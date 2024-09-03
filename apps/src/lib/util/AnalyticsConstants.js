@@ -241,14 +241,19 @@ const EVENTS = {
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
   AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
-  AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
-  AI_TUTOR_ASK_ABOUT_VALIDATION: 'AI Tutor was asked about validation',
-  AI_TUTOR_ASK_GENERAL_CHAT: 'AI Tutor was asked a question in general chat',
+  AI_TUTOR_CHAT_EVENT: 'AI Tutor was asked a question',
+  AI_TUTOR_SUGGESTED_PROMPT_NONE: 'None - general chat',
+  AI_TUTOR_SUGGESTED_PROMPT_COMPILATION: 'Compilation',
+  AI_TUTOR_SUGGESTED_PROMPT_VALIDATION: 'Validation',
+  AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
+  AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
   HOC_GUIDE_DIALOG_SHOWN: 'HOC Guide Dialog Shown',
   GUIDE_SENT_EVENT: 'Guide Sent',
+  HOC_ACTIVITY_START_BUTTON_CLICKED:
+    'Hour of Code Activity Start Button Clicked',
 
   // Hour of Code - Dance Party
   DANCE_PARTY_ACTIVITY_STARTED: 'Dance Party Activity Started',
@@ -267,6 +272,7 @@ const EVENTS = {
 
   // videos
   VIDEO_LOADED: 'Video Loaded',
+  VIDEO_FALLBACK_LOADED: 'Video Fallback Loaded',
   VIDEO_STARTED: 'Video Started',
   VIDEO_PAUSED: 'Video Paused',
   VIDEO_ENDED: 'Video Played To Completion',

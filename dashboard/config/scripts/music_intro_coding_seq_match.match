@@ -1,0 +1,24 @@
+name 'music-intro-coding-seq-match'
+title 'Sequence Matters!'
+description '**In Music Lab, your code runs in order from top to bottom.** <br> Match the description to the code.'
+
+height '210'
+width '200'
+
+question 'https://images.code.org/655018b82ccb1050175230d4e0c81eb7-image-1724954121271.jpg'
+answer '**First**, guitar play. **Next**, drums plays. **Last**, scratch plays. ![](https://images.code.org/21591c95dfaacc0eca16002935996924-image-1724954117236.jpg)'
+
+question '![](https://images.code.org/f30513a68d9a7f69d0eb3517d0a15bf3-image-1724947712870.jpg)'
+answer '**First**, scratch plays. **Next**, guitar plays. **Last**, drums play.![](https://images.code.org/3c96eb1a717debba5c06a3cff36d9ba9-image-1724954237394.jpg)'
+
+
+allow_multiple_attempts true
+
+
+
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

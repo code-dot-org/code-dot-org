@@ -2,10 +2,16 @@
 - user_type = request.cookies[cookie_key]
 - user_type = "student" if user_type == "student_y"
 
+/ GA4 measurement ID for code.org
+- google_measurement = {id: "G-L9HT5MZ3HD"}
+
 :javascript
   window.userAnalyticsDimensions = {
     'dimension1': '#{@request.language}',
     'dimension4': '#{user_type}',
   };
 
-%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js")}
+/ Google tag (gtag.js)
+%script{async: "", src: "https://www.googletagmanager.com/gtag/js?id=#{google_measurement[:id]}"}
+
+%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js"), data: {googleMeasurement: google_measurement.to_json}}

@@ -292,6 +292,7 @@
   call_to_action_select_activity: "Select an activity"
   call_to_action_select_coding_activity: "Select a coding activity"
   call_to_action_start_activity: "Start an activity"
+  call_to_action_start_activity_short: "Start activity"
   call_to_action_get_certificates: "Get certificates"
   call_to_action_print_certificates: "Print certificates"
   call_to_action_go_beyond_hoc: "Go beyond the Hour of Code"
@@ -2074,7 +2075,7 @@
       heading: "Feedback or questions?"
       subheading: "We greatly value your input and invite you to share your feedback to help shape our offerings."
       desc: "Our international program is continuously expanding, and while resources may be limited, we are committed to growth that meets the needs of educators worldwide. For any questions or suggestions, our dedicated team is ready to assist you as we strive to support your journey in computer science education."
-      cta: "Email us at [international@code.org](%{email_url})."
+      cta: "Email us at [team-global@code.org](%{email_url})."
 
   intl_pl_partners_page:
     page_title: "International Professional Learning Partners"
@@ -2580,6 +2581,161 @@
         title: "Hour of Code Activities"
         desc: "One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round."
         button: "Explore activities"
+
+  transformers:
+    header: "Code the fun: with Transformers One!"
+    desc: "Build your own exciting Transformers One world now!"
+    code_favorite:
+      header: "Code with your favorite Transformers"
+      desc: "Explore and build awesome worlds with Optimus Prime, Bumblebee, Megatron, and More!"
+    projects_header: "Get started with one of these sample projects"
+    fun:
+      header: "Get in the fun! Easy-to-learn code with Transformers One"
+      desc: "Code.org has teamed up with Transformers One to offer a fun and easy-to-learn coding activity for 2nd-8th graders. Now, you can create your own interactive Transformers One world with some of the movie's most beloved characters!"
+      code_card:
+        header: "Code with the Transformers"
+        desc: "Autobots, roll out! In this Transformers One-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+    after:
+      header: "Continue learning after Transformers One"
+      desc: "The Transformers One activity is an ideal first step for classrooms before tackling the open-ended projects in our new CS Connections curriculum. Once students learn basic coding, they can advance to CS Connections' cross-curricular projects."
+  
+  hello_world:
+    tiny_banner: "Check out the new [Transformers One theme](%{url}) of Hello World!"
+    header: "Hello World"
+    desc: "Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps."
+    theme:
+      header: "Choose your Hello World theme!"
+      desc: "Choose from these fun themes to code interactive characters in a world you create!"
+    continue:
+      header: "Continue learning after Hello World"
+      desc: "Hello World is a great starting point before doing CS connections."
+    carousel:
+      transformers: "Transformers One"
+      space: "Space"
+      space_desc: "3, 2, 1... blast off! In this space-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+      soccer: "Soccer"
+      soccer_desc: "Goooooal! In this soccer-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+      food: "Food"
+      food_desc: "Let's see what's on the menu! In this food-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+      animals: "Animals"
+      animals_desc: "Lions and tigers and bears, oh my! In this animal-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+      retro: "Retro"
+      retro_desc: "Go old school! In this retro-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects"
+      emoji: "Emoji"
+      emoji_desc: "In this emoji-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+  
+  tools_page:
+    heading: 'Explore Standalone Labs and Widgets'
+    desc: 'Discover programming environments designed to support your creativity. Our labs offer supportive environments that meet learners where they are at, while still keeping the possibilities endless. Our widgets unravel core computer science concepts.'
+    labs:
+      heading: "Build your way with labs"
+      desc: "Discover programming environments designed to meet you at your level and elevate your skills."
+      label_what_you_can_make: "What you can make:"
+      label_experience: "Experience:"
+      spritelab:
+        overline: "Ages 5-12"
+        title: "Sprite Lab"
+        what_you_can_make: "Simple animations and games with characters"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Sprite Lab"
+        call_to_action_try: "Try Sprite Lab"
+      gamelab:
+        overline: "Ages 13+"
+        title: "Game Lab"
+        what_you_can_make: "Simple animations and games with characters"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Game Lab"
+        call_to_action_try: "Try Game Lab"
+      applab:
+        overline: "Ages 13+"
+        title: "App Lab"
+        what_you_can_make: "Simple Javascript apps with blocks or code"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about App Lab"
+        call_to_action_try: "Try App Lab"
+      musiclab:
+        overline: "Ages 10+"
+        title: "Music Lab"
+        what_you_can_make: "Create your own mix and beats with code!"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Music Lab"
+        call_to_action_try: "Try Music Lab"
+      weblab:
+        overline: "Ages 13+"
+        title: "Web Lab"
+        what_you_can_make: "Simple webpages with HTML and CSS"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Web Lab"
+        call_to_action_try: "Try Web Lab"
+    tools_el:
+      heading: "Empower learning with standalone tools"
+      desc: "Leverage our labs to create dynamic learning experiences that resonate with each student. These tools not only teach coding but also build confidence and spark curiosity through hands-on practice."
+      scaffolding: 
+        heading: "Scaffolded learning"
+        desc: "Our programming environments are carefully scaffolded, providing the right level of support to students at every step of their coding journey."
+      independence: 
+        heading: "Guided to independent"
+        desc: "Ease the transition from structured learning to exploration, with tools that encourage students to apply their learning in open-ended projects."
+      engagement: 
+        heading: "Engagement through creativity"
+        desc: "Coding becomes an adventure with labs and widgets that make learning not just educational, but exciting and genuinely fun."
+      differentiation: 
+        heading: "Support differentiation"
+        desc: "Cater to a range of abilities and interests, with tools that adapt to different skill levels, ensuring your students can find their path."
+    widgets:
+      overline: "Grades 6-12"
+      heading: "Explore computer science concepts with widgets"
+      desc: "Delve into the fundamentals of computer science with our interactive widgets. Grasp complex concepts like network communication with the Internet Simulator, or understand data efficiency through the Text Compression Widget. These tools make abstract principles tangible and engaging."
+      text_compression:
+        overline: "compression"
+        title: "Text Compression"
+        desc: "Learn the essentials of text compression as you condense content dynamically. This widget allows immediate visualization of compression effects, challenging students to find optimal patterns and understand file size efficiency."
+        aria_label: "try the text compression widget"
+        button_label: "Try this widget"
+      pixelation:
+        overline: "pixelation"
+        title: "Images and Pixels"
+        desc: "Create images from the ground up with binary code using our Pixelation Widget. Start with simple black and white pixels and progress to intricate, full-color visuals, learning how binary translates into the images we see."
+        aria_label: "try the pixelation widget"
+        button_label: "Try this widget"
+      frequency_analysis:
+        overline: "cryptography"
+        title: "Frequency Analysis"
+        desc: "Unlock the secrets of classic ciphers with the Frequency Analysis Widget. Experiment with the Caesar Shift and random substitution methods to encrypt messages and challenge students to decrypt them without the key."
+        aria_label: "try the frequency analysis widget"
+        button_label: "Try this widget"
+      cipher:
+        overline: "cryptography"
+        title: "Vigenere cipher"
+        desc: "Dive into the world of complex encryption with the Vigenère Cipher Widget. Once deemed unbreakable, this cipher changes with each letter, inviting you to both encode secret messages and test your skills at cracking them."
+        aria_label: "try the vigenere cipher widget"
+        button_label: "Try this widget"
+      internet_simulator:
+        overline: "internet"
+        title: "Internet Simulator"
+        desc: "Explore the intricacies of networked computers with our expansive Internet Simulator. Beyond learning internet protocols, engage with CS concepts such as abstraction and the binary representation of data, all while understanding the 'why' behind internet structures."
+        aria_label: "try the internet simulator widget"
+        button_label: "Try this widget"
+    additional_resources:
+      heading: "Additional resources"
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button_label: "Explore the catalog"
+      video_library:
+        title: "Video Library"
+        desc: "Explore our large library of engaging and informative videos to learn about key computer science concepts on a broad range of topics."
+        button_label: "View video library"
+      hour_of_code:
+        title: "Try an Hour of Code"
+        desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
+        button_label: "See Hour of Code activities"
+
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
@@ -11377,7 +11533,7 @@
   about_page_section_specific_description_4: "The [Code.org Advocacy Coalition](%{advocacy_url}) is a bipartisan coalition of corporations and nonprofits that work together to help establish US federal and state policies to expand and sustain access to K-12 computer science and to broaden participation and diversity in the field. We bring together [Republican and Democratic political leaders](%{leaders_url}) in common cause supporting expanding access to and participation in K-12 computer science."
   about_page_section_specific_description_5: "Code.org is a member of the steering committee that helped establish the [K-12 Computer Science Framework](%{framework_url}) - a high-level guide for states, districts, and organizations implementing computer science education. The Framework has won the support of hundreds of academics, K-12 educators, software companies, nonprofits, and states."
   about_page_section_specific_description_6: "Code.org IRS form 990 for [2014](%{irs_url_2014}), [2015](%{irs_url_2015}), [2016](%{irs_url_2016}), [2017](%{irs_url_2017}), [2018](%{irs_url_2018}), [2019](%{irs_url_2019}), [2020](%{irs_url_2020}), [2021](%{irs_url_2021}), and [2022](%{irs_url_2022}). [Donation Policy.](%{donation_policy_url})"
-  about_page_section_specific_description_7: "[Sign up to receive status updates](%{sign_up_url}) about progress in the K-12 computer gscience movement and about the work of Code.org. Or follow Code.org on social media:"
+  about_page_section_specific_description_7: "[Sign up to receive status updates](%{sign_up_url}) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:"
   about_page_section_specific_description_8: "Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](%{partners_url}), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organization for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization."
   about_page_section_donors_description_1: "Code.org® is a registered public 501c3 nonprofit, with support from the general public. We are grateful for the generous support we've received from [individuals and organizations](%{individuals_url}) who support our vision."
   about_page_section_donors_description_2: "Code.org's accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."

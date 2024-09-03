@@ -1,0 +1,17 @@
+name 'self-paced-pl-gen-ai-customizing-project_04_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrapping up
+
+#### We've built a technical understanding of how to build chatbots.
+
+### The following lesson focuses on User-Centered Design.
+
+
+
+
+ 
+
+MARKDOWN

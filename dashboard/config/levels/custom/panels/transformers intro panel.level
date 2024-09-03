@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-08-30T17:34:13.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "###Hello, World! \nWelcome to coding with Transformers One!",
+        "imageUrl": "https://images.code.org/6768490ba6b9700253afbfec9aed9cf8-transformers-catalog (1).png",
+        "key": "transformers intro panel-6331cb20-de1b-4b5f-a56d-8ff3a571ea9c"
+      },
+      {
+        "text": "###Coding in Sprite Lab\nSprite Lab is split into three main parts: \n\n**Playspace** This is where the characters you code will show up. \n\n**Toolbox** New blocks of code will become available as you go through the lesson.\n\n**Workspace** Drag blocks out of the toolbox to build your program. \n",
+        "imageUrl": "https://images.code.org/751ff17490a53b4f331395bcf139dc1b-panel2.jpg",
+        "key": "transformers intro panel-0d6ee359-1703-4fba-b081-41e7d7024417",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "###Run your code!\nPress the Run button to activate your program. ",
+        "imageUrl": "https://images.code.org/08807efdfcb63d03ec768fdd7390d396-runpanel.gif",
+        "key": "transformers intro panel-da53d45e-93f6-457a-b8d1-5e8be6a8924d"
+      },
+      {
+        "text": "###Roll Out!\nWhat will you create?",
+        "imageUrl": "https://images.code.org/d358e894443e2a7875869ff4c75e9ae3-transformers-catalog.png",
+        "key": "transformers intro panel-f0cae1fc-4489-401b-80c2-56e0b016b404"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30 17:36:41 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 17:39:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 17:58:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 17:59:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 18:42:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

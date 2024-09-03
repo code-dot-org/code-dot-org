@@ -9,12 +9,16 @@
   - dimensions[user_type_dim] = current_user.user_type
   - dimensions[has_teacher] = current_user.teachers.any? ? '1' : '0'
 
+/ GA4 measurement ID for code.org
+- google_measurement = {id: "G-L9HT5MZ3HD"}
+
 :javascript
   window.userAnalyticsDimensions = #{dimensions.to_json};
   if ('devicePixelRatio' in window) {
     window.userAnalyticsDimensions["#{pixel_ratio}"] = window.devicePixelRatio.toString();
   }
 
-%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js")}
-// Initialize Google Optimize (https://support.google.com/optimize/answer/9692472)
-%script{src: "https://www.googleoptimize.com/optimize.js?id=OPT-KBX3C3L"}
+/ Google tag (gtag.js)
+%script{async: "", src: "https://www.googletagmanager.com/gtag/js?id=#{google_measurement[:id]}"}
+
+%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js"), data: {googleMeasurement: google_measurement.to_json}}

@@ -1,0 +1,1207 @@
+{
+  "script": {
+    "name": "pilot-elem-music-lab",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "pilot-elem-music-lab",
+    "serialized_at": "2024-08-29 20:13:11 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "pilot-elem-music-lab"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Intro & Sequencing",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Loops",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "4d78c41c-77a8-4556-bb5c-cd1b58310b6b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d78c41c-77a8-4556-bb5c-cd1b58310b6b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab"
+      }
+    },
+    {
+      "key": "9b9c4254-fc19-4f1a-979e-2e6d8f698910",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b9c4254-fc19-4f1a-979e-2e6d8f698910",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab"
+      }
+    },
+    {
+      "key": "dceef5d7-2671-46d7-b106-1cf85e3c775a",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dceef5d7-2671-46d7-b106-1cf85e3c775a",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab"
+      }
+    },
+    {
+      "key": "31fd283b-cd33-4db8-a91d-e635c26976e3",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31fd283b-cd33-4db8-a91d-e635c26976e3",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710",
+        "lesson_activity.key": "4d78c41c-77a8-4556-bb5c-cd1b58310b6b"
+      }
+    },
+    {
+      "key": "7fdb001e-04b8-44de-97b8-aaf540baf08c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7fdb001e-04b8-44de-97b8-aaf540baf08c",
+        "lesson_activity.key": "9b9c4254-fc19-4f1a-979e-2e6d8f698910"
+      }
+    },
+    {
+      "key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402",
+        "lesson_activity.key": "dceef5d7-2671-46d7-b106-1cf85e3c775a"
+      }
+    },
+    {
+      "key": "d772015a-1777-4535-b59c-4b6be1416bdd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d772015a-1777-4535-b59c-4b6be1416bdd",
+        "lesson_activity.key": "31fd283b-cd33-4db8-a91d-e635c26976e3"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-video-intro-placeholder"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-video-intro-placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-video-intro-placeholder"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-try"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-try"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-try"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-match"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-match"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-match"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-investigate"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-investigate"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-investigate"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-modify-sound"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-modify-sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-modify-sound"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-modify-rest"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-modify-rest"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-modify-rest"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-change-sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-change-sound"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-modify-verse"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-modify-verse"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-modify-verse"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-make-sound"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-make-sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-make-sound"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-make-two-sounds"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-make-two-sounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-make-two-sounds"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-make-three-sounds"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-make-three-sounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-make-three-sounds"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-choice"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-choice"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-choice"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-choice-change"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-choice-change"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-choice-change"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-choice-create"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-choice-create"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-choice-create"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 15,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-choice-preview"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-choice-preview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-choice-preview"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 16,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-seq-choice-beat"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-seq-choice-beat"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      },
+      "level_keys": [
+        "music-intro-coding-seq-choice-beat"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-mult-choice-placeholder"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-mult-choice-placeholder"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-mult-choice-placeholder"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-match"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-match"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-match"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-panel"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-panel"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-try"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-try"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-try"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-panel-placeholder"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-panel-placeholder"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-panel-placeholder"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-modify-number"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-modify-number"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-modify-number"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-modify-loop"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-modify-loop"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-modify-loop"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-modify-verse"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-modify-verse"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-modify-verse"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-panel-placeholder-2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-panel-placeholder-2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-panel-placeholder-2"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-make-sound-loop"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-make-sound-loop"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-make-sound-loop"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-make-two-loops"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-make-two-loops"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-make-two-loops"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-intro-coding-loops-choice-level"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-intro-coding-loops-choice-level"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      },
+      "level_keys": [
+        "music-intro-coding-loops-choice-level"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-video-intro-placeholder",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-video-intro-placeholder"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-try",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-try"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-match",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-match"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-investigate",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-investigate"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-modify-sound",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-modify-sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-modify-rest",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-modify-rest"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-change-sound",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-change-sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-modify-verse",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-modify-verse"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-make-sound",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-make-sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-make-two-sounds",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-make-two-sounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-make-three-sounds",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-make-three-sounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-choice",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-choice"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-choice-change",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-choice-change"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-choice-create",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-choice-create"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-choice-preview",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-choice-preview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-seq-choice-beat",
+        "script_level.level_keys": [
+          "music-intro-coding-seq-choice-beat"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "4fdb49bb-5f26-4d1f-807f-a7f81a90d710"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-mult-choice-placeholder",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-mult-choice-placeholder"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-match",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-match"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-panel",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-panel"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-try",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-try"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-panel-placeholder",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-panel-placeholder"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-modify-number",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-modify-number"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-modify-loop",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-modify-loop"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-modify-verse",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-modify-verse"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-panel-placeholder-2",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-panel-placeholder-2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-make-sound-loop",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-make-sound-loop"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-make-two-loops",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-make-two-loops"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-intro-coding-loops-choice-level",
+        "script_level.level_keys": [
+          "music-intro-coding-loops-choice-level"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "pilot-elem-music-lab",
+        "activity_section.key": "27bac3cc-10d7-40c1-aed7-3fbbe8d75402"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
