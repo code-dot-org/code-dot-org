@@ -32,38 +32,16 @@ const ExampleTopicsInputs: React.FunctionComponent<{
     [dispatch]
   );
 
-  // text is duplicated here in case we want the text to change for success.
-  // todo: Dry it up if we don't change the text.
-  const examplePromptAlerts = useMemo(() => {
-    return {
-      success: {
-        text: 'Must add at least one example prompt',
-        type: alertTypes.success,
-        className: modelCustomizationStyles.examplePromptAlertSuccess,
-      },
-      warning: {
-        text: 'Must add at least one example prompt',
-        type: alertTypes.warning,
-        className: modelCustomizationStyles.examplePromptAlert,
-      },
-    };
-  }, []);
-
-  const examplePromptAlert =
-    topics.length > 0
-      ? examplePromptAlerts.success
-      : examplePromptAlerts.warning;
-
   const validationAlert = useMemo(() => {
     return (
       <Alert
-        text={examplePromptAlert.text}
-        type={examplePromptAlert.type}
+        text="Must add at least one example prompt"
+        type={alertTypes.warning}
         size="s"
-        className={examplePromptAlert.className}
+        className={modelCustomizationStyles.examplePromptAlert}
       />
     );
-  }, [examplePromptAlert]);
+  }, []);
 
   return (
     <MultiInputCustomization
@@ -75,7 +53,7 @@ const ExampleTopicsInputs: React.FunctionComponent<{
       isReadOnly={readOnly}
       hideInputBoxWhenReadOnly={false}
       onUpdateItems={onUpdateItems}
-      validationAlert={validationAlert}
+      validationAlert={topics?.length <= 0 ? validationAlert : undefined}
     />
   );
 };
