@@ -10746,7 +10746,7 @@
     button: "Register my event"
     register:
       heading: "Register your event"
-      disclaimer: "Registrations closes %{close_date}"
+      disclaimer: "Registrations close on %{close_date}"
       desc: "Join millions worldwide in the Hour of Code! Whether you're hosting an event at school, in the community, or online, we invite you to register your event today."
       how_to: "Looking for more guidance on how to host an Hour of Code? [Check out our How-To Guide](%{how_to_url})"
     resources:
