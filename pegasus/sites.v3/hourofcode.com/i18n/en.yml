@@ -10740,6 +10740,30 @@
         host: "Host an Hour of Code"
         try_activites: "Try activities"
 
+  hoc_events:
+    heading: "Register to host an Hour of Code"
+    desc: "Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October."
+    button: "Register my event"
+    register:
+      heading: "Register your event"
+      disclaimer: "Registrations closes %{close_date}"
+      desc: "Join millions worldwide in the Hour of Code! Whether you're hosting an event at school, in the community, or online, we invite you to register your event today."
+      how_to: "Looking for more guidance on how to host an Hour of Code? [Check out our How-To Guide](%{how_to_url})"
+    resources:
+      heading: "Additional resources for your Hour of Code"
+      hoc:
+        title: "Hour of Code Resources"
+        desc: "Find all the resources you need—print and digital—to bring attention to your Hour of Code."
+        button: "View resources"
+      host:
+        title: "How to Host an Hour"
+        desc: "A step-by-step guide to preparing for, running, and celebrating your Hour of Code event with your class or group."
+        button: "Read the guide"
+      host:
+        title: "Choose an Activity"
+        desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
+        button: "Explore activities"
+
   before_hoc: "Before Hour of Code"
   day_of_hoc: "Day of Hour of Code"
   after_hoc: "After Hour of Code"
