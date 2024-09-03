@@ -8,11 +8,68 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#Check out this code! \r\n\r\n- What sound will you hear first? \r\n- Which sound will play last?\r\n\r\nClick Run to hear the music! ",
+    "long_instructions": "####Check out this code! \r\n- What sound will you hear first?  \r\n- Which sound will play last?  \r\n\r\nClick [Run](#clickable=run-button) to hear the music!",
     "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "intro2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "deletable": false,
+                  "movable": true,
+                  "fields": {
+                    "sound": "bass/amped_bass"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "play_sound_at_current_location_simple2",
+                      "deletable": false,
+                      "movable": true,
+                      "fields": {
+                        "sound": "leads/shredded_guitar"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      }
+    },
+    "validations": [
+      {
+        "key": "music-intro-coding-seq-try_a8d79a9a-d5a0-4d30-962e-4067877ae473",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-27 21:58:30 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-27 21:58:30 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 16:13:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 16:16:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 16:16:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:28:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 18:30:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 18:31:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 18:34:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 18:35:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 18:38:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:10:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 19:26:52 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:27:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:29:45 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:30:10 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

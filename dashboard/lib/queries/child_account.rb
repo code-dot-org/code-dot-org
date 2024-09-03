@@ -15,4 +15,13 @@ class Queries::ChildAccount
       cap_status_date: ..expiration_date
     )
   end
+
+  # Selects users who are currently non-compliant with the Child Account Policy.
+  # @param scope {User::ActiveRecord_Relation} The range of users to query.
+  # @return {User::ActiveRecord_Relation} The CAP non-compliant users.
+  def self.cap_affected(scope: User.all)
+    scope.where.not(
+      cap_status: [Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, nil],
+    )
+  end
 end

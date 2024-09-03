@@ -495,7 +495,7 @@ class Section < ApplicationRecord
         linkToCurrentUnit: link_to_current_unit,
         courseVersionName: course_version_name,
         numberOfStudents: num_students,
-        linkToStudents: "#{base_url}#{id}/manage_students",
+        linkToStudents: manage_students_url,
         code: code,
         lesson_extras: lesson_extras,
         pairing_allowed: pairing_allowed,
@@ -528,6 +528,10 @@ class Section < ApplicationRecord
         ai_tutor_enabled: ai_tutor_enabled,
       }
     end
+  end
+
+  def manage_students_url
+    CDO.studio_url("/teacher_dashboard/sections/#{id}/manage_students")
   end
 
   def provider_managed?

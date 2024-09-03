@@ -1,0 +1,15 @@
+name 'self-paced-pl-gen-ai-foundations-overview_02_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Foundations of Generative AI Overview
+
+
+#### This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. 
+
+#### Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. 
+
+#### Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+
+MARKDOWN

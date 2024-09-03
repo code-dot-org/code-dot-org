@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-29T15:58:53.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!\r\n\r\n",
+    "teacher_markdown": "This predict level introduces the three main variable types which will be introduced in this lesson: `int`, `str`, and `list`. Additionally, it will expose students to concatenation, the `print()` function, and simple expressions. The goal is not for students to understand how to utilize these concepts independently yet – those skills will come in the next levels.\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "student response",
+      "freeResponseHeight": 20,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "pet_type = \"dog\"\nhuman_years = [5, 7, 3, 2, 8]\nindex = 3\n\npet_years = human_years[index] * 7\n\nprint(\"The \"+ pet_type + \" is \" + str(human_years[index]) + \" human years old.\")\nprint(\"The \"+ pet_type + \" is \" + str(pet_years) + \" pet years old.\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-29 15:58:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 15:59:45 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 16:00:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 16:01:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

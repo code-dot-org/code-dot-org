@@ -1,0 +1,16 @@
+name 'self-paced-pl-gen-ai-foundations-project_04_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrapping up
+
+#### We've built a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills.
+
+#### The following lesson focuses on **Customizing Language Models**. 
+
+
+
+ 
+
+MARKDOWN

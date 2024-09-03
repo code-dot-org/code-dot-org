@@ -1,0 +1,62 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-08-28T17:48:40.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "####Check out this code!\r\n\r\n1. How many times will the drum sound play? \r\n- How many times will the guitar sound play?\r\n- Can you change how many times the guitar sound plays?\r\n\r\nTo try it out press [Run](#clickable=run-button).\r\n",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "intro2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "deletable": false,
+                  "movable": true,
+                  "fields": {
+                    "sound": "bass/amped_bass"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "play_sound_at_current_location_simple2",
+                      "deletable": false,
+                      "movable": true,
+                      "fields": {
+                        "sound": "leads/shredded_guitar"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-29 19:15:47 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 19:21:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 19:28:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 19:41:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
