@@ -46,7 +46,8 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher views AI evaluation status in rubric header
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
-    And element ".uitest-run-ai-assessment" is disabled
+    And element "#uitest-run-ai-assessment" is disabled
+    And I hover over element with id "uitest-run-ai-assessment"
     Then I wait until element ".uitest-rubric-tab-buttons .__react_component_tooltip" contains text "AI analysis already completed for this project."
 
     # Teacher views AI evaluation results in rubric
@@ -94,10 +95,11 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher views AI evaluation status in settings tab
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
-    And I wait until element ".uitest-run-ai-assessment" is enabled
+    And I wait until element "#uitest-run-ai-assessment" is enabled
 
     # Teacher runs AI evaluation
-    When I click selector ".uitest-run-ai-assessment"
+    When I click selector "#uitest-run-ai-assessment"
+    And I hover over element with id "uitest-run-ai-assessment"
     Then I wait until element ".uitest-rubric-tab-buttons .__react_component_tooltip" contains text "AI analysis complete."
 
     # Teacher views AI evaluation results in rubric tab
@@ -145,7 +147,7 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher views AI evaluation status in settings tab
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
-    And I wait until element ".uitest-run-ai-assessment" is enabled
+    And I wait until element "#uitest-run-ai-assessment" is enabled
 
     # Teacher switches to Class Management tab
     When I click selector "button:contains('Class Data')"
@@ -160,6 +162,9 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views AI evaluation results in Student Rubric tab
     When I click selector "button:contains('Assess a Student')"
+    And I wait until element "#uitest-run-ai-assessment" is visible
+    And I hover over element with id "uitest-run-ai-assessment"
+    And element ".uitest-rubric-tab-buttons .__react_component_tooltip" contains text "AI analysis already completed for this project."
     And I wait until element "#uitest-next-goal" is visible
     And I click selector "#uitest-next-goal"
     Then I wait until element ".uitest-learning-goal-title" contains text "Sprites"

@@ -188,7 +188,7 @@ export default function RunAIAssessmentButton({
       {canProvideFeedback && (
         <div>
           <Button
-            className="uitest-run-ai-assessment"
+            id="uitest-run-ai-assessment"
             text={studentButtonText()}
             color={Button.ButtonColor.neutralDark}
             onClick={handleRunAiAssessment}
