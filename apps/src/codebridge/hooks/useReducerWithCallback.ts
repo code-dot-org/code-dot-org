@@ -4,7 +4,7 @@ export const useReducerWithCallback = <StateType, ActionType>(
 ) => {
   return (state: StateType, action: ActionType) => {
     const newState = reducer(state, action);
-    callback(newState);
+    setTimeout(() => callback(newState), 0);
     return newState;
   };
 };
