@@ -185,7 +185,7 @@ const Weblab2View = () => {
             setProject={setSource}
             setConfig={setConfig}
             startSource={getStartSource()}
-            codeBridgeKey={codeBridgeKey}
+            key={codeBridgeKey}
           />
         )}
 
