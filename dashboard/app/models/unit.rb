@@ -2107,8 +2107,7 @@ class Unit < ApplicationRecord
   end
 
   def show_ai_assessments_announcement?(user)
-    puts "username: #{user&.username}"
-    user.teacher? && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
+    user&.teacher? && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
   private def teacher_feedback_enabled?
