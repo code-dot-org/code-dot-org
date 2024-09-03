@@ -1,9 +1,9 @@
-import classNames from 'classnames';
+//import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
-import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
+//import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -14,6 +14,7 @@ import {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../codebridgeContext';
+import WithConditionalTooltip from '../components/WithConditionalTooltip';
 import {appendSystemMessage} from '../redux/consoleRedux';
 
 import moduleStyles from './console.module.scss';
@@ -77,10 +78,10 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  // Returns null if the code action buttons (run/test) should be enabled,
+  // Returns null if the code action buttons (run, and in the future, test) should be enabled,
   // otherwise returns the help tip text explaining why they are disabled.
-  // We disable the run/test buttons while the environment is loading
-  // OR if this is a predict level, we are not in start mode
+  // We disable the run button while the environment is loading
+  // OR if this is a predict level, we are not in start mode,
   // and the user has not yet written a prediction.
   const getDisabledCodeActionsTooltip = () => {
     let tooltip = null;
@@ -99,28 +100,28 @@ const ControlButtons: React.FunctionComponent = () => {
   // We may want to expand the tooltip to cover the disabled button
   // as well. We will likely move these buttons; when we do consider
   // wrapping the buttons in a div with the icon and applying the tooltip to that div.
-  const renderDisabledButtonHelperIcon = (
-    iconName: string,
-    tooltipId: string,
-    helpText: string
-  ) => {
-    return (
-      <WithTooltip
-        tooltipProps={{
-          direction: 'onRight',
-          text: helpText,
-          tooltipId: tooltipId,
-          size: 's',
-        }}
-        tooltipOverlayClassName={moduleStyles.disabledButtonTooltipContainer}
-      >
-        <i
-          className={classNames('fa', iconName, moduleStyles.disabledInfoIcon)}
-          aria-describedby={tooltipId}
-        />
-      </WithTooltip>
-    );
-  };
+  // const renderDisabledButtonHelperIcon = (
+  //   iconName: string,
+  //   tooltipId: string,
+  //   helpText: string
+  // ) => {
+  //   return (
+  //     <WithTooltip
+  //       tooltipProps={{
+  //         direction: 'onRight',
+  //         text: helpText,
+  //         tooltipId: tooltipId,
+  //         size: 's',
+  //       }}
+  //       tooltipOverlayClassName={moduleStyles.disabledButtonTooltipContainer}
+  //     >
+  //       <i
+  //         className={classNames('fa', iconName, moduleStyles.disabledInfoIcon)}
+  //         aria-describedby={tooltipId}
+  //       />
+  //     </WithTooltip>
+  //   );
+  // };
 
   return (
     <div className={moduleStyles.controlButtons}>
@@ -134,7 +135,17 @@ const ControlButtons: React.FunctionComponent = () => {
           className={moduleStyles.controlButton}
         />
       ) : (
-        <>
+        <WithConditionalTooltip
+          iconName={disabledCodeActionsIcon}
+          iconClassName={moduleStyles.disabledInfoIcon}
+          showTooltip={!!disabledCodeActionsTooltip}
+          tooltipProps={{
+            direction: 'onRight',
+            text: disabledCodeActionsTooltip || '',
+            size: 's',
+            tooltipId: 'code-actions-tooltip',
+          }}
+        >
           <Button
             text={'Run'}
             onClick={() => handleRun(false)}
@@ -144,13 +155,7 @@ const ControlButtons: React.FunctionComponent = () => {
             color={'purple'}
             className={moduleStyles.controlButton}
           />
-          {disabledCodeActionsTooltip &&
-            renderDisabledButtonHelperIcon(
-              disabledCodeActionsIcon,
-              'codeActionsTooltip',
-              disabledCodeActionsTooltip
-            )}
-        </>
+        </WithConditionalTooltip>
       )}
     </div>
   );
