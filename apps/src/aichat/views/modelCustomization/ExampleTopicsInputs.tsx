@@ -39,6 +39,7 @@ const ExampleTopicsInputs: React.FunctionComponent<{
       isReadOnly={readOnly}
       hideInputBoxWhenReadOnly={false}
       onUpdateItems={onUpdateItems}
+      addButtonId="uitest-add-example-topic"
     />
   );
 };
