@@ -19,17 +19,14 @@ import {
 export const asyncLoadSelectedSection = async (sectionId: string) => {
   const state = getStore().getState().teacherSections;
 
-  if (
-    state.selectedSectionId === parseInt(sectionId) ||
-    state.isLoadingSectionData
-  ) {
+  if (state.selectedSectionId === parseInt(sectionId)) {
     return;
   }
 
   getStore().dispatch(startLoadingSectionData());
   getStore().dispatch(selectSection(sectionId));
 
-  const response = await fetch(`/dashboardapi/section/${sectionId}`, {
+  const call = fetch(`/dashboardapi/section/${sectionId}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -37,30 +34,44 @@ export const asyncLoadSelectedSection = async (sectionId: string) => {
     },
   });
 
-  return response.json().then(selectedSection => {
-    getStore().dispatch(
-      setStudentsForCurrentSection(selectedSection.id, selectedSection.students)
-    );
-    // Default the scriptId to the script assigned to the section
-    const defaultScriptId = selectedSection.script
-      ? selectedSection.script.id
-      : null;
-    if (defaultScriptId) {
-      getStore().dispatch(setScriptId(defaultScriptId));
-    }
+  return call
+    .then(response => response.json())
+    .then(selectedSection => {
+      const newState = getStore().getState().teacherSections;
+      // If we have already selected a different section, don't update the state.
+      console.log('lfm', newState.selectedSectionId, parseInt(sectionId));
+      if (newState.selectedSectionId !== parseInt(sectionId)) {
+        return;
+      }
 
-    if (
-      !selectedSection.sharing_disabled &&
-      selectedSection.script.project_sharing
-    ) {
-      getStore().dispatch(setShowSharingColumn(true));
-    }
-    getStore().dispatch(setLoginType(selectedSection.login_type));
-    getStore().dispatch(setRosterProvider(selectedSection.login_type));
-    getStore().dispatch(setRosterProviderName(selectedSection.login_type_name));
+      getStore().dispatch(
+        setStudentsForCurrentSection(
+          selectedSection.id,
+          selectedSection.students
+        )
+      );
+      // Default the scriptId to the script assigned to the section
+      const defaultScriptId = selectedSection.script
+        ? selectedSection.script.id
+        : null;
+      if (defaultScriptId) {
+        getStore().dispatch(setScriptId(defaultScriptId));
+      }
 
-    getStore().dispatch(updateSelectedSection(selectedSection));
+      if (
+        !selectedSection.sharing_disabled &&
+        selectedSection.script.project_sharing
+      ) {
+        getStore().dispatch(setShowSharingColumn(true));
+      }
+      getStore().dispatch(setLoginType(selectedSection.login_type));
+      getStore().dispatch(setRosterProvider(selectedSection.login_type));
+      getStore().dispatch(
+        setRosterProviderName(selectedSection.login_type_name)
+      );
 
-    getStore().dispatch(finishLoadingSectionData());
-  });
+      getStore().dispatch(updateSelectedSection(selectedSection));
+
+      getStore().dispatch(finishLoadingSectionData());
+    });
 };
