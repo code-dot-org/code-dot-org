@@ -2,7 +2,7 @@ Code and configuration to create the AI Chat CloudWatch dashboard here:
 
 https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/GenAIBenTest
 
-In order to create or overwrite the existing dashboard, run the following:
+In order to create or overwrite the existing dashboard, run the following from this directory:
 
 ```
 yarn add @aws-sdk/client-cloudwatch

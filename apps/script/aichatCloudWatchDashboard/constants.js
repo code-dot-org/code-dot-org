@@ -1,3 +1,5 @@
+const DASHBOARD_NAME = 'GenAI';
+
 const modelNames = [
   'gen-ai-mistral-7b-inst-v01',
   'gen-ai-arithmo2-mistral-7b',
@@ -211,4 +213,5 @@ module.exports = {
   headerWidgetConfig,
   crossModelWidgetsConfig,
   logWidgetsConfig,
+  DASHBOARD_NAME,
 };
