@@ -26,7 +26,7 @@ const paths = {
   LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
   START_CHAT_COMPLETION_URL: `${ROOT_URL}/start_chat_completion`,
   STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
-  USER_HAS_AICHAT_ACCESS_URL: `${ROOT_URL}/user_has_aichat_access`,
+  USER_HAS_AICHAT_ACCESS_URL: `${ROOT_URL}/user_has_access`,
 };
 
 const MAX_POLLING_TIME_MS = 45000;
