@@ -2,10 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.4]()
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/60787)
 
 * added support of custom `className` for `RadioButton`
 * added support of common custom className (`commonClassName`) for `RadioButtonGroup`
+* added support of custom RadioButton content (added `children` prop to `RadioButton`)
 
 ## [0.2.3](https://github.com/code-dot-org/code-dot-org/pull/59444)
 

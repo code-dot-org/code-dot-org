@@ -27,6 +27,8 @@ export interface RadioButtonProps {
   size?: ComponentSizeXSToL;
   /** Custom className */
   className?: string;
+  /** Children (Radio Button custom content) */
+  children?: React.ReactNode;
 }
 
 const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
@@ -38,6 +40,7 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
   disabled = false,
   size = 'm',
   className,
+  children,
 }) => {
   const bodyTextSize = componentSizeToBodyTextSizeMap[size];
 
@@ -67,6 +70,8 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
           {label}
         </Typography>
       )}
+      {/** Custom content is rendered here if needed */}
+      {children}
     </label>
   );
 };
