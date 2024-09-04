@@ -152,19 +152,19 @@
 
 @mixin overline-one {
   @include overline-common;
-  font-size: 0.875rem;
+  font-size: 0.938rem;
   line-height: 1.6;
 }
 
 @mixin overline-two {
   @include overline-common;
-  font-size: 0.75rem;
+  font-size: 0.813rem;
   line-height: 1.64;
 }
 
 @mixin overline-three {
   @include overline-common;
-  font-size: 0.625rem;
+  font-size: 0.688rem;
   line-height: 1.76;
 }
 
