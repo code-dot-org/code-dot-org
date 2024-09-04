@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-09-03T17:00:25.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "###Hello, World! \nWelcome to coding with Transformers One.",
+        "imageUrl": "https://images.code.org/62d50009e59c74fb69a79de0587d519d-transformers-firstpanel.png",
+        "key": "transformers intro panel-6331cb20-de1b-4b5f-a56d-8ff3a571ea9c"
+      },
+      {
+        "text": "###Coding in Sprite Lab\n\n<p style=\"color: black;\"><span style=\"color: #8c52ba; font-weight:bold\">Instructions</span> Learn what to do on each level. <p>\n\n<p style=\"color: black;\"><span style=\"color: #1792e3ff; font-weight:bold\">Hint</span> Click the lightbulb for a hint! <p>\n\n<p style=\"color: black;\"><span style=\"color: #f2a100; font-weight:bold\">Playspace</span>  This is where the characters you code will show up. <p>\n\n<p style=\"color: black;\"><span style=\"color: #00b0bc; font-weight:bold\">Toolbox</span> New blocks of code will become available as you go through the lesson.<p>\n\n<p style=\"color: black;\"><span style=\"color: #b2353f; font-weight:bold\">Workspace</span>  Drag blocks out of the toolbox to build your program. <p>\n\n",
+        "imageUrl": "https://images.code.org/f6b1303371af3d4d57b2eb0a8411dd34-spritelab.jpg",
+        "key": "transformers intro panel-0d6ee359-1703-4fba-b081-41e7d7024417",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "###Run your code!\nPress the Run button to activate your program. ",
+        "imageUrl": "https://images.code.org/37ebec4c3375e032a04fe8b9163eddb0-runPannel.gif",
+        "key": "transformers intro panel-da53d45e-93f6-457a-b8d1-5e8be6a8924d"
+      },
+      {
+        "text": "###Roll Out!\nWhat will you create?",
+        "imageUrl": "https://images.code.org/563099213aa8c1a7385029e746068217-transformers-lastpanel (1).png",
+        "key": "transformers intro panel-f0cae1fc-4489-401b-80c2-56e0b016b404"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-03T17:00:25.058+00:00\",\"changed\":[\"cloned from \\\"transformers intro panel\\\"\"],\"cloned_from\":\"transformers intro panel\"},{\"changed_at\":\"2024-09-03 20:46:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:47:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:48:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:49:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
