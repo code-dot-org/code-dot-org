@@ -195,12 +195,8 @@ const saveAiCustomization = async (
 // Updates the chat window and reports analytics as necessary.
 export const onSaveComplete =
   () => (dispatch: AppDispatch, getState: () => RootState) => {
-    const {
-      savedAiCustomizations,
-      currentAiCustomizations,
-      currentSaveType,
-      userHasAichatAccess,
-    } = getState().aichat;
+    const {savedAiCustomizations, currentAiCustomizations, currentSaveType} =
+      getState().aichat;
 
     const changedProperties = findChangedProperties(
       savedAiCustomizations,
@@ -237,15 +233,13 @@ export const onSaveComplete =
       )
         ? currentAiCustomizations[typedProperty]
         : 'NULL';
-      if (currentSaveType && userHasAichatAccess) {
-        analyticsReporter.sendEvent(
-          saveTypeToAnalyticsEvent[currentSaveType],
-          {
+      if (currentSaveType) {
+        dispatch(
+          sendAnalytics(saveTypeToAnalyticsEvent[currentSaveType], {
             propertyUpdated: property,
             propertyChangedTo,
             levelPath: window.location.pathname,
-          },
-          PLATFORMS.BOTH
+          })
         );
       }
     });
@@ -334,6 +328,15 @@ const dispatchSaveFailNotification = (
   dispatch(endSave());
 };
 
+export const sendAnalytics =
+  (event: string, properties: object, skipAccessCheck = false) =>
+  (dispatch: AppDispatch, getState: () => RootState) => {
+    const userHasAichatAccess = getState().aichat.userHasAichatAccess;
+    if (userHasAichatAccess || skipAccessCheck) {
+      analyticsReporter.sendEvent(event, properties, PLATFORMS.BOTH);
+    }
+  };
+
 // This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace) if visible, i.e.,
 // hideForParticipants != true. Then it logs the event to the backend for all chat events except notifications
 // with includeInHistory != true.
@@ -414,13 +417,11 @@ export const submitChatContents = createAsyncThunk(
         aiCustomizations,
         aichatContext
       );
-      analyticsReporter.sendEvent(
-        EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS,
-        {
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
           levelPath: window.location.pathname,
           userMessage: newUserMessageText,
-        },
-        PLATFORMS.BOTH
+        })
       );
     } catch (error) {
       await handleChatCompletionError(error as Error, newUserMessage, dispatch);
@@ -495,14 +496,16 @@ async function handleChatCompletionError(
         timestamp: Date.now(),
       })
     );
-    analyticsReporter.sendEvent(
-      EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
-      {
-        levelPath: window.location.pathname,
-        userType,
-        userMessage: newUserMessage.chatMessageText,
-      },
-      PLATFORMS.BOTH
+    dispatch(
+      sendAnalytics(
+        EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
+        {
+          levelPath: window.location.pathname,
+          userType,
+          userMessage: newUserMessage.chatMessageText,
+        },
+        true
+      )
     );
   } else {
     Lab2Registry.getInstance()
@@ -563,10 +566,7 @@ const aichatSlice = createSlice({
     setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
       state.studentChatHistory = action.payload;
     },
-    setUserHasAichatAccess: (
-      state,
-      action: PayloadAction<boolean | undefined>
-    ) => {
+    setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
