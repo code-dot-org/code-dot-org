@@ -44,8 +44,9 @@ DefaultFontAwesomeV6Icon.args = {
   title: 'check',
 };
 
-export const ClassExampleFontAwesomeV6Icon = MultipleTemplate.bind({});
-ClassExampleFontAwesomeV6Icon.args = {
+export const ClassNameBrandsIconExampleFontAwesomeV6Icon =
+  MultipleTemplate.bind({});
+ClassNameBrandsIconExampleFontAwesomeV6Icon.args = {
   components: [
     {
       iconStyle: 'light',
