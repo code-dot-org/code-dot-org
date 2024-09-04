@@ -1,5 +1,4 @@
 import * as craftRedux from '@cdo/apps/craft/redux';
-import trackEvent from '@cdo/apps/util/trackEvent';
 
 import i18n from './locale';
 
@@ -99,9 +98,7 @@ export function handlePlayerSelection(
   craftRedux.openPlayerSelectionDialog(selectedPlayer => {
     craftRedux.closePlayerSelectionDialog();
 
-    if (selectedPlayer) {
-      trackEvent(craftEventType, 'ClickedCharacter', selectedPlayer);
-    } else {
+    if (!selectedPlayer) {
       selectedPlayer = defaultPlayer;
     }
 

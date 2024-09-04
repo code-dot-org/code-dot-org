@@ -1,0 +1,15 @@
+figure.video-with-fallback {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  .videodiv {
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

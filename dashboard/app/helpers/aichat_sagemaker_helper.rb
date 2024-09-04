@@ -1,29 +1,25 @@
 module AichatSagemakerHelper
   MAX_NEW_TOKENS = 512
   TOP_P = 0.9
-  MODELS = {
-    ARITHMO: "gen-ai-arithmo2-mistral-7b",
-    BASE: "gen-ai-mistral-7b-inst-v01",
-    BIOMISTRAL: "gen-ai-biomistral-7b",
-    KAREN: "gen-ai-karen-creative-mistral-7b",
-    PIRATE: "gen-ai-mistral-pirate-7b"
-  }
 
   def self.create_sagemaker_client
     Aws::SageMakerRuntime::Client.new
   end
 
-  def self.get_instructions(system_prompt, retrieval_contexts)
+  def self.get_instructions(system_prompt, level_system_prompt, retrieval_contexts)
     instructions = ""
-    instructions = system_prompt + " " unless system_prompt.empty?
+    instructions = level_system_prompt + " " unless level_system_prompt.empty?
+    instructions << (system_prompt + " ") unless system_prompt.empty?
     instructions << retrieval_contexts.join(" ") if retrieval_contexts
     instructions
   end
 
-  def self.format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message)
+  def self.format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message, level_id)
     selected_model_id = aichat_model_customizations[:selectedModelId]
     # Add system prompt and retrieval contexts if available to inputs as part of instructions that will be sent to model.
-    instructions = get_instructions(aichat_model_customizations[:systemPrompt], aichat_model_customizations[:retrievalContexts])
+    # Get level system prompt that will be prepended to student system prompt.
+    level_system_prompt = Level.find_by(id: level_id)&.properties&.dig('aichat_settings', 'levelSystemPrompt') || ""
+    instructions = get_instructions(aichat_model_customizations[:systemPrompt], level_system_prompt, aichat_model_customizations[:retrievalContexts])
     model_processor = get_model_processor(selected_model_id)
     inputs = model_processor.format_model_inputs(instructions, new_message, stored_messages)
     stopping_strings = model_processor.get_stop_strings
@@ -41,11 +37,11 @@ module AichatSagemakerHelper
 
   def self.get_model_processor(selected_model_id)
     case selected_model_id
-    when MODELS[:PIRATE]
+    when SharedConstants::AI_CHAT_MODEL_IDS[:PIRATE]
       return AiModelProcessors::PirateProcessor.new
-    when MODELS[:KAREN]
+    when SharedConstants::AI_CHAT_MODEL_IDS[:KAREN]
       return AiModelProcessors::KarenProcessor.new
-    when MODELS[:ARITHMO]
+    when SharedConstants::AI_CHAT_MODEL_IDS[:ARITHMO]
       return AiModelProcessors::ArithmoProcessor.new
     else
       return AiModelProcessors::MistralProcessor.new
@@ -60,8 +56,8 @@ module AichatSagemakerHelper
     )
   end
 
-  def self.get_sagemaker_assistant_response(aichat_model_customizations, stored_messages, new_message)
-    inputs = format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message)
+  def self.get_sagemaker_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id)
+    inputs = format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message, level_id)
     selected_model_id = aichat_model_customizations[:selectedModelId]
     sagemaker_response = request_sagemaker_chat_completion(inputs, selected_model_id)
     parsed_response = JSON.parse(sagemaker_response.body.string)

@@ -1,0 +1,16 @@
+name 'self-paced-pl-gen-ai-customizing-overview_02_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Customizing Large Language Models Overview
+
+
+#### This unit is designed to deepen students' understanding of how text-based generative AI models function and how they can be customized for specific tasks. The lessons focus on two primary aspects: system prompting and retrieval. Students will explore how prompts and retrieval methods influence the behavior of AI models, allowing them to generate more accurate and relevant responses. 
+
+#### Through hands-on activities, students will learn to design prompts that guide the AI’s output effectively and use retrieval to provide the AI with relevant information. The unit also introduces model cards as tools for planning and documenting AI behavior, culminating in a project where students create a personal chatbot that reflects their unique personality and preferences. 
+
+#### By the end of this unit, students will have the skills to customize AI models thoughtfully, considering the ethical implications and potential biases in AI systems.
+
+
+MARKDOWN

@@ -1,14 +1,34 @@
 @import 'color.scss';
+@import 'style-constants';
+
+.pageAndSidebar {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.pageWithHeader {
+  flex-grow: 1;
+  padding: 20px 48px 28px 38px;
+  overflow-y: auto;
+}
+
+.widthLockedPage {
+  max-width: $content-width;
+  padding: 10px 0 64px 0;
+}
 
 .sidebarContainer {
   width: 242px;
   flex: 0 0 242px;
   background-color: $light_gray_50;
+  height: auto;
 }
 
 .sidebarContent {
   position: sticky;
   top: 0;
+  padding-bottom: 16px;
 }
 
 .sectionDropdown {
@@ -34,11 +54,19 @@
   align-items: center;
   gap: 12px;
   padding-left: 32px;
+  text-decoration: none;
+  margin-top: 4px;
 
   &.selected {
     border-left: 4px solid $light_primary_500;
     background-color: $neutral_gray10;
     padding-left: 28px;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $neutral_gray10;
+    text-decoration: none;
   }
 }
 
@@ -48,4 +76,50 @@
   padding-left: 16px;
   padding-top: 20px;
   color: $neutral_dark80;
+}
+
+.navLink {
+  display: inline-block;
+  background-color: $purple;
+  color: $white;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  height: auto;
+  line-height: 24px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: $brand_secondary_dark;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: $brand_primary_default solid 2px;
+    outline-offset: 2px;
+    color: $white;
+  }
+}
+
+.topPadding {
+  padding-top: 24px;
+}
+
+.iconContainer {
+  width: 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSectionName {
+  font-size: 12px;
+  font-weight: 600;
+  color: $light_primary_500;
+  text-transform: uppercase;
 }

@@ -18,7 +18,7 @@ import {
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement,
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
-import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
+import {sampleActivities} from '../../levelbuilder/lesson-editor/activitiesTestData';
 
 describe('LessonOverview', () => {
   let currentLocaleStub;

@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require 'json'
+require 'optparse'
+
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} JOB_CLASS JOB_ARGS [options]
+
+    This script performs a Dashboard job with provided arguments in the background.
+
+    Arguments:
+        JOB_CLASS                        The class name of the Dashboard job to perform
+        JOB_ARGS                         The arguments of the Dashboard job in JSON format, e.g. '["arg1", {"arg2": "val2"}]'
+
+    Options:
+  BANNER
+
+  opts.on('-h', '--help', 'Print this') do
+    puts opts
+    exit
+  end
+end.parse!
+
+require_relative '../../dashboard/config/environment'
+
+job_class = ARGV[0]&.constantize
+job_args = JSON.parse(ARGV[1] || '[]')
+
+raise OptionParser::MissingArgument, 'JOB_CLASS argument is missing' unless job_class
+
+job_class.perform_later(*job_args)

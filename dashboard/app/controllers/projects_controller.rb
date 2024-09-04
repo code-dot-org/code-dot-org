@@ -187,6 +187,7 @@ class ProjectsController < ApplicationController
     transformers: {
       name: 'New Transformers Project'
     }
+    # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze
 
   @@project_level_cache = {}

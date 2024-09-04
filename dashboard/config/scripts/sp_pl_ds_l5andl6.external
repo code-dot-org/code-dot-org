@@ -1,0 +1,43 @@
+name 'sp-pl-DS_L5andL6'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data Questions and Stories
+
+
+#### In lessons 5 and 6, students explore the art of crafting effective data-driven questions and learn how to tell compelling data stories, focusing on the clarity, relevance, and ethical implications of their inquiries while examining real-life examples to understand the elements of impactful data storytelling.
+
+---
+
+## Lesson 5: Effective Data Questions
+
+<img src="https://images.code.org/f37f3e02d208df56ab9ee693170e03e4-image-1724342677390.png" alt="judicial scale icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+
+#### In this lesson, students will explore how to derive insightful and meaningful questions from a provided dataset, utilizing established criteria to evaluate and refine their inquiries.
+#### The lesson progresses through a systematic approach to understanding and applying key characteristics of effective questions.
+#### Students will engage in hands-on activities to rank, refine, and ultimately formulate their own data-driven questions, with an emphasis on relevance, clarity, measurability, and ethical considerations.
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+<div style="clear:both;"></div>
+
+## Lesson 6: Data Storytelling 
+<img src="https://images.code.org/009ab39825563cff628bf976699c3e10-image-1724342741218.png" alt="scale icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### In this lesson, students will explore both expository and persuasive data stories and learn some of the properties that are unique to each. They will explore several real-life examples of data stories in order to learn the traits that make telling a data story engaging and insightful.
+
+
+
+
+
+### <b>Check out the entire lesson plan  <a href="LINK" target="blank" rel="noopener noreferrer">here</a>.</b>
+
+<br>
+
+
+####Let’s take a look at the expository data storytelling activity.
+
+![]()
+MARKDOWN

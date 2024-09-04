@@ -3,6 +3,7 @@ import React from 'react';
 
 import {
   ButtonType,
+  Button,
   LinkButton,
   buttonColors,
 } from '@cdo/apps/componentLibrary/button';
@@ -23,9 +24,20 @@ const AccountCard: React.FunctionComponent<{
   content: string;
   buttonText: string;
   buttonType: ButtonType;
-  href: string;
+  href?: string;
+  onClick?: () => void;
   iconList?: string[];
-}> = ({id, icon, title, content, buttonText, buttonType, href, iconList}) => (
+}> = ({
+  id,
+  icon,
+  title,
+  content,
+  buttonText,
+  buttonType,
+  href,
+  onClick,
+  iconList,
+}) => (
   <Card data-testid={id}>
     <div className={styles.contentWrapper}>
       <CardHeader
@@ -56,16 +68,33 @@ const AccountCard: React.FunctionComponent<{
     </div>
     <div className={styles.buttonWrapper}>
       <CardActions>
-        <LinkButton
-          className={styles.button}
-          color={
-            buttonType === 'primary' ? buttonColors.purple : buttonColors.black
-          }
-          size="m"
-          text={buttonText}
-          type={buttonType}
-          href={href}
-        />
+        {href ? (
+          <LinkButton
+            className={styles.button}
+            color={
+              buttonType === 'primary'
+                ? buttonColors.purple
+                : buttonColors.black
+            }
+            size="m"
+            text={buttonText}
+            type={buttonType}
+            href={href}
+          />
+        ) : (
+          <Button
+            className={styles.button}
+            color={
+              buttonType === 'primary'
+                ? buttonColors.purple
+                : buttonColors.black
+            }
+            size="m"
+            text={buttonText}
+            type={buttonType}
+            onClick={onClick}
+          />
+        )}
       </CardActions>
     </div>
   </Card>

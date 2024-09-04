@@ -70,7 +70,7 @@ The Docker Compose files use a bind-mount to make the entire code-dot-org source
 Make sure everything works locally using the instructions above.
 
 ```
-cd docker/dockerfiles
+cd docker/continuous-integration
 ```
 
 Sign in to Docker Hub through the command line; when prompted, enter the password found under "access token for docker cli authentication" in the lastpass docker hub notes field
@@ -85,14 +85,18 @@ Build a full image to your local machine
 docker build .
 ```
 
+**Note:** We are moving to a new naming convention in order to use different docker images for different purposes. What was the `code-dot-org` image will become the `cdo-ci` image. For now, these docs advise publishing both names.
+
 Tag the new image with an incremented version number. You can get the image id from the end of the build log or from `docker image list`.
 
 ```
 docker tag <image_id> codedotorg/code-dot-org:<version>
+docker tag <image_id> codedotorg/cdo-ci:<version>
 ```
 
 Upload the image to docker hub (supply the version used in the previous step)
 
 ```
 docker push codedotorg/code-dot-org:<version>
+docker push codedotorg/cdo-ci:<version>
 ```

@@ -1,0 +1,40 @@
+name 'sp-pl-DS_L7'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data Questions and Stories
+
+
+#### In lessons 5 and 6, students explore the art of crafting effective data-driven questions and learn how to tell compelling data stories, focusing on the clarity, relevance, and ethical implications of their inquiries while examining real-life examples to understand the elements of impactful data storytelling.
+
+---
+
+## Lesson 7 - Intro do Data Visualization
+
+<img src="https://images.code.org/233809ee54be7f96d4d33ac74a9fba08-image-1724349670618.png" alt="codap logo" width="220px"   style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+####In this lesson, students create charts in CODAP to practice building basic data visualizations – bar charts, dot plots, and scatter plots. 
+
+####As they practice building each sort of data visualization, they also discuss when and where each type of visualization might be useful. Finally, they will learn how to filter their data in CODAP.
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+<div style="clear:both;"></div>
+
+## Vocabulary
+<img src="https://images.code.org/c3323b50d1b27f06c72d626c1f28d368-image-1724349560850.png" alt="graph icon" width="220px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+- #### **data visualization:** a graphical representation of information and data
+- #### **dot plot:** a graph where each data point is represented by a dot along an axis
+- #### **bar chart:** a graph that uses rectangular bars to represent frequency or count
+- #### **scatter plot:** a graph that uses dots to represent the values of two different variables
+- #### **filter:** a tool or process used to select specific data points from a larger set based on certain criteria or conditions
+
+
+
+
+## Let’s practice visualizing Data in **CODAP**! 
+
+![]()
+MARKDOWN

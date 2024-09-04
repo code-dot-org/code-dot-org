@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/level-editor/DropletPaletteSelector';
+import DropletPaletteSelector from '@cdo/apps/levelbuilder/level-editor/DropletPaletteSelector';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const data = getScriptData('pageOptions');

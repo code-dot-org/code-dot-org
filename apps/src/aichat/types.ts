@@ -1,14 +1,17 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import type {
+  AiInteractionStatus,
+  AiChatModelIds,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {Role} from '../aiComponentLibrary/chatMessage/types';
+import type {ValueOf} from '../types/utils';
 
 export const ChatEventDescriptions = {
-  CLEAR_CHAT: 'The user clears the chat workspace.',
-  LOAD_LEVEL: 'The user loads the aichat level.',
+  COPY_CHAT: 'The user copied the chat history.',
+  CLEAR_CHAT: 'The user cleared the chat workspace.',
+  LOAD_LEVEL: 'The user loaded the aichat level.',
 } as const;
-
-// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
-export type AichatInteractionStatusValue = string;
 
 export interface ChatEvent {
   // UTC timestamp in milliseconds
@@ -22,7 +25,7 @@ export interface ChatEvent {
 export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
-  status: AichatInteractionStatusValue;
+  status: ValueOf<typeof AiInteractionStatus>;
 }
 
 export interface ModelUpdate extends ChatEvent {
@@ -54,7 +57,6 @@ export function isNotification(event: ChatEvent): event is Notification {
 
 export interface ChatCompletionApiResponse {
   messages: ChatMessage[];
-  session_id: number;
   flagged_content?: string;
 }
 
@@ -88,7 +90,7 @@ export interface AichatLevelProperties extends LevelProperties {
 /** Model customizations and model card information for aichat levels.
  *  selectedModelId is a foreign key to ModelDescription.id */
 export interface AiCustomizations {
-  selectedModelId: string;
+  selectedModelId: ValueOf<typeof AiChatModelIds>;
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
@@ -114,7 +116,7 @@ export interface ModelCardInfo {
 
 /** Metadata about a given model, common across all aichat levels */
 export interface ModelDescription {
-  id: string;
+  id: ValueOf<typeof AiChatModelIds>;
   name: string;
   overview: string;
   trainingData: string;
@@ -134,10 +136,12 @@ export enum Visibility {
 export interface LevelAichatSettings {
   initialCustomizations: AiCustomizations;
   visibilities: {[key in keyof AiCustomizations]: Visibility};
+  // This system prompt is hidden from students and adds additional safety features or hidden guidelines to a level.
+  levelSystemPrompt: string;
   /** If the presentation panel is hidden from the student. */
   hidePresentationPanel: boolean;
   /** list of ModelDescription.ids to limit the models available to choose from in the level */
-  availableModelIds: string[];
+  availableModelIds: ValueOf<typeof AiChatModelIds>[];
 }
 
 // The type of save action being performed (customization update, publish, model card save, etc).

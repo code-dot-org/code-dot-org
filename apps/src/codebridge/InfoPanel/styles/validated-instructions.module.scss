@@ -1,0 +1,136 @@
+@import 'color.scss';
+@import 'font.scss';
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+%instructions {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 200%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  overflow: scroll;
+
+  &.vertical {
+    flex-direction: column;
+  }
+}
+
+.instructions-dark {
+  @extend %instructions;
+  background-color: $neutral_dark;
+}
+
+.instructions-light {
+  @extend %instructions;
+  background-color: $light_white;
+}
+
+.item {
+  display: flex;
+  pointer-events: auto;
+  flex: 1;
+  opacity: 1;
+
+  &.itemVertical {
+    flex-direction: column;
+  }
+}
+
+.itemTitle {
+  font-size: 18px;
+  text-align: left;
+  overflow-wrap: break-word;
+  padding: 5px;
+
+  &Horizontal {
+    max-width: 140px;
+  }
+}
+
+.mainInstructions {
+  overflow-y: auto;
+  white-space: pre-wrap;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+%bubble {
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  animation: slidein 0.5s;
+}
+
+.bubble-dark {
+  @extend %bubble;
+  background-color: $neutral_dark90;
+  color: $light_white;
+
+  h1, h2, h3, h4 {
+    color: $light_white;
+  }
+}
+
+.bubble-light {
+  @extend %bubble;
+  background-color: $light_white;
+  color: $neutral_dark;
+}
+
+.buttonInstruction {
+  width: 100%;
+  height: 32px;
+}
+
+.markdownText {
+  line-height: 0;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0 0 10px 0;
+    font-family: $barlowSemiCondensed-semibold;
+    font-size: 1.75em;
+    line-height: 1.2em;
+  }
+
+  ol {
+    line-height: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  code {
+    color: $light_primary_700;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.validationIcon {
+  color: $light_affirmative_500;
+  width: 20px;
+  height: 20px;
+  margin-top: 6px;
+}
