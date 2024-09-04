@@ -53,17 +53,6 @@ def main
     options[:dry_run] = response == 'y'
   end
 
-  # Fetch token from secrets manager if not specified
-  unless options[:token]
-    print "\nFetching HuggingFace Access Token..."
-    secrets_manager = Aws::SecretsManager::Client.new
-    value = secrets_manager.get_secret_value(
-      {secret_id: "#{options[:environment]}/gen-ai-curriculum/huggingface_token"}
-    )
-    options[:token] = value.secret_string
-    puts "done".colorize(:light_green)
-  end
-
   # Prompt for image URI if not provided
   unless options.key?(:image_uri)
     unless options.key?(:image_uri_version)
@@ -77,6 +66,17 @@ def main
                 else
                   sagemaker.get_huggingface_llm_image_uri("huggingface", options[:image_uri_version])
                 end
+  end
+
+  # Fetch token from secrets manager if not specified
+  unless options[:token]
+    print "\nFetching HuggingFace Access Token..."
+    secrets_manager = Aws::SecretsManager::Client.new
+    value = secrets_manager.get_secret_value(
+      {secret_id: "#{options[:environment]}/gen-ai-curriculum/huggingface_token"}
+    )
+    options[:token] = value.secret_string
+    puts "done".colorize(:light_green)
   end
 
   puts "\nHuggingFace Image URI: " + image_uri.to_s.colorize(:light_cyan)
@@ -110,9 +110,15 @@ def main
     "HuggingFaceToken=#{options[:token]}"
 
   puts "Running command: " + cmd.colorize(:light_cyan)
-  Open3.popen3 cmd do |_stdin, stdout, _stderr, _thread|
-    while (line = stdout.gets)
+  Open3.popen3 cmd do |_stdin, stdout, stderr, thread|
+    while (line = stdout.gets || stderr.gets)
       puts line
+    end
+
+    # Handle the exit status after the command finishes
+    exit_status = thread.value
+    unless exit_status.success?
+      abort("Command failed with exit status: #{exit_status.exitstatus}")
     end
   end
   puts "Success!".colorize(:light_green)
