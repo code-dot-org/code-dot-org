@@ -197,6 +197,30 @@ class HocRoutesTest < Minitest::Test
       end
     end
 
+    it 'starts and ends given tutorial with tracking pixel, tracking time' do
+      DB.transaction(rollback: :always) do
+        before_start_row = get_session_hoc_activity_entry
+        assert_nil before_start_row
+
+        before_began_time = now_in_sequel_datetime
+        assert_successful_png_get '/api/hour/begin_mc.png'
+        after_began_time = now_in_sequel_datetime
+
+        after_start_row = get_session_hoc_activity_entry
+        assert 'mc', after_start_row[:tutorial]
+
+        assert_datetime_within(after_start_row[:pixel_started_at], before_began_time, after_began_time)
+        assert_nil after_start_row[:pixel_finished_at]
+
+        before_ended_time = now_in_sequel_datetime
+        assert_successful_png_get '/api/hour/finish_mc.png'
+        after_ended_time = now_in_sequel_datetime
+
+        after_end_row = get_session_hoc_activity_entry
+        assert_datetime_within(after_end_row[:pixel_finished_at], before_ended_time, after_ended_time)
+      end
+    end
+
     it 'respects sample weight and records weight for sessions in sample' do
       DB.transaction(rollback: :always) do
         DCDO.set('hoc_activity_sample_weight', 100)  # Sample 1/100 of the sessions.
