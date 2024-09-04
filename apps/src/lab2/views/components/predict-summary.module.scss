@@ -15,8 +15,7 @@
 
   :global(.fa) {
     vertical-align: middle;
-    font-size: 24px;
-    color: $brand_primary_default;
+    font-size: 16px;
   }
 }
 
@@ -24,11 +23,9 @@
   font-weight: bold;
   font-size: 12px;
   line-height: 12px;
-  display: block;
 }
 
 .responseLabel {
-  display: block;
   font-size: 14px;
   line-height: 14px;
 }

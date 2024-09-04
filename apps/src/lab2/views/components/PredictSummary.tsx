@@ -53,6 +53,21 @@ const PredictSummary: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.predictSummaryContainer}>
+      {responseCount !== null && numStudents !== null && (
+        <div className={moduleStyles.responses}>
+          <div className={moduleStyles.responseIcon}>
+            <i className="fa fa-user" />
+          </div>
+          <div>
+            <span className={moduleStyles.responseCount}>
+              {responseCount}/{numStudents}{' '}
+            </span>
+            <span className={moduleStyles.responseLabel}>
+              {commonI18n.studentsAnswered()}
+            </span>
+          </div>
+        </div>
+      )}
       <LinkButton
         href={summaryUrl}
         text={commonI18n.viewStudentResponses()}
@@ -61,21 +76,6 @@ const PredictSummary: React.FunctionComponent = () => {
         color={'black'}
         className={moduleStyles.studentResponsesButton}
       />
-      {responseCount !== null && numStudents !== null && (
-        <div className={moduleStyles.responses}>
-          <div className={moduleStyles.responseIcon}>
-            <i className="fa fa-user" />
-          </div>
-          <div>
-            <span className={moduleStyles.responseCount}>
-              {responseCount}/{numStudents}
-            </span>
-            <span className={moduleStyles.responseLabel}>
-              {commonI18n.studentsAnswered()}
-            </span>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
