@@ -20,7 +20,7 @@ export default function AssessmentsAnnouncementDialog() {
     if (dialogOpen) {
       analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_ANNOUNCEMENT_VIEWED);
     }
-  });
+  }, [dialogOpen]);
 
   if (!dialogOpen) {
     return null;
