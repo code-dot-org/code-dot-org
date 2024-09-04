@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-08-30T17:32:05.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL-genAI-output",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_23",
+    "encrypted": "false",
+    "long_instructions": "## Lesson 9: Outputs & Probabilities\r\n#### In this lesson, students **investigate** how language models generate **output** based on probabilities. They participate in activities like crafting a story and filling in a mad lib to understand how models select the most probable words from training data.\r\n\r\n## To Do:\r\n#### Watch the video below to learn more about the output step.\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-30T17:32:05.380+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations_08b_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations_08b_2024\"},{\"changed_at\":\"2024-08-30 17:32:38 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

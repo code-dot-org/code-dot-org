@@ -962,6 +962,7 @@ class User < ApplicationRecord
   # address associated with them because it wasn't required when they were
   # created. Those old accounts are allowed to skip the email validation.
   def teacher_email_required?
+    return false if Policies::Lti.lti? self
     # non-teachers are not relevant to this method.
     return false unless teacher? && purged_at.nil?
 
@@ -976,12 +977,12 @@ class User < ApplicationRecord
   end
 
   def email_or_hashed_email_required?
+    return false if Policies::Lti.lti? self
     return true if teacher?
     return false if manual?
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
-    return false if Policies::Lti.lti? self
     true
   end
 

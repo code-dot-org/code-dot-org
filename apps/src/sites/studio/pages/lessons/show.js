@@ -145,8 +145,17 @@ function displayDifferentiationChat() {
   const aiDiffFabMountPoint = document.getElementById(
     'ai-differentiation-fab-mount-point'
   );
+  const lessonData = getScriptData('lesson');
+  const lessonId = lessonData['id'];
+
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(<AiDiffFloatingActionButton />, aiDiffFabMountPoint);
+    ReactDOM.render(
+      <AiDiffFloatingActionButton
+        lessonId={lessonId}
+        unitDisplayName={lessonData['unit']['displayName']}
+      />,
+      aiDiffFabMountPoint
+    );
   }
 }
 
