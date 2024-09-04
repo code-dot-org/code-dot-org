@@ -133,6 +133,11 @@ export enum Visibility {
   EDITABLE = 'editable',
 }
 
+export enum AichatAccess {
+  YES = 'yes',
+  NO = 'no',
+}
+
 /**
  * Level-defined AI customizations for student chat bots set by levelbuilders on the level's properties.
  * Levelbuilders can define initial default values for each field, as well as their visibilities.
