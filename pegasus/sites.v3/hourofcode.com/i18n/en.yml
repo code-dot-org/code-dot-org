@@ -2598,7 +2598,7 @@
     after:
       header: "Continue learning after Transformers One"
       desc: "The Transformers One activity is an ideal first step for classrooms before tackling the open-ended projects in our new CS Connections curriculum. Once students learn basic coding, they can advance to CS Connections' cross-curricular projects."
-  
+
   hello_world:
     tiny_banner: "Check out the new [Transformers One theme](%{url}) of Hello World!"
     header: "Hello World"
@@ -2623,7 +2623,7 @@
       retro_desc: "Go old school! In this retro-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects"
       emoji: "Emoji"
       emoji_desc: "In this emoji-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
-  
+
   tools_page:
     heading: 'Explore Standalone Labs and Widgets'
     desc: 'Discover programming environments designed to support your creativity. Our labs offer supportive environments that meet learners where they are at, while still keeping the possibilities endless. Our widgets unravel core computer science concepts.'
@@ -2675,16 +2675,16 @@
     tools_el:
       heading: "Empower learning with standalone tools"
       desc: "Leverage our labs to create dynamic learning experiences that resonate with each student. These tools not only teach coding but also build confidence and spark curiosity through hands-on practice."
-      scaffolding: 
+      scaffolding:
         heading: "Scaffolded learning"
         desc: "Our programming environments are carefully scaffolded, providing the right level of support to students at every step of their coding journey."
-      independence: 
+      independence:
         heading: "Guided to independent"
         desc: "Ease the transition from structured learning to exploration, with tools that encourage students to apply their learning in open-ended projects."
-      engagement: 
+      engagement:
         heading: "Engagement through creativity"
         desc: "Coding becomes an adventure with labs and widgets that make learning not just educational, but exciting and genuinely fun."
-      differentiation: 
+      differentiation:
         heading: "Support differentiation"
         desc: "Cater to a range of abilities and interests, with tools that adapt to different skill levels, ensuring your students can find their path."
     widgets:
@@ -10715,6 +10715,63 @@
 
   language_label: "Language"
 
+  hoc_homepage:
+    what_is_hoc:
+      heading: "What is the Hour of Code?"
+      desc: "The Hour of Code is a worldwide movement that aims to introduce millions of students to computer science through one-hour coding activities. Through Hour of Code, we aim to demystify coding and show that anyone can learn the basics, inspiring future interest in computer science."
+    host:
+      heading: "Host an Hour of Code"
+      desc: "Your class or school can join millions around the world doing the Hour of Code! Registration for the annual Computer Science Education Week celebration begins in September. Though, Hour of Code is available year-round. Register today!"
+      button: "Register your event"
+    resources:
+      heading: "All the resources you need for your Hour of Code"
+      desc: "Bringing Hour of Code to your classroom or school is easy! Follow our step-by-step guides for preparing for, running, and celebrating your event. Check out our resources for everything you'll need!"
+      button:
+        how_to: "How-To Guides"
+        explore_resources: "Explore resources"
+    global:
+      heading: "Hour of Code is a global movement"
+      desc: "When you participate in the Hour of Code, you join a movement of millions across the globe."
+      stats:
+        served: "Hours of Code served"
+        countries: "Countries with Hour of Code"
+        events: "Events registered so far in %{campaign_date_year}"
+      button:
+        host: "Host an Hour of Code"
+        try_activites: "Try activities"
+
+  hoc_events:
+    heading: "Register to host an Hour of Code"
+    desc: "Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October."
+    button: "Register my event"
+    register:
+      heading: "Register your event"
+      disclaimer: "Registrations close on %{close_date}"
+      desc: "Join millions worldwide in the Hour of Code! Whether you're hosting an event at school, in the community, or online, we invite you to register your event today."
+      how_to: "Looking for more guidance on how to host an Hour of Code? [Check out our How-To Guide](%{how_to_url})"
+    resources:
+      heading: "Additional resources for your Hour of Code"
+      hoc:
+        title: "Hour of Code Resources"
+        desc: "Find all the resources you need—print and digital—to bring attention to your Hour of Code."
+        button: "View resources"
+      host:
+        title: "How to Host an Hour"
+        desc: "A step-by-step guide to preparing for, running, and celebrating your Hour of Code event with your class or group."
+        button: "Read the guide"
+      host:
+        title: "Choose an Activity"
+        desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
+        button: "Explore activities"
+
+  hoc_activites:
+    heading: "Explore activities"
+    desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
+    previous:
+      heading: "Looking for previous years' activities?"
+      desc: "We've moved all previous activities [here](%{archive_url})."
+      button: "View archived activities"
+
   before_hoc: "Before Hour of Code"
   day_of_hoc: "Day of Hour of Code"
   after_hoc: "After Hour of Code"
@@ -11486,7 +11543,7 @@
   thank_you_page_teachers_students_description: "Tess Campion, Willa Campion, Jamie Delerme, Cindy Noriega, Tara Vodopich"
 
   about_us_page_title: "About Us"
-  about_us_page_hero_description: "Code.org® is an education innovation nonprofit dedicated to the vision that every student in every school has the opportunity to learn computer science as part of their core K-12 education. We expand access to computer science in schools, with a focus on increasing participation by young women and students from other underrepresented groups.  The leading provider of K-12 computer science curriculum in the largest school districts in the United States, Code.org also organizes the annual [Hour of Code](%{hour_url}) campaign, which has engaged more than 15% of all students in the world. Code.org is supported by generous donors including Microsoft, Amazon, Google and [many others.](%{others_url})"
+  about_us_page_hero_description: "Code.org® is an education innovation nonprofit dedicated to the vision that every student in every school has the opportunity to learn computer science and artificial intelligence as part of their core K-12 education. We expand access to and participation in computer science in schools, with a focus on increasing participation by young women and students from other underrepresented groups.  The leading provider of K-12 computer science curriculum in the largest school districts in the United States, Code.org also organizes the annual [Hour of Code](%{hour_url}) campaign, which has engaged more than 15% of all students in the world. Code.org is supported by generous donors including Microsoft, Amazon, Google and [many others.](%{others_url})"
   about_us_page_section_title_1: "Over 80 million students and 2 million teachers on Code.org"
   about_us_page_statistic_figcaption: "Code.org participation from the 2021-2022 school year. [See disaggregated data.](%{data_url})"
   about_us_page_statistic_description: "Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. The vast majority of the students on Code.org are from student groups historically underrepresented in computer science. Increasing diversity in computer science is foundational to our work, and [we encourage you to read more about our efforts](%{diversity_url})."
