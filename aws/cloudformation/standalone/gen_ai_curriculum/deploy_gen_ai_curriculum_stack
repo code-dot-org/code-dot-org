@@ -4,10 +4,13 @@ require 'aws-sdk-secretsmanager'
 require 'colorize'
 require 'optparse'
 require 'open3'
-require_relative '../../../../lib/cdo/pycall'
 require_relative './config'
 
 VALID_ENVIRONMENTS = %w[production test].freeze
+# Manually retrieved by running get_huggingface_llm_image_uri using the Sagemaker Python SDK.
+# See script instructions for how to change or update this value.
+HUGGINGFACE_IMAGE_URI = "763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-tgi-inference:2.3.0-tgi2.2.0-gpu-py310-cu121-ubuntu22.04-v2.0".freeze
+HUGGINGFACE_IMAGE_URI_VERSION = "2.2.0".freeze
 
 def main
   options = {}
@@ -55,17 +58,15 @@ def main
 
   # Prompt for image URI if not provided
   unless options.key?(:image_uri)
-    unless options.key?(:image_uri_version)
-      print "HuggingFace Image URI version (blank for latest): "
-      options[:image_uri_version] = gets.chomp
-    end
-    puts "\nFetching HuggingFace Image URI..."
-    sagemaker = PyCall.import_module("sagemaker.huggingface")
-    image_uri = if options[:image_uri_version].empty?
-                  sagemaker.get_huggingface_llm_image_uri("huggingface")
-                else
-                  sagemaker.get_huggingface_llm_image_uri("huggingface", options[:image_uri_version])
-                end
+    puts "\nHuggingFace Image URI Details".colorize(:light_yellow)
+    puts "-- Image URI version: " + HUGGINGFACE_IMAGE_URI_VERSION.colorize(:light_cyan)
+    puts "-- Image URI: " + HUGGINGFACE_IMAGE_URI.colorize(:light_cyan)
+    puts "\nTo generate a new image URI, use the #{'get_huggingface_llm_image_uri'.colorize(:light_blue)} Python API from the Sagemaker Python SDK. For example:"
+    puts "\n\t" + "from sagemaker.huggingface import get_huggingface_llm_image_uri".colorize(:light_white)
+    puts "\t" + "image_uri = get_huggingface_llm_image_uri(\"huggingface\", version=\"2.2.0\")".colorize(:light_white)
+    print "\nUse a custom image URI (blank to proceed with current): "
+    response = gets.chomp
+    image_uri = response.empty? ? HUGGINGFACE_IMAGE_URI : response
   end
 
   # Fetch token from secrets manager if not specified
