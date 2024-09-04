@@ -7,6 +7,7 @@ import {
 } from '@codebridge/redux/consoleRedux';
 
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 
@@ -49,6 +50,7 @@ const setUpPyodideWorker = () => {
         break;
       case 'error':
         getStore().dispatch(appendErrorMessage(parseErrorMessage(message)));
+        getStore().dispatch(setIsRunning(false));
         break;
       case 'system_error':
         getStore().dispatch(appendSystemError(message));
