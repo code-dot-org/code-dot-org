@@ -369,6 +369,9 @@ const EVENTS = {
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
+  SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
+  SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
+    'Unauthorized user attempts to submit aichat request and fails',
 };
 
 const EVENT_GROUP_NAMES = {

@@ -13,7 +13,7 @@ import {
   getCurrentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -441,6 +441,14 @@ export const submitChatContents = createAsyncThunk(
         aiCustomizations,
         aichatContext
       );
+      analyticsReporter.sendEvent(
+        EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS,
+        {
+          levelPath: window.location.pathname,
+          userMessage: newUserMessageText,
+        },
+        PLATFORMS.BOTH
+      );
     } catch (error) {
       await handleChatCompletionError(error as Error, newUserMessage, dispatch);
       return;
@@ -513,6 +521,15 @@ async function handleChatCompletionError(
         notificationType: 'error',
         timestamp: Date.now(),
       })
+    );
+    analyticsReporter.sendEvent(
+      EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
+      {
+        levelPath: window.location.pathname,
+        userType,
+        userMessage: newUserMessage.chatMessageText,
+      },
+      PLATFORMS.BOTH
     );
   } else {
     Lab2Registry.getInstance()
