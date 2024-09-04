@@ -90,7 +90,7 @@ export interface AichatState {
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
-  userHasAichatAccess: UserHasAichatAccessType | undefined;
+  userHasAichatAccess: AichatAccess | undefined;
 }
 
 const initialState: AichatState = {
