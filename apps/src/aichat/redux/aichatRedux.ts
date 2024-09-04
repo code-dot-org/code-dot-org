@@ -38,7 +38,6 @@ import {
   LevelAichatSettings,
   ModelCardInfo,
   SaveType,
-  AichatAccess,
   ViewMode,
   Visibility,
   isModelUpdate,
@@ -90,7 +89,7 @@ export interface AichatState {
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
-  userHasAichatAccess: AichatAccess | undefined;
+  userHasAichatAccess: boolean | undefined;
 }
 
 const initialState: AichatState = {
@@ -242,7 +241,7 @@ export const onSaveComplete =
       )
         ? currentAiCustomizations[typedProperty]
         : 'NULL';
-      if (currentSaveType && userHasAichatAccess === AichatAccess.YES) {
+      if (currentSaveType && userHasAichatAccess) {
         analyticsReporter.sendEvent(
           saveTypeToAnalyticsEvent[currentSaveType],
           {
@@ -386,11 +385,7 @@ export const fetchUserHasAichatAccess = createAsyncThunk(
   async (__, thunkAPI) => {
     try {
       const {userHasAccess} = await getUserHasAichatAccess();
-      thunkAPI.dispatch(
-        setUserHasAichatAccess(
-          userHasAccess ? AichatAccess.YES : AichatAccess.NO
-        )
-      );
+      thunkAPI.dispatch(setUserHasAichatAccess(userHasAccess));
     } catch (error) {
       if (!(error instanceof NetworkError && error.response.status === 403)) {
         Lab2Registry.getInstance()
@@ -592,7 +587,7 @@ const aichatSlice = createSlice({
     },
     setUserHasAichatAccess: (
       state,
-      action: PayloadAction<AichatAccess | undefined>
+      action: PayloadAction<boolean | undefined>
     ) => {
       state.userHasAichatAccess = action.payload;
     },

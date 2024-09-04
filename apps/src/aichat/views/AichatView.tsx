@@ -34,12 +34,7 @@ import {
   updateAiCustomization,
 } from '../redux/aichatRedux';
 import {getNewMessageId} from '../redux/utils';
-import {
-  AichatAccess,
-  AichatLevelProperties,
-  Notification,
-  ViewMode,
-} from '../types';
+import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
@@ -199,7 +194,7 @@ const AichatView: React.FunctionComponent = () => {
 
   const sendAnalytics = useCallback(
     (event: string, properties: object) => {
-      if (userHasAichatAccess === AichatAccess.YES) {
+      if (userHasAichatAccess) {
         analyticsReporter.sendEvent(event, properties, PLATFORMS.BOTH);
       }
     },
