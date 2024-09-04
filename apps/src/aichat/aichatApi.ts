@@ -15,16 +15,18 @@ import {
   ChatEvent,
   ChatMessage,
   LogChatEventApiResponse,
+  UserHasAichatAccessResponse,
 } from './types';
 
 const ROOT_URL = '/aichat';
 const paths = {
-  CHAT_COMPLETION_URL: `${ROOT_URL}/chat_completion`,
   CHAT_CHECK_SAFETY_URL: `${ROOT_URL}/check_message_safety`,
+  CHAT_COMPLETION_URL: `${ROOT_URL}/chat_completion`,
+  GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
   LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
   START_CHAT_COMPLETION_URL: `${ROOT_URL}/start_chat_completion`,
-  GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
   STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
+  USER_HAS_AICHAT_ACCESS_URL: `${ROOT_URL}/user_has_aichat_access`,
 };
 
 const MAX_POLLING_TIME_MS = 45000;
@@ -265,4 +267,15 @@ function getUpdatedMessages(
     default:
       throw new Error(`Unexpected status: ${executionStatus}`);
   }
+}
+
+/**
+ * This function sends a GET request to the aichat's userHasAichatAccess backend controller action,
+ * then returns true if the user has aichat access and false otherwise.
+ */
+export async function getUserHasAichatAccess(): Promise<UserHasAichatAccessResponse> {
+  const response = await HttpClient.fetchJson<UserHasAichatAccessResponse>(
+    paths.USER_HAS_AICHAT_ACCESS_URL
+  );
+  return response.value;
 }

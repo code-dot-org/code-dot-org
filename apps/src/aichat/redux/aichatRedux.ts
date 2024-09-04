@@ -22,7 +22,11 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage, getStudentChatHistory} from '../aichatApi';
+import {
+  getStudentChatHistory,
+  getUserHasAichatAccess,
+  postAichatCompletionMessage,
+} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
@@ -85,6 +89,7 @@ export interface AichatState {
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
+  userHasAichatAccess: 'yes' | 'no' | undefined;
 }
 
 const initialState: AichatState = {
@@ -102,6 +107,7 @@ const initialState: AichatState = {
   viewMode: ViewMode.EDIT,
   saveInProgress: false,
   currentSaveType: undefined,
+  userHasAichatAccess: undefined,
 };
 
 // THUNKS
@@ -193,8 +199,12 @@ const saveAiCustomization = async (
 // Updates the chat window and reports analytics as necessary.
 export const onSaveComplete =
   () => (dispatch: AppDispatch, getState: () => RootState) => {
-    const {savedAiCustomizations, currentAiCustomizations, currentSaveType} =
-      getState().aichat;
+    const {
+      savedAiCustomizations,
+      currentAiCustomizations,
+      currentSaveType,
+      userHasAichatAccess,
+    } = getState().aichat;
 
     const changedProperties = findChangedProperties(
       savedAiCustomizations,
@@ -231,7 +241,7 @@ export const onSaveComplete =
       )
         ? currentAiCustomizations[typedProperty]
         : 'NULL';
-      if (currentSaveType) {
+      if (currentSaveType && userHasAichatAccess === 'yes') {
         analyticsReporter.sendEvent(
           saveTypeToAnalyticsEvent[currentSaveType],
           {
@@ -368,6 +378,24 @@ export const addChatEvent =
       ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
     }
   };
+
+// This thunk's callback function returns if a user has aichat acess.
+export const fetchUserHasAichatAccess = createAsyncThunk(
+  'aichat/fetchUserHasAichatAccess',
+  async (__, thunkAPI) => {
+    try {
+      const {userHasAccess} = await getUserHasAichatAccess();
+      thunkAPI.dispatch(setUserHasAichatAccess(userHasAccess ? 'yes' : 'no'));
+    } catch (error) {
+      if (!(error instanceof NetworkError && error.response.status === 403)) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error in fetching user aichat access', error as Error);
+        return;
+      }
+    }
+  }
+);
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -539,6 +567,12 @@ const aichatSlice = createSlice({
     },
     setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
       state.studentChatHistory = action.payload;
+    },
+    setUserHasAichatAccess: (
+      state,
+      action: PayloadAction<'yes' | 'no' | undefined>
+    ) => {
+      state.userHasAichatAccess = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -768,15 +802,16 @@ const {
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
-  removeUpdateMessage,
-  setNewChatSession,
   clearChatMessages,
-  setShowWarningModal,
-  resetToDefaultAiCustomizations,
-  setViewMode,
-  setStartingAiCustomizations,
-  setAiCustomizationProperty,
-  setStudentChatHistory,
-  setModelCardProperty,
   endSave,
+  removeUpdateMessage,
+  resetToDefaultAiCustomizations,
+  setAiCustomizationProperty,
+  setModelCardProperty,
+  setNewChatSession,
+  setShowWarningModal,
+  setStartingAiCustomizations,
+  setStudentChatHistory,
+  setUserHasAichatAccess,
+  setViewMode,
 } = aichatSlice.actions;
