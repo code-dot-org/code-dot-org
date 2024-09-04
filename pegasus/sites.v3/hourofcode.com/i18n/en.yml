@@ -2173,7 +2173,7 @@
       try_hoc:
         title: "Try an Hour of Code"
         desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
-        button_label: "See Hour of Code activites"
+        button_label: "See Hour of Code activities"
       NAIPI:
         title: "NAIPI"
         desc: "Code.org’s Native American and Indigenous Peoples Initiative presents the integration of Native American perspectives and cultural richness in education and technology. "
@@ -10738,7 +10738,7 @@
         events: "Events registered so far in %{campaign_date_year}"
       button:
         host: "Host an Hour of Code"
-        try_activites: "Try activities"
+        try_activities: "Try activities"
 
   hoc_events:
     heading: "Register to host an Hour of Code"
@@ -10764,7 +10764,7 @@
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
 
-  hoc_activites:
+  hoc_activities:
     heading: "Explore activities"
     desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
     previous:
