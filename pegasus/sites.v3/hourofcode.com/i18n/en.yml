@@ -10828,7 +10828,7 @@
       button: "View archived activities"
 
   hoc_faq:
-    heading: "Frequently Asked Questions"
+    heading: "Frequently asked questions"
     limitations:
       q: "Are there limitations to how I can use the Hour of Code logo or name?"
       a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within our branding guidelines. Please see [these guidelines for usage](%{guidelines_url}) or contact [marketing@code.org](%{email_url}) with any questions."
@@ -10840,10 +10840,10 @@
       a: "The Hour of Code takes place each year during Computer Science Education Week. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code event all year-round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer Admiral Grace Murray Hopper (December 9, 1906)."
     why_cs:
       q: "Why computer science?"
-      a: "Computer Science is foundational and impactful for students' futures. A recent study showed that participating in computer science education causes an earnings increase for all students, with even more significant impacts for historically underrepresented groups. By starting early, students will have a foundation for success in any 21st-century career path. See more stats here."
+      a: "Computer Science is foundational and impactful for students' futures. A recent study showed that participating in computer science education causes an earnings increase for all students, with even more significant impacts for historically underrepresented groups. By starting early, students will have a foundation for success in any 21st-century career path."
     how_do_i_participate:
       q: "How do I participate in the Hour of Code?"
-      a: "[Start planning here](%{howto_url}) by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community — like in an extracurricular club, non-profit, or at work."
+      a: "[Start planning here](%{howto_url}) by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community—like in an extracurricular club, non-profit, or at work."
     who_is_behind_hoc:
       q: "Who is behind the Hour of Code?"
       a: "The Hour of Code is organized by Code.org as well as an unprecedented coalition of partners that have come together to support the Hour of Code—including Microsoft, Apple, Amazon, Boys and Girls Clubs of America, and the College Board."
@@ -10863,7 +10863,7 @@
         list_03: "Go unplugged. We offer [tutorials that require no computer at all](%{unplugged_url})."
     account:
       q: "Do students need to log on using an account?"
-      a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the [follow-on courses](%{courses_url}) require account creation to save student progress. Also, signing up for the Hour of Code does NOT automatically create a Code Studio account. If you do want to create accounts for your students, please follow these instructions."
+      a: "No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the [follow-on courses](%{courses_url}) require account creation to save student progress. Also, signing up for the Hour of Code does NOT automatically create a Code Studio account. If you do want to create accounts for your students, please [follow these instructions](%{instructions_url})."
     certificates:
       q: "Where can I print certificates for my students?"
       a: "Go to our [certificates page](%{certificates_url}) where you can print certificates for your entire class ahead of time."
@@ -10873,23 +10873,23 @@
     how_much:
       q: "How much can one learn in an hour?"
       a:
-        body_01: "The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that Computer Science (CS) is fun and creative, and that it's accessible at all ages and for all students, regardless of background.. Millions of the participating teachers and students have decided to go beyond one hour - to learn for a whole day or a whole week or longer, and many students have decided to enroll in a CS course (or college major) as a result."
+        body_01: "The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that Computer Science (CS) is fun and creative, and that it's accessible at all ages and for all students, regardless of background. Millions of the participating teachers and students have decided to go beyond one hour—to learn for a whole day or a whole week or longer, and many students have decided to enroll in a CS course (or college major) as a result."
         body_02: "Besides the students, another \"learner\" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending [professional development](%{pd_url}) or follow-on [online courses](%{online_url}), or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of."
         body_03: "Above all, what all participants can learn in an hour is that anyone can learn computer science!"
-    keep_learing:
+    keep_learning:
       q: "How do I keep learning after the Hour of Code?"
-      a: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all of our tutorials and curriculum to be available on our site in perpetuity. Please go to our resources for event how-to guides and other resources to help make your Hour of Code event a success."
+      a: "Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all of our tutorials and curriculum to be available on our site in perpetuity. Please [see our resources page](%{resources_url}) and [event how-to guides](%{events_url}) to help make your Hour of Code event a success."
     bug:
       q: "I found a bug in an Hour of Code activity! What should I do?"
       a:
-        body_01: "Oh no! If you've come across a bug in an Hour of Code activity - first check the URL for the activity you are on. If the URL starts with studio.code.org, our Code.org Support team can help! Click the question mark icon in the upper right corner of your screen, then select \"Report a problem\" from the dropdown menu."
+        body_01: "Oh no! If you've come across a bug in an Hour of Code activity first check the URL for the activity you are on. If the URL starts with studio.code.org, our Code.org Support team can help! Click the question mark icon in the upper right corner of your screen, then select \"Report a problem\" from the dropdown menu."
         body_02: "If the URL does not start with studio.code.org, you are likely working on a third party activity and will need to reach out to that company's support team for further assistance."
     screen_reader:
       q: "How can I do an Hour of Code with a screen reader?"
       a:
         body_01: "The Hour of Code activities page includes a [filter for activities compatible with screen readers](%{filter_url})."
-        body_02: "If you use a screen reader, the [Quorum tutorial for beginners](%{beginners_url)}) or the [Quorum tutorial for comfortable students](%{comfortable_url}) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum."
-        body_03: "If you use a screen reader and are interested in robotics, try the Dash Joins a Dance Circle activity (for grades K-5) or the [Dash Joins a Dance Circle with Functions activity](%{dash_url}) (for grades 6-8) from Lauren Milne."
+        body_02: "If you use a screen reader, the [Quorum tutorial for beginners](%{beginners_url}) or the [Quorum tutorial for comfortable students](%{comfortable_url}) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum."
+        body_03: "If you use a screen reader and are interested in robotics, try the [Dash Joins a Dance Circle activity](%{k5_url}) (for grades K-5) or the [Dash Joins a Dance Circle with Functions activity](%{6_8_url}) (for grades 6-8) from Lauren Milne."
         body_04: "[For grades K-5](%{k5_url})"
         body_05: "[For grades 6-8](%{6_8_url})"
     without_audio:
@@ -10901,11 +10901,11 @@
     blind:
       q: "What tutorials support students who are blind or low vision?"
       a:
-        body_01: "For students who use a screen reader, the [Quorum tutorial for beginners](%{beginners_url)}) or the [Quorum tutorial for comfortable students](%{comfortable_url}) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum."
-        body_02: "If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more."
+        body_01: "For students who use a screen reader, the [Quorum tutorial for beginners](%{beginners_url}) or the [Quorum tutorial for comfortable students](%{comfortable_url}) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum."
+        body_02: "If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control, and more."
     other_needs:
       q: "How can I support students with different learning needs?"
-      a: "Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can [give everyone a certificate](%{certificate_url}) no matter how many puzzles or challenges they complete within the hour. Pair programming is another great way to teach collaboration and have students work together to solve problems."
+      a: "Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD, or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can [give everyone a certificate](%{certificate_url}) no matter how many puzzles or challenges they complete within the hour. Pair programming is another great way to teach collaboration and have students work together to solve problems."
     company:
       q: "How can my company get involved in the Hour of Code?"
       a:
