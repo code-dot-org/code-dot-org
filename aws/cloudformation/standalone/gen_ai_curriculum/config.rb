@@ -5,7 +5,7 @@ module Config
   # Configuration for each endpoint used in the Gen AI Curriculum. Required properties:
   #   hf_model_id: HuggingFace model ID
   #   model_id: App-wide model ID (from shared constants)
-  #   model_name: Short name for naming resources (letters only)
+  #   model_name: Short name for naming resources (alphanumeric only)
   #   instance_type: EC2 Instance Type for endpoint
   #   min_num_instances (production only): Minimum number of deployed instances used for autoscaling on production
   #     on test, only a single instance will be used without autoscaling to limit resource usage
@@ -31,8 +31,8 @@ module Config
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:BIOMISTRAL],
       model_name: "BioMistral",
       instance_type: {
-        production: "ml.g5.xlarge",
-        test: "ml.g5.xlarge"
+        production: "ml.g5.2xlarge",
+        test: "ml.g5.2xlarge"
       },
       min_num_instances: 2,
       max_num_instances: 2,

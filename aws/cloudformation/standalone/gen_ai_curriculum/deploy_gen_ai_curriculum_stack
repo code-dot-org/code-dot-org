@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'aws-sdk-applicationautoscaling'
+require 'aws-sdk-secretsmanager'
 require 'colorize'
 require 'optparse'
 require 'open3'
@@ -52,10 +53,15 @@ def main
     options[:dry_run] = response == 'y'
   end
 
-  # Prompt for token if not provided
+  # Fetch token from secrets manager if not specified
   unless options[:token]
-    print "HuggingFace Access Token: "
-    options[:token] = gets.chomp
+    print "\nFetching HuggingFace Access Token..."
+    secrets_manager = Aws::SecretsManager::Client.new
+    value = secrets_manager.get_secret_value(
+      {secret_id: "#{options[:environment]}/gen-ai-curriculum/huggingface_token"}
+    )
+    options[:token] = value.secret_string
+    puts "done".colorize(:light_green)
   end
 
   # Prompt for image URI if not provided
