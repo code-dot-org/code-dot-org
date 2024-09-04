@@ -1,9 +1,12 @@
+const modelDescriptions = require('../../static/aichat/modelDescriptions.json');
+
 const {
-  modelNames,
   headerWidgetConfig,
   crossModelWidgetsConfig,
   logWidgetsConfig,
 } = require('./constants');
+
+const modelNames = modelDescriptions.map(description => description.id);
 
 const getModelSpecificConfig = modelName => [
   {

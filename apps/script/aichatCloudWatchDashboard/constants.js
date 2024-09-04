@@ -1,12 +1,4 @@
-const DASHBOARD_NAME = 'GenAI';
-
-const modelNames = [
-  'gen-ai-mistral-7b-inst-v01',
-  'gen-ai-arithmo2-mistral-7b',
-  'gen-ai-biomistral-7b',
-  'gen-ai-karen-creative-mistral-7b',
-  'gen-ai-mistral-pirate-7b',
-];
+const DASHBOARD_NAME = 'GenAICurriculum';
 
 const headerWidgetConfig = {
   height: 2,
@@ -209,7 +201,6 @@ const logWidgetsConfig = [
 ];
 
 module.exports = {
-  modelNames,
   headerWidgetConfig,
   crossModelWidgetsConfig,
   logWidgetsConfig,
