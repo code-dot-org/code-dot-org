@@ -10909,6 +10909,44 @@
         body_03: "Include language on your page (or in the footer), including links to the CSEdWeek and Code.org websites, that says the following: _\"The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.\"_"
         body_04: "No use of \"Hour of Code\" or \"Hora del Código\" in app names."
 
+  how_to:
+    heading: "Your go-to guide starts here!"
+    desc: "Choose the right guide for you:"
+    label:
+      before_hoc: "Before Hour of Code"
+      day_of_hoc: "During Hour of Code"
+      after_hoc: "After Hour of Code"
+      step_01: "Step 1"
+      step_02: "Step 2"
+      step_03: "Step 3"
+      step_04: "Step 4"
+      step_05: "Step 5"
+      step_06: "Step 6"
+      step_07: "Step 7"
+      step_08: "Step 8"
+      register: "Register your event"
+      choose: "Choose your activities"
+      plan_event: "Plan your event"
+      plan_hour: "Plan your hour"
+      prepare: "Prepare for your event"
+      spread_word: "Help spread the word"
+      get_coding: "Get coding!"
+      celebrate: "Celebrate!"
+      after: "After the event"
+      beyond: "Beyond Hour of Code"
+    button:
+      register: "Register your event"
+      select_activity: "Select a coding activity"
+      get_resources: "Get resources to run an Hour of code"
+      print_certificates: "Print certificates"
+      continue_learning: "Continue learning with Code.org"
+    teachers:
+      heading: "Teachers"
+      top:
+        heading: "How to plan your Hour of Code"
+        desc: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show how anyone can learn the basics. This year, our campaign aims to showcase how computer science drives innovation across various fields, making it relatable and exciting for students. Whether you or your students are experienced coders or you all are setting out on your very first computer science expedition, this Hour of Code shows you how we're making the invisible, visible with Computer Science."
+
+
   before_hoc: "Before Hour of Code"
   day_of_hoc: "Day of Hour of Code"
   after_hoc: "After Hour of Code"
