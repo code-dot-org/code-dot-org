@@ -1257,7 +1257,7 @@ And(/^I wait until element "([^"]*)" has the value "([^"]*)"$/) do |selector, va
   end
 end
 
-When /^I press keys "([^"]*)" (\d+) times?$/ do |keys|
+When /^I press keys "([^"]*)"$/ do |keys|
   @browser.action.send_keys(*convert_keys(keys)).perform
 end
 
