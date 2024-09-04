@@ -8,6 +8,7 @@ import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import ControlButtons from './ControlButtons';
 import GraphModal from './GraphModal';
 
 import moduleStyles from './console.module.scss';
@@ -72,6 +73,8 @@ const Console: React.FunctionComponent = () => {
       className={moduleStyles.consoleContainer}
       headerContent={'Console'}
       rightHeaderContent={headerButton()}
+      leftHeaderContent={<ControlButtons />}
+      headerClassName={moduleStyles.consoleHeader}
     >
       <div className={moduleStyles.console}>
         {codeOutput.map((outputLine, index) => {
