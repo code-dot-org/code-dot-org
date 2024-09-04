@@ -2228,7 +2228,7 @@
       try_hoc:
         title: "Try an Hour of Code"
         desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
-        button_label: "See Hour of Code activites"
+        button_label: "See Hour of Code activities"
       NAIPI:
         title: "NAIPI"
         desc: "Code.org’s Native American and Indigenous Peoples Initiative presents the integration of Native American perspectives and cultural richness in education and technology. "
@@ -10793,7 +10793,7 @@
         events: "Events registered so far in %{campaign_date_year}"
       button:
         host: "Host an Hour of Code"
-        try_activites: "Try activities"
+        try_activities: "Try activities"
 
   hoc_events:
     heading: "Register to host an Hour of Code"
@@ -10819,13 +10819,95 @@
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
 
-  hoc_activites:
+  hoc_activities:
     heading: "Explore activities"
     desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
     previous:
       heading: "Looking for previous years' activities?"
       desc: "We've moved all previous activities [here](%{archive_url})."
       button: "View archived activities"
+
+  resources_page:
+    heading: "Resources for Hour of Code"
+    desc: "Find all the resources you need for your Hour of Code. Not sure where to begin? Start with our [how-to guide](%{how_to_url}) for hosting an Hour of Code!"
+    sections:
+      handouts: "Handouts"
+      stickers: "Stickers"
+      videos: "Videos"
+      posters: "Posters"
+      emails: "Emails"
+      logos: "Logos"
+    handouts:
+      heading: "Helpful reading for getting started"
+      desc: "Read and share these helpful handouts about the Hour of Code movement and hosting and participating in an Hour of Code event. These resources will guide you through the basics and help you make the most of your Hour."
+      one_pager:
+        title: "Hour of Code One-Pager"
+        desc: "Get a quick overview of the Hour of Code movement with this one-page document. It covers the basics, including the purpose, benefits, and how anyone can get involved."
+        button: "Get the One-Pager"
+    stickers:
+      heading: "Celebrate with stickers"
+      desc: "Get participants at your event excited with our Hour of Code stickers! Each sticker measures 1” in diameter, with 63 stickers per sheet."
+      button: "Download stickers"
+    videos:
+      heading: "Inspire students with these videos"
+      desc: "Start off your Hour of Code with some familiar faces explaining why doing an Hour of Code is so important."
+    posters:
+      heading: "Decorate your classroom with inspiration"
+      desc: "Get your classroom in the Hour of Code spirit with these free posters—featuring popular characters, themes, and inspiring quotes about computer science and technology!"
+    emails:
+      heading: "Email language for outreach"
+      desc: "Use our ready-made email templates to invite community members, request volunteers, and reach out to local politicians for your Hour of Code event, and more. Simply copy, customize, and send!"
+      button:
+        copy_subject: "Copy subject line"
+        copy_text: "Copy body text"
+      generic:
+        title: "Ask your school, employer, or friends to sign up:"
+        subject: "**Subject Line:** Join Tens of Millions of Students For An Hour of Code!"
+        body_01: "Computers are everywhere, transforming every industry."
+        body_02: "The Hour of Code has a proven track record of making history. More than 100 million students have tried an Hour of Code. It's been showcased on the homepages of Google, MSN, Yahoo!, and Disney, with over 100 partners—including every Apple Store worldwide—joining the movement. Even President Obama and Prime Minister Trudeau wrote their first lines of code with us!"
+        body_03: "This year, let's make the Hour of Code even bigger. Join us for the %{campaign_date_year} Hour of Code during Computer Science Education Week, %{campaign_date_full}. Spread the word, host an event, encourage a local school to participate, or try the Hour of Code yourself. Everyone can benefit from learning the basics!"
+        body_04: "Get started at [hourofcode.com](%{hoc_url})."
+      parents:
+        title: "Keep Parents Involved! Let them know about your school event:"
+        subject: "**Subject Line:** Hour of Code is changing students' futures."
+        body_01: "Dear Parents,"
+        body_02: "We all dream of a bright future for our children. In today's technology-driven world, their success will increasingly depend on understanding how technology works."
+        body_03: "That's why our school is excited to join the largest learning event in history: The Hour of Code, during Computer Science Education Week (%{campaign_date_full}). With over 100 million students worldwide participating, the Hour of Code is a powerful way to prepare our students with essential 21st-century skills. During this week, your children will learn things like basic coding concepts, problem-solving skills, and collaboration and teamwork, which will help them in many dynamic and professional fields in the future."
+        body_04: "We want to make our Hour of Code event at [SCHOOL NAME] truly impactful. To do this, we need your help! Please consider volunteering, spreading the word through local media and social channels, and even hosting additional Hour of Code events in our community."
+        body_05: "This is our chance to make a real difference in the future of education in [TOWN/CITY NAME]. For more details and to get involved, visit [hourofcode.com](%{hoc_url})."
+        body_06: "Let's prepare our children for a brighter future together!"
+      press:
+        title: "Invite media to attend your event:"
+        subject: "**Subject Line:** Local School Launches Exciting Journey into Computer Science!"
+        body_01: "Computers are everywhere, transforming every industry."
+        body_02: "The Hour of Code has a proven track record of making history. More than 100 million students have tried an Hour of Code. It's been showcased on the homepages of Google, MSN, Yahoo!, and Disney, with over 100 partners—including every Apple Store worldwide—joining the movement. Even President Obama and Prime Minister Trudeau wrote their first lines of code with us!"
+        body_03: "That's why every one of the [X number] students at [SCHOOL NAME] is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (%{campaign_date_full})."
+        body_04: "I'm writing to invite you to attend our kickoff assembly and to see the kids start the activity on [DATE]."
+        body_05: "Contact: [YOUR NAME], [TITLE], cell: (XXX) XXX-XXXX When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]"
+        body_06: "I look forward to being in touch."
+      politician:
+        title: "Invite a local politician to your school's event:"
+        subject: "**Subject Line:** Join us as we shape the future with an Hour of Code!"
+        body_01: "Dear [Mayor/Governor/Representative/Senator LAST NAME]:"
+        body_02: "Did you know that computing is the top source of wages in the U.S.? Right now, there are more than 700,000 computing jobs available across the country, but last year, only 100,000 computer science students graduated to fill them. There's a big gap between the job openings and the number of graduates ready to step into those roles!"
+        body_03: "We know that [X] is a large part of your campaign and something that you hold dear. That's why I'm inviting you to join our Hour of Code event as our Kickoff Assembly. It'll take place on [DATE, TIME, PLACE]. We want to ensure that our students are at the forefront of creating technology of the future—not just consuming it."
+    logos:
+      heading: "Download Hour of Code logos"
+      desc: "Access high-resolution Hour of Code logos for your event materials. Ensure your usage fits our guidelines to maintain brand consistency and integrity."
+      button:
+        download: "Download logos"
+        usage: "See usage guidelines"
+        close: "Close"
+        copy_language: "Copy attribution language"
+      usage:
+        heading: "Logo usage guidelines"
+        body_01:
+          desc: "Any reference to \"Hour of Code\" or \"Hora del Código\" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement."
+          list_good: "Good example: \"Participate in the Hour of Code™ at YOUR-COMPANY.com.\""
+          list_bad: "Bad example: \"Try Hour of Code by YOUR-COMPANY.\""
+        body_02: "Use a \"TM\" superscript in the most prominent places you mention \"Hour of Code\" and a \"Ⓡ\" superscript in the most prominent places you mention \"Hora del Código\", both on your web site and in app descriptions."
+        body_03: "Include language on your page (or in the footer), including links to the CSEdWeek and Code.org websites, that says the following: _\"The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.\"_"
+        body_04: "No use of \"Hour of Code\" or \"Hora del Código\" in app names."
 
   hoc_faq:
     heading: "Frequently asked questions"
