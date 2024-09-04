@@ -9,7 +9,7 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {timestampToDateTime} from '../redux/utils';
@@ -25,6 +25,9 @@ import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 const CopyButton: React.FunctionComponent = () => {
   const messages = useSelector(selectAllVisibleMessages);
   const dispatch = useAppDispatch();
+  const userHasAichatAccess = useAppSelector(
+    state => state.aichat.userHasAichatAccess
+  );
 
   const handleCopy = () => {
     const textToCopy = messages.map(chatEventToFormattedString).join('\n');
@@ -35,13 +38,15 @@ const CopyButton: React.FunctionComponent = () => {
         console.error('Error in copying text');
       }
     );
-    analyticsReporter.sendEvent(
-      EVENTS.CHAT_ACTION,
-      {
-        action: 'Copy chat history',
-      },
-      PLATFORMS.BOTH
-    );
+    if (userHasAichatAccess === 'yes') {
+      analyticsReporter.sendEvent(
+        EVENTS.CHAT_ACTION,
+        {
+          action: 'Copy chat history',
+        },
+        PLATFORMS.BOTH
+      );
+    }
     dispatch(
       addChatEvent({
         timestamp: Date.now(),
