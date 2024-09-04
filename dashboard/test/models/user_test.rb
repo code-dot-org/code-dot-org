@@ -3993,8 +3993,10 @@ class UserTest < ActiveSupport::TestCase
 
   test 'summarize' do
     latest_permission_request_sent_at = 1.month.ago.change(usec: 0)
-
     create(:parental_permission_request, user: @student, updated_at: latest_permission_request_sent_at)
+
+    us_state = 'CO'
+    @student.update!(us_state: us_state)
 
     assert_equal(
       {
@@ -4019,6 +4021,7 @@ class UserTest < ActiveSupport::TestCase
         at_risk_age_gated: false,
         child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
+        us_state: us_state,
       },
       @student.summarize
     )
@@ -5431,6 +5434,18 @@ class UserTest < ActiveSupport::TestCase
     student.update!(us_state: 'WA')
     student.reload
     assert_equal student.us_state, 'WA'
+  end
+
+  test 'teacher can change us_state of student in cpa lockout flow' do
+    new_us_state = 'WA'
+
+    teacher = create(:teacher)
+    student = create(:student, :U13, :in_colorado, :without_parent_permission)
+
+    RequestStore.store[:current_user] = teacher
+    student.update!(us_state: new_us_state)
+
+    assert_equal new_us_state, student.reload.us_state
   end
 
   test "teacher with oauth account can access AI Chat" do

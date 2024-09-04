@@ -2,18 +2,25 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
-import {reduxStore} from '@cdo/storybook/decorators';
-
-import teacherSections from '../teacherDashboard/teacherSectionsRedux';
-
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import manageStudents, {
   RowType,
   blankStudentTransfer,
-} from './manageStudentsRedux';
-import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import {UnconnectedManageStudentsTable} from './index';
+
+const currentUserData = {
+  isTeacher: true,
+  inUSA: true,
+  usStateCode: 'CO',
+};
 
 const initialState = {
+  currentUser: currentUserData,
   manageStudents: {
     loginType: '',
     studentData: {},
@@ -59,6 +66,7 @@ const passwordAccountData = [
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
+    usState: 'CO',
   },
   {
     id: 2,
@@ -74,6 +82,7 @@ const passwordAccountData = [
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
+    usState: 'CO',
   },
   {
     id: 3,
@@ -89,6 +98,7 @@ const passwordAccountData = [
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
+    usState: 'CO',
   },
   {
     id: 4,
@@ -105,6 +115,7 @@ const passwordAccountData = [
     sectionId: 53,
     isEditing: false,
     rowType: RowType.TEACHER,
+    usState: 'CO',
   },
 ];
 
@@ -312,7 +323,7 @@ export default {
 const Template = args => (
   <Provider
     store={reduxStore(
-      {manageStudents, teacherSections, unitSelection},
+      {currentUser, manageStudents, teacherSections, unitSelection},
       initialState
     )}
   >
@@ -357,4 +368,11 @@ export const TableForCleverAccounts = Template.bind({});
 TableForCleverAccounts.args = {
   studentData: cleverData,
   loginType: SectionLoginType.clever,
+};
+
+export const TableForUSTeacher = Template.bind({});
+TableForUSTeacher.args = {
+  currentUser: currentUserData,
+  studentData: passwordAccountData,
+  loginType: SectionLoginType.email,
 };

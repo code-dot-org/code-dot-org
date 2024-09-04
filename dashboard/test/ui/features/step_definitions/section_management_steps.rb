@@ -96,13 +96,17 @@ And /^I create a new "([^"]*)" student section with course "([^"]*)", version "(
 end
 
 And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? student( in Colorado)? named "([^"]*)"( after CAP start)?( before CAP start)?$/) do |authorized, under_13, sponsored, locked, name, after_cap_start, before_cap_start|
-  steps "Given I create a teacher named \"Teacher_#{name}\""
-  # enroll in a plc course as a way of becoming an authorized teacher
-  steps 'And I am enrolled in a plc course' if authorized
+  if @section_url
+    section_code = @section_url.split('/').last
+  else
+    steps "Given I create a teacher named \"Teacher_#{name}\""
+    # enroll in a plc course as a way of becoming an authorized teacher
+    steps 'And I am enrolled in a plc course' if authorized
 
-  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: 'student'}))
-  section_code = section['code']
-  @section_url = "http://studio.code.org/join/#{section_code}"
+    section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: 'student'}))
+    section_code = section['code']
+    @section_url = "http://studio.code.org/join/#{section_code}"
+  end
 
   user_opts = {
     age: under_13 ? '10' : '16',

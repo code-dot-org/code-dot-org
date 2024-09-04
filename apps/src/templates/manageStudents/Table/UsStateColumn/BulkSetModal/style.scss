@@ -1,0 +1,44 @@
+@import 'color';
+@import 'font';
+
+#us-state-column-bulk-set-modal {
+  font-weight: $medium-font-weight;
+
+  & a {
+    color: $default_text;
+    text-decoration: underline;
+  }
+
+  & .title {
+    margin: 20px 0;
+  }
+
+  & hr {
+    margin: 0 20px !important;
+  }
+
+  & p {
+    margin: 0;
+  }
+
+  & #x-close {
+    color: $lighter_gray;
+
+    &:active {
+      border: unset !important;
+    }
+
+    &:hover {
+      background-color: unset !important;
+      color: $light_gray !important;
+    }
+  }
+
+  & .form-group {
+    margin-bottom: 5px;
+
+    .control-label {
+      font-weight: $semi-bold-font-weight;
+    }
+  }
+};

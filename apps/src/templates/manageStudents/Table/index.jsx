@@ -7,10 +7,50 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import AddMultipleStudents from '@cdo/apps/templates/manageStudents/AddMultipleStudents';
+import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
+import DownloadParentLetter from '@cdo/apps/templates/manageStudents/DownloadParentLetter';
+import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
+import ManageStudentsActionsHeaderCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
+import ManageStudentsAgeCell from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
+import ManageStudentsFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
+import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
+import ManageStudentsGenderCellLegacy from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCellLegacy';
+import ManageStudentsLoginInfo from '@cdo/apps/templates/manageStudents/ManageStudentsLoginInfo';
+import ManageStudentsNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
+import {
+  convertStudentDataToArray,
+  AddStatus,
+  RowType,
+  saveAllStudents,
+  editAll,
+  TransferStatus,
+  TransferType,
+  ParentLetterButtonMetricsCategory,
+  PrintLoginCardsButtonMetricsCategory,
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import ManageStudentsSharingCell from '@cdo/apps/templates/manageStudents/ManageStudentsSharingCell';
+import MoveStudents from '@cdo/apps/templates/manageStudents/MoveStudents';
+import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
+import PasswordReset from '@cdo/apps/templates/manageStudents/PasswordReset';
+import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
+import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/SharingControlActionsHeaderCell';
+import ShowSecret from '@cdo/apps/templates/manageStudents/ShowSecret';
+import UsStateColumn from '@cdo/apps/templates/manageStudents/Table/UsStateColumn';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {
+  tableLayoutStyles,
+  sortableOptions,
+} from '@cdo/apps/templates/tables/tableConstants';
+import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {
   sectionCode,
   sectionName,
@@ -24,44 +64,6 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import Button from '../../legacySharedComponents/Button';
-import Notification, {
-  NotificationType,
-} from '../../sharedComponents/Notification';
-import SafeMarkdown from '../SafeMarkdown';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import wrappedSortable from '../tables/wrapped_sortable';
-
-import AddMultipleStudents from './AddMultipleStudents';
-import CodeReviewGroupsDialog from './CodeReviewGroupsDialog';
-import DownloadParentLetter from './DownloadParentLetter';
-import ManageStudentsActionsCell from './ManageStudentsActionsCell';
-import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
-import ManageStudentsAgeCell from './ManageStudentsAgeCell';
-import ManageStudentsFamilyNameCell from './ManageStudentsFamilyNameCell';
-import ManageStudentsGenderCell from './ManageStudentsGenderCell';
-import ManageStudentsGenderCellLegacy from './ManageStudentsGenderCellLegacy';
-import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
-import ManageStudentsNameCell from './ManageStudentsNameCell';
-import {
-  convertStudentDataToArray,
-  AddStatus,
-  RowType,
-  saveAllStudents,
-  editAll,
-  TransferStatus,
-  TransferType,
-  ParentLetterButtonMetricsCategory,
-  PrintLoginCardsButtonMetricsCategory,
-} from './manageStudentsRedux';
-import ManageStudentsSharingCell from './ManageStudentsSharingCell';
-import MoveStudents from './MoveStudents';
-import NoSectionCodeDialog from './NoSectionCodeDialog';
-import PasswordReset from './PasswordReset';
-import PrintLoginCards from './PrintLoginCards';
-import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
-import ShowSecret from './ShowSecret';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -100,6 +102,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   dependsOnThisSectionForLogin: PropTypes.bool,
   rowType: PropTypes.oneOf(Object.values(RowType)),
   userType: PropTypes.string,
+  usState: PropTypes.string,
 });
 
 /** @enum {number} */
@@ -117,6 +120,7 @@ class ManageStudentsTable extends Component {
     studioUrlPrefix: PropTypes.string,
 
     // Provided by redux
+    currentUser: PropTypes.object,
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
@@ -513,6 +517,10 @@ class ManageStudentsTable extends Component {
       LOGIN_TYPES_WITH_GENDER_COLUMN.includes(loginType)
     ) {
       columns.push(this.genderColumn(sortable));
+    }
+
+    if (this.props.currentUser?.isTeacher && this.props.currentUser?.inUSA) {
+      columns.push(UsStateColumn());
     }
 
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
@@ -1093,6 +1101,7 @@ export const UnconnectedManageStudentsTable = ManageStudentsTable;
 
 export default connect(
   state => ({
+    currentUser: state.currentUser,
     sectionId: state.teacherSections.selectedSectionId,
     sectionCode: sectionCode(state, state.teacherSections.selectedSectionId),
     sectionName: sectionName(state, state.teacherSections.selectedSectionId),

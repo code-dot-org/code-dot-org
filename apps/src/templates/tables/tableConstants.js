@@ -41,6 +41,9 @@ import color from '../../util/color';
  *     color?: string;
  *     textAlign?: string;
  *   };
+ *   unsortableHeaderAligned: {
+ *     padding?: number;
+ *   };
  * }}
  */
 export const tableLayoutStyles = {
@@ -87,6 +90,9 @@ export const tableLayoutStyles = {
   },
   unsortableHeaderRTL: {
     paddingRight: 25,
+  },
+  unsortableHeaderAligned: {
+    padding: 10,
   },
 };
 

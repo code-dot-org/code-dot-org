@@ -6,7 +6,7 @@ import SyncOmniAuthSectionControl from '@cdo/apps/accounts/SyncOmniAuthSectionCo
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {loadSectionStudentData} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
-import ManageStudentsTable from './ManageStudentsTable';
+import ManageStudentsTable from './Table';
 
 class ManageStudents extends React.Component {
   static propTypes = {

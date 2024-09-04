@@ -98,6 +98,7 @@ const blankAddRow = {
   sharingDisabled: true,
   isEditing: true,
   rowType: RowType.ADD,
+  usState: null,
 };
 
 // New student row is created after a list of students have been
@@ -113,6 +114,7 @@ const blankNewStudentRow = {
   sharingDisabled: true,
   isEditing: true,
   rowType: RowType.NEW_STUDENT,
+  usState: null,
 };
 
 /** Initial state for the manageStudents redux store.
@@ -135,6 +137,7 @@ const initialState = {
   transferData: {...blankStudentTransfer},
   transferStatus: {...blankStudentTransferStatus},
   isLoadingStudents: true,
+  usState: null,
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
@@ -153,6 +156,7 @@ const ADD_STUDENT_FULL = 'manageStudents/ADD_STUDENT_FULL';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
 const SET_SHOW_SHARING_COLUMN = 'manageStudents/SET_SHOW_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
+const BULK_SET = 'manageStudents/BULK_SET';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
 const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
@@ -203,6 +207,7 @@ export const setSharingDefault = studentId => ({
   studentId,
 });
 export const editAll = () => ({type: EDIT_ALL});
+export const bulkSet = studentData => ({type: BULK_SET, studentData});
 export const updateAllShareSetting = disable => ({
   type: UPDATE_ALL_SHARE_SETTING,
   disable,
@@ -685,6 +690,19 @@ export default function manageStudents(state = initialState, action) {
     }
     return newState;
   }
+  if (action.type === BULK_SET) {
+    let newState = {...state};
+    for (const studentKey in state.studentData) {
+      const student = state.studentData[studentKey];
+      newState.studentData[student.id].isEditing = true;
+      newState.editingData[student.id] = {
+        ...newState.studentData[student.id],
+        ...state.editingData[student.id],
+        ...action.studentData,
+      };
+    }
+    return newState;
+  }
   if (action.type === UPDATE_ALL_SHARE_SETTING) {
     let newState = {
       ...state,
@@ -872,6 +890,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       latestPermissionRequestSentAt:
         student.latest_permission_request_sent_at &&
         new Date(student.latest_permission_request_sent_at),
+      usState: student.us_state,
     };
   }
   return studentLookup;
@@ -894,6 +913,7 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
       gender: updatedStudentInfo.gender,
       gender_teacher_input: updatedStudentInfo.genderTeacherInput,
       sharing_disabled: updatedStudentInfo.sharingDisabled,
+      us_state: updatedStudentInfo.usState,
     },
   };
   $.ajax({
@@ -923,6 +943,7 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
       gender: updatedStudentsInfo[i].gender,
       gender_teacher_input: updatedStudentsInfo[i].genderTeacherInput,
       sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
+      us_state: updatedStudentsInfo[i].usState,
     };
   }
   const students = {

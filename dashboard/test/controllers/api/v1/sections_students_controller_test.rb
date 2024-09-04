@@ -220,20 +220,37 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
   test 'teacher can add one student to a word section' do
     sign_in @teacher
-    post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name', family_name: 'famname'}]}
+
+    expected_gender = 'f'
+    expected_age = 9
+    expected_name = 'name'
+    expected_family_name = 'famname'
+    expected_us_state = 'CO'
+
+    post :bulk_add, params: {
+      section_id: @section.id,
+      students: [
+        gender_teacher_input: expected_gender,
+        age: expected_age,
+        name: expected_name,
+        family_name: expected_family_name,
+        us_state: expected_us_state,
+      ]
+    }
     assert_response :success
 
     parsed_response = JSON.parse(@response.body)
-    assert_equal 'name', parsed_response[0]['name']
-    assert_equal 9, parsed_response[0]['age']
-    assert_equal 'f', parsed_response[0]['gender']
+    assert_equal expected_name, parsed_response[0]['name']
+    assert_equal expected_age, parsed_response[0]['age']
+    assert_equal expected_gender, parsed_response[0]['gender']
+    assert_equal expected_us_state, parsed_response[0]['us_state']
 
     new_student = User.find_by_id(parsed_response[0]['id'])
-
-    assert_equal 'name', new_student.name
-    assert_equal 'famname', new_student.family_name
-    assert_equal 9, new_student.age
-    assert_equal 'f', new_student.gender
+    assert_equal expected_name, new_student.name
+    assert_equal expected_family_name, new_student.family_name
+    assert_equal expected_age, new_student.age
+    assert_equal expected_gender, new_student.gender
+    assert_equal expected_us_state, new_student.us_state
   end
 
   test 'teacher can add multiple student to a word section' do
@@ -302,5 +319,34 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
       "full",
       json_response["result"]
     )
+  end
+
+  describe 'PATCH update' do
+    subject(:patch_update) {patch :update, params: params}
+
+    let(:teacher) {@teacher}
+    let(:section) {@section}
+    let(:student) {@student}
+
+    let(:params) {{section_id: section.id, id: student.id, student: student_params}}
+    let(:response_body) {JSON.parse(@response.body)}
+
+    before do
+      sign_in teacher
+    end
+
+    context 'when student us_state param is provided' do
+      let(:student_params) {{us_state: us_state}}
+
+      let(:us_state) {'CO'}
+
+      it 'updates student us_state' do
+        assert_changes -> {student.reload.us_state}, from: nil, to: us_state do
+          patch_update
+          assert_response :success
+          _(response_body['us_state']).must_equal us_state
+        end
+      end
+    end
   end
 end

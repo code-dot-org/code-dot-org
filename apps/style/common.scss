@@ -9,7 +9,7 @@
 @import "HideToolbarHelper";
 @import "blockly";
 
-$common-root: "/blockly/media/common_images/";
+$common-root: "/blockly/media/common_images/" !default;
 
 @mixin fill-container {
   height: 100%;
