@@ -38,6 +38,7 @@ Resources:
           }
         Image: !Sub "${HuggingFaceImageUri}"
         Mode: "SingleModel"
+
   <%= config[:model_name] %>EndpointConfig:
     Type: AWS::SageMaker::EndpointConfig
     Properties:
@@ -49,11 +50,13 @@ Resources:
           InstanceType: "<%= config[:instance_type][environment.to_sym] %>"
           ModelName: !GetAtt <%= config[:model_name] %>Model.ModelName
           VariantName: "AllTraffic"
+
   <%= config[:model_name] %>Endpoint:
     Type: AWS::SageMaker::Endpoint
     Properties:
       EndpointConfigName: !GetAtt <%= config[:model_name] %>EndpointConfig.EndpointConfigName
       EndpointName: !Sub "<%= "#{config[:model_id]}-${Environment}" %>"
+
   <% if environment == 'production' %>
   <%= config[:model_name] %>ScalingTarget:
     Type: "AWS::ApplicationAutoScaling::ScalableTarget"
@@ -63,6 +66,7 @@ Resources:
       ResourceId: !Sub "endpoint/${<%= config[:model_name] %>Endpoint.EndpointName}/variant/AllTraffic"
       ScalableDimension: sagemaker:variant:DesiredInstanceCount
       ServiceNamespace: sagemaker
+
   <%= config[:model_name] %>ScalingPolicy:
     Type: "AWS::ApplicationAutoScaling::ScalingPolicy"
     Properties:
