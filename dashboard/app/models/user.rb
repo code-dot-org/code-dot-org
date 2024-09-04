@@ -1558,6 +1558,10 @@ class User < ApplicationRecord
       sections_as_student.any?(&:assigned_gen_ai?)
   end
 
+  def has_aichat_access?
+    teacher_can_access_ai_chat? || student_can_access_ai_chat?
+  end
+
   # Students
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?

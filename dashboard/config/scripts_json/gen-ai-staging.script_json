@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-08-29 04:07:12 UTC",
+    "serialized_at": "2024-09-03 19:12:47 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1861,7 +1861,7 @@
       "key": "41ef07d4-8d12-41de-bb38-625c7b261770",
       "position": 1,
       "properties": {
-        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work."
+        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels (as opposed to a purely unplugged class discussion), you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies."
       },
       "seeding_key": {
         "activity_section.key": "41ef07d4-8d12-41de-bb38-625c7b261770",
@@ -2024,6 +2024,7 @@
       "key": "25d28ae0-a4f5-4ee5-9f10-6f01989405ae",
       "position": 1,
       "properties": {
+        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels (as opposed to a purely unplugged class discussion), you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
         "progression_name": "Warm Up"
       },
       "seeding_key": {
@@ -2175,6 +2176,7 @@
       "key": "6cd4d8c7-377e-4fa1-9a80-1641205708b2",
       "position": 1,
       "properties": {
+        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels (as opposed to a purely unplugged class discussion), you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
         "progression_name": "Warm Up"
       },
       "seeding_key": {
@@ -2428,6 +2430,7 @@
       "key": "e813db6c-9cec-49dc-9e29-913fa873b9f1",
       "position": 1,
       "properties": {
+        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels (as opposed to a purely unplugged class discussion), you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
         "progression_name": "Warm Up"
       },
       "seeding_key": {
@@ -2562,6 +2565,7 @@
       "key": "895a8d9b-119e-4fc5-bd16-c9f0a9fb3bdc",
       "position": 1,
       "properties": {
+        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels (as opposed to a purely unplugged class discussion), you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
         "progression_name": "Warm Up"
       },
       "seeding_key": {
@@ -2685,6 +2689,7 @@
       "key": "cb4b8a48-22af-422e-8b0e-f0548b9103e2",
       "position": 1,
       "properties": {
+        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels (as opposed to a purely unplugged class discussion), you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
         "progression_name": "Warm Up"
       },
       "seeding_key": {
@@ -2870,6 +2875,7 @@
       "key": "6d4dc4a7-4ad0-4856-b2c9-36f70badae52",
       "position": 1,
       "properties": {
+        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels (as opposed to a purely unplugged class discussion), you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
         "progression_name": "Warm Up"
       },
       "seeding_key": {
@@ -3010,6 +3016,7 @@
       "key": "27588310-ef96-43fe-9908-5e4b8b2dbffd",
       "position": 1,
       "properties": {
+        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels (as opposed to a purely unplugged class discussion), you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
         "progression_name": "Warm Up"
       },
       "seeding_key": {
@@ -3161,6 +3168,7 @@
       "key": "42e72fee-f9f6-45fe-b3ac-17ab43bda15e",
       "position": 1,
       "properties": {
+        "description": "These levels contain the same questions as the **Warm Up** and **Wrap Up** from the lesson slide deck, allowing students to answer the questions within the Code.org platform. These can be used as a digital alternative to physical journals, and lets you take advantage of our [Student Summaries features](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels) for checking and displaying student work. \n\nBy answering these questions in these levels (as opposed to a purely unplugged class discussion), you can take advantage of discussion and differentiation strategies that elevate student voice to help you guide the discussion. See our [**Teaching Guide for Incorporating Student Responses in Lessons**](https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit) for more information on these strategies.",
         "progression_name": "Warm Up"
       },
       "seeding_key": {
@@ -9847,6 +9855,18 @@
       }
     },
     {
+      "name": "[Exemplar] Foundations of Generative AI Graphic Organizer",
+      "url": "https://docs.google.com/presentation/d/1L-NZa63NatGczunX-58GlPNwHnNxD_XQxQSSbqlhP_Y/view",
+      "key": "_exemplar_foundations_of_generative_ai_graphic_organizer",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
       "name": "[For Teachers] Behind the Activity",
       "url": "https://docs.google.com/document/d/1r3bQUafEdjoN2flf-htXkO0iYCIBrW5-_NtQCQMoedU/edit",
       "key": "_for_teachers_behind_the_activity",
@@ -10905,6 +10925,12 @@
     {
       "seeding_key": {
         "lesson.key": "Attention Is All You Need",
+        "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
         "resource.key": "attention_is_all_you_need"
       }
     },
@@ -10948,6 +10974,12 @@
       "seeding_key": {
         "lesson.key": "Chatbots in Society",
         "resource.key": "news_articles"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
       }
     },
     {
@@ -11001,6 +11033,12 @@
     {
       "seeding_key": {
         "lesson.key": "Input & Training Data",
+        "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input & Training Data",
         "resource.key": "generative_ai_input_pre-training"
       }
     },
@@ -11026,6 +11064,12 @@
       "seeding_key": {
         "lesson.key": "Interacting with Language Models",
         "resource.key": "teaching_guide_-_incorporating_student_responses_in_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
       }
     },
     {
@@ -11127,6 +11171,12 @@
     {
       "seeding_key": {
         "lesson.key": "Neural Networks: How They're Trained",
+        "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Neural Networks: How They're Trained",
         "resource.key": "_for_teachers_behind_the_activity"
       }
     },
@@ -11158,6 +11208,12 @@
       "seeding_key": {
         "lesson.key": "Neural Networks: How They're Trained",
         "resource.key": "neural_networks_how_they_re_made"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outputs & Probabilities",
+        "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
       }
     },
     {
@@ -11349,6 +11405,12 @@
     {
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
+        "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
         "resource.key": "character_quiz"
       }
     },
@@ -11368,6 +11430,12 @@
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
         "resource.key": "understanding_embeddings"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Neural Networks",
+        "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
       }
     },
     {

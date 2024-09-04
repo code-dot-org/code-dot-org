@@ -22,7 +22,7 @@
   font-size: 14px;
   line-height: 1.5;
   display: flex;
-  overflow: hidden;
+  overflow: scroll;
 
   &.vertical {
     flex-direction: column;
@@ -47,7 +47,6 @@
 
   &.itemVertical {
     flex-direction: column;
-    overflow: auto;
   }
 }
 

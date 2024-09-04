@@ -11,7 +11,6 @@ import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -19,7 +18,7 @@ import {
   isPredictAnswerLocked,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {setIsTesting} from '@cdo/apps/lab2/redux/systemRedux';
+import {setIsValidating} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
@@ -36,9 +35,6 @@ import {appendSystemMessage} from '../redux/consoleRedux';
 import ValidationResults from './ValidationResults';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
-
-// By default we show the test and navigation buttons unless the URL parameter 'button-bar' is set.
-const SHOW_TEST_NAVIGATION_BUTTONS = !queryParams('button-bar');
 
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
@@ -98,7 +94,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   ) as MultiFileSource | undefined;
 
   const appType = useAppSelector(state => state.lab.levelProperties?.appName);
-  const isTesting = useAppSelector(state => state.lab2System.isTesting);
+  const isValidating = useAppSelector(state => state.lab2System.isValidating);
   const isLoadingEnvironment = useAppSelector(
     state => state.lab2System.loadingCodeEnvironment
   );
@@ -146,11 +142,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   };
 
-  const handleTest = () => {
+  const handleValidate = () => {
     if (onRun) {
-      dispatch(setIsTesting(true));
+      dispatch(setIsValidating(true));
       onRun(true, dispatch, source).finally(() =>
-        dispatch(setIsTesting(false))
+        dispatch(setIsValidating(false))
       );
     } else {
       dispatch(appendSystemMessage(codebridgeI18n.cannotTest()));
@@ -160,10 +156,10 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const handleStop = () => {
     if (onStop) {
       onStop();
-      dispatch(setIsTesting(false));
+      dispatch(setIsValidating(false));
     } else {
       dispatch(appendSystemMessage(codebridgeI18n.cannotStop()));
-      dispatch(setIsTesting(false));
+      dispatch(setIsValidating(false));
     }
   };
 
@@ -224,15 +220,15 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   // TODO: If we go with the test button in the instructions panel long-term,
   // we should refactor this to a separate component.
-  const renderTestButton = () => {
+  const renderValidationButton = () => {
     if (!hasConditions) {
       return null;
     }
     return (
       <div className={moduleStyles['bubble-' + theme]}>
-        {isTesting ? (
+        {isValidating ? (
           <Button
-            text={commonI18n.stopTests()}
+            text={codebridgeI18n.stopValidation()}
             onClick={handleStop}
             color={'destructive'}
             iconLeft={{iconStyle: 'solid', iconName: 'square'}}
@@ -241,11 +237,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           />
         ) : (
           <Button
-            text={commonI18n.test()}
-            onClick={() => handleTest()}
+            text={codebridgeI18n.validate()}
+            onClick={() => handleValidate()}
             type={'secondary'}
             disabled={isLoadingEnvironment}
-            iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+            iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
             className={moduleStyles.buttonInstruction}
             color={'white'}
             size={'s'}
@@ -322,10 +318,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             </div>
           </InstructorsOnly>
         )}
-
-        {SHOW_TEST_NAVIGATION_BUTTONS && renderTestButton()}
+        {renderValidationButton()}
         <ValidationResults className={moduleStyles['bubble-' + theme]} />
-        {SHOW_TEST_NAVIGATION_BUTTONS && showNavigation && (
+        {showNavigation && (
           <div
             id="instructions-navigation"
             className={moduleStyles['bubble-' + theme]}
