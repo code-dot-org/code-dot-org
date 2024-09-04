@@ -14,6 +14,7 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 
 import {timestampToDateTime} from '../redux/utils';
 import {
+  AichatAccess,
   ChatEvent,
   isChatMessage,
   isModelUpdate,
@@ -38,7 +39,7 @@ const CopyButton: React.FunctionComponent = () => {
         console.error('Error in copying text');
       }
     );
-    if (userHasAichatAccess === 'yes') {
+    if (userHasAichatAccess === AichatAccess.YES) {
       analyticsReporter.sendEvent(
         EVENTS.CHAT_ACTION,
         {
