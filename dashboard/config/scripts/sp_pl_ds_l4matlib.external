@@ -1,0 +1,31 @@
+name 'sp-pl-DS_L4matlib'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Matplotlib
+
+## Lesson 4: Introduction to Matplotlib
+
+#### In this lesson, students discover the need for a library with functions that create data visualizations in Python. Students explore the syntax and functionality of matplotlib – learning how to create line and bar charts, editing these charts' appearance, title and axis labels.
+
+<img src="https://images.code.org/6e10a38f38414d0c4b551dfc55938a64-image-1724776090980.png" alt="different data visualizations" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+
+
+## Key concepts 
+
+- #### **Matplotlib** - a Python library that contains functions for creating and customizing data visualizations
+- #### **module** - a file in a library that contains a thematic grouping of functions
+
+
+
+
+## Let's practice!  
+
+
+MARKDOWN

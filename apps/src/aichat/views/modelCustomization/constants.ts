@@ -66,7 +66,7 @@ export const MODEL_CARD_FIELDS_LABELS_ICONS: {
     label: 'Example Prompts and Topics',
     icon: 'message-lines',
     editTooltip:
-      'Add example prompts the user could consider when using the chatbot',
+      'Add example prompts the user could consider when using the chatbot. Type in each example prompt into the text box, then click “Add” for each one.',
     displayTooltip: 'Try some of these example prompts to get started.',
   },
 ];
@@ -111,6 +111,7 @@ export const DEFAULT_VISIBILITIES: {
 export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   initialCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   visibilities: DEFAULT_VISIBILITIES,
+  levelSystemPrompt: '',
   hidePresentationPanel: false,
   availableModelIds: [modelDescriptions[0].id],
 };

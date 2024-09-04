@@ -24,8 +24,6 @@ nav: promote_nav
 
 {{ promote_new_posters }}
 
-* ¿Buscas carteles de años anteriores? ¡[Encuéntralos aquí]({{ promote/previous_posters_url }})!
-
 <a id="social"></a>
 
 ## Publica esto en las redes sociales

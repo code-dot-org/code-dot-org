@@ -1,0 +1,25 @@
+name 'self-paced-pl-gen-ai-customizing_01_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 12: Interacting with Language Models
+
+<img src="https://images.code.org/e2fe8ed132758ba6031037e6462de119-Screenshot 2024-08-30 at 2.31.27 PM.png" alt="chatbot lab level" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+
+#### In this lesson, students are presented an overview of the unit and explore the **chatbot lab** for the first time. They learn about the **temperature setting** in chatbots and its influence on the creativity and reliability of responses through hands-on experimentation. Students also explore how chatbots can **hallucinate** and produce incorrect information, monitoring these instances throughout the unit. 
+
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> This lesson includes  great (and early!) opportunities to make sure students become fluent with using the chatbot. Make sure students know where the instructions panel is, can send messages, know how to clear the chat, and know how to copy the chat. Building this fluency early will make later lessons easier.
+</p>
+</div>
+
+## Up Next!
+
+#### In the next level you’ll get to try **chatbot lab**. Take your time exploring chatbot lab as you and your students will be using this tool for both the remainder of the Generative AI Unit.
+
+
+MARKDOWN

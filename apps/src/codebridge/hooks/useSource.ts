@@ -35,6 +35,12 @@ export const useSource = (defaultSources: ProjectSources) => {
     state => state.lab.levelProperties?.templateSources
   );
   const previousLevelIdRef = useRef<number | null>(null);
+
+  // keep track of whatever project the user has set locally. This happens after any change in CodeBridge
+  // in the setSource function below
+  const localProjectRef = useRef(source);
+  // keep track of the key to use for the <CodeBridge/> component in the UI
+  const codeBridgeKeyRef = useRef(0);
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
@@ -50,6 +56,7 @@ export const useSource = (defaultSources: ProjectSources) => {
 
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
+      localProjectRef.current = newSource;
       setSourceHelper({source: newSource});
     },
     [setSourceHelper]
@@ -96,5 +103,19 @@ export const useSource = (defaultSources: ProjectSources) => {
     }
   }, [initialSources, levelId, setSourceHelper]);
 
-  return {source, setSource, getStartSource};
+  // If the source retrieved from redux is the same as our localProject, then there haven't been any external
+  // changes so we don't increment the key and keep the current layout in place.
+  // However, if the source has changed from our last local save, that means that we've loaded up a new copy
+  // from an external source (such as the version history button). In that case, we want to set our localProjectRef
+  // to whatever that new source is AND increment our key. This'll ensure that the CodeBridge layout reflows and
+  // the project is properly kept in sync.
+  const codeBridgeKey = useMemo(() => {
+    if (source !== localProjectRef.current) {
+      localProjectRef.current = source;
+      codeBridgeKeyRef.current++;
+    }
+    return codeBridgeKeyRef.current;
+  }, [source]);
+
+  return {source, setSource, getStartSource, codeBridgeKey};
 };

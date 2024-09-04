@@ -1,0 +1,8 @@
+- transformer_index = 4
+
+- transformer_photo = ["/images/transformers/red.png", "/images/transformers/yellow.png", "/images/transformers/purple.png", "/images/transformers/grey.png"]
+
+%ul.favorite-transformers.clear-styles.flex-container.justify-space-between.wrap
+  - transformer_index.times do |index|
+    %li
+      %img{src: transformer_photo[index], alt: ""}

@@ -300,7 +300,8 @@ class Lesson < ApplicationRecord
         description_teacher: description_teacher,
         unplugged: unplugged,
         lessonEditPath: get_uncached_edit_path,
-        lessonStartUrl: start_url
+        lessonStartUrl: start_url,
+        duration: total_lesson_duration,
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.

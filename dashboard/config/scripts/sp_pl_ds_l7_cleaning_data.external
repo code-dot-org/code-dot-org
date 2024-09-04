@@ -1,0 +1,33 @@
+name 'sp-pl-DS_L7-cleaning-data'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Python and Pandas
+
+## Lesson 7: Cleaning data 
+
+<img src="https://images.code.org/1a2aae1fbb5f2ceb700b456dbbd38f8d-image-1724776918899.png" alt="cleaning data icon" width="200px"  style="border-radius:10px; float:right; margin: 0 20px 40px 20px;">
+
+
+#### In this lesson, students learn the importance of data cleaning and the key functions used to identify and handle data quality issues, including isnull(), isnull().sum(), dropna(), fillna(), and value_counts(). 
+#### Through a series of investigate and modify levels, they explore how to evaluate datasets, identify missing, invalid, and inconsistent data, and apply techniques to clean the data. 
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+
+
+## Key concepts 
+
+- #### **isnull()** - identifies missing values 
+- #### **dropna()** - drops rows or columns with missing values 
+- #### **fillna(‘word’)**- fills missing values witht he word in the box
+- #### **value_counts()** - counts the occurrences of each unique  vlue in the columns
+
+
+
+
+## Let's practice!  
+
+
+MARKDOWN

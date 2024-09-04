@@ -22,7 +22,7 @@
   font-size: 14px;
   line-height: 1.5;
   display: flex;
-  overflow: hidden;
+  overflow: scroll;
 
   &.vertical {
     flex-direction: column;
@@ -47,7 +47,6 @@
 
   &.itemVertical {
     flex-direction: column;
-    overflow: auto;
   }
 }
 
@@ -62,17 +61,20 @@
   }
 }
 
-.text {
+.mainInstructions {
   overflow-y: auto;
   white-space: pre-wrap;
 
-  animation: slidein 0.5s;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 %bubble {
   padding: 16px;
   border-radius: 4px;
   margin-bottom: 10px;
+  animation: slidein 0.5s;
 }
 
 .bubble-dark {
@@ -124,4 +126,11 @@
   p {
     font-size: 14px;
   }
+}
+
+.validationIcon {
+  color: $light_affirmative_500;
+  width: 20px;
+  height: 20px;
+  margin-top: 6px;
 }

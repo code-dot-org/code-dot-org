@@ -190,9 +190,8 @@ Dashboard::Application.routes.draw do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       post '/users/finish_sign_up', to: 'registrations#new'
-      get '/users/new_sign_up', to: 'registrations#new_sign_up'
-      # Part of the new sign up flow - work in progress
       get '/users/new_sign_up/account_type', to: 'registrations#account_type'
+      get '/users/new_sign_up/login_type', to: 'registrations#login_type'
       get '/users/new_sign_up/finish_student_account', to: 'registrations#finish_student_account'
       get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
@@ -882,6 +881,8 @@ Dashboard::Application.routes.draw do
       concerns :assessments_routes
     end
 
+    get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
+
     # Wildcard routes for API controller: select all public instance methods in the controller,
     # and all template names in `app/views/api/*`.
     api_methods = (ApiController.instance_methods(false) +
@@ -942,6 +943,7 @@ Dashboard::Application.routes.draw do
         post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
         post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
+        post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
 
@@ -1168,12 +1170,12 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
-    post '/aichat/chat_completion', to: 'aichat#chat_completion'
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
     get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
     post '/aichat/check_message_safety', to: 'aichat#check_message_safety'
     post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
     get '/aichat/chat_request/:id', to: 'aichat#chat_request'
+    get '/aichat/user_has_access', to: 'aichat#user_has_access'
 
     post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
 

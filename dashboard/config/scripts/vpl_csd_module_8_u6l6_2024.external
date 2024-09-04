@@ -4,41 +4,34 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Curriculum Investigations
+# Curriculum Investigations
 
 ## Variables and If Statements
 
-### **Task**
+### **📋 Investigation Tasks**
 
-* ##### Choose **one** lesson plan to read, depending on your context:
-    * ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/6" target="blank">Unit 6A, Lesson 6 (Circuit Playground)</a>
-    * ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/6" target="blank">Unit 6B, Lesson 6 (micro:bit)</a>
-* ##### Identify how students will use variables, counter patterns, and if-statements
+* #### Choose **one** lesson plan to read, depending on your context:
+    * #### <a href="https://studio.code.org/s/csd6a-2024/lessons/6" target="blank">Unit 6A, Lesson 6 (Circuit Playground)</a>
+    * #### <a href="https://studio.code.org/s/csd6b-2024/lessons/6" target="blank">Unit 6B, Lesson 6 (micro:bit)</a>
+* #### Identify how students will use variables, counter patterns, and if-statements.
 
 ## Getting Screen Inputs
 
-### **Task**
+### **📋 Investigation Tasks**
 
-> ##### **Note:** The Circuit Playground version of Unit 6: Creating Apps with Devices, contains an extra lesson: Unit 6A, Lesson 8 - Color LEDs. The micro:bit version of the unit does not contain this lesson.
+* #### Choose **one** lesson plan to read, depending on your context:
+    * #### <a href="https://studio.code.org/s/csd6a-2024/lessons/9" target="blank">Unit 6A, Lesson 9 (Circuit Playground)</a>
+    * #### <a href="https://studio.code.org/s/csd6b-2024/lessons/8" target="blank">Unit 6B, Lesson 8 (micro:bit)</a>
+* #### Identify how students will use new design elements - text inputs, dropdowns, and sliders.
+<br>
 
-* ##### Choose **one** lesson plan to read, depending on your context:
-    * ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/9" target="blank">Unit 6A, Lesson 9 (Circuit Playground)</a>
-    * ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/9" target="blank">Unit 6B, Lesson 9 (micro:bit)</a>
-* ##### Identify how students will use new design elements - text inputs, dropdowns, and sliders
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px;">
+
+##### **Note:** The Circuit Playground version of Unit 6: Creating Apps with Devices, contains an extra lesson: Unit 6A, Lesson 8 - Color LEDs. The micro:bit version of the unit does not contain this lesson.
+
+</p></div>
 
 ___
-#### **Up next:**  Click next to practice getting screen inputs
 
-
-
-
-
-
-
-
-
-
-
-
-
+### **Up next:**  Click next to practice getting screen inputs
 MARKDOWN

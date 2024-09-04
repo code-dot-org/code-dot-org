@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-08-23T14:16:46.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Cleaning Data",
+    "long_instructions": "\r\n<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; \"> In this warm-up activity, students write what they notice and what they wonder about the visualization. After students have had a chance to write a couple things they noticed and wondered, instruct students to share with their partner. Give students a few minutes to share before bringing the class back together.   \r\n</p>\r\n</div>\r\n\r\n\r\n####Look at two graphs trying to help a human answer the question: “When should we have the party?”\r\n\r\n\r\n![](https://images.code.org/7e010252c79b9ea18ad1709c47913cde-image-1721314333157.png)\r\n\r\n![](https://images.code.org/376f6fc4810525fd42748cf7661b5f71-image-1721314350825.png)\r\n####What do you notice? What do you wonder?\r\n####Which of these makes it easier for a human to decide when the party should be? Explain your answer.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-23T14:16:46.350+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson8-level1\\\"\"],\"cloned_from\":\"data-science-ch1-lesson8-level1\"},{\"changed_at\":\"2024-08-23 14:36:15 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
