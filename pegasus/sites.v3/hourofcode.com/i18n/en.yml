@@ -2588,6 +2588,7 @@
     code_favorite:
       header: "Code with your favorite Transformers"
       desc: "Explore and build awesome worlds with Optimus Prime, Bumblebee, Megatron, and More!"
+    projects_header: "Get started with one of these sample projects"
     fun:
       header: "Get in the fun! Easy-to-learn code with Transformers One"
       desc: "Code.org has teamed up with Transformers One to offer a fun and easy-to-learn coding activity for 2nd-8th graders. Now, you can create your own interactive Transformers One world with some of the movie's most beloved characters!"
