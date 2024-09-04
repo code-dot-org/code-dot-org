@@ -18,7 +18,8 @@
 }
 
 .freeResponse {
-  width: 234px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .predictSolutionContainer {
@@ -31,9 +32,4 @@
 .resetError {
   margin-top: 15px;
   margin-bottom: 10px;
-}
-
-.predictQuestionContainer {
-  width: auto;
-  margin: 0;
 }

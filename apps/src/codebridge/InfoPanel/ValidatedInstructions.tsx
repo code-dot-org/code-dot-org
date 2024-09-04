@@ -307,6 +307,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
                 dispatch(setPredictResponse(response))
               }
               predictAnswerLocked={predictAnswerLocked}
+              className={moduleStyles.predictQuestion}
             />
           </div>
         )}

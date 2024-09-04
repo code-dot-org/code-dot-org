@@ -62,12 +62,11 @@
 }
 
 .mainInstructions {
-  // overflow-y: auto;
-  // white-space: pre-wrap;
+  white-space: pre-wrap;
 
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 4px;
 }
 
 %bubble {
@@ -133,6 +132,9 @@
   width: 20px;
   height: 20px;
   margin-top: 6px;
-  //shape-outside: circle();
-  //float: left;
+}
+
+.predictQuestion {
+  width: auto;
+  margin: 4px;
 }

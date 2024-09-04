@@ -14,6 +14,7 @@ interface PredictQuestionProps {
   predictResponse: string | undefined;
   setPredictResponse: (response: string) => void;
   predictAnswerLocked: boolean;
+  className?: string;
 }
 
 const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
@@ -21,6 +22,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   predictResponse,
   setPredictResponse,
   predictAnswerLocked,
+  className,
 }) => {
   if (!predictSettings?.isPredictLevel) {
     return null;
@@ -41,7 +43,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   };
 
   return (
-    <div className={moduleStyles.predictQuestionContainer}>
+    <div className={className}>
       {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
         <textarea
           value={predictResponse}
