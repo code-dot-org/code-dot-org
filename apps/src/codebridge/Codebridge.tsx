@@ -1,6 +1,10 @@
-import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
+import {
+  CodebridgeContextProvider,
+  projectReducer,
+  useProjectUtilities,
+} from '@codebridge/codebridgeContext';
 import {FileBrowser} from '@codebridge/FileBrowser';
-import {useSynchronizedProject} from '@codebridge/hooks';
+import {useReducerWithCallback} from '@codebridge/hooks';
 import {InfoPanel} from '@codebridge/InfoPanel';
 import {PreviewContainer} from '@codebridge/PreviewContainer';
 import {SideBar} from '@codebridge/SideBar';
@@ -11,7 +15,7 @@ import {
   SetConfigFunction,
   OnRunFunction,
 } from '@codebridge/types';
-import React from 'react';
+import React, {useReducer} from 'react';
 
 import './styles/cdoIDE.scss';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -40,12 +44,16 @@ export const Codebridge = React.memo(
     onRun,
     onStop,
   }: CodebridgeProps) => {
-    // keep our internal reducer backed copy synced up with our external whatever backed copy
-    // see useSynchronizedProject for more info.
-    const [internalProject, projectUtilities] = useSynchronizedProject(
-      project,
+    const reducerWithCallback = useReducerWithCallback(
+      projectReducer,
       setProject
     );
+    const [internalProject, dispatch] = useReducer(
+      reducerWithCallback,
+      project
+    );
+
+    const projectUtilities = useProjectUtilities(dispatch);
 
     const ComponentMap = {
       'file-browser': FileBrowser,
