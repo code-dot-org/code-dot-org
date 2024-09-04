@@ -1,17 +1,17 @@
-name 'self-paced-pl-gen-ai-resources-overview_01_2024'
+name 'self-paced-pl-gen-ai-resources-assessments_01_2024'
 title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching Resources
+# Predict Levels
 
-#### Now that you have an idea of what's being taught in the Generative AI Unit, it's time to look at some teaching resources and instructional best practices.
+#### Now that you have learned more about what Generative AI is, let's dive into how to design with the user in mind.
 
 <img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 150px; clear: both; margin: 0 20px 20px 0;">
 
-## **In this lesson you will:** 
+## **In this lesson, you will:** 
 - #### Explore best practices for teaching Generative AI
 - #### Identify next steps to learn more about AI in the classroom
 
-### **Suggested time:** 15 minutes
+### **Suggested time:** 20 minutes
 MARKDOWN
