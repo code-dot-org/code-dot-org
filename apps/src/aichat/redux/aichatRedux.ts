@@ -328,6 +328,9 @@ const dispatchSaveFailNotification = (
   dispatch(endSave());
 };
 
+// This thunk sends aichat analytics events to Amplitude and Statsig.
+// The event is sent for authorized users and if skipAccessCheck is true,
+// then the event is sent regardless of user aichat access.
 export const sendAnalytics =
   (event: string, properties: object, skipAccessCheck = false) =>
   (dispatch: AppDispatch, getState: () => RootState) => {

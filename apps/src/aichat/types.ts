@@ -65,10 +65,6 @@ export interface LogChatEventApiResponse {
   chat_event: ChatMessage;
 }
 
-export interface UserHasAichatAccessResponse {
-  userHasAccess: boolean;
-}
-
 export type AichatContext = {
   currentLevelId: number | null;
   scriptId: number | null;

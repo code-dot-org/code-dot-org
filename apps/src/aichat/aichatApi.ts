@@ -15,7 +15,6 @@ import {
   ChatEvent,
   ChatMessage,
   LogChatEventApiResponse,
-  UserHasAichatAccessResponse,
 } from './types';
 
 const ROOT_URL = '/aichat';
@@ -32,6 +31,10 @@ const paths = {
 const MAX_POLLING_TIME_MS = 45000;
 const MIN_POLLING_INTERVAL_MS = 1000;
 const DEFAULT_BACKOFF_RATE = 1;
+
+interface UserHasAichatAccessResponse {
+  userHasAccess: boolean;
+}
 
 /**
  * This function formats chat completion messages and aichatParameters, sends a POST request

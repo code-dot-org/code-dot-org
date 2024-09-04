@@ -124,20 +124,19 @@ const AichatView: React.FunctionComponent = () => {
 
   useEffect(() => {
     if (signInState === SignInState.SignedIn) {
-      try {
-        getUserHasAichatAccess().then(hasAccess =>
-          dispatch(setUserHasAichatAccess(hasAccess))
-        );
-      } catch (error) {
-        if (!(error instanceof NetworkError && error.response.status === 403)) {
-          Lab2Registry.getInstance()
-            .getMetricsReporter()
-            .logError('Error in fetching user aichat access', error as Error);
-          return;
-        }
-      }
+      getUserHasAichatAccess()
+        .then(hasAccess => dispatch(setUserHasAichatAccess(hasAccess)))
+        .catch(error => {
+          if (
+            !(error instanceof NetworkError && error.response.status === 403)
+          ) {
+            Lab2Registry.getInstance()
+              .getMetricsReporter()
+              .logError('Error in fetching user aichat access', error as Error);
+          }
+        });
     }
-  }, [signInState, dispatch]);
+  }, [dispatch, signInState]);
 
   // When the level changes or if we are viewing aichat level as a different user
   // (e.g., teacher viewing student work), clear the chat message history and start a new session.
