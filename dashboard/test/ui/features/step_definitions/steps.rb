@@ -298,7 +298,7 @@ end
 def wait_for_element(selection_criteria, enabled)
   wait_until do
     element = @browser.find_element(selection_criteria)
-    element.enabled?
+    element.enabled? == enabled
   rescue Selenium::WebDriver::Error::StaleElementReferenceError
     false
   end
