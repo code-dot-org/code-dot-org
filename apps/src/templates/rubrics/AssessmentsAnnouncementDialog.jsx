@@ -45,7 +45,7 @@ export default function AssessmentsAnnouncementDialog() {
     // wait for the post request to complete before navigating, otherwise the
     // post request may be cancelled when navigation occurs.
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_ANNOUNCEMENT_CLICKED);
-    postAnnouncementSeen().then(() => {
+    postAnnouncementSeen().finally(() => {
       navigateToHref('https://code.org/ai/teaching-assistant');
     });
   };
