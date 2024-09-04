@@ -33,7 +33,7 @@ Resources:
             "MAX_INPUT_LENGTH": 3000,
             "MAX_TOTAL_TOKENS": 4096,
             "SAGEMAKER_CONTAINER_LOG_LEVEL": 20,
-            "SAGEMAKER_REGION": "us-east-1",
+            "SAGEMAKER_REGION": !Sub "${AWS::Region}",
             "SM_NUM_GPUS": 1,
           }
         Image: !Sub "${HuggingFaceImageUri}"
