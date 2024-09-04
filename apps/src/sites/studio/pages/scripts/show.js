@@ -30,6 +30,7 @@ import {
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
@@ -106,6 +107,10 @@ function initPage() {
     false
   );
 
+  const showAiAssessmentsAnnouncement =
+    scriptData.showAiAssessmentsAnnouncement &&
+    experiments.isEnabled(experiments.AI_ASSESSMENTS_ANNOUNCEMENT);
+
   ReactDOM.render(
     <Provider store={store}>
       {parentalPermissionBannerData && (
@@ -149,6 +154,7 @@ function initPage() {
         completedLessonNumber={completedLessonNumber}
         publishedState={scriptData.publishedState}
         participantAudience={scriptData.participantAudience}
+        showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
       />
     </Provider>,
     mountPoint
