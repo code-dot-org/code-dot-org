@@ -31,8 +31,8 @@ class Tutorials
       DB[@table].select(*@column_aliases).all.to_json
     end.deep_dup
 
-    @contents = JSON.parse(json_contents, object_class: DB[@table]).each do |tutorial|
-      tutorial.values.symbolize_keys!.to_h
+    @contents = JSON.parse(json_contents, object_class: DB[@table]).map do |tutorial|
+      tutorial.instance_values['values'].symbolize_keys!
     end
   end
 
