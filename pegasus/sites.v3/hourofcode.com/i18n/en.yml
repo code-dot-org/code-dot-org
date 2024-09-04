@@ -10715,6 +10715,63 @@
 
   language_label: "Language"
 
+  hoc_homepage:
+    what_is_hoc:
+      heading: "What is the Hour of Code?"
+      desc: "The Hour of Code is a worldwide movement that aims to introduce millions of students to computer science through one-hour coding activities. Through Hour of Code, we aim to demystify coding and show that anyone can learn the basics, inspiring future interest in computer science."
+    host:
+      heading: "Host an Hour of Code"
+      desc: "Your class or school can join millions around the world doing the Hour of Code! Registration for the annual Computer Science Education Week celebration begins in September. Though, Hour of Code is available year-round. Register today!"
+      button: "Register your event"
+    resources:
+      heading: "All the resources you need for your Hour of Code"
+      desc: "Bringing Hour of Code to your classroom or school is easy! Follow our step-by-step guides for preparing for, running, and celebrating your event. Check out our resources for everything you'll need!"
+      button:
+        how_to: "How-To Guides"
+        explore_resources: "Explore resources"
+    global:
+      heading: "Hour of Code is a global movement"
+      desc: "When you participate in the Hour of Code, you join a movement of millions across the globe."
+      stats:
+        served: "Hours of Code served"
+        countries: "Countries with Hour of Code"
+        events: "Events registered so far in %{campaign_date_year}"
+      button:
+        host: "Host an Hour of Code"
+        try_activites: "Try activities"
+
+  hoc_events:
+    heading: "Register to host an Hour of Code"
+    desc: "Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October."
+    button: "Register my event"
+    register:
+      heading: "Register your event"
+      disclaimer: "Registrations close on %{close_date}"
+      desc: "Join millions worldwide in the Hour of Code! Whether you're hosting an event at school, in the community, or online, we invite you to register your event today."
+      how_to: "Looking for more guidance on how to host an Hour of Code? [Check out our How-To Guide](%{how_to_url})"
+    resources:
+      heading: "Additional resources for your Hour of Code"
+      hoc:
+        title: "Hour of Code Resources"
+        desc: "Find all the resources you need—print and digital—to bring attention to your Hour of Code."
+        button: "View resources"
+      host:
+        title: "How to Host an Hour"
+        desc: "A step-by-step guide to preparing for, running, and celebrating your Hour of Code event with your class or group."
+        button: "Read the guide"
+      host:
+        title: "Choose an Activity"
+        desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
+        button: "Explore activities"
+
+  hoc_activites:
+    heading: "Explore activities"
+    desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
+    previous:
+      heading: "Looking for previous years' activities?"
+      desc: "We've moved all previous activities [here](%{archive_url})."
+      button: "View archived activities"
+
   resources_page:
     heading: "Resources for Hour of Code"
     desc: "Find all the resources you need for your Hour of Code. Not sure where to begin? Start with our [how-to guide](%{how_to_url}) for hosting an Hour of Code!"
