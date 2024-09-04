@@ -248,6 +248,12 @@ const EVENTS = {
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
 
+  // Javalab
+  JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
+  JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
+  JAVALAB_COMPILATION_ERROR: 'Javalab Compilation Error',
+  JAVALAB_COMPILATION_SUCCESS: 'Javalab Compilation Success',
+
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
   HOC_GUIDE_DIALOG_SHOWN: 'HOC Guide Dialog Shown',
