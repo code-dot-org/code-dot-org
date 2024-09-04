@@ -1924,6 +1924,18 @@ FactoryBot.define do
     association :lesson
     association :level
 
+    trait :with_learning_goals do
+      transient do
+        num_learning_goals {2}
+      end
+
+      after(:create) do |rubric, evaluator|
+        evaluator.num_learning_goals.times do
+          create :learning_goal, rubric: rubric
+        end
+      end
+    end
+
     trait :with_teacher_evaluations do
       transient do
         num_learning_goals {1}
