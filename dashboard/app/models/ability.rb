@@ -491,7 +491,7 @@ class Ability
       can :student_chat_history, :aichat do
         user.teacher_can_access_ai_chat?
       end
-      can :has_access, :aichat
+      can :user_has_access, :aichat
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
