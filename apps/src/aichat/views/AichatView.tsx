@@ -17,19 +17,21 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {getUserHasAichatAccess} from '../aichatApi';
 import aichatI18n from '../locale';
 import {
   addChatEvent,
   clearChatMessages,
-  fetchUserHasAichatAccess,
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   setStartingAiCustomizations,
+  setUserHasAichatAccess,
   setViewMode,
   updateAiCustomization,
 } from '../redux/aichatRedux';
@@ -117,10 +119,24 @@ const AichatView: React.FunctionComponent = () => {
         hideForParticipants: true,
       })
     );
+  }, [dispatch, initialSources, levelAichatSettings]);
+
+  useEffect(() => {
     if (signInState === SignInState.SignedIn) {
-      dispatch(fetchUserHasAichatAccess());
+      try {
+        getUserHasAichatAccess().then(hasAccess =>
+          dispatch(setUserHasAichatAccess(hasAccess))
+        );
+      } catch (error) {
+        if (!(error instanceof NetworkError && error.response.status === 403)) {
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .logError('Error in fetching user aichat access', error as Error);
+          return;
+        }
+      }
     }
-  }, [dispatch, initialSources, levelAichatSettings, signInState]);
+  }, [signInState, dispatch]);
 
   // When the level changes or if we are viewing aichat level as a different user
   // (e.g., teacher viewing student work), clear the chat message history and start a new session.

@@ -22,11 +22,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {
-  getStudentChatHistory,
-  getUserHasAichatAccess,
-  postAichatCompletionMessage,
-} from '../aichatApi';
+import {getStudentChatHistory, postAichatCompletionMessage} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
@@ -89,7 +85,7 @@ export interface AichatState {
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
-  userHasAichatAccess: boolean | undefined;
+  userHasAichatAccess: boolean;
 }
 
 const initialState: AichatState = {
@@ -107,7 +103,7 @@ const initialState: AichatState = {
   viewMode: ViewMode.EDIT,
   saveInProgress: false,
   currentSaveType: undefined,
-  userHasAichatAccess: undefined,
+  userHasAichatAccess: false,
 };
 
 // THUNKS
@@ -378,24 +374,6 @@ export const addChatEvent =
       ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
     }
   };
-
-// This thunk's callback function returns if a user has aichat acess.
-export const fetchUserHasAichatAccess = createAsyncThunk(
-  'aichat/fetchUserHasAichatAccess',
-  async (__, thunkAPI) => {
-    try {
-      const {userHasAccess} = await getUserHasAichatAccess();
-      thunkAPI.dispatch(setUserHasAichatAccess(userHasAccess));
-    } catch (error) {
-      if (!(error instanceof NetworkError && error.response.status === 403)) {
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError('Error in fetching user aichat access', error as Error);
-        return;
-      }
-    }
-  }
-);
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates

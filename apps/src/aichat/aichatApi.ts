@@ -273,9 +273,9 @@ function getUpdatedMessages(
  * This function sends a GET request to the aichat's userHasAichatAccess backend controller action,
  * then returns true if the user has aichat access and false otherwise.
  */
-export async function getUserHasAichatAccess(): Promise<UserHasAichatAccessResponse> {
+export async function getUserHasAichatAccess(): Promise<boolean> {
   const response = await HttpClient.fetchJson<UserHasAichatAccessResponse>(
     paths.USER_HAS_AICHAT_ACCESS_URL
   );
-  return response.value;
+  return response.value.userHasAccess;
 }
