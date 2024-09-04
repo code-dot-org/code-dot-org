@@ -73,6 +73,9 @@ Feature: Evaluate student code against rubrics using AI
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
+    # make sure the project source code really saved
+    And I reload the page
+    And I wait for the lab page to fully load
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
@@ -125,6 +128,9 @@ Feature: Evaluate student code against rubrics using AI
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
+    # make sure the project source code really saved
+    And I reload the page
+    And I wait for the lab page to fully load
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
