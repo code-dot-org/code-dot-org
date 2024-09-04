@@ -65,7 +65,7 @@ module MailJet
     contact = find_or_create_contact(user.email, user.name)
     update_contact_fields(contact,
       [
-        {name: 'firstname', value: user.name},
+        {name: 'firstname', value: user.name}, # existing templates use 'firstname'
         {name: 'display_name', value: user.name},
         {name: 'sign_up_date', value: user.created_at.to_datetime.rfc3339}
       ]
@@ -93,6 +93,13 @@ module MailJet
     Mailjet::Contact.find(email)
   end
 
+  # data must be in the format:
+  # [
+  #   {
+  #     name: "field_name",
+  #     value: "field_value"
+  #   }
+  # ]
   def self.update_contact_fields(contact, fields)
     return unless enabled?
     return if contact.nil?
@@ -100,6 +107,7 @@ module MailJet
     contactdata = Mailjet::Contactdata.find(contact.id)
     return unless contactdata
 
+    # Fields need to be sent separately or else only the first field is reflected in MailJet
     fields.each do |field|
       contactdata.update_attributes(
         data: [
