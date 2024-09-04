@@ -41,7 +41,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   };
 
   return (
-    <>
+    <div className={moduleStyles.predictQuestionContainer}>
       {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
         <textarea
           value={predictResponse}
@@ -82,7 +82,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
         })
       )}
       <PredictResetButton />
-    </>
+    </div>
   );
 };
 

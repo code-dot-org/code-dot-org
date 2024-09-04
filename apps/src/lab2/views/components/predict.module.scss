@@ -18,7 +18,7 @@
 }
 
 .freeResponse {
-  max-width: 100%;
+  width: 100%;
 }
 
 .predictSolutionContainer {
@@ -31,4 +31,8 @@
 .resetError {
   margin-top: 15px;
   margin-bottom: 10px;
+}
+
+.predictQuestionContainer {
+  width: 100%;
 }

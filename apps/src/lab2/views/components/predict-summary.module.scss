@@ -1,7 +1,6 @@
 @import 'color.scss';
 
 .predictSummaryContainer {
-  margin-bottom: 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -16,15 +15,15 @@
 
   :global(.fa) {
     vertical-align: middle;
-    font-size: 28px; // size of the button
+    font-size: 24px;
     color: $brand_primary_default;
   }
 }
 
 .responseCount {
   font-weight: bold;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 12px;
   display: block;
 }
 
@@ -32,4 +31,8 @@
   display: block;
   font-size: 14px;
   line-height: 14px;
+}
+
+.studentResponsesButton {
+  width: 100%;
 }
