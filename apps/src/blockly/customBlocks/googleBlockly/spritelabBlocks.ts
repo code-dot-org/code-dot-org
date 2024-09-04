@@ -32,6 +32,8 @@ const INPUTS = {
   STACK: 'STACK',
 };
 
+const PARAMETERS_LABEL = 'PARAMETERS_LABEL';
+
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 export const blocks = {
   // Creates and returns a toggle button field. This field should be
@@ -49,7 +51,11 @@ export const blocks = {
         name: 'FLYOUT',
       });
 
-      block.appendDummyInput(INPUTS.FLYOUT).appendField(flyoutField, flyoutKey);
+      const newDummyInput = block.appendDummyInput(INPUTS.FLYOUT);
+      if (block.type === BLOCK_TYPES.procedureDefinition) {
+        newDummyInput.appendField(commonI18n.parameters(), PARAMETERS_LABEL);
+      }
+      newDummyInput.appendField(flyoutField, flyoutKey);
       // By default, the flyout is added after the stack input (at the bottom of the block).
       // This flag is used by behavior and function definitions, mainly in the modal function editor,
       // to add the flyout before the stack input (at the top of the block).
