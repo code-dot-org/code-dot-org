@@ -46,6 +46,20 @@
   africa_campaign_date_year: "2023"
   africa_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
+  hoc_2024:
+    header: "Make the invisible, visible"
+    button_host_an_event: "Host an event"
+    banner:
+      header_register: "Register your Hour of Code"
+      desc:
+        ignite: "Ready to ignite your students' passions? Host an Hour of Code event."
+        join_millions: "Join millions worldwide for an Hour of Code and see how you can make your students' favorite things come to life!"
+        join_us: "Join us %{campaign_date_full} for Computer Science Education Week and help us bring what students love to life!"
+        make_everything: "Make everything your students love come to life! Join Hour of Code and spark a passion for computer science."
+    social:
+      title: "Register your event for Hour of Code!"
+      desc: "Explore how computer science can bring your favorite things to life."
+
   hoc2023_header: "Creativity with AI"
   hoc2023_hero_desc_homepage: "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed."
   hoc2023_hero_desc_learn_page: "This year, we're taking Hour of Code to new heights by offering coding opportunities that encompass both artificial intelligence (AI) and non-AI components."
@@ -923,6 +937,47 @@
   subscribe_form_section_desc_pl: "Be the first to know when registration begins! Sign up to receive an email notification when teachers can start applying for the Code.org Professional Learning Program."
   subscribe_form_section_desc_maker: "Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for Maker."
   subscribe_form_section_unsubscribe: "You can unsubscribe at any time."
+
+  hoc_page:
+    what_is_hoc:
+      heading: "What is Hour of Code?"
+      desc_01: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the 100 one-hour tutorials, available in over 45 languages."
+      desc_02: "**Make the Invisible, Visible** encourages the next generation of creators to explore, craft, and showcase how coding can bring their favorite things to life. Computer science and AI are wondrous forces that drive the epic apps, designs, and gadgets we use every day. This movement helps to highlight how coding is behind everything from your favorite shoes to the music you listen to. By jumping into fun activities and starting your own projects, you can learn how to use computer science to bring your passions to life and share them with others."
+    activities:
+      heading: "Lead an Hour of Code Activity"
+      desc: "With 100 activities to choose from with classifications by grade level and experience, your choices are vast. When you know your plans, please [register your activity](%{register_url}) so we can celebrate all the events happening across the globe."
+      dance:
+        overline: "Grade levels: 3–12"
+        title: "Dance Party: AI Edition"
+        desc: "It's time to strut your stuff! Create your own dance party featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía, and more!"
+        button: "Explore Dance Party"
+      ai_for_oceans:
+        overline: "Grade levels: 3–12"
+        title: "AI For Oceans"
+        desc: "Help A.I. clean the oceans by training it to detect trash! Learn about training data and bias, and how AI can address world problems."
+        button: "Explore AI For Oceans"
+      minecraft:
+        overline: "Grade levels: 2–12"
+        title: "Minecraft"
+        desc: "Build and explore with Minecraft! Learn basic computer science skills with lots of different Minecraft activities to choose from."
+        button: "Explore Minecraft"
+      explore:
+        heading: "Explore all Hour of Code activities from Code.org"
+        button: "Explore activities"
+    beyond:
+      heading: "Go beyond an Hour of Code"
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      teach:
+        title: "Teach with Code.org"
+        desc: "Find everything you need to start teaching computer science with Code.org, from lesson plans to classroom support."
+        button: "Teach with Code.org"
+      professional_learning:
+        title: "Professional Learning"
+        desc: "Discover accessible, comprehensive, and flexible professional learning that equips you with the skills to empower your students."
+        button: "Explore Professional Learning"
 
   hoc_page_what_is_hoc_heading: "What is Hour of Code?"
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
