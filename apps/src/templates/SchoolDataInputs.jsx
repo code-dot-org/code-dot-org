@@ -7,7 +7,6 @@ import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
-
 import i18n from '@cdo/locale';
 
 import {
@@ -16,6 +15,7 @@ import {
   SELECT_A_SCHOOL,
   US_COUNTRY_CODE,
 } from '../schoolInfo/constants';
+
 import style from './school-association.module.scss';
 
 const SEARCH_DEFAULTS = [
@@ -198,6 +198,7 @@ SchoolDataInputs.propTypes = {
   schoolsList: PropTypes.arrayOf(
     PropTypes.shape({value: PropTypes.string, text: PropTypes.string})
   ).isRequired,
+  schoolZipIsValid: PropTypes.bool.isRequired,
   setSchoolId: PropTypes.func.isRequired,
   setCountry: PropTypes.func.isRequired,
   setSchoolName: PropTypes.func.isRequired,
