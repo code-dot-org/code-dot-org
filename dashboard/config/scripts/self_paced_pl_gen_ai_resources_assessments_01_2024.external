@@ -5,13 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Predict Levels
 
-#### Now that you have learned more about what Generative AI is, let's dive into how to design with the user in mind.
+#### Predict levels in the Customizing Generative AI unit are designed to engage students by asking them to anticipate how a specific feature will impact the chatbot. These levels serve as low-stakes, no-wrong-answer prompts that encourage students to think critically and forecast the lesson’s direction. By predicting outcomes, students are actively involved in their learning process, which helps set the stage for the rest of the lesson. These predictions can spark class discussions and provide a natural segue into deeper exploration of the lesson content.
 
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 150px; clear: both; margin: 0 20px 20px 0;">
+#### Key strategies for leveraging these levels include:
+* #### **Encouraging Class Discussions**: Use the summary response screen to highlight and discuss student predictions, connecting their thoughts to the lesson's objectives. This approach is aligned with the PRIMM method for teaching programming, which follows the sequence: Predict, Run, Investigate, Modify, Make.
 
-## **In this lesson, you will:** 
-- #### Explore best practices for teaching Generative AI
-- #### Identify next steps to learn more about AI in the classroom
+* #### **Elevating Student Voices**: Always incorporate a discussion around these levels, focusing on specific outcomes outlined in your lesson plan. This not only validates student input but also helps guide the class through key concepts in a structured manner, enhancing comprehension and engagement.
 
-### **Suggested time:** 20 minutes
+#### By integrating these strategies around Predict levels into your teaching, you create an interactive learning environment where students are motivated to think ahead, share their ideas, and engage more deeply with the material.
+
+#### Learn more about incorporating student responses <a href="https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs" target="blank" rel="noopener noreferrer">🔗here</a>.
+
+## Up Next!
+#### Check out one of the predict levels from the Unit.
 MARKDOWN

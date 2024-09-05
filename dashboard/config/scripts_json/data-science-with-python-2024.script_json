@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-01 21:20:14 UTC",
+    "serialized_at": "2024-09-04 15:50:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -231,6 +231,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**How can I use data to answer a meaningful question, uncover patterns and insights, and effectively communicate my findings to others?**\n\nIn this project, students use the data they have collected to explore and answer a specific data question. They start by cleaning and organizing their data, then create and analyze visualizations to uncover patterns, trends, and insights. Throughout the project, students document their process, refine their visualizations, and develop a narrative that clearly communicates their findings. The project culminates in a gallery walk where they present their hypothesis, conclusions, and visual evidence.\n",
+        "preparation": "- Print copies of the Community Impact project guide",
+        "student_overview": "**How can I use data to answer a meaningful question, uncover patterns and insights, and effectively communicate my findings to others?**\n\nIn this project, you use the data you collected to explore and answer a specific question. You start by cleaning and organizing your data, then create visualizations to find patterns and insights. As you work, you document your process and improve your visualizations. The project ends with a gallery walk where you share your question, conclusions, and visual evidence with others.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -672,6 +675,62 @@
         "lesson_activity.key": "f44b0b4c-9b6d-4878-b6db-ba169a8b2e33",
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "key": "562b64b4-67f5-4fe3-b927-f485b696b7a3",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "562b64b4-67f5-4fe3-b927-f485b696b7a3",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "key": "8942dcbe-0e04-4c9d-9e44-11320d766450",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8942dcbe-0e04-4c9d-9e44-11320d766450",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "key": "63233adc-25f2-4e0b-8a46-86164272f68e",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "63233adc-25f2-4e0b-8a46-86164272f68e",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "key": "10bc5c70-e3d0-4949-b204-3e93eb1bac53",
+      "position": 4,
+      "properties": {
+        "duration": 45,
+        "name": "Day 4"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "10bc5c70-e3d0-4949-b204-3e93eb1bac53",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "data-science-with-python-2024"
       }
     }
@@ -2110,6 +2169,291 @@
         "activity_section.key": "573565bd-4dda-40dc-b2c3-08435ab44b42",
         "lesson_activity.key": "f44b0b4c-9b6d-4878-b6db-ba169a8b2e33"
       }
+    },
+    {
+      "key": "88801290-e3ce-430a-ad4b-244825ccb18a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take out the project planning guide they were given at the beginning of the unit. Also make sure students have their dataset available to view.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Describe the dataset you have collected to someone who has not heard about your project.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should use information from their project planning guides to help provide context and details about the dataset that would help someone new to the project understand what data they have collected.\n\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "88801290-e3ce-430a-ad4b-244825ccb18a",
+        "lesson_activity.key": "562b64b4-67f5-4fe3-b927-f485b696b7a3"
+      }
+    },
+    {
+      "key": "3c20e5fe-be1e-4e27-a891-5b167dcf8ddf",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data Science for Community Impact Project Guide. This will guide them through all four days of the project.\n\n> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** For the next four days, you will be exploring and analyzing your data in order to answer your data question that you developed at the start of the unit. As a class, let’s go over the project guide to make sure we understand what we will be doing for the next several days.\n",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This project will be completed by individual students on individual computers. However, it may be helpful to assign \"thought partners\" so that students have a peer with whom to discuss and share their ideas. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3c20e5fe-be1e-4e27-a891-5b167dcf8ddf",
+        "lesson_activity.key": "562b64b4-67f5-4fe3-b927-f485b696b7a3"
+      }
+    },
+    {
+      "key": "587cf903-4cba-42b4-92f1-4ed482aa642a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have. \n\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the project rubric?*\n- *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What barriers do you anticipate to achieving success on this project?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "587cf903-4cba-42b4-92f1-4ed482aa642a",
+        "lesson_activity.key": "562b64b4-67f5-4fe3-b927-f485b696b7a3"
+      }
+    },
+    {
+      "key": "d93ad743-dddd-4d1c-8770-67f0352ec726",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 4.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the first step students will take with their data is to explore at least three columns that look to be important in answering their data question. This includes finding out what type of data their columns are, figuring out if they need to clean their data and if so, deciding what the best way to do that will be, getting summary information on their columns using `mean`, `median`, `count`, `value_count`, or `describe`, and recording any initial insights from this exploration. Let students know that they should be recording this information in their project guide. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d93ad743-dddd-4d1c-8770-67f0352ec726",
+        "lesson_activity.key": "562b64b4-67f5-4fe3-b927-f485b696b7a3"
+      }
+    },
+    {
+      "key": "192a9698-4638-4512-9f76-9ba47ee20aeb",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to explore their data. If students have time, they can also start creating visualizations.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Encourage students to share and discuss their exploration process and any initial insights or questions they have with a thought partner while working. Remind students to use their project guide to record the initial insights they gain from their data as well as any additional thoughts or questions that come up as they explore. As you move around the room, engage students with questions about their data decisions. Encourage students who finish exploring and making decisions with their data early to start creating visualizations that will help them answer their data question. \n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "192a9698-4638-4512-9f76-9ba47ee20aeb",
+        "lesson_activity.key": "562b64b4-67f5-4fe3-b927-f485b696b7a3"
+      }
+    },
+    {
+      "key": "93b81c40-0566-4770-b28b-08528642d574",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 1 Reflection questions in their project planning guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing these reflection questions with their thought partner. \n\n\n",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "These reflection questions can be used with the project rubric to help assess students' ability to understand and apply data exploration and cleaning skills. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "93b81c40-0566-4770-b28b-08528642d574",
+        "lesson_activity.key": "562b64b4-67f5-4fe3-b927-f485b696b7a3"
+      }
+    },
+    {
+      "key": "15b82a54-544f-4530-a25b-a3e5360d24ed",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What data cleaning techniques did you use yesterday?*\n- *What did you learn about your data from your exploration?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to identify how they cleaned their data and what they learned about their data after initial exploration. \n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "15b82a54-544f-4530-a25b-a3e5360d24ed",
+        "lesson_activity.key": "8942dcbe-0e04-4c9d-9e44-11320d766450"
+      }
+    },
+    {
+      "key": "d7dd66e1-7be8-44f9-a9de-b4895c4e10cb",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the next step in the process is to make some decisions with their data so that they can analyze their data and answer their data question. This includes deciding if they need to use exploratory data analysis functions like `agg()` or `sum()` to identify trends or patterns, creating subgroups or filters to help them answer their data question, and determining which types of visualizations they should create. \n\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that something students might notice as that as you create their visualizations is that they spark new questions and this is completely fine. Encourage students to ask those questions and make more visualizations; their data question answers should be made up of more than one visualization and they should use the visualizations to help them form additional questions. This is an iterative process!\n\n\n",
+        "duration": "35",
+        "name": "Activity "
+      },
+      "seeding_key": {
+        "activity_section.key": "d7dd66e1-7be8-44f9-a9de-b4895c4e10cb",
+        "lesson_activity.key": "8942dcbe-0e04-4c9d-9e44-11320d766450"
+      }
+    },
+    {
+      "key": "248eb450-018e-43a3-b393-6c2ea2a8237a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students back to Level 1 to work with their data and create visualizations.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Encourage students to sharing and discuss their visualizations and potential insights and evidence they provide with a thought partner while working. Remind students to document their experiences in their project guide. As you move around the room, engage students with questions about their data decisions and their visualizations. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time and feel your students would benefit, consider conducting a peer review of the visualizations students have made for their project. Use the (Optional) Visualization Peer Review activity guide. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "248eb450-018e-43a3-b393-6c2ea2a8237a",
+        "lesson_activity.key": "8942dcbe-0e04-4c9d-9e44-11320d766450"
+      }
+    },
+    {
+      "key": "6c6ba0d1-641d-416a-b594-f43fd98d1f45",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 2 Reflection questions in their project planning guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing these reflection questions with their thought partner. ",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "These reflection questions can be used with the project rubric to help assess students' ability to answer their data questions and provide evidence to support their conclusions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6c6ba0d1-641d-416a-b594-f43fd98d1f45",
+        "lesson_activity.key": "8942dcbe-0e04-4c9d-9e44-11320d766450"
+      }
+    },
+    {
+      "key": "c52a2814-f12a-4f51-9a1d-6e5872158800",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 3: Improving Your Visualizations in their project planning guide.",
+        "duration": "10",
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you conducted the optional visualization peer review during the previous class, students can discuss their peer feedback with their thought partner to help them determine what improvements they might need to make to their visualizations. Otherwise, students can continue talking about their visualizations and discussing potential improvements with their thought partner."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c52a2814-f12a-4f51-9a1d-6e5872158800",
+        "lesson_activity.key": "63233adc-25f2-4e0b-8a46-86164272f68e"
+      }
+    },
+    {
+      "key": "b7bf7ec5-5ee8-4980-80d5-891750829d28",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to improve their visualizations and create any final ones needed.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Encourage students to share and discuss their visualizations and potential insights and evidence they provide with a thought partner while working. Remind students that this is the last day to work with their visualizations and to really analyze what those visualizations are saying about their data question, so they should ensure they have looked at their question from all angles and have tried to find all potential evidence to support their conclusions. As you move around the room, engage students with questions about their data decisions and their visualizations. \n",
+        "duration": "30",
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7bf7ec5-5ee8-4980-80d5-891750829d28",
+        "lesson_activity.key": "63233adc-25f2-4e0b-8a46-86164272f68e"
+      }
+    },
+    {
+      "key": "14e05339-1dd8-4f75-b34b-4d5700e1174d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students find a partner then take turns answering their data question question out loud. Encourage them to try to do so without reading what they wrote in their project guide. Students should record ideas from their discussions that they want to use in their evidence or conclusions. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time, you can conduct a second round of peer discussions to allow students to talk about their data questions and responses with another peer. Another option would be to allow students to share some of their answers to these questions. This will give you an idea of where they are and give other students an idea of what is working for their peers and what they are struggling with."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "14e05339-1dd8-4f75-b34b-4d5700e1174d",
+        "lesson_activity.key": "63233adc-25f2-4e0b-8a46-86164272f68e"
+      }
+    },
+    {
+      "key": "0751b901-50c6-45b9-8ae0-332353fe8544",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 3 Reflection questions in their project planning guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing these reflection questions with their thought partner. ",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These reflection questions could be considered when assessing their project according to the rubric."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0751b901-50c6-45b9-8ae0-332353fe8544",
+        "lesson_activity.key": "63233adc-25f2-4e0b-8a46-86164272f68e"
+      }
+    },
+    {
+      "key": "e9b3a74a-346c-4bb9-9396-a24f1cbb0a24",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What is one thing you’re excited for classmates to see with your project?*\n- *What is one thing you are curious about in other classmate’s project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** By thinking about something they’re proud of, students build confidence in their work. Focusing on a question they have about others' projects primes them for active participation during the Gallery Walk/Showcase.\n\n\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9b3a74a-346c-4bb9-9396-a24f1cbb0a24",
+        "lesson_activity.key": "10bc5c70-e3d0-4949-b204-3e93eb1bac53"
+      }
+    },
+    {
+      "key": "d876d3eb-4238-44eb-8c18-ac61f98ded5a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each student make a copy of the Gallery Walk template. This will provide them with a place to put their data question, hypothesis, conclusions, and visualizations for next class’ gallery walk.",
+        "duration": "35",
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "d876d3eb-4238-44eb-8c18-ac61f98ded5a",
+        "lesson_activity.key": "10bc5c70-e3d0-4949-b204-3e93eb1bac53"
+      }
+    },
+    {
+      "key": "1e4b6bcc-2411-40af-abb5-a9ed0a848fff",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to add the relevant parts of their data question, hypothesis, and conclusion from their project guide to their Gallery Walk template. Have students decide which visualization(s) support their conclusions and should include as evidence in their Gallery Walk template."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e4b6bcc-2411-40af-abb5-a9ed0a848fff",
+        "lesson_activity.key": "10bc5c70-e3d0-4949-b204-3e93eb1bac53"
+      }
+    },
+    {
+      "key": "92966ccd-afc9-450e-96ae-ca36a607fa48",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to participate in the Gallery Walk by displaying their project and then going around the room to view classmate’s projects and leave sticky notes with kudos, questions or observations.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage students to take notes on what they find interesting or insightful about their peers' work. Prompt them to consider how the visualizations and data stories differ from their own and what they can learn from these differences. Check that students are providing constructive feedback on the feedback forms and encourage them to think critically about the strengths and areas for improvement in each project they review. Ensure that students are thoughtfully engaging with a variety of projects, not just those of their closest peers.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "92966ccd-afc9-450e-96ae-ca36a607fa48",
+        "lesson_activity.key": "10bc5c70-e3d0-4949-b204-3e93eb1bac53"
+      }
+    },
+    {
+      "key": "92f9fcf8-7adf-417b-a154-ca0034bdedaa",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the End of Project Reflection in their project planning guide.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Once students have completed this last reflection, their project guide can be collected and used as part of the assessment. There are multiple questions that could be taken into account when assessing their project according to the rubric."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "92f9fcf8-7adf-417b-a154-ca0034bdedaa",
+        "lesson_activity.key": "10bc5c70-e3d0-4949-b204-3e93eb1bac53"
+      }
     }
   ],
   "script_levels": [
@@ -2394,6 +2738,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L4_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2416,6 +2763,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L5_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2438,6 +2788,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L6_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2485,6 +2838,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L2_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2507,6 +2863,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L3_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2529,6 +2888,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L4_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2551,6 +2913,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L5_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2598,6 +2963,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L2_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2620,6 +2988,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L3_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2642,6 +3013,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L4_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2664,6 +3038,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L5_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2686,6 +3063,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L6_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2708,6 +3088,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L7_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2755,6 +3138,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L2_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2777,6 +3163,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L3_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2799,6 +3188,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L4_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2821,6 +3213,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L5_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2843,6 +3238,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L6_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2865,6 +3263,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L7_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2887,6 +3288,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L8_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2909,6 +3313,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L9_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2931,6 +3338,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L10_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2953,6 +3363,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L11_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2975,6 +3388,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L12_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2997,6 +3413,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L13_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3044,6 +3463,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L2_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3066,6 +3488,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L3_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3088,6 +3513,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L4_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3110,6 +3538,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L5_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3132,6 +3563,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L6_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3154,6 +3588,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L7_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3176,6 +3613,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L8_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3198,6 +3638,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L9_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3220,6 +3663,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L10_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3267,6 +3713,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L2_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3289,6 +3738,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L3_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3311,6 +3763,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L4_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3333,6 +3788,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L5_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3355,6 +3813,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L6_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3377,6 +3838,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L7_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3399,6 +3863,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L8_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3421,6 +3888,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L9_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3443,6 +3913,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L10_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3465,6 +3938,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L11_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3487,6 +3963,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L12_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3509,6 +3988,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L13_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3531,6 +4013,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L14_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3578,6 +4063,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L2_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3600,6 +4088,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L3_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4450,6 +4941,18 @@
   ],
   "resources": [
     {
+      "name": "(Optional) Visualization Peer Review",
+      "url": "https://docs.google.com/document/d/1Eq_SfFWn7xSb-FdnTWWJFVN5kLSVz7P-ntePFbVq7Wg/edit",
+      "key": "_optional_visualization_peer_review",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_visualization_peer_review"
+      }
+    },
+    {
       "name": "Accessing and Grouping Values",
       "url": "https://docs.google.com/presentation/d/1I0BTjvAuzC0R2jT7X8fVHrOhDBWZHqufZ_HU4jmwbxU/template/preview",
       "key": "accessing_and_grouping_values",
@@ -4474,6 +4977,30 @@
       }
     },
     {
+      "name": "Data Science for Community Impact",
+      "url": "https://docs.google.com/presentation/d/14SYf2bg-fYq15eDRiZELausbVtoKTFhKiJmlxSB-GZc/template/preview",
+      "key": "data_science_for_community_impact",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_for_community_impact"
+      }
+    },
+    {
+      "name": "Data Science for Community Impact Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1Eg3BCWTRkfA-5jbtj-_phIItW93Bdb3nhG7tLjXFMBM/edit",
+      "key": "data_science_for_community_impact_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_for_community_impact_project_planning_guide"
+      }
+    },
+    {
       "name": "Exploratory Data Analysis",
       "url": "https://docs.google.com/presentation/d/1NnZk4lfwSDAgtI30pc32mmFLol1GyB3I2w9E8qEiWIk/template/preview",
       "key": "exploratory_data_analysis",
@@ -4483,6 +5010,18 @@
       },
       "seeding_key": {
         "resource.key": "exploratory_data_analysis"
+      }
+    },
+    {
+      "name": "Gallery Walk Template",
+      "url": "https://docs.google.com/presentation/d/1sTZkmCS5bfx0e5sL_EeVKgdFKXfI5LtuytCL7w-O_60/view",
+      "key": "gallery_walk_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "gallery_walk_template"
       }
     },
     {
@@ -4698,6 +5237,30 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "querying_your_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_optional_visualization_peer_review"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "data_science_for_community_impact"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "data_science_for_community_impact_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "gallery_walk_template"
       }
     },
     {
@@ -5357,6 +5920,20 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-DA-05"
       }
