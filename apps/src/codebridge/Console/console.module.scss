@@ -18,3 +18,36 @@
 .errorLine {
   color: $lightest_red;
 }
+
+.popOutGraph {
+  position: fixed;
+  left: 30%;
+  bottom: 30%;
+  z-index: 2000;
+  width: 600px;
+}
+
+.disabledInfoIcon {
+  padding: 12px;
+  color: $white;
+  font-size: 16px;
+}
+
+.consoleHeader {
+  height: 40px;
+  min-height: 40px;
+}
+
+.controlButton {
+  margin: 4px 8px;
+}
+
+.controlButtons {
+  display: flex;
+}
+
+.disabledButtonTooltipContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

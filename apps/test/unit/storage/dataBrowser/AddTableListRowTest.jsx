@@ -1,10 +1,8 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
-import commonI18n from '@cdo/locale';
-import sinon from 'sinon';
+import React from 'react';
 
 import AddTableListRow from '@cdo/apps/storage/dataBrowser/AddTableListRow';
+import commonI18n from '@cdo/locale';
 
 describe('AddTableListRow', () => {
   describe('localization', () => {
@@ -13,25 +11,28 @@ describe('AddTableListRow', () => {
     }
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for placeholder text', () => {
-      sinon.stub(commonI18n, 'dataTableNamePlaceholder').returns('i18n-holder');
+      jest
+        .spyOn(commonI18n, 'dataTableNamePlaceholder')
+        .mockClear()
+        .mockReturnValue('i18n-holder');
 
       const wrapper = createAddTableListRow();
 
       let input = wrapper.find('input').at(0);
-      expect(input.prop('placeholder')).to.contain('i18n-holder');
+      expect(input.prop('placeholder')).toContain('i18n-holder');
     });
 
     it('should render a localized string for "Add"', () => {
-      sinon.stub(commonI18n, 'add').returns('i18n-add');
+      jest.spyOn(commonI18n, 'add').mockClear().mockReturnValue('i18n-add');
 
       const wrapper = createAddTableListRow();
 
       let addButton = wrapper.find('button.uitest-add-table-btn').at(0);
-      expect(addButton.text()).to.contain('i18n-add');
+      expect(addButton.text()).toContain('i18n-add');
     });
   });
 });

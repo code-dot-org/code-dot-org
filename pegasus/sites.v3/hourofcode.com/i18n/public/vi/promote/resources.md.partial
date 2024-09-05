@@ -24,8 +24,6 @@ Print your own posters! Simply click an image below to view and save a printable
 
 {{ promote_new_posters }}
 
-* Bạn đang tìm poster của các năm trước? [Tìm ở đây nhé]({{ promote/previous_posters_url }})!
-
 <a id="social"></a>
 
 ## Đăng trên mạng xã hội
@@ -95,26 +93,6 @@ Chúng ta cùng tổ chức sự kiện lớn hơn trong năm nay nhé. Tôi đa
 Hãy lan truyền tin tức. Hãy tổ chức một sự kiện. Mời một trường học địa phương đăng ký. Hoặc tự thử nghiệm Giờ lập trình - mọi người đều tìm thấy lợi ích từ những điều cơ bản.
 
 Bắt đầu tại http://hourofcode.com/{{ country_language }} <br />
-
-* * *
-
-<a id="help-schools"></a>
-
-### Tình nguyện tại trường học:
-
-#### [Tìm thêm thông tin và nguồn lực hỗ trợ về chương trình tình nguyện tại trường học ở đây]({{ how_to_volunteers_url }}).
-
-**Dòng tiêu đề:** Chúng tôi có thể giúp bạn tổ chức Giờ lập trình được không?
-
-Trong {{ campaign_date/short }}, 10% học sinh trên khắp thế giới sẽ ăn mừng Tuần lễ Giáo dục Khoa học Máy tính bằng cách tham gia Giờ lập trình tại trường học. Đây là cơ hội cho trẻ em tìm hiểu cách hoạt động của công nghệ xung quanh chúng ta.
-
-[Tổ chức của tôi/Tên của tôi] rất vui lòng hỗ trợ [tên trường] tổ chức sự kiện Giờ lập trình. Chúng tôi có thể giúp giáo viên tổ chức Giờ lập trình trong lớp (mà thậm chí không cần máy tính!) hoặc nếu bạn muốn tổ chức hội thảo trường học, chúng tôi có thể sắp xếp người diễn thuyết nói về cách hoạt động của công nghệ và công việc của kỹ sư phần mềm.
-
-Học sinh sẽ tự tạo ứng dụng và game để khoe với cha mẹ. Chúng tôi cũng sẽ in chứng chỉ Giờ lập trình để các em mang về nhà. Sự kiện này sẽ rất vui đấy! Với các hoạt động thực hành tương tác, học sinh sẽ tìm hiểu các kỹ năng tư duy máy tính bằng phương pháp dễ tiếp cận.
-
-Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. Nhưng chỉ 51% trường trung học dạy môn khoa học máy tính. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã từng nghe tới Giờ lập trình trước đây, có thể bạn biết rằng sự kiện này đã làm nên lịch sử - hơn 100 triệu học sinh trên toàn thế giới đã tham gia Giờ lập trình. Ngay cả các nhà lãnh đạo như Tổng thống Obama và Thủ tưởng Canada Justin Trudeau cũng đã viết những dòng mã lệnh đầu tiên khi tham gia chiến dịch này.
-
-Bạn có thể đọc thêm về sự kiện tại http://hourofcode.com. Ngoài ra, hãy cho chúng tôi biết nếu bạn muốn lên lịch hẹn để trò chuyện về cách tham gia của [tên trường].<br />
 
 * * *
 

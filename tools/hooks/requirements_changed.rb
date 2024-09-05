@@ -24,7 +24,7 @@ end
 # particular file. We don't want to do anything in file checkout mode
 FILE_CHECKOUT = ARGV.fetch(3, "1") == "0"
 MERGE = ARGV[0] == "merge"
-PROMPT_ENABLED = ENV['MERGE_RUN_PROMPT']
+PROMPT_ENABLED = ENV.fetch('MERGE_RUN_PROMPT', nil)
 
 def optionally_run(cmd, file)
   dir = File.dirname(file)

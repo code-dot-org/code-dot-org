@@ -141,6 +141,10 @@ class Policies::Lti
     !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
   end
 
+  def self.only_lti_auth?(user)
+    user.authentication_options&.length == 1 && user.authentication_options.first.lti?
+  end
+
   def self.issuer(user)
     auth_options = user.authentication_options.find(&:lti?)
     if auth_options
@@ -162,6 +166,11 @@ class Policies::Lti
     LMS_PLATFORMS.values.find {|platform| platform[:issuer] == issuer}
   end
 
+  def self.find_platform_name_by_issuer(issuer)
+    platform_name, _ = LMS_PLATFORMS.find {|_, platform| platform[:issuer] == issuer}
+    platform_name.to_s
+  end
+
   # Returns the email provided by the LMS when creating the User through LTI
   # provisioning.
   def self.lti_provided_email(user)
@@ -179,31 +188,14 @@ class Policies::Lti
     user.teacher? && user.lti_roster_sync_enabled
   end
 
-  def self.early_access?
-    DCDO.get('lti_early_access_limit', false).present?
-  end
-
-  def self.early_access_closed?
-    return unless early_access?
-
-    lti_early_access_limit = DCDO.get('lti_early_access_limit', false)
-    return false unless lti_early_access_limit.is_a?(Integer)
-
-    LtiIntegration.count >= lti_early_access_limit
-  end
-
-  def self.early_access_banner_available?(user)
-    user.teacher? && early_access? && lti?(user)
-  end
-
   # Returns if the issuer accepts a Resource Link level membership service when retrieving membership for a context.
   def self.issuer_accepts_resource_link?(issuer)
     ['Canvas'].include?(issuer_name(issuer))
   end
 
-  # Force Schoology through iframe mitigation flow
+  # Force Schoology and Canvas through iframe mitigation flow
   def self.force_iframe_launch?(issuer)
-    ['Schoology'].include?(issuer_name(issuer))
+    %w[Schoology Canvas].include?(issuer_name(issuer))
   end
 
   def self.feedback_available?(user)
@@ -213,5 +205,9 @@ class Policies::Lti
   # Check if a partial registration is in progress for an LTI user.
   def self.lti_registration_in_progress?(session)
     PartialRegistration.in_progress?(session) && PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
+  end
+
+  def self.account_linking?(session, user)
+    session[:lms_landing].present? && only_lti_auth?(user) && !user.lms_landing_opted_out
   end
 end

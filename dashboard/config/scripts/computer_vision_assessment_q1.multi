@@ -1,0 +1,17 @@
+name 'Computer-Vision-Assessment-Q1'
+title 'Computer Vision Assessment'
+question 'What is the best definition of computer vision?'
+wrong 'A branch of computer science focused on improving the quality of digital images and videos'
+
+wrong 'A method used to enhance the quality in multimedia applications'
+
+right 'The field of study that enables computers to interpret and understand visual information from the world'
+
+wrong 'The process of developing algorithms for natural language processing and text analysis'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -2,25 +2,34 @@
 //   Blockly
 
 import $ from 'jquery';
-import {getStore} from './redux';
+import QRCode from 'qrcode.react';
 import React from 'react';
-import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import color from '@cdo/apps/util/color';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import msg from '@cdo/locale';
-import dom from './dom';
-import LegacyDialog from './code-studio/LegacyDialog';
-import ChallengeDialog from './templates/ChallengeDialog';
+
+import {getAllBlocks} from './blockly/utils';
+import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import project from './code-studio/initApp/project';
+import LegacyDialog from './code-studio/LegacyDialog';
+import testImageAccess from './code-studio/url_test';
+import {TestResults, KeyCodes} from './constants';
+import {getValidatedResult} from './containedLevels';
+import dom from './dom';
 import FeedbackBlocks from './feedbackBlocks';
+import {dataURIToBlob} from './imageUtils';
+import DialogButtons from './legacySharedComponents/DialogButtons';
 import puzzleRatingUtils from './puzzleRatingUtils';
-import DialogButtons from './templates/DialogButtons';
+import {getStore} from './redux';
+import ChallengeDialog from './templates/ChallengeDialog';
 import CodeWritten from './templates/feedback/CodeWritten';
 import GeneratedCode from './templates/feedback/GeneratedCode';
-import {dataURIToBlob} from './imageUtils';
-import trackEvent from './util/trackEvent';
-import {getValidatedResult} from './containedLevels';
 import PublishDialog from './templates/projects/publishDialog/PublishDialog';
-import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import {
   showPublishDialog,
   PUBLISH_REQUEST,
@@ -28,13 +37,6 @@ import {
   PUBLISH_FAILURE,
 } from './templates/projects/publishDialog/publishDialogRedux';
 import {createHiddenPrintWindow} from './utils';
-import testImageAccess from './code-studio/url_test';
-import {TestResults, KeyCodes} from './constants';
-import QRCode from 'qrcode.react';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import color from '@cdo/apps/util/color';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -1037,11 +1039,9 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           $.post(options.response.phone_share_url, params)
             .done(function (response) {
               $(submitButton).text('Sent!');
-              trackEvent('SendToPhone', 'success');
             })
             .fail(function (xhr) {
               $(submitButton).text('Error!');
-              trackEvent('SendToPhone', 'error');
             });
         });
       }
@@ -1289,6 +1289,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function (
  * @param {string} options.isDangerCancel Should cancel button has a danger type
  * @param {string} options.confirmText Text for confirm button
  * @param {boolean} [options.hideIcon=false] Whether to hide the icon
+ * @param {boolean} [options.disableSpaceClose=false] Whether to disable closing the dialog with the spacebar
  * @param {onConfirmCallback} [options.onConfirm] Function to be called after clicking confirm
  * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
@@ -1323,6 +1324,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
     contentDiv: contentDiv,
     icon: options.hideIcon ? null : this.studioApp_.icon,
     defaultBtnSelector: '#again-button',
+    disableSpaceClose: !!options.disableSpaceClose,
   });
 
   var cancelButton = contentDiv.querySelector('#again-button');
@@ -1466,9 +1468,9 @@ FeedbackUtils.prototype.hasAllBlocks_ = function (blocks) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getUserBlocks_ = function () {
-  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
-  var blocks = allBlocks.filter(function (block) {
-    var blockValid = !block.disabled && block.type !== 'when_run';
+  const allBlocks = getAllBlocks();
+  const blocks = allBlocks.filter(function (block) {
+    let blockValid = !block.disabled && block.type !== 'when_run';
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
@@ -1513,8 +1515,8 @@ FeedbackUtils.blockShouldBeCounted_ = function (block) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getCountableBlocks_ = function () {
-  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
-  var blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
+  const allBlocks = getAllBlocks();
+  const blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
   return blocks;
 };
 
@@ -1776,6 +1778,7 @@ function simulateClick(element) {
  * @param {string} options.id
  * @param {HTMLElement} options.header
  * @param {boolean} options.showXButton
+ * @param {boolean} [options.disableSpaceClose]
  */
 FeedbackUtils.prototype.createModalDialog = function (options) {
   var modalBody = document.createElement('div');
@@ -1798,7 +1801,12 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function (e) {
-    if (e.keyCode === KeyCodes.ENTER || e.keyCode === KeyCodes.SPACE) {
+    if (
+      e.keyCode === KeyCodes.ENTER ||
+      // This dialog is also used for renaming variables in Blockly labs.
+      // We disable this check for these instances so that spaces can be entered.
+      (!options.disableSpaceClose && e.keyCode === KeyCodes.SPACE)
+    ) {
       simulateClick(btn);
 
       e.stopPropagation();

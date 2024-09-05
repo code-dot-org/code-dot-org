@@ -1,10 +1,12 @@
-import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormController';
-import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
-import {PROGRAM_CSD} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import $ from 'jquery';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {PROGRAM_CSD} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
+import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormController';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 let DummyPage1 = () => {
   return <div>Page 1</div>;

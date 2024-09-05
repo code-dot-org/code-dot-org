@@ -1,13 +1,15 @@
 import _ from 'lodash';
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import javalabMsg from '@cdo/javalab/locale';
+
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
-import JavalabDialog from './JavalabDialog';
-import NameFileDialog from './NameFileDialog';
+import javalabMsg from '@cdo/javalab/locale';
+
 import CommitDialog from './CommitDialog';
 import {DisplayTheme} from './DisplayTheme';
+import JavalabDialog from './JavalabDialog';
+import NameFileDialog from './NameFileDialog';
 import {
   clearNewFileError,
   clearRenameFileError,

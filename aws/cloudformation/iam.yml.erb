@@ -239,37 +239,6 @@ Resources:
         - Key: sqlworkbench-team
           Value: codedotorg
 
-# TODO: Migrate to Engineering_Contributor
-  ContributorRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: Contributor
-      Description: Google-federated AWS Role for contributors, granting minimal access for local development.
-      Path: /engineering/
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
-            Action: sts:AssumeRoleWithSAML
-            Condition:
-              StringEquals:
-                SAML:aud: https://signin.aws.amazon.com/saml
-          - Effect: Allow
-            Principal: {Federated: accounts.google.com}
-            Action: sts:AssumeRoleWithWebIdentity
-            Condition:
-              StringEquals:
-                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
-              ForAnyValue:StringEquals:
-                accounts.google.com:sub: !Ref ContributorGoogleIDs
-      ManagedPolicyArns:
-        - !Ref ContributorS3Policy
-        - !Ref ContributorSecretsPolicy
-      Tags:
-        - Key: sqlworkbench-team
-          Value: codedotorg
-
 # TODO: Migrate to Billing_ReadOnly
   BillingRole:
     Type: AWS::IAM::Role
@@ -298,6 +267,8 @@ Resources:
         - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
 
 # Console & CLI Roles
+# The term 'FullAccess' means the role has the highest access for it's type, not
+# full access to all resources. It's in comparison to similar 'ReadOnly' roles.
 
 <%
 roles = {
@@ -326,6 +297,7 @@ roles = {
     ManagedPolicyArns: [
       '!Ref ContributorS3Policy',
       '!Ref ContributorSecretsPolicy',
+      'arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess'
     ]
   },
   TempS3LessEngineerRole: {
@@ -365,6 +337,14 @@ roles = {
     GoogleIdsSSMParameter: 'BillingGoogleIDs',
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
+    ]
+  },
+  ProductManagerFullAccessRole: {
+    RoleName: 'ProductManager_FullAccess',
+    GoogleIdsSSMParameter: 'ProductGoogleIDs',
+    ManagedPolicyArns: [
+      '!Ref BedrockKnowledgeBaseInvocationPolicy',
+      '!Ref CloudwatchDashboardViewerPolicy',
     ]
   }
 }
@@ -725,6 +705,43 @@ roles.each do |name, config| %>
             Resource: 
               - !Sub "arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}/*"
               - !Sub "arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}"
+  
+  ProductGoogleIDs:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /IAM/ProductGoogleIDs
+      Type: StringList
+      Value: initial,value
+      Description: List of Google IDs of people being granted product access.
+  
+  BedrockKnowledgeBaseInvocationPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: BedrockKnowledgeBaseInvocationPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - bedrock:InvokeModel
+              - bedrock:Retrieve
+              - bedrock:RetrieveAndGenerate
+            Resource:
+              - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/*'
+
+  CloudwatchDashboardViewerPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: CloudwatchDashboardViewerPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - cloudwatch:GetDashboard
+              - cloudwatch:ListDashboards
+              - cloudwatch:GetMetricData
+            Resource: '*'
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack

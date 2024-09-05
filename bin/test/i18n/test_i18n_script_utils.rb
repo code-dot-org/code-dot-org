@@ -1,34 +1,6 @@
 require_relative '../test_helper'
 require_relative '../../i18n/i18n_script_utils'
 
-class I18nScriptUtilsTest < Minitest::Test
-  def test_to_crowdin_yaml
-    assert_equal "---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n", I18nScriptUtils.to_crowdin_yaml({en: {'test' => '#example', 'yes' => 'y'}})
-  end
-
-  def test_error_logging
-    expected_error_class = 'expected_error_class'
-    expected_error_message = 'expected_error_message'
-
-    I18nScriptUtils.expects(:puts).with('[expected_error_class] expected_error_message').once
-
-    I18nScriptUtils.log_error(expected_error_class, expected_error_message)
-  end
-
-  def test_yml_file_fixing
-    provided_yaml_file_path = 'provided_yaml_file_path'
-
-    File.expects(:read).with(provided_yaml_file_path).returns("---\nen-US:\n  data\n")
-    File.expects(:write).with(provided_yaml_file_path, %Q["en-US":\n  data\n])
-
-    I18nScriptUtils.fix_yml_file(provided_yaml_file_path)
-  end
-
-  def test_to_js_locale_returns_formated_js_locale
-    assert_equal 'en_us', I18nScriptUtils.to_js_locale('en-US')
-  end
-end
-
 describe I18nScriptUtils do
   let(:described_class) {I18nScriptUtils}
 
@@ -84,6 +56,17 @@ describe I18nScriptUtils do
     end
   end
 
+  describe '.to_crowdin_yaml' do
+    let(:to_crowdin_yaml) {described_class.to_crowdin_yaml(to_crowdin_yaml_data)}
+
+    let(:to_crowdin_yaml_data) {{en: {'test' => '#example', 'yes' => 'y'}}}
+    let(:to_crowdin_yaml_output) {"---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n"}
+
+    it 'returns correctly formatted yaml' do
+      _(to_crowdin_yaml).must_equal to_crowdin_yaml_output
+    end
+  end
+
   describe '.unit_directory_change?' do
     let(:unit_directory_change?) {I18nScriptUtils.unit_directory_change?(content_dir, unit_i18n_filepath)}
 
@@ -117,6 +100,48 @@ describe I18nScriptUtils do
 
         _(unit_directory_change?).must_equal true
       end
+    end
+  end
+
+  describe '.log_error' do
+    let(:log_error) {described_class.log_error(error_class, error_message)}
+
+    let(:error_class) {'expected_error_class'}
+    let(:error_message) {'expected_error_message'}
+
+    it 'returns error class and message' do
+      described_class.expects(:puts).with('[expected_error_class] expected_error_message').once
+      _(log_error)
+    end
+  end
+
+  describe '.fix_yml_file' do
+    let(:fix_yml_file) {described_class.fix_yml_file(provided_yaml_file_path)}
+
+    let(:provided_yaml_file_path) {'provided_yaml_file_path'}
+    let(:provided_yaml_file_data) {"---\nen-US:\n  data\n"}
+    let(:expected_yaml_output) {%Q["en-US":\n  data\n]}
+
+    before do
+      FileUtils.mkdir_p File.dirname(provided_yaml_file_path)
+      File.write provided_yaml_file_path, provided_yaml_file_data
+    end
+
+    it 'yml file should be reformatted correctly' do
+      assert_changes -> {File.read(provided_yaml_file_path)}, from: provided_yaml_file_data, to: expected_yaml_output do
+        fix_yml_file
+      end
+    end
+  end
+
+  describe '.to_js_locale' do
+    let(:to_js_locale) {described_class.to_js_locale(locale)}
+
+    let(:locale) {'en-US'}
+    let(:expected_locale_string) {'en_us'}
+
+    it 'locale string should be formatted correctly' do
+      _(to_js_locale).must_equal expected_locale_string
     end
   end
 
@@ -300,6 +325,35 @@ describe I18nScriptUtils do
       it 'raises error' do
         actual_error = assert_raises {subject}
         assert_equal 'do not know how to parse file "/unexpected.txt"', actual_error.message
+      end
+    end
+
+    describe 'when the file does not exist' do
+      let(:non_existent_file_path) {'/nonexistent.json'}
+
+      it 'raises an error' do
+        error = assert_raises(RuntimeError) {I18nScriptUtils.parse_file(non_existent_file_path)}
+        assert_match "File not found: \"#{non_existent_file_path}\" - ", error.message
+      end
+    end
+
+    describe 'when the JSON file is invalid' do
+      let(:file_path) {'/invalid.json'}
+      let(:file_content) {'invalid json content'}
+
+      it 'raises an error' do
+        error = assert_raises(RuntimeError) {I18nScriptUtils.parse_file(file_path)}
+        assert_match "JSON parsing error in file \"#{file_path}\" - ", error.message
+      end
+    end
+
+    describe 'when the YAML file is invalid' do
+      let(:file_path) {'/invalid.yaml'}
+      let(:file_content) {'invalid: yaml: content: :'}
+
+      it 'raises an error' do
+        error = assert_raises(RuntimeError) {I18nScriptUtils.parse_file(file_path)}
+        assert_match "YAML parsing error in file \"#{file_path}\" - ", error.message
       end
     end
   end

@@ -1,15 +1,14 @@
-import React from 'react';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {assert} from 'chai';
+import React from 'react';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedFoormEntityLoadButtons as FoormEntityLoadButtons} from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
 import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
 
 describe('FoormEntityLoadButtons', () => {
   let defaultProps, wrapper, showCodeMirrorStub;
-  showCodeMirrorStub = sinon.stub();
+  showCodeMirrorStub = jest.fn();
   beforeEach(() => {
     defaultProps = {
       foormEntities: [
@@ -121,6 +120,6 @@ describe('FoormEntityLoadButtons', () => {
   it('shows blank editor on new library click', () => {
     wrapper.find(Button).prop('onClick')();
 
-    sinon.assert.calledOnce(showCodeMirrorStub);
+    expect(showCodeMirrorStub).toHaveBeenCalledTimes(1);
   });
 });

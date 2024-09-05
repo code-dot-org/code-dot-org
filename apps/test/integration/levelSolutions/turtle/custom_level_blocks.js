@@ -1,6 +1,8 @@
-var testUtils = require('../../../util/testUtils');
 import {TestResults} from '@cdo/apps/constants';
+
 var blockUtils = require('@cdo/apps/block_utils.js');
+
+var testUtils = require('../../../util/testUtils');
 
 module.exports = {
   app: 'turtle',

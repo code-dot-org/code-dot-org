@@ -1,0 +1,28 @@
+name 'CSA U5L2-L8_pilot-2025'
+title 'Check for Understanding'
+
+wrong '`H`'
+wrong '`L`'
+wrong '`M`'
+right '`N`'
+wrong '`ArrayIndexOutOfBoundsException`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+String[][] letters = {{"A", "B", "C", "D", "E"},
+                      {"F", "G", "H", "I", "J"},
+                      {"K", "L", "M", "N", "O"}};
+
+System.out.println(letters[2][3]);
+```
+
+What is printed as a result of executing this code segment?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The `System.out.println(letters[2][3])` statement prints the value at row index `2` and column index `3` of the `letters` array, which corresponds to the element `"N"`.
+MARKDOWN

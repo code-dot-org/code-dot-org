@@ -1,12 +1,15 @@
-import React from 'react';
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {connect} from 'react-redux';
+
 import loadable from '@cdo/apps/util/loadable';
+
 const VirtualizedSelect = loadable(() =>
   import('@cdo/apps/templates/VirtualizedSelect')
 );
 import SingleCheckbox from '../../../form_components/SingleCheckbox';
+import {getLatestVersionMap} from '../../foormHelpers';
 import {
   setLastSaved,
   setSaveError,
@@ -14,7 +17,6 @@ import {
   setHasLintError,
   setLastSavedQuestions,
 } from '../foormEditorRedux';
-import {getLatestVersionMap} from '../../foormHelpers';
 
 class FoormEntityLoadButtons extends React.Component {
   static propTypes = {

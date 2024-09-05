@@ -4,8 +4,10 @@ module Services
       # def self.log_parent_email_submit(user)
       # def self.log_parent_email_update(user)
       # def self.log_permission_granting(user)
+      # def self.log_grace_period_start(user)
       # def self.log_account_locking(user)
       # def self.log_account_purging(user)
+      # def self.log_compliance_removing(user)
       CAP::UserEvent.names.each_key do |event_name|
         define_singleton_method("log_#{event_name}") do |user|
           call(user: user, event_name: event_name)
@@ -25,11 +27,13 @@ module Services
       def call
         return unless policy
 
-        # Get the value of the property before the user was last saved.
-        # This will be the current value if the value was not updated.
-        state_before = user.property_before_save('child_account_compliance_state')
-
-        CAP::UserEvent.create!(user: user, policy: policy, name: event_name, state_before: state_before, state_after: user.child_account_compliance_state)
+        CAP::UserEvent.create!(
+          user: user,
+          policy: policy,
+          name: event_name,
+          state_before: user.cap_status_previously_was,
+          state_after: user.cap_status
+        )
       end
 
       private def policy

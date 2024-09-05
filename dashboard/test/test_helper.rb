@@ -1,4 +1,5 @@
 require 'test_reporter'
+require 'faker'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
@@ -11,7 +12,7 @@ Minitest.extensions.unshift('rails')
 
 reporters = [CowReporter.new]
 if ENV['CIRCLECI']
-  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CIRCLE_TEST_REPORTS', nil)}/dashboard")
 end
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
@@ -54,6 +55,7 @@ require 'testing/lock_thread'
 require 'testing/transactional_test_case'
 require 'testing/spec_syntax'
 require 'testing/capture_queries'
+require 'testing/rspec_mocks'
 
 require 'parallel_tests/test/runtime_logger'
 
@@ -98,6 +100,13 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
     set_env :test
+  end
+
+  def after_teardown
+    super
+  ensure
+    # Ensures the time for the next tests is unfrozen.
+    Timecop.return if Timecop.frozen?
   end
 
   def panda_panda
@@ -267,7 +276,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Security/Eval
-      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
+      e.respond_to?(:call) ? e : -> {eval(e, block.binding)}
       # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
@@ -288,7 +297,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Security/Eval
-      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
+      e.respond_to?(:call) ? e : -> {eval(e, block.binding)}
       # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)

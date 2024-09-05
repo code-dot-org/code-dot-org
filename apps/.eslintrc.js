@@ -29,6 +29,7 @@ module.exports = {
     'jsx-a11y',
     'storybook',
     'import',
+    'jest',
   ],
   parserOptions: {
     babelOptions: {
@@ -43,6 +44,7 @@ module.exports = {
   ],
   env: {
     es6: true,
+    'jest/globals': true,
   },
   globals: {
     $: 'readonly',
@@ -146,6 +148,27 @@ module.exports = {
         pathGroupsExcludedImportTypes: ['builtin', 'object'],
       },
     ],
+    'no-restricted-imports': [
+      'error',
+      {
+        paths: [
+          {
+            name: 'chai',
+            message: 'Use jest matchers instead of chai',
+          },
+          {
+            name: 'sinon',
+            message: 'Use jest spys and stubs instead of sinon',
+          },
+        ],
+        patterns: [
+          {
+            group: ['*deprecatedChai', '*reconfiguredChai'],
+            message: 'Use jest matchers instead of chai',
+          },
+        ],
+      },
+    ],
   },
   settings: {
     react: {
@@ -175,64 +198,6 @@ module.exports = {
       rules: {
         'storybook/no-title-property-in-meta': 'error',
       },
-    },
-    {
-      rules: {
-        'import/order': 'off',
-      },
-      // We are actively working to decrease the number of folders in this list.
-      // To turn on the order rule for a folder, remove it from this list and run `yarn lint --fix`
-      // Commit any changes made.
-      files: [
-        'src/*',
-        'src/acemode/*',
-        'src/aichat/**',
-        'src/ailab/*',
-        'src/aiTutor/**',
-        'src/assetManagement/*',
-        'src/blockTooltips/*',
-        'src/bounce/*',
-        'src/code-studio/**',
-        'src/cookieBanner/*',
-        'src/courseExplorer/*',
-        'src/dance/**',
-        'src/fish/*',
-        'src/flappy/*',
-        'src/generated/**',
-        'src/hamburger/*',
-        'src/javalab/**',
-        'src/lab2/**',
-        'src/lib/**',
-        'src/music/**',
-        'src/musicMenu/*',
-        'src/p5lab/**',
-        'src/panels/*',
-        'src/publicKeyCryptography/*',
-        'src/pythonlab/*',
-        'src/redux/*',
-        'src/sites/**',
-        // This one had some problems, see https://github.com/code-dot-org/code-dot-org/pull/58284
-        'src/templates/curriculumCatalog/**',
-        'test/integration/**',
-        'test/*',
-        'test/unit/*',
-        'test/unit/assetManagement/**',
-        'test/unit/blockTooltips/**',
-        'test/unit/code-studio/**',
-        'test/unit/dance/**',
-        'test/unit/gamelab/**',
-        'test/unit/javalab/**',
-        'test/unit/lab2/**',
-        'test/unit/lib/**',
-        'test/unit/lib/kits/**',
-        'test/unit/lib/levelbuilder/**',
-        'test/unit/music/**',
-        'test/unit/p5lab/**',
-        'test/unit/redux/**',
-        'test/unit/sites/**',
-        'test/unit/storage/**',
-        'test/unit/weblab/**',
-      ],
     },
   ],
 };

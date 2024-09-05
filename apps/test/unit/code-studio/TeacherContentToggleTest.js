@@ -1,15 +1,16 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import React from 'react';
 import $ from 'jquery';
-import sinon from 'sinon';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {
   UnconnectedTeacherContentToggle as TeacherContentToggle,
   mapStateToProps,
 } from '@cdo/apps/code-studio/components/TeacherContentToggle';
-import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 import * as hiddenLessonRedux from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 
 describe('TeacherContentToggle', () => {
   let div, renderElement;

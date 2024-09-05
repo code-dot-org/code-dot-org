@@ -4,13 +4,14 @@ import * as Table from 'reactabular-table';
 
 import {fetchStudents} from '@cdo/apps/aiTutor/accessControlsApi';
 import {StudentAccessData} from '@cdo/apps/aiTutor/types';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {tableLayoutStyles as tableStyles} from '@cdo/apps/templates/tables/tableConstants';
 
 import {styleOverrides} from './InteractionsTable';
-import style from './interactions-table.module.scss';
-import StudentAccessToggle from './StudentAccessToggle';
 import SectionAccessToggle from './SectionAccessToggle';
+import StudentAccessToggle from './StudentAccessToggle';
+
+import style from './interactions-table.module.scss';
 
 /**
  * Renders toggles to control student access to AI Tutor.

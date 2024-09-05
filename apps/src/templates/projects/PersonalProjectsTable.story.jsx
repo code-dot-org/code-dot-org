@@ -25,7 +25,6 @@ WithProjects.args = {
   personalProjectsList: stubFakePersonalProjectData,
   isLoadingPersonalProjectsList: false,
   isUserSignedIn: true,
-  canShare: true,
 };
 
 export const WithoutProjects = Template.bind({});
@@ -33,5 +32,4 @@ WithoutProjects.args = {
   personalProjectsList: [],
   isLoadingPersonalProjectsList: false,
   isUserSignedIn: true,
-  canShare: true,
 };

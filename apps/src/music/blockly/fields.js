@@ -1,17 +1,28 @@
 // Common field definitions used across multiple music blocks
 
-import {DEFAULT_PATTERN, DEFAULT_CHORD, Triggers} from '../constants';
+import {
+  DEFAULT_PATTERN,
+  DEFAULT_PATTERN_AI,
+  DEFAULT_CHORD,
+  DEFAULT_TUNE,
+  Triggers,
+} from '../constants';
 import Globals from '../globals';
 import musicI18n from '../locale';
 import MusicLibrary from '../player/MusicLibrary';
+
 import {
   FIELD_REST_DURATION_NAME,
   FIELD_SOUNDS_NAME,
   FIELD_SOUNDS_TYPE,
   FIELD_PATTERN_NAME,
   FIELD_PATTERN_TYPE,
+  FIELD_PATTERN_AI_NAME,
+  FIELD_PATTERN_AI_TYPE,
   FIELD_CHORD_TYPE,
   FIELD_CHORD_NAME,
+  FIELD_TUNE_NAME,
+  FIELD_TUNE_TYPE,
   TRIGGER_FIELD,
 } from './constants';
 
@@ -56,6 +67,19 @@ export const fieldPatternDefinition = {
   ...instrumentCommonOptions,
 };
 
+export const fieldPatternAiDefinition = {
+  type: FIELD_PATTERN_AI_TYPE,
+  name: FIELD_PATTERN_AI_NAME,
+  previewSound: (id, onStop) => {
+    Globals.getPlayer().previewSound(id, onStop);
+  },
+  previewPattern: (patternValue, onTick, onStop) => {
+    Globals.getPlayer().previewPattern(patternValue, onTick, onStop);
+  },
+  currentValue: DEFAULT_PATTERN_AI,
+  ...instrumentCommonOptions,
+};
+
 export const fieldChordDefinition = {
   type: FIELD_CHORD_TYPE,
   name: FIELD_CHORD_NAME,
@@ -66,6 +90,19 @@ export const fieldChordDefinition = {
     Globals.getPlayer().previewNote(note, instrument, onStop);
   },
   currentValue: DEFAULT_CHORD,
+  ...instrumentCommonOptions,
+};
+
+export const fieldTuneDefinition = {
+  type: FIELD_TUNE_TYPE,
+  name: FIELD_TUNE_NAME,
+  previewTune: (tuneValue, onTick, onStop) => {
+    Globals.getPlayer().previewTune(tuneValue, onTick, onStop);
+  },
+  previewNote: (tune, instrument, onStop) => {
+    Globals.getPlayer().previewNote(tune, instrument, onStop);
+  },
+  currentValue: DEFAULT_TUNE,
   ...instrumentCommonOptions,
 };
 

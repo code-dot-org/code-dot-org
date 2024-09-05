@@ -484,9 +484,20 @@ class ScriptsControllerTest < ActionController::TestCase
       evil_unit = Unit.new(name: name)
       evil_unit.save(validate: false)
       assert_raise ArgumentError do
-        delete :destroy, params: {id: evil_unit.id}
+        delete :destroy, params: {id: evil_unit.name}
       end
     end
+  end
+
+  test 'destroy successfully deletes the unit' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit_to_delete = create :script
+    delete :destroy, params: {id: unit_to_delete.name}
+
+    assert_response :found
+    assert_nil Unit.find_by(name: unit_to_delete.name)
   end
 
   test "cannot update on production" do
@@ -1770,6 +1781,40 @@ class ScriptsControllerTest < ActionController::TestCase
     Unit.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
     Unit.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
+  end
+
+  test "legacy path look up by id fails with not found" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(create(:levelbuilder))
+    legacy_path_validation_unit = create :script
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :edit, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :standards, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :code, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :vocab, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :resources, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      delete :destroy, params: {id: legacy_path_validation_unit.id}
+    end
   end
 
   def stub_file_writes(unit_name, family_name: nil)

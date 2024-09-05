@@ -29,9 +29,6 @@ module Forms
           record.resends_sent += 1 if record.persisted?
           record.save!
 
-          Services::ChildAccount.update_compliance(child_account, Policies::ChildAccount::ComplianceState::REQUEST_SENT)
-          child_account.save!
-
           ParentMailer.parent_permission_request(
             record.parent_email,
             policy_compliance_child_account_consent_url(token: record.uuid)

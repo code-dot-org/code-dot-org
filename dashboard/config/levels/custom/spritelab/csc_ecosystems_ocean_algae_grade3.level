@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-04-23T19:37:19.000Z",
   "level_num": "custom",
@@ -49,8 +50,7 @@
     "encrypted_examples": "Q00Be2qsdk+4kI7XNyTpKOqfk3O3NI1zRjaMgEnHRGq0W6bwkBfrhmWJ150Q\nBjYYrIFMVSZsT7lJkLI/oRkm+A==\n",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-04-23T19:37:19.075+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_algae_maker\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_algae_maker\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:37:19.075+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_algae_maker\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_algae_maker\"},{\"changed_at\":\"2024-06-24 23:16:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-26 17:43:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

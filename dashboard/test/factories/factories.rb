@@ -427,35 +427,30 @@ FactoryBot.define do
       end
 
       trait :with_parent_permission do
-        child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
-        child_account_compliance_state_last_updated {DateTime.now}
-      end
-
-      trait :with_pending_parent_permission do
-        child_account_compliance_state {Policies::ChildAccount::ComplianceState::REQUEST_SENT}
-        child_account_compliance_state_last_updated {DateTime.now}
+        cap_status {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
+        cap_status_date {DateTime.now}
       end
 
       trait :without_parent_permission do
-        child_account_compliance_state {nil}
-        child_account_compliance_state_last_updated {DateTime.now}
+        cap_status {nil}
+        cap_status_date {DateTime.now}
       end
 
-      trait :before_p20_937_exception_date do
-        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE - 1.second}
-      end
+      factory :cpa_non_compliant_student, traits: [:U13, :in_colorado], aliases: %i[non_compliant_child] do
+        trait :predates_policy do
+          created_at {Policies::ChildAccount.state_policies.dig('CO', :start_date).ago(1.second)}
+        end
 
-      trait :p20_937_exception_date do
-        created_at {Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE}
-      end
+        trait :in_grace_period do
+          cap_status {Policies::ChildAccount::ComplianceState::GRACE_PERIOD}
+          cap_status_date {DateTime.now}
+        end
 
-      factory :non_compliant_child, traits: [:U13, :in_colorado, :p20_937_exception_date] do
         factory :locked_out_child do
-          child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
-          child_account_compliance_state_last_updated {DateTime.now}
-          child_account_compliance_lock_out_date {DateTime.now}
+          cap_status {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
+          cap_status_date {DateTime.now}
           trait :expired do
-            child_account_compliance_lock_out_date {7.days.ago}
+            cap_status_date {7.days.ago}
           end
         end
       end
@@ -473,6 +468,7 @@ FactoryBot.define do
 
     trait :with_lti_auth do
       after(:create) do |user|
+        user.lms_landing_opted_out = true
         user.authentication_options.destroy_all
         lti_auth = create(:lti_authentication_option, user: user)
         user.authentication_options << lti_auth
@@ -527,11 +523,6 @@ FactoryBot.define do
     trait :powerschool_sso_provider do
       untrusted_email_sso_provider
       provider {'powerschool'}
-    end
-
-    trait :the_school_project_sso_provider do
-      sso_provider
-      provider {'the_school_project'}
     end
 
     trait :twitter_sso_provider do
@@ -765,6 +756,13 @@ FactoryBot.define do
       end
     end
 
+    trait :with_instructions do
+      after(:create) do |level|
+        level.properties['long_instructions'] = 'Write a loop.'
+        level.save!
+      end
+    end
+
     factory :sublevel do
       sequence(:name) {|n| "sub_level_#{n}"}
     end
@@ -921,6 +919,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :pythonlab, parent: :level, class: Pythonlab do
+    game {Game.pythonlab}
+    level_num {'custom'}
+  end
+
   factory :block do
     transient do
       sequence(:index)
@@ -1048,6 +1051,8 @@ FactoryBot.define do
       after(:create) do |csc_script|
         csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
         csc_script.save!
+        course_offering = CourseOffering.add_course_offering(csc_script)
+        course_offering.update!(marketing_initiative: 'CSC')
       end
     end
 
@@ -1059,7 +1064,7 @@ FactoryBot.define do
         hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
         hoc_script.save!
         course_offering = CourseOffering.add_course_offering(hoc_script)
-        course_offering.update!(category: 'hoc')
+        course_offering.update!(marketing_initiative: 'HOC')
       end
     end
 
@@ -1173,6 +1178,13 @@ FactoryBot.define do
       after(:create) do |csf_script_level|
         csf_script_level.script.curriculum_umbrella = 'CSF'
         csf_script_level.save
+      end
+    end
+
+    factory :csa_script_level do
+      after(:create) do |csa_script_level|
+        csa_script_level.script.curriculum_umbrella = 'CSA'
+        csa_script_level.save
       end
     end
   end
@@ -1852,7 +1864,7 @@ FactoryBot.define do
   factory :lti_integration do
     issuer {SecureRandom.alphanumeric}
     client_id {SecureRandom.alphanumeric}
-    platform_name {"platform_name"}
+    platform_name {"canvas_cloud"}
     auth_redirect_url {"http://test.org/auth"}
     jwks_url {"jwks_url"}
     access_token_url {"access_token_url"}
@@ -1911,6 +1923,18 @@ FactoryBot.define do
   factory :rubric do
     association :lesson
     association :level
+
+    trait :with_learning_goals do
+      transient do
+        num_learning_goals {2}
+      end
+
+      after(:create) do |rubric, evaluator|
+        evaluator.num_learning_goals.times do
+          create :learning_goal, rubric: rubric
+        end
+      end
+    end
 
     trait :with_teacher_evaluations do
       transient do
@@ -2016,5 +2040,19 @@ FactoryBot.define do
     association :user
     type {SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT]}
     status {SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK]}
+  end
+
+  factory :aichat_event do
+    association :user
+  end
+
+  factory :aichat_request do
+    association :user
+    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.to_json}
+    new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}.to_json}
+    stored_messages {[].to_json}
+    level_id {1}
+    script_id {1}
+    project_id {1}
   end
 end

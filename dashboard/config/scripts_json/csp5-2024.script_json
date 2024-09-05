@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-29 18:18:46 UTC",
+    "serialized_at": "2024-08-27 22:03:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -239,26 +240,6 @@
       },
       "seeding_key": {
         "lesson.key": "CS Principles Post-Course Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024"
-      }
-    },
-    {
-      "key": "Conditionals Practice",
-      "name": "Conditionals Practice (Alternative)",
-      "absolute_position": 11,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 11,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students spend most of their time practicing using the skills and processes they have learned about conditionals. At the conclusion of the lesson students discuss the main things they realized and still have questions about at the conclusion of this lesson.",
-        "preparation": "* Review the programming challenges students will be completing\n* Review the Debugging Guide for ideas on how to support your students during the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is students primary opportunity to get hands on with conditionals in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
-        "student_overview": "Practice programming with conditionals through a set of programming puzzles."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2024"
       }
@@ -660,73 +641,6 @@
       "seeding_key": {
         "lesson_activity.key": "ae33e19f-a8df-4356-ac21-78902f631a21",
         "lesson.key": "CS Principles Post-Course Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024"
-      }
-    },
-    {
-      "key": "1268e1fb-9994-465b-bfd8-7610b3b6ad2b",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1268e1fb-9994-465b-bfd8-7610b3b6ad2b",
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024"
-      }
-    },
-    {
-      "key": "59b7e159-d59e-4190-b67c-d80f0926dd56",
-      "position": 2,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "59b7e159-d59e-4190-b67c-d80f0926dd56",
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024"
-      }
-    },
-    {
-      "key": "5330c1eb-bd09-4ec8-8710-75f55293f35b",
-      "position": 3,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b",
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024"
-      }
-    },
-    {
-      "key": "7438f062-2726-461c-b814-4715ac9b1072",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7438f062-2726-461c-b814-4715ac9b1072",
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024"
-      }
-    },
-    {
-      "key": "20002923-5b35-4fc3-8de1-4701dc32fd51",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "20002923-5b35-4fc3-8de1-4701dc32fd51",
-        "lesson.key": "Conditionals Practice",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2024"
       }
@@ -2255,230 +2169,6 @@
         "activity_section.key": "4ad441aa-02ec-4753-b7ac-940b8cfe7030",
         "lesson_activity.key": "ae33e19f-a8df-4356-ac21-78902f631a21"
       }
-    },
-    {
-      "key": "d5616d0b-97b6-44f5-9499-b8bf8eb823ad",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1qlZ1jETAivu185K88GCIdcZWYlj0suAIrf0gWy2-Mrc/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "d5616d0b-97b6-44f5-9499-b8bf8eb823ad",
-        "lesson_activity.key": "1268e1fb-9994-465b-bfd8-7610b3b6ad2b"
-      }
-    },
-    {
-      "key": "2b93827e-f165-4bd6-a13c-8db5cf6d60ef",
-      "position": 1,
-      "properties": {
-        "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. In our next lesson you're going to have to use a lot of these on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
-        "name": "Quick Warm Up\r",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. You may optionally wish to do a quick vocabulary review or address any questions that came up in the last lesson. Otherwise, give students more time to get hands on with some code.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2b93827e-f165-4bd6-a13c-8db5cf6d60ef",
-        "lesson_activity.key": "59b7e159-d59e-4190-b67c-d80f0926dd56"
-      }
-    },
-    {
-      "key": "e6efabf4-7176-4981-a831-e8e569118440",
-      "position": 1,
-      "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 7 Level 1. Then briefly remind students about debugging skills that they will be using in today's activity using the slides as a guide.",
-        "name": "Practice Time"
-      },
-      "seeding_key": {
-        "activity_section.key": "e6efabf4-7176-4981-a831-e8e569118440",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "ddb314d1-3ba0-4910-8398-89e5151552a9",
-      "position": 2,
-      "properties": {
-        "description": "Today you're mostly going to practice what we've learned about programming with conditionals. As always you should be using the debugging process to help you as you work on issues. Today we're also going to be working on finding two types of errors\n\n1. Syntax errors show up when you type code that breaks the rules of the programming language. You can check for errors and warnings\n2. Logic errors show up when you type valid code but it works incorrectly. Today you're going to focus on testing your code to make sure you don't have logic errors.\n\nOther errors you may encounter include:\n\n* Run-time error - a mistake in the program that shows when running the program. These are defined by the programming language. \n* Overflow error - an error that occurs when a computer tries to handle a number outside of the defined range of values.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "ddb314d1-3ba0-4910-8398-89e5151552a9",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "74f73356-c079-4eb4-a280-9be548412d97",
-      "position": 3,
-      "properties": {
-        "description": "**Levels 1-3:** These levels only use the [`console.log()`(#BB77C7)](/docs/applab/console.log/) command which prints commands in the debug console. Here are a few things to keep an eye out for\n\n* Levels 1-2 ask students to write Boolean expressions using comparison operators. Students may need to quickly review the comparison operators `<`, `>`, `<=`, `>=`, `==`, `!=`\n* Level 3 asks students to write Boolean expressions with logical operators `&&`, `||`, `!`\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "74f73356-c079-4eb4-a280-9be548412d97",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "31ac19e0-dbae-4f33-b4d8-6d6ab6933a7b",
-      "position": 4,
-      "properties": {
-        "progression_name": "Boolean expressions"
-      },
-      "seeding_key": {
-        "activity_section.key": "31ac19e0-dbae-4f33-b4d8-6d6ab6933a7b",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "5daa4b76-c33d-4576-acac-025db31dcbaf",
-      "position": 5,
-      "properties": {
-        "description": "\n**Levels 4-8:** These levels practice if-statements while working with a star color-changing app. \n\n* Levels 4-5 involve setting up an if-statement that becomes an if-else statement. \n* In Level 6 students follow a pattern to create a lengthy if-else-if statement.\n* For Level 7, make sure students slow down the running of the code to understand what's happening. It's suggested that students use the slider to slow down the code.\n* Level 8 demonstrates that Boolean expressions can be written as conditional statements, and vice versa "
-      },
-      "seeding_key": {
-        "activity_section.key": "5daa4b76-c33d-4576-acac-025db31dcbaf",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "18e41815-e250-43c4-93f6-b14739d5d77e",
-      "position": 6,
-      "properties": {
-        "progression_name": "If-Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "ec0fb726-788d-4a85-bfc5-ef77e506a5c0",
-      "position": 7,
-      "properties": {
-        "description": "\n\n\n**Levels 9-10:** The levels return to the \"Can I Adopt a Cat?\" flowchart from the Conditionals Explore activity. Students will use the flowchart to work out the logic of the if-statements in a their program. \n\n* A new block appears in these levels: [`getNumber()`(#fff176)](/docs/applab/getNumber/) . This is different than [`getText()`(#fff176)](/docs/applab/getText/). [`getNumber()`(#fff176)](/docs/applab/getNumber/) gets a number from a user input that can be used mathematically. \n* Level 10 can be completed many different ways. There are different combinations of Boolean expressions using `&&` and `||`. Students should regularly test their apps to see if their Boolean expressions are working properly.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "ec0fb726-788d-4a85-bfc5-ef77e506a5c0",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "7c3173f3-0457-4990-96d3-e9bb413b3ec1",
-      "position": 8,
-      "properties": {
-        "progression_name": "Logical Operators"
-      },
-      "seeding_key": {
-        "activity_section.key": "7c3173f3-0457-4990-96d3-e9bb413b3ec1",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "46a5e8eb-aa6b-4024-93b2-200c5729dec5",
-      "position": 9,
-      "properties": {
-        "description": "* Level 11: Students do a quick practice with the MOD operator.",
-        "progression_name": "MOD Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "46a5e8eb-aa6b-4024-93b2-200c5729dec5",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "706e9b28-aff4-449f-be42-c22bc24edb2c",
-      "position": 10,
-      "properties": {
-        "description": "* Level 12 Students complete a choice level\n  * Level 12a - Students practice adding logical operators to if-else-if statements\n  * Level 12b - Students rewrite an if-else-if statement based on a flowchart\n  * Level 12c - Students practice using the MOD operator and also writing the most specific condition first in their if-else-if statements",
-        "progression_name": "Putting It Together",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Choice Level:** To help normalize mistakes and support debugging, consider having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "706e9b28-aff4-449f-be42-c22bc24edb2c",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "4b4d85b8-653b-4840-b0ab-9a2d9daeb852",
-      "position": 11,
-      "properties": {
-        "description": "**Extension Opportunities:**\n\n* Level 3: Students can add more variables and create complex Boolean expressions. One challenge might be to assign a String to a variable and compare that string to another. \n* Level 9: There are multiple solutions. If students build their if-statement using only `&&` encourage them to figure out how to build it using only `||`. They may need to switch the content of the if and else branches. \n* Level 10: Create another input (i.e. How many cats do you already own?). Students use this information to craft more complex if-statements."
-      },
-      "seeding_key": {
-        "activity_section.key": "4b4d85b8-653b-4840-b0ab-9a2d9daeb852",
-        "lesson_activity.key": "5330c1eb-bd09-4ec8-8710-75f55293f35b"
-      }
-    },
-    {
-      "key": "d543fb65-8b23-40bf-9f62-6da394e5b1ff",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with conditionals do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "d543fb65-8b23-40bf-9f62-6da394e5b1ff",
-        "lesson_activity.key": "7438f062-2726-461c-b814-4715ac9b1072"
-      }
-    },
-    {
-      "key": "187c970c-c9e6-4a39-b5d9-3479deee1df2",
-      "position": 2,
-      "properties": {
-        "description": "Conditionals can be a little bit tricky, but I saw a lot of good progress today in nailing down this concept. We may have a  few lingering questions, but you also have a lot of resources available. Next time you'll have a chance to put all this together by programming an app that starts with \"the blank screen\"!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "187c970c-c9e6-4a39-b5d9-3479deee1df2",
-        "lesson_activity.key": "7438f062-2726-461c-b814-4715ac9b1072"
-      }
-    },
-    {
-      "key": "fc57fc80-e29a-4e86-af8b-331c34c41d2a",
-      "position": 3,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "fc57fc80-e29a-4e86-af8b-331c34c41d2a",
-        "lesson_activity.key": "7438f062-2726-461c-b814-4715ac9b1072"
-      }
-    },
-    {
-      "key": "33f5f745-ae98-4e1f-ad4e-099323d3719a",
-      "position": 4,
-      "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What will be displayed after this code segment is run?\r\n\r\n![](https://images.code.org/83c829d8942524414e0b5b2cb5151917-image-1567706962530.png)\r\n\r\n**Question:** The program below asks a user to type in a number and then will output a message. What number will a user need to input for the message `\"COLD\"` to be displayed?\r\n\r\n```\r\nnumber <- INPUT()\r\n\r\nIF (number >= 10)\r\n{\r\n  IF (number <= 20)\r\n  {\r\n    DISPLAY(\"MEDIUM\")\r\n  }\r\n  ELSE\r\n  {\r\n    DISPLAY(\"HOT\")\r\n  }\r\n}\r\nELSE\r\n{\r\n  DISPLAY(\"COLD\")\r\n}\r\n```",
-        "name": "Assessment: Check For Understanding: AP Practice\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "33f5f745-ae98-4e1f-ad4e-099323d3719a",
-        "lesson_activity.key": "7438f062-2726-461c-b814-4715ac9b1072"
-      }
-    },
-    {
-      "key": "04086304-829c-4238-aaff-2389b9feb3b3",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding: AP Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "04086304-829c-4238-aaff-2389b9feb3b3",
-        "lesson_activity.key": "20002923-5b35-4fc3-8de1-4701dc32fd51"
-      }
     }
   ],
   "script_levels": [
@@ -3206,356 +2896,6 @@
       "level_keys": [
         "csp-post-survey-2021-markdown-with-link-to-survey_csp5_2024"
       ]
-    },
-    {
-      "chapter": 30,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 1_2024"
-        ],
-        "progression": "Boolean expressions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 1_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "31ac19e0-dbae-4f33-b4d8-6d6ab6933a7b"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 1_2024"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 2_2024"
-        ],
-        "progression": "Boolean expressions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 2_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "31ac19e0-dbae-4f33-b4d8-6d6ab6933a7b"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 2_2024"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 3_2024"
-        ],
-        "progression": "Boolean expressions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 3_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "31ac19e0-dbae-4f33-b4d8-6d6ab6933a7b"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 3_2024"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 10_2024"
-        ],
-        "progression": "If-Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 10_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 10_2024"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 4_2024"
-        ],
-        "progression": "If-Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 4_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 4_2024"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 6,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 5_2024"
-        ],
-        "progression": "If-Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 5_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 5_2024"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 7,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 6_2024"
-        ],
-        "progression": "If-Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 6_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 6_2024"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 8,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice equivalent expressions_2024"
-        ],
-        "progression": "If-Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice equivalent expressions_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice equivalent expressions_2024"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 7_2024"
-        ],
-        "progression": "Logical Operators"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 7_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "7c3173f3-0457-4990-96d3-e9bb413b3ec1"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 7_2024"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 L07 Conditionals Practice 8_2024"
-        ],
-        "progression": "Logical Operators"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 8_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "7c3173f3-0457-4990-96d3-e9bb413b3ec1"
-      },
-      "level_keys": [
-        "U4 L07 Conditionals Practice 8_2024"
-      ]
-    },
-    {
-      "chapter": 40,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4 Conditionals Practice MOD_2024"
-        ],
-        "progression": "MOD Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4 Conditionals Practice MOD_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "46a5e8eb-aa6b-4024-93b2-200c5729dec5"
-      },
-      "level_keys": [
-        "U4 Conditionals Practice MOD_2024"
-      ]
-    },
-    {
-      "chapter": 41,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSP U4L7 Choice_2024"
-        ],
-        "progression": "Putting It Together"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U4L7 Choice_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "706e9b28-aff4-449f-be42-c22bc24edb2c"
-      },
-      "level_keys": [
-        "CSP U4L7 Choice_2024"
-      ]
-    },
-    {
-      "chapter": 42,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U4L10 CFU Conditionals Psuedocode2022_2024"
-        ],
-        "progression": "Check For Understanding: AP Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4L10 CFU Conditionals Psuedocode2022_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "04086304-829c-4238-aaff-2389b9feb3b3"
-      },
-      "level_keys": [
-        "U4L10 CFU Conditionals Psuedocode2022_2024"
-      ]
-    },
-    {
-      "chapter": 43,
-      "position": 14,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "U4L10 CFU Conditionals Psuedocode 22022_2024"
-        ],
-        "progression": "Check For Understanding: AP Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4L10 CFU Conditionals Psuedocode 22022_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "04086304-829c-4238-aaff-2389b9feb3b3"
-      },
-      "level_keys": [
-        "U4L10 CFU Conditionals Psuedocode 22022_2024"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -3906,174 +3246,6 @@
         "script.name": "csp5-2024",
         "activity_section.key": "4ad441aa-02ec-4753-b7ac-940b8cfe7030"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 1_2024",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 1_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "31ac19e0-dbae-4f33-b4d8-6d6ab6933a7b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 2_2024",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 2_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "31ac19e0-dbae-4f33-b4d8-6d6ab6933a7b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 3_2024",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 3_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "31ac19e0-dbae-4f33-b4d8-6d6ab6933a7b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 10_2024",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 10_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 4_2024",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 4_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 5_2024",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 5_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 6_2024",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 6_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice equivalent expressions_2024",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice equivalent expressions_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "18e41815-e250-43c4-93f6-b14739d5d77e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 7_2024",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 7_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "7c3173f3-0457-4990-96d3-e9bb413b3ec1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 L07 Conditionals Practice 8_2024",
-        "script_level.level_keys": [
-          "U4 L07 Conditionals Practice 8_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "7c3173f3-0457-4990-96d3-e9bb413b3ec1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4 Conditionals Practice MOD_2024",
-        "script_level.level_keys": [
-          "U4 Conditionals Practice MOD_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "46a5e8eb-aa6b-4024-93b2-200c5729dec5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP U4L7 Choice_2024",
-        "script_level.level_keys": [
-          "CSP U4L7 Choice_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "706e9b28-aff4-449f-be42-c22bc24edb2c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4L10 CFU Conditionals Psuedocode2022_2024",
-        "script_level.level_keys": [
-          "U4L10 CFU Conditionals Psuedocode2022_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "04086304-829c-4238-aaff-2389b9feb3b3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4L10 CFU Conditionals Psuedocode 22022_2024",
-        "script_level.level_keys": [
-          "U4L10 CFU Conditionals Psuedocode 22022_2024"
-        ],
-        "lesson.key": "Conditionals Practice",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp5-2024",
-        "activity_section.key": "04086304-829c-4238-aaff-2389b9feb3b3"
-      }
     }
   ],
   "resources": [
@@ -4171,18 +3343,6 @@
       }
     },
     {
-      "name": "CSP Debugging Guide",
-      "url": "https://docs.google.com/document/d/13wipr2CpR3kHY2_pLoiUtVPqt2prMaTASYr5XaRoy-Q/edit?usp=sharing",
-      "key": "csp_debugging_guide_1",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp_debugging_guide_1"
-      }
-    },
-    {
       "name": "CSP Project Guide - Tell a Data Story",
       "url": "https://docs.google.com/document/d/1Gd54qfWdvVWNeAIrT5tk6I1C2z6esnelvmfbt7VP5Io/edit?usp=sharing",
       "key": "csp_project_guide_-_tell_a_data_story",
@@ -4193,18 +3353,6 @@
       },
       "seeding_key": {
         "resource.key": "csp_project_guide_-_tell_a_data_story"
-      }
-    },
-    {
-      "name": "CSP Unit 4 Lesson 14 - Conditionals Practice (Alternative)",
-      "url": "https://docs.google.com/presentation/d/1BBWir1LgjxST5hQB2sdSLE_hTdHf9ymyqvVQZXuusEs/edit?usp=drive_link",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -4301,6 +3449,16 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_5_-_lesson_7_-_algorithmic_bias"
+      }
+    },
+    {
+      "name": "CSP Unit 5 - Slides",
+      "url": "https://docs.google.com/presentation/d/1lvfv9i1bouF7X0Vu0nwlbbQx-m2M9j5IIeLa6J8Uo3k/template/preview",
+      "key": "csp_unit_5_-_slides_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_slides_1"
       }
     },
     {
@@ -4412,18 +3570,6 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
-      "name": "Guide to Practice Lessons",
-      "url": "https://youtu.be/Aad0UJXGcR4",
-      "key": "guide_to_practice_lessons",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_practice_lessons"
       }
     },
     {
@@ -4629,24 +3775,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "csp_debugging_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "guide_to_practice_lessons"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Exploring One Column",
         "resource.key": "csp_unit_5_-_lesson_2_-_exploring_one_column"
       }
@@ -4824,6 +3952,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp5-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_slides_1",
         "script.name": "csp5-2024"
       }
     },
@@ -5060,16 +4194,6 @@
       }
     },
     {
-      "key": "484da884-1e63-4192-a696-ae826d272cad",
-      "properties": {
-        "description": "Write programs that use boolean expressions and conditional statements with the support of sample code."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "objective.key": "484da884-1e63-4192-a696-ae826d272cad"
-      }
-    },
-    {
       "key": "4b53a02e-1932-4493-8364-c0792e7eb2bc",
       "properties": {
         "description": "Reason about how human bias plays a role in machine learning."
@@ -5087,16 +4211,6 @@
       "seeding_key": {
         "lesson.key": "Learning from Data",
         "objective.key": "54614a1f-ca61-4019-98b3-b2c850761d7c"
-      }
-    },
-    {
-      "key": "56f62353-9925-4ca4-a7ce-7006dfdf1cfc",
-      "properties": {
-        "description": "Debug programs that use boolean expressions and conditional statements"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "objective.key": "56f62353-9925-4ca4-a7ce-7006dfdf1cfc"
       }
     },
     {
@@ -5381,125 +4495,6 @@
         "lesson.key": "Big, Open, and Crowdsourced Data",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.E.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.F.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.F.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.F.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.F.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.H.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.H.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.A.9"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.I.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.I.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.I.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.I.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.J.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
       }
     },
     {

@@ -1,19 +1,24 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Link from '@cdo/apps/componentLibrary/link';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('Design System - Link', () => {
-  it('Link - renders with correct text', () => {
+  it('Link - renders with correct text when passed as children prop', () => {
     render(<Link href="https://studio.code.org/home">Home</Link>);
 
     const link = screen.getByRole('link', {name: 'Home'});
-    expect(link).to.exist;
-    expect(link.href).to.equal('https://studio.code.org/home');
+    expect(link).toBeDefined();
+    expect(link.href).toBe('https://studio.code.org/home');
+  });
+
+  it('Link - renders with correct text when passed as text prop', () => {
+    render(<Link href="https://studio.code.org/home" text="Home" />);
+
+    const link = screen.getByRole('link', {name: 'Home'});
+    expect(link).toBeDefined();
+    expect(link.href).toBe('https://studio.code.org/home');
   });
 
   it('Link - openInNewTab adds target attribute', () => {
@@ -24,9 +29,9 @@ describe('Design System - Link', () => {
     );
 
     const link = screen.getByRole('link', {name: 'Home'});
-    expect(link).to.exist;
-    expect(link.target).to.equal('_blank');
-    expect(link.href).to.equal('https://studio.code.org/home');
+    expect(link).toBeDefined();
+    expect(link.target).toBe('_blank');
+    expect(link.href).toBe('https://studio.code.org/home');
   });
 
   it('Link - external adds rel attribute', () => {
@@ -37,14 +42,14 @@ describe('Design System - Link', () => {
     );
 
     const link = screen.getByRole('link', {name: 'Home'});
-    expect(link).to.exist;
-    expect(link.rel).to.equal('noopener noreferrer');
-    expect(link.href).to.equal('https://studio.code.org/home');
+    expect(link).toBeDefined();
+    expect(link.rel).toBe('noopener noreferrer');
+    expect(link.href).toBe('https://studio.code.org/home');
   });
 
   it('Link - onClick is correctly called when clicked', async () => {
     const user = userEvent.setup();
-    const spyOnClick = sinon.spy();
+    const spyOnClick = jest.fn();
 
     const linkToRender = <Link onClick={spyOnClick}>Home</Link>;
 
@@ -54,12 +59,12 @@ describe('Design System - Link', () => {
 
     rerender(linkToRender);
 
-    expect(spyOnClick).to.have.been.calledOnce;
+    expect(spyOnClick).toHaveBeenCalledTimes(1);
   });
 
   it('Link - doesn`t call onClick when disabled', async () => {
     const user = userEvent.setup();
-    const spyOnClick = sinon.spy();
+    const spyOnClick = jest.fn();
     const linkToRender = (
       <Link disabled onClick={spyOnClick}>
         Home
@@ -71,6 +76,6 @@ describe('Design System - Link', () => {
 
     await user.click(screen.getByText('Home'));
 
-    expect(spyOnClick).not.to.have.been.called;
+    expect(spyOnClick).not.toHaveBeenCalled();
   });
 });

@@ -122,7 +122,7 @@ end
 Given /^I publish a basic library in (Applab|Game Lab)$/ do |lab_type|
   steps <<-STEPS
     And I start a new #{lab_type} project
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait for initial project save to complete
     And I switch to text mode
     When I add code for a library function
@@ -137,7 +137,7 @@ end
 
 Then /^I open the library publish dialog/ do
   steps <<-STEPS
-    When I open the share dialog
+    When I open the project share dialog
     And I click selector "#project-share a:contains('Show advanced options')" if it exists
     And I click selector "#project-share li:contains('Share as library')"
     And I click selector "button:contains('Share as library')"

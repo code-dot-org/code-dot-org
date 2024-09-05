@@ -5,16 +5,19 @@ import {
   identify,
   setUserId,
 } from '@amplitude/analytics-browser';
+
+import DCDO from '@cdo/apps/dcdo';
+import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
 import logToCloud from '@cdo/apps/logToCloud';
+
 import {
   getEnvironment,
   isProductionEnvironment,
   isStagingEnvironment,
   isDevelopmentEnvironment,
 } from '../../utils';
-import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
+
 import {EVENT_GROUPS, PLATFORMS} from './AnalyticsConstants';
-import DCDO from '@cdo/apps/dcdo';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
@@ -55,7 +58,7 @@ class AnalyticsReporter {
    *  StatsigReporter, or the files sending events can import that file instead
    *  and we can delete this one.
    */
-  sendEvent(eventName, payload, analyticsTool = PLATFORMS.AMPLITUDE) {
+  sendEvent(eventName, payload, analyticsTool = PLATFORMS.BOTH) {
     if ([PLATFORMS.STATSIG, PLATFORMS.BOTH].includes(analyticsTool)) {
       statsigReporter.sendEvent(eventName, payload);
     }

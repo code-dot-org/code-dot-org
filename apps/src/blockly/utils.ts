@@ -14,7 +14,7 @@ type xmlAttribute = string | null;
 type InputTuple = [string, string, number];
 type InputCallback = () => void;
 type InputArgs = [...(InputTuple | InputCallback)[], number];
-type BlockList = [Block | BlockSvg];
+type BlockList = Array<Block | BlockSvg>;
 
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
 export const FALSEY_DEFAULT = (attributeValue: xmlAttribute) =>
@@ -35,7 +35,7 @@ export const TRUTHY_DEFAULT = (attributeValue: xmlAttribute) =>
 export function readBooleanAttribute(
   xmlElement: Element,
   attribute: string,
-  callback = FALSEY_DEFAULT
+  callback: (attributeValue: xmlAttribute) => boolean = FALSEY_DEFAULT
 ) {
   const attributeValue = xmlElement.getAttribute(attribute);
   return callback(attributeValue);
@@ -276,13 +276,37 @@ export function interpolateMsg(
  * @returns {BlockList} An array of the top-level blocks.
  */
 export function getCodeBlocks(): BlockList {
-  const codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true) as BlockList;
+  let codeBlocks: BlockList = [];
+  let hiddenBlocks: BlockList = [];
+  const mainBlocks = Blockly.mainBlockSpace.getTopBlocks(true) as BlockList;
+
   // The hidden workspace is only present in Google Blockly labs where the modal
   // function editor is enabled.
   if (Blockly.getHiddenDefinitionWorkspace()) {
-    const hiddenBlocks =
-      Blockly.getHiddenDefinitionWorkspace().getTopBlocks(true);
-    codeBlocks.push(...hiddenBlocks);
+    hiddenBlocks = Blockly.getHiddenDefinitionWorkspace().getTopBlocks(
+      true
+    ) as BlockList;
   }
+
+  // Hidden blocks need to be listed first in case they would set the
+  // value of global variables.
+  codeBlocks = [...hiddenBlocks, ...mainBlocks];
+
   return codeBlocks;
+}
+
+/**
+ * Retrieves all Blockly blocks from the student's Blockly workspaces.
+ * This is useful for providing the student with feedback about the total
+ * number of blocks they have used or added.
+ *
+ * @returns {BlockList} An array of all blocks.
+ */
+export function getAllBlocks(): BlockList {
+  return [
+    ...Blockly.mainBlockSpace.getAllUsedBlocks(),
+    ...(Blockly.getHiddenDefinitionWorkspace()
+      ? Blockly.getHiddenDefinitionWorkspace().getAllBlocks()
+      : []),
+  ];
 }

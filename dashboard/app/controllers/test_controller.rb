@@ -327,6 +327,11 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def delete_workshop
+    Pd::Workshop.find_by_id(params[:workshop_id]).destroy
+    head :ok
+  end
+
   def create_pilot
     name = params.require(:pilot_name)
     Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)
@@ -379,6 +384,7 @@ class TestController < ApplicationController
       :parent_email_preference_email,
       :parent_email_preference_request_ip,
       :parent_email_preference_source,
+      :provider,
       :email_preference_opt_in,
       :email_preference_form_kind,
       :email_preference_request_ip,
@@ -393,8 +399,20 @@ class TestController < ApplicationController
       :data_transfer_agreement_source,
       :data_transfer_agreement_at,
     )
-    user = User.create!(**user_opts)
+    if params[:sso]
+      user = User.new(**user_opts)
+      User.initialize_new_oauth_user(user, OmniAuth::AuthHash.new({provider: params[:sso], uid: params[:uid], info: {name: params[:name]}}))
+    else
+      user = User.create!(**user_opts)
+    end
     sign_in user
+    head :ok
+  end
+
+  # Accepts a parental request that was submitted by the current user
+  def accept_parental_request
+    permission_request = ParentalPermissionRequest.find_by(user: current_user)
+    Services::ChildAccount.grant_permission_request!(permission_request)
     head :ok
   end
 end

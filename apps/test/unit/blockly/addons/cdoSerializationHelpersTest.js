@@ -9,8 +9,6 @@ import {
 } from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('CdoSerializationHelpers', () => {
   describe('addPositionsToState', () => {
     it('should add x/y values from XML to JSON serialization', () => {
@@ -27,7 +25,7 @@ describe('CdoSerializationHelpers', () => {
       const blockIdMap = new Map([['blockId', {x: 0, y: 0}]]);
       addPositionsToState(xmlBlocks, blockIdMap);
 
-      expect(blockIdMap.get('blockId')).to.deep.equal({
+      expect(blockIdMap.get('blockId')).toEqual({
         x: 20,
         y: 20,
       });
@@ -47,7 +45,7 @@ describe('CdoSerializationHelpers', () => {
       const blockIdMap = new Map([['blockId', {x: 0, y: 0}]]);
       addPositionsToState(xmlBlocks, blockIdMap);
 
-      expect(blockIdMap.get('blockId')).to.deep.equal({
+      expect(blockIdMap.get('blockId')).toEqual({
         x: 0,
         y: 0,
       });
@@ -67,7 +65,7 @@ describe('CdoSerializationHelpers', () => {
         otherSerialization
       );
 
-      expect(result).to.deep.equal(mainSerialization);
+      expect(result).toEqual(mainSerialization);
     });
 
     it('should merge blocks and procedures based on id', () => {
@@ -89,7 +87,7 @@ describe('CdoSerializationHelpers', () => {
         otherSerialization
       );
 
-      expect(result).to.deep.equal(expected);
+      expect(result).toEqual(expected);
     });
 
     it('should return references to new objects instead of mutating the original main serialization', () => {
@@ -109,7 +107,7 @@ describe('CdoSerializationHelpers', () => {
 
       // Strict equality is true for Objects in Javascript when they refer to the same location in memory
       // So this is checking that the input was copied and not mutated
-      expect(result).to.not.equal(mainSerialization);
+      expect(result).not.toBe(mainSerialization);
     });
   });
 
@@ -123,7 +121,7 @@ describe('CdoSerializationHelpers', () => {
       const item = {y: 30, height: 10};
 
       insertCollider(colliders, item);
-      expect(colliders).to.deep.equal([
+      expect(colliders).toEqual([
         {y: 0, height: 10},
         {y: 20, height: 10},
         {y: 30, height: 10},
@@ -140,7 +138,7 @@ describe('CdoSerializationHelpers', () => {
       const item = {y: 50, height: 10};
 
       insertCollider(colliders, item);
-      expect(colliders).to.deep.equal([
+      expect(colliders).toEqual([
         {y: 0, height: 10},
         {y: 20, height: 10},
         {y: 40, height: 10},
@@ -156,7 +154,7 @@ describe('CdoSerializationHelpers', () => {
       const item = {y: 0, height: 10};
 
       insertCollider(colliders, item);
-      expect(colliders).to.deep.equal([
+      expect(colliders).toEqual([
         {y: 0, height: 10},
         {y: 20, height: 10},
         {y: 40, height: 10},
@@ -181,7 +179,7 @@ describe('CdoSerializationHelpers', () => {
       };
 
       result = isBlockAtEdge(block);
-      expect(result).to.be.true;
+      expect(result).toBe(true);
     });
 
     it('should return true for a block at either x=0 or y=0 on a LTR workspace', () => {
@@ -193,7 +191,7 @@ describe('CdoSerializationHelpers', () => {
         }),
       };
       result = isBlockAtEdge(block);
-      expect(result).to.be.true;
+      expect(result).toBe(true);
 
       block = {
         workspace: workspaceLTR,
@@ -203,7 +201,7 @@ describe('CdoSerializationHelpers', () => {
         }),
       };
       result = isBlockAtEdge(block);
-      expect(result).to.be.true;
+      expect(result).toBe(true);
     });
 
     it('should return false for a block at specific coordinates on a LTR workspace', () => {
@@ -213,7 +211,7 @@ describe('CdoSerializationHelpers', () => {
       };
 
       result = isBlockAtEdge(block);
-      expect(result).to.be.false;
+      expect(result).toBe(false);
     });
 
     it('should return true for a block at the top-right corner of an RTL workspace', () => {
@@ -223,7 +221,7 @@ describe('CdoSerializationHelpers', () => {
       };
 
       result = isBlockAtEdge(block);
-      expect(result).to.be.true;
+      expect(result).toBe(true);
     });
 
     it('should return true for a block at either x=width or y=0 on a RTL workspace', () => {
@@ -235,7 +233,7 @@ describe('CdoSerializationHelpers', () => {
         }),
       };
       result = isBlockAtEdge(block);
-      expect(result).to.be.true;
+      expect(result).toBe(true);
 
       block = {
         workspace: workspaceRTL,
@@ -245,7 +243,7 @@ describe('CdoSerializationHelpers', () => {
         }),
       };
       result = isBlockAtEdge(block);
-      expect(result).to.be.true;
+      expect(result).toBe(true);
     });
 
     it('should return false for a block at specific coordinates of an RTL workspace', () => {
@@ -255,7 +253,7 @@ describe('CdoSerializationHelpers', () => {
       };
 
       result = isBlockAtEdge(block);
-      expect(result).to.be.false;
+      expect(result).toBe(false);
     });
   });
 
@@ -265,7 +263,7 @@ describe('CdoSerializationHelpers', () => {
       const collider2 = {x: 5, y: 5, width: 10, height: 10};
 
       const result = isOverlapping(collider1, collider2);
-      expect(result).to.equal(true);
+      expect(result).toBe(true);
     });
 
     it('should return true when one collider is completely inside the other', () => {
@@ -273,7 +271,7 @@ describe('CdoSerializationHelpers', () => {
       const collider2 = {x: 5, y: 5, width: 10, height: 10};
 
       const result = isOverlapping(collider1, collider2);
-      expect(result).to.equal(true);
+      expect(result).toBe(true);
     });
 
     it('should return false when colliders only touch but do not overlap', () => {
@@ -281,7 +279,7 @@ describe('CdoSerializationHelpers', () => {
       const collider2 = {x: 10, y: 10, width: 10, height: 10};
 
       const result = isOverlapping(collider1, collider2);
-      expect(result).to.equal(false);
+      expect(result).toBe(false);
     });
 
     it('should return false when colliders do not overlap', () => {
@@ -289,7 +287,7 @@ describe('CdoSerializationHelpers', () => {
       const collider2 = {x: 20, y: 20, width: 10, height: 10};
 
       const result = isOverlapping(collider1, collider2);
-      expect(result).to.equal(false);
+      expect(result).toBe(false);
     });
   });
 
@@ -336,9 +334,9 @@ describe('CdoSerializationHelpers', () => {
       );
 
       // Check if all shared behavior blocks are added to the project
-      expect(updatedState.blocks.blocks).to.have.lengthOf(3);
+      expect(updatedState.blocks.blocks).toHaveLength(3);
       // Check if all associated procedures are added to the project
-      expect(updatedState.procedures).to.have.lengthOf(2);
+      expect(updatedState.procedures).toHaveLength(2);
     });
 
     it('should not add duplicates when one or more existing behaviors are found', () => {
@@ -366,8 +364,8 @@ describe('CdoSerializationHelpers', () => {
         sharedBehaviorsState
       );
 
-      expect(updatedState.blocks.blocks).to.have.lengthOf(3);
-      expect(updatedState.procedures).to.have.lengthOf(2);
+      expect(updatedState.blocks.blocks).toHaveLength(3);
+      expect(updatedState.procedures).toHaveLength(2);
     });
 
     it('should not add duplicate shared behaviors for any that have been renamed', () => {
@@ -395,8 +393,8 @@ describe('CdoSerializationHelpers', () => {
         sharedBehaviorsState
       );
 
-      expect(updatedState.blocks.blocks).to.have.lengthOf(3);
-      expect(updatedState.procedures).to.have.lengthOf(2);
+      expect(updatedState.blocks.blocks).toHaveLength(3);
+      expect(updatedState.procedures).toHaveLength(2);
     });
   });
 
@@ -413,7 +411,7 @@ describe('CdoSerializationHelpers', () => {
         'when_run',
         'Dancelab_whenSetup',
       ]);
-      expect(result).to.deep.equal([
+      expect(result).toEqual([
         {type: 'when_run'},
         {type: 'Dancelab_whenSetup'},
         {type: 'blockType1'},
@@ -423,14 +421,14 @@ describe('CdoSerializationHelpers', () => {
 
     it('should handle an empty block array', () => {
       const result = partitionJsonBlocksByType([], PROCEDURE_DEFINITION_TYPES);
-      expect(result).to.deep.equal([]);
+      expect(result).toEqual([]);
     });
 
     it('should return the original array if no prioritized types are provided', () => {
       const blocks = [{type: 'A'}, {type: 'B'}, {type: 'C'}];
 
       const result = partitionJsonBlocksByType(blocks, undefined);
-      expect(result).to.deep.equal(blocks);
+      expect(result).toEqual(blocks);
     });
   });
 });

@@ -1,15 +1,18 @@
-import React from 'react';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
-import * as color from '../../util/color';
-import {CIPHER, ALPHABET} from '../../constants';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
-import Button from '../../templates/Button';
+
 import fontConstants from '@cdo/apps/fontConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import i18n from '@cdo/locale';
+
+import {CIPHER, ALPHABET} from '../../constants';
+import * as color from '../../util/color';
+
+import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 
 const style = {
   nav: {

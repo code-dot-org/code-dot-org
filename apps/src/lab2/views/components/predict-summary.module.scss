@@ -1,0 +1,35 @@
+@import 'color.scss';
+
+.predictSummaryContainer {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.responses {
+  display: flex;
+}
+
+.responseIcon {
+  padding-right: 4px;
+
+  :global(.fa) {
+    vertical-align: middle;
+    font-size: 28px; // size of the button
+    color: $brand_primary_default;
+  }
+}
+
+.responseCount {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  display: block;
+}
+
+.responseLabel {
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+}

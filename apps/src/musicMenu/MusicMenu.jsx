@@ -51,20 +51,6 @@ const optionsList = [
     ],
   },
   {
-    name: 'sounds-panel-1-preview',
-    type: 'radio',
-    values: [
-      {
-        value: 'false',
-        description: 'Use original sounds panel with preview (default).',
-      },
-      {
-        value: 'true',
-        description: 'Use original sounds panel with preview on select.',
-      },
-    ],
-  },
-  {
     name: 'sounds-panel-2',
     type: 'radio',
     values: [
@@ -73,11 +59,19 @@ const optionsList = [
     ],
   },
   {
-    name: 'pack-dialog-preview',
+    name: 'play-tune-block',
     type: 'radio',
     values: [
-      {value: 'false', description: 'Use original pack dialog (default).'},
-      {value: 'true', description: 'Use pack dialog with preview on select.'},
+      {value: 'false', description: 'Hide play tune block (default).'},
+      {value: 'true', description: 'Show play tune block.'},
+    ],
+  },
+  {
+    name: 'play-pattern-ai-block',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Hide play pattern AI block (default).'},
+      {value: 'true', description: 'Show play pattern AI block.'},
     ],
   },
   {
@@ -135,17 +129,6 @@ const optionsList = [
     values: [
       {value: 'false', description: 'New timeline (default).'},
       {value: 'true', description: 'Original timeline.'},
-    ],
-  },
-  {
-    name: 'clickable-text-with-glow',
-    type: 'radio',
-    values: [
-      {
-        value: 'false',
-        description: 'No glow for clickable text in instructions (default).',
-      },
-      {value: 'true', description: 'Glow for clickable text in instructions.'},
     ],
   },
 ];

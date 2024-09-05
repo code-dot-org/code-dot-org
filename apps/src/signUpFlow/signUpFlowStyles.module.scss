@@ -1,0 +1,470 @@
+@import 'color', 'breakpoints', 'style-constants', 'typography';
+
+@mixin link-style {
+  color: $light_black;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+body {
+  background-color: $light_gray_50 !important;
+}
+
+main.wrapper {
+  padding-block: 0.625rem;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 46px !important;
+  text-indent: 0.25rem;
+}
+
+select {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+  height: 46px !important;
+  font-weight: 400 !important;
+}
+
+p, label {
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+label {
+  width: 100%;
+  align-items: start !important;
+  gap: 0 0.5rem !important;
+}
+
+span {
+  margin-bottom: 0.125rem !important;
+}
+
+.typeHeaderBanner {
+  margin-block: 1.875rem 2.5rem !important;
+
+  h1 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.errorMessage {
+  margin-top: 0.4375rem;
+  color: $light_negative_500;
+}
+
+
+// Login Type Selection page
+
+.newSignupFlow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-block-end: 2rem;
+  margin-inline: auto;
+  max-width: 100%;
+
+  .containerWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $white;
+    padding: 30px;
+    gap: 16px;
+    border-radius: 4px;
+    border: 1px solid $light_gray_200;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    max-width: 970px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+    }
+  }
+
+  .dividerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+
+    .verticalDividerTop,
+    .verticalDividerBottom {
+      width: 1px;
+      background-color: $light_gray_200;
+      height: 50%;
+    }
+
+    .verticalDividerTop {
+      margin-bottom: 1rem;
+    }
+
+    .verticalDividerBottom {
+      margin-top: 1rem;
+    }
+
+    .dividerText {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: row;
+      width: 100%;
+      margin: 10px 0;
+
+      .dividerText {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+      }
+
+      .verticalDividerTop,
+      .verticalDividerBottom {
+        width: 50%;
+        height: 1px;
+      }
+
+      .verticalDividerTop {
+        margin: 0 1rem 0 0;
+      }
+  
+      .verticalDividerBottom {
+        margin: 0 0 0 1rem;
+      }
+    }
+  }
+
+  .container {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      height: auto;
+    }
+
+    img {
+      margin-right: .5rem;
+      width: 2rem;
+    }
+
+    form {
+      margin-bottom: 0;
+      width: 100%;
+  
+      button {
+        width: 100%;
+        font-weight: 600;
+        font-size: 1rem;
+        padding-block: 0.75rem;
+      }
+    }
+
+    i {
+      margin-right: .5rem;
+    }
+
+    .ssoSignUpTypes {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .passwordMessage {
+      display: flex;
+      align-items: center;
+      margin-top: .125rem;
+
+      i {
+        margin-right: .5rem;
+      }
+
+      .teal {
+        color: $teal;
+      }
+
+      .lightGray {
+        color: $light_gray_500;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .shortButton {
+      width: auto;
+      margin-top: 2rem;
+    }
+
+    .googleButton {
+      background-color: $google_brand_color;
+      margin-bottom: .5rem;
+      color: $white;
+
+      &:hover {
+        background-color: darken($google_brand_color, 10%);
+      }
+    }
+
+    .microsoftButton {
+      background-color: $microsoft_brand_color;
+      color: $black;
+      margin-bottom: .5rem;
+
+      &:hover {
+        background-color: darken($microsoft_brand_color, 10%);
+      }
+    }
+
+    .facebookButton {
+      background-color: $facebook_brand_color;
+      margin-bottom: .5rem;
+      color: $white;
+
+      &:hover {
+        background-color: darken($facebook_brand_color, 10%);
+      }
+    }
+
+    .cleverButton {
+      background-color: $clever_brand_color;
+      color: $white;
+
+      img {
+        height: 20px;
+        width: 20px;
+        opacity: inherit;
+      }
+
+      &:hover {
+        background-color: darken($clever_brand_color, 10%);
+      }
+    }
+
+    .greyTextbox {
+      margin-top: 1rem;
+      background-color: $light_gray_50;
+      padding: 1rem;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+      p {
+        margin-bottom: .25rem;
+      }
+
+      .subheader {
+        margin-top: .5rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .headers {
+    margin-bottom: 1.5rem;
+  }
+
+  .signUpWithTitle {
+    margin-bottom: .25rem;
+  }
+
+  .inputContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+  }
+}
+
+
+// Account Type Selection page
+
+.accountTypeContentContainer {
+  max-width: $content-width;
+  margin: auto;
+  font-size: 1rem;
+
+  .cardWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.5rem;
+  
+    @media (max-width: $width-sm) {
+      flex-direction: column;
+    }
+  
+    & > div {
+      width: unset;
+      flex: 1;
+      justify-content: space-between;
+    }
+  }
+
+  .freeCurriculumWrapper {
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  
+    @media (max-width: $width-sm) {
+      margin-bottom: 4rem;
+    }
+  
+    i {
+      font-size: 1.375rem;
+      color: $light_gray_400;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 0.875rem;
+  
+      a {
+        @include link-style;
+      }
+    }
+  
+    // Styled here to look like a text link
+    .dialogButton {
+      @include body-three;
+      margin: unset !important;
+      padding: unset !important;
+      background: none;
+      color: $light_gray_800;
+      text-decoration: underline !important;
+      transition: all 0.2s ease-in-out;
+  
+      &:hover {
+        color: $light_black;
+        background: none;
+      }
+  
+      & > span {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.dialogContainer {
+  padding: 1.5rem 2rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+
+  .contentWrapper {
+    border-block: 1px solid $light_gray_200;
+    padding-block: 1rem;
+    margin-bottom: 1.25rem;
+
+    .markdownDesc {
+      margin-bottom: 0.875rem;
+
+      p {
+        @include body-three;
+
+        a {
+          @include link-style;
+        }
+      }
+    }
+  }
+
+  button {
+    align-self: end;
+  }
+}
+
+
+// Finish Teacher/Student Account pages
+
+.finishAccountContainer {
+  max-width: $content-width;
+  display: grid;
+  margin: 4rem auto;
+  padding: 30px;
+  text-align: center;
+  background-color: $light_white;
+  border-radius: 0.25rem;
+  border: 1px solid $light_gray_200 !important;
+
+  .headerTextContainer {
+    margin-bottom: 30px;
+
+    h2 {
+      margin-bottom: 0.25rem !important;
+    }
+  }
+
+  .inputContainer {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-self: center;
+    gap: 1.125rem;
+
+    .displayNameInput {
+      margin: 0.375rem 0 !important;
+    }
+  }
+}
+
+.finishSignUpButtonContainer {
+  display: grid;
+  margin-top: 1.125rem;
+  justify-content: end;
+
+  .finishSignUpButton {
+    width: fit-content;
+  }
+}
+
+.teacherKeepMeUpdated {
+  margin-bottom: 0.375rem !important;
+}
+
+.displayNameSubtext {
+  margin-top: 0.125rem;
+}
+
+.emailOptInFootnote {
+  margin-top: 0.5rem;
+}
+
+.parentInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  background-color: $light_gray_50;
+  padding: 1.125rem;
+  border-radius: 0.25rem;
+  border: 1px solid $light_gray_200;
+
+  i {
+    background-color: $light_white;
+  }
+}
+
+.parentKeepMeUpdated {
+  margin-bottom: 0.125rem !important;
+}
+
+.studentQuestionLabel {
+  margin-top: 1.125rem;
+  margin-bottom: 0.375rem !important;
+}

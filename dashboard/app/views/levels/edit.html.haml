@@ -72,9 +72,13 @@
       .actions{style: "position: fixed; bottom: 0px; width: 100%; background-color: rgb(231, 232, 234); left: 0px; z-index: 900; display: flex; justify-content: flex-end; margin: 0px; align-items: center"}
         %span.publishLevelErrorMessage{style: "display: none; color: red; margin-bottom: 10px; margin-right: 5px; line-height: 35px;"}
           = "There was an error - scroll to the bottom to see"
+        = link_to 'Discard changes', @level, {:class => 'discardChanges', :style => "margin-left: 20px; margin-right: auto"}
         %div.resetLevel{:style => "height: 35px; margin: 15px"}
           = label_tag 'reset', 'Reset version history when saving and loading level', {:style => "display: inline; margin-top: 4px"}
-          = check_box_tag 'reset'
+          = check_box_tag 'reset', '1', true
+        -# We added the button for these 3 lab types because they all use the same start_sources route for editing start code.
+        - if [Pythonlab, Javalab, Weblab2].include?(@level.class)
+          = f.submit 'Save, publish, and go to edit start code', {:class => 'publishLevel', :name => "redirect_start_mode", :style => "background-color: #0093A4; margin-bottom: 10px; margin-right:8px; height: 35px"}
         = f.submit 'Save and publish your completed work', {:class => 'publishLevel', :style => "background-color: #f0c14b; margin-bottom: 10px; height: 35px"}
 
         %div{style: "display: flex; flex-direction: column; padding: 10px 10px 0px 10px"}
@@ -94,6 +98,7 @@
     :javascript
       window.levelbuilder.ajaxSubmit("#{@level.new_record? ? '#new_level' : '.edit_level'}");
       var saving = false;
+      var discardChanges = false;
       $(document).ready(function () {
         $('#saveProgress').click(function() {
           saving = true;
@@ -103,6 +108,11 @@
         $('.publishLevel').click(function() {
           saving = true;
           $('#level_published').val(true);
+        });
+
+        $('.discardChanges').click(function() {
+          discardChanges = true;
+          $('#discard_changes').val(true);
         });
       });
 
@@ -116,7 +126,7 @@
       }
 
       $(window).bind('beforeunload', function () {
-        if (saving) {
+        if (saving || discardChanges) {
           return;
         }
         for (var i = 0; i < inputs.length; i++) {

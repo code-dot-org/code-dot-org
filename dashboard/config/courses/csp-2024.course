@@ -13,7 +13,7 @@
     "csp10-2024",
     "csp-post-survey-2024"
   ],
-  "published_state": "preview",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -78,6 +78,16 @@
       },
       "seeding_key": {
         "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
+      "name": "Course Changelog '24-'25",
+      "url": "https://docs.google.com/document/d/1JJqAWqR9XufLGf4F1Pa2MbUXp4iYlCeqrq3GXpVtGck/edit?usp=sharing",
+      "key": "course_changelong_24-_25",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_changelong_24-_25"
       }
     },
     {
@@ -204,7 +214,7 @@
     },
     {
       "name": "Syllabus",
-      "url": "\thttps://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1w8N5Hd-URvs_xiIFNWwhw06v9PiFO2ccjJf-pp_hOYE/",
       "key": "syllabus_1",
       "properties": {
       },

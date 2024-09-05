@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import msg from '@cdo/locale';
+
 import AbuseExclamation from '../components/AbuseExclamation';
 import showProjectAdmin from '../showProjectAdmin';
-import msg from '@cdo/locale';
 
 /**
  * Renders our AbuseExclamation component, and potentially updates admin box

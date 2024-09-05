@@ -1,0 +1,8 @@
+name 'cv-studentsurvey-postmodule-q1'
+question 'How would you rate your overall experience with the Computer Vision module?'
+right 'Excellent'
+right 'Good'
+right 'Average'
+right 'Below average'
+right 'Poor'
+allow_multiple_attempts true

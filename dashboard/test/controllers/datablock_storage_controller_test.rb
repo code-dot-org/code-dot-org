@@ -499,6 +499,15 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal ({"click_count" => 5}), JSON.parse(@response.body)
   end
 
+  test "populate_key_values_with_string_value" do
+    put _url(:populate_key_values), params: {key_values_json: '{"click_count": "backends"}'}
+    assert_response :success
+
+    get _url(:get_key_values)
+    assert_response :success
+    assert_equal ({"click_count" => "backends"}), JSON.parse(@response.body)
+  end
+
   test "populate_key_values does not overwrite existing data" do
     post _url(:set_key_value), params: {key: 'click_count', value: 1.to_json}
     assert_response :success

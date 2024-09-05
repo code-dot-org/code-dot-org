@@ -1,5 +1,4 @@
 // Custom styles for Maker pages:
-// code.org/maker/index
 // code.org/maker/circuitplayground
 // — supplemental to shared/css/design-system-pegasus.scss
 
@@ -11,66 +10,11 @@
   align-items: center;
 }
 
-section.why-physical-computing, // /maker/index.haml
 section.intro, // /maker/circuitplayground
 section.device-setup { // /maker/circuitplayground
 
   .flex-container {
     flex-wrap: wrap;
-  }
-}
-
-// code.org/maker/index.haml
-section.hero-banner-basic {
-  padding: 0 2rem;
-
-  .flex-container {
-    @media screen and (max-width: $width-sm) {
-      flex-wrap: wrap;
-      width: 100%;
-    }
-  }
-
-  .text-wrapper {
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-      margin-top: 4rem;
-    }
-  }
-
-  img {
-    position: relative;
-    height: 170px;
-
-    &:first-of-type {
-      margin: 0 0 4rem;
-
-      @media screen and (max-width: $width-md) {
-        display: none;
-      }
-    }
-
-    &:last-of-type {
-      margin: 4rem 0 0 2rem;
-
-      @media screen and (max-width: $width-md) {
-        display: block;
-        margin: 2rem auto 0;
-      }
-    }
-  }
-}
-
-.newsletter-signup {
-  margin-bottom: -4rem;
-
-  @media screen and (max-width: $width-md) {
-    margin-bottom: 2rem;
-  }
-
-  @media screen and (max-width: $width-sm) {
-    padding-bottom: 4rem;
-    margin-bottom: 2rem;
   }
 }
 

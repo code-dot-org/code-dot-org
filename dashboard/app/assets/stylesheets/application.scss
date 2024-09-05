@@ -22,7 +22,8 @@
  *
  * Shared
  *= require barlow-semi-condensed-font
- *= require metropolis-font
+ *= require fonts/metropolis
+ *= require fonts/noto-sans
  *= require user-menu
  *= require buttons
  *= require course-blocks
@@ -230,8 +231,9 @@ img.video_thumbnail {
     }
   }
 
-  @media screen and (max-width: 1120px) {
-    .create_menu {
+  @media (min-width: 1024px) and (max-width: 1268px) {
+    &.hide-small-desktop,
+    .hide-small-desktop {
       display: none !important;
     }
   }
@@ -312,10 +314,15 @@ img.video_thumbnail {
     }
   }
 
+  #header_user_create_account {
+    background-color: $light_white !important;
+    color: $light_primary_500;
+    font-weight: $semi-bold-font-weight;
+  }
+
   .button-signin {
     text-decoration: none;
   }
-
   .project_updated_at {
     font-size: 10px;
     .project-save-error {
@@ -354,6 +361,15 @@ img.video_thumbnail {
       .header_user {
         background-color: $teal;
       }
+    }
+  }
+
+  /* Hide the Sign in and Create account buttons
+  in the header on small screens */
+  @media (max-width: 425px) {
+    .button-signin.desktop,
+    .button-create-account.desktop {
+      display: none;
     }
   }
 }
@@ -1258,6 +1274,7 @@ $default-modal-width: 640px;
 
 #sign_in_or_user {
   float: left;
+  display: flex;
 }
 
 input.header_input {
@@ -4109,25 +4126,15 @@ a {
   }
 }
 
-$clickable-text-glow: 0 0 1px $realyellow,
-  0 0 2px $realyellow,
-  0 0 3px $realyellow,
-  0 0 4px $realyellow,
-  0 0 5px $realyellow,
-  0 0 6px $realyellow,
-  0 0 7px $realyellow,
-  0 0 8px $realyellow,
-  0 0 9px $realyellow;
-
 @keyframes clickable-text-glow-keyframes {
   0% {
-    text-shadow: none;
+    color: initial;
   }
   50% {
-    text-shadow: $clickable-text-glow;
+    color: $light_primary_500;
   }
   100% {
-    text-shadow: none;
+    color: initial;
   }
 }
 
@@ -4140,7 +4147,7 @@ $clickable-text-glow: 0 0 1px $realyellow,
       animation: clickable-text-glow-keyframes 2s ease-in-out;
 
       &:hover {
-        text-shadow: $clickable-text-glow;
+        color: $light_primary_500;
       }
     }
   }
@@ -4150,10 +4157,6 @@ $clickable-text-glow: 0 0 1px $realyellow,
       animation-delay: #{$i + 1}s;
     }
   }
-}
-
-#teacher-dashboard {
-  overflow: auto;
 }
 
 #lti-integration-portal {

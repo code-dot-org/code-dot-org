@@ -16,11 +16,11 @@
     },
     {
       "name": "Example 2",
-      "description": "A variable can be used several times in a program. Here, the variable “spriteSize” is used to set all the food sprites to the same size. \r\n",
+      "description": "A variable can be used several times in a program. Here, the variable “spriteSize” is used to set all the food sprites to the same size when the apple is clicked. \n",
       "app": "https://studio.code.org/projects/spritelab/3QoJfDGrL7UbjFQl7G72ZMChOQxkxYSgAaVram0d8BA",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "embed_app_with_code_height": "500"
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/Screen_Shot_2019-08-06_at_11.49.29_AM.png",

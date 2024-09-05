@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-06-17T19:25:00.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "ai-how-computer-vision-works",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "\r\n\r\n#### In our modern world, we are surrounded by computer vision applications, from facial recognition software to self-driving cars. Let’s dive into the mechanics of how computer vision works. \r\n\r\n---\r\n\r\n#### Watch this video to see industry experts explain this fascinating technology. \r\n\r\n\r\n\r\n\r\n\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-06-17T19:25:00.822+00:00\",\"changed\":[\"cloned from \\\"sp-pl-CV_Video\\\"\"],\"cloned_from\":\"sp-pl-CV_Video\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

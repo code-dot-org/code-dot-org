@@ -3,9 +3,15 @@
     .text-wrapper.col-47
       %h2= heading
       %p= desc
+      - if url
+        %a.has-external-link{href: url, target: "_blank", rel: "noopener noreferrer"}
+          = urlText
   %figure.col-47
     %img.rounded-corners{src: image_url, alt: "", style: "width: 100%;"}
   - unless wrap_reverse
     .text-wrapper.col-47
       %h2= heading
       %p= desc
+      - if url
+        %a.has-external-link{href: url, target: "_blank", rel: "noopener noreferrer"}
+          = urlText

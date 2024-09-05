@@ -34,7 +34,7 @@ class SectionLoginInfo extends React.Component {
     // Provided by redux.
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
-      loginType: PropTypes.string.isRequired,
+      loginType: PropTypes.string,
       code: PropTypes.string,
     }).isRequired,
     students: PropTypes.array.isRequired,

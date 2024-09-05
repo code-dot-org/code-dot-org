@@ -1,10 +1,8 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
-import commonI18n from '@cdo/locale';
-import sinon from 'sinon';
+import React from 'react';
 
 import ConfirmDeleteButton from '@cdo/apps/storage/dataBrowser/ConfirmDeleteButton';
+import commonI18n from '@cdo/locale';
 
 describe('ConfirmDeleteButton', () => {
   describe('localization', () => {
@@ -22,25 +20,31 @@ describe('ConfirmDeleteButton', () => {
     }
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for "Cancel"', () => {
-      sinon.stub(commonI18n, 'cancel').returns('i18n-cancel');
+      jest
+        .spyOn(commonI18n, 'cancel')
+        .mockClear()
+        .mockReturnValue('i18n-cancel');
 
       const wrapper = createConfirmDeleteButton();
 
       let dialog = wrapper.find('Dialog').at(0);
-      expect(dialog.prop('cancelText')).to.contain('i18n-cancel');
+      expect(dialog.prop('cancelText')).toContain('i18n-cancel');
     });
 
     it('should render a default localized string for "Delete" as the confirmation text', () => {
-      sinon.stub(commonI18n, 'delete').returns('i18n-delete');
+      jest
+        .spyOn(commonI18n, 'delete')
+        .mockClear()
+        .mockReturnValue('i18n-delete');
 
       const wrapper = createConfirmDeleteButton();
 
       let dialog = wrapper.find('Dialog').at(0);
-      expect(dialog.prop('confirmText')).to.contain('i18n-delete');
+      expect(dialog.prop('confirmText')).toContain('i18n-delete');
     });
   });
 });

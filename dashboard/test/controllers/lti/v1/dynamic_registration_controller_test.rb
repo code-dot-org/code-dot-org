@@ -39,6 +39,16 @@ class Lti::V1::DynamicRegistrationControllerTest < ActionController::TestCase
     response = {client_id: client_id}
     LtiDynamicRegistrationClient.any_instance.stubs(:make_registration_request).returns(response)
 
+    Metrics::Events.expects(:log_event_with_session).with(
+      has_entries(
+        session: session,
+        event_name: 'lti_dynamic_registration_completed',
+        metadata: {
+          lms_name: Policies::Lti::LMS_PLATFORMS[:canvas_cloud][:name],
+        },
+      )
+    )
+
     post :create_registration, params: {email: email, registration_id: registration_id}
     assert_response :created
     integration = Queries::Lti.get_lti_integration(registration_data[:issuer], client_id)

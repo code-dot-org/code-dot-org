@@ -11,6 +11,7 @@ import {
   Fade,
 } from 'react-bootstrap';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
@@ -19,7 +20,6 @@ import parentalPermissionRequestReducer, {
   requestParentalPermission,
   resetParentalPermissionRequest,
 } from '@cdo/apps/redux/parentalPermissionRequestReducer';
-import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import Skeleton from '@cdo/apps/util/loadingSkeleton';
@@ -37,14 +37,8 @@ interface ParentalPermissionModalProps {
     parentalPermissionRequest: ParentalPermissionRequest | null | undefined
   ) => void;
   onSubmit?: (parentalPermissionRequest: ParentalPermissionRequest) => void;
-  onResend?: (
-    prevParentalPermissionRequest: ParentalPermissionRequest,
-    parentalPermissionRequest: ParentalPermissionRequest
-  ) => void;
-  onUpdate?: (
-    prevParentalPermissionRequest: ParentalPermissionRequest,
-    parentalPermissionRequest: ParentalPermissionRequest
-  ) => void;
+  onResend?: (parentalPermissionRequest: ParentalPermissionRequest) => void;
+  onUpdate?: (parentalPermissionRequest: ParentalPermissionRequest) => void;
 }
 
 const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
@@ -101,9 +95,9 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
       prevParentalPermissionRequest.parent_email ===
       parentalPermissionRequest.parent_email
     ) {
-      onResend(prevParentalPermissionRequest, parentalPermissionRequest);
+      onResend(parentalPermissionRequest);
     } else {
-      onUpdate(prevParentalPermissionRequest, parentalPermissionRequest);
+      onUpdate(parentalPermissionRequest);
     }
   }, [
     action,
@@ -180,7 +174,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
     ) : (
       i18n.policyCompliance_parentalPermissionModal_lastEmailSentAt({
         sendingTime: moment(parentalPermissionRequest.requested_at)
-          .lang(currentLocale())
+          .locale(currentLocale())
           .format('lll'),
       })
     );

@@ -1,7 +1,8 @@
-import React from 'react';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {assert} from 'chai';
-import sinon from 'sinon';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import EndWorkshopPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/EndWorkshopPanel';
 
 describe('EndWorkshopPanel', () => {

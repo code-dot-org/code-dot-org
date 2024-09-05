@@ -27,8 +27,10 @@ markdown <<MARKDOWN
 #### There are also various types of coding based assessment levels including validated and unvalidated, <a href="https://studio.code.org/s/csa1-2023/lessons/5/levels/5"> choice levels</a>, or <a href="https://studio.code.org/s/coursef-2023/lessons/7/levels/1">prediction levels</a>.
 
 ### **Tips**
-* #### Assessment levels can be used to break up level types. If there is a lot of text, you can use a multiple choice level. 
+* #### Assessment levels can be used to break up level types. If there are a few text levels sequentially, you can use a multiple choice level in the middle. 
 * #### If there are a lot of coding levels, you can break up the flow by adding screen shots of different solutions and asking, "Which one would work?" 
 * #### In order for a learner to earn a certificate, they need to get a green bubble on every level in the course to get the certificate. Most of our multi/match levels allow you to keep trying until you get the right answer.
+* #### Most assessment levels don't provide the opportunity to give the user feedback on why the correct answer was correct. Consider including an explanation level after the assessment level as modeled <a href="https://levelbuilder-studio.code.org/s/self-paced-pl-ai-101-mod2/lessons/1/levels/13" target="_blank">here</a>.
+
 
 MARKDOWN

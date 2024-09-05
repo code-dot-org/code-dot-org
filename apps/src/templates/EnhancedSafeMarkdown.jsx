@@ -3,15 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {openDialog} from '@cdo/apps/redux/instructionsDialog';
 
 import SafeMarkdown from './SafeMarkdown';
 import {renderExpandableImages} from './utils/expandableImages';
-
-// A variant for clickable text that shows a glow on hover and appearance.
-const showClickableTextWithGlow =
-  queryParams('clickable-text-with-glow') === 'true';
 
 export class UnconnectedExpandableImagesWrapper extends React.Component {
   static propTypes = {
@@ -94,11 +89,9 @@ export class ClickableTextWrapper extends React.Component {
     const clickableTextAll = node.querySelectorAll('b.clickable-text');
     clickableTextAll.forEach((clickableText, index) => {
       const id = clickableText.dataset.id;
-      if (showClickableTextWithGlow) {
-        const extraClass = ` clickable-text-with-glow clickable-text-${index}`;
-        if (!clickableText.className.includes(extraClass)) {
-          clickableText.className += extraClass;
-        }
+      const extraClass = ` clickable-text-with-glow clickable-text-${index}`;
+      if (!clickableText.className.includes(extraClass)) {
+        clickableText.className += extraClass;
       }
       clickableText.onclick = () => this.props.handleInstructionsTextClick(id);
     });

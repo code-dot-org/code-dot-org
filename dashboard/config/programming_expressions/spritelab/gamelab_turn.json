@@ -4,15 +4,20 @@
   "category": "Actions",
   "category_key": "actions",
   "block_name": "gamelab_turn",
-  "content": "Rotates a sprite or group of sprites by the selected amount. When used in a behavior, the turn command will give sprite the appearance that it is spinning.\n\n## Artist\nIf this block is being used with Artist, then by default, the sprite that will turn is the artist, as no other sprites can be generated in an Artist lesson. Therefore, this block's Artist version does not allow you to choose which sprite to turn. \n\n## Examples\n\nDisplay Area | Code\n--- | ---\n![](https://curriculum.code.org/media/uploads/2.png) | ![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-08-07-at-11.23.37-AM.png)\n![](https://curriculum.code.org/media/uploads/ezgif-2-61b75f3cbcdb.gif) | ![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-08-07-at-11.24.16-AM.png)\n",
+  "content": "Rotates a sprite or group of sprites by the selected amount. When used in a behavior, the turn command will give sprite the appearance that it is spinning.\n\n## Artist\nIf this block is being used with Artist, then by default, the sprite that will turn is the artist, as no other sprites can be generated in an Artist lesson. Therefore, this block's Artist version does not allow you to choose which sprite to turn. \n\n##\nDisplay Area | Code\n--- | ---\n![](https://curriculum.code.org/media/uploads/2.png) | ![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-08-07-at-11.23.37-AM.png)\n![](https://curriculum.code.org/media/uploads/ezgif-2-61b75f3cbcdb.gif) | ![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-08-07-at-11.24.16-AM.png)\n",
   "examples": [
     {
-      "name": "",
+      "name": "Example 1",
       "description": "The toothbrush has been turned to make it look like it is in the sprite’s hand. \r\n",
       "app": "https://studio.code.org/projects/spritelab/_-NSBYoKUgXUNjx-ZGvUGtODsq3nC3d7q4K-7JrQn-o",
       "image": null,
       "app_display_type": "embedAppWithCode",
       "embed_app_with_code_height": 350
+    },
+    {
+      "name": "Example 2",
+      "description": "The artist draws a square.",
+      "app": "https://studio.code.org/projects/artist/0BiQNjmcw-xuNEgsnrNseTCEgiodDoOKMsPKsmJYDyQ"
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/turn.PNG",

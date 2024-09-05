@@ -4,6 +4,7 @@ import React, {useCallback} from 'react';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 import moduleStyles from './tabs.module.scss';
 
@@ -18,6 +19,8 @@ export interface TabModel {
   iconRight?: FontAwesomeV6IconProps;
   /** Whether button should be icon only */
   isIconOnly?: boolean;
+  /** Tab tooltip props */
+  tooltip?: TooltipProps;
   /** Tab icon */
   icon?: FontAwesomeV6IconProps;
   /** Tab content */
@@ -51,6 +54,25 @@ const checkTabForErrors = (
   }
 };
 
+const renderTabButtonContent = (
+  isIconOnly: boolean,
+  icon?: FontAwesomeV6IconProps,
+  text?: string,
+  iconLeft?: FontAwesomeV6IconProps,
+  iconRight?: FontAwesomeV6IconProps
+) => {
+  if (isIconOnly && icon) {
+    return <FontAwesomeV6Icon {...icon} />;
+  }
+  return (
+    <>
+      {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+      {text && <span>{text}</span>}
+      {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+    </>
+  );
+};
+
 const _Tab: React.FunctionComponent<TabsProps> = ({
   isSelected,
   onClick,
@@ -59,6 +81,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   iconLeft,
   iconRight,
   icon,
+  tooltip,
   tabPanelId,
   tabButtonId,
   disabled = false,
@@ -67,30 +90,39 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
   checkTabForErrors(isIconOnly, icon, text);
 
+  const buttonContent = renderTabButtonContent(
+    isIconOnly,
+    icon,
+    text,
+    iconLeft,
+    iconRight
+  );
+
+  const buttonElement = (
+    <button
+      type="button"
+      role="tab"
+      aria-selected={isSelected}
+      aria-controls={tabPanelId}
+      id={tabButtonId}
+      className={classNames(
+        isSelected && moduleStyles.selectedTab,
+        isIconOnly && moduleStyles.iconOnlyTab
+      )}
+      onClick={handleClick}
+      disabled={disabled}
+    >
+      {buttonContent}
+    </button>
+  );
+
   return (
     <li role="presentation">
-      <button
-        type="button"
-        role="tab"
-        aria-selected={isSelected}
-        aria-controls={tabPanelId}
-        id={tabButtonId}
-        className={classNames(
-          isSelected && moduleStyles.selectedTab,
-          isIconOnly && moduleStyles.iconOnlyTab
-        )}
-        onClick={handleClick}
-        disabled={disabled}
-      >
-        {isIconOnly && icon && <FontAwesomeV6Icon {...icon} />}
-        {!isIconOnly && (
-          <>
-            {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-            {text && <span>{text}</span>}
-            {iconRight && <FontAwesomeV6Icon {...iconRight} />}
-          </>
-        )}
-      </button>
+      {tooltip ? (
+        <WithTooltip tooltipProps={tooltip}>{buttonElement}</WithTooltip>
+      ) : (
+        buttonElement
+      )}
     </li>
   );
 };

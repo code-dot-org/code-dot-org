@@ -16,23 +16,8 @@ import teacherSections, {
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
-import i18n from '@cdo/locale';
 
-import {expect} from '../../util/reconfiguredChai';
-
-interface FakeStudent {
-  id: number;
-  name: string;
-  username: string;
-  sectionId: number;
-  hasEverSignedIn: boolean;
-  dependsOnThisSectionForLogin: boolean;
-  loginType: string;
-  rowType: string;
-  age: number;
-  atRiskAgeGatedStudent: boolean;
-  childAccountComplianceState: string;
-}
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('AgeGatedStudentsTable', () => {
   const fakeStudent = {
@@ -46,7 +31,8 @@ describe('AgeGatedStudentsTable', () => {
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 'l',
+    childAccountComplianceState: ChildAccountComplianceStates.LOCKED_OUT,
+    latestPermissionRequestSentAt: null,
   };
   const fakeStudent2 = {
     id: 2,
@@ -60,6 +46,7 @@ describe('AgeGatedStudentsTable', () => {
     age: 10,
     atRiskAgeGatedStudent: false,
     childAccountComplianceState: '',
+    latestPermissionRequestSentAt: null,
   };
   const fakeStudent3 = {
     id: 3,
@@ -72,7 +59,8 @@ describe('AgeGatedStudentsTable', () => {
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 's',
+    childAccountComplianceState: ChildAccountComplianceStates.GRACE_PERIOD,
+    latestPermissionRequestSentAt: new Date(),
   };
   const fakeStudent4 = {
     id: 4,
@@ -85,7 +73,9 @@ describe('AgeGatedStudentsTable', () => {
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 'g',
+    childAccountComplianceState:
+      ChildAccountComplianceStates.PERMISSION_GRANTED,
+    latestPermissionRequestSentAt: new Date(),
   };
   const fakeStudent5 = {
     id: 5,
@@ -99,6 +89,7 @@ describe('AgeGatedStudentsTable', () => {
     age: 10,
     atRiskAgeGatedStudent: true,
     childAccountComplianceState: '',
+    latestPermissionRequestSentAt: null,
   };
   const fakeStudents = {
     [fakeStudent.id]: fakeStudent,
@@ -125,19 +116,6 @@ describe('AgeGatedStudentsTable', () => {
     hidden: false,
   };
 
-  const getConsentStatus = (consentStatus: string) => {
-    switch (consentStatus) {
-      case ChildAccountComplianceStates.LOCKED_OUT:
-        return i18n.childAccountPolicy_lockedOut();
-      case ChildAccountComplianceStates.REQUEST_SENT:
-        return i18n.childAccountPolicy_requestSent();
-      case ChildAccountComplianceStates.PERMISSION_GRANTED:
-        return i18n.childAccountPolicy_permissionGranted();
-      default:
-        return i18n.childAccountPolicy_notStarted();
-    }
-  };
-
   beforeEach(() => {
     const store = getStore();
     registerReducers({
@@ -153,23 +131,46 @@ describe('AgeGatedStudentsTable', () => {
   });
 
   it('should show table with students', () => {
-    const {getByText, getByTestId, queryByText} = render(
+    const {getByTestId} = render(
       <Provider store={getStore()}>
         <AgeGatedStudentsTable />
       </Provider>
     );
-    expect(getByTestId('uitest-age-gated-students-table'));
 
-    Object.values(fakeStudents).forEach((student: FakeStudent) => {
-      if (student.atRiskAgeGatedStudent) {
-        expect(getByText(student.name));
-        expect(
-          getByText(getConsentStatus(student.childAccountComplianceState))
-        );
-      } else {
-        expect(queryByText(student.name)).to.not.exist;
-      }
-    });
+    const table = getByTestId('uitest-age-gated-students-table');
+    const theadCellText = (col: number) =>
+      table.querySelector(`thead th:nth-child(${col})`)?.textContent;
+    const tbodyCellText = (row: number, col: number) =>
+      table.querySelector(`tbody > tr:nth-child(${row}) > td:nth-child(${col})`)
+        ?.textContent;
+
+    // 4 age gated student rows
+    expect(table.querySelectorAll('tbody > tr').length).to.equal(4);
+
+    // Header
+    expect(theadCellText(1)).to.contain('Student Name');
+    expect(theadCellText(2)).to.contain('Consent Status');
+    expect(theadCellText(3)).to.contain('Parent/Guardian Emailed?');
+
+    // Kent Clark
+    expect(tbodyCellText(1, 1)).to.contain(fakeStudent5.name);
+    expect(tbodyCellText(1, 2)).to.contain('Not Started');
+    expect(tbodyCellText(1, 3)).to.contain('No');
+
+    // fake student
+    expect(tbodyCellText(2, 1)).to.contain(fakeStudent4.name);
+    expect(tbodyCellText(2, 2)).to.contain('Permission Granted');
+    expect(tbodyCellText(2, 3)).to.contain('Yes');
+
+    // test student
+    expect(tbodyCellText(3, 1)).to.contain(fakeStudent3.name);
+    expect(tbodyCellText(3, 2)).to.contain('Pending Lockout');
+    expect(tbodyCellText(3, 3)).to.contain('Yes');
+
+    // Clark Kent
+    expect(tbodyCellText(4, 1)).to.contain(fakeStudent.name);
+    expect(tbodyCellText(4, 2)).to.contain('Locked Out');
+    expect(tbodyCellText(4, 3)).to.contain('No');
   });
 
   it('should not show table if no students', () => {

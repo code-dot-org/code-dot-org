@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
-import UnitCalendar from './UnitCalendar';
-import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+import React, {Component} from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+import i18n from '@cdo/locale';
+
+import UnitCalendarGrid from './UnitCalendarGrid';
 
 const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [
   45, 90, 135, 180, 225, 270, 315, 360, 405, 450,
@@ -84,7 +86,7 @@ export default class UnitCalendarDialog extends Component {
             {this.generateDropdownOptions()}
           </select>
         </div>
-        <UnitCalendar
+        <UnitCalendarGrid
           lessons={lessons}
           weeklyInstructionalMinutes={this.state.instructionalMinutes}
           weekWidth={WEEK_WIDTH}

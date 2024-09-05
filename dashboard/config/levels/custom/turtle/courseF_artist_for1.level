@@ -33,7 +33,7 @@
     "never_autoplay_video": "true",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can you draw something like this:\\n\\n![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)\",\"hint_id\":\"courseF_artist_for1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3f647ea7b3b4586ad0d4bc878e643b86/courseF_artist_for1.mp3\"}]",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_artist_for1_1\",\r\n  \"callout_text\": \"The toolbox is in \\\"category\\\" mode to make more room for your code.  The `for` loops live in here.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"courseF_artist_for1_1\",\"callout_text\":\"The toolbox is in \\\"category\\\" mode to make more room for your code.  The `for` loops live in here.\",\"element_id\":\"[id=':2.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-1.label']\",\"localization_key\":\"courseF_artist_for1_1\",\"callout_text\":\"The toolbox is in \\\"category\\\" mode to make more room for your code.  The `for` loops live in here.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "instructions_important": "false",
     "display_name": "For Loops Freeplay (Beginning)",
     "disable_procedure_autopopulate": "false",
@@ -41,7 +41,7 @@
     "disable_if_else_editing": "false",
     "top_level_procedure_autopopulate": "false",
     "hint_prompt_attempts_threshold": 7,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

@@ -29,3 +29,4 @@ export type SetFileTypeFunction = (
   fileId: FileId,
   type: ProjectFileType
 ) => void;
+export type RearrangeFilesFunction = (fileIds: FileId[]) => void;

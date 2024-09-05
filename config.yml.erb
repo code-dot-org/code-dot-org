@@ -31,8 +31,6 @@ dashboard_microsoft_key:        !Secret
 dashboard_microsoft_secret:     !Secret
 dashboard_clever_key:           !Secret
 dashboard_clever_secret:        !Secret
-dashboard_schoolproject_key:    !Secret
-dashboard_schoolproject_secret: !Secret
 
 # Recaptcha
 recaptcha_site_key: !Secret
@@ -236,19 +234,6 @@ hip_chat_logging:               false
 # Logging endpoint used by broken link checker.
 slack_endpoint_broken_links:
 
-# Credentials/configuration for connecting to Firebase to use data blocks or data browser
-# in Applab.
-firebase_name: cdo-v3-<%=env%>
-firebase_secret: !Secret
-firebase_shared_secret: !Secret
-firebase_channel_id_suffix: ''
-firebase_max_channel_writes_per_15_sec: 300
-firebase_max_channel_writes_per_60_sec: 600
-firebase_max_table_count: 10
-firebase_max_table_rows: 20000
-firebase_max_record_size: 4096
-firebase_max_property_size: 4096
-
 # Azure keys for speech service
 azure_speech_service_key: !Secret
 azure_speech_service_region: !Secret
@@ -330,6 +315,9 @@ netsim_shard_expiry_seconds: 7200
 dcdo_table_name:       dcdo_<%=env%>
 gatekeeper_table_name: gatekeeper_<%=env%>
 
+# Allows DCDO settings via cookies. See: `Rack::CookieDCDO`
+use_cookie_dcdo: false
+
 # Poste (internal transactional email processing framework)
 poste_host: '<%= code_org_url.sub('//', '') %>'
 poste_attachment_dir:
@@ -346,7 +334,7 @@ chef_org_name: code-dot-org
 chef_client_key: <%="#{ENV['HOME']}/.chef/#{chef_node_name}.pem"%>
 chef_validation_client_name: <%="#{chef_org_name}-validator"%>
 chef_validation_key: <%="#{ENV['HOME']}/.chef/#{chef_validation_client_name}.pem"%>
-chef_server_url: '<%="https://api.opscode.com/organizations/#{chef_org_name}"%>'
+chef_server_url: '<%="https://code-org.saas.chef.io/organizations/#{chef_org_name}"%>'
 
 # Cloudfront keys for private content
 cloudfront_key_pair_id: !Secret
@@ -366,12 +354,11 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.lausd.iap.allhere.co'
+allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net https://*.lausd.iap.allhere.co'
 
 skip_locales:
 secret_pictures_csv:
 no_https_store:
-firebase_debug:
 pd_teacher_application_list_secret_key:
 
 # Configure CloudFront to serve static, custom, student-friendly page when web application returns error HTTP response.
@@ -653,7 +640,16 @@ mailjet_api_key:
 mailjet_secret_key:
 mailgun_api_key:
 
+### ActiveJob configuration
+
 # ActiveJob queues
 active_job_queues:
   :default: :default
   :mailers: :mailers
+  :mailjet: :mailjet
+
+# ActiveJob Queue Adapter
+active_job_queue_adapter: :delayed_job
+
+# aiproxy credentials
+aiproxy_api_key: !Secret

@@ -1,9 +1,10 @@
-import React from 'react';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import CohortCalculator from '@cdo/apps/code-studio/pd/application_dashboard/cohort_calculator';
 import {AllPartnersValue} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
-import {expect} from 'chai';
-import sinon from 'sinon';
 
 describe('Cohort Calculator', () => {
   describe('Initially', () => {
@@ -11,7 +12,7 @@ describe('Cohort Calculator', () => {
     let xhr;
     const regionalPartnerFilterValue = AllPartnersValue;
 
-    before(() => {
+    beforeAll(() => {
       xhr = sinon.useFakeXMLHttpRequest();
       cohortCalculator = shallow(
         <CohortCalculator
@@ -22,7 +23,7 @@ describe('Cohort Calculator', () => {
       );
     });
 
-    after(() => {
+    afterAll(() => {
       xhr.restore();
     });
 
@@ -40,7 +41,7 @@ describe('Cohort Calculator', () => {
     let server;
     let cohortCalculator;
 
-    before(() => {
+    beforeAll(() => {
       server = sinon.fakeServer.create();
       server.respondWith(
         'GET',
@@ -58,7 +59,7 @@ describe('Cohort Calculator', () => {
 
       server.respond();
     });
-    after(() => {
+    afterAll(() => {
       server.restore();
     });
 

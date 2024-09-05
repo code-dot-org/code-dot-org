@@ -1,46 +1,44 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 
 import {setModelCardProperty} from '../../redux/aichatRedux';
+import {Visibility} from '../../types';
+
+import MultiInputCustomization from './MultiInputCustomization';
 
 const ExampleTopicsInputs: React.FunctionComponent<{
+  fieldLabel: string;
+  fieldId: string;
+  tooltipText: string;
   topics: string[];
   readOnly: boolean;
-}> = ({topics, readOnly}) => {
+  visibility: Visibility;
+}> = ({fieldLabel, fieldId, tooltipText, topics, readOnly, visibility}) => {
   const dispatch = useAppDispatch();
 
+  const onUpdateItems = useCallback(
+    (updatedItems: string[]) => {
+      dispatch(
+        setModelCardProperty({
+          property: 'exampleTopics',
+          value: updatedItems,
+        })
+      );
+    },
+    [dispatch]
+  );
+
   return (
-    <MultiItemInput
-      items={topics}
-      onAdd={() =>
-        dispatch(
-          setModelCardProperty({
-            property: 'exampleTopics',
-            value: [...topics].concat(''),
-          })
-        )
-      }
-      onRemove={() => {
-        dispatch(
-          setModelCardProperty({
-            property: 'exampleTopics',
-            value: [...topics].slice(0, -1),
-          })
-        );
-      }}
-      onChange={(index, value) => {
-        const updatedTopics = topics.slice();
-        updatedTopics[index] = value;
-        dispatch(
-          setModelCardProperty({
-            property: 'exampleTopics',
-            value: updatedTopics,
-          })
-        );
-      }}
-      readOnly={readOnly}
+    <MultiInputCustomization
+      label={fieldLabel}
+      fieldId={fieldId}
+      tooltipText={tooltipText}
+      addedItems={topics}
+      visibility={visibility}
+      isReadOnly={readOnly}
+      hideInputBoxWhenReadOnly={false}
+      onUpdateItems={onUpdateItems}
     />
   );
 };

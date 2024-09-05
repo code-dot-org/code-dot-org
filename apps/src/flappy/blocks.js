@@ -4,11 +4,15 @@
  * Copyright 2013 Code.org
  *
  */
-var msg = require('./locale');
-var commonMsg = require('@cdo/locale');
-var utils = require('../utils');
+
 var _ = require('lodash');
+
+var commonMsg = require('@cdo/locale');
+
 var studioApp = require('../StudioApp').singleton;
+var utils = require('../utils');
+
+var msg = require('./locale');
 
 var FLAPPY_VALUE = '"flappy"';
 var RANDOM_VALUE = 'random';
@@ -637,10 +641,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendField(msg.setScore())
         .appendField(
-          new blockly.FieldTextInput(
-            '0',
-            blockly.FieldTextInput.numberValidator
-          ),
+          new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
           'VALUE'
         );
       this.setInputsInline(true);

@@ -1,4 +1,3 @@
-import {expect} from '../../util/reconfiguredChai';
 import {
   rateLimit,
   resetRateLimit,
@@ -34,7 +33,7 @@ describe('DatablockStorage', () => {
       }
 
       // This should be over the rate limit
-      expect(() => rateLimit(now + RATE_LIMIT)).to.throw(Error);
+      expect(() => rateLimit(now + RATE_LIMIT)).toThrow(Error);
 
       done();
     });

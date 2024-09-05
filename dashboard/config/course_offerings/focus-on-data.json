@@ -1,7 +1,6 @@
 {
   "key": "focus-on-data",
   "display_name": "Focus on Data (CS Discoveries)",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
@@ -16,6 +15,5 @@
   "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": "2023-07-10 09:00:00 UTC",
-  "self_paced_pl_course_offering_id": 443,
   "self_paced_pl_course_offering_key": "self-paced-pl-csd"
 }

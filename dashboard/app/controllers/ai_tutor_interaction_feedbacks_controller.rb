@@ -29,6 +29,6 @@ class AiTutorInteractionFeedbacksController < ApplicationController
   end
 
   private def feedback_params
-    params.permit(:thumbsUp, :thumbsDown).transform_keys {|key| key.to_s.underscore.to_sym}
+    params.permit(:thumbsUp, :thumbsDown, :details).transform_keys {|key| key.to_s.underscore.to_sym}
   end
 end

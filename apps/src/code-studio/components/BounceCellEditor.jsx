@@ -4,8 +4,10 @@
  */
 
 import React from 'react';
-import CellEditor from './CellEditor';
+
 import {SquareType} from '@cdo/apps/bounce/tiles';
+
+import CellEditor from './CellEditor';
 
 export default class BounceCellEditor extends CellEditor {
   /**

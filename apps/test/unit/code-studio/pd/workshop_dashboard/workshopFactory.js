@@ -1,4 +1,5 @@
 import {Factory} from 'rosie';
+
 import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 /**

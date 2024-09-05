@@ -17,9 +17,10 @@ export const getNewMessageId = () => {
   return latestMessageId;
 };
 
-export const getCurrentTimestamp = () =>
-  moment(Date.now()).format('YYYY-MM-DD HH:mm');
-export const getCurrentTime = () => moment(Date.now()).format('LT');
+export const timestampToDateTime = (timestamp: number) =>
+  moment(timestamp).format('YYYY-MM-DD HH:mm');
+export const timestampToLocalTime = (timestamp: number) =>
+  moment(timestamp).format('LT');
 
 const haveDifferentValues = (
   value1: AiCustomizations[keyof AiCustomizations],
@@ -27,6 +28,10 @@ const haveDifferentValues = (
 ): boolean => {
   if (typeof value1 === 'object' && typeof value2 === 'object') {
     return JSON.stringify(value1) !== JSON.stringify(value2);
+  }
+  // In the case that field values are saved as different types, compare as strings.
+  if (typeof value1 !== typeof value2) {
+    return value1.toString() !== value2.toString();
   }
 
   return value1 !== value2;
@@ -72,6 +77,16 @@ export const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
   }
 
   return true;
+};
+
+export const anyFieldsChanged = (
+  levelDefaultAiCustomizations: AiCustomizations,
+  AiCustomizations: AiCustomizations
+) => {
+  return (
+    findChangedProperties(levelDefaultAiCustomizations, AiCustomizations)
+      .length === 0
+  );
 };
 
 export const allFieldsHidden = (fieldVisibilities: FieldVisibilities) =>

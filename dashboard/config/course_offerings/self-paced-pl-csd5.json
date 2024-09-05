@@ -1,7 +1,6 @@
 {
   "key": "self-paced-pl-csd5",
   "display_name": "Teaching AI and Machine Learning (2022)",
-  "category": "pl_self_paced",
   "is_featured": false,
   "assignable": false,
   "curriculum_type": "Professional Learning",
@@ -16,6 +15,5 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

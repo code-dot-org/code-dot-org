@@ -1,0 +1,20 @@
+name 'sp-pl-DS_chk_answers-match'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Vocabulary Review
+
+#### Review your answers from the matching activity.
+<img src="https://images.code.org/66e97552a7689ceeaf07ba0c637e7d8b-image-1724088408414.png" alt="phone app icon" style="border-radius:10px; float: right; ; height: 250px; margin: 20px 20px 0px 10px; ">
+
+- #### **Data Storytelling** - presenting visualizations and narratives to a specific audience for an expository or persuasive purpose
+- #### **Data ethics**- the set of guidelines that ensure the responsible use, collection, and sharing of data while respecting privacy, consent, and fairness
+- #### **Data Question** - a question that can be answered by the data
+- #### **Data Science**- the process of making meaning from that data.
+
+
+#### Now that you have explored some foundational data concepts, let's start analyzing and visualizing data! 
+
+
+MARKDOWN

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 export const sectionData = PropTypes.shape({

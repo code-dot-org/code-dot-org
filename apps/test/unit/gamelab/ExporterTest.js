@@ -1,18 +1,20 @@
-import {assert, expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import Exporter from '@cdo/apps/p5lab/gamelab/Exporter';
-import pageConstantsReducer, {
-  setPageConstants,
-} from '@cdo/apps/redux/pageConstants';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+
+import {assert, expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+var testUtils = require('../../util/testUtils');
 
 const emptyAnimationOpts = {
   animationList: {

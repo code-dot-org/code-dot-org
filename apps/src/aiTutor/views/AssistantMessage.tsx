@@ -1,5 +1,5 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 import {
   ChatCompletionMessage,
@@ -8,8 +8,9 @@ import {
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import style from './chat-workspace.module.scss';
 import AssistantMessageFeedback from './AssistantMessageFeedback';
+
+import style from './chat-workspace.module.scss';
 
 interface AssistantMessageProps {
   message: ChatCompletionMessage;

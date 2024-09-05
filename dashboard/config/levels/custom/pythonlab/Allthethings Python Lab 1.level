@@ -7,7 +7,7 @@
   "user_id": 6959,
   "properties": {
     "encrypted": "false",
-    "source": {
+    "start_sources": {
       "files": {
         "0": {
           "id": "0",

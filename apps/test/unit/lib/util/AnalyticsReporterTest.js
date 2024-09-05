@@ -1,7 +1,9 @@
-import {expect} from '../../../util/reconfiguredChai';
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import * as utils from '@cdo/apps/utils';
-import {stub} from 'sinon';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('AnalyticsReporter', () => {
   describe('formatUserId', () => {

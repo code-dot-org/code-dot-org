@@ -1,9 +1,17 @@
 @import 'color';
 
+.container {
+  overflow: hidden;
+}
+
 .modelCardTitle {
-    background-color: $neutral_light;
-    margin: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 10px;
+  margin: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.modelCardFields {
+  overflow-y: auto;
+  padding: 0 10px 10px 10px;
 }

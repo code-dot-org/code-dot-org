@@ -121,48 +121,41 @@ module ProjectsList
       end
       if project_group == 'all'
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
-        return include_featured(limit: limit)
+        fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
       fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
-    end
-
-    def include_featured(limit:)
-      published = fetch_published_project_types(PUBLISHED_PROJECT_TYPE_GROUPS.keys, limit: limit)
-      featured = fetch_featured_published_projects
-      PUBLISHED_PROJECT_TYPE_GROUPS.each_key do |project_type|
-        featured[project_type].push(published[project_type]).flatten!.uniq!
-      end
-      return featured
     end
 
     # @param project_group [String] Project group to retrieve. Must be one of
     #   PUBLISHED_PROJECT_TYPE_GROUPS.keys, or 'all' to retrieve all project groups.
     # @param featured_before [string] String representing a DateTime before
     #   which to search for the requested featured projects. Optional.
-    # @return [Hash<Array<Hash>>] A hash of lists of active published feature projects.
+    # @return [Hash<Array<Hash>>] A hash of lists of active published featured projects.
+    #   If the project group is 'all', the hash will contain lists of featured projects for all project group types.
+    #   If the project group is specified, we return a hash with one key/value pair where the
+    #   key is the specified project group.
     def fetch_active_published_featured_projects(project_group, featured_before: nil)
-      if project_group == 'all'
-        return fetch_featured_published_projects(featured_before: featured_before)
+      if project_group != 'all' && !PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
+        raise ArgumentError, "invalid project type: #{project_group}"
       end
-      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
-      fetch_featured_projects_by_type([project_group.to_sym], featured_before: featured_before)
-    end
-
-    def fetch_featured_published_projects(featured_before: nil)
-      featured_published_projects = {}
-      PUBLISHED_PROJECT_TYPE_GROUPS.each do |project_group, project_types|
-        if project_group == :library
+      all_active_published_featured_projects = {}
+      published_project_type_groups = project_group == 'all' ?
+        PUBLISHED_PROJECT_TYPE_GROUPS.keys :
+        [project_group.to_sym]
+      published_project_type_groups.each do |project_type_group|
+        if project_type_group == :library
           next
         end
-        featured_published_projects[project_group] = []
+        active_published_featured_projects_by_group = []
+        project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_type_group]
         project_types.each do |project_type|
-          featured_published_projects[project_group] <<
-            fetch_featured_projects_by_type(project_type, featured_before: featured_before)
+          active_published_featured_projects_by_group <<
+            fetch_active_published_featured_projects_by_type(project_type, featured_before: featured_before)
         end
-        featured_published_projects[project_group].flatten!
+        all_active_published_featured_projects[project_type_group] = active_published_featured_projects_by_group.flatten!
       end
-      return featured_published_projects
+      all_active_published_featured_projects
     end
 
     # Retrieve a class set of libraries for a specified class section
@@ -241,7 +234,7 @@ module ProjectsList
       ]
     end
 
-    def fetch_featured_projects_by_type(project_type, featured_before: nil)
+    def fetch_active_published_featured_projects_by_type(project_type, featured_before: nil)
       projects = "#{CDO.dashboard_db_name}__projects".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 

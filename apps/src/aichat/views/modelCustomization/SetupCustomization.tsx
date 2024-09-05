@@ -1,25 +1,29 @@
-import React, {useState, useMemo} from 'react';
 import classNames from 'classnames';
+import React, {useState, useMemo} from 'react';
+import {useSelector} from 'react-redux';
 
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {modelDescriptions} from '../../constants';
 import {setAiCustomizationProperty} from '../../redux/aichatRedux';
-import styles from '../model-customization-workspace.module.scss';
+
+import CompareModelsDialog from './CompareModelsDialog';
 import {
   DEFAULT_VISIBILITIES,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
-import {isVisible, isDisabled, isEditable} from './utils';
-import CompareModelsDialog from './CompareModelsDialog';
-import {modelDescriptions} from '../../constants';
-import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
-import {useSelector} from 'react-redux';
+import FieldLabel from './FieldLabel';
+import SaveChangesAlerts from './SaveChangesAlerts';
 import UpdateButton from './UpdateButton';
+import {isVisible, isDisabled, isEditable} from './utils';
+
+import styles from '../model-customization-workspace.module.scss';
 
 const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -75,8 +79,14 @@ const SetupCustomization: React.FunctionComponent = () => {
   const renderChooseAndCompareModels = () => {
     return (
       <div className={styles.inputContainer}>
+        <FieldLabel
+          id="selected-model"
+          label="Selected model"
+          tooltipText="This is the underlying language model being used by the chatbot. Use the dropdown to select from additional fine-tuned models."
+        />
         <SimpleDropdown
-          labelText="Selected model:"
+          labelText="Selected model"
+          isLabelVisible={false}
           onChange={event =>
             dispatch(
               setAiCustomizationProperty({
@@ -99,6 +109,7 @@ const SetupCustomization: React.FunctionComponent = () => {
             text="Compare Models"
             onClick={() => setIsShowingModelDialog(true)}
             type="secondary"
+            color="gray"
             className={classNames(
               styles.updateButton,
               styles.compareModelsButton
@@ -123,9 +134,11 @@ const SetupCustomization: React.FunctionComponent = () => {
         {isVisible(temperature) && (
           <div className={styles.inputContainer}>
             <div className={styles.horizontalFlexContainer}>
-              <label htmlFor="temperature">
-                <StrongText>Temperature</StrongText>
-              </label>
+              <FieldLabel
+                id="temperature"
+                label="Temperature"
+                tooltipText="Temperature affects which words are generated as a response. Use the slider to change the temperature."
+              />
               {aiCustomizations.temperature}
             </div>
             <input
@@ -139,7 +152,7 @@ const SetupCustomization: React.FunctionComponent = () => {
                 dispatch(
                   setAiCustomizationProperty({
                     property: 'temperature',
-                    value: event.target.value,
+                    value: parseFloat(event.target.value),
                   })
                 )
               }
@@ -148,9 +161,11 @@ const SetupCustomization: React.FunctionComponent = () => {
         )}
         {isVisible(systemPrompt) && (
           <div className={styles.inputContainer}>
-            <label htmlFor="system-prompt">
-              <StrongText>System prompt</StrongText>
-            </label>
+            <FieldLabel
+              id="system-prompt"
+              label="System Prompt"
+              tooltipText="The system prompt controls how the chatbot behaves. Type your instructions into the text box."
+            />
             <textarea
               id="system-prompt"
               value={aiCustomizations.systemPrompt}
@@ -170,6 +185,7 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.footerButtonContainer}>
         <UpdateButton isDisabledDefault={allFieldsDisabled} />
       </div>
+      <SaveChangesAlerts />
     </div>
   );
 };

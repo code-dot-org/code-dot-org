@@ -39,7 +39,10 @@ class StandardCategory < ApplicationRecord
       filename = "config/standards/#{framework.shortcode}_categories.csv"
       CSV.foreach(filename, headers: true) do |row|
         category = StandardCategory.find_or_initialize_by(framework: framework, shortcode: row['category'])
-        category.parent_category = StandardCategory.find_by!(shortcode: row['parent']) if row['parent']
+        if row['parent']
+          category.parent_category = StandardCategory.find_by(shortcode: row['parent'])
+          raise Exception.new("Error seeding StandardCategory: Couldn't find parent #{row['parent'].inspect} for category #{row['category'].inspect}") if category.parent_category.nil?
+        end
         category.category_type = row['type']
         category.description = row['description']
         category.save! if category.changed?

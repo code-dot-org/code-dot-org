@@ -5,11 +5,11 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_unit_by_name, only: [:show, :vocab, :resources, :code, :standards, :edit]
+  before_action :set_unit_by_name, only: [:show, :vocab, :resources, :code, :standards, :edit, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  authorize_resource class: 'Unit', except: [:update, :destroy]
-  load_and_authorize_resource class: 'Unit', only: [:update, :destroy]
+  authorize_resource class: 'Unit', except: [:update]
+  load_and_authorize_resource class: 'Unit', only: [:update]
 
   use_reader_connection_for_route(:show)
 
@@ -51,8 +51,7 @@ class ScriptsController < ApplicationController
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
       @section = current_user&.sections_instructed&.all&.find {|s| s.id.to_s == params[:section_id]}&.summarize
-      sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
-      @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:script_id] == @script.id})}
+      @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
     end
 
     @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !@script.is_course
@@ -74,7 +73,7 @@ class ScriptsController < ApplicationController
       locale_code: request.locale,
       course_link: @script.course_link(params[:section_id]),
       course_title: @script.course_title || I18n.t('view_all_units'),
-      sections: @sections_with_assigned_info
+      sections: @sections
     }
 
     @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)

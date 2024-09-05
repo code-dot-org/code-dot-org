@@ -1,4 +1,5 @@
 import {RowType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 
 export const MockStudentData = [
   {
@@ -12,7 +13,8 @@ export const MockStudentData = [
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 'l',
+    childAccountComplianceState: ChildAccountComplianceStates.LOCKED_OUT,
+    latestPermissionRequestSentAt: null,
   },
   {
     id: 2,
@@ -26,6 +28,7 @@ export const MockStudentData = [
     age: 10,
     atRiskAgeGatedStudent: false,
     childAccountComplianceState: '',
+    latestPermissionRequestSentAt: null,
   },
   {
     id: 3,
@@ -38,7 +41,8 @@ export const MockStudentData = [
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: 's',
+    childAccountComplianceState: ChildAccountComplianceStates.GRACE_PERIOD,
+    latestPermissionRequestSentAt: null,
   },
   {
     id: 4,
@@ -51,7 +55,8 @@ export const MockStudentData = [
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: false,
-    childAccountComplianceState: 'p',
+    childAccountComplianceState: '',
+    latestPermissionRequestSentAt: null,
   },
   {
     id: 5,
@@ -64,6 +69,8 @@ export const MockStudentData = [
     rowType: RowType.STUDENT,
     age: 10,
     atRiskAgeGatedStudent: true,
-    childAccountComplianceState: '',
+    childAccountComplianceState:
+      ChildAccountComplianceStates.PERMISSION_GRANTED,
+    latestPermissionRequestSentAt: new Date(),
   },
 ];

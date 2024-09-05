@@ -1,3 +1,4 @@
+import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
 import {Block, Field, WorkspaceSvg} from 'blockly';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {BlockChange} from 'blockly/core/events/events_block_change';
@@ -8,14 +9,15 @@ import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
 import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import {getAddParameterButtonWithCallback} from '@cdo/apps/blockly/addons/cdoFieldParameter';
 import CdoFieldToggle from '@cdo/apps/blockly/addons/cdoFieldToggle';
 import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
-import Button from '@cdo/apps/templates/Button';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getAlphanumericId} from '@cdo/apps/utils';
 
@@ -29,6 +31,8 @@ const INPUTS = {
   FLYOUT: 'flyout_input',
   STACK: 'STACK',
 };
+
+const PARAMETERS_LABEL = 'PARAMETERS_LABEL';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 export const blocks = {
@@ -47,7 +51,11 @@ export const blocks = {
         name: 'FLYOUT',
       });
 
-      block.appendDummyInput(INPUTS.FLYOUT).appendField(flyoutField, flyoutKey);
+      const newDummyInput = block.appendDummyInput(INPUTS.FLYOUT);
+      if (block.type === BLOCK_TYPES.procedureDefinition) {
+        newDummyInput.appendField(commonI18n.parameters(), PARAMETERS_LABEL);
+      }
+      newDummyInput.appendField(flyoutField, flyoutKey);
       // By default, the flyout is added after the stack input (at the bottom of the block).
       // This flag is used by behavior and function definitions, mainly in the modal function editor,
       // to add the flyout before the stack input (at the top of the block).
@@ -150,7 +158,32 @@ export const blocks = {
                 imageSourceId: this.id,
               };
             }
-            blocks.push(block);
+            if (blockType === BLOCK_TYPES.parametersGet) {
+              // Set up the "new parameter" button in the mini-toolbox
+              const newParamButton = getAddParameterButtonWithCallback(
+                this.workspace as WorkspaceSvg,
+                (
+                  this as ProcedureBlock
+                ).getProcedureModel() as ObservableProcedureModel
+              );
+              blocks.push(newParamButton);
+              const parameters = (this as ProcedureBlock)
+                .getProcedureModel()
+                .getParameters();
+              parameters.forEach(parameter => {
+                blocks.push({
+                  ...block,
+                  fields: {
+                    VAR: {
+                      name: parameter.getName(),
+                      type: '',
+                    },
+                  },
+                });
+              });
+            } else {
+              blocks.push(block);
+            }
           });
           return blocks;
         }

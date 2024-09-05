@@ -16,7 +16,7 @@
     "first_sprite_index": "1",
     "success_condition": "function successCondition() {\r\n\t      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;\r\n\t    }",
     "short_instructions": "Help Sid say \"Hello!\" by dragging the `actor 1 say` block out and connecting it to the bottom of the `when run` event.",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"playlab_drag_say_a\",\r\n  \"callout_text\": \"Drag the `actor 1 say` block here and type \\\"Hello!\\\"\",\r\n  \"element_id\": \"[block-id='2']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 22,\r\n     \"y\": 4\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"playlab_drag_say_a\",\"callout_text\":\"Drag the `actor 1 say` block here and type \\\"Hello!\\\"\",\"element_id\":\"[block-id='2']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}}},{\"element_id\":\"[data-id='2']\",\"localization_key\":\"playlab_drag_say_a\",\"callout_text\":\"Drag the `actor 1 say` block here and type \\\"Hello!\\\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":\"\"}]",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "long_instructions": "Sid (actor 1) wants to gather everyone for a new adventure. Can you help him say \"Hello!\" by dragging the `actor 1 say` block out and connecting it to the bottom of the `when run` event?   \r\n\r\nDon't forget to type \"Hello!\" inside!",
@@ -47,7 +47,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "hint_prompt_attempts_threshold": 10,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
@@ -63,7 +63,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml id="toolbox" style="display: none;">
-        <block type="studio_saySprite"/>
+        <block type="studio_saySprite" id="2"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>

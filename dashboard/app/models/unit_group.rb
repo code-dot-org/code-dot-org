@@ -39,20 +39,22 @@ class UnitGroup < ApplicationRecord
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  scope :with_associated_models, -> do
-    includes(
-      [
-        :plc_course,
-        :default_unit_group_units,
-        :alternate_unit_group_units,
-        {
-          course_version: {
-            course_offering: :course_versions
+  scope(
+    :with_associated_models, lambda do
+      includes(
+        [
+          :plc_course,
+          :default_unit_group_units,
+          :alternate_unit_group_units,
+          {
+            course_version: {
+              course_offering: :course_versions
+            }
           }
-        }
-      ]
-    )
-  end
+        ]
+      )
+    end
+  )
 
   def cached
     return self unless UnitGroup.should_cache?
@@ -104,8 +106,8 @@ class UnitGroup < ApplicationRecord
     published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def self.file_path(name)
-    Rails.root.join("config/courses/#{name}.course")
+  def self.file_path(name, root_path = Rails.root)
+    root_path.join("config/courses/#{name}.course")
   end
 
   def self.load_from_path(path)
@@ -221,11 +223,10 @@ class UnitGroup < ApplicationRecord
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
-    if new_units_objects.any? do |s|
+    unaddable_unit_names = new_units_objects.select do |s|
       s.unit_group != self && s.prevent_course_version_change?
-    end
-      raise 'Cannot add units that have resources or vocabulary'
-    end
+    end.map(&:name)
+    raise "Cannot add units that have resources or vocabulary: #{unaddable_unit_names}" if unaddable_unit_names.any?
 
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
@@ -461,7 +462,11 @@ class UnitGroup < ApplicationRecord
 
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
-  def can_view_version?(user = nil)
+  #
+  # locale_code is added so that it matches the signature of `unit.can_view_version?`.
+  # This is necessary because course_version.content_root is either a unit or a unit_group
+  # and script.summarize_for_unit_edit calls `can_view_version?` on the content_root with two arguments.
+  def can_view_version?(user = nil, locale_code = 'en-us')
     return false unless Ability.new(user).can?(:read, self)
 
     latest_course_version = UnitGroup.latest_stable_version(family_name)

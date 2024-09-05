@@ -1,22 +1,21 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
-import AppConfig, {getBaseAssetUrl} from '../appConfig';
-import styles from './soundsPanel.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import FocusLock from 'react-focus-lock';
+
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+
+import {getBaseAssetUrl} from '../appConfig';
+import musicI18n from '../locale';
 import MusicLibrary, {
   SoundData,
   SoundFolder,
   SoundType,
 } from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
-import FocusLock from 'react-focus-lock';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
-import musicI18n from '../locale';
 
-// A variant for SoundsPanel that plays previews as sounds are selected.
-const useSoundsPanelPreview =
-  AppConfig.getValue('sounds-panel-1-preview') === 'true';
+import styles from './soundsPanel.module.scss';
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
@@ -151,10 +150,8 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   const isPlayingPreview = playingPreview === soundPath;
 
   const onSoundSelect = useCallback(() => {
-    if (useSoundsPanelPreview) {
-      if (!isPlayingPreview) {
-        onPreview(soundPath);
-      }
+    if (!isPlayingPreview) {
+      onPreview(soundPath);
     }
     onSelect(soundPath);
   }, [isPlayingPreview, onPreview, onSelect, soundPath]);
@@ -167,22 +164,11 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
     [onSoundSelect]
   );
 
-  const onPreviewClick = useCallback(
-    (e: Event) => {
-      if (!isPlayingPreview) {
-        onPreview(soundPath);
-      }
-      e.stopPropagation();
-    },
-    [isPlayingPreview, onPreview, soundPath]
-  );
-
   return (
     <div
       className={classNames(
         'sounds-panel-sound-row',
         styles.soundRow,
-        useSoundsPanelPreview && styles.soundRowExtraHeight,
         isSelected && styles.soundRowSelected
       )}
       onClick={onSoundClick}
@@ -219,27 +205,9 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         </div>
       )}
       <div className={styles.soundRowRight}>
-        <div
-          className={classNames(
-            styles.length,
-            useSoundsPanelPreview && styles.lengthNoMarginRight
-          )}
-        >
+        <div className={classNames(styles.length, styles.lengthNoMarginRight)}>
           {getLengthRepresentation(sound.length)}
         </div>
-        {!useSoundsPanelPreview && (
-          <div className={styles.previewContainer}>
-            <FontAwesome
-              title={undefined}
-              icon={'play-circle'}
-              className={classNames(
-                styles.preview,
-                isPlayingPreview && styles.previewPlaying
-              )}
-              onClick={onPreviewClick}
-            />
-          </div>
-        )}
       </div>
     </div>
   );
@@ -353,10 +321,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
     <FocusLock>
       <div
         id="sounds-panel"
-        className={classNames(
-          styles.soundsPanel,
-          useSoundsPanelPreview && styles.soundsPanelExtraHeight
-        )}
+        className={classNames(styles.soundsPanel)}
         aria-modal
       >
         <div id="hidden-item" tabIndex={0} role="button" />

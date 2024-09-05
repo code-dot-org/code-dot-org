@@ -287,53 +287,6 @@ class ProjectsListTest < ActionController::TestCase
     assert_nil returned_project["thumbnailUrl"]
   end
 
-  test "include_featured combines featured project data and published projects data correctly" do
-    fake_featured_projects = {
-      applab: [
-        {name: "featuredApplab1"},
-        {name: "featuredApplab2"},
-        {name: "featuredApplab3"}
-      ],
-      gamelab: [],
-      playlab: [],
-      artist: [],
-      minecraft: [],
-      events: [],
-      k1: [],
-      spritelab: [],
-      dance: [],
-      poetry: [],
-      music: [],
-      library: []
-    }
-    fake_recent_projects = {
-      applab: [
-        {name: "recentApplab1"},
-        {name: "recentApplab2"},
-        {name: "recentApplab3"}
-      ],
-      gamelab: [],
-      playlab: [],
-      artist: [],
-      minecraft: [],
-      events: [],
-      k1: [],
-      spritelab: [],
-      dance: [],
-      poetry: [],
-      music: [],
-      library: []
-    }
-    ProjectsList.stubs(:fetch_featured_published_projects).returns(fake_featured_projects)
-    ProjectsList.stubs(:fetch_published_project_types).returns(fake_recent_projects)
-    combined_projects = ProjectsList.send(
-      :include_featured, limit: 10
-    )
-    # Featured projects should be ordered before recent projects
-    assert_equal combined_projects[:applab].first, {name: "featuredApplab1"}
-    assert_equal combined_projects[:applab].last, {name: "recentApplab3"}
-  end
-
   test 'fetch_section_libraries filters by library_name' do
     applab_lib_name = 'applab_library'
     gamelab_lib_name = 'gamelab_library'

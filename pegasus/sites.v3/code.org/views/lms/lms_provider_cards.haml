@@ -4,25 +4,29 @@
       image: "/images/lms/clever.png",
       title: "Clever",
       url: "https://support.code.org/hc/en-us/articles/115002716111-Setting-Up-Sections-with-Clever-Sync",
-      is_new: "false"
+      is_new: "false",
+      open_new_tab: "true"
     },
     {
       image: "/images/lms/classroom.png",
       title: "Google Classroom",
       url: "https://support.code.org/hc/en-us/articles/115001319312-Setting-Up-Sections-with-Google-Classroom-Sync",
-      is_new: "false"
+      is_new: "false",
+      open_new_tab: "true"
     },
     {
       image: "/images/lms/canvas.png",
       title: "Canvas",
       url: "/lms/canvas",
-      is_new: "true"
+      is_new: "true",
+      open_new_tab: "false"
     },
     {
       image: "/images/lms/schoology.png",
       title: "Schoology",
       url: "/lms/schoology",
-      is_new: "true"
+      is_new: "true",
+      open_new_tab: "false"
     },
   ]
 
@@ -38,5 +42,9 @@
         .text-wrapper
           %h4.heading-xs
             = card_list[:title]
-      %a.link-button.has-external-link.no-margin-top{href: card_list[:url]}
-        = hoc_s(:call_to_action_learn_more)
+      - if card_list[:open_new_tab] == "true"
+        %a.link-button.has-external-link.no-margin-top{href: card_list[:url], target: "_blank", rel: "noopener noreferrer"}
+          = hoc_s(:call_to_action_learn_more)
+      - else
+        %a.link-button.has-external-link.no-margin-top{href: card_list[:url]}
+          = hoc_s(:call_to_action_learn_more)

@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-02-22 18:13:46 UTC",
+    "serialized_at": "2024-07-03 14:22:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7642,6 +7642,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -44,7 +44,7 @@ Scenario: Submit anything, teacher is able to unsubmit
   And I press "#unsubmit-button-uitest" using jQuery to load a new page
 
   # Unsubmit should be disabled now
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait to see ".show-handle"
   And I wait until element ".student-table" is visible
   Then I wait until element "#unsubmit-button-uitest" is visible

@@ -35,6 +35,7 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "nav.header."
   hamburger_options[:page_mode] = request.cookies['pm']
+  hamburger_options[:dashboard] = true
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
@@ -83,7 +84,7 @@
         - else
           .headerlinks.hide_on_tablet
             - Hamburger.get_header_contents(header_contents_options).each do |entry|
-              %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
+              %a.headerlink{id: entry[:id], href: entry[:url], class: entry[:class]}= entry[:title]
 
       .header_right
         - if !@hide_sign_in_option && signin_button_enabled

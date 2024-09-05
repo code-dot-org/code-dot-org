@@ -27,12 +27,10 @@ module RegistrationsControllerTests
           password_confirmation: 'mypassword'
         }
       }
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
       assert_template partial: '_finish_sign_up'
       assert PartialRegistration.in_progress? session
 
-      assert_creates(User) {finish_email_sign_up(User::TYPE_STUDENT)}
+      assert_creates(User) {finish_email_sign_up(User::TYPE_STUDENT, email)}
       assert_redirected_to '/'
       follow_redirect!
       assert_redirected_to '/home'
@@ -55,8 +53,8 @@ module RegistrationsControllerTests
       created_user&.destroy!
     end
 
-    private def finish_email_sign_up(user_type)
-      post '/users', params: finish_sign_up_params(user_type: user_type)
+    private def finish_email_sign_up(user_type, email)
+      post '/users', params: finish_sign_up_params(user_type: user_type, email: email)
     end
   end
 end

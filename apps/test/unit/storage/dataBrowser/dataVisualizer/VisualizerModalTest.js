@@ -1,14 +1,13 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import React from 'react';
+
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
+import DropDownField from '@cdo/apps/storage/dataBrowser/dataVisualizer/DropdownField';
 import {
   UnconnectedVisualizerModal as VisualizerModal,
   OperatorType,
 } from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
-import DropDownField from '@cdo/apps/storage/dataBrowser/dataVisualizer/DropdownField';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 const DEFAULT_PROPS = {
   isRtl: false,
@@ -24,15 +23,15 @@ const DEFAULT_PROPS = {
 describe('VisualizerModal', () => {
   it('The modal starts closed', () => {
     let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
-    expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.false;
+    expect(wrapper.find(BaseDialog).prop('isOpen')).toBe(false);
   });
 
   it('The modal opens when the button is clicked', () => {
     let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
-    expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.false;
+    expect(wrapper.find(BaseDialog).prop('isOpen')).toBe(false);
 
     wrapper.instance().handleOpen();
-    expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.true;
+    expect(wrapper.find(BaseDialog).prop('isOpen')).toBe(true);
   });
 
   describe('state management', () => {
@@ -43,12 +42,12 @@ describe('VisualizerModal', () => {
         selectedColumn1: 'column1',
         selectedColumn2: 'column2',
       });
-      expect(wrapper.instance().state.selectedColumn1).to.equal('column1');
+      expect(wrapper.instance().state.selectedColumn1).toBe('column1');
       wrapper
         .find({displayName: 'Chart Type'})
         .simulate('change', {target: {value: 'Histogram'}});
-      expect(wrapper.instance().state.selectedColumn1).to.equal('');
-      expect(wrapper.instance().state.selectedColumn2).to.equal('');
+      expect(wrapper.instance().state.selectedColumn1).toBe('');
+      expect(wrapper.instance().state.selectedColumn2).toBe('');
     });
 
     it('clears filter value when filter column changes', () => {
@@ -57,11 +56,11 @@ describe('VisualizerModal', () => {
         filterColumn: 'column',
         filterValue: 'value',
       });
-      expect(wrapper.instance().state.filterValue).to.equal('value');
+      expect(wrapper.instance().state.filterValue).toBe('value');
       wrapper
         .find({displayName: 'Filter'})
         .simulate('change', {target: {value: 'newColumn'}});
-      expect(wrapper.instance().state.filterValue).to.equal('');
+      expect(wrapper.instance().state.filterValue).toBe('');
     });
 
     it('shows numeric filters only for numeric columns', () => {
@@ -74,12 +73,12 @@ describe('VisualizerModal', () => {
       wrapper
         .find({displayName: 'Filter'})
         .simulate('change', {target: {value: 'column1'}});
-      expect(wrapper.find(DropDownField)).to.have.lengthOf(4);
+      expect(wrapper.find(DropDownField)).toHaveLength(4);
       //switch to numeric column, expect another dropdown
       wrapper
         .find({displayName: 'Filter'})
         .simulate('change', {target: {value: 'column2'}});
-      expect(wrapper.find(DropDownField)).to.have.lengthOf(5);
+      expect(wrapper.find(DropDownField)).toHaveLength(5);
     });
   });
 
@@ -87,7 +86,7 @@ describe('VisualizerModal', () => {
     let wrapper;
     beforeEach(() => {
       wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
-      sinon.spy(wrapper.instance(), 'parseRecords');
+      jest.spyOn(wrapper.instance(), 'parseRecords').mockClear();
     });
 
     it('ignores empty records', () => {
@@ -101,7 +100,7 @@ describe('VisualizerModal', () => {
       ];
 
       let parsedRecords = wrapper.instance().parseRecords(tableRecords);
-      expect(parsedRecords).to.deep.equal(expectedParsedRecords);
+      expect(parsedRecords).toEqual(expectedParsedRecords);
     });
   });
 
@@ -120,9 +119,9 @@ describe('VisualizerModal', () => {
         {id: 3, name: 'charlie', age: 9, male: true},
       ];
       let expectedNumericColumns = ['id', 'age'];
-      expect(
-        wrapper.instance().findNumericColumns(records, columns)
-      ).to.deep.equal(expectedNumericColumns);
+      expect(wrapper.instance().findNumericColumns(records, columns)).toEqual(
+        expectedNumericColumns
+      );
     });
 
     it('ignores blank cells', () => {
@@ -153,9 +152,9 @@ describe('VisualizerModal', () => {
         'numericWithNull',
         'numericWithEmptyString',
       ];
-      expect(
-        wrapper.instance().findNumericColumns(records, columns)
-      ).to.deep.equal(expectedNumericColumns);
+      expect(wrapper.instance().findNumericColumns(records, columns)).toEqual(
+        expectedNumericColumns
+      );
     });
 
     it('interprets columns with some numeric and some non-numeric values as non-numeric', () => {
@@ -166,9 +165,9 @@ describe('VisualizerModal', () => {
         {id: 3, name: 'charlie', age: 9, 'partially numeric': 5},
       ];
       let expectedNumericColumns = ['id', 'age'];
-      expect(
-        wrapper.instance().findNumericColumns(records, columns)
-      ).to.deep.equal(expectedNumericColumns);
+      expect(wrapper.instance().findNumericColumns(records, columns)).toEqual(
+        expectedNumericColumns
+      );
     });
   });
 
@@ -185,7 +184,7 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
-      ).to.deep.equal(['"123"', '"abc"']);
+      ).toEqual(['"123"', '"abc"']);
     });
 
     it('shows numbers and booleans without quotes', () => {
@@ -197,7 +196,7 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
-      ).to.deep.equal(['123', '"456"', '"false"', 'true']);
+      ).toEqual(['123', '"456"', '"false"', 'true']);
     });
 
     it('shows null, undefined, and "" separately', () => {
@@ -208,7 +207,7 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
-      ).to.deep.equal(['""', 'null', 'undefined']);
+      ).toEqual(['""', 'null', 'undefined']);
     });
 
     it('returns a list of unique values in the column', () => {
@@ -226,7 +225,7 @@ describe('VisualizerModal', () => {
 
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
-      ).to.deep.equal(['"123"', '123', '"def"', 'true', '"xyz"', 'undefined']);
+      ).toEqual(['"123"', '123', '"def"', 'true', '"xyz"', 'undefined']);
     });
 
     it('sorts numeric values', () => {
@@ -242,7 +241,7 @@ describe('VisualizerModal', () => {
         wrapper
           .instance()
           .getValuesForFilterColumn(records, 'col', true /* isNumeric */)
-      ).to.deep.equal(['-10', '0', '32', '57', '123']);
+      ).toEqual(['-10', '0', '32', '57', '123']);
     });
   });
 
@@ -261,15 +260,15 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', '123')
-      ).to.deep.equal([records[0], records[2]]);
+      ).toEqual([records[0], records[2]]);
 
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', '456')
-      ).to.deep.equal([records[1]]);
+      ).toEqual([records[1]]);
 
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', '0')
-      ).to.deep.equal([records[4]]);
+      ).toEqual([records[4]]);
     });
     it('operators work with numbers', () => {
       let records = [
@@ -282,13 +281,13 @@ describe('VisualizerModal', () => {
         wrapper
           .instance()
           .filterRecords(records, 'filterCol', '123', OperatorType.GREATER_THAN)
-      ).to.deep.equal([records[1]]);
+      ).toEqual([records[1]]);
 
       expect(
         wrapper
           .instance()
           .filterRecords(records, 'filterCol', '456', OperatorType.LESS_THAN)
-      ).to.deep.equal([records[0], records[2], records[3]]);
+      ).toEqual([records[0], records[2], records[3]]);
 
       expect(
         wrapper
@@ -299,7 +298,7 @@ describe('VisualizerModal', () => {
             '456',
             OperatorType.LESS_THAN_OR_EQUAL
           )
-      ).to.deep.equal([records[0], records[1], records[2], records[3]]);
+      ).toEqual([records[0], records[1], records[2], records[3]]);
 
       expect(
         wrapper
@@ -310,7 +309,7 @@ describe('VisualizerModal', () => {
             '123',
             OperatorType.GREATER_THAN_OR_EQUAL
           )
-      ).to.deep.equal([records[0], records[1], records[2]]);
+      ).toEqual([records[0], records[1], records[2]]);
     });
     it('works with booleans', () => {
       let records = [
@@ -321,11 +320,11 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', 'true')
-      ).to.deep.equal([records[0], records[2]]);
+      ).toEqual([records[0], records[2]]);
 
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', 'false')
-      ).to.deep.equal([records[1]]);
+      ).toEqual([records[1]]);
     });
 
     it('works with null', () => {
@@ -338,7 +337,7 @@ describe('VisualizerModal', () => {
 
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', 'null')
-      ).to.deep.equal([records[0], records[3]]);
+      ).toEqual([records[0], records[3]]);
     });
 
     it('works with undefined', () => {
@@ -351,7 +350,7 @@ describe('VisualizerModal', () => {
 
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', 'undefined')
-      ).to.deep.equal([records[0], records[1]]);
+      ).toEqual([records[0], records[1]]);
     });
 
     describe('filtering with strings', () => {
@@ -365,7 +364,7 @@ describe('VisualizerModal', () => {
 
         expect(
           wrapper.instance().filterRecords(records, 'filterCol', '"part"')
-        ).to.deep.equal([records[0], records[2]]);
+        ).toEqual([records[0], records[2]]);
       });
 
       it('works with empty string', () => {
@@ -378,7 +377,7 @@ describe('VisualizerModal', () => {
 
         expect(
           wrapper.instance().filterRecords(records, 'filterCol', '""')
-        ).to.deep.equal([records[0], records[3]]);
+        ).toEqual([records[0], records[3]]);
       });
 
       it('works with strings that contain quotes', () => {
@@ -395,17 +394,17 @@ describe('VisualizerModal', () => {
           wrapper
             .instance()
             .filterRecords(records, 'filterCol', `'"hello", he said'`)
-        ).to.deep.equal([records[0], records[3]]);
+        ).toEqual([records[0], records[3]]);
         expect(
           wrapper
             .instance()
             .filterRecords(records, 'filterCol', `"'single quoted string'"`)
-        ).to.deep.equal([records[1], records[4]]);
+        ).toEqual([records[1], records[4]]);
         expect(
           wrapper
             .instance()
             .filterRecords(records, 'filterCol', `"it's a contraction"`)
-        ).to.deep.equal([records[2], records[5]]);
+        ).toEqual([records[2], records[5]]);
       });
     });
   });
@@ -421,33 +420,33 @@ describe('VisualizerModal', () => {
       });
     });
     it('works for bar charts', () => {
-      expect(
-        wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)
-      ).to.equal('Values: column1');
+      expect(wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)).toBe(
+        'Values: column1'
+      );
     });
     it('works for histograms', () => {
-      expect(
-        wrapper.instance().chartOptionsToString(ChartType.HISTOGRAM)
-      ).to.equal('Values: column1, Bucket Size: 2');
+      expect(wrapper.instance().chartOptionsToString(ChartType.HISTOGRAM)).toBe(
+        'Values: column1, Bucket Size: 2'
+      );
     });
     it('works for scatter plots', () => {
       expect(
         wrapper.instance().chartOptionsToString(ChartType.SCATTER_PLOT)
-      ).to.equal('X Values: column1, Y Values: column2');
+      ).toBe('X Values: column1, Y Values: column2');
     });
     it('works for cross tab charts', () => {
-      expect(
-        wrapper.instance().chartOptionsToString(ChartType.CROSS_TAB)
-      ).to.equal('X Values: column1, Y Values: column2');
+      expect(wrapper.instance().chartOptionsToString(ChartType.CROSS_TAB)).toBe(
+        'X Values: column1, Y Values: column2'
+      );
     });
     it('works for filtering', () => {
       wrapper.instance().setState({
         filterColumn: 'column3',
         filterValue: 'value',
       });
-      expect(
-        wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)
-      ).to.equal('Values: column1, Filtered column3 to value');
+      expect(wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)).toBe(
+        'Values: column1, Filtered column3 to value'
+      );
     });
   });
 });

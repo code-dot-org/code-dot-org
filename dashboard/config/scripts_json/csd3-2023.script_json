@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-11 16:45:35 UTC",
+    "serialized_at": "2024-08-05 17:11:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -21111,7 +21111,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation (2).",
+      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21255,7 +21255,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well1  and properly separated code in and out of the draw loop (2).\n\n\n\n\n",
+      "teacher_description": "You sequenced the program well1  and properly separated code in and out of the draw loop.\n\n\n\n\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21303,7 +21303,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system. At least 2 elements move in different ways (4).",
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system. At least 2 elements move in different ways.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21375,7 +21375,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Your program includes simple, independent movement (8).\n",
+      "teacher_description": "Your program includes simple, independent movement.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -21399,7 +21399,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program includes at least two instances of complex movement (7).",
+      "teacher_description": "Your program includes at least two instances of complex movement.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21543,7 +21543,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program properly creates at least 2 non-sprite variables, such as score or health, that are displayed and updated during the game and affect how the game is played (9).\n",
+      "teacher_description": "Your program properly creates at least 2 non-sprite variables, such as score or health, that are displayed and updated during the game and affect how the game is played.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21591,7 +21591,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your game has at least three backgrounds that are displayed during run time (3). At least one of these backgrounds is triggered automatically through a variable (4).\n",
+      "teacher_description": "Your game has at least three backgrounds that are displayed during run time. At least one of these backgrounds is triggered automatically through a variable.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21639,7 +21639,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well (1)  and properly separated code in and out of the draw loop (2).",
+      "teacher_description": "You sequenced the program well  and properly separated code in and out of the draw loop.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21843,7 +21843,7 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "No elements (shapes, sprites, or text) are placed on the screen using the coordinate system.",
+      "teacher_description": "Consists solely of sprites or shapes with no inclusion of text, or it lacks any elements (shapes, sprites, or text) positioned on the screen using the coordinate system.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -21855,7 +21855,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "A cumulative of at least a total of 3 elements are placed on the screen using the coordinate system (e.g 2 sprites & 1 line of text or 1 sprite, 1 shape, & 1 line of text)",
+      "teacher_description": "A cumulative total of at least 2 elements (one of which is text) are placed on the screen using the coordinate system (e.g., 1 sprite and 1 line of text or 1 shape and 1 line of text).",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -22071,7 +22071,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program responds to at least 2 different types of user input (5). ",
+      "teacher_description": "Your program responds to at least 2 different types of user input. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22119,7 +22119,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program has conditionals to control multiple sprites’ looping behavior (6) inside the draw loop. ",
+      "teacher_description": "Your program has conditionals to control multiple sprites’ looping behavior inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22263,7 +22263,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program has conditionals to control multiple sprite interactions (7) inside the draw loop. ",
+      "teacher_description": "Your program has conditionals to control multiple sprite interactions inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22359,7 +22359,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well(1)  and properly separated code in and out of the draw loop (2).",
+      "teacher_description": "You sequenced the program well  and properly separated code in and out of the draw loop.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22503,7 +22503,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well (1)  and properly separated code in and out of the draw loop (2).",
+      "teacher_description": "You sequenced the program well and properly separated code in and out of the draw loop.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22551,7 +22551,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well(1) and and all elements on the screen appear as intended.",
+      "teacher_description": "You sequenced the program well and and all elements on the screen appear as intended.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22827,7 +22827,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Your program has conditionals meant to control the player sprite’s jumping, however the sprite does not respond as expected (5). ",
+      "teacher_description": "Your program has conditionals meant to control the player sprite’s jumping, however the sprite does not respond as expected. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -22839,7 +22839,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program has conditionals to control the player sprite’s jumping (4) inside the draw loop. ",
+      "teacher_description": "Your program has conditionals to control the player sprite’s jumping inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,

@@ -1,22 +1,23 @@
 import moment from 'moment';
 import React, {useEffect, useState} from 'react';
 import * as Table from 'reactabular-table';
+
 import {fetchAITutorInteractions} from '@cdo/apps/aiTutor/interactionsApi';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {
   StudentChatRow,
   AITutorInteractionStatus,
   AITutorInteractionStatusValue,
 } from '@cdo/apps/aiTutor/types';
 import CheckboxDropdown, {
-  CheckboxOption,
+  CheckboxDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
-import color from '@cdo/apps/util/color';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import styleConstants from '@cdo/apps/styleConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-
 import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
+import color from '@cdo/apps/util/color';
+
 // TODO: Condense use of inline and imported styles
 import interactionsStyle from './interactions-table.module.scss';
 
@@ -89,7 +90,7 @@ interface InteractionsTableProps {
 const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
   const [chatMessages, setChatMessages] = useState<StudentChatRow[]>([]);
   const [studentFilterOptions, setStudentFilterOptions] = useState<
-    CheckboxOption[]
+    CheckboxDropdownOption[]
   >([]);
   const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
   const [selectedUserIds, setSelectedUserIds] = useState<string[]>([]);
@@ -112,7 +113,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
   }, [sectionId]);
 
   const generateStudentFilterOptions = (messages: StudentChatRow[]) => {
-    return messages.reduce<CheckboxOption[]>((acc, message) => {
+    return messages.reduce<CheckboxDropdownOption[]>((acc, message) => {
       const userId = `${message.userId}`;
       if (!acc.some(student => student.value === userId)) {
         acc.push({label: message.studentName, value: userId});

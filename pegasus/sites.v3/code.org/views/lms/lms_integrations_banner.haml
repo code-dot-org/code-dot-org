@@ -8,12 +8,7 @@
     .logos.flex-container.justify-center.align-items-start.wrap
       %img{src: "/images/avatars/lms-logo-clever.png", alt: "Clever", style: "width: 115px"}
       %img{src: "/images/avatars/lms-logo-google-classroom.png", alt: "Google Classroom", style: "width: 185px"}
-      .coming-soon
-        %img{src: "/images/avatars/lms-logo-canvas.png", alt: "Canvas", style: "width: 150px"}
-        %p=hoc_s(:module_label_coming_soon)
-      .coming-soon
-        %img{src: "/images/avatars/lms-logo-schoology.png", alt: "Schoology", style: "width: 185px"}
-        %p=hoc_s(:module_label_coming_soon)
-    - if !!DCDO.get('show-updated-lms-content', false)
-      %a.link-button{href: "/lms", target: "_blank", rel: "noopener noreferrer"}
-        =hoc_s(:admins_page_lms_call_to_action)
+      %img{src: "/images/avatars/lms-logo-canvas.png", alt: "Canvas", style: "width: 150px"}
+      %img{src: "/images/avatars/lms-logo-schoology.png", alt: "Schoology", style: "width: 185px"}
+    %a.link-button{href: "/lms", target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s(:admins_page_lms_call_to_action)

@@ -7,7 +7,6 @@
 #  display_name                     :string(255)      not null
 #  created_at                       :datetime         not null
 #  updated_at                       :datetime         not null
-#  category                         :string(255)      default("other"), not null
 #  is_featured                      :boolean          default(FALSE), not null
 #  assignable                       :boolean          default(TRUE), not null
 #  curriculum_type                  :string(255)
@@ -35,7 +34,8 @@ class CourseOffering < ApplicationRecord
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
-  validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
+  has_and_belongs_to_many :pd_workshops, class_name: 'Pd::Workshop', join_table: :course_offerings_pd_workshops, association_foreign_key: 'pd_workshop_id'
+
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validate :grade_levels_format
@@ -240,13 +240,22 @@ class CourseOffering < ApplicationRecord
     false
   end
 
+  # Checks if the course offering requires device compatibilities and is missing any.
+  def missing_required_device_compatibility?
+    # Only student course offerings require device compatibilites to be published.
+    return false if get_participant_audience != 'student'
+    return true if device_compatibility.nil?
+
+    device_compatibility_values = JSON.parse(device_compatibility).values
+    device_compatibility_values.any?(&:blank?)
+  end
+
   def summarize_for_assignment_dropdown(user, locale_code)
     [
       id,
       {
         id: id,
         display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
-        category: category,
         is_featured: is_featured?,
         participant_audience: course_versions.first.content_root.participant_audience,
         course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
@@ -260,6 +269,13 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
       course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
+    }
+  end
+
+  def summarize_self_paced_pl
+    {
+      id: id,
+      display_name: display_name_with_latest_year
     }
   end
 
@@ -291,7 +307,6 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       is_featured: is_featured?,
-      category: category,
       display_name: display_name,
       assignable: assignable?,
       curriculum_type: curriculum_type,
@@ -342,7 +357,6 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       display_name: display_name,
-      category: category,
       is_featured: is_featured,
       assignable: assignable?,
       curriculum_type: curriculum_type,
@@ -357,7 +371,6 @@ class CourseOffering < ApplicationRecord
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
-      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
       self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
     }
   end
@@ -369,9 +382,9 @@ class CourseOffering < ApplicationRecord
     File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
-  def self.seed_all(glob = "config/course_offerings/*.json")
+  def self.seed_all(root_dir: Rails.root, glob: "config/course_offerings/*.json")
     removed_records = all.pluck(:key)
-    Dir.glob(Rails.root.join(glob)).each do |path|
+    Dir.glob(root_dir.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
     end
     where(key: removed_records).destroy_all
@@ -417,7 +430,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def hoc?
-    category == 'hoc' || marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
+    marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
   end
 
   def pl_course?

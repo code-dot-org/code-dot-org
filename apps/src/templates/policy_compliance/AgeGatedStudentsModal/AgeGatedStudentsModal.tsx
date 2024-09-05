@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
 import {connect, useSelector} from 'react-redux';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Link from '@cdo/apps/componentLibrary/link';
 import Typography from '@cdo/apps/componentLibrary/typography';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {RootState} from '@cdo/apps/types/redux';
 import i18n from '@cdo/locale';
 
@@ -35,7 +35,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
 }) => {
   const currentUser = useSelector((state: RootState) => state.currentUser);
   const reportEvent = (eventName: string, payload: object = {}) => {
-    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+    analyticsReporter.sendEvent(eventName, payload);
   };
 
   const helpDocsUrl =
@@ -48,6 +48,14 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     });
   };
 
+  const modalClosed = () => {
+    reportEvent(EVENTS.CAP_AGE_GATED_MODAL_CLOSED, {
+      user_id: currentUser.userId,
+      number_of_gateable_students: ageGatedStudentsCount,
+    });
+    onClose();
+  };
+
   useEffect(() => {
     reportEvent(EVENTS.CAP_AGE_GATED_MODAL_SHOWN, {
       user_id: currentUser.userId,
@@ -57,13 +65,14 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
   return (
     <BaseDialog
       isOpen={isOpen}
-      handleClose={onClose}
+      handleClose={modalClosed}
       useUpdatedStyles={true}
       fixedWidth={800}
     >
       <div
         className={styles.modalContainer}
         data-testid="age-gated-students-modal"
+        id="uitest-age-gated-students-modal"
       >
         <div>
           <Typography
@@ -90,7 +99,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
           {!isLoadingStudents && <AgeGatedStudentsTable />}
           <hr />
           <div className={styles.modalButton}>
-            <button type="button" onClick={onClose}>
+            <button type="button" onClick={modalClosed}>
               {i18n.closeDialog()}
             </button>
           </div>

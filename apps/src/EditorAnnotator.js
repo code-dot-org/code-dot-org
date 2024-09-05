@@ -1,9 +1,10 @@
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import annotationList from '@cdo/apps/acemode/annotationList';
-import {interpolateColors} from '@cdo/apps/utils';
-import {border_gray} from '@cdo/apps/util/color';
-import RGBColor from 'rgbcolor';
 import md5 from 'md5';
+import RGBColor from 'rgbcolor';
+
+import annotationList from '@cdo/apps/acemode/annotationList';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import {border_gray} from '@cdo/apps/util/color';
+import {interpolateColors} from '@cdo/apps/utils';
 
 /**
  * Represents an implementation of an editing environment and wraps functionality
@@ -829,10 +830,10 @@ export default class EditorAnnotator {
       return EditorAnnotator.code_;
     }
 
-    let code = EditorAnnotator.annotator().getCode();
+    let code = EditorAnnotator.annotator()?.getCode();
     EditorAnnotator.code_ = code;
 
-    if (options.stripComments) {
+    if (options.stripComments && code) {
       code = EditorAnnotator.anonymizeCode_(code);
       EditorAnnotator.strippedCode_ = code;
     }

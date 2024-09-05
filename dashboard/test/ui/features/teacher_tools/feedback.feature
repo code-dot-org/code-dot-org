@@ -3,7 +3,7 @@ Feature: Recommended/Required Blocks Feedback
 
 Scenario: Solve without recommended blocks
   Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/5?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
   When I press "runButton"
   And I wait to see ".congrats"
@@ -25,12 +25,12 @@ Scenario: Solve without recommended blocks
   When I press "again-button"
   And I wait to see "#resetButton"
   And I press "resetButton"
-  And I drag block "6" to block "8"
-  And I drag block "10" to block "14" plus offset 35, 30
-  And I drag block "9" to offset "-2000, 0"
+  And I drag block "repeat" to block "whenRun"
+  And I connect block "startBlock" inside block "repeat"
+  And I delete block "extraBlock"
   And I press "runButton"
   And I wait to see ".congrats"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Congratulations! You have completed the final puzzle."
+  And element ".congrats" has text "Congratulations! You completed Puzzle 5."
   And element "#hint-request-button" does not exist

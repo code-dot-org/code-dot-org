@@ -1,0 +1,17 @@
+name 'SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_24'
+title 'Make a Plan: Student Logins'
+content1 'Thinking through how you want your students to access the course is an important part of planning for your first class. '
+
+
+markdown <<MARKDOWN
+#### Make a plan for how you will have students log into your Code.org course. **Consider the following when making your plan:**
+
+* #### Do my students already have Code.org accounts? 
+* #### What type of log in will my students use? 
+* #### How will students join my class? 
+* #### Will I have printed instructions? Will the instructions be posted somewhere? 
+
+___
+##### **Note:** Click and drag the bottom-right corner of the text box below to resize it.
+
+MARKDOWN

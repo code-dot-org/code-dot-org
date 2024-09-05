@@ -2,14 +2,14 @@ require 'test_helper'
 
 class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
   setup do
-    @user = create(:non_compliant_child, child_account_compliance_state: 'l')
+    @user = create(:locked_out_child)
   end
 
   test 'call - creates CAP user event' do
     event_name = CAP::UserEvent::ACCOUNT_LOCKING
 
     # Simulate updating the state to 'granted'
-    @user.child_account_compliance_state = 'g'
+    @user.cap_status = 'g'
     @user.save
 
     # Should record the prior and current state
@@ -52,6 +52,12 @@ class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
     assert_equal event_name, Services::ChildAccount::EventLogger.log_permission_granting(@user)
   end
 
+  test 'log_grace_period_start' do
+    event_name = CAP::UserEvent::GRACE_PERIOD_START
+    Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
+    assert_equal event_name, Services::ChildAccount::EventLogger.log_grace_period_start(@user)
+  end
+
   test 'log_account_locking' do
     event_name = CAP::UserEvent::ACCOUNT_LOCKING
     Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
@@ -62,5 +68,11 @@ class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
     event_name = CAP::UserEvent::ACCOUNT_PURGING
     Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
     assert_equal event_name, Services::ChildAccount::EventLogger.log_account_purging(@user)
+  end
+
+  test 'log_compliance_removing' do
+    event_name = CAP::UserEvent::COMPLIANCE_REMOVING
+    Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
+    assert_equal event_name, Services::ChildAccount::EventLogger.log_compliance_removing(@user)
   end
 end

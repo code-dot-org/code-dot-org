@@ -1,30 +1,35 @@
 import $ from 'jquery';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {getStore} from '../redux';
-import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
+
 import {files} from '@cdo/apps/clientApi';
-var renderAbusive = require('./renderAbusive');
+import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
+import PlayZone from '@cdo/apps/code-studio/components/playzone';
+import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import * as imageUtils from '@cdo/apps/imageUtils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import msg from '@cdo/locale';
+
+import getScriptData from '../../util/getScriptData';
+import trackEvent from '../../util/trackEvent';
+import {getStore} from '../redux';
+
 import renderProjectNotFound from './renderProjectNotFound';
 import renderVersionNotFound from './renderVersionNotFound';
-var userAgentParser = require('./userAgentParser');
-var clientState = require('../clientState');
-import getScriptData from '../../util/getScriptData';
-import PlayZone from '@cdo/apps/code-studio/components/playzone';
-var timing = require('@cdo/apps/code-studio/initApp/timing');
-var project = require('@cdo/apps/code-studio/initApp/project');
+
 var createCallouts = require('@cdo/apps/code-studio/callouts').default;
-var reporting = require('@cdo/apps/code-studio/reporting');
+var project = require('@cdo/apps/code-studio/initApp/project');
 var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
+var reporting = require('@cdo/apps/code-studio/reporting');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
-import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import queryString from 'query-string';
-import * as imageUtils from '@cdo/apps/imageUtils';
-import trackEvent from '../../util/trackEvent';
-import msg from '@cdo/locale';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+var clientState = require('../clientState');
+
+var renderAbusive = require('./renderAbusive');
+var userAgentParser = require('./userAgentParser');
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -38,8 +43,6 @@ export function setupApp(appOptions) {
   if (!window.dashboard) {
     throw new Error('Assume existence of window.dashboard');
   }
-  timing.startTiming('Puzzle', window.script_path, '');
-
   if (appOptions.hasContainedLevels) {
     if (appOptions.readonlyWorkspace) {
       // Lock the contained levels if this is a teacher viewing student work:
@@ -63,11 +66,15 @@ export function setupApp(appOptions) {
       const isViewingStudent = !!queryParams('user_id');
       const teacherViewingStudentWork = isTeacher && isViewingStudent;
       if (teacherViewingStudentWork) {
-        analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
-          unitId: appOptions.serverScriptId,
-          levelId: appOptions.serverLevelId,
-          sectionId: queryParams('section_id'),
-        });
+        analyticsReporter.sendEvent(
+          EVENTS.TEACHER_VIEWING_STUDENT_WORK,
+          {
+            unitId: appOptions.serverScriptId,
+            levelId: appOptions.serverLevelId,
+            sectionId: queryParams('section_id'),
+          },
+          PLATFORMS.BOTH
+        );
       }
 
       if (
@@ -118,14 +125,22 @@ export function setupApp(appOptions) {
         }
         report.callback = appOptions.report.callback;
       }
-      trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
+      trackEvent('activity', 'activity_lines_of_code', {
+        path: window.script_path,
+        value: report.lines,
+      });
 
       report.fallbackResponse = appOptions.report.fallback_response;
       // Track puzzle attempt event
-      trackEvent('Puzzle', 'Attempt', window.script_path, report.pass ? 1 : 0);
+      trackEvent('puzzle', 'puzzle_attempt', {
+        path: window.script_path,
+        value: report.pass ? 1 : 0,
+      });
       if (report.pass) {
-        trackEvent('Puzzle', 'Success', window.script_path, report.attempt);
-        timing.stopTiming('Puzzle', window.script_path, '');
+        trackEvent('puzzle', 'puzzle_success', {
+          path: window.script_path,
+          value: report.attempt,
+        });
       }
       reporting.sendReport(report);
     },

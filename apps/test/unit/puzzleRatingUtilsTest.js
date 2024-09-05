@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import {assert} from '../util/reconfiguredChai';
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var puzzleRatingUtils = require('@cdo/apps/puzzleRatingUtils');
 

@@ -1,7 +1,6 @@
 import {WorkspaceSvg} from 'blockly';
 import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
-import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 /**
@@ -18,20 +17,7 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
   blockList.push(...categoryBlocks);
 
   // Add blocks from the level toolbox XML, if present.
-  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('VARIABLE');
-  if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
-    return blockList;
-  }
-
-  // Blockly supports XML or JSON, but not a combination of both.
-  // We convert to JSON here because the behavior_get blocks are JSON.
-  const blocksConvertedJson = convertXmlToJson(
-    levelToolboxBlocks.documentElement
-  );
-  const flyoutJson =
-    Blockly.cdoUtils.getSimplifiedStateForFlyout(blocksConvertedJson);
-
-  blockList.push(...flyoutJson);
+  blockList.push(...Blockly.cdoUtils.getCategoryBlocksJson('VARIABLE'));
 
   // The toolox may include "change [var] by" blocks with custom default values.
   // If any of these blocks are found, we can remove the auto-generated block.
@@ -55,14 +41,14 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
 const getNewVariableButtonWithCallback = (workspace: WorkspaceSvg) => {
   const callbackKey = 'newVariableCallback';
   workspace.registerButtonCallback(callbackKey, () => {
-    Blockly.FieldVariable.modalPromptName(
-      commonI18n.renameThisPromptTitle(),
-      commonI18n.create(),
-      '',
-      newName => {
+    Blockly.FieldVariable.variableNamePrompt({
+      promptText: commonI18n.renameThisPromptTitle(),
+      confirmButtonLabel: commonI18n.create(),
+      defaultText: '',
+      callback: newName => {
         workspace.createVariable(newName);
-      }
-    );
+      },
+    });
   });
 
   return {

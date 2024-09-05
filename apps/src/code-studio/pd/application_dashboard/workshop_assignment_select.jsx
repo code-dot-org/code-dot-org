@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Select from 'react-select';
+
 import {SelectStyleProps} from '../constants';
 
 export default class WorkshopAssignmentSelect extends React.Component {

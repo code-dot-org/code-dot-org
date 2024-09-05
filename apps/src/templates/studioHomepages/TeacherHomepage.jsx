@@ -3,14 +3,11 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import Notification from '@cdo/apps/templates/Notification';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
@@ -18,7 +15,6 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
-import ContentContainer from '../ContentContainer';
 import HeaderBanner from '../HeaderBanner';
 import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -179,9 +175,13 @@ export const UnconnectedTeacherHomepage = ({
   ) {
     trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
-    analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
-      'user id': currentUserId,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.TEACHER_LOGIN_EVENT,
+      {
+        'user id': currentUserId,
+      },
+      PLATFORMS.BOTH
+    );
   }
 
   return (
@@ -211,7 +211,6 @@ export const UnconnectedTeacherHomepage = ({
               buttonText={announcement.buttonText}
               buttonLink={announcement.link}
               newWindow={true}
-              googleAnalyticsId={announcement.id}
             />
             <div style={styles.clear} />
           </div>
@@ -286,28 +285,6 @@ export const UnconnectedTeacherHomepage = ({
             isProfessionalLearningCourse={true}
           />
         )}
-        {/* TODO - We will eventually remove this section
-          once enough time has passed */}
-        {(plCourses?.length > 0 || topPlCourse) && (
-          <section id={'pl-courses-placeholder'} style={{marginBlock: '6rem'}}>
-            <Heading2 visualAppearance="heading-md">
-              {i18n.myProfessionalLearningCourses()}
-            </Heading2>
-            <BodyTwoText>
-              {i18n.myProfessionalLearningCoursesHomepageDesc()}
-            </BodyTwoText>
-            <LinkButton
-              color={'purple'}
-              href={studio('/my-professional-learning#self-paced-pl')}
-              iconLeft={{
-                iconName: 'book-circle-arrow-right',
-                iconStyle: 'solid',
-              }}
-              size="s"
-              text={i18n.myProfessionalLearningCoursesHomepageButton()}
-            />
-          </section>
-        )}
         <TeacherResources />
         {showIncubatorBanner && <IncubatorBanner />}
         <ProjectWidgetWithData
@@ -321,23 +298,6 @@ export const UnconnectedTeacherHomepage = ({
             isTeacher={true}
           />
         </section>
-        <ContentContainer
-          heading={i18n.joinedProfessionalLearningSectionsHomepageTitle()}
-        >
-          <BodyTwoText>
-            {i18n.joinedProfessionalLearningSectionsHomepageDesc()}
-          </BodyTwoText>
-          <LinkButton
-            color={'purple'}
-            href={studio('/my-professional-learning')}
-            iconLeft={{
-              iconName: 'book-circle-arrow-right',
-              iconStyle: 'solid',
-            }}
-            size="s"
-            text={i18n.myProfessionalLearningSectionsHomepageButton()}
-          />
-        </ContentContainer>
       </div>
     </div>
   );

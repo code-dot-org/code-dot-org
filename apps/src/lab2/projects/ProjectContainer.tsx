@@ -6,19 +6,22 @@
 
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import Lab2Registry from '../Lab2Registry';
-import {
-  setUpWithLevel,
-  setUpWithoutLevel,
-  shouldHideShareAndRemix,
-} from '../lab2Redux';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import header from '@cdo/apps/code-studio/header';
+import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 import {
   getCurrentScriptLevelId,
   getLevelPropertiesPath,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
-import header from '@cdo/apps/code-studio/header';
-import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {
+  isReadOnlyWorkspace,
+  setUpWithLevel,
+  setUpWithoutLevel,
+  shouldHideShareAndRemix,
+} from '../lab2Redux';
+import Lab2Registry from '../Lab2Registry';
 import {AppName} from '../types';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
@@ -49,6 +52,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const levelPropertiesPath = useSelector(getLevelPropertiesPath);
 
   const dispatch = useAppDispatch();
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
   useEffect(() => {
     // The redux types are very complicated, so in order to re-use this variable
@@ -104,18 +108,20 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
       // We skip this if we are already force reloading, as that will occur when
-      // saving already encountered an issue.
+      // saving already encountered an issue. We also can skip this in read only mode,
+      // as we never save in read only mode.
       if (
         projectManager &&
         !projectManager.isForceReloading() &&
-        projectManager.hasUnsavedChanges()
+        projectManager.hasUnsavedChanges() &&
+        !isReadOnly
       ) {
         projectManager.cleanUp();
         event.preventDefault();
         event.returnValue = '';
       }
     });
-  }, []);
+  }, [isReadOnly]);
 
   useEffect(() => {
     // Ensure the header is cleared when we have a change,

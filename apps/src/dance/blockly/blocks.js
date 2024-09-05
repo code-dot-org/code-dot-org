@@ -1,6 +1,7 @@
-import i18n from '@cdo/locale';
-import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
 import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
+import i18n from '@cdo/locale';
+
+import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -26,11 +27,7 @@ const customInputTypes = {
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       block.getVars = function () {
-        return {
-          [Blockly.BlockValueType.SPRITE]: [
-            block.getFieldValue(inputConfig.name),
-          ],
-        };
+        return [block.getFieldValue(inputConfig.name)];
       };
 
       currentInputRow

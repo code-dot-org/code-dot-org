@@ -2,22 +2,23 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {getStore, registerReducers} from '@cdo/apps/redux';
-import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+
+import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloatingActionButton';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructions, {
   setTtsAutoplayEnabledForLevel,
   setCodeReviewEnabledForLevel,
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
-import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
-import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloatingActionButton';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import experiments from '@cdo/apps/util/experiments';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
 $(document).ready(initPage);
 
@@ -67,17 +68,17 @@ function initPage() {
       levelId,
       type,
       hasValidation,
-      isProjectBacked,
       aiTutorAvailable,
       isAssessment,
+      progressionType,
     } = aiTutorData;
     const level = {
       id: levelId,
       type,
       hasValidation,
-      isProjectBacked,
       aiTutorAvailable,
       isAssessment,
+      progressionType,
     };
     getStore().dispatch(setLevel(level));
     getStore().dispatch(setScriptId(aiTutorData.scriptId));

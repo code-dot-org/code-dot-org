@@ -1,7 +1,7 @@
+import ValidatedInstructionsView from '@codebridge/InfoPanel/ValidatedInstructions';
 import React, {useEffect, useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
-import InstructionsView from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -17,9 +17,15 @@ enum Panels {
 }
 
 const panelMap = {
-  [Panels.Instructions]: InstructionsView,
+  [Panels.Instructions]: ValidatedInstructionsView,
   [Panels.HelpAndTips]: HelpAndTips,
   [Panels.ForTeachersOnly]: ForTeachersOnly,
+};
+
+const panelProps = {
+  [Panels.Instructions]: {},
+  [Panels.HelpAndTips]: {},
+  [Panels.ForTeachersOnly]: {},
 };
 
 export const InfoPanel = React.memo(() => {
@@ -38,12 +44,15 @@ export const InfoPanel = React.memo(() => {
   const [panelOptions, setPanelOptions] = useState<Panels[]>([
     Panels.Instructions,
   ]);
+  const hasPredictSolution = useAppSelector(
+    state => !!state.lab.levelProperties?.predictSettings?.solution
+  );
 
   useEffect(() => {
     // For now, always include Instructions panel.
     // TODO: support hiding this panel completely if there are no instructions.
     const options = [Panels.Instructions];
-    if (isUserTeacher && teacherMarkdown) {
+    if (isUserTeacher && (teacherMarkdown || hasPredictSolution)) {
       options.push(Panels.ForTeachersOnly);
     }
     if (mapReference || referenceLinks) {
@@ -52,7 +61,13 @@ export const InfoPanel = React.memo(() => {
     setPanelOptions(options);
     // Close the dropdown if we change levels.
     setIsDropdownOpen(false);
-  }, [isUserTeacher, mapReference, referenceLinks, teacherMarkdown]);
+  }, [
+    isUserTeacher,
+    mapReference,
+    referenceLinks,
+    teacherMarkdown,
+    hasPredictSolution,
+  ]);
 
   useEffect(() => {
     // If we change levels and were on a panel that no longer exists,
@@ -112,7 +127,7 @@ export const InfoPanel = React.memo(() => {
           </ul>
         </form>
       )}
-      <CurrentPanelView />
+      <CurrentPanelView {...panelProps[currentPanel]} />
     </PanelContainer>
   );
 });

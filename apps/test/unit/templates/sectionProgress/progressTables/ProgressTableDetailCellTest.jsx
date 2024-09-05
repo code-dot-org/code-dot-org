@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
@@ -11,8 +10,6 @@ import {
 import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
 import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
-
-import {expect} from '../../../../util/reconfiguredChai';
 
 const level_1 = fakeLevel({
   id: '123',
@@ -40,16 +37,16 @@ const setUp = (overrideProps = {}) => {
 
 describe('ProgressTableDetailCell', () => {
   beforeEach(() => {
-    sinon.stub(firehoseClient, 'putRecord');
+    jest.spyOn(firehoseClient, 'putRecord').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    firehoseClient.putRecord.restore();
+    firehoseClient.putRecord.mockRestore();
   });
 
   it('renders nothing if levels array is empty', () => {
     const wrapper = setUp({levels: []});
-    expect(wrapper).to.be.empty;
+    expect(Object.keys(wrapper)).toHaveLength(0);
   });
 
   it('displays a progress table level bubble for each level and sublevel', () => {
@@ -57,9 +54,9 @@ describe('ProgressTableDetailCell', () => {
     const levelBubble1 = wrapper.findWhere(node => node.key() === '123_1');
     const levelBubble2 = wrapper.findWhere(node => node.key() === '456_2');
     const levelBubble3 = wrapper.findWhere(node => node.key() === '999_3');
-    expect(levelBubble1.find(ProgressTableLevelBubble)).to.have.length(1);
-    expect(levelBubble2.find(ProgressTableLevelBubble)).to.have.length(2); // 1 for level, 1 for sublevel
-    expect(levelBubble3.find(ProgressTableLevelBubble)).to.have.length(1);
+    expect(levelBubble1.find(ProgressTableLevelBubble)).toHaveLength(1);
+    expect(levelBubble2.find(ProgressTableLevelBubble)).toHaveLength(2); // 1 for level, 1 for sublevel
+    expect(levelBubble3.find(ProgressTableLevelBubble)).toHaveLength(1);
   });
 
   it('passes expected values to ProgressTableLevelBubble', () => {
@@ -68,18 +65,18 @@ describe('ProgressTableDetailCell', () => {
       .findWhere(node => node.key() === '999_3')
       .find(ProgressTableLevelBubble);
     const levelBubble3Props = levelBubble3.props();
-    expect(levelBubble3Props.levelStatus).to.equal(LevelStatus.passed);
-    expect(levelBubble3Props.isLocked).to.be.false;
-    expect(levelBubble3Props.isUnplugged).to.be.false;
-    expect(levelBubble3Props.isBonus).to.be.true;
-    expect(levelBubble3Props.reviewState).to.equal(ReviewStates.keepWorking);
+    expect(levelBubble3Props.levelStatus).toBe(LevelStatus.passed);
+    expect(levelBubble3Props.isLocked).toBe(false);
+    expect(levelBubble3Props.isUnplugged).toBe(false);
+    expect(levelBubble3Props.isBonus).toBe(true);
+    expect(levelBubble3Props.reviewState).toBe(ReviewStates.keepWorking);
   });
 
   it('generates the right url for level bubble', () => {
     const wrapper = setUp();
     const levelBubble1 = wrapper.findWhere(node => node.key() === '123_1');
     const url = levelBubble1.find(ProgressTableLevelBubble).props().url;
-    expect(url).to.equal('/level1?section_id=123&user_id=1');
+    expect(url).toBe('/level1?section_id=123&user_id=1');
   });
 
   it('calls firehose putRecord when clicking a level', () => {
@@ -88,7 +85,7 @@ describe('ProgressTableDetailCell', () => {
       .findWhere(node => node.key() === '123_1')
       .childAt(0);
     levelBubble1.simulate('click');
-    expect(firehoseClient.putRecord).to.have.been.called;
+    expect(firehoseClient.putRecord).toHaveBeenCalled();
   });
 
   it('calls firehose putRecord when clicking a sublevel', () => {
@@ -97,6 +94,6 @@ describe('ProgressTableDetailCell', () => {
       node => node.key() === `${sublevel_1.id}`
     );
     sublevel.simulate('click');
-    expect(firehoseClient.putRecord).to.have.been.called;
+    expect(firehoseClient.putRecord).toHaveBeenCalled();
   });
 });

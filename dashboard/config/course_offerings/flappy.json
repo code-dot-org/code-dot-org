@@ -1,7 +1,6 @@
 {
   "key": "flappy",
   "display_name": "Flappy Code",
-  "category": "hoc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
@@ -16,6 +15,5 @@
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/VQ4lo6Huylc/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=VQ4lo6Huylc&wmode=transparent",
   "published_date": "2014-02-26 11:00:00 UTC",
-  "self_paced_pl_course_offering_id": 497,
   "self_paced_pl_course_offering_key": "self-paced-pl-k5"
 }

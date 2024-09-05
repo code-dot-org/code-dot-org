@@ -1,11 +1,8 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {UnconnectedDocumentationTab} from '@cdo/apps/templates/instructions/DocumentationTab';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 const ENVIRONMENT = 'javalab';
 
@@ -76,24 +73,24 @@ describe('DocumentationTabTest', () => {
   const processEventLoop = () => new Promise(resolve => setTimeout(resolve, 0));
 
   beforeEach(() => {
-    fetchSpy = sinon.stub(window, 'fetch');
-    fetchSpy.returns(
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchSpy.mockReturnValue(
       Promise.resolve({ok: true, json: () => fakeDocumentation})
     );
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   it('shows spinner while loading', async () => {
     const promise = new Promise(() => {});
-    fetchSpy.returns(promise);
+    fetchSpy.mockReturnValue(promise);
     const wrapper = mount(
       <UnconnectedDocumentationTab programmingEnvironment={ENVIRONMENT} />
     );
     await processEventLoop();
-    expect(wrapper.find(Spinner).length).to.equal(1);
+    expect(wrapper.find(Spinner).length).toBe(1);
   });
 
   it('shows default class if it exists', async () => {
@@ -106,9 +103,9 @@ describe('DocumentationTabTest', () => {
     );
     await processEventLoop();
     wrapper.update();
-    expect(wrapper.find(Spinner).length).to.equal(0);
+    expect(wrapper.find(Spinner).length).toBe(0);
     const select = wrapper.find('select').at(0);
-    expect(select.prop('value')).to.equal(defaultClass);
+    expect(select.prop('value')).toBe(defaultClass);
   });
 
   it('shows first class if default does not exist', async () => {
@@ -121,8 +118,8 @@ describe('DocumentationTabTest', () => {
     );
     await processEventLoop();
     wrapper.update();
-    expect(wrapper.find(Spinner).length).to.equal(0);
+    expect(wrapper.find(Spinner).length).toBe(0);
     const select = wrapper.find('select').at(0);
-    expect(select.prop('value')).to.equal(fakeDocumentation[0].docs[0].key);
+    expect(select.prop('value')).toBe(fakeDocumentation[0].docs[0].key);
   });
 });

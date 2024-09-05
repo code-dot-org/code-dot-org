@@ -84,37 +84,6 @@ class UserTest < ActiveSupport::TestCase
     @levelbuilder = create :levelbuilder
   end
 
-  class CAPEventLogging < ActiveSupport::TestCase
-    setup do
-      @student = create(:non_compliant_child)
-    end
-
-    test 'logs CAP event "account_locking" after student compliance state changed to "l"' do
-      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::LOCKED_OUT)
-
-      Services::ChildAccount::EventLogger.expects(:log_account_locking).with(@student).once
-
-      @student.save!
-    end
-
-    test 'logs CAP event "permission_granting" after student compliance state changed to "g"' do
-      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED)
-
-      Services::ChildAccount::EventLogger.expects(:log_permission_granting).with(@student).once
-
-      @student.save!
-    end
-
-    test 'does not log any CAP events if compliance state was not changed' do
-      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::LOCKED_OUT)
-      @student.save!
-
-      Services::ChildAccount::EventLogger.expects(:new).with(user: @student, event_name: anything).never
-
-      @student.save!
-    end
-  end
-
   test 'from_identifier finds user by id' do
     student = create :student
     assert_equal student, User.from_identifier(student.id.to_s)
@@ -142,6 +111,11 @@ class UserTest < ActiveSupport::TestCase
   test 'make_teachers_21' do
     teacher = create :teacher, birthday: Time.now - 18.years
     assert_equal '21+', teacher.age
+  end
+
+  test 'creating teacher sets show_progress_table_v2 to true' do
+    teacher = create :teacher
+    assert teacher.show_progress_table_v2
   end
 
   # Disable this test if and when we do require teachers to complete school data
@@ -364,10 +338,10 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
     application = create :pd_teacher_application, user: user
     application_form_data = application.form_data_hash
-    application_form_data['alternateEmail'] = ''
+    application_form_data['alternateEmail'] = nil
     application.update!(form_data_hash: application_form_data)
 
-    assert application.form_data_hash['alternateEmail'].empty?
+    assert application.form_data_hash['alternateEmail'].blank?
     assert_equal user.email_for_enrollments, user.email
   end
 
@@ -514,6 +488,38 @@ class UserTest < ActiveSupport::TestCase
   test "cannot create multi-auth user with duplicate of multi-auth user's second email" do
     create_multi_auth_user_with_second_email COLLISION_EMAIL
     cannot_create_multi_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "can create multi-auth LTI user with duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+
+    user.valid?
+  end
+
+  test "cannot create multi-auth LTI user multiple auth options and duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+    user.authentication_options << create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    cannot_create_user_with_email :google_authentication_option, user: user, email: COLLISION_EMAIL
   end
 
   def cannot_create_multi_auth_users_with_email(email)
@@ -3986,6 +3992,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'summarize' do
+    latest_permission_request_sent_at = 1.month.ago.change(usec: 0)
+
+    create(:parental_permission_request, user: @student, updated_at: latest_permission_request_sent_at)
+
     assert_equal(
       {
         id: @student.id,
@@ -4007,7 +4017,8 @@ class UserTest < ActiveSupport::TestCase
         has_ever_signed_in: @student.has_ever_signed_in?,
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
         at_risk_age_gated: false,
-        child_account_compliance_state: @student.child_account_compliance_state,
+        child_account_compliance_state: @student.cap_status,
+        latest_permission_request_sent_at: latest_permission_request_sent_at,
       },
       @student.summarize
     )
@@ -5229,19 +5240,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
   end
 
-  test "given a noncompliant child account, that account is locked out" do
-    student = create :non_compliant_child
-    student.save!
-    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.child_account_compliance_state
-    refute_empty student.child_account_compliance_lock_out_date
-  end
-
-  test "given a compliant child account, that account is NOT locked out" do
-    student = create :non_compliant_child, :with_parent_permission
-    student.save!
-    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.child_account_compliance_state
-  end
-
   test "does not return deleted followers from the followers helper" do
     student = create :student
     teacher = create :teacher
@@ -5405,5 +5403,105 @@ class UserTest < ActiveSupport::TestCase
     refute student.us_state_changed?
     student.us_state = 'WA'
     assert student.us_state_changed?
+  end
+
+  test "student in cpa lockout flow cannot change us_state or age" do
+    student = create :student, :U13, :in_colorado, :without_parent_permission
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(us_state: 'CA')
+    end
+
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(age: 16)
+    end
+    student.reload
+    refute_equal student.age, 16
+
+    student = create :student, :U13, :in_colorado, :with_parent_permission
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
+
+    student = create :student, :U13
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
+
+    student = create :student, :in_colorado
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
+  end
+
+  test "teacher with oauth account can access AI Chat" do
+    teacher = create :teacher, :google_sso_provider
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with LTI account can access AI Chat" do
+    teacher = create :teacher, :with_lti_auth
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with AUTHORIZED_TEACHER permissions can access AI Chat" do
+    teacher = create :authorized_teacher
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with email account cannot access AI Chat" do
+    teacher = create :teacher
+    refute teacher.teacher_can_access_ai_chat?
+  end
+
+  test "student with email account cannot access AI Chat" do
+    student = create :student
+    refute student.student_can_access_ai_chat?
+  end
+
+  test "student with verified teacher and in appropriate section can access AI Chat" do
+    unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher, unit_group: unit_group
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    assert student.student_can_access_ai_chat?
+  end
+
+  test "student with verified teacher but not in appropriate section cannot access AI Chat" do
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    refute student.student_can_access_ai_chat?
+  end
+
+  describe '#latest_parental_permission_request' do
+    let(:latest_parental_permission_request) {user.latest_parental_permission_request}
+
+    let(:user) {create(:non_compliant_child)}
+
+    let(:user_permission_request1) {create(:parental_permission_request, user: user, parent_email: 'test1@example.org')}
+    let(:user_permission_request2) {create(:parental_permission_request, user: user, parent_email: 'test2@example.org')}
+
+    before do
+      user_permission_request1
+      user_permission_request2
+    end
+
+    it 'returns latest parental permission request' do
+      _(latest_parental_permission_request).must_equal user_permission_request2
+    end
+
+    context 'when oldest parental permission request was resent' do
+      before do
+        user_permission_request1.update(resends_sent: 1)
+      end
+
+      it 'returns resend parental permission request' do
+        _(latest_parental_permission_request).must_equal user_permission_request1
+      end
+    end
   end
 end

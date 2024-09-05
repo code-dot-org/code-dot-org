@@ -1,0 +1,107 @@
+@import 'color.scss';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
+
+$message-border-radius: 8px;
+$user-color: $light_gray_100;
+$assistant-color: $brand_primary_light;
+
+%message {
+  @extend %markdown-styles;
+  padding: 12px;
+  overflow: hidden;
+  white-space: pre-line;
+  border-start-start-radius: $message-border-radius;
+  border-start-end-radius: $message-border-radius;
+}
+
+%markdown-styles {
+  h1 {
+    @include heading-xxl;
+  }
+  h2 {
+    @include heading-xl;
+  }
+  h3 {
+    @include heading-lg;
+  }
+  h4 {
+    @include heading-md;
+  }
+  h5 {
+    @include heading-sm;
+  }
+  h6 {
+    @include heading-xs;
+  }
+
+  ul,
+  ol,
+  li {
+    font-size: 0.875rem;
+  }
+
+  p {
+    @include body-three;
+    margin: 0;
+  }
+}
+
+.message-user {
+  @extend %message;
+  background-color: $user_color;
+  border-end-start-radius: $message-border-radius;
+  border-end-end-radius: 0;
+}
+
+.message-assistant {
+  @extend %message;
+  background-color: $assistant-color;
+  border-end-start-radius: 0;
+  border-end-end-radius: $message-border-radius;
+  overflow-x: auto;
+}
+
+%container {
+  display: flex;
+  gap: 8px;
+}
+
+.container-assistant {
+  @extend %container;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.container-user {
+  @extend %container;
+  justify-content: flex-end;
+}
+
+.userProfaneMessageButton {
+  width: 120px;
+  margin-top: -10px;
+}
+
+.botIconContainer {
+  flex: 0 0 32px;
+  height: 32px;
+  background: $assistant-color;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botIcon {
+  width: 19.25px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.danger {
+  background-color: $light_negative_100;
+}
+
+.warning {
+  background-color: $light_caution_100;
+}

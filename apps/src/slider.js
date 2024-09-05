@@ -22,6 +22,7 @@
  * @author fraser@google.com (Neil Fraser)
  */
 import {SVG_NS} from './constants';
+
 var dom = require('./dom');
 var trySetSessionStorage = require('./utils').trySetSessionStorage;
 
