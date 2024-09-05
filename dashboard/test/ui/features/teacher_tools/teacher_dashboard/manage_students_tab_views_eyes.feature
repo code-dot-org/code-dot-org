@@ -1,4 +1,5 @@
 @no_mobile
+@eyes
 Feature: Using the manage students tab of the teacher dashboard
 
   Scenario: Viewing the manage students tab in normal and edit mode
@@ -19,3 +20,6 @@ Feature: Using the manage students tab of the teacher dashboard
     And I press keys "SallyAlsoHasAVeryVeryLongLastName" for element "input[name='uitest-family-name']"
     And I wait until element "input[value='SallyAlsoHasAVeryVeryLongLastName']" is visible
     And I click selector "button:contains(Save)" once I see it
+    And I see no difference for "manage students tab"
+
+    And I close my eyes
