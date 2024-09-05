@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-29T18:15:57.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "student response",
+      "freeResponseHeight": 30,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\n\nsurvey_data = pd.read_csv('candy_dataset.csv')\n\nprint(survey_data.head())\n\nprint(survey_data.info())\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "candy_dataset.csv",
+          "language": "csv",
+          "contents": "Candy Name,Flavor,Price ($),Popularity Score\nChocolate,Chocolate,2.97,3\nJelly Beans,Sweet,3.72,4\nSour Patch Kids,Chocolate,3.21,1\nSour Patch Kids,Spicy,2.95,2\nM&Ms,Mint,2.41,4\nStarburst,Sour,3.41,4\nJelly Beans,Fruity,2.47,4\nGummy Bears,Mint,4.51,1\nJelly Beans,Chocolate,4.84,2\nHershey's,Mint,2.23,2\nStarburst,Mint,4.06,2\nGummy Bears,Mint,2.88,1\nGummy Bears,Chocolate,3.06,3\nSkittles,Mint,4.67,5\nHershey's,Mint,0.82,4\nHershey's,Mint,0.89,4\nCandy Corn,Sweet,0.59,3\nM&Ms,Mint,4.25,5\nSkittles,Chocolate,4.0,3\nLollipop,Fruity,4.42,1\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "teacher_markdown": "This level prints the top 5 rows of the candy dataset and then information about the count and data type of each column. Students will probably be able to tell from the function name that it provides information, though they may not know until they run it what that information is.\r\n\r\nAfter running, they should know how many non-null values there are (they will probably know \"null\" means \"no value there\" and what the \"Dtype\" is. They may be able to guess that Dtype says something about the kind of data, and possibly even that float involves decimal points since they know what Price is.\r\n\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-29 18:16:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:19:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:20:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:21:06 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

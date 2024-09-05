@@ -67,6 +67,7 @@ experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 // Enables LMS cards in the LoginTypePicker during section creation
 experiments.SECTION_CREATE_LMS_CARDS = 'section_create_lms_cards';
+experiments.AI_ASSESSMENTS_ANNOUNCEMENT = 'ai-assessments-announcement';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

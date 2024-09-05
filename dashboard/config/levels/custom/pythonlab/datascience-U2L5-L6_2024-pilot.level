@@ -1,0 +1,48 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-08-30T15:36:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# to_datetime()\r\n\r\n## Do This\r\nRun the program and examine the resulting data summary & graph.\r\n   - Discuss: What issues do you see regarding the way that the data is visualized?\r\n\r\n\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "survey_data_predict.csv",
+          "language": "csv",
+          "contents": "Age,Height,Join Date,Feedback Score\n13,180.2,1/12/2024,1\n29,165.8,1/23/2024,2\n12,177.3,1/26/2024,1\n14,145.9,2/5/2024,2\n15,174.7,2/14/2024,2\n17,170,3/17/2024,1\n15,156.3,3/29/2024,3\n99,162.3,4/19/2024,2\n95,169.9,5/20/2024,4\n13,160.5,5/24/2024,2\n15,160,6/2/2024,4\n,175,7/1/2024,3\n18,172.4,7/14/2024,3\n20,158.6,8/8/2024,4\n17,175.1,9/26/2024,3\n16,180,10/7/2024,4\n16,152.2,10/31/2024,5\n18,168.8,11/29/2024,3\n18,172,12/3/2024,4\n13,165.9,12/31/2024,5",
+          "folderId": "0",
+          "active": false,
+          "open": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "project_template_level_name": "datascience-U2L5-L6-7templ_2024-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-30T15:36:05.189+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L5_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L5_2024-pilot\"},{\"changed_at\":\"2024-08-30 15:37:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\",\"project_template_level_name\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 15:39:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 15:39:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

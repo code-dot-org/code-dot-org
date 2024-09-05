@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "####Put it In Order\r\n\r\n1. We want the bass to play before the drums.\r\n2. Click and drag the blocks into the correct order.\r\n3. Then press [Run](#clickable=run-button).\r\n",
+    "long_instructions": "####Put it In Order\r\n\r\n1. We want the drums to play first. Then the bass.\r\n2. Click and drag the blocks into the correct order.\r\n3. Then press [Run](#clickable=run-button).\r\n",
     "hide_share_and_remix": "false",
     "level_data": {
       "library": "intro2024",
@@ -30,7 +30,7 @@
                   "deletable": false,
                   "movable": true,
                   "fields": {
-                    "sound": "beats/drum_kit_pop"
+                    "sound": "bass/amped_alternate_bass"
                   },
                   "next": {
                     "block": {
@@ -39,7 +39,7 @@
                       "deletable": false,
                       "movable": true,
                       "fields": {
-                        "sound": "bass/amped_alternate_bass"
+                        "sound": "beats/drum_kit_pop"
                       }
                     }
                   }
@@ -48,15 +48,6 @@
             }
           ]
         }
-      },
-      "sounds": {
-        "beats": [
-          "drum_kit_disco",
-          "drum_beat_edm",
-          "drum_beat_club",
-          "drum_beat_knock",
-          "drum_kit_pop"
-        ]
       },
       "toolbox": {
         "blocks": {
@@ -76,9 +67,10 @@
         ]
       }
     ],
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Click and drag the drums block so it plays first.\",\"hint_id\":\"click_drag_music_lab\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb540e1d33837965c6f9e6ecee2e7a97/music-intro-coding-seq-investigate.mp3\"}]",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-28 20:27:11 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:29:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:33:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:34:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:37:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:37:32 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:39:27 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:41:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:51:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:54:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:55:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:56:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-28 20:27:11 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:29:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:33:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:34:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:37:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:37:32 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:39:27 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:41:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:51:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:54:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:55:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:56:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 16:14:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 17:53:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:25:50 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:31:49 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:33:23 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:40:29 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:40:37 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

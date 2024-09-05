@@ -369,6 +369,7 @@ class Services::LtiTest < ActiveSupport::TestCase
   test 'should create a teacher user given an LTI NRPS member object' do
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     user = Services::Lti.initialize_lti_user_from_nrps(client_id: @id_token[:aud], issuer: @id_token[:iss], nrps_member: @nrps_teacher)
+    user.save!
     assert user
     assert_equal user.user_type, User::TYPE_TEACHER
     assert_equal "test-teacher@code.org", user.email
