@@ -1,0 +1,12 @@
+- if !!DCDO.get("hoc_mode", "soon-hoc")
+  %link{href: "/css/generated/hoc-skinny-banner.css", rel: "stylesheet"}
+  %aside.hoc-skinny-banner
+    .wrapper.flex-container.justify-space-between.align-items-center.wrap
+      .text-wrapper
+        %h5
+          =hoc_s("hoc_2024.header")
+        %p.no-margin-bottom
+          =hoc_s("hoc_2024.banner.desc.ignite")
+      %img{src:"/images/banners/banner-hoc-2024-skinny.png", alt: ""}
+      %a.link-button.has-external-link.black{href: "https://hourofcode.com/how-to", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s("hoc_2024.button_host_an_event")
