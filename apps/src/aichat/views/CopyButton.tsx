@@ -2,12 +2,12 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 
 import {
-  selectAllVisibleMessages,
   addChatEvent,
+  selectAllVisibleMessages,
+  sendAnalytics,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
@@ -35,13 +35,12 @@ const CopyButton: React.FunctionComponent = () => {
         console.error('Error in copying text');
       }
     );
-    analyticsReporter.sendEvent(
-      EVENTS.CHAT_ACTION,
-      {
+    dispatch(
+      sendAnalytics(EVENTS.CHAT_ACTION, {
         action: 'Copy chat history',
-      },
-      PLATFORMS.BOTH
+      })
     );
+
     dispatch(
       addChatEvent({
         timestamp: Date.now(),

@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
 import styles from './progress-table-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const getId = (student, lesson) => student.id + '.' + lesson.id;
 

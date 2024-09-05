@@ -4,6 +4,7 @@ import React from 'react';
 import locale from '@cdo/apps/signUpFlow/locale';
 import LoginTypeSelection from '@cdo/apps/signUpFlow/LoginTypeSelection';
 import {ACCOUNT_TYPE_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
   getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
@@ -29,11 +30,13 @@ describe('LoginTypeSelection', () => {
     screen.getByText(locale.sign_up_microsoft());
     screen.getByText(locale.sign_up_facebook());
 
-    // Renders inputs and reminder for password length
+    // Renders inputs and reminder for field validations
     screen.getByText(locale.email_address());
     screen.getByText(locale.password());
     screen.getByText(locale.confirm_password());
     screen.getByText(locale.minimum_six_chars());
+    screen.getByText(i18n.censusInvalidEmail());
+    screen.getByText(i18n.passwordsMustMatch());
 
     // Renders button that sends the user to the Finish Account page
     screen.getByRole('button', {name: locale.create_my_account()});

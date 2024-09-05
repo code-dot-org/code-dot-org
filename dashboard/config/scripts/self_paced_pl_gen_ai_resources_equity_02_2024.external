@@ -3,28 +3,72 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Leaders Framework
+# LEADERS Framework 
 
-#### This unit offers many ways to differentiate and customize learning in your class. Take time to look at the resources provided. 
+#### The **LEADERS framework** is a set of principles designed to guide educators in teaching and discussing the societal effects of AI, including bias and ethical considerations. It emphasizes the importance of reflective practices to ensure that AI-related lessons are inclusive, responsible, and impactful.
 
-## Prior knowledge  
-- #### Consider your students' prior knowledge of AI and computer vision and decide if you want to use  some of Code.org’s <a href="https://studio.code.org/s/how-ai-works-2023?section_id=5174974&viewAs=Instructor" target="blank" rel="noopener noreferrer">How AI Works</a> lessons or specifically, the <a href="https://studio.code.org/s/how-ai-works-2023/lessons/2" target="blank" rel="noopener noreferrer">Computer Vision Lesson</a> if you feel your students would benefit from this content first. It might be helpful to provide context about what computer vision is and how it works before diving into this unit.
+#### The framework is referenced in <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/23" target="blank">Lesson 23: User Feedback</a>, but the information shared in it is helpful across the whole Unit.
 
-- #### Some lessons use software like **Google Sheets** and **Google Forms**. Consider your students experience with these tools and decide if you will need to take extra time to support these lessons. 
+#### Preview the framework below, or check out the whole document <a href="https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit#heading=h.lud8lydgsdb9/copy" target="blank" rel="noopener noreferrer">🔗here</a>.
 
-## Differentiation 
-#### Some of the lessons offer choice activities and extension options to help you customize the lesson to your needs. Carefully read over these options to decide how you want your class to proceed. 
+## Framework
 
-## Teaching tips
-#### Notice the orange boxes in the teaching guides. These teaching tips provide useful suggestions for managing your class during the different activities. 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">L - Link to your subject area </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+Integrate AI discussions into your subject area by finding relevant examples of both beneficial and harmful AI applications, encouraging students to relate these concepts to their own experiences.
+</p></div>
+</details>
 
-<img src="https://images.code.org/6cf83f3a0a7961a2671af46ec2a836b5-image-1715182229076.png" alt="orange teaching tip box from lesson guide" width="850px" style="border-radius:10px;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">E - Errors occur for many reasons</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+Recognize that AI errors often stem from biased or unrepresentative data, and encourage a critical examination of why errors happen, considering both technical and social factors.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">A - Assume someone in the room is a datapoint</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+Approach AI-related topics with empathy, acknowledging that students may have personal experiences with the issues discussed. Teach with compassion and sensitivity.
+ </p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">D - Data sources can be biased</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+Educate students on the importance of understanding where data comes from, its original purpose, and potential biases. Encourage questioning whether certain problems should be solved with AI at all.
+ </p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">E - Empathy for multiple stakeholders</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+Promote empathy by considering the needs of all stakeholders affected by AI, from users to developers, and aim to create inclusive and equitable AI solutions.
+ </p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">R - Real-world cases are history, not opinion</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+Use historical examples of AI’s societal impacts to teach about bias, avoiding fear tactics, and focusing on factual, resolved cases to inform discussions.
+ </p></div>
+</details>
 
 
-## Materials
-#### Decide how you want to share materials with your students. In some instances, it may benefit to share the handouts digitally, in others,  you may prefer to make copies. 
-
-## External Websites 
-#### Check if the lessons involve external websites and verify whether they are blocked by your school in advance. If they are blocked, either find alternative sites or follow your school's procedure to unblock the websites.
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">S - Show solutions!</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+Highlight existing solutions to AI bias and encourage brainstorming for future improvements. Emphasize that not all solutions are technical; sometimes, representation and policy change are key.
+ </p></div>
+</details>
 
 MARKDOWN
