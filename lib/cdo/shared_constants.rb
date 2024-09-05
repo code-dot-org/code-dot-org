@@ -762,7 +762,9 @@ module SharedConstants
     # Profanity detected in the model's output.
     MODEL_PROFANITY: 1003,
     # PII detected in the model's output.
-    MODEL_PII: 1004
+    MODEL_PII: 1004,
+    # The user input request exceeded the maximum token size allowed.
+    USER_INPUT_TOO_LARGE: 1005
   }
 
   AI_CHAT_MODEL_IDS = {
