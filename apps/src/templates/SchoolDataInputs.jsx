@@ -1,22 +1,59 @@
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {useMemo} from 'react';
 
+import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
+
 import i18n from '@cdo/locale';
 
+import {
+  CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
+  SELECT_A_SCHOOL,
+  US_COUNTRY_CODE,
+} from '../schoolInfo/constants';
 import style from './school-association.module.scss';
 
-const SCHOOL_COUNTRY = 'schoolCountry';
-const US_COUNTRY_CODE = 'US';
+const SEARCH_DEFAULTS = [
+  {value: CLICK_TO_ADD, text: i18n.schoolClickToAdd()},
+  {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
+];
+
+export function getCountriesUsFirst() {
+  // Add 'Select a country' and 'United States' to the top of the country list
+  const countries = [
+    {value: 'selectCountry', text: i18n.selectCountry()},
+    {value: US_COUNTRY_CODE, text: i18n.unitedStates()},
+  ];
+
+  // Pull in the rest of the countries after/below
+  const nonUsCountries = COUNTRIES.filter(
+    item => item.label !== US_COUNTRY_CODE
+  );
+
+  for (const nonUsCountry of nonUsCountries) {
+    countries.push({value: nonUsCountry.label, text: nonUsCountry.value});
+  }
+  return countries;
+}
+
+const COUNTRIES_US_FIRST = getCountriesUsFirst();
 
 export default function SchoolDataInputs({
-  usIp,
+  schoolId,
+  country,
+  schoolName,
+  schoolZip,
+  schoolsList,
+  schoolZipIsValid,
+  setSchoolId,
+  setCountry,
+  setSchoolName,
+  setSchoolZip,
   includeHeaders = true,
   fieldNames = {
     country: 'user[school_info_attributes][country]',
@@ -25,48 +62,28 @@ export default function SchoolDataInputs({
     schoolZip: 'user[school_info_attributes][school_zip]',
   },
 }) {
-  // If the user filled out country before or we are detecting a US IP address
-  const detectedCountry =
-    sessionStorage.getItem(SCHOOL_COUNTRY) || (usIp ? US_COUNTRY_CODE : '');
-  const [country, setCountry] = useState(detectedCountry);
-  const [askForZip, setAskForZip] = useState(
-    detectedCountry === US_COUNTRY_CODE
-  );
-  const [isOutsideUS, setIsOutsideUS] = useState(
-    (detectedCountry || usIp === false) && detectedCountry !== US_COUNTRY_CODE
+  // We don't want to display any fields to start that won't eventually be
+  // necessary, so updating any time country changes
+  const countryIsUS = useMemo(() => country === US_COUNTRY_CODE, [country]);
+
+  const inputManually = useMemo(() => schoolId === CLICK_TO_ADD, [schoolId]);
+
+  const schoolSelectOptions = useMemo(
+    () => [
+      {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
+      ...schoolsList,
+    ],
+    [schoolsList]
   );
 
-  // Add 'Select a country' and 'United States' to the top of the country list
-  let COUNTRY_ITEMS = [
-    {value: 'selectCountry', text: i18n.selectCountry()},
-    {value: US_COUNTRY_CODE, text: i18n.unitedStates()},
-  ];
-  // Pull in the rest of the countries after/below
-  const nonUsCountries = Object.values(COUNTRIES).filter(
-    item => item.label !== US_COUNTRY_CODE
-  );
-  for (const item of nonUsCountries) {
-    COUNTRY_ITEMS.push({value: item.label, text: item.value});
-  }
+  const handleCountryChange = c => {
+    setCountry(c);
+  };
 
-  const onCountryChange = e => {
-    const country = e.target.value;
-    setCountry(country);
-    sessionStorage.setItem(SCHOOL_COUNTRY, country);
-    analyticsReporter.sendEvent(
-      EVENTS.COUNTRY_SELECTED,
-      {country: country},
-      PLATFORMS.BOTH
-    );
-    // We don't want to display any fields to start that won't eventually be
-    // necessary, so updating both of these any time country changes
-    if (country === US_COUNTRY_CODE) {
-      setAskForZip(true);
-      setIsOutsideUS(false);
-    } else {
-      setAskForZip(false);
-      setIsOutsideUS(true);
-    }
+  const labelClassName = schoolZipIsValid ? '' : style.disabledLabel;
+
+  const handleSchoolChange = id => {
+    setSchoolId(id);
   };
 
   return (
@@ -82,12 +99,12 @@ export default function SchoolDataInputs({
           id="uitest-country-dropdown"
           name={fieldNames.country}
           labelText={i18n.whatCountry()}
-          items={COUNTRY_ITEMS}
+          items={COUNTRIES_US_FIRST}
           selectedValue={country}
-          onChange={onCountryChange}
+          onChange={e => handleCountryChange(e.target.value)}
           size="m"
         />
-        {askForZip && (
+        {countryIsUS && (
           <div>
             <SchoolZipSearch
               fieldNames={{
@@ -95,15 +112,76 @@ export default function SchoolDataInputs({
                 ncesSchoolId: fieldNames.ncesSchoolId,
                 schoolName: fieldNames.schoolName,
               }}
+              schoolId={schoolId}
+              setSchoolId={setSchoolId}
+              schoolZip={schoolZip}
+              setSchoolZip={setSchoolZip}
+              schoolsList={schoolsList}
+              schoolZipIsValid={schoolZipIsValid}
             />
           </div>
         )}
-        {isOutsideUS && (
+        {!countryIsUS && (
           <SchoolNameInput
             fieldNames={{
               schoolName: fieldNames.schoolName,
             }}
+            schoolName={schoolName}
+            setSchoolName={setSchoolName}
           />
+        )}
+        {countryIsUS && !inputManually && (
+          <div>
+            <SimpleDropdown
+              id="uitest-school-dropdown"
+              disabled={!schoolZipIsValid}
+              name={fieldNames.ncesSchoolId}
+              className={labelClassName}
+              labelText={i18n.selectYourSchool()}
+              itemGroups={[
+                {
+                  label: i18n.schools(),
+                  groupItems: schoolSelectOptions,
+                },
+                {
+                  label: i18n.additionalOptions(),
+                  groupItems: SEARCH_DEFAULTS,
+                },
+              ]}
+              selectedValue={schoolId}
+              onChange={e => handleSchoolChange(e.target.value)}
+              size="m"
+            />
+            <Button
+              text={i18n.noSchoolSetting()}
+              disabled={!schoolZipIsValid}
+              color={'purple'}
+              type={'tertiary'}
+              size={'xs'}
+              onClick={e => {
+                e.preventDefault();
+                handleSchoolChange(NO_SCHOOL_SETTING);
+              }}
+            />
+          </div>
+        )}
+        {countryIsUS && inputManually && (
+          <div>
+            <SchoolNameInput
+              fieldNames={{schoolName: fieldNames.schoolName}}
+              schoolName={schoolName}
+              setSchoolName={setSchoolName}
+            />
+            <Button
+              text={i18n.returnToResults()}
+              color={'purple'}
+              type={'tertiary'}
+              size={'xs'}
+              onClick={() => {
+                handleSchoolChange(SELECT_A_SCHOOL);
+              }}
+            />
+          </div>
         )}
       </div>
     </div>
@@ -111,7 +189,17 @@ export default function SchoolDataInputs({
 }
 
 SchoolDataInputs.propTypes = {
-  usIp: PropTypes.bool,
   includeHeaders: PropTypes.bool,
   fieldNames: PropTypes.object,
+  schoolId: PropTypes.string.isRequired,
+  country: PropTypes.string.isRequired,
+  schoolName: PropTypes.string.isRequired,
+  schoolZip: PropTypes.string.isRequired,
+  schoolsList: PropTypes.arrayOf(
+    PropTypes.shape({value: PropTypes.string, text: PropTypes.string})
+  ).isRequired,
+  setSchoolId: PropTypes.func.isRequired,
+  setCountry: PropTypes.func.isRequired,
+  setSchoolName: PropTypes.func.isRequired,
+  setSchoolZip: PropTypes.func.isRequired,
 };
