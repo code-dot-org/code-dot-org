@@ -38,6 +38,10 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       case Status.UNKNOWN:
         return chatMessageText;
       case Status.PROFANITY_VIOLATION:
+        if (role === Role.ASSISTANT) {
+          return commonI18n.aiChatInappropriateModelMessage();
+        }
+
         return role === Role.USER && showProfaneUserMessage
           ? chatMessageText
           : commonI18n.aiChatInappropriateUserMessage();
