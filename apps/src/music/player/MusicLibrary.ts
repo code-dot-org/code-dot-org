@@ -1,6 +1,6 @@
 import cloneDeep from 'lodash/cloneDeep';
 
-import currentLocale from '@cdo/apps/util/currentLocale';
+import {getCurrentLocale} from '@cdo/apps/lab2/projects/utils';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient, {
   ResponseValidator,
@@ -45,10 +45,10 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       libraryJsonResponsePromise,
     ];
 
-    const jsLocale = currentLocale().toLowerCase().replace('-', '_');
-    if (jsLocale !== 'en_us') {
+    const locale = getCurrentLocale().toLowerCase().replace('-', '_');
+    if (locale !== 'en_us') {
       const translationPromise = HttpClient.fetchJson<Translations>(
-        getBaseAssetUrl() + libraryFilename + '-loc/' + jsLocale + '.json'
+        getBaseAssetUrl() + libraryFilename + '-loc/' + locale + '.json'
       );
       promises.push(translationPromise);
     }

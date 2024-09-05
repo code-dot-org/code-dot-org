@@ -64,16 +64,16 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       }
 
       let studentInput = '';
-      let event = '';
+      let suggestedPromptType = '';
 
       switch (actionType) {
         case ActionType.COMPILATION:
           studentInput = QuickActions[ActionType.COMPILATION];
-          event = EVENTS.AI_TUTOR_ASK_ABOUT_COMPILATION;
+          suggestedPromptType = EVENTS.AI_TUTOR_SUGGESTED_PROMPT_COMPILATION;
           break;
         case ActionType.VALIDATION:
           studentInput = QuickActions[ActionType.VALIDATION];
-          event = EVENTS.AI_TUTOR_ASK_ABOUT_VALIDATION;
+          suggestedPromptType = EVENTS.AI_TUTOR_SUGGESTED_PROMPT_VALIDATION;
           break;
       }
 
@@ -85,9 +85,11 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
 
       dispatch(askAITutor(chatContext));
 
-      analyticsReporter.sendEvent(event, {
+      analyticsReporter.sendEvent(EVENTS.AI_TUTOR_CHAT_EVENT, {
         levelId: level?.id,
         levelType: level?.type,
+        progressionType: level?.progressionType,
+        suggestedPrompt: suggestedPromptType,
       });
     },
     [studentCode, isWaitingForChatResponse, level, dispatch]

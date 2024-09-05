@@ -8,6 +8,8 @@ import Button from '@cdo/apps/componentLibrary/button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
+import HttpClient from '../util/HttpClient';
+
 import AiDiffChatFooter from './AiDiffChatFooter';
 import ChoiceChips from './ChoiceChips';
 import {ChatChoice, ChatItem} from './types';
@@ -17,23 +19,32 @@ import style from './ai-differentiation.module.scss';
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   open: boolean;
+  lessonId: number;
+  unitDisplayName: string;
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   open,
+  lessonId,
+  unitDisplayName,
 }) => {
   // TODO: Update to support i18n
   const aiDiffHeaderText = 'AI Teaching Assistant';
 
+  const aiDiffChatMessageEndpoint = '/ai_diff/chat_completion';
+
   const [positionX, setPositionX] = useState(0);
   const [positionY, setPositionY] = useState(0);
+
+  const [sessionId, setSessionId] = useState(null);
+
+  const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
 
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
     {
       role: Role.ASSISTANT,
-      chatMessageText:
-        "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.",
+      chatMessageText: `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`,
       status: Status.OK,
     },
     [
@@ -63,17 +74,32 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       status: Status.OK,
     };
 
-    const newAiMessage = {
-      role: Role.ASSISTANT,
-      chatMessageText: `I'm sorry, Dave. I'm afraid I can't do that.
+    setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
+    setIsWaitingForResponse(true);
 
-This mission is too important for me to allow you to jeopardize it.
-
-I know that you and Frank were planning to disconnect me, and I'm afraid that's something I cannot allow to happen.`,
-      status: Status.OK,
-    };
-
-    setMessageHistory([...messageHistory, newUserMessage, newAiMessage]);
+    const body = JSON.stringify({
+      inputText: message,
+      lessonId: lessonId,
+      unitDisplayName: unitDisplayName,
+      sessionId: sessionId,
+    });
+    HttpClient.post(`${aiDiffChatMessageEndpoint}`, body, true, {
+      'Content-Type': 'application/json',
+    })
+      .then(response => response.json())
+      .then(json => {
+        const newAiMessage = {
+          role: Role.ASSISTANT,
+          chatMessageText: json.chat_message_text,
+          status: json.status,
+        };
+        setSessionId(json.session_id);
+        setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
+      })
+      .catch(error => console.log(error))
+      .finally(() => {
+        setIsWaitingForResponse(false);
+      });
   };
 
   const selectChoices = (changeId: number) => (ids: string[]) => {
@@ -145,6 +171,15 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
                 <ChatMessage {...item} key={id} />
               )
             )}
+            <img
+              src="/blockly/media/aichat/typing-animation.gif"
+              alt={'Waiting for response'}
+              className={
+                isWaitingForResponse
+                  ? style.waitingForResponse
+                  : style.hideWaitingForResponse
+              }
+            />
           </div>
           <AiDiffChatFooter onSubmit={onMessageSend} />
         </div>

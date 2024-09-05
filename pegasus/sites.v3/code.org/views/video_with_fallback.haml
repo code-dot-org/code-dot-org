@@ -1,8 +1,10 @@
 - download_path ||= nil
 - poster_path ||= "//i.ytimg.com/vi/#{video_code}/mqdefault.jpg"
 
-%figure{style: "width:100%; height: 100%; margin: 0 auto;"}
-  .videodiv{style: "position:relative;"}
-    %img{style: "display:block; width:100%; height:auto", src: "/images/16x9.png"}/
+%link{href: "/css/generated/video_with_fallback-styles.css", rel: "stylesheet"}
+
+%figure.video-with-fallback
+  .videodiv
+    %img{src: "/images/16x9.png"}/
     -# either youtube or fallback video player inserted here
     .insert_video_player{:data=>{:video_code=>video_code, :download_path=>download_path, :poster_path=>poster_path}}

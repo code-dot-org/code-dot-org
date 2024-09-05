@@ -3,14 +3,21 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Safety Note with Our Chatbot
+# Safety Note with Chatbot Lab
 
-### Beep boop
+#### Chatbot Lab, has been designed with the safety and educational needs of students in mind, differing significantly from general large language models (LLMs) like ChatGPT. While general LLMs offer a wide range of capabilities, they are built for broad use cases and may not have the same level of safeguards tailored specifically for younger users. Chatbot Lab is constructed with a focus on privacy, content appropriateness, and responsible use, ensuring that students interact with AI in a controlled and educational environment. This targeted approach is designed to help protect students from inappropriate content but also encourages responsible communication practices, where their interactions are monitored to maintain a safe and productive learning space.
 
+<img src="https://images.code.org/e65f6834044f4a2b77c14601cf6a749f-Screenshot 2024-08-30 at 2.32.36 PM.png" alt="Remember to chat responsibily pop-up" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### You should emphasize the importance of responsible usage when introducing students to Chatbot Lab. Here are a few key tips:
+* #### **Encourage Awareness**: Remind students that all interactions with the chatbot are recorded and monitored, ensuring that their conversations remain respectful and on-topic. Any inappropriate messages will be flagged, and consequences may follow.
+* #### **Protect Personal Information**: Teach students the importance of keeping personal information private. They should avoid sharing details like their name, phone number, or address when interacting with the chatbot.
+* #### **Promote Responsible Communication**: Reinforce the idea that the chatbot is a tool for learning and growth, not just for casual conversation. Encourage students to use it responsibly and with a focus on education.
+
+#### While we have thoroughly tested the Chatbot Lab model to ensure it aligns with educational standards and student safety, no system is perfect. You should actively monitor student usage to identify any potential issues, providing guidance and intervention as necessary to maintain a safe and supportive learning environment.
 
 ## Up Next!
 
-#### transition to temperature
-
+#### In the next level you’ll get to experiment with **temperature**. Temperature is one of the values you can control once a language model has been trained
 
 MARKDOWN

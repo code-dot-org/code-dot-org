@@ -7,12 +7,13 @@
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-19 23:34:12 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-09-04 21:11:03 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
