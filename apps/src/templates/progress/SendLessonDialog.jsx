@@ -41,16 +41,6 @@ class SendLessonDialog extends Component {
     setTimeout(() => {
       this.setState({showLinkCopied: false});
     }, 4000);
-
-    firehoseClient.putRecord(
-      {
-        study: 'copy-lesson-link-button',
-        study_group: 'v0',
-        event: event,
-        data_json: this.props.analyticsData,
-      },
-      {includeUserId: true}
-    );
   }
 
   renderCopyToClipboardRow() {

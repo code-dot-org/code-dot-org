@@ -27,16 +27,6 @@ export default class SendLesson extends React.Component {
 
   openDialog() {
     this.setState({isDialogOpen: true});
-
-    firehoseClient.putRecord(
-      {
-        study: 'send-to-students-button',
-        study_group: 'v0',
-        event: event,
-        data_json: this.props.analyticsData,
-      },
-      {includeUserId: true}
-    );
   }
 
   closeDialog() {
