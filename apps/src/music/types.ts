@@ -1,4 +1,5 @@
 import {ProjectLevelData} from '../lab2/types';
+
 import {Sounds} from './player/MusicLibrary';
 
 // TODO: Use this interface when converting MusicView to TypeScript
@@ -9,6 +10,7 @@ export interface MusicLevelData extends ProjectLevelData {
   sounds?: Sounds;
   library?: string;
   packId?: string;
+  showSoundFilters?: boolean;
 }
 
 export type LoadFinishedCallback = (

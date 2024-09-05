@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
 import MusicLibrary, {loadLibrary} from '@cdo/apps/music/player/MusicLibrary';
@@ -139,6 +140,25 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
           ) : (
             'Loading...'
           )}
+        </div>
+      </CollapsibleSection>
+      <hr />
+      <CollapsibleSection headerContent="Interface">
+        <div
+          className={classNames(moduleStyles.section, moduleStyles.topSpacing)}
+        >
+          <Checkbox
+            checked={!!levelData.showSoundFilters}
+            name="showSoundFilters"
+            label="Show Sound Filters in Sound Picker"
+            onChange={event => {
+              setLevelData({
+                ...levelData,
+                showSoundFilters: event.target.checked,
+              });
+            }}
+            size="s"
+          />
         </div>
       </CollapsibleSection>
       <hr />
