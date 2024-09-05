@@ -21,8 +21,6 @@ export interface TextFieldProps extends AriaAttributes {
   name: string;
   /** The value attribute specifies the value of an input element. */
   value?: string;
-  /** Can be specified password if needed. */
-  type?: string;
   /** TextField label */
   label?: string;
   /** TextField helper message */
@@ -64,7 +62,6 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   onChange,
   name,
   value,
-  type = 'text',
   placeholder,
   disabled = false,
   readOnly = false,
@@ -91,7 +88,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
       {label && <span className={moduleStyles.textFieldLabel}>{label}</span>}
       <input
         id={id}
-        type={type}
+        type="text"
         name={name}
         value={value}
         placeholder={placeholder}
