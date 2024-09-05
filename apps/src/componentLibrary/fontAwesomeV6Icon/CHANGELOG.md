@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.2]()
+## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/60788)
 
 * update stories to show how to use fa-brands or any other custom families icons
 
