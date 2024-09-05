@@ -28,6 +28,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
 
   const hasDangerStyle =
     status === Status.PROFANITY_VIOLATION ||
+    status === Status.USER_INPUT_TOO_LARGE ||
     (role === Role.ASSISTANT && status === Status.ERROR);
 
   const hasWarningStyle = status === Status.PII_VIOLATION;
@@ -43,6 +44,10 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
           : commonI18n.aiChatInappropriateUserMessage();
       case Status.PII_VIOLATION:
         return commonI18n.aiChatTooPersonalUserMessage();
+      case Status.USER_INPUT_TOO_LARGE:
+        return role === Role.ASSISTANT
+          ? commonI18n.aiChatUserInputTooLargeMessage()
+          : chatMessageText;
       case Status.ERROR:
         return role === Role.ASSISTANT
           ? commonI18n.aiChatResponseError()
