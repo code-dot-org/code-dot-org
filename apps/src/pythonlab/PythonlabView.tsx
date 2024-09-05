@@ -94,7 +94,7 @@ const defaultConfig: ConfigType = {
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource, getStartSource, codeBridgeKey} =
+  const {source, setSource, startSource, projectVersion} =
     useSource(defaultProject);
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
@@ -138,10 +138,10 @@ const PythonlabView: React.FunctionComponent = () => {
           config={config}
           setProject={setSource}
           setConfig={setConfig}
-          startSource={getStartSource()}
+          startSource={startSource}
           onRun={onRun}
           onStop={stopPythonCode}
-          key={codeBridgeKey}
+          projectVersion={projectVersion}
         />
       )}
     </div>
