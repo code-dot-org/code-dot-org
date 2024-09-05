@@ -21,7 +21,6 @@ import './styles/cdoIDE.scss';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
 import Console from './Console';
-import ControlButtons from './ControlButtons';
 import Workspace from './Workspace';
 
 type CodebridgeProps = {
@@ -62,7 +61,6 @@ export const Codebridge = React.memo(
       'info-panel': config.Instructions || InfoPanel,
       workspace: Workspace,
       console: Console,
-      'control-buttons': ControlButtons,
     };
 
     let gridLayout: string;
