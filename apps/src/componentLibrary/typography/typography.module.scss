@@ -11,9 +11,8 @@
   font-family: "Barlow Semi Condensed Semibold";
   font-style: normal;
   font-weight: 600;
-  src:
-    url("/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf") format("truetype"),
-    local("?");
+  src: url("/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf") format("truetype"),
+  local("?");
 }
 
 @font-face {
@@ -223,36 +222,75 @@ html {
 // ----------------------------------------
 
 // Headings
-.heading-xxl { @include heading-xxl; }
-.heading-xl { @include heading-xl; }
-.heading-lg { @include heading-lg; }
-.heading-md { @include heading-md; }
-.heading-sm { @include heading-sm; }
-.heading-xs { @include heading-xs; }
+.heading-xxl {
+  @include heading-xxl;
+}
+
+.heading-xl {
+  @include heading-xl;
+}
+
+.heading-lg {
+  @include heading-lg;
+}
+
+.heading-md {
+  @include heading-md;
+}
+
+.heading-sm {
+  @include heading-sm;
+}
+
+.heading-xs {
+  @include heading-xs;
+}
 
 // Paragraphs
 // Use on larger paragraphs
-.body-one { @include body-one; }
+.body-one {
+  @include body-one;
+}
+
 // Use on default paragraphs
-.body-two { @include body-two; }
+.body-two {
+  @include body-two;
+}
+
 // Use on course block descriptions or anywhere
 // else that needs smaller paragraph text
-.body-three { @include body-three; }
+.body-three {
+  @include body-three;
+}
+
 // Use on smallest paragraph text
-.body-four { @include body-four; }
+.body-four {
+  @include body-four;
+}
 
 // Overlines
 // Use on small uppercase labels or descriptions
 // (Bigger size)
-.overline-one { @include overline-one; }
+.overline-one {
+  @include overline-one;
+}
+
 // (Default size)
-.overline-two { @include overline-two; }
+.overline-two {
+  @include overline-two;
+}
+
 // (Smaller size)
-.overline-three { @include overline-three; }
+.overline-three {
+  @include overline-three;
+}
 
 // Use in paragraphs to bold text
 strong,
-.strong { @include strong; }
+.strong {
+  @include strong;
+}
+
 // Use in paragraphs to italicize text
 
 .extra-strong {
@@ -260,7 +298,9 @@ strong,
 }
 
 em,
-.em { @include em; }
+.em {
+  @include em;
+}
 
 strong em,
 em strong,
@@ -279,4 +319,6 @@ em .extra-strong,
 // Captions
 // Use on figcaption elements that accompany images or videos
 figcaption,
-.figcaption { @include figcaption; }
+.figcaption {
+  @include figcaption;
+}
