@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React, {useState, useCallback} from 'react';
 
 import RadioButton, {RadioButtonProps} from './RadioButton';
@@ -51,7 +52,7 @@ const RadioButtonsGroup: React.FC<RadioButtonsGroupProps> = ({
           {...radioButtonProps}
           onChange={handleChange}
           checked={isSelectedButton(radioButtonProps.value)}
-          className={`${commonClassName} ${radioButtonProps.className}`}
+          className={classnames(commonClassName, radioButtonProps.className)}
         />
       ))}
     </>
