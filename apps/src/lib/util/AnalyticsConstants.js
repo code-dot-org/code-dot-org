@@ -253,6 +253,8 @@ const EVENTS = {
   JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
   JAVALAB_COMPILATION_ERROR: 'Javalab Compilation Error',
   JAVALAB_COMPILATION_SUCCESS: 'Javalab Compilation Success',
+  JAVALAB_TEST_PASSED: 'Javalab Test Passed',
+  JAVALAB_TEST_FAILED: 'Javalab Test Failed',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',

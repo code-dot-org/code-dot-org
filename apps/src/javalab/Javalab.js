@@ -364,8 +364,11 @@ Javalab.prototype.onRun = function () {
 };
 
 Javalab.prototype.onTest = function () {
+  const validation = this.level.validation;
+  const validated = !!validation && Object.keys(validation).length !== 0;
   analyticsReporter.sendEvent(EVENTS.JAVALAB_TEST_BUTTON_CLICK, {
     levelId: this.levelIdForAnalytics,
+    validated: validated,
   });
   this.executeJavabuilder(ExecutionType.TEST);
 };

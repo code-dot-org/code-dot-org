@@ -300,7 +300,12 @@ export default class JavabuilderConnection {
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.TEST_RESULT:
-        testResult = onTestResult(data, this.onOutputMessage, this.miniAppType);
+        testResult = onTestResult(
+          data,
+          this.onOutputMessage,
+          this.miniAppType,
+          this.levelId
+        );
         if (testResult.isValidation) {
           this.sawValidationTests = true;
           if (!testResult.success) {
