@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
-import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {getSectionSummary} from '@cdo/apps/lab2/projects/userLevelsApi';
@@ -53,32 +52,31 @@ const PredictSummary: React.FunctionComponent = () => {
   };
 
   return (
-    <InstructorsOnly>
-      <div className={moduleStyles.predictSummaryContainer}>
-        <LinkButton
-          href={summaryUrl}
-          text={commonI18n.viewStudentResponses()}
-          size={'xs'}
-          type={'secondary'}
-          color={'black'}
-        />
-        {responseCount !== null && numStudents !== null && (
-          <div className={moduleStyles.responses}>
-            <div className={moduleStyles.responseIcon}>
-              <i className="fa fa-user" />
-            </div>
-            <div>
-              <span className={moduleStyles.responseCount}>
-                {responseCount}/{numStudents}
-              </span>
-              <span className={moduleStyles.responseLabel}>
-                {commonI18n.studentsAnswered()}
-              </span>
-            </div>
+    <div className={moduleStyles.predictSummaryContainer}>
+      {responseCount !== null && numStudents !== null && (
+        <div className={moduleStyles.responses}>
+          <div className={moduleStyles.responseIcon}>
+            <i className="fa fa-user" />
           </div>
-        )}
-      </div>
-    </InstructorsOnly>
+          <div>
+            <span className={moduleStyles.responseCount}>
+              {responseCount}/{numStudents}{' '}
+            </span>
+            <span className={moduleStyles.responseLabel}>
+              {commonI18n.studentsAnswered()}
+            </span>
+          </div>
+        </div>
+      )}
+      <LinkButton
+        href={summaryUrl}
+        text={commonI18n.viewStudentResponses()}
+        size={'xs'}
+        type={'secondary'}
+        color={'black'}
+        className={moduleStyles.studentResponsesButton}
+      />
+    </div>
   );
 };
 

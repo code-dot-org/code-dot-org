@@ -300,7 +300,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
   const isViewingOldVersion = state.lab2Project.viewingOldVersion;
   const isRunningAndReadonly =
-    (state.lab2System.isRunning || state.lab2System.isTesting) &&
+    (state.lab2System.isRunning || state.lab2System.isValidating) &&
     shouldBeReadonlyWhileRunning(state);
 
   return (

@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-02 09:07:12 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-09-03 19:25:29 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -87,7 +87,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**Why is it helpful to represent programs before we write them? How can you do this?**\n\nIn this lesson, students will review what they learned in Unit 1 about classes—that they are blueprints that contain the attributes and methods of an object, and that classes can inherit from each other—as well as key facets of UML diagrams. After discussing the usefulness of these diagrams, they create some of their own.",
-        "preparation": "- Gather poster paper, markers, and sticky notes (at least 5 for each student)\n- **(Optional)** Print copies of the U2L1 Guided Notes (one for each student)\n- Print copies of the Designing with UML handout (one for each student)",
+        "preparation": "- Gather poster paper, markers, and sticky notes (at least 5 for each student)\n- **(Optional)** Print copies of the Program Design Guided Notes (one for each student)\n- Print copies of the Designing with UML handout (one for each student)",
         "student_overview": "**Why is it helpful to represent programs before we write them? How can you do this?**\n\nIn this lesson, you will act like a software engineer and create a UML diagram to plan your program before you write it.",
         "unplugged": true
       },
@@ -162,9 +162,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**How do I get input from the user?**\n\nStudents learn how to obtain user input using the `Scanner` class. Students also explore the `File` class and use the `Scanner` class to read data from a file and print it to the console.\n",
-        "preparation": "- (Optional) Print copies of the U2L5 Guided Notes (one for each student)\n- Preview the *Creating Scanner Objects* and *Scanner Class Methods* videos\n- Print copies of The Painter handout (one for each student)",
-        "student_overview": "**How do I get input from the user?**\n\nIn this lesson, you learn how to use the `Scanner` and `File` classes to obtain user input and to read data from a file."
+        "overview": "**How do I get input from the user?**\n\nStudents learn how to obtain user input using the `Scanner` class.",
+        "preparation": "- (Optional) Print copies of the User Input Guided Notes (one for each student)\n- Preview the *Creating Scanner Objects* and *Scanner Class Methods* videos",
+        "student_overview": "**How do I get input from the user?**\n\nIn this lesson, you learn how to use the `Scanner`  class to obtain user input."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -430,7 +430,7 @@
       "key": "10887406-b842-42eb-b483-1697d93b11d9",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -456,7 +456,7 @@
       "key": "5cf2ac33-f1f3-4712-a775-f0db25044bc5",
       "position": 4,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Wrap Up "
       },
       "seeding_key": {
@@ -1137,7 +1137,7 @@
       "key": "c5d8c690-a912-45c9-b783-da1f673d9a43",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Think of a time where you had to prepare to do something, like go on a trip or make a meal.\n- *How can having an effective plan make things easier?*\n\n**Discussion Goal:** Students discuss how having a plan can make tasks easier by reducing stress, saving time, and improving organization. They relate these benefits to their own experiences of preparing for activities or projects.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of a time where you had to prepare to do something, like go on a trip or make a meal. How can having an effective plan make things easier?*\n\n**Discussion Goal:** Students discuss how having a plan can make tasks easier by reducing stress, saving time, and improving organization. They relate these benefits to their own experiences of preparing for activities or projects.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1194,7 +1194,7 @@
       "key": "7591edec-dd28-4ec4-812e-43f1b37bc932",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a class?*\n\n**Discussion Goal:**  Students understand that a class in object-oriented programming serves as a blueprint for creating objects, defining their attributes and behaviors. Students may also relate this concept to real-world examples of templates or schematics used to produce specific instances.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the definition of object and class.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students label the parts of the UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the labels for each part of the UML diagram\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is inheritance? How do you represent inheritance in a UML diagram?*\n\n**Discussion Goal:** Students mention that inheritance is an object-oriented programming concept where a subclass inherits attributes and behaviors from a superclass. Students should recognize how inheritance is represented in UML diagrams, typically using an arrow pointing from the subclass to the superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that inheritance creates an *is-a* relationship. Demonstrate that arrows are drawn from the subclass to the superclass to represent this relationship."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a class?*\n\n**Discussion Goal:**  Students understand that a class in object-oriented programming serves as a blueprint for creating objects, defining their attributes and behaviors. Students may also relate this concept to real-world examples of templates or schematics used to produce specific instances.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the definition of object and class.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students label the parts of the UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the labels for each part of the UML diagram\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is inheritance?*\n\n**Discussion Goal:** Students mention that inheritance is an object-oriented programming concept where a subclass inherits attributes and behaviors from a superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that inheritance creates an *is-a* relationship. Demonstrate that arrows are drawn from the subclass to the superclass to represent this relationship."
       },
       "seeding_key": {
         "activity_section.key": "7591edec-dd28-4ec4-812e-43f1b37bc932",
@@ -1206,6 +1206,7 @@
       "position": 3,
       "properties": {
         "description": "In this lesson, you’ll create a UML diagram for an app of your choice. This will help you translate your ideas into a clear, actionable plan for programming. Let's explore how to do this together.",
+        "duration": "10",
         "name": "Introduction to UML Diagrams",
         "remarks": true
       },
@@ -1226,20 +1227,8 @@
       }
     },
     {
-      "key": "1cd3321f-7225-4bf6-9edd-f46c8e495ec1",
-      "position": 5,
-      "properties": {
-        "description": "Putting both of the descriptions together as text, we’d get something that looks like this:",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "1cd3321f-7225-4bf6-9edd-f46c8e495ec1",
-        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
-      }
-    },
-    {
       "key": "34c2367c-ab19-498c-8337-098749b3c1f6",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a text-description of the Pet-Dog-Cat relationship would look like."
       },
@@ -1249,22 +1238,10 @@
       }
     },
     {
-      "key": "810f3a05-e404-4591-a26a-a6377893507a",
-      "position": 7,
-      "properties": {
-        "description": "Or as a UML diagram, it would look more like this:",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "810f3a05-e404-4591-a26a-a6377893507a",
-        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
-      }
-    },
-    {
       "key": "0ea16758-b85e-4ff0-b5ed-9a04581f003a",
-      "position": 8,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a UML Diagram for the Pet-Dog-Cat relationship would look like.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Why might it be helpful to have these representations before you write a program?\n\n**Discussion Goal:** Students understand that having UML diagrams and text descriptions helps in planning and organizing the structure of a program, making it easier to write code by providing a clear visual and descriptive reference of the classes and their relationships.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What words in a program description make sense to turn into a class?\n\n**Discussion Goal:** Students identify the nouns in a program description as classes and the verbs as behaviors. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a UML Diagram for the Pet-Dog-Cat relationship would look like.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why might it be helpful to have these representations before you write a program?*\n\n**Discussion Goal:** Students understand that having UML diagrams and text descriptions helps in planning and organizing the structure of a program, making it easier to write code by providing a clear visual and descriptive reference of the classes and their relationships.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What words in a program description make sense to turn into a class?*\n\n**Discussion Goal:** Students identify the nouns in a program description as classes and the verbs as behaviors. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1279,9 +1256,9 @@
     },
     {
       "key": "0f74d300-ffef-4ace-9eb8-383af4b375d6",
-      "position": 9,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Not all nouns should be classes. Which of these is not a class?\n\n**Discussion Goal:** Students identify that nouns that do not actively hold or do something do not need to be classes. Students might suggest that these nouns can be attributes of classes. For example, the “length” of the run does not need to hold or do anything and can be an attribute of the run. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Not all nouns should be classes. Which of these is not a class?*\n\n**Discussion Goal:** Students identify that nouns that do not actively hold or do something do not need to be classes. Students might suggest that these nouns can be attributes of classes. For example, the “length” of the run does not need to hold or do anything and can be an attribute of the run. "
       },
       "seeding_key": {
         "activity_section.key": "0f74d300-ffef-4ace-9eb8-383af4b375d6",
@@ -1290,7 +1267,7 @@
     },
     {
       "key": "ecfcee98-c91e-4941-9e78-686317b98192",
-      "position": 10,
+      "position": 8,
       "properties": {
         "description": "Now it’s time to practice being a software engineer! You'll now have an opportunity to think critically about how you would design a program and communicate that design to others using a UML diagram. ",
         "duration": "20",
@@ -1309,32 +1286,10 @@
       }
     },
     {
-      "key": "73ac06c8-0b2c-488b-b6f1-b26d556f246c",
-      "position": 11,
-      "properties": {
-        "description": "**Group:** Place students in pairs for this project."
-      },
-      "seeding_key": {
-        "activity_section.key": "73ac06c8-0b2c-488b-b6f1-b26d556f246c",
-        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
-      }
-    },
-    {
-      "key": "d8a99239-9724-4946-b178-1b332f42d4f7",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a poster paper and marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review each project description and select one.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their activity guides to plan their UML diagram. Students will circle the nouns in the requirements, underline the verbs, and double the circle around nouns representing classes that should be created."
-      },
-      "seeding_key": {
-        "activity_section.key": "d8a99239-9724-4946-b178-1b332f42d4f7",
-        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
-      }
-    },
-    {
       "key": "5e085e82-e172-4f84-993f-eb488656f069",
-      "position": 13,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their poster paper to turn their plans into UML diagrams and a program description.\n\n \n\n",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a poster paper and marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review each project description and select one.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their activity guides to plan their UML diagram. Students will circle the nouns in the requirements, underline the verbs, and double the circle around nouns representing classes that should be created.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their poster paper to turn their plans into UML diagrams and a program description.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1352,7 +1307,6 @@
       "position": 1,
       "properties": {
         "description": "It’s exciting to see these ideas coming together! Now that we have a plan, we’ll run it by other people. Since a class diagram is essentially a plan for code, we'll use the same TAG feedback process we apply during code reviews, but with sticky notes. Tell your classmates what in your work you like, ask them questions about why they chose particular classes and offer suggestions.\n",
-        "duration": "5",
         "name": "Gallery Walk",
         "remarks": true
       },
@@ -2311,11 +2265,11 @@
       "key": "3a4d760e-8d28-4379-b80d-faf02b5f0730",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define **application program interface (API)** and **library**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `java.util` package and the `Scanner` class.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***application program interface (API)*** and ***library***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `java.util` package and the `Scanner` class.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The term package was introduced in Unit 1 Lesson 3 when The Neighborhood was introduced. Ask students to recall the meaning of package and how The Neighborhood consists of classes that can be imported and used."
+            "markdown": "The term package was introduced in Unit 1 when The Neighborhood was introduced. Ask students to recall the meaning of package and how The Neighborhood consists of classes that can be imported and used."
           }
         ]
       },
@@ -2409,65 +2363,6 @@
       },
       "seeding_key": {
         "activity_section.key": "85f9fcb9-8040-499b-b6cd-4cb73937593e",
-        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
-      }
-    },
-    {
-      "key": "bf357440-9ba0-4c6a-a852-e5429874b134",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.\n\n",
-        "name": "Working with Files",
-        "progression_name": "Predict: Reading a File "
-      },
-      "seeding_key": {
-        "activity_section.key": "bf357440-9ba0-4c6a-a852-e5429874b134",
-        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
-      }
-    },
-    {
-      "key": "0b9347c5-c671-4315-872a-b95379bea819",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the code in this program?*\n- *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that values are stored in a text file and read into the program. Students also notice that the values are printed to the console. Students may wonder how they might work with larger files or with multiple types of values, how they might save this information, or how they could write data to a file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `File` class.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "When introducing the `File` class, focus on the `File(String pathname)` constructor. In Java Lab, students can create a `File` object by specifying the name of the text file as a `String`.\n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0b9347c5-c671-4315-872a-b95379bea819",
-        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
-      }
-    },
-    {
-      "key": "ad8d9758-e9d9-45a1-84b0-13ad55cddbd4",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define **text file**.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Ask students if they have used a text editor such as Notepad. Have students identify the similarities and differences between the files created in these text editors and programs like Microsoft Word or Google Docs."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "ad8d9758-e9d9-45a1-84b0-13ad55cddbd4",
-        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
-      }
-    },
-    {
-      "key": "855cb00b-432f-4a7a-bbf5-731e2e1c79f7",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can reading a file be useful in a program?*\n\n**Discussion Goal:** Students note that a program can read data in a file. Students may also suggest that it makes the program more user-friendly and adaptable. The user does not need to enter the files directly into the array, and one program can process multiple data sets.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. \n- *What do you notice about the packages that are imported? Why do you think we need these?*\n- *What do you think the instance variables represent?*\n\n**Discussion Goal:** Students identify the packages that are imported and predict that these are needed to provide access to the `Scanner`, `File`, and `FileNotFoundException` classes. Students note that the instance variables represent a `Scanner` object to read the file and a `File` object for the file itself.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. \n- *What do you notice about the constructor?*\n- *What do you think is the purpose of the `setFile()` method?*\n\n**Discussion Goal:** Students notice that the constructor calls the `setFile()` method. Students realize that the `setFile()` method instantiates the `File` and `Scanner` object. Students note that this method is a mutator method so it can be used to change the file and update the `Scanner` object to read a different file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. \n- *What do you think is the purpose of the createScanner() method?*\n- *What do you notice about the code in this method?*\n\n**Discussion Goal:** Students note that the method returns a `Scanner` object to read the file. Students notice that the code uses a `try/catch` block that instantiates the `Scanner` object or notifies the user that the file cannot be found if a `FileNotFoundException` occurs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `Scanner` class methods for checking if there is input.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete a choice level to create and use a `Scanner` object in order to read and print data from a file\n\n",
-        "progression_name": "Practice: Working with Text Files"
-      },
-      "seeding_key": {
-        "activity_section.key": "855cb00b-432f-4a7a-bbf5-731e2e1c79f7",
         "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
       }
     },
@@ -5324,8 +5219,11 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-ProgramDesign-L1_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6023,6 +5921,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-UserInput-L1_pilot-2025"
+        ],
         "progression": "Predict: Getting User Input"
       },
       "bonus": false,
@@ -6045,6 +5946,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-UserInput-L2_pilot-2025"
+        ],
         "progression": "Practice: Getting User Input"
       },
       "bonus": false,
@@ -6065,52 +5969,11 @@
       "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Predict: Reading a File "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA-UserInput-L3_pilot-2025"
+        "level_keys": [
+          "CSA-UserInput-L5_pilot-2025"
         ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-pilot-2025",
-        "activity_section.key": "bf357440-9ba0-4c6a-a852-e5429874b134"
-      },
-      "level_keys": [
-        "CSA-UserInput-L3_pilot-2025"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice: Working with Text Files"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA-UserInput-L4_pilot-2025"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-pilot-2025",
-        "activity_section.key": "855cb00b-432f-4a7a-bbf5-731e2e1c79f7"
-      },
-      "level_keys": [
-        "CSA-UserInput-L4_pilot-2025"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6128,7 +5991,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6153,7 +6016,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6178,7 +6041,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6203,7 +6066,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6228,7 +6091,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6253,7 +6116,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6278,7 +6141,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6303,7 +6166,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6328,7 +6191,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6353,7 +6216,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6378,7 +6241,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6403,7 +6266,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6428,7 +6291,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6453,7 +6316,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6478,7 +6341,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6503,7 +6366,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6528,7 +6391,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6553,7 +6416,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6578,7 +6441,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6603,7 +6466,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6628,7 +6491,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6653,7 +6516,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6678,7 +6541,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6703,7 +6566,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6728,7 +6591,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6753,7 +6616,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 57,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6778,7 +6641,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 58,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6803,7 +6666,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6828,7 +6691,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6853,7 +6716,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6878,7 +6741,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6903,7 +6766,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6928,7 +6791,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6953,7 +6816,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6978,7 +6841,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7003,7 +6866,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7028,7 +6891,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7053,7 +6916,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7078,7 +6941,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7103,7 +6966,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7128,7 +6991,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 72,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7153,7 +7016,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 73,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7178,7 +7041,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7203,7 +7066,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7228,7 +7091,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7253,7 +7116,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -7278,7 +7141,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7303,7 +7166,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 79,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7328,7 +7191,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 80,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -7353,7 +7216,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 81,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7378,7 +7241,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7403,7 +7266,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7428,7 +7291,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7453,7 +7316,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7477,7 +7340,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7502,7 +7365,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7886,30 +7749,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-pilot-2025",
         "activity_section.key": "85f9fcb9-8040-499b-b6cd-4cb73937593e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA-UserInput-L3_pilot-2025",
-        "script_level.level_keys": [
-          "CSA-UserInput-L3_pilot-2025"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-pilot-2025",
-        "activity_section.key": "bf357440-9ba0-4c6a-a852-e5429874b134"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA-UserInput-L4_pilot-2025",
-        "script_level.level_keys": [
-          "CSA-UserInput-L4_pilot-2025"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-pilot-2025",
-        "activity_section.key": "855cb00b-432f-4a7a-bbf5-731e2e1c79f7"
       }
     },
     {
@@ -10831,16 +10670,6 @@
       }
     },
     {
-      "key": "text_file",
-      "word": "text file",
-      "definition": "a file that contains letters, numbers, and/or symbols but has no special formatting",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "text_file"
-      }
-    },
-    {
       "key": "truncate",
       "word": "truncate",
       "definition": "to cut off data from the end",
@@ -11082,12 +10911,6 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "library"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "vocabulary.key": "text_file"
       }
     }
   ],
@@ -11393,16 +11216,6 @@
       "seeding_key": {
         "lesson.key": "The this Keyword",
         "objective.key": "ead9fd26-30e1-4174-ac1d-8d15dfe8a7b2"
-      }
-    },
-    {
-      "key": "f458a0cf-0c94-405b-9cdb-ab5662156652",
-      "properties": {
-        "description": "Create and use a `Scanner` object for reading from a file"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "objective.key": "f458a0cf-0c94-405b-9cdb-ab5662156652"
       }
     },
     {

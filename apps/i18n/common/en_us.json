@@ -269,6 +269,8 @@
   "artificialIntelligenceFeatures": "Artificial Intelligence (AI) features",
   "assessment": "Assessment",
   "assessments": "Assessments",
+  "aiAssessmentsAnnouncementHeading": "AI supported assessments are available!",
+  "aiAssessmentsAnnouncementBody": "AI Teaching Assistant will evaluate student projects, suggest rubric scores, and highlight the code where each requirement is met, helping you save time when assessing student work. These features are available for projects and mini-projects in this unit.",
   "assessmentAndSurvey": "Assessments / Surveys",
   "assessmentLevel": "Assessment level",
   "assessmentOpportunity": "Assessment Opportunity",

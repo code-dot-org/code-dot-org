@@ -22,7 +22,7 @@
   font-size: 14px;
   line-height: 1.5;
   display: flex;
-  overflow: hidden;
+  overflow: scroll;
 
   &.vertical {
     flex-direction: column;
@@ -47,7 +47,6 @@
 
   &.itemVertical {
     flex-direction: column;
-    overflow: auto;
   }
 }
 
@@ -63,16 +62,15 @@
 }
 
 .mainInstructions {
-  overflow-y: auto;
   white-space: pre-wrap;
 
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 4px;
 }
 
 %bubble {
-  padding: 16px;
+  padding: 8px;
   border-radius: 4px;
   margin-bottom: 10px;
   animation: slidein 0.5s;
@@ -112,12 +110,12 @@
     line-height: 1.2em;
   }
 
-  ol {
+  ol, ul {
     line-height: 0;
   }
 
   li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   code {
@@ -134,4 +132,9 @@
   width: 20px;
   height: 20px;
   margin-top: 6px;
+}
+
+.predictQuestion {
+  width: auto;
+  margin: 4px;
 }
