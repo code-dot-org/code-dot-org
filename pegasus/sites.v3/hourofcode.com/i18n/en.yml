@@ -10943,12 +10943,12 @@
       print_certificates: "Print certificates"
       continue_learning: "Continue learning with Code.org"
     resources:
-      heading: "Additional Resources"
+      heading: "Additional resources"
       hoc:
         title: "Hour of Code Resources"
         desc: "Find all the resources you need—print and digital—to bring attention to your Hour of Code."
         button: "View resources"
-      activites:
+      activities:
         title: "Discover Activities"
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
@@ -11005,7 +11005,7 @@
           list_05: "10:40-11:00am: Students demo an unplugged activity and how computer science can be taught without using computers."
           list_06: "11:00-11:05am: Teacher who helped organize school-wide event gives closing remarks."
         get_coding:
-          body_01: "As students are working on their activity, take pictures to commemorate the event and post on your organization's social media channels (Publicity or privacy policies may apply)."
+          body_01: "As students are working on their activity, take pictures to commemorate the event and post on your organization's social media channels. (Publicity or privacy policies may apply.)"
           body_02: "Make sure the agenda is running smoothly, and that it remains on track to end on time—especially if any special guests have other scheduled commitments to attend."
         after:
           body_01: "After a successful Hour of Code event, make sure to:"
