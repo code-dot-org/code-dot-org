@@ -190,10 +190,10 @@ $default-spacing: 4px;
   border: 1px solid;
   color: $light_gray_500;
   border-color: $neutral_dark20;
-}
 
-.itemContainer span {
-  padding: 6px 12px;
+  span {
+    padding: 6px 12px;
+  }
 }
 
 .removeItemIcon {

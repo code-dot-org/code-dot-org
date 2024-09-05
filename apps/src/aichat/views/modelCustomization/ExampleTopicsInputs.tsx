@@ -53,7 +53,7 @@ const ExampleTopicsInputs: React.FunctionComponent<{
       isReadOnly={readOnly}
       hideInputBoxWhenReadOnly={false}
       onUpdateItems={onUpdateItems}
-      validationAlert={topics?.length <= 0 ? validationAlert : undefined}
+      validationAlert={topics?.length === 0 ? validationAlert : undefined}
     />
   );
 };
