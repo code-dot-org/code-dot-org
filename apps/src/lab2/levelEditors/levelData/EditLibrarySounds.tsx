@@ -2,7 +2,7 @@ import React, {useCallback} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
@@ -12,6 +12,7 @@ interface EditLibrarySoundsProps {
   library: MusicLibrary;
   currentValue?: Sounds;
   onChange: (selectedSounds: Sounds | undefined) => void;
+  selectedPack?: string;
 }
 
 /**
@@ -21,6 +22,7 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
   library,
   currentValue,
   onChange,
+  selectedPack,
 }) => {
   const onSoundChange = useCallback(
     (sound: string, pack: string, checked: boolean) => {
@@ -89,23 +91,29 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
           }}
           size="s"
           disabled={!currentValue}
+          iconLeft={{iconName: 'ban'}}
         />
       </div>
       {library.packs.map(pack => {
+        if (pack.restricted && pack.id !== selectedPack) {
+          return null;
+        }
         const currentlySelected = currentValue && currentValue[pack.id];
         const title =
           pack.name +
           (pack.artist && ` - ${pack.artist}`) +
           ` (${currentlySelected?.length || 0})`;
         return (
-          <div className={moduleStyles.indentedContainer}>
+          <div className={moduleStyles.indentedContainer} key={pack.id}>
             <CollapsibleSection
               headerContent={
-                currentlySelected && currentlySelected.length > 0 ? (
-                  <StrongText>{title}</StrongText>
-                ) : (
-                  title
-                )
+                <BodyTwoText className={moduleStyles.noMargin}>
+                  {currentlySelected && currentlySelected.length > 0 ? (
+                    <StrongText>{title}</StrongText>
+                  ) : (
+                    title
+                  )}
+                </BodyTwoText>
               }
             >
               <div className={moduleStyles.indentedContainer}>
@@ -122,6 +130,7 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
                   }
                   return (
                     <Checkbox
+                      key={sound.src}
                       name={sound.src}
                       label={sound.name}
                       checked={

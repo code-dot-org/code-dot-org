@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
@@ -49,6 +49,22 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
     }
   }, [levelData.library, loadedLibraries]);
 
+  const hasRestrictedSounds = useMemo(
+    () =>
+      levelData.library &&
+      loadedLibraries[levelData.library]?.getHasRestrictedPacks(),
+    [levelData.library, loadedLibraries]
+  );
+
+  const restrictedPacks = useMemo(
+    () =>
+      levelData.library &&
+      loadedLibraries[levelData.library]
+        ?.getRestrictedPacks()
+        ?.map(({name, id}) => ({value: id, text: name})),
+    [levelData.library, loadedLibraries]
+  );
+
   return (
     <div>
       <input
@@ -59,20 +75,45 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       />
       <CollapsibleSection headerContent="Library & Sounds">
         <div className={moduleStyles.section}>
-          <SimpleDropdown
-            labelText="Selected Library"
-            name="library"
-            size="s"
-            items={VALID_LIBRARIES.map(library => ({
-              value: library,
-              text: library,
-            }))}
-            selectedValue={levelData.library}
-            onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
-              setLevelData({...levelData, library: event.target.value});
-            }}
-            className={moduleStyles.dropdown}
-          />
+          <div>
+            <SimpleDropdown
+              labelText="Selected Library"
+              name="library"
+              size="s"
+              items={VALID_LIBRARIES.map(library => ({
+                value: library,
+                text: library,
+              }))}
+              selectedValue={levelData.library}
+              onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                // Reset sounds and packId when changing libraries
+                setLevelData({
+                  ...levelData,
+                  library: event.target.value,
+                  sounds: undefined,
+                  packId: undefined,
+                });
+              }}
+            />
+          </div>
+          {hasRestrictedSounds && restrictedPacks && (
+            <div>
+              <SimpleDropdown
+                labelText="Selected Artist Pack"
+                name="packId"
+                size="s"
+                items={restrictedPacks}
+                selectedValue={levelData.packId}
+                onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                  const packId =
+                    event.target.value === 'none'
+                      ? undefined
+                      : event.target.value;
+                  setLevelData({...levelData, packId});
+                }}
+              />
+            </div>
+          )}
           {levelData.library && loadedLibraries[levelData.library] ? (
             <div
               className={classNames(
@@ -92,6 +133,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                   }
                   setLevelData({...levelData, sounds: selectedSounds});
                 }}
+                selectedPack={levelData.packId}
               />
             </div>
           ) : (
