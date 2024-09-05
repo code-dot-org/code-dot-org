@@ -1,4 +1,7 @@
-- if !!DCDO.get("hoc_mode", "soon-hoc")
+:ruby
+  hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
+
+- if hoc_mode == "soon-hoc"
   %link{href: "/css/generated/hoc-skinny-banner.css", rel: "stylesheet"}
   %aside.hoc-skinny-banner
     .wrapper.flex-container.justify-space-between.align-items-center.wrap

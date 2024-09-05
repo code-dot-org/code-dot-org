@@ -10,8 +10,7 @@ theme: responsive_full_width
   .wrapper
     .text-wrapper.col-50
       %h1=hoc_s(:admins_page_top_heading)
-      %p.heading-xs
-        =hoc_s(:admins_page_top_subhead)
+      %p=hoc_s(:admins_page_top_subhead)
       %p.body-three
         =hoc_s(:admins_page_top_desc)
       %a.link-button{href: "/districts"}
@@ -20,8 +19,15 @@ theme: responsive_full_width
       %img.rounded-corners.box-shadow-primary{src: "/images/admins-page-top.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
+-# Show Curriculum Launch banner if dcdo flag is set to true
 - if !!DCDO.get('curriculum-launch-2024', false)
   = view :curriculum_launch_skinny_banner
+- else
+  = view :section_divider_line
+
+-# Show Hour of Code banner if hoc_mode is set to "soon-hoc"
+- if DCDO.get('hoc_mode', 'soon-hoc')
+  = view :hoc_skinny_banner
 - else
   = view :section_divider_line
 
