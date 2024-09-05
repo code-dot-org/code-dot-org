@@ -10909,7 +10909,7 @@
         body_03: "Include language on your page (or in the footer), including links to the CSEdWeek and Code.org websites, that says the following: _\"The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.\"_"
         body_04: "No use of \"Hour of Code\" or \"Hora del Código\" in app names."
 
-  how_to:
+  hoc_how_to:
     heading: "Your go-to guide starts here!"
     desc: "Choose the right guide for you:"
     label:
