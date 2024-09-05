@@ -12,11 +12,12 @@
         .dim!= piped_spaces
         = link_to t('footer.cookie_notice'), CDO.code_org_url('/cookies')
         .dim!= piped_spaces
-        = link_to t('footer.translate'), CDO.code_org_url('/translate')
-        .dim!= piped_spaces
-        = link_to t('landing.help_support'), 'https://support.code.org', target: '_blank', id: "support"
-        .dim!= piped_spaces
-        = link_to t('footer.store'), 'https://store.code.org'
+        - if current_brand_region == "global"
+          = link_to t('footer.translate'), CDO.code_org_url('/translate')
+          .dim!= piped_spaces
+          = link_to t('landing.help_support'), 'https://support.code.org', target: '_blank', id: "support"
+          .dim!= piped_spaces
+          = link_to t('footer.store'), 'https://store.code.org'
         .dim!= piped_spaces
         = link_to t('footer.tos_short'), CDO.code_org_url('/tos')
         %br/
@@ -34,12 +35,13 @@
           %a{:href=>"https://aws.amazon.com/what-is-cloud-computing"}
             %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}
 
-      .span3{style: 'float: right;' + (full_width ? 'width: 140px; margin-left: 0px' : '')}
+      - if current_brand_region == "global"
+        .span3{style: 'float: right;' + (full_width ? 'width: 140px; margin-left: 0px' : '')}
 
-        -# NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
-        -# user input or to persist data without also updating it to enforce UTF-8
-        = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
-          = hidden_field_tag :user_return_to, request.url
-          = select_tag :locale, options_for_select(options_for_locale_select, locale), { onchange: 'this.form.submit();', 'aria-label':  t('footer.locale_select', default: 'Select language') }
-        %small.dim
-          !="&copy; Code.org, #{Time.now.year}"
+          -# NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
+          -# user input or to persist data without also updating it to enforce UTF-8
+          = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
+            = hidden_field_tag :user_return_to, request.url
+            = select_tag :locale, options_for_select(options_for_locale_select, locale), { onchange: 'this.form.submit();', 'aria-label':  t('footer.locale_select', default: 'Select language') }
+          %small.dim
+            !="&copy; Code.org, #{Time.now.year}"

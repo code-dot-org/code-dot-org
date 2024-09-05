@@ -66,12 +66,14 @@ class HelpHeader
       }
     end
 
-    entries << {
-      title: I18n.t("#{loc_prefix}help_support"),
-      url: "https://support.code.org",
-      id: "support",
-      target: "_blank"
-    }
+    if options[:brand_region] == "global"
+      entries << {
+        title: I18n.t("#{loc_prefix}help_support"),
+        url: "https://support.code.org",
+        id: "support",
+        target: "_blank"
+      }
+    end
 
     if options[:level] || options[:script_level]
       report_url = options[:script_level] ?
@@ -102,7 +104,7 @@ class HelpHeader
       }
     end
 
-    if options[:user_type] == "teacher"
+    if options[:user_type] == "teacher" && options[:brand_region] == "global"
       entries << {
         title: I18n.t("#{loc_prefix}teacher_community"),
         url: "http://forum.code.org/",

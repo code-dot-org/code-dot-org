@@ -108,7 +108,7 @@ def main
       FEATURED_PROJECT_CONSTANTS
       LMS_LINKS
       USER_TYPES
-    ), 
+    ),
     file_type: 'ts'
   )
 
@@ -116,6 +116,7 @@ def main
   # then import with import { needed } from "@cdo/generated-scripts/generatedFile"
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/generated-scripts/sharedConstants.ts")
   generate_shared_js_file(generate_constants('VOICES'), "#{REPO_DIR}/apps/generated-scripts/sharedVoices.js")
+  generate_shared_js_file(generate_constants('BRAND_REGION_FEATURE_EXCLUSION_MAP'), "#{REPO_DIR}/apps/generated-scripts/sharedBrandRegionFeatureExclusionMap.js")
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedApplabBlocks.js")
   generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedApplabGoalBlocks.js")
   generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedGamelabBlocks.js")

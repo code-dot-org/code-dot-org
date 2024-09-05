@@ -764,4 +764,24 @@ module SharedConstants
     # PII detected in the model's output.
     MODEL_PII: 1004
   }
+
+  BRAND_REGION_FEATURE_EXCLUSION_MAP = {
+    "farsi": {
+      "header": {
+        "course-catalog-link": false,
+        "project-gallery-link": false,
+        "professional-learning-link": false,
+        "incubator-link": false,
+      },
+      "footer": {
+        "translate-link": false,
+        "help-support-link": false,
+        "locale-dropdown": false,
+      },
+      "homepage": {
+        "teacher-resources": false,
+        "incubator-banner": false,
+      },
+    },
+  }.freeze
 end

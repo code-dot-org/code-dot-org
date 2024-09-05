@@ -36,10 +36,12 @@
   hamburger_options[:loc_prefix] = "nav.header."
   hamburger_options[:page_mode] = request.cookies['pm']
   hamburger_options[:dashboard] = true
+  hamburger_options[:brand_region] = current_brand_region
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
   header_contents_options[:language] = request.language
+  header_contents_options[:brand_region] = current_brand_region
   header_contents_options[:loc_prefix] = "nav.header."
   header_contents_options[:page_mode] = request.cookies['pm']
 
@@ -57,6 +59,7 @@
   user_header_options[:show_pairing_dialog] = show_pairing_dialog
   user_header_options[:session_pairings] = session[:pairings]
   user_header_options[:loc_prefix] = 'nav.user.'
+  user_header_options[:brand_region] = current_brand_region
   user_header_options[:level] = level
 
   require 'cdo/hamburger'

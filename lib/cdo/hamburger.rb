@@ -87,6 +87,7 @@ class Hamburger
   end
 
   def self.get_hamburger_contents(options)
+    brand_region = options[:brand_region] || "global"
     loc_prefix = options[:loc_prefix]
     is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
     is_level = options[:level]
@@ -262,15 +263,30 @@ class Hamburger
 
   # Main header navigation links next to the Code.org logo.
   def self.get_header_contents(options)
+    brand_region = options[:brand_region] || "global"
     loc_prefix = options[:loc_prefix]
 
     any_teacher_links = [
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
-      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/catalog"), id: "header-teacher-courses"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
-      {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"},
-      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-teacher-incubator"},
     ]
+
+    if brand_region == "global"
+      any_teacher_links <<
+        {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/catalog"), id: "header-teacher-courses"}
+    end
+
+    if brand_region == "global"
+      any_teacher_links <<
+        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"}
+    end
+
+    any_teacher_links <<
+      {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"}
+
+    if brand_region == "global"
+      any_teacher_links <<
+        {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-teacher-incubator"}
+    end
 
     any_student_links = [
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},

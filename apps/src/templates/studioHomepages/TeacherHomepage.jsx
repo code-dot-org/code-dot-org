@@ -12,6 +12,7 @@ import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWit
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import currentBrandRegionHasFeature from '@cdo/apps/util/currentBrandRegionHasFeature';
 import i18n from '@cdo/locale';
 
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
@@ -286,8 +287,8 @@ export const UnconnectedTeacherHomepage = ({
             isProfessionalLearningCourse={true}
           />
         )}
-        <TeacherResources />
-        {showIncubatorBanner && <IncubatorBanner />}
+        {currentBrandRegionHasFeature('homepage.teacher-resources') && <TeacherResources />}
+        {currentBrandRegionHasFeature('homepage.incubator-banner') && showIncubatorBanner && <IncubatorBanner />}
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}

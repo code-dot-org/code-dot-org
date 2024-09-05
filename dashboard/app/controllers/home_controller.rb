@@ -3,6 +3,7 @@ require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 
 class HomeController < ApplicationController
+  include BrandRegionHelper
   include UsersHelper
   include SurveyResultsHelper
   include TeacherApplicationHelper
@@ -110,6 +111,7 @@ class HomeController < ApplicationController
     @homepage_data[:providers] = current_user.providers
     @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
     @homepage_data[:currentUserId] = current_user.id
+    @homepage_data[:currentSku] = current_brand_region
 
     current_user_permissions = UserPermission.where(user_id: current_user.id).pluck(:permission)
     @homepage_data[:showStudentAsVerifiedTeacherWarning] = current_user.student? && current_user_permissions.include?(UserPermission::AUTHORIZED_TEACHER)
@@ -192,7 +194,7 @@ class HomeController < ApplicationController
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_open_application?
       @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:afeEligible] = afe_eligible
-      @homepage_data[:specialAnnouncement] = Announcements.get_localized_announcement_for_page("/home")
+      @homepage_data[:specialAnnouncement] = Announcements.get_localized_announcement_for_page("/home") if current_brand_region == "global"
       @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
       if show_census_banner

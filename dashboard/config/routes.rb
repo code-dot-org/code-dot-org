@@ -15,6 +15,11 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
+  # SKUs
+  scope ':brand_region', contraints: { pattern: /farsi|india/ } do
+    get "home", to: "home#home"
+  end
+
   # This matches any host that is not the codeprojects hostname
   constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
