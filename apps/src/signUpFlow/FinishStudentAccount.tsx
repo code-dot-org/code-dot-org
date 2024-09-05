@@ -9,6 +9,7 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 
 import locale from './locale';
 import {
@@ -58,7 +59,7 @@ const FinishStudentAccount: React.FunctionComponent<{
     setParentEmail(newParentEmail);
     sessionStorage.setItem(PARENT_EMAIL_SESSION_KEY, newParentEmail);
 
-    if (newParentEmail === '') {
+    if (!isEmail(newParentEmail)) {
       setShowParentEmailError(true);
     } else {
       setShowParentEmailError(false);
