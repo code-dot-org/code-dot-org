@@ -343,7 +343,8 @@ class OwnedSectionsTable extends Component {
       <Table.Provider
         className="uitest-owned-sections"
         columns={columns}
-        style={tableLayoutStyles.table}>
+        style={tableLayoutStyles.table}
+      >
         <Table.Header />
         <Table.Body
           className="uitest-sorted-rows"
