@@ -120,14 +120,17 @@ const VersionHistoryDropdown: React.FunctionComponent<
     return dateFormatter.format(dateObject);
   };
 
-  const onVersionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedVersion(e.target.value);
-    dispatch(loadVersion({versionId: e.target.value}));
-  };
+  const onVersionChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setSelectedVersion(e.target.value);
+      dispatch(loadVersion({versionId: e.target.value}));
+    },
+    [dispatch]
+  );
 
   // Function called when clicking 'x' or 'cancel'. This will reset the project to the current version
   // if the user is viewing an old version, then close the dropdown.
-  const handleCancel = () => {
+  const handleCancel = useCallback(() => {
     // Go back to current version if we are viewing an old version
     const versionBeingViewed = versionList.find(
       version => version.versionId === selectedVersion
@@ -136,7 +139,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
       dispatch(resetToCurrentVersion());
     }
     closeDropdown();
-  };
+  }, [closeDropdown, dispatch, selectedVersion, versionList]);
 
   return (
     <div>
@@ -203,4 +206,4 @@ const VersionHistoryDropdown: React.FunctionComponent<
   );
 };
 
-export default VersionHistoryDropdown;
+export default React.memo(VersionHistoryDropdown);

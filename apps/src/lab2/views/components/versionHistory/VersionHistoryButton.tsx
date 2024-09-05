@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -41,39 +41,44 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   const isViewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
-  const toggleVersionHistory = (
-    e: React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLAnchorElement>
-  ) => {
-    setVersionList([]);
-    if (loading) {
-      return;
-    }
-    if (loadError) {
-      setLoadError(false);
-      return;
-    }
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (!projectManager) {
-      setLoadError(true);
-      return;
-    }
-    if (!isVersionHistoryOpen) {
-      setLoading(true);
-      projectManager
-        .getVersionList()
-        .then(versionList => {
-          setIsVersionHistoryOpen(true);
-          setVersionList(versionList);
-          setLoading(false);
-        })
-        .catch(() => {
-          setLoadError(true);
-          setLoading(false);
-        });
-    } else {
-      setIsVersionHistoryOpen(false);
-    }
-  };
+  const toggleVersionHistory = useCallback(
+    (
+      e:
+        | React.MouseEvent<HTMLButtonElement>
+        | React.MouseEvent<HTMLAnchorElement>
+    ) => {
+      setVersionList([]);
+      if (loading) {
+        return;
+      }
+      if (loadError) {
+        setLoadError(false);
+        return;
+      }
+      const projectManager = Lab2Registry.getInstance().getProjectManager();
+      if (!projectManager) {
+        setLoadError(true);
+        return;
+      }
+      if (!isVersionHistoryOpen) {
+        setLoading(true);
+        projectManager
+          .getVersionList()
+          .then(versionList => {
+            setIsVersionHistoryOpen(true);
+            setVersionList(versionList);
+            setLoading(false);
+          })
+          .catch(() => {
+            setLoadError(true);
+            setLoading(false);
+          });
+      } else {
+        setIsVersionHistoryOpen(false);
+      }
+    },
+    [isVersionHistoryOpen, loadError, loading]
+  );
 
   return (
     <>
@@ -121,4 +126,4 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   );
 };
 
-export default VersionHistoryButton;
+export default React.memo(VersionHistoryButton);
