@@ -727,6 +727,7 @@ module SharedConstants
     ERROR: 'error',
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
+    USER_INPUT_TOO_LARGE: 'user_input_too_large',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
