@@ -161,7 +161,7 @@ html {
 
 @mixin body-four {
   @include paragraph-common;
-  font-size: 0.75rem;
+  font-size: 0.813rem;
   line-height: 1.64;
 }
 
@@ -175,7 +175,7 @@ html {
 
 @mixin overline-one {
   @include overline-common;
-  font-size: 0.938rem;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 
@@ -215,7 +215,7 @@ html {
 // Caption styles
 @mixin figcaption {
   @include main-font-regular;
-  font-size: 0.75rem;
+  font-size: 0.813rem;
   margin: 0.5em 0 1em;
   line-height: 1.64;
 }
