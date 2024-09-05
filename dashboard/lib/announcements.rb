@@ -22,7 +22,7 @@ class Announcements
 
     banner = banners[banner_id_for_page]
 
-    #Returns banner if no DCDO property or if DCDO property is present and set to true
+    # Returns banner if no DCDO property, if DCDO property is present and set to true, or if a hoc_mode is set
     unless (banner && banner["dcdo"] && !DCDO.get(banner["dcdo"], false)) || (banner["hocModes"]&.exclude?(DCDO.get("hoc_mode", CDO.default_hoc_mode)))
       banner&.merge({id: banner_id_for_page})
     end
