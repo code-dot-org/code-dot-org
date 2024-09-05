@@ -10924,6 +10924,8 @@
       step_06: "Step 6"
       step_07: "Step 7"
       step_08: "Step 8"
+      step_09: "Step 9"
+      step_10: "Step 10"
       register: "Register your event"
       choose: "Choose your activities"
       plan_event: "Plan your event"
@@ -10940,12 +10942,81 @@
       get_resources: "Get resources to run an Hour of code"
       print_certificates: "Print certificates"
       continue_learning: "Continue learning with Code.org"
+    resources:
+      heading: "Additional Resources"
+      hoc:
+        title: "Hour of Code Resources"
+        desc: "Find all the resources you need—print and digital—to bring attention to your Hour of Code."
+        button: "View resources"
+      activites:
+        title: "Discover Activities"
+        desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
+        button: "Explore activities"
+      register:
+        title: "Register Your Event"
+        desc: "Register your Hour of Code event today and join a global movement. Prizes available for eligible events!"
+        button: "Register your event"
     teachers:
       heading: "Teachers"
       top:
         heading: "How to plan your Hour of Code"
         desc: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show how anyone can learn the basics. This year, our campaign aims to showcase how computer science drives innovation across various fields, making it relatable and exciting for students. Whether you or your students are experienced coders or you all are setting out on your very first computer science expedition, this Hour of Code shows you how we're making the invisible, visible with Computer Science."
-
+      steps:
+        register: "Start with a commitment to doing an Hour of Code with your students by registering your event. When you register, you'll receive emails with news and tips for hosting a successful Hour of Code."
+        choose_activity: "Explore the coding activity library and choose one based on your group's age, experience, interests and more."
+        plan_event:
+          body_01: "**What:** Before your event, try out the activities yourself so you can ensure they work on student devices and you're prepared to answer questions! Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos."
+          body_02: "**When:** People around the world often join the Hour of Code celebration during Computer Science Education Week (%{campaign_date_full}), but you can do an Hour of Code any day of the year!"
+          body_03: "Where: Choose a space that works for the number of students and devices you have available. Students can try activities on individual devices, take turns sharing a device, or as a class on a whiteboard. There are even unplugged activities that can be completed with no devices at all, so they can even be done outside!"
+        plan_hour:
+          body_01: "Here's a sample agenda to get you started:"
+          list_01: "10:00-10:05am: Begin with an [inspirational video](%{video_url})"
+          list_02: "10:05-10:50am: Students do their coding activity"
+          list_03: "10:50-11:00am: Teacher gives closing remarks"
+        spread_word:
+          body_01: "Help us spread the word in your community with [these email templates](%{emails_url})."
+          list_01: "Ask three colleagues to [register](%{register_url}) and host an Hour of Code activity. They, in turn, can secure three colleagues, who can secure three colleagues, etc."
+          list_02: "Ask your principal to host a school-wide event."
+          list_03: "Reach out to your school's Parent Teacher Student Association or share in parent newsletters, letting them know what their children are learning."
+        get_coding: "Direct your students to the activity by sharing the link on the board or through your classroom's learning management system. Your students may encounter challenges—that's okay! Learning to program is like learning a new language; you won't be fluent right away. If you don't know the answer, you can figure it out together."
+        celebrate: "After your event, print certificates of completion and congratulate your students. Share photos and videos of your Hour of Code event and show off your students' achievements using #HourOfCode and @codeorg."
+        beyond:
+          body_01: "It doesn't end here!"
+          body_02: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. Check out the diverse curriculum offerings from Hour of Code partners, and learn how to bring CS to your school today!"
+    events:
+      heading: "Events"
+      top:
+        heading: "How to organize an Hour of Code event"
+        desc_01: "Hour of Code is a one-hour introduction to computer science, using fun and interactive tutorials to show that anyone can learn the basics. Your efforts can make a huge impact on the way students view computer science and their own potential."
+        desc_02: "Schools and organizations who fully engage with Hour of Code can help raise awareness of the computer science movement and inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups."
+      steps:
+        register: "Register your Hour of Code event to receive information about new activities and special promotions!"
+        choose_activity: "Explore the coding activity library and choose one based on your group's age, experience, interests and more."
+        prepare:
+          list_01: "Consider where and when you want to hold your event, as well as the tech capabilities of your space. Students can work on their own devices, in pairs on one device, or together as a classroom on a projector, and there are even unplugged tutorials that can be completed with no devices at all!"
+          list_02: "Send an email to an elected official or influential business person and invite them to speak."
+          list_03: "You may also invite a local politician or local media, such as a local news station, newspaper, or education/tech bloggers."
+        plan:
+          body_01: "Here's a sample agenda to get you started:"
+          list_01: "10:00-10:05am: Open with one of our [inspirational video](%{video_url})."
+          list_02: "10:05-10:15am: Principal gives an intro overviewing the importance of computer science."
+          list_03: "10:15-10:30am: Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives"
+          list_04: "10:30-10:40am: Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!"
+          list_05: "10:40-11:00am: Students demo an unplugged activity and how computer science can be taught without using computers."
+          list_06: "11:00-11:05am: Teacher who helped organize school-wide event gives closing remarks."
+        get_coding:
+          body_01: "As students are working on their activity, take pictures to commemorate the event and post on your organization's social media channels (Publicity or privacy policies may apply)."
+          body_02: "Make sure the agenda is running smoothly, and that it remains on track to end on time—especially if any special guests have other scheduled commitments to attend."
+        after:
+          body_01: "After a successful Hour of Code event, make sure to:"
+          list_01: "Celebrate! Print certificates of completion and congratulate your students."
+          list_02: "Thank any special guests for their time (especially great for students to do) and offer to answer any follow-up questions they may have."
+          list_03: "Post pictures, videos, or notable quotes from the day on social media. (Publicity or privacy policies may apply.)"
+          list_04: "Follow up with volunteers or guests for feedback on how to make next year's event even better."
+          list_05: "Reach out to your school's Parent Teacher Student Association or share in parent newsletters, letting them know what their children are learning."
+        beyond:
+          body_01: "It doesn't end here!"
+          body_02: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. Check out the diverse curriculum offerings from Hour of Code partners, and learn how to bring CS to your school today!"
 
   hoc_faq:
     heading: "Frequently asked questions"
