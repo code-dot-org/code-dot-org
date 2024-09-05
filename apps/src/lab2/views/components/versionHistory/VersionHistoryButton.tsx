@@ -86,7 +86,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         size={'xs'}
         disabled={isReadOnly && !isViewingOldVersion}
       />
-      {(isVersionHistoryOpen || loading || loadError) && (
+      {(loading || loadError) && (
         <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
           {loading && (
             <div
@@ -107,16 +107,15 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
               />
             </div>
           )}
-          {isVersionHistoryOpen && (
-            <VersionHistoryDropdown
-              versionList={versionList}
-              updatedSourceCallback={updatedSourceCallback}
-              startSource={startSource}
-              closeDropdown={() => setIsVersionHistoryOpen(false)}
-            />
-          )}
         </div>
       )}
+      <VersionHistoryDropdown
+        versionList={versionList}
+        updatedSourceCallback={updatedSourceCallback}
+        startSource={startSource}
+        closeDropdown={() => setIsVersionHistoryOpen(false)}
+        isOpen={isVersionHistoryOpen}
+      />
     </>
   );
 };

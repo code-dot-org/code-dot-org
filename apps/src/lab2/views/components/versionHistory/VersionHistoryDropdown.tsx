@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -18,6 +18,7 @@ import {
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
+import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import VersionHistoryRow from './VersionHistoryRow';
@@ -29,6 +30,7 @@ interface VersionHistoryDropdownProps {
   updatedSourceCallback?: (source: ProjectSources) => void;
   startSource: ProjectSources;
   closeDropdown: () => void;
+  isOpen: boolean;
 }
 
 const INITIAL_VERSION_ID = 'initial-version';
@@ -40,11 +42,21 @@ const INITIAL_VERSION_ID = 'initial-version';
  */
 const VersionHistoryDropdown: React.FunctionComponent<
   VersionHistoryDropdownProps
-> = ({versionList, updatedSourceCallback, startSource, closeDropdown}) => {
+> = ({
+  versionList,
+  updatedSourceCallback,
+  startSource,
+  closeDropdown,
+  isOpen,
+}) => {
   const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [selectedVersion, setSelectedVersion] = useState('');
   const locale = currentLocale();
+  const menuRef = useOutsideClick<HTMLDivElement>(() => {
+    closeDropdown();
+  });
+  const previousIsOpen = useRef<boolean>(isOpen);
 
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
@@ -56,12 +68,26 @@ const VersionHistoryDropdown: React.FunctionComponent<
   }, [locale]);
 
   useEffect(() => {
-    if (selectedVersion === '') {
+    if (selectedVersion === '' && versionList.length > 0) {
       setSelectedVersion(
         versionList.find(version => version.isLatest)?.versionId || ''
       );
     }
   }, [versionList, selectedVersion]);
+
+  useEffect(() => {
+    if (isOpen && !previousIsOpen.current && selectedVersion !== '') {
+      // Wait a tick to ensure the selected version is rendered before scrolling to it.
+      setTimeout(() => {
+        const selectedVersionComponent =
+          document.getElementById(selectedVersion);
+        if (selectedVersionComponent) {
+          selectedVersionComponent.scrollIntoView({behavior: 'instant'});
+        }
+      }, 0);
+    }
+    previousIsOpen.current = isOpen;
+  }, [isOpen, selectedVersion]);
 
   const dispatch = useAppDispatch();
 
@@ -120,14 +146,21 @@ const VersionHistoryDropdown: React.FunctionComponent<
     return dateFormatter.format(dateObject);
   };
 
-  const onVersionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedVersion(e.target.value);
-    dispatch(loadVersion({versionId: e.target.value}));
-  };
+  const onVersionChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>, isLatest: boolean) => {
+      setSelectedVersion(e.target.value);
+      if (isLatest) {
+        dispatch(resetToCurrentVersion());
+      } else {
+        dispatch(loadVersion({versionId: e.target.value}));
+      }
+    },
+    [dispatch]
+  );
 
   // Function called when clicking 'x' or 'cancel'. This will reset the project to the current version
   // if the user is viewing an old version, then close the dropdown.
-  const handleCancel = () => {
+  const handleCancel = useCallback(() => {
     // Go back to current version if we are viewing an old version
     const versionBeingViewed = versionList.find(
       version => version.versionId === selectedVersion
@@ -136,16 +169,16 @@ const VersionHistoryDropdown: React.FunctionComponent<
       dispatch(resetToCurrentVersion());
     }
     closeDropdown();
-  };
+  }, [closeDropdown, dispatch, selectedVersion, versionList]);
 
-  return (
-    <div>
+  return isOpen ? (
+    <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
       <div className={moduleStyles.versionHistoryHeader}>
         <Heading6 className={moduleStyles.versionHistoryTitle}>
           {commonI18n.versionHistory_header()}
         </Heading6>
         <CloseButton
-          onClick={handleCancel}
+          onClick={closeDropdown}
           aria-label={lab2I18n.closeVersionHistory()}
         />
       </div>
@@ -153,21 +186,23 @@ const VersionHistoryDropdown: React.FunctionComponent<
       <div className={moduleStyles.versionHistoryList}>
         {versionList.map(version => (
           <VersionHistoryRow
+            id={version.versionId}
             key={version.versionId}
             versionId={version.versionId}
             versionLabel={parseDate(version.lastModified)}
             isLatest={version.isLatest}
             isSelected={selectedVersion === version.versionId}
-            onChange={onVersionChange}
+            onChange={e => onVersionChange(e, version.isLatest)}
           />
         ))}
         <VersionHistoryRow
+          id={INITIAL_VERSION_ID}
           key={INITIAL_VERSION_ID}
           versionId={INITIAL_VERSION_ID}
           versionLabel={lab2I18n.initialVersion()}
           isLatest={versionList.length === 0}
           isSelected={selectedVersion === INITIAL_VERSION_ID}
-          onChange={onVersionChange}
+          onChange={e => onVersionChange(e, versionList.length === 0)}
         />
       </div>
 
@@ -200,7 +235,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         />
       </div>
     </div>
-  );
+  ) : null;
 };
 
-export default VersionHistoryDropdown;
+export default React.memo(VersionHistoryDropdown);
