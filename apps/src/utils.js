@@ -931,11 +931,7 @@ export function getEnvironment() {
   if (hostname.includes('localhost') || hostname.includes('127.0.0.1')) {
     return Environments.development;
   }
-  if (
-    hostname === 'code.org' ||
-    hostname === 'studio.code.org' ||
-    hostname === 'hourofcode.com'
-  ) {
+  if (hostname === 'code.org' || hostname === 'studio.code.org') {
     return Environments.production;
   }
   return Environments.unknown;

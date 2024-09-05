@@ -44,10 +44,12 @@ $default-spacing: 2px;
   [dir='ltr'] &Right,
   [dir='rtl'] &Left {
     right: 4px;
+    z-index: 1;
   }
 
   [dir='ltr'] &Left,
   [dir='rtl'] &Right {
     left: 4px;
+    z-index: 1;
   }
 }
