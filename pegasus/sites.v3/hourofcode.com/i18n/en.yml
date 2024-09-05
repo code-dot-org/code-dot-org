@@ -10939,7 +10939,7 @@
     button:
       register: "Register your event"
       select_activity: "Select a coding activity"
-      get_resources: "Get resources to run an Hour of code"
+      get_resources: "Get resources to run an Hour of Code"
       print_certificates: "Print certificates"
       continue_learning: "Continue learning with Code.org"
     resources:
@@ -11000,7 +11000,7 @@
           body_01: "Here's a sample agenda to get you started:"
           list_01: "10:00-10:05am: Open with one of our [inspirational video](%{video_url})."
           list_02: "10:05-10:15am: Principal gives an intro overviewing the importance of computer science."
-          list_03: "10:15-10:30am: Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives"
+          list_03: "10:15-10:30am: Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives."
           list_04: "10:30-10:40am: Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!"
           list_05: "10:40-11:00am: Students demo an unplugged activity and how computer science can be taught without using computers."
           list_06: "11:00-11:05am: Teacher who helped organize school-wide event gives closing remarks."
