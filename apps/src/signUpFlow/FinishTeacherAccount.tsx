@@ -4,13 +4,15 @@ import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
-  Heading2,
-  BodyTwoText,
   BodyThreeText,
+  BodyTwoText,
+  Heading2,
 } from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+
+import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
 
 import locale from './locale';
 import {
@@ -23,6 +25,7 @@ import style from './signUpFlowStyles.module.scss';
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
 }> = ({usIp}) => {
+  const schoolInfo = useSchoolInfo({usIp});
   const [name, setName] = useState('');
   const [showNameError, setShowNameError] = useState(false);
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
@@ -89,7 +92,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             </BodyThreeText>
           )}
         </div>
-        <SchoolDataInputs usIp={usIp} includeHeaders={false} />
+        <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
         <div>
           <BodyThreeText className={style.teacherKeepMeUpdated}>
             <strong>{locale.keep_me_updated()}</strong>
