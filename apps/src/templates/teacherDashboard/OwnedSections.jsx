@@ -86,7 +86,7 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const {isPlSections, sectionIds, hiddenSectionIds} = this.props;
+    const {sectionIds, hiddenSectionIds} = this.props;
     const {viewHidden} = this.state;
 
     const hasSections = sectionIds.length > 0;
