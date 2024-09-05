@@ -10,7 +10,7 @@
     "panels": [
       {
         "text": "###Hello, World! \nWelcome to coding with Transformers One.",
-        "imageUrl": "https://images.code.org/62d50009e59c74fb69a79de0587d519d-transformers-firstpanel.png",
+        "imageUrl": "https://images.code.org/8143c84fcd3c8c622b85e274f0f6ff01-Panel1.jpg",
         "key": "transformers intro panel-6331cb20-de1b-4b5f-a56d-8ff3a571ea9c"
       },
       {
@@ -31,6 +31,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-03T17:00:25.058+00:00\",\"changed\":[\"cloned from \\\"transformers intro panel\\\"\"],\"cloned_from\":\"transformers intro panel\"},{\"changed_at\":\"2024-09-03 20:46:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:47:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:48:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:49:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-03T17:00:25.058+00:00\",\"changed\":[\"cloned from \\\"transformers intro panel\\\"\"],\"cloned_from\":\"transformers intro panel\"},{\"changed_at\":\"2024-09-03 20:46:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:47:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:48:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 20:49:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-04 20:03:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-04 20:12:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

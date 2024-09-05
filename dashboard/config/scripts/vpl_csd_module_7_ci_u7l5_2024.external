@@ -6,20 +6,23 @@ title 'Debugging Session'
 markdown <<MARKDOWN
 # AI and Machine Learning - Lesson 5: Patterns in Data
 
-> ##### <a href="https://studio.code.org/s/csd7-2023/lessons/5" target="blank">U7L5 Lesson Plan: Patterns in Data
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px;">
+
+#### <a href="https://studio.code.org/s/csd7-2024/lessons/5" target="blank">U7L5 Lesson Plan: Patterns in Data
 </a>
+</p></div>
 
-## Lesson Overview
-##### In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.
+## 🌎 Lesson Overview
+#### In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.
 
-## Lesson Objectives
-* ##### Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)
-* ##### Look for patterns in data to help make a decision
+## ✅ Lesson Objectives
+* #### Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data).
+* #### Look for patterns in data to help make a decision.
 
 
-## Investigation Tasks
+## 📋 Investigation Task
 
-* ##### Review the lesson plan.
+* #### Review the lesson plan.
 
 
 
