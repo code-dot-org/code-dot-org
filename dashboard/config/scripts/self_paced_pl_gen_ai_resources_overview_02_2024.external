@@ -3,54 +3,30 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching about Bias
+# Teaching Strategies in Computer Vision
 
-#### Lesson 9 addresses biases in datasets and AI. Teaching about biases in technology can be a sensitive subject for your students. These action items will help you feel more comfortable discussion these issues in your class. 
+#### This unit offers many ways to differentiate and customize learning in your class. Take time to look at the resources provided. 
 
-## Bias
-#### Bias occurs when a decision favors some things and de-prioritizes or excludes others. Bias within an AI system is a direct reflection of the data a system was trained on and the way it is trained.
+## Prior knowledge  
+- #### Consider your students' prior knowledge of AI and decide if you want to use  some of Code.org’s <a href="https://studio.code.org/s/how-ai-works-2023?section_id=5174974&viewAs=Instructor" target="blank" rel="noopener noreferrer">How AI Works</a> lessons if you feel your students would benefit from this content first. It might be helpful to provide context about what generative AI is and how it works before diving into this unit.
 
-## Action Items
+- #### You'll also want to determine if you'll be teaching the Foundations of Gen AI portion of the Unit or if you'll be abbreviating this content using the <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/27" target="blank" rel="noopener noreferrer">Foundations in a Day Lesson</a>.
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;"> 🖥️Assume all AI systems have bias</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style = "font-size: 16px;">
-  Even AI systems that seem innocuous are likely to have biases, whether those are deeply harmful or just irritating. <br><br> Before using an AI system to make decisions in your classroom, examine the ways it might be biased. Start by trying to understand the historical biases in the data the AI system uses.
+## Differentiation 
+#### Some of the lessons offer choice activities and extension options to help you customize the lesson to your needs. Carefully read over these options to decide how you want your class to proceed. 
 
-</p></div>
-</details>
+## Teaching tips
+#### Notice the orange boxes in the teaching guides. These teaching tips provide useful suggestions for managing your class during the different activities. 
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🚦Approach discussions of AI bias carefully</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style = "font-size: 16px;">
-   Many students have had personal experiences with bias, but may not have used that specific word to explain it. Approach discussions of AI bias with an understanding that students may need time to process such an emotionally difficult concept.
+<img src="https://images.code.org/6cf83f3a0a7961a2671af46ec2a836b5-image-1715182229076.png" alt="orange teaching tip box from lesson guide" width="850px" style="border-radius:10px;">
 
-</p></div>
-</details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🌍 Emphasize the importance of team diversity</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style = "font-size: 16px;">
-   Talk with students about how team diversity can help in developing widely useful AI systems. Use this fact as a motivator to encourage students to design for their community and advocate for their wants and needs. Avoid positioning students as the ones to fix others’ mistakes, but rather as innovators with a deeply valuable perspective.
- </p></div>
-</details>
+## Materials
+#### Decide how you want to share materials with your students. In some instances, it may benefit to share the handouts digitally, in others,  you may prefer to make copies. 
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">✅ Support companies committed to reducing bias</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p style = "font-size: 16px;">
-   Seek out companies that follow specific, actionable commitments that reduce bias in their AI tools. Read about the company’s background, checking for independent audits and partnerships with reputable community organizations.
+## External Websites 
+#### Check if the lessons involve external websites and verify whether they are blocked by your school in advance. If they are blocked, either find alternative sites or follow your school's procedure to unblock the websites.
 
-</p></div>
-</details>
-
----
-
-## Supportive Scripts 
-#### Addressing concerns about AI bias from administrators, parents, or fellow teachers can be challenging. To facilitate these conversations, utilize the range of **scripts** provided in this link (<a href="https://docs.google.com/document/d/1N2C5ymAYQ2JR0NKoPQ2v5IK9Ig77t-1-juVfnWMpNYw/copy" target="blank" rel="noopener noreferrer">🔗link</a>). These resources are designed to help **clarify issues and foster understanding**. Additionally, there is a specific script available for students to help them express their experiences when affected by AI bias.
 
 
 MARKDOWN

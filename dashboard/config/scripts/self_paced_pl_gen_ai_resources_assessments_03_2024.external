@@ -3,15 +3,10 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Assessment Levels
+# Assessment Opportunities
 
-#### Now that you have learned more about what Generative AI is, let's dive into how to design with the user in mind.
+<img src="https://images.code.org/32f12b55340da9bb65fade11a9fb9234-Screenshot 2024-09-04 at 3.20.27 PM.png" alt="AI bot and a model card" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 150px; clear: both; margin: 0 20px 20px 0;">
+#### Assessment opportunities, like the one above, are flagged in lesson plans through out this unit. These allow teachers to gauge students' understanding at critical points. For example, a specific level might be used to assess students' grasp of system prompting, providing insights into how well they comprehend the material so far. Additionally, formative assessments are embedded where students are encouraged to suggest more precise prompting ideas, helping teachers identify areas where further clarification or direct instruction may be needed. These assessment checkpoints are designed to inform instruction and ensure that students are progressing as expected.
 
-## **In this lesson, you will:** 
-- #### Explore best practices for teaching Generative AI
-- #### Identify next steps to learn more about AI in the classroom
-
-### **Suggested time:** 20 minutes
 MARKDOWN
