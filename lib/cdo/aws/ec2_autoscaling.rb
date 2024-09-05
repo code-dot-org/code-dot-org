@@ -18,7 +18,14 @@ module AWS
       raise "No AutoScaling group found with name #{group_name}" if groups_matching_name.empty?
       raise "Multiple AutoScaling groups found with name \"#{group_name}\"" if groups_matching_name.length > 1
 
-      asg.start_instance_refresh(auto_scaling_group_name: group_name)
+      asg.start_instance_refresh(
+        auto_scaling_group_name: group_name,
+        preferences: {
+          min_healthy_percentage: 100,
+          max_healthy_percentage: 200,
+          instance_warmup: 0
+        }
+      )
 
       return unless wait
       asg.wait_until(:instances_healthy, auto_scaling_group_names: [group_name])
