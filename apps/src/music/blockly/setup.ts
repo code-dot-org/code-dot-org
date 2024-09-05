@@ -52,7 +52,7 @@ export function setUpBlocklyForMusicLab() {
     Blockly.JavaScript[blockType] = blockConfig.generator;
   }
 
-  Blockly.cdoUtils.registerCustomProcedureBlocks();
+  //Blockly.cdoUtils.registerCustomProcedureBlocks();
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
   Blockly.fieldRegistry.register(FIELD_PATTERN_AI_TYPE, FieldPatternAi);
@@ -61,8 +61,8 @@ export function setUpBlocklyForMusicLab() {
 
   // Remove two default entries in the toolbox's Functions category that
   // we don't want.
-  delete Blockly.Blocks.procedures_defreturn;
-  delete Blockly.Blocks.procedures_ifreturn;
+  //delete Blockly.Blocks.procedures_defreturn;
+  //delete Blockly.Blocks.procedures_ifreturn;
 
   // Rename the new function placeholder text for Music Lab specifically.
   Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =

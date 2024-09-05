@@ -36,4 +36,8 @@ export default class MusicPlayerStubSequencer extends Sequencer {
   getLastMeasure(): number {
     return 0;
   }
+
+  getHandlers(): any {
+    return [];
+  }
 }

@@ -18,4 +18,6 @@ export default abstract class Sequencer {
    * Return the last sequenced measure.
    */
   abstract getLastMeasure(): number;
+
+  abstract getHandlers(): any;
 }

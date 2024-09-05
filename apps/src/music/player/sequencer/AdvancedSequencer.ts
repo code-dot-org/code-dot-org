@@ -1,5 +1,6 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import MusicLibrary from '../MusicLibrary';
@@ -11,12 +12,30 @@ import Sequencer from './Sequencer';
  */
 export default class AdvancedSequencer extends Sequencer {
   private playbackEvents: PlaybackEvent[];
+  private handlers: any;
 
   constructor(
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     super();
     this.playbackEvents = [];
+    this.handlers = [];
+  }
+
+  addEventHandler(type: string, callback: string) {
+    console.log('addeventHandler', type, callback);
+
+    const call: any =
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction;
+
+    if (call) {
+      const nativeCallback = call(callback);
+      this.handlers[type] = nativeCallback;
+    }
+  }
+
+  getHandlers() {
+    return this.handlers;
   }
 
   playSoundAtMeasureById(

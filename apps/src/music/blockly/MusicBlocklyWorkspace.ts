@@ -9,6 +9,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getBlockMode} from '../appConfig';
 import {BlockMode, Triggers} from '../constants';
+import Sequencer from '../player/sequencer/Sequencer';
 
 import {GeneratorHelpersSimple2} from './blocks/simple2';
 import {BlockTypes} from './blockTypes';
@@ -51,6 +52,7 @@ export default class MusicBlocklyWorkspace {
   private lastExecutedEvents: CompiledEvents;
   private triggerIdToStartType: {[id: string]: string};
   private headlessMode: boolean;
+  private sequencer: Sequencer | null;
 
   constructor(
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
@@ -62,6 +64,7 @@ export default class MusicBlocklyWorkspace {
     this.triggerIdToStartType = {};
     this.lastExecutedEvents = {};
     this.headlessMode = false;
+    this.sequencer = null;
   }
 
   /**
@@ -77,7 +80,8 @@ export default class MusicBlocklyWorkspace {
     onBlockSpaceChange: (e: Abstract) => void,
     isReadOnlyWorkspace: boolean,
     toolbox: {[key: string]: string[]},
-    isRtl: boolean
+    isRtl: boolean,
+    sequencer: Sequencer
   ) {
     if (this.workspace) {
       this.workspace.dispose();
@@ -109,6 +113,8 @@ export default class MusicBlocklyWorkspace {
     this.workspace.addChangeListener(onBlockSpaceChange);
 
     this.headlessMode = false;
+
+    this.sequencer = sequencer;
   }
 
   /**
@@ -210,6 +216,11 @@ export default class MusicBlocklyWorkspace {
       }
     }
 
+    this.compiledEvents.whenRunButton = {
+      code: Blockly.JavaScript.workspaceToCode(this.workspace),
+    };
+
+    /*
     topBlocks.forEach(block => {
       if (getBlockMode() !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
@@ -265,6 +276,7 @@ export default class MusicBlocklyWorkspace {
         );
       }
     });
+    */
 
     const currentEventsJson = JSON.stringify(this.compiledEvents);
     const lastExecutedEventsJson = JSON.stringify(this.lastExecutedEvents);
@@ -334,9 +346,13 @@ export default class MusicBlocklyWorkspace {
    * @param id ID of the trigger
    */
   executeTrigger(id: string, startPosition: number) {
-    const hook = this.codeHooks[triggerIdToEvent(id)];
+    /*const hook = this.codeHooks[triggerIdToEvent(id)];
     if (hook) {
       this.callUserGeneratedCode(hook, [startPosition]);
+    }*/
+    const handlers = this.sequencer?.getHandlers();
+    if (handlers && handlers['trigger']) {
+      handlers['trigger'].apply(null);
     }
   }
 
@@ -351,6 +367,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   hasTrigger(id: string) {
+    return true;
     return !!this.codeHooks[triggerIdToEvent(id)];
   }
 

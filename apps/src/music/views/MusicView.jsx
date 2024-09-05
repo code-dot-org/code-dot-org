@@ -250,7 +250,8 @@ class UnconnectedMusicView extends React.Component {
           this.onBlockSpaceChange,
           this.props.isReadOnlyWorkspace,
           levelData?.toolbox,
-          this.props.isRtl
+          this.props.isRtl,
+          this.sequencer
         );
 
     this.library.setAllowedSounds(levelData?.sounds);
@@ -261,6 +262,8 @@ class UnconnectedMusicView extends React.Component {
     let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
     this.library.setCurrentPackId(packId);
     this.props.setPackId(packId);
+
+    //this.sequencer = sequencer;
 
     // Check if the user has already made changes to the code on the project level.
     let codeChangedOnProjectLevel = false;

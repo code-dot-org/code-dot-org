@@ -37,8 +37,13 @@ export const triggeredAt = {
       ctx.getFieldValue('var'),
       Blockly.Names.NameType.VARIABLE
     );
+  const nextBlock =
+    ctx.nextConnection && ctx.nextConnection.targetBlock();
+    let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
+    ctx.skipNextBlockGeneration = true;
     return `
-      ${varName} = startPosition;
+      // ${varName} = startPosition;
+      Sequencer.addEventHandler('trigger', function(${varName}) { ${handlerCode} } )
       \n`;
   },
 };

@@ -71,6 +71,10 @@ export default class Simple2Sequencer extends Sequencer {
     return this.getCurrentMeasure();
   }
 
+  getHandlers(): any {
+    return [];
+  }
+
   /**
    * Set up for a new sequence with a new set of blocks (e.g. at the start
    * of a trigger or when_run block)
