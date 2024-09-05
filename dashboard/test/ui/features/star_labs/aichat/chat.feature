@@ -11,9 +11,6 @@ Feature: AI Chat
     And I wait until element "#ui-close-dialog" is not visible
     And I dismiss the teacher panel
 
-  # As of 9/4/24, cannot access SageMaker in Drone.
-  # More discussion in this Slack thread: https://codedotorg.slack.com/archives/C03CK49G9/p1725475362107969
-  @no_circle
   Scenario: Making chat request gets response
     When I press keys "Hello" for element "#uitest-chat-textarea"
     And I wait until element "#uitest-chat-submit" is enabled

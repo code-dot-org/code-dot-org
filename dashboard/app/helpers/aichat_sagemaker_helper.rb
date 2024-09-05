@@ -1,9 +1,29 @@
+class StubbedSagemakerClient
+  def invoke_endpoint(_)
+    StubbedSagemakerResponse.new
+  end
+end
+
+class StubbedSagemakerResponse
+  def body
+    StubbedSagemakerResponseBody.new
+  end
+end
+
+class StubbedSagemakerResponseBody
+  def string
+    JSON.generate([{"generated_text" => "Hello there!"}])
+  end
+end
+
 module AichatSagemakerHelper
   MAX_NEW_TOKENS = 512
   TOP_P = 0.9
 
   def self.create_sagemaker_client
-    Aws::SageMakerRuntime::Client.new
+    ENV['CIRCLECI'] ?
+      StubbedSagemakerClient.new :
+      Aws::SageMakerRuntime::Client.new
   end
 
   def self.get_instructions(system_prompt, level_system_prompt, retrieval_contexts)
