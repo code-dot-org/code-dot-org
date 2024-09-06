@@ -19,19 +19,13 @@ theme: responsive_full_width
       %img.rounded-corners.box-shadow-primary{src: "/images/admins-page-top.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
--# Show Curriculum Launch banner if dcdo flag is set to true
-- if !!DCDO.get('curriculum-launch-2024', false)
-  = view :curriculum_launch_skinny_banner
-- else
-  = view :section_divider_line
+-# Show Curriculum Launch banner if dcdo is true
+= view :curriculum_launch_skinny_banner
 
--# Show Hour of Code banner if hoc_mode is set to "soon-hoc"
-- if DCDO.get('hoc_mode', 'soon-hoc')
-  = view :hoc_skinny_banner
-- else
-  = view :section_divider_line
+-# Show Hour of Code 2024 banner if hoc_mode is set to "soon-hoc"
+= view :hoc_skinny_banner
 
-%section.why-teach-cs
+%section.why-teach-cs.bg-neutral-light
   .wrapper
     %h2.centered
       =hoc_s(:teach_page_why_teach_cs_heading)
