@@ -178,7 +178,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
     [dispatch]
   );
 
-  // Function called when clicking 'x' or 'cancel'. This will reset the project to the current version
+  // Function called when clicking 'cancel'. This will reset the project to the current version
   // if the user is viewing an old version, then close the dropdown.
   const handleCancel = useCallback(() => {
     // Go back to current version if we are viewing an old version

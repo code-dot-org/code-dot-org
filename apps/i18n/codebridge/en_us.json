@@ -25,6 +25,7 @@
   "predictRunDisabledTooltip": "You must answer the question in the instructions before running the code.",
   "renameFile": "Rename file",
   "renameFolder": "Rename folder",
+  "restoredOldVersion": "Version successfully restored",
   "result": "Result",
   "runToContinue": "You must run your code before continuing.",
   "runToFinish": "You must run your code before finishing.",
