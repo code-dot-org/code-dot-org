@@ -46,6 +46,7 @@ const expectedBlankRow = {
   age: '',
   gender: '',
   username: '',
+  usState: null,
   loginType: '',
   sharingDisabled: true,
   isEditing: true,
@@ -405,6 +406,7 @@ describe('manageStudentsRedux', () => {
           familyName: 'FamName5',
           username: 'student5',
           userType: 'student',
+          usState: 'CO',
           age: 14,
           gender: 'f',
           loginType: 'email',
@@ -543,13 +545,17 @@ describe('manageStudentsRedux', () => {
   });
 
   describe('editStudent', () => {
-    it('sets editingData to new updated values', () => {
-      // Set up a student that is in the editing state.
-      const setStudentsAction = setStudents(sectionLoginData);
-      const nextState = manageStudents(initialState, setStudentsAction);
-      const startEditingStudentAction = startEditingStudent(1);
-      const editingState = manageStudents(nextState, startEditingStudentAction);
+    // Set up a student that is in the editing state.
+    const setStudentsAction = setStudents(sectionLoginData);
+    const nextState = manageStudents(initialState, setStudentsAction);
+    const startEditingStudentAction = startEditingStudent(1);
+    let editingState;
 
+    beforeEach(() => {
+      editingState = manageStudents(nextState, startEditingStudentAction);
+    });
+
+    it('sets editingData to new updated values', () => {
       // Edit name, age, and gender and verify data is updated.
       const editStudentNameAction = editStudent(1, {name: 'New name'});
       const stateWithName = manageStudents(editingState, editStudentNameAction);
@@ -610,6 +616,20 @@ describe('manageStudentsRedux', () => {
         age: 13,
         gender: 'm',
         sharingDisabled: true,
+      });
+    });
+
+    it('sets usState to student state', () => {
+      const expectedUsSate = 'CO';
+
+      const state = manageStudents(
+        editingState,
+        editStudent(1, {usState: expectedUsSate})
+      );
+
+      assert.deepEqual(state.editingData[1], {
+        ...sectionLoginData[1],
+        usState: expectedUsSate,
       });
     });
   });
@@ -757,6 +777,7 @@ describe('manageStudentsRedux', () => {
         familyName: 'fam name',
         age: 17,
         gender: 'f',
+        usState: 'CO',
         secretPicturePath: '/wizard.jpg',
         loginType: 'picture',
         isEditing: false,
