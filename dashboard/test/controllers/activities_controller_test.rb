@@ -1143,7 +1143,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'milestone with student in experiment triggers rubric eval job' do
     section = create :section, teacher: @teacher, script: @script
     create :follower, section: section, student_user: @student
-    create :single_section_experiment, section: section, name: 'ai-rubrics', script: @script
     Metrics::Events.stubs(:log_event).once
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id).once
@@ -1158,7 +1157,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     @teacher.save!
     section = create :section, teacher: @teacher, script: @script
     create :follower, section: section, student_user: @student
-    create :single_section_experiment, section: section, name: 'ai-rubrics', script: @script
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
@@ -1171,7 +1169,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'milestone with student in experiment on non ai level does not trigger rubric eval job' do
     section = create :section, teacher: @teacher, script: @script
     create :follower, section: section, student_user: @student
-    create :single_section_experiment, section: section, name: 'ai-rubrics', script: @script
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(false)
     EvaluateRubricJob.expects(:perform_later).never
@@ -1182,7 +1179,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone with teacher in experiment does not trigger rubric eval job' do
-    create :single_section_experiment, section: @section, name: 'ai-rubrics'
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
@@ -1197,20 +1193,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'milestone with student not in experiment does not trigger rubric eval job' do
-    # some other section is added to the experiment
-    create :single_section_experiment, name: 'ai-rubrics'
-    Metrics::Events.stubs(:log_event).never
-    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
-    EvaluateRubricJob.expects(:perform_later).never
-    sign_in @student
-
-    post :milestone, params: @milestone_rubric_params
-    assert_response :success
-  end
-
   test 'milestone on level without ai enabled does not trigger rubric eval job' do
-    create :single_section_experiment, section: @section, name: 'ai-rubrics'
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(false)
     EvaluateRubricJob.expects(:perform_later).never
