@@ -61,7 +61,7 @@ self.onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
   const {id, python, source} = event.data;
-  let results = '';
+  let results = undefined;
   try {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
     await importPackagesFromFiles(source, self.pyodide);

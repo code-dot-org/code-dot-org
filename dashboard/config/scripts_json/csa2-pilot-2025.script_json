@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-29 22:42:32 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-09-03 19:25:29 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -52,21 +52,9 @@
       }
     },
     {
-      "key": "lessonGroup-4",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-pilot-2025"
-      }
-    },
-    {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Alternate Lessons",
         "description": "This section contains the one-day version of the Store Management Project."
@@ -79,7 +67,7 @@
     {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 5,
+      "position": 4,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -98,6 +86,10 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**Why is it helpful to represent programs before we write them? How can you do this?**\n\nIn this lesson, students will review what they learned in Unit 1 about classes—that they are blueprints that contain the attributes and methods of an object, and that classes can inherit from each other—as well as key facets of UML diagrams. After discussing the usefulness of these diagrams, they create some of their own.",
+        "preparation": "- Gather poster paper, markers, and sticky notes (at least 5 for each student)\n- **(Optional)** Print copies of the Program Design Guided Notes (one for each student)\n- Print copies of the Designing with UML handout (one for each student)",
+        "student_overview": "**Why is it helpful to represent programs before we write them? How can you do this?**\n\nIn this lesson, you will act like a software engineer and create a UML diagram to plan your program before you write it.",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -170,6 +162,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**How do I get input from the user?**\n\nStudents learn how to obtain user input using the `Scanner` class.",
+        "preparation": "- (Optional) Print copies of the User Input Guided Notes (one for each student)\n- Preview the *Creating Scanner Objects* and *Scanner Class Methods* videos",
+        "student_overview": "**How do I get input from the user?**\n\nIn this lesson, you learn how to use the `Scanner`  class to obtain user input."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -187,7 +182,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I reduce ambiguity and redundancies in my program?**\n\nStudents continue building on what they have learned about constructors and parameters to explore the functionality of local variables. Students realize that the scope of local variables is limited to the constructor in which it is declared and learn to use the `this` keyword to refer to the current object and its instance variables. Students also consider how the `this` keyword can be used to minimize redundancies in their code, then practice writing parameterized constructors using the `this` keyword in a class and write parameterized constructors in the `Dessert` class.",
-        "preparation": "* **(Optional)** Print copies of the U2L4 Guided Notes (one for each student)\n* Print copies of the Anticipation Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-4-the-this-keyword/37875) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the The this Keyword Guided Notes (one for each student)\n* Print copies of the Anticipation Guide handout (one for each student)",
         "student_overview": "**How can I reduce ambiguity and redundancies in my program?**\n\nIn this lesson, you continue building on what you have learned about constructors and parameters to explore the functionality of local variables. You realize that the scope of local variables is limited to the constructor in which it is declared and learn to use the `this` keyword to refer to the current object and its instance variables. You also consider how the `this` keyword can be used to minimize redundancies in your code, then practice writing parameterized constructors using the `this` keyword in a class and write parameterized constructors in the `Dessert` class."
       },
       "seeding_key": {
@@ -206,7 +201,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nStudents have learned how to write no-argument and parameterized constructors and used the `this` keyword to refer to the current object. In this lesson, students revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. Students learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. Students then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclasses they previously created.",
-        "preparation": "* **(Optional)** Print copies of the U2L5 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-5-constructors-and-inheritance/37876) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Constructors and Inheritance Guided Notes (one for each student)",
         "student_overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nYou have learned how to write no-argument and parameterized constructors and use the `this` keyword to refer to the current object. In this lesson, you revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. You learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. You then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclass you previously created."
       },
       "seeding_key": {
@@ -225,7 +220,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, students revisit variables and data types and learn the difference between primitive and reference types. Students investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. Students then practice tracing code segments to identify the current values stored in variables.",
-        "preparation": "* **(Optional)** Print copies of the U2L6 Guided Notes (one for each student)\n* Preview the *Creating Variables* video\n* Print copies of the Investigate: Variables handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-6-variables/37877) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Variables Guided Notes (one for each student)\n* Preview the *Creating Variables* video\n* Print copies of the Investigate: Variables handout (one for each student)",
         "student_overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, you revisit variables and data types and learn the difference between primitive and reference types. You investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. You then practice tracing code segments to identify the current values stored in variables."
       },
       "seeding_key": {
@@ -244,7 +239,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.5\n* Topic Questions 5.1\n* Topic Questions 5.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I access the values of an object's instance variables?**\n\nStudents have previously used methods in the `Painter` class to get information about the state of a `Painter` object. In this lesson, students learn about accessor methods and explore their syntax and functionality. They consider why they would use accessor methods in a program and how they might decide when to provide an accessor method for an instance variable. Students then practice writing an accessor method in a class before writing accessor methods in the `Dessert` class and subclass.",
-        "preparation": "* **(Optional)** Print copies of the U2L7 Guided Notes (one for each student)\n* Preview the *Creating a Scanner Object* and *Accessor Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-7-accessor-methods/37878) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Accessor Methods Guided Notes (one for each student)\n* Preview the *Accessor Methods* video",
         "student_overview": "**How can I access the values of an object's instance variables?**\n\nYou have previously used methods in the `Painter` class to get information about the state of a `Painter` object. In this lesson, you learn about accessor methods and explore their syntax and functionality. You consider why you would use accessor methods in a program and how you might decide when to provide an accessor method for an instance variable. You then practice writing an accessor method in a class before writing accessor methods in the `Dessert` class and subclass."
       },
       "seeding_key": {
@@ -367,27 +362,12 @@
       }
     },
     {
-      "key": "Unit 2 Survey",
-      "name": "Unit 2 Survey",
-      "absolute_position": 16,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 16,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Unit 2 Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-pilot-2025"
-      }
-    },
-    {
       "key": "Store Management Project [1-Day Version]",
       "name": "Store Management Project [1-Day Version]",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
         "assessment": true,
         "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
@@ -403,10 +383,10 @@
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 18,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -418,10 +398,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 19,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -436,11 +416,51 @@
       "key": "d11a7ed8-9a4a-4934-88f2-b65280407c1e",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Activity"
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "d11a7ed8-9a4a-4934-88f2-b65280407c1e",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "key": "10887406-b842-42eb-b483-1697d93b11d9",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "10887406-b842-42eb-b483-1697d93b11d9",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "key": "5cf2ac33-f1f3-4712-a775-f0db25044bc5",
+      "position": 4,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5cf2ac33-f1f3-4712-a775-f0db25044bc5",
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-pilot-2025"
@@ -576,11 +596,39 @@
       "key": "68a9e750-23b2-44cd-b005-be1f0a2c6ae2",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Activity"
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "68a9e750-23b2-44cd-b005-be1f0a2c6ae2",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "key": "37c7da4b-af0e-44fa-a943-8527421732fa",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "key": "9b03e2fd-2b6b-49dd-9d2a-d6e4990d90ea",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b03e2fd-2b6b-49dd-9d2a-d6e4990d90ea",
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-pilot-2025"
@@ -1005,18 +1053,6 @@
       }
     },
     {
-      "key": "8937e8cf-a0e9-4fc2-a0f5-f3b615a23dcf",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8937e8cf-a0e9-4fc2-a0f5-f3b615a23dcf",
-        "lesson.key": "Unit 2 Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-pilot-2025"
-      }
-    },
-    {
       "key": "71cadc35-d7dc-4fe2-8e0a-14ea19f30056",
       "position": 1,
       "properties": {
@@ -1088,10 +1124,225 @@
       "key": "b638c2cd-cccc-49e2-9da9-ddd3381a5f04",
       "position": 1,
       "properties": {
+        "description": "In the previous unit, you learned about the characteristics of software engineers and began to develop your software engineering skills. We will be learning more about the structure and design of classes in Java programs and continue to use software engineering characteristics and skills to make design decisions.",
+        "name": "Software Engineering Goals",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "b638c2cd-cccc-49e2-9da9-ddd3381a5f04",
         "lesson_activity.key": "d11a7ed8-9a4a-4934-88f2-b65280407c1e"
+      }
+    },
+    {
+      "key": "c5d8c690-a912-45c9-b783-da1f673d9a43",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of a time where you had to prepare to do something, like go on a trip or make a meal. How can having an effective plan make things easier?*\n\n**Discussion Goal:** Students discuss how having a plan can make tasks easier by reducing stress, saving time, and improving organization. They relate these benefits to their own experiences of preparing for activities or projects.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c5d8c690-a912-45c9-b783-da1f673d9a43",
+        "lesson_activity.key": "d11a7ed8-9a4a-4934-88f2-b65280407c1e"
+      }
+    },
+    {
+      "key": "ac941607-afc6-4198-bd97-3ae1eb1d0495",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "ac941607-afc6-4198-bd97-3ae1eb1d0495",
+        "lesson_activity.key": "10887406-b842-42eb-b483-1697d93b11d9"
+      }
+    },
+    {
+      "key": "2fa28f08-239a-4e19-bdd5-48b17b510ac0",
+      "position": 2,
+      "properties": {
+        "name": "(OPTIONAL) Review",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This section is a 3-question review: what are classes, what are the parts of a UML diagram, and inheritance. If you are confident your students do not need the review, you can skip it, entirely, or just skip the individual questions you . If you are unsure, asking these questions can help you figure out what your students have retained. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2fa28f08-239a-4e19-bdd5-48b17b510ac0",
+        "lesson_activity.key": "10887406-b842-42eb-b483-1697d93b11d9"
+      }
+    },
+    {
+      "key": "83bd2c4a-d25b-407c-b190-9e5ed72f1996",
+      "position": 1,
+      "properties": {
+        "description": "One of the tools in a software engineer’s toolbox is to think about how to organize their programs before writing them, and share their ideas with their colleagues. This saves a lot of time later. Today, we’ll practice one way that software engineers organize their thoughts and share ideas before programming. First, let’s ground ourselves in what we already know.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "83bd2c4a-d25b-407c-b190-9e5ed72f1996",
+        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
+      }
+    },
+    {
+      "key": "7591edec-dd28-4ec4-812e-43f1b37bc932",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a class?*\n\n**Discussion Goal:**  Students understand that a class in object-oriented programming serves as a blueprint for creating objects, defining their attributes and behaviors. Students may also relate this concept to real-world examples of templates or schematics used to produce specific instances.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the definition of object and class.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students label the parts of the UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the labels for each part of the UML diagram\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is inheritance?*\n\n**Discussion Goal:** Students mention that inheritance is an object-oriented programming concept where a subclass inherits attributes and behaviors from a superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that inheritance creates an *is-a* relationship. Demonstrate that arrows are drawn from the subclass to the superclass to represent this relationship."
+      },
+      "seeding_key": {
+        "activity_section.key": "7591edec-dd28-4ec4-812e-43f1b37bc932",
+        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
+      }
+    },
+    {
+      "key": "0880f317-d3ff-493e-82e8-97e0ca09a95b",
+      "position": 3,
+      "properties": {
+        "description": "In this lesson, you’ll create a UML diagram for an app of your choice. This will help you translate your ideas into a clear, actionable plan for programming. Let's explore how to do this together.",
+        "duration": "10",
+        "name": "Introduction to UML Diagrams",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0880f317-d3ff-493e-82e8-97e0ca09a95b",
+        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
+      }
+    },
+    {
+      "key": "509e3d9a-d372-45d9-bf43-a98c0a9ccab4",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do these representations have in common? How are they different?*\n\n**Discussion Goal:** Students identify common elements and differences between the UML diagram and the text description, noting how the diagram provides a structured, visual representation of attributes and methods, while the text offers a descriptive summary of the same information.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do these representations have in common? How are they different?*\n\n**Discussion Goal:** Students compare the UML diagrams and text to see how the diagrams show the relationship between a superclass and its subclasses, while the text describes the attributes and behaviors of each class. They should understand how the diagrams visually represent these relationships and how the text provides the same information in words."
+      },
+      "seeding_key": {
+        "activity_section.key": "509e3d9a-d372-45d9-bf43-a98c0a9ccab4",
+        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
+      }
+    },
+    {
+      "key": "34c2367c-ab19-498c-8337-098749b3c1f6",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a text-description of the Pet-Dog-Cat relationship would look like."
+      },
+      "seeding_key": {
+        "activity_section.key": "34c2367c-ab19-498c-8337-098749b3c1f6",
+        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
+      }
+    },
+    {
+      "key": "0ea16758-b85e-4ff0-b5ed-9a04581f003a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a UML Diagram for the Pet-Dog-Cat relationship would look like.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why might it be helpful to have these representations before you write a program?*\n\n**Discussion Goal:** Students understand that having UML diagrams and text descriptions helps in planning and organizing the structure of a program, making it easier to write code by providing a clear visual and descriptive reference of the classes and their relationships.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What words in a program description make sense to turn into a class?*\n\n**Discussion Goal:** Students identify the nouns in a program description as classes and the verbs as behaviors. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students need more guidance, it may be helpful to get them thinking about parts of speech – nouns are often classes, verbs are often methods. If students need it, remind students that a “noun” is a “person, place or thing” and a “verb” is a “thing something or someone can do.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0ea16758-b85e-4ff0-b5ed-9a04581f003a",
+        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
+      }
+    },
+    {
+      "key": "0f74d300-ffef-4ace-9eb8-383af4b375d6",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Not all nouns should be classes. Which of these is not a class?*\n\n**Discussion Goal:** Students identify that nouns that do not actively hold or do something do not need to be classes. Students might suggest that these nouns can be attributes of classes. For example, the “length” of the run does not need to hold or do anything and can be an attribute of the run. "
+      },
+      "seeding_key": {
+        "activity_section.key": "0f74d300-ffef-4ace-9eb8-383af4b375d6",
+        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
+      }
+    },
+    {
+      "key": "ecfcee98-c91e-4941-9e78-686317b98192",
+      "position": 8,
+      "properties": {
+        "description": "Now it’s time to practice being a software engineer! You'll now have an opportunity to think critically about how you would design a program and communicate that design to others using a UML diagram. ",
+        "duration": "20",
+        "name": "Designing with UML",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students have their own program ideas, they can use those as the basis for their UML diagram, as long as the focus remains on turning the idea into a clear diagram. You can remind students that the goal is to practice the process of translating program ideas into a visual plan, rather than developing new ideas from scratch."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ecfcee98-c91e-4941-9e78-686317b98192",
+        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
+      }
+    },
+    {
+      "key": "5e085e82-e172-4f84-993f-eb488656f069",
+      "position": 9,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a poster paper and marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review each project description and select one.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their activity guides to plan their UML diagram. Students will circle the nouns in the requirements, underline the verbs, and double the circle around nouns representing classes that should be created.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use their poster paper to turn their plans into UML diagrams and a program description.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Circulate as students work, offering time reminders, and ask guiding questions to help them identify potential classes and define what each class 'has' and 'does.' Encourage collaboration by asking questions that lead pairs to a shared decision. Celebrate progress, and remind pairs to include both the UML diagram and text description on their poster. Using a visible timer can help students stay aware of how much time remains."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5e085e82-e172-4f84-993f-eb488656f069",
+        "lesson_activity.key": "37b1fee5-4abc-40ba-9604-dd6dfadfd77d"
+      }
+    },
+    {
+      "key": "16ae3b1f-52a9-4c96-ab13-1bb928904511",
+      "position": 1,
+      "properties": {
+        "description": "It’s exciting to see these ideas coming together! Now that we have a plan, we’ll run it by other people. Since a class diagram is essentially a plan for code, we'll use the same TAG feedback process we apply during code reviews, but with sticky notes. Tell your classmates what in your work you like, ask them questions about why they chose particular classes and offer suggestions.\n",
+        "name": "Gallery Walk",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "16ae3b1f-52a9-4c96-ab13-1bb928904511",
+        "lesson_activity.key": "5cf2ac33-f1f3-4712-a775-f0db25044bc5"
+      }
+    },
+    {
+      "key": "8d445584-07e7-40ea-ad27-e8ed5b88a08b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Distribute: Give each pair several post-it notes, at least five per student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to TAG the UML diagrams as they participate in the gallery walk.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students back to their own UML diagrams to review the comments left by their peers. Direct students to write down ideas and thoughts in response to the prompt on a sticky note or scrap piece of paper. ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The gallery walk and student reflections can be used as an informal assessment opportunity. Reviewing the comments they leave on various UML diagrams and their responses can give insight into their grasp of class structure and design."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8d445584-07e7-40ea-ad27-e8ed5b88a08b",
+        "lesson_activity.key": "5cf2ac33-f1f3-4712-a775-f0db25044bc5"
+      }
+    },
+    {
+      "key": "f8ef5935-dd7f-40fc-bb30-560b3a63f63b",
+      "position": 3,
+      "properties": {
+        "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8ef5935-dd7f-40fc-bb30-560b3a63f63b",
+        "lesson_activity.key": "5cf2ac33-f1f3-4712-a775-f0db25044bc5"
       }
     },
     {
@@ -1971,10 +2222,203 @@
       "key": "2d171217-b54d-4849-bc6c-9a69994959bc",
       "position": 1,
       "properties": {
+        "description": "We interact with software every day. Most of the apps and systems we use get input from us to perform the tasks they are programmed to complete.",
+        "name": "Input Methods",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "2d171217-b54d-4849-bc6c-9a69994959bc",
         "lesson_activity.key": "68a9e750-23b2-44cd-b005-be1f0a2c6ae2"
+      }
+    },
+    {
+      "key": "04b4ff75-5ac1-4db2-8ee8-56bebc760c8e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the program examples and their methods of input.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. \n- *What are some apps and systems that you use every day?*\n- *What types of inputs do these apps and systems use?*\n- *How do they get these inputs from the user?*\n\n**Discussion Goal:** Students identify apps and systems they use on mobile devices, gaming consoles, or computers. Students share inputs that these apps and systems use, such as entering personal information, moving a character in a game, or entering content in a document. Students discuss how they enter input to apps and systems, including touchscreen input and button selections.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students about specific apps they use on their mobile devices or programs for school work. Have students consider the types of inputs for these apps and programs.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "04b4ff75-5ac1-4db2-8ee8-56bebc760c8e",
+        "lesson_activity.key": "68a9e750-23b2-44cd-b005-be1f0a2c6ae2"
+      }
+    },
+    {
+      "key": "fa49647b-98e0-42f0-bac9-338c6571edc6",
+      "position": 1,
+      "properties": {
+        "description": "Getting input from a user is an important aspect of many apps and programs we use every day. User input makes a program more interactive and adaptable to individual needs and information.\n\n",
+        "name": "The Scanner Class",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fa49647b-98e0-42f0-bac9-338c6571edc6",
+        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
+      }
+    },
+    {
+      "key": "3a4d760e-8d28-4379-b80d-faf02b5f0730",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***application program interface (API)*** and ***library***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `java.util` package and the `Scanner` class.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The term package was introduced in Unit 1 when The Neighborhood was introduced. Ask students to recall the meaning of package and how The Neighborhood consists of classes that can be imported and used."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3a4d760e-8d28-4379-b80d-faf02b5f0730",
+        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
+      }
+    },
+    {
+      "key": "ba5723b7-d65d-408c-acce-1e549cb7215b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating a Scanner Object*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.\n",
+        "progression_name": "Predict: Getting User Input"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba5723b7-d65d-408c-acce-1e549cb7215b",
+        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
+      }
+    },
+    {
+      "key": "1fc3690f-7da9-4531-8781-2fc9feb2be05",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the code in this program?*\n- *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that a user can input values into the program. Students may wonder what other methods are in the `Scanner` class for getting user input."
+      },
+      "seeding_key": {
+        "activity_section.key": "1fc3690f-7da9-4531-8781-2fc9feb2be05",
+        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
+      }
+    },
+    {
+      "key": "4966df90-58ec-4bc3-aa4e-2111d68b4282",
+      "position": 5,
+      "properties": {
+        "description": "The `Scanner` class has several methods for obtaining input based on the type of data we want to get from the user. Let's look at some of the methods that we will use today.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4966df90-58ec-4bc3-aa4e-2111d68b4282",
+        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
+      }
+    },
+    {
+      "key": "5f3a2aa1-4d11-4f5c-8ba4-7b4c21881f6d",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Scanner Class Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways you could use these methods in your programs?*\n\n**Discussion Goal:** Students suggest types of information they could obtain from a user, such as asking how much paint a `Painter` object should start with or a flavor for a `Dessert` object.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to consider how they might use input to decide the starting values for Painter or Dessert objects or perform calculations."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5f3a2aa1-4d11-4f5c-8ba4-7b4c21881f6d",
+        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
+      }
+    },
+    {
+      "key": "1a143148-3b2c-4f0b-a5d6-bb4c28312d1a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate common errors using `Scanner` class methods.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a143148-3b2c-4f0b-a5d6-bb4c28312d1a",
+        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
+      }
+    },
+    {
+      "key": "89a891ab-1852-4dfe-873d-b529d0695db8",
+      "position": 8,
+      "properties": {
+        "description": "The methods we saw in the video earlier are not the only methods available in the `Scanner` class. We can refer to the documentation for the `Scanner` class to see what methods it has and how to use them.\n\n",
+        "name": "Getting User Input",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "89a891ab-1852-4dfe-873d-b529d0695db8",
+        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
+      }
+    },
+    {
+      "key": "85f9fcb9-8040-499b-b6cd-4cb73937593e",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to access documentation in Java Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 to complete a choice level to create and use a `Scanner` object to obtain user input.",
+        "progression_name": "Practice: Getting User Input"
+      },
+      "seeding_key": {
+        "activity_section.key": "85f9fcb9-8040-499b-b6cd-4cb73937593e",
+        "lesson_activity.key": "37c7da4b-af0e-44fa-a943-8527421732fa"
+      }
+    },
+    {
+      "key": "3a872932-fa1b-4688-b669-1d8e1bff8cdc",
+      "position": 1,
+      "properties": {
+        "description": "We have learned a lot about getting input from the user and from files. ",
+        "duration": "5",
+        "name": "Glows, Grows, Want to Knows",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3a872932-fa1b-4688-b669-1d8e1bff8cdc",
+        "lesson_activity.key": "9b03e2fd-2b6b-49dd-9d2a-d6e4990d90ea"
+      }
+    },
+    {
+      "key": "2d22dda3-ccd2-4133-a8e5-2966dfcf513f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What was awesome about writing your code?*\n- *What is one action you can take to improve your code?*\n- *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Glows, Grows, Want-to-Knows is a strategy to help students identify their strengths and areas of improvement and share any questions or misconceptions.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2d22dda3-ccd2-4133-a8e5-2966dfcf513f",
+        "lesson_activity.key": "9b03e2fd-2b6b-49dd-9d2a-d6e4990d90ea"
+      }
+    },
+    {
+      "key": "e3d5676f-5fa9-4cc0-8a97-bcb537bcfc83",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3d5676f-5fa9-4cc0-8a97-bcb537bcfc83",
+        "lesson_activity.key": "9b03e2fd-2b6b-49dd-9d2a-d6e4990d90ea"
+      }
+    },
+    {
+      "key": "479002fb-988a-40f9-ac74-9035ec62800c",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "479002fb-988a-40f9-ac74-9035ec62800c",
+        "lesson_activity.key": "9b03e2fd-2b6b-49dd-9d2a-d6e4990d90ea"
       }
     },
     {
@@ -2690,66 +3134,13 @@
       }
     },
     {
-      "key": "0a57a5aa-5f63-476c-a62d-c1e327ea402d",
+      "key": "f22b8adb-5a83-4145-bf34-a1b90362dabd",
       "position": 1,
       "properties": {
-        "description": "Getting input from a user is an important aspect of many apps and programs we use every day. User input makes a program more interactive and adaptable to individual needs and information.",
-        "name": "The Scanner Class",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Consider the attributes in the `Painter` class. Can you recall a scenario in your program where knowing the values of those attributes would have been beneficial?*\n\n**Discussion Goal:** The goal of this discussion is to encourage students to reflect on their past programming experiences and identify instances where understanding the attributes of an object, such as those in the `Painter` class, could have enhanced their program's functionality or efficiency. By sharing specific scenarios, students will deepen their comprehension of object-oriented programming principles, particularly the importance of attributes in class design. This discussion also aims to foster peer learning, as students may gain new perspectives on how to effectively utilize object attributes in their own code."
       },
       "seeding_key": {
-        "activity_section.key": "0a57a5aa-5f63-476c-a62d-c1e327ea402d",
-        "lesson_activity.key": "3e3866e7-a12c-4466-9849-f2834a5e0f7d"
-      }
-    },
-    {
-      "key": "25b04520-adac-4f1d-9a20-af6ed0e4e2b4",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***application programming interface (API)*** and ***library***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Java API.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating a Scanner Object*.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "25b04520-adac-4f1d-9a20-af6ed0e4e2b4",
-        "lesson_activity.key": "3e3866e7-a12c-4466-9849-f2834a5e0f7d"
-      }
-    },
-    {
-      "key": "c810a738-bd9e-4dd7-a69a-99313f6a1cef",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `java.util` package and the `Scanner` class.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students will see the `Scanner` class used in the programs they use today but will not be expected to create `Scanner` objects or call any of its methods. Students will learn more about the methods in the `Scanner` class and practice calling its methods in an upcoming lesson. The goal here is to start exposing students to working with user input alongside familiar program code to build up to writing code to obtain user input on their own."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c810a738-bd9e-4dd7-a69a-99313f6a1cef",
-        "lesson_activity.key": "3e3866e7-a12c-4466-9849-f2834a5e0f7d"
-      }
-    },
-    {
-      "key": "86a94713-b0fa-41e8-8cdf-a37c84bf02c1",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could you use the `Scanner` class in the programs you have written so far?*\n\n**Discussion Goal:** Students suggest using the `Scanner` class to prompt the user for starting values to create `Painter` or `Dessert` objects or to enter numbers to perform calculations. Students might also suggest asking users for their name or to enter login information and make connections to apps and programs they use.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nAsk students about specific apps they use on their mobile devices or programs for school work. Have students consider the types of inputs for these apps and programs."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "86a94713-b0fa-41e8-8cdf-a37c84bf02c1",
+        "activity_section.key": "f22b8adb-5a83-4145-bf34-a1b90362dabd",
         "lesson_activity.key": "3e3866e7-a12c-4466-9849-f2834a5e0f7d"
       }
     },
@@ -4664,17 +5055,6 @@
       }
     },
     {
-      "key": "e7a141e7-812b-45aa-b022-4a9099e074e6",
-      "position": 1,
-      "properties": {
-        "progression_name": "Unit 2 Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "e7a141e7-812b-45aa-b022-4a9099e074e6",
-        "lesson_activity.key": "8937e8cf-a0e9-4fc2-a0f5-f3b615a23dcf"
-      }
-    },
-    {
       "key": "bd6b06bf-a928-4ed8-bfc1-28f97dde0798",
       "position": 1,
       "properties": {
@@ -4839,6 +5219,31 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-ProgramDesign-L1_pilot-2025"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-ProgramDesign-L1_pilot-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025",
+        "activity_section.key": "f8ef5935-dd7f-40fc-bb30-560b3a63f63b"
+      },
+      "level_keys": [
+        "CSA-ProgramDesign-L1_pilot-2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4861,7 +5266,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4886,7 +5291,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4911,7 +5316,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4936,7 +5341,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4961,7 +5366,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4986,7 +5391,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5011,7 +5416,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5036,7 +5441,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -5061,7 +5466,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -5086,7 +5491,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5111,7 +5516,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5136,7 +5541,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5161,7 +5566,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5186,7 +5591,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5211,7 +5616,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5236,7 +5641,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5261,7 +5666,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5286,7 +5691,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -5311,7 +5716,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5336,7 +5741,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5361,7 +5766,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5386,7 +5791,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5411,7 +5816,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5436,7 +5841,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5461,7 +5866,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5486,7 +5891,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5511,7 +5916,82 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-UserInput-L1_pilot-2025"
+        ],
+        "progression": "Predict: Getting User Input"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-UserInput-L1_pilot-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025",
+        "activity_section.key": "ba5723b7-d65d-408c-acce-1e549cb7215b"
+      },
+      "level_keys": [
+        "CSA-UserInput-L1_pilot-2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-UserInput-L2_pilot-2025"
+        ],
+        "progression": "Practice: Getting User Input"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-UserInput-L2_pilot-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025",
+        "activity_section.key": "85f9fcb9-8040-499b-b6cd-4cb73937593e"
+      },
+      "level_keys": [
+        "CSA-UserInput-L2_pilot-2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-UserInput-L5_pilot-2025"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-UserInput-L5_pilot-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025",
+        "activity_section.key": "479002fb-988a-40f9-ac74-9035ec62800c"
+      },
+      "level_keys": [
+        "CSA-UserInput-L5_pilot-2025"
+      ]
+    },
+    {
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5536,7 +6016,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5561,7 +6041,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5586,7 +6066,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5611,7 +6091,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5636,7 +6116,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5661,7 +6141,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5686,7 +6166,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5711,7 +6191,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5736,7 +6216,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5761,7 +6241,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5786,7 +6266,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5811,7 +6291,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5836,7 +6316,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5861,7 +6341,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5886,7 +6366,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5911,7 +6391,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5936,7 +6416,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5961,7 +6441,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5986,7 +6466,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6011,7 +6491,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6036,7 +6516,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6061,7 +6541,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6086,7 +6566,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6111,7 +6591,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6136,7 +6616,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 57,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6161,7 +6641,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 58,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6186,7 +6666,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6211,7 +6691,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6236,7 +6716,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6261,7 +6741,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6286,7 +6766,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6311,7 +6791,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6336,7 +6816,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6361,7 +6841,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6386,7 +6866,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6411,7 +6891,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6436,7 +6916,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6461,7 +6941,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6486,7 +6966,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6511,7 +6991,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 72,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6536,7 +7016,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 73,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6561,7 +7041,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6586,7 +7066,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6611,7 +7091,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6636,7 +7116,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6661,7 +7141,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6686,7 +7166,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 79,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6711,7 +7191,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 80,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -6736,7 +7216,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 81,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6761,7 +7241,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6786,7 +7266,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6811,32 +7291,7 @@
       ]
     },
     {
-      "chapter": 80,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa2_pilot-2025"
-        ],
-        "progression": "Unit 2 Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Student End of Unit Survey_csa2_pilot-2025"
-        ],
-        "lesson.key": "Unit 2 Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-pilot-2025",
-        "activity_section.key": "e7a141e7-812b-45aa-b022-4a9099e074e6"
-      },
-      "level_keys": [
-        "Student End of Unit Survey_csa2_pilot-2025"
-      ]
-    },
-    {
-      "chapter": 81,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6861,7 +7316,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6885,7 +7340,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6910,7 +7365,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6936,6 +7391,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSA-ProgramDesign-L1_pilot-2025",
+        "script_level.level_keys": [
+          "CSA-ProgramDesign-L1_pilot-2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025",
+        "activity_section.key": "f8ef5935-dd7f-40fc-bb30-560b3a63f63b"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSA U2L1-L1_pilot-2025",
@@ -7258,6 +7725,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-pilot-2025",
         "activity_section.key": "85a736da-5c4f-4489-be25-c0bc40c2184d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-UserInput-L1_pilot-2025",
+        "script_level.level_keys": [
+          "CSA-UserInput-L1_pilot-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025",
+        "activity_section.key": "ba5723b7-d65d-408c-acce-1e549cb7215b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-UserInput-L2_pilot-2025",
+        "script_level.level_keys": [
+          "CSA-UserInput-L2_pilot-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025",
+        "activity_section.key": "85f9fcb9-8040-499b-b6cd-4cb73937593e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-UserInput-L5_pilot-2025",
+        "script_level.level_keys": [
+          "CSA-UserInput-L5_pilot-2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot-2025",
+        "activity_section.key": "479002fb-988a-40f9-ac74-9035ec62800c"
       }
     },
     {
@@ -7886,18 +8389,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa2_pilot-2025",
-        "script_level.level_keys": [
-          "Student End of Unit Survey_csa2_pilot-2025"
-        ],
-        "lesson.key": "Unit 2 Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-pilot-2025",
-        "activity_section.key": "e7a141e7-812b-45aa-b022-4a9099e074e6"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA U2 Store Management Project 1-Day_pilot-2025",
         "script_level.level_keys": [
           "CSA U2 Store Management Project 1-Day_pilot-2025"
@@ -7995,6 +8486,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Program Design Guided Notes",
+      "url": "https://docs.google.com/document/d/1WBBzL3SI3OQJV9eap_cT2SYSjNkq_aLIVEPE9TIisDY/edit?usp=sharing",
+      "key": "_exemplar_u2l1_guided_notes_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l1_guided_notes_1"
+      }
+    },
+    {
       "name": "[EXEMPLAR] No-Argument Constructors Guided Notes",
       "url": "https://docs.google.com/document/d/1M-FTxIut0sp1Mkq7HZPQWp1VXl-h4BafYhZR2UROlcI/edit?usp=drive_link",
       "key": "_exemplar_u2l2_guided_notes",
@@ -8019,8 +8522,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L4 Guided Notes",
-      "url": "https://docs.google.com/document/d/1mZ2TYi_U5V-MmB6YDHxRrdPJaG_n3w9dgPc7q2hsRRQ/edit?usp=sharing",
+      "name": "[EXEMPLAR] The this Keyword Guided Notes",
+      "url": "https://docs.google.com/document/d/1dH7WQJeTSDjdnq0T16ejlFM3x-nYZ-L23xQ1_hvM6Yw/edit?usp=drive_link",
       "key": "_exemplar_u2l4_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8031,8 +8534,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/10fBNOIwHiiLO51Fitr4uKtHwGLSW6Sq2Qhdb7KiKsH4/edit?usp=sharing",
+      "name": "[EXEMPLAR] Constructors and Inheritance Guided Notes",
+      "url": "https://docs.google.com/document/d/13MMiuWGRy1s9i6z8NC4WYhua9RnURF_gSZqQNNAHMXo/edit?usp=drive_link",
       "key": "_exemplar_u2l5_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8043,8 +8546,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L7 Guided Notes",
-      "url": "https://docs.google.com/document/d/15Y7g3AI8HPJ8LVt8ttT9HSzXXGH5nWHqYJYkZve06IA/edit?usp=sharing",
+      "name": "[EXEMPLAR] Variables Guided Notes",
+      "url": "https://docs.google.com/document/d/1k17Lw0qIPO1f_QBbEg4hBQ0NVbWJUWOV70Z5iGvOAbY/edit?usp=drive_link",
       "key": "_exemplar_u2l7_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8055,8 +8558,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L7 Guided Notes",
-      "url": "https://docs.google.com/document/d/1xijVpfl96ZodziVU7EZrkMoia6hENe7y9wKtWINzn1w/edit?usp=sharing",
+      "name": "[EXEMPLAR] Accessor Methods Guided Notes",
+      "url": "https://docs.google.com/document/d/1HmmnNNFBmMH1KWmvtpMF4stG5abu1hHQAcxyizKZASI/edit?usp=drive_link",
       "key": "_exemplar_u2l7_guided_notes_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -8091,8 +8594,30 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Unit 2 Guide",
+      "url": "https://docs.google.com/document/d/1bzdCMX84e5GB0wAbqSRpIQber3pgbE4KT44ttx0ziPk/edit?usp=sharing",
+      "key": "_exemplar_unit_2_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_2_guide"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] User Input Guided Notes",
+      "url": "https://docs.google.com/document/d/1hlex6RPOG8rPfuSJwZEjMANPZzmWp7Dpn4O4qvXcOM0/edit?usp=drive_link",
+      "key": "_exemplar_user_input_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_user_input_guided_notes"
+      }
+    },
+    {
       "name": "[KEY] Anticipation Guide",
-      "url": "https://docs.google.com/document/d/1pNBHHn3W7xYTXfnCr9unJ9dL7NfQ4AAkmNGJyFy9nOU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1xZV9kqcoLmr7L4f9B3Sl1vmjRcH13HMJiZSzxP_PrAg/edit?usp=drive_link",
       "key": "_key_anticipation_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -8128,7 +8653,7 @@
     },
     {
       "name": "[KEY] Investigate: Variables",
-      "url": "https://docs.google.com/document/d/1jGrBDgh0-lfSZiA_lmH-pomVRNTwIjjsxsyVOwP4czQ/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Klfs4cr9GdX8uMRofGWau6MP49F45Lo9sWD-8y6U07o/edit?usp=drive_link",
       "key": "_key_investigate_variables",
       "properties": {
         "audience": "Verified Teacher",
@@ -8136,6 +8661,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_investigate_variables"
+      }
+    },
+    {
+      "name": "[KEY] Program Design Extra Practice",
+      "url": "https://docs.google.com/document/d/1no84O0SEdUGexfRK87unJZPqR9k06GgkaLpcQ23SfQo/edit?usp=sharing",
+      "key": "_key_program_design_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_program_design_extra_practice"
       }
     },
     {
@@ -8187,8 +8724,8 @@
       }
     },
     {
-      "name": "[KEY] U2L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1flZENjUuVQ7-U2pN6KrmVJOlWeOGB1wqtXNjAFXBpEQ/edit?usp=sharing",
+      "name": "[KEY] The this Keyword Extra Practice",
+      "url": "https://docs.google.com/document/d/1yAbpdiWda83_9DQuZI6S0i_ueoOadW3hzL5yHFiQTlQ/edit?usp=drive_link",
       "key": "_key_u2l4_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8199,8 +8736,8 @@
       }
     },
     {
-      "name": "[KEY] U2L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/16fHuByG_xZsEchb8fI3mklU4fm4-EDIZp0enUOABDq0/edit?usp=sharing",
+      "name": "[KEY] Constructors and Inheritance Extra Practice",
+      "url": "https://docs.google.com/document/d/1UvgblcLEjGk57X2_pFLE6ZTrsdXhbP0o3U_CFT0sKF4/edit?usp=drive_link",
       "key": "_key_u2l5_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8211,8 +8748,8 @@
       }
     },
     {
-      "name": "[KEY] U2L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1bNvGuAmqOEBm3FkBwTXL5WBi19HUmXEHlATr_ZzRsNU/edit?usp=sharing",
+      "name": "[KEY] Variables Extra Practice",
+      "url": "https://docs.google.com/document/d/1Vd6EBbxEHPmoSkuCBndNk6LzsZvL5S8g_ci7BQQTlCQ/edit?usp=drive_link",
       "key": "_key_u2l6_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8247,8 +8784,20 @@
       }
     },
     {
+      "name": "[KEY] User Input Extra Practice",
+      "url": "https://docs.google.com/document/d/1kqeurBWZWpih_amwCGTcWf_TO7MBu2a_iV0cy90zzJ8/edit?usp=drive_link",
+      "key": "_key_user_input_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_user_input_extra_practice"
+      }
+    },
+    {
       "name": "Accessor Methods",
-      "url": "https://docs.google.com/presentation/d/1UIF33TNI4dC_onYCn18eRi5XtWYnqGRoyZtoUEiVyXY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1roMOiFEK-JmOaljq3hkC85Hu2Oatpe-eeb27mtxRch0/edit?usp=sharing",
       "key": "accessor_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -8271,8 +8820,41 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa2-pilot-2025/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa2-pilot-2025/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa2-pilot-2025/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
       "name": "Anticipation Guide",
-      "url": "https://docs.google.com/document/d/1D5d1uUJGuYqAQP77kKeGDqLfDJIGhE434JGlxmmNhTM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1mnFl7DiS9SkioAlEvh8FwFOB_K4SMBF4AUXVMBpDO6c/edit?usp=drive_link",
       "key": "anticipation_guide",
       "properties": {
         "audience": "Student",
@@ -8372,7 +8954,7 @@
     },
     {
       "name": "Constructors and Inheritance",
-      "url": "https://docs.google.com/presentation/d/1AG3dZ85l3CdkKpqQt7jpaEPYZnKzBjWsa48NBmhk6Eo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1DDPX-5n2LiunDvzbcUXQ3Tqgti34AkU3cnanZ-hcrc0/edit?usp=sharing",
       "key": "constructors_and_inheritance",
       "properties": {
         "audience": "Verified Teacher",
@@ -8380,18 +8962,6 @@
       },
       "seeding_key": {
         "resource.key": "constructors_and_inheritance"
-      }
-    },
-    {
-      "name": "Creating a Scanner Object",
-      "url": "https://youtu.be/43PYFmSyupI",
-      "key": "creating_a_scanner_object",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "creating_a_scanner_object"
       }
     },
     {
@@ -8442,7 +9012,7 @@
     },
     {
       "name": "Investigate: Variables",
-      "url": "https://docs.google.com/document/d/1O2zdaXF33IlsRcnUS91MKyXOMVbuiA7jtirM4FT58WE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1mK3B1PzuWYeUQoR6oki3oFyt97Ij8hd19atlnX9xI4I/edit?usp=drive_link",
       "key": "investigate_variables",
       "properties": {
         "audience": "Student",
@@ -8526,6 +9096,19 @@
       }
     },
     {
+      "name": "Designing with UML",
+      "url": "https://docs.google.com/document/d/1qsGd2JgJUdxE2BNSbCfTnL7vAzrjb71ygQB5vhKrXuE/edit?usp=sharing",
+      "key": "planning_programs_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "planning_programs_1"
+      }
+    },
+    {
       "name": "Printing Objects",
       "url": "https://docs.google.com/presentation/d/1BXiVLhATwrh5F9kgzZ50PkTjneYRytsoyBKkOI1w6uE/edit?usp=sharing",
       "key": "printing_objects",
@@ -8535,6 +9118,31 @@
       },
       "seeding_key": {
         "resource.key": "printing_objects"
+      }
+    },
+    {
+      "name": "Program Design",
+      "url": "https://docs.google.com/presentation/d/1s0MaMaaeI2u-9ZuglcSpXLbGQQDPCBA3-25ksu1JRDY/edit?usp=sharing",
+      "key": "program_design",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "program_design"
+      }
+    },
+    {
+      "name": "Program Design Extra Practice",
+      "url": "https://docs.google.com/document/d/1sk8EARaEMczFgs4Tq19-pIlEd7L-itmMf2z9zJgBBV8/edit?usp=sharing",
+      "key": "program_design_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "program_design_extra_practice"
       }
     },
     {
@@ -8598,7 +9206,7 @@
     },
     {
       "name": "The this Keyword",
-      "url": "https://docs.google.com/presentation/d/1t5Spp8xU2AT4z0tjofAIbqiU1UKpWbu0ZiL1cfkpX68/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1wJ08k0bROdjs9Rf3vYqEQY4TtBQr3GFKqGQkj9iL08Y/edit?usp=sharing",
       "key": "the_this_keyword",
       "properties": {
         "audience": "Verified Teacher",
@@ -8673,6 +9281,19 @@
       }
     },
     {
+      "name": "Program Design Guided Notes",
+      "url": "https://docs.google.com/document/d/15fmUWT_taAS_mO2w9rwzviZEH1wmIySzGpgqCSN-mmk/edit?usp=drive_link",
+      "key": "u2l1_guided_notes_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l1_guided_notes_1"
+      }
+    },
+    {
       "name": "No-Argument Constructors Extra Practice",
       "url": "https://docs.google.com/document/d/1p38v4gNRGC59tpf9NIFkhWsd_LXSe_YRR3iZSG86978/edit?usp=drive_link",
       "key": "u2l2_extra_practice",
@@ -8725,8 +9346,8 @@
       }
     },
     {
-      "name": "U2L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Y78NwHdU_x7GF9r2NTQLDJBwLvFWaCb5rdNDTEkwHbg/edit?usp=sharing",
+      "name": "The this Keyword Extra Practice",
+      "url": "https://docs.google.com/document/d/1owWD1fz4fLnSC9mjIbDrRDBihtuSVvHxASG-Xxd_0yc/edit?usp=drive_link",
       "key": "u2l4_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8738,8 +9359,8 @@
       }
     },
     {
-      "name": "U2L4 Guided Notes",
-      "url": "https://docs.google.com/document/d/1-TyvtYHUvLeIGoV-h-skAJrgQaNDpkq0GuSBoJaBJp8/edit?usp=sharing",
+      "name": "The this Keyword Guided Notes",
+      "url": "https://docs.google.com/document/d/1IuJYszbstZG81l3_qN9LAujIwbCAbov9QWs4fkeILd4/edit?usp=drive_link",
       "key": "u2l4_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8751,8 +9372,8 @@
       }
     },
     {
-      "name": "U2L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/10U-0aKiKWWWncQy19YbQgtfTNSGoTNNWitIJ3cHyPIo/edit?usp=sharing",
+      "name": "Constructors and Inheritance Extra Practice",
+      "url": "https://docs.google.com/document/d/1L3b7oDzD7i_TR3GhwOl1S-j6ks7dVKpSXhXiJ2IC9bI/edit?usp=drive_link",
       "key": "u2l5_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8764,8 +9385,8 @@
       }
     },
     {
-      "name": "U2L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/1u9o-UW2K2v44y5EXR3MjLghOrsQHlL1qgYQ9iQD_rAw/edit?usp=sharing",
+      "name": "Constructors and Inheritance Guided Notes",
+      "url": "https://docs.google.com/document/d/19pv-4euqU5eGMLFBKMUA-rnckd8efwmqzrr_2OwwHz4/edit?usp=drive_link",
       "key": "u2l5_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8777,8 +9398,8 @@
       }
     },
     {
-      "name": "U2L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1tYy7S2iSLLQr9XXPqhxoBxIpYvXzUXExFVE6m6Qi_6E/edit?usp=sharing",
+      "name": "Variables Extra Practice",
+      "url": "https://docs.google.com/document/d/18mpujNBex1NhLomXCqK5QoV1iGkHgfGjJJ0eseOtVOM/edit?usp=drive_link",
       "key": "u2l6_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8790,7 +9411,7 @@
       }
     },
     {
-      "name": "U2L6 Guided Notes",
+      "name": "Variables Guided Notes",
       "url": "https://docs.google.com/document/d/1g0ajb0DVUAdjsUr-uKRnWnTnI17mvSIo-jA0ZtXnvAE/edit?usp=sharing",
       "key": "u2l6_guided_notes",
       "properties": {
@@ -8803,8 +9424,8 @@
       }
     },
     {
-      "name": "U2L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Rx_Fytg8fWVFWk0j_GlY8pYJ9gXl98tZAWQkdRxcExI/edit?usp=sharing",
+      "name": "[KEY] Accessor Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/12daDOCVM94AdVenv2tppsbkedWud0OBsKSUnSWNUFHc/edit?usp=drive_link",
       "key": "u2l7_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8815,8 +9436,8 @@
       }
     },
     {
-      "name": "U2L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/18lALPpviDdV1Wrd2YX351I5KKimfYvorYLN6ejUJpeo/edit?usp=sharing",
+      "name": "Accessor Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/19n-fig1tdLMIiNakv_tHPtfgIfF8F2cQ7A-Ujaptrq4/edit?usp=drive_link",
       "key": "u2l7_extra_practice_1",
       "properties": {
         "audience": "Student",
@@ -8828,8 +9449,8 @@
       }
     },
     {
-      "name": "U2L7 Guided Notes",
-      "url": "https://docs.google.com/document/d/1tr2pozUOiLptDGYxlbLwW12Tehy1y9GLS_RnDKpk8EU/edit?usp=sharing",
+      "name": "Accessor Methods Guided Notes",
+      "url": "https://docs.google.com/document/d/1CuVi-BUxjuMyf6DLfgOls-3fhb5mf_dYfma8DLL406A/edit?usp=drive_link",
       "key": "u2l7_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8905,6 +9526,36 @@
       }
     },
     {
+      "name": "Unit 2 Guide",
+      "url": "https://docs.google.com/document/d/1SNfkjeoR_OBs81KduIcl5Q8pv-jvhweRx-UaIP6C25A/edit?usp=sharing",
+      "key": "unit_2_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "name": "Unit 2 Overview",
+      "url": "https://docs.google.com/document/d/1M6kxvorrMd4ANEsNqdfTZskeGG3kcHiBpARdjBei9Mc/edit?usp=drive_link",
+      "key": "unit_2_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_overview"
+      }
+    },
+    {
+      "name": "Unit 2 Slides",
+      "url": "https://docs.google.com/presentation/d/1sO8P5jqgHZdJEyYjeB80a2UDO_nTjcqcpRa6Fg7VOGo/edit?usp=sharing",
+      "key": "unit_2_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_slides"
+      }
+    },
+    {
       "name": "Unit 2 Study Guide",
       "url": "https://docs.google.com/document/d/1od6k6IJUwRbC-f4Lr2RqP3m9vhf_W262PJ3sfS7xkxg/edit?usp=drive_link",
       "key": "unit_2_study_guide",
@@ -8915,6 +9566,26 @@
       },
       "seeding_key": {
         "resource.key": "unit_2_study_guide"
+      }
+    },
+    {
+      "name": "Unit 2 Study Guide",
+      "url": "https://docs.google.com/document/d/1od6k6IJUwRbC-f4Lr2RqP3m9vhf_W262PJ3sfS7xkxg/edit?usp=drive_link",
+      "key": "unit_2_study_guide_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_study_guide_1"
+      }
+    },
+    {
+      "name": "Unit 2 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/1ufgS11bJ5dZ1_PGpgmMda_IRujvHO2DK4hsGUrAlzzQ/edit?usp=sharing",
+      "key": "unit_2_word_wall_cards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_word_wall_cards"
       }
     },
     {
@@ -8930,8 +9601,46 @@
       }
     },
     {
+      "name": "User Input",
+      "url": "https://docs.google.com/presentation/d/1SMIrHtQuYfRAs_vrpt9knrVF1c1eCGtEqxVYynqUdo0/edit?usp=sharing",
+      "key": "user_input",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "user_input"
+      }
+    },
+    {
+      "name": "User Input Extra Practice",
+      "url": "https://docs.google.com/document/d/17ogRzAgaSnZaZL_1TieE2Fv-1zjKwQHde6MViIR41Y4/edit?usp=drive_link",
+      "key": "user_input_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "user_input_extra_practice"
+      }
+    },
+    {
+      "name": "User Input Guided Notes",
+      "url": "https://docs.google.com/document/d/1LBckqVp9G-FA096WPfv7glYB-kcXyyFYbSQIkXpnN_k/edit?usp=sharing",
+      "key": "user_input_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "user_input_guided_notes"
+      }
+    },
+    {
       "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1ZA123gAg_DXKdO9c05fMDHE7YsUmzMxuJXAsyatW57U/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1YXbUOvNqo9MhpphRKXjKTtpvEcbzTg1SVsaA666AL9M/edit?usp=sharing",
       "key": "variables",
       "properties": {
         "audience": "Verified Teacher",
@@ -8959,12 +9668,6 @@
       "seeding_key": {
         "lesson.key": "Accessor Methods",
         "resource.key": "accessor_methods_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "resource.key": "creating_a_scanner_object"
       }
     },
     {
@@ -9470,9 +10173,105 @@
         "lesson.key": "Variables",
         "resource.key": "variables"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_u2l1_guided_notes_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_program_design_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "planning_programs_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "program_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "program_design_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u2l1_guided_notes_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_exemplar_user_input_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_user_input_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "user_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "user_input_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "user_input_guided_notes"
+      }
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_2_guide",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "creating_and_using_word_walls_1",
@@ -9482,6 +10281,36 @@
     {
       "seeding_key": {
         "resource.key": "programming_levels_in_csa_2",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_guide",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_overview",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_slides",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_study_guide_1",
+        "script.name": "csa2-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_word_wall_cards",
         "script.name": "csa2-pilot-2025"
       }
     }
@@ -9849,6 +10678,16 @@
       "seeding_key": {
         "vocabulary.key": "truncate"
       }
+    },
+    {
+      "key": "uml_diagram",
+      "word": "UML Diagram",
+      "definition": "A standard way of visualizing the design of a program that displays class names, attributes, behaviors and relationships to other classes.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "uml_diagram"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -9856,18 +10695,6 @@
       "seeding_key": {
         "lesson.key": "Accessor Methods",
         "vocabulary.key": "accessor_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "vocabulary.key": "application_program_interface_api_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "vocabulary.key": "library"
       }
     },
     {
@@ -10067,6 +10894,24 @@
         "lesson.key": "Variables",
         "vocabulary.key": "reference_type"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "uml_diagram"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "application_program_interface_api_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "library"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -10184,6 +11029,16 @@
       }
     },
     {
+      "key": "605b1cc7-410a-47cf-bb7c-7d0a2b63b7e2",
+      "properties": {
+        "description": "Use the `Scanner` class to obtain input from the user"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "605b1cc7-410a-47cf-bb7c-7d0a2b63b7e2"
+      }
+    },
+    {
       "key": "677c5ebb-fb32-4087-be38-f0795f2a80f2",
       "properties": {
         "description": "Write a `toString()` method to display information about the state of an object to the console"
@@ -10191,6 +11046,16 @@
       "seeding_key": {
         "lesson.key": "Printing Objects",
         "objective.key": "677c5ebb-fb32-4087-be38-f0795f2a80f2"
+      }
+    },
+    {
+      "key": "69e5de90-d4a4-4aaa-a783-c177a5d16389",
+      "properties": {
+        "description": "Derive a plain text description of classes from a problem description."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "69e5de90-d4a4-4aaa-a783-c177a5d16389"
       }
     },
     {
@@ -10291,6 +11156,16 @@
       "seeding_key": {
         "lesson.key": "Store Management Project",
         "objective.key": "c66ce25f-8c73-4aff-8bfe-4152b1d741c0"
+      }
+    },
+    {
+      "key": "cff10911-ad6e-48b6-9ddc-5138c44020e6",
+      "properties": {
+        "description": "Create a UML diagram from a problem description."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "cff10911-ad6e-48b6-9ddc-5138c44020e6"
       }
     },
     {

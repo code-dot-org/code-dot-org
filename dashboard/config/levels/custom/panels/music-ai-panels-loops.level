@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-08-30T18:28:27.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_v2",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/2843a02314c84e8efb37bfcfa95138ba-loop.gif",
+        "text": "###Repeat a sound\n\nChoose a sound and set the number of times to play it using a repeat block.\n",
+        "key": "musiclab_intro_panels_playtogether_pdx-a0d88b4a-e9a8-4641-8ec9-3ce98e7a1cc4"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30T18:28:27.732+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_repeat\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_repeat\"},{\"changed_at\":\"2024-08-30 18:28:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

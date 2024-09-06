@@ -3,14 +3,16 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# User Stories
+# Retriveal vs. System Prompting
 
-### Key Concept - When to apply retrieval vs system prompting in certain situations.
+<img src="https://images.code.org/001ae1417346c6259d791fa73bb783b9-Screenshot 2024-08-30 at 2.55.55 PM.png" alt="cat from the pixel activity" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
+
+#### When to use retrieval and when to use system prompting is a key concept from this unit, and is reinforced in Lesson 18. System prompts can change how a chatbot behaves, but can’t change what it knows about or the content it says; and retrieval can add information to a chatbot and give it additional knowledge to reference, but doesn’t change it’s behavior or tone.
 
 ## Up Next!
 
-#### User stories
+#### Work through one of three User Stories from Lesson 18, while paying attention to retriveal vs. system prompting.
 
 
 MARKDOWN

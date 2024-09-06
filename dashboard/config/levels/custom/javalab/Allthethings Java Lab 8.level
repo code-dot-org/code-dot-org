@@ -1,5 +1,10 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2021-08-19T22:28:55.000Z",
+  "level_num": "custom",
+  "user_id": 22,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -10,13 +15,13 @@
         "text": "// This is a sample of what a standalone level could look like \n// for Java Lab. Java Lab standalone levels will be Theater\n// levels without instructions.\n\npublic class MyClass {\n  public static void main(String[] args) {\n    System.out.println(\"Hello World!\");\n  }\n}\n",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ],
+    "ai_tutor_available": "true",
+    "submittable": "false"
   },
-  "game_id": 68,
-  "created_at": "2021-08-12T15:53:20.000Z",
-  "level_num": "custom",
-  "user_id": 22,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-08-12 15:56:03 +0000\",\"changed\":[],\"changed_by_id\":22,\"changed_by_email\":\"jessica+localtest@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-12 15:56:03 +0000\",\"changed\":[],\"changed_by_id\":22,\"changed_by_email\":\"jessica+localtest@code.org\"},{\"changed_at\":\"2024-09-06 00:23:16 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
 }]]></config>
 </Javalab>

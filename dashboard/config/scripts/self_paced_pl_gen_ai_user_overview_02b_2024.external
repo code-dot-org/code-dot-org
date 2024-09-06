@@ -6,7 +6,9 @@ markdown <<MARKDOWN
 # User-Centered Design Overview
 
 
-#### 
+#### This unit guides students through the principles of user-centered design, emphasizing the role of generative AI in solving real-world problems. Students will start by identifying core issues within their communities and explore how AI can address these challenges through design thinking strategies like the 5 Whys. The unit progresses to cover user testing and feedback, where students act as testers and decision-makers for chatbot applications, wrestling with the ethical implications of AI deployment. Students will also explore the process of fine-tuning AI models, observing how different training data can drastically change a model's behavior. The unit concludes with a collaborative exploration of AI's societal impact, where students create guidelines for responsible AI use. 
+
+#### By the end of the unit, students will apply these insights to a final project where they design a chatbot tailored to address a specific community issue, incorporating user feedback and reflecting on the ethical dimensions of their design.
 
 
 MARKDOWN
