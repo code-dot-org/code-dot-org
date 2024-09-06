@@ -1,72 +1,76 @@
-import {render, screen, fireEvent, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
 
-const DEFAULT_PROPS = {
-  fieldNames: {
-    ncesSchoolId: 'ncesSchoolId',
-    schoolName: 'schoolName',
-  },
-};
-
-const fakeSchools = [
-  {nces_id: 123456, name: 'First School'},
-  {nces_id: 111111, name: 'Other School'},
-  {nces_id: 987654, name: 'Duplicate School Name'},
-  {nces_id: 876543, name: 'Duplicate School Name'},
-  {nces_id: 999999, name: 'ABC Academy'},
-];
-
-const arraysEqual = (a, b) => {
-  if (a === b) return true;
-  if (a === null || b === null) return false;
-  if (a.length !== b.length) return false;
-  for (var i = 0; i < a.length; ++i) {
-    if (a[i] !== b[i]) return false;
-  }
-  return true;
-};
+// Mock i18n functions
+jest.mock('@cdo/locale', () => ({
+  enterYourSchoolZip: jest.fn(() => 'Enter your school zip'),
+  zipInvalidMessage: jest.fn(() => 'Zip code is invalid'),
+}));
 
 describe('SchoolZipSearch', () => {
-  let fetchStub;
+  const mockSetSchoolZip = jest.fn();
 
   beforeEach(() => {
-    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
-    fetchStub.mockReturnValue(
-      Promise.resolve(new Response(JSON.stringify(fakeSchools)))
+    jest.clearAllMocks();
+  });
+
+  it('should render with initial props', () => {
+    render(
+      <SchoolZipSearch
+        fieldNames={{schoolZip: 'schoolZip'}}
+        schoolZip="12345"
+        setSchoolZip={mockSetSchoolZip}
+        schoolZipIsValid={true}
+      />
     );
+
+    expect(screen.getByLabelText('Enter your school zip')).toBeInTheDocument();
+    expect(screen.getByDisplayValue('12345')).toBeInTheDocument();
   });
 
-  afterEach(() => {
-    fetchStub.mockRestore();
+  it('should call setSchoolZip on zip code change', () => {
+    render(
+      <SchoolZipSearch
+        fieldNames={{schoolZip: 'schoolZip'}}
+        schoolZip=""
+        setSchoolZip={mockSetSchoolZip}
+        schoolZipIsValid={true}
+      />
+    );
+
+    fireEvent.change(screen.getByLabelText('Enter your school zip'), {
+      target: {value: '67890'},
+    });
+
+    expect(mockSetSchoolZip).toHaveBeenCalledWith('67890');
   });
 
-  function renderDefault(propOverrides = {}) {
-    render(<SchoolZipSearch {...DEFAULT_PROPS} {...propOverrides} />);
-  }
+  it('should display an error message when the zip code is invalid', () => {
+    render(
+      <SchoolZipSearch
+        fieldNames={{schoolZip: 'schoolZip'}}
+        schoolZip="12345"
+        setSchoolZip={mockSetSchoolZip}
+        schoolZipIsValid={false}
+      />
+    );
 
-  it('displays the school list sorted alphabetically', async () => {
-    renderDefault();
-    fireEvent.change(screen.getByRole('combobox'), {
-      target: {value: 'selectASchool'},
-    });
-    await waitFor(() => {
-      expect(
-        arraysEqual(
-          [...screen.queryAllByRole('option')].map(o => o.innerText),
-          [
-            'Select a school',
-            'Not listed here - click to add',
-            "I don't teach CS in a school setting",
-            'ABC Academy',
-            'Duplicate School Name',
-            'Duplicate School Name',
-            'First School',
-            'Other School',
-          ]
-        )
-      );
-    });
+    expect(screen.getByText('Zip code is invalid')).toBeInTheDocument();
+  });
+
+  it('should not display an error message when the zip code is valid', () => {
+    render(
+      <SchoolZipSearch
+        fieldNames={{schoolZip: 'schoolZip'}}
+        schoolZip="12345"
+        setSchoolZip={mockSetSchoolZip}
+        schoolZipIsValid={true}
+      />
+    );
+
+    expect(screen.queryByText('Zip code is invalid')).not.toBeInTheDocument();
   });
 });
