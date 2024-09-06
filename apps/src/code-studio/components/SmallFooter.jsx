@@ -14,10 +14,8 @@ import React from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog';
 import i18n from '@cdo/locale';
-
-import color from '../../util/color';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -32,14 +30,6 @@ export default class SmallFooter extends React.Component {
     // encode string of html
     i18nDropdown: PropTypes.string,
     copyrightInBase: PropTypes.bool.isRequired,
-    copyrightStrings: PropTypes.shape({
-      thanks: PropTypes.string.isRequired,
-      help_from_html: PropTypes.string.isRequired,
-      art_from_html: PropTypes.string.isRequired,
-      code_from_html: PropTypes.string.isRequired,
-      trademark: PropTypes.string.isRequired,
-      built_on_github: PropTypes.string.isRequired,
-    }),
     baseCopyrightString: PropTypes.string,
     baseMoreMenuString: PropTypes.string.isRequired,
     baseStyle: PropTypes.object,
@@ -174,35 +164,10 @@ export default class SmallFooter extends React.Component {
         width: '100%',
         boxSizing: 'border-box',
       },
-      copyright: {
-        display: this.state.menuState === MenuState.COPYRIGHT ? 'flex' : 'none',
-        position: 'absolute',
-        bottom: 0,
-        width: 650,
-        maxWidth: '50%',
-        minWidth: this.state.baseWidth,
-      },
-      copyrightXClose: {
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        padding: 0,
-        color: color.neutral_dark30,
-        backgroundColor: color.background_gray,
-        cursor: 'pointer',
-        border: 'none',
-      },
-      copyrightScrollArea: {
-        maxHeight: this.props.phoneFooter ? 210 : undefined,
-        marginBottom: this.state.baseHeight - 1,
-      },
       moreMenu: {
         display: this.state.menuState === MenuState.EXPANDED ? 'block' : 'none',
         bottom: this.state.baseHeight,
         width: this.state.baseWidth,
-      },
-      awsLogo: {
-        width: 190,
       },
       version: {
         margin: 'auto 0',
@@ -229,6 +194,10 @@ export default class SmallFooter extends React.Component {
         >
           {this.renderI18nDropdown()}
           {this.renderCopyright()}
+          <CopyrightDialog
+            isOpen={this.state.menuState === MenuState.COPYRIGHT}
+            closeModal={this.clickBaseCopyright}
+          />
           {!!this.props.unitYear && yearIsNumeric && (
             <p style={styles.version}>
               <span className="version-caption">{i18n.version()}: </span>
@@ -236,51 +205,6 @@ export default class SmallFooter extends React.Component {
             </p>
           )}
           {this.renderMoreMenuButton()}
-        </div>
-        <div id="copyright-flyout" style={styles.copyright}>
-          <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
-            <h4>{this.props.baseCopyrightString}</h4>
-            <SafeMarkdown
-              markdown={decodeURIComponent(this.props.copyrightStrings.thanks)}
-            />
-            <p>{this.props.copyrightStrings.help_from_html}</p>
-            <SafeMarkdown
-              markdown={decodeURIComponent(
-                this.props.copyrightStrings.art_from_html
-              )}
-            />
-            <SafeMarkdown
-              markdown={decodeURIComponent(
-                this.props.copyrightStrings.code_from_html
-              )}
-            />
-            <p>{this.props.copyrightStrings.built_on_github}</p>
-            <a href="https://aws.amazon.com/what-is-cloud-computing">
-              <img
-                src="/shared/images/Powered-By_logo-horiz_RGB.png"
-                alt="Powered by AWS Cloud Computing"
-                style={styles.awsLogo}
-              />
-            </a>
-            <SafeMarkdown
-              markdown={decodeURIComponent(
-                this.props.copyrightStrings.trademark
-              )}
-            />
-            <Button
-              aria-label={i18n.closeDialog()}
-              icon={{
-                iconName: 'xmark',
-                iconStyle: 'light',
-              }}
-              id="x-close-copyright"
-              isIconOnly
-              onClick={() => this.setState({menuState: MenuState.MINIMIZED})}
-              size="l"
-              style={styles.copyrightXClose}
-              type="primary"
-            />
-          </div>
         </div>
         {this.renderMoreMenu(styles)}
       </div>

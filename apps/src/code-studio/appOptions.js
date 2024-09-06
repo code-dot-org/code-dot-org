@@ -53,7 +53,6 @@
  * @property {ReportOptions} report
  * @property {boolean} isUS
  * @property {string} send_to_phone_url
- * @property {CopyrightStrings} copyrightStrings
  * @property {string} teacherMarkdown
  * @property {DialogOptions} dialog
  * @property {string} locale
@@ -190,7 +189,6 @@
  */
 
 /**
- * @typedef {Object} CopyrightStrings
  * @property {string} thanks
  * @property {string} help_from_html
  * @property {string} art_from_html

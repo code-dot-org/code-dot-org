@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Link from '@cdo/apps/componentLibrary/link';
+import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -23,7 +25,7 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
   const getDialogBody = () => {
     return (
       <div id="copyright-scroll-area">
-        <h3>{i18n.copyright()}</h3>
+        <Heading3>{i18n.copyright()}</Heading3>
         <hr />
         <SafeMarkdown
           markdown={i18n.copyright_thanks({
@@ -32,7 +34,7 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
             team_link: pegasus('about/team'),
           })}
         />
-        <p>{i18n.copyright_specialRecognition()}</p>
+        <BodyTwoText>{i18n.copyright_specialRecognition()}</BodyTwoText>
         <SafeMarkdown
           markdown={i18n.copyright_artFrom({
             current_year: new Date().getFullYear(),
@@ -44,14 +46,14 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
               'https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html',
           })}
         />
-        <p>{i18n.copyright_builtOnGithub()}</p>
-        <a href="https://aws.amazon.com/what-is-cloud-computing">
+        <BodyTwoText>{i18n.copyright_builtOnGithub()}</BodyTwoText>
+        <Link href="https://aws.amazon.com/what-is-cloud-computing">
           <img
             src="/shared/images/Powered-By_logo-horiz_RGB.png"
             alt="Powered by AWS Cloud Computing"
             className={styles.awsLogo}
           />
-        </a>
+        </Link>
         <SafeMarkdown
           markdown={i18n.copyright_trademark({
             current_year: new Date().getFullYear(),
