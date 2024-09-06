@@ -201,6 +201,7 @@ Dashboard::Application.routes.draw do
       patch '/users/parent_email', to: 'registrations#set_parent_email'
       patch '/users/user_type', to: 'registrations#set_user_type'
       post '/users/begin_creating_user', to: 'registrations#begin_creating_user'
+      post '/users/finish_creating_user', to: 'registrations#finish_creating_user'
       get '/users/cancel', to: 'registrations#cancel'
       post '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
       get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'

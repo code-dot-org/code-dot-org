@@ -10,10 +10,14 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 
+import {navigateToHref} from '../utils';
+
 import locale from './locale';
 import {
-  DISPLAY_NAME_SESSION_KEY,
-  EMAIL_OPT_IN_SESSION_KEY,
+  ACCOUNT_TYPE_SESSION_KEY,
+  SCHOOL_ID_SESSION_KEY,
+  SCHOOL_ZIP_SESSION_KEY,
+  SCHOOL_NAME_SESSION_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -28,7 +32,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
     setName(newName);
-    sessionStorage.setItem(DISPLAY_NAME_SESSION_KEY, newName);
 
     if (newName === '') {
       setShowNameError(true);
@@ -37,13 +40,27 @@ const FinishTeacherAccount: React.FunctionComponent<{
     }
   };
 
-  const onEmailOptInChange = (): void => {
-    const newOptInCheckedChoice = !emailOptInChecked;
-    setEmailOptInChecked(newOptInCheckedChoice);
-    sessionStorage.setItem(
-      EMAIL_OPT_IN_SESSION_KEY,
-      `${newOptInCheckedChoice}`
-    );
+  const submitTeacherAccount = () => {
+    $.ajax({
+      method: 'POST',
+      url: '/users/finish_creating_user',
+      contentType: 'application/json',
+      data: JSON.stringify({
+        user: {
+          user_type: sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY),
+          name: name,
+          email_preference_opt_in: emailOptInChecked,
+          school: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
+          school_info_attributes: {
+            school_id: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
+            school_zip: sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY),
+            school_name: sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY),
+          },
+        },
+      }),
+    }).done(() => {
+      navigateToHref('/home');
+    });
   };
 
   return (
@@ -80,7 +97,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             name="userEmailOptIn"
             label={locale.get_informational_emails()}
             checked={emailOptInChecked}
-            onChange={onEmailOptInChange}
+            onChange={() => setEmailOptInChecked(!emailOptInChecked)}
           />
           <BodyThreeText className={style.emailOptInFootnote}>
             <strong>{locale.note()}</strong>{' '}
@@ -93,7 +110,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
           className={style.finishSignUpButton}
           color={buttonColors.purple}
           type="primary"
-          onClick={() => console.log('FINISH SIGN UP')}
+          onClick={submitTeacherAccount}
           text={locale.go_to_my_account()}
           iconRight={{
             iconName: 'arrow-right',
