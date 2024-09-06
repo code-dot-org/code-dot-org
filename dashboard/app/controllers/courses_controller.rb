@@ -200,12 +200,12 @@ class CoursesController < ApplicationController
 
   private def redirect_unit_group(unit_group)
     # Return nil if unit_group is nil or we know the user can view the version requested.
-    return nil if !unit_group || unit_group.can_view_version?(current_user)
+    return nil if !unit_group || unit_group.can_view_version?(current_user, request.locale)
 
     # Redirect the user to the latest assigned unit_group in this family, or to the latest unit_group in this family if none
     # are assigned.
     redirect_unit_group = UnitGroup.latest_assigned_version(unit_group.family_name, current_user)
-    redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name)
+    redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name, locale: request.locale)
 
     # Do not redirect if we are already on the correct unit_group.
     return nil if redirect_unit_group == unit_group
