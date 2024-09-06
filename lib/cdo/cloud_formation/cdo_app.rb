@@ -191,7 +191,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
         {
           AcmCertificateArn: certificate_arn,
           MinimumProtocolVersion: 'TLSv1.2_2021',
-          SslSupportMethod: domain == 'code.org' ? 'vip' : 'sni-only'
+          SslSupportMethod: 'sni-only'
         }
       )
     end
