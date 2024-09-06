@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-gen-ai",
-    "serialized_at": "2024-09-04 20:43:43 UTC",
+    "serialized_at": "2024-09-05 19:19:20 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -334,7 +334,7 @@
       "key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec",
       "position": 2,
       "properties": {
-        "progression_name": "Equity (5 min)"
+        "progression_name": "Ethics (5 min)"
       },
       "seeding_key": {
         "activity_section.key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec",
@@ -1974,7 +1974,7 @@
         "level_keys": [
           "self-paced-pl-gen-ai-resources-equity_01_2024"
         ],
-        "progression": "Equity (5 min)"
+        "progression": "Ethics (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -1999,7 +1999,7 @@
         "level_keys": [
           "self-paced-pl-gen-ai-resources-equity_02_2024"
         ],
-        "progression": "Equity (5 min)"
+        "progression": "Ethics (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -2024,7 +2024,7 @@
         "level_keys": [
           "self-paced-pl-gen-ai-resources-equity_03_2024"
         ],
-        "progression": "Equity (5 min)"
+        "progression": "Ethics (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -2071,6 +2071,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-resources-assessments_02_2024"
+        ],
         "progression": "Assessments (5 min)"
       },
       "bonus": false,

@@ -1,0 +1,43 @@
+name 'datascience-U2L9-CFU_2024-pilot'
+title 'Check for Understanding'
+
+description 'Consider the following DataFrame `df`:'
+question 'You want to find out the minimum, maximum, and total sales across all the weeks for the entire dataset. Which of the following code snippets will correctly calculate these statistics?'
+wrong 'https://images.code.org/76784609eb79312866b9c9141fa6721a-B.png'
+right 'https://images.code.org/e8d80d25bd8eb4d43dbc8d26b1f4b57b-A.png'
+wrong 'https://images.code.org/74db0bbf54829727b5c2f3101c5e8f9a-C.png'
+wrong 'https://images.code.org/becbbc6e7179c965861969f22d3f1ecf-D.png'
+
+allow_multiple_attempts false
+
+
+markdown <<MARKDOWN
+```
+
+data = {"Fruit": ["Apple", "Banana", "Apple", "Orange", "Banana", "Apple", "Orange"],
+		"Sales": [50, 60, 45, 30, 55, 65, 40]}
+
+df = pd.DataFrame(data)
+
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* `result = df['Sales'].agg(['min', 'max', 'sum'])` correctly uses the `agg()` function to apply min, max, and sum operations on the 'Sales' column, returning a Series with these three values.
+
+* `result = df['Sales'].min().max().sum()` incorrectly chains the `min()`, `max()`, and `sum()` functions, which is not valid syntax for calculating these statistics individually.
+
+* ```
+min_sales = df['Sales'].min()
+max_sales = df['Sales'].max()
+total_sales = df['Sales'].sum()
+result = (min_sales, max_sales, total_sales)
+```
+The option above correctly calculates the min, max, and sum separately and combines them into a tuple, but it’s more verbose than necessary.
+
+* ```
+result = df['Sales'].agg(['min', 'max'])
+result['sum'] = df['Sales'].sum()
+```
+The option above correctly calculates min and max but incorrectly adds the sum as a separate step.
+MARKDOWN
