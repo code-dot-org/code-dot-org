@@ -10,6 +10,8 @@ social:
 
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::HOC_ACTIVITIES_PAGE_VISITED
+
 #fullwidth
   = view :header
   %section.banner
@@ -48,8 +50,6 @@ social:
 #tutorials
 
 .clear{style: "clear: both"}
-
-= view :analytics_event_log_helper, event_name: AnalyticsConstants::HOC_ACTIVITIES_PAGE_VISITED
 
 :javascript
 

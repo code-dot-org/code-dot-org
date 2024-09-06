@@ -16,6 +16,7 @@ import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/Google
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
+import AssessmentsAnnouncementDialog from '@cdo/apps/templates/rubrics/AssessmentsAnnouncementDialog';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import color from '@cdo/apps/util/color';
 import {
@@ -63,6 +64,7 @@ class UnitOverview extends React.Component {
     isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
     participantAudience: PropTypes.string,
+    showAiAssessmentsAnnouncement: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -134,6 +136,7 @@ class UnitOverview extends React.Component {
       isProfessionalLearningCourse,
       publishedState,
       participantAudience,
+      showAiAssessmentsAnnouncement,
     } = this.props;
 
     const displayRedirectDialog =
@@ -217,6 +220,11 @@ class UnitOverview extends React.Component {
           includeReviewStates={isCsdOrCsp}
         />
         <GoogleClassroomAttributionLabel />
+        {showAiAssessmentsAnnouncement ? (
+          <AssessmentsAnnouncementDialog />
+        ) : (
+          <div id="uitest-no-ai-assessments-announcement" />
+        )}
       </div>
     );
   }
