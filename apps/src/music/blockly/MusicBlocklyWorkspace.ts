@@ -18,7 +18,8 @@ import {
   TRIGGER_FIELD,
 } from './constants';
 import {setUpBlocklyForMusicLab} from './setup';
-import {getToolbox} from './toolbox';
+import {getToolbox} from './toolbox/toolbox';
+import {ToolboxData} from './toolbox/types';
 
 const experiments = require('@cdo/apps/util/experiments');
 
@@ -76,7 +77,7 @@ export default class MusicBlocklyWorkspace {
     container: HTMLElement,
     onBlockSpaceChange: (e: Abstract) => void,
     isReadOnlyWorkspace: boolean,
-    toolbox: {[key: string]: string[]},
+    toolbox: ToolboxData | undefined,
     isRtl: boolean
   ) {
     if (this.workspace) {
@@ -85,7 +86,7 @@ export default class MusicBlocklyWorkspace {
 
     this.container = container;
 
-    const toolboxBlocks = getToolbox(toolbox);
+    const toolboxBlocks = getToolbox(getBlockMode(), toolbox);
 
     this.workspace = Blockly.inject(container, {
       toolbox: toolboxBlocks,
