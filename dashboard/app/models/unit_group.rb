@@ -497,9 +497,12 @@ class UnitGroup < ApplicationRecord
     if locale_str&.start_with?('en')
       stable_course_versions.first
     else
-      stable_course_versions.find do |cv|
+      localized_version = stable_course_versions.find do |cv|
         cv.default_unit_group_units.all? {|unit_group_unit| unit_group_unit.script.supported_locales&.include?(locale_str)}
       end
+      # Return latest English version if no version has been translated to the
+      # requested language
+      localized_version || stable_course_versions.first 
     end
   end
 
