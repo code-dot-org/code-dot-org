@@ -3,6 +3,7 @@ import GoogleBlockly, {
   FieldNumberValidator,
 } from 'blockly/core';
 
+import {EMPTY_OPTION} from '../constants';
 import {
   ExtendedBlockSvg,
   ExtendedConnection,
@@ -165,5 +166,21 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
   doValueUpdate_(newValue: number) {
     super.doValueUpdate_(newValue);
     this.angleHelper?.animateAngleChange(newValue);
+  }
+
+  /**
+   * Ensure that the input value is a valid number (must fulfill the
+   * constraints placed on the field).
+   *
+   * @param newValue The input value.
+   * @returns A valid number, our special case '???' value, or null if invalid
+   */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  protected override doClassValidation_(newValue: any): number | null {
+    if (newValue === EMPTY_OPTION) {
+      return newValue; // Return the original value if it's our special case "???"
+    }
+
+    return super.doClassValidation_(newValue);
   }
 }

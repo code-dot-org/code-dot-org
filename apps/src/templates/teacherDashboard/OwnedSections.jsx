@@ -86,17 +86,13 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const {isPlSections, sectionIds, hiddenSectionIds} = this.props;
+    const {sectionIds, hiddenSectionIds} = this.props;
     const {viewHidden} = this.state;
 
     const hasSections = sectionIds.length > 0;
 
     return (
-      <div
-        className={
-          isPlSections ? 'uitest-owned-pl-sections' : 'uitest-owned-sections'
-        }
-      >
+      <div>
         {hasSections && (
           <div>
             <LtiFeedbackBanner />
