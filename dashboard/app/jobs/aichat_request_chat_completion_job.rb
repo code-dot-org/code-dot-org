@@ -39,7 +39,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
-  def self.create_comprehend_client
+  private def create_comprehend_client
     Aws::Comprehend::Client.new(
       region: aws_config['region'] || "us-east-1",
       credentials: Aws::Credentials.new(
@@ -53,7 +53,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     comprehend_client = create_comprehend_client
 
     # Check input for profanity and PII
-    user_profanity = find_profanity(new_message[:chatMessageText], locale, comprehend_client)
+    user_profanity = comprehend_toxicity(new_message[:chatMessageText], locale, comprehend_client)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_profanity}"] if user_profanity
 
     user_pii = find_pii(new_message[:chatMessageText], locale)
@@ -63,7 +63,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
     # Check output for profanity and PII. Report to HoneyBadger if the model returned profanity.
-    model_profanity = find_profanity(response, locale, comprehend_client)
+    model_profanity = comprehend_toxicity(response, locale, comprehend_client)
     if model_profanity
       Honeybadger.notify(
         'Profanity returned from aichat model (blocked before reaching student)',
@@ -90,6 +90,11 @@ class AichatRequestChatCompletionJob < ApplicationJob
       }
     )
     puts "Comprehend response: #{response}"
+    puts "response.result_list #{response.result_list}"
+    puts "response.result_list[0].labels #{response.result_list[0].labels}"
+    puts "response.result_list[0].labels[0].name #{response.result_list[0].labels[0].name}"
+    puts "response.result_list[0].labels[0].score #{response.result_list[0].labels[0].score}"
+    puts "response.result_list[0].toxicity #{response.result_list[0].toxicity}"
   end
 
   # Check the given text for PII
