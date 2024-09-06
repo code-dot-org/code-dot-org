@@ -40,13 +40,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   private def create_comprehend_client
-    Aws::Comprehend::Client.new(
-      region: aws_config['region'] || "us-east-1",
-      credentials: Aws::Credentials.new(
-        aws_config['access_key_id'],
-        aws_config['access_key_secret']
-      )
-    )
+    Aws::Comprehend::Client.new
   end
 
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
