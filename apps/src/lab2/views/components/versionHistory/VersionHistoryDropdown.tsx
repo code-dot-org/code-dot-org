@@ -83,12 +83,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
   useEffect(() => {
     if (isOpen && !previousIsOpen.current && selectedVersion !== '') {
-      console.log({
-        isOpen,
-        previousIsOpen: previousIsOpen.current,
-        viewingOldVersion,
-        selectedVersion,
-      });
       // We only do anything here if we just re-opened the dropdown.
       // If we are currently viewing an old version (this happens if
       // the user x'd out of the dropdown, but did not cancel), scroll to the selected version.
