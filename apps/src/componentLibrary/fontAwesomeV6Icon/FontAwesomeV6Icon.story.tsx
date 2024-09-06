@@ -54,11 +54,6 @@ ClassNameBrandsIconExampleFontAwesomeV6Icon.args = {
       className: 'fa-brands',
       title: 'microsoft',
     },
-    {
-      iconStyle: 'light',
-      iconName: 'brands fa-microsoft',
-      title: 'microsoft',
-    },
   ],
 };
 
