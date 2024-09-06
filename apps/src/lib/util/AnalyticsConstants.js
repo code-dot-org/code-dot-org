@@ -237,6 +237,9 @@ const EVENTS = {
   TA_RUBRIC_TOUR_COMPLETE: 'User viewed all of TA Rubric product tour',
   TA_RUBRIC_EVIDENCE_TOOLTIP_HOVERED: 'TA Rubric Evidence Tooltip Hovered',
   TA_RUBRIC_EVIDENCE_GOTO_CLICKED: 'TA Rubric Evidence Line Number Clicked',
+  TA_RUBRIC_ANNOUNCEMENT_VIEWED: 'TA Rubric Announcement Viewed',
+  TA_RUBRIC_ANNOUNCEMENT_CLICKED: 'TA Rubric Announcement Clicked',
+  TA_RUBRIC_ANNOUNCEMENT_DISMISSED: 'TA Rubric Announcement Dismissed',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -247,6 +250,14 @@ const EVENTS = {
   AI_TUTOR_SUGGESTED_PROMPT_VALIDATION: 'Validation',
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
+
+  // Javalab
+  JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
+  JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
+  JAVALAB_COMPILATION_ERROR: 'Javalab Compilation Error',
+  JAVALAB_COMPILATION_SUCCESS: 'Javalab Compilation Success',
+  JAVALAB_TEST_PASSED: 'Javalab Test Passed',
+  JAVALAB_TEST_FAILED: 'Javalab Test Failed',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
@@ -369,6 +380,9 @@ const EVENTS = {
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
+  SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
+  SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
+    'Unauthorized user attempts to submit aichat request and fails',
 };
 
 const EVENT_GROUP_NAMES = {

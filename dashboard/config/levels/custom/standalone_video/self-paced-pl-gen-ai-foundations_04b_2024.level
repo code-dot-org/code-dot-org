@@ -13,10 +13,10 @@
     "parent_level_id": 28811,
     "name_suffix": "_23",
     "encrypted": "false",
-    "long_instructions": "## Lesson 2: Input & Training Data\r\n\r\n#### In this lesson, students explore how AI systems recognize and categorize words using data. They discuss the vast data sources needed for language models and update their graphic organizer to reflect the **input step** of generative AI.\r\n\r\n## To Do:\r\n#### Watch the video below to learn more about the input step.\r\n"
+    "long_instructions": "## Lesson 2: Input & Training Data\r\n\r\n#### In this lesson, students explore how AI systems recognize and categorize words using data. They discuss the vast data sources needed for language models and update their graphic organizer to reflect the **input step** of generative AI.\r\n\r\n## To Do:\r\n#### Watch the video below to learn more about input.\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-30T16:41:29.764+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations_02_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations_02_2024\"},{\"changed_at\":\"2024-08-30 16:49:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 16:49:25 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 16:49:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-30T16:41:29.764+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations_02_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations_02_2024\"},{\"changed_at\":\"2024-08-30 16:49:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 16:49:25 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 16:49:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 15:21:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

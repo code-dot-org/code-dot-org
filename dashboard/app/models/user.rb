@@ -163,6 +163,7 @@ class User < ApplicationRecord
     lms_landing_opted_out
     failed_attempts
     locked_at
+    has_seen_ai_assessments_announcement
   )
 
   attr_accessor(
@@ -1556,6 +1557,10 @@ class User < ApplicationRecord
   def student_can_access_ai_chat?
     teachers.any?(&:teacher_can_access_ai_chat?) &&
       sections_as_student.any?(&:assigned_gen_ai?)
+  end
+
+  def has_aichat_access?
+    teacher_can_access_ai_chat? || student_can_access_ai_chat?
   end
 
   # Students
