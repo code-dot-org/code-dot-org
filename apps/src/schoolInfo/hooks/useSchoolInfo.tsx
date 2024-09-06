@@ -1,112 +1,24 @@
 import {useEffect, useMemo, useRef, useState} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
   SCHOOL_COUNTRY,
-  SCHOOL_ZIP_SEARCH as SCHOOL_ZIP_SEARCH_URL,
   SELECT_A_SCHOOL,
   US_COUNTRY_CODE,
   ZIP_REGEX,
 } from '../constants';
-
-export interface SchoolInfoInitialState {
-  schoolId?: string;
-  country?: string;
-  schoolName?: string;
-  schoolZip?: string;
-  usIp?: boolean;
-}
-
-export interface SchoolDropdownOption {
-  value: string;
-  text: string;
-}
-
-export interface SchoolInfoRequestWithSchoolId {
-  school_id: string;
-}
-
-export interface SchoolInfoRequestWithoutSchoolId {
-  country: string;
-  school_name?: string;
-  zip?: string;
-}
-
-export interface SchoolInfoAttributes {
-  school_info_attributes:
-    | SchoolInfoRequestWithSchoolId
-    | SchoolInfoRequestWithoutSchoolId;
-}
-
-export interface SchoolInfoRequest {
-  user: SchoolInfoAttributes;
-}
-
-export function sendAnalyticsEvent(
-  eventName: string,
-  data: Record<string, string>
-) {
-  analyticsReporter.sendEvent(eventName, data, PLATFORMS.BOTH);
-}
-
-export function constructSchoolOption(school: {
-  nces_id: number;
-  name: string;
-}): SchoolDropdownOption {
-  return {
-    value: school.nces_id.toString(),
-    text: `${school.name}`,
-  };
-}
-
-export function buildSchoolData({
-  schoolId,
-  country,
-  schoolName,
-  schoolZip,
-}: {
-  schoolId: string;
-  country: string;
-  schoolName: string;
-  schoolZip: string;
-}): SchoolInfoRequest | undefined {
-  // If we have an NCES id, _only_ send that - everything else will be
-  // backfilled by records on the server.
-  if (
-    schoolId &&
-    ![NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(schoolId)
-  ) {
-    return {
-      user: {
-        school_info_attributes: {
-          school_id: schoolId,
-        },
-      },
-    };
-  }
-
-  if (country) {
-    return {
-      user: {
-        school_info_attributes: {
-          country,
-          school_name: schoolName,
-          zip: country === US_COUNTRY_CODE ? schoolZip : undefined,
-        },
-      },
-    };
-  }
-}
+import {SchoolDropdownOption, SchoolInfoInitialState} from '../types';
+import {constructSchoolOption} from '../utils/constructSchoolOption';
+import {fetchSchools} from '../utils/fetchSchools';
+import {sendAnalyticsEvent} from '../utils/sendAnalyticsEvent';
 
 export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   const mounted = useRef(false);
@@ -239,42 +151,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     mounted.current = true;
   }, []);
 
-  const updateSchoolInfo = async ({
-    formUrl,
-    authTokenName,
-    authTokenValue,
-  }: {
-    formUrl: string;
-    authTokenName: string;
-    authTokenValue: string;
-  }) => {
-    const schoolData = buildSchoolData({
-      schoolId,
-      country,
-      schoolName,
-      schoolZip,
-    });
-    if (!schoolData) {
-      return;
-    }
-    const response = await fetch(formUrl, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': await getAuthenticityToken(),
-      },
-      body: JSON.stringify({
-        _method: 'patch',
-        [authTokenName]: authTokenValue,
-        ...schoolData,
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error('School info update failed');
-    }
-  };
-
   return {
     schoolId,
     country,
@@ -286,6 +162,5 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     setCountry,
     setSchoolName,
     setSchoolZip,
-    updateSchoolInfo,
   };
 }

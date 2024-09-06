@@ -12,6 +12,7 @@ import SchoolDataInputs from '../templates/SchoolDataInputs';
 import color from '../util/color';
 
 import {useSchoolInfo} from './hooks/useSchoolInfo';
+import {updateSchoolInfo} from './utils/updateSchoolInfo';
 
 export default function SchoolInfoInterstitial({
   scriptData: {
@@ -54,10 +55,14 @@ export default function SchoolInfoInterstitial({
     );
 
     try {
-      await schoolInfo.updateSchoolInfo({
+      await updateSchoolInfo({
         formUrl,
         authTokenName,
         authTokenValue,
+        schoolId: schoolInfo.schoolId,
+        country: schoolInfo.country,
+        schoolName: schoolInfo.schoolName,
+        schoolZip: schoolInfo.schoolZip,
       });
 
       analyticsReporter.sendEvent(
