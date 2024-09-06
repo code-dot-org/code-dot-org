@@ -1,4 +1,4 @@
-import {NON_SCHOOL_OPTIONS, US_COUNTRY_CODE} from '../constants';
+import {NON_SCHOOL_OPTIONS_ARRAY, US_COUNTRY_CODE} from '../constants';
 import {SchoolInfoRequest} from '../types';
 
 export function buildSchoolData({
@@ -14,7 +14,7 @@ export function buildSchoolData({
 }): SchoolInfoRequest | undefined {
   // If we have an NCES id, _only_ send that - everything else will be
   // backfilled by records on the server.
-  if (schoolId && !NON_SCHOOL_OPTIONS.includes(schoolId)) {
+  if (schoolId && !NON_SCHOOL_OPTIONS_ARRAY.includes(schoolId)) {
     return {
       user: {
         school_info_attributes: {
