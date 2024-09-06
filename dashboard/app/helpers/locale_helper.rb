@@ -34,6 +34,17 @@ module LocaleHelper
     options
   end
 
+  def options_for_locale_dropdown
+    options = []
+    Dashboard::Application::LOCALES.each do |locale, data|
+      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
+      name = data[:native]
+      name = (data[:debug] ? "#{name} DBG" : name)
+      options << {value: locale, text: name}
+    end
+    options
+  end
+
   def options_for_locale_code_select
     options = []
     I18n.available_locales.each do |locale|
