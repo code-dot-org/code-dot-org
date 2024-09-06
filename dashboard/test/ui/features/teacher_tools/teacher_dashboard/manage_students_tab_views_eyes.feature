@@ -28,11 +28,12 @@ Feature: Using the manage students tab of the teacher dashboard
     Given I create a teacher named "Teacher"
     And I create a new student section and go home
     And I save the section id from row 0 of the section table
-    And I create a teacher-associated under-13 sponsored student in Colorado named "Student 1" after CAP start
-    And I create a teacher-associated sponsored student named "Student 2"
+    And I create a teacher-associated under-13 student in Colorado named "Student 1" for teacher "Teacher" after CAP start
+    And I create a teacher-associated student named "Student 2" for teacher "Teacher"
     And I sign in as "Teacher"
     And I navigate to manage students for the section I saved
 
+    # Test the US state Bulk Set modal
     When I click selector "#uitest-manage-students-table th:contains(State) i"
     And I click selector ".pop-up-menu-item:contains(Add state for all students)"
     Then I wait until element "#us-state-column-bulk-set-modal" is visible
@@ -49,12 +50,15 @@ Feature: Using the manage students tab of the teacher dashboard
 
     When I select the "AL" option in dropdown "us-state"
     And I click selector "#us-state-column-bulk-set-modal button:contains(Add)"
-    Then element "#uitest-manage-students-table tr:has(input[value='Student 1']) td:has(select[name='usState'] option[value='AL']:selected)" is visible
+    Then I wait until element "#us-state-column-bulk-set-modal" is not visible
+    And element "#uitest-manage-students-table tr:has(input[value='Student 1']) td:has(select[name='usState'] option[value='AL']:selected)" is visible
     And element "#uitest-manage-students-table tr:has(input[value='Student 2']) td:has(select[name='usState'] option[value='AL']:selected)" is visible
 
     When I click selector "#uitest-manage-students-table span:contains(Save all)"
+    # Wait until the name input fields are changed to plain text, indicating that the student has been saved
     And I wait until element "#uitest-manage-students-table tr:contains(Student 1)" is visible
     And I wait until element "#uitest-manage-students-table tr:contains(Student 2)" is visible
+    # Check usState cells after reloading the page to ensure they has been saved in the database
     Then I reload the page
     And element "#uitest-manage-students-table tr:contains(Student 1) td:contains(AL)" is visible
     And element "#uitest-manage-students-table tr:contains(Student 2) td:contains(AL)" is visible
