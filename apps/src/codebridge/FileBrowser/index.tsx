@@ -2,6 +2,8 @@ import {
   useCodebridgeContext,
   getNextFileId,
   getNextFolderId,
+  findFiles,
+  findSubFolders,
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
@@ -108,8 +110,25 @@ const InnerFileBrowser = React.memo(
 
     const handleDeleteFolder = (folderId: string) => {
       const folderName = folders[folderId].name;
+      const projectFolders = Object.values(folders);
+      const projectFiles = Object.values(files);
+      const folderCount = findSubFolders(folderId, projectFolders).length;
+      const fileCount = findFiles(
+        folderId,
+        projectFiles,
+        projectFolders
+      ).length;
+
       const title = `Are you sure?`;
-      const message = `Are you sure you want to delete the folder ${folderName}? This will delete all files and folders inside ${folderName}.`;
+      let message = `Are you sure you want to delete the folder "${folderName}"?`;
+      if (fileCount || folderCount) {
+        message +=
+          ' This will also delete ' +
+          (fileCount ? `${fileCount} file(s)` : '') +
+          (fileCount && folderCount ? ' and ' : '') +
+          (folderCount ? `${folderCount} folder(s)` : '') +
+          ' inside "${folderName}"';
+      }
       dialogControl?.showDialog({
         type: DialogType.GenericConfirmation,
         handleConfirm: () => deleteFolder(folderId),
