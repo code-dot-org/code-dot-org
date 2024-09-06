@@ -14,6 +14,7 @@ import {
   resetToCurrentVersion,
   setViewingOldVersion,
   setRestoredOldVersion,
+  setPreviousVersionSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -169,13 +170,15 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const onVersionChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>, isLatest: boolean) => {
       setSelectedVersion(e.target.value);
-      if (isLatest) {
+      if (e.target.value === INITIAL_VERSION_ID) {
+        dispatch(setPreviousVersionSource(startSource));
+      } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {
         dispatch(loadVersion({versionId: e.target.value}));
       }
     },
-    [dispatch]
+    [dispatch, startSource]
   );
 
   // Function called when clicking 'cancel'. This will reset the project to the current version
@@ -185,7 +188,10 @@ const VersionHistoryDropdown: React.FunctionComponent<
     const versionBeingViewed = versionList.find(
       version => version.versionId === selectedVersion
     );
-    if (versionBeingViewed && !versionBeingViewed.isLatest) {
+    if (
+      selectedVersion === INITIAL_VERSION_ID ||
+      (versionBeingViewed && !versionBeingViewed.isLatest)
+    ) {
       dispatch(resetToCurrentVersion());
     }
     closeDropdown();
