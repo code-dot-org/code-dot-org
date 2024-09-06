@@ -3,7 +3,6 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import msg from '@cdo/gamelab/locale';
 
@@ -74,11 +73,7 @@ export default class GameLab extends P5Lab {
   }
 
   runButtonClick() {
-    // For AI Rubrics Pilot
-    const inRubricsPilot =
-      experiments.isEnabled('ai-rubrics') ||
-      experiments.isEnabled('non-ai-rubrics');
-    if (inRubricsPilot && hasScriptData('script[data-rubricdata]')) {
+    if (hasScriptData('script[data-rubricdata]')) {
       const rubricData = getScriptData('rubricdata');
       const teacherId = getStore().getState().currentUser.userId;
       const {rubric, studentLevelInfo} = rubricData;

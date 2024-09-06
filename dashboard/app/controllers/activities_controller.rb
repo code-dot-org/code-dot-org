@@ -122,10 +122,9 @@ class ActivitiesController < ApplicationController
         track_progress_in_session
       end
 
-      # If a student in the pilot is submitting work on an AI-enabled level, and their teachers haven't opted-out, trigger the AI evaluation job.
-      is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: @script_level&.script, experiment_name: 'ai-rubrics') && Policies::Ai.ai_rubrics_enabled_for_script_level?(current_user, @script_level)
+      # If a student is submitting work on an AI-enabled level, and their teachers haven't opted-out, trigger the AI evaluation job.
       is_level_ai_enabled = AiRubricConfig.ai_enabled?(@script_level)
-      if is_ai_experiment_enabled && is_level_ai_enabled && params[:submitted] == 'true'
+      if is_level_ai_enabled && params[:submitted] == 'true'
         metadata = {
           'studentId' => current_user.id,
           'unitName' => @script_level.script.name,
