@@ -160,6 +160,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           selectedValue={String(selectedSectionId)}
           className={styles.sectionDropdown}
           name="section-dropdown"
+          color="gray"
         />
         {navbarComponents.map(component => component)}
       </div>
