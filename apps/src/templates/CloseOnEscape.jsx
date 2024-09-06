@@ -7,7 +7,7 @@ import React from 'react';
 const CloseOnEscape = ({handleClose, className, children}) => {
   const handleKeyDown = event => {
     if (event.key === 'Escape') {
-      handleClose();
+      handleClose(event);
     }
   };
 

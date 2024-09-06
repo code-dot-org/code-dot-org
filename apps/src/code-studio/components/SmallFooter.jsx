@@ -6,7 +6,6 @@ https://github.com/code-dot-org/code-dot-org/blob/b2efc7ca8331f8261ebd55a326e23f
 
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/no-danger */
-import $ from 'jquery';
 import _ from 'lodash';
 import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
@@ -73,33 +72,6 @@ export default class SmallFooter extends React.Component {
     });
   };
 
-  minimizeOnClickAnywhere(event) {
-    // The first time we click anywhere, hide any open children
-    $(document.body).one(
-      'click',
-      function (event) {
-        // menu copyright has its own click handler
-        if (event.target === this.refs.menuCopyright) {
-          return;
-        }
-
-        this.setState({
-          menuState: MenuState.MINIMIZING,
-          moreOffset: 0,
-        });
-
-        // Create a window during which we can't show again, so that clicking
-        // on copyright doesnt immediately hide/reshow
-        setTimeout(
-          function () {
-            this.setState({menuState: MenuState.MINIMIZED});
-          }.bind(this),
-          200
-        );
-      }.bind(this)
-    );
-  }
-
   clickBase = e => {
     if (this.props.copyrightInBase) {
       // When we have multiple items in our base row, ignore clicks to the
@@ -123,13 +95,18 @@ export default class SmallFooter extends React.Component {
     }
 
     this.setState({menuState: MenuState.COPYRIGHT});
-    this.minimizeOnClickAnywhere();
   };
 
   clickMenuCopyright = event => {
     event.stopPropagation();
     this.setState({menuState: MenuState.COPYRIGHT});
-    this.minimizeOnClickAnywhere();
+  };
+
+  closeCopyrightDialog = e => {
+    if (e !== null) {
+      e.stopPropagation();
+    }
+    this.setState({menuState: MenuState.MINIMIZED});
   };
 
   clickBaseMenu = e => {
@@ -147,7 +124,6 @@ export default class SmallFooter extends React.Component {
     }
 
     this.setState({menuState: MenuState.EXPANDED});
-    this.minimizeOnClickAnywhere();
   };
 
   render() {
@@ -196,7 +172,7 @@ export default class SmallFooter extends React.Component {
           {this.renderCopyright()}
           <CopyrightDialog
             isOpen={this.state.menuState === MenuState.COPYRIGHT}
-            closeModal={this.clickBaseCopyright}
+            closeModal={this.closeCopyrightDialog}
           />
           {!!this.props.unitYear && yearIsNumeric && (
             <p style={styles.version}>
