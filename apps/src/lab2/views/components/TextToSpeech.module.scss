@@ -1,11 +1,10 @@
 @import 'color.scss';
-@import 'font.scss';
 
 .playButton {
   float: right;
   position: relative;
   width: 10px;
-  color: #5f6872;
+  color: $neutral_dark80;
   left: 7px;
   cursor: pointer;
 }
