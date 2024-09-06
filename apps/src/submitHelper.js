@@ -24,11 +24,13 @@ let studioApp, onPuzzleComplete, unsubmitUrl;
  * @param {Object} params.studioApp - The studioApp itself.
  * @param {function} params.onPuzzleComplete - Function to call when submitting.
  * @param {string} params.unsubmitUrl - URL to post to when unsubmitting.
+ * @param {boolean} params.aiRubric - Boolean to disable confirmation dialog on AI rubric levels
  */
 export function initializeSubmitHelper(params) {
   studioApp = params.studioApp;
   onPuzzleComplete = params.onPuzzleComplete;
   unsubmitUrl = params.unsubmitUrl;
+  aiRubric = params.aiRubric;
 
   const submitButton = document.getElementById('submitButton');
   if (submitButton) {
@@ -59,11 +61,15 @@ export function onSubmitComplete(response) {
  * When submit button is pressed, confirm, and then do it.
  */
 function onPuzzleSubmit() {
-  showConfirmationDialog({
-    title: commonMsg.submitYourProject(),
-    text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: () => onPuzzleComplete(true),
-  });
+  if (aiRubric) {
+    onPuzzleComplete(true);
+  } else {
+    showConfirmationDialog({
+      title: commonMsg.submitYourProject(),
+      text: commonMsg.submitYourProjectConfirm(),
+      onConfirm: () => onPuzzleComplete(true),
+    });
+  }
 }
 
 /**

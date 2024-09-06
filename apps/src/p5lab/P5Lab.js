@@ -401,6 +401,7 @@ export default class P5Lab {
         studioApp: this.studioApp_,
         onPuzzleComplete: this.onPuzzleComplete.bind(this),
         unsubmitUrl: this.level.unsubmitUrl,
+        aiRubric: true,
       });
 
       this.setCrosshairCursorForPlaySpace();
