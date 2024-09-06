@@ -6,6 +6,6 @@ export function constructSchoolOption(school: {
 }): SchoolDropdownOption {
   return {
     value: school.nces_id.toString(),
-    text: `${school.name}`,
+    text: school.name,
   };
 }
