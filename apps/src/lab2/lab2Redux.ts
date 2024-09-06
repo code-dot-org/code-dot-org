@@ -26,6 +26,7 @@ import {
   setProjectUpdatedSaving,
   setProjectUpdatedSaved,
 } from '../code-studio/projectRedux';
+import {queryParams, updateQueryParam} from '../code-studio/utils';
 import {RootState} from '../types/redux';
 import HttpClient, {NetworkError} from '../util/HttpClient';
 
@@ -478,14 +479,11 @@ async function setUpAndLoadProject(
   // Figure out if we should reset to start sources. This happens if the url parameter
   // ?reset=true is present.
   // This parameter is only used by levelbuilders.
-  const url = new URL(document.URL);
-  const params = new URLSearchParams(url.search);
+  const resetParam = queryParams('reset');
   let resetToStartSources = false;
-  if (params.get('reset')) {
+  if (resetParam === 'true') {
     // Remove the reset parameter from the url so we don't reset again.
-    params.delete('reset');
-    url.search = params.toString();
-    window.history.pushState({}, '', url);
+    updateQueryParam('reset', undefined);
     resetToStartSources = true;
   }
   return await projectManager.load(resetToStartSources);
