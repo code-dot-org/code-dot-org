@@ -1,6 +1,8 @@
 class AichatRequestChatCompletionJob < ApplicationJob
   queue_as :default
 
+  DEFAULT_TOXICITY_THRESHOLD = 0.25
+
   before_enqueue do |job|
     request = job.arguments.first[:request]
     request.update!(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:QUEUED])
@@ -43,12 +45,17 @@ class AichatRequestChatCompletionJob < ApplicationJob
     Aws::Comprehend::Client.new
   end
 
+  private def get_toxicity_threshold
+    DCDO.get("aws_comprehend_toxicity_threshold", DEFAULT_TOXICITY_THRESHOLD)
+  end
+
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
     comprehend_client = create_comprehend_client
 
-    # Check input for profanity and PII
-    user_profanity = comprehend_toxicity(new_message[:chatMessageText], locale, comprehend_client)
-    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_profanity}"] if user_profanity
+    # Moderate user input for toxicity and PII
+    user_comprehend_response = comprehend_toxicity(new_message[:chatMessageText], locale, comprehend_client)
+    puts "user_comprehend_response: #{user_comprehend_response}"
+    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_comprehend_response}"] if user_comprehend_response[:toxicity] > get_toxicity_threshold
 
     user_pii = find_pii(new_message[:chatMessageText], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
@@ -56,17 +63,18 @@ class AichatRequestChatCompletionJob < ApplicationJob
     # Make the request
     response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
-    # Check output for profanity and PII. Report to HoneyBadger if the model returned profanity.
-    model_profanity = comprehend_toxicity(response, locale, comprehend_client)
-    if model_profanity
+    # Moderate model output for toxicity and PII. Report to HoneyBadger if the model returned toxicity.
+    model_comprehend_response = comprehend_toxicity(response, locale, comprehend_client)
+    puts "model_comprehend_response: #{model_comprehend_response}"
+    if model_comprehend_response[:toxicity] > get_toxicity_threshold
       Honeybadger.notify(
-        'Profanity returned from aichat model (blocked before reaching student)',
+        'Toxicity returned from aichat model (blocked before reaching student)',
         context: {
           response: response,
-          flagged_content: model_profanity,
+          flagged_content: model_comprehend_response,
         }
       )
-      return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], "Profanity detected in model output: #{model_profanity}"]
+      return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], "Profanity detected in model output: #{model_comprehend_response}"]
     end
 
     model_pii = find_pii(response, locale)
@@ -77,18 +85,18 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   # Moderate given text for inappropriate/toxic content using AWS Comprehend client.
   private def comprehend_toxicity(text, locale, comprehend_client)
-    response = comprehend_client.detect_toxic_content(
+    comprehend_response = comprehend_client.detect_toxic_content(
       {
         text_segments: [{text: text}],
         language_code: locale,
       }
     )
-    puts "Comprehend response: #{response}"
-    puts "response.result_list #{response.result_list}"
-    puts "response.result_list[0].labels #{response.result_list[0].labels}"
-    puts "response.result_list[0].labels[0].name #{response.result_list[0].labels[0].name}"
-    puts "response.result_list[0].labels[0].score #{response.result_list[0].labels[0].score}"
-    puts "response.result_list[0].toxicity #{response.result_list[0].toxicity}"
+    categories = comprehend_response.result_list[0].labels
+    {
+      text: text,
+      toxicity: comprehend_response.result_list[0].toxicity,
+      max_category: categories.max_by(&:score),
+    }
   end
 
   # Check the given text for PII
