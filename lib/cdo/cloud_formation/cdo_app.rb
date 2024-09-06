@@ -190,7 +190,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
           [subdomain] + CDO.partners.map {|x| subdomain(nil, x)},
         {
           AcmCertificateArn: certificate_arn,
-          MinimumProtocolVersion: 'TLSv1',
+          MinimumProtocolVersion: 'TLSv1.2_2021',
           SslSupportMethod: domain == 'code.org' ? 'vip' : 'sni-only'
         }
       )
