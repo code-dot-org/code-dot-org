@@ -22,7 +22,7 @@ interface BulkSetModalProps {
 const BulkSetModal: React.FC<BulkSetModalProps> = ({
   isOpen = false,
   initVal = '',
-  onClose = () => {},
+  onClose,
   // Provided by redux
   bulkSet,
 }) => {

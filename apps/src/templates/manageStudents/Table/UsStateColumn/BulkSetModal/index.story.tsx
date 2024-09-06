@@ -1,3 +1,4 @@
+import {action} from '@storybook/addon-actions';
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -19,7 +20,7 @@ export default {
 } as Meta;
 
 const Template: StoryFn<typeof BulkUpdateModal> = args => (
-  <BulkUpdateModal isOpen={true} {...args} />
+  <BulkUpdateModal isOpen={true} {...args} onClose={action('onClose')} />
 );
 
 export const Default = Template.bind({});
