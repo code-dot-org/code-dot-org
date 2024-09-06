@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, {useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {
   navigateToNextLevel,
   sendSubmitReport,
@@ -284,36 +285,39 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           <div
             key={instructionsText}
             id="instructions-text"
-            className={classNames(
-              moduleStyles['bubble-' + theme],
-              moduleStyles.mainInstructions
-            )}
+            className={classNames(moduleStyles['bubble-' + theme])}
           >
-            <div>
+            <div className={moduleStyles.mainInstructions}>
               <i
                 className={classNames(
                   validationIcon,
                   moduleStyles.validationIcon
                 )}
               />
-            </div>
-            <div>
-              {predictSettings?.isPredictLevel && <PredictSummary />}
               <EnhancedSafeMarkdown
                 markdown={instructionsText}
                 className={moduleStyles.markdownText}
                 handleInstructionsTextClick={handleInstructionsTextClick}
               />
-              <PredictQuestion
-                predictSettings={predictSettings}
-                predictResponse={predictResponse}
-                setPredictResponse={response =>
-                  dispatch(setPredictResponse(response))
-                }
-                predictAnswerLocked={predictAnswerLocked}
-              />
             </div>
+            <PredictQuestion
+              predictSettings={predictSettings}
+              predictResponse={predictResponse}
+              setPredictResponse={response =>
+                dispatch(setPredictResponse(response))
+              }
+              predictAnswerLocked={predictAnswerLocked}
+              className={moduleStyles.predictQuestion}
+            />
           </div>
+        )}
+
+        {predictSettings?.isPredictLevel && (
+          <InstructorsOnly>
+            <div className={moduleStyles['bubble-' + theme]}>
+              <PredictSummary />
+            </div>
+          </InstructorsOnly>
         )}
         {renderValidationButton()}
         <ValidationResults className={moduleStyles['bubble-' + theme]} />

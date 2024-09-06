@@ -12,6 +12,7 @@ import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
 
 import {navigateToHref} from '../utils';
@@ -22,6 +23,14 @@ import style from './signUpFlowStyles.module.scss';
 
 const LoginTypeSelection: React.FunctionComponent = () => {
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [confirmPasswordIcon, setConfirmPasswordIcon] = useState('circle-x');
+  const [confirmPasswordIconClass, setConfirmPasswordIconClass] = useState(
+    style.lightGray
+  );
+  const [email, setEmail] = useState('');
+  const [emailIcon, setEmailIcon] = useState('circle-x');
+  const [emailIconClass, setEmailIconClass] = useState(style.lightGray);
   const [authToken, setAuthToken] = useState('');
 
   useEffect(() => {
@@ -36,12 +45,36 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     setPassword(event.target.value);
   };
 
+  const handleConfirmPasswordChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setConfirmPassword(event.target.value);
+    if (event.target.value === password) {
+      setConfirmPasswordIcon('circle-check');
+      setConfirmPasswordIconClass(style.teal);
+    } else {
+      setConfirmPasswordIcon('circle-x');
+      setConfirmPasswordIconClass(style.lightGray);
+    }
+  };
+
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+    if (isEmail(event.target.value)) {
+      setEmailIcon('circle-check');
+      setEmailIconClass(style.teal);
+    } else {
+      setEmailIcon('circle-x');
+      setEmailIconClass(style.lightGray);
+    }
+  };
+
   const finishAccountUrl =
     sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
       ? studio('/users/new_sign_up/finish_teacher_account')
       : studio('/users/new_sign_up/finish_student_account');
   const passwordIcon = password.length >= 6 ? 'circle-check' : 'circle-x';
-  const iconClass = password.length >= 6 ? style.teal : style.lightGray;
+  const passwordIconClass = password.length >= 6 ? style.teal : style.lightGray;
 
   return (
     <div className={style.newSignupFlow}>
@@ -121,31 +154,53 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             {locale.or_sign_up_with_email()}
           </Heading3>
           <div className={style.inputContainer}>
-            <TextField
-              label={locale.email_address()}
-              onChange={() => {}}
-              name="emailInput"
-            />
+            <div>
+              <TextField
+                label={locale.email_address()}
+                value={email}
+                onChange={handleEmailChange}
+                name="emailInput"
+              />
+              <div className={style.validationMessage}>
+                <FontAwesomeV6Icon
+                  className={emailIconClass}
+                  iconName={emailIcon}
+                />
+                <BodyThreeText>{i18n.censusInvalidEmail()}</BodyThreeText>
+              </div>
+            </div>
             <div>
               <TextField
                 label={locale.password()}
                 value={password}
                 onChange={handlePasswordChange}
                 name="passwordInput"
+                //type="password" can update following ACQ-2365
               />
-              <div className={style.passwordMessage}>
+              <div className={style.validationMessage}>
                 <FontAwesomeV6Icon
-                  className={iconClass}
+                  className={passwordIconClass}
                   iconName={passwordIcon}
                 />
                 <BodyThreeText>{locale.minimum_six_chars()}</BodyThreeText>
               </div>
             </div>
-            <TextField
-              label={locale.confirm_password()}
-              onChange={() => {}}
-              name="confirmPasswordInput"
-            />
+            <div>
+              <TextField
+                label={locale.confirm_password()}
+                value={confirmPassword}
+                onChange={handleConfirmPasswordChange}
+                name="confirmPasswordInput"
+                //type="password" can update following ACQ-2365
+              />
+              <div className={style.validationMessage}>
+                <FontAwesomeV6Icon
+                  className={confirmPasswordIconClass}
+                  iconName={confirmPasswordIcon}
+                />
+                <BodyThreeText>{i18n.passwordsMustMatch()}</BodyThreeText>
+              </div>
+            </div>
           </div>
           <Button
             className={style.shortButton}

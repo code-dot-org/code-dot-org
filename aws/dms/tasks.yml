@@ -83,8 +83,9 @@ cron:
 - dashboard.levels_script_levels
 - dashboard.parent_levels_child_levels
 - dashboard.courses
-- dashboard.unit_groups
+- dashboard.course_offerings
 - dashboard.course_scripts
+- dashboard.unit_groups
 - dashboard.survey_results
 - dashboard.sections
 - dashboard.section_instructors
