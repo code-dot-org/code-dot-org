@@ -1,11 +1,11 @@
+// Styles for the 2024 Hour of Code homepage banner on code.org
+
 @import 'breakpoints';
 
-// Styles for the 2024 Hour of Code homepage banner on code.org
 body #hero {
   background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
 }
 
-// Code.org homepage banner
 .hoc-banner.homepage {
   text-align: center;
   line-height: 1.4;
