@@ -57,4 +57,4 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   );
 };
 
-export default VersionHistoryRow;
+export default React.memo(VersionHistoryRow);

@@ -448,6 +448,7 @@ export function getToolbox(toolbox) {
         },
         {
           includeVariables: true,
+          includeFunctions: true,
         }
       );
     case BlockMode.SIMPLE2:

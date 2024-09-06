@@ -5,6 +5,7 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSF",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "tts": true,
@@ -12,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "elem-game-design",
-    "serialized_at": "2024-07-12 15:11:42 UTC",
+    "serialized_at": "2024-09-05 17:00:07 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

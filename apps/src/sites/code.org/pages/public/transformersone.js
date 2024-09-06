@@ -10,14 +10,14 @@ const TRANSFORMERSONE_PROJECTS = [
     channel: 'KRhjKpvWoPIcDPMmvD91NCm23S9SshJH4JQPVh0zkv8',
   },
   {
-    name: 'Alita',
-    key: 'alita',
-    channel: 'qmgtei5u0nYUl1IOl4-3BmZei7Yf_jc080JwOmx2zMI',
+    name: 'Elita',
+    key: 'elita',
+    channel: '-jyvYo6WibyXD0HbMVfiOAl7H28LnP7_0PXR-Sgf6TE',
   },
   {
-    name: 'Bumblebee',
-    key: 'bumblebee',
-    channel: '1rlHhoDtD9uqspF9I7HDJvtYoXehzDXheLD0BOCnfdQ',
+    name: 'Click the Cog',
+    key: 'click_the_cog',
+    channel: '0NalG1oERxEncUaxvibF8ZbccP9tY5qU5Hz7pdGcifA',
   },
   {
     name: 'Optimus Prime',
