@@ -52,7 +52,7 @@
 
 // 2024 soon-hoc hero banner styles
 .hero-banner-basic.hoc-2024 {
-  background: none;
+  background: none; // this overrides the background image from the previous class
   background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
 
   .wrapper {

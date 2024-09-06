@@ -9,6 +9,7 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/hour-of-code-styles.css", rel: "stylesheet", type: "text/css"}
 
+-# Show 2024 HOC banner if hoc_mode is "soon-hoc", otherwise show 2023 banner
 - if hoc_mode == "soon-hoc"
   %section.hero-banner-basic.hoc-2024
     .wrapper.centered.flex-container.align-items-center.flex-direction-column.gap-2
