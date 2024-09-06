@@ -16,7 +16,6 @@ export default function SchoolZipSearch({
   setSchoolZip,
   schoolZipIsValid,
 }) {
-  console.log('🚀 ~ schoolZipIsValid:', schoolZipIsValid);
   const handleZipChange = zip => {
     setSchoolZip(zip);
   };
