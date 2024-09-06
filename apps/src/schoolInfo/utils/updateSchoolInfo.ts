@@ -19,7 +19,6 @@ export async function updateSchoolInfo({
   schoolName: string;
   schoolZip: string;
 }) {
-  console.log('IN UPDATE SCHOOL INFO');
   const schoolData = buildSchoolData({
     schoolId,
     country,
