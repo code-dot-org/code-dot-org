@@ -11,6 +11,7 @@ import BaseDialog from '../templates/BaseDialog';
 import SchoolDataInputs from '../templates/SchoolDataInputs';
 import color from '../util/color';
 
+import {NO_SCHOOL_SETTING} from './constants';
 import {useSchoolInfo} from './hooks/useSchoolInfo';
 import {updateSchoolInfo} from './utils/updateSchoolInfo';
 
@@ -55,6 +56,10 @@ export default function SchoolInfoInterstitial({
     );
 
     try {
+      if (schoolInfo.schoolId === NO_SCHOOL_SETTING) {
+        onClose();
+        return;
+      }
       await updateSchoolInfo({
         formUrl,
         authTokenName,
