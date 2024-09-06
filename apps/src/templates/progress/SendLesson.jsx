@@ -2,7 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+<<<<<<< HEAD
 import firehoseClient from '@cdo/apps/metrics/firehose';
+=======
+>>>>>>> linter fixes.
 import i18n from '@cdo/locale';
 
 import SendLessonDialog from './SendLessonDialog';
