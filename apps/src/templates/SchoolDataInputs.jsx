@@ -4,7 +4,6 @@ import React, {useMemo} from 'react';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
-import {COUNTRIES} from '@cdo/apps/geographyConstants';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
 import i18n from '@cdo/locale';
@@ -15,6 +14,7 @@ import {
   SELECT_A_SCHOOL,
   US_COUNTRY_CODE,
 } from '../schoolInfo/constants';
+import {getCountriesUsFirst} from '../schoolInfo/utils/getCountriesUsFirst';
 
 import style from './school-association.module.scss';
 
@@ -22,24 +22,6 @@ const SEARCH_DEFAULTS = [
   {value: CLICK_TO_ADD, text: i18n.schoolClickToAdd()},
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
-
-export function getCountriesUsFirst() {
-  // Add 'Select a country' and 'United States' to the top of the country list
-  const countries = [
-    {value: 'selectCountry', text: i18n.selectCountry()},
-    {value: US_COUNTRY_CODE, text: i18n.unitedStates()},
-  ];
-
-  // Pull in the rest of the countries after/below
-  const nonUsCountries = COUNTRIES.filter(
-    item => item.label !== US_COUNTRY_CODE
-  );
-
-  for (const nonUsCountry of nonUsCountries) {
-    countries.push({value: nonUsCountry.label, text: nonUsCountry.value});
-  }
-  return countries;
-}
 
 const COUNTRIES_US_FIRST = getCountriesUsFirst();
 
