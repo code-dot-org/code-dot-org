@@ -7,9 +7,6 @@ import i18n from '@cdo/locale';
 
 import style from './school-association.module.scss';
 
-// Controls the logic and components surrounding a zip input box and its error
-// messaging, the api school search filtered on zip, and the school dropdown
-// that search populates.
 export default function SchoolZipSearch({
   fieldNames,
   schoolZip,

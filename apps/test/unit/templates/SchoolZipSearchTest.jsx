@@ -3,12 +3,7 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
-
-// Mock i18n functions
-jest.mock('@cdo/locale', () => ({
-  enterYourSchoolZip: jest.fn(() => 'Enter your school zip'),
-  zipInvalidMessage: jest.fn(() => 'Zip code is invalid'),
-}));
+import i18n from '@cdo/locale';
 
 describe('SchoolZipSearch', () => {
   const mockSetSchoolZip = jest.fn();
@@ -27,7 +22,9 @@ describe('SchoolZipSearch', () => {
       />
     );
 
-    expect(screen.getByLabelText('Enter your school zip')).toBeInTheDocument();
+    expect(
+      screen.getByLabelText(i18n.enterYourSchoolZip())
+    ).toBeInTheDocument();
     expect(screen.getByDisplayValue('12345')).toBeInTheDocument();
   });
 
@@ -41,7 +38,7 @@ describe('SchoolZipSearch', () => {
       />
     );
 
-    fireEvent.change(screen.getByLabelText('Enter your school zip'), {
+    fireEvent.change(screen.getByLabelText(i18n.enterYourSchoolZip()), {
       target: {value: '67890'},
     });
 
@@ -58,7 +55,7 @@ describe('SchoolZipSearch', () => {
       />
     );
 
-    expect(screen.getByText('Zip code is invalid')).toBeInTheDocument();
+    expect(screen.getByText(i18n.zipInvalidMessage())).toBeInTheDocument();
   });
 
   it('should not display an error message when the zip code is valid', () => {
@@ -71,6 +68,8 @@ describe('SchoolZipSearch', () => {
       />
     );
 
-    expect(screen.queryByText('Zip code is invalid')).not.toBeInTheDocument();
+    expect(
+      screen.queryByText(i18n.zipInvalidMessage())
+    ).not.toBeInTheDocument();
   });
 });

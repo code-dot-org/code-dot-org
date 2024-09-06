@@ -1,132 +1,175 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {CLICK_TO_ADD, NO_SCHOOL_SETTING} from '@cdo/apps/schoolInfo/constants';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
-import {NO_SCHOOL_SETTING} from '@cdo/apps/templates/SchoolZipSearch';
 import i18n from '@cdo/locale';
 
 describe('SchoolDataInputs', () => {
-  function renderDefault(propOverrides = {}) {
-    render(<SchoolDataInputs {...propOverrides} />);
-  }
+  const mockSetSchoolId = jest.fn();
+  const mockSetCountry = jest.fn();
+  const mockSetSchoolName = jest.fn();
+  const mockSetSchoolZip = jest.fn();
 
-  it('displays headers in basic component render', () => {
-    renderDefault();
-    expect(screen.queryByText(i18n.censusHeading()));
+  beforeEach(() => {
+    jest.clearAllMocks();
   });
 
-  it('does not display headers if includeHeaders prop is false', () => {
-    renderDefault({includeHeaders: false});
-    expect(screen.queryByText(i18n.censusHeading())).toBeFalsy();
+  it('should render with initial props and default state', () => {
+    render(
+      <SchoolDataInputs
+        schoolId="123"
+        country="US"
+        schoolName="School Name"
+        schoolZip="12345"
+        schoolsList={[{value: '1', text: 'School 1'}]}
+        schoolZipIsValid={true}
+        setSchoolId={mockSetSchoolId}
+        setCountry={mockSetCountry}
+        setSchoolName={mockSetSchoolName}
+        setSchoolZip={mockSetSchoolZip}
+      />
+    );
+
+    expect(screen.getByLabelText(i18n.whatCountry())).toBeInTheDocument();
+    expect(screen.getByText(i18n.censusHeading())).toBeInTheDocument();
+    expect(
+      screen.getByText(i18n.schoolInfoInterstitialTitle())
+    ).toBeInTheDocument();
+    expect(screen.getByText(i18n.selectASchool())).toBeInTheDocument();
+    expect(screen.getAllByText(i18n.noSchoolSetting())).toHaveLength(2);
   });
 
-  it('does not display zip input until United States is selected as country', () => {
-    renderDefault({usIp: false});
-    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeFalsy();
-    fireEvent.change(screen.getByRole('combobox')[0], {target: {value: 'US'}});
-    expect(screen.queryByText(i18n.enterYourSchoolZip()));
-  });
+  it('should call setCountry when country dropdown changes', () => {
+    render(
+      <SchoolDataInputs
+        schoolId="123"
+        country="US"
+        schoolName="School Name"
+        schoolZip="12345"
+        schoolsList={[{value: '1', text: 'School 1'}]}
+        schoolZipIsValid={true}
+        setSchoolId={mockSetSchoolId}
+        setCountry={mockSetCountry}
+        setSchoolName={mockSetSchoolName}
+        setSchoolZip={mockSetSchoolZip}
+      />
+    );
 
-  it('does not ask for zip, asks instead for name if not US', () => {
-    renderDefault();
-    fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: {value: 'UK'},
+    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
+      target: {value: 'CA'},
     });
-    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeFalsy();
-    expect(screen.queryByText(i18n.schoolOrganizationQuestion()));
+
+    expect(mockSetCountry).toHaveBeenCalledWith('CA');
   });
 
-  it('automatically displays Zip field if US IP address is detected', () => {
-    renderDefault({usIp: true});
-    expect(screen.queryByText(i18n.enterYourSchoolZip()));
+  it('should render SchoolZipSearch when country is US', () => {
+    render(
+      <SchoolDataInputs
+        schoolId="123"
+        country="US"
+        schoolName="School Name"
+        schoolZip="12345"
+        schoolsList={[{value: '1', text: 'School 1'}]}
+        schoolZipIsValid={true}
+        setSchoolId={mockSetSchoolId}
+        setCountry={mockSetCountry}
+        setSchoolName={mockSetSchoolName}
+        setSchoolZip={mockSetSchoolZip}
+      />
+    );
+
+    expect(
+      screen.getByLabelText(i18n.enterYourSchoolZip())
+    ).toBeInTheDocument();
   });
 
-  it('does not show Name field if US IP address is detected', () => {
-    renderDefault({usIp: true});
-    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBeFalsy();
+  it('should call setSchoolId when school dropdown changes', () => {
+    render(
+      <SchoolDataInputs
+        schoolId="1"
+        country="US"
+        schoolName="School Name"
+        schoolZip="12345"
+        schoolsList={[
+          {value: '1', text: 'School 1'},
+          {value: '2', text: 'School 2'},
+        ]}
+        schoolZipIsValid={true}
+        setSchoolId={mockSetSchoolId}
+        setCountry={mockSetCountry}
+        setSchoolName={mockSetSchoolName}
+        setSchoolZip={mockSetSchoolZip}
+      />
+    );
+
+    fireEvent.change(screen.getByLabelText(i18n.selectYourSchool()), {
+      target: {value: '2'},
+    });
+
+    expect(mockSetSchoolId).toHaveBeenCalledWith('2');
   });
 
-  it('does not show Name field if no IP address is detected', () => {
-    renderDefault({usIp: undefined});
-    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBeFalsy();
+  it('should render SchoolNameInput and "Return to results" button when country is US and inputManually is true', () => {
+    render(
+      <SchoolDataInputs
+        schoolId={CLICK_TO_ADD}
+        country="US"
+        schoolName="School Name"
+        schoolZip="12345"
+        schoolsList={[{value: '1', text: 'School 1'}]}
+        schoolZipIsValid={true}
+        setSchoolId={mockSetSchoolId}
+        setCountry={mockSetCountry}
+        setSchoolName={mockSetSchoolName}
+        setSchoolZip={mockSetSchoolZip}
+      />
+    );
+
+    expect(screen.getByDisplayValue('School Name')).toBeInTheDocument();
+    expect(screen.getByText(i18n.returnToResults())).toBeInTheDocument();
   });
 
-  it('automatically displays Name field if non-US IP address is detected', () => {
-    renderDefault({usIp: false});
-    expect(screen.queryByText(i18n.schoolOrganizationQuestion()));
+  it('should call handleSchoolChange when "No school setting" button is clicked', () => {
+    render(
+      <SchoolDataInputs
+        schoolId="123"
+        country="US"
+        schoolName="School Name"
+        schoolZip="12345"
+        schoolsList={[{value: '1', text: 'School 1'}]}
+        schoolZipIsValid={true}
+        setSchoolId={mockSetSchoolId}
+        setCountry={mockSetCountry}
+        setSchoolName={mockSetSchoolName}
+        setSchoolZip={mockSetSchoolZip}
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', i18n.noSchoolSetting()));
+
+    expect(mockSetSchoolId).toHaveBeenCalledWith(NO_SCHOOL_SETTING);
   });
 
-  it('autopopulates Name field if you leave and come back', () => {
-    renderDefault({usIp: true});
-    fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: {value: 'UK'},
-    });
-    fireEvent.change(screen.getByRole('textbox'), {
-      target: {value: 'MySchoolAbroad'},
-    });
-    fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: {value: 'US'},
-    });
-    expect(screen.queryByText('MySchoolAbroad')).toBeFalsy();
-    fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: {value: 'UK'},
-    });
-    expect(screen.queryByText('MySchoolAbroad'));
-  });
+  it('should not render SchoolZipSearch when country is not US', () => {
+    render(
+      <SchoolDataInputs
+        schoolId="123"
+        country="CA"
+        schoolName="School Name"
+        schoolZip="12345"
+        schoolsList={[{value: '1', text: 'School 1'}]}
+        schoolZipIsValid={true}
+        setSchoolId={mockSetSchoolId}
+        setCountry={mockSetCountry}
+        setSchoolName={mockSetSchoolName}
+        setSchoolZip={mockSetSchoolZip}
+      />
+    );
 
-  it('autopopulates Zip and ID fields if you leave and come back', () => {
-    renderDefault({usIp: true});
-    fireEvent.change(screen.getByRole('textbox'), {target: {value: '98112'}});
-    fireEvent.change(screen.getAllByRole('combobox')[1], {
-      target: {value: NO_SCHOOL_SETTING},
-    });
-    fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: {value: 'UK'},
-    });
-    expect(screen.queryByText('98112')).toBeFalsy();
-    expect(screen.queryByText(NO_SCHOOL_SETTING)).toBeFalsy();
-    fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: {value: 'US'},
-    });
-    expect(screen.queryByText('98112'));
-    expect(screen.queryByText(NO_SCHOOL_SETTING));
-  });
-
-  it('displays error message if the zip is too short', () => {
-    renderDefault({usIp: true});
-    fireEvent.change(screen.getByRole('textbox'), {target: {value: '99'}});
-    expect(screen.queryByText(i18n.zipInvalidMessage()));
-  });
-
-  it('displays school dropdown if zip is given', () => {
-    renderDefault({usIp: true});
-    fireEvent.change(screen.getByRole('textbox'), {target: {value: '98112'}});
-    expect(screen.queryByText(i18n.selectYourSchool()));
-  });
-
-  it('dropdown switches to input box if user clicks to add', () => {
-    renderDefault();
-    fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: {value: 'US'},
-    });
-    fireEvent.change(screen.getByRole('textbox'), {target: {value: '98112'}});
-    fireEvent.change(screen.getAllByRole('combobox')[1], {
-      target: {value: 'clickToAdd'},
-    });
-    expect(screen.queryByText(i18n.schoolOrganizationQuestion()));
-  });
-
-  it('goes back to dropdown if user clicks return to results list', () => {
-    renderDefault();
-    fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: {value: 'US'},
-    });
-    fireEvent.change(screen.getByRole('textbox'), {target: {value: '98112'}});
-    fireEvent.change(screen.getAllByRole('combobox')[1], {
-      target: {value: 'clickToAdd'},
-    });
-    expect(screen.queryByText(i18n.schoolOrganizationQuestion()));
-    fireEvent.click(screen.getByRole('button', {name: i18n.returnToResults()}));
-    expect(screen.queryByText(i18n.selectYourSchool()));
+    expect(
+      screen.queryByLabelText(i18n.enterYourSchoolZip())
+    ).not.toBeInTheDocument();
   });
 });
