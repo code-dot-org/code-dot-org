@@ -18,6 +18,7 @@ import {ThemeContext} from '../ThemeWrapper';
 
 import PredictQuestion from './PredictQuestion';
 import PredictSummary from './PredictSummary';
+import TextToSpeech from './TextToSpeech';
 
 import moduleStyles from './instructions.module.scss';
 
@@ -45,6 +46,8 @@ interface InstructionsProps {
   manageNavigation?: boolean;
   /** Optional classname for the container */
   className?: string;
+  /** Whether we support TTS. */
+  offerTts?: boolean;
 }
 
 /**
@@ -63,6 +66,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
+  offerTts = false,
 }) => {
   const instructionsText = useSelector(
     (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
@@ -122,6 +126,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       layout={layout}
       imagePopOutDirection={imagePopOutDirection}
       handleInstructionsTextClick={handleInstructionsTextClick}
+      offerTts={offerTts}
       className={className}
     />
   );
@@ -163,6 +168,7 @@ interface InstructionsPanelProps {
   predictAnswerLocked: boolean;
   /** Optional classname for the container */
   className?: string;
+  offerTts?: boolean;
 }
 
 /**
@@ -192,6 +198,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   setPredictResponse,
   predictAnswerLocked,
   className,
+  offerTts,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -280,6 +287,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
+            {offerTts && <TextToSpeech text={text} />}
             {predictSettings?.isPredictLevel && <PredictSummary />}
             <EnhancedSafeMarkdown
               markdown={text}
@@ -304,6 +312,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
+              {offerTts && message && <TextToSpeech text={message} />}
               {message && (
                 <EnhancedSafeMarkdown
                   markdown={message}

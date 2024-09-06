@@ -102,6 +102,7 @@
 }
 
 %text {
+  position: relative;
   overflow-y: auto;
   white-space: pre-wrap;
 
@@ -116,6 +117,7 @@
   @extend %text;
   background-color: $neutral_light;
   color: $neutral_dark;
+
 }
 
 .text-light {
@@ -125,6 +127,7 @@
 }
 
 %message {
+  position: relative;
   padding: 15px 20px 5px 20px;
   border-radius: 4px;
   border: dashed $neutral_dark 2px;
