@@ -6,7 +6,6 @@ import {Provider} from 'react-redux';
 import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloatingActionButton';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
-import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -40,9 +39,6 @@ function initPage() {
   getStore().dispatch(setIsMiniView(true));
 
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
-  const unversionedRedirectDialogMountPoint = document.getElementById(
-    'unversioned-redirect-dialog'
-  );
   if (redirectDialogMountPoint && config.redirect_script_url) {
     ReactDOM.render(
       <ScriptLevelRedirectDialog
@@ -51,14 +47,6 @@ function initPage() {
         courseName={config.course_name}
       />,
       redirectDialogMountPoint
-    );
-  } else if (
-    unversionedRedirectDialogMountPoint &&
-    config.show_unversioned_redirect_warning
-  ) {
-    ReactDOM.render(
-      <UnversionedScriptRedirectDialog />,
-      unversionedRedirectDialogMountPoint
     );
   }
 

@@ -147,9 +147,6 @@ function initPage() {
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
-        showUnversionedRedirectWarning={
-          scriptData.show_unversioned_redirect_warning
-        }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
         publishedState={scriptData.publishedState}
