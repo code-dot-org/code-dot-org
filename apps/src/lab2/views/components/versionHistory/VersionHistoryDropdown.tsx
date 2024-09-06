@@ -19,7 +19,7 @@ import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import VersionHistoryRow from './VersionHistoryRow';
 
@@ -57,6 +57,13 @@ const VersionHistoryDropdown: React.FunctionComponent<
     closeDropdown();
   });
   const previousIsOpen = useRef<boolean>(isOpen);
+  const latestVersion = useMemo(
+    () => versionList?.find(v => v.isLatest)?.versionId || '',
+    [versionList]
+  );
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
 
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
@@ -69,25 +76,38 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
   useEffect(() => {
     if (selectedVersion === '' && versionList.length > 0) {
-      setSelectedVersion(
-        versionList.find(version => version.isLatest)?.versionId || ''
-      );
+      setSelectedVersion(latestVersion);
     }
-  }, [versionList, selectedVersion]);
+  }, [versionList, selectedVersion, latestVersion]);
 
   useEffect(() => {
     if (isOpen && !previousIsOpen.current && selectedVersion !== '') {
+      console.log({
+        isOpen,
+        previousIsOpen: previousIsOpen.current,
+        viewingOldVersion,
+        selectedVersion,
+      });
+      // We only do anything here if we just re-opened the dropdown.
+      // If we are currently viewing an old version (this happens if
+      // the user x'd out of the dropdown, but did not cancel), scroll to the selected version.
       // Wait a tick to ensure the selected version is rendered before scrolling to it.
-      setTimeout(() => {
-        const selectedVersionComponent =
-          document.getElementById(selectedVersion);
-        if (selectedVersionComponent) {
-          selectedVersionComponent.scrollIntoView({behavior: 'instant'});
-        }
-      }, 0);
+      // Otherwise, reset the selected version to the latest version.
+      // (we likely just restored the project to some version, so we should be viewing the latest version)
+      if (viewingOldVersion) {
+        setTimeout(() => {
+          const selectedVersionComponent =
+            document.getElementById(selectedVersion);
+          if (selectedVersionComponent) {
+            selectedVersionComponent.scrollIntoView({behavior: 'instant'});
+          }
+        }, 0);
+      } else {
+        setSelectedVersion(latestVersion);
+      }
     }
     previousIsOpen.current = isOpen;
-  }, [isOpen, selectedVersion]);
+  }, [isOpen, selectedVersion, latestVersion, viewingOldVersion]);
 
   const dispatch = useAppDispatch();
 

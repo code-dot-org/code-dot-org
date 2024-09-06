@@ -47,7 +47,6 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         | React.MouseEvent<HTMLButtonElement>
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
-      setVersionList([]);
       if (loading) {
         return;
       }
@@ -65,8 +64,8 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         projectManager
           .getVersionList()
           .then(versionList => {
-            setIsVersionHistoryOpen(true);
             setVersionList(versionList);
+            setIsVersionHistoryOpen(true);
             setLoading(false);
           })
           .catch(() => {
