@@ -104,11 +104,13 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
         setSchoolId(detectedSchoolId);
       }
 
-      setSchoolsList(
-        schools.sort((a: SchoolDropdownOption, b: SchoolDropdownOption) =>
-          a.text > b.text ? 1 : -1
-        )
-      );
+      if (mounted.current) {
+        setSchoolsList(
+          schools.sort((a: SchoolDropdownOption, b: SchoolDropdownOption) =>
+            a.text > b.text ? 1 : -1
+          )
+        );
+      }
     });
   }, [schoolZip, schoolZipIsValid, detectedSchoolId]);
 
@@ -133,6 +135,9 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   useEffect(() => {
     mounted.current = true;
+    return () => {
+      mounted.current = false;
+    };
   }, []);
 
   return {
