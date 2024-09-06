@@ -9,7 +9,7 @@ export async function fetchSchools(
     headers: {'X-Requested-With': 'XMLHttpRequest'},
   });
   if (!response.ok) {
-    return;
+    throw new Error('Zip code search for schools failed');
   }
   const data = await response.json();
 
