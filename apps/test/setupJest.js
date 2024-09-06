@@ -3,28 +3,28 @@ import 'whatwg-fetch';
 /**
  * Import locales to jest environment
  */
+import '../build/locales/en_us/common_locale.js';
 import '../build/locales/en_us/aichat_locale.js';
 import '../build/locales/en_us/applab_locale.js';
-import '../build/locales/en_us/common_locale.js';
-import '../build/locales/en_us/craft_locale.js';
-import '../build/locales/en_us/flappy_locale.js';
-import '../build/locales/en_us/gamelab_locale.js';
 import '../build/locales/en_us/javalab_locale.js';
+import '../build/locales/en_us/signup_locale.js';
 import '../build/locales/en_us/music_locale.js';
 import '../build/locales/en_us/netsim_locale.js';
-import '../build/locales/en_us/poetry_locale.js';
-import '../build/locales/en_us/signup_locale.js';
-import '../build/locales/en_us/spritelab_locale.js';
 import '../build/locales/en_us/standaloneVideo_locale.js';
-import '../build/locales/en_us/studio_locale.js';
 import '../build/locales/en_us/tutorialExplorer_locale.js';
 import '../build/locales/en_us/weblab_locale.js';
+import '../build/locales/en_us/gamelab_locale.js';
+import '../build/locales/en_us/poetry_locale.js';
+import '../build/locales/en_us/spritelab_locale.js';
+import '../build/locales/en_us/studio_locale.js';
+import '../build/locales/en_us/craft_locale.js';
+import '../build/locales/en_us/flappy_locale.js';
 
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import mockFetch from 'jest-fetch-mock';
 import $ from 'jquery';
-import {TextDecoder, TextEncoder} from 'util';
+import {TextEncoder, TextDecoder} from 'util';
 
 enzyme.configure({adapter: new Adapter()});
 window.IN_UNIT_TEST = true;
