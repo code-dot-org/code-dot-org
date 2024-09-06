@@ -1,27 +1,10 @@
-class StubbedSagemakerClient
-  def invoke_endpoint(_)
-    StubbedSagemakerResponse.new
-  end
-end
-
-class StubbedSagemakerResponse
-  def body
-    StubbedSagemakerResponseBody.new
-  end
-end
-
-class StubbedSagemakerResponseBody
-  def string
-    JSON.generate([{"generated_text" => "Hello there!"}])
-  end
-end
-
 module AichatSagemakerHelper
   MAX_NEW_TOKENS = 512
   TOP_P = 0.9
 
   def self.create_sagemaker_client
-    ENV['CIRCLECI'] ?
+    # Stubbed SageMaker allows UI tests (without the roundtrip to the model) to run in CI environments (ie, Drone)
+    Rails.application.config.respond_to?(:stub_sagemaker) && Rails.application.config.stub_sagemaker ?
       StubbedSagemakerClient.new :
       Aws::SageMakerRuntime::Client.new
   end
@@ -88,5 +71,24 @@ module AichatSagemakerHelper
 
   def self.can_request_aichat_chat_completion?
     DCDO.get("aichat_chat_completion", true)
+  end
+end
+
+# Classes that allow us to stub Sagemaker in Drone, which does not have permission to access SageMaker.
+class StubbedSagemakerClient
+  def invoke_endpoint(_)
+    StubbedSagemakerResponse.new
+  end
+end
+
+class StubbedSagemakerResponse
+  def body
+    StubbedSagemakerResponseBody.new
+  end
+end
+
+class StubbedSagemakerResponseBody
+  def string
+    JSON.generate([{"generated_text" => "Hello there!"}])
   end
 end

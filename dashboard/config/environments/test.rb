@@ -17,9 +17,11 @@ Dashboard::Application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
 
+  is_ci = !!ENV.fetch('CI', nil)
+
   # test environment should use precompiled, minified, digested assets like production,
   # unless it's being used for unit tests.
-  ci_test = !!(ENV['UNIT_TEST'] || ENV.fetch('CI', nil))
+  ci_test = !!(ENV['UNIT_TEST'] || is_ci)
 
   unless ci_test
     # Compress JavaScripts and CSS.
@@ -33,6 +35,11 @@ Dashboard::Application.configure do
     # Avoid loading all i18n files up front, which can significantly slow down initialization.
     # Instead, it only loads i18n files that belong to the current locale.
     config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
+  end
+
+  # In CI environments (ie, Drone), stub AWS SageMaker so we can run UI tests
+  if is_ci
+    config.stub_sagemaker = true
   end
 
   config.assets.quiet = true
