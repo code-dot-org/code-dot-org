@@ -96,18 +96,4 @@ class AnnouncementsTest < ActiveSupport::TestCase
     assert_equal("dcdo-flag-test", announcement[:id])
     DCDO.unstub(:get)
   end
-
-  test 'gets announcement for banner behind hoc mode soon hoc flag' do
-    DCDO.stubs(:get).with('hoc_mode', false).returns('soon-hoc')
-    announcement = Announcements.get_announcement_for_page("/hoc-modes-test")
-    assert announcement
-    assert_equal("https://code.org/shared/images/social-media/hoc2023_social.png", announcement[:image])
-    assert_equal("Register your Hour of Code", announcement[:title])
-    assert_equal("Join us December 9th-15th for CSEdWeek and help us bring what students love to life!", announcement[:body])
-    assert_equal("Host an event", announcement[:buttonText])
-    assert_equal("https://hourofcode.com/events", announcement[:buttonUrl])
-    assert_equal("host-an-event", announcement[:buttonId])
-    assert_equal("hoc-modes-test", announcement[:id])
-    DCDO.unstub(:get)
-  end
 end

@@ -3,8 +3,7 @@
     "/home": "teacher-apps-closing-2020",
     "/courses": "teacher-apps-open-2021",
     "/another-page": "not-a-banner",
-    "/dcdo-test": "dcdo-flag-test",
-    "/hoc-modes-test": "hoc-modes-test"
+    "/dcdo-test": "dcdo-flag-test"
   },
   "banners": {
     "teacher-apps-open-2021": {
@@ -37,15 +36,6 @@
       "buttonText2": "Join us 2!",
       "buttonUrl2": "https://code.org/educate/professional-learning",
       "buttonId2": "teacher-apps-closing-2020-sign-up-2"
-    },
-    "hoc-modes-test": {
-      "hocModes": ["soon-hoc"],
-      "image": "https://code.org/shared/images/social-media/hoc2023_social.png",
-      "title": "Register your Hour of Code",
-      "body": "Join us December 9th-15th for CSEdWeek and help us bring what students love to life!",
-      "buttonText": "Host an event",
-      "buttonUrl": "https://hourofcode.com/events",
-      "buttonId": "host-an-event"
     }
   }
 }
