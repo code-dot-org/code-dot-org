@@ -18,7 +18,7 @@ import {
   TRIGGER_FIELD,
 } from './constants';
 import {setUpBlocklyForMusicLab} from './setup';
-import {getToolbox} from './toolbox/toolbox';
+import {getToolbox} from './toolbox';
 import {ToolboxData} from './toolbox/types';
 
 const experiments = require('@cdo/apps/util/experiments');
