@@ -92,20 +92,3 @@ jest.mock('@cdo/apps/imageUtils', () => ({
   dataURIToSourceSize: jest.fn(),
 }));
 fetch.mockIf('/api/v1/users/current', JSON.stringify(''));
-
-// Mock sessionStorage
-const mockSessionStorage = (() => {
-  let store = {};
-
-  return {
-    getItem: key => store[key] || null,
-    setItem: (key, value) => {
-      store[key] = value;
-    },
-    clear: () => {
-      store = {};
-    },
-  };
-})();
-
-Object.defineProperty(window, 'sessionStorage', {value: mockSessionStorage});
