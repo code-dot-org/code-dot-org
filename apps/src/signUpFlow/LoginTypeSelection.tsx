@@ -1,3 +1,4 @@
+import {screen} from '@testing-library/react';
 import React, {useState, useEffect} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -59,6 +60,24 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       setCreateAccountButtonDisabled(true);
     }
   }, [passwordIcon, confirmPasswordIcon, emailIcon]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Enter') {
+        const button = screen.getByRole('button', {
+          name: locale.create_my_account(),
+        }) as HTMLButtonElement;
+        if (button && !button.disabled) {
+          button.click();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
