@@ -127,7 +127,7 @@ const InnerFileBrowser = React.memo(
           (fileCount ? `${fileCount} file(s)` : '') +
           (fileCount && folderCount ? ' and ' : '') +
           (folderCount ? `${folderCount} folder(s)` : '') +
-          ' inside "${folderName}"';
+          ` inside "${folderName}"`;
       }
       dialogControl?.showDialog({
         type: DialogType.GenericConfirmation,
