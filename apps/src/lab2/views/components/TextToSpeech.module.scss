@@ -1,0 +1,17 @@
+@import 'color.scss';
+@import 'font.scss';
+
+.playButton {
+  float: right;
+  position: relative;
+  width: 10px;
+  color: #5f6872;
+  left: 7px;
+  cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
