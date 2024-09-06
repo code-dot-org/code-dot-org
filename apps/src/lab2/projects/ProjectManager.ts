@@ -75,11 +75,13 @@ export default class ProjectManager {
   }
 
   // Load the project from the sources and channels store.
-  async load(): Promise<ProjectAndSources> {
+  // If resetSource is true we return undefined for sources, otherwise we load the sources.
+  // The lab itself handles undefined sources, generally by using the start sources instead.
+  async load(resetSource?: boolean): Promise<ProjectAndSources> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    const sources = await this.loadAndStoreSources();
+    const sources = resetSource ? undefined : await this.loadAndStoreSources();
 
     let channel: Channel;
     try {

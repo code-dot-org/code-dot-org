@@ -267,6 +267,19 @@ function getUpdatedMessages(
           status: AiInteractionStatus.ERROR,
         },
       ];
+    case AiRequestExecutionStatus.USER_INPUT_TOO_LARGE:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
+        },
+        {
+          chatMessageText: modelResponse,
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
+        },
+      ];
     default:
       throw new Error(`Unexpected status: ${executionStatus}`);
   }

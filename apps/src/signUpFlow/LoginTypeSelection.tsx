@@ -21,17 +21,24 @@ import {ACCOUNT_TYPE_SESSION_KEY} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
+const CHECK_ICON = 'circle-check';
+const X_ICON = 'circle-x';
+
 const LoginTypeSelection: React.FunctionComponent = () => {
   const [password, setPassword] = useState('');
+  const [passwordIcon, setPasswordIcon] = useState(X_ICON);
+  const [passwordIconClass, setPasswordIconClass] = useState(style.lightGray);
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [confirmPasswordIcon, setConfirmPasswordIcon] = useState('circle-x');
+  const [confirmPasswordIcon, setConfirmPasswordIcon] = useState(X_ICON);
   const [confirmPasswordIconClass, setConfirmPasswordIconClass] = useState(
     style.lightGray
   );
   const [email, setEmail] = useState('');
-  const [emailIcon, setEmailIcon] = useState('circle-x');
+  const [emailIcon, setEmailIcon] = useState(X_ICON);
   const [emailIconClass, setEmailIconClass] = useState(style.lightGray);
   const [authToken, setAuthToken] = useState('');
+  const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
+    useState(true);
 
   useEffect(() => {
     async function getToken() {
@@ -41,8 +48,34 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     getToken();
   }, []);
 
+  useEffect(() => {
+    if (
+      passwordIcon === CHECK_ICON &&
+      confirmPasswordIcon === CHECK_ICON &&
+      emailIcon === CHECK_ICON
+    ) {
+      setCreateAccountButtonDisabled(false);
+    } else {
+      setCreateAccountButtonDisabled(true);
+    }
+  }, [passwordIcon, confirmPasswordIcon, emailIcon]);
+
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
+    if (event.target.value.length >= 6) {
+      setPasswordIcon(CHECK_ICON);
+      setPasswordIconClass(style.teal);
+    } else {
+      setPasswordIcon(X_ICON);
+      setPasswordIconClass(style.lightGray);
+    }
+    if (event.target.value === confirmPassword) {
+      setConfirmPasswordIcon(CHECK_ICON);
+      setConfirmPasswordIconClass(style.teal);
+    } else {
+      setConfirmPasswordIcon(X_ICON);
+      setConfirmPasswordIconClass(style.lightGray);
+    }
   };
 
   const handleConfirmPasswordChange = (
@@ -50,10 +83,10 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   ) => {
     setConfirmPassword(event.target.value);
     if (event.target.value === password) {
-      setConfirmPasswordIcon('circle-check');
+      setConfirmPasswordIcon(CHECK_ICON);
       setConfirmPasswordIconClass(style.teal);
     } else {
-      setConfirmPasswordIcon('circle-x');
+      setConfirmPasswordIcon(X_ICON);
       setConfirmPasswordIconClass(style.lightGray);
     }
   };
@@ -61,10 +94,10 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
     if (isEmail(event.target.value)) {
-      setEmailIcon('circle-check');
+      setEmailIcon(CHECK_ICON);
       setEmailIconClass(style.teal);
     } else {
-      setEmailIcon('circle-x');
+      setEmailIcon(X_ICON);
       setEmailIconClass(style.lightGray);
     }
   };
@@ -73,8 +106,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
       ? studio('/users/new_sign_up/finish_teacher_account')
       : studio('/users/new_sign_up/finish_student_account');
-  const passwordIcon = password.length >= 6 ? 'circle-check' : 'circle-x';
-  const passwordIconClass = password.length >= 6 ? style.teal : style.lightGray;
 
   return (
     <div className={style.newSignupFlow}>
@@ -205,6 +236,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
           <Button
             className={style.shortButton}
             text={locale.create_my_account()}
+            disabled={createAccountButtonDisabled}
             onClick={() => navigateToHref(finishAccountUrl)}
           />
         </div>
