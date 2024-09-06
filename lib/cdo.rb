@@ -144,8 +144,8 @@ module Cdo
         # deployed development instance of Javabuilder, set
         # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
         return 'ws://localhost:8080/javabuilder' if CDO.use_localhost_javabuilder
-        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
-        "wss://#{stack_name}.code.org"
+        javabuilder_stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "wss://#{javabuilder_stack_name}.code.org"
       else
         DCDO.get("javabuilder_websocket_url", 'wss://javabuilder.code.org')
       end
@@ -159,8 +159,8 @@ module Cdo
         # deployed development instance of Javabuilder, set
         # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
         return 'http://localhost:8080/javabuilderfiles/seedsources' if CDO.use_localhost_javabuilder
-        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
-        "https://#{stack_name}-http.code.org/seedsources/sources.json"
+        javabuilder_stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "https://#{javabuilder_stack_name}-http.code.org/seedsources/sources.json"
       else
         http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
         http_url + "/seedsources/sources.json"

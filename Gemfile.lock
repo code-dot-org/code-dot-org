@@ -201,6 +201,9 @@ GEM
     aws-sdk-acm (1.74.0)
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
+    aws-sdk-autoscaling (1.63.0)
+      aws-sdk-core (~> 3, >= 3.112.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-bedrockagentruntime (1.10.0)
       aws-sdk-core (~> 3, >= 3.193.0)
       aws-sigv4 (~> 1.1)
@@ -939,6 +942,7 @@ DEPENDENCIES
   auto_strip_attributes (~> 2.1)
   aws-google (~> 0.2.0)
   aws-sdk-acm
+  aws-sdk-autoscaling
   aws-sdk-bedrockagentruntime (~> 1.10.0)
   aws-sdk-cloudformation
   aws-sdk-cloudfront

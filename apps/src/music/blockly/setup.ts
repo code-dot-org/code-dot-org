@@ -1,3 +1,5 @@
+import {getBlockMode} from '../appConfig';
+import {BlockMode} from '../constants';
 import musicI18n from '../locale';
 
 import {
@@ -52,17 +54,21 @@ export function setUpBlocklyForMusicLab() {
     Blockly.JavaScript[blockType] = blockConfig.generator;
   }
 
-  Blockly.cdoUtils.registerCustomProcedureBlocks();
+  if (getBlockMode() !== BlockMode.ADVANCED) {
+    // Override default function block implementation.
+    Blockly.cdoUtils.registerCustomProcedureBlocks();
+
+    // Remove two default entries in the toolbox's Functions category that
+    // we don't want.
+    delete Blockly.Blocks.procedures_defreturn;
+    delete Blockly.Blocks.procedures_ifreturn;
+  }
+
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
   Blockly.fieldRegistry.register(FIELD_PATTERN_AI_TYPE, FieldPatternAi);
   Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
   Blockly.fieldRegistry.register(FIELD_TUNE_TYPE, FieldTune);
-
-  // Remove two default entries in the toolbox's Functions category that
-  // we don't want.
-  delete Blockly.Blocks.procedures_defreturn;
-  delete Blockly.Blocks.procedures_ifreturn;
 
   // Rename the new function placeholder text for Music Lab specifically.
   Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =

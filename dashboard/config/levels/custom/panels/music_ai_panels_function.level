@@ -11,17 +11,37 @@
     "name_suffix": "_v2",
     "panels": [
       {
+        "text": "###Functions with Orlando from Amazon Music \nHi, my name is Orlando and I'm a Senior Software Engineer on the search platform team at Amazon Music. ",
+        "imageUrl": "https://images.code.org/d16c070d494b8a7327ec15be1ece97d2-Screen Shot 2024-09-05 at 3.43.07 PM.jpg",
+        "key": "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677"
+      },
+      {
+        "text": "###When I was a kid ... \nI've always loved games and when I went to University and needed to choose a major, I asked myself, \"What do I need to study in order to build these games?\" \n\nSo I got into computer science and that started my journey to learn algorithms, programming, machine learning. \n\n",
+        "imageUrl": "https://images.code.org/97865e4eebf75927de585ceac40539ee-apps.62394.70702278257994163.1152c6f1-f586-40eb-a61e-0f8bad1ee621.jpg",
+        "key": "music_ai_panels_function-c72da2a5-cee8-4254-b1e7-6d487a2ebcde"
+      },
+      {
+        "text": "###My Job\n\nToday, I use the power of code to make Amazon Music better. At Amazon Music, you have about a hundred millions songs and podcasts to choose from. Our team helps you find that song when you type something into the music app or even when you ask Alexa for a song. ",
+        "imageUrl": "https://images.code.org/b04a31311a0cb647ddd51590defc2e75-Screen Shot 2024-09-05 at 3.44.11 PM.jpg",
+        "key": "music_ai_panels_function-61c3fe3c-2dfa-4fca-bf57-f0e750e7b9d4"
+      },
+      {
+        "text": "###Organizing Code with Functions\n\nAs a Senior Software Engineer, I work with thousands of lines of code. It's important for me to organize my code in a way where I can reuse common parts over and over. In coding, we call these **functions**.\n\nIt's similar to how a songwriter thinks about organizing their songs. They start with an intro, then verse, then chorus, and so on. \n",
+        "imageUrl": "https://images.code.org/e9cea2aee60bc079d95139b7871c3203-Screen Shot 2024-09-05 at 4.46.18 PM.png",
+        "key": "music_ai_panels_function-f164a0ad-f4a0-4fb7-a4a4-a0269980b587"
+      },
+      {
         "imageUrl": "https://images.code.org/4b445a8955ab411f81792fc7b40b7a3b-functions (1).gif",
-        "text": "###Functions\n\nCreate a **function** to play a specific chunk of code whenever it's called. \n\n**First** build your function using the sounds you like.",
+        "text": "###How to make a Function \n\nIn the next level, you will create a **chorus function** to play a specific chunk of code whenever it's called. \n\nHere is an example of how to build a function. ",
         "key": "musiclab_intro_panels_function_pdx-f1f658c0-64a9-471c-9f2a-399ba1ea8538"
       },
       {
         "imageUrl": "https://images.code.org/40333fce057d1c45297ff7d1ecfce1b3-call function (2).gif",
-        "text": "###Use your new function! \n\nNow, you can use your new function anytime by choosing the block with your function’s name. \n\nThis new block will **call** your function when you press Run. ",
+        "text": "###Use your new function! \n\nNow, you can use your new function anytime by choosing the block with your function’s name.\n\nThis new block will call your function when you press Run.",
         "key": "musiclab_intro_panels_function_pdx-952b5575-5487-40c6-8a7e-4e37339d81d3"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-30T16:50:57.197+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_function\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_function\"},{\"changed_at\":\"2024-08-30 16:51:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-30T16:50:57.197+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_function\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_function\"},{\"changed_at\":\"2024-08-30 16:51:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:07:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:10:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:36:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:39:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:46:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:47:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>
