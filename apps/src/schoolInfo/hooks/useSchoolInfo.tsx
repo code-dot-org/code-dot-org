@@ -63,22 +63,54 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   useEffect(() => {
     sessionStorage.setItem(SCHOOL_COUNTRY, country);
-    if (mounted.current) {
-      setSchoolId('');
+    if (mounted.current && country) {
+      setSchoolId(SELECT_A_SCHOOL);
       setSchoolZip('');
       setSchoolName('');
       setSchoolsList([]);
-      analyticsReporter.sendEvent(
-        EVENTS.COUNTRY_SELECTED,
-        {country: country},
-        PLATFORMS.BOTH
-      );
+      sendAnalyticsEvent(EVENTS.COUNTRY_SELECTED, {country: country});
     }
   }, [country]);
 
+  const schoolZipIsValid = useMemo(
+    () => ZIP_REGEX.test(schoolZip),
+    [schoolZip]
+  );
+
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, schoolName);
-  }, [schoolName]);
+    if (mounted.current && schoolZip) {
+      setSchoolId(SELECT_A_SCHOOL);
+      setSchoolName('');
+      setSchoolsList([]);
+    }
+    if (!schoolZipIsValid) {
+      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '');
+      return;
+    }
+
+    sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, schoolZip);
+
+    // Clear out school from dropdown if schoolZip has changed
+    setSchoolId(SELECT_A_SCHOOL);
+    setSchoolName('');
+    setSchoolsList([]);
+
+    sendAnalyticsEvent(EVENTS.ZIP_CODE_ENTERED, {zip: schoolZip});
+
+    fetchSchools(schoolZip, data => {
+      const schools: SchoolDropdownOption[] = data.map(constructSchoolOption);
+
+      if (schools.some(school => school.value === detectedSchoolId)) {
+        setSchoolId(detectedSchoolId);
+      }
+
+      setSchoolsList(
+        schools.sort((a: SchoolDropdownOption, b: SchoolDropdownOption) =>
+          a.text > b.text ? 1 : -1
+        )
+      );
+    });
+  }, [schoolZip, schoolZipIsValid, detectedSchoolId]);
 
   useEffect(() => {
     sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, schoolId);
@@ -95,57 +127,9 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     }
   }, [schoolId]);
 
-  const schoolZipIsValid = useMemo(
-    () => ZIP_REGEX.test(schoolZip),
-    [schoolZip]
-  );
-
   useEffect(() => {
-    if (mounted.current) {
-      setSchoolId('');
-      setSchoolName('');
-      setSchoolsList([]);
-    }
-    if (!schoolZipIsValid) {
-      return;
-    }
-
-    const fetchSchools = async (zip: string) => {
-      try {
-        const searchUrl = `${SCHOOL_ZIP_SEARCH_URL}${zip}`;
-        const response = await fetch(searchUrl, {
-          headers: {'X-Requested-With': 'XMLHttpRequest'},
-        });
-        if (!response.ok) {
-          return;
-        }
-        const data = await response.json();
-        const schools: SchoolDropdownOption[] = data.map(constructSchoolOption);
-
-        if (schools.some(school => school.value === detectedSchoolId)) {
-          setSchoolId(detectedSchoolId);
-        }
-
-        setSchoolsList(
-          schools.sort((a: SchoolDropdownOption, b: SchoolDropdownOption) =>
-            a.text > b.text ? 1 : -1
-          )
-        );
-      } catch (error) {
-        console.log('There was a problem with the fetch operation:', error);
-      }
-    };
-
-    if (schoolZip !== sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY)) {
-      // Clear out school from dropdown if schoolZip has changed
-      setSchoolId(SELECT_A_SCHOOL);
-      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, schoolZip);
-    }
-
-    sendAnalyticsEvent(EVENTS.ZIP_CODE_ENTERED, {zip: schoolZip});
-
-    fetchSchools(schoolZip);
-  }, [schoolZip, schoolZipIsValid, detectedSchoolId]);
+    sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, schoolName);
+  }, [schoolName]);
 
   useEffect(() => {
     mounted.current = true;
