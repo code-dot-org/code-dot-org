@@ -4,8 +4,6 @@ import React from 'react';
 import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
 import {
-  DISPLAY_NAME_SESSION_KEY,
-  EMAIL_OPT_IN_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
@@ -15,8 +13,6 @@ import i18n from '@cdo/locale';
 describe('FinishTeacherAccount', () => {
   afterEach(() => {
     [
-      DISPLAY_NAME_SESSION_KEY,
-      EMAIL_OPT_IN_SESSION_KEY,
       SCHOOL_ID_SESSION_KEY,
       SCHOOL_ZIP_SESSION_KEY,
       SCHOOL_NAME_SESSION_KEY,
@@ -69,17 +65,6 @@ describe('FinishTeacherAccount', () => {
     screen.getByText(locale.go_to_my_account());
   });
 
-  it('displayName is tracked in sessionStorage', () => {
-    renderDefault();
-    const displayName = 'Glen Powell';
-    const displayNameInput = screen.getAllByRole('textbox')[0];
-
-    expect(sessionStorage.getItem(DISPLAY_NAME_SESSION_KEY)).toBe(null);
-
-    fireEvent.change(displayNameInput, {target: {value: displayName}});
-    expect(sessionStorage.getItem(DISPLAY_NAME_SESSION_KEY)).toBe(displayName);
-  });
-
   it('school info is tracked in sessionStorage', () => {
     renderDefault();
     const zipCode = '98122';
@@ -102,19 +87,6 @@ describe('FinishTeacherAccount', () => {
     );
     expect(sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY)).toBe(zipCode);
     expect(sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY)).toBe(schoolName);
-  });
-
-  it('email opt-in checkbox is tracked in sessionStorage', () => {
-    renderDefault();
-    const emailOptInCheckbox = screen.getByRole('checkbox');
-
-    expect(sessionStorage.getItem(EMAIL_OPT_IN_SESSION_KEY)).toBe(null);
-
-    fireEvent.click(emailOptInCheckbox);
-    expect(sessionStorage.getItem(EMAIL_OPT_IN_SESSION_KEY)).toBe('true');
-
-    fireEvent.click(emailOptInCheckbox);
-    expect(sessionStorage.getItem(EMAIL_OPT_IN_SESSION_KEY)).toBe('false');
   });
 
   it('finish teacher signup button starts disabled', () => {

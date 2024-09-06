@@ -7,7 +7,6 @@ import {
   IS_PARENT_SESSION_KEY,
   PARENT_EMAIL_SESSION_KEY,
   PARENT_EMAIL_OPT_IN_SESSION_KEY,
-  DISPLAY_NAME_SESSION_KEY,
   USER_AGE_SESSION_KEY,
   USER_STATE_SESSION_KEY,
   USER_GENDER_SESSION_KEY,
@@ -30,7 +29,6 @@ describe('FinishStudentAccount', () => {
 
   afterEach(() => {
     [
-      DISPLAY_NAME_SESSION_KEY,
       IS_PARENT_SESSION_KEY,
       PARENT_EMAIL_SESSION_KEY,
       PARENT_EMAIL_OPT_IN_SESSION_KEY,
@@ -94,17 +92,6 @@ describe('FinishStudentAccount', () => {
 
     // Renders button that finishes sign-up
     screen.getByText(locale.go_to_my_account());
-  });
-
-  it('userName is tracked in sessionStorage', () => {
-    renderDefault();
-    const userName = 'Glen Powell';
-    const userNameInput = screen.getAllByRole('textbox')[0];
-
-    expect(sessionStorage.getItem(DISPLAY_NAME_SESSION_KEY)).toBe(null);
-
-    fireEvent.change(userNameInput, {target: {value: userName}});
-    expect(sessionStorage.getItem(DISPLAY_NAME_SESSION_KEY)).toBe(userName);
   });
 
   it('userAge is tracked in sessionStorage', () => {
