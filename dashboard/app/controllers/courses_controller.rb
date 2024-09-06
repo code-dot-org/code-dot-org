@@ -210,6 +210,7 @@ class CoursesController < ApplicationController
     # are assigned.
     redirect_unit_group = UnitGroup.latest_assigned_version(unit_group.family_name, current_user)
     redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name, locale: request.locale)
+    redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name)
 
     # Do not redirect if we are already on the correct unit_group.
     return nil if redirect_unit_group == unit_group
