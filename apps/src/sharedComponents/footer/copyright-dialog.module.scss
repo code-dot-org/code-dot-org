@@ -2,22 +2,18 @@
 @import 'color.scss';
 
 .copyright {
-    h3 {
-        font-size: 28px;
-        font-weight: 600;
-        font-family: $barlowSemiCondensed-medium;
-        line-height: 35.84px;
-    }
     hr {
         border-color: $lighter_gray;
     }
-    p {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 21.56px;
-    }
 }
-
+.copyrightContainer{
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.awsLogoContainer {
+    display: block;
+}
 .awsLogo {
     width: 190px;
 }
