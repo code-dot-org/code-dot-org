@@ -1,4 +1,3 @@
-import {screen} from '@testing-library/react';
 import React, {useState, useEffect} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -64,9 +63,9 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Enter') {
-        const button = screen.getByRole('button', {
-          name: locale.create_my_account(),
-        }) as HTMLButtonElement;
+        const button = document.getElementById(
+          'createAccountButton'
+        ) as HTMLButtonElement;
         if (button && !button.disabled) {
           button.click();
         }
@@ -253,6 +252,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             </div>
           </div>
           <Button
+            id="createAccountButton"
             className={style.shortButton}
             text={locale.create_my_account()}
             disabled={createAccountButtonDisabled}
