@@ -39,9 +39,21 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
+  def self.create_comprehend_client
+    Aws::Comprehend::Client.new(
+      region: aws_config['region'] || "us-east-1",
+      credentials: Aws::Credentials.new(
+        aws_config['access_key_id'],
+        aws_config['access_key_secret']
+      )
+    )
+  end
+
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
+    comprehend_client = create_comprehend_client
+
     # Check input for profanity and PII
-    user_profanity = find_profanity(new_message[:chatMessageText], locale)
+    user_profanity = find_profanity(new_message[:chatMessageText], locale, comprehend_client)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_profanity}"] if user_profanity
 
     user_pii = find_pii(new_message[:chatMessageText], locale)
@@ -51,7 +63,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
     # Check output for profanity and PII. Report to HoneyBadger if the model returned profanity.
-    model_profanity = find_profanity(response, locale)
+    model_profanity = find_profanity(response, locale, comprehend_client)
     if model_profanity
       Honeybadger.notify(
         'Profanity returned from aichat model (blocked before reaching student)',
@@ -69,11 +81,15 @@ class AichatRequestChatCompletionJob < ApplicationJob
     [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
   end
 
-  # Check the given text for profanity
-  private def find_profanity(text, locale)
-    # TODO: Use llm-guard instead of WebPurify to check for profanity / toxicity.
-    filter_result = ShareFiltering.find_profanity_failure(text, locale)
-    filter_result.content if filter_result&.type == ShareFiltering::FailureType::PROFANITY
+  # Moderate given text for inappropriate/toxic content using AWS Comprehend client.
+  private def comprehend_toxicity(text, locale, comprehend_client)
+    response = comprehend_client.detect_toxic_content(
+      {
+        text_segments: [{text: text}],
+        language_code: locale,
+      }
+    )
+    puts "Comprehend response: #{response}"
   end
 
   # Check the given text for PII
