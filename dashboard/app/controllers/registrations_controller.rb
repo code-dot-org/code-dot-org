@@ -14,7 +14,7 @@ class RegistrationsController < Devise::RegistrationsController
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
-  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
+  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
 
   #
   # GET /users/sign_up
@@ -76,6 +76,31 @@ class RegistrationsController < Devise::RegistrationsController
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
+    end
+  end
+
+  #
+  # POST /users/finish_creating_user
+  #
+  # Finish setting up User after they finish the sign-up flow.
+  #
+  def finish_creating_user
+    session[:user_return_to] ||= params[:user_return_to]
+    if PartialRegistration.in_progress?(session)
+      user_params = params[:user] || ActionController::Parameters.new
+      user_params[:user_type] ||= session[:default_sign_up_user_type]
+      user_params[:email] ||= params[:email]
+
+      @user = User.new_with_session(user_params.permit(:user_type, :email), session)
+
+      puts 'Finished creating @user'
+      puts @user.to_json
+
+      @user
+    else
+      save_default_sign_up_user_type
+      SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+      super
     end
   end
 
