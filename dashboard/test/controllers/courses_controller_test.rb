@@ -246,7 +246,6 @@ class CoursesControllerTest < ActionController::TestCase
     create :course_version, course_offering: offering, content_root: csp_2018, key: '2018'
     create :course_version, course_offering: offering, content_root: csp_2019, key: '2019'
 
-
     sign_in create(:student)
     with_default_locale('es-MX') do
       get :show, params: {course_name: 'csp'}
