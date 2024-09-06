@@ -1,5 +1,11 @@
 - require deploy_dir('shared/middleware/helpers/experiments')
 
+-# When student projects are embedded in other websites, the URL ends with
+-# /embed. When Code.org is rendered in an iframe on another website, we are
+-# responsible for getting user consent for Cookies and Tracking Technologies,
+-# therefore, we don't need to display the OneTrust banner requesting consent.
+- return if request.path.ends_with?('/embed')
+
 -# OneTrust Cookies Consent Notice scripts for code.org
 -# default to loading the prod OneTrust configuration.
 - onetrust_version = experiment_value('onetrust_cookie_scripts', request) || 'prod'

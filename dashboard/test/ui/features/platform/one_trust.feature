@@ -57,9 +57,27 @@ Feature: OneTrust integration
     Then element "script[src*='/common_locale']" is not categorized by OneTrust
     Then element "script[src*='js/code-studio-common']" is not categorized by OneTrust
     Then element "script[src*='js/code-studio']" is not categorized by OneTrust
-
-    Examples:
+  Examples:
     | url                                                                     |
     | http://code.org/index                                                   |
     | http://hourofcode.com/us                                                |
     | http://studio.code.org/users/sign_in                                    |
+
+  @as_student
+  Scenario Outline: Embedded projects do not display the OneTrust banner
+    Given I am on "<url>"
+    Then I switch to the embedded view of current project
+    Then I append "?otreset=true&otgeo=gb" to the URL
+    Then element "script[src$='otSDKStub.js']" does not exist
+    Then element "script[src$='OtAutoBlock.js']" does not exist
+  Examples:
+    | url                                                                    |
+    | http://studio.code.org/projects/music/new                              |
+    | http://studio.code.org/projects/spritelab/new                          |
+    | http://studio.code.org/projects/artist/new                             |
+    | http://studio.code.org/projects/gamelab/new                            |
+    | http://studio.code.org/projects/dance/new                              |
+    | http://studio.code.org/projects/applab/new                             |
+    | http://studio.code.org/projects/poetry/new                             |
+    | http://studio.code.org/projects/flappy/new                             |
+    | http://studio.code.org/projects/frozen/new                             |
