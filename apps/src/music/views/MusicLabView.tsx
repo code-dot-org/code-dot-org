@@ -134,7 +134,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   : 'horizontal'
               }
               handleInstructionsTextClick={onInstructionsTextClick}
-              offerTts={true}
+              offerTts={AppConfig.getValue('show-tts') === 'true'}
             />
           </PanelContainer>
         </div>
