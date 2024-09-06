@@ -13,7 +13,7 @@ import dom from './dom';
 import DialogButtons from './legacySharedComponents/DialogButtons';
 
 // Parameters provided by the calling app.
-let studioApp, onPuzzleComplete, unsubmitUrl;
+let studioApp, onPuzzleComplete, unsubmitUrl, aiRubric;
 
 /**
  * Set up the handlers for the submit and unsubmit buttons.
