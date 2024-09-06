@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 
-import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
+import DeprecatedSuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/DeprecatedSuggestedPrompts';
 import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
@@ -108,7 +108,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     },
   ];
 
-  return <SuggestedPrompts suggestedPrompts={suggestedPrompts} />;
+  return <DeprecatedSuggestedPrompts suggestedPrompts={suggestedPrompts} />;
 };
 
 export default AITutorSuggestedPrompts;
