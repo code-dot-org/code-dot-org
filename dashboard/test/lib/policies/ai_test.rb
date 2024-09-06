@@ -114,4 +114,129 @@ class Policies::AiTest < ActiveSupport::TestCase
       refute Policies::Ai.ai_rubrics_enabled_for_script_level?(@user, @script_level)
     end
   end
+
+  describe '.ai_differentiation_enabled?' do
+    let(:ai_differentiation_enabled?) {Policies::Ai.ai_differentiation_enabled?(user)}
+    let(:user_type) {'student'}
+
+    let(:user) {build_stubbed(:user, user_type: user_type)}
+
+    it 'returns false' do
+      _(ai_differentiation_enabled?).must_equal false
+    end
+
+    context 'when the user is a teacher' do
+      let(:user_type) {'teacher'}
+
+      it 'returns true' do
+        _(ai_differentiation_enabled?).must_equal true
+      end
+    end
+  end
+
+  describe '.ai_differentiation_enabled_for_unit?' do
+    let(:ai_differentiation_enabled_for_unit?) {Policies::Ai.ai_differentiation_enabled_for_unit?(unit_input)}
+
+    let(:unit_group_name) {'some-unit-group'}
+    let(:unit_group) {build(:unit_group, name: unit_group_name)}
+    let(:unit_name) {'some-unit'}
+    let(:unit) {build(:unit, name: unit_name)}
+
+    let(:unit_input) {unit}
+
+    let(:unit_differentiation_allowlist) {[]}
+    let(:unit_group_differentiation_allowlist) {[]}
+
+    around do |test|
+      Policies::Ai.stub_const(:UNIT_DIFFERENTIATION_ALLOWLIST, unit_differentiation_allowlist) do
+        Policies::Ai.stub_const(:UNIT_GROUP_DIFFERENTIATION_ALLOWLIST, unit_group_differentiation_allowlist) do
+          test.call
+        end
+      end
+    end
+
+    context 'the unit is an actual unit' do
+      context 'the unit name is in the allow list' do
+        let(:unit_differentiation_allowlist) {[unit_name]}
+
+        it 'returns true' do
+          _(ai_differentiation_enabled_for_unit?).must_equal true
+        end
+      end
+
+      context 'the unit name is not in the allow list' do
+        it 'returns false' do
+          _(ai_differentiation_enabled_for_unit?).must_equal false
+        end
+      end
+    end
+
+    context 'the unit is a unit group' do
+      let(:unit_input) {unit_group}
+
+      context 'the unit group name is in the allow list' do
+        let(:unit_group_differentiation_allowlist) {[unit_group_name]}
+
+        it 'returns true' do
+          _(ai_differentiation_enabled_for_unit?).must_equal true
+        end
+      end
+
+      context 'the unit group name is not in the allow list' do
+        it 'returns false' do
+          _(ai_differentiation_enabled_for_unit?).must_equal false
+        end
+      end
+    end
+  end
+
+  describe '.ai_differentiation_enabled_for_lesson?' do
+    let(:ai_differentiation_enabled_for_lesson?) {Policies::Ai.ai_differentiation_enabled_for_lesson?(lesson)}
+
+    let(:unit_name) {'some-unit'}
+    let(:unit) {build(:unit, name: unit_name)}
+    let(:lesson) {build(:lesson, script: unit)}
+
+    let(:mock_allowlist) {true}
+    let(:unit_differentiation_allowlist) {[]}
+
+    around do |test|
+      if mock_allowlist
+        Policies::Ai.stub_const(:UNIT_DIFFERENTIATION_ALLOWLIST, unit_differentiation_allowlist) do
+          test.call
+        end
+      else
+        test.call
+      end
+    end
+
+    context 'the unit name of the lesson is in the allow list' do
+      let(:unit_differentiation_allowlist) {[unit_name]}
+
+      it 'returns true' do
+        _(ai_differentiation_enabled_for_lesson?).must_equal true
+      end
+    end
+
+    context 'the unit name is not in the allow list' do
+      it 'returns false' do
+        _(ai_differentiation_enabled_for_lesson?).must_equal false
+      end
+    end
+
+    context 'the lesson belongs to a real unit we are specifically allowing' do
+      # Use the real list
+      let(:mock_allowlist) {false}
+
+      ['csd3-2023'].each do |real_unit_name|
+        context(real_unit_name) do
+          let(:unit_name) {real_unit_name}
+
+          it 'returns true' do
+            _(ai_differentiation_enabled_for_lesson?).must_equal true
+          end
+        end
+      end
+    end
+  end
 end
