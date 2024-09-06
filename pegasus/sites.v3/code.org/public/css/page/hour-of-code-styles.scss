@@ -3,6 +3,7 @@
 
 @import 'breakpoints';
 
+// TODO: clean up these styles once we move to 2024 soon-hoc
 // Hero banner
 .hero-banner-basic {
   background: url('/images/hoc2023-hero-banner.svg') no-repeat center center;
@@ -46,6 +47,30 @@
     @media screen and (max-width: $width-sm) {
       font-size: 1.25em;
     }
+  }
+}
+
+// 2024 soon-hoc hero banner styles
+.hero-banner-basic.hoc-2024 {
+  background: none;
+  background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
+
+  .wrapper {
+    padding: 0;
+  }
+
+  figure {
+    max-width: 344px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: unset;
   }
 }
 
