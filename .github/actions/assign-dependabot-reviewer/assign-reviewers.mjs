@@ -79,7 +79,8 @@ async function main() {
 
         const reviewers = [];
         const dependencyName = extractDependencyName(prTitle);
-        const reviewer = reviewersMap[dependencyName];
+        const configReviewer = reviewersMap[dependencyName];
+        const reviewer = configReviewer != null ? configReviewer : 'platform';
         console.log(`Found ${reviewer} for ${dependencyName}`)
 
         if (reviewer != null) {
