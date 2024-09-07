@@ -39,10 +39,8 @@ export const Triggers: Trigger[] = [
 ];
 
 export const BlockMode = {
-  ADVANCED: 'Advanced',
-  SIMPLE: 'Simple',
   SIMPLE2: 'Simple2',
-  TRACKS: 'Tracks',
+  ADVANCED: 'Advanced',
 } as const;
 
 // For reference, events look like this:

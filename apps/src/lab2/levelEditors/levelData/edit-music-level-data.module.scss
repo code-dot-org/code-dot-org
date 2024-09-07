@@ -51,3 +51,20 @@
 .topSpacing {
   margin-top: 16px;
 }
+
+.checkboxColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkboxRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  > label {
+    margin: 0;
+  }
+}

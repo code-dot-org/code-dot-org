@@ -12,7 +12,6 @@ import {
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import TimelineSampleEvents from './TimelineSampleEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
-import TimelineTrackEvents from './TimelineTrackEvents';
 import {useMusicSelector} from './types';
 
 import moduleStyles from './timeline.module.scss';
@@ -197,9 +196,7 @@ const Timeline: React.FunctionComponent = () => {
       </div>
 
       <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
-        {getBlockMode() === BlockMode.TRACKS ? (
-          <TimelineTrackEvents {...timelineElementProps} />
-        ) : getBlockMode() === BlockMode.SIMPLE2 ? (
+        {getBlockMode() === BlockMode.SIMPLE2 ? (
           <TimelineSimple2Events {...timelineElementProps} />
         ) : (
           <TimelineSampleEvents {...timelineElementProps} />

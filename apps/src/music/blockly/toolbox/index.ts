@@ -17,7 +17,7 @@ const baseCategoryCssConfig = {
   label: moduleStyles.toolboxLabel,
 };
 
-const categoryTypeToLocalizedName: {[key in Category]: string} = {
+export const categoryTypeToLocalizedName: {[key in Category]: string} = {
   Control: musicI18n.blockly_toolboxCategoryControl(),
   Effects: musicI18n.blockly_toolboxCategoryEffects(),
   Events: musicI18n.blockly_toolboxCategoryEvents(),

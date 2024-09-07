@@ -3,22 +3,20 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
+import {BlockMode, DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
 import MusicLibrary, {loadLibrary} from '@cdo/apps/music/player/MusicLibrary';
 import {MusicLevelData} from '@cdo/apps/music/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import EditLibrarySounds from './EditLibrarySounds';
+import EditMusicToolbox from './EditMusicToolbox';
 import RawJsonEditor from './RawJsonEditor';
 
 import moduleStyles from './edit-music-level-data.module.scss';
 
 const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024'];
 
-const JSON_FIELDS = [
-  ['toolbox', 'Toolbox'],
-  ['startSources', 'Start Sources'],
-] as const;
+const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
 
 interface EditMusicLevelDataProps {
   initialLevelData: MusicLevelData;
@@ -162,6 +160,29 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
         </div>
       </CollapsibleSection>
       <hr />
+      <CollapsibleSection headerContent="Toolbox">
+        <EditMusicToolbox
+          toolbox={
+            levelData.toolbox || {
+              blocks: {},
+            }
+          }
+          blockMode={levelData.blockMode || BlockMode.SIMPLE2}
+          onChange={toolbox => setLevelData({...levelData, toolbox})}
+          onBlockModeChange={blockMode =>
+            // Reset toolbox blocks when changing block mode
+            setLevelData({
+              ...levelData,
+              blockMode,
+              toolbox: {
+                ...levelData.toolbox,
+                blocks: {},
+              },
+            })
+          }
+        />
+      </CollapsibleSection>
+      <hr />
       {JSON_FIELDS.map(([fieldName, fieldLabel]) => {
         return (
           <>
@@ -181,7 +202,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
           </>
         );
       })}
-      <CollapsibleSection headerContent="Current Level Data JSON">
+      <CollapsibleSection headerContent="View Level Data JSON">
         <p className={moduleStyles.renderedJson}>
           {JSON.stringify(levelData, null, 2)}
         </p>
