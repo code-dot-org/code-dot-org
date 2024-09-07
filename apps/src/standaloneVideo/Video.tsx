@@ -1,12 +1,16 @@
-import React, {useLayoutEffect, useState} from 'react';
+import React, {useLayoutEffect, useCallback, useEffect, useState} from 'react';
 
 import standaloneVideoLocale from './locale';
+import testYouTubeAvailable from './testYouTubeAvailable';
+import VideoJS from './VideoJS';
 
 import styles from './video.module.scss';
 
 interface VideoProps {
   children: React.ReactNode;
   src: string | undefined;
+  download: string | undefined;
+  thumbnail: string | undefined;
 }
 
 function useWindowSize() {
@@ -31,7 +35,12 @@ function useWindowSize() {
  * Renders a simple modal video player.
  */
 
-const Video: React.FunctionComponent<VideoProps> = ({children, src}) => {
+const Video: React.FunctionComponent<VideoProps> = ({
+  children,
+  src,
+  download,
+  thumbnail,
+}) => {
   // Leave a margin to the left and the right of the video, to the edges
   // of the screen.
   const horizontalMargin = 40;
@@ -60,11 +69,43 @@ const Video: React.FunctionComponent<VideoProps> = ({children, src}) => {
     height = width / videoAspectRatio;
   }
 
+  const [videoChoice, setVideoChoice] = useState<VideoChoiceType>(undefined);
+
+  const videoCheckComplete = useCallback(
+    (youTubeAvailable: boolean) => {
+      setVideoChoice(youTubeAvailable ? 'youtube' : 'fallback');
+    },
+    [setVideoChoice]
+  );
+
+  useEffect(() => {
+    testYouTubeAvailable(videoCheckComplete);
+  }, [videoCheckComplete]);
+
+  type VideoChoiceType = undefined | 'youtube' | 'fallback';
+
+  const videoJsOptions = {
+    autoplay: true,
+    controls: true,
+    responsive: true,
+    fluid: true,
+    sources: [
+      {
+        src: download || '',
+        type: 'video/mp4',
+      },
+    ],
+    poster: thumbnail,
+  };
+
   return (
     <div id="video-container" className={styles.container}>
       <div className={styles.inner} style={{width, height}}>
         <div className={styles.video}>
-          {src && (
+          {videoChoice === 'fallback' && download && (
+            <VideoJS options={videoJsOptions} />
+          )}
+          {videoChoice === 'youtube' && src && (
             <iframe
               width="100%"
               height="100%"

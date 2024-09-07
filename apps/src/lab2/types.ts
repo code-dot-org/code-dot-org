@@ -183,6 +183,7 @@ export interface ProjectLevelData {
 export interface VideoLevelData {
   src: string;
   download: string;
+  thumbnail: string;
 }
 
 export enum OptionsToAvoid {
