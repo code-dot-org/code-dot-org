@@ -1,6 +1,8 @@
 class AichatRequestChatCompletionJob < ApplicationJob
   queue_as :default
 
+  DEFAULT_TOXICITY_THRESHOLD = 0.25
+
   before_enqueue do |job|
     request = job.arguments.first[:request]
     request.update!(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:QUEUED])
@@ -39,11 +41,21 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
+  private def create_comprehend_client
+    Aws::Comprehend::Client.new
+  end
+
+  private def get_toxicity_threshold
+    DCDO.get("aws_comprehend_toxicity_threshold", DEFAULT_TOXICITY_THRESHOLD)
+  end
+
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
+    comprehend_client = create_comprehend_client
+
     # Moderate user input for toxicity and PII
-    user_comprehend_response = ComprehendModeration.get_toxicity(new_message[:chatMessageText], locale)
+    user_comprehend_response = comprehend_toxicity(new_message[:chatMessageText], locale, comprehend_client)
     puts "user_comprehend_response: #{user_comprehend_response}"
-    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_comprehend_response}"] if user_comprehend_response[:toxicity] > ContentModeration.get_toxicity_threshold
+    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_comprehend_response}"] if user_comprehend_response[:toxicity] > get_toxicity_threshold
 
     user_pii = find_pii(new_message[:chatMessageText], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
@@ -52,9 +64,9 @@ class AichatRequestChatCompletionJob < ApplicationJob
     response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
     # Moderate model output for toxicity and PII. Report to HoneyBadger if the model returned toxicity.
-    model_comprehend_response = ComprehendModeration.get_toxicity(response, locale)
+    model_comprehend_response = comprehend_toxicity(response, locale, comprehend_client)
     puts "model_comprehend_response: #{model_comprehend_response}"
-    if model_comprehend_response[:toxicity] > ContentModeration.get_toxicity_threshold
+    if model_comprehend_response[:toxicity] > get_toxicity_threshold
       Honeybadger.notify(
         'Toxicity returned from aichat model (blocked before reaching student)',
         context: {
@@ -69,6 +81,22 @@ class AichatRequestChatCompletionJob < ApplicationJob
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PII], "PII detected in model output: #{model_pii}"] if model_pii
 
     [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
+  end
+
+  # Moderate given text for inappropriate/toxic content using AWS Comprehend client.
+  private def comprehend_toxicity(text, locale, comprehend_client)
+    comprehend_response = comprehend_client.detect_toxic_content(
+      {
+        text_segments: [{text: text}],
+        language_code: locale,
+      }
+    )
+    categories = comprehend_response.result_list[0].labels
+    {
+      text: text,
+      toxicity: comprehend_response.result_list[0].toxicity,
+      max_category: categories.max_by(&:score),
+    }
   end
 
   # Check the given text for PII
