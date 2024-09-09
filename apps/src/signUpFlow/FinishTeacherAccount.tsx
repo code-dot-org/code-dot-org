@@ -15,6 +15,7 @@ import {navigateToHref} from '../utils';
 import locale from './locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
@@ -48,6 +49,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       data: JSON.stringify({
         user: {
           user_type: sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY),
+          email: sessionStorage.getItem(EMAIL_SESSION_KEY),
           name: name,
           email_preference_opt_in: emailOptInChecked,
           school: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),

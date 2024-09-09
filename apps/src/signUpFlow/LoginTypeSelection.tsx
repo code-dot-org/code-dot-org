@@ -17,7 +17,10 @@ import i18n from '@cdo/locale';
 
 import {navigateToHref} from '../utils';
 
-import {ACCOUNT_TYPE_SESSION_KEY} from './signUpFlowConstants';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
@@ -101,6 +104,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     if (isEmail(event.target.value)) {
       setEmailIcon(CHECK_ICON);
       setEmailIconClass(style.teal);
+      sessionStorage.setItem(EMAIL_SESSION_KEY, event.target.value);
     } else {
       setEmailIcon(X_ICON);
       setEmailIconClass(style.lightGray);
@@ -114,7 +118,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       contentType: 'application/json',
       data: JSON.stringify({
         user: {
-          email: 'test@email.com',
+          email: email,
           password: password,
           password_confirmation: password,
         },

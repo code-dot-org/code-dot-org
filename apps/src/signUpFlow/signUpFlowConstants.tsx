@@ -1,4 +1,5 @@
 const ACCOUNT_TYPE_SESSION_KEY = 'accountType';
+const EMAIL_SESSION_KEY = 'email';
 const USER_AGE_SESSION_KEY = 'age';
 const IS_PARENT_SESSION_KEY = 'isParent';
 const PARENT_EMAIL_SESSION_KEY = 'parentEmail';
@@ -11,6 +12,7 @@ const SCHOOL_NAME_SESSION_KEY = 'schoolName';
 
 export {
   ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
   USER_AGE_SESSION_KEY,
   IS_PARENT_SESSION_KEY,
   PARENT_EMAIL_SESSION_KEY,
