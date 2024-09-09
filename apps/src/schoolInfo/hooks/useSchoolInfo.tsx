@@ -62,6 +62,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   const [schoolZip, setSchoolZip] = useState(detectedZip);
   const [schoolName, setSchoolName] = useState(detectedSchoolName);
   const [schoolsList, setSchoolsList] = useState<SchoolDropdownOption[]>([]);
+  const [schoolsListLoading, setSchoolsListLoading] = useState(false);
 
   const schoolZipIsValid = useMemo(
     () => ZIP_REGEX.test(schoolZip),
@@ -116,6 +117,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
       sendAnalyticsEvent(EVENTS.ZIP_CODE_ENTERED, {zip: schoolZip});
     }
 
+    setSchoolsListLoading(true);
     fetchSchools(schoolZip, data => {
       if (!mounted.current) return;
 
@@ -127,6 +129,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
       if (schools.some(school => school.value === detectedSchoolId)) {
         setSchoolId(detectedSchoolId);
       }
+      setSchoolsListLoading(false);
     });
   }, [schoolZip, schoolZipIsValid, detectedSchoolId, fetchSchools]);
 
@@ -166,6 +169,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     schoolZip,
     schoolsList,
     schoolZipIsValid,
+    schoolsListLoading,
     setSchoolId,
     setCountry,
     setSchoolName,
