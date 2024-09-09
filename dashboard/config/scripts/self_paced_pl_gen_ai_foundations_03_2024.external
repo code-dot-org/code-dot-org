@@ -5,8 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Hierarchy of AI
 
-### Beep boop
+### Let's take a look at some key terms in the hierarchy of AI.
 
+<img src="https://images.code.org/e81dc06432dbb8272f208e802d7033e3-Screenshot 2024-08-30 at 12.31.04 PM.png" alt="pixel grid of an X" style="border: 2px solid black; border-radius: 8px; clear: both; margin: 0 60px 20px 0;">
 
-
+- #### **Artificial Intelligence (AI)**: A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions.
+- #### **Machine Learning**: A type of AI that focuses on enabling systems to learn from data, recognizing patterns, and making decisions with minimal human intervention. An example includes recommendation algorithms.
+- #### **Deep Learning**: A specialized form of machine learning that uses neural networks with multiple layers to analyze complex data, such as images or text. Examples include cancer detection or email classification.
+- #### **Generative AI**: The latest evolution in AI technology that generates new content, such as text, images, or videos, based on the data it has been trained on. It works similarly to deep learning but in reverse—generating content instead of classifying it. Examples include ChatGPT, Midjourney, and DALL-E.
 MARKDOWN

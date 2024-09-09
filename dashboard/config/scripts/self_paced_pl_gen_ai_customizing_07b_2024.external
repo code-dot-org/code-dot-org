@@ -5,20 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # System Prompting
 
-#### There are lots of new key concepts introduced around system prompting that students will engage with during these lessons. We’ve summarized them below.
+#### There are two more strategies you can use when writing system prompts.
 
-## Role and Tone:
-## Audience and Delivery:
-## Chain of Reasoning:
-## Giving Examples:
+#### **Chain of Reasoning**: The steps the model takes to explain its answer, showing how it got from the question to the final response, like solving a math problem step by step.
+
+#### **Giving Examples**: Providing specific instances or situations to make the explanation clearer, like saying, "For example, when you..." to help people understand better.
 
 ## Up Next!
-#### Learn more about each of these concepts and then try them out in chatbot lab.
-
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> XXX  
-</p>
-</div>
+#### Try out applying each of these in chatbot lab.
 
 MARKDOWN

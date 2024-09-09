@@ -6,12 +6,13 @@ class AiRubricConfig
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `AiRubricConfig.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-08-14-cfe-release/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-09-05-lesson-7-release/'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files within
   # the release dir in S3 which will be used for AI evaluation.
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME = {
     'csd3-2023' => {
+      'CSD U3 L7 mini project_2023' => 'csd3-2023-L7',
       'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
       'CSD web project animated review_2023' => 'csd3-2023-L14',
       'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
@@ -20,6 +21,7 @@ class AiRubricConfig
       'CSD games project review_2023' => 'csd3-2023-L28',
     },
     'csd3-2024' => {
+      'CSD U3 L7 mini project_2024' => 'csd3-2023-L7',
       'CSD U3 Sprites scene challenge_2024' => 'csd3-2023-L11',
       'CSD web project animated review_2024' => 'csd3-2023-L14',
       'CSD U3 Interactive Card Final_2024' => 'csd3-2023-L18',

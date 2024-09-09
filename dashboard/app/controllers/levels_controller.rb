@@ -300,10 +300,14 @@ class LevelsController < ApplicationController
 
     if @level.save
       reset = !!params[:reset]
-      redirect = if reset
-                   params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+      redirect = if params[:redirect_start_mode]
+                   edit_blocks_level_path(@level, :start_sources)
                  else
-                   params["redirect"] || level_url(@level, show_callouts: 1)
+                   if reset
+                     params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+                   else
+                     params["redirect"] || level_url(@level, show_callouts: 1)
+                   end
                  end
       render json: {redirect: redirect}
     else
@@ -381,7 +385,9 @@ class LevelsController < ApplicationController
     rescue ActiveRecord::RecordInvalid => exception
       render(status: :not_acceptable, plain: exception) && return
     end
-    if params[:do_not_redirect]
+    if params[:redirect_start_mode]
+      render json: {redirect: edit_blocks_level_path(@level, :start_sources)}
+    elsif params[:do_not_redirect]
       render json: @level
     else
       render json: {redirect: edit_level_path(@level)}
@@ -499,6 +505,7 @@ class LevelsController < ApplicationController
     links = {}
 
     links[@level.name] = [{text: level_path(@level), url: level_url(@level)}]
+    links[@level.name] << {text: "#{level_path(@level)} (reset version history)", url: "#{level_url(@level)}?reset=true"}
     if @level.level_concept_difficulty && !@level.level_concept_difficulty.concept_difficulties_as_string.empty?
       links[@level.name] << {text: "LCD: #{@level.level_concept_difficulty.concept_difficulties_as_string}", url: ''}
     end

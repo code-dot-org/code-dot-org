@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-30T17:41:25.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Enhancing the Stacked Bar Chart: Step 1\r\n\r\nEnhance the visual appeal and readability of the bar chart.\r\n\r\n## Do This\r\n\r\n1. Add the `color` parameter to the `stacked_data.plot()` line to apply custom colors of your choice to the bars.\r\n2. Discuss with your partner:\r\n   - How does changing the bar chart’s colors enhance your understanding of the trends in sightings? \r\n   - How might your color choices negatively impact the interpretation of the data?\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "project_template_level_name": "datascience-U2L8-L7-9templ_2024-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30T17:41:25.636+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L8-L6_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L8-L6_2024-pilot\"},{\"changed_at\":\"2024-08-30 17:42:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>
