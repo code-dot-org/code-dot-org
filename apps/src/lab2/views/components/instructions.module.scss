@@ -146,22 +146,22 @@
 }
 
 .buttonInstruction {
-  font-size: 14px;
-  background-color: $brand_secondary_default;
-  border-color: $brand_secondary_default;
-  color: $neutral_light;
+  //font-size: 14px;
+  //background-color: $brand_secondary_default;
+  //border-color: $brand_secondary_default;
+  //color: $neutral_light;
   width: 100%;
   padding: 5px 10px;
   border-radius: 4px;
   height: 38px;
   margin: 0 0 10px 0;
-  &:disabled,
-  &[aria-disabled='true'] {
-    cursor: not-allowed;
-    border-color: $light_gray_200;
-    background-color: $light_gray_200;
-    color: $light_white;
-  }
+  //&:disabled,
+  //&[aria-disabled='true'] {
+  //  cursor: not-allowed;
+  //  border-color: $light_gray_200;
+  //  background-color: $light_gray_200;
+  //  color: $light_white;
+  //}
 }
 
 .markdownText {

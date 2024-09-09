@@ -4,6 +4,7 @@ import {useSelector} from 'react-redux';
 
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {
@@ -311,15 +312,23 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
               )}
+              {/*{canShowContinueButton && (*/}
+              {/*  <button*/}
+              {/*    id="instructions-continue-button"*/}
+              {/*    type="button"*/}
+              {/*    onClick={onNextPanel}*/}
+              {/*    className={moduleStyles.buttonInstruction}*/}
+              {/*  >*/}
+              {/*    {commonI18n.continue()}*/}
+              {/*  </button>*/}
+              {/*)}*/}
               {canShowContinueButton && (
-                <button
+                <Button
                   id="instructions-continue-button"
-                  type="button"
+                  text={commonI18n.continue()}
                   onClick={onNextPanel}
                   className={moduleStyles.buttonInstruction}
-                >
-                  {commonI18n.continue()}
-                </button>
+                />
               )}
               {canShowFinishButton && (
                 <>
