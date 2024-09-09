@@ -7,7 +7,7 @@
   background-size: cover;
 
   &.hoc-2024 {
-    background: none; // this overrides the background image from the previous class
+    background: none; // this overrides the background image from above
     background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
   }
 
