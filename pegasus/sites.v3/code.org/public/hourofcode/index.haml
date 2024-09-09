@@ -9,6 +9,7 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/hour-of-code-styles.css", rel: "stylesheet", type: "text/css"}
 
+-# TODO - clean up soon-hoc logic once this is launched
 -# Show 2024 HOC banner if hoc_mode is "soon-hoc", otherwise show 2023 banner
 - if hoc_mode == "soon-hoc"
   %section.hero-banner-basic.hoc-2024
@@ -36,6 +37,9 @@ theme: responsive_full_width
         - if hoc_mode == "soon-hoc"
           %p.body-three
             =hoc_s("hoc_page.what_is_hoc.desc_02", markdown: :inline)
+        - else
+          %p.body-three
+            =hoc_s(:hoc_page_desc_2023)
       %figure.col-45
         %img{src: "/images/hoc-page-kids-computer.png", alt: "", style: "width: 100%"}
 
