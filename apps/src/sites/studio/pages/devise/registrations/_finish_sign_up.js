@@ -5,11 +5,11 @@ import ReactDOM from 'react-dom';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
-import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+import {SchoolDataInputsContainer} from '@cdo/apps/templates/SchoolDataInputsContainer';
 import {
-  SELECT_A_SCHOOL,
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
+  SELECT_A_SCHOOL,
 } from '@cdo/apps/templates/SchoolZipSearch';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -237,7 +237,7 @@ $(document).ready(() => {
     if (schoolInfoMountPoint) {
       ReactDOM.render(
         <div style={{padding: 22}}>
-          <SchoolDataInputs usIp={usIp} />
+          <SchoolDataInputsContainer usIp={usIp} />
         </div>,
         schoolInfoMountPoint
       );
