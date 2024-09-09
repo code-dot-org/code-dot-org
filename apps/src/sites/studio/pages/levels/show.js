@@ -94,7 +94,10 @@ function initPage() {
     }
   }
 
-  if (hasScriptData('script[data-rubricdata]')) {
+  if (
+    getStore().getState().verifiedInstructor.isVerified &&
+    hasScriptData('script[data-rubricdata]')
+  ) {
     const rubricData = getScriptData('rubricdata');
     const {rubric, studentLevelInfo} = rubricData;
     const reportingData = {

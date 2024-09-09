@@ -73,7 +73,10 @@ export default class GameLab extends P5Lab {
   }
 
   runButtonClick() {
-    if (hasScriptData('script[data-rubricdata]')) {
+    if (
+      getStore().getState().verifiedInstructor.isVerified &&
+      hasScriptData('script[data-rubricdata]')
+    ) {
       const rubricData = getScriptData('rubricdata');
       const teacherId = getStore().getState().currentUser.userId;
       const {rubric, studentLevelInfo} = rubricData;
