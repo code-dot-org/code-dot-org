@@ -142,6 +142,12 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
+    is_teacher_verified = current_user.verified_teacher?
+    return head :forbidden unless is_teacher_verified
+
+    is_teacher_verified = current_user.verified_teacher?
+    return head :forbidden unless is_teacher_verified
+
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
@@ -165,6 +171,9 @@ class RubricsController < ApplicationController
     return head :bad_request unless @rubric
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+
+    is_teacher_verified = current_user.verified_teacher?
+    return head :forbidden unless is_teacher_verified
 
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
@@ -214,6 +223,9 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
+    is_teacher_verified = current_user.verified_teacher?
+    return head :forbidden unless is_teacher_verified
+
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
@@ -241,6 +253,9 @@ class RubricsController < ApplicationController
     section_id = params.transform_keys(&:underscore).require(:section_id)
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+
+    is_teacher_verified = current_user.verified_teacher?
+    return head :forbidden unless is_teacher_verified
 
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
