@@ -1,7 +1,7 @@
 import {waitFor} from '@testing-library/react';
 import {act, renderHook} from '@testing-library/react-hooks';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
@@ -19,7 +19,6 @@ import {
 jest.mock('@cdo/apps/lib/util/AnalyticsReporter');
 jest.mock('@cdo/apps/util/AuthenticityTokenStore');
 jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools');
-jest.mock('@cdo/apps/schoolInfo/utils/sendAnalyticsEvent');
 
 // Mock sessionStorage
 const mockSessionStorage = (() => {
@@ -64,8 +63,8 @@ describe('useSchoolInfo', () => {
       ]);
 
     sendAnalyticsEventSpy = jest.spyOn(
-      require('@cdo/apps/schoolInfo/utils/sendAnalyticsEvent'),
-      'sendAnalyticsEvent'
+      require('@cdo/apps/lib/util/AnalyticsReporter'),
+      'sendEvent'
     );
   });
 
@@ -167,7 +166,8 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.COUNTRY_SELECTED,
-          {country: 'US'}
+          {country: 'US'},
+          PLATFORMS.BOTH
         );
       });
     });
@@ -237,7 +237,8 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.ZIP_CODE_ENTERED,
-          {zip: '90210'}
+          {zip: '90210'},
+          PLATFORMS.BOTH
         );
       });
 
@@ -297,7 +298,8 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-          {}
+          {},
+          PLATFORMS.BOTH
         );
 
         act(() => {
@@ -306,7 +308,8 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.ADD_MANUALLY_CLICKED,
-          {}
+          {},
+          PLATFORMS.BOTH
         );
 
         act(() => {
@@ -315,7 +318,8 @@ describe('useSchoolInfo', () => {
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.SCHOOL_SELECTED_FROM_LIST,
-          {'nces Id': 'NEW_NCES_ID'}
+          {'nces Id': 'NEW_NCES_ID'},
+          PLATFORMS.BOTH
         );
       });
     });

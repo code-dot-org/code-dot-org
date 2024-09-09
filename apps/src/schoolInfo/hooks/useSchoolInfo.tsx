@@ -1,6 +1,7 @@
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
@@ -18,7 +19,6 @@ import {
 import {SchoolDropdownOption, SchoolInfoInitialState} from '../types';
 import {constructSchoolOption} from '../utils/constructSchoolOption';
 import {fetchSchools as fetchSchoolsAPI} from '../utils/fetchSchools';
-import {sendAnalyticsEvent} from '../utils/sendAnalyticsEvent';
 
 export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   const mounted = useRef(false);
@@ -89,7 +89,11 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
       setSchoolZip('');
       setSchoolName('');
       setSchoolsList([]);
-      sendAnalyticsEvent(EVENTS.COUNTRY_SELECTED, {country});
+      analyticsReporter.sendEvent(
+        EVENTS.COUNTRY_SELECTED,
+        {country},
+        PLATFORMS.BOTH
+      );
     }
   }, [country]);
 
@@ -114,7 +118,11 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
       sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, schoolZip);
 
-      sendAnalyticsEvent(EVENTS.ZIP_CODE_ENTERED, {zip: schoolZip});
+      analyticsReporter.sendEvent(
+        EVENTS.ZIP_CODE_ENTERED,
+        {zip: schoolZip},
+        PLATFORMS.BOTH
+      );
     }
 
     setSchoolsListLoading(true);
@@ -138,13 +146,25 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, schoolId);
     if (mounted.current) {
       if (schoolId === NO_SCHOOL_SETTING) {
-        sendAnalyticsEvent(EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED, {});
+        analyticsReporter.sendEvent(
+          EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
       } else if (schoolId === CLICK_TO_ADD) {
-        sendAnalyticsEvent(EVENTS.ADD_MANUALLY_CLICKED, {});
+        analyticsReporter.sendEvent(
+          EVENTS.ADD_MANUALLY_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
       } else {
-        sendAnalyticsEvent(EVENTS.SCHOOL_SELECTED_FROM_LIST, {
-          'nces Id': schoolId,
-        });
+        analyticsReporter.sendEvent(
+          EVENTS.SCHOOL_SELECTED_FROM_LIST,
+          {
+            'nces Id': schoolId,
+          },
+          PLATFORMS.BOTH
+        );
       }
     }
   }, [schoolId]);
