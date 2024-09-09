@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import {ControlLabel, FormControl, FormGroup} from 'react-bootstrap';
-import {connect} from 'react-redux';
+import {connect, useSelector} from 'react-redux';
 
 import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import {bulkSet} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {RootState} from '@cdo/apps/types/redux';
 import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -14,19 +15,18 @@ import './style.scss';
 
 interface BulkSetModalProps {
   isOpen?: boolean;
-  initVal?: string;
   onClose: () => void;
   bulkSet: (studentsData: {usState: string | null}) => void;
 }
 
 const BulkSetModal: React.FC<BulkSetModalProps> = ({
   isOpen = false,
-  initVal = '',
   onClose,
   // Provided by redux
   bulkSet,
 }) => {
-  const [usState, setUsState] = useState(initVal);
+  const currentUser = useSelector((state: RootState) => state.currentUser);
+  const [usState, setUsState] = useState(currentUser?.usStateCode || '');
 
   const handleUsStateChange: React.FormEventHandler<FormControl> = event => {
     setUsState((event.target as HTMLInputElement).value);

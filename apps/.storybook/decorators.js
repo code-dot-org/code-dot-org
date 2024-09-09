@@ -1,3 +1,4 @@
+import {Provider} from 'react-redux';
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import reduxThunk from 'redux-thunk';
 
@@ -10,4 +11,13 @@ export const reduxStore = (reducers = {}, state = {}) => {
     state,
     applyMiddleware(reduxThunk)
   );
+};
+
+export const reduxStoreDecorator = function (Story, context) {
+  const reducers = this || {};
+
+  return Provider({
+    children: Story(),
+    store: reduxStore(reducers, context.parameters.store),
+  });
 };
