@@ -90,8 +90,11 @@ class RegistrationsController < Devise::RegistrationsController
       user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
       user_params[:email] ||= params[:email]
+      user_params[:age] ||= user_params[:user_type] == 'teacher' ? '21+' : user_params[:age]
 
-      @user = User.new_with_session(user_params.permit(:user_type, :email), session)
+      @user = User.new_with_session(user_params.permit(:user_type, :email, :name, :email_preference_opt_in, :school, :school_info_id, :age), session)
+      @user.save!
+      @user
     else
       save_default_sign_up_user_type
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
