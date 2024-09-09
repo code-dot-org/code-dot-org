@@ -17,6 +17,8 @@ const PANEL_TOP_COORDINATE = 60;
 // console. We will likely want a different pattern long-term, as we will want other components to
 // be resizable, and don't want to have to make a bunch of different combination components to achieve that.
 // We may want to investigate more general solution for this, such as a panel manager component.
+// We also will want resizing to be accessible, and the HeightResizer component only works with mouse and touch
+// events.
 const WorkspaceAndConsole: React.FunctionComponent = () => {
   const [consoleHeight, setConsoleHeight] = React.useState(350);
   const [columnHeight, setColumnHeight] = React.useState(800);
