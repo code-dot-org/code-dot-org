@@ -36,11 +36,7 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
     <StylizedBaseDialog
       isOpen={isOpen}
       bodyId="us-state-column-bulk-set-modal"
-      title={
-        <Heading4 className="title">
-          {i18n.studentUsStateUpdatesModal_title()}
-        </Heading4>
-      }
+      title={<Heading4>{i18n.studentUsStateUpdatesModal_title()}</Heading4>}
       confirmationButtonText={i18n.add()}
       handleConfirmation={bulkSetStudents}
       handleClose={onClose}
