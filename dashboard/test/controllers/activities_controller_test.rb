@@ -67,7 +67,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     }
 
     # set up params for testing rubric evaluation
-    @teacher = create :teacher
+    @teacher = create :authorized_teacher
     @section = create :section, teacher: @teacher
     @student = create :student
     create :follower, section: @section, student_user: @student
@@ -1140,9 +1140,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, parent_user_level.best_result
   end
 
-  test 'milestone with student in experiment triggers rubric eval job' do
+  test 'milestone triggers AI rubric eval job' do
     section = create :section, teacher: @teacher, script: @script
     create :follower, section: section, student_user: @student
+
     Metrics::Events.stubs(:log_event).once
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id).once
