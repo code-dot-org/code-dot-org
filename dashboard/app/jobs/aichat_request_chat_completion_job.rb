@@ -21,7 +21,12 @@ class AichatRequestChatCompletionJob < ApplicationJob
     end
 
     request = arguments.first[:request]
-    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
+    execution_status_code = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE]
+    if exception.message.include? "must have less than 3000 tokens"
+      execution_status_code = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE]
+    end
+
+    request.update!(response: exception.message, execution_status: execution_status_code)
     Honeybadger.notify(
       "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}",
       context: {
