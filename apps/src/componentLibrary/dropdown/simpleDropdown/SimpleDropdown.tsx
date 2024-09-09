@@ -3,6 +3,7 @@ import React, {AriaAttributes} from 'react';
 
 import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 import moduleStyles from './simpleDropdown.module.scss';
 
@@ -35,6 +36,8 @@ export interface SimpleDropdownProps extends AriaAttributes {
   color?: 'white' | 'black' | 'gray';
   /** SimpleDropdown size */
   size: ComponentSizeXSToL;
+  /** Show spinner for async data */
+  loading?: boolean;
 }
 
 /**
@@ -60,6 +63,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   id,
   className,
   labelText,
+  loading = false,
   dropdownTextThickness = 'thick',
   isLabelVisible = true,
   disabled = false,
@@ -110,6 +114,11 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
                 </option>
               ))}
         </select>
+        {loading && (
+          <div className={moduleStyles.dropdownSpinner}>
+            <Spinner size="small" />
+          </div>
+        )}
       </div>
     </label>
   );
