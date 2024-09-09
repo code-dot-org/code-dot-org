@@ -92,11 +92,6 @@ class RegistrationsController < Devise::RegistrationsController
       user_params[:email] ||= params[:email]
 
       @user = User.new_with_session(user_params.permit(:user_type, :email), session)
-
-      puts 'Finished creating @user'
-      puts @user.to_json
-
-      @user
     else
       save_default_sign_up_user_type
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)

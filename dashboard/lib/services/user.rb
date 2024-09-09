@@ -6,10 +6,6 @@ class Services::User
     # Remove nested attributes for authentication_options to prevent
     # duplicates when email is ommitted from the LTI launch response
     flat_params = params.except('authentication_options_attributes')
-
-    puts 'Flat params to assign as attributes'
-    puts flat_params.to_json
-
     user.assign_attributes(flat_params.compact)
   end
 
