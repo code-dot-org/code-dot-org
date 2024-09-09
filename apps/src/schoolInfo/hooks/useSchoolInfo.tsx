@@ -94,15 +94,27 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   // Handle schoolZip changes
   useEffect(() => {
-    if (!mounted.current || !schoolZip || !schoolZipIsValid) return;
+    if (!schoolZipIsValid) {
+      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '');
+      return;
+    }
 
-    sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, schoolZip);
+    if (mounted.current && schoolZip) {
+      setSchoolId(SELECT_A_SCHOOL);
+      setSchoolName('');
+      setSchoolsList([]);
+    }
 
-    setSchoolId(SELECT_A_SCHOOL);
-    setSchoolName('');
-    setSchoolsList([]);
+    if (sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY) !== schoolZip) {
+      // Clear out school from dropdown if schoolZip has changed
+      setSchoolId(SELECT_A_SCHOOL);
+      setSchoolName('');
+      setSchoolsList([]);
 
-    sendAnalyticsEvent(EVENTS.ZIP_CODE_ENTERED, {zip: schoolZip});
+      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, schoolZip);
+
+      sendAnalyticsEvent(EVENTS.ZIP_CODE_ENTERED, {zip: schoolZip});
+    }
 
     fetchSchools(schoolZip, data => {
       if (!mounted.current) return;
