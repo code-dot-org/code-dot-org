@@ -12,12 +12,7 @@ import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import './style.scss';
-
-interface BulkSetModalProps {
-  isOpen?: boolean;
-  onClose: () => void;
-  bulkSet: (studentsData: {usState: string | null}) => void;
-}
+import {BulkSetModalProps} from './interface';
 
 const BulkSetModal: React.FC<BulkSetModalProps> = ({
   isOpen = false,
