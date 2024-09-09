@@ -175,7 +175,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 value={password}
                 onChange={handlePasswordChange}
                 name="passwordInput"
-                //type="password" can update following ACQ-2365
+                inputType="password"
               />
               <div className={style.validationMessage}>
                 <FontAwesomeV6Icon
@@ -191,7 +191,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 value={confirmPassword}
                 onChange={handleConfirmPasswordChange}
                 name="confirmPasswordInput"
-                //type="password" can update following ACQ-2365
+                inputType="password"
               />
               <div className={style.validationMessage}>
                 <FontAwesomeV6Icon
