@@ -429,7 +429,7 @@ class FilesApi < Sinatra::Base
           # For aichat lab, we only check the student system prompt and retrieval contexts.
           text_to_check = get_text_for_profanity_check(project_type, body)
           locale_code = request.locale.to_s.split('-').first
-          text_to_check_comprehend_response = comprehend_toxicity(text_to_check, locale_code)
+          text_to_check_comprehend_response = AichatComprehendHelper.get_toxicity(text_to_check, locale_code)
           if text_to_check_comprehend_response[:toxicity] >= get_toxicity_threshold
             share_failure = ShareFailure.new(ShareFiltering::FailureType::PROFANITY, text_to_check_comprehend_response)
           end
@@ -1112,27 +1112,7 @@ class FilesApi < Sinatra::Base
     body
   end
 
-  private def create_comprehend_client
-    Aws::Comprehend::Client.new
-  end
-
   private def get_toxicity_threshold
     DCDO.get("aws_comprehend_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
-  end
-
-  # Moderate given text for inappropriate/toxic content using AWS Comprehend client.
-  private def comprehend_toxicity(text, locale)
-    comprehend_response = create_comprehend_client.detect_toxic_content(
-      {
-        text_segments: [{text: text}],
-        language_code: locale,
-      }
-    )
-    categories = comprehend_response.result_list[0].labels
-    {
-      text: text,
-      toxicity: comprehend_response.result_list[0].toxicity,
-      max_category: categories.max_by(&:score),
-    }
   end
 end

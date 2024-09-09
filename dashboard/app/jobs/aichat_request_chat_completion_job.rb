@@ -47,10 +47,6 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
-  private def create_comprehend_client
-    Aws::Comprehend::Client.new
-  end
-
   private def get_toxicity_threshold_user_input
     DCDO.get("aws_comprehend_toxicity_threshold_user_input", DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
   end
@@ -60,10 +56,8 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
-    comprehend_client = create_comprehend_client
-
     # Moderate user input for toxicity and PII
-    user_comprehend_response = comprehend_toxicity(new_message[:chatMessageText], locale, comprehend_client)
+    user_comprehend_response = AichatComprehendHelper.get_toxicity(new_message[:chatMessageText], locale)
     puts "user_comprehend_response: #{user_comprehend_response}"
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_comprehend_response}"] if user_comprehend_response[:toxicity] > get_toxicity_threshold_user_input
 
@@ -74,7 +68,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
     # Moderate model output for toxicity and PII. Report to HoneyBadger if the model returned toxicity.
-    model_comprehend_response = comprehend_toxicity(response, locale, comprehend_client)
+    model_comprehend_response = AichatComprehendHelper.get_toxicity(response, locale)
     puts "model_comprehend_response: #{model_comprehend_response}"
     if model_comprehend_response[:toxicity] > get_toxicity_threshold_model_output
       Honeybadger.notify(
@@ -94,20 +88,20 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   # Moderate given text for inappropriate/toxic content using AWS Comprehend client.
-  private def comprehend_toxicity(text, locale, comprehend_client)
-    comprehend_response = comprehend_client.detect_toxic_content(
-      {
-        text_segments: [{text: text}],
-        language_code: locale,
-      }
-    )
-    categories = comprehend_response.result_list[0].labels
-    {
-      text: text,
-      toxicity: comprehend_response.result_list[0].toxicity,
-      max_category: categories.max_by(&:score),
-    }
-  end
+  # private def comprehend_toxicity(text, locale, comprehend_client)
+  #   comprehend_response = comprehend_client.detect_toxic_content(
+  #     {
+  #       text_segments: [{text: text}],
+  #       language_code: locale,
+  #     }
+  #   )
+  #   categories = comprehend_response.result_list[0].labels
+  #   {
+  #     text: text,
+  #     toxicity: comprehend_response.result_list[0].toxicity,
+  #     max_category: categories.max_by(&:score),
+  #   }
+  # end
 
   # Check the given text for PII
   private def find_pii(text, locale)
