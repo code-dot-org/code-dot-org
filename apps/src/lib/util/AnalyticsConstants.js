@@ -141,6 +141,17 @@ const EVENTS = {
     'Section table sync google classroom clicked',
   SECTION_TABLE_SYNC_CLEVER_CLICKED: 'Section table sync clever clicked',
 
+  // Section students table on teacher My Dashboard
+  SECTION_STUDENTS_TABLE_US_STATE_SET: 'Section students table US state set',
+  SECTION_STUDENTS_TABLE_US_STATE_BULK_SET:
+    'Section students table US state bulk set',
+  SECTION_STUDENTS_TABLE_ADD_ROW_CLICKED:
+    'Section students table add row clicked',
+  SECTION_STUDENTS_TABLE_SAVE_ROW_CLICKED:
+    'Section students table save row clicked',
+  SECTION_STUDENTS_TABLE_SAVE_ALL_CLICKED:
+    'Section students table save all clicked',
+
   // Section progress v2
   PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
   PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',

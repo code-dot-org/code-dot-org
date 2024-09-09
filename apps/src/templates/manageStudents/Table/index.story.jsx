@@ -28,14 +28,14 @@ const initialState = {
   },
   teacherSections: {
     selectedSectionId: 53,
-    sections: [
-      {
+    sections: {
+      53: {
         id: 53,
         name: 'Test section',
         loginType: SectionLoginType.email,
         hidden: false,
       },
-    ],
+    },
   },
   unitSelection: {
     scriptId: 22,

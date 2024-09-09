@@ -1,3 +1,4 @@
+import {merge} from 'lodash';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import reduxThunk from 'redux-thunk';
@@ -14,10 +15,9 @@ export const reduxStore = (reducers = {}, state = {}) => {
 };
 
 export const reduxStoreDecorator = function (Story, context) {
-  const reducers = this || {};
-
+  const state = merge({}, this.initialState, context.parameters.store);
   return Provider({
     children: Story(),
-    store: reduxStore(reducers, context.parameters.store),
+    store: reduxStore(this.reducers, state),
   });
 };

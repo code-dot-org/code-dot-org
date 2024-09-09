@@ -4,6 +4,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -39,6 +41,7 @@ class ManageStudentsActionsCell extends Component {
     hasEverSignedIn: PropTypes.bool,
     dependsOnThisSectionForLogin: PropTypes.bool,
     canEdit: PropTypes.bool,
+    rowData: PropTypes.object,
 
     // Provided by redux
     startEditingStudent: PropTypes.func,
@@ -52,6 +55,19 @@ class ManageStudentsActionsCell extends Component {
   state = {
     deleting: false,
     requestInProgress: false,
+  };
+
+  reportEvent = (eventName, payload = {}) => {
+    analyticsReporter.sendEvent(
+      eventName,
+      {
+        sectionId: this.props.sectionId,
+        sectionLoginType: this.props.loginType,
+        selectedUsState: this.props.rowData?.editingData?.usState,
+        ...payload,
+      },
+      PLATFORMS.STATSIG
+    );
   };
 
   onConfirmDelete = () => {
@@ -149,6 +165,10 @@ class ManageStudentsActionsCell extends Component {
         },
         {includeUserId: true}
       );
+      this.reportEvent(EVENTS.SECTION_STUDENTS_TABLE_SAVE_ROW_CLICKED, {
+        studentId: this.props.id || null,
+        originalUsState: this.props.rowData?.usState,
+      });
     }
   };
 
@@ -167,6 +187,7 @@ class ManageStudentsActionsCell extends Component {
       },
       {includeUserId: true}
     );
+    this.reportEvent(EVENTS.SECTION_STUDENTS_TABLE_ADD_ROW_CLICKED);
   };
 
   onPrintLoginInfo = () => {

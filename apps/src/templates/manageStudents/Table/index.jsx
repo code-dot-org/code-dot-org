@@ -8,6 +8,8 @@ import * as sort from 'sortabular';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import Notification, {
@@ -157,6 +159,7 @@ class ManageStudentsTable extends Component {
     this.copySectionCode = this.copySectionCode.bind(this);
     this.onPrintLoginCards = this.onPrintLoginCards.bind(this);
     this.showSectionCodeDialog = this.showSectionCodeDialog.bind(this);
+    this.handleSaveAllClick = this.handleSaveAllClick.bind(this);
     this.close = this.close.bind(this);
   }
 
@@ -387,7 +390,21 @@ class ManageStudentsTable extends Component {
         hasEverSignedIn={rowData.hasEverSignedIn}
         dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
         canEdit={!this.isTeacher(rowData.userType)}
+        rowData={rowData}
       />
+    );
+  }
+
+  handleSaveAllClick() {
+    this.props.saveAllStudents();
+
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_STUDENTS_TABLE_SAVE_ALL_CLICKED,
+      {
+        sectionId: this.props.sectionId,
+        sectionLoginType: this.props.loginType,
+      },
+      PLATFORMS.STATSIG
     );
   }
 
@@ -398,7 +415,7 @@ class ManageStudentsTable extends Component {
         {numberOfEditingRows > 1 && (
           <Button
             __useDeprecatedTag
-            onClick={this.props.saveAllStudents}
+            onClick={this.handleSaveAllClick}
             color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.saveAll()}
           />
