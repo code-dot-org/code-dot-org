@@ -526,7 +526,10 @@ exports.install = function (blockly, blockInstallOptions) {
     getVars: Blockly.Variables.getVars,
   };
 
-  generator.forBlock.variables_get_counter = generator.forBlock.variables_get;
+  const blockGeneratorFunctionDictionary = generator.forBlock || generator;
+
+  blockGeneratorFunctionDictionary.variables_get_counter =
+    blockGeneratorFunctionDictionary.variables_get;
 
   blockly.Blocks.variables_get_length = {
     // Variable getter.
