@@ -1153,7 +1153,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'milestone with student in experiment but where teacher disables AI does not triggers rubric eval job' do
+  test 'milestone where teacher disables AI does not triggers rubric eval job' do
     @teacher.ai_rubrics_disabled = true
     @teacher.save!
     section = create :section, teacher: @teacher, script: @script
@@ -1167,7 +1167,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'milestone with student in experiment on non ai level does not trigger rubric eval job' do
+  test 'milestone with student on non ai level does not trigger rubric eval job' do
     section = create :section, teacher: @teacher, script: @script
     create :follower, section: section, student_user: @student
     Metrics::Events.stubs(:log_event).never
@@ -1179,7 +1179,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'milestone with teacher in experiment does not trigger rubric eval job' do
+  test 'milestone with teacher does not trigger rubric eval job' do
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
