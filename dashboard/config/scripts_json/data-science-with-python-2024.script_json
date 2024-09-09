@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-05 20:54:04 UTC",
+    "serialized_at": "2024-09-07 00:08:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2664,6 +2664,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-CFU_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2836,6 +2839,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-CFU_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2983,6 +2989,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-CFU_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3180,6 +3189,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-CFU_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3327,6 +3339,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-CFU_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3799,6 +3814,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-CFU_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4171,6 +4189,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-CFU_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4268,6 +4289,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-CFU_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4315,6 +4339,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-CFU_2024-pilot"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,

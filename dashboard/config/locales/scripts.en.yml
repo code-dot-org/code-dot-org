@@ -10101,6 +10101,12 @@ en:
         self-paced-pl-csa-2023:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-csa-2023
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-csa1-2023:
           title: 'Module 1: Welcome'
           description: |-
