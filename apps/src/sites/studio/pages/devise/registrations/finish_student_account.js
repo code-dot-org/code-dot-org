@@ -7,11 +7,13 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const ageOptions = getScriptData('ageOptions');
+  const usIp = getScriptData('usIp');
   const usStateOptions = getScriptData('usStateOptions');
 
   ReactDOM.render(
     <FinishStudentAccount
       ageOptions={ageOptions}
+      usIp={usIp}
       usStateOptions={usStateOptions}
     />,
     document.getElementById('finish-student-account-root')
