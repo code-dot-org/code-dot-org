@@ -11,6 +11,8 @@ import moduleStyles from './workspace.module.scss';
 // header and then a bit of empty space.
 const PANEL_TOP_COORDINATE = 60;
 
+// A component that combines the Workspace and Console component into a single component,
+// with a horizontal resizer between them.
 const WorkspaceAndConsole: React.FunctionComponent = () => {
   const [consoleHeight, setConsoleHeight] = React.useState(200);
   const [columnHeight, setColumnHeight] = React.useState(600);
@@ -37,9 +39,11 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
     normalizeConsoleHeight(consoleDesiredHeight);
   };
 
+  // Given a desired console height, ensure it is between the minimum and maximum
+  // console height.
   const normalizeConsoleHeight = (desiredConsoleHeight: number) => {
-    // Minimum height fits 3 lines of text
-    const consoleHeightMin = 140;
+    // Minimum height fits 4 lines of text.
+    const consoleHeightMin = 120;
     const consoleHeightMax = window.innerHeight - 200;
 
     setConsoleHeight(
@@ -64,6 +68,7 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
         resizeItemTop={() => PANEL_TOP_COORDINATE}
         position={editorHeight}
         onResize={handleResize}
+        style={{position: 'static'}}
       />
       <div style={{height: consoleHeight}}>
         <Console />
