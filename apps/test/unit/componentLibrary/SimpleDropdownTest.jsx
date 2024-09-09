@@ -175,4 +175,19 @@ describe('Design System - Dropdown Select Component', () => {
     expect(option2).toBeDefined();
     expect(option3).toBeDefined();
   });
+
+  it('SimpleDropdown - renders a spinner if loading is true', () => {
+    render(
+      <SimpleDropdown
+        loading={true}
+        labelText="Test Dropdown"
+        onChange={() => {}}
+        name="spinner-test-dropdown"
+      />
+    );
+
+    // Check if the spinner is in the document
+    const spinner = screen.getByTestId('loading-spinner');
+    expect(spinner).toBeInTheDocument();
+  });
 });
