@@ -15,7 +15,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
   test 'execution status is set to USER_PROFANITY if profanity is detected in the input' do
     profanity = 'expletive'
-    ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, profanity))
+    AichatComprehendHelper.stubs(:get_toxicity).returns({toxicity: 0.3, text: profanity})
 
     request = create :aichat_request
     perform_enqueued_jobs do
@@ -29,9 +29,9 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   test 'execution status is set to MODEL_PROFANITY if profanity is detected in the output' do
     model_response = 'profane response'
     profanity = 'expletive'
-    ShareFiltering.stubs(:find_profanity_failure).returns(nil)
+    AichatComprehendHelper.stubs(:get_toxicity).returns({toxicity: 0.1, text: 'test'})
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns(model_response)
-    ShareFiltering.stubs(:find_profanity_failure).with(model_response, 'en').returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, profanity))
+    AichatComprehendHelper.stubs(:get_toxicity).with(model_response, 'en').returns(toxicity: 0.7, text: profanity)
 
     request = create :aichat_request
     perform_enqueued_jobs do
@@ -56,9 +56,10 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal model_response, request.response
   end
 
+  ## FIX
   test 'execution status is set to FAILURE and an exception is raised if an unexpected error occurs' do
     error_message = 'error'
-    ShareFiltering.stubs(:find_profanity_failure).returns(nil)
+    AichatComprehendHelper.stubs(:get_toxicity).returns({toxicity: 0.1, text: 'test'})
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).raises(StandardError.new(error_message))
 
     request = create :aichat_request
@@ -72,9 +73,10 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert exception.message.include?(request.to_json)
   end
 
+  # FIX
   test 'execution status is set to USER_INPUT_TOO_LARGE and an exception is raised if the input validation error occurs' do
     error_message = 'Input validation error: `inputs` must have less than 3000 tokens'
-    ShareFiltering.stubs(:find_profanity_failure).returns(nil)
+    AichatComprehendHelper.stubs(:get_toxicity).returns({toxicity: 0.1, text: 'test'})
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).raises(StandardError.new(error_message))
 
     request = create :aichat_request
