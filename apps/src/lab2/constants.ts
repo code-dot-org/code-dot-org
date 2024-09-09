@@ -31,3 +31,9 @@ export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab'];
 
 // Text-based labs that are currently supported by lab2.
 export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
+
+// Banner messages to show LevelBuilders when in start mode. These don't need to be tranlsated because LevelBuilder is English only.
+export enum WARNING_BANNER_MESSAGES {
+  STANDARD = 'You are editing start sources.',
+  TEMPLATE = 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.',
+}

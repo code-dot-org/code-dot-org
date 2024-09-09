@@ -3,7 +3,7 @@ import {Editor} from '@codebridge/Editor';
 import {FileTabs} from '@codebridge/FileTabs';
 import React from 'react';
 
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -40,8 +40,8 @@ const Workspace = () => {
           className={moduleStyles.warningBanner}
         >
           {projectTemplateLevel
-            ? 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.'
-            : 'You are editing start sources.'}
+            ? WARNING_BANNER_MESSAGES.TEMPLATE
+            : WARNING_BANNER_MESSAGES.STANDARD}
         </div>
       )}
       <Editor
