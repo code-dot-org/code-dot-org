@@ -1,12 +1,16 @@
 @import 'font.scss';
 @import 'color.scss';
+@import "@cdo/apps/componentLibrary/typography/typography.module";
 
 .copyright {
     hr {
         border-color: $lighter_gray;
     }
+    p {
+        @include body-three;
+    }
 }
-.copyrightContainer{
+.copyrightBody {
     gap: 16px;
     display: flex;
     flex-direction: column;

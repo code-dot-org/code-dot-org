@@ -103,7 +103,7 @@ export default class SmallFooter extends React.Component {
   };
 
   closeCopyrightDialog = e => {
-    if (e !== null) {
+    if (e !== undefined) {
       e.stopPropagation();
     }
     this.setState({menuState: MenuState.MINIMIZED});
