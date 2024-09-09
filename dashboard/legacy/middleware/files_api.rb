@@ -431,7 +431,7 @@ class FilesApi < Sinatra::Base
           locale_code = request.locale.to_s.split('-').first
           text_to_check_comprehend_response = comprehend_toxicity(text_to_check, locale_code)
           if text_to_check_comprehend_response[:toxicity] >= get_toxicity_threshold
-            share_failure = ShareFailure.new('profanity', text_to_check_comprehend_response)
+            share_failure = ShareFailure.new(ShareFiltering::FailureType::PROFANITY, text_to_check_comprehend_response)
           end
         else
           share_failure = ShareFiltering.find_failure(body, request.locale)
