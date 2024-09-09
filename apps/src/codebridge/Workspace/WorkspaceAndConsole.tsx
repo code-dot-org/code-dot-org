@@ -14,8 +14,8 @@ const PANEL_TOP_COORDINATE = 60;
 // A component that combines the Workspace and Console component into a single component,
 // with a horizontal resizer between them.
 const WorkspaceAndConsole: React.FunctionComponent = () => {
-  const [consoleHeight, setConsoleHeight] = React.useState(200);
-  const [columnHeight, setColumnHeight] = React.useState(600);
+  const [consoleHeight, setConsoleHeight] = React.useState(350);
+  const [columnHeight, setColumnHeight] = React.useState(800);
 
   useEffect(() => {
     const handleColumnResize = () => {
