@@ -64,7 +64,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "hide_view_data_button": "true",
+    "hide_view_data_button": "false",
     "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
@@ -73,15 +73,16 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSP U4L7 Step 4\",\r\n  \"callout_text\": \"Start Here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"step4\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"Step 4\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"right bottom\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "display_name": "Birds, Milestone 9",
+    "bubble_choice_description": "Add your own features and make the app your own!",
+    "thumbnail_url": "https://images.code.org/0fdb1b51d1a815dd986c7af70b001676-Birds.png",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "display_name": "Birds, Milestone 9",
-    "bubble_choice_description": "Add your own features and make the app your own!",
-    "thumbnail_url": "https://images.code.org/0fdb1b51d1a815dd986c7af70b001676-Birds.png"
+    "data_library_tables": "100 Birds of the World"
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-18T00:07:06.587+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Parks Extension L9\\\"\"],\"cloned_from\":\"CSP Lists Practice Parks Extension L9\"},{\"changed_at\":\"2024-04-18 00:07:28 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-18 00:07:58 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-18 19:15:28 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-19 19:08:03 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-18T00:07:06.587+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Parks Extension L9\\\"\"],\"cloned_from\":\"CSP Lists Practice Parks Extension L9\"},{\"changed_at\":\"2024-04-18 00:07:28 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-18 00:07:58 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-18 19:15:28 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-19 19:08:03 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-06 22:22:12 +0000\",\"changed\":[\"code_functions\",\"hide_view_data_button\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
