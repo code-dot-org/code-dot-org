@@ -5,13 +5,7 @@ import Header from '@cdo/apps/templates/manageStudents/Table/UsStateColumn/Heade
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import i18n from '@cdo/locale';
 
-interface RowData {
-  id: number;
-  isEditing: boolean;
-  editingData: {
-    usState: string;
-  };
-}
+import {RowData} from './interface';
 
 const UsStateColumn = () => {
   const headerFormatter = () => <Header />;
@@ -32,9 +26,8 @@ const UsStateColumn = () => {
       label: i18n.usState(),
       props: {
         style: {
+          ...tableLayoutStyles.cell,
           ...tableLayoutStyles.headerCell,
-          ...tableLayoutStyles.unsortableHeaderAligned,
-          width: 70,
         },
       },
     },
@@ -43,7 +36,6 @@ const UsStateColumn = () => {
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          width: 70,
         },
       },
     },

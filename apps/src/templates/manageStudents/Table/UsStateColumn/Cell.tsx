@@ -4,13 +4,7 @@ import {connect} from 'react-redux';
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
 import {editStudent} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
-interface CellProps {
-  id: number;
-  value: string;
-  editedValue: string;
-  isEditing?: boolean;
-  editStudent: (id: number, studentData: {usState: string | null}) => void;
-}
+import {CellProps} from './interface';
 
 const Cell: React.FC<CellProps> = ({
   id,
@@ -28,7 +22,7 @@ const Cell: React.FC<CellProps> = ({
     <>
       {isEditing ? (
         <select
-          style={{width: '100%', marginBottom: 0}}
+          style={{width: 60, margin: 0}}
           name="usState"
           value={editedValue}
           onChange={handleChange}

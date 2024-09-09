@@ -41,8 +41,9 @@ import color from '../../util/color';
  *     color?: string;
  *     textAlign?: string;
  *   };
- *   unsortableHeaderAligned: {
- *     padding?: number;
+ *   flexCell: {
+ *     display?: string;
+ *     alignItems?: string;
  *   };
  * }}
  */
@@ -80,6 +81,10 @@ export const tableLayoutStyles = {
     color: color.charcoal,
     textAlign: 'inherit',
   },
+  flexCell: {
+    display: 'flex',
+    alignItems: 'center',
+  },
   link: {
     ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
@@ -90,9 +95,6 @@ export const tableLayoutStyles = {
   },
   unsortableHeaderRTL: {
     paddingRight: 25,
-  },
-  unsortableHeaderAligned: {
-    padding: 10,
   },
 };
 

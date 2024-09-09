@@ -5,13 +5,14 @@ import BulkSetModal from '@cdo/apps/templates/manageStudents/Table/UsStateColumn
 import QuickActionsCell, {
   QuickActionsCellType,
 } from '@cdo/apps/templates/tables/QuickActionsCell';
+import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import i18n from '@cdo/locale';
 
 const Header: React.FC = () => {
   const [bulkSetModalOpened, setBulkSetModalOpened] = useState(false);
 
   return (
-    <span style={{display: 'flex', alignItems: 'center'}}>
+    <span style={tableLayoutStyles.flexCell}>
       <span>{i18n.usState()}</span>
 
       <QuickActionsCell type={QuickActionsCellType.header}>
