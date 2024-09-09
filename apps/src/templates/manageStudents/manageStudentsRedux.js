@@ -974,10 +974,8 @@ export const loadSectionStudentData = sectionId => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
 
-    // Don't load data if it's already stored in redux.
-    const alreadyHaveStudentData = state.sectionId === sectionId;
-
-    if (!alreadyHaveStudentData) {
+    // Don't load data if it's already being fetched.
+    if (!state.isLoadingStudents) {
       dispatch(startLoadingStudents());
       $.ajax({
         method: 'GET',
