@@ -8,6 +8,9 @@ module AitutorSystemPromptHelper
     system_prompt << get_level_instructions(level) if level
     system_prompt << get_validated_level_test_file_contents(level) if level
 
+    end_of_prompt = "next message should start with [fixed-code-solution], followed by [pedagogical-guiding-answer-markdown], and end with [end-of-response]."
+    system_prompt << "\n\n#{end_of_prompt}"
+
     system_prompt
   end
 
@@ -63,7 +66,7 @@ module AitutorSystemPromptHelper
     - if query is about {identifying the source of errors}
     >>> [pedagogical-guiding-answer-markdown] should explain the issues in the code, what is wrong, and how it can be fixed. use the [fixed-code-solution] as a reference to identify the issues, but do not reveal the [fixed-code-solution] in the [pedagogical-guiding-answer-markdown]. Instead, include bullet points and paragraphs to explain the issues and guide the student on how they can fix the code themselves without revealing the [fixed-code-solution]. This can include explanations about syntax, functions, programming patterns (like the accumulator pattern, which you can show short example codes for), expected behavior, and guiding the student in the task decomposition process including problem-solving, debugging, and testing strategies. You can also suggest that the student can include print statements to debug their code. Do not be picky about code formatting or style unless it directly affects the functionality of the code. If the code does not have any issues, then mention that you were unable to find any errors in the code, and suggest the student to double-check if there really is an issue in their code, or ask them to be more specific about the problem they are facing.
 
-    # make sure that you always follow the provided format in the output. next message should start with [fixed-code-solution], followed by [pedagogical-guiding-answer-markdown], and end with [end-of-response].
+    # make sure that you always follow the provided format in the output.
     "
     base_system_prompt
   end
