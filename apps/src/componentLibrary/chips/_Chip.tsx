@@ -1,11 +1,11 @@
 import classNames from 'classnames';
-import React, {useEffect, useRef, memo} from 'react';
+import React, {useEffect, useRef, memo, HTMLAttributes} from 'react';
 
 import moduleStyles from './chip.module.scss';
 
 const commonI18n = require('@cdo/locale');
 
-interface ChipProps {
+interface ChipProps extends HTMLAttributes<HTMLInputElement> {
   /** Chip label */
   label: string;
   /** Chip name*/

@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0] ()
+
+* updated `Chip` props to support native HTML Input element attributes
+
 ## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/58809)
 
 * Added `gray` color
