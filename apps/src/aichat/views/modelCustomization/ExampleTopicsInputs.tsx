@@ -1,11 +1,14 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
+import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {setModelCardProperty} from '../../redux/aichatRedux';
 import {Visibility} from '../../types';
 
 import MultiInputCustomization from './MultiInputCustomization';
+
+import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 
 const ExampleTopicsInputs: React.FunctionComponent<{
   fieldLabel: string;
@@ -29,6 +32,17 @@ const ExampleTopicsInputs: React.FunctionComponent<{
     [dispatch]
   );
 
+  const validationAlert = useMemo(() => {
+    return (
+      <Alert
+        text="Must add at least one example prompt"
+        type={alertTypes.warning}
+        size="s"
+        className={modelCustomizationStyles.examplePromptAlert}
+      />
+    );
+  }, []);
+
   return (
     <MultiInputCustomization
       label={fieldLabel}
@@ -39,6 +53,7 @@ const ExampleTopicsInputs: React.FunctionComponent<{
       isReadOnly={readOnly}
       hideInputBoxWhenReadOnly={false}
       onUpdateItems={onUpdateItems}
+      validationAlert={topics?.length === 0 ? validationAlert : undefined}
     />
   );
 };
