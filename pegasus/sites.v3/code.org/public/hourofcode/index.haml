@@ -3,15 +3,28 @@ title: Hour of Code
 theme: responsive_full_width
 ---
 
+:ruby
+  hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/hour-of-code-styles.css", rel: "stylesheet", type: "text/css"}
 
-%section.hero-banner-basic
-  .wrapper.centered
-    %p.hoc-label
-      =hoc_s(:hour_of_code)
-    %h1=hoc_s(:hoc2023_header)
+-# Show 2024 HOC banner if hoc_mode is "soon-hoc", otherwise show 2023 banner
+- if hoc_mode == "soon-hoc"
+  %section.hero-banner-basic.hoc-2024
+    .wrapper.centered.flex-container.align-items-center.flex-direction-column.gap-2
+      %figure
+        %img{src: "/images/banners/banner-hoc-2024.png", alt: ""}
+      .text-wrapper
+        %h1=hoc_s("hoc_2024.header")
+        %a.link-button.black.has-external-link{href: "https://hourofcode.com/events", target: "_blank", rel: "noopener noreferrer"}
+          =hoc_s("hoc_2024.button_host_an_event")
+- else
+  %section.hero-banner-basic
+    .wrapper.centered
+      %p.hoc-label
+        =hoc_s(:hour_of_code)
+      %h1=hoc_s(:hoc2023_header)
 
 %section.bg-neutral-light
   .wrapper.flex-container.justify-space-between.wrap
