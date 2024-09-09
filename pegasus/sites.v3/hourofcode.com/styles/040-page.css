@@ -276,6 +276,11 @@ img {
   border: none;
 }
 
+/* Add rounded corners to an element */
+.rounded-corners {
+  border-radius: 4px;
+}
+
 th {
   background-color: #008b9a;
   color: white;
@@ -305,8 +310,13 @@ td {
     flex-direction: column;
   }
   &.flex-direction-column-tablet {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
       flex-direction: column;
+    }
+  }
+  &.flex-direction-column-tablet-reverse {
+    @media screen and (max-width: 992px) {
+      flex-direction: column-reverse;
     }
   }
   &.flex-direction-column-mobile {

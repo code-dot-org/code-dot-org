@@ -1,6 +1,6 @@
 ---
 title: Hour of Code Events
-layout: wide
+layout: wide_index
 ---
 
 :ruby
@@ -16,14 +16,42 @@ layout: wide
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
-%h1=hoc_s(:hoc_events_heading)
+%link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
+%link{href: '/css/generated/action-blocks.css', rel:'stylesheet', type:'text/css'}
 
-.clear-styles
-  = view :off_season_interest_form
+#fullwidth
+  = view :header
 
-%hr{style: "margin-top: 3rem"}
+%main
+  %section
+    .wrapper.flex-container.flex-direction-column-tablet.align-items-center.gap-2
+      .text-wrapper.flex-1
+        %h1.no-margin-top
+          =hoc_s("hoc_events.heading")
+        %p.body-two
+          =hoc_s("hoc_events.desc")
+        %a.link-button{href: "#form"}
+          =hoc_s("hoc_events.button")
+      %figure.flex-1
+        %img.rounded-corners{src: "/images/events-page-header.png", alt: "", style: "width: 100%;"}
 
-%h2.heading-xxl
-  =hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-%p.body-one.no-margin-bottom
-  =hoc_s(:front_intro_default_2)
+  %section#form.bg-neutral-light
+    .wrapper.flex-container.flex-direction-column-tablet-reverse.align-items-center.gap-2
+      %figure.rounded-corners.flex-1{style: "width: 100%; background: var(--neutral_white); border: 1px solid var(--neutral_dark20); padding: 1rem 1rem 0.5rem"}
+        %iframe{allowtransparency: "true", frameborder: "0", height: "325px", src: "https://go.pardot.com/l/153401/2024-01-03/pqtwb6", style: "border: 0", type: "text/html", width: "100%"}
+      .text-wrapper.flex-1
+        %h2.no-margin-top
+          =hoc_s("hoc_events.register.heading")
+        %p.heading-sm
+          =hoc_s("hoc_events.register.disclaimer", markdown: :inline, locals:{close_date: "December 31, 2024"})
+        %p.body-three
+          =hoc_s("hoc_events.register.desc")
+        %hr
+        %p.body-three.no-margin-bottom
+          =hoc_s("hoc_events.register.how_to", markdown: :inline, locals:{how_to_url: resolve_url('/how-to')})
+
+  %section.resources.no-padding-bottom
+    .wrapper
+      %h2.centered.no-margin-top
+        =hoc_s("hoc_events.resources.heading")
+      = view :"events/events_resources"

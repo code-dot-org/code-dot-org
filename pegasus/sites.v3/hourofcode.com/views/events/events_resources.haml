@@ -1,0 +1,37 @@
+:ruby
+  block_items = [
+    {
+      title: hoc_s("hoc_events.resources.hoc.title"),
+      image: "/images/action-blocks/action-block-catalog.png",
+      desc: hoc_s("hoc_events.resources.hoc.desc"),
+      url: resolve_url('/promote'),
+      button_label: hoc_s("hoc_events.resources.hoc.button"),
+    },
+    {
+      title: hoc_s("hoc_events.resources.host.title"),
+      image: "/images/action-blocks/action-block-teach.png",
+      desc: hoc_s("hoc_events.resources.host.desc"),
+      url: resolve_url('/how-to'),
+      button_label: hoc_s("hoc_events.resources.host.button"),
+    },
+    {
+      title: hoc_s("hoc_events.resources.activity.title"),
+      image: "/images/action-blocks/action-block-self-paced-pl.png",
+      desc: hoc_s("hoc_events.resources.activity.desc"),
+      url: resolve_url('/learn'),
+      button_label: hoc_s("hoc_events.resources.activity.button"),
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - block_items.each do |block_item|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        %h3.heading-sm
+          = block_item[:title]
+        %img{src: block_item[:image], alt: ""}
+        %p
+          = block_item[:desc]
+      .content-footer
+        %a.link-button{href: block_item[:url]}
+          = block_item[:button_label]
