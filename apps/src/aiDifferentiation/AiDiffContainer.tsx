@@ -85,38 +85,18 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     };
 
     setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
-    setIsWaitingForResponse(true);
-
-    const body = JSON.stringify({
-      inputText: message,
-      lessonId: lessonId,
-      unitDisplayName: unitDisplayName,
-      sessionId: sessionId,
-    });
-    HttpClient.post(`${aiDiffChatMessageEndpoint}`, body, true, {
-      'Content-Type': 'application/json',
-    })
-      .then(response => response.json())
-      .then(json => {
-        const newAiMessage = {
-          role: Role.ASSISTANT,
-          chatMessageText: json.chat_message_text,
-          status: json.status,
-        };
-        setSessionId(json.session_id);
-        setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
-      })
-      .catch(error => console.log(error))
-      .finally(() => {
-        setIsWaitingForResponse(false);
-      });
+    getAIResponse(message);
   };
 
   const onPromptSelect = (prompt: ChatPrompt) => {
+    getAIResponse(prompt.prompt);
+  };
+
+  const getAIResponse = (prompt: string) => {
     setIsWaitingForResponse(true);
 
     const body = JSON.stringify({
-      inputText: prompt.prompt,
+      inputText: prompt,
       lessonId: lessonId,
       unitDisplayName: unitDisplayName,
       sessionId: sessionId,
