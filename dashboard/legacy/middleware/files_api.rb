@@ -430,7 +430,7 @@ class FilesApi < Sinatra::Base
           text_to_check = get_text_for_profanity_check(project_type, body)
           locale_code = request.locale.to_s.split('-').first
           text_to_check_comprehend_response = AichatComprehendHelper.get_toxicity(text_to_check, locale_code)
-          if text_to_check_comprehend_response[:toxicity] >= get_toxicity_threshold
+          if text_to_check_comprehend_response[:toxicity] >= get_toxicity_threshold_user_sources
             share_failure = ShareFailure.new(ShareFiltering::FailureType::PROFANITY, text_to_check_comprehend_response)
           end
         else
@@ -1112,7 +1112,7 @@ class FilesApi < Sinatra::Base
     body
   end
 
-  private def get_toxicity_threshold
+  private def get_toxicity_threshold_user_sources
     DCDO.get("aws_comprehend_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
   end
 end

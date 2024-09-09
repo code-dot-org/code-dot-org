@@ -87,22 +87,6 @@ class AichatRequestChatCompletionJob < ApplicationJob
     [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
   end
 
-  # Moderate given text for inappropriate/toxic content using AWS Comprehend client.
-  # private def comprehend_toxicity(text, locale, comprehend_client)
-  #   comprehend_response = comprehend_client.detect_toxic_content(
-  #     {
-  #       text_segments: [{text: text}],
-  #       language_code: locale,
-  #     }
-  #   )
-  #   categories = comprehend_response.result_list[0].labels
-  #   {
-  #     text: text,
-  #     toxicity: comprehend_response.result_list[0].toxicity,
-  #     max_category: categories.max_by(&:score),
-  #   }
-  # end
-
   # Check the given text for PII
   private def find_pii(text, locale)
     # TODO: Use llm-guard to check for PII. Currently we don't check for PII to maintain consistency with existing code.
