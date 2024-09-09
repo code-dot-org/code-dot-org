@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {useMemo} from 'react';
+import React, {HTMLAttributes, useMemo} from 'react';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
@@ -21,7 +21,7 @@ export const alertTypes: {[key in AlertType]: AlertType} = {
   gray: 'gray',
 };
 
-export interface AlertProps {
+export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   /** Alert text */
   text: string;
   /** Alert link */
@@ -90,6 +90,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
   isImmediateImportance = true,
   type = 'primary',
   size = 'm',
+  ...rest
 }) => {
   const iconToRender = useMemo(
     () => icon || getDefaultAlertIconFromType(type),
@@ -107,6 +108,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
         className
       )}
       role={isImmediateImportance ? 'alert' : 'status'}
+      {...rest}
     >
       <div className={moduleStyles.alertContentContainer}>
         {showIcon && iconToRender && <FontAwesomeV6Icon {...iconToRender} />}
