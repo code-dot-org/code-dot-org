@@ -207,8 +207,3 @@
     --text-warning-primary-fixed: var(--sentiment-warning-50);
     --text-warning-secondary: var(--text-neutral-tertiary);
 }
-
-/* Utility colors (value is the same across all the themes) */
-:root {
-    --gray: #fff;
-}
