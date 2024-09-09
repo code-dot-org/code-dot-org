@@ -10814,7 +10814,7 @@
         title: "How to Host an Hour"
         desc: "A step-by-step guide to preparing for, running, and celebrating your Hour of Code event with your class or group."
         button: "Read the guide"
-      host:
+      activity:
         title: "Choose an Activity"
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
