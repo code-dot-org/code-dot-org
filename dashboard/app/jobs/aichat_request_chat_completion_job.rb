@@ -1,7 +1,8 @@
 class AichatRequestChatCompletionJob < ApplicationJob
   queue_as :default
 
-  DEFAULT_TOXICITY_THRESHOLD = 0.25
+  DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.25
+  DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.6
 
   before_enqueue do |job|
     request = job.arguments.first[:request]
@@ -45,8 +46,12 @@ class AichatRequestChatCompletionJob < ApplicationJob
     Aws::Comprehend::Client.new
   end
 
-  private def get_toxicity_threshold
-    DCDO.get("aws_comprehend_toxicity_threshold", DEFAULT_TOXICITY_THRESHOLD)
+  private def get_toxicity_threshold_user_input
+    DCDO.get("aws_comprehend_toxicity_threshold_user_input", DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
+  end
+
+  private def get_toxicity_threshold_model_output
+    DCDO.get("aws_comprehend_toxicity_threshold_model_output", DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
   end
 
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
@@ -55,7 +60,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     # Moderate user input for toxicity and PII
     user_comprehend_response = comprehend_toxicity(new_message[:chatMessageText], locale, comprehend_client)
     puts "user_comprehend_response: #{user_comprehend_response}"
-    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_comprehend_response}"] if user_comprehend_response[:toxicity] > get_toxicity_threshold
+    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_comprehend_response}"] if user_comprehend_response[:toxicity] > get_toxicity_threshold_user_input
 
     user_pii = find_pii(new_message[:chatMessageText], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
@@ -66,7 +71,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     # Moderate model output for toxicity and PII. Report to HoneyBadger if the model returned toxicity.
     model_comprehend_response = comprehend_toxicity(response, locale, comprehend_client)
     puts "model_comprehend_response: #{model_comprehend_response}"
-    if model_comprehend_response[:toxicity] > get_toxicity_threshold
+    if model_comprehend_response[:toxicity] > get_toxicity_threshold_model_output
       Honeybadger.notify(
         'Toxicity returned from aichat model (blocked before reaching student)',
         context: {
