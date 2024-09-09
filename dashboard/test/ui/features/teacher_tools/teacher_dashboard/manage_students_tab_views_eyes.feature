@@ -51,14 +51,14 @@ Feature: Using the manage students tab of the teacher dashboard
     When I select the "AL" option in dropdown "us-state"
     And I click selector "#us-state-column-bulk-set-modal button:contains(Add)"
     Then I wait until element "#us-state-column-bulk-set-modal" is not visible
-    And element "#uitest-manage-students-table tr:has(input[value='Student 1']) td:has(select[name='usState'] option[value='AL']:selected)" is visible
-    And element "#uitest-manage-students-table tr:has(input[value='Student 2']) td:has(select[name='usState'] option[value='AL']:selected)" is visible
+    And element "#uitest-manage-students-table tbody tr:nth-child(1) select[name='usState'] option[value='AL']" is checked
+    And element "#uitest-manage-students-table tbody tr:nth-child(2) select[name='usState'] option[value='AL']" is checked
 
     When I click selector "#uitest-manage-students-table span:contains(Save all)"
     # Wait until the name input fields are changed to plain text, indicating that the student has been saved
-    And I wait until element "#uitest-manage-students-table tr:contains(Student 1)" is visible
-    And I wait until element "#uitest-manage-students-table tr:contains(Student 2)" is visible
+    And I wait until element "#uitest-manage-students-table tbody tr:nth-child(1) select[name='usState']" is not visible
+    And I wait until element "#uitest-manage-students-table tbody tr:nth-child(2) select[name='usState']" is not visible
     # Check usState cells after reloading the page to ensure they has been saved in the database
     Then I reload the page
-    And element "#uitest-manage-students-table tr:contains(Student 1) td:contains(AL)" is visible
-    And element "#uitest-manage-students-table tr:contains(Student 2) td:contains(AL)" is visible
+    And element "#uitest-manage-students-table tr:nth-child(1):contains(Student 1) td:contains(AL)" is visible
+    And element "#uitest-manage-students-table tr:nth-child(2):contains(Student 2) td:contains(AL)" is visible
