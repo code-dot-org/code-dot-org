@@ -1,5 +1,6 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
+import '@testing-library/jest-dom';
 
 import locale from '@cdo/apps/signUpFlow/locale';
 import LoginTypeSelection from '@cdo/apps/signUpFlow/LoginTypeSelection';
@@ -40,6 +41,32 @@ describe('LoginTypeSelection', () => {
 
     // Renders button that sends the user to the Finish Account page
     screen.getByRole('button', {name: locale.create_my_account()});
+  });
+
+  it('enables the confirm button only when all inputs are valid', () => {
+    renderDefault();
+
+    const emailInput = screen.getByLabelText(locale.email_address());
+    const passwordInput = screen.getByLabelText(locale.password());
+    const confirmPasswordInput = screen.getByLabelText(
+      locale.confirm_password()
+    );
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.create_my_account(),
+    }) as HTMLButtonElement;
+
+    expect(finishSignUpButton).toBeDisabled();
+
+    // Verify that the button is only enabled when all fields are valid
+    fireEvent.change(emailInput, {target: {value: 'myrandomemail@gmail.com'}});
+    expect(finishSignUpButton).toBeDisabled();
+
+    fireEvent.change(passwordInput, {target: {value: 'password'}});
+    expect(finishSignUpButton).toBeDisabled();
+
+    fireEvent.change(confirmPasswordInput, {target: {value: 'password'}});
+    expect(finishSignUpButton).not.toBeDisabled();
   });
 
   it('if user selected student then finish sign up button sends user to finish student page', () => {

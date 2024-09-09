@@ -285,7 +285,7 @@ class OwnedPlSectionsTable extends Component {
     })(this.props.sectionRows);
 
     return (
-      <Table.Provider columns={columns}>
+      <Table.Provider className="uitest-owned-pl-sections" columns={columns}>
         <Table.Header />
         <Table.Body
           className="uitest-sorted-rows"

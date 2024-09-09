@@ -171,6 +171,7 @@ const AichatView: React.FunctionComponent = () => {
           iconStyle: 'solid',
           title: 'User View Mode',
         },
+        id: 'uitest-user-view-button',
       },
     ],
     size: 's',
@@ -227,7 +228,10 @@ const AichatView: React.FunctionComponent = () => {
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
       {showPresentationToggle() && (
-        <div className={moduleStyles.viewModeButtons}>
+        <div
+          id="uitest-view-mode-toggle-container"
+          className={moduleStyles.viewModeButtons}
+        >
           <SegmentedButtons {...viewModeButtonsProps} />
         </div>
       )}
@@ -272,7 +276,10 @@ const AichatView: React.FunctionComponent = () => {
           </>
         )}
         {viewMode === ViewMode.PRESENTATION && (
-          <div className={moduleStyles.presentationArea}>
+          <div
+            id="uitest-presentation-view-container"
+            className={moduleStyles.presentationArea}
+          >
             <PanelContainer
               id="aichat-presentation-panel"
               headerContent={'Model Card'}

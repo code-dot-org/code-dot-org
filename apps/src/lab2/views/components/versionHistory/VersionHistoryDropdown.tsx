@@ -110,10 +110,13 @@ const VersionHistoryDropdown: React.FunctionComponent<
     return dateFormatter.format(dateObject);
   };
 
-  const onVersionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // TODO: preview this version
-    setSelectedVersion(e.target.value);
-  };
+  const onVersionChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      // TODO: preview this version
+      setSelectedVersion(e.target.value);
+    },
+    []
+  );
 
   return (
     <div>
@@ -180,4 +183,4 @@ const VersionHistoryDropdown: React.FunctionComponent<
   );
 };
 
-export default VersionHistoryDropdown;
+export default React.memo(VersionHistoryDropdown);
