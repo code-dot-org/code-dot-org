@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {useRef, useEffect, ChangeEvent} from 'react';
+import React, {useRef, useEffect, ChangeEvent, HTMLAttributes} from 'react';
 
 import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
@@ -7,15 +7,15 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './checkbox.module.scss';
 
-export interface CheckboxProps {
+export interface CheckboxProps extends HTMLAttributes<HTMLInputElement> {
   /** Checkbox checked state */
   checked: boolean;
   /** Checkbox onChange handler*/
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   /** The name attribute specifies the name of an input element.
-   The name attribute is used to reference elements in a JavaScript,
-   or to reference form data after a form is submitted.
-   Note: Only form elements with a name attribute will have their values passed when submitting a form. */
+     The name attribute is used to reference elements in a JavaScript,
+     or to reference form data after a form is submitted.
+     Note: Only form elements with a name attribute will have their values passed when submitting a form. */
   name: string;
   /** The value attribute specifies the value of an input element. */
   value?: string;
@@ -51,6 +51,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   disabled = false,
   indeterminate = false,
   size = 'm',
+  ...rest
 }) => {
   const checkboxRef = useRef<HTMLInputElement>(null);
   const bodyTextSize = componentSizeToBodyTextSizeMap[size];
@@ -73,6 +74,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
         checked={checked}
         disabled={disabled}
         onChange={onChange}
+        {...rest}
       />
       <i className="fa-solid" />
       {label && (
