@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.4]()
+## [0.3.4](https://github.com/code-dot-org/code-dot-org/pull/60916)
 
 * updated colors.css values
 
