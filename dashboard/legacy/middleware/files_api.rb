@@ -23,6 +23,8 @@ class FilesApi < Sinatra::Base
   # Can set this to an empty array if we do not want aichat checked for profanity.
   LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', ['aichat'])
 
+  DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES = 0.3
+
   def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
@@ -424,8 +426,13 @@ class FilesApi < Sinatra::Base
     if (endpoint == 'libraries' && file_type != '.java') || profanity_project_type?(project_type)
       begin
         if profanity_project_type?(project_type)
+          # For aichat lab, we only check the student system prompt and retrieval contexts.
           text_to_check = get_text_for_profanity_check(project_type, body)
-          share_failure = ShareFiltering.find_profanity_failure(text_to_check, request.locale)
+          locale_code = request.locale.to_s.split('-').first
+          text_to_check_comprehend_response = comprehend_toxicity(text_to_check, locale_code)
+          if text_to_check_comprehend_response[:toxicity] >= get_toxicity_threshold
+            share_failure = ShareFailure.new(ShareFiltering::FailureType::PROFANITY, text_to_check_comprehend_response)
+          end
         else
           share_failure = ShareFiltering.find_failure(body, request.locale)
         end
@@ -1103,5 +1110,29 @@ class FilesApi < Sinatra::Base
       return source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
     end
     body
+  end
+
+  private def create_comprehend_client
+    Aws::Comprehend::Client.new
+  end
+
+  private def get_toxicity_threshold
+    DCDO.get("aws_comprehend_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
+  end
+
+  # Moderate given text for inappropriate/toxic content using AWS Comprehend client.
+  private def comprehend_toxicity(text, locale)
+    comprehend_response = create_comprehend_client.detect_toxic_content(
+      {
+        text_segments: [{text: text}],
+        language_code: locale,
+      }
+    )
+    categories = comprehend_response.result_list[0].labels
+    {
+      text: text,
+      toxicity: comprehend_response.result_list[0].toxicity,
+      max_category: categories.max_by(&:score),
+    }
   end
 end
