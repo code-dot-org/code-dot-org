@@ -1,13 +1,16 @@
 import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
-import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
+import {
+  setupTestGoogleBlockly,
+  getStudioAppSingleton,
+} from './util/testGoogleBlockly';
 
 describe('hasDuplicateVariablesInForLoops', function () {
   var studioApp;
 
   // create our environment
   beforeEach(function () {
-    setupTestBlockly();
+    setupTestGoogleBlockly();
     studioApp = getStudioAppSingleton();
 
     var artistBlocks = require('@cdo/apps/turtle/blocks');
