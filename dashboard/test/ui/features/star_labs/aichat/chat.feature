@@ -1,4 +1,4 @@
-@no_mobile
+@no_phone
 Feature: AI Chat
 
   "AI Chat" is our lab that introduces students to generative AI
