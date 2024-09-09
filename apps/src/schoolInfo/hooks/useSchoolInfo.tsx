@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useRef, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {
@@ -17,12 +17,13 @@ import {
 } from '../constants';
 import {SchoolDropdownOption, SchoolInfoInitialState} from '../types';
 import {constructSchoolOption} from '../utils/constructSchoolOption';
-import {fetchSchools} from '../utils/fetchSchools';
+import {fetchSchools as fetchSchoolsAPI} from '../utils/fetchSchools';
 import {sendAnalyticsEvent} from '../utils/sendAnalyticsEvent';
 
 export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   const mounted = useRef(false);
-  // If the user filled out country before or we are detecting a US IP address
+
+  // Memoized initial values
   const detectedCountry = useMemo(
     () =>
       initialState.country ??
@@ -55,42 +56,48 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     [initialState.schoolName]
   );
 
+  // State hooks
   const [country, setCountry] = useState(detectedCountry);
   const [schoolId, setSchoolId] = useState(detectedSchoolId);
   const [schoolZip, setSchoolZip] = useState(detectedZip);
   const [schoolName, setSchoolName] = useState(detectedSchoolName);
   const [schoolsList, setSchoolsList] = useState<SchoolDropdownOption[]>([]);
 
-  useEffect(() => {
-    sessionStorage.setItem(SCHOOL_COUNTRY, country);
-    if (mounted.current && country) {
-      setSchoolId(SELECT_A_SCHOOL);
-      setSchoolZip('');
-      setSchoolName('');
-      setSchoolsList([]);
-      sendAnalyticsEvent(EVENTS.COUNTRY_SELECTED, {country: country});
-    }
-  }, [country]);
-
   const schoolZipIsValid = useMemo(
     () => ZIP_REGEX.test(schoolZip),
     [schoolZip]
   );
 
+  // Memoized fetchSchools function using useCallback
+  const fetchSchools = useCallback(
+    (
+      zip: string,
+      callback: (data: {nces_id: number; name: string}[]) => void
+    ) => {
+      fetchSchoolsAPI(zip, callback);
+    },
+    []
+  );
+
+  // Handle country changes
   useEffect(() => {
-    if (mounted.current && schoolZip) {
+    sessionStorage.setItem(SCHOOL_COUNTRY, country);
+
+    if (mounted.current && country) {
       setSchoolId(SELECT_A_SCHOOL);
+      setSchoolZip('');
       setSchoolName('');
       setSchoolsList([]);
+      sendAnalyticsEvent(EVENTS.COUNTRY_SELECTED, {country});
     }
-    if (!schoolZipIsValid) {
-      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '');
-      return;
-    }
+  }, [country]);
+
+  // Handle schoolZip changes
+  useEffect(() => {
+    if (!mounted.current || !schoolZip || !schoolZipIsValid) return;
 
     sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, schoolZip);
 
-    // Clear out school from dropdown if schoolZip has changed
     setSchoolId(SELECT_A_SCHOOL);
     setSchoolName('');
     setSchoolsList([]);
@@ -98,22 +105,20 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     sendAnalyticsEvent(EVENTS.ZIP_CODE_ENTERED, {zip: schoolZip});
 
     fetchSchools(schoolZip, data => {
-      const schools: SchoolDropdownOption[] = data.map(constructSchoolOption);
+      if (!mounted.current) return;
+
+      const schools = data
+        .map(constructSchoolOption)
+        .sort((a, b) => a.text.localeCompare(b.text));
+      setSchoolsList(schools);
 
       if (schools.some(school => school.value === detectedSchoolId)) {
         setSchoolId(detectedSchoolId);
       }
-
-      if (mounted.current) {
-        setSchoolsList(
-          schools.sort((a: SchoolDropdownOption, b: SchoolDropdownOption) =>
-            a.text > b.text ? 1 : -1
-          )
-        );
-      }
     });
-  }, [schoolZip, schoolZipIsValid, detectedSchoolId]);
+  }, [schoolZip, schoolZipIsValid, detectedSchoolId, fetchSchools]);
 
+  // Handle schoolId changes
   useEffect(() => {
     sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, schoolId);
     if (mounted.current) {
@@ -129,10 +134,12 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     }
   }, [schoolId]);
 
+  // Handle schoolName changes
   useEffect(() => {
     sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, schoolName);
   }, [schoolName]);
 
+  // Manage mounted state
   useEffect(() => {
     mounted.current = true;
     return () => {
