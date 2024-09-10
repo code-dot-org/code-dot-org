@@ -70,6 +70,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
+    # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:ruby-3.3.4
     pull: always
     volumes:
@@ -189,6 +190,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
+    # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:ruby-3.3.4
     pull: always
     volumes:
@@ -287,6 +289,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: c923c2e46876119c9a447a6cc6d1e272e23075e37b9718da73d3017b502fa120
+hmac: 65ddb24b65d118c0e5cc08778314c7e9ecdb0fee5a010556e8e8298dce2b64c3
 
 ...

@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-03-25T22:42:28.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "instructions_important": "false",
-    "long_instructions": "# Reflection \r\n\r\n## Creating Apps with Devices - End of Chapter 1 Project\r\n### Project:  Human Device Interaction\r\n\r\n\r\n##### **Prompt:** \r\n\r\n##### How will you use the Problem Solving Process for Programming to support students in completing the Chapter 1 project?\r\n___\r\n\r\n<span style=\"font-size:12px;\"> If more space is needed, click and drag the bottom-right corner to adjust the size of the text box.</span>\r\n",
+    "long_instructions": "# Reflection \r\n\r\n## Creating Apps with Devices - End-of-Chapter 1 Project: Human-Device Interaction\r\n\r\n#### **Prompt:** \r\n\r\n* #### How will you use the Problem Solving Process for Programming to support students in completing the Chapter 1 project?\r\n\r\n___\r\n\r\n##### **Note:** You can change the size of the text box by clicking and dragging the bottom-right corner of the text box.\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -20,9 +21,8 @@
     "name_suffix": "_2024",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:28.085+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD M8 Conclusions and Connections Reflection_2023\\\"\"],\"cloned_from\":\"VPL - CSD M8 Conclusions and Connections Reflection_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:28.085+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD M8 Conclusions and Connections Reflection_2023\\\"\"],\"cloned_from\":\"VPL - CSD M8 Conclusions and Connections Reflection_2023\"},{\"changed_at\":\"2024-08-29 19:08:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-08-29 19:08:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

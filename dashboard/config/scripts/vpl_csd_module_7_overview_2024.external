@@ -6,22 +6,28 @@ title 'CSD Module 3 Overview'
 markdown <<MARKDOWN
 # Module 5: CS Discoveries Virtual Professional Learning
 
+<img src="https://images.code.org/ecd64a145fae016f6b8190371ee85207-image-1626317012906.jpg" alt="Image of a classroom full of students raising their hands." width="300px" style="border-radius:10px; float:right; margin: 20px 20px 20px 20px;">
+
 ## Module 5 Overview
 
-##### Welcome to the asynchronous work for Module 5 for CS Discoveries!
+#### Welcome to the asynchronous work for Module 5 for CS Discoveries!
 
-##### This asynchronous work will feed into the upcoming synchronous workshop of this module and help you understand the content and curriculum as you prepare to teach your own students. The asynchronous work for Module 5 takes about 90 minutes to complete. Feel free to start and stop at your own pace.
+#### This asynchronous work will feed into the upcoming synchronous workshop of this module and help you understand the content and curriculum as you prepare to teach your own students. The asynchronous work for Module 5 takes about 90 minutes to complete. Feel free to start and stop at your own pace.
 
-##### Module 5 introduces the "Creating Apps with Devices" section and focuses on the theme of "Learning through Creation".
+#### Module 5 introduces the "Creating Apps with Devices" section and focuses on the theme of "Learning through Creation".
+___
 
-##### **During this asynchronous work you will:**
+#### **During this asynchronous work you will:**
 
-* ##### Preview content which focuses on hardware
-* ##### Become familiar with the Problem Solving Process for Programming
-* ##### Prepare to support students using App Lab programming a Circuit Playground or micro:bit
-* ##### Reflect on the how students can build knowledge as they build a product
+* #### Preview content which focuses on hardware
+* #### Become familiar with the Problem Solving Process for Programming
+* #### Prepare to support students using App Lab programming a Circuit Playground or micro:bit
+* #### Reflect on the how students can build knowledge as they build a product
 
-> ###### **Note:** This module will refer to both the Circuit Playground and micro:bit devices that you and your students can use for Unit 6: Creating Apps with Devices. The Circuit Playground version of the unit is Unit 6A, while the micro:bit version is Unit 6B. You will NOT need to have a Circuit Playground or micro:bit to complete the following activities.
+### Let's get started!
 
-##### Let's get started!
+<br>
+
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px;">
+<b>Note:</b> This module will refer to both the Circuit Playground and micro:bit devices that you and your students can use for Unit 6: Creating Apps with Devices. The Circuit Playground version of the unit is Unit 6A, while the micro:bit version is Unit 6B. You will NOT need to have a Circuit Playground or micro:bit to complete the following activities.</p></div>
 MARKDOWN

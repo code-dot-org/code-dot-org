@@ -1,0 +1,129 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-08-30T16:52:19.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Functions\r\n\r\nOrganize your music using functions.\r\n\r\n1. Click [Functions](#clickable=toolbox-first-row)\r\n2. Attach [chorus](#clickable=toolbox-second-block) under [when run](#clickable=when-run-block)\r\n3. What do you notice? ",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
+        "message": "Nice work.  You successfully used the function to play a sound.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
+        "message": "Connect the \"chorus\" block under [when run](#clickable=when-run-block) to play the sounds in the function.",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "x": 230,
+              "y": 30,
+              "fields": {
+                "NAME": "chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "fields": {
+                      "sound": "beats/bold_alternate_beat"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "fields": {
+                                "sound": "beats/bold_beat"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "fields": {
+                                    "sound": "leads/riff_guitar"
+                                  },
+                                  "next": null
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_together",
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "fields": {
+                                    "sound": "beats/bold_beat"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "fields": {
+                                        "sound": "leads/power_guitar"
+                                      },
+                                      "next": null
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Functions": [
+
+          ]
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30T16:52:19.658+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-trigger\\\"\"],\"cloned_from\":\"music-ai-skill-trigger\"},{\"changed_at\":\"2024-08-30 16:53:18 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,29 +1,48 @@
 import React from 'react';
 
-import SuggestedPrompt, {SuggestedPromptProps} from './SuggestedPrompt';
+import Chips from '@cdo/apps/componentLibrary/chips';
 
 import moduleStyles from './suggested-prompt.module.scss';
 
 /**
  * Renders clickable tags that can be customized with list of suggested prompts.
  */
+export interface SuggestedPrompt {
+  onClick: (prompt: SuggestedPrompt) => void;
+  label: string;
+  show: boolean;
+  selected: boolean;
+}
 
 interface SuggestedPromptsProps {
-  suggestedPrompts: Array<SuggestedPromptProps>;
+  suggestedPrompts: Array<SuggestedPrompt>;
 }
 
 const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
   suggestedPrompts,
-}) => (
-  <div className={moduleStyles.prompts}>
-    {suggestedPrompts.map(prompt => (
-      <SuggestedPrompt
-        key={prompt.label}
-        onClick={prompt.onClick}
-        label={prompt.label}
-        show={prompt.show}
-      />
-    ))}
-  </div>
-);
+}) => {
+  const setValues = (selected: string[]) => {
+    suggestedPrompts.map(prompt => {
+      if (prompt.selected !== selected.includes(prompt.label)) {
+        prompt.onClick(prompt);
+      }
+    });
+  };
+
+  return (
+    <Chips
+      options={suggestedPrompts.flatMap(prompt =>
+        prompt.show ? {label: prompt.label, value: prompt.label} : []
+      )}
+      values={suggestedPrompts.flatMap(prompt =>
+        prompt.selected ? [prompt.label] : []
+      )}
+      setValues={setValues}
+      name={'Suggested Prompts'}
+      size={'s'}
+      textThickness={'thick'}
+      className={moduleStyles.prompts}
+    />
+  );
+};
 export default SuggestedPrompts;

@@ -8,6 +8,7 @@ import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import ControlButtons from './ControlButtons';
 import GraphModal from './GraphModal';
 
 import moduleStyles from './console.module.scss';
@@ -18,6 +19,7 @@ const Console: React.FunctionComponent = () => {
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const previousLevelId = useRef(levelId);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const scrollAnchorRef = useRef<HTMLDivElement>(null);
 
   const [graphModalOpen, setGraphModalOpen] = useState(false);
   const [activeGraphIndex, setActiveGraphIndex] = useState(0);
@@ -32,6 +34,12 @@ const Console: React.FunctionComponent = () => {
       previousLevelId.current = levelId;
     }
   }, [dispatch, levelId]);
+
+  useEffect(() => {
+    scrollAnchorRef.current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }, [codeOutput]);
 
   const clearOutput = () => {
     dispatch(resetOutput());
@@ -65,6 +73,8 @@ const Console: React.FunctionComponent = () => {
       className={moduleStyles.consoleContainer}
       headerContent={'Console'}
       rightHeaderContent={headerButton()}
+      leftHeaderContent={<ControlButtons />}
+      headerClassName={moduleStyles.consoleHeader}
     >
       <div className={moduleStyles.console}>
         {codeOutput.map((outputLine, index) => {
@@ -78,7 +88,10 @@ const Console: React.FunctionComponent = () => {
                 <Button
                   color={buttonColors.black}
                   disabled={false}
-                  icon={{iconName: 'up-right-from-square', iconStyle: 'solid'}}
+                  icon={{
+                    iconName: 'up-right-from-square',
+                    iconStyle: 'solid',
+                  }}
                   isIconOnly={true}
                   onClick={() => popOutGraph(index)}
                   size="xs"
@@ -120,6 +133,7 @@ const Console: React.FunctionComponent = () => {
             );
           }
         })}
+        <div ref={scrollAnchorRef} />
       </div>
     </PanelContainer>
   );

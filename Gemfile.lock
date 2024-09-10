@@ -39,15 +39,6 @@ GIT
       omniauth-oauth2 (>= 1.1, <= 1.8)
 
 GIT
-  remote: https://github.com/code-dot-org/omniauth-windowslive.git
-  revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
-  ref: cdo
-  specs:
-    omniauth-windowslive (0.0.11)
-      multi_json (>= 1.0.3)
-      omniauth-oauth2 (~> 1.4)
-
-GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -189,10 +180,13 @@ GEM
       aws-sdk-core (~> 3.130)
       google-apis-core
       launchy (~> 2)
-    aws-partitions (1.793.0)
+    aws-partitions (1.969.0)
     aws-sdk-acm (1.74.0)
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
+    aws-sdk-autoscaling (1.63.0)
+      aws-sdk-core (~> 3, >= 3.112.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-bedrockagentruntime (1.10.0)
       aws-sdk-core (~> 3, >= 3.193.0)
       aws-sigv4 (~> 1.1)
@@ -208,7 +202,7 @@ GEM
     aws-sdk-cloudwatchlogs (1.88.0)
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-core (3.201.3)
+    aws-sdk-core (3.201.4)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.8)
@@ -271,6 +265,7 @@ GEM
       activesupport
     cgi (0.3.6)
     chronic (0.10.2)
+    chunky_png (1.3.6)
     cld (0.13.0)
       ffi
     climate_control (0.0.3)
@@ -289,7 +284,7 @@ GEM
     crowdin-api (1.10.0)
       open-uri (>= 0.1.0, < 0.2.0)
       rest-client (>= 2.0.0, < 2.2.0)
-    css_parser (1.17.1)
+    css_parser (1.19.0)
       addressable
     csv (3.3.0)
     cucumber (3.1.1)
@@ -366,6 +361,8 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     fakefs (2.5.0)
+    faker (3.4.2)
+      i18n (>= 1.8.11, < 2)
     fakeredis (0.9.2)
       redis (~> 4.8)
     faraday (1.10.3)
@@ -597,6 +594,8 @@ GEM
     octokit (6.0.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
+    oily_png (1.2.0)
+      chunky_png (~> 1.3.1)
     oj (3.16.5)
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
@@ -949,6 +948,7 @@ DEPENDENCIES
   auto_strip_attributes (~> 2.1)
   aws-google (~> 0.2.0)
   aws-sdk-acm
+  aws-sdk-autoscaling
   aws-sdk-bedrockagentruntime (~> 1.10.0)
   aws-sdk-cloudformation
   aws-sdk-cloudfront
@@ -993,6 +993,7 @@ DEPENDENCIES
   eyes_selenium (= 6.3.7)
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
+  faker (~> 3.4)
   fakeredis
   full-name-splitter!
   gemoji
@@ -1050,7 +1051,6 @@ DEPENDENCIES
   omniauth-microsoft_v2_auth!
   omniauth-openid
   omniauth-rails_csrf_protection (~> 0.1)
-  omniauth-windowslive (~> 0.0.11)!
   open_uri_redirections
   os
   parallel

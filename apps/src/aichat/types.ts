@@ -8,6 +8,7 @@ import {Role} from '../aiComponentLibrary/chatMessage/types';
 import type {ValueOf} from '../types/utils';
 
 export const ChatEventDescriptions = {
+  COPY_CHAT: 'The user copied the chat history.',
   CLEAR_CHAT: 'The user cleared the chat workspace.',
   LOAD_LEVEL: 'The user loaded the aichat level.',
 } as const;
@@ -135,6 +136,8 @@ export enum Visibility {
 export interface LevelAichatSettings {
   initialCustomizations: AiCustomizations;
   visibilities: {[key in keyof AiCustomizations]: Visibility};
+  // This system prompt is hidden from students and adds additional safety features or hidden guidelines to a level.
+  levelSystemPrompt: string;
   /** If the presentation panel is hidden from the student. */
   hidePresentationPanel: boolean;
   /** list of ModelDescription.ids to limit the models available to choose from in the level */

@@ -4,12 +4,14 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Conclusions and Connections 
-**Estimated time: 10 minutes**
+# Conclusions and Connections 
 
-##### The calendar below provides a look at the lessons investigated in this module, as well as the Model Lesson you will observe. Data and Society concepts build towards cumulative projects at the end of each chapter.  
+#### **Estimated time: 10 minutes**
 
-##### The unifying concept throughout the Data and Society unit is the importance of data in solving problems.  Chapter 1 focuses on representing information and Chapter 2 focuses on solving data problems.  The following levels focus on the End of Chapter projects for Chapter 1 and 2 to help us identify what students are working towards and what will be assessed and how.
+#### The calendar below provides a look at the lessons investigated in this module, as well as the Model Lesson you will observe. Data and Society concepts build towards cumulative projects at the end of each chapter.  
 
-![](https://images.code.org/60a5d6efb80840f77ee6e07ca1ea06bc-image-1694818040763.47.11 PM.png)
+#### The unifying concept throughout the Data and Society unit is the importance of data in solving problems. Chapter 1 focuses on representing information and Chapter 2 focuses on solving data problems. The following levels focus on the End of Chapter projects for Chapter 1 and 2 to help us identify what students are working towards and what will be assessed and how.
+<br>
+
+<img src="https://images.code.org/a105c438f0d6d618e26a07026d383143-image-1724448050750.20.46 PM.png" alt="The Unit 5 calendar with the first three lessons circled." width="700px">
 MARKDOWN

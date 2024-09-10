@@ -97,6 +97,7 @@ class XhrProxyController < ApplicationController
     isenseproject.org
     lakeside-cs.org
     maker.ifttt.com
+    moneyconvert.net
     myschoolapp.com
     native-land.ca
     newsapi.org

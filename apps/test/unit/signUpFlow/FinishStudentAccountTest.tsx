@@ -42,10 +42,11 @@ describe('FinishStudentAccount', () => {
     });
   });
 
-  function renderDefault() {
+  function renderDefault(usIp: boolean = true) {
     render(
       <FinishStudentAccount
         ageOptions={ageOptions}
+        usIp={usIp}
         usStateOptions={usStateOptions}
       />
     );
@@ -94,6 +95,13 @@ describe('FinishStudentAccount', () => {
 
     // Renders button that finishes sign-up
     screen.getByText(locale.go_to_my_account());
+  });
+
+  it('does not render state question if user is not detected in the U.S.', () => {
+    renderDefault(false);
+
+    expect(screen.queryByText(locale.what_state_are_you_in())).toBe(null);
+    expect(screen.queryByText(locale.state_error_message())).toBe(null);
   });
 
   it('userName is tracked in sessionStorage', () => {
@@ -171,5 +179,154 @@ describe('FinishStudentAccount', () => {
     expect(sessionStorage.getItem(PARENT_EMAIL_OPT_IN_SESSION_KEY)).toBe(
       'true'
     );
+  });
+
+  it('finish student signup button starts disabled', () => {
+    renderDefault();
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+  });
+
+  it('displayName error shows if name is entered then deleted', () => {
+    renderDefault();
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+
+    // Error message doesn't show by default
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+
+    // Error message doesn't show when display name is entered
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+
+    // Clear display name
+    fireEvent.change(displayNameInput, {target: {value: ''}});
+
+    // Error shows with empty display name
+    screen.getByText(locale.display_name_error_message());
+  });
+
+  it('age error shows if age is selected then cleared', () => {
+    renderDefault();
+    const ageInput = screen.getAllByRole('combobox')[0];
+
+    // Error message doesn't show by default
+    expect(screen.queryByText(locale.age_error_message())).toBe(null);
+
+    // Enter age
+    fireEvent.change(ageInput, {target: {value: '6'}});
+
+    // Error message doesn't show when age is selected
+    expect(screen.queryByText(locale.age_error_message())).toBe(null);
+
+    // Clear age
+    fireEvent.change(ageInput, {target: {value: ''}});
+
+    // Error shows with empty age
+    screen.getByText(locale.age_error_message());
+  });
+
+  it('state error shows if state is selected then cleared', () => {
+    renderDefault();
+    const stateInput = screen.getAllByRole('combobox')[1];
+
+    // Error message doesn't show by default
+    expect(screen.queryByText(locale.state_error_message())).toBe(null);
+
+    // Enter state
+    fireEvent.change(stateInput, {target: {value: 'WA'}});
+
+    // Error message doesn't show when state is selected
+    expect(screen.queryByText(locale.state_error_message())).toBe(null);
+
+    // Clear state
+    fireEvent.change(stateInput, {target: {value: ''}});
+
+    // Error shows with empty state
+    screen.getByText(locale.state_error_message());
+  });
+
+  it('parentEmail error shows if parent checkbox is selected and parentEmail is selected then cleared', () => {
+    renderDefault();
+
+    // Check parent checkbox
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+
+    // Error message doesn't show by default
+    const parentEmailInput = screen.getAllByDisplayValue('')[1];
+    expect(screen.queryByText(locale.email_error_message())).toBe(null);
+
+    // Enter state
+    fireEvent.change(parentEmailInput, {target: {value: 'parent@email.com'}});
+
+    // Error message doesn't show when state is selected
+    expect(screen.queryByText(locale.email_error_message())).toBe(null);
+
+    // Clear state
+    fireEvent.change(parentEmailInput, {target: {value: ''}});
+
+    // Error shows with empty state
+    screen.getByText(locale.email_error_message());
+  });
+
+  it('finish student signup button starts disabled', () => {
+    renderDefault();
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+  });
+
+  it('finish student signup button is disabled until required fields are entered without errors', () => {
+    renderDefault();
+
+    // Cause an error in each required field by filling it in then clearing it
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+
+    const parentEmailInput = screen.getAllByDisplayValue('')[1];
+    fireEvent.change(parentEmailInput, {target: {value: 'parent@email.com'}});
+    fireEvent.change(parentEmailInput, {target: {value: ''}});
+
+    const displayNameInput = screen.getAllByDisplayValue('')[3];
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    fireEvent.change(displayNameInput, {target: {value: ''}});
+
+    const ageInput = screen.getAllByRole('combobox')[0];
+    fireEvent.change(ageInput, {target: {value: '6'}});
+    fireEvent.change(ageInput, {target: {value: ''}});
+
+    const stateInput = screen.getAllByRole('combobox')[1];
+    fireEvent.change(stateInput, {target: {value: 'WA'}});
+    fireEvent.change(stateInput, {target: {value: ''}});
+
+    screen.getByText(locale.display_name_error_message());
+    screen.getByText(locale.email_error_message());
+    screen.getByText(locale.age_error_message());
+    screen.getByText(locale.state_error_message());
+
+    // Finish student signup button is disabled
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+
+    // Fill in fields to remove errors
+    fireEvent.change(parentEmailInput, {target: {value: 'parent@email.com'}});
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    fireEvent.change(ageInput, {target: {value: '6'}});
+    fireEvent.change(stateInput, {target: {value: 'WA'}});
+
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+    expect(screen.queryByText(locale.email_error_message())).toBe(null);
+    expect(screen.queryByText(locale.age_error_message())).toBe(null);
+    expect(screen.queryByText(locale.state_error_message())).toBe(null);
+
+    // Finish student signup button is now enabled
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
   });
 });

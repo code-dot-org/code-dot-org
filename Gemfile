@@ -91,6 +91,7 @@ group :development, :test do
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
 
+  gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
   gem 'timecop'
@@ -161,9 +162,6 @@ gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
-# Ref: https://github.com/joel/omniauth-windowslive/pull/16
-# Ref: https://github.com/joel/omniauth-windowslive/pull/17
-gem 'omniauth-windowslive', '~> 0.0.11', github: 'code-dot-org/omniauth-windowslive', ref: 'cdo'
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
@@ -222,6 +220,7 @@ gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
+gem 'aws-sdk-autoscaling'
 gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'

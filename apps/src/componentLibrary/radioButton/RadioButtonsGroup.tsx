@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React, {useState, useCallback} from 'react';
 
 import RadioButton, {RadioButtonProps} from './RadioButton';
@@ -13,6 +14,8 @@ export interface RadioButtonsGroupProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   /** Default selected value */
   defaultValue?: string;
+  /** Common Custom className for every radioButton */
+  commonClassName?: string;
 }
 
 /**
@@ -23,6 +26,7 @@ const RadioButtonsGroup: React.FC<RadioButtonsGroupProps> = ({
   radioButtons,
   defaultValue = '',
   onChange,
+  commonClassName,
 }) => {
   const [selectedValue, setSelectedValue] = useState(defaultValue);
   const handleChange = useCallback(
@@ -48,6 +52,7 @@ const RadioButtonsGroup: React.FC<RadioButtonsGroupProps> = ({
           {...radioButtonProps}
           onChange={handleChange}
           checked={isSelectedButton(radioButtonProps.value)}
+          className={classnames(commonClassName, radioButtonProps.className)}
         />
       ))}
     </>

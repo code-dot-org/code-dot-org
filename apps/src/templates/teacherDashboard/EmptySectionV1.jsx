@@ -62,7 +62,9 @@ function EmptySectionV1({
     <div className={dashboardStyles.emptyClassroomDiv}>
       {showProgressPageHeader ? (
         <div>
-          <Heading1>{i18n.progress()}</Heading1>
+          <Heading1 className={dashboardStyles.progressHeaderV1}>
+            {i18n.progress()}
+          </Heading1>
           {emptySectionGraphic(dashboardStyles.emptyClassroomProgress)}
         </div>
       ) : (

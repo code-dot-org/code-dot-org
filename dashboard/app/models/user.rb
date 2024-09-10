@@ -163,6 +163,7 @@ class User < ApplicationRecord
     lms_landing_opted_out
     failed_attempts
     locked_at
+    has_seen_ai_assessments_announcement
   )
 
   attr_accessor(
@@ -961,6 +962,7 @@ class User < ApplicationRecord
   # address associated with them because it wasn't required when they were
   # created. Those old accounts are allowed to skip the email validation.
   def teacher_email_required?
+    return false if Policies::Lti.lti? self
     # non-teachers are not relevant to this method.
     return false unless teacher? && purged_at.nil?
 
@@ -975,12 +977,12 @@ class User < ApplicationRecord
   end
 
   def email_or_hashed_email_required?
+    return false if Policies::Lti.lti? self
     return true if teacher?
     return false if manual?
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
-    return false if Policies::Lti.lti? self
     true
   end
 
@@ -1546,6 +1548,19 @@ class User < ApplicationRecord
   def can_view_student_ai_chat_messages?
     sections.any?(&:assigned_csa?) &&
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+  end
+
+  def teacher_can_access_ai_chat?
+    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
+  end
+
+  def student_can_access_ai_chat?
+    teachers.any?(&:teacher_can_access_ai_chat?) &&
+      sections_as_student.any?(&:assigned_gen_ai?)
+  end
+
+  def has_aichat_access?
+    teacher_can_access_ai_chat? || student_can_access_ai_chat?
   end
 
   # Students
