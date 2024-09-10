@@ -22,7 +22,7 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
     }
     const voicesFiltered = voices.filter(voice => voice.lang === currentLocale);
     console.log(
-      `TexttoSpeech: found ${voicesFiltered.length} of ${voices.length} possible voices`
+      `TextToSpeech: found ${voicesFiltered.length} of ${voices.length} possible voices`
     );
     if (voicesFiltered.length === 0) {
       return;
@@ -37,18 +37,17 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
   }, [text]);
 
   return (
-    <div
+    <button
       className={moduleStyles.playButton}
       onClick={playText}
-      tabIndex={0}
-      role="button"
+      type="button"
     >
       <FontAwesomeV6Icon
         iconName={'play'}
         iconStyle="solid"
         className={moduleStyles.icon}
       />
-    </div>
+    </button>
   );
 };
 

@@ -1,16 +1,19 @@
 @import 'color.scss';
+@import '../../../mixins.scss';
 
 .playButton {
+  @include remove-button-styles;
   float: right;
   position: relative;
-  width: 10px;
+  width: 22px;
+  height: 22px;
   color: $neutral_dark80;
-  left: 7px;
+  left: 19px;
   cursor: pointer;
 }
 
 .icon {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: 4px;
 }
