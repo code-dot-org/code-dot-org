@@ -47,7 +47,7 @@ Feature: AI Chat
     And I wait until element "#uitest-publish-notes-save" is enabled
     And I click selector "#uitest-publish-notes-save"
     Then I wait until element ".uitest-aichat-chat-alert" contains text "Model card information has been updated"
-    And I wait for 3 seconds
+    And I wait for 5 seconds
 
     Given element "#uitest-view-mode-toggle-container" is not visible
     And element "#uitest-presentation-view-container" is not visible
