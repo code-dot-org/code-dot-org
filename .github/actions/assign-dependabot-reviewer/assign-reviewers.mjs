@@ -1,6 +1,7 @@
 import {setFailed} from '@actions/core';
 import {reviewersMap} from "./config/reviewers.mjs";
 import github from "@actions/github";
+import dedent from "dedent";
 
 const GH_TOKEN = process.env.GH_TOKEN;
 
@@ -36,14 +37,37 @@ function getPRTitle() {
 
 /**
  * Assigns the PR to a team
- * @param team_reviewers The teams to assign to
+ * @param dependencyName The name of the dependency the PR is about
+ * @param teamReviewers The teams to assign to
  */
-async function assignReviewers(team_reviewers) {
+async function assignReviewers(dependencyName, teamReviewers) {
+
+    console.log(`request`,
+        {owner: REPO_OWNER,
+        repo: REPO,
+        pull_number: getPRNumber(),
+        team_reviewers: teamReviewers
+})
+
+    // Assign reviewer to PR
     await octokit.rest.pulls.requestReviewers({
         owner: REPO_OWNER,
         repo: REPO,
         pull_number: getPRNumber(),
-        team_reviewers
+        team_reviewers: teamReviewers
+    });
+
+    // Leave comment on PR
+    await octokit.rest.issues.createComment({
+        owner: REPO_OWNER,
+        repo: REPO,
+        issue_number: getPRNumber(),
+        body: dedent`
+        The maintainers for the dependency \`${dependencyName}\` is **${teamReviewers.join(',')}**.
+        
+        This pull request is open to anyone (including the public) to work on. If you have any questions, please feel free to contact **${teamReviewers.join(',')}**
+        
+        To re-run this dependabot assignment workflow, use the command \`dependabot-reassign\``
     });
 }
 
@@ -88,7 +112,7 @@ async function main() {
         }
 
         if (reviewers.length > 0) {
-            await assignReviewers(reviewers);
+            await assignReviewers(dependencyName, reviewers);
             console.log(`Successfully assigned reviewers: ${reviewers.join(', ')}`);
         } else {
             console.log('No reviewers to assign based on updated dependencies.');

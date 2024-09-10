@@ -10,7 +10,8 @@
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^6.0.0",
-    "@octokit/action": "^7.0.0"
+    "@octokit/action": "^7.0.0",
+    "dedent": "^1.5.3"
   },
   "devDependencies": {
     "globals": "^15.9.0"
