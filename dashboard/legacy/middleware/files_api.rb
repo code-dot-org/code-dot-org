@@ -1116,6 +1116,6 @@ class FilesApi < Sinatra::Base
   end
 
   private def get_toxicity_threshold_user_sources
-    DCDO.get("aws_comprehend_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
+    DCDO.get("aichat_toxicity_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
   end
 end

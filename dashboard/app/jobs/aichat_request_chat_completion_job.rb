@@ -48,11 +48,11 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   private def get_toxicity_threshold_user_input
-    DCDO.get("aws_comprehend_toxicity_threshold_user_input", DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
+    DCDO.get("aichat_toxicity_threshold_user_input", DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
   end
 
   private def get_toxicity_threshold_model_output
-    DCDO.get("aws_comprehend_toxicity_threshold_model_output", DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
+    DCDO.get("aichat_toxicity_threshold_model_output", DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
   end
 
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
