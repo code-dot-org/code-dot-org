@@ -505,6 +505,7 @@ class LevelsController < ApplicationController
     links = {}
 
     links[@level.name] = [{text: level_path(@level), url: level_url(@level)}]
+    links[@level.name] << {text: "#{level_path(@level)} (reset version history)", url: "#{level_url(@level)}?reset=true"}
     if @level.level_concept_difficulty && !@level.level_concept_difficulty.concept_difficulties_as_string.empty?
       links[@level.name] << {text: "LCD: #{@level.level_concept_difficulty.concept_difficulties_as_string}", url: ''}
     end

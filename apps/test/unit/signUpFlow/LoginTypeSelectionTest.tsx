@@ -1,5 +1,6 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
+import '@testing-library/jest-dom';
 
 import locale from '@cdo/apps/signUpFlow/locale';
 import LoginTypeSelection from '@cdo/apps/signUpFlow/LoginTypeSelection';
@@ -40,6 +41,68 @@ describe('LoginTypeSelection', () => {
 
     // Renders button that sends the user to the Finish Account page
     screen.getByRole('button', {name: locale.create_my_account()});
+  });
+
+  it('enables the confirm button only when all inputs are valid', () => {
+    renderDefault();
+
+    const emailInput = screen.getByLabelText(locale.email_address());
+    const passwordInput = screen.getByLabelText(locale.password());
+    const confirmPasswordInput = screen.getByLabelText(
+      locale.confirm_password()
+    );
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.create_my_account(),
+    }) as HTMLButtonElement;
+
+    expect(finishSignUpButton).toBeDisabled();
+
+    // Verify that the button is only enabled when all fields are valid
+    fireEvent.change(emailInput, {target: {value: 'myrandomemail@gmail.com'}});
+    expect(finishSignUpButton).toBeDisabled();
+
+    fireEvent.change(passwordInput, {target: {value: 'password'}});
+    expect(finishSignUpButton).toBeDisabled();
+
+    fireEvent.change(confirmPasswordInput, {target: {value: 'password'}});
+    expect(finishSignUpButton).not.toBeDisabled();
+  });
+
+  it('clicks the create account button when Enter is pressed if the button is enabled', () => {
+    renderDefault();
+
+    const emailInput = screen.getByLabelText(locale.email_address());
+    const passwordInput = screen.getByLabelText(locale.password());
+    const confirmPasswordInput = screen.getByLabelText(
+      locale.confirm_password()
+    );
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.create_my_account(),
+    }) as HTMLButtonElement;
+
+    // Mock the click handler
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Simulate pressing Enter when button is not enabled
+    fireEvent.keyDown(document, {key: 'Enter', code: 'Enter', charCode: 13});
+
+    // Verify the button's click handler was never called
+    expect(handleClick).not.toHaveBeenCalled();
+
+    // Ensure the button is enabled
+    fireEvent.change(emailInput, {target: {value: 'myrandomemail@gmail.com'}});
+    fireEvent.change(passwordInput, {target: {value: 'password'}});
+    fireEvent.change(confirmPasswordInput, {target: {value: 'password'}});
+    expect(finishSignUpButton).not.toBeDisabled();
+
+    // Simulate pressing Enter
+    fireEvent.keyDown(document, {key: 'Enter', code: 'Enter', charCode: 13});
+
+    // Verify the button's click handler was called
+    expect(handleClick).toHaveBeenCalled();
   });
 
   it('if user selected student then finish sign up button sends user to finish student page', () => {

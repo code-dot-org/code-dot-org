@@ -22,7 +22,7 @@ const requestVersion = 'launch2024-0';
  * URL param, that will take precedence.
  * @returns the Music Library
  */
-async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
+export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
   const libraryParameter = AppConfig.getValue('library') || libraryName;
   const libraryFilename = `music-library-${libraryParameter}`;
 
@@ -452,8 +452,8 @@ export type LibraryJson = {
   packs: SoundFolder[];
 };
 
-interface Sounds {
-  [index: string]: [string];
+export interface Sounds {
+  [category: string]: string[];
 }
 
 interface Translations {

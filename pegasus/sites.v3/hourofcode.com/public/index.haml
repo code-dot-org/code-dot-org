@@ -23,16 +23,29 @@ social:
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
 #top
-  #fullwidth
+  #fullwidth{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
     = view :header
-    %section.banner.homepage
-      .wrapper
-        %p.hoc-label
-          =hoc_s(:hour_of_code)
-        %h1=hoc_s(:hoc2023_header)
-        %p.hero-desc
-          =hoc_s(:hoc2023_hero_desc_homepage)
-        = view :hoc2023_hero_banner_ctas
+    -# Show 2024 HOC banner if hoc_mode is "soon-hoc", otherwise show 2023 banner
+    - if hoc_mode == "soon-hoc"
+      %section.banner.homepage.hoc-2024
+        .wrapper.flex-container
+          %figure
+            %img{src: "/images/hoc-2024-graphic.png", alt: ""}
+          .text-wrapper
+            %h1=hoc_s("hoc_2024.header")
+            %p.body-one
+              =hoc_s("hoc_2024.banner.desc.join_millions")
+          %a.link-button.black{href: resolve_url("/events")}
+            =hoc_s("hoc_2024.button_host_an_event")
+    - else
+      %section.banner.homepage
+        .wrapper
+          %p.hoc-label
+            =hoc_s(:hour_of_code)
+          %h1=hoc_s(:hoc2023_header)
+          %p.hero-desc
+            =hoc_s(:hoc2023_hero_desc_homepage)
+          = view :hoc2023_hero_banner_ctas
 
 %main
   -# What is HoC?
