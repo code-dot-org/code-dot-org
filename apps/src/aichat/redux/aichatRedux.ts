@@ -279,19 +279,13 @@ export const onSaveFail =
             getState().aichat.savedAiCustomizations,
             getState().aichat.currentAiCustomizations
           );
-          let flaggedProperties;
-          if (
-            changedProperties.includes('systemPrompt') &&
+          const flaggedProperties =
+            changedProperties.includes('systemPrompt') ||
             changedProperties.includes('retrievalContexts')
-          ) {
-            flaggedProperties = 'system prompt and/or retrieval contexts';
-          } else if (changedProperties.includes('systemPrompt')) {
-            flaggedProperties = 'system prompt';
-          } else if (changedProperties.includes('retrievalContexts')) {
-            flaggedProperties = 'retrieval contexts';
-          }
+              ? 'system prompt and/or retrieval contexts'
+              : undefined;
           if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
-            errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
+            errorMessage = `The ${flaggedProperties} have been flagged by our content moderation policy. Please try a different model customization.`;
           }
           dispatchSaveFailNotification(
             dispatch,
