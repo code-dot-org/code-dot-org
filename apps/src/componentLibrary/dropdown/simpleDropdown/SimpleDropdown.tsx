@@ -115,10 +115,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
               ))}
         </select>
         {loading && (
-          <div
-            className={moduleStyles.dropdownSpinner}
-            data-testid="loading-spinner"
-          >
+          <div className={moduleStyles.dropdownSpinner}>
             <Spinner size="small" />
           </div>
         )}
