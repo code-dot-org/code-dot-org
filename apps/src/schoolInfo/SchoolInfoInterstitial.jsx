@@ -6,8 +6,8 @@ import {combineReducers, createStore} from 'redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import i18n from '@cdo/locale';
 

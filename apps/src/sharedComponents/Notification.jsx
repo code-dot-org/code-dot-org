@@ -7,7 +7,7 @@ import ReactTooltip from 'react-tooltip';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import color from '@cdo/apps/util/color';
 
 export const NotificationType = {
