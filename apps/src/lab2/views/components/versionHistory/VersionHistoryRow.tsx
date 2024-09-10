@@ -6,6 +6,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import moduleStyles from './version-history-row.module.scss';
 
 interface VersionHistoryRowProps {
+  id: string;
   versionId: string;
   versionLabel: string;
   isLatest: boolean;
@@ -19,9 +20,10 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   isLatest,
   isSelected,
   onChange,
+  id,
 }) => {
   return (
-    <label className={moduleStyles.versionHistoryRow} key={versionId}>
+    <label className={moduleStyles.versionHistoryRow} key={versionId} id={id}>
       <input
         type="radio"
         name={versionId}
