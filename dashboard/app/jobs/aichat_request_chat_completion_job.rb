@@ -1,7 +1,7 @@
 class AichatRequestChatCompletionJob < ApplicationJob
   queue_as :default
 
-  DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.25
+  DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.2
   DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.6
 
   before_enqueue do |job|
@@ -56,20 +56,20 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
-    # Moderate user input for toxicity and PII
+    # Moderate user input for toxicity.
+    # get_toxicity returns an object with the following fields:
+    # text: string, toxicity: number, and max_category {name: string, score: number}
     user_comprehend_response = AichatComprehendHelper.get_toxicity(new_message[:chatMessageText], locale)
-    puts "user_comprehend_response: #{user_comprehend_response}"
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_comprehend_response}"] if user_comprehend_response[:toxicity] > get_toxicity_threshold_user_input
 
     user_pii = find_pii(new_message[:chatMessageText], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
-    # Make the request
+    # Make the request.
     response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
-    # Moderate model output for toxicity and PII. Report to HoneyBadger if the model returned toxicity.
+    # Moderate model output for toxicity. Report to HoneyBadger if the model returns toxicity.
     model_comprehend_response = AichatComprehendHelper.get_toxicity(response, locale)
-    puts "model_comprehend_response: #{model_comprehend_response}"
     if model_comprehend_response[:toxicity] > get_toxicity_threshold_model_output
       Honeybadger.notify(
         'Toxicity returned from aichat model (blocked before reaching student)',
@@ -87,8 +87,8 @@ class AichatRequestChatCompletionJob < ApplicationJob
     [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
   end
 
-  # Check the given text for PII
+  # Check the given text for PII.
   private def find_pii(text, locale)
-    # TODO: Use llm-guard to check for PII. Currently we don't check for PII to maintain consistency with existing code.
+    # TODO: Check for PII. Currently we don't check for PII but we plan to add post-launch.
   end
 end

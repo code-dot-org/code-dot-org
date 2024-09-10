@@ -429,6 +429,9 @@ class FilesApi < Sinatra::Base
           # For aichat lab, we only check the student system prompt and retrieval contexts.
           text_to_check = get_text_for_profanity_check(project_type, body)
           locale_code = request.locale.to_s.split('-').first
+          # Moderate user text for toxicity.
+          # get_toxicity returns an object with the following fields:
+          # text: string, toxicity: number, and max_category {name: string, score: number}
           text_to_check_comprehend_response = AichatComprehendHelper.get_toxicity(text_to_check, locale_code)
           if text_to_check_comprehend_response[:toxicity] >= get_toxicity_threshold_user_sources
             share_failure = ShareFailure.new(ShareFiltering::FailureType::PROFANITY, text_to_check_comprehend_response)
