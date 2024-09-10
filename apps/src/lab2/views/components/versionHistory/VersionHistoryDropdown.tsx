@@ -17,6 +17,7 @@ import {
   setPreviousVersionSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
+import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
@@ -65,6 +66,8 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+
+  const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
@@ -118,16 +121,22 @@ const VersionHistoryDropdown: React.FunctionComponent<
   );
 
   const startOver = useCallback(() => {
-    // TODO: confirm
     dispatch(setAndSaveProjectSource(startSource));
     successfulRestoreCleanUp(startSource);
     closeDropdown();
   }, [dispatch, startSource, successfulRestoreCleanUp, closeDropdown]);
 
+  const confirmStartOver = useCallback(() => {
+    dialogControl?.showDialog({
+      type: DialogType.StartOver,
+      handleConfirm: startOver,
+    });
+  }, [dialogControl, startOver]);
+
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (selectedVersion === INITIAL_VERSION_ID) {
-      startOver();
+      confirmStartOver();
     } else if (projectManager && selectedVersion) {
       setLoading(true);
       setLoadError(false);
@@ -150,7 +159,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
     }
   }, [
     selectedVersion,
-    startOver,
+    confirmStartOver,
     closeDropdown,
     dispatch,
     successfulRestoreCleanUp,
