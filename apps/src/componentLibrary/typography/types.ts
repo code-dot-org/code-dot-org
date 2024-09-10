@@ -35,7 +35,7 @@ type VisualAppearance =
 interface TypographyElementProps {
   // Scss module classname to use for the typography element
   visualAppearance?: VisualAppearance;
-  // Additional id to apply to the typography element
+  // Element id to apply to the typography element
   id?: string;
   // Additional classnames to apply to the typography element
   className?: string;

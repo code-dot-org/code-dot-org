@@ -5,17 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson 23: User Feedback
 
-<img src="https://images.code.org/d84e29dc1d036a5fd755e0f1ca039ffa-image-1715268406186.png" alt="cat from the pixel activity" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px; transform: scaleX(-1);">
+<img src="https://images.code.org/ddc7ab7741dc379934afff0a81b8b618-Screenshot 2024-09-03 at 10.25.06 AM.png" alt="Alice's user story from the lesson" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
 #### In this lesson, students act as **user testers** for a chatbot app and analyze the testing data to decide the next steps for the chatbot’s development. They also explore the responsible use of AI, debating whether a chatbot should be launched despite discovered flaws. This lesson builds the foundation for the project at the end of the unit, where students will use the same testing structure.
 
-## Up Next!
-
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> XXX  
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> This lesson includes opportunities for students to discuss the impacts of generative AI on society, both the intended and unintended consequences. Navigating these conversations so they elevate and honor the experiences of your students, while also keeping the conversation grounded and connected to the lesson content, requires careful consideration and intentionality as the discussions are happening.
 </p>
 </div>
+
+
+## Up Next!
+### Try out one of the Making Decisions Levels.
 
 
 MARKDOWN
