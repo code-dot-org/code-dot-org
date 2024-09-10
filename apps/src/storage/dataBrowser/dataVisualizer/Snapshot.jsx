@@ -1,16 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import moment from 'moment';
-import msg from '@cdo/locale';
-import * as imageUtils from '@cdo/apps/imageUtils';
-import {html2canvas} from '@cdo/apps/util/htmlToCanvasWrapper';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import PendingButton from '@cdo/apps/templates/PendingButton';
-import {ChartType} from '../dataUtils';
-import dataStyles from '../data-styles.module.scss';
 import classNames from 'classnames';
+import moment from 'moment';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import * as imageUtils from '@cdo/apps/imageUtils';
+import PendingButton from '@cdo/apps/legacySharedComponents/PendingButton';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {html2canvas} from '@cdo/apps/util/htmlToCanvasWrapper';
+import msg from '@cdo/locale';
+
+import {ChartType} from '../dataUtils';
+
 import {CROSS_TAB_CHART_AREA, GOOGLE_CHART_AREA} from './constants';
+
+import dataStyles from '../data-styles.module.scss';
 
 const PLACEHOLDER_IMAGE = require('./placeholder.png');
 

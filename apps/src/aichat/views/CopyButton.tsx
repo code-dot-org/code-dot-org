@@ -1,26 +1,33 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
+import {
+  addChatEvent,
+  selectAllVisibleMessages,
+  sendAnalytics,
+} from '@cdo/apps/aichat/redux/aichatRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+
+import {timestampToDateTime} from '../redux/utils';
+import {
+  ChatEvent,
+  isChatMessage,
+  isModelUpdate,
+  isNotification,
+} from '../types';
+
+import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 const CopyButton: React.FunctionComponent = () => {
-  const storedMessages = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessages
-  );
+  const messages = useSelector(selectAllVisibleMessages);
+  const dispatch = useAppDispatch();
 
   const handleCopy = () => {
-    const textToCopy = storedMessages
-      .map(
-        message =>
-          `[${message.timestamp || 'XXXX-XX-XX XX:XX'} - ${message.role}] ${
-            message.chatMessageText
-          }`
-      )
-      .join('\n');
+    const textToCopy = messages.map(chatEventToFormattedString).join('\n');
     copyToClipboard(
       textToCopy,
       () => alert('Text copied to clipboard'),
@@ -28,25 +35,52 @@ const CopyButton: React.FunctionComponent = () => {
         console.error('Error in copying text');
       }
     );
-    analyticsReporter.sendEvent(
-      EVENTS.CHAT_ACTION,
-      {
+    dispatch(
+      sendAnalytics(EVENTS.CHAT_ACTION, {
         action: 'Copy chat history',
-      },
-      PLATFORMS.BOTH
+      })
+    );
+
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'COPY_CHAT',
+        hideForParticipants: true,
+      })
     );
   };
 
   return (
     <Button
       onClick={handleCopy}
-      text="Copy Chat"
+      text="Copy chat"
       iconLeft={{iconName: 'clipboard'}}
-      size="xs"
-      color="white"
+      size="s"
+      color="gray"
       type="secondary"
     />
   );
 };
+
+function chatEventToFormattedString(chatEvent: ChatEvent) {
+  const formattedTimestamp = timestampToDateTime(chatEvent.timestamp);
+  if (isChatMessage(chatEvent)) {
+    return `[${formattedTimestamp} - ${chatEvent.role}] ${
+      chatEvent.status === Status.PROFANITY_VIOLATION
+        ? '[FLAGGED AS PROFANITY]'
+        : chatEvent.chatMessageText
+    }`;
+  }
+
+  if (isModelUpdate(chatEvent)) {
+    return `[${formattedTimestamp} - Model Update] ${
+      AI_CUSTOMIZATIONS_LABELS[chatEvent.updatedField]
+    } updated.`;
+  }
+
+  if (isNotification(chatEvent)) {
+    return `[${formattedTimestamp} - Notification] ${chatEvent.text}`;
+  }
+}
 
 export default CopyButton;

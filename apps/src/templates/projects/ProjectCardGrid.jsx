@@ -30,8 +30,6 @@ class ProjectCardGrid extends Component {
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired,
-    // Controls hiding/showing view more links for App Lab and Game Lab.
-    limitedGallery: PropTypes.bool,
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -86,14 +84,13 @@ class ProjectCardGrid extends Component {
             <ProjectAppTypeArea
               labKey="featured"
               labName={i18n.featuredProjects()}
-              labViewMoreString={i18n.projectTypeDanceViewMore()}
               projectList={projectLists.featured}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideViewMoreLink={true}
-              hideWithoutThumbnails={true}
+              hideWithoutThumbnails={false}
             />
           </div>
         )}

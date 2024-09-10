@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:54:09 UTC",
-    "published_state": null,
+    "serialized_at": "2024-08-21 19:01:44 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -118,6 +118,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 8 - Workshop Overview_2024"
+        ],
         "progression": "Module 6 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -140,6 +143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - MC Exam 1_2024"
+        ],
         "progression": "Preparing students for the AP Multiple Choice Exam (~60 minutes)"
       },
       "bonus": false,
@@ -162,6 +168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Exam 2_2024"
+        ],
         "progression": "Preparing students for the AP Multiple Choice Exam (~60 minutes)"
       },
       "bonus": false,
@@ -184,6 +193,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Exam 3_2024"
+        ],
         "progression": "Preparing students for the AP Multiple Choice Exam (~60 minutes)"
       },
       "bonus": false,
@@ -206,6 +218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Create PT Reqs_2024"
+        ],
         "progression": "Introduction to the Create Performance Task (~15 minutes)"
       },
       "bonus": false,
@@ -228,6 +243,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 8 Wrap Up_2024"
+        ],
         "progression": "Module 6 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,

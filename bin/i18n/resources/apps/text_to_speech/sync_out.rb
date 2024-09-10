@@ -14,6 +14,7 @@ module I18n
       module TextToSpeech
         class SyncOut < I18n::Utils::SyncOutBase
           METRIC_CONTEXT = 'update_i18n_static_messages'.freeze
+          TTS_LOCALES = ::TextToSpeech::VOICES.keys.freeze
 
           # TODO: (elijah) formalize a process for flagging these strings somewhere in apps code,
           # rather than maintaining this ugly manual Hash
@@ -99,8 +100,8 @@ module I18n
           def perform
             progress_bar.start
 
-            progress_bar.total = I18nScriptUtils::TTS_LOCALES.size * LABS_FEEDBACK_MESSAGE_KEYS.size
-            I18nScriptUtils.process_in_threads(I18nScriptUtils::TTS_LOCALES) do |locale|
+            progress_bar.total = TTS_LOCALES.size * LABS_FEEDBACK_MESSAGE_KEYS.size
+            I18nScriptUtils.process_in_threads(TTS_LOCALES) do |locale|
               js_locale = I18nScriptUtils.to_js_locale(locale)
 
               LABS_FEEDBACK_MESSAGE_KEYS.each do |lab, message_keys|
@@ -117,7 +118,7 @@ module I18n
                   tts_message_l10n = mutex.synchronize {::TextToSpeech.sanitize(localized_message)}
                   tts_file_path = ::TextToSpeech.tts_path(localized_message, localized_message, locale: locale)
 
-                  ::TextToSpeech.tts_upload_to_s3(tts_message_l10n, tts_file_path, METRIC_CONTEXT, locale: locale)
+                  ::TextToSpeech.tts_upload_to_s3(tts_message_l10n, 'message', tts_file_path, METRIC_CONTEXT, locale: locale)
                 end
               ensure
                 mutex.synchronize {progress_bar.increment}

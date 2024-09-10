@@ -1,32 +1,35 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import {
   PageLabels,
   SectionHeaders,
   TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import color from '@cdo/apps/util/color';
+
+import Spinner from '../../../../sharedComponents/Spinner';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
+import {PrivacyDialogMode} from '../../constants';
+import {FormContext} from '../../form_components_func/FormComponent';
+import {LabeledDynamicCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
+import {LabeledLargeInput} from '../../form_components_func/labeled/LabeledInput';
+import {
+  LabeledRadioButtons,
+  LabeledRadioButtonsWithAdditionalTextFields,
+} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+import PrivacyDialog from '../PrivacyDialog';
+
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
   PROGRAM_CSA,
   styles as defaultStyles,
 } from './TeacherApplicationConstants';
-import PrivacyDialog from '../PrivacyDialog';
-import {PrivacyDialogMode} from '../../constants';
-import Spinner from '../../components/spinner';
-import color from '@cdo/apps/util/color';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-import {LabeledLargeInput} from '../../form_components_func/labeled/LabeledInput';
-import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
-import {
-  LabeledRadioButtons,
-  LabeledRadioButtonsWithAdditionalTextFields,
-} from '../../form_components_func/labeled/LabeledRadioButtons';
-import {LabeledDynamicCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
-import {useRegionalPartner} from '../../components/useRegionalPartner';
-import {FormContext} from '../../form_components_func/FormComponent';
 
 const getProgramName = program => {
   switch (program) {

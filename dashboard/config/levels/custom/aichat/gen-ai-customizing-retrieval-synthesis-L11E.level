@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-retrieval-templateE"
+    "project_template_level_name": "gen-ai-customizing-retrieval-templateE",
+    "display_name": "Make Your Own",
+    "bubble_choice_description": "Make the chatbot you described in the check-in level! Add a system prompt and at least 10 retrieval statements.",
+    "thumbnail_url": "https://images.code.org/187ecf18176f40084398752bdf01a354-Lesson 6 - Level 9E - Make Your Own.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-08T22:48:09.991+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L9E\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L9E\"},{\"changed_at\":\"2024-05-08 22:50:16 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-08T22:48:09.991+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L9E\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L9E\"},{\"changed_at\":\"2024-05-08 22:50:16 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:38:34 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

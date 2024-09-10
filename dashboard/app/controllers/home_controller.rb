@@ -17,6 +17,7 @@ class HomeController < ApplicationController
   # The terms_and_privacy page gets loaded in an iframe on the signup page, so skip
   # clearing the sign up tracking variables
   skip_before_action :clear_sign_up_session_vars, only: [:terms_and_privacy]
+  skip_before_action :initialize_statsig_session, only: [:health_check]
 
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
@@ -210,6 +211,7 @@ class HomeController < ApplicationController
       @homepage_data[:sections] = student_sections
       @homepage_data[:studentId] = current_user.id
       @homepage_data[:studentSpecialAnnouncement] = Announcements.get_localized_announcement_for_page("/student-home")
+      @homepage_data[:parentalPermissionBanner] = helpers.parental_permission_banner_data(current_user, request)
     end
 
     if current_user.school_donor_name

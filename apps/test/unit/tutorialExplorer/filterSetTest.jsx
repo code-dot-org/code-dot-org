@@ -6,7 +6,7 @@ import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames'
 import FilterSet from '@cdo/apps/tutorialExplorer/filterSet';
 import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const FAKE_ON_USER_INPUT = () => {};
 const FAKE_ORG_NAME = 'fake org name';

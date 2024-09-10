@@ -1,0 +1,56 @@
+@import 'color.scss';
+
+.versionHistoryDropdown {
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid $black;
+  background-color: $darkest_gray;
+  color: $white;
+  min-width: 400px;
+  text-align: left;
+  vertical-align: top;
+  z-index: 1000;
+  right: 0;
+}
+
+.versionHistoryHeader {
+  padding: 12px;
+  border-bottom: 1px solid #54595E;
+  display: flex;
+  justify-content: space-between;
+}
+
+.versionHistoryTitle {
+  color: $white;
+}
+
+.versionHistoryMessage {
+  margin: 20px;
+  font-size: 16px;
+}
+
+.versionHistoryList {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.versionDropdownFooter {
+  margin-top: 8px;
+  padding: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loadingVersionSpinner {
+  font-size: 32px;
+  text-align: center;
+  margin-right: 12px;
+}
+
+.versionLoadError {
+  font-size: 14px;
+}
+
+.actionButton {
+  margin-right: 8px;
+}

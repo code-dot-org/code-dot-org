@@ -1,12 +1,13 @@
-import React from 'react';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {Row} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {
   Summary,
   removeIncompleteApplications,
 } from '@cdo/apps/code-studio/pd/application_dashboard/summary';
-import {expect} from 'chai';
-import sinon from 'sinon';
 
 describe('Summary', () => {
   const dataWithoutIncompleteApps = {

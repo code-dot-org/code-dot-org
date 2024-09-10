@@ -15,7 +15,6 @@ import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/ap
 import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('PersonalProjectsTable', () => {
@@ -39,7 +38,6 @@ describe('PersonalProjectsTable', () => {
             personalProjectsList={stubFakePersonalProjectData}
             isLoadingPersonalProjectsList={false}
             isUserSignedIn={true}
-            canShare={true}
           />
         </Provider>
       );
@@ -59,16 +57,12 @@ describe('PersonalProjectsTable', () => {
         .find('PersonalProjectsNameCell')
         .at(3)
         .find('a');
-      expect(firstProjectName.text()).to.equal(
-        stubFakePersonalProjectData[0].name
-      );
-      expect(secondProjectName.text()).to.equal(
+      expect(firstProjectName.text()).toBe(stubFakePersonalProjectData[0].name);
+      expect(secondProjectName.text()).toBe(
         stubFakePersonalProjectData[1].name
       );
-      expect(thirdProjectName.text()).to.equal(
-        stubFakePersonalProjectData[2].name
-      );
-      expect(fourthProjectName.text()).to.equal(
+      expect(thirdProjectName.text()).toBe(stubFakePersonalProjectData[2].name);
+      expect(fourthProjectName.text()).toBe(
         stubFakePersonalProjectData[3].name
       );
     });
@@ -80,11 +74,10 @@ describe('PersonalProjectsTable', () => {
             personalProjectsList={[]}
             isLoadingPersonalProjectsList={false}
             isUserSignedIn={true}
-            canShare={true}
           />
         </Provider>
       );
-      expect(wrapper.contains(i18n.noPersonalProjects())).to.be.true;
+      expect(wrapper.contains(i18n.noPersonalProjects())).toBe(true);
     });
 
     it('if there are no projects and user is signed out displays no saved projects message', () => {
@@ -94,11 +87,10 @@ describe('PersonalProjectsTable', () => {
             personalProjectsList={[]}
             isLoadingPersonalProjectsList={false}
             isUserSignedIn={false}
-            canShare={true}
           />
         </Provider>
       );
-      expect(wrapper.find('SafeMarkdown').props().markdown).to.equal(
+      expect(wrapper.find('SafeMarkdown').props().markdown).toBe(
         i18n.noSavedProjects({
           signInUrl: '/users/sign_in?user_return_to=/projects',
         })
@@ -114,12 +106,11 @@ describe('PersonalProjectsTable', () => {
             personalProjectsList={[]}
             isLoadingPersonalProjectsList={true}
             isUserSignedIn={true}
-            canShare={true}
           />
         </Provider>
       );
 
-      expect(wrapper.find('#uitest-personal-projects')).to.have.length(0);
+      expect(wrapper.find('#uitest-personal-projects')).toHaveLength(0);
     });
   });
 });

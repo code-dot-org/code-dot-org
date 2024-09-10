@@ -1,19 +1,22 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
-import onClickOutside from 'react-onclickoutside';
 import classNames from 'classnames';
-import JavalabButton from './JavalabButton';
-import msg from '@cdo/locale';
-import javalabMsg from '@cdo/javalab/locale';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import onClickOutside from 'react-onclickoutside';
 import {connect} from 'react-redux';
-import moduleStyles from './backpack.module.scss';
-import {DisplayTheme} from './DisplayTheme';
-import {makeEnum} from '@cdo/apps/utils';
-import JavalabDialog from './JavalabDialog';
-import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
+import javalabMsg from '@cdo/javalab/locale';
+import msg from '@cdo/locale';
+
 import {BackpackAPIContext} from './BackpackAPIContext';
+import {DisplayTheme} from './DisplayTheme';
+import JavalabButton from './JavalabButton';
+import JavalabDialog from './JavalabDialog';
+
+import moduleStyles from './backpack.module.scss';
 
 const Dialog = makeEnum(
   'IMPORT_WARNING',

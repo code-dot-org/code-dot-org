@@ -4,14 +4,35 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
       "is_course": true,
       "is_migrated": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fa-IR",
+        "fil-PH",
+        "fr-FR",
+        "hi-IN",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "pl-PL",
+        "pt-BR",
+        "sk-SK",
+        "th-TH",
+        "tr-TR",
+        "vi-VN",
+        "zh-TW"
+      ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "music-tutorial-2024",
-    "serialized_at": "2024-05-14 21:00:37 UTC",
-    "published_state": "beta",
+    "serialized_at": "2024-08-01 16:22:18 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -41,7 +62,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this engaging and interactive lesson, students will dive into the world of music creation through coding. Using Music Lab, a block-based integrated development environment (IDE), learners will discover the power of programming to make their own unique sounds, compose songs, and perform live music. By the end of this lesson, students will not only have developed foundational coding skills but also an appreciation for the interdisciplinary connection between music and technology. All the skills they learn in this tutorial will set them up for success when they get to the Music Lab project, which is an open space for students to create any song they'd like!\n\n"
+        "overview": "In this interactive lesson, students will use Music Lab, a block-based IDE, to learn about events, functions, and loops while creating unique sounds, composing songs, and performing live music. They will utilize sound generation, loops, functions, and events to craft and share a unique composition, developing foundational coding skills and an appreciation for the connection between music and technology."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -847,7 +868,27 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

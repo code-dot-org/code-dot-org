@@ -233,7 +233,8 @@ class Game < ApplicationRecord
       WEBLAB,
       DANCE,
       SPRITELAB,
-      POETRY
+      POETRY,
+      MUSIC
     ].include? app
   end
 
@@ -277,7 +278,7 @@ class Game < ApplicationRecord
   def use_restricted_songs?
     return false unless [DANCE, MUSIC].include? app
     dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
-    CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
+    CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV.fetch('CI', nil))
   end
 
   # Format: name:app:intro_video

@@ -1,0 +1,8 @@
+name 'gen-ai-customizing-modelcards-practice-L2_2024'
+display_name 'Bubble Choice: All the Choices'
+description 'Try These Levels!'
+
+sublevels
+level 'gen-ai-customizing-modelcards-practice-L2A_2024'
+level 'gen-ai-customizing-modelcards-practice-L2B_2024'
+level 'gen-ai-customizing-modelcards-practice-L2C_2024'

@@ -1,8 +1,10 @@
-import {assert} from '../util/reconfiguredChai';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
-var testUtils = require('./../util/testUtils');
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var runState = require('@cdo/apps/redux/runState');
+
+var testUtils = require('./../util/testUtils');
 
 describe('runState', () => {
   testUtils.setExternalGlobals();

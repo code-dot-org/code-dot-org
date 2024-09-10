@@ -4,8 +4,8 @@ import React from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
+import Button from '../../legacySharedComponents/Button';
 import color from '../../util/color';
-import Button from '../Button';
 
 import NewProjectButtons from './NewProjectButtons';
 
@@ -50,7 +50,7 @@ export default class StartNewProject extends React.Component {
       ? DEFAULT_PROJECT_TYPES_ADVANCED
       : DEFAULT_PROJECT_TYPES_BASIC;
 
-    const OPEN_ENDED_PROJECT_TYPES = ['spritelab', 'dance', 'poetry'];
+    const OPEN_ENDED_PROJECT_TYPES = ['spritelab', 'dance', 'poetry', 'music'];
 
     const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
 

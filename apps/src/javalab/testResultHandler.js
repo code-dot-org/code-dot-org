@@ -1,11 +1,14 @@
-import {UserTestResultSignalType, TestStatus} from './constants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import msg from '@cdo/javalab/locale';
+
+import {UserTestResultSignalType, TestStatus} from './constants';
 import {getExceptionMessage} from './javabuilderExceptionHandler';
 
 const CHECK_MARK = '✔';
 const HEAVY_X = '✖';
 
-export function onTestResult(data, callback, miniAppType) {
+export function onTestResult(data, callback, miniAppType, levelId) {
   let message = '';
   const {
     status,
@@ -23,8 +26,18 @@ export function onTestResult(data, callback, miniAppType) {
   switch (data.value) {
     case UserTestResultSignalType.TEST_STATUS:
       if (status === TestStatus.SUCCESSFUL) {
+        analyticsReporter.sendEvent(EVENTS.JAVALAB_TEST_PASSED, {
+          levelId: levelId,
+          test: methodName,
+        });
         message = `${CHECK_MARK} ${msg.successfulTestResult(statusDetails)}`;
       } else if (status === TestStatus.FAILED) {
+        if (methodName) {
+          analyticsReporter.sendEvent(EVENTS.JAVALAB_TEST_FAILED, {
+            levelId: levelId,
+            test: methodName,
+          });
+        }
         message = `${HEAVY_X} ${msg.failedTestResult(statusDetails)}`;
         successful = false;
       } else {

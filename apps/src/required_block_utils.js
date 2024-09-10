@@ -1,6 +1,8 @@
-var xml = require('./xml');
-var msg = require('@cdo/locale');
 var _ = require('lodash');
+
+var msg = require('@cdo/locale');
+
+var xml = require('./xml');
 
 /**
  * Create the textual XML for a math_number block.

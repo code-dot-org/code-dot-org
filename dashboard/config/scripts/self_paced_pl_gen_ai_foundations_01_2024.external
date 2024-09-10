@@ -1,0 +1,19 @@
+name 'self-paced-pl-gen-ai-foundations_01_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 1: Introduction to Generative AI
+
+<img src="https://images.code.org/4992cd388a8b6420d13746e6e8c53816-Screenshot 2024-08-30 at 10.14.14 AM.png" alt="graphic organizer from unit" height="150px" style="border-radius:20px; float:right; margin: 0 0 40px 40px">
+
+#### In this lesson, students are introduced to AI concepts, focusing on generative AI. They discuss the impact of past technologies, explore generative AI through its hype, and learn the **Input, Storage, Processing, Output** (ISPO) framework to understand how generative AI works. The lesson ends with students using a graphic organizer to outline their expectations for the unit.
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Managing vocabulary throughout this unit can be challenging. While a graphic organizer is provided, consider using additional teaching strategies like word walls or vocabulary handouts to help students consistently track and reference important concepts.
+</p>
+</div>
+
+
+MARKDOWN

@@ -40,16 +40,6 @@ def disallow_case_change
   end
 end
 
-def disallow_state_pdf
-  `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.split("\n").each do |line|
-    next unless %r{pegasus/sites.v3/code.org/public/advocacy/state-facts/..\.pdf$}.match?(line)
-    warn "\nAborting because state pdf generation appears to be in progress:\n\n    #{line}\n\n"
-    warn "Please wait 10 minutes and then try again.\n\n"
-    `git reset HEAD`
-    exit 1
-  end
-end
-
 def ignore_levelbuilder_omissions
   if GitUtils.current_branch == 'levelbuilder'
     system("git reset -q HEAD -- '#{LEVELBUILDER_OMISSIONS.join("' '")}'")
@@ -68,7 +58,6 @@ def check_changes
   end
 
   disallow_case_change
-  disallow_state_pdf
 
   system("git status --untracked-files=all #{CONTENT_PATHS}")
   print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "

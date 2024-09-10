@@ -1,7 +1,6 @@
 {
   "key": "starwarsblocks",
   "display_name": "Star Wars: Building a Galaxy With Code (Blockly)",
-  "category": "hoc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
@@ -16,6 +15,5 @@
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/v7jSy_yE9U0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=v7jSy_yE9U0&wmode=transparent",
   "published_date": "2015-12-01 11:00:00 UTC",
-  "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

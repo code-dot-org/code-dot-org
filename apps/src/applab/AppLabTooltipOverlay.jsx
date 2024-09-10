@@ -2,12 +2,14 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
+import {ellipsify} from '../utils';
+
+import {ApplabInterfaceMode} from './constants';
 import {getId} from './designElements/elementUtils';
 import {draggedElementDropPoint} from './gridUtils';
-import {connect} from 'react-redux';
-import {ApplabInterfaceMode} from './constants';
-import {ellipsify} from '../utils';
 
 const ELEMENT_ID_TEXT_MAX_CHAR = 12;
 

@@ -87,10 +87,14 @@ export class ClickableTextWrapper extends React.Component {
 
   renderClickableText(node) {
     const clickableTextAll = node.querySelectorAll('b.clickable-text');
-    for (const clickableText of clickableTextAll) {
+    clickableTextAll.forEach((clickableText, index) => {
       const id = clickableText.dataset.id;
+      const extraClass = ` clickable-text-with-glow clickable-text-${index}`;
+      if (!clickableText.className.includes(extraClass)) {
+        clickableText.className += extraClass;
+      }
       clickableText.onclick = () => this.props.handleInstructionsTextClick(id);
-    }
+    });
   }
 
   render() {

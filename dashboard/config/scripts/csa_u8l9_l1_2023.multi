@@ -2,8 +2,8 @@ name 'CSA U8L9-L1_2023'
 title 'Check for Understanding'
 
 wrong 'Complete Mediation - Every access to every object must be checked for authorization'
-right 'Least Privilege - Every program and every user of the system should operate using the least set of privileges necessary to complete the job'
-wrong 'Economy of Mechanism - Keep the design of the system as simple as possible'
+wrong 'Least Privilege - Every program and every user of the system should operate using the least set of privileges necessary to complete the job'
+right 'Economy of Mechanism - Keep the design of the system as simple as possible'
 wrong 'Design for Updates - Developers should plan for the safe and reliable installation of security updates'
 
 allow_multiple_attempts true

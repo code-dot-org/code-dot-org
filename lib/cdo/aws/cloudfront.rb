@@ -38,31 +38,31 @@ module AWS
       pegasus: {
         # NOTE: Keep this list in sync with the call to AWS::CloudFront.distribution_config in cloud_formation_stack.yml.erb.
         # CloudFormation stack should be refactored to reference this configuration in the future.
-        aliases: [CDO.pegasus_hostname, CDO.advocacy_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
-        origin: "#{ENV['RACK_ENV']}-pegasus.code.org",
+        aliases: [CDO.pegasus_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
+        origin: "#{ENV.fetch('RACK_ENV', nil)}-pegasus.code.org",
         # ACM domain name
         ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
-          prefix: "#{ENV['RACK_ENV']}-pegasus-cdn"
+          prefix: "#{ENV.fetch('RACK_ENV', nil)}-pegasus-cdn"
         }
       },
       dashboard: {
         aliases: [CDO.dashboard_hostname],
-        origin: "#{ENV['RACK_ENV']}-dashboard.code.org",
+        origin: "#{ENV.fetch('RACK_ENV', nil)}-dashboard.code.org",
         ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
-          prefix: "#{ENV['RACK_ENV']}-dashboard-cdn"
+          prefix: "#{ENV.fetch('RACK_ENV', nil)}-dashboard-cdn"
         }
       },
       hourofcode: {
         aliases: [CDO.hourofcode_hostname],
-        origin: "#{ENV['RACK_ENV']}-origin.hourofcode.com",
+        origin: "#{ENV.fetch('RACK_ENV', nil)}-origin.hourofcode.com",
         ssl_cert: 'hourofcode.com',
         log: {
           bucket: 'cdo-logs',
-          prefix: "#{ENV['RACK_ENV']}-hourofcode-cdn"
+          prefix: "#{ENV.fetch('RACK_ENV', nil)}-hourofcode-cdn"
         }
       }
     }
@@ -183,7 +183,7 @@ module AWS
               Id: app_name == proxy ? 'cdo' : app_name,
               CustomOriginConfig: {
                 OriginProtocolPolicy: 'match-viewer',
-                OriginSSLProtocols: %w(TLSv1.2 TLSv1.1),
+                OriginSSLProtocols: %w(TLSv1.2),
                 OriginReadTimeout: rack_env?(:levelbuilder) ? 60 : 30
               },
               DomainName: origin,
@@ -225,7 +225,7 @@ module AWS
         },
         ViewerCertificate: ssl_cert ? ssl_cert : {
           CloudFrontDefaultCertificate: true,
-          MinimumProtocolVersion: 'TLSv1' # accepts SSLv3, TLSv1
+          MinimumProtocolVersion: 'TLSv1.2_2021'
         },
         HttpVersion: 'http2',
         WebACLId: {'Fn::Sub': 'arn:aws:wafv2:${AWS::Region}:${AWS::AccountId}:global/webacl/code-dot-org/a79a67de-dabf-4555-a8dc-98c3a20b562f'}

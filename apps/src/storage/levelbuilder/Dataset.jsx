@@ -1,16 +1,18 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+
 import color from '@cdo/apps/util/color';
+
+import {DataView} from '../constants';
+import ConfirmDeleteButton from '../dataBrowser/ConfirmDeleteButton';
+import ConfirmImportButton from '../dataBrowser/ConfirmImportButton';
+import DataTable from '../dataBrowser/DataTable';
 import {
   changeView,
   updateTableColumns,
   updateTableRecords,
 } from '../redux/data';
-import {DataView} from '../constants';
-import ConfirmDeleteButton from '../dataBrowser/ConfirmDeleteButton';
-import ConfirmImportButton from '../dataBrowser/ConfirmImportButton';
-import DataTable from '../dataBrowser/DataTable';
 
 class Dataset extends React.Component {
   static propTypes = {

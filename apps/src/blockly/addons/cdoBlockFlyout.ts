@@ -1,15 +1,19 @@
-import GoogleBlockly, {IDraggable, Options} from 'blockly/core';
+import GoogleBlockly, {Block, IDraggable, Options} from 'blockly/core';
 import {FlyoutItem} from 'blockly/core/flyout_base';
 import {Svg} from 'blockly/core/utils';
+
+import {ExtendedWorkspaceSvg} from '../types';
 
 const svgPaths = GoogleBlockly.utils.svgPaths;
 interface CdoBlockFlyoutOptions extends Options {
   minWidth: number;
   maxWidth: number;
+  parentBlock: Block | null;
 }
 
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   private svgClipPath_: SVGElement | undefined;
+  parentBlock: GoogleBlockly.Block | null;
 
   /**
    * This is a customized flyout class that extends the HorizontalFlyout class.
@@ -19,8 +23,11 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    */
   constructor(workspaceOptions: CdoBlockFlyoutOptions) {
     super(workspaceOptions);
+    this.parentBlock = workspaceOptions.parentBlock;
     this.minWidth_ = workspaceOptions.minWidth || this.minWidth_;
     this.maxWidth_ = workspaceOptions.maxWidth || this.maxWidth_;
+    (this.workspace_ as ExtendedWorkspaceSvg).flyoutParentBlock =
+      this.parentBlock;
   }
 
   autoClose = false;
@@ -84,6 +91,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     this.height_ = 0;
     this.width_ = 0;
     const topBlocks = this.workspace_.getTopBlocks(false);
+    // Adjust the size of the flyout for each block.
     topBlocks.forEach(block => {
       const blockHW = block.getHeightWidth();
       this.updateHeight_(blockHW.height);
@@ -94,7 +102,11 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
         this.moveRectToBlock_(rect, block);
       }
     });
-
+    // Adjust the size of the flyout for each button.
+    this.buttons_.forEach(button => {
+      this.updateHeight_(button.height);
+      this.updateWidth_(button.width);
+    });
     this.setBackgroundPath_(this.width_, this.height_);
     this.position();
   }

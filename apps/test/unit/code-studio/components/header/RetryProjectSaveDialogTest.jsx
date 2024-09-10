@@ -1,12 +1,8 @@
-import React from 'react';
-import sinon from 'sinon';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-
-import {expect} from '../../../../util/reconfiguredChai';
-
-import {projectUpdatedStatuses as statuses} from '@cdo/apps/code-studio/projectRedux';
+import React from 'react';
 
 import {UnconnectedRetryProjectSaveDialog as RetryProjectSaveDialog} from '@cdo/apps/code-studio/components/header/RetryProjectSaveDialog';
+import {projectUpdatedStatuses as statuses} from '@cdo/apps/code-studio/projectRedux';
 
 const errorTitle = 'Error saving your project';
 
@@ -15,14 +11,14 @@ describe('RetryProjectSaveDialog', () => {
     const wrapper = mount(
       <RetryProjectSaveDialog
         projectUpdatedStatus={statuses.saved}
-        onTryAgain={sinon.spy()}
+        onTryAgain={jest.fn()}
       />
     );
-    expect(wrapper.text()).not.to.include(errorTitle);
+    expect(wrapper.text()).not.toContain(errorTitle);
   });
 
   it('is visible and clickable when open', () => {
-    const tryAgain = sinon.spy();
+    const tryAgain = jest.fn();
     const wrapper = mount(
       <RetryProjectSaveDialog
         projectUpdatedStatus={statuses.error}
@@ -30,17 +26,17 @@ describe('RetryProjectSaveDialog', () => {
         onTryAgain={tryAgain}
       />
     );
-    expect(wrapper.text()).to.include(errorTitle);
+    expect(wrapper.text()).toContain(errorTitle);
     const button = wrapper.find('Button').at(0);
-    expect(button.text()).to.equal('Try again');
+    expect(button.text()).toBe('Try again');
 
-    expect(tryAgain).not.to.have.been.called;
+    expect(tryAgain).not.toHaveBeenCalled();
     button.simulate('click');
-    expect(tryAgain).to.have.been.called;
+    expect(tryAgain).toHaveBeenCalled();
   });
 
   it('is not clickable when save is pending', () => {
-    const tryAgain = sinon.spy();
+    const tryAgain = jest.fn();
     const wrapper = mount(
       <RetryProjectSaveDialog
         projectUpdatedStatus={statuses.saving}
@@ -48,11 +44,11 @@ describe('RetryProjectSaveDialog', () => {
         onTryAgain={tryAgain}
       />
     );
-    expect(wrapper.text()).to.include(errorTitle);
+    expect(wrapper.text()).toContain(errorTitle);
     const button = wrapper.find('Button').at(0);
-    expect(button.text()).to.contain('saving');
+    expect(button.text()).toContain('saving');
 
     button.simulate('click');
-    expect(tryAgain).not.to.have.been.called;
+    expect(tryAgain).not.toHaveBeenCalled();
   });
 });

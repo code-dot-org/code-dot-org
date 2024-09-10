@@ -1,14 +1,15 @@
 <Weblab2>
   <config><![CDATA[{
   "game_id": 74,
-  "created_at": "2024-03-14T20:16:49.000Z",
+  "created_at": "2024-04-30T03:00:53.000Z",
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Web Lab 2 Basics\r\n\r\nCreate your own web page!"
+    "long_instructions": "## Web Lab 2 Basics\r\n\r\nCreate your own web page!",
+    "encrypted_exemplar_sources": "v/Rg3zbDcHxqbL5urXXbzs3R/reNz38Kp/uRh4qyJgMoT5bpr04QozZRDg0h\nAoDDQzOSU3yXc3SjreCBIWnapc8cC6rc/lLp11jblWLfIQbakpFNdmz4jD2y\nSIhOh16YK8fJK0cGCdUqeqVMgR80lAvWBL+uj5lwKvDY346yYBZeJmU8H7MP\nm6Yx0DuwFJyu4C60u4bPq1XEZqhTvawvaq53zjlKx8QImqieGDM27ly+yIU8\neWyFCIPFkPBA0WhGl36doV9bm3SCzFJw6IvouKbjcVWNWx0qloKAkvdOjwng\nUgZqCifUoNJ2NmbatYU8Ca6Etv5IlwDVfroOCOM/Fos90yC/4Q/lVhaMfJqx\nTlg2kiknovt/YmBfbQZkMrml1qkpEQNOd67gcdcWw7zSkLUwwAtT2gMJZgvy\nABMMQgRd/G9xTY9dNUv+aW1XsUEO4lpy0p3Zzq3Zn5SigJNrq86lSQSlgr/q\nqQSO+7oI0gnzotLdscMFA7jsyJptNKyCVpZjUQ+Te+YViqNPHGWCgi8ghrhN\nu5GW83Ydw2S1Vx5dUcIsjZWLxgWrEADT13Ivj8tvp1iaDMAf7F2DyGXcY9c6\nopo5espABsrl23Svn3+jJ3nPt0/EDq1bFlewLF+mnq/oVPwL7Oi2WB4KtsWY\nubjevBgoOI+MQoGt6LSuoPZu+5TfB/Au81WeEZePi1aafkEFQ3P0WoD7apXs\nzxgQ4Y6GDQD+VeFuiZGwXPK15xardwQ9cnK4tmzb/7cGPQIkaXjHl7PRx7ab\nHAzmhg9ORzo4fV4bjPp7SDLar3MKJveBCBFyGzXqlWtS3oPci4I3JW7i61RI\ns5Kh/nG5Epw0GmisdI/2gJKORrec+KcWDXnaRx/+k0hLzPO2Dci8Eb8X480b\ngUwbZo0QsQAFYPSE5VGINmEEVv+i8SMEv56KhczP2tKukqWaS5Gn+26F00hP\n5bYBk68YhzkxPFcpI4u1VeAuKIktlLfXALIO2lw/T6a039eRPj27zlcMu0dE\nAkr3g4DzfMuI/bYTRDAbD37MCbEjV+WgqI/sSyakRGczJUHrKWSJt1TuW5BZ\nVuiRiEiBtL39veFGpqCY6cmMIsJDSV08kIPr5gSNjW4VSCD/KX8QDYlQCri2\nWhFhDMWqHgL/TVerombVZSlvv7N/Tikm5Qi1chwvTJOVGnIAdQToLw0xdmDB\nTsA6rEk33xdi7cPkVfvpPSM/a0waNBrYO54DfWWicnrFTXYv/D1Zd0+6Oj9g\nop8tnvnQFPzjA5ViQowKAlU1lenQnbLRA1uHBECGuzqMp5aJPbE+hgQMJ9pz\nKXM7sUqJcy2MfhA+7An/6SpyRdOvwb4jS8JkgVeUj8nLpHIFelugAkwK/VFN\nEK6CRpP1H4gm1MVFBUVUgq0Ne1T0aJmrLgthqind8Rb+6CW0wT4oiApUiOln\nseu5AXjZYeLETs21PFubVN6PKjVsxQGJyHqBRlwHkQ6qlhuYU9PLjwD382Nl\nvRGPXwbRBQv78MayJEDggCAIwAmbXpoPYi187WyKa/03w/IF9Pa3NfWRnKOx\nSX+EObhPlBzyrQ6g0zZsL77zReCokdBDDki0x/XIyJele3evUiGKV4L7pmsT\n7dc53jvG0Pg0tv/cbDIIm8Ixn+RPlAlWmxVZrqWGSU+n3iJS/Y2rkOC/1pHT\neuszJ2tRuWbhPyzWNV6LT+SF4pi1Yx/4FvhITKWHy5p4SqeM\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-03-14T13:16:48.984-07:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 1\\\"\"],\"cloned_from\":\"Allthethings Weblab2 1\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-14T13:16:48.984-07:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 1\\\"\"],\"cloned_from\":\"Allthethings Weblab2 1\"},{\"changed_at\":\"2024-05-23 11:05:48 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

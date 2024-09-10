@@ -1,16 +1,20 @@
-import React, {useCallback} from 'react';
 import classNames from 'classnames';
-import {Triggers} from '@cdo/apps/music/constants';
-import moduleStyles from './controls.module.scss';
-import BeatPad from './BeatPad';
+import React, {useCallback} from 'react';
 import {useDispatch} from 'react-redux';
+
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {Triggers} from '@cdo/apps/music/constants';
+import {commonI18n} from '@cdo/apps/types/locale';
+
 import {
   moveStartPlayheadPositionBackward,
   moveStartPlayheadPositionForward,
 } from '../redux/musicRedux';
+
+import BeatPad from './BeatPad';
 import {useMusicSelector} from './types';
-import {commonI18n} from '@cdo/apps/types/locale';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+
+import moduleStyles from './controls.module.scss';
 
 const LoadingProgress: React.FunctionComponent = () => {
   const progressValue = useMusicSelector(

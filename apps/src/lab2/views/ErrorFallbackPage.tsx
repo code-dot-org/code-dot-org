@@ -1,5 +1,7 @@
 import React from 'react';
+
 import moduleStyles from './Lab2Wrapper.module.scss';
+
 const i18n = require('@cdo/locale');
 
 export interface ErrorUIProps {

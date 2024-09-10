@@ -4,6 +4,7 @@
  * A ChannelsStore manages the loading and saving of channels.
  */
 import {Channel, DefaultChannel} from '../types';
+
 import * as channelsApi from './channelsApi';
 import * as projectsApi from './projectsApi';
 
@@ -13,7 +14,8 @@ export interface ChannelsStore {
   loadForLevel: (
     levelId: number,
     scriptId?: number,
-    userId?: string
+    scriptLevelId?: string,
+    userId?: number
   ) => Promise<Response>;
 
   save: (channel: Channel) => Promise<Response>;
@@ -71,8 +73,18 @@ export class LocalChannelsStore implements ChannelsStore {
 export class RemoteChannelsStore implements ChannelsStore {
   defaultChannel: DefaultChannel = {name: 'New Project'};
 
-  loadForLevel(levelId: number, scriptId?: number, userId?: string) {
-    return projectsApi.getChannelForLevel(levelId, scriptId, userId);
+  loadForLevel(
+    levelId: number,
+    scriptId?: number,
+    scriptLevelId?: string,
+    userId?: number
+  ) {
+    return projectsApi.getChannelForLevel(
+      levelId,
+      scriptId,
+      scriptLevelId,
+      userId
+    );
   }
 
   load(channelId: string) {

@@ -1,11 +1,13 @@
 /** @file Top-level view for Fish */
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import StudioAppWrapper from '../templates/StudioAppWrapper';
-import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
-import _ from 'lodash';
+
 import fontConstants from '@cdo/apps/fontConstants';
+
+import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
+import StudioAppWrapper from '../templates/StudioAppWrapper';
 
 /**
  * Top-level React wrapper for Fish

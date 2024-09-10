@@ -28,7 +28,7 @@ class Weblab2 < Level
     start_sources
     hide_share_and_remix
     is_project_level
-    encrypted_examples
+    encrypted_exemplar_sources
     submittable
     validation_enabled
   )

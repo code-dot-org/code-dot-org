@@ -1,5 +1,5 @@
-import {NotificationType} from '@cdo/apps/templates/Notification';
 import {VisibilityType} from '@cdo/apps/code-studio/announcementsRedux';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 
 export const fakeTeacherAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',

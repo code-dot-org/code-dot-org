@@ -1,25 +1,28 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
-import {getBaseAssetUrl} from '../appConfig';
-import styles from './soundsPanel2.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import FocusLock from 'react-focus-lock';
+
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+
+import {getBaseAssetUrl} from '../appConfig';
+import musicI18n from '../locale';
 import MusicLibrary, {
   SoundData,
   SoundFolder,
   SoundType,
 } from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
-import FocusLock from 'react-focus-lock';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
-import ScrollIntoView from './ScrollIntoView';
 
-import musicI18n from '../locale';
+import EaseIntoView from './EaseIntoView';
 
-const scrollIntoViewDelayFramesFolders = 0;
-const scrollIntoViewDelayFramesSounds = 5;
-const scrollIntoViewFrames = 50;
-const scrollIntoViewDistanceY = 70;
+import styles from './soundsPanel2.module.scss';
+
+const easeIntoViewDelayFramesFolders = 0;
+const easeIntoViewDelayFramesSounds = 5;
+const easeIntoViewFrames = 50;
+const easeIntoViewDistanceY = 70;
 
 /*
  * Renders a UI for previewing and choosing samples.  Version 2 implements a new UI that shows a
@@ -252,7 +255,13 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   const currentSoundRef: React.MutableRefObject<HTMLDivElement | null> =
     useRef(null);
 
-  const isDefaultSoundSelected = currentValue === library.getDefaultSound();
+  // Capture whether the initially-selected sound is the default sound, in which
+  // case we will do a smooth ease into view, rather than scroll directly
+  // to the current sound.  Uses useRef so that changes to this value don't trigger
+  // additional executions of the "Initial render" useEffect, below.
+  const isDefaultSoundSelected = useRef(
+    currentValue === library.getDefaultSound()
+  );
 
   const onModeChange = useCallback((value: Mode) => {
     setMode(value);
@@ -265,9 +274,9 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   // Initial render.
   useEffect(() => {
     // If the user has selected a non-default sound, then jump directly to it.
-    // If the default sound is selected, then the ScrollIntoView component will do
+    // If the default sound is selected, then the EaseIntoView component will do
     // an initial scroll instead.
-    if (!isDefaultSoundSelected) {
+    if (!isDefaultSoundSelected.current) {
       // This timeout allows the initial scroll-to-current-selection to work
       // when wrapping the content with FocusLock.
       setTimeout(() => {
@@ -275,7 +284,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         currentSoundRef.current?.scrollIntoView();
       }, 0);
     }
-  }, [isDefaultSoundSelected]);
+  }, []);
 
   const currentFolderRefCallback = (ref: HTMLDivElement) => {
     currentFolderRef.current = ref;
@@ -354,13 +363,13 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         )}
         <div id="sounds-panel-body" className={styles.soundsPanelBody}>
           {mode === 'packs' && (
-            <ScrollIntoView
+            <EaseIntoView
               id="sounds-panel-left"
               className={styles.leftColumn}
-              doScroll={isDefaultSoundSelected}
-              delay={scrollIntoViewDelayFramesFolders}
-              frames={scrollIntoViewFrames}
-              distanceY={scrollIntoViewDistanceY}
+              doEase={isDefaultSoundSelected.current}
+              delay={easeIntoViewDelayFramesFolders}
+              frames={easeIntoViewFrames}
+              distanceY={easeIntoViewDistanceY}
             >
               {folders.map(folder => {
                 return (
@@ -376,18 +385,18 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                   />
                 );
               })}
-            </ScrollIntoView>
+            </EaseIntoView>
           )}
-          <ScrollIntoView
+          <EaseIntoView
             id="sounds-panel-right"
             className={classNames(
               styles.rightColumn,
               mode === 'sounds' && styles.rightColumnFullWidth
             )}
-            doScroll={isDefaultSoundSelected}
-            delay={scrollIntoViewDelayFramesSounds}
-            frames={scrollIntoViewFrames}
-            distanceY={scrollIntoViewDistanceY}
+            doEase={isDefaultSoundSelected.current}
+            delay={easeIntoViewDelayFramesSounds}
+            frames={easeIntoViewFrames}
+            distanceY={easeIntoViewDistanceY}
           >
             {rightColumnSoundEntries.map(soundEntry => {
               return (
@@ -404,7 +413,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
                 />
               );
             })}
-          </ScrollIntoView>
+          </EaseIntoView>
         </div>
       </div>
     </FocusLock>

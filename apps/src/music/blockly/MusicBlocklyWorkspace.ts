@@ -1,20 +1,26 @@
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {BlockTypes} from './blockTypes';
+import {BlocklyOptions, Workspace, WorkspaceSvg} from 'blockly';
+import {Abstract} from 'blockly/core/events/events_abstract';
+
+import {Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
-import {getToolbox} from './toolbox';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getBlockMode} from '../appConfig';
 import {BlockMode, Triggers} from '../constants';
+
+import {GeneratorHelpersSimple2} from './blocks/simple2';
+import {BlockTypes} from './blockTypes';
 import {
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
-import {GeneratorHelpersSimple2} from './blocks/simple2';
-import {Renderers} from '@cdo/apps/blockly/constants';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {BlocklyOptions, Workspace, WorkspaceSvg} from 'blockly';
-import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {Abstract} from 'blockly/core/events/events_abstract';
+import {setUpBlocklyForMusicLab} from './setup';
+import {getToolbox} from './toolbox';
+import {ToolboxData} from './toolbox/types';
+
 const experiments = require('@cdo/apps/util/experiments');
 
 const triggerIdToEvent = (id: string) => `triggeredAtButton-${id}`;
@@ -26,6 +32,19 @@ type CompiledEvents = {[key: string]: {code: string; args?: string[]}};
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
+  private static isBlocklyEnvironmentSetup = false;
+
+  // Setup the global Blockly environment for Music Lab.
+  // This should only happen once per page load.
+  public static setupBlocklyEnvironment() {
+    if (this.isBlocklyEnvironmentSetup) {
+      return;
+    }
+
+    setUpBlocklyForMusicLab();
+    this.isBlocklyEnvironmentSetup = true;
+  }
+
   private workspace: WorkspaceSvg | Workspace | null;
   private container: HTMLElement | null;
   private codeHooks: {[key: string]: (...args: unknown[]) => void};
@@ -58,7 +77,7 @@ export default class MusicBlocklyWorkspace {
     container: HTMLElement,
     onBlockSpaceChange: (e: Abstract) => void,
     isReadOnlyWorkspace: boolean,
-    toolbox: {[key: string]: string[]},
+    toolbox: ToolboxData | undefined,
     isRtl: boolean
   ) {
     if (this.workspace) {
@@ -67,7 +86,7 @@ export default class MusicBlocklyWorkspace {
 
     this.container = container;
 
-    const toolboxBlocks = getToolbox(toolbox);
+    const toolboxBlocks = getToolbox(getBlockMode(), toolbox);
 
     this.workspace = Blockly.inject(container, {
       toolbox: toolboxBlocks,
@@ -196,7 +215,10 @@ export default class MusicBlocklyWorkspace {
       if (getBlockMode() !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
           this.compiledEvents.whenRunButton = {
-            code: Blockly.JavaScript.blockToCode(block),
+            code:
+              'var __context = "when_run";\n' +
+              Blockly.JavaScript.workspaceToCode(this.workspace),
+            args: ['startPosition'],
           };
         }
       } else {
@@ -237,7 +259,8 @@ export default class MusicBlocklyWorkspace {
         const id = block.getFieldValue(TRIGGER_FIELD);
         this.compiledEvents[triggerIdToEvent(id)] = {
           code:
-            Blockly.JavaScript.blockToCode(block) + functionImplementationsCode,
+            `var __context = "${id}";\n` +
+            Blockly.JavaScript.workspaceToCode(this.workspace),
           args: ['startPosition'],
         };
         // Also save the value of the trigger start field at compile time so we can
@@ -293,7 +316,7 @@ export default class MusicBlocklyWorkspace {
     console.log('Executing compiled song.');
 
     if (this.codeHooks.whenRunButton) {
-      this.callUserGeneratedCode(this.codeHooks.whenRunButton);
+      this.callUserGeneratedCode(this.codeHooks.whenRunButton, [0]);
     }
 
     if (this.codeHooks.tracks) {

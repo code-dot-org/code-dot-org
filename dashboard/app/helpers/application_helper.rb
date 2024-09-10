@@ -80,17 +80,29 @@ module ApplicationHelper
     ret = ''
     if notice.present?
       ret += content_tag(:div, flash.notice, {class: 'alert alert-success'})
-      flash.notice = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash.notice = nil
+      end
     end
 
     if flash[:info].present?
       ret += content_tag(:div, flash[:info], {class: 'alert alert-info'})
-      flash[:info] = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash[:info] = nil
+      end
     end
 
     if alert.present?
       ret += content_tag(:div, flash.alert, {class: 'alert alert-danger'})
-      flash.alert = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash.alert = nil
+      end
     end
 
     ret
@@ -125,8 +137,6 @@ module ApplicationHelper
     case provider.to_sym
     when :facebook
       'https://www.facebook.com/logout.php'
-    when :windowslive
-      'http://login.live.com/logout.srf'
     when :google_oauth2
       'https://accounts.google.com/logout'
     end
@@ -155,7 +165,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB, Game::DANCE, Game::SPRITELAB].include? app
+    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB, Game::DANCE, Game::SPRITELAB, Game::MUSIC].include? app
       asset_url "#{app}_sharing_drawing.png"
     elsif app == Game::BOUNCE
       if ["basketball", "sports"].include? skin

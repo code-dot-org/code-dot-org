@@ -27,14 +27,22 @@ const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
     [args, selectedValues, setValues]
   );
   const onSelectAll = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
+    (
+      e:
+        | React.MouseEvent<HTMLButtonElement>
+        | React.MouseEvent<HTMLAnchorElement>
+    ) => {
       setValues(args.allOptions.map(option => option.value));
       args.onSelectAll(e);
     },
     [args]
   );
   const onClearAll = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
+    (
+      e:
+        | React.MouseEvent<HTMLButtonElement>
+        | React.MouseEvent<HTMLAnchorElement>
+    ) => {
       setValues([]);
       args.onClearAll(e);
     },
@@ -92,7 +100,11 @@ const MultipleTemplate: StoryFn<{
             }
             componentArg.onChange(e);
           };
-          const onSelectAll = (e: React.MouseEvent<HTMLButtonElement>) => {
+          const onSelectAll = (
+            e:
+              | React.MouseEvent<HTMLButtonElement>
+              | React.MouseEvent<HTMLAnchorElement>
+          ) => {
             setValues({
               ...values,
               [componentArg.name]: componentArg.allOptions.map(
@@ -101,7 +113,11 @@ const MultipleTemplate: StoryFn<{
             });
             componentArg.onSelectAll(e);
           };
-          const onClearAll = (e: React.MouseEvent<HTMLButtonElement>) => {
+          const onClearAll = (
+            e:
+              | React.MouseEvent<HTMLButtonElement>
+              | React.MouseEvent<HTMLAnchorElement>
+          ) => {
             setValues({...values, [componentArg.name]: []});
             componentArg.onClearAll(e);
           };
@@ -245,8 +261,24 @@ GroupOfCheckboxDropdownColors.args = {
       color: dropdownColors.black,
       disabled: false,
     },
+    {
+      name: 'default-dropdown-gray',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Gray Dropdown',
+      onChange: args => null,
+      onSelectAll: args => null,
+      onClearAll: args => null,
+      size: 'm',
+      color: dropdownColors.gray,
+      disabled: false,
+    },
   ],
 };
+
 export const GroupOfSizesOfCheckboxDropdown = MultipleTemplate.bind({});
 GroupOfSizesOfCheckboxDropdown.args = {
   components: [

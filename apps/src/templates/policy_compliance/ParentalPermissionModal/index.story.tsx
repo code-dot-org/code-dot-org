@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
@@ -15,7 +15,7 @@ registerReducers({currentUser});
 store.dispatch(
   setInitialData({
     id: 1,
-    childAccountComplianceState: 's',
+    child_account_compliance_state: 'l',
   })
 );
 
@@ -31,15 +31,21 @@ export default {
 } as Meta;
 
 const spy = sinon.spy();
-const useReducerStub = sinon.stub(React, 'useReducer');
 const Template = (state: object = {}) => {
-  useReducerStub.returns([state, spy]);
+  // @ts-expect-error eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  React.useReducer.restore && React.useReducer.restore();
 
-  return <ParentalPermissionModal lockoutDate={new Date()} />;
+  sinon.stub(React, 'useReducer').returns([state, spy]);
+
+  return <ParentalPermissionModal lockoutDate={new Date().toISOString()} />;
 };
 
 export const NewRequestForm = () => {
-  return Template();
+  const state = {
+    parentalPermissionRequest: null,
+  };
+
+  return Template(state);
 };
 
 export const UpdateRequestForm = () => {

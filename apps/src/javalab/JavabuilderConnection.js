@@ -1,3 +1,10 @@
+import project from '@cdo/apps/code-studio/initApp/project';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import logToCloud from '@cdo/apps/logToCloud';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import javalabMsg from '@cdo/javalab/locale';
+
 import {
   WebSocketMessageType,
   StatusMessageType,
@@ -6,13 +13,10 @@ import {
   AuthorizerSignalType,
   CsaViewMode,
   JavabuilderLockoutType,
+  JavabuilderExceptionType,
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
-import project from '@cdo/apps/code-studio/initApp/project';
-import javalabMsg from '@cdo/javalab/locale';
 import {onTestResult} from './testResultHandler';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import logToCloud from '@cdo/apps/logToCloud';
 import {getUnsupportedMiniAppMessage} from './utils';
 
 const WEBSOCKET_CLOSED_NORMAL_CODE = 1000;
@@ -226,6 +230,9 @@ export default class JavabuilderConnection {
         lineBreakCount = 1;
         break;
       case StatusMessageType.COMPILATION_SUCCESSFUL:
+        analyticsReporter.sendEvent(EVENTS.JAVALAB_COMPILATION_SUCCESS, {
+          levelId: this.levelId,
+        });
         message = javalabMsg.compilationSuccess();
         lineBreakCount = 1;
         break;
@@ -293,7 +300,12 @@ export default class JavabuilderConnection {
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.TEST_RESULT:
-        testResult = onTestResult(data, this.onOutputMessage, this.miniAppType);
+        testResult = onTestResult(
+          data,
+          this.onOutputMessage,
+          this.miniAppType,
+          this.levelId
+        );
         if (testResult.isValidation) {
           this.sawValidationTests = true;
           if (!testResult.success) {
@@ -317,6 +329,11 @@ export default class JavabuilderConnection {
         }
         break;
       case WebSocketMessageType.EXCEPTION:
+        if (data.value === JavabuilderExceptionType.COMPILER_ERROR) {
+          analyticsReporter.sendEvent(EVENTS.JAVALAB_COMPILATION_ERROR, {
+            levelId: this.levelId,
+          });
+        }
         this.onNewlineMessage();
         handleException(data, this.onOutputMessage, this.miniAppType);
         this.onNewlineMessage();

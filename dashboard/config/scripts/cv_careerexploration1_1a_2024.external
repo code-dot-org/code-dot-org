@@ -1,0 +1,11 @@
+name 'CV_CareerExploration1_1a_2024'
+title 'Design Technologist Statistics'
+description 'Examine the role of a design technologist and the skills that they employ'
+
+markdown <<MARKDOWN
+This is Level 1a of the Computer Vision Career Explorations. 
+
+![](https://images.code.org/36d49d30fa46c25d71b406acaa59b74f-image-1719423523844.png)
+
+![](https://images.code.org/cb008bbc19cdab6a068bf5f34fb450f8-image-1719423538213.png)
+MARKDOWN

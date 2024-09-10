@@ -1,13 +1,13 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedRosterDialog as RosterDialog} from '@cdo/apps/templates/teacherDashboard/RosterDialog';
 import locale from '@cdo/locale';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const failedLoadError = {
   status: 404,
@@ -52,9 +52,12 @@ describe('RosterDialog', () => {
     wrapper.find('button[id="cancel-button"]').simulate('click');
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
-    assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
-      oauthSource: OAuthSectionTypes.google_classroom,
-    });
+    assert.deepEqual(
+      analyticsSpy.getCall(0).args[analyticsSpy.getCall(0).args.length - 2],
+      {
+        oauthSource: OAuthSectionTypes.google_classroom,
+      }
+    );
 
     analyticsSpy.restore();
   });
@@ -91,9 +94,12 @@ describe('RosterDialog', () => {
     rosterDialog.instance().importClassroom();
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
-    assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
-      oauthSource: OAuthSectionTypes.google_classroom,
-    });
+    assert.deepEqual(
+      analyticsSpy.getCall(0).args[analyticsSpy.getCall(0).args.length - 2],
+      {
+        oauthSource: OAuthSectionTypes.google_classroom,
+      }
+    );
 
     analyticsSpy.restore();
   });
@@ -111,5 +117,34 @@ describe('RosterDialog', () => {
       />
     );
     expect(wrapper.find('#import-button-and-redirect')).to.have.lengthOf(1);
+  });
+
+  it('should dispatch handleImportFailure when the redirect ajax fails', async () => {
+    const handleImportFailureMock = jest.fn();
+
+    const rosterDialog = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        handleImportFailure={handleImportFailureMock}
+        isOpen={true}
+        classrooms={[
+          {
+            id: '2',
+            name: 'Test',
+          },
+        ]}
+        loadError={failedLoadError}
+        rosterProvider={OAuthSectionTypes.google_classroom}
+      />
+    );
+
+    rosterDialog.instance().setState({selectedId: '2'});
+    await rosterDialog
+      .instance()
+      .handleRedirect()
+      .catch(error => {
+        expect(handleImportFailureMock.mock.calls.length).to.equal(1);
+      });
   });
 });

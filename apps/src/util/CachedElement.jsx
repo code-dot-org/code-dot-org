@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import PropTypes from 'prop-types';
 
 export default function CachedElement({elementType, cacheKey, createElement}) {
   const htmlCache = elementsHtmlCache[elementType] || {};

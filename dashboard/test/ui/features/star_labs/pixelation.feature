@@ -33,6 +33,31 @@ Feature: Pixelation levels
     Then pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110 111 000 111 000 01"
 
   @as_student
+  Scenario: Pixelation slider input fields are accessible via keyboard keys
+    Given I am on the 2nd pixelation test level
+    And pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110"
+
+    When I press keys ":arrow_up" for element "#width"
+    And pixelation data has text "0000 0101 0000 0010 0000 0011 000 111 100 010 001 110"
+
+    When I press keys ":arrow_down" for element "#width"
+    And pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110"
+
+    When I press keys ":arrow_up" for element "#height"
+    And pixelation data has text "0000 0100 0000 0011 0000 0011 000 111 100 010 001 110"
+
+    When I press keys ":arrow_down" for element "#height"
+    And pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110"
+
+    When I press keys ":backspace" for element "#height"
+    When I press keys "7" for element "#height"
+    And pixelation data has text "0000 0100 0000 0111 0000 0011 000 111 100 010 001 110"
+
+    When I press keys ":backspace" for element "#width"
+    When I press keys "7" for element "#width"
+    And pixelation data has text "0000 0111 0000 0111 0000 0011 000 111 100 010 001 110"
+
+  @as_student
   Scenario: Pixelation version 3 in color with sliders starting in hex mode
     Given I am on the 3rd pixelation test level
     And pixelation data has text "04 04 18 FF0000 00AAAA"

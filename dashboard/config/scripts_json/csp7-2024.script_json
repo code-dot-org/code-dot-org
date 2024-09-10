@@ -13,11 +13,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 19:33:22 UTC",
+    "serialized_at": "2024-08-27 22:23:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2602,6 +2603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 1_2024"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2624,6 +2628,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 2_2024"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2646,6 +2653,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 4_2024"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2668,6 +2678,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 3_2024"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2690,6 +2703,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L3 Console Choice_2024"
+        ],
         "progression": "Putting It Together: Console"
       },
       "bonus": false,
@@ -2712,6 +2728,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Investigate Calculator App_2024"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -2734,6 +2753,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Practice App 2_2024"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -2756,6 +2778,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Practice App 3_2024"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -2778,6 +2803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L3 App Choice_2024"
+        ],
         "progression": "Putting It Together: Apps"
       },
       "bonus": false,
@@ -2800,6 +2828,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U73 CFU Param Return AP2022_2024"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -3915,6 +3946,16 @@
       }
     },
     {
+      "name": "CSP Unit 7 - Slides",
+      "url": "https://docs.google.com/presentation/d/1BTwX1x-F1kbRrwnqIc6d5Rgi9JBo3-4FxqRSynq-AaA/template/preview",
+      "key": "csp_unit_7_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_7_-_slides"
+      }
+    },
+    {
       "name": "Customize Make Lessons: How-To-Guide",
       "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
       "key": "customize_make_lessons_how-to-guide",
@@ -4241,6 +4282,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp7-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_7_-_slides",
         "script.name": "csp7-2024"
       }
     },

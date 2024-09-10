@@ -180,7 +180,14 @@ class ProjectsController < ApplicationController
     },
     game_design: {
       name: 'New Game Design Project'
+    },
+    pythonlab: {
+      name: 'New Python Lab Project'
+    },
+    transformers: {
+      name: 'New Transformers Project'
     }
+    # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
@@ -194,7 +201,6 @@ class ProjectsController < ApplicationController
     end
 
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
-    @limited_gallery = limited_gallery?
     @current_tab = params[:tab_name]
     @project_count_millions = PROJECT_COUNT_MILLIONS
   end
@@ -320,15 +326,24 @@ class ProjectsController < ApplicationController
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     script_id = params[:script_id]
+    script_level_id = params[:script_level_id]
     level = Level.find(params[:level_id])
     user_id = params[:user_id]
 
     error_message = under_13_without_tos_teacher?(level)
     return render(status: :forbidden, json: {error: error_message}) if error_message
 
+    # If viewing another user's work, ensure that we have permission.
     if user_id
-      # If viewing another user's work, ensure that we have permission.
-      script_level = level.script_levels.find_by_script_id(script_id)
+      # If a script level ID was provided, ensure it matches the level ID.
+      if script_level_id
+        script_level = ScriptLevel.cache_find(script_level_id.to_i)
+        same_level = script_level.oldest_active_level.id == level.id
+        is_sublevel = ParentLevelsChildLevel.exists?(child_level_id: level.id, parent_level_id: script_level.oldest_active_level.id)
+        return render(status: :forbidden, json: {error: "Access denied."}) unless same_level || is_sublevel
+      else
+        script_level = level.script_levels.find_by_script_id(script_id)
+      end
       user = User.find(user_id)
       unless can?(:view_as_user, script_level, user)
         return render(status: :forbidden, json: {error: "Access denied."})
@@ -364,16 +379,6 @@ class ProjectsController < ApplicationController
 
   def weblab_footer
     render partial: 'projects/weblab_footer'
-  end
-
-  private def initial_data
-    data = {
-      name: 'Untitled Project',
-      level: polymorphic_url([params[:key].to_sym, :project_projects])
-    }
-    default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
-    data[:thumbnailUrl] = default_image_url if default_image_url
-    data
   end
 
   def show
@@ -519,27 +524,6 @@ class ProjectsController < ApplicationController
     }
   end
 
-  private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab javalab).include? project_type
-  end
-
-  private def uses_animation_bucket?(project_type)
-    projects_that_use_animations = ['gamelab']
-    poetry_subtypes = Poetry.standalone_app_names.map {|item| item[1]}
-    spritelab_subtypes = GamelabJr.standalone_app_names.map {|item| item[1]}
-    projects_that_use_animations.concat(poetry_subtypes)
-    projects_that_use_animations.concat(spritelab_subtypes)
-    projects_that_use_animations.include?(project_type)
-  end
-
-  private def uses_file_bucket?(project_type)
-    %w(weblab).include? project_type
-  end
-
-  private def uses_starter_assets?(project_type)
-    %w(javalab applab).include? project_type
-  end
-
   def export_create_channel
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
@@ -564,9 +548,12 @@ class ProjectsController < ApplicationController
     render json: {channel_id: new_channel_id}
   end
 
+  def datablock_storage_options
+    {}
+  end
+
   def export_config
     return if redirect_under_13_without_tos_teacher(@level)
-    # TODO: post-firebase-cleanup, remove both branches of this conditional: #56994
     if params[:script_call]
       render js: "#{params[:script_call]}(#{datablock_storage_options.to_json});"
     else
@@ -579,15 +566,85 @@ class ProjectsController < ApplicationController
     @game = @level.game
   end
 
-  # Due to risk of inappropriate content, we can hide non-featured Applab
-  # and Gamelab projects via DCDO. Internally, project_validators should
-  # always have access to all Applab and Gamelab projects, even if there is a
-  # limited gallery for others.
-  def limited_gallery?
-    dcdo_flag = DCDO.get('image_moderation', {})['limited_project_gallery']
-    limited_project_gallery = dcdo_flag.nil? ? true : dcdo_flag
-    project_validator = current_user&.permission? UserPermission::PROJECT_VALIDATOR
-    !project_validator && limited_project_gallery
+  # GET /projects/:channel_id/extra_links
+  # Get the extra links for the project for use by project validators.
+  # This is used by lab2 levels that cannot use the haml 'extra links' box since
+  # this box will not refresh when changing levels.
+  def extra_links
+    src_channel_id = params[:channel_id]
+    if src_channel_id == "undefined"
+      return render json: {message: 'No channel id provided.'}, status: :ok
+    end
+    project_info = {}
+    owner_info = {}
+    owner_info['storage_id'], project_info['id'] = storage_decrypt_channel_id(src_channel_id)
+    project_info['sources_link'] = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_info['storage_id']}/#{project_info['id']}/"
+    # For legacy labs, other links are displayed.
+    # App Lab includes assets, Gamelab includes animations, and Weblab includes files.
+    # Follow-up includes adding links other than sources for lab2 labs.
+    owner_info['name'] = User.find_channel_owner(src_channel_id).try(:username)
+    project_info['is_featured_project'] = FeaturedProject.exists?(storage_app_id: project_info['id'])
+
+    remix_ancestry = Projects.remix_ancestry(src_channel_id, depth: 5)
+    project_info['remix_ancestry'] = []
+    project_type = Project.find_by_channel_id(src_channel_id)['project_type']
+    if remix_ancestry.present?
+      remix_ancestry.each do |channel_id|
+        project_info['remix_ancestry'] << "/projects/#{project_type}/#{channel_id}/view"
+      end
+    end
+    if project_info['is_featured_project']
+      project = FeaturedProject.find_by project_id: project_info['id']
+      project_info['featured_status'] = project.status
+    else
+      project_info['featured_status'] = 'n/a'
+    end
+    return render json: {owner_info: owner_info, project_info: project_info}
+  end
+
+  # Automatically catch authorization exceptions on any methods in this controller
+  # Overrides handler defined in application_controller.rb.
+  # Special for projects controller - when forbidden, redirect to home instead
+  # of returning a 403.
+  rescue_from CanCan::AccessDenied do
+    if current_user
+      # Logged in and trying to reach a forbidden page - redirect to home.
+      redirect_to '/'
+    else
+      # Not logged in and trying to reach a forbidden page - redirect to sign in.
+      authenticate_user!
+    end
+  end
+
+  private def initial_data
+    data = {
+      name: 'Untitled Project',
+      level: polymorphic_url([params[:key].to_sym, :project_projects])
+    }
+    default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
+    data[:thumbnailUrl] = default_image_url if default_image_url
+    data
+  end
+
+  private def uses_asset_bucket?(project_type)
+    %w(applab makerlab gamelab spritelab javalab).include? project_type
+  end
+
+  private def uses_animation_bucket?(project_type)
+    projects_that_use_animations = ['gamelab']
+    poetry_subtypes = Poetry.standalone_app_names.map {|item| item[1]}
+    spritelab_subtypes = GamelabJr.standalone_app_names.map {|item| item[1]}
+    projects_that_use_animations.concat(poetry_subtypes)
+    projects_that_use_animations.concat(spritelab_subtypes)
+    projects_that_use_animations.include?(project_type)
+  end
+
+  private def uses_file_bucket?(project_type)
+    %w(weblab).include? project_type
+  end
+
+  private def uses_starter_assets?(project_type)
+    %w(javalab applab).include? project_type
   end
 
   # @param iframe_embed [Boolean] Whether the project view event was via iframe.
@@ -624,8 +681,10 @@ class ProjectsController < ApplicationController
 
     project = Projects.new(get_storage_id).get(params[:channel_id])
     is_owner = project[:isOwner]
+    is_frozen = project[:frozen]
 
-    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && request.path.ends_with?('/view')
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && request.path.ends_with?('/view') && !is_frozen
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if is_frozen && request.path.ends_with?('/edit')
     return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && request.path.ends_with?('/edit')
   end
 
@@ -635,19 +694,6 @@ class ProjectsController < ApplicationController
     # If the user is on the play view '/projects/channel_id', set `response_content`.`
     if sharing == true
       view_options(responsive_content: true)
-    end
-  end
-  # Automatically catch authorization exceptions on any methods in this controller
-  # Overrides handler defined in application_controller.rb.
-  # Special for projects controller - when forbidden, redirect to home instead
-  # of returning a 403.
-  rescue_from CanCan::AccessDenied do
-    if current_user
-      # Logged in and trying to reach a forbidden page - redirect to home.
-      redirect_to '/'
-    else
-      # Not logged in and trying to reach a forbidden page - redirect to sign in.
-      authenticate_user!
     end
   end
 end

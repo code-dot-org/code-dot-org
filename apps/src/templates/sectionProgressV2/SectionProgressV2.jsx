@@ -5,34 +5,21 @@ import {connect} from 'react-redux';
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
-import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
+import {
+  getCurrentUnitData,
+  loadExpandedLessonsFromLocalStorage,
+} from '../sectionProgress/sectionProgressRedux';
 import UnitSelectorV2 from '../UnitSelectorV2';
 
 import IconKey from './IconKey';
+import MoreOptionsDropdown from './MoreOptionsDropdown';
 import ProgressTableV2 from './ProgressTableV2';
 
 import styles from './progress-table-v2.module.scss';
-
-const getLocalStorageString = (scriptId, sectionId) =>
-  `expandedLessonProgressV2-${scriptId}-${sectionId}`;
-
-const getLocalStorage = (scriptId, sectionId) => {
-  try {
-    return (
-      JSON.parse(
-        tryGetLocalStorage(getLocalStorageString(scriptId, sectionId), [])
-      ) || []
-    );
-  } catch (e) {
-    // If we fail to parse the local storage, default to nothing expanded.
-    return [];
-  }
-};
 
 function SectionProgressV2({
   scriptId,
@@ -41,42 +28,26 @@ function SectionProgressV2({
   isLoadingProgress,
   isRefreshingProgress,
   isLevelProgressLoaded,
+  expandedLessonIds,
+  loadExpandedLessonsFromLocalStorage,
+  hideTopHeading,
 }) {
-  const [expandedLessonIds, setExpandedLessonIds] = React.useState(() =>
-    getLocalStorage(scriptId, sectionId)
-  );
-
   React.useEffect(() => {
-    setExpandedLessonIds(getLocalStorage(scriptId, sectionId));
+    loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
       sectionId: sectionId,
       unitId: scriptId,
       windowWidth: window.innerWidth,
       windowHeight: window.innerHeight,
     });
-  }, [scriptId, sectionId]);
-
-  const setExpandedLessons = React.useCallback(
-    updateFunction => {
-      const newUpdateFunction = currentExpandedLessonIds => {
-        const newExpandedLessonIds = updateFunction(currentExpandedLessonIds);
-        trySetLocalStorage(
-          getLocalStorageString(scriptId, sectionId),
-          JSON.stringify(newExpandedLessonIds)
-        );
-        return newExpandedLessonIds;
-      };
-      setExpandedLessonIds(newUpdateFunction);
-    },
-    [setExpandedLessonIds, scriptId, sectionId]
-  );
+  }, [scriptId, sectionId, loadExpandedLessonsFromLocalStorage]);
 
   const levelDataInitialized = React.useMemo(() => {
     return unitData && isLevelProgressLoaded;
   }, [unitData, isLevelProgressLoaded]);
 
   React.useEffect(() => {
-    if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
+    if (!unitData && !isLoadingProgress && !isRefreshingProgress && scriptId) {
       loadUnitProgress(scriptId, sectionId);
     }
   }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
@@ -89,7 +60,7 @@ function SectionProgressV2({
 
   return (
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
-      <Heading1>{i18n.progressBeta()}</Heading1>
+      {!hideTopHeading && <Heading1>{i18n.progressBeta()}</Heading1>}
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
@@ -101,13 +72,10 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
+          <MoreOptionsDropdown />
         </Heading6>
       </div>
-      <ProgressTableV2
-        expandedLessonIds={expandedLessonIds}
-        setExpandedLessons={setExpandedLessons}
-        isSkeleton={!levelDataInitialized}
-      />
+      <ProgressTableV2 isSkeleton={!levelDataInitialized} />
     </div>
   );
 }
@@ -119,16 +87,30 @@ SectionProgressV2.propTypes = {
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
   isLevelProgressLoaded: PropTypes.bool.isRequired,
+  expandedLessonIds: PropTypes.array,
+  loadExpandedLessonsFromLocalStorage: PropTypes.func.isRequired,
+  hideTopHeading: PropTypes.bool,
 };
 
-export default connect(state => ({
-  scriptId: state.unitSelection.scriptId,
-  sectionId: state.teacherSections.selectedSectionId,
-  unitData: getCurrentUnitData(state),
-  isLoadingProgress: state.sectionProgress.isLoadingProgress,
-  isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
-  isLevelProgressLoaded:
-    !!state.sectionProgress.studentLevelProgressByUnit[
-      state.unitSelection.scriptId
-    ],
-}))(SectionProgressV2);
+export default connect(
+  state => ({
+    scriptId: state.unitSelection.scriptId,
+    sectionId: state.teacherSections.selectedSectionId,
+    unitData: getCurrentUnitData(state),
+    isLoadingProgress: state.sectionProgress.isLoadingProgress,
+    isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
+    isLevelProgressLoaded:
+      !!state.sectionProgress.studentLevelProgressByUnit[
+        state.unitSelection.scriptId
+      ],
+    expandedLessonIds:
+      state.sectionProgress.expandedLessonIds[
+        state.teacherSections.selectedSectionId
+      ] || [],
+  }),
+  dispatch => ({
+    loadExpandedLessonsFromLocalStorage(scriptId, sectionId) {
+      dispatch(loadExpandedLessonsFromLocalStorage(scriptId, sectionId));
+    },
+  })
+)(SectionProgressV2);

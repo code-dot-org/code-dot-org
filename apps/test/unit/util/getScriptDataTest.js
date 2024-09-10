@@ -1,6 +1,6 @@
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('the getScriptData function', () => {
   beforeEach(() => {

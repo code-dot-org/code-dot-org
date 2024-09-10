@@ -1,14 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import {
   LockStatus,
   saveLockState,
   useGetLockState,
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import * as useFetch from '@cdo/apps/util/useFetch';
+
+window.fetch = jest.fn();
 
 describe('LessonLockDataApi', () => {
   const fakeUnitId = 1;
@@ -50,7 +51,7 @@ describe('LessonLockDataApi', () => {
           },
         },
       };
-      sinon.stub(useFetch, 'useFetch').returns({
+      jest.spyOn(useFetch, 'useFetch').mockClear().mockReturnValue({
         loading: false,
         data: fakeLockStatusData,
       });
@@ -62,8 +63,8 @@ describe('LessonLockDataApi', () => {
         />
       );
       const {loading, serverLockState} = useGetLockStateReturnValue.current;
-      expect(loading).to.be.false;
-      expect(serverLockState).to.deep.equal([
+      expect(loading).toBe(false);
+      expect(serverLockState).toEqual([
         {
           name: 'Student1',
           lockStatus: 'Locked',
@@ -75,13 +76,13 @@ describe('LessonLockDataApi', () => {
           userLevelData: {},
         },
       ]);
-      useFetch.useFetch.restore();
+      useFetch.useFetch.mockRestore();
     });
   });
 
   describe('saveLockState', () => {
     it('calls lock_status api with changes in the lock state', () => {
-      const fetchSpy = sinon.spy(window, 'fetch');
+      const fetchSpy = jest.spyOn(window, 'fetch').mockClear();
       const previousLockState = [
         {
           name: 'Student1',
@@ -109,7 +110,7 @@ describe('LessonLockDataApi', () => {
 
       saveLockState(previousLockState, newLockState, 'fake-csrf');
 
-      expect(fetchSpy).to.have.been.calledWith('/api/lock_status', {
+      expect(fetchSpy).toHaveBeenCalledWith('/api/lock_status', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -127,7 +128,7 @@ describe('LessonLockDataApi', () => {
         }),
       });
 
-      window.fetch.restore();
+      window.fetch.mockRestore();
     });
   });
 

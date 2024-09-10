@@ -69,8 +69,76 @@ DisabledChips.args = {
   ],
 };
 
-export const SizesOfChips = MultipleTemplate.bind({});
-SizesOfChips.args = {
+export const ThickAndThinChips = MultipleTemplate.bind({});
+ThickAndThinChips.args = {
+  groups: [
+    {
+      label: 'Thick Chips',
+      name: 'thick-chips1',
+      textThickness: 'thick',
+      options: [
+        {value: 'ThickChip1', label: 'Chip1'},
+        {value: 'ThickChip2', label: 'Chip2'},
+        {value: 'ThickChip3', label: 'Chip3'},
+        {value: 'ThickChip4', label: 'Chip4'},
+        {value: 'ThickChip5', label: 'Chip5'},
+      ],
+      values: [],
+      setValues: () => null,
+    },
+    {
+      label: 'Thin Chips',
+      name: 'thin-chips1',
+      textThickness: 'thin',
+      options: [
+        {value: 'ThinChip1', label: 'Chip1'},
+        {value: 'ThinChip2', label: 'Chip2'},
+        {value: 'ThinChip3', label: 'Chip3'},
+        {value: 'ThinChip4', label: 'Chip4'},
+        {value: 'ThinChip5', label: 'Chip5'},
+      ],
+      values: [],
+      setValues: () => null,
+    },
+  ],
+};
+
+export const GroupOfColorsOfChips = MultipleTemplate.bind({});
+GroupOfColorsOfChips.args = {
+  groups: [
+    {
+      label: 'Black Chips',
+      name: 'black-chips1',
+      color: 'black',
+      options: [
+        {value: 'BlackChip1', label: 'Chip1'},
+        {value: 'BlackChip2', label: 'Chip2'},
+        {value: 'BlackChip3', label: 'Chip3'},
+        {value: 'BlackChip4', label: 'Chip4'},
+        {value: 'BlackChip5', label: 'Chip5'},
+      ],
+      values: [],
+      setValues: () => null,
+    },
+    {
+      label: 'Gray Chips',
+      name: 'Gray-chips1',
+      color: 'gray',
+      options: [
+        {value: 'GrayChip1', label: 'Chip1'},
+        {value: 'GrayChip2', label: 'Chip2'},
+        {value: 'GrayChip3', label: 'Chip3'},
+        {value: 'GrayChip4', label: 'Chip4'},
+        {value: 'GrayChip5', label: 'Chip5'},
+      ],
+      values: [],
+      setValues: () => null,
+    },
+  ],
+};
+
+export const GroupOfSizesOfChips = MultipleTemplate.bind({});
+GroupOfSizesOfChips.args = {
   groups: [
     {
       label: 'Chips L',

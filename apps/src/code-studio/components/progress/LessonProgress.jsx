@@ -1,19 +1,21 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from '../../../util/color';
-import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
   lessonExtrasUrl,
   getCurrentLevel,
   getCurrentLevels,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import color from '../../../util/color';
 import {canChangeLevelInPage} from '../../browserNavigation';
-import $ from 'jquery';
 
 /**
  * Lesson progress component used in level header and course overview.

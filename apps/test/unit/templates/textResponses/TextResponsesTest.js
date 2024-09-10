@@ -1,12 +1,9 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
-import sinon from 'sinon';
 
 import * as textReponsesDataApi from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import {UnconnectedTextResponses as TextResponses} from '@cdo/apps/templates/textResponses/TextResponses';
-
-import {expect} from '../../../util/deprecatedChai';
 
 // responses (object) - keys are scriptIds, values are
 // array of student text responses for that script
@@ -43,13 +40,14 @@ const responses = [
 describe('TextResponses', () => {
   describe('when there are text responses', () => {
     beforeEach(() => {
-      sinon
-        .stub(textReponsesDataApi, 'loadTextResponsesFromServer')
-        .returns(Promise.resolve(responses));
+      jest
+        .spyOn(textReponsesDataApi, 'loadTextResponsesFromServer')
+        .mockClear()
+        .mockReturnValue(Promise.resolve(responses));
     });
 
     afterEach(() => {
-      textReponsesDataApi.loadTextResponsesFromServer.restore();
+      textReponsesDataApi.loadTextResponsesFromServer.mockRestore();
     });
 
     it('renders the UnitSelector dropdown', async () => {
@@ -59,7 +57,6 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            coursesWithProgress={[]}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -67,7 +64,7 @@ describe('TextResponses', () => {
         );
       });
 
-      expect(wrapper.exists('UnitSelector')).to.be.true;
+      expect(wrapper.exists('Connect(UnitSelector)')).toBe(true);
     });
 
     it('renders the TextResponsesTable', async () => {
@@ -77,7 +74,6 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            coursesWithProgress={[]}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -85,11 +81,11 @@ describe('TextResponses', () => {
         );
       });
 
-      expect(wrapper.exists('TextResponsesTable')).to.be.true;
+      expect(wrapper.exists('TextResponsesTable')).toBe(true);
       const textResponsesTable = wrapper.findOne('TextResponsesTable');
-      expect(textResponsesTable.props.responses).to.eql(responses);
-      expect(textResponsesTable.props.sectionId).to.equal(2);
-      expect(textResponsesTable.props.scriptName).to.equal('A Script');
+      expect(textResponsesTable.props.responses).toEqual(responses);
+      expect(textResponsesTable.props.sectionId).toBe(2);
+      expect(textResponsesTable.props.scriptName).toBe('A Script');
     });
 
     it('renders a CSVLink if there are 1 or more text responses', async () => {
@@ -99,7 +95,6 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            coursesWithProgress={[]}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -107,8 +102,8 @@ describe('TextResponses', () => {
         );
       });
 
-      expect(wrapper.exists('CSVLink')).to.be.true;
-      expect(wrapper.exists('Button')).to.be.true;
+      expect(wrapper.exists('CSVLink')).toBe(true);
+      expect(wrapper.exists('Button')).toBe(true);
     });
 
     it('renders a filter if there are 2+ lessons to filter by', async () => {
@@ -118,7 +113,6 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            coursesWithProgress={[]}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -126,22 +120,23 @@ describe('TextResponses', () => {
         );
       });
 
-      expect(wrapper.exists('TextResponsesLessonSelector')).to.be.true;
+      expect(wrapper.exists('TextResponsesLessonSelector')).toBe(true);
       expect(
         wrapper.findOne('TextResponsesLessonSelector').props.lessons
-      ).to.eql(['Lesson 1', 'Lesson 2']);
+      ).toEqual(['Lesson 1', 'Lesson 2']);
     });
   });
 
   describe('when there are no text responses', () => {
     beforeEach(() => {
-      sinon
-        .stub(textReponsesDataApi, 'loadTextResponsesFromServer')
-        .returns(Promise.resolve({}));
+      jest
+        .spyOn(textReponsesDataApi, 'loadTextResponsesFromServer')
+        .mockClear()
+        .mockReturnValue(Promise.resolve({}));
     });
 
     afterEach(() => {
-      textReponsesDataApi.loadTextResponsesFromServer.restore();
+      textReponsesDataApi.loadTextResponsesFromServer.mockRestore();
     });
 
     it('does not render actions when there are no text responses', async () => {
@@ -151,7 +146,6 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            coursesWithProgress={[]}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -159,9 +153,9 @@ describe('TextResponses', () => {
         );
       });
 
-      expect(wrapper.exists('#uitest-response-actions')).to.be.false;
-      expect(wrapper.exists('TextResponsesLessonSelector')).to.be.false;
-      expect(wrapper.exists('CSVLink')).to.be.false;
+      expect(wrapper.exists('#uitest-response-actions')).toBe(false);
+      expect(wrapper.exists('TextResponsesLessonSelector')).toBe(false);
+      expect(wrapper.exists('CSVLink')).toBe(false);
     });
   });
 });

@@ -1,4 +1,5 @@
 import {SoundLoadCallbacks} from '../types';
+
 import {Effects} from './interfaces/Effects';
 
 /**
@@ -52,6 +53,7 @@ export interface AudioPlayer {
    */
   playSequenceImmediately(
     sequence: SamplerSequence,
+    length: number,
     onTick?: (tick: number) => void,
     onStop?: () => void
   ): Promise<void>;
@@ -60,7 +62,10 @@ export interface AudioPlayer {
   cancelPreviews(): void;
 
   /** Schedule a sample to played */
-  scheduleSample(sample: SampleEvent): void;
+  scheduleSample(
+    sample: SampleEvent,
+    onSampleStart: (id: string) => void
+  ): void;
 
   /** Schedule a sampler sequence to be played */
   scheduleSamplerSequence(sequence: SamplerSequence): void;
@@ -96,6 +101,8 @@ export interface AudioPlayer {
 export interface SampleEvent {
   // 1-based playback position in measures
   playbackPosition: number;
+  // ID of the sound
+  id: string;
   // URL of the sample
   sampleUrl: string;
   // Whether the sound was triggered

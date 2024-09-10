@@ -1,12 +1,16 @@
-import ConfirmDeleteButton from './ConfirmDeleteButton';
-import {DataView} from '../constants';
-import EditLink from './EditLink';
 import PropTypes from 'prop-types';
 import React from 'react';
-import dataStyles from './data-styles.module.scss';
+
 import msg from '@cdo/locale';
+
+import {DataView} from '../constants';
+import {storageBackend} from '../storage';
+
+import ConfirmDeleteButton from './ConfirmDeleteButton';
+import EditLink from './EditLink';
 import {refreshCurrentDataView} from './loadDataForView';
-import {storageBackend, isFirebaseStorage} from '../storage';
+
+import dataStyles from './data-styles.module.scss';
 
 class EditTableListRow extends React.Component {
   static propTypes = {
@@ -19,21 +23,8 @@ class EditTableListRow extends React.Component {
     this.props.onViewChange(DataView.TABLE, this.props.tableName);
   };
 
-  handleDelete = () => {
-    // TODO: post-firebase-cleanup, remove this conditional: #56994
-    if (isFirebaseStorage()) {
-      storageBackend().deleteTable(
-        this.props.tableName,
-        this.props.tableType,
-        refreshCurrentDataView
-      );
-    } else {
-      storageBackend().deleteTable(
-        this.props.tableName,
-        refreshCurrentDataView
-      );
-    }
-  };
+  handleDelete = () =>
+    storageBackend().deleteTable(this.props.tableName, refreshCurrentDataView);
 
   render() {
     return (

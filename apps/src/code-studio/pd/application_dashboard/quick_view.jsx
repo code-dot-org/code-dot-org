@@ -7,21 +7,23 @@
  *        /csd_facilitators
  *        /csp_facilitators
  */
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Button, FormGroup, ControlLabel, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import Select from 'react-select';
+
 import 'react-select/dist/react-select.css';
-import {SelectStyleProps} from '../constants';
-import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
+import Spinner from '../../../sharedComponents/Spinner';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
-import QuickViewTable from './quick_view_table';
-import Spinner from '../components/spinner';
-import $ from 'jquery';
+import {SelectStyleProps} from '../constants';
+
+import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
 import {getApplicationStatuses} from './constants';
-import {Button, FormGroup, ControlLabel, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import QuickViewTable from './quick_view_table';
 
 export class QuickView extends React.Component {
   static propTypes = {

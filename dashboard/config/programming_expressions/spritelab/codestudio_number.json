@@ -5,6 +5,13 @@
   "category_key": "math",
   "block_name": "math_number",
   "content": "Holds a number value.\r\n\r\nThis block cannot be used by itself and can be placed in any block that expects a number. Click inside the block to type a number.",
+  "examples": [
+    {
+      "name": "Example 1",
+      "description": "Each time the space bar is pressed, the monster will shrink to half its size. Pay attention to how the number block is used to set the original size of the monster as well as to determine how much to divide the monster's size by each time.",
+      "app": "https://studio.code.org/projects/spritelab/hnM9t4sd6B0NNx5EEgzbCPLrTjPXGxoLYFJPD977Wtk"
+    }
+  ],
   "image_url": "https://curriculum.code.org/media/blocks/number.PNG",
   "palette_params": [
     {

@@ -1,6 +1,7 @@
-import styles from '../views/SoundStyle.module.scss';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {SoundType} from '../player/MusicLibrary';
+
+import styles from '../views/SoundStyle.module.scss';
 
 type SoundStyle = {
   [key in SoundType | PlaybackEvent['type']]?: {
@@ -84,9 +85,18 @@ const soundStyle: SoundStyle = {
     iconCode: '',
     marginLeft: 0,
     classNameColor: styles.soundChordColor,
-    classNameFill: styles.soundPatternFill,
+    classNameFill: styles.soundChordFill,
     classNameBackground: styles.soundChordBackground,
     classNameBorder: styles.soundChordBorder,
+  },
+  tune: {
+    icon: '',
+    iconCode: '',
+    marginLeft: 0,
+    classNameColor: styles.soundTuneColor,
+    classNameFill: styles.soundTuneFill,
+    classNameBackground: styles.soundTuneBackground,
+    classNameBorder: styles.soundTuneBorder,
   },
 };
 

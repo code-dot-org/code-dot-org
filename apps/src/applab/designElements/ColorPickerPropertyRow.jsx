@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import * as rowStyle from './rowStyle';
 import ColorPicker from 'react-color';
+import ReactDOM from 'react-dom';
+
+import * as rowStyle from './rowStyle';
 
 export default class ColorPickerPropertyRow extends React.Component {
   static propTypes = {

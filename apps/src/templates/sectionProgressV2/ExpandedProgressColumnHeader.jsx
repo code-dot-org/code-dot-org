@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import {removeExpandedLesson} from '../sectionProgress/sectionProgressRedux';
 
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
 import {getLessonColumnHeaderId} from './LevelDataCell';
@@ -11,11 +13,12 @@ import LevelProgressHeader from './LevelProgressHeader';
 
 import styles from './progress-table-v2.module.scss';
 
-export default function ExpandedProgressColumnHeader({
+function ExpandedProgressColumnHeader({
+  unitId,
+  sectionId,
   lesson,
   removeExpandedLesson,
-  expandedChoiceLevels,
-  toggleExpandedChoiceLevel,
+  expandedChoiceLevelIds,
 }) {
   const expandedLevelHeaderRef = React.useRef();
 
@@ -37,7 +40,7 @@ export default function ExpandedProgressColumnHeader({
 
   // If there are 2 or less levels, we only show the number so that the text fits the cell.
   const headerText =
-    lesson.levels.length < 3 && expandedChoiceLevels.length === 0
+    lesson.levels.length < 3 && expandedChoiceLevelIds.length === 0
       ? lesson.relative_position
       : lesson.title;
 
@@ -57,7 +60,7 @@ export default function ExpandedProgressColumnHeader({
               'ui-test-expanded-progress-column-header-' +
               lesson.relative_position
             }
-            onClick={() => removeExpandedLesson(lesson.id)}
+            onClick={() => removeExpandedLesson(unitId, sectionId, lesson.id)}
             aria-label={headerText}
             aria-expanded={true}
             type="button"
@@ -87,8 +90,7 @@ export default function ExpandedProgressColumnHeader({
             key={level.id}
             lesson={lesson}
             level={level}
-            isLevelExpanded={expandedChoiceLevels.includes(level.id)}
-            toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
+            isLevelExpanded={expandedChoiceLevelIds.includes(level.id)}
           />
         ))}
       </tr>
@@ -96,9 +98,23 @@ export default function ExpandedProgressColumnHeader({
   );
 }
 
+export default connect(
+  state => ({
+    sectionId: state.teacherSections.selectedSectionId,
+    unitId: state.unitSelection.scriptId,
+    expandedChoiceLevelIds: state.sectionProgress.expandedChoiceLevelIds,
+  }),
+  dispatch => ({
+    removeExpandedLesson(unitId, sectionId, lessonId) {
+      dispatch(removeExpandedLesson(unitId, sectionId, lessonId));
+    },
+  })
+)(ExpandedProgressColumnHeader);
+
 ExpandedProgressColumnHeader.propTypes = {
+  unitId: PropTypes.number.isRequired,
+  sectionId: PropTypes.number.isRequired,
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
-  expandedChoiceLevels: PropTypes.arrayOf(PropTypes.string).isRequired,
-  toggleExpandedChoiceLevel: PropTypes.func.isRequired,
+  expandedChoiceLevelIds: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

@@ -1,0 +1,76 @@
+@import 'color';
+
+.infoPanel {
+  white-space: pre-wrap;
+  width: 100%;
+  grid-area: info-panel;
+  color: $white;
+  background-color: $neutral_dark;
+  border: 1px solid $neutral_dark80;
+  overflow: hidden;
+}
+
+// This is adapted from customDropdown.module.scss in the component library.
+// The component library does not have a dropdown that comes from an icon-only button.
+.dropdownContainer {
+  position: absolute;
+  bottom: auto;
+  top: 25px;
+  right: 10px;
+  z-index: 1000;
+  float: left;
+  margin: 0.25rem 0;
+  list-style: none;
+  background-color: $dark_gray;
+  border: 1px solid rgba(0 0 0 / 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
+  box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
+  background-clip: padding-box;
+  padding: 0.25rem 0 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      display: flex;
+      align-items: flex-end;
+      align-self: stretch;
+
+      .dropdownItem {
+        /* Resets every element's appearance */
+        background: none repeat scroll 0 0 transparent;
+        border: none !important;
+        border-radius: 0;
+        border-spacing: 0;
+        list-style: none outside none;
+        margin: 0;
+        padding: 5px;
+        text-decoration: none;
+        text-indent: 0;
+        box-shadow: none;
+
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:focus-visible {
+          outline: 2px solid $light_primary_500;
+          outline-offset: -2px;
+        }
+
+        i {
+          display: inline-block;
+        }
+      }
+
+      label,
+      .dropdownItem {
+        flex-grow: 1;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

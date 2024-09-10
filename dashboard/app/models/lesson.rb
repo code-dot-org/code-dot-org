@@ -87,9 +87,11 @@ class Lesson < ApplicationRecord
   # absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  validates_uniqueness_of :key, scope: :script_id, case_sensitive: true, message: ->(object, _data) do
-    "lesson with key #{object.key.inspect} is already taken within unit #{object.script&.name.inspect}"
-  end
+  validates_uniqueness_of(
+    :key, scope: :script_id, case_sensitive: true, message: lambda do |object, _data|
+      "lesson with key #{object.key.inspect} is already taken within unit #{object.script&.name.inspect}"
+    end
+  )
 
   include CodespanOnlyMarkdownHelper
 
@@ -168,7 +170,7 @@ class Lesson < ApplicationRecord
   end
 
   def has_lesson_pdf?
-    return false if Unit.unit_in_category?('csf', script.name) && ['2017', '2018'].include?(script.version_year)
+    return false if script.csf? && ['2017', '2018'].include?(script.version_year)
 
     !!has_lesson_plan
   end
@@ -298,7 +300,8 @@ class Lesson < ApplicationRecord
         description_teacher: description_teacher,
         unplugged: unplugged,
         lessonEditPath: get_uncached_edit_path,
-        lessonStartUrl: start_url
+        lessonStartUrl: start_url,
+        duration: total_lesson_duration,
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.

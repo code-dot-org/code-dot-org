@@ -1,15 +1,21 @@
+import GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
+
+import AppConfig from '../appConfig';
+import SoundStyle from '../utils/SoundStyle';
 import SoundsPanel from '../views/SoundsPanel';
 import SoundsPanel2 from '../views/SoundsPanel2';
-import GoogleBlockly from 'blockly/core';
-import experiments from '@cdo/apps/util/experiments';
-import color from '@cdo/apps/util/color';
-import SoundStyle from '../utils/SoundStyle';
-import AppConfig from '../appConfig';
 
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
+
+// Default to using SoundsPanel, unless a URL parameter forces the use of
+// the newer SoundsPanel2.
+const useSoundsPanel2 = AppConfig.getValue('sounds-panel-2') === 'true';
 
 /**
  * A custom field that renders the sample previewing and choosing UI, used in
@@ -113,10 +119,7 @@ class FieldSounds extends GoogleBlockly.Field {
       return;
     }
 
-    const CurrentSoundsPanel =
-      AppConfig.getValue('sounds-panel-2') === 'true'
-        ? SoundsPanel2
-        : SoundsPanel;
+    const CurrentSoundsPanel = useSoundsPanel2 ? SoundsPanel2 : SoundsPanel;
 
     ReactDOM.render(
       <CurrentSoundsPanel
@@ -141,18 +144,15 @@ class FieldSounds extends GoogleBlockly.Field {
             this.renderContent();
           });
         }}
-        onSelect={value => {
-          this.setValue(value);
-          if (AppConfig.getValue('sounds-panel-2') !== 'true') {
-            this.hide_();
-          }
-        }}
+        onSelect={value => this.setValue(value)}
       />,
       this.newDiv_
     );
   }
 
   dropdownDispose_() {
+    this.options.cancelPreviews();
+
     this.newDiv_ = null;
     this.showingEditor = false;
   }

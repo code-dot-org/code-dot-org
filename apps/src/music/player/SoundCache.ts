@@ -1,16 +1,26 @@
-import {fetchSignedCookies} from '@cdo/apps/utils';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {LoadFinishedCallback} from '../types';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {fetchSignedCookies} from '@cdo/apps/utils';
+
 import {baseAssetUrlRestricted} from '../constants';
+import {LoadFinishedCallback} from '../types';
 
 class SoundCache {
+  private static instance: SoundCache;
+
+  public static getInstance() {
+    if (!SoundCache.instance) {
+      SoundCache.instance = new SoundCache();
+    }
+    return SoundCache.instance;
+  }
+
   private readonly audioContext: AudioContext;
   private readonly metricsReporter: LabMetricsReporter;
   private audioBuffers: {[id: string]: AudioBuffer};
   private hasLoadedSignedCookies: boolean;
 
-  constructor(
+  private constructor(
     audioContext: AudioContext = new AudioContext(),
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
@@ -38,7 +48,7 @@ class SoundCache {
       updateLoadProgress?: (progress: number) => void;
     } = {}
   ): Promise<void> {
-    const failedSounds: string[] = [];
+    const failedSounds: {path: string; error: string}[] = [];
     const {onLoadFinished, updateLoadProgress} = callbacks;
     const startTime = Date.now();
 
@@ -53,15 +63,19 @@ class SoundCache {
     let loadCounter = 0;
     const loadPromises: Promise<void>[] = [];
 
+    if (paths.length > 0) {
+      this.metricsReporter.incrementCounter('SoundCache.LoadSoundsAttempt');
+    }
+
     for (const path of paths) {
       const loadPromise = this.loadSound(path)
         .then(sound => {
           if (!sound) {
-            failedSounds.push(path);
+            failedSounds.push({path, error: 'Error verifying URL'});
           }
         })
         .catch(err => {
-          failedSounds.push(path);
+          failedSounds.push({path, error: err.message});
         })
         .finally(() => {
           if (updateLoadProgress) {
@@ -82,9 +96,11 @@ class SoundCache {
 
     if (failedSounds.length > 0) {
       this.metricsReporter.logError('Error loading sounds', undefined, {
+        attempted: paths.length,
         count: failedSounds.length,
-        failedSounds: failedSounds.join(','),
+        failedSounds,
       });
+      this.metricsReporter.incrementCounter('SoundCache.LoadSoundsError');
     }
   }
 

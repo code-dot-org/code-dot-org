@@ -1,18 +1,21 @@
 import $ from 'jquery';
 import React from 'react';
+
+import {
+  LegacyIncorrectDialog,
+  LegacyTooFewDialog,
+} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+
+import {TestResults} from '../../constants';
+import Sounds from '../../Sounds';
+import {sourceForLevel} from '../clientState';
+
 import {
   registerGetResult,
   onAnswerChanged,
   resetContainedLevel,
 } from './codeStudioLevels';
-import {sourceForLevel} from '../clientState';
-import Sounds from '../../Sounds';
-import {
-  LegacyIncorrectDialog,
-  LegacyTooFewDialog,
-} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
-import {TestResults} from '../../constants';
 
 var Multi = function (
   levelId,

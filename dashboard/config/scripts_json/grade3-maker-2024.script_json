@@ -4,14 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "grade3-maker",
-    "serialized_at": "2024-05-13 21:59:11 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-09-05 17:01:26 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -516,8 +519,21 @@
       }
     },
     {
-      "key": "c337e6a3-b27b-48e2-a187-f84748d6d340",
+      "key": "561f078c-261e-4b5f-98de-2468a785914c",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "561f078c-261e-4b5f-98de-2468a785914c",
+        "lesson.key": "Cristina - Saving sea turtles with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "key": "c337e6a3-b27b-48e2-a187-f84748d6d340",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended learning"
       },
@@ -626,8 +642,21 @@
       }
     },
     {
-      "key": "27adcef9-1567-4ad7-a228-0049b93a4b4c",
+      "key": "647bb0af-d9c6-4297-beff-e98ea06574c6",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "647bb0af-d9c6-4297-beff-e98ea06574c6",
+        "lesson.key": "Cristina - Rock, Paper, Scissors with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "key": "27adcef9-1567-4ad7-a228-0049b93a4b4c",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended Learning"
       },
@@ -723,8 +752,21 @@
       }
     },
     {
-      "key": "63febeb9-64cb-4f24-a0ae-5c89e9d44aa1",
+      "key": "b397b0f8-dd0c-4edd-add1-eb9dc7bc3a63",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b397b0f8-dd0c-4edd-add1-eb9dc7bc3a63",
+        "lesson.key": "Cristina - Activity picker with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "key": "63febeb9-64cb-4f24-a0ae-5c89e9d44aa1",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended Learning"
       },
@@ -1534,7 +1576,7 @@
       "key": "939b383a-716c-4c45-bd4e-0600c3972a1d",
       "position": 2,
       "properties": {
-        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1-RZPTODOwGros3IUSArOIeAddsMTNyhBciJt8eeRrr8/edit#slide=id.g113143322ab_0_142/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/2/topicNumber/2/quizId/o11JlzU4I0j26kEDh18o\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::",
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1-RZPTODOwGros3IUSArOIeAddsMTNyhBciJt8eeRrr8/edit#slide=id.g113143322ab_0_142/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/2/topicNumber/2/quizId/o11JlzU4I0j26kEDh18o\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 1, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::",
         "duration": "10",
         "name": "Assessment ",
         "progression_name": "Saving sea turtles with micro:bit"
@@ -1554,6 +1596,18 @@
       "seeding_key": {
         "activity_section.key": "70249673-04bb-41ed-8454-2b3705ea71c7",
         "lesson_activity.key": "d583f55b-bbb7-449d-9aee-5624f531d55f"
+      }
+    },
+    {
+      "key": "546a0e32-424e-4826-a46f-ca1cbee17a88",
+      "position": 1,
+      "properties": {
+        "description": "Today we'll use your micro:bit to create mini weather stations, to help gardeners protect their plants. Plants thrive in specific temperature ranges. Some prefer warm, sunny spots, while others do better in cooler, shadier areas. By monitoring the air temperature with your micro:bit, you can ensure your plants are getting the right environment to flourish and keep them happy and healthy!\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1xjTj9JoJj2Dp03s0iJQnMZ1VTHyzJhpXA2_s5f9Lpnw/template/preview\" target=\"_blank\">here.</a>**\n\n<i> Note: Pages 3-5 of the student handout include step by step coding directions and are an optional support to provide students. \n\n**Find the code for this project <a href=\"https://makecode.microbit.org/S74177-81726-90206-68462\" target=\"_blank\">here.</a>**",
+        "name": "Plant Protector"
+      },
+      "seeding_key": {
+        "activity_section.key": "546a0e32-424e-4826-a46f-ca1cbee17a88",
+        "lesson_activity.key": "561f078c-261e-4b5f-98de-2468a785914c"
       }
     },
     {
@@ -1773,7 +1827,7 @@
       "key": "3b38b9e1-9195-420a-96eb-5bc920caa0fc",
       "position": 2,
       "properties": {
-        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1-RZPTODOwGros3IUSArOIeAddsMTNyhBciJt8eeRrr8/edit#slide=id.g113143322ab_0_142/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/2/topicNumber/2/quizId/AxYSHy3ut4zQLkxMZu2M\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1-RZPTODOwGros3IUSArOIeAddsMTNyhBciJt8eeRrr8/edit#slide=id.g113143322ab_0_142/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/2/topicNumber/2/quizId/AxYSHy3ut4zQLkxMZu2M\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 1, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
         "duration": "10",
         "name": "Assessment ",
         "progression_name": "Rock, paper, scissors with micro:bit"
@@ -1793,6 +1847,18 @@
       "seeding_key": {
         "activity_section.key": "1e696ef7-091b-460b-a0a0-1d461e425dc8",
         "lesson_activity.key": "0b7c7490-15d0-4a39-813b-408336e55fe6"
+      }
+    },
+    {
+      "key": "904110ee-d27b-4d2b-8195-c5a9ce5e99e9",
+      "position": 1,
+      "properties": {
+        "description": "Take your micro:bit game skills to the next level with the mystery number guessing game! Code \"if\" statements to check your guess and use variables to store clues. Will you unlock the happy face and victory sound? This activity helps you master events, conditions (if/else), and variables in coding.\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/15441P7GHifYUt9q5r_OIoA0je8sIGfKr10GDLcquOD8/template/preview\" target=\"_blank\">here.</a>**\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/S45914-90251-95525-35036\" target=\"_blank\">here.</a>**",
+        "name": "Shake and Guess"
+      },
+      "seeding_key": {
+        "activity_section.key": "904110ee-d27b-4d2b-8195-c5a9ce5e99e9",
+        "lesson_activity.key": "647bb0af-d9c6-4297-beff-e98ea06574c6"
       }
     },
     {
@@ -1979,7 +2045,7 @@
       "key": "a21f08f9-770a-43ac-be7d-3bc6c9587753",
       "position": 2,
       "properties": {
-        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1-RZPTODOwGros3IUSArOIeAddsMTNyhBciJt8eeRrr8/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/2/topicNumber/2/quizId/fcEgBc4gEnDCwJ9vSazQ\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1-RZPTODOwGros3IUSArOIeAddsMTNyhBciJt8eeRrr8/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/2/topicNumber/2/quizId/fcEgBc4gEnDCwJ9vSazQ\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 1, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
         "duration": "10",
         "name": "Assessment ",
         "progression_name": "Activity picker with micro:bit"
@@ -1999,6 +2065,18 @@
       "seeding_key": {
         "activity_section.key": "fe76939f-d06f-450f-a6e5-8433eebf43b6",
         "lesson_activity.key": "f2247cf2-35a1-4ca7-9917-b07c53a05e75"
+      }
+    },
+    {
+      "key": "502024ad-a25c-4217-adc5-2b06f0ebe7df",
+      "position": 1,
+      "properties": {
+        "description": "Feeling a little down? Or maybe you're having a great day! Your micro:bit can be your personal companion checking in on your mood and giving suggestions to keep those smiles bright. By utilizing your knowledge of events, conditionals (if/then/else), and variables, you can create a helpful tool for everyday use!\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1-AEjKmyu0XbFUwgUJVyMHruU8_Axovya-T8IWFz_gcI/template/preview\" target=\"_blank\">here.</a>**\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/S96335-74640-88654-67402\" target=\"_blank\">here.</a>**",
+        "name": "Mood Tracker"
+      },
+      "seeding_key": {
+        "activity_section.key": "502024ad-a25c-4217-adc5-2b06f0ebe7df",
+        "lesson_activity.key": "b397b0f8-dd0c-4edd-add1-eb9dc7bc3a63"
       }
     },
     {
@@ -2796,6 +2874,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_saving_sea_turtles_grade3"
+        ],
         "progression": "Saving sea turtles with micro:bit"
       },
       "bonus": false,
@@ -3168,6 +3249,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_rock_paper_scissors_grade3"
+        ],
         "progression": "Rock, paper, scissors with micro:bit"
       },
       "bonus": false,
@@ -3415,6 +3499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_d_maker_activity_picker_grade3"
+        ],
         "progression": "Activity picker with micro:bit"
       },
       "bonus": false,
@@ -4120,12 +4207,11 @@
   ],
   "resources": [
     {
-      "name": "**Grade 3 - Maker with micro:bit slides ",
+      "name": "Grade 3 - Maker with micro:bit slides ",
       "url": "https://docs.google.com/presentation/d/1-RZPTODOwGros3IUSArOIeAddsMTNyhBciJt8eeRrr8/template/preview",
       "key": "_grade_3_-_maker_with_micro_bit_slides",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1-RZPTODOwGros3IUSArOIeAddsMTNyhBciJt8eeRrr8/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -4190,6 +4276,39 @@
       },
       "seeding_key": {
         "resource.key": "activity_picker_step_by_step_coding_video"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/grade3-maker-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/grade3-maker-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/grade3-maker-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -4387,6 +4506,18 @@
       },
       "seeding_key": {
         "resource.key": "meet_your_micro_bit_video_guide"
+      }
+    },
+    {
+      "name": "micro:bit MakeCode block cut-out cards",
+      "url": "https://microbit.org/teach/classroom-resources/microbit-makecode-blocks-cutout-cards/",
+      "key": "micro_bit_makecode_block_cut-out_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "micro_bit_makecode_block_cut-out_cards"
       }
     },
     {
@@ -4720,6 +4851,30 @@
     {
       "seeding_key": {
         "resource.key": "_grade_3_-_maker_with_micro_bit_slides",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "grade3-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "micro_bit_makecode_block_cut-out_cards",
         "script.name": "grade3-maker-2024"
       }
     }

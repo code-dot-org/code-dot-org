@@ -1,7 +1,7 @@
 <GamelabJr>
   <config><![CDATA[{
   "game_id": 64,
-  "created_at": "2024-03-14T23:14:35.000Z",
+  "created_at": "2024-03-18T09:30:10.000Z",
   "level_num": "custom",
   "user_id": 18605,
   "properties": {
@@ -48,7 +48,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[]",
+  "audit_log": "[{\"changed_at\":\"2024-06-20 15:57:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -188,13 +188,13 @@
             <field name="ANIMATION">"purple bunny"</field>
           </block>
           <block type="GameDev_spriteType" id="|HPja#(M$I,iWv6uqo9z">
-            <field name="TYPE">"players"</field>
+            <field name="GROUP">"players"</field>
           </block>
           <block type="GameDev_setGroup" id="r(/bJ6r{B;PmuHV[Zzu-">
             <field name="GROUP">"players"</field>
           </block>
           <block type="GameDev_playerJump" id="]L2ft3*Z[or1Mp~`JMr/">
-            <field name="STRENGTH">5</field>
+            <field name="STRENGTH">10</field>
           </block>
           <block type="gamelab_destroy" id="=!A7{5k),KY,nr64i9F)">
             <value name="THIS">
@@ -541,6 +541,17 @@
           <block type="gamelab_randomLocation" id="}5SzoihPpm[13?msEOS%"/>
         </category>
         <category name="Variables" custom="VARIABLE">
+          <block type="gamelab_showVariable" id="$xk1M@1@}Q1GLkLR9[CR">
+            <field name="VAR" id="B8Io3r7Zj2k]pq`PU7vO">counter</field>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker" id="JL/`@lZrQpB7*Va~M8T@">
+                <field name="LOCATION">{"x":200,"y":200}</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_hideVariable" id="aiGO{=yWc24.ke[/x9~o">
+            <field name="VAR" id="B8Io3r7Zj2k]pq`PU7vO">counter</field>
+          </block>
           <block type="math_change" id="V,D~gHzt;MttXFrdB5lI">
             <field name="VAR" id="B8Io3r7Zj2k]pq`PU7vO">counter</field>
             <value name="DELTA">

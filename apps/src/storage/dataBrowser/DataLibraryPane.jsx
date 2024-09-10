@@ -1,19 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {showWarning} from '../redux/data';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import LibraryCategory from './LibraryCategory';
-import SearchBar from '@cdo/apps/templates/SearchBar';
-import {getDatasetInfo} from './dataUtils';
-import msg from '@cdo/locale';
-import PreviewModal from './PreviewModal';
-import {isFirebaseStorage, storageBackend} from '../storage';
-import {WarningType} from '../constants';
-import experiments from '../../util/experiments';
 import _ from 'lodash';
-import style from './data-library-pane.module.scss';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import msg from '@cdo/locale';
+
+import experiments from '../../util/experiments';
+import {WarningType} from '../constants';
+import {showWarning} from '../redux/data';
+import {storageBackend} from '../storage';
+
+import {getDatasetInfo} from './dataUtils';
+import LibraryCategory from './LibraryCategory';
 import {refreshCurrentDataView} from './loadDataForView';
+import PreviewModal from './PreviewModal';
+
+import style from './data-library-pane.module.scss';
 
 class DataLibraryPane extends React.Component {
   static propTypes = {
@@ -35,27 +39,10 @@ class DataLibraryPane extends React.Component {
     }
   };
 
-  importTable = datasetInfo => {
-    // TODO: post-firebase-cleanup, remove this conditional: #56994
-    if (isFirebaseStorage()) {
-      if (datasetInfo.current) {
-        storageBackend().addCurrentTableToProject(
-          datasetInfo.name,
-          () => {},
-          this.onError
-        );
-      } else {
-        storageBackend().copyStaticTable(
-          datasetInfo.name,
-          () => {},
-          this.onError
-        );
-      }
-    } else {
-      storageBackend().addSharedTable(datasetInfo.name);
-      refreshCurrentDataView();
-    }
-  };
+  importTable = datasetInfo =>
+    storageBackend()
+      .addSharedTable(datasetInfo.name)
+      .then(() => refreshCurrentDataView());
 
   search = e => {
     let searchValue = '';
@@ -93,7 +80,7 @@ class DataLibraryPane extends React.Component {
 
   render() {
     const showUnpublishedTables = experiments.isEnabled(
-      experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
+      experiments.SHOW_UNPUBLISHED_DATASET_TABLES
     );
     let categories = (this.props.libraryManifest.categories || []).filter(
       category => showUnpublishedTables || category.published

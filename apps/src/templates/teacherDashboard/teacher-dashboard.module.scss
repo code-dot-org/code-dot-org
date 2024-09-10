@@ -2,6 +2,18 @@
 @import 'font';
 @import 'style-constants';
 
+.pageContainer {
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
 .navContainer {
   background-color: $neutral_dark;
   display: flex;
@@ -59,6 +71,7 @@
 
 .emptyClassroomDiv {
   margin: 24px 64px 82px 64px;
+  text-align: center;
 }
 
 .header {
@@ -85,7 +98,10 @@
       margin-inline-end: 8px;
       color: $light_secondary_500;
 
-      &:hover, :active, :visited, :focus-visible {
+      &:hover,
+      :active,
+      :visited,
+      :focus-visible {
         color: $light_secondary_500;
       }
     }
@@ -134,4 +150,8 @@
 
 .topPadding {
   padding-top: 24px;
+}
+
+.progressHeaderV1 {
+  text-align: left;
 }

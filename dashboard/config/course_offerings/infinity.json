@@ -1,7 +1,6 @@
 {
   "key": "infinity",
   "display_name": "Disney Infinity Play Lab",
-  "category": "hoc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
@@ -16,6 +15,5 @@
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/vQGOfhsb76o/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=vQGOfhsb76o&wmode=transparent",
   "published_date": "2015-08-02 09:00:00 UTC",
-  "self_paced_pl_course_offering_id": 497,
   "self_paced_pl_course_offering_key": "self-paced-pl-k5"
 }

@@ -9,7 +9,7 @@ module Lti
 
         @lti_feedback.user = current_user
         @lti_feedback.locale = I18n.locale
-        @lti_feedback.early_access = Policies::Lti.early_access?
+        @lti_feedback.early_access = false
 
         respond_to do |format|
           if @lti_feedback.save

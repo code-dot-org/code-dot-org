@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Fantasy Football Chatbot",
+    "bubble_choice_description": "Ken is a huge fan sports and loves to play fantasy football. A big moment in fantasy football is the \"draft\", where each person decides the players they want on their team. Ken wants to create a chatbot to help him decide who to draft.",
+    "thumbnail_url": "https://images.code.org/8eff5bc60bbeb706a3f1f900023f48f8-Lesson 7 - Level 11C- Fantasy Football Chatbot.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:30:23.505+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L10\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L10\"},{\"changed_at\":\"2024-05-11 23:29:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 23:30:24 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:30:23.505+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L10\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L10\"},{\"changed_at\":\"2024-05-11 23:29:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 23:30:24 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:35:32 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

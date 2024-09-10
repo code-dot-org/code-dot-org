@@ -1,7 +1,6 @@
 {
   "key": "gamelab",
   "display_name": "gamelab",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
@@ -16,6 +15,5 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

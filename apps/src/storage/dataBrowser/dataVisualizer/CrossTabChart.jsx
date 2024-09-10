@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {CROSS_TAB_CHART_AREA} from './constants';
-import * as color from '../../../util/color';
+
 import fontConstants from '@cdo/apps/fontConstants';
 import msg from '@cdo/locale';
+
+import * as color from '../../../util/color';
+
+import {CROSS_TAB_CHART_AREA} from './constants';
 
 export const MAX_CROSSTAB_COLUMNS = 150;
 export const MAX_CROSSTAB_ROWS = 10000;

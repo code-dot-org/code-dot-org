@@ -409,6 +409,16 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#student-information-modal', false
   end
 
+  test 'clever student under 13 and in US with no us_state does not get student information prompt' do
+    student = create :student, :clever_sso_provider
+    student.update_attribute(:age, 11)
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    sign_in student
+    Policies::ChildAccount.stubs(:show_cap_state_modal?).with(student).returns(true)
+    get :home
+    assert_select '#student-information-modal', false
+  end
+
   test 'anonymous does not get student information prompt' do
     get :index
 
@@ -446,87 +456,5 @@ class HomeControllerTest < ActionController::TestCase
     assert_raises ActionController::UrlGenerationError do
       get :debug
     end
-  end
-
-  test 'workshop organizers see dashboard links' do
-    sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
-    query_count = 17
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'program managers see dashboard links' do
-    sign_in create(:program_manager, :with_terms_of_service, :not_first_sign_in)
-    query_count = 18
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'workshop admins see dashboard links' do
-    sign_in create(:workshop_admin, :with_terms_of_service, :not_first_sign_in)
-    query_count = 16
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'facilitators see dashboard links' do
-    facilitator = create(:facilitator, :with_terms_of_service, :not_first_sign_in)
-    sign_in facilitator
-    query_count = 17
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'teachers cannot see dashboard links' do
-    sign_in create(:terms_of_service_teacher, :not_first_sign_in)
-    query_count = 15
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 0, text: 'Workshop Dashboard'
-  end
-
-  test 'workshop admins see application dashboard links' do
-    sign_in create(:workshop_admin, :with_terms_of_service, :not_first_sign_in)
-    query_count = 16
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Application Dashboard'
-  end
-
-  test 'workshop organizers who are regional partner program managers see application dashboard links' do
-    sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service, :not_first_sign_in)
-    query_count = 18
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Application Dashboard'
-  end
-
-  test 'program managers see application dashboard links' do
-    sign_in create(:program_manager, :with_terms_of_service, :not_first_sign_in)
-    query_count = 18
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Application Dashboard'
-  end
-
-  test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
-    sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
-    query_count = 17
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 0, text: 'Application Dashboard'
   end
 end

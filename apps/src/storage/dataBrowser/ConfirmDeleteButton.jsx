@@ -1,9 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Dialog from '../../templates/Dialog';
-import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import msg from '@cdo/locale';
+
+import Dialog from '../../legacySharedComponents/Dialog';
+
+import dataStyles from './data-styles.module.scss';
 
 class ConfirmDeleteButton extends React.Component {
   static propTypes = {

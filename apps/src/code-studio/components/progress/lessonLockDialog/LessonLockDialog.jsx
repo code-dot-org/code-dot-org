@@ -1,24 +1,26 @@
-import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import $ from 'jquery';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import progressStyles from '../progressStyles';
-import {refetchSectionLockStatus} from '../../../lessonLockRedux';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
-import SectionSelector from '../SectionSelector';
-import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React, {useState, useEffect} from 'react';
+import {connect} from 'react-redux';
+
 import {
   LockStatus,
   useGetLockState,
   saveLockState,
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
-import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import SkeletonRows from '@cdo/apps/code-studio/components/progress/lessonLockDialog/SkeletonRows';
-import _ from 'lodash';
+import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import fontConstants from '@cdo/apps/fontConstants';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {refetchSectionLockStatus} from '../../../lessonLockRedux';
+import progressStyles from '../progressStyles';
+import SectionSelector from '../SectionSelector';
 
 function LessonLockDialog({
   unitId,

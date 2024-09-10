@@ -1,7 +1,9 @@
 import _ from 'lodash';
-import {stub} from 'sinon';
-import {assert, expect} from '../util/reconfiguredChai';
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import * as utils from '@cdo/apps/utils';
+
+import {assert, expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const {
   isSubsequence,
@@ -266,7 +268,7 @@ describe('utils modules', () => {
 
     it('will allow ??? in number validators after being wrapped', function () {
       global.Blockly = {
-        FieldTextInput: {
+        cdoUtils: {
           // fake our validators
           nonnegativeIntegerValidator: function (text) {
             return isNaN(text) ? null : text;
@@ -277,27 +279,15 @@ describe('utils modules', () => {
         },
       };
 
-      assert.equal(
-        Blockly.FieldTextInput.nonnegativeIntegerValidator('123'),
-        123
-      );
-      assert.equal(Blockly.FieldTextInput.numberValidator('123'), 123);
-      assert.equal(
-        Blockly.FieldTextInput.nonnegativeIntegerValidator('???'),
-        null
-      );
-      assert.equal(Blockly.FieldTextInput.numberValidator('???'), null);
+      assert.equal(Blockly.cdoUtils.nonnegativeIntegerValidator('123'), 123);
+      assert.equal(Blockly.cdoUtils.numberValidator('123'), 123);
+      assert.equal(Blockly.cdoUtils.nonnegativeIntegerValidator('???'), null);
+      assert.equal(Blockly.cdoUtils.numberValidator('???'), null);
       wrapNumberValidatorsForLevelBuilder();
-      assert.equal(
-        Blockly.FieldTextInput.nonnegativeIntegerValidator('123'),
-        123
-      );
-      assert.equal(Blockly.FieldTextInput.numberValidator('123'), 123);
-      assert.equal(
-        Blockly.FieldTextInput.nonnegativeIntegerValidator('???'),
-        '???'
-      );
-      assert.equal(Blockly.FieldTextInput.numberValidator('???'), '???');
+      assert.equal(Blockly.cdoUtils.nonnegativeIntegerValidator('123'), 123);
+      assert.equal(Blockly.cdoUtils.numberValidator('123'), 123);
+      assert.equal(Blockly.cdoUtils.nonnegativeIntegerValidator('???'), '???');
+      assert.equal(Blockly.cdoUtils.numberValidator('???'), '???');
     });
   });
 

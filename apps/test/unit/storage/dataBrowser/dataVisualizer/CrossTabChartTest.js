@@ -1,6 +1,6 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import CrossTabChart, {
   createPivotTable,
   getColorForValue,
@@ -20,29 +20,29 @@ describe('CrossTabChart', () => {
 
   describe('getColorForValue', () => {
     it('maps the min value to white', () => {
-      expect(getColorForValue(19, 19, 100)).to.equal('hsl(217, 89%, 100%)');
+      expect(getColorForValue(19, 19, 100)).toBe('hsl(217, 89%, 100%)');
 
-      expect(getColorForValue(4, 4, 25)).to.equal('hsl(217, 89%, 100%)');
+      expect(getColorForValue(4, 4, 25)).toBe('hsl(217, 89%, 100%)');
 
-      expect(getColorForValue(0, 0, 3)).to.equal('hsl(217, 89%, 100%)');
+      expect(getColorForValue(0, 0, 3)).toBe('hsl(217, 89%, 100%)');
     });
 
     it('maps intermediate values proportionately', () => {
-      expect(getColorForValue(50, 0, 100)).to.equal('hsl(217, 89%, 78%)');
+      expect(getColorForValue(50, 0, 100)).toBe('hsl(217, 89%, 78%)');
 
-      expect(getColorForValue(2, 0, 3)).to.equal(
+      expect(getColorForValue(2, 0, 3)).toBe(
         'hsl(217, 89%, 70.66666666666667%)'
       );
 
-      expect(getColorForValue(20, 10, 50)).to.equal('hsl(217, 89%, 89%)');
+      expect(getColorForValue(20, 10, 50)).toBe('hsl(217, 89%, 89%)');
     });
 
     it('maps the max value to hsl(217, 89%, 56%)', () => {
-      expect(getColorForValue(100, 19, 100)).to.equal('hsl(217, 89%, 56%)');
+      expect(getColorForValue(100, 19, 100)).toBe('hsl(217, 89%, 56%)');
 
-      expect(getColorForValue(25, 4, 25)).to.equal('hsl(217, 89%, 56%)');
+      expect(getColorForValue(25, 4, 25)).toBe('hsl(217, 89%, 56%)');
 
-      expect(getColorForValue(3, 0, 3)).to.equal('hsl(217, 89%, 56%)');
+      expect(getColorForValue(3, 0, 3)).toBe('hsl(217, 89%, 56%)');
     });
   });
 
@@ -61,7 +61,7 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 1, 2, 3],
       };
-      expect(createPivotTable(records, [], 'abc', 'value')).to.deep.equal(
+      expect(createPivotTable(records, [], 'abc', 'value')).toEqual(
         expectedPivotData
       );
     });
@@ -82,7 +82,7 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 'a', 'z'],
       };
-      expect(createPivotTable(records, [], 'abc', 'value')).to.deep.equal(
+      expect(createPivotTable(records, [], 'abc', 'value')).toEqual(
         expectedPivotData
       );
     });
@@ -103,9 +103,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 18, 134],
       };
-      expect(
-        createPivotTable(records, ['value'], 'abc', 'value')
-      ).to.deep.equal(expectedPivotData);
+      expect(createPivotTable(records, ['value'], 'abc', 'value')).toEqual(
+        expectedPivotData
+      );
     });
 
     it('sorts rows', () => {
@@ -125,7 +125,7 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 'x', 'y'],
       };
-      expect(createPivotTable(records, [], 'abc', 'value')).to.deep.equal(
+      expect(createPivotTable(records, [], 'abc', 'value')).toEqual(
         expectedPivotData
       );
     });

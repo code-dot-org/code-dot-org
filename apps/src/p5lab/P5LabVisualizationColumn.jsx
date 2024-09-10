@@ -1,35 +1,37 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
-import classNames from 'classnames';
-import GameButtons from '@cdo/apps/templates/GameButtons';
+
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
-import PauseButton from '@cdo/apps/templates/PauseButton';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
-import {APP_HEIGHT, APP_WIDTH} from './constants';
-import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
+import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
+import GameButtons from '@cdo/apps/templates/GameButtons';
+import PauseButton from '@cdo/apps/templates/PauseButton';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import VisualizationOverlay from '@cdo/apps/templates/VisualizationOverlay';
-import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 import TooltipOverlay, {
   coordinatesProvider,
 } from '@cdo/apps/templates/TooltipOverlay';
+import VisualizationOverlay from '@cdo/apps/templates/VisualizationOverlay';
+import {isMobileDevice} from '@cdo/apps/util/browser-detector';
+import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
 import {toggleGridOverlay} from './actions';
+import {APP_HEIGHT, APP_WIDTH} from './constants';
+import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import GridOverlay from './gamelab/GridOverlay';
-import TextConsole from './spritelab/TextConsole';
-import SpritelabInput from './spritelab/SpritelabInput';
 import {
   cancelLocationSelection,
   selectLocation,
   updateLocation,
   isPickingLocation,
 } from './redux/locationPicker';
-import {calculateOffsetCoordinates} from '@cdo/apps/utils';
-import {isMobileDevice} from '@cdo/apps/util/browser-detector';
+import SpritelabInput from './spritelab/SpritelabInput';
+import TextConsole from './spritelab/TextConsole';
 
 const MODAL_Z_INDEX = 1050;
 const LOCATION_PICKER_CANCEL_THRESHOLD_MS = 250;

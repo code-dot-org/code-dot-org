@@ -1,21 +1,25 @@
 /**
  * @overview Component for detailed view of a data table.
  */
-import TableControls from './TableControls';
-import {DataView, WarningType} from '../constants';
-import DataTable from './DataTable';
-import {storageBackend, isFirebaseStorage} from '../storage';
-import FontAwesome from '../../templates/FontAwesome';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {changeView, showWarning, tableType} from '../redux/data';
-import dataStyles from './data-styles.module.scss';
 import {connect} from 'react-redux';
-import TableDescription from './TableDescription';
-import classNames from 'classnames';
-import style from './data-table-view.module.scss';
+
 import msg from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import {DataView, WarningType} from '../constants';
+import {changeView, showWarning, tableType} from '../redux/data';
+import {storageBackend} from '../storage';
+
+import DataTable from './DataTable';
 import {refreshCurrentDataView} from './loadDataForView';
+import TableControls from './TableControls';
+import TableDescription from './TableDescription';
+
+import dataStyles from './data-styles.module.scss';
+import style from './data-table-view.module.scss';
 
 const INITIAL_STATE = {
   showDebugView: false,
@@ -67,16 +71,7 @@ class DataTableView extends React.Component {
   };
 
   exportCsv = () => {
-    // TODO: post-firebase-cleanup, remove this conditional, leave only logic from the else clause #56994
-    if (isFirebaseStorage()) {
-      const isSharedTable =
-        this.props.tableListMap[this.props.tableName] === tableType.SHARED;
-      const tableName = encodeURIComponent(this.props.tableName);
-      const channelId = isSharedTable ? 'shared' : Applab.channelId;
-      location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
-    } else {
-      location.href = storageBackend().exportCsvUrl(this.props.tableName);
-    }
+    location.href = storageBackend().exportCsvUrl(this.props.tableName);
   };
 
   /** Delete all rows, but preserve the columns. */

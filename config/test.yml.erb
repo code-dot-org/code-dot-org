@@ -25,7 +25,6 @@ dashboard_devise_pepper: not a pepper!
 dashboard_secret_key_base: not a secret
 google_maps_api_key: boguskey
 db_writer: 'mysql://root@localhost/'
-firebase_shared_secret: fake_firebase_shared_secret
 <% end -%>
 
 netsim_enable_metrics: true
@@ -48,9 +47,6 @@ sources_s3_directory: sources_test<%=ENV['CIRCLECI'] ? '' : "/#{GitUtils.git_rev
 # the DB.
 disable_s3_image_uploads: true
 
-# provide a unique path for firebase channels data for ci, to avoid conflicts in channel ids.
-firebase_channel_id_suffix: '<%=ci ? "-#{circle_run_identifier}" : ''%>'
-
 ai_proxy_origin:
 
 openai_evaluate_rubric_api_key: 'stub-api-key'
@@ -66,3 +62,6 @@ statsig_api_client_key: !Secret
 statsig_server_secret_key: 'secret-fake-key'
 statsig_api_client_key: 'client-fake-key'
 <% end -%>
+
+# Enables DCDO settings via cookies
+use_cookie_dcdo: true

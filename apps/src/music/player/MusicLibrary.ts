@@ -1,17 +1,98 @@
-import {ResponseValidator} from '@cdo/apps/util/HttpClient';
-import {Key} from '../utils/Notes';
+import cloneDeep from 'lodash/cloneDeep';
+
+import {getCurrentLocale} from '@cdo/apps/lab2/projects/utils';
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient, {
+  ResponseValidator,
+  GetResponse,
+} from '@cdo/apps/util/HttpClient';
+
+import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
-import {getBaseAssetUrl} from '../appConfig';
+import {Key} from '../utils/Notes';
+
+// This value can be modifed each time we know that there is an important new version
+// of the library on S3, to help bypass any caching of an older version.
+const requestVersion = 'launch2024-0';
+
+/**
+ * Loads a sound library JSON file.
+ *
+ * @param libraryName specific library to load. If a library is specified by
+ * URL param, that will take precedence.
+ * @returns the Music Library
+ */
+export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
+  const libraryParameter = AppConfig.getValue('library') || libraryName;
+  const libraryFilename = `music-library-${libraryParameter}`;
+
+  if (AppConfig.getValue('local-library') === 'true') {
+    const localLibrary = require(`@cdo/static/music/${libraryFilename}.json`);
+    return new MusicLibrary(
+      'local-' + libraryName,
+      localLibrary as LibraryJson
+    );
+  } else {
+    const libraryJsonResponsePromise = HttpClient.fetchJson<LibraryJson>(
+      getBaseAssetUrl() +
+        libraryFilename +
+        '.json' +
+        (requestVersion ? `?version=${requestVersion}` : ''),
+      {},
+      LibraryValidator
+    );
+    const promises: Promise<GetResponse<Translations | LibraryJson>>[] = [
+      libraryJsonResponsePromise,
+    ];
+
+    const locale = getCurrentLocale().toLowerCase().replace('-', '_');
+    if (locale !== 'en_us') {
+      const translationPromise = HttpClient.fetchJson<Translations>(
+        getBaseAssetUrl() + libraryFilename + '-loc/' + locale + '.json'
+      );
+      promises.push(translationPromise);
+    }
+
+    // translations will be undefined if locale is en_us.
+    const [libraryJsonResponse, translations] = await Promise.allSettled(
+      promises
+    );
+
+    let libraryJson = {} as LibraryJson;
+    if (libraryJsonResponse.status === 'fulfilled') {
+      libraryJson = libraryJsonResponse.value.value as LibraryJson;
+    }
+
+    // Early return with no translations unless experiment is enabled for now.
+    if (!experiments.isEnabledAllowingQueryString('libraryLocalization')) {
+      return new MusicLibrary(libraryName, libraryJson);
+    }
+
+    if (translations && translations.status === 'fulfilled') {
+      libraryJson = localizeLibrary(
+        libraryJson,
+        translations.value.value as Translations
+      );
+    }
+
+    return new MusicLibrary(libraryName, libraryJson);
+  }
+}
 
 export default class MusicLibrary {
-  private static instance: MusicLibrary;
+  private static instance: MusicLibrary | undefined;
 
-  static getInstance(): MusicLibrary | undefined {
+  static async loadLibrary(libraryName: string): Promise<MusicLibrary> {
+    if (this.instance?.name === libraryName) {
+      return this.instance;
+    }
+
+    this.instance = await loadLibrary(libraryName);
     return this.instance;
   }
 
-  static setCurrent(library: MusicLibrary) {
-    this.instance = library;
+  static getInstance(): MusicLibrary | undefined {
+    return this.instance;
   }
 
   name: string;
@@ -50,11 +131,11 @@ export default class MusicLibrary {
     this.instruments = libraryJson.instruments;
     this.kits = libraryJson.kits;
 
-    if (libraryJson.bpm) {
+    if (libraryJson.bpm !== undefined) {
       this.bpm = libraryJson.bpm;
     }
 
-    if (libraryJson.key) {
+    if (libraryJson.key !== undefined) {
       this.key = libraryJson.key;
     }
 
@@ -71,7 +152,7 @@ export default class MusicLibrary {
     return this.libraryJson.path;
   }
 
-  setCurrentPackId(packId: string) {
+  setCurrentPackId(packId: string | null) {
     this.currentPackId = packId;
   }
 
@@ -245,7 +326,7 @@ export default class MusicLibrary {
     const folder = this.getFolderForFolderId(this.currentPackId);
     // Read key from the folder, or the first sound that has a key if not present on the folder.
     return (
-      folder?.key || folder?.sounds.find(sound => sound.key !== undefined)?.key
+      folder?.key ?? folder?.sounds.find(sound => sound.key !== undefined)?.key
     );
   }
 }
@@ -256,6 +337,41 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
     throw new Error(`Invalid library JSON: ${response}`);
   }
   return libraryJson;
+};
+
+const localizeLibrary = (
+  library: LibraryJson,
+  translations: Translations
+): LibraryJson => {
+  const libraryJsonLocalized = cloneDeep(library);
+  libraryJsonLocalized.instruments.forEach(
+    instrument =>
+      (instrument.name = translations[instrument.id] || instrument.name)
+  );
+
+  libraryJsonLocalized.kits.forEach(kit => {
+    const kitId = kit.id;
+    kit.name = translations[kitId] || kit.name;
+    kit.sounds.forEach(sound => {
+      const soundId = `${kitId}/${sound.src}`;
+      sound.name = translations[soundId] || sound.name;
+    });
+  });
+
+  libraryJsonLocalized.packs.forEach(pack => {
+    const packId = pack.id;
+    if (!pack.skipLocalization) {
+      pack.name = translations[packId] || pack.name;
+    }
+    pack.sounds.forEach(sound => {
+      if (!sound.skipLocalization) {
+        const soundId = `${packId}/${sound.src}`;
+        sound.name = translations[soundId] || sound.name;
+      }
+    });
+  });
+
+  return libraryJsonLocalized;
 };
 
 export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal' | 'preview';
@@ -295,6 +411,13 @@ export interface SoundData {
   sequence?: SampleSequence;
   bpm?: number;
   key?: Key;
+  skipLocalization?: boolean;
+}
+
+export interface ImageAttribution {
+  author: string;
+  color?: string;
+  position?: 'left' | 'right';
 }
 
 export type SoundFolderType = 'sound' | 'kit' | 'instrument';
@@ -311,6 +434,8 @@ export interface SoundFolder {
   sounds: SoundData[];
   bpm?: number;
   key?: Key;
+  imageAttribution?: ImageAttribution;
+  skipLocalization?: boolean;
 }
 
 export type LibraryJson = {
@@ -327,6 +452,10 @@ export type LibraryJson = {
   packs: SoundFolder[];
 };
 
-interface Sounds {
-  [index: string]: [string];
+export interface Sounds {
+  [category: string]: string[];
+}
+
+interface Translations {
+  [key: string]: string;
 }

@@ -2,14 +2,15 @@
  * Teacher Attendance Report
  */
 import PropTypes from 'prop-types';
-
 import React from 'react';
-import {connect} from 'react-redux';
-import ReportTable from './report_table';
-import {PermissionPropType} from '../permission';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {connect} from 'react-redux';
+
+import Spinner from '../../../../sharedComponents/Spinner';
+import {PermissionPropType} from '../permission';
+
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
-import Spinner from '../../components/spinner';
+import ReportTable from './report_table';
 
 const QUERY_URL = '/api/v1/pd/teacher_attendance_report';
 

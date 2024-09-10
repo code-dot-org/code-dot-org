@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2024-04-23T19:52:44.000Z",
   "level_num": "custom",
@@ -45,8 +46,8 @@
     ],
     "name_suffix": "_grade5",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**How do I pass this level?**\\n\\n* Change the size of at least one dancer.\\n\\n*This level ends after 6 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/590657921c3cd5e03debd0273c41aad2/Dance_2019_07.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"**Optional Challenge**\\n\\n* Experiment by changing other properties such as width or rotation.\",\"hint_id\":\"challenges\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/686340be574acb903389ebd35c04783b/Dance_2019_07.mp3\"}]",
-    "default_song": "sorry_justinbieber",
-    "long_instructions": "Every dancer has a set of _properties_ that controls what it looks like.\r\n\r\nUse <xml><block type=\"Dancelab_setPropEach\" block-text=\"the set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"VAL\">???</title></block></xml> under a green event block to make dancers appear closer or farther away.",
+    "default_song": "introtoshamstep_47SOUL",
+    "long_instructions": "\r\nEvery dancer has a set of _properties_ that controls what it looks like.\r\n\r\nUse <xml><block type=\"Dancelab_setPropEach\" block-text=\"the set block\"><title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;\">???</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"VAL\">???</title></block></xml> under a green event block to make dancers appear closer or farther away.",
     "short_instructions": "Change the size of the group of backup dancers.",
     "video_key": "hoc_dance_properties_2019",
     "encrypted": "false",
@@ -64,9 +65,8 @@
     "validation_enabled": "false",
     "hide_pause_button": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-23T19:52:44.211+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_07_maker\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_07_maker\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:52:44.211+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_07_maker\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_07_maker\"},{\"changed_at\":\"2024-06-25 18:50:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_song\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-25 18:51:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-25 18:51:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-26 17:50:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "events": 2

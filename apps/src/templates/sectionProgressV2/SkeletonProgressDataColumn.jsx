@@ -1,13 +1,57 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
 import styles from './progress-table-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
-export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
+const getId = (student, lesson) => student.id + '.' + lesson.id;
+
+const skeletonContent = (
+  <div
+    className={classNames(
+      styles.lessonSkeletonCell,
+      skeletonizeContent.skeletonizeContent
+    )}
+  />
+);
+
+const getSkeletonCell = (id, key = undefined) => (
+  <div
+    className={classNames(styles.gridBox, styles.gridBoxLesson)}
+    key={key}
+    data-testid={'lesson-skeleton-cell-' + id}
+  >
+    {skeletonContent}
+  </div>
+);
+
+const getMetadataExpandedSkeletonCell = id => (
+  <div className={styles.lessonDataCellExpanded} key={id}>
+    {getSkeletonCell(id)}
+    <div
+      className={classNames(styles.gridBox, styles.gridBoxMetadata)}
+      data-testid={'lesson-skeleton-cell-' + id + '-time-spent'}
+    >
+      {skeletonContent}
+    </div>
+    <div
+      className={classNames(styles.gridBox, styles.gridBoxMetadata)}
+      data-testid={'lesson-skeleton-cell-' + id + '-last-updated'}
+    >
+      {skeletonContent}
+    </div>
+  </div>
+);
+
+function SkeletonProgressDataColumn({
+  lesson,
+  sortedStudents,
+  expandedMetadataStudentIds,
+}) {
   return (
     <div className={styles.lessonColumn}>
       <LessonProgressColumnHeader
@@ -15,19 +59,11 @@ export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
         addExpandedLesson={() => {}}
       />
       <div className={styles.lessonDataColumn}>
-        {sortedStudents.map(student => (
-          <div
-            className={classNames(styles.gridBox, styles.gridBoxLesson)}
-            key={student.id + '.' + lesson.id}
-          >
-            <div
-              className={classNames(
-                styles.lessonSkeletonCell,
-                skeletonizeContent.skeletonizeContent
-              )}
-            />
-          </div>
-        ))}
+        {sortedStudents.map(student =>
+          expandedMetadataStudentIds.includes(student.id)
+            ? getMetadataExpandedSkeletonCell(getId(student, lesson))
+            : getSkeletonCell(getId(student, lesson), getId(student, lesson))
+        )}
       </div>
     </div>
   );
@@ -36,4 +72,9 @@ export default function SkeletonProgressDataColumn({lesson, sortedStudents}) {
 SkeletonProgressDataColumn.propTypes = {
   sortedStudents: PropTypes.array,
   lesson: PropTypes.object.isRequired,
+  expandedMetadataStudentIds: PropTypes.array.isRequired,
 };
+
+export default connect(state => ({
+  expandedMetadataStudentIds: state.sectionProgress.expandedMetadataStudentIds,
+}))(SkeletonProgressDataColumn);

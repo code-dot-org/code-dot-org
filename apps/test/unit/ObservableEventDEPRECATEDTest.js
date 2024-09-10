@@ -1,4 +1,4 @@
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ObservableEventDEPRECATED', function () {
   var ObservableEventDEPRECATED = require('@cdo/apps/ObservableEventDEPRECATED');

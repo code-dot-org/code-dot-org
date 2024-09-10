@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-17T22:34:40.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "## Lessons Learned\r\n\r\nWhat can we learn by testing our design in front of our intended users?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20662,
+    "name_suffix": "_2024",
+    "allow_multiple_attempts": "false",
+    "teacher_markdown": "Responses should reflect an understanding that user testing is essential for creating solutions that are genuinely useful and user-friendly. Students should mention how testing with intended users ensures the product meets real-world needs and usability standards.\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:40.349+00:00\",\"changed\":[\"cloned from \\\"CV_L14_Reflection_1\\\"\"],\"cloned_from\":\"CV_L14_Reflection_1\"},{\"changed_at\":\"2024-07-04 18:43:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

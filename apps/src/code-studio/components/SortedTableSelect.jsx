@@ -1,16 +1,17 @@
-import React from 'react';
+import {orderBy} from 'lodash';
 import PropTypes from 'prop-types';
+import React from 'react';
 import * as Table from 'reactabular-table';
-import {Heading1} from '@cdo/apps/lib/ui/Headings';
-import color from '@cdo/apps/util/color';
+import * as sort from 'sortabular';
+
+import {Heading1} from '@cdo/apps/legacySharedComponents/Headings';
 import {
   tableLayoutStyles,
   sortableOptions,
 } from '@cdo/apps/templates/tables/tableConstants';
-import i18n from '@cdo/locale';
-import {orderBy} from 'lodash';
-import * as sort from 'sortabular';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const PADDING = 20;
 const TABLE_WIDTH = 300;

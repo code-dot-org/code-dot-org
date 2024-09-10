@@ -1,16 +1,18 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {lessonHasLevels} from '../progress/progressHelpers';
+import {addExpandedLesson} from '../sectionProgress/sectionProgressRedux';
 
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
 
 import styles from './progress-table-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const getUninteractiveLessonColumnHeader = (lesson, allLocked) => {
   return (
@@ -42,6 +44,7 @@ const getSkeletonLessonHeader = lessonId => (
     key={lessonId}
   >
     <div
+      data-testid={'skeletonize-content'}
       className={classNames(
         styles.lessonSkeletonHeaderCell,
         skeletonizeContent.skeletonizeContent
@@ -50,7 +53,9 @@ const getSkeletonLessonHeader = lessonId => (
   </div>
 );
 
-export default function LessonProgressColumnHeader({
+function LessonProgressColumnHeader({
+  scriptId,
+  sectionId,
   addExpandedLesson,
   lesson,
   allLocked,
@@ -67,7 +72,7 @@ export default function LessonProgressColumnHeader({
       className={styles.lessonHeaderCellInteractive}
       data-tip
       data-for={getTooltipId(lesson)}
-      onClick={() => addExpandedLesson(lesson)}
+      onClick={() => addExpandedLesson(scriptId, sectionId, lesson)}
       aria-label={lesson.title}
       aria-expanded={false}
       type="button"
@@ -84,7 +89,23 @@ export default function LessonProgressColumnHeader({
   );
 }
 
+export default connect(
+  state => ({
+    sectionId: state.teacherSections.selectedSectionId,
+    scriptId: state.unitSelection.scriptId,
+  }),
+  dispatch => ({
+    addExpandedLesson(scriptId, sectionId, lessonId) {
+      dispatch(addExpandedLesson(scriptId, sectionId, lessonId));
+    },
+  })
+)(LessonProgressColumnHeader);
+
+export const UnconnectedLessonProgressColumnHeader = LessonProgressColumnHeader;
+
 LessonProgressColumnHeader.propTypes = {
+  sectionId: PropTypes.number,
+  scriptId: PropTypes.number,
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
   allLocked: PropTypes.bool,

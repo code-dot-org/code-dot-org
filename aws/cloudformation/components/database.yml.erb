@@ -1,5 +1,5 @@
 <%
-  PRODUCTION_DB_CLUSTER_ID = 'production-aurora-cluster'.freeze
+  PRODUCTION_DB_CLUSTER_ID = 'autoscale-prod-cluster'.freeze
   # If an adhoc environment is using MySQL server installed on the app server EC2 Instance instead of an AWS RDS Cluster
   # use default credentials and hostname.
   MYSQL_DAEMON_DEFAULT_CREDENTIALS = '{"username":"root", "password":""}'.freeze
@@ -114,53 +114,6 @@
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
 # working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
 
-  # Aurora Engine 2.x (MySQL 5.x) ParameterGroups
-  AuroraClusterDBParameters:
-    Type: AWS::RDS::DBClusterParameterGroup
-    Properties:
-      Description: !Sub "Aurora Cluster DB Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters:
-        # BEGIN: Static configuration settings.
-        # WARNING - Changing these settings triggers restart of each database instance in the cluster during Stack Update.
-
-        binlog_format: 'ROW'
-        gtid-mode: 'ON'
-        enforce_gtid_consistency: 'ON'
-
-        innodb_autoinc_lock_mode: 2
-        #END: Static configuration settings.
-
-        # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
-        slow_query_log: 1
-        innodb_monitor_enable: all
-        tx_isolation: READ-COMMITTED
-
-        # Prevent a slow query from degrading instance or cluster performance.
-        # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
-        max_execution_time: 30000
-
-        # Favor write performance over durability. In the event of a database server crash
-        # we could lose roughly 1 second of transactions.
-        # https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit
-        innodb_flush_log_at_trx_commit: 1
-        # END: Dynamic configuration settings.
-  AuroraWriterDBParameters:
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Description: !Sub "Aurora Writer DB Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters:
-        # BEGIN: Static configuration settings. Changing these settings will trigger a restart of each database instance.
-
-        # END: Static configuration settings.
-
-        # BEGIN: Dynamic configuration settings. Changing these settings does NOT require nor trigger restart of instances.
-
-        # Prevent a slow query from degrading instance or cluster performance.
-        # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time
-        max_execution_time: 30000
-        # END: Dynamic configuration settings.
   Aurora3ClusterDBParameters:
     Type: AWS::RDS::DBClusterParameterGroup
     Properties:
@@ -173,6 +126,13 @@
         binlog_format: 'ROW'
         gtid-mode: 'ON'
         enforce_gtid_consistency: 'ON'
+
+        # Enable Enhanced Binary Logging to support Zero-ETL Integration with Redshift
+        aurora_enhanced_binlog: 1
+        binlog_backup: 0
+        binlog_replication_globaldb: 0
+        binlog_row_image: full # This is actually a dynamic setting, but let's keep all these settings together.
+        binlog_row_metadata: full # Also dynamic.
 
         innodb_autoinc_lock_mode: 2
         #END: Static configuration settings.
@@ -262,10 +222,10 @@
         # Send reporting/analytics queries to the reader database instances, but use the database connection
         # initialization to configure reporting sessions so that queries do not negatively impact cluster performance
         # and to permit long running queries.
-        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
+        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION transaction_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
         # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
-        # exceed 5% of the total database connection capacity of a reader instance.
-        MaxConnectionsPercent: 5
+        # exceed 10% of the total database connection capacity of a reader instance.
+        MaxConnectionsPercent: 10
   WriterSQLUser:
     Type: Custom::SQLUser
 <%  unless rack_env?(:production)%>
@@ -325,12 +285,12 @@
     Type: AWS::RDS::DBCluster
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
-      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
+      DBClusterParameterGroupName: !Ref Aurora3ClusterDBParameters
       Engine: aurora-mysql
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
       # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
-      EngineVersion: 5.7.mysql_aurora.2.11.1
+      EngineVersion: 8.0.mysql_aurora.3.05.2
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
       EnableIAMDatabaseAuthentication: true
@@ -353,7 +313,7 @@
       DBInstanceClass: !Ref DBInstanceType
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
-      DBParameterGroupName: default.aurora-mysql5.7 #Explicitly stop setting a custom Instance ParameterGroup.
+      DBParameterGroupName: default.aurora-mysql8.0 #Explicitly stop setting a custom Instance ParameterGroup.
 <%      if rack_env?(:production) || rack_env?(:test) -%>
       EnablePerformanceInsights: true
       PerformanceInsightsRetentionPeriod: <%= rack_env?(:production) ? 465 : 7 %>

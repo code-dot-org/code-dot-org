@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-21T15:14:12.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection:",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "##Summary of Computer Vision\r\n\r\n<img src=\"https://images.code.org/96fa84754511c23238bc7c1225183f6f-image-1716306918280.png\" alt=\"stadium with facial recogition demo from pixel activity\" width=\"390px\" style=\"border-radius:10px; float:right; margin: 0px 0 80px 40px;\">\r\n\r\n#### In this introductory lesson on computer vision, students explore the fundamentals of how computers interpret visual data. They learn how computers process and analyze images to extract meaningful information, a key component of artificial intelligence.\r\n\r\n## Insight on the Pixel Activity\r\n#### So far, you have learned about computer vision and the Pixel activity gave you hands-on experience with three different computer vision techniques: heat map, segmentation, and facial recognition. These exercises helped you understand how these techniques are applied to real-world scenarios, such as detecting objects, analyzing movements, and recognizing faces.\r\n\r\n<div style=\"clear:both;\"></div>\r\n\r\n---\r\n\r\n## Everyday Life Applications\r\n\r\n\r\n> **Reflect:** How can you connect the computer vision techniques explored in the \"Search for Pixel\" activity to everyday life experiences your students might encounter? \r\nWhat examples can you share to make these concepts more relatable and engaging for them?\r\n\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18982,
+    "name_suffix": "_2023",
+    "encrypted_solution": "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\n",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-21T15:14:12.800+00:00\",\"changed\":[\"cloned from \\\"U1L12 CFU Copyright_2023\\\"\"],\"cloned_from\":\"U1L12 CFU Copyright_2023\"},{\"changed_at\":\"2024-05-21 15:57:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-05-21 15:59:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-05-21 16:01:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-05-21 16:03:52 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-05-21 16:05:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-05-29 15:35:39 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -10,33 +10,18 @@ class Queries::ChildAccount
   def self.expired_accounts(scope: User.all, expiration_date: 7.days.ago)
     # Filter for accounts which don't have parent permission then filter for
     # accounts which have been locked out before the expiration_date
-    scope.
-      where(
-        "JSON_EXTRACT(properties, '$.child_account_compliance_state') != ?",
-        Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
-      ).
-      where(
-        "CAST(properties->>'$.child_account_compliance_lock_out_date' AS DATETIME) <= ?",
-        expiration_date
-      )
+    scope.where(
+      cap_status: Policies::ChildAccount::ComplianceState::LOCKED_OUT,
+      cap_status_date: ..expiration_date
+    )
   end
 
-  # Retrieve the most recent ParentalPermissionRequest for a user
-  def self.latest_permission_request(user)
-    ParentalPermissionRequest.where(user: user).order(updated_at: :desc).limit(1).first
-  end
-
-  # Find the US state that the student most likely resides in, based on the state
-  # associated with their most recent teacher's school.
-  def self.teacher_us_state(user)
-    return nil unless user.student?
-
-    latest_student_section = user.sections_as_student.order(created_at: :desc).first
-    return nil unless latest_student_section
-
-    latest_teacher_school_info = UserSchoolInfo.where(user_id: latest_student_section.user_id).order(start_date: :desc).first
-    return nil unless latest_teacher_school_info
-
-    latest_teacher_school_info.school_info&.state
+  # Selects users who are currently non-compliant with the Child Account Policy.
+  # @param scope {User::ActiveRecord_Relation} The range of users to query.
+  # @return {User::ActiveRecord_Relation} The CAP non-compliant users.
+  def self.cap_affected(scope: User.all)
+    scope.where.not(
+      cap_status: [Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, nil],
+    )
   end
 end

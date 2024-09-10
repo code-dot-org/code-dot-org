@@ -7,6 +7,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {getCodeBlocks} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
@@ -23,7 +24,6 @@ import {trySetLocalStorage} from '@cdo/apps/utils';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
-import trackEvent from '../../util/trackEvent';
 import craftMsg from '../locale';
 
 var Provider = require('react-redux').Provider;
@@ -351,7 +351,6 @@ Craft.getCurrentCharacter = function () {
 };
 
 Craft.setCurrentCharacter = function (name = DEFAULT_CHARACTER) {
-  trackEvent('Minecraft', 'ChoseCharacter', name);
   Craft.clearPlayerState();
   trySetLocalStorage('craftSelectedPlayer', name);
   Craft.updateUIForCharacter(name);
@@ -582,7 +581,7 @@ Craft.executeUserCode = function () {
   };
 
   // Run user code.
-  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+  let codeBlocks = getCodeBlocks();
   code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   interpreter = CustomMarshalingInterpreter.evalWith(
     code,

@@ -1,6 +1,6 @@
-import SoundEffects from './soundEffects';
-
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import SoundEffects from './soundEffects';
 
 const DEFAULT_DELAY_TIME = 60 / 120 / 2;
 

@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Noticing some Bias?\r\n\r\nJessie was testing a chatbot and noticed that some of the responses seemed bias. For example, when asking about famous scientists, the chatbot seemed to only respond with white men even though there's a diversity of renowned scientists. This is a situation that Retrieval can help with by adding information about diverse figured to the chatbot.\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot for 3-5 examples of people famous in certain areas, and notice if a response includes a limited set of examples\r\n    * For example: \"Who are 5 famous scientists\" or \"Who are 3 astronauts who have gone to space\"\r\n2) Search for other famous people in these areas from more diverse backgrounds\r\n3) Find a description of these people and their accomplishments, then add them to Retrieval\r\n    * For example: looking for descriptions on Wikipedia\r\n4) Press the `Update`(#7435b2) button to save your work!\r\n5) Ask the chatbot the same questions and verify that the answers are updated to include the examples you've provided.",
+    "long_instructions": "## Noticing some Bias?\r\n\r\nJessie was testing a chatbot and noticed that some of the responses seemed bias. For example, when asking about famous scientists, the chatbot seemed to only respond with white men even though there's a diversity of renowned scientists. This is a situation that Retrieval can help with by adding information about diverse figured to the chatbot.\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot for 3-5 examples of people famous in certain areas, and notice if a response includes a limited set of examples\r\n    * For example: \"Who are 5 famous scientists\" or \"Who are 3 astronauts who have gone to space\"\r\n2) Search for other famous people in these areas from more diverse backgrounds\r\n3) Find a description of these people and their accomplishments, then add them to Retrieval\r\n    * For example: looking for descriptions on Wikipedia\r\n4) Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button to save your work!\r\n5) Ask the chatbot the same questions and verify that the answers are updated to include the examples you've provided.",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -45,6 +45,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:26:18.912+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4\"},{\"changed_at\":\"2024-05-09 04:32:00 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:26:18.912+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4\"},{\"changed_at\":\"2024-05-09 04:32:00 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:40:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

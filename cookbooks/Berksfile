@@ -7,7 +7,7 @@ cookbook 'ark'
 cookbook 'chef-client'
 cookbook 'ntp'
 cookbook 'seven_zip'
-cookbook 'chef_client_updater', '>= 3.3.2' # 3.3.2 fixed https://github.com/chef-cookbooks/chef_client_updater/pull/93
+cookbook 'chef_client_updater', '>= 3.12.0' # 3.12.0 fixed deprecation warnings about unified_mode for Chef 18
 
 # required for cdo-nginx. See that cookbook's Berksfile for details.
 cookbook 'ssl_certificate', github: 'code-dot-org/ssl_certificate-cookbook', branch: 'add_provider-issue_45'

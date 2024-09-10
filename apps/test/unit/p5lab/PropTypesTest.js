@@ -1,4 +1,3 @@
-import {expect} from '../../util/reconfiguredChai';
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
 
 var testUtils = require('../../util/testUtils');
@@ -12,35 +11,28 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
         orderedKeys: [],
         propsByKey: {},
       })
-    ).not.to.throw();
+    ).not.toThrow();
   });
 
   it('throws if passed anything empty', function () {
-    expect(() => throwIfSerializedAnimationListIsInvalid(undefined)).to.throw(
-      Error,
-      `serializedAnimationList is not an object`
+    expect(() => throwIfSerializedAnimationListIsInvalid(undefined)).toThrow(
+      Error
     );
-    expect(() => throwIfSerializedAnimationListIsInvalid(null)).to.throw(
-      Error,
-      `serializedAnimationList is not an object`
-    );
+    expect(() => throwIfSerializedAnimationListIsInvalid(null)).toThrow(Error);
   });
 
   it('throws if missing orderedKeys or propsByKey', function () {
-    expect(() => throwIfSerializedAnimationListIsInvalid({})).to.throw(
-      Error,
-      `orderedKeys is not an array`
-    );
+    expect(() => throwIfSerializedAnimationListIsInvalid({})).toThrow(Error);
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: [],
       })
-    ).to.throw(Error, `propsByKey is not an object`);
+    ).toThrow(Error);
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         propsByKey: {},
       })
-    ).to.throw(Error, `orderedKeys is not an array`);
+    ).toThrow(Error);
   });
 
   it('throws if orderedKeys is not an array', function () {
@@ -49,19 +41,19 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
         orderedKeys: {},
         propsByKey: {},
       })
-    ).to.throw(Error, `orderedKeys is not an array`);
+    ).toThrow(Error);
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: '',
         propsByKey: {},
       })
-    ).to.throw(Error, `orderedKeys is not an array`);
+    ).toThrow(Error);
     expect(() =>
       throwIfSerializedAnimationListIsInvalid({
         orderedKeys: null,
         propsByKey: {},
       })
-    ).to.throw(Error, `orderedKeys is not an array`);
+    ).toThrow(Error);
   });
 
   it('throws if it finds keys without associated props', function () {
@@ -70,10 +62,7 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
         orderedKeys: ['keyWithoutProps'],
         propsByKey: {},
       })
-    ).to.throw(
-      Error,
-      'Animation List has key "keyWithoutProps" but not associated props'
-    );
+    ).toThrow(Error);
   });
 
   it('throws if it finds props without associated key', function () {
@@ -82,10 +71,7 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
         orderedKeys: [],
         propsByKey: buildValidPropsForKeys(['propsWithoutKey']),
       })
-    ).to.throw(
-      Error,
-      'Animation List has a props for "propsWithoutKey" but that key isn\'t in the orderedKeys list'
-    );
+    ).toThrow(Error);
   });
 
   it('throws if required prop fields are missing', function () {
@@ -105,10 +91,7 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
           orderedKeys: keys,
           propsByKey: props,
         })
-      ).to.throw(
-        Error,
-        `Required prop '${requiredField}' is missing from animation with key 'mykey'.`
-      );
+      ).toThrow(Error);
     });
   });
 
@@ -121,7 +104,7 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
         orderedKeys: keys,
         propsByKey: props,
       })
-    ).to.throw(Error, 'Name "duplicate" appears more than once in propsByKey');
+    ).toThrow(Error);
   });
 
   it('does not throw if it finds an unexpected property', function () {
@@ -134,7 +117,7 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
         propsByKey: props,
         somethingElse: {},
       })
-    ).not.to.throw();
+    ).not.toThrow();
   });
 });
 

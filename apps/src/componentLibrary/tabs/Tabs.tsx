@@ -20,11 +20,13 @@ export interface TabsProps {
   name: string;
   /** Type of Tabs */
   type?: 'primary' | 'secondary';
+  /** Mode (color) of Tabs */
+  mode?: 'light' | 'dark';
   /** Size of Tabs */
   size?: ComponentSizeXSToL;
   /** Custom className for Tabs container */
   tabsContainerClassName?: string;
-  /** Custom className for Tab Panels container */
+  /** Custom id for Tabs container */
   tabsContainerId?: string;
   /** Custom className for Tab Panels container */
   tabPanelsContainerClassName?: string;
@@ -55,6 +57,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   tabPanelsContainerId,
   tabPanelsContainerClassName,
   type = 'primary',
+  mode = 'light',
   size = 'm',
 }) => {
   const [selectedTabValue, setSelectedValue] = useState(
@@ -79,6 +82,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
           moduleStyles.tabs,
           moduleStyles[`tabs-${size}`],
           moduleStyles[`tabs-${type}`],
+          moduleStyles[`tabs-${mode}`],
           tabsContainerClassName
         )}
         id={tabsContainerId}

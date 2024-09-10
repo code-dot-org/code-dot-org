@@ -1,0 +1,25 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2024-06-12T21:32:11.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "long_instructions": "Regular text\r\n\r\n<code style=\"background-color: #ececec; color: black; font-weight: bold;\">keywords</code>\r\n\r\n✅ **TO DOs**\r\n\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>Tip Callout:</strong> Things that might be important to highlight\r\n</div>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 Pseudocode Help</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    \t<p>The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> that is returned from the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">toString()</code> method should be formatted as:</p>\r\n        <pre style=\"background-color: #333333; color: white;\">\r\nTemperature: 92.5\r\n\t  </pre>\r\n    </div>\r\n</details>\r\n\r\n# ***Bold Text***  **Bold Text** *Bold Text* Bold Text\r\n## ***Bold Text***  **Bold Text** *Bold Text* Bold Text\r\n### ***Bold Text***  **Bold Text** *Bold Text* Bold Text\r\n",
+    "display_name": "toString() Sample",
+    "thumbnail_url": "https://images.code.org/3efc3ed49d56f8ddd3c2b4ba9de92204-art (1).png",
+    "encrypted_examples": [
+
+    ],
+    "bubble_choice_description": "Testing a description"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-12 21:38:54 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-12 21:43:54 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 02:23:39 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Javalab>

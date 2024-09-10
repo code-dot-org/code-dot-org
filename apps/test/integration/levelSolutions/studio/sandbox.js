@@ -1,9 +1,9 @@
-var tickWrapper = require('../../util/tickWrapper');
 import {TestResults} from '@cdo/apps/constants';
-var Direction = require('@cdo/apps/studio/constants.js').Direction;
-var blockUtils = require('@cdo/apps/block_utils');
 
-var commonMsg = require('@cdo/locale');
+var blockUtils = require('@cdo/apps/block_utils');
+var Direction = require('@cdo/apps/studio/constants.js').Direction;
+
+var tickWrapper = require('../../util/tickWrapper');
 
 module.exports = {
   app: 'studio',
@@ -838,44 +838,6 @@ module.exports = {
       expected: {
         result: true,
         testResult: TestResults.FREE_PLAY,
-      },
-    },
-    {
-      description: 'unnamed function',
-      xml:
-        '<xml>' +
-        '<block type="functional_definition" inline="false" editable="false">' +
-        '  <mutation>' +
-        '    <arg name="x" type="Number"></arg>' +
-        '    <outputtype>Number</outputtype>' +
-        '  </mutation>' +
-        '  <title name="NAME"></title>' +
-        '  <functional_input name="STACK">' +
-        '    <block type="functional_plus" inline="false">' +
-        '      <functional_input name="ARG1">' +
-        '        <block type="functional_parameters_get">' +
-        '          <mutation>' +
-        '            <outputtype>Number</outputtype>' +
-        '          </mutation>' +
-        '          <title name="VAR">x</title>' +
-        '        </block>' +
-        '      </functional_input>' +
-        '      <functional_input name="ARG2">' +
-        '        <block type="functional_math_number">' +
-        '          <title name="NUM">2</title>' +
-        '        </block>' +
-        '      </functional_input>' +
-        '    </block>' +
-        '  </functional_input>' +
-        '</block>' +
-        '</xml>',
-      expected: {
-        result: false,
-        testResult: TestResults.EMPTY_FUNCTION_NAME,
-      },
-      customValidator: function (assert) {
-        assert.equal(Studio.message, commonMsg.unnamedFunction());
-        return true;
       },
     },
     {

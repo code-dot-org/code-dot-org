@@ -1,0 +1,12 @@
+name 'cv-studentsurvey-premodule'
+title 'Computer Vision: Pre-Module Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'cv-studentsurvey-premodule-preamble'
+level 'cv-studentsurvey-premodule-q1'
+level 'cv-studentsurvey-premodule-q2'
+level 'cv-studentsurvey-premodule-q3'
+level 'cv-studentsurvey-premodule-q4'
+level 'cv-studentsurvey-premodule-q5'

@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-retrieval-templateC"
+    "project_template_level_name": "gen-ai-customizing-retrieval-templateC",
+    "display_name": "Self-Help and Wellness",
+    "bubble_choice_description": "Have you ever helped someone get over the hiccups, or cheer up when they’re feeling down, or relieve a body ache? Let's create a chatbot that gives people friendly advice on how to get over common ailments (like hiccups or body aches or toothaches).",
+    "thumbnail_url": "https://images.code.org/b35a73f301a1dce3c0883037ddae09f2-Lesson 6 - Level 9C - Self-Help and Wellness.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-08T22:47:56.114+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L9C\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L9C\"},{\"changed_at\":\"2024-05-08 22:49:58 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-08T22:47:56.114+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L9C\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L9C\"},{\"changed_at\":\"2024-05-08 22:49:58 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:38:02 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

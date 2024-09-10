@@ -1,7 +1,4 @@
-import {SoundLoadCallbacks} from '../types';
-import SoundCache from './SoundCache';
 import {
-  Clock,
   Filter,
   GrainPlayer,
   PingPongDelay,
@@ -12,8 +9,17 @@ import {
   getContext,
   start,
 } from 'tone';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
+import {Source, SourceOptions} from 'tone/build/esm/source/Source';
+
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
+import {SoundLoadCallbacks} from '../types';
+
+import {Effects} from './interfaces/Effects';
+import SoundCache from './SoundCache';
 import {
   AudioPlayer,
   InstrumentData,
@@ -21,10 +27,6 @@ import {
   SampleEvent,
   SamplerSequence,
 } from './types';
-import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
-import {Source, SourceOptions} from 'tone/build/esm/source/Source';
-import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
-import {Effects} from './interfaces/Effects';
 import {generateEffectsKeyString} from './utils';
 
 const EMPTY_EFFECTS_KEY = '';
@@ -47,11 +49,11 @@ class ToneJSPlayer implements AudioPlayer {
     [event in PlayerEvent]?: ((payload?: string) => void)[];
   };
   private loadingInstruments: {[instrumentName: string]: boolean};
-  private currentSequencePreviewClock: Clock | null;
+  private currentSequencePreviewTimer: NodeJS.Timeout | null;
 
   constructor(
     bpm = DEFAULT_BPM,
-    private readonly soundCache: SoundCache = new SoundCache(),
+    private readonly soundCache: SoundCache = SoundCache.getInstance(),
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     Transport.bpm.value = bpm;
@@ -61,7 +63,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.effectBusses = {};
     this.registeredCallbacks = {};
     this.loadingInstruments = {};
-    this.currentSequencePreviewClock = null;
+    this.currentSequencePreviewTimer = null;
     this.generateEffectBusses();
   }
 
@@ -199,6 +201,7 @@ class ToneJSPlayer implements AudioPlayer {
 
   async playSequenceImmediately(
     {instrument, events}: SamplerSequence,
+    length: number,
     onTick?: (tick: number) => void,
     onStop?: () => void
   ) {
@@ -222,20 +225,18 @@ class ToneJSPlayer implements AudioPlayer {
       );
     });
 
-    // Create a clock that ticks forward every 16th note, and stops when the sequence finishes.
-    // We can assume the sequence will finish one 16th note after the last sample starts.
-    const clockEnd = lastSampleStart + Transport.toSeconds('16n');
+    // Play every tick (quarter note) of the sequence.
     let tick = 1;
-    const clock = new Clock(() => {
-      onTick?.(tick++);
-    }, Transport.toFrequency('16n'))
-      .on('stop', () => {
-        this.currentSequencePreviewClock = null;
+    this.currentSequencePreviewTimer = setInterval(() => {
+      if (tick <= length * 4 * 4) {
+        onTick?.(tick++);
+      } else {
+        if (this.currentSequencePreviewTimer) {
+          clearInterval(this.currentSequencePreviewTimer);
+        }
         onStop?.();
-      })
-      .start()
-      .stop(`+${clockEnd}`);
-    this.currentSequencePreviewClock = clock;
+      }
+    }, Transport.toSeconds('16n') * 1000);
   }
 
   cancelPreviews() {
@@ -243,8 +244,9 @@ class ToneJSPlayer implements AudioPlayer {
       this.currentPreview.player.stop();
     }
 
-    if (this.currentSequencePreviewClock) {
-      this.currentSequencePreviewClock.stop();
+    if (this.currentSequencePreviewTimer) {
+      clearInterval(this.currentSequencePreviewTimer);
+      this.currentSequencePreviewTimer = null;
     }
 
     this.stopAllSamplers();
@@ -259,7 +261,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.generateEffectBusses();
   }
 
-  scheduleSample(sample: SampleEvent) {
+  scheduleSample(sample: SampleEvent, onSampleStart: (id: string) => void) {
     const buffer = this.soundCache.getSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
@@ -286,6 +288,12 @@ class ToneJSPlayer implements AudioPlayer {
       .start(this.playbackTimeToTransportTime(sample.playbackPosition));
 
     this.activePlayers.push(player);
+
+    // Schedule a callback to report the sound ID after the sound has been played.
+    Transport.scheduleOnce(
+      () => onSampleStart(sample.id),
+      this.playbackTimeToTransportTime(sample.playbackPosition)
+    );
   }
 
   scheduleSamplerSequence({instrument, events, effects}: SamplerSequence) {
@@ -369,8 +377,10 @@ class ToneJSPlayer implements AudioPlayer {
   ): BarsBeatsSixteenths {
     const bar = Math.floor(playbackPosition);
     const beat = Math.floor((playbackPosition - bar) * 4);
-    const sixteenths = Math.floor((playbackPosition - bar - beat / 4) * 16);
-    return `${bar - 1}:${beat}:${sixteenths}`;
+    const sixteenths = (playbackPosition - bar - beat / 4) * 16;
+    // Round sixteenths note value to 3 decimal places.
+    const sixteenthsRounded = Math.round(sixteenths * 1000) / 1000;
+    return `${bar - 1}:${beat}:${sixteenthsRounded}`;
   }
 
   private createPlayer(
@@ -399,6 +409,8 @@ class ToneJSPlayer implements AudioPlayer {
   }
 
   private generateEffectBusses() {
+    // Dispose of all existing effect busses
+    Object.values(this.effectBusses).forEach(node => node.dispose());
     BUS_EFFECT_COMBINATIONS.forEach(effects => {
       const {filter, delay} = effects;
       let firstNode, lastNode;

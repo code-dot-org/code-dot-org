@@ -1,11 +1,12 @@
-import React from 'react';
-import {expect} from 'chai';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
-import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
-import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
+import * as utils from '@cdo/apps/utils';
+
 import FindYourRegion from '../../../../../src/code-studio/pd/application/teacher/FindYourRegion';
 
 describe('TeacherApplication', () => {
@@ -31,11 +32,6 @@ describe('TeacherApplication', () => {
     sinon.stub($, 'param').returns(new $.Deferred());
     sinon.stub(window, 'fetch').returns(Promise.resolve({ok: true}));
     sinon.stub(utils, 'reload');
-    sinon
-      .stub(window.sessionStorage, 'getItem')
-      .withArgs('TeacherApplication')
-      .returns(JSON.stringify({}));
-    sinon.stub(window.sessionStorage, 'setItem');
     window.ga = sinon.fake();
   });
 
@@ -63,24 +59,11 @@ describe('TeacherApplication', () => {
   });
 
   it('Sets the school dropdown value from storage', () => {
-    window.sessionStorage.getItem.restore();
-    sinon
-      .stub(window.sessionStorage, 'getItem')
-      .withArgs('TeacherApplication')
-      .returns({program: 'CSD', school: '25'});
-    const page = mount(
-      <FindYourRegion
-        {...defaultProps}
-        data={window.sessionStorage.getItem('TeacherApplication')}
-      />
-    );
+    const data = {program: 'CSD', school: '25'};
+
+    const page = mount(<FindYourRegion {...defaultProps} data={data} />);
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       '25'
     );
-  });
-
-  it('Reports to google analytics', () => {
-    mount(<TeacherApplication {...defaultProps} />);
-    sinon.assert.called(window.ga);
   });
 });

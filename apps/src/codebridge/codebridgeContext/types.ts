@@ -1,4 +1,6 @@
 import {ProjectType, FileId, FolderId} from '@codebridge/types';
+
+import {ProjectFileType} from '@cdo/apps/lab2/types';
 export type ReplaceProjectFunction = (project: ProjectType) => void;
 
 export type SaveFileFunction = (fileId: FileId, contents: string) => void;
@@ -23,4 +25,8 @@ export type NewFileFunction = (arg: {
 export type RenameFileFunction = (fileId: FileId, newName: string) => void;
 export type RenameFolderFunction = (folderId: string, newName: string) => void;
 export type MoveFileFunction = (fileId: FileId, folderId: FolderId) => void;
-export type SetFileVisibilityFunction = (fileId: FileId, hide: boolean) => void;
+export type SetFileTypeFunction = (
+  fileId: FileId,
+  type: ProjectFileType
+) => void;
+export type RearrangeFilesFunction = (fileIds: FileId[]) => void;

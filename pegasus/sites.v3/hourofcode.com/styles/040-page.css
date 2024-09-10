@@ -20,7 +20,10 @@
   --neutral_dark: #292F36;
   --orange: #ffa400; /* legacy color */
   /* Typography */
-  --main-font: 'Metropolis', sans-serif;
+  --main-font: 'Metropolis', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans SC',
+               'Noto Sans TC', 'Noto Sans Devanagari', 'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
+               'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar', 'Noto Sans Sinhala',
+               'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Sans Thaana', sans-serif;
   --thin-font-weight: 100;
   --extra-light-font-weight: 200;
   --light-font-weight: 300;
@@ -645,6 +648,17 @@ a.link-button.secondary.white {
   color: var(--neutral_white);
 }
 
+a.link-button.black {
+  background: var(--neutral_dark);
+  border-color: var(--neutral_dark);
+  color: var(--neutral_white);
+
+  &:hover {
+    background: black;
+    border-color: black;
+  }
+}
+
 .continue-btn{
   background-color: rgb(255, 255, 255);
   border-color: var(--brand_secondary_default);
@@ -656,24 +670,6 @@ a.link-button.secondary.white {
   border-radius: 5px;
 }
 
-.btn-carousel-slide {
-  background: #ffa401;
-}
-.course-carousel .slide-prev, .course-carousel .slide-next {
-  background-color: #7765a1;
-}
-#stats-carousel .slide-prev > span {
-  border-right-color: #b9bf15;
-}
-#stats-carousel .slide-next > span {
-  border-left-color: #b9bf15;
-}
-.carousel-wrapper .pagination a {
-  background: var(--brand_secondary_light);
-}
-.carousel-wrapper .pagination a.selected {
-  background: var(--brand_secondary_default);
-}
 .container_nonresponsive { width: 970px; margin: 0 auto; max-width: none !important; }
 
 .lines_of_code_header {

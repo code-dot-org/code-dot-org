@@ -7,9 +7,6 @@
 # build dependency accounting stuff
 /config/scripts/.dropbox
 /config/scripts/.hints_imported
-/config/scripts/.matches_seeded
-/config/scripts/.multis_seeded
-/config/scripts/.dsls_seeded
 /config/scripts/.seeded
 
 # unit test and ui test artifacts

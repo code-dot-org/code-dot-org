@@ -1,23 +1,35 @@
-import React, {useEffect, useRef} from 'react';
-import style from './expanded_curriculum_catalog_card.module.scss';
-import centererStyle from './curriculum_catalog_card.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {TextLink} from '@dsco_/link';
 import PropTypes from 'prop-types';
+import React, {useEffect, useRef} from 'react';
+
+import {
+  Button,
+  buttonColors,
+  LinkButton,
+} from '@cdo/apps/componentLibrary/button';
+import Link from '@cdo/apps/componentLibrary/link';
 import {
   BodyTwoText,
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
-import {TextLink} from '@dsco_/link';
-import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
+
 import {
   translatedCourseOfferingDeviceTypes,
   translatedAvailableResources,
 } from '../teacherDashboard/CourseOfferingHelpers';
-import {defaultImageSrc} from './curriculumCatalogConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+import {
+  curriculumCatalogCardIdPrefix,
+  defaultImageSrc,
+} from './curriculumCatalogConstants';
+
+import centererStyle from './curriculum_catalog_card.module.scss';
+import style from './expanded_curriculum_catalog_card.module.scss';
 
 const ExpandedCurriculumCatalogCard = ({
   courseKey,
@@ -62,7 +74,7 @@ const ExpandedCurriculumCatalogCard = ({
     },
   };
 
-  const devices = JSON.parse(deviceCompatibility);
+  const devices = deviceCompatibility ? JSON.parse(deviceCompatibility) : {};
 
   const resoucesOrder = [
     'Lesson Plan',
@@ -105,10 +117,6 @@ const ExpandedCurriculumCatalogCard = ({
       150;
     window.scrollTo({top: yOffset, behavior: 'smooth'});
   }, [expandedCardRef]);
-
-  const quickViewButtonColor = !isTeacherOrSignedOut
-    ? Button.ButtonColor.brandSecondaryDefault
-    : Button.ButtonColor.neutralDark;
 
   return (
     <div ref={expandedCardRef}>
@@ -233,65 +241,80 @@ const ExpandedCurriculumCatalogCard = ({
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.compatibilityContainer}>
-                {Object.keys(devices).map(device => (
-                  <div key={device} className={style.iconWithDescription}>
-                    <FontAwesome
-                      icon={iconData[devices[device]].icon}
-                      className={`fa-solid ${iconData[devices[device]].color}`}
-                    />
-                    <BodyTwoText>
-                      {device !== 'no_device'
-                        ? translatedCourseOfferingDeviceTypes[device]
-                            .charAt(0)
-                            .toUpperCase() +
-                          translatedCourseOfferingDeviceTypes[device].slice(1)
-                        : i18n.offline()}
-                    </BodyTwoText>
-                  </div>
-                ))}
+                {Object.keys(devices).map(
+                  device =>
+                    devices[device] !== '' && (
+                      <div key={device} className={style.iconWithDescription}>
+                        <FontAwesome
+                          icon={iconData[devices[device]].icon}
+                          className={`fa-solid ${
+                            iconData[devices[device]].color
+                          }`}
+                        />
+                        <BodyTwoText>
+                          {device !== 'no_device'
+                            ? translatedCourseOfferingDeviceTypes[device]
+                                .charAt(0)
+                                .toUpperCase() +
+                              translatedCourseOfferingDeviceTypes[device].slice(
+                                1
+                              )
+                            : i18n.offline()}
+                        </BodyTwoText>
+                      </div>
+                    )
+                )}
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>
-                <Button
-                  __useDeprecatedTag
-                  color={quickViewButtonColor}
-                  type="button"
-                  href={pathToCourse}
-                  aria-label={
-                    isTeacherOrSignedOut
-                      ? i18n.quickViewDescription({
-                          course_name: courseDisplayName,
-                        })
-                      : i18n.tryCourseNow({
-                          course_name: courseDisplayName,
-                        })
-                  }
-                  text={
-                    isTeacherOrSignedOut
-                      ? i18n.seeCurriculumDetails()
-                      : i18n.tryNow()
-                  }
-                  className={centererStyle.buttonFlex}
-                />
-                {isTeacherOrSignedOut && (
-                  <Button
-                    color={Button.ButtonColor.brandSecondaryDefault}
-                    type="button"
-                    onClick={() => assignButtonOnClick('expanded-card')}
-                    aria-label={assignButtonDescription}
-                    text={i18n.assignToClassSections()}
+                {isTeacherOrSignedOut ? (
+                  <>
+                    <LinkButton
+                      color={buttonColors.black}
+                      type="secondary"
+                      href={pathToCourse}
+                      text={i18n.seeCurriculumDetails()}
+                      className={centererStyle.buttonFlex}
+                      ariaLabel={i18n.quickViewDescription({
+                        course_name: courseDisplayName,
+                      })}
+                    />
+                    <Button
+                      color={buttonColors.purple}
+                      type="primary"
+                      onClick={() => assignButtonOnClick('expanded-card')}
+                      ariaLabel={assignButtonDescription}
+                      text={i18n.assignToClassSections()}
+                      className={centererStyle.buttonFlex}
+                    />
+                  </>
+                ) : (
+                  <LinkButton
+                    color={buttonColors.purple}
+                    type="primary"
+                    href={pathToCourse}
+                    ariaLabel={i18n.tryCourseNow({
+                      course_name: courseDisplayName,
+                    })}
+                    text={i18n.tryNow()}
                     className={centererStyle.buttonFlex}
                   />
                 )}
               </div>
             </div>
             <div className={style.relatedCurriculaContainer}>
-              <div className={style.closeButton}>
+              <div className={style.closeButtonContainer}>
                 <Button
                   onClick={onClose}
-                  icon="xmark"
-                  iconClassName="fa-solid"
-                  aria-label="Close Button"
+                  icon={{
+                    iconName: 'xmark',
+                    iconStyle: 'solid',
+                  }}
+                  ariaLabel="Close Button"
+                  isIconOnly
+                  type="tertiary"
+                  color={buttonColors.black}
+                  className={style.closeButton}
                 />
               </div>
               <div className={style.relatedContainer}>
@@ -304,13 +327,12 @@ const ExpandedCurriculumCatalogCard = ({
                   src={recommendedSimilarCurriculum.image || defaultImageSrc}
                   alt={recommendedSimilarCurriculum.display_name}
                 />
-                <Button
+                <Link
                   id="similarCurriculumButton"
                   name={recommendedSimilarCurriculum.display_name}
-                  type="button"
-                  styleAsText
                   className={style.relatedCurriculaLink}
                   text={recommendedSimilarCurriculum.display_name}
+                  href={`#${curriculumCatalogCardIdPrefix}${recommendedSimilarCurriculum.key}`}
                   onClick={handleClickRecommendedSimilarCurriculum}
                 />
                 <img
@@ -318,13 +340,12 @@ const ExpandedCurriculumCatalogCard = ({
                   src={recommendedStretchCurriculum.image || defaultImageSrc}
                   alt={recommendedStretchCurriculum.display_name}
                 />
-                <Button
+                <Link
                   id="stretchCurriculumButton"
                   name={recommendedStretchCurriculum.display_name}
-                  type="button"
-                  styleAsText
                   className={style.relatedCurriculaLink}
                   text={recommendedStretchCurriculum.display_name}
+                  href={`#${curriculumCatalogCardIdPrefix}${recommendedStretchCurriculum.key}`}
                   onClick={handleClickRecommendedStretchCurriculum}
                 />
               </div>

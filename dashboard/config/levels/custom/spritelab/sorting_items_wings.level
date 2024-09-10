@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-14T21:25:38.000Z",
   "level_num": "custom",
@@ -38,28 +39,29 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "parent_level_id": 28361,
-    "short_instructions": "New items ",
     "mini_rubric": "false",
-    "long_instructions": "**Click Run. Then click and drag each item into a box.**\r\n\r\n<img src=\"\" width=30% style=\"padding-left: 100px\" >\r\n\r\n",
+    "long_instructions": "**Click <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into the \"wings\" or \"no wings\" box.**\r\n\r\n<img src=\"https://images.code.org/fe9b5522d05c3708d585104658a6709c-image-1720553593394.gif\" width=30%>\r\n\r\n<br>\r\n",
     "encrypted": "false",
     "auto_run_setup": "DRAW_LOOP",
-    "encrypted_examples": "tGFXRCNeWDteZg5u4M4A1KCdvfpeYyQH41d7WkgAIFioUX0eyiXX4QwJs1oy\nqrOki4I9UPG8Dyzh1PRFgln4Gpco4MT+RjJ2crhcGYfzj6hKvZV9PgCIQO0M\nrNGbWavp8GvlC52njY848WC0vWZYjg==\n",
     "name_suffix": "_2021",
     "hint_prompt_attempts_threshold": "1",
     "validation_enabled": "false",
     "mini_toolbox": "false",
-    "hide_pause_button": "false",
+    "hide_pause_button": "true",
     "instructions_icon": "emoji",
     "start_animations": "                {\r\n  \"orderedKeys\": [\r\n    \"e918788c-4e48-4aac-b884-ce0e85a09396\",\r\n    \"cad749ee-0767-4575-a12d-0051143a5ef3\",\r\n    \"4cc99b8d-2d5d-4c3e-b14e-8e83e26421f0\",\r\n    \"62299df2-5f0f-4060-8928-16c842f7fe40\",\r\n    \"73240e69-5fbc-41f8-8e1f-9ff63cbf57dc\",\r\n    \"6a3417e5-e856-4294-a902-49b77bde2dfc\",\r\n    \"7fb10ab8-3f49-4371-9329-7ffdfa49abd0\",\r\n    \"d2c33bfe-0972-4c67-8837-90c48b8edf09\",\r\n    \"8380d003-0912-4499-90e8-f4bf92b477fa\",\r\n    \"6af69232-3dfc-4fbf-81a2-d3c099a2cd9e\",\r\n    \"44d8285e-1542-40d6-94c7-5811dca42041\",\r\n    \"b17be409-96b7-4e89-b14a-2174de59dbac\",\r\n    \"ee1568c0-6914-483c-bdc0-36dfb91ccc0d\",\r\n    \"3f62d4bd-ef77-4f96-86ed-0ffd5ace099b\",\r\n    \"902030ff-ebad-4729-be3b-76a9240adb63\",\r\n    \"21b0d976-c5c3-4dda-b06d-c7d578fb79ec\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"e918788c-4e48-4aac-b884-ce0e85a09396\": {\r\n      \"name\": \"adultbutterfly_csc\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"jsonLastModified\": \"2021-10-06 17:59:10 UTC\",\r\n      \"pngLastModified\": \"2021-10-06 17:59:08 UTC\",\r\n      \"version\": \"e7FIQ4cVbXtdg77XNxNwMB4kPKixcXHS\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/e7FIQ4cVbXtdg77XNxNwMB4kPKixcXHS/category_animals/adultbutterfly_csc.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"cad749ee-0767-4575-a12d-0051143a5ef3\": {\r\n      \"name\": \"bee_1\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:49:00 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:49:01 UTC\",\r\n      \"version\": \"fLqqklqR6MSXQ5epui65egj6vY7MjCFs\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/fLqqklqR6MSXQ5epui65egj6vY7MjCFs/category_animals/bee_1.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"4cc99b8d-2d5d-4c3e-b14e-8e83e26421f0\": {\r\n      \"name\": \"cartoonbug3_csc\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"jsonLastModified\": \"2021-10-06 18:09:42 UTC\",\r\n      \"pngLastModified\": \"2021-10-06 18:09:39 UTC\",\r\n      \"version\": \"Tn15Ssa8w5wxlMOVsmJek2XswgldGdRZ\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/Tn15Ssa8w5wxlMOVsmJek2XswgldGdRZ/category_animals/cartoonbug3_csc.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"62299df2-5f0f-4060-8928-16c842f7fe40\": {\r\n      \"name\": \"birdside_02\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 222\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"jsonLastModified\": \"2021-01-19 23:48:40 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:48:40 UTC\",\r\n      \"version\": \"sEAy0zi0VQHbV32tzwo56Cjerth_gZHJ\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/sEAy0zi0VQHbV32tzwo56Cjerth_gZHJ/category_animals/birdside_02.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 222\r\n      }\r\n    },\r\n    \"73240e69-5fbc-41f8-8e1f-9ff63cbf57dc\": {\r\n      \"name\": \"chimps\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 387,\r\n        \"y\": 397\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:48:03 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:48:04 UTC\",\r\n      \"version\": \"I8pVMnVcPVKTStqaKoknrE8YNw6a94O9\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/I8pVMnVcPVKTStqaKoknrE8YNw6a94O9/category_animals/chimps.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 387,\r\n        \"y\": 397\r\n      }\r\n    },\r\n    \"6a3417e5-e856-4294-a902-49b77bde2dfc\": {\r\n      \"name\": \"cuteanimals_shark\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-09-02 18:05:29 UTC\",\r\n      \"pngLastModified\": \"2021-09-02 22:02:11 UTC\",\r\n      \"version\": \"QxTmMlWfOMiuh.2SlTn5whkqLcJczeUx\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/QxTmMlWfOMiuh.2SlTn5whkqLcJczeUx/category_animals/cuteanimals_shark.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"7fb10ab8-3f49-4371-9329-7ffdfa49abd0\": {\r\n      \"name\": \"elephant_1\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 398,\r\n        \"y\": 323\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:46:55 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:46:55 UTC\",\r\n      \"version\": \"sYt9h2Jn6zT5Af7RVVwfIzBcBW.9ZaqU\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/sYt9h2Jn6zT5Af7RVVwfIzBcBW.9ZaqU/category_animals/elephant_1.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 398,\r\n        \"y\": 323\r\n      }\r\n    },\r\n    \"d2c33bfe-0972-4c67-8837-90c48b8edf09\": {\r\n      \"name\": \"horse\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 395,\r\n        \"y\": 386\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:46:05 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:46:05 UTC\",\r\n      \"version\": \"ntmYko4Bb6PIqgj2wEI7XnAjH3F9XxeY\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/ntmYko4Bb6PIqgj2wEI7XnAjH3F9XxeY/category_animals/horse.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 395,\r\n        \"y\": 386\r\n      }\r\n    },\r\n    \"8380d003-0912-4499-90e8-f4bf92b477fa\": {\r\n      \"name\": \"sort_items_wings\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 700,\r\n        \"y\": 705\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-14T21:31:58.000Z\",\r\n      \"pngLastModified\": \"2024-05-14T21:31:58.000Z\",\r\n      \"version\": \"mZPxgHEwxB2Mjbjxqqv5AmEW_bs5B8Ln\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/mZPxgHEwxB2Mjbjxqqv5AmEW_bs5B8Ln/sort_items_wings.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 700,\r\n        \"y\": 705\r\n      }\r\n    },\r\n    \"6af69232-3dfc-4fbf-81a2-d3c099a2cd9e\": {\r\n      \"name\": \"card_white\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 140,\r\n        \"y\": 190\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-14T20:43:37.000Z\",\r\n      \"pngLastModified\": \"2024-05-14T20:43:37.000Z\",\r\n      \"version\": \"urvx5GxOBTh69Tyga8cqmWoWMAIThiSg\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/urvx5GxOBTh69Tyga8cqmWoWMAIThiSg/card_white.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 140,\r\n        \"y\": 190\r\n      }\r\n    },\r\n    \"44d8285e-1542-40d6-94c7-5811dca42041\": {\r\n      \"name\": \"card_white_2\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 140,\r\n        \"y\": 190\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-14T21:02:28.000Z\",\r\n      \"pngLastModified\": \"2024-05-14T21:02:28.000Z\",\r\n      \"version\": \"8cFQ4gRZ53Gb5f1OfqejtoocCMsD5oa7\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/8cFQ4gRZ53Gb5f1OfqejtoocCMsD5oa7/card_white_2.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 140,\r\n        \"y\": 190\r\n      }\r\n    },\r\n    \"b17be409-96b7-4e89-b14a-2174de59dbac\": {\r\n      \"name\": \"lizard\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 386,\r\n        \"y\": 198\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:45:51 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:45:52 UTC\",\r\n      \"version\": \"UdVhwF43Eu1pFImxxAlSWQbe53lEk7Mw\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/UdVhwF43Eu1pFImxxAlSWQbe53lEk7Mw/category_animals/lizard.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 386,\r\n        \"y\": 198\r\n      }\r\n    },\r\n    \"ee1568c0-6914-483c-bdc0-36dfb91ccc0d\": {\r\n      \"name\": \"cuteanimals_duckling_hello\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-09-02 18:05:40 UTC\",\r\n      \"pngLastModified\": \"2021-09-02 22:42:58 UTC\",\r\n      \"version\": \"JwUTdBccgUnE9CYFr9YqFalkytzvnmAI\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/JwUTdBccgUnE9CYFr9YqFalkytzvnmAI/category_animals/cuteanimals_duckling_hello.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      }\r\n    },\r\n    \"3f62d4bd-ef77-4f96-86ed-0ffd5ace099b\": {\r\n      \"name\": \"bluejay\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 394,\r\n        \"y\": 272\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:48:35 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:48:36 UTC\",\r\n      \"version\": \"l2omFNj5BRBSnrWTi8D9Zdgn6HedUUGB\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/l2omFNj5BRBSnrWTi8D9Zdgn6HedUUGB/category_animals/bluejay.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 394,\r\n        \"y\": 272\r\n      }\r\n    },\r\n    \"902030ff-ebad-4729-be3b-76a9240adb63\": {\r\n      \"name\": \"emoji_19\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ],\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"jsonLastModified\": \"2021-01-19 23:56:45 UTC\",\r\n      \"pngLastModified\": \"2021-01-19 23:57:00 UTC\",\r\n      \"version\": \"hKXwNDtCaVI4G0Ow.udOCdsMRnK77A48\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/hKXwNDtCaVI4G0Ow.udOCdsMRnK77A48/category_emoji/emoji_19.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      }\r\n    },\r\n    \"21b0d976-c5c3-4dda-b06d-c7d578fb79ec\": {\r\n      \"name\": \"sort_shapes_bg_3\",\r\n      \"frameCount\": 1,\r\n      \"frameSize\": {\r\n        \"x\": 700,\r\n        \"y\": 705\r\n      },\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ],\r\n      \"jsonLastModified\": \"2024-05-15T16:37:56.000Z\",\r\n      \"pngLastModified\": \"2024-05-15T16:37:56.000Z\",\r\n      \"version\": \"vhxQNqBCtz1OsaXK3_uWczwtJg4006rL\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/vhxQNqBCtz1OsaXK3_uWczwtJg4006rL/sort_shapes_bg_3.png\",\r\n      \"sourceSize\": {\r\n        \"x\": 700,\r\n        \"y\": 705\r\n      }\r\n    }\r\n  }\r\n}\r\n                \r\n              ",
-    "callout_json": "[]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"ai_data_run_button\",\r\n  \"callout_text\": \"Click here!\",\r\n  \"element_id\": \"[id=\\\"runButton\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "authored_hints": "[]",
     "skip_autosave": true,
     "standalone_app_name": "spritelab",
-    "preload_asset_list": null
+    "validation_code": "//THESE THINGS RUN ONLY ONCE!\r\nif (World.frameCount == 1) {\r\n  setDelayTime(90);\r\n  setFailTime(150); //for the way we're using this: this is the \"deadline\" for when a student should have passed the code. This will get updated later\r\n  setDelayTime(90); //this is basically how long the green bar is.\r\n  addCriteria(function() {\r\n    return true; // The real check for this is outside this loop - see below\r\n  }, \"noSprites\");  // This doesn't actually matter - ignore the string here\r\n\r\n}\r\n\r\n//THESE THINGS RUN EVERY FRAME\r\n\r\nvar bucket1Validation = (wings >= 5); //will resolve as a boolean true/false\r\nvar bucket2Validation = (no_wings >=5); //will resolve as a boolean true/false\r\n//add more conditions as you need them\r\n\r\nif (bucket1Validation && bucket2Validation) { //This is the REAL criteria check. If this is true...\r\n  checkAndSetSuccessTime(\"pass\"); //Set the correct delay and success timer so the green bar shows as expected\r\n  //console.log(validationFrames.successFrame);\r\n  check(); //Start the \"Check\" loop, which is what makes the green bar work\r\n} else { //If we _haven't_ passed the level yet...\r\n  delayEndInActiveApp();\r\n  setFailTime(World.frameCount + 150); // continually update the failFrames based on the current frame\r\n  // if we don't do ^: then if a student waits too long, the first call to \"check\" will make it seem like they failed the level because it's past the initial failTime.\r\n  // So this continually updates the failTime to avoid that error\r\n  // Usually this would make the purple bar appear, but we avoid that by making this mutually exclusive with the check() function.\r\n  // This means: if a student has passed the level, but then they do something to make it look like they failed the level, the level will just stop the bar again.\r\n}\r\n\r\n//All of this would be easier to do, I think, if we had access to a method that let us set the success time (like similar methods in https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js). But we don't.",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-14T21:25:38.194+00:00\",\"changed\":[\"cloned from \\\"sorting_items_new\\\"\"],\"cloned_from\":\"sorting_items_new\"},{\"changed_at\":\"2024-05-14 21:25:42 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:33:29 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:34:27 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:35:30 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:40:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:41:37 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:42:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:42:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:43:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:45:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:46:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:47:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:48:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:50:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:50:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:52:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:53:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:53:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:58:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:58:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:59:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:00:27 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:02:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:03:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:05:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:10:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:12:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:40:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:41:26 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:41:38 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:42:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:43:22 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:43:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:43:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:46:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:47:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:48:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:16:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:16:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:28:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:42:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:42:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-14T21:25:38.194+00:00\",\"changed\":[\"cloned from \\\"sorting_items_new\\\"\"],\"cloned_from\":\"sorting_items_new\"},{\"changed_at\":\"2024-05-14 21:25:42 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:33:29 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:34:27 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:35:30 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:40:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:41:37 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:42:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:42:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:43:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:45:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:46:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:47:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:48:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:50:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:50:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:52:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:53:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:53:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:58:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:58:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 21:59:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:00:27 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:02:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:03:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:05:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:10:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:12:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:40:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:41:26 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:41:38 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:42:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:43:22 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:43:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-14 22:43:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:46:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:47:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 16:48:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:16:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:16:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:28:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:42:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-15 19:42:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:48:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:51:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:52:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:53:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:53:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:54:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:54:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:55:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:56:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:56:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 16:57:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:00:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"hide_pause_button\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:03:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:07:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:10:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:12:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:15:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 17:59:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 18:00:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 18:00:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 18:01:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 18:01:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 18:01:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 18:09:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 21:56:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 21:57:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 22:40:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-16 22:43:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 17:39:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 18:58:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 19:51:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 19:52:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 19:52:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 19:53:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 19:54:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 19:55:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 19:56:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 19:58:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-28 20:04:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-28 20:04:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-29 22:29:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-29 22:31:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-29 22:32:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-29 22:33:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-06-17 14:33:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-06-17 15:07:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-06-17 15:52:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-06-17 15:53:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-09 16:35:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-09 19:29:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-09 19:33:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-22 13:51:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-22 14:42:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-22 14:43:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"validation_enabled\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-22 14:44:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"validation_enabled\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-22 14:45:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-25 18:48:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -68,7 +70,7 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
           <variable id="?x^U~(cTla@$I});v[2[">touchBool1</variable>
-          <variable id="=QyQ8+JA0g^_RoFHH^b=">noWings</variable>
+          <variable id="=QyQ8+JA0g^_RoFHH^b=">no wings</variable>
           <variable id="uJ4s-0_4(pl_JznGc3K`">touchBool2</variable>
           <variable id="gS=]u|XRxKg2};05*LvR">wings</variable>
           <variable id="n?o4Txsh=nU,z^j7e4?x">touchBool3</variable>
@@ -94,7 +96,7 @@
                   </value>
                   <next>
                     <block type="variables_set">
-                      <field name="VAR" id="=QyQ8+JA0g^_RoFHH^b=">noWings</field>
+                      <field name="VAR" id="=QyQ8+JA0g^_RoFHH^b=">no wings</field>
                       <value name="VALUE">
                         <block type="math_number">
                           <field name="NUM">3</field>
@@ -124,7 +126,7 @@
                                       <field name="OP">ADD</field>
                                       <value name="A">
                                         <block type="variables_get">
-                                          <field name="VAR" id="=QyQ8+JA0g^_RoFHH^b=">noWings</field>
+                                          <field name="VAR" id="=QyQ8+JA0g^_RoFHH^b=">no wings</field>
                                         </block>
                                       </value>
                                       <value name="B">
@@ -146,7 +148,7 @@
                                   </value>
                                   <next>
                                     <block type="gamelab_showVariable">
-                                      <field name="VAR" id="=QyQ8+JA0g^_RoFHH^b=">noWings</field>
+                                      <field name="VAR" id="=QyQ8+JA0g^_RoFHH^b=">no wings</field>
                                       <value name="LOCATION">
                                         <block type="gamelab_location_picker">
                                           <field name="LOCATION">{"x":291,"y":368}</field>
@@ -591,7 +593,7 @@
                               </value>
                               <next>
                                 <block type="variables_set">
-                                  <field name="VAR" id="=QyQ8+JA0g^_RoFHH^b=">noWings</field>
+                                  <field name="VAR" id="=QyQ8+JA0g^_RoFHH^b=">no wings</field>
                                   <value name="VALUE">
                                     <block type="math_arithmetic">
                                       <field name="OP">ADD</field>
@@ -633,7 +635,7 @@
                                               <field name="OP">ADD</field>
                                               <value name="A">
                                                 <block type="variables_get">
-                                                  <field name="VAR" id="=QyQ8+JA0g^_RoFHH^b=">noWings</field>
+                                                  <field name="VAR" id="=QyQ8+JA0g^_RoFHH^b=">no wings</field>
                                                 </block>
                                               </value>
                                               <value name="B">
@@ -655,6 +657,43 @@
                       </next>
                     </block>
                   </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" x="855" y="784">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"cuteanimals_duckling_hello"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"card_white_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"emoji_19"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="text">
+                  <field name="TEXT">Try again!</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">2</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
                 </block>
               </next>
             </block>
@@ -689,14 +728,19 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_bell/vibrant_game_bell_ding.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="880" y="815">
+        <block type="gamelab_checkTouching" x="854" y="957">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"cuteanimals_duckling_hello"</field>
+              <field name="ANIMATION">"bluejay"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -713,7 +757,7 @@
               </value>
               <value name="TEXT1">
                 <block type="text">
-                  <field name="TEXT">Not quite!</field>
+                  <field name="TEXT">Try again!</field>
                 </block>
               </value>
               <value name="NUM">
@@ -721,10 +765,15 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="403" y="961">
+        <block type="gamelab_checkTouching" x="403" y="1021">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
@@ -753,19 +802,24 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_bell/vibrant_game_bell_ding.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="854" y="959">
+        <block type="gamelab_checkTouching" x="838" y="1170">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"bluejay"</field>
+              <field name="ANIMATION">"elephant_1"</field>
             </block>
           </value>
           <value name="SPRITE2">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white_2"</field>
+              <field name="ANIMATION">"card_white"</field>
             </block>
           </value>
           <next>
@@ -777,7 +831,7 @@
               </value>
               <value name="TEXT1">
                 <block type="text">
-                  <field name="TEXT">Not quite!</field>
+                  <field name="TEXT">Try again!</field>
                 </block>
               </value>
               <value name="NUM">
@@ -785,10 +839,15 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="397" y="1105">
+        <block type="gamelab_checkTouching" x="390" y="1197">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
@@ -817,14 +876,19 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_bell/vibrant_game_bell_ding.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="837" y="1105">
+        <block type="gamelab_checkTouching" x="842" y="1350">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"elephant_1"</field>
+              <field name="ANIMATION">"horse"</field>
             </block>
           </value>
           <value name="SPRITE2">
@@ -841,7 +905,7 @@
               </value>
               <value name="TEXT1">
                 <block type="text">
-                  <field name="TEXT">Not quite!</field>
+                  <field name="TEXT">Try again!</field>
                 </block>
               </value>
               <value name="NUM">
@@ -849,10 +913,15 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_retro/retro_game_ui_select_12.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="394" y="1248">
+        <block type="gamelab_checkTouching" x="394" y="1406">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
@@ -881,40 +950,22 @@
                   <field name="NUM">2</field>
                 </block>
               </value>
+              <next>
+                <block type="gamelab_playSound">
+                  <field name="SOUND">sound://category_bell/vibrant_game_bell_ding.mp3</field>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" x="843" y="1254">
+        <block type="gamelab_spriteClicked" x="36" y="1540">
           <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"horse"</field>
-            </block>
+          <value name="SPRITE">
+            <block type="gamelab_getAllSprites"/>
           </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"card_white"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"emoji_19"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="text">
-                  <field name="TEXT">Not quite!</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">2</field>
-                </block>
-              </value>
-            </block>
-          </next>
+        </block>
+        <block type="gamelab_playSound" x="1822" y="2014">
+          <field name="SOUND">sound://category_alerts/vibrant_game_negative_affirmation.mp3</field>
         </block>
         <block type="behavior_definition" deletable="false" x="0" y="0">
           <mutation behaviorId="wandering"/>

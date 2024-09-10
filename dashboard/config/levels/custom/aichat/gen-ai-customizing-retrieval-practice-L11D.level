@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Cultural Norms Chatbot",
+    "bubble_choice_description": "Mariah wants to use a chatbot to help make sure she has the right cultural norms and etiquette when visiting another country.",
+    "thumbnail_url": "https://images.code.org/43950e17b8c5bf5b82118e70d8a8bc95-Lesson 7 - Level 11D- Cultural Norms Chatbot.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:30:25.975+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L10\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L10\"},{\"changed_at\":\"2024-05-11 23:56:28 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:30:25.975+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L10\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L10\"},{\"changed_at\":\"2024-05-11 23:56:28 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:35:28 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -45,8 +45,8 @@ theme: responsive_full_width
         %h2
           =hoc_s((!applications_closed ? :call_to_action_applications_open_exclamation : :cs_ambassador_application_closed_title))
         - if !applications_closed
-          %p.heading-xs
-            =hoc_s(:cs_ambassador_priority_deadline)
+          -# %p.heading-xs
+            -# =hoc_s(:cs_ambassador_priority_deadline)
           %p.heading-xs.no-margin-bottom
             =hoc_s(:cs_ambassador_application_subhead)
         %p.body-three

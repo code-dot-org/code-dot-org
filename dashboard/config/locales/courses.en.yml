@@ -616,10 +616,7 @@ en:
         csd-2024:
           title: Computer Science Discoveries ('24-'25)
           description_short: An introductory computer science course that empowers students to create authentic artifacts
-          description_student: |-
-            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-
-            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers you to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: |
             Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
 
@@ -693,8 +690,11 @@ en:
         foundations-of-cs-beta-2024:
           title: Foundations of Computer Science BETA
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: |-
+            Welcome to Foundations of Computer Science! This exciting course is your gateway to the powerful world of computer science. Whether you're curious about how apps work or want to know more about the impact of technology on society, this course has something for you. Over the semester, you'll learn the basics of programming, dive into how the Internet functions, and even create your own projects that could solve real-world problems.
+
+            ⚠️ **Note:** This is a beta version of the Foundations of CS curriculum that consists primarily of content from our existing Computer Science Discoveries and Computer Science Principles curricula. As such, you will see CSD and CSP labels on activity guides, resources, and slide decks. This will not be the case on the final version of the curriculum!
+          description_teacher: The Foundations of Computer Science (FCS) course is a comprehensive introduction to the vast field of computer science. Designed for high school students, this course integrates fundamental concepts with hands-on practical experience to foster a deep understanding of computing, its capabilities, and its impacts. The curriculum is structured to align with state requirements and CSTA standards, offering a solid foundation in computer science that prepares students for further study and future careers in technology.
           version_title: "'24-'25"
         self-paced-pl-csd-2024:
           title: Teaching CS Discoveries
@@ -773,17 +773,31 @@ en:
           description_teacher: "**Participants will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: "'24-'25"
         vpl-csd-2024:
-          title: vpl-csd-2024
+          title: CSD Virtual Professional Learning '24-'25
           description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_student: |-
+            #####**You will:**
+
+            * ##### Prepare to teach CS Discoveries.
+            * ##### Practice key concepts in the CS Discoveries curriculum.
+            * ##### Grow in your understanding of equitable CS education.
+            * ##### Develop empathy for the student experience.
+            * ##### Become a part of a network of teachers who are doing similar work.
+          description_teacher: |-
+            ##### **Participants will:**
+
+            * ##### Prepare to teach CS Discoveries.
+            * ##### Practice key concepts in the CS Discoveries curriculum.
+            * ##### Grow in their understanding of equitable CS education.
+            * ##### Develop empathy for the student experience.
+            * ##### Become a part of a network of teachers who are doing similar work.
+          version_title: '2024'
         vpl-csa-2024:
-          title: vpl-csa-2024
+          title: CSA Virtual Professional Learning '24-'25
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2024'
         self-paced-pl-csa-2024:
           title: self-paced-pl-csa-2024
           description_short: ''
@@ -795,7 +809,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2024'
         self-paced-pl-csp-2024:
           title: Teaching CS Principles
           description_short: ''
@@ -898,3 +912,255 @@ en:
 
             * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: "'24-'25"
+        focus-on-coding-2024:
+          title: Focus on Coding '24-'25 (CS Discoveries)
+          description_short: A collection of Computer Science Discovery units that focuses on coding and programming skills
+          description_student: |-
+            Focus on Coding is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to build their coding skills in web development, games and animation, and creating apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+          description_teacher: |-
+            Focus on Coding is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to build their coding skills in web development, games and animation, and creating apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
+          version_title: "'24-'25"
+        focus-on-creativity-2024:
+          title: Focus on Creativity '24-'25 (CS Discoveries)  ('24-'25)
+          description_short: A collection of Computer Science Discovery units that focuses on being creative and creating with computing.
+          description_student: |-
+            Focus on Creativity is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to be creative as they learn to create websites, animations and games, and apps for devices. Students create authentic artifacts and engage with computer science not only as a medium for creativity, but also for communication, problem-solving, and fun.
+
+            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+          description_teacher: |
+            Focus on Creativity is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to be creative as they learn to create websites, animations and games, and apps for devices. Students create authentic artifacts and engage with computer science not only as a medium for creativity, but also for communication, problem-solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
+          version_title: "'24-'25"
+        focus-on-hardware-2024:
+          title: Focus on Hardware '24-'25 (CS Discoveries)
+          description_short: A collection of Computer Science Discovery units that explore how computers and smaller physical devices work
+          description_student: |-
+            Focus on Hardware is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to use data and physical devices to solve problems. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+          description_teacher: |-
+            Focus on Hardware is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to use data and physical devices to solve problems. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
+          version_title: "'24-'25"
+        focus-on-design-with-purpose-2024:
+          title: Focus on Design with Purpose '24-'25 (CS Discoveries)
+          description_short: A collection of Computer Science Discovery units that focuses on the design process and listening to users to solve real-world problems.
+          description_student: |-
+            Focus on Design with Purpose is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to think about the needs of users while designing websites and apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+          description_teacher: |-
+            Focus on Design with Purpose is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to think about the needs of users while designing websites and apps for devices. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
+          version_title: "'24-'25"
+        focus-on-impact-in-society-2024:
+          title: Focus on Impact in Society '24-'25 (CS Discoveries)
+          description_short: A collection of Computer Science Discovery units that focus on the impact of technology in society
+          description_student: |-
+            Focus on Impact in Society is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to think about computer science as a tool to solve problems while considering the broader social impacts of various aspects of computer science. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+          description_teacher: |
+            Focus on Impact in Society is a collection of Computer Science Discoveries (CS Discoveries) course units that empowers students to think about computer science as a tool to solve problems while considering the broader social impacts of various aspects of computer science. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
+          version_title: "'24-'25"
+        focus-on-data-2024:
+          title: Focus on Data '24-'25 (CS Discoveries)
+          description_short: 'A collection of Computer Science Discovery units that focuses on data: how computers use it and how it is used in society '
+          description_student: |-
+            Focus on Data is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to use data to solve problems. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+          description_teacher: |
+            Focus on Data is a collection of Computer Science Discoveries (CSD) course units that empowers students to use data to solve problems. Students create authentic artifacts and engage with computer science as a medium for creativity, communication, problem-solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
+          version_title: "'24-'25"
+        self-paced-foundations-cs-2024:
+          title: Teaching Foundations of Computer Science
+          description_short: ''
+          description_student: |
+            ## Welcome!
+
+            ##### Welcome to Code.org's free self-paced online course for educators to get started teaching <a href="https://studio.code.org/courses/foundations-of-cs-beta-2024" target="blank" rel="noopener noreferrer">**Foundations of Computer Science**</a>! After completing this online course, you'll be ready to get started teaching Code.org's **Foundations of Computer Science** course with your students.
+
+            ### **Find the learning that works for you**
+
+            * ##### **Start with Introduction to Teaching Foundations of Computer Science:** This section will introduce you to this course and help you customize your learning path.
+            * ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
+            * ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and Foundations of Computer Science. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about this professional learning course before getting started.
+          description_teacher: |
+            ## Welcome!
+
+            ##### Welcome to Code.org's free self-paced online course for educators to get started teaching <a href="https://studio.code.org/courses/foundations-of-cs-beta-2024" target="blank" rel="noopener noreferrer">**Foundations of Computer Science**</a>! After completing this online course, you'll be ready to get started teaching Code.org's **Foundations of Computer Science** course with your students.
+
+            ### **Find the learning that works for you**
+
+            * ##### **Start with Introduction to Teaching Foundations of Computer Science:** This section will introduce you to this course and help you customize your learning path.
+            * ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
+            * ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and Foundations of Computer Science. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about this professional learning course before getting started.
+          version_title: "'24-'25"
+        self-paced-pl-computer-vision:
+          title: self-paced-pl-computer-vision
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        self-paced-pl-coding-with-ai:
+          title: self-paced-pl-coding-with-ai
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        3-5gamedesign-2024:
+          title: Preparing to Teach Elementary Game Design
+          description_short: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
+          version_title: ''
+        microbitmakermodule-2024:
+          title: Preparing to Teach Maker with micro:bit
+          description_short: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
+          version_title: ''
+        elementaryai-2024:
+          title: Preparing to Teach How AI Makes Decisions
+          description_short: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
+          version_title: ''
+        self-paced-pl-computer-vision-2024:
+          title: Teaching Computer Vision
+          description_short: ''
+          description_student: |
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Computer Vision Unit** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Computer Vision. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Computer Vision.
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Computer Vision Unit** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Computer Vision. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Computer Vision. \n\n"
+          version_title: "'24-'25"
+        self-paced-pl-coding-with-ai-2024:
+          title: Teaching Coding with AI
+          description_short: ''
+          description_student: |
+            ## Welcome
+            #### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Coding with AI Unit** with your students.
+
+            ### **Find the learning that works for you**
+            *  ####**Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * ####**Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Coding with AI. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Coding with AI.
+          description_teacher: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s Coding with AI Unit** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Coding with AI. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Coding with AI.
+          version_title: "'24-'25"
+        data-science-2024:
+          title: Data Science Pilot
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        tesselementaryai-2024:
+          title: tesselementaryai-2024
+          description_short: testing fix for getting started
+          description_student: testing fix for getting started
+          description_teacher: testing fix for getting started
+          version_title: ''
+        csa-alt-2025:
+          title: Computer Science A ('25-'26)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            **This version of the CSA curriculum follows the sequence outlined in the AP CSA CED.**
+
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          version_title: "'25-'26"
+        sandbox-csf-2025:
+          title: sandbox-csf-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csa-2025:
+          title: Computer Science A ('25-'26)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+
+            **Did You Know?**
+            * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
+
+            * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'25-'26"
+        csa-pilot-2025:
+          title: Computer Science A ('24-'25 Pilot -- 2025 Framework)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          version_title: "'24-'25"
+        exploring-gen-ai-2024:
+          title: Exploring Generative AI
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        csd-ayw1-debugging:
+          title: 'CSD Academic Year Workshop #1 - Debugging'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-data-science-pl:
+          title: sandbox-data-science-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-summer-puertorico-2024:
+          title: Descubrimientos de Ciencias de la Computación - Taller de 5 Dias 2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

@@ -9,17 +9,27 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-06 20:07:27 UTC",
+    "serialized_at": "2024-09-08 20:16:44 UTC",
     "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": "self_paced",
+    "instructor_audience": "universal_instructor",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "self-paced-pl-csa-2023"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa-2023"
+      }
+    }
   ],
   "lessons": [
 

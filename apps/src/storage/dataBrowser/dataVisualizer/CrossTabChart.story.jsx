@@ -1,6 +1,7 @@
-import React from 'react';
-import CrossTabChart from './CrossTabChart';
 import _ from 'lodash';
+import React from 'react';
+
+import CrossTabChart from './CrossTabChart';
 
 export default {
   component: CrossTabChart,

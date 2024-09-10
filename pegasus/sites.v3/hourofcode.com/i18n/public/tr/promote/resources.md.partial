@@ -24,8 +24,6 @@ Print your own posters! Simply click an image below to view and save a printable
 
 {{ promote_new_posters }}
 
-* Önceki yıllara ait posterlerimizi mi arıyorsunuz? [Burada bulabilirsiniz]({{ promote/previous_posters_url }})!
-
 <a id="social"></a>
 
 ## Bunları sosyal medyada paylaşın
@@ -95,26 +93,6 @@ Bu yıl daha da büyütelim. Hour of Code {{ campaign_date/year }} etkinliğine 
 Organizasyondan bahsedin. Bir etkinlik düzenleyin. Yerel okullardan kaydolmalarını isteyin. Veya Hour of Code'u kendiniz deneyin. Herkes temelleri öğrenerek kendine fayda sağlayabilir.
 
 http://hourofcode.com/{{ country_language }} adresinden başlayın<br />
-
-* * *
-
-<a id="help-schools"></a>
-
-### Bir okulda gönüllü olun:
-
-#### [Okullarda gönüllü olmak ile ilgili daha fazla kaynak ve bilgiyi burada bulabilirsiniz]({{ how_to_volunteers_url }}).
-
-**Konu satırı:**Hour of Code düzenlemene yardım edebilir miyiz?
-
-{{ campaign_date/short }} tarihleri arasında, dünyadaki öğrencilerin yüzde onu Bilgisayar Bilimi Eğitim Haftası'nı okullarında Hour of Code etkinliği ile kutlayacak. Bu, her çocuğun etrafımızdaki teknolojinin nasıl çalıştığını anlaması için bir fırsattır.
-
-[Kuruluşum/Adım], [okul adı] içinde gerçekleştirilecek olan Hour of Code etkinliğine destek olmaktan memnuniyet duyarız. Öğretmenlerin sınıflarında Hour of Code etkinliği gerçekleştirmesine yardım edebiliriz (üstelik bilgisayarlara ihtiyacımız olmadan!) ya da okul toplantısı gerçekleştirmek isterseniz size teknolojinin nasıl işlediğini ve yazılım mühendisliğinin ne olduğunu anlatacak konuşmacılar ayarlayabiliriz.
-
-Öğrenciler kendi uygulamalarını ve oyunlarını geliştirip ailelerine gösterebilir ve Hour of Code katılımcı belgelerini evlerine götürebilirler. Üstelik eğlenceli de! Etkileşimli ve uygulamalı aktivitelerle öğrenciler, ulaşılabilir yollar ile sayısal düşünme becerilerini edinecek.
-
-Bilgisayarlar her yerdeler ve gezegendeki her sektörü değiştiriyorlar. Fakat liselerin sadece %51'inde bilgisayar bilimi dersi var. Bunu değiştirmeye çalışıyor olmamız iyi haber! Eğer daha önce Hour of Code'u duyduysanız dünya çapında 100 milyondan fazla öğrenci tarafından denendiğini ve tarihe geçtiğini de biliyor olabilirsiniz. Hatta Başkan Obama ve Kanada Başbakanı Justin Trudeau gibi liderler kampanya kapsamında ilk kod satırlarını yazdı.
-
-Etkinliğe dair daha fazla bilgiyi http://hourofcode.com adresinden bulabilirsiniz. Ya da [okul adı] okulunuzun nasıl dahil olabileceğini öğrenmek için bizimle iletişime geçebilirsiniz.<br />
 
 * * *
 

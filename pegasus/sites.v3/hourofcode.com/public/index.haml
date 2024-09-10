@@ -10,14 +10,6 @@ social:
 
 %link{href: "/css/generated/front-page.css", rel: "stylesheet", type: "text/css"}
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
-%link{href: "/css/generated/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
-
--# These are needed for the signup form, even if the map isn't currently showing.
-%script{src:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'}
-:javascript
-  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
-
--facebook = {:u=>"http://#{request.host}/us"}
 
 -# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
 -# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
@@ -27,22 +19,33 @@ social:
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner, locals: {campaign_date: campaign_date('full-year')}).include? '#HourOfCode'
 
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry"}
-%script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
 #top
-  #fullwidth
+  #fullwidth{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
     = view :header
-    %section.banner.homepage
-      .wrapper
-        %p.hoc-label
-          =hoc_s(:hour_of_code)
-        %h1=hoc_s(:hoc2023_header)
-        %p.hero-desc
-          =hoc_s(:hoc2023_hero_desc_homepage)
-        = view :hoc2023_hero_banner_ctas
+    -# Show 2024 HOC banner if hoc_mode is "soon-hoc", otherwise show 2023 banner
+    - if hoc_mode == "soon-hoc"
+      %section.banner.homepage.hoc-2024
+        .wrapper.flex-container
+          %figure
+            %img{src: "/images/hoc-2024-graphic.png", alt: ""}
+          .text-wrapper
+            %h1=hoc_s("hoc_2024.header")
+            %p.body-one
+              =hoc_s("hoc_2024.banner.desc.join_millions")
+          %a.link-button.black{href: resolve_url("/events")}
+            =hoc_s("hoc_2024.button_host_an_event")
+    - else
+      %section.banner.homepage
+        .wrapper
+          %p.hoc-label
+            =hoc_s(:hour_of_code)
+          %h1=hoc_s(:hoc2023_header)
+          %p.hero-desc
+            =hoc_s(:hoc2023_hero_desc_homepage)
+          = view :hoc2023_hero_banner_ctas
 
 %main
   -# What is HoC?
@@ -53,30 +56,11 @@ social:
         =hoc_s(:hoc2023_what_is_hoc_desc)
       = view :index_video
 
-  -# Map
-  %section.map.bg-neutral-light
-    .wrapper
-      .text-wrapper.centered
-        %h2.no-margin-bottom{style: "font-size: 2.5rem;"}
-          =format_integer_with_commas(fetch_hoc_metrics['started']).to_s
-        %h3.heading-xl{style: "margin-top: 0.25rem"}
-          =hoc_s(:hours_of_code_served)
-        %p.body-one.no-margin-bottom
-          =hoc_s(:front_intro_default_2)
-        %p.body-one
-          = view :hoc_events_counter
-      = view :map
-      .text-wrapper.centered
-        %p.body-two.no-margin-bottom
-          =hoc_s(:hoc_homepage_registration_desc)
-        - if hoc_mode != false
-          %a.link-button{href: resolve_url("/events"), style: "margin-top: 2rem"}
-            =hoc_s(:call_to_action_register_your_hoc)
-
   -# Off season interest form
   -# This is only shown when hoc_mode is false
   - if hoc_mode == false
-    %section.no-padding-bottom
+    %hr{style: "max-width: 960px; margin-inline: auto"}
+    %section
       .wrapper
         = view :off_season_interest_form
 
@@ -94,12 +78,6 @@ social:
             %a.link-button{href: 'https://code.org/envivo'}
               = hoc_s(:hoc_live_learn_more)
         %hr
-
-  -# Highlights
-  %section.highlights.centered
-    .wrapper
-      %h2=hoc_s(:highlights_header)
-      = view :home_highlights
 
   -# Stats
   %section.stats.bg-neutral-light

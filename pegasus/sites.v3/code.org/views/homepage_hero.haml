@@ -63,34 +63,20 @@
           .text-wrapper
             %h1
               = I18n.t(entry[:text_h1])
-            %p
+            %p.body-one
               = I18n.t(entry[:text_desc])
-            - if entry[:studio_button_link]
-              %a.link-button{href: CDO.studio_url(entry[:studio_button_link])}
-                = I18n.t(entry[:button_text])
-            - else
-              %a.link-button{href: entry[:button_link]}
-                = I18n.t(entry[:button_text])
+            %a.link-button{href: entry[:studio_button_link] ? CDO.studio_url(entry[:studio_button_link]) : entry[:button_link], class: [(entry[:external_link] ? "has-external-link" : nil), (entry[:button_color_white] ? "white" : nil), (entry[:button_color_black] ? "black" : nil)].compact.join(' '), target: (entry[:external_link] ? "_blank" : nil), rel: (entry[:external_link] ? "noopener noreferrer" : nil)}
+              = I18n.t(entry[:button_text])
           %figure
             %img{src: entry[:img_src], alt: ""}
-      - elsif entry[:type] == "music-lab-launch-2024"
-        %div.flex-container
-          .text-wrapper
-            %p.has-icon.body-one
-              =hoc_s(:"music_lab.introducing_music_lab_strong", markdown: :inline, locals:{music_lab: "Music Lab"})
-            %h1
-              = I18n.t(entry[:text_h1])
-            %p.body-one.wrap-balance
-              = I18n.t(entry[:text_desc])
-            .button-wrapper
-              %a.link-button.white{href: entry[:button_url_primary]}
-                = I18n.t(entry[:button_label_primary])
-              %a.link-button.secondary.white{href: entry[:button_url_secondary]}
-                = I18n.t(entry[:button_label_secondary])
-            .afe
-              %p= I18n.t(entry[:text_desc_02])
-              %figure
-                %img{src: entry[:logo_list_01], alt: I18n.t(entry[:logo_list_01_alt])}
+      - elsif entry[:type] == "best-of-stem-2024"
+        %div
+          %i{class: "fa-solid fa-award", style: "font-size: 4rem; color: #F9CB28; margin-block: 1rem;"}
+          %h1.white{style: "margin-top: 0"}
+            = I18n.t(entry[:text_h1])
+          .button-wrapper
+            %a.link-button.white.has-external-link{href: entry[:button_link], target: (entry[:external_link] ? "_blank" : nil), rel: (entry[:external_link] ? "noopener noreferrer" : nil)}
+              = I18n.t(entry[:button_text])
   .clear{style: "clear: both"}
 
 #hero{style: "position: relative"}
@@ -110,7 +96,7 @@
         .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
     - else
       -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
-      .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
+      .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> entry[:image], style: "background-position: #{entry[:centering]}", class: entry[:classname]}
 
   - if show_single_hero
     - if num_columns == 3

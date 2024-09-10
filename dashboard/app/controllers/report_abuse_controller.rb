@@ -33,32 +33,6 @@ class ReportAbuseController < ApplicationController
     project_owner.permission?(UserPermission::PROJECT_VALIDATOR)
   end
 
-  def report_abuse_pop_up
-    unless protected_project?
-      unless verify_recaptcha || !require_captcha?
-        flash[:alert] = I18n.t('project.abuse.report_abuse_form.validation.captcha')
-        return head :forbidden
-      end
-
-      name = current_user&.name || ''
-      email = current_user&.email
-      age = current_user&.age
-      username = current_user&.username
-      abuse_url = CDO.studio_url(params[:abuse_url], CDO.default_scheme)
-
-      # submit abuse reports from
-      # signed out users (nil) and student accounts (blank string)
-      # under generic email
-      if email.nil? || email == ''
-        email = UNKNOWN_ACCOUNT_ZENDESK_REPORT_EMAIL
-      end
-      send_abuse_report(name, email, age, abuse_url, username)
-      update_abuse_score
-
-      return head :ok
-    end
-  end
-
   def report_abuse
     unless protected_project?
       unless verify_recaptcha || !require_captcha?

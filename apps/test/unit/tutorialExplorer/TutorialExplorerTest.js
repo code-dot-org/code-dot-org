@@ -6,8 +6,6 @@ import {
   orgNameMinecraft,
 } from '@cdo/apps/tutorialExplorer/util';
 
-var assert = require('assert');
-
 describe('TutorialExplorer filterTutorials tests', function () {
   const longOrgName = 'them-012345678901234567890123456789';
   const tutorials = [
@@ -145,7 +143,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, tutorials.length - 1);
+    expect(filtered.length).toEqual(tutorials.length - 1);
   });
 
   it('no filter, but do-not-show and orgname work', function () {
@@ -159,11 +157,11 @@ describe('TutorialExplorer filterTutorials tests', function () {
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 4);
-    assert.equal(filtered[0].name, 'tut3');
-    assert.equal(filtered[1].name, 'tut2');
-    assert.equal(filtered[2].name, 'tut4');
-    assert.equal(filtered[3].name, 'tut1');
+    expect(filtered.length).toEqual(4);
+    expect(filtered[0].name).toEqual('tut3');
+    expect(filtered[1].name).toEqual('tut2');
+    expect(filtered[2].name).toEqual('tut4');
+    expect(filtered[3].name).toEqual('tut1');
   });
 
   it('filter on platform', function () {
@@ -177,8 +175,8 @@ describe('TutorialExplorer filterTutorials tests', function () {
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 1);
-    assert.equal(filtered[0].name, 'tut2');
+    expect(filtered.length).toEqual(1);
+    expect(filtered[0].name).toEqual('tut2');
   });
 
   it('filter on platform and subject', function () {
@@ -193,8 +191,8 @@ describe('TutorialExplorer filterTutorials tests', function () {
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 1);
-    assert.equal(filtered[0].name, 'tut5');
+    expect(filtered.length).toEqual(1);
+    expect(filtered[0].name).toEqual('tut5');
   });
 
   it('filter on platform, no locale provided', function () {
@@ -208,9 +206,9 @@ describe('TutorialExplorer filterTutorials tests', function () {
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 2);
-    assert.equal(filtered[0].name, 'tut5');
-    assert.equal(filtered[1].name, 'tut6');
+    expect(filtered.length).toEqual(2);
+    expect(filtered[0].name).toEqual('tut5');
+    expect(filtered[1].name).toEqual('tut6');
   });
 
   it('filter on subject and language, use hideFilters', function () {
@@ -227,9 +225,9 @@ describe('TutorialExplorer filterTutorials tests', function () {
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 2);
-    assert.equal(filtered[0].name, 'tut3');
-    assert.equal(filtered[1].name, 'tut1');
+    expect(filtered.length).toEqual(2);
+    expect(filtered[0].name).toEqual('tut3');
+    expect(filtered[1].name).toEqual('tut1');
   });
 
   it('filter on subject and language, sort by displayweight', function () {
@@ -243,10 +241,10 @@ describe('TutorialExplorer filterTutorials tests', function () {
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 3);
-    assert.equal(filtered[0].name, 'tut3');
-    assert.equal(filtered[1].name, 'tut4');
-    assert.equal(filtered[2].name, 'tut1');
+    expect(filtered.length).toEqual(3);
+    expect(filtered[0].name).toEqual('tut3');
+    expect(filtered[1].name).toEqual('tut4');
+    expect(filtered[2].name).toEqual('tut1');
   });
 
   it('filter on subject and language, sort by popularityrank', function () {
@@ -260,10 +258,10 @@ describe('TutorialExplorer filterTutorials tests', function () {
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 3);
-    assert.equal(filtered[0].name, 'tut4');
-    assert.equal(filtered[1].name, 'tut1');
-    assert.equal(filtered[2].name, 'tut3');
+    expect(filtered.length).toEqual(3);
+    expect(filtered[0].name).toEqual('tut4');
+    expect(filtered[1].name).toEqual('tut1');
+    expect(filtered[2].name).toEqual('tut3');
   });
 
   it('show only one language', function () {
@@ -276,9 +274,9 @@ describe('TutorialExplorer filterTutorials tests', function () {
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 2);
-    assert.equal(filtered[0].name, 'tut3');
-    assert.equal(filtered[1].name, 'tut4');
+    expect(filtered.length).toEqual(2);
+    expect(filtered[0].name).toEqual('tut3');
+    expect(filtered[1].name).toEqual('tut4');
   });
 
   it('shows Minecraft as Codeorg tutorial', function () {
@@ -307,18 +305,18 @@ describe('TutorialExplorer filterTutorials tests', function () {
       props
     );
 
-    assert.equal(filtered.length, 1);
-    assert.equal(filtered[0].name, 'minecraft');
+    expect(filtered.length).toEqual(1);
+    expect(filtered[0].name).toEqual('minecraft');
   });
 
   it('get unique orgnames', function () {
     const uniqueOrgNames =
       TutorialExplorer.getUniqueOrgNamesFromTutorials(tutorials);
 
-    assert.equal(uniqueOrgNames.length, 3);
-    assert.equal(uniqueOrgNames[0], 'code');
-    assert.equal(uniqueOrgNames[1], 'tech');
-    assert.equal(uniqueOrgNames[2], longOrgName);
+    expect(uniqueOrgNames.length).toEqual(3);
+    expect(uniqueOrgNames[0]).toEqual('code');
+    expect(uniqueOrgNames[1]).toEqual('tech');
+    expect(uniqueOrgNames[2]).toEqual(longOrgName);
   });
 
   it('get tutorials by search term', function () {
@@ -332,9 +330,9 @@ describe('TutorialExplorer filterTutorials tests', function () {
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorialsWithSpec, props);
-    assert.equal(filtered.length, 2);
-    assert.equal(filtered[0].name, 'specific');
-    assert.equal(filtered[1].name, 'special');
+    expect(filtered.length).toEqual(2);
+    expect(filtered[0].name).toEqual('specific');
+    expect(filtered[1].name).toEqual('special');
 
     props.searchTerm = 'specific';
 
@@ -342,8 +340,8 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tutorialsWithSpec,
       props
     );
-    assert.equal(filtered2.length, 1);
-    assert.equal(filtered2[0].name, 'specific');
+    expect(filtered2.length).toEqual(1);
+    expect(filtered2[0].name).toEqual('specific');
 
     props.searchTerm = 'dinosaur';
 
@@ -351,7 +349,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tutorialsWithSpec,
       props
     );
-    assert.equal(filtered3.length, 0);
+    expect(filtered3.length).toEqual(0);
   });
 
   it('get tutorials by search term and subject filter', function () {
@@ -367,8 +365,8 @@ describe('TutorialExplorer filterTutorials tests', function () {
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorialsWithSpec, props);
-    assert.equal(filtered.length, 1);
-    assert.equal(filtered[0].name, 'special');
+    expect(filtered.length).toEqual(1);
+    expect(filtered[0].name).toEqual('special');
 
     props.searchTerm = 'specific';
 
@@ -376,6 +374,6 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tutorialsWithSpec,
       props
     );
-    assert.equal(filtered2.length, 0);
+    expect(filtered2.length).toEqual(0);
   });
 });

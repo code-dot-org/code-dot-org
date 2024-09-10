@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2024-04-23T19:52:45.000Z",
   "level_num": "custom",
@@ -39,7 +40,7 @@
     "name_suffix": "_grade5",
     "skip_autosave": true,
     "default_song": "ificanthaveyou_shawnmendes",
-    "long_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
+    "long_instructions": "\r\nGet your groove on! Create a dance of your own to share with your friends.",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -55,11 +56,13 @@
     "hint_prompt_attempts_threshold": "1",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-23T19:52:45.088+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_10_maker\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_10_maker\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:52:45.088+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_10_maker\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_10_maker\"},{\"changed_at\":\"2024-06-25 18:53:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-26 17:47:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "debugging": 1,

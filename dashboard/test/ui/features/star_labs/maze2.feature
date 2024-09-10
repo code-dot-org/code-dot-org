@@ -3,7 +3,7 @@ Feature: Complete a simple maze level
   Background:
     Given I am on "http://studio.code.org/reset_session"
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/11?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I dismiss the login reminder
     Then element ".csf-top-instructions p" has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
 
@@ -12,11 +12,11 @@ Feature: Complete a simple maze level
   Scenario: Submit an incorrect program missing a block
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
-    # Repeat: move forward, turn right, turn right
-    Then I drag block "4" to block "5"
-    And I drag block "3" into first position in repeat block "6"
-    And I drag block "1" to block "7"
-    And I drag block "1" to block "8"
+    # Repeat: turn right, move forward, move forward
+    Then I drag block "repeatForever" to block "topBlock"
+    And I drag block "turnRight" into first position in repeat block "repeatForever"
+    And I drag block "moveForward" to block "turnRight"
+    And I drag block "moveForward" to block "moveForward"
     And I press "runButton"
     And I wait until element ".uitest-topInstructions-inline-feedback" is visible
     Then element "#runButton" is hidden
@@ -27,7 +27,7 @@ Feature: Complete a simple maze level
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # Drag out repeat block.
-    Then I drag block "4" to block "5"
+    Then I drag block "repeatForever" to block "topBlock"
     And I press "runButton"
     And I wait until element ".uitest-topInstructions-inline-feedback" is visible
     Then element "#runButton" is hidden
@@ -41,11 +41,11 @@ Feature: Complete a simple maze level
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # move forward, Repeat: move forward, turn left, move forward
-    Then I drag block "1" to block "5"
-    And I drag block "4" to block "6"
-    And I drag block "1" into first position in repeat block "7"
-    And I drag block "2" to block "8"
-    And I drag block "1" to block "9"
+    Then I drag block "moveForward" to block "topBlock"
+    And I drag block "repeatForever" to block "moveForward"
+    And I drag block "turnLeft" into first position in repeat block "repeatForever"
+    And I drag block "moveForward" into first position in repeat block "repeatForever"
+    And I drag block "moveForward" to block "turnLeft"
     And I press "runButton"
     And I wait until element ".congrats" is visible
     And element ".congrats" has text "Congratulations! You completed Puzzle 11. (However, you could have used only 5 blocks.)"

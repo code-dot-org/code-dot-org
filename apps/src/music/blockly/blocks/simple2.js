@@ -1,12 +1,16 @@
+import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
+import {getCodeForSingleBlock} from '../blockUtils';
 import {
   TRIGGER_FIELD,
   FIELD_SOUNDS_NAME,
   FIELD_PATTERN_NAME,
+  FIELD_PATTERN_AI_NAME,
   FIELD_REST_DURATION_NAME,
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE,
   FIELD_CHORD_NAME,
+  FIELD_TUNE_NAME,
   DOCS_BASE_URL,
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
@@ -16,12 +20,12 @@ import {
 import {
   fieldSoundsDefinition,
   fieldPatternDefinition,
+  fieldPatternAiDefinition,
   fieldRestDurationDefinition,
   fieldChordDefinition,
+  fieldTuneDefinition,
   fieldTriggerDefinition,
 } from '../fields';
-import {getCodeForSingleBlock} from '../blockUtils';
-import musicI18n from '../../locale';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().
@@ -170,6 +174,33 @@ export const playPatternAtCurrentLocationSimple2 = {
     )}, "${block.id}");`,
 };
 
+export const playPatternAiAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: musicI18n.blockly_blockPlayPatternAi({bot: '%1', pattern: '%2'}),
+    args0: [
+      {
+        type: 'field_image',
+        src: '/blockly/media/ai-bot-mini.svg',
+        width: 24,
+        height: 24,
+        alt: '',
+      },
+      fieldPatternAiDefinition,
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: musicI18n.blockly_blockPlayPatternAiTooltip(),
+    helpUrl: DOCS_BASE_URL + 'play_pattern_ai',
+  },
+  generator: block =>
+    `Sequencer.playPattern(${JSON.stringify(
+      block.getFieldValue(FIELD_PATTERN_AI_NAME)
+    )}, "${block.id}");`,
+};
+
 export const playChordAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
@@ -185,6 +216,24 @@ export const playChordAtCurrentLocationSimple2 = {
   generator: block =>
     `Sequencer.playChord(${JSON.stringify(
       block.getFieldValue(FIELD_CHORD_NAME)
+    )},  "${block.id}");`,
+};
+
+export const playTuneAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: musicI18n.blockly_blockPlayTune({tune: '%1'}),
+    args0: [fieldTuneDefinition],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: musicI18n.blockly_blockPlayTuneTooltip(),
+    helpUrl: DOCS_BASE_URL + 'play_tune',
+  },
+  generator: block =>
+    `Sequencer.playTune(${JSON.stringify(
+      block.getFieldValue(FIELD_TUNE_NAME)
     )},  "${block.id}");`,
 };
 
@@ -336,7 +385,7 @@ export const playSoundsRandom = {
 export const repeatSimple2 = {
   definition: {
     type: BlockTypes.REPEAT_SIMPLE2,
-    message0: '%{BKY_CONTROLS_REPEAT_TITLE}',
+    message0: Blockly.Msg['CONTROLS_REPEAT_TITLE'],
     args0: [
       {
         type: 'field_number',
@@ -346,7 +395,7 @@ export const repeatSimple2 = {
         max: 100,
       },
     ],
-    message1: '%{BKY_CONTROLS_REPEAT_INPUT_DO} %1',
+    message1: `${Blockly.Msg['CONTROLS_REPEAT_INPUT_DO']} %1`,
     args1: [
       {
         type: 'input_statement',
@@ -357,7 +406,7 @@ export const repeatSimple2 = {
     previousStatement: null,
     nextStatement: null,
     style: 'loop_blocks',
-    tooltip: '%{BKY_CONTROLS_REPEAT_TOOLTIP}',
+    tooltip: Blockly.Msg['CONTROLS_REPEAT_TOOLTIP'],
     helpUrl: DOCS_BASE_URL + 'repeat',
   },
   generator: block => {

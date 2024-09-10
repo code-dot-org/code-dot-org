@@ -1,15 +1,17 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
-import PropTypes from 'prop-types';
-import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
-import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {
   PROGRAM_CSD,
   PROGRAM_CSA,
 } from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
-import _ from 'lodash';
+import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 let regionalPartnerData, regionalPartnerError;
 
@@ -117,8 +119,8 @@ describe('useRegionalPartner tests', () => {
           }}
         />
       );
-      await clock.runAllAsync();
     });
+    await clock.runAllAsync();
 
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);
@@ -144,8 +146,8 @@ describe('useRegionalPartner tests', () => {
           }}
         />
       );
-      await clock.runAllAsync();
     });
+    await clock.runAllAsync();
 
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);

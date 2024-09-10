@@ -1,0 +1,83 @@
+name 'VPL-CI-LessonTypes-U5_CSD_PL_23_-foundations24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit Content
+
+#### The Representing Information unit focuses on data representation and its role in solving information problems. Students learn what a representation system needs to be useful, and how computers are able to represent different types of information using binary systems. For the chapter project, students represent their perfect day in a binary punch card and trade with classmates to decipher.
+
+#### **Goals**
+
+* #### Understand the role of data and data representation in solving information problems.
+* #### Explain the necessary components of any data representation scheme, as well as the particulars of binary and the common ways that various types of simple and complex data are represented in binary code.
+
+#### **Big Questions**
+
+* #### Why is representation important in problem solving?
+* #### What features does a representation system need to be useful?
+* #### What is necessary to create usable binary representation systems?
+* #### How can we combine systems together to get more complex information?
+
+
+## Lessons
+#### Most lessons are designed for **45 minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
+
+### **Lesson Components** 
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm Up</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Each lesson begins with a warm up, which serves as a highly approachable shared experience that highlights the need for the skills and understandings presented in the lesson. These should be kept short so that students can quickly move into the main activity of the lesson. Warm ups end with a big question that articulates the problem space students will be exploring during the lesson. This question sets the stage for the target learning.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💃 Activity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Students spend the majority of their time engaging in the lesson activity. Activities provide students with opportunities to explore new computing concepts. Exploration is essential for students to build the content knowledge they will need to understand and participate in computing activities. Lesson activities are scaffolded to provide students with just-in-time information to solve their problems as they build their computing knowledge and skills.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🏁 Wrap Up</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Wrap ups end every lesson and provide students with opportunities to reflect on the skills and understandings presented in the lesson. Wrap ups include a review of any vocabulary introduced in the lesson, and return to the big question introduced in the warm up. Wrap ups are often journal prompts and short discussions that can be used as an exit ticket or short formative assessment.
+</p></div>
+</details>
+
+### **Lesson Types**
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Non-Programming Lessons</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Non-programming lessons focus on process skills and non-programming computing concepts. These lessons are mostly offline, but some do include online components. Offline lessons typically include an activity guide that students will use throughout the lesson as a guide for their learning. Non-programming lessons present students with opportunities for collaboration and discussion in small groups as well as individual reflection.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">👩‍💻 Project Lessons</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### ***Mini-projects*** are opportunities for students to apply what they have learned by creating something new in a more open-ended setting. Mini-projects appear throughout the unit as opportunities for students to practice open-ended application of a small set of new skills. These projects can be expanded or condensed depending on the class time available. 
+
+#### ***Projects*** are multi-day open-ended lessons found at the end of each chapter or unit. Projects challenge students to create using skills developed throughout the unit. Projects often include opportunities for planning, creation, and reflection. 
+</p></div>
+</details>
+
+
+MARKDOWN

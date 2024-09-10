@@ -13,7 +13,8 @@
 version: "3"
 services:
   site:
-    image: codedotorg/code-dot-org:1.9.3
+    # TODO: switch to codedotorg/cdo-ci or other new image
+    image: codedotorg/code-dot-org:1.10.0
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/circleci/code-dot-org:delegated

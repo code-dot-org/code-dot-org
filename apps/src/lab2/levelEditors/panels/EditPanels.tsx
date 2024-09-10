@@ -1,18 +1,20 @@
-import {Panel, PanelLayout} from '@cdo/apps/panels/types';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import moduleStyles from './edit-panels.module.scss';
-import PanelsView from '@cdo/apps/panels/PanelsView';
+
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {
   BodyThreeText,
   Heading3,
   Heading5,
 } from '@cdo/apps/componentLibrary/typography';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
+import PanelsView from '@cdo/apps/panels/PanelsView';
+import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import classNames from 'classnames';
-import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
-import Button from '@cdo/apps/templates/Button';
+
+import moduleStyles from './edit-panels.module.scss';
 
 const createKey = (levelName: string) => levelName + '-' + createUuid();
 
@@ -102,6 +104,13 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
         id="level_panels"
         name="level[panels]"
         value={JSON.stringify(panels)}
+      />
+      {/* This extra empty input is used to clear out any old panels data saved to the level's "level_data" field */}
+      <input
+        type="hidden"
+        id="level_level_data"
+        name="level[level_data]"
+        value={JSON.stringify({})}
       />
       <Heading3>Preview</Heading3>
       <div className={moduleStyles.panelsContainer}>

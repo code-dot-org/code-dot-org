@@ -53,6 +53,29 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyLimit.overLimit text {
       fill: ${color.neutral_dark} !important;
     }
+    .fieldAngleDropDownContainer .blocklyAngleHelperContainer {
+      box-shadow: 4px 4px 6px #bbb;
+      border-width: 1px;
+      float: right;
+    }
+    .fieldAngleDropDownContainer .blocklyMenu{
+      float: left;
+    }
+    .fieldAngleDropDownContainer .blocklyMenu::after {
+      content: '';
+      border-left: 1px solid #949ca2;
+      position: absolute;
+      height: 80%;
+      right: 0;
+      top: 10%;
+    }
+    .fieldAngleDropDownContainer .blocklyMenuItem{
+      min-width: 0em;
+    }
+    .k1ColourDropdown>tr>td {
+      height: 35px;
+      width: 45px;
+    }
     `
   );
 }

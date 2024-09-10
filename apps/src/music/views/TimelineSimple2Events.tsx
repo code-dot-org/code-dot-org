@@ -1,7 +1,14 @@
 import React, {useCallback, useMemo} from 'react';
+
+import AppConfig from '../appConfig';
+import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+
 import TimelineElement from './TimelineElement';
 import {useMusicSelector} from './types';
-import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+
+const useOriginalTimelineLayout =
+  AppConfig.getValue('timeline-original-layout') === 'true';
 
 /**
  * Compute the extents for the given function, given the list of unique sounds and all functions.
@@ -86,7 +93,6 @@ const FunctionExtentsSimple2: React.FunctionComponent<
 
   return (
     <div
-      key={index}
       style={{
         position: 'absolute',
         backgroundColor:
@@ -105,6 +111,34 @@ const FunctionExtentsSimple2: React.FunctionComponent<
 };
 
 /**
+ * Given an array of playback events, returns a copy of the array that is sorted
+ * primarily by when each sound is played.
+ */
+const getOrderedByWhenSoundEvents = (soundEvents: PlaybackEvent[]) => {
+  // This sort arranges all of the sounds played under "when run" in order of when
+  // played.  Triggered sounds come after them.
+  return [...soundEvents].sort((soundEvent1, soundEvent2) => {
+    if (soundEvent1.triggered && soundEvent2.triggered) {
+      const soundEvent1Name = soundEvent1.functionContext?.name || '';
+      const soundEvent2Name = soundEvent2.functionContext?.name || '';
+      if (soundEvent1Name < soundEvent2Name) {
+        return -1;
+      } else if (soundEvent1 > soundEvent2) {
+        return 1;
+      } else {
+        return 0;
+      }
+    } else if (soundEvent1.triggered && !soundEvent2.triggered) {
+      return 1;
+    } else if (!soundEvent1.triggered && soundEvent2.triggered) {
+      return -1;
+    } else {
+      return soundEvent1.when - soundEvent2.when;
+    }
+  });
+};
+
+/**
  * Renders timeline events in the simple2 model.
  */
 interface TimelineSimple2EventsProps {
@@ -117,7 +151,18 @@ interface TimelineSimple2EventsProps {
 const TimelineSimple2Events: React.FunctionComponent<
   TimelineSimple2EventsProps
 > = ({paddingOffset, barWidth, eventVerticalSpace, getEventHeight}) => {
-  const soundEvents = useMusicSelector(state => state.music.playbackEvents);
+  const soundEventsOriginal = useMusicSelector(
+    state => state.music.playbackEvents
+  );
+
+  // soundEventsOriginal has sounds sorted primarily by the immediate function
+  // that generates them, and next by when they are played.  Unless useOriginalTimelineLayout
+  // is true, then they are resorted so that all sounds played somewhere under
+  // "when run" are sorted by when they are played.
+  const soundEvents = useOriginalTimelineLayout
+    ? soundEventsOriginal
+    : getOrderedByWhenSoundEvents(soundEventsOriginal);
+
   const orderedFunctions = useMusicSelector(
     state => state.music.orderedFunctions
   );
@@ -173,6 +218,7 @@ const TimelineSimple2Events: React.FunctionComponent<
       <div id="timeline-events-function-extents">
         {uniqueFunctionExtentsArray.map((functionExtents, index) => (
           <FunctionExtentsSimple2
+            key={index}
             index={index}
             paddingOffset={paddingOffset}
             barWidth={barWidth}

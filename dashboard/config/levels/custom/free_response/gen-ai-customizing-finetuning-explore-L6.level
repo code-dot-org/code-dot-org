@@ -17,10 +17,11 @@
     "peer_reviewable": "false",
     "optional": "false",
     "allow_multiple_attempts": "true",
-    "placeholder": "Type your answer here!"
+    "placeholder": "Type your answer here!",
+    "long_instructions": "If you could fine-tune your own model, what would you have it do? Or who would you have it behave like?\r\n\r\nWhat data would you need in order to successfully fine-tune the model (for example: specific websites? interviews? types of literature?)"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:59:24.748+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L3\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L3\"},{\"changed_at\":\"2024-05-13 07:24:43 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:59:24.748+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L3\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L3\"},{\"changed_at\":\"2024-05-13 07:24:43 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-18 00:20:30 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

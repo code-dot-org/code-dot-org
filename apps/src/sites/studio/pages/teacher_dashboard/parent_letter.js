@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
+import {setPegasusOrigin, setStudioOrigin} from '@cdo/apps/lib/util/urlHelpers';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import currentUser, {
+  setCurrentUserName,
+} from '@cdo/apps/templates/currentUserRedux';
+import ParentLetter from '@cdo/apps/templates/teacherDashboard/ParentLetter';
 import teacherSections, {
   selectSection,
   setSections,
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import currentUser, {
-  setCurrentUserName,
-} from '@cdo/apps/templates/currentUserRedux';
-import {setPegasusOrigin, setStudioOrigin} from '@cdo/apps/lib/util/urlHelpers';
-import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
 
 const script = document.querySelector('script[data-json]');
 const scriptData = JSON.parse(script.dataset.json);
@@ -42,7 +43,11 @@ window.addEventListener('DOMContentLoaded', function () {
   document.body.appendChild(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
-      <ParentLetter autoPrint logoUrl={scriptData.logoUrl} />
+      <ParentLetter
+        autoPrint
+        logoUrl={scriptData.logoUrl}
+        loginTypeName={scriptData.section.login_type_name}
+      />
     </Provider>,
     mountPoint
   );

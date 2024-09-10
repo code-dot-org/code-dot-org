@@ -1,10 +1,12 @@
-import React from 'react';
-import SignInCalloutWrapper from '@cdo/apps/code-studio/components/header/SignInCalloutWrapper';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
-import sinon from 'sinon';
 import cookies from 'js-cookie';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import SignInCalloutWrapper from '@cdo/apps/code-studio/components/header/SignInCalloutWrapper';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ViewPopup', () => {
   it('displays the correct background darkness', () => {
@@ -63,12 +65,8 @@ describe('Check cookies and session storage appear on click', () => {
   it('session storage appears when clicked', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
     wrapper.setState({hideCallout: false});
-    var sessionSetStub = sinon.stub(sessionStorage, 'setItem');
     wrapper.find('.uitest-login-callout').simulate('click');
-    expect(sessionSetStub).to.have.been.calledWith(
-      'hide_signin_callout',
-      'true'
-    );
+    expect(sessionStorage.getItem('hide_signin_callout')).to.equal('true');
   });
 
   it('if cookie is set, callout does not appear', () => {

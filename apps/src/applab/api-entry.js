@@ -6,11 +6,6 @@ import '@cdo/apps/sites/studio/pages/code-studio';
 // which need to be explicitly required here.
 window.React = require('react');
 window.Applab = require('./applab');
-import {injectErrorHandler} from '../lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import Sounds from '../Sounds';
-import {singleton as studioApp} from '../StudioApp';
-import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
 import {
   getAppOptions,
   setAppOptions,
@@ -18,9 +13,16 @@ import {
 } from '@cdo/apps/code-studio/initApp/loadApp';
 import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
-import {getExportedGlobals} from './export';
+import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
+
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import {injectErrorHandler} from '../lib/util/javascriptMode';
 import * as shareWarnings from '../shareWarnings';
+import Sounds from '../Sounds';
+import {singleton as studioApp} from '../StudioApp';
 import {navigateToHref} from '../utils';
+
+import {getExportedGlobals} from './export';
 window.CDOSounds = Sounds.getSingleton();
 
 const noop = function () {};

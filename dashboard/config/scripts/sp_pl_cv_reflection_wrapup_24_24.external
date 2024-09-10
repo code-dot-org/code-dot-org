@@ -1,0 +1,25 @@
+name 'sp-pl-CV_reflection_wrapup_24_24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Everyday Uses
+
+#### Some possible answers you may have reflected on in the previous level include:
+
+<img src="https://images.code.org/78c92ae348445d60db8ea37bea16630b-image-1716997244321.png" alt="AI bot with a directional sign" width="250px" style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
+
+* #### **Smartphone Features**: "I can connect the concept of facial recognition to the facial unlock feature on smartphones. Students use this feature daily, so explaining how their phone uses computer vision to recognize their face will make the concept more relatable."
+
+* #### **Social Media Filters:** "I can discuss how segmentation is used in social media apps like Instagram and Snapchat to apply filters to people's faces. This connection can help students understand how computer vision can distinguish different parts of an image."
+
+* #### **Virtual Reality Games:** "I could use examples from popular VR games, which use motion tracking to create an immersive experience. By explaining the computer vision techniques behind motion detection, students will see the practical application in a context they find exciting."
+
+* #### **Self-Driving Cars:** "I will relate the heat map and motion detection techniques to the technology used in self-driving cars. These cars use computer vision to detect objects and navigate safely, a futuristic and relevant topic."
+
+* #### **Healthcare Applications:** "Discussing how computer vision is used in healthcare, such as in medical imaging to detect tumors or in fitness apps to correct posture, can show students the impact of this technology on their well-being and future careers."
+
+* #### **Retail and Shopping:** "I can connect the use of computer vision in retail environments, such as automated checkouts and personalized shopping experiences, to show how these techniques improve the efficiency and convenience of everyday tasks."
+
+![]()
+MARKDOWN

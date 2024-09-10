@@ -5,6 +5,41 @@ class UsersHelperTest < ActionView::TestCase
   include UsersHelper
   include SharedConstants
 
+  class CountryCodeTest < ActionView::TestCase
+    setup do
+      @country_code = 'US'
+      @request = ActionDispatch::Request.new({'HTTP_CLOUDFRONT_VIEWER_COUNTRY' => @country_code.downcase})
+    end
+
+    test 'returns country code of student' do
+      student_country_code = 'UA'
+
+      student = build(:student, country_code: student_country_code)
+
+      assert_equal student_country_code, country_code(student, @request)
+    end
+
+    test 'returns nil if country code of student is not set' do
+      student = build(:student, country_code: nil)
+
+      assert_nil country_code(student, @request)
+    end
+
+    test 'returns country code of teacher' do
+      teacher_country_code = 'UA'
+
+      teacher = build(:teacher, country_code: teacher_country_code)
+
+      assert_equal teacher_country_code, country_code(teacher, @request)
+    end
+
+    test 'returns request country code when teacher country_code is not set' do
+      teacher = build(:teacher, country_code: '')
+
+      assert_equal @country_code, country_code(teacher, @request)
+    end
+  end
+
   def test_summarize_user_progress
     script = create(:script, :with_levels, levels_count: 3)
     user = create :user
@@ -479,5 +514,27 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal 2, coteacher.sections_instructed.count
     assert_equal destination_teacher.id, section.user.id
     assert_equal destination_teacher.id, section_instructor2.instructor.id
+  end
+
+  describe '.account_linking_lock_reason' do
+    let(:user) {build_stubbed(:user)}
+
+    let(:user_cap_compliant?) {true}
+
+    before do
+      Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+    end
+
+    it 'returns nil' do
+      _(account_linking_lock_reason(user)).must_be_nil
+    end
+
+    context 'when user is not compliant with CAP' do
+      let(:user_cap_compliant?) {false}
+
+      it 'returns lock reason message' do
+        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account.'
+      end
+    end
   end
 end

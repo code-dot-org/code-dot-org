@@ -1,12 +1,12 @@
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
 import {reviewCommentShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -25,7 +25,7 @@ function Comment({
   currentUserId,
   viewingAsOwner,
 }) {
-  const isMounted = useRef(false);
+  const isMounted = React.useRef(false);
   const [isCommentResolved, setIsCommentResolved] = useState(
     comment.isResolved
   );

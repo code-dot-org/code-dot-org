@@ -1,6 +1,8 @@
-import _ from 'lodash';
-import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
+import _ from 'lodash';
+
+import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
+
 import {savePromptAndResponse} from '../interactionsApi';
 import {
   Role,
@@ -8,7 +10,6 @@ import {
   ChatCompletionMessage,
   Level,
   ChatContext,
-  AITutorTypes,
 } from '../types';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
@@ -20,10 +21,6 @@ export interface AITutorState {
   chatMessages: ChatCompletionMessage[];
   isWaitingForChatResponse: boolean;
   isChatOpen: boolean;
-}
-
-export interface InstructionsState {
-  longInstructions: string;
 }
 
 const initialChatMessages: ChatCompletionMessage[] = [
@@ -43,17 +40,26 @@ const initialState: AITutorState = {
   isChatOpen: false,
 };
 
-const formatQuestionForAITutor = (chatContext: ChatContext) => {
-  if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
-    return chatContext.studentInput;
+export const formatQuestionForAITutor = (chatContext: ChatContext) => {
+  let formattedQuestion = chatContext.studentInput;
+
+  if (chatContext.studentCode) {
+    const separator = '\n\n---\n\n';
+    const codePrefix = "Here is the student's code:\n\n```\n";
+    const codePostfix = '\n```';
+    formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
   }
 
-  const separator = '\n\n---\n\n';
-  const codePrefix = "Here is the student's code:\n\n```\n";
-  const codePostfix = '\n```';
-
-  const formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
   return formattedQuestion;
+};
+
+const formatResponseForStudent = (response: string) => {
+  const paritionedResponse = response.split(
+    '[pedagogical-guiding-answer-markdown]'
+  );
+  const guidingResponse = paritionedResponse[paritionedResponse.length - 1];
+  const studentFacingResponse = guidingResponse.split('[end-of-response]')[0];
+  return studentFacingResponse;
 };
 
 // THUNKS
@@ -62,14 +68,10 @@ export const askAITutor = createAsyncThunk(
   async (chatContext: ChatContext, thunkAPI) => {
     const state = thunkAPI.getState();
     const aiTutorState = state as {aiTutor: AITutorState};
-    const instructionsState = state as {instructions: InstructionsState};
     const levelContext = {
       levelId: aiTutorState.aiTutor.level?.id,
-      isProjectBacked: aiTutorState.aiTutor.level?.isProjectBacked,
       scriptId: aiTutorState.aiTutor.scriptId,
     };
-
-    const levelInstructions = instructionsState.instructions.longInstructions;
 
     const storedMessages = aiTutorState.aiTutor.chatMessages;
     const newMessage: ChatCompletionMessage = {
@@ -80,12 +82,15 @@ export const askAITutor = createAsyncThunk(
     thunkAPI.dispatch(addChatMessage(newMessage));
 
     const formattedQuestion = formatQuestionForAITutor(chatContext);
+    // We currently use the default system prompt stored on the server,
+    // so don't pass in an override here.
+    const systemPrompt = undefined;
     const chatApiResponse = await getChatCompletionMessage(
       formattedQuestion,
       storedMessages,
+      systemPrompt,
       levelContext.levelId,
-      chatContext.actionType,
-      levelInstructions
+      levelContext.scriptId
     );
     thunkAPI.dispatch(
       updateLastChatMessage({
@@ -97,7 +102,9 @@ export const askAITutor = createAsyncThunk(
       const assistantChatMessage: ChatCompletionMessage = {
         role: Role.ASSISTANT,
         status: chatApiResponse.status,
-        chatMessageText: chatApiResponse.assistantResponse,
+        chatMessageText: formatResponseForStudent(
+          chatApiResponse.assistantResponse
+        ),
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }

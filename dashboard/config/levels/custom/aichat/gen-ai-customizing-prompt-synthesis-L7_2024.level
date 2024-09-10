@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:54:46.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Reversing a Sentence\r\n\r\nThis task is actually extremely difficult for a language model because of how its designed to generate sentences. However, with some examples, its performance can be improved.\r\n\r\n### Do This\r\n1) Try 3 short sentences (no more than 8 words) and see the results\r\n2) Add at least 2 examples to the prompt showing how the model should behave. For example:\r\n    - Input: \"this is a sentence\"\r\n    - Response: \"sentence is a this\"\r\n    - Use \"Input:\" / \"Response:\" to structure your examples\r\n3) Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button to save your changes!\r\n4) Type in the same 3 sentences and see how it changes the difference\r\n    - If you don't notice a huge difference, try adding more examples!\r\n\r\n**Note:** This will never be _perfect_ because of how language models work. But you should notice an improvement when you add more examples to the prompt!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* This is a sentence\r\n* Hello World\r\n* Welcome Home\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "Reverse all the words in the sentence.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:46.237+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L7\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L7\"}]"
+}]]></config>
+</Aichat>

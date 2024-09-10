@@ -98,14 +98,39 @@
   }
 }
 
+// Chips Colors
+.chips-black {
+  fieldset {
+    .chip {
+      border-color: $light_black;
+    }
+  }
+}
+
+.chips-gray {
+  fieldset {
+    .chip {
+      border-color: $light_gray_400;
+    }
+  }
+}
+
+// Chips sizes
 .chips-l {
   .groupLabel {
     @include label-one;
   }
 
   .chip {
-    @include body-one;
-    padding: 0.62rem 1.25rem;
+    padding: calc(0.62rem + 2px) 1.25rem 0.62rem;
+
+    &.chip-thick {
+      @include button-one-text;
+    }
+
+    &.chip-thin {
+      @include body-one;
+    }
   }
 }
 
@@ -115,8 +140,15 @@
   }
 
   .chip {
-    @include body-two;
-    padding: 0.5rem 1rem;
+    padding: calc(0.5rem + 2px) 1rem 0.5rem;
+
+    &.chip-thick {
+      @include button-two-text;
+    }
+
+    &.chip-thin {
+      @include body-two;
+    }
   }
 }
 
@@ -126,8 +158,15 @@
   }
 
   .chip {
-    @include body-three;
-    padding: 0.31rem 0.75rem;
+    padding: calc(0.31rem + 1px) 0.75rem 0.31rem;
+
+    &.chip-thick {
+      @include button-three-text;
+    }
+
+    &.chip-thin {
+      @include body-three;
+    }
   }
 }
 
@@ -137,7 +176,14 @@
   }
 
   .chip {
-    @include body-four;
-    padding: 0.12rem 0.5rem;
+    padding: calc(0.12rem + 1px) 0.5rem 0.12rem;
+
+    &.chip-thick {
+      @include button-four-text;
+    }
+
+    &.chip-thin {
+      @include body-four;
+    }
   }
 }

@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-04-18T17:12:35.000Z",
   "level_num": "custom",
@@ -12,10 +13,12 @@
     "skip_sound": true,
     "parent_level_id": 27335,
     "name_suffix": "_2023",
-    "encrypted": "false"
+    "encrypted": "false",
+    "long_instructions": "#### Let’s take a look at Sprite Lab to see how it can be used to make games"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-18T17:12:35.321+00:00\",\"changed\":[\"cloned from \\\"game_design_video_sprites\\\"\"],\"cloned_from\":\"game_design_video_sprites\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-18T17:12:35.321+00:00\",\"changed\":[\"cloned from \\\"game_design_video_sprites\\\"\"],\"cloned_from\":\"game_design_video_sprites\"},{\"changed_at\":\"2024-07-08 19:56:56 +0000\",\"changed\":[],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

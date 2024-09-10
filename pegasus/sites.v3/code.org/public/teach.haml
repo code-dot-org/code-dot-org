@@ -19,10 +19,11 @@ theme: responsive_full_width
       %img.rounded-corners.box-shadow-primary{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
-= view :poetry_banner
+-# Show Curriculum Launch banner if dcdo is true
+= view :curriculum_launch_skinny_banner
 
-// TODO - Remove this once the Music Lab launch is over
-= view :"music/music_lab_skinny_banner"
+-# Show Hour of Code 2024 banner if hoc_mode is set to "soon-hoc"
+= view :hoc_skinny_banner
 
 %section.why-teach-cs.bg-neutral-light
   .wrapper
@@ -113,7 +114,11 @@ theme: responsive_full_width
   .wrapper
     = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
 
-%section.pl-offerings.centered
+%section.labs.centered
+  .wrapper
+    = view :teach_page_labs
+
+%section.pl-offerings.centered.bg-neutral-light
   .wrapper
     = view :teach_page_pl
 
@@ -123,6 +128,8 @@ theme: responsive_full_width
       %p.no-margin-bottom
         %strong
           Are you a district leader or administrator? <a href="/administrators">Find out how to bring Code.org to your district</a>.
+
+= view :"lms/lms_integrations_banner"
 
 %section
   .wrapper

@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Make Your Own\r\n\r\nMake the chatbot you described in the check-in level! Add a system prompt and at least 10 retrieval statements.\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the `Continue`(#7435b2) button!",
+    "long_instructions": "## Make Your Own\r\n\r\nMake the chatbot you described in the check-in level! Add a system prompt and at least 10 retrieval statements.\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-retrieval-templateE"
+    "project_template_level_name": "gen-ai-customizing-retrieval-templateE",
+    "display_name": "Make Your Own",
+    "bubble_choice_description": "Make the chatbot you described in the check-in level! Add a system prompt and at least 10 retrieval statements.",
+    "thumbnail_url": "https://images.code.org/187ecf18176f40084398752bdf01a354-Lesson 6 - Level 9E - Make Your Own.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:20:23.733+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L7D\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L7D\"},{\"changed_at\":\"2024-05-08 22:36:28 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 22:47:30 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:20:23.733+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L7D\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L7D\"},{\"changed_at\":\"2024-05-08 22:36:28 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 22:47:30 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:38:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:30:30 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

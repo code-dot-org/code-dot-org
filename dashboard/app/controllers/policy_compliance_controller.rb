@@ -23,12 +23,13 @@ class PolicyComplianceController < ApplicationController
     Services::ChildAccount.grant_permission_request!(permission_request)
     @permission_granted = true
     user = permission_request.user
-    @permission_granted_date = user.child_account_compliance_state_last_updated
+    @permission_granted_date = user.cap_status_date
+    @student_id = user.id
   end
 
   # GET /policy_compliance/pending_permission_request
   def pending_permission_request
-    @pending_permission_request = Queries::ChildAccount.latest_permission_request(current_user)
+    @pending_permission_request = current_user.latest_parental_permission_request
 
     if @pending_permission_request
       render json: ChildAccount::PendingPermissionRequestSerializer.new(@pending_permission_request).as_json

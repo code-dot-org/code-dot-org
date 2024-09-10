@@ -97,6 +97,7 @@ group :development, :test do
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
 
+  gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
   gem 'timecop'
@@ -107,6 +108,7 @@ group :development, :test do
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
+  gem 'minitest-rails', '~> 6.1', require: false
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
@@ -162,14 +164,10 @@ gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-# Ref: https://github.com/daynew/omniauth-clever/pull/1
-gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
+gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
-# Ref: https://github.com/joel/omniauth-windowslive/pull/16
-# Ref: https://github.com/joel/omniauth-windowslive/pull/17
-gem 'omniauth-windowslive', '~> 0.0.11', github: 'code-dot-org/omniauth-windowslive', ref: 'cdo'
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
@@ -228,6 +226,8 @@ gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
+gem 'aws-sdk-autoscaling'
+gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
@@ -257,6 +257,7 @@ end
 # Reduce volume of production logs
 # Ref: https://github.com/roidrage/lograge/pull/252
 gem 'lograge', github: 'code-dot-org/lograge', ref: 'debug_exceptions'
+gem 'request_store', '~> 1.6.0', require: false
 
 # Enforce SSL
 gem 'rack-ssl-enforcer'
@@ -266,10 +267,8 @@ gem 'pusher', '~> 1.3.1', require: false
 
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
-gem 'daemons'
+gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
 gem 'httparty'
-gem 'net-scp'
-gem 'net-ssh'
 gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
@@ -284,10 +283,9 @@ gem 'acmesmith', '~> 2.3.1'
 gem 'addressable'
 # bcrypt version specified due to "Invalid Hash" error in Linux
 gem 'bcrypt', '3.1.13'
-gem 'firebase'
-gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
+gem 'validate_url', '~> 1.0.15'
 
 gem 'composite_primary_keys', '~> 13.0'
 
@@ -300,7 +298,6 @@ gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie', '>= 2.1.1'
 
 gem 'omniauth-openid'
-gem 'omniauth-openid-connect', github: 'code-dot-org/omniauth-openid-connect', ref: 'cdo'
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
@@ -322,7 +319,7 @@ gem 'recaptcha', require: 'recaptcha/rails'
 gem 'loofah', '~> 2.19.1'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
-require_pg = -> do
+require_pg = lambda do
   require 'socket'
   %w[production-daemon production-console i18n-dev].include?(Socket.gethostname)
 end
@@ -342,8 +339,6 @@ gem 'require_all', require: false
 
 gem 'dotiw'
 
-gem 'datapackage'
-
 gem 'ruby-progressbar'
 
 gem 'pry', '~> 0.14.0'
@@ -352,6 +347,8 @@ gem 'pry', '~> 0.14.0'
 gem 'cld'
 
 gem 'crowdin-api', '~> 1.10.0'
+
+gem "pycall", ">= 1.5.2"
 
 gem "delayed_job_active_record", "~> 4.1"
 
@@ -365,3 +362,6 @@ gem 'statsig', '~> 1.33'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
+
+gem 'json-jwt', '~> 1.15'
+gem "json-schema", "~> 4.3"

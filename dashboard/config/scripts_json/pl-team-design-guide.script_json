@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "pl-team-design-guide",
-    "serialized_at": "2024-03-21 18:59:38 UTC",
+    "serialized_at": "2024-07-02 14:19:46 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -808,6 +808,28 @@
     },
     {
       "chapter": 23,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Headings and Body Text"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L3_Links"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a"
+      },
+      "level_keys": [
+        "PLGuide_L3_Links"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -831,7 +853,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1113,6 +1135,18 @@
         "level.key": "PLGuide_L3_BodyText1",
         "script_level.level_keys": [
           "PLGuide_L3_BodyText1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "438b7f52-72d3-49f2-a08e-5d4df1464b9a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L3_Links",
+        "script_level.level_keys": [
+          "PLGuide_L3_Links"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

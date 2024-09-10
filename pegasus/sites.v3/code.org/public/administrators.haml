@@ -10,8 +10,7 @@ theme: responsive_full_width
   .wrapper
     .text-wrapper.col-50
       %h1=hoc_s(:admins_page_top_heading)
-      %p.heading-xs
-        =hoc_s(:admins_page_top_subhead)
+      %p=hoc_s(:admins_page_top_subhead)
       %p.body-three
         =hoc_s(:admins_page_top_desc)
       %a.link-button{href: "/districts"}
@@ -20,9 +19,13 @@ theme: responsive_full_width
       %img.rounded-corners.box-shadow-primary{src: "/images/admins-page-top.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
-= view :section_divider_line
+-# Show Curriculum Launch banner if dcdo is true
+= view :curriculum_launch_skinny_banner
 
-%section.why-teach-cs
+-# Show Hour of Code 2024 banner if hoc_mode is set to "soon-hoc"
+= view :hoc_skinny_banner
+
+%section.why-teach-cs.bg-neutral-light
   .wrapper
     %h2.centered
       =hoc_s(:teach_page_why_teach_cs_heading)
@@ -88,19 +91,7 @@ theme: responsive_full_width
   .wrapper
     = view :"administrators/admins_subscribe_form"
 
-%section.lms.bg-neutral-light
-  .wrapper.centered
-    %h2=hoc_s(:admins_page_lms_heading)
-    %p=hoc_s(:admins_page_lms_desc)
-    .logos.flex-container.justify-center.align-items-start.wrap
-      %img{src: "/images/avatars/lms-logo-clever.png", alt: "Clever", style: "width: 115px"}
-      %img{src: "/images/avatars/lms-logo-google-classroom.png", alt: "Google Classroom", style: "width: 185px"}
-      .coming-soon
-        %img{src: "/images/avatars/lms-logo-canvas.png", alt: "Canvas", style: "width: 150px"}
-        %p=hoc_s(:module_label_coming_soon)
-      .coming-soon
-        %img{src: "/images/avatars/lms-logo-schoology.png", alt: "Schoology", style: "width: 185px"}
-        %p=hoc_s(:module_label_coming_soon)
+= view :"lms/lms_integrations_banner"
 
 %section
   .wrapper

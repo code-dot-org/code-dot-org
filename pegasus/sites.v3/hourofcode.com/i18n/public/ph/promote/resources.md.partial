@@ -24,8 +24,6 @@ Print your own posters! Simply click an image below to view and save a printable
 
 {{ promote_new_posters }}
 
-* Hinahanap ang mga poster namin sa mga nakaraang taon? [Hanapin sila dito]({{ promote/previous_posters_url }})!
-
 <a id="social"></a>
 
 ## I-post ang mga ito sa social media
@@ -95,26 +93,6 @@ Ngayong taon, gawin natin mas malaki ito. Hinihiling kong sumali ka sa Hour of C
 Ipamalita ito. Mag-host ng event. Hilingin ang lokal na paaralan na mag-sign up. O subukan mo ang Hour of Code—makikinabang ang lahat mula sa pag-aaral ng mga pangunahing kaalaman.
 
 Magsimula sa http://hourofcode.com/{{ country_language }}<br />
-
-* * *
-
-<a id="help-schools"></a>
-
-### Magboluntaryo sa isang paaralan:
-
-#### [Maghanap ng higit pang mga mapagkukunan at impormasyon tungkol sa pagboboluntaryo sa mga paaralan dito]({{ how_to_volunteers_url }}).
-
-**Linya ng paksa:** Matutulungan ka ba naming mag-host ng Hour of Code?
-
-Sa pagitan ng {{ campaign_date/short }}, magdidiwang ng Linggo ng Edukasyon ng Computer Science ang sampung porsyento ng mga mag-aaral sa buong mundo sa pamamagitan ng paggawa ng Hour of Code sa paaralan nila. Ito'y isang pagkakataon sa bawat bata na matuto kung paano gumagana ang teknolohiya.
-
-[Organisasyon natin/Pangalan ko] ay gustong tumulong sa [pangalan ng paaralan] na magpatakbo ng event ng Hour of Code. Pwede natin tulungan ang mga guro na mag-host ng Hour of Code sa kanilang mga silid-aralan (hindi na natin kailangan ng computer!) o kung nais mong mag-host ng isang pagtitipon sa paaralan, maaari tayong magsaayos ng tagapagsalita upang pag-usapan kung paano gumagana ang teknolohiya at kung ano ang pakiramdam na maging isang software engineer.
-
-Gagawa ang mga mag-aaral ng sarili nilang mga app o mga laro na ipapakita sa kanilang mga magulang, at magpi-print din kami ng mga sertipiko sa Hour of Code na pwede nilang dalhin sa bahay. At, masaya ito! Sa interaktibo, hands-on na aktibidad, matututunan ng mga estudyante ang computational na pag-iisip sa madaling paraan.
-
-Nasa lahat ng dako ang mga computer, binabago ang bawat industriya sa planeta. Ngunit 51% lamang ng lahat ng haiskul ang nag-aalok ng computer science. Ang mabuting balita ay papunta na tayo upang baguhin ito! Kung narinig mo na dati ang tungkol sa Hour of Code, maaaring alam mong gumawa na ito ng ksaysayan - mahigit 100 milyong mga mag-aaral sa buong mundo ang sumubok na sa Hour of Code. At sumulat na ng kanilang unang mga linya ng code bilang bahagi ng kampanya ang mga lider gaya ni Presidente Obama at Canadian Prime Minister Justin Trudeau.
-
-Mababasa mo ang higit pang tungkol sa event sa http://hourofcode.com/. O, ipaalam mo sa amin kung nais mong mag-schedule ng ilang oras upang pag-usapan ang tungkol sa kung paano makikibahagi ang [pangalan ng paaralan].<br />
 
 * * *
 
