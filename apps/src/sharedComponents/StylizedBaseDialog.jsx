@@ -125,9 +125,6 @@ export default function StylizedBaseDialog(props) {
 }
 
 StylizedBaseDialog.propTypes = {
-  bodyId: PropTypes.string,
-  isOpen: PropTypes.bool,
-  fixedWidth: PropTypes.number,
   title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   body: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   // Alternative to providing body prop
