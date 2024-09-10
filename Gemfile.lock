@@ -39,15 +39,6 @@ GIT
       omniauth-oauth2 (>= 1.1, <= 1.8)
 
 GIT
-  remote: https://github.com/code-dot-org/omniauth-windowslive.git
-  revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
-  ref: cdo
-  specs:
-    omniauth-windowslive (0.0.11)
-      multi_json (>= 1.0.3)
-      omniauth-oauth2 (~> 1.4)
-
-GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -1041,7 +1032,6 @@ DEPENDENCIES
   omniauth-microsoft_v2_auth!
   omniauth-openid
   omniauth-rails_csrf_protection (~> 0.1)
-  omniauth-windowslive (~> 0.0.11)!
   open_uri_redirections
   os
   parallel

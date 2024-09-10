@@ -12,7 +12,7 @@ import HttpClient from '../util/HttpClient';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
-import {ChatItem} from './types';
+import {ChatItem, ChatPrompt} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -48,10 +48,27 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       status: Status.OK,
     },
     [
-      'Explain a concept',
-      'Give an example to use with my class',
-      'Write an extension activity for students who finish early',
-      'Write an extension activity for students who need extra practice',
+      {
+        label: 'Explain a concept',
+        prompt:
+          'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
+      },
+      {
+        label: 'Give an example to use with my class',
+        prompt:
+          'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
+      },
+      {
+        label: 'Write an extension activity for students who finish early',
+        prompt:
+          'Write an extension activity for this lesson for students who finish early',
+      },
+      {
+        label:
+          'Write an extension activity for students who need extra practice',
+        prompt:
+          'Write an extension activity for this lesson for students who need extra practice',
+      },
     ],
   ]);
 
@@ -68,10 +85,18 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     };
 
     setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
+    getAIResponse(message);
+  };
+
+  const onPromptSelect = (prompt: ChatPrompt) => {
+    getAIResponse(prompt.prompt);
+  };
+
+  const getAIResponse = (prompt: string) => {
     setIsWaitingForResponse(true);
 
     const body = JSON.stringify({
-      inputText: message,
+      inputText: prompt,
       lessonId: lessonId,
       unitDisplayName: unitDisplayName,
       sessionId: sessionId,
@@ -93,16 +118,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       .finally(() => {
         setIsWaitingForResponse(false);
       });
-  };
-
-  const onPromptSelect = (prompt: string) => {
-    const newAiMessage = {
-      role: Role.ASSISTANT,
-      chatMessageText: `You selected "${prompt}". This is a placeholder response.`,
-      status: Status.OK,
-    };
-
-    setMessageHistory([...messageHistory, newAiMessage]);
   };
 
   return (

@@ -10,9 +10,12 @@ social:
 
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 
+-# Get the default HOC mode
+-hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::HOC_ACTIVITIES_PAGE_VISITED
 
-#fullwidth
+#fullwidth{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
   = view :header
   %section.banner
     = view :learn_banner_text
