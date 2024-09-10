@@ -10,7 +10,7 @@ import i18n from '@cdo/locale';
 
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
 
-import youTubeAvailabilityEndpointURL from './youtubeCheck';
+import youTubeAvailabilityEndpointURL from './youTubeAvailabilityEndpointURL';
 
 var clientState = require('./clientState');
 var testImageAccess = require('./url_test');
