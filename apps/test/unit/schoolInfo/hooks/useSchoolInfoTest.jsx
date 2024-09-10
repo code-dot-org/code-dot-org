@@ -2,18 +2,16 @@ import {waitFor} from '@testing-library/react';
 import {act, renderHook} from '@testing-library/react-hooks';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
-  SCHOOL_COUNTRY,
-  SELECT_A_SCHOOL,
-  US_COUNTRY_CODE,
-} from '@cdo/apps/schoolInfo/constants';
-import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
-import {
+  SCHOOL_COUNTRY_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
+  SELECT_A_SCHOOL,
+  US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 
 jest.mock('@cdo/apps/lib/util/AnalyticsReporter');
@@ -70,7 +68,7 @@ describe('useSchoolInfo', () => {
 
   it('should use initialState instead of sessionStorage if passed', async () => {
     await act(async () => {
-      sessionStorage.setItem(SCHOOL_COUNTRY, US_COUNTRY_CODE);
+      sessionStorage.setItem(SCHOOL_COUNTRY_SESSION_KEY, US_COUNTRY_CODE);
       sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, '2');
       sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, 'Stored School');
       sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '54321');
@@ -90,7 +88,7 @@ describe('useSchoolInfo', () => {
 
   it('should use sessionStorage if no initialState is passed', async () => {
     await act(async () => {
-      sessionStorage.setItem(SCHOOL_COUNTRY, US_COUNTRY_CODE);
+      sessionStorage.setItem(SCHOOL_COUNTRY_SESSION_KEY, US_COUNTRY_CODE);
       sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, '2');
       sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, 'Stored School');
       sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '54321');
@@ -129,7 +127,7 @@ describe('useSchoolInfo', () => {
         waitFor(() => {
           const schoolCountrySessionStorageCalls =
             mockSessionStorage.setItem.mock.calls.filter(
-              ([key]) => key === SCHOOL_COUNTRY
+              ([key]) => key === SCHOOL_COUNTRY_SESSION_KEY
             );
           expect(schoolCountrySessionStorageCalls).toHaveLength(2);
           expect(schoolCountrySessionStorageCalls[0][1]).toBe(

@@ -1,7 +1,6 @@
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
+import {US_COUNTRY_CODE} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import i18n from '@cdo/locale';
-
-import {US_COUNTRY_CODE} from '../constants';
 
 export function getCountriesUsFirst() {
   // Add 'Select a country' and 'United States' to the top of the country list

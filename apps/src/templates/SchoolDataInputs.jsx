@@ -4,16 +4,16 @@ import React, {useMemo} from 'react';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
-import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
-import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
-import i18n from '@cdo/locale';
-
 import {
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
   SELECT_A_SCHOOL,
   US_COUNTRY_CODE,
-} from '../schoolInfo/constants';
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
+import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
+import i18n from '@cdo/locale';
+
 import {getCountriesUsFirst} from '../schoolInfo/utils/getCountriesUsFirst';
 
 import style from './school-association.module.scss';

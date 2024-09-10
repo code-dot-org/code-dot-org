@@ -2,7 +2,10 @@ import '@testing-library/jest-dom';
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
-import {CLICK_TO_ADD, NO_SCHOOL_SETTING} from '@cdo/apps/schoolInfo/constants';
+import {
+  CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import i18n from '@cdo/locale';
 

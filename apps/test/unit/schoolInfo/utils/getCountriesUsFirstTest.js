@@ -1,6 +1,6 @@
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
-import {US_COUNTRY_CODE} from '@cdo/apps/schoolInfo/constants';
 import {getCountriesUsFirst} from '@cdo/apps/schoolInfo/utils/getCountriesUsFirst';
+import {US_COUNTRY_CODE} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import i18n from '@cdo/locale';
 
 describe('getCountriesUsFirst', () => {

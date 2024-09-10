@@ -1,5 +1,5 @@
-import {SCHOOL_ZIP_SEARCH_URL} from '@cdo/apps/schoolInfo/constants';
 import {fetchSchools} from '@cdo/apps/schoolInfo/utils/fetchSchools';
+import {SCHOOL_ZIP_SEARCH_URL} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 
 window.fetch = jest.fn();
 

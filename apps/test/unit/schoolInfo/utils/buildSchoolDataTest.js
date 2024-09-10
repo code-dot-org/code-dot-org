@@ -1,8 +1,8 @@
+import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';
 import {
   NON_SCHOOL_OPTIONS_ARRAY,
   US_COUNTRY_CODE,
-} from '@cdo/apps/schoolInfo/constants';
-import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 
 describe('buildSchoolData', () => {
   it('should return school info with school_id when schoolId is provided and not in NON_SCHOOL_OPTIONS_ARRAY', () => {

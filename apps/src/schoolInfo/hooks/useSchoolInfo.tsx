@@ -3,19 +3,17 @@ import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
+  CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
   SCHOOL_COUNTRY_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
-} from '@cdo/apps/signUpFlow/signUpFlowConstants';
-
-import {
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
   SELECT_A_SCHOOL,
   US_COUNTRY_CODE,
   ZIP_REGEX,
-} from '../constants';
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+
 import {SchoolDropdownOption, SchoolInfoInitialState} from '../types';
 import {constructSchoolOption} from '../utils/constructSchoolOption';
 import {fetchSchools as fetchSchoolsAPI} from '../utils/fetchSchools';

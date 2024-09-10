@@ -1,4 +1,4 @@
-import {SCHOOL_ZIP_SEARCH_URL} from '../constants';
+import {SCHOOL_ZIP_SEARCH_URL} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 
 export async function fetchSchools(
   zip: string,
