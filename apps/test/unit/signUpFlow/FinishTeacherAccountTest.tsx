@@ -12,6 +12,8 @@ import {
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import i18n from '@cdo/locale';
 
+jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools');
+
 describe('FinishTeacherAccount', () => {
   afterEach(() => {
     sessionStorage.clear();
