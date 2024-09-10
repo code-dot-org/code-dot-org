@@ -46,6 +46,7 @@ export const defaultMaps: {
       'math_arithmetic',
       'math_random_int',
       'math_modulo',
+      'math_number_property',
     ],
     Logic: ['controls_if', 'logic_compare'],
   },

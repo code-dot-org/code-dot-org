@@ -17,7 +17,7 @@
 .side-by-side-cta-wrapper
   - list_item.each do |list_item|
     .flex-container
-      %h3
+      %h3.heading-sm
         %i{class: "#{list_item[:icon]}"}
         = list_item[:audience_heading]
       %a.link-button.white{href: list_item[:url_primary]}

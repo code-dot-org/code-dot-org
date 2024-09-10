@@ -7,8 +7,8 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Toggle from '@cdo/apps/componentLibrary/toggle';
 import DCDO from '@cdo/apps/dcdo';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import FreeResponseResponses from './FreeResponseResponses';
