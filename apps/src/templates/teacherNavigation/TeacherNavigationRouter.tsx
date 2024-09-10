@@ -27,6 +27,9 @@ import TextResponses from '../textResponses/TextResponses';
 
 import DefaultTeacherNavRedirect from './DefaultTeacherNavRedirect';
 import ElementOrEmptyPage from './ElementOrEmptyPage';
+import LessonMaterialsContainer, {
+  lessonMaterialsLoader,
+} from './LessonMaterialsContainer';
 import PageHeader from './PageHeader';
 import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import TeacherNavigationBar from './TeacherNavigationBar';
@@ -52,6 +55,7 @@ export interface Section {
   name: string;
   courseVersionName: string;
   courseOfferingId: number;
+  unitId: number;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -228,11 +232,14 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
+            loader={lessonMaterialsLoader}
             element={
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+                element={applyV1TeacherDashboardWidth(
+                  <LessonMaterialsContainer />
+                )}
               />
             }
           />

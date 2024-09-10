@@ -413,6 +413,12 @@ class ApiController < ApplicationController
     render json: standards
   end
 
+  def lesson_materials
+    unit_id = params[:unit_id]
+    script = Unit.get_from_cache(unit_id)
+    render json: script.summarize_for_lesson_materials_view(current_user)
+  end
+
   def course_summary
     course_name = params[:course_name]
     unit_group = UnitGroup.get_from_cache(course_name)
