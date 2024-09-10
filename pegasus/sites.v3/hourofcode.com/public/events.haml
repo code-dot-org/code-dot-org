@@ -36,7 +36,7 @@ layout: wide_index
         %img.rounded-corners{src: "/images/events-page-header.png", alt: "", style: "width: 100%;"}
 
   %section#form.bg-neutral-light
-    .wrapper.flex-container.flex-direction-column-tablet-reverse.align-items-center.gap-2
+    .wrapper
       - if hoc_mode == false
         = view :"events/off_season_interest_form"
       - else
