@@ -20,6 +20,7 @@ import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 interface ChatEventViewProps {
   event: ChatEvent;
+  isTeacherView?: boolean;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -37,8 +38,8 @@ function formatModelUpdateText(update: ModelUpdate): string {
   }
 
   const updatedText = updatedToText
-    ? ` has been updated to ${updatedToText}.`
-    : ' has been updated.';
+    ? `has been updated to ${updatedToText}.`
+    : 'has been updated.';
 
   return `${fieldLabel} ${updatedText} ${timestampToLocalTime(timestamp)}`;
 }
@@ -48,18 +49,14 @@ function formatModelUpdateText(update: ModelUpdate): string {
  */
 const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   event,
+  isTeacherView,
 }) => {
   const dispatch = useAppDispatch();
 
-  // For now, we always hide chat events when this property is `true`. This is not technically needed
-  // since hidden chat events are not added to `chatEventsCurrent` but adds clarification and redundancy.
-  // TODO: add `teacherView` prop for displaying chat events when in teacher view of student chat history.
-  if (event.hideForParticipants) {
-    return null;
-  }
-
   if (isChatMessage(event)) {
-    return <ChatMessage {...event} />;
+    return (
+      <ChatMessage {...event} showProfaneUserMessageToggle={isTeacherView} />
+    );
   }
 
   if (isNotification(event)) {
@@ -68,7 +65,9 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
       <Alert
         text={`${text} ${timestampToLocalTime(timestamp)}`}
         type={notificationType === 'error' ? 'danger' : 'success'}
-        onClose={() => dispatch(removeUpdateMessage(id))}
+        onClose={
+          isTeacherView ? undefined : () => dispatch(removeUpdateMessage(id))
+        }
         size="s"
       />
     );
@@ -77,10 +76,15 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   if (isModelUpdate(event)) {
     return (
       <Alert
+        className="uitest-aichat-chat-alert"
         text={formatModelUpdateText(event)}
         type="success"
-        onClose={() => dispatch(removeUpdateMessage(event.id))}
         size="s"
+        onClose={
+          isTeacherView
+            ? undefined
+            : () => dispatch(removeUpdateMessage(event.id))
+        }
       />
     );
   }
@@ -89,7 +93,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
     return (
       <Alert
         text={ChatEventDescriptions[event.descriptionKey] as string}
-        type="success"
+        type="info"
         size="s"
       />
     );

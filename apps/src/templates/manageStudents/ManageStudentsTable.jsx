@@ -7,8 +7,8 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
 import {
@@ -74,6 +74,7 @@ const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
   SectionLoginType.email,
   SectionLoginType.google_classroom,
   SectionLoginType.clever,
+  SectionLoginType.lti_v1,
 ];
 const LOGIN_TYPES_WITH_GENDER_COLUMN = [
   SectionLoginType.word,
@@ -215,10 +216,7 @@ class ManageStudentsTable extends Component {
 
   shouldShowActionColumn() {
     const {loginType} = this.props;
-    return (
-      LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType) ||
-      (loginType === SectionLoginType.lti_v1 && !this.props.syncEnabled)
-    );
+    return LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType);
   }
 
   // Cell formatters.

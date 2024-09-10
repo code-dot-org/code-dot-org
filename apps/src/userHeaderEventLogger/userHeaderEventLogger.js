@@ -33,23 +33,19 @@ function addClickEventToLinks(selector, eventName, additionalProperties = {}) {
   });
 }
 
-function getHeaderType(screenWidth) {
-  if (screenWidth < 425) return 'mobile';
-  if (screenWidth < 1024) return 'tablet';
-  if (screenWidth <= 1268) return 'small desktop';
-  return 'large desktop';
-}
-
 const addCreateMenuMetrics = (
   headerCreateMenu,
   platforms,
+  isSignedIn,
   additionalOptions = {}
 ) => {
   if (headerCreateMenu) {
     // Log if a signed-out user clicks the "Create" menu dropdown
     headerCreateMenu.addEventListener('click', () => {
       analyticsReporter.sendEvent(
-        EVENTS.SIGNED_IN_USER_CLICKS_CREATE_DROPDOWN,
+        isSignedIn
+          ? EVENTS.SIGNED_IN_USER_CLICKS_CREATE_DROPDOWN
+          : EVENTS.SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN,
         additionalOptions,
         platforms
       );
@@ -62,7 +58,9 @@ const addCreateMenuMetrics = (
         .getElementById(`create_menu_option_${option}`)
         .addEventListener('click', () => {
           analyticsReporter.sendEvent(
-            EVENTS.SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION,
+            isSignedIn
+              ? EVENTS.SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION
+              : EVENTS.SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION,
             {
               option: option,
               ...additionalOptions,
@@ -112,16 +110,6 @@ const addMenuMetrics = (
 };
 
 const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
-  const screenWidth = window.innerWidth;
-  analyticsReporter.sendEvent(
-    EVENTS.SIGNED_OUT_USER_SEES_HEADER,
-    {
-      pageUrl: pageUrl,
-      headerType: getHeaderType(screenWidth),
-    },
-    PLATFORMS.STATSIG
-  );
-
   // Log if a header link is clicked
   addClickEventToLinks('headerlink', EVENTS.SIGNED_OUT_USER_CLICKS_HEADER_LINK);
 
@@ -143,18 +131,6 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
     });
   }
 
-  const signInButton = document.getElementById('signin_button');
-  // Log if the Sign in button is clicked
-  if (signInButton) {
-    signInButton.addEventListener('click', () => {
-      analyticsReporter.sendEvent(
-        EVENTS.SIGNED_OUT_USER_CLICKS_SIGN_IN,
-        {pageUrl: pageUrl},
-        PLATFORMS.STATSIG
-      );
-    });
-  }
-
   // Log if the Help icon menu is clicked
   const helpIcon = document.querySelector('#help-icon');
   helpIcon.addEventListener('click', () => {
@@ -165,7 +141,7 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
     );
   });
 
-  addCreateMenuMetrics(headerCreateMenu, PLATFORMS.BOTH);
+  addCreateMenuMetrics(headerCreateMenu, PLATFORMS.BOTH, false);
 };
 
 const addSignedInMetrics = (pageUrl, headerCreateMenu) => {
@@ -210,7 +186,12 @@ const addSignedInMetrics = (pageUrl, headerCreateMenu) => {
     additionalOptions
   );
 
-  addCreateMenuMetrics(headerCreateMenu, PLATFORMS.STATSIG, additionalOptions);
+  addCreateMenuMetrics(
+    headerCreateMenu,
+    PLATFORMS.STATSIG,
+    true,
+    additionalOptions
+  );
 };
 
 $(document).ready(function () {

@@ -1,0 +1,97 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-08-15T23:07:21.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Play Together\r\n\r\nTry playing two or more sounds at the same time.\r\n\r\n1. Connect [play together](#clickable=play-sounds-together-block) to [when run](#clickable=when-run-block).\r\n2. Then, add two different [sounds](#clickable=play-sound-block) _into_ the [play together](#clickable=play-sounds-together-block-workspace) block. ",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
+        "message": "Nice work. Those two sounds are great together!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-playtogether_7d85508c-951f-4734-8c97-9c67745a4207",
+        "message": "Please play two sounds together. Hint: Try using two different types of sounds to play together, like a drum and a bass beat!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-playtogether_cbf2c46c-cdea-42c9-8b09-e785539b5026",
+        "message": "You chose one sound, now choose a different sound to play together. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
+        "message": "No sounds have played yet. Connect a [play together](#clickable=play-sounds-together-block) block under [when run](#clickable=when-run-block). Then, add two [play](#clickable=play-sound-block-workspace) blocks _into_ the [play together](#clickable=play-sounds-together-block-workspace) block.",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-15T23:07:21.077+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence\\\"\"],\"cloned_from\":\"music-ai-skill-sequence\"},{\"changed_at\":\"2024-08-15 23:08:42 +0000\",\"changed\":[\"tts_short_instructions_override\",\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 21:52:52 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:06:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:08:36 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:09:07 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:10:18 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:11:16 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:12:08 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:12:36 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:13:48 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:14:45 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:15:23 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:16:11 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 22:25:24 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 15:44:03 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 17:17:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 17:18:12 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 17:35:23 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 20:43:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -63,12 +63,20 @@
           .text-wrapper
             %h1
               = I18n.t(entry[:text_h1])
-            %p
+            %p.body-one
               = I18n.t(entry[:text_desc])
-            %a.link-button{href: entry[:studio_button_link] ? CDO.studio_url(entry[:studio_button_link]) : entry[:button_link], class: [(entry[:external_link] ? "has-external-link" : nil), (entry[:button_color_white] ? "white" : nil)].compact.join(' '), target: (entry[:external_link] ? "_blank" : nil), rel: (entry[:external_link] ? "noopener noreferrer" : nil)}
+            %a.link-button{href: entry[:studio_button_link] ? CDO.studio_url(entry[:studio_button_link]) : entry[:button_link], class: [(entry[:external_link] ? "has-external-link" : nil), (entry[:button_color_white] ? "white" : nil), (entry[:button_color_black] ? "black" : nil)].compact.join(' '), target: (entry[:external_link] ? "_blank" : nil), rel: (entry[:external_link] ? "noopener noreferrer" : nil)}
               = I18n.t(entry[:button_text])
           %figure
             %img{src: entry[:img_src], alt: ""}
+      - elsif entry[:type] == "best-of-stem-2024"
+        %div
+          %i{class: "fa-solid fa-award", style: "font-size: 4rem; color: #F9CB28; margin-block: 1rem;"}
+          %h1.white{style: "margin-top: 0"}
+            = I18n.t(entry[:text_h1])
+          .button-wrapper
+            %a.link-button.white.has-external-link{href: entry[:button_link], target: (entry[:external_link] ? "_blank" : nil), rel: (entry[:external_link] ? "noopener noreferrer" : nil)}
+              = I18n.t(entry[:button_text])
   .clear{style: "clear: both"}
 
 #hero{style: "position: relative"}

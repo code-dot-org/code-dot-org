@@ -1,0 +1,377 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2024-08-28T05:06:28.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO #1:** When the student explained to an AI how the program was behaving and the behavior that was intended, the AI suggested that the student modify the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">paintFlagOfBelgium()</code> method to ensure the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FlagPainter</code> is facing the proper direction before calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">paintStripe(\"black\")</code> method. The student added <code style=\"background-color: #ececec; color: black; font-weight: bold;\">turnRight()</code> as the first line of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">paintFlagOfBelgium()</code> method.\r\n\r\n1. The program is still not working as intended. What unintended behavior is happening now?\r\n\r\n2. What should the program be doing?\r\n\r\n✅ **TO DO #2:** Describe to a partner what this method was intended to do and what it is actually doing. \r\n\r\n1. Identify the ways in which the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FlagPainter</code> is not behaving as expected.\r\n\r\n2. Explain to a partner what is happening. \r\n\r\n3. Brainstorm ideas about resolving the problem. Are you able to implement these changes? \r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 Need help identifying the problem?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px;\">\r\n    \t<p>\r\n        The FlagPainter is painting a vertical black stripe and returning to the top of the stripe, which is what I expected. However, instead of moving to the right to paint the next stripe, the FlagPainter tries to move to the left. \r\n        </p>\r\n    </div>\r\n</details>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "neighborhood",
+    "start_sources": {
+      "FlagPainterRunner.java": {
+        "text": "import org.code.neighborhood.*;\n\npublic class FlagPainterRunner {\n  public static void main(String[] args) {\n\n    FlagPainter flag = new FlagPainter();\n    flag.takeAllPaint();\n    flag.paintFlagOfBelgium();\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "PainterPlus.java": {
+        "text": "import org.code.neighborhood.*;\n\npublic class PainterPlus extends Painter {\n\n  // Turns the Painter to the right\n  public void turnRight() {\n    turnLeft();\n    turnLeft();\n    turnLeft();\n  }\n\n  // Takes all of the paint from a paint bucket\n  public void takeAllPaint() {\n    while (isOnBucket()) {\n      takePaint();\n    }\n  }\n\n  // Turns around\n  public void turnAround() {\n    turnLeft();\n    turnLeft();\n  }\n\n  // Paints a line based on how much paint the Painter has\n  public void paintLine(int paintAmount, String color) {\n    setPaint(paintAmount);\n\n    while (hasPaint()) {\n      paint(color);\n      \n      if (canMove()) {\n        move();\n      }\n    }\n  }\n\n  // Moves to the next row\n  public void moveToNextRow() {\n    if (canMove(\"south\")) {\n      if (isFacingEast()) {\n        turnRight();\n        move();\n        turnRight();\n      }\n      else {\n        turnLeft();\n        move();\n        turnLeft();\n      }\n    }\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "FlagPainter.java": {
+        "text": "import org.code.neighborhood.*;\n\npublic class FlagPainter extends PainterPlus {\n\n  /*\n   * Paints the entire flag of Belgium\n   */\n  public void paintFlagOfBelgium() {\n    /* ---- 🔎 This is where the student implemented AI Tutor's suggestion ---- */\n    turnRight();\n    \n    paintStripe(\"black\");\n    moveToNextStripe();\n    paintStripe(\"yellow\");\n    moveToNextStripe();\n    paintStripe(\"red\");\n    resetPosition();\n  }\n\n  /*\n   * Paints a vertical stripe of the flag\n   */\n  public void paintStripe(String color) {\n    for (int i = 0; i < 8; i++) {\n      paint(color);\n      if (canMove()) {\n        move();\n      }\n    }\n    turnAround();\n    for (int i = 0; i < 7; i++) {\n      move();\n    }\n    turnLeft();\n  }\n\n  /*\n   * Moves to the starting position for the next stripe\n   */\n  public void moveToNextStripe() {\n    move();\n    turnRight();\n  }\n\n  /*\n   * Resets the Painter to the starting position\n   */\n  public void resetPosition() {\n    turnLeft();\n    while (canMove()) {\n      move();\n    }\n    turnLeft();\n    while (canMove()) {\n      move();\n    }\n    turnAround();\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 2
+      }
+    },
+    "ai_tutor_available": "false",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 100,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-28T05:06:28.917+00:00\",\"changed\":[\"cloned from \\\"CSA-AIGeneratedCode-L2_2025\\\"\"],\"cloned_from\":\"CSA-AIGeneratedCode-L2_2025\"},{\"changed_at\":\"2024-08-28 05:06:39 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-08-28 05:12:08 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Javalab>

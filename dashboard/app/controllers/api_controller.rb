@@ -125,6 +125,11 @@ class ApiController < ApplicationController
 
       section = GoogleClassroomSection.from_service(course_id, current_user.id, students, course_name)
 
+      # If a teacher passes the criteria for becoming verified, upgrade them here
+      if section && Policies::User.verified_teacher_candidate?(current_user)
+        current_user.verify_teacher!
+      end
+
       render json: section.summarize
     end
   end
@@ -199,6 +204,13 @@ class ApiController < ApplicationController
     end
 
     render json: data
+  end
+
+  use_reader_connection_for_route(:section)
+  def section
+    section = load_section
+
+    render json: section.selected_section_summarize.merge(section.concise_summarize)
   end
 
   use_reader_connection_for_route(:section_progress)
@@ -399,6 +411,25 @@ class ApiController < ApplicationController
     script = Unit.get_from_cache(params[:script])
     standards = script.standards
     render json: standards
+  end
+
+  def course_summary
+    course_name = params[:course_name]
+    unit_group = UnitGroup.get_from_cache(course_name)
+
+    # When the url of a course family is requested, redirect to a specific course version.
+    if !unit_group && UnitGroup.family_names.include?(params[:course_name])
+      unit_group = UnitGroup.latest_stable_version(params[:course_name])
+      if unit_group
+        redirect_path = url_for(action: params[:action], course_name: unit_group.name)
+        redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+        redirect_to "#{redirect_path}#{redirect_query_string}"
+      end
+    end
+
+    render json: {is_verified_instructor: current_user.try(:verified_instructor?) || false,
+                  unit_group: unit_group.summarize(current_user, for_edit: false, locale_code: request.locale),
+                  hidden_scripts: current_user.try(:get_hidden_unit_ids, unit_group)}
   end
 
   use_reader_connection_for_route(:user_progress)

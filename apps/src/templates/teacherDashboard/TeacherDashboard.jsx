@@ -16,11 +16,12 @@ import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 
-import EmptySection from './EmptySection';
+import EmptySectionV1 from './EmptySectionV1';
 import StatsTableWithData from './StatsTableWithData';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
-import TeacherDashboardNavigation from './TeacherDashboardNavigation';
-import {TEACHER_DASHBOARD_PATHS} from './teacherNavigation/TeacherDashboardPaths';
+import TeacherDashboardNavigation, {
+  TEACHER_DASHBOARD_PATHS,
+} from './TeacherDashboardNavigation';
 
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
@@ -129,52 +130,84 @@ function TeacherDashboard({
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.standardsReport}
-          element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+            />
+          }
         />
-        {studentCount === 0 && (
-          <Route
-            element={
-              <EmptySection hasStudents={false} hasCurriculumAssigned={true} />
-            }
-          />
-        )}
         <Route
           path={TEACHER_DASHBOARD_PATHS.projects}
-          element={applyV1TeacherDashboardWidth(
-            <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-          )}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              // Don't show no curriculum assigned error for projects tab.
+              hasCurriculumAssigned={true}
+              element={applyV1TeacherDashboardWidth(
+                <SectionProjectsListWithData
+                  studioUrlPrefix={studioUrlPrefix}
+                />
+              )}
+            />
+          }
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.stats}
-          element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+            />
+          }
         />
-        {!anyStudentHasProgress && (
-          <Route
-            element={
-              <EmptySection hasStudents={true} hasCurriculumAssigned={false} />
-            }
-          />
-        )}
         <Route
           path={TEACHER_DASHBOARD_PATHS.progress}
-          element={<SectionProgressSelector />}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={<SectionProgressSelector isInV1Navigaton={true} />}
+              showProgressPageHeader={true}
+            />
+          }
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.textResponses}
-          element={applyV1TeacherDashboardWidth(<TextResponses />)}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TextResponses />)}
+            />
+          }
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.assessments}
-          element={applyV1TeacherDashboardWidth(
-            <SectionAssessments sectionName={sectionName} />
-          )}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )}
+            />
+          }
         />
         {showAITutorTab && (
           <Route
             path={TEACHER_DASHBOARD_PATHS.aiTutorChatMessages}
-            element={applyV1TeacherDashboardWidth(
-              <TutorTab sectionId={sectionId} />
-            )}
+            element={
+              <EmptySectionV1
+                hasStudents={studentCount > 0}
+                hasCurriculumAssigned={anyStudentHasProgress}
+                element={applyV1TeacherDashboardWidth(
+                  <TutorTab sectionId={sectionId} />
+                )}
+              />
+            }
           />
         )}
       </Routes>

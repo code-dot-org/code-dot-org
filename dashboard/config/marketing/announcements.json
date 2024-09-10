@@ -1,7 +1,7 @@
 {
   "pages": {
-    "/home": "progress-launch",
-    "/student-home": ""
+    "/home": "transformers-sept-2024",
+    "/student-home": "transformers-sept-2024"
   },
   "banners": {
     "superhero": {
@@ -12,13 +12,13 @@
       "buttonUrl": "https://code.org/educate/professional-learning",
       "buttonId": "superhero-pl-details"
     },
-    "hoc-2023": {
-      "image": "/shared/images/fill-540x300/social-media/hoc2023_social.png",
-      "title": "Hour of Code: Creativity with AI",
-      "body": "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed.",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/hourofcode",
-      "buttonId": "hoc-2023"
+    "hoc-2024": {
+      "image": "/shared/images/banners/hoc-2024.png",
+      "title": "Register your Hour of Code",
+      "body": "Join us December 9th-15th for Computer Science Education Week and help us bring what students love to life!",
+      "buttonText": "Host an event",
+      "buttonUrl": "https://hourofcode.com/events",
+      "buttonId": "hoc-2024"
     },
     "curriculum-launch-2024": {
       "dcdo": "curriculum-launch-2024",
@@ -29,13 +29,21 @@
       "buttonUrl": "https://codeorg.medium.com/ai-game-design-and-more-in-code-orgs-2024-25-curriculum-updates-caff691935ad",
       "buttonId": "curriculum-launch-2024"
     },
-    "progress-launch": {
-      "image": "/shared/images/banners/banner-progress-launch.png",
-      "title": "Progress tracking just leveled up!",
-      "body": "Effortlessly monitor student work, provide timely feedback, and simplify grading with our fast, teacher-tested interface. Save time and gain valuable insights into your students' performance, all in one intuitive tool.",
+    "user-research-aug-2024": {
+      "image": "/shared/images/banners/banner-user-research-aug-2024.png",
+      "title": "Help shape the future of Code.org",
+      "body": "Your classroom experience and feedback can help shape improvements to Code.org for all teachers. Join our research community to share your insights, try out new features, and pilot new courses.",
+      "buttonText": "Join our research community",
+      "buttonUrl": "https://greatquestion.co/codedotorg/userresearch",
+      "buttonId": "user-research-aug-2024"
+    },
+    "transformers-sept-2024": {
+      "image": "/shared/images/banners/transformers_action_poster.png",
+      "title": "Get in the fun! Easy-to-learn code with Transformers One",
+      "body": "Autobots, roll out! In this Transformers One-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects.",
       "buttonText": "Try it now",
-      "buttonUrl": "/teacher_dashboard/sections/first_section_progress",
-      "buttonId": "progress-launch"
+      "buttonUrl": "https://studio.code.org/s/hello-world-transformers-one-2024/lessons/1/levels/1",
+      "buttonId": "transformers-sept-2024"
     }
   }
 }

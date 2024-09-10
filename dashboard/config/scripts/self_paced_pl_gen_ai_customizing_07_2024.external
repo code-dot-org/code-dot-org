@@ -1,0 +1,20 @@
+name 'self-paced-pl-gen-ai-customizing_07_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# System Prompting
+
+#### There are lots of new key concepts introduced around system prompting that students will engage with during these lessons. We’ve summarized them below.
+
+#### **Role and Tone**: 
+- #### Role: The part the model plays when responding, like being a teacher, helper, or friend.
+- #### Tone: The way the model speaks, such as being formal, friendly, or casual.
+
+#### **Audience and Delivery**:
+- #### Audience: The people the model is talking to, like kids, adults, or professionals.
+- #### Delivery: How the model says things, whether it’s simple, detailed, quick, or slow, depending on who’s listening.
+
+## Up Next!
+#### Try out writing a system prompt that includes all of these components in chatbot lab.
+MARKDOWN

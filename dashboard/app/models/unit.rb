@@ -67,74 +67,78 @@ class Unit < ApplicationRecord
   has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  scope :with_associated_models, -> do
-    includes(
-      [
-        {
-          script_levels: [
-            {
-              levels: [
-                :concepts,
-                :game,
-                :level_concept_difficulty,
-                :levels_child_levels
-              ]
-            },
-            :lesson,
-            :callouts
-          ]
-        },
-        :lesson_groups,
-        :resources,
-        :student_resources,
-        {
-          lessons: [
-            :lesson_activities,
-            {script_levels: [:levels]}
-          ]
-        },
-        {
-          unit_group_units: :unit_group
-        },
-        {
-          course_version: {
-            course_offering: :course_versions
+  scope(
+    :with_associated_models, lambda do
+      includes(
+        [
+          {
+            script_levels: [
+              {
+                levels: [
+                  :concepts,
+                  :game,
+                  :level_concept_difficulty,
+                  :levels_child_levels
+                ]
+              },
+              :lesson,
+              :callouts
+            ]
+          },
+          :lesson_groups,
+          :resources,
+          :student_resources,
+          {
+            lessons: [
+              :lesson_activities,
+              {script_levels: [:levels]}
+            ]
+          },
+          {
+            unit_group_units: :unit_group
+          },
+          {
+            course_version: {
+              course_offering: :course_versions
+            }
           }
-        }
-      ]
-    )
-  end
+        ]
+      )
+    end
+  )
 
   # The set of models which may be touched by ScriptSeed
-  scope :with_seed_models, -> do
-    includes(
-      [
-        {
-          unit_group_units: {
-            unit_group: :course_version
-          }
-        },
-        :course_version,
-        :lesson_groups,
-        {
-          lessons: [
-            {lesson_activities: :activity_sections},
-            :resources,
-            :vocabularies,
-            :programming_expressions,
-            :objectives,
-            {rubric: {learning_goals: :learning_goal_evidence_levels}},
-            :standards,
-            :opportunity_standards
-          ]
-        },
-        :script_levels,
-        :levels,
-        :resources,
-        :student_resources
-      ]
-    )
-  end
+  scope(
+    :with_seed_models, lambda do
+      includes(
+        [
+          {
+            unit_group_units: {
+              unit_group: :course_version
+            }
+          },
+          :course_version,
+          :lesson_groups,
+          {
+            lessons: [
+              {lesson_activities: :activity_sections},
+              :resources,
+              :vocabularies,
+              :programming_expressions,
+              :objectives,
+              {rubric: {learning_goals: :learning_goal_evidence_levels}},
+              :standards,
+              :opportunity_standards
+            ]
+          },
+          :script_levels,
+          :levels,
+          :resources,
+          :student_resources
+        ]
+      )
+    end
+  )
 
   attr_accessor :skip_name_format_validation
 
@@ -1575,7 +1579,8 @@ class Unit < ApplicationRecord
         scriptOverviewPdfUrl: get_unit_overview_pdf_url,
         scriptResourcesPdfUrl: get_unit_resources_pdf_url,
         updated_at: updated_at.to_s,
-        isPlCourse: pl_course?
+        isPlCourse: pl_course?,
+        showAiAssessmentsAnnouncement: show_ai_assessments_announcement?(user),
       }
 
       #TODO: lessons should be summarized through lesson groups in the future
@@ -2093,6 +2098,16 @@ class Unit < ApplicationRecord
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
     middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+  end
+
+  def ai_assessment_enabled?
+    lessons.any? do |lesson|
+      lesson.rubric&.learning_goals&.any?(&:ai_enabled?)
+    end
+  end
+
+  def show_ai_assessments_announcement?(user)
+    user&.teacher? && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
   private def teacher_feedback_enabled?

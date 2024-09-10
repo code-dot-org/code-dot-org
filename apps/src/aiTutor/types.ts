@@ -61,14 +61,15 @@ export interface Level {
   hasValidation: boolean;
   aiTutorAvailable: boolean;
   isAssessment: boolean;
+  progressionType: string;
 }
 
 export interface ChatContext {
   // studentInput is the last user message for general chat
   // or the student's code for compilation and validation.
   studentInput: string;
-  studentCode: string;
-  actionType: AITutorTypesValue | undefined;
+  studentCode?: string;
+  actionType?: AITutorTypesValue | undefined;
 }
 
 export enum Role {

@@ -1,46 +1,60 @@
-import React from 'react';
+import React, {useCallback, useMemo} from 'react';
 
-import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
+import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {setModelCardProperty} from '../../redux/aichatRedux';
+import {Visibility} from '../../types';
+
+import MultiInputCustomization from './MultiInputCustomization';
+
+import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 
 const ExampleTopicsInputs: React.FunctionComponent<{
+  fieldLabel: string;
+  fieldId: string;
+  tooltipText: string;
   topics: string[];
   readOnly: boolean;
-}> = ({topics, readOnly}) => {
+  visibility: Visibility;
+}> = ({fieldLabel, fieldId, tooltipText, topics, readOnly, visibility}) => {
   const dispatch = useAppDispatch();
 
+  const onUpdateItems = useCallback(
+    (updatedItems: string[]) => {
+      dispatch(
+        setModelCardProperty({
+          property: 'exampleTopics',
+          value: updatedItems,
+        })
+      );
+    },
+    [dispatch]
+  );
+
+  const validationAlert = useMemo(() => {
+    return (
+      <Alert
+        text="Must add at least one example prompt"
+        type={alertTypes.warning}
+        size="s"
+        className={modelCustomizationStyles.examplePromptAlert}
+      />
+    );
+  }, []);
+
   return (
-    <MultiItemInput
-      items={topics}
-      onAdd={() =>
-        dispatch(
-          setModelCardProperty({
-            property: 'exampleTopics',
-            value: [...topics].concat(''),
-          })
-        )
-      }
-      onRemove={() => {
-        dispatch(
-          setModelCardProperty({
-            property: 'exampleTopics',
-            value: [...topics].slice(0, -1),
-          })
-        );
-      }}
-      onChange={(index, value) => {
-        const updatedTopics = topics.slice();
-        updatedTopics[index] = value;
-        dispatch(
-          setModelCardProperty({
-            property: 'exampleTopics',
-            value: updatedTopics,
-          })
-        );
-      }}
-      readOnly={readOnly}
+    <MultiInputCustomization
+      label={fieldLabel}
+      fieldId={fieldId}
+      tooltipText={tooltipText}
+      addedItems={topics}
+      visibility={visibility}
+      isReadOnly={readOnly}
+      hideInputBoxWhenReadOnly={false}
+      onUpdateItems={onUpdateItems}
+      addButtonId="uitest-add-example-topic"
+      validationAlert={topics?.length === 0 ? validationAlert : undefined}
     />
   );
 };

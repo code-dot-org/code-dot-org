@@ -71,4 +71,20 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert exception.message.include?(error_message)
     assert exception.message.include?(request.to_json)
   end
+
+  test 'execution status is set to USER_INPUT_TOO_LARGE and an exception is raised if the input validation error occurs' do
+    error_message = 'Input validation error: `inputs` must have less than 3000 tokens'
+    ShareFiltering.stubs(:find_profanity_failure).returns(nil)
+    AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).raises(StandardError.new(error_message))
+
+    request = create :aichat_request
+    exception = assert_raises(StandardError) do
+      AichatRequestChatCompletionJob.perform_now(request: request, locale: 'en')
+    end
+
+    assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE], request.reload.execution_status
+    assert request.response.include?(error_message)
+    assert exception.message.include?(error_message)
+    assert exception.message.include?(request.to_json)
+  end
 end

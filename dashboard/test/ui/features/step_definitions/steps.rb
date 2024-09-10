@@ -287,9 +287,18 @@ end
 
 When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selector_symbol, name, negation|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
+  wait_for_element(selection_criteria, negation.nil?)
+end
+
+When /^I wait until element with css selector "([^"]*)" is (not )?enabled$/ do |css_selector, negation|
+  selection_criteria = {css: css_selector}
+  wait_for_element(selection_criteria, negation.nil?)
+end
+
+def wait_for_element(selection_criteria, enabled)
   wait_until do
     element = @browser.find_element(selection_criteria)
-    element.enabled? == negation.nil?
+    element.enabled? == enabled
   end
 end
 
@@ -460,24 +469,6 @@ def select_dropdown(element, option_text, load)
     select = Selenium::WebDriver::Support::Select.new(element)
     select.select_by(:text, option_text)
   end
-end
-
-When /^I open the topmost blockly category "([^"]*)"$/ do |name|
-  name_selector = ".blocklyTreeLabel:contains(#{name})"
-  # seems we usually have two of these item, and want the second if the function
-  # editor is open, the first if it isn't
-  @browser.execute_script(
-    "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {" \
-      "bubbles: true," \
-      "cancelable: true," \
-      "view: window" \
-    "}))"
-  )
-rescue
-  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
-  @browser.execute_script(script)
 end
 
 And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
@@ -753,6 +744,10 @@ end
 
 Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
   element_has_i18n_text(selector, language, loc_key)
+end
+
+Then /^element "([^"]*)" has "([^"]*)" RTL text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
+  element_has_i18n_text(selector, language, loc_key, rtl: true)
 end
 
 Then /^element "([^"]*)" has "([^"]*)" markdown from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
@@ -1237,11 +1232,6 @@ When /^I debug channel id$/ do
   puts "appOptions.channel: #{@browser.execute_script('return (appOptions && appOptions.channel)')}"
 end
 
-And(/^I ctrl-([^"]*)$/) do |key|
-  # Note: Safari webdriver does not support actions API
-  @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
-end
-
 def press_keys(element, key)
   element.send_keys(*convert_keys(key))
 end
@@ -1484,7 +1474,6 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
   student_count.to_i.times do |i|
     add_student_step_list.push("Given I create a student named \"student_#{i}\"")
     add_student_step_list.push("And I join the section")
-    add_student_step_list.push("And I wait for 3 seconds")
   end
 
   add_students_to_group_step_list = []
@@ -1502,7 +1491,6 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
     #{add_student_step_list.join("\n")}
     And I wait to see ".alert-success"
     And I sign out using jquery
-    And I wait for 3 seconds
     Given I sign in as "#{teacher_name}" and go home
     And I create a new code review group for the section I saved
     #{add_students_to_group_step_list.join("\n")}
@@ -1547,5 +1535,12 @@ And(/^I validate rubric ai config for all lessons$/) do
     response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_validate_rubric_ai_config"))
     response_code = response.code
     expect(response_code).to eq(200), "Error code #{response_code}:\n#{response.body}"
+  end
+end
+
+And(/^I wait until ai assessments announcement is marked as seen$/) do
+  wait_short_until do
+    response = browser_request(url: '/api/v1/users/current')
+    response['has_seen_ai_assessments_announcement']
   end
 end

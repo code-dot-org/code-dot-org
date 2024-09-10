@@ -18,7 +18,9 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 import AiAssessment from './AiAssessment';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+} from './AiAssessmentFeedbackContext';
 import EvidenceLevels from './EvidenceLevels';
 import tipIcon from './images/AiBot_Icon.svg';
 import infoIcon from './images/info-icon.svg';
@@ -300,8 +302,14 @@ export default function LearningGoals({
   const [displayUnderstanding, setDisplayUnderstanding] = useState(
     INVALID_UNDERSTANDING
   );
-  const [aiFeedback, setAiFeedback] = useState(-1);
+  const [aiFeedback, setAiFeedback] = useState(NO_FEEDBACK);
+  const [aiFeedbackId, setAiFeedbackId] = useState(null);
   const [doneLoading, setDoneLoading] = useState(false);
+
+  // The position of the 'arrow' that points up from the AiAssessment region
+  // to the EvidenceLevels component. When this value is 0, there is no
+  // specific left and the arrow is centered.
+  const [arrowLeft, setArrowLeft] = useState(10);
 
   // The ref version of this state is used when updating the information based
   // on saved info retrieved by network requests so as not to race them.
@@ -412,49 +420,48 @@ export default function LearningGoals({
       setLoaded(teacherFeedbacksLoaded.current[currentLearningGoal]);
       setDisplayUnderstanding(understandingLevels.current[currentLearningGoal]);
 
-      // Only load prior learning goal feedback once
-      learningGoals
-        .filter((learningGoal, index) => {
-          return !teacherFeedbacksLoaded.current[index];
-        })
-        .forEach((learningGoal, index) => {
-          const body = JSON.stringify({
-            userId: studentLevelInfo.user_id,
-            learningGoalId: learningGoal.id,
-          });
-          HttpClient.post(
-            `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
-            body,
-            true,
-            {
-              'Content-Type': 'application/json',
-            }
-          )
-            .then(response => response.json())
-            .then(json => {
-              learningGoalEvalIds.current[index] = json.id;
-              if (json.feedback) {
-                teacherFeedbacks.current[index] = json.feedback;
-              }
-              teacherFeedbacksLoaded.current[index] = true;
-              if (json.understanding >= 0 && json.understanding !== null) {
-                understandingLevels.current[index] = json.understanding;
-              }
-
-              // Uses the redundant ref here instead of state to defeat a race
-              // condition where the current learning goal changes before the
-              // fetch resolves.
-              if (index === currentLearningGoalRef.current) {
-                setDisplayFeedback(teacherFeedbacks.current[index]);
-                setLoaded(teacherFeedbacksLoaded.current[index]);
-                setDisplayUnderstanding(understandingLevels.current[index]);
-              }
-              if (index === learningGoals.length - 1) {
-                setDoneLoading(true);
-              }
-            })
-            .catch(error => console.error(error));
+      learningGoals.forEach((learningGoal, index) => {
+        // Only load prior learning goal feedback once
+        if (teacherFeedbacksLoaded.current[index]) {
+          return;
+        }
+        const body = JSON.stringify({
+          userId: studentLevelInfo.user_id,
+          learningGoalId: learningGoal.id,
         });
+        HttpClient.post(
+          `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
+          body,
+          true,
+          {
+            'Content-Type': 'application/json',
+          }
+        )
+          .then(response => response.json())
+          .then(json => {
+            learningGoalEvalIds.current[index] = json.id;
+            if (json.feedback) {
+              teacherFeedbacks.current[index] = json.feedback;
+            }
+            teacherFeedbacksLoaded.current[index] = true;
+            if (json.understanding >= 0 && json.understanding !== null) {
+              understandingLevels.current[index] = json.understanding;
+            }
+
+            // Uses the redundant ref here instead of state to defeat a race
+            // condition where the current learning goal changes before the
+            // fetch resolves.
+            if (index === currentLearningGoalRef.current) {
+              setDisplayFeedback(teacherFeedbacks.current[index]);
+              setLoaded(teacherFeedbacksLoaded.current[index]);
+              setDisplayUnderstanding(understandingLevels.current[index]);
+            }
+            if (index === learningGoals.length - 1) {
+              setDoneLoading(true);
+            }
+          })
+          .catch(error => console.error(error));
+      });
     }
   }, [studentLevelInfo, learningGoals, currentLearningGoal, open, productTour]);
 
@@ -588,7 +595,8 @@ export default function LearningGoals({
       setCurrentLearningGoal(currentIndex);
 
       // Clear feedback (without sending it)
-      setAiFeedback(-1);
+      setAiFeedback(NO_FEEDBACK);
+      setAiFeedbackId(null);
 
       // Annotate the lines based on the AI observation
       clearAnnotations();
@@ -710,7 +718,7 @@ export default function LearningGoals({
         {currentLearningGoal !== learningGoals.length && (
           <div className={style.learningGoalExpanded}>
             <AiAssessmentFeedbackContext.Provider
-              value={{aiFeedback, setAiFeedback}}
+              value={{aiFeedback, setAiFeedback, aiFeedbackId, setAiFeedbackId}}
             >
               {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
               <div>
@@ -728,6 +736,7 @@ export default function LearningGoals({
                   submittedEvaluation={submittedEvaluation}
                   isStudent={isStudent}
                   isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
+                  arrowPositionCallback={setArrowLeft}
                 />
                 {teacherHasEnabledAi &&
                   !!studentLevelInfo &&
@@ -737,6 +746,14 @@ export default function LearningGoals({
                       id="tour-ai-assessment"
                       className={style.aiAssessmentOuterBlock}
                     >
+                      {/* Draw the arrow pointing at the AI suggested buttons.
+                          EvidenceLevels sets the arrowLeft parameter to reflect the
+                          position of the buttons. And we subtract some to center it.*/}
+                      <div
+                        id="ai-assessment-arrow"
+                        className={style.aiAssessmentArrow}
+                        style={arrowLeft === 0 ? {} : {left: arrowLeft - 10}}
+                      />
                       <AiAssessment
                         isAiAssessed={
                           learningGoals[currentLearningGoal].aiEnabled

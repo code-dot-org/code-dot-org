@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-24 04:50:36 UTC",
+    "serialized_at": "2024-08-27 22:26:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +34,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 10: Algortihms"
+        "display_name": "Unit 10: Algorithms"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit10_2020",
@@ -2659,11 +2659,9 @@
     },
     {
       "name": "CSP Unit 10 - Slides",
-      "url": "https://drive.google.com/drive/folders/1iefEV-xjBzqDifmoN9Y51rv79-zyHgb9?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1R9n57GGvVd8HAbHqU77N86FDGBUaMjkmYyY11vPL6tg/template/preview",
       "key": "csp_unit_10_-_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_10_-_slides"

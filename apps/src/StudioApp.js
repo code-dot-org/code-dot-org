@@ -16,8 +16,6 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
@@ -40,6 +38,8 @@ import {assets as assetsApi} from './clientApi';
 import * as assets from './code-studio/assets';
 import AbuseError from './code-studio/components/AbuseError';
 import SmallFooter from './code-studio/components/SmallFooter';
+import {RESIZE_VISUALIZATION_EVENT} from './code-studio/components/VisualizationResizeBar';
+import WireframeButtons from './code-studio/components/WireframeButtons';
 import project from './code-studio/initApp/project';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
@@ -56,8 +56,6 @@ import * as dropletUtils from './dropletUtils';
 import FeedbackUtils from './feedback';
 import Alert from './legacySharedComponents/alert';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
-import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
-import WireframeButtons from './lib/ui/WireframeButtons';
 import firehoseClient from './lib/util/firehose';
 import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
 import puzzleRatingUtils from './puzzleRatingUtils';
@@ -95,17 +93,15 @@ var codegen = require('./lib/tools/jsinterpreter/codegen');
 var copyrightStrings;
 
 /**
- * Store experiment parameters.
+ * If the bigPlayspace is enabled, either by experiment or by level property,
+ * then the padding can be configured via query param as well.
  */
-const isBigPlayspaceEnabled = experiments.isEnabledAllowingQueryString(
-  experiments.BIG_PLAYSPACE
-);
 const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
 
 /**
  * Get the maximum resizable width of the playspace.
  */
-const getMaxResizableVisualizationWidth = () => {
+const getMaxResizableVisualizationWidth = isBigPlayspaceEnabled => {
   return isBigPlayspaceEnabled
     ? Math.min(window.innerHeight - bigPlaySpacePadding, window.innerWidth / 2)
     : 400;
@@ -289,8 +285,13 @@ StudioApp.prototype.configure = function (options) {
   // binding correctly as they pass this function around.
   this.assetUrl = _.bind(this.assetUrl_, this);
 
+  this.isBigPlayspaceEnabled =
+    experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE) ||
+    options.level.enableBigPlayspace;
+
   this.maxVisualizationWidth =
-    options.maxVisualizationWidth || getMaxResizableVisualizationWidth();
+    options.maxVisualizationWidth ||
+    getMaxResizableVisualizationWidth(this.isBigPlayspaceEnabled);
   this.minVisualizationWidth =
     options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 
@@ -1369,18 +1370,11 @@ StudioApp.prototype.onReportComplete = function (response) {
   }
   this.lastShareUrl = response.level_source;
 
-  // Track GA events
   if (response.new_level_completed) {
-    trackEvent(
-      'Puzzle',
-      'Completed',
-      response.level_path,
-      response.level_attempts
-    );
-  }
-
-  if (response.share_failure) {
-    trackEvent('Share', 'Failure', response.share_failure.type);
+    trackEvent('puzzle', 'puzzle_completed', {
+      path: response.level_path,
+      value: response.level_attempts,
+    });
   }
 };
 
@@ -1413,13 +1407,15 @@ StudioApp.prototype.onResize = function () {
     onResizeSmallFooter();
   }
 
-  if (isBigPlayspaceEnabled) {
+  if (this.isBigPlayspaceEnabled) {
     // Let's avoid an infinite recursion by making sure this is a genuine resize.
     if (
       window.innerWidth !== this.lastWindowInnerWidth ||
       window.innerHeight !== this.lastWindowInnerHeight
     ) {
-      this.maxVisualizationWidth = getMaxResizableVisualizationWidth();
+      this.maxVisualizationWidth = getMaxResizableVisualizationWidth(
+        this.isBigPlayspaceEnabled
+      );
 
       const visualizationColumn = document.getElementById(
         'visualizationColumn'
@@ -1572,7 +1568,7 @@ StudioApp.prototype.resizeVisualization = function (width, skipFire = false) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
-  if (isBigPlayspaceEnabled) {
+  if (this.isBigPlayspaceEnabled) {
     // Override the max visualization column width.
     visualizationColumn.style.width = visualizationColumn.style.maxWidth;
     // Override the visualization height.
@@ -1675,13 +1671,6 @@ StudioApp.prototype.displayFeedback = function (options) {
   }
 
   if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
-    // Track whether this experiment is in use. If not, delete this and similar
-    // sections of code. If it is, create a non-experiment flag.
-    trackEvent(
-      'experiment',
-      'Feedback bubbleDialog',
-      `AppType ${this.config.app}. Level ${this.config.serverLevelId}`
-    );
     const {response, preventDialog, feedbackType, feedbackImage} = options;
 
     const newFinishDialogApps = {
@@ -2156,9 +2145,6 @@ StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
-  const isSignedOut = !config.isSignedIn;
-  const isStandaloneProject = config.level.isProjectLevel;
-
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
@@ -2168,22 +2154,8 @@ StudioApp.prototype.configureDom = function (config) {
     trailing: false,
   });
 
-  function handleRunButtonClick() {
-    throttledRunClick.call(this);
-    // Sends a Statsig event when the Run button is pressed by a signed out user
-    // This is related to the Create Account Button A/B Test; see Jira ticket:
-    // https://codedotorg.atlassian.net/browse/ACQ-1938
-    if (isSignedOut && isStandaloneProject) {
-      analyticsReporter.sendEvent(
-        EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
-        {},
-        PLATFORMS.STATSIG
-      );
-    }
-  }
-
   if (runButton && resetButton) {
-    dom.addClickTouchEvent(runButton, _.bind(handleRunButtonClick, this));
+    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
     this.keyHandler.registerEvent(['Control', 'Enter'], () => {
       if (this.isRunning()) {

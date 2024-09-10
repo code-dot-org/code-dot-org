@@ -6,18 +6,20 @@ title 'Debugging Session'
 markdown <<MARKDOWN
 # Module 6: CS Discoveries Virtual Professional Learning
 
+<img src="https://images.code.org/ecd64a145fae016f6b8190371ee85207-image-1626317012906.jpg" alt="Image of a classroom full of students raising their hands." width="300px" style="border-radius:10px; float:right; margin: 20px 20px 20px 20px;">
+
 ## Module 6 Overview
 
-##### Welcome to the asynchronous work for Module 6 for CS Discoveries!
+#### Welcome to the asynchronous work for Module 6 for CS Discoveries!
 
-##### Module 6 is a continuation of Unit 6 - Creating Apps with Devices, Chapter 1. You will explore how information is gathered from the user and how computers can sense and respond to their environment. Unit 6 - Creating Apps with Devices, Chapter 2 will be discussed during the Module 6 synchronous workshop.
+#### Module 6 is a continuation of Unit 6 - Creating Apps with Devices, Chapter 1. You will explore how information is gathered from the user and how computers can sense and respond to their environment. Unit 6 - Creating Apps with Devices, Chapter 2 will be discussed during the Module 6 synchronous workshop.
 
-##### The asynchronous tasks during this module should take about 90 minutes to complete, but you can start and stop at your own pace.
+#### The asynchronous tasks during this module should take about 90 minutes to complete, but you can start and stop at your own pace.
 
-##### **During this asynchronous work you will:**
+### **During this asynchronous work you will:**
 
-* #####  Identify how the `getProperty()` block to gathers information from users
-* ##### Review the resources for the end-of-chapter project for Unit 6 - Creating Apps with Devices, Chapter 1
+* ####  Identify how the `getProperty()` block to gathers information from users.
+* #### Review the resources for the end-of-chapter project for Unit 6 - Creating Apps with Devices, Chapter 1.
 
 ### Let's get started!
 MARKDOWN

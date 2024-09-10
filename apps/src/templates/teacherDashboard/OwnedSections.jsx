@@ -6,7 +6,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import LtiFeedbackBanner from '@cdo/apps/lib/ui/simpleSignUp/lti/feedback/LtiFeedbackBanner';
+import LtiFeedbackBanner from '@cdo/apps/simpleSignUp/lti/feedback/LtiFeedbackBanner';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
@@ -86,17 +86,13 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const {isPlSections, sectionIds, hiddenSectionIds} = this.props;
+    const {sectionIds, hiddenSectionIds} = this.props;
     const {viewHidden} = this.state;
 
     const hasSections = sectionIds.length > 0;
 
     return (
-      <div
-        className={
-          isPlSections ? 'uitest-owned-pl-sections' : 'uitest-owned-sections'
-        }
-      >
+      <div>
         {hasSections && (
           <div>
             <LtiFeedbackBanner />

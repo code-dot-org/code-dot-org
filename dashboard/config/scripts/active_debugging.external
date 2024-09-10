@@ -1,0 +1,22 @@
+name 'active debugging'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Active Debugging
+
+#### Writing long chunks of code without pausing to read or test can lead to hard-to-find errors. To prevent this, we suggest implementing **active debugging**.
+
+<img src="https://images.code.org/a6f25215d0f359ca94029241b7fd7980-image-1724363269506.jpg" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+
+## What is Active Debugging?
+#### Active debugging describes the practice of debugging while coding. Students should take time to read, process, and test small pieces of code that they have just written during coding exercises. The practice can be tremendously helpful as students write more complex programs.
+
+
+
+## Let's practice!
+
+<div style="clear:both"/>
+
+MARKDOWN

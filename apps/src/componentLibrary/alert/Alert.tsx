@@ -12,6 +12,15 @@ import moduleStyles from './alert.module.scss';
 
 type AlertType = 'primary' | 'success' | 'danger' | 'warning' | 'info' | 'gray';
 
+export const alertTypes: {[key in AlertType]: AlertType} = {
+  primary: 'primary',
+  success: 'success',
+  danger: 'danger',
+  warning: 'warning',
+  info: 'info',
+  gray: 'gray',
+};
+
 export interface AlertProps {
   /** Alert text */
   text: string;

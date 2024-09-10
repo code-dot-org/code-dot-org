@@ -24,8 +24,6 @@ Print your own posters! Simply click an image below to view and save a printable
 
 {{ promote_new_posters }}
 
-* Está procurando nossos pôsteres de anos anteriores? <a href="{{ promote/previous_posters_url }}”>Encontre-os aqui</a>!
-
 <a id="social"></a>
 
 ## Publique estas imagens nas mídias sociais
@@ -95,26 +93,6 @@ Esse ano, vamos torná-lo ainda maior. Estou pedindo a vocês que participem do 
 Espalhe a ideia. Sedie um evento. Peça a uma escola local que se inscreva. Ou experimente uma Hora do Código você mesmo - todos podem se beneficiar aprendendo os fundamentos.
 
 Para começar, acesse http://hourofcode.com/{{ country_language }} <br />
-
-* * *
-
-<a id="help-schools"></a>
-
-### Voluntário em uma escola:
-
-#### <a href="{{ how_to_volunteers_url }}”>Encontre mais recursos e informações sobre o voluntariado em escolas aqui</a>.
-
-**Linha de assunto:** Podemos ajudar você a promover um Hour of Code?
-
-Cerca de {{ campaign_date/short }}, dez% dos estudantes em todo o mundo vão comemorar a Semana de Educação em Ciência da Computação, fazendo um Hour of Code em sua escola. É uma oportunidade para cada criança aprender como funciona a tecnologia ao nosso redor.
-
-[Nossa organização / meu nome] adoraria ajudar [nome da escola] a executar um evento da Hora do Código. Podemos ajudar os professores hospedar uma Hora do Código em suas salas de aula (nem sequer precisamos de computadores!) ou se você gostaria de hospedar uma palestra na escola, nós podemos arranjar um orador para falar sobre como a tecnologia funciona e o que é necessário para ser um engenheiro de software.
-
-Os alunos criarão seus próprios aplicativos ou jogos e podem mostrar seus pais, e nós também vamos imprimir certificados da Hora do Código que os alunos podem levar para casa. E, é divertido! Com atividades interativas, mão na massa, os alunos aprenderão habilidades de pensamento computacional de forma acessível.
-
-Computadores estão em toda parte, mudando todos os setores do planeta. Mas somente 51% das escolas de ensino médio oferecem ciência da computação. A boa notícia é que estamos a caminho de mudar essa realidade! Se você ouviu falar sobre a Hora do Código, talvéz você saiba que ela fez história - mais de 100 milhões de estudantes em todo o mundo participaram de uma Hora do Código. Até mesmo líderes como o Presidente Obama e o primeiro -ministro canadense Justin Trudeau escreveram suas primeiras linhas de programação como parte da campanha.
-
-Leia mais sobre o evento em http://hourofcode.com. Ou informe-nos se quiser programar uma reunião para conversar sobre como a [nome da escola] pode participar. <br />
 
 * * *
 

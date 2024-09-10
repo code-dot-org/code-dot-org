@@ -184,14 +184,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_created_google_user create(:teacher, :google_sso_provider)
   end
 
-  test 'create migrated Windows Live OAuth student' do
-    assert_created_sso_user_with_oauth_token create(:student, :windowslive_sso_provider)
-  end
-
-  test 'create migrated Windows Live OAuth teacher' do
-    assert_created_sso_user_with_oauth_token create(:teacher, :windowslive_sso_provider)
-  end
-
   test 'create migrated Facebook OAuth student' do
     assert_created_sso_user_with_oauth_token create(:student, :facebook_sso_provider)
   end
@@ -242,18 +234,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
         oauth_token_expiration: :not_nil
       }
     }
-  end
-
-  # At time of writing we have 6 The School Project students and 3 teachers.
-  # These mostly look like test accounts, but presumably we want to continue
-  # supporting them.
-
-  test 'create migrated The School Project student' do
-    assert_created_sso_user create(:student, :the_school_project_sso_provider)
-  end
-
-  test 'create migrated The School Project teacher' do
-    assert_created_sso_user create(:teacher, :the_school_project_sso_provider)
   end
 
   # Our Twitter SSO support is very old - we have a few thousand such accounts
@@ -421,14 +401,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     end
   end
 
-  test 'de- and re-migrate Windows Live OAuth student' do
-    round_trip_sso_with_token create(:student, :windowslive_sso_provider)
-  end
-
-  test 'de- and re-migrate Windows Live OAuth teacher' do
-    round_trip_sso_with_token create(:teacher, :windowslive_sso_provider)
-  end
-
   test 'de- and re-migrate Facebook OAuth student' do
     round_trip_sso_with_token create(:student, :facebook_sso_provider)
   end
@@ -468,14 +440,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
           }
         }
     end
-  end
-
-  test 'de- and re-migrate The School Project student' do
-    round_trip_sso create(:student, :the_school_project_sso_provider)
-  end
-
-  test 'de- and re-migrate The School Project teacher' do
-    round_trip_sso create(:teacher, :the_school_project_sso_provider)
   end
 
   test 'de- and re-migrate Twitter student' do

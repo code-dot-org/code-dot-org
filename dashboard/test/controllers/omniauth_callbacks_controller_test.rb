@@ -120,7 +120,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :facebook
     end
 
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
     assert_nil partial_user.age
@@ -233,7 +234,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :clever
     end
 
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
   end
@@ -714,17 +716,14 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_equal AuthenticationOption::GOOGLE, partial_user.provider
     assert_equal uid, partial_user.uid
   end
 
   test 'google_oauth2: renders redirector to complete registration if user is not found by credentials' do
-    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
-    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
     # Given I do not have a Code.org account
     uid = "nonexistent-google-oauth2"
 
@@ -763,7 +762,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     assert PartialRegistration.in_progress? session
     partial_user = User.new_with_session({}, session)
 
@@ -792,7 +792,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     assert PartialRegistration.in_progress? session
     partial_user = User.new_with_session({}, session)
 
@@ -1043,40 +1044,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil signed_in_user_id
   end
 
-  test 'login: microsoft_v2_auth deletes an existing windowslive authentication_option for migrated user' do
-    email = 'test@foo.xyz'
-    uid = '654321'
-    user = create(:user, :windowslive_sso_provider, email: email)
-    auth = OmniAuth::AuthHash.new(
-      provider: 'microsoft_v2_auth',
-      uid: uid,
-      info: {},
-      extra: {
-        raw_info: {
-          userPrincipalName: email,
-          displayName: 'My Name'
-        }
-      },
-    )
-
-    windowslive_auth_option = user.authentication_options.find {|ao| ao.credential_type == 'windowslive'}
-    assert windowslive_auth_option.primary?
-
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    get :microsoft_v2_auth
-
-    user.reload
-    assert_equal 'migrated', user.provider
-    assert_equal 1, user.authentication_options.count
-    microsoft_auth_option = user.authentication_options.first
-    refute_nil microsoft_auth_option
-    assert microsoft_auth_option.primary?
-    assert_equal 'microsoft_v2_auth', microsoft_auth_option.credential_type
-    assert_equal uid, microsoft_auth_option.authentication_id
-    assert_equal signed_in_user_id, user.id
-  end
-
   test 'login: google_oauth2 updates unmigrated Google Classroom student email if silent takeover not available' do
     email = 'test@foo.xyz'
     uid = '654321'
@@ -1234,20 +1201,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     setup_should_connect_provider(user, auth)
     assert_creates(AuthenticationOption) do
       get :google_oauth2
-    end
-
-    user.reload
-    assert_redirected_to 'http://test-studio.code.org/users/edit'
-    assert_auth_option(user, auth)
-  end
-
-  test 'connect_provider: creates new windowslive auth option for signed in user' do
-    user = create :user, uid: 'some-uid'
-    auth = generate_auth_user_hash(provider: 'windowslive', uid: user.uid)
-
-    setup_should_connect_provider(user, auth)
-    assert_creates(AuthenticationOption) do
-      get :windowslive
     end
 
     user.reload
@@ -1884,7 +1837,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     get :google_oauth2
     OmniauthCallbacksController.expects(:sign_in_google_oauth2).never
     OmniauthCallbacksController.expects(:sign_up_google_oauth2).never
-    assert_response :redirect
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     assert_nil User.find_by_credential type: AuthenticationOption::GOOGLE, id: auth.uid
   end
 

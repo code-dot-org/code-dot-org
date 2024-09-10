@@ -318,6 +318,18 @@ input[type="submit"] {
     }
   }
 
+  /* Black button styles */
+  &.black {
+    background: var(--neutral_dark);
+    border-color: var(--neutral_dark);
+    color: var(--neutral_white);
+
+    &:hover {
+      background: black;
+      border-color: black;
+    }
+  }
+
   /* Icon button styles */
   &.has-icon {
     .flex-wrapper {
@@ -656,6 +668,15 @@ nav.main #hamburger #hamburger-contents {
 /* Hide the main list of links on mobile */
 @media (max-width: 1023px) {
   nav.main .left ul {
+    display: none;
+  }
+}
+
+/* Hide the Sign in and Create account buttons
+  in the header on small screens */
+@media (max-width: 425px) {
+  nav.main .button-signin.desktop,
+  nav.main .button-create-account.desktop {
     display: none;
   }
 }

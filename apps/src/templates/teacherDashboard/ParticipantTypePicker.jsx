@@ -8,7 +8,7 @@ import React, {Component} from 'react';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
-import {Heading3} from '../../lib/ui/Headings';
+import {Heading3} from '../../legacySharedComponents/Headings';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
 

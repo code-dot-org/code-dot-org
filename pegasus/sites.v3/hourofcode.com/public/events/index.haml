@@ -1,43 +1,29 @@
 ---
 title: Hour of Code Events
 layout: wide
-nav: resources_nav
 ---
 
 :ruby
   @header["title"] = hoc_s(:front_title, locals: {campaign_date: campaign_date('full-year')})
 
--# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
--# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
--# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
+-# We set the DCDO default to CDO.default_hoc_mode here because
+-# we can't change the DCDO flag on the test machine, but ui tests
+-# rely on hourofcode.com being in a hoc_mode consistent with production.
+-# This default needs to be updated whenever we change the hoc_mode,
+-# to make sure we're still testing what we'll see on production.
 - hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
--# These are needed for the signup form, even if the map isn't currently showing.
-%script{src:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'}
-:javascript
-  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
-
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry"}
-%script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: webpack_asset_path("js/hourofcode.com/public/events/index.js")}
 
 %h1=hoc_s(:hoc_events_heading)
 
-- if hoc_mode == false
-  .clear-styles
-    = view :off_season_interest_form
-- else
-  = view :events_signup, hoc_mode: hoc_mode
+.clear-styles
+  = view :off_season_interest_form
 
-%hr{style: "margin-top: 4rem"}
+%hr{style: "margin-top: 3rem"}
 
 %h2.heading-xxl
   =hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
 %p.body-one.no-margin-bottom
   =hoc_s(:front_intro_default_2)
-%p.body-one
-  = view :hoc_events_counter
-
-= view :map

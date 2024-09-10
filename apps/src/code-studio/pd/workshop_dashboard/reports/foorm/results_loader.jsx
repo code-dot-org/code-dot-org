@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 
 import color from '@cdo/apps/util/color';
 
-import Spinner from '../../../components/spinner';
+import Spinner from '../../../../../sharedComponents/Spinner';
 import {PermissionPropType, WorkshopAdmin} from '../../permission';
 
 import Results from './results';

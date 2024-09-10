@@ -14,7 +14,6 @@ import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin'
 import procedureCallerMutator from './mutators/procedureCallerMutator';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 
-const PARAMETERS_LABEL = 'PARAMETERS_LABEL';
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
  * Replaces blocks that are part of core Blockly.
@@ -188,14 +187,6 @@ GoogleBlockly.Extensions.register(
     );
     // Open mini-toolbox by default
     flyoutToggleButton.setIcon(false);
-    // If we added a flyout, place a 'Parameters' label before it.
-    const flyoutInput = this.getInput('flyout_input');
-    if (flyoutInput) {
-      flyoutInput.insertFieldAt(
-        0,
-        new Blockly.FieldLabel(commonI18n.parameters(), PARAMETERS_LABEL)
-      );
-    }
   }
 );
 

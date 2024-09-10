@@ -1,4 +1,5 @@
 require 'test_reporter'
+require 'faker'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
@@ -275,7 +276,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Security/Eval
-      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
+      e.respond_to?(:call) ? e : -> {eval(e, block.binding)}
       # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
@@ -296,7 +297,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Security/Eval
-      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
+      e.respond_to?(:call) ? e : -> {eval(e, block.binding)}
       # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)

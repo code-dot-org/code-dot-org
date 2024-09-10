@@ -1,7 +1,0 @@
-<% @header["title"] = hoc_s(:title_hoc_review_committee) %>
-
-<h1><%= hoc_s(:title_hoc_review_committee) %></h1>
-
-<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'hoc_review') %>
-
-<%= view :about_people, people:DB[:cdo_team].where(kind_s:'hoc_review_short') %>

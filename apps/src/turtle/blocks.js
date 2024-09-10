@@ -526,7 +526,10 @@ exports.install = function (blockly, blockInstallOptions) {
     getVars: Blockly.Variables.getVars,
   };
 
-  generator.variables_get_counter = generator.variables_get;
+  const blockGeneratorFunctionDictionary = generator.forBlock || generator;
+
+  blockGeneratorFunctionDictionary.variables_get_counter =
+    blockGeneratorFunctionDictionary.variables_get;
 
   blockly.Blocks.variables_get_length = {
     // Variable getter.
@@ -738,8 +741,9 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTitleValue(counter, 'VAR');
     },
   };
-
-  generator.controls_for_counter = generator.controls_for;
+  // Google Blockly uses forBlock, CDO Blockly does not.
+  generator.controls_for_counter =
+    generator.controls_for || generator.forBlock.controls_for;
 
   // Delete these standard blocks.
   delete blockly.Blocks.procedures_defreturn;
@@ -1433,7 +1437,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.draw_colour_simple = {
     // Simplified dropdown block for setting the colour.
     init: function () {
-      var colours = [
+      const colours = [
         Colours.RED,
         Colours.BLACK,
         Colours.PINK,
@@ -1449,7 +1453,7 @@ exports.install = function (blockly, blockInstallOptions) {
         BlockColors.LOGIC,
         BlockStyles.LOGIC
       );
-      var colourField = new Blockly.FieldColourDropdown(colours, 45, 35);
+      const colourField = Blockly.customBlocks.getColourDropdownField(colours);
       this.appendDummyInput()
         .appendField(msg.setColour())
         .appendField(colourField, 'COLOUR');

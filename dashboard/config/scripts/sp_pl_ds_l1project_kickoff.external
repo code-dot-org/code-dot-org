@@ -1,0 +1,34 @@
+name 'sp-pl-DS_L1Project_kickoff'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Project Kickoff
+
+
+#### Before diving into Python, students will work on brainstorming ideas for their final project. As they work through the chapter, they will be working towards the final project. 
+
+---
+
+## Lesson 1: Project Kickoff 
+
+<img src="https://images.code.org/0446e33e857726829127b5984b2a8d4f-image-1724771056575.png" alt="project planning guide" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+
+#### In this lesson, students kick off their Data Science for Community Impact Project by identifying the communities they belong to and brainstorming relevant problems within these communities. 
+
+#### They work collaboratively to turn their observations into well-defined data questions, create a data collection plan, and ensure their plans are specific, actionable, and ethically sound.
+
+### <b><a href="https://docs.google.com/document/d/1zI55ag_XNooqQOHcaVQ5AxBF5IaDSn0uM2IyX7-GkUs/copy" target="blank" rel="noopener noreferrer">Project Planning Guide</a>.</b>
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+<div style="clear:both;"></div>
+
+<br>
+
+
+## Let’s continue to Pyhton 
+
+![]()
+MARKDOWN

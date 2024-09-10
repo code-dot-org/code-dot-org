@@ -3,7 +3,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
-import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
@@ -31,12 +30,8 @@ function SectionProgressV2({
   isLevelProgressLoaded,
   expandedLessonIds,
   loadExpandedLessonsFromLocalStorage,
+  hideTopHeading,
 }) {
-  const expandedMetadataEnabled = React.useMemo(
-    () => DCDO.get('progress-v2-metadata-enabled', false),
-    []
-  );
-
   React.useEffect(() => {
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
@@ -65,7 +60,7 @@ function SectionProgressV2({
 
   return (
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
-      <Heading1>{i18n.progressBeta()}</Heading1>
+      {!hideTopHeading && <Heading1>{i18n.progressBeta()}</Heading1>}
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
@@ -77,7 +72,7 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-          {expandedMetadataEnabled && <MoreOptionsDropdown />}
+          <MoreOptionsDropdown />
         </Heading6>
       </div>
       <ProgressTableV2 isSkeleton={!levelDataInitialized} />
@@ -94,6 +89,7 @@ SectionProgressV2.propTypes = {
   isLevelProgressLoaded: PropTypes.bool.isRequired,
   expandedLessonIds: PropTypes.array,
   loadExpandedLessonsFromLocalStorage: PropTypes.func.isRequired,
+  hideTopHeading: PropTypes.bool,
 };
 
 export default connect(

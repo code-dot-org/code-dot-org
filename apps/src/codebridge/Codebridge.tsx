@@ -1,6 +1,11 @@
-import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
+import {
+  CodebridgeContextProvider,
+  projectReducer,
+  PROJECT_REDUCER_ACTIONS,
+  useProjectUtilities,
+} from '@codebridge/codebridgeContext';
 import {FileBrowser} from '@codebridge/FileBrowser';
-import {useSynchronizedProject} from '@codebridge/hooks';
+import {useReducerWithCallback} from '@codebridge/hooks';
 import {InfoPanel} from '@codebridge/InfoPanel';
 import {PreviewContainer} from '@codebridge/PreviewContainer';
 import {SideBar} from '@codebridge/SideBar';
@@ -11,13 +16,12 @@ import {
   SetConfigFunction,
   OnRunFunction,
 } from '@codebridge/types';
-import React from 'react';
+import React, {useEffect, useReducer, useRef} from 'react';
 
 import './styles/cdoIDE.scss';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
 import Console from './Console';
-import ControlButtons from './ControlButtons';
 import Workspace from './Workspace';
 
 type CodebridgeProps = {
@@ -27,6 +31,8 @@ type CodebridgeProps = {
   setConfig: SetConfigFunction;
   startSource: ProjectSources;
   onRun?: OnRunFunction;
+  onStop?: () => void;
+  projectVersion: number;
 };
 
 export const Codebridge = React.memo(
@@ -37,13 +43,28 @@ export const Codebridge = React.memo(
     setConfig,
     startSource,
     onRun,
+    onStop,
+    projectVersion,
   }: CodebridgeProps) => {
-    // keep our internal reducer backed copy synced up with our external whatever backed copy
-    // see useSynchronizedProject for more info.
-    const [internalProject, projectUtilities] = useSynchronizedProject(
-      project,
-      setProject
+    const reducerWithCallback = useReducerWithCallback(
+      projectReducer,
+      setProject,
+      new Set(PROJECT_REDUCER_ACTIONS.REPLACE_PROJECT)
     );
+    const [internalProject, dispatch] = useReducer(
+      reducerWithCallback,
+      project
+    );
+
+    const projectUtilities = useProjectUtilities(dispatch);
+
+    const currentProjectVersion = useRef(projectVersion);
+    useEffect(() => {
+      if (projectVersion !== currentProjectVersion.current) {
+        projectUtilities.replaceProject(project);
+        currentProjectVersion.current = projectVersion;
+      }
+    }, [currentProjectVersion, project, projectUtilities, projectVersion]);
 
     const ComponentMap = {
       'file-browser': FileBrowser,
@@ -52,7 +73,6 @@ export const Codebridge = React.memo(
       'info-panel': config.Instructions || InfoPanel,
       workspace: Workspace,
       console: Console,
-      'control-buttons': ControlButtons,
     };
 
     let gridLayout: string;
@@ -84,6 +104,7 @@ export const Codebridge = React.memo(
           setConfig,
           startSource,
           onRun,
+          onStop,
           ...projectUtilities,
         }}
       >

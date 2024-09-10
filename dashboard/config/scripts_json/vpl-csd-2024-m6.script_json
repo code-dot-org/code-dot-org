@@ -7,11 +7,12 @@
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:42:32 UTC",
+    "serialized_at": "2024-09-04 20:44:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -325,6 +326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8 Overview_2024"
+        ],
         "progression": "Module 6 Overview"
       },
       "bonus": false,
@@ -347,6 +351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - CI_2024"
+        ],
         "progression": "Curriculum Investigation Overview"
       },
       "bonus": false,
@@ -369,6 +376,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6_2024"
+        ],
         "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
@@ -391,6 +401,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Lesson 2_2024"
+        ],
         "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
@@ -413,6 +426,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Level 3_2024"
+        ],
         "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
@@ -435,6 +451,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6 - Level 4_2024"
+        ],
         "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
@@ -457,6 +476,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8  U6L6 Reflection_2024"
+        ],
         "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
@@ -479,6 +501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - Conclusions and Connections2_2024"
+        ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "bonus": false,
@@ -501,6 +526,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U6 Chapter 1 Project_2024"
+        ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "bonus": false,
@@ -523,6 +551,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M8 Conclusions and Connections Reflection_2024"
+        ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "bonus": false,
@@ -545,6 +576,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 Wrap Up_2024"
+        ],
         "progression": "Wrap Up (~10 mins)"
       },
       "bonus": false,

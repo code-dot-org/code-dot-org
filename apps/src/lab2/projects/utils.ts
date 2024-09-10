@@ -1,4 +1,5 @@
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
 import {MultiFileSource, ProjectFile, ProjectFileType} from '../types';
@@ -118,4 +119,11 @@ export function getActiveFileForProject(project: MultiFileSource) {
 
   // Get the first active file, or the first file.
   return visibleFiles.find(f => f.active) || visibleFiles[0];
+}
+
+/**
+ * Returns the value of the language cookie (eg, en-US, which is also the default if the cookie is not set).
+ */
+export function getCurrentLocale(): string {
+  return currentLocale();
 }

@@ -3,7 +3,9 @@ import {useSelector} from 'react-redux';
 
 import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import {updateSectionAiTutorEnabled} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -38,6 +40,13 @@ const SectionAccessToggle: React.FC<SectionAccessToggleProps> = ({
     const newValue = !aiTutorEnabled;
     handleUpdateSectionAITutorEnabled(sectionId, newValue);
     setAiTutorEnabled(newValue);
+    const event = aiTutorEnabled
+      ? EVENTS.AI_TUTOR_DISABLED
+      : EVENTS.AI_TUTOR_ENABLED;
+    analyticsReporter.sendEvent(event, {
+      sectionId: sectionId,
+      uiLocation: 'aiTutorTeacherDashboardTab',
+    });
     dispatch(updateSectionAiTutorEnabled(sectionId, newValue));
   };
 

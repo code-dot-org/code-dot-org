@@ -21,12 +21,19 @@ const MultipleTemplate: StoryFn<{
   components: FontAwesomeV6IconProps[];
 }> = args => (
   <>
-    {args.components?.map(componentArg => (
-      <FontAwesomeV6Icon
-        key={componentArg.iconName + componentArg.iconStyle}
-        {...componentArg}
-      />
-    ))}
+    <p>
+      * Margins on this screen does not represent Component's margins, and are
+      only added to improve storybook view *
+    </p>
+    <p>Multiple Icons:</p>
+    <div style={{display: 'flex', gap: '20px'}}>
+      {args.components?.map(componentArg => (
+        <FontAwesomeV6Icon
+          key={componentArg.iconName + componentArg.iconStyle}
+          {...componentArg}
+        />
+      ))}
+    </div>
   </>
 );
 
@@ -35,6 +42,19 @@ DefaultFontAwesomeV6Icon.args = {
   iconStyle: 'solid',
   iconName: 'check',
   title: 'check',
+};
+
+export const ClassNameBrandsIconExampleFontAwesomeV6Icon =
+  MultipleTemplate.bind({});
+ClassNameBrandsIconExampleFontAwesomeV6Icon.args = {
+  components: [
+    {
+      iconStyle: 'light',
+      iconName: 'microsoft',
+      className: 'fa-brands',
+      title: 'microsoft',
+    },
+  ],
 };
 
 export const GroupOfStylesOfFontAwesomeV6Icon = MultipleTemplate.bind({});
