@@ -60,6 +60,7 @@ const AccountType: React.FunctionComponent = () => {
               locale.track_student_progress(),
               locale.access_assessments(),
               locale.enroll_in_pl(),
+              locale.integrate_seamlessly(),
             ]}
           />
         </div>

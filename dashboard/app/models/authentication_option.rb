@@ -47,7 +47,6 @@ class AuthenticationOption < ApplicationRecord
     POWERSCHOOL = 'powerschool',
     QWIKLABS = 'lti_lti_prod_kids.qwikcamps.com',
     TWITTER = 'twitter',
-    WINDOWS_LIVE = 'windowslive',
     MICROSOFT = 'microsoft_v2_auth',
   ].freeze
 
@@ -82,8 +81,6 @@ class AuthenticationOption < ApplicationRecord
   SILENT_TAKEOVER_CREDENTIAL_TYPES = [
     FACEBOOK,
     GOOGLE,
-    # TODO: (madelynkasula) Remove once we are sure users are no longer logging in via windowslive.
-    WINDOWS_LIVE,
     MICROSOFT
   ].freeze
 

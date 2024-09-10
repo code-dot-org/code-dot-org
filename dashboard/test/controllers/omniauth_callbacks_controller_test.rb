@@ -1044,40 +1044,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil signed_in_user_id
   end
 
-  test 'login: microsoft_v2_auth deletes an existing windowslive authentication_option for migrated user' do
-    email = 'test@foo.xyz'
-    uid = '654321'
-    user = create(:user, :windowslive_sso_provider, email: email)
-    auth = OmniAuth::AuthHash.new(
-      provider: 'microsoft_v2_auth',
-      uid: uid,
-      info: {},
-      extra: {
-        raw_info: {
-          userPrincipalName: email,
-          displayName: 'My Name'
-        }
-      },
-    )
-
-    windowslive_auth_option = user.authentication_options.find {|ao| ao.credential_type == 'windowslive'}
-    assert windowslive_auth_option.primary?
-
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    get :microsoft_v2_auth
-
-    user.reload
-    assert_equal 'migrated', user.provider
-    assert_equal 1, user.authentication_options.count
-    microsoft_auth_option = user.authentication_options.first
-    refute_nil microsoft_auth_option
-    assert microsoft_auth_option.primary?
-    assert_equal 'microsoft_v2_auth', microsoft_auth_option.credential_type
-    assert_equal uid, microsoft_auth_option.authentication_id
-    assert_equal signed_in_user_id, user.id
-  end
-
   test 'login: google_oauth2 updates unmigrated Google Classroom student email if silent takeover not available' do
     email = 'test@foo.xyz'
     uid = '654321'
@@ -1235,20 +1201,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     setup_should_connect_provider(user, auth)
     assert_creates(AuthenticationOption) do
       get :google_oauth2
-    end
-
-    user.reload
-    assert_redirected_to 'http://test-studio.code.org/users/edit'
-    assert_auth_option(user, auth)
-  end
-
-  test 'connect_provider: creates new windowslive auth option for signed in user' do
-    user = create :user, uid: 'some-uid'
-    auth = generate_auth_user_hash(provider: 'windowslive', uid: user.uid)
-
-    setup_should_connect_provider(user, auth)
-    assert_creates(AuthenticationOption) do
-      get :windowslive
     end
 
     user.reload
