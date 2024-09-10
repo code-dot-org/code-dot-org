@@ -44,9 +44,8 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
   // The version history button is generally disabled in read only mode with two exceptions:
-  // if the user is viewing an old version of the project,
-  // or if this is a teacher view a student's project (in which case they can view old versions, but
-  // not restore them).
+  // if the user is viewing an old version of the project, or if this is a teacher viewing
+  // a student's project (in which case they can view old versions, but not restore them).
   const buttonDisabled = isReadOnly && !isViewingOldVersion && !viewAsUserId;
   const toggleVersionHistory = useCallback(
     (
