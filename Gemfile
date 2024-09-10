@@ -297,8 +297,6 @@ gem 'octokit'
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie', '>= 2.1.1'
 
-gem 'omniauth-openid'
-
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
 gem 'image_optim', github: 'code-dot-org/image_optim', ref: 'cdo'

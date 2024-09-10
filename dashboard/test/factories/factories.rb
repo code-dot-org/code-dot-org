@@ -520,11 +520,6 @@ FactoryBot.define do
       provider {'microsoft_v2_auth'}
     end
 
-    trait :powerschool_sso_provider do
-      untrusted_email_sso_provider
-      provider {'powerschool'}
-    end
-
     trait :twitter_sso_provider do
       sso_provider
       provider {'twitter'}
