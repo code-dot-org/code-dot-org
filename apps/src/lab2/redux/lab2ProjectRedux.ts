@@ -28,12 +28,16 @@ const initialState: Lab2ProjectState = {
 // Store the project source in the redux store and tell the project manager
 // to save it.
 export const setAndSaveProjectSource = (
-  projectSource: ProjectSources
+  projectSource: ProjectSources,
+  forceSave: boolean = false,
+  forceNewVersion: boolean = false
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return dispatch => {
     dispatch(projectSlice.actions.setProjectSource(projectSource));
     if (Lab2Registry.getInstance().getProjectManager()) {
-      Lab2Registry.getInstance().getProjectManager()?.save(projectSource);
+      Lab2Registry.getInstance()
+        .getProjectManager()
+        ?.save(projectSource, forceSave, forceNewVersion);
     }
   };
 };
@@ -47,6 +51,17 @@ export const loadVersion = createAsyncThunk(
       await projectManager.flushSave();
       const sources = await projectManager.loadSources(payload.versionId);
       thunkAPI.dispatch(setPreviousVersionSource(sources));
+    }
+  }
+);
+
+export const previewStartSource = createAsyncThunk(
+  'lab2Project/previewStartSource',
+  async (payload: {startSource: ProjectSources}, thunkAPI) => {
+    const projectManager = Lab2Registry.getInstance().getProjectManager();
+    if (projectManager) {
+      await projectManager.flushSave();
+      thunkAPI.dispatch(setPreviousVersionSource(payload.startSource));
     }
   }
 );

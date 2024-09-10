@@ -171,14 +171,18 @@ export default class ProjectManager {
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async save(sources: ProjectSources, forceSave = false) {
+  async save(
+    sources: ProjectSources,
+    forceSave = false,
+    forceNewVersion = false
+  ) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.sourcesToSave = sources;
-    return await this.enqueueSaveOrSave(forceSave);
+    return await this.enqueueSaveOrSave(forceSave, forceNewVersion);
   }
 
   /**
@@ -193,7 +197,7 @@ export default class ProjectManager {
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    return await this.enqueueSaveOrSave(true);
+    return await this.enqueueSaveOrSave(true, false);
   }
 
   /**
@@ -216,7 +220,7 @@ export default class ProjectManager {
       ) as Channel;
     }
     this.channelToSave.name = name;
-    return await this.enqueueSaveOrSave(forceSave);
+    return await this.enqueueSaveOrSave(forceSave, false);
   }
 
   /**
@@ -314,7 +318,7 @@ export default class ProjectManager {
    * @returns a Promise<void> that resolves when the save is complete or when the save fails.
    * Listeners are notified of save status throughout the process.
    */
-  private async saveHelper(): Promise<void> {
+  private async saveHelper(forceNewVersion: boolean): Promise<void> {
     // We can't save without a last channel or last source.
     // We also know we don't need to save if we don't have sources to save
     // or a channel to save.
@@ -347,7 +351,8 @@ export default class ProjectManager {
         await this.sourcesStore.save(
           this.channelId,
           this.sourcesToSave,
-          this.lastChannel.projectType
+          this.lastChannel.projectType,
+          forceNewVersion
         );
       } catch (error) {
         this.onSaveFail('Error saving sources', error as Error);
@@ -434,14 +439,17 @@ export default class ProjectManager {
   // initiate a save.
   // If we cannot save now, enqueue a save if one has not already been enqueued and
   // return a noop response.
-  private async enqueueSaveOrSave(forceSave: boolean) {
+  private async enqueueSaveOrSave(
+    forceSave: boolean,
+    forceNewVersion: boolean
+  ) {
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         // enqueue a save
         this.saveQueued = true;
         this.currentTimeoutId = window.setTimeout(
           () => {
-            this.saveHelper();
+            this.saveHelper(forceNewVersion);
           },
           this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
         );
@@ -450,7 +458,7 @@ export default class ProjectManager {
     } else {
       // if we can save immediately, initiate a save now. This is an async
       // request.
-      return await this.saveHelper();
+      return await this.saveHelper(forceNewVersion);
     }
   }
 
