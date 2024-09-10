@@ -139,6 +139,7 @@ const initialState = {
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
 const SET_STUDENTS = 'manageStudents/SET_STUDENTS';
+const SET_SECTION_INFO = 'manageStudents/SET_SECTION_INFO';
 const START_EDITING_STUDENT = 'manageStudents/START_EDITING_STUDENT';
 const CANCEL_EDITING_STUDENT = 'manageStudents/CANCEL_EDITING_STUDENT';
 const REMOVE_STUDENT = 'manageStudents/REMOVE_STUDENT';
@@ -169,11 +170,14 @@ export const startLoadingStudents = () => ({type: START_LOADING_STUDENTS});
 export const finishLoadingStudents = () => ({type: FINISH_LOADING_STUDENTS});
 
 export const setLoginType = loginType => ({type: SET_LOGIN_TYPE, loginType});
-export const setStudents = (studentData, sectionId) => ({
+export const setStudents = (studentData) => ({
   type: SET_STUDENTS,
-  studentData,
-  sectionId,
+  studentData
 });
+export const setSectionInfo = (sectionId) => ({
+  type: SET_SECTION_INFO,
+  sectionId
+})
 export const startEditingStudent = studentId => ({
   type: START_EDITING_STUDENT,
   studentId,
@@ -508,9 +512,14 @@ export default function manageStudents(state = initialState, action) {
       ...state,
       studentData: studentData,
       addStatus: {status: null, numStudents: null},
-      isLoadingStudents: false,
-      sectionId: action.sectionId,
+      isLoadingStudents: false
     };
+  }
+  if (action.type === SET_SECTION_INFO) {
+    return {
+      ...state,
+      sectionId: action.sectionId
+    }
   }
   if (action.type === START_EDITING_STUDENT) {
     return {
@@ -974,8 +983,10 @@ export const loadSectionStudentData = sectionId => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
 
+    // if section ID matches, don't do anything and say isLoading is false
     // Don't load data if it's already being fetched.
-    if (!state.isLoadingStudents) {
+    if (state.sectionId !== sectionId) {
+      dispatch(setSectionInfo(sectionId));
       dispatch(startLoadingStudents());
       $.ajax({
         method: 'GET',
@@ -987,7 +998,7 @@ export const loadSectionStudentData = sectionId => {
           state.loginType,
           sectionId
         );
-        dispatch(setStudents(convertedStudentData, sectionId));
+        dispatch(setStudents(convertedStudentData));
       });
     } else {
       dispatch(finishLoadingStudents());
