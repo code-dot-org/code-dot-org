@@ -51,7 +51,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   disabled = false,
   indeterminate = false,
   size = 'm',
-  ...rest
+  ...HTMLAttributes
 }) => {
   const checkboxRef = useRef<HTMLInputElement>(null);
   const bodyTextSize = componentSizeToBodyTextSizeMap[size];
@@ -74,7 +74,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
         checked={checked}
         disabled={disabled}
         onChange={onChange}
-        {...rest}
+        {...HTMLAttributes}
       />
       <i className="fa-solid" />
       {label && (

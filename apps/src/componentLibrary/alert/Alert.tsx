@@ -90,7 +90,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
   isImmediateImportance = true,
   type = 'primary',
   size = 'm',
-  ...rest
+  ...HTMLAttributes
 }) => {
   const iconToRender = useMemo(
     () => icon || getDefaultAlertIconFromType(type),
@@ -108,7 +108,7 @@ const Alert: React.FunctionComponent<AlertProps> = ({
         className
       )}
       role={isImmediateImportance ? 'alert' : 'status'}
-      {...rest}
+      {...HTMLAttributes}
     >
       <div className={moduleStyles.alertContentContainer}>
         {showIcon && iconToRender && <FontAwesomeV6Icon {...iconToRender} />}

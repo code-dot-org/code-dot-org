@@ -33,6 +33,7 @@ const Chip: React.FunctionComponent<ChipProps> = ({
   textThickness,
   disabled,
   onCheckedChange,
+  ...HTMLAttributes
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -71,6 +72,7 @@ const Chip: React.FunctionComponent<ChipProps> = ({
               commonI18n.chooseAtLeastOne()
             );
           }}
+          {...HTMLAttributes}
         />
         {label}
       </label>
