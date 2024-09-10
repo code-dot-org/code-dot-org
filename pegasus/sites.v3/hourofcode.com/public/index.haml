@@ -1,8 +1,5 @@
 ---
 layout: wide_index
-social:
-  twitter:site: "@codeorg"
-  twitter:url: https://hourofcode.com
 ---
 
 :ruby
@@ -16,9 +13,6 @@ social:
 -# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
 -# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
 -hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
-
--twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
--twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner, locals: {campaign_date: campaign_date('full-year')}).include? '#HourOfCode'
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
@@ -73,7 +67,7 @@ social:
               = hoc_s(:hoc_live_learn_more)
         %hr
 
-  -# Host & resources
+  -# Host an event & Resources
   %section
     .wrapper
       .flex-container.justify-space-between.gap-2
