@@ -1,4 +1,18 @@
-%figure.rounded-corners.flex-1{style: "width: 100%; background: var(--neutral_white); border: 1px solid var(--neutral_dark20); padding: 1rem 1rem 0.5rem"}
+:scss
+  figure {
+    width: 100%;
+    background: var(--neutral_white);
+    border: 1px solid var(--neutral_dark20);
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  @media (max-width: 640px) {
+    iframe {
+      height: 560px;
+    }
+  }
+
+%figure.rounded-corners.flex-1
   %iframe{allowtransparency: "true", frameborder: "0", height: "425px", src: "https://go.pardot.com/l/153401/2024-08-26/pr46fc", style: "border: 0", type: "text/html", width: "100%"}
 .text-wrapper.flex-1
   %h2.no-margin-top
