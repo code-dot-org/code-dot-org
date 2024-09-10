@@ -93,11 +93,13 @@ function initPage() {
       );
     }
   }
-
-  if (
-    getStore().getState().verifiedInstructor.isVerified &&
-    hasScriptData('script[data-rubricdata]')
-  ) {
+  let verified;
+  if (getStore().getState().verifiedInstructor) {
+    verified = getStore().getState().verifiedInstructor.isVerified;
+  } else {
+    verified = false;
+  }
+  if (verified && hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');
     const {rubric, studentLevelInfo} = rubricData;
     const reportingData = {
