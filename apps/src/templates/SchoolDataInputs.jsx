@@ -32,7 +32,6 @@ export default function SchoolDataInputs({
   schoolZip,
   schoolsList,
   schoolZipIsValid,
-  schoolsListLoading,
   setSchoolId,
   setCountry,
   setSchoolName,
@@ -117,7 +116,7 @@ export default function SchoolDataInputs({
           <div>
             <SimpleDropdown
               id="uitest-school-dropdown"
-              disabled={!schoolZipIsValid || schoolsListLoading}
+              disabled={!schoolZipIsValid}
               name={fieldNames.ncesSchoolId}
               className={labelClassName}
               labelText={i18n.selectYourSchool()}
@@ -134,7 +133,6 @@ export default function SchoolDataInputs({
               selectedValue={schoolId}
               onChange={e => handleSchoolChange(e.target.value)}
               size="m"
-              loading={schoolsListLoading}
             />
             <Button
               text={i18n.noSchoolSetting()}
@@ -182,7 +180,6 @@ SchoolDataInputs.propTypes = {
   schoolsList: PropTypes.arrayOf(
     PropTypes.shape({value: PropTypes.string, text: PropTypes.string})
   ).isRequired,
-  schoolsListLoading: PropTypes.bool.isRequired,
   schoolZipIsValid: PropTypes.bool.isRequired,
   setSchoolId: PropTypes.func.isRequired,
   setCountry: PropTypes.func.isRequired,
