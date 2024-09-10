@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useCallback, useEffect, useState} from 'react';
+import React, {useLayoutEffect, useEffect, useState} from 'react';
 
 import standaloneVideoLocale from './locale';
 import testYouTubeAvailable from './testYouTubeAvailable';
@@ -73,16 +73,11 @@ const Video: React.FunctionComponent<VideoProps> = ({
 
   const [videoChoice, setVideoChoice] = useState<VideoChoiceType>(undefined);
 
-  const videoCheckComplete = useCallback(
-    (youTubeAvailable: boolean) => {
-      setVideoChoice(youTubeAvailable ? 'youtube' : 'fallback');
-    },
-    [setVideoChoice]
-  );
-
   useEffect(() => {
-    testYouTubeAvailable(videoCheckComplete);
-  }, [videoCheckComplete]);
+    testYouTubeAvailable(available =>
+      setVideoChoice(available ? 'youtube' : 'fallback')
+    );
+  }, [setVideoChoice]);
 
   const videoJsOptions = {
     autoplay: true,
