@@ -42,10 +42,11 @@ describe('FinishStudentAccount', () => {
     });
   });
 
-  function renderDefault() {
+  function renderDefault(usIp: boolean = true) {
     render(
       <FinishStudentAccount
         ageOptions={ageOptions}
+        usIp={usIp}
         usStateOptions={usStateOptions}
       />
     );
@@ -94,6 +95,13 @@ describe('FinishStudentAccount', () => {
 
     // Renders button that finishes sign-up
     screen.getByText(locale.go_to_my_account());
+  });
+
+  it('does not render state question if user is not detected in the U.S.', () => {
+    renderDefault(false);
+
+    expect(screen.queryByText(locale.what_state_are_you_in())).toBe(null);
+    expect(screen.queryByText(locale.state_error_message())).toBe(null);
   });
 
   it('userName is tracked in sessionStorage', () => {

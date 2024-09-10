@@ -252,8 +252,20 @@ function getUpdatedMessages(
           status: AiInteractionStatus.PII_VIOLATION,
         },
       ];
-    case AiRequestExecutionStatus.FAILURE:
     case AiRequestExecutionStatus.MODEL_PROFANITY:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.ERROR,
+        },
+        {
+          chatMessageText: modelResponse,
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.PROFANITY_VIOLATION,
+        },
+      ];
+    case AiRequestExecutionStatus.FAILURE:
     case AiRequestExecutionStatus.MODEL_PII:
       return [
         {
@@ -265,6 +277,19 @@ function getUpdatedMessages(
           role: Role.ASSISTANT,
           timestamp: Date.now(),
           status: AiInteractionStatus.ERROR,
+        },
+      ];
+    case AiRequestExecutionStatus.USER_INPUT_TOO_LARGE:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
+        },
+        {
+          chatMessageText: modelResponse,
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
         },
       ];
     default:
