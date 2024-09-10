@@ -6,7 +6,7 @@ import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import {getStore} from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 
-import LegacyButton from '../legacySharedComponents/LegacyButton';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import color from '../util/color';
 
 import BackToFrontConfetti from './BackToFrontConfetti';
@@ -61,6 +61,10 @@ class ChallengeDialog extends React.Component {
 
   render() {
     const isRtl = getStore().getState().isRtl;
+    const bannerStyle = {
+      ...styles.banner,
+      ...(this.props.complete ? styles.bannerComplete : {}),
+    };
 
     return (
       <BaseDialog
@@ -75,12 +79,7 @@ class ChallengeDialog extends React.Component {
           src={this.props.avatar}
           alt={i18n.cheeringInstructorAltText()}
         />
-        <div
-          style={{
-            ...styles.banner,
-            ...(this.props.complete ? styles.bannerComplete : {}),
-          }}
-        >
+        <div style={bannerStyle}>
           <h1 style={styles.title} id="uitest-challenge-title">
             {this.props.title}
           </h1>
@@ -93,21 +92,21 @@ class ChallengeDialog extends React.Component {
           {this.props.text && <div style={styles.text}>{this.props.text}</div>}
           {this.props.children}
         </div>
-        <LegacyButton
-          type="cancel"
-          onClick={this.handleCancel}
+        <Button
           id="challengeCancelButton"
-        >
-          {this.props.cancelButtonLabel}
-        </LegacyButton>
-        <LegacyButton
-          type="primary"
-          style={isRtl ? styles.primaryButtonRtl : styles.primaryButton}
-          onClick={this.handlePrimary}
+          onClick={this.handleCancel}
+          text={this.props.cancelButtonLabel}
+          type="secondary"
+          color={buttonColors.gray}
+        />
+        <Button
           id="challengePrimaryButton"
-        >
-          {this.props.primaryButtonLabel}
-        </LegacyButton>
+          onClick={this.handlePrimary}
+          text={this.props.primaryButtonLabel}
+          type="primary"
+          color={buttonColors.purple}
+          style={isRtl ? styles.primaryButtonRtl : styles.primaryButton}
+        />
         {this.props.showPuzzleRatingButtons && (
           <div style={styles.footer}>
             <PuzzleRatingButtons useLegacyStyles />
