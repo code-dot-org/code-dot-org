@@ -1,5 +1,5 @@
-require 'email_delivery_interceptor'
-require 'email_delivery_observer'
+require_relative '../../app/mailers/email_delivery_interceptor'
+require_relative '../../app/mailers/email_delivery_observer'
 
 if Rails.env.production?
   ActionMailer::Base.register_interceptor EmailDeliveryInterceptor

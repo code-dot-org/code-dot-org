@@ -28,7 +28,7 @@ class Pd::RegionalPartnerCohort < ApplicationRecord
     Pd::Workshop::COURSE_CS_IN_S
   ]
 
-  enum role: {
+  enum :role, {
     teacher: 0,
     facilitator: 1
   }
@@ -36,7 +36,9 @@ class Pd::RegionalPartnerCohort < ApplicationRecord
   has_and_belongs_to_many :users, join_table: 'pd_regional_partner_cohorts_users',
     foreign_key: 'pd_regional_partner_cohort_id', association_foreign_key: 'user_id'
 
-  alias_attribute :members, :users
+  has_and_belongs_to_many :members, join_table: 'pd_regional_partner_cohorts_users',
+    foreign_key: 'pd_regional_partner_cohort_id', association_foreign_key: 'user_id',
+    class_name: 'User'
 
   belongs_to :regional_partner, optional: true
   belongs_to :summer_workshop, class_name: 'Pd::Workshop', optional: true

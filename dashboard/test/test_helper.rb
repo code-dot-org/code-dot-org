@@ -1,10 +1,6 @@
 require 'test_reporter'
 require 'faker'
 
-if defined? ActiveRecord
-  ActiveRecord::Migration&.check_pending!
-end
-
 # This is a workaround for https://github.com/kern/minitest-reporters/issues/230
 Minitest.load_plugins
 Minitest.extensions.delete('rails')
@@ -27,6 +23,7 @@ ENV['TZ'] = 'UTC'
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
+require "minitest/unit"
 require 'mocha/mini_test'
 
 CDO.stubs(:rack_env).returns(:test) if defined? CDO
@@ -51,7 +48,6 @@ Dashboard::Application.config.action_dispatch.show_exceptions = false
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
 require 'testing/setup_all_and_teardown_all'
-require 'testing/lock_thread'
 require 'testing/transactional_test_case'
 require 'testing/spec_syntax'
 require 'testing/capture_queries'
@@ -60,8 +56,6 @@ require 'testing/rspec_mocks'
 require 'parallel_tests/test/runtime_logger'
 
 class ActiveSupport::TestCase
-  ActiveRecord::Migration.check_pending!
-
   setup do
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")

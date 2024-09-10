@@ -1,12 +1,3 @@
-require "base64"
-require "queries/lti"
-require "services/lti"
-require "policies/lti"
-require "concerns/partial_registration"
-require "clients/lti_advantage_client"
-require "cdo/honeybadger"
-require 'metrics/events'
-
 class LtiV1Controller < ApplicationController
   # Don't require an authenticity token because LTI Platforms POST to this
   # controller.

@@ -1,4 +1,4 @@
-class LtiAdvantageClient
+class Clients::LtiAdvantageClient
   include LtiAccessToken
 
   def initialize(client_id, issuer)

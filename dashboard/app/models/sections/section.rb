@@ -63,7 +63,7 @@ class Section < ApplicationRecord
   acts_as_paranoid
 
   belongs_to :user, optional: true
-  alias_attribute :teacher, :user
+  belongs_to :teacher, class_name: 'User', foreign_key: 'user_id', optional: true
 
   has_many :section_instructors, dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
@@ -93,7 +93,7 @@ class Section < ApplicationRecord
 
   validates :participant_type, acceptance: {accept: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
-  serialize :grade, GradesArray
+  serialize :grade, coder: GradesArray
   # Allow accessing section.grades, without a costly column rename.
   alias_attribute :grades, :grade
 

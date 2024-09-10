@@ -1,6 +1,4 @@
 require 'test_helper'
-require 'user'
-require 'policies/ai'
 
 class Policies::AiTest < ActiveSupport::TestCase
   class AiRubricsEnabledTest < ActiveSupport::TestCase

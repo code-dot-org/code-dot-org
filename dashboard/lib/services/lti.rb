@@ -1,11 +1,3 @@
-require 'policies/lti'
-require 'queries/lti'
-require 'user'
-require 'authentication_option'
-require 'sections/section'
-require 'set'
-require 'metrics/events'
-
 module Services
   module Lti
     def self.initialize_lti_user(id_token)

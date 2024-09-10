@@ -29,7 +29,7 @@ class Census::CensusSummary < ApplicationRecord
     EXCLUDED: "E",
     UNKNOWN: "U",
   }.freeze
-  enum teaches_cs: TEACHES
+  enum :teaches_cs, TEACHES
 
   # Use the zero byte as the quote character to allow importing double quotes
   #   via http://stackoverflow.com/questions/8073920/importing-csv-quoting-error-is-driving-me-nuts

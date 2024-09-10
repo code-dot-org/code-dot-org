@@ -14,6 +14,7 @@ module ActiveSupport
 
         setup do
           pools = ActiveRecord::Base.connection_handler.connection_pool_list
+          pools.uniq! # Locking is at the pool level, so duplicate pool entries shouldn't trigger a warning
           all_connections = pools.map(&:connections).flatten
           if all_connections.many?
             warning = 'WARN: Multiple ActiveRecord connections are in use, this can make transactional tests fail in weird ways.'
@@ -28,8 +29,7 @@ module ActiveSupport
           if use_transactional_test_case?
             @test_case_connections = enlist_transaction_connections
             @test_case_connections.each do |connection|
-              connection.begin_transaction joinable: false, _lazy: false
-              connection.pool.lock_thread = true
+              connection.pool.pin_connection!(true)
             end
           end
         end
@@ -37,8 +37,7 @@ module ActiveSupport
         teardown_all do
           if use_transactional_test_case && @test_case_connections
             @test_case_connections.each do |connection|
-              connection.rollback_transaction if connection.transaction_open?
-              connection.pool.lock_thread = false
+              connection.pool.unpin_connection!
             end
           end
         end

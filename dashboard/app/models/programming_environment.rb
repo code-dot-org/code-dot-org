@@ -23,8 +23,7 @@ class ProgrammingEnvironment < ApplicationRecord
 
   validates_uniqueness_of :name, case_sensitive: false
 
-  alias_attribute :categories, :programming_environment_categories
-  has_many :programming_environment_categories, -> {order(:position)}, dependent: :destroy
+  has_many :categories, -> {order(:position)}, class_name: 'ProgrammingEnvironmentCategory', dependent: :destroy
   has_many :programming_classes, dependent: :destroy
   has_many :programming_expressions, dependent: :destroy
 
@@ -71,7 +70,7 @@ class ProgrammingEnvironment < ApplicationRecord
 
   def serialize
     env_hash = {name: name, published: published}.merge(properties.sort.to_h)
-    env_hash.merge(categories: programming_environment_categories.map(&:serialize))
+    env_hash.merge(categories: categories.map(&:serialize))
   end
 
   def write_serialization

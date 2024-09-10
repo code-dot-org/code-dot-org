@@ -22,7 +22,7 @@ BLOCK_TYPES_BY_DEFINITION_TYPE = DEFINITION_BLOCK_TYPES.invert
 class SharedBlocklyFunction < ApplicationRecord
   include MultiFileSeeded
 
-  enum block_type: {
+  enum :block_type, {
     function: 0,
     behavior: 1,
   }

@@ -322,9 +322,12 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
-  require 'devise/custom_failure'
-  config.warden do |manager|
-    manager.failure_app = Devise::CustomFailure
+
+  Rails.application.config.to_prepare do
+    require 'devise/custom_failure'
+    config.warden do |manager|
+      manager.failure_app = Devise::CustomFailure
+    end
   end
 
   require 'cdo/cookie_helpers'

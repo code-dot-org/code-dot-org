@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'i18n_controller'
 
 class I18nControllerTest < ActionController::TestCase
   test "post track_string_usage should succeed" do

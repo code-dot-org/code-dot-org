@@ -1,6 +1,4 @@
 require 'test_helper'
-require 'user'
-require 'services/user'
 
 class Services::UserTest < ActiveSupport::TestCase
   test 'assign_form_params should update user with given params' do

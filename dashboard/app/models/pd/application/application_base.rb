@@ -82,7 +82,7 @@ module Pd::Application
       notes_5
     )
 
-    enum course: %w(
+    enum :course, %w(
       csf
       csd
       csp

@@ -22,7 +22,20 @@ gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgr
 gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.2'
+
+# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+gem "importmap-rails"
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem "turbo-rails"
+# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+gem "stimulus-rails"
+# Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem "jbuilder"
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "tzinfo-data", platforms: %i[windows jruby]
+
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # provide `respond_to` methods
@@ -62,12 +75,12 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate', '~> 3.1.1'
+  gem 'annotate', '~> 3.2.0'
   gem 'aws-google', '~> 0.2.0'
-  gem 'web-console', '~> 4.2.0'
+  gem 'web-console', '~> 4.2.1'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
-  gem 'bootsnap', '>= 1.14.0', require: false
+  gem 'bootsnap', '>= 1.18.4', require: false
 end
 
 # Rack::Cache middleware used in development/test;
@@ -77,8 +90,12 @@ gem 'rack-cache'
 group :development, :test do
   gem 'rerun'
   gem 'thin'
-  # Use debugger
-  #gem 'debugger' unless ENV['RM_INFO']
+
+  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem "debug", platforms: %i[mri windows], require: "debug/prelude"
+
+  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
+  gem "rubocop-rails-omakase", require: false
 
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
@@ -97,21 +114,22 @@ group :development, :test do
   gem 'timecop'
 
   # For UI testing.
+  gem 'capybara'
   gem 'cucumber'
   gem 'eyes_selenium', '6.3.7'
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
-  gem 'minitest-rails', '~> 6.1', require: false
+  gem 'minitest-rails', '~> 7.1.1', require: false
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec', require: false
-  gem 'selenium-webdriver', '~> 4.0'
+  gem 'selenium-webdriver'
   gem 'simplecov', '~> 0.22.0', require: false
-  gem 'spring', '~> 3.1.1'
+  gem 'spring', '~> 4.2.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 5.2'
 
@@ -121,7 +139,7 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 6.4.3', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
@@ -179,7 +197,7 @@ gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 9.12.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
@@ -213,10 +231,10 @@ gem 'twilio-ruby', '< 6.0'
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.5.0'
+gem 'paranoia', '~> 3.0.0'
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.13'
+gem 'active_model_serializers', '~> 0.10.14'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
@@ -281,7 +299,9 @@ gem 'sshkit'
 gem 'validates_email_format_of'
 gem 'validate_url', '~> 1.0.15'
 
-gem 'composite_primary_keys', '~> 13.0'
+# DISABLED during Rails 7.2 upgrade: Rails 7.1 includes composite primary key support, and this
+# gem has not been updated to support ActiveRecord >= 7.1 yet (possibly as a result of reduced demand)
+# gem 'composite_primary_keys', '~> 13.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
@@ -310,7 +330,7 @@ gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
-gem 'loofah', '~> 2.19.1'
+gem 'loofah', '~> 2.22.0'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
 require_pg = lambda do
@@ -322,7 +342,7 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
-gem 'activerecord-import', '~> 1.0.3'
+gem 'activerecord-import', '~> 1.7.0'
 gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'

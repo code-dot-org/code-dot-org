@@ -1,4 +1,4 @@
-class LtiDynamicRegistrationClient
+class Clients::LtiDynamicRegistrationClient
   def initialize(registration_token, registration_endpoint)
     raise ArgumentError unless registration_token && registration_endpoint
     @registration_token = registration_token

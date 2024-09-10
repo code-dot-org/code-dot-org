@@ -1,7 +1,4 @@
 require 'test_helper'
-require 'user'
-require 'policies/lti'
-require 'authentication_option'
 
 class Services::LtiTest < ActiveSupport::TestCase
   test 'get_user returns an existing user' do

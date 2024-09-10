@@ -20,7 +20,7 @@ class NewFeatureFeedback < ApplicationRecord
 
   validates :satisfied, inclusion: {in: [true, false]}
 
-  enum form_key: {
+  enum :form_key, {
     progress_v2: 0
   }
 end
