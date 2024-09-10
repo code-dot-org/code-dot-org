@@ -23,6 +23,10 @@ export const MusicConditions: ConditionNames = {
     valueType: 'number',
   },
   PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
+  PLAYED_SOUND_IN_FUNCTION: {
+    name: 'played_sound_in_function',
+    valueType: 'number',
+  },
   PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
   PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
   PLAYED_EMPTY_CHORDS: {name: 'played_empty_chords', valueType: 'number'},
@@ -97,6 +101,13 @@ export default class MusicValidator extends Validator {
           if (eventData.triggered) {
             this.conditionsChecker.addSatisfiedCondition({
               name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
+            });
+          }
+
+          if (eventData.functionContext) {
+            this.conditionsChecker.addSatisfiedCondition({
+              name: MusicConditions.PLAYED_SOUND_IN_FUNCTION.name,
+              value: eventData.functionContext.name,
             });
           }
 
