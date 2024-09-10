@@ -3,10 +3,10 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {getStore} from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import color from '../util/color';
 
 import BackToFrontConfetti from './BackToFrontConfetti';
