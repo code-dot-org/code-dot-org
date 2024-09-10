@@ -44,28 +44,27 @@ layout: wide_index
 
 %main
   -# What is HoC?
-  %section.bg-neutral-light.centered
+  %section.bg-neutral-light
     .wrapper
-      %h2=hoc_s("hoc_homepage.what_is_hoc.heading")
-      %p.body-two.wrap-balance
+      %h2.centered
+        =hoc_s("hoc_homepage.what_is_hoc.heading")
+      %p.centered.body-two.wrap-balance
         =hoc_s("hoc_homepage.what_is_hoc.desc")
+      -# Spanish video and banner
+      - if @language == 'es' || @language == 'la'
+        .spanish-content
+          = view :index_video
+          %hr
+          .action-block.action-block--two-col.white
+            %img{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
+            .content-wrapper
+              %h2.heading-lg
+                = hoc_s(:hoc_live_learn_title)
+              %p
+                = hoc_s(:hoc_live_learn_message)
+              %a.link-button{href: 'https://code.org/envivo'}
+                = hoc_s(:hoc_live_learn_more)
 
-  -# HoC Live Spanish banner
-  - if @language == 'es' || @language == 'la'
-    %section.spanish-banner.no-padding-bottom
-      .wrapper
-        = view :index_video
-        %hr
-        .action-block.action-block--two-col
-          %img{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
-          .content-wrapper
-            %h2.heading-lg
-              = hoc_s(:hoc_live_learn_title)
-            %p
-              = hoc_s(:hoc_live_learn_message)
-            %a.link-button{href: 'https://code.org/envivo'}
-              = hoc_s(:hoc_live_learn_more)
-        %hr
 
   -# Host an event & Resources
   %section

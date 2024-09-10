@@ -1,7 +1,12 @@
 @import 'breakpoints.scss', 'video-responsive', 'action-blocks';
 
 // Spanish banner
-section.spanish-banner {
+.spanish-content {
+  padding-top: 1rem;
+
+  figure.video-responsive {
+    max-width: 100%;
+  }
 
   .action-block {
     .content-wrapper {
@@ -18,13 +23,13 @@ section.spanish-banner {
         width: 50%;
       }
     }
-  }
 
-  hr {
-    margin: 5rem 0 -2rem;
+    hr {
+      margin: 5rem 0 -2rem;
 
-    @media (max-width: $width-sm) {
-      margin: 3rem 0 0;
+      @media (max-width: $width-sm) {
+        margin: 3rem 0 0;
+      }
     }
   }
 }
