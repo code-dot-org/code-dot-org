@@ -1,68 +1,4 @@
-@import 'color.scss', 'font.scss', 'breakpoints.scss', 'video-responsive', 'action-blocks';
-
-html, body {
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-top: 0;
-  font-weight: var(--bold-font-weight);
-}
-
-section {
-  padding: 7em 1em;
-
-  @media screen and (max-width: $width-sm) {
-    padding: 4em 1.15em;
-  }
-
-  .wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-}
-
-#top {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-// What is HoC?
-section.what-is-hoc {
-
-  figure.video-responsive {
-    max-width: 100%;
-  }
-
-  p.body-two {
-    margin-bottom: 3rem;
-
-    @media (min-width: $width-sm) {
-      max-width: 68%;
-      margin: 0 auto 3rem;
-    }
-  }
-}
-
-// Map
-section.map {
-
-  #maparea {
-    margin-top: 3rem !important;
-  }
-
-  .text-wrapper:last-child {
-    margin: 3rem auto 0;
-
-    @media (min-width: $width-sm) {
-      max-width: 640px;
-    }
-  }
-}
+@import 'breakpoints.scss', 'video-responsive', 'action-blocks';
 
 // Spanish banner
 section.spanish-banner {
@@ -98,10 +34,10 @@ section.stats {
 
   .stats-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 1.25rem;
+    margin-block: 3rem;
 
     @media (max-width: $width-md) {
       justify-content: space-around;
@@ -111,28 +47,21 @@ section.stats {
       justify-content: center;
     }
 
-    figure {
+    .stat-item {
       width: 65%;
+      background: var(--neutral_dark90);
+      border: 1px solid var(--neutral_dark80);
+      border-radius: 4px;
+      padding: 1.75rem 1rem;
+      flex: 1;
 
-      @media (min-width: $width-sm) {
-        width: 25%;
+      p.stat {
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 0.25rem;
+        color: #21C0CF;
       }
     }
-
-    img {
-      width: 85%;
-      margin-bottom: 1.5rem;
-    }
-
-    figcaption {
-      font-weight: var(--regular-font-weight);
-    }
-  }
-
-  .button-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
   }
 }
