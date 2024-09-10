@@ -56,7 +56,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
 
 Scenario: Teacher views rubric product tour
   # Teacher signs in and navigates to assessment page
-  Given I create a teacher-associated student named "Aiden"
+  Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
   And I wait until element "#homepage-container" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
@@ -138,7 +138,7 @@ Scenario: Teacher views rubric product tour
 
 @eyes
 Scenario: Teacher views Rubric and Settings tabs
-  Given I create a teacher-associated student named "Aiden"
+  Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
   And I wait until element "#homepage-container" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
@@ -171,7 +171,7 @@ Scenario: Teacher views Rubric and Settings tabs
 @eyes
 Scenario: Teacher views product tour
   # Teacher signs in and navigates to assessment page
-  Given I create a teacher-associated student named "Aiden"
+  Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
   And I wait until element "#homepage-container" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"

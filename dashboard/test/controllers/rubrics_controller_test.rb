@@ -12,7 +12,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     # set up a section containing 6 students: 1 @student and 5 other_students.
 
-    @teacher = create :teacher
+    @teacher = create :authorized_teacher
     @student = create :student
     @follower = create :follower, student_user: @student, user: @teacher
     @rubric = create :rubric, lesson: @lesson, level: @level
@@ -23,6 +23,18 @@ class RubricsControllerTest < ActionController::TestCase
     5.times do
       other_students << create(:student)
       other_followers << create(:follower, section: @follower.section, student_user: other_students[-1], user: @teacher)
+    end
+
+    @unauth_teacher = create :teacher
+    @unauth_student = create :student
+    @unauth_follower = create :follower, student_user: @unauth_student, user: @unauth_teacher
+
+    other_unauth_followers = []
+    other_unauth_students = []
+
+    5.times do
+      other_unauth_students << create(:student)
+      other_unauth_followers << create(:follower, section: @unauth_follower.section, student_user: other_unauth_students[-1], user: @unauth_teacher)
     end
 
     @fake_ip = '127.0.0.1'
@@ -359,6 +371,17 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 0, json_response.length
   end
 
+  test "returns forbidden when getting aggregate status if teacher is unverified" do
+    sign_in @unauth_teacher
+
+    get :ai_evaluation_status_for_all, params: {
+      id: @rubric.id,
+      sectionId: @unauth_follower.section.id,
+    }
+
+    assert_response :forbidden
+  end
+
   test "returns bad request when getting aggregate status if ai isn't enabled for script level" do
     sign_in @teacher
 
@@ -540,6 +563,19 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 5, json_response['lastAttemptEvaluatedCount']
     assert_equal 0, json_response['pendingCount']
     assert json_response['csrfToken']
+  end
+
+  test "returns forbidden when running ai evals for all if teacher is unverified" do
+    sign_in @unauth_teacher
+
+    Metrics::Events.stubs(:log_event).never
+
+    get :run_ai_evaluations_for_all, params: {
+      id: @rubric.id,
+      sectionId: @unauth_follower.section.id,
+    }
+
+    assert_response :forbidden
   end
 
   test "returns bad request when running ai evals for all if ai isn't enabled" do
@@ -990,6 +1026,18 @@ class RubricsControllerTest < ActionController::TestCase
       }
       assert_response :success
     end
+  end
+
+  test "run ai evaluations for user does not call EvaluateRubricJob if teacher not verified" do
+    sign_in @unauth_teacher
+
+    EvaluateRubricJob.expects(:perform_later).never
+
+    post :run_ai_evaluations_for_user, params: {
+      id: @rubric.id,
+      userId: @unauth_student.id,
+    }
+    assert_response :forbidden
   end
 
   test "cannot run ai evaluations for user if not teacher of student" do
