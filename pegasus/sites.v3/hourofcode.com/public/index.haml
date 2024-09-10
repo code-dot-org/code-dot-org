@@ -46,7 +46,7 @@ layout: wide_index
   -# What is HoC?
   %section.bg-neutral-light
     .wrapper
-      %h2.centered
+      %h2.no-margin-top.centered
         =hoc_s("hoc_homepage.what_is_hoc.heading")
       %p.centered.body-two.wrap-balance
         =hoc_s("hoc_homepage.what_is_hoc.desc")
@@ -58,30 +58,36 @@ layout: wide_index
           .action-block.action-block--two-col.white
             %img{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
             .content-wrapper
-              %h2.heading-lg
+              %h2.heading-lg.no-margin-top
                 = hoc_s(:hoc_live_learn_title)
               %p
                 = hoc_s(:hoc_live_learn_message)
               %a.link-button{href: 'https://code.org/envivo'}
                 = hoc_s(:hoc_live_learn_more)
 
-  -# Host an event & Resources
-  %section
+  -# Host an Hour of Code
+  %section.no-padding-bottom
     .wrapper
-      .flex-container.justify-space-between.gap-2
+      .flex-container.justify-space-between.align-items-center.flex-direction-column-tablet-reverse.gap-4.mobile-gap-2
         .text-wrapper.flex-1
-          %h2=hoc_s("hoc_homepage.host.heading")
+          %h2.no-margin-top
+            =hoc_s("hoc_homepage.host.heading")
           %p.body-two
             =hoc_s("hoc_homepage.host.desc")
           %a.link-button{href: resolve_url('/events')}
             =hoc_s("hoc_homepage.host.button")
         %figure.flex-1
-          %img{src: "/images/homepage-students-computer.png", alt: ""}
-      .flex-container.justify-space-between.gap-2
+          %img.rounded-corners{src: "/images/homepage-students-computer.png", alt: "", style: "width: 100%"}
+
+  -# Resources
+  %section
+    .wrapper
+      .flex-container.justify-space-between.align-items-center.flex-direction-column-tablet.gap-4.mobile-gap-2
         %figure.flex-1
-          %img{src: "/images/homepage-resources.png", alt: ""}
+          %img.rounded-corners{src: "/images/homepage-resources.png", alt: "", style: "width: 100%"}
         .text-wrapper.flex-1
-          %h2=hoc_s("hoc_homepage.resources.heading")
+          %h2.no-margin-top
+            =hoc_s("hoc_homepage.resources.heading")
           %p.body-two
             =hoc_s("hoc_homepage.resources.desc")
           .button-wrapper
@@ -95,7 +101,7 @@ layout: wide_index
     .wrapper.centered
       %h2.white
         =hoc_s("hoc_homepage.global.heading")
-      %p.white
+      %p.body-two.no-margin-bottom.white
         =hoc_s("hoc_homepage.global.desc")
       = view :home_stats
       .button-wrapper.centered

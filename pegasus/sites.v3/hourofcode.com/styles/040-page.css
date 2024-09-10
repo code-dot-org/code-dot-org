@@ -375,6 +375,15 @@ td {
   &.gap-2 {
     gap: 2rem;
   }
+  &.gap-4 {
+    gap: 4rem;
+  }
+
+  @media (max-width: 992px) {
+    &.mobile-gap-2 {
+      gap: 2rem;
+    }
+  }
 
   & > .flex-1 {
     flex: 1;
