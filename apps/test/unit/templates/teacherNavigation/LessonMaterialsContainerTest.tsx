@@ -4,7 +4,6 @@ import {useLoaderData} from 'react-router-dom';
 
 import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/LessonMaterialsContainer';
 
-// Mock the useLoaderData hook from react-router-dom
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useLoaderData: jest.fn(),
