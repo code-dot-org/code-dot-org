@@ -3,6 +3,7 @@ import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
+  SCHOOL_COUNTRY_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
@@ -11,7 +12,6 @@ import {
 import {
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
-  SCHOOL_COUNTRY,
   SELECT_A_SCHOOL,
   US_COUNTRY_CODE,
   ZIP_REGEX,
@@ -27,7 +27,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   const detectedCountry = useMemo(
     () =>
       initialState.country ??
-      sessionStorage.getItem(SCHOOL_COUNTRY) ??
+      sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY) ??
       (initialState.usIp ? US_COUNTRY_CODE : ''),
     [initialState.country, initialState.usIp]
   );
@@ -82,7 +82,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   // Handle country changes
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_COUNTRY, country);
+    sessionStorage.setItem(SCHOOL_COUNTRY_SESSION_KEY, country);
 
     if (mounted.current && country) {
       setSchoolId(SELECT_A_SCHOOL);
