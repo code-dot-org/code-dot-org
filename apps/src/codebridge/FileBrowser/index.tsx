@@ -97,14 +97,14 @@ const InnerFileBrowser = React.memo(
 
     const handleDeleteFile = (fileId: string) => {
       const filename = files[fileId].name;
-      const title = `Are you sure?`;
-      const message = `Are you sure you want to delete the file ${filename}?`;
+      const title = codebridgeI18n.areYouSure();
+      const message = codebridgeI18n.deleteFileConfirm({filename});
       dialogControl?.showDialog({
         type: DialogType.GenericConfirmation,
         handleConfirm: () => deleteFile(fileId),
         title,
         message,
-        confirmText: 'Delete',
+        confirmText: codebridgeI18n.delete(),
       });
     };
 
@@ -119,22 +119,33 @@ const InnerFileBrowser = React.memo(
         projectFolders
       ).length;
 
-      const title = `Are you sure?`;
-      let message = `Are you sure you want to delete the folder "${folderName}"?`;
-      if (fileCount || folderCount) {
-        message +=
-          ' This will also delete ' +
-          (fileCount ? `${fileCount} file(s)` : '') +
-          (fileCount && folderCount ? ' and ' : '') +
-          (folderCount ? `${folderCount} folder(s)` : '') +
-          ` inside "${folderName}"`;
+      const title = codebridgeI18n.areYouSure();
+      const confirmation = codebridgeI18n.deleteFolderConfirm({folderName});
+      let additionalWarning = '';
+      if (fileCount && folderCount) {
+        additionalWarning = codebridgeI18n.deleteFolderConfirmBoth({
+          fileCount: `${fileCount}`,
+          folderCount: `${folderCount}`,
+          folderName,
+        });
+      } else if (fileCount) {
+        additionalWarning = codebridgeI18n.deleteFolderConfirmFiles({
+          fileCount: `${fileCount}`,
+          folderName,
+        });
+      } else if (folderCount) {
+        additionalWarning = codebridgeI18n.deleteFolderConfirmSubfolders({
+          folderCount: `${folderCount}`,
+          folderName,
+        });
       }
+      const message = confirmation + ' ' + additionalWarning;
       dialogControl?.showDialog({
         type: DialogType.GenericConfirmation,
         handleConfirm: () => deleteFolder(folderId),
         title,
         message,
-        confirmText: 'Delete',
+        confirmText: codebridgeI18n.delete(),
       });
     };
 
