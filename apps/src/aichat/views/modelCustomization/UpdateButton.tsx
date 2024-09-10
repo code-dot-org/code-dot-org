@@ -28,6 +28,7 @@ const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
 
   return (
     <Button
+      id="uitest-update-customizations"
       text="Update"
       disabled={isDisabledDefault || saveInProgress || !havePropertiesChanged}
       iconLeft={

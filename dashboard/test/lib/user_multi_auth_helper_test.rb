@@ -184,14 +184,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_created_google_user create(:teacher, :google_sso_provider)
   end
 
-  test 'create migrated Windows Live OAuth student' do
-    assert_created_sso_user_with_oauth_token create(:student, :windowslive_sso_provider)
-  end
-
-  test 'create migrated Windows Live OAuth teacher' do
-    assert_created_sso_user_with_oauth_token create(:teacher, :windowslive_sso_provider)
-  end
-
   test 'create migrated Facebook OAuth student' do
     assert_created_sso_user_with_oauth_token create(:student, :facebook_sso_provider)
   end
@@ -407,14 +399,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
         }
       }
     end
-  end
-
-  test 'de- and re-migrate Windows Live OAuth student' do
-    round_trip_sso_with_token create(:student, :windowslive_sso_provider)
-  end
-
-  test 'de- and re-migrate Windows Live OAuth teacher' do
-    round_trip_sso_with_token create(:teacher, :windowslive_sso_provider)
   end
 
   test 'de- and re-migrate Facebook OAuth student' do

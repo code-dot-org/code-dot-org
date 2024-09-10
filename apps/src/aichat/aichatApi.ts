@@ -252,8 +252,20 @@ function getUpdatedMessages(
           status: AiInteractionStatus.PII_VIOLATION,
         },
       ];
-    case AiRequestExecutionStatus.FAILURE:
     case AiRequestExecutionStatus.MODEL_PROFANITY:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.ERROR,
+        },
+        {
+          chatMessageText: modelResponse,
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.PROFANITY_VIOLATION,
+        },
+      ];
+    case AiRequestExecutionStatus.FAILURE:
     case AiRequestExecutionStatus.MODEL_PII:
       return [
         {

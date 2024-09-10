@@ -42,6 +42,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         us_state_code: current_user.us_state_code,
         in_section: current_user.student? ? current_user.sections_as_student.present? : nil,
         created_at: current_user.created_at,
+        has_seen_ai_assessments_announcement: current_user.has_seen_ai_assessments_announcement?,
       }
     else
       render json: {

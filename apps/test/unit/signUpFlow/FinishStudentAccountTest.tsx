@@ -40,10 +40,11 @@ describe('FinishStudentAccount', () => {
     });
   });
 
-  function renderDefault() {
+  function renderDefault(usIp: boolean = true) {
     render(
       <FinishStudentAccount
         ageOptions={ageOptions}
+        usIp={usIp}
         usStateOptions={usStateOptions}
       />
     );
