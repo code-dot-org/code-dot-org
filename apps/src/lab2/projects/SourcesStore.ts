@@ -84,7 +84,11 @@ export class RemoteSourcesStore implements SourcesStore {
         replace: replaceExistingVersion,
         firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
         tabId: getTabId(),
-        projectType: projectType,
+        projectType,
+      };
+    } else {
+      options = {
+        projectType,
       };
     }
     const response = await sourcesApi.update(channelId, sources, options);
