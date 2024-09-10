@@ -58,7 +58,7 @@ And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |
       Applitools::STITCH_MODE[:css]
   end
 
-  @eyes.check_window(identifier, MATCH_TIMEOUT)
+  @eyes.check_window(identifier, MATCH_TIMEOUT, false)
 
   # Return to full page screenshot for remaining checkpoints in this Scenario.
   @eyes.force_full_page_screenshot = true
