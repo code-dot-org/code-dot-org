@@ -6,21 +6,25 @@ title 'Debugging Session'
 markdown <<MARKDOWN
 # Creating Apps with Devices - Lesson 4: Updating Screen Elements
 
-> ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/4" target="blank">U6AL4 Lesson Plan: Updating Screen Elements</a> (Circuit Playground)
-> ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/4" target="blank">U6BL4 Lesson Plan: Updating Screen Elements</a> (micro:bit)
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px;">
 
-##### Let's put our "student hat" on and explore the same levels we just previewed, but this time keeping our students in mind.
+#### <a href="https://studio.code.org/s/csd6a-2023/lessons/4" target="blank">U6AL4 Lesson Plan: Updating Screen Elements</a> (Circuit Playground)
+#### <a href="https://studio.code.org/s/csd6b-2023/lessons/4" target="blank">U6BL4 Lesson Plan: Updating Screen Elements</a> (micro:bit)
+</p></div>
+<br>
 
-## Investigation Goal
+#### Let's put our "student hat" on and explore the same levels we just previewed, but this time keeping our students in mind.
 
-##### Explore designing in App Lab with setProperties()
+## 🎯 Investigation Goal
 
-## Investigation Tasks
+#### Explore designing in App Lab with ``setProperty()``.
 
-##### Practice using App Lab and ```setProperty()``` in Lesson 4, **Levels 1 through 4**:
+## 📋 Investigation Tasks
 
-* ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/4/levels/1" target="blank"> Unit 6A (Circuit Playground), Lesson 4, Level 1</a>
-* ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/4/levels/1" target="blank"> Unit 6B (micro:bit), Lesson 4, Level 1</a>
+#### Practice using App Lab and ```setProperty()``` in Lesson 4, **Levels 1 through 4**:
+
+* #### <a href="https://studio.code.org/s/csd6a-2024/lessons/4/levels/1" target="blank"> Unit 6A (Circuit Playground), Lesson 4, Level 1</a>
+* #### <a href="https://studio.code.org/s/csd6b-2024/lessons/4/levels/1" target="blank"> Unit 6B (micro:bit), Lesson 4, Level 1</a>
 
 
 

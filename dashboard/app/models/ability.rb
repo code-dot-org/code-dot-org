@@ -2,8 +2,6 @@ class Ability
   include CanCan::Ability
   include Pd::Application::ActiveApplicationModels
 
-  GENAI_PILOT = 'gen-ai-lab-v1'
-
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
   def initialize(user)
@@ -272,6 +270,10 @@ class Ability
       if user.has_ai_tutor_access? && user.levelbuilder?
         can :check_message_safety, :aichat
       end
+
+      if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
+        can :chat_completion, :ai_diff
+      end
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
@@ -481,18 +483,15 @@ class Ability
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      if user.has_pilot_experiment?(GENAI_PILOT) ||
-          (!user.teachers.empty? &&
-          user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT)})
-        can :chat_completion, :aichat
-        can :log_chat_event, :aichat
-        can :start_chat_completion, :aichat
-        can :chat_request, :aichat
+      can [:log_chat_event, :start_chat_completion, :chat_request], :aichat do
+        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
-      # Only teachers can view student chat history.
-      if user.has_pilot_experiment?(GENAI_PILOT)
-        can :student_chat_history, :aichat
+      # Additional logic that confirms that a given teacher should have access
+      # to a given student's chat history is in aichat_controller.
+      can :student_chat_history, :aichat do
+        user.teacher_can_access_ai_chat?
       end
+      can :user_has_access, :aichat
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)

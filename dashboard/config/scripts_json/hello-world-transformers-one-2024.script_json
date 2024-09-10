@@ -48,8 +48,8 @@
     },
     "new_name": null,
     "family_name": "hello-world-transformers-one",
-    "serialized_at": "2024-08-13 22:47:49 UTC",
-    "published_state": "beta",
+    "serialized_at": "2024-09-03 20:50:01 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -237,6 +237,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hello_world_intro_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "hello_world_intro_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "helloworld_food_say_transformers_2024"
         ],
@@ -257,9 +279,9 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 2,
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -282,9 +304,9 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -307,9 +329,9 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -332,9 +354,9 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -357,9 +379,9 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -382,9 +404,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -407,9 +429,9 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -432,9 +454,9 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 9,
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -457,9 +479,9 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -482,9 +504,9 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -508,6 +530,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "hello_world_intro_transformers_2024",
+        "script_level.level_keys": [
+          "hello_world_intro_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "helloworld_food_say_transformers_2024",

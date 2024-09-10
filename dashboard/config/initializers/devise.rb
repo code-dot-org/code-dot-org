@@ -293,7 +293,6 @@ Devise.setup do |config|
       end
     end,
   }
-  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, scope: 'wl.basic wl.emails'
 
   config.omniauth :microsoft_v2_auth, CDO.dashboard_microsoft_key, CDO.dashboard_microsoft_secret
 
@@ -301,22 +300,6 @@ Devise.setup do |config|
   # initiates the oauth flow (instead of us as we do with facebook
   # with a log in with facebook button)
   config.omniauth :clever, CDO.dashboard_clever_key, CDO.dashboard_clever_secret, provider_ignores_state: true
-
-  config.omniauth :openid_connect, {
-    name: :the_school_project,
-    scope: [:profile, :email, :school],
-    response_type: :code,
-    issuer: 'https://www.cleio.fr/openid',
-    discovery: true,
-    client_options: {
-      port: 443,
-      scheme: 'https',
-      host: CDO.dashboard_hostname,
-      identifier: CDO.dashboard_schoolproject_key,
-      secret: CDO.dashboard_schoolproject_secret,
-      redirect_uri: CDO.studio_url('/users/auth/the_school_project/callback', 'https:')
-    }
-  }
 
   # Powerschool OpenID config
   config.omniauth :openid, {

@@ -727,6 +727,7 @@ module SharedConstants
     ERROR: 'error',
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
+    USER_INPUT_TOO_LARGE: 'user_input_too_large',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
@@ -762,6 +763,16 @@ module SharedConstants
     # Profanity detected in the model's output.
     MODEL_PROFANITY: 1003,
     # PII detected in the model's output.
-    MODEL_PII: 1004
+    MODEL_PII: 1004,
+    # The user input request exceeded the maximum token size allowed.
+    USER_INPUT_TOO_LARGE: 1005
+  }
+
+  AI_CHAT_MODEL_IDS = {
+    ARITHMO: "gen-ai-arithmo2-mistral-7b",
+    BIOMISTRAL: "gen-ai-biomistral-7b",
+    MISTRAL: "gen-ai-mistral-7b-inst-v01",
+    KAREN: "gen-ai-karen-creative-mistral-7b",
+    PIRATE: "gen-ai-mistral-pirate-7b"
   }
 end

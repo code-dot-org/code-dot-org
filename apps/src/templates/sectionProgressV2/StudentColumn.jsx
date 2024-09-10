@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
@@ -16,7 +17,7 @@ import {
 import SortByNameDropdown from '../SortByNameDropdown';
 
 import styles from './progress-table-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
@@ -42,9 +43,6 @@ function StudentColumn({
   expandMetadataForStudents,
   collapseMetadataForStudents,
 }) {
-  const getFullName = student =>
-    student.familyName ? `${student.name} ${student.familyName}` : student.name;
-
   const collapseRow = studentId => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ONE_ROW_COLLAPSED, {
       sectionId: sectionId,

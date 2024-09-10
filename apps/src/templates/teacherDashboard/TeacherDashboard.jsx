@@ -169,7 +169,7 @@ function TeacherDashboard({
             <EmptySectionV1
               hasStudents={studentCount > 0}
               hasCurriculumAssigned={anyStudentHasProgress}
-              element={<SectionProgressSelector />}
+              element={<SectionProgressSelector isInV1Navigaton={true} />}
               showProgressPageHeader={true}
             />
           }

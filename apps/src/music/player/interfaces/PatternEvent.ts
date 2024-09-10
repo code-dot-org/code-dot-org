@@ -10,6 +10,7 @@ export interface PatternEvent extends PlaybackEvent {
 
 export interface PatternEventValue {
   kit: string;
+  length?: 1 | 2;
   events: PatternTickEvent[];
 }
 

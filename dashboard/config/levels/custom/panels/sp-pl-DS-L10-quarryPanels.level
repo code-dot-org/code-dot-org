@@ -1,0 +1,48 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-08-28T16:03:11.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "\n\n",
+        "imageUrl": "https://images.code.org/539b792bd856479924f675c7870a78ed-10notnull1.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/05499986ca40d460edd8d38d0c5428d5-10-2notnull.png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/72de4a230b9924f5aabe21640c22ccc6-10-3end.png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/ad29758b3c06eb72aa01eb624cff9442-10-4strEnd.png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/1be58aca38f4c3128c90dc27d933094b-10-5logical.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-643a23e5-54c4-4eb0-a0bb-bde8f986587c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/48111d7beb6b05ee0f3a09e6cd60bc8a-10-6logoperator.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-79e6faa9-6b7f-4aab-a8d7-c91fdc3ca442"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-28T16:03:11.463+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-L8-visualPanels\\\"\"],\"cloned_from\":\"sp-pl-DS-L8-visualPanels\"},{\"changed_at\":\"2024-08-28 16:45:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

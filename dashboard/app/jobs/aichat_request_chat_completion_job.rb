@@ -18,7 +18,12 @@ class AichatRequestChatCompletionJob < ApplicationJob
     end
 
     request = arguments.first[:request]
-    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
+    execution_status_code = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE]
+    if exception.message.include? "must have less than 3000 tokens"
+      execution_status_code = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE]
+    end
+
+    request.update!(response: exception.message, execution_status: execution_status_code)
     Honeybadger.notify(
       "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}",
       context: {
@@ -34,12 +39,12 @@ class AichatRequestChatCompletionJob < ApplicationJob
     model_customizations = JSON.parse(request.model_customizations, {symbolize_names: true})
     stored_messages = JSON.parse(request.stored_messages, {symbolize_names: true})
     new_message = JSON.parse(request.new_message, {symbolize_names: true})
-
-    status, response = get_execution_status_and_response(model_customizations, stored_messages, new_message, locale)
+    level_id = request.level_id
+    status, response = get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
     request.update!(response: response, execution_status: status)
   end
 
-  private def get_execution_status_and_response(model_customizations, stored_messages, new_message, locale)
+  private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
     # Check input for profanity and PII
     user_profanity = find_profanity(new_message[:chatMessageText], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_profanity}"] if user_profanity
@@ -48,7 +53,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
     # Make the request
-    response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message)
+    response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
     # Check output for profanity and PII. Report to HoneyBadger if the model returned profanity.
     model_profanity = find_profanity(response, locale)

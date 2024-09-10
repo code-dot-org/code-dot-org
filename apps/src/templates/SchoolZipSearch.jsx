@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
@@ -43,9 +42,7 @@ export default function SchoolZipSearch({fieldNames}) {
     !detectedZip
   );
 
-  const labelClassName = isSchoolDropdownDisabled
-    ? classNames(style.padding, style.disabledLabel)
-    : style.padding;
+  const labelClassName = isSchoolDropdownDisabled ? style.disabledLabel : '';
 
   useEffect(() => {
     const isValidZip = ZIP_REGEX.test(zip);
@@ -121,14 +118,12 @@ export default function SchoolZipSearch({fieldNames}) {
   ].concat(sortSchoolsByName(dropdownSchools));
 
   return (
-    <div>
+    <div className={style.inputContainer}>
       <label>
-        <BodyThreeText className={style.padding}>
-          <strong>{i18n.enterYourSchoolZip()}</strong>
-        </BodyThreeText>
         <TextField
           id="uitest-school-zip"
           name={fieldNames.schoolZip}
+          label={i18n.enterYourSchoolZip()}
           onChange={e => {
             setZip(e.target.value);
           }}
@@ -143,13 +138,12 @@ export default function SchoolZipSearch({fieldNames}) {
       </label>
       {!inputManually && (
         <div>
-          <BodyThreeText className={labelClassName}>
-            <strong>{i18n.selectYourSchool()}</strong>
-          </BodyThreeText>
           <SimpleDropdown
             id="uitest-school-dropdown"
             disabled={isSchoolDropdownDisabled}
             name={fieldNames.ncesSchoolId}
+            className={labelClassName}
+            labelText={i18n.selectYourSchool()}
             itemGroups={[
               {
                 label: i18n.schools(),

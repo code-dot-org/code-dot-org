@@ -1,0 +1,191 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-09-05T17:44:44.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "#Check out this code! \r\nThis is an example of a completed coding project that plays a familiar song. \r\n\r\nClick “Run” to play ______ and notice what happens.",
+    "instructions_important": "false",
+    "long_instructions": "##Functions in Music Making\r\nMost songs are organized by verses and chorus.  \r\n\r\nNotice how the code in the function named \"chorus\" stands on its own. \r\n1. Call the `chorus` function by adding it under `when run`. \r\n2. Press \"Run\" to see how it works. ",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_espresso",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 34,
+              "y": 34,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "x": 230,
+              "y": 30,
+              "fields": {
+                "NAME": "chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "play_sounds_together",
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "play_sound_at_current_location_simple2",
+                          "fields": {
+                            "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "play_sound_at_current_location_simple2",
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "play_sound_at_current_location_simple2",
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "play_sound_at_current_location_simple2",
+                                          "fields": {
+                                            "sound": "sabrina_carpenter_espresso/bass_main"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "play_sounds_together",
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "play_sound_at_current_location_simple2",
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/vocals_chorus_backgrounds"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "play_sound_at_current_location_simple2",
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "play_sound_at_current_location_simple2",
+                                          "fields": {
+                                            "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "play_sound_at_current_location_simple2",
+                                              "fields": {
+                                                "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "play_sound_at_current_location_simple2",
+                                                  "fields": {
+                                                    "sound": "sabrina_carpenter_espresso/bass_main"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Functions": [
+
+          ]
+        }
+      }
+    },
+    "validations": [
+      {
+        "key": "music-ai-functions-chorus_40e32b8b-3591-4266-82c8-cc24049aa1a0",
+        "message": "Nice work.  You successfully used the function to play a sound.",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f",
+        "message": "Connect the \"chorus\" block under [when run](#clickable=when-run-block) to play the sounds in the function.",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-05T17:44:44.740+00:00\",\"changed\":[\"cloned from \\\"music-ai-tinker\\\"\"],\"cloned_from\":\"music-ai-tinker\"},{\"changed_at\":\"2024-09-05 17:48:24 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 21:53:12 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:20:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:51:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:53:02 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:53:50 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

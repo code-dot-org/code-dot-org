@@ -392,11 +392,14 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getStartSources = () => {
-    if (this.props.levelProperties?.levelData?.startSources) {
-      return this.props.levelProperties?.levelData.startSources;
-    } else {
+    if (
+      getBlockMode() !== BlockMode.SIMPLE2 ||
+      !this.props.levelProperties?.levelData?.startSources
+    ) {
       const startSourcesFilename = 'startSources' + getBlockMode();
       return require(`@cdo/static/music/${startSourcesFilename}.json`);
+    } else {
+      return this.props.levelProperties?.levelData.startSources;
     }
   };
 
@@ -670,6 +673,7 @@ class UnconnectedMusicView extends React.Component {
             this.props.isProjectLevel
           }
           analyticsReporter={this.analyticsReporter}
+          blocklyWorkspace={this.musicBlocklyWorkspace}
         />
         <Callouts />
       </AnalyticsContext.Provider>

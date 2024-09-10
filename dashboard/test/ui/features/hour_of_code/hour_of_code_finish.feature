@@ -231,3 +231,47 @@ Scenario: congrats certificate pages
   And I see no difference for "customized Course A 2017 certificate"
 
   And I close my eyes
+
+Scenario: congrats certificate pages show social media icons
+  Given I am on "http://studio.code.org/congrats"
+  And I wait until element "#uitest-certificate" is visible
+  And element "#uitest-certificate" is visible
+  And I wait until element ".fa-facebook" is visible
+  And I wait until element ".fa-twitter" is visible
+  Then the href of selector ".social-print-link" contains "/print_certificates/"
+
+  When I am on "http://code.org/api/hour/finish/flappy"
+  And I wait until current URL contains "/congrats"
+  And I wait to see element with ID "uitest-certificate"
+  And element "#uitest-certificate" is visible
+  And I wait for image "#uitest-certificate img" to load
+  And I wait until element ".fa-facebook" is visible
+  And I wait until element ".fa-twitter" is visible
+  Then the href of selector ".social-print-link" contains "/print_certificates/"
+
+  When I am on "http://code.org/api/hour/finish/oceans"
+  And I wait until current URL contains "/congrats"
+  And I wait to see element with ID "uitest-certificate"
+  And element "#uitest-certificate" is visible
+  And I wait for image "#uitest-certificate img" to load
+  And I wait until element ".fa-facebook" is visible
+  And I wait until element ".fa-twitter" is visible
+  Then the href of selector ".social-print-link" contains "/print_certificates/"
+
+  When I am on "http://code.org/congrats/accelerated"
+  And I wait until current URL contains "/congrats"
+  And I wait to see element with ID "uitest-certificate"
+  And element "#uitest-certificate" is visible
+  And I wait for image "#uitest-certificate img" to load
+  And I wait until element ".fa-facebook" is visible
+  And I wait until element ".fa-twitter" is visible
+  Then the href of selector ".social-print-link" contains "/print_certificates/"
+
+  When I am on "http://code.org/congrats/coursea-2017"
+  And I wait until current URL contains "/congrats"
+  And I wait to see element with ID "uitest-certificate"
+  And element "#uitest-certificate" is visible
+  And I wait for image "#uitest-certificate img" to load
+  And I wait until element ".fa-facebook" is visible
+  And I wait until element ".fa-twitter" is visible
+  Then the href of selector ".social-print-link" contains "/print_certificates/"

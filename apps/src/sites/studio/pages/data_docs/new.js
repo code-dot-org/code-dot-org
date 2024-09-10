@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import NewDataDocForm from '@cdo/apps/lib/levelbuilder/data-docs-editor/NewDataDocForm';
+import NewDataDocForm from '@cdo/apps/levelbuilder/data-docs-editor/NewDataDocForm';
 import {getStore} from '@cdo/apps/redux';
 
 $(document).ready(() => {

@@ -509,10 +509,7 @@ en:
         csd-2024:
           title: Computer Science Discoveries ('24-'25)
           description_short: An introductory computer science course that empowers students to create authentic artifacts
-          description_student: |-
-            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-
-            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here][0] to learn more about professional learning opportunities in your region or [click here][1] to learn more about a self-paced online option.
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers you to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: |-
             Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
 
@@ -633,17 +630,17 @@ en:
           description_teacher: "**Participants will:**\n\n-   Prepare to teach CS Discoveries.\n-   Practice key concepts in the CS Discoveries curriculum.\n-   Grow in their understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
           version_title: "'24-'25"
         vpl-csd-2024:
-          title: vpl-csd-2024
+          title: CSD Virtual Professional Learning '24-'25
           description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_student: "##### **You will:**\n\n-   ##### Prepare to teach CS Discoveries.\n-   ##### Practice key concepts in the CS Discoveries curriculum.\n-   ##### Grow in your understanding of equitable CS education.\n-   ##### Develop empathy for the student experience.\n-   ##### Become a part of a network of teachers who are doing similar work."
+          description_teacher: "##### **Participants will:**\n\n-   ##### Prepare to teach CS Discoveries.\n-   ##### Practice key concepts in the CS Discoveries curriculum.\n-   ##### Grow in their understanding of equitable CS education.\n-   ##### Develop empathy for the student experience.\n-   ##### Become a part of a network of teachers who are doing similar work."
+          version_title: '2024'
         vpl-csa-2024:
-          title: vpl-csa-2024
+          title: CSA Virtual Professional Learning '24-'25
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2024'
         self-paced-pl-csa-2024:
           title: self-paced-pl-csa-2024
           description_short: ''
@@ -655,7 +652,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2024'
         self-paced-pl-csp-2024:
           title: Teaching CS Principles
           description_short: ''
@@ -901,6 +898,30 @@ en:
           description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
           description_teacher: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
           version_title: "'24-'25"
+        exploring-gen-ai-2024:
+          title: Exploring Generative AI
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        csd-ayw1-debugging:
+          title: "CSD Academic Year Workshop #1 - Debugging"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-data-science-pl:
+          title: sandbox-data-science-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csd-summer-puertorico-2024:
+          title: Descubrimientos de Ciencias de la Computación - Taller de 5 Dias 2024
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
     resources:
       curriculum/csd/2017:
         name: Curriculum
@@ -1061,6 +1082,9 @@ en:
       all_vocabulary_8/csd/2024:
         name: All Vocabulary
         url: "/courses/csd-2024/vocab"
+      csd_changelog_24-25/csd/2024:
+        name: CSD Changelog 24-25
+        url: "https://docs.google.com/document/d/1DN6WF64Jy3cr1hkeDySNAujMhb9yQZlJvt3ls8OCvRw/edit#heading=h.ydx1g8n6vyu8"
       csd_course_standards_csta_alignment/csd/2024:
         name: CSD Course Standards CSTA Alignment
         url: https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing

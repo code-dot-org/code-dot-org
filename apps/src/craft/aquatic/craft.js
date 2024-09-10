@@ -24,7 +24,6 @@ import {trySetLocalStorage} from '@cdo/apps/utils';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
-import trackEvent from '../../util/trackEvent';
 import craftMsg from '../locale';
 
 var Provider = require('react-redux').Provider;
@@ -352,7 +351,6 @@ Craft.getCurrentCharacter = function () {
 };
 
 Craft.setCurrentCharacter = function (name = DEFAULT_CHARACTER) {
-  trackEvent('Minecraft', 'ChoseCharacter', name);
   Craft.clearPlayerState();
   trySetLocalStorage('craftSelectedPlayer', name);
   Craft.updateUIForCharacter(name);
