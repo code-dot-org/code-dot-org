@@ -6,10 +6,6 @@ import 'video.js/dist/video-js.css';
 
 export const VideoJS = (props: {options: VideoJsPlayerOptions}) => {
   const videoRef: React.MutableRefObject<HTMLDivElement | null> = useRef(null);
-  const videoRefCallback = (ref: HTMLDivElement) => {
-    videoRef.current = ref;
-  };
-
   const playerRef: React.MutableRefObject<VideoJsPlayer | null> = useRef(null);
   const {options} = props;
 
@@ -50,7 +46,7 @@ export const VideoJS = (props: {options: VideoJsPlayerOptions}) => {
 
   return (
     <div data-vjs-player>
-      <div ref={videoRefCallback} />
+      <div ref={videoRef} />
     </div>
   );
 };

@@ -6,6 +6,8 @@ import VideoJS from './VideoJS';
 
 import styles from './video.module.scss';
 
+type VideoChoiceType = undefined | 'youtube' | 'fallback';
+
 interface VideoProps {
   children: React.ReactNode;
   src: string | undefined;
@@ -81,8 +83,6 @@ const Video: React.FunctionComponent<VideoProps> = ({
   useEffect(() => {
     testYouTubeAvailable(videoCheckComplete);
   }, [videoCheckComplete]);
-
-  type VideoChoiceType = undefined | 'youtube' | 'fallback';
 
   const videoJsOptions = {
     autoplay: true,
