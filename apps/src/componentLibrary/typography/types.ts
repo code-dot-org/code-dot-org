@@ -35,14 +35,13 @@ type VisualAppearance =
 interface TypographyElementProps {
   // Scss module classname to use for the typography element
   visualAppearance?: VisualAppearance;
-  // Element id to apply to the typography element
-  id?: string;
   // Additional classnames to apply to the typography element
   className?: string;
   // Inline styles to apply to the typography element
   style?: React.CSSProperties;
   // Text or other elements to render inside the typography element
   children: React.ReactNode;
+  id?: string;
 }
 
 export {SemanticTag, VisualAppearance, TypographyElementProps};
