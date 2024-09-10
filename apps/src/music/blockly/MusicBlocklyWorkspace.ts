@@ -119,6 +119,7 @@ export default class MusicBlocklyWorkspace {
       readOnly: isReadOnlyWorkspace,
       useBlocklyDynamicCategories: true,
       rtl: isRtl,
+      editBlocks: getAppOptionsEditBlocks(),
       customSimpleDialog,
     } as BlocklyOptions);
 
