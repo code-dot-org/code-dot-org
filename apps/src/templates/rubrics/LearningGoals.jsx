@@ -420,49 +420,48 @@ export default function LearningGoals({
       setLoaded(teacherFeedbacksLoaded.current[currentLearningGoal]);
       setDisplayUnderstanding(understandingLevels.current[currentLearningGoal]);
 
-      // Only load prior learning goal feedback once
-      learningGoals
-        .filter((learningGoal, index) => {
-          return !teacherFeedbacksLoaded.current[index];
-        })
-        .forEach((learningGoal, index) => {
-          const body = JSON.stringify({
-            userId: studentLevelInfo.user_id,
-            learningGoalId: learningGoal.id,
-          });
-          HttpClient.post(
-            `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
-            body,
-            true,
-            {
-              'Content-Type': 'application/json',
-            }
-          )
-            .then(response => response.json())
-            .then(json => {
-              learningGoalEvalIds.current[index] = json.id;
-              if (json.feedback) {
-                teacherFeedbacks.current[index] = json.feedback;
-              }
-              teacherFeedbacksLoaded.current[index] = true;
-              if (json.understanding >= 0 && json.understanding !== null) {
-                understandingLevels.current[index] = json.understanding;
-              }
-
-              // Uses the redundant ref here instead of state to defeat a race
-              // condition where the current learning goal changes before the
-              // fetch resolves.
-              if (index === currentLearningGoalRef.current) {
-                setDisplayFeedback(teacherFeedbacks.current[index]);
-                setLoaded(teacherFeedbacksLoaded.current[index]);
-                setDisplayUnderstanding(understandingLevels.current[index]);
-              }
-              if (index === learningGoals.length - 1) {
-                setDoneLoading(true);
-              }
-            })
-            .catch(error => console.error(error));
+      learningGoals.forEach((learningGoal, index) => {
+        // Only load prior learning goal feedback once
+        if (teacherFeedbacksLoaded.current[index]) {
+          return;
+        }
+        const body = JSON.stringify({
+          userId: studentLevelInfo.user_id,
+          learningGoalId: learningGoal.id,
         });
+        HttpClient.post(
+          `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
+          body,
+          true,
+          {
+            'Content-Type': 'application/json',
+          }
+        )
+          .then(response => response.json())
+          .then(json => {
+            learningGoalEvalIds.current[index] = json.id;
+            if (json.feedback) {
+              teacherFeedbacks.current[index] = json.feedback;
+            }
+            teacherFeedbacksLoaded.current[index] = true;
+            if (json.understanding >= 0 && json.understanding !== null) {
+              understandingLevels.current[index] = json.understanding;
+            }
+
+            // Uses the redundant ref here instead of state to defeat a race
+            // condition where the current learning goal changes before the
+            // fetch resolves.
+            if (index === currentLearningGoalRef.current) {
+              setDisplayFeedback(teacherFeedbacks.current[index]);
+              setLoaded(teacherFeedbacksLoaded.current[index]);
+              setDisplayUnderstanding(understandingLevels.current[index]);
+            }
+            if (index === learningGoals.length - 1) {
+              setDoneLoading(true);
+            }
+          })
+          .catch(error => console.error(error));
+      });
     }
   }, [studentLevelInfo, learningGoals, currentLearningGoal, open, productTour]);
 

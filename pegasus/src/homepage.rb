@@ -253,6 +253,7 @@ class Homepage
           text_overline: action["text_overline"],
           external_link: action["external_link"],
           button_color_white: action["button_color_white"],
+          button_color_black: action["button_color_black"],
           button_link: action["button_link"],
           studio_button_link: action["studio_button_link"],
           button_label_primary: action["button_label_primary"],
