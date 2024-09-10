@@ -60,6 +60,7 @@ export const previewStartSource = createAsyncThunk(
   async (payload: {startSource: ProjectSources}, thunkAPI) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (projectManager) {
+      // We need to ensure we save the existing project before loading the start source.
       await projectManager.flushSave();
       thunkAPI.dispatch(setPreviousVersionSource(payload.startSource));
     }

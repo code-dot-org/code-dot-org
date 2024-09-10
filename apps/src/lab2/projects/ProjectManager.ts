@@ -168,6 +168,7 @@ export default class ProjectManager {
    * If a save is already enqueued, update this.sourceToSave with the given source.
    * @param sources ProjectSources: the source to save.
    * @param forceSave boolean: if the save should happen immediately
+   * @param forceNewVersion boolean: if the save should create a new version
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
@@ -197,7 +198,10 @@ export default class ProjectManager {
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    return await this.enqueueSaveOrSave(true, false);
+    return await this.enqueueSaveOrSave(
+      /* forceSave */ true,
+      /* forceNewVersion */ false
+    );
   }
 
   /**
@@ -220,7 +224,7 @@ export default class ProjectManager {
       ) as Channel;
     }
     this.channelToSave.name = name;
-    return await this.enqueueSaveOrSave(forceSave, false);
+    return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
   }
 
   /**
@@ -315,6 +319,7 @@ export default class ProjectManager {
    * Only if the source save succeeds do we update the channel, as the
    * channel is metadata about the project and we don't want to save it unless the source
    * save succeeded.
+   * @param forceNewVersion boolean: If the save should create a new version.
    * @returns a Promise<void> that resolves when the save is complete or when the save fails.
    * Listeners are notified of save status throughout the process.
    */
@@ -437,6 +442,7 @@ export default class ProjectManager {
   // Check if we can save immediately. If a save is in progress, we must wait. Otherwise,
   // if forceSave is true or it has been at least 30 seconds since our last save,
   // initiate a save.
+  // If forceNewVersion is true, we will create a new version on save.
   // If we cannot save now, enqueue a save if one has not already been enqueued and
   // return a noop response.
   private async enqueueSaveOrSave(
