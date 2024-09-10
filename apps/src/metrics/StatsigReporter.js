@@ -9,7 +9,7 @@ import {
   isProductionEnvironment,
   isDevelopmentEnvironment,
   createUuid,
-} from '../../utils';
+} from '../utils';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;

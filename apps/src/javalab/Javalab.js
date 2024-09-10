@@ -6,8 +6,8 @@ import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {TestResults} from '@cdo/apps/constants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import javalabMsg from '@cdo/javalab/locale';
 
