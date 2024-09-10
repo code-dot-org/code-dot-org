@@ -218,19 +218,6 @@ describe('Applab Exporter,', function () {
       },
       isUS: true,
       send_to_phone_url: 'http://studio.code.org.localhost:3000/sms/send',
-      copyrightStrings: {
-        thanks:
-          'We%20thank%20our%20%3Ca%20href=%22https://code.org/about/donors%22%3Edonors%3C/a%3E,%20%3Ca%20href=%22https://code.org/about/partners%22%3Epartners%3C/a%3E,%20our%20%3Ca%20href=%22https://code.org/about/team%22%3Eextended%20team%3C/a%3E,%20and%20our%20video%20cast%20for%20their%20support%20in%20creating%20Code%20Studio.',
-        help_from_html:
-          'We especially want to recognize the engineers from Amazon, Google, and Microsoft who helped create these materials.',
-        art_from_html:
-          'Minecraft\u0026%238482;%20\u0026copy;%202017%20Microsoft.%20All%20Rights%20Reserved.%3Cbr%20/%3EStar%20Wars\u0026%238482;%20\u0026copy;%202017%20Disney%20and%20Lucasfilm.%20All%20Rights%20Reserved.%3Cbr%20/%3EFrozen\u0026%238482;%20\u0026copy;%202017%20Disney.%20All%20Rights%20Reserved.%3Cbr%20/%3EIce%20Age\u0026%238482;%20\u0026copy;%202017%2020th%20Century%20Fox.%20All%20Rights%20Reserved.%3Cbr%20/%3EAngry%20Birds\u0026%238482;%20\u0026copy;%202009-2017%20Rovio%20Entertainment%20Ltd.%20All%20Rights%20Reserved.%3Cbr%20/%3EPlants%20vs.%20Zombies\u0026%238482;%20\u0026copy;%202017%20Electronic%20Arts%20Inc.%20All%20Rights%20Reserved.%3Cbr%20/%3EThe%20Amazing%20World%20of%20Gumball%20is%20trademark%20and%20\u0026copy;%202017%20Cartoon%20Network.',
-        code_from_html:
-          'Code.org%20uses%20p5.play,%20which%20is%20licensed%20under%20%3Ca%20href=%22http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html%22%3Ethe%20GNU%20LGPL%202.1%3C/a%3E.',
-        powered_by_aws: 'Powered by Amazon Web Services',
-        trademark:
-          '\u0026copy;%20Code.org,%202017.%20Code.org\u0026reg;,%20the%20CODE%20logo%20and%20Hour%20of%20Code\u0026reg;%20are%20trademarks%20of%20Code.org.',
-      },
       teacherMarkdown: null,
       dialog: {
         skipSound: false,
