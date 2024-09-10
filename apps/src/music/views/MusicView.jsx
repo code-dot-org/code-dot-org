@@ -669,8 +669,7 @@ class UnconnectedMusicView extends React.Component {
           player={this.player}
           allowPackSelection={
             this.library?.getHasRestrictedPacks() &&
-            !this.props.levelProperties?.levelData?.packId &&
-            this.props.isProjectLevel
+            !this.props.levelProperties?.levelData?.packId
           }
           analyticsReporter={this.analyticsReporter}
         />
