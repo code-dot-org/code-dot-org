@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "web-development",
-    "serialized_at": "2024-07-11 19:11:53 UTC",
+    "serialized_at": "2024-09-09 16:35:14 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -12187,7 +12187,7 @@
     },
     {
       "name": "Web Design for Users (A)",
-      "url": "https://docs.google.com/document/d/1dZxd7DuruNKhqjp9nxAzr0RSICJFyb3sc-B6bgY2bIs/view",
+      "url": "https://docs.google.com/document/d/1NYVEB_fULN0TwhKRyIBP7j2e-EZreodBpBhURM9aT8Y/view",
       "key": "web_design_for_users_a_",
       "properties": {
         "audience": "Student",

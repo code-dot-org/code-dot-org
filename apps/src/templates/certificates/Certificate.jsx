@@ -195,6 +195,29 @@ function Certificate(props) {
 
   const print = getPrintPath(courseName);
 
+  const renderCertificateImage = certificateObj => {
+    return (
+      <>
+        <a href={getCertificateSharePath(certificateObj.courseName)}>
+          <img
+            src={getCertificateImagePath(certificateObj.courseName)}
+            alt={
+              studentName
+                ? i18n.certificateAltTextWithName({
+                    studentName,
+                    courseTitle: certificateObj.courseTitle,
+                  })
+                : i18n.certificateAltTextNoName({
+                    courseTitle: certificateObj.courseTitle,
+                  })
+            }
+            className={style.certificateImage}
+          />
+        </a>
+      </>
+    );
+  };
+
   return (
     <div className={style.container}>
       <div className={style.headerContainer}>
@@ -216,44 +239,35 @@ function Certificate(props) {
               className={style.confetti}
             />
           }
-          <swiper-container
-            init="false"
-            ref={swiperRef}
-            class={style.swiperContainer}
-            navigation-next-el="#certificate-swiper-next-el"
-            navigation-prev-el="#certificate-swiper-prev-el"
-          >
-            {certificateData.map(image => (
-              <swiper-slide key={image.courseName}>
-                <a href={getCertificateSharePath(image.courseName)}>
-                  <img
-                    src={getCertificateImagePath(image.courseName)}
-                    alt={
-                      studentName
-                        ? i18n.certificateAltTextWithName({
-                            studentName,
-                            courseTitle: image.courseTitle,
-                          })
-                        : i18n.certificateAltTextNoName({
-                            courseTitle: image.courseTitle,
-                          })
-                    }
-                    className={style.certificateImage}
-                  />
-                </a>
-              </swiper-slide>
-            ))}
-          </swiper-container>
-          <button
-            id="certificate-swiper-prev-el"
-            className={classNames(style.navButton, style.prevElNav)}
-            type="button"
-          />
-          <button
-            id="certificate-swiper-next-el"
-            className={classNames(style.navButton, style.nextElNav)}
-            type="button"
-          />
+          {certificateData.length > 1 && (
+            <>
+              <swiper-container
+                init="false"
+                ref={swiperRef}
+                class={style.swiperContainer}
+                navigation-next-el="#certificate-swiper-next-el"
+                navigation-prev-el="#certificate-swiper-prev-el"
+              >
+                {certificateData.map(image => (
+                  <swiper-slide key={image.courseName}>
+                    {renderCertificateImage(image)}
+                  </swiper-slide>
+                ))}
+              </swiper-container>
+              <button
+                id="certificate-swiper-prev-el"
+                className={classNames(style.navButton, style.prevElNav)}
+                type="button"
+              />
+              <button
+                id="certificate-swiper-next-el"
+                className={classNames(style.navButton, style.nextElNav)}
+                type="button"
+              />
+            </>
+          )}
+          {certificateData.length === 1 &&
+            renderCertificateImage(certificateData[0])}
         </div>
         <div className={`${certificateStyle} ${style.inputContainer}`}>
           {courseName && !personalized && (

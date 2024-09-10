@@ -1,0 +1,30 @@
+name 'datascience-U2L7-CFU_2024-pilot'
+title 'Check for Understanding'
+
+description 'Consider the following DataFrame `df`:'
+question 'You want to clean the data by removing rows where the "City" column has missing values and then replacing any remaining missing values in the "Age" column with the average age. Which of the following code snippets will correctly accomplish this?'
+wrong 'https://images.code.org/00f96f4800689eac085fea1ec7f756ac-B.png'
+right 'https://images.code.org/34b6fed08cb8c4444670d609cc57a239-A.png'
+wrong 'https://images.code.org/9b15e24d58cdbe0d222704d5a9d99acf-C.png'
+wrong 'https://images.code.org/570961c062627a4942f8642b63a5d754-D.png'
+
+allow_multiple_attempts false
+
+
+markdown <<MARKDOWN
+```
+
+data = {"Name": ["Alice", "Bob", None, "David"],
+		"Age": [25, None, 30, 22],
+        "City": ["New York", "Los Angeles", "Chicago", None]}
+
+df = pd.DataFrame(data)
+
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Step 1: The code `df.dropna(subset=['City'])` removes rows where the 'City' column has missing values.
+
+Step 2: The f`illna(df_clean['Age'].mean(), inplace=True)` replaces any remaining missing values in the 'Age' column with the column's mean.
+MARKDOWN

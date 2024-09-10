@@ -2564,7 +2564,32 @@ class UnitTest < ActiveSupport::TestCase
     assert UnitGroupUnit.find_by(id: unit_gp_unit.id).nil?
   end
 
+  test 'is ai assessment enabled' do
+    LearningGoal.any_instance.stubs(:validate_ai_config).returns(true)
+
+    unit_without_rubrics = create :unit, :with_levels
+
+    unit_with_non_ai_rubric = create :unit, :with_levels
+    add_rubric_with_learning_goals(unit_with_non_ai_rubric)
+    unit_with_non_ai_rubric.reload
+
+    unit_with_ai_rubric = create :unit, :with_levels
+    rubric = add_rubric_with_learning_goals(unit_with_ai_rubric)
+    rubric.learning_goals.first.update!(ai_enabled: true)
+    unit_with_ai_rubric.reload
+
+    refute unit_without_rubrics.ai_assessment_enabled?
+    refute unit_with_non_ai_rubric.ai_assessment_enabled?
+    assert unit_with_ai_rubric.ai_assessment_enabled?
+  end
+
   private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
+  end
+
+  private def add_rubric_with_learning_goals(unit)
+    lesson = unit.lessons.first
+    level = lesson.levels.first
+    create :rubric, :with_learning_goals, lesson: lesson, level: level
   end
 end

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-30 03:55:57 UTC",
+    "serialized_at": "2024-08-30 14:41:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -212,7 +212,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial intelligence (AI) has permeated nearly every aspect of modern life. In this lesson, students first recognize the ways in which AI-developed programs and data sets can have inherent bias. Then, students learn how to harness the power of AI to develop code while exploring the challenges associated with AI-developed code. Finally, students practice designing a program in order to more effectively make use of AI-assistance in developing programs.",
+        "overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial intelligence (AI) has permeated nearly every aspect of modern life. In this lesson, students first recognize the ways in which AI-developed programs and data sets can have inherent bias. Then, students learn how to harness the power of AI to develop code while exploring the challenges associated with AI-developed code. Finally, students practice designing a program in order to more effectively make use of AI-assistance in developing programs.\n\n### Not using the AI Tutor?\n\nUse the [**alternate version**](https://studio.code.org/s/csa1-pilot-2025/lessons/20) of this lesson to teach students about AI-generated code without the use of the AI Tutor or external chatbots.",
         "preparation": "* **(Optional)** Print copies of the AI-Generated Code Guided notes (one for each student)\n* Print copies of the Planning Programs handout (one for each student)\n* Preview the videos *Are We Automating Racism*, *Chatbots and Large-Language Models (Part 1)*, and *Chatbots and Large-Language Models (Part 2)*.",
         "student_overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial intelligence (AI) is a big part of modern life. In this lesson, you'll first recognize how AI programs and data sets can have built-in biases. Then, you'll learn how to use AI to develop code while understanding the challenges that come with AI-created code. Finally, you'll practice designing a program to make better use of AI when developing your own programs."
       },
@@ -431,7 +431,7 @@
       "relative_position": 20,
       "properties": {
         "overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial Intelligence (AI) has permeated nearly every aspect of modern life. In this lesson, students first recognize the ways in which AI-developed programs and data sets can have inherent bias. Then, students learn how AI can help to develop code while exploring the challenges associated with AI-developed code. Finally, students practice designing prompts in order to more effectively make use of AI-assistance in developing programs. ",
-        "preparation": "- Print copies of the [Planning Programs](https://docs.google.com/document/d/1VRFumOTI2Gidc3L2v7So9nw3iQCSbaKuazUbdBrkIaI/edit?usp=drive_link) handout \n- Preview the *Are We Automating Racism* video\n- Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers\n",
+        "preparation": "- Print copies of the [Planning Programs](https://docs.google.com/document/d/1VRFumOTI2Gidc3L2v7So9nw3iQCSbaKuazUbdBrkIaI/edit?usp=drive_link) handout \n- Preview the *Are We Automating Racism* video",
         "student_overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial Intelligence (AI) is a big part of modern life. In this lesson, you'll first recognize how AI programs and data sets can have built-in biases. Then, you'll learn how AI can develop code while understanding the challenges that come with AI-created code. Finally, you'll practice designing prompts to make better use of AI when developing programs."
       },
       "seeding_key": {
@@ -8697,6 +8697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L1_2025"
+        ],
         "progression": "Investigating AI-Generated Code"
       },
       "bonus": false,
@@ -8719,6 +8722,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L2_2025"
+        ],
         "progression": "Investigating AI-Generated Code"
       },
       "bonus": false,
@@ -8739,8 +8745,11 @@
       "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L3_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -9880,7 +9889,7 @@
       }
     },
     {
-      "name": "[EXEMPLAR] Planning Programs (Alternate Version)",
+      "name": "[EXEMPLAR] Planning Programs",
       "url": "https://docs.google.com/document/d/1MZDU4cUUeLgCCcTOSeBrpJ-q6D2fRSdg-1X5O6kLZjQ/edit?usp=drive_link",
       "key": "_exemplar_planning_programs_alternate_version_",
       "properties": {
@@ -10336,7 +10345,7 @@
       }
     },
     {
-      "name": "AI-Generated Code (Alternate Version)",
+      "name": "AI-Generated Code",
       "url": "https://docs.google.com/presentation/d/11XaM8cXYyzp4CBn6PNbVnGYBMuT1fNBqHG5gLWqytds/edit?usp=drive_link",
       "key": "ai-generated_code_alternate_version_",
       "properties": {
@@ -10809,7 +10818,7 @@
       }
     },
     {
-      "name": "Planning Programs (Alternate Version)",
+      "name": "Planning Programs",
       "url": "https://docs.google.com/document/d/1i6j879bZjgxPe9-a20RPOlq_GXglb6UqaGH2rW4iBdg/edit?usp=drive_link",
       "key": "planning_programs_alternate_version_",
       "properties": {
