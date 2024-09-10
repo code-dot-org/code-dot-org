@@ -648,6 +648,17 @@ a.link-button.secondary.white {
   color: var(--neutral_white);
 }
 
+a.link-button.black {
+  background: var(--neutral_dark);
+  border-color: var(--neutral_dark);
+  color: var(--neutral_white);
+
+  &:hover {
+    background: black;
+    border-color: black;
+  }
+}
+
 .continue-btn{
   background-color: rgb(255, 255, 255);
   border-color: var(--brand_secondary_default);

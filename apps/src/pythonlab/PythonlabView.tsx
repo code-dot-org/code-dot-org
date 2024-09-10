@@ -42,7 +42,7 @@ const defaultProject: ProjectSources = {
 
 const labeledGridLayouts = {
   horizontal: {
-    gridLayoutRows: '2fr 1fr 48px',
+    gridLayoutRows: '2fr 1fr ',
     gridLayoutColumns: '300px minmax(0, 1fr)',
     gridLayout: `
   "info-panel workspace"
@@ -50,7 +50,7 @@ const labeledGridLayouts = {
   "info-panel control-buttons"`,
   },
   vertical: {
-    gridLayoutRows: '1fr 1fr 48px',
+    gridLayoutRows: '1fr 1fr',
     gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
     gridLayout: `
     "info-panel workspace console"
@@ -96,7 +96,8 @@ const defaultConfig: ConfigType = {
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource, getStartSource} = useSource(defaultProject);
+  const {source, setSource, startSource, projectVersion} =
+    useSource(defaultProject);
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
@@ -139,9 +140,10 @@ const PythonlabView: React.FunctionComponent = () => {
           config={config}
           setProject={setSource}
           setConfig={setConfig}
-          startSource={getStartSource()}
+          startSource={startSource}
           onRun={onRun}
           onStop={stopPythonCode}
+          projectVersion={projectVersion}
         />
       )}
     </div>

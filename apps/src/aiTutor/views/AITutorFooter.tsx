@@ -49,9 +49,11 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
 
       dispatch(askAITutor(chatContext));
 
-      analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_GENERAL_CHAT, {
+      analyticsReporter.sendEvent(EVENTS.AI_TUTOR_CHAT_EVENT, {
         levelId: level?.id,
         levelType: level?.type,
+        progressionType: level?.progressionType,
+        suggestedPrompt: EVENTS.AI_TUTOR_SUGGESTED_PROMPT_NONE,
       });
     },
     [studentCode, isWaitingForChatResponse, level, dispatch]

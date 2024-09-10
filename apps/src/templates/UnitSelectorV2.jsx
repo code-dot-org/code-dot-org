@@ -15,7 +15,7 @@ import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgr
 import firehoseClient from '../lib/util/firehose';
 
 import styles from './unit-selector-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const recordEvent = (eventName, sectionId, dataJson = {}) => {
   firehoseClient.putRecord(

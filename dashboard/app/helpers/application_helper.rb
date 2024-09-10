@@ -137,8 +137,6 @@ module ApplicationHelper
     case provider.to_sym
     when :facebook
       'https://www.facebook.com/logout.php'
-    when :windowslive
-      'http://login.live.com/logout.srf'
     when :google_oauth2
       'https://accounts.google.com/logout'
     end
