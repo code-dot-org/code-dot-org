@@ -7,7 +7,7 @@ import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import firehoseClient from '../../../lib/util/firehose';
+import firehoseClient from '../../../metrics/firehose';
 
 export default class ProgressTableStudentName extends React.PureComponent {
   static propTypes = {

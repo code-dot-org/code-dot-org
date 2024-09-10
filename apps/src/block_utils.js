@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
 import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
-import MetricsReporter from './lib/metrics/MetricsReporter';
+import MetricsReporter from './metrics/MetricsReporter';
 import xml from './xml';
 
 const styleTypes = Object.keys(cdoBlockStyles);

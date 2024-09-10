@@ -3,7 +3,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification from '@cdo/apps/sharedComponents/Notification';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';

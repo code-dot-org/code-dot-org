@@ -7,15 +7,15 @@ import {
 } from '@amplitude/analytics-browser';
 
 import DCDO from '@cdo/apps/dcdo';
-import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
 import logToCloud from '@cdo/apps/logToCloud';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 
 import {
   getEnvironment,
   isProductionEnvironment,
   isStagingEnvironment,
   isDevelopmentEnvironment,
-} from '../../utils';
+} from '../utils';
 
 import {EVENT_GROUPS, PLATFORMS} from './AnalyticsConstants';
 

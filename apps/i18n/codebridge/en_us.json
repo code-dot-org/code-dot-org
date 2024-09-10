@@ -8,7 +8,7 @@
   "cannotTest": "We don't know how to run your tests. Please contact support.",
   "delete": "Delete",
   "deleteFile": "Delete file",
-  "deleteFileConfirm": "Are you sure you want to delete the file \"{fileName}\"?",
+  "deleteFileConfirm": "Are you sure you want to delete the file \"{filename}\"?",
   "deleteFolder": "Delete folder",
   "deleteFolderConfirm": "Are you sure you want to delete the folder \"{folderName}\"?",
   "deleteFolderConfirmBoth": "This will also delete {fileCount} files and {folderCount} subfolders inside \"{folderName}\".",
