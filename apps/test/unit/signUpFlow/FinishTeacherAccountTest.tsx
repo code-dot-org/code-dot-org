@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
@@ -7,100 +6,141 @@ import locale from '@cdo/apps/signUpFlow/locale';
 import {
   DISPLAY_NAME_SESSION_KEY,
   EMAIL_OPT_IN_SESSION_KEY,
+  SCHOOL_ID_SESSION_KEY,
+  SCHOOL_NAME_SESSION_KEY,
+  SCHOOL_ZIP_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
-
-// mocking SchoolDataInputs as it has its own tests
-jest.mock('@cdo/apps/templates/SchoolDataInputs', () => () => (
-  <div>Mocked SchoolDataInputs</div>
-));
+import i18n from '@cdo/locale';
 
 describe('FinishTeacherAccount', () => {
   afterEach(() => {
     sessionStorage.clear();
   });
 
-  it('renders the finish teacher account page', () => {
-    render(<FinishTeacherAccount usIp={true} />);
+  function renderDefault(usIp: boolean = true) {
+    render(<FinishTeacherAccount usIp={usIp} />);
+  }
 
-    expect(
-      screen.getByText(locale.finish_creating_teacher_account())
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(locale.what_do_you_want_to_be_called())
-    ).toBeInTheDocument();
-    expect(screen.getByText(locale.keep_me_updated())).toBeInTheDocument();
-    expect(screen.getByText('Mocked SchoolDataInputs')).toBeInTheDocument();
-    expect(screen.getByText(locale.go_to_my_account())).toBeInTheDocument();
+  it('renders finish teacher account page with school zip when usIp is true', () => {
+    renderDefault(true);
+
+    // Renders page title
+    screen.getByText(locale.finish_creating_teacher_account());
+
+    // Renders questions shown regardless of usIp
+    screen.getByText(locale.what_do_you_want_to_be_called());
+    screen.getByText(i18n.whatCountry());
+    screen.getByText(locale.keep_me_updated());
+
+    // Renders school zip and select school questions if usIp is true
+    screen.getByText(i18n.enterYourSchoolZip());
+    screen.getByText(i18n.selectYourSchool());
+    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBe(null);
+
+    // Renders button that finishes sign-up
+    screen.getByText(locale.go_to_my_account());
   });
 
-  it('displays name error message if the name is left empty', () => {
-    render(<FinishTeacherAccount usIp={true} />);
-    const nameInput = screen.getByLabelText(
-      locale.what_do_you_want_to_be_called()
-    );
+  it('renders finish teacher account page with school name when usIp is false', () => {
+    renderDefault(false);
 
-    fireEvent.change(nameInput, {target: {value: 'Bill'}});
-    fireEvent.change(nameInput, {target: {value: ''}});
+    // Renders page title
+    screen.getByText(locale.finish_creating_teacher_account());
 
-    expect(
-      screen.getByText(locale.display_name_error_message())
-    ).toBeInTheDocument();
+    // Renders questions shown regardless of usIp
+    screen.getByText(locale.what_do_you_want_to_be_called());
+    screen.getByText(i18n.whatCountry());
+    screen.getByText(locale.keep_me_updated());
+
+    // Renders school name/organization if usIp is false
+    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBe(null);
+    expect(screen.queryByText(i18n.selectYourSchool())).toBe(null);
+    screen.getByText(i18n.schoolOrganizationQuestion());
+
+    // Renders button that finishes sign-up
+    screen.getByText(locale.go_to_my_account());
   });
 
-  it('does not display name error message if a valid name is entered', () => {
-    render(<FinishTeacherAccount usIp={true} />);
-    const nameInput = screen.getByLabelText(
-      locale.what_do_you_want_to_be_called()
-    );
+  it('displayName is tracked in sessionStorage', () => {
+    renderDefault();
+    const displayName = 'Glen Powell';
+    const displayNameInput = screen.getAllByRole('textbox')[0];
 
-    fireEvent.change(nameInput, {target: {value: 'John Doe'}});
+    expect(sessionStorage.getItem(DISPLAY_NAME_SESSION_KEY)).toBe(null);
 
-    expect(
-      screen.queryByText(locale.display_name_error_message())
-    ).not.toBeInTheDocument();
+    fireEvent.change(displayNameInput, {target: {value: displayName}});
+    expect(sessionStorage.getItem(DISPLAY_NAME_SESSION_KEY)).toBe(displayName);
   });
 
-  it('enables the finish sign-up button when a name is entered', () => {
-    render(<FinishTeacherAccount usIp={true} />);
-    const nameInput = screen.getByLabelText(
-      locale.what_do_you_want_to_be_called()
+  it('school info is tracked in sessionStorage', () => {
+    renderDefault();
+    const zipCode = '98122';
+    const clickToAddSchool = 'clickToAdd';
+    const schoolName = 'Seattle Academy';
+
+    // Fill out zip code and add school by name
+    fireEvent.change(screen.getAllByRole('textbox')[1], {
+      target: {value: zipCode},
+    });
+    fireEvent.change(screen.getAllByRole('combobox')[1], {
+      target: {value: clickToAddSchool},
+    });
+    fireEvent.change(screen.getAllByRole('textbox')[2], {
+      target: {value: schoolName},
+    });
+
+    expect(sessionStorage.getItem(SCHOOL_ID_SESSION_KEY)).toBe(
+      clickToAddSchool
     );
-    const finishButton = screen.getByRole('button', locale.go_to_my_account());
-
-    expect(finishButton).toBeDisabled();
-
-    fireEvent.change(nameInput, {target: {value: 'John Doe'}});
-
-    expect(finishButton).toBeEnabled();
+    expect(sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY)).toBe(zipCode);
+    expect(sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY)).toBe(schoolName);
   });
 
-  it('stores the name in sessionStorage when it is entered', () => {
-    render(<FinishTeacherAccount usIp={true} />);
-    const nameInput = screen.getByLabelText(
-      locale.what_do_you_want_to_be_called()
-    );
+  it('email opt-in checkbox is tracked in sessionStorage', () => {
+    renderDefault();
+    const emailOptInCheckbox = screen.getByRole('checkbox');
 
-    fireEvent.change(nameInput, {target: {value: 'John Doe'}});
-
-    expect(sessionStorage.getItem(DISPLAY_NAME_SESSION_KEY)).toBe('John Doe');
-  });
-
-  it('toggles the email opt-in checkbox and stores the value in sessionStorage', () => {
-    render(<FinishTeacherAccount usIp={true} />);
-    const emailOptInCheckbox = screen.getByLabelText(
-      locale.get_informational_emails()
-    );
-
-    expect(emailOptInCheckbox).not.toBeChecked();
+    expect(sessionStorage.getItem(EMAIL_OPT_IN_SESSION_KEY)).toBe(null);
 
     fireEvent.click(emailOptInCheckbox);
-
-    expect(emailOptInCheckbox).toBeChecked();
     expect(sessionStorage.getItem(EMAIL_OPT_IN_SESSION_KEY)).toBe('true');
 
     fireEvent.click(emailOptInCheckbox);
-
-    expect(emailOptInCheckbox).not.toBeChecked();
     expect(sessionStorage.getItem(EMAIL_OPT_IN_SESSION_KEY)).toBe('false');
+  });
+
+  it('finish teacher signup button starts disabled', () => {
+    renderDefault();
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+  });
+
+  it('leaving the displayName field empty shows error message and disabled button until display name is entered', () => {
+    renderDefault();
+    const displayNameInput = screen.getAllByDisplayValue('')[0];
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+
+    // Error does not show and button is enabled when display name is entered
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+
+    // Clear display name
+    fireEvent.change(displayNameInput, {target: {value: ''}});
+
+    // Error shows and button is disabled with empty display name
+    screen.getByText(locale.display_name_error_message());
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 });
