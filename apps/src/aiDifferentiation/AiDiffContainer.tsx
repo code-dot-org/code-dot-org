@@ -11,8 +11,8 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 import HttpClient from '../util/HttpClient';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
-import ChoiceChips from './ChoiceChips';
-import {ChatChoice, ChatItem} from './types';
+import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
+import {ChatItem} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -48,19 +48,12 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       status: Status.OK,
     },
     [
-      {selected: false, text: 'Explain a concept'},
-      {selected: false, text: 'Give an example to use with my class'},
-      {
-        selected: false,
-        text: 'Write an extension activity for students who finish early',
-      },
-      {
-        selected: false,
-        text: 'Write an extension activity for students who need extra practice',
-      },
+      'Explain a concept',
+      'Give an example to use with my class',
+      'Write an extension activity for students who finish early',
+      'Write an extension activity for students who need extra practice',
     ],
   ]);
-  const [lastChipSelected, setLastChipSelected] = useState<number>(-1);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
@@ -102,29 +95,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       });
   };
 
-  const selectChoices = (changeId: number) => (ids: string[]) => {
-    // Only allow user to select a chip when those chips were the most recent
-    // chat interaction.
-    if (changeId !== messageHistory.length - 1) {
-      return;
-    }
+  const onPromptSelect = (prompt: string) => {
+    const newAiMessage = {
+      role: Role.ASSISTANT,
+      chatMessageText: `You selected "${prompt}". This is a placeholder response.`,
+      status: Status.OK,
+    };
 
-    // Only allow the first selected chip to count.
-    if (changeId === lastChipSelected) {
-      return;
-    }
-
-    setMessageHistory(
-      messageHistory.map((item: ChatItem, id: number) =>
-        id === changeId && Array.isArray(item)
-          ? item.map((choice: ChatChoice, choiceId: number) => {
-              return {...choice, selected: ids.includes(`${choiceId}`)};
-            })
-          : item
-      )
-    );
-
-    setLastChipSelected(changeId);
+    setMessageHistory([...messageHistory, newAiMessage]);
   };
 
   return (
@@ -162,9 +140,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           <div className={style.chatContent}>
             {messageHistory.map((item: ChatItem, id: number) =>
               Array.isArray(item) ? (
-                <ChoiceChips
-                  choices={item}
-                  selectChoices={selectChoices(id)}
+                <AiDiffSuggestedPrompts
+                  suggestedPrompts={item}
+                  isLatest={id === messageHistory.length - 1}
+                  onSubmit={onPromptSelect}
                   key={id}
                 />
               ) : (

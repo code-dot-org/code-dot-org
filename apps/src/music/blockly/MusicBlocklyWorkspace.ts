@@ -19,6 +19,7 @@ import {
 } from './constants';
 import {setUpBlocklyForMusicLab} from './setup';
 import {getToolbox} from './toolbox';
+import {ToolboxData} from './toolbox/types';
 
 const experiments = require('@cdo/apps/util/experiments');
 
@@ -76,7 +77,7 @@ export default class MusicBlocklyWorkspace {
     container: HTMLElement,
     onBlockSpaceChange: (e: Abstract) => void,
     isReadOnlyWorkspace: boolean,
-    toolbox: {[key: string]: string[]},
+    toolbox: ToolboxData | undefined,
     isRtl: boolean
   ) {
     if (this.workspace) {
@@ -85,7 +86,7 @@ export default class MusicBlocklyWorkspace {
 
     this.container = container;
 
-    const toolboxBlocks = getToolbox(toolbox);
+    const toolboxBlocks = getToolbox(getBlockMode(), toolbox);
 
     this.workspace = Blockly.inject(container, {
       toolbox: toolboxBlocks,
@@ -214,7 +215,10 @@ export default class MusicBlocklyWorkspace {
       if (getBlockMode() !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
           this.compiledEvents.whenRunButton = {
-            code: Blockly.JavaScript.blockToCode(block),
+            code:
+              'var __context = "when_run";\n' +
+              Blockly.JavaScript.workspaceToCode(this.workspace),
+            args: ['startPosition'],
           };
         }
       } else {
@@ -255,7 +259,8 @@ export default class MusicBlocklyWorkspace {
         const id = block.getFieldValue(TRIGGER_FIELD);
         this.compiledEvents[triggerIdToEvent(id)] = {
           code:
-            Blockly.JavaScript.blockToCode(block) + functionImplementationsCode,
+            `var __context = "${id}";\n` +
+            Blockly.JavaScript.workspaceToCode(this.workspace),
           args: ['startPosition'],
         };
         // Also save the value of the trigger start field at compile time so we can
@@ -311,7 +316,7 @@ export default class MusicBlocklyWorkspace {
     console.log('Executing compiled song.');
 
     if (this.codeHooks.whenRunButton) {
-      this.callUserGeneratedCode(this.codeHooks.whenRunButton);
+      this.callUserGeneratedCode(this.codeHooks.whenRunButton, [0]);
     }
 
     if (this.codeHooks.tracks) {

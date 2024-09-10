@@ -309,7 +309,7 @@ en:
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
-    verified_teacher_subject: 'Code.org Teacher Verification - Success'
+    verified_teacher_subject: 'Verified Teacher Resources Unlocked: Your Code.org Access is Ready!'
   section:
     your_section:
       one: 'Your section:'

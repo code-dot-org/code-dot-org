@@ -1,6 +1,5 @@
-@import "color.scss";
-@import "font.scss";
-@import "./music-view.module.scss";
+@import 'color.scss';
+@import 'font.scss';
 
 .toolboxCategoryContainer {
   margin-top: 3px;
@@ -14,7 +13,7 @@
   padding-bottom: 3px;
   margin-left: 3px;
   margin-right: 3px;
-  border-radius: $default-border-radius;
+  border-radius: 0;
   &:hover {
     background-color: $light_gray;
   }
