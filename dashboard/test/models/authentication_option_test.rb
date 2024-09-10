@@ -133,11 +133,6 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     assert option.oauth?
   end
 
-  test 'oauth? true when credential_type is Windows Live' do
-    option = create :authentication_option, credential_type: AuthenticationOption::WINDOWS_LIVE
-    assert option.oauth?
-  end
-
   test 'lti? true when credential_type is LTI_V1' do
     cred_type = AuthenticationOption::LTI_V1
     auth_id = TEST_LTI_AUTH_ID

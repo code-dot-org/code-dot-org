@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -10,11 +10,17 @@ import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   setProjectSource,
   setAndSaveProjectSource,
+  loadVersion,
+  resetToCurrentVersion,
+  setViewingOldVersion,
+  setRestoredOldVersion,
+  setPreviousVersionSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import VersionHistoryRow from './VersionHistoryRow';
 
@@ -25,6 +31,7 @@ interface VersionHistoryDropdownProps {
   updatedSourceCallback?: (source: ProjectSources) => void;
   startSource: ProjectSources;
   closeDropdown: () => void;
+  isOpen: boolean;
 }
 
 const INITIAL_VERSION_ID = 'initial-version';
@@ -36,11 +43,28 @@ const INITIAL_VERSION_ID = 'initial-version';
  */
 const VersionHistoryDropdown: React.FunctionComponent<
   VersionHistoryDropdownProps
-> = ({versionList, updatedSourceCallback, startSource, closeDropdown}) => {
+> = ({
+  versionList,
+  updatedSourceCallback,
+  startSource,
+  closeDropdown,
+  isOpen,
+}) => {
   const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [selectedVersion, setSelectedVersion] = useState('');
   const locale = currentLocale();
+  const menuRef = useOutsideClick<HTMLDivElement>(() => {
+    closeDropdown();
+  });
+  const previousIsOpen = useRef<boolean>(isOpen);
+  const latestVersion = useMemo(
+    () => versionList?.find(v => v.isLatest)?.versionId || '',
+    [versionList]
+  );
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
 
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
@@ -52,23 +76,53 @@ const VersionHistoryDropdown: React.FunctionComponent<
   }, [locale]);
 
   useEffect(() => {
-    if (selectedVersion === '') {
-      setSelectedVersion(
-        versionList.find(version => version.isLatest)?.versionId || ''
-      );
+    if (selectedVersion === '' && versionList.length > 0) {
+      setSelectedVersion(latestVersion);
     }
-  }, [versionList, selectedVersion]);
+  }, [versionList, selectedVersion, latestVersion]);
+
+  useEffect(() => {
+    if (isOpen && !previousIsOpen.current && selectedVersion !== '') {
+      // We only do anything here if we just re-opened the dropdown.
+      // If we are currently viewing an old version (this happens if
+      // the user x'd out of the dropdown, but did not cancel), scroll to the selected version.
+      // Wait a tick to ensure the selected version is rendered before scrolling to it.
+      // Otherwise, reset the selected version to the latest version.
+      // (we likely just restored the project to some version, so we should be viewing the latest version)
+      if (viewingOldVersion) {
+        setTimeout(() => {
+          const selectedVersionComponent =
+            document.getElementById(selectedVersion);
+          if (selectedVersionComponent) {
+            selectedVersionComponent.scrollIntoView({behavior: 'instant'});
+          }
+        }, 0);
+      } else {
+        setSelectedVersion(latestVersion);
+      }
+    }
+    previousIsOpen.current = isOpen;
+  }, [isOpen, selectedVersion, latestVersion, viewingOldVersion]);
 
   const dispatch = useAppDispatch();
+
+  const successfulRestoreCleanUp = useCallback(
+    (sources: ProjectSources) => {
+      dispatch(setViewingOldVersion(false));
+      dispatch(setRestoredOldVersion(true));
+      if (updatedSourceCallback) {
+        updatedSourceCallback(sources);
+      }
+    },
+    [dispatch, updatedSourceCallback]
+  );
 
   const startOver = useCallback(() => {
     // TODO: confirm
     dispatch(setAndSaveProjectSource(startSource));
-    if (updatedSourceCallback) {
-      updatedSourceCallback(startSource);
-    }
+    successfulRestoreCleanUp(startSource);
     closeDropdown();
-  }, [dispatch, startSource, updatedSourceCallback, closeDropdown]);
+  }, [dispatch, startSource, successfulRestoreCleanUp, closeDropdown]);
 
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -82,18 +136,15 @@ const VersionHistoryDropdown: React.FunctionComponent<
         .then(sources => {
           if (sources) {
             dispatch(setProjectSource(sources));
-            if (updatedSourceCallback) {
-              updatedSourceCallback(sources);
-            }
+            successfulRestoreCleanUp(sources);
           } else {
             setLoadError(true);
           }
+          setLoading(false);
           closeDropdown();
         })
         .catch(() => {
           setLoadError(true);
-        })
-        .finally(() => {
           setLoading(false);
         });
     }
@@ -102,7 +153,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
     startOver,
     closeDropdown,
     dispatch,
-    updatedSourceCallback,
+    successfulRestoreCleanUp,
   ]);
 
   const parseDate = (date: string) => {
@@ -110,13 +161,38 @@ const VersionHistoryDropdown: React.FunctionComponent<
     return dateFormatter.format(dateObject);
   };
 
-  const onVersionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // TODO: preview this version
-    setSelectedVersion(e.target.value);
-  };
+  const onVersionChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>, isLatest: boolean) => {
+      setSelectedVersion(e.target.value);
+      if (e.target.value === INITIAL_VERSION_ID) {
+        dispatch(setPreviousVersionSource(startSource));
+      } else if (isLatest) {
+        dispatch(resetToCurrentVersion());
+      } else {
+        dispatch(loadVersion({versionId: e.target.value}));
+      }
+    },
+    [dispatch, startSource]
+  );
 
-  return (
-    <div>
+  // Function called when clicking 'cancel'. This will reset the project to the current version
+  // if the user is viewing an old version, then close the dropdown.
+  const handleCancel = useCallback(() => {
+    // Go back to current version if we are viewing an old version
+    const versionBeingViewed = versionList.find(
+      version => version.versionId === selectedVersion
+    );
+    if (
+      selectedVersion === INITIAL_VERSION_ID ||
+      (versionBeingViewed && !versionBeingViewed.isLatest)
+    ) {
+      dispatch(resetToCurrentVersion());
+    }
+    closeDropdown();
+  }, [closeDropdown, dispatch, selectedVersion, versionList]);
+
+  return isOpen ? (
+    <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
       <div className={moduleStyles.versionHistoryHeader}>
         <Heading6 className={moduleStyles.versionHistoryTitle}>
           {commonI18n.versionHistory_header()}
@@ -130,21 +206,23 @@ const VersionHistoryDropdown: React.FunctionComponent<
       <div className={moduleStyles.versionHistoryList}>
         {versionList.map(version => (
           <VersionHistoryRow
+            id={version.versionId}
             key={version.versionId}
             versionId={version.versionId}
             versionLabel={parseDate(version.lastModified)}
             isLatest={version.isLatest}
             isSelected={selectedVersion === version.versionId}
-            onChange={onVersionChange}
+            onChange={e => onVersionChange(e, version.isLatest)}
           />
         ))}
         <VersionHistoryRow
+          id={INITIAL_VERSION_ID}
           key={INITIAL_VERSION_ID}
           versionId={INITIAL_VERSION_ID}
           versionLabel={lab2I18n.initialVersion()}
           isLatest={versionList.length === 0}
           isSelected={selectedVersion === INITIAL_VERSION_ID}
-          onChange={onVersionChange}
+          onChange={e => onVersionChange(e, versionList.length === 0)}
         />
       </div>
 
@@ -171,13 +249,13 @@ const VersionHistoryDropdown: React.FunctionComponent<
           text={commonI18n.cancel()}
           color={'white'}
           size={'m'}
-          onClick={closeDropdown}
+          onClick={handleCancel}
           disabled={loading}
           className={moduleStyles.actionButton}
         />
       </div>
     </div>
-  );
+  ) : null;
 };
 
-export default VersionHistoryDropdown;
+export default React.memo(VersionHistoryDropdown);

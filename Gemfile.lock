@@ -39,15 +39,6 @@ GIT
       omniauth-oauth2 (>= 1.1, <= 1.8)
 
 GIT
-  remote: https://github.com/code-dot-org/omniauth-windowslive.git
-  revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
-  ref: cdo
-  specs:
-    omniauth-windowslive (0.0.11)
-      multi_json (>= 1.0.3)
-      omniauth-oauth2 (~> 1.4)
-
-GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -193,6 +184,9 @@ GEM
     aws-sdk-acm (1.74.0)
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
+    aws-sdk-autoscaling (1.63.0)
+      aws-sdk-core (~> 3, >= 3.112.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-bedrockagentruntime (1.10.0)
       aws-sdk-core (~> 3, >= 3.193.0)
       aws-sigv4 (~> 1.1)
@@ -952,6 +946,7 @@ DEPENDENCIES
   auto_strip_attributes (~> 2.1)
   aws-google (~> 0.2.0)
   aws-sdk-acm
+  aws-sdk-autoscaling
   aws-sdk-bedrockagentruntime (~> 1.10.0)
   aws-sdk-cloudformation
   aws-sdk-cloudfront
@@ -1054,7 +1049,6 @@ DEPENDENCIES
   omniauth-microsoft_v2_auth!
   omniauth-openid
   omniauth-rails_csrf_protection (~> 0.1)
-  omniauth-windowslive (~> 0.0.11)!
   open_uri_redirections
   os
   parallel

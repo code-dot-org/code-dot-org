@@ -185,17 +185,20 @@ $default-spacing: 4px;
 .itemContainer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 0 5px;
-  padding: 4px 12px;
+  align-items: start;
   border-radius: 4px;
-  border-color: $light_gray_500;
   border: 1px solid;
   color: $light_gray_500;
+  border-color: $neutral_dark20;
+
+  span {
+    padding: 6px 12px;
+  }
 }
 
 .removeItemIcon {
   color: $light_gray_500;
+  margin: 6px;
 
   &:hover {
     color: $light_negative_500;
@@ -214,5 +217,10 @@ $default-spacing: 4px;
 .addedItemsHeaderContainer {
   border-bottom: 1px solid $light_gray_200;
   font-size: 14px;
-  margin: 16px 0 8px 0;
+  margin-top: 8px;
+}
+
+.examplePromptAlert {
+  padding: 0;
+  background-color: white;
 }

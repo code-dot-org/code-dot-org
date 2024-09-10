@@ -3,6 +3,14 @@ title: Transformers One
 theme: responsive_full_width
 ---
 
+:javascript
+  window.pegasus = window.pegasus || {};
+  window.pegasus.STUDIO_URL = "#{CDO.studio_url}";
+
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/public/transformersone.js')}
+
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/transformers-styles.css", rel: "stylesheet"}
 
@@ -37,7 +45,7 @@ theme: responsive_full_width
       =hoc_s("transformers.fun.desc")
     .action-block.action-block--two-col.bg-neutral-light
       .media-wrapper.col-50
-        %img{src: "/images/transformers/action_poster.png", alt: ""}
+        = view :display_video_thumbnail, id: "Transformers_One_promo_video", video_code: "nLFd7v6CkiI", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/Transformers_One_promo_video.mp4"
       .text-wrapper.col-50
         %p.overline=hoc_s("teach_labs_section.spritelab.overline")
         %h3=hoc_s("transformers.fun.code_card.header")
@@ -49,6 +57,11 @@ theme: responsive_full_width
         %a.link-button{href: CDO.studio_url("s/hello-world-transformers-one-2024/lessons/1/levels/1")}
           =hoc_s(:call_to_action_start_activity_short)
       .clear
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %h2.white.centered=hoc_s("transformers.projects_header")
+    #transformersone_student_projects
 
 %section#continue.bg-neutral-light
   .wrapper

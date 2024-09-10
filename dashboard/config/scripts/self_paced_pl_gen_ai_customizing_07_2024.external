@@ -7,18 +7,14 @@ markdown <<MARKDOWN
 
 #### There are lots of new key concepts introduced around system prompting that students will engage with during these lessons. We’ve summarized them below.
 
-## Role and Tone:
-## Audience and Delivery:
-## Chain of Reasoning:
-## Giving Examples:
+#### **Role and Tone**: 
+- #### Role: The part the model plays when responding, like being a teacher, helper, or friend.
+- #### Tone: The way the model speaks, such as being formal, friendly, or casual.
+
+#### **Audience and Delivery**:
+- #### Audience: The people the model is talking to, like kids, adults, or professionals.
+- #### Delivery: How the model says things, whether it’s simple, detailed, quick, or slow, depending on who’s listening.
 
 ## Up Next!
-#### Learn more about each of these concepts and then try them out in chatbot lab.
-
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> XXX  
-</p>
-</div>
-
+#### Try out writing a system prompt that includes all of these components in chatbot lab.
 MARKDOWN

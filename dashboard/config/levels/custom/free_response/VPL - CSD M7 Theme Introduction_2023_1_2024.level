@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-03-25T22:42:35.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "instructions_important": "false",
-    "long_instructions": "# Theme Introduction\r\n\r\n## Learning in Context\r\n\r\n##### “Learning in Context” means learning should begin with the “why” before moving to the “how”. Problems should be purposeful. Students should understand **why** the problem is important before deciding **how** to solve the problem. Both the “why” and the “how” should be relevant to the student (facilitates motivation) and to the learning objectives (facilitates learning).\r\n\r\n## Reflection\r\n\r\n##### What does it mean for learning to start with the “why” before moving on to the “how”? How might students make connections between the \"why\" and \"how\", better support their own learning?\r\n\r\n\r\n",
+    "long_instructions": "# Theme Introduction\r\n\r\n## Learning in Context\r\n\r\n#### “Learning in Context” means learning should begin with the **why** before moving to the **how**. Problems should be purposeful. Students should understand **why** the problem is important before deciding **how** to solve the problem. Both the **why** and the **how** should be relevant to the student (facilitates motivation) and to the learning objectives (facilitates learning).\r\n\r\n## Reflection\r\n\r\n* #### What does it mean for learning to start with the **why** before moving on to the **how**? \r\n* #### How might students who make connections between the **why** and **how** better support their own learning?\r\n<br>\r\n\r\n##### **Note:** You can change the size of the text box by clicking and dragging the bottom-right corner of the text box.",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -20,9 +21,8 @@
     "name_suffix": "_2024",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:35.734+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD M7 Theme Introduction_2023_1\\\"\"],\"cloned_from\":\"VPL - CSD M7 Theme Introduction_2023_1\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:35.734+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD M7 Theme Introduction_2023_1\\\"\"],\"cloned_from\":\"VPL - CSD M7 Theme Introduction_2023_1\"},{\"changed_at\":\"2024-09-04 20:46:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-09-04 20:47:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-09-04 20:55:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-09-04 20:55:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -9,6 +9,7 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 
 import locale from './locale';
 import {
@@ -25,8 +26,9 @@ import style from './signUpFlowStyles.module.scss';
 
 const FinishStudentAccount: React.FunctionComponent<{
   ageOptions: {value: string; text: string}[];
+  usIp: boolean;
   usStateOptions: {value: string; text: string}[];
-}> = ({ageOptions, usStateOptions}) => {
+}> = ({ageOptions, usIp, usStateOptions}) => {
   // Fields
   const [isParent, setIsParent] = useState(false);
   const [parentEmail, setParentEmail] = useState('');
@@ -58,7 +60,7 @@ const FinishStudentAccount: React.FunctionComponent<{
     setParentEmail(newParentEmail);
     sessionStorage.setItem(PARENT_EMAIL_SESSION_KEY, newParentEmail);
 
-    if (newParentEmail === '') {
+    if (!isEmail(newParentEmail)) {
       setShowParentEmailError(true);
     } else {
       setShowParentEmailError(false);
@@ -189,21 +191,23 @@ const FinishStudentAccount: React.FunctionComponent<{
             </BodyThreeText>
           )}
         </div>
-        <div>
-          <SimpleDropdown
-            name="userState"
-            labelText={locale.what_state_are_you_in()}
-            size="m"
-            items={usStateOptions}
-            selectedValue={state}
-            onChange={onStateChange}
-          />
-          {showStateError && (
-            <BodyThreeText className={style.errorMessage}>
-              {locale.state_error_message()}
-            </BodyThreeText>
-          )}
-        </div>
+        {usIp && (
+          <div>
+            <SimpleDropdown
+              name="userState"
+              labelText={locale.what_state_are_you_in()}
+              size="m"
+              items={usStateOptions}
+              selectedValue={state}
+              onChange={onStateChange}
+            />
+            {showStateError && (
+              <BodyThreeText className={style.errorMessage}>
+                {locale.state_error_message()}
+              </BodyThreeText>
+            )}
+          </div>
+        )}
         <TextField
           name="userGender"
           label={locale.what_is_your_gender()}
@@ -227,7 +231,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           disabled={
             name === '' ||
             age === '' ||
-            state === '' ||
+            (usIp && state === '') ||
             (isParent && parentEmail === '')
           }
         />

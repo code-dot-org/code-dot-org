@@ -1,6 +1,6 @@
 import cloneDeep from 'lodash/cloneDeep';
 
-import currentLocale from '@cdo/apps/util/currentLocale';
+import {getCurrentLocale} from '@cdo/apps/lab2/projects/utils';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient, {
   ResponseValidator,
@@ -22,7 +22,7 @@ const requestVersion = 'launch2024-0';
  * URL param, that will take precedence.
  * @returns the Music Library
  */
-async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
+export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
   const libraryParameter = AppConfig.getValue('library') || libraryName;
   const libraryFilename = `music-library-${libraryParameter}`;
 
@@ -45,10 +45,10 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       libraryJsonResponsePromise,
     ];
 
-    const jsLocale = currentLocale().toLowerCase().replace('-', '_');
-    if (jsLocale !== 'en_us') {
+    const locale = getCurrentLocale().toLowerCase().replace('-', '_');
+    if (locale !== 'en_us') {
       const translationPromise = HttpClient.fetchJson<Translations>(
-        getBaseAssetUrl() + libraryFilename + '-loc/' + jsLocale + '.json'
+        getBaseAssetUrl() + libraryFilename + '-loc/' + locale + '.json'
       );
       promises.push(translationPromise);
     }
@@ -452,8 +452,8 @@ export type LibraryJson = {
   packs: SoundFolder[];
 };
 
-interface Sounds {
-  [index: string]: [string];
+export interface Sounds {
+  [category: string]: string[];
 }
 
 interface Translations {

@@ -51,8 +51,7 @@ class ScriptsController < ApplicationController
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
       @section = current_user&.sections_instructed&.all&.find {|s| s.id.to_s == params[:section_id]}&.summarize
-      sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
-      @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:script_id] == @script.id})}
+      @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
     end
 
     @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !@script.is_course
@@ -74,7 +73,7 @@ class ScriptsController < ApplicationController
       locale_code: request.locale,
       course_link: @script.course_link(params[:section_id]),
       course_title: @script.course_title || I18n.t('view_all_units'),
-      sections: @sections_with_assigned_info
+      sections: @sections
     }
 
     @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)

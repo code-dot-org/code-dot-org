@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {asyncLoadCoursesWithProgress} from '@cdo/apps/redux/unitSelectionRedux';
 
 import styles from './unit-selector.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 function UnitSelector({
   scriptId,
