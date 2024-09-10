@@ -65,9 +65,7 @@ async function assignReviewers(dependencyName, teamReviewers) {
         body: dedent`
         The maintainers for the dependency \`${dependencyName}\` is **${teamReviewers.join(',')}**.
         
-        This pull request is open to anyone (including the public) to work on. If you have any questions, please feel free to contact **${teamReviewers.join(',')}**
-        
-        To re-run this dependabot assignment workflow, use the command \`dependabot-reassign\``
+        This pull request is open to anyone (including the public) to work on. If you have any questions, please feel free to contact **${teamReviewers.join(',')}**`
     });
 }
 

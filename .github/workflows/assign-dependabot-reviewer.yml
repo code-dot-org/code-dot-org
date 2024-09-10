@@ -12,11 +12,7 @@ jobs:
   assign-reviewer:
     # Only run if a dependabot PR on open or synchronize or the command /reassign-dependabot is commented in the PR
     if: >
-      github.event.pull_request.user.login == 'dependabot[bot]' ||
-      (
-        github.event_name == 'issue_comment' && 
-        contains(github.event.comment.body, '/dependabot-reassign')
-      )
+      github.event.pull_request.user.login == 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
