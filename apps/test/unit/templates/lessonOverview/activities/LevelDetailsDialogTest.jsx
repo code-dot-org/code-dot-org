@@ -3,7 +3,7 @@ import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
 import * as utils from '@cdo/apps/utils';
 
