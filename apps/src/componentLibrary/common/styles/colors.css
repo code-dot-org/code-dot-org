@@ -198,7 +198,7 @@
     --text-neutral-primary: var(--neutral-base-white);
     --text-neutral-quaternary: var(--neutral-gray-30);
     --text-neutral-secondary: var(--neutral-gray-10);
-    --text-neutral-tertiary: var(--nblocklyeutral-gray-20);
+    --text-neutral-tertiary: var(--neutral-gray-20);
     --text-neutral-white-fixed: var(--neutral-base-white);
     --text-success-primary: var(--text-neutral-white-fixed);
     --text-success-primary-fixed: var(--sentiment-success-50);
