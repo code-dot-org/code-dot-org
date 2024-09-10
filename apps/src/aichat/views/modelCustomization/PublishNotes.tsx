@@ -58,7 +58,10 @@ const PublishNotes: React.FunctionComponent = () => {
     : ['In order to publish, you must fill out a model card', 'warning'];
 
   return (
-    <div className={modelCustomizationStyles.verticalFlexContainer}>
+    <div
+      id="uitest-publish-notes-tab-content"
+      className={modelCustomizationStyles.verticalFlexContainer}
+    >
       <div className={modelCustomizationStyles.customizationContainer}>
         {!isReadOnly && <Alert text={alertText} type={type} size="s" />}
         {MODEL_CARD_FIELDS_LABELS_ICONS.map(data => {
@@ -111,6 +114,7 @@ const PublishNotes: React.FunctionComponent = () => {
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
         <Button
+          id="uitest-publish-notes-save"
           text="Save"
           iconLeft={
             saveInProgress && currentSaveType === 'saveModelCard'
@@ -124,6 +128,7 @@ const PublishNotes: React.FunctionComponent = () => {
           className={modelCustomizationStyles.updateButton}
         />
         <Button
+          id="uitest-publish-notes-publish"
           text="Publish"
           iconLeft={
             saveInProgress && currentSaveType === 'publishModelCard'

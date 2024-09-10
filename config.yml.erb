@@ -25,8 +25,6 @@ dashboard_facebook_key:         !Secret
 dashboard_facebook_secret:      !Secret
 dashboard_google_key:           !Secret
 dashboard_google_secret:        !Secret
-dashboard_windowslive_key:      !Secret
-dashboard_windowslive_secret:   !Secret
 dashboard_microsoft_key:        !Secret
 dashboard_microsoft_secret:     !Secret
 dashboard_clever_key:           !Secret
@@ -317,6 +315,11 @@ gatekeeper_table_name: gatekeeper_<%=env%>
 
 # Allows DCDO settings via cookies. See: `Rack::CookieDCDO`
 use_cookie_dcdo: false
+
+# Allows Geolocation to be altered via cookies.
+# See: 'lib/cdo/rack/geolocation_override.rb'
+# and: 'dashboard/test/ui/features/xteam/gdpr_dialog.feature'
+use_geolocation_override: false
 
 # Poste (internal transactional email processing framework)
 poste_host: '<%= code_org_url.sub('//', '') %>'

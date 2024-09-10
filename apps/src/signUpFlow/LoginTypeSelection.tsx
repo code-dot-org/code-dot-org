@@ -60,6 +60,24 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     }
   }, [passwordIcon, confirmPasswordIcon, emailIcon]);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Enter') {
+        const button = document.getElementById(
+          'createAccountButton'
+        ) as HTMLButtonElement;
+        if (button && !button.disabled) {
+          button.click();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
     if (event.target.value.length >= 6) {
@@ -234,6 +252,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             </div>
           </div>
           <Button
+            id="createAccountButton"
             className={style.shortButton}
             text={locale.create_my_account()}
             disabled={createAccountButtonDisabled}

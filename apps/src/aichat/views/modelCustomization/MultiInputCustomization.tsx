@@ -20,6 +20,7 @@ const MultiInputCustomization: React.FunctionComponent<{
   isReadOnly: boolean;
   hideInputBoxWhenReadOnly: boolean;
   onUpdateItems: (updatedItems: string[]) => void;
+  addButtonId?: string;
   validationAlert?: React.ReactNode;
 }> = ({
   label,
@@ -30,6 +31,7 @@ const MultiInputCustomization: React.FunctionComponent<{
   isReadOnly,
   hideInputBoxWhenReadOnly,
   onUpdateItems,
+  addButtonId,
   validationAlert,
 }) => {
   const [newItem, setNewItem] = useState('');
@@ -65,6 +67,7 @@ const MultiInputCustomization: React.FunctionComponent<{
           </div>
           <div className={modelCustomizationStyles.addItemContainer}>
             <Button
+              id={addButtonId}
               text="Add"
               type="secondary"
               color="gray"
