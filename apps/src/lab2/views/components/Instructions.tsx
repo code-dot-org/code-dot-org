@@ -312,16 +312,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
               )}
-              {/*{canShowContinueButton && (*/}
-              {/*  <button*/}
-              {/*    id="instructions-continue-button"*/}
-              {/*    type="button"*/}
-              {/*    onClick={onNextPanel}*/}
-              {/*    className={moduleStyles.buttonInstruction}*/}
-              {/*  >*/}
-              {/*    {commonI18n.continue()}*/}
-              {/*  </button>*/}
-              {/*)}*/}
               {canShowContinueButton && (
                 <Button
                   id="instructions-continue-button"
@@ -332,15 +322,13 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               )}
               {canShowFinishButton && (
                 <>
-                  <button
+                  <Button
                     id="instructions-finish-button"
-                    type="button"
                     onClick={onFinish}
                     disabled={isFinished}
                     className={moduleStyles.buttonInstruction}
-                  >
-                    {commonI18n.finish()}
-                  </button>
+                    text={commonI18n.finish()}
+                  />
                   {isFinished && <Heading6>{finalMessage}</Heading6>}
                 </>
               )}
