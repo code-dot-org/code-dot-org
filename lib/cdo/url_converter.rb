@@ -18,6 +18,10 @@ class UrlConverter
     @csedweek_host = csedweek_host
   end
 
+  def localhost?(url)
+    URI.parse(url).host.end_with? '.localhost'
+  end
+
   # An 'origin' is a protocol, domain, and (optional) port.  This method may
   # replace all three.
   def replace_origin(url)
@@ -44,7 +48,7 @@ class UrlConverter
     end
 
     # Convert http to https
-    url = url.gsub(/^#{'http://'}/, 'https://') unless url.start_with? 'http://localhost'
+    url = url.gsub(/^#{'http://'}/, 'https://') unless localhost? url
     # Convert x.y.code.org to x-y.code.org
     url.gsub(/(\w+)\.(\w+)#{'.code.org'}/, '\1-\2.code.org')
   end
