@@ -4,7 +4,10 @@ import '@testing-library/jest-dom';
 
 import locale from '@cdo/apps/signUpFlow/locale';
 import LoginTypeSelection from '@cdo/apps/signUpFlow/LoginTypeSelection';
-import {ACCOUNT_TYPE_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
@@ -13,7 +16,7 @@ jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
 
 describe('LoginTypeSelection', () => {
   afterEach(() => {
-    sessionStorage.removeItem(ACCOUNT_TYPE_SESSION_KEY);
+    sessionStorage.clear();
   });
 
   function renderDefault() {
@@ -131,5 +134,23 @@ describe('LoginTypeSelection', () => {
         .toString()
         .includes("href: '/users/new_sign_up/finish_teacher_account'")
     ).toBeTruthy;
+  });
+
+  it('valid email is stored in sessionStorage', () => {
+    renderDefault();
+    const emailInput = screen.getByLabelText(locale.email_address());
+
+    // Session storage starts empty
+    expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(null);
+
+    // Session storage doesn't update for an invalid email
+    fireEvent.change(emailInput, {target: {value: 'invalidEmail'}});
+    expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(null);
+
+    // Session storage updates for valid email
+    fireEvent.change(emailInput, {target: {value: 'validEmail@email.com'}});
+    expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(
+      'validEmail@email.com'
+    );
   });
 });
