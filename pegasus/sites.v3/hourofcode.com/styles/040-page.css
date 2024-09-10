@@ -51,16 +51,6 @@ body {
   background-color: var(--neutral_white);
   height: 100%;
   font-family: var(--main-font);
-  font-size: 14px;
-  line-height: 22px;
-  color: var(--neutral_dark);
-  margin: 0;
-}
-
-body {
-  background-color: var(--neutral_white);
-  height: 100%;
-  font-family: var(--main-font);
   font-weight: var(--regular-font-weight);
   font-style: normal;
   font-size: 14px;
