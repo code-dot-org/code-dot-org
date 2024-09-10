@@ -37,18 +37,10 @@ layout: wide_index
 
   %section#form.bg-neutral-light
     .wrapper.flex-container.flex-direction-column-tablet-reverse.align-items-center.gap-2
-      %figure.rounded-corners.flex-1{style: "width: 100%; background: var(--neutral_white); border: 1px solid var(--neutral_dark20); padding: 1rem 1rem 0.5rem"}
-        %iframe{allowtransparency: "true", frameborder: "0", height: "325px", src: "https://go.pardot.com/l/153401/2024-01-03/pqtwb6", style: "border: 0", type: "text/html", width: "100%"}
-      .text-wrapper.flex-1
-        %h2.no-margin-top
-          =hoc_s("hoc_events.register.heading")
-        %p.heading-sm
-          =hoc_s("hoc_events.register.disclaimer", markdown: :inline, locals:{close_date: "December 31, 2024"})
-        %p.body-three
-          =hoc_s("hoc_events.register.desc")
-        %hr
-        %p.body-three.no-margin-bottom
-          =hoc_s("hoc_events.register.how_to", markdown: :inline, locals:{how_to_url: resolve_url('/how-to')})
+      - if hoc_mode == false
+        = view :"events/off_season_interest_form"
+      - else
+        = view :"events/event_registration_form"
 
   %section.resources.no-padding-bottom
     .wrapper

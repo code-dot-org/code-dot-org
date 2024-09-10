@@ -1,0 +1,12 @@
+%figure.rounded-corners.flex-1{style: "width: 100%; background: var(--neutral_white); border: 1px solid var(--neutral_dark20); padding: 1rem 1rem 0.5rem"}
+  %iframe{allowtransparency: "true", frameborder: "0", height: "425px", src: "https://go.pardot.com/l/153401/2024-08-26/pr46fc", style: "border: 0", type: "text/html", width: "100%"}
+.text-wrapper.flex-1
+  %h2.no-margin-top
+    =hoc_s("hoc_events.register.heading")
+  %p.heading-sm
+    =hoc_s("hoc_events.register.disclaimer", markdown: :inline, locals:{close_date: "December 31, 2024"})
+  %p.body-three
+    =hoc_s("hoc_events.register.desc")
+  %hr
+  %p.body-three.no-margin-bottom
+    =hoc_s("hoc_events.register.how_to", markdown: :inline, locals:{how_to_url: resolve_url('/how-to')})
