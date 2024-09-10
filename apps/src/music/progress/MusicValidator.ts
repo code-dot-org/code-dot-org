@@ -18,6 +18,10 @@ export interface ConditionNames {
 
 export const MusicConditions: ConditionNames = {
   PLAYED_SOUNDS_TOGETHER: {name: 'played_sounds_together', valueType: 'number'},
+  PLAYED_DIFFERENT_SOUNDS_TOGETHER: {
+    name: 'played_different_sounds_together',
+    valueType: 'number',
+  },
   PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
   PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
   PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
@@ -54,6 +58,9 @@ export default class MusicValidator extends Validator {
     // Get number of sounds currently playing simultaneously.
     let currentNumberSounds = 0;
 
+    // Get number of different sounds currently playing simultaneously.
+    let currentNumberDifferentSounds = 0;
+
     // Get number of sounds that have been started.
     let playedNumberSounds = 0;
 
@@ -67,6 +74,8 @@ export default class MusicValidator extends Validator {
     let playedNumberEmptyChords = 0;
     let playedNumberChords = 0;
 
+    const uniqueCurrentSounds: string[] = [];
+
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
     this.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
       // Skip events that we haven't gotten to yet.
@@ -79,6 +88,11 @@ export default class MusicValidator extends Validator {
       if (eventData.type === 'sound') {
         if (eventData.when + length > currentPlayheadPosition) {
           currentNumberSounds++;
+
+          if (!uniqueCurrentSounds.includes(eventData.id)) {
+            currentNumberDifferentSounds++;
+            uniqueCurrentSounds.push(eventData.id);
+          }
 
           if (eventData.triggered) {
             this.conditionsChecker.addSatisfiedCondition({
@@ -121,6 +135,20 @@ export default class MusicValidator extends Validator {
       this.conditionsChecker.addSatisfiedCondition({
         name: MusicConditions.PLAYED_SOUNDS_TOGETHER.name,
         value: numberSounds,
+      });
+    }
+
+    // Check for up to a certain number of different sounds playing simultaneously.
+    // Note that if, for example, 3 different sounds are playing, then we'll consider
+    // that 2 different sounds and 1 different sound have also been played together.
+    for (
+      let numberDifferentSounds = currentNumberDifferentSounds;
+      numberDifferentSounds >= 1;
+      numberDifferentSounds--
+    ) {
+      this.conditionsChecker.addSatisfiedCondition({
+        name: MusicConditions.PLAYED_DIFFERENT_SOUNDS_TOGETHER.name,
+        value: numberDifferentSounds,
       });
     }
 
