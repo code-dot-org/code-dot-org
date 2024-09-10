@@ -4,34 +4,18 @@
 #us-state-column-bulk-set-modal {
   font-weight: $medium-font-weight;
 
+  & #ui-close-dialog {
+    outline: none;
+  }
+
   & a {
     color: $default_text;
     text-decoration: underline;
   }
 
-  & h4 {
-    margin: 20px 0;
-  }
-
   & hr {
-    margin: 0 20px !important;
-  }
-
-  & p {
-    margin: 0;
-  }
-
-  & #x-close {
-    color: $lighter_gray;
-
-    &:active {
-      border: unset !important;
-    }
-
-    &:hover {
-      background-color: unset !important;
-      color: $light_gray !important;
-    }
+    border-color: $border_gray;
+    margin: 15px 0;
   }
 
   & .form-group {
@@ -40,5 +24,11 @@
     .control-label {
       font-weight: $semi-bold-font-weight;
     }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
   }
 };

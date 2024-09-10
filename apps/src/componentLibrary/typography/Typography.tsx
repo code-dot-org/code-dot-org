@@ -10,6 +10,8 @@ interface TypographyProps {
   semanticTag: SemanticTag;
   // Scss module classname to use for the typography element
   visualAppearance: VisualAppearance;
+  // Additional id to apply to the typography element
+  id?: string;
   // Additional classnames to apply to the typography element
   className?: string;
   // Inline styles to apply to the typography element
@@ -19,6 +21,7 @@ interface TypographyProps {
 }
 
 const Typography: React.FunctionComponent<TypographyProps> = ({
+  id,
   semanticTag,
   visualAppearance,
   children,
@@ -30,6 +33,7 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
 
   return (
     <Tag
+      id={id}
       className={classnames(moduleStyles[visualAppearance], className)}
       style={style}
       {...props}

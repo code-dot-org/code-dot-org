@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
-import {ControlLabel, FormControl, FormGroup} from 'react-bootstrap';
+import {ControlLabel, Fade, FormControl, FormGroup} from 'react-bootstrap';
 import {connect} from 'react-redux';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {bulkSet} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {BulkSetModalProps} from '@cdo/apps/templates/manageStudents/Table/UsStateColumn/interface';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -50,41 +51,59 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
   };
 
   return (
-    <StylizedBaseDialog
-      isOpen={isOpen}
-      bodyId="us-state-column-bulk-set-modal"
-      title={<Heading4>{i18n.studentUsStateUpdatesModal_title()}</Heading4>}
-      confirmationButtonText={i18n.add()}
-      handleConfirmation={bulkSetUsState}
-      handleClose={onClose}
-      fixedWidth={600}
-    >
-      <FormGroup>
-        <ControlLabel htmlFor="us-state">{i18n.usState()}</ControlLabel>
-        <FormControl
-          componentClass="select"
-          id="us-state"
-          name="usState"
-          style={{width: 150}}
-          value={usState}
-          onChange={handleUsStateChange}
-        >
-          <option value="">{i18n.chooseUsState()}</option>
-          {STATE_CODES.map(code => (
-            <option key={code} value={code}>
-              {code}
-            </option>
-          ))}
-        </FormControl>
-      </FormGroup>
+    <Fade in={isOpen} mountOnEnter unmountOnExit>
+      <AccessibleDialog id="us-state-column-bulk-set-modal" onClose={onClose}>
+        <Heading4 id="us-state-column-bulk-set-modal-title">
+          {i18n.studentUsStateUpdatesModal_title()}
+        </Heading4>
 
-      <SafeMarkdown
-        openExternalLinksInNewTab={true}
-        markdown={i18n.studentUsStateUpdatesModal_desc({
-          docURL: CapLinks.PARENTAL_CONSENT_GUIDE_URL,
-        })}
-      />
-    </StylizedBaseDialog>
+        <hr aria-hidden="true" />
+
+        <FormGroup>
+          <ControlLabel htmlFor="us-state">{i18n.usState()}</ControlLabel>
+          <FormControl
+            componentClass="select"
+            id="us-state"
+            name="usState"
+            style={{width: 150}}
+            value={usState}
+            onChange={handleUsStateChange}
+          >
+            <option value="">{i18n.chooseUsState()}</option>
+            {STATE_CODES.map(code => (
+              <option key={code} value={code}>
+                {code}
+              </option>
+            ))}
+          </FormControl>
+        </FormGroup>
+
+        <SafeMarkdown
+          openExternalLinksInNewTab={true}
+          markdown={i18n.studentUsStateUpdatesModal_desc({
+            docURL: CapLinks.PARENTAL_CONSENT_GUIDE_URL,
+          })}
+        />
+
+        <hr aria-hidden="true" />
+
+        <div id="us-state-column-bulk-set-modal-footer">
+          <Button
+            text={i18n.cancel()}
+            type="secondary"
+            size="s"
+            color={buttonColors.gray}
+            onClick={onClose}
+          />
+          <Button
+            text={i18n.add()}
+            type="primary"
+            size="s"
+            onClick={bulkSetUsState}
+          />
+        </div>
+      </AccessibleDialog>
+    </Fade>
   );
 };
 
