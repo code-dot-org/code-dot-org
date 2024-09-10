@@ -238,6 +238,9 @@ module Services
         end
       end
 
+      # Unarchive archived sections, even if there are no changes
+      section.update(hidden: false)
+
       {
         had_changes: had_changes,
         size: current_students.size,
