@@ -278,6 +278,11 @@ td {
   padding: 15px;
 }
 
+/* Applies text-wrap: balance to an element */
+.wrap-balance {
+  text-wrap: balance;
+}
+
 .flex-container { display: flex; }
 
 /* Centers a block-level element */
@@ -656,6 +661,18 @@ a.link-button.black {
   &:hover {
     background: black;
     border-color: black;
+  }
+}
+
+/* Button wrapper for side-by-side buttons */
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
+
+  &.centered {
+    justify-content: center;
   }
 }
 

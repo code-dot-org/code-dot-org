@@ -8,7 +8,8 @@ social:
 :ruby
   @header["title"] = hoc_s(:front_title, locals: {campaign_date: campaign_date('full-year')})
 
-%link{href: "/css/generated/front-page.css", rel: "stylesheet", type: "text/css"}
+-# %link{href: "/css/generated/front-page.css", rel: "stylesheet", type: "text/css"}
+%link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 
 -# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
@@ -49,25 +50,18 @@ social:
 
 %main
   -# What is HoC?
-  %section.what-is-hoc.centered
+  %section.bg-neutral-light.centered
     .wrapper
-      %h2=hoc_s(:front_what_is_hoc)
-      %p.body-two
-        =hoc_s(:hoc2023_what_is_hoc_desc)
-      = view :index_video
-
-  -# Off season interest form
-  -# This is only shown when hoc_mode is false
-  - if hoc_mode == false
-    %hr{style: "max-width: 960px; margin-inline: auto"}
-    %section
-      .wrapper
-        = view :off_season_interest_form
+      %h2=hoc_s("hoc_homepage.what_is_hoc.heading")
+      %p.body-two.wrap-balance
+        =hoc_s("hoc_homepage.what_is_hoc.desc")
 
   -# HoC Live Spanish banner
   - if @language == 'es' || @language == 'la'
     %section.spanish-banner.no-padding-bottom
       .wrapper
+        = view :index_video
+        %hr
         .action-block.action-block--two-col
           %img{src: '/images/hora-del-codigo-en-vivo.png', alt: hoc_s(:hoc_live)}
           .content-wrapper
@@ -79,8 +73,33 @@ social:
               = hoc_s(:hoc_live_learn_more)
         %hr
 
+  -# Host & resources
+  %section
+    .wrapper
+      .flex-container.justify-space-between.gap-2
+        .text-wrapper.flex-1
+          %h2=hoc_s("hoc_homepage.host.heading")
+          %p.body-two
+            =hoc_s("hoc_homepage.host.desc")
+          %a.link-button{href: resolve_url('/events')}
+            =hoc_s("hoc_homepage.host.button")
+        %figure.flex-1
+          %img{src: "/images/homepage-students-computer.png", alt: ""}
+      .flex-container.justify-space-between.gap-2
+        %figure.flex-1
+          %img{src: "/images/homepage-resources.png", alt: ""}
+        .text-wrapper.flex-1
+          %h2=hoc_s("hoc_homepage.resources.heading")
+          %p.body-two
+            =hoc_s("hoc_homepage.resources.desc")
+          .button-wrapper
+            %a.link-button{href: resolve_url('/how-to')}
+              =hoc_s("hoc_homepage.resources.button.how_to")
+            %a.link-button.secondary{href: resolve_url('/promote')}
+              =hoc_s("hoc_homepage.resources.button.explore_resources")
+
   -# Stats
-  %section.stats.bg-neutral-light
+  %section.stats.bg-neutral-dark
     .wrapper.centered
       = view :home_stats
       .button-wrapper
@@ -91,17 +110,3 @@ social:
 
   -# Organized by Code.org
   = view :organized_by_cdo
-
-:javascript
-
-  $(function() {
-    $('.highlight-item').mouseover(function() {
-      var caption = $(this).find('.highlight-caption');
-      caption.fadeIn();
-    });
-
-    $('.highlight-item').mouseleave(function() {
-      var caption = $(this).find('.highlight-caption');
-      caption.fadeOut();
-    });
-  });
