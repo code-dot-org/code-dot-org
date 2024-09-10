@@ -89,6 +89,21 @@ export default class MusicBlocklyWorkspace {
 
     const toolboxBlocks = getToolbox(getBlockMode(), toolbox);
 
+    // This dialog is used for naming variables, which are only present in advanced mode.
+    // Other Blockly labs use FeedbackUtils.prototype.showSimpleDialog to create a prettier dialog.
+    // See StudioApp.prototype.inject for more information.
+    const customSimpleDialog = function (options: {
+      bodyText: string;
+      promptPrefill: string;
+      onCancel: (p1: string | null) => void;
+    }) {
+      Blockly.dialog.prompt(
+        options.bodyText,
+        options.promptPrefill,
+        options.onCancel
+      );
+    };
+
     this.workspace = Blockly.inject(container, {
       toolbox: toolboxBlocks,
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
@@ -105,6 +120,7 @@ export default class MusicBlocklyWorkspace {
       useBlocklyDynamicCategories: true,
       rtl: isRtl,
       editBlocks: getAppOptionsEditBlocks(),
+      customSimpleDialog,
     } as BlocklyOptions);
 
     this.resizeBlockly();
