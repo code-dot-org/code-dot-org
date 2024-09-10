@@ -244,7 +244,7 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 
-  it('leaving the state field empty shows error message and disabled submit button until state is entered', () => {
+  it('leaving the state field empty shows error message and disabled submit button until state is entered for US users', () => {
     renderDefault();
     const stateInput = screen.getAllByRole('combobox')[1];
     const finishSignUpButton = screen.getByRole('button', {
@@ -274,6 +274,22 @@ describe('FinishStudentAccount', () => {
     // Error shows and button is disabled with empty state
     screen.getByText(locale.state_error_message());
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+  });
+
+  it('state field is not required if user is not detected in the U.S.', () => {
+    renderDefault(false);
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+
+    // Set all required fields (which excludes 'state' in this case)
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+    const ageInput = screen.getAllByRole('combobox')[0];
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    fireEvent.change(ageInput, {target: {value: '6'}});
+
+    // Button is enabled without having to enter anything for 'state'
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
   });
 
   it('parentEmail error shows if parent checkbox is selected and parentEmail is selected then cleared', () => {
