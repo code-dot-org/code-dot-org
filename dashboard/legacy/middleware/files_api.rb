@@ -426,16 +426,8 @@ class FilesApi < Sinatra::Base
     if (endpoint == 'libraries' && file_type != '.java') || profanity_project_type?(project_type)
       begin
         if profanity_project_type?(project_type)
-          # For aichat lab, we only check the student system prompt and retrieval contexts.
-          text_to_check = get_text_for_profanity_check(project_type, body)
           locale_code = request.locale.to_s.split('-').first
-          # Moderate user text for toxicity.
-          # get_toxicity returns an object with the following fields:
-          # text: string, toxicity: number, and max_category {name: string, score: number}
-          text_to_check_comprehend_response = AichatComprehendHelper.get_toxicity(text_to_check, locale_code)
-          if text_to_check_comprehend_response[:toxicity] >= get_toxicity_threshold_user_sources
-            share_failure = ShareFailure.new(ShareFiltering::FailureType::PROFANITY, text_to_check_comprehend_response)
-          end
+          share_failure = find_project_profanity(project_type, body, locale_code)
         else
           share_failure = ShareFiltering.find_failure(body, request.locale)
         end
@@ -1106,16 +1098,23 @@ class FilesApi < Sinatra::Base
     LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
   end
 
-  private def get_text_for_profanity_check(project_type, body)
+  private def get_toxicity_threshold_user_sources
+    DCDO.get("aichat_toxicity_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
+  end
+
+  private def find_project_profanity(project_type, body, locale_code)
+    # Currently, only AI Chat is checked for profanity
     if project_type == 'aichat'
       source = JSON.parse(body)['source']
       source_json = JSON.parse(source)
-      return source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
+      text = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
+      # Use AWS Comprehend to check AI Chat contents for toxicity.
+      # get_toxicity returns an object with the following fields:
+      # text: string, toxicity: number, and max_category {name: string, score: number}
+      comprehend_response = AichatComprehendHelper.get_toxicity(text, locale_code)
+      if comprehend_response[:toxicity] >= get_toxicity_threshold_user_sources
+        return ShareFailure.new(ShareFiltering::FailureType::PROFANITY, comprehend_response)
+      end
     end
-    body
-  end
-
-  private def get_toxicity_threshold_user_sources
-    DCDO.get("aichat_toxicity_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
   end
 end
