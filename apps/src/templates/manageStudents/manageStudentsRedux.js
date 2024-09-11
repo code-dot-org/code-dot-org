@@ -170,14 +170,14 @@ export const startLoadingStudents = () => ({type: START_LOADING_STUDENTS});
 export const finishLoadingStudents = () => ({type: FINISH_LOADING_STUDENTS});
 
 export const setLoginType = loginType => ({type: SET_LOGIN_TYPE, loginType});
-export const setStudents = (studentData) => ({
+export const setStudents = studentData => ({
   type: SET_STUDENTS,
-  studentData
+  studentData,
 });
-export const setSectionInfo = (sectionId) => ({
+export const setSectionInfo = sectionId => ({
   type: SET_SECTION_INFO,
-  sectionId
-})
+  sectionId,
+});
 export const startEditingStudent = studentId => ({
   type: START_EDITING_STUDENT,
   studentId,
@@ -512,14 +512,14 @@ export default function manageStudents(state = initialState, action) {
       ...state,
       studentData: studentData,
       addStatus: {status: null, numStudents: null},
-      isLoadingStudents: false
+      isLoadingStudents: false,
     };
   }
   if (action.type === SET_SECTION_INFO) {
     return {
       ...state,
-      sectionId: action.sectionId
-    }
+      sectionId: action.sectionId,
+    };
   }
   if (action.type === START_EDITING_STUDENT) {
     return {
