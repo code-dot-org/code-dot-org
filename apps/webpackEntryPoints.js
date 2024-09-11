@@ -202,7 +202,6 @@ const PEGASUS_ENTRIES = {
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
   'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
   'code.org/views/workshop_search': './src/sites/code.org/pages/views/workshop_search.js',
-  'code.org/views/amazon_future_engineer': './src/sites/code.org/pages/views/amazon_future_engineer.js',
   'code.org/views/amazon_future_engineer_eligibility': './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
