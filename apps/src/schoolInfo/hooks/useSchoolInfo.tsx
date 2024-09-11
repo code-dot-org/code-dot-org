@@ -164,6 +164,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     schoolName,
     schoolZip,
     schoolsList,
+    usIp: initialState.usIp,
     setSchoolId,
     setCountry,
     setSchoolName,

@@ -36,6 +36,7 @@ export default function SchoolDataInputs({
   setCountry,
   setSchoolName,
   setSchoolZip,
+  usIp,
   includeHeaders = true,
   fieldNames = {
     country: 'user[school_info_attributes][country]',
@@ -48,7 +49,10 @@ export default function SchoolDataInputs({
   // necessary, so updating any time country changes
   const countryIsUS = useMemo(() => country === US_COUNTRY_CODE, [country]);
 
-  const countryIsSelected = useMemo(() => country !== '', [country]);
+  const countryIsSelectedOrUsIpFalse = useMemo(
+    () => country !== '' || usIp === false,
+    [country, usIp]
+  );
 
   const inputManually = useMemo(() => schoolId === CLICK_TO_ADD, [schoolId]);
 
@@ -110,7 +114,7 @@ export default function SchoolDataInputs({
             />
           </div>
         )}
-        {!countryIsUS && countryIsSelected && (
+        {!countryIsUS && countryIsSelectedOrUsIpFalse && (
           <SchoolNameInput
             fieldNames={{
               schoolName: fieldNames.schoolName,
@@ -187,6 +191,7 @@ SchoolDataInputs.propTypes = {
   schoolsList: PropTypes.arrayOf(
     PropTypes.shape({value: PropTypes.string, text: PropTypes.string})
   ).isRequired,
+  usIp: PropTypes.bool,
   setSchoolId: PropTypes.func.isRequired,
   setCountry: PropTypes.func.isRequired,
   setSchoolName: PropTypes.func.isRequired,
