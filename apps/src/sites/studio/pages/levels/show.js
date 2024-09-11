@@ -140,26 +140,22 @@ function initPage() {
       }
     }
   };
-
-  let verified;
-  if (getStore().getState().currentUser.userType === 'student') {
-    const body = JSON.stringify({
-      userId: getStore().getState().currentUser.userId,
-    });
-    HttpClient.post(`/sections/section_instructors_verified`, body, true, {
-      'Content-Type': 'application/json',
-    })
-      .then(response => response.json())
-      .then(json => {
-        verified = json.verified;
-        taRubricSetup(verified);
+  HttpClient.fetchJson('/api/v1/users/current').then(user => {
+    let verified;
+    if (user.value.user_type === 'student') {
+      const body = JSON.stringify({
+        userId: user.value.id,
       });
-  } else {
-    if (getStore().getState().verifiedInstructor) {
-      verified = getStore().getState().verifiedInstructor.isVerified;
+      HttpClient.post(`/sections/section_instructors_verified`, body, true, {
+        'Content-Type': 'application/json',
+      })
+        .then(response => response.json())
+        .then(json => {
+          verified = json.verified;
+          taRubricSetup(verified);
+        });
     } else {
-      verified = false;
+      taRubricSetup(user.value.is_verified_instructor);
     }
-    taRubricSetup(verified);
-  }
+  });
 }
