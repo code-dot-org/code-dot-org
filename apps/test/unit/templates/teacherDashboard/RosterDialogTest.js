@@ -3,7 +3,7 @@ import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {UnconnectedRosterDialog as RosterDialog} from '@cdo/apps/templates/teacherDashboard/RosterDialog';
 import locale from '@cdo/locale';
 

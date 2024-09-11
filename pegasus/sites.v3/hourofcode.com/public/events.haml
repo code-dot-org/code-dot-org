@@ -1,0 +1,49 @@
+---
+title: Hour of Code Events
+layout: wide_index
+---
+
+:ruby
+  @header["title"] = hoc_s(:front_title, locals: {campaign_date: campaign_date('full-year')})
+
+-# We set the DCDO default to CDO.default_hoc_mode here because
+-# we can't change the DCDO flag on the test machine, but ui tests
+-# rely on hourofcode.com being in a hoc_mode consistent with production.
+-# This default needs to be updated whenever we change the hoc_mode,
+-# to make sure we're still testing what we'll see on production.
+- hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+
+%link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
+%link{href: '/css/generated/action-blocks.css', rel:'stylesheet', type:'text/css'}
+
+#fullwidth
+  = view :header
+
+%main
+  %section
+    .wrapper.flex-container.flex-direction-column-tablet.align-items-center.gap-2
+      .text-wrapper.flex-1
+        %h1.no-margin-top
+          =hoc_s("hoc_events.heading")
+        %p.body-two
+          =hoc_s("hoc_events.desc")
+        %a.link-button{href: "#form"}
+          =hoc_s("hoc_events.button")
+      %figure.flex-1
+        %img.rounded-corners{src: "/images/events-page-header.png", alt: "", style: "width: 100%;"}
+
+  %section#form.bg-neutral-light
+    .wrapper
+      - if hoc_mode == false
+        = view :"events/off_season_interest_form"
+      - else
+        = view :"events/event_registration_form"
+
+  %section.resources.no-padding-bottom
+    .wrapper
+      %h2.centered.no-margin-top
+        =hoc_s("hoc_events.resources.heading")
+      = view :"events/events_resources"

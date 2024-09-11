@@ -551,7 +551,7 @@ class User < ApplicationRecord
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
+  defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"

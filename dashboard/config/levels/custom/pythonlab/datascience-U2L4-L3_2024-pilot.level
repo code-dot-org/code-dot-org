@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Adding a Title\r\n\r\nExperiment with the program by making the following modification, then run the program to observe the results.\r\n\r\n## Do This\r\nAdd a title to the bar chart of **'Average Gas Prices on 5/26/2003'**.\r\n\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Fixing Labels\r\n\r\n::: details [**Step 1**]\r\nFix the bar chart labels by adding the line `plt.xticks(rotation=45)` before the line to display the chart.\r\n:::\r\n\r\n\r\n::: details [**Step 2**]\r\nIf your x-axis labels are being cut off at the bottom of the chart area, add `plt.tight_layout()` before you display the chart.\r\n:::\r\n\r\n\r\n\r\n\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -41,8 +41,9 @@
         "0",
         "1"
       ]
-    }
+    },
+    "project_template_level_name": "datascience-U2L4-L2-3templ_2024-pilot"
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-30T13:38:44.054+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L2_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L2_2024-pilot\"},{\"changed_at\":\"2024-08-30 13:38:46 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 13:41:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 13:44:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-30T13:38:44.054+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L2_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L2_2024-pilot\"},{\"changed_at\":\"2024-08-30 13:38:46 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 13:41:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 13:44:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-10 23:57:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

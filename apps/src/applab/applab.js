@@ -116,7 +116,6 @@ consoleApi.setClearMethod(Applab.clear);
 
 var level;
 var skin;
-var copyrightStrings;
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -234,7 +233,6 @@ function renderFooterInSharedGame() {
       i18nDropdown={''}
       privacyPolicyInBase={false}
       copyrightInBase={false}
-      copyrightStrings={copyrightStrings}
       baseMoreMenuString={commonMsg.builtOnCodeStudio()}
       rowHeight={applabConstants.FOOTER_HEIGHT}
       style={{fontSize: 18}}
@@ -368,7 +366,6 @@ Applab.initReadonly = function (config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
-  copyrightStrings = config.copyrightStrings;
   config.appMsg = applabMsg;
   loadLevel();
 
@@ -432,7 +429,6 @@ Applab.init = function (config) {
   skin.winAvatar = null;
   skin.failureAvatar = null;
   level = config.level;
-  copyrightStrings = config.copyrightStrings;
   Applab.user = {
     labUserId: config.labUserId,
     isSignedIn: config.isSignedIn,

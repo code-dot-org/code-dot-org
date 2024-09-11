@@ -165,6 +165,13 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       {JSON_FIELDS.map(([fieldName, fieldLabel]) => {
         return (
           <>
+            {fieldName === JSON_FIELDS[1][0] && (
+              <div>
+                {
+                  'You can also edit start sources using Blockly using Extra Links.'
+                }
+              </div>
+            )}
             <CollapsibleSection headerContent={`${fieldLabel} (JSON)`}>
               <RawJsonEditor
                 currentValue={levelData[fieldName]}
