@@ -29,7 +29,7 @@
     "long_instructions": "**Health decreases when the sprite is clicked.**\r\n1. Add a `change health by -1` under the event `when sprite clicked` \r\n\r\n- Press `Run` and watch the variable change when you click on the sprite",
     "submittable": "false",
     "hide_share_and_remix": "true",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
     "include_shared_functions": "true",
@@ -53,10 +53,11 @@
     "encrypted_examples": "vCTZHzdeu9zC7at4wEmlqd7WlXiB/6/AoXO0fMAQwhmOr1Z45nsok5ULMfei\nrIOBbE/l4+y5oFJYAod9x90CkQ==\n",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"This time the variable should decrease when the player sprite touches the enemy sprite. To decrease the value, you will use a negative number.\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"math_change\\\" id=\\\"~0jqmFx/!a[v4n)xN]$F\\\">\\n  <field name=\\\"VAR\\\" id=\\\"xplzL-PU=*{_JUv=yc59\\\">health</field>\\n  <value name=\\\"DELTA\\\">\\n    <shadow type=\\\"math_number\\\" id=\\\"~,.{(?Hs/,c=lm`$c_z9\\\">\\n      <field name=\\\"NUM\\\">-1</field>\\n    </shadow>\\n    <block type=\\\"math_number\\\" id=\\\"Dsygy)_vgya%_J|C?^+(\\\">\\n      <field name=\\\"NUM\\\">-1</field>\\n    </block>\\n  </value>\\n</block>\\n</xml>\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0e74d786235e2ba444f482a287c2f0a0/game_variables_decrease_2024.mp3\"}]",
     "instructions_icon": "fox",
+    "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null,
-    "hint_prompt_attempts_threshold": "1"
+    "video_key": "variables_sprite_lab_games"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:30.493+00:00\",\"changed\":[\"cloned from \\\"game_variables_decrease_2024\\\"\"],\"cloned_from\":\"game_variables_decrease_2024\"},{\"changed_at\":\"2024-05-17 16:55:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-17 20:50:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:30.493+00:00\",\"changed\":[\"cloned from \\\"game_variables_decrease_2024\\\"\"],\"cloned_from\":\"game_variables_decrease_2024\"},{\"changed_at\":\"2024-05-17 16:55:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-17 20:50:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-24 17:23:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

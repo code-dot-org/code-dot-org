@@ -2,13 +2,11 @@ import {
   Role,
   AITutorInteractionStatus as Status,
   AITutorInteractionStatusValue,
-  AITutorTypesValue,
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
+import {MetricEvent} from '@cdo/apps/metrics/events';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
-
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
-import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 
 // These are the possible statuses returned by ShareFiltering.find_failure
 enum ShareFilterStatus {
@@ -24,33 +22,30 @@ const CHAT_COMPLETION_URL = '/openai/chat_completion';
 // We want to expose enough information to help troubleshoot false positives
 const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
   console.info('Violation detected in chat completion response', {
-    type: response.status,
+    type: response.safety_status,
     content: response.flagged_content,
   });
   MetricsReporter.logWarning({
     event: MetricEvent.AI_TUTOR_CHAT_PROFANITY_PII_VIOLATION,
+    content: response.flagged_content,
   });
 };
 
 /**
  * This function sends a POST request to the chat completion backend controller.
- * Note: This function needs access to the tutorType so it can decide whether to include
- * validation code on the backend.
  */
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
-  tutorType?: AITutorTypesValue,
-  levelInstructions?: string
+  scriptId?: number,
+  systemPrompt?: string
 ): Promise<OpenaiChatCompletionMessage | null> {
-  const payload = levelId
-    ? {
-        levelId: levelId,
-        messages: messagesToSend,
-        type: tutorType,
-        levelInstructions,
-      }
-    : {messages: messagesToSend, type: tutorType, levelInstructions};
+  const payload = {
+    messages: messagesToSend,
+    levelId: levelId,
+    scriptId: scriptId,
+    systemPrompt: systemPrompt,
+  };
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -82,21 +77,22 @@ const formatForChatCompletion = (
 export async function getChatCompletionMessage(
   formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
+  systemPrompt?: string,
   levelId?: number,
-  tutorType?: AITutorTypesValue,
-  levelInstructions?: string
+  scriptId?: number
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     ...formatForChatCompletion(chatMessages),
     {role: Role.USER, content: formattedQuestion},
   ];
   let response;
+
   try {
     response = await postOpenaiChatCompletion(
       messagesToSend,
       levelId,
-      tutorType,
-      levelInstructions
+      scriptId,
+      systemPrompt
     );
   } catch (error) {
     MetricsReporter.logError({
@@ -113,7 +109,7 @@ export async function getChatCompletionMessage(
         'There was an error processing your request. Please try again.',
     };
 
-  switch (response.status) {
+  switch (response.safety_status) {
     case ShareFilterStatus.Profanity:
       logViolationDetails(response);
       return {
@@ -124,11 +120,12 @@ export async function getChatCompletionMessage(
     case ShareFilterStatus.Email:
     case ShareFilterStatus.Phone:
     case ShareFilterStatus.Address:
+      // False positives with the PII filter (e.g. `for loops` flagged as addresses,
+      // and curriculum fake emails) were significantly impacting user experience.
+      // We're effectively turning PII filtering off for AI Tutor
+      // but still logging the violation for future analysis.
       logViolationDetails(response);
-      return {
-        status: Status.PII_VIOLATION,
-        assistantResponse: `To protect your privacy, please remove any personal details like your ${response.status} from your message and try again.`,
-      };
+      return {status: Status.OK, assistantResponse: response.content};
     default:
       return {status: Status.OK, assistantResponse: response.content};
   }
@@ -140,6 +137,7 @@ type OpenaiChatCompletionMessage = {
   content: string;
   // Only used in case of PII or profanity violation
   flagged_content?: string;
+  safety_status?: AITutorInteractionStatusValue;
 };
 
 type ChatCompletionResponse = {

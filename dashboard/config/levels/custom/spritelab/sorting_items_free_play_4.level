@@ -52,16 +52,16 @@
     "instructions_icon": "emoji",
     "start_animations": "{\"orderedKeys\":[\"a535d80b-6a3c-4693-b122-fbc6b4aee283\",\"f6bf004b-c38e-4875-9368-89297ef646f9\",\"91873513-c386-470b-a438-72e6e59d1652\",\"43afd66b-6ec0-487d-9ed4-e872b9a95da1\",\"4f614a21-be5c-4e84-b39f-2ef244effbe5\",\"975acd6c-0e39-4d87-8f74-18ec778bac81\",\"d0e45f32-8c2d-43e4-847b-5404be11fe7c\",\"6e2840dd-05c1-4fbe-9d4a-95068b917524\",\"0eab4c1f-f6e6-40a4-b31c-bcb4621a77e4\",\"56dcbdf5-cf71-40c9-87b2-e6fa63ce33f3\",\"907abc66-f10f-44fa-ad1c-41bdf9951742\",\"25bcd91b-b27d-4b0f-8c00-9cd5a278dc85\",\"a7d6e5e1-e09f-44c3-85c3-11595f631fb3\",\"9636c83f-5a8d-4534-9658-5b2bd4a32444\",\"31a5f482-836f-41ce-b050-8fc15af32faf\"],\"propsByKey\":{\"a535d80b-6a3c-4693-b122-fbc6b4aee283\":{\"name\":\"sort_shapes_bg_3\",\"frameCount\":1,\"frameSize\":{\"x\":700,\"y\":705},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-05-15T16:37:56.000Z\",\"pngLastModified\":\"2024-05-15T16:37:56.000Z\",\"version\":\"vhxQNqBCtz1OsaXK3_uWczwtJg4006rL\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/vhxQNqBCtz1OsaXK3_uWczwtJg4006rL/sort_shapes_bg_3.png\",\"sourceSize\":{\"x\":700,\"y\":705}},\"f6bf004b-c38e-4875-9368-89297ef646f9\":{\"name\":\"card_white\",\"frameCount\":1,\"frameSize\":{\"x\":140,\"y\":190},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-14T20:43:37.000Z\",\"pngLastModified\":\"2024-05-14T20:43:37.000Z\",\"version\":\"urvx5GxOBTh69Tyga8cqmWoWMAIThiSg\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/urvx5GxOBTh69Tyga8cqmWoWMAIThiSg/card_white.png\",\"sourceSize\":{\"x\":140,\"y\":190}},\"91873513-c386-470b-a438-72e6e59d1652\":{\"name\":\"card_white_2\",\"frameCount\":1,\"frameSize\":{\"x\":140,\"y\":190},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-14T21:02:28.000Z\",\"pngLastModified\":\"2024-05-14T21:02:28.000Z\",\"version\":\"8cFQ4gRZ53Gb5f1OfqejtoocCMsD5oa7\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/8cFQ4gRZ53Gb5f1OfqejtoocCMsD5oa7/card_white_2.png\",\"sourceSize\":{\"x\":140,\"y\":190}},\"43afd66b-6ec0-487d-9ed4-e872b9a95da1\":{\"name\":\"card_white_3\",\"frameCount\":1,\"frameSize\":{\"x\":140,\"y\":190},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-14T21:02:39.000Z\",\"pngLastModified\":\"2024-05-14T21:02:38.000Z\",\"version\":\"9ID1mrkMhkcfglzCjtAfYKM556vh9P1F\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/9ID1mrkMhkcfglzCjtAfYKM556vh9P1F/card_white_3.png\",\"sourceSize\":{\"x\":140,\"y\":190}},\"4f614a21-be5c-4e84-b39f-2ef244effbe5\":{\"name\":\"emoji_19\",\"categories\":[\"emoji\"],\"frameCount\":1,\"frameSize\":{\"x\":300,\"y\":300},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:56:45 UTC\",\"pngLastModified\":\"2021-01-19 23:57:00 UTC\",\"version\":\"hKXwNDtCaVI4G0Ow.udOCdsMRnK77A48\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/hKXwNDtCaVI4G0Ow.udOCdsMRnK77A48/category_emoji/emoji_19.png\",\"sourceSize\":{\"x\":300,\"y\":300}},\"975acd6c-0e39-4d87-8f74-18ec778bac81\":{\"name\":\"mermaid_01\",\"frameCount\":1,\"frameSize\":{\"x\":189,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"aquatic_objects\"],\"jsonLastModified\":\"2023-12-06 20:43:26 UTC\",\"pngLastModified\":\"2023-12-06 20:43:26 UTC\",\"version\":\"89Be8tQsZos9oAfIiw3dI4VouNrSDV7c\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/89Be8tQsZos9oAfIiw3dI4VouNrSDV7c/category_aquatic_objects/mermaid_01.png\",\"sourceSize\":{\"x\":189,\"y\":400}},\"d0e45f32-8c2d-43e4-847b-5404be11fe7c\":{\"name\":\"shell_16\",\"categories\":[\"aquatic_objects\"],\"frameCount\":1,\"frameSize\":{\"x\":393,\"y\":311},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:51:24 UTC\",\"pngLastModified\":\"2021-01-19 23:51:23 UTC\",\"version\":\"C0YYLCcVIb5Jf1ia0YqWq_SJhJTcQ5pF\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/C0YYLCcVIb5Jf1ia0YqWq_SJhJTcQ5pF/category_aquatic_objects/shell_16.png\",\"sourceSize\":{\"x\":393,\"y\":311}},\"6e2840dd-05c1-4fbe-9d4a-95068b917524\":{\"name\":\"sticker_06\",\"categories\":[\"stickers\"],\"frameCount\":1,\"frameSize\":{\"x\":396,\"y\":260},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:32:44 UTC\",\"pngLastModified\":\"2021-01-20 00:32:25 UTC\",\"version\":\"9Ajd_jcaAw5PJfYT3f3v7MDVtvuXs5at\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/9Ajd_jcaAw5PJfYT3f3v7MDVtvuXs5at/category_stickers/sticker_06.png\",\"sourceSize\":{\"x\":396,\"y\":260}},\"0eab4c1f-f6e6-40a4-b31c-bcb4621a77e4\":{\"name\":\"game_heart\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-03-06T16:36:39.000Z\",\"pngLastModified\":\"2024-03-06T16:36:39.000Z\",\"version\":\"hIZtlLp86gUH9PJliZy2wTnFHVsOJqF2\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/hIZtlLp86gUH9PJliZy2wTnFHVsOJqF2/game_heart.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"56dcbdf5-cf71-40c9-87b2-e6fa63ce33f3\":{\"name\":\"guitar\",\"frameCount\":1,\"frameSize\":{\"x\":196,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2023-03-08T05:36:12.000Z\",\"pngLastModified\":\"2023-03-08T05:36:11.000Z\",\"version\":\"agt_Y1fJaVRYTUt3KHQE.n0mJNbcHwb1\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/agt_Y1fJaVRYTUt3KHQE.n0mJNbcHwb1/guitar.png\",\"sourceSize\":{\"x\":196,\"y\":400}},\"907abc66-f10f-44fa-ad1c-41bdf9951742\":{\"name\":\"zoom_mobil\",\"frameCount\":1,\"frameSize\":{\"x\":238,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2023-03-07T23:01:09.000Z\",\"pngLastModified\":\"2023-03-07T23:01:08.000Z\",\"version\":\"S4NNv0ZR2p7suODUcD_aesKGtjBAtYnM\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/S4NNv0ZR2p7suODUcD_aesKGtjBAtYnM/zoom_mobil.png\",\"sourceSize\":{\"x\":238,\"y\":400}},\"25bcd91b-b27d-4b0f-8c00-9cd5a278dc85\":{\"name\":\"sticker_15\",\"categories\":[\"stickers\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:32:23 UTC\",\"pngLastModified\":\"2021-01-20 00:32:12 UTC\",\"version\":\"ZymyTIuUX1ms.YBUeDyRult3RumLQiMN\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/ZymyTIuUX1ms.YBUeDyRult3RumLQiMN/category_stickers/sticker_15.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"a7d6e5e1-e09f-44c3-85c3-11595f631fb3\":{\"name\":\"sticker_60\",\"categories\":[\"stickers\"],\"frameCount\":1,\"frameSize\":{\"x\":270,\"y\":220},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:32:33 UTC\",\"pngLastModified\":\"2021-01-20 00:32:00 UTC\",\"version\":\"jLfS2ameCsgpMvnMjc70tDQHP8ePRst1\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/jLfS2ameCsgpMvnMjc70tDQHP8ePRst1/category_stickers/sticker_60.png\",\"sourceSize\":{\"x\":270,\"y\":220}},\"9636c83f-5a8d-4534-9658-5b2bd4a32444\":{\"name\":\"sticker_52\",\"categories\":[\"stickers\"],\"frameCount\":1,\"frameSize\":{\"x\":224,\"y\":180},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-20 00:31:57 UTC\",\"pngLastModified\":\"2021-01-20 00:33:02 UTC\",\"version\":\"xjrGXEm58zjjUYlhUat9DIhX3xcrZnvV\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/xjrGXEm58zjjUYlhUat9DIhX3xcrZnvV/category_stickers/sticker_52.png\",\"sourceSize\":{\"x\":224,\"y\":180}},\"31a5f482-836f-41ce-b050-8fc15af32faf\":{\"name\":\"emoji-explode\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-05-13T23:18:04.000Z\",\"pngLastModified\":\"2024-05-13T23:18:04.000Z\",\"version\":\"J0Ryc8HpEDMJKf4eocwkj5k_xcc1hEE8\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/J0Ryc8HpEDMJKf4eocwkj5k_xcc1hEE8/emoji-explode.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
     "callout_json": "[]",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try sorting by color or where you might see each item.\",\"hint_id\":\"ai_data_sorting_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d4e998f4f45682c8ad194966def42678/sorting_items_free_play_4.mp3\"}]",
     "skip_autosave": true,
     "standalone_app_name": "spritelab",
     "display_name": "Level Four",
     "bubble_choice_description": "You choose how to sort these items!",
-    "thumbnail_url": "https://images.code.org/f34f566e1dadcc5839fe236a517e0e1a-genz.png",
+    "thumbnail_url": "https://images.code.org/aeabe162d5d458497f0bcc14cc2ad1a0-sublevel4.png",
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T21:05:51.676+00:00\",\"changed\":[\"cloned from \\\"sorting_items_free_play_2\\\"\"],\"cloned_from\":\"sorting_items_free_play_2\"},{\"changed_at\":\"2024-05-17 21:06:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:12:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:13:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:13:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:17:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:19:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:20:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:22:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:25:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T21:05:51.676+00:00\",\"changed\":[\"cloned from \\\"sorting_items_free_play_2\\\"\"],\"cloned_from\":\"sorting_items_free_play_2\"},{\"changed_at\":\"2024-05-17 21:06:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:12:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:13:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:13:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:17:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:19:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:20:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:22:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:25:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-06-17 15:02:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-09 19:38:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-09 21:55:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -75,11 +75,11 @@
           <variable id="p^ypJlw_zWtA|5=6;)pL">touchBool10c</variable>
           <variable id="?x^U~(cTla@$I});v[2[">touchBool1a</variable>
           <variable id="H;5AGdXg_S~KN+MUXKxm">touchBool1b</variable>
-          <variable id="[5MGQBj.wmTd1,hugh:a">boxOne</variable>
+          <variable id="[5MGQBj.wmTd1,hugh:a">box one</variable>
           <variable id=")aS+E!^R+hhus!_O2c|,">touchBool1c</variable>
-          <variable id="Mpvz^cL%/])CvWk|$+En">boxTwo</variable>
+          <variable id="Mpvz^cL%/])CvWk|$+En">box two</variable>
           <variable id="i9W9J:{$Ng,kCHA*tEO2">touchBool2a</variable>
-          <variable id="dG/wycthq4HPyln?dyYZ">boxThree</variable>
+          <variable id="dG/wycthq4HPyln?dyYZ">box three</variable>
           <variable id="g[rt4O][}H1OQ-^#D~Y}">touchBool2b</variable>
           <variable id="4FQy6JXGuP((v,vH]Qha">touchBool2c</variable>
           <variable id="!y(s$u~AJJLcm_Z+C|cm">touchBool3a</variable>
@@ -1223,7 +1223,7 @@
                                                             </statement>
                                                             <next>
                                                             <block type="variables_set">
-                                                            <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">boxOne</field>
+                                                            <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">box one</field>
                                                             <value name="VALUE">
                                                             <block type="math_arithmetic">
                                                             <field name="OP">ADD</field>
@@ -1321,7 +1321,7 @@
                                                             </value>
                                                             <next>
                                                             <block type="variables_set">
-                                                            <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">boxTwo</field>
+                                                            <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">box two</field>
                                                             <value name="VALUE">
                                                             <block type="math_arithmetic">
                                                             <field name="OP">ADD</field>
@@ -1419,7 +1419,7 @@
                                                             </value>
                                                             <next>
                                                             <block type="variables_set">
-                                                            <field name="VAR" id="dG/wycthq4HPyln?dyYZ">boxThree</field>
+                                                            <field name="VAR" id="dG/wycthq4HPyln?dyYZ">box three</field>
                                                             <value name="VALUE">
                                                             <block type="math_arithmetic">
                                                             <field name="OP">ADD</field>
@@ -1601,7 +1601,7 @@
                   </value>
                   <next>
                     <block type="variables_set">
-                      <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">boxOne</field>
+                      <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">box one</field>
                       <value name="VALUE">
                         <block type="math_number">
                           <field name="NUM">0</field>
@@ -1609,7 +1609,7 @@
                       </value>
                       <next>
                         <block type="variables_set">
-                          <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">boxTwo</field>
+                          <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">box two</field>
                           <value name="VALUE">
                             <block type="math_number">
                               <field name="NUM">0</field>
@@ -1617,7 +1617,7 @@
                           </value>
                           <next>
                             <block type="variables_set">
-                              <field name="VAR" id="dG/wycthq4HPyln?dyYZ">boxThree</field>
+                              <field name="VAR" id="dG/wycthq4HPyln?dyYZ">box three</field>
                               <value name="VALUE">
                                 <block type="math_number">
                                   <field name="NUM">0</field>
@@ -1625,7 +1625,7 @@
                               </value>
                               <next>
                                 <block type="gamelab_showVariable">
-                                  <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">boxOne</field>
+                                  <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">box one</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker">
                                       <field name="LOCATION">{"x":61,"y":367}</field>
@@ -1633,7 +1633,7 @@
                                   </value>
                                   <next>
                                     <block type="gamelab_showVariable">
-                                      <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">boxTwo</field>
+                                      <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">box two</field>
                                       <value name="LOCATION">
                                         <block type="gamelab_location_picker">
                                           <field name="LOCATION">{"x":199,"y":367}</field>
@@ -1641,7 +1641,7 @@
                                       </value>
                                       <next>
                                         <block type="gamelab_showVariable">
-                                          <field name="VAR" id="dG/wycthq4HPyln?dyYZ">boxThree</field>
+                                          <field name="VAR" id="dG/wycthq4HPyln?dyYZ">box three</field>
                                           <value name="LOCATION">
                                             <block type="gamelab_location_picker">
                                               <field name="LOCATION">{"x":332,"y":367}</field>

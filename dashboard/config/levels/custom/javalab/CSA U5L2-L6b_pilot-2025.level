@@ -1,0 +1,41 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T18:14:54.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A game designer is creating a board game where a player wins the game if the sum of all four corners of the board is greater than 50.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Game</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcScore()</code> to calculate and return the sum of all four corners of the 2D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">board</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">GameRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcScore()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with accessing and modifying elements in a two-dimensional (2D) array.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "video_key": "csa_working_with_2d_array_elements",
+    "reference_links": [
+      "/courses/csa-2023/guides/two-dimensional-arrays"
+    ],
+    "display_name": "Board Game",
+    "bubble_choice_description": "A game designer is creating a board game where a player wins the game if the sum of all four corners of the board is greater than 50.",
+    "thumbnail_url": "https://images.code.org/8fe50cc31159a9b4bc04e50552e26fc1-board-game.png",
+    "encrypted_validation": "J76fobxWwZ1E6ozPBkPZkKanfs6VZq+wM8RZ1LwHPWwuOq2k9jVE3GAnyp6l\nHaMs5e3DmHbpNgIpHQnm3ChJwhyXyfAtNiegiD/u3k6qSRQfh1uOuLAoAywi\nz74SFbrTtPuQWTbEYwmQdDW8HIrcJxOBIOfcs6HmO38vUOPSSjAgqI32yg/h\n/o6aeFPYTENboxrjfXTyhr+kQP1HDXc5KXxTXmK6pxWWMDiVC/zfXKAkPiUM\nkCF4BeMFnpHrHHGh1T1fDF2bD7fPv0exx5IghycNkMOEje3jtBzB+cdk48S6\nnQefYfOgU7l7uMulG6eD+u6zNegxW+fLooj8Oi/8VLXIafZzahih5znmbmuy\n5ilcJnsEEJYxrMRzZzS8Ib0tCkQ/92wGQ+b8rY9iEBteDoexfMmdER0Qpuja\nbYUp07gJjjCQQTGEQzb2326L+bOsezRYe88hNicOfsxbFhILYXt6ukknLag4\nKKTta+1eKYur5IiN6jzrxk4CTu+4FBn8LCeDHL1eckIGiGzE+oJzKBDkNB35\n6fj1YvIB39fKD3VMi+Iac4EtiZeFhvkXvmf5L3MOzxL0xiX6pEkQqeiqUfDa\nAhKMB+G9sVVcYH7tkJpPHDXk5CZRl6fdhY5eOZwxzN/4ZW5KXSFFhO9Ur/Po\neOhFnJeJq3699Qg5nvJeuFPoOFRAx1/8iXkOmUQ8g/+QZl32/eVotlNcmwvo\nCoSXNEX1Re97XYjtiscNoZNbBcLs0sbnZAQlfAes14BGB5YRlcM7NZMLua8L\n2GqXfTRwQgF42tOzaHmc9TuIfRhaUsJcucNLz7nOdJ61Dt59g7KCaZDaOFTj\nRT8sr8PdbhX86LRl0HdktzmATk96bLZnuNog5YCFHDrqpIcNGOPpnzfzgPs3\ntOrBE3TXdeoTLQufZDTx1DQ6qfWOeHtrzOhA1EYunpZE4tPDUh3FPKdJuB3O\n2Xir2+a3+42o1Dj5OC3qBROAAz4MRHTxGmaiF7vh974vT4jJFbt8rEYRsyah\nEkJrdrcT84vtBPJ+ryxyAuZSuEyI3R5tOF2klXGZ0khZcle5gJ9hNNlegkmr\nHVNapByntXuTdwAYS9Djabr3GuiIqFN9p8eo1wzf3crw8Il/T8ZE6zUPJiLM\nCQAaZnk/6lazMW4GUEBfHVVp58xj4s+vMWRcpUbULhvnRwckXQn+DYDmc5pL\nVgzffHLOH+zaNBNVfoJckUFH7mi4U7qt6zSBmgPFIP16BdGnGhQYqljKWbwf\nHv++0XTX/KmsMRClqZZH9StX6NQQkDVrqQG6glxmOmkMZ5f+gPjphae1VgDR\nm+yyuoJ8atr6KEad8jSEg+mrjKYsSodTnkph8/OmDxa3CERqRsjAgZYaOn3B\nf9HTljN59Dwh8aEKWBs8+4koaSuG5YtDEVmp1mRHCSnjqlLvvk1vySPc7n8c\nsn6DlCGPRIBunWo/d36u/cRbjWNDP0vzYcgnWJ4yKAnKAxfWsAnnHHEYhLEc\n5G5AMvJTIxY0OZkHnJN95+mGlwOFnxgQbJtWZ7b190lwJ3NMtGNfK9iEv70Y\nSCOi+TZ07m0fBzkxeoTvLTFFphNU17FugCa06j0qwAM3xpHfanxqhyGDga18\nvIngc3MxI1K4V9e5G1Gne2d/XeLmsdl/kSibv8mqx6Uv019nLj0m9XBL7deB\n+oY9QvF78Qy5pP53uEKKwJyR8G5KediuBlzAlRtkQYZQlyx3QirJ7gajieLq\nG+EwTQQ/FRZ5PAO2Ekyts7bYNgzWXSqrJwXkyPvtg4nUr8aeCowoMaDeUMtF\nsjEoE+ofnaSl7VDfQg5Ezp8Yjzk0pWG2W7IJ210cJa8Ivl5ew/p+idTM3Slo\nCX8asyJXKoB2u9WsTWyVlYiKuyEyrnJpY1r73LI=\n",
+    "encrypted_exemplar_sources": "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\n",
+    "start_sources": {
+      "GameRunner.java": {
+        "text": "public class GameRunner {\n  public static void main(String[] args) {\n\n    // Creates a 1D array of integers to represent a board\n    int[][] numbers = { {5, 9, 3, 1},\n                        {7, 2, 8, 6},\n                        {4, 0, 1, 9},\n                        {3, 5, 2, 8} };\n\n    // Creates a Game object\n    Game boardGame = new Game(numbers);\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Call the calcScore() method and print the result.\n     * -----------------------------------------------------------------------------\n     */\n\n\n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Game.java": {
+        "text": "/*\n * Represents a board game\n */\npublic class Game {\n\n  private int[][] board;    // The 2D array of integers that represent the board\n\n  /*\n   * Initializes board to the specified 2D array of integers\n   */\n  public Game(int[][] board) {\n    this.board = board;\n  }\n\n  /*\n   * Returns the 2D array board\n   */\n  public int[][] getBoard() {\n    return board;\n  }\n\n  /*\n   * Calculates and returns the sum of all four corners of the board\n   */\n  public int calcScore() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Calculate and return the sum of the four corners of the board.\n     * -----------------------------------------------------------------------------\n     */\n    \n    return -1;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T18:14:54.830+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L6b_2025\\\"\"],\"cloned_from\":\"CSA U5L2-L6b_2025\"}]"
+}]]></config>
+</Javalab>

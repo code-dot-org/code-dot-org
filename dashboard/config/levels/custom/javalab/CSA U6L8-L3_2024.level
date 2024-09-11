@@ -6,7 +6,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO #1:** What does the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">remove()</code> method remove? Try changing the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">2</code> to a different value, like <code style=\"background-color: #ececec; color: black; font-weight: bold;\">1</code> or <code style=\"background-color: #ececec; color: black; font-weight: bold;\">12</code>. Run the program to observe the results after each change.\r\n\r\n✅ **TO DO #2:** What happens if you change the argument for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">remove()</code> method to the loop control variable? Try changing the argument to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">index</code> and run the program to observe the results.",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\nTip - Remember to reset the version history and comment out the enhanced for loop so that you do not continue to get the same error from the previous level.\r\n\r\n\r\n✅ **TO DO #1:** What does the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">remove()</code> method remove? Try changing the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">2</code> to a different value, like <code style=\"background-color: #ececec; color: black; font-weight: bold;\">1</code> or <code style=\"background-color: #ececec; color: black; font-weight: bold;\">12</code>. Run the program to observe the results after each change.\r\n\r\n✅ **TO DO #2:** What happens if you change the argument for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">remove()</code> method to the loop control variable? Try changing the argument to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">index</code> and run the program to observe the results.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -24,6 +24,6 @@
     "ai_tutor_available": true
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-01-12T21:04:47.518+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L3_2023\\\"\"],\"cloned_from\":\"CSA U6L8-L3_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T21:04:47.518+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L3_2023\\\"\"],\"cloned_from\":\"CSA U6L8-L3_2023\"},{\"changed_at\":\"2024-07-17 06:32:36 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
 </Javalab>

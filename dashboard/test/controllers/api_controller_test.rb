@@ -44,45 +44,6 @@ class ApiControllerTest < ActionController::TestCase
     sign_in @teacher
   end
 
-  private def create_script_with_bonus_levels
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-
-    regular_level = create :maze
-    create :script_level, script: script, levels: [regular_level], lesson: lesson
-
-    bonus_level = create :maze
-    create :script_level, script: script, levels: [bonus_level], lesson: lesson, bonus: true
-
-    [script, lesson, regular_level, bonus_level]
-  end
-
-  private def create_script_with_lockable_lesson
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-
-    # Create a LevelGroup level.
-    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
-    level.properties['title'] =  'Long assessment 1'
-    level.properties['submittable'] = true
-    level.save!
-
-    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
-
-    # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
-
-    [script, level, lesson]
-  end
-
-  private def make_text_progress_in_script(script, student)
-    level = script.script_levels.map(&:oldest_active_level).find {|l| l.is_a? TextMatch}
-    level_source = create :level_source
-    create :user_level, level: level, user: student, script: script, level_source: level_source
-    # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
-  end
-
   test "example_solutions should return expected example solutions" do
     STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
@@ -1706,6 +1667,51 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'import_google_classroom upgrades elibible teacher to verified' do
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    mock_students = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
+      {
+        students: (1..5).map do |i|
+          {
+            userId: i,
+            profile: {
+              name: {
+                fullName: "Sample User #{i}",
+                givenName: "Sample",
+                familyName: "User #{i}"
+              }
+            }
+          }
+        end
+      }.to_json
+    ).students
+    mock_response = mock('Google::Apis::ClassroomV1::ListStudentsResponse')
+    mock_response.stubs(:students).returns(mock_students)
+    mock_response.stubs(:next_page_token).returns(nil)
+
+    mock_section = mock('GoogleClassroomSection')
+    mock_section.stubs(:summarize).returns({section_id: @section.id})
+
+    ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
+    mock_service.stubs(:list_course_students).returns(mock_response)
+    GoogleClassroomSection.any_instance.stubs(:from_service).returns(mock_section)
+
+    teacher = create :teacher, :with_google_authentication_option
+    # change teacher email to @gmail.com, which will the teacher ineligible for verified
+    teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@gmail.com')
+    @controller.stubs(:current_user).returns(teacher)
+    section = create(:section, user: teacher)
+    assert_equal false, teacher.verified_teacher?
+    sign_in teacher
+    get :import_google_classroom, params: {courseId: section.course_id, courseName: section.name}
+    assert_response :ok
+    assert_equal false, teacher.verified_teacher?
+    # change email to non google/gmail email, teacher should now be eligible for verified
+    teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@test.com')
+    get :import_google_classroom, params: {courseId: section.course_id, courseName: section.name}
+    assert_equal true, teacher.verified_teacher?
+  end
+
   #
   # Given two arrays, checks that they represent equivalent bags (or multisets)
   # of elements.
@@ -1784,5 +1790,44 @@ class ApiControllerTest < ActionController::TestCase
     assert_nil @response.cookies['CloudFront-Expires']
 
     assert_equal "max-age=3600, private", @response.headers["Cache-Control"]
+  end
+
+  private def create_script_with_bonus_levels
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    regular_level = create :maze
+    create :script_level, script: script, levels: [regular_level], lesson: lesson
+
+    bonus_level = create :maze
+    create :script_level, script: script, levels: [bonus_level], lesson: lesson, bonus: true
+
+    [script, lesson, regular_level, bonus_level]
+  end
+
+  private def create_script_with_lockable_lesson
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+
+    # Create a LevelGroup level.
+    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
+    level.properties['title'] =  'Long assessment 1'
+    level.properties['submittable'] = true
+    level.save!
+
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
+
+    # Create a ScriptLevel joining this level to the script.
+    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
+
+    [script, level, lesson]
+  end
+
+  private def make_text_progress_in_script(script, student)
+    level = script.script_levels.map(&:oldest_active_level).find {|l| l.is_a? TextMatch}
+    level_source = create :level_source
+    create :user_level, level: level, user: student, script: script, level_source: level_source
+    # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
   end
 end

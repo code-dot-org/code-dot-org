@@ -1,14 +1,13 @@
-import {expect} from '../../../util/reconfiguredChai';
+import javalabEditor, {
+  initialState,
+  sourceTextUpdated,
+} from '@cdo/apps/javalab/redux/editorRedux';
 import {
   stubRedux,
   restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
-import javalabEditor, {
-  initialState,
-  sourceTextUpdated,
-} from '@cdo/apps/javalab/redux/editorRedux';
 
 describe('javalabRedux', () => {
   let store;
@@ -24,17 +23,17 @@ describe('javalabRedux', () => {
     const fileInitialSource = initialState.sources[fileName];
     const newText = 'some new text';
 
-    expect(getStore().getState().javalabEditor.sources[fileName]).is.equal(
+    expect(getStore().getState().javalabEditor.sources[fileName]).toBe(
       fileInitialSource
     );
     store.dispatch(sourceTextUpdated(fileName, newText));
 
     const updatedSources = getStore().getState().javalabEditor.sources;
-    expect(updatedSources[fileName].text).is.equal(newText);
-    expect(updatedSources[fileName].isVisible).is.equal(
+    expect(updatedSources[fileName].text).toBe(newText);
+    expect(updatedSources[fileName].isVisible).toBe(
       fileInitialSource.isVisible
     );
-    expect(updatedSources[fileName].isValidation).is.equal(
+    expect(updatedSources[fileName].isValidation).toBe(
       fileInitialSource.isValidation
     );
   });

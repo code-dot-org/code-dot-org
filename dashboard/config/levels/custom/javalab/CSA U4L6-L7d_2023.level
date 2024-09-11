@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-02-17T18:46:45.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "✅ **TO DO:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Color.java</code>, override the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">equals()</code> method to check if the values in the calling object's <code style=\"background-color: #ececec; color: black; font-weight: bold;\">red</code>, <code style=\"background-color: #ececec; color: black; font-weight: bold;\">green</code>, and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">blue</code> values are equivalent to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">red</code>, <code style=\"background-color: #ececec; color: black; font-weight: bold;\">green</code>, and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">blue</code> values of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">otherColor</code>. If all values are equivalent, return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code>, otherwise return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">false</code>.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Object</code> class in the <strong>Documentation</strong> tab ⬆️ for help overriding and using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">equals()</code> method.\r\n</div>",
@@ -24,16 +28,10 @@
         "tabOrder": 1
       }
     },
-    "encrypted_examples": [
-
-    ],
-    "video_key": "csa_the_equals_method"
+    "video_key": "csa_the_equals_method",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2023-02-17T18:46:45.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:46:45.098+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L7c_2023\\\"\"],\"cloned_from\":\"CSA U4L6-L7c_2023\"},{\"changed_at\":\"2023-02-17 18:46:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 19:15:38 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:07:52 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:08:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:08:48 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:17:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:17:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:24:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:24:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:24:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:24:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:24:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 00:24:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 13:43:59 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

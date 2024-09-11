@@ -1,0 +1,8 @@
+name 'genai-lesson2-wrapup-level1'
+title 'Wrap Up'
+description 'Wrap Up'
+
+markdown <<MARKDOWN
+#Wrap Up
+###We’ve been exploring the first aspect of how a language model works - how it processes words as **input**. In your graphic organizer, update the **Input** section with an explanation of how a model learns to recognize language. Leave some blank space to revise this in future classes.
+MARKDOWN

@@ -1,14 +1,14 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 
-import {expect, assert} from '../../../util/reconfiguredChai';
+import {expect, assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -31,7 +31,6 @@ describe('SectionProgress', () => {
         script: {id: 123},
         students: studentData,
       },
-      coursesWithProgress: [],
       currentView: ViewType.SUMMARY,
       scriptData: {
         id: 123,

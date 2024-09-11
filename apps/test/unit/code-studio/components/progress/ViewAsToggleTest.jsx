@@ -1,10 +1,12 @@
-import React from 'react';
-import $ from 'jquery';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
+import $ from 'jquery';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {UnconnectedViewAsToggle as ViewAsToggle} from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   viewAs: ViewType.Participant,

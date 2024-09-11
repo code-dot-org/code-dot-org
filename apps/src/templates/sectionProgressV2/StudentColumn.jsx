@@ -2,11 +2,22 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
+import i18n from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import {
+  collapseMetadataForStudents,
+  expandMetadataForStudents,
+} from '../sectionProgress/sectionProgressRedux';
 import SortByNameDropdown from '../SortByNameDropdown';
 
 import styles from './progress-table-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
@@ -23,28 +34,91 @@ const skeletonCell = key => (
   </div>
 );
 
-export default function StudentColumn({
+function StudentColumn({
   sortedStudents,
   unitName,
   sectionId,
   isSkeleton,
+  expandedMetadataStudentIds,
+  expandMetadataForStudents,
+  collapseMetadataForStudents,
 }) {
-  const getFullName = student =>
-    student.familyName ? `${student.name} ${student.familyName}` : student.name;
+  const collapseRow = studentId => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ONE_ROW_COLLAPSED, {
+      sectionId: sectionId,
+    });
+    collapseMetadataForStudents([studentId]);
+  };
+
+  const expandRow = studentId => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ONE_ROW_EXPANDED, {
+      sectionId: sectionId,
+    });
+    expandMetadataForStudents([studentId]);
+  };
+
+  const getUnexpandedRow = (student, ind) => (
+    <button
+      className={styles.studentColumnName}
+      key={ind}
+      onClick={() => expandRow(student.id)}
+      type="button"
+      aria-expanded={false}
+      id={'ui-test-student-row-unexpanded-' + getFullName(student)}
+    >
+      <FontAwesome
+        icon="caret-right"
+        title="caret"
+        className={styles.studentColumnNameCaret}
+      />
+      {getFullName(student)}
+    </button>
+  );
+
+  const getExpandedRow = (student, ind) => (
+    <div className={styles.studentColumnExpandedHeader} key={ind}>
+      <button
+        className={styles.studentColumnName}
+        onClick={() => collapseRow(student.id)}
+        type="button"
+        aria-expanded={true}
+        id={'ui-test-student-row-expanded-' + getFullName(student)}
+      >
+        <FontAwesome
+          icon="caret-down"
+          className={styles.studentColumnNameCaret}
+        />
+        {getFullName(student)}
+      </button>
+      <div
+        className={classNames(
+          styles.gridBox,
+          styles.studentColumnExpandedHeaderText
+        )}
+      >
+        {i18n.timeSpentMins()}
+      </div>
+      <div
+        className={classNames(
+          styles.gridBox,
+          styles.studentColumnExpandedHeaderText
+        )}
+      >
+        {i18n.lastUpdatedTitle()}
+      </div>
+    </div>
+  );
 
   const studentColumnBox = (student, ind) => {
     if (isSkeleton) {
       return skeletonCell(ind);
     }
 
-    return (
-      <div
-        className={classNames(styles.gridBox, styles.gridBoxStudent)}
-        key={ind}
-      >
-        {getFullName(student)}
-      </div>
-    );
+    if (expandedMetadataStudentIds.includes(student.id)) {
+      return getExpandedRow(student, ind);
+    }
+
+    return getUnexpandedRow(student, ind);
   };
 
   return (
@@ -67,4 +141,20 @@ StudentColumn.propTypes = {
   unitName: PropTypes.string,
   sortedStudents: PropTypes.array,
   isSkeleton: PropTypes.bool,
+  expandedMetadataStudentIds: PropTypes.array,
+  expandMetadataForStudents: PropTypes.func,
+  collapseMetadataForStudents: PropTypes.func,
 };
+
+export default connect(
+  state => ({
+    expandedMetadataStudentIds:
+      state.sectionProgress.expandedMetadataStudentIds,
+  }),
+  dispatch => ({
+    expandMetadataForStudents: studentIds =>
+      dispatch(expandMetadataForStudents(studentIds)),
+    collapseMetadataForStudents: studentIds =>
+      dispatch(collapseMetadataForStudents(studentIds)),
+  })
+)(StudentColumn);

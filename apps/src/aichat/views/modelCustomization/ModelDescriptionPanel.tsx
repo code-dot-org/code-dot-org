@@ -1,8 +1,9 @@
 import React, {useEffect, useState, useRef} from 'react';
 
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import {BodyThreeText, StrongText} from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/componentLibrary/button/Button';
+
 import {ModelDescription} from '../../types';
 
 import styles from './compare-models-dialog.module.scss';
@@ -57,6 +58,7 @@ const ModelDescriptionPanel: React.FunctionComponent<{
         size="s"
         className={styles.fullWidth}
       />
+      <br />
       <div
         ref={descriptionsContainerRef}
         className={

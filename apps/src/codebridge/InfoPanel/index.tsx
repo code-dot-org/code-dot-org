@@ -1,10 +1,11 @@
+import ValidatedInstructionsView from '@codebridge/InfoPanel/ValidatedInstructions';
 import React, {useEffect, useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
-import InstructionsView from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import ForTeachersOnly from './ForTeachersOnly';
 import HelpAndTips from './HelpAndTips';
 
 import moduleStyles from './styles/info-panel.module.scss';
@@ -12,11 +13,19 @@ import moduleStyles from './styles/info-panel.module.scss';
 enum Panels {
   Instructions = 'Instructions',
   HelpAndTips = 'Help and Tips',
+  ForTeachersOnly = 'For Teachers Only',
 }
 
 const panelMap = {
-  [Panels.Instructions]: InstructionsView,
+  [Panels.Instructions]: ValidatedInstructionsView,
   [Panels.HelpAndTips]: HelpAndTips,
+  [Panels.ForTeachersOnly]: ForTeachersOnly,
+};
+
+const panelProps = {
+  [Panels.Instructions]: {},
+  [Panels.HelpAndTips]: {},
+  [Panels.ForTeachersOnly]: {},
 };
 
 export const InfoPanel = React.memo(() => {
@@ -26,23 +35,39 @@ export const InfoPanel = React.memo(() => {
   const referenceLinks = useAppSelector(
     state => state.lab.levelProperties?.referenceLinks
   );
+  const teacherMarkdown = useAppSelector(
+    state => state.lab.levelProperties?.teacherMarkdown
+  );
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [currentPanel, setCurrentPanel] = useState(Panels.Instructions);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [panelOptions, setPanelOptions] = useState<Panels[]>([
     Panels.Instructions,
   ]);
+  const hasPredictSolution = useAppSelector(
+    state => !!state.lab.levelProperties?.predictSettings?.solution
+  );
 
   useEffect(() => {
     // For now, always include Instructions panel.
     // TODO: support hiding this panel completely if there are no instructions.
     const options = [Panels.Instructions];
+    if (isUserTeacher && (teacherMarkdown || hasPredictSolution)) {
+      options.push(Panels.ForTeachersOnly);
+    }
     if (mapReference || referenceLinks) {
       options.push(Panels.HelpAndTips);
     }
     setPanelOptions(options);
     // Close the dropdown if we change levels.
     setIsDropdownOpen(false);
-  }, [mapReference, referenceLinks]);
+  }, [
+    isUserTeacher,
+    mapReference,
+    referenceLinks,
+    teacherMarkdown,
+    hasPredictSolution,
+  ]);
 
   useEffect(() => {
     // If we change levels and were on a panel that no longer exists,
@@ -102,7 +127,7 @@ export const InfoPanel = React.memo(() => {
           </ul>
         </form>
       )}
-      <CurrentPanelView />
+      <CurrentPanelView {...panelProps[currentPanel]} />
     </PanelContainer>
   );
 });

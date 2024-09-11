@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Investigating Mathematics",
+    "bubble_choice_description": "This chatbot is designed to help solve mathematics problems and perform calculations. Let's investigate how accurate it can be.",
+    "thumbnail_url": "https://images.code.org/26a118e1f7090c7d8426182838911d34-Lesson 2 - Level 9B - Investigating Mathematics.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-06T18:06:25.484+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L6\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L6\"},{\"changed_at\":\"2024-05-06 18:26:05 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:13:40 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-06T18:06:25.484+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L6\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L6\"},{\"changed_at\":\"2024-05-06 18:26:05 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:13:40 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:01:58 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

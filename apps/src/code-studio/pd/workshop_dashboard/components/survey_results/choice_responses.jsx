@@ -1,6 +1,6 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
 import {Panel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 // This component renders a survey answer for answer_type of 'scale',

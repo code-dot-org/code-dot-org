@@ -10,7 +10,7 @@ module Lti
       registration_token = SecureRandom.uuid
       @registration_endpoint = 'https://example.com'
       @client_id = SecureRandom.alphanumeric(10)
-      @registration_client = Lti::DynamicRegistration.new(registration_token, @registration_endpoint)
+      @registration_client = LtiDynamicRegistrationClient.new(registration_token, @registration_endpoint)
     end
 
     test 'Returns response body with client_id when successful response from the registration_endpoint' do
@@ -36,7 +36,7 @@ module Lti
 
     test 'throws an error if no registration_token or registration_endpoint is provided' do
       assert_raises ArgumentError do
-        Lti::DynamicRegistration.new(nil, nil)
+        LtiDynamicRegistrationClient.new(nil, nil)
       end
     end
   end

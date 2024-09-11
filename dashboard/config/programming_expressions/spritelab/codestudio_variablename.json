@@ -4,7 +4,7 @@
   "category": "Variables",
   "category_key": "variables",
   "block_name": "variables_get",
-  "content": "Gets the value of the specified variable. \r\n\r\nVariables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember a number, computer scientists can use variables to reference them. Variable values can change throughout a program. Each time the variable name is used, it gets the current value of the given variable and passes it to the block it is attached to. ",
+  "content": "Gets the value of the specified variable. \n\nVariables are used to store values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember a number, computer scientists can use variables to reference them. Variable values can change throughout a program. Each time the variable name is used, it gets the current value of the given variable and passes it to the block it is attached to. ",
   "examples": [
     {
       "name": "Example 1",
@@ -16,11 +16,11 @@
     },
     {
       "name": "Example 2",
-      "description": "A variable can be used several times in a program. Here, the variable “spriteSize” is used to set all the food sprites to the same size. \r\n",
+      "description": "A variable can be used several times in a program. Here, the variable “spriteSize” is used to set all the food sprites to the same size when the apple is clicked. \n",
       "app": "https://studio.code.org/projects/spritelab/3QoJfDGrL7UbjFQl7G72ZMChOQxkxYSgAaVram0d8BA",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "embed_app_with_code_height": "500"
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/Screen_Shot_2019-08-06_at_11.49.29_AM.png",

@@ -1,65 +1,55 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {assert} from '../../../util/reconfiguredChai';
-import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
+import React from 'react';
+
 import ReportAbuseForm from '@cdo/apps/code-studio/components/ReportAbuseForm';
+import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
 
 describe('ReportAbuseForm', () => {
   it('getChannelIdFromUrl returns the channel id for codeprojects', () => {
-    assert.equal(
-      getChannelIdFromUrl('https://codeprojects.org/123abc/'),
+    expect(getChannelIdFromUrl('https://codeprojects.org/123abc/')).toEqual(
       '123abc'
     );
-    assert.equal(
-      getChannelIdFromUrl('http://localhost.codeprojects.org:3000/abc123/'),
-      'abc123'
-    );
-    assert.equal(
-      getChannelIdFromUrl('https://codeprojects.org/projects/weblab/123abc/'),
-      '123abc'
-    );
-    assert.equal(
+    expect(
+      getChannelIdFromUrl('http://localhost.codeprojects.org:3000/abc123/')
+    ).toEqual('abc123');
+    expect(
+      getChannelIdFromUrl('https://codeprojects.org/projects/weblab/123abc/')
+    ).toEqual('123abc');
+    expect(
       getChannelIdFromUrl(
         'http://localhost.codeprojects.org:3000/projects/weblab/abc123/'
-      ),
-      'abc123'
-    );
+      )
+    ).toEqual('abc123');
   });
 
   it('getChannelIdFromUrl returns the channel id for studio projects', () => {
-    assert.equal(
-      getChannelIdFromUrl('https://studio.code.org/projects/gamelab/123abc'),
-      '123abc'
-    );
-    assert.equal(
-      getChannelIdFromUrl('https://studio.code.org/projects/applab/123abc'),
-      '123abc'
-    );
-    assert.equal(
-      getChannelIdFromUrl('https://studio.code.org/projects/playlab/123abc/'),
-      '123abc'
-    );
-    assert.equal(
+    expect(
+      getChannelIdFromUrl('https://studio.code.org/projects/gamelab/123abc')
+    ).toEqual('123abc');
+    expect(
+      getChannelIdFromUrl('https://studio.code.org/projects/applab/123abc')
+    ).toEqual('123abc');
+    expect(
+      getChannelIdFromUrl('https://studio.code.org/projects/playlab/123abc/')
+    ).toEqual('123abc');
+    expect(
       getChannelIdFromUrl(
         'http://localhost-studio.code.org:3000/projects/weblab/123abc/edit'
-      ),
-      '123abc'
-    );
+      )
+    ).toEqual('123abc');
   });
 
   it('getChannelIdFromUrl returns the channel id for weblab projects', () => {
-    assert.equal(
+    expect(
       getChannelIdFromUrl(
         'https://studio.code.org/report_abuse?channelId=123abc'
-      ),
-      '123abc'
-    );
-    assert.equal(
+      )
+    ).toEqual('123abc');
+    expect(
       getChannelIdFromUrl(
         'http://localhost-studio.code.org:3000/report_abuse?channelId=123abc'
-      ),
-      '123abc'
-    );
+      )
+    ).toEqual('123abc');
   });
 
   it('renders a captcha when required', () => {
@@ -69,7 +59,7 @@ describe('ReportAbuseForm', () => {
     };
     const wrapper = shallow(<ReportAbuseForm {...args} />);
 
-    assert.equal(wrapper.find('div.g-recaptcha').length, 1);
+    expect(wrapper.find('div.g-recaptcha').length).toEqual(1);
   });
 
   it('does not render a captcha when not required', () => {
@@ -79,6 +69,6 @@ describe('ReportAbuseForm', () => {
     };
     const wrapper = shallow(<ReportAbuseForm {...args} />);
 
-    assert.equal(wrapper.find('div.g-recaptcha').length, 0);
+    expect(wrapper.find('div.g-recaptcha').length).toEqual(0);
   });
 });

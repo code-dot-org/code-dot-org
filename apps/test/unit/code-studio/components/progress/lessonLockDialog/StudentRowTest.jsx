@@ -1,9 +1,8 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
+import React from 'react';
+
 import {LockStatus} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
+import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 
 const DEFAULT_PROPS = {
   index: 1,
@@ -20,44 +19,44 @@ const setUp = (overrideProps = {}) => {
 describe('StudentRow', () => {
   it('displays name', () => {
     const wrapper = setUp();
-    expect(wrapper.find('td').at(0).text()).to.equal('Jerry');
+    expect(wrapper.find('td').at(0).text()).toBe('Jerry');
   });
 
   it('has expected status when lockStatus is locked', () => {
     const wrapper = setUp({lockStatus: LockStatus.Locked});
     const radioButtons = wrapper.find('input');
     const lockedSelected = radioButtons.at(0).props().checked;
-    expect(lockedSelected).to.be.true;
+    expect(lockedSelected).toBe(true);
     const editableSelected = radioButtons.at(1).props().checked;
-    expect(editableSelected).to.be.false;
+    expect(editableSelected).toBe(false);
     const readonlySelected = radioButtons.at(2).props().checked;
-    expect(readonlySelected).to.be.false;
+    expect(readonlySelected).toBe(false);
   });
 
   it('has expected status when lockStatus is editable', () => {
     const wrapper = setUp({lockStatus: LockStatus.Editable});
     const radioButtons = wrapper.find('input');
     const lockedSelected = radioButtons.at(0).props().checked;
-    expect(lockedSelected).to.be.false;
+    expect(lockedSelected).toBe(false);
     const editableSelected = radioButtons.at(1).props().checked;
-    expect(editableSelected).to.be.true;
+    expect(editableSelected).toBe(true);
     const readonlySelected = radioButtons.at(2).props().checked;
-    expect(readonlySelected).to.be.false;
+    expect(readonlySelected).toBe(false);
   });
 
   it('has expected status when lockStatus is readonlyAnswers', () => {
     const wrapper = setUp({lockStatus: LockStatus.ReadonlyAnswers});
     const radioButtons = wrapper.find('input');
     const lockedSelected = radioButtons.at(0).props().checked;
-    expect(lockedSelected).to.be.false;
+    expect(lockedSelected).toBe(false);
     const editableSelected = radioButtons.at(1).props().checked;
-    expect(editableSelected).to.be.false;
+    expect(editableSelected).toBe(false);
     const readonlySelected = radioButtons.at(2).props().checked;
-    expect(readonlySelected).to.be.true;
+    expect(readonlySelected).toBe(true);
   });
 
   it('handleRadioChange is called with expected value when radio is selected', () => {
-    const handleChangeSpy = sinon.spy();
+    const handleChangeSpy = jest.fn();
     const wrapper = setUp({handleRadioChange: handleChangeSpy});
     const lockLessonInput = wrapper.find('input').at(0);
     lockLessonInput.simulate('change', {
@@ -66,6 +65,6 @@ describe('StudentRow', () => {
         name: lockLessonInput.props().name,
       },
     });
-    expect(handleChangeSpy).to.have.been.calledWith(1, LockStatus.Locked);
+    expect(handleChangeSpy).toHaveBeenCalledWith(1, LockStatus.Locked);
   });
 });

@@ -126,7 +126,6 @@ theme: responsive
 | **เพื่อใช้โปรแกรมจำลองอินเทอร์เน็ต**                                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **เพื่อใช้งาน Web Lab**                                                                          | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **เพื่อใช้งานปุ่มแชร์ในโปรแกรม Google Classroom**                                                | `https://apis.google.com`                                                                                  |
-| **วิธีใช้ชุดข้อมูลแอพแล็บ**                                                                      | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## รายละเอียดกอุปกรณ์มือถือและแท็บเล็ตที่รองรับ
 

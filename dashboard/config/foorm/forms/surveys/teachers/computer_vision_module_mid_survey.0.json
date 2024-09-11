@@ -1,0 +1,138 @@
+{
+  "title": "Computer Vision - Mid-Unit Survey for Teachers",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "mid_module_survey_header_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "survey_preamble_header_and_text",
+              "html": "<h1>Welcome to Code.org's Computer Vision - Mid-Unit Survey</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better our teachers' experience teaching Code.org's Computer Vision unit.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "curriculum_perceptions",
+          "html": "<h2>Your Perceptions About the Computer Vision Unit</h1>\n<p><span style='font-size: 12pt;'>Please share with us a little bit about your thoughts on Code.org's Computer Vision curriculum so far.</span></p>"
+        },
+        {
+          "type": "rating",
+          "name": "module_effective",
+          "title": "Is teaching with Code.org's Computer Vision unit effective for your students to learn computer vision and AI concepts?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Effective At All",
+          "maxRateDescription": "Very Effective"
+        },
+        {
+          "type": "rating",
+          "name": "curriculum_materials_support_teaching",
+          "title": "How effective do you feel the curriculum materials are at supporting your teaching of computer vision concepts?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Effective At All",
+          "maxRateDescription": "Very Effective"
+        },
+        {
+          "type": "rating",
+          "name": "confidence_teaching",
+          "title": "How confident do you feel in your ability to teach the remaining content of the unit?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Confident At All",
+          "maxRateDescription": "Very Confident"
+        },
+        {
+          "type": "rating",
+          "name": "nps_value",
+          "title": "Based on your experience thus far, how likely are you to recommend this unit to other teachers? ",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not At All Likely",
+          "maxRateDescription": "Extremely Likely"
+        },
+        {
+          "type": "checkbox",
+          "name": "module_challenges",
+          "title": "What challenges have you encountered in teaching the unit?",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "lack_student_interest",
+              "text": "Lack of student interest or motivation."
+            },
+            {
+              "value": "own_understanding_complex_concepts",
+              "text": "Difficulty in developing my own understanding or teaching complex concepts."
+            },
+            {
+              "value": "time_constraints",
+              "text": "Time constraints within the academic calendar."
+            },
+            {
+              "value": "diverse_learning",
+              "text": "Managing diverse learning speeds and styles within the classroom."
+            },
+            {
+              "value": "other",
+              "text": "Other."
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "additional_supports",
+          "title": "What additional support or resources, if any, do you need at this point in the unit?",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "detailed_lesson_plans",
+              "text": "More detailed lesson plans or guides."
+            },
+            {
+              "value": "additional_pd",
+              "text": "Additional PD sessions."
+            },
+            {
+              "value": "resources_struggling_students",
+              "text": "Extra resources for students struggling with the content."
+            },
+            {
+              "value": "resources_fast_learners",
+              "text": "Advanced materials for fast learners."
+            },
+            {
+              "value": "other",
+              "text": "Other."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "additional_supports_other_comment",
+          "visibleIf": "{additional_supports} anyOf ['other']",
+          "title": "Please describe what other supports or resources would be helpful for teaching this unit?"
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback_FR",
+          "title": "Is there anything else you’d like to tell us about your experience teaching with Code.org's Computer Vision unit?",
+          "rows": 3
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

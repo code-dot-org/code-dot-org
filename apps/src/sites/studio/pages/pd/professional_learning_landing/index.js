@@ -1,11 +1,12 @@
-import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
+import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // Execute after page has fully loaded so the Amplitude event only fires on full page load
 $(() => {
@@ -26,7 +27,7 @@ $(() => {
         currentYearApplicationId={
           landingPageData['current_year_application_id']
         }
-        workshopsAsParticipant={landingPageData['workshops_as_participant']}
+        hasEnrolledInWorkshop={landingPageData['has_enrolled_in_workshop']}
         workshopsAsFacilitator={landingPageData['workshops_as_facilitator']}
         workshopsAsOrganizer={landingPageData['workshops_as_organizer']}
         workshopsAsRegionalPartner={

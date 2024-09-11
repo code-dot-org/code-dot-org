@@ -1,5 +1,5 @@
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
-import {MetricDimension} from '@cdo/apps/lib/metrics/types';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import {MetricDimension} from '@cdo/apps/metrics/types';
 
 /**
  * Properties that this metric reporter will add to log payloads.
@@ -54,6 +54,16 @@ export default class LabMetricsReporter {
     dimensions: MetricDimension[] = []
   ) {
     MetricsReporter.publishMetric(metricName, loadTimeMs, 'Milliseconds', [
+      ...dimensions,
+      ...this.getCommonDimensions(),
+    ]);
+  }
+
+  public incrementCounter(
+    metricName: string,
+    dimensions: MetricDimension[] = []
+  ) {
+    MetricsReporter.incrementCounter(metricName, [
       ...dimensions,
       ...this.getCommonDimensions(),
     ]);

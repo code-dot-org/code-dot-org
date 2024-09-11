@@ -71,6 +71,7 @@ use_my_apps: true
 # multiple browsers
 #saucelabs_username: ''
 #saucelabs_authkey: ''
+#saucelabs_tunnel_name: ''
 
 
 # Credentails for applitools.com, used for running automated visual tests
@@ -95,14 +96,6 @@ use_my_apps: true
 # Credentials for new relic logging. Used to log apps build times.
 # Log in to https://rpm.newrelic.com/accounts/501463 to get the key
 #new_relic_license_key: ''
-
-
-# Credentials for connecting to Firebase to use data blocks or data browser
-# in Applab.
-#firebase_name: 'cdo-v3-dev'
-#firebase_secret: localoverride
-#firebase_shared_secret: localoverride
-
 
 # Configuration and credentials for the Geocoder gem.  Google Maps provides a
 # street address geocoding service, while freegeoip provides an IP address
@@ -142,3 +135,13 @@ use_my_apps: true
 #https_development: true
 #default_scheme: 'https:'
 #dashboard_port: 443
+
+# Uncomment to use `delayed_job` to fulfill ActiveJob requests. This is useful
+# for matching prod, and is also currently required to use ActiveJobs that
+# invoke Python via PyCall. These will SEGV if run with the default async
+# adapter, because it uses threads instead of processes.
+#
+# If you enable `delayed_job`, you will need to manually run `bundle exec bin/delayed_job start`
+# from the dashboard/ directory to start the workers.
+#
+# active_job_queue_adapter: :delayed_job

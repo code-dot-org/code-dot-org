@@ -1,14 +1,16 @@
+import {Pagination} from '@react-bootstrap/pagination';
+import $ from 'jquery';
+import {isEqual, omit} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
-import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {Pagination} from '@react-bootstrap/pagination';
-import {isEqual, omit} from 'lodash';
-import i18n from '@cdo/locale';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import usePrevious from '@cdo/apps/util/usePrevious';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import i18n from '@cdo/locale';
+
 import {useRegionalPartner} from '../components/useRegionalPartner';
 
 const defaultSubmitButtonText = i18n.submit();

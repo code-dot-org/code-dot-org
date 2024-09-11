@@ -2,7 +2,6 @@ require 'cdo/script_config'
 require 'cdo/redcarpet/inline'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
-require 'firebase_token_generator' # TODO: post-firebase-cleanup, remove this code: #56994
 require 'image_size'
 require 'cdo/firehose'
 require 'cdo/languages'
@@ -540,10 +539,6 @@ module LevelsHelper
       sublevelCallback: @sublevel_callback,
     }
 
-    if @game&.owns_footer_for_share? || @legacy_share_style
-      app_options[:copyrightStrings] = build_copyright_strings
-    end
-
     app_options
   end
 
@@ -576,28 +571,6 @@ module LevelsHelper
     app_options[:unsubmitUrl] = level_view_options(@level.id)[:unsubmit_url]
 
     app_options
-  end
-
-  def datablock_storage_options
-    storage_options = {}
-
-    # TODO: post-firebase-cleanup, remove this whole if statement: #56994
-    if DatablockStorageController::SUPPORTED_PROJECT_TYPES.include? @level.game.app
-      channel_id = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
-
-      # TODO: post-firebase-cleanup, remove ProjectUseDatablockStorage once we reach 100% datablock storage: #56994
-      storage_options[:useDatablockStorage] = ProjectUseDatablockStorage.use_data_block_storage_for?(channel_id)
-
-      # TODO: post-firebase-cleanup, remove all code in this unless block: #56994
-      unless storage_options[:useDatablockStorage]
-        storage_options[:firebaseName] = CDO.firebase_name
-        storage_options[:firebaseAuthToken] = firebase_auth_token
-        storage_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
-        storage_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
-      end
-    end
-
-    storage_options
   end
 
   def azure_speech_service_options
@@ -686,7 +659,6 @@ module LevelsHelper
     app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    app_options.merge!(datablock_storage_options)
     app_options[:canResetAbuse] = true if current_user&.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
@@ -725,10 +697,6 @@ module LevelsHelper
     end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:isUS]
 
-    if @game&.owns_footer_for_share? || @legacy_share_style
-      app_options[:copyrightStrings] = build_copyright_strings
-    end
-
     app_options
   end
 
@@ -740,23 +708,13 @@ module LevelsHelper
     if level_options[:edit_blocks]
       app_options[:edit_blocks] = level_options[:edit_blocks]
     end
+    # Also pass through if we are in exemplar edit or view mode.
+    if level_options[:is_editing_exemplar] || level_options[:is_viewing_exemplar]
+      app_options[:is_editing_exemplar] = level_options[:is_editing_exemplar] || false
+      app_options[:is_viewing_exemplar] = level_options[:is_viewing_exemplar] || false
+    end
     app_options[:share] = level_options[:share] if level_options[:share]
     app_options.camelize_keys
-  end
-
-  def build_copyright_strings
-    # These would ideally also go in _javascript_strings.html right now, but it can't
-    # deal with params.
-    {
-      thanks: ERB::Util.url_encode(I18n.t('footer.thanks')),
-      help_from_html: I18n.t('footer.help_from_html'),
-      art_from_html: ERB::Util.url_encode(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-      code_from_html: ERB::Util.url_encode(I18n.t('footer.code_from_html')),
-      powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: ERB::Util.url_encode(I18n.t('footer.trademark', current_year: Time.now.year, cs_discoveries: "CS Discoveries&reg;")),
-      built_on_github: I18n.t('footer.built_on_github'),
-      google_copyright: ERB::Util.url_encode(I18n.t('footer.google_copyright'))
-    }
   end
 
   def match_answer_as_image(path, width)
@@ -914,62 +872,6 @@ module LevelsHelper
   def lab_user_id
     plaintext_id = "#{@view_options[:channel]}:#{user_or_session_id}"
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
-  end
-
-  # Assign a firebase authentication token based on the firebase shared secret,
-  # plus either the dashboard user id or the rails session id. This is
-  # sufficient for rate limiting, since it uniquely identifies users.
-  #
-  # Today, anyone can edit the data in any channel, so this meets our current needs.
-  # In the future, if we need to assign special privileges to channel owners,
-  # we could include the storage_id associated with the user id (if one exists).
-  #
-  # TODO: post-firebase-cleanup, remove this method: #56994
-  def firebase_shared_auth_token
-    return nil unless CDO.firebase_shared_secret
-
-    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
-    payload = {
-      uid: user_or_session_id,
-      is_dashboard_user: !!current_user,
-      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
-    }
-    options = {}
-    # Provides additional debugging information to the browser when
-    # security rules are evaluated.
-    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
-
-    # TODO(dave): cache token generator across requests
-    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_shared_secret)
-    generator.create_token(payload, options)
-  end
-
-  # Assign a firebase authentication token based on the firebase secret,
-  # plus either the dashboard user id or the rails session id. This is
-  # sufficient for rate limiting, since it uniquely identifies users.
-  #
-  # Today, anyone can edit the data in any channel, so this meets our current needs.
-  # In the future, if we need to assign special privileges to channel owners,
-  # we could include the storage_id associated with the user id (if one exists).
-  #
-  # TODO: post-firebase-cleanup, remove this method: #56994
-  def firebase_auth_token
-    return nil unless CDO.firebase_secret
-
-    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
-    payload = {
-      uid: user_or_session_id,
-      is_dashboard_user: !!current_user,
-      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
-    }
-    options = {}
-    # Provides additional debugging information to the browser when
-    # security rules are evaluated.
-    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
-
-    # TODO(dave): cache token generator across requests
-    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_secret)
-    generator.create_token(payload, options)
   end
 
   # If this is a restricted level (i.e., applab), the user is under 13, and the

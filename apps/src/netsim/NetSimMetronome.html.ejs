@@ -1,4 +1,11 @@
 <%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var progress = locals.progress;
+var pulseAge = locals.pulseAge;
+%>
+<%
   function moveCommand(x, y) {
     return 'M' + x + ' ' + y;
   }

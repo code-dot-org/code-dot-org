@@ -1,8 +1,10 @@
-import React from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import moduleStyles from './loading.module.scss';
 import classNames from 'classnames';
+import React from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
+
+import moduleStyles from './loading.module.scss';
 
 export interface LoadingProps {
   isLoading: boolean;

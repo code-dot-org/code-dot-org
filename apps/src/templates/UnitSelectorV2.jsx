@@ -1,14 +1,21 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  asyncLoadCoursesWithProgress,
+  setScriptId,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 
-import firehoseClient from '../lib/util/firehose';
+import firehoseClient from '../metrics/firehose';
+
+import styles from './unit-selector-v2.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const recordEvent = (eventName, sectionId, dataJson = {}) => {
   firehoseClient.putRecord(
@@ -31,7 +38,15 @@ function UnitSelectorV2({
   coursesWithProgress,
   className,
   setScriptId,
+  asyncLoadCoursesWithProgress,
+  isLoadingCourses,
 }) {
+  React.useEffect(() => {
+    if (!coursesWithProgress || coursesWithProgress.length === 0) {
+      asyncLoadCoursesWithProgress();
+    }
+  }, [coursesWithProgress, asyncLoadCoursesWithProgress]);
+
   const unitId = React.useMemo(() => scriptId, [scriptId]);
   const onSelectUnit = React.useCallback(
     e => {
@@ -61,7 +76,20 @@ function UnitSelectorV2({
     })),
   }));
 
-  return (
+  const loadingDropdown = () => (
+    <div
+      className={classNames(
+        skeletonizeContent.skeletonizeContent,
+        styles.skeleton
+      )}
+    />
+  );
+
+  return isLoadingCourses ||
+    !coursesWithProgress ||
+    coursesWithProgress.length === 0 ? (
+    loadingDropdown()
+  ) : (
     <SimpleDropdown
       itemGroups={itemGroups}
       selectedValue={unitId}
@@ -72,6 +100,7 @@ function UnitSelectorV2({
       size="s"
       dropdownTextThickness="thin"
       id="unit-selector-v2"
+      color="gray"
     />
   );
 }
@@ -82,17 +111,25 @@ UnitSelectorV2.propTypes = {
   coursesWithProgress: PropTypes.array.isRequired,
   setScriptId: PropTypes.func.isRequired,
   className: PropTypes.string,
+  asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
+  isLoadingCourses: PropTypes.bool,
 };
+
+export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
 
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
+    isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,
   }),
   dispatch => ({
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
+    },
+    asyncLoadCoursesWithProgress() {
+      dispatch(asyncLoadCoursesWithProgress());
     },
   })
 )(UnitSelectorV2);

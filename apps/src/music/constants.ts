@@ -43,7 +43,7 @@ export const BlockMode = {
   SIMPLE: 'Simple',
   SIMPLE2: 'Simple2',
   TRACKS: 'Tracks',
-};
+} as const;
 
 // For reference, events look like this:
 // events: [{src: 'sound_1', tick: 3}]
@@ -54,6 +54,16 @@ export const DEFAULT_PATTERN = {
 
 export const DEFAULT_PATTERN_LENGTH = 1;
 
+// For reference, events look like this:
+// events: [{src: 'sound_1', tick: 3}]
+export const DEFAULT_PATTERN_AI = {
+  kit: 'drums',
+  length: 2,
+  events: [],
+};
+
+export const DEFAULT_PATTERN_AI_LENGTH = 2;
+
 // Type: ChordEventValue
 export const DEFAULT_CHORD = {
   instrument: 'piano',
@@ -62,6 +72,15 @@ export const DEFAULT_CHORD = {
 };
 
 export const DEFAULT_CHORD_LENGTH = 1;
+
+// For reference, events look like this:
+// events: [{note: 60, tick: 3}]
+export const DEFAULT_TUNE = {
+  instrument: 'piano',
+  events: [],
+};
+
+export const DEFAULT_TUNE_LENGTH = 1;
 
 export const LOCAL_STORAGE = 'local';
 export const REMOTE_STORAGE = 'remote';

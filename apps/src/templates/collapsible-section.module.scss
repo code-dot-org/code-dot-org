@@ -1,27 +1,19 @@
 @import '@cdo/apps/mixins.scss';
 @import 'color.scss';
 
-.titleRow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-.title {
-    margin-left: 10px;
-    margin-bottom: 0;
-}
-.title:hover {
-    color: $teal;
-}
-
-.titleIcon {
-    margin-left: 25px;
-    margin-bottom: 0;
-    color: $teal;
-}
-
 .expandCollapseButton {
-    @include remove-button-styles;
+  @include remove-button-styles;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+  width: 100%;
+}
+
+.icon {
+  transition: transform 0.2s ease;
+  &Expanded {
+    transform: rotate(90deg);
+  }
 }

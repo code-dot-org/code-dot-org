@@ -1,7 +1,6 @@
 {
   "key": "pl-csd-summer",
   "display_name": "CSD In-Person PL Workshop Course",
-  "category": "pl_virtual",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
@@ -16,6 +15,5 @@
   "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

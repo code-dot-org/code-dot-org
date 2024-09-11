@@ -16,19 +16,28 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
       PLC_COURSE_ORDERING.index(enrollment[:courseName]) || PLC_COURSE_ORDERING.size
     end
 
-    workshops_as_participant_data = Pd::Enrollment.for_user(current_user).map do |enrollment|
-      workshop = enrollment.workshop
-      workshop.summarize_for_my_pl_page.merge({feedback_given: enrollments_with_pending_surveys.include?(enrollment)})
-    end
-
-    workshops_as_facilitator = current_user.pd_workshops_facilitated
+    workshops_as_facilitator =
+      current_user.
+        pd_workshops_facilitated.
+        order_by_scheduled_start.
+        reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}
     workshops_as_facilitator_with_surveys_completed = Pd::WorkshopSurveyFoormSubmission.where(user: current_user, pd_workshop: workshops_as_facilitator).pluck(:pd_workshop_id).uniq
     workshops_as_facilitator_data = workshops_as_facilitator.map do |workshop|
       workshop.summarize_for_my_pl_page.merge({feedback_given: workshops_as_facilitator_with_surveys_completed.include?(workshop.id)})
     end
 
-    workshops_as_organizer_data = current_user.pd_workshops_organized.map(&:summarize_for_my_pl_page)
-    workshops_for_regional_partner_data = Pd::Workshop.where(regional_partner: current_user.regional_partners).map(&:summarize_for_my_pl_page)
+    workshops_as_organizer_data =
+      current_user.
+        pd_workshops_organized.
+        order_by_scheduled_start.
+        reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}.
+        map(&:summarize_for_my_pl_page)
+
+    workshops_for_regional_partner_data =
+      Pd::Workshop.where(regional_partner: current_user.regional_partners).
+        order_by_scheduled_start.
+        reject {|workshop| workshop.state == Pd::Workshop::STATE_ENDED}.
+        map(&:summarize_for_my_pl_page)
 
     # Link to the certificate
     @landing_page_data = {
@@ -36,7 +45,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
       last_workshop_survey_course: last_enrollment_with_pending_survey.try(:workshop).try(:course),
       summarized_plc_enrollments: summarized_plc_enrollments,
       current_year_application_id: Pd::Application::TeacherApplication.find_by(user: current_user, application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR)&.id,
-      workshops_as_participant: workshops_as_participant_data,
+      has_enrolled_in_workshop: Pd::Enrollment.for_user(current_user).any?,
       workshops_as_facilitator: workshops_as_facilitator_data,
       workshops_as_organizer: workshops_as_organizer_data,
       workshops_for_regional_partner: workshops_for_regional_partner_data,

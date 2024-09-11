@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import {MusicState} from '../redux/musicRedux';
-import moduleStyles from './callouts.module.scss';
+
 import {BlockTypes} from '../blockly/blockTypes';
 import {Triggers} from '../constants';
+import {MusicState} from '../redux/musicRedux';
+
+import moduleStyles from './callouts.module.scss';
 
 const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
 
 const availableCallouts: {
-  [key: string]: {selector: string};
+  [key: string]: {openToolboxCategory?: number; selector: string};
 } = {
   'play-sound-block': {
     selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2}"]`,
@@ -18,6 +20,12 @@ const availableCallouts: {
   },
   'play-drums-block': {
     selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2}"]`,
+  },
+  'play-drums-ai-block': {
+    selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2}"]`,
+  },
+  'play-tune-block': {
+    selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2}"]`,
   },
   'play-sounds-together-block': {
     selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_SOUNDS_TOGETHER}"]`,
@@ -44,6 +52,7 @@ const availableCallouts: {
   'trigger-button-1': {selector: `#${Triggers[0].id}`},
   'toolbox-first-row': {selector: '.blocklyTreeRow'},
   'toolbox-second-block': {
+    openToolboxCategory: 0,
     selector:
       '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable:nth-of-type(3)',
   },
@@ -60,14 +69,29 @@ const Callouts: React.FunctionComponent = () => {
     (state: {music: MusicState}) => state.music.currentCallout
   );
 
-  if (!callout.id) {
-    return null;
-  }
+  const availableCallout = callout.id
+    ? availableCallouts[callout.id]
+    : undefined;
 
-  const availableCallout = availableCallouts[callout.id];
+  const calloutIndex = callout.index;
+
+  useEffect(() => {
+    const toolbox = Blockly.getMainWorkspace()?.getToolbox();
+    if (availableCallout?.openToolboxCategory !== undefined) {
+      // Open toolbox category if a position is specified.
+      // This actually toggles whether a toolbox category is selected.  Ideally, we would only call
+      // this if the correct category isn't yet selected, but IToolbox doesn't expose the necessary
+      // functionality.
+      toolbox?.selectItemByPosition(availableCallout.openToolboxCategory);
+    } else {
+      toolbox?.clearSelection();
+    }
+  }, [availableCallout, calloutIndex]);
+
   if (!availableCallout) {
     return null;
   }
+
   const element = document.querySelector(availableCallout.selector);
   if (!element) {
     return null;

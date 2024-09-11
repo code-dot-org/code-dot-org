@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T21:59:30.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "NeighborhoodRunner.java": {
+        "text": "public class NeighborhoodRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- NOTE -----------------------------------\n     * This program will run, but you won't see anything happen. The Painter class\n     * in this program is a simplified version of the real one you will be using.\n     * ----------------------------------------------------------------------------\n     */\n    \n    Painter lisa = new Painter();\n    lisa.move();\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Painter.java": {
+        "text": "/*\n * Represents a painter in The Neighborhood\n */\npublic class Painter {\n\n  private int xLocation;\n  private int yLocation;\n  private String direction;\n  private int remainingPaint;\n\n  public Painter() {\n    /* code not shown */\n  }\n\n  public void move() {\n    /* code not shown */\n  }\n\n  public void turnLeft() {\n    /* code not shown */\n  }\n\n  public void paint(String color) {\n    /* code not shown */\n  }\n\n  public void takePaint() {\n    /* code not shown */\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T21:59:30.707+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3 Classes PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L3 Classes PBT_pilot-2025\"}]"
+}]]></config>
+</Javalab>

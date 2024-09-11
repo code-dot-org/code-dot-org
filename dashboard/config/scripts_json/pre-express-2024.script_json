@@ -15,12 +15,13 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2024-05-10 19:11:42 UTC",
-    "published_state": "beta",
+    "serialized_at": "2024-07-11 16:06:36 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",

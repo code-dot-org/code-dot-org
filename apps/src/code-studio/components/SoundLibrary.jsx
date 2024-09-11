@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import SoundList from './SoundList';
-import SoundCategory from './SoundCategory';
-import * as color from '../../util/color';
-import Sounds from '../../Sounds';
-import SearchBar from '@cdo/apps/templates/SearchBar';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import i18n from '@cdo/locale';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
+import i18n from '@cdo/locale';
+
+import Sounds from '../../Sounds';
+import * as color from '../../util/color';
+
+import SoundCategory from './SoundCategory';
+import SoundList from './SoundList';
 
 const SOUND_CATEGORIES = {
   accent: 'Accent',

@@ -1,6 +1,7 @@
 @import "color";
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 
+$tooltip-background-color: $light_gray_950;
 $tail-offset: 4px;
 $l-tail-length: 12px;
 $m-tail-length: 9px;
@@ -16,32 +17,24 @@ $tooltip-span-vertical-top-spacing: 2px;
   }
 
   &.tooltip-onTop {
-    inset-block-end: calc(100% + $tail-length + $tail-offset);
-
     &::after {
       border-bottom-width: 0;
     }
   }
 
   &.tooltip-onRight {
-    inset-inline-start: calc(100% + $tail-length + $tail-offset);
-
     &::after {
       border-inline-start-width: 0;
     }
   }
 
   &.tooltip-onBottom {
-    inset-block-start: calc(100% + $tail-length + $tail-offset);
-
     &::after {
       border-top-width: 0;
     }
   }
 
   &.tooltip-onLeft {
-    inset-inline-end: calc(100% + $tail-length + $tail-offset);
-
     &::after {
       border-inline-end-width: 0;
       margin-inline-start: 0;
@@ -62,7 +55,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   display: flex;
   align-items: center;
   height: fit-content;
-  background-color: $light_gray_900;
+  background-color: $tooltip-background-color;
   box-sizing: border-box;
   min-width: 64px;
   max-width: 256px;
@@ -76,26 +69,9 @@ $tooltip-span-vertical-top-spacing: 2px;
   }
 }
 
-[aria-describedby]:hover,
-[aria-describedby]:focus {
-  position: relative;
-}
-
-[aria-describedby]:hover + [role="tooltip"],
-[aria-describedby]:focus + [role="tooltip"] {
-  visibility: visible;
-}
-
 // Direction
 .tooltip-onTop {
   display: flex;
-  inset-inline-start: 50%;
-  transform: translateX(-50%);
-
-  html[dir='rtl'] & {
-    transform: translateX(50%);
-  }
-
 
   &::after {
     content: "";
@@ -103,59 +79,45 @@ $tooltip-span-vertical-top-spacing: 2px;
     inset-block-start: 100%;
     inset-inline-start: 50%;
     border-style: solid;
-    border-color: $light_gray_900 transparent transparent transparent;
+    border-color: $tooltip-background-color transparent transparent transparent;
   }
 }
 
 .tooltip-onRight {
-  inset-block-start: 50%;
-  transform: translateY(-50%);
-
-
   &::after {
     content: "";
     position: absolute;
     inset-inline-end: 100%;
     border-style: solid;
-    border-color: transparent $light_gray_900 transparent transparent;
+    border-color: transparent $tooltip-background-color transparent transparent;
 
     html[dir='rtl'] & {
-      border-color: transparent transparent transparent $light_gray_900;
+      border-color: transparent transparent transparent $tooltip-background-color;
     }
   }
 }
 
 .tooltip-onBottom {
-  inset-inline-start: 50%;
-  transform: translateX(-50%);
-
-  html[dir='rtl'] & {
-    transform: translateX(50%);
-  }
-
   &::after {
     content: "";
     position: absolute;
     inset-block-end: 100%;
     inset-inline-start: 50%;
     border-style: solid;
-    border-color: transparent transparent $light_gray_900 transparent;
+    border-color: transparent transparent $tooltip-background-color transparent;
   }
 }
 
 .tooltip-onLeft {
-  inset-block-start: 50%;
-  transform: translateY(-50%);
-
   &::after {
     content: "";
     position: absolute;
     inset-inline-start: 100%;
     border-style: solid;
-    border-color: transparent transparent transparent $light_gray_900;
+    border-color: transparent transparent transparent $tooltip-background-color;
 
     html[dir='rtl'] & {
-      border-color: transparent $light_gray_900 transparent transparent;
+      border-color: transparent $tooltip-background-color transparent transparent;
     }
   }
 }

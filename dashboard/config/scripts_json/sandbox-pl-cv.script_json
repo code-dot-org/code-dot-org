@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "sandbox-pl-cv",
-    "serialized_at": "2024-05-22 15:19:44 UTC",
+    "serialized_at": "2024-08-16 17:35:02 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -556,6 +556,31 @@
     {
       "chapter": 14,
       "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-CV_reflection_wrapup"
+        ],
+        "progression": "Introduction to Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-CV_reflection_wrapup"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "9c53a6b9-71b8-4efd-98fd-285b22bb1396"
+      },
+      "level_keys": [
+        "sp-pl-CV_reflection_wrapup"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -579,8 +604,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 6,
+      "chapter": 16,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -604,8 +629,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 7,
+      "chapter": 17,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -629,8 +654,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 8,
+      "chapter": 18,
+      "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -654,8 +679,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 9,
+      "chapter": 19,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -679,8 +704,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 10,
+      "chapter": 20,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -704,8 +729,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 11,
+      "chapter": 21,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -729,8 +754,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 12,
+      "chapter": 22,
+      "position": 13,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -754,8 +779,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 13,
+      "chapter": 23,
+      "position": 14,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -779,8 +804,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 14,
+      "chapter": 24,
+      "position": 15,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -804,8 +829,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 15,
+      "chapter": 25,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -829,8 +854,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 16,
+      "chapter": 26,
+      "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -854,8 +879,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 17,
+      "chapter": 27,
+      "position": 18,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -879,8 +904,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 18,
+      "chapter": 28,
+      "position": 19,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -904,8 +929,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 19,
+      "chapter": 29,
+      "position": 20,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -929,8 +954,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 20,
+      "chapter": 30,
+      "position": 21,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -954,8 +979,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 21,
+      "chapter": 31,
+      "position": 22,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -979,8 +1004,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 22,
+      "chapter": 32,
+      "position": 23,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1004,8 +1029,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 23,
+      "chapter": 33,
+      "position": 24,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1029,8 +1054,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 24,
+      "chapter": 34,
+      "position": 25,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1054,8 +1079,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 25,
+      "chapter": 35,
+      "position": 26,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1079,8 +1104,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 26,
+      "chapter": 36,
+      "position": 27,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -1104,8 +1129,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 27,
+      "chapter": 37,
+      "position": 28,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1129,8 +1154,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 28,
+      "chapter": 38,
+      "position": 29,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1154,8 +1179,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 29,
+      "chapter": 39,
+      "position": 30,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1179,8 +1204,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 30,
+      "chapter": 40,
+      "position": 31,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1204,8 +1229,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 31,
+      "chapter": 41,
+      "position": 32,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -1229,7 +1254,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1254,7 +1279,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1279,7 +1304,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1304,7 +1329,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1479,6 +1504,18 @@
         "level.key": "sp_PL_CV_check_introCV_Pixel",
         "script_level.level_keys": [
           "sp_PL_CV_check_introCV_Pixel"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-pl-cv",
+        "activity_section.key": "9c53a6b9-71b8-4efd-98fd-285b22bb1396"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-CV_reflection_wrapup",
+        "script_level.level_keys": [
+          "sp-pl-CV_reflection_wrapup"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

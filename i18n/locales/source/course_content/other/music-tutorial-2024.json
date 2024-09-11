@@ -81,7 +81,7 @@
     }
   },
   "https://studio.code.org/s/music-tutorial-2024/lessons/1/levels/13": {
-    "long_instructions": "#### Customize a Melody\n\n1.  Click on [Sounds][0] to find the [play notes][1] block.\n2.  Attach a play notes block under [when run][2].\n3.  Click the on the [play notes][3] block to compose a new melody.",
+    "long_instructions": "#### Customize a Melody\n\n1.  Click on [Sounds][0] to find the [play notes][1] block.\n2.  Attach a [play notes][2] block under [when run][3].\n3.  Click the on the [play notes][4] block to compose a new melody.",
     "validations": {
       "musiclab_intro_notes_v2_a40492dc-818f-4e02-ba2e-e7de19e291df": "Try out the [play notes][0] block and compose your own melody.",
       "musiclab_tutorial_notes_cdc6aa6b-b5a7-45d2-92e2-410eb5c4d3bc": "Click on the [play notes][0] block and use the keyboard to create a custom melody. ",

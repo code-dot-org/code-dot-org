@@ -691,7 +691,7 @@ class ScriptLevel < ApplicationRecord
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    # exemplar_sources is used by Javalab levels to store level solutions
+    # exemplar_sources is used by Javalab and Code Bridge levels to store level solutions
     if level.try(:exemplar_sources).present? && current_user&.verified_instructor?
       if oldest_active_level.is_a? BubbleChoice
         # If the script level has sublevels, get a link for the sublevel that looks like
@@ -734,7 +734,9 @@ class ScriptLevel < ApplicationRecord
         end
       end
     elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
-      level_example_links.push(build_script_level_url(self, {solution: true}.merge(section_id ? {section_id: section_id} : {})))
+      unless ScriptConfig.allows_public_caching_for_script(script.name)
+        level_example_links.push(build_script_level_url(self, {solution: true}.merge(section_id ? {section_id: section_id} : {})))
+      end
     end
 
     level_example_links
@@ -742,6 +744,25 @@ class ScriptLevel < ApplicationRecord
 
   def level_deprecated?
     level&.deprecated?
+  end
+
+  # WARNING: Do NOT reuse this trashy little method. It is fragile English-only string comparison
+  # written for a very specific use case - logging analytics for the CSA '24-'25 AI Tutor pilot,
+  # in which the level progression naming conventions follow a very specific pattern aligned
+  # with the PRIMM pedagogical approach.
+  #
+  # If the concept of a "progression type" becomes more general, or you're tempted to use this method,
+  # consider a more robust solution such as creating a new property that can be designated by a
+  # Levelbuilder, similar to how we designate assessment levels.
+  def primm_progression_type
+    progression_name = properties["progression"]
+    substring = progression_name.split(":").first if progression_name
+    return "predict_and_run" if substring&.include?("Predict and Run")
+    return "investigate_and_modify" if substring&.include?("Investigate and Modify")
+    return "practice" if substring&.include?("Practice")
+    return "project" if substring&.include?("Project")
+    return "assessment" if substring&.include?("Check for Understanding")
+    return "other"
   end
 
   private def kind

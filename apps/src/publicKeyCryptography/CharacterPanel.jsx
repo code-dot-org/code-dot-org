@@ -1,9 +1,12 @@
 /** @file Panel with title, used for each character in crypto widget */
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../util/color';
-import {AnyChildren} from './types';
+
 import fontConstants from '@cdo/apps/fontConstants';
+
+import color from '../util/color';
+
+import {AnyChildren} from './types';
 
 const style = {
   header: {

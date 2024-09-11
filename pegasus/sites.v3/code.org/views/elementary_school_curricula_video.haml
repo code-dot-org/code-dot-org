@@ -1,28 +1,28 @@
-- video_curricula_index = 5
+- video_curricula_index = 6
 
-- video_curricula_tags = [hoc_s(:module_grade_k_5), hoc_s(:module_grade_3_5), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_k_12)]
+- video_curricula_tags = [hoc_s(:module_grade_k_5), hoc_s(:module_grade_3_5), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_k_12)]
 
-- video_curricula_title = [hoc_s(:curriculum_name_csf), hoc_s(:curriculum_name_csc), hoc_s(:curriculum_name_artificial_intelligence), hoc_s(:curriculum_name_maker), hoc_s(:hour_of_code)]
+- video_curricula_title = [hoc_s(:curriculum_name_csf), hoc_s(:curriculum_name_csc), hoc_s(:curriculum_name_artificial_intelligence), hoc_s(:curriculum_name_maker), hoc_s('curricula_pages.game_design.title'), hoc_s(:hour_of_code)]
 
-- video_curricula_desc = [hoc_s(:csf_page_top_desc), hoc_s(:csc_page_top_desc), hoc_s(:ai_hero_desc), hoc_s(:curriculum_desc_maker), hoc_s(:hoc_homepage_what_is_hoc_subhead)]
+- video_curricula_desc = [hoc_s(:csf_page_top_desc), hoc_s(:csc_page_top_desc), hoc_s(:ai_hero_desc), hoc_s(:curriculum_desc_maker), hoc_s('curricula_pages.game_design.desc'), hoc_s(:hoc_homepage_what_is_hoc_subhead)]
 
 - video_id = ["cs_connections", "ai_intelligence", "courses_maker"]
-- video_link =["/csf", "/csc", "/ai", "/maker", "/hourofcode"]
-- video_link_title=[:call_to_action_explore_csf, :call_to_action_explore_csc, :ai_why_link_01, :call_to_action_explore_maker, :call_to_action_explore_hoc]
+- video_link =["/csf", "/csc", "/ai", "/maker", "/curriculum/game-design", "/hourofcode"]
+- video_link_title=[:call_to_action_explore_csf, :call_to_action_explore_csc, :ai_why_link_01, :call_to_action_explore_maker, 'curricula_pages.game_design.button', :call_to_action_explore_hoc]
 - video_code = ["rNIM1fzJ8u0", "GDcKJ1v2W1s", "dWRnCXbUDgA", "sLIJNEIE0Rs"]
 
 
 - video_curricula_index.times do |index|
   .action-block.action-block--two-col.video-101__text
-    - if index === 1|| index === 2 || index === 3
+    - if [0, 1, 2, 3].include?(index)
       %figure.video-101__video.col-50
         = view :display_video_thumbnail, id: video_id[index], video_code: video_code[index], play_button: 'center', letterbox: 'false'
     - if index === 4
       .video-101__image
+        %img{src: "/images/game-design-illustration.png", style: "width: 100%" }
+    - if index === 5
+      .video-101__image
         %img{src: "/images/hoc2022-banner.png", style: "width: 100%" }
-    - if index === 0
-      %figure.video-101__video.col-50
-        = view :display_video_thumbnail, id: video_id[index], video_code: video_code[index], play_button: 'center', letterbox: 'false'
     .text-wrapper.col-50
       %p.overline
         Grades:
@@ -34,4 +34,3 @@
 
       %a.link-button{href: video_link[index]}
         = hoc_s(video_link_title[index])
-

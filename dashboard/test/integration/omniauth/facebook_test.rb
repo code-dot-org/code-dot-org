@@ -20,9 +20,9 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_facebook
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_finish_sign_up'
+      assert_template 'omniauth/redirect'
+
+      omniauth_redirect
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
       assert_redirected_to '/'
@@ -53,8 +53,16 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_facebook
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
+
+      assert_template 'omniauth/redirect'
+
+      # Simulate the equivalent of omniauth/redirect
+      post '/users/finish_sign_up', params: {
+        user: {
+          email: 'test@code.org'
+        }
+      }
+
       assert_template partial: '_finish_sign_up'
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
@@ -132,21 +140,10 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_facebook
-      follow_redirect!
+      omniauth_redirect
 
       assert_template partial: '_finish_sign_up'
       assert_nil assigns(:user).user_type
-    end
-
-    test 'sign_up queryparam can prefill user_type on finish_sign_up' do
-      mock_oauth
-
-      get '/users/sign_up?user[user_type]=teacher'
-      sign_in_through_facebook
-      follow_redirect!
-
-      assert_template partial: '_finish_sign_up'
-      assert_equal 'teacher', assigns(:user).user_type
     end
 
     private def mock_oauth

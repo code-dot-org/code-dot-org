@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
@@ -210,8 +210,12 @@ class ProgressTableView extends React.Component {
   syncScrollTop() {
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
-      this.setScrollState(this.contentView.bodyComponent);
-      this.setScrollState(this.studentList.bodyComponent);
+      if (this.contentView?.bodyComponent) {
+        this.setScrollState(this.contentView.bodyComponent);
+      }
+      if (this.studentList?.bodyComponent) {
+        this.setScrollState(this.studentList.bodyComponent);
+      }
     }, 200);
   }
 

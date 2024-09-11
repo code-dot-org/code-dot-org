@@ -1,0 +1,53 @@
+@import 'color.scss';
+
+.section,
+%section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dropdown {
+  width: 180px;
+}
+
+.packSectionSelected {
+  font-weight: bold;
+}
+
+.packSectionEmpty {
+  color: $neutral_dark60;
+}
+
+.indentedContainer {
+  margin-left: 20px;
+}
+
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 200px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.renderedJson {
+  white-space: pre;
+  font-family: monospace;
+  padding: 8px;
+  background-color: $neutral_gray10;
+  border-radius: 4px;
+}
+
+.topSpacing {
+  margin-top: 16px;
+}

@@ -2,6 +2,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
   RELEASE_OR_DELETE_RECORDS_EXPLANATION,
@@ -12,10 +13,9 @@ import i18n from '@cdo/locale';
 import {
   Header,
   ConfirmCancelFooter,
-} from '../../lib/ui/SystemDialog/SystemDialog';
+} from '../../sharedComponents/SystemDialog/SystemDialog';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
-import Button from '../Button';
 
 // A stub set of otherwise-required props for use in stories and unit tests.
 export const MINIMUM_TEST_PROPS = {

@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 19:07:20 UTC",
+    "serialized_at": "2024-08-27 22:04:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2331,7 +2332,7 @@
       "key": "0abfff1b-acab-4da0-aca0-118333916de5",
       "position": 2,
       "properties": {
-        "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals1d.jpg) | **Say:** Today we are going to learn about Traversals. Make sure you and your partner have all the supplies you see on the screen. <br><br> **Note to Teacher:** If you are concerned about time or material management, the Traversal Machines can be prepared ahead of time. You only need one Traversal Machine per pair of students, and machines can be shared between classes. <br><br> There are three places to make cuts: <br><ul><li>The dotted line at the top of the sheet</li><li>The box with the list index</li><li>The box inside of the variable baggy</li></ul>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals2.svg) | **Do This:** On a scrap piece of paper or a sticky note, write down the list on the screen.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals3.svg) | **Prompt:** What if I want to know if a value is in a list? With a partner, discuss the method you would use to look for an item in a list. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation to reveal suggested answer**|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals4.svg) | **Say:** Computers are really good at checking things one by one. To do this... let's use a for loop.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals5.svg) | **Do This:** Set up the Traversal Machine. <br><br> **Note:** Students use scissors make cuts as directed on the Traversal Machines. As noted before, this can all be done before class to save time. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals6.svg) | **Do This:** Direct students attention to their Traversal Machines as you describe the parts. <br><br> **Say:** This is where we assign the starting value to the counter variable i. Usually we assign it to 0. What else starts with 0? The index of a list! <br><br> **Note:** In Javascript, the index of a list starts at 0. You may want to remind students that on the AP Exam, pseudocode starts the index at 1.|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals7.svg) | **Say:** This is the Boolean expression that is checked to see if the loop should continue to run. When working with a list, we want to access every element in the list,s o we are going to keep the loop going until we have hit list.length. <br><br> **Note:** You may want to remind students that list.length evaluates to the length of a list, which will be different than the last index number. For example, in a list of three, the length is 3 and the index numbers are 0, 1, 2 |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals8.svg) | **Do This:** replace list with the name of your list. In this case, we would replace it with temps. |\n| ![](https://curriculum.code.org/media/uploads/Screen-Shot-2020-11-25-at-9.24.37-AM_C2zpJ9H.png) | **Say:** The counter variable i increases after each loop runs. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals9.svg) | **Say:** To access each element in the list, we are going to store the element in a variable inside the for loop. Let's try this out with your Traversal Machine. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** Set up a variable baggy and give it the name element. <br><br> **Note:** You may opt to not use variable baggies at all in this lesson and instead have students keep track of variables on a scrap piece of paper. In this case, the variable element is tracking the local variable that is inside of the for loop. With every round of the for loop, the variable will update. It's not necessary to build a baggy for the variable i - this will be represented on the Traversal Machine itself as a drawing of a baggy. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals10.svg) | **Do This:** Pull the index sheetu p to assign i to 0. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Notice how the variable in the baggy has changed. Each time the loop is executed, the variable i increases by one. <br><br> **Note:** For the following six slides, students will follow along with what's happening on the screen with their own Traversal Machines. Give students a few seconds to pull up the index sheet at each step. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals11.svg) | **Say:** Look at the list on the screen. Right now i=0. <br><br> **Do This:** Evaluate the statement in the for loop to see what value is stored by the variable element. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation:** There are six steps to click through. <code>temps[0]</code> evaluates to 77 which is stored in the variable <code>element</code> |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals12.svg) | **Do This:** Now pull the index sheet up one spot. i now equals 1. Evaluate the statement inside the for loop. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation:** There are seven steps to click through. <code>temps[1]</code> evaluates to 85 which is stored in the variable <code>element</code>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals13.svg) | **Do This:** Pull the index sheet up again. i now equals 2. Evaluate the statement inside the for loop. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation:** There are seven steps to click through. <code>temps[2]</code> evaluates to 89 which is stored in the variable <code>element</code>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals14.svg) | **Do This:** Pull the index sheet up again. i now equals 3. Evaluate the statement inside the for loop. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation:** There are seven steps to click through. <code>temps[3]</code> evaluates to 65 which is stored in the variable <code>element</code> |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals15.svg) | **Do This:** Now pull up the index sheet one last time. i now equals 4. <br><br> **Prompt:** What happens next? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** There are three steps to click through. <br><br> **Say:** Is 4 less than 4 (the length of the list)? No - so we exit out of the loop. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals16.svg) | **Say:** Are you starting to see a pattern here? <br><br><ul><li>We are able to access each item in a list by using a for loop.</li><li>This is called traversal. We are traveling or traversing through a list one element at a time.</li></ul>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals17.svg) | **Say:** Let's look for a number in the temps list. It's easy for you to scan the list quickly with your own eyes, but for this exercise, let's pretend you are a computer and must use the Traversal Machine to look for the number. <br><br> **Do this:** <br><ul><li>Write down the code to the left on a sticky note and put it in your for loop.</li><li> Pull the index sheet up each time you go through the loop.</li><li>Run the loop until it is finished</li><li>Your \"console\" can be a scrap piece of paper.</li><li>When done, compare your console with another group.</li></ul>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals18.svg) | **Say:** Check your console. Does it look like what you see on the screen? The number 85 was found at index 1, the second number in the list. Notice that i currently has the value 4. This is because we stopped after four rounds. Element is currently storing 65, the last element that we accessed, at index 3. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals19.svg) | **Say:** Now I want to find the smallest number in a list. I am going to reduce the list to the smallest number. We are going to leave the baggies behind now. You can use a scrap piece of paper to store the global variable <code>var min = temps[0]</code> <br><br> **Do This:** <br><ul><li>Evaluate that statement to find the value stored in min.</li><li>Run the program</li><li>Update the variable min as needed</li></ul> |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals20.svg) | **Say:** The smallest number in the list is 65. Again, this is easy for you to quickly scan with your eyes when your list is short, but imagine if your list contained 1,000 or 1,000,000 elements? This is where a computer using a loop really shines. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals21.svg) | **Say:** Let's make it more challenging. <br><br> **Do This:** <br><ul><li>With your partner, update the code inside the for loop to now find the largest number (max)</li><li>One partner creates a new list of 8 random numbers and keeps them hidden.</li><li>The other partner runs the Traversal Machine to find the largest number in the list by asking for each number one at a time. </li><li>Before beginning: <br><ul><li>store the global variable on a scrap piece of paper: <code>var max = temps[0];</code><li><li>Evaluate that statement to find the value stored in max. Ask your partner what is stored at \"temps index 0\"</li></ul><li>Run the for loop.</li><li>Check your answer at the end with your partner!</li></ul><br><br> **Note:** Read the example at the bottom of the screen out loud so students understand how they should interact while using the Traversal Machine. Allow students five or so minutes to fully complete the task on this slide. Here's a sample of what their updated code might look like: <br><br><code>if(element>max)<br>&nbsp;&nbsp;&nbsp;&nbsp;{max = element;<br>}</code>|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals22_7ovsk3m.svg) | **Say:** Now I have a list of animals from which I want to filter some elements and store them in another list. <br><br> **Note:** Guide the students through the setup listed on the screen. <br><br> **Do This:** <br><ul><li>One partner creates a list of eight random animals, and stores it in the list animals on a scrap of paper. Keep this list hidden.</li><li>The other partner uses a separate scrap of paper to track a new list called animalsListA</li><li>Change the name of the list in the for loop of the Traversal Machine to animals.</li><li>Copy the code to the right on to a sticky note and place it in the for loop of the Traversal Machine.</li></ul>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals23.svg) | **Do This:** <br><ul><li>Run the code</li><li>Keep track of your console</li><li>When finished, trade your animal list with another group, run the code, and compare your console outputs</li></ul><br><br> **Note:** Expect this activity to take around 5 minutes. When students have finished, move on to the Takeaways in the Wrap Up |"
+        "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals1d.jpg) | **Say:** Today we are going to learn about Traversals. Make sure you and your partner have all the supplies you see on the screen. <br><br> **Note to Teacher:** If you are concerned about time or material management, the Traversal Machines can be prepared ahead of time. You only need one Traversal Machine per pair of students, and machines can be shared between classes. <br><br> There are three places to make cuts: <br><ul><li>The dotted line at the top of the sheet</li><li>The box with the list index</li><li>The box inside of the variable baggy</li></ul>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals2.svg) | **Do This:** On a scrap piece of paper or a sticky note, write down the list on the screen.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals3.svg) | **Prompt:** What if I want to know if a value is in a list? With a partner, discuss the method you would use to look for an item in a list. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation to reveal suggested answer**|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals4.svg) | **Say:** Computers are really good at checking things one by one. To do this... let's use a for loop.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals5.svg) | **Do This:** Set up the Traversal Machine. <br><br> **Note:** Students use scissors make cuts as directed on the Traversal Machines. As noted before, this can all be done before class to save time. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals6.svg) | **Do This:** Direct students attention to their Traversal Machines as you describe the parts. <br><br> **Say:** This is where we assign the starting value to the counter variable i. Usually we assign it to 0. What else starts with 0? The index of a list! <br><br> **Note:** In Javascript, the index of a list starts at 0. You may want to remind students that on the AP Exam, pseudocode starts the index at 1.|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals7.svg) | **Say:** This is the Boolean expression that is checked to see if the loop should continue to run. When working with a list, we want to access every element in the list, so we are going to keep the loop going until we have hit list.length. <br><br> **Note:** You may want to remind students that list.length evaluates to the length of a list, which will be different than the last index number. For example, in a list of three, the length is 3 and the index numbers are 0, 1, 2 |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals8.svg) | **Do This:** replace list with the name of your list. In this case, we would replace it with temps. |\n| ![](https://curriculum.code.org/media/uploads/Screen-Shot-2020-11-25-at-9.24.37-AM_C2zpJ9H.png) | **Say:** The counter variable i increases after each loop runs. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals9.svg) | **Say:** To access each element in the list, we are going to store the element in a variable inside the for loop. Let's try this out with your Traversal Machine. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** Set up a variable baggy and give it the name element. <br><br> **Note:** You may opt to not use variable baggies at all in this lesson and instead have students keep track of variables on a scrap piece of paper. In this case, the variable element is tracking the local variable that is inside of the for loop. With every round of the for loop, the variable will update. It's not necessary to build a baggy for the variable i - this will be represented on the Traversal Machine itself as a drawing of a baggy. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals10.svg) | **Do This:** Pull the index sheet up to assign i to 0. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Notice how the variable in the baggy has changed. Each time the loop is executed, the variable i increases by one. <br><br> **Note:** For the following six slides, students will follow along with what's happening on the screen with their own Traversal Machines. Give students a few seconds to pull up the index sheet at each step. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals11.svg) | **Say:** Look at the list on the screen. Right now i=0. <br><br> **Do This:** Evaluate the statement in the for loop to see what value is stored by the variable element. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation:** There are six steps to click through. <code>temps[0]</code> evaluates to 77 which is stored in the variable <code>element</code> |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals12.svg) | **Do This:** Now pull the index sheet up one spot. i now equals 1. Evaluate the statement inside the for loop. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation:** There are seven steps to click through. <code>temps[1]</code> evaluates to 85 which is stored in the variable <code>element</code>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals13.svg) | **Do This:** Pull the index sheet up again. i now equals 2. Evaluate the statement inside the for loop. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation:** There are seven steps to click through. <code>temps[2]</code> evaluates to 89 which is stored in the variable <code>element</code>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals14.svg) | **Do This:** Pull the index sheet up again. i now equals 3. Evaluate the statement inside the for loop. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation:** There are seven steps to click through. <code>temps[3]</code> evaluates to 65 which is stored in the variable <code>element</code> |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals15.svg) | **Do This:** Now pull up the index sheet one last time. i now equals 4. <br><br> **Prompt:** What happens next? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** There are three steps to click through. <br><br> **Say:** Is 4 less than 4 (the length of the list)? No - so we exit out of the loop. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals16.svg) | **Say:** Are you starting to see a pattern here? <br><br><ul><li>We are able to access each item in a list by using a for loop.</li><li>This is called traversal. We are traveling or traversing through a list one element at a time.</li></ul>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals17.svg) | **Say:** Let's look for a number in the temps list. It's easy for you to scan the list quickly with your own eyes, but for this exercise, let's pretend you are a computer and must use the Traversal Machine to look for the number. <br><br> **Do this:** <br><ul><li>Write down the code to the left on a sticky note and put it in your for loop.</li><li> Pull the index sheet up each time you go through the loop.</li><li>Run the loop until it is finished</li><li>Your \"console\" can be a scrap piece of paper.</li><li>When done, compare your console with another group.</li></ul>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals18.svg) | **Say:** Check your console. Does it look like what you see on the screen? The number 85 was found at index 1, the second number in the list. Notice that i currently has the value 4. This is because we stopped after four rounds. Element is currently storing 65, the last element that we accessed, at index 3. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals19.svg) | **Say:** Now I want to find the smallest number in a list. I am going to reduce the list to the smallest number. We are going to leave the baggies behind now. You can use a scrap piece of paper to store the global variable <code>var min = temps[0]</code> <br><br> **Do This:** <br><ul><li>Evaluate that statement to find the value stored in min.</li><li>Run the program</li><li>Update the variable min as needed</li></ul> |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals20.svg) | **Say:** The smallest number in the list is 65. Again, this is easy for you to quickly scan with your eyes when your list is short, but imagine if your list contained 1,000 or 1,000,000 elements? This is where a computer using a loop really shines. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals21.svg) | **Say:** Let's make it more challenging. <br><br> **Do This:** <br><ul><li>With your partner, update the code inside the for loop to now find the largest number (max)</li><li>One partner creates a new list of 8 random numbers and keeps them hidden.</li><li>The other partner runs the Traversal Machine to find the largest number in the list by asking for each number one at a time. </li><li>Before beginning: <br><ul><li>store the global variable on a scrap piece of paper: <code>var max = temps[0];</code><li><li>Evaluate that statement to find the value stored in max. Ask your partner what is stored at \"temps index 0\"</li></ul><li>Run the for loop.</li><li>Check your answer at the end with your partner!</li></ul><br><br> **Note:** Read the example at the bottom of the screen out loud so students understand how they should interact while using the Traversal Machine. Allow students five or so minutes to fully complete the task on this slide. Here's a sample of what their updated code might look like: <br><br><code>if(element>max)<br>&nbsp;&nbsp;&nbsp;&nbsp;{max = element;<br>}</code>|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals22_7ovsk3m.svg) | **Say:** Now I have a list of animals from which I want to filter some elements and store them in another list. <br><br> **Note:** Guide the students through the setup listed on the screen. <br><br> **Do This:** <br><ul><li>One partner creates a list of eight random animals, and stores it in the list animals on a scrap of paper. Keep this list hidden.</li><li>The other partner uses a separate scrap of paper to track a new list called animalsListA</li><li>Change the name of the list in the for loop of the Traversal Machine to animals.</li><li>Copy the code to the right on to a sticky note and place it in the for loop of the Traversal Machine.</li></ul>  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_Traversals23.svg) | **Do This:** <br><ul><li>Run the code</li><li>Keep track of your console</li><li>When finished, trade your animal list with another group, run the code, and compare your console outputs</li></ul><br><br> **Note:** Expect this activity to take around 5 minutes. When students have finished, move on to the Takeaways in the Wrap Up |"
       },
       "seeding_key": {
         "activity_section.key": "0abfff1b-acab-4da0-aca0-118333916de5",
@@ -5090,6 +5091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 1_b"
+        ],
         "progression": "Setting up Lists"
       },
       "bonus": false,
@@ -5112,6 +5116,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 2_b"
+        ],
         "progression": "Setting up Lists"
       },
       "bonus": false,
@@ -5134,6 +5141,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 3.75_b"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -5156,6 +5166,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 3.5_b"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -5178,6 +5191,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 10_b"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -5200,6 +5216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice Strings 2_b"
+        ],
         "progression": "Strings and Indexes"
       },
       "bonus": false,
@@ -5222,6 +5241,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice Strings 3_b"
+        ],
         "progression": "Strings and Indexes"
       },
       "bonus": false,
@@ -5244,6 +5266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 4_b"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -5266,6 +5291,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 5_b"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -5288,6 +5316,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 9_b"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -5310,6 +5341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L3 Choice_b"
+        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -5332,6 +5366,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L3 CFU Lists Psuedocode2022_b"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -5354,6 +5391,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L3 CFU Lists Psuedocode 22022_b"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -6565,6 +6605,16 @@
       }
     },
     {
+      "name": "CSP Unit 6 - Slides",
+      "url": "https://docs.google.com/presentation/d/1l_mpNKjAK73OlGNpll-0fWEPnsHaP3YeLffqHKN9oPE/template/preview",
+      "key": "csp_unit_6_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_slides"
+      }
+    },
+    {
       "name": "Customize Make Lessons: How-To-Guide",
       "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
       "key": "customize_make_lessons_how-to-guide",
@@ -7124,6 +7174,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp6-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_slides",
         "script.name": "csp6-2024"
       }
     },

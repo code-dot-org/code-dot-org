@@ -1,7 +1,7 @@
-import FreeResponseSection from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/free_response_section';
-import React from 'react';
-import {expect} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
+import FreeResponseSection from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/free_response_section';
 
 describe('Free Response Section', () => {
   const questions = [
@@ -21,8 +21,8 @@ describe('Free Response Section', () => {
       />
     );
 
-    expect(freeResponseSection.find('Well')).to.have.length(2);
-    expect(freeResponseSection.find('li')).to.have.length(4);
+    expect(freeResponseSection.find('Well')).toHaveLength(2);
+    expect(freeResponseSection.find('li')).toHaveLength(4);
   });
 
   it('Renders divs for facilitator specific free responses', () => {
@@ -43,9 +43,9 @@ describe('Free Response Section', () => {
       />
     );
 
-    expect(freeResponseSection.find('Well')).to.have.length(2);
-    expect(freeResponseSection.find('ul')).to.have.length(4);
-    expect(freeResponseSection.find('li')).to.have.length(12);
-    expect(freeResponseSection.find('b')).to.have.length(2);
+    expect(freeResponseSection.find('Well')).toHaveLength(2);
+    expect(freeResponseSection.find('ul')).toHaveLength(4);
+    expect(freeResponseSection.find('li')).toHaveLength(12);
+    expect(freeResponseSection.find('b')).toHaveLength(2);
   });
 });

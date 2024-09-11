@@ -10,7 +10,10 @@ export const behaviorGetMutator = {
   paramsFromSerializedState_: [],
 
   domToMutation: function (this: ProcedureBlock, element: Element) {
-    const name = element.nextElementSibling?.textContent || '';
+    const name =
+      element.getAttribute('name') ||
+      element.nextElementSibling?.textContent ||
+      '';
     this.behaviorId = element.nextElementSibling?.getAttribute('id');
     this.deserialize_(name, []);
   },

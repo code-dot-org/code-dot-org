@@ -4,13 +4,13 @@ module ChildAccountHelper
   # @param request [ActionDispatch::Request] the web request
   # @return [Hash, nil]
   def parental_permission_banner_data(user, request)
-    student_lockout_date = Policies::ChildAccount.lockout_date(user)
+    student_lockout_date = Policies::ChildAccount.lockout_date(user, approximate: true)
 
     if request.params.key?(:show_parental_permission_banner)
       student_lockout_date ||= Cpa::ALL_USER_LOCKOUT_DATE
     else
       return unless student_lockout_date
-      return unless Cpa.cpa_experience(request) == Cpa::ALL_USER_LOCKOUT_WARNING
+      return unless DCDO.get('cap_student_warnings_enabled', false)
     end
 
     {
@@ -33,14 +33,14 @@ module ChildAccountHelper
   # @return [String] the HTML for the pre-lockdown parent permission modal
   def render_parental_permission_modal(user, request)
     force_display = request.params.key?(:show_parental_permission_modal)
-    student_lockout_date = Policies::ChildAccount.lockout_date(user)
+    student_lockout_date = Policies::ChildAccount.lockout_date(user, approximate: true)
 
     if force_display
       student_lockout_date ||= Cpa::ALL_USER_LOCKOUT_DATE
     else
       return unless student_lockout_date
-      return unless Cpa.cpa_experience(request) == Cpa::ALL_USER_LOCKOUT_WARNING
-      return if Policies::ChildAccount::ComplianceState.request_sent?(user)
+      return unless DCDO.get('cap_student_warnings_enabled', false)
+      return if user.latest_parental_permission_request
     end
 
     render partial: 'policy_compliance/parental_permission/modal',

@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .progressV2Page {
   background-color: white;
@@ -56,10 +56,18 @@ $level-cell-width: 52;
   }
 }
 
+.outerTable {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
 .tableInterior {
   display: flex;
   flex-direction: row;
   width: fit-content;
+  // Needed to account for the `margin: -1px` on the lesson column
+  padding-right: 1px;
 }
 
 .gridBox {
@@ -75,30 +83,43 @@ $level-cell-width: 52;
     height: 47px;
     line-height: 47px;
     padding-inline-start: 12px;
-    padding-inline-end: .5em;
+    padding-inline-end: 0.5em;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     background-color: $light_gray_50;
+    font-size: 14px;
+    font-weight: 600;
   }
 
   &Lesson {
     text-align: center;
     min-width: 52px;
-    max-width: 52px;  
+    max-width: 52px;
     height: 47px;
     line-height: 47px !important;
+  }
+
+  &Metadata {
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
   }
 
   &Skeleton {
     vertical-align: middle;
   }
-  
+
   &Level {
     width: $level-cell-width + px;
     height: 47px;
     color: inherit !important;
     padding: 0;
+  }
+
+  &ChoiceSubLevel {
+    border-left: 0;
   }
 }
 
@@ -133,7 +154,7 @@ $level-cell-width: 52;
     flex-direction: column;
     justify-content: flex-end;
   }
-  
+
   &UnitSelector {
     display: flex;
     flex-direction: row;
@@ -163,6 +184,8 @@ $level-cell-width: 52;
     margin-bottom: 32px;
     text-align: center;
     background-color: $light_gray_50;
+    font-size: 14px;
+    font-weight: 600;
   }
 
   &HeaderCellInteractive {
@@ -175,9 +198,10 @@ $level-cell-width: 52;
     margin-bottom: 32px;
     text-align: center;
     background-color: $light_gray_50;
+    font-size: 14px;
+    font-weight: 600;
   }
 
-  
   &HeaderTooltip {
     height: 18px;
     line-height: 18px;
@@ -235,7 +259,7 @@ $level-cell-width: 52;
         border: none !important;
       }
     }
-    
+
     &LessonText {
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -315,7 +339,7 @@ $level-cell-width: 52;
       }
     }
 
-    &ExpandedLevelCellFirst { 
+    &ExpandedLevelCellFirst {
       border-left: 1px solid $neutral_dark40;
       width: 52px;
     }
@@ -346,7 +370,7 @@ $level-cell-width: 52;
   &LevelLink {
     height: 100%;
     width: 100%;
-    text-align: center; 
+    text-align: center;
     line-height: 47px !important;
   }
 
@@ -400,3 +424,54 @@ $level-cell-width: 52;
   color: black;
 }
 
+.studentColumnName {
+  @include remove-default-button-styles;
+  border-top: 1px solid $neutral_dark40;
+  border-left: 1px solid $neutral_dark40;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+
+  height: 47px;
+  width: calc(100% - 20px);
+  line-height: 47px;
+  padding-inline-start: 12px;
+  padding-inline-end: 0.5em;
+  text-align: start;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: $light_gray_50;
+
+  &:active {
+    border-bottom: 0 !important;
+    border-right: 0 !important;
+  }
+
+  &Caret {
+    margin-inline-end: 12px;
+  }
+}
+
+.studentColumnExpandedHeader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.studentColumnExpandedHeaderText {
+  text-align: end;
+  height: 28px;
+  line-height: 28px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 14px;
+}
+
+.lessonDataCellExpanded {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-06T23:58:38.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Explore and test this program using the questions on the Testing Software activity guide.",
@@ -64,12 +68,9 @@
         "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class SepiaImage extends Image {\n\n  private Pixel[][] imagePixels;\n\n  public SepiaImage(String filename) throws FileNotFoundException {\n    super(filename);\n    imagePixels = ImageEditor.getPixels(this);\n  }\n\n  public void sepia() {\n    for (int row = 0; row < imagePixels.length; row++) {\n      for (int col = 0; col < imagePixels[0].length; col++) {\n        Pixel currentPixel = imagePixels[row][col];\n        int redValue = currentPixel.getRed();\n        int greenValue = currentPixel.getGreen();\n        int blueValue = currentPixel.getBlue();\n\n        if (redValue < 60) {\n          redValue = (int) (redValue * 0.8);\n          greenValue = (int) (greenValue * 0.9);\n          blueValue = (int) (blueValue * 0.9);\n        }\n        else if (redValue < 190) {\n          blueValue = (int) (blueValue * 0.8);\n        }\n        else {\n          blueValue = (int) (blueValue * 0.9);\n        }\n\n        currentPixel.setRed(redValue);\n        currentPixel.setGreen(greenValue);\n        currentPixel.setBlue(blueValue);\n      }\n    }\n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-12-06T23:58:38.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-06T23:58:38.537+00:00\",\"changed\":[\"cloned from \\\"CSA U7L10-L1a\\\"\"],\"cloned_from\":\"CSA U7L10-L1a\"},{\"changed_at\":\"2021-12-06 23:58:51 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 17:01:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 17:03:42 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 17:50:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 17:53:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

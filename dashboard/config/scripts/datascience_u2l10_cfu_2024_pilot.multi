@@ -1,0 +1,33 @@
+name 'datascience-U2L10-CFU_2024-pilot'
+title 'Check for Understanding'
+
+description 'Consider the following DataFrame `df`:'
+question 'Given the following DataFrame `df`, which code snippet correctly filters the data to show only rows where the Sales are greater than 50 and the Fruit is either "Apple" or "Banana"?'
+wrong '`result = df[(df["Sales"] > 50) & (df["Fruit"] == "Apple" or df["Fruit"] == "Banana")]`'
+right '`result = df[(df["Sales"] > 50) & ((df["Fruit"] == "Apple") | (df["Fruit"] == "Banana"))]`'
+wrong '`result = df[(df["Sales"] > 50) and (df["Fruit"] == "Apple" or df["Fruit"] == "Banana")]`'
+wrong '`result = df[(df["Sales"] > 50) | ((df["Fruit"] == "Apple") & (df["Fruit"] == "Banana"))]`'
+
+allow_multiple_attempts false
+
+
+markdown <<MARKDOWN
+```
+
+data = {"Fruit": ["Apple", "Banana", "Orange", "Apple", "Banana", "Orange"],
+		"Sales": [55, 45, 60, 50, 65, 40]}
+
+df = pd.DataFrame(data)
+
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* `result = df[(df['Sales'] > 50) & ((df['Fruit'] == 'Apple') | (df['Fruit'] == 'Banana'))]` correctly uses the `&` operator for logical 'and' and combines `|` for logical 'or' to filter rows where Sales are greater than 50 and Fruit is either 'Apple' or 'Banana'.
+
+* `result = df[(df['Sales'] > 50) & (df['Fruit'] == 'Apple' or df['Fruit'] == 'Banana')]` mixes the correct structure but incorrectly uses Python's 'or' inside a pandas filtering expression, which won't work.
+
+* `result = df[(df['Sales'] > 50) and (df['Fruit'] == 'Apple' or df['Fruit'] == 'Banana')]` incorrectly uses 'and' instead of `&`, which is not appropriate in pandas.
+
+* `result = df[(df['Sales'] > 50) | ((df['Fruit'] == 'Apple') & (df['Fruit'] == 'Banana'))]` incorrectly mixes the logic, using `|` where it should use `&` for the Fruit condition and creating an impossible condition for both 'Apple' and 'Banana' to be true simultaneously.
+MARKDOWN

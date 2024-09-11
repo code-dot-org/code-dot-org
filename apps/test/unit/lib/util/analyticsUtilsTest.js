@@ -1,8 +1,10 @@
-import {expect} from '../../../util/reconfiguredChai';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import * as utils from '@cdo/apps/code-studio/utils';
-import sinon from 'sinon';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('AnalyticsUtils', () => {
   it('reports teacher viewing student work on a dsl level when needed', () => {

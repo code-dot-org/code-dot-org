@@ -1,13 +1,15 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import $ from 'jquery';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
-import ModelCard from './ModelCard';
 import color from '@cdo/apps/util/color';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
+
+import ModelCard from './ModelCard';
 
 const DEFAULT_MARGIN = 7;
 

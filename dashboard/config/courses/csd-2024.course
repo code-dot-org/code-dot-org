@@ -11,7 +11,7 @@
     "csd7-2024",
     "csd-post-survey-2024"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -63,6 +63,16 @@
       },
       "seeding_key": {
         "resource.key": "all_vocabulary_8"
+      }
+    },
+    {
+      "name": "CSD Changelog 24-25",
+      "url": "https://docs.google.com/document/d/1DN6WF64Jy3cr1hkeDySNAujMhb9yQZlJvt3ls8OCvRw/edit#heading=h.ydx1g8n6vyu8",
+      "key": "csd_changelog_24-25",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_changelog_24-25"
       }
     },
     {

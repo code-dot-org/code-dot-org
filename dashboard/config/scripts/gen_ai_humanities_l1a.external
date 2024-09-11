@@ -1,0 +1,39 @@
+name 'gen-ai-humanities-L1A'
+title 'Crafting Prompts'
+display_name 'Essay Introduction'
+bubble_choice_description 'Use your AI tool to write an introduction for an essay about the benefits of learning a second language.'
+thumbnail_url 'https://images.code.org/9894ac4657b0df1e65c9bfee528bc9a0-image-1719500447864.png'
+
+markdown <<MARKDOWN
+## Essay Introduction
+
+**Task:** Use your AI tool to write an introduction for an essay about the benefits of learning a second language.
+
+### Steps
+
+1. **Understanding the task:** You will be crafting a prompt that asks an AI tool to write an introduction for an essay about the benefits of learning a second language.
+
+2. **Crafting your prompt:** Start by thinking about what makes a good essay introduction. It should be engaging, informative, and set the stage for the rest of the essay.
+
+   Consider the key points you want the introduction to cover, such as the cognitive benefits, cultural understanding, and career advantages of learning a second language.
+
+3. **Writing your prompt:** Write a prompt that is clear and specific. Here is an example to get you started:
+
+> Write an engaging introduction for an essay that discusses the benefits of learning a second language. Highlight the cognitive advantages, cultural insights, and career opportunities that come with being bilingual.
+
+4. **Using the AI tool:** Enter your prompt into the AI tool, and review the response. Assess whether it meets your expectations and includes the key points you wanted.
+
+5. **Evaluate the response:** Consider the following questions when evaluating the AI's response:
+
+   * Is the introduction engaging, and does it capture the reader's attention?
+   
+   * Does it clearly state the benefits of learning a second language?
+   
+   * Are the cognitive, cultural, and career benefits mentioned effectively?
+   
+   * Is the information accurate and relevant?
+
+6. **Refining your prompt:** If the AI's response is not as expected, think about how you can improve your prompt. You might need to add more detail or be more specific about what you want.
+
+   Adjust your prompt and try again until you get a satisfactory response.
+MARKDOWN

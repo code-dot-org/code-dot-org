@@ -7,11 +7,12 @@
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:46:13 UTC",
+    "serialized_at": "2024-09-04 21:17:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -560,6 +561,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8 Overview_2023_1_2024"
+        ],
         "progression": "Module 8 Overview"
       },
       "bonus": false,
@@ -582,6 +586,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - CI_2023_1_2024"
+        ],
         "progression": "Curriculum Investigation Overview"
       },
       "bonus": false,
@@ -604,6 +611,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U7L10_2024"
+        ],
         "progression": "Unit 7: Lesson 10 -  Saving Models in AI Lab (~25 mins)"
       },
       "bonus": false,
@@ -626,6 +636,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U7L10_1 _2024"
+        ],
         "progression": "Unit 7: Lesson 10 -  Saving Models in AI Lab (~25 mins)"
       },
       "bonus": false,
@@ -648,6 +661,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U7L10_2 _2024"
+        ],
         "progression": "Unit 7: Lesson 10 -  Saving Models in AI Lab (~25 mins)"
       },
       "bonus": false,
@@ -670,6 +686,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U7L10_3_2024"
+        ],
         "progression": "Unit 7: Lesson 10 -  Saving Models in AI Lab (~25 mins)"
       },
       "bonus": false,
@@ -692,6 +711,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U7L10_4_2024"
+        ],
         "progression": "Unit 7: Lesson 10 -  Saving Models in AI Lab (~25 mins)"
       },
       "bonus": false,
@@ -714,6 +736,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U7L10_5_2024"
+        ],
         "progression": "Unit 7: Lesson 10 -  Saving Models in AI Lab (~25 mins)"
       },
       "bonus": false,
@@ -736,6 +761,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8  U7L10 Reflection_2024"
+        ],
         "progression": "Unit 7: Lesson 10 -  Saving Models in AI Lab (~25 mins)"
       },
       "bonus": false,
@@ -758,6 +786,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U7L12_2024"
+        ],
         "progression": "Unit 7: Lesson 12: Numerical Models (~20 min)"
       },
       "bonus": false,
@@ -780,6 +811,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8  U7L12 Reflection_2024"
+        ],
         "progression": "Unit 7: Lesson 12: Numerical Models (~20 min)"
       },
       "bonus": false,
@@ -802,6 +836,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U7L15_2024"
+        ],
         "progression": "Unit 7: Lesson 15: AI Code of Ethics (~20 min)"
       },
       "bonus": false,
@@ -824,6 +861,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8  U7L15 Reflection_2024"
+        ],
         "progression": "Unit 7: Lesson 15: AI Code of Ethics (~20 min)"
       },
       "bonus": false,
@@ -846,6 +886,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 Wrap Up_2023_1_2024"
+        ],
         "progression": "Module 8 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,
@@ -868,6 +911,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo1_2024"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -890,6 +936,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo2_2024"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -912,6 +961,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo3_2024"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -934,6 +986,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- import app_2024"
+        ],
         "progression": "Importing Your Model"
       },
       "bonus": false,
@@ -956,6 +1011,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- customize app_2024"
+        ],
         "progression": "Customizing Your App"
       },
       "bonus": false,

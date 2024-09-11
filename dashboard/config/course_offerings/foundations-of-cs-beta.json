@@ -1,14 +1,13 @@
 {
   "key": "foundations-of-cs-beta",
   "display_name": "Foundations of Computer Science (Beta)",
-  "category": "full_course",
   "is_featured": true,
   "assignable": true,
   "curriculum_type": "Course",
   "marketing_initiative": null,
   "grade_levels": "9,10,11,12",
   "header": "teacher_led",
-  "image": null,
+  "image": "https://images.code.org/21a5140e24b70fcb784995ae3a47563f-FCS-min.png",
   "cs_topic": "artificial_intelligence,cybersecurity,data,internet,physical_computing",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
@@ -16,6 +15,5 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": "2024-07-10 05:00:00 UTC",
-  "self_paced_pl_course_offering_id": null,
-  "self_paced_pl_course_offering_key": null
+  "self_paced_pl_course_offering_key": "self-paced-foundations-cs"
 }

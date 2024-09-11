@@ -1,0 +1,28 @@
+name 'SP-VPL-21-mod4-Differentiation-CSP_-foundations-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Differentiation
+
+## What is my role as the teacher? 
+
+#### Your role as the teacher is to ensure that all students are able to access the course content in a way that meets their unique learning needs. This might mean modifying the lesson plan for the whole class, modifying activities for individual students, or other modifications necessary to support learning within your classroom. 
+
+<img src="https://images.code.org/0353ef2c78a13a5891399f6e7e21a00b-image-1626707318272.jpg" alt="A classroom of students working on individual laptops while a teacher circulates." width="365px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Three ways to differentiate lessons:
+
+* #### **Differentiate by modality:** As the teacher, you can choose the way in which students experience lesson activities. Warm-up and wrap-up activities can be conducted through journaling, partner sharing, or whole-group discussions to allow students to process in the way that works best for them. Additionally, our coding environments give your students to code using either blocks or text depending on their preference.
+* #### **Differentiate by topic:** Your students can own the content of their learning by deciding topics that feel relevant and exciting to them. When designing projects, students can often choose what type of app they're designing, how it looks, and the real-world problems that they solve. Other projects allow students to choose a topic that it most interesting to them to demonstrate their content knowledge.
+* #### **Differentiate by timing:** For some tasks, you may find students need differing amounts of time to complete tasks. Being flexible with deadlines and helping students set individual goals for their work can help meet the unique needs of each student.
+
+## For teachers serving students with disabilities
+
+#### AccessCSforAll offers a series of <a href="https://www.washington.edu/accesscomputing/accesscsforall/resources/webinars/infosys-webinars" target="blank" rel="noopener noreferrer">four free webinars</a> called *Accessible Computer Science: Teacher to Teacher*. The topics of the four webinars are:
+
+* #### Teaching CS to Blind and Visually Impaired Students
+* #### Teaching CS to Deaf and Hard of Hearing Students
+* #### Teaching CS to Students with Learning Disabilities
+* #### Teaching CS to Neurodiverse Students
+MARKDOWN

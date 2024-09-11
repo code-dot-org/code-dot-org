@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:49:55.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A weather analyst wants to find out which city had the highest temperature over several days. They have the following values:\r\n\r\n![](https://images.code.org/96f3b31d65d7611e43d0fd780ce43f27-image-1651005727636.png)\r\n\r\nwhere each row represents New York, Los Angeles, Miami, and Seattle, respectively. Each column represents the temperature on March 29th, March 30th, March 31st, April 1st, and April 2nd, respectively.\r\n\r\n##In Temperatures.java:\r\n\r\n1. Write the method `maxTemperature()`(#e7e8ea) to find the the highest temperature.\r\n\r\n   * Get the corresponding name of the city with the highest temperature from the `cityNames`(#e7e8ea) array.\r\n   \r\n   * Return a `String`(#e7e8ea) containing the name of the city and the temperature found.\r\n\r\n::: details [**Show Me How**]\r\nTraversing a 2D array uses the following syntax:\r\n  \r\n  ```\r\n  for (int row = 0; row < arrayName.length; row++) {\r\n    for (int col = 0; col < arrayName[0].length; col++) {\r\n      // code to execute\r\n    }\r\n  }\r\n  ```\r\n:::",
@@ -24,12 +28,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:49:55.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:49:55.980+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L3a_2022\\\"\"],\"cloned_from\":\"CSA U5L2-L3a_2022\"},{\"changed_at\":\"2022-10-09 00:07:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 00:07:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

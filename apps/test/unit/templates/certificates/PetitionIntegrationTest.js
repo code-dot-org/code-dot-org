@@ -2,11 +2,11 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import {mapValues} from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Petition on submit', () => {
   const minimumInputs = {
@@ -123,17 +123,5 @@ describe('Petition on submit', () => {
       ...expectedDataFromInputs(inputs),
       role_s: 'engineer', // The 'role' value has a consistent name regardless of language
     });
-  });
-  it('reports to google analytics if successful submit', () => {
-    const petition = mountPetition();
-    addInputsToPetition(petition, minimumInputs);
-    submitForm(petition);
-
-    sinon.assert.calledOnce(window.ga);
-  });
-  it('does not report to google analytics if unsuccessful submit', () => {
-    const petition = mountPetition();
-    submitForm(petition);
-    sinon.assert.notCalled(window.ga);
   });
 });

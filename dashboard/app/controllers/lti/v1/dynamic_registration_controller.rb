@@ -1,5 +1,6 @@
 require 'clients/cache_client'
 require 'clients/lti_dynamic_registration_client'
+require 'metrics/events'
 
 module Lti
   module V1
@@ -55,6 +56,7 @@ module Lti
         return unauthorized_status if registration_data.nil?
 
         platform = Policies::Lti.find_platform_by_issuer(registration_data[:issuer])
+        platform_name = Policies::Lti.find_platform_name_by_issuer(registration_data[:issuer])
         if platform.nil?
           message = "Unsupported issuer: #{registration_data[:issuer]}"
           Honeybadger.notify(
@@ -67,7 +69,7 @@ module Lti
         end
 
         begin
-          dynamic_registration_client = Lti::DynamicRegistration.new(registration_data[:registration_token], registration_data[:registration_endpoint])
+          dynamic_registration_client = LtiDynamicRegistrationClient.new(registration_data[:registration_token], registration_data[:registration_endpoint])
           registration_response = dynamic_registration_client.make_registration_request
         rescue => exception
           message = 'Error creating registration'
@@ -81,12 +83,21 @@ module Lti
             name: registration_data[:lms_account_name],
             client_id: registration_response[:client_id],
             issuer: platform[:issuer],
-            platform_name: platform[:name],
+            platform_name: platform_name,
             auth_redirect_url: platform[:auth_redirect_url],
             jwks_url: platform[:jwks_url],
             access_token_url: platform[:access_token_url],
             admin_email: admin_email,
           )
+          metadata = {
+            lms_name: platform[:name],
+          }
+          Metrics::Events.log_event_with_session(
+            session: session,
+            event_name: 'lti_dynamic_registration_completed',
+            metadata: metadata,
+          )
+
           return render status: :created, json: {}
         else
           return render status: :conflict, json: {error: I18n.t('lti.integration.exists_error')}

@@ -10,6 +10,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {getCodeBlocks} from '@cdo/apps/blockly/utils';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
 import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
@@ -30,7 +31,6 @@ import {singleton as studioApp} from '../../StudioApp';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import trackEvent from '../../util/trackEvent';
 import craftMsg from '../locale';
 
 import CraftVisualizationColumn from './CraftVisualizationColumn';
@@ -455,7 +455,6 @@ export default class Craft {
   }
 
   static setCurrentCharacter(name = DEFAULT_CHARACTER) {
-    trackEvent('Minecraft', 'ChoseCharacter', name);
     Craft.clearPlayerState();
     trySetLocalStorage('craftSelectedPlayer', name);
   }
@@ -714,7 +713,7 @@ export default class Craft {
 
     // Run user generated code, calling appCodeOrgAPI
     let code = '';
-    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+    let codeBlocks = getCodeBlocks();
     if (studioApp().initializationBlocks) {
       codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
     }

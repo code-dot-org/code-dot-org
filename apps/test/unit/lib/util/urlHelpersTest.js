@@ -1,11 +1,13 @@
-import {expect} from '../../../util/reconfiguredChai';
-import {stubWindowDashboard, stubWindowPegasus} from '../../../util/testUtils';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {
   pegasus,
   studio,
   metaTagDescription,
 } from '@cdo/apps/lib/util/urlHelpers';
-import sinon from 'sinon';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {stubWindowDashboard, stubWindowPegasus} from '../../../util/testUtils';
 
 describe('pegasus()', () => {
   describe('from dashboard', () => {

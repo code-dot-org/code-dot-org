@@ -1,0 +1,15 @@
+name 'VPL-Devices-22-post-survey_CSD-PL-24_-foundations-24'
+title 'Post-survey'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'SP-VPL-postSurvey-Devices-preamble-22_CSD-PL-24_-foundations-24'
+level 'SP-VPL-PostSuvey-22-Q1_CSD-PL-24_-foundations-24'
+level 'SP-VPL-PostSuvey-22-Q6_CSD-PL-24_-foundations-24'
+level 'SP-VPL-PreSuvey-Devices-22-Q3_CSD-PL-24_-foundations-24'
+level 'SP-VPL-PostSuvey-Devices-22-Q2_CSD-PL-24_-foundations-24'
+level 'SP-VPL-PostSuvey-Devices-22-Q3_CSD-PL-24_-foundations-24'
+level 'SP-VPL-PostSurvey-Devices-22-Q7_-foundations-24'
+level 'SP-VPL-PostSurvey-Devices-22-Q5_-foundations-24'
+level 'SP-VPL-PostSurvey-Devices-22-Q4_-foundations-24'

@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :assert_child_account_policy
+  before_action :handle_cap_lockout, :assert_lms_landing_policy, if: :current_user
 
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -28,6 +28,8 @@ class ApplicationController < ActionController::Base
   before_action :fix_crawlers_with_bad_accept_headers
 
   before_action :clear_sign_up_session_vars
+
+  before_action :initialize_statsig_session
 
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
@@ -127,7 +129,9 @@ class ApplicationController < ActionController::Base
   # set in accounts created/updated in tests, but do not
   # want to be set via account creates/updates otherwise.
   UI_TEST_ATTRIBUTES = [
-    :sign_in_count
+    :sign_in_count,
+    :provider,
+    :created_at,
   ].freeze
 
   PERMITTED_USER_FIELDS = [
@@ -330,17 +334,24 @@ class ApplicationController < ActionController::Base
 
   # Check that the user is compliant with the Child Account Policy. If they
   # are not compliant, then we need to send them to the lockout page.
-  protected def assert_child_account_policy
+  protected def handle_cap_lockout
     # Check that the child account policy is currently enabled.
     return unless ::Cpa.cpa_experience(request)
 
-    # Anonymous users are NOT affected by our Child Account Policy
-    return unless current_user
+    # Transits the user to the CAP grace period if they are eligible.
+    Services::ChildAccount::GracePeriodHandler.call(user: current_user)
+
+    # Locks out the user if they are not compliant with CAP, otherwise, do nothing.
+    return unless Services::ChildAccount::LockoutHandler.call(user: current_user)
 
     # URLs we should not redirect.
     return if Set[
+      # Allow retrieval of current user data for event reporting
+      api_v1_users_current_path,
       # Don't block any user from signing out
       destroy_user_session_path,
+      # Allow retrieval of CSRF token
+      get_token_path,
       # Don't block any user from changing the language
       locale_path,
       # Avoid an infinite redirect loop to the lockout page
@@ -351,7 +362,45 @@ class ApplicationController < ActionController::Base
       users_set_student_information_path,
     ].include?(request.path)
 
-    redirect_to lockout_path unless Policies::ChildAccount.compliant?(current_user) || Policies::ChildAccount.user_predates_policy?(current_user)
+    redirect_to lockout_path
+  rescue StandardError => exception
+    Honeybadger.notify(
+      exception,
+      error_message: 'Failed to apply the Child Account Policy to the user',
+      context: {
+        user_id: current_user.id,
+        request_path: request.path,
+      }
+    )
+  end
+
+  # Check that the user has completed the LMS onboarding flow
+  protected def assert_lms_landing_policy
+    return unless Policies::Lti.account_linking?(session, current_user)
+
+    # URLs we should not redirect.
+    return if Set[
+      # Don't block any user from signing out
+      destroy_user_session_path,
+      # Don't block any user from changing the language
+      locale_path,
+      # Avoid an infinite redirect loop to the lockout page
+      lti_v1_account_linking_landing_path,
+      # Allow the 'finish link' path
+      lti_v1_account_linking_finish_link_path,
+      # Allow API call to set lockout state
+      lti_v1_account_linking_new_account_path,
+      # Allow cancelling the link
+      users_cancel_path
+    ].include?(request.path)
+
+    redirect_to lti_v1_account_linking_landing_path
+  end
+
+  # Creates a stable statsig id for use of session tracking (whether the user is logged in or not)
+  # Use this session variable when you want to track the user journey when the user is not logged in.
+  protected def initialize_statsig_session
+    session[:statsig_stable_id] ||= SecureRandom.uuid
   end
 
   private def pairing_still_enabled

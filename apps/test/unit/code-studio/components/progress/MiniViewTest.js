@@ -1,7 +1,7 @@
-import React from 'react';
-import {assert} from '../../../../util/reconfiguredChai';
-import {UnconnectedMiniView as MiniView} from '@cdo/apps/code-studio/components/progress/MiniView';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
+import {UnconnectedMiniView as MiniView} from '@cdo/apps/code-studio/components/progress/MiniView';
 
 describe('MiniView', () => {
   const defaultProps = {
@@ -18,9 +18,9 @@ describe('MiniView', () => {
 
     const body = wrapper.childAt(1);
 
-    assert.equal(body.props().className, 'loading');
-    assert.equal(wrapper.find('MiniViewTopRow').length, 1);
-    assert.equal(wrapper.find('UnitOverview').length, 0);
+    expect(body.props().className).toEqual('loading');
+    expect(wrapper.find('MiniViewTopRow').length).toEqual(1);
+    expect(wrapper.find('UnitOverview').length).toEqual(0);
   });
 
   it('shows course progress once progress has loaded', () => {
@@ -28,11 +28,10 @@ describe('MiniView', () => {
       <MiniView {...defaultProps} hasFullProgress={true} />
     );
 
-    assert.equal(
-      wrapper.find(n => n.props().className === 'loading').length,
+    expect(wrapper.find(n => n.props().className === 'loading').length).toEqual(
       0
     );
-    assert.equal(wrapper.find('Connect(ProgressTable)').length, 1);
+    expect(wrapper.find('Connect(ProgressTable)').length).toEqual(1);
   });
 
   it('shows GoogleClassroomAttributionLabel once progress has loaded', () => {
@@ -40,24 +39,22 @@ describe('MiniView', () => {
       <MiniView {...defaultProps} hasFullProgress={true} />
     );
 
-    assert.equal(
-      wrapper.find(n => n.props().className === 'loading').length,
+    expect(wrapper.find(n => n.props().className === 'loading').length).toEqual(
       0
     );
-    assert.equal(
-      wrapper.find('Connect(GoogleClassroomAttributionLabel)').length,
-      1
-    );
+    expect(
+      wrapper.find('Connect(GoogleClassroomAttributionLabel)').length
+    ).toEqual(1);
   });
 
   it('shows MiniViewTopRow if not minimal', () => {
     const wrapper = shallow(<MiniView {...defaultProps} minimal={false} />);
-    assert.equal(wrapper.find('MiniViewTopRow').length, 1);
+    expect(wrapper.find('MiniViewTopRow').length).toEqual(1);
   });
 
   it('hides MiniViewTopRow if minimal', () => {
     const wrapper = shallow(<MiniView {...defaultProps} minimal={true} />);
-    assert.equal(wrapper.find('MiniViewTopRow').length, 0);
+    expect(wrapper.find('MiniViewTopRow').length).toEqual(0);
   });
 
   it('has larger margins in group view', () => {
@@ -66,7 +63,7 @@ describe('MiniView', () => {
     );
 
     const bodyDiv = wrapper.children().last();
-    assert.equal(bodyDiv.name(), 'div');
-    assert.propertyVal(bodyDiv.prop('style'), 'margin', 20);
+    expect(bodyDiv.name()).toEqual('div');
+    expect(bodyDiv.prop('style')['margin']).toBe(20);
   });
 });

@@ -1,13 +1,13 @@
 import appMain from '@cdo/apps/appMain';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import Poetry from '@cdo/apps/p5lab/poetry/Poetry';
-import blocks from '@cdo/apps/p5lab/spritelab/blocks';
-import skins from '@cdo/apps/p5lab/skins';
-import levels from '@cdo/apps/p5lab/levels';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
-import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import levels from '@cdo/apps/p5lab/levels';
+import Poetry from '@cdo/apps/p5lab/poetry/Poetry';
+import skins from '@cdo/apps/p5lab/skins';
+import blocks from '@cdo/apps/p5lab/spritelab/blocks';
+import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 export default function loadPoetry(options) {
   options.skinsModule = skins;

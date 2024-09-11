@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-customizing-pilot-v1",
-    "serialized_at": "2024-05-21 05:18:55 UTC",
+    "serialized_at": "2024-06-04 22:01:56 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -204,7 +204,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "This lesson will be available the week of 5/14"
+        "overview": "In this lesson, students are introduced to Model Cards and Foresight in AI charts as tools used to plan for how AI products are used. Students begin by reflecting on what materials are provided to users when we buy a new product, then explore how a Model Card serves a similar purpose for chatbots to clarify and caution how a particular chatbot product should and shouldn’t be used. Then, students explore an example of a Library chatbot and use a Foresight in AI table to examine the intended and unintended users and use-cases for this chatbot. After this example, students create their own model card for a fictitious chatbot, and then analyze each other’s model cards with a Foresight in AI chart."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -220,7 +220,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "This lesson will be available the week of 5/14"
+        "overview": "In this lesson, students explore how to create model cards as they develop their chatbots. Students start by helping a friend design a chatbot to give more specific recommendations using a series of multiple-choice focus questions. Once these decisions are made, students document these decisions on the model card for the chatbot, emphasizing how a model card can also serve as documentation as you make decisions during chatbot development. After doing an example as a class, students choose a new scenario and repeat this process."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -718,6 +718,7 @@
       "key": "387913a6-27e2-4029-a426-c00e77247a36",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -731,6 +732,7 @@
       "key": "d0b5f7e2-d954-4107-9db7-50b7863119d6",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -744,6 +746,7 @@
       "key": "5b88c15c-f087-4551-a49d-97b3fc732455",
       "position": 3,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -770,6 +773,7 @@
       "key": "eb750d2b-9ce0-4251-95e7-86e85d5fdedc",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -783,6 +787,7 @@
       "key": "967bd5ed-9103-484e-9d5b-48f7584f3f2f",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -809,6 +814,7 @@
       "key": "ec6341ab-36c8-4cb9-bab8-51f483737a80",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Pilot Feedback"
       },
       "seeding_key": {
@@ -2375,6 +2381,7 @@
       "key": "b80f9d15-461d-4b99-a47e-b27716da31dc",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> When you buy a new appliance or tool or new device or even a children’s toy, what different kinds of material does it come with? List as many things as you can think of. For example: an instructions manual\n\t\t<br />\n\t\t<br />Have students discuss in small groups, then ask folks to share out in a popcorn style. This can be a quick moment before continuing to the next slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Try to generate a wide variety of items, such as:\n\t\t<br />- Instructions manual\n\t\t<br />- Safety sheet\n\t\t<br />- Contact information\n\t\t<br />- Warranty card\n\t\t<br />- Similar products card\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_1\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Why do you think it’s important for companies to supply all of this stuff with a new product?\n\t\t<br />\n\t\t<br />Have students discuss in small groups, before continuing to a class discussion.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may list a variety of reasons, such as:\n\t\t<br />- It’s important to give the user guidance on how to use the new thing they bought\n\t\t<br />- It’s important to warn the user about any safety features so they don’t misuse it or get hurt\n\t\t<br />- There may be laws or regulations that require certain information to be provided\n\t\t<br />- Companies may be trying to sell more things \n\t\t<br />\n\t\t<br />As more examples are generated, try to tie this to a larger theme around the “social contract” between things we use and the companies that make them. Sometimes companies are required to provide information through regulation, but other times it’s just part of our own expectations around how we should start using a new product.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> When we buy new products, there’s a whole host of information provided to us so we can better understand and use their products. Today we’ll investigate a similar idea with chatbots and what information we should be providing to people who want to use the chatbots we create.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> What information should we be providing to potential users of our chatbots?\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "b80f9d15-461d-4b99-a47e-b27716da31dc",
@@ -2385,6 +2392,13 @@
       "key": "bb04cfd7-004f-46c7-8f0e-264f3f741ce5",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_11\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> If we were “shipping” our chatbot to a new user, what kind of information do you think should be included? For example: what’s an equivalent of a “contact card” or “warranty sheet” or “instruction manual”. Try to phrase things as “We should tell the user…” or “The user should really know about…”\n\t\t<br />\n\t\t<br />Have students write down some of their responses first before discussing with a neighbor, then have a full-class discussion.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a very open-ended prompt meant to foreshadow the rest of the lesson. Some answers might include “The user should really know who made the chatbot”, or “We should tell the user about any hallucinations” or “The user should really know why we made the chatbot and how it works”. Focus on responses that can be generalized across chatbots rather than something that might be specific to certain kinds of chatbots. In general, responses to this prompt should generally fall under Safety information (ie: what to do and not do), Transparency information (ie: how the chatbot was made and why), and Usability information (ie: how to get started).\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_23\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> One way to add this kind of extra information to a chatbot is to give it a special nametag, called a Model Card.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Model cards contain additional information about the chatbot for the user to review. These can include safety features which help the user know how to use the chatbot responsibly. Or transparency information, so the user knows how the chatbot was created or designed. And even usability information, which helps the user know where to get started.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_102\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Another way to think about model cards is how nutrition labels work on your food.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> They both provide information about how the product was made\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> any warnings you should be aware of before using\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> and sometimes there are even examples of what you can use the chatbot for. Today, we’re going to explore an example model card and see how it can be useful in preparing for how chatbots can be used in society.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Model Cards in the Real World** - Model Cards are not a concept we invented - they were first coined in the paper <a href=\"https://arxiv.org/pdf/1810.03993\" target=\"_blank\">Model Cards for Model Reporting</a> via a project led by Dr Timnit Gebru. To date, model cards are used for many AI models and are an industry best-practice. To reinforce this point with students, you could decide to show them the <a href=\"https://huggingface.co/docs/hub/model-card-annotated\" target=\"_blank\">Model Card Template on HuggingFace</a> or show them an example of a model card <a href=\"https://huggingface.co/distilbert/distilgpt2\" target=\"_blank\">like the one for DistilGPT2</a>."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bb04cfd7-004f-46c7-8f0e-264f3f741ce5",
@@ -2392,9 +2406,78 @@
       }
     },
     {
+      "key": "dee4a0d5-1119-40ce-81ba-496f63150d7a",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g1413e1213c5_0_216\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> <a href=\"https://docs.google.com/document/d/1o4Yv3chFH5WM8jeQTSfvFsJVA5YVjLM-hgEJsB2dSKQ/edit\" target=\"_blank\">Activity Guide - Model Cards</a> to each student\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g1413e1213c5_0_280\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read over the model card. Be ready to discuss:\n\t\t<br />- What’s a piece of information related to safety?\n\t\t<br />- What’s a piece of information related to transparency?\n\t\t<br />- What’s a piece of information related to usability?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Have students read the article. Consider using a “marking the text” strategy, like highlighting key words or annotating in the margins.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g7f83d971788d9709_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What’s a piece of information related to safety? What’s a piece of information related to transparency? What’s a piece of information related to usability?\n\t\t<br />\n\t\t<br />Have students share in a small group before sharing as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Try to generate 1-2 answers for each topic. Examples might include:\n\t\t<br />- Safety: the model card says not to enter personal information\n\t\t<br />- Transparency: the model has been tested with staff at the Des Moines. The model isn’t always accurate with obscure recommendations or recent releases.\n\t\t<br />- Usability: the intended uses section describes how to use the model, and there are example prompts and topics.\n\t\t<br />\n\t\t<br />Ultimately, this is an opportunity for students to get familiar with the structure of a model card and how it communicates information to a potential user.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_241\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the scenario aloud: The Des Moines library has decided they want to use this chatbot in their library system.  But - they’ve also read stories of chatbots being misused in the past, so they don’t want any surprises. Using their model card, can we help them imagine how this chatbot will impact their community?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_261\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> One thing that can help us with this analysis is a Foresight in AI chart. It’s a way to imagine how chatbots or other AI products will get used in the real-world, imagining both the intended and unintended situations that can occur.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Foresight in AI** - The Foresight in AI chart was initially developed by Dr Margaret Mitchell, who is also a co-creator of Model Cards. You can read more about Model Cards and the Foresight in AI chart in the article <a href=\"https://www.techpolicy.press/the-pillars-of-a-rightsbased-approach-to-ai-development/\" target=\"_blank\">The Pillars of a Rights-Based Approach to AI Development</a>."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dee4a0d5-1119-40ce-81ba-496f63150d7a",
+        "lesson_activity.key": "d0b5f7e2-d954-4107-9db7-50b7863119d6"
+      }
+    },
+    {
+      "key": "a9c79fcf-e2f6-4c15-a3f4-3703d4307cba",
+      "position": 3,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_269\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> For example, here’s how we could use this chart with an Image Generation model.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The intended users might be artists, and the intended use-case might be to creative artistic images. The result is: artists make cool new art! Awesome!\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And then there’s the intended audience, or the folks who are affected by this. For example, different art collectors who want to buy and curate new art. Also awesome!\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> But there may also be some unintended consequences. For example, all the artists whose images were used to train the model are also affected by this. They were never paid for their work, and now it’s easy to generate similar artwork based on their own style. How unfair is that?\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There also may be some unintended users trying to use the model in unintended ways. For example, someone interested in misinformation could use this tool to make realistic fake images of political candidates to create confusion during an election.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> These are just some possible answers - there are lots of different users and use-cases we could imagine! And as we make the chart, not all boxes get filled - some of them are left empty if the different situations don’t match up neatly. And that’s fine! Someone else could’ve imagined a different set of users or use-cases and ended up with a different chart!\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Crediting this Example** - The example on this slide is based on an <a href=\"https://x.com/mmitchell_ai/status/1663634099414925312\" target=\"_blank\">example presented by Dr Margaret Mitchell on X (formerly twitter)</a>."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a9c79fcf-e2f6-4c15-a3f4-3703d4307cba",
+        "lesson_activity.key": "d0b5f7e2-d954-4107-9db7-50b7863119d6"
+      }
+    },
+    {
+      "key": "0c8ba7ec-a4f1-41a5-bc1f-bced5a48d0e4",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_290\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Let’s return to the Library chatbot for Des Moines and imagine how we could start filling this out.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Who do you think is an intended user for this chatbot? Someone this chatbot was made for? Who do you think is an unintended user of this chatbot? Someone who might use this chatbot, but isn’t the target audience?\n\t\t<br />\n\t\t<br />Have students share with a neighbor before generating a few answers as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should use empathy to imagine themselves in situations where this chatbot could be used by them or someone they know. There are many acceptable answers to this prompt, such as:\n\t\t<br />- Intended users: a student taking a class, an adult looking for a hobby, an avid reader wanting to save money by using the library instead of buying books\n\t\t<br />- Unintended users: someone outside of Des Moines who might accidentally discover the chatbot, a malicious hacker looking to disrupt services\n\t\t<br />\n\t\t<br />As students share responses, consider writing them down on poster paper or a whiteboard.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_315\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Who do you think is an intended use for this chatbot? What is a task someone might try to complete? Who do you think is an unintended use for this chatbot? What is a task someone might try to use this for, but they really shouldn’t?\n\t\t<br />\n\t\t<br />Have students share with a neighbor before generating a few answers as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should imagine reasons someone might use this chatbot. They should rely on the model card, especially the intended uses section of the model card. There are many acceptable answers to this prompt, such as:\n\t\t<br />- Intended uses: looking for a recommendation, checking the status of a book, looking up the library hours.\n\t\t<br />- Unintended uses: asking off-topic questions, using it as a search engine for specific catalog information\n\t\t<br />\n\t\t<br />As students share responses, consider writing them down on poster paper or a whiteboard.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_332\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Based on the last two discussions, can we fill in one of these boxes?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Students should attempt to match the combinations of users and use-cases brainstormed in the last few slides. Some of these combinations are easier than others - for example, the intended user matching with the intended use-case usually looks like the ideal scenario you would imagine, and the unintended user matched with an unintended uses case can also be easier to imagine. Encourage students to think of the more nuanced pairings, like users who are affected by the intended use cases.\n\t\t<br />\n\t\t<br />Don’t regroup for a class discussion - instead, as students discuss, begin passing out the handout on the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_349\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> <a href=\"https://docs.google.com/document/d/1TkceFBX_Tc-xNE4gBeTHtkUbloPkiargShh9yxOIo-s/edit\" target=\"_blank\">Foresight in AI chart</a> to each student\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_219\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Another student filled out this chart for the Des Moines Library LibBot. What’s an idea that felt similar to your thoughts in the last discussion? What’s one idea that’s a surprise and you didn’t consider?\n\t\t<br />\n\t\t<br />Have students read over the chart, then discuss with a neighbor before regrouping.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This can be a quick discussion, but it should also cement students’ understanding of how this chart can be used to represent potential uses (and misuses) of chatbots and AI before continuing to the next activity. Student responses will vary depending on how the discussion has gone so far, but listen for ways in which students are identifying unique users and use-cases, and imagining both the intended and unintended consequences of this chatbot.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Real-World Connection** - This scenario investigates the potential uses and misuses of a chatbot in the context of library book recommendations. This is very loosely inspired by real-world events where school districts relied on chatbots like ChatGPT to make decisions about books to comply with state laws. In an effort to comply with these new laws, several school districts hastily resorted to using AI to make recommendations on certain books to remove from circulation. This is an example of how an intended user - libraries and schools - were using chatbots for a surprising and unintended use case with a wide variety of affected uses (also both intended and unintended). You can read more about this situation in the following articles:\n- <a href=\"https://www.edweek.org/teaching-learning/an-iowa-district-used-ai-to-figure-out-which-books-to-ban/2023/08\" target=\"_blank\">Edweek 2023</a>\n- <a href=\"https://www.brennancenter.org/our-work/analysis-opinion/using-ai-comply-book-bans-makes-those-laws-more-dangerous\" target=\"_blank\">Brennan Center for Justice</a>"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0c8ba7ec-a4f1-41a5-bc1f-bced5a48d0e4",
+        "lesson_activity.key": "d0b5f7e2-d954-4107-9db7-50b7863119d6"
+      }
+    },
+    {
+      "key": "ab4beda0-8fa9-4970-88c0-e24bf6321eed",
+      "position": 5,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_376\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Now it’s your turn! Flip over the Model Card handout to the back side! Imagine a chatbot you would like to make, or think of a chatbot you made earlier in this class. Create a model card for this chatbot!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they start to make their own model card for a chatbot they want to create. This is an aspirational activity, where students are imagining how this chatbot would look and function before they actually create it.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=gca418c6afa_0_1529\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Now Trade Your Model Card with Someone Else!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_389\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Flip over the Foresight in AI handout to the back side! You’re going to fill out the chart for your partner’s model card. \n\t\t<br />- Try to identify the set of intended users and use-cases that this model is aiming for.\n\t\t<br />- Try to identify some unintended users and use-cases they may not have considered!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they fill in the Foresight in AI chart. If students seem stuck, have them consider the model card to fill in some of the information such as the intended user and use-case. It’s also okay for not every box to be filled in.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g2df5ec74709_0_402\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Now Trade Your Model Card with Someone Else!\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "ab4beda0-8fa9-4970-88c0-e24bf6321eed",
+        "lesson_activity.key": "d0b5f7e2-d954-4107-9db7-50b7863119d6"
+      }
+    },
+    {
       "key": "edb0e3a5-5e65-4a42-9ea3-bc1311ce199b",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What’s something you expected in the Foresight in AI chart that your partner completed? What’s something unexpected that you hadn’t considered?\n\t\t<br />\n\t\t<br />Have students complete these prompts as an exit ticket or in a journal. Consider collecting these along with the Model Card and Foresight in AI handouts.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity: Model Cards & User Experiences** - The Model Card sheet and the Foresight in AI charts can be collected and used to assess how well students are able to articulate the uses and misuses of chatbots, and how well students can imagine the intended and unintended impacts of chatbots on society."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "edb0e3a5-5e65-4a42-9ea3-bc1311ce199b",
@@ -2402,9 +2485,21 @@
       }
     },
     {
+      "key": "b95708cd-4b59-467d-aaf4-0683e65112b7",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/export/png?id=1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> What information should we be providing to potential users of our chatbots?\n\t\t<br />\n\t\t<br />Pilot Survey Feedback: Please encourage students to submit feedback to the Code.org Curriculum Writers via the QR code on the slide. Alternatively, you can provide students with the pre-filled link <a href=\"https://bit.ly/customizing-llms-student-survey-lesson-10\" target=\"_blank\">https://bit.ly/customizing-llms-student-survey-lesson-10</a>\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "b95708cd-4b59-467d-aaf4-0683e65112b7",
+        "lesson_activity.key": "5b88c15c-f087-4551-a49d-97b3fc732455"
+      }
+    },
+    {
       "key": "06758942-c67e-46ee-a7e8-ef7a241dc441",
       "position": 1,
       "properties": {
+        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
       },
       "seeding_key": {
         "activity_section.key": "06758942-c67e-46ee-a7e8-ef7a241dc441",
@@ -2415,6 +2510,13 @@
       "key": "93e3c5f6-a3fb-4b14-be08-88bc63969e18",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> When scientists perform experiments, they take detailed notes about their process in specialized notebooks. Why is that a useful thing for scientists to do?\n\t\t<br />\n\t\t<br />Have students share in small groups before hearing a few answers as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Focus on responses that emphasize how this is useful for the scientist - as a way to review notes later - and also for people who want to review the experiment later, since they can look at the notes that the scientist has taken. Ideally this question relates to experiences students have in their science classes - if not, consider extending the question towards a math context as well where we are asked to show our work step-by-step. The same rationale applies - it helps us see how we got to a certain point in the problem, and it helps others coming later understand what we did to get here. As the discussion winds down, emphasize how this notebook could be thought of documentation for the experiment, similar to the type of documentation provided by a model card from yesterday’s lesson.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Coding Documentation** - If your class has done coding and emphasized writing comments in code, consider adjusting this warm-up to instead ask about why we write comments in our code? And in the discussion, make a connection between comments-as-coding-documentation to model cards as chatbot documentation. Just like we should comment our code for ourselves and others, model cards help us document our decisions making chatbots for ourselves and others."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "93e3c5f6-a3fb-4b14-be08-88bc63969e18",
@@ -2422,8 +2524,31 @@
       }
     },
     {
-      "key": "6aeda3b4-5e6c-46c7-b4a2-32be825ba560",
+      "key": "ada97b17-1c03-4199-961b-b7cf9b2b2005",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are lots of situations where it’s helpful to keep track of the decisions we made as we solved a problem or created something. A Model Card can do the same thing for chatbots - today we’ll explore how a model card can help document the decisions we make when designing a chatbot.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How can a Model Card help document decisions when making a chatbot?\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "ada97b17-1c03-4199-961b-b7cf9b2b2005",
+        "lesson_activity.key": "eb750d2b-9ce0-4251-95e7-86e85d5fdedc"
+      }
+    },
+    {
+      "key": "37e05318-48e1-4fa1-af74-a26ba6b813a6",
       "position": 1,
+      "properties": {
+        "description": "**Getting Familiar:** These are the levels students will complete throughout the lesson. We recommend briefly exploring the levels yourself before reading the rest of the lesson plan. Some levels are meant to be completed independently by students, but others are meant to motivate class discussion or lead to moments of direct instruction in the slides. Very rarely should students be working through levels completely self-paced.",
+        "name": "Student Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "37e05318-48e1-4fa1-af74-a26ba6b813a6",
+        "lesson_activity.key": "967bd5ed-9103-484e-9d5b-48f7584f3f2f"
+      }
+    },
+    {
+      "key": "6aeda3b4-5e6c-46c7-b4a2-32be825ba560",
+      "position": 2,
       "properties": {
         "progression_name": "Initial Scenario"
       },
@@ -2434,7 +2559,7 @@
     },
     {
       "key": "5d071f29-70df-4cfb-83bc-8f2dc04a7df4",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "You Decide!"
       },
@@ -2444,9 +2569,79 @@
       }
     },
     {
+      "key": "c9c7fae7-37ef-4997-b23e-308783998196",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2e00832fd1e_0_5\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’ve been asked to help a few people improve their chatbots. As we do, we’ll be making decisions about how the chatbot behaves. We’re going to practice keeping track of these decisions so we can include them in our model card when we make the chatbot.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1-lIWtV556QCZ2hUlaHajtTugty9-TWy84YGk8UvXZH4/edit\" target=\"_blank\">Model Card Class Scenario</a> to each student.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2e00832fd1e_0_17\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview as a class.\n\t\t<br />\n\t\t<br />Isaac wants to make a chatbot to help people in his community be better cooks because he read research about how home cooked meals can improve health and wellness in families. But - he's having trouble getting people to use his chatbot. He needs to make some choices for how to further specialize it so folks will find it more useful.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "name": "Teaching Guide",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: As a Class? Or Independently?** - We recommend going through this first example as a class to help students understand how the decisions they make translate into information on their model card and so they can work in pairs if they’d like. After this example, students will have a choice over which scenarios to further personalize and can work independently to make their own choices."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c9c7fae7-37ef-4997-b23e-308783998196",
+        "lesson_activity.key": "967bd5ed-9103-484e-9d5b-48f7584f3f2f"
+      }
+    },
+    {
+      "key": "edab0673-b186-4597-a36c-397a16db5ac9",
+      "position": 5,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2e00832fd1e_0_30\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> As a class, vote a class answer to the question:\n\t\t<br />\n\t\t<br />Focusing Question 1: What is the intended cuisine his chatbot should focus on?\n\t\t<br />A) Italian\n\t\t<br />B) West African\n\t\t<br />C) Korean\n\t\t<br />D) Chilean\n\t\t<br />\n\t\t<br />Students should circle the correct answer on their activity guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2e00832fd1e_0_47\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> As a class, vote a class answer to the question:\n\t\t<br />\n\t\t<br />Focusing Question 2: Who should he design the chatbot for?\n\t\t<br />A) Teenagers wanting to cook things when they're home by themselves\n\t\t<br />B) Single people wanting to impress on a date\n\t\t<br />C) Parents wanting to cook things for kids\n\t\t<br />D) Older folks with limited mobility\n\t\t<br />\n\t\t<br />Students should circle the correct answer on their activity guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2e00832fd1e_0_56\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> As a class, vote a class answer to the question:\n\t\t<br />\n\t\t<br />Focusing Question 3: What should he assume about the ingredients his users have?\n\t\t<br />A) Provide advice on how to \"make it work\" with typical ingredients in a grocery store.\n\t\t<br />B) Provide advice on where to order specialized ingredients that can be used in dishes\n\t\t<br />\n\t\t<br />Students should circle the correct answer on their activity guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2e00832fd1e_0_65\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> As a class, vote a class answer to the question:\n\t\t<br />\n\t\t<br />Focusing Question 4: How should the chatbot cater to the people who will eat the food it recommends?\n\t\t<br />A) Avoid recipes with common allergens in them\n\t\t<br />B) Avoid recipes that require specialized cooking equipment\n\t\t<br />C) Prioritize recipes that are gluten free\n\t\t<br />D) Prioritize recipes that are vegan-friendly\n\t\t<br />\n\t\t<br />Students should circle the correct answer on their activity guide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Connecting to Foresight in AI Chart** - These questions implicitly connect back to the Foresight in AI chart, prompting students to narrow the chatbot by focusing on who the intended users are or intended use cases. For example, Focus Question 4 helps think about who the affected users are who would be on the receiving end of the recipes created by this chatbot."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "edab0673-b186-4597-a36c-397a16db5ac9",
+        "lesson_activity.key": "967bd5ed-9103-484e-9d5b-48f7584f3f2f"
+      }
+    },
+    {
+      "key": "149e4189-a968-4fa6-938a-01b9b48444ae",
+      "position": 6,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2e00832fd1e_0_84\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Isaac’s original chatbot was very general. That meant it was accessible to lots of people, but maybe didn’t meet everyone’s needs or was “just fine”.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As we answer these questions, we’re making decisions about who the chatbot is designed for and what it’s ideal use-cases are, just like we explored with the Foresight in AI chart.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> A model card can help us keep track of these decisions as we build our chatbots. They’re like the documentation for the chatbot we make and should include decisions like these ones.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This makes it easier for the right people to find our chatbot and use it effectively. And the better it is at meeting their needs, the more they’ll love it!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2029dc0a488_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 11 Level 1. This level lets you complete the chatbot for Isaac’s scenario\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Complete these steps:\n\t\t<br />1) Make Isaac’s chatbot! Choose a system prompt that represents the decisions made as a class\u000b2) Test the chatbot to make sure it works as expected! You'll need to write down how you tested the chatbot on your model card!\n\t\t<br />3) Create a Model Card based on these decisions\n\t\t<br />4) “Publish” the chatbot and see how it would look to a user!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they complete the chatbot. Students should spend a minimal amount of time on customizing the system prompt and instead focus on documenting their decisions and how this chatbot works. They should also test their chatbot and document how they make sure the chatbot works as intended in the “Testing and Evaluation” section of the chatbot.\n\t\t<br />\n\t\t<br />Once students have finished this chatbot, explain the next slide and then let them work on making a second chatbot.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Focusing on Writing** - Students may be surprised to suddenly find themselves writing and explaining and reflecting about their chatbots. Students who may have been confident and engaged in earlier lessons may find themselves deflated by the task of writing about their chatbots and describing their decisions. It can be helpful to acknowledge this change in dynamic, but encourage students to lean into it rather than away from it. Taking time to document and describe our chatbots and other digital artifacts is a core part of any new technology, and might take a different set of skills but is just as important. Be sure to provide writing supports to students who may need it, such as having students explain it to you first before writing it down."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "149e4189-a968-4fa6-938a-01b9b48444ae",
+        "lesson_activity.key": "967bd5ed-9103-484e-9d5b-48f7584f3f2f"
+      }
+    },
+    {
+      "key": "7f2a7ad0-0495-4b88-af38-6e32942a0006",
+      "position": 7,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2e00832fd1e_0_187\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview to the class.\n\t\t<br />Now that we’ve helped one person make a chatbot, let’s try another one! There are 3 more people looking for chatbot help. Each of them has their own sheet of decisions to make!\n\t\t<br />\n\t\t<br />Students will need to choose which person they want to work with next - they do not need to work with all three!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Decide how you will let students review the handouts for each new user:\n\t\t<br />1) Provide copies of the handouts in stacks that students can walk up and choose from\n\t\t<br />2) Walk around to each student and ask them which one they want to try and distribute a handout to them\n\t\t<br />3) Have students view the handouts digitally when they go to the next level on the code.org website\n\t\t<br />\n\t\t<br />Links to handouts:\n\t\t<br />- <a href=\"https://docs.google.com/document/d/1fmw324RzOuxAS1NhETm8AApDk56ZmtW-0JluAq-ZPF0/edit\" target=\"_blank\">Scenario 1</a>\n\t\t<br />- <a href=\"https://docs.google.com/document/d/1K317h6vQpqi9AH2QeJzT2E-6K2aEXNA-8k4C3g6LhGM/edit\" target=\"_blank\">Scenario 2</a>\n\t\t<br />- <a href=\"https://docs.google.com/document/d/1VW3RoG-VWhDx7EhylYJmFj2ZY19QEYBOTOQ9RpB682w/edit\" target=\"_blank\">Scenario 3</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g2029dc0a488_0_37\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 11 Level 2. Students can choose which chatbot to work with next\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students do the following:\n\t\t<br />1) Choose at least one other chatbot to create\n\t\t<br />2) Answer the focus questions on the handout to decide how to adjust the chatbot\n\t\t<br />3) Make the chatbot and fill out the model card!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they complete the chatbot. Students should spend a minimal amount of time on customizing the system prompt and instead focus on documenting their decisions and how this chatbot works. They should also test their chatbot and document how they make sure the chatbot works as intended in the “Testing and Evaluation” section of the chatbot.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "7f2a7ad0-0495-4b88-af38-6e32942a0006",
+        "lesson_activity.key": "967bd5ed-9103-484e-9d5b-48f7584f3f2f"
+      }
+    },
+    {
       "key": "e408178b-15f8-42f0-9e83-be328329d708",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> This headline describes a company that had to take down a chatbot after it was discovered to give harmful advice to participants. How do you think a Model Card of Foresight in AI chart could have helped avoid this situation?\n\t\t<br />\n\t\t<br />[<a href=\"https://www.npr.org/2023/06/08/1181131532/eating-disorder-helpline-takes-down-chatbot-after-it-gave-weight-loss-advice\" target=\"_blank\">Link to article source</a>]\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should note how a model card requires a testing and evaluation component, as well as a limitations and warnings component. If the chatbot had been tested in these manners, potential flaws could have been discovered and avoided. Students may also note how a Foresight in AI chart helps imagine unexpected consequences from unintended users or those affected, which could have helped predict this kind of harmful impact.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity: Model Cards & Foresight in AI** - Consider collecting this prompt as an exit ticket as a way to assess the content from the last few days, especially how these tools can be used proactively to assess opportunities and risks proactively."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e408178b-15f8-42f0-9e83-be328329d708",
@@ -2454,9 +2649,21 @@
       }
     },
     {
+      "key": "92a991b4-137d-4c8b-816b-0ced0c979d6c",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/export/png?id=1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How can a Model Card help document decisions when making a chatbot?\n\t\t<br />\n\t\t<br />Pilot Survey Feedback: Please encourage students to submit feedback to the Code.org Curriculum Writers via the QR code on the slide. Alternatively, you can provide students with the pre-filled link <a href=\"https://bit.ly/customizing-llms-student-survey-lesson-11\" target=\"_blank\">https://bit.ly/customizing-llms-student-survey-lesson-11</a>\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "92a991b4-137d-4c8b-816b-0ced0c979d6c",
+        "lesson_activity.key": "09172780-2395-4671-8e8a-f09eafe32d65"
+      }
+    },
+    {
       "key": "37e028ad-596f-45d6-8525-9b68faf0a09b",
       "position": 1,
       "properties": {
+        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
       },
       "seeding_key": {
         "activity_section.key": "37e028ad-596f-45d6-8525-9b68faf0a09b",
@@ -5717,6 +5924,19 @@
       }
     },
     {
+      "name": "Model Cards",
+      "url": "https://docs.google.com/document/d/1o4Yv3chFH5WM8jeQTSfvFsJVA5YVjLM-hgEJsB2dSKQ/edit",
+      "key": "activity_guide_-_model_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide_-_model_cards"
+      }
+    },
+    {
       "name": "Activity Instructions",
       "url": "https://docs.google.com/document/d/1nMp7SJSf_xX2U8MK-mI60NjwKkcUgXI5C2x2x1BLInk/edit#heading=h.59k2gm16lgj2",
       "key": "activity_instructions",
@@ -5777,6 +5997,19 @@
       }
     },
     {
+      "name": "Foresight in AI Chart",
+      "url": "https://docs.google.com/document/d/1TkceFBX_Tc-xNE4gBeTHtkUbloPkiargShh9yxOIo-s/edit",
+      "key": "foresight_in_ai_chart",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "foresight_in_ai_chart"
+      }
+    },
+    {
       "name": "Hugging Face Model Explorer",
       "url": "https://huggingface.co/models?pipeline_tag=text-generation&library=transformers&sort=trending",
       "key": "hugging_face_model_explorer",
@@ -5797,6 +6030,82 @@
       },
       "seeding_key": {
         "resource.key": "interacting_with_language_models"
+      }
+    },
+    {
+      "name": "Model Card - Class Scenario",
+      "url": "https://docs.google.com/document/d/1-lIWtV556QCZ2hUlaHajtTugty9-TWy84YGk8UvXZH4/edit",
+      "key": "model_card_-_class_scenario",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "model_card_-_class_scenario"
+      }
+    },
+    {
+      "name": "Model Card - Scenario 1",
+      "url": "https://docs.google.com/document/d/1fmw324RzOuxAS1NhETm8AApDk56ZmtW-0JluAq-ZPF0/edit#heading=h.10sosi3gwomj",
+      "key": "model_card_-_scenario_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "model_card_-_scenario_1"
+      }
+    },
+    {
+      "name": "Model Card - Scenario 2",
+      "url": "https://docs.google.com/document/d/1K317h6vQpqi9AH2QeJzT2E-6K2aEXNA-8k4C3g6LhGM/edit",
+      "key": "model_card_-_scenario_2",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "model_card_-_scenario_2"
+      }
+    },
+    {
+      "name": "Model Card - Scenario 3",
+      "url": "https://docs.google.com/document/d/1VW3RoG-VWhDx7EhylYJmFj2ZY19QEYBOTOQ9RpB682w/edit",
+      "key": "model_card_-_scenario_3",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "model_card_-_scenario_3"
+      }
+    },
+    {
+      "name": "Model Cards - Exploration",
+      "url": "https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/template/preview",
+      "key": "model_cards_-_exploration",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "model_cards_-_exploration"
+      }
+    },
+    {
+      "name": "Model Cards - Practice",
+      "url": "https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/template/preview",
+      "key": "model_cards_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "model_cards_-_practice"
       }
     },
     {
@@ -5924,6 +6233,24 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "activity_guide_-_model_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "foresight_in_ai_chart"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "model_cards_-_exploration"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "activity_instructions"
       }
@@ -5962,6 +6289,36 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "project_make_your_own_chatbot"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "model_card_-_class_scenario"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "model_card_-_scenario_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "model_card_-_scenario_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "model_card_-_scenario_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "model_cards_-_practice"
       }
     },
     {

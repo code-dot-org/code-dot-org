@@ -1,25 +1,31 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
 import PropTypes from 'prop-types';
-
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import * as applabConstants from './constants';
-import Dialog, {Body, Buttons, Confirm, Cancel} from '../templates/Dialog';
+
 import AssetThumbnail, {
   styles as assetThumbnailStyles,
 } from '../code-studio/components/AssetThumbnail';
+import Dialog, {
+  Body,
+  Buttons,
+  Confirm,
+  Cancel,
+} from '../legacySharedComponents/Dialog';
+import Sounds from '../Sounds';
 import MultiCheckboxSelector, {
   styles as multiCheckboxStyles,
 } from '../templates/MultiCheckboxSelector';
 import color from '../util/color';
-import {toggleImportScreen, importIntoProject} from './redux/screens';
+
+import * as applabConstants from './constants';
 import {
   importableAssetShape,
   importableScreenShape,
   importableProjectShape,
 } from './import';
-import Sounds from '../Sounds';
+import {toggleImportScreen, importIntoProject} from './redux/screens';
 
 const SCALE = 0.1;
 const MARGIN = 10;

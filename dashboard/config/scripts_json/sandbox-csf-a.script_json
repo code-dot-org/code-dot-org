@@ -1,0 +1,3996 @@
+{
+  "script": {
+    "name": "sandbox-csf-a",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-08-02 16:45:35 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "sandbox-csf-a"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Course A overview ",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Digital Citizenship",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Unplugged Lessons",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "Learn to Drag and Drop",
+      "name": "Learn to Drag and Drop",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This **skill-building** lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.",
+        "preparation": "- Watch the ***How to Make a Class Section** on Code.org - Teacher Video. Create your own class section on Code.org and make sure every student has a card with their passcode on it.\n- Make sure students will be able to access Lesson 2 from their devices. Consider whether you want to hide future lessons to prevent students from moving ahead too quickly.\n- Have the school IT person add a quick link for your class section to the computer desktop.\n- Review the Common Sense Education website for more online safety content.",
+        "purpose": "The main goal of this lesson is to build students' experience with computers. By covering the most basic computer functions such as clicking, dragging, and dropping, we are creating a more equal playing field in the class for future puzzles. This lesson also provides a great opportunity to introduce basic computer hardware terminology, potentially including \"mouse\", \"trackpad\" or \"touchscreen\", depending on your devices.",
+        "student_overview": "Click and drag to finish the puzzles."
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "Block-Based Coding",
+      "name": "Block-Based Coding",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**You will:**\n\n* Learn about block based programming.\n* Practice connecting, taking apart, and trashing blocks.\n* Use blocks from the toolbox.\n\n\n**Suggested time:** 5 minutes",
+        "student_overview": "**You will:**\n\n* Learn about block based programming.\n* Practice connecting, taking apart, and trashing blocks.\n* Use blocks from the toolbox.\n\n\n**Suggested time:** 5 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "Programming with Rey and BB-8",
+      "name": "Sequencing and Algorithms ",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **skill-building** lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with _BB-8_.",
+        "preparation": " - Play through the puzzles corresponding with this lesson to find any potential problem areas for your class.\n - Review ***CS Fundamentals Main Activity Tips - Lesson Recommendations**.\n - Make sure every student has a Reflection Journal.",
+        "purpose": "With transfer of knowledge in mind, this lesson gives students a new environment to practice the skills that they have been cultivating. _Star Wars_ fans will jump for joy when they see these puzzles. Each puzzle in this series has been added to provide a deeper understanding of the basic concepts that they will be using throughout the rest of this course.",
+        "student_overview": "Help BB-8 collect the scrap metal."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "Ocean Scene with Loops",
+      "name": "Loops",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will create their own images.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure each student has a reflection journal.",
+        "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of  `repeat` loops.",
+        "student_overview": "Use loops and patterns to finish the images."
+      },
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "Mini-Project: On the Move with Play Lab",
+      "name": "Mini-Project: On the Move with Play Lab",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **mini-project**, students will use events in Play Lab and apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure every student has a reflection journal.",
+        "purpose": "Students will further develop their understanding of events using Play Lab today. Events are very common in most computer programs. In this activity, students will use events to make a character move around the screen, make noises, and change backgrounds based on user-initiated events.",
+        "student_overview": "Create your own game or story."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "End of Course Project",
+      "name": "End of Course Project",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "In this **project** lesson, students apply what they have learned about sequencing and loops with the Artist.",
+        "preparation": "* Write and code your own story for the Artist in advance to inspire students!\n",
+        "purpose": "This lesson gives students one last opportunity to creatively use their new computer science skills.",
+        "student_overview": "Tell a story with the Artist!"
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e53709a9-1b88-4c6c-9ff7-a5540dbcebc3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e53709a9-1b88-4c6c-9ff7-a5540dbcebc3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "cdb1e375-0ded-4310-b450-69b20ab59680",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cdb1e375-0ded-4310-b450-69b20ab59680",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "fda0955f-9cdc-461a-98fb-2a8e193206d6",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fda0955f-9cdc-461a-98fb-2a8e193206d6",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "86ce67b0-b674-49d3-a24c-ab21e661e29e",
+      "position": 3,
+      "properties": {
+        "duration": 20,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "86ce67b0-b674-49d3-a24c-ab21e661e29e",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "c7fd1acf-8bcd-4587-8f27-543ee142a58b",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7fd1acf-8bcd-4587-8f27-543ee142a58b",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "cad10050-3e6e-4523-bfee-9bf4a5ed94e3",
+      "position": 5,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cad10050-3e6e-4523-bfee-9bf4a5ed94e3",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "41fe5ec6-40eb-478e-9971-a808a564ec9b",
+      "position": 6,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41fe5ec6-40eb-478e-9971-a808a564ec9b",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "856d0331-558b-4b25-9db0-3fa25a0499ee",
+      "position": 1,
+      "properties": {
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "856d0331-558b-4b25-9db0-3fa25a0499ee",
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "8cfcfa4d-5179-48e9-b06e-02b5c6b0f351",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8cfcfa4d-5179-48e9-b06e-02b5c6b0f351",
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "946dc83a-f536-4e1e-9c3a-440521b2df41",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "946dc83a-f536-4e1e-9c3a-440521b2df41",
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "986350e1-838a-43fb-b3a9-8696823c33b1",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "986350e1-838a-43fb-b3a9-8696823c33b1",
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "7c8fd6d0-fa3f-438a-88e3-e86ed01d46f3",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7c8fd6d0-fa3f-438a-88e3-e86ed01d46f3",
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "6f482682-98cb-48e4-b05c-eb618312b19a",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f482682-98cb-48e4-b05c-eb618312b19a",
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "ac86d946-a1bb-4b40-85ec-39ce90bbd305",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac86d946-a1bb-4b40-85ec-39ce90bbd305",
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "51102f4a-a2fc-4e3e-9ebc-4807ed4ff773",
+      "position": 4,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "51102f4a-a2fc-4e3e-9ebc-4807ed4ff773",
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "b19d4a83-1f2d-4d9e-a373-84816d28693f",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b19d4a83-1f2d-4d9e-a373-84816d28693f",
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "e0e36b74-9c79-4bef-9285-bcb560f11820",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Bridging Activity - Events - Choose One"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0e36b74-9c79-4bef-9285-bcb560f11820",
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "0ca935b5-3d2c-478b-9fd3-05c3cadc966c",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ca935b5-3d2c-478b-9fd3-05c3cadc966c",
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "384d376b-bd49-487f-a336-067b325d84df",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "384d376b-bd49-487f-a336-067b325d84df",
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "a7aa735b-9ec2-4cc7-b8b2-d7585c02b26c",
+      "position": 5,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a7aa735b-9ec2-4cc7-b8b2-d7585c02b26c",
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "7577bf3c-60f9-41cc-97b7-0b0740b89905",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7577bf3c-60f9-41cc-97b7-0b0740b89905",
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "3aebe192-3f00-4a30-973a-223ad0c98787",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3aebe192-3f00-4a30-973a-223ad0c98787",
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "aca16b36-720b-4fbb-bfd9-960d2435e3d9",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aca16b36-720b-4fbb-bfd9-960d2435e3d9",
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7",
+        "lesson_activity.key": "e53709a9-1b88-4c6c-9ff7-a5540dbcebc3"
+      }
+    },
+    {
+      "key": "a70d2a5f-e62e-47de-add9-d387e297530d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a70d2a5f-e62e-47de-add9-d387e297530d",
+        "lesson_activity.key": "cdb1e375-0ded-4310-b450-69b20ab59680"
+      }
+    },
+    {
+      "key": "2e520d67-f798-4894-a38e-c55723ed5273",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2e520d67-f798-4894-a38e-c55723ed5273",
+        "lesson_activity.key": "fda0955f-9cdc-461a-98fb-2a8e193206d6"
+      }
+    },
+    {
+      "key": "f4369f90-c389-40c7-abe7-6f185234ecb6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6",
+        "lesson_activity.key": "86ce67b0-b674-49d3-a24c-ab21e661e29e"
+      }
+    },
+    {
+      "key": "c9834556-3f0a-4908-aac2-9b649cf29e86",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c9834556-3f0a-4908-aac2-9b649cf29e86",
+        "lesson_activity.key": "c7fd1acf-8bcd-4587-8f27-543ee142a58b"
+      }
+    },
+    {
+      "key": "a52c8ee3-9756-41a0-bef2-3018b575f67c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a52c8ee3-9756-41a0-bef2-3018b575f67c",
+        "lesson_activity.key": "cad10050-3e6e-4523-bfee-9bf4a5ed94e3"
+      }
+    },
+    {
+      "key": "b0379239-1896-4edc-877a-cd43098ec69a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b0379239-1896-4edc-877a-cd43098ec69a",
+        "lesson_activity.key": "41fe5ec6-40eb-478e-9971-a808a564ec9b"
+      }
+    },
+    {
+      "key": "32caf200-304b-44fc-ac9c-10595543d3ba",
+      "position": 1,
+      "properties": {
+        "progression_name": "Practicing Block-Based Coding"
+      },
+      "seeding_key": {
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba",
+        "lesson_activity.key": "856d0331-558b-4b25-9db0-3fa25a0499ee"
+      }
+    },
+    {
+      "key": "7a9e9bed-b188-4a4e-b90d-b03fb61ee5b5",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7a9e9bed-b188-4a4e-b90d-b03fb61ee5b5",
+        "lesson_activity.key": "856d0331-558b-4b25-9db0-3fa25a0499ee"
+      }
+    },
+    {
+      "key": "42b91d67-7463-483a-a4df-631ab49b69ee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "42b91d67-7463-483a-a4df-631ab49b69ee",
+        "lesson_activity.key": "8cfcfa4d-5179-48e9-b06e-02b5c6b0f351"
+      }
+    },
+    {
+      "key": "b8e11b7a-e88f-40ea-a7ff-6cf76fad7615",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Programming with Rey and BB-8” slide\n\n\n",
+        "name": "Programming with Rey and BB-8",
+        "progression_name": "Video: Programming with Rey and BB-8"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8e11b7a-e88f-40ea-a7ff-6cf76fad7615",
+        "lesson_activity.key": "946dc83a-f536-4e1e-9c3a-440521b2df41"
+      }
+    },
+    {
+      "key": "90c0f329-7895-483d-9423-f19bd4d8d518",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-8: Skill Building” slide",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518",
+        "lesson_activity.key": "946dc83a-f536-4e1e-9c3a-440521b2df41"
+      }
+    },
+    {
+      "key": "fd18520a-7555-4e44-95e5-2774d8d1726c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Challenge” slide",
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd18520a-7555-4e44-95e5-2774d8d1726c",
+        "lesson_activity.key": "946dc83a-f536-4e1e-9c3a-440521b2df41"
+      }
+    },
+    {
+      "key": "21e29498-ee4d-41bb-9ba6-da1c9b738ed5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10-12: Practice” slide",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "21e29498-ee4d-41bb-9ba6-da1c9b738ed5",
+        "lesson_activity.key": "946dc83a-f536-4e1e-9c3a-440521b2df41"
+      }
+    },
+    {
+      "key": "ee2e14d3-5c89-4d24-9b17-861adb68afd1",
+      "position": 5,
+      "properties": {
+        "description": "As we mentioned in the last lesson, we highly recommend viewing and using ***Pair Programming** - student video as a class. Pair programming stimulates a discussion that can answer questions, review basic concepts, and build confidence with the subject."
+      },
+      "seeding_key": {
+        "activity_section.key": "ee2e14d3-5c89-4d24-9b17-861adb68afd1",
+        "lesson_activity.key": "946dc83a-f536-4e1e-9c3a-440521b2df41"
+      }
+    },
+    {
+      "key": "a21b7db8-5686-4329-a188-dce5e30e21b6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a21b7db8-5686-4329-a188-dce5e30e21b6",
+        "lesson_activity.key": "986350e1-838a-43fb-b3a9-8696823c33b1"
+      }
+    },
+    {
+      "key": "d449de24-66d5-417f-a8b8-a4763a43ec2b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d449de24-66d5-417f-a8b8-a4763a43ec2b",
+        "lesson_activity.key": "7c8fd6d0-fa3f-438a-88e3-e86ed01d46f3"
+      }
+    },
+    {
+      "key": "ab7a047c-3818-44f9-a362-cf2a1ef5b4d9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Artist in Code Studio” slide",
+        "progression_name": "Video: The Artist in Code Studio"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab7a047c-3818-44f9-a362-cf2a1ef5b4d9",
+        "lesson_activity.key": "6f482682-98cb-48e4-b05c-eb618312b19a"
+      }
+    },
+    {
+      "key": "89f41da1-b720-4055-99ab-c4de7d8c1489",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-4: Skill Building” slide",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "89f41da1-b720-4055-99ab-c4de7d8c1489",
+        "lesson_activity.key": "6f482682-98cb-48e4-b05c-eb618312b19a"
+      }
+    },
+    {
+      "key": "fea5ab0f-dadc-47b1-b50e-84214afb8114",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Loops in Artist” slide",
+        "progression_name": "Video: Loops in Artist"
+      },
+      "seeding_key": {
+        "activity_section.key": "fea5ab0f-dadc-47b1-b50e-84214afb8114",
+        "lesson_activity.key": "6f482682-98cb-48e4-b05c-eb618312b19a"
+      }
+    },
+    {
+      "key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 6-10: Skill Building” slide",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba",
+        "lesson_activity.key": "6f482682-98cb-48e4-b05c-eb618312b19a"
+      }
+    },
+    {
+      "key": "c6ccd72a-cdad-4ccf-b4dc-cd9268f3267b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 11: Challenge” slide",
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6ccd72a-cdad-4ccf-b4dc-cd9268f3267b",
+        "lesson_activity.key": "6f482682-98cb-48e4-b05c-eb618312b19a"
+      }
+    },
+    {
+      "key": "00d5e2d0-5230-4932-a57b-3a30a7eaa588",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 12-13: Practice” slide",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "00d5e2d0-5230-4932-a57b-3a30a7eaa588",
+        "lesson_activity.key": "6f482682-98cb-48e4-b05c-eb618312b19a"
+      }
+    },
+    {
+      "key": "46427e7b-0665-44a0-a93d-46f2a1bf4321",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 14: Free Play” slide",
+        "progression_name": "Free Play",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online - Video**"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "46427e7b-0665-44a0-a93d-46f2a1bf4321",
+        "lesson_activity.key": "6f482682-98cb-48e4-b05c-eb618312b19a"
+      }
+    },
+    {
+      "key": "d187ae18-118a-4e4c-9f3e-2588cc6fe039",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "progression_name": "Lesson Extras"
+      },
+      "seeding_key": {
+        "activity_section.key": "d187ae18-118a-4e4c-9f3e-2588cc6fe039",
+        "lesson_activity.key": "6f482682-98cb-48e4-b05c-eb618312b19a"
+      }
+    },
+    {
+      "key": "6ba0a584-65b9-4369-9d97-1d8ab9be79ad",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6ba0a584-65b9-4369-9d97-1d8ab9be79ad",
+        "lesson_activity.key": "ac86d946-a1bb-4b40-85ec-39ce90bbd305"
+      }
+    },
+    {
+      "key": "8dc2de15-5478-464b-9604-646eb1309a9e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8dc2de15-5478-464b-9604-646eb1309a9e",
+        "lesson_activity.key": "51102f4a-a2fc-4e3e-9ebc-4807ed4ff773"
+      }
+    },
+    {
+      "key": "d2ffd8f4-33f9-4771-a53e-a6e7e1504856",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n**Say:**\n- **Event** - An event is an action that causes something to happen.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2ffd8f4-33f9-4771-a53e-a6e7e1504856",
+        "lesson_activity.key": "b19d4a83-1f2d-4d9e-a373-84816d28693f"
+      }
+    },
+    {
+      "key": "e1fbd88f-a6d2-472f-b0a6-d6b96eef4ece",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Review\" slide\n\nReview \"The Big Event\" activity with students:\n\n - _What did we \"program\" the button events to do?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Gaming\" slide\n\n_Now we're going to add events to our code. Specifically, we're going to have an event for when two characters touch each other._\n\n - _When have you seen two characters touch each other as an event in games?_",
+        "name": "Introduction\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1fbd88f-a6d2-472f-b0a6-d6b96eef4ece",
+        "lesson_activity.key": "b19d4a83-1f2d-4d9e-a373-84816d28693f"
+      }
+    },
+    {
+      "key": "de9a260a-834a-4ba7-8f89-c1c0a48fc6dd",
+      "position": 1,
+      "properties": {
+        "description": "These activities will help bring the unplugged concepts from \"The Big Event\" into the online world that the students are moving into. Choose *one* of the following to do with your class:"
+      },
+      "seeding_key": {
+        "activity_section.key": "de9a260a-834a-4ba7-8f89-c1c0a48fc6dd",
+        "lesson_activity.key": "e0e36b74-9c79-4bef-9285-bcb560f11820"
+      }
+    },
+    {
+      "key": "e96cbd9f-467e-4eef-a7b2-4746da084e11",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!\n\nRemind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** video .\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e96cbd9f-467e-4eef-a7b2-4746da084e11",
+        "lesson_activity.key": "e0e36b74-9c79-4bef-9285-bcb560f11820"
+      }
+    },
+    {
+      "key": "d3516c53-bba3-4c54-a30e-c7efb27c8da9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Option 1: Paper Blocks\" slide\n\nUsing the remote from the ***Controller Image** and blocks from ***Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class _when the teal button is pushed, what do we do?_ then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.\n\n####-Or-",
+        "name": "Unplugged Activity Using Paper Blocks"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3516c53-bba3-4c54-a30e-c7efb27c8da9",
+        "lesson_activity.key": "e0e36b74-9c79-4bef-9285-bcb560f11820"
+      }
+    },
+    {
+      "key": "9cfbbbff-c024-4e5b-aee4-cb66558d30d2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Option 2: Previewing Puzzles as a Class\" slide\n\nPull a puzzle from the corresponding puzzles online. We recommend puzzle 7.  Call on different students to make a funny noise when you click on Jorge. Explain this is an event that they are reacting to and Jorge can be coded to make noise when you click on him.",
+        "name": "Previewing Online Puzzles as a Class"
+      },
+      "seeding_key": {
+        "activity_section.key": "9cfbbbff-c024-4e5b-aee4-cb66558d30d2",
+        "lesson_activity.key": "e0e36b74-9c79-4bef-9285-bcb560f11820"
+      }
+    },
+    {
+      "key": "e417e54a-c762-4a3f-9455-889ca2fbc493",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e417e54a-c762-4a3f-9455-889ca2fbc493",
+        "lesson_activity.key": "0ca935b5-3d2c-478b-9fd3-05c3cadc966c"
+      }
+    },
+    {
+      "key": "70023d77-7be5-4008-9b33-80702403a741",
+      "position": 2,
+      "properties": {
+        "description": "This is the most free-form plugged activity of the course. At the final stage students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, particularly for students who are overwhelmed by too many options.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.",
+        "name": "On the Move with Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "70023d77-7be5-4008-9b33-80702403a741",
+        "lesson_activity.key": "0ca935b5-3d2c-478b-9fd3-05c3cadc966c"
+      }
+    },
+    {
+      "key": "9ca91b78-53ba-4a69-a8ad-307575e77d43",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Introduction to Play Lab” slide",
+        "progression_name": "Video: Introduction to Play Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ca91b78-53ba-4a69-a8ad-307575e77d43",
+        "lesson_activity.key": "0ca935b5-3d2c-478b-9fd3-05c3cadc966c"
+      }
+    },
+    {
+      "key": "20176a9f-25fd-461f-821b-13e147d66c69",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2: Free Play” slide",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "20176a9f-25fd-461f-821b-13e147d66c69",
+        "lesson_activity.key": "0ca935b5-3d2c-478b-9fd3-05c3cadc966c"
+      }
+    },
+    {
+      "key": "7e255e69-1054-4774-87d5-0e04632408ce",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3: Practice” slide",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e255e69-1054-4774-87d5-0e04632408ce",
+        "lesson_activity.key": "0ca935b5-3d2c-478b-9fd3-05c3cadc966c"
+      }
+    },
+    {
+      "key": "dd50a7e2-663d-41db-8e89-cdeac81348c6",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-8: Mini-project” slide",
+        "progression_name": "Mini-project: Jorge the Dog"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6",
+        "lesson_activity.key": "0ca935b5-3d2c-478b-9fd3-05c3cadc966c"
+      }
+    },
+    {
+      "key": "11b949ab-f8e4-413b-84b7-6cba4e240f46",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Lesson Extras\" slide",
+        "progression_name": "Lesson Extras"
+      },
+      "seeding_key": {
+        "activity_section.key": "11b949ab-f8e4-413b-84b7-6cba4e240f46",
+        "lesson_activity.key": "0ca935b5-3d2c-478b-9fd3-05c3cadc966c"
+      }
+    },
+    {
+      "key": "7aa1041f-1eb4-45aa-951a-aeb431f36305",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflection” slide\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of a face that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote-controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "7aa1041f-1eb4-45aa-951a-aeb431f36305",
+        "lesson_activity.key": "384d376b-bd49-487f-a336-067b325d84df"
+      }
+    },
+    {
+      "key": "f2abedce-441a-4a59-a7f7-09dcc4182eb3",
+      "position": 1,
+      "properties": {
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**Look Under the Hood**\r\n\r\nWhen you share a link to your story, you also share all of the code that goes behind it. This is a great way for students to learn from each other.\r\n\r\n- Post links to completed stories online.\r\n\t- Make a story of your own to share as well!\r\n- When students load up a link, have them click the \"How it Works\" button to see the code behind the story.\r\n- Discuss as a group the different ways your classmates coded their stories.\r\n\t- What surprised you?\r\n\t- What would you like to try?\r\n- Choose someone else's story and click `Remix` to build on it. (Don't worry, the original story will be safe.)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2abedce-441a-4a59-a7f7-09dcc4182eb3",
+        "lesson_activity.key": "a7aa735b-9ec2-4cc7-b8b2-d7585c02b26c"
+      }
+    },
+    {
+      "key": "f4655c64-28b5-40a6-965d-e9c51cbdba84",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Review\" slide\n\n**Do this:**\n* Get students excited and ready for today's activity. Begin by asking students to remember what they have already done in the earlier lesson using the Artist tools.\n* Review the vocabulary word **loop**.\n* If you created your own project example, share it now.",
+        "name": "Review",
+        "progression_name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4655c64-28b5-40a6-965d-e9c51cbdba84",
+        "lesson_activity.key": "7577bf3c-60f9-41cc-97b7-0b0740b89905"
+      }
+    },
+    {
+      "key": "c05be240-2876-4ecb-b9db-21875e5938db",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n**Say:**\n- **Loop** - The action of doing something over and over again.",
+        "name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "c05be240-2876-4ecb-b9db-21875e5938db",
+        "lesson_activity.key": "7577bf3c-60f9-41cc-97b7-0b0740b89905"
+      }
+    },
+    {
+      "key": "c86ad96f-be7c-423d-a4a3-9c324084adda",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Pull up level for this lesson on the projector.",
+        "name": "Telling a story with the Artist",
+        "progression_name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "c86ad96f-be7c-423d-a4a3-9c324084adda",
+        "lesson_activity.key": "3aebe192-3f00-4a30-973a-223ad0c98787"
+      }
+    },
+    {
+      "key": "21a2c84f-5571-46f2-b79a-1e90e74850d3",
+      "position": 2,
+      "properties": {
+        "description": "*Today, we will celebrate how much you have all learned by creating our own projects to tell a story with the Artist.   The Artist will be taking a trip to three places today: a garden, a zoo, and outer space!*\n\n*Your job is to create a path for him and tell a story about what he did and saw.*\n\n*Will he walk through the flowers?*\n\n*Will he build a house for the animals?* \n\n*What else might he see or do?*",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "21a2c84f-5571-46f2-b79a-1e90e74850d3",
+        "lesson_activity.key": "3aebe192-3f00-4a30-973a-223ad0c98787"
+      }
+    },
+    {
+      "key": "c1c1489e-6506-49c0-91cc-57037b7c4f17",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Planning\" slide\n\n**Do this:** Distribute the **planning guide** handout and review it with students.\nStudents will pick *at least one* place for the artist. They should then draw the path that the artist will follow. (It's like a dot-to-dot puzzle, but without the numbers!)\nNext to the image, students should write their stories. ",
+        "name": "Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Stories can be a sentence or two, whatever feels appropriate for your class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c1c1489e-6506-49c0-91cc-57037b7c4f17",
+        "lesson_activity.key": "3aebe192-3f00-4a30-973a-223ad0c98787"
+      }
+    },
+    {
+      "key": "68639f93-6bbb-4e80-af8e-8a460a555918",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Telling a Story with the Artist\" slide",
+        "name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "68639f93-6bbb-4e80-af8e-8a460a555918",
+        "lesson_activity.key": "3aebe192-3f00-4a30-973a-223ad0c98787"
+      }
+    },
+    {
+      "key": "ba06e092-9513-48d5-8740-305bc27e6d9f",
+      "position": 5,
+      "properties": {
+        "description": "When you get the activity on your computer, click on any of the choices to start. Start with your plan, but you can have the artist draw whatever you like! At the end of class, we will share our projects with the class.",
+        "progression_name": "Project",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ba06e092-9513-48d5-8740-305bc27e6d9f",
+        "lesson_activity.key": "3aebe192-3f00-4a30-973a-223ad0c98787"
+      }
+    },
+    {
+      "key": "7a4e7be8-d420-4257-948a-2785300a22c0",
+      "position": 6,
+      "properties": {
+        "description": "As students work, support them by answering questions and giving ideas. Encourage them to share ideas to make the activity more collaborative.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "All of the choices in this lesson are considered \"Free Play,\" which means there is no single right answer. If a student presses Finish, they will return to the list of choices. You can have students complete just one choice or as many as they are interested in completing as time allows."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7a4e7be8-d420-4257-948a-2785300a22c0",
+        "lesson_activity.key": "3aebe192-3f00-4a30-973a-223ad0c98787"
+      }
+    },
+    {
+      "key": "d998ac66-523c-4318-a01b-943e29f13945",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Showcase\" slide\n\nTo celebrate students' work, spend the last 10 minutes or so, allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects and tell their story in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them. \n* **Pair Storytelling**: If you have a big class or are shorter on time, have students or groups pair up and demo their projects that way. \n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and run the project there and read the story. When they receive a signal from you, they should move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
+        "name": "Showcase"
+      },
+      "seeding_key": {
+        "activity_section.key": "d998ac66-523c-4318-a01b-943e29f13945",
+        "lesson_activity.key": "aca16b36-720b-4fbb-bfd9-960d2435e3d9"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLPLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLPLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7"
+      },
+      "level_keys": [
+        "PLPLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7"
+      },
+      "level_keys": [
+        "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "why drag and drop"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "why drag and drop"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "a70d2a5f-e62e-47de-add9-d387e297530d"
+      },
+      "level_keys": [
+        "why drag and drop"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:1"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:1"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:2"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:2"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:3"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:3"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:4"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:4"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:5"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:5"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:5"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:6"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:6"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:6"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:7"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:7"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:7"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:8"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:8"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:8"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 10,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:9"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:9"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:9"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 11,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:10"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:10"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:10"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 12,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:11"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:11"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:11"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 13,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:12"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:12"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:12"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5block_1"
+        ],
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5block_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "pl-k5-2-behaviors -intro_2024_K5block_1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1"
+        ],
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp12022_2023_K5_1"
+        ],
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp12022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp12022_2023_K5_1"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3a2022_2023_K5_1"
+        ],
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3a2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp3a2022_2023_K5_1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3b2022_2023_K5_1"
+        ],
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3b2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp3b2022_2023_K5_1"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023K5_1"
+        ],
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "U2L4 Multiple Choice packets2022_2023K5_1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Programming with Rey and BB-8"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bb8_skinOverview_K-1_video2022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "b8e11b7a-e88f-40ea-a7ff-6cf76fad7615"
+      },
+      "level_keys": [
+        "bb8_skinOverview_K-1_video2022_1"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog12022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      },
+      "level_keys": [
+        "courseB_starWars_prog12022_1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog22022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      },
+      "level_keys": [
+        "courseB_starWars_prog22022_1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog32022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      },
+      "level_keys": [
+        "courseB_starWars_prog32022_1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog42022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      },
+      "level_keys": [
+        "courseB_starWars_prog42022_1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog52022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      },
+      "level_keys": [
+        "courseB_starWars_prog52022_1"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog62022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      },
+      "level_keys": [
+        "courseB_starWars_prog62022_1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog72022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      },
+      "level_keys": [
+        "courseB_starWars_prog72022_1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog82022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "fd18520a-7555-4e44-95e5-2774d8d1726c"
+      },
+      "level_keys": [
+        "courseB_starWars_prog82022_1"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog92022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "21e29498-ee4d-41bb-9ba6-da1c9b738ed5"
+      },
+      "level_keys": [
+        "courseB_starWars_prog92022_1"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog102022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "21e29498-ee4d-41bb-9ba6-da1c9b738ed5"
+      },
+      "level_keys": [
+        "courseB_starWars_prog102022_1"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog112022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "21e29498-ee4d-41bb-9ba6-da1c9b738ed5"
+      },
+      "level_keys": [
+        "courseB_starWars_prog112022_1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: The Artist in Code Studio"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_video_ArtistIntro_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "ab7a047c-3818-44f9-a362-cf2a1ef5b4d9"
+      },
+      "level_keys": [
+        "courseB_video_ArtistIntro_1"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops12022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "89f41da1-b720-4055-99ab-c4de7d8c1489"
+      },
+      "level_keys": [
+        "courseA_artist_loops12022_1"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops22022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "89f41da1-b720-4055-99ab-c4de7d8c1489"
+      },
+      "level_keys": [
+        "courseA_artist_loops22022_1"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops32022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "89f41da1-b720-4055-99ab-c4de7d8c1489"
+      },
+      "level_keys": [
+        "courseA_artist_loops32022_1"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Loops in Artist"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_loops12022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "fea5ab0f-dadc-47b1-b50e-84214afb8114"
+      },
+      "level_keys": [
+        "courseA_video_loops12022_1"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops42022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba"
+      },
+      "level_keys": [
+        "courseA_artist_loops42022_1"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops52022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba"
+      },
+      "level_keys": [
+        "courseA_artist_loops52022_1"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops62022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba"
+      },
+      "level_keys": [
+        "courseA_artist_loops62022_1"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops72022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba"
+      },
+      "level_keys": [
+        "courseA_artist_loops72022_1"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops82022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba"
+      },
+      "level_keys": [
+        "courseA_artist_loops82022_1"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops92022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "c6ccd72a-cdad-4ccf-b4dc-cd9268f3267b"
+      },
+      "level_keys": [
+        "courseA_artist_loops92022_1"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops102022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "00d5e2d0-5230-4932-a57b-3a30a7eaa588"
+      },
+      "level_keys": [
+        "courseA_artist_loops102022_1"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops112022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "00d5e2d0-5230-4932-a57b-3a30a7eaa588"
+      },
+      "level_keys": [
+        "courseA_artist_loops112022_1"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops122022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "46427e7b-0665-44a0-a93d-46f2a1bf4321"
+      },
+      "level_keys": [
+        "courseA_artist_loops122022_1"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops_challenge2a2022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "d187ae18-118a-4e4c-9f3e-2588cc6fe039"
+      },
+      "level_keys": [
+        "courseA_artist_loops_challenge2a2022_1"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 16,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops_challenge12022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "d187ae18-118a-4e4c-9f3e-2588cc6fe039"
+      },
+      "level_keys": [
+        "courseA_artist_loops_challenge12022_1"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Introduction to Play Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_events_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "9ca91b78-53ba-4a69-a8ad-307575e77d43"
+      },
+      "level_keys": [
+        "courseA_video_events_1"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_playLab_events12022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "20176a9f-25fd-461f-821b-13e147d66c69"
+      },
+      "level_keys": [
+        "courseA_playLab_events12022_1"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_playLab_events22022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "7e255e69-1054-4774-87d5-0e04632408ce"
+      },
+      "level_keys": [
+        "courseA_playLab_events22022_1"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-project: Jorge the Dog"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_playLab_events32022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6"
+      },
+      "level_keys": [
+        "courseA_playLab_events32022_1"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-project: Jorge the Dog"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_playLab_events42022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6"
+      },
+      "level_keys": [
+        "courseA_playLab_events42022_1"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-project: Jorge the Dog"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_playLab_events52022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6"
+      },
+      "level_keys": [
+        "courseA_playLab_events52022_1"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-project: Jorge the Dog"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_playLab_events62022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6"
+      },
+      "level_keys": [
+        "courseA_playLab_events62022_1"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-project: Jorge the Dog"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_playLab_events72022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6"
+      },
+      "level_keys": [
+        "courseA_playLab_events72022_1"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_playlab_events_challenge22022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "11b949ab-f8e4-413b-84b7-6cba4e240f46"
+      },
+      "level_keys": [
+        "courseA_playlab_events_challenge22022_1"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_playlab_events_challenge12022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "11b949ab-f8e4-413b-84b7-6cba4e240f46"
+      },
+      "level_keys": [
+        "courseA_playlab_events_challenge12022_1"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_EOC2022_1"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "ba06e092-9513-48d5-8740-305bc27e6d9f"
+      },
+      "level_keys": [
+        "courseAB_EOC2022_1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PLPLOPD-K5 Begin_2023_K5CSConcepts_TextPage",
+        "script_level.level_keys": [
+          "PLPLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage",
+        "script_level.level_keys": [
+          "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "why drag and drop",
+        "script_level.level_keys": [
+          "why drag and drop"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "a70d2a5f-e62e-47de-add9-d387e297530d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:1",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:1"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:2",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:2"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:3",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:3"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:4",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:4"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:5",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:5"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:6",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:6"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:7",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:7"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:8",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:8"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:9",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:9"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:10",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:10"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:11",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:11"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:12",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:12"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2-behaviors -intro_2024_K5block_1",
+        "script_level.level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5block_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1",
+        "script_level.level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp12022_2023_K5_1",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp12022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp3a2022_2023_K5_1",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3a2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp3b2022_2023_K5_1",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3b2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 Multiple Choice packets2022_2023K5_1",
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bb8_skinOverview_K-1_video2022_1",
+        "script_level.level_keys": [
+          "bb8_skinOverview_K-1_video2022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "b8e11b7a-e88f-40ea-a7ff-6cf76fad7615"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog12022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog12022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog22022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog22022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog32022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog32022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog42022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog42022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog52022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog52022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog62022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog62022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog72022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog72022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "90c0f329-7895-483d-9423-f19bd4d8d518"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog82022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog82022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "fd18520a-7555-4e44-95e5-2774d8d1726c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog92022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog92022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "21e29498-ee4d-41bb-9ba6-da1c9b738ed5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog102022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog102022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "21e29498-ee4d-41bb-9ba6-da1c9b738ed5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog112022_1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog112022_1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "21e29498-ee4d-41bb-9ba6-da1c9b738ed5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_video_ArtistIntro_1",
+        "script_level.level_keys": [
+          "courseB_video_ArtistIntro_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "ab7a047c-3818-44f9-a362-cf2a1ef5b4d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops12022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops12022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "89f41da1-b720-4055-99ab-c4de7d8c1489"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops22022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops22022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "89f41da1-b720-4055-99ab-c4de7d8c1489"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops32022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops32022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "89f41da1-b720-4055-99ab-c4de7d8c1489"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_video_loops12022_1",
+        "script_level.level_keys": [
+          "courseA_video_loops12022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "fea5ab0f-dadc-47b1-b50e-84214afb8114"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops42022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops42022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops52022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops52022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops62022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops62022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops72022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops72022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops82022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops82022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops92022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops92022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "c6ccd72a-cdad-4ccf-b4dc-cd9268f3267b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops102022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops102022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "00d5e2d0-5230-4932-a57b-3a30a7eaa588"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops112022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops112022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "00d5e2d0-5230-4932-a57b-3a30a7eaa588"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops122022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops122022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "46427e7b-0665-44a0-a93d-46f2a1bf4321"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops_challenge2a2022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops_challenge2a2022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "d187ae18-118a-4e4c-9f3e-2588cc6fe039"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops_challenge12022_1",
+        "script_level.level_keys": [
+          "courseA_artist_loops_challenge12022_1"
+        ],
+        "lesson.key": "Ocean Scene with Loops",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "d187ae18-118a-4e4c-9f3e-2588cc6fe039"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_video_events_1",
+        "script_level.level_keys": [
+          "courseA_video_events_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "9ca91b78-53ba-4a69-a8ad-307575e77d43"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_playLab_events12022_1",
+        "script_level.level_keys": [
+          "courseA_playLab_events12022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "20176a9f-25fd-461f-821b-13e147d66c69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_playLab_events22022_1",
+        "script_level.level_keys": [
+          "courseA_playLab_events22022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "7e255e69-1054-4774-87d5-0e04632408ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_playLab_events32022_1",
+        "script_level.level_keys": [
+          "courseA_playLab_events32022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_playLab_events42022_1",
+        "script_level.level_keys": [
+          "courseA_playLab_events42022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_playLab_events52022_1",
+        "script_level.level_keys": [
+          "courseA_playLab_events52022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_playLab_events62022_1",
+        "script_level.level_keys": [
+          "courseA_playLab_events62022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_playLab_events72022_1",
+        "script_level.level_keys": [
+          "courseA_playLab_events72022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "dd50a7e2-663d-41db-8e89-cdeac81348c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_playlab_events_challenge22022_1",
+        "script_level.level_keys": [
+          "courseA_playlab_events_challenge22022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "11b949ab-f8e4-413b-84b7-6cba4e240f46"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_playlab_events_challenge12022_1",
+        "script_level.level_keys": [
+          "courseA_playlab_events_challenge12022_1"
+        ],
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "11b949ab-f8e4-413b-84b7-6cba4e240f46"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseAB_EOC2022_1",
+        "script_level.level_keys": [
+          "courseAB_EOC2022_1"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "ba06e092-9513-48d5-8740-305bc27e6d9f"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "20/20/20 Rule",
+      "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+      "key": "20_20_20_rule",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "name": "Artist Project Planning Guide",
+      "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
+      "key": "artist_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "artist_project_planning_guide"
+      }
+    },
+    {
+      "name": "Artist Project Planning Guide",
+      "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
+      "key": "artist_project_planning_guide_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "artist_project_planning_guide_1"
+      }
+    },
+    {
+      "name": "CS Fundamentals Main Activity Tips",
+      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+      "key": "cs_fundamentals_main_activity_tips",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "cs_fundamentals_main_activity_tips"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1Fi51StQ8W2frzFwSHBWi_YxvOQpN2JivlFJ6MEYh4ZQ/template/preview",
+      "key": "csf_course_a_lesson_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Fi51StQ8W2frzFwSHBWi_YxvOQpN2JivlFJ6MEYh4ZQ/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "name": "CSF Lesson Recommendations",
+      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+      "key": "csf_lesson_recommendations",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_lesson_recommendations"
+      }
+    },
+    {
+      "name": "Feeling Faces - Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_-_emotion_image",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_-_emotion_image"
+      }
+    },
+    {
+      "name": "Feeling Faces Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_emotion_image",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "name": "Getting Started - Creating a Class Section",
+      "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+      "key": "getting_started_-_creating_a_class_section",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "getting_started_-_creating_a_class_section"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+      "key": "pair_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Student Video"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "pause_and_think_online",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "name": "The Big Event (Courses A, B)",
+      "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+      "key": "the_big_event_courses_a_b_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Controller Image"
+      },
+      "seeding_key": {
+        "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
+      "name": "Unplugged Blockly Blocks (Grades K-1)",
+      "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+      "key": "unplugged_blockly_blocks_grades_k-1_",
+      "properties": {
+        "audience": "Student",
+        "type": "Manipulatives"
+      },
+      "seeding_key": {
+        "resource.key": "unplugged_blockly_blocks_grades_k-1_"
+      }
+    },
+    {
+      "name": "Wiggles-Go Noodle",
+      "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+      "key": "wiggles-go_noodle",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wiggles-go_noodle"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "artist_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "artist_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "getting_started_-_creating_a_class_section"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "wiggles-go_noodle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "resource.key": "cs_fundamentals_main_activity_tips"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "resource.key": "csf_lesson_recommendations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "resource.key": "feeling_faces_-_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "resource.key": "unplugged_blockly_blocks_grades_k-1_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "csf_lesson_recommendations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "feeling_faces_-_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "pair_programming"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "drag",
+      "word": "Drag",
+      "definition": "Click your mouse button and hold as you move the mouse pointer to a new location",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "drag"
+      }
+    },
+    {
+      "key": "drop",
+      "word": "Drop",
+      "definition": "Release your mouse button to \"let go\" of an item that you are dragging",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "drop"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "programming"
+      }
+    },
+    {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "vocabulary.key": "drag"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "vocabulary.key": "drop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "vocabulary.key": "programming"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "202455ad-e1d1-4df9-9227-3ae1dbf2d819",
+      "properties": {
+        "description": "Recognize what is expected when students transition into the computer lab."
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "202455ad-e1d1-4df9-9227-3ae1dbf2d819"
+      }
+    },
+    {
+      "key": "33bc1876-01f1-4222-b6e9-d2248332e198",
+      "properties": {
+        "description": "Apply computer science concepts in an open-ended project."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "33bc1876-01f1-4222-b6e9-d2248332e198"
+      }
+    },
+    {
+      "key": "42063e68-f441-4ed2-89d1-1c7119afd90c",
+      "properties": {
+        "description": "Create an animated, interactive story using sequence and event-handlers."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "objective.key": "42063e68-f441-4ed2-89d1-1c7119afd90c"
+      }
+    },
+    {
+      "key": "562e1576-75f6-4e24-a2e0-f5ce6fd98d81",
+      "properties": {
+        "description": "Overcome obstacles such as time constraints or bugs."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "objective.key": "562e1576-75f6-4e24-a2e0-f5ce6fd98d81"
+      }
+    },
+    {
+      "key": "588c4fad-d580-472d-a34f-0cc3cb6d6a85",
+      "properties": {
+        "description": "Construct a precise sequence of instructions for dragging and dropping. "
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "588c4fad-d580-472d-a34f-0cc3cb6d6a85"
+      }
+    },
+    {
+      "key": "786b7eb4-9a56-47a4-9b57-4501a69caacd",
+      "properties": {
+        "description": "Count the number of times an action should be repeated and represent it as a loop."
+      },
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "objective.key": "786b7eb4-9a56-47a4-9b57-4501a69caacd"
+      }
+    },
+    {
+      "key": "7a277e2f-94e2-470e-8656-528ef888013e",
+      "properties": {
+        "description": "Share a creative artifact with other students."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "objective.key": "7a277e2f-94e2-470e-8656-528ef888013e"
+      }
+    },
+    {
+      "key": "8c813d0b-73c4-4122-af92-371968a592f4",
+      "properties": {
+        "description": "Use appropriate terminology when referring to a computer mouse, trackpad, or touchscreen."
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "8c813d0b-73c4-4122-af92-371968a592f4"
+      }
+    },
+    {
+      "key": "9788ac05-0371-4f6f-a453-32302fa653ae",
+      "properties": {
+        "description": "Decompose a shape into its largest repeatable sequence."
+      },
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "objective.key": "9788ac05-0371-4f6f-a453-32302fa653ae"
+      }
+    },
+    {
+      "key": "bb4be1bf-f39f-4927-b478-8b03b61c426a",
+      "properties": {
+        "description": "Recognize problems or \"bugs\" in a program and develop a plan to resolve the issues."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "objective.key": "bb4be1bf-f39f-4927-b478-8b03b61c426a"
+      }
+    },
+    {
+      "key": "c28bac36-5993-47a0-90cd-be36528a075c",
+      "properties": {
+        "description": "Sequence commands in a logical order."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "objective.key": "c28bac36-5993-47a0-90cd-be36528a075c"
+      }
+    },
+    {
+      "key": "c76c5b77-6904-4256-853a-e8538dee8818",
+      "properties": {
+        "description": "Create a program that draws complex shapes by repeating simple sequences."
+      },
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "objective.key": "c76c5b77-6904-4256-853a-e8538dee8818"
+      }
+    },
+    {
+      "key": "ed11a24d-f38c-412b-98fb-1acca9bce548",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "objective.key": "ed11a24d-f38c-412b-98fb-1acca9bce548"
+      }
+    },
+    {
+      "key": "ed6d5a8d-51d0-4228-a13b-dee97bb400c5",
+      "properties": {
+        "description": "Explain best practices for logging into a computer and logging out when done."
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "ed6d5a8d-51d0-4228-a13b-dee97bb400c5"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

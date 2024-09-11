@@ -857,6 +857,23 @@ en:
         ai-how-computer-vision-works: How Computer Vision Works
         variables_sprite_lab_games: Variables for Sprite Lab Games
         music_lab_promo_long: Music Lab - Make Music, Learn Code
+        PL_BasicFeatures_2024: 'Getting Started: Basic Features of Code.org'
+        PL_StudentExperience_2024: 'Getting Started: Student Experience'
+        PL_ClassSection_2024: 'Getting Started: Creating a Classroom Section'
+        PL_ProgressFeedbackAssessment2024: 'Getting Started: Progress Feedback & Assessment'
+        PL_LMSIntegrations_2024: 'Getting Started: Integrations for Learning Management Systems'
+        game_design_intro: Intro to Game Design
+        llms-intro-gen-ai: Introduction to Large Language Models (Exploring Gen AI)
+        gen-ai-input-pretraining: 'Generative AI: Input & Pre-training'
+        gen-ai-storage-embeddings: 'Generative AI: Storage & Embeddings'
+        gen-ai-processing-neuralnets: 'Generative AI: Processing & Neural Networks'
+        gen-ai-attention: 'Generative AI: Attention'
+        gen-ai-output-probabilities: 'Generative AI: Output & Probabilities'
+        PL-genAI-input: 'Generative AI: Input & Pre-training'
+        PL-genAI-Embeddings: 'Generative AI: Storage & Embeddings'
+        PL-genAI-neuralnetworks: 'Generative AI: Processing & Neural Networks'
+        PL-genAI-attention: 'Generative AI: Attention'
+        PL-genAI-output: 'Generative AI: Output & Probabilities'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

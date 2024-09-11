@@ -15,7 +15,8 @@
     "project_template_level_name": "CSA U2L6-L3a PBT_pilot-2022",
     "bubble_choice_description": "Request a code review to get feedback from your peers on your Cookie class.",
     "thumbnail_url": "https://images.code.org/716cdae52b3c16bcb2ac9504ea28e8ce-image-1647346638990.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:23:49.180+00:00\",\"changed\":[\"cloned from \\\"CSA U2L6-L4a CR_2022\\\"\"],\"cloned_from\":\"CSA U2L6-L4a CR_2022\"}]"

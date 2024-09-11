@@ -1,29 +1,22 @@
-import {assert} from 'chai';
+import $ from 'jquery'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import 'jquery-ui/ui/effects/effect-drop';
-import $ from 'jquery';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {
   showDialog,
   getSuccessDialog,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 
 describe('dialogHelper', () => {
-  before(() => {
+  beforeAll(() => {
     // We need bootstrap-sass for $.fn.modal. In the real app, this is provided by dashboard
     // boostrap-sass also depends on window.jQuery being set. We use require instead
     // of import for boostrap-sass, otherwise babel moves the import to the top of
     // the file (before we've globalized jQuery)
-    if (Object.hasOwn(window, 'jQuery')) {
-      throw new Error('window.jQuery already set');
-    }
-    window.jQuery = $;
     require('bootstrap-sass');
   });
 
-  after(() => {
-    delete window.jQuery;
-  });
   describe('showDialog', () => {
     let parent;
     beforeEach(() => {
@@ -63,21 +56,21 @@ describe('dialogHelper', () => {
       const callback = sinon.spy();
       showDialog(<MyComponent />, callback);
       $('#ok-button').click();
-      assert(callback.calledOnce);
+      expect(callback.calledOnce).toBeTruthy();
     });
 
     it('calls onHidden when ok button is clicked', () => {
       const onHidden = sinon.spy();
       showDialog(<MyComponent />, null, onHidden);
       $('#ok-button').click();
-      assert(onHidden.calledOnce);
+      expect(onHidden.calledOnce).toBeTruthy();
     });
 
     it('calls onHidden when cancel button is clicked', () => {
       const onHidden = sinon.spy();
       showDialog(<MyComponent />, null, onHidden);
       $('#cancel-button').click();
-      assert(onHidden.calledOnce);
+      expect(onHidden.calledOnce).toBeTruthy();
     });
   });
 
@@ -114,15 +107,15 @@ describe('dialogHelper', () => {
         },
       });
       const dialog = getSuccessDialog(appOptions);
-      assert.equal(dialog.props.title, 'Customized success title');
-      assert.equal(dialog.props.body, 'Customized success body');
+      expect(dialog.props.title).toEqual('Customized success title');
+      expect(dialog.props.body).toEqual('Customized success body');
     });
 
     it('has the right title/body for a standard multi', () => {
       const appOptions = fakeAppOptions('multi');
       const dialog = getSuccessDialog(appOptions);
-      assert.equal(dialog.props.title, 'Correct');
-      assert.equal(dialog.props.body, 'That is the correct answer.');
+      expect(dialog.props.title).toEqual('Correct');
+      expect(dialog.props.body).toEqual('That is the correct answer.');
     });
 
     it('has the right title/body for a submittable multi', () => {
@@ -135,8 +128,8 @@ describe('dialogHelper', () => {
         answers: undefined,
       });
       const dialog = getSuccessDialog(appOptions);
-      assert.equal(dialog.props.title, 'Thank you');
-      assert.equal(dialog.props.body, 'Thank you for submitting an answer.');
+      expect(dialog.props.title).toEqual('Thank you');
+      expect(dialog.props.body).toEqual('Thank you for submitting an answer.');
     });
 
     it('has the right title/body for a text_match without answers', () => {
@@ -146,8 +139,8 @@ describe('dialogHelper', () => {
         answers: undefined,
       });
       const dialog = getSuccessDialog(appOptions);
-      assert.equal(dialog.props.title, 'Thank you');
-      assert.equal(dialog.props.body, 'Thanks for your response!');
+      expect(dialog.props.title).toEqual('Thank you');
+      expect(dialog.props.body).toEqual('Thanks for your response!');
     });
   });
 });

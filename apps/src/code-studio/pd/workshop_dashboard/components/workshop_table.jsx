@@ -4,16 +4,19 @@
 import _, {orderBy} from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import color from '@cdo/apps/util/color';
-import SessionTimesList from './session_times_list';
-import FacilitatorsList from './facilitators_list';
-import WorkshopManagement from './workshop_management';
+
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import color from '@cdo/apps/util/color';
+
 import {workshopShape} from '../types.js';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {shouldShowSurveyResults} from '../workshop_summary_utils';
+
+import FacilitatorsList from './facilitators_list';
+import SessionTimesList from './session_times_list';
+import WorkshopManagement from './workshop_management';
 
 export default class WorkshopTable extends React.Component {
   static propTypes = {

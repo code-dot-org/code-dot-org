@@ -46,8 +46,8 @@ class Video < ApplicationRecord
     end
   end
 
-  def self.setup
-    videos = CSV.read('config/videos.csv', headers: true).map.with_index(1) do |row, id|
+  def self.setup(dashboard_root = '.')
+    videos = CSV.read("#{dashboard_root}/config/videos.csv", headers: true).map.with_index(1) do |row, id|
       {id: id, key: row['Key'], youtube_code: row['YoutubeCode'], download: row['Download'], locale: row['Locale']}
     end
     transaction do

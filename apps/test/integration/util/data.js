@@ -16,15 +16,6 @@ module.exports = function (app) {
         blocks: require('@cdo/apps/maze/blocks'),
       };
     };
-  } else if (app === 'calc') {
-    appCache[app] = function () {
-      return {
-        levels: {
-          levels: require('@cdo/apps/calc/levels'),
-        },
-        blocks: require('@cdo/apps/calc/blocks'),
-      };
-    };
   } else if (app === 'turtle') {
     appCache[app] = function () {
       return {
@@ -33,15 +24,6 @@ module.exports = function (app) {
           levels: require('@cdo/apps/turtle/levels'),
         },
         blocks: require('@cdo/apps/turtle/blocks'),
-      };
-    };
-  } else if (app === 'eval') {
-    appCache[app] = function () {
-      return {
-        levels: {
-          levels: require('@cdo/apps/eval/levels'),
-        },
-        blocks: require('@cdo/apps/eval/blocks'),
       };
     };
   } else if (app === 'studio') {

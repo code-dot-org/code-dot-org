@@ -213,7 +213,9 @@ export function moveHiddenBlocks(
 
   source.blocks.blocks.forEach(block => {
     const {invisible, procedureId} = block.extraState || {};
-    const hideBlock = procedureTypesToHide.includes(block.type) || invisible;
+    const hideBlock =
+      procedureTypesToHide.includes(block.type) ||
+      (invisible && !Blockly.isStartMode);
     const destination = hideBlock ? hiddenDefinitionSource : mainSource;
     destination.blocks.blocks.push(block);
 
@@ -443,6 +445,38 @@ export function getCode(workspace: WorkspaceSvg, getSourceAsJson: boolean) {
   }
 }
 
+/**
+ * Ensure that only a number may be entered.
+ * @param {string} text The user's text.
+ * @returns {?string} A string representing a valid number, or null if invalid.
+ *   Returns 0 for null or empty string.
+ * @static
+ */
+export function numberValidator(text: string): string | null {
+  text = text || '';
+  // TODO: Handle cases like 'ten', '1.203,14', etc.
+  // 'O' is sometimes mistaken for '0' by inexperienced users.
+  text = text.replace(/O/gi, '0');
+  // Strip out thousands separators.
+  text = text.replace(/,/g, '');
+  const n = parseFloat(text || '0');
+  return isNaN(n) ? null : String(n);
+}
+
+/**
+ * Ensure that only a nonnegative integer may be entered.
+ * @param {string} text The user's text.
+ * @returns {?string} A string representing a valid int, or null if invalid.
+ *   Returns '0' for negative numbers and null for truthy strings that do not contain numbers.
+ * @static
+ */
+export function nonnegativeIntegerValidator(text: string): string | null {
+  const n = numberValidator(text);
+  if (n) {
+    return String(Math.max(0, Math.floor(parseFloat(n))));
+  }
+  return n;
+}
 export function soundField(
   onClick: () => void,
   transformText?: (text: string) => string,
@@ -595,7 +629,7 @@ export function getSimplifiedStateForFlyout(
   const blocksCopy = {...blocks};
 
   // Replace variable ids with names and simplify state for flyout.
-  blocksCopy.blocks.forEach(block => {
+  blocksCopy.blocks?.forEach(block => {
     updateVariableFields(block, serializedVariableMap);
     blocksList.push(simplifyBlockState(block));
   });
@@ -611,7 +645,7 @@ function updateVariableFields(
   const fields = block.fields;
   for (const key in fields) {
     const field = fields[key];
-    if (field.id && serializedVariableMap.has(field.id)) {
+    if (field?.id && serializedVariableMap.has(field.id)) {
       field.name = serializedVariableMap.get(field.id)!;
       delete field.id;
     }
@@ -729,4 +763,59 @@ export function toolboxWithoutIds(
   const toolboxDom = Blockly.Xml.textToDom(toolbox);
   removeIdsFromBlocks(toolboxDom);
   return Blockly.Xml.domToText(toolboxDom);
+}
+
+// Sets the lab code based on the student's blocks and any extra (e.g. initialization) code.
+// The students blocks are considered to be any on the main or hidden workspaces.
+export function getAllGeneratedCode(extraCode?: string) {
+  let code = extraCode || '';
+
+  [Blockly.getHiddenDefinitionWorkspace(), Blockly.getMainWorkspace()].forEach(
+    workspace => {
+      if (workspace) {
+        Blockly.getGenerator().init(workspace);
+        const blocks = workspace.getTopBlocks(true);
+        const blocksCode: Block[] = [];
+        blocks.forEach(block =>
+          blocksCode.push(Blockly.JavaScript.blockToCode(block))
+        );
+        code += Blockly.getGenerator().finish(blocksCode.join('\n'));
+      }
+    }
+  );
+  return code;
+}
+
+// Returns the student's executable code based on blockXml. Blocks are loaded onto
+// a single unrendered workspace. Used for Artist solution blocks in the student view.
+export function getCodeFromBlockXmlSource(blockXmlString: string) {
+  const domBlocks = Blockly.Xml.textToDom(blockXmlString);
+  const workspace = new Blockly.Workspace();
+  Blockly.Xml.domToBlockSpace(workspace, domBlocks);
+  Blockly.getGenerator().init(workspace);
+  const blocks = workspace.getTopBlocks(true);
+  const code = [] as string[];
+  blocks.forEach(block => code.push(Blockly.JavaScript.blockToCode(block)));
+  const result = Blockly.getGenerator().finish(code.join('\n'));
+  workspace.dispose();
+  return result;
+}
+
+// Returns a list of Blockly toolbox blocks in JSON for a given category.
+// This is used in order to merge XML toolbox blocks with the dynamically created
+// blocks in auto-populated categories, such as Behaviors, Functions, and Variables.
+export function getCategoryBlocksJson(category: string) {
+  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks(category);
+  if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
+    return [];
+  }
+
+  // Blockly supports XML or JSON, but not a combination of both.
+  // We convert to JSON here because the other flyout blocks are JSON.
+  const blocksConvertedJson = convertXmlToJson(
+    levelToolboxBlocks.documentElement
+  );
+  const flyoutJson = getSimplifiedStateForFlyout(blocksConvertedJson);
+
+  return flyoutJson;
 }

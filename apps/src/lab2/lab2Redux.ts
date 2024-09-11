@@ -5,11 +5,41 @@
 
 import {
   AnyAction,
+  createAction,
   createAsyncThunk,
   createSlice,
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
+
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
+import {
+  setProjectUpdatedAt,
+  setProjectUpdatedError,
+  setProjectUpdatedSaving,
+  setProjectUpdatedSaved,
+} from '../code-studio/projectRedux';
+import {queryParams, updateQueryParam} from '../code-studio/utils';
+import {RootState} from '../types/redux';
+import HttpClient, {NetworkError} from '../util/HttpClient';
+
+import {START_SOURCES} from './constants';
+import Lab2Registry from './Lab2Registry';
+import {
+  getInitialValidationState,
+  ValidationState,
+} from './progress/ProgressManager';
+import ProjectManager from './projects/ProjectManager';
+import ProjectManagerFactory from './projects/ProjectManagerFactory';
+import {getPredictResponse} from './projects/userLevelsApi';
+import {LevelPropertiesValidator} from './responseValidators';
 import {
   AppName,
   Channel,
@@ -17,23 +47,7 @@ import {
   ProjectManagerStorageType,
   ProjectSources,
 } from './types';
-import Lab2Registry from './Lab2Registry';
-import ProjectManagerFactory from './projects/ProjectManagerFactory';
-import {
-  setProjectUpdatedAt,
-  setProjectUpdatedError,
-  setProjectUpdatedSaving,
-  setProjectUpdatedSaved,
-} from '../code-studio/projectRedux';
-import ProjectManager from './projects/ProjectManager';
-import HttpClient, {NetworkError} from '../util/HttpClient';
-import {
-  getInitialValidationState,
-  ValidationState,
-} from './progress/ProgressManager';
-import {LevelPropertiesValidator} from './responseValidators';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {START_SOURCES} from './constants';
+import {LifecycleEvent} from './utils/LifecycleNotifier';
 
 interface PageError {
   errorMessage: string;
@@ -89,10 +103,14 @@ export const setUpWithLevel = createAsyncThunk(
       scriptId?: number;
       levelPropertiesPath: string;
       channelId?: string;
-      userId?: string;
+      userId?: number;
+      scriptLevelId?: string;
     },
     thunkAPI
   ) => {
+    Lab2Registry.getInstance()
+      .getLifecycleNotifier()
+      .notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
     try {
       // Update properties for reporting as early as possible in case of errors.
       Lab2Registry.getInstance().getMetricsReporter().updateProperties({
@@ -102,6 +120,8 @@ export const setUpWithLevel = createAsyncThunk(
       });
 
       await cleanUpProjectManager();
+      const isViewingExemplar = getAppOptionsViewingExemplar();
+      const isEditingExemplar = getAppOptionsEditingExemplar();
 
       // Load level properties if we have a levelPropertiesPath.
       const levelProperties = await loadLevelProperties(
@@ -126,10 +146,11 @@ export const setUpWithLevel = createAsyncThunk(
         return;
       }
 
-      // Start mode doesn't use channel ids so we can skip creating
-      // a project manager and just set the level data.
+      // If we are in start mode or are editing or viewing exemplars,
+      // we don't use a channel id.
+      // We can skip creating a project manager and just set the level data.
       const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-      if (isStartMode) {
+      if (isStartMode || isViewingExemplar || isEditingExemplar) {
         setProjectAndLevelData(
           {levelProperties},
           thunkAPI.signal.aborted,
@@ -137,6 +158,19 @@ export const setUpWithLevel = createAsyncThunk(
         );
         return;
       }
+
+      // If we have a predict level, we should try to load the existing response.
+      // We only can load predict responses if we have a script id.
+      if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
+        const predictResponse =
+          (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
+        thunkAPI.dispatch(setLoadedPredictResponse(predictResponse));
+      } else {
+        // If this isn't a predict level, reset the response to an empty string
+        // to avoid potentially confusing behavior.
+        thunkAPI.dispatch(setLoadedPredictResponse(''));
+      }
+
       // Create a new project manager. If we have a channel id,
       // default to loading the project for that channel. Otherwise
       // create a project manager for the given level and script id.
@@ -150,7 +184,8 @@ export const setUpWithLevel = createAsyncThunk(
               ProjectManagerStorageType.REMOTE,
               payload.levelId,
               payload.userId,
-              payload.scriptId
+              payload.scriptId,
+              payload.scriptLevelId
             );
 
       // Only set the project manager and initiate load
@@ -247,8 +282,36 @@ export const isLabLoading = (state: {lab: LabState}) =>
   state.lab.isLoadingProjectOrLevel || state.lab.isLoading;
 
 // This may depend on more factors, such as share.
-export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
-  return !state.lab.channel?.isOwner;
+export const isReadOnlyWorkspace = (state: RootState) => {
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isEditingExemplarMode = getAppOptionsEditingExemplar();
+
+  // We are always in edit mode if we are in start or editing exemplar mode.
+  // Both of these modes have no channel.
+  if (isStartMode || isEditingExemplarMode) {
+    return false;
+  }
+
+  // Otherwise, we are in read only mode if we are not the owner of the channel,
+  // the level is frozen, the level is a read only predict level, the level has been submitted.
+  // or this is a lab that should be read only while running and the code is currently running.
+  const isOwner = state.lab.channel?.isOwner;
+  const isFrozen = !!state.lab.channel?.frozen;
+  const readonlyPredictLevel = isReadonlyPredictLevel(state);
+  const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
+  const isViewingOldVersion = state.lab2Project.viewingOldVersion;
+  const isRunningAndReadonly =
+    (state.lab2System.isRunning || state.lab2System.isValidating) &&
+    shouldBeReadonlyWhileRunning(state);
+
+  return (
+    !isOwner ||
+    isFrozen ||
+    readonlyPredictLevel ||
+    hasSubmitted ||
+    isRunningAndReadonly ||
+    isViewingOldVersion
+  );
 };
 
 // If there is an error present on the page.
@@ -265,6 +328,8 @@ export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
 
 export const isProjectTemplateLevel = (state: {lab: LabState}) =>
   !!state.lab.levelProperties?.projectTemplateLevelName;
+
+// SLICE
 
 const labSlice = createSlice({
   name: 'lab',
@@ -387,6 +452,8 @@ function getErrorFromThunkAction(
   };
 }
 
+// HELPERS
+
 // Helper function to add event listeners to the project manager
 // and load the project. Returns the project load response.
 // This should be called from a thunk, which will provide its
@@ -411,7 +478,17 @@ async function setUpAndLoadProject(
     }
   });
   projectManager.addSaveFailListener(() => dispatch(setProjectUpdatedError()));
-  return await projectManager.load();
+  // Figure out if we should reset to start sources. This happens if the url parameter
+  // ?reset=true is present.
+  // This parameter is only used by levelbuilders.
+  const resetParam = queryParams('reset');
+  let resetToStartSources = false;
+  if (resetParam === 'true') {
+    // Remove the reset parameter from the url so we don't reset again.
+    updateQueryParam('reset', undefined);
+    resetToStartSources = true;
+  }
+  return await projectManager.load(resetToStartSources);
 }
 
 // Helper function to set the channel, source, and level data in redux.
@@ -432,6 +509,14 @@ function setProjectAndLevelData(
   if (aborted) {
     return;
   }
+  Lab2Registry.getInstance()
+    .getLifecycleNotifier()
+    .notify(
+      LifecycleEvent.LevelLoadCompleted,
+      data.levelProperties,
+      data.channel,
+      data.initialSources
+    );
   // Dispatch level change last so labs can react to the new level data
   // and new initial sources at once.
   dispatch(onLevelChange(data));
@@ -456,6 +541,36 @@ async function cleanUpProjectManager() {
   await existingProjectManager?.cleanUp();
   Lab2Registry.getInstance().clearProjectManager();
 }
+
+// Returns if the current state represents a predict level that should be read only.
+// If the predict level code is not editable after submit or the user has not submitted a response,
+// the predict level is read only.
+function isReadonlyPredictLevel(state: RootState) {
+  const isPredictLevel =
+    state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
+  let isReadonlyPredictLevel = isPredictLevel;
+  if (isPredictLevel) {
+    const isEditableAfterSubmit =
+      state.lab.levelProperties?.predictSettings?.codeEditableAfterSubmit ||
+      false;
+    const hasSubmittedPredictResponse = state.predictLevel.hasSubmittedResponse;
+    // If the predict level code is not editable after submit or the user has not submitted a response,
+    // the predict level is read only.
+    isReadonlyPredictLevel =
+      !isEditableAfterSubmit || !hasSubmittedPredictResponse;
+  }
+  return isReadonlyPredictLevel;
+}
+
+// Currently only Python Lab disables editing while code is running.
+function shouldBeReadonlyWhileRunning(state: RootState) {
+  return state.lab.levelProperties?.appName === 'pythonlab';
+}
+
+// This is an action that other reducers (specifically predictLevelRedux) can respond to.
+export const setLoadedPredictResponse = createAction<string>(
+  'lab/setLoadedPredictResponse'
+);
 
 export const {
   setIsLoading,

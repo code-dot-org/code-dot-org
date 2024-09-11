@@ -2,11 +2,11 @@ import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, Heading3} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/templates/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
 
@@ -138,15 +138,16 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
           <div className={style.buttonsBottom}>
             <Button
               id="uitest-no-email-guide"
+              className={style.whiteButton}
               text={continueWithoutEmailButtonText}
               onClick={onClose}
-              color={Button.ButtonColor.white}
+              color={buttonColors.gray}
+              type="secondary"
             />
             <Button
               id="uitest-email-guide"
               text={isSendInProgress ? i18n.inProgress() : emailGuideButtonText}
               onClick={validateAndSave}
-              color={Button.ButtonColor.brandSecondaryDefault}
               disabled={isSendInProgress}
             />
           </div>

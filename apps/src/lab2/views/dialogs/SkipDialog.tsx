@@ -1,42 +1,31 @@
-import Typography from '@cdo/apps/componentLibrary/typography';
 import React from 'react';
-import {BaseDialogProps} from './DialogManager';
-import moduleStyles from './confirm-dialog.module.scss';
-const commonI18n = require('@cdo/locale');
 
-/**
- * Skip dialog used in Lab2 labs.
- */
-const SkipDialog: React.FunctionComponent<BaseDialogProps> = ({
+import {commonI18n} from '@cdo/apps/types/locale';
+
+import GenericDialog, {GenericDialogProps} from './GenericDialog';
+
+export type SkipDialogProps = GenericDialogProps & {
+  handleConfirm?: () => void;
+  handleCancel?: () => void;
+};
+
+const SkipDialog: React.FunctionComponent<SkipDialogProps> = ({
   handleConfirm,
   handleCancel,
-}) => {
-  return (
-    <div className={moduleStyles.confirmDialog}>
-      <Typography semanticTag="h1" visualAppearance="heading-lg">
-        {commonI18n.skipTitle()}
-      </Typography>
-      <Typography semanticTag="p" visualAppearance="body-two">
-        {commonI18n.skipBody()}
-      </Typography>
-      <div className={moduleStyles.buttonContainer}>
-        <button
-          className={moduleStyles.cancel}
-          type="button"
-          onClick={handleCancel}
-        >
-          {commonI18n.cancel()}
-        </button>
-        <button
-          className={moduleStyles.confirm}
-          type="button"
-          onClick={handleConfirm}
-        >
-          {commonI18n.skipToProject()}
-        </button>
-      </div>
-    </div>
-  );
-};
+}) => (
+  <GenericDialog
+    title={commonI18n.skipTitle()}
+    message={commonI18n.skipBody()}
+    buttons={{
+      confirm: {
+        callback: handleConfirm,
+        text: commonI18n.skipToProject(),
+      },
+      cancel: {
+        callback: handleCancel,
+      },
+    }}
+  />
+);
 
 export default SkipDialog;

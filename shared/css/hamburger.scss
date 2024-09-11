@@ -1,12 +1,15 @@
 @import 'color.scss';
 @import 'font';
 
+$arrow-size: 1.5rem;
 
 #pageheader-wrapper {
   z-index: 99;
 }
 
 #hamburger {
+  display: inline-block;
+  position: relative;
 
   &.hide-always {
     display: none;
@@ -40,10 +43,10 @@
     display: block;
   }
 
-  display: inline-block;
-  float: right;
-  position: relative;
-  font-size: 14px;
+  &.show-small-desktop,
+  .show-small-desktop {
+    display: none;
+  }
 
   #hamburger-icon {
     cursor: pointer;
@@ -53,39 +56,31 @@
   }
 
   #hamburger-contents {
-    font-size: 14px;
+    font-size: 1rem;
     list-style: none;
     margin: 0;
-    padding: 0;
-    width: 300px;
-    right: 0;
+    width: 290px;
     position: absolute;
-    top: 55px;
+    top: 64px;
+    inset-inline-end: 0;
     background-color: $light_primary_500;
+    max-height: 100vh;
+    overflow-y: auto;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, .2);
     // We want the z-index to be greater than the teacher panel, which is currently 1021.
     // Teacher panel z-index is defined in teacher-panel.scss
     z-index: 1022;
-    max-height: 100vh;
-    overflow-y: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
     .item {
-
-
       color: $white;
-      line-height: 20px;
-      padding: 4px;
+      line-height: 1.5;
       text-indent: 0;
       list-style-type: none;
-      border-radius: 2px;
-      padding-bottom: 10px;
-      margin-bottom: 5px;
-      margin-top: 5px;
-      margin-left: 25px;
-      display: block;
-      float: none;
-
-      max-width: 240px;
+      margin-block: 1rem;
+      margin-inline: 1rem;
+      display: flex;
+      justify-content: space-between;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
@@ -96,9 +91,6 @@
       &::before {
         content: none;
       }
-      &:last-child {
-        margin-right: 0;
-      }
       a {
         @include main-font-regular;
         color: $white;
@@ -107,38 +99,6 @@
           float:right;
         }
       }
-
-      #about-more {
-        @include main-font-regular;
-        color: $white;
-        text-decoration: none;
-        cursor: pointer;
-      }
-      #educate-more {
-        @include main-font-regular;
-        color: $white;
-        text-decoration: none;
-        cursor: pointer;
-      }
-      #about-down {
-        font-size: 30px;
-        float: right;
-      }
-      #about-up {
-        font-size: 30px;
-        float: right;
-        display: none;
-      }
-      #educate-up {
-        font-size: 30px;
-        float: right;
-        display: none;
-      }
-      #educate-down {
-        font-size: 30px;
-        float: right;
-      }
-
     }
     &.hide-responsive-menu {
       display: none;
@@ -163,23 +123,21 @@
           float: right;
         }
       }
-      .arrow-down {
-        font-size: 30px;
+      .arrow-down,
+      .arrow-up {
+        font-size: $arrow-size;
         float: right;
-        margin-top: -7px;
+        margin-block-start: -4px;
+
         html[dir=rtl], .rtl & {
           float: left;
         }
-
       }
       .arrow-up {
-        font-size: 30px;
-        float: right;
-        margin-top: -7px;
         display: none;
-        html[dir=rtl], .rtl & {
-          float: left;
-        }
+      }
+      i {
+        width: unset;
       }
     }
 
@@ -192,39 +150,34 @@
       }
     }
 
-    @media(max-width: 400px) {
-      .item {
-        max-width: 240px;
-      }
-      .hamburger-expandable-item .text {
-        max-width: 210px;
-      }
-      .hamburger-expandable-items .item {
-        max-width: 220px;
+    .divider {
+      height: 1px;
+      background: $light_primary_700;
+      margin: 0.75rem 0;
+
+      @media (min-width: 1269px) {
+        &.hide-large-desktop {
+          display: none !important;
+        }
       }
     }
   }
 
-  .divider {
-    height: 10px;
-    background: $dark_teal;
-  }
-
-  @media(max-width: 1010px) {
-    &.show-mobile {
+  @media (max-width: 1268px) {
+    &.show-small-desktop,
+    .show-small-desktop {
       display: block;
     }
+  }
+
+  @media(max-width: 1023px) {
+    &.show-mobile,
     .show-mobile {
       display: block;
     }
-    &.hide-mobile {
-      display: none;
-    }
+    &.hide-mobile,
     .hide-mobile {
       display: none;
-    }
-    #hamburger-contents {
-      font-size: 18px;
     }
     #hamburger {
       padding-left: 0;
@@ -240,6 +193,7 @@
     padding: 10px 28px 16px 0;
     float: right;
     margin-top: 7px;
+    margin-inline-start: 3px;
     display: inline-block;
 
     %extend_burger {
@@ -280,13 +234,37 @@
     &.active span {
       background-color: transparent;
       &::before {
-        top: 0;
+        top: -2px;
         transform: rotate(45deg);
       }
       &::after {
-        top: 0;
+        top: -2px;
         transform: rotate(-45deg);
       }
     }
+  }
+}
+
+#hamburger-sign-up-buttons {
+  .button-wrapper {
+    box-sizing: border-box;
+    background-color: $light_primary_500;
+    text-align: center;
+    padding: 1rem 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .header_button {
+      margin: unset;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /* Hide the Sign in and Create account buttons
+  in the hamburger on large screens */
+  @media (min-width: 426px) {
+    display: none;
   }
 }

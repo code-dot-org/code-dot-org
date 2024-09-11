@@ -20,7 +20,7 @@
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -67,11 +67,14 @@
     "validation_code": "if (World.frameCount == 1) {\r\n  \r\n  setFailTime(200);\r\n  setDelayTime(200);\r\n  setupPrevious(); \r\n  \r\n  addCriteria(function(){\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n//  addCriteria(function() {\r\n  //  return spritesDefaultSize();\r\n  //}, 'spritesNotDefaultSize');\r\n  addCriteria(function(){\r\n    return anySpriteClicked();\r\n  }, 'spritelabFeedbackClickSprites');\r\n  addCriteria(function(){\r\n    return clickEventFound();\r\n  }, 'eventNotDetected');\r\n  addCriteria(function(){\r\n    return onlyClickedPropChanged('scale')&&clickEventFound();\r\n  }, 'changeOrSetSize');\r\n}\r\n\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\ndrawHandsOnUnclickedSprites();\r\n\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();\r\n",
     "encrypted_examples": "8IMZz4RdF5Gd33ujLb9yCOiXVoG6QpZDfCtZtZ6esYXO4a7Dqqtj8Kel3a8j\nRbe9j+KVTBaQj0J1NOQHSzkfNQ==\n",
     "standalone_app_name": "spritelab",
+    "video_key": "csf_lots_of_sprites",
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:16.648+00:00\",\"changed\":[\"cloned from \\\"game_design_toolbox_object_2024\\\"\"],\"cloned_from\":\"game_design_toolbox_object_2024\"},{\"changed_at\":\"2024-05-17 17:04:27 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:16.648+00:00\",\"changed\":[\"cloned from \\\"game_design_toolbox_object_2024\\\"\"],\"cloned_from\":\"game_design_toolbox_object_2024\"},{\"changed_at\":\"2024-05-17 17:04:27 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-24 17:16:57 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-24 17:28:29 +0000\",\"changed\":[\"start_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-15 21:51:09 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 2,
+    "events": 2
   }
 }]]></config>
   <blocks>

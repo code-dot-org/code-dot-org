@@ -1,10 +1,12 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
+import React from 'react';
 import {Factory} from 'rosie';
-import {stubWindowDashboard} from '../../../../util/testUtils';
-import './workshopFactory';
+
 import AttendancePanel from '@cdo/apps/code-studio/pd/workshop_dashboard/AttendancePanel';
+
+import {stubWindowDashboard} from '../../../../util/testUtils';
+
+import './workshopFactory';
 
 describe('AttendancePanel', () => {
   stubWindowDashboard({
@@ -20,7 +22,7 @@ describe('AttendancePanel', () => {
         ]}
       />,
       {
-        context: {router: {push: sinon.spy(), createHref: sinon.spy()}},
+        context: {router: {push: jest.fn(), createHref: jest.fn()}},
       }
     );
   });

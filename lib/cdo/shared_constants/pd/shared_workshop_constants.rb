@@ -7,6 +7,7 @@ module Pd
       COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_FACILITATOR = 'Facilitator'.freeze,
       COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
+      COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
     ].freeze
 
     ARCHIVED_COURSES = [
@@ -111,8 +112,7 @@ module Pd
         SUBJECT_CSD_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
         SUBJECT_CSD_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
         SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
-        SUBJECT_CSD_FIT = SUBJECT_FIT,
-        SUBJECT_CSD_CUSTOM_WORKSHOP = SUBJECT_CUSTOM_WORKSHOP
+        SUBJECT_CSD_FIT = SUBJECT_FIT
       ],
       COURSE_CSF => [
         SUBJECT_CSF_101,
@@ -241,7 +241,8 @@ module Pd
         LEGACY_SUBJECT_CSD_VIRTUAL_5 = 'Virtual Workshop 5'.freeze,
         LEGACY_SUBJECT_CSD_VIRTUAL_6 = 'Virtual Workshop 6'.freeze,
         LEGACY_SUBJECT_CSD_VIRTUAL_7 = 'Virtual Workshop 7'.freeze,
-        LEGACY_SUBJECT_CSD_VIRTUAL_8 = 'Virtual Workshop 8'.freeze
+        LEGACY_SUBJECT_CSD_VIRTUAL_8 = 'Virtual Workshop 8'.freeze,
+        SUBJECT_CSD_CUSTOM_WORKSHOP = SUBJECT_CUSTOM_WORKSHOP
       ]
     }.freeze
 

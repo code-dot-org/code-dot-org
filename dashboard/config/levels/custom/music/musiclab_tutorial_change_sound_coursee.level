@@ -1,0 +1,90 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-06-03T22:50:39.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "long_instructions": "####Play more sounds\r\nTry playing one sound after another.\r\n\r\n1. Drag one or more [play](#clickable=play-sound-block) blocks into the program. \r\n2. Then press [Run](#clickable=run-button).\r\n\r\n",
+    "level_data": {
+      "library": "intro2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "deletable": false,
+                  "movable": false,
+                  "fields": {
+                    "sound": "bass/amped_alternate_bass"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "sounds": {
+        "beats": [
+          "drum_kit_disco",
+          "drum_beat_edm",
+          "drum_beat_club",
+          "drum_beat_knock",
+          "drum_kit_pop"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "instructions_important": "false",
+    "name_suffix": "_coursee",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "key": "musiclab_intro_change_sound_v2_6054328e-dc95-47fe-8c65-980ce00299f1",
+        "message": "Great work! You added new sounds to your song. ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "musiclab_intro_change_sound_v2_9ddfc062-5d48-4090-aa06-ff26c4a75916",
+        "message": "Add at least one more sound.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-03T22:50:39.877+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_change_sound_course-d\\\"\"],\"cloned_from\":\"musiclab_tutorial_change_sound_course-d\"}]"
+}]]></config>
+  <blocks/>
+</Music>

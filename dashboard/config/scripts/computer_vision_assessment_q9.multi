@@ -1,0 +1,10 @@
+name 'Computer-Vision-Assessment-Q9'
+title 'Computer Vision Assessment'
+
+question 'Compose a plan that would best eliminate bias in the following scenario–
+A inventor would like to create a doggy door application that utilizes computer vision in order to only open when a known dog is identified.'
+wrong 'Use a single high-resolution image of the known dog to train the model, as it will focus on detailed features'
+wrong 'Train the model using images of different dog breeds to improve its generalization capabilities, even if they are not the target dog'
+wrong 'Use a pre-trained model on generic dog images and fine-tune it with a few images of the known dog, so it will perform well'
+right 'Collect a diverse dataset with images of the known dog in various lighting conditions, poses, and backgrounds to ensure the model recognizes the dog accurately in different situations'
+allow_multiple_attempts false

@@ -1,7 +1,10 @@
-import {expect} from '../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import MusicController from '@cdo/apps/MusicController';
-import sinon from 'sinon';
 import Sounds from '@cdo/apps/Sounds';
+
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 
 describe('MusicController', () => {

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:32:08.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A researcher wants to determine an approximate width of the largest cities in the world by land area.\r\n\r\nThe researcher assumes that each city is shaped like a circle. To find the approximate width of each city, the researcher needs to find the square root of each value in `landAreas`(#e7e8ea) divided by `Math.PI`(#e7e8ea).\r\n\r\n##In CityData.java:\r\n\r\n1. Write the `calculateSizes()`(#e7e8ea) method.\r\n\r\n   * Traverse the `landAreas`(#e7e8ea) array. Divide each value by `Math.PI`(#e7e8ea) then use `Math.sqrt()`(#e7e8ea) to calculate the square root of this result to get the radius.\r\n   \r\n   * Multiply each radius by `2`(#e7e8ea) to get the total approximate width.\r\n\r\n   * Return a new array that contains the width.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Declare and initialize a new array called `landSizes`(#e7e8ea) that stores the array returned from the `calculateSizes()`(#e7e8ea) method.\r\n\r\n3. Print the values stored in the `landSizes`(#e7e8ea) array.",
@@ -22,12 +26,9 @@
         "text": "/*\n * Analyzes city data\n */\npublic class CityData {\n\n  private double[] landAreas;   // The list of land areas\n\n  /*\n   * Constructor to create a CityData object\n   * with the specified array of land areas\n   */\n  public CityData(double[] landAreas) {\n    this.landAreas = landAreas;\n  }\n\n  /*\n   * Returns an array containing the approximate\n   * width of each city\n   */\n  public double[] calculateSizes() {\n    // TO DO #2: Return an array containing the approximate width of each city.\n\n\n    return null;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:32:08.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:32:08.949+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5d_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L5d_2022\"},{\"changed_at\":\"2022-09-21 22:46:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-21 22:52:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-21 22:52:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

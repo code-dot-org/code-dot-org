@@ -1,29 +1,32 @@
 import PropTypes from 'prop-types';
+import QRCode from 'qrcode.react';
 import React from 'react';
 import {connect} from 'react-redux';
-import BaseDialog from '../../templates/BaseDialog';
-import AdvancedShareOptions from './AdvancedShareOptions';
-import AbuseError from './AbuseError';
-import SendToPhone from './SendToPhone';
-import color from '../../util/color';
-import * as applabConstants from '../../applab/constants';
+
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import * as p5labConstants from '@cdo/apps/p5lab/constants';
-import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
-import {hideShareDialog, unpublishProject} from './shareDialogRedux';
-import DownloadReplayVideoButton from './DownloadReplayVideoButton';
-import {showPublishDialog} from '../../templates/projects/publishDialog/publishDialogRedux';
-import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import LibraryCreationDialog from './libraries/LibraryCreationDialog';
-import QRCode from 'qrcode.react';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from '../../templates/Button';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
-import fontConstants from '@cdo/apps/fontConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+import * as applabConstants from '../../applab/constants';
+import BaseDialog from '../../templates/BaseDialog';
+import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
+import {showPublishDialog} from '../../templates/projects/publishDialog/publishDialogRedux';
+import color from '../../util/color';
+import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
+
+import AbuseError from './AbuseError';
+import AdvancedShareOptions from './AdvancedShareOptions';
+import DownloadReplayVideoButton from './DownloadReplayVideoButton';
+import LibraryCreationDialog from './libraries/LibraryCreationDialog';
+import SendToPhone from './SendToPhone';
+import {hideShareDialog, unpublishProject} from './shareDialogRedux';
 
 function recordShare(type, appType) {
   if (!window.dashboard) {
@@ -372,14 +375,10 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                   <div>
                     <Button
-                      color={Button.ButtonColor.brandSecondaryDefault}
+                      color={buttonColors.purple}
+                      type="primary"
                       id="sharing-dialog-copy-button"
-                      icon="clipboard"
-                      style={{
-                        ...styles.button,
-                        ...styles.copyButton,
-                        ...(this.state.hasBeenCopied && styles.copyButtonLight),
-                      }}
+                      iconLeft={{iconName: 'copy'}}
                       onClick={wrapShareClick(
                         this.copy,
                         'SHARING_LINK_COPY',
@@ -396,26 +395,25 @@ class ShareAllowedDialog extends React.Component {
                 </div>
                 <div className="social-buttons" style={{marginTop: 12}}>
                   <Button
-                    color={Button.ButtonColor.neutralDark}
                     id="sharing-phone"
-                    href=""
+                    color={buttonColors.black}
+                    type="secondary"
                     onClick={wrapShareClick(
                       this.showSendToPhone,
                       'SHARING_LINK_SEND_TO_PHONE',
                       this.props.appType
                     )}
-                    style={styles.sendToPhoneButton}
-                  >
-                    <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
-                    <span style={styles.sendToPhoneSpan}>
-                      {i18n.sendToPhone()}
-                    </span>
-                  </Button>
+                    text={i18n.sendToPhone()}
+                    iconLeft={{iconName: 'mobile-screen'}}
+                  />
                   {canPrint && hasThumbnail && (
-                    <a href="#" onClick={wrapShareClick(this.print, 'print')}>
-                      <FontAwesome icon="print" style={{fontSize: 26}} />
-                      <span>{i18n.print()}</span>
-                    </a>
+                    <Button
+                      color={buttonColors.purple}
+                      type="primary"
+                      onClick={wrapShareClick(this.print, 'print')}
+                      iconLeft={{iconName: 'print'}}
+                      text={i18n.print()}
+                    />
                   )}
                   {/* prevent buttons from overlapping when unpublish is pending */}
                   {this.isSocialShareAllowed() && !isUnpublishPending && (
@@ -551,18 +549,6 @@ const styles = {
     marginBottom: 0,
     marginLeft: 0,
     verticalAlign: 'top',
-  },
-  copyButton: {
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    marginLeft: 0,
-    marginBottom: 0,
-    marginTop: 0,
-    marginRight: 16,
-    fontSize: 'large',
-  },
-  copyButtonLight: {
-    backgroundColor: color.light_purple,
   },
   thumbnail: {
     float: 'left',

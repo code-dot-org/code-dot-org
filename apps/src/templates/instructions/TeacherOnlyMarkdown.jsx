@@ -10,21 +10,34 @@ import color from '../../util/color';
 export default class TeacherOnlyMarkdown extends Component {
   static propTypes = {
     content: PropTypes.string,
+    hideContainer: PropTypes.bool,
   };
 
-  render() {
+  renderMarkdownContent() {
     const {content} = this.props;
+    return (
+      <div style={styles.content}>
+        <SafeMarkdown markdown={content} />
+      </div>
+    );
+  }
+
+  render() {
+    const {content, hideContainer} = this.props;
 
     if (!content) {
       return null;
     }
 
+    // CodeBridge does not use the teal container/header, so we just render the content.
+    if (hideContainer) {
+      return this.renderMarkdownContent();
+    }
+
     return (
       <div style={styles.container}>
         <div style={styles.header}>{i18n.forTeachersOnly()}</div>
-        <div style={styles.content}>
-          <SafeMarkdown markdown={content} />
-        </div>
+        {this.renderMarkdownContent()}
       </div>
     );
   }

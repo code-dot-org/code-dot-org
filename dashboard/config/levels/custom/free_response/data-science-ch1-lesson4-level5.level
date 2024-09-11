@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-11T20:21:46.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "**Directions:** These statements should be from the perspective of the persona and explain what they, personally, value or find frustration with when it comes to data rights. A few sample statements are provided below:\r\n- Data should never be provided to other parties without my explicit consent and permission in writing\r\n- Data should be available more easily for those in the law enforcement community so that we can investigate and solve crimes quicker and easier.\r\n\r\n\r\n<table style=\"width: 100%; border-collapse: collapse; border: 1px solid black;\">\r\n  <tr>\r\n    <td colspan=\"2\" style=\"border: 1px solid black; padding: 10px;\">\r\n      <h1 style=\"text-align: center;\">Tamara, The Data Analyst</h1>\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n    <td style=\"width: 40%; border: 1px solid black; padding: 10px; text-align: center;\">\r\n      <img src=\"https://images.code.org/fc01fabd1f9e0b1641c8ef1c86ade0e8-image-1718137282119.png\" style=\"width: 33%;\"/>\r\n      <hr>\r\n      <div style=\"text-align: left;\">\r\n        <h2>Background:</h2>\r\n        <p>Tamara is a 29-year-old data analyst working in Silicon Valley, using big data to optimize user engagement and product development.</p>\r\n      </div>\r\n    </td>\r\n    <td style=\"width: 70%; border: 1px solid black; padding: 10px;\">\r\n    <h2 style=\"margin-top: 0;\">Key Experiences:</h2>\r\n    <ul style=\"font-size: 16px;\">\r\n        <li style=\"margin-bottom: 10px;\">        Tamara worked on an AI project that used customer data to predict purchasing behavior. The project faced criticism for lack of transparency regarding how decisions were made by the AI system. However, Tamara was commended for accurately forecasting the revenue that it generated for her company.\r\n            </li>\r\n        <li style=\"margin-bottom: 10px;\">Tamara was asked to come up with a way to erase user data when requested by a user. This became very difficult to do for data that had been anonymized.</li>\r\n        <li style=\"margin-bottom: 10px;\">Tamara uses user data to tailor products that are shown to users, constantly questioning the ethical lines of user engagement and data manipulation.</li>\r\n      </ul>\r\n    </td>\r\n  </tr>\r\n</table>\r\n\r\n\r\n\r\n### Write 1-2 **data rights statement(s)** that would reflect the viewpoint of this stakeholder based on his/her key experiences:\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "The Data Analyst",
+    "bubble_choice_description": "Tamara is a 29-year-old data analyst working in Silicon Valley, using big data to optimize user engagement and product development.",
+    "thumbnail_url": "https://images.code.org/bb565ba0f54cd0797a8e9045db6c3431-tamara.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-11 20:21:50 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-22 18:36:05 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

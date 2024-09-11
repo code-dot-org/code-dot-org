@@ -1,0 +1,26 @@
+name 'sp-pl-DS_L10'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# More Data Visualizations 
+
+
+
+## Lesson 10 - More Data Visualization
+
+
+<img src="https://images.code.org/02dda88bf5859a1001a08bd34df14eff-image-1724434070556.png" alt="codap logo" width="220px"   style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### In this lesson, students will deepen their understanding of data visualization by using additional features in CODAP to analyze various datasets.
+#### They learn to use formulas and other visualization tools to interpret data through different lenses and discuss ethical considerations such as bias and privacy. 
+#### The lesson aims to enhance their skills in technical data handling and critical thinking about the impacts of data analysis.
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+##Let’s try a few levels!
+
+#### In the lesson, the students build a graph and reflect on the data before building new skills in CODAP. This professional learning module focuses on the new skills. 
+
+
+MARKDOWN

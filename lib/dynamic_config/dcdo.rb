@@ -31,6 +31,7 @@ class DCDOBase < DynamicConfigBase
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
       'pl-teacher-application-off-season': DCDO.get('pl_teacher_application', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
+      'curriculum-launch-2024': DCDO.get('curriculum-launch-2024', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
       cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
@@ -48,9 +49,14 @@ class DCDOBase < DynamicConfigBase
       'ai-teaching-assistant-launch': DCDO.get('ai-teaching-assistant-launch', false),
       'incubator-canvas-block-enabled': DCDO.get('incubator-canvas-block-enabled', true),
       'progress-table-v2-metadata-enabled': DCDO.get('progress-table-v2-metadata-enabled', false),
-      'music-lab-launch-2024': DCDO.get('music-lab-launch-2024', false),
       'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
+      'disable-try-new-progress-view-modal': DCDO.get('disable-try-new-progress-view-modal', false),
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
+      'show-age-gated-students-banner': DCDO.get('show-age-gated-students-banner', true),
+      'cfu-pin-hide-enabled': DCDO.get('cfu-pin-hide-enabled', false),
+      'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', false),
+      'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
+      section_create_lms_cards: DCDO.get('section_create_lms_cards', false),
     }
   end
 end

@@ -17,14 +17,14 @@ Feature: Swapped levels
     Then I wait until element ".instructions-markdown" contains text "Now use a repeat block to make the cell a shell."
 
   @as_student
-  @no_phone
+  @no_mobile
   Scenario: Student with progress sees old version
     Given I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/1?level_name=2-3 Maze 1"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new&blocklyVersion=google"
     And I am on "http://studio.code.org/s/allthethings/lessons/29/levels/5?level_name=ramp_video_loopsArtist&noautoplay=true"
     And I wait until element ".submitButton" is visible
     When I click selector ".submitButton" to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I verify progress in the header of the current page is "perfect" for level 1
     And I verify the bubble for level 1 is an activity bubble
     And I verify progress in the header of the current page is "perfect" for level 4

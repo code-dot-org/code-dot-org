@@ -10,13 +10,28 @@
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
+      "supported_locales": [
+        "ar-SA",
+        "zh-TW",
+        "fr-FR",
+        "es-MX",
+        "hi-IN",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "fa-IR",
+        "pt-BR",
+        "th-TH",
+        "tr-TR"
+      ],
       "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "how-ai-works",
-    "serialized_at": "2023-11-20 20:33:04 UTC",
+    "serialized_at": "2024-09-09 23:23:21 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -157,9 +172,9 @@
       "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson centers around the [How AI Works: Privacy and the Future of Work](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn small groups, students conduct research using articles and videos that expose ethical pitfalls in an artificial intelligence area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
-        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.",
-        "student_overview": "Collaboratively research about AI ethics and create a shareable code of conduct."
+        "overview": "This lesson centers around the [How AI Works: Privacy and the Future of Work](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, there are options for how students synthesize what they've learned to make recommendations for how AI can be used in society: creating an AI Code of Ethics, or creating an AI Manifesto, or designing an \"Imagine your World\" artistic representation.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
+        "preparation": "- Review the slide deck and student resources\n- Review the research topics and decide if you would like to remove / add any topics\n- Decide which final activity to complete with the class (there are 3 options)",
+        "student_overview": "Collaboratively research about AI ethics and create an artifact to reflect your research."
       },
       "seeding_key": {
         "lesson.key": "Our AI Code of Ethics",
@@ -634,42 +649,81 @@
       }
     },
     {
-      "key": "bb2dd9c1-473e-4f5b-8065-ad655ccfb0a5",
+      "key": "566a087d-aa19-4f4d-bf96-e7d2c8fa3dfd",
       "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "bb2dd9c1-473e-4f5b-8065-ad655ccfb0a5",
+        "lesson_activity.key": "566a087d-aa19-4f4d-bf96-e7d2c8fa3dfd",
         "lesson.key": "Our AI Code of Ethics",
         "lesson_group.key": "",
         "script.name": "how-ai-works-2023"
       }
     },
     {
-      "key": "bc33c5c0-b292-4da3-961f-4788b53dcc6d",
+      "key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79",
       "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "bc33c5c0-b292-4da3-961f-4788b53dcc6d",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79",
         "lesson.key": "Our AI Code of Ethics",
         "lesson_group.key": "",
         "script.name": "how-ai-works-2023"
       }
     },
     {
-      "key": "6ab33f6a-b887-470b-a530-63aa3546d5ed",
+      "key": "b3cd6690-a7c8-406f-be13-8ee125c7b36f",
       "position": 4,
+      "properties": {
+        "name": "Option 1: AI Code of Ethics"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3cd6690-a7c8-406f-be13-8ee125c7b36f",
+        "lesson.key": "Our AI Code of Ethics",
+        "lesson_group.key": "",
+        "script.name": "how-ai-works-2023"
+      }
+    },
+    {
+      "key": "17fa6ca8-65a3-4967-8d64-973e45d58461",
+      "position": 5,
+      "properties": {
+        "name": "Option 2: Create a Manifesto"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17fa6ca8-65a3-4967-8d64-973e45d58461",
+        "lesson.key": "Our AI Code of Ethics",
+        "lesson_group.key": "",
+        "script.name": "how-ai-works-2023"
+      }
+    },
+    {
+      "key": "492054b3-7551-4b80-b356-46d4224659d2",
+      "position": 6,
+      "properties": {
+        "name": "Option 3: Imagine Your World Art Display"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "492054b3-7551-4b80-b356-46d4224659d2",
+        "lesson.key": "Our AI Code of Ethics",
+        "lesson_group.key": "",
+        "script.name": "how-ai-works-2023"
+      }
+    },
+    {
+      "key": "1a398c5a-e747-44c6-8861-f41fe02acc03",
+      "position": 7,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "6ab33f6a-b887-470b-a530-63aa3546d5ed",
+        "lesson_activity.key": "1a398c5a-e747-44c6-8861-f41fe02acc03",
         "lesson.key": "Our AI Code of Ethics",
         "lesson_group.key": "",
         "script.name": "how-ai-works-2023"
@@ -677,7 +731,7 @@
     },
     {
       "key": "75a6c307-1c70-4932-94fd-e2e3a2caa2c9",
-      "position": 5,
+      "position": 8,
       "properties": {
         "name": "After the Lesson"
       },
@@ -2135,7 +2189,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Real-World Connections:** Consider sharing with students the work of Michael Running Wolf, an indigenous computer scientist who is working to add Native languages like Salish, Cheyenne, or Blackfoot to voice assistants. Part of this work includes creating the data that the assistants can use when generating their response, since that data was missing when these systems were first created. Consider sharing [this news article](https://missoulian.com/news/local/meet-michael-running-wolf-the-man-using-ai-to-reclaim-native-languages/article_9cdd8db4-4074-5edb-9fa4-74773cdb9464.html) with students or completing one of the activities from the [CS Education Week CS Heroes series](https://www.csedweek.org/cs-heroes/michael-running-wolf)"
+            "markdown": "**Real-World Connections:** Consider sharing with students the work of Michael Running Wolf, an Indigenous computer scientist who is working to add Native languages like Salish, Cheyenne, or Blackfoot to voice assistants. Part of this work includes creating the data that the assistants can use when generating their response, since that data was missing when these systems were first created. Consider sharing [this news article](https://missoulian.com/news/local/meet-michael-running-wolf-the-man-using-ai-to-reclaim-native-languages/article_9cdd8db4-4074-5edb-9fa4-74773cdb9464.html) with students or completing one of the activities from the [CS Education Week CS Heroes series](https://www.csedweek.org/cs-heroes/michael-running-wolf)"
           }
         ]
       },
@@ -3478,7 +3532,8 @@
       "key": "17bd5635-8ba9-4318-96e4-d1e3bedf918b",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**View the Resources:** This lesson plan comes with a slide deck and additional resources, found in the Links section of the lesson plan. Each bolded line in the lesson plan usually corresponds to a slide in the slide deck. It can be helpful to have the slides and student resources open while reading the lesson plan, as there are visuals and additional information not always represented in the lesson plan.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.",
+        "name": "Preparing to Teach a Code.org Lesson"
       },
       "seeding_key": {
         "activity_section.key": "17bd5635-8ba9-4318-96e4-d1e3bedf918b",
@@ -3489,8 +3544,8 @@
       "key": "75b90ab5-9e92-4a28-ad51-4e89e824651e",
       "position": 2,
       "properties": {
-        "description": "This lesson is not intended to introduce students to sound research practices or how to vet credible sources. Students should come into this lesson with prior knowledge and the skills to be able to:\n\n- recognize credible sources on the internet\n- summarize information from digital sources to support an argument\n- navigate online resources and cite sources appropriately",
-        "name": "Prerequisite Skills"
+        "description": "**Checking Resources:** Students will be researching different topics related to Artificial Intelligence. Research areas are included in this handout: [r ai_research_areas/ai-ethics/2023]. We haven't provided these directly to students because sometimes these sites are blocked by district filtering programs, or the latest news-worthy innovation may not be middle-school appropriate. **We strongly suggest you check each site for appropriateness of content and to make sure it will load on classroom computers before sharing it with students.** You are also welcome to curate your own news sources based on current events or issues in your state or community.\n\n**LEADERS Framework:** This lesson allows students to explore the societal impacts of artificial intelligence on society, both the intentional solutions that can be beneficial to society and the unintended consequences that may be harmful to society. Issues of bias in artificial intelligence may come up in research material and class discussion. \n\nTo help prepare for these moments, we recommend reviewing the \n[r leaders_framework/ai-ethics/2023] for facilitating lessons and discussions involving the societal effects of AI, including bias and ethical considerations. Not all of the tenets are applicable to every lesson, but many of the teaching tips and discussion goals in this lesson follow the principles outlined in this framework.",
+        "name": "Preparing to Teach a Lesson on AI Impact & Bias"
       },
       "seeding_key": {
         "activity_section.key": "75b90ab5-9e92-4a28-ad51-4e89e824651e",
@@ -3498,152 +3553,604 @@
       }
     },
     {
-      "key": "baa4a80d-7b25-46a4-b655-5ca5c2c89a90",
+      "key": "b648506d-062d-4c55-8808-610118965579",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:**  On a whiteboard, draw a T-chart that says \"Helpful\" and \"Harmful\"."
+      },
+      "seeding_key": {
+        "activity_section.key": "b648506d-062d-4c55-8808-610118965579",
+        "lesson_activity.key": "566a087d-aa19-4f4d-bf96-e7d2c8fa3dfd"
+      }
+    },
+    {
+      "key": "3b4cc41c-efac-430e-89f1-1400c88a3ebd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The Internet has been one of the greatest technological innovations in the last century. What are ways it has been helpful towards society? What are ways it has been harmful?",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces summarizing an article or determining how an article could be used as evidence in an argument."
+            "markdown": "**Differentiating the Topic:** You could decide to change this prompt to use a different technology that is more relevant to your students and their interests, as long as there are clear examples of how it has been helpful or harmful in society. For example, you could ask the class for examples of a technology that's had a big impact on their lives (such as social media, maps, voice assistants, or self-driving cars) and then continue the warm-up using the class idea as the prompt.&#x20;\n\nYou could also change the topic entirely to a relevant issue in your community - for example, if a new mining quarry might be opening near a community, this could be used as a topic to discuss ways it can be helpful or harmful (ie: boosts the economy, but may decrease the air quality in the community)."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "baa4a80d-7b25-46a4-b655-5ca5c2c89a90",
-        "lesson_activity.key": "bb2dd9c1-473e-4f5b-8065-ad655ccfb0a5"
+        "activity_section.key": "3b4cc41c-efac-430e-89f1-1400c88a3ebd",
+        "lesson_activity.key": "566a087d-aa19-4f4d-bf96-e7d2c8fa3dfd"
       }
     },
     {
-      "key": "303214ba-9e83-41f9-814c-5a8e3cf17723",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What is the best example you can think of where AI can do good in the world? What is the best example you can think of where AI can do harm in the world? In each case, why?_\n\nRemind students that AI is more than just robots or representations in the media - things like social media algorithms or recommendation systems or facial recognition are all examples of artificial intelligence as well.\n\nAs students write down their thoughts, create a T-chart in front of the room with \"Good\" on the left side and \"Bad\" on the right side. After students have a chance to write down their thoughts and discuss with a neighbor, ask for suggestions to fill in the chart. As you do, ask students to say what informed whether something belonged in the \"good\" or \"bad\" column.",
-        "name": "Journal"
-      },
-      "seeding_key": {
-        "activity_section.key": "303214ba-9e83-41f9-814c-5a8e3cf17723",
-        "lesson_activity.key": "bb2dd9c1-473e-4f5b-8065-ad655ccfb0a5"
-      }
-    },
-    {
-      "key": "5dde3bb0-ae0f-43ef-94f3-36ef29a6feac",
+      "key": "b814c0a3-4086-4756-80c1-55782ec9bbd4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is intentionally open-ended and vague with how we define \"good\", \"bad\", \"right\", and \"wrong\". Give students space to explore how they would describe artificial technology and find examples of \"good\" or \"bad\". Try to hear from a wide variety of voices in your classroom. When ready, advance to the next slide and use the remarks below to wrap up the discussion."
-      },
-      "seeding_key": {
-        "activity_section.key": "5dde3bb0-ae0f-43ef-94f3-36ef29a6feac",
-        "lesson_activity.key": "bb2dd9c1-473e-4f5b-8065-ad655ccfb0a5"
-      }
-    },
-    {
-      "key": "7d462e2d-fa45-40ef-81ba-e83a9d898bf1",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** \n\n- **Ethics:** guidelines for good behavior."
-      },
-      "seeding_key": {
-        "activity_section.key": "7d462e2d-fa45-40ef-81ba-e83a9d898bf1",
-        "lesson_activity.key": "bb2dd9c1-473e-4f5b-8065-ad655ccfb0a5"
-      }
-    },
-    {
-      "key": "4f24c132-2919-489b-8ba5-873d8f63e1f0",
-      "position": 5,
-      "properties": {
-        "description": "When we discuss right and wrong, good and bad, we are discussing “ethics”. As we create our own apps using machine learning and AI, it's important to consider the ethical impact of our decisions. No matter how “intelligent” machines may appear, they are still tools that humans create. If created or used without the right guidelines, machines with AI can easily make unethical decisions, such as being biased against someone’s gender or race. The more aware we are of ethical issues involving AI, the better we will be able to make sure that AI benefits everyone in society.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "4f24c132-2919-489b-8ba5-873d8f63e1f0",
-        "lesson_activity.key": "bb2dd9c1-473e-4f5b-8065-ad655ccfb0a5"
-      }
-    },
-    {
-      "key": "70f2dc25-9a22-4121-a3a1-031353075f51",
-      "position": 1,
-      "properties": {
-        "description": "**Groups**: Place students in groups of three or four.",
-        "name": "Research and Reflect"
-      },
-      "seeding_key": {
-        "activity_section.key": "70f2dc25-9a22-4121-a3a1-031353075f51",
-        "lesson_activity.key": "bc33c5c0-b292-4da3-961f-4788b53dcc6d"
-      }
-    },
-    {
-      "key": "4d5a11a3-ceb9-4397-afad-f0034c5a7c07",
-      "position": 2,
-      "properties": {
-        "description": "Roleplay time! Today you are a group of AI experts. Each group specializes in a particular area of AI ethics. You are holding a meeting to write an “AI Code of Ethics”, which will be a set of rules for people who work on AI machines and lawmakers worldwide! One example of a rule might be, “AI must treat all people fairly.” Before you begin writing these rules, you will research your area and discuss it with your group members.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "4d5a11a3-ceb9-4397-afad-f0034c5a7c07",
-        "lesson_activity.key": "bc33c5c0-b292-4da3-961f-4788b53dcc6d"
-      }
-    },
-    {
-      "key": "7f65c64b-fa2e-439c-946b-4b174603b56b",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Digitally share the [r ai_ethics_research_areas/how-ai-works/2023] document with each group. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/how-ai-works/2023] handout. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "7f65c64b-fa2e-439c-946b-4b174603b56b",
-        "lesson_activity.key": "bc33c5c0-b292-4da3-961f-4788b53dcc6d"
-      }
-    },
-    {
-      "key": "e2a6627e-2ea9-480d-b99c-d2f6cdfcd15a",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Once students have completed their research, share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\n\n",
-        "name": "Draft “Our AI Code of Ethics” Resource "
-      },
-      "seeding_key": {
-        "activity_section.key": "e2a6627e-2ea9-480d-b99c-d2f6cdfcd15a",
-        "lesson_activity.key": "bc33c5c0-b292-4da3-961f-4788b53dcc6d"
-      }
-    },
-    {
-      "key": "0928230e-8cc1-4f03-8e54-0d07b8c4a24f",
-      "position": 5,
-      "properties": {
-        "description": "Have students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page).",
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students brainstorm individually, then share with a neighbor before regrouping. Call on students to share, keeping track of responses on the T-chart. \n\nStudents should be able to pull from news sources or lived experiences to populate the chart. If students struggle generating ideas, continue to the next slide which includes a few examples.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Displaying a Class Code of Ethics:** The format of your class Code of Ethics is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation (such as the one from our [r our_ai_code_of_ethics_template_/how-ai-works/2023]), or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!"
+            "markdown": "**Context Matters**: What helps one student may harm another, and vice versa. If students have conflicting ideas around “helpful” and “harmful”, try not to open for direct debate, as this may result in the majority outweighing a vulnerable student. Instead, encourage students to think about future technologies, research, or policies that could protect people from being harmed. This will help segue into later activities encouraging students to be a part of the solution!"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "0928230e-8cc1-4f03-8e54-0d07b8c4a24f",
-        "lesson_activity.key": "bc33c5c0-b292-4da3-961f-4788b53dcc6d"
+        "activity_section.key": "b814c0a3-4086-4756-80c1-55782ec9bbd4",
+        "lesson_activity.key": "566a087d-aa19-4f4d-bf96-e7d2c8fa3dfd"
       }
     },
     {
-      "key": "fd914ace-90b0-46ed-a205-faf9fba75a9c",
+      "key": "8c2c0ef9-9dfc-4440-857e-d631cbfc6fdc",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with various news articles about the impact of the Internet on society. If you changed the prompt to a different technology, also update these slides."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c2c0ef9-9dfc-4440-857e-d631cbfc6fdc",
+        "lesson_activity.key": "566a087d-aa19-4f4d-bf96-e7d2c8fa3dfd"
+      }
+    },
+    {
+      "key": "73cb5570-46f4-4027-9c77-6b95113ab6f9",
+      "position": 5,
+      "properties": {
+        "description": "Even though the Internet is a grand technological innovation, its legacy is complicated - in some cases, it's been incredibly helpful and beneficial to society. And in others, it's been harmful and detrimental to society. Technology can have a wide-range of impacts, sometimes beyond what was intended. Today, we're going to example another piece of technology and explore the impacts its having on society: Artificial Intelligence.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "73cb5570-46f4-4027-9c77-6b95113ab6f9",
+        "lesson_activity.key": "566a087d-aa19-4f4d-bf96-e7d2c8fa3dfd"
+      }
+    },
+    {
+      "key": "52a39000-2a8a-4b49-aead-ccc9bd804c19",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the video \n[r how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023]"
+        "duration": "5",
+        "name": "Introduction to Artificial Intelligence",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Skip to the Research:** This section starts with a brief introduction of artificial intelligence. If you have already introduced artificial intelligence to students in previous lessons, consider skipping this section.\n\n**Connecting to your Subject:** In order to expand on the definition of AI, you may want to bring up other examples to help students think about AI in their daily lives. You can even specifically discuss AI and your subject area. For example, English teachers can discuss AI-written essays. Math teachers can discuss how AI assists computation. Economics teachers can discuss how AI is used for financial prediction. History teachers can discuss the past decade of innovation in AI and how it has impacted society. You can simply think about the apps you use on a daily basis, as these are all opportunities to discuss AI."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "fd914ace-90b0-46ed-a205-faf9fba75a9c",
-        "lesson_activity.key": "6ab33f6a-b887-470b-a530-63aa3546d5ed"
+        "activity_section.key": "52a39000-2a8a-4b49-aead-ccc9bd804c19",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
       }
     },
     {
-      "key": "c78b9095-0ab0-421b-906a-3ef18f86d6d0",
+      "key": "3c61962e-1b27-4304-9562-86c9eee9ba92",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_\n\nEncourage student to use evidence from their research in explaining what AI Ethics is and the need for an ethical code.",
-        "name": "Journal"
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Show students the definition of artificial intelligence.\n\n- **Artificial Intelligence**: A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions."
       },
       "seeding_key": {
-        "activity_section.key": "c78b9095-0ab0-421b-906a-3ef18f86d6d0",
-        "lesson_activity.key": "6ab33f6a-b887-470b-a530-63aa3546d5ed"
+        "activity_section.key": "3c61962e-1b27-4304-9562-86c9eee9ba92",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "b2de0171-2cac-488e-994f-1b6495dcaa10",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are some examples of artificial intelligence you are already familiar with?"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2de0171-2cac-488e-994f-1b6495dcaa10",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "8e69f23d-2b3d-4931-ae61-5dab7a637c10",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Responses may include examples from movies and television, such as robots like WALL-E or R2D2. They may also include personal examples, like Siri on a phone or TikTok filters that can detect facial features. Try to surface examples that may not be immediately apparent but still govern ways we interact with the world, such as recommendation algorithms on social media, facial recognition, or times when a computer makes a decision."
+      },
+      "seeding_key": {
+        "activity_section.key": "8e69f23d-2b3d-4931-ae61-5dab7a637c10",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "caba9147-6bc5-4501-b2de-0ec2e8ae5dd5",
+      "position": 5,
+      "properties": {
+        "description": "Today we're going to explore several specific areas of artificial intelligence. Our goal is to uncover how these technologies have influenced society, both in positive and negative ways. We'll read several recent news articles on these technologies and fill out a reflection sheet, then have an opportunity to decide our own opinions about these technologies as a whole.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "caba9147-6bc5-4501-b2de-0ec2e8ae5dd5",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "75047327-ef7f-4026-b2b9-ca947dd24e31",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Digitally share the [r ai_research_areas/ai-ethics/2023]. This activity guide is designed to be used digitally so students can click the links and explore the online resources.",
+        "duration": "15",
+        "name": "Student Research & Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "75047327-ef7f-4026-b2b9-ca947dd24e31",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "a2cbcaca-0f25-407f-a65b-22b6f2d7c607",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read over the introduction on the activity guide. Have students choose an area of specialization.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Groups:** You could decide to have students work in groups for their research, with all students in the same group researching the same topic but reading different articles. This allows students to see a broader picture of the impact of their technology, especially when filling in the Research Reflection handout later."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a2cbcaca-0f25-407f-a65b-22b6f2d7c607",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "e42281fe-8555-4531-af07-adb94e5d9104",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Provide each student with one copy of the [r research_reflection_guide/ai-ethics/2023] handout.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e42281fe-8555-4531-af07-adb94e5d9104",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "a00902e8-24da-4381-ac30-37568ef7d3dc",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students research their area, answering questions on the handout along the way. Make sure students only answer questions on the front of their reflection guide for now. \n\nEncourage students to look over 3-4 articles from their list, making sure at least one article comes from the \"Societal Impact\" section and at least one article comes from the \"Ethical Considerations\" section. Students can also do their own research, for example: looking up the \"Spotlight Person\" listed in each section. \n\nStudents can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Empathize with Student Experience:** Students may be personally impacted when learning about how AI can be biased. For example, students may be worried about how facial recognition bias affects them and their communities, or may have family members undergoing medical treatment and are concerned about AI in medicine. This follows advice from the A in the LEADERS framework - assume someone in the room is your datapoint.\n\nAcknowledge that AI may impact each of us differently, and encourage students to find the proposed solutions in each of the articles, or ideate on solutions themselves. Many scholars, technologists, and policymakers are working hard to combat bias in AI."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a00902e8-24da-4381-ac30-37568ef7d3dc",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "13b84a9a-ec0d-494b-abd9-408ce00beae7",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they perform their research. Consider prompting students for their reactions as they read certain articles, especially on unexpected impacts of technology on society."
+      },
+      "seeding_key": {
+        "activity_section.key": "13b84a9a-ec0d-494b-abd9-408ce00beae7",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "b3bd4bc6-535a-46e3-91af-d7593e82f5c8",
+      "position": 11,
+      "properties": {
+        "description": "**Regroup:** Regroup the class for a class shareout"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3bd4bc6-535a-46e3-91af-d7593e82f5c8",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "5b976a58-4253-45e3-97e7-db3a740359b0",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one thing that surprised you in your research? This could be about a positive use of this technology, or something concerning you didn't know about."
+      },
+      "seeding_key": {
+        "activity_section.key": "5b976a58-4253-45e3-97e7-db3a740359b0",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "c906a34c-5ec1-4cc7-a044-635e45d19ce8",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is an opportunity for students to share their thoughts and reflections from the articles, processing their thoughts and emotions. Some students may have strong reactions to the way AI is being used in society, both positively and negatively. Try to avoid open debate, but acknowledge that the pros and cons of these technologies must be weighed against the potential benefits and consequences to society. Consider reminding students that there are entire career paths dedicated towards addressing these issues in AI Ethics – policy writers, software engineers, AI ethicists, researchers, stakeholder advocates, and more. "
+      },
+      "seeding_key": {
+        "activity_section.key": "c906a34c-5ec1-4cc7-a044-635e45d19ce8",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "83521b77-ce97-4e98-a74a-fe655c1c49e3",
+      "position": 14,
+      "properties": {
+        "description": "Any new technology can be complicated, as we've heard so far. One of the challenges is figuring out how to weigh the benefits with the harms - what potential downsides are we willing to accept in order to reap the benefits of a new technology? Or do we need to make changes so the harms are minimized? Or rethink things entirely?\n\nThis line of thinking is related to **ethics**, or guidelines on how a person or society should behave.  After reading the articles, you may have an opinion on what ethical uses of this technology are. We're going to imagine what these ethical uses might be on the back of your activity guide.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "83521b77-ce97-4e98-a74a-fe655c1c49e3",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "e685383c-47ec-40de-91c0-ce2402370190",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students flip to the back of their handout and read the introduction."
+      },
+      "seeding_key": {
+        "activity_section.key": "e685383c-47ec-40de-91c0-ce2402370190",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "77cd3d50-3d3b-4f7c-be7e-9312369ef0e6",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the ethical frameworks on them as well as the hypothetical scenario",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Why Introduce Ethical Frameworks?** This lesson introduces 5 ethical frameworks: Utilitarianism, Rights-Based Ethics, Care-Based Ethics, Equality-based, Values-Based. The goal of this lesson is _not_ to become an expert on each framework, nor is it to become an expert on ethical thinking in general. Instead, the hope is students start to recognize that anytime they make a choice, that choice is influenced by covert factors on how they see and value the world **and those values have names**. For example:\n\n- Deciding to do something because \"it's what most of us want\" has a name - Utilitarianism.\n- Or, deciding _not_ to do something because \"first, do no harm\" has a name - Care-Based Ethics. \n\nBy introducing students to these frameworks, we give them the language to talk about these values so they can see how they are informing the decisions they (and others) are making. And, they can also start to see other ways of thinking that might lead to different decisions that they may not have previously considered."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "77cd3d50-3d3b-4f7c-be7e-9312369ef0e6",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "a9592145-e655-40bb-993a-fe5055bccd43",
+      "position": 17,
+      "properties": {
+        "description": "These are examples of **ethical frameworks**, which are different viewpoints on how to make ethical decisions. Take some consider which viewpoint resonates with your own on how to address some of the issues with the technology that you researched"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9592145-e655-40bb-993a-fe5055bccd43",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "0b3d9a15-f9cb-4a46-88fb-b049fa6dd519",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fill in the back of their reflection guide"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b3d9a15-f9cb-4a46-88fb-b049fa6dd519",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "f939aef0-07d4-4225-9b7c-fb807267c5d1",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete the task, connecting their own ideas with different ethical frameworks. The frameworks are meant to help students shape their thoughts and potentially make them more coherent, and introduce them to other viewpoints on how to solve a particular problem. For example, students may default to a Utilitarian point of view where as long as the most people get the benefits everything is fine, but may shift their thinking when considering an Ethics of Care perspective and reconsider how technology impacts different groups."
+      },
+      "seeding_key": {
+        "activity_section.key": "f939aef0-07d4-4225-9b7c-fb807267c5d1",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "7cc0ee15-c6ff-4d03-912d-9aa055b4e4f2",
+      "position": 20,
+      "properties": {
+        "description": "**Regroup:** Regroup students to introduce the culminating activity of the lesson.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Final Product Options:** Below are several choices for how students synthesize what they've learned in these articles and create an artifact to reflect their learning. We recommend choosing one of the options below and definitely **not** doing all of them. Or, combine or rearrange or reimagine the way you would like students to show their understanding at the end of the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7cc0ee15-c6ff-4d03-912d-9aa055b4e4f2",
+        "lesson_activity.key": "59918e6d-1bfc-4e18-9166-c9f37e34fe79"
+      }
+    },
+    {
+      "key": "0239d42b-d62c-493c-a544-9fe818e0ae63",
+      "position": 1,
+      "properties": {
+        "description": "This section guides students towards creating a class-wide AI Code of Ethics, synthesizing what they've learned from the articles."
+      },
+      "seeding_key": {
+        "activity_section.key": "0239d42b-d62c-493c-a544-9fe818e0ae63",
+        "lesson_activity.key": "b3cd6690-a7c8-406f-be13-8ee125c7b36f"
+      }
+    },
+    {
+      "key": "968cd093-70c5-4613-9e7b-51268e28deab",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/)."
+      },
+      "seeding_key": {
+        "activity_section.key": "968cd093-70c5-4613-9e7b-51268e28deab",
+        "lesson_activity.key": "b3cd6690-a7c8-406f-be13-8ee125c7b36f"
+      }
+    },
+    {
+      "key": "8d39a14c-4e34-4c91-9332-ab26f02c741c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d39a14c-4e34-4c91-9332-ab26f02c741c",
+        "lesson_activity.key": "b3cd6690-a7c8-406f-be13-8ee125c7b36f"
+      }
+    },
+    {
+      "key": "6c16feaa-3a5e-4e7b-8348-3d8ac00ed3e5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page)."
+      },
+      "seeding_key": {
+        "activity_section.key": "6c16feaa-3a5e-4e7b-8348-3d8ac00ed3e5",
+        "lesson_activity.key": "b3cd6690-a7c8-406f-be13-8ee125c7b36f"
+      }
+    },
+    {
+      "key": "4f3cff36-70da-46f2-be77-f7c9f3e0a574",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete this activity. You might ask which ethical framework most influenced their final Code of Ethics, or if they combined multiple frameworks to come up with their best practices.  \n\nRemind students that creating a code of ethics means having empathy for multiple stakeholders – the people who benefit most and benefit least from these technologies. A Code of Ethics can also include protocols for speaking to the most impacted people, or setting up ways to respond if bias occurs. The entirety of AI ethics is too large a problem to solve, but a Code of Ethics gives us some best practices.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Displaying a Class Code of Ethics:** The format of your class Code of Ethics is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation (such as the one from our [r _template_ai_code_of_ethics/ai-ethics/2023]), or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4f3cff36-70da-46f2-be77-f7c9f3e0a574",
+        "lesson_activity.key": "b3cd6690-a7c8-406f-be13-8ee125c7b36f"
+      }
+    },
+    {
+      "key": "21334dd9-69e4-4c71-9243-5d5b11d8c901",
+      "position": 1,
+      "properties": {
+        "description": "This section guides students towards creating a personal AI Manifesto, synthesizing what they've learned from the articles."
+      },
+      "seeding_key": {
+        "activity_section.key": "21334dd9-69e4-4c71-9243-5d5b11d8c901",
+        "lesson_activity.key": "17fa6ca8-65a3-4967-8d64-973e45d58461"
+      }
+    },
+    {
+      "key": "091f0fd5-e58b-4dc8-a87c-33540210b5d2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share the slide with the [Holstee Manifesto](https://www.beachtig.com/dl/019096d7d9c066d5d1c53ef5f5e35b7f/The-Holstee-Manifesto.pdf) on it"
+      },
+      "seeding_key": {
+        "activity_section.key": "091f0fd5-e58b-4dc8-a87c-33540210b5d2",
+        "lesson_activity.key": "17fa6ca8-65a3-4967-8d64-973e45d58461"
+      }
+    },
+    {
+      "key": "3b6b958e-05e7-45f5-acb0-4af6e2501645",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** This is a document called the Holstee Manifesto. What do you notice about how it's structured? What is one line that stands out to you?\n\nGive students a chance to discuss with partners before regrouping"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b6b958e-05e7-45f5-acb0-4af6e2501645",
+        "lesson_activity.key": "17fa6ca8-65a3-4967-8d64-973e45d58461"
+      }
+    },
+    {
+      "key": "3859934a-7aa7-43d8-a485-6230d331fd5c",
+      "position": 4,
+      "properties": {
+        "description": "This is an example of a Manifesto - it's a special document created to clearly and concisely describe a set of values or beliefs. Sometimes people create manifestos as a reaction to how they see the world so it inspires change, and sometimes people create them to build community and inspire like-minded individuals. Now that we've read more about the impacts of AI on society, we're going to write our own personal manifestos about AI technologies.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3859934a-7aa7-43d8-a485-6230d331fd5c",
+        "lesson_activity.key": "17fa6ca8-65a3-4967-8d64-973e45d58461"
+      }
+    },
+    {
+      "key": "917661c6-cb3a-48f2-8ddb-ff76757eeec1",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [r create_a_manifesto/ai-ethics/2023]. Have students read through the top section while displaying the slides on the board."
+      },
+      "seeding_key": {
+        "activity_section.key": "917661c6-cb3a-48f2-8ddb-ff76757eeec1",
+        "lesson_activity.key": "17fa6ca8-65a3-4967-8d64-973e45d58461"
+      }
+    },
+    {
+      "key": "df6980ef-bef5-4f07-bc98-a93813f3c8de",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slides describing the three reasons to create a manifesto, along with the links.\n\nAs students finish reading, open up each of the manifestos so students can see what they look like and skim some of the principles. Don't spend time deeply reading each one, but instead let students get a sense of the length of the manifesto, how it's designed visually, and the structure of each of the statements in the manifesto."
+      },
+      "seeding_key": {
+        "activity_section.key": "df6980ef-bef5-4f07-bc98-a93813f3c8de",
+        "lesson_activity.key": "17fa6ca8-65a3-4967-8d64-973e45d58461"
+      }
+    },
+    {
+      "key": "a2df9124-af6d-4215-b852-2312cce54bad",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students create their own personal manifesto centered on AI technology. Encourage them to be creative in how they design their manifesto. "
+      },
+      "seeding_key": {
+        "activity_section.key": "a2df9124-af6d-4215-b852-2312cce54bad",
+        "lesson_activity.key": "17fa6ca8-65a3-4967-8d64-973e45d58461"
+      }
+    },
+    {
+      "key": "46ccc401-e571-4cc1-b01b-a7f039067a5a",
+      "position": 8,
+      "properties": {
+        "description": "**Circulate:** Check in with students as they complete this activity. Consider prompting students to tell you why they are including certain statements in their manifesto, listening for connections back to the articles from earlier in the class.\n\nManifestos can draw on deep emotion. Encourage students to use their passion to advocate strongly for themselves and others. They might use their manifesto as a protest sign, a call to action, a poetic description of AI failures. If a student does get particularly passionate, remind them of the work being done to combat AI bias, and encourage them to continue learning more. You may direct them to resources of different groups researching AI bias, such as the [Algorithmic Justice League](https://www.ajl.org/)"
+      },
+      "seeding_key": {
+        "activity_section.key": "46ccc401-e571-4cc1-b01b-a7f039067a5a",
+        "lesson_activity.key": "17fa6ca8-65a3-4967-8d64-973e45d58461"
+      }
+    },
+    {
+      "key": "cb965190-b517-41cb-af9c-5c12212baf8c",
+      "position": 9,
+      "properties": {
+        "description": "**(Optional) Display the Result:** Consider if/how you would like to offer students the chance to share their manifestos. Some students may want to display them publicly as a call to action, while others may wish to keep theirs private and only share with you. Be sure to consider the potentially personal nature of these manifestos when deciding if/how students should share."
+      },
+      "seeding_key": {
+        "activity_section.key": "cb965190-b517-41cb-af9c-5c12212baf8c",
+        "lesson_activity.key": "17fa6ca8-65a3-4967-8d64-973e45d58461"
+      }
+    },
+    {
+      "key": "ac8a54f5-f911-4341-ac5e-0f99e53401a1",
+      "position": 1,
+      "properties": {
+        "description": "This section guides students towards creating an artistic expression displaying an idealized world that uses artificial intelligence. Students also create a smaller artist-card to go along with their artistic work. \n\nAI mistakes can be particularly harmful, and give us a pessimistic view of technology. One way to approach fear of AI is to also envision the possible benefits of responsible and fair AI systems. We want to encourage students to feel part of the solution, and to channel their creativity into imagining a better world."
+      },
+      "seeding_key": {
+        "activity_section.key": "ac8a54f5-f911-4341-ac5e-0f99e53401a1",
+        "lesson_activity.key": "492054b3-7551-4b80-b356-46d4224659d2"
+      }
+    },
+    {
+      "key": "ff5df9a8-8a14-4df5-9332-c4a20986e4be",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following quote from Dr. Ruha Benjamin\n\n> \"Remember to imagine and craft the worlds you cannot live without, just as you dismantle the ones you cannot live within\""
+      },
+      "seeding_key": {
+        "activity_section.key": "ff5df9a8-8a14-4df5-9332-c4a20986e4be",
+        "lesson_activity.key": "492054b3-7551-4b80-b356-46d4224659d2"
+      }
+    },
+    {
+      "key": "52a04669-12fd-4720-b2b3-212c3addca55",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How do you think this quote could apply to some of the scenarios we've read about today?\n\nHave students reflect on their own and share with a partner before returning as a full group"
+      },
+      "seeding_key": {
+        "activity_section.key": "52a04669-12fd-4720-b2b3-212c3addca55",
+        "lesson_activity.key": "492054b3-7551-4b80-b356-46d4224659d2"
+      }
+    },
+    {
+      "key": "605a51a8-5c27-45ed-b8e0-43987dc80683",
+      "position": 4,
+      "properties": {
+        "description": "This quote invites us to reimagine our circumstances and see the world as we wish it was. Based on the articles we've explored today, we're going to do exactly that - imagine a world where AI technology has been developed and implemented justly - what would that look and sound like? We're going to create a piece of artwork that imagines that world, then we'll hang it up on the walls along with a short artist card describing the world you've imagined.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "605a51a8-5c27-45ed-b8e0-43987dc80683",
+        "lesson_activity.key": "492054b3-7551-4b80-b356-46d4224659d2"
+      }
+    },
+    {
+      "key": "a566df47-59f5-4554-a629-4d2abad44f28",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r imagine_your_world/ai-ethics/2023] activity guide.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a566df47-59f5-4554-a629-4d2abad44f28",
+        "lesson_activity.key": "492054b3-7551-4b80-b356-46d4224659d2"
+      }
+    },
+    {
+      "key": "5a456ef7-030e-4ca5-ab66-69ca2c7a5b05",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the top two paragraphs and answer any questions about the directions.\n\nGive students directions on how they should complete their artwork, for example:\n\n* Using physical materials, such as drawing paper and paint\n* Using three-dimensional materials, such as sculpting with clay or molding with cardboard\n* Using a digital representation by designing using digital tools.\n\nYou may also decide to give students choice in the materials or format that they use. If teaching this in a single day, consider something on a smaller scale such as just a pencil and paper or a digital photo collage."
+      },
+      "seeding_key": {
+        "activity_section.key": "5a456ef7-030e-4ca5-ab66-69ca2c7a5b05",
+        "lesson_activity.key": "492054b3-7551-4b80-b356-46d4224659d2"
+      }
+    },
+    {
+      "key": "2891635d-e4ff-43ca-9b0d-6c29ff5b9a04",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete their artwork. Also ensure they are completing the Artist Card to explain the artwork they are creating.\n\nSome students may simply imagine a world where the AI problems they read about are fixed. For example, facial recognition that works on everyone’s faces. Encourage students to use ‘moonshot thinking’ – “an approach of choosing a huge, seemingly insurmountable problem and proposing a radical solution to that problem using technology”. An imagined world can be as outlandish as they want. Think big!"
+      },
+      "seeding_key": {
+        "activity_section.key": "2891635d-e4ff-43ca-9b0d-6c29ff5b9a04",
+        "lesson_activity.key": "492054b3-7551-4b80-b356-46d4224659d2"
+      }
+    },
+    {
+      "key": "25bd43ec-7f04-4e23-a704-a2155534f392",
+      "position": 8,
+      "properties": {
+        "description": "**Display the Results:** Consider how you would like to display the results in your classroom, either physically or digitally. Consider having students take a Gallery Walk to explore the artwork their peers created."
+      },
+      "seeding_key": {
+        "activity_section.key": "25bd43ec-7f04-4e23-a704-a2155534f392",
+        "lesson_activity.key": "492054b3-7551-4b80-b356-46d4224659d2"
+      }
+    },
+    {
+      "key": "84b2306e-f391-4359-96e6-9774d49696d8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023] video as a class"
+      },
+      "seeding_key": {
+        "activity_section.key": "84b2306e-f391-4359-96e6-9774d49696d8",
+        "lesson_activity.key": "1a398c5a-e747-44c6-8861-f41fe02acc03"
+      }
+    },
+    {
+      "key": "3edb8b04-3362-4049-9ad3-0afec8963f99",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you describe \"AI ethics\" to a family member or friend who didn’t participate in today’s lesson?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Future Thinking:** Following the lesson, students may still feel apprehensive about the impacts of AI technology on their future. They may be concerned about medical AI, college admissions, or even their own social media algorithms. If you feel comfortable, allow for students to approach you with their concerns. Remind them that more and more experts are interested in creating responsible AI, and that students can research more advocacy groups who fight against AI injustice. You may even encourage students to write letters to local representatives about these issues."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3edb8b04-3362-4049-9ad3-0afec8963f99",
+        "lesson_activity.key": "1a398c5a-e747-44c6-8861-f41fe02acc03"
       }
     },
     {
@@ -4353,8 +4860,20 @@
       }
     },
     {
+      "name": "[Template] AI Code of Ethics",
+      "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit",
+      "key": "_template_ai_code_of_ethics",
+      "properties": {
+        "audience": "Student",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "_template_ai_code_of_ethics"
+      }
+    },
+    {
       "name": "AI Code of Ethics",
-      "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1sjTMJf2g1eJvvTjaIzk5aFkTi-_UNWybRq48pfH2PVo/template/preview",
       "key": "ai_code_of_ethics",
       "properties": {
         "audience": "Teacher",
@@ -4366,26 +4885,15 @@
     },
     {
       "name": "AI Ethics Research Areas",
-      "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1F7jlc3lw9UQ2ZLO6NDLO5wj543IntOT0fC1fpQwDo3s/edit",
       "key": "ai_ethics_research_areas",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "ai_ethics_research_areas"
-      }
-    },
-    {
-      "name": "AI Ethics Research Reflection",
-      "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing",
-      "key": "ai_ethics_research_reflection",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "ai_ethics_research_reflection"
       }
     },
     {
@@ -4471,6 +4979,19 @@
       }
     },
     {
+      "name": "Create a Manifesto",
+      "url": "https://docs.google.com/document/d/1HCY1VWUCT3mgXAdQ3KD7C29r8yfNxbz3b3lvu8jibI4/edit",
+      "key": "create_a_manifesto",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "create_a_manifesto"
+      }
+    },
+    {
       "name": "Does AI Have Creativity and Imagination?",
       "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
       "key": "does_ai_have_creativity_and_imagination_",
@@ -4493,6 +5014,18 @@
       },
       "seeding_key": {
         "resource.key": "eliza_activity_guide"
+      }
+    },
+    {
+      "name": "Ethics and AI: Privacy & the Future of Work",
+      "url": "https://www.youtube.com/watch?v=zNxw5gJtHLc",
+      "key": "ethics_and_ai_privacy_the_future_of_work",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ethics_and_ai_privacy_the_future_of_work"
       }
     },
     {
@@ -4541,18 +5074,6 @@
       },
       "seeding_key": {
         "resource.key": "how_ai_works"
-      }
-    },
-    {
-      "name": "How AI Works - Privacy and Future of Work",
-      "url": "https://youtu.be/zNxw5gJtHLc",
-      "key": "how_ai_works_-_privacy_and_future_of_work",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_ai_works_-_privacy_and_future_of_work"
       }
     },
     {
@@ -4730,6 +5251,19 @@
       }
     },
     {
+      "name": "Imagine Your World",
+      "url": "https://docs.google.com/document/d/1KfPa5xnZN0pOJtQGm0KU69TAsX37xJgdnnfyU1RPtRI/edit",
+      "key": "imagine_your_world",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "imagine_your_world"
+      }
+    },
+    {
       "name": "Introduction to Machine Learning",
       "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
       "key": "introduction_to_machine_learning",
@@ -4739,6 +5273,18 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "name": "LEADERS Framework",
+      "url": "https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit",
+      "key": "leaders_framework",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "leaders_framework"
       }
     },
     {
@@ -4803,15 +5349,16 @@
       }
     },
     {
-      "name": "Our AI Code of Ethics [Template]",
-      "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
-      "key": "our_ai_code_of_ethics_template_",
+      "name": "Research Reflection Guide",
+      "url": "https://docs.google.com/document/d/1YYw8n8HPq3WDx7l7ZfyDeAoMkUCSEIFZb1670RzwKZE/edit",
+      "key": "research_reflection_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "our_ai_code_of_ethics_template_"
+        "resource.key": "research_reflection_guide"
       }
     },
     {
@@ -5248,6 +5795,12 @@
     {
       "seeding_key": {
         "lesson.key": "Our AI Code of Ethics",
+        "resource.key": "_template_ai_code_of_ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
         "resource.key": "ai_code_of_ethics"
       }
     },
@@ -5260,19 +5813,31 @@
     {
       "seeding_key": {
         "lesson.key": "Our AI Code of Ethics",
-        "resource.key": "ai_ethics_research_reflection"
+        "resource.key": "create_a_manifesto"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Our AI Code of Ethics",
-        "resource.key": "how_ai_works_-_privacy_and_future_of_work"
+        "resource.key": "ethics_and_ai_privacy_the_future_of_work"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Our AI Code of Ethics",
-        "resource.key": "our_ai_code_of_ethics_template_"
+        "resource.key": "imagine_your_world"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "resource.key": "leaders_framework"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Our AI Code of Ethics",
+        "resource.key": "research_reflection_guide"
       }
     }
   ],
@@ -5313,7 +5878,7 @@
     {
       "key": "artificial_intelligence",
       "word": "Artificial Intelligence",
-      "definition": "the ability of machines to learn and problem-solve.",
+      "definition": "A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions.",
       "properties": {
       },
       "seeding_key": {
@@ -5328,16 +5893,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "diffusion_ai"
-      }
-    },
-    {
-      "key": "ethics",
-      "word": "Ethics",
-      "definition": "guidelines for good behavior.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "ethics"
       }
     },
     {
@@ -5439,12 +5994,6 @@
         "lesson.key": "Our AI Code of Ethics",
         "vocabulary.key": "artificial_intelligence"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Our AI Code of Ethics",
-        "vocabulary.key": "ethics"
-      }
     }
   ],
   "lessons_programming_expressions": [
@@ -5542,16 +6091,6 @@
       }
     },
     {
-      "key": "a8074c06-9394-43f7-94a4-7055c9e44135",
-      "properties": {
-        "description": "Create at least one guiding principle that addresses an AI ethics issue."
-      },
-      "seeding_key": {
-        "lesson.key": "Our AI Code of Ethics",
-        "objective.key": "a8074c06-9394-43f7-94a4-7055c9e44135"
-      }
-    },
-    {
       "key": "bb0c78af-3cdb-48cc-9f7a-f79c7d954752",
       "properties": {
         "description": "Explain how AI works"
@@ -5574,7 +6113,7 @@
     {
       "key": "cb45ec87-ad2c-41f8-96e5-cb48a1181314",
       "properties": {
-        "description": "Reason about which types of tasks are should not be completed by an algorithm"
+        "description": "Reason about which types of tasks should not be completed by an algorithm"
       },
       "seeding_key": {
         "lesson.key": "Algorithmic Bias",

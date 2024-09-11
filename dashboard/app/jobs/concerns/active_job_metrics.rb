@@ -30,19 +30,52 @@ module ActiveJobMetrics
     ]
   end
 
+  # Failed jobs are those that have failed at least once.
+  def get_failed_job_count
+    Delayed::Job.where.not(failed_at: nil).count
+  end
+
+  # Pending jobs are those that have not yet been run.
+  def get_pending_job_count
+    Delayed::Job.where(failed_at: nil).count
+  end
+
+  # Workable jobs are those that are not locked and are ready to run.
+  def get_workable_job_count
+    Delayed::Job.where(failed_at: nil, locked_at: nil).where('run_at <= ?', Time.now).count
+  end
+
   protected def report_job_count
-    Cdo::Metrics.push(
-      METRICS_NAMESPACE, [
+    Cdo::Metrics.push(METRICS_NAMESPACE,
+      # Same metrics as "bin/cron/report_activejob_metrics"
+      [
         {
-          # Same metric as "bin/cron/report_activejob_metrics"
-          metric_name: 'JobCount',
-          value: Delayed::Job.count,
+          metric_name: 'PendingJobCount',
+          value: get_pending_job_count,
           unit: 'Count',
           timestamp: Time.now,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
           ],
         },
+        {
+          metric_name: 'FailedJobCount',
+          value: get_failed_job_count,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+          ],
+        },
+        {
+          metric_name: 'WorkableJobCount',
+          value: get_workable_job_count,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+          ],
+        }
       ]
     )
   rescue => exception

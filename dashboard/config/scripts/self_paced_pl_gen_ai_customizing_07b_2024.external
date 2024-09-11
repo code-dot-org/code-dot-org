@@ -1,0 +1,17 @@
+name 'self-paced-pl-gen-ai-customizing_07b_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# System Prompting
+
+#### There are two more strategies you can use when writing system prompts.
+
+#### **Chain of Reasoning**: The steps the model takes to explain its answer, showing how it got from the question to the final response, like solving a math problem step by step.
+
+#### **Giving Examples**: Providing specific instances or situations to make the explanation clearer, like saying, "For example, when you..." to help people understand better.
+
+## Up Next!
+#### Try out applying each of these in chatbot lab.
+
+MARKDOWN

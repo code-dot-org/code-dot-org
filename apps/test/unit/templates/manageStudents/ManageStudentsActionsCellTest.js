@@ -1,11 +1,12 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedManageStudentsActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   id: 2,
@@ -64,6 +65,16 @@ describe('ManageStudentsActionsCell', () => {
   it('does not render the edit option when canEdit is false', () => {
     const wrapper = shallow(
       <ManageStudentsActionsCell {...DEFAULT_PROPS} canEdit={false} />
+    );
+    expect(wrapper).not.to.contain('Edit');
+  });
+
+  it('does not render the edit option when loginType is lti', () => {
+    const wrapper = shallow(
+      <ManageStudentsActionsCell
+        {...DEFAULT_PROPS}
+        loginType={SectionLoginType.lti_v1}
+      />
     );
     expect(wrapper).not.to.contain('Edit');
   });

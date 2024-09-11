@@ -10,14 +10,17 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import {SourcesStore} from './SourcesStore';
-import {ChannelsStore} from './ChannelsStore';
-import {Channel, Project, ProjectSources} from '../types';
-import {currentLocation} from '@cdo/apps/utils';
-import LabMetricsReporter from '../Lab2MetricsReporter';
-import {ValidationError} from '../responseValidators';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
+import {currentLocation} from '@cdo/apps/utils';
+
+import LabMetricsReporter from '../Lab2MetricsReporter';
 import Lab2Registry from '../Lab2Registry';
+import {ValidationError} from '../responseValidators';
+import {Channel, ProjectAndSources, ProjectSources} from '../types';
+
+import {ChannelsStore} from './ChannelsStore';
+import {SourcesStore} from './SourcesStore';
+
 const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
@@ -72,14 +75,54 @@ export default class ProjectManager {
   }
 
   // Load the project from the sources and channels store.
-  async load(): Promise<Project> {
+  // If resetSource is true we return undefined for sources, otherwise we load the sources.
+  // The lab itself handles undefined sources, generally by using the start sources instead.
+  async load(resetSource?: boolean): Promise<ProjectAndSources> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
+    const sources = resetSource ? undefined : await this.loadAndStoreSources();
+
+    let channel: Channel;
+    try {
+      channel = await this.channelsStore.load(this.channelId);
+    } catch (error) {
+      throw new Error('Error loading channel', {cause: error});
+    }
+
+    this.lastChannel = channel;
+    return {sources, channel};
+  }
+
+  // Restore the given version of the project. This will call restore on the sources store
+  // and then load and return the updated sources.
+  async restoreSources(versionId: string): Promise<ProjectSources | undefined> {
+    if (this.destroyed) {
+      this.throwErrorIfDestroyed('restore');
+    }
+    // Flush the enqueued save, if it exists, before restoring.
+    await this.flushSave();
+    try {
+      await this.sourcesStore.restore(this.channelId, versionId);
+    } catch (e) {
+      throw new Error('Error restoring sources', {cause: e});
+    }
+    // Now that we've restored to the previous version, loading sources
+    // will load the newly-restored version.
+    const sources = await this.loadAndStoreSources();
+    return sources;
+  }
+
+  /**
+   * Load the sources for this project. If a versionId is provided, load that version, otherwise
+   * load the latest version. The sources are not stored by the Project Manager.
+   * @param versionId Optional version id to load. If not provided, the latest version is loaded.
+   * @returns sources for the project.
+   */
+  async loadSources(versionId?: string) {
     let sources: ProjectSources | undefined;
     try {
-      sources = await this.sourcesStore.load(this.channelId);
-      this.lastSource = JSON.stringify(sources);
+      sources = await this.sourcesStore.load(this.channelId, versionId);
     } catch (error) {
       // If there was a validation error or sourceResponse is a 404 (not found),
       // we still want to load the channel. In the case of a validation error,
@@ -98,16 +141,7 @@ export default class ProjectManager {
         throw new Error('Error loading sources', {cause: error});
       }
     }
-
-    let channel: Channel;
-    try {
-      channel = await this.channelsStore.load(this.channelId);
-    } catch (error) {
-      throw new Error('Error loading channel', {cause: error});
-    }
-
-    this.lastChannel = channel;
-    return {sources, channel};
+    return sources;
   }
 
   hasUnsavedChanges(): boolean {
@@ -245,6 +279,10 @@ export default class ProjectManager {
     this.publishHelper(false);
   }
 
+  async getVersionList() {
+    return await this.sourcesStore.getVersionList(this.channelId);
+  }
+
   addSaveSuccessListener(listener: (channel: Channel) => void) {
     this.saveSuccessListeners.push(listener);
   }
@@ -298,13 +336,19 @@ export default class ProjectManager {
     // If neither source nor channel has actually changed, no need to save again.
     if (!sourceChanged && !channelChanged) {
       this.saveInProgress = false;
+      // We can clear sourcesToSave since they have not changed.
+      this.sourcesToSave = undefined;
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
     // Only save the source if it has changed.
     if (this.sourcesToSave && sourceChanged) {
       try {
-        await this.sourcesStore.save(this.channelId, this.sourcesToSave);
+        await this.sourcesStore.save(
+          this.channelId,
+          this.sourcesToSave,
+          this.lastChannel.projectType
+        );
       } catch (error) {
         this.onSaveFail('Error saving sources', error as Error);
         return;
@@ -350,6 +394,7 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     this.channelToSave = undefined;
+    this.sourcesToSave = undefined;
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
   }
@@ -480,6 +525,19 @@ export default class ProjectManager {
     } else {
       return this.channelsStore.unpublish(this.lastChannel);
     }
+  }
+
+  /**
+   * Load the sources for the given version id, or the latest version if no version id is provided.
+   * These sources are stored as lastSource, so any future changes to the sources will be compared
+   * to these sources.
+   * @param versionId Optional version id to load. If not provided, the latest version is loaded.
+   * @returns sources for the project.
+   */
+  private async loadAndStoreSources(versionId?: string) {
+    const sources = await this.loadSources(versionId);
+    this.lastSource = JSON.stringify(sources);
+    return sources;
   }
 
   // LISTENERS

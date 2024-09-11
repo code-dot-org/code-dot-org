@@ -3,24 +3,26 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Big Ideas + Vocab for AI 
+# Whoa! There’s no way I can teach all of that! 
 
-#### This lesson covers practicing block-based coding basics, building on your understanding of computer science and its everyday applications.
-
-<img src="https://images.code.org/4e37cf72816a90a1abccaf66d623b4ad-image-1704408444176.23.19 PM.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+## Don’t worry; this module focuses on foundational AI concepts: How AI Makes Decisions.
 
 
-## In this lesson, you will:
-
-* #### Learn about block based programming.
-* #### Practice connecting, taking apart, and trashing blocks. 
-* #### Use blocks from the toolbox.
 
 
-### **Suggested time:** 5 minutes
+#### Here are the major takeaways covered in the module: 
 
+#### <b>Big Idea #1:</b> Understanding what data a computer will need in order to make predictions in the future.
+#### <b>Big Idea #2:</b> There is a human component to training a model, thus, any human bias may be reflected in the predictions the computer makes. 
+#### <b>Big Idea #3:</b> Sometimes AI gets it wrong in a way that a human wouldn’t. 
 
-## Let's get started!
+## Main Ideas to Reinforce with Students:
+#### 👷 AI can help us automate tasks
+#### 📊 Machine learning algorithms require data provided to it by humans
+#### ⠳ AI makes predictions based on patterns it has seen from large datasets
+#### ❌ AI can sometimes be wrong or unfair
+#### 🪄 AI is not magical or random
+
 
 <div style="clear:both"/>
 MARKDOWN

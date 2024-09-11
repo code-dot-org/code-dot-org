@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-prompt-templateA"
+    "project_template_level_name": "gen-ai-customizing-prompt-templateA",
+    "display_name": "Historical Experiences",
+    "bubble_choice_description": "Have you ever wanted to talk to someone from the past and learn what it was like? Or a famous historical figure?",
+    "thumbnail_url": "https://images.code.org/bdfe974903ad0c242e6d183723dc6b5c-Lesson 3 - Level 7A - Historical Experiences.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-08T20:15:28.705+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L7A\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L7A\"},{\"changed_at\":\"2024-05-08 20:24:34 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:45:00 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-08T20:15:28.705+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L7A\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L7A\"},{\"changed_at\":\"2024-05-08 20:24:34 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:45:00 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:25:51 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

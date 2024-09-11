@@ -1,9 +1,10 @@
 import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
-import {FieldKey, GeneratedEffect} from '../types';
-import danceMetricsReporter from '../../danceMetricsReporter';
 
-import {getValidateAndSetFieldValueWithInvalidValueLogger} from './validateAndSetFieldValue';
+import danceMetricsReporter from '../../danceMetricsReporter';
+import {FieldKey, GeneratedEffect} from '../types';
+
 import {generateAiEffectBlocks} from './generateAiEffectBlocks';
+import {getValidateAndSetFieldValueWithInvalidValueLogger} from './validateAndSetFieldValue';
 
 const validateAndSetFieldValue =
   getValidateAndSetFieldValueWithInvalidValueLogger(

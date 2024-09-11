@@ -1,7 +1,6 @@
 {
   "key": "aiml",
   "display_name": "AI and Machine Learning",
-  "category": "aiml",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
@@ -16,6 +15,5 @@
   "professional_learning_program": "https://code.org/apply",
   "video": "https://www.youtube-nocookie.com/embed/bGJ05vdI3xA/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=bGJ05vdI3xA&wmode=transparent",
   "published_date": "2023-07-10 09:00:00 UTC",
-  "self_paced_pl_course_offering_id": 460,
   "self_paced_pl_course_offering_key": "self-paced-pl-aiml"
 }

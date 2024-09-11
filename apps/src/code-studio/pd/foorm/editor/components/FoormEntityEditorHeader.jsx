@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import Spinner from '../../../components/spinner';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import moment from 'moment';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+
+import Spinner from '../../../../../sharedComponents/Spinner';
 
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';

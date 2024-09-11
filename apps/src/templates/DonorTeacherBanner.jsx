@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import i18n from '@cdo/locale';
 
 import color from '../util/color';
-
-import Button from './Button';
 
 export default class DonorTeacherBanner extends Component {
   static propTypes = {

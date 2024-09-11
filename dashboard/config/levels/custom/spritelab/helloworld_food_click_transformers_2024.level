@@ -1,0 +1,156 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2024-08-02T22:04:52.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "edit_code": "false",
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zHelloWorldValidation",
+      "zValidationHelperFunctions",
+      "transformers"
+    ],
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "auto_run_setup": "DRAW_LOOP",
+    "parent_level_id": 28356,
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "name_suffix": "_transformers_2024",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "long_instructions": "*What's different here? Can you make these sprites talk?*\r\n\r\n- Read the code. What do you notice?\r\n- Click the *\"Run\"* button.\r\n- Click or tap the sprites.\r\n",
+    "start_animations": "{\"orderedKeys\":[\"83d59132-2ada-41cb-bc39-99f752d97fb7\",\"8e0774b1-bf85-4ea5-9dbe-9eb76ee02425\",\"9eac3771-e106-4c83-87cc-7a9f32b8f123\",\"86e1006b-3fcc-4c2d-87d5-f2ad3f05de9e\",\"6f522d45-b944-496f-8a28-6befc3739bf0\",\"765492ed-1293-4905-95cf-06bae5744cdc\",\"c259d461-7443-47be-9359-5d1cee9daec3\",\"ba64befc-2915-49fb-995d-0b44bccaf03a\",\"07f92353-a801-4b51-9d9b-eedb45ad415c\",\"b08691a0-66bc-40a8-afe2-dae8d82e00a5\",\"7769c848-95ff-4149-9b2f-93d5731e9df5\",\"b79ddae3-9900-425c-98cf-8215c3c6bb5f\",\"061d339e-1978-4d39-b2a0-ad04a4e8bc6b\",\"705e7d04-d847-48a9-ab8d-d91ae4d3068a\"],\"propsByKey\":{\"83d59132-2ada-41cb-bc39-99f752d97fb7\":{\"name\":\"transformers_one_bg_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-13T16:33:51.000Z\",\"pngLastModified\":\"2024-08-13T16:33:51.000Z\",\"version\":\"n80cuty5qP0Ja23rjmiyUvgsMzvFKwd6\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/n80cuty5qP0Ja23rjmiyUvgsMzvFKwd6/transformers_one_bg_2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8e0774b1-bf85-4ea5-9dbe-9eb76ee02425\":{\"name\":\"transformers_one_bg_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-13T16:33:43.000Z\",\"pngLastModified\":\"2024-08-13T16:33:42.000Z\",\"version\":\"FmJNkMgDSzzzm6DpseimczWfDnGNNl1U\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/FmJNkMgDSzzzm6DpseimczWfDnGNNl1U/transformers_one_bg_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"9eac3771-e106-4c83-87cc-7a9f32b8f123\":{\"name\":\"transformers_one_bg_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-13T16:33:58.000Z\",\"pngLastModified\":\"2024-08-13T16:33:57.000Z\",\"version\":\"9KAkvI4oKsYwB4DVWqV._rDhCJo5BPRx\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/9KAkvI4oKsYwB4DVWqV._rDhCJo5BPRx/transformers_one_bg_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"86e1006b-3fcc-4c2d-87d5-f2ad3f05de9e\":{\"name\":\"transformers_one_bg_4\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-13T16:34:06.000Z\",\"pngLastModified\":\"2024-08-13T16:34:05.000Z\",\"version\":\"yVz9vbQTM0UZmLU4muHZmm816leCYaPT\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/yVz9vbQTM0UZmLU4muHZmm816leCYaPT/transformers_one_bg_4.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6f522d45-b944-496f-8a28-6befc3739bf0\":{\"name\":\"transformers_one_bg_5\",\"frameCount\":1,\"frameSize\":{\"x\":401,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-13T16:34:13.000Z\",\"pngLastModified\":\"2024-08-13T16:34:12.000Z\",\"version\":\"kuhHeFUetufFsAVXbHkEmc.Ig00E3ASi\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/kuhHeFUetufFsAVXbHkEmc.Ig00E3ASi/transformers_one_bg_5.png\",\"sourceSize\":{\"x\":401,\"y\":400}},\"765492ed-1293-4905-95cf-06bae5744cdc\":{\"name\":\"optimus_prime_1\",\"frameCount\":1,\"frameSize\":{\"x\":127,\"y\":250},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:44:22.000Z\",\"pngLastModified\":\"2024-08-13T15:44:22.000Z\",\"version\":\"pg3DXjsX8WLcB556l_mQbpIW5dqrrctP\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/pg3DXjsX8WLcB556l_mQbpIW5dqrrctP/optimus_prime_1.png\",\"sourceSize\":{\"x\":127,\"y\":250}},\"c259d461-7443-47be-9359-5d1cee9daec3\":{\"name\":\"megatron_1\",\"frameCount\":1,\"frameSize\":{\"x\":147,\"y\":295},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:43:07.000Z\",\"pngLastModified\":\"2024-08-13T15:43:06.000Z\",\"version\":\"J7isRRoerYbpGT6uXgpQqt_l.7.J955i\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/J7isRRoerYbpGT6uXgpQqt_l.7.J955i/megatron_1.png\",\"sourceSize\":{\"x\":147,\"y\":295}},\"ba64befc-2915-49fb-995d-0b44bccaf03a\":{\"name\":\"bumblebee_1\",\"frameCount\":1,\"frameSize\":{\"x\":115,\"y\":220},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:40:47.000Z\",\"pngLastModified\":\"2024-08-13T15:40:47.000Z\",\"version\":\"PrHauzONGlHvGwUxdnKVdyMpti4E2T3q\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/PrHauzONGlHvGwUxdnKVdyMpti4E2T3q/bumblebee_1.png\",\"sourceSize\":{\"x\":115,\"y\":220}},\"07f92353-a801-4b51-9d9b-eedb45ad415c\":{\"name\":\"elita_1\",\"frameCount\":1,\"frameSize\":{\"x\":73,\"y\":216},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:42:07.000Z\",\"pngLastModified\":\"2024-08-13T15:42:06.000Z\",\"version\":\"hJxMxLyuqa.c88NH5OoWsjADawt0zGqX\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/hJxMxLyuqa.c88NH5OoWsjADawt0zGqX/elita_1.png\",\"sourceSize\":{\"x\":73,\"y\":216}},\"b08691a0-66bc-40a8-afe2-dae8d82e00a5\":{\"name\":\"optimus_prime_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":205,\"y\":133},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:45:05.000Z\",\"pngLastModified\":\"2024-08-13T15:45:05.000Z\",\"version\":\"HM5gXwfoDR7mURS1.F_4MzXi4gtDIwNq\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/HM5gXwfoDR7mURS1.F_4MzXi4gtDIwNq/optimus_prime_vehicle.png\",\"sourceSize\":{\"x\":205,\"y\":133}},\"7769c848-95ff-4149-9b2f-93d5731e9df5\":{\"name\":\"megatron_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":248,\"y\":160},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:44:09.000Z\",\"pngLastModified\":\"2024-08-13T15:44:09.000Z\",\"version\":\"4UhOMamfvAj8IQ4i_xWR0JSwjMyCEC2C\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/4UhOMamfvAj8IQ4i_xWR0JSwjMyCEC2C/megatron_vehicle.png\",\"sourceSize\":{\"x\":248,\"y\":160}},\"b79ddae3-9900-425c-98cf-8215c3c6bb5f\":{\"name\":\"bumblebee_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":225,\"y\":88},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:41:47.000Z\",\"pngLastModified\":\"2024-08-13T15:41:47.000Z\",\"version\":\"JFb9hj4jLpOLj4rdXB8wwni3CuI4OWhM\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/JFb9hj4jLpOLj4rdXB8wwni3CuI4OWhM/bumblebee_vehicle.png\",\"sourceSize\":{\"x\":225,\"y\":88}},\"061d339e-1978-4d39-b2a0-ad04a4e8bc6b\":{\"name\":\"elita_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":200,\"y\":105},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:42:54.000Z\",\"pngLastModified\":\"2024-08-13T15:42:54.000Z\",\"version\":\"g7YXw5cSOS.pChU8U7O1VfiLlIUdzOwt\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/g7YXw5cSOS.pChU8U7O1VfiLlIUdzOwt/elita_vehicle.png\",\"sourceSize\":{\"x\":200,\"y\":105}},\"705e7d04-d847-48a9-ab8d-d91ae4d3068a\":{\"name\":\"cog\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":389},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T16:44:49.000Z\",\"pngLastModified\":\"2024-08-13T16:44:49.000Z\",\"version\":\"0Pi.JtOW3zvhmxVivxLgge1szzEaBPxv\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/0Pi.JtOW3zvhmxVivxLgge1szzEaBPxv/cog.png\",\"sourceSize\":{\"x\":400,\"y\":389}}}}\r\n\r\n",
+    "validation_enabled": "false",
+    "mini_toolbox": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hw_Run\",\r\n  \"callout_text\": \"Click here to run the code.\",\r\n  \"element_id\": \"[id='runButton']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 30,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_pause_button": "true",
+    "hint_prompt_attempts_threshold": "1",
+    "short_instructions": "What makes these sprites talk?",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Click on the sprites while the program is running.\",\"hint_id\":\"hw_click_sprites\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f5ccdc39ffb113caab99c572f56a16df/helloworld_food_click.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to change any of the code in this level.\",\"hint_id\":\"hw_no_changes\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ec039212f05e3efb2779a92da1ee94a/helloworld_food_click.mp3\"}]",
+    "instructions_icon": "transformers_optimusprime",
+    "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel4();",
+    "skip_autosave": true,
+    "standalone_app_name": "spritelab",
+    "enable_big_playspace": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.703+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click\\\"\"],\"cloned_from\":\"helloworld_food_click\"},{\"changed_at\":\"2024-08-07 18:44:09 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:59:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:12:04 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:31:02 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-13 19:41:52 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-13 19:53:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16">
+          <next>
+            <block type="gamelab_setBackgroundImageAs" movable="false">
+              <field name="IMG">"transformers_one_bg_4"</field>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon" movable="false">
+                  <field name="ANIMATION_NAME">"elita_1"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker" movable="false">
+                      <field name="LOCATION">{"x":100,"y":280}</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_makeNewSpriteAnon" movable="false">
+                      <field name="ANIMATION_NAME">"optimus_prime_1"</field>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker" movable="false">
+                          <field name="LOCATION">{"x":280,"y":260}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked" movable="false" x="16" y="219">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" movable="false">
+              <field name="ANIMATION">"elita_1"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSay" movable="false">
+              <field name="SPEECH">Let's go!</field>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation" movable="false">
+                  <field name="ANIMATION">"elita_1"</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked" movable="false" x="16" y="357">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" movable="false">
+              <field name="ANIMATION">"optimus_prime_1"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSay" movable="false">
+              <field name="SPEECH">Rollout!</field>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation" movable="false">
+                  <field name="ANIMATION">"optimus_prime_1"</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

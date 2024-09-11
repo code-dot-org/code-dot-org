@@ -67,26 +67,6 @@ class UserLevel < ApplicationRecord
     ActivityConstants.passing?(best_result)
   end
 
-  # Retrieves and memoizes the latest PairedUserLevel that's associated with
-  # this UserLevel for internal callers. External callers should call one of
-  # the higher-level pairing-related methods below.
-  #
-  # Conceptually, each UserLevel should only be associated with one
-  # PairedUserLevel. However, since we don't clean up previous entries in the
-  # paired_user_levels table when posting progress, there can be multiple
-  # entries in the paired_user_levels table associated with a user_level. We
-  # heuristically consider the latest entry in the paired_user_levels table as
-  # the "active" one. This is correct for most cases but can be incorrect in
-  # some edge cases such as when a student leaves a pairing group and makes
-  # further progress on a level as an individual.
-  private def latest_paired_user_level
-    return @latest_paired_user_level if defined? @latest_paired_user_level
-    @latest_paired_user_level =
-      PairedUserLevel.where(driver_user_level_id: id).
-        or(PairedUserLevel.where(navigator_user_level_id: id)).
-        last
-  end
-
   # Returns whether this UserLevel represents progress completed by a pairing
   # group where the user was the driver.
   def driver?
@@ -255,6 +235,26 @@ class UserLevel < ApplicationRecord
   # @return [Hash<Integer, Integer>] user_id => passed_level_count
   def self.count_passed_levels_for_users(users)
     joins(:user).merge(users).passing.group(:user_id).count
+  end
+
+  # Retrieves and memoizes the latest PairedUserLevel that's associated with
+  # this UserLevel for internal callers. External callers should call one of
+  # the higher-level pairing-related methods below.
+  #
+  # Conceptually, each UserLevel should only be associated with one
+  # PairedUserLevel. However, since we don't clean up previous entries in the
+  # paired_user_levels table when posting progress, there can be multiple
+  # entries in the paired_user_levels table associated with a user_level. We
+  # heuristically consider the latest entry in the paired_user_levels table as
+  # the "active" one. This is correct for most cases but can be incorrect in
+  # some edge cases such as when a student leaves a pairing group and makes
+  # further progress on a level as an individual.
+  private def latest_paired_user_level
+    return @latest_paired_user_level if defined? @latest_paired_user_level
+    @latest_paired_user_level =
+      PairedUserLevel.where(driver_user_level_id: id).
+        or(PairedUserLevel.where(navigator_user_level_id: id)).
+        last
   end
 
   # Making unlocked_at private ensures future updates will use the locked

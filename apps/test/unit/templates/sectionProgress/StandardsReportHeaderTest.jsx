@@ -3,8 +3,6 @@ import React from 'react';
 
 import StandardsReportHeader from '@cdo/apps/templates/sectionProgress/standards/StandardsReportHeader';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('StandardsReportHeader', () => {
   let DEFAULT_PROPS;
 
@@ -17,8 +15,8 @@ describe('StandardsReportHeader', () => {
 
   it('report shows section information and report date', () => {
     const wrapper = shallow(<StandardsReportHeader {...DEFAULT_PROPS} />);
-    expect(wrapper.contains('Class Standards Report')).to.equal(true);
-    expect(wrapper.contains('Awesome Teacher')).to.equal(true);
-    expect(wrapper.contains('Great Section')).to.equal(true);
+    expect(wrapper.contains('Class Standards Report')).toBe(true);
+    expect(wrapper.contains('Awesome Teacher')).toBe(true);
+    expect(wrapper.contains('Great Section')).toBe(true);
   });
 });

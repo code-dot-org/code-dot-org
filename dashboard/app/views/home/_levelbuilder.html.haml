@@ -1,6 +1,7 @@
-- if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
+- if current_user && current_user.levelbuilder?
   = render layout: 'shared/extra_links' do
     %li= link_to 'Videos', videos_path
+    %li= link_to 'Images', '/images/new'
     %li
       = link_to 'Scripts', scripts_path
       = link_to '(Update all)', scripts_path(rake: '1'), data: { confirm: 'Are you sure want to re-seed script data?'}

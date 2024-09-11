@@ -1,7 +1,10 @@
-import React from 'react';
-import commonMsg from '@cdo/locale';
-import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import commonMsg from '@cdo/locale';
+
+import commonStyles from '../../commonStyles';
+
 import style from './duplicate-element-button.module.scss';
 
 /**

@@ -11,8 +11,8 @@ import {
   EmText,
   OverlineThreeText,
 } from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {reload} from '@cdo/apps/utils';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -22,6 +22,7 @@ import {reportingDataShape} from './rubricShapes';
 import style from './rubrics.module.scss';
 
 const NO_SELECTED_SECTION_VALUE = '';
+const MAX_NAME_LENGTH = 20;
 
 function StudentSelector({
   styleName,
@@ -84,9 +85,16 @@ function StudentSelector({
           label: (
             <div className={style.studentDropdownOptionContainer}>
               <div className={style.studentDropdownOption}>
-                <BodyThreeText className={style.submitStatusText}>{`${
-                  student.name
-                } ${student.familyName || ''}`}</BodyThreeText>
+                <BodyThreeText className={style.submitStatusText}>
+                  {student.familyName
+                    ? student.familyName.length + student.name.length <
+                      MAX_NAME_LENGTH
+                      ? `${student.name} ${student.familyName}`
+                      : `${student.name} ${student.familyName}`
+                          .substring(0, MAX_NAME_LENGTH - 1)
+                          .concat('', '...')
+                    : `${student.name}`}
+                </BodyThreeText>
                 {!!levelsWithProgress && (
                   <StudentProgressStatus
                     level={levelsWithProgress.find(

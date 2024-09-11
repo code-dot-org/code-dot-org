@@ -20,10 +20,11 @@ import {
   SetActiveFileFunction,
   MoveFileFunction,
   NewFolderFunction,
+  RearrangeFilesFunction,
   RenameFolderFunction,
   ToggleOpenFolderFunction,
   DeleteFolderFunction,
-  SetFileVisibilityFunction,
+  SetFileTypeFunction,
 } from './types';
 
 const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
@@ -86,7 +87,6 @@ export const useProjectUtilities = (
             contents: contents.replace(/\${fileName}/g, fileName),
           },
         });
-        utils.setActiveFile(fileId);
       }),
       renameFile: <RenameFileFunction>((fileId, newName) => {
         dispatch({
@@ -131,10 +131,10 @@ export const useProjectUtilities = (
         });
       }),
 
-      setFileVisibility: <SetFileVisibilityFunction>((fileId, hide) => {
+      setFileType: <SetFileTypeFunction>((fileId, type) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.SET_FILE_VISIBILITY,
-          payload: {fileId, hide},
+          type: PROJECT_REDUCER_ACTIONS.SET_FILE_TYPE,
+          payload: {fileId, type},
         });
       }),
 
@@ -164,6 +164,12 @@ export const useProjectUtilities = (
         dispatch({
           type: PROJECT_REDUCER_ACTIONS.DELETE_FOLDER,
           payload: {folderId},
+        });
+      }),
+      rearrangeFiles: <RearrangeFilesFunction>(fileIds => {
+        dispatch({
+          type: PROJECT_REDUCER_ACTIONS.REARRANGE_FILES,
+          payload: {fileIds},
         });
       }),
     };

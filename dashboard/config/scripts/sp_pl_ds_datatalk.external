@@ -1,0 +1,41 @@
+name 'sp-pl-DS_dataTalk'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data Talk 
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> The data talk levels are used as warm-up activities to get students thinking and their curiosity peaked.
+</p>
+</div>
+
+#### To facilitate discussion, you can see responses on your teacher dashboard.
+
+#### When you are logged into your class as a teacher, you have a powerful tool at your disposal to encourage classroom discussion and highlight student thinking.
+
+<img src="https://images.code.org/2de07f2dfb3de77880649b65d01dfe55-image-1724424528700.png" alt="cat from the pixel activity" width="350px" style="border-radius:20px; float:right; margin: 0 0 40px 40px;">
+
+- #### **Access Student Responses:** Simply click on the top left corner of your screen, and you'll be able to view the responses submitted by your students.
+
+- #### **Encourage Discussion:** You can select interesting or thought-provoking responses to read out loud to the class. This is a great way to spark conversation and give voice to different perspectives.
+
+- #### **Project for the Class:** If you want the entire class to see the responses, you can project them onto the screen. This can help in highlighting good ideas and fostering a collaborative learning environment.
+
+- #### **Privacy Options:** You have the option to hide student names when projecting responses, ensuring anonymity. You can also choose to hide certain responses if needed, giving you full control over what is shared with the class.
+
+
+![](https://images.code.org/27de6fb89d1edc36e3640912a5b3e284-image-1724424496779.png)
+
+### Use these features to create an engaging and inclusive classroom experience!
+
+*Note:This feature is not in the self-paced professional learning module. It is only available when a course is assigned through your teacher account.*
+
+
+
+
+
+
+
+MARKDOWN

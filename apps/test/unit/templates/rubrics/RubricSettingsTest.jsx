@@ -3,12 +3,12 @@ import {render, fireEvent, act} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as utils from '@cdo/apps/code-studio/utils';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
@@ -22,7 +22,7 @@ import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('RubricSettings', () => {
   let clock;
@@ -44,9 +44,15 @@ describe('RubricSettings', () => {
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
+  function stubFetchTeacherEvaluations(data) {
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
   beforeEach(() => {
     fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(Promise.resolve(new Response('')));
+    fetchStub.returns(Promise.resolve(new Response(JSON.stringify(''))));
     refreshAiEvaluationsSpy = sinon.spy();
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
@@ -139,6 +145,7 @@ describe('RubricSettings', () => {
 
   it('displays Section selector', () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -156,6 +163,7 @@ describe('RubricSettings', () => {
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -177,6 +185,7 @@ describe('RubricSettings', () => {
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
     stubFetchEvalStatusForAll(noAttempts);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -198,6 +207,7 @@ describe('RubricSettings', () => {
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
     stubFetchEvalStatusForAll(noUnevaluated);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -221,6 +231,7 @@ describe('RubricSettings', () => {
     // show ready state on initial load
 
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -257,6 +268,7 @@ describe('RubricSettings', () => {
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
     const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     clock = sinon.useFakeTimers();
@@ -412,6 +424,7 @@ describe('RubricSettings', () => {
 
   it('displays the AI enable toggle', () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     render(
       <Provider store={store}>
@@ -430,6 +443,7 @@ describe('RubricSettings', () => {
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     // Set the user's opt-out setting to true (our setting will now be false)
     store.dispatch(setAiRubricsDisabled(true));
@@ -451,6 +465,7 @@ describe('RubricSettings', () => {
 
   it('updates the AI disabled user setting when the toggle is used', async () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     render(
       <Provider store={store}>

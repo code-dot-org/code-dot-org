@@ -50,9 +50,6 @@ class Projects
     }
     row[:id] = @table.insert(row)
 
-    # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage: #56994
-    set_use_datablock_storage row[:id], project_type
-
     storage_encrypt_channel_id(row[:storage_id], row[:id])
   end
 
@@ -370,6 +367,7 @@ class Projects
         updatedAt: row[:updated_at],
         publishedAt: row[:published_at],
         projectType: row[:project_type],
+        frozen: JSON.parse(row[:value])['frozen'],
       }
     )
   end
@@ -447,26 +445,6 @@ class Projects
     source_body = source_data[:body].string
     project_src = ProjectSourceJson.new(source_body)
     return project_src.in_restricted_share_mode?
-  end
-
-  # TODO: post-firebase-cleanup, remove this once we switch 100% to datablock storage
-  private def set_use_datablock_storage(project_id, project_type)
-    # TODO: unfirebase, include 'gamelab' in this list, see #56995
-    if ['applab'].include? project_type
-      # While we transition, a fraction of new projects will be set at creation
-      # to use datablock storage. As we gain confidence, we can increase this
-      # DCDO flag to 1.0. At that point, we're ready to migrate all the old projects.
-      #
-      # Once 100% of the old projects are migrated, we're ready to remove code
-      # marked with: TODO: post-firebase-cleanup
-      use_datablock_table = DASHBOARD_DB[:project_use_datablock_storages]
-      existing_record = use_datablock_table.where(project_id: project_id).first
-      unless existing_record
-        fraction = DCDO.get('fraction_of_new_projects_use_datablock_storage', 0.0)
-        should_use_datablock = rand < fraction
-        use_datablock_table.insert(project_id: project_id, use_datablock_storage: should_use_datablock)
-      end
-    end
   end
 
   #

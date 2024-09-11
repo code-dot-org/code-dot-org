@@ -1,10 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import UnitCalendarDialog from './UnitCalendarDialog';
+import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
+import UnitCalendarDialog from './UnitCalendarDialog';
 
 export default class UnitCalendarButton extends React.Component {
   static propTypes = {

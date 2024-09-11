@@ -41,6 +41,7 @@ function SortByNameDropdown({
       className={className}
       size="s"
       dropdownTextThickness="thin"
+      color="gray"
     />
   );
 }

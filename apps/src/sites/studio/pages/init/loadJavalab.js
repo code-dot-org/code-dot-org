@@ -1,8 +1,8 @@
 import appMain from '@cdo/apps/appMain';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import Javalab from '@cdo/apps/javalab/Javalab';
 import levels from '@cdo/apps/javalab/levels';
 import skins from '@cdo/apps/maze/skins';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 export default function loadJavalab(options) {
   options.isEditorless = true;

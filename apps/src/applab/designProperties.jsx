@@ -1,15 +1,18 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
+
 import color from '../util/color';
-import elementLibrary from './designElements/library';
-import DeleteElementButton from './designElements/DeleteElementButton';
-import ElementSelect from './ElementSelect';
-import DuplicateElementButton from './designElements/DuplicateElementButton';
+
 import CopyElementToScreenButton from './designElements/CopyElementToScreenButton';
+import DeleteElementButton from './designElements/DeleteElementButton';
+import DuplicateElementButton from './designElements/DuplicateElementButton';
+import elementLibrary from './designElements/library';
 import RestoreThemeDefaultsButton from './designElements/RestoreThemeDefaultsButton';
 import designMode from './designMode';
+import ElementSelect from './ElementSelect';
 
 let nextKey = 0;
 
@@ -26,6 +29,7 @@ export default class DesignProperties extends React.Component {
     onDelete: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired,
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    isRtl: PropTypes.bool.isRequired,
   };
 
   state = {selectedTab: TabType.PROPERTIES};
@@ -227,7 +231,7 @@ export default class DesignProperties extends React.Component {
                seen to be two completely different tables. Otherwise the defaultValues
                in inputs don't update correctly. */}
             <div key={key}>
-              <div style={{float: 'right'}}>
+              <div style={{float: this.props.isRtl ? 'left' : 'right'}}>
                 {!isOnlyScreen && (
                   <DeleteElementButton
                     shouldConfirm={isScreen}

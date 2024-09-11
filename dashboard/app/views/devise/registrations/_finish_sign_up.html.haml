@@ -32,7 +32,7 @@
       .span10
         %p
           - if is_lti
-            = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: issuer_name, email: @user.email, markdown: :inline).html_safe
+            = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: issuer_name, email: params.dig(:user, :email), markdown: :inline).html_safe
           - elsif @user.provider.present?
             - provider = t("auth.#{@user.provider}")
             = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: provider, email: @user.email, markdown: :inline).html_safe
@@ -41,8 +41,7 @@
           = link_to t('cancel'), users_cancel_path
 
     = f.hidden_field :locale, value: locale
-    - if DCDO.get('student-email-post-enabled', false)
-      = f.hidden_field :email, value: @user.email
+    = f.hidden_field :email, value: @user.email
     - if @user.errors.any?
       .row
         .span8
@@ -57,7 +56,7 @@
       = f.hidden_field :user_type, value: @user.user_type
     - else
       .row
-        .span3.signup-field-label{:id => 'signup-select-user-type-label'}
+        .span3.signup-field-label.required{:id => 'signup-select-user-type-label'}
           = f.label :user_type, t('signup_form.user_type_label')
           - if @user.errors[:user_type].present?
             %p.error= t('activerecord.errors.messages.blank')
@@ -80,42 +79,43 @@
         -# Sign-up user type original
         .span5{:id => 'select-user-type-original'}
           = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
-    .row#parent-email-container
-      .span8#parent-email-section
-        .padded-container
-          .row.parent-email-section-header
-            .span7.parent-email-field-input
-              .checkbox
-                = f.label :parent_email_preference_opt_in_required do
-                  = f.check_box :parent_email_preference_opt_in_required
-                  %span= t('signup_form.parent_account_checkbox')
-          .row.parent-email-field
-            .span3.signup-field-label
-              = f.label :parent_email do
-                %span= t('signup_form.parent_account_email_label')
-              - if @user.errors[:parent_email_preference_email].present?
-                %p.error= @user.errors[:parent_email_preference_email]&.first
-            .span4.parent-email-field-input
-              = f.email_field :parent_email_preference_email, maxlength: 255, value: @user.parent_email_preference_email || @user.email
-          .row.parent-email-field
-            .span6.signup-field-label
-              = t('signup_form.parent_account_email_progress_permission', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
-              - if @user.errors[:parent_email_preference_opt_in].present?
-                %p.error= t('signup_form.email_preference_required')
-            .span1.parent-email-field-input{style:"display:block"}
-              .radio
-                = f.radio_button :parent_email_preference_opt_in, 'yes'
-                = f.label :parent_email_preference_opt_in, t('signup_form.email_preference_yes'), value: 'yes'
-              .radio
-                = f.radio_button :parent_email_preference_opt_in, 'no'
-                = f.label :parent_email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
+    - unless is_lti
+      .row#parent-email-container
+        .span8#parent-email-section
+          .padded-container
+            .row.parent-email-section-header
+              .span7.parent-email-field-input
+                .checkbox
+                  = f.label :parent_email_preference_opt_in_required do
+                    = f.check_box :parent_email_preference_opt_in_required
+                    %span= t('signup_form.parent_account_checkbox')
+            .row.parent-email-field
+              .span3.signup-field-label
+                = f.label :parent_email do
+                  %span.required= t('signup_form.parent_account_email_label')
+                - if @user.errors[:parent_email_preference_email].present?
+                  %p.error= @user.errors[:parent_email_preference_email]&.first
+              .span4.parent-email-field-input
+                = f.email_field :parent_email_preference_email, maxlength: 255, value: @user.parent_email_preference_email || @user.email
+            .row.parent-email-field
+              .span6.signup-field-label
+                .required= t('signup_form.parent_account_email_progress_permission', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
+                - if @user.errors[:parent_email_preference_opt_in].present?
+                  %p.error= t('signup_form.email_preference_required')
+              .span1.parent-email-field-input{style:"display:block"}
+                .radio
+                  = f.radio_button :parent_email_preference_opt_in, 'yes'
+                  = f.label :parent_email_preference_opt_in, t('signup_form.email_preference_yes'), value: 'yes'
+                .radio
+                  = f.radio_button :parent_email_preference_opt_in, 'no'
+                  = f.label :parent_email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
 
     - if Policies::Lti.show_email_input? @user
       = f.fields_for :authentication_options do |ao_form|
         - if ao_form.object.lti?
           .row
             .span3.signup-field-label
-              #teacher-email-label
+              #teacher-email-label.required
                 = ao_form.label :email, User.human_attribute_name(:email)
               - if @user.errors[:email].present?
                 %p.error= @user.errors[:email].join('\n')
@@ -124,9 +124,9 @@
 
     .row
       .span3.signup-field-label
-        #teacher-name-label{style: "display: none;"}
+        #teacher-name-label.required{style: "display: none;"}
           = f.label :name, t('activerecord.attributes.user.name').html_safe
-        #student-name-label{style: "display: none;"}
+        #student-name-label.required{style: "display: none;"}
           = f.label :name, t('activerecord.attributes.user.name_example')
         - if @user.errors[:name].present?
           %p.error= @user.errors[:name].join('\n')
@@ -134,7 +134,7 @@
         = f.text_field :name, maxlength: 255
 
     .row#age-dropdown{style: "display: none;"}
-      .span3.signup-field-label
+      .span3.signup-field-label.required
         = f.label :age
         - if @user.errors[:age].present?
           %p.error= @user.errors[:age].join('\n')
@@ -143,7 +143,7 @@
 
     - if us_ip && Cpa.cpa_experience(request)
       .row#us-state-dropdown{style: "display: none;"}
-        .span3.signup-field-label
+        .span3.signup-field-label.required
           = f.label :us_state
           - if @user.errors[:us_state].present?
             %p.error= @user.errors[:us_state].join('\n')
@@ -184,7 +184,7 @@
                   = t('signup_form.agree_us_data_transfer_student', markdown: :inline).html_safe
                 %span#teacher-gdpr{style: "display: none;"}
                   = t('signup_form.agree_us_data_transfer_teacher', markdown: :inline).html_safe
-                %span
+                %span.required.not-bold
                   = t('signup_form.data_collection_us', markdown: :inline).html_safe
                   = t('signup_form.visit_privacy', privacy_url: CDO.code_org_url('/privacy'), markdown: :inline).html_safe
           - if @user.errors[:data_transfer_agreement_accepted].present?
@@ -192,7 +192,7 @@
 
     .row#email-preference-radio{style: "display: none;"}
       .span10.signup-field-label
-        %p
+        %p.required
           = t('signup_form.email_preference_question')
           = link_to t('signup_form.email_preference_privacy'), CDO.code_org_url('/privacy'), target: '_blank'
         - if @user.errors[:email_preference_opt_in].present?
@@ -206,7 +206,7 @@
           = f.label :email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
 
     .row#share-email-reg-part-preference-radio{style: "display: none;"}
-      .span10.signup-field-label
+      .span10.signup-field-label.required
         %p
           = t('signup_form.share_teacher_email_reg_partner_question', cdo_regional_partner_desc: CDO.code_org_url('/educate/regional-partner'), markdown: true).html_safe
         - if @user.errors[:share_teacher_email_reg_partner_opt_in_radio_choice].present?

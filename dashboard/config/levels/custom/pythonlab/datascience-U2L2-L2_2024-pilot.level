@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-29T23:39:46.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# String Variables\r\n\r\n::: details [**Step 1**]\r\n* How do you think you would declare and initialize two new variables called `pet_type_two` and `pet_name_two`?\r\n* Discuss ideas with your partner and give it a try!\r\n:::\r\n\r\n::: details [**Step 2**]\r\n* How do you think you would join, or concatenate, your two new variables with the `message` variable?\r\n* Discuss ideas with your partner and give it a try!\r\n:::\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "pet_name = \"Buddy\"\npet_type = \"dog\"\n\nmessage = \"The pet named \" + pet_name + \" is a \" + pet_type + \".\"\nprint(message)\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "project_template_level_name": "datascience-U2L2-L2-3templ_2024-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-29T23:39:46.104+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L3_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L3_2024-pilot\"},{\"changed_at\":\"2024-08-29 23:41:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:42:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:50:28 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 20:39:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 20:48:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 20:54:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

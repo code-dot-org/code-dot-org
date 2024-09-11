@@ -1,9 +1,10 @@
-import React from 'react';
-import {assert, expect} from 'chai';
+import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
 import jQuery from 'jquery';
 import {pick, omit} from 'lodash';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import EnrollForm from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 

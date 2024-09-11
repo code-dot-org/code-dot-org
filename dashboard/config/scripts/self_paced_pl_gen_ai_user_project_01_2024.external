@@ -1,0 +1,25 @@
+name 'self-paced-pl-gen-ai-user-project_01_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 26: Project: Solving Community Problems with Chatbots
+
+#### In the project, students create a chatbot that addresses a personally relevant issue or an issue in their community. Students rely on the user-centered design strategies they’ve seen throughout the unit to create issue statements, design a chatbot, perform user testing, and reflect on the results. Optionally, students can design a presentation on their project and the problem it was designed to address.
+
+
+
+
+---
+
+## Project Guide
+
+### Click <a href="https://docs.google.com/document/d/1dM1g3ZPt1Q43I8iq-7oxxmm0acqGAiOubaeBdFHRofU/edit" target="blank" rel="noopener noreferrer">here</a> for the complete Project Guide.
+
+---
+
+## Up Next!
+#### Explore the steps students will go through when completing their projects.
+
+
+MARKDOWN

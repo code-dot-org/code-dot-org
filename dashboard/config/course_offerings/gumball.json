@@ -1,7 +1,6 @@
 {
   "key": "gumball",
   "display_name": "Gumball Play Lab",
-  "category": "hoc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
@@ -16,6 +15,5 @@
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/0QQVL8oKEaA/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=0QQVL8oKEaA&wmode=transparent",
   "published_date": "2015-11-30 11:00:00 UTC",
-  "self_paced_pl_course_offering_id": 497,
   "self_paced_pl_course_offering_key": "self-paced-pl-k5"
 }

@@ -112,7 +112,7 @@ $bootstrap_button_blue: #337ab7;
 $bootstrap_button_red: #d9534f;
 $bootstrap_error_background: #f2dede;
 $bootstrap_error_text: #b94a48;
-$bootstrap_v3_error_text:  #a94442;
+$bootstrap_v3_error_text: #a94442;
 $bootstrap_error_border: #ebccd1;
 $bootstrap_warning_background: #fcf8e3;
 $bootstrap_warning_text: #c09853;
@@ -143,13 +143,13 @@ $dark_black: #121212;
 
 // ===----===----===---- Phase 1 Colors: ----===----===----===
 // Brand
-$brand_primary_light: #ABDFE5;
+$brand_primary_light: #E0F8F9;
 $brand_primary_default: #009EB0;
-$brand_primary_dark: #008291;
+$brand_primary_dark: #007785;
 
 $brand_secondary_light: #E0D1EC;
 $brand_secondary_default: #8C52BA;
-$brand_secondary_dark: #6F488E;
+$brand_secondary_dark: #6C468A;
 
 $brand_accent_default: #ED6060;
 
@@ -169,52 +169,84 @@ $product_information_default: #007ACC;
 // Neutral
 $neutral_white: #FFFFFF;
 $neutral_light: #F7F8FA;
-$neutral_dark10: #EAEBEB;
-$neutral_dark20: #D4D5D7;
-$neutral_dark30: #BFC1C3;
-$neutral_dark40: #A9ACAF;
-$neutral_dark50: #94979B;
-$neutral_dark60: #7F8286;
-$neutral_dark70: #6A6E73;
-$neutral_dark80: #54595E;
-$neutral_dark90: #3F444B;
+$neutral_gray10: #EAEBEB;
+$neutral_dark10: #EAECEF;
+$neutral_dark20: #D1D4D8;
+$neutral_dark30: #BEC2C7;
+$neutral_dark40: #ABB0B6;
+$neutral_dark50: #989EA5;
+$neutral_dark60: #858C94;
+$neutral_dark70: #727A83;
+$neutral_dark80: #5F6872;
+$neutral_dark90: #4C5661;
 $neutral_dark: #292F36;
 
 //Brands
 $google_brand_color: #0F9D58;
 $microsoft_brand_color: #FFB900;
 $facebook_brand_color: #3B5998;
+$clever_brand_color: #1464FF;
 
 // ===----===----===---- Design system colors: ----===----===----===
 
-$light_primary_100: #ABDFE5;
+$light_primary_100: #BFE4E8;
 $light_primary_500: #0093A4;
-$light_primary_700: #008291;
+$light_primary_700: #007785;
 
 $light_secondary_100: #E2D4EE;
 $light_secondary_500: #8C52BA;
-$light_secondary_700: #6F488E;
+$light_secondary_700: #6C468A;
 
 $light_gray_50: #F7F8FA;
-$light_gray_100: #EAEBEB;
-$light_gray_200: #D4D5D7;
-$light_gray_300: #BFC1C3;
-$light_gray_400: #A9ACAF;
-$light_gray_500: #94979B;
-$light_gray_700: #6A6E73;
-$light_gray_800: #54595E;
-$light_gray_900: #3F444B;
+$light_gray_100: #EAECEF;
+$light_gray_200: #D1D4D8;
+$light_gray_300: #BEC2C7;
+$light_gray_400: #ABB0B6;
+$light_gray_500: #989EA5;
+$light_gray_600: #858C94;
+$light_gray_700: #727A83;
+$light_gray_800: #5F6872;
+$light_gray_900: #4C5661;
+$light_gray_950: #394450;
 
 $light_affirmative_100: #E2F1E2;
 $light_affirmative_500: #3EA33E;
+$light_affirmative_700: #2D742D;
 
+$light_negative_100: #FBE0DD;
 $light_negative_500: #E5311A;
+$light_negative_700: #B24949;
 
+$light_caution_100: #FEF7DF;
 $light_caution_500: #F9CB28;
+$light_caution_700: #C7A220;
+
+$light_accent_100: #FAD7D7;
+$light_accent_500: #ED6060;
+$light_accent_700: #D84C4C;
+
+$light_aqua_100: #CEFFFD;
+$light_aqua_500: #3CFFF8;
+$light_aqua_700: #30CCC6;
+
+$light_orange_100: #FFEDCC;
+$light_orange_500: #FFA400;
+$light_orange_700: #CC8300;
 
 $light_info_100: #DCEFFB;
 $light_info_500: #1892E3;
+$light_info_700: #1375B6;
 
 $light_white: #FFFFFF;
 
 $light_black: #292F36;
+
+$light_black_opacity_90: rgba(41, 47, 54, 0.90);
+$light_black_opacity-80: rgba(41, 47, 54, 0.80);
+$light_black_opacity-70: rgba(41, 47, 54, 0.70);
+$light_black_opacity-60: rgba(41, 47, 54, 0.60);
+$light_black_opacity-50: rgba(41, 47, 54, 0.50);
+$light_black_opacity-40: rgba(41, 47, 54, 0.40);
+$light_black_opacity-30: rgba(41, 47, 54, 0.30);
+$light_black_opacity-20: rgba(41, 47, 54, 0.20);
+$light_black_opacity-10: rgba(41, 47, 54, 0.10);

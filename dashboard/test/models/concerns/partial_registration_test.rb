@@ -46,10 +46,6 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   describe 'can_finish_signup?' do
-    before do
-      DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
-    end
-
     it 'can_finish_signup? is false when params are not present' do
       PartialRegistration.persist_attributes @session, build(:user)
       refute PartialRegistration.can_finish_signup?(nil, @session)
@@ -58,6 +54,11 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     it 'can_finish_signup? is false when no user params are present' do
       PartialRegistration.persist_attributes @session, build(:user)
       refute PartialRegistration.can_finish_signup?({}, @session)
+    end
+
+    it 'can_finish_signup? is false when user is nil' do
+      PartialRegistration.persist_attributes @session, build(:user)
+      refute PartialRegistration.can_finish_signup?(ActionController::Parameters.new({user: nil}), @session)
     end
 
     it 'can_finish_signup? is false when email is not present' do
@@ -104,10 +105,13 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     assert_kind_of User, User.new_from_partial_registration(@session)
   end
 
-  test 'new_from_partial_registration does not save the User' do
+  test 'new_with_session does not save the User' do
     PartialRegistration.persist_attributes @session, build(:user)
 
-    user = User.new_from_partial_registration @session
+    user_params = ActionController::Parameters.new
+    user_params[:email] = 'test@code.org'
+
+    user = User.new_with_session(user_params.permit(:email), @session)
     assert user.valid?
     refute user.persisted?
   end
@@ -129,7 +133,10 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     refute_nil user.encrypted_password
     PartialRegistration.persist_attributes @session, user
 
-    result_user = User.new_from_partial_registration @session
+    user_params = ActionController::Parameters.new
+    user_params[:email] = user.email
+
+    result_user = User.new_with_session user_params.permit(:email), @session
     assert result_user.student?
     assert_equal user.name, result_user.name
     assert_equal user.email, result_user.email
@@ -138,8 +145,6 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'persist_attributes expires after TTL' do
-    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
-
     user = build :student
     refute_nil user.email
     refute_nil user.encrypted_password
@@ -161,7 +166,10 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     refute_nil user.oauth_refresh_token
     PartialRegistration.persist_attributes @session, user
 
-    result_user = User.new_from_partial_registration @session
+    user_params = ActionController::Parameters.new
+    user_params[:email] = user.email
+
+    result_user = User.new_with_session user_params.permit(:email), @session
     assert_equal user.user_type, result_user.user_type
     assert_equal user.name, result_user.name
     assert_equal user.email, result_user.email

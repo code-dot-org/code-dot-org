@@ -8,72 +8,71 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {singleton as studioApp} from '../StudioApp';
-import commonMsg from '@cdo/locale';
-import applabMsg from '@cdo/applab/locale';
-import AppLabView from './AppLabView';
-import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-import dom from '../dom';
-import * as utils from '../utils';
-import * as dropletConfig from './dropletConfig';
-import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
-import {
-  initStorage,
-  isFirebaseStorage,
-  DATABLOCK_STORAGE,
-  FIREBASE_STORAGE,
-} from '../storage/storage';
-import * as apiTimeoutList from '../lib/util/timeoutList';
-import designMode from './designMode';
-import applabTurtle from './applabTurtle';
-import applabCommands from './commands';
-import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
-import JsInterpreterLogger from '../JsInterpreterLogger';
-import * as elementUtils from './designElements/elementUtils';
-import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
-import logToCloud from '../logToCloud';
-import executionLog from '../executionLog';
-import annotationList from '../acemode/annotationList';
-import Exporter from './Exporter';
 import {Provider} from 'react-redux';
-import {getStore} from '../redux';
-import {actions, reducers} from './redux/applab';
-import {add as addWatcher} from '../redux/watchedExpressions';
-import {changeScreen} from './redux/screens';
-import * as applabConstants from './constants';
-const {ApplabInterfaceMode} = applabConstants;
+
+import applabMsg from '@cdo/applab/locale';
+import autogenerateML from '@cdo/apps/applab/ai';
+import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
+import commonMsg from '@cdo/locale';
+
+import annotationList from '../acemode/annotationList';
+import {showHideWorkspaceCallouts} from '../code-studio/callouts';
+import header from '../code-studio/header';
+import project from '../code-studio/initApp/project';
 import consoleApi from '../consoleApi';
-import {
-  updateTableColumns,
-  updateTableRecords,
-  setLibraryManifest,
-} from '../storage/redux/data';
-import {loadDataForView} from '../storage/dataBrowser/loadDataForView';
-import {setStepSpeed} from '../redux/runState';
+import {TestResults, ResultType} from '../constants';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel,
 } from '../containedLevels';
-import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
-import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
-import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
-import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
-import * as makerToolkit from '../lib/kits/maker/toolkit';
-import * as makerToolkitRedux from '../lib/kits/maker/redux';
-import project from '../code-studio/initApp/project';
-import * as thumbnailUtils from '../util/thumbnail';
-import Sounds from '../Sounds';
+import dom from '../dom';
 import {makeDisabledConfig} from '../dropletUtils';
+import executionLog from '../executionLog';
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import JsInterpreterLogger from '../JsInterpreterLogger';
+import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
+import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
+import * as apiTimeoutList from '../lib/util/timeoutList';
+import logToCloud from '../logToCloud';
+import {MB_API} from '../maker/boards/microBit/MicroBitConstants';
+import * as makerToolkitRedux from '../maker/redux';
+import * as makerToolkit from '../maker/toolkit';
+import {getStore} from '../redux';
+import {setStepSpeed} from '../redux/runState';
+import {add as addWatcher} from '../redux/watchedExpressions';
+import Sounds from '../Sounds';
+import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
+import {loadDataForView} from '../storage/dataBrowser/loadDataForView';
+import {
+  updateTableColumns,
+  updateTableRecords,
+  setLibraryManifest,
+} from '../storage/redux/data';
+import {initStorage, DATABLOCK_STORAGE} from '../storage/storage';
+import {singleton as studioApp} from '../StudioApp';
+import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
+import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
+import * as thumbnailUtils from '../util/thumbnail';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
-import {showHideWorkspaceCallouts} from '../code-studio/callouts';
-import header from '../code-studio/header';
-import {TestResults, ResultType} from '../constants';
-import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
-import {workspace_running_background, white} from '@cdo/apps/util/color';
-import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
-import autogenerateML from '@cdo/apps/applab/ai';
+import * as utils from '../utils';
+
+import applabTurtle from './applabTurtle';
+import AppLabView from './AppLabView';
+import applabCommands from './commands';
+import * as applabConstants from './constants';
+import * as elementUtils from './designElements/elementUtils';
+import designMode from './designMode';
+import * as dropletConfig from './dropletConfig';
+import Exporter from './Exporter';
+import {actions, reducers} from './redux/applab';
+import {changeScreen} from './redux/screens';
+
+const {ApplabInterfaceMode} = applabConstants;
 
 /**
  * Create a namespace for the application.
@@ -117,7 +116,6 @@ consoleApi.setClearMethod(Applab.clear);
 
 var level;
 var skin;
-var copyrightStrings;
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -235,7 +233,6 @@ function renderFooterInSharedGame() {
       i18nDropdown={''}
       privacyPolicyInBase={false}
       copyrightInBase={false}
-      copyrightStrings={copyrightStrings}
       baseMoreMenuString={commonMsg.builtOnCodeStudio()}
       rowHeight={applabConstants.FOOTER_HEIGHT}
       style={{fontSize: 18}}
@@ -369,7 +366,6 @@ Applab.initReadonly = function (config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
-  copyrightStrings = config.copyrightStrings;
   config.appMsg = applabMsg;
   loadLevel();
 
@@ -417,21 +413,9 @@ Applab.init = function (config) {
   }
   Applab.channelId = config.channel;
 
-  // TODO: post-firebase-cleanup, remove this conditional when we're removing firebase: #56994
-  if (!!config.useDatablockStorage) {
-    Applab.storage = initStorage(DATABLOCK_STORAGE, {
-      channelId: config.channel,
-    });
-  } else {
-    Applab.storage = initStorage(FIREBASE_STORAGE, {
-      channelId: config.channel,
-      firebaseName: config.firebaseName,
-      firebaseAuthToken: config.firebaseAuthToken,
-      firebaseSharedAuthToken: config.firebaseSharedAuthToken,
-      firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-      showRateLimitAlert: studioApp().showRateLimitAlert,
-    });
-  }
+  Applab.storage = initStorage(DATABLOCK_STORAGE, {
+    channelId: config.channel,
+  });
 
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
@@ -445,7 +429,6 @@ Applab.init = function (config) {
   skin.winAvatar = null;
   skin.failureAvatar = null;
   level = config.level;
-  copyrightStrings = config.copyrightStrings;
   Applab.user = {
     labUserId: config.labUserId,
     isSignedIn: config.isSignedIn,
@@ -688,7 +671,7 @@ Applab.init = function (config) {
     isCurriculumLevel: isCurriculumLevel(config.level.validationEnabled),
   });
 
-  config.dropletConfig = dropletConfig;
+  config.dropletConfig = {...dropletConfig};
 
   if (config.level.aiEnabled) {
     config.dropletConfig = utils.deepMergeConcatArrays(
@@ -828,24 +811,7 @@ async function initDataTab(levelOptions) {
           // We don't know what this table is, we should just skip it.
           console.warn(`unknown table ${table}`);
         } else {
-          // TODO: post-firebase-cleanup, remove this conditional when we're done with firebase: #56994
-          if (isFirebaseStorage()) {
-            if (datasetInfo.current) {
-              Applab.storage.addCurrentTableToProject(
-                table,
-                () => console.log('success'),
-                outputError
-              );
-            } else {
-              Applab.storage.copyStaticTable(
-                table,
-                () => console.log('success'),
-                outputError
-              );
-            }
-          } else {
-            Applab.storage.addSharedTable(table);
-          }
+          Applab.storage.addSharedTable(table);
         }
       });
     }
@@ -883,12 +849,7 @@ function setupReduxSubscribers(store) {
       (isDataMode && view !== lastView) ||
       changedToDataMode(state, lastState)
     ) {
-      loadDataForView(
-        Applab.storage,
-        state.data.view,
-        lastState.data.tableName,
-        state.data.tableName
-      );
+      loadDataForView(Applab.storage, state.data.view, state.data.tableName);
     }
 
     const lastIsPreview = lastState.data && lastState.data.isPreviewOpen;

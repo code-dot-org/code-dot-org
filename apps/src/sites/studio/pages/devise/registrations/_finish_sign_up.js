@@ -1,19 +1,18 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
+
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
-import experiments from '@cdo/apps/util/experiments';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {
   SELECT_A_SCHOOL,
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
 } from '@cdo/apps/templates/SchoolZipSearch';
+import experiments from '@cdo/apps/util/experiments';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -40,15 +39,6 @@ const {usIp, signUpUID} = scriptData;
 const teacherButton = document.getElementById('select-user-type-teacher');
 const studentButton = document.getElementById('select-user-type-student');
 
-// Auto-fill country and countryCode if we detect a US IP address.
-let schoolData = {
-  country: usIp ? 'United States' : '',
-  countryCode: usIp ? 'US' : '',
-};
-
-// Keep track of whether the current user is in the U.S. or not (for regional partner email sharing)
-let isInUnitedStates = schoolData.countryCode === 'US';
-
 let userInRegionalPartnerVariant = experiments.isEnabled(
   experiments.OPT_IN_EMAIL_REG_PARTNER
 );
@@ -56,7 +46,6 @@ let userInRegionalPartnerVariant = experiments.isEnabled(
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
   let user_type = $('#user_user_type').val();
-  let isInSchoolAssociationExperiment = false;
   init();
 
   function init() {
@@ -91,11 +80,8 @@ $(document).ready(() => {
     if (user_type === 'teacher') {
       cleanSchoolInfo();
       $('#user_age').val('21+');
-      // If the new or old school association flow has a school, update to true
-      if (
-        $('select[name="user[school_info_attributes][school_id]"]')?.val() ||
-        $('input[name="user[school_info_attributes][school_id]"]')?.val()
-      ) {
+      // If the school association flow has a school, update to true
+      if ($('select[name="user[school_info_attributes][school_id]"]')?.val()) {
         has_school = true;
       }
       // Check if either of the marketing opt in/out radio buttons are selected
@@ -119,15 +105,7 @@ $(document).ready(() => {
   });
 
   function cleanSchoolInfo() {
-    // The country set in our form is the long-form string name of the country.
-    // We want it to be the 2-letter country code, so we change the value on form submission.
-    const countryInputEl = $(
-      'input[name="user[school_info_attributes][country]"]'
-    );
-    countryInputEl.val(schoolData.countryCode);
-
-    // Clear school_id if the searched school is not found.
-    // New school search flow
+    // Clear school_id and zip if the searched school is not found.
     const newSchoolIdEl = $(
       'select[name="user[school_info_attributes][school_id]"]'
     );
@@ -137,15 +115,7 @@ $(document).ready(() => {
       )
     ) {
       newSchoolIdEl.val('');
-      // Clear out zip before saving as well
       $('input[name="user[school_info_attributes][school_zip]"]').val('');
-    }
-    // Old school search flow
-    if (schoolData.ncesSchoolId === '-1') {
-      const schoolIdEl = $(
-        'input[name="user[school_info_attributes][school_id]"]'
-      );
-      schoolIdEl.val('');
     }
   }
 
@@ -202,6 +172,11 @@ $(document).ready(() => {
 
   // Style selected user type button to show it has been clicked
   function styleSelectedUserTypeButton(value) {
+    // For LTI, the user type is implied from the LMS so the buttons will not appear
+    if (!teacherButton || !studentButton) {
+      return;
+    }
+
     if (value === 'teacher') {
       teacherButton.classList.add('select-user-type-button-selected');
       studentButton.classList.remove('select-user-type-button-selected');
@@ -214,12 +189,7 @@ $(document).ready(() => {
   function switchToTeacher() {
     fadeInFields(TEACHER_ONLY_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
-    toggleVisShareEmailRegPartner(isInUnitedStates);
-    isInSchoolAssociationExperiment = statsigReporter.getIsInExperiment(
-      'school_association_update_2024',
-      'showNewFlow',
-      false
-    );
+    toggleVisShareEmailRegPartner(usIp);
     renderSchoolInfo();
   }
 
@@ -265,81 +235,12 @@ $(document).ready(() => {
 
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
-      if (isInSchoolAssociationExperiment) {
-        ReactDOM.render(
-          <div style={{padding: 10}}>
-            <SchoolDataInputs />
-          </div>,
-          schoolInfoMountPoint
-        );
-      } else {
-        ReactDOM.render(
-          <div style={{padding: 10}}>
-            <SchoolInfoInputs
-              schoolType={schoolData.schoolType}
-              country={schoolData.country}
-              ncesSchoolId={schoolData.ncesSchoolId}
-              schoolName={schoolData.schoolName}
-              schoolCity={schoolData.schoolCity}
-              schoolState={schoolData.schoolState}
-              schoolZip={schoolData.schoolZip}
-              schoolLocation={schoolData.schoolLocation}
-              useLocationSearch={schoolData.useLocationSearch}
-              onCountryChange={onCountryChange}
-              onSchoolTypeChange={onSchoolTypeChange}
-              onSchoolChange={onSchoolChange}
-              onSchoolNotFoundChange={onSchoolNotFoundChange}
-              showRequiredIndicator={false}
-              styles={{width: 580}}
-            />
-          </div>,
-          schoolInfoMountPoint
-        );
-      }
-    }
-  }
-
-  function onCountryChange(_, event) {
-    if (event) {
-      schoolData.country = event.value;
-      schoolData.countryCode = event.label;
-      analyticsReporter.sendEvent(
-        EVENTS.COUNTRY_SELECTED,
-        {country: schoolData.country, countryCode: schoolData.countryCode},
-        PLATFORMS.BOTH
+      ReactDOM.render(
+        <div style={{padding: 22}}>
+          <SchoolDataInputs usIp={usIp} />
+        </div>,
+        schoolInfoMountPoint
       );
     }
-    isInUnitedStates = schoolData.countryCode === 'US';
-    toggleVisShareEmailRegPartner(isInUnitedStates);
-    renderSchoolInfo();
-  }
-
-  function onSchoolTypeChange(event) {
-    schoolData.schoolType = event ? event.target.value : '';
-    renderSchoolInfo();
-  }
-
-  function onSchoolChange(_, event) {
-    schoolData.ncesSchoolId = event ? event.value : '';
-    // ID is set to -1 and '' respectively as user toggles 'I cannot find my
-    // school above': exlude these from school selection events
-    if (!['-1', ''].includes(schoolData.ncesSchoolId)) {
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_SELECTED_FROM_LIST,
-        {ncesId: schoolData.ncesSchoolId},
-        PLATFORMS.BOTH
-      );
-    }
-    renderSchoolInfo();
-  }
-
-  function onSchoolNotFoundChange(field, event) {
-    if (event) {
-      schoolData = {
-        ...schoolData,
-        [field]: event.target.value,
-      };
-    }
-    renderSchoolInfo();
   }
 });

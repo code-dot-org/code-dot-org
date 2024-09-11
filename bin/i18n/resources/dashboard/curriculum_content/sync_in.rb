@@ -76,7 +76,7 @@ module I18n
           # unit for the sync in. Note this may be a nested directory like "2021/csf"
           private def get_unit_subdirectory(unit)
             # special-case Hour of Code units.
-            return 'Hour of Code' if Unit.unit_in_category?('hoc', unit.name)
+            return 'Hour of Code' if unit.in_initiative?('HOC')
 
             # catchall for units without courses
             return 'other' if unit.get_course_version.blank?

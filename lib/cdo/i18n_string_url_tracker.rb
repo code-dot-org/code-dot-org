@@ -122,38 +122,6 @@ class I18nStringUrlTracker
     end
   end
 
-  # Records the log data to a buffer which will eventually be flushed
-  private def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
-    # make sure this is the only thread modifying @buffer
-    @buffer.synchronize do
-      # update the buffer size if we are adding any new data to it
-      # duplicate data will not increase the buffer size
-      buffer_url = @buffer[url] ||= {}.tap {@buffer_size += url.bytesize}
-      buffer_normalized_key = buffer_url[normalized_key] ||= Set.new.tap {@buffer_size += normalized_key.bytesize}
-      # add the new data to the buffer
-      buffer_values = [source, string_key, scope, separator]
-
-      if buffer_normalized_key.add?(buffer_values)
-        buffer_values_size = buffer_values.reduce(0) {|sum, s| sum + (s ? s.bytesize : 0)}
-        @buffer_size += buffer_values_size
-      end
-    end
-
-    # if the buffer is too large, trigger an early flush
-    if @buffer_size > @buffer_size_max
-      message = "The I18n string usage tracker is has reached its memory limit so data will be flushed early. Investigate whether there is an issue or if the limit should be increased."
-      Honeybadger.notify(
-        name: 'I18n Usage Tracker buffer reached max memory limits.',
-        message: message,
-        context: {
-          current_buffer_size: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size).to_s,
-          buffer_size_max: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size_max).to_s
-        }
-      )
-      flush
-    end
-  end
-
   # Sends the buffered i18n string usage data to Firehose.
   def flush
     buffer = nil
@@ -317,5 +285,37 @@ class I18nStringUrlTracker
   # This should only be used by unit tests.
   def set_buffer_size_max(max)
     @buffer_size_max = max
+  end
+
+  # Records the log data to a buffer which will eventually be flushed
+  private def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
+    # make sure this is the only thread modifying @buffer
+    @buffer.synchronize do
+      # update the buffer size if we are adding any new data to it
+      # duplicate data will not increase the buffer size
+      buffer_url = @buffer[url] ||= {}.tap {@buffer_size += url.bytesize}
+      buffer_normalized_key = buffer_url[normalized_key] ||= Set.new.tap {@buffer_size += normalized_key.bytesize}
+      # add the new data to the buffer
+      buffer_values = [source, string_key, scope, separator]
+
+      if buffer_normalized_key.add?(buffer_values)
+        buffer_values_size = buffer_values.reduce(0) {|sum, s| sum + (s ? s.bytesize : 0)}
+        @buffer_size += buffer_values_size
+      end
+    end
+
+    # if the buffer is too large, trigger an early flush
+    if @buffer_size > @buffer_size_max
+      message = "The I18n string usage tracker is has reached its memory limit so data will be flushed early. Investigate whether there is an issue or if the limit should be increased."
+      Honeybadger.notify(
+        name: 'I18n Usage Tracker buffer reached max memory limits.',
+        message: message,
+        context: {
+          current_buffer_size: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size).to_s,
+          buffer_size_max: ActiveSupport::NumberHelper.number_to_human_size(@buffer_size_max).to_s
+        }
+      )
+      flush
+    end
   end
 end

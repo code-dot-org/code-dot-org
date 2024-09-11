@@ -25,11 +25,12 @@
  * @file The global redux store - "There can be only one"
  */
 
+import {configureStore} from '@reduxjs/toolkit';
 import Immutable from 'immutable';
-import experiments from './util/experiments';
 import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
-import {configureStore} from '@reduxjs/toolkit';
+
+import experiments from './util/experiments';
 
 if (process.env.NODE_ENV !== 'production') {
   var createLogger = require('redux-logger');

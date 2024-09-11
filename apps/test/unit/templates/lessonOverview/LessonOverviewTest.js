@@ -1,27 +1,30 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
+import * as currentLocaleModule from '@cdo/apps/util/currentLocale';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement,
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
-import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
+import {sampleActivities} from '../../levelbuilder/lesson-editor/activitiesTestData';
 
 describe('LessonOverview', () => {
+  let currentLocaleStub;
   let defaultProps;
   beforeEach(() => {
+    currentLocaleStub = sinon.stub(currentLocaleModule, 'default');
     defaultProps = {
       lesson: {
         unit: {
@@ -107,6 +110,10 @@ describe('LessonOverview', () => {
       hasVerifiedResources: false,
       isVerifiedInstructor: false,
     };
+  });
+
+  afterEach(() => {
+    currentLocaleStub.restore();
   });
 
   it('renders default props', () => {
@@ -300,6 +307,7 @@ describe('LessonOverview', () => {
   });
 
   it('renders dropdown button with links to printing options if not pilot or in development', () => {
+    currentLocaleStub.returns('en-US');
     const lesson = {
       ...defaultProps.lesson,
       lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
@@ -321,6 +329,7 @@ describe('LessonOverview', () => {
   });
 
   it('renders dropdown button with lessonPlanPdf if no scriptResourcesPdfUrl provided and not pilot or in development', () => {
+    currentLocaleStub.returns('en-US');
     const lesson = {
       ...defaultProps.lesson,
       lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
@@ -339,7 +348,26 @@ describe('LessonOverview', () => {
     ]);
   });
 
+  it('does not render dropdown with links if locale is not en-US', () => {
+    currentLocaleStub.returns('te-ST');
+    const lesson = {
+      ...defaultProps.lesson,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf',
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql(['#']);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Lesson Plan',
+    ]);
+  });
+
   it('does not render overview printing option in dropdown for pilot course', () => {
+    currentLocaleStub.returns('en-US');
     const unit = {
       ...defaultProps.lesson.unit,
       publishedState: PublishedState.pilot,
@@ -364,6 +392,7 @@ describe('LessonOverview', () => {
   });
 
   it('does not render overview printing option in dropdown for in development course', () => {
+    currentLocaleStub.returns('en-US');
     const unit = {
       ...defaultProps.lesson.unit,
       publishedState: PublishedState.in_development,

@@ -5,7 +5,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
@@ -20,8 +20,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 
 import {featuredProjectDataPropType} from './projectConstants';
 import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
-
-const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
+import {getThumbnailUrl} from './projectUtils';
 
 const THUMBNAIL_SIZE = 65;
 
@@ -82,7 +81,7 @@ export const styles = {
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
-  thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
+  thumbnailUrl = getThumbnailUrl(thumbnailUrl, rowData.type);
   return (
     <a
       style={tableLayoutStyles.link}

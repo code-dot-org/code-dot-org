@@ -4,6 +4,7 @@
     "style": "world_blocks",
     "category": "World",
     "func": "setBackgroundImageAs",
+    "docFunc": "gamelab_setBackgroundImage",
     "blockText": "set background to {IMG}",
     "args": [
       {

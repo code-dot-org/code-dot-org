@@ -1,46 +1,49 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
+
+import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
+import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import TeacherPanelContainer from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanelContainer';
-import SectionSelector from '../SectionSelector';
+import {
+  getStudentsForSection,
+  queryLockStatus,
+} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   fullyLockedLessonMapping,
   setSectionLockStatus,
 } from '@cdo/apps/code-studio/lessonLockRedux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  queryUserProgress,
+  setViewAsUserId,
+} from '@cdo/apps/code-studio/progressRedux';
+import {
+  getCurrentLevel,
+  hasLockableLessons,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
+import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {
   pageTypes,
   setStudentsForCurrentSection,
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
-import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {
-  queryUserProgress,
-  setViewAsUserId,
-} from '@cdo/apps/code-studio/progressRedux';
-import {
-  hasLockableLessons,
-  levelsForLessonId,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {reload} from '@cdo/apps/utils';
-import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
+import i18n from '@cdo/locale';
+
+import SectionSelector from '../SectionSelector';
+
 import {studentShape, levelWithProgress} from './types';
-import {
-  getStudentsForSection,
-  queryLockStatus,
-} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
-import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
-import fontConstants from '@cdo/apps/fontConstants';
+
 import moduleStyles from './teacher-panel.module.scss';
 
 const TEACHER_PANEL = 'TeacherPanel';
@@ -71,7 +74,6 @@ class TeacherPanel extends React.Component {
     teacherId: PropTypes.number,
     exampleSolutions: PropTypes.array,
     currentLevelId: PropTypes.string,
-    levels: PropTypes.arrayOf(levelWithProgressType),
     selectUser: PropTypes.func.isRequired,
     setViewAsUserId: PropTypes.func.isRequired,
     setStudentsForCurrentSection: PropTypes.func.isRequired,
@@ -79,7 +81,8 @@ class TeacherPanel extends React.Component {
     setSectionLockStatus: PropTypes.func.isRequired,
     selectSection: PropTypes.func.isRequired,
     setViewType: PropTypes.func.isRequired,
-    isCurrentLevelLab2: PropTypes.bool.isRequired,
+    isCurrentLevelLab2: PropTypes.bool,
+    lab2ExampleSolutions: PropTypes.array,
   };
 
   componentDidMount() {
@@ -172,6 +175,8 @@ class TeacherPanel extends React.Component {
       pageType,
       teacherId,
       exampleSolutions,
+      isCurrentLevelLab2,
+      lab2ExampleSolutions,
     } = this.props;
 
     const selectedUserId = this.getSelectedUserId();
@@ -183,8 +188,12 @@ class TeacherPanel extends React.Component {
       !!students?.length &&
       pageType !== pageTypes.scriptOverview;
 
+    const exampleSolutionsToParse = isCurrentLevelLab2
+      ? lab2ExampleSolutions
+      : exampleSolutions;
+
     const displayLevelExamples =
-      viewAs === ViewType.Instructor && exampleSolutions?.length > 0;
+      viewAs === ViewType.Instructor && exampleSolutionsToParse?.length > 0;
 
     const displayLockInfo =
       hasSections && unitHasLockableLessons && viewAs === ViewType.Instructor;
@@ -208,7 +217,7 @@ class TeacherPanel extends React.Component {
           )}
           {displayLevelExamples && (
             <div style={styles.exampleSolutions}>
-              {exampleSolutions.map((example, index) => (
+              {exampleSolutionsToParse.map((example, index) => (
                 <Button
                   __useDeprecatedTag
                   key={index}
@@ -357,15 +366,6 @@ export default connect(
       lockableAuthorized &&
       hasLockableLessons(state.progress);
 
-    const levels = levelsForLessonId(
-      state.progress,
-      state.progress.currentLessonId
-    );
-
-    const isCurrentLevelLab2 = levels?.find(
-      level => level.isCurrentLevel
-    )?.usesLab2;
-
     return {
       viewAs: state.viewAs,
       hasSections: sectionIds.length > 0,
@@ -380,8 +380,8 @@ export default connect(
       teacherId: state.currentUser.userId,
       exampleSolutions: state.pageConstants?.exampleSolutions,
       currentLevelId: state.progress.currentLevelId,
-      levels,
-      isCurrentLevelLab2,
+      lab2ExampleSolutions: state.lab?.levelProperties?.exampleSolutions,
+      isCurrentLevelLab2: getCurrentLevel(state)?.usesLab2,
     };
   },
   dispatch => ({

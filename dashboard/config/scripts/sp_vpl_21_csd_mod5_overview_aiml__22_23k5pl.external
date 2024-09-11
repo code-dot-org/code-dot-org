@@ -5,40 +5,25 @@ description 'description here'
 markdown <<MARKDOWN
 # Game Design: Ignite Creativity! 
 
-##### Welcome, educators, to an exhilarating journey into the world of game design! 🎮✨ This free, self-paced module is designed to equip you with the skills to inspire budding game designers. Dive into the fundamentals of game creation and Code.org's module in just 45 minutes! Discover the art of crafting captivating games, empowering students to unleash their creativity and technical skills. Through problem-solving, storytelling, and teamwork, students will develop resilience and empathy. Using Sprite Lab, your students will bring their imagination to life. 
-
-<img src="https://images.code.org/b201f3b28b7d2c536741773242ca1352-image-1715287595815.png" alt="pixelated cartoon image of a green dinosaur" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
-
-
-##### Check out what teachers are saying about teaching game design: 
-* ##### "The most vital aspect was the discussion at the end. Students really embraced the process of verbalizing the 'glows and grows,' enhancing their learning experience through reflective conversation."
-* ##### "It was just pure fun. Everyone loves playing games, but learning how to design them? That's something special. This was how I introduced game design to both 4th and 5th graders, and they were instantly engaged and excited."
-* ##### "I noted particular enthusiasm from students who previously didn't feel confident with coding, including gifted students who might not typically enjoy it. They became very excited when they managed to grasp new concepts and even more so when they could help a classmate understand a problem."
+#### Welcome, educators, to an exhilarating journey into the world of game design! 🎮✨ This free, self-paced module is designed to equip you with the skills to inspire budding game designers. Discover the art of crafting captivating games, empowering students to unleash their creativity and technical skills. Through problem-solving, storytelling, and teamwork, students will develop resilience and empathy. Using Sprite Lab, your students will bring their imagination to life. 
 
 
 
 
+## In this lesson, you will:
+
+* #### Get an introduction to game design.
+* #### Learn about the big ideas students will be taught in the Code.org Game Design module. 
+* #### Practice foundational computer science concepts to modify and create games.
 
 
-
-
-
-
-## In this lesson, you will::
-
-* ##### Get an introduction to game design.
-* ##### Learn about the big ideas students will be taught in the Code.org Game Design module. 
-* ##### Practice foundational computer science concepts to modify and create games.
-
-
-### **Suggested time:** ??? minutes
+### **Suggested time:** 30 minutes
 
 ## Take the pre-survey
 
-Update Survey link:
-##### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
+#### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/selfpaced_pd_k5_game_design_pre_survey" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
 
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_k5_game_design_pre_survey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 
 ## Are you ready to ignite creativity in your classroom? Let's dive in! 🌟
 

@@ -1,0 +1,152 @@
+name 'markdown-testing'
+markdown <<MARKDOWN
+# Heading level 1
+
+## Heading level 2
+
+### Heading level 3
+
+#### Heading level 4
+
+##### Heading level 5
+
+###### Heading level 6
+
+## a heading with an id {#custom-id}
+
+**bold text**
+
+*italic text*
+
+***bold italic text***
+
+> blockquote - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae iaculis nisl. Maecenas at risus porttitor purus venenatis vulputate quis a velit.
+>
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae iaculis nisl. Maecenas at risus porttitor purus venenatis vulputate quis a velit.
+
+> nested blockquote - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+>
+>> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae iaculis nisl. Maecenas at risus porttitor purus venenatis vulputate quis a velit.
+
+> # blockquote heading level 1
+>
+> - list item 1
+> - list item 2
+>
+> *italic* text followed by **bold text**
+
+**first ordered list**
+
+1. first item
+2. second item
+3. third item
+
+**second ordered list**
+
+1. first item
+2. second item
+3. third item
+   - indented item
+   - indented item
+4. fourth item
+
+**first unordered list**
+
+- first item
+- second item
+- third item
+
+**second unordered list**
+
+- first item
+- second item
+- third item
+   - indented item
+   - indented item
+- fourth item
+
+inline `code`
+
+```
+code block
+```
+
+a horizontal rule
+___
+
+a cat image that says "a picture of a cat" when you hover over it
+
+![cat image](https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg "a picture of a cat")
+
+a cat image that is linked
+
+[![cat image](https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg "a picture of a cat")](https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg)
+
+html entities
+
+Copyright (©) — &copy;
+
+Registered trademark (®) — &reg;
+
+Trademark (™) — &trade;
+
+Euro (€) — &euro;
+
+Left arrow (←) — &larr;
+
+Up arrow (↑) — &uarr;
+
+Right arrow (→) — &rarr;
+
+Down arrow (↓) — &darr;
+
+Degree (°) — &#176;
+
+Pi (π) — &#960;
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+
+attempting to use syntax highlighting for fenced code blocks
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+[linking to the heading with an id](#custom-id)
+
+task list (should show as check boxes)
+
+- [x] first thing to do
+- [ ] second thing to do
+- [ ] third thing to do
+
+I need to highlight these ==very important words==.
+
+trying subscript with H~2~O
+
+trying superscript with x^2^
+
+Some of these words <ins>will be underlined</ins>.
+
+we need admonitions
+
+like
+
+> :warning: **Warning:** Don't push the big red button.
+
+> :memo: **Note:** Here's a helpful note.
+
+> :bulb: **Tip:** Remember to appreciate the little things in life.
+MARKDOWN

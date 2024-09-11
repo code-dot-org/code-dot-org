@@ -1,9 +1,11 @@
-import {assert} from '../util/reconfiguredChai';
-import {parseElement} from '@cdo/apps/xml';
-import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 import blocksCommon from '@cdo/apps/blocksCommon';
 import blocks from '@cdo/apps/studio/blocks';
 import skins from '@cdo/apps/studio/skins';
+import {parseElement} from '@cdo/apps/xml';
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
 describe('Custom studio blocks', function () {
   let studioApp, skin;

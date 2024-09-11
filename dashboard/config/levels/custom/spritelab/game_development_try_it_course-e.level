@@ -74,12 +74,15 @@
     "validation_code": "if (World.frameCount == 1) {\r\n  \r\n  setFailTime(150);\r\n  \r\n   addCriteria(function() {\r\n  return (((isKeyPressed(\"left\") || isKeyPressed(\"right\"))) || isKeyPressed(\"up\")) && (setFailTime(800) || true);\r\n   }, \"didntPressKey\");\r\n     \r\n  addCriteria(function() {\r\n    return foregroundEffectRenderedThisFrame(); // Check whether or not the student created a sprite.\r\n  }, \"gameDesignPlayToWin\");  // Failure message: \" Make sure to get all the collectibles in order to win.\"\r\n\r\n  // Additional calls to addCriteria(), in order of precedence\r\n}\r\ncheck();\r\n",
     "bubble_choice_description": "**Difficulty:** 🌶️\r\n\r\n**Problem:** The penguin player can not reach the gems!",
     "thumbnail_url": "https://images.code.org/23493b5436f9e9e8ccfb657cf7e7b488-debug a.jpg",
-    "preload_asset_list": null,
-    "encrypted_examples": "TXhUAWNUcHZgL2+gjM/cjhLhix+iE9ESbUgOo0/caRLhtOnQuTt7+HXfYKjG\n3esUIC7EfVATsWRWElSJq/6/Kw==\n"
+    "encrypted_examples": "TXhUAWNUcHZgL2+gjM/cjhLhix+iE9ESbUgOo0/caRLhtOnQuTt7+HXfYKjG\n3esUIC7EfVATsWRWElSJq/6/Kw==\n",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:05.052+00:00\",\"changed\":[\"cloned from \\\"game_development_try_it_2024\\\"\"],\"cloned_from\":\"game_development_try_it_2024\"},{\"changed_at\":\"2024-05-21 15:38:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:05.052+00:00\",\"changed\":[\"cloned from \\\"game_development_try_it_2024\\\"\"],\"cloned_from\":\"game_development_try_it_2024\"},{\"changed_at\":\"2024-05-21 15:38:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-23 15:50:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-23 19:28:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-23 19:29:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-23 19:30:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-16 18:40:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "events": 1
   }
 }]]></config>
   <blocks>
@@ -121,7 +124,7 @@
           <field name="KEY">"up"</field>
           <next>
             <block type="GameDev_playerJump">
-              <field name="STRENGTH">6</field>
+              <field name="STRENGTH">10</field>
             </block>
           </next>
         </block>
@@ -1294,7 +1297,7 @@
                       <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
                     </shadow>
                     <block type="gamelab_bitmap">
-                      <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,1,0],[0,0,0,0,1,1,0,0],[1,1,1,1,0,0,0,0]]</field>
+                      <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,1,0],[0,0,0,0,0,0,0,0],[1,1,1,1,0,0,0,0]]</field>
                     </block>
                   </value>
                   <next>
@@ -1305,7 +1308,7 @@
                           <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
                         </shadow>
                         <block type="gamelab_bitmap">
-                          <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,1,1],[0,0,0,0,1,1,1,1]]</field>
+                          <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,1],[0,0,0,0,1,1,1,1],[0,0,0,0,1,1,1,1]]</field>
                         </block>
                       </value>
                       <next>
@@ -1324,16 +1327,18 @@
                                   <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
                                 </shadow>
                                 <block type="gamelab_bitmap">
-                                  <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,0,0,0,0],[1,1,1,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
+                                  <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,0,0,0,0],[1,1,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_makeSpritesWithSize">
-                                  <field name="SIZE">30</field>
-                                  <field name="COSTUME">"gameplayobject_heart_02"</field>
-                                  <value name="NUM">
-                                    <block type="math_number">
-                                      <field name="NUM">5</field>
+                                <block type="gamelab_makeSpritesGridInput">
+                                  <field name="ANIMATION_NAME">"gameplayobject_heart_02"</field>
+                                  <value name="GRID">
+                                    <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
+                                      <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
+                                    </shadow>
+                                    <block type="gamelab_bitmap">
+                                      <field name="GRID">[[0,0,0,0,0,0,0,0],[1,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,1],[0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
                                     </block>
                                   </value>
                                   <next>
@@ -1349,29 +1354,23 @@
                                           <field name="GROUP">"walls"</field>
                                           <value name="SPRITE">
                                             <block type="gamelab_allSpritesWithAnimation">
-                                              <field name="ANIMATION">"brick_grey"</field>
+                                              <field name="ANIMATION">"dirt"</field>
                                             </block>
                                           </value>
                                           <next>
                                             <block type="GameDev_setGroup">
-                                              <field name="GROUP">"players"</field>
+                                              <field name="GROUP">"walls"</field>
                                               <value name="SPRITE">
                                                 <block type="gamelab_allSpritesWithAnimation">
-                                                  <field name="ANIMATION">"game_penguin"</field>
+                                                  <field name="ANIMATION">"brick_grey"</field>
                                                 </block>
                                               </value>
                                               <next>
-                                                <block type="gamelab_toggleBehaviorSimple">
-                                                  <field name="TOGGLE">"begins"</field>
+                                                <block type="GameDev_setGroup">
+                                                  <field name="GROUP">"players"</field>
                                                   <value name="SPRITE">
                                                     <block type="gamelab_allSpritesWithAnimation">
                                                       <field name="ANIMATION">"game_penguin"</field>
-                                                    </block>
-                                                  </value>
-                                                  <value name="BEHAVIOR">
-                                                    <block type="gamelab_behavior_get">
-                                                      <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
-                                                      <field name="NAME">moving with arrow keys</field>
                                                     </block>
                                                   </value>
                                                   <next>
@@ -1379,15 +1378,31 @@
                                                       <field name="TOGGLE">"begins"</field>
                                                       <value name="SPRITE">
                                                         <block type="gamelab_allSpritesWithAnimation">
-                                                          <field name="ANIMATION">"gameplayobject_heart_02"</field>
+                                                          <field name="ANIMATION">"game_penguin"</field>
                                                         </block>
                                                       </value>
                                                       <value name="BEHAVIOR">
                                                         <block type="gamelab_behavior_get">
-                                                          <mutation behaviorId="wandering" name="wandering"/>
-                                                          <field name="NAME">wandering</field>
+                                                          <mutation behaviorId="moving with arrow keys" name="moving with arrow keys"/>
+                                                          <field name="NAME">moving with arrow keys</field>
                                                         </block>
                                                       </value>
+                                                      <next>
+                                                        <block type="gamelab_toggleBehaviorSimple">
+                                                          <field name="TOGGLE">"begins"</field>
+                                                          <value name="SPRITE">
+                                                            <block type="gamelab_allSpritesWithAnimation">
+                                                            <field name="ANIMATION">"gameplayobject_heart_02"</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="BEHAVIOR">
+                                                            <block type="gamelab_behavior_get">
+                                                            <mutation behaviorId="wandering" name="wandering"/>
+                                                            <field name="NAME">wandering</field>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </next>
                                                     </block>
                                                   </next>
                                                 </block>

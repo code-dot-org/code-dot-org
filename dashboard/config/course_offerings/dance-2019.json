@@ -1,7 +1,6 @@
 {
   "key": "dance-2019",
   "display_name": "Dance Party (2019)",
-  "category": "hoc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
@@ -16,6 +15,5 @@
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/tY09z2y8-xQ/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=tY09z2y8-xQ&wmode=transparent",
   "published_date": "2019-12-01 11:00:00 UTC",
-  "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

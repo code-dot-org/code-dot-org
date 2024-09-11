@@ -6,7 +6,6 @@ theme: responsive_full_width
 %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
 %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
 %script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
-%script{src: webpack_asset_path('js/code.org/public/districts.js')}
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/districts-styles.css", rel: "stylesheet"}
 
@@ -22,8 +21,6 @@ theme: responsive_full_width
 - icon_chart_pie = "fa-solid fa-chart-pie"
 - icon_badge_check = "fa-solid fa-badge-check"
 - icon_folder_open = "fa-solid fa-folder-open"
-- icon_smile = "fa-solid fa-smile"
-- icon_money_check_dollar_pen = "fa-solid fa-money-check-dollar-pen"
 
 = view :top_skinny_banner, banner_id: "banner-districts", banner_url: nil, banner_icon: "fa-solid fa-megaphone", banner_text: hoc_s("districts_skinny_banner_title", markdown: :inline, locals: {district_partners_url: district_partners_url}), external_link: false, light_theme: true
 
@@ -98,18 +95,6 @@ theme: responsive_full_width
         .text-wrapper
           %h3 National visibility and recognition
           %p We'll spotlight your district on the Code.org website alongside partners including Amazon, The College Board, Google, and Microsoft.
-      %li
-        %div
-          %i{class: "#{icon_smile}"}
-        .text-wrapper
-          %h3 Amazon Future Engineer Benefits
-          %p Eligible schools can receive paid 1-year CSTA membership for teachers, Amazon classroom resources, first access to career exploration offerings, awards, scholarships, and more.
-      %li
-        %div
-          %i{class: "#{icon_money_check_dollar_pen}"}
-        .text-wrapper
-          %h3 Scholarships for schools serving underserved students
-          %p Access to $1.5M in Professional Learning scholarships for teachers serving students traditionally underrepresented in CS.
     .button-wrapper.centered
       %a.link-button{href: url_learn_more} Learn more
       %a.link-button.secondary{href: url_enroll_now, target: "_blank", rel: "noopener noreferrer"} Enroll now
@@ -169,9 +154,6 @@ theme: responsive_full_width
     %details
       %summary Do high school computer science courses count toward graduation?
       %p <a class="has-external-link" href="https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#" target="_blank" rel="noopener noreferrer">Take a look here</a> to see if your state allows computer science courses to count toward graduation (click the “Count” tab near the top).
-    %details
-      %summary How do I or my counselors recruit students to take the class?
-      %p We have a number of suggestions and materials for encouraging students to take computer science. Find them all at <a href="/educate/resources/recruit" target="_blank" rel="noopener noreferrer">code.org/recruit</a>.
 
 %section{style: "display: block !important"}
   .wrapper

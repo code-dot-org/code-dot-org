@@ -1,0 +1,27 @@
+name 'data-science-ch1-lesson1-level2'
+title 'Data Scientists Exploration'
+
+markdown <<MARKDOWN
+## Data Scientists Exploration
+
+| Image | Person            | Field Of Study          | Link(s)                                                                                                                           |
+|:-----:|:-----------------:|:-----------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|
+|<img src="https://images.code.org/f707d1a29cf88ba1785c8086f8b8bd2d-image-1718036928941.jpg" width="125"/>| **Nathalie<br>Miebach** | **Art** | [Ted Talk](https://www.ted.com/talks/nathalie_miebach_art_made_of_storms) // [Personal Website](https://www.nathaliemiebach.com/) |
+|<img src="https://images.code.org/bfb542ec19246c054bd05d86658728ba-image-1718037047405.png" width="125"/>| **Michelle<br>Tat** | **City Government** | [Article](https://towardsdatascience.com/on-being-a-civic-data-scientist-774c15232695) // [Portfolio](https://mjtat.github.io/) |
+|<img src="https://images.code.org/f3291d7a86adf91e6e79771f91277070-image-1718042520836.png" width="125"/>| **Jacob<br>Campbell** | **Dance** | [Article](https://magazine.calpoly.edu/winter-2023/making-data-dance/) |
+|<img src="https://images.code.org/842c4cf5abd0ecb27df6327b3cb635c2-image-1718042530855.png" width="125"/>| **Peaks<br>Krafft** | **Diversity, Social Media** | [Profile](https://www.oii.ox.ac.uk/people/profiles/krafft/) // [Portfolio](https://people.csail.mit.edu/pkrafft/) |
+|<img src="https://images.code.org/deaff19842680f5a0a2a3c8a1a09a156-image-1718042546968.jpeg" width="125"/>| **Lydia<br>Jennings** | **Environment** | [Personal Website](https://nativesoilnerd.com/) |
+|<img src="https://images.code.org/92e3b8e689843127a493c4cc1233e628-image-1718042563736.png" width="125"/>| **Briana<br>Vecchione** | **Ethics** | [Personal Website](https://brianavecchione.org/) |
+|<img src="https://images.code.org/6bd0ce1e3da34eb7735f63445adb779b-image-1718042570986.png" width="125"/>| **Kelsey<br>Campbell** | **General** | [Profile + Video](https://roadtripnation.com/leader/kelsey-campbell) |
+|<img src="https://images.code.org/12a7c5ac1b44b885999c7d27a6f64936-image-1718042578542.png" width="125"/>| **Chris<br>Chenet** | **Homelessness** | [Article](https://www.datakind.org/2023/11/07/welcome-chris-chenet-datakinds-product-owner/) |
+|<img src="https://images.code.org/f4cb0af440d82bbb595dc8183da7f189-image-1718042582268.png" width="125"/>| **Kira<br>Radinsky** | **Medicine** | [Personal Website](http://www.kiraradinsky.com/) |
+|<img src="https://images.code.org/5936ef245824a2dcd80727e507ec07ab-image-1718042592152.png" width="125"/>| **Christine<br>Osazuwa** | **Music** | [Personal Website](https://christineosazuwa.com) |
+|<img src="https://images.code.org/2379c356d72a9e678e45c4e9039bb4e2-image-1718042597835.png" width="125"/>| **WEB<br>DuBois** | **Race** | [Article](https://sparkmap.org/data/w-e-b-du-bois-data-visualization-history/) |
+|<img src="https://images.code.org/f74186da88a44d8988a6e14c0fe04e38-image-1718042605652.png" width="125"/>| **Kimberly<br>Arcand** | **Space** | [Profile + Video](https://roadtripnation.com/interviews/kimberly-arcand) // [Personal Website](https://www.kimarcand.com/) |
+|<img src="https://images.code.org/1732a7006e77a5447c900cc18bfa7d70-image-1718042610686.png" width="125"/>| **Ivana<br>Seric** | **Sports** | [Article](https://www.smorescience.com/data-scientist-ivana-seric/) // [Video](https://www.youtube.com/watch?v=N7WpMixTD-g) |
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This level exists to give students access to the links that they can follow to learn more about each person. You should have assigned each of the students one of these data scientists to find on this page and research. This [spreadsheet](https://docs.google.com/spreadsheets/d/1wjbbdckWogsZAqgXmCuZoqAxdgqJrCo1KUP6P2TUS-Y/edit#gid=0) provides some basic information about which people also have videos students can watch in addition to reading, and which data scientists have shorter articles, so you can differentiate which student gets which data scientist from that.
+MARKDOWN

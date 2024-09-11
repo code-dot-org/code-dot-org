@@ -12,7 +12,8 @@
     "link_title": "Guessing Game",
     "url": "https://github.com/code-dot-org/csa-cv-lesson2a",
     "thumbnail_url": "https://images.code.org/c35317d101a4783b53bef625b8159fb3-guessinggame1.gif",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:48:09.820+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L2-L1a_2023\\\"\"],\"cloned_from\":\"CSA-CV-L2-L1a_2023\"}]"

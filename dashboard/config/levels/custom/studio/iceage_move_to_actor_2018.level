@@ -19,7 +19,7 @@
     "goal": "{}",
     "success_condition": "function successCondition() {\r\n\t      return Studio.playSoundCount > 0 && Studio.sprite[0].isCollidingWith(1);\r\n\t    }",
     "short_instructions": "Connect a block to the `when actor touches` event to play a sound when Diego finds Manny.",
-    "callout_json": "[{\"localization_key\":\"playlab_play_sound\",\"callout_text\":null,\"element_id\":\"[block-id='7']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
+    "callout_json": "[{\"localization_key\":\"playlab_play_sound\",\"callout_text\":null,\"element_id\":\"[block-id='7']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null},{\"element_id\":\"[data-id='7']\",\"localization_key\":\"playlab_play_sound\",\"callout_text\":null,\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
     "long_instructions": "Diego (actor 1) is searching for Manny (actor 2). Can you help bring the two together? Connect a block to the `when actor touches` event to play a sound when they find each other.",
@@ -52,7 +52,7 @@
     "sprites_hidden_to_start": "false",
     "remove_items_when_actor_collides": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
@@ -83,7 +83,7 @@
           <title name="DIR">8</title>
           <title name="DISTANCE">200</title>
         </block>
-        <block type="studio_playSound">
+        <block type="studio_playSound" id="7">
           <title name="SOUND">goal1</title>
         </block>
       </xml>

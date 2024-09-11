@@ -1,20 +1,22 @@
+import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
+import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AilabView from './AilabView';
 import {Provider} from 'react-redux';
-import {getStore} from '../redux';
-import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
-import {TestResults} from '@cdo/apps/constants';
-import ailabMsg from './locale';
-import mlPlaygroundMsg from './mlPlayground_locale';
-import $ from 'jquery';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
+import {TestResults} from '@cdo/apps/constants';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+
+import {getStore} from '../redux';
 import {
   setDynamicInstructionsDefaults,
   setDynamicInstructionsKey,
   setDynamicInstructionsOverlayDismissCallback,
 } from '../redux/instructions';
+
+import AilabView from './AilabView';
+import ailabMsg from './locale';
+import mlPlaygroundMsg from './mlPlayground_locale';
 
 /**
  * This is used to set the viewport width in portrait mode, and will become

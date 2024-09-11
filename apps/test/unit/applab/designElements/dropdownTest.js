@@ -1,5 +1,6 @@
-import {expect} from '../../../util/reconfiguredChai';
 import library from '@cdo/apps/applab/designElements/library';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const {elements, ElementType} = library;
 const dropdown = elements[ElementType.DROPDOWN];

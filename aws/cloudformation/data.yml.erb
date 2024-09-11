@@ -15,15 +15,20 @@ Description: Data layer including RedShift cluster configuration and synchroniza
 Parameters:
   RDSIdentifier:
     Type: String
-  # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE permissions.
+  # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE
+  # permissions, and must have SELECT permissions on all tables and must have
+  # permissions to connect to the Production Reporting RDS Proxy.
   # Ref: http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.Security
   RDSUsername:
     Type: String
   RDSPassword:
     Type: String
     NoEcho: true
+  # Typically set to the reader endpoint of the production Aurora MySQL cluster because exports from the production
+  # Reporting RDS Proxy are often interrupted with database connection errors.
   RDSHost:
     Type: String
+    Description: Production MySQL database servername to use for exporting data to Redshift.
   # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
   RDSClusterEndpointRootDomain:
     Type: String
@@ -32,11 +37,17 @@ Parameters:
   RedshiftDatabase:
     Type: String
     Default: dashboard
-  RedshiftUsername:
+  RedshiftAdminUsername:
     Type: String
-    Default: dev
-  RedshiftPassword:
+  RedshiftAdminPassword:
     Type: String
+    NoEcho: true
+  RedshiftEtlClientUsername:
+    Type: String
+    Description: Redshift SQL user to execute Extract Transform Load (ETL) processes.
+  RedshiftEtlClientPassword:
+    Type: String
+    Description: Redshift SQL user to execute Extract Transform Load (ETL) processes.
     NoEcho: true
   RDSBackupAccount:
     Type: String
@@ -57,8 +68,8 @@ Resources:
       DBName: {Ref: RedshiftDatabase}
       Encrypted: true
       KmsKeyId: alias/aws/redshift
-      MasterUsername: {Ref: RedshiftUsername}
-      MasterUserPassword: {Ref: RedshiftPassword}
+      MasterUsername: {Ref: RedshiftAdminUsername}
+      MasterUserPassword: {Ref: RedshiftAdminPassword}
       NodeType: dc1.large
       # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
       # to start at least 1 hour before the export begins (it typically takes 15 minutes).
@@ -97,29 +108,30 @@ Resources:
             Resource:
               - 'arn:aws:s3:::cdo-data-sharing-internal/*'
               - 'arn:aws:s3:::cdo-data-sharing-internal'
-  RDSEndpoint:
+  MySQLDatabaseSourceEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
-      EndpointIdentifier: !Sub "RDS-${AWS::StackName}"
+      EndpointIdentifier: !Sub "MySQL-${AWS::StackName}"
       EndpointType: source
-      EngineName: mysql
+      EngineName: aurora
       ServerName: !Ref RDSHost
       Port: 3306
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
-      ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
-  AuroraCloneEndpoint:
-    Type: AWS::DMS::Endpoint
-    Properties:
-      EndpointIdentifier: !Sub "AuroraCloneEndpoint-${AWS::StackName}"
-      EndpointType: source
-      EngineName: aurora
-      # At the time this template is rendered the Redshift Import Clone may not exist, so we can't use the RDS describe
-      # endpoints API to get this server name.
-      ServerName: !Sub "<%= RedshiftImport::CLONE_CLUSTER_ID %>.${RDSClusterEndpointRootDomain}"
-      Port: 3306
-      Username: !Ref RDSUsername
-      Password: !Ref RDSPassword
+      MySqlSettings:
+        # Initialize MySQL client to execute SELECT statements with long execution times that fetch large result sets
+        # without negatively impacting transaction isolation on the cluster and increase several client connection
+        # timeouts to ensure that pauses during the export don't result in prematurely terminated connections.
+        # The first three settings are the same as what the Reporting RDS Proxy uses:
+        # https://github.com/code-dot-org/code-dot-org/blob/5ffbfc6909a6d1b4e97497db247aeb5f1eba0847/aws/cloudformation/components/database.yml.erb#L265
+        AfterConnectScript:  >-
+          SET SESSION aurora_read_replica_read_committed=ON;
+          SET SESSION transaction_isolation="READ-COMMITTED";
+          SET SESSION max_execution_time = 0;
+          SET SESSION net_read_timeout=300;
+          SET SESSION net_write_timeout=300;
+          SET SESSION wait_timeout = 300;
+          SET SESSION interactive_timeout = 300;
       ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
   RedshiftEndpoint:
     Type: AWS::DMS::Endpoint
@@ -129,8 +141,8 @@ Resources:
       EngineName: redshift
       ServerName: !GetAtt Tableau.Endpoint.Address
       Port: !GetAtt Tableau.Endpoint.Port
-      Username: !Ref RedshiftUsername
-      Password: !Ref RedshiftPassword
+      Username: !Ref RedshiftEtlClientUsername
+      Password: !Ref RedshiftEtlClientPassword
       DatabaseName: !Ref RedshiftDatabase
       # Extra Connection Attributes:
       # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html#CHAP_Introduction.ConnectionAttributes.Redshift
@@ -156,8 +168,8 @@ Resources:
     Properties:
       MigrationType: full-load
       ReplicationInstanceArn: !Ref DMSReplicationInstance
-      ReplicationTaskIdentifier: <%= task_name %>
-      SourceEndpointArn: !Ref AuroraCloneEndpoint
+      ReplicationTaskIdentifier: task-<%= task_name %>
+      SourceEndpointArn: !Ref MySQLDatabaseSourceEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
         <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>

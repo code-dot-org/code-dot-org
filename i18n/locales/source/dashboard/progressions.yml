@@ -20,6 +20,7 @@ en:
       Add Sprites: Add Sprites
       Add Style: Add Style
       Add Style to Your Page: Add Style to Your Page
+      Add Style to Your User's Page: Add Style to Your User's Page
       Add Text: Add Text
       Add a Welcome Screen: Add a Welcome Screen
       Adding Images: Adding Images
@@ -57,6 +58,7 @@ en:
       Artist Project: Artist Project
       'Artist: Variables': 'Artist: Variables'
       Assessment: Assessment
+      Assessment Level: Assessment Level
       Attribution: Attribution
       Back and Forth: Back and Forth
       Balance an Ecosystem: Balance an Ecosystem
@@ -65,10 +67,12 @@ en:
       Be a Super Digital Citizen: Be a Super Digital Citizen
       Begin planning your project: Begin planning your project
       Begin planning your project_2018: Begin planning your project_2018
+      Binary Bracelets - Student Resources: Binary Bracelets - Student Resources
       Binary Bracelets - Unplugged Activity: Binary Bracelets - Unplugged Activity
       Binary Number Widget: Binary Number Widget
       Binary Numbers: Binary Numbers
       Binary and Data: Binary and Data
+      Blank Space Stories - Student Resources: Blank Space Stories - Student Resources
       Board Events: Board Events
       Board Input and Output: Board Input and Output
       Book Recommender App: Book Recommender App
@@ -84,6 +88,7 @@ en:
       Bunny Jumper: Bunny Jumper
       Button Circuits: Button Circuits
       Buttons and Switch: Buttons and Switch
+      COCO Dataset: COCO Dataset
       CS Discoveries Post-Course Survey: CS Discoveries Post-Course Survey
       CS Discoveries Post-course Survey: CS Discoveries Post-course Survey
       CSD U3 Interactive Card Exemplar: CSD U3 Interactive Card Exemplar
@@ -95,6 +100,9 @@ en:
       Cake Defender: Cake Defender
       Cake Survey: Cake Survey
       Captioned Scene Example: Captioned Scene Example
+      'Career Explorations: The Sports Industry': 'Career Explorations: The Sports Industry'
+      'Career Spotlight: Creative Technologist': 'Career Spotlight: Creative Technologist'
+      'Career Spotlight: Healthcare': 'Career Spotlight: Healthcare'
       Challenge: Challenge
       Challenge Levels: Challenge Levels
       Challenge/Practice: Challenge/Practice
@@ -139,7 +147,9 @@ en:
       Color LEDs: Color LEDs
       Combining Projects: Combining Projects
       Combining Representations: Combining Representations
+      'Conditionals with Cards - Student Resources ': 'Conditionals with Cards - Student Resources '
       Conditionals with Cards - Unplugged Activity: Conditionals with Cards - Unplugged Activity
+      Conditionals with Cards - Video: Conditionals with Cards - Video
       'Conditionals: If Statements': 'Conditionals: If Statements'
       'Conditionals: If and If/Else Statements': 'Conditionals: If and If/Else Statements'
       Control Your Player: Control Your Player
@@ -187,7 +197,11 @@ en:
       Design an AI App - App Lab: Design an AI App - App Lab
       Designing Screens with Code: Designing Screens with Code
       Designing for Accessibility: Designing for Accessibility
+      Designing for Accessibility - Student Discussion: Designing for Accessibility - Student Discussion
+      Digital Sharing - Discussion Questions: Digital Sharing - Discussion Questions
       Digital Sharing - Unplugged Activity: Digital Sharing - Unplugged Activity
+      Digital Sharing - Video: Digital Sharing - Video
+      Div & Flex Exploration: Div & Flex Exploration
       Dogger Example: Dogger Example
       Draw Your Background: Draw Your Background
       Draw a Background: Draw a Background
@@ -199,9 +213,11 @@ en:
       Editing Images: Editing Images
       Emotion Machine Example: Emotion Machine Example
       End of Course Projects: End of Course Projects
+      End-Of-Unit Assessment: End-Of-Unit Assessment
       End-Of-Unit Survey: End-Of-Unit Survey
       End-of-Unit Survey: End-of-Unit Survey
       Escape Room Example: Escape Room Example
+      Ethics Exploration: Ethics Exploration
       Event Types: Event Types
       Events: Events
       Events and Linking Screens: Events and Linking Screens
@@ -218,6 +234,8 @@ en:
       Expanding Your Website: Expanding Your Website
       Experiment with Web Lab: Experiment with Web Lab
       Exploration: Exploration
+      Exploration Level: Exploration Level
+      Exploration level: Exploration level
       'Exploration: Adding Style': 'Exploration: Adding Style'
       'Exploration: Clicker Game': 'Exploration: Clicker Game'
       'Exploration: For Loops': 'Exploration: For Loops'
@@ -260,19 +278,28 @@ en:
       Free Play - Landmarks: Free Play - Landmarks
       'Free Play: Make a Scene': 'Free Play: Make a Scene'
       'Free Play: Make an Interactive Scene': 'Free Play: Make an Interactive Scene'
+      From Data to Visualization: From Data to Visualization
       Fruit and Veggie Explorer: Fruit and Veggie Explorer
       Functions: Functions
       Functions Review: Functions Review
       Functions with Parameters: Functions with Parameters
+      Garden Image Files: Garden Image Files
       Geometric Sun: Geometric Sun
       Get In Formation: Get In Formation
       Getters and Setters: Getters and Setters
+      Getting Loopy - Student Handout: Getting Loopy - Student Handout
       Getting Properties: Getting Properties
+      Graph Paper Programming - Student Resources: Graph Paper Programming - Student Resources
       Graph Paper Programming - Unplugged Activity: Graph Paper Programming - Unplugged Activity
+      Graph Paper Programming - Video: Graph Paper Programming - Video
       Green Glass Door: Green Glass Door
       Guess The Number: Guess The Number
       HTML Tags: HTML Tags
+      Happy Loops - Student Resources: Happy Loops - Student Resources
+      Happy Loops - Unplugged Activity: Happy Loops - Unplugged Activity
+      'Happy Maps - Student Resources ': 'Happy Maps - Student Resources '
       Hardware and Software: Hardware and Software
+      Hardware and Software Skits - Student Reminder: Hardware and Software Skits - Student Reminder
       Headings: Headings
       Headings in HTML: Headings in HTML
       Hello World: Hello World
@@ -321,6 +348,7 @@ en:
       Investigate: Investigate
       Isaac's Survey Data: Isaac's Survey Data
       Iteration and Parameters: Iteration and Parameters
+      JuiceMind Assessment: JuiceMind Assessment
       Keep On Dancing!: Keep On Dancing!
       Keeping Data Secret: Keeping Data Secret
       Key Press & At Measure Events: Key Press & At Measure Events
@@ -357,8 +385,12 @@ en:
       Making an Interactive Card: Making an Interactive Card
       'Maze Intro: Programming with Blocks': 'Maze Intro: Programming with Blocks'
       Measures: Measures
+      MediaPipe Image Classification: MediaPipe Image Classification
+      MediaPipe Object Detection: MediaPipe Object Detection
+      MediaPipe Object Detection and Image Files: MediaPipe Object Detection and Image Files
       Medical Dataset Model Cards: Medical Dataset Model Cards
       Medical Priority App: Medical Priority App
+      Mid-Module Survey: Mid-Module Survey
       'Minecraft: Hero''s Journey': 'Minecraft: Hero''s Journey'
       'Mini-Project: About Me': 'Mini-Project: About Me'
       'Mini-Project: Alien Dance Moves': 'Mini-Project: Alien Dance Moves'
@@ -389,12 +421,15 @@ en:
       More Parameters: More Parameters
       Motorcycle: Motorcycle
       Move It Move it Video  - Unplugged Activity: Move It Move it Video  - Unplugged Activity
+      Move It, Move It - Student Resources: Move It, Move It - Student Resources
       Movement with the Counter Pattern: Movement with the Counter Pattern
       Multi-Screen Apps: Multi-Screen Apps
       Multiframe Animations: Multiframe Animations
       Musical Arrays: Musical Arrays
+      My Loopy Robotic Friend - Student Resources: My Loopy Robotic Friend - Student Resources
       My Loopy Robotic Friends - Unplugged Activity: My Loopy Robotic Friends - Unplugged Activity
       My Online Neighborhood: My Online Neighborhood
+      My Robotic Friend - Student Resources: My Robotic Friend - Student Resources
       My Robotic Friends - Unplugged Activity: My Robotic Friends - Unplugged Activity
       My Time Capsule: My Time Capsule
       Naming Variables: Naming Variables
@@ -411,6 +446,9 @@ en:
       'Overview: onEvent': 'Overview: onEvent'
       'Overview: setPosition': 'Overview: setPosition'
       Pair Programming: Pair Programming
+      Pattern Block Data - Resource Reminder: Pattern Block Data - Resource Reminder
+      Pattern Block Data - Unplugged Activity: Pattern Block Data - Unplugged Activity
+      Personal Career Exploration: Personal Career Exploration
       Pet Recommender: Pet Recommender
       Physical Design Prototypes: Physical Design Prototypes
       Picturing Data: Picturing Data
@@ -436,7 +474,11 @@ en:
       Plotting Shapes in Game Lab: Plotting Shapes in Game Lab
       Polling Events: Polling Events
       Post-Course Survey Instructions: Post-Course Survey Instructions
+      Post-Module Survey: Post-Module Survey
       Practice: Practice
+      Practice Levels: Practice Levels
+      Pre-Assessment: Pre-Assessment
+      Pre-Module Survey: Pre-Module Survey
       Predict: Predict
       Predict - Introduction to Game Lab: Predict - Introduction to Game Lab
       Prediction: Prediction
@@ -453,8 +495,10 @@ en:
       Project Guide: Project Guide
       Project Work: Project Work
       Properties: Properties
+      Prototype Components: Prototype Components
       Prototype an Innovation: Prototype an Innovation
       Publishing Your Website: Publishing Your Website
+      QR Code Exploration: QR Code Exploration
       Quarter Notes: Quarter Notes
       Quick Check: Quick Check
       RGB Exploration: RGB Exploration
@@ -531,6 +575,7 @@ en:
       Simple Circuits: Simple Circuits
       Skill Building: Skill Building
       Skill Building - Map Setup: Skill Building - Map Setup
+      Skill Building Levels: Skill Building Levels
       Skill-Building: Skill-Building
       Sliders: Sliders
       Smart Bike - Blinkers: Smart Bike - Blinkers
@@ -538,7 +583,10 @@ en:
       Solution 1 - Fishing Zone: Solution 1 - Fishing Zone
       Solution 2 - Fishing Season: Solution 2 - Fishing Season
       Solution 3 - Fishing Limits: Solution 3 - Fishing Limits
+      Solving Healthcare Issues with Computer Vision: Solving Healthcare Issues with Computer Vision
       Songwriting - Functions Unplugged Activity: Songwriting - Functions Unplugged Activity
+      'Songwriting - Functions Video ': 'Songwriting - Functions Video '
+      Songwriting - Student Resources: Songwriting - Student Resources
       Speed it Up, Slow it Down: Speed it Up, Slow it Down
       Sprite Interactions: Sprite Interactions
       Sprite Interactions Review: Sprite Interactions Review
@@ -556,13 +604,16 @@ en:
       Styling your Website: Styling your Website
       Teach A.I. a new word: Teach A.I. a new word
       Teach AI a New Word: Teach AI a New Word
+      Teachable Machine: Teachable Machine
       'Technique: Frequency Analysis': 'Technique: Frequency Analysis'
       Terminology Recap: Terminology Recap
       Text Compression: Text Compression
       The Accelerometer: The Accelerometer
       The Animation Tab: The Animation Tab
       The Artist in Code Studio: The Artist in Code Studio
+      The Big Event - Student Resources: The Big Event - Student Resources
       The Big Event - Unplugged Activity: The Big Event - Unplugged Activity
+      'The Big Event Jr. - Student Resources ': 'The Big Event Jr. - Student Resources '
       The Body Element: The Body Element
       The Buzzer: The Buzzer
       The Collector: The Collector
@@ -570,9 +621,12 @@ en:
       The Draw Loop: The Draw Loop
       The Food Chain: The Food Chain
       The Harvester: The Harvester
+      The Internet - Student Resources: The Internet - Student Resources
       The Internet - Unplugged Activity: The Internet - Unplugged Activity
       The Power of Words - Unplugged Activity: The Power of Words - Unplugged Activity
+      The Right App - Student Resource: The Right App - Student Resource
       The Right App - Unplugged Activity: The Right App - Unplugged Activity
+      The Search for Pixel: The Search for Pixel
       Title, Author, Background: Title, Author, Background
       Top Websites: Top Websites
       Tour of Design Mode: Tour of Design Mode
@@ -584,6 +638,7 @@ en:
       Ultimate Shoe Recommender: Ultimate Shoe Recommender
       Unit 5 Lesson 1 Overview: Unit 5 Lesson 1 Overview
       Unplugged Activity: Unplugged Activity
+      Unplugged Activity - Hardware and Software Skits: Unplugged Activity - Hardware and Software Skits
       Updating Your Prototype: Updating Your Prototype
       Upload Your Images: Upload Your Images
       Use AI: Use AI
@@ -732,6 +787,7 @@ en:
       'Video: What is Machine Learning?': 'Video: What is Machine Learning?'
       'Video: While Loops with the Farmer': 'Video: While Loops with the Farmer'
       'Video: Wrap-up': 'Video: Wrap-up'
+      Visualizing Data: Visualizing Data
       Warm Up: Warm Up
       WeTube Video Recommendations (2.0): WeTube Video Recommendations (2.0)
       WeTube Video Recommendations (Beta): WeTube Video Recommendations (Beta)

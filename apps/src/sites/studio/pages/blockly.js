@@ -11,6 +11,7 @@
 import 'pepjs';
 
 import CDOBlockly from '@code-dot-org/blockly';
+
 import initializeCdoBlocklyWrapper from '@cdo/apps/blockly/cdoBlocklyWrapper';
 import trackBlocklyStrings from '@cdo/apps/util/i18nBlockyStringTracker';
 

@@ -1,7 +1,6 @@
 {
   "key": "csd3-virtual",
   "display_name": "Self Paced Introduction to Game Lab",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
@@ -16,6 +15,5 @@
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/PXn9gKiKKFo/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=PXn9gKiKKFo&wmode=transparent",
   "published_date": "2020-03-01 11:00:00 UTC",
-  "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

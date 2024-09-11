@@ -1,0 +1,35 @@
+name 'CSA U1L10-L5_pilot-2025'
+title 'Check for Understanding'
+
+wrong '`sara.canMove("east");`'
+wrong '`sara.getXLocation();`'
+wrong '`sara.getMyPaint();`'
+wrong '`sara.isOnBucket();`'
+right '`sara.getDirection();`'
+
+markdown <<MARKDOWN
+The following code segment has an error, but the programmer is having trouble finding the error. The programmer wanted the `Painter` object to paint a line to the east, but it keeps going west.
+
+![](https://images.code.org/07f99e54dbd2f5874537629acb331b36-image-1647953914773.png)
+
+```
+1   PainterPlus sara = new PainterPlus();
+2   sara.move();
+3   sara.move();
+4   sara.move();
+5   sara.move();
+6   sara.turnRight();
+7   sara.move();
+8   sara.takeAllPaint();
+9   sara.turnRight();
+10  sara.paintLine("green");
+```
+
+Which of the following would be MOST helpful to print?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Since the error is related to the direction that the `Painter` object is moving, printing the `Painter` object's direction would be most helpful to identify where the issue is occurring.
+MARKDOWN
+
+allow_multiple_attempts true

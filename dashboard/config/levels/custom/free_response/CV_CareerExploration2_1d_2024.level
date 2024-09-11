@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-27T17:16:56.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Career Spotlight: User Experience Designer",
+    "long_instructions": "##What do they do?\r\nUser Experience Designers typically do the following:\r\n\r\n* **Create Augmented Reality and Immersive Experiences**: AR is also enhancing fan experiences. For instance, the NBA AR app allows fans to enjoy games in an immersive 3D environment. Designers must focus on creating intuitive, engaging interfaces that resonate with a diverse fan base.\r\n* **Social Media and Second Screen Experiences**: Platforms like Twitter and Instagram have become integral to sports broadcasting, offering a second screen where fans can interact in real time. Designing these experiences requires an understanding of social dynamics and how fans like to engage with content.\r\n* **E-Sports and Interactive Gaming**: The rise of e-sports has opened new avenues for fan engagement. Platforms like Twitch not only stream games but also enable interaction between fans and players. Designing for these platforms involves creating interfaces that are engaging and enhance the communal experience of gaming.  [Source](https://www.linkedin.com/pulse/next-gen-sports-tech-role-ux-enhancing-athletic-fan-felix-chandran-agalc)\r\n\r\n\r\n##What is the salary?\r\n*The Bureau of Labor Statistics doesn't compile salary data for UX designers specifically, but they are included in the profession of web and digital interface designers.*\r\n\r\nThe median annual wage for web and digital interface designers was $98,540 in May 2023. The median wage is the wage at which half the workers in an occupation earned more than that amount and half earned less. The lowest 10 percent earned less than $48,210, and the highest 10 percent earned more than $176,490.\r\n\r\nThe median annual wage for web developers was $84,960 in May 2023. The lowest 10 percent earned less than $46,850, and the highest 10 percent earned more than $157,280.\r\n\r\n##What is the job outlook?\r\nOverall employment of web developers and digital designers is projected to grow 16 percent from 2022 to 2032, much faster than the average for all occupations.\r\n\r\nAbout 19,000 openings for web developers and digital designers are projected each year, on average, over the decade. Many of those openings are expected to result from the need to replace workers who transfer to different occupations or exit the labor force, such as to retire.\r\n\r\n##Explore further\r\nTimer permitting, click this link to explore the career more in-depth: [More Information about Digital Designers](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#tab-1).\r\n\r\n*As you read about this profession, note any observations and wonderings in the box below:*",
+    "thumbnail_url": "https://images.code.org/f14f47052e9acdc719f9c4c9b39d8945-2_interaction.png",
+    "height": "150",
+    "placeholder": "What do you notice about this profession? What do you wonder?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "User Experience Designer",
+    "bubble_choice_description": "User Experience Designers specialize in the integration of emerging technologies in sports to  revolutionize the athlete's experience and fan engagement."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-27T17:16:56.073+00:00\",\"changed\":[\"cloned from \\\"CV_CareerExploration2_1c_2024\\\"\"],\"cloned_from\":\"CV_CareerExploration2_1c_2024\"},{\"changed_at\":\"2024-06-27 17:28:59 +0000\",\"changed\":[\"title\",\"long_instructions\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-27 17:29:24 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

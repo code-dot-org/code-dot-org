@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
 import {studentLevelProgressType} from '../progress/progressTypes';
@@ -15,34 +14,13 @@ import LevelDataCell, {getStudentRowHeaderId} from './LevelDataCell';
 
 import styles from './progress-table-v2.module.scss';
 
-const getFullName = student =>
-  student.familyName ? `${student.name} ${student.familyName}` : student.name;
-
 function ExpandedProgressDataColumn({
   lesson,
   levelProgressByStudent,
   sortedStudents,
-  removeExpandedLesson,
-  sectionId,
+  expandedMetadataStudentIds,
+  expandedChoiceLevelIds,
 }) {
-  const [expandedChoiceLevels, setExpandedChoiceLevels] = React.useState([]);
-
-  const toggleExpandedChoiceLevel = level => {
-    if (expandedChoiceLevels.includes(level.id)) {
-      setExpandedChoiceLevels(expandedChoiceLevels.filter(l => l !== level.id));
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_CHOICE_LEVEL, {
-        sectionId: sectionId,
-        levelId: level.id,
-      });
-    } else if (level?.sublevels?.length > 0) {
-      setExpandedChoiceLevels([...expandedChoiceLevels, level.id]);
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_CHOICE_LEVEL, {
-        sectionId: sectionId,
-        levelId: level.id,
-      });
-    }
-  };
-
   const getSingleLevelColumn = React.useCallback(
     (level, studentId, propOverrides = {}) => {
       return (
@@ -52,11 +30,12 @@ function ExpandedProgressDataColumn({
           studentLevelProgress={levelProgressByStudent[studentId][level.id]}
           key={studentId + '.' + lesson.id + '.' + level.id}
           lessonId={lesson.id}
+          metadataExpanded={expandedMetadataStudentIds.includes(studentId)}
           {...propOverrides}
         />
       );
     },
-    [levelProgressByStudent, lesson]
+    [levelProgressByStudent, lesson, expandedMetadataStudentIds]
   );
 
   const getExpandedChoiceLevel = React.useCallback(
@@ -93,7 +72,7 @@ function ExpandedProgressDataColumn({
             {lesson.levels.flatMap(level => {
               if (
                 level.sublevels?.length > 0 &&
-                expandedChoiceLevels.includes(level.id)
+                expandedChoiceLevelIds.includes(level.id)
               ) {
                 return getExpandedChoiceLevel(level, student.id);
               }
@@ -106,7 +85,7 @@ function ExpandedProgressDataColumn({
     [
       lesson,
       sortedStudents,
-      expandedChoiceLevels,
+      expandedChoiceLevelIds,
       getSingleLevelColumn,
       getExpandedChoiceLevel,
     ]
@@ -117,12 +96,7 @@ function ExpandedProgressDataColumn({
       <caption hidden={true}>
         {i18n.progressForLesson({lessonName: lesson.title})}
       </caption>
-      <ExpandedProgressColumnHeader
-        lesson={lesson}
-        removeExpandedLesson={removeExpandedLesson}
-        expandedChoiceLevels={expandedChoiceLevels}
-        toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
-      />
+      <ExpandedProgressColumnHeader lesson={lesson} />
       {progress}
     </table>
   );
@@ -134,8 +108,8 @@ ExpandedProgressDataColumn.propTypes = {
     PropTypes.objectOf(studentLevelProgressType)
   ).isRequired,
   lesson: PropTypes.object.isRequired,
-  removeExpandedLesson: PropTypes.func.isRequired,
-  sectionId: PropTypes.number,
+  expandedMetadataStudentIds: PropTypes.array,
+  expandedChoiceLevelIds: PropTypes.array.isRequired,
 };
 
 export const UnconnectedExpandedProgressDataColumn = ExpandedProgressDataColumn;
@@ -145,4 +119,6 @@ export default connect(state => ({
     state.sectionProgress.studentLevelProgressByUnit[
       state.unitSelection.scriptId
     ],
+  expandedMetadataStudentIds: state.sectionProgress.expandedMetadataStudentIds,
+  expandedChoiceLevelIds: state.sectionProgress.expandedChoiceLevelIds,
 }))(ExpandedProgressDataColumn);

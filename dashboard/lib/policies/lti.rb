@@ -21,6 +21,7 @@ class Policies::Lti
   NAMESPACE = 'lti_v1_controller'.freeze
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'.freeze
   JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
+  DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course', CDO.default_scheme).freeze
 
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
   TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
@@ -90,11 +91,11 @@ class Policies::Lti
     jwks_uri: CDO.studio_url('/oauth/jwks', CDO.default_scheme),
     token_endpoint_auth_method: "private_key_jwt",
     contacts: ["platform@code.org"],
-    scope: "https://purl.imsglobal.org/spec/lti-ags/scope/score https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly",
+    scope: ALL_SCOPES.join(' '),
     "https://purl.imsglobal.org/spec/lti-tool-configuration" => {
-      domain: "studio.code.org",
-      description: "Code.org",
-      target_link_uri: "https://studio.code.org/lti/v1/sync_course",
+      domain: CDO.dashboard_site_host,
+      description: "Code.org LTI Integration",
+      target_link_uri: DEFAULT_TARGET_LINK_URI,
       custom_parameters: {
         email: "$Person.email.primary",
         full_name: "$Person.name.full",
@@ -109,37 +110,14 @@ class Policies::Lti
         {
           type: "LtiResourceLinkRequest",
           label: "Launch Code.org",
-          placements: ["course_navigation"],
-        },
-        {
-          type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
-          placements: ["account_navigation"],
-        },
-        {
-          type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
           placements: ["link_selection"],
+          icon_uri: CDO.studio_url('/images/logo.svg', CDO.default_scheme),
         },
         {
           type: "LtiResourceLinkRequest",
           label: "Launch Code.org",
           placements: ["assignment_selection"],
-        },
-        {
-          type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
-          placements: ["assignment_menu"],
-        },
-        {
-          type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
-          placements: ["assignment_view"],
-        },
-        {
-          type: "LtiResourceLinkRequest",
-          label: "Launch Code.org",
-          placements: ["submission_type_selection"],
+          icon_uri: CDO.studio_url('/images/logo.svg', CDO.default_scheme),
         }
       ]
     }
@@ -163,6 +141,10 @@ class Policies::Lti
     !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
   end
 
+  def self.only_lti_auth?(user)
+    user.authentication_options&.length == 1 && user.authentication_options.first.lti?
+  end
+
   def self.issuer(user)
     auth_options = user.authentication_options.find(&:lti?)
     if auth_options
@@ -184,6 +166,11 @@ class Policies::Lti
     LMS_PLATFORMS.values.find {|platform| platform[:issuer] == issuer}
   end
 
+  def self.find_platform_name_by_issuer(issuer)
+    platform_name, _ = LMS_PLATFORMS.find {|_, platform| platform[:issuer] == issuer}
+    platform_name.to_s
+  end
+
   # Returns the email provided by the LMS when creating the User through LTI
   # provisioning.
   def self.lti_provided_email(user)
@@ -201,31 +188,14 @@ class Policies::Lti
     user.teacher? && user.lti_roster_sync_enabled
   end
 
-  def self.early_access?
-    DCDO.get('lti_early_access_limit', false).present?
-  end
-
-  def self.early_access_closed?
-    return unless early_access?
-
-    lti_early_access_limit = DCDO.get('lti_early_access_limit', false)
-    return false unless lti_early_access_limit.is_a?(Integer)
-
-    LtiIntegration.count >= lti_early_access_limit
-  end
-
-  def self.early_access_banner_available?(user)
-    user.teacher? && early_access? && lti?(user)
-  end
-
   # Returns if the issuer accepts a Resource Link level membership service when retrieving membership for a context.
   def self.issuer_accepts_resource_link?(issuer)
     ['Canvas'].include?(issuer_name(issuer))
   end
 
-  # Force Schoology through iframe mitigation flow
+  # Force Schoology and Canvas through iframe mitigation flow
   def self.force_iframe_launch?(issuer)
-    ['Schoology'].include?(issuer_name(issuer))
+    %w[Schoology Canvas].include?(issuer_name(issuer))
   end
 
   def self.feedback_available?(user)
@@ -235,5 +205,9 @@ class Policies::Lti
   # Check if a partial registration is in progress for an LTI user.
   def self.lti_registration_in_progress?(session)
     PartialRegistration.in_progress?(session) && PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
+  end
+
+  def self.account_linking?(session, user)
+    session[:lms_landing].present? && only_lti_auth?(user) && !user.lms_landing_opted_out
   end
 end

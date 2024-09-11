@@ -1,8 +1,14 @@
+import {getBlockMode} from '../appConfig';
+import {BlockMode} from '../constants';
+import musicI18n from '../locale';
+
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DOCS_BASE_URL,
   FIELD_CHORD_TYPE,
   FIELD_PATTERN_TYPE,
+  FIELD_PATTERN_AI_TYPE,
+  FIELD_TUNE_TYPE,
   FIELD_SOUNDS_TYPE,
   PLAY_MULTI_MUTATOR,
   FIELD_EFFECTS_EXTENSION,
@@ -14,9 +20,10 @@ import {
 } from './extensions';
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
+import FieldPatternAi from './FieldPatternAi';
 import FieldSounds from './FieldSounds';
+import FieldTune from './FieldTune';
 import {MUSIC_BLOCKS} from './musicBlocks';
-import musicI18n from '../locale';
 import {BlockConfig} from './types';
 
 /**
@@ -47,15 +54,21 @@ export function setUpBlocklyForMusicLab() {
     Blockly.JavaScript[blockType] = blockConfig.generator;
   }
 
-  Blockly.cdoUtils.registerCustomProcedureBlocks();
+  if (getBlockMode() !== BlockMode.ADVANCED) {
+    // Override default function block implementation.
+    Blockly.cdoUtils.registerCustomProcedureBlocks();
+
+    // Remove two default entries in the toolbox's Functions category that
+    // we don't want.
+    delete Blockly.Blocks.procedures_defreturn;
+    delete Blockly.Blocks.procedures_ifreturn;
+  }
+
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
+  Blockly.fieldRegistry.register(FIELD_PATTERN_AI_TYPE, FieldPatternAi);
   Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
-
-  // Remove two default entries in the toolbox's Functions category that
-  // we don't want.
-  delete Blockly.Blocks.procedures_defreturn;
-  delete Blockly.Blocks.procedures_ifreturn;
+  Blockly.fieldRegistry.register(FIELD_TUNE_TYPE, FieldTune);
 
   // Rename the new function placeholder text for Music Lab specifically.
   Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =

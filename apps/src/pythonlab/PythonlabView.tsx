@@ -1,14 +1,23 @@
 // Pythonlab view
-import React, {useState} from 'react';
-import moduleStyles from './pythonlab-view.module.scss';
-import {ConfigType} from '@codebridge/types';
-import {LanguageSupport} from '@codemirror/language';
-import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
-import {ProjectSources} from '@cdo/apps/lab2/types';
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {useSource} from '@codebridge/hooks/useSource';
-import {handleRunClick} from './pyodideRunner';
+import {ConfigType} from '@codebridge/types';
+import {python} from '@codemirror/lang-python';
+import {LanguageSupport} from '@codemirror/language';
+import React, {useContext, useEffect, useState} from 'react';
+
+import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import PythonValidationTracker from './progress/PythonValidationTracker';
+import PythonValidator from './progress/PythonValidator';
+import {handleRunClick, stopPythonCode} from './pyodideRunner';
+
+import moduleStyles from './pythonlab-view.module.scss';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -22,21 +31,32 @@ const defaultProject: ProjectSources = {
         name: MAIN_PYTHON_FILE,
         language: 'py',
         contents: 'print("Hello world!")',
-        folderId: '1',
+        folderId: '0',
         active: true,
         open: true,
       },
     },
-    folders: {
-      '1': {
-        id: '1',
-        name: 'src',
-        parentId: '0',
-      },
-    },
+    folders: {},
   },
 };
 
+const labeledGridLayouts = {
+  horizontal: {
+    gridLayoutRows: '2fr 1fr ',
+    gridLayoutColumns: '300px minmax(0, 1fr)',
+    gridLayout: `
+  "info-panel workspace"
+  "file-browser console"
+  `,
+  },
+  vertical: {
+    gridLayoutRows: '1fr 1fr',
+    gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
+    gridLayout: `
+    "info-panel workspace console"
+    "file-browser workspace console"`,
+  },
+};
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
   languageMapping: pythonlabLangMapping,
@@ -67,18 +87,48 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  gridLayoutRows: '1fr 1fr 1fr',
-  gridLayoutColumns: '300px minmax(0, 1fr)',
-  gridLayout: `
-    "info-panel workspace"
-    "file-browser workspace"
-    "file-browser console"
-  `,
+
+  labeledGridLayouts,
+  activeGridLayout: 'horizontal',
 };
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource, resetToStartSource} = useSource(defaultProject);
+  const {source, setSource, startSource, projectVersion} =
+    useSource(defaultProject);
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
+  );
+  const predictResponse = useAppSelector(state => state.predictLevel.response);
+  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
+  const progressManager = useContext(ProgressManagerContext);
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
+  useEffect(() => {
+    if (progressManager && appName === 'pythonlab') {
+      progressManager.setValidator(
+        new PythonValidator(PythonValidationTracker.getInstance())
+      );
+    }
+  }, [progressManager, appName]);
+
+  const onRun = async (
+    runTests: boolean,
+    dispatch: AppDispatch,
+    source: MultiFileSource | undefined
+  ) => {
+    await handleRunClick(runTests, dispatch, source, progressManager);
+    // Only send a predict level report if this is a predict level and the predict
+    // answer was not locked.
+    if (isPredictLevel && !predictAnswerLocked) {
+      dispatch(
+        sendPredictLevelReport({
+          appType: 'pythonlab',
+          predictResponse: predictResponse,
+        })
+      );
+    }
+  };
 
   return (
     <div className={moduleStyles.pythonlab}>
@@ -88,8 +138,10 @@ const PythonlabView: React.FunctionComponent = () => {
           config={config}
           setProject={setSource}
           setConfig={setConfig}
-          resetProject={resetToStartSource}
-          onRun={handleRunClick}
+          startSource={startSource}
+          onRun={onRun}
+          onStop={stopPythonCode}
+          projectVersion={projectVersion}
         />
       )}
     </div>

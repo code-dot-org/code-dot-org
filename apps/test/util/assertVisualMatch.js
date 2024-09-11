@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import pixelmatch from 'pixelmatch';
 
 import {toImageData} from '@cdo/apps/imageUtils';

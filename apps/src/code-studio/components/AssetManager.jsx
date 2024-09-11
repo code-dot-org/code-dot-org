@@ -1,19 +1,21 @@
 /* eslint-disable react/no-is-mounted */
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import {STARTER_ASSET_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import {
   assets as assetsApi,
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
-
-import AssetRow from './AssetRow';
-import assetListStore from '../assets/assetListStore';
-import AudioRecorder from './AudioRecorder';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import AddAssetButtonRow from './AddAssetButtonRow';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
-import {STARTER_ASSET_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+
+import assetListStore from '../assets/assetListStore';
+
+import AddAssetButtonRow from './AddAssetButtonRow';
+import AssetRow from './AssetRow';
+import AudioRecorder from './AudioRecorder';
 import {RecordingFileType} from './recorders';
 
 export const AudioErrorType = {

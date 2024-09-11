@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';
-import Button from '../Button';
 import ContentContainer from '../ContentContainer';
 
 import CourseCard from './CourseCard';
@@ -58,6 +58,7 @@ export default class SeeMoreCourses extends Component {
               icon="caret-down"
               text={i18n.viewMore()}
               style={styles.button}
+              className="ui-test-view-more-courses"
             />
           </div>
         )}

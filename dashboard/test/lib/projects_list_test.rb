@@ -28,6 +28,16 @@ class ProjectsListTest < ActionController::TestCase
       hidden: true
     }.to_json
     @hidden_project = {id: 33, value: hidden_project_value}
+
+    # lab2 projects rely on the projectType field to determine type.
+    lab2_project_value = {
+      name: 'Lab2 Project',
+      createdAt: '2024-01-24T16:41:08.000-08:00',
+      updatedAt: '2024-01-25T17:48:12.358-08:00',
+      projectType: 'pythonlab',
+      hidden: false,
+    }.to_json
+    @lab2_project = {id: 44, value: lab2_project_value}
   end
 
   test 'get_project_row_data correctly parses student and project data' do
@@ -38,6 +48,16 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal @student.name, project_row['studentName']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-01-25T17:48:12.358-08:00', project_row['updatedAt']
+  end
+
+  test 'get_project_row_data correctly parses lab2 project data' do
+    project_row = ProjectsList.send(:get_project_row_data, @lab2_project, @channel_id, @student)
+    assert_nil @channel_id
+    assert_nil project_row['channel']
+    assert_equal 'Lab2 Project', project_row['name']
+    assert_equal @student.name, project_row['studentName']
+    assert_equal 'pythonlab', project_row['type']
+    assert_equal '2024-01-25T17:48:12.358-08:00', project_row['updatedAt']
   end
 
   test 'get_project_row_data ignores hidden projects' do
@@ -265,51 +285,6 @@ class ProjectsListTest < ActionController::TestCase
 
     assert_equal JSON.parse(fake_project_value)["name"], returned_project["name"]
     assert_nil returned_project["thumbnailUrl"]
-  end
-
-  test "include_featured combines featured project data and published projects data correctly" do
-    fake_featured_projects = {
-      applab: [
-        {name: "featuredApplab1"},
-        {name: "featuredApplab2"},
-        {name: "featuredApplab3"}
-      ],
-      gamelab: [],
-      playlab: [],
-      artist: [],
-      minecraft: [],
-      events: [],
-      k1: [],
-      spritelab: [],
-      dance: [],
-      poetry: [],
-      library: []
-    }
-    fake_recent_projects = {
-      applab: [
-        {name: "recentApplab1"},
-        {name: "recentApplab2"},
-        {name: "recentApplab3"}
-      ],
-      gamelab: [],
-      playlab: [],
-      artist: [],
-      minecraft: [],
-      events: [],
-      k1: [],
-      spritelab: [],
-      dance: [],
-      poetry: [],
-      library: []
-    }
-    ProjectsList.stubs(:fetch_featured_published_projects).returns(fake_featured_projects)
-    ProjectsList.stubs(:fetch_published_project_types).returns(fake_recent_projects)
-    combined_projects = ProjectsList.send(
-      :include_featured, limit: 10
-    )
-    # Featured projects should be ordered before recent projects
-    assert_equal combined_projects[:applab].first, {name: "featuredApplab1"}
-    assert_equal combined_projects[:applab].last, {name: "recentApplab3"}
   end
 
   test 'fetch_section_libraries filters by library_name' do

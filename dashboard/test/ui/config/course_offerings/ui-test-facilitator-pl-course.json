@@ -1,7 +1,6 @@
 {
   "key": "ui-test-facilitator-pl-course",
   "display_name": "Facilitator PL Course",
-  "category": "pl_other",
   "is_featured": false,
   "assignable": true
 }

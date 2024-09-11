@@ -1,27 +1,38 @@
+import classNames from 'classnames';
 import React, {useCallback, useContext, useEffect} from 'react';
+
+import header from '@cdo/apps/code-studio/header';
+import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
+import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import Instructions from '@cdo/apps/lab2/views/components/Instructions';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import AnalyticsReporter from '../analytics/AnalyticsReporter';
+import AppConfig, {getBaseAssetUrl} from '../appConfig';
+import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
+import musicI18n from '../locale';
+import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
-import moduleStyles from './music-view.module.scss';
 import {
   InstructionsPosition,
   setCurrentPlayheadPosition,
   showCallout,
 } from '../redux/musicRedux';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import musicI18n from '../locale';
-import HeaderButtons from './HeaderButtons';
-import AppConfig, {getBaseAssetUrl} from '../appConfig';
-import classNames from 'classnames';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import Controls from './Controls';
-import Timeline from './Timeline';
-import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import usePlaybackUpdate from './hooks/usePlaybackUpdate';
-import MusicPlayer from '../player/MusicPlayer';
-import useUpdatePlayer from './hooks/useUpdatePlayer';
+
 import AdvancedControls from './AdvancedControls';
-import PackDialog from './PackDialog';
+import Controls from './Controls';
+import HeaderButtons from './HeaderButtons';
+import usePlaybackUpdate from './hooks/usePlaybackUpdate';
+import useUpdateAnalytics from './hooks/useUpdateAnalytics';
+import useUpdatePlayer from './hooks/useUpdatePlayer';
 import MusicPlayView from './MusicPlayView';
+import PackDialog from './PackDialog';
+import Timeline from './Timeline';
+
+import moduleStyles from './music-view.module.scss';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -36,6 +47,8 @@ interface MusicLabViewProps {
   validator: MusicValidator;
   player: MusicPlayer;
   allowPackSelection: boolean;
+  analyticsReporter: AnalyticsReporter;
+  blocklyWorkspace: MusicBlocklyWorkspace;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -51,8 +64,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   validator,
   player,
   allowPackSelection,
+  analyticsReporter,
+  blocklyWorkspace,
 }) => {
   useUpdatePlayer(player);
+  useUpdateAnalytics(analyticsReporter);
   const dispatch = useAppDispatch();
   const showInstructions = useAppSelector(
     state => state.music.showInstructions
@@ -64,16 +80,33 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+  const levelData = useAppSelector(
+    state => state.lab.levelProperties?.levelData
+  );
   const isPlayView = useAppSelector(state => state.lab.isShareView);
 
   const progressManager = useContext(ProgressManagerContext);
 
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   // Pass music validator to Progress Manager
   useEffect(() => {
     if (progressManager && appName === 'music') {
       progressManager.setValidator(validator);
     }
   }, [progressManager, validator, appName]);
+
+  useEffect(() => {
+    if (isStartMode) {
+      header.showLevelBuilderSaveButton(() => {
+        const updatedLevelData = {
+          ...levelData,
+          startSources: blocklyWorkspace.getCode(),
+        };
+        return {level_data: updatedLevelData};
+      });
+    }
+  }, [blocklyWorkspace, isStartMode, levelData]);
 
   // Update loop that runs while playback is in progress.
   const doPlaybackUpdate = useCallback(() => {
@@ -219,6 +252,16 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               />
             }
           >
+            {isStartMode && (
+              <div
+                id="startSourcesWarningBanner"
+                className={moduleStyles.warningBanner}
+              >
+                {projectTemplateLevel
+                  ? WARNING_BANNER_MESSAGES.TEMPLATE
+                  : WARNING_BANNER_MESSAGES.STANDARD}
+              </div>
+            )}
             <div id={blocklyDivId} />
             {showAdvancedControls && (
               <div className={moduleStyles.advancedControlsContainer}>

@@ -1,7 +1,6 @@
 {
   "key": "vpl-csd",
-  "display_name": "CS Discoveries Virtual Professional Learning 23-24",
-  "category": "pl_virtual",
+  "display_name": "CS Discoveries Virtual Professional Learning 24-25",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
@@ -9,13 +8,12 @@
   "grade_levels": null,
   "header": "virtual_academic_year_workshops_612",
   "image": null,
-  "cs_topic": null,
+  "cs_topic": "app_design",
   "school_subject": null,
   "device_compatibility": null,
   "description": null,
-  "professional_learning_program": null,
+  "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

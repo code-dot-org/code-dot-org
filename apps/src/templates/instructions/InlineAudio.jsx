@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {Voices} from '@cdo/generated-scripts/sharedVoices';
-
-import trackEvent from '../../util/trackEvent';
 
 import {AudioQueueContext} from './AudioQueue';
 
@@ -157,7 +155,6 @@ class InlineAudio extends React.Component {
     audio.addEventListener('error', this.audioEndedListener);
 
     this.setState({audio});
-    trackEvent('InlineAudio', 'getAudioElement', src);
     return audio;
   }
 
@@ -251,9 +248,7 @@ class InlineAudio extends React.Component {
     }
   }
 
-  audioEndedListener = e => {
-    // e is an instance of a MediaError object
-    trackEvent('InlineAudio', 'error', e.target.error.code);
+  audioEndedListener = () => {
     this.setState({
       playing: false,
       error: true,

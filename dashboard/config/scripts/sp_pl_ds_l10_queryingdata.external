@@ -1,0 +1,32 @@
+name 'sp-pl-DS_L10-QueryingData'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Python and Pandas
+
+## Lesson 10 Quarrying your Data 
+
+<img src="https://images.code.org/2df9050dff40b9e5fa362d87339c5ceb-image-1724862949854.png" alt="notnull() chart example" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+
+#### In this lesson, students learn to filter data attributes to exclude entries that contain null values. 
+#### Additionally, they learn how to filter by examining the value of string data within an entry. 
+
+#### Last, they combine many of the previous filtering techniques that they have learned throughout the unit and combine them with the use of multiple **logical operators** in order to create focused and precise subsets of data.
+
+
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+
+
+## Key concepts 
+
+- #### **notnull()** -creates new DataFrame containg the non-null values
+- #### **str.endswith()** - checks if a value ends with a given string
+
+
+## Let's practice!  
+
+MARKDOWN

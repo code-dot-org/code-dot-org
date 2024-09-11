@@ -1,24 +1,27 @@
 /**
  * Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
  */
-import PropTypes from 'prop-types';
-import React from 'react';
-import {connect} from 'react-redux';
 import $ from 'jquery';
 import _ from 'lodash';
-import fontConstants from '@cdo/apps/fontConstants';
-import SessionAttendanceRow from './session_attendance_row';
-import VisibilitySensor from '../components/visibility_sensor';
-import Spinner from '../../components/spinner';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import IdleTimer from 'react-idle-timer';
-import {COURSE_CSF} from '../workshopConstants';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
+import Spinner from '../../../../sharedComponents/Spinner';
+import VisibilitySensor from '../components/visibility_sensor';
 import {
   PermissionPropType,
   WorkshopAdmin,
   ProgramManager,
   Facilitator,
 } from '../permission';
+import {COURSE_CSF} from '../workshopConstants';
+
+import SessionAttendanceRow from './session_attendance_row';
 
 // in milliseconds
 const REFRESH_DELAY = 5000;

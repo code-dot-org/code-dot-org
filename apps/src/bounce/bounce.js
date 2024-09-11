@@ -6,19 +6,27 @@
  */
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Provider = require('react-redux').Provider;
+
+var dom = require('../dom');
 var studioApp = require('../StudioApp').singleton;
+var Hammer = require('../third-party/hammer');
+
+var api = require('./api');
+var BounceVisualizationColumn = require('./BounceVisualizationColumn');
 var bounceMsg = require('./locale');
 var tiles = require('./tiles');
+
+// Disabling import order in order to add require statements first
+// Require statements can change behavior based on the order they are called.
+// This might be safe to remove but needs investigation whether any behavior is changed by order.
+/* eslint-disable import/order */
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var api = require('./api');
-var Provider = require('react-redux').Provider;
 import AppView from '../templates/AppView';
-var BounceVisualizationColumn = require('./BounceVisualizationColumn');
-var dom = require('../dom');
-var Hammer = require('../third-party/hammer');
 import {getStore} from '../redux';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {KeyCodes, TestResults, ResultType} from '../constants';
+
 import {
   showArrowButtons,
   dismissSwipeOverlay,
@@ -28,6 +36,7 @@ var SquareType = tiles.SquareType;
 
 import '../util/svgelement-polyfill';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+/* eslint-enable import/order */
 
 /**
  * Create a namespace for the application.
@@ -127,7 +136,7 @@ var initWallMap = function () {
 /**
  * PIDs of async tasks currently executing.
  */
-import * as timeoutList from '../lib/util/timeoutList';
+import * as timeoutList from '../lib/util/timeoutList'; // eslint-disable-line import/order
 
 // Map each possible shape to a sprite.
 // Input: Binary string representing Centre/North/East/South/West squares.

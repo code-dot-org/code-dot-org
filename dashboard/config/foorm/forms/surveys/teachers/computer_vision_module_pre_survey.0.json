@@ -1,0 +1,214 @@
+{
+  "title": "Computer Vision - Pre Unit Survey for Teachers",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "pre_module_survey_header_panel",
+          "elements": [
+            {
+              "type": "html",
+              "name": "survey_preamble_header_and_text",
+              "html": "<h1>Welcome to Code.org's Computer Vision - Pre-Unit Survey</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better who our teachers are, their motivation to teach Code.org's Computer Vision unit, and their previous experience with this content and tools.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "teaching_background_header",
+          "html": "<h2>Your Background</h1>\n<p><span style='font-size: 12pt;'>We'd like to get to know you and your expectations for teaching this unit. Please share with us a little bit about you and your background.</span></p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "teacher_role",
+          "title": "Which best describes you?",
+          "choices": [
+            {
+              "value": "cs_teacher",
+              "text": "Computer Science teacher"
+            },
+            {
+              "value": "classroom_teacher",
+              "text": "Classroom teacher"
+            },
+            {
+              "value": "stem_teacher",
+              "text": "STEM / Technology teacher"
+            },
+            {
+              "value": "Librarian",
+              "text": "Librarian / school media specialist"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "teaching_experience_cs_year_groups",
+          "title": "How many years have you been teaching Computer Science?",
+          "choices": [
+            {
+              "value": "none",
+              "text": "I have not taught Computer Science before"
+            },
+            {
+              "value": "years_0",
+              "text": "Less than one year"
+            },
+            {
+              "value": "years_1_2",
+              "text": "Between 1 and 2 years"
+            },
+            {
+              "value": "years_3_5",
+              "text": "Between 3 and 5 years"
+            },
+            {
+              "value": "years_6_plus",
+              "text": "More than 5 years"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "teaching_experience_computer_vision",
+          "title": "Have you taught computer vision concepts before?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "No",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "teaching_experience_computer_vision_details",
+          "visibleIf": "{teaching_experience_computer_vision} = 'yes'",
+          "title": "Please describe briefly the computer vision content you have taught and context in which you taught it.",
+          "rows": 3
+        },
+        {
+          "type": "html",
+          "name": "module_expectations_header",
+          "html": "<h2>Your Goals and Expectations</h1>\n<p><span style='font-size: 12pt;'>Please share with us what drives you to teach this unit and what barriers do you anticipate.</span></p>"
+        },
+        {
+          "type": "checkbox",
+          "name": "module_goals",
+          "title": "What are your primary goals in teaching this unit?",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "student_understanding_ai_computer_vision",
+              "text": "Enhance students' understanding of computer vision and AI concepts."
+            },
+            {
+              "value": "stimulate_interest_cs_careers",
+              "text": "Stimulate interest in CS careers among students."
+            },
+            {
+              "value": "critical_thinking",
+              "text": "Develop critical thinking and problem-solving abilities."
+            },
+            {
+              "value": "ethical_considerations",
+              "text": "Integrate ethical considerations of technology use into students' learning."
+            },
+            {
+              "value": "creativity_innovation",
+              "text": "Encourage creativity and innovation in project work."
+            },
+            {
+              "value": "other",
+              "text": "Other."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "module_goals_other_comment",
+          "visibleIf": "{module_goals} anyOf ['other']",
+          "title": "Please describe what other goal do you have for this unit?"
+        },
+        {
+          "type": "checkbox",
+          "name": "module_challenges",
+          "title": "What challenges do you anticipate in teaching this unit?",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "lack_student_interest",
+              "text": "Lack of student interest or motivation."
+            },
+            {
+              "value": "own_understanding_complex_concepts",
+              "text": "Difficulty in developing my own understanding or teaching complex concepts."
+            },
+            {
+              "value": "time_constraints",
+              "text": "Time constraints within the academic calendar."
+            },
+            {
+              "value": "diverse_learning",
+              "text": "Managing diverse learning speeds and styles within the classroom."
+            },
+            {
+              "value": "other",
+              "text": "Other."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "module_challenges_other_comment",
+          "visibleIf": "{module_challenges} anyOf ['other']",
+          "title": "Please describe what other goal do you have for this unit?"
+        },
+        {
+          "type": "checkbox",
+          "name": "plans_curriculum_integration",
+          "title": "How do you plan to integrate the unit into your existing curriculum?",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "lack_student_interest",
+              "text": "Lack of student interest or motivation."
+            },
+            {
+              "value": "own_understanding_complex_concepts",
+              "text": "Difficulty in developing my own understanding or teaching complex concepts."
+            },
+            {
+              "value": "time_constraints",
+              "text": "Time constraints within the academic calendar."
+            },
+            {
+              "value": "diverse_learning",
+              "text": "Managing diverse learning speeds and styles within the classroom."
+            },
+            {
+              "value": "other",
+              "text": "Other."
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

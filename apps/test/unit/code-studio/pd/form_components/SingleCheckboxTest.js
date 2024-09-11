@@ -1,9 +1,8 @@
-import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
-import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import React from 'react';
-import {expect} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
+import React from 'react';
+import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
 
 describe('SingleCheckbox', () => {
   it('renders a basic checkbox', () => {
@@ -15,7 +14,7 @@ describe('SingleCheckbox', () => {
       singleCheckbox.containsMatchingElement(
         <Checkbox>This is the label</Checkbox>
       )
-    ).to.be.ok;
+    ).toBeTruthy();
   });
 
   it('displays checked value', () => {
@@ -28,14 +27,16 @@ describe('SingleCheckbox', () => {
         />
       );
 
-    expect(singleCheckBoxWithValue(true).find(Checkbox).prop('checked')).to.be
-      .true;
-    expect(singleCheckBoxWithValue(false).find(Checkbox).prop('checked')).to.be
-      .false;
+    expect(singleCheckBoxWithValue(true).find(Checkbox).prop('checked')).toBe(
+      true
+    );
+    expect(singleCheckBoxWithValue(false).find(Checkbox).prop('checked')).toBe(
+      false
+    );
   });
 
   it('Calls supplied onChange function with the updated value', () => {
-    const onChangeCallback = sinon.spy();
+    const onChangeCallback = jest.fn();
     const singleCheckbox = shallow(
       <SingleCheckbox
         name="testCheckbox"
@@ -47,14 +48,14 @@ describe('SingleCheckbox', () => {
     singleCheckbox
       .find('Checkbox')
       .simulate('change', {target: {checked: true}});
-    expect(onChangeCallback).to.have.been.calledOnce;
-    expect(onChangeCallback).to.have.been.calledWith({testCheckbox: true});
+    expect(onChangeCallback).toHaveBeenCalledTimes(1);
+    expect(onChangeCallback).toHaveBeenCalledWith({testCheckbox: true});
 
-    onChangeCallback.resetHistory();
+    onChangeCallback.mockReset();
     singleCheckbox
       .find('Checkbox')
       .simulate('change', {target: {checked: false}});
-    expect(onChangeCallback).to.have.been.calledOnce;
-    expect(onChangeCallback).to.have.been.calledWith({testCheckbox: false});
+    expect(onChangeCallback).toHaveBeenCalledTimes(1);
+    expect(onChangeCallback).toHaveBeenCalledWith({testCheckbox: false});
   });
 });

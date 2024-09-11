@@ -6,7 +6,9 @@ import {BlocklyWrapperType} from '../types';
 export default function initializeVariables(
   blocklyWrapper: BlocklyWrapperType
 ) {
-  blocklyWrapper.Variables.DEFAULT_CATEGORY = 'Default';
+  // Re-use the variable getter block's generator function for paramters.
+  blocklyWrapper.JavaScript.forBlock.parameters_get =
+    blocklyWrapper.JavaScript.forBlock.variables_get;
 
   // TODO: Removing support for sprite variables as a separate variable type is
   // captured in https://codedotorg.atlassian.net/browse/CT-213
@@ -27,14 +29,10 @@ export default function initializeVariables(
   };
 
   /**
-   * Standard implementation of getVars for blocks with a single 'VAR' title
-   * @param {string=} opt_category Variable category, defaults to 'Default'
+   * Standard implementation of getVars for blocks with a single 'VAR' field
    */
-  blocklyWrapper.Variables.getVars = function (this: Block, opt_category) {
-    const category = opt_category || blocklyWrapper.Variables.DEFAULT_CATEGORY;
-    const vars: {[key: string]: string[]} = {};
-    vars[category] = [this.getFieldValue('VAR')];
-    return vars;
+  blocklyWrapper.Variables.getVars = function (this: Block) {
+    return [this.getFieldValue('VAR')];
   };
 
   // Add serialization hooks to allow these blocks to be hidden on the

@@ -1,6 +1,6 @@
-import {expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import LibraryIdCopier from '@cdo/apps/code-studio/components/libraries/LibraryIdCopier.jsx';
 
 describe('LibraryIdCopier', () => {
@@ -11,6 +11,6 @@ describe('LibraryIdCopier', () => {
       <LibraryIdCopier libraryName="name" channelId={channelId} />
     );
 
-    expect(wrapper.find(CHANNEL_ID_SELECTOR).props().value).to.equal(channelId);
+    expect(wrapper.find(CHANNEL_ID_SELECTOR).props().value).toBe(channelId);
   });
 });

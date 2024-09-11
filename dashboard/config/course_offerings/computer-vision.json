@@ -1,0 +1,19 @@
+{
+  "key": "computer-vision",
+  "display_name": "Computer Vision",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "9,10,11,12",
+  "header": "teacher_led",
+  "image": "https://images.code.org/4c0ea13ed2ea42ecbca092c99aac7d35-computer_vision.png",
+  "cs_topic": "artificial_intelligence",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "This unit introduces students to the fundamentals, applications, and ethical implications of computer vision technologies.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": "2024-07-16 05:00:00 UTC",
+  "self_paced_pl_course_offering_key": "self-paced-pl-computer-vision"
+}

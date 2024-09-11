@@ -71,6 +71,18 @@ class DatablockStorageTable < ApplicationRecord
     get_table_names(SHARED_TABLE_PROJECT_ID)
   end
 
+  def self.update_shared_table(table_name, records)
+    shared_table = DatablockStorageTable.find_or_create_by!(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
+    shared_table.records.delete_all
+    shared_table.columns = ['id']
+    shared_table.save!
+
+    shared_table.create_records(records)
+    shared_table.save!
+
+    shared_table
+  end
+
   def self.find_shared_table(table_name)
     shared_table = DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
     raise "Shared table '#{table_name}' does not exist" unless shared_table
@@ -220,7 +232,7 @@ class DatablockStorageTable < ApplicationRecord
 
     max_csv_size = MAX_TABLE_ROW_COUNT * DatablockStorageRecord::MAX_RECORD_LENGTH
     if table_data_csv.bytesize > max_csv_size
-      raise StudentFacingError.new(:CSV_TOO_LARGE), "CSV is too large to import, max CSV size is #{(max_csv_size.to_f / (1024 * 1024)).round} MB"
+      raise StudentFacingError.new(:IMPORT_FAILED), "CSV is too large to import, maximum CSV size is #{(max_csv_size.to_f / (1024 * 1024)).round} MB"
     end
 
     new_records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
@@ -281,7 +293,11 @@ class DatablockStorageTable < ApplicationRecord
     end
 
     # Second rename the column in the table definition
-    self.columns = columns.map {|column| column == old_column_name ? new_column_name : column}
+    if columns.include? old_column_name
+      self.columns = columns.map {|column| column == old_column_name ? new_column_name : column}
+    else
+      self.columns << new_column_name
+    end
   end
 
   # Convert all values in a column to a new type
@@ -343,7 +359,7 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   private def validate_max_table_count
-    if DatablockStorageTable.where(project_id: project_id).count >= MAX_TABLE_COUNT
+    if DatablockStorageTable.where(project_id: project_id).count >= MAX_TABLE_COUNT && project_id != SHARED_TABLE_PROJECT_ID
       raise StudentFacingError.new(:MAX_TABLES_EXCEEDED), "Cannot create more than #{MAX_TABLE_COUNT} tables"
     end
   end

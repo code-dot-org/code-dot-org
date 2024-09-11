@@ -1,6 +1,7 @@
+import {MetricEvent} from '@cdo/apps/metrics/events';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
-import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+
 import {StudentServerData} from './types';
 
 const formatServerData = (student: StudentServerData) => ({

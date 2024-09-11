@@ -10,7 +10,12 @@ social:
 
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 
-#fullwidth
+-# Get the default HOC mode
+-hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::HOC_ACTIVITIES_PAGE_VISITED
+
+#fullwidth{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
   = view :header
   %section.banner
     = view :learn_banner_text
@@ -67,14 +72,6 @@ social:
     // Add the rel tag to attempt to mitigate the inherent danger in opening
     // links in a new tab; will only work for modern browsers, though.
     $(".banner a").attr({target: "_blank", rel: "noopener noreferrer nofollow"});
-
-    // Set up google analytics tracking
-    $('.bannerTeachers a[href$="join"]').click(function () {
-      ga('send', 'event', 'learn', 'click', 'teacher_banner_host');
-    });
-    $('.bannerTeachers a[href$="how-to"]').click(function () {
-      ga('send', 'event', 'learn', 'click', 'teacher_banner_howto');
-    });
 
     $(".bannerTeachers").fadeTo('slow', 1);
   });

@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-prompt-templateC"
+    "project_template_level_name": "gen-ai-customizing-prompt-templateC",
+    "display_name": "Career Advice",
+    "bubble_choice_description": "Have you ever wondered what it would be like to have a certain career but you have no idea what it’s really like? Wouldn’t it be great to talk to someone who had that job?",
+    "thumbnail_url": "https://images.code.org/492b225e33c502ecf2d95cdc87323fde-Lesson 3 - Level 7C - Career Advice.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-08T20:15:37.403+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L7C\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L7C\"},{\"changed_at\":\"2024-05-08 20:26:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:27:57 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:45:27 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-08T20:15:37.403+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L7C\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L7C\"},{\"changed_at\":\"2024-05-08 20:26:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:27:57 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:45:27 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:26:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

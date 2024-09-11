@@ -95,8 +95,6 @@
         = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, lesson: @lesson, full_width: view_options[:full_width]}
       - if view_options[:code_studio_logo]
         = render partial: 'layouts/logo'
-      - if current_user && Policies::Lti.early_access_banner_available?(current_user)
-        = render partial: 'lti/v1/early_access_banner'
       - if current_user
         = render_parental_permission_modal(current_user, request)
 

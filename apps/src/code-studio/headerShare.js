@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import popupWindow from './popup-window';
-import ShareDialog from './components/ShareDialog';
 import {Provider} from 'react-redux';
-import {getStore} from '../redux';
-import {showShareDialog} from './components/shareDialogRedux';
+
 import {AllPublishableProjectTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {getStore} from '../redux';
+
+import ShareDialog from './components/ShareDialog';
+import {showShareDialog} from './components/shareDialogRedux';
+import popupWindow from './popup-window';
 
 export function shareProject(shareUrl) {
   dashboard.project.saveIfSourcesChanged().then(() => {

@@ -1,14 +1,15 @@
+import Immutable from 'immutable';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Immutable from 'immutable';
 import {connect} from 'react-redux';
 import TetherComponent from 'react-tether';
 
-import i18n from '@cdo/locale';
-import {add, update, remove} from '../../../redux/watchedExpressions';
-import AutocompleteSelector from './AutocompleteSelector';
-
 import escapeSpecialCharactersForRegExp from '@cdo/apps/util/escapeSpecialCharactersForRegExp';
+import i18n from '@cdo/locale';
+
+import {add, update, remove} from '../../../redux/watchedExpressions';
+
+import AutocompleteSelector from './AutocompleteSelector';
 
 const WATCH_VALUE_NOT_RUNNING = 'undefined';
 const OPTIONS_GAMELAB = [

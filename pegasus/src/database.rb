@@ -7,13 +7,11 @@ require 'active_support/core_ext/enumerable'
 require 'active_support/core_ext/object/deep_dup'
 
 class Tutorials
-  # This class uses data from two GSheets:
+  # This class uses data from one GSheet:
   #   GoogleDrive://Pegasus/v3/cdo-tutorials
-  #   GoogleDrive://Pegasus/v3/cdo-beyond-tutorials
-  # These sheets are in the "v3" Google Sheet format and use datatype suffixes on the column names,
+  # This sheet is in the "v3" Google Sheet format and use datatype suffixes on the column names,
   # and map to tables in the database to match the v3 convention:
   #   cdo_tutorials
-  #   cdo_beyond_tutorials
   # We alias the database columns with names that have the datatype suffixes stripped off for
   # backwards-compatibility with some existing tutorial pages
   # Note: A tutorial can be present in the sheet but hidden by giving it the "do-not-show" tag.
@@ -117,34 +115,9 @@ def search_for_address(address)
   Geocoder.search(address).first
 end
 
-# Temporary helper method to help us determine which version of MySQL is
-# available in the local environment, so we can conditionally apply
-# version-specific logic as we transition from MySQL 5.7 to MySQL 8.
-#
-# TODO infra: remove this once we've updated everything to MySQL 8.
-def current_mysql_version
-  $current_mysql_version ||= begin
-    raw_version = DB.fetch('SELECT VERSION()').first[:'VERSION()']
-    case raw_version
-    when /^8.0.\d+/
-      8.0
-    when /^5.7.\d+/
-      5.7
-    else
-      raise "cannot parse MySQL version #{raw_version.inspect}"
-    end
-  end
-end
-
 def geocode_address(address)
   location = search_for_address(address)
   return nil unless location
   return nil unless location.latitude && location.longitude
-  # TODO infra: once we've updated everything to MySQL 8+, we can reduce this
-  # back to a single case.
-  if current_mysql_version < 8
-    "#{location.latitude},#{location.longitude}"
-  else
-    "#{location.longitude},#{location.latitude}"
-  end
+  return "#{location.longitude},#{location.latitude}"
 end

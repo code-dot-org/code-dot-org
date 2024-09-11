@@ -6,7 +6,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "An online shopping platform wants to manage its products, including adding new products and searching for existing products.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">search()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ShoppingPlatform</code> class. The method should take a product name and ID as parameters.\r\n\r\n✅ **TO DO #2:** Write another <code style=\"background-color: #ececec; color: black; font-weight: bold;\">search()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ShoppingPlatform</code> class. The method should take a product ID as a parameter.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ProductRunner</code> class, call both versions of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">search()</code> method and print the results.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing overloaded methods.\r\n</div>",
+    "long_instructions": "An online shopping platform wants to manage its products, including adding new products and searching for existing products.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">search()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ShoppingPlatform</code> class. The method should take a product ID and name as parameters.\r\n\r\n✅ **TO DO #2:** Write another <code style=\"background-color: #ececec; color: black; font-weight: bold;\">search()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ShoppingPlatform</code> class. The method should take a product ID as a parameter.\r\n\r\n✅ **TO DO #3:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ProductRunner</code> class, call both versions of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">search()</code> method and print the results.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing overloaded methods.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -36,9 +36,10 @@
         "tabOrder": 2
       }
     },
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-01-12T21:06:38.434+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L6b_2023\\\"\"],\"cloned_from\":\"CSA U7L3-L6b_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T21:06:38.434+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L6b_2023\\\"\"],\"cloned_from\":\"CSA U7L3-L6b_2023\"},{\"changed_at\":\"2024-07-05 15:36:09 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

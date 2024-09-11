@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-retrieval-templateD"
+    "project_template_level_name": "gen-ai-customizing-retrieval-templateD",
+    "display_name": "Personal Style Advice",
+    "bubble_choice_description": "Has anyone ever asked you for fashion or style advice? Do you have a personal list of \"dos and don'ts\" and special tricks for your sense of fashion? Let's create a chatbot that gives people advice for how to dress or how to style themselves.",
+    "thumbnail_url": "https://images.code.org/494668750a1de9240e41dcfe72fb11a8-Lesson 6 - Level 9D - Personal Style Advice.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:20:20.598+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L7D\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L7D\"},{\"changed_at\":\"2024-05-08 22:33:23 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 22:47:26 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:38:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:20:20.598+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L7D\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L7D\"},{\"changed_at\":\"2024-05-08 22:33:23 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 22:47:26 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:38:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:30:05 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

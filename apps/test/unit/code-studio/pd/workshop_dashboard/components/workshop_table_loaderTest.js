@@ -1,20 +1,21 @@
-import WorkshopTableLoader from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_table_loader';
-import React from 'react';
-import _ from 'lodash';
-import sinon from 'sinon';
-import {expect} from 'chai';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import _ from 'lodash';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import WorkshopTableLoader from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_table_loader';
 
 describe('WorkshopTableLoader', () => {
   let server;
   let debounceStub;
 
-  before(() => {
+  beforeAll(() => {
     // stub out debounce to return the original function, so it's called immediately
     debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
   });
 
-  after(() => {
+  afterAll(() => {
     debounceStub.restore();
   });
 

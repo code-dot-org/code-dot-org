@@ -8,13 +8,15 @@ import Announcements from '@cdo/apps/code-studio/components/progress/Announcemen
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import styleConstants from '@cdo/apps/styleConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {
   assignmentCourseVersionShape,
@@ -85,7 +87,8 @@ class CourseOverview extends Component {
         EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
         {
           'unit group name': props.name,
-        }
+        },
+        PLATFORMS.BOTH
       );
     }
   }

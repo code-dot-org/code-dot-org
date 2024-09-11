@@ -9,11 +9,11 @@ Scenario: Teacher can open and close Icon Key and details
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
-  
+
   # toggle to V2 progress view
   And I wait until element "h6:contains(Icon Key)" is visible
   And I wait until element "#ui-test-progress-table-v2" is visible
-  And element "#ui-test-progress-table-v2" is visible 
+  And element "#ui-test-progress-table-v2" is visible
 
   # Teacher can minimize icon key
   And I wait until element "strong:contains(Assignment Completion States)" is visible
@@ -27,6 +27,52 @@ Scenario: Teacher can open and close Icon Key and details
   And I wait until element "h3:contains(Progress Tracking Icon Key)" is visible
   And I click selector "#ui-close-dialog"
   And element "h3:contains(Progress Tracking Icon Key)" is hidden
+
+Scenario: Viewing student metadata
+  Given I create an authorized teacher-associated student named "Sally"
+  Given I am assigned to unit "allthethings"
+  And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/9?noautoplay=true"
+  And I wait to see "#runButton"
+  When I press "runButton"
+  And I wait for 5 seconds
+  And I submit this level
+
+  # Progress tab
+  When I sign in as "Teacher_Sally" and go home
+  And I get levelbuilder access
+  And I navigate to the V2 progress dashboard for "Untitled Section"
+
+  # Toggle to V2 progress view
+  And I wait until element "h6:contains(Icon Key)" is visible
+  And I wait until element "#ui-test-progress-table-v2" is visible
+
+  # Can see and open menu with more options
+  And I wait until element "#ui-see-more-options-dropdown" is visible
+  Then I click selector "#ui-see-more-options-dropdown"
+  And I wait until element "div:contains(Expand all student rows)" is visible
+  And I wait until element "div:contains(Collapse all student rows)" is visible
+
+  # Can click on more options and it responds appropriately
+  Then I click selector "#ui-test-expand-all"
+  And I wait until element "div:contains(Last Updated)" is visible
+  And I wait until element "div:contains(Time Spent)" is visible
+  And I wait until element "#ui-test-lesson-header-44" is visible
+  And I scroll to "#ui-test-lesson-header-44"
+  And I wait until ".ui-test-time-spent-44" contains one or more integers
+  Then I click selector "#ui-see-more-options-dropdown"
+  Then I click selector "#ui-test-collapse-all"
+  And element "div:contains(Time Spent)" does not exist
+  And element "div:contains(Last Updated)" does not exist
+
+  # Can click on individual row and it opens with lesson and level data
+  Then I click selector "#ui-test-student-row-unexpanded-Sally"
+  And I wait until element "div:contains(Last Updated)" is visible
+  And I wait until element "div:contains(Time Spent)" is visible
+
+  # Can click on individual row and it closes with lesson and level data
+  Then I click selector "#ui-test-student-row-expanded-Sally"
+  And element "div:contains(Time Spent)" does not exist
+  And element "div:contains(Last Updated)" does not exist
 
 Scenario: Teacher can open and close lessons and see level data cells
   Given I create an authorized teacher-associated student named "Sally"
@@ -48,7 +94,7 @@ Scenario: Teacher can open and close lessons and see level data cells
 Scenario: Teacher can navigate to student work by clicking level cell.
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-    
+
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
@@ -64,7 +110,7 @@ Scenario: Teacher can navigate to student work by clicking level cell.
 Scenario: Teacher can open lesson data, refresh the page, and lesson data will still be shown
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-    
+
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
@@ -111,7 +157,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   And I open my eyes to test "V2 Progress Dashboard Assessments"
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-  
+
   # Student submits project
   Given I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1?noautoplay=true"
   Then I wait to see "#runButton"
@@ -137,6 +183,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   And I press keys "Nice!" for element "#ui-test-feedback-input"
   And I press "#ui-test-submit-feedback" using jQuery
   And element ".editor-column" contains text "Nice!"
+  And I wait for 3 seconds
 
   # Teacher can see feedback given icon
   Given I am on "http://studio.code.org/"
@@ -150,6 +197,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   And I wait to see "#ui-test-feedback-input"
   And I click selector "#keep-working" once I see it
   And I press "#ui-test-submit-feedback" using jQuery
+  And I wait for 3 seconds
 
   # Teacher can see keep working icon
   Given I am on "http://studio.code.org/"
@@ -194,52 +242,4 @@ Scenario: Teacher can view choice levels
   And I click selector "button:contains(b)"
   And I see no difference for "unexpanded choice level - closed"
 
-# The test requires java-lab which does not run on correctly on drone
-@eyes @no_circle @skip
-Scenario: Teacher can view validated level
-  And I open my eyes to test "V2 Progress - Validated Levels"
-
-  # Student must be in CSA to run java lab
-  # Teacher for this step is named `Dumbledore`
-  Given I create a student named "Sally" in a CSA section
-
-  # Student makes progress in validated level
-  Given I am on "http://studio.code.org/s/allthethings/lessons/44/levels/11?noautoplay=true"
-  And I wait until I see selector "button:contains(Commit Code)"
-  And I click selector "button:contains(Commit Code)"
-  And I wait to see "#commit-notes"
-  And I press the first "#commit-notes" element
-  And I press keys "Commit message" for element "#commit-notes"
-  And I wait until "#confirmationButton" is not disabled
-  And I press "confirmationButton"
-  And I wait for 5 seconds
-
-  # Student submits validated level
-  Given I am on "http://studio.code.org/s/allthethings/lessons/44/levels/12?noautoplay=true"
-  And I wait to see "#finishButton"
-  And I press "testButton"
-  And I wait until element ".javalab-console" contains text "[JAVALAB] Program completed."
-  And I wait until "#finishButton" is enabled
-  And I press "finishButton"
-
-  Given I am assigned to unit "allthethings"
-
-  When I sign in as "Dumbledore" and go home
-  And I get levelbuilder access
-  And I navigate to the V2 progress dashboard for "New Section"
-
-  # Navigate to the right course on the progress page
-  And I wait until element "#unit-selector-v2" is visible
-  And I click selector "#unit-selector-v2"
-  And I click selector "option:contains(All the Things!)"
-
-  # eyes test for unexpanded lessons
-  And I wait until element "#ui-test-lesson-header-1" is visible
-  And I scroll to "#ui-test-lesson-header-44"
-  And I see no difference for "unexpanded lessons"
-
-  # eyes test for expanded lessons with in progress and completed validated levels
-  And I click selector "#ui-test-lesson-header-44"
-  And I wait until I see selector "div:contains('44.12')"
-  And I scroll to "#ui-test-lesson-header-45"
-  And I see no difference for "expanded lesson"
+  And I close my eyes

@@ -1,0 +1,41 @@
+name 'gen-ai-humanities-L1G'
+title 'Crafting Prompts'
+display_name 'Email Draft'
+bubble_choice_description 'Draft a formal email to a teacher requesting an extension on a project deadline.'
+thumbnail_url 'https://images.code.org/6cb0a14c03cca38bab189e73d65fa63b-image-1719504640208.png'
+
+markdown <<MARKDOWN
+## Email Draft
+
+**Task:** Draft a formal email to a teacher requesting an extension on a project deadline.
+
+### Steps
+
+1. **Understanding the task:** You will be crafting a prompt that asks an AI tool to draft a formal email to a teacher requesting an extension on a project deadline.
+
+   Think about what makes a good formal email: it should be clear, polite, and provide enough context for the request.
+
+2. **Crafting your prompt:** Start by considering the key points the email should include. This might involve stating the reason for the extension request, providing any relevant details about the project, and expressing gratitude.
+
+   Think about how to phrase your prompt to ensure the AI provides a well-structured and polite email.
+
+3. **Writing your prompt:** Write a prompt that is clear and specific. Here is an example to get you started:
+
+> Draft a formal email to a teacher requesting an extension on a project deadline. Include a polite greeting, a clear explanation for the request, details about the project, and a courteous closing.
+
+4. **Using the AI tool:** Enter your prompt into the AI tool, and review the response. Assess whether it meets your expectations and includes a clear, polite, and well-structured email.
+
+5. **Evaluate the response:** Consider the following questions when evaluating the AI's response:
+
+   * Does the email include a polite greeting and closing?
+   
+   * Is the reason for the extension request clearly explained?
+   
+   * Are the details about the project and the request appropriate and respectful?
+   
+   * Is the overall tone of the email polite and professional?
+
+6. **Refining your prompt:** If the AI's response is not as expected, think about how you can improve your prompt. You might need to add more detail or be more specific about what you want.
+
+   Adjust your prompt and try again until you get a satisfactory response.
+MARKDOWN

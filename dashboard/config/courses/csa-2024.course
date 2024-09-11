@@ -12,7 +12,7 @@
     "csa9-2024",
     "csa-postap-se-and-computer-vision-2024"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -23,6 +23,18 @@
     "version_year": "2024"
   },
   "resources": [
+    {
+      "name": "24-25 Change Log",
+      "url": "https://docs.google.com/document/d/1AwYTl0ceDm9fv2T-AGSfWjJeaVDqw4lVLpbdaEaIph0/edit?usp=sharing",
+      "key": "24-25_change_log",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "24-25_change_log"
+      }
+    },
     {
       "name": "All Resources",
       "url": "/courses/csa-2024/resources",

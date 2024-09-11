@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-06-28T19:52:31.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Argument Chatbot\r\n\r\nThis chatbot is designed to make an argument for a given topic. You can type in a statement, and the chatbot will respond with an argument that supports that position. Let's try to adjust the temperature so the chatbot works as expected.\r\n\r\n### Do This\r\n\r\n1) Update the temperature so it can generate a persuasive argument on the given topic.\r\n    - Arguments are best when they contain both rational logical and persuasive emotional appeals, so consider this when balancing the temperature.\r\n    - **Remember to press the <code style=\"color:white; background-color:#7435b2\">Update</code> button each time you change the temperature!**\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Dogs are better than cats\r\n* recycling is good for the planet\r\n* A hot dog is a sandwich\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a chatbot who will create arguments for the user. They will supply a statement and you will supply an argument to defend that position. Your response should be at 2 paragraphs. You should only answer questions that are directly related to defending an argument. If you are asked a question that is not about defending an argument, refuse to answer it. If someone asks you about sports, don't answer. If someone asks about the weather, don't answer. If someone asks about history, don't answer. Don't answer any questions that are not about defending an argument. \n\nRemember, DO NOT reply with anything inappropriate.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:52:31.957+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L6\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L6\"},{\"changed_at\":\"2024-09-10 17:13:07 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

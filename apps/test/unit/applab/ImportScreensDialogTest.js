@@ -1,14 +1,7 @@
 /* eslint no-unused-vars: "error" */
-import React from 'react';
-import sinon from 'sinon';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../util/reconfiguredChai';
-import Dialog, {
-  Body,
-  Buttons,
-  Confirm,
-  Cancel,
-} from '@cdo/apps/templates/Dialog';
+import React from 'react';
+
 import {
   ImportScreensDialog,
   ScreenListItem,
@@ -16,6 +9,12 @@ import {
   IMPORT_FAILURE_MESSAGE,
 } from '@cdo/apps/applab/ImportScreensDialog';
 import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
+import Dialog, {
+  Body,
+  Buttons,
+  Confirm,
+  Cancel,
+} from '@cdo/apps/legacySharedComponents/Dialog';
 
 describe('AssetListItem', () => {
   var item;
@@ -33,7 +32,7 @@ describe('AssetListItem', () => {
           <div>bar.mp3</div>
         </div>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('will show a warning when replacing an existing asset', () => {
@@ -42,7 +41,7 @@ describe('AssetListItem', () => {
         asset={{filename: 'bar.mp3', category: 'audio', willReplace: true}}
       />
     );
-    expect(item.text()).to.contain(
+    expect(item.text()).toContain(
       'Warning: Importing this will replace your existing "bar.mp3".'
     );
   });
@@ -53,7 +52,7 @@ describe('AssetListItem', () => {
         asset={{filename: 'bar.png', category: 'image', willReplace: false}}
       />
     );
-    expect(itemWithoutProjectId.find('img').prop('src')).to.contain(
+    expect(itemWithoutProjectId.find('img').prop('src')).toContain(
       '/v3/assets/undefined/bar.png'
     );
   });
@@ -65,7 +64,7 @@ describe('AssetListItem', () => {
         asset={{filename: 'bar.png', category: 'image', willReplace: false}}
       />
     );
-    expect(itemWithProjectId.find('img').prop('src')).to.contain(
+    expect(itemWithProjectId.find('img').prop('src')).toContain(
       '/v3/assets/1234/bar.png'
     );
   });
@@ -88,7 +87,7 @@ describe('ScreenListItem', () => {
         }}
       />
     );
-    expect(item.text()).to.contain('main_screen');
+    expect(item.text()).toContain('main_screen');
   });
 
   it('Will show a warning when replacing another screen', () => {
@@ -105,8 +104,8 @@ describe('ScreenListItem', () => {
         }}
       />
     );
-    expect(item.text()).to.contain('main_screen');
-    expect(item.text()).to.contain(
+    expect(item.text()).toContain('main_screen');
+    expect(item.text()).toContain(
       'Importing this will replace your existing screen: "main_screen".'
     );
   });
@@ -125,11 +124,11 @@ describe('ScreenListItem', () => {
         }}
       />
     );
-    expect(item.text()).to.contain('main_screen');
-    expect(item.text()).to.contain(
+    expect(item.text()).toContain('main_screen');
+    expect(item.text()).toContain(
       'Importing this will replace your existing screen: "main_screen".'
     );
-    expect(item.text()).to.contain(
+    expect(item.text()).toContain(
       'Importing this will replace your existing assets: "foo.png", "bar.png".'
     );
   });
@@ -148,15 +147,15 @@ describe('ScreenListItem', () => {
         }}
       />
     );
-    expect(item.text()).to.contain('main_screen');
-    expect(item.text()).to.contain(
+    expect(item.text()).toContain('main_screen');
+    expect(item.text()).toContain(
       'Uses existing element or screen IDs: "input1", "input2".'
     );
     // we don't want to show other errors related to importing.
-    expect(item.text()).not.to.contain(
+    expect(item.text()).not.toContain(
       'Importing this will replace your existing assets'
     );
-    expect(item.text()).not.to.contain(
+    expect(item.text()).not.toContain(
       'Importing this will replace your existing screen'
     );
   });
@@ -179,7 +178,7 @@ describe('ImportScreensDialog', () => {
                  id="img2">
           </div>
         </div>`;
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop
@@ -205,22 +204,22 @@ describe('ImportScreensDialog', () => {
     });
 
     it('renders a dialog with the list of screens', () => {
-      expect(dialog.type()).to.equal(Dialog);
-      expect(dialog.children().at(0).type()).to.equal(Body);
-      expect(dialog.children().at(1).type()).to.equal(Buttons);
-      expect(dialog.find('MultiCheckboxSelector').length).to.equal(1);
+      expect(dialog.type()).toBe(Dialog);
+      expect(dialog.children().at(0).type()).toBe(Body);
+      expect(dialog.children().at(1).type()).toBe(Buttons);
+      expect(dialog.find('MultiCheckboxSelector').length).toBe(1);
     });
 
     it('renders an Import button which calls onImport when clicked', () => {
       const button = getDialogButton();
-      expect(button.type()).to.equal(Confirm);
-      expect(button.matchesElement(<Confirm>Import</Confirm>)).to.be.true;
+      expect(button.type()).toBe(Confirm);
+      expect(button.matchesElement(<Confirm>Import</Confirm>)).toBe(true);
     });
 
     describe('the import button', () => {
       it('calls the onImport prop when clicked', () => {
         getDialogButton().simulate('click');
-        expect(onImport.calledWith('some-project', [], [])).to.be.true;
+        expect(onImport).toHaveBeenCalledWith('some-project', [], []);
       });
 
       it('passes the selected screens to the onImport prop function', () => {
@@ -230,7 +229,7 @@ describe('ImportScreensDialog', () => {
         dialog.update();
 
         getDialogButton().simulate('click');
-        expect(onImport.calledWith('some-project', newSelected, [])).to.be.true;
+        expect(onImport).toHaveBeenCalledWith('some-project', newSelected, []);
       });
     });
 
@@ -241,11 +240,11 @@ describe('ImportScreensDialog', () => {
       });
 
       it('should have a Screens header', () => {
-        expect(checkboxSelector.prop('header')).to.equal('Screens');
+        expect(checkboxSelector.prop('header')).toBe('Screens');
       });
 
       it('should have no selected screens initially', () => {
-        expect(checkboxSelector.prop('selected')).to.deep.equal([]);
+        expect(checkboxSelector.prop('selected')).toEqual([]);
       });
 
       it('should keep track of the selected screens when they are changed', () => {
@@ -253,7 +252,7 @@ describe('ImportScreensDialog', () => {
         checkboxSelector.prop('onChange')(newSelected);
         dialog.update();
         checkboxSelector = dialog.find('MultiCheckboxSelector');
-        expect(checkboxSelector.prop('selected')).to.deep.equal(newSelected);
+        expect(checkboxSelector.prop('selected')).toEqual(newSelected);
       });
     });
   });
@@ -261,7 +260,7 @@ describe('ImportScreensDialog', () => {
   describe('When given other assets that can be imported', () => {
     let checkboxSelector;
     beforeEach(() => {
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop
@@ -286,16 +285,16 @@ describe('ImportScreensDialog', () => {
       dialog.update();
 
       getDialogButton().simulate('click');
-      expect(onImport.calledWith('some-project', [], newSelected)).to.be.true;
+      expect(onImport).toHaveBeenCalledWith('some-project', [], newSelected);
     });
 
     describe('the asset list', () => {
       it('should have a Screens header', () => {
-        expect(checkboxSelector.prop('header')).to.equal('Other Assets');
+        expect(checkboxSelector.prop('header')).toBe('Other Assets');
       });
 
       it('should have no selected screens initially', () => {
-        expect(checkboxSelector.prop('selected')).to.deep.equal([]);
+        expect(checkboxSelector.prop('selected')).toEqual([]);
       });
 
       it('should keep track of the selected screens when they are changed', () => {
@@ -303,7 +302,7 @@ describe('ImportScreensDialog', () => {
         checkboxSelector.prop('onChange')(newSelected);
         dialog.update();
         checkboxSelector = dialog.find('MultiCheckboxSelector');
-        expect(checkboxSelector.prop('selected')).to.deep.equal(newSelected);
+        expect(checkboxSelector.prop('selected')).toEqual(newSelected);
       });
     });
   });
@@ -318,7 +317,7 @@ describe('ImportScreensDialog', () => {
                  id="img2">
           </div>
         </div>`;
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop
@@ -367,7 +366,7 @@ describe('ImportScreensDialog', () => {
             </Buttons>
           </Dialog>
         )
-      ).to.be.true;
+      ).toBe(true);
     });
   });
 
@@ -381,7 +380,7 @@ describe('ImportScreensDialog', () => {
                  id="img2">
           </div>
         </div>`;
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop
@@ -408,11 +407,11 @@ describe('ImportScreensDialog', () => {
     });
 
     it('should disable the confirmation button', () => {
-      expect(getDialogButton().prop('disabled')).to.be.true;
+      expect(getDialogButton().prop('disabled')).toBe(true);
     });
 
     it('should disable the multi checkbox widget', () => {
-      expect(dialog.find('MultiCheckboxSelector').prop('disabled')).to.be.true;
+      expect(dialog.find('MultiCheckboxSelector').prop('disabled')).toBe(true);
     });
   });
 });

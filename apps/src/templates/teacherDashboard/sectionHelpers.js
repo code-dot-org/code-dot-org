@@ -1,14 +1,15 @@
 import _ from 'lodash';
 
-import {TeacherDashboardPath} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation';
 import {navigateToHref} from '@cdo/apps/utils';
 
-import firehoseClient from '../../lib/util/firehose';
+import firehoseClient from '../../metrics/firehose';
+
+import {TEACHER_DASHBOARD_PATHS} from './TeacherDashboardNavigation';
 
 export function switchToSection(toSectionId, fromSectionId) {
   const baseUrl = `/teacher_dashboard/sections/${toSectionId}/`;
   const currentTab = _.last(_.split(window.location.pathname, '/'));
-  const teacherNavigationTabs = _.values(TeacherDashboardPath);
+  const teacherNavigationTabs = _.values(TEACHER_DASHBOARD_PATHS);
   const sectionUrl = teacherNavigationTabs.includes(`/${currentTab}`)
     ? baseUrl.concat(currentTab)
     : baseUrl;

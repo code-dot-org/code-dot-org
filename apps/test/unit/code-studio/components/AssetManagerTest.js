@@ -1,8 +1,10 @@
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   uploadsEnabled: true,

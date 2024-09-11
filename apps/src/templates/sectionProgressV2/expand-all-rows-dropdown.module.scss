@@ -1,0 +1,27 @@
+@import 'color';
+
+.expandButton {
+  background-color: $white;
+  border: 1px solid $light_gray_400;
+  margin-top: 0;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px !important;
+}
+
+.menu {
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 4px !important;
+  border: 1px solid $light_gray_400 !important;
+  box-shadow: 0 6px 12px rgba(0 0 0 / 0.175) !important;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

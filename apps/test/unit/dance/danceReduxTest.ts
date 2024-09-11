@@ -1,5 +1,9 @@
-import {createStore} from '../../util/redux';
-import {expect} from '../../util/reconfiguredChai';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {combineReducers, Store} from 'redux';
+import Sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+import {StubFunction} from 'test/types/types';
+
+import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {
   DanceState,
   initSongs,
@@ -8,17 +12,15 @@ import {
   setSong,
   setSongData,
 } from '@cdo/apps/dance/danceRedux';
-import {setExternalGlobals} from '../../util/testUtils';
-import * as commonReducers from '@cdo/apps/redux/commonReducers';
-import {combineReducers, Store} from 'redux';
 import * as songs from '@cdo/apps/dance/songs';
-import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
-import * as utils from '@cdo/apps/utils';
-import {assert} from 'chai';
-import Sinon from 'sinon';
-import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {SongData, SongMetadata} from '@cdo/apps/dance/types';
-import {StubFunction} from 'test/types/types';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {createStore} from '../../util/redux';
+import {setExternalGlobals} from '../../util/testUtils';
 
 describe('danceRedux', function () {
   let store: Store;

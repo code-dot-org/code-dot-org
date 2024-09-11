@@ -1,43 +1,29 @@
 {
   "pages": {
     "homepage": [
-      "hoc2023-soon-hoc",
+      "hoc2024-soon-hoc",
       "hoc2023-actual-hoc",
       "pl-launch-superhero",
-      "music-lab-launch-2024"
+      "curriculum-launch-2024",
+      "best-of-stem-2024"
     ]
   },
 
   "banners": {
-    "hoc2023-soon-hoc": {
+    "hoc2024-soon-hoc": {
       "hoc_modes": ["soon-hoc"],
       "class": "hoc-banner homepage",
-      "desktopImage": "/images/hoc2023-codeorg-hero-banner.png",
-      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.png",
-      "leftImage": "/images/hoc2023-codeorg-hero-banner-left.svg",
-      "rightImage": "/images/hoc2023-codeorg-hero-banner-right.svg",
+      "desktopImage": "",
       "actions": [
         {
-          "type": "text",
-          "text": "homepage_hero_hoc_is_coming"
-        },
-        {
-          "type": "heading",
-          "text": "curriculum_name_dance_party_ai_edition"
-        },
-        {
-          "type": "heading-two",
-          "text": "codeorg_homepage_hoc2023_body"
-        },
-        {
-          "type": "cta_button_solid_yellow",
-          "text": "hoc2022_cta_primary",
-          "url": "/dance"
-        },
-        {
-          "type": "cta_button_solid_white",
-          "text": "hoc2022_cta_secondary",
-          "url": "https://hourofcode.com/learn"
+          "type": "flex-container",
+          "text_h1": "hoc_2024.header",
+          "text_desc": "hoc_2024.banner.desc.make_everything",
+          "external_link": true,
+          "button_color_black": true,
+          "button_link": "https://hourofcode.com/events",
+          "button_text": "hoc_2024.button_host_an_event",
+          "img_src": "/images/banners/banner-hoc-2024.png"
         }
       ]
     },
@@ -102,26 +88,34 @@
         }
       ]
     },
-    "music-lab-launch-2024": {
-      "dcdo": "music-lab-launch-2024",
-      "class": "music-lab-launch homepage",
-      "desktopImage": "/images/music-lab/music-lab-homepage-banner-bg.png",
-      "mobileImage": "/images/music-lab/music-lab-homepage-banner-bg.png",
-      "leftImage": "/images/music-lab/music-lab-homepage-banner-left.png",
-      "rightImage": "/images/music-lab/music-lab-homepage-banner-right.png",
+    "curriculum-launch-2024": {
+      "dcdo": "curriculum-launch-2024",
+      "class": "curriculum-banner-hero homepage",
+      "desktopImage": "/images/banners/banner-bg-school-supplies-dark-black.png",
       "actions": [
         {
-          "type": "music-lab-launch-2024",
-          "text_overline": "music_lab.introducing_music_lab_strong",
-          "text_h1": "music_lab.banner.heading",
-          "text_desc": "music_lab.banner.desc",
-          "button_label_primary": "music_lab.button.try_music_lab",
-          "button_url_primary": "https://studio.code.org/s/music-intro-2024/reset",
-          "button_label_secondary": "music_lab.button.learn_more",
-          "button_url_secondary": "/music",
-          "text_desc_02": "music_lab.in_partnership_with",
-          "logo_list_01": "/images/avatars/amazon_future_engineer_light.png",
-          "logo_list_01_alt": "music_lab.amazon_future_engineer"
+          "type": "flex-container",
+          "text_h1": "curriculum_launch_2024.banner.heading",
+          "text_desc": "curriculum_launch_2024.banner.desc",
+          "external_link": true,
+          "button_color_white": true,
+          "button_link": "https://codeorg.medium.com/ai-game-design-and-more-in-code-orgs-2024-25-curriculum-updates-caff691935ad",
+          "button_text": "curriculum_launch_2024.banner.button_learn_more_here",
+          "img_src": "/images/banners/banner-curriculum-catalog-illustration-black.png"
+        }
+      ]
+    },
+    "best-of-stem-2024": {
+      "dcdo": "best-of-stem-2024",
+      "class": "best-of-stem-2024",
+      "desktopImage": "/images/banners/banner-bg-best-of-stem-confetti.png",
+      "actions": [
+        {
+          "type": "best-of-stem-2024",
+          "text_h1": "best_of_stem_heading",
+          "external_link": true,
+          "button_link": "https://medium.com/@codeorg/code-org-wins-two-best-of-stem-2024-awards-155e55bde866",
+          "button_text": "call_to_action_learn_more"
         }
       ]
     }
