@@ -45,13 +45,13 @@ const labeledGridLayouts = {
     gridLayoutRows: '2fr 1fr ',
     gridLayoutColumns: '300px minmax(0, 1fr)',
     gridLayout: `
-  "info-panel workspace"
-  "file-browser console"
+  "info-panel workspace-and-console"
+  "file-browser workspace-and-console"
   `,
   },
   vertical: {
     gridLayoutRows: '1fr 1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
+    gridLayoutColumns: '300px minmax(0, 1fr) 400px',
     gridLayout: `
     "info-panel workspace console"
     "file-browser workspace console"`,

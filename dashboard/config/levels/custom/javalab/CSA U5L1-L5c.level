@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-10-13T16:09:05.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U5L1-L1 Template",
@@ -11,13 +15,10 @@
     "display_name": "Add More Pies",
     "bubble_choice_description": "Update the inventory for all food trucks by increasing the number of pies each food truck has available.",
     "thumbnail_url": "https://images.code.org/56ed6a4f562c17d0c9e77686657d0eb9-image-1634141487288.png",
-    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYKcgMDZRYdlltGN0m8\nb+Ks/FFDaNWX+AONF/+tmRoQ04Ym/69JE2RdIsUaCRLIwJmLYksDwkE7p39q\nOOs+pCK8\n"
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYKcgMDZRYdlltGN0m8\nb+Ks/FFDaNWX+AONF/+tmRoQ04Ym/69JE2RdIsUaCRLIwJmLYksDwkE7p39q\nOOs+pCK8\n",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-10-13T16:09:05.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-10-13T16:09:05.884+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L5b\\\"\"],\"cloned_from\":\"CSA U5L1-L5b\"},{\"changed_at\":\"2021-10-13 16:12:05 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 16:23:09 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

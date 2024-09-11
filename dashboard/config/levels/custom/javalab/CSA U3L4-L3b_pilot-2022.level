@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:14.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L4-L3b PBT_pilot-2022",
@@ -23,12 +27,9 @@
         "text": "/*\n * Stores and analyzes the list of book\n * titles and their year of publication\n */\npublic class Books {\n\n  private String[] titles;   // The list of book titles\n  private int[] years;       // The list of years the books were published\n\n  /*\n   * Constructor to create a Books object with\n   * specified titles and years arrays\n   */\n  public Books(String[] titles, int[] years) {\n    this.titles = titles;\n    this.years = years;\n  }\n\n  /*\n   * Returns the array titles\n   */\n  public String[] getTitles() {\n    return titles;\n  }\n\n  /*\n   * Returns the array years\n   */\n  public int[] getYears() {\n    return years;\n  }\n\n  /*\n   * Checks if years array contains at least one value\n   * that is equal to yearToFind\n   */\n  public boolean hasYear(int yearToFind) {\n    // TO DO #1: Check if years array contains at least\n    // one value that is equal to yearToFind.\n\n\n    return false;\n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:14.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:14.506+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L3b_2022\\\"\"],\"cloned_from\":\"CSA U3L4-L3b_2022\"},{\"changed_at\":\"2022-09-01 14:36:09 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 14:39:30 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 14:43:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 14:44:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:42:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:42:47 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

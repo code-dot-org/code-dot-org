@@ -19,7 +19,6 @@ import {
 
 const ROOT_URL = '/aichat';
 const paths = {
-  CHAT_CHECK_SAFETY_URL: `${ROOT_URL}/check_message_safety`,
   CHAT_COMPLETION_URL: `${ROOT_URL}/chat_completion`,
   GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
   LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
@@ -79,33 +78,6 @@ export async function postLogChatEvent(
   };
   const response = await HttpClient.post(
     paths.LOG_CHAT_EVENT_URL,
-    JSON.stringify(payload),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
-    }
-  );
-
-  return await response.json();
-}
-
-interface LLMGuardResponseResult {
-  body: string;
-  statusCode: number;
-}
-
-interface LLMGuardResponse {
-  result: LLMGuardResponseResult;
-}
-
-export async function postAichatCheckSafety(
-  message: string
-): Promise<LLMGuardResponse> {
-  const payload = {
-    message,
-  };
-  const response = await HttpClient.post(
-    paths.CHAT_CHECK_SAFETY_URL,
     JSON.stringify(payload),
     true,
     {
@@ -252,8 +224,20 @@ function getUpdatedMessages(
           status: AiInteractionStatus.PII_VIOLATION,
         },
       ];
-    case AiRequestExecutionStatus.FAILURE:
     case AiRequestExecutionStatus.MODEL_PROFANITY:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.ERROR,
+        },
+        {
+          chatMessageText: modelResponse,
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.PROFANITY_VIOLATION,
+        },
+      ];
+    case AiRequestExecutionStatus.FAILURE:
     case AiRequestExecutionStatus.MODEL_PII:
       return [
         {

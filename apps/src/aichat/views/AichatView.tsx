@@ -12,7 +12,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -171,6 +171,7 @@ const AichatView: React.FunctionComponent = () => {
           iconStyle: 'solid',
           title: 'User View Mode',
         },
+        id: 'uitest-user-view-button',
       },
     ],
     size: 's',
@@ -227,7 +228,10 @@ const AichatView: React.FunctionComponent = () => {
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
       {showPresentationToggle() && (
-        <div className={moduleStyles.viewModeButtons}>
+        <div
+          id="uitest-view-mode-toggle-container"
+          className={moduleStyles.viewModeButtons}
+        >
           <SegmentedButtons {...viewModeButtonsProps} />
         </div>
       )}
@@ -272,7 +276,10 @@ const AichatView: React.FunctionComponent = () => {
           </>
         )}
         {viewMode === ViewMode.PRESENTATION && (
-          <div className={moduleStyles.presentationArea}>
+          <div
+            id="uitest-presentation-view-container"
+            className={moduleStyles.presentationArea}
+          >
             <PanelContainer
               id="aichat-presentation-panel"
               headerContent={'Model Card'}

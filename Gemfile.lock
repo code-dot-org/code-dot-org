@@ -39,15 +39,6 @@ GIT
       omniauth-oauth2 (>= 1.1, <= 1.8)
 
 GIT
-  remote: https://github.com/code-dot-org/omniauth-windowslive.git
-  revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
-  ref: cdo
-  specs:
-    omniauth-windowslive (0.0.11)
-      multi_json (>= 1.0.3)
-      omniauth-oauth2 (~> 1.4)
-
-GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -217,6 +208,9 @@ GEM
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
     aws-sdk-cloudwatchlogs (1.88.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-comprehend (1.87.0)
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
     aws-sdk-core (3.201.3)
@@ -616,9 +610,6 @@ GEM
     omniauth-oauth2 (1.7.3)
       oauth2 (>= 1.4, < 3)
       omniauth (>= 1.9, < 3)
-    omniauth-openid (1.0.1)
-      omniauth (~> 1.0)
-      rack-openid (~> 1.3.1)
     omniauth-rails_csrf_protection (0.1.2)
       actionpack (>= 4.2)
       omniauth (>= 1.3.1)
@@ -669,9 +660,6 @@ GEM
       rack (>= 2.0.0)
     rack-mini-profiler (3.0.0)
       rack (>= 1.2.0)
-    rack-openid (1.3.1)
-      rack (>= 1.1.0)
-      ruby-openid (>= 2.1.8)
     rack-protection (2.2.3)
       rack
     rack-session (1.0.2)
@@ -789,7 +777,6 @@ GEM
       rubocop (>= 1.7.0, < 2.0)
     rubocop-rails-accessibility (0.2.0)
       rubocop (>= 1.0.0)
-    ruby-openid (2.9.2)
     ruby-prof (1.7.0)
     ruby-progressbar (1.13.0)
     ruby-rc4 (0.1.5)
@@ -948,6 +935,7 @@ DEPENDENCIES
   aws-sdk-cloudfront
   aws-sdk-cloudwatch
   aws-sdk-cloudwatchlogs
+  aws-sdk-comprehend
   aws-sdk-core
   aws-sdk-databasemigrationservice
   aws-sdk-dynamodb
@@ -1039,9 +1027,7 @@ DEPENDENCIES
   omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.6.0)
   omniauth-microsoft_v2_auth!
-  omniauth-openid
   omniauth-rails_csrf_protection (~> 0.1)
-  omniauth-windowslive (~> 0.0.11)!
   open_uri_redirections
   os
   parallel

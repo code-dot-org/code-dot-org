@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-09-01T22:11:46.000Z",
   "level_num": "custom",
@@ -20,11 +19,9 @@
     "contained_level_names": [
       "CSA-UserInput-L1 Contained_pilot-2025"
     ],
-    "ai_tutor_available": "true",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-09-01T22:11:46.303+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L1v2_2022\\\"\"],\"cloned_from\":\"CSA U2L5-L1v2_2022\"},{\"changed_at\":\"2024-09-01 22:14:30 +0000\",\"changed\":[\"contained_level_names\",\"ai_tutor_available\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>

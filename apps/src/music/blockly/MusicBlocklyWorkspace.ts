@@ -5,6 +5,7 @@ import {Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ValueOf} from '@cdo/apps/types/utils';
 
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -90,6 +91,21 @@ export default class MusicBlocklyWorkspace {
 
     const toolboxBlocks = getToolbox(blockMode, toolbox);
 
+    // This dialog is used for naming variables, which are only present in advanced mode.
+    // Other Blockly labs use FeedbackUtils.prototype.showSimpleDialog to create a prettier dialog.
+    // See StudioApp.prototype.inject for more information.
+    const customSimpleDialog = function (options: {
+      bodyText: string;
+      promptPrefill: string;
+      onCancel: (p1: string | null) => void;
+    }) {
+      Blockly.dialog.prompt(
+        options.bodyText,
+        options.promptPrefill,
+        options.onCancel
+      );
+    };
+
     this.workspace = Blockly.inject(container, {
       toolbox: toolboxBlocks,
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
@@ -105,6 +121,8 @@ export default class MusicBlocklyWorkspace {
       readOnly: isReadOnlyWorkspace,
       useBlocklyDynamicCategories: true,
       rtl: isRtl,
+      editBlocks: getAppOptionsEditBlocks(),
+      customSimpleDialog,
     } as BlocklyOptions);
 
     this.resizeBlockly();

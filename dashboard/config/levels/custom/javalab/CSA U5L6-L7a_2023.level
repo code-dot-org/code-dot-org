@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-03-28T00:01:25.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">CustomImage</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">zeroRed()</code> method to set the red value of each <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> object to 0.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">zeroRed()</code> method on the image, then draw the image in the scene.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> class in the <strong>Documentation</strong> tab ⬆️ for help with getting and setting the color values of a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> object.\r\n</div>\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/062843b34d78c1ff2bff589701a24f50-image-1651234781336.gif)",
@@ -30,12 +34,9 @@
         "isVisible": true,
         "tabOrder": 2
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-03-28T00:01:25.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-03-28T00:01:25.879+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L6_2023\\\"\"],\"cloned_from\":\"CSA U5L6-L6_2023\"},{\"changed_at\":\"2023-03-28 00:01:27 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:47:31 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:48:41 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 17:50:49 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 19:41:32 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 19:42:42 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 19:48:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 19:49:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 19:52:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

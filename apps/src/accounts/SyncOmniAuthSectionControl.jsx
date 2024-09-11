@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {Heading1} from '@cdo/apps/legacySharedComponents/Headings';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
 } from '@cdo/apps/simpleSignUp/lti/sync/LtiSectionSyncDialog';

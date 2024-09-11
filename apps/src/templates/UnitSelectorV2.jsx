@@ -4,15 +4,15 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   asyncLoadCoursesWithProgress,
   setScriptId,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 
-import firehoseClient from '../lib/util/firehose';
+import firehoseClient from '../metrics/firehose';
 
 import styles from './unit-selector-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';

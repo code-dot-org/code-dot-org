@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-18T19:35:39.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
@@ -28,15 +32,9 @@
     "display_name": "Connect Four",
     "bubble_choice_description": "An example project that recreates the Connect Four game.",
     "thumbnail_url": "https://images.code.org/6d44a2ee8986b359d453dabbbf6c5962-Connect_Four,_John_Slegers.png",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-18T19:35:39.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-18T19:35:39.250+00:00\",\"changed\":[\"cloned from \\\"CSA U8L1-L1c_2022\\\"\"],\"cloned_from\":\"CSA U8L1-L1c_2022\"},{\"changed_at\":\"2022-04-18 19:35:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-14 00:11:32 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-26 17:04:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-26 17:04:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-26 17:04:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-26 17:06:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-17 15:19:00 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

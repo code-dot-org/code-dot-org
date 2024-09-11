@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-03-28T00:03:52.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A marketing analyst is analyzing customer feedback to identify common themes and issues. They need to count the number of times a particular keyword or phrase appears in customer reviews to gain insights into what customers are saying about their product.\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Review</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">productReviews</code>, which is a 2D array of reviews submitted each day of the week during a month.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Review</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">countTimes()</code> method to count and return the number of times the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">targetWord</code> appears in each review in <code style=\"background-color: #ececec; color: black; font-weight: bold;\">productReviews</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ReviewRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">countTimes()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">indexOf()</code> method.\r\n</div>",
@@ -43,12 +47,9 @@
         "isVisible": true,
         "tabOrder": 5
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-03-28T00:03:52.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-03-28T00:03:52.284+00:00\",\"changed\":[\"cloned from \\\"CSA U5L7-IndexOf PBT_2023\\\"\"],\"cloned_from\":\"CSA U5L7-IndexOf PBT_2023\"},{\"changed_at\":\"2023-03-28 00:03:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 01:08:04 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 01:12:33 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 21:12:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 21:12:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 21:19:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 21:19:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 21:19:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 21:20:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 21:20:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-18T12:37:41.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##In ScenePlus.java:\r\n\r\n1. Write an overloaded version of the `drawText()`(#e7e8ea) method in the `Scene`(#e7e8ea) class. The method takes a `String`(#e7e8ea) parameter for the text to draw in the scene.\r\n\r\n   * The method should call the `setTextStyle()`(#e7e8ea) method in the `Scene`(#e7e8ea) to set the `Font`(#e7e8ea) and `FontStyle`(#e7e8ea) for the text.\r\n   \r\n   * The method should also call the `setTextHeight()`(#e7e8ea) and `setTextColor()`(#e7e8ea) methods to set the size and color of the text.\r\n   \r\n   * Use the `drawText()`(#e7e8ea) method in the `Scene`(#e7e8ea) class to draw the text at a specified location.\r\n\r\n##In MyTheater.java:\r\n\r\n2. Call the overloaded `drawText()`(#e7e8ea) method.\r\n\r\n##Save your `ScenePlus`(#e7e8ea) class to the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png) !",
@@ -20,16 +24,10 @@
       }
     },
     "encrypted_exemplar_sources": "88cqqh4PFE13VUB7Wdee/b0dxeEfZcOIwxv+hsPvwwI8RYHd81Vv10gpE6uO\niJk1iXz8CJhh5mEyuT0OjhJLT3zuvEK7V+ctavkVTWXA2G5wkm2xJ4DDUSMk\nlzrB/3bHf1VMbVUn7C/Y9C+s7gL75T3X/RIQ8bEdBhMeSFxGwgEoOama8u3J\nuUeq/UzI5db0BtYER5/yYbEWOxkX09M9QSDJHxSRknrFMYf+DGZIyGV4d8Lc\niRvLL+iXil5trSeUrtdsaMcYPO2KKPagJVew+M/ULxrMwYu0nwCa4oSFYCJu\ngyrb2W/EO0eWpqCnGObCy8n7VHuQIMmxptj3duopQbPpffken63LAqfQQ1Zc\nnZvJlfM6ust57Q7buxVmWNJrljkjqDXBXPpbVOI87zAFR7b3O4wB5A0OcAC8\nyvdd0jDWyv2Af8yULdmhn6cM7ohGFfxaIYgvVsNTlR8DuDJbWh9oYsN1/WQB\nQvZz7CHVpGob+XmwU4QOB+DQ6qzQpQ8eQCgfxpebd5E8WjnN97NAoocOPwsJ\nBPLzQzCofAnOG36MmU13QXJTdvUYTL4OToVJyWWsiLuLWUGfl9VJMp1CLXph\nxpvTD0s9olmi5GEJ0dJSFTh/m+jinbGaonsbtTwj/c2FWbe8UsU5R335tVhX\nd+fstFotP/CH2DQW3uYXuMuYsnwgChp8z0J4oKG+loq0/XKhrbcWorwa6Pqv\nvRqdignDqqR3f9dT2xw+c2GA84lZ/6M4TDSjHND4p4Q3mYi64BZz/A4oulXJ\n7R7fWntGlwX2usHnPRKow+XIxblmVWP+nMRc7kLCKhaqjZFhyS1Aq9PHihpH\nKKtpaPqLogrLcidzl0XQsP4oHhzVK23+8uBHrI/7yZbqHOOU/o6OYX2HP5no\nX3jmdoY6Z8sT/egWKsvTdn11TeHd3VDgxOed+8ZhdeY9E+lBsY9qrB5K2SSl\nNpXGyBbOZlSbIQ/i8qJpziOI0vSFByeGpKJFywTQ9TmZ0dICt0WWOB29+2SU\nB42hkevMnwXTzZc4ZOV1Iw3/GtrXsfg+c7TXx4X1ePskX1A=\n",
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/acb1e42e09cd5b976d9eab07a5bfc102-U7L3-L2d.gif"
+    "thumbnail_url": "https://images.code.org/acb1e42e09cd5b976d9eab07a5bfc102-U7L3-L2d.gif",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-18T12:37:41.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-18T12:37:41.477+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L2c_2022\\\"\"],\"cloned_from\":\"CSA U7L3-L2c_2022\"},{\"changed_at\":\"2022-04-18 12:37:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-10 20:20:11 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-12 14:32:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-12 14:40:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-12 14:45:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-12 14:54:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-12 14:56:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 13:37:20 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
