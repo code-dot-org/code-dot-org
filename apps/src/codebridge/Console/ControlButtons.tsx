@@ -5,10 +5,9 @@ import Button from '@cdo/apps/componentLibrary/button';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {setHasRun, setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../codebridgeContext';
