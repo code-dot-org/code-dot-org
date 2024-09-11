@@ -90,6 +90,8 @@ import {parseElement as parseXmlElement} from './xml';
 
 var codegen = require('./lib/tools/jsinterpreter/codegen');
 
+var copyrightStrings;
+
 /**
  * If the bigPlayspace is enabled, either by experiment or by level property,
  * then the padding can be configured via query param as well.
@@ -337,6 +339,7 @@ StudioApp.prototype.init = function (config) {
   this.config = config;
 
   config.getCode = this.getCode.bind(this);
+  copyrightStrings = config.copyrightStrings;
 
   if (config.legacyShareStyle && config.hideSource) {
     $('body').addClass('legacy-share-view');
@@ -1025,6 +1028,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     i18nDropdown: '',
     privacyPolicyInBase: false,
     copyrightInBase: false,
+    copyrightStrings: copyrightStrings,
     baseMoreMenuString: msg.builtOnCodeStudio(),
     baseStyle: {
       paddingLeft: 0,
