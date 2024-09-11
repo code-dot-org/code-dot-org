@@ -20,17 +20,8 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
     if (voices.length === 0) {
       return;
     }
-    const voicesFiltered = voices.filter(voice => voice.lang === currentLocale);
-    console.log(
-      `TextToSpeech: found ${voicesFiltered.length} of ${voices.length} possible voices`
-    );
-    if (voicesFiltered.length === 0) {
-      return;
-    }
-    const voice = voicesFiltered[0];
     const plainText = markdownToTxt(text);
     const utterance = new SpeechSynthesisUtterance(plainText);
-    utterance.voice = voice;
     utterance.lang = currentLocale;
     speechSynthesis.cancel();
     speechSynthesis.speak(utterance);
