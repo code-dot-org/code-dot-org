@@ -61,11 +61,11 @@ export interface ProjectSources {
 export type Source = BlocklySource | MultiFileSource;
 
 export interface SourceUpdateOptions {
-  currentVersion: string;
+  currentVersion?: string;
   replace: boolean;
   firstSaveTimestamp: string;
   tabId: string | null;
-  projectType?: ProjectType;
+  projectType: ProjectType | undefined;
 }
 
 // -- BLOCKLY -- //

@@ -68,29 +68,24 @@ export class RemoteSourcesStore implements SourcesStore {
     projectType?: ProjectType,
     forceNewVersion = false
   ) {
-    let options = undefined;
-    if (this.currentVersionId) {
-      // If forceNewVersion is set to true, we will not replace the existing version (i.e., we will create
-      // a new version). Otherwise we check if we should replace the existing version based on the last new
-      // version saved in this session.
-      const replaceExistingVersion =
-        !forceNewVersion && this.shouldReplaceExistingVersion();
-      if (!replaceExistingVersion) {
-        // If we're are creating a new version, update the last new version time.
-        this.lastNewVersionTime = Date.now();
-      }
-      options = {
-        currentVersion: this.currentVersionId,
-        replace: replaceExistingVersion,
-        firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
-        tabId: getTabId(),
-        projectType,
-      };
-    } else {
-      options = {
-        projectType,
-      };
+    // If forceNewVersion is set to true, we will not replace the existing version (i.e., we will create
+    // a new version). Otherwise we check if we should replace the existing version based on the last new
+    // version saved in this session.
+    const replaceExistingVersion =
+      !forceNewVersion && this.shouldReplaceExistingVersion();
+    if (!replaceExistingVersion) {
+      // If we're are creating a new version, update the last new version time.
+      this.lastNewVersionTime = Date.now();
     }
+    const optionsWithoutVersionId = {
+      replace: replaceExistingVersion,
+      firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
+      tabId: getTabId(),
+      projectType,
+    };
+    const options = this.currentVersionId
+      ? {...optionsWithoutVersionId, currentVersion: this.currentVersionId}
+      : optionsWithoutVersionId;
     const response = await sourcesApi.update(channelId, sources, options);
 
     if (response.ok) {

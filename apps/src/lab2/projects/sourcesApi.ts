@@ -28,7 +28,7 @@ export async function get(
 export async function update(
   channelId: string,
   sources: ProjectSources,
-  options?: SourceUpdateOptions | {projectType: string | undefined}
+  options?: SourceUpdateOptions
 ): Promise<Response> {
   const url = rootUrl(channelId) + stringifyQueryParams(options);
   return fetch(url, {
