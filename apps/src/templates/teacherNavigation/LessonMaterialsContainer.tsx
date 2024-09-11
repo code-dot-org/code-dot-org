@@ -7,14 +7,27 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
+import ResourceRow from './ResourceRow';
+
 export type Lesson = {
   name: string;
   id: number;
   position: number;
+  resources: {
+    Teacher: {
+      key: string;
+      name: string;
+      url: string;
+      downloadUrl: string | null;
+      audience: string;
+      type: string;
+    }[];
+  };
 };
 
 interface LessonMaterialsData {
   title: string;
+  unitNumber: number;
   lessons: Lesson[];
 }
 
@@ -51,29 +64,28 @@ const createDisplayName = (lessonName: string, lessonPosition: number) => {
 
 const LessonMaterialsContainer: React.FC = () => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
-
-  // Memoize the lessons to ensure they only change when loadedData changes
   const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
 
-  const [selectedLesson, setSelectedLesson] = useState({
-    text: 'No lesson available',
-    value: '',
-  });
+  const getLessonFromId = (lessonId: number): Lesson | null => {
+    return lessons.find(lesson => lesson.id === lessonId) || null;
+  };
 
-  // UseEffect to update selected lesson once data is available
+  const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
+
   React.useEffect(() => {
     if (lessons.length > 0) {
-      setSelectedLesson({
-        text: createDisplayName(lessons[0].name, lessons[0].position),
-        value: createDisplayName(lessons[0].name, lessons[0].position),
-      });
+      setSelectedLesson(lessons[0]);
     }
   }, [lessons]);
+
+  const onDropdownChange = (value: string) => {
+    setSelectedLesson(getLessonFromId(Number(value)));
+  };
 
   const generateLessonDropdownOptions = useCallback(() => {
     return lessons.map((lesson: Lesson) => {
       const displayName = createDisplayName(lesson.name, lesson.position);
-      return {text: displayName, value: displayName};
+      return {text: displayName, value: lesson.id.toString()};
     });
   }, [lessons]);
 
@@ -85,17 +97,21 @@ const LessonMaterialsContainer: React.FC = () => {
   return (
     <div>
       <SimpleDropdown
-        labelText={i18n.lesson()}
-        selectedValue={selectedLesson.value}
-        onChange={event =>
-          setSelectedLesson({
-            text: event.target.value,
-            value: event.target.value,
-          })
-        }
+        labelText={i18n.chooseLesson()}
+        isLabelVisible={false}
+        onChange={event => onDropdownChange(event.target.value)}
         items={lessonOptions}
+        selectedValue={
+          selectedLesson ? selectedLesson.id.toString() : 'no lesson'
+        }
         name={'lessons-in-assigned-unit-dropdown'}
         size="s"
+      />
+      {/* Note that this is just a "proof of concept row" - the actual implementation would be more complex */}
+      <ResourceRow
+        unitNumber={5} // note that this is a placeholder value
+        lessonNumber={selectedLesson?.position || null}
+        resource={selectedLesson?.resources.Teacher[0] || null} // note that this is a placeholder value
       />
     </div>
   );

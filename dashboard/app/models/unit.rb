@@ -1604,6 +1604,7 @@ class Unit < ApplicationRecord
       title: title_for_display,
       name: name,
       link: script_path(self),
+      unitNumber: unit_number,
       version_year: version_year,
       course_id: unit_group.try(:id),
       courseVersionId: get_course_version&.id,
@@ -1762,6 +1763,15 @@ class Unit < ApplicationRecord
       scope: [:data, :script, :name, name],
       smart: true
     )
+  end
+
+  def unit_number
+    has_prefix = unit_group&.has_numbered_units
+
+    return nil unless has_prefix
+
+    position = unit_group_units&.first&.position
+    return position
   end
 
   def title_for_display
