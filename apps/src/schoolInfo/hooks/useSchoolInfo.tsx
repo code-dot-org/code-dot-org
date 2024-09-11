@@ -110,6 +110,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
         .sort((a, b) => a.text.localeCompare(b.text));
       setSchoolsList(schools);
 
+      // this will auto select the school from the fetched list of schools if the user is updating their school info
       if (schools.some(school => school.value === detectedSchoolId)) {
         setSchoolId(detectedSchoolId);
       }
