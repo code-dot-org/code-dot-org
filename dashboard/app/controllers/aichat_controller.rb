@@ -154,12 +154,6 @@ class AichatController < ApplicationController
     render json: aichat_events
   end
 
-  def check_message_safety
-    string_to_check = params[:message]
-    response_body = AichatSafetyHelper.get_llmguard_response(string_to_check)
-    render(status: :ok, json: response_body)
-  end
-
   # GET /aichat/user_has_access
   def user_has_access
     render(status: :ok, json: {userHasAccess: current_user&.has_aichat_access?})

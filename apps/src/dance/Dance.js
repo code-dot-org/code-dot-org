@@ -8,7 +8,7 @@ import {Provider} from 'react-redux';
 
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
@@ -17,10 +17,10 @@ import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArti
 import project from '../code-studio/initApp/project';
 import {TestResults} from '../constants';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {EVENTS} from '../lib/util/AnalyticsConstants';
-import analyticsReporter from '../lib/util/AnalyticsReporter';
 import {commands as audioCommands} from '../lib/util/audioApi';
 import logToCloud from '../logToCloud';
+import {EVENTS} from '../metrics/AnalyticsConstants';
+import analyticsReporter from '../metrics/AnalyticsReporter';
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
 import AppView from '../templates/AppView';
