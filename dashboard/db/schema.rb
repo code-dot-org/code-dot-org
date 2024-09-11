@@ -2183,14 +2183,6 @@ ActiveRecord::Schema.define(version: 2024_09_11_181608) do
     t.index ["user_level_id"], name: "index_teacher_scores_on_user_level_id"
   end
 
-  create_table "trophies", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.string "name"
-    t.string "image_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["name"], name: "index_trophies_on_name", unique: true
-  end
-
   create_table "unit_groups", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.text "properties"
@@ -2373,15 +2365,6 @@ ActiveRecord::Schema.define(version: 2024_09_11_181608) do
     t.datetime "deleted_at"
     t.index ["script_id"], name: "index_user_scripts_on_script_id"
     t.index ["user_id", "script_id", "deleted_at"], name: "index_user_scripts_on_user_id_and_script_id_and_deleted_at", unique: true
-  end
-
-  create_table "user_trophies", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "trophy_id", null: false
-    t.integer "concept_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["user_id", "trophy_id", "concept_id"], name: "index_user_trophies_on_user_id_and_trophy_id_and_concept_id", unique: true
   end
 
   create_table "users", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
