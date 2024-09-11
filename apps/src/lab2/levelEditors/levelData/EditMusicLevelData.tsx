@@ -5,7 +5,9 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import {BlockMode, DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
+import globals from '@cdo/apps/music/globals';
 import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
+import MusicPlayer from '@cdo/apps/music/player/MusicPlayer';
 import {MusicLevelData} from '@cdo/apps/music/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
@@ -31,6 +33,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
 }) => {
   useEffect(() => {
     setUpBlocklyForMusicLab();
+    globals.setPlayer(new MusicPlayer());
   }, []);
 
   const [levelData, setLevelData] = useState(initialLevelData);
@@ -41,11 +44,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
 
   // Fetch library whenever it changes
   useEffect(() => {
-    const libraryName = levelData.library;
-    if (libraryName === undefined) {
-      return;
-    }
-
+    const libraryName = levelData.library || DEFAULT_LIBRARY;
     MusicLibrary.loadLibrary(libraryName).then(library => {
       if (!loadedLibraries[libraryName]) {
         setLoadedLibraries({...loadedLibraries, [libraryName]: library});
@@ -167,11 +166,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       <hr />
       <CollapsibleSection headerContent="Toolbox">
         <EditMusicToolbox
-          toolbox={
-            levelData.toolbox || {
-              blocks: {},
-            }
-          }
+          toolbox={levelData.toolbox}
           blockMode={levelData.blockMode || BlockMode.SIMPLE2}
           onChange={toolbox => setLevelData({...levelData, toolbox})}
           onBlockModeChange={blockMode =>
@@ -185,7 +180,6 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               },
             })
           }
-          startSources={levelData.startSources}
         />
       </CollapsibleSection>
       <hr />

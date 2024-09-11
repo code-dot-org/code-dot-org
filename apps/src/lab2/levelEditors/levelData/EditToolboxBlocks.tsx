@@ -1,14 +1,16 @@
 import classNames from 'classnames';
+import {isEqual} from 'lodash';
 import React, {useCallback} from 'react';
 
+import {Button} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {BlockTypes} from '@cdo/apps/music/blockly/blockTypes';
-import {categoryTypeToLocalizedName} from '@cdo/apps/music/blockly/toolbox';
 import {
-  defaultMaps,
-  options,
-} from '@cdo/apps/music/blockly/toolbox/definitions';
+  categoryTypeToLocalizedName,
+  dynamicCategories,
+} from '@cdo/apps/music/blockly/toolbox';
+import {defaultMaps} from '@cdo/apps/music/blockly/toolbox/definitions';
 import {
   Category,
   CategoryBlocksMap,
@@ -48,10 +50,9 @@ const EditToolboxBlocks: React.FC<EditToolboxBlocksProps> = ({
   blockMode,
 }) => {
   const defaultBlocks = defaultMaps[blockMode];
-  const defaultOptions = options[blockMode];
-  const specialCategories = (
-    [Category.Functions, Category.Variables] as const
-  ).filter(category => defaultOptions[`include${category}`]);
+  const includedDynamicCategories = dynamicCategories.filter(
+    category => defaultBlocks[category]
+  );
 
   const toggleBlock = useCallback(
     (category: Category, block: BlockTypes | string, checked: boolean) => {
@@ -88,26 +89,46 @@ const EditToolboxBlocks: React.FC<EditToolboxBlocksProps> = ({
     [blocksMap, onChange, defaultBlocks]
   );
 
-  const multiSelectItems = getTypedKeys(defaultBlocks).map(category => {
-    const categoryItems = (defaultBlocks[category] || []).map(block => {
+  const multiSelectItems = getTypedKeys(defaultBlocks)
+    .filter(category => !dynamicCategories.includes(category))
+    .map(category => {
+      const categoryItems = (defaultBlocks[category] || []).map(block => {
+        return {
+          id: block,
+          label: blockDescriptions[block] || block,
+          selected: blocksMap[category]?.includes(block) || false,
+        };
+      });
       return {
-        id: block,
-        label: blockDescriptions[block] || block,
-        selected: blocksMap[category]?.includes(block) || false,
+        categoryId: category,
+        categoryLabel: categoryTypeToLocalizedName[category],
+        categoryItems,
       };
     });
-    return {
-      categoryId: category,
-      categoryLabel: categoryTypeToLocalizedName[category],
-      categoryItems,
-    };
-  });
 
   return (
     <div className={styles.section}>
       <BodyTwoText className={classNames(styles.noMargin)}>
         Allowed Blocks:
       </BodyTwoText>
+      <div className={classNames(styles.verticalFlex, styles.gapMedium)}>
+        <Button
+          text="Select All"
+          onClick={() => onChange(defaultBlocks)}
+          size="xs"
+          iconLeft={{iconName: 'circle-check'}}
+          disabled={isEqual(blocksMap, defaultBlocks)}
+        />
+        <Button
+          text="Clear All"
+          onClick={() => onChange({})}
+          size="xs"
+          iconLeft={{iconName: 'ban'}}
+          color="destructive"
+          type="secondary"
+          disabled={Object.keys(blocksMap).length === 0}
+        />
+      </div>
       <MultiCategorySelect
         items={multiSelectItems}
         onToggle={(categoryId, itemId, selected) =>
@@ -117,7 +138,7 @@ const EditToolboxBlocks: React.FC<EditToolboxBlocksProps> = ({
           toggleCategory(categoryId as Category, selected)
         }
       />
-      {specialCategories.map(category => (
+      {includedDynamicCategories.map(category => (
         <Checkbox
           key={category}
           name={`include-${category}`}

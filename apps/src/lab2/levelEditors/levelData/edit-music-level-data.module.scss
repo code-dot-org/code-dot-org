@@ -111,8 +111,6 @@
 }
 
 .previewWorkspaceContainer {
-  // Prevent interaction with the workspace preview
-  pointer-events: none;
   width: 100%;
   min-height: 500px;
 }
@@ -122,4 +120,9 @@
   background-color: $neutral_light;
   border-radius: 4px;
   margin-bottom: 32px;
+}
+
+.verticalLine {
+  width: 1px;
+  background-color: $neutral_dark20;
 }

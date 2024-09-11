@@ -4,7 +4,7 @@ import appConfig from '../../appConfig';
 import {BlockMode} from '../../constants';
 import {BlockTypes} from '../blockTypes';
 
-import {CategoryBlocksMap, ToolboxOptions} from './types';
+import {CategoryBlocksMap} from './types';
 
 /**
  * Default toolbox category-blocks maps for each block mode.
@@ -25,6 +25,8 @@ export const defaultMaps: {
       'math_modulo',
     ],
     Logic: ['controls_if', 'logic_compare'],
+    Functions: [],
+    Variables: [],
   },
   [BlockMode.SIMPLE2]: {
     Play: [
@@ -51,15 +53,6 @@ export const defaultMaps: {
       BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
       BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
     ],
-  },
-};
-
-export const options: {[mode in ValueOf<typeof BlockMode>]: ToolboxOptions} = {
-  [BlockMode.ADVANCED]: {
-    includeFunctions: true,
-    includeVariables: true,
-  },
-  [BlockMode.SIMPLE2]: {
-    includeFunctions: true,
+    Functions: [],
   },
 };

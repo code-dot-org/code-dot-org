@@ -5,7 +5,7 @@ import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
 import {BlockMode} from '../../constants';
 import musicI18n from '../../locale';
 
-import {defaultMaps, options} from './definitions';
+import {defaultMaps} from './definitions';
 import toolboxBlocks from './toolboxBlocks';
 import {Category, ToolboxData} from './types';
 
@@ -16,6 +16,15 @@ const baseCategoryCssConfig = {
   row: `${moduleStyles.toolboxRow} blocklyTreeRow`, // Used to look up category labels in UI tests
   label: moduleStyles.toolboxLabel,
 };
+
+const dynamicCategoryLabels: {
+  [key in Category]?: string;
+} = {
+  [Category.Functions]: 'PROCEDURE',
+  [Category.Variables]: 'VARIABLE',
+};
+
+export const dynamicCategories = getTypedKeys(dynamicCategoryLabels);
 
 export const categoryTypeToLocalizedName: {[key in Category]: string} = {
   Control: musicI18n.blockly_toolboxCategoryControl(),
@@ -39,7 +48,6 @@ export function getToolbox(
   levelToolbox?: ToolboxData
 ) {
   const categoryBlocksMap = defaultMaps[blockMode];
-  const toolboxOptions = options[blockMode];
   const allowList = levelToolbox?.blocks;
   const type = levelToolbox?.type;
 
@@ -51,6 +59,16 @@ export function getToolbox(
   for (const category of getTypedKeys<Category>(categoryBlocksMap)) {
     // Skip if we aren't allowing anything from this category.
     if (allowList && !allowList[category]) {
+      continue;
+    }
+
+    if (dynamicCategories.includes(category)) {
+      toolbox.contents.push({
+        kind: 'category',
+        name: categoryTypeToLocalizedName[category],
+        cssconfig: baseCategoryCssConfig,
+        custom: dynamicCategoryLabels[category],
+      });
       continue;
     }
 
@@ -80,27 +98,5 @@ export function getToolbox(
       });
     }
   }
-
-  if (toolboxOptions?.includeVariables) {
-    toolbox.contents.push({
-      kind: 'category',
-      name: categoryTypeToLocalizedName[Category.Variables],
-      cssconfig: baseCategoryCssConfig,
-      custom: 'VARIABLE',
-    });
-  }
-
-  if (toolboxOptions?.includeFunctions) {
-    // Skip if functions are not allowed.
-    if (!allowList || allowList[Category.Functions]) {
-      toolbox.contents.push({
-        kind: 'category',
-        name: categoryTypeToLocalizedName[Category.Functions],
-        cssconfig: baseCategoryCssConfig,
-        custom: 'PROCEDURE',
-      });
-    }
-  }
-
   return toolbox;
 }
