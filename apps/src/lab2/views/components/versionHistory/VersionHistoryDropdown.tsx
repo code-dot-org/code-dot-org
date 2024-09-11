@@ -14,7 +14,7 @@ import {
   resetToCurrentVersion,
   setViewingOldVersion,
   setRestoredOldVersion,
-  setPreviousVersionSource,
+  previewStartSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -125,7 +125,15 @@ const VersionHistoryDropdown: React.FunctionComponent<
   );
 
   const startOver = useCallback(() => {
-    dispatch(setAndSaveProjectSource(startSource));
+    // We force a new version on start over so the user doesn't lose their recent edits.
+    // We also force the save to occur immediately to avoid confusion.
+    dispatch(
+      setAndSaveProjectSource(
+        startSource,
+        /* forceSave */ true,
+        /* forceNewVersion */ true
+      )
+    );
     successfulRestoreCleanUp(startSource);
     closeDropdown();
   }, [dispatch, startSource, successfulRestoreCleanUp, closeDropdown]);
@@ -178,7 +186,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
     (e: React.ChangeEvent<HTMLInputElement>, isLatest: boolean) => {
       setSelectedVersion(e.target.value);
       if (e.target.value === INITIAL_VERSION_ID) {
-        dispatch(setPreviousVersionSource(startSource));
+        dispatch(previewStartSource({startSource}));
       } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {
