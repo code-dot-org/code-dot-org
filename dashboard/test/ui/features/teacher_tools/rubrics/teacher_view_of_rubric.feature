@@ -18,7 +18,6 @@ Scenario: Teachers can give and send feedback on the rubric to students.
 
   # Teacher can see and submit feedback for a student
   Then I sign in as "Teacher_Lillian" and go home
-  And I give use "Teacher_Lillian" authorized teacher permission
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I wait to see "#ui-floatingActionButton"
   And I wait until element "#teacher-panel-container" is visible
