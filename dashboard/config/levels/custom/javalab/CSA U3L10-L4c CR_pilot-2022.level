@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:45.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L10-L3c PBT_pilot-2022",
@@ -34,12 +38,9 @@
         "text": "/*\n * Analyzes data about states\n */\npublic class States {\n\n  private String[] stateNames;\n  private int[] admissionYears;\n\n  /*\n   * Constructor to create an States object with the specified\n   * arrays of state names and years they were admitted\n   */\n  public States(String[] stateNames, int[] admissionYears) {\n    this.stateNames = stateNames;\n    this.admissionYears = admissionYears;\n  }\n\n  /*\n   * Returns true if there are duplicate years in\n   * the admissionYears array, otherwise returns false\n   */\n  public boolean hasDuplicates() {\n    // TO DO #1: Traverse the admissionYears array to determine if there\n    // are duplicate values and return the result.\n\n\n    return false;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:45.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:45.872+00:00\",\"changed\":[\"cloned from \\\"CSA U3L10-L4c CR_2022\\\"\"],\"cloned_from\":\"CSA U3L10-L4c CR_2022\"},{\"changed_at\":\"2022-09-09 19:41:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

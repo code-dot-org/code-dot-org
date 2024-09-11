@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-03-25T13:05:06.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L9-L4d PBT_2022",
@@ -29,12 +33,9 @@
         "text": "York Chocolate\nTurkish Van\nTurkish Angora\nToyger\nTonkinese\nSphynx\nSomali\nSnowshoe\nSingapura\nSiberian\nSiamese\nSelkirk Rex\nScottish Fold\nSavannah\nRussian Blue\nRagdoll\nRagamuffin\nPixie-bob\nPersian\nOriental\nOcicat\nNorwegian Forest Cat\nNebelung\nMunchkin\nManx\nMalayan\nMaine Coon\nLaPerm\nKurilian\nKorat\nKhao Manee\nJavanese\nJapanese Bobtail\nHimalayan\nHavana Brown\nExotic Shorthair\nEuropean Burmese\nEgyptian Mau\nDragon Li\nDonskoy\nDevon Rex\nCyprus\nCymric\nCornish Rex\nColorpoint Shorthair\nCheetoh\nChausie\nChartreux\nChantilly-Tiffany\nCalifornia Spangled\nBurmilla\nBurmese\nBritish Shorthair\nBritish Longhair\nBombay\nBirman\nBengal\nBambino\nBalinese\nAustralian Mist\nArabian Mau\nAmerican Wirehair\nAmerican Shorthair\nAmerican Curl\nAmerican Bobtail\nAegean\nAbyssinian",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-03-25T13:05:06.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-03-25 13:05:09 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 16:26:29 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 19:06:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 19:09:03 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 19:22:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 19:45:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-03 13:00:30 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 12:44:28 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 19:30:03 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-24 15:16:20 +0000\",\"changed\":[\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-11 23:52:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-11 23:52:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-11 23:52:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

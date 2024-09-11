@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-12T19:20:05.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A weather analyst wants to find out which city had the highest temperature over several days. They have the following values:\r\n\r\n![](https://images.code.org/96f3b31d65d7611e43d0fd780ce43f27-image-1651005727636.png)\r\n\r\nwhere each row represents New York, Los Angeles, Miami, and Seattle, respectively. Each column represents the temperature on March 29th, March 30th, March 31st, April 1st, and April 2nd, respectively.\r\n\r\nThe weather analyst wants to find the overall average temperature.\r\n\r\n##In Temperatures.java:\r\n\r\n1. Write the method `calculateAverage()`(#e7e8ea) using enhanced `for`(#e7e8ea) loops.\r\n\r\n   * Calculate and return the overall average of all the temperatures.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `calculateAverage()`(#e7e8ea) method and print the result.\r\n\r\n::: details [**Show Me How**]\r\nTraversing a 2D array using an enhanced `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (dataType[] rowName : arrayName) {\r\n    for (dataType valueName : rowName) {\r\n      // code to execute\r\n    }\r\n  }\r\n  ```\r\n:::",
@@ -24,15 +28,9 @@
       }
     },
     "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6FIJOKrqFlPhddRyRDehem6vr7Vd+GKAFh5jKcXW\n7v7AUI9ns492espLSyOFR4HwTQhGnSCbqTtxT70rBPcxLdyBvhdiTSj+1HKN\n3QeDNH35G8Qe7ztvXk6uwNRDNebKrTTOAHVtcYd5HqMSbkkZSJdvl1k3ZfHi\nwyrKp2oT1OVM1I8CAk5xS1fr8U9ypFygWwgAoaxz8NWBRguJiZZgAmuJqSQs\n+3rwWdBzG+N4W/d0H9qtD7myBIeRh/j8j4KVPQL7bFNEnjxEH7mAeka2X39H\nIT71cGIhhZRI0rNBiiG7d10WT37C1qiRp+RVbXXnT5TMV/7737RHYszxMCGW\nkZWotUdGqY7XfbrhiiHmwenR9FBKFjnDlK8Lq3GedjkpK4zG4CMiDhq4QPeX\n/9Q7DY4MAxVocgVMxAPxWJZhxTFpXA6iPMEcdBn9cKzOo3miHUWMF7JVf8C0\nV399Gix3mSbZPA8WGm6d/q/SjJ/h7lMYIkfFAervkBK51Tf7kCn9RjDAf7sW\njZZMAnUo1x0aGm52XqfF3+5vpOIsuSI/uDoeCPAqzn4ZZWym71GmXda16FJt\nbfPf22gSzl+7VY1yjHCgyNfzVN9VqzbIkYArLaL5D8XrBTyQ+0/nrBpkOoqW\nFIYShFrxUA9pVqdyc3NjKk+469fnl8wn8I4g/t6CGG1ZwJsb4JwjTese1u9r\ne1U/OuP2vMFM12aOyFr92XYhEluZ82U3pPJRcTSerP5GOOjuO55jk8jbwU55\nA/q6va48e3eIeKlmW+KsD9FD3DISfLs6J5sA1fl683z4rGBcEV73nHkt+IOu\nozpBboWFb331L4OBy2A2PMpOzqO1I8Luhvkez5NnTmGbAiLjaH7kBQtXy/u7\ne7edb9kBFgtLU5PIQpr8dT3PNicV6If5/Vr1GoXBwMbNpjpanDa4C0QE1UBH\nbccaGCAQCJfvUb8YIp+wiAg+hInHQ9UigcSAN/zlbCrIYbVuY2VBx9z/+1AQ\n3sw5e8Q40Rl7rvFG8UvSqkpBhDSRfeOObtOhxej/6em3MiIKPMRWHeQC1v6g\nAV+GfiPFRgMBQuXNbFIe9HIeU77CwqKutwcgIY35fsMVW/Ridr3asrG0jqT8\nATKCSTl9HE/tydOBBB6hOAxuI5nMBvAXwbaw4o3/Di8rjldMIRbhNPdUO/xi\nGLKGFkir7RjDz9AFXeab74pgIQvxORZhonxMkhnZqNoJ4AlBEzz2Xwk38UWV\n4pHWoWANwdUDDIr2r2nVkw6I+otPCiaCbFU4VEYEHdcUppL0YGj962zeqIj0\nMdTOGXeeMbCJ//rQ4oiI2m9zvJseAPYvS6Own2b7Ut87kWg0WPY7P7KhvT8R\nqndmoAmDhperAk95Wk4aYnSqFBwk+smxLdH/q1/vCZoFHhgsuDhGhDJmLZ+S\nklMtD+F/kNmBo7/X5bm14KHser1L+mvOLW6oe4Uq3ipYct9lJ+WXeFd+Tn69\ngmWkYY4953QyM3nI6sGJiAtX574CI5XXMXG2FAQQgUBqo9/4qfgN8MkYfYEo\nYHV0OcjYWq0j40diXEzPsnKuuZU7meCKkvB6CxQZPE3abnccTmtE++19kHa4\nIXSGFuvkJLEPIaKphQo5Z1EfgHoABZfkSCxkgrWEFb24zt2rTxYZ5HKgzGy3\nDcVw3vI6v3i/zhZ0X8k+O/qMUMFcw7qyBsolbQJkcskHedgkIL7NEQ6faDXJ\nUUQ6VaSq00n8fxhmJs9aFgsmQzb/HlS+CLeWJud1HsIR9uQKSYzlpEPEFvwn\nY7W97O1QtPGsDe87PnVt4tApvn/Hg6g1/TekON4YsKZNL1vG5BUu5MJAl7V1\nyM/MoxOScih+PsC+2H+7wLGRIhtlhixlggyTaMgflu8P7u9WXAEOw+62E5Ta\n",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-12T19:20:05.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-12T19:20:05.050+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L3a_2022\\\"\"],\"cloned_from\":\"CSA U5L5-L3a_2022\"},{\"changed_at\":\"2022-04-12 19:20:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 16:05:45 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 16:48:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 20:17:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 20:27:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 22:30:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-18 15:54:39 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-18 17:05:57 +0000\",\"changed\":[\"bubble_choice_description\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-13 14:48:17 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 23:56:04 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -27,7 +27,8 @@
         "tabOrder": 2
       }
     },
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T21:31:38.418+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-Lists PBT_2025\\\"\"],\"cloned_from\":\"CSA U6L7-Lists PBT_2025\"}]"

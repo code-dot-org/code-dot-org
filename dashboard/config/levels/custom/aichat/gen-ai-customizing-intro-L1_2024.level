@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2024-06-28T19:52:31.000Z",
   "level_num": "custom",
@@ -45,7 +46,6 @@
     },
     "name_suffix": "_2024"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:52:31.146+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L1\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:52:31.146+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L1\"},{\"changed_at\":\"2024-09-10 17:12:30 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

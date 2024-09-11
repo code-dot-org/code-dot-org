@@ -15,7 +15,8 @@
     "display_name": "Count Phrases",
     "bubble_choice_description": "Count the number of times a word or phrase appears in text.",
     "thumbnail_url": "https://images.code.org/4fd636e38bd9dcd6d98e9b67ea0b45cd-document.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:22.439+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-L4c CR_2022\\\"\"],\"cloned_from\":\"CSA U6L9-L4c CR_2022\"}]"

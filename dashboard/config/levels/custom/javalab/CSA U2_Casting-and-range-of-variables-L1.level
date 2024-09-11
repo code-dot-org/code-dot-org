@@ -12,7 +12,7 @@
     "display_name": "Predict and Run: Overflow",
     "long_instructions": "Here's some instructions",
     "mini_rubric": "false",
-    "ai_tutor_available": "true",
+    "ai_tutor_available": true,
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",

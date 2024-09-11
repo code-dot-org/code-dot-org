@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-09-20T16:41:42.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U5L1-L1 Template",
@@ -11,13 +15,10 @@
     "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYKcgMDZRYdlltGN0m8\nb+Ks/FFDaNWX+AONF/+tmRoQ03QBw1jOsqAgkf3zI1AMY2/2X1OK5v+iEffT\ngbC586p7\n",
     "display_name": "Dessert Quantities",
     "bubble_choice_description": "Write a method to get the quantities of desserts sold at a given food truck.",
-    "thumbnail_url": "https://images.code.org/967967051232cd348436b16d9d9da8e3-image-1634139162681.png"
+    "thumbnail_url": "https://images.code.org/967967051232cd348436b16d9d9da8e3-image-1634139162681.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-09-20T16:41:42.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-09-20 16:41:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 15:32:57 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 15:33:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 15:35:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 16:22:12 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

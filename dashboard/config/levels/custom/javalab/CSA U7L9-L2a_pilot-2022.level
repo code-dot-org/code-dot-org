@@ -26,7 +26,8 @@
     ],
     "display_name": "Recursion and Strings",
     "bubble_choice_description": "Trace a code segment using recursion with Strings to determine its output.",
-    "thumbnail_url": "https://images.code.org/4d10e37f04b9a39d699e4a717641cf83-font.png"
+    "thumbnail_url": "https://images.code.org/4d10e37f04b9a39d699e4a717641cf83-font.png",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:51.508+00:00\",\"changed\":[\"cloned from \\\"CSA U7L9-L2a_2022\\\"\"],\"cloned_from\":\"CSA U7L9-L2a_2022\"}]"

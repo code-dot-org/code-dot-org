@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Play Together Sequence\r\n\r\nNow create a sequence of two `play together` chunks of code. \r\n\r\n1. Connect [play together](#clickable=play-sounds-together-block) to [when run](#clickable=when-run-block).\r\n2. Then, connect another [play together](#clickable=play-sounds-together-block) after the first one. \r\n3. Customize your sound choices to make a song. ",
+    "long_instructions": "#### Play Together Sequence\r\n\r\nNow create a sequence of two `play together` chunks of code. \r\n\r\n- Connect [play together](#clickable=play-sounds-together-block) to [when run](#clickable=when-run-block).\r\n- Then, connect another [play together](#clickable=play-sounds-together-block) after the first one. \r\n- Customize your sound choices to make a song. ",
     "hide_share_and_remix": "false",
     "validations": [
       {
@@ -79,11 +79,34 @@
           ]
         },
         "type": "flyout"
+      },
+      "library": "launch2024",
+      "packId": "lady_gaga_born_this_way",
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "stop_hammer_time",
+          "cant_touch_this"
+        ],
+        "lady_gaga_born_this_way": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_tag",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "synth_main_intro",
+          "synth_big_chorus",
+          "synth_plink",
+          "synth_bounce",
+          "piano",
+          "strings"
+        ]
       }
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-05T17:40:49.891+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether\"},{\"changed_at\":\"2024-09-05 17:42:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 17:36:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 21:42:29 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-05T17:40:49.891+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether\"},{\"changed_at\":\"2024-09-05 17:42:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 17:36:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 21:42:29 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-10 22:58:12 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-10 23:04:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-10 23:11:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-10 23:39:23 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
