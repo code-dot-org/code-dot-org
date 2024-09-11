@@ -7,20 +7,25 @@ import i18n from '@cdo/locale';
 
 describe('SchoolZipSearch', () => {
   const mockSetSchoolZip = jest.fn();
+  const DEFAULT_PROPS = {
+    fieldNames: {
+      ncesSchoolId: 'ncesSchoolId',
+      schoolName: 'schoolName',
+    },
+    schoolZip: '',
+    setSchoolZip: mockSetSchoolZip,
+  };
+
+  function renderDefault(propOverrides = {}) {
+    render(<SchoolZipSearch {...DEFAULT_PROPS} {...propOverrides} />);
+  }
 
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   it('should render with initial props', () => {
-    render(
-      <SchoolZipSearch
-        fieldNames={{schoolZip: 'schoolZip'}}
-        schoolZip="12345"
-        setSchoolZip={mockSetSchoolZip}
-        schoolZipIsValid={true}
-      />
-    );
+    renderDefault({schoolZip: '12345'});
 
     expect(
       screen.getByLabelText(i18n.enterYourSchoolZip())
@@ -29,14 +34,7 @@ describe('SchoolZipSearch', () => {
   });
 
   it('should call setSchoolZip on zip code change', () => {
-    render(
-      <SchoolZipSearch
-        fieldNames={{schoolZip: 'schoolZip'}}
-        schoolZip=""
-        setSchoolZip={mockSetSchoolZip}
-        schoolZipIsValid={true}
-      />
-    );
+    renderDefault();
 
     fireEvent.change(screen.getByLabelText(i18n.enterYourSchoolZip()), {
       target: {value: '67890'},
@@ -46,27 +44,13 @@ describe('SchoolZipSearch', () => {
   });
 
   it('should display an error message when the zip code is invalid', () => {
-    render(
-      <SchoolZipSearch
-        fieldNames={{schoolZip: 'schoolZip'}}
-        schoolZip="12345"
-        setSchoolZip={mockSetSchoolZip}
-        schoolZipIsValid={false}
-      />
-    );
+    renderDefault({schoolZip: 'BADZIP'});
 
     expect(screen.getByText(i18n.zipInvalidMessage())).toBeInTheDocument();
   });
 
   it('should not display an error message when the zip code is valid', () => {
-    render(
-      <SchoolZipSearch
-        fieldNames={{schoolZip: 'schoolZip'}}
-        schoolZip="12345"
-        setSchoolZip={mockSetSchoolZip}
-        schoolZipIsValid={true}
-      />
-    );
+    renderDefault({schoolZip: '12345'});
 
     expect(
       screen.queryByText(i18n.zipInvalidMessage())
