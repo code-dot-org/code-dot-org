@@ -51,7 +51,7 @@ const labeledGridLayouts = {
   },
   vertical: {
     gridLayoutRows: '1fr 1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
+    gridLayoutColumns: '300px minmax(0, 1fr) 400px',
     gridLayout: `
     "info-panel workspace console"
     "file-browser workspace console"`,
