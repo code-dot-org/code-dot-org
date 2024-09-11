@@ -232,6 +232,7 @@ gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
 gem 'aws-sdk-cloudwatchlogs'
+gem 'aws-sdk-comprehend'
 gem 'aws-sdk-core'
 gem 'aws-sdk-databasemigrationservice'
 gem 'aws-sdk-dynamodb'
@@ -296,8 +297,6 @@ gem 'octokit'
 # Used to create a prefix trie of student names within a section
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie', '>= 2.1.1'
-
-gem 'omniauth-openid'
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.

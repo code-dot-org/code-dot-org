@@ -3,8 +3,8 @@ import {useSelector} from 'react-redux';
 
 import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import {updateSectionAiTutorEnabled} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';

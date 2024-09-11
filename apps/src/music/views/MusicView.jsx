@@ -673,6 +673,7 @@ class UnconnectedMusicView extends React.Component {
             this.props.isProjectLevel
           }
           analyticsReporter={this.analyticsReporter}
+          blocklyWorkspace={this.musicBlocklyWorkspace}
         />
         <Callouts />
       </AnalyticsContext.Provider>

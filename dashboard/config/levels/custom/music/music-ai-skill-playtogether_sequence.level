@@ -71,19 +71,19 @@
       },
       "toolbox": {
         "blocks": {
-          "Control": [
-            "repeat_simple2",
-            "play_sounds_together"
-          ],
           "Play": [
             "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
           ]
-        }
+        },
+        "type": "flyout"
       }
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-05T17:40:49.891+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether\"},{\"changed_at\":\"2024-09-05 17:42:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-05T17:40:49.891+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether\"},{\"changed_at\":\"2024-09-05 17:42:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 17:36:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 21:42:29 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

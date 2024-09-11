@@ -38,13 +38,15 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   const [loadError, setLoadError] = useState(false);
 
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isViewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
   const toggleVersionHistory = useCallback(
     (
       e:
         | React.MouseEvent<HTMLButtonElement>
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
-      setVersionList([]);
       if (loading) {
         return;
       }
@@ -62,8 +64,8 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         projectManager
           .getVersionList()
           .then(versionList => {
-            setIsVersionHistoryOpen(true);
             setVersionList(versionList);
+            setIsVersionHistoryOpen(true);
             setLoading(false);
           })
           .catch(() => {
@@ -86,9 +88,9 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         onClick={toggleVersionHistory}
         ariaLabel={commonI18n.versionHistory_header()}
         size={'xs'}
-        disabled={isReadOnly}
+        disabled={isReadOnly && !isViewingOldVersion}
       />
-      {(isVersionHistoryOpen || loading || loadError) && (
+      {(loading || loadError) && (
         <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
           {loading && (
             <div
@@ -109,16 +111,15 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
               />
             </div>
           )}
-          {isVersionHistoryOpen && (
-            <VersionHistoryDropdown
-              versionList={versionList}
-              updatedSourceCallback={updatedSourceCallback}
-              startSource={startSource}
-              closeDropdown={() => setIsVersionHistoryOpen(false)}
-            />
-          )}
         </div>
       )}
+      <VersionHistoryDropdown
+        versionList={versionList}
+        updatedSourceCallback={updatedSourceCallback}
+        startSource={startSource}
+        closeDropdown={() => setIsVersionHistoryOpen(false)}
+        isOpen={isVersionHistoryOpen}
+      />
     </>
   );
 };
