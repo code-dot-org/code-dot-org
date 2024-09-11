@@ -26,10 +26,23 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
       },
     },
   },
-
   [BlockTypes.PLAY_PATTERN_AT_MEASURE]: {
     kind: 'block',
     type: BlockTypes.PLAY_PATTERN_AT_MEASURE,
+    inputs: {
+      measure: {
+        shadow: {
+          type: 'math_number',
+          fields: {
+            NUM: 1,
+          },
+        },
+      },
+    },
+  },
+  [BlockTypes.PLAY_CHORD_AT_MEASURE]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_CHORD_AT_MEASURE,
     inputs: {
       measure: {
         shadow: {

@@ -1,4 +1,8 @@
-import {playSound, playPatternAtMeasure} from './blocks/advanced';
+import {
+  playSound,
+  playPatternAtMeasure,
+  playChordAtMeasure,
+} from './blocks/advanced';
 import {forLoop} from './blocks/control';
 import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
 import {valueSample} from './blocks/samples';
@@ -39,6 +43,7 @@ const blockList = [
   playSound,
   playSoundAtCurrentLocation,
   playPatternAtMeasure,
+  playChordAtMeasure,
   setCurrentLocationNextMeasure,
   playSoundAtCurrentLocationSimple2,
   playPatternAtCurrentLocationSimple2,

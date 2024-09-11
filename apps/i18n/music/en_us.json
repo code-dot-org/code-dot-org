@@ -7,6 +7,8 @@
   "blockly_blockNewTrackOnTriggerTooltip": "new track on trigger",
   "blockly_blockPlayChord": "play notes {chord}",
   "blockly_blockPlayChordTooltip": "play notes",
+  "blockly_blockPlayChordAtMeasure": "play notes {chord} at {measure}",
+  "blockly_blockPlayChordAtMeasureTooltip": "play notes",
   "blockly_blockPlaySound": "play {sound}",
   "blockly_blockPlaySoundTooltip": "play sound",
   "blockly_blockPlaySoundAtMeasure": "play {sound} at {measure}",
