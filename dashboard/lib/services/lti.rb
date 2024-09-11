@@ -239,7 +239,7 @@ module Services
       end
 
       # Unarchive archived sections, even if there are no changes
-      section.update(hidden: false)
+      section.update(hidden: false) if section.hidden
 
       {
         had_changes: had_changes,
