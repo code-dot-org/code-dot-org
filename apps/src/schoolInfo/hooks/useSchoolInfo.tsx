@@ -61,11 +61,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   const [schoolName, setSchoolName] = useState(detectedSchoolName);
   const [schoolsList, setSchoolsList] = useState<SchoolDropdownOption[]>([]);
 
-  const schoolZipIsValid = useMemo(
-    () => ZIP_REGEX.test(schoolZip),
-    [schoolZip]
-  );
-
   // Memoized fetchSchools function using useCallback
   const fetchSchools = useCallback(
     (
@@ -134,7 +129,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
         setSchoolId(detectedSchoolId);
       }
     });
-  }, [schoolZip, schoolZipIsValid, detectedSchoolId, fetchSchools]);
+  }, [schoolZip, detectedSchoolId, fetchSchools]);
 
   // Handle schoolId changes
   useEffect(() => {

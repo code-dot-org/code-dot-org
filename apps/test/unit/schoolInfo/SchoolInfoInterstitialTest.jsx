@@ -35,7 +35,6 @@ describe('SchoolInfoInterstitial', () => {
       schoolId: '123',
       schoolZip: '12345',
       schoolsList: [],
-      schoolZipIsValid: true,
       setCountry: jest.fn(),
       setSchoolName: jest.fn(),
       setSchoolId: jest.fn(),
