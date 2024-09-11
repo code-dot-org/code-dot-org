@@ -1542,3 +1542,10 @@ And(/^I validate rubric ai config for all lessons$/) do
     expect(response_code).to eq(200), "Error code #{response_code}:\n#{response.body}"
   end
 end
+
+And(/^I wait until ai assessments announcement is marked as seen$/) do
+  wait_short_until do
+    response = browser_request(url: '/api/v1/users/current')
+    response['has_seen_ai_assessments_announcement']
+  end
+end

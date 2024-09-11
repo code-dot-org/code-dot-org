@@ -360,7 +360,8 @@
         "isVisible": true
       }
     },
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:22.289+00:00\",\"changed\":[\"cloned from \\\"CSA U1L4-L4b_2022\\\"\"],\"cloned_from\":\"CSA U1L4-L4b_2022\"}]"

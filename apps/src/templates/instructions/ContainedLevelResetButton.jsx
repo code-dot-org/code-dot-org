@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import color from '@cdo/apps/util/color';

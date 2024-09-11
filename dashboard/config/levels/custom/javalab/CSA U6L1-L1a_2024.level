@@ -66,7 +66,8 @@
     "display_name": "Product Review",
     "bubble_choice_description": "An example project that changes the overall sentiment of product reviews.",
     "thumbnail_url": "https://images.code.org/bcb177c1450d9fe3e096be8a1fbe551e-rating.png",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:03:59.487+00:00\",\"changed\":[\"cloned from \\\"CSA U6L1-L1a_2023\\\"\"],\"cloned_from\":\"CSA U6L1-L1a_2023\"}]"

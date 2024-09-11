@@ -7,7 +7,7 @@ import onClickOutside from 'react-onclickoutside';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import msg from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';

@@ -2,6 +2,7 @@ import React from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
 
+import {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT} from '../../constants';
 import {LevelPredictSettings} from '../types';
 
 import moduleStyles from './edit-predict-settings.module.scss';
@@ -48,7 +49,8 @@ const FreeResponseFields: React.FunctionComponent<FreeResponseFieldsProps> = ({
       </label>
       <label className={moduleStyles.fieldArea}>
         <div className={moduleStyles.label}>
-          Height of the answer textarea in px. Default is 20px.
+          Height of the answer textarea in px. Default is{' '}
+          {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT}px.
         </div>
         <input
           type="number"

@@ -3,7 +3,7 @@ import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import SchoolInfoInterstitial from '@cdo/apps/schoolInfo/SchoolInfoInterstitial';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';

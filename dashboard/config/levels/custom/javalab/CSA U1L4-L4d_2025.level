@@ -550,7 +550,8 @@
     "bubble_choice_description": "Help the `Painter` navigate through The Neighborhood to reach the traffic cone.",
     "thumbnail_url": "https://images.code.org/a2d81e2376453a3b4784cc88fc9f5c1b-U1L4-L4d.gif",
     "video_key": "csa_calling_methods",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:00:44.754+00:00\",\"changed\":[\"cloned from \\\"CSA U1L4-L4d_2023\\\"\"],\"cloned_from\":\"CSA U1L4-L4d_2023\"}]"

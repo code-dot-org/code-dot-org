@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-06T23:46:06.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -19,18 +23,12 @@
     "contained_level_names": [
       "CSA U7L9-L2a Predict"
     ],
-    "encrypted_examples": [
-
-    ],
     "display_name": "Recursion and Strings",
     "bubble_choice_description": "Trace a program that uses recursion to work with Strings.",
-    "thumbnail_url": "https://images.code.org/b811bf784e20a4dd92f38f88314b7e97-image-1639151222715.png"
+    "thumbnail_url": "https://images.code.org/b811bf784e20a4dd92f38f88314b7e97-image-1639151222715.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-12-06T23:46:06.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2021-12-06T23:46:06.949+00:00\",\"changed\":[\"cloned from \\\"CSA U7L9-L1\\\"\"],\"cloned_from\":\"CSA U7L9-L1\"},{\"changed_at\":\"2021-12-06 23:46:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-07 14:56:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-07 14:57:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 15:47:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

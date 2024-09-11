@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The `BankAccount`(#e7e8ea) class represents a bank account and has instance variables for the customer's name and starting balance. The `BasicAccount`(#e7e8ea) class represents a basic bank account.\r\n\r\nThe `BasicAccount`(#e7e8ea) class overrides the `withdraw()`(#e7e8ea) method to charge a $30 fee if a withdrawal causes an account to be overdrawn (balance is negative).\r\n\r\n##In Bank.java:\r\n\r\n1. Write the `getAccountsInfo()`(#e7e8ea) method to traverse the `BankAccount`(#e7e8ea) array.\r\n\r\n   * Withdraw `300`(#e7e8ea) from each account.\r\n   \r\n   * Return a `String`(#e7e8ea) containing each customer's name and new balance using the `getName()`(#e7e8ea) and `getBalance()`(#e7e8ea) methods.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Create an `BankAccount`(#e7e8ea) array containing the `BankAccount`(#e7e8ea) objects.\r\n\r\n3. Instantiate a `Bank`(#e7e8ea) object with the `BankAccount`(#e7e8ea) array then call the `getAccountsInfo()`(#e7e8ea) method and print the result.",
@@ -30,12 +34,9 @@
         "text": "/*\n * Represents a bank\n */\npublic class Bank {\n\n  private BankAccount[] accounts;\n\n  /*\n   * Creates a Bank with an array of bank accounts\n   */\n  public Bank(BankAccount[] accounts) {\n    this.accounts = accounts;\n  }\n\n  /*\n   * Returns the array of bank accounts\n   */\n  public BankAccount[] getAccounts() {\n    return accounts;\n  }\n\n  /*\n   * Returns a String containing information about each bank account\n   */\n  public String getAccountsInfo() {\n    String result = \"\";\n    \n    // TO DO #1: Traverse the BankAccount array and withdraw 300 from each account\n    // then concatenate the customer's name and balance for each account to the result.\n\n\n    return result;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:29.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:29.514+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L4b_2022\\\"\"],\"cloned_from\":\"CSA U3L7-L4b_2022\"},{\"changed_at\":\"2022-09-08 19:44:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 19:46:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 19:48:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 19:49:05 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:05:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:05:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

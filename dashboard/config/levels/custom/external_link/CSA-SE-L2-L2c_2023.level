@@ -12,7 +12,8 @@
     "display_name": "Honest Headlines",
     "bubble_choice_description": "Step into the digital detective's shoes with Honest Headlines! In a world filled with misinformation, Honest Headlines is your go-to tool to separate the real news from the fakes.",
     "thumbnail_url": "https://images.code.org/e1c2322846fe23e365dcd0b1fd2da3a2-honestheadlines.gif",
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-10-03T21:33:59.338+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L2c\\\"\"],\"cloned_from\":\"CSA-SE-L2-L2c\"}]"

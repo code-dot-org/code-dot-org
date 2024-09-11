@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:31:56.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##In ImageScene.java:\r\n\r\n1. Write the `equals()`(#e7e8ea) method. It should return `true`(#e7e8ea) if the number of images in the `images`(#e7e8ea) array of both `ImageScene`(#e7e8ea) objects are the same. Otherwise, return `false`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n2. Write an `if/else`(#e7e8ea) statement using your `equals()`(#e7e8ea) method to check if `firstImages`(#e7e8ea) and `secondImages`(#e7e8ea) are equivalent.\r\n\r\n   a. If the `equals()`(#e7e8ea) method returns `true`(#e7e8ea), use `Theater.playScenes(firstImages)`(#e7e8ea) to play only `firstImages`(#e7e8ea).\r\n   \r\n   b. If the `equals()`(#e7e8ea) method returns `false`(#e7e8ea), call `secondImages.createScene()`(#e7e8ea) then use `Theater.playScenes(firstImages, secondImages)`(#e7e8ea) to play both scenes.\r\n   \r\n![](https://images.code.org/e0332decbf2e6e0396c019c0d50c8039-image-1653075350052.gif)\r\n\r\n::: details [**Show Me How**]\r\nThe `equals()`(#e7e8ea) method uses the following syntax:\r\n  \r\n  ```\r\n  public boolean equals(Object otherObject) {\r\n    // code to compare values\r\n  }\r\n  ```\r\n\r\nDon't forget to first check if `otherObject`(#e7e8ea) is `null`(#e7e8ea)!\r\n\r\nTo call the `equals()`(#e7e8ea) method in an `if`(#e7e8ea) statement, use the following syntax:\r\n\r\n   ```\r\n   if (firstObject.equals(secondObject) {\r\n     // code to execute\r\n   }\r\n   ```\r\n:::",
@@ -32,12 +36,9 @@
         "text": "import org.code.theater.*;\n\n/*\n * Represents a scene of images\n */\npublic class ImageScene extends Scene {\n\n  private String[] images;  // The array of image files\n\n  /*\n   * Constructor to create a ImageScene with\n   * an array of images\n   */\n  public ImageScene(String[] images) {\n    this.images = images;\n  }\n\n  /*\n   * Returns the array of images\n   */\n  public String[] getImages() {\n    return images;\n  }\n\n  /*\n   * Creates the image scene\n   */\n  public void createScene() {\n    for (int index = 0; index < images.length; index++) {\n      drawImage(images[index], 0, 0, getWidth());\n      pause(0.5);\n    }\n  }\n\n  // TO DO #1: Write the equals() method.\n  \n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:31:56.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:31:56.189+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L4d_2022\\\"\"],\"cloned_from\":\"CSA U4L2-L4d_2022\"},{\"changed_at\":\"2022-09-21 02:36:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-21 02:37:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

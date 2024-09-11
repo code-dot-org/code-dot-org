@@ -15,7 +15,8 @@
     "display_name": "Lines in a Song",
     "bubble_choice_description": "Find the average length of the lines in a song.",
     "thumbnail_url": "https://images.code.org/bc9243b920022c3c8cf5ee32011bda21-song.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:04.573+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L4b CR_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L4b CR_2022\"}]"

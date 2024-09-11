@@ -20,7 +20,7 @@ import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../legacySharedComponents/Headings';
-import firehoseClient from '../../lib/util/firehose';
+import firehoseClient from '../../metrics/firehose';
 
 import AssessmentSelector from './AssessmentSelector';
 import FeedbackDownload from './FeedbackDownload';

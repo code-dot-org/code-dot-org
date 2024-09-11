@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:32:08.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A researcher wants to find the population growth over time. They are using the formula\r\n\r\n**totalPopulation = startingPopulation x 2.7 <sup>growthRate * time</sup>**\r\n\r\nwhere `2.7`(#e7e8ea) represents [**Euler's number**](https://www.investopedia.com/terms/e/eulers-constant.asp#:~:text=Euler's%20number%20is%20a%20mathematical,to%20exponential%20growth%20or%20decay.). This value is raised to the power of `growthRate * time`(#e7e8ea).\r\n\r\n##In PopulationData.java:\r\n\r\n1. Write the `calculateGrowth()`(#e7e8ea) method.\r\n\r\n   * Use `Math.pow()`(#e7e8ea) to calculate the total population with the researcher's formula.\r\n\r\n   * Return the value of the new population.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Declare and initialize a variable that stores the result returned from the `calculateGrowth()`(#e7e8ea) method.\r\n\r\n3. Print the current and new population.",
@@ -22,12 +26,9 @@
         "text": "/*\n * Analyzes population growth\n */\npublic class PopulationData {\n\n  private double currentPopulation;  // The current population\n\n  /*\n   * Constructor to create a PopulationData object\n   * with the specified current population\n   */\n  public PopulationData(double currentPopulation) {\n    this.currentPopulation = currentPopulation;\n  }\n\n  /*\n   * Returns the current population\n   */\n  public double getCurrentPopulation() {\n    return currentPopulation;\n  }\n\n  /*\n   * Returns the new population\n   */\n  public double calculateGrowth(double growthRate, double time) {\n    // TO DO #1: Calculate and return the total population.\n\n    \n    return 0;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:32:08.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:32:08.823+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5c_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L5c_2022\"},{\"changed_at\":\"2022-09-21 21:55:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-21 21:55:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

@@ -670,8 +670,10 @@
   collection_data: "Focus on Data"
   collection_data_desc: "Empowers students to use data to solve problems."
 
+  module_label_accessibility_features: "Accessibility Features:"
   module_label_ages: "Ages:"
   module_label_grades: "Grades:"
+  module_label_compatible_devices: "Compatible Devices:"
   module_label_curriculum: "Curriculum:"
   module_label_curriculum_pure: "Curriculum"
   module_label_duration: "Duration:"
@@ -1232,6 +1234,147 @@
         ai_101:
           aria_label: "Start the AI 101 for Teachers module"
 
+  gen_ai_page:
+    heading_banner:
+      heading: "Exploring Generative AI"
+      desc: "Empower students with hands-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
+      partner: "In partnership with"
+    course_description:
+      title: "Empower students with generative AI skills"
+      desc: "Prepare students to explore and create with generative AI, developing critical thinking and ethical awareness."
+      comprehensive_literacy:
+        title: "Comprehensive AI literacy"
+        desc: "From foundational AI concepts to advanced techniques like prompt engineering and chatbot design, this curriculum encompasses both how AI works and how to use AI."
+      flexible_curriculum:
+        title: "Flexible curriculum design"
+        desc: "Whether integrated into an existing course structure or taught as a standalone unit, this curriculum’s flexible structure allows you to adapt lessons to fit your classroom goals and timelines."
+      ethical_learning:
+        title: "Ethical and inclusive learning"
+        desc: "Promote responsible AI use and development with a focus on ethical considerations and inclusivity, ensuring all students can be responsible creators and critical consumers of AI technologies."
+    glance:
+      title: "Curriculum at a glance"
+      grades: "8-12"
+      level: "Beginner"
+      duration: "6 weeks"
+      topics: "Artificial Intelligence, Аpp Design"
+      compatible_devices: "Laptop, Chromebook"
+      suggested_tools: "Code.org AI Chat Lab"
+      professional_learning: "Available, Course-specific"
+      languages: "English"
+      accessibility_features: "Text-to-speech, Closed captioning"
+    teach_complete_course:
+      title: "Teach the complete course"
+      desc: "Equip students with a comprehensive understanding of generative AI through a full, structured curriculum"
+      explore_gen_ai_card:
+        title: "Exploring Generative AI"
+        desc: "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world."
+        see_pl: "See professional learrning"
+    flexible_units:
+      title: "Flexible units in this course"
+      desc: "Choose standalone units to fit your classroom needs or combine them for a deeper dive into AI concepts."
+      unit_1_card:
+        overline: "Unit 1"
+        title: "Foundations of Generative AI"
+        desc: "Introduces the basics of generative AI and how it works, covering neural networks, embeddings, and how large language models are trained to understand and represent language."
+      unit_2_card:
+        overline: "Unit 2"
+        title: "Customizing Language Models"
+        desc: "Focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards."
+        note: "Note:"
+        note_desc: "AI Chat Lab levels require a [verified teacher account](%{verified_teacher_url}) or SSO login to make use of the tool."
+      button: "Explore unit"
+    unlock_full_access_banner:
+      title: "Unlock full access with a no-cost verified teacher account"
+      desc: "Gain access to more resources, including the new AI Chat Lab, and exclusive materials to enhance your teaching at no cost! It’s quick and easy, get verified today!"
+      button: "Get verified"
+    new_ai_chat_lab:
+      title: "New AI Chat Lab"
+      desc: "The AI Chat Lab tool, accessible only through our curriculum, allows students to experiment with AI models, learn prompt engineering, and customize chatbots using real-world techniques. Designed with built-in safety and moderation features, AI Chat Lab ensures a secure environment for exploring AI concepts while promoting ethical development and responsible use."
+    cs_teacher_quote:
+      quote: "This unit let my students explore and make their own genuine choices, while teaching students how chatbots work. While they were able to create their own chatbots, it was not overly technical, so students do not need a strong computer background knowledge to participate in the course. However, because of the open and explore-based nature of the lesson format, my AP students were also able to engage, enjoy the lesson, and learn about AI."
+      credit: "CS Teacher"
+    preparing_to_explore:
+      title: "Preparing to teach Exploring Generative AI"
+      teaching_card:
+        overline: "8-12 Teachers"
+        title: "Teaching Exploring Generative AI"
+        desc: "This professional learning module prepares teachers to guide 8-12 students through Code.org's Exploring Generative UI units, where students work with hand-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
+        button: "Start professional learning"
+    faq:
+      how_to_fit_existing_curriculum:
+        question: "How does Exploring Generative AI fit into my existing curriculum?"
+        answer:
+          overview: "Exploring Generative AI was designed to address both \"How AI Works\" and \"How to Use AI\", [two essential elements of AI Literacy](%{essential_literacy_url}). The course offers flexible implementation options to suit your specific needs and curriculum structure:"
+          full_course:
+            label: "Full Course:"
+            desc: "Teach both units together as a cohesive course, providing a deep dive into generative AI concepts and applications."
+          individual_units:
+            label: "Individual Units:"
+            desc: "Teach each unit individually, focusing on specific aspects of generative AI that align with your curriculum goals. Optional \"ramp-up\" lessons are provided to quickly onboard students to each unit's topics, ensuring a smooth transition even if they haven't completed the previous unit."
+          conclusion: "Regardless of your chosen implementation approach, Exploring Generative AI is designed to complement and enhance your existing CS or STEM curriculum, equipping your students with essential AI skills and knowledge."
+      address_ethical_considerations:
+        question: "Does Exploring Generative AI address ethical considerations in AI?"
+        answer: "Yes, the curriculum emphasizes the importance of ethical AI development and use. It covers topics such as bias in AI, hallucinations and misinformation, and responsible AI practices such as model cards, encouraging students to think critically about the societal implications of AI technologies. Learn more about our approach to AI Ethics in our [Teachers Guide to Ethical Opportunities in Exploring Generative AI](%{teachers_guide_url})."
+      tools_and_setup:
+        question: "What tools and setup are required for teaching this module?"
+        answer: "The first unit of the course is entirely unplugged and doesn't require any student devices. The second unit requires student computers or Chromebooks - see our [IT Requirements page](%{it_requirements_url}) for additional information on accessing our Code.org platform. Additional information about accessing AI Chat Lab is available in this [technical support article](%{technical_support_url})."
+      projects_and_activities:
+        question: "What kind of projects and activities do students work on in Exploring Generative AI?"
+        answer:
+          overview: "Students engage in a variety of hands-on projects and activities throughout the curriculum, such as building chatbots, role-playing scenarios that address misinformation about AI, and exploring creative applications of AI. These allow students to apply their knowledge and develop practical AI skills. For example, in Exploring Generative AI, students:"
+          li_1: "Construct artifacts to help demystify AI to people in their community"
+          li_2: "Design chatbots to address personally relevant issues or creative tasks"
+          li_3: "Collaboratively construct guidance for appropriate AI usage in a real-world context"
+          li_4: "Develop a chatbot using a user-centered design process to address an issue in the community"
+      mapped_to_standards:
+        question: "Is this module mapped to standards?"
+        answer: "This curriculum is mapped to [CSTA K-12 Standards](%{csta_standards_url}) and the [AI for K-12 Guidelines](%{ai_guidelines_url}) when possible - [click here to see a mapping of standards to lessons in the curriculum](%{mapping_standards_url}). The curriculum is also aligned to a learning framework of skills and knowledge designed specifically for generative AI - [click here to view the learning framework](%{learning_framework_url})."
+      ai_chat_lab:
+        question: "Tell me more about AI Chat Lab - what safety precautions have been built in? What is the data retention policy?"
+        answer: "Please see our [technical support article](%{technical_support_url}) on AI Chat Lab for more information about this exciting new tool!"
+    stay_informed:
+      title: "Stay informed on AI at Code.org"
+      desc: "Keep up with Code.org's innovative AI tools and updates. Subscribe to our newsletter for the latest insights and developments. You can unsubscribe at any time."
+    additional_resources:
+      title: "Additional resources"
+      desc: "From diverse curriculum offerings, to short educational videos, explore all the things Code.org has to offer."
+      curriculum_catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      ai_resources:
+        title: "Code.org AI Resources"
+        desc: "Discover our extensive AI curriculum, professional learning, and other resources to build foundational skills, foster creativity, and encourage critical thinking."
+        button: "Explore AI resources"
+      support:
+        title: "Get Support"
+        desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
+        button: "Visit our support center"
+    developed_in_partnership: "Developed in partnership with"
+  
+  gen_ai_banner:
+    overline: "Grades 8-12"
+    title: "Exploring Generative AI"
+    desc: "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world."
+
+  gen_ai_skinny_banner:
+    title: "Exploring Generative AI"
+    desc: "Empower students with hands-on projects and ethical insights into generative AI"
+    in_partnership: "In partnership with"
+  
+  gen_ai_middle_high_carousel_card:
+    overline: "Grades: 8-12"
+    title: "Exploring Generative AI"
+    desc: "Empower students with hands-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
+    duration: "6 weeks"
+  
+  gen_ai_pl_carousel_cared:
+    overline: "8-12 Teachers"
+    title: "Teaching Exploring Generative AI"
+    curriculum: "Exploring Generative AI"
+    duration: "2.5 hours"
+    prerequisites: "Verified teacher account or SSO-login needed to access AI Chat Lab"
+
   ai_integrations:
     heading: "AI Integrations"
     desc: "We are working on some exciting new technologies to empower students and teachers in the classroom."
@@ -1558,7 +1701,7 @@
   resources_tabs_assessments_desc: "These include rubrics, checklists, mini-projects, end-of-chapter projects, student-facing rubrics, sample projects, and post-project tests — all designed to support teachers in measuring student growth, providing feedback, and evaluating student understanding."
 
   teach_page_top_heading: "Teach computer science & ignite possibilities"
-  teach_page_top_desc_01: "Tap into your students' full potential with Code.org's free Computer Science (CS) curriculum."
+  teach_page_top_desc_01: "Tap into your students' full potential with Code.org's free Computer Science (CS) and Artificial Intelligence (AI) curriculum."
   teach_page_top_desc_02: "Join the global community of over 2 million educators empowering the next generation of innovators, problem solvers, and digital citizens! Code.org supports teachers the whole way with professional learning, comprehensive curricula, and support when you need it."
   teach_page_why_teach_cs_heading: "Why teach computer science with Code.org?"
   teach_page_why_teach_cs_block_heading_01: "Build foundational CS skills"
@@ -10814,7 +10957,7 @@
         title: "How to Host an Hour"
         desc: "A step-by-step guide to preparing for, running, and celebrating your Hour of Code event with your class or group."
         button: "Read the guide"
-      host:
+      activity:
         title: "Choose an Activity"
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
@@ -10827,7 +10970,7 @@
       desc: "We've moved all previous activities [here](%{archive_url})."
       button: "View archived activities"
 
-  resources_page:
+  hoc_resources:
     heading: "Resources for Hour of Code"
     desc: "Find all the resources you need for your Hour of Code. Not sure where to begin? Start with our [how-to guide](%{how_to_url}) for hosting an Hour of Code!"
     sections:
@@ -10908,6 +11051,115 @@
         body_02: "Use a \"TM\" superscript in the most prominent places you mention \"Hour of Code\" and a \"Ⓡ\" superscript in the most prominent places you mention \"Hora del Código\", both on your web site and in app descriptions."
         body_03: "Include language on your page (or in the footer), including links to the CSEdWeek and Code.org websites, that says the following: _\"The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.\"_"
         body_04: "No use of \"Hour of Code\" or \"Hora del Código\" in app names."
+
+  hoc_how_to:
+    heading: "Your go-to guide starts here!"
+    desc: "Choose the right guide for you:"
+    label:
+      before_hoc: "Before Hour of Code"
+      day_of_hoc: "During Hour of Code"
+      after_hoc: "After Hour of Code"
+      step_01: "Step 1"
+      step_02: "Step 2"
+      step_03: "Step 3"
+      step_04: "Step 4"
+      step_05: "Step 5"
+      step_06: "Step 6"
+      step_07: "Step 7"
+      step_08: "Step 8"
+      step_09: "Step 9"
+      step_10: "Step 10"
+      register: "Register your event"
+      choose: "Choose your activities"
+      plan_event: "Plan your event"
+      plan_hour: "Plan your hour"
+      prepare: "Prepare for your event"
+      spread_word: "Help spread the word"
+      get_coding: "Get coding!"
+      celebrate: "Celebrate!"
+      after: "After the event"
+      beyond: "Beyond Hour of Code"
+    button:
+      register: "Register your event"
+      select_activity: "Select a coding activity"
+      get_resources: "Get resources to run an Hour of Code"
+      print_certificates: "Print certificates"
+      continue_learning: "Continue learning with Code.org"
+    resources:
+      heading: "Additional resources"
+      hoc:
+        title: "Hour of Code Resources"
+        desc: "Find all the resources you need—print and digital—to bring attention to your Hour of Code."
+        button: "View resources"
+      activities:
+        title: "Discover Activities"
+        desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
+        button: "Explore activities"
+      register:
+        title: "Register Your Event"
+        desc: "Register your Hour of Code event today and join a global movement. Prizes available for eligible events!"
+        button: "Register your event"
+    teachers:
+      heading: "Teachers"
+      top:
+        heading: "How to plan your Hour of Code"
+        desc: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show how anyone can learn the basics. This year, our campaign aims to showcase how computer science drives innovation across various fields, making it relatable and exciting for students. Whether you or your students are experienced coders or you all are setting out on your very first computer science expedition, this Hour of Code shows you how we're making the invisible, visible with Computer Science."
+      steps:
+        register: "Start with a commitment to doing an Hour of Code with your students by registering your event. When you register, you'll receive emails with news and tips for hosting a successful Hour of Code."
+        choose_activity: "Explore the coding activity library and choose one based on your group's age, experience, interests and more."
+        plan_event:
+          body_01: "**What:** Before your event, try out the activities yourself so you can ensure they work on student devices and you're prepared to answer questions! Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos."
+          body_02: "**When:** People around the world often join the Hour of Code celebration during Computer Science Education Week (%{campaign_date_full}), but you can do an Hour of Code any day of the year!"
+          body_03: "Where: Choose a space that works for the number of students and devices you have available. Students can try activities on individual devices, take turns sharing a device, or as a class on a whiteboard. There are even unplugged activities that can be completed with no devices at all, so they can even be done outside!"
+        plan_hour:
+          body_01: "Here's a sample agenda to get you started:"
+          list_01: "10:00-10:05am: Begin with an [inspirational video](%{video_url})"
+          list_02: "10:05-10:50am: Students do their coding activity"
+          list_03: "10:50-11:00am: Teacher gives closing remarks"
+        spread_word:
+          body_01: "Help us spread the word in your community with [these email templates](%{emails_url})."
+          list_01: "Ask three colleagues to [register](%{register_url}) and host an Hour of Code activity. They, in turn, can secure three colleagues, who can secure three colleagues, etc."
+          list_02: "Ask your principal to host a school-wide event."
+          list_03: "Reach out to your school's Parent Teacher Student Association or share in parent newsletters, letting them know what their children are learning."
+        get_coding: "Direct your students to the activity by sharing the link on the board or through your classroom's learning management system. Your students may encounter challenges—that's okay! Learning to program is like learning a new language; you won't be fluent right away. If you don't know the answer, you can figure it out together."
+        celebrate: "After your event, print certificates of completion and congratulate your students. Share photos and videos of your Hour of Code event and show off your students' achievements using #HourOfCode and @codeorg."
+        beyond:
+          body_01: "It doesn't end here!"
+          body_02: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. Check out the diverse curriculum offerings from Hour of Code partners, and learn how to bring CS to your school today!"
+    events:
+      heading: "Events"
+      top:
+        heading: "How to organize an Hour of Code event"
+        desc_01: "Hour of Code is a one-hour introduction to computer science, using fun and interactive tutorials to show that anyone can learn the basics. Your efforts can make a huge impact on the way students view computer science and their own potential."
+        desc_02: "Schools and organizations who fully engage with Hour of Code can help raise awareness of the computer science movement and inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups."
+      steps:
+        register: "Register your Hour of Code event to receive information about new activities and special promotions!"
+        choose_activity: "Explore the coding activity library and choose one based on your group's age, experience, interests and more."
+        prepare:
+          list_01: "Consider where and when you want to hold your event, as well as the tech capabilities of your space. Students can work on their own devices, in pairs on one device, or together as a classroom on a projector, and there are even unplugged tutorials that can be completed with no devices at all!"
+          list_02: "Send an email to an elected official or influential business person and invite them to speak."
+          list_03: "You may also invite a local politician or local media, such as a local news station, newspaper, or education/tech bloggers."
+        plan:
+          body_01: "Here's a sample agenda to get you started:"
+          list_01: "10:00-10:05am: Open with one of our [inspirational video](%{video_url})."
+          list_02: "10:05-10:15am: Principal gives an intro overviewing the importance of computer science."
+          list_03: "10:15-10:30am: Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives."
+          list_04: "10:30-10:40am: Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!"
+          list_05: "10:40-11:00am: Students demo an unplugged activity and how computer science can be taught without using computers."
+          list_06: "11:00-11:05am: Teacher who helped organize school-wide event gives closing remarks."
+        get_coding:
+          body_01: "As students are working on their activity, take pictures to commemorate the event and post on your organization's social media channels. (Publicity or privacy policies may apply.)"
+          body_02: "Make sure the agenda is running smoothly, and that it remains on track to end on time—especially if any special guests have other scheduled commitments to attend."
+        after:
+          body_01: "After a successful Hour of Code event, make sure to:"
+          list_01: "Celebrate! Print certificates of completion and congratulate your students."
+          list_02: "Thank any special guests for their time (especially great for students to do) and offer to answer any follow-up questions they may have."
+          list_03: "Post pictures, videos, or notable quotes from the day on social media. (Publicity or privacy policies may apply.)"
+          list_04: "Follow up with volunteers or guests for feedback on how to make next year's event even better."
+          list_05: "Reach out to your school's Parent Teacher Student Association or share in parent newsletters, letting them know what their children are learning."
+        beyond:
+          body_01: "It doesn't end here!"
+          body_02: "Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. Check out the diverse curriculum offerings from Hour of Code partners, and learn how to bring CS to your school today!"
 
   hoc_faq:
     heading: "Frequently asked questions"

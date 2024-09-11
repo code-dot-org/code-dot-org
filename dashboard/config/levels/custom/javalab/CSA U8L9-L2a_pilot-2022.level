@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:57:11.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Create a guessing game to guess a user's number.\r\n\r\n##In GuessingGame.java:\r\n\r\n1. Write the method `guessNumber()`(#e7e8ea) to use the binary search algorithm to guess a user's number.\r\n\r\n   * Use the `promptUser()`(#e7e8ea) method to check if the guess (the middle value) is the user's number. If the user's response is `\"yes\"`(#e7e8ea), print a message that the number was successfully guessed and return `true`(#e7e8ea).\r\n   \r\n   * If the guess is not the user's number, use the `isGreaterThan()`(#e7e8ea) method check if the guess (the middle value) is greater than the user's number. Use the binary search algorithm to make a new guess based on the user's response.\r\n   \r\n   * Close the `input`(#e7e8ea) and return `false`(#e7e8ea) at the end of the method.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `guessNumber()`(#e7e8ea) method.\r\n\r\n::: details [**Show Me How**]\r\nThe binary search algorithm can be implemented using iteration or recursion.\r\n  \r\n**Iteration Method**\r\nwhile low is less than high\r\n  mid = (low + high) / 2\r\n  \r\n  if target equals mid\r\n    return mid\r\n  else if value is greater than mid\r\n    low = mid + 1\r\n  else\r\n    high = mid - 1\r\n\r\n**Recursive Method**\r\nboolean binarySearch(low, high)\r\n  mid = (low + high) / 2\r\n  \r\n  if target equals mid\r\n    return true\r\n  \r\n  if value is greater than mid\r\n    return binarySearch(mid + 1, high)\r\n  else if value is less than mid\r\n    return binarySearch(low, mid - 1)\r\n  \r\n  return false\r\n:::",
@@ -24,15 +28,9 @@
         "tabOrder": 1
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-08-23T20:57:11.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:57:11.520+00:00\",\"changed\":[\"cloned from \\\"CSA U8L9-L2a_2022\\\"\"],\"cloned_from\":\"CSA U8L9-L2a_2022\"},{\"changed_at\":\"2022-10-25 16:33:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 16:34:33 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:26:09 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:28:32 +0000\",\"changed\":[\"start_sources\",\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:37:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:39:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:39:23 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 15:28:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-28 14:25:55 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 02:32:12 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

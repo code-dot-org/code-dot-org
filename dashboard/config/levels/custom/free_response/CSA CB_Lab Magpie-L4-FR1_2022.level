@@ -1,5 +1,9 @@
 <FreeResponse>
   <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2022-07-12T17:39:46.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Review the findKeyword() Methods\r\n---\r\n\r\nScroll down to lines **89** & **129** to review the two versions of the `findKeyword()` methods.\r\n\r\nIn our code, `findKeyword()` is an example of an *overloaded* method. What is the difference between the two versions of this method in the new Magpie code? When might we use one over the other?",
@@ -11,12 +15,9 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "allow_multiple_attempts": "false"
+    "allow_multiple_attempts": "false",
+    "ai_tutor_available": true
   },
-  "level_num": "custom",
-  "game_id": 52,
-  "created_at": "2022-07-12T17:39:46.000Z",
-  "user_id": 18603,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-07-12 17:39:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-12 17:42:18 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-12 17:52:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-13 23:27:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-07-22 16:06:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
