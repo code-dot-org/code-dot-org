@@ -96,7 +96,7 @@ export const Codebridge = React.memo(
     } else {
       throw new Error('Cannot render codebridge - no layout provided');
     }
-    // gridLayout is a css string the defines the components in the grid layout.
+    // gridLayout is a css string that defines the components in the grid layout.
     // In order to find which components are in the grid layout, we remove all quotes
     // from the string and tokenize it.
     const gridLayoutKeys = gridLayout
