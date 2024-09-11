@@ -16,6 +16,30 @@ class RegistrationsController < Devise::RegistrationsController
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
 
+  CREATE_USER_PERMITTED_PARAMS = [
+    :user_type,
+    :email,
+    :name,
+    :email_preference_opt_in_required,
+    :email_preference_opt_in,
+    :email_preference_request_ip,
+    :email_preference_source,
+    :email_preference_form_kind,
+    :school,
+    :school_info_id,
+    :age,
+    :parent_email_preference_email,
+    :parent_email_preference_opt_in,
+    :parent_email_preference_request_ip,
+    :parent_email_preference_source,
+    :data_transfer_agreement_accepted,
+    :data_transfer_agreement_required,
+    :data_transfer_agreement_request_ip,
+    :data_transfer_agreement_source,
+    :data_transfer_agreement_kind,
+    :data_transfer_agreement_at
+  ]
+
   #
   # GET /users/sign_up
   #
@@ -92,13 +116,34 @@ class RegistrationsController < Devise::RegistrationsController
       user_params[:email] ||= params[:email]
       user_params[:age] ||= user_params[:user_type] == 'teacher' ? '21+' : user_params[:age]
 
-      @user = User.new_with_session(user_params.permit(:user_type, :email, :name, :email_preference_opt_in, :school, :school_info_id, :age), session)
+      # Set email and data transfer preferences
+      if user_params[:user_type] == 'teacher'
+        user_params[:email_preference_opt_in_required] = true
+        user_params[:email_preference_opt_in] = user_params[:email_preference_opt_in] ? 'yes' : 'no'
+        user_params[:email_preference_request_ip] = request.ip
+        user_params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
+        user_params[:email_preference_form_kind] = "0"
+      elsif user_params[:user_type] == 'student'
+        user_params[:parent_email_preference_request_ip] = request.ip
+        user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
+      end
+
+      user_params[:data_transfer_agreement_accepted] = user_params[:data_transfer_agreement_accepted] == "1"
+      if user_params[:data_transfer_agreement_required] && user_params[:data_transfer_agreement_accepted]
+        user_params[:data_transfer_agreement_accepted] = true
+        user_params[:data_transfer_agreement_request_ip] = request.ip
+        user_params[:data_transfer_agreement_source] = User::ACCOUNT_SIGN_UP
+        user_params[:data_transfer_agreement_kind] = "0"
+        user_params[:data_transfer_agreement_at] = DateTime.now
+      end
+
+      # Create new user entry
+      @user = User.new_with_session(user_params.permit(CREATE_USER_PERMITTED_PARAMS), session)
       @user.save!
       @user
     else
       save_default_sign_up_user_type
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
-      super
     end
   end
 
