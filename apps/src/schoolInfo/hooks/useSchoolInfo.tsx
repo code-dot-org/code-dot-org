@@ -96,7 +96,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   // Handle schoolZip changes
   useEffect(() => {
-    if (!schoolZipIsValid) {
+    if (!ZIP_REGEX.test(schoolZip)) {
       sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, '');
       return;
     }
@@ -183,7 +183,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     schoolName,
     schoolZip,
     schoolsList,
-    schoolZipIsValid,
     setSchoolId,
     setCountry,
     setSchoolName,

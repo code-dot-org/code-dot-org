@@ -31,7 +31,6 @@ export default function SchoolDataInputs({
   schoolName,
   schoolZip,
   schoolsList,
-  schoolZipIsValid,
   setSchoolId,
   setCountry,
   setSchoolName,
@@ -49,6 +48,11 @@ export default function SchoolDataInputs({
   const countryIsUS = useMemo(() => country === US_COUNTRY_CODE, [country]);
 
   const inputManually = useMemo(() => schoolId === CLICK_TO_ADD, [schoolId]);
+
+  const schoolZipIsValid = useMemo(
+    () => ZIP_REGEX.test(schoolZip),
+    [schoolZip]
+  );
 
   const schoolSelectOptions = useMemo(
     () => [
@@ -180,7 +184,6 @@ SchoolDataInputs.propTypes = {
   schoolsList: PropTypes.arrayOf(
     PropTypes.shape({value: PropTypes.string, text: PropTypes.string})
   ).isRequired,
-  schoolZipIsValid: PropTypes.bool.isRequired,
   setSchoolId: PropTypes.func.isRequired,
   setCountry: PropTypes.func.isRequired,
   setSchoolName: PropTypes.func.isRequired,

@@ -1,13 +1,32 @@
 import '@testing-library/jest-dom';
-import {fireEvent, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {
   CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
+  SELECT_A_SCHOOL,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import i18n from '@cdo/locale';
+
+// Mock sessionStorage
+const mockSessionStorage = (() => {
+  let store = {};
+
+  return {
+    getItem: jest.fn().mockImplementation(key => {
+      return store[key] || null;
+    }),
+    setItem: jest.fn().mockImplementation((key, value) => {
+      store[key] = value;
+    }),
+    clear: () => {
+      store = {};
+    },
+  };
+})();
+
+Object.defineProperty(window, 'sessionStorage', {value: mockSessionStorage});
 
 describe('SchoolDataInputs', () => {
   const mockSetSchoolId = jest.fn();
@@ -16,13 +35,11 @@ describe('SchoolDataInputs', () => {
   const mockSetSchoolZip = jest.fn();
 
   const defaultProps = {
-    schoolId: '1',
-    country: 'US',
-    schoolName: 'School Name',
-    schoolZip: '12345',
-    schoolsList: [{value: '1', text: 'School 1'}],
-    schoolsListLoading: false,
-    schoolZipIsValid: true,
+    schoolId: '',
+    country: '',
+    schoolName: '',
+    schoolZip: '',
+    schoolsList: [],
     setSchoolId: mockSetSchoolId,
     setCountry: mockSetCountry,
     setSchoolName: mockSetSchoolName,
@@ -35,77 +52,83 @@ describe('SchoolDataInputs', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    sessionStorage.clear();
   });
 
-  it('should render with initial props and default state', () => {
+  it('displays headers in basic component render', () => {
     renderDefault();
+    expect(screen.queryByText(i18n.censusHeading())).toBeInTheDocument();
+  });
 
-    expect(screen.getByLabelText(i18n.whatCountry())).toBeInTheDocument();
-    expect(screen.getByText(i18n.censusHeading())).toBeInTheDocument();
+  it('does not display headers if includeHeaders prop is false', () => {
+    renderDefault({includeHeaders: false});
+    expect(screen.queryByText(i18n.censusHeading())).toBeFalsy();
+  });
+
+  it('does not display zip input until United States is selected as country', () => {
+    renderDefault();
+    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeFalsy();
+  });
+
+  it('does not ask for zip, asks instead for name if not US', () => {
+    renderDefault({country: 'UK'});
+    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeFalsy();
     expect(
-      screen.getByText(i18n.schoolInfoInterstitialTitle())
-    ).toBeInTheDocument();
-    expect(screen.getByText(i18n.selectASchool())).toBeInTheDocument();
-    expect(screen.getAllByText(i18n.noSchoolSetting())).toHaveLength(2);
-  });
-
-  it('should call setCountry when country dropdown changes', () => {
-    renderDefault();
-
-    fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
-      target: {value: 'CA'},
-    });
-
-    expect(mockSetCountry).toHaveBeenCalledWith('CA');
-  });
-
-  it('should render SchoolZipSearch when country is US', () => {
-    renderDefault();
-
-    expect(
-      screen.getByLabelText(i18n.enterYourSchoolZip())
+      screen.queryByText(i18n.schoolOrganizationQuestion())
     ).toBeInTheDocument();
   });
 
-  it('should call setSchoolId when school dropdown changes', () => {
-    renderDefault({
-      schoolsList: [
-        {value: '1', text: 'School 1'},
-        {value: '2', text: 'School 2'},
-      ],
-    });
-
-    fireEvent.change(screen.getByLabelText(i18n.selectYourSchool()), {
-      target: {value: '2'},
-    });
-
-    expect(mockSetSchoolId).toHaveBeenCalledWith('2');
+  it('automatically displays Zip field if US country is selected', () => {
+    renderDefault({country: 'US'});
+    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeInTheDocument();
   });
 
-  it('should render SchoolNameInput and "Return to results" button when country is US and inputManually is true', () => {
-    renderDefault({
-      schoolId: CLICK_TO_ADD,
-    });
-
-    expect(screen.getByDisplayValue('School Name')).toBeInTheDocument();
-    expect(screen.getByText(i18n.returnToResults())).toBeInTheDocument();
+  it('does not show Name field if US country is detected', () => {
+    renderDefault({country: 'US'});
+    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBeFalsy();
   });
 
-  it('should call handleSchoolChange when "No school setting" button is clicked', () => {
+  it('does not show Name field if country is not selected', () => {
     renderDefault();
-
-    fireEvent.click(screen.getByRole('button', i18n.noSchoolSetting()));
-
-    expect(mockSetSchoolId).toHaveBeenCalledWith(NO_SCHOOL_SETTING);
+    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBeFalsy();
   });
 
-  it('should not render SchoolZipSearch when country is not US', () => {
-    renderDefault({
-      country: 'CA',
-    });
-
+  it('automatically displays Name field if non-US country is detected', () => {
+    renderDefault({country: 'UK'});
     expect(
-      screen.queryByLabelText(i18n.enterYourSchoolZip())
-    ).not.toBeInTheDocument();
+      screen.queryByText(i18n.schoolOrganizationQuestion())
+    ).toBeInTheDocument();
+  });
+
+  it('displays error message if the zip is too short', () => {
+    renderDefault({country: 'US', schoolZip: '99'});
+    expect(screen.queryByText(i18n.zipInvalidMessage())).toBeInTheDocument();
+  });
+
+  it('displays and enables school dropdown if a valid zip is given', () => {
+    renderDefault({country: 'US', schoolZip: '98112'});
+    const dropDown = screen.getByLabelText(i18n.selectYourSchool());
+    expect(dropDown).not.toBeDisabled();
+  });
+
+  it('disables school dropdown if zip is invalid', () => {
+    renderDefault({country: 'US', schoolZip: '99'});
+    const dropDown = screen.getByLabelText(i18n.selectYourSchool());
+    expect(dropDown).toBeDisabled();
+  });
+
+  it('dropdown switches to input box if user clicks to add', () => {
+    renderDefault({country: 'US', schoolId: CLICK_TO_ADD});
+    expect(
+      screen.queryByText(i18n.schoolOrganizationQuestion())
+    ).toBeInTheDocument();
+  });
+
+  it('goes back to dropdown if user clicks return to results list', () => {
+    renderDefault({
+      country: 'US',
+      schoolId: SELECT_A_SCHOOL,
+    });
+    expect(screen.queryByText(i18n.selectYourSchool())).toBeInTheDocument();
   });
 });
