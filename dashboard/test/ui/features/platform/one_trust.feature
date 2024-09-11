@@ -43,7 +43,7 @@ Feature: OneTrust integration
     Then element "script[src$='e345/OtAutoBlock.js']" does exist
     Then element "script[src$='e345-test/OtAutoBlock.js']" does not exist
 
-  Scenario: The pages load the prod OneTrust libraries.
+  Scenario: The pages load the Onetrust hosted prod libraries.
     Given I am on "http://studio.code.org/users/sign_in"
     When I use a cookie to mock the DCDO key "onetrust_cookie_scripts" as "prod"
     Given I am on "http://studio.code.org/users/sign_in"
