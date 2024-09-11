@@ -50,6 +50,26 @@ class SectionsController < ApplicationController
     end
   end
 
+  def section_instructors_verified
+    new_params = params.transform_keys(&:underscore)
+    sections = User.find_by(id: new_params[:user_id]).sections_as_student
+    unit = Unit.find_by(id: new_params[:unit_id])
+    unit_group = unit&.unit_group
+    section = if unit_group
+                sections.find_by(course_id: unit_group.id)
+              else
+                sections.find_by(script_id: unit.id)
+              end
+
+    section&.instructors&.each do |instructor|
+      instructor.permissions.each do |permission|
+        if permission.permission == "authorized_teacher"
+          render json: {verified: true}
+        end
+      end
+    end
+  end
+
   private def redirect_to_section_script_or_course
     if @section.script
       redirect_to script_path(@section.script)
