@@ -54,15 +54,11 @@ class ScriptsController < ApplicationController
       @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
     end
 
-    @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !@script.is_course
-    session[:show_unversioned_redirect_warning] = false
-
     additional_script_data = {
       course_name: @script.unit_group&.name,
       course_id: @script.unit_group&.id,
       show_redirect_warning: @show_redirect_warning,
       redirect_script_url: @redirect_unit_url,
-      show_unversioned_redirect_warning: !!@show_unversioned_redirect_warning,
       section: @section,
       user_type: current_user&.user_type,
       user_id: current_user&.id,
@@ -280,7 +276,6 @@ class ScriptsController < ApplicationController
 
     if Unit.family_names.include?(unit_name)
       script = Unit.get_unit_family_redirect_for_user(unit_name, user: current_user, locale: request.locale)
-      session[:show_unversioned_redirect_warning] = true
       Unit.log_redirect(unit_name, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
       return script
     end
