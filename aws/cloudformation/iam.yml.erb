@@ -821,6 +821,20 @@ roles.each do |name, config| %>
       Path: /
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
+  # TODO: Move this to gen_ai_curriculum.yml.erb
+  SagemakerFullAccessRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      RoleName: SagemakerFullAccessRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: sagemaker.amazonaws.com
+            Action: 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AmazonSageMakerFullAccess'
   SessionPermissions:
     Type: AWS::IAM::ManagedPolicy
     Properties:
