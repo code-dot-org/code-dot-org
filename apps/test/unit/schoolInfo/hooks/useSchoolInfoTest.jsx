@@ -1,6 +1,6 @@
 import {act, renderHook} from '@testing-library/react-hooks';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {
   CLICK_TO_ADD,
@@ -13,7 +13,7 @@ import {
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 
-jest.mock('@cdo/apps/lib/util/AnalyticsReporter');
+jest.mock('@cdo/apps/metrics/AnalyticsReporter');
 jest.mock('@cdo/apps/util/AuthenticityTokenStore');
 
 // Mock sessionStorage
@@ -60,7 +60,7 @@ describe('useSchoolInfo', () => {
     window.fetch = mockFetch;
 
     sendAnalyticsEventSpy = jest.spyOn(
-      require('@cdo/apps/lib/util/AnalyticsReporter'),
+      require('@cdo/apps/metrics/AnalyticsReporter'),
       'sendEvent'
     );
   });

@@ -2,15 +2,15 @@ import '@testing-library/jest-dom';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import SchoolInfoInterstitial from '@cdo/apps/schoolInfo/SchoolInfoInterstitial';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
 import i18n from '@cdo/locale';
 
 // Mock the dependencies
-jest.mock('@cdo/apps/lib/util/AnalyticsReporter', () => ({
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
   sendEvent: jest.fn(),
 }));
 
@@ -35,6 +35,7 @@ describe('SchoolInfoInterstitial', () => {
       schoolId: '123',
       schoolZip: '12345',
       schoolsList: [],
+      schoolZipIsValid: true,
       setCountry: jest.fn(),
       setSchoolName: jest.fn(),
       setSchoolId: jest.fn(),
