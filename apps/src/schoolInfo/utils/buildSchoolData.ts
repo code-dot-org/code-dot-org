@@ -1,4 +1,8 @@
-import {NON_SCHOOL_OPTIONS_ARRAY, US_COUNTRY_CODE} from '../constants';
+import {
+  NON_SCHOOL_OPTIONS_ARRAY,
+  US_COUNTRY_CODE,
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+
 import {SchoolInfoRequest} from '../types';
 
 export function buildSchoolData({

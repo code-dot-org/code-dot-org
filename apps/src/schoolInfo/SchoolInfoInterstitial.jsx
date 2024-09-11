@@ -5,13 +5,13 @@ import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {NO_SCHOOL_SETTING} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../templates/BaseDialog';
 import SchoolDataInputs from '../templates/SchoolDataInputs';
 import color from '../util/color';
 
-import {NO_SCHOOL_SETTING} from './constants';
 import {useSchoolInfo} from './hooks/useSchoolInfo';
 import {updateSchoolInfo} from './utils/updateSchoolInfo';
 
