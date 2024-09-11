@@ -323,6 +323,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
+      ai_teaching_assistant_available: ai_teaching_assistant_available,
     }
   end
 
@@ -350,7 +351,8 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
-      available_resources: get_available_resources(locale_code)
+      available_resources: get_available_resources(locale_code),
+      ai_teaching_assistant_available: ai_teaching_assistant_available,
     }
   end
 
@@ -373,6 +375,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
+      ai_teaching_assistant_available: ai_teaching_assistant_available,
     }
   end
 
