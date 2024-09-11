@@ -12050,8 +12050,7 @@
   hoc_beyond_carousel_title: "For Students"
   hoc_beyond_carousel_description: "Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels."
   hoc_beyond_submit_activity_form: "Submit your own activity [here](%{form_url})."
-  hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
-
+  hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"g
 
   pl_curriculum_launch_skinny_banner_2024:
     title: Introducing new professional learning!
