@@ -153,19 +153,6 @@
     },
   }
 
--# Skip this section as ai-rubrics experiment needs to be unit aware
--# if Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
-  - if current_user.verified_teacher?
-    = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |form|
-      %hr
-      %h2= t('activerecord.attributes.user.ai_settings_header')
-      .field
-        = form.label :ai_rubrics_disabled, class: "label-bold" do
-          = form.check_box :ai_rubrics_disabled
-          %span{style: "position: relative; top: 3px"}
-            = t('activerecord.attributes.user.ai_rubrics_disabled')
-      %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
-
 - if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
