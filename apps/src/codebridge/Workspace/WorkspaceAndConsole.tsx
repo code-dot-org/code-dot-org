@@ -69,7 +69,9 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
     );
   };
 
-  // The editor height is computed based on the console height.
+  // The editor height is computed based on the column height, console height,
+  // and the height of the resize bar. The resize bar gets positioned at the bottom
+  // of the editor, and seemingly expects to be included in the height of the editor.
   const editorHeight = useMemo(
     () =>
       columnHeight - consoleHeight + globalStyleConstants['resize-bar-width'],
