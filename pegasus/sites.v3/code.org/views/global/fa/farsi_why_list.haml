@@ -1,0 +1,29 @@
+:ruby
+  list_items = [
+    {
+      icon: "fa-solid fa-cubes",
+      heading: hoc_s(:teach_page_why_teach_cs_block_heading_01),
+      desc: hoc_s(:teach_page_why_teach_cs_block_desc_01),
+    },
+    {
+      icon: "fa-solid fa-book",
+      heading: hoc_s(:teach_page_why_teach_cs_block_heading_02),
+      desc: hoc_s(:teach_page_why_teach_cs_block_desc_02),
+    },
+    {
+      icon: "fa-solid fa-lock-open",
+      heading: hoc_s(:teach_page_why_teach_cs_block_heading_03),
+      desc: hoc_s(:farsi_teach_page_why_1),
+    },
+  ]
+
+%ul.steps-list.three-col
+  - list_items.each do |list_item|
+    %li
+      .icon-wrapper
+        %span
+          %i{class: list_item[:icon]}
+      %h3
+        = list_item[:heading]
+      %p
+        = list_item[:desc]

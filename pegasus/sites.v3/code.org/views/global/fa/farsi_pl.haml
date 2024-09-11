@@ -1,0 +1,52 @@
+:ruby
+  block_items = [
+    {
+      overline: hoc_s(:module_grade_k_5_teachers),
+      title: hoc_s(:module_label_teaching_k5_basics),
+      image: "/images/CSFimages/students_with_tablets.png",
+      curriculum: hoc_s(:curriculum_name_all_k5),
+      duration: hoc_s(:module_duration_2_hrs),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/self-paced-pl-k5-2024"),
+      aria_label_primary: hoc_s(:aria_label_call_to_action_explore_k5_self_paced_pl),
+    },
+    {
+      overline: hoc_s(:module_grade_k_5_teachers),
+      title: hoc_s(:module_label_teaching_csf),
+      image: "/images/self-paced-pl-tile-csf.png",
+      curriculum: hoc_s(:curriculum_name_csf_02),
+      duration: hoc_s(:module_duration_4_hrs_30_mins),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/s/k5-onlinepd-2023"),
+      aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_csf),
+    }
+  ]
+
+.action-block__wrapper.action-block__wrapper--two-col
+  - block_items.each do |block_item|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        - if block_item[:new]
+          .flex-container.justify-space-between.align-items-start
+            %p.overline
+              = block_item[:overline]
+            %p.new
+              =hoc_s(:new)
+        - else
+          %p.overline
+            = block_item[:overline]
+        %h3
+          = block_item[:title]
+        %img{src: block_item[:image], alt: "", style: "width: 100%"}
+        %p
+          %strong=hoc_s(:module_label_curriculum)
+          = block_item[:curriculum]
+        %p
+          %strong=hoc_s(:module_label_duration)
+          = block_item[:duration]
+        %p
+          %strong=hoc_s(:module_label_prerequisites)
+          = block_item[:prerequisites]
+      .content-footer
+        %a.link-button{href: block_item[:url_primary], aria:{label: "#{block_item[:aria_label_primary]}"}}
+          =hoc_s(:call_to_action_start_pl)
