@@ -74,7 +74,7 @@ export class RemoteSourcesStore implements SourcesStore {
     projectType?: ProjectType,
     forceNewVersion = false
   ) {
-    let options: SaveSourceOptions | UpdateSourceOptions = {projectType};
+    let options: SaveSourceOptions = {projectType};
     if (this.currentVersionId) {
       // If forceNewVersion is set to true, we will not replace the existing version (i.e., we will create
       // a new version). Otherwise we check if we should replace the existing version based on the last new
@@ -91,7 +91,7 @@ export class RemoteSourcesStore implements SourcesStore {
         replace: replaceExistingVersion,
         firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
         tabId: getTabId(),
-      };
+      } as UpdateSourceOptions;
     }
     const response = await sourcesApi.update(channelId, sources, options);
 
