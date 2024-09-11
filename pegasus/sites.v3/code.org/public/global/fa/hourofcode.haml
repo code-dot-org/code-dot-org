@@ -5,15 +5,28 @@ set_dir: true
 
 :ruby
   @header["title"] = hoc_s(:hour_of_code)
+  hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/hour-of-code-styles.css", rel: "stylesheet", type: "text/css"}
 
-%section.hero-banner-basic
-  .wrapper.centered
-    %p.hoc-label
-      =hoc_s(:hour_of_code)
-    %h1=hoc_s(:hoc2023_header)
+-# TODO - clean up soon-hoc logic once this is launched
+-# Show 2024 HOC banner if hoc_mode is "soon-hoc", otherwise show 2023 banner
+- if hoc_mode == "soon-hoc"
+  %section.hero-banner-basic.hoc-2024
+    .wrapper.centered.flex-container.align-items-center.flex-direction-column.gap-2
+      %figure
+        %img{src: "/images/banners/banner-hoc-2024.png", alt: ""}
+      .text-wrapper
+        %h1=hoc_s("hoc_2024.header")
+        %a.link-button.black.has-external-link{href: "https://hourofcode.com/events", target: "_blank", rel: "noopener noreferrer"}
+          =hoc_s("hoc_2024.button_host_an_event")
+- else
+  %section.hero-banner-basic
+    .wrapper.centered
+      %p.hoc-label
+        =hoc_s(:hour_of_code)
+      %h1=hoc_s(:hoc2023_header)
 
 %section.bg-neutral-light
   .wrapper.flex-container.justify-space-between.wrap
@@ -31,70 +44,10 @@ set_dir: true
 
 %section
   .wrapper
-    %p.heading-sm.centered{style: "margin-bottom: 4rem"}
-      =hoc_s(:hoc_page_place_to_start)
-    %hr
     %h2=hoc_s(:hoc_page_lead_activity_heading)
     %p.has-external-link
-      =hoc_s(:hoc_page_lead_activity_desc, markdown: :inline, locals:{register_activity_url: "https://hourofcode.com/events"})
+      =hoc_s(:"hoc_page.activities.desc", markdown: :inline, locals:{register_activity_url: "https://hourofcode.com/events"})
     = view :hoc_activites_featured
-    .centered{style: "margin-top: 3rem"}
-      %hr
-      %h3=hoc_s(:call_to_action_explore_all_hoc_activities)
-      .see-all-activities.flex-container.align-items-center.wrap.gap-1
-        %img{src: "/images/tutorials/hoc2019/oceans.jpg", alt: ""}
-        %img{src: "/images/tutorials/resubmission/flappy.jpg", alt: ""}
-        %img{src: "/images/tutorials/resubmission/frozen.jpg", alt: ""}
-        %img{src: "/images/tutorials/hoc2021/poem_art.jpg", alt: ""}
-        %img{src: "/images/tutorials/resubmission/starwars.jpg", alt: ""}
-      %a.link-button.secondary{href: CDO.studio_url("/catalog?marketingInitiative=hoc")}
-        =hoc_s(:call_to_action_explore_activities)
-
-= view :section_divider_line
-
-%section
-  .wrapper
-    %h2=hoc_s(:learn_how_ai_works)
-    %p=hoc_s(:hoc_page_how_ai_works_desc)
-    .action-block.action-block--two-col
-      .media-wrapper.col-50
-        = view :display_video_thumbnail, id: "intro_csp", video_code: "YlwVMtNEWKA", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/ai_series/ai-intro-to-how-ai-works-lessons.mp4"
-      .text-wrapper.col-50
-        .flex-container.justify-space-between.align-items-start
-          %p.overline
-            =hoc_s(:module_label_grades)
-            =hoc_s(:module_grade_6_12)
-        %h3.heading-md
-          = hoc_s(:hoc_page_how_ai_works_title)
-        %p
-          = hoc_s(:how_ai_works_intro_desc)
-        %a.link-button{href: "/ai/how-ai-works"}
-          = hoc_s(:call_to_action_explore_how_ai_works)
-      .clear
-
-= view :section_divider_line
-
-%section
-  .wrapper
-    %h2=hoc_s(:hoc_page_ai_101_heading)
-    %p=hoc_s(:hoc_page_ai_101_desc)
-    .action-block.action-block--two-col
-      .media-wrapper.col-50
-        %img{src: "shared/images/social-media/ai-101-social.png", alt: hoc_s(:hoc_live)}
-      .text-wrapper.col-50
-        .flex-container.justify-space-between.align-items-start
-          %p.overline
-            =hoc_s(:module_professional_learning)
-        %h3.heading-md
-          = hoc_s(:hoc_page_ai_101_block_title)
-        %p
-          = hoc_s(:hoc_page_ai_101_block_desc)
-        %a.link-button{href: "/ai/pl/101"}
-          = hoc_s(:csa_ai_page_learn_more_title)
-      .clear
-
-%section.bg-neutral-light
-  .wrapper.centered
-    %h2=hoc_s(:hoc_page_go_beyond_hoc)
-    = view :hoc_page_beyond
-
+    %div.centered{style: "margin-top: 2rem"}
+      %a.link-button.secondary{href: "https://studio.code.org/catalog?marketingInitiative=hoc"}
+        =hoc_s(:call_to_action_explore_all_hoc_activities)
