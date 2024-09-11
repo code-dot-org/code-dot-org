@@ -77,10 +77,6 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     sessionStorage.setItem(SCHOOL_COUNTRY_SESSION_KEY, country);
 
     if (mounted.current && country) {
-      setSchoolId(SELECT_A_SCHOOL);
-      setSchoolZip('');
-      setSchoolName('');
-      setSchoolsList([]);
       analyticsReporter.sendEvent(
         EVENTS.COUNTRY_SELECTED,
         {country},
@@ -96,18 +92,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
       return;
     }
 
-    if (mounted.current && schoolZip) {
-      setSchoolId(SELECT_A_SCHOOL);
-      setSchoolName('');
-      setSchoolsList([]);
-    }
-
     if (sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY) !== schoolZip) {
-      // Clear out school from dropdown if schoolZip has changed
-      setSchoolId(SELECT_A_SCHOOL);
-      setSchoolName('');
-      setSchoolsList([]);
-
       sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, schoolZip);
 
       analyticsReporter.sendEvent(
