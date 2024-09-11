@@ -3,8 +3,9 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import {BlockMode, DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
-import MusicLibrary, {loadLibrary} from '@cdo/apps/music/player/MusicLibrary';
+import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
 import {MusicLevelData} from '@cdo/apps/music/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
@@ -28,6 +29,10 @@ interface EditMusicLevelDataProps {
 const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
   initialLevelData,
 }) => {
+  useEffect(() => {
+    setUpBlocklyForMusicLab();
+  }, []);
+
   const [levelData, setLevelData] = useState(initialLevelData);
 
   const [loadedLibraries, setLoadedLibraries] = useState<{
@@ -41,11 +46,11 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       return;
     }
 
-    if (!loadedLibraries[libraryName]) {
-      loadLibrary(libraryName).then(library => {
+    MusicLibrary.loadLibrary(libraryName).then(library => {
+      if (!loadedLibraries[libraryName]) {
         setLoadedLibraries({...loadedLibraries, [libraryName]: library});
-      });
-    }
+      }
+    });
   }, [levelData.library, loadedLibraries]);
 
   const hasRestrictedSounds = useMemo(
@@ -176,10 +181,11 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               blockMode,
               toolbox: {
                 ...levelData.toolbox,
-                blocks: {},
+                blocks: undefined,
               },
             })
           }
+          startSources={levelData.startSources}
         />
       </CollapsibleSection>
       <hr />

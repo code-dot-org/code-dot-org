@@ -68,3 +68,58 @@
     margin: 0;
   }
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tooltip {
+  animation: fade-in 0.3s;
+}
+
+.configSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.verticalFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontalFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+.gapMedium {
+  gap: 16px;
+}
+
+.gapLarge {
+  gap: 36px;
+}
+
+.flexAll {
+  flex: 1;
+}
+
+.previewWorkspaceContainer {
+  // Prevent interaction with the workspace preview
+  pointer-events: none;
+  width: 100%;
+  min-height: 500px;
+}
+
+.infoPanel {
+  padding: 16px;
+  background-color: $neutral_light;
+  border-radius: 4px;
+  margin-bottom: 32px;
+}

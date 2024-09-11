@@ -5,6 +5,7 @@ import {Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {ValueOf} from '@cdo/apps/types/utils';
 
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getBlockMode} from '../appConfig';
@@ -78,7 +79,8 @@ export default class MusicBlocklyWorkspace {
     onBlockSpaceChange: (e: Abstract) => void,
     isReadOnlyWorkspace: boolean,
     toolbox: ToolboxData | undefined,
-    isRtl: boolean
+    isRtl: boolean,
+    blockMode: ValueOf<typeof BlockMode> = getBlockMode()
   ) {
     if (this.workspace) {
       this.workspace.dispose();
@@ -86,7 +88,7 @@ export default class MusicBlocklyWorkspace {
 
     this.container = container;
 
-    const toolboxBlocks = getToolbox(getBlockMode(), toolbox);
+    const toolboxBlocks = getToolbox(blockMode, toolbox);
 
     this.workspace = Blockly.inject(container, {
       toolbox: toolboxBlocks,
@@ -465,7 +467,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   // Load the workspace with the given code.
-  loadCode(code: string) {
+  loadCode(code: object) {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'loadCode called before workspace initialized.'

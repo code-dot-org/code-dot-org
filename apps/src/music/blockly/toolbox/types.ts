@@ -41,6 +41,6 @@ export type ToolboxType = 'category' | 'flyout';
  * Level-defined data for configuring the toolbox.
  */
 export interface ToolboxData {
-  blocks: CategoryBlocksMap;
+  blocks?: CategoryBlocksMap;
   type?: ToolboxType;
 }
