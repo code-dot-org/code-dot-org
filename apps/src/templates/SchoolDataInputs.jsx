@@ -110,7 +110,6 @@ export default function SchoolDataInputs({
               schoolZip={schoolZip}
               setSchoolZip={setSchoolZip}
               schoolsList={schoolsList}
-              schoolZipIsValid={schoolZipIsValid}
             />
           </div>
         )}
