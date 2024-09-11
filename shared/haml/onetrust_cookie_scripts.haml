@@ -4,7 +4,7 @@
 -# /embed. When Code.org is rendered in an iframe on another website, we are
 -# responsible for getting user consent for Cookies and Tracking Technologies,
 -# therefore, we don't need to display the OneTrust banner requesting consent.
-- return if request.path.ends_with?('/embed')
+- return if request&.path&.ends_with?('/embed')
 
 -# OneTrust Cookies Consent Notice scripts for code.org
 -# default to loading the prod OneTrust configuration.
