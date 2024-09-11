@@ -24,8 +24,8 @@ set_dir: true
 
 %section
   .wrapper
-    %div.col-50{style: "margin: .5rem 0 1rem;"}
-      = view :display_video_thumbnail, id: "intro_csf", video_code: "rNIM1fzJ8u0", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csf.mp4"
+    %figure
+      %img.col-45{src: "/images/courses-art-k-5.png", alt: ""}
     .text-wrapper.col-45{style: "float: right;"}
       %h2=hoc_s(:csf_page_intro_heading)
       %ul
@@ -83,7 +83,7 @@ set_dir: true
     %p=hoc_s(:farsi_csf_unplugged_description)
     .action-block.action-block--two-col
       .media-wrapper.col-50
-        %img{src: "/images/new-main.jpg", alt: ""}
+        %img{src: "/images/global/fa/unplugged-curriculum.png", alt: ""}
       .text-wrapper.col-50
         %h3=hoc_s(:no_devices_section_subhead)
         %p=hoc_s(:no_devices_section_desc)

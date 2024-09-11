@@ -1522,6 +1522,8 @@
   farsi_about_description_4: "We invite you to celebrate Persian contributions to technology by supporting Code.org and computer science education so that every student in every school has the opportunity to learn computer science."
   farsi_csf_express_description: "These express courses are ideal for students who want to explore the basics of Computer Science on their own, outside of the classroom, or for teachers looking for an accelerated way to cover the fundamentals of Computer Science with older students."
   farsi_csf_unplugged_description: "Go ahead, cut the cord (for a while)! CS education does not always need to be in front of a screen and you don’t need to make device access a barrier to learning computer science concepts. "
+  farsi_hello_world: "Hello World: Animals"
+  farsi_hello_world_cta: "Explore Hello World"
 
   naipi_page_heading: "Native American and Indigenous Peoples Initiative (NAIPI)"
   naipi_page_intro_heading: "What is NAIPI?"
