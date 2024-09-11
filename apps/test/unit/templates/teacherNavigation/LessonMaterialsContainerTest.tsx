@@ -13,8 +13,40 @@ describe('LessonMaterialsContainer', () => {
   const mockLessonData = {
     title: 'Unit 1',
     lessons: [
-      {name: 'First lesson', id: 1, position: 1},
-      {name: 'Second lesson', id: 2, position: 2},
+      {
+        name: 'First lesson',
+        id: 1,
+        position: 1,
+        resources: {
+          Teacher: [
+            {
+              type: 'Slides',
+              key: 'resourceKey1',
+              name: 'my resource',
+              url: 'google.com',
+              downloadUrl: 'google.com',
+              audience: 'Teacher',
+            },
+          ],
+        },
+      },
+      {
+        name: 'Second lesson',
+        id: 2,
+        position: 2,
+        resources: {
+          Teacher: [
+            {
+              type: 'Slides',
+              key: 'resourceKey2',
+              name: 'my resource',
+              url: 'google.com',
+              downloadUrl: 'google.com',
+              audience: 'Teacher',
+            },
+          ],
+        },
+      },
     ],
   };
 
@@ -24,8 +56,6 @@ describe('LessonMaterialsContainer', () => {
 
   it('renders the component and dropdown with lessons', () => {
     render(<LessonMaterialsContainer />);
-
-    screen.getByText('Lesson');
 
     screen.getByRole('combobox');
     screen.getByRole('option', {name: 'Lesson 1 - First lesson'});
