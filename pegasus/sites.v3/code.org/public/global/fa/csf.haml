@@ -33,16 +33,9 @@ set_dir: true
         %li=hoc_s(:csf_page_intro_list_02)
         %li=hoc_s(:csf_page_intro_list_03)
         %li=hoc_s(:csf_page_intro_list_04)
-        -# The list item below is using the new namespace pattern for strings
-        %li=hoc_s("csf_page.intro_list_05")
       %a.link-button{href: "#pick-a-course"}
         =hoc_s(:call_to_action_explore_courses)
     .clear
-
-%section.bg-neutral-light
-  - languages = "فارسی ,العربية , Bahasa Indonesia, Català, 简体字, 繁體字, Čeština, Français, Deutsch, हिन्दी, Italiano, 日本語, 한국어, ಕನ್ನಡ, بهاس ملايو, Монгол хэл, English, Polski, Português (Brasil), Română, Русский, Slovenčina, Filipino, தமிழ், ภาษาไทย, Türkçe, Українська, Español (España), Español (LATAM), اردو, O'zbekcha, Tiếng Việt"
-  .wrapper
-    = view :curriculum_glance_section, heading: hoc_s(:heading_curricula_at_a_glance), grades: hoc_s(:module_grade_k_5), duration: hoc_s(:module_duration_month_quarter), level: hoc_s(:module_level_beginner), tools: hoc_s(:csf_page_curriculum_glance_tools), devices: hoc_s(:csf_page_curriculum_glance_devices), professional_learning: hoc_s(:csf_page_curriculum_glance_professional_learning), topics: hoc_s(:csf_page_curriculum_glance_topics), accessibility_features: hoc_s(:csf_page_curriculum_glance_accessibility_features), languages: languages
 
 %section.quote.bg-neutral-dark
   .wrapper
@@ -79,7 +72,7 @@ set_dir: true
 %section#csf-self-paced
   .wrapper
     %h2=hoc_s(:csf_page_courses_self_paced_heading)
-    %p=hoc_s(:csf_page_courses_self_paced_desc)
+    %p=hoc_s(:farsi_csf_express_description)
     = view :csf_page_courses_self_paced
 
 = view :section_divider_line
@@ -87,38 +80,13 @@ set_dir: true
 %section#csf-no-devices
   .wrapper
     %h2=hoc_s(:heading_no_devices)
+    %p=hoc_s(:farsi_csf_unplugged_description)
     .action-block.action-block--two-col
       .media-wrapper.col-50
         %img{src: "/images/new-main.jpg", alt: ""}
       .text-wrapper.col-50
         %h3=hoc_s(:no_devices_section_subhead)
         %p=hoc_s(:no_devices_section_desc)
-        %a.link-button{href: "/curriculum/unplugged", target: "_blank", rel: "noopener noreferrer"}
+        %a.link-button{href: "https://studio.code.org/s/k5-unplugged", target: "_blank", rel: "noopener noreferrer"}
           =hoc_s(:call_to_action_explore_unplugged_lesson)
       .clear
-
-%section.bg-neutral-light
-  .wrapper
-    = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
-
-%section
-  .wrapper
-    = view :curriculum_pages_pl_section, facilitator_desc: hoc_s(:professional_learning_section_block_facilitator_led_workshops_csf), apply_url: "/professional-development-workshops", modules_url: CDO.studio_url("/s/k5-onlinepd-2023")
-
-= view :section_divider_line
-
-%section.no-padding-bottom
-  .wrapper
-    %h2=hoc_s(:heading_faq)
-    = view :faq_csf
-
-%section
-  .wrapper
-    = view :support_and_questions_section
-
-%section.bg-neutral-light
-  .wrapper
-    -# The section is using the new namespace pattern for strings
-    %h2=hoc_s("csf_page.additional_resources.heading")
-    %p=hoc_s("csf_page.additional_resources.desc")
-    = view :curriculum_support_additional_resources
