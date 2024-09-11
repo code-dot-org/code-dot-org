@@ -1,4 +1,4 @@
-import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
+import * as codegen from '@cdo/apps/code-studio/jsinterpreter/codegen';
 
 describe('codegen', function () {
   describe('generates cumulative length stats', function () {

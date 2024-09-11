@@ -1,5 +1,5 @@
 describe('CommandHistory', function () {
-  var CommandHistory = require('@cdo/apps/lib/tools/jsdebugger/CommandHistory');
+  var CommandHistory = require('@cdo/apps/code-studio/jsdebugger/CommandHistory');
   var history, inputText;
 
   beforeEach(function () {

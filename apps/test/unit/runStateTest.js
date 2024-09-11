@@ -1,4 +1,4 @@
-import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+import JSInterpreter from '@cdo/apps/code-studio/jsinterpreter/JSInterpreter';
 
 import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

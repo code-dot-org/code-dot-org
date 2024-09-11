@@ -1,4 +1,4 @@
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import CustomMarshalingInterpreter from '@cdo/apps/code-studio/jsinterpreter/CustomMarshalingInterpreter';
 
 export function attachAssertToInterpreter(interpreter, scope, assertion) {
   interpreter.setProperty(

@@ -1,10 +1,10 @@
-import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
+import CommandHistory from '@cdo/apps/code-studio/jsdebugger/CommandHistory';
 import {
   reducers,
   selectors,
   actions,
-} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+} from '@cdo/apps/code-studio/jsdebugger/redux';
+import JSInterpreter from '@cdo/apps/code-studio/jsinterpreter/JSInterpreter';
 import Observer from '@cdo/apps/Observer';
 import {
   getStore,

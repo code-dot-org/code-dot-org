@@ -7,7 +7,7 @@ import * as constants from '@cdo/apps/applab/constants';
 import designMode from '@cdo/apps/applab/designMode';
 import {reducers} from '@cdo/apps/applab/redux/applab';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import {isOpen as isDebuggerOpen} from '@cdo/apps/code-studio/jsdebugger/redux';
 import {
   getStore,
   registerReducers,

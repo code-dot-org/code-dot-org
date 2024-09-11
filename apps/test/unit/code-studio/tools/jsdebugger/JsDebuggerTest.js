@@ -3,9 +3,9 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import JsDebugger from '@cdo/apps/code-studio/jsdebugger/JsDebugger';
+import {actions, reducers} from '@cdo/apps/code-studio/jsdebugger/redux';
 import dom from '@cdo/apps/dom';
-import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
-import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
   getStore,
   registerReducers,

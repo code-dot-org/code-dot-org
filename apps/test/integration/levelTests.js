@@ -14,11 +14,11 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import {reducers as jsDebuggerReducers} from '@cdo/apps/code-studio/jsdebugger/redux';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import projectRedux from '@cdo/apps/code-studio/projectRedux';
-import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 import runState from '@cdo/apps/redux/runState';
 import {

@@ -4,7 +4,7 @@ import * as utils from '@cdo/apps/code-studio/utils';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('AnalyticsUtils', () => {
   it('reports teacher viewing student work on a dsl level when needed', () => {

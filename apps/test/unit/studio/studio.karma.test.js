@@ -1,7 +1,7 @@
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import CustomMarshalingInterpreter from '@cdo/apps/code-studio/jsinterpreter/CustomMarshalingInterpreter';
 import {SVG_NS} from '@cdo/apps/constants';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import Studio, {
   setSvgText,
   calculateBubblePosition,

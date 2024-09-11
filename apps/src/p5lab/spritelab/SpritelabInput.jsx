@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {selectors} from '@cdo/apps/code-studio/tools/jsdebugger/redux';
 import {KeyCodes} from '@cdo/apps/constants';
-import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 
 import {animationSourceUrl} from '../redux/animationList';
 import {PromptType} from '../redux/spritelabInput';

@@ -20,6 +20,8 @@ import commonMsg from '@cdo/locale';
 
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import project from '../code-studio/initApp/project';
+import CustomMarshalingInterpreter from '../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
+import JSInterpreter from '../code-studio/tools/jsinterpreter/JSInterpreter';
 import {TestResults, ResultType, KeyCodes, SVG_NS} from '../constants';
 import {
   getContainedLevelResultInfo,
@@ -29,8 +31,6 @@ import {
 import dom from '../dom';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import JsInterpreterLogger from '../JsInterpreterLogger';
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import MusicController from '../MusicController';
 import {getStore} from '../redux';

@@ -43,6 +43,7 @@ import WireframeButtons from './code-studio/components/WireframeButtons';
 import project from './code-studio/initApp/project';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
+import {isEditWhileRun} from './code-studio/tools/jsdebugger/redux';
 import {
   KeyCodes,
   TestResults,
@@ -55,7 +56,6 @@ import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import FeedbackUtils from './feedback';
 import Alert from './legacySharedComponents/alert';
-import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
 import firehoseClient from './metrics/firehose';
 import puzzleRatingUtils from './puzzleRatingUtils';
@@ -88,7 +88,7 @@ import trackEvent from './util/trackEvent';
 import * as utils from './utils';
 import {parseElement as parseXmlElement} from './xml';
 
-var codegen = require('./lib/tools/jsinterpreter/codegen');
+var codegen = require('./code-studio/tools/jsinterpreter/codegen');
 
 /**
  * If the bigPlayspace is enabled, either by experiment or by level property,
