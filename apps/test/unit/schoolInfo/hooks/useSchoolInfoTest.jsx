@@ -16,7 +16,6 @@ import {
 
 jest.mock('@cdo/apps/lib/util/AnalyticsReporter');
 jest.mock('@cdo/apps/util/AuthenticityTokenStore');
-jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools');
 
 // Mock sessionStorage
 const mockSessionStorage = (() => {
@@ -38,7 +37,7 @@ const mockSessionStorage = (() => {
 Object.defineProperty(window, 'sessionStorage', {value: mockSessionStorage});
 
 describe('useSchoolInfo', () => {
-  let fetchSchoolsSpy;
+  let mockFetch;
   let sendAnalyticsEventSpy;
 
   const initialState = {
@@ -51,14 +50,15 @@ describe('useSchoolInfo', () => {
   beforeEach(() => {
     sessionStorage.clear();
     jest.clearAllMocks();
-    const mockResponse = {ok: true, json: jest.fn().mockResolvedValue([])};
-    window.fetch = jest.fn().mockResolvedValue(mockResponse);
-
-    fetchSchoolsSpy = jest
-      .spyOn(require('@cdo/apps/schoolInfo/utils/fetchSchools'), 'fetchSchools')
-      .mockResolvedValue([
-        {nces_id: initialState.schoolId, name: initialState.schoolName},
-      ]);
+    const mockResponse = {
+      ok: true,
+      json: jest.fn().mockResolvedValue([
+        {nces_id: '1', name: 'Cool School'},
+        {nces_id: '2', name: 'Other School'},
+      ]),
+    };
+    mockFetch = jest.fn().mockResolvedValue(mockResponse);
+    window.fetch = mockFetch;
 
     sendAnalyticsEventSpy = jest.spyOn(
       require('@cdo/apps/lib/util/AnalyticsReporter'),
