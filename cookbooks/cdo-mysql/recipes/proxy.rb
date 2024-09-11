@@ -20,6 +20,7 @@ remote_file proxysql_file do
   checksum "5e92844617aa1666a65475bd22c7fda1939ef5604e4b7ea08625ff2465b87482"
   action :create_if_missing
 end
+
 dpkg_package('proxysql') do
   source proxysql_file
   version '2.7.0'
