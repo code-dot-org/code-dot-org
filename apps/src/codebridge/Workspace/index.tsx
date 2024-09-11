@@ -68,20 +68,26 @@ const Workspace = () => {
             </div>
           )}
           {config.showFileBrowser && <FileBrowser />}
+
           <Editor
             langMapping={config.languageMapping}
             editableFileTypes={config.editableFileTypes}
           />
-          {viewingOldVersion && (
-            <Alert text={codebridgeI18n.viewingOldVersion()} type={'warning'} />
-          )}
-          {hasRestoredOldVersion && (
-            <Alert
-              text={codebridgeI18n.restoredOldVersion()}
-              type={'success'}
-              onClose={closeRestoredVersionBanner}
-            />
-          )}
+          <div className={moduleStyles.workspaceWarningArea}>
+            {viewingOldVersion && (
+              <Alert
+                text={codebridgeI18n.viewingOldVersion()}
+                type={'warning'}
+              />
+            )}
+            {hasRestoredOldVersion && (
+              <Alert
+                text={codebridgeI18n.restoredOldVersion()}
+                type={'success'}
+                onClose={closeRestoredVersionBanner}
+              />
+            )}
+          </div>
         </div>
       </div>
     </PanelContainer>

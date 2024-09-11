@@ -36,3 +36,7 @@
   color: $white;
   overflow: hidden;
 }
+
+.workspaceWarningArea {
+  grid-column: 1 / span 2;
+}
