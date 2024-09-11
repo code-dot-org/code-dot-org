@@ -142,10 +142,7 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_teacher_verified = current_user.verified_teacher?
-    return head :forbidden unless is_teacher_verified
-
-    is_teacher_verified = current_user.verified_teacher?
+    is_teacher_verified = current_user&.verified_teacher?
     return head :forbidden unless is_teacher_verified
 
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
@@ -172,7 +169,7 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_teacher_verified = current_user.verified_teacher?
+    is_teacher_verified = current_user&.verified_teacher?
     return head :forbidden unless is_teacher_verified
 
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
@@ -223,7 +220,7 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_teacher_verified = current_user.verified_teacher?
+    is_teacher_verified = current_user&.verified_teacher?
     return head :forbidden unless is_teacher_verified
 
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
@@ -254,7 +251,7 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_teacher_verified = current_user.verified_teacher?
+    is_teacher_verified = current_user&.verified_teacher?
     return head :forbidden unless is_teacher_verified
 
     is_level_ai_enabled = AiRubricConfig.ai_enabled?(script_level)
