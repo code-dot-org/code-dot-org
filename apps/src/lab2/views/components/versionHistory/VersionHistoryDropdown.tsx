@@ -67,6 +67,10 @@ const VersionHistoryDropdown: React.FunctionComponent<
     state => state.lab2Project.viewingOldVersion
   );
 
+  // If this is a teacher viewing a student's project, we hide the restore button,
+  // but still allow viewing old versions.
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -246,14 +250,16 @@ const VersionHistoryDropdown: React.FunctionComponent<
             <i className="fa fa-spinner fa-spin" />
           </div>
         )}
-        <Button
-          text={commonI18n.restore()}
-          color={'purple'}
-          size={'m'}
-          onClick={restoreSelectedVersion}
-          disabled={loading}
-          className={moduleStyles.actionButton}
-        />
+        {!viewAsUserId && (
+          <Button
+            text={commonI18n.restore()}
+            color={'purple'}
+            size={'m'}
+            onClick={restoreSelectedVersion}
+            disabled={loading}
+            className={moduleStyles.actionButton}
+          />
+        )}
         <Button
           text={commonI18n.cancel()}
           color={'white'}
