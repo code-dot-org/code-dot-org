@@ -47,7 +47,7 @@ import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
   id: getNewMessageId(),
-  text: 'Model customizations and model card information have been reset to default settings.',
+  text: aichatI18n.customizationsResetToDefaultSettings(),
   notificationType: 'success',
   timestamp: Date.now(),
   includeInChatHistory: true,
@@ -159,12 +159,12 @@ const AichatView: React.FunctionComponent = () => {
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
       {
-        label: 'Edit',
+        label: aichatI18n.editView(),
         value: ViewMode.EDIT,
         iconLeft: {iconName: 'wrench', iconStyle: 'solid', title: 'Edit Mode'},
       },
       {
-        label: 'User View',
+        label: aichatI18n.userView(),
         value: ViewMode.PRESENTATION,
         iconLeft: {
           iconName: 'user-group',
@@ -255,7 +255,7 @@ const AichatView: React.FunctionComponent = () => {
               <div className={moduleStyles.customizationArea}>
                 <PanelContainer
                   id="aichat-model-customization-panel"
-                  headerContent="Model Customization"
+                  headerContent={aichatI18n.modelCustomizationHeader()}
                   className={moduleStyles.panelContainer}
                   headerClassName={moduleStyles.panelHeader}
                   rightHeaderContent={renderModelCustomizationHeaderRight(
@@ -282,7 +282,7 @@ const AichatView: React.FunctionComponent = () => {
           >
             <PanelContainer
               id="aichat-presentation-panel"
-              headerContent={'Model Card'}
+              headerContent={aichatI18n.modelCardHeader()}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
             >
@@ -313,7 +313,7 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
         isIconOnly={true}
         color={'black'}
         onClick={onStartOver}
-        ariaLabel={'Start Over'}
+        ariaLabel={commonI18n.startOver()}
         size={'xs'}
         type="tertiary"
         className={moduleStyles.aichatViewButton}

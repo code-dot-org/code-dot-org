@@ -1,7 +1,12 @@
 {
   "aichatWorkspaceHeader": "AI Chat",
   "continue": "Continue",
+  "editView": "Edit",
+  "customizationsResetToDefaultSettings": "Model customizations and model card information have been reset to default settings.",
+  "modelCustomizationHeader": "Model Customization",
+  "modelCardHeader" : "Model Card",
   "startOverAichatModelCustomizations": "This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.",
+  "userView": "User View",
   "waitingForChatResponse": "Waiting for a response...",
   "whatIsPersonalInformation": "What is considered personal information?"
 }
