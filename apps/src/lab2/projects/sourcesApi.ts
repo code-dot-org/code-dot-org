@@ -7,7 +7,12 @@ import HttpClient, {GetResponse} from '@cdo/apps/util/HttpClient';
 
 import {SOURCE_FILE} from '../constants';
 import {SourceResponseValidator} from '../responseValidators';
-import {ProjectSources, ProjectVersion, SourceUpdateOptions} from '../types';
+import {
+  ProjectSources,
+  ProjectVersion,
+  SaveSourceOptions,
+  UpdateSourceOptions,
+} from '../types';
 
 const {stringifyQueryParams} = require('@cdo/apps/utils');
 
@@ -28,7 +33,7 @@ export async function get(
 export async function update(
   channelId: string,
   sources: ProjectSources,
-  options?: SourceUpdateOptions
+  options?: SaveSourceOptions | UpdateSourceOptions
 ): Promise<Response> {
   const url = rootUrl(channelId) + stringifyQueryParams(options);
   return fetch(url, {

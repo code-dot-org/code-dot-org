@@ -5,7 +5,13 @@
  */
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
-import {ProjectSources, ProjectType, ProjectVersion} from '../types';
+import {
+  ProjectSources,
+  ProjectType,
+  ProjectVersion,
+  SaveSourceOptions,
+  UpdateSourceOptions,
+} from '../types';
 
 import * as sourcesApi from './sourcesApi';
 
@@ -68,24 +74,25 @@ export class RemoteSourcesStore implements SourcesStore {
     projectType?: ProjectType,
     forceNewVersion = false
   ) {
-    // If forceNewVersion is set to true, we will not replace the existing version (i.e., we will create
-    // a new version). Otherwise we check if we should replace the existing version based on the last new
-    // version saved in this session.
-    const replaceExistingVersion =
-      !forceNewVersion && this.shouldReplaceExistingVersion();
-    if (!replaceExistingVersion) {
-      // If we're are creating a new version, update the last new version time.
-      this.lastNewVersionTime = Date.now();
+    let options: SaveSourceOptions | UpdateSourceOptions = {projectType};
+    if (this.currentVersionId) {
+      // If forceNewVersion is set to true, we will not replace the existing version (i.e., we will create
+      // a new version). Otherwise we check if we should replace the existing version based on the last new
+      // version saved in this session.
+      const replaceExistingVersion =
+        !forceNewVersion && this.shouldReplaceExistingVersion();
+      if (!replaceExistingVersion) {
+        // If we're are creating a new version, update the last new version time.
+        this.lastNewVersionTime = Date.now();
+      }
+      options = {
+        ...options,
+        currentVersion: this.currentVersionId,
+        replace: replaceExistingVersion,
+        firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
+        tabId: getTabId(),
+      };
     }
-    const optionsWithoutVersionId = {
-      replace: replaceExistingVersion,
-      firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
-      tabId: getTabId(),
-      projectType,
-    };
-    const options = this.currentVersionId
-      ? {...optionsWithoutVersionId, currentVersion: this.currentVersionId}
-      : optionsWithoutVersionId;
     const response = await sourcesApi.update(channelId, sources, options);
 
     if (response.ok) {
