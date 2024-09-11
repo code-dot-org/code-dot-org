@@ -99,7 +99,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             name="userEmailOptIn"
             label={locale.get_informational_emails()}
             checked={emailOptInChecked}
-            onChange={() => setEmailOptInChecked(!emailOptInChecked)}
+            onChange={e => setEmailOptInChecked(e.target.checked)}
           />
           <BodyThreeText className={style.emailOptInFootnote}>
             <strong>{locale.note()}</strong>{' '}
