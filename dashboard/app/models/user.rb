@@ -301,6 +301,10 @@ class User < ApplicationRecord
 
   after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
 
+  after_update if: -> {cap_status? && property_previously_changed?(:us_state)} do
+    Services::ChildAccount.remove_compliance(self)
+  end
+
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do

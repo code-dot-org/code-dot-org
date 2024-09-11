@@ -40,6 +40,15 @@ module SerializedProperties
     changes[key] != properties[key]
   end
 
+  def property_previously_changed?(key)
+    return false unless previous_changes.dig('properties', 0)&.key?(key)
+
+    property_before = previous_changes.dig('properties', 0, key)
+    property_after  = previous_changes.dig('properties', 1, key)
+
+    property_before != property_after
+  end
+
   module ClassMethods
     def sti_hierarchy
       classes = []

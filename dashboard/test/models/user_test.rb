@@ -5519,4 +5519,56 @@ class UserTest < ActiveSupport::TestCase
       end
     end
   end
+
+  describe 'CAP compliance status removing after #us_state updating' do
+    subject(:user) {create(:user, us_state: old_us_state, cap_status: cap_status)}
+
+    let(:cap_status) {'l'}
+    let(:old_us_state) {'CO'}
+    let(:new_us_state) {'WA'}
+
+    let(:update_us_state) do
+      user.us_state = new_us_state
+      user.save(validate: false)
+    end
+
+    let(:expect_cap_compliance_removing) do
+      Services::ChildAccount.expects(:remove_compliance).with(user)
+    end
+
+    it 'calls CAP compliance removing service' do
+      expect_cap_compliance_removing.once
+      update_us_state
+    end
+
+    it 'removes #cap_status' do
+      assert_changes -> {user.reload.cap_status}, from: cap_status, to: nil do
+        update_us_state
+      end
+    end
+
+    it 'updates #us_state' do
+      assert_changes -> {user.reload.us_state}, from: old_us_state, to: new_us_state do
+        update_us_state
+      end
+    end
+
+    context 'when #us_state property is not changed' do
+      let(:new_us_state) {old_us_state}
+
+      it 'does not call CAP compliance removing service' do
+        expect_cap_compliance_removing.never
+        update_us_state
+      end
+    end
+
+    context 'when no CAP compliance status' do
+      let(:cap_status) {nil}
+
+      it 'does not call CAP compliance removing service' do
+        expect_cap_compliance_removing.never
+        update_us_state
+      end
+    end
+  end
 end
