@@ -61,6 +61,7 @@ Parameters:
 <% if frontends -%>
   DaemonInstanceType:
     Type: String
+    Default: <%=INSTANCE_TYPE%>
   AutoscaleRollingBatchSize:
     Type: Number
     Default: 20
@@ -582,7 +583,11 @@ Resources:
       IamInstanceProfile: !Ref DaemonInstanceProfile
       KeyName: <%=SSH_KEY_NAME%>
       Tags:
-        - {Key: Name, Value: <%=frontends ? "#{environment}-daemon" : "!Ref 'AWS::StackName'"%>}
+<%   if frontends -%>
+        - {Key: Name, Value: !Sub "${AWS::StackName}-daemon"}
+<%   else -%>
+        - {Key: Name, Value: !Ref AWS::StackName}
+<%   end -%>
       BlockDeviceMappings:
         # BlockDeviceMappings cannot be modified after instance creation, doing so will DELETE the instance and recreate it.
         # EBS Volume is manually modified via CLI or Console to prevent instance recreation.
@@ -614,7 +619,7 @@ Resources:
           #!/bin/bash -x
           <%=indent(erb_file(BOOTSTRAP_CHEF,
             resource_id: daemon,
-            node_name: frontends ? '$ENVIRONMENT-daemon' : '$STACK',
+            node_name: frontends ? '$STACK-daemon' : '$STACK',
             run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
             commit: nil, # track branch
             daemon: true
@@ -640,9 +645,13 @@ Resources:
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
-# We don't yet provision the production database cluster/instances via CloudFormation.
+    DependsOn:
+<%# We don't yet provision the production database cluster/instances via CloudFormation. %>
 <% if database && !rack_env?(:production) %>
-    DependsOn: DBProxy
+      - DBProxy
+<% end -%>
+<% if frontends-%>
+      - Memcached
 <% end -%>
 <%end-%>
 
@@ -664,7 +673,8 @@ Resources:
       KeyName: <%=SSH_KEY_NAME%>
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
       Tags:
-        - {Key: Name, Value: <%=environment%>-console}
+        # TODO: Handle production stack name isn't "production".
+        - {Key: Name, Value: !Sub "${AWS::StackName}-console"}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs: {VolumeSize: 256, VolumeType: gp2}
@@ -690,10 +700,7 @@ Resources:
         - DeviceIndex: 0
           SubnetId: <%=subnets[1].to_json%>
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
-# We don't yet provision the production database cluster/instances via CloudFormation.
-<%   if database && !rack_env?(:production)%>
-    DependsOn: DBProxy
-<%   end -%>
+    DependsOn: [Daemon]
 <% end-%>
 
 
