@@ -3,8 +3,6 @@ import Workspace from '@codebridge/Workspace';
 import {debounce} from 'lodash';
 import React, {useEffect, useMemo} from 'react';
 
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import globalStyleConstants from '@cdo/apps/styleConstants';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
@@ -33,13 +31,6 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
     handleColumnResize();
 
     window.addEventListener('resize', debounce(handleColumnResize, 10));
-
-    // Ensure we resize appropriately when switching levels.
-    const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
-    lifecycleNotifier.addListener(
-      LifecycleEvent.LevelLoadCompleted,
-      handleColumnResize
-    );
   }, []);
 
   useEffect(() => {
@@ -61,6 +52,7 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
     // Minimum height fits 4 lines of text.
     const consoleHeightMin = 120;
     const consoleHeightMax = window.innerHeight - 200;
+
     setConsoleHeight(
       Math.max(
         consoleHeightMin,
