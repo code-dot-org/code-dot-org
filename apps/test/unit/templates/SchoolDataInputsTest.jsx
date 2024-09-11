@@ -57,58 +57,58 @@ describe('SchoolDataInputs', () => {
 
   it('displays headers in basic component render', () => {
     renderDefault();
-    expect(screen.queryByText(i18n.censusHeading())).toBeInTheDocument();
+    expect(screen.getByText(i18n.censusHeading())).toBeInTheDocument();
   });
 
   it('does not display headers if includeHeaders prop is false', () => {
     renderDefault({includeHeaders: false});
-    expect(screen.queryByText(i18n.censusHeading())).toBeFalsy();
+    expect(screen.queryByText(i18n.censusHeading())).toBeNull();
   });
 
   it('does not display zip input until United States is selected as country', () => {
-    renderDefault();
-    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeFalsy();
+    renderDefault({usIp: false});
+    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeNull();
   });
 
   it('does not ask for zip, asks instead for name if not US', () => {
     renderDefault({country: 'UK'});
-    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeFalsy();
+    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeNull();
     expect(
-      screen.queryByText(i18n.schoolOrganizationQuestion())
+      screen.getByText(i18n.schoolOrganizationQuestion())
     ).toBeInTheDocument();
   });
 
   it('automatically displays Zip field if US country is selected', () => {
-    renderDefault({country: 'US'});
-    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeInTheDocument();
+    renderDefault({usIp: true, country: 'US'});
+    expect(screen.getByText(i18n.enterYourSchoolZip())).toBeInTheDocument();
   });
 
   it('does not show Name field if US country is detected', () => {
-    renderDefault({country: 'US'});
-    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBeFalsy();
+    renderDefault({usIp: true, country: 'US'});
+    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBeNull();
   });
 
   it('does not show Name field if country is not selected', () => {
-    renderDefault();
-    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBeFalsy();
+    renderDefault({usIp: undefined});
+    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBeNull();
   });
 
   it('automatically displays Name field if non-US country is detected', () => {
     renderDefault({country: 'UK'});
     expect(
-      screen.queryByText(i18n.schoolOrganizationQuestion())
+      screen.getByText(i18n.schoolOrganizationQuestion())
     ).toBeInTheDocument();
   });
 
   it('displays error message if the zip is too short', () => {
     renderDefault({country: 'US', schoolZip: '99'});
-    expect(screen.queryByText(i18n.zipInvalidMessage())).toBeInTheDocument();
+    expect(screen.getByText(i18n.zipInvalidMessage())).toBeInTheDocument();
   });
 
   it('displays and enables school dropdown if a valid zip is given', () => {
     renderDefault({country: 'US', schoolZip: '98112'});
     const dropDown = screen.getByLabelText(i18n.selectYourSchool());
-    expect(dropDown).not.toBeDisabled();
+    expect(dropDown).toBeEnabled();
   });
 
   it('disables school dropdown if zip is invalid', () => {
@@ -120,7 +120,7 @@ describe('SchoolDataInputs', () => {
   it('dropdown switches to input box if user clicks to add', () => {
     renderDefault({country: 'US', schoolId: CLICK_TO_ADD});
     expect(
-      screen.queryByText(i18n.schoolOrganizationQuestion())
+      screen.getByText(i18n.schoolOrganizationQuestion())
     ).toBeInTheDocument();
   });
 
@@ -129,6 +129,6 @@ describe('SchoolDataInputs', () => {
       country: 'US',
       schoolId: SELECT_A_SCHOOL,
     });
-    expect(screen.queryByText(i18n.selectYourSchool())).toBeInTheDocument();
+    expect(screen.getByText(i18n.selectYourSchool())).toBeInTheDocument();
   });
 });
