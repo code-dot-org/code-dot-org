@@ -1,0 +1,38 @@
+name 'sp-pl-DS-teachingstrategies'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching Strategies in Data Science
+
+#### This unit offers many ways to differentiate and customize learning in your class. Take time to look at the resources provided. 
+
+## Strategies  
+
+#### Several of the lessons reference different teaching strategies to help make the lessons more engaging and interactive. Guides are provided to give step by step details of these approaches to make your preparation as simple as possible. 
+
+- ####  <a href= "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/edit?usp=sharing" target = "blank" rel = "noopener noreferrer">Guide to Anchor Charts and Word Walls</a> 
+
+- ####  <a href="https://docs.google.com/document/d/1B93Lzlo63VrBNjlc3puiujew8gtMFanxSdXx3lqzIrs/edit?usp=sharing" target="blank" rel="noopener noreferrer">Guide to Language Routines</a>
+
+- #### Guide to Data Talks
+
+- #### Guide to Three Reads 
+
+## Differentiation
+#### Some of the lessons offer choice activities and extension options to help you customize the lesson to your needs. Carefully read over these options to decide how you want your class to proceed. 
+
+
+## Teaching tips
+#### Notice the orange boxes in the teaching guides. These teaching tips provide useful suggestions for managing your class during the different activities. 
+
+<img src="https://images.code.org/6cf83f3a0a7961a2671af46ec2a836b5-image-1715182229076.png" alt="orange teaching tip box from lesson guide" width="850px" style="border-radius:10px;">
+
+
+## Materials
+#### Decide how you want to share materials with your students. In some instances, it may benefit to share the handouts digitally, in others,  you may prefer to make copies. 
+
+## External Websites 
+#### Check if the lessons involve external websites and verify whether they are blocked by your school in advance. If they are blocked, either find alternative sites or follow your school's procedure to unblock the websites.
+
+MARKDOWN

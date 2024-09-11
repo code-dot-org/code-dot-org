@@ -47,13 +47,13 @@ html {
   height: 100%;
 }
 
-
 body {
   background-color: var(--neutral_white);
   height: 100%;
   font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
+  font-style: normal;
   font-size: 14px;
-  line-height: 22px;
   color: var(--neutral_dark);
   margin: 0;
 }
@@ -62,26 +62,25 @@ h1,
 .heading-xxl {
   font-family: var(--main-font);
   font-weight: var(--bold-font-weight);
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 1.16;
-  margin: 1.75em 0 0.5em 0;
+  margin: 1em 0 0.5em 0;
 }
 
 h2,
 .heading-xl {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.24;
   margin: 1em 0 0.5em 0;
-  color: var(--brand-accent-default);
 }
 
 h3,
 .heading-lg {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
-  font-size: 1.125rem;
+  font-size: 1.75rem;
   line-height: 1.28;
   margin-bottom: 0.5em;
 }
@@ -90,7 +89,7 @@ h4,
 .heading-md {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.32;
   margin-bottom: 0.5em;
 }
@@ -99,8 +98,8 @@ h5,
 .heading-sm {
   font-family: var(--main-font);
   font-weight: var(--semi-bold-font-weight);
-  font-size: 1rem;
-  line-height: 1.40;
+  font-size: 1.25rem;
+  line-height: 1.4;
   margin-bottom: 0.5em;
 }
 
@@ -111,6 +110,15 @@ h6,
   font-size: 1rem;
   line-height: 1.48;
   margin-bottom: 0.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }
 
 p {
@@ -258,6 +266,11 @@ img {
   border: none;
 }
 
+/* Add rounded corners to an element */
+.rounded-corners {
+  border-radius: 4px;
+}
+
 th {
   background-color: #008b9a;
   color: white;
@@ -278,16 +291,98 @@ td {
   padding: 15px;
 }
 
-.flex-container { display: flex; }
+/* Flex container
+  Use classes to determine flexbox characteristics */
+.flex-container {
+  display: flex;
+
+  &.flex-direction-column {
+    flex-direction: column;
+  }
+  &.flex-direction-column-tablet {
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+  &.flex-direction-column-tablet-reverse {
+    @media screen and (max-width: 992px) {
+      flex-direction: column-reverse;
+    }
+  }
+  &.flex-direction-column-mobile {
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+    }
+  }
+  &.flex-direction-row {
+    flex-direction: row;
+  }
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.justify-end {
+    justify-content: end;
+  }
+  &.align-content-baseline {
+    align-content: baseline;
+  }
+  &.align-items-baseline {
+    align-items: baseline;
+  }
+  &.align-items-center {
+    align-items: center;
+  }
+  &.align-items-start {
+    align-items: flex-start;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+  &.gap-1 {
+    gap: 1rem;
+  }
+  &.gap-1-5 {
+    gap: 1.5rem;
+  }
+  &.gap-2 {
+    gap: 2rem;
+  }
+
+  & > .flex-1 {
+    flex: 1;
+  }
+  & > .flex-1-5 {
+    flex: 1.5;
+  }
+  & > .flex-2 {
+    flex: 2;
+  }
+}
 
 /* Centers a block-level element */
 .centered { text-align: center !important; }
 
-/* Removes the bottom margin or padding —
+/* Removes the top or bottom margin or padding —
   often helpful on a last paragraphs or list elements
   to maintain consistent white space between sections */
-.no-margin-bottom { margin-bottom: 0 !important;}
-.no-padding-bottom { padding-bottom: 0 !important;}
+.no-margin-top {
+  margin-top: 0 !important;
+}
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+.no-padding-top {
+  padding-top: 0 !important;
+}
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
 
 /* Use these classes to change a section's background color */
 section.bg-neutral-light { background-color: var(--neutral_light); }

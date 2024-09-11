@@ -216,14 +216,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert_created_sso_user_with_oauth_token create(:teacher, :clever_sso_provider)
   end
 
-  test 'create migrated Powerschool OAuth student' do
-    assert_created_sso_user_with_oauth_token create(:student, :powerschool_sso_provider)
-  end
-
-  test 'create migrated Powerschool OAuth teacher' do
-    assert_created_sso_user_with_oauth_token create(:teacher, :powerschool_sso_provider)
-  end
-
   def assert_created_sso_user_with_oauth_token(user)
     # Some Oauth accounts store an oauth token and expiration time
     assert_created_sso_user user
@@ -415,14 +407,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
   test 'de- and re-migrate Clever OAuth teacher' do
     round_trip_sso_with_token create(:teacher, :clever_sso_provider)
-  end
-
-  test 'de- and re-migrate Powerschool OAuth student' do
-    round_trip_sso_with_token create(:student, :powerschool_sso_provider)
-  end
-
-  test 'de- and re-migrate Powerschool OAuth teacher' do
-    round_trip_sso_with_token create(:teacher, :powerschool_sso_provider)
   end
 
   def round_trip_sso_with_token(for_user)

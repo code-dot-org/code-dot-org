@@ -37,3 +37,6 @@ export enum WARNING_BANNER_MESSAGES {
   STANDARD = 'You are editing start sources.',
   TEMPLATE = 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.',
 }
+
+// Default height of the predict question free response text area.
+export const PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT = 50;
