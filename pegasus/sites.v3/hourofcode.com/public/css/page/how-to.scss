@@ -16,33 +16,8 @@ $border-radius: 4px;
   content: "";
 }
 
-html {
-  font-size: 16px;
-}
-
-h2 {
-  font-size: 2rem;
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
-  margin: 0 0 1rem;
-  line-height: 1.2;
-}
-
-.button-wrapper {
-  margin: 2rem 0 0;
-  display: flex;
-  justify-content: start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-
 section.banner {
   padding: 0;
-
-  .wrapper {
-    padding: 2rem 0px 11rem;
-  }
 
   h1 {
     margin-bottom: 1rem;
@@ -67,90 +42,55 @@ section.banner {
     gap: 1rem;
   }
 
-  ul.how-to-nav {
-    min-width: 230px;
-    position: relative;
-    list-style: none;
-    @include reset-spacing;
+  // TODO clean up all of these banner styles after soon-hoc launch
+  &.hoc-2024 {
+    color: var(--neutral_dark);
 
-    li {
-      font-family: var(--main-font);
-      font-weight: var(--semi-bold-font-weight);
+    h1 {
       color: var(--neutral_dark);
-      @include reset-list-item-spacing;
+    }
+  }
+}
 
-      &::before {
-        @include remove-list-dot;
-      }
+nav.choose-guide {
+  margin-top: 2rem;
 
-      button {
-        background-color: var(--neutral_light);
-        border: none;
-        border-radius: $border-radius;
-        font-family: inherit;
-        width: 100%;
-        text-align: initial;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        display: flex;
-        justify-content: space-between;
-        gap: 0.5rem;
+  .button-wrapper {
+    justify-content: center;
+  }
 
-        @media screen and (max-width: $width-sm) {
-          max-width: 320px;
-        }
+  a {
+    min-width: 132px;
+    color: var(--neutral_white);
+    border: 2px solid var(--neutral_white);
+    border-radius: 4px;
+    padding: 1rem 1rem 0.875rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
-        span {
-          pointer-events: none;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+    i {
+      font-size: 1.5rem;
+    }
 
-        &::after {
-          content: url('/images/angle-down.svg');
-          line-height: 1;
-        }
-      }
+    &.active {
+      color: var(--neutral_dark);
+      background: var(--neutral_white);
+      border-color: var(--neutral_white);
+    }
+  }
 
-      button.rotate::after {
-        transform: rotate(180deg);
-        margin-top: 2px;
-      }
+  // TODO clean this up after soon-hoc launch
+  &.hoc-2024 {
+    a {
+      color: var(--neutral_dark);
+      border-color: var(--neutral_dark);
 
-      a, button {
-        color: var(--neutral_dark);
-        text-decoration: none;
-        font-size: 18px;
-        padding: 14px 12px 14px 16px;
-      }
-
-      a {
-        display: block;
-      }
-
-      ul.menu-list {
-        position: absolute;
-        top: calc(100% - 4px);
-        padding-top: 6px;
-        margin: 0;
-        background-color: var(--neutral_light);
-        border-radius: 0 0 4px 4px;
-        border-bottom: 2px solid var(--neutral_dark20);
-        width: 100%;
-        text-align: initial;
-
-        li {
-          border-radius: 0;
-
-          &:hover {
-            background-color: var(--neutral_dark10);
-          }
-
-          &:last-child {
-            border-radius: 0 0 4px 4px;
-            padding-bottom: 2px;
-          }
-        }
+      &.active {
+        color: var(--neutral_white);
+        background: var(--neutral_dark);
+        border-color: var(--neutral_dark);
       }
     }
   }
