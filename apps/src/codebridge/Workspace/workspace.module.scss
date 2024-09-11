@@ -6,7 +6,12 @@
   background-color: $darkest_gray;
   color: $white;
   overflow: hidden;
-  display: block;
+}
+
+.workspaceContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .warningBanner {
@@ -21,5 +26,5 @@
 .workspaceWorkarea {
   display: grid;
   overflow: scroll;
-  height: 100%;
+  flex: 1;
 }
