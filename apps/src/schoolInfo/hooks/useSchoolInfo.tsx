@@ -139,28 +139,28 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   // Handle schoolId changes
   useEffect(() => {
     sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, schoolId);
-    if (mounted.current) {
-      if (schoolId === NO_SCHOOL_SETTING) {
-        analyticsReporter.sendEvent(
-          EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
-          {},
-          PLATFORMS.BOTH
-        );
-      } else if (schoolId === CLICK_TO_ADD) {
-        analyticsReporter.sendEvent(
-          EVENTS.ADD_MANUALLY_CLICKED,
-          {},
-          PLATFORMS.BOTH
-        );
-      } else {
-        analyticsReporter.sendEvent(
-          EVENTS.SCHOOL_SELECTED_FROM_LIST,
-          {
-            'nces Id': schoolId,
-          },
-          PLATFORMS.BOTH
-        );
-      }
+    if (!mounted.current) return;
+
+    if (schoolId === NO_SCHOOL_SETTING) {
+      analyticsReporter.sendEvent(
+        EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
+        {},
+        PLATFORMS.BOTH
+      );
+    } else if (schoolId === CLICK_TO_ADD) {
+      analyticsReporter.sendEvent(
+        EVENTS.ADD_MANUALLY_CLICKED,
+        {},
+        PLATFORMS.BOTH
+      );
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_SELECTED_FROM_LIST,
+        {
+          'nces Id': schoolId,
+        },
+        PLATFORMS.BOTH
+      );
     }
   }, [schoolId]);
 
