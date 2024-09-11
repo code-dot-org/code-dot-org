@@ -9,7 +9,7 @@ Feature: Evaluate student code against rubrics using AI
     Given I validate rubric ai config for all lessons
 
   Scenario: Student code is evaluated by AI when student submits project
-    Given I create a teacher-associated student named "Aiden"
+    Given I create an authorized teacher-associated student named "Aiden"
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
@@ -56,7 +56,7 @@ Feature: Evaluate student code against rubrics using AI
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
 
   Scenario: Student code is evaluated by AI when teacher requests individual evaluation
-    Given I create a teacher-associated student named "Aiden"
+    Given I create an authorized teacher-associated student named "Aiden"
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
@@ -105,7 +105,7 @@ Feature: Evaluate student code against rubrics using AI
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
 
   Scenario: Student code is evaluated by AI when teacher requests evaluation for entire class
-    Given I create a teacher-associated student named "Aiden"
+    Given I create an authorized teacher-associated student named "Aiden"
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
