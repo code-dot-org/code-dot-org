@@ -24,7 +24,6 @@ interface EditMusicToolboxProps {
   blockMode: ValueOf<typeof BlockMode>;
   onChange: (toolbox: ToolboxData) => void;
   onBlockModeChange: (blockMode: ValueOf<typeof BlockMode>) => void;
-  startSources?: object;
 }
 
 const ChangeWarning: React.FC = () => (
