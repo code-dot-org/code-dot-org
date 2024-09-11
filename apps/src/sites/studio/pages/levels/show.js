@@ -145,7 +145,6 @@ function initPage() {
   if (getStore().getState().currentUser.userType === 'student') {
     const body = JSON.stringify({
       userId: getStore().getState().currentUser.userId,
-      unitId: getStore().getState().progress.scriptId,
     });
     HttpClient.post(`/sections/section_instructors_verified`, body, true, {
       'Content-Type': 'application/json',
