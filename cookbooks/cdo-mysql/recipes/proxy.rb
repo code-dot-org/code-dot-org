@@ -13,16 +13,16 @@
 #   action :upgrade
 # end
 
-proxysql_filename = 'proxysql_2.6.2-ubuntu20_amd64.deb'
+proxysql_filename = 'proxysql_2.7.0-ubuntu20_amd64.deb'
 proxysql_file = "#{Chef::Config[:file_cache_path]}/#{proxysql_filename}"
 remote_file proxysql_file do
-  source "https://github.com/sysown/proxysql/releases/download/v2.6.2/#{proxysql_filename}"
-  checksum "bd4e4bf310927789d387341160c5a44b74d5fa0cd3d65783d40a75dd983791e1"
+  source "https://github.com/sysown/proxysql/releases/download/v2.7.0/#{proxysql_filename}"
+  checksum "5e92844617aa1666a65475bd22c7fda1939ef5604e4b7ea08625ff2465b87482"
   action :create_if_missing
 end
 dpkg_package('proxysql') do
   source proxysql_file
-  version '2.6.2'
+  version '2.7.0'
   options '--force-confold'
 end
 
