@@ -7,7 +7,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
-import AppConfig, {getBaseAssetUrl} from '../appConfig';
+import AppConfig from '../appConfig';
 import musicI18n from '../locale';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
@@ -127,7 +127,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             hideHeaders={hideHeaders}
           >
             <Instructions
-              baseUrl={getBaseAssetUrl() || ''}
               layout={
                 position !== InstructionsPosition.TOP
                   ? 'vertical'

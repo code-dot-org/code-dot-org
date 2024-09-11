@@ -27,18 +27,8 @@ const commonI18n = require('@cdo/locale');
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
   beforeNextLevel?: () => void;
-  /**
-   * Base asset URL for images. Note: this is currently unused but may be needed in the future if we support
-   * instructions images.
-   * */
-  baseUrl?: string;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
-  /**
-   * If the image should pop out to the right of the panel or to the left when clicked. Note: instructions images
-   * are currently unsupported. Defaults to right.
-   */
-  imagePopOutDirection?: 'right' | 'left';
   /**
    * A callback when the user clicks on clickable text.
    */
@@ -60,9 +50,7 @@ interface InstructionsProps {
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
   beforeNextLevel,
-  baseUrl,
   layout,
-  imagePopOutDirection,
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
@@ -124,7 +112,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       setPredictResponse={response => dispatch(setPredictResponse(response))}
       predictAnswerLocked={predictAnswerLocked}
       layout={layout}
-      imagePopOutDirection={imagePopOutDirection}
       handleInstructionsTextClick={handleInstructionsTextClick}
       offerTts={offerTts}
       className={className}
@@ -139,8 +126,6 @@ interface InstructionsPanelProps {
   message?: string;
   /** Key for rendering the optional message. A unique value ensures the appearance animation shows. */
   messageIndex?: number;
-  /** Optional image URL to display. */
-  imageUrl?: string;
   /** If the continue button should be shown. */
   showContinueButton?: boolean;
   /** If the finish button should be shown. */
@@ -151,11 +136,6 @@ interface InstructionsPanelProps {
   onNextPanel?: () => void;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
-  /**
-   * If the image should pop out to the right of the panel or to the left when clicked. Note: instructions images
-   * are currently unsupported. Defaults to right.
-   */
-  imagePopOutDirection?: 'right' | 'left';
   /** Display theme. Defaults to dark. */
   theme?: 'dark' | 'light';
   /**
@@ -184,13 +164,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   text,
   message,
   messageIndex,
-  imageUrl,
   showContinueButton,
   showFinishButton,
   beforeFinish,
   onNextPanel,
   layout = 'vertical',
-  imagePopOutDirection = 'right',
   theme = 'dark',
   handleInstructionsTextClick,
   predictSettings,
@@ -200,12 +178,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   className,
   offerTts,
 }) => {
-  const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
-
-  const imageClicked = () => {
-    setShowBigImage(!showBigImage);
-  };
 
   const vertical = layout === 'vertical';
 
@@ -245,42 +218,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
           vertical && moduleStyles.itemVertical
         )}
       >
-        {imageUrl && (
-          <div
-            className={classNames(
-              moduleStyles.imageContainer,
-              !vertical && moduleStyles.horizontal
-            )}
-          >
-            {
-              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-              // Verify or update this alt-text as necessary
-            }
-            <img
-              src={imageUrl}
-              className={classNames(
-                moduleStyles.image,
-                !vertical && moduleStyles.fixedHeight
-              )}
-              onClick={() => imageClicked()}
-              alt=""
-            />
-            {showBigImage && (
-              <div
-                className={classNames(
-                  moduleStyles.bigImage,
-                  imagePopOutDirection === 'left' && moduleStyles.bigImageLeft
-                )}
-              >
-                {
-                  // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-                  // Verify or update this alt-text as necessary
-                }
-                <img src={imageUrl} onClick={() => imageClicked()} alt="" />
-              </div>
-            )}
-          </div>
-        )}
         {text && (
           <div
             key={text}
@@ -288,18 +225,23 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             className={moduleStyles['text-' + theme]}
           >
             {offerTts && <TextToSpeech text={text} />}
-            {predictSettings?.isPredictLevel && <PredictSummary />}
-            <EnhancedSafeMarkdown
-              markdown={text}
-              className={moduleStyles.markdownText}
-              handleInstructionsTextClick={handleInstructionsTextClick}
-            />
-            <PredictQuestion
-              predictSettings={predictSettings}
-              predictResponse={predictResponse}
-              setPredictResponse={setPredictResponse}
-              predictAnswerLocked={predictAnswerLocked}
-            />
+            <div
+              id="instructions-text-content"
+              className={moduleStyles.textContent}
+            >
+              {predictSettings?.isPredictLevel && <PredictSummary />}
+              <EnhancedSafeMarkdown
+                markdown={text}
+                className={moduleStyles.markdownText}
+                handleInstructionsTextClick={handleInstructionsTextClick}
+              />
+              <PredictQuestion
+                predictSettings={predictSettings}
+                predictResponse={predictResponse}
+                setPredictResponse={setPredictResponse}
+                predictAnswerLocked={predictAnswerLocked}
+              />
+            </div>
           </div>
         )}
         {(message || canShowContinueButton || canShowFinishButton) && (
