@@ -1,6 +1,8 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
+import {DEFAULT_PATTERN_LENGTH} from '../../constants';
+import {PatternEventValue} from '../interfaces/PatternEvent';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import MusicLibrary from '../MusicLibrary';
 
@@ -39,6 +41,24 @@ export default class AdvancedSequencer extends Sequencer {
       blockId,
       triggered: false,
       when: measure,
+    } as PlaybackEvent);
+  }
+
+  playPatternAtMeasureById(
+    value: PatternEventValue,
+    measure: number,
+    blockId: string
+  ) {
+    const length = value.length || DEFAULT_PATTERN_LENGTH;
+
+    this.playbackEvents.push({
+      id: JSON.stringify(value),
+      type: 'pattern',
+      length: length,
+      blockId,
+      triggered: false,
+      when: measure,
+      value,
     } as PlaybackEvent);
   }
 

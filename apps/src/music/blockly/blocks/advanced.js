@@ -1,8 +1,8 @@
 import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
 import {isBlockInsideWhenRun} from '../blockUtils';
-import {FIELD_SOUNDS_NAME} from '../constants';
-import {fieldSoundsDefinition} from '../fields';
+import {FIELD_PATTERN_NAME, FIELD_SOUNDS_NAME} from '../constants';
+import {fieldPatternDefinition, fieldSoundsDefinition} from '../fields';
 
 export const playSound = {
   definition: {
@@ -39,4 +39,35 @@ export const playSound = {
     ', "' +
     ctx.id +
     '");\n',
+};
+
+export const playPatternAtMeasure = {
+  definition: {
+    type: BlockTypes.PLAY_PATTERN_AT_MEASURE,
+    message0: musicI18n.blockly_blockPlayPatternAtMeasure({
+      pattern: '%1',
+      measure: '%2',
+    }),
+    args0: [
+      fieldPatternDefinition,
+      {
+        type: 'input_value',
+        name: 'measure',
+      },
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: musicI18n.blockly_blockPlayPatternAtMeasureTooltip(),
+    helpUrl: '',
+  },
+  generator: block =>
+    `Sequencer.playPatternAtMeasureById(${JSON.stringify(
+      block.getFieldValue(FIELD_PATTERN_NAME)
+    )}, ${Blockly.JavaScript.valueToCode(
+      block,
+      'measure',
+      Blockly.JavaScript.ORDER_ASSIGNMENT
+    )}, "${block.id}");`,
 };

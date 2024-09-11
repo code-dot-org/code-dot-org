@@ -5,6 +5,7 @@ export enum BlockTypes {
   TRIGGERED_AT_SIMPLE = 'triggered_at_simple',
   TRIGGERED_AT_SIMPLE2 = 'triggered_at_simple2',
   PLAY_SOUND = 'play_sound',
+  PLAY_PATTERN_AT_MEASURE = 'play_pattern_at_measure',
   FOR_LOOP = 'for_loop',
   PLAY_SOUND_AT_CURRENT_LOCATION = 'play_sound_at_current_location',
   SET_CURRENT_LOCATION_NEXT_MEASURE = 'set_current_location_next_measure',
