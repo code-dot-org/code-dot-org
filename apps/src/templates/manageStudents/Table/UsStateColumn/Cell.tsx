@@ -2,8 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {editStudent} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {RootState} from '@cdo/apps/types/redux';

@@ -1,6 +1,9 @@
 class AichatRequestChatCompletionJob < ApplicationJob
   queue_as :default
 
+  DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.2
+  DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.6
+
   before_enqueue do |job|
     request = job.arguments.first[:request]
     request.update!(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:QUEUED])
@@ -44,28 +47,38 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
+  private def get_toxicity_threshold_user_input
+    DCDO.get("aichat_toxicity_threshold_user_input", DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
+  end
+
+  private def get_toxicity_threshold_model_output
+    DCDO.get("aichat_toxicity_threshold_model_output", DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
+  end
+
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
-    # Check input for profanity and PII
-    user_profanity = find_profanity(new_message[:chatMessageText], locale)
-    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_profanity}"] if user_profanity
+    # Moderate user input for toxicity.
+    # get_toxicity returns an object with the following fields:
+    # text: string, toxicity: number, and max_category {name: string, score: number}
+    user_comprehend_response = AichatComprehendHelper.get_toxicity(new_message[:chatMessageText], locale)
+    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_comprehend_response}"] if user_comprehend_response[:toxicity] > get_toxicity_threshold_user_input
 
     user_pii = find_pii(new_message[:chatMessageText], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
-    # Make the request
+    # Make the request.
     response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
-    # Check output for profanity and PII. Report to HoneyBadger if the model returned profanity.
-    model_profanity = find_profanity(response, locale)
-    if model_profanity
+    # Moderate model output for toxicity. Report to HoneyBadger if the model returns toxicity.
+    model_comprehend_response = AichatComprehendHelper.get_toxicity(response, locale)
+    if model_comprehend_response[:toxicity] > get_toxicity_threshold_model_output
       Honeybadger.notify(
-        'Profanity returned from aichat model (blocked before reaching student)',
+        'Toxicity returned from aichat model (blocked before reaching student)',
         context: {
           response: response,
-          flagged_content: model_profanity,
+          flagged_content: model_comprehend_response,
         }
       )
-      return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], "Profanity detected in model output: #{model_profanity}"]
+      return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], "Profanity detected in model output: #{model_comprehend_response}"]
     end
 
     model_pii = find_pii(response, locale)
@@ -74,15 +87,8 @@ class AichatRequestChatCompletionJob < ApplicationJob
     [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
   end
 
-  # Check the given text for profanity
-  private def find_profanity(text, locale)
-    # TODO: Use llm-guard instead of WebPurify to check for profanity / toxicity.
-    filter_result = ShareFiltering.find_profanity_failure(text, locale)
-    filter_result.content if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-  end
-
-  # Check the given text for PII
+  # Check the given text for PII.
   private def find_pii(text, locale)
-    # TODO: Use llm-guard to check for PII. Currently we don't check for PII to maintain consistency with existing code.
+    # TODO: Check for PII. Currently we don't check for PII but we plan to add post-launch.
   end
 end
