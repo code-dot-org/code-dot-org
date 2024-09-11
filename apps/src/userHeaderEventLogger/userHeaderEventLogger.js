@@ -198,7 +198,7 @@ $(document).ready(function () {
   const headerCreateMenu = document.getElementById('header_create_menu');
   const pageUrl = window.location.href;
 
-  if (!pageUrl.includes('/global/fa')) {
+  if (!pageUrl.includes('/global/')) {
     if (getScriptData('isSignedOut')) {
       addSignedOutMetrics(pageUrl, headerCreateMenu);
     } else {

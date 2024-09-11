@@ -12030,6 +12030,16 @@
   hoc_beyond_submit_activity_form: "Submit your own activity [here](%{form_url})."
   hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
 
+  farsi_homepage_hero_title: "Free foundational computer science curriculum"
+  farsi_homepage_hero_description: "Every student in every school should have the opportunity to learn computer science. Whether you are a student or teacher, you can start here!"
+  farsi_homepage_hero_button: "Create your free account"
+  farsi_homepage_curriculum_overline_1: "Ages 5-11"
+  farsi_homepage_curriculum_overline_2: "All Ages"
+  farsi_homepage_curriculum_title_1: "Hour of Code"
+  farsi_homepage_curriculum_title_2: "Unplugged"
+  farsi_homepage_curriculum_description_1: "Bite-sized, hour-long introductory tutorials introducing fundamental concepts of computer science in a fun, creative, and engaging way."
+  farsi_homepage_curriculum_description_2: "CS education does not always need to be in front of a screen and device access shouldn't be a barrier to learning computer science concepts."
+
   pl_curriculum_launch_skinny_banner_2024:
     title: Introducing new professional learning!
     description: Explore new self-paced online modules that will empower you to teach the newest additions to our curriculum.

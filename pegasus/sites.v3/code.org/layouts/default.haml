@@ -4,7 +4,7 @@
   = view :unsupported_browser
 
   -if request.path.include?('/global/fa')
-    = view :farsiheader
+    = view :"global/fa/farsiheader"
   -elsif request.site == 'code.org'
     = view :header
   -elsif @header['theme'] == 'responsive'
@@ -85,7 +85,7 @@
   .push
 
 - if request.path.include?('/global/fa')
-  = view :farsifooter
+  = view :"global/fa/farsifooter"
 -elsif @header['theme'] == 'responsive' || 'responsive_full_width'
   .desktop-feature
     -if @header['footer'] == 'donor_footer'
