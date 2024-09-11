@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-07T17:21:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Draw the images in the **Asset Manager** in your scene.\r\n\r\n##In ImageScene.java:\r\n\r\n1. Write the method `createScene()`(#e7e8ea) to draw the images in the scene. You choose where you want to draw the images and the sizes of the images.\r\n\r\nTry using the `pause()`(#e7e8ea) or `clear()`(#e7e8ea) methods to turn your scene into an animation! Add a `pause()`(#e7e8ea) after drawing each image or after drawing a set of images. Use the `clear()`(#e7e8ea) method to clear the scene before drawing another image if you don't want the previous image to still display in the scene.\r\n\r\nYou can use one (or both!) of the following methods in the `Scene`(#e7e8ea) class to draw images:\r\n\r\n```\r\ndrawImage(String filename, int x, int y, int size)\r\nDraws an image at the given location and size\r\n\r\ndrawImage(String filename, int x, int y, int size, double rotation)\r\nDraws an image at the given location and size with a specified amount to rotate the image\r\n```\r\n\r\n##In MyTheater.java:\r\n\r\n2. Instantiate an `ImageScene`(#e7e8ea) object with the `sports`(#e7e8ea) array.\r\n\r\n3. Call the `createScene()`(#e7e8ea) method on your `ImageScene`(#e7e8ea) object.\r\n\r\n4. Use the method `Theater.playScenes(Scene scene)`(#e7e8ea) to play the scene.",
@@ -27,15 +31,9 @@
       }
     },
     "encrypted_exemplar_sources": "88cqqh4PFE13VUB7Wdee/b0dxeEfZcOIwxv+hsPvwwKh+46HHycC7RpqvuKH\noqT8gCjj2damsed8epo4Nd76SQq2zVnbbidWhy76a+Fc1Sxos4JCkytzkRW2\no1w1WgHx5UUOBOJ70V4GOBBxBDZ4HKgqsDbxQEBttsKdnJ44vYMVlHPUIPpC\nkAtBS7Wnor0KP2Fw7dgSvLdhM0REY6MqJzJVQujS1sfyw2PCNrPy2zUljbpK\nO2GHV5DlTV1IPI19TzR3lbPXBKYzbi0/S37MKNORn5cHAoBnU8hbj5mkVNFL\n+vyacDbOjSCRnxZbhVOy/PEEZj2ee0BwWJWVABr07poHHHyDwuV5OWGcPtXZ\nMMpo4ikb6crK9GTkAiXeYXogAwjcOxv/J85DU/mU35vKCXjMFCOBToo07uFb\nejcUMiRjgqcz4+bdLRcroL6XTie2vnVKX+zsu2KoA6jFpKW0HCckDWX8W5pR\ntMQOy2Uqi1LTXd/2OagannVl1HHvt6AFhwCEvXzNTLO1TzEQjPcmeuGD0Hpv\n2J7+MK4eeVnXp65T+jhWBIiLRCeUmMskGTr6dGG291oS9LTlKGPzmJa+zo6x\nxSPqCjTaZB+ibxE4K7oZMpzgq8JWjdYwAckm8UjwzoLElIlhcx/gfBUuRZ1a\nvOBalUUywnd16TnpyzUqaszRmELaPZdscLwBnpqij0F1N4pxBkHXX3vhj77P\nJWGF+4IWQwsEMA3FwcrMOa1YVK9Gz9alk02L46T/ogYWeEIgZO3yx2T1x9a8\n6Iyormh1G1JnLu4Vbi0Vacd58VHEsRDC4VXHZnzmStFmohZdTB2oPkU5Po10\n3mRMm1bc3fqe0F80DwIap0JmDhkzCmvsdIVWhrWlo+N2aVfS44AfKcMeXG8z\n30Jv88T/f3pyjVQMgDiCLvKSSyqH01tFFBNC6TEHYD0MOvuY2Vmi5OVSO8V2\nTXZwkfksGYZXREj3kmxjNnTf2q41HZRmSMiIB6ILFydUlQWmbGyCTj4M5LXq\nsWpVO5bMicojBKEHpiA+7j4ms8TVoWgBtdeuUZXL0tXplp9XegSPC8uNrD9k\n7an7u9M15RKxBKxE8VQnC9bS6LH7xAjRlQW6ljgyYL5qFC/ab2PpRmBU4F7Q\nK/pQeyVSAXY7koPqgz4Bj3Ksw2L+8xmcMDtOdkx2IpL09+1Smst4ykdBhJBJ\nEn5dAIBcKZRZOz91UFois1nYlX706daokmWIbQ0eXZDHEc47if3d6V7Ea4Y9\nqm+rv1fZ7X7Af2Bevgz134343sSCTPG4XxrPt6f2FellSdb+Bae6LkDrQ3Vy\nS8uvMrNt3vitno6h5+keWxVqnY/btKglvsIOHTs1P11Z0lQ5swbnCRMH1WSL\nOluWbiW7qTlqxnomWLZKUQQORPBj5cKqyB8N51jMmdt91uuDc5Mq6hJMbv4m\n+D07gNMzGYkWY5aKMjLXptk8n7Ir7Zjw+jzF3xvsNbx0Iq8eLMbQ10RCtwbE\nPYOsTLgwnrqRTGGQo6pQnW0S0hdQi4feTOmaRMfmYiGs7n9sdSUa9pmI5pSO\nPx0gQT2SrlfpcZNoM2EIChd44f7deRpBw4bL2jqjBmsw/ukpsVwSExJ8uGgM\nJSgJZ5cdSBdMV4JeDDkc84Qg/Sj9DehLn17AaUqFJAgx2U2l+2nBdx0QXDyB\nPbZMUPnkXZ0Bcxceyy+d6ZPlkgPwk3/G/h7yswElvp0K+8FQAcNK8j59xc9Q\nPS8QKb3LFo8xxbDb3SQ4ZX85WbfyQzt8P4UeN7nIFkF1UAhPqX/u\n",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-07T17:21:19.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-07T17:21:19.022+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L3a_2022\\\"\"],\"cloned_from\":\"CSA U4L1-L3a_2022\"},{\"changed_at\":\"2022-04-07 17:21:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 14:22:15 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 14:58:57 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 15:07:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 15:30:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 15:36:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 15:37:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 20:00:16 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -775,7 +775,8 @@
       "/courses/csa-2023/guides/inheritance"
     ],
     "video_key": "csa_conditional_statements",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:01:14.762+00:00\",\"changed\":[\"cloned from \\\"CSA U1L9-L4c_2023\\\"\"],\"cloned_from\":\"CSA U1L9-L4c_2023\"}]"

@@ -13,8 +13,8 @@ import {
   getCurrentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
@@ -22,7 +22,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage, getStudentChatHistory} from '../aichatApi';
+import {getStudentChatHistory, postAichatCompletionMessage} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
@@ -85,6 +85,7 @@ export interface AichatState {
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
+  userHasAichatAccess: boolean;
 }
 
 const initialState: AichatState = {
@@ -102,6 +103,7 @@ const initialState: AichatState = {
   viewMode: ViewMode.EDIT,
   saveInProgress: false,
   currentSaveType: undefined,
+  userHasAichatAccess: false,
 };
 
 // THUNKS
@@ -232,14 +234,12 @@ export const onSaveComplete =
         ? currentAiCustomizations[typedProperty]
         : 'NULL';
       if (currentSaveType) {
-        analyticsReporter.sendEvent(
-          saveTypeToAnalyticsEvent[currentSaveType],
-          {
+        dispatch(
+          sendAnalytics(saveTypeToAnalyticsEvent[currentSaveType], {
             propertyUpdated: property,
             propertyChangedTo,
             levelPath: window.location.pathname,
-          },
-          PLATFORMS.BOTH
+          })
         );
       }
     });
@@ -279,19 +279,13 @@ export const onSaveFail =
             getState().aichat.savedAiCustomizations,
             getState().aichat.currentAiCustomizations
           );
-          let flaggedProperties;
-          if (
-            changedProperties.includes('systemPrompt') &&
+          const flaggedProperties =
+            changedProperties.includes('systemPrompt') ||
             changedProperties.includes('retrievalContexts')
-          ) {
-            flaggedProperties = 'system prompt and/or retrieval contexts';
-          } else if (changedProperties.includes('systemPrompt')) {
-            flaggedProperties = 'system prompt';
-          } else if (changedProperties.includes('retrievalContexts')) {
-            flaggedProperties = 'retrieval contexts';
-          }
+              ? 'system prompt and/or retrieval contexts'
+              : undefined;
           if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
-            errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
+            errorMessage = `The ${flaggedProperties} have been flagged by our content moderation policy. Please try a different model customization.`;
           }
           dispatchSaveFailNotification(
             dispatch,
@@ -327,6 +321,18 @@ const dispatchSaveFailNotification = (
   // Notify the UI that the save is complete.
   dispatch(endSave());
 };
+
+// This thunk sends aichat analytics events to Amplitude and Statsig.
+// The event is sent for authorized users and if skipAccessCheck is true,
+// then the event is sent regardless of user aichat access.
+export const sendAnalytics =
+  (event: string, properties: object, skipAccessCheck = false) =>
+  (dispatch: AppDispatch, getState: () => RootState) => {
+    const userHasAichatAccess = getState().aichat.userHasAichatAccess;
+    if (userHasAichatAccess || skipAccessCheck) {
+      analyticsReporter.sendEvent(event, properties, PLATFORMS.BOTH);
+    }
+  };
 
 // This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace) if visible, i.e.,
 // hideForParticipants != true. Then it logs the event to the backend for all chat events except notifications
@@ -408,6 +414,12 @@ export const submitChatContents = createAsyncThunk(
         aiCustomizations,
         aichatContext
       );
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
+          levelPath: window.location.pathname,
+          userMessage: newUserMessageText,
+        })
+      );
     } catch (error) {
       await handleChatCompletionError(error as Error, newUserMessage, dispatch);
       return;
@@ -481,6 +493,17 @@ async function handleChatCompletionError(
         timestamp: Date.now(),
       })
     );
+    dispatch(
+      sendAnalytics(
+        EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
+        {
+          levelPath: window.location.pathname,
+          userType,
+          userMessage: newUserMessage.chatMessageText,
+        },
+        true
+      )
+    );
   } else {
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -539,6 +562,9 @@ const aichatSlice = createSlice({
     },
     setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
       state.studentChatHistory = action.payload;
+    },
+    setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
+      state.userHasAichatAccess = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -768,15 +794,16 @@ const {
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
-  removeUpdateMessage,
-  setNewChatSession,
   clearChatMessages,
-  setShowWarningModal,
-  resetToDefaultAiCustomizations,
-  setViewMode,
-  setStartingAiCustomizations,
-  setAiCustomizationProperty,
-  setStudentChatHistory,
-  setModelCardProperty,
   endSave,
+  removeUpdateMessage,
+  resetToDefaultAiCustomizations,
+  setAiCustomizationProperty,
+  setModelCardProperty,
+  setNewChatSession,
+  setShowWarningModal,
+  setStartingAiCustomizations,
+  setStudentChatHistory,
+  setUserHasAichatAccess,
+  setViewMode,
 } = aichatSlice.actions;

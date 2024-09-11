@@ -17,7 +17,8 @@ export interface SourcesStore {
   save: (
     key: string,
     sources: ProjectSources,
-    appType?: ProjectType
+    appType?: ProjectType,
+    forceNewVersion?: boolean
   ) => Promise<Response>;
 
   getVersionList: (key: string) => Promise<ProjectVersion[]>;

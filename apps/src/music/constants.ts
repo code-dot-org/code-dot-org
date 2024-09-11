@@ -43,7 +43,7 @@ export const BlockMode = {
   SIMPLE: 'Simple',
   SIMPLE2: 'Simple2',
   TRACKS: 'Tracks',
-};
+} as const;
 
 // For reference, events look like this:
 // events: [{src: 'sound_1', tick: 3}]

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-gen-ai",
-    "serialized_at": "2024-09-03 19:28:48 UTC",
+    "serialized_at": "2024-09-05 19:19:20 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -334,7 +334,7 @@
       "key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec",
       "position": 2,
       "properties": {
-        "progression_name": "Equity (5 min)"
+        "progression_name": "Ethics (5 min)"
       },
       "seeding_key": {
         "activity_section.key": "4ff111e4-a47b-4b84-a1f7-9ff1ac46a9ec",
@@ -1871,6 +1871,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-user-project_03b_2024"
+        ],
         "progression": "Final Project (8 min)"
       },
       "bonus": false,
@@ -1943,6 +1946,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-resources-overview_02_2024"
+        ],
         "progression": "Teaching Resources (3 min)"
       },
       "bonus": false,
@@ -1965,7 +1971,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Equity (5 min)"
+        "level_keys": [
+          "self-paced-pl-gen-ai-resources-equity_01_2024"
+        ],
+        "progression": "Ethics (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -1987,7 +1996,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Equity (5 min)"
+        "level_keys": [
+          "self-paced-pl-gen-ai-resources-equity_02_2024"
+        ],
+        "progression": "Ethics (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -2009,7 +2021,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Equity (5 min)"
+        "level_keys": [
+          "self-paced-pl-gen-ai-resources-equity_03_2024"
+        ],
+        "progression": "Ethics (5 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -2031,6 +2046,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-resources-assessments_01_2024"
+        ],
         "progression": "Assessments (5 min)"
       },
       "bonus": false,
@@ -2053,6 +2071,34 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-resources-assessments_02_2024"
+        ],
+        "progression": "Assessments (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-resources-assessments_02_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "5708cc9d-8d9f-4315-9f60-9ab86dfaf60f"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-resources-assessments_02_2024"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-resources-assessments_03_2024"
+        ],
         "progression": "Assessments (5 min)"
       },
       "bonus": false,
@@ -2070,33 +2116,14 @@
       ]
     },
     {
-      "chapter": 70,
-      "position": 8,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Assessments (5 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_04_2024"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-gen-ai-2024",
-        "activity_section.key": "5708cc9d-8d9f-4315-9f60-9ab86dfaf60f"
-      },
-      "level_keys": [
-        "self-paced-pl-gen-ai-resources-assessments_04_2024"
-      ]
-    },
-    {
       "chapter": 71,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-resources-nextsteps_01_2024"
+        ],
         "progression": "Next Steps (2 min)"
       },
       "bonus": false,
@@ -2933,9 +2960,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-assessments_03_2024",
+        "level.key": "self-paced-pl-gen-ai-resources-assessments_02_2024",
         "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_03_2024"
+          "self-paced-pl-gen-ai-resources-assessments_02_2024"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -2945,9 +2972,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-pl-gen-ai-resources-assessments_04_2024",
+        "level.key": "self-paced-pl-gen-ai-resources-assessments_03_2024",
         "script_level.level_keys": [
-          "self-paced-pl-gen-ai-resources-assessments_04_2024"
+          "self-paced-pl-gen-ai-resources-assessments_03_2024"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:14.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L4-L3c PBT_pilot-2022",
@@ -23,12 +27,9 @@
         "text": "/*\n * Stores and analyzes the list of planets\n * and the number of hours in a day for each planet\n */\npublic class Planets {\n\n  private String[] names;         // The list of planets\n  private double[] dayLengths;    // The length of day for each planet\n\n  /*\n   * Constructor to create a Planets object with\n   * specified arrays of planet names and length of days\n   */\n  public Planets(String[] names, double[] dayLengths) {\n    this.names = names;\n    this.dayLengths = dayLengths;\n  }\n\n  /*\n   * Return the array names\n   */\n  public String[] getNames() {\n    return names;\n  }\n\n  /*\n   * Return the array dayLengths\n   */\n  public double[] getDayLengths() {\n    return dayLengths;\n  }\n\n  /*\n   * Checks if dayLengths array contains at\n   * least one value that is less than valueToFind\n   */\n  public boolean hasDayLength(double valueToFind) {\n    // TO DO #1: Check if dayLengths array contains at least\n    // one value that is less than valueToFind.\n\n\n    return false;\n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:14.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:14.788+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L3c_2022\\\"\"],\"cloned_from\":\"CSA U3L4-L3c_2022\"},{\"changed_at\":\"2022-09-01 14:56:32 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 15:01:16 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 15:06:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 15:07:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 15:07:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:44:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:44:33 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

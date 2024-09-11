@@ -18,6 +18,7 @@ Feature: Announcement for AI Assessments
     # announcement is not visible after closing
     When I click selector "#ui-close-dialog"
     Then I wait until element "#uitest-ai-assessments-announcement" is not visible
+    And I wait until ai assessments announcement is marked as seen
 
     # announcement still not visible after reloading the page
     When I reload the page

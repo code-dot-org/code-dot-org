@@ -15,7 +15,8 @@
     "display_name": "Chatbot",
     "bubble_choice_description": "Determine the overall sentiment of user input.",
     "thumbnail_url": "https://images.code.org/f4ab3786ff264d8db0de2abe775a756c-chatbot.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:27.686+00:00\",\"changed\":[\"cloned from \\\"CSA U6L10-L4a CR_2022\\\"\"],\"cloned_from\":\"CSA U6L10-L4a CR_2022\"}]"

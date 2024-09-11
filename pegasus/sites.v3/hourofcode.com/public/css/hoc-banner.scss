@@ -1,9 +1,15 @@
 @import 'color.scss', 'font.scss', 'breakpoints.scss';
 
+// TODO: clean up these styles once we move to 2024 soon-hoc
 #fullwidth {
   overflow: hidden;
   background: url('/images/hoc2023-hero-banner.svg') no-repeat center center;
   background-size: cover;
+
+  &.hoc-2024 {
+    background: none; // this overrides the background image from above
+    background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
+  }
 
   @media screen and (max-width: $width-sm) {
     background: url('/images/hoc2023-hero-banner-mobile.svg') no-repeat center center;
@@ -15,6 +21,7 @@
   background-color: rgba($neutral-white, .9);
 }
 
+// TODO: clean up these styles once we move to 2024 soon-hoc
 section.banner.homepage,
 section.banner {
 
@@ -129,6 +136,36 @@ section.banner.homepage {
   }
 }
 
+// 2024 soon-hoc hero banner styles
+section.banner.homepage.hoc-2024 {
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  h1, p {
+    color: var(--neutral_dark);
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  a.link-button {
+    text-decoration: none;
+  }
+
+  figure {
+    max-width: 344px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
 section.banner {
   text-align: center;
   color: $neutral-white;
@@ -137,6 +174,31 @@ section.banner {
     max-width: 850px;
     margin: 0 auto;
     padding: 2em 0 7em;
+
+    // 2024 soon-hoc hero banner styles
+    &.hoc-2024 {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding-block-end: 5rem;
+
+      h1, p, p > a {
+        color: var(--neutral_dark);
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      figure {
+        max-width: 344px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 
   a {

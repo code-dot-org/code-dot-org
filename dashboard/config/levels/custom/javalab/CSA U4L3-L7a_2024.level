@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-01-12T20:58:33.000Z",
   "level_num": "custom",
@@ -30,11 +29,9 @@
       }
     },
     "name_suffix": "_2024",
-    "encrypted_examples": [
-
-    ],
-    "ai_tutor_available": "false"
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:33.760+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L7a_2023\\\"\"],\"cloned_from\":\"CSA U4L3-L7a_2023\"},{\"changed_at\":\"2024-07-26 20:51:59 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

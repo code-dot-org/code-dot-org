@@ -1,5 +1,10 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2021-08-19T22:28:55.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
@@ -300,14 +305,10 @@
     "submittable": "true",
     "encrypted_examples": [
 
-    ]
+    ],
+    "ai_tutor_available": "true"
   },
-  "game_id": 68,
-  "published": true,
-  "created_at": "2021-08-10T00:38:11.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-09T10:38:11.482-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 1\\\"\"],\"cloned_from\":\"Allthethings Java Lab 1\"},{\"changed_at\":\"2021-08-09 10:38:38 -0700\",\"changed\":[\"start_direction\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"bethany+levelbuilder@code.org\"},{\"changed_at\":\"2021-08-09 10:39:02 -0700\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"bethany+levelbuilder@code.org\"},{\"changed_at\":\"2021-08-09 10:39:46 -0700\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-09T10:38:11.482-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 1\\\"\"],\"cloned_from\":\"Allthethings Java Lab 1\"},{\"changed_at\":\"2021-08-09 10:38:38 -0700\",\"changed\":[\"start_direction\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"bethany+levelbuilder@code.org\"},{\"changed_at\":\"2021-08-09 10:39:02 -0700\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"bethany+levelbuilder@code.org\"},{\"changed_at\":\"2021-08-09 10:39:46 -0700\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"bethany+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-06 00:23:38 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
 }]]></config>
 </Javalab>

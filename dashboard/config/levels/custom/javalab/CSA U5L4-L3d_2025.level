@@ -45,7 +45,8 @@
         "tabOrder": 2
       }
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:13:39.921+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L3d_2023\\\"\"],\"cloned_from\":\"CSA U5L4-L3d_2023\"}]"

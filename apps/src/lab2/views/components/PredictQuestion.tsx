@@ -5,6 +5,8 @@ import {
   PredictQuestionType,
 } from '@cdo/apps/lab2/levelEditors/types';
 
+import {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT} from '../../constants';
+
 import PredictResetButton from './PredictResetButton';
 
 import moduleStyles from './predict.module.scss';
@@ -14,6 +16,7 @@ interface PredictQuestionProps {
   predictResponse: string | undefined;
   setPredictResponse: (response: string) => void;
   predictAnswerLocked: boolean;
+  className?: string;
 }
 
 const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
@@ -21,6 +24,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   predictResponse,
   setPredictResponse,
   predictAnswerLocked,
+  className,
 }) => {
   if (!predictSettings?.isPredictLevel) {
     return null;
@@ -41,13 +45,17 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   };
 
   return (
-    <>
+    <div className={className}>
       {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
         <textarea
           value={predictResponse}
           placeholder={predictSettings.placeholderText}
           onChange={e => setPredictResponse(e.target.value)}
-          style={{height: predictSettings.freeResponseHeight || 20}}
+          style={{
+            height:
+              predictSettings.freeResponseHeight ||
+              PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT,
+          }}
           className={moduleStyles.freeResponse}
           readOnly={predictAnswerLocked}
         />
@@ -82,7 +90,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
         })
       )}
       <PredictResetButton />
-    </>
+    </div>
   );
 };
 

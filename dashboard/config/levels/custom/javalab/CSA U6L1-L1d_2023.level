@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-04-03T13:42:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
@@ -46,12 +50,9 @@
     },
     "display_name": "Chatbot",
     "bubble_choice_description": "An example project that creates a chatbot to interact with a user.",
-    "thumbnail_url": "https://images.code.org/24bc0bdb5638c0a67d49ef0f77be95c3-image-1651495036604.png"
+    "thumbnail_url": "https://images.code.org/24bc0bdb5638c0a67d49ef0f77be95c3-image-1651495036604.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-04-03T13:42:29.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-03T13:42:29.539+00:00\",\"changed\":[\"cloned from \\\"CSA U6L1-L1c_2023\\\"\"],\"cloned_from\":\"CSA U6L1-L1c_2023\"},{\"changed_at\":\"2023-04-03 13:42:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 14:40:45 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 15:01:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 15:01:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 15:01:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 15:01:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

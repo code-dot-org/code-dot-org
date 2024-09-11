@@ -365,7 +365,8 @@
     "bubble_choice_description": "Instantiate the missing `Painter` objects so they can navigate through the maze to reach the traffic cones.",
     "thumbnail_url": "https://images.code.org/92419fde54da05fdc8cf38483c3cbc69-U1L4-L3c.gif",
     "video_key": "csa_creating_objects",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:00:39.800+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L6c_2023\\\"\"],\"cloned_from\":\"CSA U1L3-L6c_2023\"}]"

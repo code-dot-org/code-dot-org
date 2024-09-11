@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# astype()\r\n\r\n## Do This\r\nConvert the **Height** data type from `float64` to `int64` and use the `describe()` function.\r\n   - Discuss: How did changing the data type affect the summary of the data?\r\n\r\n\r\n\r\n",
+    "long_instructions": "# astype()\r\n\r\n::: details [**Step 1**]\r\nUse the `astype()` function to convert the **Height** data type from `float64` to `int64` and the `info()` function to confirm the change.\r\n:::\r\n\r\n::: details [**Step 2**]\r\nDiscuss with your partner how changing the data type affected the summary of the data.\r\n:::\r\n\r\n::: details [**Step 3**]\r\nConvert the **Height** data type *back* to `int64` and use the `info()` function to confirm the change.\r\n:::\r\n\r\n::: details [**Step 4**]\r\nDiscuss with your partner what happened with the data as a result of the conversion. Can the original values be recovered?\r\n:::\r\n\r\n\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -20,18 +20,18 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "import pandas as pd\n\nsurvey_data = pd.read_csv('survey_data_predict.csv')\n\n#1 Use the describe() function for survey_data and examine the output.\nprint(survey_data.describe())\n\n",
+          "contents": "import pandas as pd\n\nsurvey_data = pd.read_csv('survey_data.csv')\nprint(survey_data.describe())\n\nprint('CHANGING TO INT64')\n# ADD CODE FOR STEP 1 HERE\n\n\nprint('CHANGING BACK TO FLOAT64')\n# ADD CODE FOR STEP 3 HERE",
           "folderId": "0",
-          "active": false,
+          "active": true,
           "open": true
         },
         "1": {
           "id": "1",
-          "name": "survey_data_predict.csv",
+          "name": "survey_data.csv",
           "language": "csv",
           "contents": "Age,Height,Join Date,Feedback Score\n13,180.2,1/12/2024,1\n29,165.8,1/23/2024,2\n12,177.3,1/26/2024,1\n14,145.9,2/5/2024,2\n15,174.7,2/14/2024,2\n17,170,3/17/2024,1\n15,156.3,3/29/2024,3\n99,162.3,4/19/2024,2\n95,169.9,5/20/2024,4\n13,160.5,5/24/2024,2\n15,160,6/2/2024,4\n,175,7/1/2024,3\n18,172.4,7/14/2024,3\n20,158.6,8/8/2024,4\n17,175.1,9/26/2024,3\n16,180,10/7/2024,4\n16,152.2,10/31/2024,5\n18,168.8,11/29/2024,3\n18,172,12/3/2024,4\n13,165.9,12/31/2024,5",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
         }
       },
@@ -41,9 +41,8 @@
         "0",
         "1"
       ]
-    },
-    "project_template_level_name": "datascience-U2L5-L4-5templ_2024-pilot"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-30T14:46:45.937+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L3_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L3_2024-pilot\"},{\"changed_at\":\"2024-08-30 14:50:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 14:51:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 14:59:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 15:38:10 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-30T14:46:45.937+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L3_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L3_2024-pilot\"},{\"changed_at\":\"2024-08-30 14:50:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 14:51:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 14:59:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 15:38:10 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-11 00:11:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-11 00:18:38 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-11 00:23:06 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-11 00:23:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-11 00:23:29 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

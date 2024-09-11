@@ -11,8 +11,8 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 import HttpClient from '../util/HttpClient';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
-import ChoiceChips from './ChoiceChips';
-import {ChatChoice, ChatItem} from './types';
+import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
+import {ChatItem, ChatPrompt} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -48,19 +48,29 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       status: Status.OK,
     },
     [
-      {selected: false, text: 'Explain a concept'},
-      {selected: false, text: 'Give an example to use with my class'},
       {
-        selected: false,
-        text: 'Write an extension activity for students who finish early',
+        label: 'Explain a concept',
+        prompt:
+          'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
       },
       {
-        selected: false,
-        text: 'Write an extension activity for students who need extra practice',
+        label: 'Give an example to use with my class',
+        prompt:
+          'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
+      },
+      {
+        label: 'Write an extension activity for students who finish early',
+        prompt:
+          'Write an extension activity for this lesson for students who finish early',
+      },
+      {
+        label:
+          'Write an extension activity for students who need extra practice',
+        prompt:
+          'Write an extension activity for this lesson for students who need extra practice',
       },
     ],
   ]);
-  const [lastChipSelected, setLastChipSelected] = useState<number>(-1);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
@@ -75,10 +85,18 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     };
 
     setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
+    getAIResponse(message);
+  };
+
+  const onPromptSelect = (prompt: ChatPrompt) => {
+    getAIResponse(prompt.prompt);
+  };
+
+  const getAIResponse = (prompt: string) => {
     setIsWaitingForResponse(true);
 
     const body = JSON.stringify({
-      inputText: message,
+      inputText: prompt,
       lessonId: lessonId,
       unitDisplayName: unitDisplayName,
       sessionId: sessionId,
@@ -100,31 +118,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       .finally(() => {
         setIsWaitingForResponse(false);
       });
-  };
-
-  const selectChoices = (changeId: number) => (ids: string[]) => {
-    // Only allow user to select a chip when those chips were the most recent
-    // chat interaction.
-    if (changeId !== messageHistory.length - 1) {
-      return;
-    }
-
-    // Only allow the first selected chip to count.
-    if (changeId === lastChipSelected) {
-      return;
-    }
-
-    setMessageHistory(
-      messageHistory.map((item: ChatItem, id: number) =>
-        id === changeId && Array.isArray(item)
-          ? item.map((choice: ChatChoice, choiceId: number) => {
-              return {...choice, selected: ids.includes(`${choiceId}`)};
-            })
-          : item
-      )
-    );
-
-    setLastChipSelected(changeId);
   };
 
   return (
@@ -162,9 +155,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           <div className={style.chatContent}>
             {messageHistory.map((item: ChatItem, id: number) =>
               Array.isArray(item) ? (
-                <ChoiceChips
-                  choices={item}
-                  selectChoices={selectChoices(id)}
+                <AiDiffSuggestedPrompts
+                  suggestedPrompts={item}
+                  isLatest={id === messageHistory.length - 1}
+                  onSubmit={onPromptSelect}
                   key={id}
                 />
               ) : (
