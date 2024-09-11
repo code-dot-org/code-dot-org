@@ -9,25 +9,6 @@ import {
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import i18n from '@cdo/locale';
 
-// Mock sessionStorage
-const mockSessionStorage = (() => {
-  let store = {};
-
-  return {
-    getItem: jest.fn().mockImplementation(key => {
-      return store[key] || null;
-    }),
-    setItem: jest.fn().mockImplementation((key, value) => {
-      store[key] = value;
-    }),
-    clear: () => {
-      store = {};
-    },
-  };
-})();
-
-Object.defineProperty(window, 'sessionStorage', {value: mockSessionStorage});
-
 describe('SchoolDataInputs', () => {
   const mockSetSchoolId = jest.fn();
   const mockSetCountry = jest.fn();
