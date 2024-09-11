@@ -111,6 +111,7 @@ Resources:
           RealtimeLogConfigArn: !ImportValue AccessLogs-Config
         ViewerCertificate:
           AcmCertificateArn: !Ref RedirectedDomainCertificate
+          MinimumProtocolVersion: TLSv1.2_2021
           SslSupportMethod: sni-only
 
   RedirectedDomainCertificate:
