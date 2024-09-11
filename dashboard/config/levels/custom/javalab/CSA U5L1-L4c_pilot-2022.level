@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:49:53.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A social media analyst wants to store data about the top five most followed Instagram accounts to create a visual for each user. They have the following values:\r\n\r\n![](https://images.code.org/4d8c4e750832b8f35456740e25e041f3-image-1650931723109.08.24 PM.png)\r\n\r\nwhere each row represents Instagram, Cristiano Ronaldo, Ariana Grande, Dwayne Johnson, and Kylie Jenner, respectively. Each column represents the username, owner's name, and followers in millions, respectively.\r\n\r\n##In InstagramScene.java:\r\n\r\nWrite the `createDataArray()`(#e7e8ea) method:\r\n\r\n1. Declare and initialize a 2D `String`(#e7e8ea) array called `tempData`(#e7e8ea) to store the values using an initializer list.\r\n\r\n2. Return the `tempData`(#e7e8ea) array.\r\n\r\nWrite the `getUserInfo()`(#e7e8ea) method:\r\n\r\n3. Return a `String`(#e7e8ea) array containing the row in the 2D array `users`(#e7e8ea) that corresponds with the parameter `user`(#e7e8ea).\r\n\r\n**Hint:** Use the `getUserRow()`(#e7e8ea) method in the `InstagramScene`(#e7e8ea) class to get the row in the `users`(#e7e8ea) array for the parameter `users`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n4. Call the `createScene()`(#e7e8ea) method with a user's name (for example, `\"Dwayne Johhnson\"`(#e7e8ea)).\r\n\r\n5. Call `Theater.playScenes()`(#e7e8ea) to play the scene.\r\n\r\n::: details [**Show Me How**]\r\nA 2D array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[][] variableName = { {row1value1, row1value2, row1value3}, {row2value1, row2value2, row2value3} };\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, and add the values for each row in the 2D array inside curly braces `{ }`(#e7e8ea).\r\n\r\nValues are accessed using the following syntax:\r\n\r\n  ```\r\n  variableName[row][col];\r\n  ```\r\n  \r\nSpecify the specific `row`(#e7e8ea) and `col`(#e7e8ea) of the value you want to access.\r\n:::",
@@ -31,12 +35,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:49:53.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:49:53.965+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L4c_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L4c_2022\"},{\"changed_at\":\"2022-10-08 20:27:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 20:31:52 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 20:32:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 20:33:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 20:38:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 20:38:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 21:03:55 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 21:04:06 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-03 16:27:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-03 16:27:57 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>

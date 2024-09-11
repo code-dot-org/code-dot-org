@@ -17,7 +17,8 @@
         "tabOrder": 0
       }
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:15:30.108+00:00\",\"changed\":[\"cloned from \\\"CSA U6L3-Wrapper PBT_2023\\\"\"],\"cloned_from\":\"CSA U6L3-Wrapper PBT_2023\"}]"

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:14.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L4-L3a PBT_pilot-2022",
@@ -23,12 +27,9 @@
         "text": "/*\n * Stores and analyzes the list of\n * crops and their annual yields\n */\npublic class Crops {\n\n  private String[] types;    // The types of crops\n  private int[] yields;      // The yield in hectograms\n\n  /*\n   * Constructor to create a Crops object with\n   * specified types of crops and yields arrays\n   */\n  public Crops(String[] types, int[] yields) {\n    this.types = types;\n    this.yields = yields;\n  }\n\n  /*\n   * Returns the array types\n   */\n  public String[] getTypes() {\n    return types;\n  }\n\n  /*\n   * Returns the array yields\n   */\n  public int[] getYields() {\n    return yields;\n  }\n\n  /*\n   * Checks if yields array contains at least one value\n   * that is greater than valueToFind\n   */\n  public boolean hasAtLeast(int valueToFind) {\n    // TO DO #1: Check if yields array contains at least\n    // one value that is greater than valueToFind.\n\n\n    return false;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:14.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:14.227+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L3a_2022\\\"\"],\"cloned_from\":\"CSA U3L4-L3a_2022\"},{\"changed_at\":\"2022-09-01 14:23:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 14:24:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 14:25:52 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 14:34:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-01 14:34:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:39:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:40:26 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:40:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:40:47 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

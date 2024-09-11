@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-09-01T22:22:51.000Z",
   "level_num": "custom",
@@ -26,11 +25,9 @@
     },
     "thumbnail_url": "https://images.code.org/3529672eb72644293f85a1bea291ef58-image-1647298892379.gif",
     "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6FIJOKrqFlPhddRyRDehem4iBpVM8usMvKMc0u3A\nWPvXmAqETq+/9a3vR6b9sqMhHv3MUXnR9wCnIN/V2sa4t1gyOC3Iwg8D4Q/s\nj3xpLu2xJHrAzXBopi8VicPYReLjs+/uNfHSYgNPNCgK9o84QRa7pRdefpt6\ny+LOH5M5KtvhEOYGhPBrLWOtavkCKONIX/AytC4Fk8iObqsDHzS4BQcgJsdu\n0hToqlIhAg817eEXtirsaj7kEy9fSsmt6QeZIAu6rImEPWfGoTIgyqRXka7d\nY1EXkuYgJ+4G4duQY2mRX0E4e9ZhztMQrkrQkfl97KwxaEZHo3FzOXEE7qbq\nk9QQb+V4xXxrpLQtJueA3/QAhMlsWazjHbkT14hxi19uA7f4K8xWBDKtOcAO\nwkjrNlwgK0QlhdKdxaqECj+VebB6n764+cz45te7mP9oJflKGov3/bmV0x/+\npR/CcoOQecKTj0uGAbjjBmHuqSbLOZ8sRgOxwp/jMe8WuL8RIciWJJGxMl/S\nod6TW75mdaBuejKEaFlN7X5tQ0FM4rz5ss0LAB0+a/OI5ISql4bd48tpoC69\nZxfLkQLa1gRC/YNKW7oZhpw333c7ZhIm82KMsgzhE8o3aJMfE5d4ODFsQBIk\n4kSYFekeEhGSPyWHvGtaqtvgNrhiEWUn8oc2Orn+MhkE1aBX3NeQ5KyqN7Pe\nGpiuxFJeyd0NBsGbsQ0h4eZ4ExgL94dyM8A3/CLg+2Cex+fJSwgqpnhvUo31\nNsuhWNjiCN8sdeerC0xV00MBhLkiQJsdy65tYn3I3DoovDvqfTTKyXKNNKSM\nL6zBG3jWl27EaZxkzX5B2fa47DhUHF2Waa2cR36s/kSjnGlWJxoDb0pzETLF\ns7+atUDmKMr9yU9Anui9Gwu5bYDG2CtdTtxRpeByu4LHl+dOY9TF6b/eG4Cn\n0i14gF3jPDPF1USAGsugbRC7gTKtnctOq7ja1BFNDUdP3t4L+kEETB1LICDo\nKUDE05gik3rJCISZ/NA6ybeI2T8ELXa36aZSghoFKm6j1xgZkjDzZ8aWCbJl\naZUqOi9o+H3ExdlPeFxEFt3AZ2mE+7kHqdtJ3BJi3RDrGloZLI0Ib2LG19Ys\ny/NUM6gEP7b8eLXdQ//cKJpIEosgNT68SoFaFTS7JkdE6plqm++WxfBHjoNu\nM/rXsIBPlPF9JFjRCltW/IwlouCu+vdHBjW8DoWpYfI1Y0WTUdkPRn7mjaJZ\nnKlIi+nceXWM96vpKHpOxyjWjJ6MEkKTRKmXX+cwXGHjGsKZ7HwberUvshMp\n951B8OJl74Kwf4V0Z8CjpXx95pKe5PwE+k10D3n+FXow6VWalq/5n/45Is03\n2oViJFviHVbUrCSwAn2DTolH77CS\n",
-    "encrypted_examples": [
-
-    ],
-    "ai_tutor_available": "false"
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-09-01T22:22:51.549+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L2b_2022\\\"\"],\"cloned_from\":\"CSA U2L5-L2b_2022\"},{\"changed_at\":\"2024-09-01 22:22:53 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>

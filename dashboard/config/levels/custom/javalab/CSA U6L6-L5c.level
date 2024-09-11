@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-11-03T20:09:02.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "**Stop word removal** is the process of removing commonly used words from a list before or after processing text.\r\n\r\nIn `LitProcessor.java`, write the method `removeStopWords()`:\r\n\r\n1. Loop through the `litText` list.\r\n\r\n   a. Loop through the `stopWords` list.\r\n   \r\n      * If the current item in `litText` is the same as the current item in `stopWords`, remove the item from `litText`.\r\n      \r\n*Remember that the `equals()` method should be used to compare two objects for equality!*\r\n\r\n2. Save `LitProcessor.java` to your **Backpack**.",
@@ -28,12 +32,9 @@
       }
     },
     "thumbnail_url": "https://images.code.org/a66f72ae503cdd6ab2c466a62a37fff9-image-1637682923003.gif",
-    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYc0IUdKH6G1cAz++9Q\nGaQsV9gbDTvKpXXchBYiHMzKTQ69uOb85L6h7OFw8FbEyzHQaO1GE9PLPJZ6\nR6nI1j0j\n"
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYc0IUdKH6G1cAz++9Q\nGaQsV9gbDTvKpXXchBYiHMzKTQ69uOb85L6h7OFw8FbEyzHQaO1GE9PLPJZ6\nR6nI1j0j\n",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-11-03T20:09:02.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-11-03 20:09:04 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-23 13:26:59 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 14:07:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 14:15:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 14:17:52 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 15:55:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-02 16:55:13 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-16 20:29:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

@@ -15,7 +15,8 @@
     "display_name": "Product Review",
     "bubble_choice_description": "Determine the overall sentiment of a product review.",
     "thumbnail_url": "https://images.code.org/70750e8c4193e3a26f88d7f7679aae6d-rating.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:27.848+00:00\",\"changed\":[\"cloned from \\\"CSA U6L10-L4b CR_2022\\\"\"],\"cloned_from\":\"CSA U6L10-L4b CR_2022\"}]"

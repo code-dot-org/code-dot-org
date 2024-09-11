@@ -771,7 +771,8 @@
     "long_instructions": "Request a code review to get feedback from your peers on your `moveFast()`(#e7e8ea) and `paintDashes()`(#e7e8ea) methods.\r\n\r\nWhen you are finished receiving feedback, return to your project and click the **Close review** button.\r\n\r\n##Requesting Feedback\r\n\r\n**Commit your code** and add a comment that includes:\r\n\r\n* a description of the goals and intended outcome of the program\r\n\r\n* any additional relevant information\r\n\r\n* specific tasks or questions you want your reviewer to perform or answer\r\n\r\n##TAG to Give Feedback\r\n*Remember to keep feedback kind, specific, and helpful. Refer to the Unit 1 Guide for sentence starters to structure your feedback.*\r\n\r\n1. Tell them something you like about their code.\r\n\r\n2. Ask them something about the code.\r\n\r\n3. Give a suggestion for improvement.",
     "bubble_choice_description": "Paint dashed lines between the lanes of traffic.",
     "thumbnail_url": "https://images.code.org/0dea0fc4a774b3884e7ed5808b834046-image-1646323157893.gif",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:51.095+00:00\",\"changed\":[\"cloned from \\\"CSA U1L12-L4b_2022\\\"\"],\"cloned_from\":\"CSA U1L12-L4b_2022\"}]"

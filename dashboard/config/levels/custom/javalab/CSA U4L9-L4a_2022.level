@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-07T18:41:47.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA ULL9-L4a PBT_2022",
@@ -11,16 +15,10 @@
     "display_name": "Random Shapes",
     "bubble_choice_description": "Use Math.random() to draw shapes in your scene.",
     "encrypted_exemplar_sources": "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\n5Gwf6gm26LNfWnd8\n",
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/b59d7a60c18fe5e636ac7df86e447d64-image-1651426290945.gif"
+    "thumbnail_url": "https://images.code.org/b59d7a60c18fe5e636ac7df86e447d64-image-1651426290945.gif",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-07T18:41:47.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-07 18:41:50 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-07 18:42:22 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 21:32:11 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 21:38:42 +0000\",\"changed\":[\"encrypted_examples\",\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 22:43:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 22:43:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 20:58:46 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2022-05-01 17:31:45 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

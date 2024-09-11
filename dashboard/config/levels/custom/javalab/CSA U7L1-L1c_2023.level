@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-04-11T13:50:46.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
@@ -69,12 +73,9 @@
       "sbSmoothie.png": "56c9128a-e4bf-491e-8c4f-6761f6f9ddbf.png",
       "threeBananas.png": "23c921ea-7e7f-47ff-8888-f3dcc183692c.png",
       "tomatoes.png": "93a1bae8-cba9-4bd5-97ca-c8ee3c9379e1.png"
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-04-11T13:50:46.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-11T13:50:46.165+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b_2023\\\"\"],\"cloned_from\":\"CSA U7L1-L1b_2023\"},{\"changed_at\":\"2023-04-11 13:50:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:24:05 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:25:37 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:28:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:28:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 03:28:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 12:43:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 12:43:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

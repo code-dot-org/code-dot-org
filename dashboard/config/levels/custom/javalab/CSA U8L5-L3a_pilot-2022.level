@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:56:59.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The array `averageTemps`(#e7e8ea) stores the average temperatures for each planet in order from the planet closest to the sun to the planet furthest from the sun.\r\n\r\nUse the selection sort algorithm to sort the average temperatures from the lowest temperature to the highest.\r\n\r\n##In Sorter.java:\r\n\r\n1. Write the method `selectionSort()`(#e7e8ea) to sort the parameter `data`(#e7e8ea) using a selection sort.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `selectionSort()`(#e7e8ea) method to sort the array. Then call the `arrayToString()`(#e7e8ea) method and print the result to the console. \r\n\r\n::: details [**Show Me How**]\r\nThe algorithm for a selection sort is:\r\n\r\n**Step 1:** Set MIN to location 0\r\n**Step 2:** Find the minimum element in the list\r\n**Step 3:** Swap with value at location MIN\r\n**Step 4:** Set MIN to point to the next element\r\n**Step 5:** Repeat until list is sorted\r\n:::",
@@ -24,12 +28,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:56:59.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:56:59.811+00:00\",\"changed\":[\"cloned from \\\"CSA U8L5-L3a_2022\\\"\"],\"cloned_from\":\"CSA U8L5-L3a_2022\"},{\"changed_at\":\"2022-10-12 14:56:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 14:57:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 15:02:15 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 17:00:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 17:00:42 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 17:04:04 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 17:06:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 17:07:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 17:15:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 17:16:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 17:17:09 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 17:21:02 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 17:23:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 19:04:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>

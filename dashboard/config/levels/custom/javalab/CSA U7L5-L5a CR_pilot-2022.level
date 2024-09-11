@@ -15,7 +15,8 @@
     "display_name": "Social Media Posts",
     "bubble_choice_description": "Override a method to create posts for specific social media platforms.",
     "thumbnail_url": "https://images.code.org/1a5ac59701fa5ae7646eb613ef58a647-social-media.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:43.610+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L5a CR_2022\\\"\"],\"cloned_from\":\"CSA U7L5-L5a CR_2022\"}]"

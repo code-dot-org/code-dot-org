@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:32:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Create a scene that draws park images based on the area in acres of each national park.\r\n\r\n##In ParkScene.java:\r\n\r\n1. Write the `chooseSize()`(#e7e8ea) method using multi-selection statements to check the area in acres of each national park and return the size to draw the image.\r\n\r\n   * If the number of acres is greater than `1000000`(#e7e8ea), return a size of `100`(#e7e8ea).\r\n   \r\n   * Else if the number of acres is greater than or equal to `100000`(#e7e8ea), return a size of `50`(#e7e8ea).\r\n   \r\n   * Otherwise, return a size of `25`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n2. Call the `createScene()`(#e7e8ea) method with the array.\r\n\r\n3. Use `Theater.playScenes()`(#e7e8ea) to play the scene.\r\n\r\n::: details [**Show Me How**]\r\nA multi-selection statement uses the following syntax:\r\n  \r\n  ```\r\n  if (condition) {\r\n    // code to execute\r\n  }\r\n  else if (condition) {\r\n    // code to execute\r\n  }\r\n  else {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nYou can have more than one `else if`(#e7e8ea) if you have additional conditions you need to check.\r\n:::",
@@ -42,12 +46,9 @@
         "text": "49077\n8257\n76679\n242756\n801163\n172971\n30780\n35835\n337598\n241905\n46766\n249561\n26476\n183224\n32572\n3408407\n4740911\n64701\n1508939\n7523897\n193\n1013126\n3223383\n1201647\n310044\n77180\n107342\n522427\n86367\n33265\n325605\n5554\n15349\n571790\n795156\n3674529\n669650\n461901\n1750716\n2619816\n106589\n54012\n52485\n236382\n504781\n922649\n221390\n26686\n138999\n265807\n91716\n404063\n199224\n70447\n15053\n218222\n146344\n33971\n8323146\n2219791\n761748\n147243",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:32:19.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:32:19.050+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L3a_2022\\\"\"],\"cloned_from\":\"CSA U4L10-L3a_2022\"},{\"changed_at\":\"2022-09-22 18:24:43 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 18:26:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 18:26:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 18:32:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 18:38:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 18:38:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 18:38:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

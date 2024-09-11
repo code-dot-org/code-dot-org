@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-18T12:43:34.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##Getting Started\r\n1. Import `ScenePlus.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from <a href=\"https://studio.code.org/projects/javalab/48JwG7FWLhuYZkYVHbIWxi6q1Y3HeNGDsl8iPP4pvMo\" target=\"_blank\">**here**</a>.*\r\n\r\n##In MandalaScene.java:\r\n\r\n1. Override the `drawImage()`(#e7e8ea) method from the `ScenePlus`(#e7e8ea) class to draw each image in the middle of the scene with a size of `100`(#e7e8ea) and rotate the image in the scene. While the rotation is less than `360`(#e7e8ea)\r\n\r\n   * Draw the image using the `drawImage(String filename, int x, int y, int width, int height, int rotation)`(#e7e8ea) method in the `Scene`(#e7e8ea) class.\r\n   \r\n   * Add a pause then clear the scene with `\"white\"`(#e7e8ea).\r\n   \r\n   * Increase the rotation by some amount, like `50`(#e7e8ea).\r\n\r\n   **Hint:** You can find the x and y location to center an image using `(getWidth() / 2) - (size / 2)`(#e7e8ea) for the x position and `(getHeight() / 2) - (size / 2)`(#e7e8ea) for the y position.",
@@ -12,15 +16,9 @@
     "display_name": "Center and Rotate Images",
     "bubble_choice_description": "Override the drawImage() method from the ScenePlus class in the MandalaScene class.",
     "thumbnail_url": "https://images.code.org/3f8c56fcb3289cd8eeace72588a19afd-U7L5-L4d.gif",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-18T12:43:34.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-18T12:43:34.554+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L4c_2022\\\"\"],\"cloned_from\":\"CSA U7L5-L4c_2022\"},{\"changed_at\":\"2022-04-18 12:43:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:23:15 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:39:03 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 13:08:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 13:12:07 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 13:15:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 15:58:31 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-27 20:57:23 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-07-12 21:13:35 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

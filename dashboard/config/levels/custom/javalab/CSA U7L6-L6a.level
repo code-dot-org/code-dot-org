@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-06T17:16:14.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "display_name": "The Console",
@@ -28,13 +32,10 @@
       }
     },
     "thumbnail_url": "https://images.code.org/995a3907fc910da783be252eefb01618-image-1639688788625.gif",
-    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHb8P3/b6ls7VSz8nxyw\nx3Dwb0kaHYW4NtDW3p0ojL60KdEni6N1l1nRkJm6DBKKbqrBnpUir+7KwlhR\nl7Lc+cLR\n"
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHb8P3/b6ls7VSz8nxyw\nx3Dwb0kaHYW4NtDW3p0ojL60KdEni6N1l1nRkJm6DBKKbqrBnpUir+7KwlhR\nl7Lc+cLR\n",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-12-06T17:16:14.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2021-12-06T17:16:14.179+00:00\",\"changed\":[\"cloned from \\\"CSA U7L6-L3a\\\"\"],\"cloned_from\":\"CSA U7L6-L3a\"},{\"changed_at\":\"2021-12-06 17:16:39 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-09 17:44:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-09 17:57:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-09 17:59:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-09 17:59:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 21:07:06 +0000\",\"changed\":[\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-16 21:23:52 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-16 21:26:11 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

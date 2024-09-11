@@ -15,7 +15,8 @@
     "display_name": "Chatbot",
     "bubble_choice_description": "Have a chatbot respond to the user if their response contains specific phrases or words.",
     "thumbnail_url": "https://images.code.org/738aee8477de45f594ef3387394f8ca3-chatbot.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:22.118+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-L4a CR_2022\\\"\"],\"cloned_from\":\"CSA U6L9-L4a CR_2022\"}]"
