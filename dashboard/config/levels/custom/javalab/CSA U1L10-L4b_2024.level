@@ -775,7 +775,8 @@
     },
     "thumbnail_url": "https://images.code.org/2ac531cd013fecbd178a1429303f8b0d-u1l10-l4b.gif",
     "video_key": "csa_printing_in_java",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:44:09.704+00:00\",\"changed\":[\"cloned from \\\"CSA U1L10-L4b_2023\\\"\"],\"cloned_from\":\"CSA U1L10-L4b_2023\"}]"

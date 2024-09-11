@@ -5,7 +5,7 @@ import React from 'react';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import Match from '@cdo/apps/code-studio/levels/match';
 import {LegacySingleLevelGroupDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import i18n from '@cdo/locale';
 

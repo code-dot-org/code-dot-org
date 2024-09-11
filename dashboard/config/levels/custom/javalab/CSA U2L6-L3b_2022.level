@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-03-12T12:55:49.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The `Pie`(#e7e8ea) class represents a pie that is available at Project Mercury Pastries Food Truck.\r\n\r\n##Getting Started\r\n1. Import `Dessert.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from <a href=\"https://studio.code.org/projects/javalab/XPKNPDEmcPt5PXsjJHko9GjUB7zcd1abycQZRLT0Dhk\" target=\"_blank\">**here**</a>.*\r\n\r\n##In Pie.java:\r\n2. Refactor the `Pie`(#e7e8ea) class to be a subclass of `Dessert`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n3. Instantiate a `Pie`(#e7e8ea) object.\r\n\r\n::: details [**Show Me How**]\r\nA subclass is created using the following syntax:\r\n\r\n```\r\npublic class Subclass extends Superclass {\r\n\r\n   public Subclass(dataType variableName, dataType variableName) {\r\n      super(variableName);\r\n   }\r\n\r\n}\r\n```\r\n\r\nBe sure to call the superclass constructor and pass any parameters that should be initialized by the superclass.\r\n:::",
@@ -21,12 +25,9 @@
         "text": "/*\n * A Pie that the Project Mercury Pastries Food Truck sells\n */\npublic class Pie {\n\n  private String flavor;     // The flavor of the Pie\n  private double price;      // The price of the Pie\n  private String filling;    // The filling flavor of the Pie\n  private boolean hasCrust;  // Whether or not the Pie has a crust\n\n  /*\n   * Constructor to create a plain Pie\n   */\n  public Pie() {\n    flavor = \"plain\";\n    price = 0.00;\n    filling = \"none\";\n    hasCrust = false;\n  }\n\n  /*\n   * Constructor create a Pie with specified\n   * flavor, price, filling flavor, and crust status\n   */\n  public Pie(String newFlavor, double newPrice, String newFilling, boolean newCrust) {\n    flavor = newFlavor;\n    price = newPrice;\n    filling = newFilling;\n    hasCrust = newCrust;\n  }\n\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-03-12T12:55:49.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-03-12 12:55:51 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 12:26:39 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 12:29:14 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-15 12:45:02 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 12:56:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 21:21:17 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-06-09 14:29:15 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-06-17 13:33:57 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-24 15:01:15 +0000\",\"changed\":[\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-27 13:11:13 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-07-12 20:44:25 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-07-13 15:44:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-10 20:44:40 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-18 18:21:29 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-18 18:21:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

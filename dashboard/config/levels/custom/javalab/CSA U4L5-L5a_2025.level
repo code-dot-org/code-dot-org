@@ -29,7 +29,8 @@
       }
     },
     "video_key": "csa_random_numbers",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:54:59.635+00:00\",\"changed\":[\"cloned from \\\"CSA U4L5-L5a_2023\\\"\"],\"cloned_from\":\"CSA U4L5-L5a_2023\"}]"

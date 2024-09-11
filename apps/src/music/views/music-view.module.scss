@@ -87,3 +87,11 @@ $default-spacing: 2px;
   right: 10px;
   bottom: 0;
 }
+
+.warningBanner {
+  display: flex;
+  z-index: 99;
+  background-color: $light_yellow;
+  padding: 5px;
+  color: $black;
+}

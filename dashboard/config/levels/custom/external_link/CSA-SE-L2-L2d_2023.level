@@ -12,7 +12,8 @@
     "display_name": "TextTrekkers",
     "bubble_choice_description": "Welcome to TextTrekkers, where your words shape your adventure! Traverse through exciting landscapes, solve riddles, and engage in quests using just your text commands.",
     "thumbnail_url": "https://images.code.org/21304bf12cc1cae9b42110e7df85e8c9-texttrekkers.gif",
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-10-03T21:33:59.717+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L2d\\\"\"],\"cloned_from\":\"CSA-SE-L2-L2d\"}]"

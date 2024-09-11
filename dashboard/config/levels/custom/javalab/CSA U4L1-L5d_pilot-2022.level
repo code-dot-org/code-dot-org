@@ -28,7 +28,8 @@
     "display_name": "Add Your Own Music",
     "bubble_choice_description": "Add music to the scene displaying a motivational image.",
     "thumbnail_url": "https://images.code.org/61716362f895a9834bd8bf610fbf8941-image-1650486321810.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:31:53.896+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L5d_2022\\\"\"],\"cloned_from\":\"CSA U4L1-L5d_2022\"}]"

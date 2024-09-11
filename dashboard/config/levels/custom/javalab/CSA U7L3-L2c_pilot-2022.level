@@ -28,7 +28,8 @@
     },
     "encrypted_exemplar_sources": "88cqqh4PFE13VUB7Wdee/b0dxeEfZcOIwxv+hsPvwwKAZHkeW0Z/CjP2B5Us\n1Ukcp38E+wItc3UgmpVEmYq2Uq7c860zl2z9VTYS/brfD+g54apIVhCJ0wql\n+7N6DslY9+Gf2omLN4qdrCZrI56+eBjEYP11bhBpHXEwBhqzUp8CNs1n3q2k\np8CtUpFY8W9HyjlwTSsA5EOeirk42NUZy73+NNugexU/N02/omT/REb8i/ZH\nVXBv4IcUu9E7vgbILFkKGSuaoWF4fm9KPQD6O2p4tDdxUFU5H4ZM5fpztr3o\nN27yudUt75SL0JKYn9TyyKQ55M3bJJ5vgo6HkxvpLF9BE+s/nsrCEykJqsxY\nz8rP9H+sPW73aocO1b6NwkjzpdAwFHiTHPgKFAZw321FnEQXSGIYoXbji2Ky\n7d2Umz+z4srrrCCOpqJ1lLKa+RVu6QNN6wbiFOWJKqyMjtuiZF+aVaq7sDFj\nAOENLMlQIQI5U5fH879Au4X2I/4y74OJTwnhCZF9EjszAhSvbGz5IR5N9dOR\nFWuj851eF5nPlJoiWG8bsX3d3HcLMnOlvPU9gP25wrXT1KTeq2a+qLIkX96Z\nRVBCY2t9dNFWSz9ug71q9DvRxh94IWRJMD8ibl7HqxjIfCDWrcvEu7qlHkcQ\nGAFkztRTOdTTIfoCrTcOwXRpcQBlRCjYItwAXDPTD9hSOAK34jcHGsJdXZEG\n7VQ0EL4FEK/IC7sap0dP/O/QKKqVesxYiF1QjYWd0VHx4HMYUV6pMRVmDAuY\nu/t0qbZ71xDRtdNXUIVnIVsHnlbGjL2P5R3+FrJzmGd0t5t61+0lZJ7j0lWM\n2Sh3QzXpfA4//NHnk15O0QxZeKbnoyKuvD2173K1Hrrp+xYM0n2ci91nmnNx\n+3g+1+smV58vWFgF6og+xlefEzjuB6xusqk56eAxN6u7D2zRP6kb3YbsSaaB\nOMHJuMmPjd2nYCQcJRcAVg==\n",
     "thumbnail_url": "https://images.code.org/8bc696aa4f9a3fffbd8e7a1380e6ef98-U7L3-L2c.gif",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:36.945+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L2c_2022\\\"\"],\"cloned_from\":\"CSA U7L3-L2c_2022\"}]"

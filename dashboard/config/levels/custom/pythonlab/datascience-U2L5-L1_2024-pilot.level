@@ -17,7 +17,7 @@
       "questionType": "freeResponse",
       "allowMultipleAttempts": false,
       "placeholderText": "student response",
-      "freeResponseHeight": 30,
+      "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
     "start_sources": {
@@ -26,18 +26,18 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "import pandas as pd\n\nsurvey_data = pd.read_csv('candy_dataset.csv')\n\nprint(survey_data.head())\n\nprint(survey_data.info())\n",
+          "contents": "import pandas as pd\n\nsurvey_data = pd.read_csv('survey_data.csv')\n\nprint(survey_data.head())\n\nprint(survey_data.info())\n",
           "folderId": "0",
-          "active": false,
+          "active": true,
           "open": true
         },
         "1": {
           "id": "1",
-          "name": "candy_dataset.csv",
+          "name": "survey_data.csv",
           "language": "csv",
-          "contents": "Candy Name,Flavor,Price ($),Popularity Score\nChocolate,Chocolate,2.97,3\nJelly Beans,Sweet,3.72,4\nSour Patch Kids,Chocolate,3.21,1\nSour Patch Kids,Spicy,2.95,2\nM&Ms,Mint,2.41,4\nStarburst,Sour,3.41,4\nJelly Beans,Fruity,2.47,4\nGummy Bears,Mint,4.51,1\nJelly Beans,Chocolate,4.84,2\nHershey's,Mint,2.23,2\nStarburst,Mint,4.06,2\nGummy Bears,Mint,2.88,1\nGummy Bears,Chocolate,3.06,3\nSkittles,Mint,4.67,5\nHershey's,Mint,0.82,4\nHershey's,Mint,0.89,4\nCandy Corn,Sweet,0.59,3\nM&Ms,Mint,4.25,5\nSkittles,Chocolate,4.0,3\nLollipop,Fruity,4.42,1\n",
+          "contents": "Age,Height,Join Date,Feedback Score\n13,180.2,1/12/2024,1\n29,165.8,1/23/2024,2\n12,177.3,1/26/2024,1\n14,145.9,2/5/2024,2\n15,174.7,2/14/2024,2\n17,170,3/17/2024,1\n15,156.3,3/29/2024,3\n99,162.3,4/19/2024,2\n95,169.9,5/20/2024,4\n13,160.5,5/24/2024,2\n15,160,6/2/2024,4\n,175,7/1/2024,3\n18,172.4,7/14/2024,3\n20,158.6,8/8/2024,4\n17,175.1,9/26/2024,3\n16,180,10/7/2024,4\n16,152.2,10/31/2024,5\n18,168.8,11/29/2024,3\n18,172,12/3/2024,4\n13,165.9,12/31/2024,5",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
         }
       },
@@ -48,8 +48,8 @@
         "1"
       ]
     },
-    "teacher_markdown": "This level prints the top 5 rows of the candy dataset and then information about the count and data type of each column. Students will probably be able to tell from the function name that it provides information, though they may not know until they run it what that information is.\r\n\r\nAfter running, they should know how many non-null values there are (they will probably know \"null\" means \"no value there\" and what the \"Dtype\" is. They may be able to guess that Dtype says something about the kind of data, and possibly even that float involves decimal points since they know what Price is.\r\n\r\n"
+    "teacher_markdown": "This level prints the top 5 rows of the dataset and then information about the count and data type of each column. Students will probably be able to tell from the function name that it provides information, though they may not know until they run it what that information is.\r\n\r\nAfter running, they should know how many non-null values there are (they will probably know \"null\" means \"no value there\" and what the \"Dtype\" is. They may be able to guess that Dtype says something about the kind of data.\r\n\r\n"
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-29 18:16:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:19:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:20:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:21:06 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29 18:16:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:19:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:20:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:21:06 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-11 00:03:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-11 00:04:57 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

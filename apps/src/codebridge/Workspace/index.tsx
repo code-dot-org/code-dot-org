@@ -4,21 +4,32 @@ import {FileBrowser} from '@codebridge/FileBrowser';
 import {FileTabs} from '@codebridge/FileTabs';
 import React from 'react';
 
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {setRestoredOldVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
 import HeaderButtons from './HeaderButtons';
 
 import moduleStyles from './workspace.module.scss';
+
 const Workspace = () => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
+  const hasRestoredOldVersion = useAppSelector(
+    state => state.lab2Project.restoredOldVersion
+  );
+  const dispatch = useAppDispatch();
 
   const headerContent = (
     <>
@@ -26,6 +37,10 @@ const Workspace = () => {
       {projectTemplateLevel && <ProjectTemplateWorkspaceIcon />}
     </>
   );
+
+  const closeRestoredVersionBanner = () => {
+    dispatch(setRestoredOldVersion(false));
+  };
 
   return (
     <PanelContainer
@@ -52,11 +67,25 @@ const Workspace = () => {
             gridTemplateColumns: config.showFileBrowser ? '200px auto' : '100%',
           }}
         >
+          {projectTemplateLevel
+            ? WARNING_BANNER_MESSAGES.TEMPLATE
+            : WARNING_BANNER_MESSAGES.STANDARD}
+
           {config.showFileBrowser && <FileBrowser />}
           <Editor
             langMapping={config.languageMapping}
             editableFileTypes={config.editableFileTypes}
           />
+          {viewingOldVersion && (
+            <Alert text={codebridgeI18n.viewingOldVersion()} type={'warning'} />
+          )}
+          {hasRestoredOldVersion && (
+            <Alert
+              text={codebridgeI18n.restoredOldVersion()}
+              type={'success'}
+              onClose={closeRestoredVersionBanner}
+            />
+          )}
         </div>
       </div>
     </PanelContainer>

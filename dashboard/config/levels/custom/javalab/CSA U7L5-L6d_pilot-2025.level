@@ -39,7 +39,8 @@
     "starter_assets": {
       "cloudy.png": "76946d82-bdd0-4e57-bf30-b15ba2c6104e.png"
     },
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T21:41:10.777+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L6d_2025\\\"\"],\"cloned_from\":\"CSA U7L5-L6d_2025\"}]"

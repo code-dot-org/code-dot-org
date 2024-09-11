@@ -42,20 +42,18 @@ const defaultProject: ProjectSources = {
 
 const labeledGridLayouts = {
   horizontal: {
-    gridLayoutRows: '2fr 1fr ',
+    gridLayoutRows: '1fr',
     gridLayoutColumns: '300px minmax(0, 1fr)',
     gridLayout: `
-  "info-panel workspace"
-  "info-panel console"
-  "info-panel control-buttons"`,
+  "info-panel workspace-and-console"
+  `,
   },
   vertical: {
-    gridLayoutRows: '1fr 1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
+    gridLayoutRows: '1fr',
+    gridLayoutColumns: '300px minmax(0, 1fr) 400px',
     gridLayout: `
     "info-panel workspace console"
-    "info-panel workspace console"
-    "info-panel control-buttons control-buttons"`,
+    `,
   },
 };
 const defaultConfig: ConfigType = {

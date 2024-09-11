@@ -1335,7 +1335,8 @@
         "isVisible": true
       }
     },
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:23:39.416+00:00\",\"changed\":[\"cloned from \\\"CSA U2L4-L2d_2022\\\"\"],\"cloned_from\":\"CSA U2L4-L2d_2022\"}]"

@@ -28,3 +28,11 @@
   overflow: scroll;
   flex: 1;
 }
+
+.workspaceAndConsole {
+  height: 100%;
+  grid-area: workspace-and-console;
+  background-color: $darkest_gray;
+  color: $white;
+  overflow: hidden;
+}
