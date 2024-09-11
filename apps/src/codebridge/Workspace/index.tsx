@@ -18,11 +18,7 @@ import HeaderButtons from './HeaderButtons';
 
 import moduleStyles from './workspace.module.scss';
 
-interface WorkspaceProps {
-  style?: React.CSSProperties;
-}
-
-const Workspace: React.FunctionComponent<WorkspaceProps> = ({style}) => {
+const Workspace = () => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
@@ -51,7 +47,6 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({style}) => {
       headerContent={headerContent}
       rightHeaderContent={<HeaderButtons />}
       className={moduleStyles.workspace}
-      style={style}
     >
       <FileTabs />
       {isStartMode && (

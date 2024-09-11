@@ -10,8 +10,8 @@ import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
 import moduleStyles from './workspace.module.scss';
 
-// The top Y coordinate of the panel.  Above them is just the common site
-// header and then a bit of empty space.
+// The top Y coordinate of the panel. This includes the top header and the header
+// of the workspace, which is absolutely positioned.
 const PANEL_TOP_COORDINATE = 80;
 
 // A component that combines the Workspace and Console component into a single component,
@@ -69,6 +69,7 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
     );
   };
 
+  // The editor height is computed based on the console height.
   const editorHeight = useMemo(
     () =>
       columnHeight - consoleHeight + globalStyleConstants['resize-bar-width'],
@@ -77,14 +78,18 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.workspaceAndConsole}>
-      <Workspace style={{height: editorHeight}} />
+      <div style={{height: editorHeight}}>
+        <Workspace />
+      </div>
       <HeightResizer
         resizeItemTop={() => PANEL_TOP_COORDINATE}
         position={editorHeight}
         onResize={handleResize}
         style={{position: 'static'}}
       />
-      <Console style={{height: consoleHeight}} />
+      <div style={{height: consoleHeight}}>
+        <Console />
+      </div>
     </div>
   );
 };
