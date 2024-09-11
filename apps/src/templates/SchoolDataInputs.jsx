@@ -9,6 +9,7 @@ import {
   NO_SCHOOL_SETTING,
   SELECT_A_SCHOOL,
   US_COUNTRY_CODE,
+  ZIP_REGEX,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
@@ -46,6 +47,8 @@ export default function SchoolDataInputs({
   // We don't want to display any fields to start that won't eventually be
   // necessary, so updating any time country changes
   const countryIsUS = useMemo(() => country === US_COUNTRY_CODE, [country]);
+
+  const countryIsSelected = useMemo(() => country !== '', [country]);
 
   const inputManually = useMemo(() => schoolId === CLICK_TO_ADD, [schoolId]);
 
@@ -107,7 +110,7 @@ export default function SchoolDataInputs({
             />
           </div>
         )}
-        {!countryIsUS && (
+        {!countryIsUS && countryIsSelected && (
           <SchoolNameInput
             fieldNames={{
               schoolName: fieldNames.schoolName,
