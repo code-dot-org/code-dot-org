@@ -7,9 +7,9 @@ set_dir: true
 :ruby
   @header["title"] = hoc_s(:curriculum_name_csf)
 
-- video_page_index = 7
-- video_page_section_title = [hoc_s(:video_library_page_title_ai_works), hoc_s(:video_library_page_title_computers_work), hoc_s(:video_library_page_title_internet_works), hoc_s(:video_library_page_title_not_hacked), hoc_s(:video_library_page_title_blockchain), hoc_s(:video_library_page_title_inspirational), hoc_s(:video_library_page_title_careers)]
-- video_page_section_desc = [hoc_s(:video_library_page_description_ai_works), hoc_s(:video_library_page_description_computers_work), hoc_s(:video_library_page_description_internet_works), hoc_s(:video_library_page_description_not_hacked), hoc_s(:video_library_page_description_blockchain), hoc_s(:video_library_page_description_inspirational), hoc_s(:video_library_page_description_careers)]
+- video_page_index = 3
+- video_page_section_title = [hoc_s(:video_library_page_title_ai_works), hoc_s(:video_library_page_title_computers_work), hoc_s(:video_library_page_title_internet_works)]
+- video_page_section_desc = [hoc_s(:video_library_page_description_ai_works), hoc_s(:video_library_page_description_computers_work), hoc_s(:video_library_page_description_internet_works)]
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/video-page-styles.css", rel: "stylesheet"}
@@ -38,14 +38,6 @@ set_dir: true
         = view :carousel_computer_works_video
       - if index === 2
         = view :carousel_internet_video
-      - if index === 3
-        = view :carousel_not_hacked_video
-      - if index === 4
-        = view :carousel_blockchain_video
-      - if index === 5
-        = view :carousel_inspirational_video
-      - if index === 6
-        = view :carousel_careers_in_cs_video
   = view :section_divider_line
 
 %section.centered
