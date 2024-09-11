@@ -18,7 +18,8 @@
 }
 
 .workspaceAndConsole {
-  height: 100%;
+  height: auto;
+  width: 100%;
   grid-area: workspace-and-console;
   background-color: $darkest_gray;
   color: $white;

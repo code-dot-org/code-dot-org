@@ -3,13 +3,16 @@ import Workspace from '@codebridge/Workspace';
 import {debounce} from 'lodash';
 import React, {useEffect, useMemo} from 'react';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import globalStyleConstants from '@cdo/apps/styleConstants';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
 import moduleStyles from './workspace.module.scss';
 
 // The top Y coordinate of the panel.  Above them is just the common site
 // header and then a bit of empty space.
-const PANEL_TOP_COORDINATE = 60;
+const PANEL_TOP_COORDINATE = 80;
 
 // A component that combines the Workspace and Console component into a single component,
 // with a horizontal resizer between them.
@@ -30,6 +33,13 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
     handleColumnResize();
 
     window.addEventListener('resize', debounce(handleColumnResize, 10));
+
+    // Ensure we resize appropriately when switching levels.
+    const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
+    lifecycleNotifier.addListener(
+      LifecycleEvent.LevelLoadCompleted,
+      handleColumnResize
+    );
   }, []);
 
   useEffect(() => {
@@ -51,7 +61,6 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
     // Minimum height fits 4 lines of text.
     const consoleHeightMin = 120;
     const consoleHeightMax = window.innerHeight - 200;
-
     setConsoleHeight(
       Math.max(
         consoleHeightMin,
@@ -61,24 +70,21 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
   };
 
   const editorHeight = useMemo(
-    () => columnHeight - consoleHeight,
+    () =>
+      columnHeight - consoleHeight + globalStyleConstants['resize-bar-width'],
     [columnHeight, consoleHeight]
   );
 
   return (
     <div className={moduleStyles.workspaceAndConsole}>
-      <div style={{height: editorHeight}}>
-        <Workspace />
-      </div>
+      <Workspace style={{height: editorHeight}} />
       <HeightResizer
         resizeItemTop={() => PANEL_TOP_COORDINATE}
         position={editorHeight}
         onResize={handleResize}
         style={{position: 'static'}}
       />
-      <div style={{height: consoleHeight}}>
-        <Console />
-      </div>
+      <Console style={{height: consoleHeight}} />
     </div>
   );
 };

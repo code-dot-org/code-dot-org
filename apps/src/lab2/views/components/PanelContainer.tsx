@@ -14,6 +14,7 @@ interface PanelContainerProps {
   hideHeaders?: boolean;
   className?: string;
   headerClassName?: string;
+  style?: React.CSSProperties;
 }
 
 /**
@@ -32,6 +33,7 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   hideHeaders,
   className,
   headerClassName,
+  style,
 }) => {
   const {theme} = useContext(ThemeContext);
 
@@ -43,6 +45,7 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
         className
       )}
       id={id}
+      style={style}
     >
       {!hideHeaders && (
         <div

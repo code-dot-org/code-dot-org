@@ -13,7 +13,11 @@ import GraphModal from './GraphModal';
 
 import moduleStyles from './console.module.scss';
 
-const Console: React.FunctionComponent = () => {
+interface ConsoleProps {
+  style?: React.CSSProperties;
+}
+
+const Console: React.FunctionComponent<ConsoleProps> = ({style}) => {
   const codeOutput = useAppSelector(state => state.codebridgeConsole.output);
   const dispatch = useDispatch();
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
@@ -75,6 +79,7 @@ const Console: React.FunctionComponent = () => {
       rightHeaderContent={headerButton()}
       leftHeaderContent={<ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
+      style={style}
     >
       <div className={moduleStyles.console}>
         {codeOutput.map((outputLine, index) => {
