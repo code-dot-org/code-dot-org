@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-04-14T13:58:45.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
@@ -56,12 +60,9 @@
     },
     "display_name": "Character Battle Game",
     "bubble_choice_description": "An example project that creates a game where the player battles against another character.",
-    "thumbnail_url": "https://images.code.org/09f5a3d547909bb2e16cf8413d0e973e-optionC.png"
+    "thumbnail_url": "https://images.code.org/09f5a3d547909bb2e16cf8413d0e973e-optionC.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-04-14T13:58:45.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-14T13:58:45.452+00:00\",\"changed\":[\"cloned from \\\"CSA U8L1-L1b_2023\\\"\"],\"cloned_from\":\"CSA U8L1-L1b_2023\"},{\"changed_at\":\"2023-04-14 13:58:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 17:45:34 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 17:47:29 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 17:53:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 17:53:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 17:53:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

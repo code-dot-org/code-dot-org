@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:37.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L9-L4b PBT_pilot-2022",
@@ -31,12 +35,9 @@
         "text": "#91: Sylheti\n#90: Min Dong Chinese\n#89: Uyghur\n#88: Taʽizzi-Adeni Arabic\n#87: Czech\n#86: Rundi\n#85: Southern Pashto\n#84: Min Bei Chinese\n#83: Sanaani Spoken Arabic\n#82: Tunisian Arabic\n#81: South Levantine Arabic\n#80: Zulu\n#79: Kinyarwanda\n#78: Hungarian\n#77: Deccan\n#76: Kazakh\n#75: Chittagonian\n#74: Greek\n#73: South Azerbaijani\n#72: Bavarian\n#71: Nigerian Fulfulde\n#70: Hejazi Arabic\n#69: Northern Kurdish\n#68: Sinhalese\n#67: Assamese\n#66: Mesopotamian Arabic\n#65: Nepali\n#64: Cebuano\n#63: Malay (Malaysian Malay)\n#62: Somali\n#61: Chhattisgarhi\n#60: Khmer\n#59: Saraiki\n#58: Thai\n#57: Magahi\n#56: Northern Pashto\n#55: Amharic\n#54: Gan Chinese\n#53: Saʽidi Arabic\n#52: Dutch\n#51: Tagalog\n#50: Romanian\n#49: North Levantine Arabic\n#48: Sindhi\n#47: Northern Uzbek\n#46: Igbo\n#45: Ukrainian\n#44: Moroccan Arabic\n#43: Algerian Arabic\n#42: Sudanese Arabic\n#41: Sunda\n#40: Eastern Punjabi\n#39: Burmese\n#38: Maithili\n#37: Odia\n#36: Malayalam\n#35: Xiang Chinese\n#34: Yoruba\n#33: Polish\n#32: Indonesian (Indonesian Malay)\n#31: Kannada\n#30: Hausa\n#29: Jin Chinese\n#28: Hakka Chinese\n#27: Min Nan Chinese\n#26: Bhojpuri\n#25: Iranian Persian\n#24: Gujarati\n#23: Egyptian Arabic\n#22: Italian\n#21: Javanese\n#20: Urdu (Persianised Hindustani\n#19: Yue Chinese\n#18: Tamil\n#17: Vietnamese\n#16: German\n#15: French\n#14: Korean\n#13: Turkish\n#12: Wu Chinese\n#11: Telugu\n#10: Marathi\n#9: Western Punjabi\n#8: Japanese\n#7: Russian\n#6: Portuguese\n#5: Bengali\n#4: Hindi (Sanskritised Hindustani)\n#3: English\n#2: Spanish\n#1: Mandarin Chinese",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:37.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:37.989+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L4b_2022\\\"\"],\"cloned_from\":\"CSA U3L9-L4b_2022\"},{\"changed_at\":\"2022-09-09 00:35:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-09 00:36:08 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-09 00:36:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-09 00:37:08 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

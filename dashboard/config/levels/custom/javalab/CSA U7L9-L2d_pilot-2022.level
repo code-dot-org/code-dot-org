@@ -26,7 +26,8 @@
       "CSA U7L9-L2d Predict_pilot-2022"
     ],
     "thumbnail_url": "https://images.code.org/f0e958bba305d82d0b66fb345ab31f28-matrix.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:55.702+00:00\",\"changed\":[\"cloned from \\\"CSA U7L9-L2d_2022\\\"\"],\"cloned_from\":\"CSA U7L9-L2d_2022\"}]"

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-07T17:24:12.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Draw a smiley face in your scene!\r\n\r\n##In DrawingScene.java:\r\n\r\n1. Write the method `createScene()`(#e7e8ea) to draw shapes to create a smiley face.\r\n\r\n   * Use the `drawEllipse(int x, int y, int width, int height)`(#e7e8ea) method to draw the face. Position the face at `(50, 50)`(#e7e8ea) with a width of `300`(#e7e8ea) and a height of `300`(#e7e8ea).\r\n   \r\n   * Use the `drawEllipse(int x, int y, int width, int height)`(#e7e8ea) method to draw the eyes. Position the left eye at `(120, 120)`(#e7e8ea) and the right eye at `(230, 120)`(#e7e8ea) with a width of `50`(#e7e8ea) and a height of `50`(#e7e8ea).\r\n   \r\n   * Use the `drawEllipse(int x, int y, int width, int height)`(#e7e8ea) method to draw the mouth. Position the mouth at `(130, 200)`(#e7e8ea) with a width of `150`(#e7e8ea) and a height of `100`(#e7e8ea).\r\n   \r\n   * Use the `drawRectangle(int x, int y, int width, int height)`(#e7e8ea) method to cover the top half of the mouth. Position the rectangle at `(130, 200)`(#e7e8ea) with a width of `160`(#e7e8ea) and a height of `50`(#e7e8ea).\r\n\r\nUse the following methods in the `Scene`(#e7e8ea) class to change the colors of the face, eyes, and mouth:\r\n\r\n```\r\nsetFillColor(String color)\r\nSets the fill color for shapes that are drawn.\r\n\r\nremoveStrokeColor()\r\nRemoves the stroke color so any shapes drawn have no stroke.\r\n```\r\n\r\n##In MyTheater.java:\r\n\r\n2. Instantiate an `DrawingScene`(#e7e8ea) object.\r\n\r\n3. Call the `createScene()`(#e7e8ea) method on your `DrawingScene`(#e7e8ea) object.\r\n\r\n4. Use the method `Theater.playScenes(Scene scene)`(#e7e8ea) to play the scene.\r\n\r\n![](https://images.code.org/28c2a9930b71e6326da5c1c5810c1858-image-1650480543450.png)",
@@ -20,16 +24,10 @@
       }
     },
     "encrypted_exemplar_sources": "88cqqh4PFE13VUB7Wdee/b0dxeEfZcOIwxv+hsPvwwJZRoDcE913kILEJNy4\nXN/Sdi1y6g3ijdwCWJ7/VAyIO207AD91QN03s2rZxnYReBXeiTD3AHt1WgzJ\n+FDsnjuOO+z5h6JDlqUkQXiY0NdEQZTqL0vkVZ67lOXFlCBN3jsCT1ZiI27a\n/tNIj+DV2Y+yqFqT0O+okgdmjFURAsOCfNrRx7P+y6rLMR1A3jC42+0G9mKG\ncyDtNQ5+jIWejhzjp7GVjn3cNEpWnH1fRvOdKh0BvHFYykCHpONJzg045Tfq\nPlTk+XOZiPaN7irLrf66cEkDVUc/VeKe4WSQRIBv189LBYTm2OGqwlINbmhO\no7MVTPkpWS5/S0Nnh3KYPBxZv6IAwTS+ubkuH4eOjrC2SzJRHZTMXzvF2+OX\nPMcji8ORZwFhib65SvlQMjeqJbWzvkCOduwOcHDWxMDOfzHrg6vprIwChWEW\nr1xE3+ROPv6qnDNuxusar2czv/3wM6Gz3qqc5Eui8apCbpZ1dOebaRi6tEjh\ntTy3osVjDm8wxJpQdIR6U+p/d+NMwSTC/LPccWGLbyNn/sIql6XCshnIe3RN\nVOOFsd9MZRk078sRpt+PBZBZ74xvtozzdjhlz8x75CZ+cEiIxKFNsthxxLj0\nJadTTXJZwdWqU/NE/hnpjH7WYEoYWtIlRhTM9CPGylN89UNUq4JUa07+znm2\nofI4ew0WwNGWQ5EBnSAXcyEE4AdThfPvXmntNpsJq1hsOt9lc6zkzp5Oo3sN\nT0IqY8c6x6k7TuElfWhPkTUkCz5xkwrBWWc8ASDrS4ZSuF4FjTI7VfP4DeoR\nFeUIOgGfoSaz7OhUqp8sKW8a3GbpakjJxzgjZiLrK5kui5zKRN9z1IYltVpz\n1MM8Nv0yE0VGksi+FBi8h7wAAQFuc6wllIvEnENk9AZDVu9etXpLHJBQlSM1\ntIlspPlbrYYlUB66bAlLrrlTUJ1FXneW1OQVGsSAMkacbrFrE771dc+AiU17\na6mqfyV+JEqqDvGokWsr8Wfiv+KANIeEXNuh2+1mOXbuabtOHfe3cIA5yyUa\n8hLDSKwLu4p3bA/EwQ/Eo2lL6ZyDjY+Tt6gg05RKzFadAqKutjQGbg/07djI\nf9m8/GYTFMoOBO+bLRkvYPOcLAZsvAb8R6LYkLeeSL4Fbs1Fd6MA61/3XmlS\neGSpLKK69PUnQHcEwvNsl0jOE+N3xX826ILPzSC7uoZ8SlzYhOQ0tLPdBCVV\ne6rELt9pWqjufDOyhxbSvQSYU08KgXZKY7OkHYyC/DOR5u+VyrOfX4PEhUbO\nOL3gQx5X/xvFcqK8D7mTVrFrZIWFJHdCvZGu1gUN/9weahidxHx0NU3hHdRW\nrGnofm1UAqFsEkdJu7g0S2v2GBXTRzswnpdEU94iAVe5nfehmQwoeVKsw/yb\ne5pZwPf2X04NAkF6YZ91zAJqanJRE5np719xu8HRy2i1tteouJ/3zb29dBnj\nAsQpOwe++C4jntGgffJzMXN77wtULwRRmZPoYANaAnwzYGW80kx5FtnwwRXm\n+Ipt4SjcqP+Y+jygYA/lQcwa1100An75ZTTEW4tweMKBhyb5LhyoMiuHNR3h\nKdxAm+jIHwn6KfXLsGcGwZrkkHbog/eIKTQKgQ8m7a4C\n",
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/28c2a9930b71e6326da5c1c5810c1858-image-1650480543450.png"
+    "thumbnail_url": "https://images.code.org/28c2a9930b71e6326da5c1c5810c1858-image-1650480543450.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-07T17:24:12.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-07T17:24:12.468+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L4a_2022\\\"\"],\"cloned_from\":\"CSA U4L1-L4a_2022\"},{\"changed_at\":\"2022-04-07 17:25:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 17:33:39 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 18:27:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 18:42:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 18:48:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 18:49:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 20:01:26 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

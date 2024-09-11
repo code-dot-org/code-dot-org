@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-09-10T21:10:57.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_v2",
+    "panels": [
+      {
+        "text": "### This is the AI Beat Block\nYou can use AI to help you generate new beats! ",
+        "imageUrl": "https://images.code.org/50f6a8f66c6a76e126f8abb649edba0c-empty beat block.png",
+        "key": "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677"
+      },
+      {
+        "text": "###First, click on the block and open the drum modal. Add in your beat. ",
+        "imageUrl": "https://images.code.org/24112089b9c6acf1b8a8ce5e1653a49f-seed pattern 2.gif",
+        "key": "music_ai_panels_aibeatblock-2590f59d-fc81-460c-8499-036f2a1f5b60"
+      },
+      {
+        "text": "###Then, click on AI Bot to generate the rest of your beat. ",
+        "imageUrl": "https://images.code.org/eb8e02786ca69aaeffac2258965de423-click on Ai bot 2 .gif",
+        "key": "music_ai_panels_aibeatblock-dbb9516c-1147-4f1e-951a-4ef7e00c129f"
+      },
+      {
+        "text": "###You can change the temperature to get different results. Let's try spicy to make things interesting. ",
+        "imageUrl": "https://images.code.org/5b906ec72954411e40c1842e7ba8a45e-spicy generate 2.gif",
+        "key": "music_ai_panels_aibeatblock-d2ba442b-68e2-47f1-abd5-15c49f5d243c"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-10T21:10:57.721+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function\\\"\"],\"cloned_from\":\"music_ai_panels_function\"},{\"changed_at\":\"2024-09-10 21:47:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1558,7 +1558,7 @@
   resources_tabs_assessments_desc: "These include rubrics, checklists, mini-projects, end-of-chapter projects, student-facing rubrics, sample projects, and post-project tests — all designed to support teachers in measuring student growth, providing feedback, and evaluating student understanding."
 
   teach_page_top_heading: "Teach computer science & ignite possibilities"
-  teach_page_top_desc_01: "Tap into your students' full potential with Code.org's free Computer Science (CS) curriculum."
+  teach_page_top_desc_01: "Tap into your students' full potential with Code.org's free Computer Science (CS) and Artificial Intelligence (AI) curriculum."
   teach_page_top_desc_02: "Join the global community of over 2 million educators empowering the next generation of innovators, problem solvers, and digital citizens! Code.org supports teachers the whole way with professional learning, comprehensive curricula, and support when you need it."
   teach_page_why_teach_cs_heading: "Why teach computer science with Code.org?"
   teach_page_why_teach_cs_block_heading_01: "Build foundational CS skills"
@@ -10814,7 +10814,7 @@
         title: "How to Host an Hour"
         desc: "A step-by-step guide to preparing for, running, and celebrating your Hour of Code event with your class or group."
         button: "Read the guide"
-      host:
+      activity:
         title: "Choose an Activity"
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"

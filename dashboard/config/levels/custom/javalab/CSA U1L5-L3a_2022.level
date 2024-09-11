@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-02-15T14:10:39.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -355,15 +359,9 @@
     "bubble_choice_description": "Use an if statement and the isOnBucket() method to take all of the paint from the paint bucket if the Painter object is standing on a paint bucket.",
     "thumbnail_url": "https://images.code.org/b5c5ddce9715bd518d1b26b5a008732f-image-1646320116969.gif",
     "encrypted_exemplar_sources": "KNjm63MQ86iRZeyLht9Rk62smWHrvRJhg0SD7xLvYFRjBribjRJBPPxye5tZ\nSw+yR0g4yUhcRSYQWkDGM5E5qQ1lVV/SXzOvpd6fH2RjMomDsv0B6T20w4El\n7Iy7tSI9WDgsXrHBqdEGrOIzxms3Fz7e+AvIzg8flBeXudWa6xHRQwJMM1K0\n6OOaykbPBSjRutrNxEbYJtd/dSYX1E/zr+7Wfapn793i6jhDoIZE4f1OqTCi\nBrFQ0lNS6vBnuVqBazppJKApt0lgmnzRsyvviGCcBomg7jw2vt4qov/DLLBO\nuyIpU2C0/4TWLjiLfDlgPpZybc8f4EeYSyRB43+F8EdZ4tCEXg3h1c6YvMEC\nNc7e9I3yl5Tuold9I9sc1nimS/YY93KRz2YY5MDUmP7EWCG324l4AU9yKeAu\nJqLaiGMJxQD31AH22HclRXciN0XvtkEZJ6mTMFwcmQw92k7sD8xAzfmGGsri\ndDhagIL/41N/l/5HgmgPgOP9zHIjT1WW4V3+Lay+A1cO/Ta+h8bOwfJmz6h+\nmsnzn/j9+Be+3RlI5YDO7KsBiS9hX4InHnXG4TC6wSeezzpx0dl14MDNmgvH\n/jSyo3cqyZ6i51pqQ5hnt+jHRuR7U6MZL8a1bd6Vkm6Z4Da/dNI53WolgD7Z\nCTfeXfQCylICv/c4CRDy1vnf7VGC33ikwiZKGJ1e0S5m2CCL4PAIeSt+Uugx\nMnG8KQ==\n",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-02-15T14:10:39.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-02-15T14:10:39.370+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L5-L2_2022\"},{\"changed_at\":\"2022-02-15 14:13:16 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 14:14:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 14:17:02 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 14:18:49 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-23 13:29:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 13:39:18 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:09:50 +0000\",\"changed\":[\"serialized_maze\",\"display_name\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:16:25 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 13:23:20 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 13:23:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 18:57:50 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-24 14:39:19 +0000\",\"changed\":[\"serialized_maze\",\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

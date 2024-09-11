@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-ai-2024",
-    "serialized_at": "2024-09-05 17:55:13 UTC",
+    "serialized_at": "2024-09-10 21:47:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -178,6 +178,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_ai_panels_playtogether"
+        ],
         "progression": "Play Together & Sounds"
       },
       "bonus": false,
@@ -200,6 +203,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-playtogether"
+        ],
         "progression": "Play Together & Sounds"
       },
       "bonus": false,
@@ -222,6 +228,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-playtogether_sequence"
+        ],
         "progression": "Play Together & Sounds"
       },
       "bonus": false,
@@ -269,6 +278,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-functions-chorus"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -291,6 +303,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-function-verse"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -313,15 +328,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-ai-video-aibeats"
-        ],
         "progression": "AI Beat Block "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music-ai-video-aibeats"
+          "music_ai_panels_aibeatblock"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -329,7 +341,7 @@
         "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
       },
       "level_keys": [
-        "music-ai-video-aibeats"
+        "music_ai_panels_aibeatblock"
       ]
     },
     {
@@ -482,9 +494,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-ai-video-aibeats",
+        "level.key": "music_ai_panels_aibeatblock",
         "script_level.level_keys": [
-          "music-ai-video-aibeats"
+          "music_ai_panels_aibeatblock"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
