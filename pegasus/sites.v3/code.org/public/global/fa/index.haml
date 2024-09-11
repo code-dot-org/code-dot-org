@@ -31,3 +31,21 @@ set_dir: true
     %div.centered{style: "margin-top: 2rem"}
       %a.link-button.secondary{href: CDO.studio_url("/catalog")}
         =hoc_s(:call_to_action_see_full_curriculum_catalog)
+
+%section.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s(:farsi_homepage_video_title)
+    %p.centered
+      =hoc_s(:farsi_homepage_video_description)
+    .action-block.action-block--two-col.white
+      .media-wrapper.col-50
+        %img{src: "/images/video-library-banner.png", alt: ""}
+      .text-wrapper.col-50
+        %p.overline
+        %h3
+          =hoc_s(:farsi_homepage_video_card_title)
+        %p.heading-sm
+          =hoc_s(:farsi_homepage_video_card_description)
+        %a.link-button{href: "https://hourofcode.com/learn"}
+          =hoc_s(:farsi_homepage_video_card_cta)

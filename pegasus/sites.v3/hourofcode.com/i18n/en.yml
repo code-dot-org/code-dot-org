@@ -12039,6 +12039,11 @@
   farsi_homepage_curriculum_title_2: "Unplugged"
   farsi_homepage_curriculum_description_1: "Bite-sized, hour-long introductory tutorials introducing fundamental concepts of computer science in a fun, creative, and engaging way."
   farsi_homepage_curriculum_description_2: "CS education does not always need to be in front of a screen and device access shouldn't be a barrier to learning computer science concepts."
+  farsi_homepage_video_title: "Video library"
+  farsi_homepage_video_description: "There are so many amazing offerings to explore. Here are just a few of the new and popular offerings."
+  farsi_homepage_video_card_title: "Short educational videos"
+  farsi_homepage_video_card_description: "Learn more about computer science through our video series covering topics like artificial intelligence, the internet, and how computers work! Watch our 5 - 10 minute long videos on your own or use them in the classroom"
+  farsi_homepage_video_card_cta: "Explore video library"
 
   pl_curriculum_launch_skinny_banner_2024:
     title: Introducing new professional learning!
