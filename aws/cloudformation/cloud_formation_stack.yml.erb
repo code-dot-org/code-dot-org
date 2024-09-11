@@ -207,6 +207,8 @@ Resources:
           - Effect: Allow
             Action:
               - 'bedrock:RetrieveAndGenerate'
+              - 'bedrock:Retrieve' # TODO: scope to custom knowledge base
+              - 'bedrock:InvokeModel' # TODO: scope to allowed models
             Resource: '*'
 
   # ---------------------------------------------
