@@ -314,4 +314,39 @@ describe('useSchoolInfo', () => {
       });
     });
   });
+
+  describe('fetchSchools', () => {
+    let hook;
+    const fakeSchools = [
+      {nces_id: 123456, name: 'First School'},
+      {nces_id: 111111, name: 'Other School'},
+      {nces_id: 987654, name: 'Duplicate School Name'},
+      {nces_id: 876543, name: 'Duplicate School Name'},
+      {nces_id: 999999, name: 'ABC Academy'},
+    ];
+
+    beforeEach(async () => {
+      jest.clearAllMocks();
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue(fakeSchools),
+      };
+      mockFetch = jest.fn().mockResolvedValue(mockResponse);
+      window.fetch = mockFetch;
+
+      const {result} = renderHook(() => useSchoolInfo(initialState));
+
+      hook = result;
+    });
+
+    it('returns the school list sorted alphabetically', () => {
+      expect(hook.current.schoolsList).toEqual([
+        {text: 'ABC Academy', value: '999999'},
+        {text: 'Duplicate School Name', value: '987654'},
+        {text: 'Duplicate School Name', value: '876543'},
+        {text: 'First School', value: '123456'},
+        {text: 'Other School', value: '111111'},
+      ]);
+    });
+  });
 });
