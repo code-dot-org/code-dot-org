@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:57:11.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A teacher wants to place students in pairs for an assignment. They have a list of students and want to find the name of a student whose name is closest to the target name and comes after the target name.\r\n\r\n##In PairFinder.java:\r\n\r\n1. Write the method `findPartner()`(#e7e8ea) to use the binary search algorithm to find and return the name that is closest and comes after the name to find.\r\n\r\n**Hint:** When returning the student from `students`(#e7e8ea), use the mod operator to return the name at the front of the list if the target name comes after the last name in `students`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `findPartner()`(#e7e8ea) method and print the result.\r\n\r\n::: details [**Show Me How**]\r\nThe binary search algorithm can be implemented using iteration or recursion.\r\n  \r\n**Iteration Method**\r\nwhile low is less than high\r\n  mid = (low + high) / 2\r\n  \r\n  if target comes after list[mid]\r\n    low = mid + 1\r\n  else\r\n    high = mid - 1\r\n\r\nreturn list[low]\r\n\r\n**Recursive Method**\r\nString binarySearch(list, target, low, high)\r\n  mid = (low + high) / 2\r\n  \r\n  if low is greater than high\r\n    return list[low]\r\n  \r\n  if target comes after list[mid]\r\n    return binarySearch(list, target, mid + 1, high)\r\n  else\r\n    return binarySearch(list, target, low, mid)\r\n:::",
@@ -25,15 +29,9 @@
     "thumbnail_url": "https://images.code.org/71345917b57ae89670566bff83934dcc-pair.png",
     "name_suffix": "_pilot-2022",
     "encrypted_validation": "mDM/N/uReeeka+FtnXq5W8KpojfWbvBw2PuXbXttwO0IcE6VgwP4Fj0ZEvRB\nt59+Rbw2vbgTRXsz7c1fB7a8IvMuRn7tPvs+l+JSWWekbIG2VSng0Xpgxt3r\nVa+UxyHHViklGJB7TI1Ezo6a3OIEnIqtFO1+isZU8BD5VPhXio90xCE5T+p7\n3GRPTs/S8XOe8t+ZAIKuYPyO+Ue0EHBcjCglDDbElfu9oy/IZ/fef6R3Pz/a\nHPWVTQ8bTuEGNCPb6+tm2YM6Qkqs1jHAGHuzHndM5PQnbIHSR7gc+sH63c/4\noHdW5IBtRxS7Ixkfv9ksccHbj9gQUu5nfG5yhcrE3e0RU4CTQQ0BOpvruT1y\nQI3s1sO7ws3nXHVwN8NPE0A6n46GhyMNX5F2+jM6mMn/dYg5BtbL+V42+56t\nXFGjhGhI3kioUkgUOP0ExAtfkZ+grtxR8nP1nWYWj0n84I1AtWCUp74IYrv2\nfJK8g2WRs6DowFzBrMblKuwrqaE0TpEQuEkabJJD+7cPq4mqIEITB7CJISbW\nuW9uv7/9utQTx6/Kpe4YMW3Wra3IlYIWAttg7lugosgyHwcmfP8/gFO4X6JR\nFAtq/7mgCHJIay6hjesuYEKd2EXcDjOgkdkhNb9k75xqAZR0vm3GrUDoFKDS\ne0AFtwPs0HdNeMnPnMfI3Eo1eoG3+/5upU7miZc8WCLfYlYU/oW5/nMKXqKj\nBbfs3OJQcw3Vl/2qBaj8EmdcPnjcE1EuvFjAyxX2pkdhkt3KO4E4IIs+I31v\ng+WDWkcI3QsPO0eT/Od7ILISKECehjTZXDH2dXvEjH7ZnWn/jSrtVgHagRdD\n6v6LRGFg0d5toTsf11Ce8Ia5kUrkG/y63X/wzuVQPrvRLO1CvnfGGavIh+Kg\nvzKJ4smKLG4yXeDi1LpjKLxcGt7CyxL0ev7i9BxrQL5KnxWIRaqxEFyvyfZ5\nHgvIxrGIEEzLthTAFmZRdezDZ7XBz4o9SHnF4XZ+TwBkvEQcm5XhxB6tCvKo\n9uuXxh2xjF4jHF56rlcMKQoRsy2BoFUaBqqxvyKVwewaPe+vlYDk5ZO67Uni\nuYZNvzxfCGNAQ2T3jFjx+gOh7zBAcMwjaSXh0wg/Q0872a80+OQcAAg3sOm0\nBTkE5ev7s8xUWmxlemm6euvYCdh77k43zmeIszI9g7vu3cveU0I3QCN2Yu22\n7hPUHPHnGLSGEZ1THGt+62knL3DKysbsdTa9rfk27cW93JR+SeU90k7ISHE+\n72+cm8WEz5s/cVuQx88Fv5kjeItT16HvqF+1bzOEEL98aKIDZs4l/WkYnjuB\nYN87pg4qkOEfdHcsRRwiZ5EwSjf3/w8HrxLDdbGc0l1+IC8FI3ukmZcYuUY3\nLhqNM7e4/+33dAKQHE/dbHUsvWrGSB6L2YppSqWVEnpJmy85mjvh5WMTd9Dl\nNrv0x0cn2gDsQAF1HTufdCW9Y7AJMCdxRz3eOdw+j2wkxG5S0iJGALHFJH0Q\n1CT6YxR1DA1O+J1Ib6gsnsptibmU1czoLR5lb8dJ19je1JKMa/8GVQBxu75+\nl6ptAnFz96ACaLMUre8=\n",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-08-23T20:57:11.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:57:11.652+00:00\",\"changed\":[\"cloned from \\\"CSA U8L9-L2b_2022\\\"\"],\"cloned_from\":\"CSA U8L9-L2b_2022\"},{\"changed_at\":\"2022-10-25 16:34:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 16:34:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:45:43 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:46:40 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:47:18 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:49:16 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:55:18 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 18:55:55 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-21 02:35:25 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

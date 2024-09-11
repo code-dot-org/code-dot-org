@@ -287,6 +287,10 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
       },
     },
   },
+  ['math_number_property']: {
+    kind: 'block',
+    type: 'math_number_property',
+  },
   ['controls_if']: {
     kind: 'block',
     type: 'controls_if',

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-06T16:46:58.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "display_name": "The Console",
@@ -24,13 +28,10 @@
       }
     },
     "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHb8P3/b6ls7VSz8nxyw\nx3Dwb0kaHYW4NtDW3p0ojL60Kd8slxc3bFf60JI+NfngSe6L93Hfcu6P+875\nrZInump2\n",
-    "thumbnail_url": "https://images.code.org/9e33a8ac9f1be1278ce8724e3f937cd9-image-1639151486054.gif"
+    "thumbnail_url": "https://images.code.org/9e33a8ac9f1be1278ce8724e3f937cd9-image-1639151486054.gif",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-12-06T16:46:58.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2021-12-06 16:47:02 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-09 15:05:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-09 15:08:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-09 15:12:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-09 15:15:03 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 15:54:09 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 15:54:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

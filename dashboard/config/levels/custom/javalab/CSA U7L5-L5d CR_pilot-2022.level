@@ -15,7 +15,8 @@
     "display_name": "Center and Rotate Images",
     "bubble_choice_description": "Override the drawImage() method from the ScenePlus class in the MandalaScene class.",
     "thumbnail_url": "https://images.code.org/3f8c56fcb3289cd8eeace72588a19afd-U7L5-L4d.gif",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:44.080+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L5d CR_2022\\\"\"],\"cloned_from\":\"CSA U7L5-L5d CR_2022\"}]"

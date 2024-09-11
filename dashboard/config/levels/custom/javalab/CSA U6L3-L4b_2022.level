@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-14T19:18:53.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##In MyConsole.java:\r\n\r\n1. Declare and initialize an `ArrayList`(#e7e8ea) called `prices`(#e7e8ea) to store decimal values.\r\n\r\n2. Add the values `4.74`(#e7e8ea), `3.95`(#e7e8ea), `5.25`(#e7e8ea), and `2.87`(#e7e8ea) to the `prices`(#e7e8ea) list.\r\n\r\n3. Print the size of the `prices`(#e7e8ea) list.\r\n\r\n::: details [**Show Me How**]\r\nAn `ArrayList`(#e7e8ea) is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  ArrayList<DataType> listName = new ArrayList<DataType>();\r\n  ```\r\n\r\nValues are added to an `ArrayList`(#e7e8ea) using the following methods:\r\n\r\n```\r\nlistName(value);\r\n\r\nor\r\n\r\nlistName(index, value);\r\n```\r\n:::",
@@ -16,16 +20,10 @@
       }
     },
     "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI7EAbfuQCmDg7gcrxPC\nJHvMsx7l7BbVEjJAejtJY9SRRiRH57Qc1ustwH2iWElRBOjHQGO5oRefoeFp\ngn/p55Q59GT1+VBICNcWwORxy88opsCK0Ri+O1EO33ZDisPoMU47K/4HdUSU\nXEUBFrz1oU4r6J1jg68R0wwSXHuFWFjRpPw+YHs1LUCeFRzAJkWWKhQlrw9Z\nNoILytItTIEvwir2q30SRM2NavXmWbYqU4nqRldXlX2uq48mMmbQh5h+0dg+\nXNzggiO/Ui0UJvGjixQlL2Hlsk2yAfXtOP4PAzEJV8K5GdARsUxUk78nb+8s\ndIBvJFFyDC07JITforcjzvDO9i9bRn4/My3Aeq9+6XXQLNODjUL4WmGYeLtQ\n7fH3z/0Kwey5QuRgH/71WWR/6E70sGkp75+7aOt8eGh5fWXnpCI6IldLJEcC\noM24bG7EhmzZ82JtggolF0vqkZ+mRj7BFSDIkbmY0oiNFYLlnj1X5S9Rs/vp\nPZiiWe/KFJ4s8OIy3voBmvc/XwfMW1oH4Tjx7jGedZhaAQ+Z1JlpsQmcXVZ8\nRzuZ5TMIgiRE7cfs6/d2HVflD7n/2W44deFQgRtCYyMbOIh9+WPgjAALBU/k\nUdH0IVtcTuAKIDDXhqf2MOQ6WaBj0Rjw8cQL8ufhibsdw8pn2d1yOsNZKSkk\ngJW+Rw==\n",
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/420032874be5404cfebd6ef5663306ad-image-1651590684928.png"
+    "thumbnail_url": "https://images.code.org/420032874be5404cfebd6ef5663306ad-image-1651590684928.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-14T19:18:53.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:18:53.064+00:00\",\"changed\":[\"cloned from \\\"CSA U6L3-L4a_2022\\\"\"],\"cloned_from\":\"CSA U6L3-L4a_2022\"},{\"changed_at\":\"2022-04-14 19:18:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 23:22:39 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 23:27:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 23:30:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-03 15:11:33 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

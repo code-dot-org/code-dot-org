@@ -10,28 +10,9 @@ Feature: Checking the footer appearance
 
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
-    Then I see no difference for "copyright flyout"
-    And I press the first ".copyright-link" element
+    Then I see no difference for "copyright dialog"
+    And I press the first "#ui-close-dialog" element
     And I wait for 0.25 seconds
-
-    When I drag the visualization grippy by -400 pixels
-    Then I see no difference for "smaller small footer"
-    And I wait for 0.25 seconds
-
-    When I press the first ".copyright-link" element
-    And I wait for 0.25 seconds
-    Then I see no difference for "smaller copyright flyout"
-    And I press the first ".copyright-link" element
-    And I wait for 0.25 seconds
-
-    # Now, variations where we resize while the flyouts are open, to make
-    # sure they update their size/position properly during the resize
-
-    When I press the first ".copyright-link" element
-    And I wait for 0.25 seconds
-    Then I see no difference for "copyright resize before"
-    When I drag the visualization grippy by -400 pixels
-    Then I see no difference for "copyright resize after"
 
     Then I close my eyes
 
@@ -45,7 +26,7 @@ Feature: Checking the footer appearance
 
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright dialog"
 
     Then I close my eyes
 
@@ -67,7 +48,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright dialog"
     And I wait for 0.25 seconds
     And I close the small footer menu
 
@@ -79,7 +60,7 @@ Feature: Checking the footer appearance
 
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
-    Then I see no difference for "how it works copyright flyout"
+    Then I see no difference for "how it works copyright dialog"
 
     Then I close my eyes
 
@@ -100,7 +81,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright dialog"
     And I wait for 0.25 seconds
     And I close the small footer menu
 
@@ -118,7 +99,7 @@ Feature: Checking the footer appearance
 
     When I press the first ".copyright-link" element
     And I wait for 0.25 seconds
-    Then I see no difference for "how it works copyright flyout"
+    Then I see no difference for "how it works copyright dialog"
 
     Then I close my eyes
 
@@ -136,7 +117,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright dialog"
 
     Then I close my eyes
 
@@ -164,7 +145,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright dialog"
 
     Then I close my eyes
 
@@ -191,7 +172,7 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright dialog"
 
     Then I close my eyes
 
@@ -214,6 +195,6 @@ Feature: Checking the footer appearance
     Then I see no difference for "footer menu"
 
     When I press menu item "Copyright"
-    Then I see no difference for "copyright flyout"
+    Then I see no difference for "copyright dialog"
 
     Then I close my eyes

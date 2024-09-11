@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-04T22:24:15.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "display_name": "User's Choice",
@@ -40,12 +44,9 @@
       "soccer.jpeg": "f2f49d4c-825c-4119-8f2a-7e75e4409d97.jpeg",
       "abstract.jpeg": "b34dddc1-7bd2-45d3-b6e9-10fa8af6bc0d.jpeg"
     },
-    "thumbnail_url": "https://images.code.org/551a8f4ed67521a010bd8564ba6f7c51-image-1639769655090.jpeg"
+    "thumbnail_url": "https://images.code.org/551a8f4ed67521a010bd8564ba6f7c51-image-1639769655090.jpeg",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-12-04T22:24:15.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-04T22:24:15.422+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b\\\"\"],\"cloned_from\":\"CSA U7L1-L1b\"},{\"changed_at\":\"2021-12-04 22:24:22 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 00:44:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-14 01:05:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-15 23:53:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 00:28:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 01:12:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 19:39:17 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-18 00:59:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-18 00:59:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

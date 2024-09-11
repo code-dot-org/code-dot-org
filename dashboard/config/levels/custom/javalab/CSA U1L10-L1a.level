@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-07-08T16:21:03.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nIn `PainterPlus.java`, write the `turnAround()` method.\r\n\r\nIn `MyNeighborhood.java`, navigate `PainterPlus` through the maze and collect 25 units of paint from the paint buckets. Use `turnAround()` when you hit a dead end.",
@@ -1029,13 +1033,10 @@
     "thumbnail_url": "https://images.code.org/3a7eff759e05bf27e6dac3bd9d3315d1-image-1627577225630.gif",
     "reference_links": [
       "https://docs.google.com/document/d/e/2PACX-1vSbu1JcuqFt8sFJWEUsd2dMmvRhzkNMD30gPiMpFYNZJEPEOzflNVGWqEL36VjpDKVcYY2NDyVi4gZl/pub"
-    ]
+    ],
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-07-08T16:21:03.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-07-08 16:21:58 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 16:25:25 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 16:27:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 16:44:43 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 18:08:51 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 18:28:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 18:59:05 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 18:59:50 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 13:37:55 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 16:42:47 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 16:47:44 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-17 18:35:02 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>
