@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Exploring DataFrame Content\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n## Do This\r\n1. What happens if you change your print statement to `print(data.head())`?\r\n2. Run the program & discuss with your partner:\r\n   - What is the output?\r\n   - When and why might this be useful?\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Exploring Content\r\n\r\n::: details [**Step 1**]\r\n* What happens if you change the print statement to `print(data.head())`?\r\n* Discuss with your partner and give it a try!\r\n:::\r\n\r\n::: details [**Step 2**]\r\nDiscuss with your partner:\r\n- What was the output?\r\n- When and why might this be useful?\r\n:::\r\n\r\n::: details [**Step 3**]\r\nChange `data.head()` to print out the *last* few rows instead of the first few rows.\r\n:::\r\n\r\n::: details [**Step 4**]\r\nRun the program and discuss with your partner:\r\n* What is the output?\r\n:::\r\n\r\n\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -43,6 +43,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-30T13:09:30.613+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L3_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L3_2024-pilot\"},{\"changed_at\":\"2024-08-30 13:13:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-30T13:09:30.613+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L3_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L3_2024-pilot\"},{\"changed_at\":\"2024-08-30 13:13:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-10 21:35:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 21:40:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

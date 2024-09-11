@@ -5,6 +5,8 @@ import {
   PredictQuestionType,
 } from '@cdo/apps/lab2/levelEditors/types';
 
+import {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT} from '../../constants';
+
 import PredictResetButton from './PredictResetButton';
 
 import moduleStyles from './predict.module.scss';
@@ -49,7 +51,11 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           value={predictResponse}
           placeholder={predictSettings.placeholderText}
           onChange={e => setPredictResponse(e.target.value)}
-          style={{height: predictSettings.freeResponseHeight || 20}}
+          style={{
+            height:
+              predictSettings.freeResponseHeight ||
+              PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT,
+          }}
           className={moduleStyles.freeResponse}
           readOnly={predictAnswerLocked}
         />
