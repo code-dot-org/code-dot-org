@@ -3,7 +3,8 @@ updates:
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "sunday"
     groups:
       auth:
         patterns:
@@ -39,8 +40,8 @@ updates:
   - package-ecosystem: "npm"
     directory: "/apps"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
     groups:
       amplitude:
         patterns:
@@ -166,8 +167,8 @@ updates:
     - "/bin/i18n"
     - "/tools/scripts/brokenLinkChecker"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
   # Infrastructure NPM/Yarn Packages
   - package-ecosystem: "npm"
     directories: 
@@ -176,23 +177,23 @@ updates:
     - "/aws/offsite/aurora-snapshots-fargate"
     - "/aws/offsite/prune-aurora-backups/src"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
   # Teacher Tools NPM/Yarn Packages
   - package-ecosystem: "npm"
     directories: 
     - "/bin/generate-pdf"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
   # Docker Images
   - package-ecosystem: "docker"
     directories: 
     - "/aws/offsite/aurora-snapshots-fargate"
     - "/docker/dockerfiles"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
   # Github Actions
   - package-ecosystem: "github-actions"
     directories: 
@@ -200,10 +201,11 @@ updates:
     - "/.github/actions/**/"
     - "/.github/workflows"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
 
   - package-ecosystem: 'pip'
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
+      day: "sunday"
