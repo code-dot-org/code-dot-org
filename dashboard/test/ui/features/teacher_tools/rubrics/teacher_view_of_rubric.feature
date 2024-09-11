@@ -25,6 +25,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element ".student-table" is visible
   And I click selector ".student-table tr:nth(1)" to load a new page
   And I wait for the lab page to fully load
+  And I wait until element "#ui-floatingActionButton" is visible
   And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
   And I click selector ".introjs-skipbutton" once I see it
   And I wait for 2 seconds
@@ -66,6 +67,7 @@ Scenario: Teacher views rubric product tour
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
   And I click selector ".teacher-panel td:eq(1)" to load a new page
   And I wait for the lab page to fully load
+  And I wait until element "#ui-floatingActionButton" is visible
 
   # Teacher views product tour step 1
   And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
@@ -148,6 +150,7 @@ Scenario: Teacher views Rubric and Settings tabs
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
   And I click selector ".teacher-panel td:eq(1)" to load a new page
   And I wait for the lab page to fully load
+  And I wait until element "#ui-floatingActionButton" is visible
   And I click selector ".introjs-skipbutton" if it exists
 
   When I open my eyes to test "teaching assistant rubric"

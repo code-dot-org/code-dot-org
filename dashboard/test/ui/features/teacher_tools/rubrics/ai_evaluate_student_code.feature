@@ -37,6 +37,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the lab page to fully load
+    And I wait until element "#ui-floatingActionButton" is visible
     And I click selector ".introjs-skipbutton" once I see it
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
@@ -81,6 +82,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the lab page to fully load
+    And I wait until element "#ui-floatingActionButton" is visible
     And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" once I see it
     And I wait until element ".congrats" is gone
@@ -130,6 +132,7 @@ Feature: Evaluate student code against rubrics using AI
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the lab page to fully load
+    And I wait until element "#ui-floatingActionButton" is visible
     And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" once I see it
     And I wait until element ".congrats" is gone
