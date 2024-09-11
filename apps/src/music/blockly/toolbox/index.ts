@@ -63,12 +63,15 @@ export function getToolbox(
     }
 
     if (dynamicCategories.includes(category)) {
-      toolbox.contents.push({
-        kind: 'category',
-        name: categoryTypeToLocalizedName[category],
-        cssconfig: baseCategoryCssConfig,
-        custom: dynamicCategoryLabels[category],
-      });
+      // Dynamic categories are not allowed in flyout toolboxes
+      if (type !== 'flyout') {
+        toolbox.contents.push({
+          kind: 'category',
+          name: categoryTypeToLocalizedName[category],
+          cssconfig: baseCategoryCssConfig,
+          custom: dynamicCategoryLabels[category],
+        });
+      }
       continue;
     }
 

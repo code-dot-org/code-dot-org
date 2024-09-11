@@ -14,6 +14,7 @@ import {defaultMaps} from '@cdo/apps/music/blockly/toolbox/definitions';
 import {
   Category,
   CategoryBlocksMap,
+  ToolboxType,
 } from '@cdo/apps/music/blockly/toolbox/types';
 import {BlockMode} from '@cdo/apps/music/constants';
 import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
@@ -42,17 +43,20 @@ interface EditToolboxBlocksProps {
   blocksMap: CategoryBlocksMap;
   onChange: (blocksMap: CategoryBlocksMap) => void;
   blockMode: ValueOf<typeof BlockMode>;
+  toolboxType?: ToolboxType;
 }
 
 const EditToolboxBlocks: React.FC<EditToolboxBlocksProps> = ({
   blocksMap,
   onChange,
   blockMode,
+  toolboxType,
 }) => {
   const defaultBlocks = defaultMaps[blockMode];
-  const includedDynamicCategories = dynamicCategories.filter(
-    category => defaultBlocks[category]
-  );
+  const includedDynamicCategories =
+    toolboxType === 'flyout'
+      ? []
+      : dynamicCategories.filter(category => defaultBlocks[category]);
 
   const toggleBlock = useCallback(
     (category: Category, block: BlockTypes | string, checked: boolean) => {

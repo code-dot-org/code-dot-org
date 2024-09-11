@@ -129,6 +129,7 @@ const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
             blocksMap={toolbox?.blocks || defaultBlocks}
             onChange={onBlocksChange}
             blockMode={blockMode}
+            toolboxType={toolbox?.type}
           />
         </div>
         <div className={styles.verticalLine}>&nbsp;</div>
