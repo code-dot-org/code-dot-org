@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-02-26T00:32:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -22,16 +26,10 @@
     "name_suffix": "_2022",
     "display_name": "Recursion and 1D Arrays",
     "bubble_choice_description": "Trace a code segment using recursion with a 1D array to determine its output.",
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/029e45816bf30e010427f61c7712e6a9-steps.png"
+    "thumbnail_url": "https://images.code.org/029e45816bf30e010427f61c7712e6a9-steps.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-02-26T00:32:29.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-02-26T00:32:29.092+00:00\",\"changed\":[\"cloned from \\\"CSA U7L9-L2b\\\"\"],\"cloned_from\":\"CSA U7L9-L2b\"},{\"changed_at\":\"2022-05-11 14:47:33 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-12 22:36:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 18:05:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

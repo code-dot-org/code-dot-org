@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The `Ticket`(#e7e8ea) class represents a ticket for an event and has an instance variable for the `ticketNumber`(#e7e8ea) and a `toString()`(#e7e8ea) method that returns a `String`(#e7e8ea) containing the ticket number.\r\n\r\nThe `WalkupTicket`(#e7e8ea), `AdvanceTicket`(#e7e8ea), and `StudentAdvanceTicket`(#e7e8ea) classes are subclasses of the `Ticket`(#e7e8ea) class. These classes override the `getTicketPrice()`(#e7e8ea) method to set the price of the ticket based on the number of days in advance the ticket is purchased. The `StudentAdvanceTicket`(#e7e8ea) also overrides the `toString()`(#e7e8ea) method to include a reminder that students must show their student ID.\r\n\r\n##In Event.java:\r\n\r\n1. Write the `getTicketsInfo()`(#e7e8ea) method to traverse the `Ticket`(#e7e8ea) array return a `String`(#e7e8ea) containing each ticket's information and price.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Create an `Ticket`(#e7e8ea) array containing the `Ticket`(#e7e8ea) objects.\r\n\r\n3. Instantiate an `Event`(#e7e8ea) object with the `Ticket`(#e7e8ea) array then call the `getTicketsInfo()`(#e7e8ea) method and print the result.",
@@ -38,12 +42,9 @@
         "text": "/*\n * Represents an event\n */\npublic class Event {\n\n  private Ticket[] eventTickets;\n\n  /*\n   * Constructor to create an Event object\n   * with a specified array of event tickets\n   */\n  public Event(Ticket[] eventTickets) {\n    this.eventTickets = eventTickets;\n  }\n\n  /*\n   * Returns the array of event tickets\n   */\n  public Ticket[] getTickets() {\n    return eventTickets;\n  }\n\n  /*\n   * Returns a String containing each ticket's information and price\n   */\n  public String getTicketsInfo() {\n    String result = \"\";\n    \n    // TO DO #1: Traverse the Ticket array and concatenate the ticket\n    // information and the ticket price to result.\n\n\n    return result;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:29.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:29.784+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L4d_2022\\\"\"],\"cloned_from\":\"CSA U3L7-L4d_2022\"},{\"changed_at\":\"2022-09-08 20:39:34 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:41:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:42:31 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:53:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:54:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

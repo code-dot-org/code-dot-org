@@ -1042,7 +1042,8 @@
     "display_name": "The BeePainter",
     "bubble_choice_description": "The `Painter` is volunteering at an upcoming honey bee festival, and they need help painting a mural of a bee in The Neighborhood.",
     "thumbnail_url": "https://images.code.org/263d4af235850cbe5ff491ea6467bc01-U1L11-L3a.png",
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-01T20:49:32.308+00:00\",\"changed\":[\"cloned from \\\"CSA U1L11-L3a_2025\\\"\"],\"cloned_from\":\"CSA U1L11-L3a_2025\"}]"

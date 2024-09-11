@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-09-01T22:22:15.000Z",
   "level_num": "custom",
@@ -26,11 +25,9 @@
     "bubble_choice_description": "Use the Scanner class to get the user's name and greet them.",
     "thumbnail_url": "https://images.code.org/f557b99b05a741fb63663ef6c3bc7b92-image-1647298209546.gif",
     "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M2IMICWxtTJ+M6nMn9X\n/VC7SsgSKKMoFWba0BKLKZV/1N4TMNMTcpej/WqL/fwqR5eugsQzfe12LIXr\nqscyJ/WrwCz3FfFKP3dIy4yG6h/ABTJgHMHcGfpW8rSpZ7tvNVUCQQOfEWf/\nOaVRnfWc8zquFmHFOKTwV1qrkwDBGgVRaDnMZpA6sGYNGnCrYQzMxLIcTqt6\n/8NgB9khcgbViu5llhjptwQIUd0f9kQ2auHNNnancF8LSeq1rW+HVFiojEwk\njYqb+dpYm4GXfLRCbASk37pgH7eiy8GPXRMdKzHj33j/Q/05eRTwlL/eAyGb\neNfXicQUYf2kL6bx/mUfmnfwkOE+vDBaMFLghkFsWSJrgupog97SA77rEdJv\n82inlyr74EupjqClmTCs4MPGYTAKYaPyl93LYLa+Mg+yqmJSRgDguWDlQGno\niepIDMZ75XlYjOgKatTpDjKlXeZtt1KC0RSBosjb2eclVdLEeno8NmMSFLX1\nUKqmQgxYacc3xjKd4O7YBuUjks0/lEtI9Te+eVzk0dwd7huibSOwuYcPnQnt\n6FrSzHSC05gETHenq+97vuYbt01R2zr8jIKWCdxzgc+VefFUUopFBdusdjzF\nJHjiPhU1TiJHVTpOgJNY7AdAb28KdmFkucy0VelNHOQ8s0oeKbdNVbv6k+QE\nBu0tRr2IHSN7Ay88u5Fw5f6WK6k/8CjzZM2pCoT53F9dTKmLirpIps0oxD78\nZdY1qwzc/vxJ+3aC+WY+R9LdUsSOTfKGxu08PErDFmtdPdfwxcymoFLt1asn\nWSQ1gPxrKwRKmpTpdw9O4lTzcmg0Byc3lFEtqUVlV5BgLyLWNUzlPsJa9E3j\nxIYLOFHXnAaNuzBnf4iahadGLnOo7spfcb8chfm1Du1MgG7P81aMYs5EaCWL\n6o9AeGHiDOUIoyWDCgjqAi/dO9JsA3m9JTwyy5sg/M1nTCXabmEKnjONnXIi\noTJtHxgWilaG9S1DLG7CkdhzjI442Ja31mjaFdgdFjqPQGbTiGM5OkdZsUz4\nmDVepAJ78RQ5KMEG9cVeOGyWcTSv1RMoA+5TTbefJUlGd+P3IY0=\n",
-    "encrypted_examples": [
-
-    ],
-    "ai_tutor_available": "false"
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-09-01T22:22:15.233+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L2a_2022\\\"\"],\"cloned_from\":\"CSA U2L5-L2a_2022\"},{\"changed_at\":\"2024-09-01 22:22:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -15,7 +15,8 @@
     "display_name": "Text Messages",
     "bubble_choice_description": "Find the total number of text messages to be sent based on the length of each message.",
     "thumbnail_url": "https://images.code.org/930bccebdbdc575b6f514b6567773196-message.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:04.907+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L4d CR_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L4d CR_2022\"}]"

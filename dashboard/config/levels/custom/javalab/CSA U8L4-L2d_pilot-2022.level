@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:56:57.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A library keeps track of books in a list that is sorted in alphabetical order.\r\n\r\n##In Library.java:\r\n\r\n1. Write the method `findBook()`(#e7e8ea) to find a book title in `bookList`(#e7e8ea) using an iterative or recursive binary search. Return the author of the book.",
@@ -34,12 +38,9 @@
         "isVisible": true,
         "tabOrder": 3
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:56:57.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:56:57.371+00:00\",\"changed\":[\"cloned from \\\"CSA U8L4-L2d_2022\\\"\"],\"cloned_from\":\"CSA U8L4-L2d_2022\"},{\"changed_at\":\"2022-10-07 13:42:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 13:42:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 14:52:39 +0000\",\"changed\":[\"start_sources\",\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 14:53:30 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 14:57:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 14:58:24 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 15:18:59 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:57:11.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "An event manager is preparing tickets to sell and needs to make sure there are no missing ticket numbers. They have entered the ticket numbers into a file to check.\r\n\r\n##In TicketGenerator.java:\r\n\r\n1. Write the method `missingSmallest()`(#e7e8ea) to use the binary search algorithm to find and return the smallest missing number in `tickets`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `missingSmallest()`(#e7e8ea) method and print the result.\r\n\r\n::: details [**Show Me How**]\r\nThe binary search algorithm can be implemented using iteration or recursion.\r\n  \r\n**Iteration Method**\r\nwhile low is less than high\r\n  mid = (low + high) / 2\r\n  \r\n  if target equals list[mid]\r\n    low = mid + 1\r\n  else\r\n    high = mid - 1\r\n\r\n**Recursive Method**\r\nint binarySearch(list, target, low, high)\r\n  mid = (low + high) / 2\r\n  \r\n  if low is greater than high\r\n    return low\r\n  \r\n  if target is equal to mid\r\n    return binarySearch(list, mid + 1, high)\r\n  else\r\n    return binarySearch(list, low, mid - 1)\r\n:::",
@@ -35,15 +39,9 @@
     "thumbnail_url": "https://images.code.org/21d6ee59eeea20b84c201a273fa67a1d-ticket.png",
     "name_suffix": "_pilot-2022",
     "encrypted_validation": "faunDh3KELWdwlIW7Zxbmkn27PkaBVnt2BkUZwGwqZfAEbd5PFk3udovtwrb\n2O6VD8CtH9ro/MO5WVrbVyEa/xw7etL9lBDRBRMy7p2V33cjKe8f10uui8XF\nxyg60+z03UEtWwLeAw6qZdhVnM32sMQDnLkGDXCWKu6Q5ztkccJdzLzwF8f5\n0NLziN5fnD6Hwq7A4y85a9qo61U3E6d67c+YvH7Up6g/8dASca8u8Adqk9a5\n1wHPr1rD1YzHgYcWmjWPiH0Al0+xx0zu3YfGWx2qZL4w6m8sIh4c5+JnbrdT\nxHpTz1kULwn6/UYVe7Brnww8t/0wJY87evEGJh00DxykWMofmhkzXQKuRevt\n1/380thrwKX1dOXNfaI0QCQywzXxru2LPAArLmb8cCpAYLG8kfzwMEh4kxAV\nry1lUX5RWYbAm37gBBQ8idzGJL6FZ+TGpFsvWoOQFbhgPeWmcnZ6a4RmMMsk\nDQtqFKLIzjWzOk4joNi+lJHZjnbXiiK1p0EnX/KfrrrkrY0g565HVvm9sj6s\nkAaSX78zu7Dfsd+Wf9EETlxfiLZWzTNFWlHYs5RAM4Ap6HgxEOYg2tRzqHre\nsxjBgnql1hofWt2n8Jys3OxvcFakloKc42fFJHG98ZLtMlC1hkLPYbLKBuvq\nQ8rZePlQpyXmMCZxds69DoJ1XYGTaE7ikpbmXO6nnhHcRyNJ8Iy6EFBwVZUc\n3Ghl8uj1pDh/6Jj8QTZJ6FZUtGTMj5ft7YSyOw6cZ+AFPa72+OJwxVaFT7y+\n4m/C+vDpFhhhg59xng94DIwhOlSAYaqJMzs7I5Oo13z+IeEuLw7EyPZFi3BE\neor8hP1cNWDnbiEFF187+Lvn099QpaLzZkozUSRgoDyIZS7RK5TF5N+hJKMQ\nG66aoNBRUmvm4ZgFIUj3msdmmjkYro5km7r7msYTdWIt3EG29qiFy8A7sFrs\nGMVz6r1uIoUK0MfJMs+cOXTTXM5tffY51BfsztW2Zed8HXUOAZW8u96K9do1\nCVyQlz8QpsOVMZp6FvSPvPpYQLxQkTyLzW0IuKhx3BwJIidoms0mt6ENLJ1V\nnIIIeefJm+Wp9hdDE8J+xdtJ1/F+zYfDIMnXnd6Xnpv6wRzix0/X/NdZYTym\nTyayfVu4wHMsI8Pkcf9Rejf8AW6D7SM0b4B0h1uHuRIXyfUePVGG8TSsMrgE\nCAQXFM+9+kim1YTYGi2vKdKnUabaWpkXvs72/yzBjb+YvcU0NKZqGNuFh9Ji\npZ4Yi9EEEi4CTVWSO9/1aIm8wOruZgt9tvkCm3CgT2W1i1C1n97WYSiRgSDI\nnFF9cF42k/GVxDmNEr6eH0I68y72a6hamzextoQlIf68KhOtRqbo5WzYSvBt\nfjvk+3MRr+5znDQSN06Nyg7V1lkrW/2gRkdJZh/QfPrHFXKkZoBlPJjXGx2r\nOL+TrI7y8Tgiyff/sVeBo3bDdpp1ER5EpYiadsnoi5ziMDlA6xke9VYDj9Q6\niLKNa0dnebBXAs+/YEvDwyRexg5XZAxoTOSGIRlRkEYTG1IxUyANdhT6Idig\nPTiARl+udhJT6qG0BYqnlbfDdb5GadYzJWDK2iJymkVeeQO1X+jJxu7XXEdI\n79AEYLWO5rvgWjE8xnuxTghsgKzNOBhfHtw3W/6gL83M4VxqXxVY/DtzeVqC\nLORheSSf02INtbjEzfCxJ99l8mU=\n",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-08-23T20:57:11.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:57:11.782+00:00\",\"changed\":[\"cloned from \\\"CSA U8L9-L2c_2022\\\"\"],\"cloned_from\":\"CSA U8L9-L2c_2022\"},{\"changed_at\":\"2022-10-25 16:35:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 19:10:24 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 19:11:08 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 19:11:27 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 19:12:28 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 19:12:40 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-04-21 02:37:42 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

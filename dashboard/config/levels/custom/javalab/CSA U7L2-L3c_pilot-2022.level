@@ -32,7 +32,8 @@
     "display_name": "Scrolling Message",
     "bubble_choice_description": "Create a scrolling message effect using The Theater. Write a method to animate a message across a scene.",
     "thumbnail_url": "https://images.code.org/fbaec72f0159eaf42a3580f7260023f7-U7L2-L3c.gif",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:33.591+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L3c_2022\\\"\"],\"cloned_from\":\"CSA U7L2-L3c_2022\"}]"

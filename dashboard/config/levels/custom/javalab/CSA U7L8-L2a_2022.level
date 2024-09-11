@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-18T12:47:14.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##In ListProcessor.java:\r\n\r\n1. Write the method `recursiveReverse()`(#e7e8ea) by translating the `iterativeReverse()`(#e7e8ea) method to recursion.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `recursiveReverse()`(#e7e8ea) method and print the new array using the `printList()`(#e7e8ea) method in the `ListProcessor`(#e7e8ea) class.",
@@ -20,16 +24,10 @@
     "display_name": "Recursive Reverse",
     "bubble_choice_description": "Translate an iterative method to a recursive method to reverse an array.",
     "encrypted_exemplar_sources": "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\nQBmoBA==\n",
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/128e12ff281a2769bfcec90eb466c99d-exchange.png"
+    "thumbnail_url": "https://images.code.org/128e12ff281a2769bfcec90eb466c99d-exchange.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-18T12:47:14.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-18T12:47:14.500+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L5d CR_2022\\\"\"],\"cloned_from\":\"CSA U7L5-L5d CR_2022\"},{\"changed_at\":\"2022-04-18 12:47:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:49:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:50:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-12 23:18:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-12 23:20:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-12 23:23:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 17:57:06 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
