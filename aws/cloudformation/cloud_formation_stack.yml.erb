@@ -195,6 +195,10 @@ Resources:
           - Effect: Allow
             Action: 'sagemaker:InvokeEndpoint'
             Resource: !Sub "arn:aws:sagemaker:${AWS::Region}:${AWS::AccountId}:endpoint/gen-ai-*"
+          # Comprehend Detect Toxicity access
+          - Effect: Allow
+            Action: 'comprehend:DetectToxicContent'
+            Resource: '*'
 
   # ---------------------------------------------
   # Frontend Servers
