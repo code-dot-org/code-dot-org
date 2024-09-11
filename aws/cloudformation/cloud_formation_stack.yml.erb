@@ -195,6 +195,10 @@ Resources:
           - Effect: Allow
             Action: 'sagemaker:InvokeEndpoint'
             Resource: !Sub "arn:aws:sagemaker:${AWS::Region}:${AWS::AccountId}:endpoint/gen-ai-*"
+          # Bedrock Retrieve and Generate PermissionsBoundary
+          - Effect: Allow
+            Action: 'bedrock:RetrieveAndGenerate'
+            Resource: '*'
 
   # ---------------------------------------------
   # Frontend Servers
