@@ -389,8 +389,8 @@ export default function CourseOfferingEditor(props) {
         AI Teaching Assistant Available
         <HelpTip>
           <p>
-            Select this checkbox to show the TA bot icon in the curriculum
-            catalog.
+            Select this checkbox to show the TA bot icon in the assignment
+            experience.
           </p>
         </HelpTip>
         <input
