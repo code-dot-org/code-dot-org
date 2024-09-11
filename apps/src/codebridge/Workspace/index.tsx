@@ -51,26 +51,22 @@ const Workspace = () => {
     >
       <div className={moduleStyles.workspaceContainer}>
         <FileTabs />
-        {isStartMode && (
-          <div
-            id="startSourcesWarningBanner"
-            className={moduleStyles.warningBanner}
-          >
-            {projectTemplateLevel
-              ? 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.'
-              : 'You are editing start sources.'}
-          </div>
-        )}
         <div
           className={moduleStyles.workspaceWorkarea}
           style={{
             gridTemplateColumns: config.showFileBrowser ? '200px auto' : '100%',
           }}
         >
-          {projectTemplateLevel
-            ? WARNING_BANNER_MESSAGES.TEMPLATE
-            : WARNING_BANNER_MESSAGES.STANDARD}
-
+          {isStartMode && (
+            <div
+              id="startSourcesWarningBanner"
+              className={moduleStyles.warningBanner}
+            >
+              {projectTemplateLevel
+                ? WARNING_BANNER_MESSAGES.TEMPLATE
+                : WARNING_BANNER_MESSAGES.STANDARD}
+            </div>
+          )}
           {config.showFileBrowser && <FileBrowser />}
           <Editor
             langMapping={config.languageMapping}
