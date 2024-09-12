@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Navigating this Module 
 
-#### This professional learning module includes three additional lessons to enhance your understanding and teaching about Generative AI. 
+#### This professional learning module includes three additional lessons to enhance your understanding and teaching of the Exploring Generative AI course. 
 
 ####For the next steps, choose the path that fits how you will teach this unit.
 
@@ -13,12 +13,14 @@ markdown <<MARKDOWN
 
 #### Continue to **Lesson 2: Foundations of Generative AI**
 
-#### This lesson covers basic concepts on Generative AI. If you class has covered our How AI Works lessons and has a good grasp of what generative AI is, you may opt to skip this lesson with your class.
+#### This lesson covers basic concepts on Generative AI introduced in the first unit of the course. If you class has covered our How AI Works lessons and has a good grasp of what generative AI is, you may opt to skip this unit with your class.
 
 
 ## **OPTION TWO:** 
 
 #### Skip to **Lesson 3: Customizing Large Language Models**   
+
+#### This lesson covers the second unit in the Exploring Generative AI course and focuses on practicing skills for the hands-on activities that involve exploring, customizing, and creating AI bots.
 
 #### Move directly to this lesson if you are comfortable with the foundational concepts.
 
@@ -35,9 +37,9 @@ markdown <<MARKDOWN
 
 ## Choose your path
 
-#### Click 'Continue' on the bottom right to go to **Lesson 2.**
+- #### Click **'Continue'** on the bottom right to go to **Lesson 2.**
 
-#### Otherwise, click the 'Return to Menu' button to select the level you want complete next.
+- #### Otherwise, click the **'Return to Menu'** button to skip to **Lesson 3.**
 
 <a class="btn btn-large btn-primary" href="https://studio.code.org/s/self-paced-gen-ai-2024" rel="noopener noreferrer" style="float:left;">Return to Menu</a>
 

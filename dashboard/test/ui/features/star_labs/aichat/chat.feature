@@ -1,4 +1,8 @@
 @no_mobile
+@no_circle
+# As of 9/4/24, cannot access AWS SageMaker or Comprehend in Drone.
+# More discussion in this Slack thread: https://codedotorg.slack.com/archives/C03CK49G9/p1725475362107969
+
 Feature: AI Chat
 
   "AI Chat" is our lab that introduces students to generative AI
@@ -11,9 +15,6 @@ Feature: AI Chat
     And I wait until element "#ui-close-dialog" is not visible
     And I dismiss the teacher panel
 
-  # As of 9/4/24, cannot access SageMaker in Drone.
-  # More discussion in this Slack thread: https://codedotorg.slack.com/archives/C03CK49G9/p1725475362107969
-  @no_circle
   Scenario: Making chat request gets response
     When I press keys "Hello" for element "#uitest-chat-textarea"
     And I wait until element "#uitest-chat-submit" is enabled
@@ -22,7 +23,7 @@ Feature: AI Chat
     Then element "[aria-label='AI bot']" has css property "background-color" equal to "rgb(224, 248, 249)"
 
   Scenario: Editing system prompt produces success notification and saves
-    When I press keys "You are a silly chatbot" for element "#system-prompt"
+    When I press keys "You are a safe chatbot" for element "#system-prompt"
     And I wait until element "#uitest-update-customizations" is enabled
     And I click selector "#uitest-update-customizations"
     Then I wait until element ".uitest-aichat-chat-alert" contains text "System prompt has been updated"
@@ -31,10 +32,8 @@ Feature: AI Chat
     And I click selector "#ui-close-dialog" once I see it
     And I wait until element "#ui-close-dialog" is not visible
     And I dismiss the teacher panel
-    Then element "#system-prompt" has text "You are a silly chatbot"
+    Then element "#system-prompt" has text "You are a safe chatbot"
 
-  # Cannot access AWS Comprehend in Drone. Refer to comment above.
-  @no_circle
   Scenario: Publishing model enables published view and saves
     When I click selector "#modelCustomizationTabs-tab-modelCardInfo"
     And I wait until element "#uitest-publish-notes-tab-content" is visible

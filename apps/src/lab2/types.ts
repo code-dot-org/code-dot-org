@@ -60,12 +60,15 @@ export interface ProjectSources {
 // We will eventually make this a union type to include other source types.
 export type Source = BlocklySource | MultiFileSource;
 
-export interface SourceUpdateOptions {
+export interface SaveSourceOptions {
+  projectType?: string;
+}
+
+export interface UpdateSourceOptions extends SaveSourceOptions {
   currentVersion: string;
   replace: boolean;
   firstSaveTimestamp: string;
   tabId: string | null;
-  projectType?: ProjectType;
 }
 
 // -- BLOCKLY -- //
