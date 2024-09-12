@@ -36,8 +36,26 @@ module AichatComprehendHelper
   # Returns a collection of text segment lists, each with a list of individual text segments to check for toxicity.
   # Comprehend limits the amount of bytes per segment, and the amount of overall bytes per list.
   def self.get_text_segment_lists(text)
-    text_segment_lists = [[""]]
+    words = []
+    # Split the text by words. If a single word exceeds our segment size limit, split up the word.
     text.split.each do |word|
+      if word.bytesize >= MAX_SEGMENT_SIZE_BYTES
+        word_segments = [""]
+        word.each_char do |char|
+          if word_segments.last.bytesize + char.bytesize < MAX_SEGMENT_SIZE_BYTES
+            word_segments.last << char
+          else
+            word_segments << char
+          end
+        end
+        words.concat(word_segments)
+      else
+        words << word
+      end
+    end
+
+    text_segment_lists = [[""]]
+    words.each do |word|
       new_word_size = " #{word}".bytesize
       current_list = text_segment_lists.last
       current_segment = current_list.last
