@@ -3,8 +3,7 @@ import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Link from '@cdo/apps/componentLibrary/link';
-import {LinkBaseProps} from '@cdo/apps/componentLibrary/link/Link';
+import Link, {LinkBaseProps} from '@cdo/apps/componentLibrary/link';
 
 import moduleStyles from './breadcrumbs.module.scss';
 
