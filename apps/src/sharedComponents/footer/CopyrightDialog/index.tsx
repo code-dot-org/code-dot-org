@@ -7,7 +7,7 @@ import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import styles from '@cdo/apps/sharedComponents/footer/copyright-dialog.module.scss';
+import './style.scss';
 
 export interface CopyrightDialogProps {
   isOpen: boolean;
@@ -20,7 +20,7 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
 }) => {
   const getDialogBody = () => {
     return (
-      <div id="copyright-body" className={styles.copyrightBody}>
+      <div id="copyrightBody">
         <SafeMarkdown
           markdown={i18n.copyright_thanks({
             donors_link: pegasus('about/donors'),
@@ -43,12 +43,12 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
         <BodyThreeText>{i18n.copyright_builtOnGithub()}</BodyThreeText>
         <Link
           href="https://aws.amazon.com/what-is-cloud-computing"
-          className={styles.awsLogoContainer}
+          className="awsLogoContainer"
         >
           <img
             src="/shared/images/Powered-By_logo-horiz_RGB.png"
             alt="Powered by AWS Cloud Computing"
-            className={styles.awsLogo}
+            className="awsLogo"
           />
         </Link>
         <SafeMarkdown
@@ -63,11 +63,11 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
 
   return isOpen ? (
     <AccessibleDialog
-      className={styles.copyright}
+      className="copyrightDialog"
       onClose={closeModal}
       closeOnClickBackdrop={true}
     >
-      <div id="copyright-scroll-area">
+      <div id="copyright-content">
         <div id="copyright-header">
           <Heading3>{i18n.copyright()}</Heading3>
         </div>
