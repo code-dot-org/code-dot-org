@@ -181,7 +181,8 @@ class ScriptLevelsController < ApplicationController
     @body_classes = @level.properties['background']
 
     @rubric = @script_level.lesson.rubric
-    if @rubric
+    ai_rubrics_enabled_for_user = @view_as_user&.verified_teacher? || @view_as_user&.teachers.any?(&:verified_teacher?)
+    if @rubric && ai_rubrics_enabled_for_user
       @rubric_data = {rubric: @rubric.summarize}
       if @script_level.lesson.rubric && view_as_other
         viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
