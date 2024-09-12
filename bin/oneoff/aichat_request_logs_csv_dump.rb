@@ -3,7 +3,7 @@
 require 'csv'
 require 'optparse'
 require_relative '../../dashboard/config/environment'
-require_relative '../../dashboard/shared_constants'  # Make sure to include shared_constants.rb
+require_relative '../../lib/cdo/shared_constants'  # Make sure to include shared_constants.rb
 
 # Define a helper function to map the execution_status codes to human-readable text
 def human_readable_execution_status(status_code)
