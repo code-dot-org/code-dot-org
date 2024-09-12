@@ -256,6 +256,7 @@
     "loadable-components": "2.2.3",
     "loader-utils": "^2.0.4",
     "lodash": "^4.17.21",
+    "markdown-to-txt": "^2.0.1",
     "md5": "^2.3.0",
     "memoize-one": "^5.1.1",
     "merge": "^2.1.1",
