@@ -47,7 +47,7 @@ jobs:
     if: needs.check-reviewers.outputs.has_infrastructure_reviewer == 'true' || github.actor == 'pablo-code-org'
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: code-dot-org
           
