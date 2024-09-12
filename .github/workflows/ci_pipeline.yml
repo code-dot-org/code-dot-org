@@ -66,7 +66,7 @@ jobs:
           docker run --user circleci code-dot-org-testing-docker-image /bin/bash -c "printenv"
 
       - name: Update Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
