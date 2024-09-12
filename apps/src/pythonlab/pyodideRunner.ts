@@ -2,10 +2,9 @@ import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-
-import ProgressManager from '../lab2/progress/ProgressManager';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {

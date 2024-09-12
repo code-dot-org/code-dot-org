@@ -17,6 +17,7 @@ import {
   previewStartSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
@@ -82,11 +83,29 @@ const VersionHistoryDropdown: React.FunctionComponent<
     });
   }, [locale]);
 
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
     if (selectedVersion === '' && versionList.length > 0) {
       setSelectedVersion(latestVersion);
     }
   }, [versionList, selectedVersion, latestVersion]);
+
+  useEffect(() => {
+    const resetVersionState = () => {
+      dispatch(setViewingOldVersion(false));
+      dispatch(setRestoredOldVersion(false));
+    };
+    Lab2Registry.getInstance()
+      .getLifecycleNotifier()
+      .addListener(LifecycleEvent.LevelLoadStarted, resetVersionState);
+
+    return () => {
+      Lab2Registry.getInstance()
+        .getLifecycleNotifier()
+        .removeListener(LifecycleEvent.LevelLoadStarted, resetVersionState);
+    };
+  }, [dispatch]);
 
   useEffect(() => {
     if (isOpen && !previousIsOpen.current && selectedVersion !== '') {
@@ -110,8 +129,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
     }
     previousIsOpen.current = isOpen;
   }, [isOpen, selectedVersion, latestVersion, viewingOldVersion]);
-
-  const dispatch = useAppDispatch();
 
   const successfulRestoreCleanUp = useCallback(
     (sources: ProjectSources) => {

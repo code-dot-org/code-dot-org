@@ -7,13 +7,10 @@ import {
 } from '@codebridge/redux/consoleRedux';
 
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {setLoadingCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
-
-import Lab2Registry from '../lab2/Lab2Registry';
-import {setLoadingCodeEnvironment} from '../lab2/redux/systemRedux';
-import {MultiFileSource} from '../lab2/types';
-import {LifecycleEvent} from '../lab2/utils/LifecycleNotifier';
 
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
@@ -112,13 +109,5 @@ const restartPyodideIfProgramIsRunning = () => {
     getStore().dispatch(appendSystemMessage('Program stopped.'));
   }
 };
-
-// If we switch levels, we should stop any in-progress programs.
-Lab2Registry.getInstance()
-  .getLifecycleNotifier()
-  .addListener(
-    LifecycleEvent.LevelLoadStarted,
-    restartPyodideIfProgramIsRunning
-  );
 
 export {asyncRun, restartPyodideIfProgramIsRunning};

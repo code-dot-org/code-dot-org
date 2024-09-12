@@ -36,6 +36,12 @@ const Console: React.FunctionComponent = () => {
     Lab2Registry.getInstance()
       .getLifecycleNotifier()
       .addListener(LifecycleEvent.LevelLoadCompleted, clearOutput);
+
+    return () => {
+      Lab2Registry.getInstance()
+        .getLifecycleNotifier()
+        .removeListener(LifecycleEvent.LevelLoadCompleted, clearOutput);
+    };
   }, [clearOutput]);
 
   useEffect(() => {
