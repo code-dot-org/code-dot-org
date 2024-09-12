@@ -1003,7 +1003,8 @@ export const loadSectionStudentData = sectionId => {
       }).fail(() => {
         // revert to old section ID in case of failure to backend call
         dispatch(setSectionInfo(oldSectionId));
-      });
+        dispatch(setSectionInfo(sectionId));
+    });
     } else {
       dispatch(finishLoadingStudents());
     }

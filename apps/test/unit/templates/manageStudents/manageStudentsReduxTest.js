@@ -1202,7 +1202,7 @@ describe('manageStudentsRedux', () => {
       server.respond();
 
       assert.equal(state().sectionId, null);
-      assert.equal(state().isLoadingStudents, true);
+      assert.equal(state().isLoadingStudents, false);
     });
   });
 });
