@@ -10,8 +10,10 @@ import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 
+import Lab2Registry from '../lab2/Lab2Registry';
 import {setLoadingCodeEnvironment} from '../lab2/redux/systemRedux';
 import {MultiFileSource} from '../lab2/types';
+import {LifecycleEvent} from '../lab2/utils/LifecycleNotifier';
 
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
@@ -101,10 +103,22 @@ const asyncRun = (() => {
   };
 })();
 
-const stopAndRestartPyodideWorker = () => {
-  pyodideWorker.terminate();
-  pyodideWorker = setUpPyodideWorker();
-  getStore().dispatch(appendSystemMessage('Program stopped.'));
+const restartPyodideIfProgramIsRunning = () => {
+  // Only restart if there are pending callbacks, as that means the worker is currently
+  // running a program.
+  if (Object.keys(callbacks).length > 0) {
+    pyodideWorker.terminate();
+    pyodideWorker = setUpPyodideWorker();
+    getStore().dispatch(appendSystemMessage('Program stopped.'));
+  }
 };
 
-export {asyncRun, stopAndRestartPyodideWorker};
+// If we switch levels, we should stop any in-progress programs.
+Lab2Registry.getInstance()
+  .getLifecycleNotifier()
+  .addListener(
+    LifecycleEvent.LevelLoadStarted,
+    restartPyodideIfProgramIsRunning
+  );
+
+export {asyncRun, restartPyodideIfProgramIsRunning};

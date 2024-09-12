@@ -8,7 +8,10 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import ProgressManager from '../lab2/progress/ProgressManager';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
-import {asyncRun, stopAndRestartPyodideWorker} from './pyodideWorkerManager';
+import {
+  asyncRun,
+  restartPyodideIfProgramIsRunning,
+} from './pyodideWorkerManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
 export async function handleRunClick(
@@ -47,8 +50,8 @@ export async function runPythonCode(mainFile: string, source: MultiFileSource) {
 }
 
 export function stopPythonCode() {
-  // This will terminate the worker and create a new one.
-  stopAndRestartPyodideWorker();
+  // This will terminate the worker and create a new one if there is a running program.
+  restartPyodideIfProgramIsRunning();
 }
 
 export async function runAllTests(

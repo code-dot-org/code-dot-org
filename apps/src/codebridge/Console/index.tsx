@@ -1,10 +1,12 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
 import SwapLayoutButton from '@codebridge/SwapLayoutButton';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -16,8 +18,6 @@ import moduleStyles from './console.module.scss';
 const Console: React.FunctionComponent = () => {
   const codeOutput = useAppSelector(state => state.codebridgeConsole.output);
   const dispatch = useDispatch();
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
-  const previousLevelId = useRef(levelId);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const scrollAnchorRef = useRef<HTMLDivElement>(null);
 
@@ -27,24 +27,22 @@ const Console: React.FunctionComponent = () => {
   // TODO: Update this with other apps that use the console as needed.
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
 
+  const clearOutput = useCallback(() => {
+    dispatch(resetOutput());
+    setGraphModalOpen(false);
+  }, [dispatch]);
+
   useEffect(() => {
-    // If the level changes, clear the console.
-    if (previousLevelId.current !== levelId) {
-      dispatch(resetOutput());
-      previousLevelId.current = levelId;
-    }
-  }, [dispatch, levelId]);
+    Lab2Registry.getInstance()
+      .getLifecycleNotifier()
+      .addListener(LifecycleEvent.LevelLoadCompleted, clearOutput);
+  }, [clearOutput]);
 
   useEffect(() => {
     scrollAnchorRef.current?.scrollIntoView({
       behavior: 'smooth',
     });
   }, [codeOutput]);
-
-  const clearOutput = () => {
-    dispatch(resetOutput());
-    setGraphModalOpen(false);
-  };
 
   const popOutGraph = (index: number) => {
     setActiveGraphIndex(index);
