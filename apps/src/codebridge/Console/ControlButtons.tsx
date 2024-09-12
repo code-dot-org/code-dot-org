@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {setHasRun, setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -21,8 +21,6 @@ import moduleStyles from './console.module.scss';
 const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {onRun, onStop} = useCodebridgeContext();
-
-  const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
 
   const source = useAppSelector(
     state => state.lab2Project.projectSource?.source
@@ -43,18 +41,12 @@ const ControlButtons: React.FunctionComponent = () => {
   const awaitingPredictSubmit =
     !isStartMode && isPredictLevel && !hasPredictResponse;
 
-  useEffect(() => {
-    const resetStatus = () => {
-      dispatch(setHasRun(false));
-      dispatch(setIsRunning(false));
-    };
+  const resetStatus = useCallback(() => {
+    dispatch(setHasRun(false));
+    dispatch(setIsRunning(false));
+  }, [dispatch]);
 
-    // Reset run status when the level changes.
-    lifecycleNotifier.addListener(
-      LifecycleEvent.LevelLoadCompleted,
-      resetStatus
-    );
-  }, [lifecycleNotifier, dispatch]);
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
