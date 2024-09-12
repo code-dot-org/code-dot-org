@@ -45,13 +45,13 @@
               %p.tag.day-of
                 =hoc_s("hoc_how_to.label.before_hoc")
               %a.link-button{href: resolve_url("/events")}
-                =hoc_s(:call_to_action_register_event)
+                =hoc_s("hoc_how_to.button.register")
 
             -# Step 2 additional content
             - if index === 1
-              %img{src: "/images/activites_2023.jpg", alt: ""}
+              %img{src: "/images/activities_2024.jpg", alt: ""}
               %a.link-button{href: resolve_url("/learn")}
-                =hoc_s(:call_to_action_select_coding_activity)
+                =hoc_s("hoc_how_to.button.select_activity")
 
             -# Step 3 additional content
             - if index === 2
@@ -93,8 +93,8 @@
 
             -# Step 7 additional content
             - if index === 6
-              %a.link-button{href: "https://code.org/certificates"}
-                =hoc_s(:call_to_action_print_certificates)
+              %a.link-button.has-external-link{href: "https://code.org/certificates", target: "_blank", rel: "noopener noreferrer"}
+                =hoc_s("hoc_how_to.button.print_certificates")
 
             -# Step 8 additional content
             - if index === 7
@@ -102,5 +102,5 @@
                 =hoc_s("hoc_how_to.label.after_hoc")
               %p
                 =hoc_s("hoc_how_to.teachers.steps.beyond.body_02")
-              %a.link-button{href: resolve_url("/beyond")}
-                =hoc_s(:call_to_action_go_beyond_hoc)
+              %a.link-button.has-external-link{href: "https://code.org", target: "_blank", rel: "noopener noreferrer"}
+                =hoc_s("hoc_how_to.button.continue_learning")
