@@ -491,6 +491,26 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert_equal lti_section.followers.last, user_to_remove
   end
 
+  test 'should unarchive synced sections' do
+    auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
+    user = create :teacher
+    create :lti_authentication_option, user: user, authentication_id: auth_id
+
+    section = create :section, user: user, hidden: true
+
+    lti_course = create :lti_course, lti_integration: @lti_integration
+    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    nrps_section = parsed_response[@lms_section_ids.first.to_s]
+
+    # Sync section
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
+
+    # Should no longer be hidden
+    assert_equal lti_section.section.hidden, false
+  end
+
   test 'should convert co-teacher to student in the section if LTI role changes' do
     auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
     user = create :teacher

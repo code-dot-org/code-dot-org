@@ -16,3 +16,11 @@
   width: 100%;
   color: $black;
 }
+
+.workspaceAndConsole {
+  height: 100%;
+  grid-area: workspace-and-console;
+  background-color: $darkest_gray;
+  color: $white;
+  overflow: hidden;
+}

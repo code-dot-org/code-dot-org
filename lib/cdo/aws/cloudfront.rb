@@ -227,7 +227,8 @@ module AWS
           CloudFrontDefaultCertificate: true,
           MinimumProtocolVersion: 'TLSv1.2_2021'
         },
-        HttpVersion: 'http2'
+        HttpVersion: 'http2',
+        WebACLId: {'Fn::Sub': 'arn:aws:wafv2:${AWS::Region}:${AWS::AccountId}:global/webacl/code-dot-org/a79a67de-dabf-4555-a8dc-98c3a20b562f'}
       }.to_json
     end
 

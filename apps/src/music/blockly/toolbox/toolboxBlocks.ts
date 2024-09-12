@@ -26,6 +26,34 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
       },
     },
   },
+  [BlockTypes.PLAY_PATTERN_AT_MEASURE]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_PATTERN_AT_MEASURE,
+    inputs: {
+      measure: {
+        shadow: {
+          type: 'math_number',
+          fields: {
+            NUM: 1,
+          },
+        },
+      },
+    },
+  },
+  [BlockTypes.PLAY_CHORD_AT_MEASURE]: {
+    kind: 'block',
+    type: BlockTypes.PLAY_CHORD_AT_MEASURE,
+    inputs: {
+      measure: {
+        shadow: {
+          type: 'math_number',
+          fields: {
+            NUM: 1,
+          },
+        },
+      },
+    },
+  },
   [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION]: {
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION,
@@ -286,6 +314,10 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfo} = {
         },
       },
     },
+  },
+  ['math_number_property']: {
+    kind: 'block',
+    type: 'math_number_property',
   },
   ['controls_if']: {
     kind: 'block',
