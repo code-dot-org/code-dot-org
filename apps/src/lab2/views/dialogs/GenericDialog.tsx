@@ -1,5 +1,7 @@
 import React from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import commonI18n from '@cdo/locale';
 
@@ -91,49 +93,50 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
       <div className={moduleStyles.buttonContainer}>
         <div className={moduleStyles.outerButtonContainer}>
           {buttons?.cancel ? (
-            <button
-              className={moduleStyles.cancel}
-              type="button"
+            <Button
               onClick={closingCallback(
                 dialogControl.closeDialog,
                 'cancel',
                 buttons.cancel.callback
               )}
-              disabled={buttons?.cancel?.disabled}
-            >
-              {buttons.cancel.text || commonI18n.cancel()}
-            </button>
+              className={moduleStyles.cancel}
+              type="secondary"
+              disabled={buttons.cancel.disabled}
+              color={buttonColors.gray}
+              text={buttons.cancel.text || commonI18n.cancel()}
+            />
           ) : (
             <div />
           )}
           <div className={moduleStyles.innerButtonContainer}>
             {buttons?.neutral && (
-              <button
-                className={moduleStyles.neutral}
-                type="button"
+              <Button
                 onClick={closingCallback(
                   dialogControl.closeDialog,
                   'neutral',
                   buttons.neutral.callback
                 )}
-                disabled={buttons?.neutral?.disabled}
-              >
-                {buttons.neutral.text}
-              </button>
+                type="secondary"
+                disabled={buttons.neutral.disabled}
+                color={buttonColors.gray}
+                text={buttons.neutral.text}
+              />
             )}
-
-            <button
-              className={moduleStyles.confirm}
-              type="button"
+            <Button
               onClick={closingCallback(
                 dialogControl.closeDialog,
                 'confirm',
                 buttons?.confirm?.callback
               )}
               disabled={buttons?.confirm?.disabled}
-            >
-              {buttons?.confirm?.text || commonI18n.dialogOK()}
-            </button>
+              type="primary"
+              color={
+                buttons?.confirm?.text === codebridgeI18n.delete()
+                  ? buttonColors.destructive
+                  : buttonColors.purple
+              }
+              text={buttons?.confirm?.text || commonI18n.dialogOK()}
+            />
           </div>
         </div>
       </div>
