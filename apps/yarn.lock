@@ -6718,6 +6718,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/video.js@npm:^7.3.58":
+  version: 7.3.58
+  resolution: "@types/video.js@npm:7.3.58"
+  checksum: 154abf8898d6f5302e48b4bf40c077515fb0815e54e3d856f25a73f8c328a33bfec28581001ab2f65ef1bb3d55338f3bbe7ae372ae7880786d569a454cf0608b
+  languageName: node
+  linkType: hard
+
 "@types/w3c-web-usb@npm:^1.0.4":
   version: 1.0.6
   resolution: "@types/w3c-web-usb@npm:1.0.6"
@@ -8603,6 +8610,7 @@ __metadata:
     "@types/react-router-dom": ^5.3.3
     "@types/reactabular-table": ^8.14.6
     "@types/sinon": ^10.0.14
+    "@types/video.js": ^7.3.58
     "@typescript-eslint/eslint-plugin": ^7.16.1
     "@typescript-eslint/parser": ^7.16.1
     "@wojtekmaj/enzyme-adapter-react-17": ^0.8.0
