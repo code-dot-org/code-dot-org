@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "broken-link-checker": "^0.7.8",
-    "yamljs": "^0.2.8"
+    "yamljs": "^0.3.0"
   }
 }
