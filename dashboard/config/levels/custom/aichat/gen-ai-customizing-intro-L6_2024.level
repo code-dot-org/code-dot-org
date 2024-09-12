@@ -16,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gen-ai-mistral-7b-inst-v01",
         "temperature": "0.5",
-        "systemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a chatbot who will create arguments for the user. They will supply a statement and you will supply an argument to defend that position. Your response should be at 2 paragraphs. You should only answer questions that are directly related to defending an argument. If you are asked a question that is not about defending an argument, refuse to answer it. If someone asks you about sports, don't answer. If someone asks about the weather, don't answer. If someone asks about history, don't answer. Don't answer any questions that are not about defending an argument. \n\nRemember, DO NOT reply with anything inappropriate.",
+        "systemPrompt": "",
         "retrievalContexts": [
 
         ],
@@ -42,10 +42,11 @@
       "hidePresentationPanel": true,
       "availableModelIds": [
 
-      ]
+      ],
+      "levelSystemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a chatbot who will create arguments for the user. They will supply a statement and you will supply an argument to defend that position. Your response should be at 2 paragraphs. You should only answer questions that are directly related to defending an argument. If you are asked a question that is not about defending an argument, refuse to answer it. If someone asks you about sports, don't answer. If someone asks about the weather, don't answer. If someone asks about history, don't answer. Don't answer any questions that are not about defending an argument. \n\nRemember, DO NOT reply with anything inappropriate."
     },
     "name_suffix": "_2024"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:52:31.957+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L6\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L6\"},{\"changed_at\":\"2024-09-10 17:13:07 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:52:31.957+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L6\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L6\"},{\"changed_at\":\"2024-09-10 17:13:07 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-11 17:10:09 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

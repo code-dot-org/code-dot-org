@@ -17,8 +17,8 @@ import instructions, {
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
-import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 $(document).ready(initPage);
 
@@ -95,54 +95,67 @@ function initPage() {
     }
   }
 
-  const inRubricsPilot =
-    experiments.isEnabled('ai-rubrics') ||
-    experiments.isEnabled('non-ai-rubrics');
-  if (inRubricsPilot && hasScriptData('script[data-rubricdata]')) {
-    const rubricData = getScriptData('rubricdata');
-    const {rubric, studentLevelInfo} = rubricData;
-    const reportingData = {
-      unitName: config.script_name,
-      courseName: config.course_name,
-      levelName: config.level_name,
-    };
-    getStore().dispatch(setTaRubric(rubric));
+  const taRubricSetup = verified => {
+    if (verified && hasScriptData('script[data-rubricdata]')) {
+      const rubricData = getScriptData('rubricdata');
+      const {rubric, studentLevelInfo} = rubricData;
+      const reportingData = {
+        unitName: config.script_name,
+        courseName: config.course_name,
+        levelName: config.level_name,
+      };
+      getStore().dispatch(setTaRubric(rubric));
 
-    const rubricFabMountPoint = document.getElementById(
-      'rubric-fab-mount-point'
-    );
-    if (rubricFabMountPoint) {
-      //rubric fab mount point is only true for teachers
-      if (
-        experiments.isEnabled('ai-rubrics') &&
-        !!rubric &&
-        rubric.learningGoals.some(lg => lg.aiEnabled) &&
-        config.level_name === rubric.level.name
-      ) {
-        analyticsReporter.sendEvent(
-          EVENTS.TA_RUBRIC_AI_PAGE_VISITED,
-          {
-            ...reportingData,
-            studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
-          },
-          PLATFORMS.BOTH
+      const rubricFabMountPoint = document.getElementById(
+        'rubric-fab-mount-point'
+      );
+      if (rubricFabMountPoint) {
+        //rubric fab mount point is only true for teachers
+        if (
+          !!rubric &&
+          rubric.learningGoals.some(lg => lg.aiEnabled) &&
+          config.level_name === rubric.level.name
+        ) {
+          analyticsReporter.sendEvent(
+            EVENTS.TA_RUBRIC_AI_PAGE_VISITED,
+            {
+              ...reportingData,
+              studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
+            },
+            PLATFORMS.BOTH
+          );
+        }
+        ReactDOM.render(
+          <Provider store={getStore()}>
+            <RubricFloatingActionButton
+              rubric={rubric}
+              studentLevelInfo={studentLevelInfo}
+              reportingData={reportingData}
+              currentLevelName={config.level_name}
+              aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
+            />
+          </Provider>,
+          rubricFabMountPoint
         );
       }
-      ReactDOM.render(
-        <Provider store={getStore()}>
-          <RubricFloatingActionButton
-            rubric={rubric}
-            studentLevelInfo={studentLevelInfo}
-            reportingData={reportingData}
-            currentLevelName={config.level_name}
-            aiEnabled={
-              experiments.isEnabled('ai-rubrics') &&
-              rubric.learningGoals.some(lg => lg.aiEnabled)
-            }
-          />
-        </Provider>,
-        rubricFabMountPoint
-      );
     }
-  }
+  };
+  HttpClient.fetchJson('/api/v1/users/current').then(user => {
+    let verified;
+    if (user.value.user_type === 'student') {
+      const body = JSON.stringify({
+        userId: user.value.id,
+      });
+      HttpClient.post(`/sections/section_instructors_verified`, body, true, {
+        'Content-Type': 'application/json',
+      })
+        .then(response => response.json())
+        .then(json => {
+          verified = json.verified;
+          taRubricSetup(verified);
+        });
+    } else {
+      taRubricSetup(user.value.is_verified_instructor);
+    }
+  });
 }
