@@ -12,7 +12,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     # set up a section containing 6 students: 1 @student and 5 other_students.
 
-    @teacher = create :teacher
+    @teacher = create :authorized_teacher
     @student = create :student
     @follower = create :follower, student_user: @student, user: @teacher
     @rubric = create :rubric, lesson: @lesson, level: @level
@@ -23,6 +23,18 @@ class RubricsControllerTest < ActionController::TestCase
     5.times do
       other_students << create(:student)
       other_followers << create(:follower, section: @follower.section, student_user: other_students[-1], user: @teacher)
+    end
+
+    @unauth_teacher = create :teacher
+    @unauth_student = create :student
+    @unauth_follower = create :follower, student_user: @unauth_student, user: @unauth_teacher
+
+    other_unauth_followers = []
+    other_unauth_students = []
+
+    5.times do
+      other_unauth_students << create(:student)
+      other_unauth_followers << create(:follower, section: @unauth_follower.section, student_user: other_unauth_students[-1], user: @unauth_teacher)
     end
 
     @fake_ip = '127.0.0.1'
@@ -359,14 +371,12 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 0, json_response.length
   end
 
-  test "returns forbidden when getting aggregate status if ai experiment isn't enabled" do
-    sign_in @teacher
-
-    Experiment.expects(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(false)
+  test "returns forbidden when getting aggregate status if teacher is unverified" do
+    sign_in @unauth_teacher
 
     get :ai_evaluation_status_for_all, params: {
       id: @rubric.id,
-      sectionId: @follower.section.id,
+      sectionId: @unauth_follower.section.id,
     }
 
     assert_response :forbidden
@@ -375,7 +385,6 @@ class RubricsControllerTest < ActionController::TestCase
   test "returns bad request when getting aggregate status if ai isn't enabled for script level" do
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.expects(:ai_enabled?).with(@script_level).returns(false)
 
     get :ai_evaluation_status_for_all, params: {
@@ -397,7 +406,6 @@ class RubricsControllerTest < ActionController::TestCase
     end
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
 
     get :ai_evaluation_status_for_all, params: {
@@ -417,7 +425,6 @@ class RubricsControllerTest < ActionController::TestCase
   test "returns ok and attempted count when getting aggregate status if work is attempted" do
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
 
     get :ai_evaluation_status_for_all, params: {
@@ -437,7 +444,6 @@ class RubricsControllerTest < ActionController::TestCase
   test "returns ok and pending count when getting aggregate status if work is queued" do
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
 
     Timecop.freeze do
@@ -469,7 +475,6 @@ class RubricsControllerTest < ActionController::TestCase
   test "returns ok and pending count when getting aggregate status if work is running" do
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
 
     Timecop.freeze do
@@ -544,7 +549,6 @@ class RubricsControllerTest < ActionController::TestCase
     end
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
 
     get :ai_evaluation_status_for_all, params: {
@@ -561,15 +565,14 @@ class RubricsControllerTest < ActionController::TestCase
     assert json_response['csrfToken']
   end
 
-  test "returns forbidden when running ai evals for all if experiment isn't enabled" do
-    sign_in @teacher
+  test "returns forbidden when running ai evals for all if teacher is unverified" do
+    sign_in @unauth_teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(false)
     Metrics::Events.stubs(:log_event).never
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
-      sectionId: @follower.section.id,
+      sectionId: @unauth_follower.section.id,
     }
 
     assert_response :forbidden
@@ -578,7 +581,6 @@ class RubricsControllerTest < ActionController::TestCase
   test "returns bad request when running ai evals for all if ai isn't enabled" do
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.expects(:ai_enabled?).with(@script_level).returns(false)
     Metrics::Events.stubs(:log_event).never
 
@@ -602,7 +604,6 @@ class RubricsControllerTest < ActionController::TestCase
 
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
     Metrics::Events.stubs(:log_event).never
@@ -661,7 +662,6 @@ class RubricsControllerTest < ActionController::TestCase
     end
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).once
     Metrics::Events.stubs(:log_event).once
@@ -714,7 +714,6 @@ class RubricsControllerTest < ActionController::TestCase
     end
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
 
     get :ai_evaluation_status_for_all, params: {
@@ -854,7 +853,6 @@ class RubricsControllerTest < ActionController::TestCase
   test "run ai evaluations for user calls EvaluateRubricJob" do
     sign_in @teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
 
@@ -886,7 +884,6 @@ class RubricsControllerTest < ActionController::TestCase
 
     stub_project_source_data(new_channel_id)
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).with(user_id: new_student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
 
@@ -913,7 +910,6 @@ class RubricsControllerTest < ActionController::TestCase
     create :follower, student_user: new_student, user: @teacher
     create_storage_id_for_user(new_student.id)
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     AiRubricConfig.stubs(:ai_enabled?).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
 
@@ -971,7 +967,6 @@ class RubricsControllerTest < ActionController::TestCase
       Timecop.travel 1.minute
       sign_in @teacher
 
-      Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
       AiRubricConfig.stubs(:ai_enabled?).returns(true)
       EvaluateRubricJob.expects(:perform_later).never
 
@@ -1013,8 +1008,6 @@ class RubricsControllerTest < ActionController::TestCase
       create :user_level, user: @student, script: @script_level.script, level: @level
       sign_in @teacher
 
-      Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-
       AiRubricConfig.stubs(:ai_enabled?).returns(true)
       EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
 
@@ -1035,15 +1028,14 @@ class RubricsControllerTest < ActionController::TestCase
     end
   end
 
-  test "run ai evaluations for user does not call EvaluateRubricJob if ai experiment is disabled" do
-    sign_in @teacher
+  test "run ai evaluations for user does not call EvaluateRubricJob if teacher not verified" do
+    sign_in @unauth_teacher
 
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(false)
     EvaluateRubricJob.expects(:perform_later).never
 
     post :run_ai_evaluations_for_user, params: {
       id: @rubric.id,
-      userId: @student.id,
+      userId: @unauth_student.id,
     }
     assert_response :forbidden
   end
