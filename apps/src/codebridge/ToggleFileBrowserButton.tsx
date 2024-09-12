@@ -1,5 +1,6 @@
 import React, {useCallback} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
 
 import {useCodebridgeContext} from './codebridgeContext';
@@ -38,7 +39,7 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
         isIconOnly
         color={'black'}
         onClick={onClick}
-        ariaLabel={'toggle file browser'}
+        ariaLabel={codebridgeI18n.toggleFileBrowser()}
         size={'xs'}
       />
     </span>
