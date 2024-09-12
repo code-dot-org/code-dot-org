@@ -18,7 +18,6 @@ import instructions, {
 } from '@cdo/apps/redux/instructions';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 $(document).ready(initPage);
 
