@@ -11,20 +11,22 @@ import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 
 import {setLoadingCodeEnvironment} from '../lab2/redux/systemRedux';
+import {MultiFileSource} from '../lab2/types';
 
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
+import {PyodideMessage} from './types';
 
-let callbacks = {};
+let callbacks: {[key: number]: (event: PyodideMessage) => void} = {};
 
 const setUpPyodideWorker = () => {
-  // This syntax doesn't work with typescript, so this file is in js.
-  const worker = new Worker(new URL('./pyodideWebWorker.js', import.meta.url));
+  // @ts-expect-error because
+  const worker = new Worker(new URL('./pyodideWebWorker.ts', import.meta.url));
 
   callbacks = {};
 
   worker.onmessage = event => {
-    const {type, id, message} = event.data;
+    const {type, id, message} = event.data as PyodideMessage;
     const onSuccess = callbacks[id];
     switch (type) {
       case 'sysout':
@@ -84,10 +86,10 @@ let pyodideWorker = setUpPyodideWorker();
 
 const asyncRun = (() => {
   let id = 0; // identify a Promise
-  return (script, source) => {
+  return (script: string, source: MultiFileSource) => {
     // the id could be generated more carefully
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
-    return new Promise(onSuccess => {
+    return new Promise<PyodideMessage>(onSuccess => {
       callbacks[id] = onSuccess;
       const messageData = {
         python: script,
