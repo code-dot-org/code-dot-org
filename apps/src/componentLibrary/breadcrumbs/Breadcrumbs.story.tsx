@@ -1,5 +1,5 @@
 import {Meta, StoryFn} from '@storybook/react';
-import React, {useState} from 'react';
+import React from 'react';
 
 import {Breadcrumbs, BreadcrumbsProps} from './index';
 
@@ -12,111 +12,84 @@ export default {
 // TEMPLATE
 //
 const SingleTemplate: StoryFn<BreadcrumbsProps> = args => {
-  const [values, setValues] = useState<string[]>([]);
-
-  return (
-    <Breadcrumbs
-      {...args}
-      values={values}
-      setValues={setValues as (values: string[]) => void}
-    />
-  );
+  return <Breadcrumbs {...args} />;
 };
 
-const MultipleTemplate: StoryFn<{groups: BreadcrumbsProps[]}> = args => {
-  const [values, setValues] = useState([]);
-  const {groups} = args;
-
+const MultipleTemplate: StoryFn<{components: BreadcrumbsProps[]}> = args => {
   return (
     <>
-      {groups.map(group => (
-        <Breadcrumbs
-          key={group.name}
-          {...group}
-          values={values}
-          setValues={setValues as (values: string[]) => void}
-        />
-      ))}
+      <p>
+        * Margins on this screen do not represent Component's margins, and are
+        only added to improve storybook view *
+      </p>
+      <p>Multiple Breadcrumbs:</p>
+      <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+        {args.components.map(component => (
+          <Breadcrumbs key={component.name} {...component} />
+        ))}
+      </div>
     </>
   );
 };
 
 export const DefaultBreadcrumbs = SingleTemplate.bind({});
 DefaultBreadcrumbs.args = {
-  label: 'Breadcrumbs label',
   name: 'test-Breadcrumbs',
-  required: true,
-  options: [
-    {value: 'Breadcrumb1', label: 'Breadcrumb1'},
-    {value: 'Breadcrumb2', label: 'Breadcrumb2'},
-    {value: 'Breadcrumb3', label: 'Breadcrumb3'},
-    {value: 'Breadcrumb4', label: 'Breadcrumb4'},
-    {value: 'Breadcrumb5', label: 'Breadcrumb5'},
+  breadcrumbs: [
+    {text: 'Breadcrumb1', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb2', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb3', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb4', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb5', href: 'https://studio.code.org/home'},
   ],
 };
 
 export const GroupOfSizesOfBreadcrumbs = MultipleTemplate.bind({});
 GroupOfSizesOfBreadcrumbs.args = {
-  groups: [
+  components: [
     {
-      label: 'Breadcrumbs L',
-      name: 'test-Breadcrumbs1',
-      required: true,
+      name: 'test-Breadcrumbsl',
       size: 'l',
-      options: [
-        {value: 'LBreadcrumb1', label: 'Breadcrumb1'},
-        {value: 'LBreadcrumb2', label: 'Breadcrumb2'},
-        {value: 'LBreadcrumb3', label: 'Breadcrumb3'},
-        {value: 'LBreadcrumb4', label: 'Breadcrumb4'},
-        {value: 'LBreadcrumb5', label: 'Breadcrumb5'},
+      breadcrumbs: [
+        {text: 'LBreadcrumb1', href: 'https://studio.code.org/home'},
+        {text: 'LBreadcrumb2', href: 'https://studio.code.org/home'},
+        {text: 'LBreadcrumb3', href: 'https://studio.code.org/home'},
+        {text: 'LBreadcrumb4', href: 'https://studio.code.org/home'},
+        {text: 'LBreadcrumb5', href: 'https://studio.code.org/home'},
       ],
-      values: [],
-      setValues: () => null,
     },
     {
-      label: 'Breadcrumbs M',
-      name: 'test-Breadcrumbs2',
-      required: true,
+      name: 'test-Breadcrumbsm',
       size: 'm',
-      options: [
-        {value: 'MBreadcrumb1', label: 'Breadcrumb1'},
-        {value: 'MBreadcrumb2', label: 'Breadcrumb2'},
-        {value: 'MBreadcrumb3', label: 'Breadcrumb3'},
-        {value: 'MBreadcrumb4', label: 'Breadcrumb4'},
-        {value: 'MBreadcrumb5', label: 'Breadcrumb5'},
+      breadcrumbs: [
+        {text: 'MBreadcrumb1', href: 'https://studio.code.org/home'},
+        {text: 'MBreadcrumb2', href: 'https://studio.code.org/home'},
+        {text: 'MBreadcrumb3', href: 'https://studio.code.org/home'},
+        {text: 'MBreadcrumb4', href: 'https://studio.code.org/home'},
+        {text: 'MBreadcrumb5', href: 'https://studio.code.org/home'},
       ],
-      values: [],
-      setValues: () => null,
     },
     {
-      label: 'Breadcrumbs S',
       name: 'test-Breadcrumbs3',
-      required: true,
       size: 's',
-      options: [
-        {value: 'SBreadcrumb1', label: 'Breadcrumb1'},
-        {value: 'SBreadcrumb2', label: 'Breadcrumb2'},
-        {value: 'SBreadcrumb3', label: 'Breadcrumb3'},
-        {value: 'SBreadcrumb4', label: 'Breadcrumb4'},
-        {value: 'SBreadcrumb5', label: 'Breadcrumb5'},
+      breadcrumbs: [
+        {text: 'SBreadcrumb1', href: 'https://studio.code.org/home'},
+        {text: 'SBreadcrumb2', href: 'https://studio.code.org/home'},
+        {text: 'SBreadcrumb3', href: 'https://studio.code.org/home'},
+        {text: 'SBreadcrumb4', href: 'https://studio.code.org/home'},
+        {text: 'SBreadcrumb5', href: 'https://studio.code.org/home'},
       ],
-      values: [],
-      setValues: () => null,
     },
     {
-      label: 'Breadcrumbs XS',
       name: 'test-Breadcrumbs4',
-      required: true,
       size: 'xs',
-      options: [
-        {value: 'XSBreadcrumb1', label: 'Breadcrumb1'},
-        {value: 'XSBreadcrumb2', label: 'Breadcrumb2'},
-        {value: 'XSBreadcrumb3', label: 'Breadcrumb3'},
-        {value: 'XSBreadcrumb4', label: 'Breadcrumb4'},
-        {value: 'XSBreadcrumb5', label: 'Breadcrumb5'},
+      breadcrumbs: [
+        {text: 'XSBreadcrumb1', href: 'https://studio.code.org/home'},
+        {text: 'XSBreadcrumb2', href: 'https://studio.code.org/home'},
+        {text: 'XSBreadcrumb3', href: 'https://studio.code.org/home'},
+        {text: 'XSBreadcrumb4', href: 'https://studio.code.org/home'},
+        {text: 'XSBreadcrumb5', href: 'Breadcrumb5'},
       ],
-      values: [],
-      setValues: () => null,
     },
   ],
 };
