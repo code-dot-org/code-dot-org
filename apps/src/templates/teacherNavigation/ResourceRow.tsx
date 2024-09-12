@@ -4,14 +4,9 @@ import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 
 import styles from './lesson-materials.module.scss';
 
-export type Lesson = {
-  name: string;
-  id: number;
-};
-
 type ResourceRowProps = {
-  lessonNumber: number | null;
-  unitNumber: number | null;
+  lessonNumber: number;
+  unitNumber: number;
   resource: {
     key: string;
     name: string;
@@ -19,7 +14,7 @@ type ResourceRowProps = {
     downloadUrl: string | null;
     audience: string;
     type: string;
-  } | null;
+  };
 };
 
 const ResourceRow: React.FC<ResourceRowProps> = ({
