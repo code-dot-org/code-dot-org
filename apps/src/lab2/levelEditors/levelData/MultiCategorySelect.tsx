@@ -20,6 +20,9 @@ interface MultiCategorySelectProps {
   onToggleCategory: (categoryId: string, selected: boolean) => void;
 }
 
+/**
+ * A utility component for selecting multiple checkbox options under multiple collapsible sections.
+ */
 const MultiCategorySelect: React.FC<MultiCategorySelectProps> = ({
   items,
   onToggle,

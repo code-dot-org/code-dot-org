@@ -34,6 +34,10 @@ const ChangeWarning: React.FC = () => (
   />
 );
 
+/**
+ * Editor for editing the Music Lab level toolbox,
+ * including block mode, toolbox type, and allowed blocks.
+ */
 const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
   toolbox,
   blockMode,

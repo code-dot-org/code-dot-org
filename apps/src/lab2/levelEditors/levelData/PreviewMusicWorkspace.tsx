@@ -16,6 +16,9 @@ interface PreviewMusicWorkspaceProps {
   blockMode: ValueOf<typeof BlockMode>;
 }
 
+/**
+ * Displays a music Blockly workspace to preview the given toolbox data.
+ */
 const PreviewMusicWorkspace: React.FC<PreviewMusicWorkspaceProps> = ({
   toolboxData,
   blockMode,

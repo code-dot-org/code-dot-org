@@ -11,6 +11,7 @@ import {
   dynamicCategories,
 } from '@cdo/apps/music/blockly/toolbox';
 import {defaultMaps} from '@cdo/apps/music/blockly/toolbox/definitions';
+import toolboxBlocks from '@cdo/apps/music/blockly/toolbox/toolboxBlocks';
 import {
   Category,
   CategoryBlocksMap,
@@ -23,22 +24,6 @@ import MultiCategorySelect from './MultiCategorySelect';
 
 import styles from './edit-music-level-data.module.scss';
 
-// Levelbuilder-facing English block names.
-const blockDescriptions: {[blockType in BlockTypes | string]?: string} = {
-  [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2]: 'Play Sound',
-  [BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2]: 'Play Pattern',
-  [BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2]: 'Play Chord',
-  [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: 'Rest',
-  [BlockTypes.TRIGGERED_AT_SIMPLE2]: 'Trigger',
-  [BlockTypes.PLAY_SOUNDS_TOGETHER]: 'Play Together',
-  [BlockTypes.PLAY_SOUNDS_SEQUENTIAL]: 'Play Sequential',
-  [BlockTypes.PLAY_SOUNDS_RANDOM]: 'Play Random',
-  [BlockTypes.REPEAT_SIMPLE2]: 'Repeat',
-  [BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: 'Set Volume',
-  [BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: 'Set Filter',
-  [BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: 'Set Delay',
-};
-
 interface EditToolboxBlocksProps {
   blocksMap: CategoryBlocksMap;
   onChange: (blocksMap: CategoryBlocksMap) => void;
@@ -46,6 +31,9 @@ interface EditToolboxBlocksProps {
   toolboxType?: ToolboxType;
 }
 
+/**
+ * Editor for selecting allowed blocks and categories in the Music Lab toolbox.
+ */
 const EditToolboxBlocks: React.FC<EditToolboxBlocksProps> = ({
   blocksMap,
   onChange,
@@ -99,7 +87,7 @@ const EditToolboxBlocks: React.FC<EditToolboxBlocksProps> = ({
       const categoryItems = (defaultBlocks[category] || []).map(block => {
         return {
           id: block,
-          label: blockDescriptions[block] || block,
+          label: toolboxBlocks[block].text || block,
           selected: blocksMap[category]?.includes(block) || false,
         };
       });
