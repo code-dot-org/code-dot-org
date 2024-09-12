@@ -1524,6 +1524,7 @@
   "lessonName": "Lesson Name",
   "lessonNumber": "Lesson Number",
   "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
+  "lessonNumberAndName": "Lesson {lessonNumber} — {lessonName}",
   "lessonPlans": "Lesson Plans",
   "lessonsAttempted": "Lessons attempted in",
   "lessonsAvailableWithColon": "Lessons available: ",

@@ -9,7 +9,7 @@ import i18n from '@cdo/locale';
 
 import ResourceRow from './ResourceRow';
 
-export type Lesson = {
+type Lesson = {
   name: string;
   id: number;
   position: number;
@@ -59,7 +59,10 @@ export const lessonMaterialsLoader =
   };
 
 const createDisplayName = (lessonName: string, lessonPosition: number) => {
-  return i18n.lesson() + ' ' + lessonPosition + ' - ' + lessonName;
+  return i18n.lessonNumberAndName({
+    lessonNumber: lessonPosition,
+    lessonName: lessonName,
+  });
 };
 
 const LessonMaterialsContainer: React.FC = () => {
@@ -108,11 +111,13 @@ const LessonMaterialsContainer: React.FC = () => {
         size="s"
       />
       {/* Note that this is just a "proof of concept row" - the actual implementation would be more complex */}
-      <ResourceRow
-        unitNumber={5} // note that this is a placeholder value
-        lessonNumber={selectedLesson?.position || null}
-        resource={selectedLesson?.resources.Teacher[0] || null} // note that this is a placeholder value
-      />
+      {selectedLesson && (
+        <ResourceRow
+          unitNumber={5} // note that this is a placeholder value
+          lessonNumber={selectedLesson.position}
+          resource={selectedLesson.resources.Teacher[0] || null} // note that this is a placeholder value
+        />
+      )}
     </div>
   );
 };
