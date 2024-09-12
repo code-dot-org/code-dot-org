@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_09_11_181608) do
+ActiveRecord::Schema.define(version: 2024_09_12_194834) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -935,6 +935,13 @@ ActiveRecord::Schema.define(version: 2024_09_11_181608) do
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end
 
+  create_table "lti_deployments_user_identities", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "lti_deployment_id", null: false
+    t.bigint "lti_user_identity_id", null: false
+    t.index ["lti_deployment_id"], name: "index_lti_deployments_user_identities_on_lti_deployment_id"
+    t.index ["lti_user_identity_id"], name: "index_lti_deployments_user_identities_on_lti_user_identity_id"
+  end
+
   create_table "lti_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.boolean "satisfied", null: false
@@ -981,9 +988,7 @@ ActiveRecord::Schema.define(version: 2024_09_11_181608) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
-    t.bigint "lti_deployment_id"
     t.index ["deleted_at"], name: "index_lti_user_identities_on_deleted_at"
-    t.index ["lti_deployment_id"], name: "index_lti_user_identities_on_lti_deployment_id"
     t.index ["lti_integration_id"], name: "index_lti_user_identities_on_lti_integration_id"
     t.index ["subject"], name: "index_lti_user_identities_on_subject"
     t.index ["user_id"], name: "index_lti_user_identities_on_user_id"
@@ -2473,7 +2478,6 @@ ActiveRecord::Schema.define(version: 2024_09_11_181608) do
   add_foreign_key "lti_feedbacks", "users"
   add_foreign_key "lti_sections", "lti_courses"
   add_foreign_key "lti_sections", "sections"
-  add_foreign_key "lti_user_identities", "lti_deployments"
   add_foreign_key "lti_user_identities", "lti_integrations"
   add_foreign_key "lti_user_identities", "users"
   add_foreign_key "new_feature_feedbacks", "users"
