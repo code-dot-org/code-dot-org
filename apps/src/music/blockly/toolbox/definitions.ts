@@ -44,6 +44,11 @@ export const defaultMaps: {
     ],
     Events: [BlockTypes.TRIGGERED_AT],
     Control: [BlockTypes.FOR_LOOP],
+    Effects: [
+      BlockTypes.SET_VOLUME_EFFECT,
+      BlockTypes.SET_FILTER_EFFECT,
+      BlockTypes.SET_DELAY_EFFECT,
+    ],
     Math: [
       'math_number',
       'math_round',
