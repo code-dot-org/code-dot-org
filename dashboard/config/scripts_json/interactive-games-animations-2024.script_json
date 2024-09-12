@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "97ecbd36-57f8-4462-9e93-3e0b046645eb",
+          "notice": "AI Teaching Assistant Available to Help Assess Student Projects",
+          "details": "AI Teaching Assistant is now available to support you in projects and mini-projects throughout this unit. This new tool is designed to save you time, using AI to assess student work. To learn more about how to integrate the AI Teaching Assistant into your lessons, please watch our introductory video or visit https://code.org/ai/teaching-assistant",
+          "link": "https://youtu.be/Lj7uZx-BKhw",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -19,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "interactive-games-animations",
-    "serialized_at": "2024-08-05 21:36:27 UTC",
+    "serialized_at": "2024-09-11 16:43:28 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
