@@ -15,7 +15,8 @@
     "display_name": "Shift Colors",
     "bubble_choice_description": "Create an effect that shifts the colors in an image.",
     "thumbnail_url": "https://images.code.org/7d94026fa783cf45b683e0b388c8c8b0-image-1651325014916.gif",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:31.037+00:00\",\"changed\":[\"cloned from \\\"CSA U5L10-L5c CR_2022\\\"\"],\"cloned_from\":\"CSA U5L10-L5c CR_2022\"}]"

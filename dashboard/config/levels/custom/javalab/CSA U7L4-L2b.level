@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-04T23:35:05.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nWrite an overloaded `paint()` method that paints and moves a specified number of spaces.\r\n\r\nIn `PainterPlus.java`, the method signature for the overloaded `paint()` method has a `String` parameter for `color` and an `int` parameter for `steps`.\r\n\r\n1. While the `Painter` object `canMove()` and `steps` are greater than 0:\r\n\r\n   a. Call the one-parameter version of the `paint()` method with `color` as its argument.\r\n   \r\n   b. Move forward.\r\n   \r\n   c. Decrease `steps` by 1.\r\n\r\n2. In `MyNeighborhood.java`, use the overloaded `paint()` method to create the dashed line shown below.\r\n\r\n![](https://images.code.org/aeb385424f4fcf4d448bada709de0794-image-1638729112249.png)",
@@ -1173,13 +1177,10 @@
       ]
     ],
     "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHb8P3/b6ls7VSz8nxyw\nx3Dws6/iRepS75TDpamYUQgXJrs0/c3mcg3pa2DnhXFVvobzK3uQhPL4jmsP\nIx1kGlFS\n",
-    "thumbnail_url": "https://images.code.org/5a75f0c354774ef72f218c03181f4c92-image-1639150675353.gif"
+    "thumbnail_url": "https://images.code.org/5a75f0c354774ef72f218c03181f4c92-image-1639150675353.gif",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-12-04T23:35:05.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2021-12-04 23:36:27 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 15:31:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 15:31:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 18:18:52 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 18:27:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 18:28:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 18:36:52 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 19:20:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 19:20:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 15:39:11 +0000\",\"changed\":[\"bubble_choice_description\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-04 14:35:52 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

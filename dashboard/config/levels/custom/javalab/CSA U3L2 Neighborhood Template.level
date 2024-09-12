@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-07-20T20:09:52.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -760,12 +764,9 @@
         "text": "import org.code.neighborhood.Painter;\n\npublic class PainterPlus extends Painter {\n  public PainterPlus(int x, int y, String direction, int paint) {\n    super(x, y, direction, paint);\n  }\n\n  public void turnRight() {\n    turnLeft();\n    turnLeft();\n    turnLeft();\n  }\n\n  public void turnAround() {\n    turnLeft();\n    turnLeft();\n  }\n\n  public void moveFast() {\n    move();\n    move();\n  }\n\n  public void paintLineSegment(String color) {\n    paint(color);\n    move();\n    paint(color);\n    move();\n    paint(color);\n  }\n\n  public void paintFullLine(String color) {\n    while (canMove()) {\n      paint(color);\n      move();\n    }\n    paint(color);\n  }\n\n  public void paintDiagonalSegment(String color) {\n    paint(color);\n    if (canMove()) {\n      move();\n    }\n    turnLeft();\n    if (canMove()) {\n      move();\n    }\n    paint(color);\n    turnRight();\n  }\n\n  public void paintFullDiagonal(String color) {\n    while (canMove()) {\n      paintDiagonalSegment(color);\n    }\n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-07-20T20:09:52.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-07-20 20:11:37 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>

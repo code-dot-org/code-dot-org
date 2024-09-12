@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-12T16:04:01.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The Memory game contains a list of cards that are each placed at a random location on the board. The possible locations that a card can be placed is managed with the `coordinates` list. To use these coordinates, the x and y values must be converted to integers to assign to each card.\r\n\r\nIn `Memory.java`, complete the `parseCoordinate()` method. The method takes a `position` (either `\"x\"` or `\"y\"`) and the `coordinate` from the `coordinates` list. It should return the `int` representation of the `\"x\"` or `\"y\"` coordinate.",
@@ -43,12 +47,9 @@
     },
     "display_name": "Memory",
     "bubble_choice_description": "Use multiple lists in this Memory game to manage random locations for each card.",
-    "thumbnail_url": "https://images.code.org/8244f9697e61468243280f115e64cf87-image-1641776845756.png"
+    "thumbnail_url": "https://images.code.org/8244f9697e61468243280f115e64cf87-image-1641776845756.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-12-12T16:04:01.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-12 16:04:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-09 00:20:57 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-09 15:05:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-09 20:02:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-09 20:08:57 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 01:00:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 01:11:40 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 01:27:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 01:32:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 01:36:21 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-21 17:10:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-21 17:12:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

@@ -19,7 +19,7 @@ class Policies::Ai
   # Whether or not AI rubric features (AI TA) are enabled.
   def self.ai_rubrics_enabled?(user)
     return false if user.nil?
-
+    return false unless user.verified_teacher?
     !user.ai_rubrics_disabled
   end
 

@@ -12,7 +12,8 @@
     "display_name": "PixelPedia",
     "bubble_choice_description": "Level up your gaming experience with PixelPedia! Navigate through a treasure trove of video games from A to Z, each waiting to whisk you off on a new epic adventure. Ready, set, game on!",
     "thumbnail_url": "https://images.code.org/77b669209885c13562854a33fd9ace2a-pixelpedia.gif",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:47:50.749+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L1d_2023\\\"\"],\"cloned_from\":\"CSA-SE-L2-L1d_2023\"}]"

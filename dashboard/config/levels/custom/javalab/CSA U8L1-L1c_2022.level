@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-18T19:35:23.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
@@ -48,15 +52,9 @@
     "display_name": "Character Battle Game",
     "bubble_choice_description": "An example project that creates a game where the player battles against another character.",
     "thumbnail_url": "https://images.code.org/a896f39e3cb1f912ed61164e991baf9e-pikachu.png",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-18T19:35:23.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-18T19:35:23.712+00:00\",\"changed\":[\"cloned from \\\"CSA U8L1-L1b_2022\\\"\"],\"cloned_from\":\"CSA U8L1-L1b_2022\"},{\"changed_at\":\"2022-04-18 19:35:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-14 00:11:44 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-27 19:47:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-27 19:49:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-27 19:52:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-17 15:17:33 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

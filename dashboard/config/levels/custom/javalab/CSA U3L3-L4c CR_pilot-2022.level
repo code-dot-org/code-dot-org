@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:10.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L3-L3c PBT_pilot-2022",
@@ -18,12 +22,9 @@
         "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    // TO DO #4: Instantiate a PainterPlus object.\n\n\n    // TO DO #5: Declare and initialize a 1D array.\n\n\n    // TO DO #6: Call the paintPark() method.\n\n    \n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:10.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:10.407+00:00\",\"changed\":[\"cloned from \\\"CSA U3L3-L4c CR_2022\\\"\"],\"cloned_from\":\"CSA U3L3-L4c CR_2022\"},{\"changed_at\":\"2022-08-31 17:29:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

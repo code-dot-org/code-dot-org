@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:04.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The following values represent the grades a student received on daily quizzes given during a week:\r\n\r\n```\r\n85, 97, 82, 79, 95\r\n```\r\n\r\n##In QuizGrades.java:\r\n\r\n1. Write the method `getGrade()`(#e7e8ea) to return the value in `grades`(#e7e8ea) at the parameter `index`(#e7e8ea).\r\n\r\n2. Write the method `setGrade()`(#e7e8ea) to change the value in `grades`(#e7e8ea) at the parameter `index`(#e7e8ea) to the new value passed to the parameter `newValue`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n3. Declare and initialize a 1D array to store the grade values.\r\n\r\n4. Instantiate a `QuizGrades`(#e7e8ea) object with the array of grades.\r\n\r\n5. The teacher wants to know the grade the student received on Tuesday. Call the `getGrade()`(#e7e8ea) method to get the grade at index `1`(#e7e8ea) and print the result.\r\n\r\n6. The student retook Thursday's quiz and received a higher score. Call the `setGrade()`(#e7e8ea) method to change the grade at index `3`(#e7e8ea) to `91`(#e7e8ea). Print the updated value at index `3`(#e7e8ea).\r\n\r\n::: details [**Show Me How**]\r\nA 1D array can be declared and initialized with an initializer list using the following syntax:\r\n  \r\n  ```\r\n  dataType[] variableName = {value1, value2, . . . };\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data the array will store. The `variableName`(#e7e8ea) should be the name of the array. Inside the curly braces ( `{ }`(#e7e8ea) ), list the values the array will store.\r\n\r\nYou can obtain a value from an array using the following syntax:\r\n\r\n  ```\r\n  variableName[index]\r\n  ```\r\n\r\n`variableName`(#e7e8ea) refers to the name of the array, and `index`(#e7e8ea) refers to the location in the array.\r\n:::",
@@ -22,12 +26,9 @@
         "text": "/*\n * Manages grades on daily quizzes\n */\npublic class QuizGrades {\n\n  private int[] grades;\n\n  /*\n   * Creates a QuizGrades with an array of grades\n   */\n  public QuizGrades(int[] grades) {\n    this.grades = grades;\n  }\n\n  /*\n   * Returns the array containing the grades\n   */\n  public int[] getAllGrades() {\n    return grades;\n  }\n\n  /*\n   * Returns the value in grades at the specified index\n   */\n  public int getGrade(int index) {\n    // TO DO #1: Return the value in grades at the specified index.\n\n    return 0;\n  }\n\n  /*\n   * Changes the value in grades at the specified index to the new value\n   */\n  public void setGrade(int index, int newValue) {\n    // TO DO #2: Change the value in grades at the specified index to newValue;\n\n    \n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:04.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:04.260+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L4a_2022\\\"\"],\"cloned_from\":\"CSA U3L2-L4a_2022\"},{\"changed_at\":\"2022-08-30 18:02:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 18:02:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 18:03:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 18:03:56 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 19:36:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 19:38:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 19:38:26 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 19:38:40 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

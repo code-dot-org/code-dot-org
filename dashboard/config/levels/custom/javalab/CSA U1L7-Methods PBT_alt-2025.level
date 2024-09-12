@@ -360,7 +360,8 @@
         "tabOrder": 1
       }
     },
-    "name_suffix": "_alt-2025"
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:13:47.252+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-Methods PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L7-Methods PBT_pilot-2025\"}]"

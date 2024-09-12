@@ -1,0 +1,39 @@
+name: Assign Reviewer for Dependabot
+
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+    branches:
+      - staging
+  issue_comment:
+    types: [ created ]
+
+jobs:
+  assign-reviewer:
+    # Only run if a dependabot PR on open or synchronize or the command /reassign-dependabot is commented in the PR
+    if: >
+      github.event.pull_request.user.login == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+          cache-dependency-path: ".github/actions/assign-dependabot-reviewer"
+
+      - name: Install dependencies
+        working-directory: .github/actions/assign-dependabot-reviewer
+        run: yarn install
+
+      - name: Determine and assign reviewer
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        working-directory: .github/actions/assign-dependabot-reviewer
+        run: node assign-reviewers.mjs

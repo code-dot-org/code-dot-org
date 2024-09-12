@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-09-07T16:00:56.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "display_name": "Program B",
@@ -14,17 +18,11 @@
         "isVisible": true
       }
     },
-    "encrypted_examples": [
-
-    ],
     "bubble_choice_description": "Are these two Strings equal?",
-    "thumbnail_url": "https://images.code.org/628f4a9991dbf0e2da5be6820720d62f-image-1631892050525.png"
+    "thumbnail_url": "https://images.code.org/628f4a9991dbf0e2da5be6820720d62f-image-1631892050525.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-09-07T16:00:56.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-09-07 16:00:58 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:14:13 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:15:43 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:19:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:21:06 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

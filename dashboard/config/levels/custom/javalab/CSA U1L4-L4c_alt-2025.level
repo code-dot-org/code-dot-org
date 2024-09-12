@@ -550,7 +550,8 @@
     "bubble_choice_description": "Help the `Painter` navigate through The Neighborhood to reach the house.",
     "thumbnail_url": "https://images.code.org/188cc4430abc272e409b186e2d4395e3-U1L4-L4c.gif",
     "video_key": "csa_calling_methods",
-    "name_suffix": "_alt-2025"
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:07:41.173+00:00\",\"changed\":[\"cloned from \\\"CSA U1L4-L4c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L4-L4c_pilot-2025\"}]"

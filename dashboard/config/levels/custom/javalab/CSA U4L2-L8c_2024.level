@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-01-12T20:58:26.000Z",
   "level_num": "custom",
@@ -34,11 +33,9 @@
       }
     },
     "name_suffix": "_2024",
-    "encrypted_examples": [
-
-    ],
-    "ai_tutor_available": "false"
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:26.872+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L8c_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L8c_2023\"},{\"changed_at\":\"2024-03-28 19:41:45 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-03-28 19:43:07 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-03-28 19:49:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Javalab>

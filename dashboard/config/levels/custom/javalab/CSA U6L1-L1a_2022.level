@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-02-26T00:27:42.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n**Note:** The `TextProcessor`(#e7e8ea) class is a hidden class containing code that you will be writing later in this unit!\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
@@ -63,15 +67,9 @@
     "bubble_choice_description": "An example project that changes the overall sentiment of product reviews.",
     "thumbnail_url": "https://images.code.org/bcb177c1450d9fe3e096be8a1fbe551e-rating.png",
     "name_suffix": "_2022",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-02-26T00:27:42.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2022-02-26T00:27:42.162+00:00\",\"changed\":[\"cloned from \\\"CSA U6L1-L1a\\\"\"],\"cloned_from\":\"CSA U6L1-L1a\"},{\"changed_at\":\"2022-05-08 13:15:26 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 12:44:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-25 16:01:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-25 16:06:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-25 16:06:28 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-19 14:34:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 14:39:59 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -115,6 +115,9 @@ Dashboard::Application.routes.draw do
       member do
         post 'log_in'
       end
+      collection do
+        post 'section_instructors_verified'
+      end
     end
     # Section API routes (JSON only)
     concern :section_api_routes do

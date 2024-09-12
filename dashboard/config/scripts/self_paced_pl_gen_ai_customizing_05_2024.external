@@ -3,19 +3,19 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lessons 13-15: System Prompting
+# Lessons 2-4: System Prompting
 
 <img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="system prompt with role, goal, tone, and restriction" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
 
-#### Lessons 13 through 15 in the Customizing Large Language Models unit help students develop an understanding of system prompting. Students go through the **Explore-Practice-Synthesis** model of learning.
+#### Lessons 2 through 4 in the Customizing Large Language Models unit help students develop an understanding of system prompting. Students go through the **Explore-Practice-Synthesis** model of learning.
 
-## Lesson 13: Exploration
+## Lesson 2: Exploration
 #### This lesson introduces the **system prompt** and guides students through how it impacts a chatbot's behavior. Students predict, discuss, and investigate the effects of system prompts, learning how prompt design can direct and limit chatbot interactions. They practice crafting prompts to elicit specific responses and incorporate personal experiences to observe the effects.
 
-## Lesson 14: Practice
+## Lesson 3: Practice
 #### This lesson builds fluency in designing and applying system prompts, expanding on knowledge from the previous lesson. Students learn to craft prompts that guide the **content, style, and appropriateness** of AI response's for different audiences and situations. They practice these skills through scenarios simulating real-life use cases and user stories, emphasizing practical problem-solving.
 
-## Lesson 15: Synthesis
+## Lesson 4: Synthesis
 #### This lesson expands on the prompting techniques learned previously, inviting students to reflect on their skill growth. They explore advanced techniques: **chain of reasoning** for precise responses and providing examples to enhance accuracy. After practicing these skills, students revisit and refine earlier activities using their accumulated knowledge.
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
@@ -25,6 +25,6 @@ markdown <<MARKDOWN
 </div>
 
 ## Up Next!
-#### You’ll learn about system prompts yourself and try it out in a curriculum investigation.
+#### You’ll learn about system prompts yourself before you try out writing your own in some levels from the curriculum.
 
 MARKDOWN

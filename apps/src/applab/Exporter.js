@@ -101,6 +101,14 @@ const APP_OPTIONS_ALLOWLIST = {
   },
   isUS: true,
   send_to_phone_url: true,
+  copyrightStrings: {
+    thanks: true,
+    help_from_html: true,
+    art_from_html: true,
+    code_from_html: true,
+    powered_by_aws: true,
+    trademark: true,
+  },
   teacherMarkdown: false,
   dialog: {
     skipSound: true,

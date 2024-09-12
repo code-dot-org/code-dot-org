@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-01-12T21:04:47.000Z",
   "level_num": "custom",
@@ -22,11 +21,9 @@
     "project_template_level_name": "CSA U6L8-Removing PBT_2024",
     "teacher_markdown": "The code now removes each element in the `ArrayList` instead of skipping any elements. When an element is removed from an `ArrayList`, the items are shifted and the size of the `ArrayList` decreases by `1`. Decreasing the `index` when an element is removed ensures that it aligns with the new positioning of the elements in the list.",
     "name_suffix": "_2024",
-    "ai_tutor_available": "true",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:04:47.697+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L4_2023\\\"\"],\"cloned_from\":\"CSA U6L8-L4_2023\"},{\"changed_at\":\"2024-07-17 06:35:41 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
 </Javalab>

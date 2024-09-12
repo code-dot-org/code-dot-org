@@ -26,7 +26,8 @@
     "name_suffix": "_pilot-2022",
     "display_name": "Recursion and ArrayLists",
     "bubble_choice_description": "Trace a code segment using recursion with an ArrayList to determine its output.",
-    "thumbnail_url": "https://images.code.org/16a8f6803961f88f58ed4597e2a56461-list.png"
+    "thumbnail_url": "https://images.code.org/16a8f6803961f88f58ed4597e2a56461-list.png",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:54.339+00:00\",\"changed\":[\"cloned from \\\"CSA U7L9-L2c_2022\\\"\"],\"cloned_from\":\"CSA U7L9-L2c_2022\"}]"

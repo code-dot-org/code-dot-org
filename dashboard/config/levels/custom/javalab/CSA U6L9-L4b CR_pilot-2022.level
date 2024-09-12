@@ -15,7 +15,8 @@
     "display_name": "Change Words or Phrases",
     "bubble_choice_description": "Determine if a text contains a specific word or phrase.",
     "thumbnail_url": "https://images.code.org/86fa56d5dabfb90a0d884d161e70570b-book.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:22.281+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-L4b CR_2022\\\"\"],\"cloned_from\":\"CSA U6L9-L4b CR_2022\"}]"
