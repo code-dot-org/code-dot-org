@@ -43,6 +43,7 @@
   "testsDidNotPass": "Tests did not all pass.",
   "toggleFileBrowser": "Toggle File Browser",
   "validate": "Validate",
+  "validatingRunDisabledTooltip": "You cannot run code while validation is running",
   "validationNotYetPassedContinue": "You must pass tests before continuing.",
   "validationNotYetPassedFinish": "You must pass tests before finishing.",
   "validationNotYetPassedSubmit": "You must pass tests before submitting.",

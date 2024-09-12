@@ -5,7 +5,11 @@ import Button from '@cdo/apps/componentLibrary/button';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {setHasRun, setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
+import {
+  setHasRun,
+  setIsRunning,
+  setIsValidating,
+} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -35,6 +39,7 @@ const ControlButtons: React.FunctionComponent = () => {
     state => state.lab2System.loadingCodeEnvironment
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
+  const isValidating = useAppSelector(state => state.lab2System.isValidating);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -44,6 +49,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const resetStatus = useCallback(() => {
     dispatch(setHasRun(false));
     dispatch(setIsRunning(false));
+    dispatch(setIsValidating(false));
   }, [dispatch]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
@@ -83,14 +89,16 @@ const ControlButtons: React.FunctionComponent = () => {
       tooltip = codebridgeI18n.predictRunDisabledTooltip();
     } else if (isLoadingEnvironment) {
       tooltip = codebridgeI18n.loadingEnvironmentTooltip();
+    } else if (isValidating) {
+      tooltip = codebridgeI18n.validatingRunDisabledTooltip();
     }
     return tooltip;
   };
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
-  const disabledCodeActionsIcon = awaitingPredictSubmit
-    ? 'fa-question-circle-o'
-    : 'fa-spinner fa-spin';
+  const disabledCodeActionsIcon = isLoadingEnvironment
+    ? 'fa-spinner fa-spin'
+    : 'fa-question-circle-o';
 
   return (
     <div className={moduleStyles.controlButtons}>
