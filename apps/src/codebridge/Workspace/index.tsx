@@ -1,4 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {FILE_BROWSER_WIDTH} from '@codebridge/constants';
 import {Editor} from '@codebridge/Editor';
 import {FileBrowser} from '@codebridge/FileBrowser';
 import {FileTabs} from '@codebridge/FileTabs';
@@ -54,7 +55,9 @@ const Workspace = () => {
         <div
           className={moduleStyles.workspaceWorkarea}
           style={{
-            gridTemplateColumns: config.showFileBrowser ? '200px auto' : '100%',
+            gridTemplateColumns: config.showFileBrowser
+              ? `${FILE_BROWSER_WIDTH} auto`
+              : '100%',
           }}
         >
           {isStartMode && (
