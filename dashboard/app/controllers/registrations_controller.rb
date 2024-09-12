@@ -176,6 +176,7 @@ class RegistrationsController < Devise::RegistrationsController
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
       if Policies::Lti.lti? current_user
+        current_user.verify_teacher! if current_user.teacher? && !current_user.verified_teacher?
         lms_name = Queries::Lti.get_lms_name_from_user(current_user)
         metadata = {
           'user_type' => current_user.user_type,
