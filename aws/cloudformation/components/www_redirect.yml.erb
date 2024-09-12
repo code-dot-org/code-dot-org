@@ -45,6 +45,7 @@
           RealtimeLogConfigArn: !ImportValue AccessLogs-Config
         ViewerCertificate:
           AcmCertificateArn: !Ref <%=app%>RedirectedDomainCertificate
+          MinimumProtocolVersion: TLSv1.2_2021
           SslSupportMethod: sni-only
 
   <%=app%>RedirectedDomainCertificate:
