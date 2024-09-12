@@ -99,6 +99,7 @@ nav.choose-guide {
 section.steps {
   position: relative;
   padding: 4rem 2rem 5rem;
+  font-size: 16px;
 
   .wrapper {
     display: flex;
@@ -110,12 +111,13 @@ section.steps {
   p.tag {
     background: var(--brand_primary_light);
     color: var(--brand_primary_dark);
-    padding: 2px 6px;
+    padding: 4px 8px;
     border-radius: $border-radius;
     font-family: var(--main-font);
     font-weight: var(--semi-bold-font-weight);
     font-size: 0.65rem;
     line-height: 1.6;
+    letter-spacing: 0.025rem;
     text-transform: uppercase;
     display: inline-block;
   }
