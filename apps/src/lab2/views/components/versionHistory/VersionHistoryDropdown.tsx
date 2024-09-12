@@ -5,6 +5,7 @@ import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -91,21 +92,12 @@ const VersionHistoryDropdown: React.FunctionComponent<
     }
   }, [versionList, selectedVersion, latestVersion]);
 
-  useEffect(() => {
-    const resetVersionState = () => {
-      dispatch(setViewingOldVersion(false));
-      dispatch(setRestoredOldVersion(false));
-    };
-    Lab2Registry.getInstance()
-      .getLifecycleNotifier()
-      .addListener(LifecycleEvent.LevelLoadStarted, resetVersionState);
-
-    return () => {
-      Lab2Registry.getInstance()
-        .getLifecycleNotifier()
-        .removeListener(LifecycleEvent.LevelLoadStarted, resetVersionState);
-    };
+  const resetVersionState = useCallback(() => {
+    dispatch(setViewingOldVersion(false));
+    dispatch(setRestoredOldVersion(false));
   }, [dispatch]);
+
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, resetVersionState);
 
   useEffect(() => {
     if (isOpen && !previousIsOpen.current && selectedVersion !== '') {

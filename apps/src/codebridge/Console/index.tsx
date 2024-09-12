@@ -5,7 +5,7 @@ import {useDispatch} from 'react-redux';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -32,17 +32,8 @@ const Console: React.FunctionComponent = () => {
     setGraphModalOpen(false);
   }, [dispatch]);
 
-  useEffect(() => {
-    Lab2Registry.getInstance()
-      .getLifecycleNotifier()
-      .addListener(LifecycleEvent.LevelLoadCompleted, clearOutput);
-
-    return () => {
-      Lab2Registry.getInstance()
-        .getLifecycleNotifier()
-        .removeListener(LifecycleEvent.LevelLoadCompleted, clearOutput);
-    };
-  }, [clearOutput]);
+  // Clear console when we change levels.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, clearOutput);
 
   useEffect(() => {
     scrollAnchorRef.current?.scrollIntoView({
