@@ -18,61 +18,57 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
   isOpen,
   closeModal,
 }) => {
-  const getDialogBody = () => {
-    return (
-      <div id="copyrightBody">
-        <SafeMarkdown
-          markdown={i18n.copyright_thanks({
-            donors_link: pegasus('about/donors'),
-            partners_link: pegasus('about/partners'),
-            team_link: pegasus('about/team'),
-          })}
-        />
-        <BodyThreeText>{i18n.copyright_specialRecognition()}</BodyThreeText>
-        <SafeMarkdown
-          markdown={i18n.copyright_artFrom({
-            current_year: new Date().getFullYear(),
-          })}
-        />
-        <SafeMarkdown
-          markdown={i18n.copyright_codeLicense({
-            gnu_license_link:
-              'https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html',
-          })}
-        />
-        <BodyThreeText>{i18n.copyright_builtOnGithub()}</BodyThreeText>
-        <Link
-          href="https://aws.amazon.com/what-is-cloud-computing"
-          className="awsLogoContainer"
-        >
-          <img
-            src="/shared/images/Powered-By_logo-horiz_RGB.png"
-            alt="Powered by AWS Cloud Computing"
-            className="awsLogo"
-          />
-        </Link>
-        <SafeMarkdown
-          markdown={i18n.copyright_trademark({
-            current_year: new Date().getFullYear(),
-            cs_discoveries: 'CS Discoveries&reg;',
-          })}
-        />
-      </div>
-    );
-  };
-
   return isOpen ? (
     <AccessibleDialog
+      id="copyright-modal"
       className="copyrightDialog"
       onClose={closeModal}
       closeOnClickBackdrop={true}
     >
-      <div id="copyright-content">
-        <div id="copyright-header">
+      <div id="copyright-modal-content">
+        <div id="copyright-modal-header">
           <Heading3>{i18n.copyright()}</Heading3>
         </div>
-        <hr />
-        {getDialogBody()}
+        <hr aria-hidden="true" />
+        <div id="copyright-modal-body" className="copyrightScrollArea">
+          <SafeMarkdown
+            markdown={i18n.copyright_thanks({
+              donors_link: pegasus('about/donors'),
+              partners_link: pegasus('about/partners'),
+              team_link: pegasus('about/team'),
+            })}
+          />
+          <BodyThreeText>{i18n.copyright_specialRecognition()}</BodyThreeText>
+          <SafeMarkdown
+            markdown={i18n.copyright_artFrom({
+              current_year: new Date().getFullYear(),
+            })}
+          />
+          <SafeMarkdown
+            markdown={i18n.copyright_codeLicense({
+              gnu_license_link:
+                'https://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html',
+            })}
+          />
+          <BodyThreeText>{i18n.copyright_builtOnGithub()}</BodyThreeText>
+          <Link
+            href="https://aws.amazon.com/what-is-cloud-computing"
+            className="awsLogoContainer"
+          >
+            <img
+              src="/shared/images/Powered-By_logo-horiz_RGB.png"
+              alt="Powered by AWS Cloud Computing"
+              className="awsLogo"
+            />
+          </Link>
+          <SafeMarkdown
+            markdown={i18n.copyright_trademark({
+              current_year: new Date().getFullYear(),
+              cs_discoveries: 'CS Discoveries&reg;',
+            })}
+          />
+        </div>
+        <hr aria-hidden="true" />
       </div>
     </AccessibleDialog>
   ) : null;
