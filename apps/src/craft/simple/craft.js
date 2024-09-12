@@ -14,8 +14,8 @@ import {handlePlayerSelection} from '@cdo/apps/craft/utils';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
+import CustomMarshalingInterpreter from '../../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {TestResults} from '../../constants';
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
 import AppView from '../../templates/AppView';

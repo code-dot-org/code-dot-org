@@ -2,7 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import Immutable from 'immutable';
 import React from 'react';
 
-import {UnconnectedWatchers as Watchers} from '@cdo/apps/lib/tools/jsdebugger/Watchers';
+import {UnconnectedWatchers as Watchers} from '@cdo/apps/code-studio/jsdebugger/Watchers';
 
 describe('Watchers', () => {
   const defaultProps = {

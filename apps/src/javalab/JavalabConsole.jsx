@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import CommandHistory from '@cdo/apps/code-studio/tools/jsdebugger/CommandHistory';
 import {KeyCodes} from '@cdo/apps/constants';
-import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
   PaneSection,
   PaneButton,

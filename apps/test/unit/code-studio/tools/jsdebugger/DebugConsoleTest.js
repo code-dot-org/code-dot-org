@@ -2,10 +2,10 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import DebugConsole from '@cdo/apps/code-studio/jsdebugger/DebugConsole';
+import {reducers, actions} from '@cdo/apps/code-studio/jsdebugger/redux';
+import JSInterpreter from '@cdo/apps/code-studio/jsinterpreter/JSInterpreter';
 import {KeyCodes} from '@cdo/apps/constants';
-import DebugConsole from '@cdo/apps/lib/tools/jsdebugger/DebugConsole';
-import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import {
   getStore,
   registerReducers,

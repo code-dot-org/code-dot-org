@@ -4,8 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+import CustomMarshalingInterpreter from '@cdo/apps/code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   outputError,
   injectErrorHandler,
@@ -30,7 +30,7 @@ var apiJavascript = require('./gamelab/apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');
 var utils = require('@cdo/apps/utils');
 var dropletConfig = require('./gamelab/dropletConfig');
-var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
+var JSInterpreter = require('@cdo/apps/code-studio/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
 var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
 var P5Wrapper = require('./P5Wrapper');
@@ -59,7 +59,7 @@ import {
   runAfterPostContainedLevel,
 } from '@cdo/apps/containedLevels';
 import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import {actions as jsDebugger} from '@cdo/apps/code-studio/tools/jsdebugger/redux';
 import {addConsoleMessage, clearConsole} from './redux/textConsole';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';

@@ -27,7 +27,7 @@ get merged upstream.
 
 ### The CustomMarshalingInterpreter class
 
-This class is located in `apps/src/lib/tools/jsinterpreter/CustomMarshalingInterpreter.js`
+This class is located in `apps/src/code-studio/jsinterpreter/CustomMarshalingInterpreter.js`
 and subclasses the `Interpreter` class provided by the `@code-dot-org/js-interpreter` package.
 It adds additional functionality to support custom bi-directional marshaling of objects between
 the interpreter and native javascript. In order to do this, it also overrides several private
@@ -38,7 +38,7 @@ unsuitable for the core `Interpreter`.
 
 ### The JSInterpreter class
 
-This class is located in `apps/src/lib/tools/jsinterpreter/JSInterpreter.js`
+This class is located in `apps/src/code-studio/jsinterpreter/JSInterpreter.js`
 and wraps the `CustomMarshalingInterpreter` instance with an additional set
 of APIs to support step debugging and breakpoints. It relies on private APIs
 of the underlying `Interpreter` class to properly step between relevant interpreter
@@ -75,19 +75,19 @@ extra work to setup your development environment. Assuming you already have the
 
 3. Switch your local `code-dot-org/code-dot-org` git clone to use your local `JS-Interpreter` instead
    of the one installed from npm:
-   
+
    ```bash
    cd ../code-dot-org
    cd apps
    yarn link @code-dot-org/JS-Interpreter
    ```
-   
+
 ## Performing an Upgrade
 
 ### Step 1: Test the upgrade locally against code-dot-org:
 
 1. Merge the upstream commit that you'd like to upgrade to. Merging upstream master is a good way to start:
-   in `JS-Interpreter`, run the following:
+     in `JS-Interpreter`, run the following:
 
    ```bash
    git checkout -b master merge-upstream
@@ -97,9 +97,9 @@ extra work to setup your development environment. Assuming you already have the
 1. Run interpreter related unit tests in `code-dot-org/apps`:
 
    ```bash
-   yarn run test:entry -- --entry=./test/unit/lib/tools/jsinterpreter/
+   yarn run test:entry -- --entry=./test/unit/code-studio/jsinterpreter/
    ```
-   
+
    If the tests don't pass, then the upgrade won't work without changes to one or more of the components
    outlined above. This is usually because of changes to private APIs which we are abusing. If the tests
    do pass, you can continue to the next step
@@ -109,7 +109,7 @@ extra work to setup your development environment. Assuming you already have the
    ```bash
    yarn test
    ```
-   
+
 ### Step 2: Test the upgrade against the official ECMAScript test suite:
 
 > ## Warning
@@ -133,7 +133,7 @@ extra work to setup your development environment. Assuming you already have the
    ```bash
    `yarn bin`/js-interpreter-tyrant --diff --verbose --circleBuild=<build number from circle ci>
    ```
-   
+
 1. Assuming the fixes and regressions after performing the upgrade are acceptable, save the test results and rerun the tests on circle by pushing the branch up to github:
 
    ```bash
@@ -143,7 +143,7 @@ extra work to setup your development environment. Assuming you already have the
    ```
 
    At this point the circle build should pass since it is only looking for _regressions_ and doesn't care about tests that have never passed in the first place. Assuming the tests pass, you can go ahead and merge the pull request into master.
-   
+
 ### Step 3: Cut a new release of `@code-dot-org/js-interpreter`
 
 1. Checkout and update your local master branch with the newly merged code from the pull request:
@@ -152,7 +152,7 @@ extra work to setup your development environment. Assuming you already have the
    git checkout master
    git pull origin
    ```
-   
+
 2. Bump the npm package version, and publish to npm:
 
    ```bash
@@ -161,7 +161,7 @@ extra work to setup your development environment. Assuming you already have the
    git push --tags
    npm publish --access public
    ```
-   
+
 ### Step 4: Point code-dot-org/apps to the new version
 
 1. Add the new version of the interpreter to package.json in `code-dot-org/apps`:

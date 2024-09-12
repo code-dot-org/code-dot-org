@@ -1,12 +1,11 @@
-# Refactoring Code.org javascript #
+# Refactoring Code.org javascript
 
 The code base has been around for a while and a lot has changed. While there is
 still a lot of spaghetti, it's at least now in a place where we have the
 opportunity to refactor the code without changing build systems or doing any other
 super complicated thing.
 
-
-## The case for refactoring ##
+## The case for refactoring
 
 code.org has multiple websites, each of which have their own set of features
 that rely on rich client side javascript. Most of the javascript for these
@@ -26,7 +25,7 @@ organized well, which causes a number of problems for us:
 The goal of refactoring would be to make all of the above much less difficult
 and time consuming.
 
-## Key challenges to refactoring ##
+## Key challenges to refactoring
 
 Our codebase has morphed over time to use a number of different
 strategies/libraries/frameworks for managing state, business logic, and ui. If
@@ -54,8 +53,7 @@ more. These all live in the same code bases, making it easy for them to share
 code (which is good), but also easy for them to become unintentionally entangled
 with each other (which is bad).
 
-
-## Definitions ##
+## Definitions
 
 The first step to refactoring is to define a common language that we can use to
 talk about all the different parts of our system.
@@ -130,14 +128,14 @@ system. i.e. libraries can choose to act like singletons, where only one
 "instance" of the library can be in play on the page at a time, or they can act
 like classes which can be instantiated multiple times.
 
-----
+---
 
 So far, these terms are generic for any web product with a similar structure to
 ours. From here on, we'll dive into some more specific language for our stuff.
 
-----
+---
 
-## Library Types ##
+## Library Types
 
 Since "library" is such a broad/vague/overloaded term, it doesn't really help us
 decide how to arrange our code base into distinct library units. For that we
@@ -209,10 +207,9 @@ for which we need to establish well defined patterns.
    Some examples of "capsule libraries" in our code base would be
    `src/MusicController.js`, `src/dom.js`, `src/Sounds.js`.
 
+## Capsule Library
 
-## Capsule Library ##
-
-### Capsule Library Pattern ###
+### Capsule Library Pattern
 
 In the case of a relatively simple capsule library that consists of only one
 file, the pattern is pretty simple:
@@ -236,7 +233,7 @@ files the pattern is only a bit more involved:
   use. Calling code imports from the index.js file only. This makes dependency
   graphs easier to read.
 
-### Capsule Library Rules ###
+### Capsule Library Rules
 
 The rules for capsule libraries are also straightforward:
 
@@ -246,20 +243,19 @@ The rules for capsule libraries are also straightforward:
 - Do not reference DOM nodes by ID or css selectors that are not passed in to
   the library explicitly.
 
-
-## Feature Library ##
+## Feature Library
 
 Feature libraries require more discipline to avoid coupling and spaghetti code,
 since they must inherently interact with some form of global state at some
 point. But if we are careful and consistently apply a sensible pattern for
 writing feature libraries, we can keep things clean and manageable.
 
-### Feature Library Pattern ###
+### Feature Library Pattern
 
 The primary goal of the feature library pattern is to make it really clear where
 and how the library interacts with shared state or remote services.
 
-#### Exposing/Providing Shared State ####
+#### Exposing/Providing Shared State
 
 Shared application state should be managed by redux. Since there can only be one
 redux store on a page, while there can be multiple features on a page, feature
@@ -300,8 +296,8 @@ Action types are prefixed with the name of the feature to avoid collisions with
 other libraries and their reducers.
 
 ```js
-export const INCREMENT_STEP = "stepper/INCREMENT_STEP";
-export const DECREMENT_STEP = "stepper/DECREMENT_STEP";
+export const INCREMENT_STEP = 'stepper/INCREMENT_STEP';
+export const DECREMENT_STEP = 'stepper/DECREMENT_STEP';
 ```
 
 **`src/stepper/redux/reducer.js`**
@@ -335,11 +331,11 @@ globally unique on the page.
 import * as actionTypes from './actionTypes';
 
 export function incrementStep() {
-  return {type: actionTypes.INCREMENT_STEP}
+  return {type: actionTypes.INCREMENT_STEP};
 }
 
 export function decrementStep() {
-  return {type: actionTypes.DECREMENT_STEP}
+  return {type: actionTypes.DECREMENT_STEP};
 }
 ```
 
@@ -350,7 +346,8 @@ so that they know how to access the part of the global state tree with the data
 they are interested in. This is done using the `setRootSelector` function.
 
 ```js
-let getRoot = () => throw new Error("rootSelector not set. Did you forget to call configure?");
+let getRoot = () =>
+  throw new Error('rootSelector not set. Did you forget to call configure?');
 
 export function setRootSelector(rootSelector) {
   getRoot = rootSelector;
@@ -392,6 +389,7 @@ An entry point which uses this feature library (and the state that it exposes)
 on a given page would then have code like this:
 
 **`src/entry-points/some-page.js`**
+
 ```js
 
 import React from 'react';
@@ -418,7 +416,7 @@ ReactDOM.render(
 );
 ```
 
-#### Exposing/Providing Connected React Components ####
+#### Exposing/Providing Connected React Components
 
 Features that maintain shared application state usually do so because they also
 render/expose connected react components that work with that state. Continuing
@@ -426,14 +424,14 @@ with our stepper library example, if we wanted to export a connected
 `<Incrementor />` component, we would write it like this:
 
 **`src/stepper/components/Incrementor.jsx`**
+
 ```jsx
 import {incrementStep} from '../redux/actionCreators';
 import {getStep} from '../redux/selectors';
 
-connect(
-  state => ({step: getStep(state)}),
-  {incrementStep}
-)(props => <button onClick={props.incrementStep}>Increment to {props.step + 1}</button>);
+connect(state => ({step: getStep(state)}), {incrementStep})(props => (
+  <button onClick={props.incrementStep}>Increment to {props.step + 1}</button>
+));
 ```
 
 and the `index.js` file would be updated to explicitly export this component:
@@ -445,7 +443,7 @@ import Incrementor from './components/Incrementor';
 export Incrementor;
 ```
 
-#### Using Shared State in a Feature Library ####
+#### Using Shared State in a Feature Library
 
 In some circumstances, feature libraries may need to access shared state that is
 provided by another feature library. To make our discussion more concrete, let's
@@ -543,7 +541,7 @@ export function decrementStep() {
 }
 ```
 
-### Feature Library Rules ###
+### Feature Library Rules
 
 In order to maintain some sanity, there are a few important rules that govern
 what feature libraries cannot do:
@@ -554,18 +552,18 @@ what feature libraries cannot do:
 - do not depend directly on other feature libraries unless you are reponsible
   for configuring them
 
-## Further Reading ##
+## Further Reading
 
 If all this sounds a bit confusing to you, read
 http://jaysoo.ca/2016/02/28/organizing-redux-application/, which is a more
 concise explanation of basically the same thing as is proposed in this document.
 
-# The Actual Plan #
+# The Actual Plan
 
 While having patterns for capsule and feature libraries is helpful, we need to
 go one step further to figure out how to actually execute this refactoring.
 
-## Directory Hierarchy ##
+## Directory Hierarchy
 
 The first step is determining a sensible directory structure that organizes code
 based on the various patterns we want to use, and based on the various problem
@@ -615,7 +613,7 @@ And here is a list of ordered steps to take that will move us in this direction:
 5. Remove cycles from our dependency graph [hard]
 6. Move applab/gamelab/weblab/maze/studio/etc into `lib/kits` directory [medium]
 7. Move all the other stateless utility modules into `lib/util` [easy]
-8. Move all the other stateful modules into `lib/tools` directory [medium]
+8. Move all the other stateful modules into `code-studio` directory [medium]
 9. Refactor entry points to inject dependent modules into feature libraries [hard]
 10. [...]
 11. profit!

@@ -21,7 +21,7 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import CustomMarshalingInterpreter from '../../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import craftMsg from '../locale';

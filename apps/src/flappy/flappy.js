@@ -8,9 +8,9 @@
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import placeholder from '../../static/flappy/placeholder.jpg';
+import CustomMarshalingInterpreter from '../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {TestResults, ResultType} from '../constants';
 import {dataURIFromURI} from '../imageUtils';
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '../redux';
 import AppView from '../templates/AppView';
 import {getRandomDonorTwitter} from '../util/twitterHelper';

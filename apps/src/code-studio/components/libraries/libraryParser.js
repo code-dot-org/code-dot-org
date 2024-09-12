@@ -1,4 +1,4 @@
-import {getFunctionsAndMetadata} from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+import {getFunctionsAndMetadata} from '@cdo/apps/code-studio/tools/jsinterpreter/JSInterpreter';
 
 /**
  * Finds all functions in the provided code and returns them with any metadata

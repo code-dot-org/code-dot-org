@@ -1,7 +1,7 @@
 import Interpreter from '@code-dot-org/js-interpreter';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+import JSInterpreter from '@cdo/apps/code-studio/jsinterpreter/JSInterpreter';
 import Observer from '@cdo/apps/Observer';
 
 import {expect, assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports

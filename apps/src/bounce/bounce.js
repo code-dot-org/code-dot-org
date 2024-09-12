@@ -21,7 +21,7 @@ var tiles = require('./tiles');
 // Require statements can change behavior based on the order they are called.
 // This might be safe to remove but needs investigation whether any behavior is changed by order.
 /* eslint-disable import/order */
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import CustomMarshalingInterpreter from '../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import AppView from '../templates/AppView';
 import {getStore} from '../redux';
 import {getRandomDonorTwitter} from '../util/twitterHelper';

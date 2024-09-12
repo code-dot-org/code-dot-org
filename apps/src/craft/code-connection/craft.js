@@ -6,8 +6,8 @@ import {getStore} from '@cdo/apps/redux';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import AppView from '@cdo/apps/templates/AppView';
 
+import CustomMarshalingInterpreter from '../../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import dom from '../../dom';
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 import cc_client from './cc-client';
 import CraftVisualizationColumn from './CraftVisualizationColumn';

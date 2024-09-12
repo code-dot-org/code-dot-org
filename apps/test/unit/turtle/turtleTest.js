@@ -1,5 +1,5 @@
+import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/code-studio/jsinterpreter/CustomMarshalingInterpreter';
 import {Position} from '@cdo/apps/constants';
-import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';

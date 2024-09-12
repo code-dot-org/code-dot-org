@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {actions, selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import {actions, selectors} from '@cdo/apps/code-studio/tools/jsdebugger/redux';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import color from '@cdo/apps/util/color';
 

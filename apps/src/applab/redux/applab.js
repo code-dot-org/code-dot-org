@@ -1,5 +1,5 @@
 /** @file App Lab redux module */
-import {reducers as jsDebuggerReducers} from '../../lib/tools/jsdebugger/redux';
+import {reducers as jsDebuggerReducers} from '../../code-studio/tools/jsdebugger/redux';
 import {reducer as maker} from '../../maker/redux';
 import data from '../../storage/redux/data';
 import {ApplabInterfaceMode} from '../constants';
