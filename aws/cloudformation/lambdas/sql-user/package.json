@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@aws-sdk/client-secrets-manager": "^3.414.0",
-    "aws-sdk": "^2.1443.0",
+    "aws-sdk": "^2.1691.0",
     "cfn-response-promise": "^1.1.0",
     "ci": "^2.3.0",
     "mysql": "^2.18.1"
