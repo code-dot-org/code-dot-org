@@ -22,19 +22,18 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
 
 const labeledGridLayouts = {
   horizontal: {
-    gridLayoutRows: '300px minmax(0, 1fr)',
+    gridLayoutRows: '1fr',
     gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
     gridLayout: `
     "info-panel workspace preview-container"
-    "file-browser workspace preview-container"`,
+    `,
   },
   vertical: {
-    gridLayoutRows: '300px minmax(0, 1fr) 1fr',
+    gridLayoutRows: '1fr 1fr',
     gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
     gridLayout: `
     "info-panel workspace workspace"
-    "file-browser workspace workspace"
-    "file-browser preview-container preview-container"`,
+    "info-panel preview-container preview-container"`,
   },
 };
 
@@ -71,6 +70,7 @@ const defaultConfig: ConfigType = {
 
   labeledGridLayouts,
   activeGridLayout: 'horizontal',
+  showFileBrowser: true,
 };
 
 const defaultSource: ProjectType = {
