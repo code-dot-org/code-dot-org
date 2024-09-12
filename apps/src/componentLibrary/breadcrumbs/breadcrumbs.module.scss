@@ -3,187 +3,106 @@
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 
-// Chips common styles
-.chips {
-  fieldset {
-    .chipsContainer {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+// Breadcrumbs common styles
+.breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+
+  .breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: $light-black;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-decoration: none;
+    border-radius: 4px;
+
+    // Current location styles
+    &:last-child {
+      color: $light_primary_500;
+      cursor: default;
     }
 
-    .chip {
-      display: inline-block;
-      background-color: $light_white;
-      border: 1px solid $light_black;
+    // Hover, Pressed, Visited styles
+    &:hover, :active, :visited {
+      &:not(:last-child) {
+        color: $light_gray_800;
+      }
+    }
+
+    // Focus styles
+    &:focus-visible {
       color: $light_black;
-      min-width: 30px;
-      text-align: center;
-      border-radius: 100px;
-      white-space: nowrap;
-      margin: 0;
-      cursor: pointer;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      -webkit-tap-highlight-color: transparent;
-
-      input[type="checkbox"] {
-        position: absolute;
-        opacity: 0;
-      }
-
-      // Checked styles
-      &:has(input[type="checkbox"]:checked) {
-        border: 1px solid $light_primary_500;
-        background-color: $light_primary_500;
-        color: $light_white;
-      }
-
-      // Hover styles
-      &:hover {
-        background-color: $light_gray_100;
-
-        &:has(input[type="checkbox"]:checked) {
-          background-color: $light_primary_700;
-        }
-      }
-
-      // Pressed styles
-      &:active {
-        background-color: $light_primary_100;
-        outline: $light_primary_500 solid 2px;
-        outline-offset: -2px;
-
-        &:has(input[type="checkbox"]:checked) {
-          background-color: $light_primary_700;
-          outline: $light_primary_500 solid 2px;
-          outline-offset: -2px;
-        }
-      }
-
-      // Focus styles
-      &:has(input[type="checkbox"]:focus-visible) {
-        outline: 2px solid $light_primary_500;
-        outline-offset: 2px;
-      }
-
-      //Disabled styles
-      &:has(input[type="checkbox"]:disabled) {
-        color: $light_gray_200;
-        border-color: $light_gray_200;
-
-        &:hover {
-          cursor: not-allowed;
-          background-color: $light_white;
-        }
-
-        &:active {
-          background-color: $light_white;
-          outline: none;
-        }
-      }
-
-      &:has(input[type="checkbox"]:disabled:checked) {
-        background-color: $light_gray_200;
-        color: $light_white;
-      }
+      outline: 2px solid $light_primary_500;
+      outline-offset: 2px;
     }
   }
 
-  fieldset div:nth-of-type(1) {
-    margin-inline-start: 0;
+  i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: $light_black_opacity-70;
   }
+
 }
 
-// Chips Colors
-.chips-black {
-  fieldset {
-    .chip {
-      border-color: $light_black;
-    }
-  }
-}
-
-.chips-gray {
-  fieldset {
-    .chip {
-      border-color: $light_gray_400;
-    }
-  }
-}
-
-// Chips sizes
-.chips-l {
-  .groupLabel {
+// Breadcrumbs sizes
+.breadcrumbs-l {
+  .breadcrumb {
     @include label-one;
+    margin: 0;
   }
 
-  .chip {
-    padding: calc(0.62rem + 2px) 1.25rem 0.62rem;
-
-    &.chip-thick {
-      @include button-one-text;
-    }
-
-    &.chip-thin {
-      @include body-one;
-    }
+  i {
+    padding: 6px;
+    font-size: 13px;
+    width: 16px;
+    line-height: 1.25;
   }
 }
 
-.chips-m {
-  .groupLabel {
+.breadcrumbs-m {
+  .breadcrumb {
     @include label-two;
+    margin: 0;
   }
 
-  .chip {
-    padding: calc(0.5rem + 2px) 1rem 0.5rem;
-
-    &.chip-thick {
-      @include button-two-text;
-    }
-
-    &.chip-thin {
-      @include body-two;
-    }
+  i {
+    padding: 5px 6px;
+    font-size: 12px;
+    width: 15px;
+    line-height: 1.25;
   }
 }
 
-.chips-s {
-  .groupLabel {
+.breadcrumbs-s {
+  .breadcrumb {
     @include label-three;
+    margin: 0;
   }
 
-  .chip {
-    padding: calc(0.31rem + 1px) 0.75rem 0.31rem;
-
-    &.chip-thick {
-      @include button-three-text;
-    }
-
-    &.chip-thin {
-      @include body-three;
-    }
+  i {
+    padding: 5px 6px;
+    font-size: 11px;
+    width: 14px;
+    line-height: 1.25;
   }
 }
 
-.chips-xs {
-  .groupLabel {
+.breadcrumbs-xs {
+  .breadcrumb {
     @include label-four;
+    margin: 0;
   }
 
-  .chip {
-    padding: calc(0.12rem + 1px) 0.5rem 0.12rem;
-
-    &.chip-thick {
-      @include button-four-text;
-    }
-
-    &.chip-thin {
-      @include body-four;
-    }
+  i {
+    padding: 4px 6px;
+    font-size: 10px;
+    width: 13px;
+    line-height: 1.25;
   }
 }
