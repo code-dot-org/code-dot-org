@@ -1,0 +1,67 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require_relative '../../dashboard/config/environment'
+
+def main
+  options = {}
+  OptionParser.new do |opts|
+    opts.on('--section_id SECTION_ID') do |section_id|
+      options[:section_id] = Integer(section_id)
+    end
+  end.parse!
+
+  CSV.open("aichat_events.csv", "w") do |csv|
+    headers = %w[
+      aichat_event_id user_id path created_at updated_at role chatMessageText status
+    ]
+    csv << headers
+
+    student_users_in_section = Section.find(options[:section_id]).followers.map(&:student_user)
+    rows = AichatEvent.where(
+      user: student_users_in_section,
+    )
+
+    rows.each do |row|
+      event = JSON.parse(row.aichat_event)
+
+      level = Level.find(row.level_id)
+      path = ""
+
+      script_level = level.script_levels.find_by_script_id(row.script_id)
+      if script_level
+        # This handles chat events that occurred on standard levels in a progression
+        path = script_level.path
+      else
+        # This handles chat events that occurred on a sublevel
+        parent_levels = BubbleChoice.parent_levels(level.name)
+        parent_levels_in_script = parent_levels.filter do |pl|
+          pl.script_levels.any? {|sl| sl.script_id == row.script_id}
+        end
+
+        if parent_levels_in_script
+          parent_level = parent_levels_in_script.first
+          sublevel_position = parent_level.sublevel_position(level)
+          path = parent_level.build_script_level_path(
+            parent_level.script_levels.first,
+            {sublevel_position: sublevel_position}
+          )
+        end
+      end
+
+      next if event["role"] != "user" && event["role"] != "assistant"
+      csv << [
+        row.id,
+        row.user_id,
+        path,
+        row.created_at,
+        row.updated_at,
+        event["role"],
+        event["chatMessageText"],
+        event["status"]
+      ]
+    end
+  end
+end
+
+main
