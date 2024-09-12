@@ -9,12 +9,12 @@ import {
   SingleSignOnProviders,
   LmsPlatformNames,
 } from '@cdo/apps/lib/ui/accounts/constants';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
 
 import RailsAuthenticityToken from '../lib/util/RailsAuthenticityToken';
 
@@ -171,7 +171,8 @@ class ManageLinkedAccounts extends React.Component {
     Object.values(SingleSignOnProviders).forEach(provider => {
       if (
         provider === SingleSignOnProviders.lti_v1 &&
-        (!optionsByProvider[provider] || !experiments.isEnabled(experiments.LTI_ACCOUNT_UNLINKING))
+        (!optionsByProvider[provider] ||
+          !experiments.isEnabled(experiments.LTI_ACCOUNT_UNLINKING))
       ) {
         return;
       }

@@ -3,14 +3,15 @@ import {Fade} from 'react-bootstrap';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import i18n from '@cdo/locale';
 import {navigateToHref} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 import {AccountUnlinkWarningModalProps} from './types';
+
 import styles from './accountUnlinkWarningModal.module.scss';
 
 const AccountUnlinkWarningModal = ({
@@ -26,7 +27,7 @@ const AccountUnlinkWarningModal = ({
       PLATFORMS.STATSIG
     );
 
-    const res = await fetch('/lti/v1/account_linking/unlink', {
+    await fetch('/lti/v1/account_linking/unlink', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -50,14 +51,22 @@ const AccountUnlinkWarningModal = ({
   return (
     <Fade in={isOpen} mountOnEnter unmountOnExit>
       <AccessibleDialog onClose={onClose}>
-        <Typography semanticTag='h4' visualAppearance='heading-sm' className={styles.warningTitle}>
+        <Typography
+          semanticTag="h4"
+          visualAppearance="heading-sm"
+          className={styles.warningTitle}
+        >
           {i18n.manageLinkedAccounts_warning_title({lmsName})}
         </Typography>
         <hr className={styles.line} />
-        <Typography semanticTag='p' visualAppearance='body-two' className={styles.warningText}>
+        <Typography
+          semanticTag="p"
+          visualAppearance="body-two"
+          className={styles.warningText}
+        >
           {i18n.manageLinkedAccounts_warning_body({lmsName})}
         </Typography>
-        <Typography semanticTag='p' visualAppearance='body-two'>
+        <Typography semanticTag="p" visualAppearance="body-two">
           {i18n.manageLinkedAccounts_warning_instructions({lmsName})}
         </Typography>
         <hr className={styles.line} />
