@@ -982,10 +982,11 @@ const transferStudentsOnServer = (
 export const loadSectionStudentData = sectionId => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
+    let oldSectionId = state.sectionId;
 
-    // if section ID matches, don't do anything and say isLoading is false
-    // Don't load data if it's already being fetched.
+    // Load data only if section Id doesn't already match
     if (state.sectionId !== sectionId) {
+      // Set section ID to indicate student data for current section.
       dispatch(setSectionInfo(sectionId));
       dispatch(startLoadingStudents());
       $.ajax({
@@ -999,6 +1000,9 @@ export const loadSectionStudentData = sectionId => {
           sectionId
         );
         dispatch(setStudents(convertedStudentData));
+      }).fail(() => {
+        // revert to old section ID in case of failure to backend call
+        dispatch(setSectionInfo(oldSectionId));
       });
     } else {
       dispatch(finishLoadingStudents());
