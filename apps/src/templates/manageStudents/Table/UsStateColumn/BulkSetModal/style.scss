@@ -15,20 +15,22 @@
 
   & hr {
     border-color: $border_gray;
-    margin: 15px 0;
+    margin: 1rem 0;
   }
 
   & .form-group {
-    margin-bottom: 5px;
-
-    .control-label {
+    & .control-label {
       font-weight: $semi-bold-font-weight;
+    }
+
+    & .form-control {
+      margin-bottom: 1rem;
     }
   }
 
   &-footer {
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
+    gap: .5rem;
   }
 };
