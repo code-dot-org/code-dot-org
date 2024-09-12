@@ -162,7 +162,7 @@ updates:
       - "dependencies"
   # Platform NPM/Yarn Packages
   - package-ecosystem: "npm"
-    open-pull-requests: 0
+    open-pull-requests-limit: 0
     directories: 
     - "/apps/eslint"
     - "/bin/i18n"
@@ -172,7 +172,7 @@ updates:
       day: "sunday"
   # Infrastructure NPM/Yarn Packages
   - package-ecosystem: "npm"
-    open-pull-requests: 0
+    open-pull-requests-limit: 0
     directories:
     - "/aws/cloudformation"
     - "/aws/cloudformation/lambdas/sql-user"
@@ -190,7 +190,7 @@ updates:
       day: "sunday"
   # Docker Images
   - package-ecosystem: "docker"
-    open-pull-requests: 0
+    open-pull-requests-limit: 0
     directories:
     - "/aws/offsite/aurora-snapshots-fargate"
     - "/docker/dockerfiles"
@@ -199,7 +199,7 @@ updates:
       day: "sunday"
   # Github Actions
   - package-ecosystem: "github-actions"
-    open-pull-requests: 0
+    open-pull-requests-limit: 0
     directories:
     - "/.github"
     - "/.github/actions/**/"
@@ -209,7 +209,7 @@ updates:
       day: "sunday"
 
   - package-ecosystem: 'pip'
-    open-pull-requests: 0
+    open-pull-requests-limit: 0
     directory: '/'
     schedule:
       interval: 'weekly'
