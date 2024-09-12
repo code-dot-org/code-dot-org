@@ -23,7 +23,7 @@ Feature: AI Chat
     Then element "[aria-label='AI bot']" has css property "background-color" equal to "rgb(224, 248, 249)"
 
   Scenario: Editing system prompt produces success notification and saves
-    When I press keys "You are a silly chatbot" for element "#system-prompt"
+    When I press keys "You are a safe chatbot" for element "#system-prompt"
     And I wait until element "#uitest-update-customizations" is enabled
     And I click selector "#uitest-update-customizations"
     Then I wait until element ".uitest-aichat-chat-alert" contains text "System prompt has been updated"
@@ -32,7 +32,7 @@ Feature: AI Chat
     And I click selector "#ui-close-dialog" once I see it
     And I wait until element "#ui-close-dialog" is not visible
     And I dismiss the teacher panel
-    Then element "#system-prompt" has text "You are a silly chatbot"
+    Then element "#system-prompt" has text "You are a safe chatbot"
 
   Scenario: Publishing model enables published view and saves
     When I click selector "#modelCustomizationTabs-tab-modelCardInfo"
