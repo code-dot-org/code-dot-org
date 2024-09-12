@@ -23,9 +23,21 @@
   color: $black;
 }
 
+.workspaceToggleButtonContainer {
+  background-color: $charcoal;
+  display: flex;
+  align-items: center;
+}
+
+.workplaceEditorWrapper {
+  overflow: scroll;
+  flex: 1;
+}
+
 .workspaceWorkarea {
   display: grid;
-  overflow: scroll;
+  grid-auto-rows: auto 1fr auto;
+  overflow: hidden;
   flex: 1;
 }
 
@@ -38,5 +50,5 @@
 }
 
 .workspaceWarningArea {
-  grid-column: 1 / span 2;
+  grid-column: span 2;
 }

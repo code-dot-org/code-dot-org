@@ -2,6 +2,7 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {Editor} from '@codebridge/Editor';
 import {FileBrowser} from '@codebridge/FileBrowser';
 import {FileTabs} from '@codebridge/FileTabs';
+import ToggleFileBrowserButton from '@codebridge/ToggleFileBrowserButton';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -49,45 +50,60 @@ const Workspace = () => {
       rightHeaderContent={<HeaderButtons />}
       className={moduleStyles.workspace}
     >
-      <div className={moduleStyles.workspaceContainer}>
-        <FileTabs />
+      <div
+        className={moduleStyles.workspaceWorkarea}
+        style={{
+          gridTemplateColumns: `${
+            config.showFileBrowser ? '200px' : '30px'
+          } auto`,
+        }}
+      >
         <div
-          className={moduleStyles.workspaceWorkarea}
+          className={moduleStyles.workspaceToggleButtonContainer}
           style={{
-            gridTemplateColumns: config.showFileBrowser ? '200px auto' : '100%',
+            justifyContent: !config.showFileBrowser ? 'center' : undefined,
+            height: '32px',
           }}
         >
-          {isStartMode && (
-            <div
-              id="startSourcesWarningBanner"
-              className={moduleStyles.warningBanner}
-            >
-              {projectTemplateLevel
-                ? WARNING_BANNER_MESSAGES.TEMPLATE
-                : WARNING_BANNER_MESSAGES.STANDARD}
-            </div>
-          )}
-          {config.showFileBrowser && <FileBrowser />}
+          <ToggleFileBrowserButton />
+        </div>
+        <div>
+          <FileTabs />
+        </div>
+        {isStartMode && (
+          <div
+            id="startSourcesWarningBanner"
+            className={moduleStyles.warningBanner}
+          >
+            {projectTemplateLevel
+              ? WARNING_BANNER_MESSAGES.TEMPLATE
+              : WARNING_BANNER_MESSAGES.STANDARD}
+          </div>
+        )}
+        {config.showFileBrowser && <FileBrowser />}
 
+        <div
+          className={moduleStyles.workplaceEditorWrapper}
+          style={{
+            gridColumn: !config.showFileBrowser ? 'span 2' : undefined,
+          }}
+        >
           <Editor
             langMapping={config.languageMapping}
             editableFileTypes={config.editableFileTypes}
           />
-          <div className={moduleStyles.workspaceWarningArea}>
-            {viewingOldVersion && (
-              <Alert
-                text={codebridgeI18n.viewingOldVersion()}
-                type={'warning'}
-              />
-            )}
-            {hasRestoredOldVersion && (
-              <Alert
-                text={codebridgeI18n.restoredOldVersion()}
-                type={'success'}
-                onClose={closeRestoredVersionBanner}
-              />
-            )}
-          </div>
+        </div>
+        <div className={moduleStyles.workspaceWarningArea}>
+          {viewingOldVersion && (
+            <Alert text={codebridgeI18n.viewingOldVersion()} type={'warning'} />
+          )}
+          {hasRestoredOldVersion && (
+            <Alert
+              text={codebridgeI18n.restoredOldVersion()}
+              type={'success'}
+              onClose={closeRestoredVersionBanner}
+            />
+          )}
         </div>
       </div>
     </PanelContainer>
