@@ -26,7 +26,8 @@
       }
     },
     "thumbnail_url": "https://images.code.org/66e49234ca2e09308b88b14d25e48611-image-1651260019479.gif",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:18.605+00:00\",\"changed\":[\"cloned from \\\"CSA U5L8-L4b_2022\\\"\"],\"cloned_from\":\"CSA U5L8-L4b_2022\"}]"

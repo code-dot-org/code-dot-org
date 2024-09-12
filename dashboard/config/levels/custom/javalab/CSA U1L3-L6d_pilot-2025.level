@@ -365,7 +365,8 @@
     "bubble_choice_description": "Instantiate the missing `Painter` objects so they can navigate through The Neighborhood to reach the traffic cones.",
     "thumbnail_url": "https://images.code.org/943475edcc2a9740461e0dec0db5072a-U1L4-L3d.gif",
     "video_key": "csa_creating_objects",
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-01T20:43:40.758+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L6d_2025\\\"\"],\"cloned_from\":\"CSA U1L3-L6d_2025\"}]"

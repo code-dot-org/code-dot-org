@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-06T17:16:54.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "display_name": "The Neighborhood",
@@ -1334,12 +1338,9 @@
       ]
     ],
     "thumbnail_url": "https://images.code.org/8bc34a20fc4fed80e8864b8f16bd40ac-image-1639688758233.gif",
-    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHb8P3/b6ls7VSz8nxyw\nx3Dwb0kaHYW4NtDW3p0ojL60KYy5ygUZ/GTLOhAoZK4iML5d0DNHRm5QahiL\nOWFWuwcf\n"
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHb8P3/b6ls7VSz8nxyw\nx3Dwb0kaHYW4NtDW3p0ojL60KYy5ygUZ/GTLOhAoZK4iML5d0DNHRm5QahiL\nOWFWuwcf\n",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-12-06T17:16:54.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-06T17:16:54.222+00:00\",\"changed\":[\"cloned from \\\"CSA U7L6-L6a\\\"\"],\"cloned_from\":\"CSA U7L6-L6a\"},{\"changed_at\":\"2021-12-06 17:17:12 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-07 17:09:39 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-07 17:11:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-07 18:45:37 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-07 18:52:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-07 18:55:22 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-08 14:33:12 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-08 14:33:46 +0000\",\"changed\":[\"display_name\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-16 21:06:17 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-16 21:24:09 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-16 21:26:26 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 15:22:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

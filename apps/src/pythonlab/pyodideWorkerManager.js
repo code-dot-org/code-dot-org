@@ -7,7 +7,7 @@ import {
 } from '@codebridge/redux/consoleRedux';
 
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 
 import {setLoadingCodeEnvironment} from '../lab2/redux/systemRedux';

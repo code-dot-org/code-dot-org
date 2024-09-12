@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-12T19:46:10.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Request a code review to get feedback from your peers on your `shiftFoodTrucks()`(#e7e8ea) method.\r\n\r\nWhen you are finished receiving feedback, return to your project and click the **Close review** button.\r\n\r\n##Requesting Feedback\r\n\r\n**Commit your code** and add a comment that includes:\r\n\r\n* a description of the goals and intended outcome of the program\r\n\r\n* any additional relevant information\r\n\r\n* specific tasks or questions you want your reviewer to perform or answer\r\n\r\n##TAG to Give Feedback\r\n*Remember to keep feedback kind, specific, and helpful. Refer to your sentence starters to structure your feedback.*\r\n\r\n1. Tell them something you like about their code.\r\n\r\n2. Ask them something about the code.\r\n\r\n3. Give a suggestion for improvement.",
@@ -11,15 +15,9 @@
     "display_name": "Food Trucks",
     "bubble_choice_description": "The owner of the Project Mercury Pastries Food Truck business assigns food trucks for each day of the week in several cities. They want to shift the order of food trucks assigned for each city.",
     "thumbnail_url": "https://images.code.org/ea1b090b2fbb2c289dabfdaa149ade05-image-1651095705021.png",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-12T19:46:10.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-12T19:46:10.607+00:00\",\"changed\":[\"cloned from \\\"CSA U5L9-L3d CR_2022\\\"\"],\"cloned_from\":\"CSA U5L9-L3d CR_2022\"},{\"changed_at\":\"2022-04-12 19:46:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-30 00:17:26 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-30 01:40:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-30 12:41:56 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:07:36 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

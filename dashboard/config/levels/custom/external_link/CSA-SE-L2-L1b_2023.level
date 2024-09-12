@@ -12,7 +12,8 @@
     "display_name": "BrandBook",
     "bubble_choice_description": "Unleash your inner fashionista with BrandBook! We bring you an A-Z guide of the world's most coveted fashion brands and designers, alphabetically sorted for your browsing pleasure. So go on, dive in, and explore the trends that are just a click away!",
     "thumbnail_url": "https://images.code.org/b25bfe6751718a77fc5c314a493d33c3-brandbook.gif",
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-10-03T21:33:56.958+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L1b\\\"\"],\"cloned_from\":\"CSA-SE-L2-L1b\"}]"

@@ -4,8 +4,8 @@ import React, {CSSProperties, useState} from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';

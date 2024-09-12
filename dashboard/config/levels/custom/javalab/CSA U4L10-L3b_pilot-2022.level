@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:32:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Create a scene that draws the logos of basketball teams based on the number of championship wins they have.\r\n\r\n##In BasketballScene.java:\r\n\r\n1. Write the `chooseSize()`(#e7e8ea) method using multi-selection statements to check the number of championship wins and return the size to draw the image.\r\n\r\n   * If the number of wins is greater than `10`(#e7e8ea), return a size of `150`(#e7e8ea).\r\n   \r\n   * Else if the number of wins is greater than or equal to `5`(#e7e8ea), return a size of `100`(#e7e8ea).\r\n   \r\n   * Otherwise, return a size of `50`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n2. Call the `createScene()`(#e7e8ea) method with the array.\r\n\r\n3. Use `Theater.playScenes()`(#e7e8ea) to play the scene.\r\n\r\n::: details [**Show Me How**]\r\nA multi-selection statement uses the following syntax:\r\n  \r\n  ```\r\n  if (condition) {\r\n    // code to execute\r\n  }\r\n  else if (condition) {\r\n    // code to execute\r\n  }\r\n  else {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nYou can have more than one `else if`(#e7e8ea) if you have additional conditions you need to check.\r\n:::",
@@ -71,12 +75,9 @@
         "isVisible": true,
         "tabOrder": 4
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:32:19.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:32:19.197+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L3b_2022\\\"\"],\"cloned_from\":\"CSA U4L10-L3b_2022\"},{\"changed_at\":\"2022-09-22 19:55:45 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 19:56:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 19:57:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 19:57:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 20:07:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 20:07:33 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-13 14:38:58 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-13 14:39:04 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

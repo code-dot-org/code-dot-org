@@ -15,7 +15,8 @@
     "project_template_level_name": "CSA U2L6-L3c PBT_pilot-2022",
     "bubble_choice_description": "Request a code review to get feedback from your peers on your Donut class.",
     "thumbnail_url": "https://images.code.org/952dc2dc70311e4c81ded16c446c49e6-image-1647347060307.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:23:49.489+00:00\",\"changed\":[\"cloned from \\\"CSA U2L6-L4c CR_2022\\\"\"],\"cloned_from\":\"CSA U2L6-L4c CR_2022\"}]"

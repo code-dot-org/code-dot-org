@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:49:59.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A students wants to store data about the bestselling books to create a visual of the books that received the most reviews each year. They have a 2D array of `Book`(#e7e8ea) objects, where each row represents fiction books and non-fiction books, respectively. Each column represents 2017, 2018, and 2019, respectively.\r\n\r\n##In BookScene.java:\r\n\r\n1. Write the `findMostReviews()`(#e7e8ea) method to return a 1D `Book`(#e7e8ea) array containing the `Book`(#e7e8ea) objects that had the most reviews each year.\r\n\r\n   * Create a 1D `Book`(#e7e8ea) array that is the same length as the number of columns in `bestsellers`(#e7e8ea).\r\n   \r\n   * Traverse the `bestsellers`(#e7e8ea) array to find the book with the most reviews each year.\r\n   \r\n   * Add the `Book`(#e7e8ea) object with the most reviews each year to the 1D `Book`(#e7e8ea) array.\r\n   \r\n   * Return the 1D `Book`(#e7e8ea) array.\r\n\r\n2. Write the `createScene()`(#e7e8ea) method to draw the book cover that had the most reviews each year.\r\n\r\n   * Call the `findMostReviews()`(#e7e8ea) method to get the 1D array of `Book`(#e7e8ea) objects.\r\n\r\n   * Traverse the 1D array and draw the book cover for each `Book`(#e7e8ea) object.\r\n   \r\n   * Use the `pause`(#e7e8ea) and `clear()`(#e7e8ea) methods in the `Scene`(#e7e8ea) class to pause and clear the scene before drawing the next book cover.\r\n\r\n::: details [**Show Me How**]\r\nTraversing a 2D array in column-major order uses the following syntax:\r\n  \r\n  ```\r\n  for (int col = 0; col < arrayName[0].length; col++) {\r\n    for (int row = 0; row < arrayName.length; row++) {\r\n      // code to execute\r\n    }\r\n  }\r\n  ```\r\n:::",
@@ -37,12 +41,9 @@
         "isVisible": true,
         "tabOrder": 2
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:49:59.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:49:59.967+00:00\",\"changed\":[\"cloned from \\\"CSA U5L3-L4d_2022\\\"\"],\"cloned_from\":\"CSA U5L3-L4d_2022\"},{\"changed_at\":\"2022-10-09 18:16:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 18:16:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 18:20:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 18:25:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 18:25:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 18:25:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

@@ -33,6 +33,8 @@ Feature: AI Chat
     And I dismiss the teacher panel
     Then element "#system-prompt" has text "You are a silly chatbot"
 
+  # Cannot access AWS Comprehend in Drone. Refer to comment above.
+  @no_circle
   Scenario: Publishing model enables published view and saves
     When I click selector "#modelCustomizationTabs-tab-modelCardInfo"
     And I wait until element "#uitest-publish-notes-tab-content" is visible

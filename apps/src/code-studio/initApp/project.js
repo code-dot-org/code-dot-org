@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 

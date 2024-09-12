@@ -37,7 +37,11 @@ export const defaultMaps: {
     Logic: ['controls_if', 'logic_compare'],
   },
   [BlockMode.ADVANCED]: {
-    Play: [BlockTypes.PLAY_SOUND],
+    Play: [
+      BlockTypes.PLAY_SOUND,
+      BlockTypes.PLAY_PATTERN_AT_MEASURE,
+      BlockTypes.PLAY_CHORD_AT_MEASURE,
+    ],
     Events: [BlockTypes.TRIGGERED_AT],
     Control: [BlockTypes.FOR_LOOP],
     Math: [
@@ -46,6 +50,7 @@ export const defaultMaps: {
       'math_arithmetic',
       'math_random_int',
       'math_modulo',
+      'math_number_property',
     ],
     Logic: ['controls_if', 'logic_compare'],
   },

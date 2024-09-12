@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-12T16:04:08.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The Guess Who game contains a list of characters that the player can choose from. The computer randomly chooses questions when the **Ask a Question** button is clicked to eliminate characters from the board based on their traits (gender, hair color, eye color, and shirt color). Each `Character` object has a 1D array containing their traits.\r\n\r\nIn `GuessWho.java`, complete the `createCharacters()` method. This method returns a 2D array of `Character` objects that each contain their list of traits from the 2D array `imageFiles`. Each row in `imageFiles` contains the traits for one `Character`.",
@@ -44,12 +48,9 @@
       }
     },
     "bubble_choice_description": "Use multiple lists in this Guess Who game to manage the list of traits for each character.",
-    "thumbnail_url": "https://images.code.org/19ed0639a37b830520674380c439eaae-image-1641777159749.png"
+    "thumbnail_url": "https://images.code.org/19ed0639a37b830520674380c439eaae-image-1641777159749.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-12-12T16:04:08.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-12 16:04:11 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-09 00:21:16 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-09 20:09:12 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-09 20:26:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-09 21:09:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 00:58:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 01:13:17 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 01:18:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 01:25:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

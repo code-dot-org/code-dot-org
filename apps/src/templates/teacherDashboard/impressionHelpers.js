@@ -1,4 +1,4 @@
-import firehoseClient from '../../lib/util/firehose';
+import firehoseClient from '../../metrics/firehose';
 
 export function recordImpression(study_group) {
   firehoseClient.putRecord({

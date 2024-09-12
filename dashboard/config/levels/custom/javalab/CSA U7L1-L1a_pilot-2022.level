@@ -42,7 +42,8 @@
       "sprite.png": "699dc156-e789-4044-af13-90b703daecf7.png"
     },
     "name_suffix": "_pilot-2022",
-    "thumbnail_url": "https://images.code.org/1d2f7fce169ebd1caf043c2cd7dce61f-U7_project1.gif"
+    "thumbnail_url": "https://images.code.org/1d2f7fce169ebd1caf043c2cd7dce61f-U7_project1.gif",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:31.200+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1a_2022\\\"\"],\"cloned_from\":\"CSA U7L1-L1a_2022\"}]"

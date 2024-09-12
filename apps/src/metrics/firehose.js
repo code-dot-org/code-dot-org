@@ -13,7 +13,7 @@ import {
   getEnvironment,
   isDevelopmentEnvironment,
   isTestEnvironment,
-} from '../../utils';
+} from '../utils';
 
 /**
  * A barebones client for posting data to an AWS Firehose stream.
