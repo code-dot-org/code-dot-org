@@ -1,7 +1,4 @@
 @no_mobile
-@no_circle
-# As of 9/4/24, cannot access AWS SageMaker or Comprehend in Drone.
-# More discussion in this Slack thread: https://codedotorg.slack.com/archives/C03CK49G9/p1725475362107969
 
 Feature: AI Chat
 
