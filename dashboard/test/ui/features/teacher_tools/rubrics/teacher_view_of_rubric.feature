@@ -5,7 +5,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   Given I create an authorized teacher-associated student named "Lillian"
 
   # Student can see the rubric and submit work
-  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2?enableExperiments=ai-rubrics"
+  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I click selector ".uitest-taRubricTab" once I see it
   Then I wait to see "#runButton"
   And I press "runButton"
@@ -18,8 +18,8 @@ Scenario: Teachers can give and send feedback on the rubric to students.
 
   # Teacher can see and submit feedback for a student
   Then I sign in as "Teacher_Lillian" and go home
-  And I add the current user to the "ai-rubrics" single section experiment for the "allthethings" course
-  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2?enableExperiments=ai-rubrics"
+  And I get debug info for the current user
+  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I wait to see "#ui-floatingActionButton"
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".student-table" is visible
@@ -49,7 +49,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
 
   # The teacher given feedback is received by the student
   Then I sign in as "Lillian" and go home
-  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2?enableExperiments=ai-rubrics"
+  And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I click selector ".uitest-taRubricTab" once I see it
   And I wait until element "p:contains(Extensive Evidence)" is visible
   And I click selector "h6:contains(Code Quality)" once I see it
@@ -57,12 +57,10 @@ Scenario: Teachers can give and send feedback on the rubric to students.
 
 Scenario: Teacher views rubric product tour
   # Teacher signs in and navigates to assessment page
-  Given I create a teacher-associated student named "Aiden"
+  Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
-  And I add the current user to the "ai-rubrics" single section experiment for the "allthethings" course
   And I wait until element "#homepage-container" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
-  And I add the current user to the "ai-rubrics" single user experiment
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I wait for the lab page to fully load
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
@@ -141,12 +139,10 @@ Scenario: Teacher views rubric product tour
 
 @eyes
 Scenario: Teacher views Rubric and Settings tabs
-  Given I create a teacher-associated student named "Aiden"
+  Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
-  And I add the current user to the "ai-rubrics" single section experiment for the "allthethings" course
   And I wait until element "#homepage-container" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
-  And I add the current user to the "ai-rubrics" single user experiment
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I wait for the lab page to fully load
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
@@ -176,12 +172,10 @@ Scenario: Teacher views Rubric and Settings tabs
 @eyes
 Scenario: Teacher views product tour
   # Teacher signs in and navigates to assessment page
-  Given I create a teacher-associated student named "Aiden"
+  Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
-  And I add the current user to the "ai-rubrics" single section experiment for the "allthethings" course
   And I wait until element "#homepage-container" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
-  And I add the current user to the "ai-rubrics" single user experiment
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I wait for the lab page to fully load
   And element ".teacher-panel td:eq(1)" contains text "Aiden"

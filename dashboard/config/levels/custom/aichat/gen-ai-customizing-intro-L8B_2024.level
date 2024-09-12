@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2024-06-28T19:52:32.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gen-ai-mistral-7b-inst-v01",
         "temperature": "0.8",
-        "systemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a chatbot designed to solve math problems. You should only answer questions that are directly related to solving math problems. If you are asked a question that is not about solving math problems, respond with \"I am not interested\".\n\nRemember, DO NOT reply with anything inappropriate.",
+        "systemPrompt": "",
         "retrievalContexts": [
 
         ],
@@ -41,14 +42,14 @@
       "hidePresentationPanel": true,
       "availableModelIds": [
 
-      ]
+      ],
+      "levelSystemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a chatbot designed to solve math problems. You should only answer questions that are directly related to solving math problems. If you are asked a question that is not about solving math problems, respond with \"I am not interested\".\n\nRemember, DO NOT reply with anything inappropriate."
     },
     "display_name": "Investigating Mathematics",
     "bubble_choice_description": "This chatbot is designed to help solve mathematics problems and perform calculations. Let's investigate how accurate it can be.",
     "thumbnail_url": "https://images.code.org/26a118e1f7090c7d8426182838911d34-Lesson 2 - Level 9B - Investigating Mathematics.png",
     "name_suffix": "_2024"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:52:32.946+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L8B\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L8B\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:52:32.946+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L8B\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L8B\"},{\"changed_at\":\"2024-09-11 17:12:36 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>
