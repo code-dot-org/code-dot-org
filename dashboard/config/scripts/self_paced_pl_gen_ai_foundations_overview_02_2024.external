@@ -5,11 +5,38 @@ description 'description here'
 markdown <<MARKDOWN
 # Foundations of Generative AI Overview
 
-
 #### This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. 
 
 #### Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. 
 
 #### Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+
+
+Lesson 1: Introduction to Generative AI
+In this lesson, students are introduced to AI concepts, focusing on generative AI. They discuss the impact of past technologies, explore generative AI through its hype, and learn the ISPO framework to understand how generative AI works. The lesson ends with students using a graphic organizer to outline their expectations for the unit.
+
+Lesson 2: Input & Training Data
+In this lesson, students explore how AI systems recognize and categorize words using data. They discuss the vast data sources needed for language models and update their graphic organizer to reflect the Input step of generative AI.
+
+Lesson 4: Understanding Embeddings
+In this lesson, students explore how language models use embeddings to represent word meanings. Through activities, they learn that similar words are numerically close in these embeddings. They update the storage section of their graphic organizer with this concept.
+
+Lesson 5: Embeddings: How They're Created
+In this lesson, students create embeddings by interpreting a made-up language and analyzing word relationships. They learn how different contexts create different embeddings, setting the stage for understanding how language models use context to determine word meanings.
+
+Lesson 6: Understanding Neural Networks
+This lesson introduces neural networks through a hands-on activity where students create a lunch recommender. They learn how hidden layers and weights in neural networks influence decisions and connect these ideas back to language and word meanings.
+
+Lesson 7: Neural Networks: How They're Trained
+This lesson explores supervised learning through trial and error. Students engage in a fictional language game, improving as they identify patterns. They reflect on whether this process shows true "intelligence" or just sophisticated rule-following.
+
+Lesson 8: Attention Is All You Need
+This lesson explores language ambiguity and the importance of context. Students brainstorm words with multiple meanings, create sentences to clarify them, and connect this to how Attention updates word meanings in language models.
+
+Lesson 9: Outputs & Probabilities
+In this lesson, students investigate how language models generate output based on probabilities. They participate in activities like crafting a story and filling in a mad lib to understand how models select the most probable words from training data.
+
+Lesson 10: Hallucinations and Fabrications
+In this lesson, students explore why language models produce hallucinations or inaccurate outputs. They discuss how bias in training data leads to errors and act as AI Auditors to suggest proactive measures for mitigating harm from language models.
 
 MARKDOWN
