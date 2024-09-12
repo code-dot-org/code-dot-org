@@ -490,7 +490,6 @@ class Lesson < ApplicationRecord
       unit: script.summarize_for_lesson_show,
       position: relative_position,
       key: key,
-      duration: total_lesson_duration,
       name: localized_name,
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       lessonPlanPdfUrl: lesson_plan_pdf_url,

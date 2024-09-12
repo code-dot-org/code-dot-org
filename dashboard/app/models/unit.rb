@@ -1603,14 +1603,8 @@ class Unit < ApplicationRecord
       id: id,
       title: title_for_display,
       name: name,
-      link: script_path(self),
       unitNumber: unit_number,
-      version_year: version_year,
-      course_id: unit_group.try(:id),
-      courseVersionId: get_course_version&.id,
-      courseOfferingId: get_course_version&.course_offering&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
-      scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
     }
@@ -1770,8 +1764,7 @@ class Unit < ApplicationRecord
 
     return nil unless has_prefix
 
-    position = unit_group_units&.first&.position
-    return position
+    unit_group_units&.first&.position
   end
 
   def title_for_display

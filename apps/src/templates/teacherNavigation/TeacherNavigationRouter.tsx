@@ -237,9 +237,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(
-                  <LessonMaterialsContainer />
-                )}
+                element={<LessonMaterialsContainer />}
               />
             }
           />
