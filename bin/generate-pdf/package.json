@@ -10,6 +10,6 @@
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "puppeteer": "22.0.0",
-    "yargs": "^14.2.0"
+    "yargs": "^17.7.2"
   }
 }
