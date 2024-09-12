@@ -1,4 +1,3 @@
-import {FILE_BROWSER_WIDTH} from '@codebridge/constants';
 import React, {useCallback} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
@@ -30,9 +29,7 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
   }
 
   return (
-    <span
-      style={{width: config.showFileBrowser ? FILE_BROWSER_WIDTH : undefined}}
-    >
+    <span>
       <Button
         icon={{
           iconStyle: config.showFileBrowser ? 'solid' : 'regular',

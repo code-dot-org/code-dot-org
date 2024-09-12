@@ -1,5 +1,4 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import ToggleFileBrowserButton from '@codebridge/ToggleFileBrowserButton';
 import {getOpenFiles} from '@codebridge/utils';
 import {
   DndContext,
@@ -64,7 +63,6 @@ export const FileTabs = React.memo(() => {
 
   return (
     <div className={moduleStyles.fileTabs}>
-      <ToggleFileBrowserButton />
       <DndContext
         onDragEnd={handleDragEnd}
         onDragStart={handleDragStart}
