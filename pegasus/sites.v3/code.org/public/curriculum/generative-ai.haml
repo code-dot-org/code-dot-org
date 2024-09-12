@@ -1,0 +1,38 @@
+---
+title: Generative AI
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/generative-ai-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper.col-50
+      %h1.white.no-margin-bottom
+        =hoc_s("gen_ai_page.heading_banner.heading")
+      %p.body-two.no-margin-bottom.white
+        =hoc_s("gen_ai_page.heading_banner.desc")
+      .afe.flex-container.align-items-baseline.wrap
+        %p.strong.body-three.no-margin-bottom.white
+          =hoc_s("gen_ai_page.heading_banner.partner")
+        %figure
+          %img{src: "/images/avatars/amazon_future_engineer_light.png", alt: hoc_s(:afe_partnership_logo_alt)}
+      %a.link-button{href: CDO.studio_url("/courses/exploring-gen-ai-2024?viewAs=Instructor")}
+        =hoc_s(:call_to_action_explore_course)
+    %figure.col-40
+      %img{src: "/images/banners/banner-bg-gen-ai-bot-wizard.png", alt: ""}
+
+%section
+  .wrapper.centered
+    %h2=hoc_s("gen_ai_page.course_description.title")
+    %p=hoc_s("gen_ai_page.course_description.desc")
+    = view "gen_ai_landing_page/empower_students_unordered_list"
+    .button-wrapper.centered
+      %a.link-button{href: CDO.studio_url("/courses/exploring-gen-ai-2024?viewAs=Instructor")}
+        =hoc_s(:call_to_action_explore_course)
+
+%section.bg-neutral-light
+  .wrapper
+    = view :curriculum_glance_section, heading: hoc_s("gen_ai_page.glance.title"), grades: hoc_s("gen_ai_page.glance.grades"), duration: hoc_s("gen_ai_page.glance.duration"), level: hoc_s("gen_ai_page.glance.level"), tools: hoc_s("gen_ai_page.glance.suggested_tools"), devices: hoc_s("gen_ai_page.glance.compatible_devices"), suggested_tools: hoc_s("gen_ai_page.glance.compatible_devices"), professional_learning: hoc_s("gen_ai_page.glance.professional_learning"), topics: hoc_s("gen_ai_page.glance.topics"), accessibility_features: hoc_s("gen_ai_page.glance.accessibility_features"), languages: hoc_s("gen_ai_page.glance.languages")
+
