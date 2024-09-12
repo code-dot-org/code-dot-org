@@ -12,9 +12,8 @@ Feature: OneTrust integration
   Scenario: User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org
     Given I create a student named "Alice"
     Given I am on "http://studio.code.org/home?otreset=true&otgeo=gb"
-    
     And I open my eyes to test "Code.org Onetrust pop up"
-    And I wait until element "#onetrust-banner-sdk" is visible 
+    And I wait until element "#onetrust-banner-sdk" is visible
     And I see no difference for "Onetrust pop up: code.org" using stitch mode "none"
     And I close my eyes
 
