@@ -107,6 +107,10 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     [setSelectedTab]
   );
 
+  if (visibleTabs.length === 0) {
+    return null;
+  }
+
   const tabArgs: TabsProps = {
     name: 'modelCustomizationTabs',
     tabs: visibleTabs,
