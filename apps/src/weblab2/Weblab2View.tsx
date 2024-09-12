@@ -71,6 +71,7 @@ const defaultConfig: ConfigType = {
 
   labeledGridLayouts,
   activeGridLayout: 'horizontal',
+  showFileBrowser: true,
 };
 
 const defaultSource: ProjectType = {

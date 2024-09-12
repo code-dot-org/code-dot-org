@@ -3,6 +3,7 @@ import {Editor} from '@codebridge/Editor';
 import {FileBrowser} from '@codebridge/FileBrowser';
 import {FileTabs} from '@codebridge/FileTabs';
 import ToggleFileBrowserButton from '@codebridge/ToggleFileBrowserButton';
+import classnames from 'classnames';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -51,18 +52,14 @@ const Workspace = () => {
       className={moduleStyles.workspace}
     >
       <div
-        className={moduleStyles.workspaceWorkarea}
-        style={{
-          gridTemplateColumns: `${
-            config.showFileBrowser ? '200px' : '30px'
-          } auto`,
-        }}
+        className={classnames(moduleStyles.workspaceWorkarea, {
+          [moduleStyles.withFileBrowser]: config.showFileBrowser,
+        })}
       >
         <div
-          className={moduleStyles.workspaceToggleButtonContainer}
-          style={{
-            justifyContent: !config.showFileBrowser ? 'center' : undefined,
-          }}
+          className={classnames(moduleStyles.workspaceToggleButtonContainer, {
+            [moduleStyles.withFileBrowser]: config.showFileBrowser,
+          })}
         >
           <ToggleFileBrowserButton />
         </div>
@@ -82,10 +79,9 @@ const Workspace = () => {
         {config.showFileBrowser && <FileBrowser />}
 
         <div
-          className={moduleStyles.workplaceEditorWrapper}
-          style={{
-            gridColumn: !config.showFileBrowser ? 'span 2' : undefined,
-          }}
+          className={classnames(moduleStyles.workplaceEditorWrapper, {
+            [moduleStyles.withFileBrowser]: config.showFileBrowser,
+          })}
         >
           <Editor
             langMapping={config.languageMapping}

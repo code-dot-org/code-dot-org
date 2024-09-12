@@ -25,10 +25,6 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
     [config, setConfig]
   );
 
-  if (config.showFileBrowser === undefined) {
-    return null;
-  }
-
   return (
     <span>
       <Button
