@@ -7,6 +7,16 @@
       "announcements": [
         {
           "key": "7c0b3b50-62ba-43c3-bd32-37a58e1622fc",
+          "notice": "AI Teaching Assistant Available to Help Assess Student Projects",
+          "details": "AI Teaching Assistant is now available to support you in projects and mini-projects throughout this unit. This new tool is designed to save you time, using AI to assess student work. To learn more about how to integrate the AI Teaching Assistant into your lessons, please watch our introductory video or visit https://code.org/ai/teaching-assistant",
+          "link": "https://youtu.be/Lj7uZx-BKhw",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
+        },
+        {
+          "key": "0c8ac90e-1294-48d4-8073-b8009264a631",
           "notice": "New Self-Paced Professional Learning Module!",
           "details": "Want to teach CS Discoveries, but not sure where to start? Code.org has released a professional learning module all about CSD's Unit 3: Interactive Animations and Games. This two-hour, self-paced module will teach you what you need to know to teach CSD. Check it out at this link!",
           "link": "https://studio.code.org/courses/self-paced-pl-csd-unit3-2023",
@@ -16,7 +26,7 @@
           "buttonText": "Unit 3 Self-Paced PL"
         },
         {
-          "key": "0c8ac90e-1294-48d4-8073-b8009264a631",
+          "key": "8528531c-53d1-48d5-ac91-f7730b007f29",
           "notice": "Free Teacher Resources from Amazon Future Engineer",
           "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
           "link": "https://code.org/afe",
@@ -39,7 +49,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-05 17:11:04 UTC",
+    "serialized_at": "2024-09-11 16:37:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
