@@ -10,7 +10,7 @@
     "honeybadger": "^1.3.0"
   },
   "devDependencies": {
-    "aws-sdk": "^2.50.0",
+    "aws-sdk": "^2.1691.0",
     "chai": "^4.4.1",
     "lambda-tester": "^4.0.1",
     "mocha": "^10.3.0",
