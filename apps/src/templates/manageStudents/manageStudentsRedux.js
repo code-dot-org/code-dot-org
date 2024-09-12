@@ -993,18 +993,20 @@ export const loadSectionStudentData = sectionId => {
         method: 'GET',
         url: `/dashboardapi/sections/${sectionId}/students`,
         dataType: 'json',
-      }).done(studentData => {
-        const convertedStudentData = convertStudentServerData(
-          studentData,
-          state.loginType,
-          sectionId
-        );
-        dispatch(setStudents(convertedStudentData));
-      }).fail(() => {
-        // revert to old section ID in case of failure to backend call
-        dispatch(setSectionInfo(oldSectionId));
-        dispatch(setSectionInfo(sectionId));
-    });
+      })
+        .done(studentData => {
+          const convertedStudentData = convertStudentServerData(
+            studentData,
+            state.loginType,
+            sectionId
+          );
+          dispatch(setStudents(convertedStudentData));
+        })
+        .fail(() => {
+          // revert to old section ID in case of failure to backend call
+          dispatch(setSectionInfo(oldSectionId));
+          dispatch(setSectionInfo(sectionId));
+        });
     } else {
       dispatch(finishLoadingStudents());
     }

@@ -1,3 +1,11 @@
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 import manageStudents, {
   setLoginType,
   setStudents,
@@ -29,15 +37,11 @@ import manageStudents, {
   transferStudentsFailure,
   addStudentsFull,
   transferStudentsFull,
-  loadSectionStudentData
+  loadSectionStudentData,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import {sectionLoginFactory} from '../../../factories/sectionLogin';
 import {assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
-
-import sinon from 'sinon';
-import { expect } from 'chai';
 
 const sectionLoginData = {
   1: sectionLoginFactory.build({id: 1, name: 'StudentNameA', sectionId: 53}),
@@ -1097,34 +1101,36 @@ describe('manageStudentsRedux', () => {
       JSON.stringify(body),
     ];
 
-    const mockStudentData = [{
-        "id": 229,
-        "name": "new student",
-        "username": "coder_abc",
-        "family_name": "fam name",
-        "age": 17,
-        "sharing_disabled": true,
-        "has_ever_signed_in": false,
-        "ai_tutor_access_denied": false,
-        "at_risk_age_gated": false,
-        "child_account_compliance_state": null,
-        "latest_permission_request_sent_at": null,
-        "depends_on_this_section_for_login": true
-    }];
+    const mockStudentData = [
+      {
+        id: 229,
+        name: 'new student',
+        username: 'coder_abc',
+        family_name: 'fam name',
+        age: 17,
+        sharing_disabled: true,
+        has_ever_signed_in: false,
+        ai_tutor_access_denied: false,
+        at_risk_age_gated: false,
+        child_account_compliance_state: null,
+        latest_permission_request_sent_at: null,
+        depends_on_this_section_for_login: true,
+      },
+    ];
 
     let store, server;
 
     let state = () => store.getState().manageStudents;
 
-    beforeEach(function() {
+    beforeEach(function () {
       server = sinon.fakeServer.create();
 
       stubRedux();
-      registerReducers({manageStudents:manageStudents});
+      registerReducers({manageStudents: manageStudents});
       store = getStore();
     });
 
-    afterEach(function() {
+    afterEach(function () {
       server.restore();
       restoreRedux();
     });
@@ -1195,7 +1201,7 @@ describe('manageStudentsRedux', () => {
       server.respondWith(
         'GET',
         `/dashboardapi/sections/${sectionId}/students`,
-        [404, {}, ""]
+        [404, {}, '']
       );
 
       store.dispatch(loadSectionStudentData(sectionId));
