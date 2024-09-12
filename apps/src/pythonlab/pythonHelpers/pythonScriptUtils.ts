@@ -76,7 +76,7 @@ export function writeSource(
 // Tracked in https://codedotorg.atlassian.net/browse/CT-509
 export function getUpdatedSourceAndDeleteFiles(
   source: MultiFileSource,
-  id: string,
+  id: number,
   pyodide: PyodideInterface,
   sendMessage: (message: PyodideMessage) => void
 ) {
@@ -103,7 +103,7 @@ function updateAndDeleteSourceWithContents(
   source: MultiFileSource,
   currentPath: string,
   folderId: string,
-  id: string,
+  id: number,
   pyodide: PyodideInterface,
   sendMessage: (message: PyodideMessage) => void
 ) {

@@ -1,5 +1,5 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {loadPyodide, version} from 'pyodide';
+import {loadPyodide, PyodideInterface, version} from 'pyodide';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
@@ -12,9 +12,11 @@ import {
   resetGlobals,
   writeSource,
 } from './pythonHelpers/pythonScriptUtils';
+import {MessageType} from './types';
 
+let pyodide: PyodideInterface;
 async function loadPyodideAndPackages() {
-  self.pyodide = await loadPyodide({
+  pyodide = await loadPyodide({
     // /assets does not serve unhashed files, so we load from /blockly instead,
     // which does serve the unhashed files. We need to serve the unhashed files because
     // pyodide controls adding the filenames to the url we provide here.
@@ -33,43 +35,45 @@ async function loadPyodideAndPackages() {
       HOME: `/${HOME_FOLDER}/`,
     },
   });
-  self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
-  self.pyodide.setStderr(getStreamHandlerOptions('syserr'));
+  pyodide.setStdout(getStreamHandlerOptions('sysout'));
+  pyodide.setStderr(getStreamHandlerOptions('syserr'));
   // Warm up the pyodide environment by running setup code.
-  await runInternalCode(SETUP_CODE, 'setup_run');
+  await runInternalCode(SETUP_CODE, -1);
 }
 
-let pyodideReadyPromise = null;
-let pyodideGlobals = null;
+let pyodideReadyPromise: Promise<void> | null = null;
+// Pyodide defines the globals object as any.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let pyodideGlobals: any | null = null;
 async function initializePyodide() {
   const promiseWasNull = pyodideReadyPromise === null;
   if (promiseWasNull) {
     pyodideReadyPromise = loadPyodideAndPackages();
-    self.postMessage({type: 'loading_pyodide'});
+    postMessage({type: 'loading_pyodide'});
   }
   await pyodideReadyPromise;
   if (promiseWasNull) {
-    self.postMessage({type: 'loaded_pyodide'});
+    postMessage({type: 'loaded_pyodide'});
   }
-  pyodideGlobals = self.pyodide.globals.toJs();
+  pyodideGlobals = pyodide.globals.toJs();
 }
 
 // Get pyodide ready as soon as possible.
 initializePyodide();
 
-self.onmessage = async event => {
+onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
   const {id, python, source} = event.data;
   let results = undefined;
   try {
-    writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
-    await importPackagesFromFiles(source, self.pyodide);
-    results = await self.pyodide.runPythonAsync(python, {
+    writeSource(source, DEFAULT_FOLDER_ID, '', pyodide);
+    await importPackagesFromFiles(source, pyodide);
+    results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
   } catch (error) {
-    self.postMessage({type: 'error', message: error.message, id});
+    postMessage({type: 'error', message: (error as Error).message, id});
   }
   // Clean up environment.
   await runInternalCode(getCleanupCode(source), id);
@@ -79,34 +83,34 @@ self.onmessage = async event => {
   const updatedSource = getUpdatedSourceAndDeleteFiles(
     source,
     id,
-    self.pyodide,
-    self.postMessage
+    pyodide,
+    postMessage
   );
-  self.postMessage({type: 'updated_source', message: updatedSource, id});
-  resetGlobals(self.pyodide, pyodideGlobals);
+  postMessage({type: 'updated_source', message: updatedSource, id});
+  resetGlobals(pyodide, pyodideGlobals);
 
   // If there is a results response, convert it to a JS object.
   // Documentation on this method:
   // https://pyodide.org/en/stable/usage/api/js-api.html#pyodide.ffi.PyProxy.toJs
   const resultsObject = results?.toJs();
-  self.postMessage({type: 'run_complete', message: resultsObject, id});
+  postMessage({type: 'run_complete', message: resultsObject, id});
 };
 
 // Run code owned by us (not the user). If there is an error, post a
 // system_error message.
-async function runInternalCode(code, id) {
+async function runInternalCode(code: string, id: number) {
   try {
-    await self.pyodide.runPythonAsync(code);
+    await pyodide.runPythonAsync(code);
   } catch (error) {
-    self.postMessage({type: 'system_error', message: error.message, id});
+    postMessage({type: 'system_error', message: (error as Error).message, id});
   }
 }
 
 // Return the options for sysout or syserr stream handler.
-function getStreamHandlerOptions(type) {
+function getStreamHandlerOptions(type: MessageType) {
   return {
-    batched: msg => {
-      self.postMessage({type: type, message: msg, id: 'none'});
+    batched: (msg: string) => {
+      postMessage({type: type, message: msg, id: 'none'});
     },
   };
 }
