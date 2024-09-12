@@ -58,7 +58,7 @@ describe('LessonMaterialsContainer', () => {
     render(<LessonMaterialsContainer />);
 
     screen.getByRole('combobox');
-    screen.getByRole('option', {name: 'Lesson 1 - First lesson'});
-    screen.getByRole('option', {name: 'Lesson 2 - Second lesson'});
+    screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
+    screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
   });
 });
