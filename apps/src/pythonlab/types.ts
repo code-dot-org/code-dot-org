@@ -7,6 +7,8 @@ export interface PyodidePathContent {
 
 export interface PyodideMessage {
   type: MessageType;
+  // The message can be the return value of the Python script, or a
+  // string message. The return value could be any object.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   message: any;
   id: number;

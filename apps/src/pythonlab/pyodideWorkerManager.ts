@@ -20,7 +20,7 @@ import {PyodideMessage} from './types';
 let callbacks: {[key: number]: (event: PyodideMessage) => void} = {};
 
 const setUpPyodideWorker = () => {
-  // @ts-expect-error because
+  // @ts-expect-error because TypeScript does not like this syntax.
   const worker = new Worker(new URL('./pyodideWebWorker.ts', import.meta.url));
 
   callbacks = {};

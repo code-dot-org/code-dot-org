@@ -42,6 +42,7 @@ async function loadPyodideAndPackages() {
 }
 
 let pyodideReadyPromise: Promise<void> | null = null;
+// Pyodide defines the globals object as any.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let pyodideGlobals: any | null = null;
 async function initializePyodide() {
