@@ -12,7 +12,8 @@
     "display_name": "Urban Explorer",
     "bubble_choice_description": "Embark on a thrilling urban adventure with Urban Explorer! Your virtual passport to the world's greatest sights, this nifty tool sorts cities alphabetically, making your dream destinations just a click away. Let's turn your wanderlust into a wonder-list!",
     "thumbnail_url": "https://images.code.org/06483d9941527d7515273c8e1610b688-urbanexplorer.gif",
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-10-03T21:33:56.580+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L1a\\\"\"],\"cloned_from\":\"CSA-SE-L2-L1a\"}]"

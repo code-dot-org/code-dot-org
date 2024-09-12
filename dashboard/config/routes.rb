@@ -115,6 +115,9 @@ Dashboard::Application.routes.draw do
       member do
         post 'log_in'
       end
+      collection do
+        post 'section_instructors_verified'
+      end
     end
     # Section API routes (JSON only)
     concern :section_api_routes do
@@ -1172,7 +1175,6 @@ Dashboard::Application.routes.draw do
 
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
     get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
-    post '/aichat/check_message_safety', to: 'aichat#check_message_safety'
     post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
     get '/aichat/chat_request/:id', to: 'aichat#chat_request'
     get '/aichat/user_has_access', to: 'aichat#user_has_access'

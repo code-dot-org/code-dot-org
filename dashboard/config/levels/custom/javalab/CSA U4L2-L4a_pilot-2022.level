@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:31:55.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##In Dog.java:\r\n\r\n1. Write the `equals()`(#e7e8ea) method. It should return `true`(#e7e8ea) if the `age`(#e7e8ea) of both `Dog`(#e7e8ea) objects are the same. Otherwise, return `false`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Test your `equals()`(#e7e8ea) method by checking if `firstDog`(#e7e8ea) and `secondDog`(#e7e8ea) are equivalent and printing the result.\r\n\r\n::: details [**Show Me How**]\r\nThe `equals()`(#e7e8ea) method uses the following syntax:\r\n  \r\n  ```\r\n  public boolean equals(Object otherObject) {\r\n    // code to compare values\r\n  }\r\n  ```\r\n\r\nDon't forget to first check if `otherObject`(#e7e8ea) is `null`(#e7e8ea)!\r\n:::",
@@ -22,12 +26,9 @@
         "text": "/*\n * Represents a dog\n */\npublic class Dog {\n\n  private int age;       // The age of the dog\n\n  /*\n   * Constructor to create a Dog with\n   * the specified age\n   */\n  public Dog(int age) {\n    this.age = age;\n  }\n\n  /*\n   * Returns the age of the Dog\n   */\n  public int getAge() {\n    return age;\n  }\n\n  // TO DO #1: Write the equals() method.\n\n\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:31:55.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:31:55.791+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L4a_2022\\\"\"],\"cloned_from\":\"CSA U4L2-L4a_2022\"},{\"changed_at\":\"2022-09-21 01:45:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-21 01:45:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-21 01:48:24 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

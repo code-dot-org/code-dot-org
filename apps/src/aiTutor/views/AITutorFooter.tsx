@@ -3,8 +3,8 @@ import React, {useCallback} from 'react';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import style from './ai-tutor.module.scss';

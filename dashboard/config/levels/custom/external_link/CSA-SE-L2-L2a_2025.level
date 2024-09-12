@@ -12,7 +12,8 @@
     "display_name": "ByteBud",
     "bubble_choice_description": "Welcome to ByteBud - your friendly, text-based sidekick! Forget scrolling through boring FAQs, just ask your questions directly to ByteBud, and experience a fun and engaging conversation about your favorite topic.",
     "thumbnail_url": "https://images.code.org/707e993f13db906599793cf2d2dc982e-bytebud.gif",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:47:51.440+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L2a_2023\\\"\"],\"cloned_from\":\"CSA-SE-L2-L2a_2023\"}]"

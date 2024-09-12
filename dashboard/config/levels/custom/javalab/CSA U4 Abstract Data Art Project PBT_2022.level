@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-07T17:59:18.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -28,15 +32,9 @@
         "isVisible": true
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-07T17:59:18.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-07 17:59:20 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 17:00:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-03 12:34:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 12:55:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 12:56:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-04 16:41:12 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

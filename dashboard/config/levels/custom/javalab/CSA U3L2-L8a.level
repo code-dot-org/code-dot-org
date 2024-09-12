@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-07-20T17:35:49.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "display_name": "Paint a Pinwheel",
@@ -1334,13 +1338,10 @@
     "reference_links": [
       "https://docs.google.com/document/d/e/2PACX-1vSbu1JcuqFt8sFJWEUsd2dMmvRhzkNMD30gPiMpFYNZJEPEOzflNVGWqEL36VjpDKVcYY2NDyVi4gZl/pub"
     ],
-    "submittable": "false"
+    "submittable": "false",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-07-20T17:35:49.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-07-20T17:35:49.509+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L7a\\\"\"],\"cloned_from\":\"CSA U3L2-L7a\"},{\"changed_at\":\"2021-07-20 17:36:13 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 12:51:36 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-04 18:25:30 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-09 19:58:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-12 00:38:37 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-12 00:39:22 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-24 17:27:16 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>

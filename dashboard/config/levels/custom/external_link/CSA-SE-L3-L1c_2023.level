@@ -12,7 +12,8 @@
     "link_title": "Virtual Pet App",
     "url": "https://github.com/code-dot-org/csa-se-lesson3c",
     "thumbnail_url": "https://images.code.org/115717904416d5ce776a306fbdbe2607-virtualpet.gif",
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-10-03T21:34:07.654+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L3-L1c\\\"\"],\"cloned_from\":\"CSA-SE-L3-L1c\"}]"

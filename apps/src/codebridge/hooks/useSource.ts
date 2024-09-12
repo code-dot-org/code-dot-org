@@ -35,6 +35,7 @@ export const useSource = (defaultSources: ProjectSources) => {
     state => state.lab.levelProperties?.templateSources
   );
   const previousLevelIdRef = useRef<number | null>(null);
+  const previousInitialSources = useRef<ProjectSources | null>(null);
 
   // keep track of whatever project the user has set locally. This happens after any change in CodeBridge
   // in the setSource function below
@@ -93,14 +94,20 @@ export const useSource = (defaultSources: ProjectSources) => {
   }, [isStartMode, isEditingExemplarMode, levelId, source]);
 
   useEffect(() => {
-    if (levelId && previousLevelIdRef.current !== levelId) {
-      // We reset the project when the levelId changes, as this means we are on a new level.
+    // We reset the project when the levelId changes, as this means we are on a new level.
+    // We also reset if the initialSources changed; this could occur if we are a teacher
+    // viewing a student's project.
+    if (
+      (levelId && previousLevelIdRef.current !== levelId) ||
+      initialSources !== previousInitialSources.current
+    ) {
       if (initialSources) {
         setSourceHelper(initialSources);
       }
       if (levelId) {
         previousLevelIdRef.current = levelId;
       }
+      previousInitialSources.current = initialSources;
     }
   }, [initialSources, levelId, setSourceHelper]);
 

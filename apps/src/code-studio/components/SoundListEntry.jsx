@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 
 import * as color from '../../util/color';
 

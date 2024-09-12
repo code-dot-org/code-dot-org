@@ -50,6 +50,17 @@ class SectionsController < ApplicationController
     end
   end
 
+  def section_instructors_verified
+    new_params = params.transform_keys(&:underscore)
+    teachers = User.find_by(id: new_params[:user_id]).teachers
+
+    if teachers.any?(&:verified_teacher?)
+      render json: {verified: true}
+    else
+      render json: {verified: false}
+    end
+  end
+
   private def redirect_to_section_script_or_course
     if @section.script
       redirect_to script_path(@section.script)

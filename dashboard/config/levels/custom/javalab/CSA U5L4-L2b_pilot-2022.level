@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:50:01.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The owner of the Project Mercury Pastries Food Truck business assigns food trucks for each day of the week in several cities. The owner stores these food trucks in a 2D array, where each row represents a unique city. Each column represents Monday, Tuesday, Wednesday, Thursday, and Friday, respectively.\r\n\r\nThe owner wants to reverse the order of food trucks assigned for each city.\r\n\r\n##In Owner.java:\r\n\r\n1. Write the `reverseFoodTrucks()`(#e7e8ea) method to reverse each row in the 2D array `foodTrucks`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `reverseFoodTrucks()`(#e7e8ea) method and print the results.\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
@@ -30,12 +34,9 @@
         "isVisible": true,
         "tabOrder": 2
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:50:01.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:01.991+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L2b_2022\\\"\"],\"cloned_from\":\"CSA U5L4-L2b_2022\"},{\"changed_at\":\"2022-10-09 20:42:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 20:42:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 20:49:57 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

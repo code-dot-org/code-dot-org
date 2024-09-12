@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-02-17T18:51:31.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A researcher is analyzing real estate trends in Connecticut to compare the number of homes that were sold that were single family, two family, three family, four family, or condo homes.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">RealEstate.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getHomesByType()</code> method to traverse the 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Home</code> objects and return the number of homes that were sold of the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">type</code> where the length of the name of the town is greater than <code style=\"background-color: #ececec; color: black; font-weight: bold;\">4</code>.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawResult()</code> method with the 1D array returned from calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getHomesByType()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing nested <code style=\"background-color: #ececec; color: black; font-weight: bold;\">if</code> statements.\r\n</div>",
@@ -51,12 +55,9 @@
         "isVisible": true,
         "tabOrder": 6
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-02-17T18:51:31.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:51:31.439+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5a_2023\\\"\"],\"cloned_from\":\"CSA U4L7-L5a_2023\"},{\"changed_at\":\"2023-02-17 18:51:33 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 21:23:45 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 02:08:15 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-15 02:11:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 15:54:57 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 15:57:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 15:57:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 15:58:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 16:10:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 16:22:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 16:24:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 16:24:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 16:24:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 16:28:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 16:29:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 16:29:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 16:29:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 16:29:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

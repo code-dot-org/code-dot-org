@@ -99,8 +99,9 @@
     --text-neutral-inverse: var(--neutral-base-white);
     --text-neutral-placeholder: var(--neutral-gray-40);
     --text-neutral-primary: var(--neutral-base-black);
-    --text-neutral-secondary: var(--neutral-gray-80);
-    --text-neutral-tertiary: var(--neutral-gray-50);
+    --text-neutral-quaternary: var(--neutral-gray-70);
+    --text-neutral-secondary: var(--neutral-gray-90);
+    --text-neutral-tertiary: var(--neutral-gray-80);
     --text-neutral-white-fixed: var(--neutral-base-white);
     --text-success-primary: var(--sentiment-success-50);
     --text-success-primary-fixed: var(--sentiment-success-50);
@@ -195,8 +196,9 @@
     --text-neutral-inverse: var(--neutral-base-black);
     --text-neutral-placeholder: var(--neutral-gray-60);
     --text-neutral-primary: var(--neutral-base-white);
-    --text-neutral-secondary: var(--neutral-gray-20);
-    --text-neutral-tertiary: var(--neutral-gray-40);
+    --text-neutral-quaternary: var(--neutral-gray-30);
+    --text-neutral-secondary: var(--neutral-gray-10);
+    --text-neutral-tertiary: var(--neutral-gray-20);
     --text-neutral-white-fixed: var(--neutral-base-white);
     --text-success-primary: var(--text-neutral-white-fixed);
     --text-success-primary-fixed: var(--sentiment-success-50);
@@ -204,9 +206,4 @@
     --text-warning-primary: var(--text-neutral-primary);
     --text-warning-primary-fixed: var(--sentiment-warning-50);
     --text-warning-secondary: var(--text-neutral-tertiary);
-}
-
-/* Utility colors (value is the same across all the themes) */
-:root {
-    --gray: #fff;
 }

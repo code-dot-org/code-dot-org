@@ -293,7 +293,6 @@ Devise.setup do |config|
       end
     end,
   }
-  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, scope: 'wl.basic wl.emails'
 
   config.omniauth :microsoft_v2_auth, CDO.dashboard_microsoft_key, CDO.dashboard_microsoft_secret
 
@@ -301,19 +300,6 @@ Devise.setup do |config|
   # initiates the oauth flow (instead of us as we do with facebook
   # with a log in with facebook button)
   config.omniauth :clever, CDO.dashboard_clever_key, CDO.dashboard_clever_secret, provider_ignores_state: true
-
-  # Powerschool OpenID config
-  config.omniauth :openid, {
-    provider_ignores_state: true,
-    name: :powerschool,
-    identifier_param: 'openid_identifier',
-    required: %w(
-      http://powerschool.com/entity/type
-      http://powerschool.com/entity/email
-      http://powerschool.com/entity/firstName
-      http://powerschool.com/entity/lastName
-    ).freeze
-  }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

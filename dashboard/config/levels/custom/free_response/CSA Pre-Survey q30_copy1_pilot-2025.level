@@ -17,7 +17,8 @@
     "parent_level_id": 24993,
     "name_suffix": "_pilot-2025",
     "encrypted": "false",
-    "allow_multiple_attempts": "true"
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": true
   },
   "published": true,
   "notes": "",

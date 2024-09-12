@@ -176,6 +176,7 @@ export const READ_ONLY_PROPERTIES = [
   'createSvgElement',
   'Css',
   'Cursor',
+  'dialog',
   'disableVariableEditing',
   'DropDownDiv',
   'Events',

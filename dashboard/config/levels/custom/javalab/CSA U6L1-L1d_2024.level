@@ -51,7 +51,8 @@
     "display_name": "Chatbot",
     "bubble_choice_description": "An example project that creates a chatbot to interact with a user.",
     "thumbnail_url": "https://images.code.org/24bc0bdb5638c0a67d49ef0f77be95c3-image-1651495036604.png",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:04:00.095+00:00\",\"changed\":[\"cloned from \\\"CSA U6L1-L1d_2023\\\"\"],\"cloned_from\":\"CSA U6L1-L1d_2023\"}]"

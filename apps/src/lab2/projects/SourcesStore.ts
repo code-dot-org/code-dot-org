@@ -5,7 +5,13 @@
  */
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
-import {ProjectSources, ProjectType, ProjectVersion} from '../types';
+import {
+  ProjectSources,
+  ProjectType,
+  ProjectVersion,
+  SaveSourceOptions,
+  UpdateSourceOptions,
+} from '../types';
 
 import * as sourcesApi from './sourcesApi';
 
@@ -17,7 +23,8 @@ export interface SourcesStore {
   save: (
     key: string,
     sources: ProjectSources,
-    appType?: ProjectType
+    appType?: ProjectType,
+    forceNewVersion?: boolean
   ) => Promise<Response>;
 
   getVersionList: (key: string) => Promise<ProjectVersion[]>;
@@ -68,7 +75,7 @@ export class RemoteSourcesStore implements SourcesStore {
     projectType?: ProjectType,
     forceNewVersion = false
   ) {
-    let options = undefined;
+    let options: SaveSourceOptions = {projectType};
     if (this.currentVersionId) {
       // If forceNewVersion is set to true, we will not replace the existing version (i.e., we will create
       // a new version). Otherwise we check if we should replace the existing version based on the last new
@@ -80,12 +87,12 @@ export class RemoteSourcesStore implements SourcesStore {
         this.lastNewVersionTime = Date.now();
       }
       options = {
+        ...options,
         currentVersion: this.currentVersionId,
         replace: replaceExistingVersion,
         firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
         tabId: getTabId(),
-        projectType: projectType,
-      };
+      } as UpdateSourceOptions;
     }
     const response = await sourcesApi.update(channelId, sources, options);
 

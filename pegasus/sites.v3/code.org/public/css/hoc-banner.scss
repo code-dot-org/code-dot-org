@@ -1,123 +1,56 @@
-@import 'color.scss', 'font.scss', 'breakpoints.scss';
+// Styles for the 2024 Hour of Code homepage banner on code.org
 
-// Code.org HoC homepage banner
-#bars {
-  height: 450px;
-  position: relative;
+@import 'breakpoints';
 
-  @media screen and (max-width: $width-md) {
-    height: 400px;
-  }
-
-  @media screen and (max-width: $width-sm) {
-    height: 500px;
-  }
-
-  & > div.col-33 {
-    position: absolute;
-
-    // Left image
-    &:nth-of-type(1) {
-      height: inherit;
-      max-width: 500px;
-      left: 0;
-      top: -10%;
-
-      @media (min-width: 768px) and (max-width: 1190px) {
-        width: 45%;
-        left: -9%;
-        top: -15%;
-      }
-
-      @media screen and (max-width: 800px) {
-        display: none;
-      }
-    }
-
-    // Copy and buttons (.hoc-banner.homepage)
-    &:nth-of-type(2) {
-      width: 700px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      @media screen and (max-width: $width-lg) {
-        width: 610px;
-        margin-top: 0;
-      }
-
-      @media screen and (max-width: $width-sm) {
-        width: 100%;
-      }
-    }
-
-    // Right image
-    &:nth-of-type(3) {
-      height: inherit;
-      max-width: 500px;
-      right: 0;
-      bottom: 0;
-
-      @media screen and (max-width: $width-md) {
-        width: 45%;
-        right: -5%;
-      }
-    }
-  }
+body #hero {
+  background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
 }
 
 .hoc-banner.homepage {
   text-align: center;
-  color: $white;
   line-height: 1.4;
-  max-width: 860px;
-  margin: 2rem auto 4rem;
-  padding: 0 1rem;
+  max-width: 1020px;
+  margin: 4rem auto;
 
-  h1, h2 {
-    color: $white
+  @media (max-width: $width-md) {
+    margin: 0 auto;
   }
 
-  h1 {
-    font-size: 4rem;
-    font-family: var(--barlowSemiCondensed-semibold);
-    font-weight: var(--bold-font-weight);
-    margin: 0 auto 0.5em;
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 
-    @media screen and (max-width: 1024px) {
-      font-size: 3.5rem;
-    }
-    @media screen and (max-width: $width-sm) {
-      font-size: 3rem;
-    }
-  }
-
-  h2 {
-    margin: 0 auto 1rem;
-    font-family: var(--main-font);
-    font-size: 1.25rem;
-
-    @media screen and (max-width: $width-md) {
-      width: 80%;
+    @media (max-width: $width-md) {
+      flex-direction: column-reverse;
     }
 
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
+    .text-wrapper {
+      text-align: initial;
+      flex: 1.25;
+
+      @media (max-width: $width-md) {
+        text-align: center;
+
+        p {
+          text-wrap: balance;
+        }
+      }
+
+      h1 {
+        margin-block-start: 0;
+      }
     }
-  }
 
-  // The Hour of Code is coming/here text
-  p {
-    font-size: 2em;
-    font-family: var(--main-font);
-    font-weight: var(--semi-bold-font-weight);
+    figure {
+      margin: 0;
+      max-width: 400px;
+      flex: 1;
 
-    @media screen and (max-width: $width-md) {
-      font-size: 1.75em;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      font-size: 1.35em;
+      img {
+        width: 100%;
+      }
     }
   }
 }
@@ -125,9 +58,4 @@
 // Misc styles that need to be overridden
 .widehero_do_not_hide.phone-feature {
   background-position: 50% 0% !important;
-}
-
-#homepage #actions .herohocbutton-solid-yellow {
-  background-color: #1AADBB;
-  border-color: #1AADBB;
 }

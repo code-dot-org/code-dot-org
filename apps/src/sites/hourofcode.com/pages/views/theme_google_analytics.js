@@ -1,1 +1,1 @@
-import '@cdo/apps/lib/util/GoogleAnalyticsReporter';
+import '@cdo/apps/metrics/GoogleAnalyticsReporter';

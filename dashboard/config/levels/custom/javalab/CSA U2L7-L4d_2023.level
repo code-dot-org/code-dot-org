@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-11-30T19:42:36.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A game developer is creating a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Player</code> class to represent a player in a game.\r\n\r\n✅ **TO DO #1:** Write an accessor method called <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getHighScore()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Player</code> class to return the value assigned to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">highScore</code> instance variable.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">GameRunner.java</code>, call the accessor method on the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">tetrisChamp</code> object and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing accessor methods.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
@@ -28,15 +32,9 @@
       }
     },
     "video_key": "csa_accessor_methods",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-11-30T19:42:36.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-11-30T19:42:36.135+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-L4c_2023\\\"\"],\"cloned_from\":\"CSA U2L7-L4c_2023\"},{\"changed_at\":\"2022-11-30 19:42:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 02:29:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 13:19:47 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 13:21:23 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 13:25:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 15:44:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 15:45:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-01 15:46:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-06 21:06:03 +0000\",\"changed\":[\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-14 18:54:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-14 18:54:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-14 18:54:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-12-14 18:55:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-02 14:30:31 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-14 16:52:58 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

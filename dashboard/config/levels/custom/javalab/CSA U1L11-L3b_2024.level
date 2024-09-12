@@ -1042,7 +1042,8 @@
     "display_name": "The BirdPainter",
     "bubble_choice_description": "The Neighborhood is planning to host an event to showcase the local birds in the community, and the `Painter` needs help painting a mural of a bird in the street.",
     "thumbnail_url": "https://images.code.org/0c21865709407dae3d5ee4791bf97ce7-U1L11-L3b.png",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:44:14.886+00:00\",\"changed\":[\"cloned from \\\"CSA U1L11-L3b_2023\\\"\"],\"cloned_from\":\"CSA U1L11-L3b_2023\"}]"

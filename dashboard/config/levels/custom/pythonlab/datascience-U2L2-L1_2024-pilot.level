@@ -18,7 +18,7 @@
       "questionType": "freeResponse",
       "allowMultipleAttempts": false,
       "placeholderText": "student response",
-      "freeResponseHeight": 20,
+      "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
     "start_sources": {
@@ -37,6 +37,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-29 15:58:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 15:59:45 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 16:00:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 16:01:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29 15:58:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 15:59:45 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 16:00:30 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 16:01:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 17:30:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

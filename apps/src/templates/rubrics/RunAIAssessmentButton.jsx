@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
