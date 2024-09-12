@@ -1,5 +1,9 @@
 name: Assign Reviewer for Dependabot
 
+permissions:
+  pull-requests: write
+  issues: write
+
 on:
   pull_request:
     types: [ opened, synchronize, reopened ]
