@@ -12,26 +12,20 @@ module AichatComprehendHelper
   # Moderate given text for inappropriate/toxic content using AWS Comprehend client.
   def self.get_toxicity(text, locale)
     text_segment_lists = get_text_segment_lists(text)
-    print_lists(text_segment_lists)
-
     max_toxicity = 0
     max_category = nil
-    text_segment_lists.each_with_index do |list, idx|
+    text_segment_lists.each do |list|
       comprehend_response = create_comprehend_client.detect_toxic_content(
         {
           text_segments: list.map {|segment| {text: segment}},
           language_code: locale,
         }
       )
-      print_comprehend_response(comprehend_response, idx)
       max_toxicity = [max_toxicity, comprehend_response.result_list.map(&:toxicity).max].max
       list_max_category = comprehend_response.result_list.map(&:labels).flatten.max_by(&:score)
       max_category = max_category.nil? ? list_max_category : [max_category, list_max_category].max_by(&:score)
     end
 
-    puts "\nOVERALL RESULTS"
-    puts "Max Toxicity: #{max_toxicity.round(3)}"
-    puts "Max Category: #{max_category}"
     {
       text: text,
       toxicity: max_toxicity,
@@ -63,28 +57,6 @@ module AichatComprehendHelper
       current_segment << (current_segment.empty? ? word : " #{word}")
     end
     text_segment_lists
-  end
-
-  def self.print_lists(lists)
-    puts "\n\nComputed Segments\n"
-    lists.each_with_index do |list, idx|
-      size = list.inject(0) {|sum, segment| sum + segment.bytesize}
-      puts "List #{idx + 1} (#{list.size} items, #{size} Bytes)"
-      list.each_with_index do |segment, idx2|
-        puts "\tSegment #{idx2 + 1} (#{segment.bytesize}/#{MAX_SEGMENT_SIZE_BYTES} Bytes): #{segment.truncate(150)}"
-      end
-    end
-  end
-
-  def self.print_comprehend_response(comprehend_response, index)
-    list_max = comprehend_response.result_list.map(&:toxicity).max
-    list_max_category = comprehend_response.result_list.map(&:labels).flatten.max_by(&:score)
-    puts "\n\nResponse for List #{index + 1}. List Max Toxicity: #{list_max.round(3)}. Max Category: #{list_max_category}"
-    comprehend_response.result_list.each_with_index do |result, idx|
-      puts "Segment #{idx + 1} Toxicity: #{result.toxicity.round(3)}"
-      puts "\t#{result.labels.map {|label| label.name + ': ' + label.score.round(3).to_s}.join(', ')}"
-      puts "\tMax Category: #{result.labels.max_by(&:score)}"
-    end
   end
 end
 
