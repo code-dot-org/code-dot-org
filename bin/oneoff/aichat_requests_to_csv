@@ -1,0 +1,101 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require_relative '../../dashboard/config/environment'
+
+def main
+  options = {}
+  OptionParser.new do |opts|
+    opts.on('--section_id SECTION_ID') do |section_id|
+      options[:section_id] = Integer(section_id)
+    end
+  end.parse!
+
+  CSV.open("aichat_requests.csv", "w") do |csv|
+    headers = %w[
+      aichat_request_id user_id username name path created_at updated_at role chat_message status toxicity max_category score
+    ]
+    csv << headers
+
+    student_users_in_section = Section.find(options[:section_id]).followers.map(&:student_user)
+    rows = AichatRequest.where(
+      user: student_users_in_section,
+    )
+
+    rows.each do |row|
+      user = row.user
+      user_message = JSON.parse(row.new_message)
+      user_message_text = user_message["chatMessageText"]
+      execution_status = row.execution_status
+
+      level = Level.find(row.level_id)
+      path = ""
+
+      script_level = level.script_levels.find_by_script_id(row.script_id)
+      if script_level
+        # This handles chat requests that occurred on standard levels in a progression
+        path = script_level.path
+      else
+        # This handles chat requests that occurred on a sublevel
+        parent_levels = BubbleChoice.parent_levels(level.name)
+        parent_levels_in_script = parent_levels.filter do |pl|
+          pl.script_levels.any? {|sl| sl.script_id == row.script_id}
+        end
+
+        if parent_levels_in_script
+          parent_level = parent_levels_in_script.first
+          sublevel_position = parent_level.sublevel_position(level)
+          path = parent_level.build_script_level_path(
+            parent_level.script_levels.first,
+            {sublevel_position: sublevel_position}
+          )
+        end
+      end
+
+      status =
+        case execution_status
+        when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS]
+          "okay"
+        when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE]
+          "unexpected error"
+        when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY]
+          "user profanity detected"
+        when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
+          "model profanity detected"
+        when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE]
+          "user input too large"
+        else
+          "unknown"
+        end
+
+      if execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY]
+        ## parse response for comprehend details
+        comprehend_response = row.response.delete_prefix("Profanity detected in user input: ")
+        toxicity = comprehend_response.split(":toxicity=>").last.split(",").first.to_f
+        max_category = comprehend_response.split(":max_category=>#<struct Aws::Comprehend::Types::ToxicContent name=").last.split(",").first
+        max_category = max_category.delete_prefix('"').delete_suffix('"')
+        puts "max_category #{max_category}"
+        score = comprehend_response.split("score=").last.split(">").first.to_f
+      end
+
+      user_message_entry = [
+        row.id,
+        row.user_id,
+        user.username,
+        user.name,
+        path,
+        row.created_at,
+        row.updated_at,
+        'user',
+        user_message_text,
+        status,
+        toxicity,
+        max_category,
+        score
+      ]
+      csv << user_message_entry
+    end
+  end
+end
+
+main

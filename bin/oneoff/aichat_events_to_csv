@@ -13,7 +13,7 @@ def main
 
   CSV.open("aichat_events.csv", "w") do |csv|
     headers = %w[
-      aichat_event_id user_id path created_at updated_at role chatMessageText status
+      aichat_event_id user_id username name path created_at updated_at role chatMessageText status
     ]
     csv << headers
 
@@ -23,6 +23,7 @@ def main
     )
 
     rows.each do |row|
+      user = row.user
       event = JSON.parse(row.aichat_event)
 
       level = Level.find(row.level_id)
@@ -53,6 +54,8 @@ def main
       csv << [
         row.id,
         row.user_id,
+        user.username,
+        user.name,
         path,
         row.created_at,
         row.updated_at,
