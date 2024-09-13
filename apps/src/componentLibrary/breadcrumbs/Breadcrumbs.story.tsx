@@ -4,7 +4,7 @@ import React from 'react';
 import {Breadcrumbs, BreadcrumbsProps} from './index';
 
 export default {
-  title: 'DesignSystem/[WIP]Breadcrumbs', // eslint-disable-line storybook/no-title-property-in-meta
+  title: 'DesignSystem/Breadcrumbs', // eslint-disable-line storybook/no-title-property-in-meta
   component: Breadcrumbs,
 } as Meta;
 

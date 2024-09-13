@@ -23,24 +23,15 @@ export interface BreadcrumbsProps {
   className?: string;
 }
 
-// TODO:
-// * MARKUP +
-// * styles +
-// * add stories +
-// * add tests
-// * cleanup
-// * update README
-// * update PR
-
 /**
  * ### Production-ready Checklist:
- * * (?) implementation of component approved by design team;
- * * (?) has storybook, covered with stories and documentation;
- * * (?) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/BreadcrumbsTest.jsx)
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see apps/test/unit/componentLibrary/BreadcrumbsTest.tsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Breadcrumbs Component.
  * Can be used to render Breadcrumbs or as a part of bigger/more complex components (e.g. forms).
@@ -61,7 +52,7 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
       data-testid={`breadcrumbs-${name}`}
     >
       {breadcrumbs.map(({text, href, ...rest}, i) => (
-        <>
+        <React.Fragment key={`${text}-${href}`}>
           <Link
             {...rest}
             text={text}
@@ -72,7 +63,7 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
           {i < breadcrumbs.length - 1 && (
             <FontAwesomeV6Icon iconName="chevron-right" />
           )}
-        </>
+        </React.Fragment>
       ))}
     </div>
   );
