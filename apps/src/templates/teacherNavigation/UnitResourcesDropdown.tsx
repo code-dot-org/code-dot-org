@@ -17,7 +17,9 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
   scriptSlidesUrl,
 }) => {
   // note: use the iconTypes here once merged in
-  const dummyOptions = [
+  // also, not sure if every unit with this paeg has these three options...
+  // might need to do some checking before rendering
+  const dropdownOptions = [
     {
       value: 'option-1',
       label: i18n.downloadUnitLessonPlans({unitNumber: unitNumber}),
@@ -43,7 +45,7 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
       <ActionDropdown
         name="view-options"
         labelText="View options dropdown"
-        options={dummyOptions}
+        options={dropdownOptions}
         size="s"
         menuPlacement="right"
         triggerButtonProps={{
