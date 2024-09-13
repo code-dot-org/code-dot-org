@@ -4,11 +4,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import {
   SingleSignOnProviders,
   LmsLoginTypeNames,
 } from '@cdo/apps/accounts/constants';
+import fontConstants from '@cdo/apps/fontConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
