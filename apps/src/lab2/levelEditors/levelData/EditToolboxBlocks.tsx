@@ -84,11 +84,11 @@ const EditToolboxBlocks: React.FC<EditToolboxBlocksProps> = ({
   const multiSelectItems = getTypedKeys(defaultBlocks)
     .filter(category => !dynamicCategories.includes(category))
     .map(category => {
-      const categoryItems = (defaultBlocks[category] || []).map(block => {
+      const categoryItems = (defaultBlocks[category] || []).map(blockType => {
         return {
-          id: block,
-          label: toolboxBlocks[block].levelbuilderText || block,
-          selected: blocksMap[category]?.includes(block) || false,
+          id: blockType,
+          label: toolboxBlocks[blockType].levelbuilderText || blockType,
+          selected: blocksMap[category]?.includes(blockType) || false,
         };
       });
       return {
