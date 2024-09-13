@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Your turn:\r\n\r\nMake your own `verse` function.\r\n\r\n",
+    "long_instructions": "#### Your turn:\r\n\r\n- Add sounds to the `verse` function. \r\n- Call the `verse` function by adding it under `when run`. \r\n\r\n",
     "hide_share_and_remix": "false",
     "validations": [
       {
@@ -183,29 +183,58 @@
         }
       },
       "toolbox": {
-        "categories": [
-          {
-            "name": "Control",
-            "blocks": [
-              {
-                "type": "play_sounds_together"
-              }
-            ]
-          },
-          {
-            "name": "Play",
-            "blocks": [
-              {
-                "type": "play_sound_at_current_location_simple2"
-              }
-            ]
-          }
+        "blocks": {
+          "Control": [
+            "play_sounds_together"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ]
+        }
+      },
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "drums_intro",
+          "drums_main_beat",
+          "drums_hats",
+          "drums_fill",
+          "drums_percussion_1",
+          "drums_percussion_2",
+          "bass_intro",
+          "bass_main",
+          "keys_intro",
+          "keys_chorus_1",
+          "keys_chorus_2",
+          "keys_prechorus",
+          "synth",
+          "guitar_intro",
+          "guitar_1",
+          "guitar_2",
+          "crash",
+          "wow",
+          "mmm",
+          "breaths",
+          "reverse_vocal",
+          "vocals_now_hes",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_backgrounds",
+          "vocals_adlib_i_know",
+          "vocals_adlib_espresso",
+          "vocals_adlib"
         ]
       }
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-05T17:50:35.842+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function\\\"\"],\"cloned_from\":\"music-ai-skill-function\"},{\"changed_at\":\"2024-09-05 17:52:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:58:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:01:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:04:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:06:09 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 15:56:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 17:42:47 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-05T17:50:35.842+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function\\\"\"],\"cloned_from\":\"music-ai-skill-function\"},{\"changed_at\":\"2024-09-05 17:52:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:58:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:01:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:04:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:06:09 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 15:56:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-09 17:42:47 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:51:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:54:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:55:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:59:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 21:01:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 22:27:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 22:32:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-12 22:35:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-12 22:40:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-12 22:45:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
