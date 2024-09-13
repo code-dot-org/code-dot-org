@@ -4,22 +4,23 @@ import React, {useEffect, useMemo, useState} from 'react';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
-import MusicLibrary, {loadLibrary} from '@cdo/apps/music/player/MusicLibrary';
+import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
+import {BlockMode, DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
+import globals from '@cdo/apps/music/globals';
+import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
+import MusicPlayer from '@cdo/apps/music/player/MusicPlayer';
 import {MusicLevelData} from '@cdo/apps/music/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import EditLibrarySounds from './EditLibrarySounds';
+import EditMusicToolbox from './EditMusicToolbox';
 import RawJsonEditor from './RawJsonEditor';
 
 import moduleStyles from './edit-music-level-data.module.scss';
 
 const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024'];
 
-const JSON_FIELDS = [
-  ['toolbox', 'Toolbox'],
-  ['startSources', 'Start Sources'],
-] as const;
+const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
 
 interface EditMusicLevelDataProps {
   initialLevelData: MusicLevelData;
@@ -31,6 +32,11 @@ interface EditMusicLevelDataProps {
 const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
   initialLevelData,
 }) => {
+  useEffect(() => {
+    setUpBlocklyForMusicLab();
+    globals.setPlayer(new MusicPlayer());
+  }, []);
+
   const [levelData, setLevelData] = useState(initialLevelData);
 
   const [loadedLibraries, setLoadedLibraries] = useState<{
@@ -39,16 +45,12 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
 
   // Fetch library whenever it changes
   useEffect(() => {
-    const libraryName = levelData.library;
-    if (libraryName === undefined) {
-      return;
-    }
-
-    if (!loadedLibraries[libraryName]) {
-      loadLibrary(libraryName).then(library => {
+    const libraryName = levelData.library || DEFAULT_LIBRARY;
+    MusicLibrary.loadLibrary(libraryName).then(library => {
+      if (!loadedLibraries[libraryName]) {
         setLoadedLibraries({...loadedLibraries, [libraryName]: library});
-      });
-    }
+      }
+    });
   }, [levelData.library, loadedLibraries]);
 
   const hasRestrictedSounds = useMemo(
@@ -163,10 +165,29 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
         </div>
       </CollapsibleSection>
       <hr />
+      <CollapsibleSection headerContent="Toolbox">
+        <EditMusicToolbox
+          toolbox={levelData.toolbox}
+          blockMode={levelData.blockMode || BlockMode.SIMPLE2}
+          onChange={toolbox => setLevelData({...levelData, toolbox})}
+          onBlockModeChange={blockMode =>
+            // Reset toolbox blocks when changing block mode
+            setLevelData({
+              ...levelData,
+              blockMode,
+              toolbox: {
+                ...levelData.toolbox,
+                blocks: undefined,
+              },
+            })
+          }
+        />
+      </CollapsibleSection>
+      <hr />
       {JSON_FIELDS.map(([fieldName, fieldLabel]) => {
         return (
           <>
-            {fieldName === JSON_FIELDS[1][0] && (
+            {fieldName === 'startSources' && (
               <div>
                 {
                   'You can also edit start sources using Blockly using Extra Links.'
