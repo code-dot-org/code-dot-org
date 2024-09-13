@@ -9,7 +9,7 @@ import {
   SingleSignOnProviders,
   LmsPlatformNames,
 } from '@cdo/apps/accounts/constants';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
@@ -352,7 +352,7 @@ class OauthConnection extends React.Component {
         event.preventDefault();
         this.setShowUnlinkWarning(true);
         analyticsReporter.sendEvent(
-          'lti_unlink_modal_shown',
+          EVENTS.LTI_UNLINK_MODAL_SHOWN,
           {lms_name: displayName},
           PLATFORMS.STATSIG
         );

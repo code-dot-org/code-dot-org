@@ -3,7 +3,7 @@ import {Fade} from 'react-bootstrap';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -22,7 +22,7 @@ const AccountUnlinkWarningModal = ({
 }: AccountUnlinkWarningModalProps) => {
   const handleSubmit = async () => {
     analyticsReporter.sendEvent(
-      'lti_unlink_click',
+      EVENTS.LTI_UNLINK_CLICK,
       {lms_name: lmsName},
       PLATFORMS.STATSIG
     );
@@ -41,7 +41,7 @@ const AccountUnlinkWarningModal = ({
 
   const handleCancel = () => {
     analyticsReporter.sendEvent(
-      'lti_unlink_cancel',
+      EVENTS.LTI_UNLINK_CANCEL,
       {lms_name: lmsName},
       PLATFORMS.STATSIG
     );
