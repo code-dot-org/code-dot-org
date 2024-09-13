@@ -36,3 +36,20 @@ theme: responsive_full_width
   .wrapper
     = view :curriculum_glance_section, heading: hoc_s("gen_ai_page.glance.title"), grades: hoc_s("gen_ai_page.glance.grades"), duration: hoc_s("gen_ai_page.glance.duration"), level: hoc_s("gen_ai_page.glance.level"), tools: hoc_s("gen_ai_page.glance.suggested_tools"), devices: hoc_s("gen_ai_page.glance.compatible_devices"), suggested_tools: hoc_s("gen_ai_page.glance.compatible_devices"), professional_learning: hoc_s("gen_ai_page.glance.professional_learning"), topics: hoc_s("gen_ai_page.glance.topics"), accessibility_features: hoc_s("gen_ai_page.glance.accessibility_features"), languages: hoc_s("gen_ai_page.glance.languages")
 
+%section
+  .wrapper
+    %h2
+      =hoc_s("gen_ai_page.teach_complete_course.title")
+    %p.body-two
+      =hoc_s("gen_ai_page.teach_complete_course.desc")
+    .action-block.action-block--two-col
+      %img.col-50{src: "/images/banners/gen-ai-bot-wizard-with-background.png", alt: ""}
+      .text-wrapper.col-50
+        %h3=hoc_s("gen_ai_page.teach_complete_course.explore_gen_ai_card.title")
+        %p=hoc_s("gen_ai_page.teach_complete_course.explore_gen_ai_card.desc")
+        %a.link-button{href: CDO.studio_url("/courses/exploring-gen-ai-2024?viewAs=Instructor")}
+          =hoc_s(:call_to_action_explore_course)
+        %br
+        %a.link-button.secondary.white{href: CDO.studio_url("/s/self-paced-gen-ai-2024")}
+          =hoc_s("gen_ai_page.teach_complete_course.explore_gen_ai_card.see_pl")
+      .clear
