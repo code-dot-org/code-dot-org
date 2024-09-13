@@ -46,25 +46,31 @@ export default function SchoolInfoInterstitial({
   }, []);
 
   const handleSchoolInfoSubmit = async () => {
+    const hasNcesId =
+      schoolInfo.schoolId &&
+      !NON_SCHOOL_OPTIONS_ARRAY.includes(schoolInfo.schoolId);
     analyticsReporter.sendEvent(
       EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
       {
-        hasNcesId: schoolInfo.schoolId ? 'true' : 'false',
+        hasNcesId: hasNcesId.toString(),
         attempt: showSchoolInfoUnknownError ? 2 : 1,
       },
       PLATFORMS.BOTH
     );
 
     try {
+      // analytics event is sent in useSchoolInfo
       if (schoolInfo.schoolId === NO_SCHOOL_SETTING) {
         onClose();
         return;
       }
+
+      // don't send non ncesId options to school info
       await updateSchoolInfo({
         formUrl,
         authTokenName,
         authTokenValue,
-        schoolId: schoolInfo.schoolId,
+        schoolId: hasNcesId ? schoolInfo.schoolId : '',
         country: schoolInfo.country,
         schoolName: schoolInfo.schoolName,
         schoolZip: schoolInfo.schoolZip,
