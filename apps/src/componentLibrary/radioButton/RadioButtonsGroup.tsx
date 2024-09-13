@@ -5,7 +5,10 @@ import RadioButton, {RadioButtonProps} from './RadioButton';
 
 // We then pass onChange to higher level prop, so we won't need to specify onChange for every radio button.
 // checked value will be calculated in RadioButtonsGroup component.
-type GroupedRadioButtonProps = Omit<RadioButtonProps, 'onChange' | 'checked'>;
+export type GroupedRadioButtonProps = Omit<
+  RadioButtonProps,
+  'onChange' | 'checked'
+>;
 
 export interface RadioButtonsGroupProps {
   /** Array of props for radio button to render */
