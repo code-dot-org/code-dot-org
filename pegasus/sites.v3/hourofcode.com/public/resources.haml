@@ -13,7 +13,7 @@ layout: wide_index
     .wrapper.centered
       %h1.no-margin-top
         =hoc_s("hoc_resources.heading")
-      %p.body-two.wrap-balance
+      %p.body-two{style: "max-width: 650px; margin: 0 auto;"}
         =hoc_s("hoc_resources.desc", markdown: :inline, locals:{how_to_url: resolve_url('/how-to')})
       = view :"resources/resources_page_nav"
 
@@ -57,7 +57,7 @@ layout: wide_index
         =hoc_s("hoc_resources.posters.desc")
 
   -# Emails
-  %section#sample-emails
+  %section#emails
     .wrapper
       %h2.overline-one.centered
         =hoc_s("hoc_resources.sections.emails")
@@ -67,7 +67,7 @@ layout: wide_index
         =hoc_s("hoc_resources.emails.desc")
 
   -# Logos
-  %section#logo.bg-neutral-dark
+  %section#logos.bg-neutral-dark
     .wrapper
       %h2.white
         =hoc_s("hoc_resources.logos.heading")

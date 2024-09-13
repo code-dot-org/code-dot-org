@@ -19,24 +19,28 @@ section.banner {
 
 nav.section-nav {
   margin-top: 2rem;
-
-  .button-wrapper {
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
 
   a {
     min-width: 132px;
     background: var(--neutral_white);
     border: 2px solid var(--neutral_dark10);
     border-radius: 4px;
+    color: var(--neutral_dark);
     padding: 1rem 1rem 0.875rem;
     text-decoration: none;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 
     i {
       font-size: 1.5rem;
+      color: var(--brand_primary_default);
     }
   }
 }
