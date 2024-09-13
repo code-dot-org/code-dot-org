@@ -7,7 +7,7 @@ import ReactTooltip from 'react-tooltip';
 import fontConstants from '@cdo/apps/fontConstants';
 import {
   SingleSignOnProviders,
-  LmsPlatformNames,
+  LmsLoginTypeNames,
 } from '@cdo/apps/accounts/constants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -143,7 +143,7 @@ class ManageLinkedAccounts extends React.Component {
       case SingleSignOnProviders.facebook:
         return i18n.manageLinkedAccounts_facebook();
       case SingleSignOnProviders.lti_v1:
-        return LmsPlatformNames[this.props.lmsName];
+        return LmsLoginTypeNames[this.props.lmsName];
     }
   };
 
