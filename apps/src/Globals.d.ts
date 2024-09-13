@@ -33,6 +33,7 @@ declare module '*.svg' {
 }
 
 // Modules without types
+declare module '@blockly/block-plus-minus';
 declare module '@blockly/plugin-scroll-options';
 declare module '@blockly/keyboard-navigation';
 declare module '@blockly/field-angle';

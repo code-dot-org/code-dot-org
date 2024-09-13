@@ -2,6 +2,7 @@ import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 import musicI18n from '../locale';
 
+import {installAdvancedProcedures} from './advancedProcedures';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DOCS_BASE_URL,
@@ -62,6 +63,8 @@ export function setUpBlocklyForMusicLab() {
     // we don't want.
     delete Blockly.Blocks.procedures_defreturn;
     delete Blockly.Blocks.procedures_ifreturn;
+  } else {
+    installAdvancedProcedures();
   }
 
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);

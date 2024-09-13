@@ -2586,6 +2586,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/block-plus-minus@npm:^8.0.9":
+  version: 8.0.9
+  resolution: "@blockly/block-plus-minus@npm:8.0.9"
+  peerDependencies:
+    blockly: ^11.0.0
+  checksum: f684c0d3c4e08d0996de8abda94accf78d657a6774558bd1149a72e1fa5811edc8cf66f03e2e70bff27de984f48993795585bafd9f6c16792d27ea10a71945a0
+  languageName: node
+  linkType: hard
+
 "@blockly/block-shareable-procedures@npm:~4.0.5":
   version: 4.0.6
   resolution: "@blockly/block-shareable-procedures@npm:4.0.6"
@@ -8539,6 +8548,7 @@ __metadata:
     "@babel/polyfill": ^7.12.1
     "@babel/preset-env": ^7.24.4
     "@babel/preset-react": ^7.24.1
+    "@blockly/block-plus-minus": ^8.0.9
     "@blockly/block-shareable-procedures": ~4.0.5
     "@blockly/field-bitmap": ^4.1.0
     "@blockly/field-grid-dropdown": ~4.0.9
