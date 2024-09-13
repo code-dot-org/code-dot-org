@@ -8621,7 +8621,7 @@ __metadata:
     babel-plugin-dynamic-import-node: ^2.3.3
     babel-plugin-syntax-async-functions: ^6.13.0
     blockly: 10.3.1
-    bootstrap-sass: ^3.3.6
+    bootstrap-sass: ^3.4.1
     browser-process-hrtime: 0.1.2
     buffer: ^6.0.3
     canvg: gabelerner/canvg
@@ -8922,10 +8922,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap-sass@npm:^3.3.6":
-  version: 3.3.7
-  resolution: "bootstrap-sass@npm:3.3.7"
-  checksum: af924d6810dfeb4c725ace475bf17cb1073572b9d94abd926de9a099ffb8909326220d48c1ff63e188698b9aa5e23e7eb12a44e583d6637db5962316f13a906c
+"bootstrap-sass@npm:^3.4.1":
+  version: 3.4.3
+  resolution: "bootstrap-sass@npm:3.4.3"
+  checksum: a34efc64b4d73a2da8de338a54cc94343aeb7f5e4abbcf6c03afc738cf848697ec8b2ba719ef584b7dcb00c3b3332f85e6e22a87e2813b98371730d981899849
   languageName: node
   linkType: hard
 
