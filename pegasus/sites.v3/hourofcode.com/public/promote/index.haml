@@ -1,0 +1,65 @@
+---
+title: Resources | Hour of Code
+layout: wide_index
+---
+
+%link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
+%link{href: '/css/generated/page/promote-styles.css', rel:'stylesheet', type:'text/css'}
+
+#fullwidth
+  = view :header
+
+  %section.banner.bg-neutral-light
+    .wrapper.centered
+      %h1.no-margin-top
+        =hoc_s("hoc_resources.heading")
+      %p.body-two.wrap-balance
+        =hoc_s("hoc_resources.desc", markdown: :inline, locals:{how_to_url: resolve_url('/how-to')})
+
+%main
+  -# Handouts
+  %section#handouts
+    .wrapper
+      %h2.overline-one.centered
+        =hoc_s("hoc_resources.sections.handouts")
+      %h3.heading-xl.centered
+        =hoc_s("hoc_resources.handouts.heading")
+
+  -# Stickers
+  %section#stickers.bg-neutral-dark
+    .wrapper
+      %h2.white
+        =hoc_s("hoc_resources.stickers.heading")
+
+  -# Videos
+  %section#videos
+    .wrapper
+      %h2.overline-one.centered
+        =hoc_s("hoc_resources.sections.videos")
+      %h3.heading-xl.centered
+        =hoc_s("hoc_resources.videos.heading")
+
+  -# Posters
+  %section#posters.bg-neutral-light
+    .wrapper
+      %h2.overline-one.centered
+        =hoc_s("hoc_resources.sections.posters")
+      %h3.heading-xl.centered
+        =hoc_s("hoc_resources.posters.heading")
+
+  -# Emails
+  %section#sample-emails
+    .wrapper
+      %h2.overline-one.centered
+        =hoc_s("hoc_resources.sections.emails")
+      %h3.heading-xl.centered
+        =hoc_s("hoc_resources.emails.heading")
+
+  -# Logos
+  %section#logo.bg-neutral-dark
+    .wrapper
+      %h2.white
+        =hoc_s("hoc_resources.logos.heading")
+
+  -# Organized by Code.org
+  = view :organized_by_cdo
