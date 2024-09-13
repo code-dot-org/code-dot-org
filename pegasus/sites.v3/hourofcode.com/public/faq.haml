@@ -2,10 +2,13 @@
 layout: wide
 ---
 
-%link{rel: "stylesheet", type: "text/css", href: "/css/faq.css"}
+%link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
+%link{rel: "stylesheet", type: "text/css", href: "/css/generated/faq.css"}
 
 :ruby
-  @header["title"] = hoc_s(:hoc_faq_title)
+  @header["title"] = hoc_s("hoc_faq.heading")
 
-%section
-  =view :faq
+%main
+  %section
+    .wrapper
+      =view :faq
