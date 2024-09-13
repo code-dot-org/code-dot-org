@@ -1449,7 +1449,6 @@ en:
       connect_with: "Connect with..."
       connect_with_email: "Connect with personal login"
       backend_error: "Oops! We encountered an error while trying to link your account. Please try launching Code.org again from your LMS."
-      backend_error_unlink: "Oops! We encountered an error while trying to unlink your account."
       go_back: "Go back"
       invalid_credentials: "Invalid credentials"
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
