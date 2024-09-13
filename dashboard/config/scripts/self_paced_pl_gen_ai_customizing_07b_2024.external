@@ -7,9 +7,34 @@ markdown <<MARKDOWN
 
 #### There are two more strategies you can use when writing system prompts.
 
-#### **Chain of Reasoning**: The steps the model takes to explain its answer, showing how it got from the question to the final response, like solving a math problem step by step.
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Chain of Reasoning
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
 
-#### **Giving Examples**: Providing specific instances or situations to make the explanation clearer, like saying, "For example, when you..." to help people understand better.
+<img src="https://images.code.org/b47dd24b89e67d4dbb150d1bf6298daf-Screenshot 2024-09-11 at 2.17.19 PM.png" alt="chatbot lab level" width="600px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### The steps the model takes to explain its answer, showing how it got from the question to the final response, like solving a math problem step by step.
+<br>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Giving Examples
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+<img src="https://images.code.org/3432fa7472cb8abd54d4d89209b701fc-Screenshot 2024-09-11 at 2.18.21 PM.png" alt="chatbot lab level" width="600px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### Providing specific instances or situations to make the explanation clearer, like saying, "For example, when you..." to help people understand better.
+<br>
+
+</p></div>
+</details>
+
 
 ## Up Next!
 #### Try out applying each of these in chatbot lab.

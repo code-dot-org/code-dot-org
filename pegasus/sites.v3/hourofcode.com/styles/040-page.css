@@ -592,6 +592,28 @@ a.link-button.black {
   }
 }
 
+/* Adds an icon to external links
+  - apply this class to container elements or directly onto
+  an "a" tag when a link opens in a new tab or window */
+.has-external-link a::after,
+a.has-external-link::after {
+  display: inline-block;
+  font: var(--fa-font-solid);
+  content: "\f08e";
+  font-size: 0.875em;
+  margin-inline: 4px 2px;
+}
+
+.has-external-link a.link-button::after,
+a.link-button.has-external-link::after {
+  margin-inline: 4px 0;
+}
+
+html[dir="rtl"] .has-external-link a::after,
+html[dir="rtl"] a.has-external-link::after {
+  transform: scaleX(-1);
+}
+
 /* Button wrapper for side-by-side buttons */
 .button-wrapper {
   display: flex;
