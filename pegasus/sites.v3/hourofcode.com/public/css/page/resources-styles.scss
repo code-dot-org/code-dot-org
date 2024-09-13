@@ -1,0 +1,42 @@
+@import 'breakpoints', 'action-blocks', 'video-responsive';
+
+#fullwidth {
+  overflow: hidden;
+  background: var(--neutral_light);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+h3.heading-xl {
+  margin-top: 1rem;
+}
+
+section.banner {
+  padding-top: 2rem;
+}
+
+nav.section-nav {
+  margin-top: 2rem;
+
+  .button-wrapper {
+    justify-content: center;
+  }
+
+  a {
+    min-width: 132px;
+    background: var(--neutral_white);
+    border: 2px solid var(--neutral_dark10);
+    border-radius: 4px;
+    padding: 1rem 1rem 0.875rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}

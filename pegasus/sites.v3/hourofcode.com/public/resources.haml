@@ -4,7 +4,7 @@ layout: wide_index
 ---
 
 %link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
-%link{href: '/css/generated/page/promote-styles.css', rel:'stylesheet', type:'text/css'}
+%link{href: '/css/generated/page/resources-styles.css', rel:'stylesheet', type:'text/css'}
 
 #fullwidth
   = view :header
@@ -15,6 +15,7 @@ layout: wide_index
         =hoc_s("hoc_resources.heading")
       %p.body-two.wrap-balance
         =hoc_s("hoc_resources.desc", markdown: :inline, locals:{how_to_url: resolve_url('/how-to')})
+      = view :"resources/resources_page_nav"
 
 %main
   -# Handouts
