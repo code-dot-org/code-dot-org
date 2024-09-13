@@ -5,10 +5,10 @@ import {
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 
 describe('buildSchoolData', () => {
-  it('should return school info with school_id when schoolId is provided and not in NON_SCHOOL_OPTIONS_ARRAY', () => {
+  it('should return school info with school_id when country is US and schoolId is provided and not in NON_SCHOOL_OPTIONS_ARRAY', () => {
     const result = buildSchoolData({
       schoolId: '12345',
-      country: '',
+      country: US_COUNTRY_CODE,
       schoolName: '',
       schoolZip: '',
     });
@@ -22,7 +22,7 @@ describe('buildSchoolData', () => {
     });
   });
 
-  it('should return school info with country, school_name, and zip when country is provided and US_COUNTRY_CODE', () => {
+  it('should return school info with country, school_name, and zip when country is US', () => {
     const result = buildSchoolData({
       schoolId: '',
       country: US_COUNTRY_CODE,
@@ -47,6 +47,24 @@ describe('buildSchoolData', () => {
       country: 'CA',
       schoolName: 'Test School',
       schoolZip: '12345',
+    });
+
+    expect(result).toEqual({
+      user: {
+        school_info_attributes: {
+          country: 'CA',
+          school_name: 'Test School',
+        },
+      },
+    });
+  });
+
+  it('should return school info with country and no schoolId when country is not US_COUNTRY_CODE', () => {
+    const result = buildSchoolData({
+      schoolId: '12345',
+      country: 'CA',
+      schoolName: 'Test School',
+      schoolZip: '',
     });
 
     expect(result).toEqual({

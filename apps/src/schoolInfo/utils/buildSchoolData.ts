@@ -1,5 +1,6 @@
 import {
   NON_SCHOOL_OPTIONS_ARRAY,
+  SELECT_COUNTRY,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 
@@ -18,7 +19,11 @@ export function buildSchoolData({
 }): SchoolInfoRequest | undefined {
   // If we have an NCES id, _only_ send that - everything else will be
   // backfilled by records on the server.
-  if (schoolId && !NON_SCHOOL_OPTIONS_ARRAY.includes(schoolId)) {
+  if (
+    country === US_COUNTRY_CODE &&
+    schoolId &&
+    !NON_SCHOOL_OPTIONS_ARRAY.includes(schoolId)
+  ) {
     return {
       user: {
         school_info_attributes: {
@@ -28,7 +33,7 @@ export function buildSchoolData({
     };
   }
 
-  if (country) {
+  if (country && country !== SELECT_COUNTRY) {
     return {
       user: {
         school_info_attributes: {
