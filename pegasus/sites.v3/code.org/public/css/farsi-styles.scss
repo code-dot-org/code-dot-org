@@ -21,8 +21,22 @@
 
 #farsi-carousel {
 
+  swiper-slide {
+    gap: 2rem;
+    align-items: center;
+
+    @media screen and (max-width: $width-md) {
+      flex-direction: column;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
   p {
     margin-bottom: 0;
+    @include heading-md;
 
     @media screen and (max-width: $width-sm) {
       margin-bottom: 1rem;
