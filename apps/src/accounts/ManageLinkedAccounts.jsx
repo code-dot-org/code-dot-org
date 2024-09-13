@@ -8,7 +8,7 @@ import fontConstants from '@cdo/apps/fontConstants';
 import {
   SingleSignOnProviders,
   LmsPlatformNames,
-} from '@cdo/apps/lib/ui/accounts/constants';
+} from '@cdo/apps/accounts/constants';
 import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
