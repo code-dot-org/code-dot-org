@@ -9,22 +9,8 @@ import {RESOURCE_TYPE} from './ResourceIconType';
 import styles from './lesson-materials.module.scss';
 
 type ResourceIconProps = {
-  // the resourceType is connected to how curriculum writers designate a resource
-  // when building a lesson. The Lesson Plan is unique in that a curriculum writer
-  // doesn't add this resource in the same way as the others in this list.  However
-  // we are displaying the lesson plans in the Lesson Materials page.
-  // resourceType:
-  //   | 'Slides'
-  //   | 'Video'
-  //   | 'Lesson Plan'
-  //   | 'Resource'
-  //   | 'Rubric'
-  //   | 'Handout'
-  //   | 'Activity Guide'
-  //   | 'Exemplar'
-  //   | 'Answer Key';
-  resourceType: string | null | undefined;
-  resourceUrl: string | null | undefined;
+  resourceType: string;
+  resourceUrl: string;
 };
 
 const ResourceIcon: React.FC<ResourceIconProps> = ({
@@ -48,7 +34,10 @@ const ResourceIcon: React.FC<ResourceIconProps> = ({
   };
 
   return (
-    <div className={classNames(styles.resourceIconContainer, iconType().class)}>
+    <div
+      data-testid={'resource-icon-' + iconType().icon}
+      className={classNames(styles.resourceIconContainer, iconType().class)}
+    >
       <FontAwesomeV6Icon iconName={iconType().icon} className={styles.icon} />
     </div>
   );

@@ -13,6 +13,7 @@ type ResourceViewOptionsDropdownProps = {
 const ResourceViewOptionsDropdown: React.FC<
   ResourceViewOptionsDropdownProps
 > = ({resource}) => {
+  // This is a dummy options array that will be replaced with actual options in TEACH-1326
   const dummyOptions = [
     {
       value: 'option-1',
@@ -29,9 +30,9 @@ const ResourceViewOptionsDropdown: React.FC<
   ];
 
   return (
-    <div>
+    <div data-testid={'view-options-dropdown'}>
       <ActionDropdown
-        name="view-options-dropdown"
+        name="view-options"
         labelText="View options dropdown"
         options={dummyOptions}
         size="s"
