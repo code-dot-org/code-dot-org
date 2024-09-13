@@ -3,22 +3,44 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Generative AI Course Overview
+# Exploring Generative AI Course Overview
  
-#### The Generative AI unit is designed as a standalone unit for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.
+#### The Exploring Generative AI course is designed as a standalone unit for 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce these concepts according to their schedule and educational needs.
+
+#### This course consists of two units. You can choose to teach one or both units, whichever works for your class. 
 
 
-<img src="https://images.code.org/253b0e26c460cbe7c84792effee1a70e-image-1712672034629.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 175px; margin: 20px 50px 50px 20px; ">
 
-## In this unit, students will: 
+## Unit 1: Foundations of Generative AI 
+
+#### This unit consists of 11 lessons and takes about 2.5 weeks to complete.
+
+<img src="https://images.code.org/253b0e26c460cbe7c84792effee1a70e-image-1712672034629.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 190px; width: 210px; margin: 20px 50px 50px 20px; ">
+
+### **Students will:** 
 
 
-- #### Understand the fundamental concepts generative AI.
-- #### Engage in hands-on activities that involve exploring, customizing, and creating AI bots.
-- #### Explore and discuss the ethical implications and responsibilities associated Generataive AI.
+- #### Understand the **fundamental concepts** generative AI.
+- #### Demystify generative AI models by exploring their internal structures through input, storage, process, and output.
+- #### Understand the impact of training data on model performance and the potential for bias in generative AI systems.
+
+#### Explore the Unit <a href = "link" target = "blank" rel = "noopener noreferrer"> here </a>
+
+## Unit 2: Customizing Language Models
+
+#### This unit consists of 15 lessons and takes about 4 weeks to complete.
+
+<img src="https://images.code.org/4adb0f9acc3b4e3c089acb44c14e8d39-image-1726074091862.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 205px; margin: 20px 50px 50px 20px; ">
+
+### **Students will:**
+- #### Engage in hands-on activities that involve exploring, customizing, and **creating AI bots**.
+- #### Explore and discuss the ethical implications and responsibilities associated generataive AI.
+- #### Design and build a personalized chatbot, adjusting key settings, and create a model card to share their project for peer interaction.
+
+#### Explore the Unit <a href = "link" target = "blank" rel = "noopener noreferrer"> here </a>
 
 
-##Let’s start learning!
+## Let’s start learning!
 
 
 MARKDOWN

@@ -1,7 +1,7 @@
 import project from '@cdo/apps/code-studio/initApp/project';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import logToCloud from '@cdo/apps/logToCloud';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import javalabMsg from '@cdo/javalab/locale';
 

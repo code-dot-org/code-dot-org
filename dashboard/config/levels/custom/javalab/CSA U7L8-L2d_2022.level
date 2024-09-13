@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-18T12:47:43.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The Sierpinski Carpet is a fractal, or geometric shape, that is created by recursively drawing squares and subsquares. Mobile phone and Wi-Fi antennas have even been produced in the form of a few iterations of the Sierpinski Carpet.\r\n\r\n##In RecursiveScene.java:\r\n\r\n1. Write the method `drawCarpet()`(#e7e8ea) by implementing the following algorithm to create the Sierpinski Carpet.\r\n\r\n```\r\nset smaller to size / 3\r\n\r\ndraw a square at (x + smaller, y + smaller)\r\nwith smaller as the width and height\r\n\r\nif smaller is greater than or equal to 3,\r\ndraw 8 subsquares using smaller as size for each:\r\n   draw carpet at (x, y)\r\n   draw carpet at (x + smaller, y)\r\n   draw carpet at (x + 2 * smaller, y)\r\n   draw carpet at (x, y + smaller)\r\n   draw carpet at (x + 2 * smaller, y + smaller)\r\n   draw carpet at (x, y + 2 * smaller)\r\n   draw carpet at (x + smaller, y + 2 * smaller)\r\n   draw carpet at (x + 2 * smaller, y + 2 * smaller)\r\n```\r\n\r\n##In MyTheater.java:\r\n\r\n2. Call the `drawCarpet()`(#e7e8ea) method with the arguments `(0, 0)`(#e7e8ea) for the x and y position and `myScene.getWidth()`(#e7e8ea) for the size.",
@@ -23,15 +27,9 @@
     "display_name": "Sierpinski Carpet",
     "bubble_choice_description": "Use recursion to draw the Sierpinski Carpet.",
     "thumbnail_url": "https://images.code.org/916c6024cc46b28d8a7a3753a585234c-U7L8-L2d.gif",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-18T12:47:43.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-18T12:47:43.306+00:00\",\"changed\":[\"cloned from \\\"CSA U7L8-L2c_2022\\\"\"],\"cloned_from\":\"CSA U7L8-L2c_2022\"},{\"changed_at\":\"2022-04-18 12:47:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-11 13:51:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-12 23:07:50 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 02:24:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 02:30:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 02:31:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 02:31:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 02:31:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 02:40:41 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-13 02:47:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 18:00:17 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-17 15:10:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-17 15:21:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

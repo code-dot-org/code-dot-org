@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Reading a CSV File\r\n\r\nExperiment with the program by making some modifications, then run the program to observe the results.\r\n\r\n## Do This\r\n1. Change the variable name of the DataFrame on line 3.\r\n2. Run the program & discuss with your partner:\r\n   - What happened? Why? \r\n3. What additional modifications might you need to make so that the program works?\r\n\r\n\r\n",
+    "long_instructions": "# DataFrame Names\r\n\r\n::: details [**Step 1**]\r\nChange the variable name of the DataFrame on line 3.\r\n:::\r\n\r\n::: details [**Step 2**]\r\n* Run the program\r\n* Discuss with your partner what happened and why?\r\n:::\r\n\r\n::: details [**Step 3**]\r\nWithout changing the variable name _back_ to `data`, what other modifications might you need to make so that the program works? \r\n:::\r\n\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -43,6 +43,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-29T23:03:01.141+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L2_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L2_2024-pilot\"},{\"changed_at\":\"2024-08-29 23:03:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:05:41 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:26:27 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29T23:03:01.141+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L2_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L2_2024-pilot\"},{\"changed_at\":\"2024-08-29 23:03:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:05:41 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 23:26:27 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 21:29:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 23:11:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,5 +1,5 @@
 # Analytics constants used within the pegasus directory.
-# (See apps/src/lib/util/AnalyticsConstants.js for constants in the
+# (See apps/metrics/AnalyticsConstants.js for constants in the
 # apps directory)
 module AnalyticsConstants
   EVENTS = [

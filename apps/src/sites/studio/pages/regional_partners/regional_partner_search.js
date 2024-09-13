@@ -6,8 +6,8 @@ import {Provider} from 'react-redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import initResponsive from '@cdo/apps/code-studio/responsive';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import RegionalPartnerSearch from '@cdo/apps/templates/RegionalPartnerSearch';
 

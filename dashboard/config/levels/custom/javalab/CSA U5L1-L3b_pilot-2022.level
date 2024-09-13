@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:49:52.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A road safety team wants to brainstorm ways to reduce the number of major car accidents and needs to store information about car accidents that occurred in 2020. They have the following values:\r\n\r\n![](https://images.code.org/ace39fdd1e3b68194dc798e6dd90bc75-image-1650903038942.png)\r\n\r\nwhere each row represents a unique accident. Each column represents the severity of the accident, the number of vehicles, the number of casualties, the day of the week, and the speed limit, respectively.\r\n\r\n##In CarAccidents.java:\r\n\r\nWrite the `createDataArray()`(#e7e8ea) method:\r\n\r\n1. Declare and initialize a 2D `int`(#e7e8ea) array called `tempData`(#e7e8ea) using the `new`(#e7e8ea) keyword.\r\n\r\n2. Return the `tempData`(#e7e8ea) array.\r\n\r\nWrite the `setDataValues()`(#e7e8ea) method:\r\n\r\n3. Assign the values for each row and column in the `accidents`(#e7e8ea) array.\r\n\r\n::: details [**Show Me How**]\r\nA two-dimensional (2D) array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[][] variableName = new dataType[numRows][numCols];\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, and set the `numRows`(#e7e8ea) and `numCols`(#e7e8ea) to the number of rows and columns for the 2D array.\r\n\r\nValues are added to a 2D array using the following syntax:\r\n\r\n  ```\r\n  variableName[row][col] = value;\r\n  ```\r\n  \r\nSpecify the specific `row`(#e7e8ea) and `col`(#e7e8ea) where you want to store the value.\r\n:::",
@@ -24,12 +28,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:49:52.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:49:52.870+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L3b_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L3b_2022\"},{\"changed_at\":\"2022-10-07 20:18:40 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-07 21:41:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-07 21:43:48 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-07 21:46:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-07 21:46:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-07 21:47:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-03 15:56:24 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>

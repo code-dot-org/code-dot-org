@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Lists\r\n\r\n\r\n## Do This:\r\n1. What will happen when you update the value of one of the elements in the `conversion_factors` list?\r\n2. Run the program again to print the `message` and find out!\r\n\r\n\r\n",
+    "long_instructions": "# Element Value\r\n\r\n::: details [**Step 1**]\r\nWhat happens when you update the value of one of the elements in the `conversion_factors` list?\r\n:::\r\n\r\n::: details [**Step 2**]\r\nRun the program again to print the `message` and find out!\r\n:::\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -34,6 +34,6 @@
     },
     "project_template_level_name": "datascience-U2L2-L7-8templ_2024-pilot"
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-30T00:05:32.416+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L7_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L7_2024-pilot\"},{\"changed_at\":\"2024-08-30 00:08:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-30T00:05:32.416+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L7_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L7_2024-pilot\"},{\"changed_at\":\"2024-08-30 00:08:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 20:59:38 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -778,7 +778,8 @@
     "display_name": "The RocketPainter",
     "bubble_choice_description": "The Neighborhood is opening a space center! To celebrate, the `Painter` has been asked to paint a mural of a rocket.",
     "thumbnail_url": "https://images.code.org/85e704a77c197cbfbbaf466d4bcf9e14-U1L11-L3c.png",
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-01T20:49:31.914+00:00\",\"changed\":[\"cloned from \\\"CSA U1L11-L3c_2025\\\"\"],\"cloned_from\":\"CSA U1L11-L3c_2025\"}]"

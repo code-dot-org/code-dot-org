@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:20.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The `Weather`(#e7e8ea) class analyzes data about daily temperatures and has an instance variable for the daily temperatures for a city.\r\n\r\n##In Weather.java:\r\n\r\nThe method `calculateAverage()`(#e7e8ea) returns the average of all the values in a 1D array. In the `calculateAverage()`(#e7e8ea) method,\r\n\r\n1. Declare and initialize a variable called `sum`(#e7e8ea) to `0`(#e7e8ea).\r\n\r\n2. Traverse the instance variable `temperatures`(#e7e8ea) using an enhanced `for`(#e7e8ea) loop.\r\n\r\n3. Add each value in the array to `sum`(#e7e8ea).\r\n\r\n4. Return the result of the `sum`(#e7e8ea) divided by the length of the `temperatures`(#e7e8ea) array.\r\n\r\n##In MyConsole.java:\r\n\r\n5. Print the result of a call to `calculateAverage()`(#e7e8ea) on the `albanyTemps`(#e7e8ea) object.\r\n\r\n6. Print the result of a call to `calculateAverage()`(#e7e8ea) on the `sacramentoTemps`(#e7e8ea) object.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://openweathermap.org/)!*\r\n\r\n::: details [**Show Me How**]\r\nAn enhanced `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (dataType variableName : arrayName) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data stored in the 1D array. The `variableName`(#e7e8ea) should be a name that is easily recognizable and represents the data stored in the array. The `arrayName`(#e7e8ea) should be the name of the array to traverse.\r\n:::",
@@ -22,12 +26,9 @@
         "text": "public class Weather {\n\n  private double[] temperatures;\n\n  public Weather(double[] temperatures) {\n    this.temperatures = temperatures;\n  }\n\n  public double calculateAverage() {\n    // TO DO #1-4: Traverse the temperatures array using an enhanced\n    // for loop to calculate the average of the values.\n\n\n    return 0;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:20.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:20.381+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L5b_2022\\\"\"],\"cloned_from\":\"CSA U3L5-L5b_2022\"},{\"changed_at\":\"2022-09-04 20:15:29 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 20:16:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 20:16:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 20:17:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 21:00:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 21:00:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 21:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 21:38:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 21:39:40 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

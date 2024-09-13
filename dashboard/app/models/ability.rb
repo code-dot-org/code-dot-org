@@ -267,10 +267,6 @@ class Ability
         can :index, AiTutorInteraction
       end
 
-      if user.has_ai_tutor_access? && user.levelbuilder?
-        can :check_message_safety, :aichat
-      end
-
       if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :chat_completion, :ai_diff
       end

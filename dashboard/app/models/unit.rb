@@ -1598,6 +1598,23 @@ class Unit < ApplicationRecord
     lessons.none?(&:has_lesson_plan)
   end
 
+  def summarize_for_lesson_materials_view(user)
+    summary = {
+      id: id,
+      title: title_for_display,
+      name: name,
+      unitNumber: unit_number,
+      scriptOverviewPdfUrl: get_unit_overview_pdf_url,
+      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+    }
+    # Only get lessons with lesson plans
+    filtered_lessons = lessons.select(&:has_lesson_plan)
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
+
+    summary
+  end
+
   def summarize_for_rollup(user = nil)
     summary = {
       title: title_for_display,
@@ -1740,6 +1757,14 @@ class Unit < ApplicationRecord
       scope: [:data, :script, :name, name],
       smart: true
     )
+  end
+
+  def unit_number
+    has_prefix = unit_group&.has_numbered_units
+
+    return nil unless has_prefix
+
+    unit_group_units&.first&.position
   end
 
   def title_for_display

@@ -118,11 +118,6 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     assert option.oauth?
   end
 
-  test 'oauth? true when credential_type is Powerschool' do
-    option = create :authentication_option, credential_type: AuthenticationOption::POWERSCHOOL
-    assert option.oauth?
-  end
-
   test 'oauth? true when credential_type is Quikcamps' do
     option = create :authentication_option, credential_type: AuthenticationOption::QWIKLABS
     assert option.oauth?

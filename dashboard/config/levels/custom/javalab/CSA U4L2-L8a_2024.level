@@ -32,7 +32,8 @@
         "tabOrder": 1
       }
     },
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:58:26.529+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L8a_2023\\\"\"],\"cloned_from\":\"CSA U4L2-L8a_2023\"},{\"changed_at\":\"2024-06-20 12:31:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-20 12:32:00 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-20 12:33:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-20 12:33:43 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

@@ -309,7 +309,7 @@ en:
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
-    verified_teacher_subject: 'Code.org Teacher Verification - Success'
+    verified_teacher_subject: 'Verified Teacher Resources Unlocked: Your Code.org Access is Ready!'
   section:
     your_section:
       one: 'Your section:'
@@ -636,15 +636,9 @@ en:
     student: 'Student'
     teacher: 'Teacher'
   footer:
-    thanks: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, and our video cast for their support in creating Code Studio.'
-    help_from_html: 'We especially want to recognize the engineers from Amazon, Google, and Microsoft who helped create these materials.'
     help_from_html_old: 'Engineers from Amazon, Google, and Microsoft helped create these materials.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. All Rights Reserved.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. All Rights Reserved.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
-    powered_by_aws: 'Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC. All Rights Reserved. Paramount Pictures Transformers One &copy; %{current_year} Paramount Pictures. All Rights Reserved.'
     built_on_github: 'Built on GitHub from Microsoft'
-    google_copyright: '&copy; Google Inc. used with permission. Google Classroom is a trademark of Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and %{cs_discoveries} are trademarks of Code.org.'
     copyright: 'Copyright'
     more: 'More'

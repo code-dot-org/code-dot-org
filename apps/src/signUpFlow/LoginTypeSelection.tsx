@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
+import {Button as NewButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import canvas from '@cdo/apps/signUpFlow/images/canvas.png';
 import cleverLogo from '@cdo/apps/signUpFlow/images/cleverLogo.png';
-import signupCanvas from '@cdo/apps/signUpFlow/images/signupCanvas.png';
-import signupSchoology from '@cdo/apps/signUpFlow/images/signupSchoology.png';
+import schoology from '@cdo/apps/signUpFlow/images/schoology.png';
 import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -181,16 +182,30 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <div className={style.greyTextbox}>
-            <img src={signupCanvas} alt="" />
-            <img src={signupSchoology} alt="" />
             <BodyThreeText className={style.subheader}>
-              {locale.does_your_school_use_an_lms()}
+              {locale.using_lms_platforms()}
             </BodyThreeText>
-            <SafeMarkdown
-              markdown={locale.click_here_to_learn({
-                clickHereLink: 'code.org/lms',
-              })}
-            />
+            <BodyThreeText>
+              {locale.access_detailed_instructions()}
+            </BodyThreeText>
+            <Button
+              href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
+              color={Button.ButtonColor.white}
+              text={'Canvas'}
+              icon={'arrow-up-right-from-square'}
+              __useDeprecatedTag
+            >
+              <img src={canvas} alt="" />
+            </Button>
+            <Button
+              href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
+              color={Button.ButtonColor.white}
+              text={'Schoology'}
+              icon={'arrow-up-right-from-square'}
+              __useDeprecatedTag
+            >
+              <img src={schoology} alt="" />
+            </Button>
           </div>
         </div>
         <div className={style.dividerContainer}>
@@ -251,7 +266,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <Button
+          <NewButton
             id="createAccountButton"
             className={style.shortButton}
             text={locale.create_my_account()}

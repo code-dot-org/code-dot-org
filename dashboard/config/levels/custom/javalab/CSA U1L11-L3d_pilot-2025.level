@@ -778,7 +778,8 @@
     "display_name": "The TrophyPainter",
     "bubble_choice_description": "The `Painter` is volunteering at an upcoming marathon, and they need help painting a mural of a trophy to mark the finish line.",
     "thumbnail_url": "https://images.code.org/a169122701494bfbfcf0a1de055f43d3-U1L11-L3d.png",
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-01T20:49:32.115+00:00\",\"changed\":[\"cloned from \\\"CSA U1L11-L3d_2025\\\"\"],\"cloned_from\":\"CSA U1L11-L3d_2025\"}]"

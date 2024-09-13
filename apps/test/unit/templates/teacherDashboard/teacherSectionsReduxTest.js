@@ -2,7 +2,7 @@ import $ from 'jquery';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   stubRedux,
   restoreRedux,
@@ -1803,7 +1803,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('doesnt send an event when course offering is unchanged', () => {
-      jest.mock('@cdo/apps/lib/util/firehose');
+      jest.mock('@cdo/apps/metrics/firehose');
       store.dispatch(assignToSection(11, 2, 2, 3, null));
       expect(analyticsSpy).to.not.be.called;
     });

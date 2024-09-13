@@ -8,6 +8,10 @@ markdown <<MARKDOWN
 
 #### Now that you have learned more about what Generative AI is, let's dive into how to customize large language models.
 
+#### This unit is designed to deepen students' understanding of how text-based generative AI models function and how they can be customized for specific tasks. The lessons focus on two primary aspects: system prompting and retrieval. Students will explore how prompts and retrieval methods influence the behavior of AI models, allowing them to generate more accurate and relevant responses.
+#### Through hands-on activities, students will learn to design prompts that guide the AI's output effectively and use retrieval to provide the AI with relevant information. The unit also introduces model cards as tools for planning and documenting AI behavior, culminating in a project where students create a personal chatbot that reflects their unique personality and preferences.
+#### By the end of this unit, students will have the skills to customize AI models thoughtfully, considering the ethical implications and potential biases in AI systems.
+
 <img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 150px; clear: both; margin: 0 20px 20px 0;">
 
 ## **In this lesson you will:** 
@@ -16,5 +20,6 @@ markdown <<MARKDOWN
 
 
 ### **Suggested time:** 60 minutes
+
 
 MARKDOWN
