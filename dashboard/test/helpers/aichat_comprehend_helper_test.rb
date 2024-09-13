@@ -69,6 +69,12 @@ class AichatComprehendHelperTest < ActionView::TestCase
     assert_equal 0.9, response[:max_category].score
   end
 
+  test 'returns nil if text is nil, empty, or blank' do
+    assert_nil AichatComprehendHelper.get_toxicity(nil, 'en')
+    assert_nil AichatComprehendHelper.get_toxicity("", 'en')
+    assert_nil AichatComprehendHelper.get_toxicity("         ", 'en')
+  end
+
   test 'correctly chunks long text inputs' do
     # 5 characters * 3000 = 15000 bytes.
     long_message = "abcd " * 3000
