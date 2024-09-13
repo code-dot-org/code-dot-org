@@ -50,6 +50,7 @@ export const BlockMode = {
 export const DEFAULT_PATTERN = {
   kit: 'drums',
   events: [],
+  ai: false,
 };
 
 export const DEFAULT_PATTERN_LENGTH = 1;
@@ -60,6 +61,7 @@ export const DEFAULT_PATTERN_AI = {
   kit: 'drums',
   length: 2,
   events: [],
+  ai: true,
 };
 
 export const DEFAULT_PATTERN_AI_LENGTH = 2;

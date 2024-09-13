@@ -33,6 +33,11 @@ export const MusicConditions: ConditionNames = {
   PLAYED_CHORDS: {name: 'played_chords', valueType: 'number'},
   PLAYED_EMPTY_PATTERNS: {name: 'played_empty_patterns', valueType: 'number'},
   PLAYED_PATTERNS: {name: 'played_patterns', valueType: 'number'},
+  PLAYED_EMPTY_PATTERNS_AI: {
+    name: 'played_empty_patterns_ai',
+    valueType: 'number',
+  },
+  PLAYED_PATTERNS_AI: {name: 'played_patterns_ai', valueType: 'number'},
 };
 
 export default class MusicValidator extends Validator {
@@ -72,6 +77,10 @@ export default class MusicValidator extends Validator {
     // that are empty and those with events.
     let playedNumberEmptyPatterns = 0;
     let playedNumberPatterns = 0;
+
+    // And the same for patterns made with AI.
+    let playedNumberEmptyPatternsAi = 0;
+    let playedNumberPatternsAi = 0;
 
     // Get number of chords that have been started, separately counting those
     // that are empty and those with notes.
@@ -121,9 +130,17 @@ export default class MusicValidator extends Validator {
       } else if (eventData.type === 'pattern') {
         const patternEvent = eventData as PatternEvent;
         if (patternEvent.value.events.length === 0) {
-          playedNumberEmptyPatterns++;
+          if (patternEvent.value.ai) {
+            playedNumberEmptyPatternsAi++;
+          } else {
+            playedNumberEmptyPatterns++;
+          }
         } else {
-          playedNumberPatterns++;
+          if (patternEvent.value.ai) {
+            playedNumberPatternsAi++;
+          } else {
+            playedNumberPatterns++;
+          }
         }
       } else if (eventData.type === 'chord') {
         const chordEvent = eventData as ChordEvent;
@@ -177,6 +194,16 @@ export default class MusicValidator extends Validator {
     this.addPlayedConditions(
       MusicConditions.PLAYED_PATTERNS.name,
       playedNumberPatterns
+    );
+
+    // And the same for patterns made with AI.
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_EMPTY_PATTERNS_AI.name,
+      playedNumberEmptyPatternsAi
+    );
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_PATTERNS_AI.name,
+      playedNumberPatternsAi
     );
 
     // Add satisfied conditions for the played chords.
