@@ -1,14 +1,14 @@
-#fullwidth
+-# TODO remove this logic after soon-hoc launch
+-# Get the default HOC mode
+-hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+
+#fullwidth{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
   = view :header
 
-  %section.banner
+  %section.banner{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
     .wrapper
       %h1
-        =hoc_s(:hoc_how_to_top_heading)
+        =hoc_s("hoc_how_to.heading")
       %p.body-one
-        =hoc_s(:hoc_how_to_top_desc)
-      %div.show-overflow
-        .flex-container
-          %p.heading-sm.no-margin-bottom
-            =hoc_s(:hoc_how_to_top_view_guide)
-          = view :"how-to/guide-nav/#{nav_audience}"
+        =hoc_s("hoc_how_to.desc")
+      = view :"how-to/how_to_guide_nav"

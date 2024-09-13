@@ -7,3 +7,7 @@ level 'gen-ai-customizing-prompt-synthesis-L9A_2024'
 level 'gen-ai-customizing-prompt-synthesis-L9B_2024'
 level 'gen-ai-customizing-prompt-synthesis-L9C_2024'
 level 'gen-ai-customizing-prompt-synthesis-L9D_2024'
+
+markdown <<MARKDOWN
+**Teacher Tip**: 
+MARKDOWN

@@ -1,13 +1,12 @@
-- nav_index = 1
+-# TODO remove this logic after soon-hoc launch
+-# Get the default HOC mode
+-hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
-%nav{"aria-label": hoc_s(:hoc_how_to_nav_main_aria_label)}
-  %ul.how-to-nav
-    %li
-      %button.menu-button
-        %span
-          = nav_current
-      %ul.menu-list{style: "display: none"}
-        - nav_index.times do |index|
-          %li
-            %a{href: resolve_url(nav_url[index]), "aria-label": nav_aria_label[index]}
-              = nav_label[index]
+%nav.choose-guide{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
+  .button-wrapper
+    %a.teachers{href: resolve_url("/how-to")}
+      %i{class: "fa-solid fa-person-chalkboard"}
+      =hoc_s("hoc_how_to.teachers.heading")
+    %a.events{href: resolve_url("/how-to/events")}
+      %i{class: "fa-solid fa-school"}
+      =hoc_s("hoc_how_to.events.heading")

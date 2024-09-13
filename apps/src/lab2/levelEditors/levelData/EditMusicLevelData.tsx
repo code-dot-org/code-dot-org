@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
@@ -105,7 +106,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 labelText="Selected Artist Pack"
                 name="packId"
                 size="s"
-                items={restrictedPacks}
+                items={[{value: 'none', text: '(none)'}, ...restrictedPacks]}
                 selectedValue={levelData.packId}
                 onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
                   const packId =
@@ -209,10 +210,19 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
           </>
         );
       })}
-      <CollapsibleSection headerContent="View Level Data JSON">
-        <p className={moduleStyles.renderedJson}>
-          {JSON.stringify(levelData, null, 2)}
-        </p>
+      <CollapsibleSection headerContent="Edit Level Data JSON">
+        <div className={moduleStyles.section}>
+          <Alert
+            type="warning"
+            text="Editing level data JSON directly will override any changes made in other sections"
+            size="xs"
+          />
+          <RawJsonEditor
+            currentValue={levelData}
+            fieldName={'levelData'}
+            onChange={newValue => setLevelData(newValue as MusicLevelData)}
+          />
+        </div>
       </CollapsibleSection>
     </div>
   );
