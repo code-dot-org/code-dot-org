@@ -3,17 +3,17 @@ theme: responsive_full_width
 ---
 
 :ruby
-  @header["title"] = hoc_s(:farsi_page_top_heading)
+  @header["title"] = hoc_s(:"farsi_site.top_heading")
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/farsi-styles.css", rel: "stylesheet"}
 %section
   .wrapper
-    %h1=hoc_s(:farsi_page_top_heading)
+    %h1=hoc_s(:"farsi_site.top_heading")
     %div.flex-container.justify-space-between.wrap
       %div.col-60{style: "margin-bottom: 1rem"}
-        %h2.heading-lg=hoc_s(:farsi_page_top_heading_02)
-        %p.body-three=hoc_s(:farsi_page_top_desc)
+        %h2.heading-lg=hoc_s(:"farsi_site.top_heading_02")
+        %p.body-three=hoc_s(:"farsi_site.top_desc")
       %div.col-33{style: "float:right"}
         %img{src: "/images/global/fa/farsi-page-students.jpg", alt: "", style: "width: 100%"}
       .clear
@@ -36,25 +36,25 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2=hoc_s(:farsi_page_global_heading)
-    %p.body-three=hoc_s(:farsi_page_global_desc_01)
+    %h2=hoc_s(:"farsi_site.global_heading")
+    %p.body-three=hoc_s(:"farsi_site.global_desc_01")
     %p.body-three
-      %strong=hoc_s(:farsi_page_global_desc_02)
-      =hoc_s(:farsi_page_global_desc_03)
+      %strong=hoc_s(:"farsi_site.global_desc_02")
+      =hoc_s(:"farsi_site.global_desc_03")
 
 %section.bg-neutral-light
   .wrapper
-    %h2=hoc_s(:farsi_about_heading_1)
-    %p.body-three=hoc_s(:farsi_about_description_1)
-    %p.body-three=hoc_s(:farsi_about_description_2)
-    %p.body-three=hoc_s(:farsi_about_description_3)
-    %p.body-three=hoc_s(:farsi_about_description_4)
+    %h2=hoc_s(:"farsi_site.farsi_about_heading_1")
+    %p.body-three=hoc_s(:"farsi_site.farsi_about_description_1")
+    %p.body-three=hoc_s(:"farsi_site.farsi_about_description_2")
+    %p.body-three=hoc_s(:"farsi_site.farsi_about_description_3")
+    %p.body-three=hoc_s(:"farsi_site.farsi_about_description_4")
 
 %section
   .wrapper
-    %h2=hoc_s(:farsi_page_supporters_heading)
+    %h2=hoc_s(:"farsi_site.supporters_heading")
     %p.heading-sm
-      =hoc_s(:farsi_page_supporters_desc)
+      =hoc_s(:"farsi_site.supporters_desc")
     %ul.three-col.clear-styles{style: "margin-top: 2rem"}
       %li Abstract Ventures
       %li Anonymous
@@ -97,13 +97,15 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    %h2=hoc_s(:farsi_page_founders_heading)
+    %h2=hoc_s(:"farsi_site.founders_heading")
     .photo-carousel-wrapper
       = view :"global/fa/farsi_carousel"
 
+// Want to always be in English
 %section
   .wrapper
     %h2.heading-sm
-      =hoc_s(:farsi_page_compliance_heading)
+      ="Compliance In Support Of Farsi Translations"
     %p.body-three
-      =hoc_s(:farsi_page_compliance_desc)
+      ="As a U.S. nonprofit, Code.org is subject to laws regarding sanctions with Iran. After consulting with U.S. legal counsel experienced in the Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in the United States and elsewhere around the world, including within Iran. The ITSR provides an exemption for “information and informational materials” (the IIM Exemption) and Code.org believes that this exemption will fully shield its funding, preparation, and distribution of the Farsi Translations and thus enable its Farsi Translations effort to proceed in full compliance with U.S. economic sanctions requirements."
+"

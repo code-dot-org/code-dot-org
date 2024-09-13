@@ -71,7 +71,7 @@ theme: responsive_full_width
 %section#csf-self-paced
   .wrapper
     %h2=hoc_s(:csf_page_courses_self_paced_heading)
-    %p=hoc_s(:farsi_csf_express_description)
+    %p=hoc_s(:"farsi_site.farsi_csf_express_description")
     = view :csf_page_courses_self_paced
 
 = view :section_divider_line
@@ -79,7 +79,7 @@ theme: responsive_full_width
 %section#csf-no-devices
   .wrapper
     %h2=hoc_s(:heading_no_devices)
-    %p=hoc_s(:farsi_csf_unplugged_description)
+    %p=hoc_s(:"farsi_site.farsi_csf_unplugged_description")
     .action-block.action-block--two-col
       .media-wrapper.col-50
         %img{src: "/images/global/fa/unplugged-curriculum.png", alt: ""}
