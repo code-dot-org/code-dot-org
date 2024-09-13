@@ -76,8 +76,6 @@ class RegistrationsController < Devise::RegistrationsController
 
         @user = User.new_with_session(user_params.permit(NEW_USER_PERMITTED_PARAMS), session)
         @user.save!
-
-        sign_in @user
         @user
       else
         @user = User.new_with_session(user_params.permit(:user_type, :email), session)
@@ -262,6 +260,10 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     SignUpTracking.log_sign_up_result resource, session
+
+    if !!params[:new_sign_up]
+      sign_in curr_user
+    end
   end
 
   #
