@@ -1,15 +1,35 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
-  "created_at": "2024-09-05T17:44:44.000Z",
+  "created_at": "2024-09-12T23:57:35.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "###Functions in Music Making\r\n\r\nNotice how the code in the function named \"chorus\" stands on its own. \r\n- Call the `chorus` function by adding it under `when run`. \r\n- Press \"Run\" to see how it works. ",
+    "long_instructions": "#### Your turn:\r\n\r\n- Add sounds to the `verse` function. \r\n- Call the `verse` function by adding it under `when run`. \r\n\r\n",
     "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
+        "message": "Nice work.  You successfully used the function to play a sound.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
+        "message": "Connect the \"chorus\" block under [when run](#clickable=when-run-block) to play the sounds in the function.",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
     "level_data": {
       "library": "launch2024",
       "packId": "sabrina_carpenter_espresso",
@@ -29,8 +49,14 @@
               "type": "procedures_defnoreturn",
               "x": 230,
               "y": 30,
-              "deletable": false,
-              "movable": false,
+              "fields": {
+                "NAME": "verse"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "x": 500,
+              "y": 30,
               "fields": {
                 "NAME": "chorus"
               },
@@ -157,6 +183,12 @@
       },
       "toolbox": {
         "blocks": {
+          "Control": [
+            "play_sounds_together"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
           "Functions": [
 
           ]
@@ -199,30 +231,11 @@
         ]
       }
     },
-    "validations": [
-      {
-        "key": "music-ai-functions-chorus_40e32b8b-3591-4266-82c8-cc24049aa1a0",
-        "message": "Nice work.  You successfully used the function to play a sound.",
-        "next": true,
-        "conditions": [
-          {
-            "name": "played_sounds",
-            "value": 1
-          }
-        ]
-      },
-      {
-        "key": "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f",
-        "message": "Connect the \"chorus\" block under [when run](#clickable=when-run-block) to play the sounds in the function.",
-        "next": false,
-        "conditions": [
-
-        ]
-      }
-    ],
+    "name_suffix": "_v1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-05T17:44:44.740+00:00\",\"changed\":[\"cloned from \\\"music-ai-tinker\\\"\"],\"cloned_from\":\"music-ai-tinker\"},{\"changed_at\":\"2024-09-05 17:48:24 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 21:53:12 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:20:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:51:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:53:02 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-05 23:53:50 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 16:18:12 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 16:20:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 16:21:16 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 16:22:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 16:23:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:48:09 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:49:54 +0000\",\"changed\":[\"tts_short_instructions_override\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:52:40 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 20:53:42 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 23:24:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-12T23:57:35.762+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function-verse\\\"\"],\"cloned_from\":\"music-ai-skill-function-verse\"}]"
 }]]></config>
   <blocks/>
 </Music>

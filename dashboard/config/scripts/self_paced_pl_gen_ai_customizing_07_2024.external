@@ -8,62 +8,88 @@ markdown <<MARKDOWN
 #### There are lots of new key concepts introduced around system prompting that students will engage with during these lessons. We’ve summarized them below.
 
 
+<Table style="width:100%;">
+<tr>
+<td>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Role
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-<img src="https://images.code.org/72763f3d42a80e44b0dfded8daff8f68-Screenshot 2024-09-11 at 2.00.51 PM.png" alt="chatbot lab level" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
-
 #### The part the model plays when responding, like being a teacher, helper, or friend.
+
+<img src="https://images.code.org/72763f3d42a80e44b0dfded8daff8f68-Screenshot 2024-09-11 at 2.00.51 PM.png" alt="chatbot lab level" width="500px" style="border: 2px solid black; border-radius: 8px; float:center">
+
 <br>
 
 </p></div>
 </details>
+</td>
 
+<td>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Tone
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-<img src="https://images.code.org/f7b61b13570706aa62dc8c6974528956-Screenshot 2024-09-11 at 2.00.58 PM.png" alt="chatbot lab level" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
-
 #### The way the model speaks, such as being formal, friendly, or casual.
+
+<img src="https://images.code.org/f7b61b13570706aa62dc8c6974528956-Screenshot 2024-09-11 at 2.00.58 PM.png" alt="chatbot lab level" width="500px" style="border: 2px solid black; border-radius: 8px; float:center">
+
+
 <br>
 
 </p></div>
 </details>
 
+</td>
+</tr>
+<tr>
+
+<td>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Audience
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-<img src="https://images.code.org/b451c5ba210c49b035f79dbcfb10fffc-Screenshot 2024-09-11 at 2.01.37 PM.png" alt="chatbot lab level" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
-
 #### The people the model is talking to, like kids, adults, or professionals.
+<img src="https://images.code.org/b451c5ba210c49b035f79dbcfb10fffc-Screenshot 2024-09-11 at 2.01.37 PM.png" alt="chatbot lab level" width="500px" style="border: 2px solid black; border-radius: 8px; float:center">
+
+
 <br>
 
 </p></div>
 </details>
+</td>
 
+<td>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Delivery
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-<img src="https://images.code.org/21634632a6b6b454982372261637e6c5-Screenshot 2024-09-11 at 2.01.43 PM.png" alt="chatbot lab level" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
-
 #### How the model says things, whether it’s simple, detailed, quick, or slow, depending on who’s listening.
+<img src="https://images.code.org/21634632a6b6b454982372261637e6c5-Screenshot 2024-09-11 at 2.01.43 PM.png" alt="chatbot lab level" width="500px" style="border: 2px solid black; border-radius: 8px; float:center">
+
+
 <br>
 
 </p></div>
 </details>
+</td>
+
+</tr>
+</Table>
+
+
+
 
 ## Up Next!
-#### Try out writing a system prompt that includes all of these components in chatbot lab.
+#### The next level is an example of an **Assessment Level** from the curriculum. These levels require students to apply the skills they've learned with less scaffolding and support than other levels. Teachers are encouraged to use these for gathering information about what students are and are not grasping from the lessons.
+
+#### But don't worry! We've added in some additional scaffolding for you for this level as you try out writing a system prompt that includes all of these components.
 MARKDOWN
