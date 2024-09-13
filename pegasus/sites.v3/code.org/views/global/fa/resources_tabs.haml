@@ -23,33 +23,32 @@
   -# Tabs content
   %div.tab-content-container
     %div#lesson-plans.content.tab-content.show
-      = view :"tabs_section/resources/resources_tabs_content_lesson_plans"
+      = view :"global/fa/resources_tabs_content_lesson_plans"
     %div#videos.content.tab-content
-      = view :"tabs_section/resources/resources_tabs_content_videos"
+      = view :"global/fa/resources_tabs_content_videos"
     %div#slides.content.tab-content
-      = view :"tabs_section/resources/resources_tabs_content_slides"
+      = view :"global/fa/resources_tabs_content_slides"
     %div#assessments.content.tab-content
       = view :"tabs_section/resources/resources_tabs_content_assessments"
     %div#tools.content.tab-content
-      = view :"tabs_section/resources/resources_tabs_content_progress"
+      = view :"global/fa/resources_tabs_content_progress"
 
 -# Shows accordion UI on smaller screens
 .tabs-section.resources-tabs.show-tablet-and-mobile
   %details.lesson-plans
     %summary=hoc_s(:resources_tabs_tab_label_lesson_plans)
-    = view :"tabs_section/resources/resources_tabs_content_lesson_plans"
+    = view :"global/fa/resources_tabs_content_lesson_plans"
   %details.videos
     %summary=hoc_s(:resources_tabs_tab_label_videos)
-    = view :"tabs_section/resources/resources_tabs_content_videos"
+    = view :"global/fa/resources_tabs_content_videos"
   %details.slides
     %summary=hoc_s(:resources_tabs_tab_label_slides)
-    = view :"tabs_section/resources/resources_tabs_content_slides"
+    = view :"global/fa/resources_tabs_content_slides"
   %details.assessments
     %summary=hoc_s(:resources_tabs_tab_label_assessments)
     = view :"tabs_section/resources/resources_tabs_content_assessments"
   %details.tools
     %summary=hoc_s(:"resources_tabs.progress.tab_label")
-    = view :"tabs_section/resources/resources_tabs_content_progress"
+    = view :"global/fa/resources_tabs_content_progress"
 
 = view :tabs_section
-
