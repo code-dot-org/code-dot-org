@@ -18,7 +18,7 @@ const ResourceViewOptionsDropdown: React.FC<
       value: 'option-1',
       label: 'View',
       icon: {iconName: 'check'},
-      onClick: () => console.log('option 1 with URL '),
+      onClick: () => console.log('option 1 with of types' + resource.type),
     },
     {
       value: 'option-2',
@@ -31,10 +31,11 @@ const ResourceViewOptionsDropdown: React.FC<
   return (
     <div>
       <ActionDropdown
-        name="view options dropdown"
-        labelText="label text that I don't think I want..."
+        name="view-options-dropdown"
+        labelText="View options dropdown"
         options={dummyOptions}
         size="s"
+        menuPlacement="right"
         triggerButtonProps={{
           color: 'black',
           type: 'tertiary',

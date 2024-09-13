@@ -29,14 +29,23 @@ const ResourceRow: React.FC<ResourceRowProps> = ({
     <strong>{unitNumber + '.' + lessonNumber + ' '}</strong>
   );
   return (
-    <div className={styles.rowContainer}>
-      <ResourceIcon resourceType={resource?.type} resourceUrl={resource?.url} />
-      <BodyTwoText>
-        <StrongText>{resourcePositionLabel}</StrongText>
-        {resource?.name}
-      </BodyTwoText>
-      <ResourceViewOptionsDropdown resource={resource} />
-    </div>
+    <>
+      {resource && (
+        <div className={styles.rowContainer}>
+          <div className={styles.iconAndName}>
+            <ResourceIcon
+              resourceType={resource.type}
+              resourceUrl={resource.url}
+            />
+            <BodyTwoText className={styles.resourceLabel}>
+              <StrongText>{resourcePositionLabel}</StrongText>
+              {resource.name}
+            </BodyTwoText>
+          </div>
+          <ResourceViewOptionsDropdown resource={resource} />
+        </div>
+      )}
+    </>
   );
 };
 
