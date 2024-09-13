@@ -55,6 +55,7 @@ module Lti
       def new_account
         if current_user
           current_user.lms_landing_opted_out = true
+          current_user.verify_teacher! if current_user.teacher? && !current_user.verified_teacher?
           current_user.save!
         elsif PartialRegistration.in_progress?(session)
           partial_user = User.new_with_session(ActionController::Parameters.new, session)
