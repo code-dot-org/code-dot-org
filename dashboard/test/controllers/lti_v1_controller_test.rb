@@ -16,6 +16,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     # create arbitary state and nonce values
     @state = 'state'
     @nonce = 'nonce'
+    @subject = SecureRandom.uuid
     @parsed_nrps_sections = {
       "1" =>
       {
@@ -313,7 +314,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       exp: 7.days.from_now.to_i,
       iat: 1.day.ago.to_i,
       iss: @integration.issuer,
-      sub: 'LTI-AUTH',
+      sub: @subject,
       nonce: @nonce,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri,
       'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest',
@@ -513,6 +514,28 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_equal deployment, @integration.lti_deployments.first
     assert_equal @integration.lti_deployments.count, 1
+  end
+
+  test 'auth - link lti_user_identity with lti_deployment' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    user = create_preexisting_user(payload)
+    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    assert_equal deployment.lti_user_identities.count, 0
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_equal deployment.lti_user_identities.count, 1
+    assert_equal deployment.lti_user_identities.first, user.lti_user_identities.first
+  end
+
+  test 'auth - do not link lti_user_identity with lti_deployment if already linked' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    user = create_preexisting_user(payload)
+    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    deployment.lti_user_identities << user.lti_user_identities.first
+    assert_equal deployment.lti_user_identities.count, 1
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_equal deployment.lti_user_identities.count, 1
   end
 
   test 'auth - should render the upgrade account page if the LTI has the same user as an instructor' do
@@ -938,6 +961,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       authentication_id: Services::Lti::AuthIdGenerator.new(jwt_payload).call
     )
     ao.save!
+    user_identity = LtiUserIdentity.new(
+      user_id: user.id,
+      lti_integration_id: @integration.id,
+      subject: @subject,
+    )
+    user_identity.save!
 
     user
   end
