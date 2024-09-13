@@ -68,7 +68,7 @@ const PreviewMusicWorkspace: React.FC<PreviewMusicWorkspaceProps> = ({
         type="info"
         size="xs"
       />
-      <PanelContainer id="preview-workspace" headerContent="Preview">
+      <PanelContainer id="preview-workspace" headerContent="Toolbox Preview">
         <div ref={workspaceDivRef} />
       </PanelContainer>
     </div>

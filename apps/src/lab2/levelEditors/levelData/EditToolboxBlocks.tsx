@@ -87,7 +87,7 @@ const EditToolboxBlocks: React.FC<EditToolboxBlocksProps> = ({
       const categoryItems = (defaultBlocks[category] || []).map(block => {
         return {
           id: block,
-          label: toolboxBlocks[block].text || block,
+          label: toolboxBlocks[block].levelbuilderText || block,
           selected: blocksMap[category]?.includes(block) || false,
         };
       });
