@@ -4,6 +4,8 @@ import React from 'react';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {isGDocsUrl} from '@cdo/apps/templates/lessonOverview/googleDocsUtils';
 
+import {RESOURCE_TYPE} from './ResourceIconType';
+
 import styles from './lesson-materials.module.scss';
 
 type ResourceIconProps = {
@@ -32,36 +34,22 @@ const ResourceIcon: React.FC<ResourceIconProps> = ({
   const iconType = () => {
     if (isGDocsUrl(resourceUrl)) {
       if (resourceType === 'Slides') {
-        return 'presentation-screen';
+        return RESOURCE_TYPE.SLIDES;
       } else {
-        return 'files';
+        return RESOURCE_TYPE.GOOGLE_DOC;
       }
     } else if (resourceType === 'Video') {
-      return 'video';
+      return RESOURCE_TYPE.VIDEO;
     } else if (resourceType === 'Lesson Plan') {
-      return 'file-lines';
+      return RESOURCE_TYPE.LESSON_PLAN;
     } else {
-      return 'link-simple';
+      return RESOURCE_TYPE.LINK;
     }
   };
 
-  const getIconClass = () => {
-    switch (iconType()) {
-      case 'presentation-screen':
-        return styles.slides;
-      case 'video':
-        return styles.video;
-      case 'file-lines':
-        return styles.lessonPlan;
-      case 'files':
-        return styles.files;
-      default:
-        return styles.link;
-    }
-  };
   return (
-    <div className={classNames(styles.resourceIconContainer, getIconClass())}>
-      <FontAwesomeV6Icon iconName={iconType()} className={styles.icon} />
+    <div className={classNames(styles.resourceIconContainer, iconType().class)}>
+      <FontAwesomeV6Icon iconName={iconType().icon} className={styles.icon} />
     </div>
   );
 };
