@@ -12,8 +12,7 @@ module AichatComprehendHelper
   # Moderate given text for inappropriate/toxic content using AWS Comprehend client.
   def self.get_toxicity(text, locale)
     text_segment_lists = get_text_segment_lists(text)
-    max_toxicity = 0
-    max_category = nil
+    all_results = []
     text_segment_lists.each do |list|
       comprehend_response = create_comprehend_client.detect_toxic_content(
         {
@@ -21,15 +20,13 @@ module AichatComprehendHelper
           language_code: locale,
         }
       )
-      max_toxicity = [max_toxicity, comprehend_response.result_list.map(&:toxicity).max].max
-      list_max_category = comprehend_response.result_list.map(&:labels).flatten.max_by(&:score)
-      max_category = max_category.nil? ? list_max_category : [max_category, list_max_category].max_by(&:score)
+      all_results.concat(comprehend_response.result_list)
     end
 
     {
       text: text,
-      toxicity: max_toxicity,
-      max_category: max_category
+      toxicity: all_results.max_by(&:toxicity).toxicity,
+      max_category: all_results.map(&:labels).flatten.max_by(&:score)
     }
   end
 
@@ -86,27 +83,27 @@ class StubbedComprehendClient
 end
 
 class StubbedComprehendResponse
-  def result_list
-    [StubbedComprehendResult.new]
+  def initialize(result_list = [StubbedComprehendResult.new])
+    @result_list = result_list
   end
+
+  attr_reader :result_list
 end
 
 class StubbedComprehendResult
-  def toxicity
-    0.1
+  def initialize(toxicity = 0.1, labels = [StubbedComprehendLabel.new])
+    @toxicity = toxicity
+    @labels = labels
   end
 
-  def labels
-    [StubbedComprehendLabel.new]
-  end
+  attr_reader :toxicity, :labels
 end
 
 class StubbedComprehendLabel
-  def name
-    'INSULT'
+  def initialize(name = 'INSULT', score = 0.1)
+    @name = name
+    @score = score
   end
 
-  def score
-    0.1
-  end
+  attr_reader :name, :score
 end

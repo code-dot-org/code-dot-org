@@ -3,6 +3,72 @@ require 'test_helper'
 class AichatComprehendHelperTest < ActionView::TestCase
   include AichatComprehendHelper
 
+  setup do
+    @client = StubbedComprehendClient.new
+    AichatComprehendHelper.stubs(:create_comprehend_client).returns(@client)
+  end
+
+  test 'returns text, toxicity, and max category' do
+    toxicity = 0.4
+    category_name = 'PROFANITY'
+    category_score = 0.2
+    text = "hi"
+    comprehend_response = StubbedComprehendResponse.new(
+      [
+        StubbedComprehendResult.new(
+          toxicity,
+          [StubbedComprehendLabel.new(category_name, category_score)]
+        )
+      ]
+    )
+    @client.stubs(:detect_toxic_content).returns(comprehend_response)
+
+    response = AichatComprehendHelper.get_toxicity(text, 'en')
+
+    assert_equal text, response[:text]
+    assert_equal toxicity, response[:toxicity]
+    assert_equal category_name, response[:max_category].name
+    assert_equal category_score, response[:max_category].score
+  end
+
+  test 'returns max toxicity and max category if there are multiple response' do
+    comprehend_response_1 = StubbedComprehendResponse.new(
+      [
+        StubbedComprehendResult.new(
+          0.2,
+          [StubbedComprehendLabel.new('INSULT', 0.3), StubbedComprehendLabel.new('PROFANITY', 0.4)]
+        ),
+        StubbedComprehendResult.new(
+          0.3,
+          [StubbedComprehendLabel.new('INSULT', 0.3), StubbedComprehendLabel.new('GRAPHIC', 0.4)]
+        )
+      ]
+    )
+
+    comprehend_response_2 = StubbedComprehendResponse.new(
+      [
+        # Expected max
+        StubbedComprehendResult.new(
+          0.7,
+          [StubbedComprehendLabel.new('HATE_SPEECH', 0.9), StubbedComprehendLabel.new('INSULT', 0.4)]
+        ),
+        StubbedComprehendResult.new(
+          0.1,
+          [StubbedComprehendLabel.new('INSULT', 0.5), StubbedComprehendLabel.new('HARASSMENT_OR_ABUSE', 0.2)]
+        )
+      ]
+    )
+
+    @client.stubs(:detect_toxic_content).returns(comprehend_response_1, comprehend_response_2)
+    # Stub text segmentation to return two lists so we make two comprehend calls
+    AichatComprehendHelper.stubs(:get_text_segment_lists).returns([["hi"], ["hello"]])
+
+    response = AichatComprehendHelper.get_toxicity('hi hello', 'en')
+    assert_equal 0.7, response[:toxicity]
+    assert_equal 'HATE_SPEECH', response[:max_category].name
+    assert_equal 0.9, response[:max_category].score
+  end
+
   test 'correctly chunks long text inputs' do
     # 5 characters * 3000 = 15000 bytes.
     long_message = "abcd " * 3000
@@ -35,7 +101,6 @@ class AichatComprehendHelperTest < ActionView::TestCase
     special_chars_string = "դϬƵӋ֚»˙ыۨΚ " * 1000
     # Total expected bytes: 16000 + 21000 = 37000
     # Expect 4 lists with 10, 10, 10, and 8 respectively (due to how the characters are chunked, we end up with an extra segment)
-    puts "total byte size: #{(emoji_string + special_chars_string).bytesize}"
     text_segment_lists = AichatComprehendHelper.get_text_segment_lists(emoji_string + special_chars_string)
     assert_equal 4, text_segment_lists.size
     assert_equal 10, text_segment_lists[0].size
