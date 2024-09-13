@@ -42,14 +42,35 @@ theme: responsive_full_width
       =hoc_s("gen_ai_page.teach_complete_course.title")
     %p.body-two
       =hoc_s("gen_ai_page.teach_complete_course.desc")
-    .action-block.action-block--two-col
-      %img.col-50{src: "/images/banners/gen-ai-bot-wizard-with-background.png", alt: ""}
+    .action-block.action-block--two-col.content-block-margin
+      %img.col-50{src: "/images/ai/explore-gen-ai-bot-wizard.png", alt: ""}
       .text-wrapper.col-50
         %h3=hoc_s("gen_ai_page.teach_complete_course.explore_gen_ai_card.title")
         %p=hoc_s("gen_ai_page.teach_complete_course.explore_gen_ai_card.desc")
         %a.link-button{href: CDO.studio_url("/courses/exploring-gen-ai-2024?viewAs=Instructor")}
           =hoc_s(:call_to_action_explore_course)
         %br
-        %a.link-button.secondary.white{href: CDO.studio_url("/s/self-paced-gen-ai-2024")}
+        %a.link-button.secondary.white-button{href: CDO.studio_url("/s/self-paced-gen-ai-2024")}
           =hoc_s("gen_ai_page.teach_complete_course.explore_gen_ai_card.see_pl")
       .clear
+
+= view :section_divider_line
+
+%section
+  .wrapper
+    %h2
+      =hoc_s("gen_ai_page.flexible_units.title")
+    %p.body-two
+      =hoc_s("gen_ai_page.flexible_units.desc")
+    = view "gen_ai_landing_page/generative_ai_units"
+
+%section.verified-skinny-banner
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap.gap-1
+    .text-wrapper
+      %p.body-one.strong
+        =hoc_s("gen_ai_page.unlock_full_access_banner.title")
+      %p.body-two.no-margin-bottom
+        =hoc_s("gen_ai_page.unlock_full_access_banner.desc")
+    .cta-wrapper.col-30
+      %a.link-button.has-external-link{href: "https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher"}
+        =hoc_s("gen_ai_page.unlock_full_access_banner.button")

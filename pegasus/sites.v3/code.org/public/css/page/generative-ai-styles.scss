@@ -66,3 +66,28 @@ section.hero-banner-basic {
     width: 100%;
   }
 }
+
+.content-block-margin {
+  margin-top: 2.5rem;
+}
+
+.white-button {
+  background: $white !important;
+}
+
+.verified-skinny-banner {
+  background: #ABDFE580 !important;
+  padding: 2.5rem;
+
+    @media (min-width: 753px) {
+      .text-wrapper {
+        width: 75%;
+      }
+    }
+
+    @media (max-width: 753px) {
+      .wrapper {
+        justify-content: center;
+      }
+    }
+}
