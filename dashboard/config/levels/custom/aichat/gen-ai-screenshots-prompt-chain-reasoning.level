@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-09-12T17:59:18.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Use this level for updating screenshots to the panel level on the system prompt overview [link here](https://levelbuilder-studio.code.org/levels/61648)",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "You are a chatbot helping people develop arguments for a particular audience. The user will describe an argument they are trying to make and who they are trying to convince. Complete the following steps when responding:\n\n1) Develop a short argument using logos - an appeal to logic\n2) Develop a short argument using pathos - an appeal to emotions\n3) Develop a short argument using ethos - an appeal to values\n4) Make a recommendation of which argument to use with the user's audience",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    },
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-12T17:59:18.812+00:00\",\"changed\":[\"cloned from \\\"gen-ai-screenshots-prompt-audience-delivery\\\"\"],\"cloned_from\":\"gen-ai-screenshots-prompt-audience-delivery\"},{\"changed_at\":\"2024-09-12 18:01:31 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>
