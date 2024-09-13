@@ -11,6 +11,8 @@ module AichatComprehendHelper
 
   # Moderate given text for inappropriate/toxic content using AWS Comprehend client.
   def self.get_toxicity(text, locale)
+    return nil if text.blank?
+
     text_segment_lists = get_text_segment_lists(text)
     all_results = []
     text_segment_lists.each do |list|
