@@ -24,32 +24,32 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
   // Memoized initial values
   const detectedCountry = useMemo(
     () =>
-      initialState.country ??
-      sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY) ??
+      initialState.country ||
+      sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY) ||
       (initialState.usIp ? US_COUNTRY_CODE : ''),
     [initialState.country, initialState.usIp]
   );
 
   const detectedSchoolId = useMemo(
     () =>
-      initialState.schoolId ??
-      sessionStorage.getItem(SCHOOL_ID_SESSION_KEY) ??
+      initialState.schoolId ||
+      sessionStorage.getItem(SCHOOL_ID_SESSION_KEY) ||
       SELECT_A_SCHOOL,
     [initialState.schoolId]
   );
 
   const detectedZip = useMemo(
     () =>
-      initialState.schoolZip ??
-      sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY) ??
+      initialState.schoolZip ||
+      sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY) ||
       '',
     [initialState.schoolZip]
   );
 
   const detectedSchoolName = useMemo(
     () =>
-      initialState.schoolName ??
-      sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ??
+      initialState.schoolName ||
+      sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ||
       '',
     [initialState.schoolName]
   );
