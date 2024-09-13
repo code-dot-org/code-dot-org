@@ -10,6 +10,7 @@ import {
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
   SELECT_A_SCHOOL,
+  SELECT_COUNTRY,
   US_COUNTRY_CODE,
   ZIP_REGEX,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
@@ -26,7 +27,7 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     () =>
       initialState.country ||
       sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY) ||
-      (initialState.usIp ? US_COUNTRY_CODE : ''),
+      (initialState.usIp ? US_COUNTRY_CODE : SELECT_COUNTRY),
     [initialState.country, initialState.usIp]
   );
 
