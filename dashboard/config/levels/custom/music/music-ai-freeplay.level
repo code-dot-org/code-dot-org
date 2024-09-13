@@ -8,15 +8,14 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#Freeplay Level ",
+    "long_instructions": "###Your turn!\r\nThere are lots of new sounds and effects in your toolbox now. Explore and make some music!",
     "hide_share_and_remix": "false",
     "level_data": {
-      "library": "launch2024",
-      "packId": "default"
+      "library": "launch2024"
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-30T16:55:54.425+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function\\\"\"],\"cloned_from\":\"music-ai-skill-function\"},{\"changed_at\":\"2024-08-30 16:57:43 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:14:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:15:49 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-30T16:55:54.425+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-function\\\"\"],\"cloned_from\":\"music-ai-skill-function\"},{\"changed_at\":\"2024-08-30 16:57:43 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:14:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-06 00:15:49 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 16:36:18 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 16:39:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 16:44:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 21:03:52 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 21:20:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 23:42:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-12 23:43:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
