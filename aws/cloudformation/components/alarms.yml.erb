@@ -21,8 +21,8 @@
 <%    unless rack_env?(:adhoc) -%>
       AlarmActions:
         - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
-        AlarmDescription: Daemon memory utilization exceeds 87% for 5 minutes
 <%    end -%>
+      AlarmDescription: Daemon memory utilization exceeds 87% for 5 minutes
       AlarmName: <%="#{stack_name}_daemon_high_memory_utilization" %>
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
