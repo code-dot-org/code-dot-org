@@ -4,8 +4,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
-import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
-import {GroupedRadioButtonProps} from '@cdo/apps/componentLibrary/radioButton/RadioButtonsGroup';
+import {RadioButton} from '@cdo/apps/componentLibrary/radioButton';
 import Tags from '@cdo/apps/componentLibrary/tags';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -25,8 +24,6 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-//import VersionHistoryRow from './VersionHistoryRow';
 
 import moduleStyles from './version-history.module.scss';
 
@@ -104,7 +101,10 @@ const VersionHistoryDropdown: React.FunctionComponent<
           const selectedVersionComponent =
             document.getElementById(selectedVersion);
           if (selectedVersionComponent) {
-            selectedVersionComponent.scrollIntoView({behavior: 'instant'});
+            selectedVersionComponent.scrollIntoView({
+              behavior: 'instant',
+              block: 'nearest',
+            });
           }
         }, 0);
       } else {
@@ -205,7 +205,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setSelectedVersion(e.target.value);
       if (e.target.value === INITIAL_VERSION_ID) {
-        console.log('previewing initial version');
         dispatch(previewStartSource({startSource}));
       } else if (isLatestVersion(e.target.value)) {
         dispatch(resetToCurrentVersion());
@@ -229,43 +228,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
     closeDropdown();
   }, [closeDropdown, dispatch, isLatestVersion, selectedVersion]);
 
-  const radioButtons: GroupedRadioButtonProps[] = useMemo(() => {
-    const latestTag = (
-      <Tags
-        tagsList={[
-          {
-            label: commonI18n.current(),
-            icon: {
-              iconName: 'check',
-              iconStyle: 'regular',
-              title: 'check',
-              placement: 'left',
-            },
-            tooltipContent: commonI18n.current(),
-            tooltipId: 'current-version-tag',
-            ariaLabel: commonI18n.current(),
-          },
-        ]}
-        className={moduleStyles.latestTag}
-      />
-    );
-    const buttons: GroupedRadioButtonProps[] = versionList.map(version => ({
-      name: version.versionId,
-      value: version.versionId,
-      label: parseDate(version.lastModified),
-      size: 'm',
-      children: version.isLatest ? latestTag : undefined,
-    }));
-    buttons.push({
-      name: INITIAL_VERSION_ID,
-      value: INITIAL_VERSION_ID,
-      label: lab2I18n.initialVersion(),
-      size: 'm',
-      children: versionList.length === 0 ? latestTag : undefined,
-    });
-    return buttons;
-  }, [versionList, parseDate]);
-
   return isOpen ? (
     <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
       <div className={moduleStyles.versionHistoryHeader}>
@@ -279,11 +241,49 @@ const VersionHistoryDropdown: React.FunctionComponent<
       </div>
 
       <div className={moduleStyles.versionHistoryList}>
-        <RadioButtonsGroup
-          radioButtons={radioButtons}
-          commonClassName={moduleStyles.versionHistoryRow}
-          onChange={onVersionChange}
-        />
+        {versionList.map(version => (
+          <div id={version.versionId}>
+            <RadioButton
+              key={version.versionId}
+              name={version.versionId}
+              value={version.versionId}
+              label={parseDate(version.lastModified)}
+              onChange={onVersionChange}
+              checked={selectedVersion === version.versionId}
+              className={moduleStyles.versionHistoryRow}
+            >
+              {version.isLatest && (
+                <Tags
+                  tagsList={[
+                    {
+                      label: commonI18n.current(),
+                      icon: {
+                        iconName: 'check',
+                        iconStyle: 'regular',
+                        title: 'check',
+                        placement: 'left',
+                      },
+                      tooltipContent: commonI18n.current(),
+                      tooltipId: 'current-version-tag',
+                      ariaLabel: commonI18n.current(),
+                    },
+                  ]}
+                  className={moduleStyles.latestTag}
+                />
+              )}
+            </RadioButton>
+          </div>
+        ))}
+        <div id={INITIAL_VERSION_ID}>
+          <RadioButton // Initial version
+            name={INITIAL_VERSION_ID}
+            value={INITIAL_VERSION_ID}
+            label={lab2I18n.initialVersion()}
+            onChange={onVersionChange}
+            checked={selectedVersion === INITIAL_VERSION_ID}
+            className={moduleStyles.versionHistoryRow}
+          />
+        </div>
       </div>
 
       {loadError && (
