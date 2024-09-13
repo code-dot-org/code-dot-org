@@ -4,7 +4,7 @@ import React from 'react';
 import {RESOURCE_TYPE} from '@cdo/apps/templates/teacherNavigation/ResourceIconType';
 import ResourceRow from '@cdo/apps/templates/teacherNavigation/ResourceRow';
 
-describe('LessonMaterialsContainer', () => {
+describe('ResourceRow', () => {
   const mockResourceData = {
     key: 'resourceKey1',
     name: 'Handout for teacher',
