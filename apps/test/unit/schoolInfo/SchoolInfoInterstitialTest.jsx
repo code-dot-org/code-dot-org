@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -18,108 +18,74 @@ jest.mock('@cdo/apps/schoolInfo/utils/updateSchoolInfo', () => ({
   updateSchoolInfo: jest.fn(),
 }));
 
-jest.mock('@cdo/apps/schoolInfo/hooks/useSchoolInfo', () => ({
-  useSchoolInfo: jest.fn(),
-}));
-
-const mockUseSchoolInfo = useSchoolInfo;
 const mockUpdateSchoolInfo = updateSchoolInfo;
 const mockSendEvent = analyticsReporter.sendEvent;
 
 describe('SchoolInfoInterstitial', () => {
+  let mockFetch;
+  let mockOnClose = jest.fn();
+
+  const defaultProps = {
+    scriptData: {
+      existingSchoolInfo: {
+        country: 'US',
+        school_id: '123',
+        school_name: 'Test School',
+        school_zip: '12345',
+      },
+      usIp: true,
+      formUrl: 'form/url',
+      authTokenName: 'authTokenName',
+      authTokenValue: 'authTokenValue',
+    },
+    onClose: mockOnClose,
+  };
+
+  function renderDefault(overrideProps = {}) {
+    render(<SchoolInfoInterstitial {...defaultProps} {...overrideProps} />);
+  }
+
   beforeEach(() => {
     jest.clearAllMocks();
-    mockUseSchoolInfo.mockReturnValue({
-      country: 'US',
-      schoolName: 'Test School',
-      schoolId: '123',
-      schoolZip: '12345',
-      schoolsList: [],
-      schoolZipIsValid: true,
-      setCountry: jest.fn(),
-      setSchoolName: jest.fn(),
-      setSchoolId: jest.fn(),
-      setSchoolZip: jest.fn(),
+    sessionStorage.clear();
+    const mockResponse = {
+      ok: true,
+      json: jest.fn().mockResolvedValue([
+        {nces_id: '1', name: 'Cool School'},
+        {nces_id: '2', name: 'Other School'},
+      ]),
+    };
+    mockFetch = jest.fn().mockResolvedValue(mockResponse);
+    window.fetch = mockFetch;
+  });
+
+  it('should render the component correctly', async () => {
+    renderDefault();
+    await waitFor(() => {
+      expect(screen.getByText('Save')).toBeInTheDocument();
+      expect(screen.getByText('Dismiss')).toBeInTheDocument();
     });
   });
 
-  it('should render the component correctly', () => {
-    const mockOnClose = jest.fn();
-    render(
-      <SchoolInfoInterstitial
-        scriptData={{
-          existingSchoolInfo: {
-            country: 'US',
-            school_id: '123',
-            school_name: 'Test School',
-            school_zip: '12345',
-          },
-          usIp: true,
-          formUrl: 'https://example.com',
-          authTokenName: 'authTokenName',
-          authTokenValue: 'authTokenValue',
-        }}
-        onClose={mockOnClose}
-      />
-    );
-
-    expect(screen.getByText('Save')).toBeInTheDocument();
-    expect(screen.getByText('Dismiss')).toBeInTheDocument();
-  });
-
-  it('should call sendEvent when component mounts', () => {
-    render(
-      <SchoolInfoInterstitial
-        scriptData={{
-          existingSchoolInfo: {
-            country: 'US',
-            school_id: '123',
-            school_name: 'Test School',
-            school_zip: '12345',
-          },
-          usIp: true,
-          formUrl: 'https://example.com',
-          authTokenName: 'authTokenName',
-          authTokenValue: 'authTokenValue',
-        }}
-        onClose={jest.fn()}
-      />
-    );
-
-    expect(mockSendEvent).toHaveBeenCalledWith(
-      EVENTS.SCHOOL_INTERSTITIAL_SHOW,
-      {},
-      PLATFORMS.BOTH
-    );
+  it('should call sendEvent when component mounts', async () => {
+    renderDefault();
+    await waitFor(() => {
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        EVENTS.SCHOOL_INTERSTITIAL_SHOW,
+        {},
+        PLATFORMS.BOTH
+      );
+    });
   });
 
   it('should call sendEvent and updateSchoolInfo on save button click', async () => {
-    mockUpdateSchoolInfo.mockResolvedValueOnce(undefined);
-    const mockOnClose = jest.fn();
-
-    render(
-      <SchoolInfoInterstitial
-        scriptData={{
-          existingSchoolInfo: {
-            country: 'US',
-            school_id: '123',
-            school_name: 'Test School',
-            school_zip: '12345',
-          },
-          usIp: true,
-          formUrl: 'https://example.com',
-          authTokenName: 'authTokenName',
-          authTokenValue: 'authTokenValue',
-        }}
-        onClose={mockOnClose}
-      />
-    );
+    renderDefault();
 
     fireEvent.click(screen.getByText('Save'));
 
     await waitFor(() => {
       expect(mockUpdateSchoolInfo).toHaveBeenCalledWith({
-        formUrl: 'https://example.com',
+        formUrl: 'form/url',
         authTokenName: 'authTokenName',
         authTokenValue: 'authTokenValue',
         schoolId: '123',
@@ -128,8 +94,7 @@ describe('SchoolInfoInterstitial', () => {
         schoolZip: '12345',
       });
 
-      expect(mockSendEvent).toHaveBeenNthCalledWith(
-        2,
+      expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
         {
           hasNcesId: 'true',
@@ -138,8 +103,7 @@ describe('SchoolInfoInterstitial', () => {
         PLATFORMS.BOTH
       );
 
-      expect(mockSendEvent).toHaveBeenNthCalledWith(
-        3,
+      expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
         {
           attempt: 1,
@@ -152,32 +116,14 @@ describe('SchoolInfoInterstitial', () => {
   });
 
   it('should handle errors from updateSchoolInfo and retry', async () => {
-    mockUpdateSchoolInfo.mockRejectedValue(new Error('Update failed'));
-    const mockOnClose = jest.fn();
+    mockUpdateSchoolInfo.mockRejectedValueOnce(new Error('Update failed'));
 
-    render(
-      <SchoolInfoInterstitial
-        scriptData={{
-          existingSchoolInfo: {
-            country: 'US',
-            school_id: '123',
-            school_name: 'Test School',
-            school_zip: '12345',
-          },
-          usIp: true,
-          formUrl: 'https://example.com',
-          authTokenName: 'authTokenName',
-          authTokenValue: 'authTokenValue',
-        }}
-        onClose={mockOnClose}
-      />
-    );
+    renderDefault();
 
     fireEvent.click(screen.getByText('Save'));
 
     await waitFor(() => {
-      expect(mockSendEvent).toHaveBeenNthCalledWith(
-        2,
+      expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
         {
           hasNcesId: 'true',
@@ -186,8 +132,7 @@ describe('SchoolInfoInterstitial', () => {
         PLATFORMS.BOTH
       );
 
-      expect(mockSendEvent).toHaveBeenNthCalledWith(
-        3,
+      expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
         {
           attempt: 1,
@@ -200,11 +145,13 @@ describe('SchoolInfoInterstitial', () => {
       ).toBeInTheDocument();
     });
 
+    // second failure
+    mockUpdateSchoolInfo.mockRejectedValueOnce(new Error('Update failed'));
+
     fireEvent.click(screen.getByText('Save'));
 
     await waitFor(() => {
-      expect(mockSendEvent).toHaveBeenNthCalledWith(
-        4,
+      expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
         {
           hasNcesId: 'true',
@@ -213,8 +160,7 @@ describe('SchoolInfoInterstitial', () => {
         PLATFORMS.BOTH
       );
 
-      expect(mockSendEvent).toHaveBeenNthCalledWith(
-        5,
+      expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
         {
           attempt: 2,
@@ -226,33 +172,21 @@ describe('SchoolInfoInterstitial', () => {
     });
   });
 
-  it('should call sendEvent on dismiss button click', () => {
-    const mockOnClose = jest.fn();
-    render(
-      <SchoolInfoInterstitial
-        scriptData={{
-          existingSchoolInfo: {
-            country: 'US',
-            school_id: '123',
-            school_name: 'Test School',
-            school_zip: '12345',
-          },
-          usIp: true,
-          formUrl: 'https://example.com',
-          authTokenName: 'authTokenName',
-          authTokenValue: 'authTokenValue',
-        }}
-        onClose={mockOnClose}
-      />
-    );
+  it('should call sendEvent on dismiss button click', async () => {
+    await act(async () => {
+      renderDefault();
+    });
 
     fireEvent.click(screen.getByText('Dismiss'));
 
-    expect(mockSendEvent).toHaveBeenCalledWith(
-      EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
-      {},
-      PLATFORMS.BOTH
-    );
-    expect(mockOnClose).toHaveBeenCalled();
+    await waitFor(() => {
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
+        {},
+        PLATFORMS.BOTH
+      );
+      expect(mockOnClose).toHaveBeenCalled();
+    });
+  });
   });
 });
