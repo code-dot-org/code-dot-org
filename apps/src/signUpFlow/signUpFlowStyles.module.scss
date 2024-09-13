@@ -273,6 +273,34 @@ span {
         margin-top: .5rem;
         font-weight: 600;
       }
+
+      img {
+        height: 24px;
+        width: 24px;
+      }
+
+      i {
+        float: right;
+        margin: .5rem 0 .5rem .5rem;
+        font-size: 1rem;
+        color: $light_gray_200;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: .875rem;
+      }
+
+      a {
+        box-shadow: none;
+        margin: .75rem .25rem;
+        padding: 4px 14px;
+        height: 42px;
+
+        div {
+          line-height: 32px;
+        }
+      }
     }
   }
 
