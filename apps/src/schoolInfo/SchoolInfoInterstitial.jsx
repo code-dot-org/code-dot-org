@@ -53,10 +53,6 @@ export default function SchoolInfoInterstitial({
   }, []);
 
   const saveDisabled = useMemo(() => {
-    const schoolIdExists =
-      schoolInfo.schoolId &&
-      !NON_SCHOOL_OPTIONS_ARRAY.includes(schoolInfo.schoolId);
-
     const countryExists =
       schoolInfo.country && schoolInfo.country !== SELECT_COUNTRY;
 
@@ -89,8 +85,12 @@ export default function SchoolInfoInterstitial({
     if (schoolInfo.schoolId === CLICK_TO_ADD) {
       return !schoolInfo.schoolName;
     }
-    // if schoolId exists, don't disable
-    if (schoolIdExists) {
+
+    // if schoolId exists, don't disable unless selected school is not in the schools list
+    if (
+      schoolInfo.schoolId &&
+      schoolInfo.schoolsList.some(({value}) => schoolInfo.schoolId === value)
+    ) {
       return false;
     }
     // disable by default
@@ -100,6 +100,7 @@ export default function SchoolInfoInterstitial({
     schoolInfo.schoolId,
     schoolInfo.schoolZip,
     schoolInfo.schoolName,
+    schoolInfo.schoolsList,
   ]);
 
   const handleSchoolInfoSubmit = async () => {
