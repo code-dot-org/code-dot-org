@@ -8,6 +8,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
 import './style.scss';
+import defaultStyle from '@cdo/apps/sharedComponents/accessible-dialogue.module.scss';
 
 export interface CopyrightDialogProps {
   isOpen: boolean;
@@ -20,6 +21,7 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
 }) => {
   return isOpen ? (
     <AccessibleDialog
+      styles={{xCloseButton: defaultStyle.xCloseButton + ' no-mc'}}
       id="copyright-modal"
       className="copyrightDialog"
       onClose={closeModal}
