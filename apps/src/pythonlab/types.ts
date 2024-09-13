@@ -6,13 +6,21 @@ export interface PyodidePathContent {
 }
 
 export interface PyodideMessage {
-  type:
-    | 'sysout'
-    | 'syserr'
-    | 'updated_source'
-    | 'run_complete'
-    | 'error'
-    | 'internal_error';
-  message: string;
-  id: string;
+  type: MessageType;
+  // The message can be the return value of the Python script, or a
+  // string message. The return value could be any object.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  message: any;
+  id: number;
 }
+
+export type MessageType =
+  | 'sysout'
+  | 'syserr'
+  | 'updated_source'
+  | 'run_complete'
+  | 'error'
+  | 'internal_error'
+  | 'system_error'
+  | 'loading_pyodide'
+  | 'loaded_pyodide';
