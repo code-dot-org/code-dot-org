@@ -25,15 +25,14 @@
 
 %nav.main
   .left
-  -# rubocop:disable CustomCops/DashboardDbUsage
-  %a{href: current_user ? CDO.studio_url("/home") : CDO.code_org_url("/global/fa")}
-    %img.logo{src: '/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
-  -# rubocop:enable CustomCops/DashboardDbUsage
-  %ul#headerlinks
-    - Hamburger.get_farsi_header_contents(header_contents_options).each do |entry|
-      %li
-        %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
+    -# rubocop:disable CustomCops/DashboardDbUsage
+    %a{href: current_user ? CDO.studio_url("/home") : CDO.code_org_url("/global/fa")}
+      %img.logo{src: '/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
+    -# rubocop:enable CustomCops/DashboardDbUsage
+    %ul#headerlinks
+      - Hamburger.get_farsi_header_contents(header_contents_options).each do |entry|
+        %li
+          %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
   .right
     = view :sign_in_or_user
     = view :hamburger, hamburger_options
-

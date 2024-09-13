@@ -1,4 +1,4 @@
-// Adds carousel functionality to code.org/videos
+// Adds carousel functionality to code.org/global/fa/videos
 
 // This installs the Swiper library WebComponent.
 // See docs here: https://swiperjs.com/swiper-api#web-component.
