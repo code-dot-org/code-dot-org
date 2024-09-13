@@ -1351,7 +1351,7 @@
         desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
         button: "Visit our support center"
     developed_in_partnership: "Developed in partnership with"
-  
+
   gen_ai_banner:
     overline: "Grades 8-12"
     title: "Exploring Generative AI"
@@ -1361,13 +1361,13 @@
     title: "Exploring Generative AI"
     desc: "Empower students with hands-on projects and ethical insights into generative AI"
     in_partnership: "In partnership with"
-  
+
   gen_ai_middle_high_carousel_card:
     overline: "Grades: 8-12"
     title: "Exploring Generative AI"
     desc: "Empower students with hands-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
     duration: "6 weeks"
-  
+
   gen_ai_pl_carousel_cared:
     overline: "8-12 Teachers"
     title: "Teaching Exploring Generative AI"
@@ -11171,7 +11171,7 @@
       a: "The Hour of Code started as a one-hour introduction to computer science, designed to demystify \"code\", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the [tutorials and activities](%{tutorials_url})."
     when_is_hoc:
       q: "When is the Hour of Code?"
-      a: "The Hour of Code takes place each year during Computer Science Education Week. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code event all year-round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer Admiral Grace Murray Hopper (December 9, 1906)."
+      a: "The Hour of Code takes place each year during [Computer Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code event all year-round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{hopper_url}) (December 9, 1906)."
     why_cs:
       q: "Why computer science?"
       a: "Computer Science is foundational and impactful for students' futures. A recent study showed that participating in computer science education causes an earnings increase for all students, with even more significant impacts for historically underrepresented groups. By starting early, students will have a foundation for success in any 21st-century career path."
@@ -11192,7 +11192,7 @@
       a:
         body_01: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have."
         body_02: "Here are a few options:"
-        list_01: "Work in pairs. [Research shows](%{research_url}) students learn best with [pair programming](%{pair_url}), sharing a computer and working together. Encourage your students to double up."
+        list_01: "Work in pairs. [Research shows](%{research_url}) students learn best with pair programming, sharing a computer and working together. Encourage your students to double up."
         list_02: "Use a projected screen. If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions."
         list_03: "Go unplugged. We offer [tutorials that require no computer at all](%{unplugged_url})."
     account:
@@ -11223,9 +11223,9 @@
       a:
         body_01: "The Hour of Code activities page includes a [filter for activities compatible with screen readers](%{filter_url})."
         body_02: "If you use a screen reader, the [Quorum tutorial for beginners](%{beginners_url}) or the [Quorum tutorial for comfortable students](%{comfortable_url}) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum."
-        body_03: "If you use a screen reader and are interested in robotics, try the [Dash Joins a Dance Circle activity](%{k5_url}) (for grades K-5) or the [Dash Joins a Dance Circle with Functions activity](%{6_8_url}) (for grades 6-8) from Lauren Milne."
+        body_03: "If you use a screen reader and are interested in robotics, try the [Dash Joins a Dance Circle activity](%{k5_url}) (for grades K-5) or the [Dash Joins a Dance Circle with Functions activity](%{six_8_url}) (for grades 6-8) from Lauren Milne."
         body_04: "[For grades K-5](%{k5_url})"
-        body_05: "[For grades 6-8](%{6_8_url})"
+        body_05: "[For grades 6-8](%{six_8_url})"
     without_audio:
       q: "What tutorials can I do without audio?"
       a: "The [Code.org tutorials](%{code_url}) can all be used with or without sound. All the videos have captions."
