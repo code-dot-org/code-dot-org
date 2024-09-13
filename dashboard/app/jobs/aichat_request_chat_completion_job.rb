@@ -103,7 +103,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
     if comprehend_enabled?
       comprehend_response = AichatComprehendHelper.get_toxicity(text, locale)
-      return {text: text, blocked_by: 'comprehend', details: comprehend_response} if comprehend_response[:toxicity] > threshold
+      return {text: text, blocked_by: 'comprehend', details: comprehend_response} if comprehend_response && comprehend_response[:toxicity] > threshold
     end
   end
 
