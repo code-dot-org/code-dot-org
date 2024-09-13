@@ -76,6 +76,8 @@ class RegistrationsController < Devise::RegistrationsController
 
         @user = User.new_with_session(user_params.permit(NEW_USER_PERMITTED_PARAMS), session)
         @user.save!
+
+        sign_in @user
         @user
       else
         @user = User.new_with_session(user_params.permit(:user_type, :email), session)
