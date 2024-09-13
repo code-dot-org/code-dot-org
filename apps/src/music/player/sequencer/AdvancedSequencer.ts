@@ -101,6 +101,7 @@ export default class AdvancedSequencer extends Sequencer {
 
   clear(): void {
     this.playbackEvents = [];
+    this.effects = {};
   }
 
   getLastMeasure(): number {
