@@ -1,6 +1,5 @@
 import React from 'react';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import commonI18n from '@cdo/locale';
@@ -39,6 +38,7 @@ export type GenericDialogProps = GenericDialogTitleProps &
         text?: string;
         callback?: dialogCallback;
         disabled?: boolean;
+        destructive?: boolean;
       };
     };
   };
@@ -50,7 +50,9 @@ import moduleStyles from './generic-dialog.module.scss';
  * Allows a title component or title message
  * a body component or message
  * a list of up to three buttons - confirm, cancel, neutral
- * each button takes up to two args - a callback (if not a default will be provided), and a label.
+ * each button takes up to four args - a callback (if not a default will be provided), a label,
+ * a disabled flag, and a destructive flag. The confirm button is the only one that can be destructive,
+ * and it will be styled as such (red) to provide extra visual warning when attempting to delete something.
  * An accept button is always added, with the default "OK" text if not provided.
  * dialogs maintain a context, which can provide data to any of the callbacks.
  * The title, message, and confirm button text can be customized.
@@ -131,7 +133,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
               disabled={buttons?.confirm?.disabled}
               type="primary"
               color={
-                buttons?.confirm?.text === codebridgeI18n.delete()
+                buttons?.confirm?.destructive
                   ? buttonColors.destructive
                   : buttonColors.purple
               }
