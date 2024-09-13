@@ -19,6 +19,10 @@ const EVENTS = {
   ACCOUNT_SETTINGS_PAGE_VISITED: 'Account Settings Page Visited',
   LOGIN_PAGE_VISITED: 'Login Page Visited',
   LOGIN_PAGE_CREATE_ACCOUNT_CLICKED: 'Login Page Create Account Button Clicked',
+  CURRICULUM_FREE_DIALOG_BUTTON_CLICKED:
+    'Curriculum Free Dialog Button Clicked',
+  LMS_INFORMATION_BUTTON_CLICKED: 'LMS Information Button Clicked',
+  PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
 
   // School Association
   // Update School Info Dialog
