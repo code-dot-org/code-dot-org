@@ -2,10 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-<<<<<<< HEAD
 import firehoseClient from '@cdo/apps/metrics/firehose';
-=======
->>>>>>> linter fixes.
 import i18n from '@cdo/locale';
 
 import SendLessonDialog from './SendLessonDialog';
@@ -30,6 +27,16 @@ export default class SendLesson extends React.Component {
 
   openDialog() {
     this.setState({isDialogOpen: true});
+
+    firehoseClient.putRecord(
+      {
+        study: 'send-to-students-button',
+        study_group: 'v0',
+        event: 'send-lesson-to-students',
+        data_json: this.props.analyticsData,
+      },
+      {includeUserId: true}
+    );
   }
 
   closeDialog() {
