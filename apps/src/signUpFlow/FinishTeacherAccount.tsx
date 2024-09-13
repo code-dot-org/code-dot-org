@@ -44,9 +44,10 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const submitTeacherAccount = () => {
     $.ajax({
       method: 'POST',
-      url: '/users/finish_creating_user',
+      url: '/users/finish_sign_up',
       contentType: 'application/json',
       data: JSON.stringify({
+        new_sign_up: true,
         user: {
           user_type: sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY),
           email: sessionStorage.getItem(EMAIL_SESSION_KEY),
@@ -61,7 +62,17 @@ const FinishTeacherAccount: React.FunctionComponent<{
         },
       }),
     }).done(() => {
-      navigateToHref('/home');
+      $.ajax({
+        method: 'POST',
+        url: '/users',
+        contentType: 'application/json',
+        data: JSON.stringify({
+          new_sign_up: true,
+          user_email: sessionStorage.getItem(EMAIL_SESSION_KEY),
+        }),
+      }).done(() => {
+        navigateToHref('/home');
+      });
     });
   };
 

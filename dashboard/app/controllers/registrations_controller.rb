@@ -16,7 +16,7 @@ class RegistrationsController < Devise::RegistrationsController
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
 
-  CREATE_USER_PERMITTED_PARAMS = [
+  NEW_USER_PERMITTED_PARAMS = [
     :user_type,
     :email,
     :name,
@@ -50,7 +50,36 @@ class RegistrationsController < Devise::RegistrationsController
       user_params[:user_type] ||= session[:default_sign_up_user_type]
       user_params[:email] ||= params[:email]
 
-      @user = User.new_with_session(user_params.permit(:user_type, :email), session)
+      if !!params[:new_sign_up]
+        user_params[:age] ||= user_params[:user_type] == 'teacher' ? '21+' : user_params[:age]
+
+        # Set email and data transfer preferences
+        if user_params[:user_type] == 'teacher'
+          user_params[:email_preference_opt_in_required] = true
+          user_params[:email_preference_opt_in] = user_params[:email_preference_opt_in] ? 'yes' : 'no'
+          user_params[:email_preference_request_ip] = request.ip
+          user_params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
+          user_params[:email_preference_form_kind] = "0"
+        elsif user_params[:user_type] == 'student'
+          user_params[:parent_email_preference_request_ip] = request.ip
+          user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
+        end
+
+        user_params[:data_transfer_agreement_accepted] = user_params[:data_transfer_agreement_accepted] == "1"
+        if user_params[:data_transfer_agreement_required] && user_params[:data_transfer_agreement_accepted]
+          user_params[:data_transfer_agreement_accepted] = true
+          user_params[:data_transfer_agreement_request_ip] = request.ip
+          user_params[:data_transfer_agreement_source] = User::ACCOUNT_SIGN_UP
+          user_params[:data_transfer_agreement_kind] = "0"
+          user_params[:data_transfer_agreement_at] = DateTime.now
+        end
+
+        @user = User.new_with_session(user_params.permit(NEW_USER_PERMITTED_PARAMS), session)
+        @user.save!
+        @user
+      else
+        @user = User.new_with_session(user_params.permit(:user_type, :email), session)
+      end
     else
       save_default_sign_up_user_type
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
@@ -84,66 +113,8 @@ class RegistrationsController < Devise::RegistrationsController
       PartialRegistration.persist_attributes(session, @user)
     end
 
-    render 'new'
-  end
-
-  #
-  # POST /users/begin_creating_user
-  #
-  # Set up PartialRegistration for user after they enter an email and password.
-  #
-  def begin_creating_user
-    @user = User.new(begin_sign_up_params)
-    @user.validate_for_finish_sign_up
-
-    SignUpTracking.log_begin_sign_up(@user, session)
-
-    if @user.errors.blank?
-      PartialRegistration.persist_attributes(session, @user)
-    end
-  end
-
-  #
-  # POST /users/finish_creating_user
-  #
-  # Finish setting up User after they finish the sign-up flow.
-  #
-  def finish_creating_user
-    session[:user_return_to] ||= params[:user_return_to]
-    if PartialRegistration.in_progress?(session)
-      user_params = params[:user] || ActionController::Parameters.new
-      user_params[:user_type] ||= session[:default_sign_up_user_type]
-      user_params[:email] ||= params[:email]
-      user_params[:age] ||= user_params[:user_type] == 'teacher' ? '21+' : user_params[:age]
-
-      # Set email and data transfer preferences
-      if user_params[:user_type] == 'teacher'
-        user_params[:email_preference_opt_in_required] = true
-        user_params[:email_preference_opt_in] = user_params[:email_preference_opt_in] ? 'yes' : 'no'
-        user_params[:email_preference_request_ip] = request.ip
-        user_params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
-        user_params[:email_preference_form_kind] = "0"
-      elsif user_params[:user_type] == 'student'
-        user_params[:parent_email_preference_request_ip] = request.ip
-        user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
-      end
-
-      user_params[:data_transfer_agreement_accepted] = user_params[:data_transfer_agreement_accepted] == "1"
-      if user_params[:data_transfer_agreement_required] && user_params[:data_transfer_agreement_accepted]
-        user_params[:data_transfer_agreement_accepted] = true
-        user_params[:data_transfer_agreement_request_ip] = request.ip
-        user_params[:data_transfer_agreement_source] = User::ACCOUNT_SIGN_UP
-        user_params[:data_transfer_agreement_kind] = "0"
-        user_params[:data_transfer_agreement_at] = DateTime.now
-      end
-
-      # Create new user entry
-      @user = User.new_with_session(user_params.permit(CREATE_USER_PERMITTED_PARAMS), session)
-      @user.save!
-      @user
-    else
-      save_default_sign_up_user_type
-      SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+    unless params[:new_sign_up]
+      render 'new'
     end
   end
 
@@ -240,10 +211,12 @@ class RegistrationsController < Devise::RegistrationsController
       super
     end
 
-    if current_user && current_user.errors.blank?
-      if current_user.teacher?
+    curr_user = !!params[:new_sign_up] ? User.find_by_email(params[:user_email]) : current_user
+
+    if curr_user && curr_user.errors.blank?
+      if curr_user.teacher?
         begin
-          MailJet.create_contact_and_add_to_welcome_series(current_user, request.locale)
+          MailJet.create_contact_and_add_to_welcome_series(curr_user, request.locale)
         rescue => exception
           # If we can't add the user to the welcome series, we don't want to disrupt
           # sign up, but we do want to know about it.
@@ -256,30 +229,30 @@ class RegistrationsController < Devise::RegistrationsController
           )
         end
       end
-      ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?
+      ParentMailer.parent_email_added_to_student_account(curr_user.parent_email, curr_user).deliver_now if curr_user.parent_email.present?
 
-      storage_id = take_storage_id_ownership_from_cookie(current_user.id)
-      current_user.generate_progress_from_storage_id(storage_id) if storage_id
+      storage_id = take_storage_id_ownership_from_cookie(curr_user.id)
+      curr_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
-      if Policies::Lti.lti? current_user
-        lms_name = Queries::Lti.get_lms_name_from_user(current_user)
+      if Policies::Lti.lti? curr_user
+        lms_name = Queries::Lti.get_lms_name_from_user(curr_user)
         metadata = {
-          'user_type' => current_user.user_type,
+          'user_type' => curr_user.user_type,
           'lms_name' => lms_name,
           'context' => 'registration_controller'
         }
         Metrics::Events.log_event(
-          user: current_user,
+          user: curr_user,
           event_name: 'lti_user_created',
           metadata: metadata,
         )
       end
-      has_school = current_user.school_info&.school_id.present?
+      has_school = curr_user.school_info&.school_id.present?
       event_metadata = {
         'has_school' => has_school,
       }
       Metrics::Events.log_event(
-        user: current_user,
+        user: curr_user,
         event_name: 'Sign Up Finished Backend',
         metadata: event_metadata,
         get_enabled_experiments: true,

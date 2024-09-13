@@ -132,9 +132,10 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const submitLoginType = () => {
     $.ajax({
       method: 'POST',
-      url: '/users/begin_creating_user',
+      url: '/users/begin_sign_up',
       contentType: 'application/json',
       data: JSON.stringify({
+        new_sign_up: true,
         user: {
           email: email,
           password: password,
