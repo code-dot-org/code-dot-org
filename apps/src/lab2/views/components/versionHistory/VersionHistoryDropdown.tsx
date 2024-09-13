@@ -182,6 +182,9 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
   const isLatestVersion = useCallback(
     (versionId: string) => {
+      if (versionId === INITIAL_VERSION_ID) {
+        return versionList.length === 0;
+      }
       const version = versionList.find(
         version => version.versionId === versionId
       );
