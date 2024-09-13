@@ -1,11 +1,18 @@
 import PropTypes from 'prop-types';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {NO_SCHOOL_SETTING} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {
+  CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
+  NON_SCHOOL_OPTIONS_ARRAY,
+  SELECT_A_SCHOOL,
+  SELECT_COUNTRY,
+  US_COUNTRY_CODE,
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../templates/BaseDialog';
@@ -44,6 +51,56 @@ export default function SchoolInfoInterstitial({
       PLATFORMS.BOTH
     );
   }, []);
+
+  const saveDisabled = useMemo(() => {
+    const schoolIdExists =
+      schoolInfo.schoolId &&
+      !NON_SCHOOL_OPTIONS_ARRAY.includes(schoolInfo.schoolId);
+
+    const countryExists =
+      schoolInfo.country && schoolInfo.country !== SELECT_COUNTRY;
+
+    if (!countryExists) {
+      // disabled if country is not selected
+      return true;
+    }
+
+    // for non-US countries
+    if (schoolInfo.country !== US_COUNTRY_CODE) {
+      // disable true if no school/organization name
+      return !schoolInfo.schoolName;
+    }
+
+    // for US country
+    // must have zip code to enable school list dropdown where click to add and non school setting are selectable
+    const hasZip = Boolean(schoolInfo.schoolZip);
+    if (!hasZip) {
+      return true;
+    }
+    // disable true if school is not selected
+    if (schoolInfo.schoolId === SELECT_A_SCHOOL) {
+      return true;
+    }
+    // for non school settings, don't disable
+    if (schoolInfo.schoolId === NO_SCHOOL_SETTING) {
+      return false;
+    }
+    // if school not in list, disable true if no name
+    if (schoolInfo.schoolId === CLICK_TO_ADD) {
+      return !schoolInfo.schoolName;
+    }
+    // if schoolId exists, don't disable
+    if (schoolIdExists) {
+      return false;
+    }
+    // disable by default
+    return true;
+  }, [
+    schoolInfo.country,
+    schoolInfo.schoolId,
+    schoolInfo.schoolZip,
+    schoolInfo.schoolName,
+  ]);
 
   const handleSchoolInfoSubmit = async () => {
     const hasNcesId =
@@ -148,6 +205,7 @@ export default function SchoolInfoInterstitial({
             text={i18n.save()}
             color={Button.ButtonColor.brandSecondaryDefault}
             id="save-button"
+            disabled={saveDisabled}
           />
         </div>
       </div>
