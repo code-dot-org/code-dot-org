@@ -10,6 +10,14 @@ markdown <<MARKDOWN
 
 #### Model cards contain additional information about the chatbot for the user to review. These can include safety features which help the user know how to use the chatbot responsibly. Or transparency information, so the user knows how the chatbot was created or designed. And even usability information, which helps the user know where to get started.
 
+#### You first saw model cards at the beginning of this unit when trying out the Recipe Recommender chatbot. Take a moment to review it now.
+
+## Exploration and Practice
+
+#### Lessons 8 and 9 help students develop an understanding of Model Cards. Students explore Model Cards as tools for planning AI product usage and learn about how Model Cards clarify and caution chatbot use. 
+
+#### Students then practice creating model cards as they develop their chatbots emphasizing how a model card can also serve as documentation as you make decisions during chatbot development.
+
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Students may feel challenged when asked to write, explain, and reflect on their chatbots after earlier, more hands-on lessons. Acknowledge this shift but encourage them to embrace it, as documenting and describing digital creations is crucial. Remind them that this task requires a different skill set but is equally important. Provide writing support, like having students explain their thoughts verbally before writing them down.
