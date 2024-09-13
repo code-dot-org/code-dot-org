@@ -25,6 +25,7 @@ def main
     rows.each do |row|
       user = row.user
       user_message = JSON.parse(row.new_message)
+      response = row.response
       user_message_text = user_message["chatMessageText"]
       execution_status = row.execution_status
 
@@ -69,14 +70,25 @@ def main
         end
 
       if execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY]
-        ## parse response for comprehend details
-        comprehend_response = row.response.delete_prefix("Profanity detected in user input: ")
-        toxicity = comprehend_response.split(":toxicity=>").last.split(",").first.to_f
-        max_category = comprehend_response.split(":max_category=>#<struct Aws::Comprehend::Types::ToxicContent name=").last.split(",").first
-        max_category = max_category.delete_prefix('"').delete_suffix('"')
-        puts "max_category #{max_category}"
-        score = comprehend_response.split("score=").last.split(">").first.to_f
+        ## Parse response for comprehend details for user response.
+        ## There is no model response recorded.
+        user_comprehend_response = response.delete_prefix("Profanity detected in user input: ")
+        user_toxicity = user_comprehend_response.split(":toxicity=>").last.split(",").first.to_f
+        user_max_category = user_comprehend_response.split(":max_category=>#<struct Aws::Comprehend::Types::ToxicContent name=").last.split(",").first.delete_prefix('"').delete_suffix('"')
+        user_score = user_comprehend_response.split("score=").last.split(">").first.to_f
+      elsif execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
+        # Parse response for comprehend details for model response.
+        # Model response is recorded in addition to comprehend details.
+        model_comprehend_response = response.delete_prefix("Profanity detected in model output: ")
+        model_message_text = model_comprehend_response.split(":text=>").last.split(", :toxicity").first.delete_prefix('"').delete_suffix('"')
+        model_toxicity = model_comprehend_response.split(":toxicity=>").last.split(",").first.to_f
+        model_max_category = model_comprehend_response.split(":max_category=>#<struct Aws::Comprehend::Types::ToxicContent name=").last.split(",").first.delete_prefix('"').delete_suffix('"')
+        model_score = model_comprehend_response.split("score=").last.split(">").first.to_f
+      elsif execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS]
+        # Model response is recorded.
+        model_message_text = response
       end
+      # No model response recorded when unexpected error or user input too large.
 
       user_message_entry = [
         row.id,
@@ -89,11 +101,29 @@ def main
         'user',
         user_message_text,
         status,
-        toxicity,
-        max_category,
-        score
+        user_toxicity,
+        user_max_category,
+        user_score
       ]
       csv << user_message_entry
+
+      next if execution_status != SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS] && execution_status != SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
+      model_message_entry = [
+        row.id,
+        row.user_id,
+        user.username,
+        user.name,
+        path,
+        row.created_at,
+        row.updated_at,
+        'assistant',
+        model_message_text,
+        status,
+        model_toxicity,
+        model_max_category,
+        model_score
+      ]
+      csv << model_message_entry
     end
   end
 end
