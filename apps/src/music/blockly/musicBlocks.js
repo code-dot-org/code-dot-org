@@ -25,6 +25,8 @@ import {
   repeatSimple2,
   playChordAtCurrentLocationSimple2,
   playTuneAtCurrentLocationSimple2,
+  callChorusSimple2,
+  callVerseSimple2,
 } from './blocks/simple2';
 import {
   newTrackAtMeasure,
@@ -65,6 +67,8 @@ const blockList = [
   playSoundInTrack,
   restInTrack,
   valueSample,
+  callChorusSimple2,
+  callVerseSimple2,
 ];
 
 const MUSIC_BLOCKS = {};

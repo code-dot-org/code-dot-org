@@ -34,4 +34,6 @@ export enum BlockTypes {
   PLAY_SOUND_IN_TRACK = 'play_sound_in_track',
   REST_IN_TRACK = 'rest_in_track',
   VALUE_SAMPLE = 'value_sample',
+  CALL_CHORUS_SIMPLE2 = 'call_chorus_simple2',
+  CALL_VERSE_SIMPLE2 = 'call_verse_simple2',
 }

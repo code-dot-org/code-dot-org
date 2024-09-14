@@ -310,6 +310,34 @@ export const playSoundsTogether = {
     `,
 };
 
+export const callChorusSimple2 = {
+  definition: {
+    type: BlockTypes.CALL_CHORUS_SIMPLE2,
+    message0: 'chorus',
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'procedure_blocks',
+  },
+  generator: () =>
+    ` chorus();
+    `,
+};
+
+export const callVerseSimple2 = {
+  definition: {
+    type: BlockTypes.CALL_VERSE_SIMPLE2,
+    message0: 'verse',
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'procedure_blocks',
+  },
+  generator: () =>
+    ` verse();
+    `,
+};
+
 export const playSoundsSequential = {
   definition: {
     type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL,

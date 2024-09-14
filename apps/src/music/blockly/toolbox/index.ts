@@ -99,6 +99,20 @@ export function getToolbox(
         continue;
       }
 
+      if (
+        blockName === BlockTypes.CALL_CHORUS_SIMPLE2 &&
+        !levelToolbox?.includeCallChorus
+      ) {
+        continue;
+      }
+
+      if (
+        blockName === BlockTypes.CALL_VERSE_SIMPLE2 &&
+        !levelToolbox?.includeCallVerse
+      ) {
+        continue;
+      }
+
       categoryContents.push(toolboxBlocks[blockName]);
     }
 

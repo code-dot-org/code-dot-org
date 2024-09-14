@@ -49,6 +49,8 @@ export const defaultMaps: {
         ? [BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2]
         : []),
       BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+      BlockTypes.CALL_CHORUS_SIMPLE2,
+      BlockTypes.CALL_VERSE_SIMPLE2,
     ],
     Control: [
       BlockTypes.TRIGGERED_AT_SIMPLE2,

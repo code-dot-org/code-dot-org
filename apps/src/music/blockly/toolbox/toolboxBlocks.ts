@@ -61,6 +61,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     },
   },
   [BlockTypes.SET_VOLUME_EFFECT]: {
+    levelbuilderText: 'Set volume effect',
     kind: 'block',
     type: BlockTypes.SET_EFFECT,
     fields: {
@@ -69,6 +70,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     },
   },
   [BlockTypes.SET_FILTER_EFFECT]: {
+    levelbuilderText: 'Set filter effect',
     kind: 'block',
     type: BlockTypes.SET_EFFECT,
     fields: {
@@ -77,6 +79,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     },
   },
   [BlockTypes.SET_DELAY_EFFECT]: {
+    levelbuilderText: 'Set delay effect',
     kind: 'block',
     type: BlockTypes.SET_EFFECT,
     fields: {
@@ -99,6 +102,18 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     id: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+  },
+  [BlockTypes.CALL_CHORUS_SIMPLE2]: {
+    levelbuilderText: 'Call chorus function',
+    id: BlockTypes.CALL_CHORUS_SIMPLE2,
+    kind: 'block',
+    type: BlockTypes.CALL_CHORUS_SIMPLE2,
+  },
+  [BlockTypes.CALL_VERSE_SIMPLE2]: {
+    levelbuilderText: 'Call verse function',
+    id: BlockTypes.CALL_VERSE_SIMPLE2,
+    kind: 'block',
+    type: BlockTypes.CALL_VERSE_SIMPLE2,
   },
   [BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2]: {
     levelbuilderText: 'Play Drums',
