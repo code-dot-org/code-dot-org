@@ -181,7 +181,7 @@ export const playPatternAiAtCurrentLocationSimple2 = {
     args0: [
       {
         type: 'field_image',
-        src: '/blockly/media/ai-bot-mini.svg',
+        src: '/blockly/media/ai-bot-mini-2.svg',
         width: 24,
         height: 24,
         alt: '',
