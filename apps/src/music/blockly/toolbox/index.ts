@@ -2,8 +2,10 @@ import {ToolboxInfo, ToolboxItemInfo} from 'blockly/core/utils/toolbox';
 
 import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
 
+import appConfig from '../../appConfig';
 import {BlockMode} from '../../constants';
 import musicI18n from '../../locale';
+import {BlockTypes} from '../blockTypes';
 
 import {defaultMaps} from './definitions';
 import toolboxBlocks from './toolboxBlocks';
@@ -83,6 +85,16 @@ export function getToolbox(
         allowList &&
         allowList[category] &&
         !allowList[category].includes(blockName)
+      ) {
+        continue;
+      }
+
+      if (
+        blockName === BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2 &&
+        !(
+          levelToolbox?.includeAi ||
+          appConfig.getValue('play-pattern-ai-block') === 'true'
+        )
       ) {
         continue;
       }
