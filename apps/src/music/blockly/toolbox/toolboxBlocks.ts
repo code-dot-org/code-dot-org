@@ -60,6 +60,30 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
       },
     },
   },
+  [BlockTypes.SET_VOLUME_EFFECT]: {
+    kind: 'block',
+    type: BlockTypes.SET_EFFECT,
+    fields: {
+      [FIELD_EFFECTS_NAME]: 'volume',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
+    },
+  },
+  [BlockTypes.SET_FILTER_EFFECT]: {
+    kind: 'block',
+    type: BlockTypes.SET_EFFECT,
+    fields: {
+      [FIELD_EFFECTS_NAME]: 'filter',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
+    },
+  },
+  [BlockTypes.SET_DELAY_EFFECT]: {
+    kind: 'block',
+    type: BlockTypes.SET_EFFECT,
+    fields: {
+      [FIELD_EFFECTS_NAME]: 'delay',
+      [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
+    },
+  },
   [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION]: {
     levelbuilderText: 'unused',
     kind: 'block',
