@@ -42,7 +42,7 @@ git lfs install
 pip install pdm==2.1.7
 
 # Install Bundler 2.3.22
-gem install bundler -v 2.3.22
+sudo gem install bundler -v 2.3.22
 
 # Install Yarn (if not already installed)
 sudo apt-get install -y yarn
