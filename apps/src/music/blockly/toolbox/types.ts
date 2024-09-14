@@ -35,4 +35,5 @@ export type ToolboxType = 'category' | 'flyout';
 export interface ToolboxData {
   blocks?: CategoryBlocksMap;
   type?: ToolboxType;
+  includeAi?: boolean;
 }
