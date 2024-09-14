@@ -26,16 +26,13 @@ sudo apt-get install -y \
   yarn \
   curl
 
-# Install Ruby version 3.0.5 using RVM
-sudo apt-add-repository ppa:rael-gc/rvm
-sudo apt-get update
-sudo apt-get install rvm
-rvm install 3.0.5
-rvm use 3.0.5 --default
+# Install Ruby version 3.0.5 from Ubuntu's official repositories
+sudo apt-get install -y ruby=1:3.0.5
 
-# Install Node.js version 18.16.0
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# Install Node.js version 18.16.0 using NodeSource's official repository
+wget https://deb.nodesource.com/setup_18.x -O nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt-get install -y nodejs=18.16.0-1nodesource1
 
 # Install Git LFS version 3.0
 sudo apt-get install -y git-lfs
@@ -44,11 +41,15 @@ git lfs install
 # Install Python PDM version 2.1.7
 pip install pdm==2.1.7
 
-# Install Bundler 2.3.2.2
-gem install bundler -v 2.3.2.2
+# Install Bundler 2.3.22
+gem install bundler -v 2.3.22
 
 # Install Yarn (if not already installed)
-curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+sudo apt-get install -y yarn
 
+# Verify versions
+ruby -v
+node -v
+yarn -v
+bundler -v
+git-lfs --version
