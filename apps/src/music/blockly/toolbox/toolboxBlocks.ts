@@ -61,6 +61,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     },
   },
   [BlockTypes.SET_VOLUME_EFFECT]: {
+    levelbuilderText: 'Set volume effect',
     kind: 'block',
     type: BlockTypes.SET_EFFECT,
     fields: {
@@ -69,6 +70,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     },
   },
   [BlockTypes.SET_FILTER_EFFECT]: {
+    levelbuilderText: 'Set filter effect',
     kind: 'block',
     type: BlockTypes.SET_EFFECT,
     fields: {
@@ -77,6 +79,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     },
   },
   [BlockTypes.SET_DELAY_EFFECT]: {
+    levelbuilderText: 'Set delay effect',
     kind: 'block',
     type: BlockTypes.SET_EFFECT,
     fields: {
