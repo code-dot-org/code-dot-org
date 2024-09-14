@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+
+# echo all commands
+set -x
+
 sudo apt-get update
 
 # Install dependencies for Ruby, Node, Git LFS, MySQL, and other libraries
