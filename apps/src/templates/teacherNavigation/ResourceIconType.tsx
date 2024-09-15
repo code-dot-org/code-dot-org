@@ -17,9 +17,3 @@ export const RESOURCE_TYPE = Object.freeze({
   GOOGLE_DOC: makeObjectType('files', styles.files),
   VIDEO: makeObjectType('video', styles.video),
 } as const);
-
-export type ResourceTypeValues =
-  (typeof RESOURCE_TYPE)[keyof typeof RESOURCE_TYPE];
-
-export const ITEM_TYPE_SHAPE: ResourceTypeValues[] =
-  Object.values(RESOURCE_TYPE);

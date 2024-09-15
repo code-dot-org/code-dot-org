@@ -17,7 +17,7 @@ const ResourceIcon: React.FC<ResourceIconProps> = ({
   resourceType,
   resourceUrl,
 }) => {
-  const iconType = () => {
+  const computeIconType = () => {
     if (isGDocsUrl(resourceUrl)) {
       if (resourceType === 'Slides') {
         return RESOURCE_TYPE.SLIDES;
@@ -33,12 +33,14 @@ const ResourceIcon: React.FC<ResourceIconProps> = ({
     }
   };
 
+  const iconType = computeIconType();
+
   return (
     <div
-      data-testid={'resource-icon-' + iconType().icon}
-      className={classNames(styles.resourceIconContainer, iconType().class)}
+      data-testid={'resource-icon-' + iconType.icon}
+      className={classNames(styles.resourceIconContainer, iconType.class)}
     >
-      <FontAwesomeV6Icon iconName={iconType().icon} className={styles.icon} />
+      <FontAwesomeV6Icon iconName={iconType.icon} className={styles.icon} />
     </div>
   );
 };
