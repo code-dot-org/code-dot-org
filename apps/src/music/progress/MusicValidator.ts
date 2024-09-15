@@ -38,6 +38,10 @@ export const MusicConditions: ConditionNames = {
     valueType: 'number',
   },
   PLAYED_PATTERNS_AI: {name: 'played_patterns_ai', valueType: 'number'},
+  PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES: {
+    name: 'played_different_sounds_together_multiple_times',
+    valueType: 'number',
+  },
 };
 
 export default class MusicValidator extends Validator {
@@ -151,6 +155,45 @@ export default class MusicValidator extends Validator {
         }
       }
     });
+
+    // How many unique start times for different blocks have we found?
+    //for each sound
+    // record ID + start time if not already in list
+    // then group that list by start time
+    // filter to how many have already started
+    // if bigger than value, we have multiple play togthers
+    const uniqueStarts: Array<Array<{id: string; when: number}>> = [];
+    this.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
+      const entry = {id: eventData.id, when: eventData.when};
+      if (!uniqueStarts[eventData.when]) {
+        uniqueStarts[eventData.when] = [];
+      }
+      if (
+        !uniqueStarts[eventData.when].find(
+          uniqueStart =>
+            uniqueStart.id === entry.id && uniqueStart.when === entry.when
+        )
+      ) {
+        uniqueStarts[eventData.when].push(entry);
+      }
+    });
+
+    const filteredItems = Object.keys(uniqueStarts).filter(when => {
+      return Number(when) <= currentPlayheadPosition;
+    });
+
+    let numBuckets = 0;
+    filteredItems.forEach(item => {
+      if (uniqueStarts[Number(item)].length >= 2) {
+        numBuckets++;
+      }
+    });
+    console.log(numBuckets);
+
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES.name,
+      numBuckets
+    );
 
     // Check for up to a certain number of sounds playing simultaneously.
     // Note that if, for example, 3 sounds are playing, then we'll consider
