@@ -231,9 +231,10 @@ export default class MusicValidator extends Validator {
   ) {
     // An array of arrays of unique sound starts.
     // The outer array is sparsely indexed by start time in measures.
-    // Each inner array is a list of unique sound IDs.
+    // Each inner array is a list of unique sound IDs that start at
+    // that measure.
     // This means that the same sound started at the same time will
-    // only be recorded once, even if encountered multiple times.
+    // only be recorded once, even if played multiple times.
     const uniqueStarts: Array<Array<string>> = [];
 
     this.getPlaybackEvents()
@@ -247,9 +248,13 @@ export default class MusicValidator extends Validator {
         }
       });
 
+    // At least 2 sounds must be played together at the same time to be
+    // counted.
+    const numSoundsForPlayTogether = 2;
+
     let playTogetherStarts = 0;
     Object.keys(uniqueStarts).forEach(when => {
-      if (uniqueStarts[Number(when)].length >= 2) {
+      if (uniqueStarts[Number(when)].length >= numSoundsForPlayTogether) {
         playTogetherStarts++;
       }
     });
