@@ -22,7 +22,7 @@ def main
     csv << headers
 
     student_users_in_section = Section.find(options[:section_id]).followers.map(&:student_user)
-    teacher_users_in_section = Section.find(options[:section_id]).active_section_instructors
+    teacher_users_in_section = Section.find(options[:section_id]).active_section_instructors.map(&:instructor)
     all_users_in_section = student_users_in_section + teacher_users_in_section
     rows = AichatRequest.where(
       user: all_users_in_section,
