@@ -140,7 +140,7 @@ const PublishNotes: React.FunctionComponent = () => {
           className={modelCustomizationStyles.updateButton}
         />
       </div>
-      <SaveChangesAlerts />
+      <SaveChangesAlerts isReadOnly={isReadOnly} />
     </div>
   );
 };

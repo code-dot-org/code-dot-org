@@ -50,16 +50,9 @@ export function getCodeForSingleBlock(block) {
   }
 }
 
-// Examine chain of parents to see if one is 'when_run'.
-export const isBlockInsideWhenRun = ctx => {
-  let block = ctx;
-  while ((block = block.getParent())) {
-    if (
-      [BlockTypes.WHEN_RUN, BlockTypes.WHEN_RUN_SIMPLE2].includes(block.type)
-    ) {
-      return true;
-    }
-  }
-
-  return false;
+// Check if root block is 'when_run'.
+export const isBlockInsideWhenRun = block => {
+  return [BlockTypes.WHEN_RUN, BlockTypes.WHEN_RUN_SIMPLE2].includes(
+    block.getRootBlock().type
+  );
 };

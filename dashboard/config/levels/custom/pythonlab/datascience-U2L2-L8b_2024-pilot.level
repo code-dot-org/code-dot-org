@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-09-14T00:09:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Recipes!\r\n\r\n::: details [**✅ Step 1**]\r\nDeclare variables for the information we know – original serving size, original quantity of ingredient, and new serving size.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n- To find out the new amount of an ingredient needed, write an expression that divides original quantity by original serving size. \r\n- Multiply this result by the new serving size and store the result in a variable.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nPrint a message that contains the original quantity and the new quantity. For example: *\"Original Quantity: 2 | New Quantity: 4\"*\r\n:::\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Step 1\n\n\n# Step 2\n\n\n# Step 3\nmessage = \"\"\nprint(message)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "Recipe Helper",
+    "bubble_choice_description": "Practice python by adjusting the quantities of ingredients in a recipe based on the number of servings you want to make.",
+    "thumbnail_url": "https://images.code.org/34ef21745f85b8af34618bc5a56bec99-cook-book.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-14T00:09:04.997+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L8a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L8a_2024-pilot\"},{\"changed_at\":\"2024-09-14 00:10:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 00:25:28 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>
