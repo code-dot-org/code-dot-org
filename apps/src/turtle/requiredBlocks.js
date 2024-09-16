@@ -197,7 +197,7 @@ var defineWithArg = function (func_name, arg_name) {
       return (
         block.type === 'procedures_defnoreturn' &&
         block.getFieldValue('NAME') === func_name &&
-        block.getProcedureModel()?.getParameters()[0]?.getName() === arg_name
+        block.getProcedureModel()?.getParameters()?.[0]?.getName() === arg_name
       );
     },
     type: 'procedures_defnoreturn',
