@@ -25,7 +25,7 @@ export const MusicConditions: ConditionNames = {
   PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
   PLAYED_SOUND_IN_FUNCTION: {
     name: 'played_sound_in_function',
-    valueType: 'number',
+    valueType: 'string',
   },
   PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
   PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
