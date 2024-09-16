@@ -27,7 +27,11 @@ sudo apt-get install -y \
   curl
 
 # Install Ruby version 3.0.5 from Ubuntu's official repositories
-sudo apt-get install -y ruby=1:3.0.5
+sudo apt-add-repository ppa:rael-gc/rvm
+sudo apt-get update
+sudo apt-get install -y rvm
+rvm install 3.0.5
+rvm use 3.0.5 --default
 
 # Install Node.js version 18.16.0 using NodeSource's official repository
 wget https://deb.nodesource.com/setup_18.x -O nodesource_setup.sh
