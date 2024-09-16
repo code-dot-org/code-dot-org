@@ -336,6 +336,11 @@ td {
       flex-direction: column;
     }
   }
+  &.flex-direction-column-mobile-reverse {
+    @media screen and (max-width: 640px) {
+      flex-direction: column-reverse;
+    }
+  }
   &.flex-direction-row {
     flex-direction: row;
   }
