@@ -267,15 +267,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       refToScrollTo = validationScrollRef;
     }
     if (refToScrollTo) {
-      // We do a 30 ms timeout before scrolling to avoid a flicker. When a new
-      // "bubble" (validation results or continue button) appears, we do an animation
-      // for it to appear. If we scroll immediately, it looks like the instructions are
-      // jumping.
       // We must at least set a timeout with a wait of 0 to ensure the scroll happens at all,
       // because the DOM needs to update before we can scroll to the new element.
       setTimeout(
         () => refToScrollTo.current?.scrollIntoView({behavior: 'smooth'}),
-        30
+        0
       );
     }
   }, [showNavigation, validationResults]);
