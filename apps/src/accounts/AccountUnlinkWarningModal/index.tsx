@@ -12,7 +12,7 @@ import i18n from '@cdo/locale';
 
 import {AccountUnlinkWarningModalProps} from './types';
 
-import styles from './accountUnlinkWarningModal.module.scss';
+import styles from './style.module.scss';
 
 const AccountUnlinkWarningModal = ({
   lmsName,
