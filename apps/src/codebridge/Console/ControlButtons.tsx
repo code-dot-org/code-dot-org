@@ -42,7 +42,7 @@ const ControlButtons: React.FunctionComponent = () => {
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
-  const labType = useAppSelector(state => state.lab.levelProperties?.appName);
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -60,7 +60,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, labType);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName);
       onRun(/*runTests*/ false, dispatch, source).finally(() =>
         dispatch(setIsRunning(false))
       );
