@@ -13,28 +13,34 @@ module AichatComprehendHelper
   def self.get_toxicity(text, locale)
     return nil if text.blank?
 
-    text_segment_lists = get_text_segment_lists(text)
+    segments = get_text_segments(text)
     all_results = []
-    text_segment_lists.each do |list|
+    segments.in_groups_of(MAX_SEGMENTS_PER_LIST, false).each do |segments_group|
       comprehend_response = create_comprehend_client.detect_toxic_content(
         {
-          text_segments: list.map {|segment| {text: segment}},
+          text_segments: segments_group.map {|segment| {text: segment}},
           language_code: locale,
         }
       )
       all_results.concat(comprehend_response.result_list)
     end
 
+    max_toxicity_index = all_results.index(all_results.max_by(&:toxicity))
+    flagged_segment = segments[max_toxicity_index]
+    max_category = all_results[max_toxicity_index].labels.max_by(&:score)
     {
-      text: text,
-      toxicity: all_results.max_by(&:toxicity).toxicity,
-      max_category: all_results.map(&:labels).flatten.max_by(&:score)
+      flagged_segment: flagged_segment,
+      toxicity: all_results[max_toxicity_index].toxicity,
+      max_category: {
+        name: max_category.name,
+        score: max_category.score,
+      }
     }
   end
 
-  # Returns a collection of text segment lists, each with a list of individual text segments to check for toxicity.
+  # Converts a string of text into a list of segments to work with Comprehend's segment limits.
   # Comprehend limits the amount of bytes per segment, and the amount of overall bytes per list.
-  def self.get_text_segment_lists(text)
+  def self.get_text_segments(text)
     words = []
     # Split the text by words. If a single word exceeds our segment size limit, split up the word.
     text.split.each do |word|
@@ -53,27 +59,16 @@ module AichatComprehendHelper
       end
     end
 
-    text_segment_lists = [[""]]
+    segments = [""]
     words.each do |word|
       new_word_size = " #{word}".bytesize
-      current_list = text_segment_lists.last
-      current_segment = current_list.last
-
-      if current_segment.bytesize + new_word_size >= MAX_SEGMENT_SIZE_BYTES
-        if current_list.size >= MAX_SEGMENTS_PER_LIST
-          # If we've exceeded the limit for the current list, create a new list
-          text_segment_lists << [""]
-          current_list = text_segment_lists.last
-        else
-          # Otherwise, start a new segment in the current list
-          current_list << ""
-        end
-        current_segment = current_list.last
+      if segments.last.bytesize + new_word_size >= MAX_SEGMENT_SIZE_BYTES
+        # Otherwise, start a new segment in the current list
+        segments << ""
       end
-
-      current_segment << (current_segment.empty? ? word : " #{word}")
+      segments.last << (segments.last.empty? ? word : " #{word}")
     end
-    text_segment_lists
+    segments
   end
 end
 
