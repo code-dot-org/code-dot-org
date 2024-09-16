@@ -27,6 +27,7 @@
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - {Name: InstanceId, Value: !Ref <%=daemon%>}
+        - {Name: Environment, Value: <%= rack_env? %>}
       EvaluationPeriods: 7
       MetricName: mem_used_percent
       Namespace: CWAgent
