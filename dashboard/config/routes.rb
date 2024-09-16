@@ -115,6 +115,9 @@ Dashboard::Application.routes.draw do
       member do
         post 'log_in'
       end
+      collection do
+        post 'section_instructors_verified'
+      end
     end
     # Section API routes (JSON only)
     concern :section_api_routes do
@@ -882,6 +885,7 @@ Dashboard::Application.routes.draw do
     end
 
     get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
+    get 'dashboardapi/lesson_materials/:unit_id', to: 'api#lesson_materials'
 
     # Wildcard routes for API controller: select all public instance methods in the controller,
     # and all template names in `app/views/api/*`.

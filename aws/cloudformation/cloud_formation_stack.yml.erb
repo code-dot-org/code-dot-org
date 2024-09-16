@@ -191,10 +191,25 @@ Resources:
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
-          # SageMaker Invoke Endpoint access
+          # TODO: Move to dedicated policy for GenAI
+          # GenAI Sagemaker access
           - Effect: Allow
-            Action: 'sagemaker:InvokeEndpoint'
+            Action:
+              - 'sagemaker:InvokeEndpoint'
             Resource: !Sub "arn:aws:sagemaker:${AWS::Region}:${AWS::AccountId}:endpoint/gen-ai-*"
+          # GenAI Comprehend access
+          - Effect: Allow
+            Action:
+              - 'comprehend:DetectToxicContent'
+            Resource: '*'
+          # TODO: Move to dedicated policy for AI TA
+          # AI TA Sagemaker access
+          - Effect: Allow
+            Action:
+              - 'bedrock:RetrieveAndGenerate'
+              - 'bedrock:Retrieve' # TODO: scope to custom knowledge base
+              - 'bedrock:InvokeModel' # TODO: scope to allowed models
+            Resource: '*'
 
   # ---------------------------------------------
   # Frontend Servers

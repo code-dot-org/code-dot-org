@@ -8,7 +8,7 @@
     "encrypted": "false",
     "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Add the following code:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nSystem.out.println(\"bigNumber as double: \" + (double)bigNumber);\r\nSystem.out.println(bigNumber + \" (as double) plus 1: \" + ((double)bigNumber + 1));\r\n</pre>\r\n\r\nRun the program and observe the results. Why do you think this happened?\r\n\r\nCan you change + 1 in the line above in order to cause an overflow again?",
     "mini_rubric": "false",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": true,
     "submittable": "false",
     "hide_share_and_remix": "true",
     "csa_view_mode": "console",

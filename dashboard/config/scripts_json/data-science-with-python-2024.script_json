@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-11 00:40:47 UTC",
+    "serialized_at": "2024-09-15 22:38:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -945,7 +945,7 @@
       "key": "c85cca63-e622-44ab-88b8-42876b3dbdcb",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2, 3, and 4 with their partner. Students use pair programming to investigate the program by modifying the program as prompted and observing the results.\n\n- **Level 2:** Students add in a second `pet_type` and `pet_name` and concatenate them onto the original message variable.\n- **Level 3:** Students modify the given expression and remove the `str()`. \n- **Level 4:** Students change the index variable and modify the list.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 - 7 with their partner. Students use pair programming to investigate the program by modifying the program as prompted and observing the results.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.\n",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -957,7 +957,7 @@
       "key": "b6190c57-43a3-4641-b90a-5f07a0fd5159",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What did you discover from the modifications you made to the code?\n- *Think-Pair-Share*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are lots of discoveries that students should make from these introductory explorations into the Python programming language. Amongst those are:\n- How to declare and initialize different variable types.\n- How to create basic expressions that use mathematical operators.\n- How to concatenate a series of strings together and to print them into the console.\n- How to use an index variable to access / modify information from a list.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define variable.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define data type.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how to create a variable.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the assignment operator `=`.",
+        "description": "- **Level 2:** Students add in a second `pet_type` and `pet_name` and concatenate them onto the original message variable.\n- **Level 3:** Students investigate a concatenation error.\n- **Level 4:** Students create an expression to convert human years into dog years.\n- **Level 5:** Students change the index variable and modify the list.\n- **Level 6:** Students update the value of a list element.\n- **Level 7:** Students complete a quick check for understanding.\n\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What did you discover from the modifications you made to the code?\n- *Think-Pair-Share*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are lots of discoveries that students should make from these introductory explorations into the Python programming language. Amongst those are:\n- How to declare and initialize different variable types.\n- How to create basic expressions that use mathematical operators.\n- How to concatenate a series of strings together and to print them into the console.\n- How to use an index variable to access / modify information from a list.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define variable.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define data type.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how to create a variable.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the assignment operator `=`.",
         "tips": [
           {
             "type": "teachingTip",
@@ -985,20 +985,32 @@
       "key": "333645d3-c6c5-476e-b923-1e0fdc7bbaea",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to complete Levels 5 and 6.\n- **Level 5:** Students will practice creating string and numeric variables, creating an expression that involves a mathematical operation on those variables, and printing the results as output.\n- **Level 6:** Students will practice creating lists, accessing elements within those lists, creating an expression that involves a mathematical operation on the elements of the list, and printing the results as output.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 8 to complete Levels 8 and 9.\n",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "333645d3-c6c5-476e-b923-1e0fdc7bbaea",
+        "lesson_activity.key": "e0aa4eed-bbb7-43fe-9db2-e6b824435d1f"
+      }
+    },
+    {
+      "key": "c3254f84-8392-401b-826b-71c0c1a20f23",
+      "position": 7,
+      "properties": {
+        "description": "- **Level 8:** Students will practice creating string and numeric variables, creating an expression that involves a mathematical operation on those variables, and printing the results as output.\n- **Level 9:** Students will practice creating lists, accessing elements within those lists, creating an expression that involves a mathematical operation on the elements of the list, and printing the results as output.\n",
         "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Students who successfully complete these levels will have demonstrated mastery of the following lesson objective:\n- Write simple Python programs utilizing variables, operators, and expressions\n"
-          },
           {
             "type": "teachingTip",
             "markdown": "Consider having more advanced students tackle levels 5B and 6B, as these levels utilizes the most variables and the most in-depth expressions. If students finish early, they might also gain further practice by engaging with one of the levels that they did not choose."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students who successfully complete these levels will have demonstrated mastery of the following lesson objective:\n- Write simple Python programs utilizing variables, operators, and expressions\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "333645d3-c6c5-476e-b923-1e0fdc7bbaea",
+        "activity_section.key": "c3254f84-8392-401b-826b-71c0c1a20f23",
         "lesson_activity.key": "e0aa4eed-bbb7-43fe-9db2-e6b824435d1f"
       }
     },
@@ -1085,7 +1097,7 @@
       "key": "f605d2ab-efc9-48b9-b0e4-6f6a9b821a4c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 5.\n- **Level 2:** Students investigate how commenting out and modifying code affects reading a CSV file into a DataFrame\n- **Level 3:** Students experiment with modifying the code to use the `head()` function and observe the output to understand its use.\n- **Level 4:** Students experiment with modifying the code to use the `tail()` function and observe the output to understand its use.\n- **Level 5:** Students experiment with the `len()` function to find the number of rows in the DataFrame and compare it with the shape attribute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 6.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -1097,7 +1109,7 @@
       "key": "9aef47d7-f67f-475c-aeaa-a1766db59f81",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code. Do a quick whip around to allow students to share one thing they discovered or ask students to \"Raise a Righteous Hand\" to volunteer to share."
+        "description": "- **Level 2:** Students investigate how commenting out and modifying code affects reading a CSV file into a DataFrame\n- **Level 3:** Students experiment with modifying the code to use the `head()` function and observe the output to understand its use.\n- **Level 4:** Students experiment with modifying the code to use the `tail()` function and observe the output to understand its use.\n- **Level 5:** Students experiment with the `len()` function to find the number of rows in the DataFrame and compare it with the shape attribute.\n- **Level 6:** Students complete a check for understanding.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code. Do a quick whip around to allow students to share one thing they discovered or ask students to \"Raise a Righteous Hand\" to volunteer to share."
       },
       "seeding_key": {
         "activity_section.key": "9aef47d7-f67f-475c-aeaa-a1766db59f81",
@@ -1130,7 +1142,19 @@
       "key": "2ac173de-fd9f-4468-a269-670bb504d36c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to level 6 to complete Levels 6 through 9.\n- **Level 6:** Students do a multiple choice question about `shape`\n- **Level 7:** Students practice importing pandas and reading a csv file\n- **Level 8:** Students practice using `len()` and shape\n- **Level 9:** Students practice using `head()` and `tail()`",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to level 7 to complete Levels 7 through 9.\n",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ac173de-fd9f-4468-a269-670bb504d36c",
+        "lesson_activity.key": "fd34e09c-949e-4441-b98d-9de61e914369"
+      }
+    },
+    {
+      "key": "339228fc-943b-44cb-8cd8-58f9c14c83ab",
+      "position": 8,
+      "properties": {
+        "description": "\n- **Level 7:** Students practice importing pandas and reading a csv file\n- **Level 8:** Students practice using `len()` and `shape`\n- **Level 9:** Students practice using `head()` and `tail()`",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1139,7 +1163,7 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "2ac173de-fd9f-4468-a269-670bb504d36c",
+        "activity_section.key": "339228fc-943b-44cb-8cd8-58f9c14c83ab",
         "lesson_activity.key": "fd34e09c-949e-4441-b98d-9de61e914369"
       }
     },
@@ -1198,7 +1222,7 @@
       "key": "c403eade-1958-4062-afc7-33e83f66ea20",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 4.\n- **Level 2:** Change the name of the y axis of the line chart and add a title to the bar chart \n- **Level 3:** Tilt the labels for the bars\n- **Level 4:** Contains code that is missing the `plt.show()` line, which will run, but will not show the image. It then tells students to put the “show” line before the title and axes has been set, which will show the plot but will not add the title and axis labels.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students collaborate with each other, helping students who are stuck. If students are getting errors, double check for misspellings and missing `[]`or single quotes, in particular – students will be editing strings and may accidentally remove syntax that is important. If the plt.show() line for a given chart is earlier in the code than things like the title or axes, they won’t show up in the chart, so students need to be careful about where they put it.\n\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 5.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students collaborate with each other, helping students who are stuck. If students are getting errors, double check for misspellings and missing `[]`or single quotes, in particular – students will be editing strings and may accidentally remove syntax that is important. If the plt.show() line for a given chart is earlier in the code than things like the title or axes, they won’t show up in the chart, so students need to be careful about where they put it.\n\n",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -1210,7 +1234,7 @@
       "key": "ca515706-5af0-433d-9c67-dbac801c54a6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What did you discover from the modifications you made to the code?\nThink-Pair-Share\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a chance for students to synthesize and articulate what they discovered in the previous levels. There are no wrong answers here. You should encourage students to talk about any errors they ran into – for example they may have found that it is easy to accidentally miss a ‘ or ] that will cause errors in the program, or add lines after the plt.show() line for the plot in question. They will also probably have realized that Matplotlib provides them with a lot of creative freedom around how the charts show up. \n\n"
+        "description": "- **Level 2:** Students update labels and add a title to the bar chart.\n- **Level 3:** Students adjust the x-axis labels to be readable.\n- **Level 4:** Students explore the placement of `plt.show()`. \n- **Level 5:** Students complete quick a check for understanding.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What did you discover from the modifications you made to the code?\nThink-Pair-Share\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a chance for students to synthesize and articulate what they discovered in the previous levels. There are no wrong answers here. You should encourage students to talk about any errors they ran into – for example they may have found that it is easy to accidentally miss a ‘ or ] that will cause errors in the program, or add lines after the plt.show() line for the plot in question. They will also probably have realized that Matplotlib provides them with a lot of creative freedom around how the charts show up. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "ca515706-5af0-433d-9c67-dbac801c54a6",
@@ -1229,14 +1253,26 @@
       }
     },
     {
-      "key": "a9c2699f-385d-486e-a0c2-40fe2a59b0e2",
+      "key": "3a401822-e107-4cd7-b006-8b60e7675667",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to complete Levels 5 through 8. Each is a choice level, based on which data set the students were interested in working with.\n- **Level 5:** Students load the pandas library and the pyplot module from Matplotlib.\n- **Level 6:** Students load their data, and read the top few lines of the data.\n- **Level 7:** Students create a line chart complete with titles and axis labels.\n- **Level #8:** Students create a bar chart complete with titles and axis labels.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6 to complete Levels 6 through 9. Each is a choice level, based on which data set the students were interested in working with.",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a401822-e107-4cd7-b006-8b60e7675667",
+        "lesson_activity.key": "5a29fde0-2d3e-4eb1-9dd6-af659a5d7a4b"
+      }
+    },
+    {
+      "key": "a9c2699f-385d-486e-a0c2-40fe2a59b0e2",
+      "position": 7,
+      "properties": {
+        "description": "\n- **Level 6:** Students load the pandas library and the pyplot module from Matplotlib.\n- **Level 7:** Students load their data, and print the first few lines of the data.\n- **Level 8:** Students create a line chart complete with titles and axis labels.\n- **Level 9:** Students create a bar chart complete with titles and axis labels.",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Levels 5 & 6 practice things students should know from the previous class - loading libraries and the data. \n\nLevels 7 & 8 has students write from scratch the lines they have seen in Levels 2-4, which they should be able to do. "
+            "markdown": "Levels 6 & 7 practice things students should know from the previous class - loading libraries and the data. \n\nLevels 8 & 9 has students write from scratch the lines they have seen in Levels 2-4, which they should be able to do. "
           }
         ]
       },
@@ -1356,7 +1392,7 @@
       "key": "1fa9cbcb-057b-4566-a102-7b9d5ff30f0c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 5 with their partner.\n- **Level 2:** Use the `info()` function for `survey_data` and examine the output\n- **Level 3:** Use the describe() function and compare the output with the output from `info()`\n- **Level 4:** Use `astype()` to convert `float64` to `int64`, and vice versa\n- **Level 5:** Use `to_datetime()` to convert an object to datetime.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications. The levels provide possible mistakes and misconceptions and how to help.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 6 with their partner.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications. The levels provide possible mistakes and misconceptions and how to help.\n",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -1368,7 +1404,7 @@
       "key": "e44ff1be-2379-42cd-b13a-90664789d245",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how Pandas assigns data types.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the four main data types that students will encounter frequently: int64, float64, object, datetime\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that pandas auto-assigning data types is prone to errors at times.\n\n\n\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `info()` to see what data type was assigned to each column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `astype()` to update types for an entire column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `to_datetime()` to convert a column's data type to datetime."
+        "description": "- **Level 2:** Use the `info()` function for `survey_data` and examine the output\n- **Level 3:** Use the describe() function and compare the output with the output from `info()`\n- **Level 4:** Use `astype()` to convert `float64` to `int64`, and vice versa\n- **Level 5:** Use `to_datetime()` to convert an object to datetime.\n- **Level 6:** Students complete a quick check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how Pandas assigns data types.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the four main data types that students will encounter frequently: int64, float64, object, datetime\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that pandas auto-assigning data types is prone to errors at times.\n\n\n\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `info()` to see what data type was assigned to each column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `astype()` to update types for an entire column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `to_datetime()` to convert a column's data type to datetime."
       },
       "seeding_key": {
         "activity_section.key": "e44ff1be-2379-42cd-b13a-90664789d245",
@@ -1376,10 +1412,22 @@
       }
     },
     {
-      "key": "f5edb261-cfd4-4ef8-95c8-2ab396ad489f",
+      "key": "a27cc22f-52f1-471e-bc51-5f5afdf19f20",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6 to complete Levels 6 and 7\n- **Level 6:** Students will use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a line graph.\n- **Level 7:** Students will use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a bar chart.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 7 to complete Levels 7 and 8\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "a27cc22f-52f1-471e-bc51-5f5afdf19f20",
+        "lesson_activity.key": "b510b4a9-bdfb-4bdc-8509-60de94003d35"
+      }
+    },
+    {
+      "key": "f5edb261-cfd4-4ef8-95c8-2ab396ad489f",
+      "position": 6,
+      "properties": {
+        "description": "\n- **Level 7:** Students will use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a line graph.\n- **Level 8:** Students will use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a bar chart.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2635,6 +2683,50 @@
     },
     {
       "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L2-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "333645d3-c6c5-476e-b923-1e0fdc7bbaea"
+      },
+      "level_keys": [
+        "datascience-U2L2-L8Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L2-L9Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "333645d3-c6c5-476e-b923-1e0fdc7bbaea"
+      },
+      "level_keys": [
+        "datascience-U2L2-L9Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2659,7 +2751,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2684,7 +2776,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2709,7 +2801,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2734,7 +2826,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -2759,7 +2851,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -2784,7 +2876,73 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L3-L7Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "2ac173de-fd9f-4468-a269-670bb504d36c"
+      },
+      "level_keys": [
+        "datascience-U2L3-L7Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L3-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "2ac173de-fd9f-4468-a269-670bb504d36c"
+      },
+      "level_keys": [
+        "datascience-U2L3-L8Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L3-L9Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "2ac173de-fd9f-4468-a269-670bb504d36c"
+      },
+      "level_keys": [
+        "datascience-U2L3-L9Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2809,7 +2967,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2834,7 +2992,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2859,7 +3017,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 22,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2884,7 +3042,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 23,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -2909,7 +3067,95 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 24,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L4-L6Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "3a401822-e107-4cd7-b006-8b60e7675667"
+      },
+      "level_keys": [
+        "datascience-U2L4-L6Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L4-L7Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "3a401822-e107-4cd7-b006-8b60e7675667"
+      },
+      "level_keys": [
+        "datascience-U2L4-L7Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L4-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "3a401822-e107-4cd7-b006-8b60e7675667"
+      },
+      "level_keys": [
+        "datascience-U2L4-L8Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L4-L9Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "3a401822-e107-4cd7-b006-8b60e7675667"
+      },
+      "level_keys": [
+        "datascience-U2L4-L9Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2934,7 +3180,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2959,7 +3205,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2984,7 +3230,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3009,7 +3255,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3034,7 +3280,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 33,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3059,7 +3305,51 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L5-L7Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "a27cc22f-52f1-471e-bc51-5f5afdf19f20"
+      },
+      "level_keys": [
+        "datascience-U2L5-L7Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L5-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "a27cc22f-52f1-471e-bc51-5f5afdf19f20"
+      },
+      "level_keys": [
+        "datascience-U2L5-L8Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3084,7 +3374,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3109,7 +3399,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3134,20 +3424,20 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "datascience-U2L6-L4_2024-pilot"
+          "datascience-U2L6-L6_2024-pilot"
         ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "datascience-U2L6-L4_2024-pilot"
+          "datascience-U2L6-L6_2024-pilot"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -3155,24 +3445,24 @@
         "activity_section.key": "ae715c69-cf75-4df8-8f3b-8de7d170c59d"
       },
       "level_keys": [
-        "datascience-U2L6-L4_2024-pilot"
+        "datascience-U2L6-L6_2024-pilot"
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "datascience-U2L6-L5_2024-pilot"
+          "datascience-U2L6-L7_2024-pilot"
         ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "datascience-U2L6-L5_2024-pilot"
+          "datascience-U2L6-L7_2024-pilot"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -3180,13 +3470,38 @@
         "activity_section.key": "ae715c69-cf75-4df8-8f3b-8de7d170c59d"
       },
       "level_keys": [
-        "datascience-U2L6-L5_2024-pilot"
+        "datascience-U2L6-L7_2024-pilot"
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "datascience-U2L6-L11_2024-pilot"
+        ],
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L6-L11_2024-pilot"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "ae715c69-cf75-4df8-8f3b-8de7d170c59d"
+      },
+      "level_keys": [
+        "datascience-U2L6-L11_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3209,207 +3524,7 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L6-L6_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L6-L6_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      },
-      "level_keys": [
-        "datascience-U2L6-L6_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L6-L7_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L6-L7_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      },
-      "level_keys": [
-        "datascience-U2L6-L7_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 9,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L6-L8_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L6-L8_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      },
-      "level_keys": [
-        "datascience-U2L6-L8_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 10,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L6-L9_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L6-L9_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      },
-      "level_keys": [
-        "datascience-U2L6-L9_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 11,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L6-L10_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L6-L10_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      },
-      "level_keys": [
-        "datascience-U2L6-L10_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 12,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L6-L11_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L6-L11_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      },
-      "level_keys": [
-        "datascience-U2L6-L11_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 13,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L6-L12_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L6-L12_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      },
-      "level_keys": [
-        "datascience-U2L6-L12_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 14,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L6-L13_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L6-L13_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      },
-      "level_keys": [
-        "datascience-U2L6-L13_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 39,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3434,7 +3549,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3459,59 +3574,9 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L7-L3_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L7-L3_2024-pilot"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "8bf4bf06-a0d2-4716-96ca-466533e97551"
-      },
-      "level_keys": [
-        "datascience-U2L7-L3_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 42,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L7-L4_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L7-L4_2024-pilot"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "8bf4bf06-a0d2-4716-96ca-466533e97551"
-      },
-      "level_keys": [
-        "datascience-U2L7-L4_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 43,
-      "position": 5,
-      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3534,34 +3599,9 @@
       ]
     },
     {
-      "chapter": 44,
-      "position": 6,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L7-L6_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L7-L6_2024-pilot"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "8bf4bf06-a0d2-4716-96ca-466533e97551"
-      },
-      "level_keys": [
-        "datascience-U2L7-L6_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 46,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3584,59 +3624,9 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 8,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L7-L8_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L7-L8_2024-pilot"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "8bf4bf06-a0d2-4716-96ca-466533e97551"
-      },
-      "level_keys": [
-        "datascience-U2L7-L8_2024-pilot"
-      ]
-    },
-    {
       "chapter": 47,
-      "position": 9,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L7-L9_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L7-L9_2024-pilot"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "8bf4bf06-a0d2-4716-96ca-466533e97551"
-      },
-      "level_keys": [
-        "datascience-U2L7-L9_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 48,
-      "position": 10,
-      "activity_section_position": 9,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3659,9 +3649,9 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 11,
-      "activity_section_position": 10,
+      "chapter": 48,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3684,7 +3674,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3709,7 +3699,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3734,34 +3724,9 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L8-L3_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L8-L3_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      },
-      "level_keys": [
-        "datascience-U2L8-L3_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 53,
-      "position": 4,
-      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3784,59 +3749,9 @@
       ]
     },
     {
-      "chapter": 54,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L8-L5_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L8-L5_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      },
-      "level_keys": [
-        "datascience-U2L8-L5_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 6,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L8-L6_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L8-L6_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      },
-      "level_keys": [
-        "datascience-U2L8-L6_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3859,59 +3774,9 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 8,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L8-L8_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L8-L8_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      },
-      "level_keys": [
-        "datascience-U2L8-L8_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 58,
-      "position": 9,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L8-L9_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L8-L9_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      },
-      "level_keys": [
-        "datascience-U2L8-L9_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 59,
-      "position": 10,
-      "activity_section_position": 9,
+      "chapter": 53,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3934,34 +3799,9 @@
       ]
     },
     {
-      "chapter": 60,
-      "position": 11,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L8-L11_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L8-L11_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      },
-      "level_keys": [
-        "datascience-U2L8-L11_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 61,
-      "position": 12,
-      "activity_section_position": 11,
+      "chapter": 54,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3984,59 +3824,9 @@
       ]
     },
     {
-      "chapter": 62,
-      "position": 13,
-      "activity_section_position": 12,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L8-L13_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L8-L13_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      },
-      "level_keys": [
-        "datascience-U2L8-L13_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 63,
-      "position": 14,
-      "activity_section_position": 13,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "datascience-U2L8-L14_2024-pilot"
-        ],
-        "progression": "Investigate and Modify"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "datascience-U2L8-L14_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      },
-      "level_keys": [
-        "datascience-U2L8-L14_2024-pilot"
-      ]
-    },
-    {
-      "chapter": 64,
-      "position": 15,
-      "activity_section_position": 14,
+      "chapter": 55,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4059,7 +3849,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4084,7 +3874,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4109,7 +3899,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4134,9 +3924,31 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L9-L4_2024-pilot"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "f6907929-8d72-4b67-aef6-0a3545774baf"
+      },
+      "level_keys": [
+        "datascience-U2L9-L4_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4159,7 +3971,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4184,9 +3996,119 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L10-L2_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
+      },
+      "level_keys": [
+        "datascience-U2L10-L2_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L10-L3_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
+      },
+      "level_keys": [
+        "datascience-U2L10-L3_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L10-L4_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
+      },
+      "level_keys": [
+        "datascience-U2L10-L4_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L10-L5_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
+      },
+      "level_keys": [
+        "datascience-U2L10-L5_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L10-L6_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
+      },
+      "level_keys": [
+        "datascience-U2L10-L6_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4296,6 +4218,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "datascience-U2L2-L8Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L2-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "333645d3-c6c5-476e-b923-1e0fdc7bbaea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L2-L9Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L2-L9Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "333645d3-c6c5-476e-b923-1e0fdc7bbaea"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "datascience-U2L3-L1_2024-pilot",
         "script_level.level_keys": [
           "datascience-U2L3-L1_2024-pilot"
@@ -4368,6 +4314,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "datascience-U2L3-L7Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L3-L7Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "2ac173de-fd9f-4468-a269-670bb504d36c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L3-L8Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L3-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "2ac173de-fd9f-4468-a269-670bb504d36c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L3-L9Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L3-L9Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "2ac173de-fd9f-4468-a269-670bb504d36c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "datascience-U2L4-L1_2024-pilot",
         "script_level.level_keys": [
           "datascience-U2L4-L1_2024-pilot"
@@ -4424,6 +4406,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "data-science-with-python-2024",
         "activity_section.key": "c403eade-1958-4062-afc7-33e83f66ea20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L4-L6Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L4-L6Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "3a401822-e107-4cd7-b006-8b60e7675667"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L4-L7Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L4-L7Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "3a401822-e107-4cd7-b006-8b60e7675667"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L4-L8Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L4-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "3a401822-e107-4cd7-b006-8b60e7675667"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L4-L9Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L4-L9Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "3a401822-e107-4cd7-b006-8b60e7675667"
       }
     },
     {
@@ -4500,6 +4530,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "datascience-U2L5-L7Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L5-L7Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "a27cc22f-52f1-471e-bc51-5f5afdf19f20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L5-L8Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L5-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "a27cc22f-52f1-471e-bc51-5f5afdf19f20"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "datascience-U2L6-L1_2024-pilot",
         "script_level.level_keys": [
           "datascience-U2L6-L1_2024-pilot"
@@ -4536,9 +4590,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "datascience-U2L6-L4_2024-pilot",
+        "level.key": "datascience-U2L6-L6_2024-pilot",
         "script_level.level_keys": [
-          "datascience-U2L6-L4_2024-pilot"
+          "datascience-U2L6-L6_2024-pilot"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -4548,9 +4602,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "datascience-U2L6-L5_2024-pilot",
+        "level.key": "datascience-U2L6-L7_2024-pilot",
         "script_level.level_keys": [
-          "datascience-U2L6-L5_2024-pilot"
+          "datascience-U2L6-L7_2024-pilot"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "ae715c69-cf75-4df8-8f3b-8de7d170c59d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L6-L11_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L6-L11_2024-pilot"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -4568,102 +4634,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "data-science-with-python-2024",
         "activity_section.key": "ae715c69-cf75-4df8-8f3b-8de7d170c59d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L6-L6_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L6-L6_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L6-L7_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L6-L7_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L6-L8_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L6-L8_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L6-L9_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L6-L9_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L6-L10_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L6-L10_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L6-L11_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L6-L11_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L6-L12_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L6-L12_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L6-L13_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L6-L13_2024-pilot"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "479b3146-81ab-4095-bb2c-2f2f5b006204"
       }
     },
     {
@@ -4692,30 +4662,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "datascience-U2L7-L3_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L7-L3_2024-pilot"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "8bf4bf06-a0d2-4716-96ca-466533e97551"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L7-L4_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L7-L4_2024-pilot"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "8bf4bf06-a0d2-4716-96ca-466533e97551"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "datascience-U2L7-L5_2024-pilot",
         "script_level.level_keys": [
           "datascience-U2L7-L5_2024-pilot"
@@ -4728,45 +4674,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "datascience-U2L7-L6_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L7-L6_2024-pilot"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "8bf4bf06-a0d2-4716-96ca-466533e97551"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "datascience-U2L7-L7_2024-pilot",
         "script_level.level_keys": [
           "datascience-U2L7-L7_2024-pilot"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "8bf4bf06-a0d2-4716-96ca-466533e97551"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L7-L8_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L7-L8_2024-pilot"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "8bf4bf06-a0d2-4716-96ca-466533e97551"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L7-L9_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L7-L9_2024-pilot"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -4824,45 +4734,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "datascience-U2L8-L3_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L8-L3_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "datascience-U2L8-L4_2024-pilot",
         "script_level.level_keys": [
           "datascience-U2L8-L4_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L8-L5_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L8-L5_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L8-L6_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L8-L6_2024-pilot"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
@@ -4884,30 +4758,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "datascience-U2L8-L8_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L8-L8_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L8-L9_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L8-L9_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "datascience-U2L8-L10_2024-pilot",
         "script_level.level_keys": [
           "datascience-U2L8-L10_2024-pilot"
@@ -4920,45 +4770,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "datascience-U2L8-L11_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L8-L11_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "datascience-U2L8-L12_2024-pilot",
         "script_level.level_keys": [
           "datascience-U2L8-L12_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L8-L13_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L8-L13_2024-pilot"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "data-science-with-python-2024",
-        "activity_section.key": "c7e45adc-7675-4733-9e3b-713fa03258f2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "datascience-U2L8-L14_2024-pilot",
-        "script_level.level_keys": [
-          "datascience-U2L8-L14_2024-pilot"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
@@ -5016,6 +4830,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "datascience-U2L9-L4_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L9-L4_2024-pilot"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "f6907929-8d72-4b67-aef6-0a3545774baf"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "datascience-U2L9-CFU_2024-pilot",
         "script_level.level_keys": [
           "datascience-U2L9-CFU_2024-pilot"
@@ -5036,6 +4862,66 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "data-science-with-python-2024",
         "activity_section.key": "42cf70fa-129a-4012-b00e-4e4e5241490e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L10-L2_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L10-L2_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L10-L3_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L10-L3_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L10-L4_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L10-L4_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L10-L5_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L10-L5_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L10-L6_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L10-L6_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
       }
     },
     {

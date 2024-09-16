@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The `Dessert`(#e7e8ea) class represents a dessert at Project Mercury Pastries Food Truck and has instance variables for the flavor, price, and quantity ordered.\r\n\r\nThe `Cookie`(#e7e8ea) and `Pie`(#e7e8ea) classes are subclasses of the `Dessert`(#e7e8ea) class. These classes override the `getTotalPrice()`(#e7e8ea) method to discount the price of the order if the quantity is over a specific amount.\r\n\r\n##In Dessert.java:\r\n\r\n1. Write a method called `getDessertsInfo()`(#e7e8ea) with a parameter for a `Dessert`(#e7e8ea) array.\r\n\r\n   * Traverse the `Dessert`(#e7e8ea) array and return a `String`(#e7e8ea) containing the flavor of each dessert using the `getFlavor()`(#e7e8ea) method and the total prices of each dessert order.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Create an `Dessert`(#e7e8ea) array containing the `Dessert`(#e7e8ea) objects.\r\n\r\n3. Call the `getDessertsInfo()`(#e7e8ea) method on one of the `Dessert`(#e7e8ea) objects with the `Dessert`(#e7e8ea) array and print the result.",
@@ -30,12 +34,9 @@
         "text": "/*\n * A Pie that the Project Mercury Pastries Food Truck sells\n */\npublic class Pie extends Dessert {\n\n  private String filling;    // The filling flavor of the Pie\n  private boolean hasCrust;  // Whether or not the Pie has a crust\n\n  /*\n   * Constructor to create a plain Pie\n   */\n  public Pie() {\n    filling = \"none\";\n    hasCrust = false;\n  }\n\n  /*\n   * Constructor create a Pie with specified\n   * flavor, price, quantity, filling flavor, and crust status\n   */\n  public Pie(String newFlavor, double newPrice, int newQuantity, String newFilling, boolean newCrust) {\n    super(newFlavor, newPrice, newQuantity);\n    filling = newFilling;\n    hasCrust = newCrust;\n  }\n\n  /*\n   * Gets the total price of the dessert order\n   */\n  public double getTotalPrice() {\n    double total = super.getTotalPrice();\n\n    if (getQuantity() > 2) {\n      total *= .8;\n    }\n\n    return total;\n  }\n\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:29.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:29.649+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L4c_2022\\\"\"],\"cloned_from\":\"CSA U3L7-L4c_2022\"},{\"changed_at\":\"2022-09-08 20:24:55 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:27:43 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:28:34 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:30:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:30:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:37:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:37:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:44:29 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

@@ -42,19 +42,18 @@ const defaultProject: ProjectSources = {
 
 const labeledGridLayouts = {
   horizontal: {
-    gridLayoutRows: '2fr 1fr ',
+    gridLayoutRows: '1fr',
     gridLayoutColumns: '300px minmax(0, 1fr)',
     gridLayout: `
-  "info-panel workspace"
-  "file-browser console"
+  "info-panel workspace-and-console"
   `,
   },
   vertical: {
-    gridLayoutRows: '1fr 1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
+    gridLayoutRows: '1fr',
+    gridLayoutColumns: '300px minmax(0, 1fr) 400px',
     gridLayout: `
     "info-panel workspace console"
-    "file-browser workspace console"`,
+    `,
   },
 };
 const defaultConfig: ConfigType = {
@@ -90,6 +89,7 @@ const defaultConfig: ConfigType = {
 
   labeledGridLayouts,
   activeGridLayout: 'horizontal',
+  showFileBrowser: true,
 };
 
 const PythonlabView: React.FunctionComponent = () => {

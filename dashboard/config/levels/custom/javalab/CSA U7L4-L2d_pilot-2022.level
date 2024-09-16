@@ -31,7 +31,8 @@
     "display_name": "Animated Transition",
     "bubble_choice_description": "Use private and public methods to create a scene that draws images and shows an animated transition after each image.",
     "thumbnail_url": "https://images.code.org/f112f8908562c98d362902e7a6722846-U7L4-L2d.gif",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:39.620+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L2d_2022\\\"\"],\"cloned_from\":\"CSA U7L4-L2d_2022\"}]"

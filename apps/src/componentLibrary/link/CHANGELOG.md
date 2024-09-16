@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.3]()
+
+* minor types updates
+
 ## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/59819)
 * added support of `role` prop
 

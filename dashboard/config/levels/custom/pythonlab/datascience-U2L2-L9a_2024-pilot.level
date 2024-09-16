@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-09-14T16:24:50.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Follower Count\r\n\r\n::: details [**✅ Step 1**]\r\nCreate a list named `social_networks` that contains the names of the top three social platforms, and a list named `follower_counts` that contains the associated followers on those platforms. \r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nCreate an expression that calculates `total_followers` which sums all of the elements within the `follower_counts` list.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nCreate and print a message variable that will concatenate the names of the three social platforms and the `total_followers`. For example: *“The total number of followers across Facebook, Instagram, and Twitter is 800.”*\r\n:::\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Step 1\n\n\n# Step 2\ntotal_followers = 0\n\n# Step 3\nmessage = \"\"\nprint(message)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "Social Media Counts",
+    "bubble_choice_description": "Practice python by calculating the total number of followers across different social media platforms. ",
+    "thumbnail_url": "https://images.code.org/965a6112d897553ea4b54c94411ce715-social-media.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-14T16:24:50.198+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L8a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L8a_2024-pilot\"},{\"changed_at\":\"2024-09-14 16:27:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 16:28:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 16:38:17 +0000\",\"changed\":[\"predict_settings\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

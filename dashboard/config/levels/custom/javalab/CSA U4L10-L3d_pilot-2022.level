@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:32:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Create a scene that visualizes the number of cat breeds that originated in each country. Use multi-selection statements to count the number of cat breeds for each country, and use the counts for each country to decide the size of the flag images to draw.\r\n\r\n##In CatScene.java:\r\n\r\n1. Write the `analyzeCountries()`(#e7e8ea) method to count the number of cat breeds that originated in each country by traversing the `countries`(#e7e8ea) array.\r\n\r\n   * Create an `int`(#e7e8ea) array to store the counts for each country.\r\n\r\n   * Use multi-selection statements and the `equals()`(#e7e8ea) method to check if the current country equals `\"Egypt\"`(#e7e8ea), `\"Russia\"`(#e7e8ea), `\"Thailand\"`(#e7e8ea), `\"United Kingdom\"`(#e7e8ea), or `\"United States\"`(#e7e8ea). Increase the corresponding value in the `int`(#e7e8ea) array by `1`(#e7e8ea) if the condition is `true`(#e7e8ea).\r\n   \r\n   * Return the `int`(#e7e8ea) array.\r\n\r\n2. Write the `createScene()`(#e7e8ea) method to draw each country flag at a random location in the scene. Use the corresponding value in the `counts`(#e7e8ea) array to determine the size to draw the image.\r\n\r\n##In MyTheater.java:\r\n\r\n3. Declare and initialize an array to store the array returned from calling the `analyzeCountries()`(#e7e8ea) method, then call the `createScene()`(#e7e8ea) method with the array.\r\n\r\n4. Use `Theater.playScenes()`(#e7e8ea) to play the scene.\r\n\r\n::: details [**Show Me How**]\r\nA multi-selection statement uses the following syntax:\r\n  \r\n  ```\r\n  if (condition) {\r\n    // code to execute\r\n  }\r\n  else if (condition) {\r\n    // code to execute\r\n  }\r\n  else {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nYou can have more than one `else if`(#e7e8ea) if you have additional conditions you need to check.\r\n:::",
@@ -41,12 +45,9 @@
         "text": "Egypt\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited Kingdom\nUnited Kingdom\nUnited Kingdom\nUnited States\nUnited States\nEgypt\nUnited States\nUnited States\nUnited Kingdom\nUnited Kingdom\nRussia\nEgypt\nUnited States\nUnited Kingdom\nUnited States\nUnited States\nThailand\nThailand\nRussia\nThailand\nUnited States\nUnited Kingdom\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nRussia\nUnited States\nUnited Kingdom\nUnited States\nThailand\nRussia\nUnited States\nUnited States\nUnited States",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:32:19.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:32:19.482+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L3d_2022\\\"\"],\"cloned_from\":\"CSA U4L10-L3d_2022\"},{\"changed_at\":\"2022-09-22 20:26:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 20:27:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 20:28:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-22 20:28:24 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

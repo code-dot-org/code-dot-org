@@ -26,7 +26,8 @@
     "name_suffix": "_pilot-2022",
     "display_name": "Recursion and 1D Arrays",
     "bubble_choice_description": "Trace a code segment using recursion with a 1D array to determine its output.",
-    "thumbnail_url": "https://images.code.org/029e45816bf30e010427f61c7712e6a9-steps.png"
+    "thumbnail_url": "https://images.code.org/029e45816bf30e010427f61c7712e6a9-steps.png",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:52.918+00:00\",\"changed\":[\"cloned from \\\"CSA U7L9-L2b_2022\\\"\"],\"cloned_from\":\"CSA U7L9-L2b_2022\"}]"

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The `Employee`(#e7e8ea) class represents an employee at a business and has instance variables for the employee's name and base salary. The `Manager`(#e7e8ea) class represents a manager at the business and has an additional instance variable for their bonus.\r\n\r\nThe `Manager`(#e7e8ea) class overrides the `getName()`(#e7e8ea) method to add a `\"*\"`(#e7e8ea) before the manager's name. It also overrides the `getSalary()`(#e7e8ea) method to add the manager's bonus to their base salary.\r\n\r\n##In Business.java:\r\n\r\n1. Write the `getEmployeeInfo()`(#e7e8ea) method to traverse the `Employee`(#e7e8ea) array and return a `String`(#e7e8ea) containing each employee's name and salary.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Create an `Employee`(#e7e8ea) array containing the `Employee`(#e7e8ea) objects.\r\n\r\n3. Instantiate a `Business`(#e7e8ea) object with the `Employee`(#e7e8ea) array then call the `getEmployeeInfo()`(#e7e8ea) method and print the result.",
@@ -30,12 +34,9 @@
         "text": "/*\n * Represents a business\n */\npublic class Business {\n\n  private Employee[] employees;\n\n  /*\n   * Creates a Business object with an array of employees\n   */\n  public Business(Employee[] employees) {\n    this.employees = employees;\n  }\n\n  /*\n   * Returns the array of employees\n   */\n  public Employee[] getEmployees() {\n    return employees;\n  }\n\n  /*\n   * Returns a String containing the information about each employee\n   */\n  public String getEmployeeInfo() {\n    String result = \"\";\n    \n    // TO DO #1: Traverse the Employee array to concatenate each employee's name and salary to the result.\n\n\n    return result;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:29.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:29.381+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L4a_2022\\\"\"],\"cloned_from\":\"CSA U3L7-L4a_2022\"},{\"changed_at\":\"2022-09-08 19:26:19 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 19:28:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 19:28:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 19:29:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 19:29:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 19:32:09 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 19:39:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 19:39:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-08 20:04:42 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
