@@ -45,22 +45,28 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     ao.update(authentication_id: auth_id)
     partial_lti_teacher.authentication_options = [ao]
     PartialRegistration.persist_attributes @session, partial_lti_teacher
-    Services::Lti::AccountLinker.call(user: partial_lti_teacher, session: @session)
+    Services::Lti::AccountLinker.call(user: @user, session: @session)
 
-    assert_equal true, partial_lti_teacher.reload.verified_teacher?
+    assert_equal true, @user.reload.verified_teacher?
   end
 
   test 'do not verify the user if they are a student' do
-    partial_lti_student = create :student
+    new_student = create :student
+    existing_student = create :student
+    lti_course = create :lti_course, lti_integration: @lti_integration
+    lti_section = create :lti_section, lti_course: lti_course
+    lti_section.section.students << new_student
+
     ao = create :lti_authentication_option
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
-    partial_lti_student.authentication_options = [ao]
-    PartialRegistration.persist_attributes @session, partial_lti_student
-    Services::Lti::AccountLinker.call(user: partial_lti_student, session: @session)
+    new_student.authentication_options = [ao]
+    PartialRegistration.persist_attributes @session, new_student
 
-    assert_equal false, partial_lti_student.reload.verified_teacher?
+    new_student.expects(:verify_teacher!).never
+    Services::Lti::AccountLinker.call(user: existing_student, session: @session)
+    assert_equal false, @user.reload.verified_teacher?
   end
 
   test 'Swaps the existing user into the defunct user\'s sections' do
