@@ -19,6 +19,8 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     DCDO.stubs(:get).with("aichat_toxicity_threshold_user_input", anything).returns(AichatRequestChatCompletionJob::DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
     DCDO.stubs(:get).with("aichat_toxicity_threshold_model_output", anything).returns(AichatRequestChatCompletionJob::DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
     DCDO.stubs(:get).with("aichat_safety_profane_word_blocklist", anything).returns([@blocklist_blocked_word])
+    ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'webpurify-profanity'))
+    AichatComprehendHelper.stubs(:get_toxicity).returns(@comprehend_response)
 
     stub_safety_services(nil, 'user')
   end
@@ -101,18 +103,11 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert exception.message.include?(request.to_json)
   end
 
-  def stub_safety_services(enabled_service, role)
-    DCDO.stubs(:get).with("aichat_safety_blocklist_enabled", anything).returns(enabled_service == 'blocklist')
-    DCDO.stubs(:get).with("aichat_safety_webpurify_enabled", anything).returns(enabled_service == 'webpurify')
-    DCDO.stubs(:get).with("aichat_safety_comprehend_enabled", anything).returns(enabled_service == 'comprehend')
-
-    if role == 'user'
-      ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'webpurify-profanity'))
-      AichatComprehendHelper.stubs(:get_toxicity).returns(@comprehend_response)
-    else
-      # If assistant (not user), only return profanity response on the second call
-      ShareFiltering.stubs(:find_profanity_failure).returns(nil, ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'webpurify-profanity'))
-      AichatComprehendHelper.stubs(:get_toxicity).returns(nil, @comprehend_response)
+  def stub_safety_services(enabled_service, enabled_role)
+    %w[user assistant].each do |role|
+      DCDO.stubs(:get).with("aichat_safety_blocklist_enabled_#{role}", anything).returns(enabled_service == 'blocklist' && role == enabled_role)
+      DCDO.stubs(:get).with("aichat_safety_webpurify_enabled_#{role}", anything).returns(enabled_service == 'webpurify' && role == enabled_role)
+      DCDO.stubs(:get).with("aichat_safety_comprehend_enabled_#{role}", anything).returns(enabled_service == 'comprehend' && role == enabled_role)
     end
   end
 

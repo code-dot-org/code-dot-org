@@ -59,7 +59,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     # Moderate user input for toxicity.
     # get_toxicity returns an object with the following fields:
     # text: string, toxicity: number, and max_category {name: string, score: number}
-    user_toxicity = find_toxicity(new_message[:chatMessageText], get_toxicity_threshold_user_input, locale)
+    user_toxicity = find_toxicity('user', new_message[:chatMessageText], get_toxicity_threshold_user_input, locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
     user_pii = find_pii(new_message[:chatMessageText], locale)
@@ -69,7 +69,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
     # Moderate model output for toxicity. Report to HoneyBadger if the model returns toxicity.
-    model_toxicity = find_toxicity(response, get_toxicity_threshold_model_output, locale)
+    model_toxicity = find_toxicity('assistant', response, get_toxicity_threshold_model_output, locale)
     if model_toxicity
       Honeybadger.notify(
         'Toxicity returned from aichat model (blocked before reaching student)',
@@ -89,19 +89,19 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   # Checks for toxicity in the given text using various services, determined by DCDO settings.
   # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}
-  private def find_toxicity(text, threshold, locale)
-    if blocklist_enabled?
+  private def find_toxicity(role, text, threshold, locale)
+    if blocklist_enabled?(role)
       text.split.each do |word|
         return {text: text, blocked_by: 'blocklist', details: {blocked_word: word}} if profane_word_blocklist.include? word
       end
     end
 
-    if webpurify_enabled?
+    if webpurify_enabled?(role)
       profanity = ShareFiltering.find_profanity_failure(text, locale)
       return {text: text, blocked_by: 'webpurify', details: profanity.to_h} if profanity
     end
 
-    if comprehend_enabled?
+    if comprehend_enabled?(role)
       comprehend_response = AichatComprehendHelper.get_toxicity(text, locale)
       return {text: text, blocked_by: 'comprehend', details: comprehend_response} if comprehend_response && comprehend_response[:toxicity] > threshold
     end
@@ -112,16 +112,16 @@ class AichatRequestChatCompletionJob < ApplicationJob
     # TODO: Check for PII. Currently we don't check for PII but we plan to add post-launch.
   end
 
-  private def comprehend_enabled?
-    DCDO.get("aichat_safety_comprehend_enabled", true)
+  private def comprehend_enabled?(role)
+    DCDO.get("aichat_safety_comprehend_enabled_#{role}", true)
   end
 
-  private def webpurify_enabled?
-    DCDO.get("aichat_safety_webpurify_enabled", false)
+  private def webpurify_enabled?(role)
+    DCDO.get("aichat_safety_webpurify_enabled_#{role}", false)
   end
 
-  private def blocklist_enabled?
-    DCDO.get("aichat_safety_blocklist_enabled", false)
+  private def blocklist_enabled?(role)
+    DCDO.get("aichat_safety_blocklist_enabled_#{role}", false)
   end
 
   private def profane_word_blocklist
