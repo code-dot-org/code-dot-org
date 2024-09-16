@@ -91,3 +91,12 @@ section.hero-banner-basic {
       }
     }
 }
+
+.solid-bg {
+  background: $brand_primary_light !important;
+  padding: 0.5rem 1rem !important;
+
+  img {
+    width: 100%;
+  }
+}

@@ -74,3 +74,50 @@ theme: responsive_full_width
     .cta-wrapper.col-30
       %a.link-button.has-external-link{href: "https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher"}
         =hoc_s("gen_ai_page.unlock_full_access_banner.button")
+
+%section
+  .wrapper.flex-container.justify-space-between.align-items-center
+    %figure.action-wrapper.solid-bg.col-45
+      %img{src: "/images/ai/model-card-genai-example.png", alt: ""}
+    .text-wrapper.col-50
+      %h2
+        =hoc_s("gen_ai_page.new_ai_chat_lab.title")
+      %p.body-two
+        =hoc_s("gen_ai_page.new_ai_chat_lab.desc")
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text.large
+        =hoc_s("gen_ai_page.cs_teacher_quote.quote")
+      %p.no-margin-bottom
+        =hoc_s("gen_ai_page.cs_teacher_quote.credit")
+
+%section.bg-neutral-light
+  .wrapper
+    %h2
+      =hoc_s("gen_ai_page.preparing_to_explore.title")
+    .action-block.action-block--two-col.content-block-margin.white
+      %img.col-50{src: "/images/ai/explore-gen-ai-bot-wizard.png", alt: ""}
+      .text-wrapper.col-50
+        %p.overline=hoc_s("gen_ai_page.preparing_to_explore.teaching_card.overline")
+        %h3=hoc_s("gen_ai_page.preparing_to_explore.teaching_card.title")
+        %p=hoc_s("gen_ai_page.preparing_to_explore.teaching_card.desc")
+        %a.link-button{href: CDO.studio_url("/s/self-paced-gen-ai-2024")}
+          =hoc_s("gen_ai_page.preparing_to_explore.teaching_card.button")
+
+%section
+  .wrapper
+    %h2
+      =hoc_s(:heading_faq)
+    = view "gen_ai_landing_page/faq_generative_ai"
+
+%section#csa-newsletter-signup{style: "padding-top: 2rem"}
+  .wrapper
+    = view :subscribe_form, subscribe_form_section_title: hoc_s("gen_ai_page.stay_informed.title"), subscribe_form_section_desc: hoc_s("gen_ai_page.stay_informed.desc"), form_height: "375px", form_src: "http://go.pardot.com/l/153401/2021-02-19/p291ns"
+
+
+-# # Make sure the form above is the right form?
+
+-# # Get the URL for Technical Support Article (used in 2 spots in the faq view)
+
