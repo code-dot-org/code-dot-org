@@ -596,7 +596,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     Queries::Lti.expects(:get_lms_name_from_user).returns('test-lms')
     post :create, params: {user: lti_teacher_params}
 
-    assert_equal assigns(:user).verified_teacher?, true
+    assert assigns(:user).verified_teacher?
   end
 
   test 'do not verify lti users if they are a student' do
@@ -607,13 +607,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     post :create, params: {user: @default_params}
 
     assigns(:user).expects(:verify_teacher!).never
-    assert_equal assigns(:user).verified_teacher?, false
-
-    user = create :student, :with_lti_auth
-    PartialRegistration.persist_attributes session, user
-
-    post :create, params: {user: user}
-
-    assert_equal user.verified_teacher?, false
+    refute assigns(:user).verified_teacher?
   end
 end

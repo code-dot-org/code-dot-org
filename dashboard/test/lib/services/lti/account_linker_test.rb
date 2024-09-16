@@ -47,7 +47,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     PartialRegistration.persist_attributes @session, partial_lti_teacher
     Services::Lti::AccountLinker.call(user: @user, session: @session)
 
-    assert_equal true, @user.reload.verified_teacher?
+    assert @user.reload.verified_teacher?
   end
 
   test 'do not verify the user if they are a student' do
@@ -66,7 +66,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
 
     new_student.expects(:verify_teacher!).never
     Services::Lti::AccountLinker.call(user: existing_student, session: @session)
-    assert_equal false, existing_student.reload.verified_teacher?
+    refute existing_student.reload.verified_teacher?
   end
 
   test 'Swaps the existing user into the defunct user\'s sections' do

@@ -101,7 +101,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
 
     lti_user.reload
 
-    assert_equal true, lti_user.verified_teacher?
+    assert lti_user.verified_teacher?
   end
 
   test 'do not verify roster-synced student' do
@@ -112,6 +112,6 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
 
     lti_user.reload
 
-    assert_equal false, lti_user.verified_teacher?
+    refute lti_user.verified_teacher?
   end
 end
