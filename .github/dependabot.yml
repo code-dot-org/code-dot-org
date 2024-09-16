@@ -42,6 +42,11 @@ updates:
     schedule:
       interval: "weekly"
       day: "sunday"
+    ignore:
+      # Exclude Blockly, for more info: https://github.com/code-dot-org/code-dot-org/pull/61094
+      - dependency-name: "@blockly/*"
+      - dependency-name: "blockly"
+      - dependency-name: "pepjs"
     groups:
       amplitude:
         patterns:
