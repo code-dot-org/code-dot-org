@@ -12,6 +12,8 @@ import {
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -40,6 +42,7 @@ const ControlButtons: React.FunctionComponent = () => {
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
+  const labType = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -54,15 +57,16 @@ const ControlButtons: React.FunctionComponent = () => {
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
 
-  const handleRun = (runTests: boolean) => {
+  const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      onRun(runTests, dispatch, source).finally(() =>
+      analyticsReporter.sendEvent(EVENTS.CODEBRIDGE_RUN_CLICK, {
+        labType: labType,
+      });
+      onRun(/*runTests*/ false, dispatch, source).finally(() =>
         dispatch(setIsRunning(false))
       );
-      if (!runTests) {
-        dispatch(setHasRun(true));
-      }
+      dispatch(setHasRun(true));
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
     }
@@ -125,7 +129,7 @@ const ControlButtons: React.FunctionComponent = () => {
         >
           <Button
             text={'Run'}
-            onClick={() => handleRun(false)}
+            onClick={handleRun}
             disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
             size={'s'}
