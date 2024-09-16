@@ -5,6 +5,7 @@ import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -17,6 +18,7 @@ import {
   previewStartSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
@@ -82,11 +84,20 @@ const VersionHistoryDropdown: React.FunctionComponent<
     });
   }, [locale]);
 
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
     if (selectedVersion === '' && versionList.length > 0) {
       setSelectedVersion(latestVersion);
     }
   }, [versionList, selectedVersion, latestVersion]);
+
+  const resetVersionState = useCallback(() => {
+    dispatch(setViewingOldVersion(false));
+    dispatch(setRestoredOldVersion(false));
+  }, [dispatch]);
+
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, resetVersionState);
 
   useEffect(() => {
     if (isOpen && !previousIsOpen.current && selectedVersion !== '') {
@@ -110,8 +121,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
     }
     previousIsOpen.current = isOpen;
   }, [isOpen, selectedVersion, latestVersion, viewingOldVersion]);
-
-  const dispatch = useAppDispatch();
 
   const successfulRestoreCleanUp = useCallback(
     (sources: ProjectSources) => {

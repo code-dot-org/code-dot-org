@@ -11,11 +11,15 @@ import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
+import {restartPyodideIfProgramIsRunning} from './pyodideWorkerManager';
 
 import moduleStyles from './pythonlab-view.module.scss';
 
@@ -111,6 +115,12 @@ const PythonlabView: React.FunctionComponent = () => {
       );
     }
   }, [progressManager, appName]);
+
+  // Ensure any in-progress program is stopped when the level is switched.
+  useLifecycleNotifier(
+    LifecycleEvent.LevelLoadStarted,
+    restartPyodideIfProgramIsRunning
+  );
 
   const onRun = async (
     runTests: boolean,
