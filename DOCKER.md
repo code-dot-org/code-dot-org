@@ -41,7 +41,7 @@ brew services start colima
 
 1. Verify that Docker works
 ```shell
-docker run hello-world
+docker run --rm hello-world
 ```
 
 ### Ubuntu
