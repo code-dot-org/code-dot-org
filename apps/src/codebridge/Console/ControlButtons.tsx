@@ -13,12 +13,12 @@ import {
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 import WithConditionalTooltip from '../components/WithConditionalTooltip';
 import {appendSystemMessage} from '../redux/consoleRedux';
+import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import moduleStyles from './console.module.scss';
 
@@ -60,9 +60,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      analyticsReporter.sendEvent(EVENTS.CODEBRIDGE_RUN_CLICK, {
-        labType: labType,
-      });
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, labType);
       onRun(/*runTests*/ false, dispatch, source).finally(() =>
         dispatch(setIsRunning(false))
       );

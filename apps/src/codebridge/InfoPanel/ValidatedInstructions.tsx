@@ -24,6 +24,7 @@ import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -31,6 +32,7 @@ import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 import {appendSystemMessage} from '../redux/consoleRedux';
+import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ValidationResults from './ValidationResults';
 
@@ -147,6 +149,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const handleValidate = () => {
     if (onRun) {
       dispatch(setIsValidating(true));
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK, appType);
       onRun(true, dispatch, source).finally(() =>
         dispatch(setIsValidating(false))
       );
