@@ -5,12 +5,8 @@ import ReactDOM from 'react-dom';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import {NON_SCHOOL_OPTIONS_ARRAY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {SchoolDataInputsContainer} from '@cdo/apps/templates/SchoolDataInputsContainer';
-import {
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
-  SELECT_A_SCHOOL,
-} from '@cdo/apps/templates/SchoolZipSearch';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
@@ -109,11 +105,7 @@ $(document).ready(() => {
     const newSchoolIdEl = $(
       'select[name="user[school_info_attributes][school_id]"]'
     );
-    if (
-      [NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
-        newSchoolIdEl.val()
-      )
-    ) {
+    if (NON_SCHOOL_OPTIONS_ARRAY.includes(newSchoolIdEl.val())) {
       newSchoolIdEl.val('');
       $('input[name="user[school_info_attributes][school_zip]"]').val('');
     }
