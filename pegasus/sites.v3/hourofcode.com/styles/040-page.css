@@ -549,6 +549,15 @@ button:hover {
   border-color: var(--brand_secondary_dark);
 }
 
+a.link-button:focus {
+  outline: var(--brand_primary_default) solid 2px;
+  outline-offset: 2px;
+
+  &:not(:focus-visible) {
+    outline: none;
+  }
+}
+
 a.link-button.secondary {
   background: none;
   border: 2px solid var(--brand_secondary_default);

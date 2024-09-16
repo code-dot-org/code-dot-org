@@ -25,7 +25,7 @@ nav.section-nav {
   flex-wrap: wrap;
   gap: 1rem;
 
-  a {
+  a.link-button {
     min-width: 132px;
     background: var(--neutral_white);
     border: 2px solid var(--neutral_dark10);
@@ -36,11 +36,16 @@ nav.section-nav {
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
 
     i {
       font-size: 1.5rem;
       color: var(--brand_primary_default);
+    }
+
+    &:is(:hover, :active) {
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
     }
   }
 }
