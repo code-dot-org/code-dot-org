@@ -3,13 +3,14 @@ import Workspace from '@codebridge/Workspace';
 import {debounce} from 'lodash';
 import React, {useEffect, useMemo} from 'react';
 
+import globalStyleConstants from '@cdo/apps/styleConstants';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
 import moduleStyles from './workspace.module.scss';
 
-// The top Y coordinate of the panel.  Above them is just the common site
-// header and then a bit of empty space.
-const PANEL_TOP_COORDINATE = 60;
+// The top Y coordinate of the panel. This includes the top header and the header
+// of the workspace, which is absolutely positioned.
+const PANEL_TOP_COORDINATE = 80;
 
 // A component that combines the Workspace and Console component into a single component,
 // with a horizontal resizer between them.
@@ -60,8 +61,12 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
     );
   };
 
+  // The editor height is computed based on the column height, console height,
+  // and the height of the resize bar. The resize bar gets positioned at the bottom
+  // of the editor, and seemingly expects to be included in the height of the editor.
   const editorHeight = useMemo(
-    () => columnHeight - consoleHeight,
+    () =>
+      columnHeight - consoleHeight + globalStyleConstants['resize-bar-width'],
     [columnHeight, consoleHeight]
   );
 
