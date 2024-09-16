@@ -8,6 +8,7 @@ import {
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
   SELECT_A_SCHOOL,
+  SELECT_COUNTRY,
   US_COUNTRY_CODE,
   ZIP_REGEX,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
@@ -50,7 +51,7 @@ export default function SchoolDataInputs({
   const countryIsUS = useMemo(() => country === US_COUNTRY_CODE, [country]);
 
   const countryIsSelectedOrUsIpFalse = useMemo(
-    () => country !== '' || usIp === false,
+    () => (country && country !== SELECT_COUNTRY) || usIp === false,
     [country, usIp]
   );
 
