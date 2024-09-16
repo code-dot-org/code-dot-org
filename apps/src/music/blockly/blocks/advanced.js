@@ -1,8 +1,11 @@
 import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
-import {isBlockInsideWhenRun} from '../blockUtils';
 import {
   FIELD_CHORD_NAME,
+  FIELD_EFFECT_NAME_OPTIONS,
+  FIELD_EFFECTS_EXTENSION,
+  FIELD_EFFECTS_NAME,
+  FIELD_EFFECTS_VALUE,
   FIELD_PATTERN_NAME,
   FIELD_SOUNDS_NAME,
 } from '../constants';
@@ -42,8 +45,6 @@ export const playSound = {
       'measure',
       Blockly.JavaScript.ORDER_ASSIGNMENT
     ) +
-    ', ' +
-    (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
     ', "' +
     ctx.id +
     '");\n',
@@ -109,4 +110,38 @@ export const playChordAtMeasure = {
       'measure',
       Blockly.JavaScript.ORDER_ASSIGNMENT
     )}, "${block.id}");`,
+};
+
+export const setEffect = {
+  definition: {
+    type: BlockTypes.SET_EFFECT,
+    message0: musicI18n.blockly_blockSetEffect({
+      effect: '%1',
+      value: '%2',
+    }),
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: FIELD_EFFECTS_NAME,
+        options: FIELD_EFFECT_NAME_OPTIONS,
+      },
+      {
+        // This input is replaced with a field_dropdown by the extension
+        type: 'input_dummy',
+        name: FIELD_EFFECTS_VALUE,
+      },
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: musicI18n.blockly_blockSetEffectTooltip(),
+    helpUrl: '',
+    extensions: [FIELD_EFFECTS_EXTENSION],
+  },
+  generator: block => {
+    const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
+    const effectValue = block.getFieldValue(FIELD_EFFECTS_VALUE);
+    return `Sequencer.setEffect('${effectName}', '${effectValue}');`;
+  },
 };

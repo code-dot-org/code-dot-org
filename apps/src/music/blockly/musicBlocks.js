@@ -2,6 +2,7 @@ import {
   playSound,
   playPatternAtMeasure,
   playChordAtMeasure,
+  setEffect,
 } from './blocks/advanced';
 import {forLoop} from './blocks/control';
 import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
@@ -44,6 +45,7 @@ const blockList = [
   playSoundAtCurrentLocation,
   playPatternAtMeasure,
   playChordAtMeasure,
+  setEffect,
   setCurrentLocationNextMeasure,
   playSoundAtCurrentLocationSimple2,
   playPatternAtCurrentLocationSimple2,
