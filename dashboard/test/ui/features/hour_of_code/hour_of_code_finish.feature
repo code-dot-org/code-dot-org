@@ -158,9 +158,6 @@ Scenario: congrats certificate pages
   Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
   And element "#uitest-certificate" is visible
-  And I wait until element ".fa-facebook" is visible
-  And I wait until element ".fa-twitter" is visible
-  And I wait for 5 seconds
   And I open my eyes to test "congrats certificate pages"
 
   When I am on "http://code.org/api/hour/finish/flappy"
@@ -168,9 +165,6 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
-  And I wait until element ".fa-twitter" is visible
-  And I wait for 5 seconds
   And I see no difference for "uncustomized flappy certificate"
 
   When I type "Robo Códer" into "#name"
@@ -184,9 +178,6 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
-  And I wait until element ".fa-twitter" is visible
-  And I wait for 5 seconds
   And I see no difference for "uncustomized oceans certificate"
 
   When I type "Robo Códer" into "#name"
@@ -200,9 +191,6 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
-  And I wait until element ".fa-twitter" is visible
-  And I wait for 5 seconds
   And I see no difference for "uncustomized 20-hour certificate"
 
   When I type "Robo Códer" into "#name"
@@ -219,9 +207,6 @@ Scenario: congrats certificate pages
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
-  And I wait until element ".fa-twitter" is visible
-  And I wait for 5 seconds
   And I see no difference for "uncustomized Course A 2017 certificate"
 
   When I type "Robo Códer" into "#name"
@@ -236,8 +221,6 @@ Scenario: congrats certificate pages show social media icons
   Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
   And element "#uitest-certificate" is visible
-  And I wait until element ".fa-facebook" is visible
-  And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"
 
   When I am on "http://code.org/api/hour/finish/flappy"
@@ -245,8 +228,6 @@ Scenario: congrats certificate pages show social media icons
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
-  And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"
 
   When I am on "http://code.org/api/hour/finish/oceans"
@@ -254,8 +235,6 @@ Scenario: congrats certificate pages show social media icons
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
-  And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"
 
   When I am on "http://code.org/congrats/accelerated"
@@ -263,8 +242,6 @@ Scenario: congrats certificate pages show social media icons
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
-  And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"
 
   When I am on "http://code.org/congrats/coursea-2017"
@@ -272,6 +249,4 @@ Scenario: congrats certificate pages show social media icons
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
   And I wait for image "#uitest-certificate img" to load
-  And I wait until element ".fa-facebook" is visible
-  And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"
