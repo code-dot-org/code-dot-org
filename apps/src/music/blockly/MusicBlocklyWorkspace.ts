@@ -9,7 +9,6 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ValueOf} from '@cdo/apps/types/utils';
 
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {getBlockMode} from '../appConfig';
 import {BlockMode, Triggers} from '../constants';
 
 import {GeneratorHelpersSimple2} from './blocks/simple2';
@@ -38,12 +37,12 @@ export default class MusicBlocklyWorkspace {
 
   // Setup the global Blockly environment for Music Lab.
   // This should only happen once per page load.
-  public static setupBlocklyEnvironment() {
+  public static setupBlocklyEnvironment(blockMode: ValueOf<typeof BlockMode>) {
     if (this.isBlocklyEnvironmentSetup) {
       return;
     }
 
-    setUpBlocklyForMusicLab();
+    setUpBlocklyForMusicLab(blockMode);
     this.isBlocklyEnvironmentSetup = true;
   }
 
@@ -81,7 +80,7 @@ export default class MusicBlocklyWorkspace {
     isReadOnlyWorkspace: boolean,
     toolbox: ToolboxData | undefined,
     isRtl: boolean,
-    blockMode: ValueOf<typeof BlockMode> = getBlockMode()
+    blockMode: ValueOf<typeof BlockMode>
   ) {
     if (this.workspace) {
       this.workspace.dispose();
@@ -167,8 +166,9 @@ export default class MusicBlocklyWorkspace {
    * Generates executable JavaScript code for all blocks in the workspace.
    *
    * @param scope Global scope to provide the execution runtime
+   * @param blockMode Current block mode, such as "simple2" or "advanced"
    */
-  compileSong(scope: object) {
+  compileSong(scope: object, blockMode: ValueOf<typeof BlockMode>) {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'compileSong called before workspace initialized.'
@@ -186,7 +186,7 @@ export default class MusicBlocklyWorkspace {
     let functionCallsCode = '';
     let functionImplementationsCode = '';
 
-    if (getBlockMode() === BlockMode.SIMPLE2) {
+    if (blockMode === BlockMode.SIMPLE2) {
       // Go through all blocks, specifically looking for functions.
       // As they are found, accumulate one set of code to call all of them,
       // and a second set of code that has their implementations.
@@ -232,7 +232,7 @@ export default class MusicBlocklyWorkspace {
     }
 
     topBlocks.forEach(block => {
-      if (getBlockMode() !== BlockMode.SIMPLE2) {
+      if (blockMode !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
           this.compiledEvents.whenRunButton = {
             code:
@@ -383,10 +383,14 @@ export default class MusicBlocklyWorkspace {
    * Given the exact current playback position, get the start position of the trigger,
    * adjusted based on when the trigger should play (immediately, next beat, or next measure).
    */
-  getTriggerStartPosition(id: string, currentPosition: number) {
+  getTriggerStartPosition(
+    id: string,
+    currentPosition: number,
+    blockMode: ValueOf<typeof BlockMode>
+  ) {
     const triggerStart = this.triggerIdToStartType[triggerIdToEvent(id)];
 
-    if (getBlockMode() === BlockMode.ADVANCED) {
+    if (blockMode === BlockMode.ADVANCED) {
       return currentPosition;
     }
 

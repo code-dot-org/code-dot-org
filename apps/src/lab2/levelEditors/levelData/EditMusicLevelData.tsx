@@ -11,6 +11,7 @@ import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
 import MusicPlayer from '@cdo/apps/music/player/MusicPlayer';
 import {MusicLevelData} from '@cdo/apps/music/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import EditLibrarySounds from './EditLibrarySounds';
 import EditMusicToolbox from './EditMusicToolbox';
@@ -32,10 +33,16 @@ interface EditMusicLevelDataProps {
 const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
   initialLevelData,
 }) => {
+  const blockMode =
+    (
+      useAppSelector(
+        state => state.lab.levelProperties?.levelData
+      ) as MusicLevelData
+    )?.blockMode || BlockMode.SIMPLE2;
   useEffect(() => {
-    setUpBlocklyForMusicLab();
+    setUpBlocklyForMusicLab(blockMode);
     globals.setPlayer(new MusicPlayer());
-  }, []);
+  }, [blockMode]);
 
   const [levelData, setLevelData] = useState(initialLevelData);
 
