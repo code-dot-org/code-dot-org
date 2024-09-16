@@ -66,7 +66,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
 
     new_student.expects(:verify_teacher!).never
     Services::Lti::AccountLinker.call(user: existing_student, session: @session)
-    assert_equal false, @user.reload.verified_teacher?
+    assert_equal false, existing_student.reload.verified_teacher?
   end
 
   test 'Swaps the existing user into the defunct user\'s sections' do
