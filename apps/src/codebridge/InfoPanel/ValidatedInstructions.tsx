@@ -98,6 +98,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const isLoadingEnvironment = useAppSelector(
     state => state.lab2System.loadingCodeEnvironment
   );
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+  const shouldValidateBeDisabled = isLoadingEnvironment || isRunning;
 
   const dispatch = useAppDispatch();
 
@@ -240,7 +242,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             text={codebridgeI18n.validate()}
             onClick={() => handleValidate()}
             type={'secondary'}
-            disabled={isLoadingEnvironment}
+            disabled={shouldValidateBeDisabled}
             iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
             className={moduleStyles.buttonInstruction}
             color={'white'}
