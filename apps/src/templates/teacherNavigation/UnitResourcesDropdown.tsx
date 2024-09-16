@@ -21,22 +21,20 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
   // might need to do some checking before rendering
   const dropdownOptions = [
     {
-      value: 'option-1',
+      value: 'download-lesson-plans',
       label: i18n.downloadUnitLessonPlans({unitNumber: unitNumber}),
       icon: {iconName: 'file-lines'},
-      onClick: () => console.log('clicked'),
+      onClick: () => {
+        window.location.href = scriptOverviewPdfUrl;
+      },
     },
     {
-      value: 'option-2',
-      label: i18n.downloadUnitSlides({unitNumber: unitNumber}),
-      icon: {iconName: 'presentation-screen'},
-      onClick: () => console.log('option 2'),
-    },
-    {
-      value: 'option-3',
+      value: 'download-resources',
       label: i18n.downloadUnitHandouts({unitNumber: unitNumber}),
       icon: {iconName: 'files'},
-      onClick: () => console.log('option 2'),
+      onClick: () => {
+        window.location.href = scriptResourcesPdfUrl;
+      },
     },
   ];
 
