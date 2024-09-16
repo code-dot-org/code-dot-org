@@ -37,8 +37,8 @@ describe('updateSchoolInfo', () => {
       },
     };
 
-    mockBuildSchoolData.mockReturnValue(mockSchoolData);
-    mockGetAuthenticityToken.mockResolvedValue('authenticity-token');
+    mockBuildSchoolData.mockReturnValueOnce(mockSchoolData);
+    mockGetAuthenticityToken.mockResolvedValueOnce('authenticity-token');
 
     fetch.mockResolvedValueOnce({
       ok: true,
@@ -77,8 +77,8 @@ describe('updateSchoolInfo', () => {
       },
     };
 
-    mockBuildSchoolData.mockReturnValue(mockSchoolData);
-    mockGetAuthenticityToken.mockResolvedValue('authenticity-token');
+    mockBuildSchoolData.mockReturnValueOnce(mockSchoolData);
+    mockGetAuthenticityToken.mockResolvedValueOnce('authenticity-token');
 
     fetch.mockResolvedValueOnce({
       ok: false,
@@ -98,7 +98,7 @@ describe('updateSchoolInfo', () => {
   });
 
   it('should handle cases where buildSchoolData returns undefined', async () => {
-    mockBuildSchoolData.mockReturnValue(undefined);
+    mockBuildSchoolData.mockReturnValueOnce(undefined);
 
     await updateSchoolInfo({
       formUrl,
