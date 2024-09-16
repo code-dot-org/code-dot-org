@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useCallback, useContext} from 'react';
+import React, {useCallback, useContext, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -74,7 +74,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     state => state.lab.levelProperties?.longInstructions
   );
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
-  const {hasConditions, satisfied} = useAppSelector(
+  const {hasConditions, validationResults, satisfied} = useAppSelector(
     state => state.lab.validationState
   );
   const predictSettings = useAppSelector(
@@ -256,6 +256,30 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const {showNavigation, navigationText, navigationIcon, handleNavigation} =
     getNavigationButtonProps();
 
+  const navigationScrollRef = useRef<HTMLDivElement>(null);
+  const validationScrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let refToScrollTo;
+    if (showNavigation) {
+      refToScrollTo = navigationScrollRef;
+    } else if (validationResults) {
+      refToScrollTo = validationScrollRef;
+    }
+    if (refToScrollTo) {
+      // We do a 30 ms timeout before scrolling to avoid a flicker. When a new
+      // "bubble" (validation results or continue button) appears, we do an animation
+      // for it to appear. If we scroll immediately, it looks like the instructions are
+      // jumping.
+      // We must at least set a timeout with a wait of 0 to ensure the scroll happens at all,
+      // because the DOM needs to update before we can scroll to the new element.
+      setTimeout(
+        () => refToScrollTo.current?.scrollIntoView({behavior: 'smooth'}),
+        30
+      );
+    }
+  }, [showNavigation, validationResults]);
+
   const validationIcon =
     hasMetValidation || hasSubmitted
       ? 'fa-solid fa-circle-check'
@@ -322,11 +346,13 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           </InstructorsOnly>
         )}
         {renderValidationButton()}
+        {validationResults && <div ref={validationScrollRef} />}
         <ValidationResults className={moduleStyles['bubble-' + theme]} />
         {showNavigation && (
           <div
             id="instructions-navigation"
             className={moduleStyles['bubble-' + theme]}
+            ref={navigationScrollRef}
           >
             <Button
               text={navigationText}
