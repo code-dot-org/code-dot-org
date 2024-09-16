@@ -41,14 +41,6 @@ function getPRTitle() {
  * @param teamReviewers The teams to assign to
  */
 async function assignReviewers(dependencyName, teamReviewers) {
-
-    console.log(`request`,
-        {owner: REPO_OWNER,
-        repo: REPO,
-        pull_number: getPRNumber(),
-        team_reviewers: teamReviewers
-})
-
     // Assign reviewer to PR
     await octokit.rest.pulls.requestReviewers({
         owner: REPO_OWNER,
@@ -67,6 +59,21 @@ async function assignReviewers(dependencyName, teamReviewers) {
         
         This pull request is open to anyone (including the public) to work on. If you have any questions, please feel free to contact **${teamReviewers.join(',')}**`
     });
+}
+
+/**
+ * Gets the current team reviewers for a given PR
+ */
+async function getCurrentTeamReviewers() {
+    const response = await octokit.rest.pulls.listRequestedReviewers(
+        {
+            owner: REPO_OWNER,
+            repo: REPO,
+            pull_number: getPRNumber()
+        }
+    );
+
+    return response.data.teams;
 }
 
 /**
@@ -97,6 +104,13 @@ function extractDependencyName(str) {
 async function main() {
     try {
         const prTitle = getPRTitle();
+        const currentReviewers = await getCurrentTeamReviewers();
+
+        if (currentReviewers.length > 0) {
+            console.log(`Team reviewers are already assigned to this PR, skipping...`)
+            return;
+        }
+
         // Determine the dependency using the title of the PR
 
         const reviewers = [];
