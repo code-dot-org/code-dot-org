@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-09-14T16:29:11.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Shopping Cart\r\n\r\n::: details [**✅ Step 1**]\r\nCreate a list named `item_costs` that contains the prices of the items that might be within an online shopping cart.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nCreate an expression that calculates `total_cost` which sums the elements within the `item_costs` list.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nCreate an expression that calculates `average_cost` which determines the average cost from the elements within the `item_costs` list.\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\nCreate and print a message variable that will concatenate both the `total_cost` and `average_cost` variables. For example: *“Total cost: $36.48 | Average cost: $12.16”*\r\n:::\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Step 1\n\n\n# Step 2 & 3\ntotal_cost = 0\naverage_cost = 0\n\n# Step 4\nmessage = \"\"\nprint(message)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "My Shopping Cart",
+    "bubble_choice_description": "Practice python by calculating the total cost and the average cost per item in an online shopping cart.",
+    "thumbnail_url": "https://images.code.org/835ed7005ae549f71651f6eb1bf18f6e-shopping-cart.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-14T16:29:11.496+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L9a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L9a_2024-pilot\"},{\"changed_at\":\"2024-09-14 16:30:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 16:31:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 16:32:52 +0000\",\"changed\":[\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

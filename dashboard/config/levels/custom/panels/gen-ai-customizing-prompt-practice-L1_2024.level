@@ -14,7 +14,7 @@
         "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
       },
       {
-        "text": "##**System Prompt:**\nWhen using a system prompt, it can be helpful to include:\n- a specific **goal** that the chatbot is designed to accomplish\n- any **constraints** on how the chatbot should respond",
+        "text": "##**System Prompt:**\n### When using a system prompt, it can be helpful to include:\n- a specific **goal** that the chatbot is designed to accomplish\n- any **constraints** on how the chatbot should respond",
         "imageUrl": "https://images.code.org/a5b01809ef1ed68bda6581164fba8da6-system-prompt-panel-2.png",
         "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
       },
@@ -33,6 +33,6 @@
     ],
     "name_suffix": "_2024"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:53:24.086+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L1\"},{\"changed_at\":\"2024-09-11 17:50:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:53:24.086+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L1\"},{\"changed_at\":\"2024-09-11 17:50:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-09-13 13:36:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-09-13 13:37:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>
