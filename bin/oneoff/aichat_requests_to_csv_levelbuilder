@@ -1,0 +1,121 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require_relative '../../dashboard/config/environment'
+
+def get_substring_in_between(text, begin_string, end_string)
+  text.split(begin_string).last.split(end_string).first
+end
+
+def main
+  options = {}
+  OptionParser.new do |opts|
+    opts.on('--section_id SECTION_ID') do |section_id|
+      options[:section_id] = Integer(section_id)
+    end
+  end.parse!
+
+  CSV.open("aichat_requests.csv", "w") do |csv|
+    headers = %w[
+      aichat_request_id user_id username name path created_at updated_at role chat_message status toxicity max_category score
+    ]
+    csv << headers
+
+    student_users_in_section = Section.find(options[:section_id]).followers.map(&:student_user)
+    teacher_users_in_section = Section.find(options[:section_id]).active_section_instructors.map(&:instructor)
+    all_users_in_section = student_users_in_section + teacher_users_in_section
+    rows = AichatRequest.where(
+      user: all_users_in_section,
+    )
+
+    rows.each do |row|
+      user = row.user
+      user_message = JSON.parse(row.new_message)
+      response = row.response
+      user_message_text = user_message["chatMessageText"]
+      execution_status = row.execution_status
+
+      level = Level.find(row.level_id)
+      path =  "sublevel - level_id: #{row.level_id}"
+
+      script_level = level.script_levels.find_by_script_id(row.script_id)
+      if script_level
+        # This handles chat requests that occurred on standard levels in a progression
+        path = script_level.path
+      end
+
+      if execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY]
+        ## Parse response for comprehend details for user response.
+        ## There is no model response recorded.
+        user_comprehend_response = response.delete_prefix("Profanity detected in user input: ")
+        user_toxicity = get_substring_in_between(user_comprehend_response, ":toxicity=>", ",").to_f
+        user_max_category = get_substring_in_between(user_comprehend_response, ":max_category=>#<struct Aws::Comprehend::Types::ToxicContent name=", ",").delete_prefix('"').delete_suffix('"')
+        user_score = get_substring_in_between(user_comprehend_response, "score=", ">").to_f
+      elsif execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
+        # Parse response for comprehend details for model response.
+        # Model response is recorded in addition to comprehend details.
+        model_comprehend_response = response.delete_prefix("Profanity detected in model output: ")
+        model_message_text = get_substring_in_between(model_comprehend_response, ":text=>", ", :toxicity").delete_prefix('"').delete_suffix('"')
+        model_toxicity = get_substring_in_between(model_comprehend_response, ":toxicity=>", ",").to_f
+        model_max_category = get_substring_in_between(model_comprehend_response, ":max_category=>#<struct Aws::Comprehend::Types::ToxicContent name=", ",").delete_prefix('"').delete_suffix('"')
+        model_score = get_substring_in_between(model_comprehend_response, "score=", ">").to_f
+      elsif execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS]
+        # Model response is recorded.
+        model_message_text = response
+      end
+      # No model response recorded when unexpected error or user input too large.
+
+      base_row = [
+        row.id,
+        row.user_id,
+        user.username,
+        user.name,
+        path,
+        row.created_at,
+        row.updated_at,
+      ]
+
+      status =
+        case execution_status
+        when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS] || SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
+          "okay"
+        when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE]
+          "unexpected error"
+        when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY]
+          "user profanity detected"
+        when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE]
+          "user input too large"
+        else
+          "unknown"
+        end
+
+      # Add user message to csv.
+      csv << [
+        *base_row,
+        'user',
+        user_message_text,
+        status,
+        user_toxicity,
+        user_max_category,
+        user_score
+      ]
+
+      next if execution_status != SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS] && execution_status != SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
+      if execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
+        status = "model profanity detected"
+      end
+      # Add assistant message to csv.
+      csv << [
+        *base_row,
+        'assistant',
+        model_message_text,
+        status,
+        model_toxicity,
+        model_max_category,
+        model_score
+      ]
+    end
+  end
+end
+
+main
