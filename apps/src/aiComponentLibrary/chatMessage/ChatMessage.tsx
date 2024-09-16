@@ -16,6 +16,7 @@ interface ChatMessageProps {
   role: Role;
   status: string;
   showProfaneUserMessageToggle?: boolean;
+  customStyles?: {[label: string]: string};
   children?: React.ReactNode;
 }
 
@@ -24,6 +25,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   role,
   status,
   showProfaneUserMessageToggle,
+  customStyles,
   children,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
@@ -97,6 +99,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
           <div
             className={classNames(
               moduleStyles[`message-${role}`],
+              customStyles && customStyles[`message-${role}`],
               hasDangerStyle && moduleStyles.danger,
               hasWarningStyle && moduleStyles.warning
             )}
@@ -108,7 +111,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             <SafeMarkdown markdown={getDisplayText} />
           </div>
         </div>
-        <div style={{width: chatMessageWidth + 'px', marginLeft: '48px'}}>
+        <div style={{width: `${chatMessageWidth}px`, marginLeft: '48px'}}>
           {children}
         </div>
       </div>

@@ -163,7 +163,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                   key={id}
                 />
               ) : (
-                <ChatMessage {...item} key={id}>
+                <ChatMessage {...item} customStyles={style} key={id}>
                   {item.role === Role.ASSISTANT && (
                     <AiDiffBotMessageFooter message={item} />
                   )}

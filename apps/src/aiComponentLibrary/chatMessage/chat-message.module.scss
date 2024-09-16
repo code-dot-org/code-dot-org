@@ -9,7 +9,7 @@ $assistant-color: $brand_primary_light;
   @extend %markdown-styles;
   display: flex;
   padding: 12px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 8px;
   border-start-start-radius: $message-border-radius;
@@ -51,7 +51,6 @@ $assistant-color: $brand_primary_light;
 .messageWithChildren {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 4px;
 }
 

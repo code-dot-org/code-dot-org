@@ -111,6 +111,16 @@
   }
 }
 
+// Necessary to prevent "Was this helpful?..." message footer from being wider
+// than the message box for short messages.
+.message-assistant {
+  min-width: 270px;
+}
+
+.message-user {
+  margin-left: 48px;
+}
+
 .messageFeedback {
   &Container {
     display: flex;
