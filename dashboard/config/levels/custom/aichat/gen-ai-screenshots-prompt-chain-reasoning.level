@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Use this level for updating screenshots to the panel level on the system prompt overview [link here](https://levelbuilder-studio.code.org/levels/61648)",
+    "long_instructions": "Use this level for updating screenshots to the panel level on [this panels level](https://levelbuilder-studio.code.org/levels/61648)",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -46,6 +46,6 @@
     },
     "name_suffix": "_2024"
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-12T17:59:18.812+00:00\",\"changed\":[\"cloned from \\\"gen-ai-screenshots-prompt-audience-delivery\\\"\"],\"cloned_from\":\"gen-ai-screenshots-prompt-audience-delivery\"},{\"changed_at\":\"2024-09-12 18:01:31 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-12T17:59:18.812+00:00\",\"changed\":[\"cloned from \\\"gen-ai-screenshots-prompt-audience-delivery\\\"\"],\"cloned_from\":\"gen-ai-screenshots-prompt-audience-delivery\"},{\"changed_at\":\"2024-09-12 18:01:31 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-09-13 16:39:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>
