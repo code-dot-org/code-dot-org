@@ -35,7 +35,7 @@ describe('SchoolInfoInterstitial', () => {
     scriptData: {
       existingSchoolInfo: {
         country: 'US',
-        school_id: '123',
+        school_id: '1',
         school_name: 'Test School',
         school_zip: '12345',
       },
@@ -68,8 +68,12 @@ describe('SchoolInfoInterstitial', () => {
   it('should render the component correctly', async () => {
     renderDefault();
     await waitFor(() => {
-      expect(screen.getByText('Save')).toBeInTheDocument();
-      expect(screen.getByText('Dismiss')).toBeInTheDocument();
+      expect(
+        screen.getByRole('button', {name: i18n.save()})
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('button', {name: i18n.dismiss()})
+      ).toBeInTheDocument();
     });
   });
 
@@ -87,14 +91,18 @@ describe('SchoolInfoInterstitial', () => {
   it('should call sendEvent and updateSchoolInfo on save button click', async () => {
     renderDefault();
 
-    fireEvent.click(screen.getByText('Save'));
+    await waitFor(() => {
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
 
     await waitFor(() => {
       expect(mockUpdateSchoolInfo).toHaveBeenCalledWith({
         formUrl: 'form/url',
         authTokenName: 'authTokenName',
         authTokenValue: 'authTokenValue',
-        schoolId: '123',
+        schoolId: '1',
         country: 'US',
         schoolName: 'Test School',
         schoolZip: '12345',
@@ -126,7 +134,11 @@ describe('SchoolInfoInterstitial', () => {
 
     renderDefault();
 
-    fireEvent.click(screen.getByText('Save'));
+    await waitFor(() => {
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
 
     await waitFor(() => {
       expect(mockSendEvent).toHaveBeenCalledWith(
@@ -154,7 +166,7 @@ describe('SchoolInfoInterstitial', () => {
     // second failure
     mockUpdateSchoolInfo.mockRejectedValueOnce(new Error('Update failed'));
 
-    fireEvent.click(screen.getByText('Save'));
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
 
     await waitFor(() => {
       expect(mockSendEvent).toHaveBeenCalledWith(
@@ -183,7 +195,7 @@ describe('SchoolInfoInterstitial', () => {
       renderDefault();
     });
 
-    fireEvent.click(screen.getByText('Dismiss'));
+    fireEvent.click(screen.getByRole('button', {name: i18n.dismiss()}));
 
     await waitFor(() => {
       expect(mockSendEvent).toHaveBeenCalledWith(
@@ -285,7 +297,7 @@ describe('SchoolInfoInterstitial', () => {
             ...defaultProps.scriptData,
             existingSchoolInfo: {
               country: US_COUNTRY_CODE,
-              school_id: 'abc',
+              school_id: '1',
               school_name: '',
               school_zip: '12345',
             },
