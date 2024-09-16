@@ -5,11 +5,10 @@ class Services::Lti::AccountUnlinkerTest < ActiveSupport::TestCase
     let(:student_user) {create :student}
     let(:teacher_user) {create :teacher}
     let(:lti_integration) {create :lti_integration}
+    let(:auth_option) {create :lti_authentication_option, authentication_id: "#{lti_integration.issuer}|#{lti_integration.client_id}|#{student_user.id}"}
+    let(:lti_identity) {create :lti_user_identity, user: student_user, lti_integration: lti_integration, subject: student_user.id}
 
     context 'with one auth option' do
-      let(:auth_option) {create :lti_authentication_option, authentication_id: "#{lti_integration.issuer}|#{lti_integration.client_id}|#{student_user.id}"}
-      let(:lti_identity) {create :lti_user_identity, user: student_user, lti_integration: lti_integration, subject: student_user.id}
-
       before(:context) do
         student_user.authentication_options.find_by(credential_type: 'email')&.destroy
         student_user.authentication_options << auth_option
@@ -31,14 +30,6 @@ class Services::Lti::AccountUnlinkerTest < ActiveSupport::TestCase
     end
 
     context 'with multiple auth options' do
-      let(:auth_option) {create :lti_authentication_option, authentication_id: "#{lti_integration.issuer}|#{lti_integration.client_id}|#{student_user.id}"}
-      let(:lti_identity) {create :lti_user_identity, user: student_user, lti_integration: lti_integration, subject: student_user.id}
-
-      before(:each) do
-        student_user.authentication_options << auth_option unless student_user.authentication_options.include?(auth_option)
-        student_user.lti_user_identities << lti_identity unless student_user.lti_user_identities.include?(lti_identity)
-      end
-
       it 'removes the auth option' do
         Services::Lti::AccountUnlinker.call(user: student_user, auth_option: auth_option)
         refute student_user.reload.authentication_options.any?(&:lti?)
@@ -51,14 +42,6 @@ class Services::Lti::AccountUnlinkerTest < ActiveSupport::TestCase
     end
 
     context 'when student' do
-      let(:auth_option) {create :lti_authentication_option, authentication_id: "#{lti_integration.issuer}|#{lti_integration.client_id}|#{student_user.id}"}
-      let(:lti_identity) {create :lti_user_identity, user: student_user, lti_integration: lti_integration, subject: student_user.id}
-
-      before(:each) do
-        student_user.authentication_options << auth_option unless student_user.authentication_options.include?(auth_option)
-        student_user.lti_user_identities << lti_identity unless student_user.lti_user_identities.include?(lti_identity)
-      end
-
       it 'does not remove the user from sections' do
         section = create :section
         section.students << student_user
