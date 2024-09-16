@@ -131,6 +131,7 @@ const FinishStudentAccount: React.FunctionComponent<{
       {
         'user type': 'student',
         'has school': false,
+        'has marketing value selected': true,
         'has display name': !showNameError,
       },
       PLATFORMS.BOTH

@@ -57,6 +57,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       {
         'user type': 'teacher',
         'has school': hasSchool,
+        'has marketing value selected': true,
         'has display name': !showNameError,
       },
       PLATFORMS.BOTH
