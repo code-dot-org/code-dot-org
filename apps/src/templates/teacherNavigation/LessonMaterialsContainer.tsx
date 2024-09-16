@@ -51,6 +51,9 @@ export const lessonMaterialsLoader =
     const selectedSectionId = state.selectedSectionId;
     const sectionData = state.sections[selectedSectionId];
 
+    // NOTE: this page is not working for stand alone courses.
+    // this is because there is no "unitId" in the sectionData for stand alone courses.
+
     if (!selectedSectionId || !sectionData.unitId) {
       return null;
     }
@@ -68,6 +71,7 @@ const createDisplayName = (lessonName: string, lessonPosition: number) => {
 const LessonMaterialsContainer: React.FC = () => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
   const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
+  const unitNumber = useMemo(() => loadedData?.unitNumber || 0, [loadedData]);
 
   const getLessonFromId = (lessonId: number): Lesson | null => {
     return lessons.find(lesson => lesson.id === lessonId) || null;
@@ -110,13 +114,18 @@ const LessonMaterialsContainer: React.FC = () => {
         name={'lessons-in-assigned-unit-dropdown'}
         size="s"
       />
-      {/* Note that this is just a "proof of concept row" - the actual implementation would be more complex */}
+      {/*  Note that this only goes through Teacher resources - we have separate tickets to make sure that this is presented for all resources */}
       {selectedLesson && (
-        <ResourceRow
-          unitNumber={5} // note that this is a placeholder value
-          lessonNumber={selectedLesson.position}
-          resource={selectedLesson.resources.Teacher[0] || null} // note that this is a placeholder value
-        />
+        <div>
+          {selectedLesson.resources.Teacher.map(resource => (
+            <ResourceRow
+              key={resource.key}
+              unitNumber={unitNumber}
+              lessonNumber={selectedLesson.position}
+              resource={resource}
+            />
+          ))}
+        </div>
       )}
     </div>
   );
