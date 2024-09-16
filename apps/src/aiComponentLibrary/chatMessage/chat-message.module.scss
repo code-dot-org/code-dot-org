@@ -94,7 +94,6 @@ $assistant-color: $brand_primary_light;
   flex: 0 0 32px;
   height: 32px;
   width: 32px;
-  padding: 4px;
   background: $light-black;
   border-radius: 20px;
   display: flex;
@@ -103,8 +102,8 @@ $assistant-color: $brand_primary_light;
 }
 
 .botIcon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
 }
 
