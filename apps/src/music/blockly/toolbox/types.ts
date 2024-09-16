@@ -24,14 +24,6 @@ export type CategoryBlocksMap = {
 };
 
 /**
- * Additional options for configuring the toolbox.
- */
-export interface ToolboxOptions {
-  includeFunctions?: boolean;
-  includeVariables?: boolean;
-}
-
-/**
  * Toolbox type.
  * Category displays blocks in categories, flyout displays all blocks in a single list.
  */
@@ -41,6 +33,7 @@ export type ToolboxType = 'category' | 'flyout';
  * Level-defined data for configuring the toolbox.
  */
 export interface ToolboxData {
-  blocks: CategoryBlocksMap;
+  blocks?: CategoryBlocksMap;
   type?: ToolboxType;
+  includeAi?: boolean;
 }

@@ -1,3 +1,7 @@
+@import 'color.scss';
+@import 'style-constants';
+@import '@cdo/apps/componentLibrary/common/styles/colors.css';
+
 .rowContainer {
   display: flex;
   height: 48px;
@@ -5,5 +9,54 @@
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  border: 1px solid #f92828; // to be changed
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+.resourceIconContainer {
+  height: 32px;
+  width: 32px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+}
+
+.iconAndName {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.resourceLabel {
+  margin-bottom: 0 !important;
+}
+
+.icon {
+  text-align: center;
+  font-size: 16px;
+}
+
+.slides {
+  background-color: var(--sentiment-warning-20);
+  color: var(--sentiment-warning-60);
+}
+
+.video {
+  background-color: var(--sentiment-success-10);
+  color: var(--sentiment-success-50);
+}
+
+.lessonPlan {
+  background-color: var(--background-brand-purple-extra-light);
+  color: var(--text-brand-purple-primary);
+}
+
+.link {
+  background-color: var(--accent-strawberry-10, #ffe3e3);
+  color: var(--accent-strawberry-50, #ed6060);
+}
+
+.files {
+  background-color: var(--sentiment-information-10);
+  color: var(--sentiment-information-50);
 }
