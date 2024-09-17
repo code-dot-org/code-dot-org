@@ -1760,10 +1760,6 @@ class Unit < ApplicationRecord
   end
 
   def unit_number
-    has_prefix = unit_group&.has_numbered_units
-
-    return nil unless has_prefix
-
     unit_group_units&.first&.position
   end
 
