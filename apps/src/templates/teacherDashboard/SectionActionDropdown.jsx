@@ -26,10 +26,7 @@ import {
   toggleSectionHidden,
   importOrUpdateRoster,
 } from './teacherSectionsRedux';
-import {
-  sectionCode,
-  sectionName,
-} from './teacherSectionsReduxSelectors';
+import {sectionCode, sectionName} from './teacherSectionsReduxSelectors';
 
 class SectionActionDropdown extends Component {
   static propTypes = {
