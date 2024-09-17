@@ -491,8 +491,7 @@ class UnconnectedMusicView extends React.Component {
     const triggerStartPosition =
       this.musicBlocklyWorkspace.getTriggerStartPosition(
         id,
-        this.player.getCurrentPlayheadPosition(),
-        this.getBlockMode()
+        this.player.getCurrentPlayheadPosition()
       );
     if (!triggerStartPosition) {
       return;

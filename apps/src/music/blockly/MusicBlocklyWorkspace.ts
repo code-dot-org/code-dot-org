@@ -284,10 +284,11 @@ export default class MusicBlocklyWorkspace {
           args: ['startPosition'],
         };
         // Also save the value of the trigger start field at compile time so we can
-        // compute the correct start time at each invocation.
-        this.triggerIdToStartType[triggerIdToEvent(id)] = block.getFieldValue(
-          FIELD_TRIGGER_START_NAME
-        );
+        // compute the correct start time at each invocation. For blocks without this
+        // field, such as in advanced mode, the start time is immediately.
+        this.triggerIdToStartType[triggerIdToEvent(id)] =
+          block.getFieldValue(FIELD_TRIGGER_START_NAME) ||
+          TriggerStart.IMMEDIATELY;
       }
     });
 
@@ -383,16 +384,8 @@ export default class MusicBlocklyWorkspace {
    * Given the exact current playback position, get the start position of the trigger,
    * adjusted based on when the trigger should play (immediately, next beat, or next measure).
    */
-  getTriggerStartPosition(
-    id: string,
-    currentPosition: number,
-    blockMode: ValueOf<typeof BlockMode>
-  ) {
+  getTriggerStartPosition(id: string, currentPosition: number) {
     const triggerStart = this.triggerIdToStartType[triggerIdToEvent(id)];
-
-    if (blockMode === BlockMode.ADVANCED) {
-      return currentPosition;
-    }
 
     if (!triggerStart) {
       console.warn('No compiled trigger with ID: ' + id);
