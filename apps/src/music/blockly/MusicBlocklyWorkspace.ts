@@ -12,7 +12,6 @@ import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMar
 import {getBlockMode} from '../appConfig';
 import {BlockMode, Triggers} from '../constants';
 
-import {GeneratorHelpersSimple2} from './blocks/simple2';
 import {BlockTypes} from './blockTypes';
 import {
   FIELD_TRIGGER_START_NAME,
@@ -182,55 +181,6 @@ export default class MusicBlocklyWorkspace {
 
     const topBlocks = this.workspace.getTopBlocks();
 
-    // These are both used for BlockMode.SIMPLE2.
-    let functionCallsCode = '';
-    let functionImplementationsCode = '';
-
-    if (getBlockMode() === BlockMode.SIMPLE2) {
-      // Go through all blocks, specifically looking for functions.
-      // As they are found, accumulate one set of code to call all of them,
-      // and a second set of code that has their implementations.
-      // We'll use the calls only when simulating tracks mode, and the
-      // implementations will become part of the runtime code for both when_run,
-      // as well as for each new trigger handler.
-      topBlocks.forEach(functionBlock => {
-        if (functionBlock.type === 'procedures_defnoreturn') {
-          // Accumulate some custom code that calls all the functions
-          // together, simulating tracks mode.
-          const actualFunctionName =
-            GeneratorHelpersSimple2.getSafeFunctionName(
-              functionBlock.getFieldValue('NAME')
-            );
-          functionCallsCode += `${actualFunctionName}();
-          `;
-
-          // Accumulate some code that has all of the function implementations.
-          const functionCode = Blockly.JavaScript.blockToCode(
-            functionBlock.getChildren(false)[0]
-          );
-          functionImplementationsCode +=
-            GeneratorHelpersSimple2.getFunctionImplementation(
-              functionBlock.getFieldValue('NAME'),
-              functionCode
-            );
-        }
-      });
-
-      // If there's no when_run block, then we'll generate
-      // some custom code that first initializes things, and then calls all
-      // the functions together, simulating tracks mode.
-      if (
-        !topBlocks.some(block => block.type === BlockTypes.WHEN_RUN_SIMPLE2)
-      ) {
-        this.compiledEvents.whenRunButton = {
-          code: GeneratorHelpersSimple2.getDefaultWhenRunImplementation(
-            functionCallsCode,
-            functionImplementationsCode
-          ),
-        };
-      }
-    }
-
     topBlocks.forEach(block => {
       if (getBlockMode() !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
@@ -245,8 +195,8 @@ export default class MusicBlocklyWorkspace {
         if (block.type === BlockTypes.WHEN_RUN_SIMPLE2) {
           this.compiledEvents.whenRunButton = {
             code:
-              Blockly.JavaScript.blockToCode(block) +
-              functionImplementationsCode,
+              'var __context = "when_run";\n' +
+              Blockly.JavaScript.workspaceToCode(this.workspace),
           };
         }
       }
