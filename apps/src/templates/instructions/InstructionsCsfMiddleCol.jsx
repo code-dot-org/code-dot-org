@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
+import LegacyButton from '../../legacySharedComponents/LegacyButton';
 import color from '../../util/color';
-import LegacyButton from '../LegacyButton';
 import SafeMarkdown from '../SafeMarkdown';
 
 import ChatBubble from './ChatBubble';

@@ -11,7 +11,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "source": {
+    "start_sources": {
       "files": {
         "0": {
           "id": "0",

@@ -63,17 +63,7 @@ module Pd
       new_general_foorm(survey_names: PRE_SURVEY_CONFIG_PATHS, day: 0)
     end
 
-    # General post-workshop survey using foorm system.
-    # GET '/pd/workshop_post_survey?enrollmentCode=code'
-    # Enrollment code is an optional parameter, otherwise will show most recent workshop.
-    #
-    # If the post-survey has been already completed, will redirect to thanks page.
-    def new_post_foorm
-      new_general_foorm(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
-    end
-
-    def new_facilitator_post_foorm
-      workshop = Pd::Workshop.find(params[:workshop_id])
+    def new_facilitator_post_foorm(workshop)
       survey_name = FACILITATOR_POST_SURVEY_CONFIG_PATH
 
       agenda = params[:agenda] || nil
@@ -109,9 +99,24 @@ module Pd
     # Post workshop survey. This one will be emailed and displayed in the my PL page,
     # and can persist for more than a day, so it uses an enrollment code to be tied to a specific workshop.
     # GET /pd/workshop_survey/post/:enrollment_code
-    # This will direct to new_post_foorm
+    # If Build Your Own, redirect to its specific survey link. Otherwise, use Foorm.
     def new_post
-      return new_post_foorm
+      course = Pd::Enrollment.find_by(code: params[:enrollment_code], user: current_user)&.workshop&.course
+      if course == COURSE_BUILD_YOUR_OWN
+        redirect_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_TEACHER], CDO.default_scheme
+      else
+        # If the post-survey has been already completed, will redirect to thanks page.
+        return new_general_foorm(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
+      end
+    end
+
+    def new_facilitator_post
+      workshop = Pd::Workshop.find(params[:workshop_id])
+      if workshop.course == COURSE_BUILD_YOUR_OWN
+        redirect_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_FACILITATOR], CDO.default_scheme
+      else
+        new_facilitator_post_foorm(workshop)
+      end
     end
 
     # Display CSF201 (Deep Dive) pre-workshop survey using Foorm.

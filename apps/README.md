@@ -82,7 +82,7 @@ Apps unit tests are run using [jest](https://jestjs.io/) and integration tests a
 | Integration tests for maze levels       | `yarn test:integration --levelType=maze`                  |
 | **Other useful flags:**                 | **Example Command**                                       |
 | Stream pass/fail to stdout/stderr       | `yarn test:unit --verbose`                                |
-| Rerun tests when files change           | `yarn test:unit --watchTests`                             |
+| Rerun tests when files change           | `yarn test:unit --watch`                                  |
 | Debug tests in Chrome                   | `yarn test:integration --browser=Chrome --watchTests`     |
 | Directly invoke Karma (same flags)      | `npx karma start --testType=integration --browser=Chrome` |
 | Directly invoke jest                    | `npx jest`                                                |

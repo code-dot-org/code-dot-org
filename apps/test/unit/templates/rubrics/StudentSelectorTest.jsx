@@ -1,14 +1,11 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {UnconnectedStudentSelector as StudentSelector} from '@cdo/apps/templates/rubrics/StudentSelector';
 import * as utils from '@cdo/apps/utils';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 function setup(jsx) {
   return {
@@ -38,16 +35,18 @@ describe('StudentSelector', () => {
     students: [STUDENT_1, STUDENT_2],
   };
 
-  beforeEach(() => sinon.stub(utils, 'reload'));
-  afterEach(() => utils.reload.restore());
+  beforeEach(() =>
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation()
+  );
+  afterEach(() => utils.reload.mockRestore());
 
   it('sends event on Student selection', async () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     const {user} = setup(<StudentSelector {...defaultProps} />);
     const dropdown = screen.getByLabelText('Select a student');
     await user.click(dropdown);
     await user.click(screen.getByText('Student 2 FamNameA'));
-    expect(sendEventSpy).to.have.been.calledWith(
+    expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.TA_RUBRIC_DROPDOWN_STUDENT_SELECTED,
       {
         unitName: 'test-2023',
@@ -57,6 +56,6 @@ describe('StudentSelector', () => {
         studentId: STUDENT_2.id,
       }
     );
-    sendEventSpy.restore();
+    sendEventSpy.mockRestore();
   });
 });

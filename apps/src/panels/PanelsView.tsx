@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import FontAwesome from '../legacySharedComponents/FontAwesome';
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
-import FontAwesome from '../templates/FontAwesome';
 import {commonI18n} from '../types/locale';
 
 import {Panel} from './types';

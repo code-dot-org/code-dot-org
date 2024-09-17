@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-17 00:14:41 UTC",
+    "serialized_at": "2024-08-02 18:24:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4063,6 +4063,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L1_2025"
+        ],
         "progression": "Predict and Run: 2D Arrays"
       },
       "bonus": false,
@@ -4085,6 +4088,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L2_2025"
+        ],
         "progression": "Skill Building: Creating 2D Arrays"
       },
       "bonus": false,
@@ -4107,6 +4113,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L3_2025"
+        ],
         "progression": "Skill Building: Creating 2D Arrays"
       },
       "bonus": false,
@@ -4129,6 +4138,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L4_2025"
+        ],
         "progression": "Skill Building: Using Initializer Lists"
       },
       "bonus": false,
@@ -4151,6 +4163,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L5_2025"
+        ],
         "progression": "Skill Building: Using Initializer Lists"
       },
       "bonus": false,
@@ -4173,6 +4188,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L6_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4195,6 +4213,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L1_2025"
+        ],
         "progression": "Predict and Run: 2D Array Elements"
       },
       "bonus": false,
@@ -4217,6 +4238,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L2_2025"
+        ],
         "progression": "Investigate and Modify: 2D Array Elements"
       },
       "bonus": false,
@@ -4239,6 +4263,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L3_2025"
+        ],
         "progression": "Investigate and Modify: 2D Array Elements"
       },
       "bonus": false,
@@ -4261,6 +4288,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L4_2025"
+        ],
         "progression": "Investigate and Modify: 2D Array Elements"
       },
       "bonus": false,
@@ -4283,6 +4313,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L5_2025"
+        ],
         "progression": "Practice: 2D Array Elements"
       },
       "bonus": false,
@@ -4305,6 +4338,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L6_2025"
+        ],
         "progression": "Practice: 2D Array Elements"
       },
       "bonus": false,
@@ -4327,6 +4363,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L7_2025"
+        ],
         "progression": "Practice: 2D Array Elements"
       },
       "bonus": false,
@@ -4349,6 +4388,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L8_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4371,6 +4413,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L1_2025"
+        ],
         "progression": "Predict and Run: Nested Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4393,6 +4438,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L2_2025"
+        ],
         "progression": "Practice: Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4415,6 +4463,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L3_2025"
+        ],
         "progression": "Practice: Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4437,6 +4488,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L4_2025"
+        ],
         "progression": "Practice: Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4459,6 +4513,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4481,6 +4538,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4_2025"
+        ],
         "progression": "Predict and Run: Column-Major Traversal"
       },
       "bonus": false,
@@ -4503,6 +4563,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L2_2025"
+        ],
         "progression": "Practice: Column-Major Traversal"
       },
       "bonus": false,
@@ -4525,6 +4588,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L3_2025"
+        ],
         "progression": "Practice: Column-Major Traversal"
       },
       "bonus": false,
@@ -4547,6 +4613,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4choice_2025"
+        ],
         "progression": "Practice: Column-Major Traversal"
       },
       "bonus": false,
@@ -4569,6 +4638,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4591,6 +4663,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L1_2025"
+        ],
         "progression": "Predict and Run: Enhanced For Loops and Objects"
       },
       "bonus": false,
@@ -4613,6 +4688,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L2_2025"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -4635,6 +4713,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L3_2025"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -4657,6 +4738,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L4_2025"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -4679,6 +4763,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L5_2025"
+        ],
         "progression": "Practice: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4701,6 +4788,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L6_2025"
+        ],
         "progression": "Practice: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4723,6 +4813,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L7_2025"
+        ],
         "progression": "Practice: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4745,6 +4838,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L8_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4767,6 +4863,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L1_2025"
+        ],
         "progression": "Predict and Run: Image Filters"
       },
       "bonus": false,
@@ -4789,6 +4888,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L2_2025"
+        ],
         "progression": "Investigate and Modify: Image Filters"
       },
       "bonus": false,
@@ -4811,6 +4913,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L3_2025"
+        ],
         "progression": "Investigate and Modify: Image Filters"
       },
       "bonus": false,
@@ -4833,6 +4938,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L4_2025"
+        ],
         "progression": "Investigate and Modify: Image Filters"
       },
       "bonus": false,
@@ -4855,6 +4963,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L5_2025"
+        ],
         "progression": "Practice: Creating Image Filters"
       },
       "bonus": false,
@@ -4877,6 +4988,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L6_2025"
+        ],
         "progression": "Practice: Creating Image Filters"
       },
       "bonus": false,
@@ -4899,6 +5013,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L7_2025"
+        ],
         "progression": "Practice: Creating Image Filters"
       },
       "bonus": false,
@@ -4921,6 +5038,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L8_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4943,6 +5063,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L1_2025"
+        ],
         "progression": "Predict and Run: The indexOf() Method"
       },
       "bonus": false,
@@ -4965,6 +5088,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L2_2025"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -4987,6 +5113,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L3_2025"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -5009,6 +5138,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L4_2025"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -5031,6 +5163,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L5_2025"
+        ],
         "progression": "Skill Building: The indexOf() Method"
       },
       "bonus": false,
@@ -5053,6 +5188,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L6_2025"
+        ],
         "progression": "Practice: 2D Array Algorithms"
       },
       "bonus": false,
@@ -5075,6 +5213,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L7_2025"
+        ],
         "progression": "Practice: 2D Array Algorithms"
       },
       "bonus": false,
@@ -5097,6 +5238,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L8_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5119,6 +5263,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L1_2025"
+        ],
         "progression": "Predict and Run: Image Filters"
       },
       "bonus": false,
@@ -5141,6 +5288,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L2_2025"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5163,6 +5313,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L3_2025"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5185,6 +5338,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L4_2025"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5207,6 +5363,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L5_2025"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5229,6 +5388,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L6_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5251,6 +5413,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L1_2025"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -5273,6 +5438,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L2_2025"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -5295,6 +5463,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L3_2025"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -5317,6 +5488,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L4_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5339,6 +5513,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project_2025"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -5361,6 +5538,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 5 Assessment_2025"
+        ],
         "progression": "Unit 5 Assessment"
       },
       "bonus": false,
@@ -5383,6 +5563,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa5_2025"
+        ],
         "progression": "Unit 5 Survey"
       },
       "bonus": false,
@@ -5405,6 +5588,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2025"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -5427,6 +5613,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5448,6 +5637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -5470,6 +5662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -5492,6 +5687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {

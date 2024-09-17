@@ -1,11 +1,8 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-
-import {expect} from '../../util/reconfiguredChai';
 
 let dropdownValue;
 let onDropdownChange = value => (dropdownValue = value);
@@ -35,15 +32,15 @@ describe('Design System - Dropdown Select Component', () => {
     const option2 = screen.getByText('option2');
     const option3 = screen.getByText('option3');
 
-    expect(label).to.exist;
-    expect(option1).to.exist;
-    expect(option2).to.exist;
-    expect(option3).to.exist;
+    expect(label).toBeDefined();
+    expect(option1).toBeDefined();
+    expect(option2).toBeDefined();
+    expect(option3).toBeDefined();
   });
 
   it('SimpleDropdown - renders with correct text and options, changes selected value on when one is selected', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     const onChange = e => {
       onDropdownChange(e.target.value);
       spyOnChange(e.target.value);
@@ -69,32 +66,32 @@ describe('Design System - Dropdown Select Component', () => {
     const option1 = screen.getByText('option1');
     const option2 = screen.getByText('option2');
 
-    expect(label).to.exist;
-    expect(selectElement).to.exist;
-    expect(option1).to.exist;
-    expect(option2).to.exist;
-    expect(dropdownValue).to.equal('');
+    expect(label).toBeDefined();
+    expect(selectElement).toBeDefined();
+    expect(option1).toBeDefined();
+    expect(option2).toBeDefined();
+    expect(dropdownValue).toBe('');
 
     await user.selectOptions(selectElement, 'option-1');
 
     rerender(<DropdownToRender />);
 
-    expect(spyOnChange).to.have.been.calledOnce;
-    expect(spyOnChange).to.have.been.calledWith('option-1');
-    expect(dropdownValue).to.equal('option-1');
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
+    expect(spyOnChange).toHaveBeenCalledWith('option-1');
+    expect(dropdownValue).toBe('option-1');
 
     await user.selectOptions(selectElement, 'option-2');
 
     rerender(<DropdownToRender />);
 
-    expect(spyOnChange).to.have.been.calledTwice;
-    expect(spyOnChange).to.have.been.calledWith('option-2');
-    expect(dropdownValue).to.equal('option-2');
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
+    expect(spyOnChange).toHaveBeenCalledWith('option-2');
+    expect(dropdownValue).toBe('option-2');
   });
 
   it("SimpleDropdown - renders disabled dropdown, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     const onChange = e => {
       onDropdownChange(e.target.value);
       spyOnChange(e.target.value);
@@ -122,25 +119,25 @@ describe('Design System - Dropdown Select Component', () => {
     const option1 = screen.getByText('option1');
     const option2 = screen.getByText('option2');
 
-    expect(label).to.exist;
-    expect(selectElement).to.exist;
-    expect(option1).to.exist;
-    expect(option2).to.exist;
-    expect(dropdownValue).to.equal('');
+    expect(label).toBeDefined();
+    expect(selectElement).toBeDefined();
+    expect(option1).toBeDefined();
+    expect(option2).toBeDefined();
+    expect(dropdownValue).toBe('');
 
     await user.selectOptions(selectElement, 'option-1');
 
     rerender(<DropdownToRender />);
 
-    expect(spyOnChange).to.have.not.been.called;
-    expect(dropdownValue).to.equal('');
+    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(dropdownValue).toBe('');
 
     await user.selectOptions(selectElement, 'option-2');
 
     rerender(<DropdownToRender />);
 
-    expect(spyOnChange).to.have.not.been.called;
-    expect(dropdownValue).to.equal('');
+    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(dropdownValue).toBe('');
   });
 
   it('SimpleDropdown - renders with correct text and options with grouped items', () => {
@@ -172,10 +169,10 @@ describe('Design System - Dropdown Select Component', () => {
     const option2 = screen.getByText('option2');
     const option3 = screen.getByText('option3');
 
-    expect(label).to.exist;
-    expect(option1).to.exist;
-    expect(groupLabels).to.have.length(2);
-    expect(option2).to.exist;
-    expect(option3).to.exist;
+    expect(label).toBeDefined();
+    expect(option1).toBeDefined();
+    expect(groupLabels).toHaveLength(2);
+    expect(option2).toBeDefined();
+    expect(option3).toBeDefined();
   });
 });

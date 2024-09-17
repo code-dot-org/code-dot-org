@@ -26,6 +26,8 @@ class ChatClient
   #   color (optional): The color the message should be posted.
   # @return [Boolean] Whether the message was posted successfully.
   def self.message(room, message, options = {})
+    message = Slack.tag_user_group(message, options[:notify_group]) if options[:notify_group]
+
     unless @@logger
       FileUtils.mkdir_p(deploy_dir('log'))
       @@logger = Logger.new(deploy_dir('log', 'chat_messages.log'))

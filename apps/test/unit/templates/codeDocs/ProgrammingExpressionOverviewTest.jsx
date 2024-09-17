@@ -3,7 +3,7 @@ import React from 'react';
 
 import ProgrammingExpressionOverview from '@cdo/apps/templates/codeDocs/ProgrammingExpressionOverview';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ProgrammingExpressionOverview', () => {
   let defaultProgrammingExpression;

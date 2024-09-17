@@ -1,17 +1,19 @@
-import React, {memo, useCallback, useMemo} from 'react';
+import React, {memo, useCallback, useContext, useMemo} from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 import musicPlayViewLogo from '@cdo/static/music/music-play-view.png';
 
-import moduleStyles from './music-play-view.module.scss';
+import {AnalyticsContext} from '../context';
+import musicI18n from '../locale';
+
 import ProgressSlider from './ProgressSlider';
 
-import musicI18n from '../locale';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import moduleStyles from './music-play-view.module.scss';
 
 interface MusicPlayViewProps {
   setPlaying: (value: boolean) => void;
@@ -33,6 +35,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   const isLoading = useAppSelector(
     state => state.music.soundLoadingProgress < 1
   );
+  const analyticsReporter = useContext(AnalyticsContext);
 
   const shareData = useMemo(
     () => ({
@@ -56,18 +59,21 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const onShareProject = useCallback(() => {
+    analyticsReporter?.onButtonClicked('shareFromShareView');
     navigator?.share(shareData);
-  }, [shareData]);
+  }, [shareData, analyticsReporter]);
   const onViewCode = useCallback(() => {
+    analyticsReporter?.onButtonClicked('viewCodeFromShareView');
     projectManager?.redirectToView();
-  }, [projectManager]);
+  }, [projectManager, analyticsReporter]);
   const onRemix = useCallback(() => {
+    analyticsReporter?.onButtonClicked('remixFromShareView');
     if (projectManager) {
       projectManager.flushSave().then(() => {
         projectManager.redirectToRemix();
       });
     }
-  }, [projectManager]);
+  }, [projectManager, analyticsReporter]);
 
   return (
     <div className={moduleStyles.container}>

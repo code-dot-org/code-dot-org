@@ -1,0 +1,37 @@
+:ruby
+  block_items = [
+    {
+      title: hoc_s("donate_page.support_mission.translate.title"),
+      img: "/images/action-blocks/action-block-translate.png",
+      desc: hoc_s("donate_page.support_mission.translate.desc"),
+      url: "/translate",
+      button_label: hoc_s("donate_page.support_mission.translate.button"),
+    },
+    {
+      title: hoc_s("donate_page.support_mission.speak_up.title"),
+      img: "/images/action-blocks/action-block-petition.png",
+      desc: hoc_s("donate_page.support_mission.speak_up.desc"),
+      url: "https://advocacy.code.org",
+      button_label: hoc_s("donate_page.support_mission.speak_up.button"),
+    },
+    {
+      title: hoc_s("donate_page.support_mission.shop.title"),
+      img: "/images/action-blocks/action-block-shop.png",
+      desc: hoc_s("donate_page.support_mission.shop.desc"),
+      url: "https://store.code.org/",
+      button_label: hoc_s("donate_page.support_mission.shop.button"),
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - block_items.each_with_index do |block_item, index|
+    .action-block.action-block--one-col.flex-space-between.white
+      .content-wrapper
+        %h3
+          = block_item[:title]
+        %img{src: block_item[:img], alt: ""}
+        %p
+          = block_item[:desc]
+      .content-footer
+        %a.link-button{href: block_item[:url], class: index != 0 ? "has-external-link" : "", target: index != 0 ? "_blank" : "", rel: index != 0 ?  "noopener noreferrer" : ""}
+          = block_item[:button_label]

@@ -12,8 +12,6 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('Gamelab blocks', () => {
   describe('costumeList()', () => {
     let animationList = {
@@ -56,8 +54,8 @@ describe('Gamelab blocks', () => {
 
     it('returns sourceUrl array for both library and drawn costumes', () => {
       let items = costumeList();
-      expect(items.length).to.equal(2);
-      expect(items[0]).to.deep.equal([
+      expect(items.length).toBe(2);
+      expect(items[0]).toEqual([
         animationSourceUrl(
           '1',
           animationList.propsByKey['1'],
@@ -65,7 +63,7 @@ describe('Gamelab blocks', () => {
         ),
         '"drawn"',
       ]);
-      expect(items[1]).to.deep.equal(['/v3/library/test.png', '"library"']);
+      expect(items[1]).toEqual(['/v3/library/test.png', '"library"']);
     });
   });
 });
@@ -79,9 +77,9 @@ describe('Custom Input Types', () => {
         },
       };
       const arg = {name: "te'st"};
-      expect(
-        customInputTypes['soundPicker'].generateCode(block, arg)
-      ).to.deep.equal(`"te\'st"`);
+      expect(customInputTypes['soundPicker'].generateCode(block, arg)).toEqual(
+        `"te\'st"`
+      );
     });
   });
 });

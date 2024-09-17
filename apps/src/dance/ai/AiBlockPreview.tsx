@@ -1,9 +1,11 @@
 import {Workspace} from 'blockly';
 import React, {useEffect, useRef} from 'react';
-import moduleStyles from './ai-block-preview.module.scss';
-import {GeneratedEffect} from './types';
 import {useSelector} from 'react-redux';
+
+import {GeneratedEffect} from './types';
 import {generateAiEffectBlocksXmlFromResult} from './utils';
+
+import moduleStyles from './ai-block-preview.module.scss';
 
 interface AiBlockPreviewProps {
   results: GeneratedEffect;

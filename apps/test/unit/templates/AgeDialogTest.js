@@ -1,7 +1,6 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
 
@@ -22,11 +21,18 @@ describe('AgeDialog', () => {
   });
 
   it('renders null if dialog was seen before', () => {
-    let getItem = sinon.stub(defaultProps.storage, 'getItem');
-    getItem.withArgs('ad_anon_over13').returns('true');
+    let getItem = jest
+      .spyOn(defaultProps.storage, 'getItem')
+      .mockClear()
+      .mockImplementation();
+    getItem.mockImplementation((...args) => {
+      if (args[0] === 'ad_anon_over13') {
+        return 'true';
+      }
+    });
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);
-    getItem.restore();
+    getItem.mockRestore();
   });
 
   it('renders a dialog if neither signed in nor seen before', () => {

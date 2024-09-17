@@ -8,8 +8,6 @@ import ImageURLInput from '@cdo/apps/code-studio/components/ImageURLInput';
 import {stubRedux, registerReducers} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 
-import {assert} from '../../../util/reconfiguredChai';
-
 describe('ImagePicker', () => {
   const defaultProps = {
     assetChosen: () => true,
@@ -26,33 +24,33 @@ describe('ImagePicker', () => {
 
   it('shows mode switch', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);
-    assert.equal(wrapper.find('#modeSwitch').length, 1);
+    expect(wrapper.find('#modeSwitch').length).toEqual(1);
   });
 
   it('shows icons and files and links as options', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);
     const tabs = wrapper.find('#modeSwitch').find('span');
 
-    assert.equal(tabs.length, 3);
-    assert.equal(tabs.find('span[children="Icons"]').length, 1);
-    assert.equal(tabs.find('span[children="My Files"]').length, 1);
-    assert.equal(tabs.find('span[children="Link to Image"]').length, 1);
+    expect(tabs.length).toEqual(3);
+    expect(tabs.find('span[children="Icons"]').length).toEqual(1);
+    expect(tabs.find('span[children="My Files"]').length).toEqual(1);
+    expect(tabs.find('span[children="Link to Image"]').length).toEqual(1);
   });
 
   it('initially shows file picker by default', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);
-    assert.equal(wrapper.find(AssetManager).length, 1);
+    expect(wrapper.find(AssetManager).length).toEqual(1);
   });
 
   it('shows icon picker when clicked', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);
     wrapper.find('span[children="Icons"]').simulate('click');
-    assert.equal(wrapper.find(IconLibrary).length, 1);
+    expect(wrapper.find(IconLibrary).length).toEqual(1);
   });
 
   it('shows url picker when clicked', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);
     wrapper.find('span[children="Link to Image"]').simulate('click');
-    assert.equal(wrapper.find(ImageURLInput).length, 1);
+    expect(wrapper.find(ImageURLInput).length).toEqual(1);
   });
 });

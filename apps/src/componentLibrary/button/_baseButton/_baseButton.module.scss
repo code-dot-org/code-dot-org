@@ -101,6 +101,20 @@ a.button-primary {
       color: $light_gray_900;
     }
   }
+
+  &.button-destructive {
+    background-color: $light_negative_500;
+    color: $light_white;
+
+    &:hover {
+      background-color: $light_negative_700;
+    }
+
+    &:disabled, &[aria-disabled="true"] {
+      background-color: $light_gray_200;
+      color: $light_white;
+    }
+  }
 }
 
 .button-secondary,
@@ -196,6 +210,28 @@ a.button-secondary {
       background-color: unset;
     }
   }
+
+  &.button-destructive {
+    border: 1px solid $light_negative_500;
+    color: $light_negative_500;
+
+    &:hover {
+      background-color: $light_negative_100;
+      border: 1px solid $light_negative_500;
+      color: $light_negative_500;
+    }
+
+    &:active {
+      // !important is used here to override the ./apps/style/common.scss line 655 styles
+      border: 1px solid $light_negative_500 !important;
+    }
+
+    &:disabled, &[aria-disabled="true"] {
+      border-color: $light_gray_200 !important;
+      color: $light_gray_200;
+      background-color: unset;
+    }
+  }
 }
 
 .button-tertiary,
@@ -253,6 +289,25 @@ a.button-tertiary {
 
     &:disabled, &[aria-disabled="true"] {
       color: $light_gray_800;
+      background-color: unset;
+    }
+  }
+
+  &.button-destructive {
+    color: $light_negative_500;
+
+    &:hover {
+      background-color: $light_negative_100;
+      color: $light_negative_500;
+    }
+
+    &:active {
+      background-color: $light_negative_100;
+      color: $light_negative_700;
+    }
+
+    &:disabled, &[aria-disabled="true"] {
+      color: $light_gray_200;
       background-color: unset;
     }
   }

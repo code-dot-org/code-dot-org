@@ -1,22 +1,35 @@
-import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
-import {curriculumDataShape} from './curriculumCatalogConstants';
-import i18n from '@cdo/locale';
-import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
+// The following styles are imported in a very specific order to preserve UI consistency.
+// `HeaderBanner` imports `typography.scss`
+// `CurriculumCatalogCard` imports `phase1-design-system.scss`
+// `typography.scss` has conflicting styles with `phase1-design-system.scss` (specifically for `h4` and `p` elements)
+// We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
+// These are very small changes so this can likely be removed with no issues.
+/* eslint-disable import/order */
 import HeaderBanner from '../HeaderBanner';
-import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
-import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
-import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
-import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+/* eslint-enable import/order */
+
+import PropTypes from 'prop-types';
+import React, {useState, useEffect} from 'react';
+
+import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getSimilarRecommendations,
   getStretchRecommendations,
 } from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
+import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
+import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
+
+import {curriculumDataShape} from './curriculumCatalogConstants';
+import CurriculumCatalogFilters from './CurriculumCatalogFilters';
+
+import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
 
 const CurriculumCatalog = ({
   curriculaData,

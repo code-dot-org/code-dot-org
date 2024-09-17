@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Sila ambil kursus pengenalan, mampu diri</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Cipta permainan atau aplikasi</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Sila cuba CS tanpa menggunakan komputer (pilihan 'nirplag' & mudah alih)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Belajar CS daripada pasukan Code.org dan tetamu istimewa</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Helo Ruby</a> - Cara paling pelik di dunia untuk mempelajari tentang komputer, teknologi dan pengaturcaraan. Aktiviti mengenai pelbagai topik CS (Sains Komputer), seperti kebolehan mencerakinkan masalah, corak bintik, berfikir dengan mengikut algoritma, nyahpepijat masalah dan kerja bersama. (untuk umur 4-10)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">Nirplag CS</a> - Koleksi bahan pengajaran percuma yang membantu mengajar sains komputer melalui permainan dan teka-teki menarik yang menggunakan kad, tali, krayon dan banyak melakukan pergerakan di sekeliling. (untuk umur 5-14)</li>
 </ul>
-
-<h2>Tiada komputer di rumah? Cuba CS dalam telefon anda dengan aplikasi ini daripada rakan kongsi kami</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Pulau Peti"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Permainan pengekodan mudah alih yang menawan yang membawa pelajar dalam pengembaraan yang menarik, sambil mengajar asas pengekodan, seperti algoritma, pengecaman corak, urutan, gelung dan syarat. <i>(untuk semua peringkat umur)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">Platform belajar-ke-kod yang</h3></a>memenangi Anugerah CodeSpark untuk kanak-kanak berumur 5-9 tahun. Selesaikan teka-teki dan cipta permainan dengan The Foos sambil belajar mengekod. <strong>Catatan: codeSpark menawarkan tempoh percubaan untuk 3 bulan secara percuma. Alamat e-mel dan maklumat kad kredit ibu bapa diperlukan semasa pendaftaran.</strong> <i>(untuk prapembaca melalui Gred 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Back to top]</a></p>
-
-<a id="livecoding"></a>
-<h2>Belajar daripada pasukan Code.org dan tetamu istimewa!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logo Bait Kod">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes adalah pelajaran interaktif 20 minit yang mudah dicerna yang menggabungkan sains komputer dengan topik dunia nyata. Latih AI untuk membaca bahasa isyarat, mereka bentuk aplikasi untuk kebaikan, meneroka dunia Minecraft dan banyak lagi!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Tonton episod</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Memecah Kod">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Pastikan sains komputer menyeronokkan dengan mengambil Kod Break! Anda boleh mencipta sifer dengan Ashton Kutcher, belajar tentang pemboleh ubah dengan Yara Shahidi dan malah meneroka cara Internet berfungsi dengan pencipta Internet yang sebenar iaitu Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Sila berhubung</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

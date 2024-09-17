@@ -5,8 +5,6 @@ import ProgrammingEnvironmentOverview, {
   CategorySection,
 } from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentOverview';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('ProgrammingEnvironmentOverview', () => {
   let defaultProgrammingEnvironment;
 
@@ -38,10 +36,10 @@ describe('ProgrammingEnvironmentOverview', () => {
         programmingEnvironment={defaultProgrammingEnvironment}
       />
     );
-    expect(wrapper.find('CategorySection').length).to.equal(2);
+    expect(wrapper.find('CategorySection').length).toBe(2);
     expect(
       wrapper.find('CategorySection').map(cat => cat.props().category.name)
-    ).to.eql(['World', 'Sprites']);
+    ).toEqual(['World', 'Sprites']);
   });
 
   it('renders description if provided', () => {
@@ -50,11 +48,11 @@ describe('ProgrammingEnvironmentOverview', () => {
         programmingEnvironment={defaultProgrammingEnvironment}
       />
     );
-    expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(1);
-    expect(
-      wrapper.find('EnhancedSafeMarkdown').first().props().markdown
-    ).to.equal('spritelab description');
-    expect(wrapper.find('TextLink').props().href).to.equal('/p/spritelab');
+    expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(1);
+    expect(wrapper.find('EnhancedSafeMarkdown').first().props().markdown).toBe(
+      'spritelab description'
+    );
+    expect(wrapper.find('TextLink').props().href).toBe('/p/spritelab');
   });
 
   it('doesnt render description if not provided', () => {
@@ -65,8 +63,8 @@ describe('ProgrammingEnvironmentOverview', () => {
         programmingEnvironment={defaultProgrammingEnvironment}
       />
     );
-    expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(0);
-    expect(wrapper.find('a').length).to.equal(0);
+    expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(0);
+    expect(wrapper.find('a').length).toBe(0);
   });
 });
 
@@ -89,7 +87,7 @@ describe('CategorySection', () => {
         }}
       />
     );
-    expect(wrapper.text().includes('World')).to.be.true;
-    expect(wrapper.find('CodeDocLink').length).to.equal(2);
+    expect(wrapper.text().includes('World')).toBe(true);
+    expect(wrapper.find('CodeDocLink').length).toBe(2);
   });
 });

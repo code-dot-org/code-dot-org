@@ -67,74 +67,78 @@ class Unit < ApplicationRecord
   has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  scope :with_associated_models, -> do
-    includes(
-      [
-        {
-          script_levels: [
-            {
-              levels: [
-                :concepts,
-                :game,
-                :level_concept_difficulty,
-                :levels_child_levels
-              ]
-            },
-            :lesson,
-            :callouts
-          ]
-        },
-        :lesson_groups,
-        :resources,
-        :student_resources,
-        {
-          lessons: [
-            :lesson_activities,
-            {script_levels: [:levels]}
-          ]
-        },
-        {
-          unit_group_units: :unit_group
-        },
-        {
-          course_version: {
-            course_offering: :course_versions
+  scope(
+    :with_associated_models, lambda do
+      includes(
+        [
+          {
+            script_levels: [
+              {
+                levels: [
+                  :concepts,
+                  :game,
+                  :level_concept_difficulty,
+                  :levels_child_levels
+                ]
+              },
+              :lesson,
+              :callouts
+            ]
+          },
+          :lesson_groups,
+          :resources,
+          :student_resources,
+          {
+            lessons: [
+              :lesson_activities,
+              {script_levels: [:levels]}
+            ]
+          },
+          {
+            unit_group_units: :unit_group
+          },
+          {
+            course_version: {
+              course_offering: :course_versions
+            }
           }
-        }
-      ]
-    )
-  end
+        ]
+      )
+    end
+  )
 
   # The set of models which may be touched by ScriptSeed
-  scope :with_seed_models, -> do
-    includes(
-      [
-        {
-          unit_group_units: {
-            unit_group: :course_version
-          }
-        },
-        :course_version,
-        :lesson_groups,
-        {
-          lessons: [
-            {lesson_activities: :activity_sections},
-            :resources,
-            :vocabularies,
-            :programming_expressions,
-            :objectives,
-            {rubric: {learning_goals: :learning_goal_evidence_levels}},
-            :standards,
-            :opportunity_standards
-          ]
-        },
-        :script_levels,
-        :levels,
-        :resources,
-        :student_resources
-      ]
-    )
-  end
+  scope(
+    :with_seed_models, lambda do
+      includes(
+        [
+          {
+            unit_group_units: {
+              unit_group: :course_version
+            }
+          },
+          :course_version,
+          :lesson_groups,
+          {
+            lessons: [
+              {lesson_activities: :activity_sections},
+              :resources,
+              :vocabularies,
+              :programming_expressions,
+              :objectives,
+              {rubric: {learning_goals: :learning_goal_evidence_levels}},
+              :standards,
+              :opportunity_standards
+            ]
+          },
+          :script_levels,
+          :levels,
+          :resources,
+          :student_resources
+        ]
+      )
+    end
+  )
 
   attr_accessor :skip_name_format_validation
 
@@ -788,11 +792,17 @@ class Unit < ApplicationRecord
     text_response_levels = []
     script_levels.map do |script_level|
       script_level.levels.map do |level|
-        next if level.contained_levels.empty? ||
+        # We are looking for two types of text response levels: levels with contained levels
+        # that are text response levels, and predict levels that are free response (predict
+        # levels are used by lab2).
+        is_not_contained = level.contained_levels.empty? ||
           TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
+        is_not_predict_free_response = !level.predict_level? || level.properties.dig('predict_settings', 'questionType') != 'freeResponse'
+        next if is_not_contained && is_not_predict_free_response
+        text_response_level = level.predict_level? ? level : level.contained_levels.first
         text_response_levels << {
           script_level: script_level,
-          levels: [level.contained_levels.first]
+          levels: [text_response_level]
         }
       end
     end
@@ -1569,7 +1579,8 @@ class Unit < ApplicationRecord
         scriptOverviewPdfUrl: get_unit_overview_pdf_url,
         scriptResourcesPdfUrl: get_unit_resources_pdf_url,
         updated_at: updated_at.to_s,
-        isPlCourse: pl_course?
+        isPlCourse: pl_course?,
+        showAiAssessmentsAnnouncement: show_ai_assessments_announcement?(user),
       }
 
       #TODO: lessons should be summarized through lesson groups in the future
@@ -1585,6 +1596,23 @@ class Unit < ApplicationRecord
 
   def unit_without_lesson_plans?
     lessons.none?(&:has_lesson_plan)
+  end
+
+  def summarize_for_lesson_materials_view(user)
+    summary = {
+      id: id,
+      title: title_for_display,
+      name: name,
+      unitNumber: unit_number,
+      scriptOverviewPdfUrl: get_unit_overview_pdf_url,
+      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+    }
+    # Only get lessons with lesson plans
+    filtered_lessons = lessons.select(&:has_lesson_plan)
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
+
+    summary
   end
 
   def summarize_for_rollup(user = nil)
@@ -1729,6 +1757,10 @@ class Unit < ApplicationRecord
       scope: [:data, :script, :name, name],
       smart: true
     )
+  end
+
+  def unit_number
+    unit_group_units&.first&.position
   end
 
   def title_for_display
@@ -2087,6 +2119,16 @@ class Unit < ApplicationRecord
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
     middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+  end
+
+  def ai_assessment_enabled?
+    lessons.any? do |lesson|
+      lesson.rubric&.learning_goals&.any?(&:ai_enabled?)
+    end
+  end
+
+  def show_ai_assessments_announcement?(user)
+    user&.teacher? && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
   private def teacher_feedback_enabled?

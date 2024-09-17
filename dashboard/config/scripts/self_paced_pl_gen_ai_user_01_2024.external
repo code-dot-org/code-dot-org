@@ -1,0 +1,33 @@
+name 'self-paced-pl-gen-ai-user_01_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# User-Centered Design
+
+<img src="https://images.code.org/ddc7ab7741dc379934afff0a81b8b618-Screenshot 2024-09-03 at 10.25.06 AM.png" alt="Alice's user story from the lesson" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+
+#### For the remainder of this unit students develop their skills related to **User-Centered Design** focusing on building chatbots that are not only functional, but also useful for users in their specific situations.
+
+#### The lessons in this portion of the unit will help students develop their skills to complete the **Final Project, Solving Community Problems with Chatbots**. Below are some of the ways students explore key ideas in these lessons.
+
+## Issue Statements
+
+#### Students use the **5 Why’s strategy** to uncover the root cause of a problem in their community, and then brainstorm potential solutions using model cards.
+
+<img src="https://images.code.org/42c3d3887db130910c13a6afb2aa0a49-Screenshot 2024-09-03 at 10.19.33 AM.png" alt="the five whys activity ending with a core issue statement" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+
+## User Feedback
+
+#### Students act as **user testers** for a chatbot app and analyze the testing data to decide the next steps for the chatbot’s development.
+
+## Fine Tuning
+
+#### By using the **compare model** feature of AI Chat Lab students experiment with different fine-tuned models to observe how additional data sources influence chatbot responses.
+
+## Up Next!
+#### Learn more about how you can compare multiple models in AI Chat Lab. Then you'll complete one final practice level.
+
+MARKDOWN

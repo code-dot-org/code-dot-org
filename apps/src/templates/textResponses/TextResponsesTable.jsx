@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 

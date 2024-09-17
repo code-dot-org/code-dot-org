@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {beginEditingSection} from '../teacherDashboard/teacherSectionsRedux';
@@ -18,6 +19,7 @@ class SetUpSections extends Component {
     headingText: PropTypes.string,
     descriptionText: PropTypes.string,
     solidBorder: PropTypes.bool,
+    asyncLoadComplete: PropTypes.bool,
   };
 
   // Wrapped to avoid passing event args
@@ -27,7 +29,7 @@ class SetUpSections extends Component {
   };
 
   recordSectionSetupStartedEvent = () => {
-    analyticsReporter.sendEvent(STARTED_EVENT, {});
+    analyticsReporter.sendEvent(STARTED_EVENT, {}, PLATFORMS.BOTH);
   };
 
   render() {
@@ -41,6 +43,7 @@ class SetUpSections extends Component {
         buttonText={i18n.createSection()}
         className="uitest-set-up-sections"
         buttonClass="uitest-newsection"
+        buttonDisabled={!this.props.asyncLoadComplete}
         onClick={this.beginEditingSection}
         solidBorder={this.props.solidBorder || false}
       />
@@ -48,6 +51,11 @@ class SetUpSections extends Component {
   }
 }
 export const UnconnectedSetUpSections = SetUpSections;
-export default connect(undefined, {
-  beginEditingSection,
-})(SetUpSections);
+export default connect(
+  state => ({
+    asyncLoadComplete: state.teacherSections.asyncLoadComplete,
+  }),
+  {
+    beginEditingSection,
+  }
+)(SetUpSections);

@@ -3,7 +3,7 @@ require 'cpa'
 require 'date'
 
 class Policies::ChildAccount
-  # Values for the `child_account_compliance_state` attribute
+  # Values for the `cap_status` attribute
   module ComplianceState
     # The period for "existing" users before their accounts locked out.
     GRACE_PERIOD = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.GRACE_PERIOD
@@ -19,7 +19,7 @@ class Policies::ChildAccount
     # def self.permission_granted?(student)
     SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.to_h.each do |key, value|
       define_singleton_method("#{key.downcase}?") do |student|
-        student.child_account_compliance_state == value
+        student.cap_status == value
       end
     end
   end
@@ -33,6 +33,10 @@ class Policies::ChildAccount
 
   # The maximum number of times a student can resend a request to a parent.
   MAX_PARENT_PERMISSION_RESENDS = 3
+
+  # The maximum number of days a student should be age-gated before
+  # a teacher stops receiving warnings about the sections the student is following.
+  TEACHER_WARNING_PERIOD = 30.days
 
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
@@ -67,17 +71,11 @@ class Policies::ChildAccount
     user_state_policy = state_policy(user)
     return false unless user_state_policy
 
-    if user_state_policy[:name] == Cpa::NAME
-      # Accounts created before 5/26/2024 should have been locked upon creation,
-      # but they weren't because their state wasn't collected.
-      # To avoid immediate lockout after the state banner rollout,
-      # their lockout was postponed to the start of the "all-user lockout" phase.
-      return true if user.created_at < Cpa::CREATED_AT_EXCEPTION_DATE
-
-      # Due to a leaky bucket issue, roster-synced Google accounts weren't being locked out as intended.
-      # Therefore, it was decided to move their locking out to the "all-user lockout" phase.
-      return true if user.created_at < user_state_policy[:lockout_date] && user.authentication_options.any?(&:google?)
-    end
+    # Due to a leaky bucket issue, roster-synced Google accounts weren't being locked out as intended.
+    # Therefore, it was decided to move their locking out to the "all-user lockout" phase.
+    return true if user_state_policy[:name] == Cpa::NAME &&
+      user.created_at < user_state_policy[:lockout_date] &&
+      user.authentication_options.any?(&:google?)
 
     user.created_at < user_state_policy[:start_date]
   end
@@ -92,7 +90,7 @@ class Policies::ChildAccount
     grace_period_duration = user_state_policy[:grace_period_duration]
     return unless grace_period_duration
 
-    start_date = DateTime.parse(user.child_account_compliance_state_last_updated) if ComplianceState.grace_period?(user)
+    start_date = user.cap_status_date if ComplianceState.grace_period?(user)
     start_date = user_state_policy[:lockout_date] if approximate && start_date.nil?
 
     start_date&.since(grace_period_duration)

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {ModelDescription} from '../../types';
@@ -33,9 +33,6 @@ const CompareModelsDialog: React.FunctionComponent<{
       <div className={styles.headerContainer}>
         <Heading3>Compare Models</Heading3>
       </div>
-      <button type="button" onClick={onClose} className={styles.xCloseButton}>
-        <i id="x-close" className="fa-solid fa-xmark" />
-      </button>
       <hr />
       <div className={styles.modelComparisonContainer}>
         <ModelDescriptionPanel

@@ -1,0 +1,44 @@
+name 'CSA U8 Assessment q11_pilot-2025'
+
+wrong 'I only'
+wrong 'II only'
+wrong 'III only'
+right 'I and III'
+wrong 'II and III'
+
+markdown <<MARKDOWN
+The following method is intended to return the index of the location of `target` in the `ArrayList` `arrList`, otherwise returns `-1`.
+
+```
+public int find(ArrayList<Integer> arrList, int target) {
+  for (int i = 0; i < arrList.size(); i++) {
+    if (target == arrList.get(i)) {
+      return i;
+    }
+    return -1;
+  }
+ 
+  return -1;
+}
+```
+
+Which of the following statements is true about the method?
+
+I. It returns the intended output if `target` is the first item in `arrList`.
+
+II. It returns the intended output if `target` is the last item in `arrList`.
+
+III. It returns the intended output if `target` is not in `arrList`.
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+**I. It returns the intended output if `target` is the first item in `arrList`**
+   - This statement is true. In the given code, the `for` loop iterates over the elements of `arrList` from index `0` to `arrList.size() - 1`. If the target is found at the first index (`i = 0`), the condition `target == arrList.get(i)` is satisfied, and the method immediately returns the index `i` (which is `0`). Therefore, if the target is the first item in `arrList`, the method returns the intended output.
+   
+**II. It returns the intended output if `target` is the last item in `arrList`**
+   - This statement is false. In the given code, the `return -1` statement is placed within the `for` loop immediately after the `if` condition. This causes the method to return `-1` after checking only the first element of `arrList`. As a result, if the target is the last item in `arrList` or any other position beyond the first element, the method will not return the correct index and will instead return `-1` prematurely.
+
+**III. It returns the intended output if `target` is not in `arrList`**
+   - This statement is true. After the `for` loop, if none of the elements match the target, the method reaches the final `return -1` statement. This means that if the target is not found during the iteration, the method will return `-1`, which is the intended output to indicate that the target is not present in `arrList`. Therefore, if the target is not in `arrList`, the method returns the intended output.
+MARKDOWN

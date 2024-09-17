@@ -25,7 +25,8 @@
     "display_name": "Sierpinski Carpet",
     "bubble_choice_description": "Use recursion to draw the Sierpinski Carpet.",
     "thumbnail_url": "https://images.code.org/916c6024cc46b28d8a7a3753a585234c-U7L8-L2d.gif",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:49.433+00:00\",\"changed\":[\"cloned from \\\"CSA U7L8-L2d_2022\\\"\"],\"cloned_from\":\"CSA U7L8-L2d_2022\"}]"

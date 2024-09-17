@@ -1,0 +1,9 @@
+name 'CSA U1L12-L4_pilot_alt-2025'
+display_name 'Practice: Writing Algorithms'
+description 'Use `if/else` statements and/or the NOT ( `!` ) operator to solve problems in The Neighborhood.'
+
+sublevels
+level 'CSA U1L12-L4a_alt-2025'
+level 'CSA U1L12-L4b_alt-2025'
+level 'CSA U1L12-L4c_alt-2025'
+level 'CSA U1L12-L4d_alt-2025'

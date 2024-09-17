@@ -210,7 +210,7 @@ module AWS
       # rubocop:enable Security/YAMLLoad
       return [] unless params
       params.filter_map do |key, properties|
-        value = CDO[key.underscore] || ENV[key.underscore.upcase]
+        value = CDO[key.underscore] || ENV.fetch(key.underscore.upcase, nil)
         param = {parameter_key: key}
         if value
           param[:parameter_value] = value

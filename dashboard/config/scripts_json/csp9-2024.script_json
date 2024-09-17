@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 19:37:23 UTC",
+    "serialized_at": "2024-08-27 22:25:34 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1560,6 +1561,16 @@
       }
     },
     {
+      "name": "CSP Unit 9 - Slides",
+      "url": "https://docs.google.com/presentation/d/1ZrbWqbI3vLGUJgtYpkByMFP63Wm2knDgy6r_YEtjqnM/template/preview",
+      "key": "csp_unit_9_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_slides"
+      }
+    },
+    {
       "name": "Help Students Sign Up For The AP Exam",
       "url": "https://drive.google.com/file/d/1zwC1ZVW1ug9EUJfZ9a9ZitqMFQ0DScbU/view?usp=drive_link",
       "key": "help_students_sign_up_for_the_ap_exam",
@@ -1746,6 +1757,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp9-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_slides",
         "script.name": "csp9-2024"
       }
     },

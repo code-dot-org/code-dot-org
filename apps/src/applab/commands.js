@@ -2,10 +2,10 @@ import $ from 'jquery';
 
 import i18n from '@cdo/applab/locale';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
-import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import * as makerCommands from '@cdo/apps/maker/commands';
 import {rateLimit} from '@cdo/apps/storage/rateLimit';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
@@ -2020,7 +2020,10 @@ applabCommands.updateRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncOutputWarning();
+  var onError = error => {
+    getAsyncOutputWarning()(error);
+    onComplete(null, false);
+  };
   try {
     rateLimit();
     Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
@@ -2083,7 +2086,10 @@ applabCommands.deleteRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncOutputWarning();
+  var onError = error => {
+    getAsyncOutputWarning()(error);
+    onComplete(false);
+  };
   try {
     rateLimit();
     Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);

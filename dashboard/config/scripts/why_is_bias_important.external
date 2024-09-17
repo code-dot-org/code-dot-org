@@ -8,12 +8,12 @@ markdown <<MARKDOWN
 ##Bias can cause inaccurate predictions
 
 
-#### The previous activity showed that having more data from more people can help solve this problem and avoid biased input data. This would ensure the results represent all types of fish. 
+#### The previous activity showed that having <b>more data from more people </b> can help solve this problem and avoid biased input data. Combining Melissa, Dan, and Amanda’s training data would ensure the results represent more types of fish.
 
 
 ## How can you decrease bias? 
 
-#### Recognizing that human biases can influence the predictions made by a computer, since humans are involved in training these models, is crucial for addressing and mitigating bias.
+#### You can address bias by recognizing human biases are replicated in the predictions made by AI, since humans are involved in training these models. 
 
 ## Teacher Tip: 
 * #### Bias (fair/unfair) in data can be a tricky concept to teach students. Alternatively, you can use the words, <b>“fair/unfair”</b>  to discuss topics of bias with your students. 

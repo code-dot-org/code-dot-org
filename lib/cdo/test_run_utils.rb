@@ -20,7 +20,7 @@ module TestRunUtils
   end
 
   def self.run_local_ui_test
-    feature_path = File.expand_path(ENV['feature'])
+    feature_path = File.expand_path(ENV.fetch('feature', nil))
     Dir.chdir(dashboard_dir('test/ui/')) do
       RakeUtils.system "./runner.rb --verbose --pegasus=localhost.code.org:3000 --dashboard=localhost-studio.code.org:3000 --local --headed --feature=#{feature_path}"
     end

@@ -1,7 +1,7 @@
 #implicit-terms-modal.modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', style: 'display: none;'}
   %row
     .span#implicit_accept_terms_message
-      = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: :inline).html_safe
+      = t('terms_interstitial.accept_new_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: :inline).html_safe
   %row
     %button#close_btn_go_to_account{type: 'button'}
       = t('signup_form.go_to_account')

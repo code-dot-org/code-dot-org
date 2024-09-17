@@ -1,5 +1,5 @@
 /** @file Who watches the watchers? */
-import {expect} from '../util/reconfiguredChai';
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {forEveryBooleanPermutation} from '../util/testUtils';
 
 describe('forEveryBooleanPermutation', function () {

@@ -18,3 +18,4 @@ Scenario: Teacher can create an account with the new school association flow
   When I press "user_email_preference_opt_in_no"
   And I press "#signup_finish_submit" using jQuery
   And I wait until I see selector "#uitest-accept-section-creation"
+  And I close my eyes

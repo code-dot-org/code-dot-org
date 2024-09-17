@@ -1,7 +1,9 @@
-import React, {useContext} from 'react';
 import classNames from 'classnames';
-import moduleStyles from './panelContainer.module.scss';
+import React, {useContext} from 'react';
+
 import {ThemeContext} from '../ThemeWrapper';
+
+import moduleStyles from './panelContainer.module.scss';
 
 interface PanelContainerProps {
   id: string;

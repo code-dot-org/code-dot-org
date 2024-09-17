@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Hallo Welten: Weltraum", body: "Erschaffe intergalaktische Szenen mit Charakteren und Sounds, die sagen \"Hallo Welten!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "Weltraum-Jam bei der NASA", body: "Erschaffe ein Sonnensystem, das wirklich rockt, und lerne dabei etwas über Musik, Astronomie und Programmieren!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "Krieg der Sterne", body: "Lerne Droiden zu programmieren und erstelle dein eigenes Star Wars-Spiel in einer weit entfernten Galaxie.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code-Quest", body: "In diesem Online-Programmierabenteuer löst du mit dem U-Boot Subby Aufgaben tief im Meer.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

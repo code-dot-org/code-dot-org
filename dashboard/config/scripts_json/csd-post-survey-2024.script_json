@@ -5,11 +5,12 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSD",
-      "is_migrated": true
+      "is_migrated": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 17:32:54 UTC",
+    "serialized_at": "2024-07-11 18:51:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

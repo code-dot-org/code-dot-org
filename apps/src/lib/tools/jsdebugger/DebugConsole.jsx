@@ -6,7 +6,9 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Inspector, chromeLight} from 'react-inspector';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
 
 import {KeyCodes} from '../../../constants';
@@ -14,10 +16,10 @@ import {
   add as addWatchExpression,
   remove as removeWatchExpression,
 } from '../../../redux/watchedExpressions';
+import color from '../../../util/color';
+
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
-import color from '../../../util/color';
-import {Inspector, chromeLight} from 'react-inspector';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;

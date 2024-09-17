@@ -1,3 +1,5 @@
+@import 'breakpoints';
+
 // Action blocks wrappers
 .action-block__wrapper {
   margin-top: 2rem;
@@ -35,7 +37,9 @@
 
   h3 {
     width: 100%;
-    margin-top: 0;
+    margin: 0 0 0.5em;
+    font-size: 1.25rem;
+    line-height: 1.4;
   }
 
   figure {
@@ -67,7 +71,7 @@
   // Align copy or button(s) to the bottom of a block when
   // blocks are vastly different heights due to content length
   // — use .content-wrapper and .content-footer as seen on
-  // views/maker_curriculum_microbit.haml
+  // app_lab_lessons.haml
   &.flex-space-between {
     justify-content: space-between;
   }

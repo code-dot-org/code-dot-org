@@ -1,0 +1,17 @@
+name 'SP-VPL-21-mod4-Overview-teacher-CSP_-foundations-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching Computer Science
+
+#### The teacher plays an active role in developing the classroom culture and supporting learning in the CS Principles classroom. In this lesson you will consider the role of the teacher in inclusion, differentiation, and assessment. 
+</p></div>
+
+### **You will learn how to:**
+
+* #### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom.
+
+#### Let's keep learning! 
+
+MARKDOWN

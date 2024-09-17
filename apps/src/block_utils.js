@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
 import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
-import MetricsReporter from './lib/metrics/MetricsReporter';
+import MetricsReporter from './metrics/MetricsReporter';
 import xml from './xml';
 
 const styleTypes = Object.keys(cdoBlockStyles);
@@ -233,6 +233,7 @@ exports.forceInsertTopBlock = function (input, blockType) {
   topBlock.setAttribute('type', blockType);
   topBlock.setAttribute('movable', 'false');
   topBlock.setAttribute('deletable', 'false');
+  topBlock.setAttribute('id', 'topBlock');
 
   var numChildren = root.childNodes ? root.childNodes.length : 0;
 
@@ -617,11 +618,7 @@ const STANDARD_INPUT_TYPES = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       // Make sure the variable name gets declared at the top of the program
       block.getVars = function () {
-        return {
-          [Blockly.Variables.DEFAULT_CATEGORY]: [
-            block.getFieldValue(inputConfig.name),
-          ],
-        };
+        return [block.getFieldValue(inputConfig.name)];
       };
 
       // Add the variable field to the block

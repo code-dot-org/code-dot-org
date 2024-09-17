@@ -1,11 +1,8 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import LoadableComponent from '@cdo/apps/templates/LoadableComponent';
-
-import {expect} from '../../util/reconfiguredChai';
 
 describe('LoadableComponent', () => {
   let loadFunction, loadArgs, renderFunction, renderedText, errorMessage;
@@ -13,9 +10,9 @@ describe('LoadableComponent', () => {
   beforeEach(() => {
     renderedText = 'component';
     errorMessage = 'error';
-    loadFunction = sinon.stub();
+    loadFunction = jest.fn();
     loadArgs = ['arg1', 'arg2'];
-    renderFunction = sinon.stub().returns(<div>{renderedText}</div>);
+    renderFunction = jest.fn().mockReturnValue(<div>{renderedText}</div>);
   });
 
   it('displays a loading spinner before component loads', () => {
@@ -27,7 +24,7 @@ describe('LoadableComponent', () => {
       />
     );
 
-    expect(wrapper.find(Spinner).length).to.equal(1);
+    expect(wrapper.find(Spinner).length).toBe(1);
   });
 
   it('displays loaded component after load function completes', () => {
@@ -44,9 +41,9 @@ describe('LoadableComponent', () => {
       />
     );
 
-    expect(wrapper.find(Spinner).length).to.equal(0);
-    expect(wrapper.text()).to.equal(renderedText);
-    sinon.assert.calledWith(renderFunction, renderArgs[0], renderArgs[1]);
+    expect(wrapper.find(Spinner).length).toBe(0);
+    expect(wrapper.text()).toBe(renderedText);
+    expect(renderFunction).toHaveBeenCalledWith(renderArgs[0], renderArgs[1]);
   });
 
   it('displays error message if load function produces an error', () => {
@@ -63,8 +60,8 @@ describe('LoadableComponent', () => {
       />
     );
 
-    expect(wrapper.find(Spinner).length).to.equal(0);
-    expect(wrapper.text()).to.equal(errorMessage);
-    sinon.assert.notCalled(renderFunction);
+    expect(wrapper.find(Spinner).length).toBe(0);
+    expect(wrapper.text()).toBe(errorMessage);
+    expect(renderFunction).not.toHaveBeenCalled();
   });
 });

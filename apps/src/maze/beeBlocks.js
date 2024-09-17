@@ -340,7 +340,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       );
       this.appendDummyInput().appendField(' ');
       this.appendDummyInput().appendField(
-        new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator),
+        new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
         'ARG2'
       );
       this.setInputsInline(true);

@@ -32,7 +32,7 @@
                 },
                 {
                   "value": "csf_maker_mb",
-                  "text": "Computer Science Foundations: Maker with micro:bit"
+                  "text": "Maker with micro:bit"
                 }
               ]
             },
@@ -89,7 +89,7 @@
             {
               "value": "better_understand_course_csf_maker_mb",
               "visibleIf": "{survey_variable_name}='csf_maker_mb'",
-              "text": "Better understand Code.org's Computer Science Foundations: Maker with micro:bit curriculum"
+              "text": "Better understand Code.org's Maker with micro:bit curriculum"
             },
             {
               "value": "learn_programming",

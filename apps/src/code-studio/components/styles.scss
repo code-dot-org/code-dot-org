@@ -1,9 +1,0 @@
-// Styles for ToggleSwitch that cannot be handled with Radium
-// Only add an outline around the toggle when it is tabbed over, not clicked on.
-.toggle-input:focus > .toggle-display {
-  outline: 1px solid #949ca2;
-}
-
-.toggle-input:focus:not(:focus-visible) > .toggle-display {
-  outline: 0;
-}

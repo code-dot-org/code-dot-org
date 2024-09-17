@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-03-25T22:32:51.000Z",
   "level_num": "custom",
@@ -68,7 +69,7 @@
     "name_suffix": "_2024",
     "encrypted_examples": "9MDoybI9Z9v2YLzhetcvT/sP5gwFi+0N8z1vKqrjfBGcPNzuvZalQB9BhjHM\n+tDxBFBAj8ugnrtgZqy18AuhXg==\n",
     "text_mode_at_start": "false",
-    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/taking-input-with-getproperty",
+    "map_reference": "/docs/concepts/app-lab/taking-input-with-getproperty/",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -79,9 +80,8 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:32:51.270+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_physical-computing\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_physical-computing\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:32:51.270+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_physical-computing\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_physical-computing\"},{\"changed_at\":\"2024-07-16 01:11:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-07-16 01:11:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"map_reference\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

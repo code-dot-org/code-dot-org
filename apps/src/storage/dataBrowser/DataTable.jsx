@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 
 import msg from '@cdo/locale';
 
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import {WarningType} from '../constants';
 import {showWarning} from '../redux/data';

@@ -1,11 +1,12 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 import {Provider} from 'react-redux';
+
 import {getStore} from '@cdo/apps/code-studio/redux';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   prepareBlockly();

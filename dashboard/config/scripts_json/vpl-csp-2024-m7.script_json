@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:54:13 UTC",
-    "published_state": null,
+    "serialized_at": "2024-08-21 19:01:55 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -129,6 +129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 7 - Workshop Overview_2023.1_2024"
+        ],
         "progression": "Module 7 overview (~5 minutes)"
       },
       "bonus": false,
@@ -151,6 +154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Create PT Reqs_2023.1_2024"
+        ],
         "progression": "Requirements of the Create Performance Task (~20 minutes)"
       },
       "bonus": false,
@@ -173,6 +179,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Survival Guide_2023.1_2024"
+        ],
         "progression": "Digging into the Create Performance Task Survival Guide (~40 minutes)"
       },
       "bonus": false,
@@ -195,6 +204,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Role of teacher_2023.1_2024"
+        ],
         "progression": "Role of the teacher during the Create Performance Task (~15 minutes)"
       },
       "bonus": false,
@@ -217,6 +229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 7 Wrap Up_2023.1_2024"
+        ],
         "progression": "Module 6 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,

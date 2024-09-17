@@ -126,7 +126,6 @@ theme: responsive
 | **Щоб використовувати Інтернет-симулятор**                                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Щоб використовувати веб-лабораторію**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Щоб використовувати кнопку «Поділитися» в Google Classroom**                                                | `https://apis.google.com`                                                                                  |
-| **Використання наборів даних App Lab**                                                                        | `https://*.firebaseio.com`<br />`ссс: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 

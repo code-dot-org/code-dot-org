@@ -30,6 +30,12 @@ module CookieHelpers
 
     encryptor.decrypt_and_verify(message)
   end
+
+  # It's safer to retrieve a cookie from the list of all cookies
+  # because `#cookie_named` may raise `Selenium::WebDriver::Error::UnknownMethodError` during mobile testing.
+  def get_cookie(key)
+    @browser.manage.all_cookies.find {|cookie| cookie[:name] == key}
+  end
 end
 
 World(CookieHelpers)

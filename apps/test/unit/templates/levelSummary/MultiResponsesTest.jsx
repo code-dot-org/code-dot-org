@@ -6,13 +6,26 @@ import MultiResponses, {
 } from '@cdo/apps/templates/levelSummary/MultiResponses';
 import color from '@cdo/apps/util/color';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 const {multiAnswerCounts, multiChartData} = exportedForTesting;
 
 const JS_DATA = {
   level: {
     properties: {
       answers: [{}],
+    },
+  },
+  responses: [{user_id: 0, text: '1'}],
+};
+
+const PREDICT_DATA = {
+  level: {
+    properties: {
+      predict_settings: {
+        isPredictLevel: true,
+        multipleChoiceOptions: ['option 1', 'option 2', 'option 3'],
+        solution: 'option 1',
+      },
     },
   },
   responses: [{user_id: 0, text: '1'}],
@@ -27,6 +40,18 @@ describe('MultiResponses', () => {
       ['Answer', 'Count', {role: 'annotation'}, {role: 'style'}],
       ['A', 0, '0', null],
       ['B', 1, '1', null],
+    ]);
+  });
+
+  it('renders chart for predict level', () => {
+    const wrapper = shallow(<MultiResponses scriptData={PREDICT_DATA} />);
+
+    expect(wrapper.find('Chart').length).to.eq(1);
+    expect(wrapper.find('Chart').prop('data')).to.eql([
+      ['Answer', 'Count', {role: 'annotation'}, {role: 'style'}],
+      ['A', 0, '0', null],
+      ['B', 1, '1', null],
+      ['C', 0, '0', null],
     ]);
   });
 });

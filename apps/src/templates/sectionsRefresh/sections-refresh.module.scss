@@ -2,11 +2,6 @@
 @import 'font.scss';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 
-// In order to make typography work correctly with em units. (Design system is build for 16px default font size)
-body {
-  font-size: 16px;
-}
-
 .containerWithMarginTop {
   margin-top: 40px;
 }
@@ -175,6 +170,7 @@ label.typographyLabelTwo {
 
 .unitDropdown {
   @include main-font-semi-bold;
+  font-size: 16px;
   margin: 4px 0 0 10px;
   padding: 0.3em;
 }
@@ -223,6 +219,7 @@ button.advancedSettingsButton {
 .toolTipContainer {
   display: flex;
   align-items: center;
+  margin-bottom: 8px;
 
   button {
     .toggle-display {

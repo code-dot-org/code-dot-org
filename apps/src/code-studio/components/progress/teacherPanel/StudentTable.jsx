@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import color from '@cdo/apps/util/color';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';

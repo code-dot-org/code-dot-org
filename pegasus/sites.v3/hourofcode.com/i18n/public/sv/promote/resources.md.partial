@@ -24,8 +24,6 @@ Print your own posters! Simply click an image below to view and save a printable
 
 {{ promote_new_posters }}
 
-* Letar du efter våra affischer från tidigare år? [Hitta dem här]({{ promote/previous_posters_url }})!
-
 <a id="social"></a>
 
 ## Posta dessa på sociala medier
@@ -95,26 +93,6 @@ Låt oss gör det ännu större detta året. Jag ber dig att gå med i Hour of C
 Berätta om det. Håll ett evenemang. Be din lokala skola att registrera sig. Eller prova en Hour of Code själv - alla har nytta av att lära sig grunderna.
 
 Kom igång på http://hourofcode.com/{{ country_language }}<br />
-
-* * *
-
-<a id="help-schools"></a>
-
-### Volontär på en skola:
-
-#### [Här hittar du mer resurser och information om volontärarbete i skolor]({{ how_to_volunteers_url }}).
-
-**Ämnesrad:** Kan vi hjälpa dig att vara värd för en Hour of Code?
-
-Mellan {{ campaign_date/short }} kommer tio procent av studenterna runt om i världen att fira Computer Science Education Week genom att göra en Hour of Code på sin skola. Det är en möjlighet för varje barn att lära sig hur teknologi runt omkring oss fungerar.
-
-[Our organisation/My name] vill gärna hjälpa [school name] att driva ett Hour of Code-evenemang. Vi kan hjälpa lärare att hålla en Hour of Code i sina klassrum (vi behöver inte ens datorer!) eller om du vill vara värd för en skolsammankomst kan vi ordna en talare som berättar om hur tekniken fungerar och hur det är att vara mjukvaruingenjör.
-
-Eleverna kommer att skapa sina egna appar eller spel som de kan visa sina föräldrar, och vi kommer också att skriva ut Hour of Code-certifikat som de kan ta med sig hem. Och, det är roligt! Med interaktiva, praktiska aktiviteter kommer studenter att lära sig beräkningstänkande på ett lättillgängligt sätt.
-
-Datorer finns överallt, och förändrar varje industri på jorden. But only 51% of all high schools offer computer science. Goda nyheter är, vi är på väg att ändra detta! Om du har hört talas om Hour of Code tidigare, kanske du vet att det blev historia - mer än 100 miljoner studenter runt om i världen har provat en Hour of Code. Till och med ledare som president Obama och kanadensiska premiärministern Justin Trudeau skrev sina första rader av kodning som en del av kampanjen.
-
-Du kan läsa mer om evenemanget på http://hourofcode.com. Eller låt oss veta om du vill boka tid för att prata om hur [school name] kan delta.<br />
 
 * * *
 

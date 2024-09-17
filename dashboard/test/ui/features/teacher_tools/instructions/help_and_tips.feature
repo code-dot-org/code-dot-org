@@ -6,7 +6,7 @@ Feature: Help and Tips Map Link
 
   Scenario: 'Help & Tips' and 'Instruction' tabs are visible if the level has a map reference
     Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/18"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     When I click selector ".uitest-helpTab" once I see it
     And I wait until ".editor-column" contains text "Circuit Playground"
     When I click selector "a:contains(Circuit Playground)"

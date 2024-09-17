@@ -1,0 +1,20 @@
+name 'sp-pl-DS_matplotlib'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introduction to Matplotlib
+
+<img src="https://images.code.org/b015c0aaf304ca2243c8367c0d54d550-image-1724775907516.png" alt="pandas logo" width="220px" style="border-radius:20px; float:right; margin: 0 0 40px 40px;">
+
+## What is Matplotlib?
+#### Matplotlib is a Python library used for creating static, interactive, and animated visualizations in data science. It helps you turn data into charts and graphs, making complex information easier to understand.
+
+
+## Why students should learn it?
+#### Learning Matplotlib is important for students because being able to visualize data is a key skill in many fields. 
+
+####It helps students communicate their findings clearly, make data-driven decisions, and tell compelling stories with data—skills that are essential in today’s data-centric world.
+
+
+MARKDOWN

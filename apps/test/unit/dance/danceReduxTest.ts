@@ -1,6 +1,6 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {combineReducers, Store} from 'redux';
-import Sinon from 'sinon';
+import Sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {StubFunction} from 'test/types/types';
 
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
@@ -18,7 +18,7 @@ import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {createStore} from '../../util/redux';
 import {setExternalGlobals} from '../../util/testUtils';
 

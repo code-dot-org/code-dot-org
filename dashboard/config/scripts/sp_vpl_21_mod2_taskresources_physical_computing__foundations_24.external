@@ -1,0 +1,20 @@
+name 'SP-VPL-21-mod2-TaskResources_physical-computing_-foundations-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Navigating Support 
+
+<img src="https://images.code.org/316c85b04466f48a603e3b902212c14c-image-1714074264271.44.21 PM.png" alt="Two students look on to a laptop." style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
+
+#### Welcome! In addition to the lesson plans and teacher resources, there are also other options to access support while teaching Code.org curricula. In this lesson, we will explore these additional support options. 
+
+### **You will:**
+
+* #### Learn how to access support while teaching the course.
+<br>
+
+#### **Suggested time:** 15 minutes
+
+<br><br><br><br>
+MARKDOWN

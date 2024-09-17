@@ -4,8 +4,6 @@ import React from 'react';
 
 import Tags from '@cdo/apps/componentLibrary/tags';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('Design System - Tags', () => {
   it('Tags - renders with correct label', () => {
     render(
@@ -26,9 +24,9 @@ describe('Design System - Tags', () => {
     );
 
     const tags = screen.getByTestId('tags');
-    expect(tags).to.exist;
-    expect(screen.getByText('tag1')).to.exist;
-    expect(screen.getAllByText('tag1')).to.have.lengthOf(1);
+    expect(tags).toBeDefined();
+    expect(screen.getByText('tag1')).toBeDefined();
+    expect(screen.getAllByText('tag1')).toHaveLength(1);
   });
 
   it('Tags - renders tooltip on hover, removes tooltip on unhover; shows +1 if there are two tags', async () => {
@@ -56,19 +54,19 @@ describe('Design System - Tags', () => {
     const tag1 = screen.getByText('tag1');
     const plusOneTag = screen.getByText('+1');
 
-    expect(tags).to.exist;
-    expect(tag1).to.exist;
-    expect(plusOneTag).to.exist;
-    expect(screen.queryByText('tag2')).to.be.null;
+    expect(tags).toBeDefined();
+    expect(tag1).toBeDefined();
+    expect(plusOneTag).toBeDefined();
+    expect(screen.queryByText('tag2')).toBeNull();
 
     // Hover +1 to show the +1 tooltip
     await user.hover(plusOneTag);
 
-    expect(screen.queryByText('tag2')).to.exist;
+    expect(screen.queryByText('tag2')).toBeDefined();
 
     // Hover tag1 / unhover +1 to hide the +1 tooltip
     await user.hover(tag1);
 
-    expect(screen.queryByText('tag2')).to.be.null;
+    expect(screen.queryByText('tag2')).toBeNull();
   });
 });

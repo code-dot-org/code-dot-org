@@ -13,5 +13,5 @@ Scenario: Check Piskel loads and reload the project with a blank animation
   And I press "runButton"
 
   Then I reload the page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element ".modal-body" does not contain text "Sorry, we couldn't load animation"

@@ -3,7 +3,7 @@ import blocks from '@cdo/apps/studio/blocks';
 import skins from '@cdo/apps/studio/skins';
 import {parseElement} from '@cdo/apps/xml';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 

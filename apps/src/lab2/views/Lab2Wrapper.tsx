@@ -6,10 +6,13 @@
 // boundary; a fade-in between levels; a loading spinner when a level takes a
 // while to load; and a sad bee when things go wrong.
 
+import classNames from 'classnames';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import classNames from 'classnames';
-import moduleStyles from './Lab2Wrapper.module.scss';
+
+import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import ErrorBoundary from '../ErrorBoundary';
 import {
   LabState,
@@ -17,13 +20,13 @@ import {
   hasPageError,
   setIsShareView,
 } from '../lab2Redux';
+import Lab2Registry from '../Lab2Registry';
+import {getAppOptionsLevelId, getIsShareView} from '../projects/utils';
 
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
-import Lab2Registry from '../Lab2Registry';
 import Loading from './Loading';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {getAppOptionsLevelId, getIsShareView} from '../projects/utils';
-import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+
+import moduleStyles from './Lab2Wrapper.module.scss';
 
 export interface Lab2WrapperProps {
   children: React.ReactNode;

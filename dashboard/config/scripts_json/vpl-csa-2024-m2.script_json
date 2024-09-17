@@ -7,11 +7,12 @@
       "curriculum_umbrella": "PD Workshop Activity CSA",
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-18 15:25:27 UTC",
+    "serialized_at": "2024-08-07 15:04:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

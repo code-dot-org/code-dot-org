@@ -3,34 +3,42 @@ skip_dialog true
 markdown <<MARKDOWN
 # Debugging
 
-> **Debugging** is the process of finding and fixing bugs in code. 
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"><b>Debugging</b> is the process of finding and fixing bugs in code. </p></div>
 
-##### Bugs are opportunities to:
+#### Bugs are opportunities to:
 
-- ##### Reinforce positive attitudes towards debugging and persistence
-- ##### Identify and address student misconceptions
-- ##### Further develop good debugging skills 
+* #### Reinforce positive attitudes towards debugging and persistence
+* #### Identify and address student misconceptions
+* #### Further develop good debugging skills 
 
-##### Your role as the teacher is to avoid directly debugging for your students, but to instead guide students in developing their own debugging skills. 
+#### Your role as the teacher is to avoid directly debugging for your students, but to instead guide students in developing their own debugging skills. 
 
 ## Revisiting the Debugging Process
 
-##### As we begin adding more complexity in our CS skills, more opportunities for bugs arise. One common barrier to supporting students during a programming unit is knowing how to support them effectively when they encounter bugs while programming. 
+#### As we begin adding more complexity in our CS skills, more opportunities for bugs arise. One common barrier to supporting students during a programming unit is knowing how to support them effectively when they encounter bugs while programming. 
 
-##### Over the Summer, reviewed the resources available to support the process of debugging. We also practiced debugging in Web Lab and Game Lab. In the following activities you will have the opportunity to practice debugging in Game Lab. Below are the resources that you explored over the Summer. Revisit them if you would like to review or click continue to move on to the next activity.
+#### Over the Summer, reviewed the resources available to support the process of debugging. We also practiced debugging in Web Lab and Game Lab. In the following activities, you will have the opportunity to practice debugging in Game Lab. Below are the resources that you explored over the Summer. Revisit them if you would like to review or click "Continue" to move on to the next activity.
 
+___
 
 ## Debugging Resources
 
-##### Watch this video to understand how debugging works, and hear directly from students how it enhances their learning.
+### **Debugging Video**
 
-<a href="https://youtu.be/auv10y-dN4s" target="blank" rel="noopener noreferrer">![](https://images.code.org/87bcfca7793858df65e763cc38584ed0-image-1594388746783.45.14 AM.png)</a>
+#### Watch this video to understand how debugging works, and hear directly from students how it enhances their learning.
+
+<a href="https://youtu.be/auv10y-dN4s" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/87bcfca7793858df65e763cc38584ed0-image-1594388746783.45.14 AM.png" alt="Debugging Video thumbnail" width="600 px">
 
 <a href="https://drive.google.com/file/d/1MaFGlWcPPcl8SfvGMcWpg2w_EKHaAH-g/view?usp=sharing" target="blank" rel="noopener noreferrer"> Can't see the video? Click here. </a>
 <br/><br/>
-##### Debugging can be broken down into four easy steps for students:
 
-![](https://images.code.org/38b1d819761ca8e2b9d4fd5a950570f8-image-1594389053858.50.37 AM.png)
+### **Debugging Process**
 
-##### For teacher specific guidance on how to support students in the process of debugging check out the <a href="https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view" target="blank">CSD Guide to Debugging.</a>
+#### Debugging can be broken down into four easy steps for students:
+
+<img src="https://images.code.org/38b1d819761ca8e2b9d4fd5a950570f8-image-1594389053858.50.37 AM.png" alt="The four-step debugging process: Describe, Hunt, Try, Document" width="600 px">
+
+### **Guide to Debugging**
+
+#### For teacher specific guidance on how to support students in the process of debugging check out the <a href="https://docs.google.com/document/d/1_l6i_uCScy9Cfom8oqeaN9VM0TS9ELDXd1MLH8i4HzU/edit?usp=drive_link" target="blank">CSD Guide to Debugging.</a>
 MARKDOWN

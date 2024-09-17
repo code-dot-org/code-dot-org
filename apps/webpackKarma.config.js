@@ -33,10 +33,9 @@ const karmaConfig = {
             localeDoNotImportTest('@cdo/netsim/locale'),
             localeDoNotImportTest('@cdo/tutorialExplorer/locale'),
             localeDoNotImportTest('@cdo/weblab/locale'),
+            localeDoNotImportTest('@cdo/signup/locale'),
           ]),
           ...{
-            // TODO: post-firebase-cleanup, remove this: #56994
-            firebase: path.resolve(__dirname, 'test/util/MockFirebase.js'),
             // Use mock-firmata to unit test playground-io maker components
             firmata: 'mock-firmata/mock-firmata',
           },

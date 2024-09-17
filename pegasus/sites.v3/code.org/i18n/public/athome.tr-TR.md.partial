@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Giriş seviyesinde, kendi hızınızda bir kursa katılın</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Bir oyun veya uygulama oluşturun</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Bilgisayarsız BB'yi deneyin ('Bağlantısızl' ve mobil seçenekler)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org ekibinden ve özel konuklardan BB öğrenin</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Merhaba Ruby</a> - Bilgisayarlar, teknoloji ve programlama hakkında bilgi edinmek için dünyanın en tuhaf yolu. Bir problemi parçalara ayırma, nokta örüntüleri, algoritmik olarak düşünme, problemleri çözme ve birlikte çalışma gibi bir dizi BB  konusuna dair aktiviteler. (4-10 yaş için)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">BB Bağlantısız</a> - Kartlar, ipler, boya kalemleri ve çok sayıda koşuşturma kullanan ilgi çekici oyunlar ve bulmacalar yoluyla bilgisayar bilimini öğreten ücretsiz öğretim materyali koleksiyonu. (5-14 yaş için)</li>
 </ul>
-
-<h2>Evde bilgisayar yok mu? İş ortaklarımızın sunduğu bu uygulamalarla telefonunuzda BB'yi deneyin</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island Öğrencileri heyecan verici</h3></a>bir maceraya götüren büyüleyici bir mobil kodlama oyunu, kodlamanın temellerini öğretirken, algoritmalar gibi, örüntü tanıma, diziler, döngüler ve koşullu. <i>(tüm yaşlar için)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark 5-9</h3></a>yaş arası çocuklar için ödüllü kod öğrenme platformu. The Foos ile kodlamayı öğrenirken bulmacaları çözün ve oyunlar oluşturun. <strong>Not: codeSpark 3 aylık ücretsiz deneme sunuyor. Kaydolurken ebeveynin e-posta adresi ve kredi kartı bilgileri gereklidir.</strong> <i>(5. Sınıftan itibaren ön okuyucular için)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Başa dön]</a></p>
-
-<a id="livecoding"></a>
-<h2>Code.org ekibinden ve özel konuklardan öğrenin!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes logosu">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes, bilgisayar bilimini gerçek dünya konularıyla harmanlayan sindirimi kolay, 20 dakikalık etkileşimli derslerdir. İşaret dilini okumak, iyi bir uygulama tasarlamak, Minecraft dünyasını keşfetmek ve daha fazlası için bir AI'yı eğitin!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break Code Break alarak bilgisayar bilimini eğlenceli</h3>
-        <div class="smalltext" style="">tutun! Ashton Kutcher ile bir şifre oluşturabilir, Yara Shahidi ile değişkenler hakkında bilgi edinebilir ve hatta İnternet'in gerçek mucidi Vint Cerf ile İnternet'in nasıl çalıştığını keşfedebilirsiniz!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Bağlan</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

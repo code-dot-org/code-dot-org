@@ -1666,23 +1666,6 @@ en:
             "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": kick
             "'sound://category_sports/Double_Whistle_SFX.mp3'": two whistles
             "'sound://category_sports/One_Whistle_SFX.mp3'": whistle
-      gamelab_playSoundOptionsSpace:
-        text: play sound [SOUND][0]
-        options:
-          SOUND:
-            "'sound://category_space/Blackhole_SFX.mp3'": black hole
-            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
-            "'sound://category_space/Carina_SFX.mp3'": carina
-            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
-            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
-            "'sound://category_space/Galactic_center_SFX.mp3'": galactic center
-            "'sound://category_space/Launch_SFX.mp3'": launch
-            "'sound://category_space/Lift_Off.mp3'": lift off
-            "'sound://category_space/Pillars_SFX.mp3'": pillars
-            "'sound://category_space/Southern_ring_SFX.mp3'": southern ring
-            "'sound://category_space/Supernova_SFX.mp3'": supernova
-            "'sound://category_space/Tycho_SFX.mp3'": tycho
-            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": whirlpool galaxy
       gamelab_playSpeech:
         text: play speech [SOUND][0]
       gamelab_playerBehaviors:
@@ -3073,3 +3056,40 @@ en:
         text: prompt user [QUESTION][0] for variable [VAR][1] with choice [A][2]
       storylab_setSubheading:
         text: set subheading [SUBHEADING][0]
+      transformers_playSoundOptions:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            "'sound://category_transformers/transforming1.mp3'": Glitch
+            "'sound://category_transformers/transforming2.mp3'": Static
+            "'sound://category_transformers/transforming3.mp3'": Warp
+            "'sound://category_transformers/transforming4.mp3'": Buzz
+            "'sound://category_transformers/transforming5.mp3'": Synthesize
+            "'sound://category_transformers/transforming6.mp3'": Fuzz
+            "'sound://category_transformers/transforming7.mp3'": Electric
+            "'sound://category_transformers/transforming8.mp3'": Pulse
+            "'sound://category_transformers/transforming9.mp3'": Cybernetic
+            "'sound://category_transformers/transforming10.mp3'": Zap
+            "'sound://category_transformers/transforming11.mp3'": Transform
+            "'sound://category_transformers/transforming12.mp3'": Robotic
+            "'sound://category_transformers/transforming13.mp3'": Ping
+            "'sound://category_transformers/transforming14.mp3'": Pulse
+            "'sound://category_transformers/transforming15.mp3'": Crash
+      transformers_setAllTransformersSize:
+        text: set all sprites size to [SIZE][0]
+        options:
+          SIZE:
+            '0': random
+            '0.50': small
+            '0.75': medium
+            '1.00': large
+            '2.00': extra large
+      transformers_setTransformersSize:
+        text: set [SPRITE][0] size to [SIZE][1]
+        options:
+          SIZE:
+            '0': random
+            '0.50': small
+            '0.75': medium
+            '1.00': large
+            '2.00': extra large

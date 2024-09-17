@@ -126,7 +126,6 @@ theme: responsive
 | **使用網路模擬器**                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **使用網路實驗室**                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **使用Google課堂共用按鈕**                      | `https://apis.google.com`                                                                                  |
-| **使用應用程式實驗室資料集**                        | `https://*.firebaseio.com`<br />`常見問題：//*.火焰兵庫`                                                      |
 
 ## 移動設備/平板電腦支援詳情
 

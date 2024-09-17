@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 import {stringifyQueryParams} from '@cdo/apps/utils';
 import javalabMsg from '@cdo/javalab/locale';

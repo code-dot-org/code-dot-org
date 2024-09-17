@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-31T19:06:00.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Wrap Up",
+    "long_instructions": "### Thinking about the last few days and your skills developing system prompts to solve problems:\r\n- ###What’s one thing you feel especially confident in or proud of?\r\n- ###What’s one thing that still feels a little challenging that you can keep working on throughout the rest of the unit?\r\n\r\n",
+    "teacher_markdown": "Discussion Goal: This is a personal reflection moreso for the student. This can be done as a small group, or a journal entry that is collected. If collected, you may decide to note the response to “what is challenging” as something to look out for with students going into the next set of lessons.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-31 19:06:07 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

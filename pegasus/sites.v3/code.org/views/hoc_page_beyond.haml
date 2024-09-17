@@ -1,40 +1,37 @@
 :ruby
-  card_item = [
+  block_items = [
     {
-      title: hoc_s(:teach_computer_science),
-      image: "/images/square-teacher-with-student.png",
-      desc: hoc_s(:hoc_page_go_beyond_hoc_card_desc_teach),
-      url: "/teach",
-      button_label: hoc_s(:call_to_action_learn_more),
-      aria_label: hoc_s(:aria_label_call_to_action_learn_more_teach)
-    },
-    {
-      title: hoc_s(:explore_our_curriculum),
-      image: "/images/square-students-at-computer.png",
-      desc: hoc_s(:hoc_page_go_beyond_hoc_card_desc_curriculum),
+      title: hoc_s("hoc_page.beyond.catalog.title"),
+      image: "/images/action-blocks/action-block-catalog.png",
+      desc: hoc_s("hoc_page.beyond.catalog.desc"),
       url: CDO.studio_url("/catalog"),
-      button_label: hoc_s(:call_to_action_view_curriculum_catalog),
-      aria_label: ""
+      button_label: hoc_s("hoc_page.beyond.catalog.button"),
     },
     {
-      title: hoc_s(:start_professional_learning),
-      image: "/images/teach-page-pl-offerings-self-paced.png",
-      desc: hoc_s(:hoc_page_go_beyond_hoc_card_desc_pl),
-      url: "/educate/professional-development-online",
-      button_label: hoc_s(:call_to_action_learn_more),
-      aria_label: hoc_s(:aria_label_call_to_action_learn_more_self_paced_pl)
+      title: hoc_s("hoc_page.beyond.teach.title"),
+      image: "/images/action-blocks/action-block-teach.png",
+      desc: hoc_s("hoc_page.beyond.teach.desc"),
+      url: "/teach",
+      button_label: hoc_s("hoc_page.beyond.teach.button"),
+    },
+    {
+      title: hoc_s("hoc_page.beyond.professional_learning.title"),
+      image: "/images/action-blocks/action-block-self-paced-pl.png",
+      desc: hoc_s("hoc_page.beyond.professional_learning.desc"),
+      url: "/educate/professional-learning/self-paced",
+      button_label: hoc_s("hoc_page.beyond.professional_learning.button"),
     },
   ]
 
-%div.editorial-cards-wrapper
-  - card_item.each do |card_item|
-    .flex-container.justify-space-between.align-content-baseline.wrap
+.action-block__wrapper.action-block__wrapper--three-col
+  - block_items.each do |block_item|
+    .action-block.action-block--one-col.flex-space-between.white
       .content-wrapper
-        %img{src: card_item[:image], alt: ""}
-        %h3.heading-sm
-          = card_item[:title]
-        %p.no-margin-bottom
-          = card_item[:desc]
+        %h3
+          = block_item[:title]
+        %img{src: block_item[:image], alt: ""}
+        %p
+          = block_item[:desc]
       .content-footer
-        %a.link-button{href: card_item[:url], "aria-label": card_item[:aria_label]}
-          = card_item[:button_label]
+        %a.link-button{href: block_item[:url]}
+          = block_item[:button_label]

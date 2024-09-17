@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import fontConstants from '@cdo/apps/fontConstants';
 import msg from '@cdo/locale';
 
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 import experiments from '../../util/experiments';
 import {showPreview} from '../redux/data';
@@ -42,7 +42,7 @@ class LibraryTable extends React.Component {
     const shouldShowTable =
       datasetInfo &&
       (datasetInfo.published ||
-        experiments.isEnabled(experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES));
+        experiments.isEnabled(experiments.SHOW_UNPUBLISHED_DATASET_TABLES));
     if (!shouldShowTable) {
       return null;
     }

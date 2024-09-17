@@ -14,7 +14,7 @@ import {
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import color from '@cdo/apps/util/color';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import {isLevelAssessment} from './progressHelpers';
 import {levelProgressStyle, hoverStyle} from './progressStyles';

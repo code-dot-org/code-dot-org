@@ -1,4 +1,5 @@
 import msg from '@cdo/javalab/locale';
+
 import {
   JavabuilderExceptionType,
   NeighborhoodExceptionType,

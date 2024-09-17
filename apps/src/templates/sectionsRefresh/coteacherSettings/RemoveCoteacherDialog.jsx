@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
-import AccessibleDialog from '../../AccessibleDialog';
+import AccessibleDialog from '../../../sharedComponents/AccessibleDialog';
 
 import styles from './coteacher-settings.module.scss';
 

@@ -1,0 +1,9 @@
+name 'CSA U1 Asphalt Art Project_pilot-2025'
+display_name 'Asphalt Art Project'
+description 'Choose a grid and develop your Asphalt Art Project.'
+
+sublevels
+level 'CSA U1 Asphalt Art Project 8x8_pilot-2025'
+level 'CSA U1 Asphalt Art Project 12x12_pilot-2025'
+level 'CSA U1 Asphalt Art Project 16x16_pilot-2025'
+level 'CSA U1 Asphalt Art Project 32x32_pilot-2025'

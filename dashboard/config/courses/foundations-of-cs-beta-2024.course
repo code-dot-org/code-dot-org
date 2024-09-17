@@ -10,7 +10,7 @@
     "fcs5-beta-2024",
     "fcs6-beta-2024"
   ],
-  "published_state": "preview",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

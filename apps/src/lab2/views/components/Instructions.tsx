@@ -1,37 +1,35 @@
-import React, {useCallback, useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import moduleStyles from './instructions.module.scss';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
+
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import {LabState} from '../../lab2Redux';
-import {ThemeContext} from '../ThemeWrapper';
-import PredictQuestion from './PredictQuestion';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {
   isPredictAnswerLocked,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {LabState} from '../../lab2Redux';
+import {ThemeContext} from '../ThemeWrapper';
+
+import PredictQuestion from './PredictQuestion';
+import PredictSummary from './PredictSummary';
+import TextToSpeech from './TextToSpeech';
+
+import moduleStyles from './instructions.module.scss';
+
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
   beforeNextLevel?: () => void;
-  /**
-   * Base asset URL for images. Note: this is currently unused but may be needed in the future if we support
-   * instructions images.
-   * */
-  baseUrl?: string;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
-  /**
-   * If the image should pop out to the right of the panel or to the left when clicked. Note: instructions images
-   * are currently unsupported. Defaults to right.
-   */
-  imagePopOutDirection?: 'right' | 'left';
   /**
    * A callback when the user clicks on clickable text.
    */
@@ -39,6 +37,8 @@ interface InstructionsProps {
   manageNavigation?: boolean;
   /** Optional classname for the container */
   className?: string;
+  /** Whether we support TTS. */
+  offerTts?: boolean;
 }
 
 /**
@@ -51,12 +51,11 @@ interface InstructionsProps {
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
   beforeNextLevel,
-  baseUrl,
   layout,
-  imagePopOutDirection,
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
+  offerTts = false,
 }) => {
   const instructionsText = useSelector(
     (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
@@ -114,8 +113,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       setPredictResponse={response => dispatch(setPredictResponse(response))}
       predictAnswerLocked={predictAnswerLocked}
       layout={layout}
-      imagePopOutDirection={imagePopOutDirection}
       handleInstructionsTextClick={handleInstructionsTextClick}
+      offerTts={offerTts}
       className={className}
     />
   );
@@ -128,8 +127,6 @@ interface InstructionsPanelProps {
   message?: string;
   /** Key for rendering the optional message. A unique value ensures the appearance animation shows. */
   messageIndex?: number;
-  /** Optional image URL to display. */
-  imageUrl?: string;
   /** If the continue button should be shown. */
   showContinueButton?: boolean;
   /** If the finish button should be shown. */
@@ -140,11 +137,6 @@ interface InstructionsPanelProps {
   onNextPanel?: () => void;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
-  /**
-   * If the image should pop out to the right of the panel or to the left when clicked. Note: instructions images
-   * are currently unsupported. Defaults to right.
-   */
-  imagePopOutDirection?: 'right' | 'left';
   /** Display theme. Defaults to dark. */
   theme?: 'dark' | 'light';
   /**
@@ -157,23 +149,27 @@ interface InstructionsPanelProps {
   predictAnswerLocked: boolean;
   /** Optional classname for the container */
   className?: string;
+  offerTts?: boolean;
 }
 
 /**
- * Renders the instructions panel view. This is a separate component so that it can be
- * used without the Lab2 redux integration if necessary.
+ * Renders the instructions panel view. This was initially set up as a separate component
+ * so that it could be used without the Lab2 redux integration if necessary.
+ * If the level is a predict level, the predict reset button now uses redux, as it needs
+ * multiple unique redux values and there isn't a clear use case for having no redux integration
+ * anymore.
+ * TODO: Determine if we need this separate component anymore, or if we can merge this into Instructions.
+ * https://codedotorg.atlassian.net/browse/CT-671
  */
 const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   text,
   message,
   messageIndex,
-  imageUrl,
   showContinueButton,
   showFinishButton,
   beforeFinish,
   onNextPanel,
   layout = 'vertical',
-  imagePopOutDirection = 'right',
   theme = 'dark',
   handleInstructionsTextClick,
   predictSettings,
@@ -181,13 +177,9 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   setPredictResponse,
   predictAnswerLocked,
   className,
+  offerTts,
 }) => {
-  const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
-
-  const imageClicked = () => {
-    setShowBigImage(!showBigImage);
-  };
 
   const vertical = layout === 'vertical';
 
@@ -227,59 +219,30 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
           vertical && moduleStyles.itemVertical
         )}
       >
-        {imageUrl && (
-          <div
-            className={classNames(
-              moduleStyles.imageContainer,
-              !vertical && moduleStyles.horizontal
-            )}
-          >
-            {
-              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-              // Verify or update this alt-text as necessary
-            }
-            <img
-              src={imageUrl}
-              className={classNames(
-                moduleStyles.image,
-                !vertical && moduleStyles.fixedHeight
-              )}
-              onClick={() => imageClicked()}
-              alt=""
-            />
-            {showBigImage && (
-              <div
-                className={classNames(
-                  moduleStyles.bigImage,
-                  imagePopOutDirection === 'left' && moduleStyles.bigImageLeft
-                )}
-              >
-                {
-                  // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-                  // Verify or update this alt-text as necessary
-                }
-                <img src={imageUrl} onClick={() => imageClicked()} alt="" />
-              </div>
-            )}
-          </div>
-        )}
         {text && (
           <div
             key={text}
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
-            <EnhancedSafeMarkdown
-              markdown={text}
-              className={moduleStyles.markdownText}
-              handleInstructionsTextClick={handleInstructionsTextClick}
-            />
-            <PredictQuestion
-              predictSettings={predictSettings}
-              predictResponse={predictResponse}
-              setPredictResponse={setPredictResponse}
-              predictAnswerLocked={predictAnswerLocked}
-            />
+            {offerTts && <TextToSpeech text={text} />}
+            <div
+              id="instructions-text-content"
+              className={moduleStyles.textContent}
+            >
+              {predictSettings?.isPredictLevel && <PredictSummary />}
+              <EnhancedSafeMarkdown
+                markdown={text}
+                className={moduleStyles.markdownText}
+                handleInstructionsTextClick={handleInstructionsTextClick}
+              />
+              <PredictQuestion
+                predictSettings={predictSettings}
+                predictResponse={predictResponse}
+                setPredictResponse={setPredictResponse}
+                predictAnswerLocked={predictAnswerLocked}
+              />
+            </div>
           </div>
         )}
         {(message || canShowContinueButton || canShowFinishButton) && (
@@ -292,6 +255,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
+              {offerTts && message && <TextToSpeech text={message} />}
               {message && (
                 <EnhancedSafeMarkdown
                   markdown={message}
@@ -300,26 +264,22 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 />
               )}
               {canShowContinueButton && (
-                <button
+                <Button
                   id="instructions-continue-button"
-                  type="button"
+                  text={commonI18n.continue()}
                   onClick={onNextPanel}
                   className={moduleStyles.buttonInstruction}
-                >
-                  {commonI18n.continue()}
-                </button>
+                />
               )}
               {canShowFinishButton && (
                 <>
-                  <button
+                  <Button
                     id="instructions-finish-button"
-                    type="button"
                     onClick={onFinish}
                     disabled={isFinished}
                     className={moduleStyles.buttonInstruction}
-                  >
-                    {commonI18n.finish()}
-                  </button>
+                    text={commonI18n.finish()}
+                  />
                   {isFinished && <Heading6>{finalMessage}</Heading6>}
                 </>
               )}

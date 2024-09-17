@@ -1,0 +1,52 @@
+name 'CSA U7L4-L4_alt-2025'
+title 'Check for Understanding'
+
+wrong 'There is a syntax error in the program.'
+wrong 'The program runs correctly and prints `"Total tickets sold: 3"`.'
+right 'The `sellTicket()` method should be marked as `public` instead of `private`.'
+wrong 'The `sellTicket()` method should be marked as `static` instead of `private`.'
+wrong 'The `sellTicket()` method should be called using the `PromTickets.sellTicket()` syntax.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following `PromTickets` class.
+
+```
+public class PromTickets {
+    private int availableTickets;
+    private int soldTickets;
+
+    public PromTickets(int totalTickets) {
+        availableTickets = totalTickets;
+        soldTickets = 0;
+    }
+
+    private void sellTicket() {
+        if (availableTickets > 0) {
+            availableTickets--;
+            soldTickets++;
+            System.out.println("Ticket sold! Remaining tickets: " + availableTickets);
+        } else {
+            System.out.println("Sorry, tickets are sold out.");
+        }
+    }
+}
+```
+
+The following code segment appears in a class other than `PromTickets`.
+
+```
+PromTickets tickets = new PromTickets(100);
+tickets.sellTicket();
+tickets.sellTicket();
+tickets.sellTicket();
+System.out.println("Total tickets sold: " + tickets.soldTickets);
+```
+
+Which of the following best describes the reason why this code segment does not run?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The `sellTicket()` method is marked as `private`, which means it cannot be accessed outside of the `PromTickets` class. Therefore, attempting to call `tickets.sellTicket()` will result in a compile-time error. The correct solution is to mark the `sellTicket()` method as `public` so that it can be called from outside the class.
+MARKDOWN

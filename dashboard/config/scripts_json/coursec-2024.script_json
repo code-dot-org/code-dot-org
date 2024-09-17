@@ -15,13 +15,14 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2024-07-02 16:47:52 UTC",
-    "published_state": "preview",
+    "serialized_at": "2024-07-11 16:06:01 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -4437,6 +4438,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_my robotic friend_markdown"
+        ],
         "progression": "My Robotic Friend - Student Resources"
       },
       "bonus": false,
@@ -5788,6 +5792,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_my loopy robotic friend_markdown"
+        ],
         "progression": "My Loopy Robotic Friend - Student Resources"
       },
       "bonus": false,
@@ -6837,6 +6844,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_the big event_markdown"
+        ],
         "progression": "The Big Event - Student Resources"
       },
       "bonus": false,
@@ -7534,6 +7544,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_pattern block data_markdown"
+        ],
         "progression": "Pattern Block Data - Resource Reminder"
       },
       "bonus": false,
@@ -7581,6 +7594,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_binary bracelets_markdown"
+        ],
         "progression": "Binary Bracelets - Student Resources"
       },
       "bonus": false,

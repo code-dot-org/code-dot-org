@@ -3,7 +3,10 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Using AI Bot: Feature Vectors
+# Lesson 3: Using AI Bot and Feature Vectors
+#### The following levels come from Lesson 3 in the module and lead up to Dance Party AI Edition.
+
+<img src="https://images.code.org/9b822b615f797c236a7a0060874574fe-image-1720633199925.39.56 AM.png" alt="A graph plotting data points on size and hardness for a 'Sweet Potato' dataset. The graph features orange and purple squares representing data points. There is a diagonal line indicating a separation. Below the graph are dropdown menus for 'x Axis' and 'y Axis', currently set to 'Size' and 'Hardness' respectively. There are also accuracy statistics: 'Fruit Accuracy: 7 / 12 (58%)' and 'Veggie Accuracy: 1 / 12 (8%)'. Buttons labeled 'Flip Colors', 'Try Your Own Food!', and 'Reset' are available at the bottom." style="border-radius:40px; float: right; padding-right: 0px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
 ##What is a Feature Vector?
@@ -12,7 +15,8 @@ markdown <<MARKDOWN
 ##Why are Feature Vectors Important?
 #### Humans choose important details (features) of a problem and convert them into numbers, creating feature vectors. These vectors are used to train the AI, helping it learn to recognize and understand different things.
 
-![](https://images.code.org/1c679853316b58772aaaf3f71cc10db0-image-1719597451316.57.28 AM.png)
+
+
 
 ## Teacher Tip: 
 #### Reinforce the idea that <b> AI only knows the information that we give it. </b>

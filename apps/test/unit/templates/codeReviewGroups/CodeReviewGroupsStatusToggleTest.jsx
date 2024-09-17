@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedCodeReviewGroupsStatusToggle} from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsStatusToggle';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('Code Review Groups Status Toggle', () => {
   let setCodeReviewExpiration, fakeSectionId;
   beforeEach(() => {
@@ -20,10 +18,11 @@ describe('Code Review Groups Status Toggle', () => {
         setCodeReviewExpiration={setCodeReviewExpiration}
       />
     );
-    const toggle = wrapper.find('ToggleSwitch');
-    expect(toggle.prop('isToggledOn')).to.be.false;
+    const toggle = wrapper.find('input');
+    expect(toggle.prop('checked')).toBe(false);
     // expect to not find the enabled message
-    expect(wrapper.find('p')).to.have.lengthOf(0);
+    const enabledMsg = wrapper.find({name: 'enabledCodeReviewMessage'});
+    expect(enabledMsg).toHaveLength(0);
   });
 
   it('renders enable toggle if code review expiration date is before today', () => {
@@ -35,8 +34,8 @@ describe('Code Review Groups Status Toggle', () => {
         setCodeReviewExpiration={setCodeReviewExpiration}
       />
     );
-    const toggle = wrapper.find('ToggleSwitch');
-    expect(toggle.prop('isToggledOn')).to.be.false;
+    const toggle = wrapper.find('input');
+    expect(toggle.prop('checked')).toBe(false);
   });
 
   it('renders disable toggle if code review expiration date is after today', () => {
@@ -48,12 +47,12 @@ describe('Code Review Groups Status Toggle', () => {
         setCodeReviewExpiration={setCodeReviewExpiration}
       />
     );
-    const toggle = wrapper.find('ToggleSwitch');
-    expect(toggle.prop('isToggledOn')).to.be.true;
+    const toggle = wrapper.find('input');
+    expect(toggle.prop('checked')).toBe(true);
     // expect to see enabled message
-    const enabledMessage = wrapper.find('p').at(0).text();
+    const enabledMessage = wrapper.find({name: 'enabledCodeReviewMessage'});
     const expectedEnabledMessage =
       'Code review will be automatically disabled in 1 days. To reset this time, disable and re-enable code review.';
-    expect(enabledMessage).to.equal(expectedEnabledMessage);
+    expect(enabledMessage.text()).toBe(expectedEnabledMessage);
   });
 });

@@ -1,0 +1,8 @@
+name 'CSD U6 - Accelerometer - Chal_mb2022_mb_2024'
+display_name 'Challenge Levels'
+
+sublevels
+level 'CSD U6 - Accelerometer - CA_mb_2024'
+level 'CSD U6 - Accelerometer - ChalA_mb_2024'
+level 'CSD U6 - Accelerometer - ChalC_mb_2024'
+level 'CSD U6 - Accelerometer - ChalG_mb_2024'

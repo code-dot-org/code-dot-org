@@ -1,0 +1,11 @@
+name 'data-science-ch1-lesson4-level1-choice'
+display_name 'Check for Understanding'
+description '##Choose a persona and discuss what their stance on data rights may be.'
+
+sublevels
+level 'data-science-ch1-lesson4-level1'
+level 'data-science-ch1-lesson4-level2'
+level 'data-science-ch1-lesson4-level3'
+level 'data-science-ch1-lesson4-level4'
+level 'data-science-ch1-lesson4-level5'
+level 'data-science-ch1-lesson4-level6'

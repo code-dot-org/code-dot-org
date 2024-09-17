@@ -1,0 +1,46 @@
+$width-sm: 640px;
+
+.curriculum-banner-skinny {
+  background: url('/images/banners/banner-bg-school-supplies-dark-black.png') center center;
+  background-color: #292F36;
+  background-size: cover;
+  padding: 1rem 2rem;
+
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+
+    @media (max-width: 900px) {
+      gap: 2rem;
+    }
+
+    @media (max-width: $width-sm) {
+      padding-block: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  .text-wrapper {
+    flex: 2;
+    align-items: center;
+
+    @media (max-width: $width-sm) {
+      text-align: center;
+    }
+  }
+
+  img {
+    max-width: 10rem;
+    
+    @media (max-width: $width-sm) {
+      align-self: center;
+    }
+  }
+}

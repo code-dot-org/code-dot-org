@@ -1,9 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
 import JavalabButton from './JavalabButton';
 import JavalabSettings from './JavalabSettings';
+
 import style from './control-buttons.module.scss';
 
 export default function ControlButtons({

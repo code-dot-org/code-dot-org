@@ -42,6 +42,11 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       refute_redirect_to lockout_path
     end
 
+    it 'allows CSRF token retrieving' do
+      get get_token_path
+      refute_redirect_to lockout_path
+    end
+
     it 'allows changing language' do
       post locale_path
       refute_redirect_to lockout_path

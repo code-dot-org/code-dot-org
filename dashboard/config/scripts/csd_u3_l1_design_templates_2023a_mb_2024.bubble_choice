@@ -1,0 +1,10 @@
+name 'CSD U3 L1 - Design Templates_2023a_mb_2024'
+display_name 'Physical Design Prototypes'
+description 'Refer to your activity guide to recommend one of these prototype designs to each client based on their needs.'
+
+sublevels
+level 'CSD U6 - Design - prototype1_mb_2024'
+level 'CSD U6 - Design - prototype2_mb_2024'
+level 'CSD U6 - Design - prototype3_mb_2024'
+level 'CSD U6 - Design - prototype4_mb_2024'
+level 'CSD U6 - Design - prototype5_mb_2024'

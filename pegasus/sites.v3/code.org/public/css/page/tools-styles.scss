@@ -1,0 +1,86 @@
+@import "typography", "breakpoints";
+
+
+section.hero-banner-basic {
+  &.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #16545B 0%, #12625F 100%);
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/banners/banner-bg-rhombus.png');
+      background-repeat: repeat;
+      background-size: 1500px;
+      z-index: 2;
+      opacity: 4%;
+    }
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: $width-md) {
+      gap: 2rem;
+    }
+  }
+}
+
+section.tools-el {
+  ul.icon-bullet-list {
+    margin: 0;
+    width: 45%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    background: url("/images/tools/tools-el.png") center no-repeat;
+    background-size: cover;
+    height: auto;
+    flex: 1;
+    margin: 1.5rem 0;
+
+    @media screen and (max-width: $width-md) {
+      height: 28rem;
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      height: 20rem;
+    }
+  }
+}
+
+section.widgets {
+  p {
+    &.header-overline {
+      @include overline-one;
+      color: var(--brand_primary_default);
+    }
+  }
+
+  figure {
+    height: auto;
+  }
+}
+

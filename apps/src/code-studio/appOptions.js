@@ -46,10 +46,6 @@
  * @property {boolean} hideSource
  * @property {string} share
  * @property {string} labUserId
- * @property {string} firebaseName // TODO: post-firebase-cleanup: #56994
- * @property {string} firebaseSharedAuthToken // TODO: post-firebase-cleanup: #56994
- * @property {string} firebaseAuthToken // TODO: post-firebase-cleanup: #56994
- * @property {string} firebaseChannelIdSuffix // TODO: post-firebase-cleanup: #56994
  * @property {boolean} isSignedIn
  * @property {boolean} pinWorkspaceToBottom
  * @property {boolean} hasVerticalScrollbars
@@ -128,6 +124,8 @@
  * @property {boolean} isLastLevelInLesson
  * @property {boolean} isLastLevelInScript
  * @property {boolean} showEndOfLessonMsgs
+ * @property {boolean} anonymous
+ * @property {boolean} activity_guide_level
  */
 
 /**

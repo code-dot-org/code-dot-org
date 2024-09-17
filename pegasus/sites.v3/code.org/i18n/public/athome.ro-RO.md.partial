@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Participați la un curs introductiv, în ritm propriu</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Creați un joc sau o aplicație</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Încercați să practicați ȘC fără computer (opțiuni offline și pe mobil)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Învățați principiile științei calculatoarelor de la echipa Code.org și de la invitații speciali</a></li>
 </ul>
 
 <br>
@@ -277,51 +276,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">bună, Ruby</a> - Cel mai bizar mod de a învăța despre computere, tehnologie și programare. Activități axate pe o întreagă gamă de subiecte ȘC, cum ar fi abilitatea de a descompune o problemă în părțile componente, de a recunoaște tipare, de a gândi algoritmic, de a depana probleme și de a lucra în colaborare. (vârste între 4-10 ani)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">ȘC offline</a> - O colecție de materiale de învățare gratuite, în care se predau noțiuni de știința calculatoarelor (ȘC) prin intermediul jocurilor și al puzzle-urilor cu cărți de joc, ață, creioane și multă distracție. (vârste între 5-14 ani)</li>
 </ul>
-
-<h2>Nu aveți computer acasă? Încercați ȘC pe telefon cu aceste aplicații de la partenerii noștri</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Insula Cutiei"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Un joc fermecător de codificare mobilă care îi duce pe cursanți într-o aventură interesantă, în timp ce predă fundamentele codificării, cum ar fi algoritmi, recunoașterea modelelor, secvențe, bucle și condiționalități. <i>(pentru toate vârstele)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">Platforma de învățare a codului câștigătoare a</h3></a>premiului CodeSpark pentru copii cu vârste cuprinse între 5-9 ani. Rezolvă puzzle-uri și creează jocuri cu Foos în timp ce înveți să programezi. <strong>Notă: timp de 3 luni poți încerca gratuit codeSpark. La înscriere sunt necesare adresa de e-mail a părinților și informațiile legate de cardul de credit.</strong> <i>(pentru preșcolari, până în clasa a V-a)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Sus]</a></p>
-
-<a id="livecoding"></a>
-<h2>Învățați de la echipa Code.org și de la invitații speciali!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Sigla CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes sunt lecții interactive ușor de digerat, de 20 de minute, care îmbină informatica cu subiecte din lumea reală. Instruiți o IA să citească limbajul semnelor, creați o aplicație pentru a face bine, explorați universul Minecraft și multe altele!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Urmăriți episoadele</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Pauza de cod">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Păstrați distracția informaticii făcând o pauză de cod! Puteți crea un cifru cu Ashton Kutcher, puteți învăța despre variabile cu Yara Shahidi și puteți chiar să explorați cum funcționează internetul cu Vint Cerf, inventatorul internetului!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Conectați-vă</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

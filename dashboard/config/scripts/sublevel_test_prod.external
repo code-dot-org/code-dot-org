@@ -1,0 +1,18 @@
+name 'sublevel_test_prod'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Lesson 4: AI Tools in School
+
+#### Frontload concepts by starting with the <a href="https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/4#activity-7883565" target="_blank">warm up activity</a> where students engage in a survey. 
+
+
+<div style="background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "> 
+<b>Teacher Tip: </b>If needed, scaffold the lesson by choosing one topic to address as a class. Model how to respond to the prompts, and then have students complete another prompt independently. 
+</p>
+</div>
+
+
+MARKDOWN

@@ -1,4 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+
 import {
   DEFAULT_BPM,
   DEFAULT_KEY,
@@ -6,8 +7,8 @@ import {
   MIN_BPM,
   MIN_NUM_MEASURES,
 } from '../constants';
-import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {Key} from '../utils/Notes';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
@@ -23,8 +24,6 @@ export enum InstructionsPosition {
 }
 
 export interface MusicState {
-  /** Current music library name */
-  libraryName: string | null;
   /** Current pack ID, if a specific restricted pack from the current music library is selected */
   packId: string | null;
   /** If the song is currently playing */
@@ -76,7 +75,6 @@ export interface MusicState {
 }
 
 const initialState: MusicState = {
-  libraryName: null,
   packId: null,
   isPlaying: false,
   currentPlayheadPosition: 0,
@@ -112,9 +110,6 @@ const musicSlice = createSlice({
   name: 'music',
   initialState,
   reducers: {
-    setLibraryName: (state, action: PayloadAction<string>) => {
-      state.libraryName = action.payload;
-    },
     setPackId: (state, action: PayloadAction<string>) => {
       state.packId = action.payload;
     },
@@ -300,7 +295,6 @@ export const getCurrentlyPlayingBlockIds = (state: {
 registerReducers({music: musicSlice.reducer});
 
 export const {
-  setLibraryName,
   setPackId,
   setIsPlaying,
   setCurrentPlayheadPosition,

@@ -8,7 +8,7 @@
         {
           "key": "409174a0-d76d-4992-8486-cfd9801c329e",
           "notice": "Course Warning",
-          "details": "We are in the process of fully removing the Course 1 content and course from Code.org within the next 15 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 1 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings. ",
+          "details": "We are in the process of fully removing the Course 1 content and course from Code.org by Summer 2025, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 1 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings. ",
           "link": "https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses",
           "type": "warning",
           "visibility": "Teacher-only",
@@ -43,7 +43,7 @@
     },
     "new_name": null,
     "family_name": "course1",
-    "serialized_at": "2024-04-17 19:07:38 UTC",
+    "serialized_at": "2024-07-23 17:08:27 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

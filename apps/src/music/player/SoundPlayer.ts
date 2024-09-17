@@ -1,5 +1,5 @@
-import AudioSystem from './soundSub';
 import {Effects} from './interfaces/Effects';
+import AudioSystem from './soundSub';
 
 interface SoundPlayerOptions {
   delayTimeSeconds: number; // Delay time used in the delay effect

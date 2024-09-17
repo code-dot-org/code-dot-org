@@ -15,7 +15,10 @@ import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  LevelStatus,
+  SectionLoginType,
+} from '@cdo/generated-scripts/sharedConstants';
 
 export function fakeRowsForStudents(students) {
   const rows = [];
@@ -43,7 +46,14 @@ export function createStore(numStudents, numLessons, studentList = null) {
     id: 11,
     script: scriptData,
     students: [],
-    lessonExtras: false,
+    name: 'My Section',
+    lesson_extras: false,
+    pairing_allowed: false,
+    tts_autoplay_enabled: false,
+    studentCount: numStudents,
+    provider_managed: false,
+    code: 'PMTKVH',
+    loginType: SectionLoginType.word,
   };
   if (studentList === null) {
     for (let i = 0; i < numStudents; i++) {

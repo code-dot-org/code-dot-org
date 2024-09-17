@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedSendLessonDialog as SendLessonDialog} from '@cdo/apps/templates/progress/SendLessonDialog';
 
-import {assert} from '../../../util/reconfiguredChai';
-
 const lessonUrl = 'https://studio.code.org/s/coursee-2020/lessons/2/levels/1';
 
 describe('SendLessonDialog', () => {
@@ -13,9 +11,8 @@ describe('SendLessonDialog', () => {
       <SendLessonDialog lessonUrl={lessonUrl} showGoogleButton={false} />
     );
 
-    assert.equal(wrapper.find('#uitest-copy-button').length, 1);
-    assert.equal(
-      wrapper.find('#uitest-copy-button').at(0).props().icon,
+    expect(wrapper.find('#uitest-copy-button').length).toEqual(1);
+    expect(wrapper.find('#uitest-copy-button').at(0).props().icon).toEqual(
       'link'
     );
   });
@@ -25,6 +22,6 @@ describe('SendLessonDialog', () => {
       <SendLessonDialog lessonUrl={lessonUrl} showGoogleButton={true} />
     );
 
-    assert.equal(wrapper.find('GoogleClassroomShareButton').length, 1);
+    expect(wrapper.find('GoogleClassroomShareButton').length).toEqual(1);
   });
 });

@@ -1,0 +1,8 @@
+name 'CSA Pre-Survey q13_pilot-2025'
+question 'Have you ever learned any computer science in school before?'
+
+right 'Yes, I took a class.'
+right 'Yes, some activities, but not a full class.'
+right 'Not sure.'
+right 'Definitely not.'
+allow_multiple_attempts true

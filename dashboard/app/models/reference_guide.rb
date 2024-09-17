@@ -91,10 +91,10 @@ class ReferenceGuide < ApplicationRecord
   end
 
   # runs through all seed files, creating and deleting records to match the seed files
-  def self.seed_all
+  def self.seed_all(root_dir = Rails.root)
     # collect all existing ids
     removed_records = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/reference_guides/**/*.json")).each do |path|
+    Dir.glob(root_dir.join("config/reference_guides/**/*.json")).each do |path|
       # for each file, seed the reference guide and remove from the original set the found ids
       # (new ids won't change anything)
       removed_records -= [ReferenceGuide.seed_record(path)]

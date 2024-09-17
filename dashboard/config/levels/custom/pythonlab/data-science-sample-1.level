@@ -1,7 +1,8 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
-  "created_at": "2024-06-20T16:07:00.000Z",
+  "created_at": "2024-07-10T05:07:11.000Z",
   "level_num": "custom",
   "user_id": 1054,
   "properties": {
@@ -33,9 +34,13 @@
       },
       "folders": {
       }
+    },
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "predict_settings": {
+      "isPredictLevel": false
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-20 16:08:22 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2024-06-20 19:35:23 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2024-06-20 19:42:41 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-20 16:08:22 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2024-06-20 19:35:23 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2024-06-20 19:42:41 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2024-07-17 12:45:47 -0400\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"erin@email.com\"},{\"changed_at\":\"2024-07-17 12:48:49 -0400\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"erin@email.com\"}]"
 }]]></config>
 </Pythonlab>

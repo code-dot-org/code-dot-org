@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-16T14:17:38.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Wrap Up",
+    "long_instructions": " ####Imagine you have a friend who isn’t taking this class and they say “They’re just computers and machines with a mind of their own - there’s not much we petty humans can do to influence them”.####\r\n####**What would you say in response?**",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-16 14:17:41 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

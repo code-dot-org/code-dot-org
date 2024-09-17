@@ -4,7 +4,7 @@ import createP5Wrapper, {
   createStatefulP5Wrapper,
   expectAnimationsAreClones,
 } from '../../util/gamelab/TestableP5Wrapper';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {
   forEveryBooleanPermutation,
   sandboxDocumentBody,

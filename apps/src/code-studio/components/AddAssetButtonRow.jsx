@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {isIE11} from '@cdo/apps/util/browser-detector';
 import i18n from '@cdo/locale';
-
-import Button from '../../templates/Button';
 
 import AssetUploader from './AssetUploader';
 

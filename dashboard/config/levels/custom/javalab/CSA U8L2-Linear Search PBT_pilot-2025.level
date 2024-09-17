@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T21:19:34.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "SearchRunner.java": {
+        "text": "import java.util.ArrayList;\n\npublic class SearchRunner {\n  public static void main(String[] args) {\n\n    int[] firstSet = {10, 20, 30, 40, 50};\n    int[] secondSet = {6, 10, 2, 8, 4};\n\n    System.out.println(\"----------Search First Set----------\");\n    int firstResult = Searcher.searchList(firstSet, 30);\n    System.out.println(\"Target found in firstSet at index \" + firstResult);\n\n    System.out.println(\"\\n----------Search Second Set----------\");\n    int secondResult = Searcher.searchList(secondSet, 2);\n    System.out.println(\"Target found in secondSet at index \" + secondResult);\n\n    System.out.println(\"\\n----------Search Third Set----------\");\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Searcher.java": {
+        "text": "import java.util.ArrayList;\n\n/*\n * Analyzes lists of data\n */\npublic class Searcher {\n\n  /*\n   * Returns the index that target is found in the 1D array numbers,\n   * or returns -1 if the target is not found\n   */\n  public static int searchList(int[] numbers, int target) {\n    int itemsChecked = 0;\n\n    for (int index = 0; index < numbers.length; index++) {\n      System.out.println(\"Number of items checked: \" + itemsChecked);\n\n      if (numbers[index] == target) {\n        System.out.println(numbers[index] + \": is target\");\n        return index;\n      }\n      else {\n        System.out.println(numbers[index] + \": not target\");\n      }\n\n      itemsChecked++;\n    }\n\n    return -1;\n  }\n\n  /*\n   * Returns the index that target is found in the ArrayList numbers,\n   * or returns -1 if the target is not found\n   */\n  public static int searchList(ArrayList<Integer> numbers, int target) {\n    int itemsChecked = 0;\n\n    for (int index = 0; index < numbers.size(); index++) {\n      System.out.println(\"Number of items checked: \" + itemsChecked);\n\n      if (numbers.get(index) == target) {\n        System.out.println(numbers.get(index) + \": is target\");\n        return index;\n      }\n      else {\n        System.out.println(numbers.get(index) + \": not target\");\n      }\n\n      itemsChecked++;\n    }\n\n    return -1;\n  }\n\n  /*\n   * Returns an ArrayList of size numItems containing random numbers\n   */\n  public static ArrayList<Integer> generateRandomList(int numItems) {\n    ArrayList<Integer> temp = new ArrayList<Integer>();\n\n    while (numItems > 0) {\n      int randomNumber = (int)(Math.random() * 200);\n      temp.add(randomNumber);\n      numItems--;\n    }\n\n    return temp;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T21:19:34.619+00:00\",\"changed\":[\"cloned from \\\"CSA U8L2-Linear Search PBT_2025\\\"\"],\"cloned_from\":\"CSA U8L2-Linear Search PBT_2025\"}]"
+}]]></config>
+</Javalab>

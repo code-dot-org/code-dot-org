@@ -5,7 +5,7 @@ import React from 'react';
 
 import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';

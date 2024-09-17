@@ -1,9 +1,8 @@
 module Services
   module DeprecatedLevelLoader
-    FILEPATH = File.expand_path("#{Rails.root}/config/deprecated_levels/blockly_levels.json")
-
-    def self.load_blockly_levels
-      json = File.read(FILEPATH)
+    def self.load_blockly_levels(root_dir = Rails.root)
+      path = File.expand_path("#{root_dir}/config/deprecated_levels/blockly_levels.json")
+      json = File.read(path)
       raw_levels_by_key = JSON.parse(json)
       raw_levels_by_key.each do |key, raw_level|
         raw_level.symbolize_keys!

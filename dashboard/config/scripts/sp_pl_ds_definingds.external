@@ -1,0 +1,33 @@
+name 'sp-pl-DS_definingDS'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Data Science?
+
+
+<img src="https://images.code.org/1233653f67af64f5f96488f45b298812-image-1724078163830.png" alt="bargraph and data icon" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
+
+## Defining Data
+
+#### Data is any form of organized information. This could be words, numbers or pictures.
+
+## Defining Data Science
+
+#### Data Science is the process of making meaning from that data.
+
+
+
+<br>
+<br>
+
+---
+
+## Why Students Should Learn It:
+
+#### Learning data science helps students develop critical thinking skills and understand how to make informed decisions based on data.
+
+#### It prepares them for a wide range of careers and enhances their ability to navigate a data-driven world. Plus, it empowers them to understand and address real-world problems using data.
+
+
+MARKDOWN

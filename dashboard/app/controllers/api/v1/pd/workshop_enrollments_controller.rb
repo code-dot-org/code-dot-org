@@ -58,9 +58,22 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     else
       ActiveRecord::Base.transaction do
         enrollment = ::Pd::Enrollment.new workshop: @workshop
-        enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
 
-        user&.update_school_info(enrollment.school_info)
+        if @workshop.course == COURSE_BUILD_YOUR_OWN
+          enrollment.update!(enrollment_params)
+
+          # Mark attendance for all sessions in Build Your Own workshops (we are not tracking attendance in
+          # this way for Build Your Own workshops, but we want to ensure that functionality for emails,
+          # certificates, etc. remains the same).
+          @workshop.sessions.each do |session|
+            attendance = Pd::Attendance.find_restore_or_create_by! session: session, teacher: user, enrollment: enrollment
+            attendance.update! marked_by_user: user
+          end
+        else
+          enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
+          user&.update_school_info(enrollment.school_info)
+        end
+
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
 

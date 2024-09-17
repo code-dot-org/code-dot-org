@@ -1,16 +1,16 @@
+import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
-import moduleStyles from './dance-ai-modal.module.scss';
-import classNames from 'classnames';
-import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
-
+import AiVisualizationPreview from './AiVisualizationPreview';
 import {
   DanceAiModalMode,
   DanceAiPreviewButtonToggleState,
   GeneratedEffect,
 } from './types';
 import {getPreviewCode} from './utils';
+
+import moduleStyles from './dance-ai-modal.module.scss';
 
 type DanceAiModalFlipCardProps = {
   mode: DanceAiModalMode;

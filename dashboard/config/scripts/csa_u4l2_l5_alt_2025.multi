@@ -1,0 +1,44 @@
+name 'CSA U4L2-L5_alt-2025'
+title 'Check for Understanding'
+
+right '![](https://images.code.org/e0b1998407be8b746351844ade30d3af-image-1677708677232.png)'
+wrong '![](https://images.code.org/8569d83e9a51fb78cb03d9ce247ac6e1-image-1677708684226.png)'
+wrong '![](https://images.code.org/4cfbf71a1e5b1f7e6dde8b6f9e750c6c-image-1677708689727.png)'
+wrong '![](https://images.code.org/2315be096610875c2cc0173d4b929091-image-1677708694973.png)'
+wrong '![](https://images.code.org/d4ae852241fb17ec43cb527bf4e49ef9-image-1677708700417.png)'
+
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+public class StaticNumber {
+
+   public static int number = 10;
+   
+   public static void changeNumber() {
+     number += 5;
+   }
+}
+```
+
+What is the output of executing the following code segment?
+
+```
+System.out.println("number before method call: " + StaticNumber.number);
+StaticNumber.changeNumber();
+System.out.println("number after method call: " + StaticNumber.number);
+``
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In this code segment, the `StaticNumber` class has a static variable `number` that is initialized to `10`. It also has a static method `changeNumber()` that increases the value assigned to `number` by `5`.
+
+When the first print statement is executed, it prints the current value assigned to `number`, which is `10`.
+
+Then the `changeNumber()` method is called, which increases the value assigned to `number` to `15`.
+
+When the second print statement is executed, it prints the current value assigned to `number`, which is `15`.
+MARKDOWN
+
+allow_multiple_attempts true

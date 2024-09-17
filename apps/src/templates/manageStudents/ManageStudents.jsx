@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
+import SyncOmniAuthSectionControl from '@cdo/apps/accounts/SyncOmniAuthSectionControl';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {loadSectionStudentData} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import ManageStudentsTable from './ManageStudentsTable';
@@ -26,7 +26,7 @@ class ManageStudents extends React.Component {
     const {sectionId, studioUrlPrefix, isLoadingStudents} = this.props;
 
     return (
-      <div>
+      <div data-testid={'manage-students-tab'}>
         {isLoadingStudents && <Spinner />}
         {!isLoadingStudents && (
           <div>

@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-08-28T15:38:34.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "editable",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01",
+        "gen-ai-mistral-pirate-7b",
+        "gen-ai-karen-creative-mistral-7b",
+        "gen-ai-arithmo2-mistral-7b",
+        "gen-ai-biomistral-7b"
+      ]
+    },
+    "long_instructions": "**Teacher Tip:** This level is your last opportunity to practice with AI Chat lab in this Professional Learning. Engage with this level as much or as little as you need to feel confident navigating AI Chat lab.\r\n\r\n## Explore Multiple Models\r\n\r\nThis level has _every_ base model available to experiment with and compare.\r\n\r\n### Do This\r\n1) Choose a model _other than the default one_ and try to create a chatbot with it.\r\n    - Come up with your own system prompt or retrieval and see if you can make a simple chatbot with it.",
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-28T15:38:34.301+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L5_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L5_2024\"},{\"changed_at\":\"2024-09-12 18:58:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

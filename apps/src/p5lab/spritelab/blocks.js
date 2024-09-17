@@ -1,15 +1,16 @@
+import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {parseSoundPathString} from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {getStore} from '@cdo/apps/redux';
-import {getLocation} from '../redux/locationPicker';
-import {P5LabInterfaceMode} from '../constants';
-import {TOOLBOX_EDIT_MODE} from '../../constants';
-import {animationSourceUrl} from '../redux/animationList';
-import {changeInterfaceMode} from '../actions';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
-import {parseSoundPathString} from '@cdo/apps/blockly/utils';
-import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
-import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+
+import {TOOLBOX_EDIT_MODE} from '../../constants';
+import {changeInterfaceMode} from '../actions';
+import {P5LabInterfaceMode} from '../constants';
+import {animationSourceUrl} from '../redux/animationList';
+import {getLocation} from '../redux/locationPicker';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -104,49 +105,6 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return `(${block.getFieldValue(arg.name)})`;
-    },
-  },
-  locationVariableDropdown: {
-    addInput(blockly, block, inputConfig, currentInputRow) {
-      block.getVars = function () {
-        return {
-          [Blockly.BlockValueType.LOCATION]: [
-            block.getFieldValue(inputConfig.name),
-          ],
-        };
-      };
-      block.renameVar = function (oldName, newName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.setTitleValue(newName, inputConfig.name);
-        }
-      };
-      block.removeVar = function (oldName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.dispose(true, true);
-        }
-      };
-
-      currentInputRow
-        .appendField(inputConfig.label)
-        .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(
-          new Blockly.FieldVariable(
-            Blockly.Msg.VARIABLES_SET_ITEM,
-            null,
-            null,
-            Blockly.BlockValueType.LOCATION,
-            null
-          ),
-          inputConfig.name
-        )
-        .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-    },
-    generateCode(block, arg) {
-      return Blockly.JavaScript.translateVarName(block.getFieldValue(arg.name));
     },
   },
   soundPicker: {
@@ -305,11 +263,7 @@ const customInputTypes = {
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       block.getVars = function () {
-        return {
-          [Blockly.BlockValueType.SPRITE]: [
-            block.getFieldValue(inputConfig.name),
-          ],
-        };
+        return [block.getFieldValue(inputConfig.name)];
       };
 
       currentInputRow

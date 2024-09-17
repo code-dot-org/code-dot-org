@@ -1,6 +1,17 @@
 :ruby
   block_items = [
     {
+      overline: hoc_s("ai_page.curricula.tile.humanities.overline"),
+      title: hoc_s("ai_page.curricula.tile.humanities.title"),
+      img: "/images/action-blocks/action-block-ai-humanities.png",
+      desc: hoc_s("ai_page.curricula.tile.humanities.desc"),
+      duration: hoc_s("ai_page.curricula.tile.humanities.duration"),
+      url: CDO.studio_url("/s/gen-ai-humanities"),
+      aria_label: hoc_s("ai_page.curricula.tile.humanities.aria_label"),
+      button_label: hoc_s("ai_page.curricula.tile.humanities.button"),
+      new: true,
+    },
+    {
       overline: hoc_s(:module_grade_6_12),
       title: hoc_s("coding_with_ai_tile.title"),
       img: "/images/action-blocks/action-block-coding-with-ai.png",
@@ -81,21 +92,6 @@
       button_label: hoc_s(:call_to_action_try_activity),
     },
   ]
-
-  # TODO - Remove this DCDO logic once the 2024 curriculum is live and add this to the top of the main list
-  if !!DCDO.get('curriculum-launch-2024', false)
-    block_items.unshift(
-      overline: hoc_s("ai_page.curricula.tile.humanities.overline"),
-      title: hoc_s("ai_page.curricula.tile.humanities.title"),
-      img: "/images/action-blocks/action-block-ai-humanities.png",
-      desc: hoc_s("ai_page.curricula.tile.humanities.desc"),
-      duration: hoc_s("ai_page.curricula.tile.humanities.duration"),
-      url: CDO.studio_url("/s/gen-ai-humanities"),
-      aria_label: hoc_s("ai_page.curricula.tile.humanities.aria_label"),
-      button_label: hoc_s("ai_page.curricula.tile.humanities.button"),
-      new: true,
-    )
-  end
 
 .carousel-wrapper
   %swiper-container.swiper-middle-high{navigation: "true", "navigation-next-el": ".nav-next-middle-high", "navigation-prev-el": ".nav-prev-middle-high", pagination: "true", init: "false"}

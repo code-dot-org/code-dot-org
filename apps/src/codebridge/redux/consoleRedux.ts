@@ -5,7 +5,13 @@ export interface CodeBridgeConsoleState {
 }
 
 export interface ConsoleLog {
-  type: 'system_out' | 'system_in' | 'img' | 'system_msg' | 'error';
+  type:
+    | 'system_out'
+    | 'system_in'
+    | 'img'
+    | 'system_msg'
+    | 'error'
+    | 'system_error';
   contents: string;
 }
 
@@ -33,6 +39,9 @@ const consoleSlice = createSlice({
     appendErrorMessage(state, action: PayloadAction<string>) {
       state.output.push({type: 'error', contents: action.payload});
     },
+    appendSystemError(state, action: PayloadAction<string>) {
+      state.output.push({type: 'system_error', contents: action.payload});
+    },
     resetOutput(state) {
       state.output = [];
     },
@@ -45,6 +54,7 @@ export const {
   appendOutputImage,
   appendSystemMessage,
   appendErrorMessage,
+  appendSystemError,
   resetOutput,
 } = consoleSlice.actions;
 

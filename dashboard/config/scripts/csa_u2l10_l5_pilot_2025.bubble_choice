@@ -1,0 +1,9 @@
+name 'CSA U2L10-L5_pilot-2025'
+display_name 'Skill Building: The toString() Method'
+description 'Write a `toString()` method in a class to display information about the state of an object.'
+
+sublevels
+level 'CSA U2L10-L5a_pilot-2025'
+level 'CSA U2L10-L5b_pilot-2025'
+level 'CSA U2L10-L5c_pilot-2025'
+level 'CSA U2L10-L5d_pilot-2025'

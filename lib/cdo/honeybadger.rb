@@ -65,7 +65,7 @@ module Honeybadger
   def self.notify_cronjob_error(opts)
     # Configure and start Honeybadger
     Honeybadger.configure do |config|
-      config.env = ENV['RACK_ENV']
+      config.env = ENV.fetch('RACK_ENV', nil)
       config.api_key = CDO.cronjobs_honeybadger_api_key
       config.logging.path = "STDOUT"
       config.logging.level = "ERROR"

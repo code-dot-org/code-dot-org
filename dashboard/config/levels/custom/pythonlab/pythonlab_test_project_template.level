@@ -8,7 +8,7 @@
     "encrypted": "false",
     "long_instructions": "## Sample Python Lab Project Template Level",
     "hide_share_and_remix": "false",
-    "source": {
+    "start_sources": {
       "files": {
         "0": {
           "id": "0",

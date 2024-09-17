@@ -1,6 +1,7 @@
 @import "color";
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 
+$tooltip-background-color: $light_gray_950;
 $tail-offset: 4px;
 $l-tail-length: 12px;
 $m-tail-length: 9px;
@@ -54,7 +55,7 @@ $tooltip-span-vertical-top-spacing: 2px;
   display: flex;
   align-items: center;
   height: fit-content;
-  background-color: $light_gray_900;
+  background-color: $tooltip-background-color;
   box-sizing: border-box;
   min-width: 64px;
   max-width: 256px;
@@ -78,7 +79,7 @@ $tooltip-span-vertical-top-spacing: 2px;
     inset-block-start: 100%;
     inset-inline-start: 50%;
     border-style: solid;
-    border-color: $light_gray_900 transparent transparent transparent;
+    border-color: $tooltip-background-color transparent transparent transparent;
   }
 }
 
@@ -88,10 +89,10 @@ $tooltip-span-vertical-top-spacing: 2px;
     position: absolute;
     inset-inline-end: 100%;
     border-style: solid;
-    border-color: transparent $light_gray_900 transparent transparent;
+    border-color: transparent $tooltip-background-color transparent transparent;
 
     html[dir='rtl'] & {
-      border-color: transparent transparent transparent $light_gray_900;
+      border-color: transparent transparent transparent $tooltip-background-color;
     }
   }
 }
@@ -103,7 +104,7 @@ $tooltip-span-vertical-top-spacing: 2px;
     inset-block-end: 100%;
     inset-inline-start: 50%;
     border-style: solid;
-    border-color: transparent transparent $light_gray_900 transparent;
+    border-color: transparent transparent $tooltip-background-color transparent;
   }
 }
 
@@ -113,10 +114,10 @@ $tooltip-span-vertical-top-spacing: 2px;
     position: absolute;
     inset-inline-start: 100%;
     border-style: solid;
-    border-color: transparent transparent transparent $light_gray_900;
+    border-color: transparent transparent transparent $tooltip-background-color;
 
     html[dir='rtl'] & {
-      border-color: transparent $light_gray_900 transparent transparent;
+      border-color: transparent $tooltip-background-color transparent transparent;
     }
   }
 }

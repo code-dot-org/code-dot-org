@@ -7,8 +7,8 @@ require 'csv'
 require 'json'
 require 'aws-sdk-glue'
 
-DATABASE = ENV['DATABASE']
-TABLE = ENV['TABLE']
+DATABASE = ENV.fetch('DATABASE', nil)
+TABLE = ENV.fetch('TABLE', nil)
 
 LOG_FIELDS = ENV['LOG_FIELDS']&.split(',')
 OLD_LOG_FIELDS = ENV['OLD_LOG_FIELDS']&.split(',')

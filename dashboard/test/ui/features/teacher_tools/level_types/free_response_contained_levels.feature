@@ -8,7 +8,7 @@ Feature: Free Response Contained Levels
 Scenario: Applab with free response contained level
   When I open my eyes to test "applab contained level"
   Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/15"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I see no difference for "initial load"
   Then I press keys "This is my answer" for element ".response"
   And I see no difference for "answer entered"
@@ -17,7 +17,7 @@ Scenario: Applab with free response contained level
   # At this point, we should have submitted our result to the server, do
   # a reload and make sure we have the submission
   Then I am on "http://studio.code.org/s/allthethings/lessons/18/levels/15"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I see no difference for "reloaded with contained level answered"
   Then I press "runButton"
   And I press "finishButton"
@@ -55,7 +55,7 @@ Scenario: Authorized Teacher on Maze with free response contained level
   When I open my eyes to test "maze free response contained level"
   Given I sign in as "Teacher_Lillian"
   And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/6"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I see no difference for "initial load"
   And I press keys "Here is my response!" for element ".response"
   And I see no difference for "answer entered"
@@ -73,7 +73,7 @@ Scenario: Authorized Teacher on App Lab with free response contained level
   When I open my eyes to test "applab free response contained level"
   Given I sign in as "Teacher_Lillian"
   And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/3"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I see no difference for "initial load"
   And I press keys "Here is my response!" for element ".response"
   And I see no difference for "answer entered"
@@ -89,7 +89,7 @@ Scenario: Authorized Teacher on App Lab with free response contained level
 Scenario: Teacher can reset progress on free response contained level
   Given I sign in as "Teacher_Lillian"
   And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/3"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I press keys "Here is my response!" for element ".response"
   And element ".response" has value "Here is my response!"
   Then I press "runButton"
@@ -108,7 +108,7 @@ Scenario: Teacher can reset progress on free response contained level
 Scenario: Student can attempt retriable free response contained level multiple times
   Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/9"
   And I rotate to landscape
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I press keys "Here is my response!" for element ".response"
   And element ".response" has value "Here is my response!"
   Then I press "runButton"

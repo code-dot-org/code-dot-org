@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-17T19:45:30.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "####**How were you able to figure out the Klempin words?**",
+    "teacher_markdown": "Discussion Goal: Guide students to notice how the other words in the sentence helped them respond to the questions. This is sometimes called using “context clues”, where the context of the sentence helps you learn new words. Some students may try to say they “understand” or “know” these new words - if this comes up, consider asking some leading questions about whether or not this is really true. Just because we could answer some very direct questions about the text, does that mean we truly “understand” it? Digging into this may reveal that regurgitating responses from the text doesn’t always mean we know what we’re talking about. You can also relate this to student experiences where they may have earned a high-score on a test, but never really feel like they “learned” the material - a similar phenomenon has happened in the warm up.\r\n\r\n Say: Even without really understanding any of the words in this paragraph, we were able to figure out how to use the words from context and answer some questions. This is what a Large Language Model does as well - they figure out how to use words from the context around them rather than somebody telling the model explicitly what the word means.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-17 19:45:32 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# What are variables? 
+# What are Variables? 
 ####Variables store information (data). The value stored in a variable can be updated throughout a program.
 
 ##Examples of Variables in Games

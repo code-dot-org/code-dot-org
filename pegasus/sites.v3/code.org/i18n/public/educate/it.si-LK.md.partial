@@ -126,7 +126,6 @@ theme: responsive
 | **අන්තර්ජාල සිමියුලේටරය භාවිතා කිරීම**                                                                               | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **වෙබ් විද්යාගාරය භාවිතා කිරීම**                                                                                     | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **ගූගල් පන්ති කාමර බෙදා ගැනීමේ බොත්තම භාවිතා කිරීම**                                                                 | `https://apis.google.com`                                                                                  |
-| **යෙදුම් විද්යාගාර දත්ත කට්ටල භාවිතා කිරීම**                                                                         | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 

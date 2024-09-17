@@ -68,7 +68,7 @@ const styles = {
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.neutral_dark20,
-    borderRadius: 1,
+    borderRadius: 4,
     background: color.neutral_white,
     cursor: 'pointer',
   },

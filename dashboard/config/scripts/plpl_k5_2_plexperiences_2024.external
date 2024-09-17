@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Next Steps
 
-#### Thank you for completing **Teaching Elementary Game Design.** Now that you've learned some basic computer science skills, check out some of our curriculum and professional learning offerings to continue your journey!
+#### Thank you for completing **Teaching Elementary Game Design.** Access the student curriculum <a href="https://studio.code.org/s/elem-game-design-2024" target="_blank">here</a>. Now that you've learned some basic computer science skills, check out some of our curriculum and professional learning offerings to continue your journey!
 
 ## Teach CS in your class
 
@@ -32,9 +32,9 @@ markdown <<MARKDOWN
 
 ## Help us make this module better!
 
-#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit2" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
+#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/selfpaced_pd_k5_game_design_post_survey" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
 
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit2" target="blank" rel="noopener noreferrer">Take the survey</a>
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_k5_game_design_post_survey" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 
 ## Stay connected 

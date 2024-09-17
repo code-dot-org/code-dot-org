@@ -1,0 +1,27 @@
+name 'self-paced-pl-gen-ai-customizing_14_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lessons 5-7: Retrieval
+
+<img src="https://images.code.org/ed33d52d1e8715c0cdc2e3ea53048e2d-Screenshot 2024-08-30 at 2.46.04 PM.png" alt="diagram showing the relationship between retrival and storage in generative AI" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+
+#### Lessons 5 through 7 help students develop an understanding of **retrieval**.
+
+## Exploration
+#### Students are guided through how **retrieval** can improve chatbot accuracy and relevance.
+
+## Practice
+#### Through examples and guided practice, students learn how retrieval can provide **current, specialized, and accurate information** to reduce AI hallucinations.
+
+## Synthesis
+#### Students brainstorm and plan strategies to achieve user goals, explore methods for testing and evaluating chatbots, and design chatbots tailored to each scenario, deciding between system prompts or retrieval.
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> If you taught the Foundations of Generative AI unit, there are some opportunities in these lessons to tie in the retrieval process to embeddings.
+</p>
+</div>
+MARKDOWN

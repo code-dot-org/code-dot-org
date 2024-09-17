@@ -1,7 +1,8 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
-  "created_at": "2024-06-20T19:38:42.000Z",
+  "created_at": "2024-07-10T05:07:11.000Z",
   "level_num": "custom",
   "user_id": 1054,
   "properties": {
@@ -9,8 +10,13 @@
     "project_template_level_name": "data-science-sample-pbt-1",
     "long_instructions": "## Step 3: Inspect the Data\r\nBefore we do any calculations or visualizations, let's display the first few rows of the dataset to understand its structure.\r\n\r\n### Do This\r\n1.  Print the first few rows of the dataset to understand its structure.\r\n\r\n**What are the column names? How is the data formatted?**",
     "teacher_markdown": "Explain why it's important to inspect the data, such as to understand its structure or to detect anomalies or missing values. You could also encourage students to use methods like `info` and `describe` to get a good overview of the data. Highlight the potential insights each method provides and how it helps in the upcoming data manipulation steps.",
-    "hide_share_and_remix": "false"
+    "hide_share_and_remix": "false",
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    }
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2024-07-17 13:02:24 -0400\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"erin@email.com\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,6 +1,10 @@
 import {Block} from 'blockly';
 
-import {BlocklyWrapperType, ExtendedBlock} from '@cdo/apps/blockly/types';
+import {
+  BlocklyWrapperType,
+  ExtendedBlock,
+  ExtendedGenerator,
+} from '@cdo/apps/blockly/types';
 
 export default function initializeGenerator(
   blocklyWrapper: BlocklyWrapperType
@@ -63,9 +67,13 @@ export default function initializeGenerator(
 
   const originalBlockToCode = blocklyWrapper.Generator.prototype.blockToCode;
   blocklyWrapper.Generator.prototype.blockToCode = function (
+    this: ExtendedGenerator,
     block: Block | null,
     opt_thisOnly?: boolean
   ) {
+    if (!this.variableDB_) {
+      this.variableDB_ = this.nameDB_;
+    }
     // Skip disabled block check for non-rendered workspaces. Non-rendered workspaces
     // do not have an unused concept.
     if (block?.workspace?.rendered && !block?.isEnabled()) {

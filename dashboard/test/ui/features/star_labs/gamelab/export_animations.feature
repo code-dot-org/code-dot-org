@@ -11,7 +11,7 @@ Scenario: Export library animation
   And I press "runButton"
 
   Then I switch to the animation tab
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait until element ".icon-settings-export-white" is visible within element "iframe[src='/blockly/js/piskel/index.html']"
   And I switch to the first iframe
   And I wait until I don't see selector "#loadingMask"

@@ -1,4 +1,4 @@
-- if current_user && current_user.permission?(UserPermission::LEVELBUILDER)
+- if current_user && current_user.levelbuilder?
   = render layout: 'shared/extra_links' do
     %li= link_to 'Videos', videos_path
     %li= link_to 'Images', '/images/new'

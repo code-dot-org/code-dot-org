@@ -10,7 +10,7 @@ Ohai.plugin(:Sudo) do
       nil
     end
     user = ENV['SUDO_USER'] if [nil, 'root'].include?(user) && ENV['SUDO_USER']
-    user ||= ENV['USER']
+    user ||= ENV.fetch('USER', nil)
 
     user user
     current_user user

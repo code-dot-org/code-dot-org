@@ -5,10 +5,10 @@ import {connect} from 'react-redux';
 
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import color from '@cdo/apps/util/color';
 import {reload} from '@cdo/apps/utils';

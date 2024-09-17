@@ -1,5 +1,6 @@
 import {cachedWeightsMappings} from '../constants';
 import {FieldKey, GeneratedEffect, EffectsQuality} from '../types';
+
 import {calculateOutputSummedWeights} from './calculateOutputSummedWeights';
 
 const NUM_RANDOM_TOP_OPTIONS = 3;

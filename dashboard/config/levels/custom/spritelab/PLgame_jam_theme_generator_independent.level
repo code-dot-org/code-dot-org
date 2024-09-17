@@ -45,7 +45,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-06T19:36:34.159+00:00\",\"changed\":[\"cloned from \\\"game_jam_theme_generator_independent\\\"\"],\"cloned_from\":\"game_jam_theme_generator_independent\"},{\"changed_at\":\"2024-06-07 21:34:34 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-06T19:36:34.159+00:00\",\"changed\":[\"cloned from \\\"game_jam_theme_generator_independent\\\"\"],\"cloned_from\":\"game_jam_theme_generator_independent\"},{\"changed_at\":\"2024-06-07 21:34:34 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-07-09 17:37:12 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-07-09 17:43:40 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

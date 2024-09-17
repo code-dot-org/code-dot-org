@@ -3,30 +3,30 @@ Feature: Step Mode
 
 Scenario: Step Only - Failure
   Given I am on "http://studio.code.org/s/step/lessons/1/levels/1"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   Then element "#runButton" is hidden
     And element "#resetButton" is hidden
     And element "#stepButton" is visible
     And element "#stepButton" is not disabled
 
-  When I drag block "1" to block "5"
+  When I drag block "moveForward" to block "startBlock"
     And I press "stepButton"
     And I wait for 1 second
     And I wait until "#stepButton" is not disabled
   Then element "#runButton" is hidden
     And element "#resetButton" is visible
     And element "#stepButton" is not disabled
-    And block "5" has class "blocklySelected"
-    And block "6" doesn't have class "blocklySelected"
+    And block "startBlock" has class "blocklySelected"
+    And block "moveForward" doesn't have class "blocklySelected"
 
   # After second press, second block is highlighted and step button goes away
   When I press "stepButton"
-    And I wait until block "6" has class "blocklySelected"
+    And I wait until block "moveForward" has class "blocklySelected"
   Then element "#runButton" is hidden
     And element "#resetButton" is visible
     And element "#stepButton" is disabled
-    And block "5" doesn't have class "blocklySelected"
-    And block "6" has class "blocklySelected"
+    And block "startBlock" doesn't have class "blocklySelected"
+    And block "moveForward" has class "blocklySelected"
 
   When I press "resetButton"
   Then element "#runButton" is not displayed
@@ -36,14 +36,14 @@ Scenario: Step Only - Failure
 
 Scenario: Step Only - Success
   Given I am on "http://studio.code.org/s/step/lessons/1/levels/1"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   Then element "#runButton" is hidden
     And element "#resetButton" is hidden
     And element "#stepButton" is visible
     And element "#stepButton" is not disabled
 
-  When I drag block "1" to block "4"
-    And I drag block "1" to block "5"
+  When I drag block "moveForward" to block "startBlock"
+    And I drag block "moveForward" to block "moveForward"
     And I press "stepButton"
       And I wait for 1 second
       And I wait until "#stepButton" is not disabled
@@ -56,13 +56,13 @@ Scenario: Step Only - Success
 
 Scenario: Step Only - Reset while stepping
   Given I am on "http://studio.code.org/s/step/lessons/1/levels/1"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   Then element "#runButton" is hidden
     And element "#resetButton" is hidden
     And element "#stepButton" is visible
     And element "#stepButton" is not disabled
 
-  When I drag block "1" to block "5"
+  When I drag block "moveForward" to block "startBlock"
     And I press "stepButton"
     And I wait for 1 second
     And I wait until "#stepButton" is not disabled
@@ -79,18 +79,18 @@ Scenario: Step Only - Reset while stepping
 
 Scenario: Step and Run - Stepping
   Given I am on "http://studio.code.org/s/step/lessons/1/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   Then element "#runButton" is visible
     And element "#resetButton" is hidden
     And element "#stepButton" is visible
     And element "#stepButton" is not disabled
 
-  When I drag block "1" to block "5"
+  When I drag block "moveForward" to block "startBlock"
     And I press "stepButton"
     And I wait for 1 second
     And I wait until "#stepButton" is not disabled
-  Then block "5" has class "blocklySelected"
-    And block "6" doesn't have class "blocklySelected"
+  Then block "startBlock" has class "blocklySelected"
+    And block "moveForward" doesn't have class "blocklySelected"
     And element "#runButton" is hidden
     And element "#resetButton" is visible
     And element "#stepButton" is visible
@@ -104,12 +104,12 @@ Scenario: Step and Run - Stepping
 
 Scenario: Step and Run - Running
   Given I am on "http://studio.code.org/s/step/lessons/1/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   Then element "#runButton" is visible
     And element "#resetButton" is hidden
     And element "#stepButton" is visible
     And element "#stepButton" is not disabled
-  When I drag block "1" to block "5"
+  When I drag block "moveForward" to block "startBlock"
     And I press "runButton"
   Then element "#stepButton" is disabled
     And element "#runButton" is hidden

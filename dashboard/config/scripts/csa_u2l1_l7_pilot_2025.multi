@@ -1,0 +1,13 @@
+name 'CSA U2L1-L7_pilot-2025'
+title 'Check for Understanding'
+
+wrong 'Private instance variables are an example of encapsulation.'
+right 'Private instance variables are accessible outside of the class.'
+wrong 'The syntax to declare a private instance variable is `private dataType myVariable;`'
+wrong 'Each object has its own copy of each instance variable.'
+
+markdown <<MARKDOWN
+Which of the following is **NOT** true of instance variables?
+MARKDOWN
+
+allow_multiple_attempts true

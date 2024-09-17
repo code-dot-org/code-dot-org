@@ -1,5 +1,6 @@
-import {APP_HEIGHT, APP_WIDTH} from './constants';
 import * as colors from '@cdo/apps/util/color';
+
+import {APP_HEIGHT, APP_WIDTH} from './constants';
 
 /**
  * A set of P5 helpers for drawing.

@@ -1,9 +1,9 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as dontMarshalApi from '@cdo/apps/dontMarshalApi';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
-import {expect} from '../util/reconfiguredChai';
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 /*
  * These tests verify the behavior of dontMarshalApi.js list APIs when called

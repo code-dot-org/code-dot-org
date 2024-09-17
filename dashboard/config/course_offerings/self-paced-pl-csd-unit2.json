@@ -3,10 +3,10 @@
   "display_name": "Teaching Web Development",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
+  "curriculum_type": "Professional Learning",
+  "marketing_initiative": "CSD",
   "grade_levels": null,
-  "header": null,
+  "header": "self_paced",
   "image": null,
   "cs_topic": null,
   "school_subject": null,
@@ -15,6 +15,5 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": 486,
   "self_paced_pl_course_offering_key": "self-paced-pl-csd-unit2"
 }

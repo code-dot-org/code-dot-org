@@ -1,15 +1,18 @@
+import React from 'react';
+
+import {getStore} from '@cdo/apps/redux';
+import Sounds from '@cdo/apps/Sounds';
 import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/spritelab/locale';
-import P5Lab from '../P5Lab';
-import {P5LabType} from '../constants';
-import Sounds from '@cdo/apps/Sounds';
-import {getStore} from '@cdo/apps/redux';
-import {clearConsole} from '../redux/textConsole';
-import {clearPrompts, popPrompt} from '../redux/spritelabInput';
-import CoreLibrary from './CoreLibrary';
-import React from 'react';
-import {singleton as studioApp} from '../../StudioApp';
+
 import {closeWorkspaceAlert} from '../../code-studio/projectRedux';
+import {singleton as studioApp} from '../../StudioApp';
+import {P5LabType} from '../constants';
+import P5Lab from '../P5Lab';
+import {clearPrompts, popPrompt} from '../redux/spritelabInput';
+import {clearConsole} from '../redux/textConsole';
+
+import CoreLibrary from './CoreLibrary';
 
 export default class SpriteLab extends P5Lab {
   getAvatarUrl(levelInstructor) {

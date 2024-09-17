@@ -1,16 +1,16 @@
+import {render, screen} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
-import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+} from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('AiAssessmentBox', () => {
   const reportingData = {
@@ -19,8 +19,8 @@ describe('AiAssessmentBox', () => {
     levelName: 'Test Blah Blah Blah',
   };
   const mockAiInfo = {
-    id: 2,
-    learning_goal_id: 2,
+    id: 33,
+    learning_goal_id: 44,
     understanding: 2,
     aiConfidencePassFail: 2,
   };
@@ -54,21 +54,24 @@ describe('AiAssessmentBox', () => {
     currentLearningGoal: 0,
     reportingData: reportingData,
     aiUnderstandingLevel: RubricUnderstandingLevels.CONVINCING,
-    aiConfidence: 70,
+    aiConfidence: 1,
     aiEvalInfo: mockAiInfo,
     aiEvidence: mockEvidence,
     studentLevelInfo: {name: 'student', user_id: 42},
   };
-
+  let mockSetAiFeedback;
+  beforeEach(() => {
+    mockSetAiFeedback = jest.fn(() => {});
+  });
   it('renders AiAssessmentBox with student information if it is assessed by AI', () => {
-    const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+    render(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(
-      wrapper.find('BodyFourText StrongText + span').first().text()
-    ).to.equal(
+    screen.getByText(
       i18n.aiStudentAssessment({
         studentName: props.studentName,
         understandingLevel: i18n.aiAssessmentDoesMeet(),
@@ -77,12 +80,14 @@ describe('AiAssessmentBox', () => {
   });
 
   it('renders AiAssessmentBox with AiConfidenceBox when available', () => {
-    const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+    render(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('AiConfidenceBox')).to.have.lengthOf(1);
+    screen.getByText(i18n.aiConfidence({aiConfidence: i18n.low()}));
   });
 
   it('renders AiAssessmentBox without AiConfidenceBox when unavailable', () => {
@@ -90,29 +95,31 @@ describe('AiAssessmentBox', () => {
       ...props,
       aiConfidence: null,
     };
-    const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+    render(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('AiConfidenceBox')).to.have.lengthOf(0);
+    expect(screen.queryByText('AI Confidence')).toBeNull();
   });
 
   it('should render associated message for aiAssessed with convincing understanding', () => {
-    const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+    render(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
 
-    expect(
-      wrapper.html().includes(
-        i18n.aiStudentAssessment({
-          studentName: props.studentName,
-          understandingLevel: i18n.aiAssessmentDoesMeet(),
-        })
-      )
-    ).to.be.true;
+    screen.getByText(
+      i18n.aiStudentAssessment({
+        studentName: props.studentName,
+        understandingLevel: i18n.aiAssessmentDoesMeet(),
+      })
+    );
   });
 
   it('should render associated message for aiAssessed with limited understanding', () => {
@@ -120,82 +127,94 @@ describe('AiAssessmentBox', () => {
       ...props,
       aiUnderstandingLevel: RubricUnderstandingLevels.LIMITED,
     };
-    const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+    render(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-
-    expect(
-      wrapper.html().includes(
-        i18n.aiStudentAssessment({
-          studentName: props.studentName,
-          understandingLevel: i18n.aiAssessmentDoesNotMeet(),
-        })
-      )
-    ).to.be.true;
+    screen.getByText(
+      i18n.aiStudentAssessment({
+        studentName: props.studentName,
+        understandingLevel: i18n.aiAssessmentDoesNotMeet(),
+      })
+    );
   });
 
   it('renders AiAssessmentBox with notice that AI cannot be used when the topic is too subjective to be evaluated', () => {
     const updatedProps = {...props, isAiAssessed: false};
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('BodyThreeText')).to.have.lengthOf(0);
-    expect(wrapper.find('EmText')).to.have.lengthOf(1);
-    expect(wrapper.html().includes(i18n.aiCannotAssess())).to.be.true;
+    expect(wrapper.find('BodyThreeText')).toHaveLength(0);
+    expect(wrapper.find('EmText')).toHaveLength(1);
+    expect(wrapper.html().includes(i18n.aiCannotAssess())).toBe(true);
   });
 
   it('renders no evidence if none is given', () => {
     const updatedProps = {...props, aiEvidence: []};
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('ul li')).to.have.lengthOf(0);
-    expect(wrapper.html().includes(props.aiEvidence[0].message)).to.be.false;
+    expect(wrapper.find('ul li')).toHaveLength(0);
+    expect(wrapper.html().includes(props.aiEvidence[0].message)).toBe(false);
   });
 
   it('renders evidence when given', () => {
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('ul li')).to.have.lengthOf(2);
-    expect(wrapper.html().includes(props.aiEvidence[0].message)).to.be.true;
+    expect(wrapper.find('ul li')).toHaveLength(2);
+    expect(wrapper.html().includes(props.aiEvidence[0].message)).toBe(true);
 
     // Expect that lines are present
-    expect(wrapper.html().includes(`Lines`)).to.be.true;
+    expect(wrapper.html().includes(`Lines`)).toBe(true);
 
     // And we expect two links for each line for a total of 4 links
-    expect(wrapper.find('ul li p a')).to.have.lengthOf(4);
+    expect(wrapper.find('ul li p a')).toHaveLength(4);
   });
 
   it('falls back to rendering evidence as observations if there is no line numbers', () => {
     const updatedProps = {...props, aiEvidence: mockEvidenceWithoutLines};
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
     // Still one list item per evidence provided.
-    expect(wrapper.find('ul li')).to.have.lengthOf(3);
+    expect(wrapper.find('ul li')).toHaveLength(3);
     // We expect no links
-    expect(wrapper.find('ul li p a')).to.have.lengthOf(0);
+    expect(wrapper.find('ul li p a')).toHaveLength(0);
     // And it should not render line numbers in this case since it does not know
     // where any particular observation actually is.
-    expect(wrapper.html().includes(`Lines`)).to.be.false;
+    expect(wrapper.html().includes(`Lines`)).toBe(false);
   });
 
   it('navigates to the line when the evidence link for a line number is activated', () => {
-    const scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
+    const scrollToLineStub = jest
+      .spyOn(EditorAnnotator, 'scrollToLine')
+      .mockClear()
+      .mockImplementation();
 
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -210,19 +229,24 @@ describe('AiAssessmentBox', () => {
     link.simulate('click');
 
     // Check that we called the editor annotator to scroll to the line we want.
-    sinon.assert.calledWith(scrollToLineStub, lineNumber);
+    expect(scrollToLineStub).toHaveBeenCalledWith(lineNumber);
 
     // Restore stubs
-    scrollToLineStub.restore();
+    scrollToLineStub.mockRestore();
   });
 
   it('should send an event when the evidence link is clicked', () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     const eventName = EVENTS.TA_RUBRIC_EVIDENCE_GOTO_CLICKED;
-    const scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
+    const scrollToLineStub = jest
+      .spyOn(EditorAnnotator, 'scrollToLine')
+      .mockClear()
+      .mockImplementation();
 
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -234,7 +258,7 @@ describe('AiAssessmentBox', () => {
     link.simulate('click');
 
     // Check that we sent the event
-    expect(sendEventSpy).to.have.been.calledWith(eventName, {
+    expect(sendEventSpy).toHaveBeenCalledWith(eventName, {
       ...reportingData,
       learningGoalKey: props.learningGoals[props.currentLearningGoal].key,
       learningGoal: props.learningGoals[props.currentLearningGoal].learningGoal,
@@ -242,7 +266,7 @@ describe('AiAssessmentBox', () => {
     });
 
     // Restore stubs
-    scrollToLineStub.restore();
-    sendEventSpy.restore();
+    scrollToLineStub.mockRestore();
+    sendEventSpy.mockRestore();
   });
 });

@@ -1,0 +1,43 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-08-29T20:19:34.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/1a0eca8ce23bf76561753d231baa6084-Screenshot 2024-08-30 at 1.50.34 PM.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/70042085ec3737218b104c46c1e88c62-Screenshot 2024-08-30 at 1.50.39 PM.png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/44e1e994c082b998b89cb06976201939-Screenshot 2024-08-30 at 1.50.45 PM.png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/7bedbc5438074556cc21b95a07361ab0-Screenshot 2024-08-30 at 1.50.51 PM.png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/ac41e35c8cab9895a9dd8ab88df50fb2-Screenshot 2024-08-30 at 1.50.57 PM.png",
+        "key": "self-paced-pl-gen-ai-customizing-project_02_2024-d188940e-a67a-4deb-8fe0-80956166fdc5"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-29T20:19:34.108+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-customizing-project_02_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-customizing-project_02_2024\"},{\"changed_at\":\"2024-08-30 17:54:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

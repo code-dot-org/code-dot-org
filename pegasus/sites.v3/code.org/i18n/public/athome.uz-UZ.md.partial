@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Kirish, o'z-o'zini boshqarish kursini o'ting</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">O'yin yoki ilova yarating</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Kompyutersiz CS-ni sinab ko'ring (“elektrdan uzilgan” va mobil variantlar)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Code.org jamoasi va maxsus mehmonlardan CSni o'rganing</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Salom Ruby</a> - Kompyuterlar, texnologiyalar va dasturlash haqida ma'lumot olishning dunyodagi eng injiq usuli. Muammoni yechish, qonuniyatlarni aniqlash, algoritmik fikrlash, muammolarni debag qilish va birgalikda ishlash kabi bir qator informatika mavzularidagi mashg‘ulotlar. (4-10 yosh uchun)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Kartochkalar, simlar, qalamlar va ko'plab yugurishdan foydalanadigan qiziqarli o'yinlar va boshqotirmalar orqali informatika fanini o'rgatadigan bepul o'quv materiallari to'plami. (5-14 yosh uchun)</li>
 </ul>
-
-<h2>Uyda kompyuter yo'qmi? Hamkorlarimizning ushbu ilovalari yordamida telefoningizda CS ni sinab ko'ring</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Algoritmlar, naqshlarni aniqlash, ketma-ketliklar, ilmoqlar va shartlar kabi kodlash asoslarini o'rgatish bilan birga o'quvchilarni hayajonli sarguzashtga jalb qiladigan maftunkor mobil kodlash o'yini. <i>(barcha yoshdagilar uchun).</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>mukofotiga sazovor bo'lgan 5-9 yoshdagi bolalar uchun kodga o'rganish platformasi. Dasturlashni o'rganib, jumboqlarni yechib va Foo-lar bilan o'yinlar yarating. <strong>Eslatma: codeSpark 3 oylik bepul sinov muddatini taqdim etadi. Ro'yxatdan o'tishda ota-onaning elektron pochta manzili va kredit karta ma'lumotlari talab qilinadi.</strong><i>(5-sinfgacha bo'lgan o'quvchilar uchun)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Yuqoriga qaytish]</a></p>
-
-<a id="livecoding"></a>
-<h2>Code.org jamoasi va maxsus mehmonlardan o'rganing!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes logotipi">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes hazm qilish oson, 20 daqiqalik interaktiv darslar bo'lib, informatika fanini real dunyo mavzulari bilan uyg'unlashtiradi. Imo-ishora tilini o'qishga, yaxshilik uchun ilovani loyihalashtirishga, Minecraft dunyosini o'rganishga va boshqalarga sun'iy intellektni o'rgating!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Epizodlarni ko'rish</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Kodni buzish">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Kodni buzish</h3>
-        <div class="smalltext" style="">Kodni buzish orqali informatika fanini qiziqarli qiling! Siz Eshton Kutcher bilan shifrni yaratishingiz, Yara Shahidi bilan o'zgaruvchilar haqida bilib olishingiz va hatto Internetning haqiqiy ixtirochisi Vint Cerf bilan Internet qanday ishlashini o'rganishingiz mumkin!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Ulaning</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

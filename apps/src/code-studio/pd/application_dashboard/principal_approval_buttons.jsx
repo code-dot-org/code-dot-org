@@ -5,8 +5,8 @@ import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imp
 
 import {SendAdminApprovalEmailStatuses} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 
+import Spinner from '../../../sharedComponents/Spinner.jsx';
 import ConfirmationDialog from '../components/confirmation_dialog';
-import Spinner from '../components/spinner.jsx';
 
 export default class PrincipalApprovalButtons extends React.Component {
   static propTypes = {

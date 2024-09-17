@@ -1,10 +1,10 @@
 import 'details-element-polyfill';
 import 'lazysizes';
 import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
-import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
-import {initHamburger} from '@cdo/apps/hamburger/hamburger';
-import {loadVideos} from '@cdo/apps/util/loadVideos';
 import testImageAccess from '@cdo/apps/code-studio/url_test';
+import {initHamburger} from '@cdo/apps/hamburger/hamburger';
+import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
+import {loadVideos} from '@cdo/apps/util/loadVideos';
 
 // Prevent filtered errors from being passed to New Relic.
 if (window.newrelic) {

@@ -1,19 +1,15 @@
 #!/usr/bin/env ruby
 
-# TODO: unfirebase, also update datablock storage: #56993
-# TODO: post-firebase-cleanup, remove the firebase version: #56994
-
 require_relative '../only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
-# This script fetches weather forecast data from api.openweathermap and uploads to the shared firebase channel.
+# This script fetches weather forecast data from api.openweathermap and uploads to the shared datablock storage table.
+require_relative '../../../dashboard/config/environment'
 require_relative '../../../deployment'
 require 'net/http'
 require 'json'
 require 'ostruct'
 require 'date'
-# TODO: post-firebase-cleanup, remove the firebase reference: #56994
-require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper' # TODO: unfirebase, remaining firebase reference
 require 'honeybadger/ruby'
 
 WeatherForecastOffice = Struct.new(:city, :state, :zip_code)
@@ -93,7 +89,6 @@ def get_weather_data
     WeatherForecastOffice.new('Blacksburg/Roanoke', 'Virginia', '24060'),
     WeatherForecastOffice.new('Wakefield', 'Virginia', '23888'),
     WeatherForecastOffice.new('Charleston', 'West Virginia', '25309'),
-    WeatherForecastOffice.new('Guam', 'Guam', '96913'),
     WeatherForecastOffice.new('Honolulu', 'Hawaii', '96822'),
     WeatherForecastOffice.new('Birmingham', 'Alabama', '35040'),
     WeatherForecastOffice.new('Huntsville', 'Alabama', '35805'),
@@ -113,7 +108,6 @@ def get_weather_data
     WeatherForecastOffice.new('Albuquerque', 'New Mexico', '87106'),
     WeatherForecastOffice.new('Norman/Oklahoma City', 'Oklahoma', '73072'),
     WeatherForecastOffice.new('Tulsa', 'Oklahoma', '74128'),
-    WeatherForecastOffice.new('San Juan', 'Puerto Rico', '00979'),
     WeatherForecastOffice.new('Memphis', 'Tennessee', '38120'),
     WeatherForecastOffice.new('Morristown/Knoxville', 'Tennessee', '37877'),
     WeatherForecastOffice.new('Nashville', 'Tennessee', '37138'),
@@ -152,30 +146,25 @@ def get_weather_data
     WeatherForecastOffice.new('Seattle', 'Washington', '98115'),
     WeatherForecastOffice.new('Spokane', 'Washington', '99224')
   ]
-  records = {}
-  columns = ['id', 'State', 'City', 'Forecast Number', 'Date', 'Main Condition', 'Condition Description', 'Icon',
-             'Low Temperature', 'High Temperature', 'Humidity Percentage', 'Wind MPH', 'Wind Direction', 'Rain Inches',
-             'Snow Inches', 'Pressure', 'Cloud Percent', 'UTC Timestamp', 'Timezone Offset']
 
-  id = 1
-  forecast_offices.each do |office|
+  records = forecast_offices.flat_map do |office|
     forecast_number = 1
-
+    puts "Fetching weather data for #{office.zip_code}"
     url = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=#{office.zip_code},us&cnt=#{NUM_DAYS}&units=imperial&appid=#{API_KEY}"
     response = Net::HTTP.get_response(URI(url))
     if response.code != '200'
+      puts "Failed to retrieve data from Open Weather API for WeatherForecastOffice with zip code #{office.zip_code}. This office will not be updated in App Labs datasets."
       Honeybadger.notify(
         error: response.message,
-        error_message: "Failed to retrieve data from Open Weather API for use with App Labs datasets.",
+        error_message: "Failed to retrieve data from Open Weather API for WeatherForecastOffice with zip code #{office.zip_code}. This office will not be updated in App Labs datasets.",
       )
       next
     end
 
     parsed_response = JSON.parse(response.body)
     measurements = parsed_response['list']
-    measurements.each do |measurement|
+    measurements.map do |measurement|
       record = OpenStruct.new
-      record.id = id
       record.State = office.state
       record.City = office.city
       record['Forecast Number'] = forecast_number
@@ -203,25 +192,27 @@ def get_weather_data
       record['UTC Timestamp'] = measurement['dt']
       record['Timezone Offset'] = parsed_response['city']['timezone']
 
-      records[id] = record.to_h.to_json
-      id += 1
       forecast_number += 1
+
+      record.to_h
     end
-  end
-  return records, columns
+  end.compact
+  return records
 end
 
 def main
-  # TODO: post-firebase-cleanup, remove the firebase reference: #56994
-  fb = FirebaseHelper.new('shared')
-  records, columns = get_weather_data
+  records = get_weather_data
   if records.empty?
+    puts "No data returned from OpenWeather API. No records will be written to datablock storage."
     Honeybadger.notify(
-      error_message: "No data returned from OpenWeather API. No records will be written to firebase."
+      error_message: "No data returned from OpenWeather API. No records will be written to datablock storage."
       )
     return
   end
-  fb.upload_live_table('Daily Weather', records, columns)
+
+  ActiveRecord::Base.transaction do
+    DatablockStorageTable.update_shared_table('Daily Weather', records)
+  end
 end
 
 main

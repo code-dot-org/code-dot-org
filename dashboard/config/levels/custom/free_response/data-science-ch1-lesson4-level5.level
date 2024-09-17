@@ -15,9 +15,12 @@
     "optional": "false",
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "display_name": "The Data Analyst",
+    "bubble_choice_description": "Tamara is a 29-year-old data analyst working in Silicon Valley, using big data to optimize user engagement and product development.",
+    "thumbnail_url": "https://images.code.org/bb565ba0f54cd0797a8e9045db6c3431-tamara.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-11 20:21:50 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-11 20:21:50 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-22 18:36:05 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

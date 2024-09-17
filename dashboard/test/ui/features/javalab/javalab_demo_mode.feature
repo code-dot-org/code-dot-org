@@ -10,7 +10,7 @@ Feature: Javalab Demo Mode
     When I open my eyes to test "Javalab Demo Mode"
     Given I create a teacher named "Ms_Frizzle"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/4"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I dismiss the teacher panel
     When I press "runButton"
     And I wait to see a modal containing text "Please confirm you're human"

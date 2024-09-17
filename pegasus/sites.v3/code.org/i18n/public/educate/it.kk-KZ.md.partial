@@ -126,7 +126,6 @@ theme: responsive
 | **Интернет симуляторын пайдалану үшін**                                                                                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Веб-зертхананы пайдалану үшін**                                                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google Сыныптағы бөлісу түймесін пайдалану үшін**                                                                                | `https://apis.google.com`                                                                                  |
-| **App Lab деректер жиынтығын пайдалану үшін**                                                                                      | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 

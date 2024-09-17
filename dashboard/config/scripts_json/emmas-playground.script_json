@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "emmas-playground",
-    "serialized_at": "2024-07-01 17:34:01 UTC",
+    "serialized_at": "2024-08-29 21:54:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -185,6 +185,21 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Python Lab",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -347,6 +362,18 @@
       "seeding_key": {
         "lesson_activity.key": "f4a8d324-a7df-4031-83f6-c9df2fcc378c",
         "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "632c27e9-770e-4f98-87b8-bc219c9ac415",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "632c27e9-770e-4f98-87b8-bc219c9ac415",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
@@ -691,6 +718,16 @@
       "seeding_key": {
         "activity_section.key": "61cbec77-876f-4be2-b408-cefa4f35957f",
         "lesson_activity.key": "f4a8d324-a7df-4031-83f6-c9df2fcc378c"
+      }
+    },
+    {
+      "key": "c96fe760-3d6f-468f-a5a4-2f8e6e87a6a1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c96fe760-3d6f-468f-a5a4-2f8e6e87a6a1",
+        "lesson_activity.key": "632c27e9-770e-4f98-87b8-bc219c9ac415"
       }
     }
   ],
@@ -1500,6 +1537,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test_k5_ai_matching_background_emoji"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2238,6 +2278,27 @@
       },
       "level_keys": [
         "grade2-maker-content-assessment-5_assessment"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-python-lab-level"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c96fe760-3d6f-468f-a5a4-2f8e6e87a6a1"
+      },
+      "level_keys": [
+        "emma-test-python-lab-level"
       ]
     }
   ],
@@ -2996,6 +3057,18 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground",
         "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-python-lab-level",
+        "script_level.level_keys": [
+          "emma-test-python-lab-level"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c96fe760-3d6f-468f-a5a4-2f8e6e87a6a1"
       }
     }
   ],

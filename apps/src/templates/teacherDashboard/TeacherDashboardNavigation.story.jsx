@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
 
@@ -18,9 +18,9 @@ export const ScrollableNavigation = () => {
 
   return (
     <Router basename="/">
-      <Route
-        component={props => <TeacherDashboardNavigation links={links} />}
-      />
+      <Routes>
+        <Route element={<TeacherDashboardNavigation links={links} />} />
+      </Routes>
     </Router>
   );
 };
@@ -34,9 +34,9 @@ export const NonScrollableNavigation = () => {
 
   return (
     <Router basename="/">
-      <Route
-        component={props => <TeacherDashboardNavigation links={links} />}
-      />
+      <Routes>
+        <Route element={<TeacherDashboardNavigation links={links} />} />
+      </Routes>
     </Router>
   );
 };

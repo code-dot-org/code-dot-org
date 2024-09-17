@@ -64,9 +64,7 @@ export default {
 
   webpackFinal: async config => storybookWebpackConfig(config),
 
-  docs: {
-    autodocs: true,
-  },
+  docs: {},
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },

@@ -2,11 +2,10 @@ import {
   Role,
   AITutorInteractionStatus as Status,
   AITutorInteractionStatusValue,
-  AITutorTypesValue,
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
-import {MetricEvent} from '@cdo/apps/lib/metrics/events';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {MetricEvent} from '@cdo/apps/metrics/events';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 // These are the possible statuses returned by ShareFiltering.find_failure
@@ -34,27 +33,19 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
 
 /**
  * This function sends a POST request to the chat completion backend controller.
- * Note: This function needs access to the tutorType so it can decide whether to include
- * validation code on the backend.
  */
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
-  tutorType?: AITutorTypesValue,
-  levelInstructions?: string
+  scriptId?: number,
+  systemPrompt?: string
 ): Promise<OpenaiChatCompletionMessage | null> {
-  const payload = levelId
-    ? {
-        levelId: levelId,
-        messages: messagesToSend,
-        type: tutorType,
-        levelInstructions,
-      }
-    : {
-        messages: messagesToSend,
-        type: tutorType,
-        levelInstructions,
-      };
+  const payload = {
+    messages: messagesToSend,
+    levelId: levelId,
+    scriptId: scriptId,
+    systemPrompt: systemPrompt,
+  };
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -86,9 +77,9 @@ const formatForChatCompletion = (
 export async function getChatCompletionMessage(
   formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
+  systemPrompt?: string,
   levelId?: number,
-  tutorType?: AITutorTypesValue,
-  levelInstructions?: string
+  scriptId?: number
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     ...formatForChatCompletion(chatMessages),
@@ -100,8 +91,8 @@ export async function getChatCompletionMessage(
     response = await postOpenaiChatCompletion(
       messagesToSend,
       levelId,
-      tutorType,
-      levelInstructions
+      scriptId,
+      systemPrompt
     );
   } catch (error) {
     MetricsReporter.logError({

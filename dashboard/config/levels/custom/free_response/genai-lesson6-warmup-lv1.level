@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-16T14:24:40.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "####**Complete this mad-lib:** The __________ was dancing in rain",
+    "teacher_markdown": "Discussion Goal: Notice that most answers are likely nouns, like “dog” or “firefly” or “leaf”",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-16 14:24:43 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

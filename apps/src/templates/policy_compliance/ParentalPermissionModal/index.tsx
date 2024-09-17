@@ -11,6 +11,7 @@ import {
   Fade,
 } from 'react-bootstrap';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
@@ -19,7 +20,6 @@ import parentalPermissionRequestReducer, {
   requestParentalPermission,
   resetParentalPermissionRequest,
 } from '@cdo/apps/redux/parentalPermissionRequestReducer';
-import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import Skeleton from '@cdo/apps/util/loadingSkeleton';

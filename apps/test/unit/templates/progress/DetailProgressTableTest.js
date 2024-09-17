@@ -7,8 +7,6 @@ import {
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
-import {assert} from '../../../util/reconfiguredChai';
-
 describe('DetailProgressTable', () => {
   const lessons = [
     fakeLesson('lesson1', 1),
@@ -32,11 +30,11 @@ describe('DetailProgressTable', () => {
     );
 
     const rows = wrapper.props().children;
-    assert.equal(rows.length, 4);
+    expect(rows.length).toEqual(4);
   });
 
   it('throws if passed mismatched props', () => {
-    assert.throws(() =>
+    expect(() =>
       shallow(
         <DetailProgressTable
           groupedLesson={{
@@ -45,6 +43,6 @@ describe('DetailProgressTable', () => {
           }}
         />
       )
-    );
+    ).toThrow();
   });
 });

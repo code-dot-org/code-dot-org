@@ -1,9 +1,11 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import {SoundLoadCallbacks} from '../types';
+
 import {Effects} from './interfaces/Effects';
 import SoundCache from './SoundCache';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import SoundPlayer from './SoundPlayer';
-import {SoundLoadCallbacks} from '../types';
 
 // Multiplied by the duration of a single beat to determine the length of
 // time to fade out a sound, if trimming to a specific duration. This results
@@ -41,7 +43,7 @@ export default class SamplePlayer {
 
   constructor(
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
-    soundCache: SoundCache = new SoundCache(),
+    soundCache: SoundCache = SoundCache.getInstance(),
     soundPlayer: SoundPlayer = new SoundPlayer()
   ) {
     this.metricsReporter = metricsReporter;

@@ -168,6 +168,15 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   def update
     adjust_facilitators
 
+    if params[:pd_workshop][:course] == Pd::Workshop::COURSE_BUILD_YOUR_OWN
+      supplied_course_offering_ids = params[:pd_workshop].delete(:course_offerings)
+      if supplied_course_offering_ids.blank?
+        return render json: {error: "Cannot create a Build Your Own workshop without PL topics"}, status: :bad_request
+      else
+        @workshop.course_offerings = supplied_course_offering_ids.filter_map {|id| CourseOffering.find_by(id: id)}
+      end
+    end
+
     # The below user types have permission to set the regional partner. CSF Facilitators
     # can initially set the regional partner, but cannot edit it once it is set.
     can_update_regional_partner = current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) ||
@@ -192,6 +201,15 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   def create
     @workshop.organizer = current_user
     adjust_facilitators
+
+    if params[:pd_workshop][:course] == Pd::Workshop::COURSE_BUILD_YOUR_OWN
+      supplied_course_offering_ids = params[:pd_workshop].delete(:course_offerings)
+      if supplied_course_offering_ids.blank?
+        return render json: {error: "Cannot create a Build Your Own workshop without PL topics"}, status: :bad_request
+      else
+        @workshop.course_offerings = supplied_course_offering_ids.filter_map {|id| CourseOffering.find_by(id: id)}
+      end
+    end
 
     if @workshop.virtual && user_cannot_freely_edit_virtual(@workshop.course, @workshop.subject, @workshop.workshop_starting_date)
       render json: {error: "non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting."}, status: :bad_request

@@ -1,10 +1,9 @@
-import {expect} from 'chai';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import * as utils from '@cdo/apps/utils';
 
@@ -66,10 +65,5 @@ describe('TeacherApplication', () => {
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       '25'
     );
-  });
-
-  it('Reports to google analytics', () => {
-    mount(<TeacherApplication {...defaultProps} />);
-    sinon.assert.called(window.ga);
   });
 });

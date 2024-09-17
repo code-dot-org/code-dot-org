@@ -75,6 +75,15 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     assert_template :new
   end
 
+  test 'students are shown students_cannot_enroll view' do
+    student = create :student
+    sign_in student
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :students_cannot_enroll
+  end
+
   test 'teacher with missing application gets missing application view' do
     teacher = create :teacher
 

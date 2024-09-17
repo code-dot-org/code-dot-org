@@ -3,9 +3,9 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
 import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
 

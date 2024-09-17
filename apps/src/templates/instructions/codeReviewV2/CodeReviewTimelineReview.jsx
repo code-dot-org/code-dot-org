@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/templates/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 import CodeReviewTimelineElement, {

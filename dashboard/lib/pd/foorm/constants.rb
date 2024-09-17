@@ -7,7 +7,8 @@ module Pd::Foorm
       TYPE_DROPDOWN = 'dropdown'.freeze,
       TYPE_RATING = 'rating'.freeze,
       TYPE_MATRIX = 'matrix'.freeze,
-      TYPE_COMMENT = 'comment'.freeze
+      TYPE_COMMENT = 'comment'.freeze,
+      TYPE_BOOLEAN = 'boolean'.freeze
     ].freeze
 
     PANEL_TYPES = [
@@ -21,6 +22,7 @@ module Pd::Foorm
       ANSWER_MULTI_SELECT = 'multiSelect'.freeze,
       ANSWER_MATRIX = 'matrix'.freeze,
       ANSWER_RATING = 'scale'.freeze,
+      ANSWER_BOOLEAN = 'boolean'.freeze,
       # No answer, just question metadata, e.g. matrix heading
       ANSWER_NONE = 'none'.freeze,
       # Don't know answer type of a question
@@ -35,7 +37,8 @@ module Pd::Foorm
       TYPE_CHECKBOX => ANSWER_MULTI_SELECT,
       TYPE_RATING => ANSWER_SINGLE_SELECT,
       TYPE_MATRIX => ANSWER_MATRIX,
-      TYPE_RATING => ANSWER_RATING
+      TYPE_RATING => ANSWER_RATING,
+      TYPE_BOOLEAN => ANSWER_BOOLEAN
     }
 
     ROLLUP_CONFIGURATION_FILE = 'config/foorm/rollups/rollups_by_course.json'

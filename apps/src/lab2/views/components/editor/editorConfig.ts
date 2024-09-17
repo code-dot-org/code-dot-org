@@ -1,12 +1,10 @@
+import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
 import {
-  highlightSpecialChars,
-  drawSelection,
-  highlightActiveLine,
-  keymap,
-  lineNumbers,
-  rectangularSelection,
-} from '@codemirror/view';
-import {EditorState} from '@codemirror/state';
+  defaultKeymap,
+  indentWithTab,
+  history,
+  historyKeymap,
+} from '@codemirror/commands';
 import {
   indentOnInput,
   foldGutter,
@@ -15,14 +13,16 @@ import {
   bracketMatching,
   syntaxHighlighting,
 } from '@codemirror/language';
-import {
-  defaultKeymap,
-  indentWithTab,
-  history,
-  historyKeymap,
-} from '@codemirror/commands';
-import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
 import {highlightSelectionMatches, searchKeymap} from '@codemirror/search';
+import {EditorState} from '@codemirror/state';
+import {
+  highlightSpecialChars,
+  drawSelection,
+  highlightActiveLine,
+  keymap,
+  lineNumbers,
+  rectangularSelection,
+} from '@codemirror/view';
 
 // Extensions for codemirror. Based on @codemirror/basic-setup, with javascript-specific
 // extensions removed (lint, autocomplete). This is the base configuration for all codemirror

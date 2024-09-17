@@ -13,13 +13,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "computer-vision",
-    "serialized_at": "2024-07-04 18:19:58 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-07-26 20:53:51 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -1312,7 +1313,7 @@
       "key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0",
       "position": 3,
       "properties": {
-        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/quizzes/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "name": "(Optional) JuiceMind Assessment",
         "progression_name": "JuiceMind Assessment"
       },
@@ -5001,6 +5002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_CareerExploration3_3_2024"
+        ],
         "progression": "Career Spotlight: Healthcare"
       },
       "bonus": false,
@@ -5023,6 +5027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_CareerExploration3_2_2024"
+        ],
         "progression": "Solving Healthcare Issues with Computer Vision"
       },
       "bonus": false,
@@ -7374,6 +7381,18 @@
       }
     },
     {
+      "name": "Self-Paced Professional Development",
+      "url": "http://studio.code.org/courses/self-paced-pl-computer-vision-2024",
+      "key": "self-paced_professional_development",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "self-paced_professional_development"
+      }
+    },
+    {
       "name": "Teachable Machine 2.0",
       "url": "https://youtu.be/T2qQGqZxkD0?feature=shared",
       "key": "teachable_machine_2_0",
@@ -7810,6 +7829,12 @@
     {
       "seeding_key": {
         "resource.key": "computer_vision_overview",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "self-paced_professional_development",
         "script.name": "computer-vision"
       }
     }

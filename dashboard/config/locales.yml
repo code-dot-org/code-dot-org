@@ -74,7 +74,6 @@
 "dv-MV":
   english: "Dhivehi"
   native: "ދިވެހި"
-  debug: true
   webfonts: false
 
 "el": "el-GR"
@@ -248,7 +247,6 @@
 "kn-IN":
   english: "Kannada"
   native: "ಕನ್ನಡ"
-  debug: true
   webfonts: false
 
 "ku": "ku-IQ"
@@ -303,7 +301,6 @@
 "ms-MY":
   english: "Malay"
   native: "بهاس ملايو"
-  debug: true
   webfonts: false
 
 "mt": "mt-MT"
@@ -455,7 +452,6 @@
 "ur-PK":
   english: "Urdu"
   native: "اردو"
-  debug: true
   dir: 'rtl'
   webfonts: false
 

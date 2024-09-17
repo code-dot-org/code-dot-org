@@ -1,0 +1,18 @@
+name 'genai-lesson9-warmup-level1'
+title 'Warm Up'
+
+
+markdown <<MARKDOWN
+#Warm Up
+
+#### We're going to play a game called **Fortunately, Unfortunately**. Here's how it works:
+
+#### 1) We start with a simple sentence. For example: "Steve needed to go to the store to get some apples"
+
+#### 2) The next person continues the story with a generally positive sentence that starts with "Fortunately: ..."
+
+#### 3) The next person continues the sentence with a generally negative sentence that starts with "Unfortunately: ..."
+
+#### 4) Repeat five or six times, then pick a new starting sentence
+
+MARKDOWN

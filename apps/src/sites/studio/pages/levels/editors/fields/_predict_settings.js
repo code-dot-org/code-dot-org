@@ -1,8 +1,9 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
+
 import EditPredictSettings from '@cdo/apps/lab2/levelEditors/predictSettings/EditPredictSettings';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const initialSettings = getScriptData('predictsettings');

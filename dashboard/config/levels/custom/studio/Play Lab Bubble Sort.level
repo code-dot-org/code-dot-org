@@ -71,7 +71,7 @@
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="procedures_callnoreturn" inline="true" uservisible="false">
+                    <block type="procedures_callnoreturn" uservisible="false">
                       <mutation name="move down">
                         <arg name="actor"/>
                       </mutation>
@@ -93,12 +93,12 @@
                         </block>
                       </value>
                       <next>
-                        <block type="procedures_callnoreturn" inline="true" uservisible="false">
+                        <block type="procedures_callnoreturn" uservisible="false">
                           <mutation name="say number">
                             <arg name="actor"/>
                           </mutation>
                           <next>
-                            <block type="procedures_callnoreturn" inline="true" uservisible="false">
+                            <block type="procedures_callnoreturn" uservisible="false">
                               <mutation name="move down">
                                 <arg name="actor"/>
                               </mutation>
@@ -130,7 +130,7 @@
                                 </block>
                               </value>
                               <next>
-                                <block type="procedures_callnoreturn" inline="true" uservisible="false">
+                                <block type="procedures_callnoreturn" uservisible="false">
                                   <mutation name="say number">
                                     <arg name="actor"/>
                                   </mutation>
@@ -235,7 +235,7 @@
                                         </block>
                                       </statement>
                                       <next>
-                                        <block type="procedures_callnoreturn" inline="true" uservisible="false">
+                                        <block type="procedures_callnoreturn" uservisible="false">
                                           <mutation name="move up">
                                             <arg name="actor"/>
                                           </mutation>
@@ -257,7 +257,7 @@
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="procedures_callnoreturn" inline="true" uservisible="false">
+                                            <block type="procedures_callnoreturn" uservisible="false">
                                               <mutation name="move up">
                                                 <arg name="actor"/>
                                               </mutation>
@@ -310,7 +310,7 @@
                         </block>
                       </value>
                       <statement name="DO0">
-                        <block type="procedures_callnoreturn" inline="true" uservisible="false">
+                        <block type="procedures_callnoreturn" uservisible="false">
                           <mutation name="bubble sort">
                             <arg name="toSort"/>
                           </mutation>
@@ -442,7 +442,7 @@
                 </block>
               </value>
               <statement name="DO">
-                <block type="procedures_callnoreturn" inline="true">
+                <block type="procedures_callnoreturn">
                   <mutation name="say number">
                     <arg name="actor"/>
                   </mutation>
@@ -528,7 +528,7 @@
                                             </block>
                                           </value>
                                           <statement name="DO">
-                                            <block type="procedures_callnoreturn" inline="true">
+                                            <block type="procedures_callnoreturn">
                                               <mutation name="move right">
                                                 <arg name="actor"/>
                                               </mutation>
@@ -537,7 +537,7 @@
                                         </block>
                                       </statement>
                                       <next>
-                                        <block type="procedures_callnoreturn" inline="true">
+                                        <block type="procedures_callnoreturn">
                                           <mutation name="bubble sort">
                                             <arg name="toSort"/>
                                           </mutation>
@@ -1067,7 +1067,7 @@
                         </block>
                       </value>
                       <next>
-                        <block type="procedures_callnoreturn" inline="true">
+                        <block type="procedures_callnoreturn">
                           <mutation name="move left">
                             <arg name="actor"/>
                           </mutation>
@@ -1089,7 +1089,7 @@
                             </block>
                           </value>
                           <next>
-                            <block type="procedures_callnoreturn" inline="true">
+                            <block type="procedures_callnoreturn">
                               <mutation name="move right">
                                 <arg name="actor"/>
                               </mutation>

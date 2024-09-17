@@ -24,10 +24,11 @@ Scenario: Can Rename a Project
   And I wait until element "#ui-project-rename-input" is visible
   And I clear the text from element "#ui-project-rename-input"
   And I press keys "New Name" for element "#ui-project-rename-input"
-  Then I click selector ".ui-projects-rename-save"
-  And I wait until element ".ui-projects-rename-save" is not visible
+  Then I click selector "#ui-projects-rename-save"
+  And I wait until element "#ui-projects-rename-save" is not visible
   And the first project in the table is named "New Name"
 
+@no_safari
 Scenario: Can Remix a Project
   Given I make a "playlab" project named "Remix Template"
   Given I am on "http://studio.code.org/projects"

@@ -1,17 +1,19 @@
-import React from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/javalab/locale';
-import color from '@cdo/apps/util/color';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {setCommitSaveStatus} from '@cdo/apps/javalab/redux/javalabRedux';
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import {connect} from 'react-redux';
-import _ from 'lodash';
-import CommitDialogBody from './CommitDialogBody';
-import {setCommitSaveStatus} from '@cdo/apps/javalab/redux/javalabRedux';
-import {CompileStatus} from './constants';
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/javalab/locale';
+
 import {BackpackAPIContext} from './BackpackAPIContext';
-import fontConstants from '@cdo/apps/fontConstants';
+import CommitDialogBody from './CommitDialogBody';
+import {CompileStatus} from './constants';
 
 const PADDING = 8;
 

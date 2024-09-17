@@ -1,0 +1,45 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T15:22:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "DataRunner.java": {
+        "text": "public class DataRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Call the FileReader.toIntArray() to read the episodes.txt file and\n     * store the result in a 1D array. Instantiate a TVEpisodes object with the 1D\n     * array, then call the calcTotalLength() method and print the result.\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    \n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Call the calcAverageLength() method and print the result.\n     * -----------------------------------------------------------------------------\n     */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "TVEpisodes.java": {
+        "text": "/*\n * Manages data about episodes in a TV series\n */\npublic class TVEpisodes {\n\n  private String title;              // The title of a TV show\n  private String[] episodeTitles;    // The 1D array of episode titles\n  private int[] episodeLengths;      // The 1D array of the number of minutes in each episode\n\n  /*\n   * Sets title to the specified title of the TV show and initializes episodeTitles\n   * to the specified 1D array of the episode titles and episodeLengths to the 1D\n   * array of the number of minutes in each episode\n   */\n  public TVEpisodes(String title, int[] episodeLengths) {\n    this.title = title;\n    episodeTitles = FileReader.toStringArray(\"titles.txt\");\n    this.episodeLengths = episodeLengths;\n  }\n\n  /*\n   * Returns the name of the TV show\n   */\n  public String getTitle() {\n    return title;\n  }\n\n  /*\n   * Returns the episode title and its number of minutes at the specified index\n   */\n  public String getEpisodeInfo(int index) {\n    return episodeTitles[index] + \": \" + episodeLengths[index] + \" minutes\\n\";\n  }\n\n  /*\n   * Returns the total number of minutes for all episodes\n   */\n  public int calcTotalLength() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Traverse episodeLengths to calculate and return the total number of\n     * minutes for all TV episodes.\n     * -----------------------------------------------------------------------------\n     */\n\n\n    return -1;\n  }\n\n  /*\n   * Returns the average number of minutes for each episode\n   */\n  public int calcAverageLength() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Calculate and return the average number of minutes for each TV episode.\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    return -1;\n  }\n\n  /*\n   * Returns a String containing the name and length of each episode\n   */\n  public String toString() {\n    String result = \"\";\n\n    for (int index = 0; index < episodeTitles.length; index++) {\n      result += episodeTitles[index] + \": \" + episodeLengths[index] + \" minutes\\n\";\n    }\n\n    return result;\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "titles.txt": {
+        "text": "Chapter 1: The Mandalorian\nChapter 2: The Child\nChapter 3: The Sin\nChapter 4: Sanctuary\nChapter 5: The Gunslinger\nChapter 6: The Prisoner\nChapter 7: The Reckoning\nChapter 8: Redemption\nChapter 9: The Marshal\nChapter 10: The Passenger\nChapter 11: The Heiress\nChapter 12: The Siege\nChapter 13: The Jedi\nChapter 14: The Tragedy\nChapter 15: The Believer\nChapter 16: The Rescue",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "episodes.txt": {
+        "text": "37\n30\n34\n38\n32\n41\n37\n45\n50\n38\n32\n36\n43\n30\n35\n44",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\npublic class FileReader {\n\n  public static String[] toStringArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    String[] data = new String[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = currentValue;\n    }\n\n    return data;\n  }\n\n  public static int[] toIntArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    int[] data = new int[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Integer.parseInt(currentValue);\n    }\n\n    return data;\n  }\n\n  public static double[] toDoubleArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    double[] data = new double[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Double.parseDouble(currentValue);\n    }\n\n    return data;\n  }\n\n  private static Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  private static ArrayList<String> readDataFromFile(String filename) {\n    File dataFile = new File(filename);\n    Scanner reader = createScanner(dataFile);\n    ArrayList<String> temp = new ArrayList<String>();\n\n    while (reader.hasNextLine()) {\n      String currentLine = reader.nextLine().trim();\n      temp.add(currentLine);\n    }\n\n    reader.close();\n    return temp;\n  }\n  \n}",
+        "isVisible": false,
+        "tabOrder": 4
+      }
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T15:22:29.268+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-ChoiceD_2025\\\"\"],\"cloned_from\":\"CSA U3L5-ChoiceD_2025\"}]"
+}]]></config>
+</Javalab>

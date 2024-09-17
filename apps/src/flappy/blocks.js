@@ -641,10 +641,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendField(msg.setScore())
         .appendField(
-          new blockly.FieldTextInput(
-            '0',
-            blockly.FieldTextInput.numberValidator
-          ),
+          new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
           'VALUE'
         );
       this.setInputsInline(true);

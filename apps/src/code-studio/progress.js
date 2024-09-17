@@ -13,8 +13,8 @@ import {
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import clientState from './clientState';
-import DisabledBubblesAlert from './DisabledBubblesAlert';
-import DisabledBubblesModal from './DisabledBubblesModal';
+import DisabledBubblesAlert from './components/DisabledBubblesAlert';
+import DisabledBubblesModal from './components/DisabledBubblesModal';
 import {getHiddenLessons} from './hiddenLessonRedux';
 import {
   initProgress,

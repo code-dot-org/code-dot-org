@@ -62,12 +62,7 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s("maker_page.curricula_microbit.heading")
     %p=hoc_s("maker_page.curricula_microbit.desc")
-    -# TODO - Remove this DCDO flag logic once the 2024 curriculum is live
-    -# and deprecate the maker_curriculum_microbit view here and on /maker/microbit
-    - if !!DCDO.get('curriculum-launch-2024', false)
-      = view :maker_curriculum_microbit_carousel
-    - else
-      = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit", self_paced_pl_link: CDO.studio_url("/courses/self-paced-pl-microbit")
+    = view :maker_curriculum_microbit_carousel
 
 = view :section_divider_line
 

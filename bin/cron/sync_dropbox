@@ -19,7 +19,6 @@ require 'cdo/developers_topic'
 require "open3"
 
 FOLDERS = {
-  "advocacy.code.org" => "sites.v3/advocacy.code.org",
   "code.org" => "sites.v3/code.org",
   "curriculum-6-8" => "sites/virtual/curriculum-6-8",
   "curriculum-algebra" => "sites/virtual/curriculum-algebra",
@@ -38,7 +37,10 @@ FOLDERS = {
 INTERVAL_SECONDS = 5
 TOTAL_SECONDS = 55 - INTERVAL_SECONDS
 
-logger = HighFrequencyReporter.new(Slack, 'sync-dropbox-staging', '/home/ubuntu/dropbox_sync_error_log.csv')
+LOG_DIR = '/home/ubuntu/staging/log'.freeze
+FileUtils.mkdir_p(LOG_DIR) # This directory should always exist, but just in case
+
+logger = HighFrequencyReporter.new(Slack, 'sync-dropbox-staging', File.join(LOG_DIR, 'dropbox_sync_error_log.csv'))
 logger.load # load errors from most recent sync
 
 while (Time.now - SCRIPT_START) < TOTAL_SECONDS
@@ -46,8 +48,13 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
   logger.reset_new_events # reset new events such that they represent one run through all FOLDERS
   FOLDERS.each do |key, value|
     # 'unison' will sync the two folders. It will return true on success and false on failure.
-    # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
-    command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod -log -logfile /home/ubuntu/unison.log"
+    # For full details, see unison's man page. Docs are also here:
+    # https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
+    command = [
+      "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value}",
+      '-silent -ignore "Name .dropbox" -auto -perms 0 -dontchmod',
+      "-log -logfile #{File.join(LOG_DIR, 'unison.log')}"
+    ].join(' ')
     stdout, stderr, _ = Open3.capture3(command)
     next unless stdout == "" && stderr == ""
     error_message = <<~ERROR_MSG

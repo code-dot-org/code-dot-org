@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
 
 import SendLessonDialog from './SendLessonDialog';
@@ -32,7 +32,7 @@ export default class SendLesson extends React.Component {
       {
         study: 'send-to-students-button',
         study_group: 'v0',
-        event: event,
+        event: 'send-lesson-to-students',
         data_json: this.props.analyticsData,
       },
       {includeUserId: true}

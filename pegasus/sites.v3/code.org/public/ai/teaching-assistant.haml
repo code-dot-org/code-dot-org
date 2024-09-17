@@ -3,12 +3,7 @@ title: AI Teaching Assistant
 theme: responsive_full_width
 ---
 
-- button_url = "https://forms.gle/84GHPpoRRG9QGmAM8"
-- button_string = hoc_s("ai_ta_page.button")
-
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-
-= view :top_skinny_banner, banner_id: "banner-csd", banner_url: nil, banner_icon: "fa fa-megaphone", banner_text: hoc_s("ai_ta_page.announcement_banner", markdown: :inline, locals: {apply_url: "https://forms.gle/84GHPpoRRG9QGmAM8"}), external_link: true, light_theme: true
 
 %section.hero-banner-basic.bg-neutral-dark
   .wrapper.grid-container.justify-space-between.align-items-center.gap-4
@@ -17,8 +12,6 @@ theme: responsive_full_width
         =hoc_s("ai_ta_page.heading")
       %p.white
         =hoc_s("ai_ta_page.desc")
-      %a.link-button.white.has-external-link{href: button_url, target: "_blank", rel: "noopener noreferrer"}
-        =button_string
     %figure
       %img{src: "/images/ai/page/teaching-assistant/ai-ta-banner.png", alt: "", style: "width: 100%; margin-block-start: -2rem; margin-inline-start: -2rem;"}
 
@@ -38,18 +31,6 @@ theme: responsive_full_width
 %section
   .wrapper
     = view :section_basic_image_text, image_url: "/images/ai/page/teaching-assistant/ai-ta-focus-example.png", heading: hoc_s("ai_ta_page.focus.heading"), desc: hoc_s("ai_ta_page.focus.desc"), wrap_reverse: true, url: nil, urlText: nil
-
-%section.bg-primary-light
-  .wrapper.flex-container.justify-space-between.align-items-center.gap-1.wrap
-    .text-wrapper.col-60
-      %h2.heading-lg
-        =hoc_s("ai_ta_page.pilot_apps.heading")
-      %p.wrap-balance
-        =hoc_s("ai_ta_page.pilot_apps.desc", markdown: :inline)
-      %p=hoc_s("ai_ta_page.pilot_apps.cta", markdown: :inline, locals: {sign_up_url: "#ai-signup-form"})
-    .button-wrapper.col-30
-      %a.link-button.has-external-link{href: button_url, target: "_blank", rel: "noopener noreferrer"}
-        =button_string
 
 %section.bg-neutral-light
   .wrapper.centered

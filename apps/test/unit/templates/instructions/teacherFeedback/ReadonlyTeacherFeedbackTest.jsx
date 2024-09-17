@@ -7,8 +7,6 @@ import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedbac
 import ReadonlyTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/ReadonlyTeacherFeedback';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 const DEFAULT_PROPS = {
   rubric: null,
   visible: true,
@@ -40,7 +38,7 @@ const setUp = (overrideProps = {}) => {
 describe('ReadonlyTeacherFeedback', () => {
   it('does not display tab content if it is not currently visible', () => {
     const wrapper = setUp({visible: false});
-    expect(wrapper.isEmptyRender()).to.be.true;
+    expect(wrapper.isEmptyRender()).toBe(true);
   });
 
   describe('without previous feedback given', () => {
@@ -48,7 +46,7 @@ describe('ReadonlyTeacherFeedback', () => {
       const wrapper = setUp({
         rubric: RUBRIC,
       });
-      expect(wrapper.find('#ui-test-feedback-time')).to.have.length(0);
+      expect(wrapper.find('#ui-test-feedback-time')).toHaveLength(0);
     });
 
     it('displays rubric with expected props if there is a rubric', () => {
@@ -56,23 +54,23 @@ describe('ReadonlyTeacherFeedback', () => {
         rubric: RUBRIC,
       });
       const rubric = wrapper.find(Rubric);
-      expect(rubric).to.have.length(1);
-      expect(rubric.props().rubric).to.equal(RUBRIC);
-      expect(rubric.props().isEditable).to.equal(false);
+      expect(rubric).toHaveLength(1);
+      expect(rubric.props().rubric).toBe(RUBRIC);
+      expect(rubric.props().isEditable).toBe(false);
     });
 
     it('does not display the comment area', () => {
       const wrapper = setUp({
         rubric: RUBRIC,
       });
-      expect(wrapper.find(Comment)).to.have.lengthOf(0);
+      expect(wrapper.find(Comment)).toHaveLength(0);
     });
 
     it('does not display ReadOnlyReviewState', () => {
       const wrapper = setUp({
         rubric: RUBRIC,
       });
-      expect(wrapper.find(ReadOnlyReviewState)).to.have.lengthOf(0);
+      expect(wrapper.find(ReadOnlyReviewState)).toHaveLength(0);
     });
   });
 
@@ -81,7 +79,7 @@ describe('ReadonlyTeacherFeedback', () => {
       const wrapper = setUp({
         latestFeedback: FEEDBACK,
       });
-      expect(wrapper.find(Rubric)).to.have.lengthOf(0);
+      expect(wrapper.find(Rubric)).toHaveLength(0);
     });
 
     it('renders rubric with expected props if there is a rubric for the level', () => {
@@ -96,10 +94,10 @@ describe('ReadonlyTeacherFeedback', () => {
       });
 
       const rubric = wrapper.find(Rubric);
-      expect(rubric).to.have.length(1);
-      expect(rubric.props().rubric).to.equal(RUBRIC);
-      expect(rubric.props().performance).to.equal('performanceLevel2');
-      expect(rubric.props().isEditable).to.equal(false);
+      expect(rubric).toHaveLength(1);
+      expect(rubric.props().rubric).toBe(RUBRIC);
+      expect(rubric.props().performance).toBe('performanceLevel2');
+      expect(rubric.props().isEditable).toBe(false);
     });
 
     it('renders the comment with expected props if there is a comment', () => {
@@ -107,8 +105,8 @@ describe('ReadonlyTeacherFeedback', () => {
         latestFeedback: FEEDBACK,
       });
       const confirmCommentArea = wrapper.find(Comment).first();
-      expect(confirmCommentArea.props().isEditable).to.equal(false);
-      expect(confirmCommentArea.props().comment).to.equal('Good work!');
+      expect(confirmCommentArea.props().isEditable).toBe(false);
+      expect(confirmCommentArea.props().comment).toBe('Good work!');
     });
 
     it('does not render a comment if no comment was given with feedback', () => {
@@ -123,7 +121,7 @@ describe('ReadonlyTeacherFeedback', () => {
         latestFeedback,
       });
 
-      expect(wrapper.find(Comment)).to.have.lengthOf(0);
+      expect(wrapper.find(Comment)).toHaveLength(0);
     });
 
     it('renders ReadOnlyReviewState with expected props - keepWorking', () => {
@@ -133,8 +131,8 @@ describe('ReadonlyTeacherFeedback', () => {
       };
       const wrapper = setUp({latestFeedback});
       const reviewState = wrapper.find(ReadOnlyReviewState);
-      expect(reviewState).to.have.lengthOf(1);
-      expect(reviewState.props().latestReviewState).to.equal(
+      expect(reviewState).toHaveLength(1);
+      expect(reviewState.props().latestReviewState).toBe(
         ReviewStates.keepWorking
       );
     });
@@ -146,8 +144,8 @@ describe('ReadonlyTeacherFeedback', () => {
       };
       const wrapper = setUp({latestFeedback});
       const reviewState = wrapper.find(ReadOnlyReviewState);
-      expect(reviewState).to.have.lengthOf(1);
-      expect(reviewState.props().latestReviewState).to.equal(
+      expect(reviewState).toHaveLength(1);
+      expect(reviewState.props().latestReviewState).toBe(
         ReviewStates.awaitingReview
       );
     });
@@ -162,7 +160,7 @@ describe('ReadonlyTeacherFeedback', () => {
       };
 
       const wrapper = setUp({latestFeedback});
-      expect(wrapper.text().includes('Last updated a day ago')).to.be.true;
+      expect(wrapper.text().includes('Last updated a day ago')).toBe(true);
     });
   });
 });

@@ -3,16 +3,13 @@
 // This is a React client for a panels level.  Note that this is
 // only used for levels that use Lab2.
 
-import React, {useCallback, useContext} from 'react';
+import React, {useCallback} from 'react';
 
 import {
   sendSuccessReport,
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
-import {
-  DialogContext,
-  DialogType,
-} from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import useWindowSize from '../util/hooks/useWindowSize';
@@ -34,7 +31,7 @@ const PanelsLabView: React.FunctionComponent = () => {
   );
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
 
-  const dialogControl = useContext(DialogContext);
+  const dialogControl = useDialogControl();
 
   const onContinue = useCallback(
     (nextUrl?: string) => {
@@ -52,10 +49,13 @@ const PanelsLabView: React.FunctionComponent = () => {
 
   const onSkip = useCallback(() => {
     if (dialogControl) {
-      dialogControl.showDialog(DialogType.Skip, () => {
-        if (skipUrl) {
-          window.location.href = skipUrl;
-        }
+      dialogControl.showDialog({
+        type: DialogType.Skip,
+        handleConfirm: () => {
+          if (skipUrl) {
+            window.location.href = skipUrl;
+          }
+        },
       });
     }
   }, [dialogControl, skipUrl]);

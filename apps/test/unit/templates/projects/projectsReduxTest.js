@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import {
@@ -23,8 +23,6 @@ import projects, {
   unpublishProjectLibrary,
 } from '@cdo/apps/templates/projects/projectsRedux';
 
-import {assert} from '../../../util/reconfiguredChai';
-
 describe('projectsRedux', () => {
   const initialState = projects(undefined, {});
 
@@ -32,8 +30,7 @@ describe('projectsRedux', () => {
     it('sets the personal projects list', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
-      assert.deepEqual(
-        nextState.personalProjectsList.projects,
+      expect(nextState.personalProjectsList.projects).toEqual(
         stubFakePersonalProjectData
       );
     });
@@ -58,8 +55,7 @@ describe('projectsRedux', () => {
     const nextNextState = projects(nextState, nextAction);
 
     const expectedProjects = [personalProjects[0], updatedProject];
-    assert.deepEqual(
-      nextNextState.personalProjectsList.projects,
+    expect(nextNextState.personalProjectsList.projects).toEqual(
       expectedProjects
     );
   });
@@ -72,14 +68,12 @@ describe('projectsRedux', () => {
         channel: 'abcd2',
       });
       const nextNextState = projects(nextState, nextAction);
-      assert.equal(
-        nextNextState.personalProjectsList.projects[1].channel,
+      expect(nextNextState.personalProjectsList.projects[1].channel).toEqual(
         'abcd2'
       );
-      assert.equal(
-        nextNextState.personalProjectsList.projects[1].publishedAt,
-        '2016-11-30T23:59:59.999-08:00'
-      );
+      expect(
+        nextNextState.personalProjectsList.projects[1].publishedAt
+      ).toEqual('2016-11-30T23:59:59.999-08:00');
     });
   });
 
@@ -87,25 +81,23 @@ describe('projectsRedux', () => {
     it('sets the publishedAt field for the recently unpublished project to null', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
-      assert.deepEqual(
-        nextState.personalProjectsList.projects,
+      expect(nextState.personalProjectsList.projects).toEqual(
         stubFakePersonalProjectData
       );
-      assert.equal(nextState.personalProjectsList.projects[2].channel, 'abcd3');
-      assert.equal(
-        nextState.personalProjectsList.projects[2].publishedAt,
+      expect(nextState.personalProjectsList.projects[2].channel).toEqual(
+        'abcd3'
+      );
+      expect(nextState.personalProjectsList.projects[2].publishedAt).toEqual(
         '2015-12-31T23:59:59.999-08:00'
       );
       const nextAction = unpublishSuccess('abcd3');
       const nextNextState = projects(nextState, nextAction);
-      assert.equal(
-        nextNextState.personalProjectsList.projects[2].channel,
+      expect(nextNextState.personalProjectsList.projects[2].channel).toEqual(
         'abcd3'
       );
-      assert.equal(
-        nextNextState.personalProjectsList.projects[2].publishedAt,
-        null
-      );
+      expect(
+        nextNextState.personalProjectsList.projects[2].publishedAt
+      ).toEqual(null);
     });
   });
 
@@ -113,14 +105,13 @@ describe('projectsRedux', () => {
     it('removes the recently deleted project from the projects list', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
-      assert.deepEqual(
-        nextState.personalProjectsList.projects,
+      expect(nextState.personalProjectsList.projects).toEqual(
         stubFakePersonalProjectData
       );
-      assert.equal(nextState.personalProjectsList.projects.length, 4);
+      expect(nextState.personalProjectsList.projects.length).toEqual(4);
       const nextAction = deleteSuccess('abcd3');
       const nextNextState = projects(nextState, nextAction);
-      assert.equal(nextNextState.personalProjectsList.projects.length, 3);
+      expect(nextNextState.personalProjectsList.projects.length).toEqual(3);
     });
   });
 
@@ -128,20 +119,17 @@ describe('projectsRedux', () => {
     it('startRenamingProject sets isEditing to true', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
-      assert.deepEqual(
-        nextState.personalProjectsList.projects,
+      expect(nextState.personalProjectsList.projects).toEqual(
         stubFakePersonalProjectData
       );
       const nextAction = startRenamingProject('abcd3');
       const nextNextState = projects(nextState, nextAction);
-      assert.equal(
-        nextNextState.personalProjectsList.projects[2].isEditing,
+      expect(nextNextState.personalProjectsList.projects[2].isEditing).toEqual(
         true
       );
-      assert.equal(
-        nextNextState.personalProjectsList.projects[2].updatedName,
-        nextNextState.personalProjectsList.projects[2].name
-      );
+      expect(
+        nextNextState.personalProjectsList.projects[2].updatedName
+      ).toEqual(nextNextState.personalProjectsList.projects[2].name);
     });
   });
 
@@ -149,16 +137,14 @@ describe('projectsRedux', () => {
     it('updateProjectName saves the new name as updatedName', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
-      assert.deepEqual(
-        nextState.personalProjectsList.projects,
+      expect(nextState.personalProjectsList.projects).toEqual(
         stubFakePersonalProjectData
       );
       const nextAction = updateProjectName('abcd3', 'new name');
       const nextNextState = projects(nextState, nextAction);
-      assert.equal(
-        nextNextState.personalProjectsList.projects[2].updatedName,
-        'new name'
-      );
+      expect(
+        nextNextState.personalProjectsList.projects[2].updatedName
+      ).toEqual('new name');
     });
   });
 
@@ -166,22 +152,19 @@ describe('projectsRedux', () => {
     it('cancelRenamingProject sets isEditing to false', () => {
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
-      assert.deepEqual(
-        nextState.personalProjectsList.projects,
+      expect(nextState.personalProjectsList.projects).toEqual(
         stubFakePersonalProjectData
       );
       const nextAction = startRenamingProject('abcd3');
       const nextNextState = projects(nextState, nextAction);
-      assert.equal(
-        nextNextState.personalProjectsList.projects[2].isEditing,
+      expect(nextNextState.personalProjectsList.projects[2].isEditing).toEqual(
         true
       );
       const nextNextAction = cancelRenamingProject('abcd3');
       const nextNextNextState = projects(nextNextState, nextNextAction);
-      assert.equal(
-        nextNextNextState.personalProjectsList.projects[2].isEditing,
-        false
-      );
+      expect(
+        nextNextNextState.personalProjectsList.projects[2].isEditing
+      ).toEqual(false);
     });
   });
 
@@ -190,23 +173,19 @@ describe('projectsRedux', () => {
       const updatedName = 'new name';
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
-      assert.deepEqual(
-        nextState.personalProjectsList.projects,
+      expect(nextState.personalProjectsList.projects).toEqual(
         stubFakePersonalProjectData
       );
       nextState.personalProjectsList.projects[3].updatedName = updatedName;
       const nextAction = saveSuccess('abcd4');
       const nextNextState = projects(nextState, nextAction);
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].name,
+      expect(nextNextState.personalProjectsList.projects[3].name).toEqual(
         updatedName
       );
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].isSaving,
+      expect(nextNextState.personalProjectsList.projects[3].isSaving).toEqual(
         false
       );
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].isEditing,
+      expect(nextNextState.personalProjectsList.projects[3].isEditing).toEqual(
         false
       );
     });
@@ -217,24 +196,20 @@ describe('projectsRedux', () => {
       const updatedName = 'new name';
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
-      assert.deepEqual(
-        nextState.personalProjectsList.projects,
+      expect(nextState.personalProjectsList.projects).toEqual(
         stubFakePersonalProjectData
       );
       nextState.personalProjectsList.projects[3].updatedName = updatedName;
       const nextAction = saveFailure('abcd4');
       const nextNextState = projects(nextState, nextAction);
       // Name doesn't change after saveFailure.
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].name,
+      expect(nextNextState.personalProjectsList.projects[3].name).toEqual(
         nextState.personalProjectsList.projects[3].name
       );
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].isSaving,
+      expect(nextNextState.personalProjectsList.projects[3].isSaving).toEqual(
         false
       );
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].isEditing,
+      expect(nextNextState.personalProjectsList.projects[3].isEditing).toEqual(
         false
       );
     });
@@ -244,29 +219,24 @@ describe('projectsRedux', () => {
       const updatedName = profanity;
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
-      assert.deepEqual(
-        nextState.personalProjectsList.projects,
+      expect(nextState.personalProjectsList.projects).toEqual(
         stubFakePersonalProjectData
       );
       nextState.personalProjectsList.projects[3].updatedName = updatedName;
       const nextAction = saveFailure('abcd4', profanity);
       const nextNextState = projects(nextState, nextAction);
       // Name doesn't change after saveFailure.
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].name,
+      expect(nextNextState.personalProjectsList.projects[3].name).toEqual(
         nextState.personalProjectsList.projects[3].name
       );
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].projectNameFailure,
-        profanity
-      );
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].isSaving,
+      expect(
+        nextNextState.personalProjectsList.projects[3].projectNameFailure
+      ).toEqual(profanity);
+      expect(nextNextState.personalProjectsList.projects[3].isSaving).toEqual(
         false
       );
       // Should still be editing because you need to pick a new name without profanity.
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].isEditing,
+      expect(nextNextState.personalProjectsList.projects[3].isEditing).toEqual(
         true
       );
     });
@@ -277,17 +247,15 @@ describe('projectsRedux', () => {
       const profanity = 'farts';
       const action = setPersonalProjectsList(stubFakePersonalProjectData);
       const nextState = projects(initialState, action);
-      assert.deepEqual(
-        nextState.personalProjectsList.projects,
+      expect(nextState.personalProjectsList.projects).toEqual(
         stubFakePersonalProjectData
       );
       nextState.personalProjectsList.projects[3].projectNameFailure = profanity;
       const nextAction = unsetNameFailure('abcd4');
       const nextNextState = projects(nextState, nextAction);
-      assert.equal(
-        nextNextState.personalProjectsList.projects[3].projectNameFailure,
-        undefined
-      );
+      expect(
+        nextNextState.personalProjectsList.projects[3].projectNameFailure
+      ).toEqual(undefined);
     });
   });
 
@@ -329,7 +297,7 @@ describe('projectsRedux', () => {
       store.dispatch(action);
       server.respond();
 
-      assert(libraryApiStub.unpublish.calledOnce);
+      expect(libraryApiStub.unpublish.calledOnce).toBeTruthy();
     });
 
     it('does not unpublish library if fetchProjectToUpdate fails', () => {
@@ -344,8 +312,8 @@ describe('projectsRedux', () => {
       store.dispatch(action);
       server.respond();
 
-      assert.equal(0, libraryApiStub.unpublish.callCount);
-      assert(onCompleteSpy.calledOnce);
+      expect(0).toEqual(libraryApiStub.unpublish.callCount);
+      expect(onCompleteSpy.calledOnce).toBeTruthy();
     });
   });
 });

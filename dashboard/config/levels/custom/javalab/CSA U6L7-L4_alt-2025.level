@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:52:07.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Add the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\\<Book\\></code> back to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> declaration and initialization on **Line 12**, then run the program again.\r\n\r\nWhat is printed? Why do you think this happened?",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U6L7-Lists PBT_alt-2025",
+    "teacher_markdown": "If we add the `<Book>` back to the `ArrayList` declaration and initialization on **Line 12**, we get the error `Pet cannot be converted to Book` when we attempt to add a `Pet` object to a generic `ArrayList` of type `Book`. This is because the `ArrayList` can now only contain `Book` objects.",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:52:07.694+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U6L7-L4_pilot-2025\"}]"
+}]]></config>
+</Javalab>

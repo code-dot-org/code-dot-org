@@ -1,19 +1,22 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import msg from '@cdo/locale';
-import AnimationPickerListItem from './AnimationPickerListItem.jsx';
-import project from '@cdo/apps/code-studio/initApp/project';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
+
+import project from '@cdo/apps/code-studio/initApp/project';
 import {
   refreshInRestrictedShareMode,
   refreshTeacherHasConfirmedUploadWarning,
 } from '@cdo/apps/code-studio/projectRedux';
+import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
+import PublishedWarningModal from '@cdo/apps/templates/imageUploadWarning/PublishedWarningModal';
+import msg from '@cdo/locale';
+
 import {
   exitedUploadWarning,
   showingUploadWarning,
 } from '../redux/animationPicker.js';
-import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
-import PublishedWarningModal from '@cdo/apps/templates/imageUploadWarning/PublishedWarningModal';
+
+import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 
 /**
  * Render the animation upload button. If the project should warn on upload

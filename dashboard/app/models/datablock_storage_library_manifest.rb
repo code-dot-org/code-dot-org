@@ -57,6 +57,35 @@ class DatablockStorageLibraryManifest < ApplicationRecord
 
   validate :library_manifest
 
+  def self.seed_all
+    # Don't overwrite if there is already a manifest
+    unless DatablockStorageLibraryManifest.exists?
+      seed_manifest
+      seed_tables
+    end
+  end
+
+  def self.seed_manifest
+    manifest_file = Rails.root.join('config', 'datablock_storage', 'manifest.json')
+    manifest = JSON.parse(File.read(manifest_file))
+    instance.update!(library_manifest: manifest)
+  end
+
+  def self.seed_tables(glob = "config/datablock_storage/*.csv")
+    Dir.glob(Rails.root.join(glob)).each do |path|
+      table_name = path.match(/([^\/]+)\.csv$/)[1]
+
+      # Overwrite the table if it already exists
+      table = begin
+        DatablockStorageTable.find_shared_table table_name
+      rescue
+        DatablockStorageTable.create!(project_id: DatablockStorageTable::SHARED_TABLE_PROJECT_ID, table_name: table_name)
+      end
+
+      table.import_csv File.read(path)
+    end
+  end
+
   private def validate_library_manifest
     unless library_manifest.is_a?(Hash)
       errors.add(:library_manifest, "must be a JSON object")

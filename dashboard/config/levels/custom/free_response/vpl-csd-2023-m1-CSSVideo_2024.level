@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-03-25T22:41:00.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "instructions_important": "false",
-    "long_instructions": "# Video: Introduction to CSS\r\n\r\n## Questions to Consider\r\n\r\n* ##### What key information do you want to make sure your students get from this video?\r\n* ##### How might this video help students solve problems later in the lesson or unit? \r\n\r\n<a href=\"https://www.youtube.com/watch?v=EP9QMdoXvXE&list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD&index=11\" target=\"blank\">\r\n  <img src=\"https://images.code.org/2c9dfc3a274d385b9240e1c490a6655e-image-1692322109454.28.22 PM.png\" alt=\"Screenshot of the CSS video\" style=\"width:500px\">\r\n</a>\r\n\r\n###### **Note**: Click the image above to be taken to the video.\r\n\r\n## Key Takeaways \r\n\r\n* ##### CSS allows a web developer to define a specific set of style rules to apply to HTML elements on the page.\r\n* ##### To style an element, you must include a selector, followed by properties and values for those properties. This is called a rule set.\r\n\r\n",
+    "long_instructions": "# Video: Introduction to CSS\r\n\r\n## Questions to Consider\r\n\r\n* #### What key information do you want to make sure your students get from this video?\r\n* #### How might this video help students solve problems later in the lesson or unit? \r\n\r\n<a href=\"https://www.youtube.com/watch?v=EP9QMdoXvXE&list=PLzdnOPI1iJNcWlvBj62U-bszhT0hBN2mD&index=11\" target=\"blank\">\r\n  <img src=\"https://images.code.org/2c9dfc3a274d385b9240e1c490a6655e-image-1692322109454.28.22 PM.png\" alt=\"Screenshot of the CSS video\" style=\"width:500px\">\r\n</a>\r\n\r\n##### **Note**: Click the image above to be taken to the video.\r\n\r\n## Key Takeaways \r\n\r\n* #### CSS allows a web developer to define a specific set of style rules to apply to HTML elements on the page.\r\n* #### To style an element, you must include a selector, followed by properties and values for those properties. This is called a rule set.\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -20,9 +21,8 @@
     "name_suffix": "_2024",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:00.387+00:00\",\"changed\":[\"cloned from \\\"vpl-csd-2023-m1-CSSVideo\\\"\"],\"cloned_from\":\"vpl-csd-2023-m1-CSSVideo\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:00.387+00:00\",\"changed\":[\"cloned from \\\"vpl-csd-2023-m1-CSSVideo\\\"\"],\"cloned_from\":\"vpl-csd-2023-m1-CSSVideo\"},{\"changed_at\":\"2024-08-16 16:07:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

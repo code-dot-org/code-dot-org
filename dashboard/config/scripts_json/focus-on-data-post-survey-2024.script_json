@@ -5,11 +5,12 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSD",
-      "is_migrated": true
+      "is_migrated": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-23 21:19:09 UTC",
+    "serialized_at": "2024-07-11 21:05:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -82,6 +83,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2024"
+        ],
         "progression": "Survey"
       },
       "bonus": false,

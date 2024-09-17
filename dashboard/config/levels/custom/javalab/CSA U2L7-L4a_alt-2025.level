@@ -1,0 +1,40 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:30:32.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A meteorologist is creating a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Weather</code> class to represent the weather conditions in a city.\r\n\r\n✅ **TO DO #1:** Write an accessor method called <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getTemperature()</code> in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Weather</code> class to return the value assigned to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">temperature</code> instance variable.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">WeatherRunner.java</code>, call the accessor method on the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dallasWeather</code> object and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing accessor methods.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Weather",
+    "bubble_choice_description": "A meteorologist is creating a `Weather` class to represent the weather conditions in a city. Write an accessor method to return the value assigned to the `temperature` instance variable.",
+    "thumbnail_url": "https://images.code.org/1f3e7c75a6d3382a25ec3106ae5559a2-weather.png",
+    "reference_links": [
+      "/courses/csa-2023/guides/accessor-methods"
+    ],
+    "encrypted_exemplar_sources": "evPWcbkKqgbB2QDHOS0lFNPLRpoIvbHG5P316EUos8/ix2r+H9Ittenp9j3W\np17ZyjwsKFaw0JdPQul5FpwrYb8JfsQfHNYuJy1UpUcqR29tmN2bwTayOd6r\nM5ft+o1CK9y+FvVRYbUsMezM0mbJOlyn+yg6eCAOsmRd/J5lOysdGhWhReMM\nl4EFiNjqPVqLvWvSX3qydF9cVoIyBilBaZuU/FgmPg3ei3kPWqoQEhqbNxuE\nPxswc00liNKSREKxVztgyuOG0W380oZss9JBHu/SSjgceLC8IG1EwkoUPgKP\nHcTBOST81Srz51sCfw1dTmNTYVuQJQG8Iy9MwUwT3eSXiUTwTSoB+W0NcJ2M\nsMNh+UKDu6c5iPCx8VkHNELleFTWhiwS7tbkMm7h9OWmEQvk0giFdrqeBS99\nqlkn1CXX4wP4ZMyTKf5t6Ht7Tuq3PpRdrXOj2nVm7n5acep6n4xcimJ2gj07\nMDUV01eGkwtYkaPfiWUBGrsDlgK/O3CcX02YJVBqjXkmSTKUTr0/n8UEO3UX\nN7HLTMkiU2CsgwAbR2wCEpfWlhqWLw19t1wcZYm4GoHMdGuc0/73Br3YVSMf\nve96NrztFQpKmpdnoR7XVUIz8aF/BHVVgvND/OVimY8qRaqrQEF1khfYniqZ\nxJ/6Oo2zNCrc8NUJ7YfHbCiDGsWqbVRh4lrIxKj35chKFP84lskuC8m2LORq\ndVa5NxGT1Y3dWZ6pR4HiLJrAefI8We67kpb2reixbZXyOTByz99dJJMCyrmj\nCrIW7LoFDifYAh0798eng+DMPFdX5pwYTaVRF9KfdH3tt4K760FlvH9Z9tzv\nk7uDiFfkahCRWnWFvZ82E8DIM/i8vdR+gKRGtLRakFIyPz1XepAoia/dLDgE\ndBJ6t0WkIDNdTuv2pjz/6N0d3YvqXYNLQxSjtQDT47g4IWgUkPgE5o/7vHqe\nXoZnfg0KHSwqaZ32k8yFGVYtsyKSXwMwXmEc+/ZDXSA+1I9uSUXWmv0MwMvb\npYBtncgCAXVjfKhIRX2grluB5uL9oLpbbwAFUGI8pZfoj7ge3EC9l2bxLaWl\nHwQhapstNnwCh1/iPa4Qn7rEIGejXZXrzv3uBTXgy5YkewfqL9HcHl478VQJ\nVsqmWX+3ryIpK/HPH7LM76NeusIbHWLN/hWMxIG36d7GKq2+yBYR9FXxEUms\nvaTQGTDYCZ58boSY325IbCTT+6B/Ewd5MevUnvQsFpBcATG2ZUA19uyOkBGK\nZ0IyxYXHkH+h4ymTNgYrTIZX17qpeD+P+Izrf+3m3pCP/VJSI2x/VwU9UBX+\noFDHUso1dQiP93lEBeVpyZUL7UGD1mwnFd49tn4DenV91kRb6hPH6BLtmiq6\nssVBWT1Sv2w3xEOSIsf44eDkDp250lllYx/FFwBXU+DisKNamNF843G425jF\nxsgmyDoKzDTKUtxhXb63MaMFH/8dJtwSc1NABDYTwfihKyFnhgdko2PBElFE\na3/8LqkihF9Fgb36xNPGhy9GX5cKDEpRMINgupRL+iNstIBUJt1N7kOTtuS4\n2XtJMXpVYKPRQxCLQrTLhmRZBNby96acBzLWZiN2rRnbGvxbHn5Khn8fh6EC\nyvEAs1GSZX6ylfReoTmSgrfe3sOW0AIBY/rWO0bV6FjVTyYSdbmHXBVcm8DN\n3tfMQJplIklFVnk/XtbIdWNPAB3mdQeyHlETZsPMfYlA0wTKzCiJvpFN9vpH\nvX3VWcs4WKCgsEAihKLptspndLRYyLnHjdftRDiZmhBy9DEVYORAYiSksdEH\n9rC4Rp+C2Z8+VmcTC01JQBqkRqG68gu2XQS1VwbM/JWiz2OTKrJzoGdE\n",
+    "encrypted_validation": "Vp5OeVLRlzQzoMQDJg6vYD3/YOjwiTtHBQaNv32YzQ5qSiO5Z6zov/jStOtU\nHyJSgPPopfUMfwQIPtJM9VhMYy1GebG/XXkC1tW+XHzAyMui17bLwrq0oaPa\nXYV2lez6O+zTd5zd1oC4JHqrk529voP3RiXZ+kLFXNWvXTxG08oh1uEeE6L/\nxsPhw9j7nRFWRMwYO/idrgm2Zv0GjB+PFC8A3Xd/OEzqdXcji9P8JwBINFWG\ndCfVntG9k0dCKovl/R/dRpXEn/og1TZ0Slzrg1imKFHIWZVekUSPjtjUKbJe\nCKLGsmjBecnEBAP99TBBsVjCHqwf1jNWY/4W/Rvv7PPgHrC0q2ZGZ9sVncg2\nePjhTGO72MXMA6Dg75ahOnnPJtuy5gfmGe0rdOqQHk0ie47pVJRYmJoxfoOR\nufdeMWyDBxApCoVdK+wb8eperIeVyPAeGg9R76S+qT63qgInly87SGS1FmsJ\n2ypTqpM1XewCt+6JSuQjWwWIeDvWeqpSQJEXY5TYSIMyN/wZIkqWkI3tIy2n\niOGzXWwHcdTeDV4Ejpf962ALgYJKKBP9qQjuttLW/Qj9UfyBdtjy1bW1R/GJ\nBTpXbLsTtUOyKaJM57uXamqxt48PVte9PFH6Pcb66fg9sK4oALEqSUAyCFwH\nsy80ryUTVy1auC3aH+lqv7XbS2ZbP7ArzgsUgiMq5VknpO74cSlC+vzE07uT\nwqUd5X7N6gni71vk7Q7mnEN6LVzboY1/XnWdO0s9a/n5BABhQ0XoN3tQvnHY\nSizQUnC2IxWZUbtqVfO5+XGH3V9wfVEugMwWb9qxNjKpWhMKvC51zmNDlpKC\n9OkhsZ5cznLG+IQukAbCXf7ocuwh1UaokSZyu21RZuPQ4wJSo8qbq1Ivc7ka\nyeObFS3M8IH5TEMAlRsmkk4nrPyV8wJ0nirEMp1+rvbefgVoECOwPErABlh5\n7jpSmvvwdKbMaQmXLlnld9JJE1zQA+ij9EE7m5U4F3CULXqHQGimxzVyDK32\nK71rYNA8E1WQmAd4EM0Uw0RKuGl6v7UsN7cmZhgd1M5RnAxFmOtoTxpoCewW\nWzPP6ZPynqs+j9476y9lcb7hEtq9HhG/0vHIpjrGEKzqvG+WLPlpXQFYOhmg\njuvhhhboG3EQFbs+uXXjhPAdThBQyEyhE1KEPhpiKmHbNQKFXbqB40nnUAMZ\ntyd0G6wmlRup2tWB6Um7FPVKulH+kRoyA7GJ23qvn/o1htfN27xepJCvDziC\nUtO30qa2/9ULGTmnL6Lb9BAqruCSc9l5XEocfZbTrJpK8/8muOEB+fcIhqAD\nxlO86EuxT763lVqoJIkiCZldrW6zmCjS7ZTur0brOek7/bEvvOaOhcZ9qzsL\nRnOwKCWRRCDC0/CgVTHb3U7GS4ILcstDFjaFOa97uKG3fR0HM3fsJwjb+x6N\nPG9C9GhyOcU0eWzCsWo6DQN/qYei82eN\n",
+    "start_sources": {
+      "WeatherRunner.java": {
+        "text": "public class WeatherRunner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Call the accessor method on the dallasWeather object and print the result.\n     * -----------------------------------------------------------------------------\n     */\n\n    // Creates a Weather object\n    Weather dallasWeather = new Weather(92.5);\n\n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Weather.java": {
+        "text": "/*\n * Represents the weather conditions in a city\n */\npublic class Weather {\n\n  private double temperature;   // The temperature in a city\n\n  /*\n   * Sets temperature to the specified temperature\n   */\n  public Weather(double temperature) {\n    this.temperature = temperature;\n  }\n\n  /* ----------------------------------- TO DO -----------------------------------\n   * ✅ Write an accessor method to return the value assigned to temperature.\n   * -----------------------------------------------------------------------------\n   */\n\n\n  \n\n\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "video_key": "csa_accessor_methods",
+    "name_suffix": "_alt-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:30:32.619+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-L4a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L7-L4a_pilot-2025\"}]"
+}]]></config>
+</Javalab>

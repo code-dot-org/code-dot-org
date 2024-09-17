@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {addMouseUpTouchEvent} from '../../dom';
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import {getOuterHeight, scrollBy} from './utils';
 

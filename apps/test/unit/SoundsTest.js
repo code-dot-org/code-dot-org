@@ -1,8 +1,8 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Sounds from '@cdo/apps/Sounds';
 
-import {expect} from '../util/reconfiguredChai';
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 

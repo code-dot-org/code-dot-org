@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Chapter 1 Project: Human Device Interaction
+# End-of-Unit Project: Human Device Interaction
 
-#### The activities you completed in the previous levels were a selection of activities from Chapter 1 of the Creating Apps with Devices unit. These levels were intended to give you an overview of the skills students will building as they work towards the end of chapter project. 
+#### The activities you completed in the previous levels were a selection of activities from the Computer Systems and Devices unit. These levels were intended to give you an overview of the skills students will building as they work towards the end of chapter project. 
 
 ## Project Overview
 
@@ -25,12 +25,8 @@ markdown <<MARKDOWN
 <div style="clear:both"/>
 <br>
 
-## Pacing Recommendation
-
-#### If you you do not have enough time for Chapter 2, this project can be used as way to wrap up the unit. This project can also be expanded to include a student presentation if you have the time available. 
-
 ## Project Resources
-* #### <a href="https://studio.code.org/s/csd6a-2024/lessons/11" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* #### <a href="https://studio.code.org/s/fcs1a-beta-2024/lessons/11" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
 * #### <a href="https://docs.google.com/document/d/1qCzlxKJQ4gdYDS2LufqLYugiFKYbs3O5v5q_jufBR70/view" target="blank" rel="noopener noreferrer" >Project Guide</a> 
 * #### <a href="https://docs.google.com/document/d/1IVZIVUMyq0FxmA9mX-H3LXo12Blvi2NzDg7vZ2dLbLA/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
 * #### <a href="https://docs.google.com/document/d/1GqR49vQTEirALh2c7pIDoGugJD3WqX-sEYygPQ2vlhQ/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 

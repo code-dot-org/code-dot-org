@@ -1,0 +1,26 @@
+name 'game jam lesson plan_prod'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Classroom Implementation
+
+<img src="https://images.code.org/b7bd48719ffe99bbb290f3d47865cd4a-image-1720556345046.19.01 PM.png" alt="pixelated cartoon snail" width="200px" style="border-radius:10px; float:right; margin: 0 40px 40px 40px;">
+
+#### The lesson plan explains the lesson in detail with suggestions for discussions, remarks, and teacher actions.
+
+## Example lesson plan
+
+#### Preview the lesson plans from the <a href="https://studio.code.org/s/elem-game-design-2024/lessons/4" target="blank">Game Jam: Day 1</a> and <a href="https://studio.code.org/s/elem-game-design-2024/lessons/5" target="blank">Game Jam: Day 2</a> lessons.
+
+### **When exploring the lesson plan, locate...**
+* #### Slide decks
+* #### Activity guides
+* #### Answer keys
+<br>
+
+#### Take your time working through all of the lesson features. Think about how you could implement the lesson in your class. 
+
+## Let's wrap up! 
+
+MARKDOWN

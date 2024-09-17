@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {lessonsByStandard} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import i18n from '@cdo/locale';

@@ -1,11 +1,11 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('TextResponsesLessonSelector', () => {
   describe('with less than 2 lessons', () => {

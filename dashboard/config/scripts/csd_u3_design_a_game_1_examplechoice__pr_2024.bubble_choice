@@ -1,0 +1,16 @@
+name 'CSD U3 - Design a Game 1 - ExampleChoice_-pr-2024'
+display_name 'Create your own game'
+description 'Now that you have all the skills you need, it\'s time to make your own game!
+
+With a partner, brainstorm some different ideas for your game. You can think about the games you\'ve already seen, or look at some more sample games to give you ideas.
+
+Once you have settled on a type of game with your partner, fill out the Project Guide with the backgrounds, variables, sprites, and functions that you will need to make the game. You\'ll spend the next few levels creating your game.'
+
+sublevels
+level 'CSD U3 - Design a Game 1 - Example2_-pr-2024'
+level 'CSD U3 - Design a Game 1 - Example3_-pr-2024'
+level 'CSD U3 - Design a Game 1 - Example5_-pr-2024'
+level 'CSD U3 - Design a Game 1 - Example6_-pr-2024'
+level 'CSD U3 - Design a Game 1 - Example7_-pr-2024'
+level 'CSD U3 - Design a Game 1 - Example8_-pr-2024'
+level 'CSD U3 - Design a Game 1 - Example9_-pr-2024'

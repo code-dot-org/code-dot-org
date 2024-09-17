@@ -4,9 +4,9 @@ import React, {useCallback, useEffect, useState, useRef} from 'react';
 import Draggable from 'react-draggable';
 
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -138,24 +138,19 @@ export default function RubricContainer({
   // add more functionality to the settings tab.
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
-  const updateTourStatus = useCallback(() => {
-    const bodyData = JSON.stringify({seen: productTour});
-    const rubricId = rubric.id;
-    const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
-    HttpClient.post(url, bodyData, true, {
-      'Content-Type': 'application/json',
-    })
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        if (json['seen']) {
-          setProductTour(false);
-        } else {
-          setProductTour(true);
-        }
+  // Update the server to indicate that the product tour has been seen.
+  const updateTourStatus = useCallback(
+    visible => {
+      setProductTour(visible);
+      const bodyData = JSON.stringify({seen: !visible});
+      const rubricId = rubric.id;
+      const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
+      HttpClient.post(url, bodyData, true, {
+        'Content-Type': 'application/json',
       });
-  }, [rubric.id, productTour]);
+    },
+    [rubric.id]
+  );
 
   const getTourStatus = useCallback(() => {
     const rubricId = rubric.id;
@@ -179,7 +174,7 @@ export default function RubricContainer({
 
   const tourRestartHandler = () => {
     tourRestarted.current = true;
-    updateTourStatus();
+    updateTourStatus(true);
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_RESTARTED, {
       ...(reportingData || {}),
     });
@@ -197,7 +192,7 @@ export default function RubricContainer({
   };
 
   const onTourExit = stepIndex => {
-    updateTourStatus();
+    updateTourStatus(false);
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_CLOSED, {
       ...(reportingData || {}),
       step: stepIndex,
@@ -205,7 +200,7 @@ export default function RubricContainer({
   };
 
   const onTourComplete = () => {
-    updateTourStatus();
+    updateTourStatus(false);
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_COMPLETE, {
       ...(reportingData || {}),
     });

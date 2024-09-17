@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-31T19:12:59.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "### When you buy a new appliance or tool or new device or even a children’s toy, what different kinds of material does it come with? List as many things as you can think of.\r\n- ####For example: an instructions manual\r\n",
+    "teacher_markdown": "Have students discuss in small groups, then ask folks to share out in a popcorn style. This can be a quick moment before continuing to the next slide.\r\n\r\n Discussion Goal: Try to generate a wide variety of items, such as:\r\n- Instructions manual\r\n- Safety sheet\r\n- Contact information\r\n- Warranty card\r\n- Similar products card",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-31 19:13:02 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

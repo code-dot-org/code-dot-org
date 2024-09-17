@@ -4,10 +4,18 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
+
+import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import color from '@cdo/apps/util/color';
+
+import globalStyleConstants from '../styleConstants';
+
+import {CsaViewMode} from './constants';
+import {DisplayTheme} from './DisplayTheme';
+import {resizeCrosshairOverlay} from './JavalabCrosshairOverlay';
 import {
   setLeftWidth,
   setRightWidth,
@@ -16,12 +24,8 @@ import {
   setConsoleHeight,
   setEditorColumnHeight,
 } from './redux/viewRedux';
-import {DisplayTheme} from './DisplayTheme';
-import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
-import globalStyleConstants from '../styleConstants';
+
 import styleConstants from './constants.module.scss';
-import {CsaViewMode} from './constants';
-import {resizeCrosshairOverlay} from './JavalabCrosshairOverlay';
 
 // The top Y coordinate of the JavaLab panels.  Above them is just the common site
 // header and then a bit of empty space.

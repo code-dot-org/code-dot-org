@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Танцевальная вечеринка", body: "Напишите код танцевальной вечеринки! Используйте композиции Бейонсе, Harry Styles, Lizzo, Lil Nas X, Селены Гомес, саундтрек из диснеевского \"Энканто,\" и другую музыку!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Искусство поэзии", body: "В этом занятии Часа кода вы дополните классическое произведение рисунками и анимацией!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Artist", body: "Рисуйте классные картины и дизайны с Художником!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity в Play Lab", body: "Используйте Play Lab, чтобы создать историю с персонажами Disney Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

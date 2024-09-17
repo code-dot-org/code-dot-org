@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import {reload} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import ExternalRedirectDialog from '@cdo/apps/applab/ExternalRedirectDialog';
 
-import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
+import VisualizationResizeBar from '../code-studio/components/VisualizationResizeBar';
 import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';

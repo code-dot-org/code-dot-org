@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import LibraryTable from './LibraryTable';
 

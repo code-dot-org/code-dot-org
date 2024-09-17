@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-17T16:18:16.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Read 1: Context",
+    "long_instructions": "![](https://images.code.org/ec50df7f593a0b42a051016e9c923b50-image-1721233031201.16.52 PM.png)\r\n###What is this data about?\r\n- This data is from...\r\n- I know that...\r\n- A pattern I see is...\r\n- The data is organized...\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-17 16:18:20 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-17 16:21:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

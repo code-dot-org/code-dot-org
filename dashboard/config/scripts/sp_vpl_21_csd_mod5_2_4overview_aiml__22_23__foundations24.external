@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lessons 3 - 5
+# Lessons 2 - 4
 
-#### In Lesson 3, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. A key takeaway is that A.I. Bot learns best when it has more examples (training data). As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. 
+#### In Lesson 2, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. A key takeaway is that A.I. Bot learns best when it has more examples (training data). As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. 
 
 #### By the end of the unit, students will have the context to understand not only what machine learning is, but how it works.  
 
@@ -23,12 +23,12 @@ markdown <<MARKDOWN
 
 #### The lessons within the AI and Machine Learning unit are a mix between online and unplugged activities. The unplugged activities include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
 
-## Overview of Lessons 3 - 5 
+## Overview of Lessons 2 - 4
 
 ##### Click the dropdown arrows below to view lesson overviews.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: Types of Machine Learning</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: Types of Machine Learning</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:45px;">
     <p>
 <img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="150px" style="float:left; margin: 0 20px 0px 20px;">
@@ -47,7 +47,7 @@ markdown <<MARKDOWN
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Innovations in AI</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: Innovations in AI</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:80px;">
     <p>
 <img src="https://images.code.org/3df14392372d770ff2d4dfae050c6e29-image-1635957745827.41.42 AM.png" alt="Image of a student activity guide" width="200px" style="float:left; margin: 0 20px 0px 20px;">
@@ -66,7 +66,7 @@ markdown <<MARKDOWN
 <div style="clear:both"/>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Patterns in Data</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Patterns in Data</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:40px;">
     <p>
 <img src="https://images.code.org/708300a2e109c438cc5716a4a405ca36-image-1635957741359.40.25 AM.png" alt="Image of a shoe recommender app" width="150px" style="float:left; margin: 0 20px 0px 20px;">

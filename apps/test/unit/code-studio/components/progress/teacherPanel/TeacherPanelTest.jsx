@@ -2,7 +2,6 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import sinon from 'sinon';
 
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
@@ -15,8 +14,6 @@ import viewAs, {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../../../util/reconfiguredChai';
 
 const students = [
   {id: 1, name: 'Student 1'},
@@ -80,9 +77,10 @@ describe('TeacherPanel', () => {
   let teacherPanelDataStub;
 
   beforeEach(() => {
-    teacherPanelDataStub = sinon
-      .stub(teacherPanelData, 'queryLockStatus')
-      .returns(
+    teacherPanelDataStub = jest
+      .spyOn(teacherPanelData, 'queryLockStatus')
+      .mockClear()
+      .mockReturnValue(
         Promise.resolve({
           teacherSections,
           sectionLockStatus,
@@ -91,46 +89,46 @@ describe('TeacherPanel', () => {
   });
 
   afterEach(() => {
-    teacherPanelDataStub.restore();
+    teacherPanelDataStub.mockRestore();
   });
 
   describe('on unit page', () => {
     it('initial view as participant has teacher panel header and view toggle', () => {
       const wrapper = setUp({viewAs: ViewType.Participant});
-      expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
-      expect(wrapper.find(ViewAsToggle)).to.have.length(1);
+      expect(wrapper.contains(i18n.teacherPanel())).toBe(true);
+      expect(wrapper.find(ViewAsToggle)).toHaveLength(1);
     });
 
     it('initial view as instructor has teacher panel header and view toggle', () => {
       const wrapper = setUp({viewAs: ViewType.Instructor});
-      expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
-      expect(wrapper.find(ViewAsToggle)).to.have.length(1);
+      expect(wrapper.contains(i18n.teacherPanel())).toBe(true);
+      expect(wrapper.find(ViewAsToggle)).toHaveLength(1);
     });
   });
 
   it('shows loading message when sections are not loaded', () => {
     const wrapper = setUp({sectionsAreLoaded: false});
-    expect(wrapper.contains(i18n.loading())).to.be.true;
+    expect(wrapper.contains(i18n.loading())).toBe(true);
   });
 
   it('hides loading message when sections are loaded', () => {
     const wrapper = setUp({sectionsAreLoaded: true});
-    expect(wrapper.contains(i18n.loading())).to.be.false;
+    expect(wrapper.contains(i18n.loading())).toBe(false);
   });
 
   it('shows SectionSelector if hasSections and sectionsAreLoaded', () => {
     const wrapper = setUp({sectionsAreLoaded: true, hasSections: true});
-    expect(wrapper.find(SectionSelector)).to.have.length(1);
+    expect(wrapper.find(SectionSelector)).toHaveLength(1);
   });
 
   it('hides SectionSelector if hasSections is false', () => {
     const wrapper = setUp({hasSections: false});
-    expect(wrapper.find(SectionSelector)).to.have.length(0);
+    expect(wrapper.find(SectionSelector)).toHaveLength(0);
   });
 
   it('hides SectionSelector if sectionsAreLoaded is false', () => {
     const wrapper = setUp({sectionsAreLoaded: false});
-    expect(wrapper.find(SectionSelector)).to.have.length(0);
+    expect(wrapper.find(SectionSelector)).toHaveLength(0);
   });
 
   it('shows link to teacher dashboard for section if sections are loaded and there is a selected section', () => {
@@ -140,7 +138,7 @@ describe('TeacherPanel', () => {
       hasSections: true,
     });
 
-    expect(wrapper.contains(i18n.teacherDashboard())).to.be.true;
+    expect(wrapper.contains(i18n.teacherDashboard())).toBe(true);
   });
 
   it('shows section selection instructions if viewing as a instructor, and has sections and lockable lessons', () => {
@@ -149,7 +147,7 @@ describe('TeacherPanel', () => {
       unitHasLockableLessons: true,
       hasSections: true,
     });
-    expect(wrapper.contains(i18n.selectSectionInstructions())).to.be.true;
+    expect(wrapper.contains(i18n.selectSectionInstructions())).toBe(true);
   });
 
   it('adds a warning if there are also unlocked lessons', () => {
@@ -160,21 +158,24 @@ describe('TeacherPanel', () => {
       unlockedLessonNames: ['lesson1', 'lesson2'],
     });
 
-    expect(wrapper.contains(i18n.selectSectionInstructions())).to.be.true;
-    expect(wrapper.contains(i18n.dontForget())).to.be.true;
-    expect(wrapper.contains(i18n.lockFollowing())).to.be.true;
-    expect(wrapper.contains('lesson1')).to.be.true;
+    expect(wrapper.contains(i18n.selectSectionInstructions())).toBe(true);
+    expect(wrapper.contains(i18n.dontForget())).toBe(true);
+    expect(wrapper.contains(i18n.lockFollowing())).toBe(true);
+    expect(wrapper.contains('lesson1')).toBe(true);
   });
 
   it('loads initial data and calls get/set students for section', async () => {
-    sinon.stub(teacherPanelData, 'getStudentsForSection').returns(
-      Promise.resolve({
-        id: 55,
-        students: [],
-      })
-    );
+    jest
+      .spyOn(teacherPanelData, 'getStudentsForSection')
+      .mockClear()
+      .mockReturnValue(
+        Promise.resolve({
+          id: 55,
+          students: [],
+        })
+      );
 
-    const setStudentsForCurrentSectionStub = sinon.stub();
+    const setStudentsForCurrentSectionStub = jest.fn();
     const overrideProps = {
       viewAs: ViewType.Instructor,
       pageType: pageTypes.scriptOverview,
@@ -183,13 +184,13 @@ describe('TeacherPanel', () => {
 
     await setUpWithMount(overrideProps);
 
-    expect(setStudentsForCurrentSectionStub).to.have.been.calledWith(55, []);
+    expect(setStudentsForCurrentSectionStub).toHaveBeenCalledWith(55, []);
 
-    teacherPanelData.getStudentsForSection.restore();
+    teacherPanelData.getStudentsForSection.mockRestore();
   });
 
   it('calls setViewType default to Instructor', async () => {
-    const setViewTypeStub = sinon.stub();
+    const setViewTypeStub = jest.fn();
     const overrideProps = {
       pageType: pageTypes.scriptOverview,
       setViewType: setViewTypeStub,
@@ -197,12 +198,12 @@ describe('TeacherPanel', () => {
 
     await setUpWithMount(overrideProps);
 
-    expect(setViewTypeStub).to.have.been.calledWith(ViewType.Instructor);
+    expect(setViewTypeStub).toHaveBeenCalledWith(ViewType.Instructor);
   });
 
   it('loads initial data and calls get/set lock status', async () => {
-    const setSectionsStub = sinon.stub();
-    const setSectionLockStatusStub = sinon.stub();
+    const setSectionsStub = jest.fn();
+    const setSectionLockStatusStub = jest.fn();
     const overrideProps = {
       viewAs: ViewType.Instructor,
       pageType: pageTypes.level,
@@ -211,10 +212,10 @@ describe('TeacherPanel', () => {
     };
     await setUpWithMount(overrideProps);
 
-    expect(setSectionsStub).to.have.been.calledWith(teacherSections);
-    expect(setSectionLockStatusStub).to.have.been.calledWith(sectionLockStatus);
+    expect(setSectionsStub).toHaveBeenCalledWith(teacherSections);
+    expect(setSectionLockStatusStub).toHaveBeenCalledWith(sectionLockStatus);
 
-    teacherPanelData.queryLockStatus.restore();
+    teacherPanelData.queryLockStatus.mockRestore();
   });
 
   describe('StudentTable', () => {
@@ -223,7 +224,7 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Instructor,
         students: students,
       });
-      expect(wrapper.find(StudentTable)).to.have.length(1);
+      expect(wrapper.find(StudentTable)).toHaveLength(1);
     });
 
     it('does not display StudentTable for instructor with no students', () => {
@@ -231,7 +232,7 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Instructor,
         students: [],
       });
-      expect(wrapper.find(StudentTable)).to.have.length(0);
+      expect(wrapper.find(StudentTable)).toHaveLength(0);
     });
 
     it('does not display StudentTable for view page as participant', () => {
@@ -239,7 +240,7 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Participant,
         students: students,
       });
-      expect(wrapper.find(StudentTable)).to.have.length(0);
+      expect(wrapper.find(StudentTable)).toHaveLength(0);
     });
 
     it('calls selectUser when user is clicked with isAsync true when on overview page', () => {
@@ -247,7 +248,7 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Instructor,
       });
 
-      const selectUserStub = sinon.stub();
+      const selectUserStub = jest.fn();
       const overrideProps = {
         selectUser: selectUserStub,
         viewAs: ViewType.Instructor,
@@ -265,7 +266,7 @@ describe('TeacherPanel', () => {
       const secondStudentInTable = wrapper.find('tr').at(1);
       secondStudentInTable.simulate('click');
 
-      expect(selectUserStub).to.have.been.calledWith(1, true);
+      expect(selectUserStub).toHaveBeenCalledWith(1, true);
     });
 
     it('calls selectUser when user is clicked with isAsync false when on level page', () => {
@@ -273,7 +274,7 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Instructor,
       });
 
-      const selectUserStub = sinon.stub();
+      const selectUserStub = jest.fn();
       const overrideProps = {
         selectUser: selectUserStub,
         viewAs: ViewType.Instructor,
@@ -290,7 +291,7 @@ describe('TeacherPanel', () => {
       const secondStudentInTable = wrapper.find('tr').at(1);
       secondStudentInTable.simulate('click');
 
-      expect(selectUserStub).to.have.been.calledWith(1, false);
+      expect(selectUserStub).toHaveBeenCalledWith(1, false);
     });
   });
 
@@ -302,11 +303,18 @@ describe('TeacherPanel', () => {
         pageType: pageTypes.scriptOverview,
       });
 
-      expect(wrapper.find(SelectedStudentInfo)).to.have.length(0);
+      expect(wrapper.find(SelectedStudentInfo)).toHaveLength(0);
     });
 
     it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
-      sinon.stub(utils, 'queryParams').withArgs('user_id').returns('1');
+      jest
+        .spyOn(utils, 'queryParams')
+        .mockClear()
+        .mockImplementation((...args) => {
+          if (args[0] === 'user_id') {
+            return '1';
+          }
+        });
 
       const wrapper = setUp({
         viewAs: ViewType.Instructor,
@@ -315,11 +323,11 @@ describe('TeacherPanel', () => {
       });
 
       const selectedStudentComponent = wrapper.find(SelectedStudentInfo);
-      expect(selectedStudentComponent).to.have.length(1);
-      expect(selectedStudentComponent.props().teacherId).to.equal(5);
-      expect(selectedStudentComponent.props().selectedUserId).to.equal(1);
+      expect(selectedStudentComponent).toHaveLength(1);
+      expect(selectedStudentComponent.props().teacherId).toBe(5);
+      expect(selectedStudentComponent.props().selectedUserId).toBe(1);
 
-      utils.queryParams.restore();
+      utils.queryParams.mockRestore();
     });
   });
 
@@ -331,7 +339,7 @@ describe('TeacherPanel', () => {
           'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view',
         ],
       });
-      expect(wrapper.find('Button')).to.have.length(0);
+      expect(wrapper.find('Button')).toHaveLength(0);
     });
 
     it('displays example solution for level with one example solution', () => {
@@ -343,7 +351,7 @@ describe('TeacherPanel', () => {
         ],
       });
 
-      expect(wrapper.find('Button')).to.have.length(1);
+      expect(wrapper.find('Button')).toHaveLength(1);
     });
 
     it('does not display example solution for level with no example solution', () => {
@@ -353,7 +361,7 @@ describe('TeacherPanel', () => {
         exampleSolutions: null,
       });
 
-      expect(wrapper.find('Button')).to.have.length(0);
+      expect(wrapper.find('Button')).toHaveLength(0);
     });
   });
 });

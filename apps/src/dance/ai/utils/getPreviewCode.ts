@@ -1,6 +1,7 @@
 import {Workspace} from 'blockly/core';
 
 import {GeneratedEffect} from '../types';
+
 import {generatePreviewCode} from './generatePreviewCode';
 
 // given a generated effect, returns the appropriate blockly preview code

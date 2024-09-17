@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 7: Introduction to AI Lab 
+# Lesson 6: Introduction to AI Lab 
 
 #### After students train their machine learning model to predict shapes based on features, they will move on to training machine learning a model to make food recommendations for a customer. As they did in the first model, they will be selecting features (food options) to predict a label (like or dislike). 
 
@@ -59,6 +59,6 @@ markdown <<MARKDOWN
 
 ### **Up Next**
 
-#### In the next level of this professional learning module, you will complete the pizza recommendation level from Lesson 6 of the AI and Machine Learning unit. While completing this level, use the cross-tab visualizations to help you select the features you use to train your model. 
+#### In the next level of this professional learning module, you will complete the pizza recommendation level from the AI and Machine Learning unit. While completing this level, use the cross-tab visualizations to help you select the features you use to train your model. 
 
 MARKDOWN

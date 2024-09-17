@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-06-27T22:33:22.000Z",
   "level_num": "custom",
@@ -13,11 +14,10 @@
     "skip_sound": true,
     "parent_level_id": 20862,
     "name_suffix": "_-foundations24",
-    "long_instructions": "## Setting Up Your Circuit Playground\r\n\r\n#### In the Creating Apps with Devices unit, students use the Circuit Playground tethered via USB to their computers to create apps with physical inputs and outputs.\r\n* #### Watch this video to learn more about setting you your Circuit Playground.\r\n* #### <a href=\"https://studio.code.org/maker/setup\" target=\"blank\" rel=\"noopener noreferrer\">Click here</a> to visit the Circuit Playground setup page. \r\n\r\n## Where do I go if I have additional questions?\r\n\r\n#### Visit the <a href=\"https://code.org/maker/circuitplayground\" target=\"blank\" rel=\"noopener noreferrer\">Circuit Playground support page</a> for additional support. \r\n"
+    "long_instructions": "## Setting Up Your Circuit Playground\r\n\r\n#### In the Computer Systems and Devices unit, students use the Circuit Playground tethered via USB to their computers to create apps with physical inputs and outputs.\r\n* #### Watch this video to learn more about setting you your Circuit Playground.\r\n* #### <a href=\"https://studio.code.org/maker/setup\" target=\"blank\" rel=\"noopener noreferrer\">Click here</a> to visit the Circuit Playground setup page. \r\n\r\n## Where do I go if I have additional questions?\r\n\r\n#### Visit the <a href=\"https://code.org/maker/circuitplayground\" target=\"blank\" rel=\"noopener noreferrer\">Circuit Playground support page</a> for additional support. \r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-06-27T22:33:22.288+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_2024\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-27T22:33:22.288+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_2024\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_2024\"},{\"changed_at\":\"2024-07-12 23:41:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

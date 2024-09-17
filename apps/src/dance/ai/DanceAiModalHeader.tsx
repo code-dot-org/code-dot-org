@@ -1,11 +1,13 @@
 import React, {useMemo} from 'react';
-import moduleStyles from './dance-ai-modal.module.scss';
-import aiBotMini from '@cdo/static/dance/ai/bot/ai-bot-mini.svg';
-const i18n = require('../locale');
 
-import {AiEmojiItem} from './types';
+import aiBotMini from '@cdo/static/dance/ai/bot/ai-bot-mini.svg';
 
 import EmojiIcon from './EmojiIcon';
+import {AiEmojiItem} from './types';
+
+import moduleStyles from './dance-ai-modal.module.scss';
+
+const i18n = require('../locale');
 
 interface DanceAiModalHeaderProps {
   onClose: () => void;

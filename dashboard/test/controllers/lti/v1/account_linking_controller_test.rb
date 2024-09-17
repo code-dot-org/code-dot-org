@@ -6,7 +6,6 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     @admin = create :admin
     @lti_integration = create :lti_integration
     DCDO.stubs(:get)
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
   end
 
   test 'links an LTI login to an existing account' do
@@ -37,6 +36,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       )
     )
     post :link_email, params: {email: @user.email, password: 'password'}
+    assert_equal I18n.t('lti.account_linking.successfully_linked'), flash[:notice]
     assert_redirected_to target_url
     assert Policies::Lti.lti?(@user)
   end
@@ -65,22 +65,6 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     post :link_email, params: {email: @user.email, password: 'password'}
   end
 
-  test 'blocks access if lti_account_linking_enabled is false' do
-    sign_in @user
-    DCDO.expects(:get).with('lti_account_linking_enabled', false).times(3).returns(false)
-    get :existing_account
-    assert_response :not_found
-    get :landing
-    assert_response :not_found
-    post :link_email, params: {email: @user.email, password: 'password'}
-    assert_response :not_found
-  end
-
-  test 'allows access if lti_account_linking_enabled is true' do
-    get :existing_account
-    assert_response :ok
-  end
-
   test 'returns bad request if not logged in' do
     post :new_account
 
@@ -107,5 +91,27 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     partial_user = User.new_with_session(ActionController::Parameters.new, session)
 
     assert_equal true, partial_user.lms_landing_opted_out
+  end
+
+  test 'verifies roster-synced teacher if they are not already verified' do
+    lti_user = create :teacher
+    sign_in lti_user
+
+    post :new_account
+
+    lti_user.reload
+
+    assert lti_user.verified_teacher?
+  end
+
+  test 'do not verify roster-synced student' do
+    lti_user = create :student
+    sign_in lti_user
+
+    post :new_account
+
+    lti_user.reload
+
+    refute lti_user.verified_teacher?
   end
 end

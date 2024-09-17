@@ -1,14 +1,16 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import * as assets from '../code-studio/assets';
+import React from 'react';
+
+import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import PaneHeader, {
   PaneSection,
   PaneButton,
 } from '@cdo/apps/templates/PaneHeader';
-import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
-import {RecordingFileType} from '../code-studio/components/recorders';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import * as assets from '../code-studio/assets';
+import {RecordingFileType} from '../code-studio/components/recorders';
 
 export default function PreviewPaneHeader({
   isCollapsed,

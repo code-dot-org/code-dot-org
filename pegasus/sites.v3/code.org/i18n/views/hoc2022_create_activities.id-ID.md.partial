@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Dance Party", body: "Buat Kode Pesta Dansa! Menampilkan Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musik dari \"Encanto,\" Disney, dan masih banyak lagi!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Poem Art", body: "Tambahkan seni dan animasi ke puisi klasik dalam kegiatan Hour of Code ini!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Artist", body: "Buat gambar keren dan desain bersama Seniman!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity Play Lab", body: "Gunakan Play Lab untuk membuat cerita atau game yang dibintangi oleh karakter Disney Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

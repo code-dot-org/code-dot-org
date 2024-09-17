@@ -1,0 +1,6 @@
+name 'CSA Pre-Survey q29_pilot-2025'
+question 'Did someone else at school encourage you to take this class?'
+
+right 'Yes'
+right 'No'
+allow_multiple_attempts true

@@ -1,37 +1,41 @@
 import React, {useCallback, useState} from 'react';
 
-import {
-  BodyFourText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
 import {
   AiCustomizations,
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
 } from '@cdo/apps/aichat/types';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
+  DEFAULT_LEVEL_AICHAT_SETTINGS,
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+  EMPTY_MODEL_CARD_INFO,
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
-  DEFAULT_LEVEL_AICHAT_SETTINGS,
-  EMPTY_AI_CUSTOMIZATIONS,
-  DEFAULT_VISIBILITIES,
-  EMPTY_MODEL_CARD_INFO,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
-import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import {
+  BodyFourText,
+  BodyThreeText,
+  BodyTwoText,
+} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
+import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
+import CollapsibleFieldSection from './CollapsibleFieldSection';
 import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
 import ModelSelectionFields from './ModelSelectionFields';
-import VisibilityDropdown from './VisibilityDropdown';
 import {UpdateContext} from './UpdateContext';
+import VisibilityDropdown from './VisibilityDropdown';
+
 import moduleStyles from './edit-aichat-settings.module.scss';
-import {getTypedKeys} from '@cdo/apps/types/utils';
-import {modelDescriptions} from '@cdo/apps/aichat/constants';
 
 function sanitizeSettings(settings: LevelAichatSettings) {
   const sanitizedModelCardInfo = sanitizeField(
@@ -134,7 +138,10 @@ const EditAichatSettings: React.FunctionComponent<{
   );
 
   const setModelSelectionValues = useCallback(
-    (additionalModelIds: string[], selectedModelId: string) => {
+    (
+      additionalModelIds: ValueOf<typeof AiChatModelIds>[],
+      selectedModelId: ValueOf<typeof AiChatModelIds>
+    ) => {
       const availableModelIds = Array.from(
         new Set(additionalModelIds).add(selectedModelId)
       );
@@ -178,7 +185,7 @@ const EditAichatSettings: React.FunctionComponent<{
           <b>Hidden:</b> the field is not shown on the customization panel.
         </BodyThreeText>
         <ModelSelectionFields />
-        <FieldSection
+        <CollapsibleFieldSection
           fieldName="temperature"
           labelText="Temperature"
           inputType="number"
@@ -187,13 +194,54 @@ const EditAichatSettings: React.FunctionComponent<{
           step={SET_TEMPERATURE_STEP}
           description="Temperature setting for the model. A higher temperature induces more randomness."
         />
-        <FieldSection
-          fieldName="systemPrompt"
-          labelText="System Prompt"
-          description="The base prompt applied to all inputs to the model."
-          inputType="textarea"
-        />
-        <FieldSection
+        <div className={moduleStyles.collapsibleFieldSection}>
+          <hr />
+          <CollapsibleSection headerContent="System Prompt">
+            <div>
+              <BodyTwoText>Level System Prompt</BodyTwoText>
+              <BodyFourText>
+                <i>
+                  This system prompt is hidden from students and is prepended to
+                  their student system prompt. It can be used to add additional
+                  safety features or hidden guidelines to a level that students
+                  won't see. It does not go through a PII/Profanity filter,
+                  giving you more freedom for setting the prompt.
+                </i>
+              </BodyFourText>
+              <div className={moduleStyles.fieldRow}>
+                <label
+                  htmlFor="levelSystemPrompt"
+                  className={moduleStyles.inlineLabel}
+                >
+                  Level System Prompt
+                </label>
+                <textarea
+                  id={'levelSystemPrompt'}
+                  value={aichatSettings.levelSystemPrompt}
+                  onChange={e => {
+                    setAichatSettings({
+                      ...aichatSettings,
+                      levelSystemPrompt: e.target.value,
+                    });
+                  }}
+                  className={moduleStyles.textarea}
+                />
+              </div>
+            </div>
+            <hr />
+            <div>
+              <BodyTwoText>Student System Prompt</BodyTwoText>
+              <FieldSection
+                fieldName="systemPrompt"
+                inputType="textarea"
+                description="This system prompt can be displayed to student based on
+                visibility selected by levelbuilder and is applied to all
+                inputs to the model on this level."
+              />
+            </div>
+          </CollapsibleSection>
+        </div>
+        <CollapsibleFieldSection
           fieldName="retrievalContexts"
           labelText="Retrieval Contexts"
           description="Pieces of information the model references when generating a response."
@@ -223,9 +271,9 @@ const EditAichatSettings: React.FunctionComponent<{
             />
           }
         />
-        <div className={moduleStyles.fieldSection}>
+        <div className={moduleStyles.collapsibleFieldSection}>
           <hr />
-          <CollapsibleSection title="Model Card">
+          <CollapsibleSection headerContent="Model Card">
             <div className={moduleStyles.fieldRow}>
               <ModelCardFields />
               <VisibilityDropdown
@@ -235,9 +283,9 @@ const EditAichatSettings: React.FunctionComponent<{
             </div>
           </CollapsibleSection>
         </div>
-        <div className={moduleStyles.fieldSection}>
+        <div className={moduleStyles.collapsibleFieldSection}>
           <hr />
-          <CollapsibleSection title="Additional Configuration">
+          <CollapsibleSection headerContent="Additional Configuration">
             <BodyFourText>
               <i>
                 Students always have access to the Edit View, where they can

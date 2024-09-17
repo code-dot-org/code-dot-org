@@ -1,0 +1,9 @@
+name 'CSA U3L6-L7_pilot-2025'
+display_name 'Practice: Traversing Arrays of Objects'
+description 'Traverse a 1D array of a superclass type and call overridden methods.'
+
+sublevels
+level 'CSA U3L6-L7a_pilot-2025'
+level 'CSA U3L6-L7b_pilot-2025'
+level 'CSA U3L6-L7c_pilot-2025'
+level 'CSA U3L6-L7d_pilot-2025'

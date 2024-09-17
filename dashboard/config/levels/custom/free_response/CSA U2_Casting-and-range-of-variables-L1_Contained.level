@@ -13,7 +13,8 @@
     "optional": "false",
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "ai_tutor_available": true
   },
   "published": true
 }]]></config>

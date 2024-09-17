@@ -1,20 +1,23 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import msg from '@cdo/locale';
-import javalabMsg from '@cdo/javalab/locale';
-import onClickOutside from 'react-onclickoutside';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
-import style from './javalab-settings.module.scss';
-import JavalabButton from './JavalabButton';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import onClickOutside from 'react-onclickoutside';
+import {connect} from 'react-redux';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+import javalabMsg from '@cdo/javalab/locale';
+import msg from '@cdo/locale';
+
 import {DisplayTheme} from './DisplayTheme';
+import JavalabButton from './JavalabButton';
 import {
   decreaseEditorFontSize,
   increaseEditorFontSize,
   setDisplayTheme,
 } from './redux/viewRedux';
-import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+
+import style from './javalab-settings.module.scss';
 
 /**
  * Displays the settings options for JavaLab.

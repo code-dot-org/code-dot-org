@@ -1,6 +1,6 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 

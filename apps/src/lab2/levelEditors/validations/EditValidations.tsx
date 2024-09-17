@@ -1,11 +1,15 @@
+import React, {useState} from 'react';
+
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import {Validation, ConditionType, AppName} from '../../types';
 import {MusicConditions} from '@cdo/apps/music/progress/MusicValidator';
 import {convertOptionalStringToBoolean} from '@cdo/apps/types/utils';
 import {createUuid} from '@cdo/apps/utils';
-import React, {useState} from 'react';
-import moduleStyles from './edit-validations.module.scss';
+
+import {Validation, ConditionType, AppName} from '../../types';
+
 import EditValidation from './EditValidation';
+
+import moduleStyles from './edit-validations.module.scss';
 
 /**
  * This component is used to edit validations for a level. Currently only used

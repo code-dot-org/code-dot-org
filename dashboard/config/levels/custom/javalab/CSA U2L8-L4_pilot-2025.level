@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T22:23:23.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO #1:** Add the following code, then run the program to observe the results.\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nint divideZero = 12;\r\nSystem.out.println(divideZero / 0);\r\n</pre>\r\n\r\nWhat happens when you run the program? Why do you think this happened?\r\n\r\n✅ **TO DO #2:** Change the code you just added to the following:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\ndouble divideZero = 12.0;\r\nSystem.out.println(divideZero / 0);\r\n</pre>\r\n\r\nWhat happens when you run the program? Why do you think this happened?",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U2L8-Operators PBT_pilot-2025",
+    "teacher_markdown": "1. The first code segment attempts to divide an `int` value by `0` and will result in the following error:\r\n\r\n```\r\nException message: java.lang.ArithmeticException: / by zero\r\n\t at ExpressionsRunner.main(ExpressionsRunner.java:21)\r\n```\r\n\r\n2. The second code segment attempts to divide a `double` value by `0` and will print `Infinity` to the console. This is because of the standard Java uses to handle `double` values.",
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T22:23:23.474+00:00\",\"changed\":[\"cloned from \\\"CSA U2L8-L4_2025\\\"\"],\"cloned_from\":\"CSA U2L8-L4_2025\"}]"
+}]]></config>
+</Javalab>

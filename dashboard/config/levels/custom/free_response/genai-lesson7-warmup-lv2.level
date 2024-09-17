@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-16T14:51:18.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "####Can you guess the rule for the Green Glass Door game?#### \r\n####How did you figure it out?####",
+    "teacher_markdown": " Discussion Goal: Ask a student to share the rule with the class and share how they figured it out. Emphasize answers that rely on noticing patterns within the responses, and responses that used an educated-guess to test their hypothesis (for example: “I suspected it was double letters, so I guessed a word like that to see if it was correct, and that confirmed my suspicions”). To help manage emotions for students who may not have figured out the pattern, remind students that it takes both correct and incorrect answers to determine the rule, which makes all responses valuable.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-16 14:51:21 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

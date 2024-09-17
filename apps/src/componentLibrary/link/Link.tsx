@@ -5,7 +5,7 @@ import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import moduleStyles from './link.module.scss';
 
-type LinkBaseProps = {
+export interface LinkBaseProps {
   /** Link id */
   id?: string;
   /** Custom class name */
@@ -24,7 +24,9 @@ type LinkBaseProps = {
   size?: ComponentSizeXSToL;
   /** Type of link */
   type?: 'primary' | 'secondary';
-};
+  /** Role of link */
+  role?: string;
+}
 
 type LinkWithChildren = LinkBaseProps & {
   /** Link content */
@@ -66,6 +68,7 @@ const Link: React.FunctionComponent<LinkProps> = ({
   onClick,
   size = 'm',
   type = 'primary',
+  role,
 }) => {
   return (
     <a
@@ -80,6 +83,7 @@ const Link: React.FunctionComponent<LinkProps> = ({
       onClick={!disabled ? onClick : undefined}
       rel={openInNewTab || external ? 'noopener noreferrer' : undefined}
       target={(openInNewTab || undefined) && '_blank'}
+      role={role}
       {...(disabled ? {'aria-disabled': true} : {})}
     >
       {text || children}

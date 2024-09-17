@@ -6,7 +6,7 @@ import {
   VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Notification from '@cdo/apps/templates/Notification';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 import i18n from '@cdo/locale';
 
 export default class Announcements extends Component {

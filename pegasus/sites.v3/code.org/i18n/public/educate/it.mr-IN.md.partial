@@ -126,7 +126,6 @@ Starting in July 2024, we will update the minimum versions required for browsers
 | **इंटरनेट सिम्युलेटर वापरण्यासाठी**                                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **वेब लॅब वापरण्यासाठी**                                                                            | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **गुगल क्लासरूम शेअर बटण वापरण्यासाठी**                                                             | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                                         | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## मोबाइल आणि टॅब्लेट सपोर्ट तपशील
 

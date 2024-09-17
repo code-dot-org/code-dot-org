@@ -126,7 +126,6 @@ theme: responsive
 | **ఇంటర్నెట్ సిమ్యులేటర్ ఉపయోగించడానికి**                                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **వెబ్ ల్యాబ్ ఉపయోగించడానికి**                                                                                   | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **గూగుల్ క్లాస్రూమ్ షేర్ బటన్ను ఉపయోగించడానికి**                                                                 | `https://apis.google.com`                                                                                  |
-| **యాప్ ల్యాబ్ డేటాసెట్లను ఉపయోగించడానికి**                                                                       | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 

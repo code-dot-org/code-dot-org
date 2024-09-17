@@ -69,8 +69,9 @@ steps:
       filename: unit-tests-cache-ubuntu-20.tar
 
   - name: unit-tests
-    # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.9.4
+    # see: docker/continuous-integration/Dockerfile
+    # TODO: switch to codedotorg/cdo-ci
+    image: codedotorg/code-dot-org:1.10.0
     pull: always
     volumes:
       - name: rbenv
@@ -188,8 +189,9 @@ steps:
       filename: ui-tests-cache-ubuntu-20.tar
 
   - name: ui-tests
-    # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.9.4
+    # see: docker/continuous-integration/Dockerfile
+    # TODO: switch to codedotorg/cdo-ci
+    image: codedotorg/code-dot-org:1.10.0
     pull: always
     volumes:
       - name: rbenv
@@ -204,12 +206,6 @@ steps:
         from_secret: CLOUDFRONT_PRIVATE_KEY
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
-      FIREBASE_NAME:
-        from_secret: FIREBASE_NAME
-      FIREBASE_SECRET:
-        from_secret: FIREBASE_SECRET
-      FIREBASE_SHARED_SECRET:
-        from_secret: FIREBASE_SHARED_SECRET
       SAUCE_USERNAME:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
@@ -293,6 +289,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 4430a979d74f30112a547f5dee7dd7fc6dc0671a54b4996e0b6e030f7afaaabf
+hmac: 8551f3e768d263e92bb0c8060de2b6bfd8cf939aa31c52047621485746726d16
 
 ...

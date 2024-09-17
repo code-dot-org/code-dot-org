@@ -2,9 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.2](https://github.com/code-dot-org/code-dot-org/pull/59607)
+## [0.3.4](https://github.com/code-dot-org/code-dot-org/pull/60916)
 
-* added ThemeContext.tsx to support themes change
+* updated colors.css values
+* removed utility colors
+
+## [0.3.2](https://github.com/code-dot-org/code-dot-org/pull/59328)
+
+* added `updatePositionedElementStyles` and `calculatePositionedElementStyles` helper functions
+* minor types update
 
 ## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/59609)
 

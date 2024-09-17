@@ -1,14 +1,14 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon, {SinonStub} from 'sinon';
+import sinon, {SinonStub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ChildAccountConsent, {
   ChildAccountConsentProps,
 } from '@cdo/apps/templates/policy_compliance/ChildAccountConsent';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ChildAccountConsent', () => {
   let sendEventSpy: SinonStub;

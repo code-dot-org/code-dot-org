@@ -1,6 +1,7 @@
 /** @file Type definitions (React and otherwise) specific to Gamelab */
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+
 import {P5LabInterfaceMode} from './constants';
 
 /**

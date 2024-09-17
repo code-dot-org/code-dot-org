@@ -6,7 +6,7 @@
         {
           "type": "html",
           "name": "Intro_csf_maker_microbit",
-          "html": "<h1>Code.org Self-paced Online Professional Learning - Computer Science Foundations: Maker with micro:bit</p> <h3><strong>Post-Module Survey</strong></h3><p><strong>Thanks for learning with us!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>  Post-Module Survey</h2>"
+          "html": "<h1>Code.org Self-paced Online Professional Learning - Maker with micro:bit</p> <h3><strong>Post-Module Survey</strong></h3><p><strong>Thanks for learning with us!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>  Post-Module Survey</h2>"
         },
         {
           "type": "radiogroup",
@@ -65,7 +65,7 @@
         {
           "type": "radiogroup",
           "name": "csf_maker_microbit_know_what_students_learn",
-          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s Computer Science Foundations: Maker with micro:bit curriculum.",
+          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s Maker with micro:bit curriculum.",
           "choices": [
             {
               "value": "1",
@@ -92,7 +92,7 @@
         {
           "type": "radiogroup",
           "name": "csf_maker_microbit_comfort_ability_to_teach",
-          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s Computer Science Foundations: Maker with micro:bit curriculum than I did before starting this professional learning course. ",
+          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s Maker with micro:bit curriculum than I did before starting this professional learning course. ",
           "choices": [
             {
               "value": "1",
@@ -207,7 +207,7 @@
             },
             {
               "value": "making_a_plan",
-              "text": "Making a plan to prepare to teach Code.org's Computer Science Foundations Maker: with micro:bit."
+              "text": "Making a plan to prepare to teach Code.org's Maker with micro:bit curriculum."
             },
             {
               "value": "check_for_understanding",

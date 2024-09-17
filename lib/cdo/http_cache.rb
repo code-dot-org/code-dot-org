@@ -143,6 +143,12 @@ class HttpCache
       default_cookies << Rack::CookieDCDO::KEY
     end
 
+    # Allows Geolocation to be altered via cookies. See: Rack::GeolocationOverride
+    if CDO.use_geolocation_override
+      require 'cdo/rack/geolocation_override'
+      default_cookies << Rack::GeolocationOverride::KEY
+    end
+
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [
       'hour_of_code',
@@ -191,7 +197,6 @@ class HttpCache
               # TODO: Collapse these paths into /private to simplify Pegasus caching config.
               %w(
                 /amazon-future-engineer*
-                /review-hociyskvuwa*
                 /manage-professional-development-workshops*
                 /professional-development-workshop-surveys*
                 /pd-program-registration*

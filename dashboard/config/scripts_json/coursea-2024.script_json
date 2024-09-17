@@ -15,13 +15,14 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2024-07-02 16:27:29 UTC",
-    "published_state": "preview",
+    "serialized_at": "2024-07-11 16:06:04 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",

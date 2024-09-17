@@ -12,7 +12,6 @@ import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard
 import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {getStore, restoreRedux, stubRedux} from '@cdo/apps/redux';
 
-import {assert, expect} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
 
 describe('DetailViewContents', () => {
@@ -105,7 +104,7 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.getAllByDisplayValue('')[0].id).to.eql('notes');
+      expect(screen.getAllByDisplayValue('')[0].id).toEqual('notes');
     });
   });
 
@@ -123,7 +122,7 @@ describe('DetailViewContents', () => {
         'Awaiting Admin Approval'
       );
       statusDropdowns.forEach(statusDropdown => {
-        assert(statusDropdown.disabled);
+        expect(statusDropdown.disabled).toBeTruthy();
       });
     });
 
@@ -132,8 +131,9 @@ describe('DetailViewContents', () => {
 
       const statusDropdowns = screen.getAllByDisplayValue('Accepted');
       statusDropdowns.forEach(statusDropdown => {
-        expect(within(statusDropdown).queryByText('Awaiting Admin Approval')).to
-          .be.null;
+        expect(
+          within(statusDropdown).queryByText('Awaiting Admin Approval')
+        ).toBeNull();
       });
     });
 
@@ -142,7 +142,7 @@ describe('DetailViewContents', () => {
 
       const statusDropdowns = screen.getAllByDisplayValue('Accepted');
       statusDropdowns.forEach(statusDropdown => {
-        expect(within(statusDropdown).queryByText('Incomplete')).to.be.null;
+        expect(within(statusDropdown).queryByText('Incomplete')).toBeNull();
       });
     });
 
@@ -158,7 +158,7 @@ describe('DetailViewContents', () => {
       renderDefault(overrideProps);
 
       const statusDropdowns = screen.getAllByDisplayValue('Incomplete');
-      expect(statusDropdowns.length).to.equal(2);
+      expect(statusDropdowns.length).toBe(2);
       statusDropdowns.forEach(statusDropdown => {
         within(statusDropdown).queryByText('Incomplete');
       });
@@ -198,9 +198,9 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.queryByLabelText('Edit')).to.be.null;
-      expect(screen.queryByText('(Admin) Edit Form Data')).to.be.null;
-      expect(screen.queryByText('Delete Application')).to.be.null;
+      expect(screen.queryByLabelText('Edit')).toBeNull();
+      expect(screen.queryByText('(Admin) Edit Form Data')).toBeNull();
+      expect(screen.queryByText('Delete Application')).toBeNull();
     });
 
     it('Is visible to admins', () => {
@@ -209,9 +209,9 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.getAllByLabelText('Edit').length).to.equal(2);
-      expect(screen.getAllByText('(Admin) Edit Form Data').length).to.equal(2);
-      expect(screen.getAllByText('Delete Application').length).to.equal(2);
+      expect(screen.getAllByLabelText('Edit').length).toBe(2);
+      expect(screen.getAllByText('(Admin) Edit Form Data').length).toBe(2);
+      expect(screen.getAllByText('Delete Application').length).toBe(2);
     });
   });
 
@@ -221,23 +221,23 @@ describe('DetailViewContents', () => {
 
       // Dropdowns and notes are disabled before Edit button is clicked
       screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
-        assert(dropdown.disabled);
+        expect(dropdown.disabled).toBeTruthy();
       });
-      assert(screen.getByDisplayValue('notes').disabled);
+      expect(screen.getByDisplayValue('notes').disabled).toBeTruthy();
 
       // Dropdowns and notes are enabled after Edit button is clicked
       fireEvent.click(screen.getAllByText('Edit')[0]);
       screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
-        assert(!dropdown.disabled);
+        expect(!dropdown.disabled).toBeTruthy();
       });
-      assert(!screen.getByDisplayValue('notes').disabled);
+      expect(!screen.getByDisplayValue('notes').disabled).toBeTruthy();
 
       // Dropdowns and notes are disabled after Cancel or Save button is clicked
       fireEvent.click(screen.getAllByText('Cancel')[0]);
       screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
-        assert(dropdown.disabled);
+        expect(dropdown.disabled).toBeTruthy();
       });
-      assert(screen.getByDisplayValue('notes').disabled);
+      expect(screen.getByDisplayValue('notes').disabled).toBeTruthy();
     });
   });
 
@@ -259,11 +259,11 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      assert(
+      expect(
         screen
           .getAllByRole('link')[1]
           .href.includes(`/pd/application/principal_approval/${guid}`)
-      );
+      ).toBeTruthy();
     });
 
     it(`Shows complete text for principal approval if complete`, () => {
@@ -329,7 +329,7 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.queryByRole('button', {name: 'Resend request'})).to.be.null;
+      expect(screen.queryByRole('button', {name: 'Resend request'})).toBeNull();
     });
 
     it(`Does not show button to resend admin email if is allowed to be resent but status is pending`, () => {
@@ -343,7 +343,7 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.queryByRole('button', {name: 'Resend request'})).to.be.null;
+      expect(screen.queryByRole('button', {name: 'Resend request'})).toBeNull();
     });
   });
 
@@ -354,7 +354,7 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.getAllByText('Delete').length).to.equal(2);
+      expect(screen.getAllByText('Delete').length).toBe(2);
     });
   });
 
@@ -375,19 +375,19 @@ describe('DetailViewContents', () => {
           .parentElement.parentElement;
 
       // Dropdown is disabled
-      assert(selectDropdown.classList.contains('is-disabled'));
+      expect(selectDropdown.classList.contains('is-disabled')).toBeTruthy();
 
       // Click "Edit"
       fireEvent.click(screen.getAllByText('Edit')[0]);
 
       // Dropdown is no longer disabled
-      assert(!selectDropdown.classList.contains('is-disabled'));
+      expect(!selectDropdown.classList.contains('is-disabled')).toBeTruthy();
 
       // Click "Cancel"
       fireEvent.click(screen.getAllByText('Cancel')[0]);
 
       // Dropdown is disabled
-      assert(selectDropdown.classList.contains('is-disabled'));
+      expect(selectDropdown.classList.contains('is-disabled')).toBeTruthy();
     });
   });
 
@@ -403,8 +403,8 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.getAllByText('Accepted (auto-email)').length).to.equal(2);
-      expect(screen.getAllByText('Declined (auto-email)').length).to.equal(2);
+      expect(screen.getAllByText('Accepted (auto-email)').length).toBe(2);
+      expect(screen.getAllByText('Declined (auto-email)').length).toBe(2);
     });
 
     it('does not append auto email text if set to false', () => {
@@ -418,10 +418,10 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.queryAllByText('Accepted (auto-email)').length).to.equal(0);
-      expect(screen.queryAllByText('Declined (auto-email)').length).to.equal(0);
-      expect(screen.getAllByText('Accepted').length).to.equal(2);
-      expect(screen.getAllByText('Declined').length).to.equal(2);
+      expect(screen.queryAllByText('Accepted (auto-email)').length).toBe(0);
+      expect(screen.queryAllByText('Declined (auto-email)').length).toBe(0);
+      expect(screen.getAllByText('Accepted').length).toBe(2);
+      expect(screen.getAllByText('Declined').length).toBe(2);
     });
 
     it(`is required in order to set application status to accepted`, () => {
@@ -436,15 +436,15 @@ describe('DetailViewContents', () => {
       renderDefault(overrideProps);
 
       // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
-      assert(!isModalShowing());
+      expect(!isModalShowing()).toBeTruthy();
       screen.getByText('Select...');
-      expect(screen.getAllByDisplayValue('Unreviewed').length).to.equal(2);
+      expect(screen.getAllByDisplayValue('Unreviewed').length).toBe(2);
 
       // Attempt to change application status without updating scholarship status, resulting in modal that instructs
       // the user to set the scholarship status first
       clickEditButton();
       setApplicationStatusTo('Unreviewed', 'accepted');
-      assert(isModalShowing());
+      expect(isModalShowing()).toBeTruthy();
     });
 
     for (const applicationStatus of _.difference(
@@ -463,20 +463,18 @@ describe('DetailViewContents', () => {
         renderDefault(overrideProps);
 
         // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
-        assert(!isModalShowing());
+        expect(!isModalShowing()).toBeTruthy();
         screen.getByText('Select...');
-        expect(screen.getAllByDisplayValue('Unreviewed').length).to.equal(2);
+        expect(screen.getAllByDisplayValue('Unreviewed').length).toBe(2);
 
         // Change application status without updating scholarship status, and ensure that no modal pops up
         clickEditButton();
         setApplicationStatusTo('Unreviewed', applicationStatus);
-        assert(!isModalShowing());
+        expect(!isModalShowing()).toBeTruthy();
 
         // Check that status successfully updated
         const statusDisplayValue = getApplicationStatuses()[applicationStatus];
-        expect(screen.getAllByDisplayValue(statusDisplayValue).length).to.equal(
-          2
-        );
+        expect(screen.getAllByDisplayValue(statusDisplayValue).length).toBe(2);
       });
     }
 

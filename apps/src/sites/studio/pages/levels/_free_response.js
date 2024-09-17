@@ -1,14 +1,15 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
-import Attachments from '@cdo/apps/code-studio/components/Attachments';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 import {Provider} from 'react-redux';
+
+import Attachments from '@cdo/apps/code-studio/components/Attachments';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import {getStore} from '@cdo/apps/redux';
+import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const scriptData = getScriptData('freeresponse');

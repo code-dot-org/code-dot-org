@@ -13,8 +13,8 @@
 #
 # Indexes
 #
-#  fk_rails_105c1f9428                                    (user_id)
-#  index_ai_tutor_feedback_on_interaction_and_user        (ai_tutor_interaction_id,user_id) UNIQUE
+#  fk_rails_105c1f9428                              (user_id)
+#  index_ai_tutor_feedback_on_interaction_and_user  (ai_tutor_interaction_id,user_id) UNIQUE
 #
 class AiTutorInteractionFeedback < ApplicationRecord
   belongs_to :ai_tutor_interaction

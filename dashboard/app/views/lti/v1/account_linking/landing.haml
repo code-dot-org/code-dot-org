@@ -6,13 +6,15 @@
     if landing_session.present?
       lti_provider = landing_session[:lti_provider_name]
       new_cta_type = landing_session[:new_cta_type]
+      user_type = landing_session[:user_type]
     else
       lti_provider ||= params[:lti_provider]
       new_cta_type ||= params[:new_cta_type]
+      user_type ||= current_user&.user_type
     end
 
     email ||= params[:email]
-    new_account_url = DCDO.get('student-email-post-enabled', false) ? users_finish_sign_up_path : new_user_registration_url
+    new_account_url = users_finish_sign_up_path
     script_data[:lti_provider] = lti_provider
     script_data[:lti_provider_name] = Policies::Lti::LMS_PLATFORMS[lti_provider.to_sym][:name]
     script_data[:new_account_url] = new_account_url
@@ -20,8 +22,8 @@
     script_data[:continue_account_url] = session[:user_return_to] || home_path
     script_data[:email] = email
     script_data[:new_cta_type] = new_cta_type
-    script_data[:user_type] = landing_session[:user_type] || current_user&.user_type
+    script_data[:user_type] = user_type
 
-  %script{src: webpack_asset_path('js/lti/v1/account_linking/landing.js'), data: {json: script_data.to_json}}}
+  %script{src: webpack_asset_path('js/lti/v1/account_linking/landing.js'), data: {json: script_data.to_json}}
 %body
   %div{id: 'mount-point'}

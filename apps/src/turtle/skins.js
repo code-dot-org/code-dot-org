@@ -20,6 +20,9 @@ exports.load = function (assetUrl, id) {
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       linePatterns: {
+        patternDefault: assetUrl(
+          'media/common_images/defaultline-menuicon.png'
+        ),
         annaLine: skin.assetUrl('annaline.png'),
         annaLine_2x: skin.assetUrl('annaline_2x.png'),
       },
@@ -44,6 +47,9 @@ exports.load = function (assetUrl, id) {
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       linePatterns: {
+        patternDefault: assetUrl(
+          'media/common_images/defaultline-menuicon.png'
+        ),
         elsaLine: skin.assetUrl('elsaline.png'),
         elsaLine_2x: skin.assetUrl('elsaline_2x.png'),
       },

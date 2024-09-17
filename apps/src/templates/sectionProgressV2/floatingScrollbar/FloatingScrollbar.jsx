@@ -14,8 +14,13 @@ import styles from './floating-scrollbar.module.scss';
  *   {child} should have all content visible and not itself scrollable.
  * childRef - a ref to {child} element.
  *    Set by calling `ref={childRef}` on the {child} element
+ * {scrollCallback} - a function that is called whenever the container is scrolled.
  */
-export default function FloatingScrollbar({children, childRef}) {
+export default function FloatingScrollbar({
+  children,
+  childRef,
+  scrollCallback,
+}) {
   const scrollRef = React.useRef();
   const childContainerRef = React.useRef();
 
@@ -110,9 +115,13 @@ export default function FloatingScrollbar({children, childRef}) {
     scroll => {
       if (childContainerRef?.current) {
         childContainerRef.current.scrollLeft = scroll.target.scrollLeft;
+
+        if (scrollCallback) {
+          scrollCallback(scroll);
+        }
       }
     },
-    [childContainerRef]
+    [childContainerRef, scrollCallback]
   );
 
   if (children.length > 1) {
@@ -161,4 +170,5 @@ export default function FloatingScrollbar({children, childRef}) {
 FloatingScrollbar.propTypes = {
   children: PropTypes.element.isRequired,
   childRef: PropTypes.object.isRequired,
+  scrollCallback: PropTypes.func,
 };

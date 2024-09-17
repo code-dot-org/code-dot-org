@@ -1,5 +1,6 @@
-import {ProjectType} from '../types';
 import * as utils from '@cdo/apps/utils';
+
+import {ProjectType} from '../types';
 
 const rootUrl = '/projects/';
 
@@ -9,7 +10,7 @@ export async function getChannelForLevel(
   levelId: number,
   scriptId?: number,
   scriptLevelId?: string,
-  userId?: string
+  userId?: number
 ): Promise<Response> {
   let requestString = rootUrl;
   if (scriptId !== undefined) {

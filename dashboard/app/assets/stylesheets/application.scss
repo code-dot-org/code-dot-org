@@ -22,7 +22,8 @@
  *
  * Shared
  *= require barlow-semi-condensed-font
- *= require metropolis-font
+ *= require fonts/metropolis
+ *= require fonts/noto-sans
  *= require user-menu
  *= require buttons
  *= require course-blocks
@@ -313,10 +314,15 @@ img.video_thumbnail {
     }
   }
 
+  #header_user_create_account {
+    background-color: $light_white !important;
+    color: $light_primary_500;
+    font-weight: $semi-bold-font-weight;
+  }
+
   .button-signin {
     text-decoration: none;
   }
-
   .project_updated_at {
     font-size: 10px;
     .project-save-error {
@@ -355,6 +361,15 @@ img.video_thumbnail {
       .header_user {
         background-color: $teal;
       }
+    }
+  }
+
+  /* Hide the Sign in and Create account buttons
+  in the header on small screens */
+  @media (max-width: 425px) {
+    .button-signin.desktop,
+    .button-create-account.desktop {
+      display: none;
     }
   }
 }
@@ -1259,6 +1274,7 @@ $default-modal-width: 640px;
 
 #sign_in_or_user {
   float: left;
+  display: flex;
 }
 
 input.header_input {
@@ -3374,9 +3390,6 @@ button.button-active-no-border:active {
   // an active button. (overriding button:active rule above)
   border: none !important;
 }
-button:hover {
-  @include box-shadow(2px 2px 5px $shadow);
-}
 button.disabled, button[disabled=disabled] {
   border: 1px solid $lighter_gray;
   background-color: $lighter_gray;
@@ -4141,10 +4154,6 @@ a {
       animation-delay: #{$i + 1}s;
     }
   }
-}
-
-#teacher-dashboard {
-  overflow: auto;
 }
 
 #lti-integration-portal {

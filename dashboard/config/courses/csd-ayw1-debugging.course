@@ -1,0 +1,20 @@
+{
+  "name": "csd-ayw1-debugging",
+  "script_names": [
+    "csd-ayw1-debugging"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csd-ayw1-debugging",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

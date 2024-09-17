@@ -3,7 +3,7 @@ Feature: Shared content restrictions
 
 Background:
   Given I am on "http://studio.code.org/s/playlab/lessons/1/levels/10?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
 @webpurify
 Scenario: Sharing a profane studio game
@@ -14,7 +14,7 @@ Scenario: Sharing a profane studio game
 
 Scenario: Sharing a phone number studio game
   Given I am on "http://studio.code.org/s/playlab/lessons/1/levels/10?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I've initialized the workspace with a studio say block saying "800.555.5555"
   Then I press "runButton"
   Then I press ".share" using jQuery
@@ -22,7 +22,7 @@ Scenario: Sharing a phone number studio game
 
 Scenario: Sharing an email studio game
   Given I am on "http://studio.code.org/s/playlab/lessons/1/levels/10?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I've initialized the workspace with a studio say block saying "brian@code.org"
   Then I press "runButton"
   Then I press ".share" using jQuery

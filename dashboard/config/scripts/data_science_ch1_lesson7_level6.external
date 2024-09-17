@@ -1,0 +1,16 @@
+name 'data-science-ch1-lesson7-level6'
+title 'Applying Filters'
+description 'description here'
+
+markdown <<MARKDOWN
+#Applying Filters
+###To practice applying filters, try the following:
+###1. Sort "When should we have the party" by "Ascending"
+###2. Select all cases that are on "Friday"
+###3. Create a graph
+###4. Add "What songs should we play" attribute to the x-axis
+###5. Click on the eye icon
+###6. Click "Hide selected cases"
+
+###[School Party Survey Data - CODAP](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FbmRtgGWIm4yEfQjEOp9c%2Ffile.json)
+MARKDOWN

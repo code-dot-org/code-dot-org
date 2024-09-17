@@ -1,10 +1,12 @@
 import GoogleBlockly from 'blockly/core';
-import experiments from '@cdo/apps/util/experiments';
-import color from '@cdo/apps/util/color';
-import {getStore} from '../../redux';
-import {openAiModal} from '../danceRedux';
+
 import {getToolboxType} from '@cdo/apps/blockly/addons/cdoUtils';
 import {ToolboxType} from '@cdo/apps/blockly/constants';
+import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
+
+import {getStore} from '../../redux';
+import {openAiModal} from '../danceRedux';
 
 const ITEM_WIDTH = 24;
 const ITEM_SPACING = 1;

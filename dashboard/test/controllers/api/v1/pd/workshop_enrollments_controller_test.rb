@@ -395,6 +395,34 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     assert_response 404
   end
 
+  test 'creating an enrollment for Build Your Own workshops marks user as attended for all sessions' do
+    user = create :teacher
+    num_workshop_sessions = 3
+    byo_workshop = create :pd_workshop,
+      funded: false,
+      course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
+      subject: nil,
+      course_offerings: [] << (create :course_offering),
+      num_sessions: num_workshop_sessions
+    params = enrollment_test_params(user).merge(
+      {
+        user_id: user.id,
+        workshop_id: byo_workshop.id
+      }
+    )
+
+    assert_equal 0, Pd::Attendance.for_workshop(byo_workshop).count
+
+    post :create, params: params
+
+    workshop_attendance = Pd::Attendance.for_workshop(byo_workshop)
+
+    assert_equal num_workshop_sessions, workshop_attendance.count
+    workshop_attendance.each do |attendance|
+      assert_equal user.id, attendance.teacher_id
+    end
+  end
+
   test 'admin can update scholarship info' do
     workshop = create :summer_workshop
     enrollment = create :pd_enrollment, :from_user, workshop: workshop

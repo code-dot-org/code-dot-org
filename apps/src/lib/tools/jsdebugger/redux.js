@@ -1,10 +1,13 @@
 import * as Immutable from 'immutable';
+
+import runState from '@cdo/apps/redux/runState';
+import watchedExpressions from '@cdo/apps/redux/watchedExpressions';
+
 import Observer from '../../../Observer';
 import {update as updateWatchExpressions} from '../../../redux/watchedExpressions';
-import CommandHistory from './CommandHistory';
 import JSInterpreter from '../jsinterpreter/JSInterpreter';
-import watchedExpressions from '@cdo/apps/redux/watchedExpressions';
-import runState from '@cdo/apps/redux/runState';
+
+import CommandHistory from './CommandHistory';
 
 const WATCH_TIMER_PERIOD = 250;
 const INITIALIZE = 'jsdebugger/INITIALIZE';

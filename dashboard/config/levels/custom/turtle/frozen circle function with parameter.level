@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "ideal": "7",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"frozen_circle_function_with_parameter_circle\",\"callout_text\":\"Use the \\\"create a circle\\\" block and change the size.\",\"element_id\":\"#create_circle_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"frozen_circle_function_with_parameter_circle\",\r\n  \"callout_text\": \"Use the \\\"create a circle\\\" block and change the size.\",\r\n  \"element_id\": \"#create_circle_qtip, [data-id=\\\"create_circle_qtip\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_sharing": "false",
     "permitted_errors": "0",
     "long_instructions": "Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?",

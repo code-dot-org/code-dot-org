@@ -15,7 +15,7 @@ import 'react-select/dist/react-select.css';
 import Select from 'react-select/lib/Select';
 import ReactTooltip from 'react-tooltip';
 
-import FontAwesome from '../../../../../templates/FontAwesome.jsx';
+import FontAwesome from '../../../../../legacySharedComponents/FontAwesome.jsx';
 import {SelectStyleProps} from '../../../constants.js';
 import DatePicker from '../../components/date_picker.jsx';
 

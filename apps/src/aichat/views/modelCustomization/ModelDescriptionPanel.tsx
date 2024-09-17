@@ -58,6 +58,7 @@ const ModelDescriptionPanel: React.FunctionComponent<{
         size="s"
         className={styles.fullWidth}
       />
+      <br />
       <div
         ref={descriptionsContainerRef}
         className={

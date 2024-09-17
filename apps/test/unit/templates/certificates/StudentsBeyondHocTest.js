@@ -7,8 +7,6 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import StudentsBeyondHoc from '@cdo/apps/templates/certificates/StudentsBeyondHoc';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const store = createStore(combineReducers({responsive, isRtl}));
 
 function wrapped(element) {

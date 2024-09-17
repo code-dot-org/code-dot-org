@@ -1,0 +1,20 @@
+name 'music-intro-coding-loops-match'
+title 'Loops!'
+description 'Match the code with the loop.'
+
+height '210'
+width '200'
+
+question 'https://images.code.org/084b5d2b19fb04e234af02d998db03fc-image-1724875080574.jpg'
+answer 'https://images.code.org/5e09c44854c8b52c90acda3e7cfdc6b7-image-1724875086454.jpg'
+question 'https://images.code.org/fcdfedcc81cb1b3b4c21b82a289cb7d2-image-1724875817123.jpg'
+answer 'https://images.code.org/ee8c058e60af4851640e7ed6ef2a055c-image-1724875828301.jpg'
+question 'https://images.code.org/3a2ed1486f37a022502db705c46550bb-image-1724875065850.jpg'
+answer 'https://images.code.org/89fe1c6f966ba19f6ea9437e74826d86-image-1724875072450.jpg'
+
+allow_multiple_attempts true
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

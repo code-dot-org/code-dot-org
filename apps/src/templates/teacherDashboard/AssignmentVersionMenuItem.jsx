@@ -6,10 +6,10 @@ import ReactTooltip from 'react-tooltip';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
-import PopUpMenu from '../../lib/ui/PopUpMenu';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import PopUpMenu from '../../sharedComponents/PopUpMenu';
 import color from '../../util/color';
 
-import FontAwesome from './../FontAwesome';
 import {assignmentCourseVersionShape} from './shapes';
 
 export default function AssignmentVersionMenuItem(props) {

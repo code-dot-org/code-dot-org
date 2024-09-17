@@ -1,6 +1,5 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {workspaceAlertTypes} from '@cdo/apps/code-studio/projectRedux';
 import {
@@ -11,7 +10,7 @@ import {
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 
 import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('CodeWorkspace', () => {
   const MINIMUM_PROPS = {
@@ -38,12 +37,12 @@ describe('CodeWorkspace', () => {
   beforeEach(() => {
     stubStudioApp();
     studioApp = studioAppSingleton();
-    sinon.stub(studioApp, 'showGeneratedCode');
+    jest.spyOn(studioApp, 'showGeneratedCode').mockClear().mockImplementation();
     workspace = mount(<CodeWorkspace {...MINIMUM_PROPS} />);
   });
 
   afterEach(() => {
-    studioApp.showGeneratedCode.restore();
+    studioApp.showGeneratedCode.mockRestore();
     restoreStudioApp();
   });
 

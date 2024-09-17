@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
@@ -17,7 +17,7 @@ import {
 } from '@cdo/apps/StudioApp';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../util/reconfiguredChai';
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import setBlocklyGlobal from '../util/setupBlocklyGlobal';
 import {
   sandboxDocumentBody,

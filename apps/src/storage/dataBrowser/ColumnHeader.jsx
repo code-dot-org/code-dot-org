@@ -5,8 +5,8 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Dialog from '../../templates/Dialog';
-import FontAwesome from '../../templates/FontAwesome';
+import Dialog from '../../legacySharedComponents/Dialog';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 import {valueOr} from '../../utils';
 

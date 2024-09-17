@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-31T21:20:49.000Z",
   "level_num": "custom",
@@ -74,16 +75,15 @@
     "encrypted_examples": "vCTZHzdeu9zC7at4wEmlqTPIIvhlO4wLtO0V1wg/WqHKR8ocs98nzntpTv5r\ngqfJocd9fRNi3tcDaYPP/tMSXA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-31T21:20:49.448+00:00\",\"changed\":[\"cloned from \\\"game_development_environment_type_course-e\\\"\"],\"cloned_from\":\"game_development_environment_type_course-e\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-31T21:20:49.448+00:00\",\"changed\":[\"cloned from \\\"game_development_environment_type_course-e\\\"\"],\"cloned_from\":\"game_development_environment_type_course-e\"},{\"changed_at\":\"2024-07-12 17:42:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-12 17:43:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" x="46" y="55">
+        <block type="when_run" id="1H!Xm]vsMkR6I6p%z#TA" deletable="false" x="16" y="16">
           <next>
             <block type="gamelab_setBackgroundImageAs" deletable="false">
               <field name="IMG">"gradient_08"</field>
@@ -149,7 +149,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_checkTouching" deletable="false" editable="false" x="90" y="513">
+        <block type="gamelab_checkTouching" deletable="false" editable="false" x="16" y="513">
           <mutation useDefaultIcon="true"/>
           <field name="button_gamelab_checkTouching"/>
           <field name="CONDITION">"when"</field>

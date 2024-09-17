@@ -3,6 +3,7 @@ class LearningGoalAiEvaluationFeedbacksController < ApplicationController
 
   def create
     @learning_goal_ai_evaluation_feedback.update!(ai_eval_feedback_params.merge(teacher_id: current_user.id))
+    AiRubricMetrics.log_feedback(@learning_goal_ai_evaluation_feedback)
     render json: @learning_goal_ai_evaluation_feedback
   end
 

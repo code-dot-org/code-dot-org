@@ -120,7 +120,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :facebook
     end
 
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
     assert_nil partial_user.age
@@ -233,7 +234,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :clever
     end
 
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
   end
@@ -278,38 +280,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     assert_creates(User) do
       get :clever
-    end
-
-    user = User.last
-    assert_equal '', user.email
-    assert_equal user.id, signed_in_user_id
-  end
-
-  test "login: authorizing with unknown powerschool student account does not save email" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '12345',
-      provider: 'powerschool',
-      info: {
-        name: nil,
-      },
-      extra: {
-        response: {
-          message: {
-            args: {
-              '["http://openid.net/srv/ax/1.0", "value.ext0"]': 'student',
-              '["http://openid.net/srv/ax/1.0", "value.ext1"]': 'splat.cat@example.com',
-              '["http://openid.net/srv/ax/1.0", "value.ext2"]': 'splat',
-              '["http://openid.net/srv/ax/1.0", "value.ext3"]': 'cat',
-            }
-          }
-        }
-      }
-    )
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_creates(User) do
-      get :powerschool
     end
 
     user = User.last
@@ -714,17 +684,14 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_equal AuthenticationOption::GOOGLE, partial_user.provider
     assert_equal uid, partial_user.uid
   end
 
   test 'google_oauth2: renders redirector to complete registration if user is not found by credentials' do
-    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
-    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
     # Given I do not have a Code.org account
     uid = "nonexistent-google-oauth2"
 
@@ -763,7 +730,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     assert PartialRegistration.in_progress? session
     partial_user = User.new_with_session({}, session)
 
@@ -792,7 +760,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     assert PartialRegistration.in_progress? session
     partial_user = User.new_with_session({}, session)
 
@@ -1043,40 +1012,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil signed_in_user_id
   end
 
-  test 'login: microsoft_v2_auth deletes an existing windowslive authentication_option for migrated user' do
-    email = 'test@foo.xyz'
-    uid = '654321'
-    user = create(:user, :windowslive_sso_provider, email: email)
-    auth = OmniAuth::AuthHash.new(
-      provider: 'microsoft_v2_auth',
-      uid: uid,
-      info: {},
-      extra: {
-        raw_info: {
-          userPrincipalName: email,
-          displayName: 'My Name'
-        }
-      },
-    )
-
-    windowslive_auth_option = user.authentication_options.find {|ao| ao.credential_type == 'windowslive'}
-    assert windowslive_auth_option.primary?
-
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    get :microsoft_v2_auth
-
-    user.reload
-    assert_equal 'migrated', user.provider
-    assert_equal 1, user.authentication_options.count
-    microsoft_auth_option = user.authentication_options.first
-    refute_nil microsoft_auth_option
-    assert microsoft_auth_option.primary?
-    assert_equal 'microsoft_v2_auth', microsoft_auth_option.credential_type
-    assert_equal uid, microsoft_auth_option.authentication_id
-    assert_equal signed_in_user_id, user.id
-  end
-
   test 'login: google_oauth2 updates unmigrated Google Classroom student email if silent takeover not available' do
     email = 'test@foo.xyz'
     uid = '654321'
@@ -1241,20 +1176,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_auth_option(user, auth)
   end
 
-  test 'connect_provider: creates new windowslive auth option for signed in user' do
-    user = create :user, uid: 'some-uid'
-    auth = generate_auth_user_hash(provider: 'windowslive', uid: user.uid)
-
-    setup_should_connect_provider(user, auth)
-    assert_creates(AuthenticationOption) do
-      get :windowslive
-    end
-
-    user.reload
-    assert_redirected_to 'http://test-studio.code.org/users/edit'
-    assert_auth_option(user, auth)
-  end
-
   test 'connect_provider: creates new facebook auth option for signed in user' do
     user = create :user, uid: 'some-uid'
     auth = generate_auth_user_hash(provider: 'facebook', uid: user.uid)
@@ -1276,20 +1197,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     setup_should_connect_provider(user, auth)
     assert_creates(AuthenticationOption) do
       get :clever
-    end
-
-    user.reload
-    assert_redirected_to 'http://test-studio.code.org/users/edit'
-    assert_auth_option(user, auth)
-  end
-
-  test 'connect_provider: creates new powerschool auth option for signed in user' do
-    user = create :user, uid: 'some-uid'
-    auth = generate_auth_user_hash(provider: 'powerschool', uid: user.uid)
-
-    setup_should_connect_provider(user, auth)
-    assert_creates(AuthenticationOption) do
-      get :powerschool
     end
 
     user.reload
@@ -1689,7 +1596,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     AuthenticationOption::OAUTH_CREDENTIAL_TYPES.excluding(
       AuthenticationOption::QWIKLABS,
       AuthenticationOption::TWITTER,
-      AuthenticationOption::POWERSCHOOL,
     ).each do |provider|
       context "when provider is #{provider}" do
         let(:auth_hash) {generate_auth_user_hash(provider: provider, uid: user_uid)}
@@ -1738,7 +1644,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     let(:user_account_linking_lock_reason) {nil}
 
     before do
-      DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
       @controller.stubs(:account_linking_lock_reason).with(user).returns(user_account_linking_lock_reason)
       @controller.stubs(:account_linking_lock_reason).with(admin).returns(user_account_linking_lock_reason)
     end
@@ -1798,6 +1703,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           # so this includes 1 email, 1 SSO, and 1 LTI auth option
           _(user.authentication_options.count).must_equal 3
           _(user.authentication_options).must_include lti_auth_option
+          assert_equal I18n.t('lti.account_linking.successfully_linked'), flash[:notice]
         end
 
         context 'if account linking is locked for user' do
@@ -1877,7 +1783,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'Account linking flow doesn\'t sign up new users' do
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
     OmniauthCallbacksController.stubs(:should_link_accounts?).returns(true)
     auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: 'some-uid'
     @request.env['omniauth.auth'] = auth
@@ -1885,7 +1790,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     get :google_oauth2
     OmniauthCallbacksController.expects(:sign_in_google_oauth2).never
     OmniauthCallbacksController.expects(:sign_up_google_oauth2).never
-    assert_response :redirect
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     assert_nil User.find_by_credential type: AuthenticationOption::GOOGLE, id: auth.uid
   end
 

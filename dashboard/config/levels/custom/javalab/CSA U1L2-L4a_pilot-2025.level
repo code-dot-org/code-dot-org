@@ -1,0 +1,374 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T20:42:32.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "csa_view_mode": "neighborhood",
+    "display_name": "One Syntax Error",
+    "bubble_choice_description": "This program has one syntax error that is preventing it from running. Can you find and fix the error?",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 3,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 52
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 283
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 26
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 24
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 22
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 20
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 27
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 25
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 23
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 21
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 49
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "long_instructions": "##Fix the Error\r\n\r\nRun the program to see the error displayed in the console.\r\n\r\n✅ **TO DO:** This program has **one** syntax error to fix! Find and fix the syntax error in the program.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for tips for finding and fixing syntax errors!\r\n</div>\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!",
+    "encrypted_exemplar_sources": "kq0Pf5c4aweori7RVLPa2YdCHg6i+267r90rZwE5q3QjjBR/PpJw16UPErsZ\nOeh4HkoGe0sIy4rmswwWqhzFbcFdbFVrR0Z9OcEvJ+vg5mvdX5HJUsmmpmcW\nY4abvtGgvTEQflirPWy6TVn0XL94SHijNz2EJ2b1dBsPvo1Ca87yOSd8VBrG\n4FOFvcdOUY0K1z4pIMjprM7tzNVC+7AWPU0fJw7wiCkMBfdgwYWDlWpkwidH\n2UU8LqtSva9JYq2+FlF1g9npbj5LrK0oz+cD2dwwCTHd2IHokxJldfceou4N\nTdIH96Yq7+4dnFYOFKVRlIGFXKENueZ4UHtViN/6cnpFSmxgUon0WnaxwX97\nyQbXUbS1aZLk8T+mVPqXba4UqV/cIYsBWmFZuKap1Bgb305cjFi2d2Ml01im\nvue1wGpxS7OOumxZrxckpwiJ4ZF+tdk24XaQHD8C9hZwF3ElUN/U0G4JqoLE\n7sh+7xe85vIzMytxJLAI3/Yv1JrKqSqa2dGoDnrdqiyOVBzpVfaTNIi2/4F0\nrt9i/SqUv4XlCNgyLHS+B33d1G/w0DFLEF+cUR48AdcVysAeg0It/YmRURn/\nNSE4ejnyWb/pMW7gv379/imMfDRwK4nfcFvS0gaDCGj+DOCda7JQRbV3ReNV\nMQcUEHd3g+TZ8Q+Kr2BKKuEkxnGav1yw1p2giOigExjNZ8oZL20wrDqLqHLr\nbI+PqlswSL2bR2gtLGfrXqky52Ll2u35l0oPEiKOqA157l57gftflJGwHOAl\nwgIsoSCbqlq4b9jZ7beIDoVXkzMTxzEY95mLOaOVVv+I8WSgwEkJToway3PM\nUTzcnM7LjvbmzdiHYjkTzO8rVvvjq5ZnNl5tu5LKu3aPF1WNBjloj1GG+31I\nGk9IogsF2ExpO+abnffKvz/wvLHcYc+KthUSMzbnfsOXf2XJBSyqvTxCU7cA\n9PAPyxFv7Ppg/M5B3kCqa0rmyo3xHS3s+24/XEtxxf53uym/X8J324BXTGV2\n33TdIvavdvER4ORZtIXEMfB/pPOx2YZZRu7bxTe++L0NFvbiqTUSstjTU/IV\nYU3JDOce9GvJUeRBulOjBUc/j6bRZGxyvPxOLyRZ73DZvua48rH6Yk8WgyAI\nbxSC2uNura1a\n",
+    "teacher_markdown": "The error is on **Line 14**. In the line\r\n\r\n```\r\namelia.takepaint();\r\n```\r\n\r\nThe `takePaint()` method should have a capital `P`.",
+    "thumbnail_url": "https://images.code.org/fc840d17b0b33da8f0c93dd8d3994448-U1L2-L4a.png",
+    "encrypted_validation": "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\nMFN1mkpL0UJ7+fv48eoI4v0=\n",
+    "start_sources": {
+      "NeighborhoodRunner.java": {
+        "text": "import org.code.neighborhood.*;\n\npublic class NeighborhoodRunner {\n  public static void main(String[] args) {\n\n    // Creates a Painter called amelia\n    Painter amelia = new Painter();\n\n    // Moves forward one space\n    amelia.move();\n\n    // Takes paint three times to get all the paint from the bucket\n    amelia.takePaint();\n    amelia.takepaint();\n    amelia.takePaint();\n\n    // Turns right by turning left three times\n    amelia.turnLeft();\n    amelia.turnLeft();\n    amelia.turnLeft();\n\n    // Moves and paints three times\n    amelia.move();\n    amelia.paint(\"LawnGreen\");\n    amelia.move();\n    amelia.paint(\"LawnGreen\");\n    amelia.move();\n    amelia.paint(\"LawnGreen\");\n\n    // Moves forward one space to get off the paint\n    amelia.move();\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "reference_links": [
+      "/courses/csa-2023/guides/reading-error-messages"
+    ],
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T20:42:32.074+00:00\",\"changed\":[\"cloned from \\\"CSA U1L2-L4a_2025\\\"\"],\"cloned_from\":\"CSA U1L2-L4a_2025\"}]"
+}]]></config>
+</Javalab>

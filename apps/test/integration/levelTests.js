@@ -10,7 +10,7 @@
 // feedback when a user gets the puzzle wrong?
 
 import jQuery from 'jquery';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -28,7 +28,7 @@ import {
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import loadSource from './util/loadSource';
 import {setupBlocklyFrame} from './util/testBlockly';

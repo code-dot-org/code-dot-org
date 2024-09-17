@@ -31,7 +31,7 @@ const StudentAccessToggle: React.FunctionComponent<
     <Toggle
       checked={hasAITutorAccess}
       onChange={handleToggle}
-      name="aiTutorAccessToggle"
+      name="aiTutorStudentAccessToggle"
       position={'right'}
       size={'s'}
     />

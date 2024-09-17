@@ -1,0 +1,82 @@
+name 'VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-compu_-foundations-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit Overview
+
+#### In the Computer Systems and Devices unit, students explore the role of physical devices in computing. Using **App Lab** and the **BBC micro:bit**, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+</p></div>
+
+<div style="float:right; margin-left:10px; margin-right:10px;">
+<img src="https://images.code.org/e78e4d2060dd3092f19834442770799e-image-1648879294294.JPG" alt="Image of app asking the user what colors to display on a small circuit board"  style="height: 250px; clear: both; margin-left:25px; margin-right:25px; margin-top:10px; margin-bottom:20px;">
+
+<img src="https://images.code.org/77c51c63b972d81ad9defdbd5f2d1769-mb1.png" alt="Image of a microbit"  style="height: 225px; clear: both; margin-left:25px; margin-right:25px; margin-top:10px; margin-bottom:20px;">
+</div>
+
+### **Students will:**
+
+* #### Design and build a physical computing device that integrates physical inputs and outputs with digital apps. 
+* #### Create app prototypes that use a physical device to solve real-world problems
+* #### Use physical computing to solve problems in fun and innovative ways.
+<br>
+
+<div style="clear:both;">
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-top:50px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.4em; font-weight: bold;">❓ Do I need a class set of micro:bits to teach the Computer Systems and Devices unit?</summary>
+ <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### **YES**, you will need a class set of micro:bits to teach the Computer Systems and Devices unit. 
+
+#### **<a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about purchasing the micro:bit.**
+</p></div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.4em; font-weight: bold;">💻 Do my students need computers to complete the activities in the Computer Systems and Devices unit?</summary>
+ <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### **YES**, you will need a desktop or laptop computer with a mouse (or touchpad) and keyboard, and Google Chrome or Microsoft Edge installed. Chromebooks are also supported, but only Chromebooks v90 and above. Tablets and mobile devices are NOT supported. 
+
+#### **<a href="https://support.code.org/hc/en-us/articles/202591743-Technical-requirements-for-Code-org#:~:text=We%20recommend%20at%20least%20a,and%20Intro%20to%20App%20Lab." target="blank" rel="noopener noreferrer" >Click here</a> to learn more about technical requirements for Code.org.**
+</p></div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.4em; font-weight: bold;">✔️ Are there prerequisites for the Computer Systems and Devices unit?</summary>
+ <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### There are **no prerequisites** for this unit. The Computer Systems and Devices unit is designed for both students with and without prior experience with computer science and programming. 
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.4em; font-weight: bold;">✍🏽 Is the Computer Systems and Devices unit mapped to standards?</summary>
+ <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### The Computer Systems and Devices unit was written using both the K-12 Framework for Computer Science and the **2017 CSTA standards** as guidance. Currently, every lesson maps to the relevant 2017 CSTA standards. The summary of of all CSTA 2017 mappings can be found at <a href="https://studio.code.org/s/csd6b-2023/standards" target="blank" rel="noopener noreferrer">https://studio.code.org/s/csd6b-2024/standards</a>. 
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.4em; font-weight: bold;">⏳ How much time do I need to teach the Computer Systems and Devices unit?</summary>
+ <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### **Time needed to teach this unit:** 3 weeks 
+#### The recommended time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/fcs1b-beta-2024" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+
+</p></div>
+</details>
+
+<div style="clear:both"/>
+
+
+MARKDOWN

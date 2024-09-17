@@ -7,8 +7,6 @@ import {
 } from '@cdo/apps/templates/projects/ProjectsList';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 
 const STUB_PROJECTS_DATA = [
@@ -68,7 +66,7 @@ describe('SectionProjectsList', () => {
     it('contains only timestamps at 11am UTC', () => {
       for (let i = 0; i < STUB_PROJECTS_DATA.length; i++) {
         const date = new Date(STUB_PROJECTS_DATA[i].updatedAt);
-        expect(date.getUTCHours()).to.equal(11);
+        expect(date.getUTCHours()).toBe(11);
       }
     });
   });
@@ -83,7 +81,7 @@ describe('SectionProjectsList', () => {
     );
 
     let rows = root.find('tr');
-    expect(rows).to.have.length(5);
+    expect(rows).toHaveLength(5);
 
     assertRowContentsWithoutThumbnail(
       getNode(rows, 0),
@@ -124,7 +122,7 @@ describe('SectionProjectsList', () => {
 
   it('initially shows all projects, most recently edited first', () => {
     let rows = root.find('tr');
-    expect(rows).to.have.length(5);
+    expect(rows).toHaveLength(5);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -167,13 +165,13 @@ describe('SectionProjectsList', () => {
     );
 
     const lastEditedHeader = root.find('th').at(COLUMNS.LAST_EDITED);
-    expect(getNode(lastEditedHeader).textContent).to.contain('Last Edited');
+    expect(getNode(lastEditedHeader).textContent).toContain('Last Edited');
 
     // Show least recently edited first
     lastEditedHeader.simulate('click');
 
     rows = root.find('tr');
-    expect(rows).to.have.length(5);
+    expect(rows).toHaveLength(5);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -218,13 +216,13 @@ describe('SectionProjectsList', () => {
 
   it('can be sorted by project name', () => {
     const projectNameHeader = root.find('th').at(COLUMNS.PROJECT_NAME);
-    expect(getNode(projectNameHeader).textContent).to.contain('Project Name');
+    expect(getNode(projectNameHeader).textContent).toContain('Project Name');
 
     // Sort in ascending order by project name
     projectNameHeader.simulate('click');
 
     let rows = root.find('tr');
-    expect(rows).to.have.length(5);
+    expect(rows).toHaveLength(5);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -270,7 +268,7 @@ describe('SectionProjectsList', () => {
     projectNameHeader.simulate('click');
 
     rows = root.find('tr');
-    expect(rows).to.have.length(5);
+    expect(rows).toHaveLength(5);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -315,13 +313,13 @@ describe('SectionProjectsList', () => {
 
   it('can be sorted by student name', () => {
     const projectNameHeader = root.find('th').at(COLUMNS.STUDENT_NAME);
-    expect(getNode(projectNameHeader).textContent).to.contain('Student Name');
+    expect(getNode(projectNameHeader).textContent).toContain('Student Name');
 
     // Sort in ascending order by student name
     projectNameHeader.simulate('click');
 
     let rows = root.find('tr');
-    expect(rows).to.have.length(5);
+    expect(rows).toHaveLength(5);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -367,7 +365,7 @@ describe('SectionProjectsList', () => {
     projectNameHeader.simulate('click');
 
     rows = root.find('tr');
-    expect(rows).to.have.length(5);
+    expect(rows).toHaveLength(5);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -414,13 +412,13 @@ describe('SectionProjectsList', () => {
 
   it('can be sorted by app type', () => {
     const appTypeHeader = root.find('th').at(COLUMNS.APP_TYPE);
-    expect(getNode(appTypeHeader).textContent).to.contain('Type');
+    expect(getNode(appTypeHeader).textContent).toContain('Type');
 
     // Sort in ascending order by app type
     appTypeHeader.simulate('click');
 
     let rows = root.find('tr');
-    expect(rows).to.have.length(5);
+    expect(rows).toHaveLength(5);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -466,7 +464,7 @@ describe('SectionProjectsList', () => {
     appTypeHeader.simulate('click');
 
     rows = root.find('tr');
-    expect(rows).to.have.length(5);
+    expect(rows).toHaveLength(5);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -513,23 +511,23 @@ describe('SectionProjectsList', () => {
 
   it('shows the correct list of students in the student filter dropdown', () => {
     const options = root.find('option');
-    expect(options).to.have.length(4);
-    expect(getNode(options, 0).textContent).to.equal('All students');
-    expect(getNode(options, 1).textContent).to.equal('Alice');
-    expect(getNode(options, 2).textContent).to.equal('Bob');
-    expect(getNode(options, 3).textContent).to.equal('Charlie');
+    expect(options).toHaveLength(4);
+    expect(getNode(options, 0).textContent).toBe('All students');
+    expect(getNode(options, 1).textContent).toBe('Alice');
+    expect(getNode(options, 2).textContent).toBe('Bob');
+    expect(getNode(options, 3).textContent).toBe('Charlie');
 
     const select = root.find('select');
-    expect(getNode(select).value).to.equal('_all_students');
+    expect(getNode(select).value).toBe('_all_students');
   });
 
   it('filters projects when a student is selected from the dropdown', () => {
     const select = root.find('select');
     select.simulate('change', {target: {value: 'Alice'}});
-    expect(getNode(select).value).to.equal('Alice');
+    expect(getNode(select).value).toBe('Alice');
 
     const rows = root.find('tr');
-    expect(rows).to.have.length(3);
+    expect(rows).toHaveLength(3);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -559,16 +557,16 @@ describe('SectionProjectsList', () => {
   it('can filter by student and then sort by app type', () => {
     const select = root.find('select');
     select.simulate('change', {target: {value: 'Alice'}});
-    expect(getNode(select).value).to.equal('Alice');
+    expect(getNode(select).value).toBe('Alice');
 
     const appTypeHeader = root.find('th').at(COLUMNS.APP_TYPE);
-    expect(getNode(appTypeHeader).textContent).to.contain('Type');
+    expect(getNode(appTypeHeader).textContent).toContain('Type');
 
     // Sort in ascending order by app type
     appTypeHeader.simulate('click');
 
     const rows = root.find('tr');
-    expect(rows).to.have.length(3);
+    expect(rows).toHaveLength(3);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -598,10 +596,10 @@ describe('SectionProjectsList', () => {
   it('shows all students projects if the current students projects all disappear', () => {
     const select = root.find('select');
     select.simulate('change', {target: {value: 'Charlie'}});
-    expect(getNode(select).value).to.equal('Charlie');
+    expect(getNode(select).value).toBe('Charlie');
 
     let rows = root.find('tr');
-    expect(rows).to.have.length(2);
+    expect(rows).toHaveLength(2);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -629,8 +627,8 @@ describe('SectionProjectsList', () => {
 
     // We should now see all students projects, except Charlie's
     rows = root.find('tr');
-    expect(getNode(select).value).to.equal('_all_students');
-    expect(rows).to.have.length(4);
+    expect(getNode(select).value).toBe('_all_students');
+    expect(rows).toHaveLength(4);
     assertRowContents(
       getNode(rows, 0),
       null,
@@ -666,17 +664,19 @@ describe('SectionProjectsList', () => {
 
     // Charlie should no longer appear in the dropdown
     const options = root.find('option');
-    expect(options).to.have.length(3);
-    expect(getNode(options, 0).textContent).to.equal('All students');
-    expect(getNode(options, 1).textContent).to.equal('Alice');
-    expect(getNode(options, 2).textContent).to.equal('Bob');
+    expect(options).toHaveLength(3);
+    expect(getNode(options, 0).textContent).toBe('All students');
+    expect(getNode(options, 1).textContent).toBe('Alice');
+    expect(getNode(options, 2).textContent).toBe('Bob');
   });
 
   describe('getStudentNames', () => {
     it('shows students in alphabetical order and without duplicates', () => {
-      expect(
-        SectionProjectsList.getStudentNames(STUB_PROJECTS_DATA)
-      ).to.deep.equal(['Alice', 'Bob', 'Charlie']);
+      expect(SectionProjectsList.getStudentNames(STUB_PROJECTS_DATA)).toEqual([
+        'Alice',
+        'Bob',
+        'Charlie',
+      ]);
     });
   });
 
@@ -735,20 +735,20 @@ describe('SectionProjectsList', () => {
     const lastEditedActual =
       rowElement.childNodes[columnMap.LAST_EDITED].textContent;
 
-    expect(projectNameActual).to.equal(projectName);
-    expect(studentNameActual).to.equal(studentName);
-    expect(appTypeActual).to.equal(appType);
+    expect(projectNameActual).toBe(projectName);
+    expect(studentNameActual).toBe(studentName);
+    expect(appTypeActual).toBe(appType);
     assertDatesMatch(lastEdited, lastEditedActual);
   }
 
   function assertDatesMatch(expected, actual) {
     if (isNaN(Date.parse(expected))) {
       // If we're checking against non-date text (a header) just do an equality check
-      expect(actual).to.equal(expected);
+      expect(actual).toBe(expected);
     } else {
       // Otherwise convert our 'expected' value to a locale string, so tests are not
       // browser-implementation-dependent
-      expect(actual).to.equal(new Date(expected).toLocaleDateString());
+      expect(actual).toBe(new Date(expected).toLocaleDateString());
     }
   }
 
@@ -756,7 +756,7 @@ describe('SectionProjectsList', () => {
     const td = rowElement.childNodes[COLUMNS.THUMBNAIL];
     const img = td.querySelector('img');
     const src = img && img.getAttribute('src');
-    expect(src).to.equal(thumbnailUrl);
+    expect(src).toBe(thumbnailUrl);
   }
 
   /**

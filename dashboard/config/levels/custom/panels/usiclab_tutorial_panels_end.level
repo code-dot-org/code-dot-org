@@ -8,19 +8,6 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "level_data": {
-      "panels": [
-        {
-          "imageUrl": "https://images.code.org/294f99cfd6e1d55a2738e91a71b53570-musiclab_intro_end_2.png",
-          "text": "#### 🎶Ready to jam?🎶\n\nYou've learned the basics, and now you're ready to make your own song! Don't forget to explore the sound library - there are plenty of cool sounds in there."
-        },
-        {
-          "imageUrl": "https://images.code.org/aa31c5258bbb31a623d50ba9482e6a00-musiclab_intro_end_1.png",
-          "text": "There will be new blocks in your toolbox, including:\n\n- A beat-making block\n\n- A synthesizer block\n\n- Sound effects like reverb\n\n- A *random* block\n\n- ...and more!\n\n🎸Rock out!",
-          "nextUrl": "/projectbeats"
-        }
-      ]
-    },
     "name_suffix": "_v2",
     "panels": [
       {
@@ -31,6 +18,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-26T04:08:34.103+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_end_v2\\\"\"],\"cloned_from\":\"musiclab_intro_panels_end_v2\"},{\"changed_at\":\"2024-05-06 22:09:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:10:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:11:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:11:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:14:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-16 02:20:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-26T04:08:34.103+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_end_v2\\\"\"],\"cloned_from\":\"musiclab_intro_panels_end_v2\"},{\"changed_at\":\"2024-05-06 22:09:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:10:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:11:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:11:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:14:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-16 02:20:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-19 20:50:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-19 20:57:44 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-27 20:42:28 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>

@@ -9,9 +9,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   skip_before_action :clear_sign_up_session_vars
 
-  # TODO: figure out how to avoid skipping CSRF verification for Powerschool
-  skip_before_action :verify_authenticity_token, only: :powerschool
-
   before_action :check_account_linking_lock
 
   # Note: We can probably remove these once we've broken out all providers
@@ -169,11 +166,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     SignUpTracking.begin_sign_up_tracking(session)
     SignUpTracking.log_oauth_callback provider, session
 
-    # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
-    if provider == 'powerschool'
-      auth_hash = extract_powerschool_data(auth_hash)
-    end
-
     # Microsoft formats email and name differently, so update it to match expected structure
     if provider == AuthenticationOption::MICROSOFT
       auth_hash = extract_microsoft_data(auth_hash)
@@ -318,31 +310,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def register_new_user(user)
     PartialRegistration.persist_attributes(session, user)
 
-    if DCDO.get('student-email-post-enabled', false)
-      @form_data = {
-        email: user.email
-      }
+    @form_data = {
+      email: user.email
+    }
 
-      render 'omniauth/redirect', {layout: false}
-    else
-      redirect_to new_user_registration_url
-    end
-  end
-
-  private def extract_powerschool_data(auth)
-    # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
-    args = JSON.parse(auth.extra.response.message.to_json)['args']
-    powerschool_data = OmniAuth::AuthHash.new(
-      user_type: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext0\"]"],
-      email: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext1\"]"],
-      name: {
-        first: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext2\"]"],
-        last: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext3\"]"],
-      }
-    )
-
-    auth.info.merge!(powerschool_data)
-    auth
+    render 'omniauth/redirect', {layout: false}
   end
 
   private def extract_microsoft_data(auth)
@@ -439,7 +411,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     begin
       if lookup_user.migrated?
-        ao = AuthenticationOption.create!(
+        AuthenticationOption.create!(
           user: lookup_user,
           email: lookup_email,
           credential_type: provider,
@@ -450,15 +422,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
             oauth_refresh_token: auth_hash.credentials&.refresh_token
           }.to_json
         )
-
-        # If the user is now logging in through microsoft_v2_auth and has an existing
-        # windowslive AuthenticationOption, we want to delete windowslive since that is
-        # deprecated in favor of microsoft_v2_auth.
-        windowslive_auth_option = lookup_user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::WINDOWS_LIVE}
-        if windowslive_auth_option.present? && provider == AuthenticationOption::MICROSOFT
-          lookup_user.update!(primary_contact_info: ao) if windowslive_auth_option.primary?
-          windowslive_auth_option.destroy!
-        end
       else
         lookup_user.update!(
           email: lookup_email,
@@ -550,21 +513,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # and report an error.
   private def check_account_linking_lock
     # Only check for account link locking when trying to link a new provider.
-    return unless connecting_new_provider? || lti_registration?
+    return unless connecting_new_provider? || Policies::Lti.lti_registration_in_progress?(session)
     lock_reason = account_linking_locked?
     return unless lock_reason
     redirect_back fallback_location: new_user_session_path, alert: lock_reason
   end
 
-  # Are we trying to link a new provider while registering an LTI account?
-  private def lti_registration?
-    DCDO.get('lti_account_linking_enabled', false) && Policies::Lti.lti_registration_in_progress?(session)
-  end
-
   # Determine whether to link a new LTI auth option to an existing account
   # Not to be confused with the connect_provider flow
   private def should_link_accounts?
-    lti_registration? && !account_linking_locked?
+    Policies::Lti.lti_registration_in_progress?(session) && !account_linking_locked?
   end
 
   # For linking new LTI auth options to existing accounts
@@ -593,6 +551,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         event_name: 'lti_user_signin',
         metadata: metadata,
       )
+      flash[:notice] = I18n.t('lti.account_linking.successfully_linked')
       sign_in_and_redirect user and return
     end
 

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "ปาร์ตี้เต้นรำ", body: "มาเขียนโค้ดปาร์ตี้เต้นรำกันเถอะ! มาฟีทเจอริ่งกับ Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, เพลงจากดิสนีย์\ "Encanto\” และศิลปินอื่น ๆ อีกเพียบ!”, image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "ศิลปะแห่งบทกวี", body: "มาเพิ่มศิลปะและแอนิเมชันให้กับบทกวีคลาสสิกในกิจกรรม Hour of Code นี้กัน!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "ศิลปิน", body: "มาวาดภาพสุดเจ๋ง และร่วมกันออกแบบผลงานกับศิลปินกันเถอะ!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity Play Lab", body: "ใช้ Play Lab เพื่อสร้างเรื่องราวหรือเกมที่นำแสดงโดยตัวละครจาก Disney Infinity", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

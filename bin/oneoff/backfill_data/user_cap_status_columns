@@ -1,0 +1,93 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# This script migrates CAP (Child Account Policy) data from properties to separate indexed columns.
+
+require 'honeybadger/ruby'
+require 'optparse'
+require 'ruby-progressbar'
+
+options = {skip_update: false}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-s', '--skip-update', 'Skip performing the update.') do
+    options[:skip_update] = true
+  end
+  opts.on('-h', '--help', 'Add -s to skip the actual update.') do
+    puts opts
+    exit
+  end
+end.parse!
+
+# Disable Honeybadger breadcrumbs to avoid memory leaks.
+Honeybadger.config.set(:'breadcrumbs.enabled', false)
+
+require_relative '../../../dashboard/config/environment'
+
+# @see https://github.com/code-dot-org/code-dot-org/pull/52244
+CAP_RELEASE_DATE = DateTime.parse('2023-06-09')
+users = User.with_deleted.where(current_sign_in_at: CAP_RELEASE_DATE..)
+
+total_successes = 0
+total_failures = 0
+
+success_status = options[:skip_update] ? 'skipped' : 'updated'
+update_progress_title = proc {"Processed[%c/%C]: |%W| #{success_status.capitalize}: #{total_successes}; Failed: #{total_failures}; %a"}
+progress_bar = ProgressBar.create(total: users.count, format: update_progress_title.call)
+
+log_path = CDO.dir('log', 'oneoff', "user_cap_status_columns_backfill_#{Time.now.utc.strftime('%Y%m%dT%H%M%S')}.csv")
+FileUtils.mkdir_p File.dirname(log_path)
+log_csv = CSV.open(log_path, 'w', col_sep: ';', write_headers: true, headers: %w[status user_id message])
+
+log_operation = proc do |status, user_id, message|
+  case status
+  when 'updated'
+    total_successes += 1
+    progress_bar.log "[#{Time.now.utc.iso8601}] Successfully updated User[#{user_id}]: #{message}"
+  when 'skipped'
+    total_successes += 1
+    progress_bar.log "[#{Time.now.utc.iso8601}] Skipped updating User[#{user_id}]: #{message}"
+  when 'failed'
+    total_failures += 1
+    progress_bar.log "[#{Time.now.utc.iso8601}] Failed to update User[#{user_id}]: #{message}".red
+  end
+
+  log_csv.add_row [status, user_id, message]
+  log_csv.flush
+
+  progress_bar.format update_progress_title.call
+end
+
+batch_size = 10_000
+users.in_batches(of: batch_size) do |users_batch|
+  cap_users = users_batch.
+    where(cap_status: nil).
+    where("properties->>'$.child_account_compliance_state' IS NOT NULL").
+    where("properties->>'$.child_account_compliance_state' != ''")
+
+  cap_users.pluck(
+    :id,
+    Arel.sql("properties->>'$.child_account_compliance_state'"),
+    Arel.sql("properties->>'$.child_account_compliance_state_last_updated'"),
+  ).each do |user_id, original_cap_status, original_cap_status_date|
+    cap_status = original_cap_status == 's' ? Policies::ChildAccount::ComplianceState::LOCKED_OUT : original_cap_status
+    cap_status_date = original_cap_status_date&.to_datetime&.utc
+
+    unless options[:skip_update]
+      # `User.where.update_all` allows updating a record without the need to init the model instance,
+      # preventing memory leaks caused by the serialization of the `properties` column.
+      User.where(id: user_id).update_all(cap_status: cap_status, cap_status_date: cap_status_date)
+    end
+
+    log_operation.call(success_status, user_id, {cap_status: cap_status, cap_status_date: cap_status_date}.to_json)
+  rescue StandardError => exception
+    log_operation.call('failed', user_id, exception.inspect)
+  end
+
+  progress_bar.progress += batch_size
+rescue ProgressBar::InvalidProgressError
+  progress_bar.finish
+end
+
+progress_bar.log "Log file: #{log_path}"
+progress_bar.log "Finished at: #{Time.now.utc.iso8601}"

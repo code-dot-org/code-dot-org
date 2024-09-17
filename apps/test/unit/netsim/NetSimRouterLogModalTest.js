@@ -1,7 +1,7 @@
 /** @file Tests for NetSimRouterLogModal */
 import $ from 'jquery';
 
-import {assert, expect} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
@@ -128,7 +128,7 @@ describe('NetSimRouterLogModal', function () {
     it('can render the dropdown with no local address', function () {
       expect(() => {
         modal.onShow_();
-      }).not.to.throw();
+      }).not.toThrow();
     });
 
     it('can render the dropdown with a local address', function () {
@@ -136,7 +136,7 @@ describe('NetSimRouterLogModal', function () {
       localNode.connectToRouter(router);
       expect(() => {
         modal.onShow_();
-      }).not.to.throw();
+      }).not.toThrow();
     });
   });
 });

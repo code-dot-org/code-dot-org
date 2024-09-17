@@ -6,7 +6,7 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {
   LegacyErrorDialog,
   LegacySuccessDialog,
-} from '@cdo/apps/lib/ui/LegacyDialogContents';
+} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 

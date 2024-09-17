@@ -830,10 +830,10 @@ export default class EditorAnnotator {
       return EditorAnnotator.code_;
     }
 
-    let code = EditorAnnotator.annotator().getCode();
+    let code = EditorAnnotator.annotator()?.getCode();
     EditorAnnotator.code_ = code;
 
-    if (options.stripComments) {
+    if (options.stripComments && code) {
       code = EditorAnnotator.anonymizeCode_(code);
       EditorAnnotator.strippedCode_ = code;
     }

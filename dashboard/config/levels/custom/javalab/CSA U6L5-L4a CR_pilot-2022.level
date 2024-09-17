@@ -15,7 +15,8 @@
     "display_name": "Lines in a Poem",
     "bubble_choice_description": "Find the longest line in a poem.",
     "thumbnail_url": "https://images.code.org/89067a86f9bbe90697b785e0a21d7633-image-1651752933769.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:04.408+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L4a CR_2022\\\"\"],\"cloned_from\":\"CSA U6L5-L4a CR_2022\"}]"

@@ -1,12 +1,15 @@
-import React from 'react';
 import classNames from 'classnames';
-import moduleStyles from './timeline.module.scss';
+import React from 'react';
 import {useDispatch} from 'react-redux';
-import {selectBlockId} from '../redux/musicRedux';
-import {SoundEvent} from '../player/interfaces/SoundEvent';
+
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {useMusicSelector} from './types';
+import {SoundEvent} from '../player/interfaces/SoundEvent';
+import {selectBlockId} from '../redux/musicRedux';
 import SoundStyle from '../utils/SoundStyle';
+
+import {useMusicSelector} from './types';
+
+import moduleStyles from './timeline.module.scss';
 
 interface TimelineElementProps {
   eventData: PlaybackEvent;

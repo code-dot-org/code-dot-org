@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
+
+import RubricsContainer from '@cdo/apps/levelbuilder/rubrics/RubricsContainer';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {

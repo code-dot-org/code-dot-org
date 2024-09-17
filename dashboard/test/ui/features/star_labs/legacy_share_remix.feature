@@ -4,7 +4,7 @@ Feature: Legacy Share Remix
 
   Background:
     Given I am on "http://studio.code.org/s/artist/lessons/1/levels/10?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And element "#runButton" is visible
     And element "#resetButton" is hidden
 

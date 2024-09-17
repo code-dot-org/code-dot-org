@@ -1,5 +1,5 @@
 # Analytics constants used within the pegasus directory.
-# (See apps/src/lib/util/AnalyticsConstants.js for constants in the
+# (See apps/metrics/AnalyticsConstants.js for constants in the
 # apps directory)
 module AnalyticsConstants
   EVENTS = [
@@ -42,6 +42,10 @@ module AnalyticsConstants
     MUSIC_LAB_PAGE_VISITED_EVENT = 'Music Lab Tools Page Visited'.freeze,
     LMS_PAGE_VISITED_EVENT = 'LMS Page Visited'.freeze,
     CANVAS_PAGE_VISITED_EVENT = 'Canvas Page Visited'.freeze,
-    SCHOOLOGY_PAGE_VISITED_EVENT = 'Schoology Page Visited'.freeze
+    SCHOOLOGY_PAGE_VISITED_EVENT = 'Schoology Page Visited'.freeze,
+    TRANSFORMERS_PAGE_VISITED_EVENT = 'Transformers Page Visited'.freeze,
+    HELLOWORLD_PAGE_VISITED_EVENT = 'Hello World Page Visited'.freeze,
+    HOC_LANDING_PAGE_VISITED = 'Code.org Hour of Code Landing Page Visited'.freeze,
+    HOC_ACTIVITIES_PAGE_VISITED = 'Hour of Code Activities Page Visited'.freeze,
   ].freeze
 end

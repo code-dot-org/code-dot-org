@@ -71,7 +71,7 @@ function setupVideos(player) {
             'style="position:absolute; top: 0; left: 0; width: 100%; height: 100%" ' +
             `data-src="https://www.youtube-nocookie.com/embed/${$(this).data(
               'video-code'
-            )}?iv_load_policy=3&rel=0&autohide=1&showinfo=0&enablejsapi=1" ` +
+            )}?iv_load_policy=3&rel=0&autohide=1&enablejsapi=1" ` +
             'frameborder="0" ' +
             'allowfullscreen=true' +
             `>`

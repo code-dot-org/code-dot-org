@@ -9,13 +9,12 @@ Feature: Evaluate student code against rubrics using AI
     Given I validate rubric ai config for all lessons
 
   Scenario: Student code is evaluated by AI when student submits project
-    Given I create a teacher-associated student named "Aiden"
+    Given I create an authorized teacher-associated student named "Aiden"
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
-    And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     # Student submits code
@@ -33,13 +32,13 @@ Feature: Evaluate student code against rubrics using AI
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
-    And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
-    And I wait for the page to fully load
-    And I click selector ".introjs-skipbutton" if it exists
+    And I wait for the lab page to fully load
+    And I wait until element "#ui-floatingActionButton" is visible
+    And I click selector ".introjs-skipbutton" once I see it
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
 
@@ -47,8 +46,7 @@ Feature: Evaluate student code against rubrics using AI
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
     And element ".uitest-run-ai-assessment" is disabled
-    And element ".uitest-info-alert" is visible
-    Then I wait until element ".uitest-info-alert" contains text "AI analysis already completed for this project."
+    Then I wait until element ".uitest-rubric-tab-buttons .__react_component_tooltip" contains text "AI analysis already completed for this project."
 
     # Teacher views AI evaluation results in rubric
     And I wait until element "#uitest-next-goal" is visible
@@ -59,13 +57,12 @@ Feature: Evaluate student code against rubrics using AI
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
 
   Scenario: Student code is evaluated by AI when teacher requests individual evaluation
-    Given I create a teacher-associated student named "Aiden"
+    Given I create an authorized teacher-associated student named "Aiden"
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
-    And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     # Student runs code
@@ -80,14 +77,14 @@ Feature: Evaluate student code against rubrics using AI
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
-    And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
+    And I wait until element "#ui-floatingActionButton" is visible
     And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
-    And I click selector ".introjs-skipbutton" if it exists
+    And I click selector ".introjs-skipbutton" once I see it
     And I wait until element ".congrats" is gone
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
@@ -99,8 +96,7 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher runs AI evaluation
     When I click selector ".uitest-run-ai-assessment"
-    Then I wait until element ".uitest-info-alert" is visible
-    And I wait until element ".uitest-info-alert" contains text "AI analysis complete."
+    Then I wait until element ".uitest-rubric-tab-buttons .__react_component_tooltip" contains text "AI analysis complete."
 
     # Teacher views AI evaluation results in rubric tab
     And I wait until element "#uitest-next-goal" is visible
@@ -111,13 +107,12 @@ Feature: Evaluate student code against rubrics using AI
     Then element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"
 
   Scenario: Student code is evaluated by AI when teacher requests evaluation for entire class
-    Given I create a teacher-associated student named "Aiden"
+    Given I create an authorized teacher-associated student named "Aiden"
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
-    And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     # Student runs code
@@ -132,14 +127,14 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element "#homepage-container" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I get debug info for the current user
-    And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
+    And I wait until element "#ui-floatingActionButton" is visible
     And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
-    And I click selector ".introjs-skipbutton" if it exists
+    And I click selector ".introjs-skipbutton" once I see it
     And I wait until element ".congrats" is gone
     #Then I verify progress in the header of the current page is "attempted_assessment" for level 2
     And element "#ui-floatingActionButton" is visible

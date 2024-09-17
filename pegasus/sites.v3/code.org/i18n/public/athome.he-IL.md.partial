@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">קח קורס מבוא בקצב עצמי</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">צור משחק או אפליקציה</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">נסה CS ללא מחשב ('מנותק' ואפשרויות לנייד)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">למד CS מצוות Code.org ואורחים מיוחדים</a></li>
 </ul>
 
 <br>
@@ -284,56 +283,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - הדרך הגחמנית ביותר בעולם ללמוד על מחשבים, טכנולוגיה ותכנות. פעילויות במגוון רחב של נושאים במדעי המחשב, כגון היכולת לפרק בעיה, לאתר תבניות, לחשוב באופן אלגוריתמי, לאתר באגים ולעבוד יחד בשיתוף פעולה. (לגילאי 4-10)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - אוסף של חומרי לימוד בחינם המלמדים מדעי המחשב באמצעות משחקים ופאזלים מרתקים המשתמשים בקלפים, מיתרים, עפרונות והרבה התרוצצות. (לגילאי 5-14)</li>
 </ul>
-
-<h2>אין מחשב בבית? נסה את CS בטלפון שלך עם אפליקציות אלה מהשותפים שלנו</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="אי בוקס"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>משחק קידוד נייד מקסים שלוקח את הלומדים להרפתקה מרגשת, תוך לימוד יסודות הקידוד, כמו אלגוריתמים, זיהוי תבניות, רצפים, לולאות והתניות. <i>(לכל הגילאים)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="פארק קודים"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">פלטפורמת למידה לקוד</h3></a>עטורת הפרסים של CodePark לילדים בגילאי 5-9. פתרו פאזלים וצרו משחקים עם The Foos תוך כדי לימוד תכנות. <strong>הערה: codeSpark מציע 3 חודשי ניסיון חינם. הרשמה מצריכה מסירת כתובת דוא"ל ופרטי כרטיס אשראי של ההורה.</strong><i>(לילדים בשלבי טרום קריאה עד כיתה ה')</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[חזרה לראש הדף]</a></p>
-
-<a id="livecoding"></a>
-<h2>למד מצוות Code.org ואורחים מיוחדים!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="לוגו CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes הם שיעורים אינטראקטיביים קלים לעיכול, 20 דקות המשלבים מדעי המחשב עם נושאים בעולם האמיתי. לאמן AI לקרוא שפת סימנים, לעצב אפליקציה לתמיד, לחקור את עולם Minecraft ועוד!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>צפו בפרקים</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="שבירת קוד">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">שבירת קוד</h3>
-        <div class="smalltext" style="">שמור על כיף במדעי המחשב על ידי הפסקת קוד! אתה יכול ליצור צופן עם אשטון קוצ'ר, ללמוד על משתנים עם יארה שאהידי, ואפילו לחקור איך האינטרנט עובד עם הממציא האמיתי של האינטרנט, וינט סרף!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>התחבר</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

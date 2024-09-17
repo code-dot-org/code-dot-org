@@ -1,0 +1,60 @@
+name 'sp-pl_DS_primm'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The PRIMM Method
+
+#### The lessons in this unit use the **PRIMM** methodology for learning. The **PRIMM** method is a structured approach to teaching and learning programming. 
+
+#### It stands for Predict, Run, Investigate, Modify, and Make. As you work through the lessons, you will notice that they follow this approach.
+
+
+## Here is a breakdown of each step: 
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🤔Predict</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:14pt;">
+Students are encouraged to first predict what the generative AI model will do. This helps them engage with the logic and structure of the model, fostering a deeper understanding of how it works.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🏃 Run </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:14pt;">
+In this step, students run the model to see if their predictions were correct. This immediate feedback helps reinforce correct predictions and correct misunderstandings. 
+</p></div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎Investigate </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+   <p style="font-size:14pt;">
+After running the the model, students explore why it behaves as it does by examining its structure, syntax, and logic. They might debug, analyze flow, and identify errors. This step emphasizes comprehension and critical thinking.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧩Modify </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:14pt;">
+Students change the existing model by altering settings, adding functionality, or fixing errors. This helps them apply their understanding and experiment, reinforcing learning through practice.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Make </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:14pt;">
+    Finally, students apply their knowledge to create something new. This step encourages creativity and solidifies their coding skills. </p></div>
+</details>
+
+
+---
+
+#### The **PRIMM** method is effective because it combines prediction and active experimentation with reflection and creation, promoting a deeper understanding of programming concepts and problem-solving skills.
+MARKDOWN

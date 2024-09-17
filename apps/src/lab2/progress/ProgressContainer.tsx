@@ -1,3 +1,6 @@
+import React, {useCallback, useEffect, useRef} from 'react';
+import {useSelector} from 'react-redux';
+
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getProgressLevelType,
@@ -5,8 +8,7 @@ import {
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import React, {useCallback, useEffect, useRef} from 'react';
-import {useSelector} from 'react-redux';
+
 import {setValidationState} from '../lab2Redux';
 
 interface ProgressContainerProps {
@@ -46,9 +48,13 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
     state => state.lab.levelProperties?.validations
   );
 
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+
   useEffect(() => {
+    // The levelValidations may be the same between two different levels,
+    // but we still want the progressManager to reset itself when the levelId changes.
     progressManager.current.onLevelChange(levelValidations);
-  }, [levelValidations]);
+  }, [levelValidations, levelId]);
 
   return (
     <ProgressManagerContext.Provider value={progressManager.current}>

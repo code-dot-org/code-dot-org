@@ -2,6 +2,7 @@
 -data = DB[:cdo_state_promote].where(state_code_s:state).first
 -pass if data.nil?
 -statename = get_us_state_from_abbr(state)
+-statename_no_space = statename.gsub(/\s+/, "")
 -petition_url = data[:petition_url_t]
 %script{type: "text/javascript", src: "/shared/js/helpers.js"}
 %script{type: "text/javascript", src: "/js/promote.js"}
@@ -107,9 +108,9 @@
       = "#{data[:percent_ap_female_i]}% of them were taken by female students"
 
 .state-buttons
-  -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/advocacy/state-facts/#{state}.pdf.fetch"))
+  -if ! state.nil_or_empty?
     .state-button.download-fact-sheet
-      %a{:href=>CDO.code_org_url("/advocacy/state-facts/#{state}.pdf"), target: '_blank'}
+      %a{href: "https://code.org/assets/advocacy/stateofcs/2023/#{statename_no_space}.pdf", target: '_blank'}
         %button<
           View state fact-sheet
 

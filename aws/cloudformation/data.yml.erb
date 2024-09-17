@@ -24,10 +24,11 @@ Parameters:
   RDSPassword:
     Type: String
     NoEcho: true
-  # Production MySQL database servername to use for exporting data to Redshift. Typically set to production Reporting
-  # RDS Proxy endpoint.
+  # Typically set to the reader endpoint of the production Aurora MySQL cluster because exports from the production
+  # Reporting RDS Proxy are often interrupted with database connection errors.
   RDSHost:
     Type: String
+    Description: Production MySQL database servername to use for exporting data to Redshift.
   # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
   RDSClusterEndpointRootDomain:
     Type: String
@@ -110,15 +111,27 @@ Resources:
   MySQLDatabaseSourceEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
-      EndpointIdentifier: !Sub "MySQLReportingEndpoint-${AWS::StackName}"
+      EndpointIdentifier: !Sub "MySQL-${AWS::StackName}"
       EndpointType: source
       EngineName: aurora
       ServerName: !Ref RDSHost
       Port: 3306
-      # The RDSUsername and RDSPassword Stack Parameters must be set to a read only user that can authenticate on the
-      # production RDS Proxy Reporting endpoint.
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
+      MySqlSettings:
+        # Initialize MySQL client to execute SELECT statements with long execution times that fetch large result sets
+        # without negatively impacting transaction isolation on the cluster and increase several client connection
+        # timeouts to ensure that pauses during the export don't result in prematurely terminated connections.
+        # The first three settings are the same as what the Reporting RDS Proxy uses:
+        # https://github.com/code-dot-org/code-dot-org/blob/5ffbfc6909a6d1b4e97497db247aeb5f1eba0847/aws/cloudformation/components/database.yml.erb#L265
+        AfterConnectScript:  >-
+          SET SESSION aurora_read_replica_read_committed=ON;
+          SET SESSION transaction_isolation="READ-COMMITTED";
+          SET SESSION max_execution_time = 0;
+          SET SESSION net_read_timeout=300;
+          SET SESSION net_write_timeout=300;
+          SET SESSION wait_timeout = 300;
+          SET SESSION interactive_timeout = 300;
       ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
   RedshiftEndpoint:
     Type: AWS::DMS::Endpoint

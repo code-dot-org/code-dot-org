@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">ลงทะเบียนหลักสูตรแนะนำที่เรียนรู้ได้ด้วยตัวเอง</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">เขียนเกมหรือแอป</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">ลอง CS ในแบบที่ไม่มีคอมพิวเตอร์ (ตัวเลือก 'ออฟไลน์' และมือถือ)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">ศึกษาเรื่อง CS จากทีมและแขกรับเชิญพิเศษของ Code.org</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">สวัสดีรูบี้</a> - วิธีที่แปลกแหวกแนวที่สุดในโลกเพื่อเรียนรู้เกี่ยวกับคอมพิวเตอร์ เทคโนโลยีและการเขียนโปรแกรม กิจกรรมที่เกี่ยวข้องกับหัวข้อต่าง ๆ ของ CS ไม่ว่าจะเป็นความสามารถในการแจกแจงปัญหา ชี้ถึงรูปแบบ คิดอย่างเป็นระบบ ดีบักปัญหาและทำงานร่วมกัน (สำหรับผู้เรียนอายุ 4-10 ปี)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS แบบออฟไลน์</a> - ชุดเอกสารประกอบการเรียนการสอนฟรีเพื่อถ่ายทอดความรู้เกี่ยวกับวิทยาการคอมพิวเตอร์ด้วยการเล่นเกมและไขปริศนาต่าง ๆ โดยใช้ไพ่ เชือกหรือด้าย สีเทียนและการวิ่งวนไปรอบ ๆ (สำหรับผู้เรียนอายุ 5-14 ปี)</li>
 </ul>
-
-<h2>ที่บ้านไม่มีคอมพิวเตอร์ใช่ไหม ลองศึกษาเรื่อง CS บนโทรศัพท์ผ่านแอปเหล่านี้จากคู่ค้าของเราดูสิ</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island เกมเข้ารหัสมือถือ</h3></a>ที่มีเสน่ห์ที่จะนำผู้เรียนในการผจญภัยที่น่าตื่นเต้นในขณะที่การสอนพื้นฐานของการเข้ารหัสเช่นขั้นตอนวิธีการรับรู้รูปแบบลำดับลูปและเงื่อนไข <i>(สำหรับทุกวัย)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">แพลตฟอร์มเรียนรู้เพื่อโค้ด</h3></a>ที่ได้รับรางวัล CodesPark สำหรับเด็กอายุ 5-9 ปี มาช่วยกันไขปริศนาและสร้างเกมด้วย The Foos ขณะที่เรียนรู้วิธีเขียนโค้ด <strong>หมายเหตุ: codeSpark มีให้ทดลองใช้ฟรี 3 เดือน ต้องใช้ทั้งที่อยู่อีเมลและข้อมูลบัตรเครดิตของผู้ปกครองในการลงทะเบียน</strong> <i>(สำหรับเด็กก่อนวัยเรียนจนถึงป. 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">กลับสู่ด้านบน</a></p>
-
-<a id="livecoding"></a>
-<h2>เรียนรู้จากทีม Code.org และแขกรับเชิญพิเศษ!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="โลโก้ของ CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes เป็นบทเรียนแบบโต้ตอบที่ใช้งานง่าย 20 นาทีผสมผสานวิทยาศาสตร์คอมพิวเตอร์กับหัวข้อในโลกแห่งความจริง ฝึก AI ให้อ่านสัญญาณมือ ออกแบบ App for Good, สำรวจโลกของไมน์คราฟท์ และอีกมากมาย!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>ดูตอนที่ต้องการ</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="พักเบรกสักนิด">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">แบ่งรหัส</h3>
-        <div class="smalltext" style="">ให้สนุกวิทยาศาสตร์คอมพิวเตอร์โดยการแบ่งรหัส! คุณสร้างรหัสไซเฟอร์ไปพร้อมกับนักแสดง Ashton Kutcher ได้นะ หรือจะเรียนเรื่องตัวแปรกับ Yara Shahidi และทำความเข้าใจวิธีทำงานของอินเทอร์เน็ตผ่านนักประดิษฐ์ตัวจริงบนอินเทอร์เน็ตอย่าง Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>เชื่อมต่อเลย</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

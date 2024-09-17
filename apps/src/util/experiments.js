@@ -12,22 +12,19 @@ import DCDO from '@cdo/apps/dcdo';
 
 import {trySetLocalStorage} from '../utils';
 
-import trackEvent from './trackEvent';
-
 const queryString = require('query-string');
 
 const experiments = module.exports;
 // Needed to support TypeScript usage.
 export default experiments;
 const STORAGE_KEY = 'experimentsList';
-const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 // Specific experiment names
 experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
-experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES = 'showUnpublishedFirebaseTables';
+experiments.SHOW_UNPUBLISHED_DATASET_TABLES = 'showUnpublishedDatasetTables';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
   'teacher-dashboard-section-buttons';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
@@ -46,8 +43,8 @@ experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the CPA lockout
 experiments.CPA_EXPERIENCE = 'cpa_experience';
-experiments.AI_RUBRICS = 'ai-rubrics';
-experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
+// Experiment for enabling the AI-TA differentiation chat
+experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 // Uses Google Blockly for a given user across labs/levels until the experiment is disabled
@@ -62,6 +59,13 @@ experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
 // Shows the new sign-up flow
 experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
+// Allows teacher view of student chat history in aichat workspace
+experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
+// Allows user to view the new version of the teacher navigation
+experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
+// Enables LMS cards in the LoginTypePicker during section creation
+experiments.SECTION_CREATE_LMS_CARDS = 'section_create_lms_cards';
+experiments.AI_ASSESSMENTS_ANNOUNCEMENT = 'ai-assessments-announcement';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
@@ -118,13 +122,11 @@ experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
   if (shouldEnable) {
     if (experimentIndex < 0) {
       allEnabled.push({key, expiration});
-      trackEvent(GA_EVENT, 'enable', key);
     } else {
       allEnabled[experimentIndex].expiration = expiration;
     }
   } else if (experimentIndex >= 0) {
     allEnabled.splice(experimentIndex, 1);
-    trackEvent(GA_EVENT, 'disable', key);
   } else {
     return;
   }

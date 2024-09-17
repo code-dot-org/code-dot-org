@@ -6,11 +6,15 @@
     "properties": {
       "is_course": true,
       "is_migrated": true,
+      "supported_locales": [
+        "es-MX",
+        "es-ES"
+      ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "pixelation",
-    "serialized_at": "2021-11-22 19:57:09 UTC",
+    "serialized_at": "2024-07-23 00:39:01 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -548,6 +552,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

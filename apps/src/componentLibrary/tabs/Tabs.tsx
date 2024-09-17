@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
@@ -20,6 +20,8 @@ export interface TabsProps {
   name: string;
   /** Type of Tabs */
   type?: 'primary' | 'secondary';
+  /** Mode (color) of Tabs */
+  mode?: 'light' | 'dark';
   /** Size of Tabs */
   size?: ComponentSizeXSToL;
   /** Custom className for Tabs container */
@@ -55,6 +57,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   tabPanelsContainerId,
   tabPanelsContainerClassName,
   type = 'primary',
+  mode = 'light',
   size = 'm',
 }) => {
   const [selectedTabValue, setSelectedValue] = useState(
@@ -70,6 +73,11 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
     [setSelectedValue, onChange]
   );
 
+  // Reset selected tab whenever default selected value changes.
+  useEffect(() => {
+    setSelectedValue(defaultSelectedTabValue);
+  }, [defaultSelectedTabValue]);
+
   const nameStripped = name.replace(' ', '-');
 
   return (
@@ -79,6 +87,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
           moduleStyles.tabs,
           moduleStyles[`tabs-${size}`],
           moduleStyles[`tabs-${type}`],
+          moduleStyles[`tabs-${mode}`],
           tabsContainerClassName
         )}
         id={tabsContainerId}

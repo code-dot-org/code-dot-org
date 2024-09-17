@@ -1,4 +1,5 @@
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
+
 import Sequencer from './Sequencer';
 
 /**

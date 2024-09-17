@@ -1,9 +1,11 @@
 import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
+
+import danceMetricsReporter from '../danceMetricsReporter';
 import {DanceState} from '../danceRedux';
 import ProgramExecutor from '../lab2/ProgramExecutor';
+
 import moduleStyles from './ai-visualization-preview.module.scss';
-import danceMetricsReporter from '../danceMetricsReporter';
 
 interface AiVisualizationPreviewProps {
   id: string;

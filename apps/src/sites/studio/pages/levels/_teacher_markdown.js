@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDom from 'react-dom';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 $(document).ready(() => {

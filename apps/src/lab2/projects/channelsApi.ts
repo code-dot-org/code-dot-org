@@ -4,6 +4,7 @@
  */
 
 import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {Channel} from '../types';
 
 const rootUrl = '/v3/channels';

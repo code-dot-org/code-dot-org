@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 const assets = require('@cdo/apps/code-studio/assets');
 const project = require('@cdo/apps/code-studio/initApp/project');

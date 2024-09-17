@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 ## Context
 ##### In your Module 1 workshop, you saw a “live demo” of the Explore and Investigate lessons from the Variables EIPM sequence in Unit 4.  In these lessons, students develop a shared mental model of Variables by using baggies and stickies to store values.  Students also see examples of working code that uses variables as well as strategies for debugging code using a “watcher” in App Lab.  In levels 3 - 10, you will be looking at the next lesson in this EIPM sequence - the Variables Practice lesson, or Unit 4, Lesson 3. 
 
-![Screenshot showing the Unit 4 calendar. Lessons 1 and 2 are highlighted as "Lessons you saw in Module 1", and Lessons 3 and 4 are highlighted as "Lessons you will see in this module."](https://images.code.org/4db54223d2ac16f72d0474ac58ee8e99-image-1594993545728.42.50 AM.png)
+<img src="https://images.code.org/4db54223d2ac16f72d0474ac58ee8e99-image-1594993545728.42.50 AM.png" style="border: 2px solid black; border-radius: 8px;" alt="Screenshot showing the Unit 4 calendar. Lessons 1 and 2 are highlighted as 'Lessons you saw in Module 1', and Lessons 3 and 4 are highlighted as 'Lessons you will see in this module.'">
 
 ##### If you were unable to attend the Module 1 workshop, it may be beneficial for you to review <a href="https://studio.code.org/s/csp4-2024/lessons/1" target="blank">Lesson 1</a> and <a href="https://studio.code.org/s/csp4-2024/lessons/2" target="blank">Lesson 2</a> in Unit 4 before engaging in this work. 
 

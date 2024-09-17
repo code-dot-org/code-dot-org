@@ -5,10 +5,10 @@
 var level = locals.level;
 %>
 <xml id="toolbox" style="display: none;">
-  <block type="maze_moveForward"></block>
+  <block type="maze_moveForward" id="moveForward"></block>
   <block type="maze_turn"><title name="DIR">turnLeft</title></block>
   <block type="maze_turn"><title name="DIR">turnRight</title></block>
-  <block type="maze_dig"></block>
+  <block type="maze_dig" id="remove"></block>
   <% if (level > 1) { -%>
     <block type="maze_fill"></block>
     <% if (level > 2) { -%>
