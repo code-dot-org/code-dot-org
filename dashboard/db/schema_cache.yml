@@ -1931,7 +1931,7 @@ columns:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: last_error
-    sql_type_metadata: *9
+    sql_type_metadata: *13
     'null': true
     default:
     default_function:
@@ -13698,7 +13698,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240912194834
+version: 20240916200341
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

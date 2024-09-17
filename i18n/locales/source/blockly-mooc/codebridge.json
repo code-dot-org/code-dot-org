@@ -41,6 +41,7 @@
   "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again.",
   "testName": "Test Name",
   "testsDidNotPass": "Tests did not all pass.",
+  "toggleFileBrowser": "Toggle File Browser",
   "validate": "Validate",
   "validationNotYetPassedContinue": "You must pass tests before continuing.",
   "validationNotYetPassedFinish": "You must pass tests before finishing.",
