@@ -395,6 +395,7 @@ const EVENTS = {
   CODEBRIDGE_NEW_SUBFOLDER: 'Create a new subfolder on codebridge',
   CODEBRIDGE_RENAME_FILE: 'Rename file on codebridge',
   CODEBRIDGE_RENAME_FOLDER: 'Rename folder on codebridge',
+  CODEBRIDGE_DOWNLOAD_FILE: 'Download file on codebridge',
 
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
