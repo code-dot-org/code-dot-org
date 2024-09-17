@@ -27,6 +27,7 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       key={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
       to={generatePath(LABELED_TEACHER_NAVIGATION_PATHS[pathKey].absoluteUrl, {
         sectionId: sectionId,
+        courseVersionname: 'x',
       })}
       className={classNames(styles.sidebarOption, {
         [styles.selected]: isSelected,

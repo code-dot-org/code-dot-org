@@ -13,7 +13,10 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
 
-import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
+import {
+  LABELED_TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_PATHS,
+} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
 
@@ -21,6 +24,7 @@ interface SectionsData {
   [sectionId: number]: {
     name: string;
     hidden: boolean;
+    courseVersionName: string;
   };
 }
 
@@ -38,7 +42,6 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     (state: {teacherSections: {selectedSectionId: number}}) =>
       state.teacherSections.selectedSectionId
   );
-
   useEffect(() => {
     const updatedSectionArray = Object.entries(sections)
       .filter(([id, section]) => !section.hidden)
@@ -107,11 +110,20 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     page: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS
   ) => {
     if (LABELED_TEACHER_NAVIGATION_PATHS[page]) {
-      navigate(
-        generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
-          sectionId: selectedSectionId,
-        })
-      );
+      if (page === TEACHER_NAVIGATION_PATHS.courseOverview) {
+        navigate(
+          generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
+            sectionId: selectedSectionId,
+            courseVersionName: sections[selectedSectionId].courseVersionName,
+          })
+        );
+      } else {
+        navigate(
+          generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
+            sectionId: selectedSectionId,
+          })
+        );
+      }
     }
   };
 

@@ -43,10 +43,10 @@ class CoursesController < ApplicationController
     end
 
     if current_user&.user_type == "teacher"
-      sections = current_user.sections_as_teacher
+      sections = current_user.sections_instructed
       sections.each do |section|
         if section.unit_group == @unit_group
-          redirect_to "/teacher_dashboard/sections/#{section.id}/course/#{@unit_group.name}"
+          redirect_to "/teacher_dashboard/sections/#{section.id}/course/#{section.unit_group.name}"
           break
         end
       end
