@@ -1,20 +1,23 @@
 {
   "script": {
-    "name": "exploring-gen-ai-1",
+    "name": "image-generation",
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "AI",
+      "is_migrated": true,
+      "show_calendar": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-16 15:26:22 UTC",
+    "serialized_at": "2024-09-16 15:26:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
     "seeding_key": {
-      "script.name": "exploring-gen-ai-1"
+      "script.name": "image-generation"
     }
   },
   "lesson_groups": [
@@ -26,7 +29,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "exploring-gen-ai-1"
+        "script.name": "image-generation"
       }
     }
   ],
