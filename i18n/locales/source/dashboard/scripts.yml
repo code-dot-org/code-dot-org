@@ -17999,3 +17999,43 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        hoc-music-ai-pilot-1:
+          lessons: {}
+          lesson_groups: {}
+          name: hoc-music-ai-pilot-1
+          title: 'Play Tests 1: Hour of Code - Music Lab with AI '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        creativity-with-ai-playground:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Text Generation
+            lessonGroup-3:
+              display_name: Image Generation
+          name: creativity-with-ai-playground
+          title: Creativity with AI Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        text-generation:
+          lessons: {}
+          lesson_groups: {}
+          name: text-generation
+          title: Text Generation
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        image-generation:
+          lessons: {}
+          lesson_groups: {}
+          name: image-generation
+          title: Image Generation
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
