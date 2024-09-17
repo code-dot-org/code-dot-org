@@ -49,7 +49,8 @@ layout: wide_index
           =hoc_s("hoc_resources.stickers.heading")
         %p.body-two.white
           =hoc_s("hoc_resources.stickers.desc")
-        %a.link-button.has-external-link.white{href: "https://hourofcode.com/images/hour-of-code-stickers.pdf", target: "_blank", rel: "noopener noreferrer"}
+        %a.link-button.white{href: "https://hourofcode.com/images/hour-of-code-stickers.pdf", target: "_blank", rel: "noopener noreferrer"}
+          %i{class: "fa-solid fa-download", style: "margin-inline-end: 0.25rem;"}
           =hoc_s("hoc_resources.stickers.button")
       %figure{style: "flex: 0.75"}
         %img{src: "/images/resources/stickers.png", alt: "", style: "width: 100%"}
@@ -86,11 +87,19 @@ layout: wide_index
 
   -# Logos
   %section#logos.bg-neutral-dark
-    .wrapper
-      %h2.white
-        =hoc_s("hoc_resources.logos.heading")
-      %p.body-two.white
-        =hoc_s("hoc_resources.logos.desc")
+    .wrapper.flex-container.flex-direction-column-mobile-reverse.justify-content-center.align-items-center.gap-2
+      .text-wrapper{style: "flex: 1.75"}
+        %h2.white
+          =hoc_s("hoc_resources.logos.heading")
+        %p.body-two.white
+          =hoc_s("hoc_resources.logos.desc")
+        .button-wrapper
+          %a.link-button.white{href: "https://images.code.org/share/hour-of-code-logo.zip"}
+            %i{class: "fa-solid fa-download", style: "margin-inline-end: 0.25rem;"}
+            =hoc_s("hoc_resources.logos.button.download")
+      %figure.flex-container.justify-end.gap-1.flex-1
+        %img{src: "/us/en/images/fit-200/hour-of-code-logo.png", alt: "", style: "width: 130px"}
+        %img{src: "/us/en/images/fit-200/hora-del-codigo-logo.png", alt: "", style: "width: 130px"}
 
   -# Organized by Code.org
   = view :organized_by_cdo
