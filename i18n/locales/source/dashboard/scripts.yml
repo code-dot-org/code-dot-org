@@ -17990,3 +17990,12 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        hoc-music-ai-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: hoc-music-ai-pilot
+          title: Hour of Code - Music Lab with AI Playtest
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
