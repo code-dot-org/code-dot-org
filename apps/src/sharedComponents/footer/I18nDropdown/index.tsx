@@ -32,7 +32,7 @@ const I18nDropdown: React.FC<I18nDropdownProps> = ({
       <div style={{display: 'flex', alignItems: 'center'}}>
         <SimpleDropdown
           className="languageSelect"
-          name="locale-dropdown"
+          name="locale"
           selectedValue={currentLocale()}
           onChange={handleChange}
           items={optionsForLocaleSelect}
