@@ -7,14 +7,12 @@ type UnitResourcesDropdownProps = {
   unitNumber: number;
   scriptOverviewPdfUrl: string;
   scriptResourcesPdfUrl: string;
-  scriptSlidesUrl: string;
 };
 
 const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
   unitNumber,
   scriptOverviewPdfUrl,
   scriptResourcesPdfUrl,
-  scriptSlidesUrl,
 }) => {
   // note: use the iconTypes here once merged in
   // also, not sure if every unit with this paeg has these three options...
@@ -42,7 +40,7 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
     <div data-testid={'unit-resources-download-dropdown'}>
       <ActionDropdown
         name="view-options"
-        labelText="View options dropdown"
+        labelText="View unit options dropdown"
         options={dropdownOptions}
         size="s"
         menuPlacement="right"

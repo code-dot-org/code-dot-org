@@ -125,7 +125,6 @@ const LessonMaterialsContainer: React.FC = () => {
             unitNumber={loadedData.unitNumber || 0}
             scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
-            scriptSlidesUrl={'google.com'}
           />
         )}
       </div>
