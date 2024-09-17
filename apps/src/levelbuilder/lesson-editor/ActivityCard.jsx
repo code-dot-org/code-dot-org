@@ -152,7 +152,7 @@ class ActivityCard extends Component {
         </div>
         <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (
-            <>
+            <React.Fragment key={section.key + '-fragment'}>
               <ActivitySectionCard
                 key={section.key}
                 activitySection={section}
@@ -188,7 +188,7 @@ class ActivityCard extends Component {
                 <i style={{marginRight: 7}} className="fa fa-plus-circle" />
                 Activity Section
               </button>
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>
