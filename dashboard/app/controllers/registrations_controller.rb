@@ -83,7 +83,7 @@ class RegistrationsController < Devise::RegistrationsController
   # Submit step 1 of the signup process for creating an email/password account.
   #
   def begin_sign_up
-    @user = User.new(begin_sign_up_params)
+    @user = User.new(params[:new_sign_up].present? ? params.permit(:email, :password, :password_confirmation) : begin_sign_up_params)
     @user.validate_for_finish_sign_up
     SignUpTracking.log_begin_sign_up(@user, session)
 

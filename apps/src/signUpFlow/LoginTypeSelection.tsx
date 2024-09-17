@@ -130,20 +130,15 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     }
   };
 
-  const submitLoginType = () => {
-    $.ajax({
+  const submitLoginType = async () => {
+    const beginSignUpFetchParams = `new_sign_up=true&email=${email}&password=${password}&password_confirmation=${password}`;
+    fetch(`/users/begin_sign_up?${beginSignUpFetchParams}`, {
       method: 'POST',
-      url: '/users/begin_sign_up',
-      contentType: 'application/json',
-      data: JSON.stringify({
-        new_sign_up: true,
-        user: {
-          email: email,
-          password: password,
-          password_confirmation: password,
-        },
-      }),
-    }).done(() => {
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+    }).then(() => {
       navigateToHref(finishAccountUrl);
     });
   };
