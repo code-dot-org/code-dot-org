@@ -822,10 +822,11 @@ roles.each do |name, config| %>
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
   # TODO: Move this to gen_ai_curriculum.yml.erb
-  SagemakerFullAccessRole:
+  # Execution role for GenAI Sagemaker Models
+  SagemakerModelExecutionRole:
     Type: 'AWS::IAM::Role'
     Properties:
-      RoleName: SagemakerFullAccessRole
+      RoleName: SagemakerModelExecutionRole
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
