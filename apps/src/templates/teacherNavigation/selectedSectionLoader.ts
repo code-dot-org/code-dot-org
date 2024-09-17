@@ -19,7 +19,10 @@ import {
 export const asyncLoadSelectedSection = async (sectionId: string) => {
   const state = getStore().getState().teacherSections;
 
-  if (state.selectedSectionId === sectionId || state.isLoadingSectionData) {
+  if (
+    state.selectedSectionId === parseInt(sectionId) ||
+    state.isLoadingSectionData
+  ) {
     return;
   }
 

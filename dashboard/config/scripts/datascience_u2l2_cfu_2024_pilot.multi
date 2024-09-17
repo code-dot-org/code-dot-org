@@ -1,0 +1,19 @@
+name 'datascience-U2L2-CFU_2024-pilot'
+title 'Check for Understanding'
+
+wrong 'My favorite fruit is apple!'
+right 'My favorite fruit is banana!'
+wrong 'My favorite fruit is cherry!'
+wrong 'Error: list index out of range'
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What will be the output of the following code?
+
+```
+items = ["apple", "banana", "cherry"]
+favorite = items[1]
+message = "My favorite fruit is " + favorite + "!"
+print(message)
+```
+MARKDOWN

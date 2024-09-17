@@ -8,14 +8,14 @@ export interface Lab2SystemState {
   loadingCodeEnvironment: boolean;
   isRunning: boolean;
   hasRun: boolean;
-  isTesting: boolean;
+  isValidating: boolean;
 }
 
 const initialState: Lab2SystemState = {
   loadingCodeEnvironment: false,
   isRunning: false,
   hasRun: false,
-  isTesting: false,
+  isValidating: false,
 };
 
 // SLICE
@@ -32,8 +32,8 @@ const systemSlice = createSlice({
     setHasRun(state, action: PayloadAction<boolean>) {
       state.hasRun = action.payload;
     },
-    setIsTesting(state, action: PayloadAction<boolean>) {
-      state.isTesting = action.payload;
+    setIsValidating(state, action: PayloadAction<boolean>) {
+      state.isValidating = action.payload;
     },
   },
 });
@@ -42,7 +42,7 @@ export const {
   setLoadingCodeEnvironment,
   setIsRunning,
   setHasRun,
-  setIsTesting,
+  setIsValidating,
 } = systemSlice.actions;
 
 export default systemSlice.reducer;

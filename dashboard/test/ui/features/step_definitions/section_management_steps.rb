@@ -263,14 +263,12 @@ end
 Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|
   link_index = (assignment_type == 'primary') ? 0 : 1
   # Wait until the link loads in the table
+  href = nil
   wait_until do
-    @browser.execute_script("return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href') !== null;")
+    href = @browser.execute_script("return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href');")
+    !href.nil?
   end
 
-  # Then grab it
-  href = @browser.execute_script(
-    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href');"
-  )
   # ignore query params
   actual_path = href.split('?')[0]
   expect(actual_path).to eq(expected_path)
@@ -287,7 +285,11 @@ Then /^the url contains the section id$/ do
 end
 
 Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
-  href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
+  href = nil
+  wait_until do
+    href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
+    href != nil?
+  end
   expect(@section_id).to be > 0
 
   # make sure the query params do not come after the # symbol
@@ -346,9 +348,15 @@ end
 # @return [Number] the section id for the corresponding row in the sections table
 def get_section_id_from_table(row_index)
   # e.g. https://studio-code.org/teacher_dashboard/sections/54
-  href = @browser.execute_script(
-    "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(1) a').attr('href')"
-  )
+
+  href = nil
+  wait_until do
+    href = @browser.execute_script(
+      "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(1) a').attr('href')"
+    )
+    !href.nil?
+  end
+
   section_id = href.split('/').last.to_i
   expect(section_id).to be > 0
   section_id

@@ -869,6 +869,11 @@ en:
         gen-ai-processing-neuralnets: 'Generative AI: Processing & Neural Networks'
         gen-ai-attention: 'Generative AI: Attention'
         gen-ai-output-probabilities: 'Generative AI: Output & Probabilities'
+        PL-genAI-input: 'Generative AI: Input & Pre-training'
+        PL-genAI-Embeddings: 'Generative AI: Storage & Embeddings'
+        PL-genAI-neuralnetworks: 'Generative AI: Processing & Neural Networks'
+        PL-genAI-attention: 'Generative AI: Attention'
+        PL-genAI-output: 'Generative AI: Output & Probabilities'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

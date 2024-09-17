@@ -92,4 +92,26 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
 
     assert_equal true, partial_user.lms_landing_opted_out
   end
+
+  test 'verifies roster-synced teacher if they are not already verified' do
+    lti_user = create :teacher
+    sign_in lti_user
+
+    post :new_account
+
+    lti_user.reload
+
+    assert lti_user.verified_teacher?
+  end
+
+  test 'do not verify roster-synced student' do
+    lti_user = create :student
+    sign_in lti_user
+
+    post :new_account
+
+    lti_user.reload
+
+    refute lti_user.verified_teacher?
+  end
 end

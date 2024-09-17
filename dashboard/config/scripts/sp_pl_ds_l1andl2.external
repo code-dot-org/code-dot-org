@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 ## Lesson 1: Introduction to Data Science 
 
-<img src="https://images.code.org/26266fb4b5ea855ad8166b356fca74d2-image-1724268314954.png" alt="farmwise robot and crops" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
+<img src="https://images.code.org/26266fb4b5ea855ad8166b356fca74d2-image-1724268314954.png" alt="pizza icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
 
 
 #### This is a survey lesson introducing students to all sorts of things data science can do. 
@@ -24,7 +24,7 @@ markdown <<MARKDOWN
 
 
 ## Lesson 2: Making Sense of Data 
-<img src="https://images.code.org/b5e2a67a75681390f709e468c050cbd3-image-1724268380001.png" alt="person squatting with exercise app" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+<img src="https://images.code.org/b5e2a67a75681390f709e468c050cbd3-image-1724268380001.png" alt="data symbols icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
 #### Students work with data in a spreadsheet before using a routine called Three Reads to familiarize themselves with a dataset about pizza choices.
 #### Then, students will use the dataset to try and answer some questions that will be helpful in planning a school event.

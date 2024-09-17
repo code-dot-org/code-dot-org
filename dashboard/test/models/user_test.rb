@@ -839,28 +839,6 @@ class UserTest < ActiveSupport::TestCase
     assert_empty user.lti_user_identities
   end
 
-  test 'LTI teacher should be verified after creation' do
-    lti_integration = create(:lti_integration)
-    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
-
-    lti_teacher = build(:teacher)
-    lti_teacher.authentication_options << build(:lti_authentication_option, user: lti_teacher, authentication_id: auth_id)
-    lti_teacher.save!
-
-    assert lti_teacher.verified_teacher?
-  end
-
-  test 'LTI student should not be verified after creation' do
-    lti_integration = create(:lti_integration)
-    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
-
-    lti_student = build(:student)
-    lti_student.authentication_options << build(:lti_authentication_option, user: lti_student, authentication_id: auth_id)
-    lti_student.save!
-
-    refute lti_student.verified_teacher?
-  end
-
   # FND-1130: This test will no longer be required
   test "teacher with no email created after 2016-06-14 should be invalid" do
     user = create :teacher, :without_email

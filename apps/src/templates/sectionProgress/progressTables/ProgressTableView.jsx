@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {

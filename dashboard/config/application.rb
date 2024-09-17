@@ -98,6 +98,12 @@ module Dashboard
       config.middleware.insert_after ActionDispatch::RequestId, Rack::CookieDCDO
     end
 
+    if CDO.use_geolocation_override
+      # Apply the remote_addr middleware to allow pretending to be at a particular IP
+      require 'cdo/rack/geolocation_override'
+      config.middleware.insert_after ActionDispatch::RequestId, Rack::GeolocationOverride
+    end
+
     config.encoding = 'utf-8'
 
     Rails.application.routes.default_url_options[:host] = CDO.canonical_hostname('studio.code.org')

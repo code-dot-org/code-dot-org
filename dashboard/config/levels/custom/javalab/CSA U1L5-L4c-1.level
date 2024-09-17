@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-07-30T13:51:46.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Create a new `Painter` using the parameterized constructor and paint the smiley face as shown below.\r\n\r\nSyntax for creating a new `Painter`:\r\n```\r\nClassName painterName = new ClassName(int x, int y, String direction, int paint);\r\n```\r\n\r\n![](https://images.code.org/f7e63e77945548bc638c90001111a3a5-image-1625587420828.png)",
@@ -538,13 +542,10 @@
     "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYvoeTb+/Zzs+EtVdP0\nzpRWcRqFNmjXAjIm5l8A76EvRR4DccBLpCKld2UqCUMqTBfZxnXDRGQXugju\nz+MfmVZv\n",
     "parent_level_id": 29354,
     "bubble_choice_description": "Create a new Painter using the parameterized constructor and paint the smiley face.",
-    "thumbnail_url": "https://images.code.org/f7e63e77945548bc638c90001111a3a5-image-1625587420828.png"
+    "thumbnail_url": "https://images.code.org/f7e63e77945548bc638c90001111a3a5-image-1625587420828.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-07-30T13:51:46.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-07-30T13:51:46.092+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L4c\\\"\"],\"cloned_from\":\"CSA U1L5-L4c\"},{\"changed_at\":\"2021-07-30 13:51:51 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:29:16 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-02 17:33:35 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

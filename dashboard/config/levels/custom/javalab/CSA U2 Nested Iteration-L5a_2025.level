@@ -8,7 +8,7 @@
     "encrypted": "false",
     "display_name": "Clock Display",
     "mini_rubric": "false",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": true,
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",

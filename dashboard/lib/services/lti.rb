@@ -122,8 +122,6 @@ module Services
         email: email_address,
         )
       user.authentication_options = [ao]
-      user.primary_contact_info = ao
-      # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user. https://codedotorg.atlassian.net/browse/P20-788
       user
     end
 
@@ -239,6 +237,9 @@ module Services
           had_changes = true
         end
       end
+
+      # Unarchive archived sections, even if there are no changes
+      section.update(hidden: false) if section.hidden
 
       {
         had_changes: had_changes,

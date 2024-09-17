@@ -479,7 +479,7 @@ FactoryBot.define do
 
     trait :sso_provider do
       encrypted_password {nil}
-      provider {%w(facebook windowslive clever).sample}
+      provider {%w(facebook clever).sample}
       sequence(:uid) {|n| n}
     end
 
@@ -520,11 +520,6 @@ FactoryBot.define do
       provider {'microsoft_v2_auth'}
     end
 
-    trait :powerschool_sso_provider do
-      untrusted_email_sso_provider
-      provider {'powerschool'}
-    end
-
     trait :twitter_sso_provider do
       sso_provider
       provider {'twitter'}
@@ -533,11 +528,6 @@ FactoryBot.define do
     trait :qwiklabs_sso_provider do
       sso_provider
       provider {'lti_lti_prod_kids.qwikcamps.com'}
-    end
-
-    trait :windowslive_sso_provider do
-      sso_provider_with_token
-      provider {'windowslive'}
     end
 
     trait :with_facebook_authentication_option do
@@ -1923,6 +1913,18 @@ FactoryBot.define do
   factory :rubric do
     association :lesson
     association :level
+
+    trait :with_learning_goals do
+      transient do
+        num_learning_goals {2}
+      end
+
+      after(:create) do |rubric, evaluator|
+        evaluator.num_learning_goals.times do
+          create :learning_goal, rubric: rubric
+        end
+      end
+    end
 
     trait :with_teacher_evaluations do
       transient do

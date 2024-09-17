@@ -1,5 +1,6 @@
 <Karel>
   <config><![CDATA[{
+  "published": true,
   "game_id": 25,
   "created_at": "2024-04-03T21:27:40.000Z",
   "level_num": "custom",
@@ -50,9 +51,8 @@
     "thumbnail_url": "https://images.code.org/91c6914147044d0d3a28344d491766a0-image-1615582061408.png",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:27:40.296+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_nestedLoops7_2023\\\"\"],\"cloned_from\":\"courseD_bee_nestedLoops7_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:27:40.296+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_nestedLoops7_2023\\\"\"],\"cloned_from\":\"courseD_bee_nestedLoops7_2023\"},{\"changed_at\":\"2024-09-04 21:33:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 5

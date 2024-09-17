@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
@@ -19,9 +21,32 @@ const AccountType: React.FunctionComponent = () => {
   const [isFreeCurriculumDialogOpen, setIsFreeCurriculumDialogOpen] =
     useState(false);
 
+  useEffect(() => {
+    analyticsReporter.sendEvent(
+      EVENTS.SIGN_UP_STARTED_EVENT,
+      {},
+      PLATFORMS.STATSIG
+    );
+  }, []);
+
   const selectAccountType = (accountType: string) => {
+    analyticsReporter.sendEvent(
+      EVENTS.ACCOUNT_TYPE_PICKED_EVENT,
+      {
+        'account type': accountType,
+      },
+      PLATFORMS.STATSIG
+    );
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, accountType);
     navigateToHref(studio('/users/new_sign_up/login_type'));
+  };
+
+  const sendCurriculumAnalyticsEvent = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_FREE_DIALOG_BUTTON_CLICKED,
+      {},
+      PLATFORMS.STATSIG
+    );
   };
 
   return (
@@ -60,6 +85,7 @@ const AccountType: React.FunctionComponent = () => {
               locale.track_student_progress(),
               locale.access_assessments(),
               locale.enroll_in_pl(),
+              locale.integrate_seamlessly(),
             ]}
           />
         </div>
@@ -76,7 +102,10 @@ const AccountType: React.FunctionComponent = () => {
             className={style.dialogButton}
             size="s"
             text={locale.read_our_commitment_free()}
-            onClick={() => setIsFreeCurriculumDialogOpen(true)}
+            onClick={() => {
+              sendCurriculumAnalyticsEvent();
+              setIsFreeCurriculumDialogOpen(true);
+            }}
           />
         </div>
       </div>

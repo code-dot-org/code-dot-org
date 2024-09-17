@@ -26,6 +26,7 @@ import {
   setProjectUpdatedSaving,
   setProjectUpdatedSaved,
 } from '../code-studio/projectRedux';
+import {queryParams, updateQueryParam} from '../code-studio/utils';
 import {RootState} from '../types/redux';
 import HttpClient, {NetworkError} from '../util/HttpClient';
 
@@ -298,8 +299,9 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   const isFrozen = !!state.lab.channel?.frozen;
   const readonlyPredictLevel = isReadonlyPredictLevel(state);
   const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
+  const isViewingOldVersion = state.lab2Project.viewingOldVersion;
   const isRunningAndReadonly =
-    (state.lab2System.isRunning || state.lab2System.isTesting) &&
+    (state.lab2System.isRunning || state.lab2System.isValidating) &&
     shouldBeReadonlyWhileRunning(state);
 
   return (
@@ -307,7 +309,8 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     isFrozen ||
     readonlyPredictLevel ||
     hasSubmitted ||
-    isRunningAndReadonly
+    isRunningAndReadonly ||
+    isViewingOldVersion
   );
 };
 
@@ -475,7 +478,17 @@ async function setUpAndLoadProject(
     }
   });
   projectManager.addSaveFailListener(() => dispatch(setProjectUpdatedError()));
-  return await projectManager.load();
+  // Figure out if we should reset to start sources. This happens if the url parameter
+  // ?reset=true is present.
+  // This parameter is only used by levelbuilders.
+  const resetParam = queryParams('reset');
+  let resetToStartSources = false;
+  if (resetParam === 'true') {
+    // Remove the reset parameter from the url so we don't reset again.
+    updateQueryParam('reset', undefined);
+    resetToStartSources = true;
+  }
+  return await projectManager.load(resetToStartSources);
 }
 
 // Helper function to set the channel, source, and level data in redux.

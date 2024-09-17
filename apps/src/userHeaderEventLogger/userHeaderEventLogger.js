@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const USER_MENU_OPTION_IDS = ['my-projects', 'user-edit', 'user-signout'];
@@ -198,9 +198,11 @@ $(document).ready(function () {
   const headerCreateMenu = document.getElementById('header_create_menu');
   const pageUrl = window.location.href;
 
-  if (getScriptData('isSignedOut')) {
-    addSignedOutMetrics(pageUrl, headerCreateMenu);
-  } else {
-    addSignedInMetrics(pageUrl, headerCreateMenu);
+  if (!pageUrl.includes('/global/')) {
+    if (getScriptData('isSignedOut')) {
+      addSignedOutMetrics(pageUrl, headerCreateMenu);
+    } else {
+      addSignedInMetrics(pageUrl, headerCreateMenu);
+    }
   }
 });

@@ -79,7 +79,7 @@ const trackedProjectProperties = [
 /**
  * An analytics reporter specifically used for the Music Lab prototype, which logs analytics
  * to Amplitude. For the more general Amplitude Analytics Reporter used across the application
- * outside of Music Lab, check {@link apps/src/lib/util/AnalyticsReporter}.
+ * outside of Music Lab, check {@link apps/src/metrics/AnalyticsReporter}.
  */
 export default class AnalyticsReporter {
   private initialized: boolean;

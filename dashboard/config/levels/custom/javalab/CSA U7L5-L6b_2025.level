@@ -39,7 +39,8 @@
     "starter_assets": {
       "amplifier.png": "b708f060-d1b8-4e4e-9d5e-0ae42e4492dc.png"
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:24:36.888+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L6b_2023\\\"\"],\"cloned_from\":\"CSA U7L5-L6b_2023\"}]"

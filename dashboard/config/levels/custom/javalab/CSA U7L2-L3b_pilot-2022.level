@@ -37,7 +37,8 @@
     "display_name": "Meal Combo",
     "bubble_choice_description": "A restaurant wants to allow customers to create meal combos consisting of a burger, side, and drink. Write the constructor for the Combo class to instantiate Burger, Side, and Drink objects.",
     "thumbnail_url": "https://images.code.org/4d907256cb39aba6baf44e776323889c-burger.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:33.454+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L3b_2022\\\"\"],\"cloned_from\":\"CSA U7L2-L3b_2022\"}]"

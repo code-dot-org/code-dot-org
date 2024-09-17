@@ -6,7 +6,7 @@ title 'Debugging Session'
 markdown <<MARKDOWN
 # Creating Apps with Devices - Lesson 1: Intro to App Lab
 
-<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px;">
 
 #### <a href="https://studio.code.org/s/csd6a-2024/lessons/1" target="blank">U6L1 Lesson Plan: Intro to App Lab</a>
 
@@ -17,7 +17,7 @@ markdown <<MARKDOWN
 
 #### Become familiar with the basics of App Lab.
 
-## 📋 Investigation Task:
+## 📋 Investigation Tasks:
 
 * #### Watch the "App Lab Intro - Video" in <a href="https://studio.code.org/s/csd6a-2024/lessons/1/levels/1" target="blank" rel="noopener noreferrer">Level 1</a> of the lesson. Afterward, try completing Levels 2-4 to get a feel for how to change properties in App Lab.
 

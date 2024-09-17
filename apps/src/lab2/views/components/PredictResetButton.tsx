@@ -49,6 +49,7 @@ const PredictResetButton: React.FunctionComponent = () => {
         iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
         type={'secondary'}
         color={buttonColors.destructive}
+        className={moduleStyles.resetButton}
       />
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
       {resetFailed && (

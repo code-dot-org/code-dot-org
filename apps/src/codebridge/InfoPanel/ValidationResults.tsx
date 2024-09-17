@@ -35,7 +35,7 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   const {validationResults, satisfied} = useAppSelector(
     state => state.lab.validationState
   );
-  const isTesting = useAppSelector(state => state.lab2System.isTesting);
+  const isValidating = useAppSelector(state => state.lab2System.isValidating);
 
   if (!validationResults) {
     return null;
@@ -44,8 +44,8 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   return (
     <div className={classNames(className, moduleStyles.validationResults)}>
       <h4>{codebridgeI18n.validationResults()}</h4>
-      {isTesting && <i className="fa fa-spinner fa-spin" />}
-      {!isTesting && (
+      {isValidating && <i className="fa fa-spinner fa-spin" />}
+      {!isValidating && (
         <div>
           <table className={moduleStyles.validationResultsTable}>
             <thead>

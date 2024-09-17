@@ -1579,7 +1579,8 @@ class Unit < ApplicationRecord
         scriptOverviewPdfUrl: get_unit_overview_pdf_url,
         scriptResourcesPdfUrl: get_unit_resources_pdf_url,
         updated_at: updated_at.to_s,
-        isPlCourse: pl_course?
+        isPlCourse: pl_course?,
+        showAiAssessmentsAnnouncement: show_ai_assessments_announcement?(user),
       }
 
       #TODO: lessons should be summarized through lesson groups in the future
@@ -1595,6 +1596,23 @@ class Unit < ApplicationRecord
 
   def unit_without_lesson_plans?
     lessons.none?(&:has_lesson_plan)
+  end
+
+  def summarize_for_lesson_materials_view(user)
+    summary = {
+      id: id,
+      title: title_for_display,
+      name: name,
+      unitNumber: unit_number,
+      scriptOverviewPdfUrl: get_unit_overview_pdf_url,
+      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+    }
+    # Only get lessons with lesson plans
+    filtered_lessons = lessons.select(&:has_lesson_plan)
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
+
+    summary
   end
 
   def summarize_for_rollup(user = nil)
@@ -1739,6 +1757,10 @@ class Unit < ApplicationRecord
       scope: [:data, :script, :name, name],
       smart: true
     )
+  end
+
+  def unit_number
+    unit_group_units&.first&.position
   end
 
   def title_for_display
@@ -2097,6 +2119,16 @@ class Unit < ApplicationRecord
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
     middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+  end
+
+  def ai_assessment_enabled?
+    lessons.any? do |lesson|
+      lesson.rubric&.learning_goals&.any?(&:ai_enabled?)
+    end
+  end
+
+  def show_ai_assessments_announcement?(user)
+    user&.teacher? && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
   private def teacher_feedback_enabled?

@@ -24,8 +24,6 @@ Print your own posters! Simply click an image below to view and save a printable
 
 {{ promote_new_posters }}
 
-* Busqueu els pòsters dels anys anteriors? [Els trobareu aquí]({{ promote/previous_posters_url }})!
-
 <a id="social"></a>
 
 ## Publiqueu-los a les xarxes socials
@@ -62,7 +60,7 @@ Print your own posters! Simply click an image below to view and save a printable
     
     *“The 'Hour of Code™'/"Hora del Código®" és una iniciativa global impulsada per la Setmana de l'Educació en Ciències de la Computació [csedweek.org] i Code.org [code.org] per proporcionar a milions d'alumnes una hora dedicada a la informàtica i a la programació".*</li> 
     
-    * No feu servir "Hour of Code" o "Hora del Código" als noms de les vostres aplicacions.</ol> 
+    - No feu servir "Hour of Code" o "Hora del Código" als noms de les vostres aplicacions.</ol> 
     
     
 

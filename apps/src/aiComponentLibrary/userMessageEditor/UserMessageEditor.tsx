@@ -34,6 +34,7 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
 
   const handleKeyPress = (e: React.KeyboardEvent, userMessage: string) => {
     if (e.key === 'Enter' && userMessage.trim() !== '') {
+      e.preventDefault(); // Prevent the text box from having just a blank line.
       handleSubmit(userMessage);
     }
   };
@@ -55,6 +56,7 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
       )}
     >
       <textarea
+        id="uitest-chat-textarea"
         className={moduleStyles.textArea}
         placeholder={customPlaceholder || commonI18n.aiUserMessagePlaceholder()}
         onChange={e => setUserMessage(e.target.value)}
@@ -65,6 +67,7 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
 
       <div className={moduleStyles.centerSingleItemContainer}>
         <Button
+          id="uitest-chat-submit"
           isIconOnly={!showSubmitLabel}
           onClick={() => handleSubmit(userMessage)}
           disabled={disabled || !userMessage || userMessageIsEmpty}

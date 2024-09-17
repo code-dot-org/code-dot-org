@@ -6,17 +6,17 @@
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "self-paced-pl-ai-101-Training_Data",
+    "video_key": "self-paced-pl-ai-101-Machine_Learning",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 28811,
     "name_suffix": "_23",
     "encrypted": "false",
-    "long_instructions": "\r\n\r\n## How AI Works: Machine Learning video\r\n\r\n"
+    "long_instructions": "\r\n\r\n#### There are different types of artificial intelligences that focus on different things. One important type is called Machine Learning - you'll show your students this video during Lesson 1 so that they can learn more. Preview it now.\r\n\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-28T17:33:22.634+00:00\",\"changed\":[\"cloned from \\\"sp-pl-CV_ideating_Trainingdata_bias\\\"\"],\"cloned_from\":\"sp-pl-CV_ideating_Trainingdata_bias\"},{\"changed_at\":\"2024-08-28 17:33:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-28T17:33:22.634+00:00\",\"changed\":[\"cloned from \\\"sp-pl-CV_ideating_Trainingdata_bias\\\"\"],\"cloned_from\":\"sp-pl-CV_ideating_Trainingdata_bias\"},{\"changed_at\":\"2024-08-28 17:33:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 16:29:04 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

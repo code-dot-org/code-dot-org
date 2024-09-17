@@ -12,7 +12,8 @@
     "link_title": "Unlock the App",
     "url": "https://github.com/code-dot-org/csa-cv-lesson3c",
     "thumbnail_url": "https://images.code.org/1ed60aa62d93494610904e50857574e4-mobile.png",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:26:37.404+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L3-L1c_2023\\\"\"],\"cloned_from\":\"CSA-CV-L3-L1c_2023\"}]"

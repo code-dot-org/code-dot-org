@@ -24,8 +24,6 @@ nav: promote_nav
 
 {{ promote_new_posters }}
 
-* دنبال پوسترهای ما از سال های گذشته هستید؟ [آنها را اینجا پیدا کنید]({{ promote/previous_posters_url }})!
-
 <a id="social"></a>
 
 ## آنها را در شبکه های اجتماعی به اشتراک بگذارید

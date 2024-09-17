@@ -1,0 +1,34 @@
+:ruby
+  block_items = [
+    {
+      icon: "fa-solid fa-layer-group",
+      title: hoc_s("tools_page.tools_el.scaffolding.heading"),
+      desc: hoc_s("tools_page.tools_el.scaffolding.desc")
+    },
+    {
+      icon: "fa-solid fa-thought-bubble",
+      title: hoc_s("tools_page.tools_el.independence.heading"),
+      desc: hoc_s("tools_page.tools_el.independence.desc")
+    },
+    {
+      icon: "fa-solid fa-lightbulb-on",
+      title: hoc_s("tools_page.tools_el.engagement.heading"),
+      desc: hoc_s("tools_page.tools_el.engagement.desc")
+    },
+    {
+      icon: "fa-solid fa-arrow-up-wide-short",
+      title: hoc_s("tools_page.tools_el.differentiation.heading"),
+      desc: hoc_s("tools_page.tools_el.differentiation.desc")
+    },
+  ]
+
+%ul.icon-bullet-list.full-width
+  - block_items.each do |block_item|
+    %li
+      %div
+        %i{class: "#{block_item[:icon]}"}
+      .text-wrapper
+        %h3
+          = block_item[:title]
+        %p.no-margin-bottom
+          = block_item[:desc]

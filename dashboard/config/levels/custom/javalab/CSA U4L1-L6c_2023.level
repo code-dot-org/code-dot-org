@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-02-17T18:17:42.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Add music to the scene!\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">GamingScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method to play the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">soundFile</code>.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Scene</code> class in the <strong>Documentation</strong> tab ⬆️ for help with playing sounds.\r\n</div>",
@@ -27,15 +31,9 @@
       "gamemusic.wav": "5d1ec7a7-667e-43d4-ac02-fad24e5da3e4.wav"
     },
     "encrypted_exemplar_sources": "Q1PxmLgiasYA0VmeXomMQm8rxQrn3nRO03FnOhEzENUgrQBYj7Qy3Jy5OJcu\ncQUG+Xn2tCDtBmutZyQh+enH7+bqukHSUl0WwoD9+lxpnAF3Uy5ZSSH8xbMi\nfN5p3S/sliAQ3RlT+2CGQAXIHAt075PWugpWc8iTIIurSsoj2i+7kN2aVLu7\nrdH5dbImo5sdNUv7aXQ8FEPCgOSz14i5gFbwYPtb7rH4YZyxpFgjOmU87uR3\nPHhK4d/IqHxziFDdJjTQx4cbGnwI8ZNkR1ZkYleY/ioVonIbkG0zwMmlg9be\nc9SuZYyl8pkWEZpGwvXSHGkdT2RFF+nDDdSTGUpLNDWCOhPburCb/aQCYvd2\nGiNNE6IcrXlcCA6GYM7hd7mBLjJg5qpJJUDn8AQSTNkxjDfuXpvkBc6AnM/r\nlGW0X8fqByMYSsD3i8XsHP4XwQuhoHdqMaSreXftNK91jLJY8FC+0fFnFp6m\n2OruXr2R06XDyZwjaia6Foep8srxUs6FblpXNWWMKa0zeLDpm+gheOzuQ4in\nuaqoxaDOWPQXSB8AMol5/cSqZ+q4uEPGLr6vXfeDRgvVy70zBYs4nCuvAzBl\n2jlf+HOLdUM48MNHORPvZNeOA5VY+30Fg2nmAffx0SrgMEJQdxtHFpo6nrl7\nquE2Q7Q434CkPoeVYocZQXL2XCXpGtfcKebOKdN04r1LeR8dJVwh6zbuOL+4\nVwu1vJJuxPYlRGuBPiG3Oru8OL7GA2iI2X3GKbEqrug4CWFri5N9Tt89udUN\nasfBNRkkYo8n6arKdE4hq4dQcc0Qve8Vj7WTCnSBRYtz2vCtu3r+DcdXyuJF\n+BohMvEJFvBI1zVz15/nTW9mh1vL/two0vqMH/qc0YutUVSR66jUPgttVLSd\n/ppGuwFG6keVHgOi108B2u/PGRpkGpDK+prlu+dhEJ0YHfuqKPEGmz2vgNvs\nxISuvUJ2SrqbAgpDy/xPrXU/9iuFH3E1bif2rIUjOB0YezVaQL7JD2ko8TC+\nnFmbX30UmAwBheMWdMTqXgvDhqXsU97yVmqzgJMzQ8+PDVqA/MbgmkKZdn9x\nqZ/v48fXFQ3Yw2dTUbQpK1D4WptMj3wxqoo1fo8o1W7aA0D4zk77Xw3E5Vaf\nx9Er0YfRNSZEROFMG89eICuj1MaCbOP4kHPgVZ+u7vPWMsjsTEXHk+z9cRiS\nyJnqatYtNF14bfUBhd9v6v0y1MSt68snM4NnQkVes5VbBYPU77wFY7i1N7BW\n53bfZgN8K6qQndWzEwBgPiweyxzwz5ATHGWdkBUItIaLKx+OGpAUX2RgB8v6\nFqLYik2Ittt7XhFxdzB5xeXUsaYJpqi651DQGZCKlzr4NB6gUJ/H2DhpVEuS\n1Mpd6rYNWz022t2WkI+rAJ3DsPDs63L9gEpcK5uHrhbFwVi94Zme1LnEVCWV\nK4k5umll+NIYoktnFX43OkQvl7L9+FFjWLPxuIeRArM2B5rxjIof1oCTas+i\npAGy+/HJB0X4D2bjyViiPHpYFW0/rqg4igZXAnAiHxJS4Famwqtz8fWTLQry\nw1Avrc1qYFJIwWkjXKRdqJHyt8/HR2qWE4w2qVqjWb5pvoQVmvu1bDfTldxW\nhxgOhOcYA9E4wPrlts4/pxnvPjuvtdCgWGeGbWaqzm8SwSiO0zf4xg++z+Vc\nE67nzFr5ORb/6NIxCNupfvvdEm58lFffh33yYe5ShdNu8lVvFOF3d1ZRuGbg\nKrik2pVhgkPm4f1sI/xwTteZJnOgwwXgOBuAhcgT5p6DcpClv1nBkfouo96q\n2oUjh5hN/BDD0NAecsGn7ztGfG5kNAIMOUUDPAbeI/ULvVPjKZtSH5gP0g7J\njdedurWKVsp99FqbUG/MeSkks4uCN1qlYrdPPN8oBR5YHf+/lm3pb2LQIdcC\n",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2023-02-17T18:17:42.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:17:42.756+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L6b_2023\\\"\"],\"cloned_from\":\"CSA U4L1-L6b_2023\"},{\"changed_at\":\"2023-02-17 18:17:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-28 21:44:33 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-01 18:16:29 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-01 18:21:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-01 18:22:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-01 18:22:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-01 18:22:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-09 18:00:56 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-09 18:01:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-09 21:25:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

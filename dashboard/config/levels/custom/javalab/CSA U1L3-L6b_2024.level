@@ -365,7 +365,8 @@
     "bubble_choice_description": "Instantiate the missing `Painter` objects so they can get around the park.",
     "thumbnail_url": "https://images.code.org/b67e665d253b56cea175f80867c64e4e-U1L4-L3b.gif",
     "video_key": "csa_creating_objects",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:43:31.391+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L6b_2023\\\"\"],\"cloned_from\":\"CSA U1L3-L6b_2023\"}]"

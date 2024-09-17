@@ -10,7 +10,8 @@
 
 #show-container
 
-- if current_user&.teacher?
+/ Supply the FAB mount-point for the differentiation if allowed by the current user and this lesson
+- if Policies::Ai.ai_differentiation_enabled?(current_user) && Policies::Ai.ai_differentiation_enabled_for_lesson?(@lesson)
   %div#ai-differentiation-fab-mount-point
 
 - if can? :edit, @lesson

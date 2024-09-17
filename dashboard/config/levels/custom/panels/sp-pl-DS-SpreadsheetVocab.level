@@ -10,7 +10,7 @@
     "panels": [
       {
         "text": "\n\n",
-        "imageUrl": "https://images.code.org/775c0449ca7b31c50a9a9fe3a6a0577d-data.png",
+        "imageUrl": "https://images.code.org/f572e816156de79ddd15577003cd6e41-sheettext.png",
         "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
       },
       {
@@ -48,6 +48,6 @@
     ],
     "name_suffix": "_2024"
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-21T14:50:25.755+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L1_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L1_2024\"},{\"changed_at\":\"2024-08-21 16:21:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-08-21 16:29:34 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-08-21 19:07:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-21T14:50:25.755+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L1_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L1_2024\"},{\"changed_at\":\"2024-08-21 16:21:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-08-21 16:29:34 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-08-21 19:07:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-08-29 16:35:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>
