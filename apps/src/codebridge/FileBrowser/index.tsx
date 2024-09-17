@@ -279,6 +279,7 @@ const InnerFileBrowser = React.memo(
                       renameFilePrompt={renameFilePrompt}
                       renameFolderPrompt={renameFolderPrompt}
                       setFileType={setFileType}
+                      appName={appName}
                     />
                   </ul>
                 )}
@@ -632,6 +633,7 @@ export const FileBrowser = React.memo(() => {
           renameFilePrompt={renameFilePrompt}
           renameFolderPrompt={renameFolderPrompt}
           setFileType={setFileType}
+          appName={appName}
         />
       </ul>
     </PanelContainer>
