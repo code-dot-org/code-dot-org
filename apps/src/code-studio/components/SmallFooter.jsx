@@ -28,7 +28,7 @@ export default class SmallFooter extends React.Component {
   static propTypes = {
     // We let dashboard generate our i18n dropdown and pass it along as an
     // encode string of html
-    i18nDropdownInBase: PropTypes.bool,
+    i18nDropdownInBase: PropTypes.bool.isRequired,
     localeUrl: PropTypes.string,
     localeOptions: PropTypes.arrayOf(
       PropTypes.shape({
