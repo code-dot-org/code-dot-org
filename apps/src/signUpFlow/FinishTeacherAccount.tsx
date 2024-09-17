@@ -9,6 +9,7 @@ import {
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {navigateToHref} from '../utils';
 
@@ -42,35 +43,26 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   const submitTeacherAccount = () => {
-    $.ajax({
-      method: 'POST',
-      url: '/users/finish_sign_up',
-      contentType: 'application/json',
-      data: JSON.stringify({
-        new_sign_up: true,
-        user: {
-          user_type: sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY),
-          email: sessionStorage.getItem(EMAIL_SESSION_KEY),
-          name: name,
-          email_preference_opt_in: emailOptInChecked,
-          school: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
-          school_info_attributes: {
-            school_id: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
-            school_zip: sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY),
-            school_name: sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY),
-          },
-        },
-      }),
-    }).done(() => {
-      $.ajax({
+    const userType = sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY);
+    const email = sessionStorage.getItem(EMAIL_SESSION_KEY);
+    const school = sessionStorage.getItem(SCHOOL_ID_SESSION_KEY);
+    const schoolZip = sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY);
+    const schoolName = sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY);
+    const fetchNewUrlParams = `new_sign_up=true&user_type=${userType}&email=${email}&name=${name}&email_preference_opt_in=${emailOptInChecked}&school=${school}&school_id=${school}&school_zip=${schoolZip}&school_name=${schoolName}`;
+
+    fetch(`/users/sign_up?${fetchNewUrlParams}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(async () => {
+      fetch(`/users?new_sign_up=true&user_email=${email}`, {
         method: 'POST',
-        url: '/users',
-        contentType: 'application/json',
-        data: JSON.stringify({
-          new_sign_up: true,
-          user_email: sessionStorage.getItem(EMAIL_SESSION_KEY),
-        }),
-      }).done(() => {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': await getAuthenticityToken(),
+        },
+      }).then(() => {
         navigateToHref('/home');
       });
     });
