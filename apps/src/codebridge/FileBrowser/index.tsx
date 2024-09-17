@@ -417,8 +417,9 @@ export const FileBrowser = React.memo(() => {
     () => fileId => {
       const file = project.files[fileId];
       fileDownload(file.contents, file.name);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
     },
-    [project.files]
+    [appName, project.files]
   );
 
   const newFilePrompt: FilesComponentProps['newFilePrompt'] = useMemo(
