@@ -16,30 +16,6 @@ class RegistrationsController < Devise::RegistrationsController
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
 
-  NEW_USER_PERMITTED_PARAMS = [
-    :user_type,
-    :email,
-    :name,
-    :email_preference_opt_in_required,
-    :email_preference_opt_in,
-    :email_preference_request_ip,
-    :email_preference_source,
-    :email_preference_form_kind,
-    :school,
-    :school_info_id,
-    :age,
-    :parent_email_preference_email,
-    :parent_email_preference_opt_in,
-    :parent_email_preference_request_ip,
-    :parent_email_preference_source,
-    :data_transfer_agreement_accepted,
-    :data_transfer_agreement_required,
-    :data_transfer_agreement_request_ip,
-    :data_transfer_agreement_source,
-    :data_transfer_agreement_kind,
-    :data_transfer_agreement_at
-  ]
-
   #
   # GET /users/sign_up
   #
@@ -50,7 +26,7 @@ class RegistrationsController < Devise::RegistrationsController
       user_params[:user_type] ||= session[:default_sign_up_user_type]
       user_params[:email] ||= params[:email]
 
-      if !!params[:new_sign_up]
+      if params[:new_sign_up].present?
         user_params[:age] ||= user_params[:user_type] == 'teacher' ? '21+' : user_params[:age]
 
         # Set email and data transfer preferences
@@ -74,7 +50,7 @@ class RegistrationsController < Devise::RegistrationsController
           user_params[:data_transfer_agreement_at] = DateTime.now
         end
 
-        @user = User.new_with_session(user_params.permit(NEW_USER_PERMITTED_PARAMS), session)
+        @user = User.new_with_session(user_params.permit(new_user_permitted_params), session)
         @user.save!
         @user
       else
@@ -113,7 +89,7 @@ class RegistrationsController < Devise::RegistrationsController
       PartialRegistration.persist_attributes(session, @user)
     end
 
-    unless params[:new_sign_up]
+    if params[:new_sign_up].blank?
       render 'new'
     end
   end
@@ -211,7 +187,7 @@ class RegistrationsController < Devise::RegistrationsController
       super
     end
 
-    if !!params[:new_sign_up]
+    if [:new_sign_up].present?
       curr_user = User.find_by_email_or_hashed_email(params[:user_email])
       sign_in curr_user
     end
@@ -601,6 +577,32 @@ class RegistrationsController < Devise::RegistrationsController
       hashed_email_is_changing ||
       parent_email_is_changing ||
       params[:user][:password].present?
+  end
+
+  private def new_user_permitted_params
+    [
+      :user_type,
+      :email,
+      :name,
+      :email_preference_opt_in_required,
+      :email_preference_opt_in,
+      :email_preference_request_ip,
+      :email_preference_source,
+      :email_preference_form_kind,
+      :school,
+      :school_info_id,
+      :age,
+      :parent_email_preference_email,
+      :parent_email_preference_opt_in,
+      :parent_email_preference_request_ip,
+      :parent_email_preference_source,
+      :data_transfer_agreement_accepted,
+      :data_transfer_agreement_required,
+      :data_transfer_agreement_request_ip,
+      :data_transfer_agreement_source,
+      :data_transfer_agreement_kind,
+      :data_transfer_agreement_at
+    ]
   end
 
   # Accept only whitelisted params for update and upgrade.
