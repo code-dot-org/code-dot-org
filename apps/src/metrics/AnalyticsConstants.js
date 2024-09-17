@@ -389,7 +389,6 @@ const EVENTS = {
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
-  CODEBRIDGE_FILE_ADDED_TO_FOLDER: 'Add file to folder on codebridge',
   CODEBRIDGE_MOVE_FILE: 'Move file on codebridge',
   CODEBRIDGE_NEW_FILE: 'Create a new file on codebridge',
   CODEBRIDGE_NEW_FOLDER: 'Create a new folder on codebridge',
@@ -405,6 +404,10 @@ const EVENTS = {
   CODEBRIDGE_VALIDATE_CLICK: 'Validate button clicked on codebridge',
   CODEBRIDGE_VERSION_RESTORED: 'Version restored on codebridge',
   CODEBRIDGE_VERSION_VIEWED: 'Version viewed on codebridge',
+  CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
+    'Toggled to For Teachers Only on codebridge',
+  CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
+  CODEBRIDGE_HELP_TIPS_TOGGLE: 'Toggled to Help and Tips on codebridge',
 };
 
 const EVENT_GROUP_NAMES = {
