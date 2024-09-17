@@ -2,7 +2,9 @@
   full_width = local_assigns[:full_width]
   channel = local_assigns[:channel]
   reactProps = {
-    i18nDropdown: (view_options[:has_i18n] ? ERB::Util.url_encode(i18n_dropdown.to_str) : ''),
+    i18nDropdownInBase: (view_options[:has_i18n] ? true : false),
+    localeUrl: locale_url,
+    localeOptions: options_for_locale_dropdown,
     privacyPolicyInBase: true,
     copyrightInBase: true,
     baseCopyrightString: I18n.t('footer.copyright'),
@@ -14,6 +16,7 @@
     channel: channel,
     unitYear: view_options[:unit_year]
   }
+  puts view_options[:has_i18n]
 
 #page-small-footer
 %script{src: webpack_asset_path('js/layouts/_small_footer.js'), data: {smallfooter: reactProps.to_json}}
