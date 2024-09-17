@@ -11,12 +11,12 @@
   padding-left: 8px;
 }
 
-.file-browser ul li span.label {
+.row {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
 }
-.file-browser ul li span.title {
+.title {
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
@@ -59,4 +59,16 @@ li .button-kebab {
 
 li :hover .button-kebab {
   display: inherit;
+}
+
+.nameContainer {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: auto;
+}
+
+.label {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
 }

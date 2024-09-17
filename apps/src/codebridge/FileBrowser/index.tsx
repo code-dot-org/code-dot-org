@@ -217,7 +217,7 @@ const InnerFileBrowser = React.memo(
             );
             return (
               <li key={f.id + f.open}>
-                <span className={moduleStyles.label}>
+                <div className={moduleStyles.row}>
                   <span className={moduleStyles.title}>
                     <span
                       className={moduleStyles['caret-container']}
@@ -225,7 +225,7 @@ const InnerFileBrowser = React.memo(
                     >
                       {caret}
                     </span>
-                    <span>{f.name}</span>
+                    <span className={moduleStyles.nameContainer}>{f.name}</span>
                   </span>
                   {!isReadOnly && (
                     <PopUpButton
@@ -252,7 +252,7 @@ const InnerFileBrowser = React.memo(
                       </span>
                     </PopUpButton>
                   )}
-                </span>
+                </div>
                 {f.open && (
                   <ul>
                     <InnerFileBrowser
@@ -277,11 +277,14 @@ const InnerFileBrowser = React.memo(
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
             <li key={f.id}>
-              <span className={moduleStyles.label}>
-                <span onClick={() => openFile(f.id)}>
+              <div className={moduleStyles.row}>
+                <div
+                  className={moduleStyles.label}
+                  onClick={() => openFile(f.id)}
+                >
                   <i className={getFileIcon(f)} />
-                  {f.name}
-                </span>
+                  <span className={moduleStyles.nameContainer}>{f.name}</span>
+                </div>
                 {!isReadOnly && (
                   <PopUpButton
                     iconName="ellipsis-v"
@@ -310,7 +313,7 @@ const InnerFileBrowser = React.memo(
                     </span>
                   </PopUpButton>
                 )}
-              </span>
+              </div>
             </li>
           ))}
       </>
