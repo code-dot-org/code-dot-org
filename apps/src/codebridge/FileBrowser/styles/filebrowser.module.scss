@@ -15,7 +15,9 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  font-size: 14px;
 }
+
 .title {
   display: flex;
   justify-content: flex-start;
@@ -71,4 +73,10 @@ li :hover .button-kebab {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
+}
+
+.rowIcon {
+  margin: 2px 8px 2px 8px;
+  font-size: 13px;
+  line-height: 125%;
 }

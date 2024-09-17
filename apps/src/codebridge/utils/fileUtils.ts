@@ -16,7 +16,7 @@ export function shouldShowFile(file: ProjectFile) {
 
 export function getFileIcon(file: ProjectFile) {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  let icon = 'fa-solid ';
+  let icon = 'fa-regular ';
   if (isStartMode) {
     if (file.type === ProjectFileType.VALIDATION) {
       icon += 'fa-flask';

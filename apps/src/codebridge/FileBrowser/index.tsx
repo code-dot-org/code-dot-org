@@ -14,6 +14,7 @@ import {
   getFileIcon,
   shouldShowFile,
 } from '@codebridge/utils';
+import classNames from 'classnames';
 import fileDownload from 'js-file-download';
 import React, {useMemo} from 'react';
 
@@ -282,7 +283,9 @@ const InnerFileBrowser = React.memo(
                   className={moduleStyles.label}
                   onClick={() => openFile(f.id)}
                 >
-                  <i className={getFileIcon(f)} />
+                  <i
+                    className={classNames(getFileIcon(f), moduleStyles.rowIcon)}
+                  />
                   <span className={moduleStyles.nameContainer}>{f.name}</span>
                 </div>
                 {!isReadOnly && (
