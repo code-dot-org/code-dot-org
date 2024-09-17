@@ -1,0 +1,31 @@
+@import 'color';
+
+.languageSelect {
+  > div {
+    display: inline-flex;
+
+    select {
+      height: 1.5rem;
+      padding: 0.125rem 1.75rem;
+    }
+    &:after {
+      inset-inline-end: 1.25rem;
+    }
+
+    &:before {
+      color: $light_black;
+      content: '\f0ac';
+      font-family: "Font Awesome 6 Pro", sans-serif;;
+      font-size: 0.8125rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.25;
+      inset-inline-end: -1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      position: relative;
+      pointer-events: none;
+    }
+  }
+}
