@@ -17,6 +17,7 @@ export interface SchoolInfoInitialState {
   country?: string;
   schoolName?: string;
   schoolZip?: string;
+  schoolType?: string;
   usIp?: boolean;
 }
 
@@ -28,4 +29,5 @@ export interface SchoolInfoRequestWithoutSchoolId {
   country: string;
   school_name?: string;
   zip?: string;
+  school_type?: string;
 }
