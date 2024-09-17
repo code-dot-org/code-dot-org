@@ -1,0 +1,38 @@
+name 'sp-pl-DS_L1andL2-B'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data, Data, Data [B]
+
+
+#### In Lessons 1 and 2, students explore the foundational role of data in our everyday lives and how it can be used to make informed decisions, starting with a simple exercise of identifying data in a pizza party scenario and progressing to hands-on work with real datasets to solve practical problems. 
+
+---
+<img src="https://images.code.org/b5e2a67a75681390f709e468c050cbd3-image-1724268380001.png" alt="person squatting with exercise app" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+
+#### In this section, you'll interpret spreadsheet data based on the cases, attributes, and responses, exploring how data is collected, organized, and used to uncover insights.
+
+#### As you work through this activity, pay attention to how these ideas connect to real-world applications and the importance of building data literacy in your classroom. 
+
+## Key Concepts 
+- #### **data** - any form of organized information, such as words, numbers, pictures, etc.
+- #### **data science** - making meaning from data
+
+
+## Lesson Plans
+
+#### This professional learning module hightlights key activites and concepts from the Data Science course. For more detail, check out the full lesson plans: 
+
+- ### <b> <a href="LINK" rel="noopener noreferrer">Lesson One</a></b>
+
+- ### <b><a href="LINK" target="blank" rel="noopener noreferrer">Lesson Two</a>.</b>
+
+<br>
+
+
+#### Next, you'll engage in an activity from lesson 2 where you'll analyze data using the **Three Reads** strategy, applying these principles to guide your students in critical thinking and informed decision-making. 
+
+
+MARKDOWN
