@@ -44,7 +44,6 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/sign_up
   #
   def new
-    puts 'NEW'
     session[:user_return_to] ||= params[:user_return_to]
     if PartialRegistration.in_progress?(session)
       user_params = params[:user] || ActionController::Parameters.new
@@ -52,7 +51,6 @@ class RegistrationsController < Devise::RegistrationsController
       user_params[:email] ||= params[:email]
 
       if !!params[:new_sign_up]
-        puts 'NEW SIGN UP'
         user_params[:age] ||= user_params[:user_type] == 'teacher' ? '21+' : user_params[:age]
 
         # Set email and data transfer preferences
@@ -78,7 +76,6 @@ class RegistrationsController < Devise::RegistrationsController
 
         @user = User.new_with_session(user_params.permit(NEW_USER_PERMITTED_PARAMS), session)
         @user.save!
-        puts 'FINISH NEW'
         @user
       else
         @user = User.new_with_session(user_params.permit(:user_type, :email), session)
