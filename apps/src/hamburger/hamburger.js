@@ -7,7 +7,7 @@ import {
 export const initHamburger = function () {
   $(document).ready(function () {
     const isInSignupExperiment = statsigReporter.getIsInExperiment(
-      'signup_test',
+      'new_sign_up_v1',
       'showNewFlow',
       false
     );

@@ -8,7 +8,7 @@ $(document).ready(() => {
     'showNewFlow',
     false
   );
-  const signupLink = document.getElementById('signup-link');
+  const signupLink = document.getElementById('sign-in-button');
 
   if (isInSignupExperiment) {
     signupLink.href = 'https://studio.code.org/users/new_sign_up/account_type';

@@ -122,7 +122,7 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
 
   const createAccountButton = document.querySelector('#create_account_button');
   const isInSignupExperiment = statsigReporter.getIsInExperiment(
-    'signup_test',
+    'new_sign_up_v1',
     'showNewFlow',
     false
   );
