@@ -889,3 +889,7 @@ Outputs:
     Description: Session Permissions
     Value: !Ref SessionPermissions
     Export: {Name: !Sub "${AWS::StackName}-SessionPermissions"}
+  SagemakerModelExecutionRoleARN:
+    Description: Execution Role for GenAI Sagemaker Models
+    Value: !GetAtt SagemakerModelExecutionRole.Arn
+    Export: {Name: !Sub "${AWS::StackName}-SagemakerExecutionRoleARN"}
