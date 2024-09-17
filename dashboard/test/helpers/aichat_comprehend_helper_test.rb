@@ -25,10 +25,10 @@ class AichatComprehendHelperTest < ActionView::TestCase
 
     response = AichatComprehendHelper.get_toxicity(text, 'en')
 
-    assert_equal text, response[:text]
+    assert_equal text, response[:flagged_segment]
     assert_equal toxicity, response[:toxicity]
-    assert_equal category_name, response[:max_category].name
-    assert_equal category_score, response[:max_category].score
+    assert_equal category_name, response[:max_category][:name]
+    assert_equal category_score, response[:max_category][:score]
   end
 
   test 'returns max toxicity and max category if there are multiple response' do
@@ -60,13 +60,16 @@ class AichatComprehendHelperTest < ActionView::TestCase
     )
 
     @client.stubs(:detect_toxic_content).returns(comprehend_response_1, comprehend_response_2)
-    # Stub text segmentation to return two lists so we make two comprehend calls
-    AichatComprehendHelper.stubs(:get_text_segment_lists).returns([["hi"], ["hello"]])
+    AichatComprehendHelper.stubs(:get_text_segments).returns(%w[hi hello toxic hey])
 
-    response = AichatComprehendHelper.get_toxicity('hi hello', 'en')
-    assert_equal 0.7, response[:toxicity]
-    assert_equal 'HATE_SPEECH', response[:max_category].name
-    assert_equal 0.9, response[:max_category].score
+    # Stub max segments per list size so we make two comprehend calls
+    AichatComprehendHelper.stub_const(:MAX_SEGMENTS_PER_LIST, 2) do
+      response = AichatComprehendHelper.get_toxicity('hi hello toxic hey', 'en')
+      assert_equal 'toxic', response[:flagged_segment]
+      assert_equal 0.7, response[:toxicity]
+      assert_equal 'HATE_SPEECH', response[:max_category][:name]
+      assert_equal 0.9, response[:max_category][:score]
+    end
   end
 
   test 'returns nil if text is nil, empty, or blank' do
@@ -78,13 +81,11 @@ class AichatComprehendHelperTest < ActionView::TestCase
   test 'correctly chunks long text inputs' do
     # 5 characters * 3000 = 15000 bytes.
     long_message = "abcd " * 3000
-    # Comprehend's segment limit is 1000 bytes, and lists are limited to 10 segments.
-    # Expect to convert this to two lists with 10 and 5 segments respectively
-    text_segment_lists = AichatComprehendHelper.get_text_segment_lists(long_message)
-    assert_equal 2, text_segment_lists.size
-    assert_equal 10, text_segment_lists[0].size
-    assert_equal 5, text_segment_lists[1].size
-    text_segment_lists.flatten.each {|segment| assert segment.bytesize <= 1000}
+    # Comprehend's segment limit is 1000 bytes.
+    # Expect to convert this to 15 segments.
+    segments = AichatComprehendHelper.get_text_segments(long_message)
+    assert_equal 15, segments.size
+    segments.each {|segment| assert segment.bytesize <= 1000}
   end
 
   test "text with single words above segment limit are split up" do
@@ -92,11 +93,10 @@ class AichatComprehendHelperTest < ActionView::TestCase
     # 5 characters (no space) * 500 = 2500 bytes.
     long_word = "abcde" * 500
     # Expect the long word to be split into 2 1000-byte chunks and 1 500-byte chunk
-    # Expect to convert this to one list with 4 segments (small_word + 3 segments of large_word)
-    text_segment_lists = AichatComprehendHelper.get_text_segment_lists("#{small_word} #{long_word}")
-    assert_equal 1, text_segment_lists.size
-    assert_equal 4, text_segment_lists[0].size
-    text_segment_lists.flatten.each {|segment| assert segment.bytesize <= 1000}
+    # Expect 4 segments (small_word + 3 segments of large_word)
+    segments = AichatComprehendHelper.get_text_segments("#{small_word} #{long_word}")
+    assert_equal 4, segments.size
+    segments.each {|segment| assert segment.bytesize <= 1000}
   end
 
   test "emojis and special characters are handled correctly" do
@@ -106,13 +106,9 @@ class AichatComprehendHelperTest < ActionView::TestCase
     # These are all 2-byte UTF-8 characters. 2 bytes * 10 characters + 1 space = 21 * 1000 = 21000
     special_chars_string = "դϬƵӋ֚»˙ыۨΚ " * 1000
     # Total expected bytes: 16000 + 21000 = 37000
-    # Expect 4 lists with 10, 10, 10, and 8 respectively (due to how the characters are chunked, we end up with an extra segment)
-    text_segment_lists = AichatComprehendHelper.get_text_segment_lists(emoji_string + special_chars_string)
-    assert_equal 4, text_segment_lists.size
-    assert_equal 10, text_segment_lists[0].size
-    assert_equal 10, text_segment_lists[1].size
-    assert_equal 10, text_segment_lists[2].size
-    assert_equal 8, text_segment_lists[3].size
-    text_segment_lists.flatten.each {|segment| assert segment.bytesize <= 1000}
+    # Expect 38 segments (due to how the characters are chunked, we end up with an extra segment)
+    segments = AichatComprehendHelper.get_text_segments(emoji_string + special_chars_string)
+    assert_equal 38, segments.size
+    segments.each {|segment| assert segment.bytesize <= 1000}
   end
 end

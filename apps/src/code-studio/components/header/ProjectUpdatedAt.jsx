@@ -74,7 +74,7 @@ class ProjectUpdatedAt extends React.Component {
 const styles = {
   container: {
     display: 'block',
-    textAlign: 'left',
+    width: 160,
   },
 };
 
