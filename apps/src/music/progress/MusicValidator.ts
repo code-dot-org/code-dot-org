@@ -38,6 +38,10 @@ export const MusicConditions: ConditionNames = {
     valueType: 'number',
   },
   PLAYED_PATTERNS_AI: {name: 'played_patterns_ai', valueType: 'number'},
+  PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES: {
+    name: 'played_different_sounds_together_multiple_times',
+    valueType: 'number',
+  },
 };
 
 export default class MusicValidator extends Validator {
@@ -152,6 +156,10 @@ export default class MusicValidator extends Validator {
       }
     });
 
+    this.checkConditionPlayedDifferentSoundsTogetherMultipleTimes(
+      currentPlayheadPosition
+    );
+
     // Check for up to a certain number of sounds playing simultaneously.
     // Note that if, for example, 3 sounds are playing, then we'll consider
     // that 2 sounds and 1 sound have also been played together.
@@ -214,6 +222,46 @@ export default class MusicValidator extends Validator {
     this.addPlayedConditions(
       MusicConditions.PLAYED_CHORDS.name,
       playedNumberChords
+    );
+  }
+
+  // Check for PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES.
+  private checkConditionPlayedDifferentSoundsTogetherMultipleTimes(
+    currentPlayheadPosition: number
+  ) {
+    // An array of arrays of unique sound starts.
+    // The outer array is sparsely indexed by start time in measures.
+    // Each inner array is a list of unique sound IDs that start at
+    // that measure.
+    // This means that the same sound started at the same time will
+    // only be recorded once, even if played multiple times.
+    const uniqueStarts: Array<Array<string>> = [];
+
+    this.getPlaybackEvents()
+      .filter(playbackEvent => playbackEvent.when <= currentPlayheadPosition)
+      .forEach((eventData: PlaybackEvent) => {
+        if (!uniqueStarts[eventData.when]) {
+          uniqueStarts[eventData.when] = [];
+        }
+        if (!uniqueStarts[eventData.when].includes(eventData.id)) {
+          uniqueStarts[eventData.when].push(eventData.id);
+        }
+      });
+
+    // At least 2 sounds must be played together at the same time to be
+    // counted.
+    const numSoundsForPlayTogether = 2;
+
+    let playTogetherStarts = 0;
+    Object.keys(uniqueStarts).forEach(when => {
+      if (uniqueStarts[Number(when)].length >= numSoundsForPlayTogether) {
+        playTogetherStarts++;
+      }
+    });
+
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES.name,
+      playTogetherStarts
     );
   }
 
