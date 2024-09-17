@@ -1,0 +1,37 @@
+:ruby
+  additional_resources = [
+    {
+      title: hoc_s('gen_ai_page.additional_resources.curriculum_catalog.title'),
+      image: "/images/course-catalog-illustration.png",
+      desc: hoc_s('gen_ai_page.additional_resources.curriculum_catalog.desc'),
+      url: CDO.studio_url("/catalog"),
+      button_label: hoc_s('gen_ai_page.additional_resources.curriculum_catalog.button'),
+    },
+    {
+      title: hoc_s('gen_ai_page.additional_resources.ai_resources.title'),
+      image: "/images/ai/ai-curriclum-machine-learning.png",
+      desc: hoc_s('gen_ai_page.additional_resources.ai_resources.desc'),
+      url: "/ai",
+      button_label: hoc_s('gen_ai_page.additional_resources.ai_resources.button'),
+    },
+    {
+      title: hoc_s('gen_ai_page.additional_resources.support.title'),
+      image: "/images/action-blocks/action-block-support.png",
+      desc: hoc_s('gen_ai_page.additional_resources.support.desc', markdown: :inline, locals: {email_url: "mailto:support@code.org"}),
+      url: "https://support.code.org",
+      button_label: hoc_s('gen_ai_page.additional_resources.support.button'),
+    }
+  ]
+
+.additional-resources.action-block__wrapper.action-block__wrapper--three-col
+  - additional_resources.each do |additional_resource|
+    .action-block.action-block--one-col.flex-space-between.white
+      .content-wrapper
+        %h3
+          = additional_resource[:title]
+        %img{src: additional_resource[:image], alt: ""}
+        %p
+          = additional_resource[:desc]
+      .content-footer
+        %a.link-button{href: "#{additional_resource[:url]}"}
+          = additional_resource[:button_label]
