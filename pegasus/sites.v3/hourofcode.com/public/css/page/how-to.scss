@@ -80,7 +80,7 @@ nav.choose-guide {
       border-color: var(--neutral_white);
     }
 
-    &:is(:hover, :active) {
+    &:is(:hover, :active):not(.active) {
       background: rgba(255, 255, 255, 0.4);
     }
   }
