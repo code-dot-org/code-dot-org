@@ -17,6 +17,12 @@ const EVENTS = {
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
   TEACHER_LOGIN_EVENT: 'Teacher Login',
   ACCOUNT_SETTINGS_PAGE_VISITED: 'Account Settings Page Visited',
+  LOGIN_PAGE_VISITED: 'Login Page Visited',
+  LOGIN_PAGE_CREATE_ACCOUNT_CLICKED: 'Login Page Create Account Button Clicked',
+  CURRICULUM_FREE_DIALOG_BUTTON_CLICKED:
+    'Curriculum Free Dialog Button Clicked',
+  LMS_INFORMATION_BUTTON_CLICKED: 'LMS Information Button Clicked',
+  PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
 
   // School Association
   // Update School Info Dialog
@@ -383,6 +389,26 @@ const EVENTS = {
   SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
     'Unauthorized user attempts to submit aichat request and fails',
+
+  // Codebridge - File broswer-related events
+  CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
+  CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
+  CODEBRIDGE_FILE_ADDED_TO_FOLDER: 'Add file to folder on codebridge',
+  CODEBRIDGE_MOVE_FILE: 'Move file on codebridge',
+  CODEBRIDGE_NEW_FILE: 'Create a new file on codebridge',
+  CODEBRIDGE_NEW_FOLDER: 'Create a new folder on codebridge',
+  CODEBRIDGE_NEW_SUBFOLDER: 'Create a new subfolder on codebridge',
+  CODEBRIDGE_RENAME_FILE: 'Rename file on codebridge',
+  CODEBRIDGE_RENAME_FOLDER: 'Rename folder on codebridge',
+
+  // Codebridge - Other events
+  CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
+  CODEBRIDGE_MOVE_CONSOLE: 'Console moved on codebridge',
+  CODEBRIDGE_POP_OUT_IMAGE: 'Image popped out of console on codebridge',
+  CODEBRIDGE_RUN_CLICK: 'Run button clicked on codebridge',
+  CODEBRIDGE_VALIDATE_CLICK: 'Validate button clicked on codebridge',
+  CODEBRIDGE_VERSION_RESTORED: 'Version restored on codebridge',
+  CODEBRIDGE_VERSION_VIEWED: 'Version viewed on codebridge',
 };
 
 const EVENT_GROUP_NAMES = {

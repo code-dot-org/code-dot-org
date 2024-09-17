@@ -51,6 +51,14 @@ const optionsList = [
     ],
   },
   {
+    name: 'show-tts',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Hide text to speech.'},
+      {value: 'true', description: 'Show text to speech.'},
+    ],
+  },
+  {
     name: 'sounds-panel-2',
     type: 'radio',
     values: [

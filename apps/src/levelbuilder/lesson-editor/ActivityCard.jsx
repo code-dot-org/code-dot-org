@@ -44,10 +44,11 @@ class ActivityCard extends Component {
     updateActivityField: PropTypes.func.isRequired,
   };
 
-  handleAddActivitySection = () => {
+  handleAddActivitySection = insertPosition => {
     this.props.addActivitySection(
       this.props.activity.position,
-      this.props.generateActivitySectionKey()
+      this.props.generateActivitySectionKey(),
+      insertPosition
     );
   };
 
@@ -151,34 +152,44 @@ class ActivityCard extends Component {
         </div>
         <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (
-            <ActivitySectionCard
-              key={section.key}
-              activitySection={section}
-              activityPosition={activity.position}
-              activitySectionsCount={activity.activitySections.length}
-              activitiesCount={this.props.activitiesCount}
-              ref={ref => {
-                setActivitySectionRef(ref, activity.position, section.position);
-              }}
-              activitySectionMetrics={this.props.activitySectionMetrics}
-              updateTargetActivitySection={updateTargetActivitySection}
-              clearTargetActivitySection={clearTargetActivitySection}
-              targetActivityPos={this.props.targetActivityPos}
-              targetActivitySectionPos={this.props.targetActivitySectionPos}
-              updateActivitySectionMetrics={updateActivitySectionMetrics}
-              hasLessonPlan={hasLessonPlan}
-              allowMajorCurriculumChanges={allowMajorCurriculumChanges}
-            />
+            <React.Fragment key={section.key + '-fragment'}>
+              <ActivitySectionCard
+                key={section.key}
+                activitySection={section}
+                activityPosition={activity.position}
+                activitySectionsCount={activity.activitySections.length}
+                activitiesCount={this.props.activitiesCount}
+                ref={ref => {
+                  setActivitySectionRef(
+                    ref,
+                    activity.position,
+                    section.position
+                  );
+                }}
+                activitySectionMetrics={this.props.activitySectionMetrics}
+                updateTargetActivitySection={updateTargetActivitySection}
+                clearTargetActivitySection={clearTargetActivitySection}
+                targetActivityPos={this.props.targetActivityPos}
+                targetActivitySectionPos={this.props.targetActivitySectionPos}
+                updateActivitySectionMetrics={updateActivitySectionMetrics}
+                hasLessonPlan={hasLessonPlan}
+                allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+              />
+
+              <button
+                onMouseDown={() =>
+                  this.handleAddActivitySection(section.position)
+                }
+                className="btn add-activity-section"
+                style={styles.addButton}
+                type="button"
+                key={section.key + 'add'}
+              >
+                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                Activity Section
+              </button>
+            </React.Fragment>
           ))}
-          <button
-            onMouseDown={this.handleAddActivitySection.bind()}
-            className="btn add-activity-section"
-            style={styles.addButton}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Activity Section
-          </button>
         </div>
       </div>
     );

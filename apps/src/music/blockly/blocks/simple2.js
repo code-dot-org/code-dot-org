@@ -45,23 +45,6 @@ export class GeneratorHelpersSimple2 {
     `;
   }
 
-  // Given a block of code with function calls, and also function implementations,
-  // this returns the implementation of the when_run block to be used when the user
-  // didn't provide their own implementation.  In this implementation, all of the
-  // provided functions are called immediately, simulating tracks mode.
-  static getDefaultWhenRunImplementation(
-    functionCallsCode,
-    functionImplementationsCode
-  ) {
-    return `
-    Sequencer.newSequence();
-    Sequencer.playTogether();
-    Sequencer.startFunctionContext('when_run');
-    ${functionCallsCode}
-    ${functionImplementationsCode}
-  `;
-  }
-
   // Return a function name in JavaScript.
   // Adapted from Blockly.JavaScript.nameDB_.safeName_
   // at https://github.com/google/blockly/blob/498766b930287ab8ef86accf95e9453018997461/core/names.ts
@@ -91,12 +74,18 @@ export const whenRunSimple2 = {
     tooltip: musicI18n.blockly_blockWhenRunTooltip(),
     helpUrl: '',
   },
-  generator: () =>
-    `
-      Sequencer.newSequence();
-      Sequencer.startFunctionContext('when_run');
-      Sequencer.playSequential();
-    `,
+  generator: ctx => {
+    const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
+    let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
+    ctx.skipNextBlockGeneration = true;
+    return `
+      if (__context == 'when_run') {
+        Sequencer.newSequence();
+        Sequencer.startFunctionContext('when_run');
+        Sequencer.playSequential();
+        ${handlerCode}
+      }`;
+  },
 };
 
 export const triggeredAtSimple2 = {
@@ -130,12 +119,19 @@ export const triggeredAtSimple2 = {
     tooltip: musicI18n.blockly_blockTriggeredTooltip(),
     helpUrl: DOCS_BASE_URL + 'trigger',
   },
-  generator: block =>
-    `
-      Sequencer.newSequence(startPosition, true);
-      Sequencer.startFunctionContext('${block.getFieldValue(TRIGGER_FIELD)}');
-      Sequencer.playSequential();
-    `,
+  generator: ctx => {
+    const id = ctx.getFieldValue(TRIGGER_FIELD);
+    const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
+    let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
+    ctx.skipNextBlockGeneration = true;
+    return `
+      if (__context == "${id}") {
+        Sequencer.newSequence(startPosition, true);
+        Sequencer.startFunctionContext('${id}');
+        Sequencer.playSequential();
+        ${handlerCode}
+      }`;
+  },
 };
 
 export const playSoundAtCurrentLocationSimple2 = {
@@ -181,7 +177,7 @@ export const playPatternAiAtCurrentLocationSimple2 = {
     args0: [
       {
         type: 'field_image',
-        src: '/blockly/media/ai-bot-mini.svg',
+        src: '/blockly/media/ai-bot-mini-2.svg',
         width: 24,
         height: 24,
         alt: '',

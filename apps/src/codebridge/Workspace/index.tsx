@@ -1,6 +1,9 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {Editor} from '@codebridge/Editor';
+import {FileBrowser} from '@codebridge/FileBrowser';
 import {FileTabs} from '@codebridge/FileTabs';
+import ToggleFileBrowserButton from '@codebridge/ToggleFileBrowserButton';
+import classnames from 'classnames';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -48,31 +51,56 @@ const Workspace = () => {
       rightHeaderContent={<HeaderButtons />}
       className={moduleStyles.workspace}
     >
-      <FileTabs />
-      {isStartMode && (
+      <div
+        className={classnames(moduleStyles.workspaceWorkarea, {
+          [moduleStyles.withFileBrowser]: config.showFileBrowser,
+        })}
+      >
         <div
-          id="startSourcesWarningBanner"
-          className={moduleStyles.warningBanner}
+          className={classnames(moduleStyles.workspaceToggleButtonContainer, {
+            [moduleStyles.withFileBrowser]: config.showFileBrowser,
+          })}
         >
-          {projectTemplateLevel
-            ? WARNING_BANNER_MESSAGES.TEMPLATE
-            : WARNING_BANNER_MESSAGES.STANDARD}
+          <ToggleFileBrowserButton />
         </div>
-      )}
-      <Editor
-        langMapping={config.languageMapping}
-        editableFileTypes={config.editableFileTypes}
-      />
-      {viewingOldVersion && (
-        <Alert text={codebridgeI18n.viewingOldVersion()} type={'warning'} />
-      )}
-      {hasRestoredOldVersion && (
-        <Alert
-          text={codebridgeI18n.restoredOldVersion()}
-          type={'success'}
-          onClose={closeRestoredVersionBanner}
-        />
-      )}
+        <div>
+          <FileTabs />
+        </div>
+        {isStartMode && (
+          <div
+            id="startSourcesWarningBanner"
+            className={moduleStyles.warningBanner}
+          >
+            {projectTemplateLevel
+              ? WARNING_BANNER_MESSAGES.TEMPLATE
+              : WARNING_BANNER_MESSAGES.STANDARD}
+          </div>
+        )}
+        {config.showFileBrowser && <FileBrowser />}
+
+        <div
+          className={classnames(moduleStyles.workplaceEditorWrapper, {
+            [moduleStyles.withFileBrowser]: config.showFileBrowser,
+          })}
+        >
+          <Editor
+            langMapping={config.languageMapping}
+            editableFileTypes={config.editableFileTypes}
+          />
+        </div>
+        <div className={moduleStyles.workspaceWarningArea}>
+          {viewingOldVersion && (
+            <Alert text={codebridgeI18n.viewingOldVersion()} type={'warning'} />
+          )}
+          {hasRestoredOldVersion && (
+            <Alert
+              text={codebridgeI18n.restoredOldVersion()}
+              type={'success'}
+              onClose={closeRestoredVersionBanner}
+            />
+          )}
+        </div>
+      </div>
     </PanelContainer>
   );
 };

@@ -31,7 +31,7 @@
 %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
 %script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
 
-- if show_create_menu
+- if show_create_menu && !(request.path_info.include? '/global/')
   .header_button.create_menu{id: "header_create_menu", tabindex: 0, role: "button", class: user_type ? "hide-mobile" : "show-small-desktop"}
     %span.create_button
       = I18n.t("#{loc_prefix}new_project_low_cap")

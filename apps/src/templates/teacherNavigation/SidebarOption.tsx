@@ -39,7 +39,11 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
           iconName={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon || ''}
         />
       </div>
-      <BodyTwoText className={styles.linkText}>
+      <BodyTwoText
+        className={classNames(styles.linkText, {
+          [styles.selected]: isSelected,
+        })}
+      >
         {LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
       </BodyTwoText>
     </NavLink>
