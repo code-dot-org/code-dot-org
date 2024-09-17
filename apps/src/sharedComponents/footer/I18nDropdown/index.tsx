@@ -6,6 +6,8 @@ import {
 } from '@cdo/apps/componentLibrary/dropdown';
 import currentLocale from '@cdo/apps/util/currentLocale';
 
+import './style.scss';
+
 interface I18nDropdownProps {
   localeUrl: string;
   optionsForLocaleSelect: SimpleDropdownProps['items'];
@@ -29,6 +31,7 @@ const I18nDropdown: React.FC<I18nDropdownProps> = ({
       <input type="hidden" name="user_return_to" value={window.location.href} />
       <div style={{display: 'flex', alignItems: 'center'}}>
         <SimpleDropdown
+          className="languageSelect"
           name="locale-dropdown"
           selectedValue={currentLocale()}
           onChange={handleChange}
