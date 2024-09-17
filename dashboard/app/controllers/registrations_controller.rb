@@ -44,6 +44,7 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/sign_up
   #
   def new
+    puts 'NEW'
     session[:user_return_to] ||= params[:user_return_to]
     if PartialRegistration.in_progress?(session)
       user_params = params[:user] || ActionController::Parameters.new
@@ -51,6 +52,7 @@ class RegistrationsController < Devise::RegistrationsController
       user_params[:email] ||= params[:email]
 
       if !!params[:new_sign_up]
+        puts 'NEW SIGN UP'
         user_params[:age] ||= user_params[:user_type] == 'teacher' ? '21+' : user_params[:age]
 
         # Set email and data transfer preferences
@@ -76,6 +78,7 @@ class RegistrationsController < Devise::RegistrationsController
 
         @user = User.new_with_session(user_params.permit(NEW_USER_PERMITTED_PARAMS), session)
         @user.save!
+        puts 'FINISH NEW'
         @user
       else
         @user = User.new_with_session(user_params.permit(:user_type, :email), session)
@@ -201,6 +204,7 @@ class RegistrationsController < Devise::RegistrationsController
   # POST /users
   #
   def create
+    puts 'CREATE'
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
         Honeybadger.notify(
@@ -211,12 +215,15 @@ class RegistrationsController < Devise::RegistrationsController
       super
     end
 
-    curr_user = !!params[:new_sign_up] ? User.find_by_email(params[:user_email]) : current_user
+    if !!params[:new_sign_up]
+      curr_user = User.find_by_email(params[:user_email])
+      sign_in curr_user
+    end
 
-    if curr_user && curr_user.errors.blank?
-      if curr_user.teacher?
+    if current_user && current_user.errors.blank?
+      if current_user.teacher?
         begin
-          MailJet.create_contact_and_add_to_welcome_series(curr_user, request.locale)
+          MailJet.create_contact_and_add_to_welcome_series(current_user, request.locale)
         rescue => exception
           # If we can't add the user to the welcome series, we don't want to disrupt
           # sign up, but we do want to know about it.
@@ -229,30 +236,30 @@ class RegistrationsController < Devise::RegistrationsController
           )
         end
       end
-      ParentMailer.parent_email_added_to_student_account(curr_user.parent_email, curr_user).deliver_now if curr_user.parent_email.present?
+      ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?
 
-      storage_id = take_storage_id_ownership_from_cookie(curr_user.id)
-      curr_user.generate_progress_from_storage_id(storage_id) if storage_id
+      storage_id = take_storage_id_ownership_from_cookie(current_user.id)
+      current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
-      if Policies::Lti.lti? curr_user
-        lms_name = Queries::Lti.get_lms_name_from_user(curr_user)
+      if Policies::Lti.lti? current_user
+        lms_name = Queries::Lti.get_lms_name_from_user(current_user)
         metadata = {
-          'user_type' => curr_user.user_type,
+          'user_type' => current_user.user_type,
           'lms_name' => lms_name,
           'context' => 'registration_controller'
         }
         Metrics::Events.log_event(
-          user: curr_user,
+          user: current_user,
           event_name: 'lti_user_created',
           metadata: metadata,
         )
       end
-      has_school = curr_user.school_info&.school_id.present?
+      has_school = current_user.school_info&.school_id.present?
       event_metadata = {
         'has_school' => has_school,
       }
       Metrics::Events.log_event(
-        user: curr_user,
+        user: current_user,
         event_name: 'Sign Up Finished Backend',
         metadata: event_metadata,
         get_enabled_experiments: true,
@@ -260,10 +267,6 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     SignUpTracking.log_sign_up_result resource, session
-
-    if !!params[:new_sign_up]
-      sign_in curr_user
-    end
   end
 
   #
