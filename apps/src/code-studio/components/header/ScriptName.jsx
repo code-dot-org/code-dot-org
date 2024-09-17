@@ -108,6 +108,7 @@ class ScriptName extends React.Component {
               {this.renderScriptLink()}
               <ProjectUpdatedAt
                 onContentUpdated={this.onProjectUpdatedAtContentUpdated}
+                floatRight={true}
               />
             </div>
           </div>
