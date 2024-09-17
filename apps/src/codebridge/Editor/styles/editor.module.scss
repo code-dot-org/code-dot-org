@@ -1,0 +1,13 @@
+@import 'color.scss';
+
+.editorContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #292f36;
+  overflow: hidden;
+}
+
+.noOpenFilesMessage {
+  color: $white;
+  padding: 8px;
+}

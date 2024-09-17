@@ -1,11 +1,15 @@
-import React, {useEffect} from 'react';
+import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {setHasRun, setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
+import {
+  setHasRun,
+  setIsRunning,
+  setIsValidating,
+} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -22,8 +26,6 @@ const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {onRun, onStop} = useCodebridgeContext();
 
-  const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
-
   const source = useAppSelector(
     state => state.lab2Project.projectSource?.source
   ) as MultiFileSource | undefined;
@@ -37,24 +39,20 @@ const ControlButtons: React.FunctionComponent = () => {
     state => state.lab2System.loadingCodeEnvironment
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
+  const isValidating = useAppSelector(state => state.lab2System.isValidating);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const awaitingPredictSubmit =
     !isStartMode && isPredictLevel && !hasPredictResponse;
 
-  useEffect(() => {
-    const resetStatus = () => {
-      dispatch(setHasRun(false));
-      dispatch(setIsRunning(false));
-    };
+  const resetStatus = useCallback(() => {
+    dispatch(setHasRun(false));
+    dispatch(setIsRunning(false));
+    dispatch(setIsValidating(false));
+  }, [dispatch]);
 
-    // Reset run status when the level changes.
-    lifecycleNotifier.addListener(
-      LifecycleEvent.LevelLoadCompleted,
-      resetStatus
-    );
-  }, [lifecycleNotifier, dispatch]);
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
@@ -91,14 +89,16 @@ const ControlButtons: React.FunctionComponent = () => {
       tooltip = codebridgeI18n.predictRunDisabledTooltip();
     } else if (isLoadingEnvironment) {
       tooltip = codebridgeI18n.loadingEnvironmentTooltip();
+    } else if (isValidating) {
+      tooltip = codebridgeI18n.validatingRunDisabledTooltip();
     }
     return tooltip;
   };
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
-  const disabledCodeActionsIcon = awaitingPredictSubmit
-    ? 'fa-question-circle-o'
-    : 'fa-spinner fa-spin';
+  const disabledCodeActionsIcon = isLoadingEnvironment
+    ? 'fa-spinner fa-spin'
+    : 'fa-question-circle-o';
 
   return (
     <div className={moduleStyles.controlButtons}>
