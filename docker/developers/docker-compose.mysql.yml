@@ -24,6 +24,7 @@ services:
         soft: 65536
         hard: 65536
 
+  # Supports a Dockerized Dashboard server
   mysql-contained:
     <<: *mysql-base
     expose:
@@ -32,10 +33,11 @@ services:
       cdo_network_test:
       cdo_network:
 
+  # Runs a database visible to the native machine
   mysql:
     <<: *mysql-base
     ports:
-      - "3306:3306"
+      - "${MYSQL_NATIVE_PORT:-3306}:3306"
 
 volumes:
   mysql_data:
