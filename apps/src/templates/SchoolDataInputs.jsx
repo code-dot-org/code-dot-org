@@ -57,6 +57,11 @@ export default function SchoolDataInputs({
 
   const inputManually = useMemo(() => schoolId === CLICK_TO_ADD, [schoolId]);
 
+  const showNoSchoolSettingButton = useMemo(
+    () => schoolId !== NO_SCHOOL_SETTING,
+    [schoolId]
+  );
+
   const schoolZipIsValid = useMemo(
     () => ZIP_REGEX.test(schoolZip),
     [schoolZip]
@@ -145,17 +150,19 @@ export default function SchoolDataInputs({
               onChange={e => handleSchoolChange(e.target.value)}
               size="m"
             />
-            <Button
-              text={i18n.noSchoolSetting()}
-              disabled={!schoolZipIsValid}
-              color={'purple'}
-              type={'tertiary'}
-              size={'xs'}
-              onClick={e => {
-                e.preventDefault();
-                handleSchoolChange(NO_SCHOOL_SETTING);
-              }}
-            />
+            {showNoSchoolSettingButton && (
+              <Button
+                text={i18n.noSchoolSetting()}
+                disabled={!schoolZipIsValid}
+                color={'purple'}
+                type={'tertiary'}
+                size={'xs'}
+                onClick={e => {
+                  e.preventDefault();
+                  handleSchoolChange(NO_SCHOOL_SETTING);
+                }}
+              />
+            )}
           </div>
         )}
         {countryIsUS && inputManually && (
