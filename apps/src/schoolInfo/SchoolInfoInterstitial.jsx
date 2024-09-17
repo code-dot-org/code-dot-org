@@ -38,6 +38,7 @@ export default function SchoolInfoInterstitial({
     schoolName: existingSchoolInfo.school_name,
     schoolId: existingSchoolInfo.school_id,
     schoolZip: existingSchoolInfo.school_zip,
+    schoolType: existingSchoolInfo.school_type,
   });
 
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
@@ -228,6 +229,7 @@ SchoolInfoInterstitial.propTypes = {
       school_id: PropTypes.string,
       school_name: PropTypes.string,
       school_zip: PropTypes.string,
+      school_type: PropTypes.string,
     }),
   }).isRequired,
   onClose: PropTypes.func.isRequired,
