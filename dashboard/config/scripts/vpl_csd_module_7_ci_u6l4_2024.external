@@ -6,19 +6,20 @@ title 'Debugging Session'
 markdown <<MARKDOWN
 # Creating Apps with Devices - Lesson 5: Board Events
 
-> ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/5" target="blank">U6AL5 Lesson Plan: Board Events</a> (Circuit Playground)
-> ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/5" target="blank">U6BL5 Lesson Plan: Board Events</a> (micro:bit)
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px;">
 
-## Tasks
+#### <a href="https://studio.code.org/s/csd6a-2024/lessons/5" target="blank">U6AL5 Lesson Plan: Board Events</a> (Circuit Playground)
+#### <a href="https://studio.code.org/s/csd6b-2024/lessons/5" target="blank">U6BL5 Lesson Plan: Board Events</a> (micro:bit)
+</p></div>
 
-* ##### Choose the appropriate lesson plan above and read through
-* ##### Identify how students will use onBoardEvent() in order to get input from their devices
+## 📋 Investigation Tasks:
 
-### Next Up (Levels 11 & 12)
-##### Click continue to revisit how input is taken in using Game Lab and App Lab in comparison to how devices get input.
+* #### Choose the appropriate lesson plan above and read through.
+* #### Identify how students will use ``onBoardEvent()`` in order to get input from their devices.
 
+___
 
+### **Next Up (Levels 11 & 12)**
 
-
-
+#### Click Continue to revisit how input is taken in using Game Lab and App Lab in comparison to how devices get input.
 MARKDOWN

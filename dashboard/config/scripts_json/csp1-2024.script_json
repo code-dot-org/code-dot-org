@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 16:25:58 UTC",
+    "serialized_at": "2024-09-09 16:29:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -219,7 +219,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget. These images are produced using layers of abstraction, with each layer relying on the other to perform its process.",
-        "preparation": "\n* Practice using the color pixelation widget \n* Review slides from [r csp_unit_1_lesson_12_digital_dilemmas_part_1/csp/2024]\t\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1qPlUIVBriflJhmjBGOiu02Dk0rzFzqmgyGnRLAV87zw/edit?usp=sharing)",
+        "preparation": "\n* Practice using the color pixelation widget \n* Review slides from [CSP Unit 1 Lesson 12: Digital Dilemmas Part 1](https://docs.google.com/presentation/d/16aEnqzS7m8tH3BNiiXyvtrG63HdZ4Ze-IBWstPh4I7M/)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1qPlUIVBriflJhmjBGOiu02Dk0rzFzqmgyGnRLAV87zw/edit?usp=sharing)",
         "student_overview": "Learn how computers represent color images using bits."
       },
       "seeding_key": {

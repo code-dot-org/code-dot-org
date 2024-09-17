@@ -1,13 +1,16 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
 import SwapLayoutButton from '@codebridge/SwapLayoutButton';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import ControlButtons from './ControlButtons';
 import GraphModal from './GraphModal';
 
 import moduleStyles from './console.module.scss';
@@ -15,9 +18,8 @@ import moduleStyles from './console.module.scss';
 const Console: React.FunctionComponent = () => {
   const codeOutput = useAppSelector(state => state.codebridgeConsole.output);
   const dispatch = useDispatch();
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
-  const previousLevelId = useRef(levelId);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const scrollAnchorRef = useRef<HTMLDivElement>(null);
 
   const [graphModalOpen, setGraphModalOpen] = useState(false);
   const [activeGraphIndex, setActiveGraphIndex] = useState(0);
@@ -25,18 +27,19 @@ const Console: React.FunctionComponent = () => {
   // TODO: Update this with other apps that use the console as needed.
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
 
-  useEffect(() => {
-    // If the level changes, clear the console.
-    if (previousLevelId.current !== levelId) {
-      dispatch(resetOutput());
-      previousLevelId.current = levelId;
-    }
-  }, [dispatch, levelId]);
-
-  const clearOutput = () => {
+  const clearOutput = useCallback(() => {
     dispatch(resetOutput());
     setGraphModalOpen(false);
-  };
+  }, [dispatch]);
+
+  // Clear console when we change levels.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, clearOutput);
+
+  useEffect(() => {
+    scrollAnchorRef.current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }, [codeOutput]);
 
   const popOutGraph = (index: number) => {
     setActiveGraphIndex(index);
@@ -65,6 +68,8 @@ const Console: React.FunctionComponent = () => {
       className={moduleStyles.consoleContainer}
       headerContent={'Console'}
       rightHeaderContent={headerButton()}
+      leftHeaderContent={<ControlButtons />}
+      headerClassName={moduleStyles.consoleHeader}
     >
       <div className={moduleStyles.console}>
         {codeOutput.map((outputLine, index) => {
@@ -78,7 +83,10 @@ const Console: React.FunctionComponent = () => {
                 <Button
                   color={buttonColors.black}
                   disabled={false}
-                  icon={{iconName: 'up-right-from-square', iconStyle: 'solid'}}
+                  icon={{
+                    iconName: 'up-right-from-square',
+                    iconStyle: 'solid',
+                  }}
                   isIconOnly={true}
                   onClick={() => popOutGraph(index)}
                   size="xs"
@@ -120,6 +128,7 @@ const Console: React.FunctionComponent = () => {
             );
           }
         })}
+        <div ref={scrollAnchorRef} />
       </div>
     </PanelContainer>
   );

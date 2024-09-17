@@ -73,15 +73,13 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSP U4L7 Step 1\",\r\n  \"callout_text\": \"Start Here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"step8\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n    \"codeString\": \"Milestone 8\" \r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"right bottom\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "display_name": "Playlist, Milestone 8",
     "bubble_choice_description": "Remove artists from the favorites list if the list is too long.",
-    "thumbnail_url": "https://images.code.org/cf44b5dc50aff51cdf2982f3314480b8-Playlist.png"
+    "thumbnail_url": "https://images.code.org/cf44b5dc50aff51cdf2982f3314480b8-Playlist.png",
+    "preload_asset_list": null,
+    "encrypted_examples": "LYF6P7CGK2+B0/bbMRY1uEFnoQZ+/f725YUjkfPH/COzwSbfYjP3Fa9MZLlo\n1VG0cIDZC9VK2IDEQvt/jUMKzg==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-17T20:45:23.123+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds L8\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds L8\"},{\"changed_at\":\"2024-04-17 20:49:07 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-19 18:57:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T20:45:23.123+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds L8\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds L8\"},{\"changed_at\":\"2024-04-17 20:49:07 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-19 18:57:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-27 21:56:22 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

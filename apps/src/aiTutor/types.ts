@@ -61,6 +61,7 @@ export interface Level {
   hasValidation: boolean;
   aiTutorAvailable: boolean;
   isAssessment: boolean;
+  progressionType: string;
 }
 
 export interface ChatContext {

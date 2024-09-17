@@ -365,7 +365,8 @@
       "/courses/csa-2023/guides/while-loops"
     ],
     "video_key": "csa_while_loops",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:43:47.130+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L4c_2023\\\"\"],\"cloned_from\":\"CSA U1L5-L4c_2023\"}]"

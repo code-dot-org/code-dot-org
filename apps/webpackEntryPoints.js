@@ -54,8 +54,9 @@ const CODE_STUDIO_ENTRIES = {
   'programming_expressions/show': './src/sites/studio/pages/programming_expressions/show.js',
   'sessions/lockout': './src/sites/studio/pages/sessions/lockout.js',
   'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
+  'devise/sessions/_login': './src/sites/studio/pages/devise/sessions/_login.js',
   'devise/registrations/_sign_up': './src/sites/studio/pages/devise/registrations/_sign_up.js',
-  'devise/registrations/new_sign_up': './src/sites/studio/pages/devise/registrations/new_sign_up.js',
+  'devise/registrations/login_type': './src/sites/studio/pages/devise/registrations/login_type.js',
   'devise/registrations/finish_student_account': './src/sites/studio/pages/devise/registrations/finish_student_account.js',
   'devise/registrations/finish_teacher_account': './src/sites/studio/pages/devise/registrations/finish_teacher_account.js',
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
@@ -147,6 +148,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_callouts': './src/sites/studio/pages/levels/editors/fields/_callouts.js',
   'levels/editors/fields/_droplet': './src/sites/studio/pages/levels/editors/fields/_droplet.js',
   'levels/editors/fields/_grid': './src/sites/studio/pages/levels/editors/fields/_grid.js',
+  'levels/editors/fields/_music_level_data': './src/sites/studio/pages/levels/editors/fields/_music_level_data.js',
   'levels/editors/fields/_panels': './src/sites/studio/pages/levels/editors/fields/_panels.js',
   'levels/editors/fields/_poetry_fields': './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
   'levels/editors/fields/_predict_settings': './src/sites/studio/pages/levels/editors/fields/_predict_settings.js',
@@ -191,6 +193,8 @@ const INTERNAL_ENTRIES = {
 const PEGASUS_ENTRIES = {
   // code.org
   'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
+  'code.org/public/helloworld': './src/sites/code.org/pages/public/helloworld.js',
+  'code.org/public/transformersone': './src/sites/code.org/pages/public/transformersone.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
@@ -199,7 +203,6 @@ const PEGASUS_ENTRIES = {
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
   'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
   'code.org/views/workshop_search': './src/sites/code.org/pages/views/workshop_search.js',
-  'code.org/views/amazon_future_engineer': './src/sites/code.org/pages/views/amazon_future_engineer.js',
   'code.org/views/amazon_future_engineer_eligibility': './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
@@ -207,8 +210,10 @@ const PEGASUS_ENTRIES = {
   'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
   'code.org/views/swiper_page_self_paced_pl': './src/sites/code.org/pages/views/swiper_page_self_paced_pl.js',
   'code.org/views/swiper_page_ai': './src/sites/code.org/pages/views/swiper_page_ai.js',
+  'code.org/views/swiper_page_tools': './src/sites/code.org/pages/views/swiper_page_tools.js',
   'code.org/views/swiper_page_applab': './src/sites/code.org/pages/views/swiper_page_applab.js',
   'code.org/views/swiper_page_videos': './src/sites/code.org/pages/views/swiper_page_videos.js',
+  'code.org/views/swiper_farsi_page_videos': './src/sites/code.org/pages/views/swiper_farsi_page_videos.js',
   'code.org/views/swiper_page_minecraft': './src/sites/code.org/pages/views/swiper_page_minecraft.js',
   'code.org/views/swiper_page_music_lab': './src/sites/code.org/pages/views/swiper_page_music_lab.js',
   'code.org/views/swiper_page_promote': './src/sites/code.org/pages/views/swiper_page_promote.js',
@@ -217,10 +222,9 @@ const PEGASUS_ENTRIES = {
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com
-  'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
-  'hourofcode.com/views/hoc_events_map': './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
+  'hourofcode.com/views/analytics_event_log_helper': './src/sites/hourofcode.com/pages/views/analytics_event_log_helper.js',
 
   // shared between code.org and hourofcode.com
   'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',

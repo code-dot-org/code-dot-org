@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-02-17T18:24:52.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Use a static variable to set the business name for all <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FoodTruck</code> objects.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FoodTruck.java</code>, declare and initialize a static variable called <code style=\"background-color: #ececec; color: black; font-weight: bold;\">businessName</code> to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Joyful Pastries\"</code>.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FoodTruckRunner.java</code>,\r\n\r\n1. Print the value of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">businessName</code> for each <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FoodTruck</code> object.\r\n\r\n2. Change the value of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">businessName</code> to a different name.\r\n\r\n3. Print the new value of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">businessName</code> for each <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FoodTruck</code> object.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with declaring and initializing a static variable.\r\n</div>",
@@ -28,15 +32,9 @@
         "tabOrder": 1
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2023-02-17T18:24:52.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:24:52.041+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-Static PBT_2023\\\"\"],\"cloned_from\":\"CSA U4L2-Static PBT_2023\"},{\"changed_at\":\"2023-02-17 18:24:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 17:56:33 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 18:27:07 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 18:27:23 +0000\",\"changed\":[\"encrypted_examples\",\"video_key\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 20:41:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 20:42:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 20:47:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 20:47:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 20:47:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 20:47:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 21:34:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-02 21:35:00 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-09 16:54:33 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-09 21:27:28 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

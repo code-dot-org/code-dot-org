@@ -55,6 +55,7 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
       )}
     >
       <textarea
+        id="uitest-chat-textarea"
         className={moduleStyles.textArea}
         placeholder={customPlaceholder || commonI18n.aiUserMessagePlaceholder()}
         onChange={e => setUserMessage(e.target.value)}
@@ -65,6 +66,7 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
 
       <div className={moduleStyles.centerSingleItemContainer}>
         <Button
+          id="uitest-chat-submit"
           isIconOnly={!showSubmitLabel}
           onClick={() => handleSubmit(userMessage)}
           disabled={disabled || !userMessage || userMessageIsEmpty}

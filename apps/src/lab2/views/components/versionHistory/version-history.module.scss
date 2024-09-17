@@ -13,6 +13,17 @@
   right: 0;
 }
 
+.versionHistoryHeader {
+  padding: 12px;
+  border-bottom: 1px solid #54595E;
+  display: flex;
+  justify-content: space-between;
+}
+
+.versionHistoryTitle {
+  color: $white;
+}
+
 .versionHistoryMessage {
   margin: 20px;
   font-size: 16px;
@@ -23,33 +34,23 @@
   overflow-y: scroll;
 }
 
-.versionHistoryRow {
-  margin: 8px 8px;
-  display: flex;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 35px;
-  justify-content: space-between;
-}
-
-.latestVersionLabel {
-  font-size: 16px;
-}
-
-.startOverButton {
-  width: 100%;
-}
-
 .versionDropdownFooter {
   margin-top: 8px;
   padding: 8px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .loadingVersionSpinner {
   font-size: 32px;
   text-align: center;
+  margin-right: 12px;
 }
 
 .versionLoadError {
   font-size: 14px;
+}
+
+.actionButton {
+  margin-right: 8px;
 }

@@ -1,6 +1,6 @@
 import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import * as utils from '@cdo/apps/utils';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports

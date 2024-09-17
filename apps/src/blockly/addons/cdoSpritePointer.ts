@@ -2,6 +2,8 @@
 // mini toolbox blocks) we "shadow" the image on the block from a source block.
 // This file contains functions to get and set the image on the pointer block.
 
+import {commonI18n} from '@cdo/apps/types/locale';
+
 import {ExtendedBlockSvg, PointerMetadataMap} from '../types';
 
 import CdoFieldImage from './cdoFieldImage';
@@ -9,7 +11,7 @@ import CdoFieldImage from './cdoFieldImage';
 /**
  * Get the image url for the given pointer block.
  * @param {Block} block pointer block to get the image url for
- * @param {{[blockType: string]: {imageSourceType: string, imageIndex: number}}} pointerMetadataMap Object of the form {blockType: {imageSourceType: <string>, imageIndex: <number>}},
+ * @param {PointerMetadataMap} pointerMetadataMap Object of the form {blockType: {expectedRootBlockType: <string>, imageIndex: <number>}},
  *  which maps pointer block types to the image source block type they can shadow and the index of the image to shadow.
  * @param {string} imageSourceId Optional id of the image source block.
  * @returns {string} The url of the image that the pointer block should display, or an empty string if the block should display no image
@@ -32,7 +34,7 @@ export function getPointerBlockImageUrl(
   }
   if (!imageSourceBlock) {
     const rootBlock = block.getRootBlock();
-    if (rootBlock.type === pointerData.imageSourceType) {
+    if (rootBlock.type === pointerData.expectedRootBlockType) {
       imageSourceBlock = rootBlock;
     } else if (rootBlock.id === block.id) {
       const blockWorkspace = Blockly.Workspace.getById(block.workspace.id);
@@ -58,6 +60,41 @@ export function getPointerBlockImageUrl(
     // default text.
     return '';
   }
+}
+
+/**
+ * Update the warning text for the given pointer block.
+ * @param {Block} block pointer block to update
+ * @param {PointerMetadataMap} pointerMetadataMap Object of the form {blockType: {expectedRootBlockType: <string>, imageIndex: <number>}},
+ *  which maps pointer block types to the expected root block type they may be used under.
+ */
+export function updatePointerBlockWarning(
+  block: ExtendedBlockSvg,
+  pointerMetadataMap: PointerMetadataMap
+) {
+  let warningText = null;
+  const currentRootBlock = block.getRootBlock();
+  const currentRootBlockType = currentRootBlock.type;
+  const expectedRootBlockType =
+    pointerMetadataMap[block.type].expectedRootBlockType;
+  // We only show the warning if a block is connected to a top block (e.g. events or
+  // "when run"). A child block of a disabled parent can still be considered enabled,
+  // so we use the current root block as the source of truth.
+  const enabled = currentRootBlock.isEnabled();
+  if (enabled && currentRootBlockType !== expectedRootBlockType) {
+    const blockText =
+      commonI18n[
+        expectedRootBlockType as
+          | 'gamelab_checkTouching'
+          | 'gamelab_spriteClicked'
+          | 'gamelab_whenSpriteCreated'
+      ]();
+    warningText = commonI18n.spriteLabPointerWarning({
+      blockText,
+    });
+  }
+
+  block.setWarningText(warningText);
 }
 
 // Given a shadow block and an optional image source block id, update the image displayed

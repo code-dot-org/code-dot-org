@@ -232,6 +232,44 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
   end
 
+  test "show: redirect to latest stable version in course family and language for student" do
+    csp_2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    csp1_2017 = create(:script, name: 'csp1-2017', supported_locales: ['en-US', 'es-MX'])
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    csp_2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    csp1_2018 = create(:script, name: 'csp1-2018', supported_locales: ['en-US'])
+    create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
+    csp_2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+
+    offering = create :course_offering, key: 'csp'
+    create :course_version, course_offering: offering, content_root: csp_2017, key: '2017'
+    create :course_version, course_offering: offering, content_root: csp_2018, key: '2018'
+    create :course_version, course_offering: offering, content_root: csp_2019, key: '2019'
+
+    sign_in create(:student)
+    with_default_locale('es-MX') do
+      get :show, params: {course_name: 'csp'}
+      assert_redirected_to '/courses/csp-2017'
+
+      get :show, params: {course_name: 'csp-2017'}
+      assert_response :ok
+
+      get :show, params: {course_name: 'csp-2019'}
+      assert_redirected_to '/courses/csp-2017/?redirect_warning=true'
+    end
+
+    with_default_locale('fi-FI') do
+      get :show, params: {course_name: 'csp'}
+      assert_redirected_to '/courses/csp-2018'
+
+      get :show, params: {course_name: 'csp-2017'}
+      assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
+
+      get :show, params: {course_name: 'csp-2019'}
+      assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
+    end
+  end
+
   test "show: redirect to latest stable version in course family for participant" do
     create :unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     create :unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher

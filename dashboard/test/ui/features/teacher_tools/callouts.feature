@@ -20,7 +20,7 @@ Feature: Callouts
     | http://studio.code.org/hoc/9?noautoplay=true        | 0          | Blocks that are grey can't be deleted. Can you solve the puzzle anyway?  | g                 |
     | http://studio.code.org/s/20-hour/lessons/2/levels/14?noautoplay=true | 0          | Click here to see the code for the program you're making                 | #show-code-header |
     | http://studio.code.org/hoc/14?noautoplay=true       | 0          | Click here to see the code for the program you're making                 | #show-code-header |
-    | http://studio.code.org/s/20-hour/lessons/11/levels/1?noautoplay=true | 0          | You have all the same blocks but they've now been arranged in categories | .blocklyTreeLabel |
+    | http://studio.code.org/s/20-hour/lessons/11/levels/1?noautoplay=true&blocklyVersion=google | 0          | You have all the same blocks but they've now been arranged in categories | .blocklyToolboxContents |
 
   # See #101702822. "Watch video" section inaccessible from iPhone.
   @no_mobile

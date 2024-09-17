@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-07T17:27:48.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Upload your own sounds to the **Asset Manager** and play them in your scene!\r\n\r\n##In MusicScene.java:\r\n\r\n1. In the `createScene()`(#e7e8ea) method, use the `playSound(String filename)`(#e7e8ea) method to play `sound`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n2. Instantiate an `MusicScene`(#e7e8ea) object with the your sound file.\r\n\r\n3. Call the `createScene()`(#e7e8ea) method on your `MusicScene`(#e7e8ea) object.\r\n\r\n4. Use the method `Theater.playScenes(Scene scene)`(#e7e8ea) to play the scene.\r\n\r\n###Finding Images\r\nThe following are some websites you can find sounds. Sounds must be `.wav`(#e7e8ea) files.\r\n\r\n* [Mixkit](https://mixkit.co/)\r\n\r\n* [FindSounds](https://www.findsounds.com/)",
@@ -21,18 +25,12 @@
       "cheerful.wav": "3fc8b21c-fa97-478d-8ab7-566fc9faafeb.wav",
       "motivation.jpg": "2162e156-fa13-41f5-ba46-841c2f3ec228.jpg"
     },
-    "encrypted_examples": [
-
-    ],
     "display_name": "Add Your Own Music",
     "bubble_choice_description": "Add music to the scene displaying a motivational image.",
-    "thumbnail_url": "https://images.code.org/61716362f895a9834bd8bf610fbf8941-image-1650486321810.png"
+    "thumbnail_url": "https://images.code.org/61716362f895a9834bd8bf610fbf8941-image-1650486321810.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-07T17:27:48.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-07T17:27:48.125+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L5c_2022\\\"\"],\"cloned_from\":\"CSA U4L1-L5c_2022\"},{\"changed_at\":\"2022-04-07 17:27:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 19:47:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 20:24:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 20:26:18 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

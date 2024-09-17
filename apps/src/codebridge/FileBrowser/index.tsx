@@ -2,6 +2,8 @@ import {
   useCodebridgeContext,
   getNextFileId,
   getNextFolderId,
+  findFiles,
+  findSubFolders,
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
@@ -95,27 +97,55 @@ const InnerFileBrowser = React.memo(
 
     const handleDeleteFile = (fileId: string) => {
       const filename = files[fileId].name;
-      const title = `Are you sure?`;
-      const message = `Are you sure you want to delete the file ${filename}?`;
+      const title = codebridgeI18n.areYouSure();
+      const message = codebridgeI18n.deleteFileConfirm({filename});
       dialogControl?.showDialog({
         type: DialogType.GenericConfirmation,
         handleConfirm: () => deleteFile(fileId),
         title,
         message,
-        confirmText: 'Delete',
+        confirmText: codebridgeI18n.delete(),
       });
     };
 
     const handleDeleteFolder = (folderId: string) => {
       const folderName = folders[folderId].name;
-      const title = `Are you sure?`;
-      const message = `Are you sure you want to delete the folder ${folderName}? This will delete all files and folders inside ${folderName}.`;
+      const projectFolders = Object.values(folders);
+      const projectFiles = Object.values(files);
+      const folderCount = findSubFolders(folderId, projectFolders).length;
+      const fileCount = findFiles(
+        folderId,
+        projectFiles,
+        projectFolders
+      ).length;
+
+      const title = codebridgeI18n.areYouSure();
+      const confirmation = codebridgeI18n.deleteFolderConfirm({folderName});
+      let additionalWarning = '';
+      if (fileCount && folderCount) {
+        additionalWarning = codebridgeI18n.deleteFolderConfirmBoth({
+          fileCount: `${fileCount}`,
+          folderCount: `${folderCount}`,
+          folderName,
+        });
+      } else if (fileCount) {
+        additionalWarning = codebridgeI18n.deleteFolderConfirmFiles({
+          fileCount: `${fileCount}`,
+          folderName,
+        });
+      } else if (folderCount) {
+        additionalWarning = codebridgeI18n.deleteFolderConfirmSubfolders({
+          folderCount: `${folderCount}`,
+          folderName,
+        });
+      }
+      const message = confirmation + ' ' + additionalWarning;
       dialogControl?.showDialog({
         type: DialogType.GenericConfirmation,
         handleConfirm: () => deleteFolder(folderId),
         title,
         message,
-        confirmText: 'Delete',
+        confirmText: codebridgeI18n.delete(),
       });
     };
 

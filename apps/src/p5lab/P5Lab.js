@@ -66,7 +66,7 @@ import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import wrap from './gamelab/debugger/replay';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {
   clearMarks,
   clearMeasures,

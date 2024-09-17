@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-12T15:49:42.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -27,12 +31,9 @@
         "text": "import org.code.media.*;\nimport org.code.playground.*;\nimport java.io.FileNotFoundException;\n\npublic class SomeClickable extends ClickableImage {\n\n  public SomeClickable(String filename, int x, int y, int width, int height) throws FileNotFoundException {\n    super(filename, x, y, width, height);\n  }\n\n  public void onClick() {\n    \n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-12-12T15:49:42.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-12T15:49:42.462+00:00\",\"changed\":[\"cloned from \\\"CSA U6 Neighborhood Lit Fest Project Template\\\"\"],\"cloned_from\":\"CSA U6 Neighborhood Lit Fest Project Template\"},{\"changed_at\":\"2021-12-12 15:49:53 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 19:26:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 19:26:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 19:27:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

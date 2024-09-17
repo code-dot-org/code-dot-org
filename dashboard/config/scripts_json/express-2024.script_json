@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2024-08-01 16:23:23 UTC",
+    "serialized_at": "2024-08-28 16:35:01 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -737,7 +737,7 @@
       "key": "005ad9b0-faa3-4473-9981-7269d9cab747",
       "position": 1,
       "properties": {
-        "duration": 4,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -748,24 +748,10 @@
       }
     },
     {
-      "key": "c80c6357-0f74-461b-8b9a-6e28f47d738d",
+      "key": "4e566616-8b6b-49dc-be16-6c07791eef05",
       "position": 2,
       "properties": {
-        "duration": 10,
-        "name": "Bridging Activity - Programming"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c80c6357-0f74-461b-8b9a-6e28f47d738d",
-        "lesson.key": "Programming with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "express-2024"
-      }
-    },
-    {
-      "key": "4e566616-8b6b-49dc-be16-6c07791eef05",
-      "position": 3,
-      "properties": {
-        "duration": 3,
+        "duration": 5,
         "name": "Previewing Online Puzzles as a Class"
       },
       "seeding_key": {
@@ -777,7 +763,7 @@
     },
     {
       "key": "ee80cfcf-27ad-40df-974f-ffcfa34e5794",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Main Activity"
@@ -791,7 +777,7 @@
     },
     {
       "key": "06ecf7a6-10e0-48c0-b7e4-76b20605c7fe",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -805,7 +791,7 @@
     },
     {
       "key": "433c0f58-05eb-45b3-ac11-b3fc7c0cbc78",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
@@ -818,7 +804,7 @@
     },
     {
       "key": "9d40c9d7-0b92-4127-ae34-7d61a4b49605",
-      "position": 7,
+      "position": 6,
       "properties": {
         "name": "Cross-Curricular Opportunity"
       },
@@ -2257,27 +2243,15 @@
       }
     },
     {
-      "key": "b5ef057f-f811-4620-a62a-4df2bfddc0df",
+      "key": "452627fa-8353-4ba0-839e-11fb4d49ffbf",
       "position": 3,
       "properties": {
-        "description": "This lesson relies on many of the unplugged ideas that students have learned in the weeks leading up to this first online activity.  It is important that you bring those concepts (such as persistence, debugging, algorithms, and programs) around full-circle so that your class can benefit from them in their online work as well.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Display:** Show students a cup stack from the \"My Robotic Friends\" exercise that they completed in the lessons prior to this one. \n\n\n**Discuss:** Ask students to recall the symbols used in \"My Robotic Friends.\"    \n\n- _What happens when the robot reads the different arrows?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging Tips” slide\n\n\nEncourage students to think about the debugging tips:\n\n- _Was everything right at the first step?_\n- _How about the second?_\n- _Where did it go wrong?_\n\n\n**Transition:** Once you are satisfied that your students remember \"My Robotic Friends\", you can move into the Bridging Activity.",
-        "name": "Introduction"
-      },
-      "seeding_key": {
-        "activity_section.key": "b5ef057f-f811-4620-a62a-4df2bfddc0df",
-        "lesson_activity.key": "005ad9b0-faa3-4473-9981-7269d9cab747"
-      }
-    },
-    {
-      "key": "90006840-7c50-4fe0-8c96-5b2c67fe3aa5",
-      "position": 1,
-      "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\nThis short activity will help students relate the ideas of persistence and debugging to the puzzles that they are about to complete online.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Maze Bridging” slide\n\n**Display:** Project a copy of the ***Maze Bridging Page** for the class to see.  Make sure that you have pre-placed the movement blocks in the workspace using ***Maze Blocks** in a configuration like the one below (this is already configured for you on the slide):\n\n![](https://images.code.org/ac052e9d25e77dd800fbf18871bc5fcf-image-1611178828427.47.39.png)\n\n**Model:**  Tell students that you have this workspace on display that looks just like the area that they will see when they start to do the Code.org puzzles online.  As the teacher, let them know that you are SO SMART that you already put all of the code in that you are going to need to solve this puzzle, then ask them to watch you \"Run\" it by moving your finger (or a penny, or some other indicator) along the path.\n\nIt won't be long before you run into a block of TNT.  Feign frustration.\n\n**Discuss:**\n\n- _What am I feeling right now, do you think?_\n- _Should I quit?_\n- _Should I throw all of the code away and start over?_\n\n**Think:** _How can I fix this program so that I don't run into the TNT?_\n\nUse the blocks provided on the slide and drag them into the work area to demonstrate student solutions.\n\n**Pair:** Have students work on solutions to get the bird around the TNT. Depending on your classroom, you might want to either have them fix each mistake one at a time (with demos in between) or students might feel comfortable working together to fix the entire program.\n\n**Share:** Have volunteers come up to help move the blocks into the right location.  \"Run\" the program over and over as a class, fixing bugs, until the bird does what it is supposed to.  Continue to point out experiences that relate to persistence, frustration, and debugging.\n\nWhen your class reaches the pig, celebrate not only their achievements, but their persistence!",
-        "name": "Transitioning from Unplugged to Online\r"
+        "name": "Persistence and Debugging"
       },
       "seeding_key": {
-        "activity_section.key": "90006840-7c50-4fe0-8c96-5b2c67fe3aa5",
-        "lesson_activity.key": "c80c6357-0f74-461b-8b9a-6e28f47d738d"
+        "activity_section.key": "452627fa-8353-4ba0-839e-11fb4d49ffbf",
+        "lesson_activity.key": "005ad9b0-faa3-4473-9981-7269d9cab747"
       }
     },
     {

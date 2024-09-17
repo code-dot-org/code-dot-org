@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-04-14T14:09:35.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A video game enthusiast has a list of their favorite games and wants to be able to find the first or last occurrence of a video game by a target publisher in their list.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">GamesManager</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">gamesByPublisher()</code> method to find and return the index location of the first or last occurrence of a video game by a target publisher in <code style=\"background-color: #ececec; color: black; font-weight: bold;\">games</code>.\r\n\r\n   * If the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">searchFirst</code> is <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code>, the method should return the first occurrence of the target publisher. If it is <code style=\"background-color: #ececec; color: black; font-weight: bold;\">false</code>, it should return the last occurrence.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">GamesRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">gamesByPublisher()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with implementing a binary search.\r\n</div>",
@@ -37,12 +41,9 @@
         "isVisible": true,
         "tabOrder": 3
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-04-14T14:09:35.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-14T14:09:35.260+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-L7c_2023\\\"\"],\"cloned_from\":\"CSA U8L7-L7c_2023\"},{\"changed_at\":\"2023-04-14 14:09:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 02:40:33 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 12:37:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 12:37:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 12:37:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 18:23:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 18:23:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 18:29:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 18:29:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 18:29:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 18:29:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 18:29:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

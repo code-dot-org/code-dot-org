@@ -1,16 +1,15 @@
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
-import {
-  postAichatCheckSafety,
-  postAichatCompletionMessage,
-} from '@cdo/apps/aichat/aichatApi';
+import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
 import {ChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {ValueOf} from '@cdo/apps/types/utils';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 import {
@@ -19,6 +18,7 @@ import {
   genAIEndpointIds,
   modelCardInfo,
 } from './constants';
+import {Endpoint} from './types';
 
 import styles from './ai-tutor-tester.module.scss';
 
@@ -42,7 +42,8 @@ interface AITutorTesterProps {
 const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [data, setData] = useState<AIInteraction[]>([]);
-  const [selectedEndpoint, setSelectedEndpoint] = useState<string>('ai-tutor');
+  const [selectedEndpoint, setSelectedEndpoint] =
+    useState<Endpoint>('ai-tutor');
   const [responseCount, setResponseCount] = useState<number>(0);
   const [responsesPending, setResponsesPending] = useState<boolean>(false);
 
@@ -62,7 +63,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     }
   };
 
-  const onDropdownChange = (value: string) => {
+  const onDropdownChange = (value: Endpoint) => {
     setSelectedEndpoint(value);
   };
 
@@ -73,9 +74,11 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const getAIResponses = async () => {
     setResponsesPending(true);
     const responsePromises = data.map(async row => {
-      if (selectedEndpoint === 'llm-guard') {
-        return getLLMGuardToxicity(row);
-      } else if (genAIEndpointIds.includes(selectedEndpoint)) {
+      if (
+        genAIEndpointIds.includes(
+          selectedEndpoint as ValueOf<typeof AiChatModelIds>
+        )
+      ) {
         return getGenAIResponses(row);
       } else {
         return askAITutor(row);
@@ -95,7 +98,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     };
     const temperature = row.temperature ? row.temperature : DEFAULT_TEMPERATURE;
     const aiCustomizations = {
-      selectedModelId: selectedEndpoint,
+      selectedModelId: selectedEndpoint as ValueOf<typeof AiChatModelIds>,
       temperature: temperature,
       systemPrompt: systemPrompt,
       retrievalContexts: [],
@@ -114,18 +117,6 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
       aichatContext
     );
     row.aiResponse = genAIResponse?.messages[1]?.chatMessageText;
-    setResponseCount(prevResponseCount => prevResponseCount + 1);
-  };
-
-  const getLLMGuardToxicity = async (row: AIInteraction) => {
-    const llmGuardResponse = await postAichatCheckSafety(row.studentInput);
-    if (llmGuardResponse.result.statusCode === 200) {
-      row.aiResponse = 'ok';
-    } else if (llmGuardResponse.result.statusCode === 422) {
-      row.aiResponse = 'toxic';
-    } else {
-      row.aiResponse = 'error';
-    }
     setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
@@ -177,7 +168,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
       <SimpleDropdown
         labelText="Choose an endpoint"
         isLabelVisible={false}
-        onChange={event => onDropdownChange(event.target.value)}
+        onChange={event => onDropdownChange(event.target.value as Endpoint)}
         items={availableEndpoints.map(endpoint => {
           return {value: endpoint.id, text: endpoint.name};
         })}

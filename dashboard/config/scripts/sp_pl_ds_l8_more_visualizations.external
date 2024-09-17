@@ -1,0 +1,28 @@
+name 'sp-pl-DS_L8-more-visualizations'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Python and Pandas
+
+## Lesson 8: More Visualizations 
+
+#### In this lesson, students will explore heat maps and stacked line charts, as well as line charts that are plotting multiple lines.
+#### They will learn how to make these charts in matplotlib. They will also discuss the pros and cons of each visualization variety.
+
+<img src="https://images.code.org/ef6272e3e3eb2cadae2f63d8d498aae4-image-1724777151726.png" alt="types of graphs" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+
+
+## Key concepts 
+
+- #### **stackplot()** -stacks lines, 
+- #### **imshow()** - creates heatmap
+- #### **yticks()** - define labels on y axis 
+
+## Let's practice!  
+
+![]()
+MARKDOWN

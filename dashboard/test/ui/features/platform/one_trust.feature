@@ -50,7 +50,6 @@ Feature: OneTrust integration
 
   Scenario Outline: Critical Javascript files are appropriately categorized by OneTrust
     Given I am on "<url>"
-    Then element "script[src*='google-analytics.com/analytics']" is categorized by OneTrust
     Then element "script[src*='/assets/application']" is not categorized by OneTrust
     Then element "script[src*='js/webpack-runtime']" is not categorized by OneTrust
     Then element "script[src*='js/essential']" is not categorized by OneTrust

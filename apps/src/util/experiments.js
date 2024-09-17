@@ -12,15 +12,12 @@ import DCDO from '@cdo/apps/dcdo';
 
 import {trySetLocalStorage} from '../utils';
 
-import trackEvent from './trackEvent';
-
 const queryString = require('query-string');
 
 const experiments = module.exports;
 // Needed to support TypeScript usage.
 export default experiments;
 const STORAGE_KEY = 'experimentsList';
-const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 // Specific experiment names
@@ -48,8 +45,6 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 experiments.CPA_EXPERIENCE = 'cpa_experience';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
-experiments.AI_RUBRICS = 'ai-rubrics';
-experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 // Uses Google Blockly for a given user across labs/levels until the experiment is disabled
@@ -70,8 +65,7 @@ experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 // Enables LMS cards in the LoginTypePicker during section creation
 experiments.SECTION_CREATE_LMS_CARDS = 'section_create_lms_cards';
-// Use the polling API for fetching chat responses in the AI Chat lab
-experiments.AICHAT_POLLING = 'aichat-polling';
+experiments.AI_ASSESSMENTS_ANNOUNCEMENT = 'ai-assessments-announcement';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
@@ -128,13 +122,11 @@ experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
   if (shouldEnable) {
     if (experimentIndex < 0) {
       allEnabled.push({key, expiration});
-      trackEvent(GA_EVENT, 'enable', key);
     } else {
       allEnabled[experimentIndex].expiration = expiration;
     }
   } else if (experimentIndex >= 0) {
     allEnabled.splice(experimentIndex, 1);
-    trackEvent(GA_EVENT, 'disable', key);
   } else {
     return;
   }

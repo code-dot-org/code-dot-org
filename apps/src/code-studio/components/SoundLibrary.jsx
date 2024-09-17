@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
 import i18n from '@cdo/locale';
 

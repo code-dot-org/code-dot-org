@@ -9,6 +9,7 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import {isEmail} from '@cdo/apps/util/formatValidation';
 
 import locale from './locale';
 import {
@@ -25,8 +26,10 @@ import style from './signUpFlowStyles.module.scss';
 
 const FinishStudentAccount: React.FunctionComponent<{
   ageOptions: {value: string; text: string}[];
+  usIp: boolean;
   usStateOptions: {value: string; text: string}[];
-}> = ({ageOptions, usStateOptions}) => {
+}> = ({ageOptions, usIp, usStateOptions}) => {
+  // Fields
   const [isParent, setIsParent] = useState(false);
   const [parentEmail, setParentEmail] = useState('');
   const [parentEmailOptInChecked, setParentEmailOptInChecked] = useState(false);
@@ -34,6 +37,12 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [age, setAge] = useState('');
   const [state, setState] = useState('');
   const [gender, setGender] = useState('');
+
+  // Field errors
+  const [showNameError, setShowNameError] = useState(false);
+  const [showParentEmailError, setShowParentEmailError] = useState(false);
+  const [showAgeError, setShowAgeError] = useState(false);
+  const [showStateError, setShowStateError] = useState(false);
 
   const onIsParentChange = (): void => {
     const newIsParentCheckedChoice = !isParent;
@@ -50,6 +59,12 @@ const FinishStudentAccount: React.FunctionComponent<{
     const newParentEmail = e.target.value;
     setParentEmail(newParentEmail);
     sessionStorage.setItem(PARENT_EMAIL_SESSION_KEY, newParentEmail);
+
+    if (!isEmail(newParentEmail)) {
+      setShowParentEmailError(true);
+    } else {
+      setShowParentEmailError(false);
+    }
   };
 
   const onParentEmailOptInChange = (): void => {
@@ -65,18 +80,36 @@ const FinishStudentAccount: React.FunctionComponent<{
     const newName = e.target.value;
     setName(newName);
     sessionStorage.setItem(DISPLAY_NAME_SESSION_KEY, newName);
+
+    if (newName === '') {
+      setShowNameError(true);
+    } else {
+      setShowNameError(false);
+    }
   };
 
   const onAgeChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     const newAge = e.target.value;
     setAge(newAge);
     sessionStorage.setItem(USER_AGE_SESSION_KEY, newAge);
+
+    if (newAge === '') {
+      setShowAgeError(true);
+    } else {
+      setShowAgeError(false);
+    }
   };
 
   const onStateChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     const newState = e.target.value;
     setState(newState);
     sessionStorage.setItem(USER_STATE_SESSION_KEY, newState);
+
+    if (newState === '') {
+      setShowStateError(true);
+    } else {
+      setShowStateError(false);
+    }
   };
 
   const onGenderChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -101,13 +134,20 @@ const FinishStudentAccount: React.FunctionComponent<{
           />
           {isParent && (
             <>
-              <TextField
-                name="parentEmail"
-                label={locale.parent_guardian_email()}
-                value={parentEmail}
-                placeholder={locale.parentEmailPlaceholder()}
-                onChange={onParentEmailChange}
-              />
+              <div>
+                <TextField
+                  name="parentEmail"
+                  label={locale.parent_guardian_email()}
+                  value={parentEmail}
+                  placeholder={locale.parentEmailPlaceholder()}
+                  onChange={onParentEmailChange}
+                />
+                {showParentEmailError && (
+                  <BodyThreeText className={style.errorMessage}>
+                    {locale.email_error_message()}
+                  </BodyThreeText>
+                )}
+              </div>
               <div>
                 <BodyThreeText className={style.parentKeepMeUpdated}>
                   <strong>{locale.keep_me_updated()}</strong>
@@ -122,29 +162,52 @@ const FinishStudentAccount: React.FunctionComponent<{
             </>
           )}
         </div>
-        <TextField
-          name="displayName"
-          label={locale.display_name_eg()}
-          value={name}
-          placeholder={locale.coder()}
-          onChange={onNameChange}
-        />
-        <SimpleDropdown
-          name="userAge"
-          labelText={locale.what_is_your_age()}
-          size="m"
-          items={ageOptions}
-          selectedValue={age}
-          onChange={onAgeChange}
-        />
-        <SimpleDropdown
-          name="userState"
-          labelText={locale.what_state_are_you_in()}
-          size="m"
-          items={usStateOptions}
-          selectedValue={state}
-          onChange={onStateChange}
-        />
+        <div>
+          <TextField
+            name="displayName"
+            label={locale.display_name_eg()}
+            value={name}
+            placeholder={locale.coder()}
+            onChange={onNameChange}
+          />
+          {showNameError && (
+            <BodyThreeText className={style.errorMessage}>
+              {locale.display_name_error_message()}
+            </BodyThreeText>
+          )}
+        </div>
+        <div>
+          <SimpleDropdown
+            name="userAge"
+            labelText={locale.what_is_your_age()}
+            size="m"
+            items={ageOptions}
+            selectedValue={age}
+            onChange={onAgeChange}
+          />
+          {showAgeError && (
+            <BodyThreeText className={style.errorMessage}>
+              {locale.age_error_message()}
+            </BodyThreeText>
+          )}
+        </div>
+        {usIp && (
+          <div>
+            <SimpleDropdown
+              name="userState"
+              labelText={locale.what_state_are_you_in()}
+              size="m"
+              items={usStateOptions}
+              selectedValue={state}
+              onChange={onStateChange}
+            />
+            {showStateError && (
+              <BodyThreeText className={style.errorMessage}>
+                {locale.state_error_message()}
+              </BodyThreeText>
+            )}
+          </div>
+        )}
         <TextField
           name="userGender"
           label={locale.what_is_your_gender()}
@@ -165,6 +228,12 @@ const FinishStudentAccount: React.FunctionComponent<{
             iconStyle: 'solid',
             title: 'arrow-right',
           }}
+          disabled={
+            name === '' ||
+            age === '' ||
+            (usIp && state === '') ||
+            (isParent && parentEmail === '')
+          }
         />
       </div>
     </div>

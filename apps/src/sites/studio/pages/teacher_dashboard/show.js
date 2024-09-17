@@ -4,6 +4,10 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
 
+import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
+import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
@@ -36,7 +40,6 @@ import experiments from '@cdo/apps/util/experiments';
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const {
-  anyStudentHasProgress,
   section,
   sections,
   localeCode,
@@ -56,6 +59,10 @@ $(document).ready(function () {
     currentUser,
     sectionStandardsProgress,
     locales,
+    viewAs,
+    hiddenLesson,
+    verifiedInstructor,
+    announcementReducer,
   });
 
   const store = getStore();
@@ -74,6 +81,7 @@ $(document).ready(function () {
     DCDO.get('teacher-local-nav-v2', false) ||
     experiments.isEnabled('teacher-local-nav-v2');
 
+  // When removing v1TeacherDashboard after v2 launch, remove `selectedSection` from api response.
   const getV1TeacherDashboard = () => {
     const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
@@ -108,7 +116,7 @@ $(document).ready(function () {
           sectionId={selectedSection.id}
           sectionName={selectedSection.name}
           studentCount={selectedSection.students.length}
-          anyStudentHasProgress={anyStudentHasProgress}
+          anyStudentHasProgress={selectedSection.any_student_has_progress}
           showAITutorTab={showAITutorTab}
           sectionProviderName={sectionProviderName(
             store.getState(),
@@ -126,7 +134,6 @@ $(document).ready(function () {
       ) : (
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
-          anyStudentHasProgress={anyStudentHasProgress}
           showAITutorTab={showAITutorTab}
         />
       )}

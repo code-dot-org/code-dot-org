@@ -2,13 +2,15 @@ import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
-import ProgressManager from '../lab2/progress/ProgressManager';
-
 import PythonValidationTracker from './progress/PythonValidationTracker';
-import {asyncRun, stopAndRestartPyodideWorker} from './pyodideWorkerManager';
+import {
+  asyncRun,
+  restartPyodideIfProgramIsRunning,
+} from './pyodideWorkerManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
 export async function handleRunClick(
@@ -47,8 +49,8 @@ export async function runPythonCode(mainFile: string, source: MultiFileSource) {
 }
 
 export function stopPythonCode() {
-  // This will terminate the worker and create a new one.
-  stopAndRestartPyodideWorker();
+  // This will terminate the worker and create a new one if there is a running program.
+  restartPyodideIfProgramIsRunning();
 }
 
 export async function runAllTests(
@@ -63,6 +65,7 @@ export async function runAllTests(
   if (validationFile) {
     // We only support one validation file. If somehow there is more than one, just run the first one.
     dispatch(appendSystemMessage(`Running level tests...`));
+    progressManager?.resetValidation();
     const result = await runPythonCode(
       runValidationTests(validationFile.name),
       source
@@ -75,7 +78,7 @@ export async function runAllTests(
       // See this PR for details: https://github.com/code-dot-org/pythonlab-packages/pull/5
       const testResults = result.message as Map<string, string>[];
       if (progressManager) {
-        PythonValidationTracker.getInstance().setTestResults(testResults);
+        PythonValidationTracker.getInstance().setValidationResults(testResults);
         progressManager.updateProgress();
       }
     }

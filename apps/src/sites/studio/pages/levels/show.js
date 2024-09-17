@@ -6,10 +6,9 @@ import {Provider} from 'react-redux';
 import {setLevel, setScriptId} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloatingActionButton';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
-import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructions, {
   setTtsAutoplayEnabledForLevel,
@@ -17,7 +16,6 @@ import instructions, {
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
-import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
 $(document).ready(initPage);
@@ -40,9 +38,6 @@ function initPage() {
   getStore().dispatch(setIsMiniView(true));
 
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
-  const unversionedRedirectDialogMountPoint = document.getElementById(
-    'unversioned-redirect-dialog'
-  );
   if (redirectDialogMountPoint && config.redirect_script_url) {
     ReactDOM.render(
       <ScriptLevelRedirectDialog
@@ -52,26 +47,25 @@ function initPage() {
       />,
       redirectDialogMountPoint
     );
-  } else if (
-    unversionedRedirectDialogMountPoint &&
-    config.show_unversioned_redirect_warning
-  ) {
-    ReactDOM.render(
-      <UnversionedScriptRedirectDialog />,
-      unversionedRedirectDialogMountPoint
-    );
   }
 
   if (hasScriptData('script[data-aitutordata]')) {
     const aiTutorData = getScriptData('aitutordata');
-    const {levelId, type, hasValidation, aiTutorAvailable, isAssessment} =
-      aiTutorData;
+    const {
+      levelId,
+      type,
+      hasValidation,
+      aiTutorAvailable,
+      isAssessment,
+      progressionType,
+    } = aiTutorData;
     const level = {
       id: levelId,
       type,
       hasValidation,
       aiTutorAvailable,
       isAssessment,
+      progressionType,
     };
     getStore().dispatch(setLevel(level));
     getStore().dispatch(setScriptId(aiTutorData.scriptId));
@@ -88,10 +82,7 @@ function initPage() {
     }
   }
 
-  const inRubricsPilot =
-    experiments.isEnabled('ai-rubrics') ||
-    experiments.isEnabled('non-ai-rubrics');
-  if (inRubricsPilot && hasScriptData('script[data-rubricdata]')) {
+  if (hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');
     const {rubric, studentLevelInfo} = rubricData;
     const reportingData = {
@@ -107,7 +98,6 @@ function initPage() {
     if (rubricFabMountPoint) {
       //rubric fab mount point is only true for teachers
       if (
-        experiments.isEnabled('ai-rubrics') &&
         !!rubric &&
         rubric.learningGoals.some(lg => lg.aiEnabled) &&
         config.level_name === rubric.level.name
@@ -128,10 +118,7 @@ function initPage() {
             studentLevelInfo={studentLevelInfo}
             reportingData={reportingData}
             currentLevelName={config.level_name}
-            aiEnabled={
-              experiments.isEnabled('ai-rubrics') &&
-              rubric.learningGoals.some(lg => lg.aiEnabled)
-            }
+            aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
           />
         </Provider>,
         rubricFabMountPoint

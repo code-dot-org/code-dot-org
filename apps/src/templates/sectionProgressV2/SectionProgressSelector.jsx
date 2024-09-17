@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState} from 'react';
@@ -6,9 +7,9 @@ import {connect} from 'react-redux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Link from '@cdo/apps/componentLibrary/link';
 import DCDO from '@cdo/apps/dcdo';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
@@ -27,6 +28,7 @@ function SectionProgressSelector({
   progressTableV2ClosedBeta,
   sectionId,
   hasSeenProgressTableInvite,
+  isInV1Navigaton,
 }) {
   const [hasJustToggledViews, setHasJustToggledViews] = useState(false);
 
@@ -142,14 +144,19 @@ function SectionProgressSelector({
   };
 
   return (
-    <div className={styles.pageContent}>
+    <div
+      className={classNames(
+        styles.pageContent,
+        !isInV1Navigaton && styles.navView
+      )}
+    >
       {displayV2 && (
         <ProgressBanners hasJustSwitchedToV2={hasJustToggledViews} />
       )}
       {toggleV1OrV2Link()}
 
       {displayV2 ? (
-        <SectionProgressV2 />
+        <SectionProgressV2 hideTopHeading={!isInV1Navigaton} />
       ) : (
         <>
           {includeModalIfAvailable()}
@@ -166,6 +173,7 @@ SectionProgressSelector.propTypes = {
   setShowProgressTableV2: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
   hasSeenProgressTableInvite: PropTypes.bool,
+  isInV1Navigaton: PropTypes.bool,
 };
 
 export const UnconnectedSectionProgressSelector = SectionProgressSelector;

@@ -32,5 +32,5 @@ Scenario: Solve without recommended blocks
   And I wait to see ".congrats"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Congratulations! You have completed the final puzzle."
+  And element ".congrats" has text "Congratulations! You completed Puzzle 5."
   And element "#hint-request-button" does not exist

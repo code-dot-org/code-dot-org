@@ -53,6 +53,15 @@ export const formatQuestionForAITutor = (chatContext: ChatContext) => {
   return formattedQuestion;
 };
 
+const formatResponseForStudent = (response: string) => {
+  const paritionedResponse = response.split(
+    '[pedagogical-guiding-answer-markdown]'
+  );
+  const guidingResponse = paritionedResponse[paritionedResponse.length - 1];
+  const studentFacingResponse = guidingResponse.split('[end-of-response]')[0];
+  return studentFacingResponse;
+};
+
 // THUNKS
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
@@ -93,7 +102,9 @@ export const askAITutor = createAsyncThunk(
       const assistantChatMessage: ChatCompletionMessage = {
         role: Role.ASSISTANT,
         status: chatApiResponse.status,
-        chatMessageText: chatApiResponse.assistantResponse,
+        chatMessageText: formatResponseForStudent(
+          chatApiResponse.assistantResponse
+        ),
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }

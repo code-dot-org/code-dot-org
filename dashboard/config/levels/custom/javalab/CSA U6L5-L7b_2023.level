@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-04-03T14:03:09.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Library</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">books</code> that represents a list of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Book</code> objects.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Library</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findBook()</code> method that takes a book title as a parameter and searches the books list for that book title. If the matching book is found, return the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Book</code> object. Otherwise, return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">null</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">LibraryRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findBook()</code> method and print the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Book</code> object that is returned.",
@@ -29,12 +33,9 @@
         "isVisible": true,
         "tabOrder": 2
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-04-03T14:03:09.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-03T14:03:09.411+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L7a_2023\\\"\"],\"cloned_from\":\"CSA U6L5-L7a_2023\"},{\"changed_at\":\"2023-04-03 14:03:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:36:16 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 22:51:57 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 14:53:53 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 15:11:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 15:11:32 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 15:11:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 15:20:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 15:21:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 15:21:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 15:21:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 15:21:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 15:22:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

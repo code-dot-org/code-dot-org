@@ -63,16 +63,17 @@ class RegistrationsController < Devise::RegistrationsController
     render 'new'
   end
 
-  #
-  # Get /users/new_sign_up
-  #
-  def new_sign_up
-    render 'new_sign_up'
-  end
-
   # Part of the new sign up flow - work in progress
   def account_type
     view_options(full_width: true, responsive_content: true)
+  end
+
+  #
+  # Get /users/new_sign_up/login_type
+  #
+  def login_type
+    view_options(full_width: true, responsive_content: true)
+    render 'login_type'
   end
 
   #
@@ -83,6 +84,7 @@ class RegistrationsController < Devise::RegistrationsController
       {value: age.to_s, text: age.to_s}
     end
 
+    @us_ip = us_ip?
     @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
       {value: code, text: name}
     end
@@ -94,10 +96,7 @@ class RegistrationsController < Devise::RegistrationsController
   # Get /users/new_sign_up/finish_teacher_account
   #
   def finish_teacher_account
-    # Get the request location
-    location = Geocoder.search(request.ip).try(:first)
-    country_code = location&.country_code.to_s.upcase
-    @us_ip = ['US', 'RD'].include?(country_code)
+    @us_ip = us_ip?
     render 'finish_teacher_account'
   end
 
@@ -666,5 +665,12 @@ class RegistrationsController < Devise::RegistrationsController
     User.ignore_deleted_at_index.destroy(user_ids_to_destroy)
 
     log_account_deletion_to_firehose(current_user, dependent_users)
+  end
+
+  private def us_ip?
+    # Get the request location
+    location = Geocoder.search(request.ip).try(:first)
+    country_code = location&.country_code.to_s.upcase
+    ['US', 'RD'].include?(country_code)
   end
 end

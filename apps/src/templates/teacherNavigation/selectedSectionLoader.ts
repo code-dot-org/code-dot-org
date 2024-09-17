@@ -13,12 +13,16 @@ import {
   setRosterProviderName,
   setStudentsForCurrentSection,
   startLoadingSectionData,
+  updateSelectedSection,
 } from '../teacherDashboard/teacherSectionsRedux';
 
 export const asyncLoadSelectedSection = async (sectionId: string) => {
   const state = getStore().getState().teacherSections;
 
-  if (state.selectedSectionId === sectionId || state.isLoadingSectionData) {
+  if (
+    state.selectedSectionId === parseInt(sectionId) ||
+    state.isLoadingSectionData
+  ) {
     return;
   }
 
@@ -54,6 +58,8 @@ export const asyncLoadSelectedSection = async (sectionId: string) => {
     getStore().dispatch(setLoginType(selectedSection.login_type));
     getStore().dispatch(setRosterProvider(selectedSection.login_type));
     getStore().dispatch(setRosterProviderName(selectedSection.login_type_name));
+
+    getStore().dispatch(updateSelectedSection(selectedSection));
 
     getStore().dispatch(finishLoadingSectionData());
   });

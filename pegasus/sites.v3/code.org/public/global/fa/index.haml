@@ -1,0 +1,50 @@
+---
+theme: responsive_full_width
+---
+
+:ruby
+  @header["title"] = hoc_s(:"farsi_site.farsi_homepage_hero_title")
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/teach-styles.css", rel: "stylesheet"}
+
+%section.top.bg-neutral-dark
+  .wrapper
+    .text-wrapper.col-50
+      %h1.white=hoc_s(:"farsi_site.farsi_homepage_hero_title")
+      %p.body-three.white
+        =hoc_s(:"farsi_site.farsi_homepage_hero_description")
+      %a{href: CDO.studio_url("/users/sign_up"), class: "link-button"}
+        =hoc_s(:"farsi_site.farsi_homepage_hero_button")
+    %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
+      %img.rounded-corners.box-shadow-primary{src: "/images/global/fa/farsi-image-1.png", alt: "", style: "position: relative; width: 100%;"}
+    .clear
+
+%section.curriculum-offerings
+  .wrapper
+    %h2.centered
+      =hoc_s(:teach_page_curriculum_heading)
+    %p.centered
+      =hoc_s(:teach_page_curriculum_desc)
+    = view :"global/fa/farsi_curriculum"
+    %div.centered{style: "margin-top: 2rem"}
+      %a.link-button.secondary{href: CDO.studio_url("/catalog")}
+        =hoc_s(:call_to_action_see_full_curriculum_catalog)
+
+%section.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s(:"farsi_site.farsi_homepage_video_title")
+    %p.centered
+      =hoc_s(:"farsi_site.farsi_homepage_video_description")
+    .action-block.action-block--two-col.white
+      .media-wrapper.col-50
+        %img{src: "/images/video-library-banner.png", alt: ""}
+      .text-wrapper.col-50
+        %p.overline
+        %h3
+          =hoc_s(:"farsi_site.farsi_homepage_video_card_title")
+        %p.heading-sm
+          =hoc_s(:"farsi_site.farsi_homepage_video_card_description")
+        %a.link-button{href: "https://hourofcode.com/learn"}
+          =hoc_s(:"farsi_site.farsi_homepage_video_card_cta")

@@ -41,6 +41,27 @@ WithErrorTextField.args = {
   errorMessage: 'Error message',
 };
 
+export const PasswordTextField = SingleTemplate.bind({});
+PasswordTextField.args = {
+  ...defaultArgs,
+  name: 'textfield_password',
+  inputType: 'password',
+};
+
+export const NumberTextField = SingleTemplate.bind({});
+NumberTextField.args = {
+  ...defaultArgs,
+  name: 'textfield_number',
+  inputType: 'number',
+};
+
+export const EmailTextField = SingleTemplate.bind({});
+EmailTextField.args = {
+  ...defaultArgs,
+  name: 'textfield_email',
+  inputType: 'email',
+};
+
 export const WithHelperMessageTextField = SingleTemplate.bind({});
 WithHelperMessageTextField.args = {
   ...defaultArgs,

@@ -38,8 +38,8 @@ function formatModelUpdateText(update: ModelUpdate): string {
   }
 
   const updatedText = updatedToText
-    ? ` has been updated to ${updatedToText}.`
-    : ' has been updated.';
+    ? `has been updated to ${updatedToText}.`
+    : 'has been updated.';
 
   return `${fieldLabel} ${updatedText} ${timestampToLocalTime(timestamp)}`;
 }
@@ -76,6 +76,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   if (isModelUpdate(event)) {
     return (
       <Alert
+        className="uitest-aichat-chat-alert"
         text={formatModelUpdateText(event)}
         type="success"
         size="s"

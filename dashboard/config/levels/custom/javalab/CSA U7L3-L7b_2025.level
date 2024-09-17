@@ -39,7 +39,8 @@
     "starter_assets": {
       "worldwide.png": "a34163ba-3855-4497-9222-d3c638e40098.png"
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:24:28.006+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L7b_2023\\\"\"],\"cloned_from\":\"CSA U7L3-L7b_2023\"}]"

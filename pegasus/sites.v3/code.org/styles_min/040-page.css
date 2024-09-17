@@ -318,6 +318,18 @@ input[type="submit"] {
     }
   }
 
+  /* Black button styles */
+  &.black {
+    background: var(--neutral_dark);
+    border-color: var(--neutral_dark);
+    color: var(--neutral_white);
+
+    &:hover {
+      background: black;
+      border-color: black;
+    }
+  }
+
   /* Icon button styles */
   &.has-icon {
     .flex-wrapper {

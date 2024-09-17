@@ -4,13 +4,13 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import microBitReducer, {
   setMicroBitFirmataUpdatePercent,
 } from '@cdo/apps/maker/microBitRedux';
 import SetupChecklist from '@cdo/apps/maker/ui/SetupChecklist';
 import * as boardUtils from '@cdo/apps/maker/util/boardUtils';
 import SetupChecker from '@cdo/apps/maker/util/SetupChecker';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
   registerReducers,

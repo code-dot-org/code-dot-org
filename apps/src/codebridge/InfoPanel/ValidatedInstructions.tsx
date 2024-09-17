@@ -1,7 +1,8 @@
 import classNames from 'classnames';
-import React, {useCallback, useContext} from 'react';
+import React, {useCallback, useContext, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {
   navigateToNextLevel,
   sendSubmitReport,
@@ -10,7 +11,6 @@ import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -18,7 +18,7 @@ import {
   isPredictAnswerLocked,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {setIsTesting} from '@cdo/apps/lab2/redux/systemRedux';
+import {setIsValidating} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
@@ -32,10 +32,9 @@ import commonI18n from '@cdo/locale';
 import {useCodebridgeContext} from '../codebridgeContext';
 import {appendSystemMessage} from '../redux/consoleRedux';
 
-import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
+import ValidationResults from './ValidationResults';
 
-// By default we show the test and navigation buttons unless the URL parameter 'button-bar' is set.
-const SHOW_TEST_NAVIGATION_BUTTONS = !queryParams('button-bar');
+import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
@@ -75,7 +74,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     state => state.lab.levelProperties?.longInstructions
   );
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
-  const {hasConditions, satisfied} = useAppSelector(
+  const {hasConditions, validationResults, satisfied} = useAppSelector(
     state => state.lab.validationState
   );
   const predictSettings = useAppSelector(
@@ -95,14 +94,16 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   ) as MultiFileSource | undefined;
 
   const appType = useAppSelector(state => state.lab.levelProperties?.appName);
-  const isTesting = useAppSelector(state => state.lab2System.isTesting);
+  const isValidating = useAppSelector(state => state.lab2System.isValidating);
   const isLoadingEnvironment = useAppSelector(
     state => state.lab2System.loadingCodeEnvironment
   );
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+  const shouldValidateBeDisabled = isLoadingEnvironment || isRunning;
 
   const dispatch = useAppDispatch();
 
-  const {theme} = useContext(ThemeContext) || 'dark';
+  const {theme} = useContext(ThemeContext);
 
   const vertical = layout === 'vertical';
 
@@ -143,11 +144,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   };
 
-  const handleTest = () => {
+  const handleValidate = () => {
     if (onRun) {
-      dispatch(setIsTesting(true));
+      dispatch(setIsValidating(true));
       onRun(true, dispatch, source).finally(() =>
-        dispatch(setIsTesting(false))
+        dispatch(setIsValidating(false))
       );
     } else {
       dispatch(appendSystemMessage(codebridgeI18n.cannotTest()));
@@ -157,12 +158,18 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const handleStop = () => {
     if (onStop) {
       onStop();
-      dispatch(setIsTesting(false));
+      dispatch(setIsValidating(false));
     } else {
       dispatch(appendSystemMessage(codebridgeI18n.cannotStop()));
-      dispatch(setIsTesting(false));
+      dispatch(setIsValidating(false));
     }
   };
+
+  // There are two ways to "meet validation" for a level:
+  // If the level has conditions, they must be satisfied.
+  // If the level has no conditions, the user must run their code at least once.
+  const hasMetValidation =
+    (!hasConditions && hasRun) || (hasConditions && satisfied);
 
   /**
    * Returns the props for the navigation (continue/finish/submit/unsubmit)
@@ -170,12 +177,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
    * @returns NavigationButtonProps for the current level and status.
    */
   const getNavigationButtonProps: () => NavigationButtonProps = () => {
-    // There are two ways to "meet validation" for a level:
-    // If the level has conditions, they must be satisfied.
-    // If the level has no conditions, the user must run their code at least once.
-    const hasMetValidation =
-      (!hasConditions && hasRun) || (hasConditions && satisfied);
-
     // The submit button will either say "submit" or "unsubmit" depending on if
     // the user has already submitted. We only show the "submit" option if the
     // user has met validation, otherwise we show the continue button.
@@ -219,15 +220,17 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   };
 
-  const renderTestButton = () => {
+  // TODO: If we go with the test button in the instructions panel long-term,
+  // we should refactor this to a separate component.
+  const renderValidationButton = () => {
     if (!hasConditions) {
       return null;
     }
     return (
       <div className={moduleStyles['bubble-' + theme]}>
-        {isTesting ? (
+        {isValidating ? (
           <Button
-            text={commonI18n.stopTests()}
+            text={codebridgeI18n.stopValidation()}
             onClick={handleStop}
             color={'destructive'}
             iconLeft={{iconStyle: 'solid', iconName: 'square'}}
@@ -236,11 +239,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           />
         ) : (
           <Button
-            text={commonI18n.test()}
-            onClick={() => handleTest()}
+            text={codebridgeI18n.validate()}
+            onClick={() => handleValidate()}
             type={'secondary'}
-            disabled={isLoadingEnvironment}
-            iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+            disabled={shouldValidateBeDisabled}
+            iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
             className={moduleStyles.buttonInstruction}
             color={'white'}
             size={'s'}
@@ -252,6 +255,31 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const {showNavigation, navigationText, navigationIcon, handleNavigation} =
     getNavigationButtonProps();
+
+  const navigationScrollRef = useRef<HTMLDivElement>(null);
+  const validationScrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let refToScrollTo;
+    if (showNavigation) {
+      refToScrollTo = navigationScrollRef;
+    } else if (validationResults) {
+      refToScrollTo = validationScrollRef;
+    }
+    if (refToScrollTo) {
+      // We must at least set a timeout with a wait of 0 to ensure the scroll happens at all,
+      // because the DOM needs to update before we can scroll to the new element.
+      setTimeout(
+        () => refToScrollTo.current?.scrollIntoView({behavior: 'smooth'}),
+        0
+      );
+    }
+  }, [showNavigation, validationResults]);
+
+  const validationIcon =
+    hasMetValidation || hasSubmitted
+      ? 'fa-solid fa-circle-check'
+      : 'fa-regular fa-circle';
 
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
@@ -279,17 +307,21 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           <div
             key={instructionsText}
             id="instructions-text"
-            className={classNames(
-              moduleStyles['bubble-' + theme],
-              moduleStyles.text
-            )}
+            className={classNames(moduleStyles['bubble-' + theme])}
           >
-            {predictSettings?.isPredictLevel && <PredictSummary />}
-            <EnhancedSafeMarkdown
-              markdown={instructionsText}
-              className={moduleStyles.markdownText}
-              handleInstructionsTextClick={handleInstructionsTextClick}
-            />
+            <div className={moduleStyles.mainInstructions}>
+              <i
+                className={classNames(
+                  validationIcon,
+                  moduleStyles.validationIcon
+                )}
+              />
+              <EnhancedSafeMarkdown
+                markdown={instructionsText}
+                className={moduleStyles.markdownText}
+                handleInstructionsTextClick={handleInstructionsTextClick}
+              />
+            </div>
             <PredictQuestion
               predictSettings={predictSettings}
               predictResponse={predictResponse}
@@ -297,14 +329,26 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
                 dispatch(setPredictResponse(response))
               }
               predictAnswerLocked={predictAnswerLocked}
+              className={moduleStyles.predictQuestion}
             />
           </div>
         )}
-        {SHOW_TEST_NAVIGATION_BUTTONS && renderTestButton()}
-        {SHOW_TEST_NAVIGATION_BUTTONS && showNavigation && (
+
+        {predictSettings?.isPredictLevel && (
+          <InstructorsOnly>
+            <div className={moduleStyles['bubble-' + theme]}>
+              <PredictSummary />
+            </div>
+          </InstructorsOnly>
+        )}
+        {renderValidationButton()}
+        {validationResults && <div ref={validationScrollRef} />}
+        <ValidationResults className={moduleStyles['bubble-' + theme]} />
+        {showNavigation && (
           <div
             id="instructions-navigation"
             className={moduleStyles['bubble-' + theme]}
+            ref={navigationScrollRef}
           >
             <Button
               text={navigationText}

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-01-12T17:54:15.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The <a href=\"https://www.kaggle.com/datasets/laibaanwer/superstore-sales-dataset\" target=\"_blank\">**Store Profits dataset**</a> includes the profits a store made each day of a month. The profits made each day are stored in a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">double</code> array called <code style=\"background-color: #ececec; color: black; font-weight: bold;\">storeProfits</code>.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Store.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcAverageProfits()</code> method to calculate and return the average profits made by the store each day in the month.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">DataRunner.java</code>, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcAverageProfits()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with traversing a 1D array using a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">for</code> loop.\r\n</div>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 Need help with your algorithm?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    \t<p>The average is found by dividing the sum by the number of values. You already have a way to get the sum of the values in the 1D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">storeProfits</code>!</p>\r\n        <p>Use the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcTotalProfits()</code> method to get the sum and divide the result by the length of the 1D array to find the average.</p>\r\n        <pre style=\"background-color: #333333; color: white;\">\r\ntotalProfits = calcTotalProfits()\r\naverage = totalProfits / storeProfits.length\r\n</pre>\r\n    </div>\r\n</details>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
@@ -38,15 +42,9 @@
         "tabOrder": 3
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2023-01-12T17:54:15.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2023-01-12T17:54:15.169+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L4b_2023\\\"\"],\"cloned_from\":\"CSA U3L5-L4b_2023\"},{\"changed_at\":\"2023-01-12 17:54:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-23 00:02:13 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-23 01:50:05 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-23 02:04:04 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-23 17:03:43 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-23 17:16:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-23 17:18:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-23 17:18:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-31 20:24:41 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

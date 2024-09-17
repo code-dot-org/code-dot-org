@@ -9,8 +9,8 @@ import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';

@@ -10,7 +10,6 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getShortName} from '../utils';
@@ -78,9 +77,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   // Teacher user is able to interact with chatbot.
   const canChatWithModel = useMemo(
-    () =>
-      selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY ||
-      !experiments.isEnabled(experiments.VIEW_CHAT_HISTORY),
+    () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
     [selectedTab]
   );
 
@@ -144,7 +141,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
-      {experiments.isEnabled(experiments.VIEW_CHAT_HISTORY) && viewAsUserId ? (
+      {viewAsUserId ? (
         <Tabs {...tabArgs} />
       ) : (
         <ChatEventsList events={visibleItems} />

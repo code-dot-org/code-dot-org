@@ -36,6 +36,26 @@ module MailJet
     end
   end
 
+  # Sends an email using a MailJet template
+  #
+  # @param template_name [Symbol] The MailJet template name
+  # @param contact_email [String] The MailJet contact (recipient) email address
+  # @param contact_name [String] The MailJet contact (recipient) full name
+  # @param vars [Hash] Optional variables to be passed to the template
+  # @param locale [String] The locale to use for the email
+  #
+  # @return [Mailjet::Send] The MailJet send response
+  def self.send_email(template_name, contact_email, contact_name, vars: {}, locale: 'en-US')
+    return unless enabled?
+
+    email_config = EMAILS[template_name.to_sym]
+    raise ArgumentError, "Invalid email template: #{template_name}" unless email_config
+
+    contact = find_or_create_contact(contact_email, contact_name)
+
+    send_template_email(contact, email_config, locale, variables: vars)
+  end
+
   def self.create_contact_and_add_to_welcome_series(user, locale = 'en-US')
     return unless enabled?
 
@@ -43,41 +63,17 @@ module MailJet
     return unless user.teacher?
 
     contact = find_or_create_contact(user.email, user.name)
-    update_contact_field(contact, 'sign_up_date', user.created_at.to_datetime.rfc3339)
+    update_contact_fields(contact,
+      [
+        {name: 'firstname', value: user.name}, # existing templates use 'firstname'
+        {name: 'display_name', value: user.name},
+        {name: 'sign_up_date', value: user.created_at.to_datetime.rfc3339}
+      ]
+    )
 
     subaccount_contact_list_config = CONTACT_LISTS[:welcome_series][subaccount.to_sym]
     contact_list_id = subaccount_contact_list_config[locale.to_sym] || subaccount_contact_list_config[:default]
     add_to_contact_list(contact, contact_list_id)
-  end
-
-  # Sends a warning to a teacher about sections with students affected by the Child Account Policy (CAP).
-  #
-  # @note The function may exit early due to any of the following conditions:
-  #   - the feature is not enabled.
-  #   - the user is nil or does not have a valid ID.
-  #   - the user is not a teacher.
-  #
-  # @param user [User] The teacher to be warned.
-  # @param sections [Array<Hash>] The list of CAP-affected sections.
-  #   Each section is represented as a hash with keys:
-  #   - `:Name` [String] The name of the section.
-  #   - `:Link` [String] The URL link to the section.
-  # @param locale [String] The locale to use for the email. Defaults to 'en-US'.
-  #
-  # @return [void]
-  def self.send_teacher_cap_section_warning(user, sections, locale: 'en-US')
-    return unless enabled?
-
-    raise ArgumentError, 'the user must be persisted' unless user&.persisted?
-    raise ArgumentError, 'the user must be a teacher' unless user.teacher?
-
-    contact = find_or_create_contact(user.email, user.name)
-    send_template_email(
-      contact,
-      EMAILS[:cap_section_warning],
-      locale,
-      variables: {capSections: sections}
-    )
   end
 
   def self.find_or_create_contact(email, name)
@@ -97,19 +93,28 @@ module MailJet
     Mailjet::Contact.find(email)
   end
 
-  def self.update_contact_field(contact, field_name, field_value)
+  # data must be in the format:
+  # [
+  #   {
+  #     name: "field_name",
+  #     value: "field_value"
+  #   }
+  # ]
+  def self.update_contact_fields(contact, fields)
     return unless enabled?
     return if contact.nil?
 
     contactdata = Mailjet::Contactdata.find(contact.id)
-    contactdata.update_attributes(
-      data: [
-        {
-          name: field_name,
-          value: field_value
-        }
-      ]
-    )
+    return unless contactdata
+
+    # Fields need to be sent separately or else only the first field is reflected in MailJet
+    fields.each do |field|
+      contactdata.update_attributes(
+        data: [
+          field
+        ]
+      )
+    end
   end
 
   def self.delete_contact(email)
