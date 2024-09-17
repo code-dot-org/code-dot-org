@@ -71,7 +71,7 @@ const createDisplayName = (lessonName: string, lessonPosition: number) => {
 const LessonMaterialsContainer: React.FC = () => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
   const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
-  const unitNumber = useMemo(() => loadedData?.unitNumber || 0, [loadedData]);
+  const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
 
   const getLessonFromId = (lessonId: number): Lesson | null => {
     return lessons.find(lesson => lesson.id === lessonId) || null;
