@@ -23,10 +23,20 @@ services:
         echo './bin/dashboard-server' &&
         echo &&
         echo 'Be sure to have the following in your locals.yml to link to the contained services:' &&
+        echo 'These will allow you to connect to the database with: ./bin/mysql-client-admin' &&
         echo &&
-        echo 'db_writer: mysql://root:password@127.0.0.1/' &&
-        echo 'db_endpoint_writer: 127.0.0.1' &&
+        echo 'db_writer: mysql://root:password@127.0.0.1:${MYSQL_NATIVE_PORT:-3306}/' &&
+        echo 'db_endpoint_writer: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
         echo 'db_credential_admin:' &&
-        echo '  username: user' &&
+        echo '  username: root' &&
+        echo '  password: password' &&
+        echo 'db_endpoint_proxy_reporting: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_endpoint_proxy_reader: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_credential_reader:' &&
+        echo '  username: root' &&
+        echo '  password: password' &&
+        echo 'db_endpoint_proxy_writer: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
+        echo 'db_credential_writer:' &&
+        echo '  username: root' &&
         echo '  password: password'
       "
