@@ -3,6 +3,8 @@ import React from 'react';
 import {ActionDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import i18n from '@cdo/locale';
 
+import {RESOURCE_TYPE} from './ResourceIconType';
+
 type UnitResourcesDropdownProps = {
   unitNumber: number;
   scriptOverviewPdfUrl: string;
@@ -14,14 +16,11 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
   scriptOverviewPdfUrl,
   scriptResourcesPdfUrl,
 }) => {
-  // note: use the iconTypes here once merged in
-  // also, not sure if every unit with this paeg has these three options...
-  // might need to do some checking before rendering
   const dropdownOptions = [
     {
       value: 'download-lesson-plans',
       label: i18n.downloadUnitLessonPlans({unitNumber: unitNumber}),
-      icon: {iconName: 'file-lines'},
+      icon: {iconName: RESOURCE_TYPE.LESSON_PLAN.icon},
       onClick: () => {
         window.location.href = scriptOverviewPdfUrl;
       },
@@ -29,7 +28,7 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
     {
       value: 'download-resources',
       label: i18n.downloadUnitHandouts({unitNumber: unitNumber}),
-      icon: {iconName: 'files'},
+      icon: {iconName: RESOURCE_TYPE.GOOGLE_DOC.icon},
       onClick: () => {
         window.location.href = scriptResourcesPdfUrl;
       },
