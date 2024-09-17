@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-14T19:28:36.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Request a code review to get feedback from your peers on your `getLongestLine()`(#e7e8ea) method.\r\n\r\nWhen you are finished receiving feedback, return to your project and click the **Close review** button.\r\n\r\n##Requesting Feedback\r\n\r\n**Commit your code** and add a comment that includes:\r\n\r\n* a description of the goals and intended outcome of the program\r\n\r\n* any additional relevant information\r\n\r\n* specific tasks or questions you want your reviewer to perform or answer\r\n\r\n##TAG to Give Feedback\r\n*Remember to keep feedback kind, specific, and helpful. Refer to your sentence starters to structure your feedback.*\r\n\r\n1. Tell them something you like about their code.\r\n\r\n2. Ask them something about the code.\r\n\r\n3. Give a suggestion for improvement.",
@@ -11,15 +15,9 @@
     "display_name": "Lines in a Poem",
     "bubble_choice_description": "Find the longest line in a poem.",
     "thumbnail_url": "https://images.code.org/89067a86f9bbe90697b785e0a21d7633-image-1651752933769.png",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-14T19:28:36.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:28:36.037+00:00\",\"changed\":[\"cloned from \\\"CSA U3L3-L4a CR_2022\\\"\"],\"cloned_from\":\"CSA U3L3-L4a CR_2022\"},{\"changed_at\":\"2022-04-14 19:28:51 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 21:12:21 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 12:16:08 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-05 12:18:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:08:47 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

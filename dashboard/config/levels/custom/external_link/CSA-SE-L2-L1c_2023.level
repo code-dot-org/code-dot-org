@@ -12,7 +12,8 @@
     "display_name": "Harmony Helper",
     "bubble_choice_description": "Calling all music lovers! Dive into Harmony Helper, your one-stop-shop to explore a symphony of sounds. Discover and sort an orchestra of instruments from A to Z and let your musical journey begin with just a click!",
     "thumbnail_url": "https://images.code.org/a9f5fba87a4648aa54a4309c4ae4257e-harmonyhelper.gif",
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-10-03T21:33:57.345+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L1c\\\"\"],\"cloned_from\":\"CSA-SE-L2-L1c\"}]"

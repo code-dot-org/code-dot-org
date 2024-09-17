@@ -16,7 +16,7 @@ import {
   blobToDataURI,
   dataURIToSourceSize,
 } from '@cdo/apps/imageUtils';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {createUuid} from '@cdo/apps/utils';
 
 import {P5LabInterfaceMode} from '../constants';

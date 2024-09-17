@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useCallback, useContext} from 'react';
+import React, {useCallback, useContext, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -24,6 +24,7 @@ import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -31,6 +32,7 @@ import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 import {appendSystemMessage} from '../redux/consoleRedux';
+import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ValidationResults from './ValidationResults';
 
@@ -74,7 +76,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     state => state.lab.levelProperties?.longInstructions
   );
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
-  const {hasConditions, satisfied} = useAppSelector(
+  const {hasConditions, validationResults, satisfied} = useAppSelector(
     state => state.lab.validationState
   );
   const predictSettings = useAppSelector(
@@ -98,6 +100,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const isLoadingEnvironment = useAppSelector(
     state => state.lab2System.loadingCodeEnvironment
   );
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+  const shouldValidateBeDisabled = isLoadingEnvironment || isRunning;
 
   const dispatch = useAppDispatch();
 
@@ -145,6 +149,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const handleValidate = () => {
     if (onRun) {
       dispatch(setIsValidating(true));
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK, appType);
       onRun(true, dispatch, source).finally(() =>
         dispatch(setIsValidating(false))
       );
@@ -240,7 +245,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             text={codebridgeI18n.validate()}
             onClick={() => handleValidate()}
             type={'secondary'}
-            disabled={isLoadingEnvironment}
+            disabled={shouldValidateBeDisabled}
             iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
             className={moduleStyles.buttonInstruction}
             color={'white'}
@@ -253,6 +258,26 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const {showNavigation, navigationText, navigationIcon, handleNavigation} =
     getNavigationButtonProps();
+
+  const navigationScrollRef = useRef<HTMLDivElement>(null);
+  const validationScrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let refToScrollTo;
+    if (showNavigation) {
+      refToScrollTo = navigationScrollRef;
+    } else if (validationResults) {
+      refToScrollTo = validationScrollRef;
+    }
+    if (refToScrollTo) {
+      // We must at least set a timeout with a wait of 0 to ensure the scroll happens at all,
+      // because the DOM needs to update before we can scroll to the new element.
+      setTimeout(
+        () => refToScrollTo.current?.scrollIntoView({behavior: 'smooth'}),
+        0
+      );
+    }
+  }, [showNavigation, validationResults]);
 
   const validationIcon =
     hasMetValidation || hasSubmitted
@@ -320,11 +345,13 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           </InstructorsOnly>
         )}
         {renderValidationButton()}
+        {validationResults && <div ref={validationScrollRef} />}
         <ValidationResults className={moduleStyles['bubble-' + theme]} />
         {showNavigation && (
           <div
             id="instructions-navigation"
             className={moduleStyles['bubble-' + theme]}
+            ref={navigationScrollRef}
           >
             <Button
               text={navigationText}

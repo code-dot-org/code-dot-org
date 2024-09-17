@@ -1,0 +1,41 @@
+:ruby
+  block_items = [
+    {
+      title: hoc_s("hoc_how_to.resources.hoc.title"),
+      image: "/images/action-blocks/action-block-resources.png",
+      desc: hoc_s("hoc_how_to.resources.hoc.desc"),
+      url: resolve_url('/promote'),
+      button_label: hoc_s("hoc_how_to.resources.hoc.button"),
+    },
+    {
+      title: hoc_s("hoc_how_to.resources.activities.title"),
+      image: "/images/action-blocks/action-block-activities.png",
+      desc: hoc_s("hoc_how_to.resources.activities.desc"),
+      url: resolve_url('/learn'),
+      button_label: hoc_s("hoc_how_to.resources.activities.button"),
+    },
+    {
+      title: hoc_s("hoc_how_to.resources.register.title"),
+      image: "/images/action-blocks/action-block-register.png",
+      desc: hoc_s("hoc_how_to.resources.register.desc"),
+      url: resolve_url('/events'),
+      button_label: hoc_s("hoc_how_to.resources.register.button"),
+    },
+  ]
+
+%section.bg-neutral-light{style: "margin-bottom: -60px;"}
+  .wrapper
+    %h2.no-margin-top.centered
+      =hoc_s("hoc_how_to.resources.heading")
+    .action-block__wrapper.action-block__wrapper--three-col
+      - block_items.each do |block_item|
+        .action-block.action-block--one-col.flex-space-between.white
+          .content-wrapper
+            %h3.heading-sm
+              = block_item[:title]
+            %img{src: block_item[:image], alt: ""}
+            %p
+              = block_item[:desc]
+          .content-footer
+            %a.link-button{href: block_item[:url]}
+              = block_item[:button_label]

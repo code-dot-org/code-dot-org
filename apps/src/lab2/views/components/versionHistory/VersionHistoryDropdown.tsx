@@ -1,10 +1,12 @@
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
+import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -14,9 +16,12 @@ import {
   resetToCurrentVersion,
   setViewingOldVersion,
   setRestoredOldVersion,
-  setPreviousVersionSource,
+  previewStartSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
@@ -65,6 +70,13 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
+  // If this is a teacher viewing a student's project, we hide the restore button,
+  // but still allow viewing old versions.
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+
+  const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
@@ -75,11 +87,20 @@ const VersionHistoryDropdown: React.FunctionComponent<
     });
   }, [locale]);
 
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
     if (selectedVersion === '' && versionList.length > 0) {
       setSelectedVersion(latestVersion);
     }
   }, [versionList, selectedVersion, latestVersion]);
+
+  const resetVersionState = useCallback(() => {
+    dispatch(setViewingOldVersion(false));
+    dispatch(setRestoredOldVersion(false));
+  }, [dispatch]);
+
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, resetVersionState);
 
   useEffect(() => {
     if (isOpen && !previousIsOpen.current && selectedVersion !== '') {
@@ -104,8 +125,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
     previousIsOpen.current = isOpen;
   }, [isOpen, selectedVersion, latestVersion, viewingOldVersion]);
 
-  const dispatch = useAppDispatch();
-
   const successfulRestoreCleanUp = useCallback(
     (sources: ProjectSources) => {
       dispatch(setViewingOldVersion(false));
@@ -118,17 +137,41 @@ const VersionHistoryDropdown: React.FunctionComponent<
   );
 
   const startOver = useCallback(() => {
-    // TODO: confirm
-    dispatch(setAndSaveProjectSource(startSource));
+    // We force a new version on start over so the user doesn't lose their recent edits.
+    // We also force the save to occur immediately to avoid confusion.
+    dispatch(
+      setAndSaveProjectSource(
+        startSource,
+        /* forceSave */ true,
+        /* forceNewVersion */ true
+      )
+    );
     successfulRestoreCleanUp(startSource);
     closeDropdown();
   }, [dispatch, startSource, successfulRestoreCleanUp, closeDropdown]);
 
+  const confirmStartOver = useCallback(() => {
+    dialogControl?.showDialog({
+      type: DialogType.StartOver,
+      handleConfirm: startOver,
+    });
+  }, [dialogControl, startOver]);
+
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (selectedVersion === INITIAL_VERSION_ID) {
-      startOver();
+      sendCodebridgeAnalyticsEvent(
+        EVENTS.CODEBRIDGE_VERSION_RESTORED,
+        appName,
+        {isInitialVersion: 'true'}
+      );
+      confirmStartOver();
     } else if (projectManager && selectedVersion) {
+      sendCodebridgeAnalyticsEvent(
+        EVENTS.CODEBRIDGE_VERSION_RESTORED,
+        appName,
+        {isInitialVersion: 'false'}
+      );
       setLoading(true);
       setLoadError(false);
       projectManager
@@ -150,7 +193,8 @@ const VersionHistoryDropdown: React.FunctionComponent<
     }
   }, [
     selectedVersion,
-    startOver,
+    appName,
+    confirmStartOver,
     closeDropdown,
     dispatch,
     successfulRestoreCleanUp,
@@ -164,15 +208,23 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const onVersionChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>, isLatest: boolean) => {
       setSelectedVersion(e.target.value);
-      if (e.target.value === INITIAL_VERSION_ID) {
-        dispatch(setPreviousVersionSource(startSource));
+      const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
+      if (!isLatest) {
+        sendCodebridgeAnalyticsEvent(
+          EVENTS.CODEBRIDGE_VERSION_VIEWED,
+          appName,
+          {isInitialVersion: viewingInitialVersion.toString()}
+        );
+      }
+      if (viewingInitialVersion) {
+        dispatch(previewStartSource({startSource}));
       } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {
         dispatch(loadVersion({versionId: e.target.value}));
       }
     },
-    [dispatch, startSource]
+    [appName, dispatch, startSource]
   );
 
   // Function called when clicking 'cancel'. This will reset the project to the current version
@@ -237,14 +289,16 @@ const VersionHistoryDropdown: React.FunctionComponent<
             <i className="fa fa-spinner fa-spin" />
           </div>
         )}
-        <Button
-          text={commonI18n.restore()}
-          color={'purple'}
-          size={'m'}
-          onClick={restoreSelectedVersion}
-          disabled={loading}
-          className={moduleStyles.actionButton}
-        />
+        {!viewAsUserId && (
+          <Button
+            text={commonI18n.restore()}
+            color={'purple'}
+            size={'m'}
+            onClick={restoreSelectedVersion}
+            disabled={loading}
+            className={moduleStyles.actionButton}
+          />
+        )}
         <Button
           text={commonI18n.cancel()}
           color={'white'}

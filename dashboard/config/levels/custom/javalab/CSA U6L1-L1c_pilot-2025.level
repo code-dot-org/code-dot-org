@@ -61,7 +61,8 @@
     "display_name": "Friend Generator",
     "bubble_choice_description": "An example project that generates a random friend.",
     "thumbnail_url": "https://images.code.org/8ede526b52bbaead05a49565d535da44-friends.png",
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T18:26:35.824+00:00\",\"changed\":[\"cloned from \\\"CSA U6L1-L1c_2025\\\"\"],\"cloned_from\":\"CSA U6L1-L1c_2025\"}]"

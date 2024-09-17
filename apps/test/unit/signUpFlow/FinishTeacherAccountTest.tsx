@@ -14,15 +14,7 @@ import i18n from '@cdo/locale';
 
 describe('FinishTeacherAccount', () => {
   afterEach(() => {
-    [
-      DISPLAY_NAME_SESSION_KEY,
-      EMAIL_OPT_IN_SESSION_KEY,
-      SCHOOL_ID_SESSION_KEY,
-      SCHOOL_ZIP_SESSION_KEY,
-      SCHOOL_NAME_SESSION_KEY,
-    ].forEach((session_key: string) => {
-      sessionStorage.removeItem(session_key);
-    });
+    sessionStorage.clear();
   });
 
   function renderDefault(usIp: boolean = true) {

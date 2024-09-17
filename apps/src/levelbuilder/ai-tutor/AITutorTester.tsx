@@ -1,10 +1,7 @@
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
-import {
-  postAichatCheckSafety,
-  postAichatCompletionMessage,
-} from '@cdo/apps/aichat/aichatApi';
+import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
 import {ChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
@@ -77,9 +74,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const getAIResponses = async () => {
     setResponsesPending(true);
     const responsePromises = data.map(async row => {
-      if (selectedEndpoint === 'llm-guard') {
-        return getLLMGuardToxicity(row);
-      } else if (
+      if (
         genAIEndpointIds.includes(
           selectedEndpoint as ValueOf<typeof AiChatModelIds>
         )
@@ -122,18 +117,6 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
       aichatContext
     );
     row.aiResponse = genAIResponse?.messages[1]?.chatMessageText;
-    setResponseCount(prevResponseCount => prevResponseCount + 1);
-  };
-
-  const getLLMGuardToxicity = async (row: AIInteraction) => {
-    const llmGuardResponse = await postAichatCheckSafety(row.studentInput);
-    if (llmGuardResponse.result.statusCode === 200) {
-      row.aiResponse = 'ok';
-    } else if (llmGuardResponse.result.statusCode === 422) {
-      row.aiResponse = 'toxic';
-    } else {
-      row.aiResponse = 'error';
-    }
     setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 

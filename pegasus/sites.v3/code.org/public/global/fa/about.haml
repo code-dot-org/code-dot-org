@@ -1,0 +1,111 @@
+---
+theme: responsive_full_width
+---
+
+:ruby
+  @header["title"] = hoc_s(:"farsi_site.top_heading")
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/farsi-styles.css", rel: "stylesheet"}
+%section
+  .wrapper
+    %h1=hoc_s(:"farsi_site.top_heading")
+    %div.flex-container.justify-space-between.wrap
+      %div.col-60{style: "margin-bottom: 1rem"}
+        %h2.heading-lg=hoc_s(:"farsi_site.top_heading_02")
+        %p.body-three=hoc_s(:"farsi_site.top_desc")
+      %div.col-33{style: "float:right"}
+        %img{src: "/images/global/fa/farsi-page-students.jpg", alt: "", style: "width: 100%"}
+      .clear
+
+%section.bg-neutral-dark
+  .wrapper
+    .flex-container.align-items-center.flex-direction-column-mobile.flex-wrap.gap-2
+      .text-wrapper.flex-2
+        %h2.heading-sm.white
+          =hoc_s(:follow_us_heading)
+        %p.no-margin-bottom.white
+          =hoc_s(:follow_us_desc)
+        .flex-container.wrap.gap-1-5{style: "margin-top: 1rem;"}
+          %a.body-two.no-margin-bottom.white{href: "https://www.facebook.com/profile.php?id=61556998216913"}
+            =hoc_s(:facebook)
+          %a.body-two.no-margin-bottom.white{href: "https://x.com/codeinfarsi"}
+            =hoc_s(:twitter)
+          %a.body-two.no-margin-bottom.white{href: "https://www.instagram.com/codeinfarsi/"}
+            =hoc_s(:instagram)
+
+%section
+  .wrapper
+    %h2=hoc_s(:"farsi_site.global_heading")
+    %p.body-three=hoc_s(:"farsi_site.global_desc_01")
+    %p.body-three
+      %strong=hoc_s(:"farsi_site.global_desc_02")
+      =hoc_s(:"farsi_site.global_desc_03")
+
+%section.bg-neutral-light
+  .wrapper
+    %h2=hoc_s(:"farsi_site.farsi_about_heading_1")
+    %p.body-three=hoc_s(:"farsi_site.farsi_about_description_1")
+    %p.body-three=hoc_s(:"farsi_site.farsi_about_description_2")
+    %p.body-three=hoc_s(:"farsi_site.farsi_about_description_3")
+    %p.body-three=hoc_s(:"farsi_site.farsi_about_description_4")
+
+%section
+  .wrapper
+    %h2=hoc_s(:"farsi_site.supporters_heading")
+    %p.heading-sm
+      =hoc_s(:"farsi_site.supporters_desc")
+    %ul.three-col.clear-styles{style: "margin-top: 2rem"}
+      %li Abstract Ventures
+      %li Anonymous
+      %li Nima Asgharbeygi
+      %li Bita Daryabari
+      %li Nariman and Hoveida Farvardin
+      %li Arash Ferdowsi
+      %li Dinesh Gupta
+      %li Jeffrey Huber and Angel Vossough
+      %li Homan Igehy and Sepideh Pashaie
+      %li Amir Khandani
+      %li Azadeh Khazraee
+      %li Dara Khosrowshahi
+      %li Kaveh Khosrowshahi
+      %li Golnar Khosrowshahi
+      %li Fati and Mehrad Khosrowshahi
+      %li Milan Kordestani
+      %li Farshid Maghami Asl
+      %li Ashkan and Nansi Marsh
+      %li Farhad Massoudi
+      %li Laleh and Mohsen Moazami
+      %li Nushin and Farhad Mohit
+      %li Steve Mohebi
+      %li Shahrokh Mortazavi
+      %li Sharmin and Bijan Mossavar-Rahmani
+      %li Nazgol Moussavi and Reza Hajebi
+      %li F. Francis and Dionne Najafi, Pivotal Foundation
+      %li Nasiri Foundation
+      %li Zod Nazem and Noosheen Hashemi
+      %li Larissa and Hooman Radfar
+      %li Mostafa Ronaghi
+      %li Poorya Sabounchi and Newsha Sharifzadeh
+      %li Shima Safaei and Saman Teimouri
+      %li Mehran and Heather Sahami
+      %li Hilary and Darian Shirazi
+      %li Parisa Tabriz
+      %li AmirAli Talasaz and Maryam Eskandari
+      %li Zahra Tashakorinia
+      %li Leila Yari
+
+%section.bg-neutral-light
+  .wrapper
+    %h2=hoc_s(:"farsi_site.founders_heading")
+    .photo-carousel-wrapper
+      = view :"global/fa/farsi_carousel"
+
+// Want to always be in English
+%section
+  .wrapper
+    %h2.heading-sm
+      ="Compliance In Support Of Farsi Translations"
+    %p.body-three
+      ="As a U.S. nonprofit, Code.org is subject to laws regarding sanctions with Iran. After consulting with U.S. legal counsel experienced in the Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in the United States and elsewhere around the world, including within Iran. The ITSR provides an exemption for “information and informational materials” (the IIM Exemption) and Code.org believes that this exemption will fully shield its funding, preparation, and distribution of the Farsi Translations and thus enable its Farsi Translations effort to proceed in full compliance with U.S. economic sanctions requirements."
+"

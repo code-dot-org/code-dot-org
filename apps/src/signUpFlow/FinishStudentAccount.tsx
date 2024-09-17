@@ -9,6 +9,8 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
 import locale from './locale';
@@ -45,6 +47,11 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [showStateError, setShowStateError] = useState(false);
 
   const onIsParentChange = (): void => {
+    analyticsReporter.sendEvent(
+      EVENTS.PARENT_OR_GUARDIAN_SIGN_UP_CLICKED,
+      {},
+      PLATFORMS.STATSIG
+    );
     const newIsParentCheckedChoice = !isParent;
     setIsParent(newIsParentCheckedChoice);
     sessionStorage.setItem(
@@ -116,6 +123,19 @@ const FinishStudentAccount: React.FunctionComponent<{
     const newGender = e.target.value;
     setGender(newGender);
     sessionStorage.setItem(USER_GENDER_SESSION_KEY, newGender);
+  };
+
+  const sendFinishEvent = (): void => {
+    analyticsReporter.sendEvent(
+      EVENTS.SIGN_UP_FINISHED_EVENT,
+      {
+        'user type': 'student',
+        'has school': false,
+        'has marketing value selected': true,
+        'has display name': !showNameError,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   return (
@@ -221,7 +241,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           className={style.finishSignUpButton}
           color={buttonColors.purple}
           type="primary"
-          onClick={() => console.log('FINISH SIGN UP')}
+          onClick={() => sendFinishEvent()}
           text={locale.go_to_my_account()}
           iconRight={{
             iconName: 'arrow-right',

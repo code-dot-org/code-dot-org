@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-12T19:30:30.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A random image consists of pixels with red, green, and blue color values chosen at random.\r\n\r\nThe `Image`(#e7e8ea) class has a constructor with parameters `width`(#e7e8ea) for the width of the image and `height`(#e7e8ea) for the height of the image. This creates an empty `Image`(#e7e8ea) object that is filled with the default background color.\r\n\r\n##Getting Started\r\n1. Import `ImagePlus.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from <a href=\"https://studio.code.org/projects/javalab/48JwG7FWLhuYZkYVHbIWxvM8Cbe-HUS_Qj56rUHIDDg\" target=\"_blank\">**here**</a>.*\r\n\r\n##In ImagePlus.java:\r\n\r\n1. Add a constructor that takes the parameters `width`(#e7e8ea) for the width of the image and `height`(#e7e8ea) for the height of the image. Call the superclass constructor with the `width`(#e7e8ea) and `height`(#e7e8ea).\r\n\r\n##In RandomImage.java:\r\n\r\n2. Write the method `makeRandom()`(#e7e8ea) to create an image consisting of randomly colored pixels.\r\n\r\n   * Generate random numbers for the red, green, and blue color values for each `Pixel`(#e7e8ea).\r\n   \r\n   * Replace the red, green, and blue color values of each `Pixel`(#e7e8ea) object with the new values.\r\n\r\n##In MyTheater.java:\r\n\r\n3. Instantiate a `RandomImage`(#e7e8ea) object that is the same width and height as the `Scene`(#e7e8ea) then draw the image in the scene. You can also upload and use your own. Add a `pause()`(#e7e8ea) after drawing the image.\r\n\r\n4. Call the `makeRandom()`(#e7e8ea) method on your image then draw the image with the effect in the scene.\r\n\r\n##Save your `ImagePlus`(#e7e8ea) and `RandomImage`(#e7e8ea) classes to the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png) !\r\n\r\n![](https://images.code.org/66e49234ca2e09308b88b14d25e48611-image-1651260019479.gif)",
@@ -22,15 +26,9 @@
       }
     },
     "thumbnail_url": "https://images.code.org/66e49234ca2e09308b88b14d25e48611-image-1651260019479.gif",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-12T19:30:30.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-12T19:30:30.691+00:00\",\"changed\":[\"cloned from \\\"CSA U5L8-L4a_2022\\\"\"],\"cloned_from\":\"CSA U5L8-L4a_2022\"},{\"changed_at\":\"2022-04-12 19:30:32 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 16:03:03 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 17:40:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 18:17:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 19:18:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 19:19:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 19:19:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 19:20:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 19:20:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-30 12:56:35 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-30 12:56:54 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-04 13:13:59 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-27 20:42:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-07-12 21:02:12 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

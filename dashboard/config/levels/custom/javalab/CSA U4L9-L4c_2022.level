@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-07T18:44:04.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U4L9-L4c PBT_2022",
@@ -28,16 +32,10 @@
       }
     },
     "encrypted_exemplar_sources": "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\n",
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/72887998b91b07ad5d744829582d5dae-image-1651426829636.gif"
+    "thumbnail_url": "https://images.code.org/72887998b91b07ad5d744829582d5dae-image-1651426829636.gif",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-07T18:44:04.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-07T18:44:04.696+00:00\",\"changed\":[\"cloned from \\\"CSA U4L9-L4b_2022\\\"\"],\"cloned_from\":\"CSA U4L9-L4b_2022\"},{\"changed_at\":\"2022-04-07 18:44:12 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 21:46:02 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 21:49:36 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 21:58:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 22:45:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 23:01:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 23:04:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 21:22:52 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2022-05-01 17:40:45 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

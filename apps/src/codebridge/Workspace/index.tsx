@@ -1,11 +1,14 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {Editor} from '@codebridge/Editor';
+import {FileBrowser} from '@codebridge/FileBrowser';
 import {FileTabs} from '@codebridge/FileTabs';
+import ToggleFileBrowserButton from '@codebridge/ToggleFileBrowserButton';
+import classnames from 'classnames';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {setRestoredOldVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -48,31 +51,56 @@ const Workspace = () => {
       rightHeaderContent={<HeaderButtons />}
       className={moduleStyles.workspace}
     >
-      <FileTabs />
-      {isStartMode && (
+      <div
+        className={classnames(moduleStyles.workspaceWorkarea, {
+          [moduleStyles.withFileBrowser]: config.showFileBrowser,
+        })}
+      >
         <div
-          id="startSourcesWarningBanner"
-          className={moduleStyles.warningBanner}
+          className={classnames(moduleStyles.workspaceToggleButtonContainer, {
+            [moduleStyles.withFileBrowser]: config.showFileBrowser,
+          })}
         >
-          {projectTemplateLevel
-            ? 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.'
-            : 'You are editing start sources.'}
+          <ToggleFileBrowserButton />
         </div>
-      )}
-      <Editor
-        langMapping={config.languageMapping}
-        editableFileTypes={config.editableFileTypes}
-      />
-      {viewingOldVersion && (
-        <Alert text={codebridgeI18n.viewingOldVersion()} type={'warning'} />
-      )}
-      {hasRestoredOldVersion && (
-        <Alert
-          text={codebridgeI18n.restoredOldVersion()}
-          type={'success'}
-          onClose={closeRestoredVersionBanner}
-        />
-      )}
+        <div>
+          <FileTabs />
+        </div>
+        {isStartMode && (
+          <div
+            id="startSourcesWarningBanner"
+            className={moduleStyles.warningBanner}
+          >
+            {projectTemplateLevel
+              ? WARNING_BANNER_MESSAGES.TEMPLATE
+              : WARNING_BANNER_MESSAGES.STANDARD}
+          </div>
+        )}
+        {config.showFileBrowser && <FileBrowser />}
+
+        <div
+          className={classnames(moduleStyles.workplaceEditorWrapper, {
+            [moduleStyles.withFileBrowser]: config.showFileBrowser,
+          })}
+        >
+          <Editor
+            langMapping={config.languageMapping}
+            editableFileTypes={config.editableFileTypes}
+          />
+        </div>
+        <div className={moduleStyles.workspaceWarningArea}>
+          {viewingOldVersion && (
+            <Alert text={codebridgeI18n.viewingOldVersion()} type={'warning'} />
+          )}
+          {hasRestoredOldVersion && (
+            <Alert
+              text={codebridgeI18n.restoredOldVersion()}
+              type={'success'}
+              onClose={closeRestoredVersionBanner}
+            />
+          )}
+        </div>
+      </div>
     </PanelContainer>
   );
 };

@@ -15,7 +15,8 @@
     "display_name": "Song Sentiment",
     "bubble_choice_description": "Find the average sentiment of a song.",
     "thumbnail_url": "https://images.code.org/cc96067bc437b2b9d63230dfd982fe28-song.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:28.074+00:00\",\"changed\":[\"cloned from \\\"CSA U6L10-L4c CR_2022\\\"\"],\"cloned_from\":\"CSA U6L10-L4c CR_2022\"}]"

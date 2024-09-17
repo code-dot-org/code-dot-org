@@ -12,6 +12,7 @@ export interface PatternEventValue {
   kit: string;
   length?: 1 | 2;
   events: PatternTickEvent[];
+  ai?: boolean;
 }
 
 export interface PatternTickEvent {

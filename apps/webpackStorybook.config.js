@@ -18,7 +18,7 @@ function storybookConfig(sbConfig) {
       alias: {
         ...WEBPACK_BASE_CONFIG.resolve.alias,
         ...sbConfig.resolve.alias,
-        '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util'),
+        '@cdo/apps/metrics/firehose': path.resolve(__dirname, 'test', 'util'),
       },
     },
     // Overwrite rules

@@ -56,7 +56,8 @@
         "tabOrder": 6
       }
     },
-    "name_suffix": "_pilot-2024"
+    "name_suffix": "_pilot-2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T16:56:05.523+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5b_2025\\\"\"],\"cloned_from\":\"CSA U4L7-L5b_2025\"}]"

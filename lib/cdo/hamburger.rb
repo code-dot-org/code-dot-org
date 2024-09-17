@@ -296,4 +296,18 @@ class Hamburger
       signed_out_links
     end
   end
+
+  def self.get_farsi_header_contents(options)
+    loc_prefix = options[:loc_prefix]
+
+    signed_out_links = [
+      {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/global/fa/teacher"), id: "header-teach"},
+      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/global/fa/about"), id: "header-about"},
+      {title: I18n.t("#{loc_prefix}csf"), url: CDO.code_org_url("/global/fa/csf"), id: "header-csf"},
+      {title: I18n.t("#{loc_prefix}hour_of_code"), url: CDO.code_org_url("/global/fa/hourofcode"), id: "header-hoc"},
+      {title: I18n.t("#{loc_prefix}videos"), url: CDO.code_org_url("/global/fa/videos"), id: "header-videos"}
+    ]
+
+    signed_out_links
+  end
 end

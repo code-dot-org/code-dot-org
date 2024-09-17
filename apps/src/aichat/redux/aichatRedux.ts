@@ -13,8 +13,8 @@ import {
   getCurrentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
@@ -279,19 +279,13 @@ export const onSaveFail =
             getState().aichat.savedAiCustomizations,
             getState().aichat.currentAiCustomizations
           );
-          let flaggedProperties;
-          if (
-            changedProperties.includes('systemPrompt') &&
+          const flaggedProperties =
+            changedProperties.includes('systemPrompt') ||
             changedProperties.includes('retrievalContexts')
-          ) {
-            flaggedProperties = 'system prompt and/or retrieval contexts';
-          } else if (changedProperties.includes('systemPrompt')) {
-            flaggedProperties = 'system prompt';
-          } else if (changedProperties.includes('retrievalContexts')) {
-            flaggedProperties = 'retrieval contexts';
-          }
+              ? 'system prompt and/or retrieval contexts'
+              : undefined;
           if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
-            errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
+            errorMessage = `The ${flaggedProperties} have been flagged by our content moderation policy. Please try a different model customization.`;
           }
           dispatchSaveFailNotification(
             dispatch,

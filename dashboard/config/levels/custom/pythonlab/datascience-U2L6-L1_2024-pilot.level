@@ -17,7 +17,7 @@
       "questionType": "freeResponse",
       "allowMultipleAttempts": false,
       "placeholderText": "student response",
-      "freeResponseHeight": 30,
+      "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
     "start_sources": {
@@ -50,6 +50,6 @@
     },
     "teacher_markdown": "Students might have difficulty predicting what the `groupby()` function does, particularly if they are unfamiliar with how data is grouped and summarized. There might also be confusion about how the program accesses data for a specific decade and calculates the mean for that group.\r\n\r\n"
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-29T18:21:27.400+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L1_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L1_2024-pilot\"},{\"changed_at\":\"2024-08-29 18:22:56 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:23:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:26:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:28:14 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29T18:21:27.400+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L1_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L1_2024-pilot\"},{\"changed_at\":\"2024-08-29 18:22:56 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:23:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:26:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:28:14 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-11 15:38:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
