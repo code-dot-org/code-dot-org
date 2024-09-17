@@ -1,3 +1,11 @@
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 import manageStudents, {
   setLoginType,
   setStudents,
@@ -29,6 +37,7 @@ import manageStudents, {
   transferStudentsFailure,
   addStudentsFull,
   transferStudentsFull,
+  loadSectionStudentData,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import {sectionLoginFactory} from '../../../factories/sectionLogin';
@@ -1082,6 +1091,124 @@ describe('manageStudentsRedux', () => {
         sectionCode: 'ABCEDF',
         sectionStudentCount: 500,
       });
+    });
+  });
+
+  describe('load student data', () => {
+    const successResponse = (body = {}) => [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(body),
+    ];
+
+    const mockStudentData = [
+      {
+        id: 229,
+        name: 'new student',
+        username: 'coder_abc',
+        family_name: 'fam name',
+        age: 17,
+        sharing_disabled: true,
+        has_ever_signed_in: false,
+        ai_tutor_access_denied: false,
+        at_risk_age_gated: false,
+        child_account_compliance_state: null,
+        latest_permission_request_sent_at: null,
+        depends_on_this_section_for_login: true,
+      },
+    ];
+
+    let store, server;
+
+    let state = () => store.getState().manageStudents;
+
+    beforeEach(function () {
+      server = sinon.fakeServer.create();
+
+      stubRedux();
+      registerReducers({manageStudents: manageStudents});
+      store = getStore();
+    });
+
+    afterEach(function () {
+      server.restore();
+      restoreRedux();
+    });
+
+    it('loadSectionStudentData fetches student info from server', async () => {
+      let store = getStore();
+      let sectionId = 1;
+
+      // assert initial state
+      assert.equal(state().sectionId, null);
+      assert.deepEqual(state().studentData, {});
+      assert.equal(state().isLoadingStudents, true);
+
+      server.respondWith(
+        'GET',
+        `/dashboardapi/sections/${sectionId}/students`,
+        successResponse(mockStudentData)
+      );
+
+      store.dispatch(loadSectionStudentData(sectionId));
+
+      // assert section Id is set before getting response from server
+      assert.equal(state().sectionId, sectionId);
+
+      server.respond();
+      assert.equal(state().isLoadingStudents, false);
+      assert.equal(Object.keys(state().studentData).length, 1);
+    });
+
+    it('loadSectionStudentData is idempotent in fetching student info from server', async () => {
+      let store = getStore();
+      let sectionId = 1;
+
+      // assert initial state
+      assert.equal(state().sectionId, null);
+      assert.deepEqual(state().studentData, {});
+      assert.equal(state().isLoadingStudents, true);
+
+      server.respondWith(
+        'GET',
+        `/dashboardapi/sections/${sectionId}/students`,
+        successResponse(mockStudentData)
+      );
+
+      // send two events to load student data
+      store.dispatch(loadSectionStudentData(sectionId));
+      store.dispatch(loadSectionStudentData(sectionId));
+
+      server.respond();
+
+      // Assert only one request was made to set student data to ensure idempotency.
+      assert.equal(server.requests.length, 1);
+
+      assert.equal(state().sectionId, sectionId);
+      assert.equal(state().isLoadingStudents, false);
+      assert.equal(Object.keys(state().studentData).length, 1);
+    });
+
+    it('loadSectionStudentData failure fetching student info from server', async () => {
+      let store = getStore();
+      let sectionId = 1;
+
+      // assert initial state
+      assert.equal(state().sectionId, null);
+      assert.deepEqual(state().studentData, {});
+      assert.equal(state().isLoadingStudents, true);
+
+      server.respondWith(
+        'GET',
+        `/dashboardapi/sections/${sectionId}/students`,
+        [404, {}, '']
+      );
+
+      store.dispatch(loadSectionStudentData(sectionId));
+      server.respond();
+
+      assert.equal(state().sectionId, null);
+      assert.equal(state().isLoadingStudents, false);
     });
   });
 });

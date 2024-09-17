@@ -7,11 +7,10 @@ import {
 } from '@codebridge/redux/consoleRedux';
 
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {setLoadingCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
-
-import {setLoadingCodeEnvironment} from '../lab2/redux/systemRedux';
-import {MultiFileSource} from '../lab2/types';
 
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
@@ -101,10 +100,14 @@ const asyncRun = (() => {
   };
 })();
 
-const stopAndRestartPyodideWorker = () => {
-  pyodideWorker.terminate();
-  pyodideWorker = setUpPyodideWorker();
-  getStore().dispatch(appendSystemMessage('Program stopped.'));
+const restartPyodideIfProgramIsRunning = () => {
+  // Only restart if there are pending callbacks, as that means the worker is currently
+  // running a program.
+  if (Object.keys(callbacks).length > 0) {
+    pyodideWorker.terminate();
+    pyodideWorker = setUpPyodideWorker();
+    getStore().dispatch(appendSystemMessage('Program stopped.'));
+  }
 };
 
-export {asyncRun, stopAndRestartPyodideWorker};
+export {asyncRun, restartPyodideIfProgramIsRunning};

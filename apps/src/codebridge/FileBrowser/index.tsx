@@ -105,6 +105,7 @@ const InnerFileBrowser = React.memo(
         title,
         message,
         confirmText: codebridgeI18n.delete(),
+        destructive: true,
       });
     };
 
@@ -146,6 +147,7 @@ const InnerFileBrowser = React.memo(
         title,
         message,
         confirmText: codebridgeI18n.delete(),
+        destructive: true,
       });
     };
 

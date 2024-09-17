@@ -8,6 +8,8 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
@@ -43,6 +45,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   const submitTeacherAccount = () => {
+    sendFinishEvent();
+
     const userType = sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY);
     const email = sessionStorage.getItem(EMAIL_SESSION_KEY);
     const school = sessionStorage.getItem(SCHOOL_ID_SESSION_KEY);
@@ -66,6 +70,22 @@ const FinishTeacherAccount: React.FunctionComponent<{
         navigateToHref('/home');
       });
     });
+  };
+
+  const sendFinishEvent = (): void => {
+    const hasSchool = !!document.querySelector(
+      'select[name="user[school_info_attributes][school_id]"]'
+    );
+    analyticsReporter.sendEvent(
+      EVENTS.SIGN_UP_FINISHED_EVENT,
+      {
+        'user type': 'teacher',
+        'has school': hasSchool,
+        'has marketing value selected': true,
+        'has display name': !showNameError,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   return (

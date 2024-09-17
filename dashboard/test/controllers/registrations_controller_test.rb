@@ -900,4 +900,25 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_template partial: '_finish_sign_up'
     assert_select '#parent_email-container', 0
   end
+
+  test 'verifies lti users if they are a teacher' do
+    lti_teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+    Policies::Lti.expects(:lti?).returns(true).at_least(1)
+    Services::Lti.expects(:create_lti_user_identity).returns(:lti_user_identity).at_least(1)
+    Queries::Lti.expects(:get_lms_name_from_user).returns('test-lms')
+    post :create, params: {user: lti_teacher_params}
+
+    assert assigns(:user).verified_teacher?
+  end
+
+  test 'do not verify lti users if they are a student' do
+    Policies::Lti.expects(:lti?).returns(true).at_least(1)
+    Services::Lti.expects(:create_lti_user_identity).returns(:lti_user_identity).at_least(1)
+    Queries::Lti.expects(:get_lms_name_from_user).returns('test-lms')
+
+    post :create, params: {user: @default_params}
+
+    assigns(:user).expects(:verify_teacher!).never
+    refute assigns(:user).verified_teacher?
+  end
 end
