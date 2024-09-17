@@ -118,18 +118,11 @@ export default function SchoolInfoInterstitial({
     );
 
     try {
-      // analytics event is sent in useSchoolInfo
-      if (schoolInfo.schoolId === NO_SCHOOL_SETTING) {
-        onClose();
-        return;
-      }
-
-      // don't send non ncesId options to school info
       await updateSchoolInfo({
         formUrl,
         authTokenName,
         authTokenValue,
-        schoolId: hasNcesId ? schoolInfo.schoolId : '',
+        schoolId: schoolInfo.schoolId,
         country: schoolInfo.country,
         schoolName: schoolInfo.schoolName,
         schoolZip: schoolInfo.schoolZip,
