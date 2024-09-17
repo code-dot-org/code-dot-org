@@ -12,6 +12,7 @@ import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMar
 import {BlockMode, Triggers} from '../constants';
 
 import {BlockTypes} from './blockTypes';
+import {installFunctionBlocks} from './blockUtils';
 import {
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
@@ -41,7 +42,8 @@ export default class MusicBlocklyWorkspace {
       return;
     }
 
-    setUpBlocklyForMusicLab(blockMode);
+    setUpBlocklyForMusicLab();
+    installFunctionBlocks(blockMode);
     this.isBlocklyEnvironmentSetup = true;
   }
 

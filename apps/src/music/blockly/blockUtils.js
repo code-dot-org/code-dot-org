@@ -1,4 +1,10 @@
+import {PROCEDURES_IFRETURN} from '@cdo/apps/blockly/addons/plusMinusBlocks/advancedProcedures';
+
+import {BlockMode} from '../constants';
+import musicI18n from '../locale';
+
 import {BlockTypes} from './blockTypes';
+import {DOCS_BASE_URL} from './constants';
 
 /**
  * Generate code for the specified block but not following blocks.
@@ -56,3 +62,28 @@ export const isBlockInsideWhenRun = block => {
     block.getRootBlock().type
   );
 };
+
+// Override default function block implementation for the current block mode.
+export function installFunctionBlocks(blockMode) {
+  if (blockMode === BlockMode.ADVANCED) {
+    Blockly.cdoUtils.registerCustomAdvancedProcedureBlocks();
+    // Re-define if-return, in case it was deleted by Simple2 mode, below.
+    Blockly.common.defineBlocks({
+      procedures_ifreturn: PROCEDURES_IFRETURN,
+    });
+    // Replaces "variable:" with "parameter:" for added parameters
+    Blockly.Msg['PROCEDURE_VARIABLE'] = musicI18n.parameterLabel();
+  } else {
+    Blockly.cdoUtils.registerCustomProcedureBlocks();
+    // Remove two advanced blocks in the toolbox's Functions category that
+    // we don't want.
+    delete Blockly.Blocks.procedures_defreturn;
+    delete Blockly.Blocks.procedures_ifreturn;
+  }
+  // Sets the help URL for each function definiton block the appropriate
+  // entry in the Music Lab docs.
+  Blockly.Msg['PROCEDURES_DEFRETURN_HELPURL'] =
+    DOCS_BASE_URL + 'create_function';
+  Blockly.Msg['PROCEDURES_DEFNORETURN_HELPURL'] =
+    DOCS_BASE_URL + 'create_function';
+}

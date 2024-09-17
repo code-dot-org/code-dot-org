@@ -11,6 +11,7 @@ import {
   SourcesStore,
 } from '../../lab2/projects/SourcesStore';
 import {Channel} from '../../lab2/types';
+import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {BlockMode} from '../constants';
@@ -53,7 +54,8 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
   // Setup library and workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
-    setUpBlocklyForMusicLab(blockMode);
+    setUpBlocklyForMusicLab();
+    installFunctionBlocks(blockMode);
     workspaceRef.current.initHeadless();
     await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
