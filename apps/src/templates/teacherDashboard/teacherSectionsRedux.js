@@ -1447,6 +1447,7 @@ export const sectionFromServerSection = serverSection => ({
   syncEnabled: serverSection.sync_enabled,
   aiTutorEnabled: serverSection.ai_tutor_enabled,
   anyStudentHasProgress: serverSection.any_student_has_progress,
+  standaloneUnitId: serverSection.standalone_unit_id,
 });
 
 /**
