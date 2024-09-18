@@ -44,6 +44,17 @@ class Policies::LtiTest < ActiveSupport::TestCase
     assert_equal @ids[0], Policies::Lti.issuer(@user)
   end
 
+  test 'unverified_teacher? should determine if a user is an unverified teacher' do
+    # false if student
+    refute Policies::Lti.unverified_teacher?(@user)
+    # true if unverified teacher
+    teacher = create :teacher
+    assert Policies::Lti.unverified_teacher?(teacher)
+    # false if verified teacher
+    teacher = create :authorized_teacher
+    refute Policies::Lti.unverified_teacher?(teacher)
+  end
+
   test 'lti? should determine if user is an LTI user' do
     assert Policies::Lti.lti?(@user)
     auth_option = @user.authentication_options.find {|ao| ao.credential_type == AuthenticationOption::LTI_V1}
