@@ -11,14 +11,14 @@ import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
 import {
   findFolder,
   getErrorMessage,
-  getFileIcon,
+  getFileIconName,
   shouldShowFile,
 } from '@codebridge/utils';
-import classNames from 'classnames';
 import fileDownload from 'js-file-download';
 import React, {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -208,74 +208,64 @@ const InnerFileBrowser = React.memo(
         {Object.values(folders)
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map(f => {
-            const caret = (
-              <i
-                className={
-                  f.open ? 'fa-solid fa-caret-down' : 'fa-solid fa-caret-right'
-                }
-              />
-            );
-            return (
-              <li key={f.id + f.open}>
-                <div className={moduleStyles.row}>
-                  <span className={moduleStyles.title}>
-                    <span
-                      className={classNames(
-                        moduleStyles['caret-container'],
-                        moduleStyles.rowIcon
-                      )}
-                      onClick={() => toggleOpenFolder(f.id)}
-                    >
-                      {caret}
-                    </span>
-                    <span className={moduleStyles.nameContainer}>{f.name}</span>
-                  </span>
-                  {!isReadOnly && (
-                    <PopUpButton
-                      iconName="ellipsis-v"
-                      className={moduleStyles['button-kebab']}
-                    >
-                      <span className={moduleStyles['button-bar']}>
-                        <span onClick={() => renameFolderPrompt(f.id)}>
-                          <i className="fa-solid fa-pencil" />{' '}
-                          {codebridgeI18n.renameFolder()}
-                        </span>
-                        <span onClick={() => newFolderPrompt(f.id)}>
-                          <i className="fa-solid fa-folder-plus" />{' '}
-                          {codebridgeI18n.addSubFolder()}
-                        </span>
-                        <span onClick={() => newFilePrompt(f.id)}>
-                          <i className="fa-solid fa-plus" />{' '}
-                          {codebridgeI18n.addFile()}
-                        </span>
-                        <span onClick={() => handleDeleteFolder(f.id)}>
-                          <i className="fa-solid fa-trash" />{' '}
-                          {codebridgeI18n.deleteFolder()}
-                        </span>
+          .map(f => (
+            <li key={f.id + f.open}>
+              <div className={moduleStyles.row}>
+                <span
+                  className={moduleStyles.title}
+                  onClick={() => toggleOpenFolder(f.id)}
+                >
+                  <FontAwesomeV6Icon
+                    iconName={f.open ? 'caret-down' : 'caret-right'}
+                    iconStyle={'solid'}
+                    className={moduleStyles.rowIcon}
+                  />
+                  <span className={moduleStyles.nameContainer}>{f.name}</span>
+                </span>
+                {!isReadOnly && (
+                  <PopUpButton
+                    iconName="ellipsis-v"
+                    className={moduleStyles['button-kebab']}
+                  >
+                    <span className={moduleStyles['button-bar']}>
+                      <span onClick={() => renameFolderPrompt(f.id)}>
+                        <i className="fa-solid fa-pencil" />{' '}
+                        {codebridgeI18n.renameFolder()}
                       </span>
-                    </PopUpButton>
-                  )}
-                </div>
-                {f.open && (
-                  <ul>
-                    <InnerFileBrowser
-                      folders={folders}
-                      newFolderPrompt={newFolderPrompt}
-                      parentId={f.id}
-                      files={files}
-                      downloadFile={downloadFile}
-                      newFilePrompt={newFilePrompt}
-                      moveFilePrompt={moveFilePrompt}
-                      renameFilePrompt={renameFilePrompt}
-                      renameFolderPrompt={renameFolderPrompt}
-                      setFileType={setFileType}
-                    />
-                  </ul>
+                      <span onClick={() => newFolderPrompt(f.id)}>
+                        <i className="fa-solid fa-folder-plus" />{' '}
+                        {codebridgeI18n.addSubFolder()}
+                      </span>
+                      <span onClick={() => newFilePrompt(f.id)}>
+                        <i className="fa-solid fa-plus" />{' '}
+                        {codebridgeI18n.addFile()}
+                      </span>
+                      <span onClick={() => handleDeleteFolder(f.id)}>
+                        <i className="fa-solid fa-trash" />{' '}
+                        {codebridgeI18n.deleteFolder()}
+                      </span>
+                    </span>
+                  </PopUpButton>
                 )}
-              </li>
-            );
-          })}
+              </div>
+              {f.open && (
+                <ul>
+                  <InnerFileBrowser
+                    folders={folders}
+                    newFolderPrompt={newFolderPrompt}
+                    parentId={f.id}
+                    files={files}
+                    downloadFile={downloadFile}
+                    newFilePrompt={newFilePrompt}
+                    moveFilePrompt={moveFilePrompt}
+                    renameFilePrompt={renameFilePrompt}
+                    renameFolderPrompt={renameFolderPrompt}
+                    setFileType={setFileType}
+                  />
+                </ul>
+              )}
+            </li>
+          ))}
         {Object.values(files)
           .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
@@ -286,9 +276,13 @@ const InnerFileBrowser = React.memo(
                   className={moduleStyles.label}
                   onClick={() => openFile(f.id)}
                 >
-                  <i
-                    className={classNames(getFileIcon(f), moduleStyles.rowIcon)}
-                  />
+                  {getFileIconName(f) && (
+                    <FontAwesomeV6Icon
+                      iconName={getFileIconName(f)!}
+                      iconStyle={'regular'}
+                      className={moduleStyles.rowIcon}
+                    />
+                  )}
                   <span className={moduleStyles.nameContainer}>{f.name}</span>
                 </div>
                 {!isReadOnly && (

@@ -14,20 +14,17 @@ export function shouldShowFile(file: ProjectFile) {
     : file.type === ProjectFileType.STARTER || !file.type;
 }
 
-export function getFileIcon(file: ProjectFile) {
+export function getFileIconName(file: ProjectFile) {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  let icon = 'fa-regular ';
-  if (isStartMode) {
-    if (file.type === ProjectFileType.VALIDATION) {
-      icon += 'fa-flask';
-    } else if (file.type === ProjectFileType.SUPPORT) {
-      icon += 'fa-eye-slash';
-    } else {
-      // Starter files or files without a type, which default to starter.
-      icon += 'fa-eye';
-    }
-  } else {
-    icon += 'fa-file';
+  if (!isStartMode) {
+    return 'file';
   }
-  return icon;
+  if (file.type === ProjectFileType.VALIDATION) {
+    return 'flask';
+  } else if (file.type === ProjectFileType.SUPPORT) {
+    return 'eye-slash';
+  } else {
+    // Starter files or files without a type, which default to starter.
+    return 'eye';
+  }
 }

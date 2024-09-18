@@ -1,8 +1,9 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {ProjectFile} from '@codebridge/types';
-import {getFileIcon} from '@codebridge/utils';
+import {getFileIconName} from '@codebridge/utils';
 import React from 'react';
 
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
 
 import moduleStyles from './styles/fileTabs.module.scss';
@@ -23,7 +24,10 @@ const FileTab = ({file}: FileTabProps) => {
       key={file.id}
     >
       <span onClick={() => setActiveFile(file.id)}>
-        <i className={getFileIcon(file)} />
+        <FontAwesomeV6Icon
+          iconName={getFileIconName(file)}
+          iconStyle={'regular'}
+        />
         &nbsp;
         {file.name}
       </span>
