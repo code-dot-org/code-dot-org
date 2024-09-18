@@ -24,7 +24,7 @@ export const reviewersMap = {
     'react': 'platform',
     '@types/reactabular-table': 'student-labs',
     'aws-sdk': 'infrastructure',
-    'bootstrap-sass': 'student-labs',
+    'bootstrap-sass': 'acquisition-products-team',
     'browser-process-hrtime': 'student-labs',
     'buffer': 'code-tools',
     'canvg': 'student-labs',
