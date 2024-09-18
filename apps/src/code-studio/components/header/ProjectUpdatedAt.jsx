@@ -82,6 +82,7 @@ const styles = {
   container: {
     display: 'block',
     width: 160,
+    height: 16,
   },
   floatRight: {
     float: 'right',

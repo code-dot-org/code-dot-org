@@ -130,10 +130,11 @@ const styles = {
     position: 'relative',
     overflow: 'hidden',
     height: 40,
-    top: 3,
   },
   headerInner: {
     position: 'absolute',
+    display: 'flex',
+    alignItems: 'center',
   },
   scriptLinkWithUpdatedAt: {
     display: 'block',
