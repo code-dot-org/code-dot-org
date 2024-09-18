@@ -225,20 +225,14 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
   test 'unarchive archived sections when imported' do
     owner = create :teacher
 
-    section = OmniAuthSection.from_omniauth(
-      code: 'G-222222',
-      type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
-      owner_id: owner.id,
-      students: [],
-      )
-    section.reload
-    section.hidden = true
-    section = OmniAuthSection.from_omniauth(
-      code: 'G-222222',
-      type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+    section = create :section, user: owner, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM, hidden: true
+
+    OmniAuthSection.from_omniauth(
+      code: section.code,
+      type: section.login_type,
       owner_id: owner.id,
       students: [],
         )
-    refute section.hidden
+    refute section.reload.hidden
   end
 end
