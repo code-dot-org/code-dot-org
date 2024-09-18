@@ -69,7 +69,7 @@
     - posters.each do |poster|
       %swiper-slide
         .poster-wrapper
-          %a{href: "//downloads.code.org/posters/#{poster[:url]}", aria:{label: poster[:aria_label]}}
+          %a{href: "//downloads.code.org/posters/#{poster[:url]}", aria:{label: poster[:aria_label]}, target: "_blank", rel: "noopener noreferrer"}
             %img{src: "/images/#{poster[:thumbnail_img]}", alt: "", style: "width: 100%"}
             .overlay
 

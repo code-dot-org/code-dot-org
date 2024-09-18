@@ -61,6 +61,7 @@ const postersParams = {
 const emailsParams = {
   ...commonParams,
   autoHeight: true,
+  allowTouchMove: false,
 };
 
 const setSwiperParams = (swiper, params) => {
