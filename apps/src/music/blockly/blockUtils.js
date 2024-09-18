@@ -78,7 +78,7 @@ export function installFunctionBlocks(blockMode) {
     delete Blockly.Blocks.procedures_defreturn;
     delete Blockly.Blocks.procedures_ifreturn;
   }
-  // Sets the help URL for each function definiton block the appropriate
+  // Sets the help URL for each function definiton block to the appropriate
   // entry in the Music Lab docs.
   Blockly.Msg['PROCEDURES_DEFRETURN_HELPURL'] =
     DOCS_BASE_URL + 'create_function';
