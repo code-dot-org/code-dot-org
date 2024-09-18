@@ -76,10 +76,10 @@ theme: responsive_full_width
         =hoc_s("gen_ai_page.unlock_full_access_banner.button")
 
 %section
-  .wrapper.flex-container.justify-space-between.align-items-center
-    %figure.action-wrapper.solid-bg.col-45
+  .wrapper.ai-chat-lab.flex-container.justify-space-between.align-items-center
+    %figure.action-wrapper.solid-bg
       %img{src: "/images/ai/model-card-genai-example.png", alt: ""}
-    .text-wrapper.col-50
+    .text-wrapper
       %h2
         =hoc_s("gen_ai_page.new_ai_chat_lab.title")
       %p.body-two
@@ -123,3 +123,9 @@ theme: responsive_full_width
     %p
       =hoc_s('gen_ai_page.additional_resources.desc')
     = view "gen_ai_landing_page/additional_resources"
+
+%section
+  .flex-container.justify-center.wrap
+    %h5.strong.no-margin-bottom
+      =hoc_s("gen_ai_page.developed_in_partnership")
+    %img.afe-partnership-logo{src: "/images/AFE-dark-logo.png", alt: hoc_s(:afe_partnership_logo_alt)}
