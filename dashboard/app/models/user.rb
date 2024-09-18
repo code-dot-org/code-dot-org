@@ -1555,7 +1555,8 @@ class User < ApplicationRecord
   end
 
   def student_can_access_ai_chat?
-    teachers.any?(&:teacher_can_access_ai_chat?)
+    teachers.any?(&:teacher_can_access_ai_chat?) &&
+      sections_as_student.any?(&:assigned_gen_ai?)
   end
 
   def has_aichat_access?
