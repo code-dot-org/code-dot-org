@@ -122,6 +122,7 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
+    this.blockMode = null;
     this.musicValidator = new MusicValidator(
       this.getIsPlaying,
       this.getPlaybackEvents,
@@ -220,6 +221,12 @@ class UnconnectedMusicView extends React.Component {
   }
 
   async onLevelLoad(levelData, initialSources) {
+    const blockMode =
+      initialSources?.labConfig?.music?.blockMode ||
+      levelData?.blockMode ||
+      BlockMode.SIMPLE2;
+    this.setBlockMode(blockMode);
+
     installFunctionBlocks(this.getBlockMode());
     // Load and initialize the library and player if not done already.
     // Read the library name first from level data, or from the project
@@ -378,9 +385,11 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getBlockMode = () => {
-    return (
-      this.props.levelProperties?.levelData?.blockMode || BlockMode.SIMPLE2
-    );
+    return this.blockMode || BlockMode.SIMPLE2;
+  };
+
+  setBlockMode = blockMode => {
+    this.blockMode = blockMode;
   };
 
   updateHighlightedBlocks = () => {
@@ -401,10 +410,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getStartSources = () => {
-    if (
-      this.getBlockMode() !== BlockMode.SIMPLE2 ||
-      !this.props.levelProperties?.levelData?.startSources
-    ) {
+    if (!this.props.levelProperties?.levelData?.startSources) {
       const startSourcesFilename = 'startSources' + this.getBlockMode();
       return require(`@cdo/static/music/${startSourcesFilename}.json`);
     } else {
@@ -597,12 +603,13 @@ class UnconnectedMusicView extends React.Component {
       };
     }
 
-    // Also save the current pack to sources as part of labConfig.
+    // Also save the current pack and block mode to sources as part of labConfig.
+    sourcesToSave.labConfig ??= {};
+    sourcesToSave.labConfig.music ??= {};
     if (this.props.packId) {
-      sourcesToSave.labConfig ??= {};
-      sourcesToSave.labConfig.music ??= {};
       sourcesToSave.labConfig.music.packId = this.props.packId;
     }
+    sourcesToSave.labConfig.music.blockMode = this.getBlockMode();
 
     Lab2Registry.getInstance()
       .getProjectManager()

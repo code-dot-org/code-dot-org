@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import {ValueOf} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import noteImage from '@cdo/static/music/music-note.png';
 
@@ -18,7 +19,6 @@ import {BlockMode} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
-import {MusicLevelData} from '../types';
 
 import moduleStyles from './MiniMusicPlayer.module.scss';
 
@@ -45,25 +45,16 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const {userId, userType, signInState} = useAppSelector(
     state => state.currentUser
   );
-  const blockMode =
-    (
-      useAppSelector(
-        state => state.lab.levelProperties?.levelData
-      ) as MusicLevelData
-    )?.blockMode || BlockMode.SIMPLE2;
 
   // Setup library and workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
     setUpBlocklyForMusicLab();
+    installFunctionBlocks(BlockMode.SIMPLE2);
     workspaceRef.current.initHeadless();
     await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
     await analyticsReporter.current.startSession();
   }, [analyticsReporter, libraryName]);
-
-  useEffect(() => {
-    installFunctionBlocks(blockMode);
-  }, [blockMode]);
 
   useEffect(() => {
     onMount();
@@ -79,6 +70,9 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   // Optimization: cache code and/or compiled song after played once.
   const onPlaySong = useCallback(
     async (project: Channel) => {
+      const blockMode =
+        (project.labConfig?.music?.blockMode as ValueOf<typeof BlockMode>) ||
+        BlockMode.SIMPLE2;
       playerRef.current.stopSong();
       // Load code
       const projectSources = await sourcesStoreRef.current.load(project.id);
@@ -139,7 +133,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
         channelId: project.id,
       });
     },
-    [analyticsReporter, blockMode]
+    [analyticsReporter]
   );
 
   const onStopSong = useCallback(async () => {

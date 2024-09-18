@@ -56,12 +56,16 @@ const getEventHeight = (
  */
 const Timeline: React.FunctionComponent = () => {
   const isPlaying = useMusicSelector(state => state.music.isPlaying);
-  const blockMode =
-    (
-      useAppSelector(
-        state => state.lab.levelProperties?.levelData
-      ) as MusicLevelData
-    )?.blockMode || BlockMode.SIMPLE2;
+  const projectBlockMode = useAppSelector(
+    state => state.lab.channel?.labConfig?.music?.blockMode
+  );
+  const levelBlockMode = (
+    useAppSelector(
+      state => state.lab.levelProperties?.levelData
+    ) as MusicLevelData
+  )?.blockMode;
+  const blockMode = projectBlockMode || levelBlockMode || BlockMode.SIMPLE2;
+
   const dispatch = useDispatch();
   const currentPlayheadPosition = useMusicSelector(
     state => state.music.currentPlayheadPosition
