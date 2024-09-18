@@ -1,0 +1,77 @@
+:ruby
+  posters = [
+    {
+      url: "poster_minecraft.pdf",
+      aria_label: hoc_s(:poster_aria_label_minecraft),
+      thumbnail_img: "poster_minecraft.png"
+    },
+    {
+      url: "poster_dance_ai_01_v2.pdf",
+      aria_label: hoc_s(:poster_aria_label_dance_ai_01),
+      thumbnail_img: "poster_dance_ai_01_v2.png"
+    },
+    {
+      url: "poster_dance_ai_02_v2.pdf",
+      aria_label: hoc_s(:poster_aria_label_dance_ai_02),
+      thumbnail_img: "poster_dance_ai_02_v2.png"
+    },
+    {
+      url: "poster_oceans_01.pdf",
+      aria_label: hoc_s(:poster_aria_label_oceans_01),
+      thumbnail_img: "poster_oceans_01.png"
+    },
+    {
+      url: "poster_oceans_02.pdf",
+      aria_label: hoc_s(:poster_aria_label_oceans_02),
+      thumbnail_img: "poster_oceans_02.png"
+    },
+    {
+      url: "poster_steph.pdf",
+      aria_label: hoc_s(:poster_aria_label_steph),
+      thumbnail_img: "poster_steph.png"
+    },
+    {
+      url: "poster_malala.pdf",
+      aria_label: hoc_s(:poster_aria_label_malala),
+      thumbnail_img: "poster_malala.png"
+    },
+    {
+      url: "poster_hadi.pdf",
+      aria_label: hoc_s(:poster_aria_label_hadi),
+      thumbnail_img: "poster_hadi.png"
+    },
+    {
+      url: "poster_mary.pdf",
+      aria_label: hoc_s(:poster_aria_label_mary),
+      thumbnail_img: "poster_mary.png"
+    },
+    {
+      url: "poster_satya.pdf",
+      aria_label: hoc_s(:poster_aria_label_satya),
+      thumbnail_img: "poster_satya.png"
+    },
+    {
+      url: "poster_shakira.pdf",
+      aria_label: hoc_s(:poster_aria_label_shakira),
+      thumbnail_img: "poster_shakira.png"
+    },
+  ]
+
+%h2.overline-one.centered
+  =hoc_s("hoc_resources.sections.posters")
+%h3.heading-xl.centered
+  =hoc_s("hoc_resources.posters.heading")
+%p.body-two.centered
+  =hoc_s("hoc_resources.posters.desc")
+
+.carousel-wrapper
+  %swiper-container.posters{navigation: "true", "navigation-next-el": ".nav-next-posters", "navigation-prev-el": ".nav-prev-posters", pagination: "true", init: "false"}
+    - posters.each do |poster|
+      %swiper-slide
+        .poster-wrapper
+          %a{href: "//downloads.code.org/posters/#{poster[:url]}", aria:{label: poster[:aria_label]}}
+            %img{src: "/images/#{poster[:thumbnail_img]}", alt: "", style: "width: 100%"}
+            .overlay
+
+  %button.swiper-nav-prev.nav-prev-posters
+  %button.swiper-nav-next.nav-next-posters

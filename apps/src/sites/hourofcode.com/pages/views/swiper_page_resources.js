@@ -9,6 +9,7 @@ import {register} from 'swiper/element/bundle';
 register();
 
 const swiperVideos = document.querySelector('swiper-container.videos');
+const swiperPosters = document.querySelector('swiper-container.posters');
 const swiperEmails = document.querySelector('swiper-container.emails');
 
 const commonParams = {
@@ -27,11 +28,6 @@ const commonParams = {
   ],
 };
 
-const actionBlocksParams = {
-  ...commonParams,
-  autoHeight: true,
-};
-
 const videosParams = {
   ...commonParams,
   autoHeight: false,
@@ -45,6 +41,28 @@ const videosParams = {
   },
 };
 
+const postersParams = {
+  ...commonParams,
+  autoHeight: false,
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    },
+  },
+};
+
+const emailsParams = {
+  ...commonParams,
+  autoHeight: true,
+};
+
 const setSwiperParams = (swiper, params) => {
   Object.assign(swiper, params);
   swiper.initialize();
@@ -52,7 +70,8 @@ const setSwiperParams = (swiper, params) => {
 
 const swipers = [
   {swiper: swiperVideos, params: videosParams},
-  {swiper: swiperEmails, params: actionBlocksParams},
+  {swiper: swiperPosters, params: postersParams},
+  {swiper: swiperEmails, params: emailsParams},
 ];
 
 swipers.forEach(({swiper, params}) => setSwiperParams(swiper, params));
