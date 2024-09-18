@@ -26,6 +26,7 @@ import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {navigateToHref, linkWithQueryParams} from '@cdo/apps/utils';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
@@ -99,6 +100,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     state => state.lab2System.loadingCodeEnvironment
   );
 
+  const scriptName =
+    useAppSelector(state => state.progress.scriptName) || undefined;
+
   const dispatch = useAppDispatch();
 
   const {theme} = useContext(ThemeContext);
@@ -106,8 +110,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const vertical = layout === 'vertical';
 
   const onFinish = () => {
-    // no op for now
-    // Tracked here: https://codedotorg.atlassian.net/browse/CT-664
+    navigateToHref(linkWithQueryParams(`/s/${scriptName}`));
   };
 
   const onNextPanel = useCallback(() => {

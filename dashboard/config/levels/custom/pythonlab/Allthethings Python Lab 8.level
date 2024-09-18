@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-09-14T06:39:57.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print('Hello start!!')",
+          "folderId": "1",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "src",
+          "parentId": "0",
+          "open": true
+        }
+      }
+    },
+    "long_instructions": "## Non-submittable Last Level\r\nHere's a sample non-submittable level! This level should have a Finish button since it's last in the progression and not submittable.",
+    "hide_share_and_remix": "true",
+    "teacher_markdown": "Teachers should see this extra info.",
+    "submittable": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_available": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-13T16:39:57.615-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 7\\\"\"],\"cloned_from\":\"Allthethings Python Lab 7\"},{\"changed_at\":\"2024-09-13 16:42:08 -0700\",\"changed\":[\"long_instructions\",\"submittable\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"cassi.brenci+local@code.org\"}]"
+}]]></config>
+</Pythonlab>
