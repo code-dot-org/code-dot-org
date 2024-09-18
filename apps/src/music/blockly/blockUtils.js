@@ -1,4 +1,4 @@
-import {PROCEDURES_IFRETURN} from '@cdo/apps/blockly/addons/plusMinusBlocks/advancedProcedures';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
 import {BlockMode} from '../constants';
 import musicI18n from '../locale';
@@ -67,10 +67,8 @@ export const isBlockInsideWhenRun = block => {
 export function installFunctionBlocks(blockMode) {
   if (blockMode === BlockMode.ADVANCED) {
     Blockly.cdoUtils.registerCustomAdvancedProcedureBlocks();
-    // Re-define if-return, in case it was deleted by Simple2 mode, below.
-    Blockly.common.defineBlocks({
-      procedures_ifreturn: PROCEDURES_IFRETURN,
-    });
+    // Re-define blocks from core, in case they were deleted for Simple2 mode.
+    restoreBlockDefinitions();
     // Replaces "variable:" with "parameter:" for added parameters
     Blockly.Msg['PROCEDURE_VARIABLE'] = musicI18n.parameterLabel();
   } else {
@@ -86,4 +84,35 @@ export function installFunctionBlocks(blockMode) {
     DOCS_BASE_URL + 'create_function';
   Blockly.Msg['PROCEDURES_DEFNORETURN_HELPURL'] =
     DOCS_BASE_URL + 'create_function';
+}
+
+// Creates shallow copies of block definitions from core Blockly.
+// These definitions and overwritten by Simple2 but needed for advanced mode.
+// This makes it possible for us to switch block modes without a page reload.
+// See also: installFunctionBlocks
+export function backupFunctionDefinitons() {
+  Blockly.blockDefinitions = {};
+  const backupBlockDefinitionTypes = [
+    // Can potentially be overwritten by Simple2
+    BLOCK_TYPES.procedureCall,
+    // Can potentially be deleted by Simple2
+    BLOCK_TYPES.procedureIfReturn,
+  ];
+  backupBlockDefinitionTypes.forEach(type => {
+    Blockly.blockDefinitions[type] = Object.assign({}, Blockly.Blocks[type]);
+  });
+}
+
+// Re-defines blocks using previously stored definitions.
+// These definitions and overwritten by Simple2 but needed for advanced mode.
+// This makes it possible for us to switch block modes without a page reload.
+// See also: installFunctionBlocks
+function restoreBlockDefinitions() {
+  const blockDefinitions = {};
+
+  Object.keys(Blockly.blockDefinitions).forEach(type => {
+    blockDefinitions[type] = Blockly.blockDefinitions[type];
+  });
+
+  Blockly.common.defineBlocks(blockDefinitions);
 }

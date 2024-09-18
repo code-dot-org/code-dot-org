@@ -1,5 +1,6 @@
 import musicI18n from '../locale';
 
+import {backupFunctionDefinitons} from './blockUtils';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   FIELD_CHORD_TYPE,
@@ -29,6 +30,7 @@ import {BlockConfig} from './types';
  * Blockly state.
  */
 export function setUpBlocklyForMusicLab() {
+  backupFunctionDefinitons();
   Blockly.Extensions.register(
     DEFAULT_TRACK_NAME_EXTENSION,
     getDefaultTrackNameExtension()
