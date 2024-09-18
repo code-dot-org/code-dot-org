@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-09-17T22:45:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Intergalactic Travel\r\n\r\n::: details [**✅ Step 1**]\r\nFilter for all **Lux** class passengers that have a non-null *\"PassengerName\"*. Print the filtered DataFrame.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nFilter for all ship names that end in *\"Explorer\"*. Print the filtered DataFrame.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nFilter for all trips to the planet **Pandora** with a duration of greater than **6000** that occurred in the year **2302**. Print the filtered DataFrame.\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\nCalculate the **total** and **mean** *\"TicketPrice\"* for each *\"Class\"*.\r\n:::\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\n\n\ndf = pd.read_csv('intergalactic_travel_log.csv')\n\n# Step 1\n\n\n# Step 2\n\n\n# Step 3\n\n\n# Step 4\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "intergalactic_travel_log.csv",
+          "language": "csv",
+          "contents": "PassengerName,Planet,TravelDate,ShipName,Class,Duration,TicketPrice\nNova Star,Crait,9/1/2301,Celestial,Lux,2542,3700\nAri Morn,Krypton,1/3/2301,Quantum,Stellar,5810,3009\nRaya Orin,Mandalore,7/23/2301,Starship,Business,3477,807\nNix Hade,Scarif,7/31/2302,Pioneer,Economy,4732,716\nXylo Vorn,Mustafar,4/25/2302,Solar,First,6209,2142\nZen Kael,Dxun,1/30/2303,Quest,First,7359,1600\nNara Orin,Rishi,1/20/2302,Celestial,Stowage,4657,616\n,Zakuul,9/25/2303,Starship,Lux,6244,4420\nNara Dax,Endor,10/13/2303,Luminous,Stellar,9237,3850\nXan Krios,Onderon,3/9/2301,Runner,Business,4668,877\nZed Krios,Jakku,1/12/2303,Seeker,First,1339,1119\nLyra Solis,Pasaana,7/15/2301,Seeker,Economy,2797,622\nXan Krios,Felucia,4/22/2304,Seeker,Business,7648,1318\nTara Zen,Nar Shaddaa,5/26/2304,Meteor,Business,6541,1317\nOrin Pax,Sarapin,9/22/2301,Adventurer,Business,6538,1434\nCade Hade,Mon Cala,7/4/2303,Luminous,Business,9424,1608\nJuno Hade,Hoth,2/12/2301,Chaser,Business,7878,1265\nLex Pax,Atollon,12/26/2301,Solar,Business,5661,1008\nLuna Krios,Yavin,11/30/2303,Meteor,Economy,6399,925\nXan Orin,Ruusan,6/12/2303,Galaxy,Business,4411,1077\nLuna Krios,Sarapin,12/3/2303,Wind,Stowage,6553,764\nTara Zorin,Ryloth,4/5/2301,Quantum,Business,3356,1052\nNova Star,Ord Mantell,9/9/2301,Comet,Lux,6471,6085\nVoss Mar,Dxun,1/17/2304,Astro,Economy,7374,971\nKrax Lumis,Jakku,12/27/2303,Quest,Stowage,1355,313\n,Cybertron,11/19/2302,Wind,Stellar,4673,2262\nVega Dax,Ord Mantell,1/8/2303,Luminous,Business,6455,1109\nSol Drin,Mon Cala,7/2/2301,Eclipse,Business,9425,1356\nRian Zell,Onderon,9/9/2302,Star,Economy,4686,714\nLyra Kael,Pasaana,6/24/2304,Navigator,Business,2799,891\nXan Krios,Takodana,6/5/2302,Celestial,Economy,6439,912\nYara Voss,Xandar,7/12/2302,Wanderer,Economy,5442,855\nLyra Zorin,Mustafar,5/19/2302,Chaser,First,6203,1566\nMira Kael,Ruusan,4/6/2303,Seeker,Economy,4410,722\nNyla Voss,Kessel,9/26/2301,Runner,Stellar,4973,2914\nRian Zell,Pandora,5/7/2303,Traveler,First,7684,1673\nNova Star,Rishi,1/27/2302,Cruiser,Lux,4665,5075\nAria Morn,Sorgan,5/11/2301,Galaxy,Business,6891,1357\nSiri Solis,Coruscant,9/14/2303,Solar,First,8570,1783\nZed Rinn,Cybertron,1/5/2303,Expedition,First,4683,1563\nXander Pax,Nar Shaddaa,6/27/2302,Star,Stellar,6547,3083\nKai Fenn,Moraband,3/26/2302,Stellar Explorer,First,4782,1325\nVoss Mar,Raxus,9/23/2303,Starship,Economy,2342,606\nSiri Solis,Ruusan,6/13/2303,Seeker,Stellar,4403,2081\nNia Voss,Ilum,9/10/2301,Celestial,Stowage,2382,383\nDax Krios,Krypton,1/1/2301,Nebula,Stowage,5807,686\nSol Drin,Yavin,12/17/2302,Seeker,Economy,6393,986\nZen Kael,Yavin,1/30/2302,Astro,Economy,6382,996\nNia Zell,Umbara,10/25/2302,Starship,Stellar,5383,2578\nTess Hade,Scarif,8/19/2302,Quantum,Business,4738,1193\nLyra Solis,Dantooine,11/3/2302,Celestial,Economy,1676,488\nNia Wren,Umbara,4/27/2301,Meteor,Business,5376,1223\nRian Stark,Gallifrey,4/9/2302,Seeker,First,7935,1744\nLex Pax,Xandar,1/27/2302,Seeker,Economy,5437,943\n,Lira San,8/1/2302,Traveler,Business,3549,759\nCass Zen,Hypori,4/9/2303,Quantum,Stellar,2202,2470\nKian Dax,Pandora,5/10/2302,Cruiser,Business,6400,1121\nOna Trix,Dagobah,9/22/2303,Solar,Stowage,3484,452\nNia Wren,Ruusan,10/21/2302,Cruiser,Business,4406,1120\nJax Krios,Taris,1/25/2301,Eclipse,Economy,9135,1205\nOna Trix,Scarif,7/4/2303,Navigator,Stowage,4731,656\nCass Zen,Scarif,5/13/2301,Celestial,Economy,4750,765\nTara Zen,Hoth,7/22/2303,Pioneer,First,7886,2126\nYara Fenn,Takodana,12/7/2303,Voyage,Business,6445,1049\nZed Krios,Zanbar,11/13/2303,Seeker,Economy,3513,551\nOna Trix,Asgard,1/21/2302,Wind,Stowage,9801,1083\nRian Stark,Jedha,9/2/2301,Voyage,Business,8550,1558\nKian Dax,Eriadu,6/22/2302,Traveler,Economy,9405,1225\nXylo Vorn,Moraband,2/25/2303,Solar,First,4774,1890\nNova Star,Umbara,6/27/2302,Seeker,Lux,5381,5598\nKian Vex,Polis Massa,5/7/2302,Celestial,Economy,2923,607\nKian Stark,Pandora,3/18/2303,Eclipse,First,5806,1848\nRaya Dax,Moraband,2/17/2303,Stellar Explorer,First,4785,2041\n,Felucia,12/9/2301,Seeker,Economy,7652,1081\nDax Krios,Moraband,11/5/2301,Voyage,First,4786,1934\nJax Orin,Ziost,6/21/2302,Seeker,Economy,3744,758\nRyn Fenn,Ord Ibanna,11/6/2301,Luminous,Business,4401,888\nZen Dax,Yavin,7/8/2303,Adventurer,Economy,6394,853\nJax Krios,Ruusan,1/20/2301,Voyage,First,4409,1368\nNia Zell,D'Qar,9/17/2301,Quest,Business,1720,829\nXylo Vorn,Ryloth,10/3/2303,Wanderer,First,3343,1633\nOrin Pax,Taris,8/6/2302,Adventurer,First,9136,2047\nMira Zell,Sullust,2/9/2301,Cruiser,Economy,784,464\nAri Orin,Zanbar,9/11/2302,Quantum,First,3516,1176\nFenn Orin,Ord Mantell,11/12/2301,Navigator,First,6457,1510\nZed Rinn,Eadu,1/21/2301,Lunar Explorer,Business,7055,1157\nSiri Solis,Nal Hutta,10/11/2303,Seeker,Business,7853,1547\nKai Zell,Jakku,11/15/2301,Expedition,Business,1342,732\nLys Hade,Lira San,2/1/2302,Star,Economy,3555,611\nXan Orin,Kessel,6/28/2303,Quantum,Stellar,4964,3482\nXylo Vorn,Kessel,10/29/2303,Navigator,Stowage,4962,689\nOrin Pax,Ziost,2/6/2303,Astro,Stellar,3742,2137\nXander Pax,Polis Massa,4/12/2302,Star,Business,2923,1088\nJax Krios,Mygeeto,4/6/2301,Star,Economy,6590,902\n,Mustafar,1/28/2302,Eclipse,Business,6204,1159\nRian Stark,Lothal,8/3/2302,Meteor,Business,9355,1597\nNix Hade,Crait,3/16/2301,Nebula,Stowage,2544,438\nNia Voss,Ryloth,6/12/2301,Lunar Explorer,Economy,3352,685\nLyra Kael,Pasaana,8/28/2301,Wind,First,2786,1093\nKian Dax,Pasaana,7/14/2303,Adventurer,Business,2799,1037\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Intergalactic Travel Logs",
+    "bubble_choice_description": "Practice using pandas functions to filter a dataset that contains information about a series of fictional intergalactic trips.",
+    "thumbnail_url": "https://images.code.org/565f9cca41752e13b8215ddf1b38b298-space-travel.png",
+    "teacher_markdown": "**Student Takeaways:**\r\n- Students learn how to filter a dataset based on multiple conditions, including non-null values, specific string patterns, and categorical attributes. \r\n- Students understand how to calculate and interpret aggregate measures such as total and median values within specific categories, which is essential for summarizing data.\r\n\r\n**Possible Misconceptions and/or Difficulties:**\r\n- Students might confuse how to properly apply string methods like str.endswith() in combination with other filtering conditions.\r\n- There might be confusion about how to calculate aggregate measures like count and mean, particularly when grouping data by a specific category such as passenger class."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-17T22:45:05.988+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L10-L8a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L10-L8a_2024-pilot\"},{\"changed_at\":\"2024-09-17 22:48:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 22:49:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>
