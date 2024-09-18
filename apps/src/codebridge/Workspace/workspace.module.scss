@@ -53,10 +53,6 @@
   flex: 1;
 }
 
-.workspaceWorkarea.withStartMode {
-  grid-auto-rows: auto auto 1fr auto;
-}
-
 .workspaceWorkarea.withFileBrowser {
   grid-template-columns: 200px auto;
 }
