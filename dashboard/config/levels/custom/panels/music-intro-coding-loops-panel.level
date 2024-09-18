@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-08-29T19:30:53.000Z",
   "level_num": "custom",
@@ -7,28 +8,28 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "level_data": {
-      "panels": [
-        {
-          "imageUrl": "https://images.code.org/9a3cfe8efd26738ba55880562e01c534-Screen Shot 2024-02-22 at 2.17.37 PM.png",
-          "text": "You can play two sounds at the same time by using the *play together* block."
-        },
-        {
-          "imageUrl": "https://images.code.org/7a81496b67dddcf8594505d047ea30a3-play together.gif",
-          "text": "Drag two or more sounds into the *play together* block."
-        }
-      ]
-    },
     "name_suffix": "_v2",
     "panels": [
       {
+        "text": "###🔄 What is a loop? \n\n→ Loops repeat some code a set number of times.",
+        "imageUrl": "https://images.code.org/71b651bbe65cc691983890e09f00c974-repeat123.svg",
+        "key": "music-intro-coding-loops-panel-94d140b0-fa35-4df8-ac88-d72d4d6fbab5",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "###🤔Why use a loop?\n\n✓ Shorter and faster to code patterns\n\n✓ More organized code\n\n✓ Easier to change ",
+        "imageUrl": "https://images.code.org/c8350ac38c0e797593ed48faf233758d-loop.gif",
+        "key": "music-intro-coding-loops-panel-3e8b702b-5483-4f22-acb1-86d0a22e0e32",
+        "layout": "text-bottom-left"
+      },
+      {
         "imageUrl": "https://images.code.org/2843a02314c84e8efb37bfcfa95138ba-loop.gif",
-        "text": "###Repeat a sound\n\nChoose a sound and set the number of times to play it using a repeat block.\n",
-        "key": "musiclab_intro_panels_playtogether_pdx-a0d88b4a-e9a8-4641-8ec9-3ce98e7a1cc4"
+        "text": "###📝How to use a loop to repeat a sound:\n\n1. Move a sound into the repeat loop.\n\n2. Set the number of times to repeat!",
+        "key": "musiclab_intro_panels_playtogether_pdx-a0d88b4a-e9a8-4641-8ec9-3ce98e7a1cc4",
+        "layout": "text-top-left"
       }
     ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-29T19:30:53.648+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_repeat\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_repeat\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29T19:30:53.648+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_repeat\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_repeat\"},{\"changed_at\":\"2024-09-17 16:16:52 +0000\",\"changed\":[\"level_data\",\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 16:23:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 16:32:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 16:32:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:17:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:25:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:59:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 19:21:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 22:54:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 22:55:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 23:09:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

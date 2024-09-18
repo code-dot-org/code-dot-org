@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-09-17T20:26:32.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Airline Quality\r\n\r\n::: details [**✅ Step 1**]\r\nCreate a Pie Chart to continue to uncover insights into the question: ***How does the distribution of passengers across different classes relate to their satisfaction levels within those classes?***\r\n- First, group the data by `Class` and total the `Count` to get the total number of passengers by class.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n**Generate the Pie Chart:**\r\n- Use `plt.pie` to create a pie chart that shows the distribution of passengers across different classes.\r\n- Use `plt.title` and other parameters in `plt.pie()` (e.g., `autopct`, `startangle`) to label the chart and display the percentages.\r\n- Use `plt.show` to display the chart\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\n**Interpret the Stacked Bar Chart:**\r\n- What does the pie chart reveal about the distribution of passengers across different classes??  \r\n- How does this information **complement** the insights from the stacked bar chart you created in the previous airline ratings practice level?\r\n:::\r\n\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\n# Read the dataset\ndata = pd.read_csv('Airline_Ratings.csv')\n\n\n# Step 1 - Group the data\n\n\n# Step 2 - Generate a pie chart\n\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "Airline_Ratings.csv",
+          "language": "csv",
+          "contents": "Class,Satisfaction,Count\nBusiness,Neutral or Dissatisfied,18994\nBusiness,Satisfied,43166\nEconomy,Neutral or Dissatisfied,47366\nEconomy,Satisfied,10943\nEconomy Plus,Neutral or Dissatisfied,7092\nEconomy Plus,Satisfied,2319\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "teacher_markdown": "**What Students Should Take Away:**\r\n- Visualizing Class Distribution: Students should understand how to use groupby() and size() to create a pie chart that visualizes the distribution of passengers across different airline classes.\r\n- Interpreting Pie Charts: Students should be able to interpret the pie chart to understand how passenger distribution by class complements the satisfaction data in the stacked bar chart from the previous airline ratings practice level.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n- Students might think that more passengers in a class indicate higher satisfaction without considering the satisfaction levels shown in the stacked bar chart.\r\n  - Tip: Encourage students to compare the pie chart with the stacked bar chart. Discuss how class distribution might influence satisfaction levels.\r\n- Students may have difficulty connecting the insights from the pie chart to those from the stacked bar chart.\r\n  - Tip: Guide students through the process of analyzing both charts together. Discuss how class distribution might influence satisfaction levels and overall passenger experience.\r\n\r\n\r\n",
+    "display_name": "Airline Quality Ratings",
+    "bubble_choice_description": "Practice creating a **pie chart** to continue to answer a question about airline quality!",
+    "thumbnail_url": "https://images.code.org/3a1eb30553b7e33e5e4bf26c8b929dd6-dashboard.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-17T20:26:32.126+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L8-L9c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L8-L9c_2024-pilot\"},{\"changed_at\":\"2024-09-17 20:35:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 20:36:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 20:54:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

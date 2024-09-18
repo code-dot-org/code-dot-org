@@ -54,12 +54,12 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
   // Setup library and workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
-    setUpBlocklyForMusicLab();
+    setUpBlocklyForMusicLab(blockMode);
     workspaceRef.current.initHeadless();
     await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
     await analyticsReporter.current.startSession();
-  }, [analyticsReporter, libraryName]);
+  }, [analyticsReporter, blockMode, libraryName]);
 
   useEffect(() => {
     installFunctionBlocks(blockMode);

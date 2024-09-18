@@ -33,10 +33,11 @@ interface EditMusicLevelDataProps {
 const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
   initialLevelData,
 }) => {
+  const blockMode = initialLevelData?.blockMode || BlockMode.SIMPLE2;
   useEffect(() => {
-    setUpBlocklyForMusicLab();
+    setUpBlocklyForMusicLab(blockMode);
     globals.setPlayer(new MusicPlayer());
-  }, []);
+  }, [blockMode]);
 
   const [levelData, setLevelData] = useState(initialLevelData);
 
