@@ -1,19 +1,15 @@
+:ruby
+  sections = [
+    {id: "handouts", icon: "person-chalkboard"},
+    {id: "stickers", icon: "certificate"},
+    {id: "videos", icon: "film-simple"},
+    {id: "posters", icon: "image"},
+    {id: "emails", icon: "envelope-open"},
+    {id: "logos", icon: "arrow-down-to-square"}
+  ]
+
 %nav.section-nav
-  %a.link-button{href: "#handouts"}
-    %i{class: "fa-solid fa-person-chalkboard"}
-    =hoc_s("hoc_resources.sections.handouts")
-  %a.link-button{href: "#stickers"}
-    %i{class: "fa-solid fa-certificate"}
-    =hoc_s("hoc_resources.sections.stickers")
-  %a.link-button{href: "#videos"}
-    %i{class: "fa-solid fa-film-simple"}
-    =hoc_s("hoc_resources.sections.videos")
-  %a.link-button{href: "#posters"}
-    %i{class: "fa-solid fa-image"}
-    =hoc_s("hoc_resources.sections.posters")
-  %a.link-button{href: "#emails"}
-    %i{class: "fa-solid fa-envelope-open"}
-    =hoc_s("hoc_resources.sections.emails")
-  %a.link-button{href: "#logos"}
-    %i{class: "fa-solid fa-arrow-down-to-square"}
-    =hoc_s("hoc_resources.sections.logos")
+  - sections.each do |section|
+    %a.link-button{href: "#" + section[:id]}
+      %i{class: "fa-solid fa-#{section[:icon]}"}
+      = hoc_s("hoc_resources.sections.#{section[:id]}")
