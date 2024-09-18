@@ -55,7 +55,7 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders the component and dropdown with lessons', () => {
-    render(<LessonMaterialsContainer />);
+    render(<LessonMaterialsContainer courseName="CSD" />);
 
     screen.getByRole('combobox');
     screen.getByRole('option', {name: 'Lesson 1 — First lesson'});

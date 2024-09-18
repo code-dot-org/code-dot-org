@@ -7,7 +7,10 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
+import NoUnitAssignedView from './NoUnitAssignedView';
 import ResourceRow from './ResourceRow';
+
+import styles from './lesson-materials.module.scss';
 
 type Lesson = {
   name: string;
@@ -26,6 +29,7 @@ type Lesson = {
 };
 
 interface LessonMaterialsData {
+  unitId: number;
   title: string;
   unitNumber: number;
   lessons: Lesson[];
@@ -68,10 +72,18 @@ const createDisplayName = (lessonName: string, lessonPosition: number) => {
   });
 };
 
-const LessonMaterialsContainer: React.FC = () => {
+type LessonMaterialsContainerProps = {
+  courseName: string;
+};
+
+const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
+  courseName,
+}) => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
+  console.log('loadedData', loadedData);
   const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
   const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
+  const isUnitAssigned = useMemo(() => !!loadedData?.unitId, [loadedData]);
 
   const getLessonFromId = (lessonId: number): Lesson | null => {
     return lessons.find(lesson => lesson.id === lessonId) || null;
@@ -101,8 +113,8 @@ const LessonMaterialsContainer: React.FC = () => {
     [generateLessonDropdownOptions]
   );
 
-  return (
-    <div>
+  const defaultView = (
+    <>
       <SimpleDropdown
         labelText={i18n.chooseLesson()}
         isLabelVisible={false}
@@ -127,8 +139,22 @@ const LessonMaterialsContainer: React.FC = () => {
           ))}
         </div>
       )}
-    </div>
+    </>
   );
+
+  const renderView = () => {
+    if (!isUnitAssigned) {
+      return (
+        <div className={styles.centerContent}>
+          <NoUnitAssignedView courseName={courseName} />
+        </div>
+      );
+    } else {
+      return defaultView;
+    }
+  };
+
+  return <div>{renderView()}</div>;
 };
 
 export default LessonMaterialsContainer;

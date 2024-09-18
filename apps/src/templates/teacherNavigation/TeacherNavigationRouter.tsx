@@ -56,6 +56,7 @@ export interface Section {
   courseVersionName: string;
   courseOfferingId: number;
   unitId: number;
+  courseDisplayName: string;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -81,6 +82,20 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         ? state.teacherSections.sections[
             state.teacherSections.selectedSectionId
           ]
+        : null
+  );
+
+  const selectedSectionCourseName = useSelector(
+    (state: {
+      teacherSections: {
+        selectedSectionId: number | null;
+        sections: {[id: number]: Section};
+      };
+    }) =>
+      state.teacherSections.selectedSectionId
+        ? state.teacherSections.sections[
+            state.teacherSections.selectedSectionId
+          ].courseDisplayName
         : null
   );
 
@@ -237,7 +252,15 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={<LessonMaterialsContainer />}
+                element={
+                  <LessonMaterialsContainer
+                    courseName={
+                      selectedSectionCourseName
+                        ? selectedSectionCourseName
+                        : 'this course'
+                    }
+                  />
+                }
               />
             }
           />
@@ -312,6 +335,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       showAITutorTab,
       selectedSection,
       studioUrlPrefix,
+      selectedSectionCourseName,
     ]
   );
 

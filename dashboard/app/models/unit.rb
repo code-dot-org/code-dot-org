@@ -1600,7 +1600,7 @@ class Unit < ApplicationRecord
 
   def summarize_for_lesson_materials_view(user)
     summary = {
-      id: id,
+      unitId: id,
       title: title_for_display,
       name: name,
       unitNumber: unit_number,
