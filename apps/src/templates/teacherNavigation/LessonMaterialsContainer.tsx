@@ -7,7 +7,7 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
-import ResourceRow from './ResourceRow';
+import TeacherResources from './TeacherResources';
 
 type Lesson = {
   name: string;
@@ -108,24 +108,16 @@ const LessonMaterialsContainer: React.FC = () => {
         isLabelVisible={false}
         onChange={event => onDropdownChange(event.target.value)}
         items={lessonOptions}
-        selectedValue={
-          selectedLesson ? selectedLesson.id.toString() : 'no lesson'
-        }
+        selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
         name={'lessons-in-assigned-unit-dropdown'}
         size="s"
       />
-      {/*  Note that this only goes through Teacher resources - we have separate tickets to make sure that this is presented for all resources */}
       {selectedLesson && (
-        <div>
-          {selectedLesson.resources.Teacher.map(resource => (
-            <ResourceRow
-              key={resource.key}
-              unitNumber={unitNumber}
-              lessonNumber={selectedLesson.position}
-              resource={resource}
-            />
-          ))}
-        </div>
+        <TeacherResources
+          unitNumber={unitNumber}
+          lessonNumber={selectedLesson.position}
+          resources={selectedLesson.resources.Teacher}
+        />
       )}
     </div>
   );
