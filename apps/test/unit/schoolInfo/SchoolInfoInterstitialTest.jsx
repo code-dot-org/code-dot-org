@@ -267,7 +267,7 @@ describe('SchoolInfoInterstitial', () => {
       expect(screen.getByRole('button', {name: i18n.save()})).toBeDisabled();
     });
 
-    it('enables submit form if zip is provided and not in a school setting. However, update api is not called', async () => {
+    it('enables submit form if zip is provided and not in a school setting', async () => {
       await act(async () => {
         renderDefault({
           scriptData: {
@@ -287,7 +287,7 @@ describe('SchoolInfoInterstitial', () => {
 
       fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
 
-      expect(mockUpdateSchoolInfo).not.toHaveBeenCalled();
+      expect(mockUpdateSchoolInfo).toHaveBeenCalled();
     });
 
     it('enables submit with US and school id from dropdown', async () => {

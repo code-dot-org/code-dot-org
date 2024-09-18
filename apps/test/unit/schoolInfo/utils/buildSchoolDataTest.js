@@ -1,6 +1,7 @@
 import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';
 import {
-  NON_SCHOOL_OPTIONS_ARRAY,
+  NO_SCHOOL_SETTING,
+  NO_SCHOOL_SETTING_SCHOOL_NAME,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 
@@ -77,21 +78,29 @@ describe('buildSchoolData', () => {
     });
   });
 
+  it('should return school info with country, zip, schoolType, and schoolName when schoolId is NO_SCHOOL_SETTING', () => {
+    const result = buildSchoolData({
+      schoolId: NO_SCHOOL_SETTING,
+      country: 'US',
+      schoolName: '',
+      schoolZip: '12345',
+    });
+
+    expect(result).toEqual({
+      user: {
+        school_info_attributes: {
+          country: 'US',
+          school_name: NO_SCHOOL_SETTING_SCHOOL_NAME,
+          zip: '12345',
+          school_type: NO_SCHOOL_SETTING,
+        },
+      },
+    });
+  });
+
   it('should return undefined when neither schoolId nor country is provided', () => {
     const result = buildSchoolData({
       schoolId: '',
-      country: '',
-      schoolName: '',
-      schoolZip: '',
-    });
-
-    expect(result).toBeUndefined();
-  });
-
-  it('should return undefined when schoolId is in NON_SCHOOL_OPTIONS_ARRAY', () => {
-    const nonSchoolOption = NON_SCHOOL_OPTIONS_ARRAY[0];
-    const result = buildSchoolData({
-      schoolId: nonSchoolOption,
       country: '',
       schoolName: '',
       schoolZip: '',
