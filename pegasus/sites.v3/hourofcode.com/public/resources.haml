@@ -33,12 +33,7 @@ layout: wide_index
   -# Videos
   %section#videos
     .wrapper
-      %h2.overline-one.centered
-        =hoc_s("hoc_resources.sections.videos")
-      %h3.heading-xl.centered
-        =hoc_s("hoc_resources.videos.heading")
-      %p.body-two.centered
-        =hoc_s("hoc_resources.videos.desc")
+      = view :"resources/resources_videos"
 
   -# Posters
   %section#posters.bg-neutral-light
@@ -67,3 +62,5 @@ layout: wide_index
 
   -# Organized by Code.org
   = view :organized_by_cdo
+
+= view :swiper_page_resources

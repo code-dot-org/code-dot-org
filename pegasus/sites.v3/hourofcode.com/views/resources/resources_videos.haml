@@ -1,0 +1,61 @@
+:ruby
+  videos = [
+    {
+      youtube_code: 'VYqHGIR7a_k',
+      caption: hoc_s(:videos_creativity),
+      download_link: "//videos.code.org/social/creativity-is.mp4",
+    },
+    {
+      youtube_code: 'nKIu9yen5nc',
+      caption: hoc_s(:videos_what_most_schools_dont_teach),
+      download_link: "https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1",
+    },
+    {
+      youtube_code: 'FC5FbmsH4fw',
+      caption: hoc_s(:videos_hoc_2014),
+      download_link: "https://dl.dropbox.com/s/6yn0pr5gvkhhqcf/HoC-video-15mb.mp4?dl=1",
+    },
+    {
+      youtube_code: '6XvmhE1J9PY',
+      caption: hoc_s(:videos_obama_cs),
+      download_link: "",
+    },
+    {
+      youtube_code: 'qYZF6oIZtfc',
+      caption: hoc_s(:videos_anybody_can_learn),
+      download_link: "https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1",
+    },
+  ]
+
+%h2.overline-one.centered
+  =hoc_s("hoc_resources.sections.videos")
+%h3.heading-xl.centered
+  =hoc_s("hoc_resources.videos.heading")
+%p.body-two.centered
+  =hoc_s("hoc_resources.videos.desc")
+
+.carousel-wrapper.video-carousel
+  %swiper-container.videos{navigation: "true", "navigation-next-el": ".nav-next-videos", "navigation-prev-el": ".nav-prev-videos", pagination: "true", init: "false", "allow-touch-move": "false"}
+    - videos.each do |video|
+      -# Show playlist link for the second video
+      - if video == videos[1]
+        %swiper-slide
+          %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf", target: "_blank", rel: "noopener noreferrer"}
+            %figure
+              %img.dance-thumbnail-tile-img{src: "/images/fit-350/dance_playlist_thumbnail.png"}
+            %figcaption
+              =hoc_s(:videos_creativity_series)
+      %swiper-slide
+        %figure.video-responsive
+          %div
+            %iframe{allowfullscreen: "true", frameborder: "0", referrerpolicy: "strict-origin-when-cross-origin", src: "https://www.youtube-nocookie.com/embed/#{video[:youtube_code]}", width: "560", height: "315"}
+        .video-caption.flex-container.justify-space-between.wrap
+          %figcaption.no-margin-top.no-margin-bottom
+            = video[:caption]
+          %p.no-margin-bottom
+            %i{class: "fa-solid fa-download", style: "color: var(--brand_secondary_default);"}
+            %a{href: video[:download_link]}
+              =hoc_s(:call_to_action_download_video)
+
+  %button.swiper-nav-prev.nav-prev-videos
+  %button.swiper-nav-next.nav-next-videos
