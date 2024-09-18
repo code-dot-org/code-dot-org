@@ -1,6 +1,5 @@
 import {Block, Generator} from 'blockly';
 
-import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 import musicI18n from '../locale';
 
@@ -33,8 +32,9 @@ import {BlockConfig} from './types';
  * Set up the global Blockly environment for Music Lab. This should
  * only be called once per page load, as it configures the global
  * Blockly state.
+ * @param {string} blockMode - The block mode to determine whether advanced blocks should be registered.
  */
-export function setUpBlocklyForMusicLab() {
+export function setUpBlocklyForMusicLab(blockMode: string | undefined) {
   Blockly.Extensions.register(
     DEFAULT_TRACK_NAME_EXTENSION,
     getDefaultTrackNameExtension()
@@ -57,7 +57,7 @@ export function setUpBlocklyForMusicLab() {
     Blockly.JavaScript[blockType] = blockConfig.generator;
   }
 
-  if (getBlockMode() !== BlockMode.ADVANCED) {
+  if (blockMode !== BlockMode.ADVANCED) {
     // Override default function block implementation.
     Blockly.cdoUtils.registerCustomProcedureBlocks();
 
