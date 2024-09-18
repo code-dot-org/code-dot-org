@@ -51,7 +51,6 @@ nav.section-nav {
 }
 
 section#handouts {
-
   .action-block {
     margin-top: 2.5rem;
   }
@@ -65,6 +64,16 @@ section#videos {
 
   .dance-thumbnail-tile-img {
     width: 100%;
+  }
+}
+
+section#emails {
+  .action-block {
+    width: 100%;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 

@@ -9,6 +9,7 @@ import {register} from 'swiper/element/bundle';
 register();
 
 const swiperVideos = document.querySelector('swiper-container.videos');
+const swiperEmails = document.querySelector('swiper-container.emails');
 
 const commonParams = {
   pagination: {
@@ -26,10 +27,10 @@ const commonParams = {
   ],
 };
 
-// const actionBlocksParams = {
-//   ...commonParams,
-//   autoHeight: false,
-// };
+const actionBlocksParams = {
+  ...commonParams,
+  autoHeight: true,
+};
 
 const videosParams = {
   ...commonParams,
@@ -49,6 +50,9 @@ const setSwiperParams = (swiper, params) => {
   swiper.initialize();
 };
 
-const swipers = [{swiper: swiperVideos, params: videosParams}];
+const swipers = [
+  {swiper: swiperVideos, params: videosParams},
+  {swiper: swiperEmails, params: actionBlocksParams},
+];
 
 swipers.forEach(({swiper, params}) => setSwiperParams(swiper, params));

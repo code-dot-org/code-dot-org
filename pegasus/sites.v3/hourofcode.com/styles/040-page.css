@@ -445,7 +445,7 @@ swiper-slide {
 .carousel-wrapper .swiper-nav-prev,
 .carousel-wrapper .swiper-nav-next {
   position: absolute;
-  top: 40%;
+  top: calc(50% - 3.25rem);
   border: 0;
   height: 48px;
 }
