@@ -13,9 +13,11 @@ import {
 import {Channel} from '../../lab2/types';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
+import {BlockMode} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
+import {MusicLevelData} from '../types';
 
 import moduleStyles from './MiniMusicPlayer.module.scss';
 
@@ -42,15 +44,21 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const {userId, userType, signInState} = useAppSelector(
     state => state.currentUser
   );
+  const blockMode =
+    (
+      useAppSelector(
+        state => state.lab.levelProperties?.levelData
+      ) as MusicLevelData
+    )?.blockMode || BlockMode.SIMPLE2;
 
   // Setup library and workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
-    setUpBlocklyForMusicLab();
+    setUpBlocklyForMusicLab(blockMode);
     workspaceRef.current.initHeadless();
     await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
     await analyticsReporter.current.startSession();
-  }, [analyticsReporter, libraryName]);
+  }, [analyticsReporter, blockMode, libraryName]);
 
   useEffect(() => {
     onMount();
@@ -74,7 +82,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       );
 
       // Compile song
-      workspaceRef.current.compileSong({Sequencer: sequencerRef.current});
+      workspaceRef.current.compileSong(
+        {Sequencer: sequencerRef.current},
+        blockMode
+      );
 
       // Execute compiled song
       // Sequence out all possible trigger events to preload sounds if necessary.
@@ -123,7 +134,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
         channelId: project.id,
       });
     },
-    [analyticsReporter]
+    [analyticsReporter, blockMode]
   );
 
   const onStopSong = useCallback(async () => {
