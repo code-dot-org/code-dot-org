@@ -25,6 +25,11 @@ services:
         echo 'Be sure to have the following in your locals.yml to link to the contained services:' &&
         echo 'These will allow you to connect to the database with: ./bin/mysql-client-admin' &&
         echo &&
+        echo '# Redis connections' &&
+        echo 'geocoder_redis_url: redis://localhost:${REDIS_NATIVE_PORT}/0/geocoder' &&
+        echo 'session_store_server: redis://localhost:${REDIS_NATIVE_PORT}/0/session' &&
+        echo &&
+        echo '# MySQL connections' &&
         echo 'db_writer: mysql://root:password@127.0.0.1:${MYSQL_NATIVE_PORT:-3306}/' &&
         echo 'db_endpoint_writer: 127.0.0.1:${MYSQL_NATIVE_PORT:-3306}' &&
         echo 'db_credential_admin:' &&

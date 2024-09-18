@@ -10,7 +10,7 @@ services:
   redis-contained: 
     <<: *redis-base
     expose:
-      - "6379"
+      - "${REDIS_NATIVE_PORT}"
     networks:
       cdo_network_test:
       cdo_network:
@@ -18,4 +18,4 @@ services:
   redis:
     <<: *redis-base
     ports:
-      - "6379:6379"
+      - "${REDIS_NATIVE_PORT:-6379}:6379"
