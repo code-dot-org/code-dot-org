@@ -9,7 +9,6 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ValueOf} from '@cdo/apps/types/utils';
 
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {getBlockMode} from '../appConfig';
 import {BlockMode, Triggers} from '../constants';
 
 import {BlockTypes} from './blockTypes';
@@ -37,12 +36,12 @@ export default class MusicBlocklyWorkspace {
 
   // Setup the global Blockly environment for Music Lab.
   // This should only happen once per page load.
-  public static setupBlocklyEnvironment() {
+  public static setupBlocklyEnvironment(blockMode: ValueOf<typeof BlockMode>) {
     if (this.isBlocklyEnvironmentSetup) {
       return;
     }
 
-    setUpBlocklyForMusicLab();
+    setUpBlocklyForMusicLab(blockMode);
     this.isBlocklyEnvironmentSetup = true;
   }
 
@@ -80,7 +79,7 @@ export default class MusicBlocklyWorkspace {
     isReadOnlyWorkspace: boolean,
     toolbox: ToolboxData | undefined,
     isRtl: boolean,
-    blockMode: ValueOf<typeof BlockMode> = getBlockMode()
+    blockMode: ValueOf<typeof BlockMode>
   ) {
     if (this.workspace) {
       this.workspace.dispose();
@@ -166,8 +165,9 @@ export default class MusicBlocklyWorkspace {
    * Generates executable JavaScript code for all blocks in the workspace.
    *
    * @param scope Global scope to provide the execution runtime
+   * @param blockMode Current block mode, such as "simple2" or "advanced"
    */
-  compileSong(scope: object) {
+  compileSong(scope: object, blockMode: ValueOf<typeof BlockMode>) {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'compileSong called before workspace initialized.'
@@ -182,7 +182,7 @@ export default class MusicBlocklyWorkspace {
     const topBlocks = this.workspace.getTopBlocks();
 
     topBlocks.forEach(block => {
-      if (getBlockMode() !== BlockMode.SIMPLE2) {
+      if (blockMode !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
           this.compiledEvents.whenRunButton = {
             code:
@@ -234,10 +234,11 @@ export default class MusicBlocklyWorkspace {
           args: ['startPosition'],
         };
         // Also save the value of the trigger start field at compile time so we can
-        // compute the correct start time at each invocation.
-        this.triggerIdToStartType[triggerIdToEvent(id)] = block.getFieldValue(
-          FIELD_TRIGGER_START_NAME
-        );
+        // compute the correct start time at each invocation. For blocks without this
+        // field, such as in advanced mode, the start time is immediately.
+        this.triggerIdToStartType[triggerIdToEvent(id)] =
+          block.getFieldValue(FIELD_TRIGGER_START_NAME) ||
+          TriggerStart.IMMEDIATELY;
       }
     });
 
@@ -335,10 +336,6 @@ export default class MusicBlocklyWorkspace {
    */
   getTriggerStartPosition(id: string, currentPosition: number) {
     const triggerStart = this.triggerIdToStartType[triggerIdToEvent(id)];
-
-    if (getBlockMode() === BlockMode.ADVANCED) {
-      return currentPosition;
-    }
 
     if (!triggerStart) {
       console.warn('No compiled trigger with ID: ' + id);
