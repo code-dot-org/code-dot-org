@@ -8,7 +8,10 @@ import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ControlButtons from './ControlButtons';
 import GraphModal from './GraphModal';
@@ -29,8 +32,9 @@ const Console: React.FunctionComponent = () => {
 
   const clearOutput = useCallback(() => {
     dispatch(resetOutput());
+    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
     setGraphModalOpen(false);
-  }, [dispatch]);
+  }, [dispatch, appName]);
 
   // Clear console when we change levels.
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, clearOutput);
@@ -42,6 +46,7 @@ const Console: React.FunctionComponent = () => {
   }, [codeOutput]);
 
   const popOutGraph = (index: number) => {
+    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_POP_OUT_IMAGE, appName);
     setActiveGraphIndex(index);
     setGraphModalOpen(true);
   };

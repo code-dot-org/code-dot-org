@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
@@ -120,6 +120,12 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       });
   };
 
+  // Scroll to bottom of content when a new message comes in
+  const chatWindowRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    chatWindowRef.current?.lastElementChild?.scrollIntoView();
+  }, [messageHistory]);
+
   return (
     <Draggable
       defaultPosition={{x: positionX, y: positionY}}
@@ -152,7 +158,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         </div>
 
         <div className={style.fabBackground}>
-          <div className={style.chatContent}>
+          <div className={style.chatContent} ref={chatWindowRef}>
             {messageHistory.map((item: ChatItem, id: number) =>
               Array.isArray(item) ? (
                 <AiDiffSuggestedPrompts

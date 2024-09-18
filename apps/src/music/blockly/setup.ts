@@ -28,6 +28,7 @@ import {BlockConfig} from './types';
  * Set up the global Blockly environment for Music Lab. This should
  * only be called once per page load, as it configures the global
  * Blockly state.
+ * @param {string} blockMode - The block mode to determine whether advanced blocks should be registered.
  */
 export function setUpBlocklyForMusicLab() {
   backupFunctionDefinitons();

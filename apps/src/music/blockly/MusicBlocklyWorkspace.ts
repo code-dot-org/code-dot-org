@@ -36,7 +36,7 @@ export default class MusicBlocklyWorkspace {
 
   // Setup the global Blockly environment for Music Lab.
   // This should only happen once per page load.
-  public static setupBlocklyEnvironment() {
+  public static setupBlocklyEnvironment(blockMode: ValueOf<typeof BlockMode>) {
     if (this.isBlocklyEnvironmentSetup) {
       return;
     }

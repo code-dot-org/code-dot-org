@@ -3,7 +3,10 @@ import React, {useEffect, useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ForTeachersOnly from './ForTeachersOnly';
 import HelpAndTips from './HelpAndTips';
@@ -28,6 +31,12 @@ const panelProps = {
   [Panels.ForTeachersOnly]: {},
 };
 
+const panelEventNames = {
+  [Panels.Instructions]: EVENTS.CODEBRIDGE_INSTRUCTIONS_TOGGLE,
+  [Panels.HelpAndTips]: EVENTS.CODEBRIDGE_HELP_TIPS_TOGGLE,
+  [Panels.ForTeachersOnly]: EVENTS.CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE,
+};
+
 export const InfoPanel = React.memo(() => {
   const mapReference = useAppSelector(
     state => state.lab.levelProperties?.mapReference
@@ -47,6 +56,7 @@ export const InfoPanel = React.memo(() => {
   const hasPredictSolution = useAppSelector(
     state => !!state.lab.levelProperties?.predictSettings?.solution
   );
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   useEffect(() => {
     // For now, always include Instructions panel.
@@ -96,7 +106,10 @@ export const InfoPanel = React.memo(() => {
   };
 
   const changePanel = (panel: Panels) => {
-    setCurrentPanel(panel);
+    if (panel !== currentPanel) {
+      setCurrentPanel(panel);
+      sendCodebridgeAnalyticsEvent(panelEventNames[panel], appName);
+    }
     setIsDropdownOpen(false);
   };
 
