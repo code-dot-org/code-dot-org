@@ -2,7 +2,7 @@ class TeacherDashboardController < ApplicationController
   load_and_authorize_resource :section
 
   rescue_from CanCan::AccessDenied do
-    if params[:course_name] && (current_user&.user_type == "student")
+    if params[:course_name]
       redirect_to "/course/#{params[:course_name]}"
     else
       redirect_to "/home"
