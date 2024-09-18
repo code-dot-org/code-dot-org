@@ -28,12 +28,12 @@ Feature: OneTrust integration
   
   Scenario: The pages load the self hosted OneTrust libraries.
     Given I am on "http://studio.code.org/users/sign_in"
-    Then element "script[src$='onetrust/scripttemplates/otSDKStub.js']" does exist
+    Then element "script[src$='onetrust/cdo/scripttemplates/otSDKStub.js']" does exist
     Then element "script[src$='977d/OtAutoBlock.js']" does exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
 
     Given I am on "http://code.org/index"
-    Then element "script[src$='onetrust/scripttemplates/otSDKStub.js']" does exist
+    Then element "script[src$='onetrust/cdo/scripttemplates/otSDKStub.js']" does exist
     Then element "script[src$='977d/OtAutoBlock.js']" does exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
 
