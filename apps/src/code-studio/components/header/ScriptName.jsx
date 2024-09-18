@@ -103,18 +103,11 @@ class ScriptName extends React.Component {
           ref="scriptName"
           style={{...styles.headerInner, height: 40}}
         >
-          <div
-            style={
-              this.props.isRtl
-                ? styles.outerContainerRtl
-                : styles.outerContainer
-            }
-          >
+          <div style={styles.outerContainer}>
             <div style={styles.containerWithUpdatedAt}>
               {this.renderScriptLink()}
               <ProjectUpdatedAt
                 onContentUpdated={this.onProjectUpdatedAtContentUpdated}
-                floatRight={!this.props.isRtl}
               />
             </div>
           </div>
@@ -130,7 +123,6 @@ const styles = {
     position: 'relative',
     overflow: 'hidden',
     height: 40,
-    top: 3,
   },
   headerInner: {
     position: 'absolute',
@@ -140,9 +132,6 @@ const styles = {
   },
   outerContainer: {
     textAlign: 'right',
-  },
-  outerContainerRtl: {
-    textAlign: 'left',
   },
   containerWithUpdatedAt: {
     verticalAlign: 'bottom',
