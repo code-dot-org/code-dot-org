@@ -1,6 +1,7 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen, waitFor, fireEvent} from '@testing-library/react';
 import React from 'react';
 import '@testing-library/jest-dom';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import locale from '@cdo/apps/signUpFlow/locale';
 import LoginTypeSelection from '@cdo/apps/signUpFlow/LoginTypeSelection';
@@ -8,11 +9,19 @@ import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
   getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
 }));
+
+jest.mock('@cdo/apps/utils', () => ({
+  ...jest.requireActual('@cdo/apps/utils'),
+  navigateToHref: jest.fn(),
+}));
+
+const navigateToHrefMock = navigateToHref as jest.Mock;
 
 describe('LoginTypeSelection', () => {
   afterEach(() => {
@@ -23,8 +32,11 @@ describe('LoginTypeSelection', () => {
     render(<LoginTypeSelection />);
   }
 
-  it('renders headers, buttons and inputs', () => {
-    renderDefault();
+  it('renders headers, buttons and inputs', async () => {
+    await waitFor(() => {
+      renderDefault();
+    });
+
     // Renders page title
     screen.getByText(locale.pick_your_login_method());
     screen.getByText(locale.sign_up_with());
@@ -46,8 +58,10 @@ describe('LoginTypeSelection', () => {
     screen.getByRole('button', {name: locale.create_my_account()});
   });
 
-  it('enables the confirm button only when all inputs are valid', () => {
-    renderDefault();
+  it('enables the confirm button only when all inputs are valid', async () => {
+    await waitFor(() => {
+      renderDefault();
+    });
 
     const emailInput = screen.getByLabelText(locale.email_address());
     const passwordInput = screen.getByLabelText(locale.password());
@@ -58,34 +72,106 @@ describe('LoginTypeSelection', () => {
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.create_my_account(),
     }) as HTMLButtonElement;
-
-    expect(finishSignUpButton).toBeDisabled();
+    await waitFor(() => {
+      expect(finishSignUpButton).toBeDisabled();
+    });
 
     // Verify that the button is only enabled when all fields are valid
-    fireEvent.change(emailInput, {target: {value: 'myrandomemail@gmail.com'}});
-    expect(finishSignUpButton).toBeDisabled();
+    fireEvent.change(emailInput, {
+      target: {value: 'myrandomemail@gmail.com'},
+    });
+    await waitFor(() => {
+      expect(finishSignUpButton).toBeDisabled();
+    });
 
     fireEvent.change(passwordInput, {target: {value: 'password'}});
-    expect(finishSignUpButton).toBeDisabled();
+    await waitFor(() => {
+      expect(finishSignUpButton).toBeDisabled();
+    });
 
     fireEvent.change(confirmPasswordInput, {target: {value: 'password'}});
-    expect(finishSignUpButton).not.toBeDisabled();
+    await waitFor(() => {
+      expect(finishSignUpButton).not.toBeDisabled();
+    });
   });
 
-  it('clicks the create account button when Enter is pressed if the button is enabled', () => {
-    renderDefault();
+  it('clicking the create account button triggers fetch call and redirects user', async () => {
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(Promise.resolve(new Response()));
 
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up create account button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.create_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in required fields
+    const email = 'myrandomemail@gmail.com';
+    const password = 'password';
     const emailInput = screen.getByLabelText(locale.email_address());
     const passwordInput = screen.getByLabelText(locale.password());
     const confirmPasswordInput = screen.getByLabelText(
       locale.confirm_password()
     );
 
+    fireEvent.change(emailInput, {
+      target: {value: email},
+    });
+    fireEvent.change(passwordInput, {target: {value: password}});
+    fireEvent.change(passwordInput, {target: {value: password}});
+    fireEvent.change(confirmPasswordInput, {target: {value: password}});
+    await waitFor(() => {
+      expect(finishSignUpButton).not.toBeDisabled();
+    });
+
+    // Click create account button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the button's fetch method was called
+      expect(fetchSpy).toHaveBeenCalled;
+      const fetchCall = fetchSpy.getCall(0);
+      expect(fetchCall.args[0]).toEqual(
+        `/users/begin_sign_up?new_sign_up=true&email=${email}&password=${password}&password_confirmation=${password}`
+      );
+
+      // Verify the user is redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledWith(
+        '/users/new_sign_up/finish_student_account'
+      );
+    });
+
+    fetchSpy.restore();
+  });
+
+  it('clicks the create account button when Enter is pressed if the button is enabled', async () => {
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(Promise.resolve(new Response()));
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    const email = 'myrandomemail@gmail.com';
+    const password = 'password';
+    const emailInput = screen.getByLabelText(locale.email_address());
+    const passwordInput = screen.getByLabelText(locale.password());
+    const confirmPasswordInput = screen.getByLabelText(
+      locale.confirm_password()
+    );
+
+    // Set up create account button onClick jest function
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.create_my_account(),
     }) as HTMLButtonElement;
-
-    // Mock the click handler
     const handleClick = jest.fn();
     finishSignUpButton.onclick = handleClick;
 
@@ -93,24 +179,50 @@ describe('LoginTypeSelection', () => {
     fireEvent.keyDown(document, {key: 'Enter', code: 'Enter', charCode: 13});
 
     // Verify the button's click handler was never called
-    expect(handleClick).not.toHaveBeenCalled();
+    await waitFor(() => {
+      expect(handleClick).not.toHaveBeenCalled();
+    });
 
     // Ensure the button is enabled
-    fireEvent.change(emailInput, {target: {value: 'myrandomemail@gmail.com'}});
-    fireEvent.change(passwordInput, {target: {value: 'password'}});
-    fireEvent.change(confirmPasswordInput, {target: {value: 'password'}});
-    expect(finishSignUpButton).not.toBeDisabled();
+    fireEvent.change(emailInput, {
+      target: {value: email},
+    });
+    fireEvent.change(passwordInput, {target: {value: password}});
+    fireEvent.change(passwordInput, {target: {value: password}});
+    fireEvent.change(confirmPasswordInput, {target: {value: password}});
+
+    await waitFor(() => {
+      expect(finishSignUpButton).not.toBeDisabled();
+    });
 
     // Simulate pressing Enter
     fireEvent.keyDown(document, {key: 'Enter', code: 'Enter', charCode: 13});
 
-    // Verify the button's click handler was called
-    expect(handleClick).toHaveBeenCalled();
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the button's fetch method was called
+      expect(fetchSpy).toHaveBeenCalled;
+      const fetchCall = fetchSpy.getCall(0);
+      expect(fetchCall.args[0]).toEqual(
+        `/users/begin_sign_up?new_sign_up=true&email=${email}&password=${password}&password_confirmation=${password}`
+      );
+
+      // Verify the user is redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledWith(
+        '/users/new_sign_up/finish_student_account'
+      );
+    });
+
+    fetchSpy.restore();
   });
 
-  it('if user selected student then finish sign up button sends user to finish student page', () => {
+  it('if user selected student then finish sign up button sends user to finish student page', async () => {
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'student');
-    renderDefault();
+    await waitFor(() => {
+      renderDefault();
+    });
 
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.create_my_account(),
@@ -122,9 +234,11 @@ describe('LoginTypeSelection', () => {
     ).toBeTruthy;
   });
 
-  it('if user selected teacher then finish sign up button sends user to finish teacher page', () => {
+  it('if user selected teacher then finish sign up button sends user to finish teacher page', async () => {
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'teacher');
-    renderDefault();
+    await waitFor(() => {
+      renderDefault();
+    });
 
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.create_my_account(),
@@ -136,19 +250,26 @@ describe('LoginTypeSelection', () => {
     ).toBeTruthy;
   });
 
-  it('valid email is stored in sessionStorage', () => {
-    renderDefault();
+  it('valid email is stored in sessionStorage', async () => {
+    await waitFor(() => {
+      renderDefault();
+    });
+
     const emailInput = screen.getByLabelText(locale.email_address());
 
     // Session storage starts empty
     expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(null);
 
     // Session storage doesn't update for an invalid email
-    fireEvent.change(emailInput, {target: {value: 'invalidEmail'}});
+    await waitFor(() => {
+      fireEvent.change(emailInput, {target: {value: 'invalidEmail'}});
+    });
     expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(null);
 
     // Session storage updates for valid email
-    fireEvent.change(emailInput, {target: {value: 'validEmail@email.com'}});
+    await waitFor(() => {
+      fireEvent.change(emailInput, {target: {value: 'validEmail@email.com'}});
+    });
     expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(
       'validEmail@email.com'
     );

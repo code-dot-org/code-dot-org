@@ -1,5 +1,6 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen, waitFor, fireEvent} from '@testing-library/react';
 import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
@@ -8,7 +9,19 @@ import {
   SCHOOL_ZIP_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
+jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
+  getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
+}));
+
+jest.mock('@cdo/apps/utils', () => ({
+  ...jest.requireActual('@cdo/apps/utils'),
+  navigateToHref: jest.fn(),
+}));
+
+const navigateToHrefMock = navigateToHref as jest.Mock;
 
 describe('FinishTeacherAccount', () => {
   afterEach(() => {
@@ -34,6 +47,10 @@ describe('FinishTeacherAccount', () => {
     screen.getByText(i18n.enterYourSchoolZip());
     screen.getByText(i18n.selectYourSchool());
     expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBe(null);
+
+    // Renders email preference opt-in checkbox
+    screen.getByRole('checkbox');
+    screen.getByText(locale.get_informational_emails());
 
     // Renders button that finishes sign-up
     screen.getByText(locale.go_to_my_account());
@@ -116,5 +133,56 @@ describe('FinishTeacherAccount', () => {
     // Error shows and button is disabled with empty display name
     screen.getByText(locale.display_name_error_message());
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+  });
+
+  it('clicking finish sign up button triggers fetch calls and redirects user to home page', async () => {
+    const fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy.returns(Promise.resolve(new Response()));
+
+    const name = 'FirstName';
+    const email = 'fake@email.com';
+
+    sessionStorage.setItem('email', email);
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up finish sign up button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in fields
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: name},
+    });
+    fireEvent.click(screen.getByRole('checkbox'));
+
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the button's fetch methods were called
+      const fetchCallNew = fetchSpy.getCall(0);
+      expect(fetchCallNew.args[0]).toEqual(
+        `/users/sign_up?new_sign_up=true&user_type=teacher&email=${email}&name=${name}&email_preference_opt_in=true&school=selectASchool&school_id=selectASchool&school_zip=null&school_name=null`
+      );
+
+      const fetchCallCreate = fetchSpy.getCall(1);
+      expect(fetchCallCreate.args[0]).toEqual(
+        `/users?new_sign_up=true&user_email=${email}`
+      );
+
+      // Verify the user is redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledWith('/home');
+    });
+
+    fetchSpy.restore();
   });
 });
