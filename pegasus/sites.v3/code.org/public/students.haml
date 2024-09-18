@@ -17,6 +17,7 @@ theme: responsive_full_width
     %p.body-one.no-margin-bottom
       =hoc_s(:student_courses_top_desc)
     - if !user_type
+      -# This button is mislabeled: it is to sign up, not sign in
       %a#sign-in-button.link-button{href: CDO.studio_url("/users/sign_up"), style: "margin-top: 2rem"}
         =hoc_s(:call_to_action_sign_up_free)
 

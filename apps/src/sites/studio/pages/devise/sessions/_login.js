@@ -15,7 +15,7 @@ $(document).ready(() => {
   const signupLink = document.getElementById('signup-link');
 
   if (isInSignupExperiment) {
-    signupLink.href = 'https://studio.code.org/users/new_sign_up/account_type';
+    signupLink.href = './new_sign_up/account_type';
   }
 
   document.getElementById('user_signup').addEventListener('click', () => {
