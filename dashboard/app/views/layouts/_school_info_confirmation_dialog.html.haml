@@ -21,7 +21,7 @@
   - script_data[:existingSchoolInfo][:user_school_info_id] = current_user_user_school_info.id
 - script_data[:existingSchoolInfo][:country] ||= 'US' if us_ip
 - script_data[:existingSchoolInfo][:school_name] ||= current_user_school_info&.school&.name
-- script_data[:existingSchoolInfo][:school_zip] ||= current_user_school_info&.school&.zip || current_user_school_info&.zip.to_s.rjust(5, '0')
+- script_data[:existingSchoolInfo][:school_zip] ||= current_user_school_info&.school&.zip || current_user_school_info&.zip&.to_s&.rjust(5, '0')
 - script_data[:existingSchoolInfo][:school_type] ||= current_user_school_info&.school&.school_type
 - script_data[:usIp] = us_ip
 
