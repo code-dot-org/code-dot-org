@@ -146,3 +146,37 @@ export interface LevelAichatSettings {
 
 // The type of save action being performed (customization update, publish, model card save, etc).
 export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
+
+/** Response structure for the detect toxicity API */
+export interface DetectToxicityResponse {
+  flaggedFields: FlaggedField[];
+}
+
+export interface FlaggedField {
+  field: keyof AiCustomizations;
+  toxicity: {
+    text: string;
+    blockedBy: SafetyService;
+    details: BlocklistDetails | WebPurifyDetails | ComprehendDetails;
+  };
+}
+
+type SafetyService = 'blocklist' | 'webpurify' | 'comprehend';
+
+interface BlocklistDetails {
+  blockedWord: string;
+}
+
+interface WebPurifyDetails {
+  type: string;
+  content: string;
+}
+
+interface ComprehendDetails {
+  flaggedSegment: string;
+  toxicity: number;
+  maxCategory: {
+    name: string;
+    score: number;
+  };
+}
