@@ -15,7 +15,7 @@
       = hidden_field_tag 'section_code', @section.code
       = submit_tag 'Undelete!'
     - else
-      %a{href: teacher_dashboard_section_progress_url(@section)}
+      %a{href: subpath_teacher_dashboard_section_url(@section, path: :progress)}
         %p View this section
     %h3 Section dump
     %pre= @section.inspect

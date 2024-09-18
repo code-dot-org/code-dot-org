@@ -18,9 +18,14 @@ Dashboard::Application.routes.draw do
   # This matches any host that is not the codeprojects hostname
   constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
-    get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
-    get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
-    get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
+    resource :teacher_dashboard, only: [] do
+      resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
+        member do
+          get :parent_letter
+          get '*path', action: :show, via: :all, as: :subpath
+        end
+      end
+    end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
 

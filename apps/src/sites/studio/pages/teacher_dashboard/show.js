@@ -83,7 +83,10 @@ $(document).ready(function () {
 
   // When removing v1TeacherDashboard after v2 launch, remove `selectedSection` from api response.
   const getV1TeacherDashboard = () => {
-    const baseUrl = `/teacher_dashboard/sections/${section.id}`;
+    const baseUrl = window.location.pathname.replace(
+      new RegExp(`(/teacher_dashboard/sections/${section.id}).*`),
+      '$1'
+    );
 
     const selectedSectionFromList = sections.find(s => s.id === section.id);
     const selectedSection = {...selectedSectionFromList, ...section};
