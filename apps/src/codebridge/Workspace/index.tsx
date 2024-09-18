@@ -54,6 +54,7 @@ const Workspace = () => {
       <div
         className={classnames(moduleStyles.workspaceWorkarea, {
           [moduleStyles.withFileBrowser]: config.showFileBrowser,
+          [moduleStyles.withStartMode]: isStartMode,
         })}
       >
         <div
