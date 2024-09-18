@@ -19,6 +19,7 @@ Dashboard::Application.routes.draw do
   constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
+    get 'teacher_dashboard/sections/:section_id/course/:course_name', to: 'teacher_dashboard#show'
     get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
     get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
 

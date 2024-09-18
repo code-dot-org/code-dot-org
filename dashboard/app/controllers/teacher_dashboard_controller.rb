@@ -1,6 +1,14 @@
 class TeacherDashboardController < ApplicationController
   load_and_authorize_resource :section
 
+  rescue_from CanCan::AccessDenied do
+    if params[:course_name] && (current_user&.user_type == "student")
+      redirect_to "/course/#{params[:course_name]}"
+    else
+      redirect_to "/home"
+    end
+  end
+
   def show
     @section_summary = @section.selected_section_summarize
     @sections = current_user.sections_instructed.map(&:concise_summarize)

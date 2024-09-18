@@ -39,7 +39,7 @@ class CoursesController < ApplicationController
 
     if current_user&.user_type == "teacher"
       sections = current_user.sections_instructed
-      section = sections.find {|s| s.unit_group == @unit_group}
+      section = sections.order(created_at: :desc).find {|s| s.unit_group == @unit_group}
       if section
         redirect_to "/teacher_dashboard/sections/#{section.id}/course/#{section.unit_group.name}"
         return
