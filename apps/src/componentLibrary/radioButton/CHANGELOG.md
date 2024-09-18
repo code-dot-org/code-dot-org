@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-# [0.3.1]()
+# [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/61173)
 
 * set `position: relative;` for `RadioButton` wrapping `label` element to fix the issue when invisible input is positioned far from actual `RadioButton`
 
