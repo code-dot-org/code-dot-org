@@ -8,6 +8,7 @@ export type GenericConfirmationDialogProps = Required<
   handleConfirm?: () => void;
   handleCancel?: () => void;
   confirmText?: string;
+  destructive?: boolean;
 };
 
 /**
@@ -17,7 +18,14 @@ export type GenericConfirmationDialogProps = Required<
  */
 const GenericConfirmationDialog: React.FunctionComponent<
   GenericConfirmationDialogProps
-> = ({title, message, handleConfirm, handleCancel, confirmText}) => (
+> = ({
+  title,
+  message,
+  handleConfirm,
+  handleCancel,
+  confirmText,
+  destructive,
+}) => (
   <GenericDialog
     title={title}
     message={message}
@@ -25,6 +33,7 @@ const GenericConfirmationDialog: React.FunctionComponent<
       confirm: {
         callback: handleConfirm,
         text: confirmText,
+        destructive: destructive,
       },
       cancel: {
         callback: handleCancel,
