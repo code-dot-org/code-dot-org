@@ -1,0 +1,17 @@
+%h2.overline-one.centered
+  =hoc_s("hoc_resources.sections.handouts")
+%h3.heading-xl.centered
+  =hoc_s("hoc_resources.handouts.heading")
+%p.body-two.centered
+  =hoc_s("hoc_resources.handouts.desc")
+.action-block.action-block--two-col.flex-container.flex-direction-column-tablet
+  .media-wrapper
+    %img{src: "/images/action-blocks/action-block-one-pager-handout.png", alt: ""}
+  .text-wrapper
+    %h3.heading-sm
+      =hoc_s("hoc_resources.handouts.one_pager.title")
+    %p
+      =hoc_s("hoc_resources.handouts.one_pager.desc")
+    -# TODO - Add link to one-pager
+    %a.link-button.has-external-link{href: "https://hourofcode.com/files/hoc-one-pager.pdf", target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s("hoc_resources.handouts.one_pager.button")

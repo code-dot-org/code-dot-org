@@ -23,37 +23,12 @@ layout: wide_index
   -# Handouts
   %section#handouts
     .wrapper
-      %h2.overline-one.centered
-        =hoc_s("hoc_resources.sections.handouts")
-      %h3.heading-xl.centered
-        =hoc_s("hoc_resources.handouts.heading")
-      %p.body-two.centered
-        =hoc_s("hoc_resources.handouts.desc")
-      .action-block.action-block--two-col.flex-container.flex-direction-column-tablet
-        .media-wrapper
-          %img{src: "/images/action-blocks/action-block-one-pager-handout.png", alt: ""}
-        .text-wrapper
-          %h3.heading-sm
-            =hoc_s("hoc_resources.handouts.one_pager.title")
-          %p
-            =hoc_s("hoc_resources.handouts.one_pager.desc")
-          -# TODO - Add link to one-pager
-          %a.link-button.has-external-link{href: "https://hourofcode.com/files/hoc-one-pager.pdf", target: "_blank", rel: "noopener noreferrer"}
-            =hoc_s("hoc_resources.handouts.one_pager.button")
+      = view :"resources/resources_handouts"
 
   -# Stickers
   %section#stickers.bg-neutral-dark
-    .wrapper.flex-container.flex-direction-column-mobile-reverse.align-items-center.gap-2
-      .text-wrapper.flex-2
-        %h2.white
-          =hoc_s("hoc_resources.stickers.heading")
-        %p.body-two.white
-          =hoc_s("hoc_resources.stickers.desc")
-        %a.link-button.white{href: "https://hourofcode.com/images/hour-of-code-stickers.pdf", target: "_blank", rel: "noopener noreferrer"}
-          %i{class: "fa-solid fa-download", style: "margin-inline-end: 0.25rem;"}
-          =hoc_s("hoc_resources.stickers.button")
-      %figure{style: "flex: 0.75"}
-        %img{src: "/images/resources/stickers.png", alt: "", style: "width: 100%"}
+    .wrapper
+      = view :"resources/resources_stickers"
 
   -# Videos
   %section#videos
@@ -87,19 +62,8 @@ layout: wide_index
 
   -# Logos
   %section#logos.bg-neutral-dark
-    .wrapper.flex-container.flex-direction-column-mobile-reverse.justify-content-center.align-items-center.gap-2
-      .text-wrapper{style: "flex: 1.75"}
-        %h2.white
-          =hoc_s("hoc_resources.logos.heading")
-        %p.body-two.white
-          =hoc_s("hoc_resources.logos.desc")
-        .button-wrapper
-          %a.link-button.white{href: "https://images.code.org/share/hour-of-code-logo.zip"}
-            %i{class: "fa-solid fa-download", style: "margin-inline-end: 0.25rem;"}
-            =hoc_s("hoc_resources.logos.button.download")
-      %figure.flex-container.justify-end.gap-1.flex-1
-        %img{src: "/us/en/images/fit-200/hour-of-code-logo.png", alt: "", style: "width: 130px"}
-        %img{src: "/us/en/images/fit-200/hora-del-codigo-logo.png", alt: "", style: "width: 130px"}
+    .wrapper
+      = view :"resources/resources_logos"
 
   -# Organized by Code.org
   = view :organized_by_cdo
