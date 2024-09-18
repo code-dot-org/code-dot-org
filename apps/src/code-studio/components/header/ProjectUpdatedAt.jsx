@@ -15,7 +15,6 @@ class ProjectUpdatedAt extends React.Component {
     status: PropTypes.oneOf(Object.values(statuses)),
     updatedAt: PropTypes.string,
     onContentUpdated: PropTypes.func,
-    floatRight: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -64,13 +63,7 @@ class ProjectUpdatedAt extends React.Component {
 
   render() {
     return (
-      <div
-        className="project_updated_at header_text"
-        style={{
-          ...styles.container,
-          ...(this.props.floatRight && styles.floatRight),
-        }}
-      >
+      <div className="project_updated_at header_text" style={styles.container}>
         {this.renderText()}
         <RetryProjectSaveDialog onTryAgain={() => project.save()} />
       </div>
@@ -82,9 +75,6 @@ const styles = {
   container: {
     display: 'block',
     width: 160,
-  },
-  floatRight: {
-    float: 'right',
   },
 };
 
