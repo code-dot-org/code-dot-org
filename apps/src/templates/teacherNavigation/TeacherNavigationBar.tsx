@@ -13,10 +13,7 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
 
-import {
-  LABELED_TEACHER_NAVIGATION_PATHS,
-  TEACHER_NAVIGATION_PATHS,
-} from './TeacherNavigationPaths';
+import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
 
@@ -110,20 +107,12 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     page: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS
   ) => {
     if (LABELED_TEACHER_NAVIGATION_PATHS[page]) {
-      if (page === TEACHER_NAVIGATION_PATHS.courseOverview) {
-        navigate(
-          generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
-            sectionId: selectedSectionId,
-            courseVersionName: sections[selectedSectionId].courseVersionName,
-          })
-        );
-      } else {
-        navigate(
-          generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
-            sectionId: selectedSectionId,
-          })
-        );
-      }
+      navigate(
+        generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
+          sectionId: selectedSectionId,
+          courseVersionName: sections[selectedSectionId].courseVersionName,
+        })
+      );
     }
   };
 
@@ -135,6 +124,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         key={'ui-test-sidebar-' + key}
         isSelected={currentPathName === key}
         sectionId={+selectedSectionId}
+        courseVersionName={sections[selectedSectionId].courseVersionName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
         onClick={() => navigateToDifferentPage(key)}
       />

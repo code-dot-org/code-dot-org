@@ -30,11 +30,6 @@ class CoursesController < ApplicationController
   end
 
   def show
-    # if !params[:section_id] && current_user&.last_section_id
-    #   redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
-    #   return
-    # end
-
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
     if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
@@ -44,19 +39,11 @@ class CoursesController < ApplicationController
 
     if current_user&.user_type == "teacher"
       sections = current_user.sections_instructed
-      sections.each do |section|
-        if section.unit_group == @unit_group
-          redirect_to "/teacher_dashboard/sections/#{section.id}/course/#{section.unit_group.name}"
-          break
-        end
+      section = sections.find {|s| s.unit_group == @unit_group}
+      if section
+        redirect_to "/teacher_dashboard/sections/#{section.id}/course/#{section.unit_group.name}"
+        return
       end
-      return
-    end
-
-    if params[:section_id] && current_user&.user_type == "student"
-      course_name = Section.find_by(id: params[:section_id]).unit_group.name
-      redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/course/#{course_name}"
-      return
     end
 
     @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
