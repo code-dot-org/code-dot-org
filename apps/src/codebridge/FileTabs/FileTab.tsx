@@ -24,10 +24,12 @@ const FileTab = ({file}: FileTabProps) => {
       key={file.id}
     >
       <span onClick={() => setActiveFile(file.id)}>
-        <FontAwesomeV6Icon
-          iconName={getFileIconName(file)}
-          iconStyle={'regular'}
-        />
+        {getFileIconName(file) && (
+          <FontAwesomeV6Icon
+            iconName={getFileIconName(file)!}
+            iconStyle={'regular'}
+          />
+        )}
         &nbsp;
         {file.name}
       </span>
