@@ -221,7 +221,10 @@ const InnerFileBrowser = React.memo(
                 <div className={moduleStyles.row}>
                   <span className={moduleStyles.title}>
                     <span
-                      className={moduleStyles['caret-container']}
+                      className={classNames(
+                        moduleStyles['caret-container'],
+                        moduleStyles.rowIcon
+                      )}
                       onClick={() => toggleOpenFolder(f.id)}
                     >
                       {caret}
