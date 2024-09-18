@@ -49,7 +49,7 @@ class RegistrationsController < Devise::RegistrationsController
           user_params[:data_transfer_agreement_at] = DateTime.now
         end
 
-        @user = User.new_with_session(user_params.permit(new_user_permitted_params), session)
+        @user = User.new_with_session(user_params.permit(Policies::Registration::NEW_USER_PERMITTED_PARAMS), session)
         @user.save!
         @user
       else
@@ -580,32 +580,6 @@ class RegistrationsController < Devise::RegistrationsController
       hashed_email_is_changing ||
       parent_email_is_changing ||
       params[:user][:password].present?
-  end
-
-  private def new_user_permitted_params
-    [
-      :user_type,
-      :email,
-      :name,
-      :email_preference_opt_in_required,
-      :email_preference_opt_in,
-      :email_preference_request_ip,
-      :email_preference_source,
-      :email_preference_form_kind,
-      :school,
-      :school_info_id,
-      :age,
-      :parent_email_preference_email,
-      :parent_email_preference_opt_in,
-      :parent_email_preference_request_ip,
-      :parent_email_preference_source,
-      :data_transfer_agreement_accepted,
-      :data_transfer_agreement_required,
-      :data_transfer_agreement_request_ip,
-      :data_transfer_agreement_source,
-      :data_transfer_agreement_kind,
-      :data_transfer_agreement_at
-    ]
   end
 
   # Accept only whitelisted params for update and upgrade.
