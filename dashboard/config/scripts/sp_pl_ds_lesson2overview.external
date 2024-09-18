@@ -1,0 +1,28 @@
+name 'sp-pl-DS-lesson2Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Introduction to Data Science
+
+####Now that you have learned about what Data Science is, let’s dive into the content of the unit and see how these concepts come together for your students. 
+
+<img src="https://images.code.org/0d1b94c203aa0f1e1638a1cfe7ebddf3-image-1724252133121.png" alt="pixel grid of an X" style="border-radius:40px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0 60px 20px 0;">
+
+## In this lesson, you will:
+
+- #### Review the content of the Introduction of Data Science Lessons
+- #### Preview activities in the lessons
+- #### Analyze data using the CODAP data site
+- #### Create a plan for teaching Chapter 1 of the Data Science Unit
+
+
+
+
+### **Suggested time:** 40 minutes
+
+
+## Let's get started! 
+
+
+MARKDOWN

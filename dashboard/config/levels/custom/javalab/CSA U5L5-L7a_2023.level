@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-03-27T23:58:41.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The owner of the Joyful Pastries Food Truck has stored the inventories for each food truck in a 2D array. The 2D array contains the following values:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nRow 1: 25, 17, 22\r\nRow 2: 18, 12, 15\r\nRow 3: 21, 19, 27\r\nRow 4: 30, 10, 23\r\n</pre>\r\n\r\nwhere each row represents a unique food truck in the business. Each column represents the number of cakes, cookies, and pies, respectively.\r\n\r\nThe owner wants to know if any food trucks have quantities of desserts that are greater than a specified amount.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Owner</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">hasMinimum()</code> method using enhanced <code style=\"background-color: #ececec; color: black; font-weight: bold;\">for</code> loops to return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code> if any food truck has a quantity of desserts that are more than the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">minValue</code>. Otherwise, return <code style=\"background-color: #ececec; color: black; font-weight: bold;\">false</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">FoodTruckRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">hasMinimum()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with traversing a two-dimensional (2D) array using an enhanced <code style=\"background-color: #ececec; color: black; font-weight: bold;\">for</code> loop.\r\n</div>",
@@ -27,12 +31,9 @@
         "isVisible": true,
         "tabOrder": 0
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-03-27T23:58:41.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-03-27T23:58:41.741+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L6d_2023\\\"\"],\"cloned_from\":\"CSA U5L5-L6d_2023\"},{\"changed_at\":\"2023-03-27 23:58:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:46:28 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 23:55:10 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:01:31 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 13:24:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 13:24:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 13:25:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 13:25:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 13:25:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

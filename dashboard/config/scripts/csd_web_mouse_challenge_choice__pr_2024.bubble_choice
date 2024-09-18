@@ -1,0 +1,10 @@
+name 'CSD web mouse challenge choice_-pr-2024'
+display_name 'Mouse Challenges'
+description 'Try out these new blocks and challenges with mouse input.'
+
+sublevels
+level 'CSD games mouse scale_-pr-2024'
+level 'CSD U3 Mouse Input Bee 1_-pr-2024'
+level 'CSD U3 Mouse Input Bee 2_-pr-2024'
+level 'CSD U3 - complex - mouse move_-pr-2024'
+level 'CSD U3 L13 Freeplay_-pr-2024'

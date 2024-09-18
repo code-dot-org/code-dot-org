@@ -24,8 +24,6 @@ Print your own posters! Simply click an image below to view and save a printable
 
 {{ promote_new_posters }}
 
-* Mencari poster kami dari tahun-tahun lalu? [Temukan di sini]({{ promote/previous_posters_url }})!
-
 <a id="social"></a>
 
 ## Posting di media sosial
@@ -95,26 +93,6 @@ Tahun ini, mari kita buat lebih besar lagi. Saya meminta Anda untuk bergabung de
 Sebarkan informasinya. Adakan sebuah acara. Mintalah sekolah setempat untuk mendaftar. Atau coba sendiri Hour of Code ini—semua orang dapat memperoleh manfaat dengan mempelajari dasar-dasarnya.
 
 Mulai di http://hourofcode.com/{{ country_language }}<br />
-
-* * *
-
-<a id="help-schools"></a>
-
-### Menjadi relawan di sekolah:
-
-#### [Temukan materi dan informasi selengkapnya tentang menjadi relawan di sekolah di sini]({{ how_to_volunteers_url }}).
-
-**Perihal:** Bisakah kami membantu Anda menggelar Hour of Code?
-
-Antara {{ campaign_date/short }}, sepuluh persen siswa di seluruh dunia akan merayakan Computer Science Education Week dengan melakukan Hour of Code di sekolah mereka. Ini adalah kesempatan bagi setiap anak untuk mempelajari cara kerja teknologi di sekitar kita.
-
-[Organisasi kami/Nama saya] ingin membantu [nama sekolah] dalam mengadakan acara Hour of Code. Kami dapat membantu para guru menyelenggarakan Hour of Code di kelasnya (kami bahkan tidak memerlukan komputer!) Atau jika Anda ingin mengadakan pertemuan umum di sekolah, kami dapat mengatur agar pembicara membahas tentang cara kerja teknologi dan bagaimana rasanya menjadi pengembang perangkat lunak.
-
-Siswa akan membuat aplikasi atau permainan mereka sendiri yang bisa mereka tunjukkan pada orang tuanya, dan kami juga akan mencetak sertifikat Hour of code yang bisa mereka bawa pulang. Dan, ini menyenangkan! Dengan kegiatan interaktif dan langsung, siswa akan belajar keterampilan berpikir komputasi dengan cara yang mudah.
-
-Komputer ada di mana-mana, dan mengubah setiap industri di planet ini. Namun hanya 51% dari semua sekolah menengah yang mengajarkan ilmu komputer. Kabar baiknya, kita berada di jalur yang tepat untuk mengubah hal tersebut! Jika Anda pernah mendengar tentang Hour of Code, Anda mungkin tahu bahwa program ini telah menciptakan sejarah - lebih dari 100 juta siswa di seluruh dunia telah mencoba Hour of Code. Bahkan para pemimpin seperti Presiden Obama dan Perdana Menteri Kanada Justin Trudeau menulis baris kode pertama mereka sebagai bagian dari gerakan ini.
-
-Anda dapat membaca lebih lanjut tentang acara tersebut di http://hourofcode.com. Atau, hubungi kami jika Anda ingin menjadwalkan waktu untuk membahas cara agar [nama sekolah] dapat berpartisipasi.<br />
 
 * * *
 

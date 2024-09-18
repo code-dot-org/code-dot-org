@@ -29,7 +29,7 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
       <StrongText>{i18n.aiWarningModalMessagesAreRecorded()}</StrongText>
     </BodyTwoText>
     <BodyTwoText>{i18n.aiWarningModalInappropriateFlagged()}</BodyTwoText>
-    <br />
+    <BodyTwoText>{i18n.aiWarningUnsaved()}</BodyTwoText>
     <BodyTwoText>{i18n.aiWarningModalPersonalNotSubmitted()}</BodyTwoText>
     <hr />
     <div className={moduleStyles.bottomSection}>

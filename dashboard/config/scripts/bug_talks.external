@@ -1,0 +1,32 @@
+name 'Bug Talks'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is a Bug Talk?
+
+#### Bug Talks are very similar to “Number Talks” from the world of mathematics education. Teachers can use Bug Talks before, during, or after class to help students clear up misconceptions that manifest as common bugs. A typical Bug Talk should last 5-10 minutes and might proceed as follows:
+
+<img src="https://images.code.org/4e37cf72816a90a1abccaf66d623b4ad-image-1704408444176.23.19 PM.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+
+## What could a bug talk look like? 
+
+* #### A problem is displayed for students to solve on their own, quietly. The problem should be small enough that they can solve it mentally or with scratch paper. Students who could solve the problem very quickly should try coming up with more than one solution. An example problem might be a buggy solution to a puzzle from the current lesson.
+After having time to work alone, students can share their ideas with a neighbor.
+After sharing with a neighbor, students raise their hands to share answers with the class.
+The teacher neutrally records as many answers as possible on the board, incrementing duplicates with tally marks.
+The teacher calls on students to explain the reasoning behind their answers. Students can respond to each other’s arguments with sentence starters like, “I agree/disagree, because…”.
+Finally, students discuss and vote on which answer they collectively believe is the best solution. 
+
+To conclude a Bug Talk, teachers should reiterate why the chosen strategy works best, including any unmentioned points the class might not have brought up.
+
+
+
+### **Suggested time:** 5 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

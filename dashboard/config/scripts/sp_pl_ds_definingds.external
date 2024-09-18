@@ -6,13 +6,15 @@ markdown <<MARKDOWN
 # What is Data Science?
 
 
-<img src="https://images.code.org/0ec49f831a315a6e3d9df9398d14302f-image-1714587189025.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
+<img src="https://images.code.org/1233653f67af64f5f96488f45b298812-image-1724078163830.png" alt="bargraph and data icon" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
 
-## Defining Computer Vision:
+## Defining Data
 
-#### Computer vision is a field of artificial intelligence that enables computers and systems to **derive meaningful information** from digital images, videos, and other visual inputs. 
+#### Data is any form of organized information. This could be words, numbers or pictures.
 
-#### It is commonly seen in everyday applications such as facial recognition, autonomous vehicles, and image processing software.
+## Defining Data Science
+
+#### Data Science is the process of making meaning from that data.
 
 
 
@@ -23,9 +25,9 @@ markdown <<MARKDOWN
 
 ## Why Students Should Learn It:
 
-#### Learning computer vision equips students with cutting-edge skills relevant in numerous industries, fostering a blend of technical proficiency and critical thinking. 
+#### Learning data science helps students develop critical thinking skills and understand how to make informed decisions based on data.
 
-#### This knowledge not only prepares them for future careers in technology but also helps them **understand and ethically engage** with the increasingly digital world around them.
+#### It prepares them for a wide range of careers and enhances their ability to navigate a data-driven world. Plus, it empowers them to understand and address real-world problems using data.
 
 
 MARKDOWN

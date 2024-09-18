@@ -1,3 +1,4 @@
+import {BlockMode} from '../constants';
 import musicI18n from '../locale';
 
 import {
@@ -5,6 +6,7 @@ import {
   DOCS_BASE_URL,
   FIELD_CHORD_TYPE,
   FIELD_PATTERN_TYPE,
+  FIELD_PATTERN_AI_TYPE,
   FIELD_TUNE_TYPE,
   FIELD_SOUNDS_TYPE,
   PLAY_MULTI_MUTATOR,
@@ -17,6 +19,7 @@ import {
 } from './extensions';
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
+import FieldPatternAi from './FieldPatternAi';
 import FieldSounds from './FieldSounds';
 import FieldTune from './FieldTune';
 import {MUSIC_BLOCKS} from './musicBlocks';
@@ -26,8 +29,9 @@ import {BlockConfig} from './types';
  * Set up the global Blockly environment for Music Lab. This should
  * only be called once per page load, as it configures the global
  * Blockly state.
+ * @param {string} blockMode - The block mode to determine whether advanced blocks should be registered.
  */
-export function setUpBlocklyForMusicLab() {
+export function setUpBlocklyForMusicLab(blockMode: string | undefined) {
   Blockly.Extensions.register(
     DEFAULT_TRACK_NAME_EXTENSION,
     getDefaultTrackNameExtension()
@@ -50,16 +54,21 @@ export function setUpBlocklyForMusicLab() {
     Blockly.JavaScript[blockType] = blockConfig.generator;
   }
 
-  Blockly.cdoUtils.registerCustomProcedureBlocks();
+  if (blockMode !== BlockMode.ADVANCED) {
+    // Override default function block implementation.
+    Blockly.cdoUtils.registerCustomProcedureBlocks();
+
+    // Remove two default entries in the toolbox's Functions category that
+    // we don't want.
+    delete Blockly.Blocks.procedures_defreturn;
+    delete Blockly.Blocks.procedures_ifreturn;
+  }
+
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
+  Blockly.fieldRegistry.register(FIELD_PATTERN_AI_TYPE, FieldPatternAi);
   Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
   Blockly.fieldRegistry.register(FIELD_TUNE_TYPE, FieldTune);
-
-  // Remove two default entries in the toolbox's Functions category that
-  // we don't want.
-  delete Blockly.Blocks.procedures_defreturn;
-  delete Blockly.Blocks.procedures_ifreturn;
 
   // Rename the new function placeholder text for Music Lab specifically.
   Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =

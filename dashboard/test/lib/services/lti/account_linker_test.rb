@@ -23,6 +23,52 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     assert Policies::Lti.lti?(@user)
   end
 
+  test 'sets the lti_roster_sync_enabled and lms_landing_opted_out properties on the user' do
+    partial_lti_teacher = create :teacher
+    ao = create :lti_authentication_option
+    fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao.update(authentication_id: auth_id)
+    partial_lti_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes @session, partial_lti_teacher
+    Services::Lti::AccountLinker.call(user: @user, session: @session)
+
+    assert_equal true, @user.reload.lti_roster_sync_enabled
+    assert_equal true, @user.lms_landing_opted_out
+  end
+
+  test 'verify the user if they are a teacher' do
+    partial_lti_teacher = create :teacher
+    ao = create :lti_authentication_option
+    fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao.update(authentication_id: auth_id)
+    partial_lti_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes @session, partial_lti_teacher
+    Services::Lti::AccountLinker.call(user: @user, session: @session)
+
+    assert @user.reload.verified_teacher?
+  end
+
+  test 'do not verify the user if they are a student' do
+    new_student = create :student
+    existing_student = create :student
+    lti_course = create :lti_course, lti_integration: @lti_integration
+    lti_section = create :lti_section, lti_course: lti_course
+    lti_section.section.students << new_student
+
+    ao = create :lti_authentication_option
+    fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao.update(authentication_id: auth_id)
+    new_student.authentication_options = [ao]
+    PartialRegistration.persist_attributes @session, new_student
+
+    new_student.expects(:verify_teacher!).never
+    Services::Lti::AccountLinker.call(user: existing_student, session: @session)
+    refute existing_student.reload.verified_teacher?
+  end
+
   test 'Swaps the existing user into the defunct user\'s sections' do
     new_student = create :student
     existing_student = create :student

@@ -24,8 +24,6 @@ Wydrukuj własne plakaty! Wystarczy kliknąć poniższy obrazek, aby wyświetli�
 
 {{ promote_new_posters }}
 
-* Czy szukasz naszych plakatów z ubiegłych lat? [Znajdziesz je tutaj]({{ promote/previous_posters_url }})!
-
 <a id="social"></a>
 
 ## Opublikuj w mediach społecznościowych
@@ -98,26 +96,6 @@ Zacznij od http://hourofcode.com/{{ country_language }}<br />
 
 * * *
 
-<a id="help-schools"></a>
-
-### Wolontariusz w szkole:
-
-#### [Tutaj znajdziesz więcej materiałów i informacji o wolontariacie w szkole]({{ how_to_volunteers_url }}).
-
-**Temat:** Czy możemy Tobie pomóc zostać gospodarzem Godziny Kodowania?
-
-Pomiędzy {{ campaign_date/short }}, dziesięć procent uczniów z całego świata będzie świętowało Computer Science Education Week uczestnicząc w Godzinie Kodowania w swoich szkołach. To jest szansa dla każdego dziecka, aby poznało, jak działa otaczająca nas technologia.
-
-[Nasza organizacja/Moje imię] chętnie pomoże [nazwa szkoły] zorganizować Godzinę Kodowania. Możemy pomóc nauczycielom prowadzącym Godzinę Kodowania w ich klasach (nie potrzebujemy nawet żadnych komputerów!) lub, jeśli chcielibyście zorganizować prelekcję na forum szkoły, możemy postarać się o prowadzącego, który zaprezentuje, jak działają technologie i opowie, jak to jest być programistą.
-
-Uczniowie utworzą swoje własne aplikacje lub gry, które mogą zaprezentować swoim rodzicom. Wydrukujemy także certyfikaty Godziny Kodowania, które będą mogli zabrać do domu. I to jest fajne! Wraz z interaktywnymi i praktycznymi zajęciami, uczniowie w przystępny sposób nabędą umiejętności komputacyjnego myślenia.
-
-Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. Ale tylko 51% wszystkich szkół średnich oferuje informatykę. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszałaś/eś wcześniej o Godzinie Kodowania, wiesz zapewne, że stała się już historią - ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania. Nawet przywódcy, tacy jak prezydent Obama i premier Kanady Justin Trudeau napisali swoje pierwsze linie kodu w ramach tej inicjatywy.
-
-Możesz przeczytać więcej o tej inicjatywie na http://hourofcode.com. Lub daj nam znać, jeśli chcesz zarezerwować czas na rozmowę o tym, w jaki sposób [nazwa szkoły] może wziąć udział. <br />
-
-* * *
-
 <a id="parents"></a>
 
 ### Powiedz rodzicom o wydarzeniu w szkole:
@@ -148,7 +126,7 @@ Zobacz http://hourofcode.com/,{{ country_language }}, aby uzyskać szczegółowe
 
 Komputery są wszędzie, zmieniając każdą branżę na świecie, ale tylko 51% wszystkich szkół średnich oferuje informatykę. Młode kobiety i uczniowie z marginalizowanych grup rasowych i etnicznych są poważnie niedostatecznie reprezentowani na zajęciach informatyki, oraz w branży technologicznej. Dobrą wiadomością jest, że zamierzamy to zmienić.
 
-Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Każdy salon Apple na świecie organizował Godzinę Kodowania. Nawet Prezydent Obama napisał swoją pierwszą linię kodu w ramach tej inicjatywy.
+Dzięki Godzinie Kodowania, zajęcia z informatyki pojawiły się na stronach Google, MSN, Yahoo! i Disney. Ponad 100 partnerów wspólnie wsparło tę inicjatywę. Każdy salon Apple na świecie organizował Godzinę Kodowania. Nawet Prezydent Obama napisał swoją pierwszą linię kodu w ramach tej inicjatywy.
 
 Dlatego każdy z uczniów [numer X] w [NAZWA SZKOŁY] dołącza do największego wydarzenia edukacyjnego w historii: Godzina Kodowania, podczas Tygodnia Edukacji Informatycznej (6-12 grudnia).
 

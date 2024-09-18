@@ -3,79 +3,105 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson Structure
+# Data Science is Everywhere
 
-## Role of the teacher
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-#### The lessons at the start of the unit are designed to help students build foundational knowledge about how computer vision works. All lessons within the Computer Vision unit are intended to be **facilitated by a teacher**. These lessons are **not designed as self-paced experiences for students** to work through at their own pace.
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "><strong>Teacher Tip: </strong> Data science is everywhere, influencing industries from healthcare to sports. Connecting your students to these real-world applications helps them see the relevance of what they’re learning and deepens their understanding.  
+</p>
+</div>
 
----
-## Computer Vision lessons
-
-#### The lessons in this unit progress through the steps of the **Design Thinking Process** and culminate to an end-of-unit final project. As students learn how computer vision works, they gradually build on to their final prototype.  
-
+<br>
+<br>
 
 <body>
-
  <table>
         <tr>
             <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
-                <img src="https://images.code.org/3ec48e01e84602a333fce6b7a36b742d-image-1715267288404.png" alt="Image 1" style="width: 75px; border-radius: 10px;">
+                <img src="https://images.code.org/c063cc1809e98ebc07d0659bb8dc52c8-image-1724079338929.png" alt="healthcare icon" style="width: 75px; border-radius: 10px;">
             </td>
             <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
-                <img src="https://images.code.org/2ac2319762b7a5489ed4978f5d6b8611-image-1715267347388.png" alt="Image 2" style="width:70px; border-radius: 10px;">
+                <img src="https://images.code.org/4d6957c590afe4356a34fd0d880dada9-image-1724079415496.png" alt="finance icon" style="width:70px; border-radius: 10px;">
             </td>
             <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
-                <img src="https://images.code.org/4ca693fb4fa527d1192f2916823316e5-image-1715267394266.png" alt="Image 3" style="width:75px; border-radius: 10px;">
+                <img src="https://images.code.org/fe851509654f7a2f909715868a3d7fde-image-1724079637108.png" alt="retail shop icon" style="width:75px; border-radius: 10px;">
             </td>
              <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
-                <img src="https://images.code.org/623906b6120e90c55ab619db66b42926-image-1715267436914.png" alt="Image 3" style="width:75px; border-radius: 10px;">
-            </td>
-             <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
-                <img src="https://images.code.org/930fdb049b412dcda371bda84b0c4dd5-image-1715267481507.png" alt="Image 3" style="width:75px; border-radius: 10px;">
+                <img src="https://images.code.org/febd63b16d05af08c0c69b6f2b76fb09-image-1724079744724.png" alt="transportation icon" style="width:75px; border-radius: 10px;">
             </td>
         </tr>
     </table>
     
-      <table border="1" style="font-size: 16pt; width: 100%; table-layout: fixed;">
+      <table border="1" style="font-size: 14pt; width: 100%; table-layout: fixed;">
         <tr>
-        <tr>
-            <th align="center">Empathy</th>
-            <th align="center">Defining</th>
-            <th align="center">Ideating</th>
-            <th align="center">Prototyping</th>
-            <th align="center">Testing</th>
+ 
+            <th align="center">Healthcare</th>
+            <th align="center">Finance</th>
+            <th align="center">Retail</th>
+            <th align="center">Transportation</th>
         </tr>
-        <tr >
-            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><br><a href="https://studio.code.org/s/computer-vision/lessons/2" target="blank" rel="noopener noreferrer"><b>Lesson 2:</b></a> <br>Empathizing <br> with Users<br><br> <a href="https://studio.code.org/s/computer-vision/lessons/3" target="blank" rel="noopener noreferrer"><b>Lesson 3:</b></a> <br>Gathering Data</td>
+    <tr>
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Predictive models that help doctors diagnose diseases earlier, personalized treatment plans, and wearable devices that monitor health metrics and provide insights for better health management.</td>
             
-           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><br><a href="https://studio.code.org/s/computer-vision/lessons/4" target="blank" rel="noopener noreferrer"><b>Lesson 4:</b></a> <br>Data Visualization<br><br> <a href="https://studio.code.org/s/computer-vision/lessons/5" target="blank" rel="noopener noreferrer"><b>Lesson 5:</b></a> <br>User Stories and<br>Problem Statments</td>
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Fraud detection systems that identify unusual spending patterns, personalized financial advice from robo-advisors, and stock market analysis for better investment strategies.
+</td>
             
-           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><br><a href="https://studio.code.org/s/computer-vision/lessons/6" target="blank" rel="noopener noreferrer"><b>Lesson 6:</b></a> <br>Pixels and QR Codes<br><br> <a href="https://studio.code.org/s/computer-vision/lessons/7" target="blank" rel="noopener noreferrer"><b>Lesson 7:</b></a> <br>Edge Detection <br><br><a href="https://studio.code.org/s/computer-vision/lessons/8" target="blank" rel="noopener noreferrer"><b>Lesson 8:</b></a> <br>Data Sets and Models<br><br> <a href="https://studio.code.org/s/computer-vision/lessons/9" target="blank" rel="noopener noreferrer"><b>Lesson 9:</b></a> <br>Data Training and Bias</td>
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Inventory management systems that predict product demand, personalized marketing campaigns based on customer data, and dynamic pricing models that adjust prices in real-time based on demand and competition.
+</td>
             
-            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><br><a href="https://studio.code.org/s/computer-vision/lessons/10" target="blank" rel="noopener noreferrer"><b>Lesson 10:</b></a> <br>Training a Model<br><br> <a href="https://studio.code.org/s/computer-vision/lessons/11" target="blank" rel="noopener noreferrer"><b>Lesson 11:</b></a> <br>Impacts of <br>Computer Vision <br><br><i><b>End of Unit Project:</i></b><br> <br><a href="https://studio.code.org/s/computer-vision/lessons/12" target="blank" rel="noopener noreferrer"><b>Lesson 12:</b></a> <br>Prototype Development <br> Part 1 <br><br> <a href="https://studio.code.org/s/computer-vision/lessons/13" target="blank" rel="noopener noreferrer"><b>Lesson 13:</b></a> <br>Prototype Development <br> Part 2</td>
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Optimization of public transit routes based on usage patterns, predictive maintenance of vehicles to avoid breakdowns, and ride-sharing algorithms that match drivers and passengers efficiently.
+</td>
             
-            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"><br><a href="https://studio.code.org/s/computer-vision/lessons/14" target="blank" rel="noopener noreferrer"><b>Lesson 14:</b></a> <br>User Feedback <br><br> <a href="https://studio.code.org/s/computer-vision/lessons/15" target="blank" rel="noopener noreferrer"><b>Lesson 15:</b></a> <br>Implementing <br> Feedback</td>
+           
         </tr>
     </table>
 </body>
 
 <br>
+<br>
 
----
-## Lesson Structure 
+ <table>
+        <tr>
+            <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/24815a5ef848a7ae17799879e481847f-image-1724079815627.png" alt="education icon" style="width: 75px; border-radius: 10px;">
+            </td>
+            <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/5cc860b95a9d00dc52d3498c31e05673-image-1724079929431.png" alt="Sports icon" style="width:70px; border-radius: 10px;">
+            </td>
+            <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/a93502230072c87cd257ac2516e45e91-image-1724080036483.png" alt="Earth icon" style="width:75px; border-radius: 10px;">
+            </td>
+        
+           
+        </tr>
+    </table>
+    
+      <table border="1" style="font-size: 14pt; width: 100%; table-layout: fixed;">
+        <tr>
+ 
+            <th align="center">Education</th>
+            <th align="center">Sports</th>
+            <th align="center">Environmental Science</th>
+            
+        </tr>
+    <tr>
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"> Adaptive learning platforms that tailor educational content to individual students' needs, data-driven insights into student performance to improve teaching methods, and early warning systems to identify students at risk of falling behind.
+</td>
+            
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Performance analysis of athletes using wearable technology, data-driven strategies for team management and game tactics, and fan engagement through personalized content and experiences.
 
-<img src="https://images.code.org/94c91bb3b11d912f8b4c38f34b241e09-image-1712760508654.png" alt="AI bot with thought bubbles" width="300px" style="border-radius:10px; float:right; margin: 20px 50px 0px 40px;">
+</td>
+            
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Monitoring and predicting climate change effects, optimizing energy usage in smart grids, and analyzing environmental data to support conservation efforts.
 
-#### Each lesson plan follows a clear structure to maximize learning and engagement.
+</td>
+            
+   
+            
+           
+        </tr>
+    </table>
 
-#### **Warm-up:** All lessons start with a warm-up activity to activate prior knowledge and introduce the topic.
-
-#### **Engage & Interact:** The core of the lesson features engaging and interactive activities designed for students to solidify understanding through hands-on exploration and collaboration.
-
-#### **Reflect:** Built-in reflection time allows students to process the learned material and make connections.
-
-#### **Wrap-up:** Lessons conclude with a clear summary and takeaways to solidify key concepts.
 
 
 MARKDOWN

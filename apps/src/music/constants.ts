@@ -39,20 +39,30 @@ export const Triggers: Trigger[] = [
 ];
 
 export const BlockMode = {
-  ADVANCED: 'Advanced',
-  SIMPLE: 'Simple',
   SIMPLE2: 'Simple2',
-  TRACKS: 'Tracks',
-};
+  ADVANCED: 'Advanced',
+} as const;
 
 // For reference, events look like this:
 // events: [{src: 'sound_1', tick: 3}]
 export const DEFAULT_PATTERN = {
   kit: 'drums',
   events: [],
+  ai: false,
 };
 
 export const DEFAULT_PATTERN_LENGTH = 1;
+
+// For reference, events look like this:
+// events: [{src: 'sound_1', tick: 3}]
+export const DEFAULT_PATTERN_AI = {
+  kit: 'drums',
+  length: 2,
+  events: [],
+  ai: true,
+};
+
+export const DEFAULT_PATTERN_AI_LENGTH = 2;
 
 // Type: ChordEventValue
 export const DEFAULT_CHORD = {

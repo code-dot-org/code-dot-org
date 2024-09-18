@@ -1,10 +1,6 @@
 %div.resources-navigation
   %a.nav-link{href: resolve_url('/promote')}
     %div.nav-header= hoc_s(:resources_promote)
-  - if @country != 'us'
-    %div.nav-item
-      %a.nav-link{href: resolve_url('/promote/country-resources')}
-        = hoc_s(:resources_country_resources)
   %div.nav-item
     %a.nav-link{href: resolve_url('/promote')}
       = hoc_s(:resources_nav_spread_word)
@@ -64,9 +60,6 @@
     - else
       %a.nav-link{href: resolve_url('/promote/resources#sample-emails')}
         = hoc_s(:resources_emails)
-  %div.nav-item
-    %a.nav-link{href: resolve_url('/promote/press-kit')}
-      = hoc_s(:resources_press_kit)
 = view :resources_nav
 
 :javascript

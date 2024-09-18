@@ -7,13 +7,11 @@ require 'active_support/core_ext/enumerable'
 require 'active_support/core_ext/object/deep_dup'
 
 class Tutorials
-  # This class uses data from two GSheets:
+  # This class uses data from one GSheet:
   #   GoogleDrive://Pegasus/v3/cdo-tutorials
-  #   GoogleDrive://Pegasus/v3/cdo-beyond-tutorials
-  # These sheets are in the "v3" Google Sheet format and use datatype suffixes on the column names,
+  # This sheet is in the "v3" Google Sheet format and use datatype suffixes on the column names,
   # and map to tables in the database to match the v3 convention:
   #   cdo_tutorials
-  #   cdo_beyond_tutorials
   # We alias the database columns with names that have the datatype suffixes stripped off for
   # backwards-compatibility with some existing tutorial pages
   # Note: A tutorial can be present in the sheet but hidden by giving it the "do-not-show" tag.

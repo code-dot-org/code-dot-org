@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-03-30T04:01:13.000Z",
   "level_num": "custom",
@@ -30,11 +29,9 @@
     },
     "encrypted_exemplar_sources": "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\n",
     "name_suffix": "_-modular",
-    "ai_tutor_available": "false",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-03-30T04:01:13.272+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L7a_-modular\\\"\"],\"cloned_from\":\"CSA U6L2-L7a_-modular\"},{\"changed_at\":\"2024-03-30 04:01:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>

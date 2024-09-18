@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:54:04 UTC",
-    "published_state": null,
+    "serialized_at": "2024-08-21 19:01:35 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -141,6 +141,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 5 - Workshop Overview_2024"
+        ],
         "progression": "Module 5 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -163,6 +166,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Intro to Unit 7_2024"
+        ],
         "progression": "Understanding Unit 7 (~5 minutes)"
       },
       "bonus": false,
@@ -185,6 +191,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Explore_2024"
+        ],
         "progression": "Digging into the \"Parameters and Return Explore\" lesson (~25 minutes)"
       },
       "bonus": false,
@@ -207,6 +216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Prac 1_2024"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -229,6 +241,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice_Level 1_2024"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -251,6 +266,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice_Level 2_2024"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -273,6 +291,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice_Level 3_2024"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -295,6 +316,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice_Level 4_2024"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -317,6 +341,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice_Level 5_2024"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -339,6 +366,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice_Level 6_2024"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -361,6 +391,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice_Level 7_2024"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -383,6 +416,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Prac 10_2024"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -405,6 +441,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Inclusive Classrooms_2024"
+        ],
         "progression": "Creating inclusive classrooms (~15 minutes)"
       },
       "bonus": false,
@@ -427,6 +466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 5 Wrap Up_2024"
+        ],
         "progression": "Module 5 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,

@@ -1,6 +1,9 @@
 class AichatRequestChatCompletionJob < ApplicationJob
   queue_as :default
 
+  DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.2
+  DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.6
+
   before_enqueue do |job|
     request = job.arguments.first[:request]
     request.update!(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:QUEUED])
@@ -18,7 +21,12 @@ class AichatRequestChatCompletionJob < ApplicationJob
     end
 
     request = arguments.first[:request]
-    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
+    execution_status_code = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE]
+    if exception.message.include? "must have less than 3000 tokens"
+      execution_status_code = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE]
+    end
+
+    request.update!(response: exception.message, execution_status: execution_status_code)
     Honeybadger.notify(
       "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}",
       context: {
@@ -34,33 +42,43 @@ class AichatRequestChatCompletionJob < ApplicationJob
     model_customizations = JSON.parse(request.model_customizations, {symbolize_names: true})
     stored_messages = JSON.parse(request.stored_messages, {symbolize_names: true})
     new_message = JSON.parse(request.new_message, {symbolize_names: true})
-
-    status, response = get_execution_status_and_response(model_customizations, stored_messages, new_message, locale)
+    level_id = request.level_id
+    status, response = get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
     request.update!(response: response, execution_status: status)
   end
 
-  private def get_execution_status_and_response(model_customizations, stored_messages, new_message, locale)
-    # Check input for profanity and PII
-    user_profanity = find_profanity(new_message[:chatMessageText], locale)
-    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_profanity}"] if user_profanity
+  private def get_toxicity_threshold_user_input
+    DCDO.get("aichat_toxicity_threshold_user_input", DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
+  end
+
+  private def get_toxicity_threshold_model_output
+    DCDO.get("aichat_toxicity_threshold_model_output", DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
+  end
+
+  private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
+    # Moderate user input for toxicity.
+    # get_toxicity returns an object with the following fields:
+    # text: string, toxicity: number, and max_category {name: string, score: number}
+    user_toxicity = find_toxicity('user', new_message[:chatMessageText], get_toxicity_threshold_user_input, locale)
+    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
     user_pii = find_pii(new_message[:chatMessageText], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
-    # Make the request
-    response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message)
+    # Make the request.
+    response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
-    # Check output for profanity and PII. Report to HoneyBadger if the model returned profanity.
-    model_profanity = find_profanity(response, locale)
-    if model_profanity
+    # Moderate model output for toxicity. Report to HoneyBadger if the model returns toxicity.
+    model_toxicity = find_toxicity('assistant', response, get_toxicity_threshold_model_output, locale)
+    if model_toxicity
       Honeybadger.notify(
-        'Profanity returned from aichat model (blocked before reaching student)',
+        'Toxicity returned from aichat model (blocked before reaching student)',
         context: {
           response: response,
-          flagged_content: model_profanity,
+          flagged_content: model_toxicity.to_json,
         }
       )
-      return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], "Profanity detected in model output: #{model_profanity}"]
+      return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], model_toxicity.to_json]
     end
 
     model_pii = find_pii(response, locale)
@@ -69,15 +87,44 @@ class AichatRequestChatCompletionJob < ApplicationJob
     [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
   end
 
-  # Check the given text for profanity
-  private def find_profanity(text, locale)
-    # TODO: Use llm-guard instead of WebPurify to check for profanity / toxicity.
-    filter_result = ShareFiltering.find_profanity_failure(text, locale)
-    filter_result.content if filter_result&.type == ShareFiltering::FailureType::PROFANITY
+  # Checks for toxicity in the given text using various services, determined by DCDO settings.
+  # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}
+  private def find_toxicity(role, text, threshold, locale)
+    if blocklist_enabled?(role)
+      text.split.each do |word|
+        return {text: text, blocked_by: 'blocklist', details: {blocked_word: word}} if profane_word_blocklist.include? word
+      end
+    end
+
+    if webpurify_enabled?(role)
+      profanity = ShareFiltering.find_profanity_failure(text, locale)
+      return {text: text, blocked_by: 'webpurify', details: profanity.to_h} if profanity
+    end
+
+    if comprehend_enabled?(role)
+      comprehend_response = AichatComprehendHelper.get_toxicity(text, locale)
+      return {text: text, blocked_by: 'comprehend', details: comprehend_response} if comprehend_response && comprehend_response[:toxicity] > threshold
+    end
   end
 
-  # Check the given text for PII
+  # Check the given text for PII.
   private def find_pii(text, locale)
-    # TODO: Use llm-guard to check for PII. Currently we don't check for PII to maintain consistency with existing code.
+    # TODO: Check for PII. Currently we don't check for PII but we plan to add post-launch.
+  end
+
+  private def comprehend_enabled?(role)
+    DCDO.get("aichat_safety_comprehend_enabled_#{role}", true)
+  end
+
+  private def webpurify_enabled?(role)
+    DCDO.get("aichat_safety_webpurify_enabled_#{role}", false)
+  end
+
+  private def blocklist_enabled?(role)
+    DCDO.get("aichat_safety_blocklist_enabled_#{role}", false)
+  end
+
+  private def profane_word_blocklist
+    DCDO.get("aichat_safety_profane_word_blocklist", [])
   end
 end

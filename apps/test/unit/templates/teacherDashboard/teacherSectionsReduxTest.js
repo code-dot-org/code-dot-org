@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   stubRedux,
   restoreRedux,
@@ -193,18 +193,12 @@ describe('teacherSectionsRedux', () => {
 
   describe('setAuthProviders', () => {
     it("sets teacher's auth providers", () => {
-      const action = setAuthProviders([
-        'google_oauth2',
-        'clever',
-        'email',
-        'windowslive',
-      ]);
+      const action = setAuthProviders(['google_oauth2', 'clever', 'email']);
       const nextState = reducer(initialState, action);
       assert.deepEqual(nextState.providers, [
         'google_classroom',
         'clever',
         'email',
-        'windowslive',
       ]);
     });
   });
@@ -477,6 +471,7 @@ describe('teacherSectionsRedux', () => {
         ],
         syncEnabled: undefined,
         aiTutorEnabled: undefined,
+        anyStudentHasProgress: undefined,
       });
     });
   });
@@ -800,6 +795,7 @@ describe('teacherSectionsRedux', () => {
           sectionInstructors: [],
           syncEnabled: undefined,
           aiTutorEnabled: false,
+          anyStudentHasProgress: undefined,
         },
       });
     });
@@ -1807,7 +1803,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('doesnt send an event when course offering is unchanged', () => {
-      jest.mock('@cdo/apps/lib/util/firehose');
+      jest.mock('@cdo/apps/metrics/firehose');
       store.dispatch(assignToSection(11, 2, 2, 3, null));
       expect(analyticsSpy).to.not.be.called;
     });

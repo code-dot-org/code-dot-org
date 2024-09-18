@@ -1,0 +1,89 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2024-08-22T22:11:12.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": true,
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": true,
+    "hide_animation_mode": true,
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": true,
+    "use_modal_function_editor": true,
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-22 22:55:15 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-22 23:01:19 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" x="79" y="50">
+          <next>
+            <block type="gamelab_setBackgroundImageAs">
+              <field name="IMG">"space"</field>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon">
+                  <field name="ANIMATION_NAME">"blue alien"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker">
+                      <field name="LOCATION">{"x":114,"y":135}</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_makeNewSpriteAnon">
+                      <field name="ANIMATION_NAME">"pink alien"</field>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <field name="LOCATION">{"x":276,"y":133}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_setBackgroundImageAs" id="ZmsV_A?{Bgu.(M*ifDmO" x="49" y="45">
+          <field name="IMG">"cave"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon" id="`B:c0pd=5r`?.OMAXqUK" x="52" y="269">
+          <field name="ANIMATION_NAME">"sun"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="aAg=arGTN~iY:+Im.;mJ">
+              <field name="LOCATION">{"x":219,"y":199}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_toggleBehaviorSimple" id="Kp)`,9/2bV.9-S$=!=V~" x="68" y="399">
+          <field name="TOGGLE">"begins"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="aCp(DiE%4c|NFjlx,GPM">
+              <field name="ANIMATION">"sun"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behaviorPicker" id="vUz|*LX]!px?u246,Ow5">
+              <field name="BEHAVIOR">uninitialized</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

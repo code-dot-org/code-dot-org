@@ -84,9 +84,10 @@
         ]
       }
     ],
+    "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-26T04:06:26.471+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_trigger_v2\\\"\"],\"cloned_from\":\"musiclab_intro_trigger_v2\"},{\"changed_at\":\"2024-04-26 22:04:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-29 15:18:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-26T04:06:26.471+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_trigger_v2\\\"\"],\"cloned_from\":\"musiclab_intro_trigger_v2\"},{\"changed_at\":\"2024-04-26 22:04:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-29 15:18:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-19 20:42:55 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

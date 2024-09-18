@@ -1,0 +1,44 @@
+name 'sp-pl-DS_L3andL4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data and Ethics
+
+
+#### In these lessons, students examine the ethical considerations of data collection and the complexities of data rights, gaining hands-on experience with data handling and exploring diverse perspectives through role-playing activities.
+
+---
+
+## Lesson 3: Ethical Data Collection 
+
+<img src="https://images.code.org/cd2f8aadb676061a688ffc2f84a732ae-image-1724339345439.png" alt="judicial scale icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+
+#### In this lesson, students will have the opportunity to learn about multiple aspects of data collection. 
+
+#### They will collect and store classroom data, explore ethical considerations that must be made when choosing the types of data that are collected, and delve into the different ways that data might be collected.
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+<div style="clear:both;"></div>
+
+## Lesson 4: Data Rights 
+<img src="https://images.code.org/296fb994c0502d16f96bda2d08e5ba05-image-1724339525656.png" alt="scale icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### In this lesson, students will examine and evaluate fundamental data rights. Through a role-playing activity, students will take on the personas of different stakeholders in data rights conversations. 
+
+#### They will attempt to empathize with different positions in order to strengthen their understanding of the nuance inherent in data rights discussions.
+
+
+
+
+### <b>Check out the entire lesson plan  <a href="LINK" target="blank" rel="noopener noreferrer">here</a>.</b>
+
+<br>
+
+
+#### Let’s dive into an activity from lesson 3 where students provide ethical guidelines for data collection while planning a party. 
+
+
+MARKDOWN

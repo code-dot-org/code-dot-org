@@ -24,8 +24,6 @@ Print your own posters! Simply click an image below to view and save a printable
 
 {{ promote_new_posters }}
 
-* Vous cherchez des posters des années précédentes ? [Retrouvez-les ici]({{ promote/previous_posters_url }}) !
-
 <a id="social"></a>
 
 ## Publiez ceux-ci sur les réseaux sociaux
@@ -95,26 +93,6 @@ Cette année, voyons encore plus grand. Je vous invite à rejoindre l'Heure de C
 Faites passer l'information. Organisez un événement. Demandez à une école près de chez vous de s'inscrire. Ou essayez Une Heure de Code vous-même ; tout le monde peut profiter de l'apprentissage des bases.
 
 Lancez-vous ici : http://hourofcode.com/{{ country_language }}<br />
-
-* * *
-
-<a id="help-schools"></a>
-
-### Portez-vous volontaire dans une école:
-
-#### [Retrouvez plus de ressources et d'informations concernant le volontariat en école ici]({{ how_to_volunteers_url }}).
-
-**Objet :** Pouvons-nous vous aider à organiser une Heure de Code ?
-
-Du {{ campaign_date/short }}, 10% des élèves dans le monde entier fêteront la Semaine de l'enseignement de l'informatique en faisant une Heure de Code au sein de leur école. C’est l’occasion pour chaque enfant d’apprendre comment fonctionne la technologie qui nous entoure.
-
-[Mon organisation/Mon nom] aimerait aider [nom de l'école] à organiser un évènement pour l'Heure de Code. Nous pouvons aider les enseignants à animer une Heure de code dans leurs salles de classe (nous n'avons même pas besoin d'ordinateurs !) ou si vous préférez une présentation, nous pouvons trouver un intervenant pour parler du fonctionnement de la technologie et du métier d'ingénieur en informatique.
-
-Les élèves créeront leurs propres applications ou jeux qu'ils pourront montrer à leur parents, et nous imprimerons aussi des certificats Une Heure de Code qu'ils pourront ramener à la maison. En plus, c'est amusant! Au travers d'activités interactives et pratiques, les élèves développeront des compétences et apprendront à appréhender l'informatique de manière accessible.
-
-Les ordinateurs sont partout, ils sont en train de changer tous les secteur de la planète. Mais seuls 51 % des établissements d'enseignement secondaire et lycées proposent des cours d'informatique. La bonne nouvelle, c'est que nous sommes en train de changer cela ! Si vous avez déjà entendu parler de l’Heure de Code, vous savez peut-être qu'elle a marqué l’histoire - plus de 100 millions d’élèves du monde entier ont fait une Heure de Code. Même des chefs d'état comme le président américain Barack Obama et le premier ministre canadien Justin Trudeau ont écrit leurs premières lignes de code dans le cadre de la campagne. 
-
-Vous pouvez en savoir plus au sujet de l'événement en vous rendant sur http://hourofcode.com. Ou alors dites-nous si vous aimeriez prendre rendez-vous pour voir comment [nom de l'école] peut participer. <br />
 
 * * *
 

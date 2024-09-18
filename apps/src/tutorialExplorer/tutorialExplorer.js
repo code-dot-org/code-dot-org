@@ -639,14 +639,6 @@ export default class TutorialExplorer extends React.Component {
               </div>
 
               <div style={bottomLinksContainerStyle}>
-                <div style={styles.bottomLinksLinkFirst}>
-                  <a
-                    style={styles.bottomLinksLink}
-                    href="https://hourofcode.com/activity-guidelines"
-                  >
-                    {i18n.bottomGuidelinesLink()}
-                  </a>
-                </div>
                 <div>
                   <a
                     style={styles.bottomLinksLink}

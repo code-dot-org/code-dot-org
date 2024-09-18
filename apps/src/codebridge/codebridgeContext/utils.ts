@@ -87,7 +87,6 @@ export const useProjectUtilities = (
             contents: contents.replace(/\${fileName}/g, fileName),
           },
         });
-        utils.setActiveFile(fileId);
       }),
       renameFile: <RenameFileFunction>((fileId, newName) => {
         dispatch({

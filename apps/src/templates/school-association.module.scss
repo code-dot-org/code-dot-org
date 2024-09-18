@@ -9,6 +9,10 @@
     margin-bottom: 0.25rem;
   }
 
+  p {
+    margin-bottom: 0.375rem;
+  }
+
   label {
     width: 100%;
     margin-bottom: 0;
@@ -18,7 +22,6 @@
     width: 100%;
     box-sizing: border-box;
     height: 46px !important;
-    margin-top: 0.37rem !important;
     text-indent: 0.25rem;
   }
 
@@ -43,19 +46,21 @@
   }
 }
 
+.headerContainer {
+  margin-bottom: 1.75rem;
+}
+
 .inputContainer {
   justify-self: center;
-  text-align: left;
+  text-align: start;
   width: 400px;
   display: flex;
   flex-direction: column;
+  gap: 1.125rem;
+}
 
-  .padding {
-    padding-top: 1.125rem;
-    margin-bottom: 0;
-  }
-
-  .disabledLabel {
+.disabledLabel {
+  span {
     color: $light_gray_300 !important;
   }
 }

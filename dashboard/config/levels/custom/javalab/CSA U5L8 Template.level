@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-09-28T19:43:57.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -23,12 +27,9 @@
         "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class MyConcert {\n  public static void main(String[] args) throws FileNotFoundException {\n\n    Stage myStage = Theater.stage;\n    String[] imageFiles = {\"demo01.jpeg\", \"demo02.jpg\", \"demo03.jpg\", \"demo04.jpg\", \"demo05.jpg\",\n                           \"demo06.jpg\", \"demo07.jpg\", \"demo08.jpg\", \"demo09.jpg\", \"demo10.jpg\"};\n\n    myStage.drawImage(imageFiles[9], 0, 0, myStage.getWidth(), myStage.getHeight(), 0);\n    myStage.pause(1);\n\n    // TO DO: Create a ShiftedImage object.\n\t\t\n\n    // TO DO: Use the shift effect.\n\t\t\n\n    // TO DO: Draw the ShiftedImage on the stage.\n\t\t\n\n    myStage.play();\n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-09-28T19:43:57.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-09-28 19:44:09 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-15 18:36:00 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>

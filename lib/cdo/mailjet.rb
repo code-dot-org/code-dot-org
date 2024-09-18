@@ -36,6 +36,26 @@ module MailJet
     end
   end
 
+  # Sends an email using a MailJet template
+  #
+  # @param template_name [Symbol] The MailJet template name
+  # @param contact_email [String] The MailJet contact (recipient) email address
+  # @param contact_name [String] The MailJet contact (recipient) full name
+  # @param vars [Hash] Optional variables to be passed to the template
+  # @param locale [String] The locale to use for the email
+  #
+  # @return [Mailjet::Send] The MailJet send response
+  def self.send_email(template_name, contact_email, contact_name, vars: {}, locale: 'en-US')
+    return unless enabled?
+
+    email_config = EMAILS[template_name.to_sym]
+    raise ArgumentError, "Invalid email template: #{template_name}" unless email_config
+
+    contact = find_or_create_contact(contact_email, contact_name)
+
+    send_template_email(contact, email_config, locale, variables: vars)
+  end
+
   def self.create_contact_and_add_to_welcome_series(user, locale = 'en-US')
     return unless enabled?
 
@@ -43,7 +63,13 @@ module MailJet
     return unless user.teacher?
 
     contact = find_or_create_contact(user.email, user.name)
-    update_contact_field(contact, 'sign_up_date', user.created_at.to_datetime.rfc3339)
+    update_contact_fields(contact,
+      [
+        {name: 'firstname', value: user.name}, # existing templates use 'firstname'
+        {name: 'display_name', value: user.name},
+        {name: 'sign_up_date', value: user.created_at.to_datetime.rfc3339}
+      ]
+    )
 
     subaccount_contact_list_config = CONTACT_LISTS[:welcome_series][subaccount.to_sym]
     contact_list_id = subaccount_contact_list_config[locale.to_sym] || subaccount_contact_list_config[:default]
@@ -67,19 +93,28 @@ module MailJet
     Mailjet::Contact.find(email)
   end
 
-  def self.update_contact_field(contact, field_name, field_value)
+  # data must be in the format:
+  # [
+  #   {
+  #     name: "field_name",
+  #     value: "field_value"
+  #   }
+  # ]
+  def self.update_contact_fields(contact, fields)
     return unless enabled?
     return if contact.nil?
 
     contactdata = Mailjet::Contactdata.find(contact.id)
-    contactdata.update_attributes(
-      data: [
-        {
-          name: field_name,
-          value: field_value
-        }
-      ]
-    )
+    return unless contactdata
+
+    # Fields need to be sent separately or else only the first field is reflected in MailJet
+    fields.each do |field|
+      contactdata.update_attributes(
+        data: [
+          field
+        ]
+      )
+    end
   end
 
   def self.delete_contact(email)
@@ -112,33 +147,23 @@ module MailJet
     )
   end
 
-  def self.send_template_email(contact, email_config, locale = 'en-US')
+  def self.send_template_email(contact, email_config, locale = 'en-US', variables: {})
     return unless enabled?
     return unless contact&.email.present?
 
     configure_api_v3dot1
 
-    from_address = email_config[:from_address]
-    from_name = email_config[:from_name]
     template_config = email_config[:template_id][subaccount.to_sym]
-    template_id = template_config[locale.to_sym] || template_config[:default]
+    # Each email template may have different required "messages:"" fields
+    # See https://dev.mailjet.com/email/guides for more information regarding "messages:" format
+    message = {}
+    message[:From] = {Email: email_config[:from_address], Name: email_config[:from_name]}
+    message[:To] = [{Email: contact.email, Name: contact.name}]
+    message[:TemplateID] = template_config[locale.to_sym] || template_config[:default]
+    message[:TemplateLanguage] = true
+    message[:Variables] = variables if variables.present?
 
-    Mailjet::Send.create(messages:
-      [{
-        From: {
-          Email: from_address,
-          Name: from_name
-        },
-        To: [
-          {
-            Email: contact.email,
-            Name: contact.name
-          }
-        ],
-        TemplateID: template_id,
-        TemplateLanguage: true,
-      }]
-    )
+    Mailjet::Send.create(messages: [message])
   end
 
   def self.valid_email?(email)

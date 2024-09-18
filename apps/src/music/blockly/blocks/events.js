@@ -1,5 +1,6 @@
 import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
+import {TRIGGER_FIELD} from '../constants';
 import {fieldTriggerDefinition} from '../fields';
 
 export const whenRun = {
@@ -12,7 +13,15 @@ export const whenRun = {
     tooltip: musicI18n.blockly_blockWhenRunTooltip(),
     helpUrl: '',
   },
-  generator: () => 'var currentMeasureLocation = 1;\n',
+  generator: ctx => {
+    const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
+    let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
+    ctx.skipNextBlockGeneration = true;
+    return `
+      if (__context == 'when_run') {
+       ${handlerCode}
+      }`;
+  },
 };
 
 export const triggeredAt = {
@@ -33,13 +42,19 @@ export const triggeredAt = {
     tooltip: musicI18n.blockly_blockTriggeredAtTooltip(),
   },
   generator: ctx => {
+    const id = ctx.getFieldValue(TRIGGER_FIELD);
     const varName = Blockly.JavaScript.nameDB_.getName(
       ctx.getFieldValue('var'),
       Blockly.Names.NameType.VARIABLE
     );
+    const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
+    let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
+    ctx.skipNextBlockGeneration = true;
     return `
       ${varName} = startPosition;
-      \n`;
+      if (__context == "${id}") {
+        ${handlerCode}
+      }`;
   },
 };
 

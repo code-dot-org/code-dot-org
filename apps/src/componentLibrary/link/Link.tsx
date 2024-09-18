@@ -5,7 +5,7 @@ import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import moduleStyles from './link.module.scss';
 
-type LinkBaseProps = {
+export interface LinkBaseProps {
   /** Link id */
   id?: string;
   /** Custom class name */
@@ -26,7 +26,7 @@ type LinkBaseProps = {
   type?: 'primary' | 'secondary';
   /** Role of link */
   role?: string;
-};
+}
 
 type LinkWithChildren = LinkBaseProps & {
   /** Link content */

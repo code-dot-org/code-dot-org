@@ -7,11 +7,12 @@
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:42:22 UTC",
+    "serialized_at": "2024-09-04 20:44:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -91,8 +92,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Purpose:**\nFacilitators guide participants in a lesson investigation of the in-person model lesson, Unit 6: Lesson 5, to support participants during this virtual workshop. Facilitators share specific implementation strategies for the different level types discussed in the last session.\n\n**Objectives:**\n\n* Participants are exposed to the essential content knowledge necessary to plan and implement Lesson 5 of Unit 6.\n* Participants become familiar with how to attach an event handler to a hardware input.\n* Participants experience lesson level types (predict, programming, assessment, Helps & Tips).\n\n**Circuit Playground Lesson Plan:** <a href=\"https://studio.code.org/s/csd6a-2023/lessons/5\" target=\"blank\">U6AL5: Board Events</a><br>\n**micro:bit Lesson Plan:** <a href=\"https://studio.code.org/s/csd6b-2023/lessons/5\" target=\"blank\">U6BL5: Board Events</a>\n\n**Suggested time:** 35 minutes",
-        "student_overview": "**You will:**\n\n* Be exposed to the essential content knowledge necessary to plan and implement Lesson 5 of Unit 6.\n* Become familiar with how to attach an event handler to a hardware input.\n* Experience lesson level types (predict, programming, assessment, Helps & Tips).\n\n**Circuit Playground Lesson Plan:** <a href=\"https://studio.code.org/s/csd6a-2023/lessons/5\" target=\"blank\">U6AL5: Board Events</a><br>\n**micro:bit Lesson Plan:** <a href=\"https://studio.code.org/s/csd6b-2023/lessons/5\" target=\"blank\">U6BL5: Board Events</a>\n"
+        "overview": "**Purpose:**\nFacilitators guide participants in a lesson investigation of the in-person model lesson, Unit 6: Lesson 5, to support participants during this virtual workshop. Facilitators share specific implementation strategies for the different level types discussed in the last session.\n\n**Objectives:**\n\n* Participants are exposed to the essential content knowledge necessary to plan and implement Lesson 5 of Unit 6.\n* Participants become familiar with how to attach an event handler to a hardware input.\n* Participants experience lesson level types (predict, programming, assessment, Helps & Tips).\n\n**Circuit Playground Lesson Plan:** <a href=\"https://studio.code.org/s/csd6a-2024/lessons/5\" target=\"blank\">U6AL5: Board Events</a><br>\n**micro:bit Lesson Plan:** <a href=\"https://studio.code.org/s/csd6b-2024/lessons/5\" target=\"blank\">U6BL5: Board Events</a>\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Be exposed to the essential content knowledge necessary to plan and implement Lesson 5 of Unit 6.\n* Become familiar with how to attach an event handler to a hardware input.\n* Experience lesson level types (predict, programming, assessment, Helps & Tips).\n\n**Circuit Playground Lesson Plan:** <a href=\"https://studio.code.org/s/csd6a-2024/lessons/5\" target=\"blank\">U6AL5: Board Events</a><br>\n**micro:bit Lesson Plan:** <a href=\"https://studio.code.org/s/csd6b-2024/lessons/5\" target=\"blank\">U6BL5: Board Events</a>\n"
       },
       "seeding_key": {
         "lesson.key": "Synchronous Session 3: Lesson Investigation",
@@ -380,6 +381,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 Overview_2024"
+        ],
         "progression": "Module 5 Overview"
       },
       "bonus": false,
@@ -402,6 +406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M7 Theme Introduction_2024"
+        ],
         "progression": "Theme Introduction"
       },
       "bonus": false,
@@ -424,6 +431,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI-U6_2024"
+        ],
         "progression": "Curriculum Investigation Overview"
       },
       "bonus": false,
@@ -446,6 +456,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L1_2023_1_2024"
+        ],
         "progression": "Unit 6 Lesson 1 - Intro to App Lab"
       },
       "bonus": false,
@@ -468,6 +481,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L1_2024"
+        ],
         "progression": "Unit 6 Lesson 2 - Physical Designs"
       },
       "bonus": false,
@@ -490,6 +506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L3_2024"
+        ],
         "progression": "Unit 6 Lesson 3 - The Circuit Playground OR Introducing the micro:bit"
       },
       "bonus": false,
@@ -512,6 +531,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI_2024"
+        ],
         "progression": "Unit 6 Lesson 4 - Updating Screen Elements"
       },
       "bonus": false,
@@ -534,6 +556,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L2a_2024"
+        ],
         "progression": "Unit 6 Lesson 4 - Updating Screen Elements"
       },
       "bonus": false,
@@ -556,6 +581,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module  U6L2 Reflection_2024"
+        ],
         "progression": "Unit 6 Lesson 4 - Updating Screen Elements"
       },
       "bonus": false,
@@ -578,6 +606,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L4_2024"
+        ],
         "progression": "Unit 6 Lesson 5 - Board Events"
       },
       "bonus": false,
@@ -600,6 +631,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 U6L4 Level 2_2024"
+        ],
         "progression": "Unit 6 Lesson 5 - Board Events"
       },
       "bonus": false,
@@ -622,6 +656,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L4 Level 3_2024"
+        ],
         "progression": "Unit 6 Lesson 5 - Board Events"
       },
       "bonus": false,
@@ -644,6 +681,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8 U6L4 Reflection_2024"
+        ],
         "progression": "Unit 6 Lesson 5 - Board Events"
       },
       "bonus": false,
@@ -666,6 +706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 PSP Reflection_2024"
+        ],
         "progression": "Reflection: Problem Solving Process for Programming"
       },
       "bonus": false,
@@ -688,6 +731,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 Wrap Up_2024"
+        ],
         "progression": "Module 7 Asynchronous Wrap Up"
       },
       "bonus": false,

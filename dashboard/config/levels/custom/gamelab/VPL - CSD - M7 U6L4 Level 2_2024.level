@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2024-03-25T22:42:18.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "skin": "gamelab",
     "edit_code": true,
     "embed": "true",
-    "long_instructions": "# Comparing Input Methods - Game Lab\r\n\r\n_Recall that **Unit 3: Interactive Animations and Games** provides students with prior knowledge using Game Lab when responding to events using a device in **Unit 6: Creating Apps with Devices.**_\r\n___ \r\n\r\n##### Run the code, use the keyboard to move the Sprite, and answer the following questions:\r\n\r\n##### 1. What is the source of input?\r\n##### 2. Where and how does the program check for input?\r\n##### 3. What does the program do when it gets the correct input?\r\n##### 4. What is the program doing when there is no input?",
+    "long_instructions": "# Comparing Input Methods - Game Lab\r\n\r\n_Recall that **Unit 3: Interactive Animations and Games** provides students with prior knowledge using Game Lab when responding to events using a device in **Unit 6: Creating Apps with Devices.**_\r\n___ \r\n\r\n#### Run the code, use the keyboard to move the Sprite, and answer the following questions:\r\n\r\n#### 1. What is the source of input?\r\n#### 2. Where and how does the program check for input?\r\n#### 3. What does the program do when it gets the correct input?\r\n#### 4. What is the program doing when there is no input?",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -61,11 +62,13 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:18.438+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - M7 U6L4 Level 2_2023\\\"\"],\"cloned_from\":\"VPL - CSD - M7 U6L4 Level 2_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:18.438+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - M7 U6L4 Level 2_2023\\\"\"],\"cloned_from\":\"VPL - CSD - M7 U6L4 Level 2_2023\"},{\"changed_at\":\"2024-08-29 17:17:48 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -151,10 +151,10 @@ export default function EvidenceLevelsForTeachersV2({
           <BodyFourText>
             {showDescription !== INVALID_UNDERSTANDING
               ? evidenceLevels.find(e => e.understanding === showDescription)
-                  .teacherDescription
+                  ?.teacherDescription
               : understanding >= 0 &&
                 evidenceLevels.find(e => e.understanding === understanding)
-                  .teacherDescription}
+                  ?.teacherDescription}
           </BodyFourText>
         </div>
       </div>

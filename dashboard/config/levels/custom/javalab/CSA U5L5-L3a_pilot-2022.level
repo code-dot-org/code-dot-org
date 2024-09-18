@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:50:07.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The owner of the Project Mercury Pastries Food Truck has stored the inventories for each food truck in a 2D array. The 2D array contains the following values:\r\n\r\n![](https://images.code.org/972447c0bb792232427f9739c03e1a7c-image-1650922812556.png)\r\n\r\nwhere each row represents a unique food truck in the business. Each column represents the number of cakes, cookies, and pies, respectively.\r\n\r\nThe owner wants to know if any food trucks have quantities of desserts that are greater than a specified amount.\r\n\r\n##In Owner.java:\r\n\r\n1. Write the method `hasMinimum()`(#e7e8ea) using enhanced `for`(#e7e8ea) loops.\r\n\r\n   * Return `true`(#e7e8ea) if any food truck has a quantity of desserts that are more than the parameter `minValue`(#e7e8ea).\r\n   \r\n   * Otherwise, return `false`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `hasMinimum()`(#e7e8ea) method and print the result.\r\n\r\n::: details [**Show Me How**]\r\nTraversing a 2D array using an enhanced `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (dataType[] rowName : arrayName) {\r\n    for (dataTy[] valueName : rowName) {\r\n      // code to execute\r\n    }\r\n  }\r\n  ```\r\n:::",
@@ -25,12 +29,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:50:07.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:07.724+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L3a_2022\\\"\"],\"cloned_from\":\"CSA U5L5-L3a_2022\"},{\"changed_at\":\"2022-10-09 21:20:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 21:21:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 21:23:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 21:23:20 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

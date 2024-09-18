@@ -10,7 +10,7 @@ import reducers, {
   removeGroup,
   emptyNonUserFacingGroup,
   mapLessonGroupDataForEditor,
-} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
+} from '@cdo/apps/levelbuilder/unit-editor/unitEditorRedux';
 
 const getInitialState = () => ({
   lessonGroups: [

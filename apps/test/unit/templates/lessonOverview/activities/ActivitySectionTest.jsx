@@ -3,7 +3,7 @@ import React from 'react';
 
 import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
 
-import {sampleActivities} from '../../../lib/levelbuilder/lesson-editor/activitiesTestData';
+import {sampleActivities} from '../../../levelbuilder/lesson-editor/activitiesTestData';
 
 describe('ActivitySection', () => {
   let defaultProps;

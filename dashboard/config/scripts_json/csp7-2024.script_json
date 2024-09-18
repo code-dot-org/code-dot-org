@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-24 04:45:37 UTC",
+    "serialized_at": "2024-08-27 22:23:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3947,11 +3947,9 @@
     },
     {
       "name": "CSP Unit 7 - Slides",
-      "url": "https://drive.google.com/drive/folders/11bNcCYaKdFMQydVj1MKblPsTW12d5g7k?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1BTwX1x-F1kbRrwnqIc6d5Rgi9JBo3-4FxqRSynq-AaA/template/preview",
       "key": "csp_unit_7_-_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_7_-_slides"

@@ -1,0 +1,15 @@
+name 'self-paced-pl-gen-ai-customizing-project_03_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Gallery Walk
+
+<img src="https://images.code.org/d091eac50ec7066a1e1a37aa95d5f6a7-Screenshot 2024-09-04 at 2.47.11 PM.png" alt="chatbot lab in 'user view' display" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+
+#### Consider adding an collaborative opportunity for your class with an Optional **Gallery Walk**. This step allows students to showcase their chatbots in **User View** providing an opportunity for their peers to interact with and explore each other's work. By participating in this gallery walk, students can gain valuable insights and inspiration from their classmates.
+
+#### Encourage your students to leave constructive feedback using post-it notes, starting with phrases like “I like…” or “I wish…”. This not only fosters a positive and supportive learning environment but also helps students develop their ability to give and receive feedback—an essential skill in both academic and professional settings. While this step is optional, it can significantly enhance the collaborative atmosphere in your classroom, making the learning experience more enriching for everyone.
+
+MARKDOWN

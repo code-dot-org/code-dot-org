@@ -780,7 +780,8 @@
     "bubble_choice_description": "The `Painter` has a new job, and they need help painting the street through The Neighborhood to mark off the traffic lane.",
     "thumbnail_url": "https://images.code.org/c62aba06beefcd33f43cdf0d079bad45-U1L12-L4a.gif",
     "video_key": "csa_two_way_selection_and_not",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-16T23:01:30.840+00:00\",\"changed\":[\"cloned from \\\"CSA U1L12-L4a_2023\\\"\"],\"cloned_from\":\"CSA U1L12-L4a_2023\"}]"

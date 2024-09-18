@@ -1,3 +1,7 @@
+
+- content_for :head do
+  %script{src: webpack_asset_path('js/devise/sessions/_login.js')}
+
 %h2= t('signin_form.title')
 
 .flex-container

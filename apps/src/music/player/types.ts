@@ -53,6 +53,7 @@ export interface AudioPlayer {
    */
   playSequenceImmediately(
     sequence: SamplerSequence,
+    length: number,
     onTick?: (tick: number) => void,
     onStop?: () => void
   ): Promise<void>;

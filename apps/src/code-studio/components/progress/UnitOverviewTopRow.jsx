@@ -8,10 +8,10 @@ import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCa
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import Assigned from '@cdo/apps/templates/Assigned';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';

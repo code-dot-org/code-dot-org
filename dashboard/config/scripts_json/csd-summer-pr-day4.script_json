@@ -1,0 +1,4898 @@
+{
+  "script": {
+    "name": "csd-summer-pr-day4",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-08-26 20:13:39 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "csd-summer-pr-day4"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Collision Detection",
+      "name": "Lección 19: Detección de colisiones",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "assessment_opportunities": "1. **Detect when sprites are touching or overlapping, and change the program in response.**\r\n\r\n\tSee Level 7 in Code Studio.\r\n\r\n2. **Describe how abstractions help to manage the complexity of code**\r\n\r\n\tIn the Wrap Up discussion, make sure students can identify how more abstract blocks can help with creating larger or more complex programs.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: ¿Cómo puede la programación ayudar a simplificar los problemas complicados?\n\nLos estudiantes aprenderán acerca de la detección de colisiones en la computadora. En parejas, explorarán cómo una computadora podría utilizar las propiedades de ubicación, el tamaño de los sprites y las matemáticas para detectar si dos sprites se están tocando. Luego, usarán el bloque `isTouching()`(#f78183) para crear distintos efectos cuando los sprites colisionen, y practicarán el uso del bloque para modelar varias interacciones.",
+        "preparation": "* Print copies of the activity guide such that each pair of students has a part A and a part B\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "This lesson formally introduces the use of abstractions, simple ways of representing underlying complexity. \r\n\r\nIn the last lesson, students were exposed to the idea of using one block to represent complex code. Students further explore this idea in the context of the intentionally complex mathematical challenge of determining whether two sprites are touching. By using a single block to represent this complexity, in this case the isTouching block, it becomes much easier to write and reason about code, and students can appreciate the value of using abstractions. In later lessons, students will continue to build on the [`isTouching()`(#f78183)](/docs/gamelab/isTouching/) abstraction to create more complex sprite interactions.\r\n",
+        "student_overview": "**Pregunta del día: ¿Cómo puede la programación ayudar a simplificar los problemas complicados?**\n\nEn esta lección, aprenderás sobre la detección de colisiones explorando cómo un ordenador podría utilizar las matemáticas, la ubicación del sprite y el tamaño para detectar si los sprites se están tocando."
+      },
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "Mini-Project - Side Scroller",
+      "name": "Lección 20: Mini-Proyecto - Desplazamiento Lateral",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: ¿Cómo se pueden usar los nuevos tipos de movimientos sprite y la detección de colisión para crear un juego?\n\nLos estudiantes aplican lo aprendido acerca de la detección de colisión y de establecer la velocidad para crear un juego simple. Luego de analizar un juego de muestra, los estudiantes piensan en que tipo de juego les gustaría crear, luego utilizan un proceso estructurado para programarlo en Code Studio.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-side-scroller-interactive-animations-and-games-lesson-20/36209) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "This lesson is a chance for students to get more creative with what they have learned.  Encourage students to spend time on parts of the activity that interest them, as long as they meet the requirements of the assignment. This lesson can be shortened or lengthened depending on time constraints. ",
+        "student_overview": "**Pregunta del día: ¿Cómo se pueden utilizar los nuevos tipos de movimiento de los sprites y la detección de colisiones para crear un juego?**\n\nEn esta lección, utilizarás lo que has aprendido sobre la detección de colisiones y la velocidad para crear un sencillo juego de desplazamiento lateral."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "Complex Sprite Movement",
+      "name": "Lección 21: Movimiento Complejo de Sprites",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "assessment_opportunities": "1. **Use sprite velocity with the counter pattern to create different types of sprite movement**\n\n\tSee Level 6 in Code Studio.\n\n2. **Explain how individual programming constructs can be combined to create more complex behavior**\n\n\tIn the wrap up discussions, check that students can explain how they are creating new types of movement without new blocks.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: ¿Cómo se pueden combinar los bloques anteriores en nuevos patrones para hacer movimientos interesantes?\n\nLos estudiantes aprenderán a combinar las propiedades de velocidad de los sprites con el patrón de contador para crear movimientos de sprites más complejos. Después de repasar los dos conceptos, explorarán varios escenarios en los que se utilizarán la velocidad en el patrón de contador, y observarán los distintos tipos de movimiento que se obtienen como el resultado. Particularmente, los estudiantes aprenderán a simular la gravedad. A continuación, reflexionarán sobre cómo han podido obtener nuevos comportamientos combinando bloques y patrones que ya conocían.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "This lesson does not introduce any new blocks and in fact only uses patterns students have seen in Chapter 1. Instead, it demonstrates how combining these tools, in particular the abstractions students learned in the previous two lessons, allows them to build new behaviors for their sprites. This highlights the broader point that abstractions not only simplify code, but also can themselves be used as building blocks of even more complex behavior.  ",
+        "student_overview": "**Pregunta del día: ¿Cómo se pueden combinar los bloques anteriores en nuevos patrones para hacer movimientos interesantes?**\n\nEn esta lección, aprenderás a combinar las propiedades de velocidad de los sprites con el patrón de contador para crear movimientos de sprite más complejos."
+      },
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "The Game Design Process",
+      "name": "Lección 25: El Proceso de Diseño de Juegos",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "assessment_opportunities": "1. **Implement different features of a program by following a structured project guide**\r\n\r\n\tIn the Wrap Up discussion, make sure students are clear on how the project guide helps them to break their programming work into manageable chunks, and that they understand how listing the sprites and functions ahead of time can help them focus on specific bits of code rather than the entire program at once.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: ¿De qué forma el tener un plan nos ayuda a que un proyecto grande sea más fácil de completar?\n\nEsta lección presenta a los estudiantes el proceso que utilizarán para diseñar juegos durante el resto de la unidad. Este proceso está acompañado de una guía de proyecto en la cual los estudiantes deberán definir sus sprites, variables y funciones antes de empezar a programar su juego. Como primera actividad, los estudiantes se dirigirán al Game Lab para probar un juego de código oculto. Luego, conversarán acerca de la ubicación de los sprites, variables y funciones en el juego. Más tarde, trabajarán en la guía de proyecto, en ella, podrán ver una de las formas en la que se puede ejecutar el juego. Los estudiantes tendrán que completar una serie de niveles antes de llegar al final de la lección, en dónde podrán mejorar y personalizar el juego.",
+        "preparation": "* Print copies of the the project guide if you will be giving students physical copies.  Please note that this project guide is intentionally filled out. (See notes in Lesson Plan.)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "This lesson introduces multi-frame animations, and is the first in a sequence centered around the process of building software.\r\n\r\nWhile previous lessons focused on using abstractions to manage the complexity of the code, this lesson focuses on managing the complexity of the software development process. The lesson heavily scaffolds the software development process by providing students a completed project guide, providing starter code, and walking students through its implementation. In the subsequent lessons students will need to complete a greater portion of this guide independently, and for the final project they will follow this process largely independently.",
+        "student_overview": "**Pregunta del día**: ¿Cómo tener un plan ayuda a hacer más fácil un proyecto de gran envergadura?\n\nEn esta lección, explorarás el proceso que utilizarás durante el resto de la unidad al diseñar juegos."
+      },
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "Using the Game Design Process",
+      "name": "Lección 26: Uso del Proceso de Diseño de Juegos",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "assessment_opportunities": "1. **Identify core programming constructs necessary to build different components of a game**\n\n\tIn the project guide, check that the student has identified key functions, sprites and variables needed in the program, and that the general description of the program is accurate.\n\n2. **Implement different features of a program by following a structured project guide**\n\n\tSee Level 17 in Code Studio.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: ¿Cómo puede el proceso de resolución de problemas ayudar a los programadores a gestionar grandes proyectos?\n\nEn esta lección de varios días, los estudiantes usan el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataforma. Comenzarán analizando un ejemplo de este juego y luego definirán el aspecto del juego que quieren crear. A continuación, utilizarán un proceso estructurado para planificar los fondos, las variables, los sprites y las funciones que necesitarán para implementar su juego. Después de escribir el código, los estudiantes reflexionarán acerca de cómo pueden mejorar el juego e implementarán esos cambios.",
+        "preparation": "* Print one copy of the project guide for each student or pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "Students have already learned all of the programming constructs that they need to make a game. This lesson reviews many of those concepts while introducing them to a structured process that will help them to manage the work. It builds on the use of the Project Guide in the previous lesson by having students complete more of this project guide independently before using it to build a game. This activity prepares students to write their own game from scratch for the final project.",
+        "student_overview": "**Pregunta del día: ¿Cómo puede el proceso de resolución de problemas ayudar a los programadores a gestionar grandes proyectos?**\n\nEn esta lección de varios días, utilizarás el proceso de resolución de problemas para crear un juego de saltos de plataforma."
+      },
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "Project - Design a Game",
+      "name": "Lección 27: Proyecto - Diseñar un Juego",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "announcements": [
+          {
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit. You may also choose to assign the post-project test through Code Studio.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: ¿Cómo pueden las cinco prácticas de las ciencias de la computación (resolución de problemas, perseverancia, comunicación, colaboración y creatividad) ayudar a los programadores a completar grandes proyectos?\n\nLos estudiantes planificarán y desarrollarán su propio juego utilizando la guía de proyecto de las dos lecciones anteriores. Ya sea individualmente o en parejas, los estudiantes tendrán que decidir el tipo de juego que quieren crear, inspirándose en un conjunto de juegos de muestra. Luego, completarán una guía de proyecto en blanco en donde describirán el comportamiento del juego y analizarán las variables, los sprites y las funciones que necesitarán crear. En Code Studio, una serie de niveles les indicarán una secuencia general que pueden usar para implementar este plan. A lo largo del proceso, los estudiantes compartirán sus proyectos con sus compañeros para la revisión por pares e incorporarán esta retroalimentación a su juego. Al final de la lección, los estudiantes compartirán sus juegos con sus compañeros. Este proyecto puede abarcar de 3 a 5 períodos de clase.",
+        "preparation": "* Print copies of the project guide, one for each student / pair of students\n* Print copies of the rubric, one for each student / pair of students\n* Print copies of the peer review guide, one for each student / pair of students\n* Review sample games in Code Studio\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-design-a-game-interactive-animations-and-games-lesson-27/36211) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "This lesson is the culmination of Unit 3 and provides students an opportunity to build a Game Lab project of their own from the ground up. The scaffolding provided by the project guide and the practice they have using it are intended to assist students in scoping their projects and seeing their ideas through to completion. This project is an opportunity to showcase technical skills, but they will also need to collaborate with their partner, provide constructive peer feedback, and repeatedly use the problem solving process as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to this unit of CS Discoveries.",
+        "student_overview": "**Pregunta del día: ¿Cómo pueden las cinco prácticas de las ciencias de la computación (resolución de problemas, la persistencia, la comunicación, la colaboración y creatividad) ayudar a los programadores a completar grandes proyectos?**\n\nEn esta lección, utilizarás el proceso de resolución de problemas para planificar y construir un juego original."
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "97b00813-e504-4589-af98-b3c8f77705ba",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97b00813-e504-4589-af98-b3c8f77705ba",
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "b8268088-d3b9-488c-a0c9-95a44154b03f",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f",
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "3a850f08-6285-4f7f-8379-759e81b72681",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3a850f08-6285-4f7f-8379-759e81b72681",
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "70bf598d-b1f3-4ee2-956b-de573f004d1c",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "70bf598d-b1f3-4ee2-956b-de573f004d1c",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "73c7220d-54f4-4869-a674-79397a838f4e",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "73c7220d-54f4-4869-a674-79397a838f4e",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "a2eb7e37-8b48-4373-b722-87a6ddf7eb01",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a2eb7e37-8b48-4373-b722-87a6ddf7eb01",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "01da0193-ae37-46b9-a153-c840ca3d21c5",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01da0193-ae37-46b9-a153-c840ca3d21c5",
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "6b2fc69f-e05a-4928-b861-b4b4da1bb799",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b2fc69f-e05a-4928-b861-b4b4da1bb799",
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "883b7221-3ff1-4f6f-82e1-a33f0e090ba2",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "883b7221-3ff1-4f6f-82e1-a33f0e090ba2",
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "545c2c68-79b8-4a02-9de8-e03f5b664467",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "545c2c68-79b8-4a02-9de8-e03f5b664467",
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "c1c3d51e-8a97-4d72-9cfb-88150164088a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c1c3d51e-8a97-4d72-9cfb-88150164088a",
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "b8a47075-101a-4c4c-a608-a4cb93c202b4",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b8a47075-101a-4c4c-a608-a4cb93c202b4",
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "c1eeb9c8-54f3-4e92-a11b-87d49075a726",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c1eeb9c8-54f3-4e92-a11b-87d49075a726",
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b",
+      "position": 2,
+      "properties": {
+        "duration": 80,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b",
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "53e68739-000c-48d4-ab3f-263c2c8f9530",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53e68739-000c-48d4-ab3f-263c2c8f9530",
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "7aefc158-6bcf-47e9-beda-91496431d20d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7aefc158-6bcf-47e9-beda-91496431d20d",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b",
+      "position": 2,
+      "properties": {
+        "duration": 215,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "16d7820c-2c90-4170-8a4b-07553450e622",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "16d7820c-2c90-4170-8a4b-07553450e622",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    },
+    {
+      "key": "b0f6f4cc-a001-4b17-95d7-0c0ccccd5c2e",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b0f6f4cc-a001-4b17-95d7-0c0ccccd5c2e",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "502b8a56-f968-4ba9-819e-11c05a6185a5",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** On a projector or a computer screen, demonstrate the game that appears in the first level in Code Studio for this lesson.",
+        "progression_name": "Sample Game",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Showing the Game:** Avoid signing students into Code Studio at this point to play the game themselves. They have a fairly significant unplugged activity immediately afterwards and it will likely lead to difficulties in transitioning.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "502b8a56-f968-4ba9-819e-11c05a6185a5",
+        "lesson_activity.key": "97b00813-e504-4589-af98-b3c8f77705ba"
+      }
+    },
+    {
+      "key": "088d3f69-73fb-4ac5-983f-9966c93b6b17",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:**\tAn interesting aspect of this animation is that the sprites change when they touch each other. Can you think of any way that the computer could use the sprites’ properties to figure out whether they are touching each other?"
+      },
+      "seeding_key": {
+        "activity_section.key": "088d3f69-73fb-4ac5-983f-9966c93b6b17",
+        "lesson_activity.key": "97b00813-e504-4589-af98-b3c8f77705ba"
+      }
+    },
+    {
+      "key": "7ab4d094-2da3-47f4-af88-2cc61ea0fbff",
+      "position": 3,
+      "properties": {
+        "description": "**Discuss**: Allow the students to brainstorm ideas for how the computer could determine whether the two sprites are touching.  List their ideas on the board and tell them that they’ll have a chance to try out their theories in a moment.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** The purpose of this discussion is just to get some ideas on the board for students to use in the next activity. There's no need to actually evaluate or try them, because students will be working together to do so immediately after the discussion.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7ab4d094-2da3-47f4-af88-2cc61ea0fbff",
+        "lesson_activity.key": "97b00813-e504-4589-af98-b3c8f77705ba"
+      }
+    },
+    {
+      "key": "1265dbc3-d726-40d3-b40a-9cb3367fe260",
+      "position": 4,
+      "properties": {
+        "description": "This is a tough problem, and we're going to get to dig into it today. As we work on it, we're also going to look at ways that the computer can help us make these tough, complicated problems more simple.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1265dbc3-d726-40d3-b40a-9cb3367fe260",
+        "lesson_activity.key": "97b00813-e504-4589-af98-b3c8f77705ba"
+      }
+    },
+    {
+      "key": "9bb55342-3937-4396-a612-37e426df7a1d",
+      "position": 5,
+      "properties": {
+        "description": "**Question of the Day: How can programming help make complicated problems more simple?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "9bb55342-3937-4396-a612-37e426df7a1d",
+        "lesson_activity.key": "97b00813-e504-4589-af98-b3c8f77705ba"
+      }
+    },
+    {
+      "key": "657997a2-c928-480f-97b6-2f71de64b5c1",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Group students into pairs.",
+        "name": "Collisions Unplugged\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "657997a2-c928-480f-97b6-2f71de64b5c1",
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f"
+      }
+    },
+    {
+      "key": "37e6f027-e507-47a0-ad32-2062ef6f2c36",
+      "position": 2,
+      "properties": {
+        "description": "Now you’re going to have a chance to try out the strategies that you came up with as a group. Each activity guide has four sheets of paper. One partner should take the papers with the “A” on the top, and the other should take the papers with the “B” on the top. You’re each going to draw two secret sprites on the chart, and your partner will try to figure out whether or not they are touching, based on the same information that the computer will have about each sprite’s properties. Don’t let your partner see what you are drawing.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "37e6f027-e507-47a0-ad32-2062ef6f2c36",
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f"
+      }
+    },
+    {
+      "key": "9011732f-0ae6-45e3-82ba-c037fa2f9378",
+      "position": 3,
+      "properties": {
+        "description": "**Distribute** the activity guides to each set of partners.  Ensure that one partner has taken Version A and the other has taken Version B.\r\n\r\n\r\n\r\nEach student will have a line on which to draw two squares.  The student chooses the location and the size of each of the squares, and then records the information about the squares in a table. They then switch tables (not drawings) and try to determine whether or not the two sprites are touching based on the width of each sprite and the distance between them.\r\n\r\nThe math to determine whether the sprites are touching is as follows:\r\n\r\n1. Subtract the x (or y) positions of the sprites to find the distance between their centers.\r\n2. Divide the width (or height) of each square by 2 to get the distance from the center to the edge.\r\n3. If the distance between the centers of the sprites is greater than the sum of the distances from their centers to their edges, the sprites are not touching.\r\n4. If the distance between the centers of the sprites is equal to the sum of the distances from their centers to their edges, the sprites are barely touching.\r\n5. If the distance between the centers of the sprites is less than the sum of the distances from their centers to their edges, the sprites are overlapping.\r\n\r\n\r\n\r\n**Circulate**: Support students as they complete the worksheet.  If students are not sure how to determine whether the sprites are touching, encourage them to use one of the ideas on the board. Remind them that they are not being graded on whether they are right or wrong, but on their ability to use the problem-solving process. If any students are finished early, challenge them to find a method that will work for sprites anywhere on the grid, not just on the same line.\r\n\r\n**Share**: After students have all had a chance to test their solutions, ask them to share what they discovered."
+      },
+      "seeding_key": {
+        "activity_section.key": "9011732f-0ae6-45e3-82ba-c037fa2f9378",
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f"
+      }
+    },
+    {
+      "key": "aa3d3f16-3519-4fd5-8e6d-ddc6067babf2",
+      "position": 4,
+      "properties": {
+        "description": "People can use a lot of different strategies to solve a problem like this. Because computers can’t “see” the drawings in the same way that people can, they need to use math to figure out whether two things are touching. We looked at how this can work along a line, but we can combine these methods to work anywhere on the game screen.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aa3d3f16-3519-4fd5-8e6d-ddc6067babf2",
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f"
+      }
+    },
+    {
+      "key": "8ba88bba-7985-42c0-8315-9226310d5fe3",
+      "position": 5,
+      "properties": {
+        "description": "**Transition**: Send students to Code Studio.",
+        "name": "isTouching()\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ba88bba-7985-42c0-8315-9226310d5fe3",
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f"
+      }
+    },
+    {
+      "key": "98e07c7b-077f-4fa5-8ace-45e5bdf64a31",
+      "position": 6,
+      "properties": {
+        "progression_name": "Sample Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "98e07c7b-077f-4fa5-8ace-45e5bdf64a31",
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f"
+      }
+    },
+    {
+      "key": "0b1d90ae-b134-4a90-8082-b70ad83e77ea",
+      "position": 7,
+      "properties": {
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Level 2:**\nThe code in this level is overwhelming. The point is not that students understand every line, but that they see that it's possible to check whether sprites are touching just by using their positions. They should understand that the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block used in the next level automatically runs the complicated code that they see here, but that it's hidden inside the block to make programming easier.\n\nThis code does not include the y and height properties because the two sprites are interacting on the same horizontal line. If the bunny could move diagonally, then the code would be even more complicated.\n\n**Level 5:** This level does not ask students to fix the bug in the program, which must be done in the animation tab. In order to make the collision work properly, students will need to crop the empty space around the visible part of the picture. The easiest way to do this is to click once on the \"crop\" icon in the animation tab, which will tightly crop to the smallest rectangle around the visible parts of the picture. Students may also use the rectangular select tool to specify what should be cropped away."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0b1d90ae-b134-4a90-8082-b70ad83e77ea",
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f"
+      }
+    },
+    {
+      "key": "056eeec0-e0b8-42f4-980f-3bcb56fba602",
+      "position": 8,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "056eeec0-e0b8-42f4-980f-3bcb56fba602",
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f"
+      }
+    },
+    {
+      "key": "1efefc70-4a57-48bf-9131-6859d798db5d",
+      "position": 9,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1efefc70-4a57-48bf-9131-6859d798db5d",
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f"
+      }
+    },
+    {
+      "key": "48824d7e-1ba9-455d-ac49-23a57aab80b9",
+      "position": 10,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "48824d7e-1ba9-455d-ac49-23a57aab80b9",
+        "lesson_activity.key": "b8268088-d3b9-488c-a0c9-95a44154b03f"
+      }
+    },
+    {
+      "key": "628af061-2c78-43a9-96ec-e49010f7501e",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can programming help make complicated problems more simple?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "628af061-2c78-43a9-96ec-e49010f7501e",
+        "lesson_activity.key": "3a850f08-6285-4f7f-8379-759e81b72681"
+      }
+    },
+    {
+      "key": "76a462b5-1b72-4f1e-9a5e-f6354caa951c",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** At the beginning of the lesson, you saw that it's possible to do everything that the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block does without using the block at all.  What makes this block useful?",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students should note that even though they could program the code to detect whether sprites are touching each time, it is error-prone and would take up more time and energy than having a block that performs the same code automatically. The new block helps them to take on more difficult challenges by reducing the risk of errors and freeing them to think about the bigger picture.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "76a462b5-1b72-4f1e-9a5e-f6354caa951c",
+        "lesson_activity.key": "3a850f08-6285-4f7f-8379-759e81b72681"
+      }
+    },
+    {
+      "key": "71fcef11-c3da-4ba2-a5b1-b0b564e4ab70",
+      "position": 3,
+      "properties": {
+        "description": "One of the great things about programming is that once you've figured out a solution to a problem, you can often program it into the computer to be used over and over again. When you don't have to worry about the details of that particular problem, you can take on bigger challenges, as you did today. Using a simplified representation of something to hide the details so you can think about the big picture is called \"abstraction\", and it's a key tool programmers use to help them write complicated programs.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "71fcef11-c3da-4ba2-a5b1-b0b564e4ab70",
+        "lesson_activity.key": "3a850f08-6285-4f7f-8379-759e81b72681"
+      }
+    },
+    {
+      "key": "5efca3f5-2c70-4e1c-9c1b-0b43196b8273",
+      "position": 4,
+      "properties": {
+        "description": "**Key Vocabulary:**\r\n\r\n* **abstraction** - a simplified representation of something more complex."
+      },
+      "seeding_key": {
+        "activity_section.key": "5efca3f5-2c70-4e1c-9c1b-0b43196b8273",
+        "lesson_activity.key": "3a850f08-6285-4f7f-8379-759e81b72681"
+      }
+    },
+    {
+      "key": "cfb91f35-ff99-4aac-b98f-647b5cbb9441",
+      "position": 1,
+      "properties": {
+        "description": "**Review**\r\n\r\nAsk students to think of all of the things that they have learned how to do in the unit so far, and display their answers to the class.  This is a good time to check in on any concepts that have been challenging for students."
+      },
+      "seeding_key": {
+        "activity_section.key": "cfb91f35-ff99-4aac-b98f-647b5cbb9441",
+        "lesson_activity.key": "70bf598d-b1f3-4ee2-956b-de573f004d1c"
+      }
+    },
+    {
+      "key": "ba1f2b0f-f2a9-4fbe-aecf-48766f6f9b7b",
+      "position": 2,
+      "properties": {
+        "description": "Now that you've learned how to detect sprite interactions, you can start making some more interesting games.  Today, we're going to look at how you can use what you've learned to make a side scroller game.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ba1f2b0f-f2a9-4fbe-aecf-48766f6f9b7b",
+        "lesson_activity.key": "70bf598d-b1f3-4ee2-956b-de573f004d1c"
+      }
+    },
+    {
+      "key": "12f2c53b-55dc-4c8c-94cc-109e87cb57a0",
+      "position": 3,
+      "properties": {
+        "description": "**Question of the Day:  How can the new types of sprite movement and collision detection be used to create a game?**",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Mini-Projects:** Mini-Projects act as checkpoints in the curricula and cover the subset of skills students have seen so far in the unit. They are designed for 1-2 days of implementation as a way to check-in with how well students understand the course content so far. You may decide to extend these projects as a way to support or challenge students, which could allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. However, we recommend deciding this ahead of time and being firm with students about how much time they have for each project - otherwise, it's easy for projects to drag-out to multiple days and for student's work to spiral beyond the scope of this project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "12f2c53b-55dc-4c8c-94cc-109e87cb57a0",
+        "lesson_activity.key": "70bf598d-b1f3-4ee2-956b-de573f004d1c"
+      }
+    },
+    {
+      "key": "d6de6d96-7452-4962-aec1-0414b67bdbdb",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** (Optional) pass out copies of the activity guide. Students can use this sheet to plan out the Side Scroller they create at the end of this lesson, but the planning can also be completed on scratch paper.\r\n\r\n**Transition** Send students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d6de6d96-7452-4962-aec1-0414b67bdbdb",
+        "lesson_activity.key": "73c7220d-54f4-4869-a674-79397a838f4e"
+      }
+    },
+    {
+      "key": "f65cbb4c-c2a2-439e-b7f7-a470ed53b647",
+      "position": 2,
+      "properties": {
+        "progression_name": "Intro to Side Scrollers"
+      },
+      "seeding_key": {
+        "activity_section.key": "f65cbb4c-c2a2-439e-b7f7-a470ed53b647",
+        "lesson_activity.key": "73c7220d-54f4-4869-a674-79397a838f4e"
+      }
+    },
+    {
+      "key": "03adc3e0-2a94-4c1c-a4e6-77f35be66d6a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Draw Your Background"
+      },
+      "seeding_key": {
+        "activity_section.key": "03adc3e0-2a94-4c1c-a4e6-77f35be66d6a",
+        "lesson_activity.key": "73c7220d-54f4-4869-a674-79397a838f4e"
+      }
+    },
+    {
+      "key": "2a464c07-9b03-4563-bdf0-63e95c66dd9e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Create Your Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a464c07-9b03-4563-bdf0-63e95c66dd9e",
+        "lesson_activity.key": "73c7220d-54f4-4869-a674-79397a838f4e"
+      }
+    },
+    {
+      "key": "54a39d8a-c0ab-465b-86d7-d77bbf81db9a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Player Controls"
+      },
+      "seeding_key": {
+        "activity_section.key": "54a39d8a-c0ab-465b-86d7-d77bbf81db9a",
+        "lesson_activity.key": "73c7220d-54f4-4869-a674-79397a838f4e"
+      }
+    },
+    {
+      "key": "fd5e125a-feb7-4e82-a3ae-02c7dbf0464c",
+      "position": 6,
+      "properties": {
+        "progression_name": "Looping"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd5e125a-feb7-4e82-a3ae-02c7dbf0464c",
+        "lesson_activity.key": "73c7220d-54f4-4869-a674-79397a838f4e"
+      }
+    },
+    {
+      "key": "e553b97c-54e8-44ed-8250-8220cab32328",
+      "position": 7,
+      "properties": {
+        "progression_name": "Sprite Interactions"
+      },
+      "seeding_key": {
+        "activity_section.key": "e553b97c-54e8-44ed-8250-8220cab32328",
+        "lesson_activity.key": "73c7220d-54f4-4869-a674-79397a838f4e"
+      }
+    },
+    {
+      "key": "376570b7-c4ef-4396-846b-99a3c59a5b36",
+      "position": 8,
+      "properties": {
+        "progression_name": "Scoring & Scoreboard"
+      },
+      "seeding_key": {
+        "activity_section.key": "376570b7-c4ef-4396-846b-99a3c59a5b36",
+        "lesson_activity.key": "73c7220d-54f4-4869-a674-79397a838f4e"
+      }
+    },
+    {
+      "key": "bfbf3840-b076-48ee-a9ec-dbc2a6df29f9",
+      "position": 9,
+      "properties": {
+        "progression_name": "Review Your Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "bfbf3840-b076-48ee-a9ec-dbc2a6df29f9",
+        "lesson_activity.key": "73c7220d-54f4-4869-a674-79397a838f4e"
+      }
+    },
+    {
+      "key": "3a4ad116-1694-4c60-bb71-7b400a25a997",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day:  How can the new types of sprite movement and collision detection be used to create a game?**\r\n\r\n**Prompt:** What was one challenge in making this game?  What is your advice for someone else who has the same challenge?"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a4ad116-1694-4c60-bb71-7b400a25a997",
+        "lesson_activity.key": "a2eb7e37-8b48-4373-b722-87a6ddf7eb01"
+      }
+    },
+    {
+      "key": "a9147f35-81c1-42d6-a3f5-bf4ae77fde5b",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** Show the two images of a frog jumping to the class.\n\n![An animation of a frog jumping up and down with a very linear movement](https://curriculum.code.org/media/uploads/triangleJump.gif)  ![An animation of a frog jumping up and down with a more nuanced movement that looks more realistic and affected by gravity](https://curriculum.code.org/media/uploads/curveJump.gif)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9147f35-81c1-42d6-a3f5-bf4ae77fde5b",
+        "lesson_activity.key": "01da0193-ae37-46b9-a153-c840ca3d21c5"
+      }
+    },
+    {
+      "key": "bce48f65-d920-4e0c-a9f1-b9c68457251f",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** Here are two images of a frog jumping.  The first is from the side scroller.  Do you have any ideas for how to make the second type of jumping?"
+      },
+      "seeding_key": {
+        "activity_section.key": "bce48f65-d920-4e0c-a9f1-b9c68457251f",
+        "lesson_activity.key": "01da0193-ae37-46b9-a153-c840ca3d21c5"
+      }
+    },
+    {
+      "key": "e886fcc6-5677-4fb5-9dbd-2903e48ba6b8",
+      "position": 3,
+      "properties": {
+        "description": "**Think-Pair-Share**  Allow students to discuss their ideas with a classmate before sharing with the entire class.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "It is unlikely that students will come up with the solution on their own, but encourage them to think of as many ideas as possible, and that they will keep working on the problem throughout the class.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e886fcc6-5677-4fb5-9dbd-2903e48ba6b8",
+        "lesson_activity.key": "01da0193-ae37-46b9-a153-c840ca3d21c5"
+      }
+    },
+    {
+      "key": "dfc9ea05-3eef-4f7d-8f7b-e77056826805",
+      "position": 4,
+      "properties": {
+        "description": "We've learned a lot of new blocks that have helped us create some fun animations.  Today, we're going to look at how we can use the blocks that we already know in new ways to make more interesting types of movements.  By the end of the class, you'll be able to code the new type of jumping with blocks that you already know.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dfc9ea05-3eef-4f7d-8f7b-e77056826805",
+        "lesson_activity.key": "01da0193-ae37-46b9-a153-c840ca3d21c5"
+      }
+    },
+    {
+      "key": "a6c02480-801b-433f-8162-d06e74027458",
+      "position": 5,
+      "properties": {
+        "description": "**Question of the Day: How can previous blocks be combined in new patterns to make interesting movements?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6c02480-801b-433f-8162-d06e74027458",
+        "lesson_activity.key": "01da0193-ae37-46b9-a153-c840ca3d21c5"
+      }
+    },
+    {
+      "key": "f7187951-4632-4608-b1c4-585c3cca6adb",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Move students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f7187951-4632-4608-b1c4-585c3cca6adb",
+        "lesson_activity.key": "6b2fc69f-e05a-4928-b861-b4b4da1bb799"
+      }
+    },
+    {
+      "key": "2a7f88b5-b69c-4a1d-8d4f-0a71332b3a58",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prediction",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level introduces the primary new programming pattern of this lesson, combing the counter pattern with sprites' velocity properties. Encourage students to take seriously their predictions before actually running the code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2a7f88b5-b69c-4a1d-8d4f-0a71332b3a58",
+        "lesson_activity.key": "6b2fc69f-e05a-4928-b861-b4b4da1bb799"
+      }
+    },
+    {
+      "key": "f6d49afd-89ef-49d4-b51e-a0285d2d1548",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6d49afd-89ef-49d4-b51e-a0285d2d1548",
+        "lesson_activity.key": "6b2fc69f-e05a-4928-b861-b4b4da1bb799"
+      }
+    },
+    {
+      "key": "007732a0-4a4b-4198-aafb-62149dbe1132",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "007732a0-4a4b-4198-aafb-62149dbe1132",
+        "lesson_activity.key": "6b2fc69f-e05a-4928-b861-b4b4da1bb799"
+      }
+    },
+    {
+      "key": "7518ae75-4d29-406f-aa2e-8468518e5b16",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7518ae75-4d29-406f-aa2e-8468518e5b16",
+        "lesson_activity.key": "6b2fc69f-e05a-4928-b861-b4b4da1bb799"
+      }
+    },
+    {
+      "key": "fbe011ec-2f4f-4d61-b4d1-b82c46264c65",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbe011ec-2f4f-4d61-b4d1-b82c46264c65",
+        "lesson_activity.key": "6b2fc69f-e05a-4928-b861-b4b4da1bb799"
+      }
+    },
+    {
+      "key": "b67bc537-3545-4d35-ad5f-66bb49282db1",
+      "position": 1,
+      "properties": {
+        "description": "**Share:** Have students share with their classmates what additions they made to their final flyer game. Have students focus not just on how the game works, but on what the code to create that kind of functionality looks like."
+      },
+      "seeding_key": {
+        "activity_section.key": "b67bc537-3545-4d35-ad5f-66bb49282db1",
+        "lesson_activity.key": "883b7221-3ff1-4f6f-82e1-a33f0e090ba2"
+      }
+    },
+    {
+      "key": "03452c56-12a7-43b3-a65c-3db18896f465",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** On your paper make two lists. First, make a list of new things you can program sprites to do after today's lesson. On the second list write down all the new blocks you learned today.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** This conversation should highlight that students did not learn any new blocks in today's lesson, they just learned new ways to combine blocks and patterns they had learned previously. The broader point here is that programming is not always about learning new blocks, but being creative about combining the tools you already know how to use.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "03452c56-12a7-43b3-a65c-3db18896f465",
+        "lesson_activity.key": "883b7221-3ff1-4f6f-82e1-a33f0e090ba2"
+      }
+    },
+    {
+      "key": "b9c53a15-b3db-4e27-a019-8d9cf38f3d61",
+      "position": 3,
+      "properties": {
+        "description": "**Discuss:** Have students share their lists with classmates. Afterwards share lists as a class. They should hopefully have listed many new sprite movements but students haven't actually learned any new blocks in this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "b9c53a15-b3db-4e27-a019-8d9cf38f3d61",
+        "lesson_activity.key": "883b7221-3ff1-4f6f-82e1-a33f0e090ba2"
+      }
+    },
+    {
+      "key": "155916d2-af86-421a-8674-d08befab46e2",
+      "position": 4,
+      "properties": {
+        "description": "**Prompt:** Today we built lots of new sprite movements like gravity and jumping, but none of this required us to learn new blocks. How were you able to do new things without learning any new blocks?"
+      },
+      "seeding_key": {
+        "activity_section.key": "155916d2-af86-421a-8674-d08befab46e2",
+        "lesson_activity.key": "883b7221-3ff1-4f6f-82e1-a33f0e090ba2"
+      }
+    },
+    {
+      "key": "d05a106e-e80e-44c6-a401-06f4fe9f9727",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:** Lead a quick follow-up to your initial discussion about this point.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": " Check that students can explain the new programming structures and algorithms that they were able to use to get the new behaviors in the program.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d05a106e-e80e-44c6-a401-06f4fe9f9727",
+        "lesson_activity.key": "883b7221-3ff1-4f6f-82e1-a33f0e090ba2"
+      }
+    },
+    {
+      "key": "f2d815c9-05fa-4f4d-8560-415351fa8104",
+      "position": 6,
+      "properties": {
+        "description": "We're going to keep learning a few more tools in Game Lab, but as we do, remember what we saw today. To create new kinds of programs you don't always need to learn new blocks. Most of the time the creativity of programming comes from learning to combine things you already know in new and creative ways.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f2d815c9-05fa-4f4d-8560-415351fa8104",
+        "lesson_activity.key": "883b7221-3ff1-4f6f-82e1-a33f0e090ba2"
+      }
+    },
+    {
+      "key": "a1854b56-b97f-4447-b4ce-c2bf067265a1",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** This lesson begins immediately in Code Studio. On the first level, students will find a game but will not be able to see the code. They should play the game and follow the instructions which ask them to list the variables, sprites, and functions they think are necessary to create this game.",
+        "name": "Play Cake Defender\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1854b56-b97f-4447-b4ce-c2bf067265a1",
+        "lesson_activity.key": "545c2c68-79b8-4a02-9de8-e03f5b664467"
+      }
+    },
+    {
+      "key": "a31ae4d2-5b03-43bf-a2d8-8cb94846def4",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Students should have individually created a list of variables, sprites, and functions they would create to make the defender game they played. Ask students to share their lists with a neighbor before discussing as a class.",
+        "name": "Stop: Review Project Guide\r",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Running the Conversation:** You can write \"Variables\", \"Sprites\", and \"Functions\" on the board and record their ideas below each. Ask students to justify their decisions but don't feel the need to settle on one right answer.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a31ae4d2-5b03-43bf-a2d8-8cb94846def4",
+        "lesson_activity.key": "545c2c68-79b8-4a02-9de8-e03f5b664467"
+      }
+    },
+    {
+      "key": "d1fe3220-0ede-481e-98d4-dcab39b4b38e",
+      "position": 3,
+      "properties": {
+        "description": "There's usually lots of ways you can structure a program to get it to work the way you want. The important thing when writing complex or large programs is that you start with a plan, including the sprites, variables, and functions you will want in your program. Today we're going to look at how we could implement this plan to build our own defender game. By the end of the lesson you'll not only have built your game, but you'll know how to change it and make it your own. Let's get going!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d1fe3220-0ede-481e-98d4-dcab39b4b38e",
+        "lesson_activity.key": "545c2c68-79b8-4a02-9de8-e03f5b664467"
+      }
+    },
+    {
+      "key": "7dc0f6ef-8f54-4fa3-bfb3-e40a806dee42",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day:  How does having a plan help to make a large project easier?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "7dc0f6ef-8f54-4fa3-bfb3-e40a806dee42",
+        "lesson_activity.key": "545c2c68-79b8-4a02-9de8-e03f5b664467"
+      }
+    },
+    {
+      "key": "dc673bd3-76c1-4bf6-8113-1190be7c42d4",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student or pair of students a copy of the project guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Project Guide:** The project guide is intentionally filled out for students so that they can experience using it as a reference when programming. This should give them more context when filling out their own project guide in the next two lessons. \r\n\r\nYou can give each student their own copy for reference, but you might also choose to print one copy per pair, share digital copies, or just display the guide on the projector. So long as it is available for reference, any approach will work fine.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc673bd3-76c1-4bf6-8113-1190be7c42d4",
+        "lesson_activity.key": "c1c3d51e-8a97-4d72-9cfb-88150164088a"
+      }
+    },
+    {
+      "key": "937acef8-3217-4134-8dff-70d6449c2656",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** Compare the components of the game you thought would be included to the ones on this project guide. Do you notice any differences? \r\n\r\n**Discuss:** As a class compare the list you made on the board to the list of variables, sprites, and functions on the project guide. Note the similarities. Where there are differences try to understand why. Don't approach one set as \"right\" vs. \"wrong\" but just confirm both would be able to make the game students played."
+      },
+      "seeding_key": {
+        "activity_section.key": "937acef8-3217-4134-8dff-70d6449c2656",
+        "lesson_activity.key": "c1c3d51e-8a97-4d72-9cfb-88150164088a"
+      }
+    },
+    {
+      "key": "4b2d135a-bbe0-490f-aa79-34d3f0f16081",
+      "position": 3,
+      "properties": {
+        "description": "Students are given a large amount of starter code in this project. The sprites, variables, and functions have all already been given to them. The work of this project is writing the code for the individual functions. These levels guide students through how to implement those functions. As students move through the levels point out how the project guide is being used.\r\n\r\nThe most challenging skill students use in these levels is recognizing the need to create new functions to replace repeated code. Students need to build this skill on their own but these levels demonstrate an instance where this might happen.",
+        "name": "Implement Project Guide\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b2d135a-bbe0-490f-aa79-34d3f0f16081",
+        "lesson_activity.key": "c1c3d51e-8a97-4d72-9cfb-88150164088a"
+      }
+    },
+    {
+      "key": "0b0c1a99-ffc8-4ec9-b683-3b28919d4872",
+      "position": 4,
+      "properties": {
+        "progression_name": "Same Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b0c1a99-ffc8-4ec9-b683-3b28919d4872",
+        "lesson_activity.key": "c1c3d51e-8a97-4d72-9cfb-88150164088a"
+      }
+    },
+    {
+      "key": "c27fddec-2f1d-4385-a482-e8018c661829",
+      "position": 5,
+      "properties": {
+        "progression_name": "Plan Your Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "c27fddec-2f1d-4385-a482-e8018c661829",
+        "lesson_activity.key": "c1c3d51e-8a97-4d72-9cfb-88150164088a"
+      }
+    },
+    {
+      "key": "38ea9a97-655b-4625-9493-40a9aa0b9e66",
+      "position": 6,
+      "properties": {
+        "progression_name": "Set Up Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "38ea9a97-655b-4625-9493-40a9aa0b9e66",
+        "lesson_activity.key": "c1c3d51e-8a97-4d72-9cfb-88150164088a"
+      }
+    },
+    {
+      "key": "b3cfbfa8-2b0d-406d-812e-25176ea83c1d",
+      "position": 7,
+      "properties": {
+        "progression_name": "Control Your Player"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3cfbfa8-2b0d-406d-812e-25176ea83c1d",
+        "lesson_activity.key": "c1c3d51e-8a97-4d72-9cfb-88150164088a"
+      }
+    },
+    {
+      "key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3",
+      "position": 8,
+      "properties": {
+        "progression_name": "Sprite Interactions"
+      },
+      "seeding_key": {
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3",
+        "lesson_activity.key": "c1c3d51e-8a97-4d72-9cfb-88150164088a"
+      }
+    },
+    {
+      "key": "b933b275-c6de-4fff-9e46-38a58b69f167",
+      "position": 9,
+      "properties": {
+        "progression_name": "Challenges",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This last level encourages students to make the game their own. If students have made their way to this point they have all the skills they need to progress through the curriculum, so there is no pressure to complete any of the modifications suggested in this level. If you have time, however, getting practice planning and implementing new features will be a useful skill. Even just modifying the animations of the game is an easy way students can make the game their own."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b933b275-c6de-4fff-9e46-38a58b69f167",
+        "lesson_activity.key": "c1c3d51e-8a97-4d72-9cfb-88150164088a"
+      }
+    },
+    {
+      "key": "9211d0a7-3237-46af-a202-e1542ecf1052",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** Today, you used a filled-out project guide as you completed your program.",
+        "name": "Using the Project Guide\r",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "As students answer the questions, make sure that they understand that the project guide is there to help them organize their work, so that they can look at smaller parts of the problem rather than thinking about it all at one time. They can use it to focus on one part of their program at a time as they code.  \r\n\r\nIn the next lesson, as they fill out their own project guides, they will need to think carefully about the different parts of their program before they start coding. You may want to remind then of the \"Prepare\" part of the Problem Solving Process, and to think about how they might need to go back and tweak the project guide even after they have started coding.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9211d0a7-3237-46af-a202-e1542ecf1052",
+        "lesson_activity.key": "b8a47075-101a-4c4c-a608-a4cb93c202b4"
+      }
+    },
+    {
+      "key": "602014d0-fbe3-4ab3-8834-5707490e5df9",
+      "position": 2,
+      "properties": {
+        "description": "* How did the project guide help you as you coded?\r\n* What do you think will be important to remember when you fill out your own project guide?"
+      },
+      "seeding_key": {
+        "activity_section.key": "602014d0-fbe3-4ab3-8834-5707490e5df9",
+        "lesson_activity.key": "b8a47075-101a-4c4c-a608-a4cb93c202b4"
+      }
+    },
+    {
+      "key": "5434b5de-4a98-4f78-9478-66306a9a1c06",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** The Problem Solving Process helps us work through all kinds of problems. Think about the problem of building a larger piece of software, like the game we built in the last lesson. What did each of the 4 steps look like? Why were they important?"
+      },
+      "seeding_key": {
+        "activity_section.key": "5434b5de-4a98-4f78-9478-66306a9a1c06",
+        "lesson_activity.key": "c1eeb9c8-54f3-4e92-a11b-87d49075a726"
+      }
+    },
+    {
+      "key": "00b5fd13-f2aa-4863-bc22-d1d72834a46c",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Students should brainstorm quietly and write down what each step might be. Afterwards, lead a share out discussion. You can record ideas on the board.  Possible parts of each step include:",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Students should share their thoughts but if it doesn't come up naturally then suggest the examples provided. This discussion will motivate the use of the project guide for building a game later in the lesson.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "00b5fd13-f2aa-4863-bc22-d1d72834a46c",
+        "lesson_activity.key": "c1eeb9c8-54f3-4e92-a11b-87d49075a726"
+      }
+    },
+    {
+      "key": "57855103-5d69-4577-bc6d-349290cb5d49",
+      "position": 3,
+      "properties": {
+        "description": "* Define: Figuring out what you want the game to look like, how it should work, who will play it.\r\n* Prepare: Plan ahead what your code will look like. Decide on a structure for your game.\r\n* Try: Write the code following your plan.\r\n* Reflect: Test your code, play the game to make sure it works, get feedback from other people to make the game better."
+      },
+      "seeding_key": {
+        "activity_section.key": "57855103-5d69-4577-bc6d-349290cb5d49",
+        "lesson_activity.key": "c1eeb9c8-54f3-4e92-a11b-87d49075a726"
+      }
+    },
+    {
+      "key": "f1c0da84-3254-4d15-a060-4713f4877516",
+      "position": 4,
+      "properties": {
+        "description": "When you build software, the problem solving process can be a helpful guide. Obviously we need to write the code, but being careful to define what you want to build, making a good plan to build it, and reflecting afterwards on how to improve it are all part of making good software. Today we’re going to use this process to make a new game.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f1c0da84-3254-4d15-a060-4713f4877516",
+        "lesson_activity.key": "c1eeb9c8-54f3-4e92-a11b-87d49075a726"
+      }
+    },
+    {
+      "key": "984555e8-a1eb-4762-ab62-bea49ec4198b",
+      "position": 5,
+      "properties": {
+        "description": "**Question of the Day:  How can the problem solving process help programmers to manage large projects?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "984555e8-a1eb-4762-ab62-bea49ec4198b",
+        "lesson_activity.key": "c1eeb9c8-54f3-4e92-a11b-87d49075a726"
+      }
+    },
+    {
+      "key": "9ed5317e-d9de-466b-84ee-c42b8bb47887",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute**: Give each student a copy of the project guide.",
+        "name": "Play Alien Jumper\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ed5317e-d9de-466b-84ee-c42b8bb47887",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "7954e789-ff73-482f-b991-a8adf334be2d",
+      "position": 2,
+      "properties": {
+        "description": "We're going to be building a jumper game today. You'll have a chance to play a sample game, then plan out how you would create the game on your Project Guide.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7954e789-ff73-482f-b991-a8adf334be2d",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "c3d7f742-a764-4860-ba5d-7c8555357b14",
+      "position": 3,
+      "properties": {
+        "description": "**Circulate:** Students should complete the project guide in the style of the one they saw in the previous lesson. They will likely want to keep the game up as they try to determine the behavior each of the sprites will have.\r\n\r\n**Share:** Students share out their plans for making the game.  Reassure them that there are many correct ways to make the same piece of software, and that they will have a chance to try out their ideas in code studio.",
+        "name": "Discuss Project Guide\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3d7f742-a764-4860-ba5d-7c8555357b14",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "8bd56326-d3cb-44c1-983a-76f35b096fae",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Making the game will take at least two class periods. If there's not enough time for all students to finish the lesson, groups of students can work to code different aspects, then share their code with each other. For example, one group could work on the platforms, one on the stars, and another on the player. Students who have finished early can choose more challenges from the later levels.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8bd56326-d3cb-44c1-983a-76f35b096fae",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "63bcd861-3018-45c9-ac17-22f5d142f728",
+      "position": 5,
+      "properties": {
+        "progression_name": "Sample Platform Jumper Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "63bcd861-3018-45c9-ac17-22f5d142f728",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "652ec8e2-7a83-42e7-9e69-3085f31f393d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Build a Platform Jumper"
+      },
+      "seeding_key": {
+        "activity_section.key": "652ec8e2-7a83-42e7-9e69-3085f31f393d",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "e857a704-fbb3-4643-82fd-f92af2b2938b",
+      "position": 7,
+      "properties": {
+        "progression_name": "Platform Jumper - Background and Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "e857a704-fbb3-4643-82fd-f92af2b2938b",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "841c4c6d-4fe9-472e-b86f-4070595d8da8",
+      "position": 8,
+      "properties": {
+        "progression_name": "Platform Jumper - Platforms"
+      },
+      "seeding_key": {
+        "activity_section.key": "841c4c6d-4fe9-472e-b86f-4070595d8da8",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "4126ab14-58c1-413e-89cb-2965399b3a1f",
+      "position": 9,
+      "properties": {
+        "progression_name": "Platform Jumper - Items"
+      },
+      "seeding_key": {
+        "activity_section.key": "4126ab14-58c1-413e-89cb-2965399b3a1f",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "895511af-ab09-4a94-a227-d333511b6dbf",
+      "position": 10,
+      "properties": {
+        "progression_name": "Platform Jumper - Player"
+      },
+      "seeding_key": {
+        "activity_section.key": "895511af-ab09-4a94-a227-d333511b6dbf",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "b74dac4a-c27b-4451-83df-d6e0d2e9ba48",
+      "position": 11,
+      "properties": {
+        "progression_name": "Platform Jumper Review",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b74dac4a-c27b-4451-83df-d6e0d2e9ba48",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "51f4858d-36df-453d-957f-2e0663bbbd63",
+      "position": 12,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "51f4858d-36df-453d-957f-2e0663bbbd63",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "6e4856d0-83e6-4d2f-ac64-250fa7b13490",
+      "position": 13,
+      "properties": {
+        "description": "**Share:** Students share their games with their classmates.",
+        "name": "Share out\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e4856d0-83e6-4d2f-ac64-250fa7b13490",
+        "lesson_activity.key": "7b83bc22-bff8-41b4-a4ba-af43e3b0330b"
+      }
+    },
+    {
+      "key": "d6bc6589-6bdb-4365-9271-301b70b22d15",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day:  How can the problem solving process help programmers to manage large projects?**\r\n\r\n\r\n**Prompt:** Before you started coding your game, you first had to fill out a project guide with a plan. How did having a plan change the way that you coded your game?  Will you do anything differently when you make your plan for your final project?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6bc6589-6bdb-4365-9271-301b70b22d15",
+        "lesson_activity.key": "53e68739-000c-48d4-ab3f-263c2c8f9530"
+      }
+    },
+    {
+      "key": "63ff6271-a5c9-429c-acdf-40c8d17ece4b",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** Today, you'll start the final project of the unit, in which you will design and code your own game.  Before you start, what are three skills or qualities that you think will be important as you complete this project?"
+      },
+      "seeding_key": {
+        "activity_section.key": "63ff6271-a5c9-429c-acdf-40c8d17ece4b",
+        "lesson_activity.key": "7aefc158-6bcf-47e9-beda-91496431d20d"
+      }
+    },
+    {
+      "key": "b816d516-67b2-4bd0-bb2c-c9ed6db468d9",
+      "position": 2,
+      "properties": {
+        "description": "**Share:** Allow students to share out their ideas.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "This discussion serves to set cultural norms for the project. Students should expect that the project will be challenging, but that they will have plenty of opportunities to iterate on their work as they work together to learn as a community.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b816d516-67b2-4bd0-bb2c-c9ed6db468d9",
+        "lesson_activity.key": "7aefc158-6bcf-47e9-beda-91496431d20d"
+      }
+    },
+    {
+      "key": "6dfcb818-2511-411a-b762-ef54b99625e0",
+      "position": 3,
+      "properties": {
+        "description": "There are lots of practices that programmers use when working on large projects. As you design and build your game, try to reflect on how you are using the five practices of problem solving, persistence, communication, collaboration, and creativity.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6dfcb818-2511-411a-b762-ef54b99625e0",
+        "lesson_activity.key": "7aefc158-6bcf-47e9-beda-91496431d20d"
+      }
+    },
+    {
+      "key": "907ad22e-0c7c-48d9-8fad-c4ff9a01ae44",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day: How can the five CS practices (problem solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "907ad22e-0c7c-48d9-8fad-c4ff9a01ae44",
+        "lesson_activity.key": "7aefc158-6bcf-47e9-beda-91496431d20d"
+      }
+    },
+    {
+      "key": "be476ec4-4903-4c6d-b086-5f997cac3586",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** This project can be completed individually or in pairs. At your discretion, you may choose to have students form larger groups as well.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be476ec4-4903-4c6d-b086-5f997cac3586",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "8e10a2f6-ecbe-4e2d-8dd0-efc2d401c606",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide.\n\n**Distribute:** Give each student a copy of the rubric or student checklist so that they know from the beginning what components of the project you will be looking for.",
+        "name": "Review Project Guide\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e10a2f6-ecbe-4e2d-8dd0-efc2d401c606",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "b6aa6ff8-cdc3-4f26-b720-5fdc663c0637",
+      "position": 3,
+      "properties": {
+        "description": "**Circulate:** Students should spend the first 15-20 minutes playing the sample games, reviewing past work, and discussing as a group the type of game they'd like to build. If they want they can sketch ideas on scratch paper or in their journals.",
+        "name": "Define - Scope Game\r",
+        "progression_name": "Sample Games",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show one or two of the exemplar apps to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b6aa6ff8-cdc3-4f26-b720-5fdc663c0637",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "e4a9dab4-faf0-42da-881c-23a8e9495431",
+      "position": 4,
+      "properties": {
+        "description": "**Circulate:** Once students have discussed their ideas for the project, they should complete the project guide. While this should be a fairly familiar process, encourage students to make each component as clear and detailed as they can. Planning ahead can help them identify issues in their plan before they'll need to make more significant changes to their code.",
+        "name": "Prepare - Complete Project Guide\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e4a9dab4-faf0-42da-881c-23a8e9495431",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "61d5f146-be80-4b84-85c8-ff3bcb891318",
+      "position": 5,
+      "properties": {
+        "description": "**Transition:** Students are now ready to program their games on Code Studio. These levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.",
+        "name": "Try - Write Code\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd-summer-puertorico-2024/unversioned] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "61d5f146-be80-4b84-85c8-ff3bcb891318",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "40f7a1cf-7fe5-4a42-8e78-6ccd5b31138d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Project - Background and Variables",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "40f7a1cf-7fe5-4a42-8e78-6ccd5b31138d",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94",
+      "position": 7,
+      "properties": {
+        "progression_name": "Project - Sprites and Interactions"
+      },
+      "seeding_key": {
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "d5c1d311-7512-4cd6-99ef-dc8f0cabe74e",
+      "position": 8,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the peer review guide.  \r\n\r\nStudents should spend 15 minutes reviewing the other group's game and filling out the peer review guide.",
+        "name": "Reflect - Peer Review\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5c1d311-7512-4cd6-99ef-dc8f0cabe74e",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "ef66a490-5f32-48dc-86d2-e9a1fe7b22fc",
+      "position": 9,
+      "properties": {
+        "progression_name": "Review Your Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef66a490-5f32-48dc-86d2-e9a1fe7b22fc",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "9ff96f22-500e-4ac4-acab-05992765da1e",
+      "position": 10,
+      "properties": {
+        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.\n\nStudents should refer to the rubric or student checklist to ensure they meet the requirements of the project.",
+        "name": "Iterate - Update Code\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9ff96f22-500e-4ac4-acab-05992765da1e",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "83fb071e-919f-4db5-8a2e-a02c07667282",
+      "position": 11,
+      "properties": {
+        "description": "**Share:** Give students a chance to share their games. If you choose to let students do a more formal presentation of their projects, the project guide provides students a set of components to include in their presentations including:\r\n\r\n* The original game they set out to build\r\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\r\n* A description of the most interesting or complex piece of code they wrote\r\n* A live demonstration of the actual game",
+        "name": "Share\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "83fb071e-919f-4db5-8a2e-a02c07667282",
+        "lesson_activity.key": "f5b3c7ae-4f3d-47ea-850b-3fafa007152b"
+      }
+    },
+    {
+      "key": "73cd7f5b-5f82-4ebe-8535-fa45da2388bb",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can the five CS practices (problem solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?**\r\n\r\n\r\n**Prompt:** Have students reflect on their development of the [five practices of CS Discoveries](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Problem Solving, Persistence, Creativity, Collaboration, Communication). Choose one or more of the following prompts as you deem appropriate.\r\n\r\n - Choose one of the five practices in which you believe you demonstrated growth in this unit. Write something you did that exemplified this practice.\r\n\r\n - Choose one practice you think you can continue to grow in. What’s one thing you’d like to do better?\r\n\r\n - Choose one practice you thought was especially important for the project we completed today. What made it so important?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "73cd7f5b-5f82-4ebe-8535-fa45da2388bb",
+        "lesson_activity.key": "16d7820c-2c90-4170-8a4b-07553450e622"
+      }
+    },
+    {
+      "key": "16d0045e-6ccf-4ada-bd0a-5975f8280fb2",
+      "position": 2,
+      "properties": {
+        "description": "Send students to Code Studio to complete a quick end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Reflect\r",
+        "progression_name": "End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "16d0045e-6ccf-4ada-bd0a-5975f8280fb2",
+        "lesson_activity.key": "16d7820c-2c90-4170-8a4b-07553450e622"
+      }
+    },
+    {
+      "key": "4677c442-0e1b-476d-93bb-0ee6be9bae4a",
+      "position": 3,
+      "properties": {
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "4677c442-0e1b-476d-93bb-0ee6be9bae4a",
+        "lesson_activity.key": "16d7820c-2c90-4170-8a4b-07553450e622"
+      }
+    },
+    {
+      "key": "45a61ca1-7b95-4027-adfb-1e366b02c61d",
+      "position": 1,
+      "properties": {
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "name": "Post-Project Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "45a61ca1-7b95-4027-adfb-1e366b02c61d",
+        "lesson_activity.key": "b0f6f4cc-a001-4b17-95d7-0c0ccccd5c2e"
+      }
+    },
+    {
+      "key": "05690d3d-4409-41ca-8000-f9c0c144bccd",
+      "position": 2,
+      "properties": {
+        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "name": "End of Course Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "05690d3d-4409-41ca-8000-f9c0c144bccd",
+        "lesson_activity.key": "b0f6f4cc-a001-4b17-95d7-0c0ccccd5c2e"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sample Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions car intro_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "502b8a56-f968-4ba9-819e-11c05a6185a5"
+      },
+      "level_keys": [
+        "CSD U3 collisions car intro_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions build isTouching_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "0b1d90ae-b134-4a90-8082-b70ad83e77ea"
+      },
+      "level_keys": [
+        "CSD U3 collisions build isTouching_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions isTouching intro_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "0b1d90ae-b134-4a90-8082-b70ad83e77ea"
+      },
+      "level_keys": [
+        "CSD U3 collisions isTouching intro_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions egg_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "0b1d90ae-b134-4a90-8082-b70ad83e77ea"
+      },
+      "level_keys": [
+        "CSD U3 collisions egg_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions debug isTouching_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "0b1d90ae-b134-4a90-8082-b70ad83e77ea"
+      },
+      "level_keys": [
+        "CSD U3 collisions debug isTouching_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games istouching practice choice_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "056eeec0-e0b8-42f4-980f-3bcb56fba602"
+      },
+      "level_keys": [
+        "CSD games istouching practice choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions horse_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "1efefc70-4a57-48bf-9131-6859d798db5d"
+      },
+      "level_keys": [
+        "CSD U3 collisions horse_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games istouching challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "48824d7e-1ba9-455d-ac49-23a57aab80b9"
+      },
+      "level_keys": [
+        "CSD games istouching challenge choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Side Scrollers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games side scroller demo_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "f65cbb4c-c2a2-439e-b7f7-a470ed53b647"
+      },
+      "level_keys": [
+        "CSD games side scroller demo_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Draw Your Background"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games sidescroll background_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "03adc3e0-2a94-4c1c-a4e6-77f35be66d6a"
+      },
+      "level_keys": [
+        "CSD games sidescroll background_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create Your Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 abstraction tumbleweed_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "2a464c07-9b03-4563-bdf0-63e95c66dd9e"
+      },
+      "level_keys": [
+        "CSD U3 abstraction tumbleweed_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Player Controls"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 abstraction jump_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "54a39d8a-c0ab-465b-86d7-d77bbf81db9a"
+      },
+      "level_keys": [
+        "CSD U3 abstraction jump_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Looping"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 abstraction looping_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "fd5e125a-feb7-4e82-a3ae-02c7dbf0464c"
+      },
+      "level_keys": [
+        "CSD U3 abstraction looping_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions sidescroll2_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "e553b97c-54e8-44ed-8250-8220cab32328"
+      },
+      "level_keys": [
+        "CSD U3 collisions sidescroll2_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scoring & Scoreboard"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 collisions scoreboard_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "376570b7-c4ef-4396-846b-99a3c59a5b36"
+      },
+      "level_keys": [
+        "CSD U3 collisions scoreboard_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Review Your Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games sidescroll review_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "bfbf3840-b076-48ee-a9ec-dbc2a6df29f9"
+      },
+      "level_keys": [
+        "CSD games sidescroll review_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Complex Movement counter prediction gamelab_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "2a7f88b5-b69c-4a1d-8d4f-0a71332b3a58"
+      },
+      "level_keys": [
+        "CSD U3 Complex Movement counter prediction gamelab_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 abstraction accelerateX_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "f6d49afd-89ef-49d4-b51e-a0285d2d1548"
+      },
+      "level_keys": [
+        "CSD U3 abstraction accelerateX_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 abstraction accelerateY_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "f6d49afd-89ef-49d4-b51e-a0285d2d1548"
+      },
+      "level_keys": [
+        "CSD U3 abstraction accelerateY_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 abstraction decelerateX_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "f6d49afd-89ef-49d4-b51e-a0285d2d1548"
+      },
+      "level_keys": [
+        "CSD U3 abstraction decelerateX_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games movement2 practice choice_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "007732a0-4a4b-4198-aafb-62149dbe1132"
+      },
+      "level_keys": [
+        "CSD games movement2 practice choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 abstraction decelerateY_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "7518ae75-4d29-406f-aa2e-8468518e5b16"
+      },
+      "level_keys": [
+        "CSD U3 abstraction decelerateY_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games movement2 challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "fbe011ec-2f4f-4d61-b4d1-b82c46264c65"
+      },
+      "level_keys": [
+        "CSD games movement2 challenge choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Same Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti Play Defender_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "0b0c1a99-ffc8-4ec9-b683-3b28919d4872"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti Play Defender_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Plan Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "c27fddec-2f1d-4385-a482-e8018c661829"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Set Up Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender animate cake enemies_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "38ea9a97-655b-4625-9493-40a9aa0b9e66"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti defender animate cake enemies_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Set Up Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender enemies move_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "38ea9a97-655b-4625-9493-40a9aa0b9e66"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti defender enemies move_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Control Your Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender move player_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b3cfbfa8-2b0d-406d-812e-25176ea83c1d"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti defender move player_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Control Your Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender move up down_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b3cfbfa8-2b0d-406d-812e-25176ea83c1d"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti defender move up down_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Control Your Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender animate player_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b3cfbfa8-2b0d-406d-812e-25176ea83c1d"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti defender animate player_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti defender enemies touch cake_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake sprite2_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti defender enemies touch cake sprite2_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender create set enemies_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti defender create set enemies_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender displace enemies_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti defender displace enemies_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Sprite Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender touch water_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3"
+      },
+      "level_keys": [
+        "CSD U3 AnimationsMulti defender touch water_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games cake challenge choice_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b933b275-c6de-4fff-9e46-38a58b69f167"
+      },
+      "level_keys": [
+        "CSD games cake challenge choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sample Platform Jumper Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform sample1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "63bcd861-3018-45c9-ac17-22f5d142f728"
+      },
+      "level_keys": [
+        "CSD U3 platform sample1_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build a Platform Jumper"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform intro_2018_2019_pilot_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "652ec8e2-7a83-42e7-9e69-3085f31f393d"
+      },
+      "level_keys": [
+        "CSD U3 platform intro_2018_2019_pilot_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Background and Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform background1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "e857a704-fbb3-4643-82fd-f92af2b2938b"
+      },
+      "level_keys": [
+        "CSD U3 platform background1_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Background and Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform variable1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "e857a704-fbb3-4643-82fd-f92af2b2938b"
+      },
+      "level_keys": [
+        "CSD U3 platform variable1_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Background and Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform background2_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "e857a704-fbb3-4643-82fd-f92af2b2938b"
+      },
+      "level_keys": [
+        "CSD U3 platform background2_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Background and Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform scoreboard_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "e857a704-fbb3-4643-82fd-f92af2b2938b"
+      },
+      "level_keys": [
+        "CSD U3 platform scoreboard_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Platforms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform platform1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "841c4c6d-4fe9-472e-b86f-4070595d8da8"
+      },
+      "level_keys": [
+        "CSD U3 platform platform1_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Platforms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform platform2_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "841c4c6d-4fe9-472e-b86f-4070595d8da8"
+      },
+      "level_keys": [
+        "CSD U3 platform platform2_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Platforms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform platform3_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "841c4c6d-4fe9-472e-b86f-4070595d8da8"
+      },
+      "level_keys": [
+        "CSD U3 platform platform3_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Items"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform items1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "4126ab14-58c1-413e-89cb-2965399b3a1f"
+      },
+      "level_keys": [
+        "CSD U3 platform items1_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Items"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform items2_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "4126ab14-58c1-413e-89cb-2965399b3a1f"
+      },
+      "level_keys": [
+        "CSD U3 platform items2_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Items"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform items3_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "4126ab14-58c1-413e-89cb-2965399b3a1f"
+      },
+      "level_keys": [
+        "CSD U3 platform items3_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform player1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "895511af-ab09-4a94-a227-d333511b6dbf"
+      },
+      "level_keys": [
+        "CSD U3 platform player1_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform player2_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "895511af-ab09-4a94-a227-d333511b6dbf"
+      },
+      "level_keys": [
+        "CSD U3 platform player2_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform player3_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "895511af-ab09-4a94-a227-d333511b6dbf"
+      },
+      "level_keys": [
+        "CSD U3 platform player3_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 16,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Platform Jumper - Player"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform player4_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "895511af-ab09-4a94-a227-d333511b6dbf"
+      },
+      "level_keys": [
+        "CSD U3 platform player4_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Platform Jumper Review"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 platform review_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b74dac4a-c27b-4451-83df-d6e0d2e9ba48"
+      },
+      "level_keys": [
+        "CSD U3 platform review_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games platform challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "51f4858d-36df-453d-957f-2e0663bbbd63"
+      },
+      "level_keys": [
+        "CSD games platform challenge choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sample Games"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b6aa6ff8-cdc3-4f26-b720-5fdc663c0637"
+      },
+      "level_keys": [
+        "CSD U3 - Design a Game 1 - ExampleChoice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project - Background and Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 game variables_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "40f7a1cf-7fe5-4a42-8e78-6ccd5b31138d"
+      },
+      "level_keys": [
+        "CSD U3 game variables_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project - Background and Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 game backgrounds_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "40f7a1cf-7fe5-4a42-8e78-6ccd5b31138d"
+      },
+      "level_keys": [
+        "CSD U3 game backgrounds_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Project - Background and Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 game display boards_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "40f7a1cf-7fe5-4a42-8e78-6ccd5b31138d"
+      },
+      "level_keys": [
+        "CSD U3 game display boards_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Project - Background and Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 game choose background_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "40f7a1cf-7fe5-4a42-8e78-6ccd5b31138d"
+      },
+      "level_keys": [
+        "CSD U3 game choose background_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project - Sprites and Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 game animations_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94"
+      },
+      "level_keys": [
+        "CSD U3 game animations_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project - Sprites and Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 game create sprites_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94"
+      },
+      "level_keys": [
+        "CSD U3 game create sprites_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Project - Sprites and Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 game sprite movement_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94"
+      },
+      "level_keys": [
+        "CSD U3 game sprite movement_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Project - Sprites and Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 game user controls_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94"
+      },
+      "level_keys": [
+        "CSD U3 game user controls_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Project - Sprites and Interactions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 game interactions_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94"
+      },
+      "level_keys": [
+        "CSD U3 game interactions_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Review Your Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games project review_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "ef66a490-5f32-48dc-86d2-e9a1fe7b22fc"
+      },
+      "level_keys": [
+        "CSD games project review_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End-Of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csd3_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "16d0045e-6ccf-4ada-bd0a-5975f8280fb2"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csd3_-pr-2024"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions car intro_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 collisions car intro_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "502b8a56-f968-4ba9-819e-11c05a6185a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions build isTouching_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 collisions build isTouching_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "0b1d90ae-b134-4a90-8082-b70ad83e77ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions isTouching intro_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 collisions isTouching intro_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "0b1d90ae-b134-4a90-8082-b70ad83e77ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions egg_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 collisions egg_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "0b1d90ae-b134-4a90-8082-b70ad83e77ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions debug isTouching_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 collisions debug isTouching_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "0b1d90ae-b134-4a90-8082-b70ad83e77ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games istouching practice choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games istouching practice choice_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "056eeec0-e0b8-42f4-980f-3bcb56fba602"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions horse_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 collisions horse_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "1efefc70-4a57-48bf-9131-6859d798db5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games istouching challenge choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games istouching challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "48824d7e-1ba9-455d-ac49-23a57aab80b9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games side scroller demo_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games side scroller demo_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "f65cbb4c-c2a2-439e-b7f7-a470ed53b647"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games sidescroll background_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games sidescroll background_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "03adc3e0-2a94-4c1c-a4e6-77f35be66d6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 abstraction tumbleweed_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 abstraction tumbleweed_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "2a464c07-9b03-4563-bdf0-63e95c66dd9e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 abstraction jump_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 abstraction jump_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "54a39d8a-c0ab-465b-86d7-d77bbf81db9a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 abstraction looping_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 abstraction looping_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "fd5e125a-feb7-4e82-a3ae-02c7dbf0464c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions sidescroll2_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 collisions sidescroll2_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "e553b97c-54e8-44ed-8250-8220cab32328"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 collisions scoreboard_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 collisions scoreboard_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "376570b7-c4ef-4396-846b-99a3c59a5b36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games sidescroll review_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games sidescroll review_-pr-2024"
+        ],
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "bfbf3840-b076-48ee-a9ec-dbc2a6df29f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Complex Movement counter prediction gamelab_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Complex Movement counter prediction gamelab_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "2a7f88b5-b69c-4a1d-8d4f-0a71332b3a58"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 abstraction accelerateX_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 abstraction accelerateX_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "f6d49afd-89ef-49d4-b51e-a0285d2d1548"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 abstraction accelerateY_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 abstraction accelerateY_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "f6d49afd-89ef-49d4-b51e-a0285d2d1548"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 abstraction decelerateX_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 abstraction decelerateX_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "f6d49afd-89ef-49d4-b51e-a0285d2d1548"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games movement2 practice choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games movement2 practice choice_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "007732a0-4a4b-4198-aafb-62149dbe1132"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 abstraction decelerateY_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 abstraction decelerateY_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "7518ae75-4d29-406f-aa2e-8468518e5b16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games movement2 challenge choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games movement2 challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "fbe011ec-2f4f-4d61-b4d1-b82c46264c65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti Play Defender_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti Play Defender_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "0b0c1a99-ffc8-4ec9-b683-3b28919d4872"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "c27fddec-2f1d-4385-a482-e8018c661829"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti defender animate cake enemies_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender animate cake enemies_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "38ea9a97-655b-4625-9493-40a9aa0b9e66"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti defender enemies move_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender enemies move_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "38ea9a97-655b-4625-9493-40a9aa0b9e66"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti defender move player_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender move player_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b3cfbfa8-2b0d-406d-812e-25176ea83c1d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti defender move up down_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender move up down_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b3cfbfa8-2b0d-406d-812e-25176ea83c1d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti defender animate player_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender animate player_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b3cfbfa8-2b0d-406d-812e-25176ea83c1d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti defender enemies touch cake_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti defender enemies touch cake sprite2_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake sprite2_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti defender create set enemies_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender create set enemies_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti defender displace enemies_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender displace enemies_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 AnimationsMulti defender touch water_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 AnimationsMulti defender touch water_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "5fc37da3-475c-4cc9-90fe-6555bf8ab3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games cake challenge choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games cake challenge choice_-pr-2024"
+        ],
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b933b275-c6de-4fff-9e46-38a58b69f167"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform sample1_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform sample1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "63bcd861-3018-45c9-ac17-22f5d142f728"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform intro_2018_2019_pilot_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform intro_2018_2019_pilot_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "652ec8e2-7a83-42e7-9e69-3085f31f393d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform background1_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform background1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "e857a704-fbb3-4643-82fd-f92af2b2938b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform variable1_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform variable1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "e857a704-fbb3-4643-82fd-f92af2b2938b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform background2_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform background2_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "e857a704-fbb3-4643-82fd-f92af2b2938b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform scoreboard_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform scoreboard_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "e857a704-fbb3-4643-82fd-f92af2b2938b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform platform1_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform platform1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "841c4c6d-4fe9-472e-b86f-4070595d8da8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform platform2_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform platform2_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "841c4c6d-4fe9-472e-b86f-4070595d8da8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform platform3_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform platform3_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "841c4c6d-4fe9-472e-b86f-4070595d8da8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform items1_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform items1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "4126ab14-58c1-413e-89cb-2965399b3a1f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform items2_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform items2_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "4126ab14-58c1-413e-89cb-2965399b3a1f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform items3_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform items3_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "4126ab14-58c1-413e-89cb-2965399b3a1f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform player1_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform player1_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "895511af-ab09-4a94-a227-d333511b6dbf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform player2_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform player2_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "895511af-ab09-4a94-a227-d333511b6dbf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform player3_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform player3_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "895511af-ab09-4a94-a227-d333511b6dbf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform player4_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform player4_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "895511af-ab09-4a94-a227-d333511b6dbf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 platform review_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 platform review_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b74dac4a-c27b-4451-83df-d6e0d2e9ba48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games platform challenge choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games platform challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "51f4858d-36df-453d-957f-2e0663bbbd63"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Design a Game 1 - ExampleChoice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "b6aa6ff8-cdc3-4f26-b720-5fdc663c0637"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 game variables_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 game variables_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "40f7a1cf-7fe5-4a42-8e78-6ccd5b31138d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 game backgrounds_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 game backgrounds_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "40f7a1cf-7fe5-4a42-8e78-6ccd5b31138d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 game display boards_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 game display boards_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "40f7a1cf-7fe5-4a42-8e78-6ccd5b31138d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 game choose background_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 game choose background_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "40f7a1cf-7fe5-4a42-8e78-6ccd5b31138d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 game animations_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 game animations_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 game create sprites_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 game create sprites_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 game sprite movement_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 game sprite movement_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 game user controls_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 game user controls_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 game interactions_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 game interactions_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "772c4652-561e-43cf-8a4b-1a6a6ead5e94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games project review_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games project review_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "ef66a490-5f32-48dc-86d2-e9a1fe7b22fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csd3_-pr-2024",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csd3_-pr-2024"
+        ],
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day4",
+        "activity_section.key": "16d0045e-6ccf-4ada-bd0a-5975f8280fb2"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Collision Detection",
+      "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
+      "key": "collision_detection",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "collision_detection"
+      }
+    },
+    {
+      "name": "Collision Detection",
+      "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
+      "key": "collision_detection_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "collision_detection_1"
+      }
+    },
+    {
+      "name": "Collision Detection",
+      "url": "https://docs.google.com/presentation/d/18hXKoENm4jVJnHFYRQGtPwF6LvL-0Ag5RS1VmGY7KB4/template/preview",
+      "key": "collision_detection_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/18hXKoENm4jVJnHFYRQGtPwF6LvL-0Ag5RS1VmGY7KB4/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "collision_detection_2"
+      }
+    },
+    {
+      "name": "Collision Detection (Version A)",
+      "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
+      "key": "collision_detection_version_a_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "collision_detection_version_a_"
+      }
+    },
+    {
+      "name": "Collision Detection (Version B)",
+      "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
+      "key": "collision_detection_version_b_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "collision_detection_version_b_"
+      }
+    },
+    {
+      "name": "Complex Sprite Movement",
+      "url": "https://docs.google.com/presentation/d/1NzaQeQLXoFMEn_F0M0npuGCIK29pOtMhyw-pZXRM39Y/template/preview",
+      "key": "complex_sprite_movement",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1NzaQeQLXoFMEn_F0M0npuGCIK29pOtMhyw-pZXRM39Y/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "complex_sprite_movement"
+      }
+    },
+    {
+      "name": "Computer Science Practices",
+      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
+      "key": "computer_science_practices",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Reflection"
+      },
+      "seeding_key": {
+        "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "name": "Defender Game",
+      "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit",
+      "key": "defender_game",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "defender_game"
+      }
+    },
+    {
+      "name": "Extra Code in Challenge Levels",
+      "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
+      "key": "extra_code_in_challenge_levels",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "extra_code_in_challenge_levels"
+      }
+    },
+    {
+      "name": "Make Your Own Game ",
+      "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
+      "key": "make_your_own_game",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game"
+      }
+    },
+    {
+      "name": "Make Your Own Game - Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
+      "key": "make_your_own_game_-_sample_marked_rubrics",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game_-_sample_marked_rubrics"
+      }
+    },
+    {
+      "name": "Make Your Own Game - Student Checklist",
+      "url": "https://docs.google.com/document/d/1jb78pFMe-X5YOtTEXQY2yLJ97mdOLPFTP7fmb3g1Or8/edit",
+      "key": "make_your_own_game_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game_-_student_checklist"
+      }
+    },
+    {
+      "name": "Make Your Own Game",
+      "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing",
+      "key": "make_your_own_game_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Project Guide"
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game_1"
+      }
+    },
+    {
+      "name": "Make Your Own Game",
+      "url": "https://docs.google.com/document/d/1s2Q7SMhJCogVU5mht16UIzZLT-aAVz0gw5JRTuW9Vq0/edit",
+      "key": "make_your_own_game_2",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Peer Review"
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game_2"
+      }
+    },
+    {
+      "name": "Make Your Own Game",
+      "url": "https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit",
+      "key": "make_your_own_game_3",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game_3"
+      }
+    },
+    {
+      "name": "Mini-Project - Side Scroller",
+      "url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/template/preview",
+      "key": "mini-project_-_side_scroller",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_-_side_scroller"
+      }
+    },
+    {
+      "name": "Mini-Project Guide - Side Scroller",
+      "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
+      "key": "mini-project_guide_-_side_scroller",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_guide_-_side_scroller"
+      }
+    },
+    {
+      "name": "Planning Your Platform Game",
+      "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
+      "key": "planning_your_platform_game",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "planning_your_platform_game"
+      }
+    },
+    {
+      "name": "Planning Your Platform Game",
+      "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit",
+      "key": "planning_your_platform_game_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "planning_your_platform_game_1"
+      }
+    },
+    {
+      "name": "Project - Design a Game",
+      "url": "https://docs.google.com/presentation/d/19RjrkgFvRil27D0Lx8SIt3OuJfR03THe8uwtGl6oYyE/template/preview",
+      "key": "project_-_design_a_game",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/19RjrkgFvRil27D0Lx8SIt3OuJfR03THe8uwtGl6oYyE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_design_a_game"
+      }
+    },
+    {
+      "name": "Side Scroller",
+      "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
+      "key": "side_scroller",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "side_scroller"
+      }
+    },
+    {
+      "name": "Side Scroller",
+      "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
+      "key": "side_scroller_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Project Guide"
+      },
+      "seeding_key": {
+        "resource.key": "side_scroller_1"
+      }
+    },
+    {
+      "name": "The Game Design Process",
+      "url": "https://docs.google.com/presentation/d/1gpsv_LnfAgi4Y75vqtxEEhu2T_YDppwwAuykpij_q0o/template/preview",
+      "key": "the_game_design_process",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gpsv_LnfAgi4Y75vqtxEEhu2T_YDppwwAuykpij_q0o/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_game_design_process"
+      }
+    },
+    {
+      "name": "Using the Game Design Process",
+      "url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/template/preview",
+      "key": "using_the_game_design_process",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "using_the_game_design_process"
+      }
+    },
+    {
+      "name": "Velocity and the Counter Pattern",
+      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
+      "key": "velocity_and_the_counter_pattern",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "velocity_and_the_counter_pattern"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection_version_a_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection_version_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "resource.key": "complex_sprite_movement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "resource.key": "velocity_and_the_counter_pattern"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "resource.key": "mini-project_-_side_scroller"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "resource.key": "mini-project_guide_-_side_scroller"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "resource.key": "side_scroller"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "resource.key": "side_scroller_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "extra_code_in_challenge_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game_-_sample_marked_rubrics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "project_-_design_a_game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "resource.key": "defender_game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "resource.key": "the_game_design_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "resource.key": "planning_your_platform_game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "resource.key": "planning_your_platform_game_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "resource.key": "using_the_game_design_process"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "abstraction",
+      "word": "Abstraction",
+      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "vocabulary.key": "abstraction"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "debug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "isTouching"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "key": "0687ed0e-abdb-4bc3-b589-592d341fa9ce",
+      "properties": {
+        "description": "Identify core programming constructs necessary to build different components of a game"
+      },
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "objective.key": "0687ed0e-abdb-4bc3-b589-592d341fa9ce"
+      }
+    },
+    {
+      "key": "0afe5425-a9d3-46d9-bf37-2504449bf632",
+      "properties": {
+        "description": "Use sprite velocity with the counter pattern to create different types of sprite movement"
+      },
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "objective.key": "0afe5425-a9d3-46d9-bf37-2504449bf632"
+      }
+    },
+    {
+      "key": "1d0d5460-e070-41bc-8734-93b2a96df4d9",
+      "properties": {
+        "description": "Detect when sprites are touching or overlapping, and change the program in response. "
+      },
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "objective.key": "1d0d5460-e070-41bc-8734-93b2a96df4d9"
+      }
+    },
+    {
+      "key": "2c776732-69b4-4728-b464-383ce9e06e18",
+      "properties": {
+        "description": "Independently scope the features of a piece of software"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "objective.key": "2c776732-69b4-4728-b464-383ce9e06e18"
+      }
+    },
+    {
+      "key": "419ca9bc-0b03-4187-a299-a40dbd6440b8",
+      "properties": {
+        "description": "Create a plan for building a piece of software by describing its major components"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "objective.key": "419ca9bc-0b03-4187-a299-a40dbd6440b8"
+      }
+    },
+    {
+      "key": "6aea2174-b502-46f7-9ac3-8cb334113a1c",
+      "properties": {
+        "description": "Implement a plan for creating a piece of software"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "objective.key": "6aea2174-b502-46f7-9ac3-8cb334113a1c"
+      }
+    },
+    {
+      "key": "6fb60a35-6891-4cba-98da-242efe8b4801",
+      "properties": {
+        "description": "Describe how abstractions help to manage the complexity of code"
+      },
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "objective.key": "6fb60a35-6891-4cba-98da-242efe8b4801"
+      }
+    },
+    {
+      "key": "7b742f89-0345-4fea-b510-ef32cb5813b1",
+      "properties": {
+        "description": "Explain how individual programming constructs can be combined to create more complex behavior"
+      },
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "objective.key": "7b742f89-0345-4fea-b510-ef32cb5813b1"
+      }
+    },
+    {
+      "key": "7bf3c853-a030-405a-a5dd-752c7abf932d",
+      "properties": {
+        "description": " Implement different features of a program by following a structured project guide"
+      },
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "objective.key": "7bf3c853-a030-405a-a5dd-752c7abf932d"
+      }
+    },
+    {
+      "key": "f751886f-88df-4c2d-91c3-5db38901c068",
+      "properties": {
+        "description": "Implement different features of a program by following a structured project guide"
+      },
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "objective.key": "f751886f-88df-4c2d-91c3-5db38901c068"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

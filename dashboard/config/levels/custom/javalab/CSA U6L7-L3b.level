@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-11-03T20:20:26.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Import `LitProcessor.java` from your **Backpack**.\r\n\r\nThe `LitAnalyzer` class is a subclass of the `LitProcessor` class to perform text analysis and natural language processing tasks.\r\n\r\nThe contents of a specified file is read into the `String litText` when a `LitAnalyzer` object is created.\r\n\r\nIn `LitAnalyzer.java`, write the method `findWord(String word)` to find and return the first location of the parameter `word` in the file `speech.txt`.",
@@ -28,13 +32,10 @@
     "display_name": "Finding the Word",
     "bubble_choice_description": "Find the first location of a word or phrase in the text.",
     "thumbnail_url": "https://images.code.org/04b666943d4a7517db6c2726801da24f-image-1638197155452.gif",
-    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYc0IUdKH6G1cAz++9Q\nGaQsJ2GdtZdDJZQLuM6k4vlHXLjdXDHt/HS7N1bhK7dDoHo9dCcripOwIaxC\n0pFTV3Mt\n"
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYc0IUdKH6G1cAz++9Q\nGaQsJ2GdtZdDJZQLuM6k4vlHXLjdXDHt/HS7N1bhK7dDoHo9dCcripOwIaxC\n0pFTV3Mt\n",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-11-03T20:20:26.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-11-03 20:20:30 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-23 21:40:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 21:52:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-23 22:06:42 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 14:26:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 14:29:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 14:30:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-11-29 14:46:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-02 16:56:26 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

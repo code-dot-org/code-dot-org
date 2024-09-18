@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';
 

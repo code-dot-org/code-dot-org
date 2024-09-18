@@ -5,7 +5,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
 export type SkipDialogProps = GenericDialogProps & {
-  handleConfirm: () => void;
+  handleConfirm?: () => void;
   handleCancel?: () => void;
 };
 

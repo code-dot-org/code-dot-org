@@ -1,0 +1,31 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-08-28T15:16:38.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "## Retrieval for Specialized Information\n### Chatbots tend to have general information about topics",
+        "imageUrl": "https://images.code.org/ae02af4d34c03ed6a31558acf4355b0a-retrieval-specialized-1.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "## Retrieval for Specialized Information\n### For more specialized information, we can add it with Retrieval",
+        "imageUrl": "https://images.code.org/3d89a08b2f2733fb1d1bb9c6a64deba0-retrieval-specialized-2.png",
+        "key": "gen-ai-customizing-retrieval-practice-L3-f357cb13-fa89-490c-b493-06ce771480a8"
+      },
+      {
+        "text": "## Retrieval for Specialized Information\n### This lets the chatbot give more specific answers.",
+        "imageUrl": "https://images.code.org/3113ab4c8a1159a5cbc4f407a763f1ff-retrieval-specialized-3.png",
+        "key": "gen-ai-customizing-retrieval-practice-L3-8ab707af-e4fb-4a63-93e3-02e9164562d7"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-28T15:16:38.311+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L3_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L3_2024\"}]"
+}]]></config>
+</Panels>

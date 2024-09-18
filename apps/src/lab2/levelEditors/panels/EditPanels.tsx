@@ -9,7 +9,7 @@ import {
   Heading5,
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
+import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 import PanelsView from '@cdo/apps/panels/PanelsView';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';

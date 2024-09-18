@@ -135,4 +135,20 @@ describe('Certificate', () => {
       '/s/csd1-2023'
     );
   });
+
+  it('does not render swiper for single certificate', () => {
+    const wrapper = wrapperWithParams({
+      certificateData: [
+        {
+          courseName: 'csd1-2023',
+          coursePath: '/s/csd1-2023',
+        },
+      ],
+      certificateId: 'sessionId',
+      isHocTutorial: false,
+    });
+    expect(wrapper.find('swiper-container').exists()).to.be.false;
+    expect(wrapper.find('#certificate-swiper-prev-el').exists()).to.be.false;
+    expect(wrapper.find('#certificate-swiper-next-el').exists()).to.be.false;
+  });
 });

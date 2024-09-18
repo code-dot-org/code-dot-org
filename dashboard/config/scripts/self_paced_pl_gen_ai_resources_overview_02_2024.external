@@ -1,0 +1,32 @@
+name 'self-paced-pl-gen-ai-resources-overview_02_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching Strategies
+
+#### This unit offers many ways to differentiate and customize learning in your class. Take time to look at the resources provided. 
+
+## Prior Knowledge  
+- #### Consider your students' prior knowledge of AI and decide if you want to use  some of Code.org’s <a href="https://studio.code.org/s/how-ai-works-2023?section_id=5174974&viewAs=Instructor" target="blank" rel="noopener noreferrer">How AI Works</a> lessons if you feel your students would benefit from this content first. It might be helpful to provide context about what generative AI is and how it works before diving into this unit.
+
+- #### You'll also want to determine if you'll be teaching the Foundations of Gen AI portion of the Unit or if you'll be abbreviating this content using the <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/27" target="blank" rel="noopener noreferrer">Foundations in a Day Lesson</a>.
+
+## Differentiation 
+#### Some of the lessons offer choice activities and extension options to help you customize the lesson to your needs. Carefully read over these options to decide how you want your class to proceed. 
+
+## Teaching Tips
+#### Notice the orange boxes in the teaching guides. These teaching tips provide useful suggestions for managing your class during the different activities. 
+
+<img src="https://images.code.org/6cf83f3a0a7961a2671af46ec2a836b5-image-1715182229076.png" alt="orange teaching tip box from lesson guide" width="850px" style="border-radius:10px;">
+
+
+## Materials
+#### Decide how you want to share materials with your students. In some instances, it may benefit to share the handouts digitally, in others,  you may prefer to make copies. 
+
+## External Websites 
+#### Check if the lessons involve external websites and verify whether they are blocked by your school in advance. If they are blocked, either find alternative sites or follow your school's procedure to unblock the websites.
+
+
+
+MARKDOWN

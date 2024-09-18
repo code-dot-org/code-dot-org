@@ -3,8 +3,8 @@ import {connect, useSelector} from 'react-redux';
 
 import Link from '@cdo/apps/componentLibrary/link';
 import Typography from '@cdo/apps/componentLibrary/typography';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {RootState} from '@cdo/apps/types/redux';
 import i18n from '@cdo/locale';
@@ -35,7 +35,7 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
 }) => {
   const currentUser = useSelector((state: RootState) => state.currentUser);
   const reportEvent = (eventName: string, payload: object = {}) => {
-    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+    analyticsReporter.sendEvent(eventName, payload);
   };
 
   const helpDocsUrl =

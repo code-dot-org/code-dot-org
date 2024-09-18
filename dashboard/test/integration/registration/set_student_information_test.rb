@@ -76,5 +76,16 @@ module RegistrationsControllerTests
       assert_equal 'm', student.gender
       assert_equal 'US', student.country_code
     end
+
+    test "set_student_information sets age if user has user_provided_us_state set to false" do
+      student = create :student
+      student.update!(birthday: nil, age: nil, country_code: 'RD')
+      sign_in student
+
+      patch '/users/set_student_information', params: {user: {age: '10'}}
+      assert_response :success
+
+      assert_equal 10, student.reload.age
+    end
   end
 end

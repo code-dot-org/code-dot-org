@@ -839,28 +839,6 @@ class UserTest < ActiveSupport::TestCase
     assert_empty user.lti_user_identities
   end
 
-  test 'LTI teacher should be verified after creation' do
-    lti_integration = create(:lti_integration)
-    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
-
-    lti_teacher = build(:teacher)
-    lti_teacher.authentication_options << build(:lti_authentication_option, user: lti_teacher, authentication_id: auth_id)
-    lti_teacher.save!
-
-    assert lti_teacher.verified_teacher?
-  end
-
-  test 'LTI student should not be verified after creation' do
-    lti_integration = create(:lti_integration)
-    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
-
-    lti_student = build(:student)
-    lti_student.authentication_options << build(:lti_authentication_option, user: lti_student, authentication_id: auth_id)
-    lti_student.save!
-
-    refute lti_student.verified_teacher?
-  end
-
   # FND-1130: This test will no longer be required
   test "teacher with no email created after 2016-06-14 should be invalid" do
     user = create :teacher, :without_email
@@ -5431,6 +5409,50 @@ class UserTest < ActiveSupport::TestCase
     student.update!(us_state: 'WA')
     student.reload
     assert_equal student.us_state, 'WA'
+  end
+
+  test "teacher with oauth account can access AI Chat" do
+    teacher = create :teacher, :google_sso_provider
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with LTI account can access AI Chat" do
+    teacher = create :teacher, :with_lti_auth
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with AUTHORIZED_TEACHER permissions can access AI Chat" do
+    teacher = create :authorized_teacher
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with email account cannot access AI Chat" do
+    teacher = create :teacher
+    refute teacher.teacher_can_access_ai_chat?
+  end
+
+  test "student with email account cannot access AI Chat" do
+    student = create :student
+    refute student.student_can_access_ai_chat?
+  end
+
+  test "student with verified teacher and in appropriate section can access AI Chat" do
+    unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher, unit_group: unit_group
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    assert student.student_can_access_ai_chat?
+  end
+
+  test "student with verified teacher but not in appropriate section cannot access AI Chat" do
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    refute student.student_can_access_ai_chat?
   end
 
   describe '#latest_parental_permission_request' do

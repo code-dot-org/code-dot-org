@@ -3,8 +3,8 @@ import React, {useCallback} from 'react';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import style from './ai-tutor.module.scss';
@@ -49,9 +49,11 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
 
       dispatch(askAITutor(chatContext));
 
-      analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_GENERAL_CHAT, {
+      analyticsReporter.sendEvent(EVENTS.AI_TUTOR_CHAT_EVENT, {
         levelId: level?.id,
         levelType: level?.type,
+        progressionType: level?.progressionType,
+        suggestedPrompt: EVENTS.AI_TUTOR_SUGGESTED_PROMPT_NONE,
       });
     },
     [studentCode, isWaitingForChatResponse, level, dispatch]

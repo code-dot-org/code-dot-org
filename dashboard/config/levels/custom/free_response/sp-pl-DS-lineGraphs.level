@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2024-08-23T17:20:03.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Skill Building",
+    "long_instructions": "##Line Graphs\r\n###Line graphs can help us analyze the data by gaining insights into trends through time. \r\n\r\n###[CODAP Link](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FMsg2aPBQk7QIVPIZ5uSE%2Ffile.json)\r\n\r\n###**Do This**\r\n####1. Make a new collection:\r\n- ####Drag the “Year Opened” attribute to the far left, on the left side of the “State” index column.\r\n\r\n<details><summary><strong>🔎 Show Me How 🔎</strong></summary>\r\n<img src=\"https://images.code.org/11959f3eefb5059dda4815d8c55727f0-image-1721836520514.gif\">\r\n</details>\r\n\r\n####2. Click on the grey “+” icon next to the “Year Opened” attribute and add a new attribute called “Year Totals”\r\n####3. Click on the “Year Totals” attribute and select “Edit formula”\r\n####4. Add the “count()” function.\r\n- ####You should be able to start typing the word “count” and see the option to select the count() function pop up.\r\n- ####Make sure you click the “Apply” button\r\n\r\n####5. Click on the “Year Opened” attribute and select “Sort Descending”\r\n####6. Add a graph and add the “Year Opened” attribute to the x-axis\r\n####7. Add the “Year Totals” attribute to the y-axis\r\n####8. Click on the “Measure” icon in the graph toolbar and select “Connecting Lines”\r\n####9. What trends do you observe in the line graph?\r\n####10. What do you think might have caused the trends you see?\r\n",
+    "teacher_markdown": "\r\n![](https://images.code.org/df69c9a86b4925a6d56d9d1c0341fa68-image-1721836646129.png)\r\n\r\nExample student responses:\r\n- Decline in the Late 2000s: Right after 2000, there was a big financial crisis that may have made people cut back on spending money on things like going to theme parks. This meant that parks didn’t have as much money to build new roller coasters. \r\n- Periods of Growth and Decline: The ups and downs in how many roller coasters were built might show how well the economy was doing. When times were good, more people spent money on fun stuff like roller coasters. When the economy was bad, people spent less, and fewer new roller coasters were built.\r\n- Significant Peak in the Early 2000s: Around the early 2000s, perhaps big amusement parks started making more exciting and advanced roller coasters to attract people from all over the world. \r\n- Late 20th Century Surge: I think that in the 1980s and 1990s, technology got better, allowing parks to build awesome steel roller coasters that could do loops and twists that weren’t possible before. \r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-23T17:20:03.023+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level8\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level8\"}]"
+}]]></config>
+</FreeResponse>
