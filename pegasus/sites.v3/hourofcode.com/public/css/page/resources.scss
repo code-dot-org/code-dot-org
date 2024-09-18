@@ -25,6 +25,10 @@ nav.section-nav {
   flex-wrap: wrap;
   gap: 1rem;
 
+  @media (max-width: $width-sm) {
+    flex-direction: column;
+  }
+
   a.link-button {
     background: var(--neutral_white);
     border: 2px solid var(--neutral_dark10);
@@ -37,6 +41,10 @@ nav.section-nav {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+
+    @media (max-width: $width-sm) {
+      width: 100%;
+    }
 
     i {
       font-size: 1.5rem;

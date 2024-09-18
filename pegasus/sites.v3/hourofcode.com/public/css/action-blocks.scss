@@ -99,6 +99,10 @@
   flex-wrap: wrap;
   overflow: hidden;
 
+  @media (max-width: $width-md) {
+    flex-direction: column;
+  }
+
   .media-wrapper {
     flex: 1;
 

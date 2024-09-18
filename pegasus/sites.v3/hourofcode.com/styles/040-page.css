@@ -465,7 +465,7 @@ swiper-slide {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .carousel-wrapper .swiper-nav-prev,
   .carousel-wrapper .swiper-nav-next {
     display: none;
@@ -545,7 +545,6 @@ button {
   text-decoration: none;
   text-transform: none;
   vertical-align: middle;
-  white-space: nowrap;
 }
 
 a.link-button:hover,
