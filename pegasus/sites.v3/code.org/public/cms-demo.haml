@@ -1,0 +1,73 @@
+---
+title: CMS Demo
+theme: responsive_full_width
+video_player: true
+---
+
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/public/cms-demo.js')}
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/admins-styles.css", rel: "stylesheet"}
+
+-# from code.org/educate/csd
+%section.bg-neutral-light
+  - languages = "Italiano, Español (LATAM), Português (Brasil), Slovenčina"
+  .wrapper
+    = view :curriculum_glance_section, heading: hoc_s(:heading_curricula_at_a_glance), grades: hoc_s(:module_grade_6_10), duration: hoc_s(:module_duration_month_semester_year), level: hoc_s(:module_level_beginner), tools: hoc_s(:csd_page_curriculum_glance_tools), devices: hoc_s(:csd_page_curriculum_glance_devices), professional_learning: hoc_s(:csd_page_curriculum_glance_professional_learning), topics: hoc_s(:csd_page_curriculum_glance_topics), accessibility_features: hoc_s(:csd_page_curriculum_glance_professional_accessibility_features), languages: languages
+
+-# from code.org/educate/csd
+%section.no-padding-bottom
+  .wrapper
+    %h2=hoc_s(:heading_faq)
+    = view :faq_csd
+
+-# from code.org/music
+%section.student-projects
+  .wrapper
+    %h2=hoc_s("music_lab.student_projects.heading")
+    = view :"music/music_lab_student_projects"
+
+-# from code.org/transformersone
+%section.quote.bg-neutral-dark
+  .wrapper
+    %h2.white.centered=hoc_s("transformers.projects_header")
+    #transformersone_student_projects
+
+-# from code.org/ai
+%section
+  .wrapper
+    = view :carousel_how_ai_works_video
+
+-# from code.org/ai
+%section.bg-neutral-light
+  .wrapper
+    = view :"ai_landing_page/ai_carousel_pl"
+
+-# from code.org/professional-learning/middle-high
+%section.bg-neutral-light
+  .wrapper
+    .quotes-wrapper
+      %figure.col-33{style: "margin-top: 10px;"}
+        %img{src: "/images/professional-learning/pl-carousel.png", alt: ""}
+      %div.col-60{style: "float: right"}
+        %h2.heading-lg.no-margin-bottom
+          =hoc_s(:pl_middle_high_quotes_heading)
+        = view :pl_middle_high_carousel
+
+-# from code.org/ai
+%section.bg-neutral-light
+  .wrapper 
+    .quotes-wrapper
+      = view :"ai_landing_page/ai_carousel_quotes"
+
+-# %section.bg-neutral-dark
+-#   .wrapper
+-#    = view :curriculum_pathway
+
+= view :swiper_page_cms_demo
+
+
+
+
+
