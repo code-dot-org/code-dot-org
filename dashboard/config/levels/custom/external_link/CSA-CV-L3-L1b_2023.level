@@ -12,7 +12,8 @@
     "link_title": "Rock, Paper, Scissors",
     "url": "https://github.com/code-dot-org/csa-cv-lesson3b",
     "thumbnail_url": "https://images.code.org/e52b81e644fc4ffc9a0fb032bb2c63a3-rock-paper-scissors.png",
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-10-03T21:34:30.775+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L3-L1b\\\"\"],\"cloned_from\":\"CSA-CV-L3-L1b\"}]"

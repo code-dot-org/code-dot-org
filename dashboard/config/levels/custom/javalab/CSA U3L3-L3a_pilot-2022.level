@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:07.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L3-L3a PBT_pilot-2022",
@@ -23,12 +27,9 @@
         "text": "/*\n * Represents the weather in a given city\n */\npublic class Weather {\n\n  private String city;              // the name of the city\n  private double[] temperatures;    // array containing the average temperatures\n\n  /*\n   * Constructor to create a Weather object with a\n   * specified city name and array of temperatures\n   */\n  public Weather(String city, double[] temperatures) {\n    this.city = city;\n    this.temperatures = temperatures;\n  }\n\n  /*\n   * Returns the name of the city\n   */\n  public String getCity() {\n    return city;\n  }\n\n  /*\n   * Returns the temperatures array\n   */\n  public double[] getAllTemperatures() {\n    return temperatures;\n  }\n\n  /*\n   * Returns a String containing each value in the temperatures array\n   */\n  public String getTemperatures() {\n    String result = \"\";\n\n    // TO DO #1: Write a for loop to traverse the temperatures\n    // array to create a String containing each value.\n\n    \n\n    return result;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:07.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:07.696+00:00\",\"changed\":[\"cloned from \\\"CSA U3L3-L3a_2022\\\"\"],\"cloned_from\":\"CSA U3L3-L3a_2022\"},{\"changed_at\":\"2022-08-31 14:08:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-31 14:09:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-31 14:09:58 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-31 14:12:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-31 14:13:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:03:50 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:08:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 20:08:09 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

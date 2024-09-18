@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:44.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L10-L3d PBT_pilot-2022",
@@ -35,12 +39,9 @@
         "text": "/*\n * Analyzes data about Netflix subscription fees in different countries\n */\npublic class Netflix {\n\n  private String[] countries;\n  private double[] subscriptionFees;\n\n  /*\n   * Constructor to create an Netflix object with the\n   * specified arrays of countries and their subscription fees\n   */\n  public Netflix(String[] countries, double[] subscriptionFees) {\n    this.countries = countries;\n    this.subscriptionFees = subscriptionFees;\n  }\n\n  /*\n   * Returns true if there are duplicate years in\n   * the subscriptionFees array, otherwise returns false\n   */\n  public boolean hasDuplicates() {\n    // TO DO #1: Traverse the subscriptionFees array to determine if there\n    // are duplicate values and return the result.\n\n\n    return false;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:44.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:44.774+00:00\",\"changed\":[\"cloned from \\\"CSA U3L10-L3d_2022\\\"\"],\"cloned_from\":\"CSA U3L10-L3d_2022\"},{\"changed_at\":\"2022-09-09 19:53:35 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-09 19:56:04 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-09 19:59:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-09 19:59:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

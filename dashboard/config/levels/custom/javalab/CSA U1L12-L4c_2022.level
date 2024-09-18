@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-02-17T19:15:21.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -543,15 +547,9 @@
     "long_instructions": "Request a code review to get feedback from your peers on your `paintFast()`(#e7e8ea) and `paintTruckBorder()`(#e7e8ea) methods.\r\n\r\nWhen you are finished receiving feedback, return to your project and click the **Close review** button.\r\n\r\n##Requesting Feedback\r\n\r\n**Commit your code** and add a comment that includes:\r\n\r\n* a description of the goals and intended outcome of the program\r\n\r\n* any additional relevant information\r\n\r\n* specific tasks or questions you want your reviewer to perform or answer\r\n\r\n##TAG to Give Feedback\r\n*Remember to keep feedback kind, specific, and helpful. Refer to the Unit 1 Guide for sentence starters to structure your feedback.*\r\n\r\n1. Tell them something you like about their code.\r\n\r\n2. Ask them something about the code.\r\n\r\n3. Give a suggestion for improvement.",
     "bubble_choice_description": "Paint a border around the food truck so it has a designated parking space. But someone left paint buckets all over The Neighborhood, and you need to collect all of the paint as well.",
     "thumbnail_url": "https://images.code.org/0c27cff1582329869e43baa0a853ddb2-image-1646323274618.gif",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-02-17T19:15:21.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-02-17T19:15:21.938+00:00\",\"changed\":[\"cloned from \\\"CSA U1L12-L3c_2022\\\"\"],\"cloned_from\":\"CSA U1L12-L3c_2022\"},{\"changed_at\":\"2022-02-17 19:15:37 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 02:18:01 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 02:20:53 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 02:24:31 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 19:04:59 +0000\",\"changed\":[\"serialized_maze\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 18:17:33 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-24 14:45:23 +0000\",\"changed\":[\"serialized_maze\",\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

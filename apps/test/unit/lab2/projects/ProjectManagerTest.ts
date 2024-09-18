@@ -318,6 +318,48 @@ describe('ProjectManager', () => {
     assert.isTrue(sourcesStore.restore.calledOnce);
     assert.isTrue(sourcesStore.save.calledOnce);
   });
+
+  it('correctly forces a new version when forceNewVersion is true', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+    await projectManager.load();
+    await projectManager.save(UPDATED_SOURCE, false, true);
+    assert.isTrue(sourcesStore.save.calledOnce);
+    assert.isTrue(
+      sourcesStore.save.calledWith(
+        FAKE_CHANNEL_ID,
+        UPDATED_SOURCE,
+        FAKE_CHANNEL.projectType,
+        /* forceNewVersion */ true
+      )
+    );
+  });
+
+  it('does not force a new version when forceNewVersion is not provided', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+    await projectManager.load();
+    await projectManager.save(UPDATED_SOURCE);
+    assert.isTrue(sourcesStore.save.calledOnce);
+    assert.isTrue(
+      sourcesStore.save.calledWith(
+        FAKE_CHANNEL_ID,
+        UPDATED_SOURCE,
+        FAKE_CHANNEL.projectType,
+        /* forceNewVersion */ false
+      )
+    );
+  });
 });
 
 // Helper functions

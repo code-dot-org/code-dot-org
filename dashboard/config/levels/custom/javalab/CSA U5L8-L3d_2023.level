@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-03-28T00:07:15.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Adjusting contrast in an image refers to changing the difference in brightness between the lightest and darkest parts of an image. A high contrast image has a greater difference between the lightest and darkest parts, while a low contrast image has a smaller difference.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ContrastImage</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">adjustContrast()</code> method to adjust the contrast of each <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> object by multiplying the red, green, and blue color values by the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">multiplier</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class,\r\n\r\n1. Instantiate an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ContrastImage</code> object with an image in the Asset Manager, then draw the image in the scene without any filters. You can also upload and use your own image.\r\n\r\n2. Add a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> after drawing the image.\r\n\r\n3. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">adjustContrast()</code> method on your image, then draw the image with the filter in the scene.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> class in the <strong>Documentation</strong> tab ⬆️ for help with getting and setting color values for a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> object.\r\n</div>\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/23208cd192a36e73c8707f2e3a271391-image-1682904547101.gif)",
@@ -49,16 +53,10 @@
         "tabOrder": 2
       }
     },
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/7c423172635619f520095f7365285e50-optionD.gif"
+    "thumbnail_url": "https://images.code.org/7c423172635619f520095f7365285e50-optionD.gif",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2023-03-28T00:07:15.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2023-03-28T00:07:15.080+00:00\",\"changed\":[\"cloned from \\\"CSA U5L8-L3c_2023\\\"\"],\"cloned_from\":\"CSA U5L8-L3c_2023\"},{\"changed_at\":\"2023-03-28 00:07:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:30:53 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 12:45:43 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 13:18:16 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 15:26:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 15:26:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 15:26:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 15:27:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 19:50:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 20:06:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 20:06:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 20:12:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 20:12:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 20:12:33 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 20:12:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 20:12:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-30 20:13:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 01:29:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -359,7 +359,8 @@
     "bubble_choice_description": "Use an if statement and the isOnPaint() method to move forward one square if the Painter object is standing on paint.",
     "thumbnail_url": "https://images.code.org/f8277e8ce78db1f48ca867139b42bdd3-image-1646320204617.gif",
     "encrypted_exemplar_sources": "KNjm63MQ86iRZeyLht9Rk62smWHrvRJhg0SD7xLvYFSpkcukK7s7CyJlLISp\nouB5wLnHmVoT6gLE6+ESf8R0GrcsRRFv/0jT99ApmgVhEEgL69WMViMkD6Of\nu5s+w4+cWTJNacad+AXSTrReRsnfjsCPzwPyIWcS9LZnflAh9am1OviGpUAJ\n1IUjFSCaRK1LxHQCdk6w+TdpnV3uNwy4ogqcRve+SwO320DpPNVEtL/7kFyW\nHikV+Bk82KKOXvH54Mby4t1TY4AO8Su7wqNpfY+L0b1AGI+bCA6kcMhaVnZH\n0itHeMbXtMjecLx92wCUpBmTAY5aiEDGOrBdphmxg+TMuH3Qxqmq3M5dPJ9F\ndLL8fqXksBd2TXO0LsCZjjwtynTryPrkLOzl/gTcCSv6SnDiTkS/d1/XguZX\nzaC0qV5mOi+1SJrbUEUKoSWQWHrazaegoEiIFO5V5kuaHEizKzQSNl/FB+32\naeouFoPvTClp9naVXFMwW0BTCfFFC03uavDfmYUVfpzZTSH5KtTYIGg64T+S\n+XAG1YVldnQmSiRPQsRZZ4oJ5wqqVZxOxRbDwcX+dawMt1/8VNXfcou1KmYD\n4744cmjh4anYSC5POfbRyyZbm/CCbKDdTuel0cxdLKZtUDdfPSfulgF5cjf/\nXR5/TML1tOeLjhqfhJ2lqVEX579lhhyzz26l2eadi4Y28/fBCZA9+BGULYYX\n7jThDPgEXhyXr8lLE9+gILBJ+uSdlmI9kBNma+yBHvwC3mEHYyyegwlda34H\nMX3olXHpJg==\n",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:25.544+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L3b_2022\\\"\"],\"cloned_from\":\"CSA U1L5-L3b_2022\"}]"

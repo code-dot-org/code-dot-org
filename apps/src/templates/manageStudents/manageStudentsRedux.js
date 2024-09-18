@@ -142,6 +142,7 @@ const initialState = {
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
 const SET_STUDENTS = 'manageStudents/SET_STUDENTS';
+const SET_SECTION_INFO = 'manageStudents/SET_SECTION_INFO';
 const START_EDITING_STUDENT = 'manageStudents/START_EDITING_STUDENT';
 const CANCEL_EDITING_STUDENT = 'manageStudents/CANCEL_EDITING_STUDENT';
 const REMOVE_STUDENT = 'manageStudents/REMOVE_STUDENT';
@@ -173,9 +174,12 @@ export const startLoadingStudents = () => ({type: START_LOADING_STUDENTS});
 export const finishLoadingStudents = () => ({type: FINISH_LOADING_STUDENTS});
 
 export const setLoginType = loginType => ({type: SET_LOGIN_TYPE, loginType});
-export const setStudents = (studentData, sectionId) => ({
+export const setStudents = studentData => ({
   type: SET_STUDENTS,
   studentData,
+});
+export const setSectionInfo = sectionId => ({
+  type: SET_SECTION_INFO,
   sectionId,
 });
 export const startEditingStudent = studentId => ({
@@ -514,6 +518,11 @@ export default function manageStudents(state = initialState, action) {
       studentData: studentData,
       addStatus: {status: null, numStudents: null},
       isLoadingStudents: false,
+    };
+  }
+  if (action.type === SET_SECTION_INFO) {
+    return {
+      ...state,
       sectionId: action.sectionId,
     };
   }
@@ -994,24 +1003,31 @@ const transferStudentsOnServer = (
 export const loadSectionStudentData = sectionId => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
+    let oldSectionId = state.sectionId;
 
-    // Don't load data if it's already stored in redux.
-    const alreadyHaveStudentData = state.sectionId === sectionId;
-
-    if (!alreadyHaveStudentData) {
+    // Load data only if section Id doesn't already match
+    if (state.sectionId !== sectionId) {
+      // Set section ID to indicate student data for current section.
+      dispatch(setSectionInfo(sectionId));
       dispatch(startLoadingStudents());
       $.ajax({
         method: 'GET',
         url: `/dashboardapi/sections/${sectionId}/students`,
         dataType: 'json',
-      }).done(studentData => {
-        const convertedStudentData = convertStudentServerData(
-          studentData,
-          state.loginType,
-          sectionId
-        );
-        dispatch(setStudents(convertedStudentData, sectionId));
-      });
+      })
+        .done(studentData => {
+          const convertedStudentData = convertStudentServerData(
+            studentData,
+            state.loginType,
+            sectionId
+          );
+          dispatch(setStudents(convertedStudentData));
+        })
+        .fail(() => {
+          // revert to old section ID in case of failure to backend call
+          dispatch(setSectionInfo(oldSectionId));
+          dispatch(finishLoadingStudents());
+        });
     } else {
       dispatch(finishLoadingStudents());
     }

@@ -103,7 +103,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     sl = create(:script, :with_levels, levels_count: 3).script_levels[2]
     params = {program: 'fake program', testResult: 0, result: 'false'}
 
-    assert_cached_queries(9) do
+    assert_cached_queries(10) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id

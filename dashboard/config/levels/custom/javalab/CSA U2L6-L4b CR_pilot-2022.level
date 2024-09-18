@@ -15,7 +15,8 @@
     "project_template_level_name": "CSA U2L6-L3b PBT_pilot-2022",
     "bubble_choice_description": "Request a code review to get feedback from your peers on your Pie class.",
     "thumbnail_url": "https://images.code.org/df1b65d9eb4ee901cf36b86f9497faae-image-1647347047814.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:23:49.336+00:00\",\"changed\":[\"cloned from \\\"CSA U2L6-L4b CR_2022\\\"\"],\"cloned_from\":\"CSA U2L6-L4b CR_2022\"}]"

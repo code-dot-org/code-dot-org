@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-04-03T14:02:25.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Patient</code> class has an instance variable <code style=\"background-color: #ececec; color: black; font-weight: bold;\">records</code> that represents a list of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Record</code> objects.\r\n\r\n✅ **TO DO #1:** Write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Patient</code> class with the following:\r\n\r\n* a method called <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getRecord()</code> that takes an index as a parameter and returns the medical record at that index in the list\r\n\r\n* a method called <code style=\"background-color: #ececec; color: black; font-weight: bold;\">editRecord()</code> that takes an index, date, and reason for visit as parameters and replaces the medical record at that index with a new record with the provided information\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PatientRunner</code> class,\r\n\r\n1. Instantiate a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Patient</code> object.\r\n\r\n2. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getRecord()</code> method to get a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Record</code> object from the list and print the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Record</code> object that is returned.\r\n\r\n3. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">editRecord()</code> method to edit a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Record</code> object in the list and print the updated <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Patient</code> object.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayList</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">get()</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">set()</code> methods.\r\n</div>",
@@ -29,12 +33,9 @@
         "isVisible": true,
         "tabOrder": 2
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-04-03T14:02:25.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-03T14:02:25.173+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L6c_2023\\\"\"],\"cloned_from\":\"CSA U6L5-L6c_2023\"},{\"changed_at\":\"2023-04-03 14:02:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:35:58 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 22:43:58 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 13:47:29 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 14:47:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 14:49:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 14:50:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 14:50:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 14:50:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 14:50:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 14:50:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-03 14:50:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
