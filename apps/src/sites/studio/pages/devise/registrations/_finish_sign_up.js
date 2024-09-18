@@ -5,7 +5,10 @@ import ReactDOM from 'react-dom';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
-import {NON_SCHOOL_OPTIONS_ARRAY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {
+  NON_SCHOOL_OPTIONS_ARRAY,
+  SELECT_COUNTRY,
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {SchoolDataInputsContainer} from '@cdo/apps/templates/SchoolDataInputsContainer';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -107,6 +110,12 @@ $(document).ready(() => {
     );
     if (NON_SCHOOL_OPTIONS_ARRAY.includes(newSchoolIdEl.val())) {
       newSchoolIdEl.val('');
+    }
+
+    // Clear country if not selected
+    const countryEl = $('select[name="user[school_info_attributes][country]"]');
+    if (countryEl.val() === SELECT_COUNTRY) {
+      countryEl.val('');
     }
   }
 
