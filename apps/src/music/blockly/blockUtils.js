@@ -6,6 +6,12 @@ import musicI18n from '../locale';
 import {BlockTypes} from './blockTypes';
 import {DOCS_BASE_URL} from './constants';
 
+// Cache for storing Music Lab specific block definitions and generators.
+const BlockCache = {
+  blockDefinitions: {},
+  blockGenerators: {},
+};
+
 /**
  * Generate code for the specified block but not following blocks.
  * Adapted from this thread: https://groups.google.com/g/blockly/c/uXewhtr-mvM
@@ -77,6 +83,14 @@ export function installFunctionBlocks(blockMode) {
     // we don't want.
     delete Blockly.Blocks.procedures_defreturn;
     delete Blockly.Blocks.procedures_ifreturn;
+    // Override the function call generator in Simple2.
+    Blockly.JavaScript.forBlock['procedures_callnoreturn'] = (
+      block,
+      generator
+    ) =>
+      simple2FunctionCallGenerator(
+        generator.getProcedureName(block.getFieldValue('NAME'))
+      );
   }
   // Sets the help URL for each function definiton block to the appropriate
   // entry in the Music Lab docs.
@@ -86,12 +100,11 @@ export function installFunctionBlocks(blockMode) {
     DOCS_BASE_URL + 'create_function';
 }
 
-// Creates shallow copies of block definitions from core Blockly.
+// Creates shallow copies of block definitions and generators from core Blockly.
 // These definitions and overwritten by Simple2 but needed for advanced mode.
 // This makes it possible for us to switch block modes without a page reload.
 // See also: installFunctionBlocks
 export function backupFunctionDefinitons() {
-  Blockly.blockDefinitions = {};
   const backupBlockDefinitionTypes = [
     // Can potentially be overwritten by Simple2
     BLOCK_TYPES.procedureCall,
@@ -99,20 +112,34 @@ export function backupFunctionDefinitons() {
     BLOCK_TYPES.procedureIfReturn,
   ];
   backupBlockDefinitionTypes.forEach(type => {
-    Blockly.blockDefinitions[type] = Object.assign({}, Blockly.Blocks[type]);
+    BlockCache.blockDefinitions[type] = Object.assign({}, Blockly.Blocks[type]);
+    BlockCache.blockGenerators[type] = Blockly.getGenerator().forBlock[type];
   });
 }
 
-// Re-defines blocks using previously stored definitions.
+// Re-defines blocks using previously stored definitions and generators.
 // These definitions and overwritten by Simple2 but needed for advanced mode.
 // This makes it possible for us to switch block modes without a page reload.
 // See also: installFunctionBlocks
 function restoreBlockDefinitions() {
   const blockDefinitions = {};
-
-  Object.keys(Blockly.blockDefinitions).forEach(type => {
-    blockDefinitions[type] = Blockly.blockDefinitions[type];
+  Object.keys(BlockCache.blockDefinitions).forEach(type => {
+    blockDefinitions[type] = BlockCache.blockDefinitions[type];
   });
-
   Blockly.common.defineBlocks(blockDefinitions);
+
+  Object.keys(BlockCache.blockGenerators).forEach(type => {
+    Blockly.getGenerator().forBlock[type] = BlockCache.blockGenerators[type];
+  });
+}
+
+// A helper function to generate the code for a function call to play sounds sequentially.
+function simple2FunctionCallGenerator(functionName) {
+  return `
+    Sequencer.startFunctionContext('${functionName}');
+    Sequencer.playSequential();
+    ${functionName}();
+    Sequencer.endSequential();
+    Sequencer.endFunctionContext();
+  `;
 }
