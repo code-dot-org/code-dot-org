@@ -19,9 +19,10 @@ get '*' do |uri|
   pass
 end
 
-# Redirects /promote and /promote/resources to /resources
+# Redirects hourofcode.com/promote and /promote/resources to /resources
 ['/promote', '/promote/resources'].each do |path|
   get path do
-    redirect resolve_url("/resources")
+    only_for 'hourofcode.com'
+    redirect resolve_url('/resources')
   end
 end
