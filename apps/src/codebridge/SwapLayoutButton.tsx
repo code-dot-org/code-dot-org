@@ -2,7 +2,11 @@ import React, {useCallback} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
 
+import {EVENTS} from '../metrics/AnalyticsConstants';
+import {useAppSelector} from '../util/reduxHooks';
+
 import {useCodebridgeContext} from './codebridgeContext';
+import {sendCodebridgeAnalyticsEvent} from './utils/analyticsReporterHelper';
 
 /*
   Please note - this is a fairly brittle component in that it's only allowing toggling between
@@ -19,19 +23,22 @@ import {useCodebridgeContext} from './codebridgeContext';
 
 const SwapLayoutButton: React.FunctionComponent = () => {
   const {config, setConfig} = useCodebridgeContext();
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const iconName =
     config.activeGridLayout === 'horizontal' ? 'table-columns' : 'table-rows';
 
-  const onClick = useCallback(
-    () =>
-      setConfig({
-        ...config,
-        activeGridLayout:
-          config.activeGridLayout === 'horizontal' ? 'vertical' : 'horizontal',
-      }),
-    [config, setConfig]
-  );
+  const onClick = useCallback(() => {
+    const newLayout =
+      config.activeGridLayout === 'horizontal' ? 'vertical' : 'horizontal';
+    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_CONSOLE, appName, {
+      positionMovedTo: newLayout,
+    });
+    setConfig({
+      ...config,
+      activeGridLayout: newLayout,
+    });
+  }, [appName, config, setConfig]);
 
   if (!config.activeGridLayout || !config.labeledGridLayouts) {
     return null;

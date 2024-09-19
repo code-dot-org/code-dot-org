@@ -27,57 +27,19 @@ import {
   fieldTriggerDefinition,
 } from '../fields';
 
-// Some helpers used when generating code to be used by the interpreter.
-// Called by executeSong().
-export class GeneratorHelpersSimple2 {
-  // Given the function's name and body code, this returns the
-  // code for the function's implementation.  All functions
-  // in this model play sounds sequentially by default.
-  static getFunctionImplementation(functionName, functionCode) {
-    const actualFunctionName = this.getSafeFunctionName(functionName);
-    return `function ${actualFunctionName}() {
+// A helper used when generating code to be used by the interpreter.
+export class GeneratorHelperSimple2 {
+  // Given the function's name, this returns the code for the function
+  // call.  All functions in this model play sounds sequentially by
+  // default.
+  static getFunctionCall(functionName) {
+    return `
       Sequencer.startFunctionContext('${functionName}');
       Sequencer.playSequential();
-      ${functionCode}
+      ${functionName}();
       Sequencer.endSequential();
       Sequencer.endFunctionContext();
-    }
     `;
-  }
-
-  // Given a block of code with function calls, and also function implementations,
-  // this returns the implementation of the when_run block to be used when the user
-  // didn't provide their own implementation.  In this implementation, all of the
-  // provided functions are called immediately, simulating tracks mode.
-  static getDefaultWhenRunImplementation(
-    functionCallsCode,
-    functionImplementationsCode
-  ) {
-    return `
-    Sequencer.newSequence();
-    Sequencer.playTogether();
-    Sequencer.startFunctionContext('when_run');
-    ${functionCallsCode}
-    ${functionImplementationsCode}
-  `;
-  }
-
-  // Return a function name in JavaScript.
-  // Adapted from Blockly.JavaScript.nameDB_.safeName_
-  // at https://github.com/google/blockly/blob/498766b930287ab8ef86accf95e9453018997461/core/names.ts
-  static getSafeFunctionName(functionName) {
-    // Unfortunately names in non-latin characters will look like
-    // _E9_9F_B3_E4_B9_90 which is pretty meaningless.
-    // https://github.com/google/blockly/issues/1654
-    let name = encodeURI(functionName.replace(/ /g, '_')).replace(
-      /[^\w]/g,
-      '_'
-    );
-    // Most languages don't allow names with leading numbers.
-    if ('0123456789'.indexOf(name[0]) !== -1) {
-      name = 'my_' + name;
-    }
-    return name;
   }
 }
 
@@ -91,12 +53,18 @@ export const whenRunSimple2 = {
     tooltip: musicI18n.blockly_blockWhenRunTooltip(),
     helpUrl: '',
   },
-  generator: () =>
-    `
-      Sequencer.newSequence();
-      Sequencer.startFunctionContext('when_run');
-      Sequencer.playSequential();
-    `,
+  generator: ctx => {
+    const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
+    let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
+    ctx.skipNextBlockGeneration = true;
+    return `
+      if (__context == 'when_run') {
+        Sequencer.newSequence();
+        Sequencer.startFunctionContext('when_run');
+        Sequencer.playSequential();
+        ${handlerCode}
+      }`;
+  },
 };
 
 export const triggeredAtSimple2 = {
@@ -130,12 +98,19 @@ export const triggeredAtSimple2 = {
     tooltip: musicI18n.blockly_blockTriggeredTooltip(),
     helpUrl: DOCS_BASE_URL + 'trigger',
   },
-  generator: block =>
-    `
-      Sequencer.newSequence(startPosition, true);
-      Sequencer.startFunctionContext('${block.getFieldValue(TRIGGER_FIELD)}');
-      Sequencer.playSequential();
-    `,
+  generator: ctx => {
+    const id = ctx.getFieldValue(TRIGGER_FIELD);
+    const nextBlock = ctx.nextConnection && ctx.nextConnection.targetBlock();
+    let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
+    ctx.skipNextBlockGeneration = true;
+    return `
+      if (__context == "${id}") {
+        Sequencer.newSequence(startPosition, true);
+        Sequencer.startFunctionContext('${id}');
+        Sequencer.playSequential();
+        ${handlerCode}
+      }`;
+  },
 };
 
 export const playSoundAtCurrentLocationSimple2 = {
