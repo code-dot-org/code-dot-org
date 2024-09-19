@@ -1,6 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {ProjectFile} from '@codebridge/types';
-import {getFileIconName} from '@codebridge/utils';
+import {getFileIconNameAndStyle} from '@codebridge/utils';
 import React from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
@@ -15,6 +15,8 @@ type FileTabProps = {
 const FileTab = ({file}: FileTabProps) => {
   const {project, closeFile, setActiveFile} = useCodebridgeContext();
   const activeFile = getActiveFileForProject(project);
+  const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
+  const iconClassName = isBrand ? 'fa-brands' : undefined;
 
   return (
     <div
@@ -25,8 +27,9 @@ const FileTab = ({file}: FileTabProps) => {
     >
       <span onClick={() => setActiveFile(file.id)}>
         <FontAwesomeV6Icon
-          iconName={getFileIconName(file)!}
-          iconStyle={'regular'}
+          iconName={iconName}
+          iconStyle={iconStyle}
+          className={iconClassName}
         />
         &nbsp;
         {file.name}

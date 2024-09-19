@@ -11,9 +11,10 @@ import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
 import {
   findFolder,
   getErrorMessage,
-  getFileIconName,
+  getFileIconNameAndStyle,
   shouldShowFile,
 } from '@codebridge/utils';
+import classNames from 'classnames';
 import fileDownload from 'js-file-download';
 import React, {useMemo} from 'react';
 
@@ -285,53 +286,59 @@ const InnerFileBrowser = React.memo(
         {Object.values(files)
           .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map(f => (
-            <li key={f.id}>
-              <div className={moduleStyles.row}>
-                <div
-                  className={moduleStyles.label}
-                  onClick={() => openFile(f.id)}
-                >
-                  {getFileIconName(f) && (
-                    <FontAwesomeV6Icon
-                      iconName={getFileIconName(f)!}
-                      iconStyle={'regular'}
-                      className={moduleStyles.rowIcon}
-                    />
-                  )}
-                  <span className={moduleStyles.nameContainer}>{f.name}</span>
-                </div>
-                {!isReadOnly && (
-                  <PopUpButton
-                    iconName="ellipsis-v"
-                    className={moduleStyles['button-kebab']}
+          .map(f => {
+            const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(f);
+            const iconClassName = isBrand
+              ? classNames('fa-brands', moduleStyles.rowIcon)
+              : moduleStyles.rowIcon;
+            return (
+              <li key={f.id}>
+                <div className={moduleStyles.row}>
+                  <div
+                    className={moduleStyles.label}
+                    onClick={() => openFile(f.id)}
                   >
-                    <span className={moduleStyles['button-bar']}>
-                      <span onClick={() => moveFilePrompt(f.id)}>
-                        <i className="fa-solid fa-arrow-right" />{' '}
-                        {codebridgeI18n.moveFile()}
-                      </span>
-                      <span onClick={() => renameFilePrompt(f.id)}>
-                        <i className="fa-solid fa-pencil" />{' '}
-                        {codebridgeI18n.renameFile()}
-                      </span>
-                      {editableFileTypes.some(type => type === f.language) && (
-                        <span onClick={() => downloadFile(f.id)}>
-                          <i className="fa-solid fa-download" />{' '}
-                          {codebridgeI18n.downloadFile()}
+                    <FontAwesomeV6Icon
+                      iconName={iconName}
+                      iconStyle={iconStyle}
+                      className={iconClassName}
+                    />
+                    <span className={moduleStyles.nameContainer}>{f.name}</span>
+                  </div>
+                  {!isReadOnly && (
+                    <PopUpButton
+                      iconName="ellipsis-v"
+                      className={moduleStyles['button-kebab']}
+                    >
+                      <span className={moduleStyles['button-bar']}>
+                        <span onClick={() => moveFilePrompt(f.id)}>
+                          <i className="fa-solid fa-arrow-right" />{' '}
+                          {codebridgeI18n.moveFile()}
                         </span>
-                      )}
-                      <span onClick={() => handleDeleteFile(f.id)}>
-                        <i className="fa-solid fa-trash" />{' '}
-                        {codebridgeI18n.deleteFile()}
+                        <span onClick={() => renameFilePrompt(f.id)}>
+                          <i className="fa-solid fa-pencil" />{' '}
+                          {codebridgeI18n.renameFile()}
+                        </span>
+                        {editableFileTypes.some(
+                          type => type === f.language
+                        ) && (
+                          <span onClick={() => downloadFile(f.id)}>
+                            <i className="fa-solid fa-download" />{' '}
+                            {codebridgeI18n.downloadFile()}
+                          </span>
+                        )}
+                        <span onClick={() => handleDeleteFile(f.id)}>
+                          <i className="fa-solid fa-trash" />{' '}
+                          {codebridgeI18n.deleteFile()}
+                        </span>
+                        {isStartMode && startModeFileDropdownOptions(f)}
                       </span>
-                      {isStartMode && startModeFileDropdownOptions(f)}
-                    </span>
-                  </PopUpButton>
-                )}
-              </div>
-            </li>
-          ))}
+                    </PopUpButton>
+                  )}
+                </div>
+              </li>
+            );
+          })}
       </>
     );
   }
