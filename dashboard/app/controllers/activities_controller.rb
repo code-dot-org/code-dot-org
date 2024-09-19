@@ -252,7 +252,7 @@ class ActivitiesController < ApplicationController
     log_string = 'Milestone Report:'
     log_string +=
       if current_user || session.id
-        "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id.to_s))}"
+        "\t#{current_user ? current_user.id.to_s : ('s:' + session.id.to_s)}"
       else
         "\tanon"
       end
