@@ -50,7 +50,10 @@ import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
-import {validateModelId} from '../views/modelCustomization/utils';
+import {
+  extractFieldsToCheckForToxicity,
+  validateModelId,
+} from '../views/modelCustomization/utils';
 
 import {
   allFieldsHidden,
@@ -203,11 +206,15 @@ const saveAiCustomization = async (
   // If any fields were flagged for toxicity, display a notification and don't try to save.
   if (toxicity.flaggedFields.length > 0) {
     // Log for analysis purposes
-    Lab2Registry.getInstance().getMetricsReporter().logInfo({
-      message: 'Toxicity detected in AI customizations',
-      flaggedFields: toxicity.flaggedFields,
-      customizations: trimmedCurrentAiCustomizations,
-    });
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logInfo({
+        message: 'Toxicity detected in AI customizations',
+        flaggedFields: toxicity.flaggedFields,
+        customizations: extractFieldsToCheckForToxicity(
+          trimmedCurrentAiCustomizations
+        ),
+      });
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('Aichat.SaveFailToxicityDetected');

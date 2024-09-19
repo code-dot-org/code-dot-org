@@ -2,8 +2,8 @@
 # Uses various services to check for profanity and toxicity based on DCDO settings.
 module AichatSafetyHelper
   class ToxicityDetector
-    DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.2
-    DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.6
+    DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.3
+    DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.5
 
     # Checks for toxicity in the given text using various services, determined by DCDO settings.
     # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}

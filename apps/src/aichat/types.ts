@@ -7,6 +7,8 @@ import type {
 import {Role} from '../aiComponentLibrary/chatMessage/types';
 import type {ValueOf} from '../types/utils';
 
+import {FIELDS_CHECKED_FOR_TOXICITY} from './views/modelCustomization/constants';
+
 export const ChatEventDescriptions = {
   COPY_CHAT: 'The user copied the chat history.',
   CLEAR_CHAT: 'The user cleared the chat workspace.',
@@ -152,8 +154,10 @@ export interface DetectToxicityResponse {
   flaggedFields: FlaggedField[];
 }
 
+export type ToxicityCheckedField = (typeof FIELDS_CHECKED_FOR_TOXICITY)[number];
+
 export interface FlaggedField {
-  field: keyof AiCustomizations;
+  field: ToxicityCheckedField;
   toxicity: {
     text: string;
     blockedBy: SafetyService;
@@ -168,7 +172,7 @@ interface BlocklistDetails {
 }
 
 interface WebPurifyDetails {
-  type: string;
+  type: 'email' | 'address' | 'phone' | 'profanity';
   content: string;
 }
 

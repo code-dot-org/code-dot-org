@@ -17,6 +17,7 @@ import {
   DetectToxicityResponse,
   LogChatEventApiResponse,
 } from './types';
+import {extractFieldsToCheckForToxicity} from './views/modelCustomization/utils';
 
 const ROOT_URL = '/aichat';
 const paths = {
@@ -121,14 +122,9 @@ export async function getStudentChatHistory(
 export async function detectToxicityInCustomizations(
   aiCustomizations: AiCustomizations
 ): Promise<DetectToxicityResponse> {
-  const {systemPrompt, retrievalContexts} = aiCustomizations;
-  const payload = {
-    systemPrompt,
-    retrievalContexts,
-  };
   const response = await HttpClient.post(
     paths.FIND_TOXICITY_URL,
-    JSON.stringify(payload),
+    JSON.stringify(extractFieldsToCheckForToxicity(aiCustomizations)),
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',

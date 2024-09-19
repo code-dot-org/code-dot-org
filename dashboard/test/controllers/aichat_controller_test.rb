@@ -299,7 +299,7 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'find_toxicity returns toxicity if detected in retrieval context' do
     sign_in(@authorized_student1)
-    retrival_contexts = ['retreival1', 'retreival2']
+    retrival_contexts = ['retrieval1', 'retrieval2']
     locale = 'en'
     toxicity_response = {text: system_prompt, blocked_by: 'comprehend', details: {}}
     AichatSafetyHelper.expects(:find_toxicity).with('user', retrival_contexts.join(' '), locale).returns(toxicity_response)
@@ -316,7 +316,7 @@ class AichatControllerTest < ActionController::TestCase
   test 'find_toxicity returns toxicity if detected in both system prompt and retrieval contexts' do
     sign_in(@authorized_student1)
     system_prompt = 'hello system prompt'
-    retrival_contexts = ['retreival1', 'retreival2']
+    retrival_contexts = ['retrieval1', 'retrieval2']
     locale = 'en'
     toxicity_response_system_prompt = {text: system_prompt, blocked_by: 'comprehend', details: {}}
     toxicity_response_retrieval_contexts = {text: retrival_contexts.join(' '), blocked_by: 'comprehend', details: {}}
@@ -338,7 +338,7 @@ class AichatControllerTest < ActionController::TestCase
   test 'find_toxicity returns empty flagged fields if no toxicity detected' do
     sign_in(@authorized_student1)
     system_prompt = 'hello system prompt'
-    retrival_contexts = ['retreival1', 'retreival2']
+    retrival_contexts = ['retrieval1', 'retrieval2']
     locale = 'en'
     AichatSafetyHelper.expects(:find_toxicity).twice.returns(nil)
 
