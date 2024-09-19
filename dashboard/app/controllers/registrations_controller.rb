@@ -189,7 +189,7 @@ class RegistrationsController < Devise::RegistrationsController
       super
     end
 
-    if [:new_sign_up].present?
+    if params[:new_sign_up].present?
       curr_user = User.find_by_email_or_hashed_email(params[:user_email])
       sign_in curr_user
     end
