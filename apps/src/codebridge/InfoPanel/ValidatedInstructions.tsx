@@ -279,9 +279,12 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   }, [showNavigation, validationResults]);
 
-  const validationIcon =
+  const validationIconClasses =
     hasMetValidation || hasSubmitted
-      ? 'fa-solid fa-circle-check'
+      ? classNames(
+          'fa-duotone fa-solid fa-circle-check',
+          moduleStyles.passedValidation
+        )
       : 'fa-regular fa-circle';
 
   // Don't render anything if we don't have any instructions.
@@ -315,7 +318,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             <div className={moduleStyles.mainInstructions}>
               <i
                 className={classNames(
-                  validationIcon,
+                  validationIconClasses,
                   moduleStyles.validationIcon
                 )}
               />

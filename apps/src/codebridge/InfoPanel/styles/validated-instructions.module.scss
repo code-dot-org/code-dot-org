@@ -142,3 +142,8 @@
   width: auto;
   margin: 4px;
 }
+
+.passedValidation {
+  --fa-primary-color: $light_affirmative_500;
+  --fa-secondary-color: $white;
+}
