@@ -31,3 +31,7 @@ header:
 footer:
   # Remove these links to support pages
   bar: false
+
+teacher-homepage:
+  marketing-announcement-banner: false
+  incubator-banner: false

@@ -1,5 +1,3 @@
-require 'cdo/yaml'
-
 module Cdo
   # Lazily loads global configurations for regional pages
   module Global
