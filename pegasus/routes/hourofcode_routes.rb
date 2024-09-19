@@ -18,3 +18,9 @@ get '*' do |uri|
   update_actionview_assigns
   pass
 end
+
+['/promote', '/promote/resources'].each do |path|
+  get path do
+    redirect resolve_url("/resources")
+  end
+end
