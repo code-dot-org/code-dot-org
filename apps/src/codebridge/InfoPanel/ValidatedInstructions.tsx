@@ -281,13 +281,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   }, [showNavigation, validationResults]);
 
   const showPassedIcon = hasMetValidation || hasSubmitted;
-  // const validationIconClasses =
-  //   hasMetValidation || hasSubmitted
-  //     ? classNames(
-  //         'fa-duotone fa-solid fa-circle-check',
-  //         moduleStyles.passedValidation
-  //       )
-  //     : 'fa-regular fa-circle';
 
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {

@@ -9,7 +9,7 @@ interface ValidationIconProps {
 }
 
 // Component that extracts out the logic for rendering a validation status icon.
-// For any but the 'pending' icon, we use a duotone icon with a white x/check/exclamation mark
+// For any but the 'pending' icon, we use a duotone icon with a white x/check/minus/exclamation mark
 // and a colored circle background. For the 'pending' icon, we use a regular (unfilled) circle icon.
 const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
   status,
