@@ -1,0 +1,33 @@
+# Farsi Global Region
+
+# The structure of a global configuration is to start with the page context and
+# then list the page name, then list components within that page.
+#
+# The component can then specify a value that overrides component properties
+# with the ones given here, or, if the value is 'false', it removes the
+# component from the page.
+
+# The top bar on the site consisting of dropdown menus and navigation links
+header:
+  # Remove these links from the header menus
+  incubator: false
+  project-gallery: false
+  districts: false
+  stats: false
+  help-us: false
+
+  # The 'Teach' section in the hamburger menu
+  teach-menu: false
+
+  # The 'About' section in the hamburger menu
+  about-menu: false
+
+  # Help button (?)
+  help-menu:
+    support: false
+    teacher-forum: false
+
+# The navigation region found at the bottom of each page
+footer:
+  # Remove these links to support pages
+  bar: false

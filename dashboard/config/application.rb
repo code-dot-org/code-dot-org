@@ -12,6 +12,7 @@ require_relative '../legacy/middleware/sound_library_api'
 require_relative '../legacy/middleware/animation_library_api'
 
 require 'bootstrap-sass'
+require 'cdo/global'
 require 'cdo/hash'
 require 'cdo/i18n_backend'
 require 'cdo/shared_constants'
