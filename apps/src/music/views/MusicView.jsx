@@ -15,7 +15,6 @@ import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import AppConfig from '../appConfig';
-import {installFunctionBlocks} from '../blockly/blockUtils';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {
@@ -106,6 +105,7 @@ class UnconnectedMusicView extends React.Component {
     setUndoStatus: PropTypes.func,
     clearCallout: PropTypes.func,
     isPlayView: PropTypes.bool,
+    blockMode: PropTypes.string,
   };
 
   constructor(props) {
@@ -144,7 +144,7 @@ class UnconnectedMusicView extends React.Component {
       hasLoadedInitialSounds: false,
     };
 
-    MusicBlocklyWorkspace.setupBlocklyEnvironment(this.getBlockMode());
+    MusicBlocklyWorkspace.setupBlocklyEnvironment(this.props.blockMode);
   }
 
   componentDidMount() {
@@ -222,13 +222,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   async onLevelLoad(levelData, initialSources) {
-    const blockMode =
-      initialSources?.labConfig?.music?.blockMode ||
-      levelData?.blockMode ||
-      BlockMode.SIMPLE2;
-    this.setBlockMode(blockMode);
-
-    installFunctionBlocks(this.getBlockMode());
     // Load and initialize the library and player if not done already.
     // Read the library name first from level data, or from the project
     // sources if not present on the level. If there is no library name
@@ -245,9 +238,9 @@ class UnconnectedMusicView extends React.Component {
     }
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
-    if (this.getBlockMode() === BlockMode.SIMPLE2) {
+    if (this.props.blockMode === BlockMode.SIMPLE2) {
       this.sequencer = new Simple2Sequencer();
-    } else if (this.getBlockMode() === BlockMode.ADVANCED) {
+    } else if (this.props.blockMode === BlockMode.ADVANCED) {
       this.sequencer = new AdvancedSequencer();
     } else {
       this.sequencer = new MusicPlayerStubSequencer();
@@ -261,7 +254,7 @@ class UnconnectedMusicView extends React.Component {
           this.props.isReadOnlyWorkspace,
           levelData?.toolbox,
           this.props.isRtl,
-          this.getBlockMode()
+          this.props.blockMode
         );
 
     this.library.setAllowedSounds(levelData?.sounds);
@@ -385,14 +378,6 @@ class UnconnectedMusicView extends React.Component {
     return this.player.getCurrentPlayheadPosition();
   };
 
-  getBlockMode = () => {
-    return this.blockMode || BlockMode.SIMPLE2;
-  };
-
-  setBlockMode = blockMode => {
-    this.blockMode = blockMode;
-  };
-
   updateHighlightedBlocks = () => {
     this.musicBlocklyWorkspace.updateHighlightedBlocks(
       this.props.currentlyPlayingBlockIds
@@ -412,7 +397,7 @@ class UnconnectedMusicView extends React.Component {
 
   getStartSources = () => {
     if (!this.props.levelProperties?.levelData?.startSources) {
-      const startSourcesFilename = 'startSources' + this.getBlockMode();
+      const startSourcesFilename = 'startSources' + this.props.blockMode;
       return require(`@cdo/static/music/${startSourcesFilename}.json`);
     } else {
       return this.props.levelProperties?.levelData.startSources;
@@ -530,7 +515,7 @@ class UnconnectedMusicView extends React.Component {
         getTriggerCount: () => this.playingTriggers.length,
         Sequencer: this.sequencer,
       },
-      this.getBlockMode()
+      this.props.blockMode
     );
   };
 
@@ -610,7 +595,7 @@ class UnconnectedMusicView extends React.Component {
     if (this.props.packId) {
       sourcesToSave.labConfig.music.packId = this.props.packId;
     }
-    sourcesToSave.labConfig.music.blockMode = this.getBlockMode();
+    sourcesToSave.labConfig.music.blockMode = this.props.blockMode;
 
     Lab2Registry.getInstance()
       .getProjectManager()
