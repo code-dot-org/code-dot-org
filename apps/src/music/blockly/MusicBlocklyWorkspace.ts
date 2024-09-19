@@ -3,7 +3,6 @@ import {Abstract} from 'blockly/core/events/events_abstract';
 
 import {Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -87,12 +86,8 @@ export default class MusicBlocklyWorkspace {
     }
 
     this.container = container;
-    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    const toolboxBlocks = getToolbox(
-      blockMode,
-      // In start mode, we always show the full toolbox for the given block mode.
-      isStartMode ? undefined : toolbox
-    );
+
+    const toolboxBlocks = getToolbox(blockMode, toolbox);
 
     // This dialog is used for naming variables, which are only present in advanced mode.
     // Other Blockly labs use FeedbackUtils.prototype.showSimpleDialog to create a prettier dialog.
