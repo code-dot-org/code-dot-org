@@ -40,13 +40,13 @@ module Pd
     end
 
     test 'day validity for summer workshops' do
-      assert (build :pd_workshop_daily_survey, placeholder_params((@pd_summer_workshop)).merge({day: 0})).valid?
-      refute (build :pd_workshop_daily_survey, placeholder_params((@pd_summer_workshop)).merge({day: 6})).valid?
+      assert (build :pd_workshop_daily_survey, placeholder_params(@pd_summer_workshop).merge({day: 0})).valid?
+      refute (build :pd_workshop_daily_survey, placeholder_params(@pd_summer_workshop).merge({day: 6})).valid?
     end
 
     test 'day validity for academic year workshops' do
-      assert (build :pd_workshop_daily_survey, placeholder_params((@pd_summer_workshop)).merge({day: 1})).valid?
-      refute (build :pd_workshop_daily_survey, placeholder_params((@pd_summer_workshop)).merge({day: 6})).valid?
+      assert (build :pd_workshop_daily_survey, placeholder_params(@pd_summer_workshop).merge({day: 1})).valid?
+      refute (build :pd_workshop_daily_survey, placeholder_params(@pd_summer_workshop).merge({day: 6})).valid?
     end
 
     private def placeholder_params(workshop)
