@@ -58,7 +58,7 @@ describe('ActivityCard', () => {
     expect(wrapper.contains('Duration:')).toBe(true);
     expect(wrapper.find('OrderControls').length).toBe(1);
     expect(wrapper.find('Connect(ActivitySectionCard)').length).toBe(3);
-    expect(wrapper.find('button').length).toBe(1);
+    expect(wrapper.find('button').length).toBe(3);
   });
 
   it('show OrderControls when not allowed to make major curriculum changes but there are no levels in activity', () => {
@@ -142,9 +142,9 @@ describe('ActivityCard', () => {
 
   it('adds activity section when button pressed', () => {
     const wrapper = shallow(<ActivityCard {...defaultProps} />);
-    expect(wrapper.find('button').length).toBe(1);
+    expect(wrapper.find('button').length).toBe(3);
 
-    const button = wrapper.find('button');
+    const button = wrapper.find('button').at(2);
     expect(button.text()).toContain('Activity Section');
     button.simulate('mouseDown');
     expect(addActivitySection).toHaveBeenCalledTimes(1);

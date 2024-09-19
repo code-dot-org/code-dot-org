@@ -66,16 +66,7 @@ const Workspace = () => {
         <div>
           <FileTabs />
         </div>
-        {isStartMode && (
-          <div
-            id="startSourcesWarningBanner"
-            className={moduleStyles.warningBanner}
-          >
-            {projectTemplateLevel
-              ? WARNING_BANNER_MESSAGES.TEMPLATE
-              : WARNING_BANNER_MESSAGES.STANDARD}
-          </div>
-        )}
+
         {config.showFileBrowser && <FileBrowser />}
 
         <div
@@ -83,6 +74,16 @@ const Workspace = () => {
             [moduleStyles.withFileBrowser]: config.showFileBrowser,
           })}
         >
+          {isStartMode && (
+            <div
+              id="startSourcesWarningBanner"
+              className={moduleStyles.warningBanner}
+            >
+              {projectTemplateLevel
+                ? WARNING_BANNER_MESSAGES.TEMPLATE
+                : WARNING_BANNER_MESSAGES.STANDARD}
+            </div>
+          )}
           <Editor
             langMapping={config.languageMapping}
             editableFileTypes={config.editableFileTypes}

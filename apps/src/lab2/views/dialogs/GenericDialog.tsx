@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import commonI18n from '@cdo/locale';
 
@@ -37,6 +38,7 @@ export type GenericDialogProps = GenericDialogTitleProps &
         text?: string;
         callback?: dialogCallback;
         disabled?: boolean;
+        destructive?: boolean;
       };
     };
   };
@@ -48,7 +50,9 @@ import moduleStyles from './generic-dialog.module.scss';
  * Allows a title component or title message
  * a body component or message
  * a list of up to three buttons - confirm, cancel, neutral
- * each button takes up to two args - a callback (if not a default will be provided), and a label.
+ * each button takes up to four args - a callback (if not a default will be provided), a label,
+ * a disabled flag, and a destructive flag. The confirm button is the only one that can be destructive,
+ * and it will be styled as such (red) to provide extra visual warning when attempting to delete something.
  * An accept button is always added, with the default "OK" text if not provided.
  * dialogs maintain a context, which can provide data to any of the callbacks.
  * The title, message, and confirm button text can be customized.
@@ -91,49 +95,50 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
       <div className={moduleStyles.buttonContainer}>
         <div className={moduleStyles.outerButtonContainer}>
           {buttons?.cancel ? (
-            <button
-              className={moduleStyles.cancel}
-              type="button"
+            <Button
               onClick={closingCallback(
                 dialogControl.closeDialog,
                 'cancel',
                 buttons.cancel.callback
               )}
-              disabled={buttons?.cancel?.disabled}
-            >
-              {buttons.cancel.text || commonI18n.cancel()}
-            </button>
+              className={moduleStyles.cancel}
+              type="secondary"
+              disabled={buttons.cancel.disabled}
+              color={buttonColors.gray}
+              text={buttons.cancel.text || commonI18n.cancel()}
+            />
           ) : (
             <div />
           )}
           <div className={moduleStyles.innerButtonContainer}>
             {buttons?.neutral && (
-              <button
-                className={moduleStyles.neutral}
-                type="button"
+              <Button
                 onClick={closingCallback(
                   dialogControl.closeDialog,
                   'neutral',
                   buttons.neutral.callback
                 )}
-                disabled={buttons?.neutral?.disabled}
-              >
-                {buttons.neutral.text}
-              </button>
+                type="secondary"
+                disabled={buttons.neutral.disabled}
+                color={buttonColors.gray}
+                text={buttons.neutral.text}
+              />
             )}
-
-            <button
-              className={moduleStyles.confirm}
-              type="button"
+            <Button
               onClick={closingCallback(
                 dialogControl.closeDialog,
                 'confirm',
                 buttons?.confirm?.callback
               )}
               disabled={buttons?.confirm?.disabled}
-            >
-              {buttons?.confirm?.text || commonI18n.dialogOK()}
-            </button>
+              type="primary"
+              color={
+                buttons?.confirm?.destructive
+                  ? buttonColors.destructive
+                  : buttonColors.purple
+              }
+              text={buttons?.confirm?.text || commonI18n.dialogOK()}
+            />
           </div>
         </div>
       </div>

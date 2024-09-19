@@ -299,8 +299,6 @@ class User < ApplicationRecord
     Services::Lti.create_lti_user_identity(self)
   end
 
-  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
-
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do

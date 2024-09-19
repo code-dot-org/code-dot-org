@@ -93,7 +93,14 @@ onmessage = async event => {
   // Documentation on this method:
   // https://pyodide.org/en/stable/usage/api/js-api.html#pyodide.ffi.PyProxy.toJs
   const resultsObject = results?.toJs();
-  postMessage({type: 'run_complete', message: resultsObject, id});
+  try {
+    postMessage({type: 'run_complete', message: resultsObject, id});
+  } catch (e) {
+    // Likely we hit a DataCloneError trying to send the resultsObject.
+    // In this case, don't try to send the results object, as if it can't be
+    // sent, it wasn't going to be parsed by us anyway.
+    postMessage({type: 'run_complete', id});
+  }
 };
 
 // Run code owned by us (not the user). If there is an error, post a
