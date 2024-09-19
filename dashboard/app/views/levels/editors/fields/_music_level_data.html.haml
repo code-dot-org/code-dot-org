@@ -4,5 +4,7 @@
 #music-level-data-container.in.collapse
 
 - content_for :body_scripts do
+  %script{src: webpack_asset_path("js/#{js_locale}/music_locale.js")}
+  %script{src: webpack_asset_path('js/googleblockly.js')}
   %script{src: webpack_asset_path('js/levels/editors/fields/_music_level_data.js'),
         data: {musicleveldata: (@level.properties['level_data'] || {}).to_json}}

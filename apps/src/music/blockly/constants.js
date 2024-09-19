@@ -53,7 +53,7 @@ export const MINUS_IMAGE =
 
 // Other
 
-export const DOCS_BASE_URL = '/docs/ide/projectbeats/expressions/';
+export const DOCS_BASE_URL = '/docs/ide/music/expressions/';
 
 export const TriggerStart = {
   IMMEDIATELY: 'immediately',

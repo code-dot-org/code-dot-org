@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-09-17T21:19:04.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Hurricane Maria\r\n\r\n::: details [**✅ Step 1**]\r\n**Evaluate the Dataset:**\r\n- Run the code to see information and statistics about the dataset.\r\n- Use `min()` , `max()` and `sum()` to identify the minimum, maximum and total sea surface temperatures.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n**Summarize the Data:**\r\n- Use the `agg()` function to calculate the total, average, minimum, and maximum sea surface temperatures for each date.\r\n- Use `groupby()` if applicable to summarize the data over time. \r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\n**Interpret the Data:**\r\nDiscuss with a partner what the calculated statistics reveal about the sea surface temperatures during Hurricane Maria. Are there any significant trends or anomalies?\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\n**Form a Hypothesis:**\r\nDiscuss with a partner and create a brief hypothesis about the data. Consider what factors or broader events might be influencing the data and the trends, patterns or anomalies you identified.\r\n:::\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndata = pd.read_csv('Hurricane_Maria.csv')\n\n# Display basic information and statistics about the dataset \nprint(data.info()) \nprint(data.describe())\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "Hurricane_Maria.csv",
+          "language": "csv",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Hurricane Maria",
+    "bubble_choice_description": "Practice using pandas functions to identify key temperature statistics and uncover initial insights.",
+    "thumbnail_url": "https://images.code.org/6e7efa33cd1b673c12742673565104db-hurricane.png",
+    "teacher_markdown": "**What Students Should Take Away:**\r\n- Students practice using the min() and max() functions to identify key temperature extremes in the dataset.\r\n- Students learn how to apply the sum() function to calculate total sea surface temperatures, helping them understand cumulative changes.\r\n- Students reinforce their skills in using the agg() function combined with groupby() to summarize data, providing insights into overall trends.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n- Students might think that only one statistic (e.g., mean) is important, neglecting the significance of other statistics.\r\n  - Tip: Encourage students to consider how each statistic offers a different perspective. For instance, the mean shows overall trends, while min and max highlight extremes.\r\n- Students may have difficulty interpreting how temperature changes relate to the progression of the hurricane.\r\n  - Tip: Guide students to think about how rising or falling temperatures could indicate changes in the hurricane's intensity. Use guiding questions to help them connect the data to real-world events."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-17T21:19:04.613+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L7_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L7_2024-pilot\"},{\"changed_at\":\"2024-09-17 21:24:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:27:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>
