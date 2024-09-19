@@ -35,7 +35,7 @@ export function buildSchoolData({
     };
   }
 
-  if (schoolId === NO_SCHOOL_SETTING) {
+  if (country === US_COUNTRY_CODE && schoolId === NO_SCHOOL_SETTING) {
     return {
       user: {
         school_info_attributes: {

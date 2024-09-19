@@ -98,6 +98,24 @@ describe('buildSchoolData', () => {
     });
   });
 
+  it('should handle cases where a user updates from a non-school setting to a non-US school', () => {
+    const result = buildSchoolData({
+      schoolId: NO_SCHOOL_SETTING,
+      country: 'CA',
+      schoolName: 'Cool School',
+      schoolZip: '12345',
+    });
+
+    expect(result).toEqual({
+      user: {
+        school_info_attributes: {
+          country: 'CA',
+          school_name: 'Cool School',
+        },
+      },
+    });
+  });
+
   it('should return undefined when neither schoolId nor country is provided', () => {
     const result = buildSchoolData({
       schoolId: '',
