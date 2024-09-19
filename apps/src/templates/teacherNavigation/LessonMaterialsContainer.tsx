@@ -80,7 +80,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   courseName,
 }) => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
-  console.log('loadedData', loadedData);
   const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
   const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
   const isUnitAssigned = useMemo(() => !!loadedData?.unitId, [loadedData]);

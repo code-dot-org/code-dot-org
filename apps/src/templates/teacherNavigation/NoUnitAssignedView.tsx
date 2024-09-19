@@ -1,9 +1,13 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
+import {generatePath, useNavigate} from 'react-router-dom';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import TeacherDashboardEmptyState from '@cdo/apps/templates/teacherNavigation/images/TeacherDashboardEmptyState.svg';
 import i18n from '@cdo/locale';
+
+import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './lesson-materials.module.scss';
 
@@ -14,6 +18,23 @@ type NoUnitAssignedViewProps = {
 const NoUnitAssignedView: React.FC<NoUnitAssignedViewProps> = ({
   courseName,
 }) => {
+  const selectedSectionId = useSelector(
+    (state: {teacherSections: {selectedSectionId: number}}) =>
+      state.teacherSections.selectedSectionId
+  );
+  const navigate = useNavigate();
+
+  const navigateToCoursePage = () => {
+    console.log('Navigating to course page');
+    navigate(
+      generatePath(
+        LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
+        {
+          sectionId: selectedSectionId,
+        }
+      )
+    );
+  };
   return (
     <div className={styles.noUnitContainer}>
       <img
@@ -26,7 +47,7 @@ const NoUnitAssignedView: React.FC<NoUnitAssignedViewProps> = ({
         {' '}
         {i18n.noUnitAssigned({courseName: courseName})}
       </BodyTwoText>
-      <LinkButton href="/courses" text={i18n.assignAUnit()} />
+      <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />
     </div>
   );
 };
