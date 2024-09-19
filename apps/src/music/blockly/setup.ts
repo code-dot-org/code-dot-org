@@ -1,8 +1,5 @@
-import {Block, Generator} from 'blockly';
-
 import musicI18n from '../locale';
 
-import {GeneratorHelperSimple2} from './blocks/simple2';
 import {backupFunctionDefinitons} from './blockUtils';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
