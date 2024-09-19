@@ -40,7 +40,6 @@ export function buildSchoolData({
       user: {
         school_info_attributes: {
           country,
-          zip: schoolZip,
           school_type: NO_SCHOOL_SETTING,
           school_name: NO_SCHOOL_SETTING_SCHOOL_NAME,
         },
