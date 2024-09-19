@@ -225,7 +225,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
   );
 
   const onVersionChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
+    (e: React.ChangeEvent<HTMLInputElement>, isLatest: boolean) => {
       setSelectedVersion(e.target.value);
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
       if (!isLatest) {
@@ -279,7 +279,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
               name={version.versionId}
               value={version.versionId}
               label={parseDate(version.lastModified)}
-              onChange={onVersionChange}
+              onChange={e => onVersionChange(e, version.isLatest)}
               checked={selectedVersion === version.versionId}
               className={moduleStyles.versionHistoryRow}
             >
@@ -310,7 +310,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
             name={INITIAL_VERSION_ID}
             value={INITIAL_VERSION_ID}
             label={lab2I18n.initialVersion()}
-            onChange={onVersionChange}
+            onChange={e => onVersionChange(e, versionList.length === 0)}
             checked={selectedVersion === INITIAL_VERSION_ID}
             className={moduleStyles.versionHistoryRow}
           />
