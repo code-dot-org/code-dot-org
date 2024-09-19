@@ -115,9 +115,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
           const selectedVersionComponent =
             document.getElementById(selectedVersion);
           if (selectedVersionComponent) {
-            selectedVersionComponent.scrollIntoView({
-              behavior: 'instant',
-            });
+            selectedVersionComponent.scrollIntoView({behavior: 'instant'});
           }
         }, 0);
       } else {
@@ -224,9 +222,10 @@ const VersionHistoryDropdown: React.FunctionComponent<
   );
 
   const onVersionChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>, isLatest: boolean) => {
+    (e: React.ChangeEvent<HTMLInputElement>) => {
       setSelectedVersion(e.target.value);
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
+      const isLatest = isLatestVersion(e.target.value);
       if (!isLatest) {
         sendCodebridgeAnalyticsEvent(
           EVENTS.CODEBRIDGE_VERSION_VIEWED,
@@ -236,7 +235,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
       }
       if (viewingInitialVersion) {
         dispatch(previewStartSource({startSource}));
-      } else if (isLatestVersion(e.target.value)) {
+      } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {
         dispatch(loadVersion({versionId: e.target.value}));
@@ -249,10 +248,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
   // if the user is viewing an old version, then close the dropdown.
   const handleCancel = useCallback(() => {
     // Go back to current version if we are viewing an old version
-    if (
-      selectedVersion === INITIAL_VERSION_ID ||
-      !isLatestVersion(selectedVersion)
-    ) {
+    if (!isLatestVersion(selectedVersion)) {
       dispatch(resetToCurrentVersion());
     }
     closeDropdown();
@@ -277,7 +273,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
               name={version.versionId}
               value={version.versionId}
               label={parseDate(version.lastModified)}
-              onChange={e => onVersionChange(e, version.isLatest)}
+              onChange={onVersionChange}
               checked={selectedVersion === version.versionId}
               className={moduleStyles.versionHistoryRow}
             >
@@ -304,11 +300,11 @@ const VersionHistoryDropdown: React.FunctionComponent<
           </div>
         ))}
         <div id={INITIAL_VERSION_ID}>
-          <RadioButton // Initial version
+          <RadioButton
             name={INITIAL_VERSION_ID}
             value={INITIAL_VERSION_ID}
             label={lab2I18n.initialVersion()}
-            onChange={e => onVersionChange(e, versionList.length === 0)}
+            onChange={onVersionChange}
             checked={selectedVersion === INITIAL_VERSION_ID}
             className={moduleStyles.versionHistoryRow}
           />
