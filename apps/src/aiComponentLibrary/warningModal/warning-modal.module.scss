@@ -1,6 +1,8 @@
 @import "color", "font";
 
 .chatWarningModal {
+  max-height: calc(95vh - 100px);
+
   hr {
     margin: 1rem 0;
     border-color: $light_gray_200;
