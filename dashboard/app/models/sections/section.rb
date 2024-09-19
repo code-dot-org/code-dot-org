@@ -695,6 +695,10 @@ class Section < ApplicationRecord
     end
   end
 
+  def lti?
+    lti_section.present?
+  end
+
   private def soft_delete_lti_section
     lti_section.destroy if lti_section
   end
