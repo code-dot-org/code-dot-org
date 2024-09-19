@@ -132,7 +132,6 @@
 }
 
 .validationIcon {
-  color: $light_affirmative_500;
   width: 20px;
   height: 20px;
   margin-top: 6px;
@@ -141,9 +140,4 @@
 .predictQuestion {
   width: auto;
   margin: 4px;
-}
-
-.passedValidation {
-  --fa-primary-color: $light_affirmative_500;
-  --fa-secondary-color: $white;
 }
