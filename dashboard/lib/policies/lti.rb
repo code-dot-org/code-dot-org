@@ -137,6 +137,10 @@ class Policies::Lti
     (Set.new(roles) & TEACHER_ROLES).any?
   end
 
+  def self.unverified_teacher?(user)
+    user.teacher? && !user.verified_teacher?
+  end
+
   def self.lti?(user)
     !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
   end

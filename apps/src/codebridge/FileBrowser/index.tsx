@@ -28,7 +28,10 @@ import {
   DialogType,
   DialogClosePromiseReturnType,
 } from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {
@@ -55,6 +58,7 @@ type FilesComponentProps = {
   renameFilePrompt: renameFilePromptType;
   renameFolderPrompt: renameFolderPromptType;
   setFileType: setFileType;
+  appName?: string;
 };
 
 // given a promise returned from DialogManager.showDialog({type : DialogType.GenericPrompt}), will return the input
@@ -84,6 +88,7 @@ const InnerFileBrowser = React.memo(
     renameFilePrompt,
     renameFolderPrompt,
     setFileType,
+    appName,
   }: FilesComponentProps) => {
     const {
       openFile,
@@ -95,17 +100,28 @@ const InnerFileBrowser = React.memo(
     const dialogControl = useDialogControl();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
+    const handleConfirmDeleteFile = (fileId: string) => {
+      deleteFile(fileId);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE, appName);
+    };
+
     const handleDeleteFile = (fileId: string) => {
       const filename = files[fileId].name;
       const title = codebridgeI18n.areYouSure();
       const message = codebridgeI18n.deleteFileConfirm({filename});
       dialogControl?.showDialog({
         type: DialogType.GenericConfirmation,
-        handleConfirm: () => deleteFile(fileId),
+        handleConfirm: () => handleConfirmDeleteFile(fileId),
         title,
         message,
         confirmText: codebridgeI18n.delete(),
+        destructive: true,
       });
+    };
+
+    const handleConfirmDeleteFolder = (folderId: string) => {
+      deleteFolder(folderId);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FOLDER, appName);
     };
 
     const handleDeleteFolder = (folderId: string) => {
@@ -142,10 +158,11 @@ const InnerFileBrowser = React.memo(
       const message = confirmation + ' ' + additionalWarning;
       dialogControl?.showDialog({
         type: DialogType.GenericConfirmation,
-        handleConfirm: () => deleteFolder(folderId),
+        handleConfirm: () => handleConfirmDeleteFolder(folderId),
         title,
         message,
         confirmText: codebridgeI18n.delete(),
+        destructive: true,
       });
     };
 
@@ -264,6 +281,7 @@ const InnerFileBrowser = React.memo(
                       renameFilePrompt={renameFilePrompt}
                       renameFolderPrompt={renameFolderPrompt}
                       setFileType={setFileType}
+                      appName={appName}
                     />
                   </ul>
                 )}
@@ -329,6 +347,7 @@ export const FileBrowser = React.memo(() => {
   } = useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const dialogControl = useDialogControl();
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   // Check if the filename is already in use in the given folder.
   // If it is, alert the user and return true, otherwise return false.
@@ -386,16 +405,23 @@ export const FileBrowser = React.memo(() => {
 
         const folderId = getNextFolderId(Object.values(project.folders));
         newFolder({parentId, folderName, folderId});
+
+        const eventName =
+          parentId === DEFAULT_FOLDER_ID
+            ? EVENTS.CODEBRIDGE_NEW_FOLDER
+            : EVENTS.CODEBRIDGE_NEW_SUBFOLDER;
+        sendCodebridgeAnalyticsEvent(eventName, appName);
       },
-    [dialogControl, newFolder, project.folders]
+    [appName, dialogControl, newFolder, project.folders]
   );
 
   const downloadFile: FilesComponentProps['downloadFile'] = useMemo(
     () => fileId => {
       const file = project.files[fileId];
       fileDownload(file.contents, file.name);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
     },
-    [project.files]
+    [appName, project.files]
   );
 
   const newFilePrompt: FilesComponentProps['newFilePrompt'] = useMemo(
@@ -437,8 +463,10 @@ export const FileBrowser = React.memo(() => {
           fileName,
           folderId,
         });
+
+        sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, appName);
       },
-    [dialogControl, checkForDuplicateFilename, newFile, project.files]
+    [dialogControl, project.files, newFile, appName, checkForDuplicateFilename]
   );
 
   const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(
@@ -488,13 +516,15 @@ export const FileBrowser = React.memo(() => {
           title: getErrorMessage(e),
         });
       }
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE, appName);
     },
     [
-      dialogControl,
-      moveFile,
-      checkForDuplicateFilename,
       project.files,
       project.folders,
+      dialogControl,
+      appName,
+      checkForDuplicateFilename,
+      moveFile,
     ]
   );
 
@@ -534,8 +564,15 @@ export const FileBrowser = React.memo(() => {
       }
       const newName = extractInput(results);
       renameFile(fileId, newName);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, appName);
     },
-    [dialogControl, project.files, checkForDuplicateFilename, renameFile]
+    [
+      dialogControl,
+      project.files,
+      checkForDuplicateFilename,
+      renameFile,
+      appName,
+    ]
   );
 
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
@@ -568,8 +605,9 @@ export const FileBrowser = React.memo(() => {
       }
       const newName = extractInput(results);
       renameFolder(folderId, newName);
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FOLDER, appName);
     },
-    [dialogControl, renameFolder, project.folders]
+    [project.folders, dialogControl, renameFolder, appName]
   );
 
   return (
@@ -598,6 +636,7 @@ export const FileBrowser = React.memo(() => {
           renameFilePrompt={renameFilePrompt}
           renameFolderPrompt={renameFolderPrompt}
           setFileType={setFileType}
+          appName={appName}
         />
       </ul>
     </PanelContainer>
