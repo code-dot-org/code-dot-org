@@ -50,6 +50,7 @@ import {
   clearCallout,
   setSelectedTriggerId,
   clearSelectedTriggerId,
+  getBlockMode,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
@@ -710,6 +711,7 @@ const MusicView = connect(
     isRtl: state.isRtl,
 
     packId: state.music.packId,
+    blockMode: getBlockMode(state),
     isPlaying: state.music.isPlaying,
     selectedBlockId: state.music.selectedBlockId,
     showInstructions: state.music.showInstructions,

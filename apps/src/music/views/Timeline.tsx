@@ -1,15 +1,13 @@
 import classNames from 'classnames';
 import React, {MouseEvent, useCallback, useRef} from 'react';
-import {useDispatch} from 'react-redux';
-
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useDispatch, useSelector} from 'react-redux';
 
 import {BlockMode, MIN_NUM_MEASURES} from '../constants';
 import {
   clearSelectedBlockId,
+  getBlockMode,
   setStartPlayheadPosition,
 } from '../redux/musicRedux';
-import {MusicLevelData} from '../types';
 
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -56,16 +54,8 @@ const getEventHeight = (
  */
 const Timeline: React.FunctionComponent = () => {
   const isPlaying = useMusicSelector(state => state.music.isPlaying);
-  const projectBlockMode = useAppSelector(
-    state => state.lab.channel?.labConfig?.music?.blockMode
-  );
-  const levelBlockMode = (
-    useAppSelector(
-      state => state.lab.levelProperties?.levelData
-    ) as MusicLevelData
-  )?.blockMode;
-  const blockMode = projectBlockMode || levelBlockMode || BlockMode.SIMPLE2;
 
+  const blockMode = useSelector(getBlockMode);
   const dispatch = useDispatch();
   const currentPlayheadPosition = useMusicSelector(
     state => state.music.currentPlayheadPosition
