@@ -11,6 +11,7 @@ import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/Partic
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import {currentGlobalConfigurationFor} from '@cdo/apps/util/globalRegions';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -195,12 +196,15 @@ export const UnconnectedTeacherHomepage = ({
         <ProtectedStatefulDiv ref={flashes} />
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
-        {specialAnnouncement && (
-          <MarketingAnnouncementBanner
-            announcement={specialAnnouncement}
-            marginBottom="30px"
-          />
-        )}
+        {specialAnnouncement &&
+          currentGlobalConfigurationFor(
+            'teacherHomepage.marketingAnnouncementBanner'
+          ) && (
+            <MarketingAnnouncementBanner
+              announcement={specialAnnouncement}
+              marginBottom="30px"
+            />
+          )}
         {announcement && showAnnouncement && (
           <div>
             <Notification
@@ -286,7 +290,10 @@ export const UnconnectedTeacherHomepage = ({
           />
         )}
         <TeacherResources />
-        {showIncubatorBanner && <IncubatorBanner />}
+        {showIncubatorBanner &&
+          currentGlobalConfigurationFor('teacherHomepage.incubatorBanner') && (
+            <IncubatorBanner />
+          )}
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
