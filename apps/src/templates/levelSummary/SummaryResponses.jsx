@@ -18,7 +18,6 @@ import styles from './summary.module.scss';
 
 const FREE_RESPONSE = 'FreeResponse';
 const MULTI = 'Multi';
-const LEVELGROUP = 'LevelGroup';
 
 const SummaryResponses = ({
   scriptData,
@@ -32,18 +31,17 @@ const SummaryResponses = ({
   levels,
 }) => {
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
-  const predictSettings = scriptData.level.properties?.predict_settings;
+  const predictSettings =
+    scriptData.viewing_level_data.properties?.predict_settings;
   const isFreeResponse =
-    scriptData.level.type === FREE_RESPONSE ||
+    scriptData.viewing_level_data.type === FREE_RESPONSE ||
     predictSettings?.questionType === PredictQuestionType.FreeResponse;
   const isMulti =
-    scriptData.level.type === MULTI ||
+    scriptData.viewing_level_data.type === MULTI ||
     predictSettings?.questionType === PredictQuestionType.MultipleChoice;
-  const isLevelGroup = scriptData.level.type === LEVELGROUP;
 
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   const [showStudentNames, setShowStudentNames] = useState(false);
-  const [subLevels, setSubLevels] = useState([]);
 
   // To avoid confusion, if a teacher tries to view the summary as a student,
   // send them back to the level in Participant mode instead.
@@ -53,13 +51,13 @@ const SummaryResponses = ({
 
   const logEvent = useCallback(
     eventName => {
-      const {level} = scriptData;
+      const {levels} = scriptData;
       analyticsReporter.sendEvent(
         eventName,
         {
-          levelId: level.id,
-          levelName: level.name,
-          levelType: level.type,
+          levelId: levels[0].id,
+          levelName: levels[0].name,
+          levelType: levels[0].type,
           sectionSelected: !!selectedSection,
           ...scriptData.reportingData,
         },
@@ -71,8 +69,8 @@ const SummaryResponses = ({
 
   const eventData = useMemo(() => {
     return {
-      levelId: scriptData.level.id,
-      levelName: scriptData.level.name,
+      levelId: scriptData.viewing_level_data.id,
+      levelName: scriptData.viewing_level_data.name,
       curriculumUmbrella: scriptData.reportingData.curriculumUmbrella,
       unitId: scriptData.reportingData.unitId,
     };
@@ -82,14 +80,14 @@ const SummaryResponses = ({
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
   }, [logEvent]);
 
-  useEffect(() => {
-    console.log('fetching sublevels');
-    fetch(`/user_levels/levelgroup_sublevels/${currentLevelId}`)
-      .then(response => response.json())
-      .then(data => setSubLevels(data))
-      .catch(error => console.error('Error fetching levels:', error));
-    console.log('sublevels', subLevels);
-  }, [currentLevelId, subLevels]);
+  // useEffect(() => {
+  //   console.log('fetching sublevels');
+  //   fetch(`/user_levels/levelgroup_sublevels/${currentLevelId}`)
+  //     .then(response => response.json())
+  //     .then(data => setSubLevels(data))
+  //     .catch(error => console.error('Error fetching levels:', error));
+  //   console.log('sublevels', subLevels);
+  // }, [currentLevelId, subLevels]);
 
   useEffect(() => {
     const correctAnswerElement = document.getElementById(
@@ -148,16 +146,6 @@ const SummaryResponses = ({
                 {i18n.studentsAnswered()}
               </span>
             </p>
-          </div>
-        )}
-        {isLevelGroup && (
-          <div>
-            <h1>Levels</h1>
-            <ul>
-              {subLevels.map((subLevel, index) => (
-                <li key={index}>{subLevel.name}</li>
-              ))}
-            </ul>
           </div>
         )}
 

@@ -53,15 +53,16 @@ const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
   const [numAnswers, correctAnswers] = useMemo(() => {
     let answers = [];
     let correctIndices = [];
-    if (scriptData.level.properties.answers) {
+    if (scriptData.viewing_level_data.properties.answers) {
       // If the level is a multi/contained level, the answers are in the level properties.
-      answers = scriptData.level.properties.answers;
+      answers = scriptData.viewing_level_data.properties.answers;
       correctIndices = answers
         .filter(answer => answer.correct)
         .map(answer => answers.indexOf(answer));
-    } else if (scriptData.level.properties.predict_settings) {
+    } else if (scriptData.viewing_level_data.properties.predict_settings) {
       // If the level is a predict level (lab2) the answers are in predict_settings.
-      const predictSettings = scriptData.level.properties.predict_settings;
+      const predictSettings =
+        scriptData.viewing_level_data.properties.predict_settings;
       // We should only be trying to load this component if this is a multiple choice question.
       if (predictSettings.multipleChoiceOptions) {
         answers = predictSettings.multipleChoiceOptions;
@@ -75,8 +76,8 @@ const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
     const correctAnswers = correctIndices.map(index => LETTERS.charAt(index));
     return [answers.length, correctAnswers];
   }, [
-    scriptData.level.properties.answers,
-    scriptData.level.properties.predict_settings,
+    scriptData.viewing_level_data.properties.answers,
+    scriptData.viewing_level_data.properties.predict_settings,
   ]);
 
   const answerData = useMemo(
