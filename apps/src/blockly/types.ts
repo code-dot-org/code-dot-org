@@ -85,7 +85,6 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
-  blockDefinitions: {[key in BLOCK_TYPES]?: BlockDefinition};
   showUnusedBlocks: boolean | undefined;
   BlockFieldHelper: {[fieldHelper: string]: string};
   enableParamEditing: boolean;

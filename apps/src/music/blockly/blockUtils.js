@@ -78,7 +78,7 @@ export function installFunctionBlocks(blockMode) {
     // Replaces "variable:" with "parameter:" block text for added parameters
     Blockly.Msg['PROCEDURE_VARIABLE'] = musicI18n.parameterLabel();
   } else {
-    Blockly.cdoUtils.registerCustomProcedureBlocks(true);
+    Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Remove two advanced blocks in the toolbox's Functions category that
     // we don't want.
     delete Blockly.Blocks.procedures_defreturn;
