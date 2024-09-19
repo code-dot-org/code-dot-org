@@ -8,7 +8,7 @@ import currentLocale from '@cdo/apps/util/currentLocale';
 
 import './style.scss';
 
-interface I18nDropdownProps {
+export interface I18nDropdownProps {
   localeUrl: string;
   optionsForLocaleSelect: SimpleDropdownProps['items'];
 }
