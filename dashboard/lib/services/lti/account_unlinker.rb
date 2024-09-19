@@ -36,7 +36,7 @@ module Services
       end
 
       private def lti_integration
-        @lti_integration ||= LtiIntegration.find_by(issuer: issuer, client_id: client_id)
+        @lti_integration ||= Queries::Lti.get_lti_integration(issuer, client_id)
       end
 
       private def remove_lti_user_identity

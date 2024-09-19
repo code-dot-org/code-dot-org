@@ -73,7 +73,7 @@ module Lti
         ao_id = params[:authentication_option_id]
         return head :not_found if ao_id.blank?
 
-        ao = AuthenticationOption.find_by(id: params[:authentication_option_id])
+        ao = AuthenticationOption.find_by(id: ao_id)
         return head :not_found unless ao.present? && ao.user == current_user
 
         Services::Lti::AccountUnlinker.call(user: current_user, auth_option: ao)
