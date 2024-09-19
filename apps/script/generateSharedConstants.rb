@@ -109,7 +109,7 @@ def main
       FEATURED_PROJECT_CONSTANTS
       LMS_LINKS
       USER_TYPES
-    ), 
+    ),
     file_type: 'ts'
   )
 
