@@ -3,6 +3,9 @@
   user_type = request.cookies[cookie_key]
   user_type = "student" if user_type == "student_y"
 
+  # Forcibly set the 'ge_region' parameter to Farsi
+  params[:ge_region] = 'fa'
+
   hamburger_options = {}
   hamburger_options[:level] = nil
   hamburger_options[:script_level] = nil
@@ -12,12 +15,14 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "header_"
   hamburger_options[:page_mode] = request.cookies['pm']
+  hamburger_options[:ge_region] = :fa
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
   header_contents_options[:language] = request.language
   header_contents_options[:loc_prefix] = "header_"
   header_contents_options[:page_mode] = request.cookies['pm']
+  header_contents_options[:ge_region] = :fa
 
   require 'cdo/hamburger'
 
@@ -30,7 +35,7 @@
       %img.logo{src: '/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
     -# rubocop:enable CustomCops/DashboardDbUsage
     %ul#headerlinks
-      - Hamburger.get_farsi_header_contents(header_contents_options).each do |entry|
+      - Hamburger.get_header_contents(header_contents_options).each do |entry|
         %li
           %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
   .right
