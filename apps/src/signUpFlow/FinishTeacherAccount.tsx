@@ -46,11 +46,13 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const submitTeacherAccount = () => {
     sendFinishEvent();
 
-    const email = sessionStorage.getItem(EMAIL_SESSION_KEY);
+    const encodedEmail = encodeURIComponent(
+      sessionStorage.getItem(EMAIL_SESSION_KEY) || ''
+    );
     const school = sessionStorage.getItem(SCHOOL_ID_SESSION_KEY);
     const schoolZip = sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY);
     const schoolName = sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY);
-    const fetchNewUrlParams = `new_sign_up=true&user_type=teacher&email=${email}&name=${name}&email_preference_opt_in=${emailOptInChecked}&school=${school}&school_id=${school}&school_zip=${schoolZip}&school_name=${schoolName}`;
+    const fetchNewUrlParams = `new_sign_up=true&user_type=teacher&email=${encodedEmail}&name=${name}&email_preference_opt_in=${emailOptInChecked}&school=${school}&school_id=${school}&school_zip=${schoolZip}&school_name=${schoolName}`;
 
     fetch(`/users/sign_up?${fetchNewUrlParams}`, {
       method: 'GET',
@@ -58,7 +60,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'Content-Type': 'application/json',
       },
     }).then(async () => {
-      fetch(`/users?new_sign_up=true&user_email=${email}`, {
+      fetch(`/users?new_sign_up=true&user_email=${encodedEmail}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

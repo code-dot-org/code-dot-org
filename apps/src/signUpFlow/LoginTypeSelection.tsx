@@ -135,7 +135,8 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const submitLoginType = async () => {
     logUserLoginType('email');
 
-    const beginSignUpFetchParams = `new_sign_up=true&email=${email}&password=${password}&password_confirmation=${password}`;
+    const encodedEmail = encodeURIComponent(email);
+    const beginSignUpFetchParams = `new_sign_up=true&email=${encodedEmail}&password=${password}&password_confirmation=${password}`;
     fetch(`/users/begin_sign_up?${beginSignUpFetchParams}`, {
       method: 'POST',
       headers: {
