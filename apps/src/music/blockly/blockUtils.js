@@ -69,10 +69,10 @@ export function installFunctionBlocks(blockMode) {
     Blockly.cdoUtils.registerCustomAdvancedProcedureBlocks();
     // Re-define blocks from core, in case they were deleted for Simple2 mode.
     restoreBlockDefinitions();
-    // Replaces "variable:" with "parameter:" for added parameters
+    // Replaces "variable:" with "parameter:" block text for added parameters
     Blockly.Msg['PROCEDURE_VARIABLE'] = musicI18n.parameterLabel();
   } else {
-    Blockly.cdoUtils.registerCustomProcedureBlocks();
+    Blockly.cdoUtils.registerCustomProcedureBlocks(true);
     // Remove two advanced blocks in the toolbox's Functions category that
     // we don't want.
     delete Blockly.Blocks.procedures_defreturn;
