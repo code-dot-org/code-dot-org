@@ -35,6 +35,11 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
           _(request.params[:foo]).must_equal params[:foo]
         end
 
+        it 'does not redirect from not application routes' do
+          get '/500.html'
+          must_respond_with :success
+        end
+
         context 'if ge_region is unavailable' do
           let(:ge_region) {'_'}
 

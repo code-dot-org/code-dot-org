@@ -38,9 +38,7 @@ module Rack
           request.path_info = path_vars[:main_path]
 
           request.update_param(REGION_KEY, path_vars[:ge_region])
-        elsif AVAILABLE_REGIONS.include?(request.cookies[REGION_KEY]) && request.get? && !request.xhr?
-          # Redirects to the regional page if the `ge_region` from cookies is available
-          # and the request is a non-AJAX GET request (reflected in the browser address bar).
+        elsif redirectable?(request)
           response = Response.new
           response.redirect(regional_path_for(request), 302)
           return response.finish
@@ -48,6 +46,28 @@ module Rack
       end
 
       @app.call(env)
+    end
+
+    private def region_available?(request)
+      region = request.cookies[REGION_KEY]
+      region.present? && AVAILABLE_REGIONS.include?(region)
+    end
+
+    private def app_route?(path)
+      Rails.application.routes.recognize_path(path).present?
+    rescue ActionController::RoutingError
+      false
+    end
+
+    # Determines if the request is eligible for redirection to the regional version of the path.
+    # To improve efficiency, the redirection should only affect the browser's address bar,
+    # avoiding redirection for non-visible to user requests such as AJAX, non-GET, or asset requests.
+    private def redirectable?(request)
+      return false unless region_available?(request)
+      return false unless request.get? && !request.xhr? # A non-AJAX GET request
+
+      # The application's routing path indicates that it is not an asset or public file path.
+      app_route?(request.path)
     end
 
     private def regional_path_for(request)
