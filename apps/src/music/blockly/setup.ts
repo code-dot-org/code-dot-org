@@ -1,6 +1,9 @@
+import {Block, Generator} from 'blockly';
+
 import {BlockMode} from '../constants';
 import musicI18n from '../locale';
 
+import {GeneratorHelperSimple2} from './blocks/simple2';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DOCS_BASE_URL,
@@ -62,6 +65,15 @@ export function setUpBlocklyForMusicLab(blockMode: string | undefined) {
     // we don't want.
     delete Blockly.Blocks.procedures_defreturn;
     delete Blockly.Blocks.procedures_ifreturn;
+
+    // Override the function call generator in Simple2.
+    Blockly.JavaScript.forBlock['procedures_callnoreturn'] = (
+      block: Block,
+      generator: Generator
+    ) => {
+      const funcName = generator.getProcedureName(block.getFieldValue('NAME'));
+      return GeneratorHelperSimple2.getFunctionCall(funcName);
+    };
   }
 
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
