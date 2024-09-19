@@ -117,7 +117,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
           if (selectedVersionComponent) {
             selectedVersionComponent.scrollIntoView({
               behavior: 'instant',
-              block: 'nearest',
             });
           }
         }, 0);
@@ -273,9 +272,8 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
       <div className={moduleStyles.versionHistoryList}>
         {versionList.map(version => (
-          <div id={version.versionId}>
+          <div id={version.versionId} key={version.versionId}>
             <RadioButton
-              key={version.versionId}
               name={version.versionId}
               value={version.versionId}
               label={parseDate(version.lastModified)}
