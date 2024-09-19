@@ -163,7 +163,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             color="gray"
             onClick={onClear}
           />
-          <CopyButton />
+          <CopyButton isDisabled={!canChatWithModel} />
         </div>
       </div>
     </div>

@@ -1,7 +1,9 @@
-import {getBlockMode} from '../appConfig';
+import {Block, Generator} from 'blockly';
+
 import {BlockMode} from '../constants';
 import musicI18n from '../locale';
 
+import {GeneratorHelperSimple2} from './blocks/simple2';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DOCS_BASE_URL,
@@ -30,8 +32,9 @@ import {BlockConfig} from './types';
  * Set up the global Blockly environment for Music Lab. This should
  * only be called once per page load, as it configures the global
  * Blockly state.
+ * @param {string} blockMode - The block mode to determine whether advanced blocks should be registered.
  */
-export function setUpBlocklyForMusicLab() {
+export function setUpBlocklyForMusicLab(blockMode: string | undefined) {
   Blockly.Extensions.register(
     DEFAULT_TRACK_NAME_EXTENSION,
     getDefaultTrackNameExtension()
@@ -54,7 +57,7 @@ export function setUpBlocklyForMusicLab() {
     Blockly.JavaScript[blockType] = blockConfig.generator;
   }
 
-  if (getBlockMode() !== BlockMode.ADVANCED) {
+  if (blockMode !== BlockMode.ADVANCED) {
     // Override default function block implementation.
     Blockly.cdoUtils.registerCustomProcedureBlocks();
 
@@ -62,6 +65,15 @@ export function setUpBlocklyForMusicLab() {
     // we don't want.
     delete Blockly.Blocks.procedures_defreturn;
     delete Blockly.Blocks.procedures_ifreturn;
+
+    // Override the function call generator in Simple2.
+    Blockly.JavaScript.forBlock['procedures_callnoreturn'] = (
+      block: Block,
+      generator: Generator
+    ) => {
+      const funcName = generator.getProcedureName(block.getFieldValue('NAME'));
+      return GeneratorHelperSimple2.getFunctionCall(funcName);
+    };
   }
 
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);

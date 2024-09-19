@@ -274,11 +274,6 @@ Style/RedundantCondition:
 Style/RedundantInitialize:
   Enabled: false
 
-# Offense count: 75
-# This cop supports safe autocorrection (--autocorrect).
-Style/RedundantParentheses:
-  Enabled: false
-
 # Offense count: 26
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantRegexpCharacterClass:

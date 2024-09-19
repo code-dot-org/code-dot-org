@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Use this level for updating screenshots to the panel level on the system prompt overview [link here](https://levelbuilder-studio.code.org/levels/61652)",
+    "long_instructions": "Use this level for updating screenshots to [this panels level](https://levelbuilder-studio.code.org/levels/61652)",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -46,6 +46,6 @@
     },
     "name_suffix": "_2024"
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-12T22:10:16.864+00:00\",\"changed\":[\"cloned from \\\"gen-ai-screenshots-prompt-chain-reasoning\\\"\"],\"cloned_from\":\"gen-ai-screenshots-prompt-chain-reasoning\"},{\"changed_at\":\"2024-09-12 22:11:13 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-12T22:10:16.864+00:00\",\"changed\":[\"cloned from \\\"gen-ai-screenshots-prompt-chain-reasoning\\\"\"],\"cloned_from\":\"gen-ai-screenshots-prompt-chain-reasoning\"},{\"changed_at\":\"2024-09-12 22:11:13 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-09-13 13:34:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

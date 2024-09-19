@@ -11,7 +11,11 @@ markdown <<MARKDOWN
 
 #### **Retrieval** can add information to a chatbot and give it additional knowledge to reference, but doesn’t change it’s behavior or tone.
 
-#### In this lesson students apply retrieval and system prompting to three complex user scenarios. Students brainstorm how to achieve user goals, explore methods of testing and evaluating chatbots, and design chatbots tailored to each scenario, deciding strategically between using system prompts or retrieval. Below is a preview of the first user story students will review.
+#### In this lesson students apply retrieval and system prompting to three complex user scenarios. Students brainstorm how to achieve user goals, explore methods of testing and evaluating chatbots, and design chatbots tailored to each scenario, deciding strategically between using system prompts or retrieval. 
+
+## To Do: 
+#### Below is a preview of the first user story students, review it and think about what you would be looking for in a student response.
+
 
 <img src="https://images.code.org/eda07bef6ebb42d3149429259ceb32cb-Screenshot 2024-09-12 at 1.45.36 PM.png" alt="cat from the pixel activity" width="90%" style="border: 2px solid black; border-radius: 8px; float:center, margin: 0 0 40px 40px">
 

@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-09-17T22:05:50.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Arctic Sea Ice\r\n\r\n::: details [**✅ Step 1**]\r\n**Evaluate the Dataset:**\r\n- Run the code to see information and statistics for the dataset about the sea ice extent over time.\r\n- Use `min()` , `max()` and `sum()` to identify the minimum, maximum and total sea ice extent.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n**Summarize the Data:**\r\n- Use the `agg()` function to calculate the total, average, minimum, and maximum ssea ice extent for each date.\r\n- Use `groupby()` if applicable to summarize the data over time. \r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\n**Interpret the Data:**\r\nDiscuss with a partner what the calculated statistics reveal about sea ice extent in the Arctic. Are there any significant trends or anomalies?\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\n**Form a Hypothesis:**\r\nDiscuss with a partner and create a brief hypothesis about the data. Consider what factors or broader events might be influencing the data and the trends, patterns or anomalies you identified.\r\n:::\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndata = pd.read_csv('Arctic_Sea_Ice.csv')\n\n# Display basic information and statistics about the dataset \nprint(data.info()) \nprint(data.describe())\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "Arctic_Sea_Ice.csv",
+          "language": "csv",
+          "contents": "ID,Year,Month,\"Extent\n(million km2)\",\"Area\n(million km2)\",,,\n0,1979,9,7.05,4.58,,,\n1,1980,9,7.67,4.87,,,\n2,1981,9,7.14,4.44,,,\n3,1982,9,7.3,4.43,,,\n4,1983,9,7.39,4.7,,,\n5,1984,9,6.81,4.11,,,\n6,1985,9,6.7,4.23,,,\n7,1986,9,7.41,4.72,,,\n8,1987,9,7.28,5.64,,,\n9,1988,9,7.37,5.36,,,\n10,1989,9,7.01,4.86,,,\n11,1990,9,6.14,4.55,,,\n12,1991,9,6.47,4.51,,,\n13,1992,9,7.47,5.43,,,\n14,1993,9,6.4,4.58,,,\n15,1994,9,7.14,5.13,,,\n16,1995,9,6.08,4.43,,,\n17,1996,9,7.58,5.62,,,\n18,1997,9,6.69,4.89,,,\n19,1998,9,6.54,4.3,,,\n20,1999,9,6.12,4.29,,,\n21,2000,9,6.25,4.35,,,\n22,2001,9,6.73,4.59,,,\n23,2002,9,5.83,4.03,,,\n24,2003,9,6.12,4.05,,,\n25,2004,9,5.98,4.39,,,\n26,2005,9,5.5,4.07,,,\n27,2006,9,5.86,4.01,,,\n28,2007,9,4.27,2.82,,,\n29,2008,9,4.69,3.26,,,\n30,2009,9,5.26,3.76,,,\n31,2010,9,4.87,3.34,,,D\n32,2011,9,4.56,3.21,,,\n33,2012,9,3.57,2.41,,,\n34,2013,9,5.21,3.78,,,\n35,2014,9,5.22,3.74,,,\n36,2015,9,4.62,3.42,,,\n37,2016,9,4.53,2.91,,,\n38,2017,9,4.82,3.35,,,\n39,2018,9,4.79,3.35,,,\n40,2019,9,4.36,3.17,,,\n41,2020,9,4,2.83,,,\n42,2021,9,4.95,3.47,,,\n43,2022,9,4.87,3.43,,,",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Arctic Sea Ice",
+    "bubble_choice_description": "Practice using pandas functions to identify important statistics about the sea ice extent over time and uncover initial insights.",
+    "thumbnail_url": "https://images.code.org/6f0b03f2ffb52431556f53ea02516ea2-glacier.png",
+    "teacher_markdown": "**What Students Should Take Away:**\r\n- Students practice using min() and max() to find the lowest and highest sea ice extents, providing a clear picture of the dataset’s extremes.\r\n- Students learn to use the sum() function to calculate total sea ice extent, reinforcing their understanding of cumulative data analysis.\r\n- By using agg() and groupby() together, students practice summarizing sea ice data across different time periods, which helps them see broader trends.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n- Students might think that only one statistic (e.g., mean) is important, neglecting the significance of other statistics.\r\n  - Tip: Encourage students to consider how each statistic offers a different perspective. For instance, the mean shows overall trends, while min and max highlight extremes.\r\n- Students may have difficulty seeing the significance of gradual changes in the data.\r\n  - Tip: Guide students to look for long-term trends and discuss how even small, gradual changes can have significant impacts over time."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-17T22:05:50.511+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L8b_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L8b_2024-pilot\"},{\"changed_at\":\"2024-09-17 22:15:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 22:16:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>
