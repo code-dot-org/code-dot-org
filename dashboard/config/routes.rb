@@ -649,6 +649,7 @@ Dashboard::Application.routes.draw do
           get :finish_link
           post :link_email
           post :new_account
+          post :unlink
         end
       end
     end

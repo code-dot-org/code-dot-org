@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {FeedbackData} from '../interactionsApi';
@@ -22,7 +25,17 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
   });
   const [detailsOpen, setDetailsOpen] = useState<boolean>(false);
 
+  const level = useAppSelector(state => state.aiTutor.level);
+
   const handleIconClick = (thumbsUp: boolean, thumbsDown: boolean) => {
+    analyticsReporter.sendEvent(EVENTS.AI_TUTOR_FEEDBACK_SUBMITTED, {
+      levelId: level?.id,
+      levelType: level?.type,
+      progressionType: level?.progressionType,
+      chatMessageId: messageId,
+      thumbsUp: thumbsUp,
+      thumbsDown: thumbsDown,
+    });
     setFeedbackState({thumbsUp: thumbsUp, thumbsDown: thumbsDown});
     setDetailsOpen(thumbsUp || thumbsDown);
   };

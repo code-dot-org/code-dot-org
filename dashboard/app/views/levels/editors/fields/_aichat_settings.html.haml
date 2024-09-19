@@ -5,4 +5,4 @@
 
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_aichat_settings.js'),
-        data: {aichatsettings: (@level.properties["aichat_settings"]).to_json}}
+        data: {aichatsettings: @level.properties["aichat_settings"].to_json}}
