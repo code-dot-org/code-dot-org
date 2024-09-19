@@ -1,7 +1,5 @@
 # Gen AI Curriculum Resources
 # This template is manually deployed to create/update Gen AI Curriculum resources.
-# TODO:
-  # Fix hardcoded execution role ARN
 
 AWSTemplateFormatVersion: 2010-09-09
 
@@ -24,7 +22,7 @@ Resources:
     Type: AWS::SageMaker::Model
     Properties:
       ModelName: !Sub "<%= "#{config[:model_name]}-${Environment}-#{Time.now.to_i}" %>"
-      ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/AmazonSageMaker-ExecutionRole-test"
+      ExecutionRoleArn: !ImportValue IAM-SagemakerModelExecutionRoleARN
       PrimaryContainer:
         Environment:
           {
