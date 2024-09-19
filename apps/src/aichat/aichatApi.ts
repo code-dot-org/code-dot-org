@@ -17,7 +17,7 @@ import {
   DetectToxicityResponse,
   LogChatEventApiResponse,
 } from './types';
-import {extractFieldsToCheckForToxicity} from './views/modelCustomization/utils';
+import {extractFieldsToCheckForToxicity} from './utils';
 
 const ROOT_URL = '/aichat';
 const paths = {

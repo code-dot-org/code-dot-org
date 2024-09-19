@@ -45,15 +45,13 @@ import {
   isChatMessage,
   FlaggedField,
 } from '../types';
+import {extractFieldsToCheckForToxicity} from '../utils';
 import {
   AI_CUSTOMIZATIONS_LABELS,
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
-import {
-  extractFieldsToCheckForToxicity,
-  validateModelId,
-} from '../views/modelCustomization/utils';
+import {validateModelId} from '../views/modelCustomization/utils';
 
 import {
   allFieldsHidden,
@@ -232,7 +230,7 @@ const getToxicityErrorMessage = (flaggedFields: FlaggedField[]) => {
   const fieldLabels = flaggedFields.map(
     flaggedField => AI_CUSTOMIZATIONS_LABELS[flaggedField.field]
   );
-  return `The following fields have been flagged by our content moderation policy: ${fieldLabels.join(
+  return `The following customization(s) have been flagged by our content moderation policy: ${fieldLabels.join(
     ', '
   )}. Please try a different model customization.`;
 };

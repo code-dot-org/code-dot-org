@@ -299,16 +299,16 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'find_toxicity returns toxicity if detected in retrieval context' do
     sign_in(@authorized_student1)
-    retrival_contexts = ['retrieval1', 'retrieval2']
+    retrieval_contexts = ['retrieval1', 'retrieval2']
     locale = 'en'
     toxicity_response = {text: system_prompt, blocked_by: 'comprehend', details: {}}
-    AichatSafetyHelper.expects(:find_toxicity).with('user', retrival_contexts.join(' '), locale).returns(toxicity_response)
+    AichatSafetyHelper.expects(:find_toxicity).with('user', retrieval_contexts.join(' '), locale).returns(toxicity_response)
 
     expected_response = {
       flaggedFields: [{field: 'retrievalContexts', toxicity: toxicity_response.camelize_keys}]
     }.deep_stringify_keys
 
-    post :find_toxicity, params: {retrievalContexts: retrival_contexts, locale: locale}, as: :json
+    post :find_toxicity, params: {retrievalContexts: retrieval_contexts, locale: locale}, as: :json
     assert_response :success
     assert_equal expected_response, json_response
   end
@@ -316,12 +316,12 @@ class AichatControllerTest < ActionController::TestCase
   test 'find_toxicity returns toxicity if detected in both system prompt and retrieval contexts' do
     sign_in(@authorized_student1)
     system_prompt = 'hello system prompt'
-    retrival_contexts = ['retrieval1', 'retrieval2']
+    retrieval_contexts = ['retrieval1', 'retrieval2']
     locale = 'en'
     toxicity_response_system_prompt = {text: system_prompt, blocked_by: 'comprehend', details: {}}
-    toxicity_response_retrieval_contexts = {text: retrival_contexts.join(' '), blocked_by: 'comprehend', details: {}}
+    toxicity_response_retrieval_contexts = {text: retrieval_contexts.join(' '), blocked_by: 'comprehend', details: {}}
     AichatSafetyHelper.expects(:find_toxicity).with('user', system_prompt, locale).returns(toxicity_response_system_prompt)
-    AichatSafetyHelper.expects(:find_toxicity).with('user', retrival_contexts.join(' '), locale).returns(toxicity_response_retrieval_contexts)
+    AichatSafetyHelper.expects(:find_toxicity).with('user', retrieval_contexts.join(' '), locale).returns(toxicity_response_retrieval_contexts)
 
     expected_response = {
       flaggedFields: [
@@ -330,7 +330,7 @@ class AichatControllerTest < ActionController::TestCase
       ]
     }.deep_stringify_keys
 
-    post :find_toxicity, params: {systemPrompt: system_prompt, retrievalContexts: retrival_contexts, locale: locale}, as: :json
+    post :find_toxicity, params: {systemPrompt: system_prompt, retrievalContexts: retrieval_contexts, locale: locale}, as: :json
     assert_response :success
     assert_equal expected_response, json_response
   end
@@ -338,7 +338,7 @@ class AichatControllerTest < ActionController::TestCase
   test 'find_toxicity returns empty flagged fields if no toxicity detected' do
     sign_in(@authorized_student1)
     system_prompt = 'hello system prompt'
-    retrival_contexts = ['retrieval1', 'retrieval2']
+    retrieval_contexts = ['retrieval1', 'retrieval2']
     locale = 'en'
     AichatSafetyHelper.expects(:find_toxicity).twice.returns(nil)
 
@@ -346,7 +346,7 @@ class AichatControllerTest < ActionController::TestCase
       flaggedFields: []
     }.deep_stringify_keys
 
-    post :find_toxicity, params: {systemPrompt: system_prompt, retrievalContexts: retrival_contexts, locale: locale}, as: :json
+    post :find_toxicity, params: {systemPrompt: system_prompt, retrievalContexts: retrieval_contexts, locale: locale}, as: :json
     assert_response :success
     assert_equal expected_response, json_response
   end
