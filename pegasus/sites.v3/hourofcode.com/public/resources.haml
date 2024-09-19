@@ -1,0 +1,56 @@
+---
+layout: wide_index
+---
+
+:ruby
+  @header["title"] = hoc_s("hoc_resources.heading")
+
+%link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
+%link{href: '/css/generated/page/resources.css', rel:'stylesheet', type:'text/css'}
+
+#fullwidth
+  = view :header
+
+  %section.banner.bg-neutral-light
+    .wrapper.centered
+      %h1.no-margin-top
+        =hoc_s("hoc_resources.heading")
+      %p.body-two{style: "max-width: 650px; margin: 0 auto;"}
+        =hoc_s("hoc_resources.desc", markdown: :inline, locals:{how_to_url: resolve_url('/how-to')})
+      = view :"resources/resources_page_nav"
+
+%main
+  -# Handouts
+  %section#handouts
+    .wrapper
+      = view :"resources/resources_handouts"
+
+  -# Stickers
+  %section#stickers.bg-neutral-dark
+    .wrapper
+      = view :"resources/resources_stickers"
+
+  -# Videos
+  %section#videos
+    .wrapper
+      = view :"resources/resources_videos"
+
+  -# Posters
+  %section#posters.bg-neutral-light
+    .wrapper
+      = view :"resources/resources_posters"
+
+  -# Emails
+  %section#emails
+    .wrapper
+      = view :"resources/resources_emails"
+
+  -# Logos
+  %section#logos.bg-neutral-dark
+    .wrapper
+      = view :"resources/resources_logos"
+
+  -# Organized by Code.org
+  = view :organized_by_cdo
+
+= view :swiper_page_resources

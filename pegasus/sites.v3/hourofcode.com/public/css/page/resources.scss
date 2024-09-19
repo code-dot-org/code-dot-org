@@ -1,0 +1,138 @@
+@import 'breakpoints', 'action-blocks', 'video-responsive';
+
+#fullwidth {
+  overflow: hidden;
+  background: var(--neutral_light);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+h3.heading-xl {
+  margin-top: 1rem;
+}
+
+section.banner {
+  padding-top: 2rem;
+}
+
+nav.section-nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @media (max-width: $width-sm) {
+    flex-direction: column;
+  }
+
+  a.link-button {
+    background: var(--neutral_white);
+    border: 2px solid var(--neutral_dark10);
+    border-radius: 4px;
+    color: var(--neutral_dark);
+    padding: 1rem 1rem 0.875rem;
+    text-decoration: none;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    @media (max-width: $width-sm) {
+      width: 100%;
+    }
+
+    i {
+      font-size: 1.5rem;
+      color: var(--brand_primary_default);
+    }
+
+    &:is(:hover, :active) {
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+section#handouts {
+  .action-block {
+    margin-top: 2.5rem;
+  }
+}
+
+section#videos {
+  .video-caption {
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .dance-thumbnail-tile-img {
+    width: 100%;
+  }
+}
+
+section#posters {
+  .poster-wrapper {
+    position: relative;
+    display: inline-block;
+    background-color: #1aadbb;
+    border-radius: 4px;
+  }
+
+  .poster-wrapper .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .poster-wrapper:hover .overlay {
+    opacity: 1;
+
+    &::before {
+      padding: 1rem;
+      border-radius: 4px;
+      background: var(--neutral_white);
+      color: var(--neutral_dark);
+      font: var(--fa-font-solid);
+      content: "\f019";
+      font-size: 1.5rem;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  img {
+    border-radius: 4px;
+  }
+}
+
+section#emails {
+  .action-block {
+    width: 100%;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.logo-guidelines {
+  margin-top: 2rem;
+
+  p {
+    color: var(--neutral_white);
+    font-size: 0.75rem;
+  }
+}
