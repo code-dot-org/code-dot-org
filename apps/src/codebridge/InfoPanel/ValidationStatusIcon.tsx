@@ -8,6 +8,9 @@ interface ValidationIconProps {
   className?: string;
 }
 
+// Component that extracts out the logic for rendering a validation status icon.
+// For any but the 'pending' icon, we use a duotone icon with a white x/check/exclamation mark
+// and a colored circle background. For the 'pending' icon, we use a regular (unfilled) circle icon.
 const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
   status,
   className,
@@ -25,7 +28,7 @@ const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
       case 'pending':
         return classNames(names, 'fa-circle', moduleStyles.green);
       case 'caution':
-        return classNames(names, 'fa-times-circle', moduleStyles.yellow);
+        return classNames(names, 'fa-minus-circle', moduleStyles.yellow);
       case 'error':
         return classNames(names, 'fa-exclamation-circle', moduleStyles.red);
     }
