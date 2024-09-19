@@ -1,4 +1,4 @@
-import {Block, BlockSvg, Field, Generator, Theme, WorkspaceSvg} from 'blockly';
+import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
 import {
   ToolboxItemInfo,
   BlockInfo,
@@ -12,7 +12,6 @@ import {
   processIndividualBlock,
   removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
-import {GeneratorHelperSimple2} from '@cdo/apps/music/blockly/blocks/simple2';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -526,21 +525,11 @@ export function locationField(icon: SVGElement, onClick: () => void) {
 }
 
 // Installs function blocks for all older Blockly labs or Simple2 (Music Lab)
-export function registerCustomProcedureBlocks(isSimple2: boolean) {
+export function registerCustomProcedureBlocks() {
   // Delete both "no return" blocks before redefining them.
   delete Blockly.Blocks['procedures_defnoreturn'];
   delete Blockly.Blocks['procedures_callnoreturn'];
   Blockly.common.defineBlocks(procedureBlocks);
-  if (isSimple2) {
-    // Override the function call generator in Simple2.
-    Blockly.JavaScript.forBlock['procedures_callnoreturn'] = (
-      block: Block,
-      generator: Generator
-    ) => {
-      const funcName = generator.getProcedureName(block.getFieldValue('NAME'));
-      return GeneratorHelperSimple2.getFunctionCall(funcName);
-    };
-  }
 }
 // Installs function blocks for Advanced Music Lab
 export function registerCustomAdvancedProcedureBlocks() {
