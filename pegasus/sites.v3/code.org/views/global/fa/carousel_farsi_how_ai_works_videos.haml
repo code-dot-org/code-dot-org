@@ -1,0 +1,22 @@
+// Should be 9 when done
+- video_ai_index = 2
+
+- video_download_path = ["//videos.code.org/farsi/ai-01-intro-to-ai.mp4", "//videos.code.org/farsi/ai-02-machine-learning.mp4"]
+
+// this is the full list which will be helpful when we add the needed videos
+//- video_caption = [hoc_s(:ai_vid_intro_caption), hoc_s(:ai_vid_mlintro_caption), hoc_s(:ai_vid_trainingdata_caption), hoc_s(:ai_vid_neuralnetworks_caption), hoc_s(:ai_vid_computervision_caption), hoc_s(:ai_vid_chatbots_caption), hoc_s(:ai_vid_creativity_caption), hoc_s(:ai_vid_ethics1_caption), hoc_s(:ai_vid_ethics2_caption)]
+- video_caption = [hoc_s(:ai_vid_mlintro_caption), hoc_s(:ai_vid_trainingdata_caption)]
+
+- video_code = ["2V6zog8MPQo", "p7f8HZqPsPk"]
+
+.carousel-wrapper.video-carousel
+  %swiper-container.how-ai-works{navigation: "true", "navigation-next-el": ".nav-next-how-ai-works", "navigation-prev-el": ".nav-prev-how-ai-works", pagination: "true", init: "false", "allow-touch-move": "false"}
+    - video_ai_index.times do |index|
+      %swiper-slide
+        %figure
+          = view :video_with_fallback, video_code: video_code[index], download_path: video_download_path[index]
+          %figcaption.no-margin-bottom
+            = video_caption[index]
+
+  %button.swiper-nav-prev.nav-prev-how-ai-works
+  %button.swiper-nav-next.nav-next-how-ai-works
