@@ -94,6 +94,11 @@ Style/EmptyMethod:
 Style/FormatStringToken:
   EnforcedStyle: template
 
+Style/InverseMethods:
+  InverseBlocks:
+    :select: null
+    :select!: null
+
 Style/NumericLiterals:
   MinDigits: 7
 
