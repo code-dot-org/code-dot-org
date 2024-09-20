@@ -2,6 +2,11 @@
 @import 'style-constants';
 @import '@cdo/apps/componentLibrary/common/styles/colors.css';
 
+.lessonMaterialsPageHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
 .rowContainer {
   display: flex;
   height: 48px;

@@ -8,6 +8,9 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import ResourceRow from './ResourceRow';
+import UnitResourcesDropdown from './UnitResourcesDropdown';
+
+import styles from './lesson-materials.module.scss';
 
 type Lesson = {
   name: string;
@@ -28,6 +31,8 @@ type Lesson = {
 interface LessonMaterialsData {
   title: string;
   unitNumber: number;
+  scriptOverviewPdfUrl: string;
+  scriptResourcesPdfUrl: string;
   lessons: Lesson[];
 }
 
@@ -103,17 +108,24 @@ const LessonMaterialsContainer: React.FC = () => {
 
   return (
     <div>
-      <SimpleDropdown
-        labelText={i18n.chooseLesson()}
-        isLabelVisible={false}
-        onChange={event => onDropdownChange(event.target.value)}
-        items={lessonOptions}
-        selectedValue={
-          selectedLesson ? selectedLesson.id.toString() : 'no lesson'
-        }
-        name={'lessons-in-assigned-unit-dropdown'}
-        size="s"
-      />
+      <div className={styles.lessonMaterialsPageHeader}>
+        <SimpleDropdown
+          labelText={i18n.chooseLesson()}
+          isLabelVisible={false}
+          onChange={event => onDropdownChange(event.target.value)}
+          items={lessonOptions}
+          selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
+          name={'lessons-in-assigned-unit-dropdown'}
+          size="s"
+        />
+        {loadedData?.unitNumber && (
+          <UnitResourcesDropdown
+            unitNumber={loadedData.unitNumber || 0}
+            scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
+            scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
+          />
+        )}
+      </div>
       {/*  Note that this only goes through Teacher resources - we have separate tickets to make sure that this is presented for all resources */}
       {selectedLesson && (
         <div>

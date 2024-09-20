@@ -985,6 +985,8 @@
   "downloadParentLetter": "Download parent letter",
   "downloadReplayVideoButtonDownload": "Animation",
   "downloadReplayVideoButtonError": "Sorry, we were unable to download your animation. Please try re-running your project and trying again.",
+  "downloadUnitLessonPlans": "Download all lesson plans for Unit {unitNumber}",
+  "downloadUnitHandouts": "Download all handouts for Unit {unitNumber}",
   "dragBlocksToMatch": "Drag the blocks to match",
   "draw": "Draw",
   "dropletBlock_addOperator_description": "Add two numbers",
