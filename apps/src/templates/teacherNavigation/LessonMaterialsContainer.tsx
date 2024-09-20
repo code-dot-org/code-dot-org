@@ -8,6 +8,9 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import TeacherResources from './TeacherResources';
+import UnitResourcesDropdown from './UnitResourcesDropdown';
+
+import styles from './lesson-materials.module.scss';
 
 type Lesson = {
   name: string;
@@ -29,6 +32,8 @@ type Lesson = {
 interface LessonMaterialsData {
   title: string;
   unitNumber: number;
+  scriptOverviewPdfUrl: string;
+  scriptResourcesPdfUrl: string;
   lessons: Lesson[];
 }
 
@@ -72,7 +77,7 @@ const createDisplayName = (lessonName: string, lessonPosition: number) => {
 const LessonMaterialsContainer: React.FC = () => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
   const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
-  const unitNumber = useMemo(() => loadedData?.unitNumber || 0, [loadedData]);
+  const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
 
   const getLessonFromId = (lessonId: number): Lesson | null => {
     return lessons.find(lesson => lesson.id === lessonId) || null;
@@ -104,15 +109,25 @@ const LessonMaterialsContainer: React.FC = () => {
 
   return (
     <div>
-      <SimpleDropdown
-        labelText={i18n.chooseLesson()}
-        isLabelVisible={false}
-        onChange={event => onDropdownChange(event.target.value)}
-        items={lessonOptions}
-        selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
-        name={'lessons-in-assigned-unit-dropdown'}
-        size="s"
-      />
+      <div className={styles.lessonMaterialsPageHeader}>
+        <SimpleDropdown
+          labelText={i18n.chooseLesson()}
+          isLabelVisible={false}
+          onChange={event => onDropdownChange(event.target.value)}
+          items={lessonOptions}
+          selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
+          name={'lessons-in-assigned-unit-dropdown'}
+          size="s"
+        />
+        {loadedData?.unitNumber && (
+          <UnitResourcesDropdown
+            unitNumber={loadedData.unitNumber || 0}
+            scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
+            scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
+          />
+        )}
+      </div>
+      {/*  Note that this only goes through Teacher resources - we have separate tickets to make sure that this is presented for all resources */}
       {selectedLesson && (
         <TeacherResources
           unitNumber={unitNumber}

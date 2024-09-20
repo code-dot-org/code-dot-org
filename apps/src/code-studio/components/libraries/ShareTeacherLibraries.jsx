@@ -9,10 +9,8 @@ import {
   setPersonalProjects,
   updateProjectLibrary,
 } from '@cdo/apps/templates/projects/projectsRedux';
-import {
-  sectionsNameAndId,
-  asyncLoadSectionData,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

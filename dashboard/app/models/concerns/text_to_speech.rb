@@ -241,7 +241,7 @@ module TextToSpeech
 
     tts_upload_to_s3(tts_long_instructions_text, 'long_instructions', context) if tts_should_update_long_instructions?(update_all: update_all)
 
-    if authored_hints && (tts_should_update('authored_hints', update_all))
+    if authored_hints && tts_should_update('authored_hints', update_all)
       hints = JSON.parse(authored_hints)
       hints.each do |hint|
         text = TextToSpeech.sanitize(hint["hint_markdown"])

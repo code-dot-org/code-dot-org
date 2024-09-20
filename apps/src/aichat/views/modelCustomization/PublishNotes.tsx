@@ -68,47 +68,46 @@ const PublishNotes: React.FunctionComponent = () => {
           const {property, label, editTooltip} = data;
           const InputTag = getInputTag(property);
 
+          if (property === 'exampleTopics') {
+            return (
+              <ExampleTopicsInputs
+                key={property}
+                fieldLabel={label}
+                fieldId={property}
+                tooltipText={editTooltip}
+                topics={modelCardInfo.exampleTopics}
+                readOnly={isReadOnly}
+                visibility={visibility}
+              />
+            );
+          }
           return (
-            <>
-              {property === 'exampleTopics' && (
-                <ExampleTopicsInputs
-                  fieldLabel={label}
-                  fieldId={property}
-                  tooltipText={editTooltip}
-                  topics={modelCardInfo.exampleTopics}
-                  readOnly={isReadOnly}
-                  visibility={visibility}
+            <div
+              className={modelCustomizationStyles.inputContainer}
+              key={property}
+            >
+              <FieldLabel
+                label={label}
+                id={property}
+                tooltipText={editTooltip}
+              />
+              {property !== 'isPublished' && (
+                <InputTag
+                  id={property}
+                  type="text"
+                  disabled={isReadOnly}
+                  value={modelCardInfo[property]}
+                  onChange={event =>
+                    dispatch(
+                      setModelCardProperty({
+                        property: property,
+                        value: event.target.value,
+                      })
+                    )
+                  }
                 />
               )}
-              {property !== 'exampleTopics' && (
-                <div
-                  className={modelCustomizationStyles.inputContainer}
-                  key={property}
-                >
-                  <FieldLabel
-                    label={label}
-                    id={property}
-                    tooltipText={editTooltip}
-                  />
-                  {property !== 'isPublished' && (
-                    <InputTag
-                      id={property}
-                      type="text"
-                      disabled={isReadOnly}
-                      value={modelCardInfo[property]}
-                      onChange={event =>
-                        dispatch(
-                          setModelCardProperty({
-                            property: property,
-                            value: event.target.value,
-                          })
-                        )
-                      }
-                    />
-                  )}
-                </div>
-              )}
-            </>
+            </div>
           );
         })}
       </div>

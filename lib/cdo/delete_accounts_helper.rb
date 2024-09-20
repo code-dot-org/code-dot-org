@@ -454,7 +454,7 @@ class DeleteAccountsHelper
     # Cache user email here before destroying user; migrated users have their
     # emails stored in primary_contact_info, which will be destroyed.
     # If the user account was already soft-deleted, then fallback to the :email attribute.
-    user_email = (user.email&.blank?) ? user.read_attribute(:email) : user.email
+    user_email = user.email&.blank? ? user.read_attribute(:email) : user.email
 
     # There is a bug in our system that causes a user to have duplicate
     # authentication options, one active and one soft-deleted.

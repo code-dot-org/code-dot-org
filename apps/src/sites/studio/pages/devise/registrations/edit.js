@@ -147,7 +147,8 @@ $(document).ready(() => {
       isPasswordRequired,
       isGoogleClassroomStudent,
       isCleverStudent,
-      personalAccountLinkingEnabled
+      personalAccountLinkingEnabled,
+      lmsName
     );
   }
 

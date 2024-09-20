@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';

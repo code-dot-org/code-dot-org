@@ -86,7 +86,7 @@ export const LOCAL_STORAGE = 'local';
 export const REMOTE_STORAGE = 'remote';
 
 // Minimum number of measures in a song
-export const MIN_NUM_MEASURES = 30;
+export const MIN_NUM_MEASURES = 40;
 
 export const LEGACY_DEFAULT_LIBRARY = 'default';
 export const DEFAULT_LIBRARY = 'intro2024';

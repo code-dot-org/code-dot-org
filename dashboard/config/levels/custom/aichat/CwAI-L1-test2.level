@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-09-19T18:59:18.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You will be given incomplete sentences. Your task is to finish the sentences with only one to two words. Do not give more than two words to finish the sentence. Only give one completed sentence for the output. Do not output more than one finished sentence. You will be given the same incomplete sentence multiple times and your objective is to provide a different ending each time, making sure to still use no more than two words.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    },
+    "long_instructions": "# Probability Exploration\r\n\r\n## Do This:\r\nType in the same incomplete sentence multiple times to see what word(s) the LLM generates in order to finish the sentence.\r\n\r\n- **The dog chased**\r\n\r\nRecord the LLM responses on your activity guide.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-19T18:59:18.368+00:00\",\"changed\":[\"cloned from \\\"CwAI-L1-test\\\"\"],\"cloned_from\":\"CwAI-L1-test\"},{\"changed_at\":\"2024-09-19 19:01:49 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-19 19:03:45 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-19 19:05:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>
