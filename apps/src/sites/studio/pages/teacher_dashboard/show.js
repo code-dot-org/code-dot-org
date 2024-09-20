@@ -83,8 +83,11 @@ $(document).ready(function () {
 
   // When removing v1TeacherDashboard after v2 launch, remove `selectedSection` from api response.
   const getV1TeacherDashboard = () => {
+    // Removes the trailing part of the current location path that is not needed for the router `basename`.
+    // For example, if the current location path is `/teacher_dashboard/sections/1/progress`,
+    // the router `basename` should be `/teacher_dashboard/sections/1`.
     const baseUrl = window.location.pathname.replace(
-      new RegExp(`(/teacher_dashboard/sections/${section.id}).*`),
+      RegExp(`(/teacher_dashboard/sections/${section.id}).*`),
       '$1'
     );
 
