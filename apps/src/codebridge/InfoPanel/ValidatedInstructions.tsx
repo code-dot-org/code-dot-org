@@ -35,6 +35,7 @@ import {appendSystemMessage} from '../redux/consoleRedux';
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ValidationResults from './ValidationResults';
+import ValidationStatusIcon from './ValidationStatusIcon';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
@@ -279,10 +280,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   }, [showNavigation, validationResults]);
 
-  const validationIcon =
-    hasMetValidation || hasSubmitted
-      ? 'fa-solid fa-circle-check'
-      : 'fa-regular fa-circle';
+  const showPassedIcon = hasMetValidation || hasSubmitted;
 
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
@@ -313,11 +311,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             className={classNames(moduleStyles['bubble-' + theme])}
           >
             <div className={moduleStyles.mainInstructions}>
-              <i
-                className={classNames(
-                  validationIcon,
-                  moduleStyles.validationIcon
-                )}
+              <ValidationStatusIcon
+                status={showPassedIcon ? 'passed' : 'pending'}
+                className={moduleStyles.validationIcon}
               />
               <EnhancedSafeMarkdown
                 markdown={instructionsText}
