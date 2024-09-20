@@ -10,6 +10,15 @@ module Cdo
     end
 
     class << self
+      # Validates a JSON record against a schema for Redshift table compatibility
+      #
+      # @param record [Hash] Hash representation of JSON record.
+      # @param schema [Hash] The schema defining the structure and constraints of the Redshift table.
+      # @param modify_invalid [Boolean] Whether to modify invalid values (e.g., truncate oversized strings) instead of raising an error
+      #
+      # @return [Array<Hash, Boolean>] An array containing the potentially modified record and a boolean indicating if any errors were found
+      #
+      # @raise [ValidationError] If validation fails and modify_invalid is false
       def validate(record, schema, modify_invalid: false)
         errors = []
         validate_required_fields(record, schema, errors)
@@ -77,7 +86,7 @@ module Cdo
 
           if modify_invalid
             truncated_value = truncate_to_byte_length(string_value, field_schema['maxLength'])
-            record[field] = value.is_a?(String) ? truncated_value : JSON.parse(truncated_value)
+            record[field] = value.is_a?(String) ? truncated_value : truncated_value.to_json
             CDO.log.warn("Truncated #{field} to fit Redshift column length")
           end
         end

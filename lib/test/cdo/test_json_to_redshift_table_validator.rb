@@ -97,9 +97,9 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
       "created_at" => "2023-09-03T12:00:00Z",
       "environment" => "production",
       "study" => "example_study",
-      "event" => "login"
+      "event" => "login",
+      "data_string" => "a" * 5000
     }
-    json["data_string"] = "a" * 5000
     assert_raises(Cdo::JSONtoRedshiftTableValidator::ValidationError) do
       Cdo::JSONtoRedshiftTableValidator.validate(json, @schema)
     end
