@@ -2,6 +2,8 @@
 
 .chatWarningModal {
   max-height: calc(95vh - 100px);
+  display: flex;
+  flex-direction: column;
 
   hr {
     margin: 1rem 0;
@@ -20,6 +22,17 @@
       color: $brand_secondary_dark;
     }
   }
+}
+
+.headerContainer {
+  display: flex;
+  height: 40px;
+}
+
+.warningModuleTextContainer {
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
 }
 
 .bottomSection {
