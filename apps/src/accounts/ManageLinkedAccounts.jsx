@@ -4,14 +4,21 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
-import {OAuthProviders} from '@cdo/apps/accounts/constants';
+import {
+  SingleSignOnProviders,
+  LmsLoginTypeNames,
+} from '@cdo/apps/accounts/constants';
 import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import RailsAuthenticityToken from '../lib/util/RailsAuthenticityToken';
 
+import AccountUnlinkWarningModal from './AccountUnlinkWarningModal';
 import BootstrapButton from './BootstrapButton';
 import lockImage from './images/lock.svg';
 
@@ -36,9 +43,9 @@ const DISCONNECT_DISABLED_STATUS = {
 };
 
 const PERSONAL_LOGIN_TYPES = [
-  OAuthProviders.google,
-  OAuthProviders.microsoft,
-  OAuthProviders.facebook,
+  SingleSignOnProviders.google,
+  SingleSignOnProviders.microsoft,
+  SingleSignOnProviders.facebook,
 ];
 
 class ManageLinkedAccounts extends React.Component {
@@ -50,18 +57,19 @@ class ManageLinkedAccounts extends React.Component {
     isCleverStudent: PropTypes.bool.isRequired,
     personalAccountLinkingEnabled: PropTypes.bool.isRequired,
     usStateCode: PropTypes.string,
+    lmsName: PropTypes.string,
   };
 
   cannotDisconnectGoogle = authOption => {
     return (
-      authOption.credentialType === OAuthProviders.google &&
+      authOption.credentialType === SingleSignOnProviders.google &&
       this.props.isGoogleClassroomStudent
     );
   };
 
   cannotDisconnectClever = authOption => {
     return (
-      authOption.credentialType === OAuthProviders.clever &&
+      authOption.credentialType === SingleSignOnProviders.clever &&
       this.props.isCleverStudent
     );
   };
@@ -126,14 +134,16 @@ class ManageLinkedAccounts extends React.Component {
 
   getDisplayName = provider => {
     switch (provider) {
-      case OAuthProviders.google:
+      case SingleSignOnProviders.google:
         return i18n.manageLinkedAccounts_google_oauth2();
-      case OAuthProviders.microsoft:
+      case SingleSignOnProviders.microsoft:
         return i18n.manageLinkedAccounts_microsoft();
-      case OAuthProviders.clever:
+      case SingleSignOnProviders.clever:
         return i18n.manageLinkedAccounts_clever();
-      case OAuthProviders.facebook:
+      case SingleSignOnProviders.facebook:
         return i18n.manageLinkedAccounts_facebook();
+      case SingleSignOnProviders.lti_v1:
+        return LmsLoginTypeNames[this.props.lmsName];
     }
   };
 
@@ -158,7 +168,14 @@ class ManageLinkedAccounts extends React.Component {
     const optionsByProvider = _.groupBy(allOptions, 'credentialType');
 
     let formattedOptions = [];
-    Object.values(OAuthProviders).forEach(provider => {
+    Object.values(SingleSignOnProviders).forEach(provider => {
+      if (
+        provider === SingleSignOnProviders.lti_v1 &&
+        (!optionsByProvider[provider] ||
+          !experiments.isEnabled(experiments.LTI_ACCOUNT_UNLINKING))
+      ) {
+        return;
+      }
       const providerOptions = optionsByProvider[provider] || [
         this.emptyAuthOption(provider),
       ];
@@ -264,9 +281,16 @@ export default connect(state => ({
   personalAccountLinkingEnabled:
     state.manageLinkedAccounts.personalAccountLinkingEnabled,
   usStateCode: state.currentUser.usStateCode,
+  lmsName: state.manageLinkedAccounts.lmsName,
 }))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showUnlinkWarning: false,
+    };
+  }
   static propTypes = {
     displayName: PropTypes.string.isRequired,
     id: PropTypes.number,
@@ -288,6 +312,10 @@ class OauthConnection extends React.Component {
       default:
         return null;
     }
+  };
+
+  setShowUnlinkWarning = showUnlinkWarning => {
+    this.setState({showUnlinkWarning});
   };
 
   render() {
@@ -319,6 +347,18 @@ class OauthConnection extends React.Component {
       disabledMessage = this.getDisabledTooltip();
     }
 
+    const onClick = event => {
+      if (credentialType === SingleSignOnProviders.lti_v1) {
+        event.preventDefault();
+        this.setShowUnlinkWarning(true);
+        analyticsReporter.sendEvent(
+          EVENTS.LTI_UNLINK_MODAL_SHOWN,
+          {lms_name: displayName},
+          PLATFORMS.STATSIG
+        );
+      }
+    };
+
     return (
       <tr>
         <td style={cellStyles}>{displayName}</td>
@@ -344,6 +384,7 @@ class OauthConnection extends React.Component {
                 style={styles.button}
                 text={buttonText}
                 disabled={!!disabledMessage}
+                onClick={onClick}
               />
               <RailsAuthenticityToken />
             </form>
@@ -358,6 +399,12 @@ class OauthConnection extends React.Component {
               </ReactTooltip>
             )}
           </div>
+          <AccountUnlinkWarningModal
+            isOpen={this.state.showUnlinkWarning}
+            onClose={() => this.setShowUnlinkWarning(false)}
+            lmsName={displayName}
+            authOptionId={id}
+          />
           {error && <span style={styles.error}>{error}</span>}
         </td>
       </tr>
