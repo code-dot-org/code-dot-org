@@ -11,11 +11,120 @@
     "long_instructions": "(CHOICE 1)\r\n\r\n\r\n####🛠️Customize this code!\r\n\r\nSimplify by replacing some of this code with a loop.",
     "hide_share_and_remix": "false",
     "level_data": {
-      "library": "launch2024"
+      "library": "launch2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "fields": {
+                          "sound": "will_i_am_i_like_to_move_it/vocals_chorus_2"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "cV8.to(SSlvqT,KIH~PB",
+                            "fields": {
+                              "sound": "will_i_am_i_like_to_move_it/drums_main_beat"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "4sUbR:3:@ef.V+HWtThE",
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "Bo`=k4m:j@.A`p4!0K~l",
+                            "fields": {
+                              "sound": "will_i_am_i_like_to_move_it/vocals_chorus_2"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": ":,,?b0DD*ez_kJ+HADUW",
+                                "fields": {
+                                  "sound": "will_i_am_i_like_to_move_it/drums_main_beat"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "4LWv{%#!_[~DY-z@:-b9",
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "yA0#UaF:{JC5x-_zE^!]",
+                                "fields": {
+                                  "sound": "will_i_am_i_like_to_move_it/vocals_chorus_2"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "9q?Ki2O]@9O_9mxZ(oAt",
+                                    "fields": {
+                                      "sound": "will_i_am_i_like_to_move_it/drums_main_beat"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Functions": [
+
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2"
+          ]
+        }
+      }
     },
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Look for patterns! Do you see the code that is repeating? \\n\\nYou can put that into a loop to make your code shorter. \",\"hint_id\":\"patterns\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4874718a382e8858413b47666d0fa39e/music-intro-coding-loops-make-sound-loop.mp3\"}]",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-29 19:51:50 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:05:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 19:53:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:22:26 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29 19:51:50 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:05:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 19:53:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:22:26 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 20:36:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 20:37:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 20:38:09 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

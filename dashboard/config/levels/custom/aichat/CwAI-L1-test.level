@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-09-19T18:44:30.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "you will be given incomplete sentences. your task is to finish the sentences with only one to two words. do not give more than two words to finish the sentence. only give one completed sentence for the output. do not output more than one finished sentence. if given the incomplete sentence a second time, provide a different ending still using only no more than two words.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    },
+    "long_instructions": "# Predict the Next Word\r\n\r\n## Do This:\r\nType in the incomplete sentences below, one at a time, to see what word(s) the LLM generates in order to finish the sentence.\r\n\r\n- **The sun is**\r\n- **She quickly grabbed the**\r\n- **The cat jumped over the**\r\n- **He opened the**\r\n- **The weather today is**\r\n\r\nRecord the LLM responses on your activity guide.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-19 18:44:37 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-19 18:50:42 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-19 18:53:08 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-19 18:54:13 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-19 18:58:57 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>
