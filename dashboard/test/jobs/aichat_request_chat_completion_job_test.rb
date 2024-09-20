@@ -17,6 +17,8 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
         }
       }
     }
+
+    AichatSafetyHelper.stubs(:find_toxicity).returns(nil)
   end
 
   test 'execution status is set to QUEUED before perform' do
