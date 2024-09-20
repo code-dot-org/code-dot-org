@@ -7,6 +7,7 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
+import StudentResources from './StudentResources';
 import TeacherResources from './TeacherResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
@@ -19,6 +20,14 @@ type Lesson = {
   lessonPlanHtmlUrl: string;
   resources: {
     Teacher: {
+      key: string;
+      name: string;
+      url: string;
+      downloadUrl: string | null;
+      audience: string;
+      type: string;
+    }[];
+    Student: {
       key: string;
       name: string;
       url: string;
@@ -127,14 +136,20 @@ const LessonMaterialsContainer: React.FC = () => {
           />
         )}
       </div>
-      {/*  Note that this only goes through Teacher resources - we have separate tickets to make sure that this is presented for all resources */}
       {selectedLesson && (
-        <TeacherResources
-          unitNumber={unitNumber}
-          lessonNumber={selectedLesson.position}
-          resources={selectedLesson.resources.Teacher}
-          lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
-        />
+        <div>
+          <TeacherResources
+            unitNumber={unitNumber}
+            lessonNumber={selectedLesson.position}
+            resources={selectedLesson.resources.Teacher}
+            lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
+          />
+          <StudentResources
+            unitNumber={unitNumber}
+            lessonNumber={selectedLesson.position}
+            resources={selectedLesson.resources.Student}
+          />
+        </div>
       )}
     </div>
   );
