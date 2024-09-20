@@ -1,0 +1,28 @@
+name 'SP-PL-DS-Python_Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# HTML Overview
+
+## What is Python?
+
+#### Python is a versatile programming language known for its simplicity and readability, making it ideal for beginners and experts alike. It supports multiple programming paradigms and is widely used in areas such as web development, **data analysis**, artificial intelligence, and automation.
+
+
+## Python VS Java 
+
+#### You may have experience coding in different languages like Java or JavaScript. Though the logic is similar to other languages, Python's syntax is is simpler and more concise.
+
+#### **Check out these examples:** 
+
+
+<img src="https://images.code.org/51137721d45758df431d592930a9b10a-image-1726778843465.png" alt="table of syntax comparisons for python and java" width="500px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+
+
+
+
+MARKDOWN
