@@ -1703,7 +1703,7 @@ ActiveRecord::Schema.define(version: 2024_09_20_175046) do
     t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
   end
 
-  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.integer "storage_id"
     t.text "value", size: :medium
     t.datetime "updated_at", null: false
