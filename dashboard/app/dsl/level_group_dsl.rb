@@ -91,12 +91,17 @@ class LevelGroupDSL < LevelDSL
     @hash[:anonymous] = text
   end
 
+  def activity_guide_level(text)
+    @hash[:activity_guide_level] = text
+  end
+
   def self.serialize(level)
     properties = level.properties
     new_dsl = "name '#{level.name}'"
     new_dsl << "\ntitle '#{properties['title'].gsub("'", %q(\\\'))}'" if properties['title']
     new_dsl << "\nsubmittable '#{properties['submittable']}'" if properties['submittable']
     new_dsl << "\nanonymous '#{properties['anonymous']}'" if properties['anonymous']
+    new_dsl << "\nactivity_guide_level '#{properties['activity_guide_level']}'" if properties['activity_guide_level']
 
     level.pages.each do |page|
       new_dsl << "\n\npage"

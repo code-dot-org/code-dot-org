@@ -163,6 +163,7 @@ class User < ApplicationRecord
     lms_landing_opted_out
     failed_attempts
     locked_at
+    has_seen_ai_assessments_announcement
   )
 
   attr_accessor(
@@ -297,8 +298,6 @@ class User < ApplicationRecord
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
-
-  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
 
   before_destroy :soft_delete_channels
 
@@ -550,7 +549,7 @@ class User < ApplicationRecord
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
+  defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -961,6 +960,7 @@ class User < ApplicationRecord
   # address associated with them because it wasn't required when they were
   # created. Those old accounts are allowed to skip the email validation.
   def teacher_email_required?
+    return false if Policies::Lti.lti? self
     # non-teachers are not relevant to this method.
     return false unless teacher? && purged_at.nil?
 
@@ -975,12 +975,12 @@ class User < ApplicationRecord
   end
 
   def email_or_hashed_email_required?
+    return false if Policies::Lti.lti? self
     return true if teacher?
     return false if manual?
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
-    return false if Policies::Lti.lti? self
     true
   end
 
@@ -1548,6 +1548,19 @@ class User < ApplicationRecord
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 
+  def teacher_can_access_ai_chat?
+    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
+  end
+
+  def student_can_access_ai_chat?
+    teachers.any?(&:teacher_can_access_ai_chat?) &&
+      sections_as_student.any?(&:assigned_gen_ai?)
+  end
+
+  def has_aichat_access?
+    teacher_can_access_ai_chat? || student_can_access_ai_chat?
+  end
+
   # Students
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
@@ -1623,7 +1636,7 @@ class User < ApplicationRecord
 
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
+    return if name.blank? || name.utf8mb4? || email&.utf8mb4?
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 

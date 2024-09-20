@@ -11,6 +11,14 @@ class ApplicationJobTest < ActiveJob::TestCase
     end
   end
 
+  test 'includes ActiveJobMetrics' do
+    assert_includes ApplicationJob.ancestors, ActiveJobMetrics
+  end
+
+  test 'includes ActiveJobReporting' do
+    assert_includes ApplicationJob.ancestors, ActiveJobReporting
+  end
+
   test 'enqueued jobs log PendingJobCount FailedJobCount WaitTime ExecutionTime and TotalTime' do
     expected_failed_count = 5
     expected_pending_count = 3

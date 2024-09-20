@@ -1,5 +1,4 @@
 import {
-  Clock,
   Filter,
   GrainPlayer,
   PingPongDelay,
@@ -43,14 +42,14 @@ class ToneJSPlayer implements AudioPlayer {
   private activePlayers: Source<SourceOptions>[];
   private currentPreview: {
     url: string;
-    player: Source<SourceOptions>;
+    player?: Source<SourceOptions>;
   } | null;
   private effectBusses: {[key: string]: ToneAudioNode};
   private registeredCallbacks: {
     [event in PlayerEvent]?: ((payload?: string) => void)[];
   };
   private loadingInstruments: {[instrumentName: string]: boolean};
-  private currentSequencePreviewClock: Clock | null;
+  private currentSequencePreviewTimer: NodeJS.Timeout | null;
 
   constructor(
     bpm = DEFAULT_BPM,
@@ -64,7 +63,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.effectBusses = {};
     this.registeredCallbacks = {};
     this.loadingInstruments = {};
-    this.currentSequencePreviewClock = null;
+    this.currentSequencePreviewTimer = null;
     this.generateEffectBusses();
   }
 
@@ -161,11 +160,20 @@ class ToneJSPlayer implements AudioPlayer {
     await this.startContextIfNeeded();
     this.cancelPreviews();
 
+    this.currentPreview = {url: sample.sampleUrl};
+
     const buffer = await this.soundCache.loadSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
         'Could not load sound which should have been in cache: ' +
           sample.sampleUrl
+      );
+      return;
+    }
+
+    if (this.currentPreview?.url !== sample.sampleUrl) {
+      console.log(
+        `Sample preview ${sample.sampleUrl} playback canceled after load but before play.`
       );
       return;
     }
@@ -191,7 +199,7 @@ class ToneJSPlayer implements AudioPlayer {
     };
 
     player.start();
-    this.currentPreview = {url: sample.sampleUrl, player};
+    this.currentPreview.player = player;
   }
 
   async playSamplesImmediately() {
@@ -202,6 +210,7 @@ class ToneJSPlayer implements AudioPlayer {
 
   async playSequenceImmediately(
     {instrument, events}: SamplerSequence,
+    length: number,
     onTick?: (tick: number) => void,
     onStop?: () => void
   ) {
@@ -225,29 +234,26 @@ class ToneJSPlayer implements AudioPlayer {
       );
     });
 
-    // Create a clock that ticks forward every 16th note, and stops when the sequence finishes.
-    // We can assume the sequence will finish one 16th note after the last sample starts.
-    const clockEnd = lastSampleStart + Transport.toSeconds('16n');
+    // Play every tick (quarter note) of the sequence.
     let tick = 1;
-    const clock = new Clock(() => {
-      onTick?.(tick++);
-    }, Transport.toFrequency('16n'))
-      .on('stop', () => {
-        this.currentSequencePreviewClock = null;
+    this.currentSequencePreviewTimer = setInterval(() => {
+      if (tick <= length * 4 * 4) {
+        onTick?.(tick++);
+      } else {
+        if (this.currentSequencePreviewTimer) {
+          clearInterval(this.currentSequencePreviewTimer);
+        }
         onStop?.();
-      })
-      .start()
-      .stop(`+${clockEnd}`);
-    this.currentSequencePreviewClock = clock;
+      }
+    }, Transport.toSeconds('16n') * 1000);
   }
 
   cancelPreviews() {
-    if (this.currentPreview) {
-      this.currentPreview.player.stop();
-    }
+    this.currentPreview?.player?.stop();
 
-    if (this.currentSequencePreviewClock) {
-      this.currentSequencePreviewClock.stop();
+    if (this.currentSequencePreviewTimer) {
+      clearInterval(this.currentSequencePreviewTimer);
+      this.currentSequencePreviewTimer = null;
     }
 
     this.stopAllSamplers();

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
 import {studentLevelProgressType} from '../progress/progressTypes';

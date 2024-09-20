@@ -1,6 +1,5 @@
 <ExternalLink>
   <config><![CDATA[{
-  "published": true,
   "game_id": 55,
   "created_at": "2023-08-02T16:25:07.000Z",
   "level_num": "custom",
@@ -12,8 +11,10 @@
     "bubble_choice_description": "The BinaryBazaar has some issues! When users add products to the cart, the total doesn't update to show the correct total for the items in the cart. And that's not all! When users click the **Remove from Cart** button, the items are not removed from the cart.",
     "link_title": "BinaryBazaar App",
     "url": "https://github.com/code-dot-org/csa-se-lesson3b",
-    "thumbnail_url": "https://images.code.org/bdb2162815eede0856636af488ff7117-binarybazaar.gif"
+    "thumbnail_url": "https://images.code.org/bdb2162815eede0856636af488ff7117-binarybazaar.gif",
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2023-08-02T16:25:07.988+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L3-L1a\\\"\"],\"cloned_from\":\"CSA-SE-L3-L1a\"},{\"changed_at\":\"2023-08-02 16:26:27 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"link_title\",\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-09-07 16:55:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </ExternalLink>

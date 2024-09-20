@@ -1,0 +1,26 @@
+name 'sp-pl-DS-PizzaChoice'
+title 'Check for Understanding'
+
+
+markdown <<MARKDOWN
+#Check for Understanding
+
+> #### In this check for understading level, students will practice cleaning data in CODAP. 
+
+#### Data scientist ***clean*** data by: 
+- #### Fixing errors (i.e. misspeslled words)
+- #### Creating categories (i.e. "other")
+- #### Deleting unnecessary data 
+---
+###At the following link:
+
+###[CODAP - Pizza Choice](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FdWwulootxTIlVBkHuHWu%2Ffile.json)
+
+####For each response, decide if you want to:
+- ####Keep it the same
+- ####Delete it
+- ####Change it
+####Put your cleaned data in the second column--and graph it!
+
+![](https://images.code.org/6c462ee743bd36e5570e7467da253e03-image-1721315101092.png)
+MARKDOWN

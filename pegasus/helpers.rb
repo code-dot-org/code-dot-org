@@ -16,14 +16,6 @@ def avatar_image(name, width = 320, square_photo: false)
   "/images/#{dimensions}/avatars/#{File.basename(path)}"
 end
 
-def authentication_required!(url = request.url)
-  dont_cache
-  # rubocop:disable CustomCops/DashboardDbUsage
-  return if dashboard_user_helper
-  # rubocop:enable CustomCops/DashboardDbUsage
-  redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?user_return_to=#{url}"), 302)
-end
-
 def dont_cache
   cache_control(:private, :must_revalidate, max_age: 0)
 end

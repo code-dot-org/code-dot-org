@@ -11,6 +11,7 @@ export abstract class Validator {
   abstract checkConditions(): void;
   abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
+  abstract getValidationResults(): ValidationResult[] | undefined;
 }
 
 // The current progress validation state.
@@ -19,7 +20,22 @@ export interface ValidationState {
   satisfied: boolean;
   message: string | null;
   index: number;
+  validationResults?: ValidationResult[];
 }
+
+export interface ValidationResult {
+  message: string;
+  result: TestStatus;
+}
+
+// Test results for upper-grade labs (labs that use levelbuilder-written unit tests for validation)
+export type TestStatus =
+  | 'PASS'
+  | 'FAIL'
+  | 'SKIP'
+  | 'ERROR'
+  | 'EXPECTED_FAILURE'
+  | 'UNEXPECTED_SUCCESS';
 
 export const getInitialValidationState: () => ValidationState = () => ({
   hasConditions: false,
@@ -83,6 +99,8 @@ export default class ProgressManager {
       }
 
       if (validation.conditions) {
+        this.currentValidationState.validationResults =
+          this.validator.getValidationResults();
         // Ask the lab-specific validator if this validation's
         // conditions are met.
         if (this.validator.conditionsMet(validation.conditions)) {

@@ -1,7 +1,6 @@
 ---
 title: Exemplo de resolução em apoio à Semana da Educação em Ciência da Computação e à Hora do Código
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -12,10 +11,10 @@ nav: promote_nav
 
 * * *
 
-#### **RESOLUÇÃO**  
+#### **RESOLUÇÃO**
 
 
-#### Apoio às metas e ideais da "Semana da educação em ciência da computação" 
+#### Apoio às metas e ideais da "Semana da educação em ciência da computação"
 
 Considerando que a Semana da educação em ciência da computação destaca o papel crítico que a ciência da computação desempenha na transformação da nossa sociedade e como essa ciência permite a inovação e gera oportunidades econômicas;
 

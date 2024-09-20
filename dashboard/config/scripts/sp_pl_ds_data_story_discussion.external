@@ -1,0 +1,29 @@
+name 'sp-pl-DS_Data-Story-Discussion'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data Story Discussions 
+
+
+#### Press the students to come up with attributes for the cards that go beyond the obvious. Students might be tempted to find one attribute and stop; however, as seen in the previous level, there are often many different possibilities. Some ideas to explore for those students who might be creatively blocked on this portion of the assignment include:
+
+<img src="https://images.code.org/30324d1cca2f20892c83ee266928fe7a-image-1724344262004.png
+" alt="cat from the pixel activity" width="180px" style="border-radius:20px; float:right; margin: 0 0 40px 40px;">
+
+<br>
+
+- #### Cards based on favorite genres of music (country, musicals, jazz, R&B, rock, and hip hop)
+- #### Cards based on the time of day during which music is most often streamed
+- #### Cards based on how many different languages are present in the songs being streamed
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "><strong>Teacher Tip:</strong> <b><i>Extension Activity:</i></b> Have students create a card themselves in Google Slides. They could use an AI art generator, if they have access to one, to create a cover image for the card, similar to how Spotify’s cards are laid out. <br> Printing these and hanging them on the wall could make an engaging anchor chart to reinforce how data can be used to tell interesting and insightful stories about people.
+</p>
+</div>
+
+
+MARKDOWN

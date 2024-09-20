@@ -3390,9 +3390,6 @@ button.button-active-no-border:active {
   // an active button. (overriding button:active rule above)
   border: none !important;
 }
-button:hover {
-  @include box-shadow(2px 2px 5px $shadow);
-}
 button.disabled, button[disabled=disabled] {
   border: 1px solid $lighter_gray;
   background-color: $lighter_gray;

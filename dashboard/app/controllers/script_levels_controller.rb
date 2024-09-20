@@ -85,7 +85,6 @@ class ScriptLevelsController < ApplicationController
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
       if Unit.family_names.include?(params[:script_id])
-        session[:show_unversioned_redirect_warning] = true unless new_script.is_course
         Unit.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
       end
 
@@ -98,9 +97,6 @@ class ScriptLevelsController < ApplicationController
       redirect_to new_path
       return
     end
-
-    @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning]
-    session[:show_unversioned_redirect_warning] = false
 
     # will be true if the user is in any unarchived section where tts autoplay is enabled
     @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
@@ -189,7 +185,8 @@ class ScriptLevelsController < ApplicationController
     @body_classes = @level.properties['background']
 
     @rubric = @script_level.lesson.rubric
-    if @rubric
+    ai_rubrics_enabled_for_user = @view_as_user&.verified_teacher? || @view_as_user&.teachers&.any?(&:verified_teacher?)
+    if @rubric && ai_rubrics_enabled_for_user
       @rubric_data = {rubric: @rubric.summarize}
       if @script_level.lesson.rubric && view_as_other
         viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)

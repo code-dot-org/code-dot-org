@@ -9,14 +9,222 @@
     "encrypted": "false",
     "tts_short_instructions_override": "#Check out this code! \r\nThis is an example of a completed coding project that plays a familiar song. \r\n\r\nClick “Run” to play ______ and notice what happens.",
     "instructions_important": "false",
-    "long_instructions": "#Check out this code! \r\nThis is an example of a completed coding project that plays a familiar song. \r\n\r\nClick “Run” to play ______ and notice what happens.",
+    "long_instructions": "#Check out this code! \r\nThis is an example of part of the song \"Espresso\" by Sabrina Carpenter.  \r\n\r\nClick “Run” to play the music and notice what happens.",
     "hide_share_and_remix": "false",
     "level_data": {
-      "library": "intro2024"
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_espresso",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 34,
+              "y": 34,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "fields": {
+                          "sound": "sabrina_carpenter_espresso/guitar_intro"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "play_sound_at_current_location_simple2",
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/drums_intro"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "play_sound_at_current_location_simple2",
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/bass_intro"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "play_sounds_together",
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "play_sound_at_current_location_simple2",
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "play_sound_at_current_location_simple2",
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "play_sound_at_current_location_simple2",
+                                    "fields": {
+                                      "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "play_sound_at_current_location_simple2",
+                                        "fields": {
+                                          "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "play_sound_at_current_location_simple2",
+                                            "fields": {
+                                              "sound": "sabrina_carpenter_espresso/bass_main"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "play_sounds_together",
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "play_sound_at_current_location_simple2",
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "play_sound_at_current_location_simple2",
+                                    "fields": {
+                                      "sound": "sabrina_carpenter_espresso/vocals_chorus_backgrounds"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "play_sound_at_current_location_simple2",
+                                        "fields": {
+                                          "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "play_sound_at_current_location_simple2",
+                                            "fields": {
+                                              "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "play_sound_at_current_location_simple2",
+                                                "fields": {
+                                                  "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "play_sound_at_current_location_simple2",
+                                                    "fields": {
+                                                      "sound": "sabrina_carpenter_espresso/bass_main"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "triggered_at_block": {
+        "type": "triggered_at_simple2",
+        "id": "triggered_at_simple2",
+        "x": 290,
+        "y": 50,
+        "fields": {
+          "trigger": "trigger1",
+          "trigger_start": "immediately"
+        },
+        "next": {
+          "block": {
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "fields": {
+              "sound": "sabrina_carpenter_espresso/vocals_now_hes"
+            }
+          }
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Control": [
+            "play_sounds_together"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        }
+      }
     },
+    "validations": [
+      {
+        "key": "music-ai-tinker_581626cc-a49b-47fd-802b-9b085e6adbff",
+        "message": "This is checking how many different sounds have been played. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": "4"
+          }
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-15T22:31:17.682+00:00\",\"changed\":[\"cloned from \\\"tinker-musiclab-hoc\\\"\"],\"cloned_from\":\"tinker-musiclab-hoc\"},{\"changed_at\":\"2024-08-15 22:31:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 17:51:48 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 17:53:05 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 17:56:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 18:17:47 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-15T22:31:17.682+00:00\",\"changed\":[\"cloned from \\\"tinker-musiclab-hoc\\\"\"],\"cloned_from\":\"tinker-musiclab-hoc\"},{\"changed_at\":\"2024-08-15 22:31:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 17:51:48 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 17:53:05 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 17:56:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 18:17:47 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-27 19:02:08 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-30 17:49:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-30 17:52:35 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-30 17:55:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-30 19:11:49 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-30 19:18:05 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-31 21:27:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 15:06:01 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 17:30:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 17:34:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 17:35:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 19:59:55 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 20:07:28 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 20:46:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 20:47:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 20:47:58 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 20:58:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 21:00:08 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 21:00:39 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 21:05:12 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 21:06:53 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-03 21:08:08 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -15,6 +15,7 @@ const BorderedCallToAction = ({
   buttonUrl,
   buttonClass,
   buttonColor,
+  buttonDisabled = false,
   onClick,
   solidBorder,
 }) => {
@@ -39,6 +40,7 @@ const BorderedCallToAction = ({
         text={buttonText}
         href={buttonUrl}
         useAsLink={!!buttonUrl}
+        disabled={buttonDisabled}
       />
     </div>
   );
@@ -55,6 +57,7 @@ BorderedCallToAction.propTypes = {
   buttonColor: PropTypes.string,
   onClick: PropTypes.func,
   solidBorder: PropTypes.bool,
+  buttonDisabled: PropTypes.bool,
 };
 
 export default BorderedCallToAction;

@@ -124,6 +124,8 @@
  * @property {boolean} isLastLevelInLesson
  * @property {boolean} isLastLevelInScript
  * @property {boolean} showEndOfLessonMsgs
+ * @property {boolean} anonymous
+ * @property {boolean} activity_guide_level
  */
 
 /**

@@ -1,7 +1,6 @@
 ---
 title: Bilgisayar Bilimleri Haftası ve Hour of Code Kararname Örneği
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -12,7 +11,7 @@ nav: promote_nav
 
 * * *
 
-#### **KARAR**  
+#### **KARAR**
 
 
 #### "Bilgisayar bilim eğitim haftası" nın hedeflerini ve ideallerini destekleme

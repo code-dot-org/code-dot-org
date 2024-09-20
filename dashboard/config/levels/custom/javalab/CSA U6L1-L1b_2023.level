@@ -60,7 +60,8 @@
     },
     "display_name": "Keyword Analysis",
     "bubble_choice_description": "An example project that identifies the most frequent words used in a song to determine its main ideas.",
-    "thumbnail_url": "https://images.code.org/6bd2f044accf80f823532afd2206792f-image-1638478918432.png"
+    "thumbnail_url": "https://images.code.org/6bd2f044accf80f823532afd2206792f-image-1638478918432.png",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-03T13:42:09.605+00:00\",\"changed\":[\"cloned from \\\"CSA U6L1-L1a_2023\\\"\"],\"cloned_from\":\"CSA U6L1-L1a_2023\"},{\"changed_at\":\"2023-04-03 13:42:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 14:40:13 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 14:49:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 14:49:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 14:49:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 14:52:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 15:05:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-01-25 15:22:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

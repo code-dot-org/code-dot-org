@@ -35,7 +35,6 @@
   # https://aws.amazon.com/blogs/database/monitoring-best-practices-with-amazon-elasticache-for-redis-using-amazon-cloudwatch/
   SessionStoreCPUUsageAlarm:
     Type: AWS::CloudWatch::Alarm
-    DependsOn: SessionStoreGroup
     Properties:
       AlarmName: <%="Redis Session Store CPU Usage Too High (#{stack_name})" %>
       AlarmDescription: AWS Documentation recommends maintaining
@@ -70,45 +69,30 @@
 <% end -%>
   SessionStoreEvictionsAlarm:
     Type: AWS::CloudWatch::Alarm
-    DependsOn: SessionStoreGroup
     Properties:
       AlarmName: <%="Redis Session Store High Eviction Rate (#{stack_name})" %>
       AlarmDescription: We're seeing a lot of evictions from the Redis session store.
         A steady amount of evictions is not a bad thing, but a rapid increase in
-        eviction rate could be a sign of other instability. Note that the
-        current limit is aribtrary and speculative; we should adjust it once we
-        have enough data to understand our normal operating eviction rate.
+        eviction rate could be a sign of other instability.
       ActionsEnabled: true
       AlarmActions:
         - !Ref InfraLowPriority
+      MetricName: Evictions
+      Namespace: AWS/ElastiCache
+      Statistic: Maximum
+      Dimensions:
+        - Name: CacheClusterId
+          Value: !Sub "${SessionStoreGroup}-001"
+      Period: 300
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
       # TODO infra: update this threshold and upgrade the alarm to Urgent once
-      # we've collected enough data to make a reasonable estimate of this.
-      Threshold: 5000
+      # we've confirmed that this threshold and implementation are practical.
+      Threshold: 10000
       ComparisonOperator: GreaterThanThreshold
       TreatMissingData: missing
-      Metrics:
-        - Id: max_evictions
-          Label: Maximum Evictions Among Redis Session Store NOdes
-          ReturnData: true
-          Expression: MAX(METRICS())
-<% (1..num_cache_clusters).each do |cluster_id| -%>
-        - Id: <%= "evictions_#{cluster_id}" %>
-          ReturnData: false
-          MetricStat:
-            Metric:
-              Namespace: AWS/ElastiCache
-              MetricName: Evictions
-              Dimensions:
-                - Name: CacheClusterId
-                  Value: !Sub "${SessionStoreGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
-            Period: 60
-            Stat: Maximum
-<% end -%>
   SessionStoreNetworkBytesInAlarm:
     Type: AWS::CloudWatch::Alarm
-    DependsOn: SessionStoreGroup
     Properties:
       AlarmName: <%="Redis Session Store Incoming Network Traffic Too High (#{stack_name})" %>
       AlarmDescription:
@@ -144,7 +128,6 @@
 <% end -%>
   SessionStoreNetworkBytesOutAlarm:
     Type: AWS::CloudWatch::Alarm
-    DependsOn: SessionStoreGroup
     Properties:
       AlarmName: <%="Redis Session Store Outgoing Network Traffic Too High (#{stack_name})" %>
       AlarmDescription:

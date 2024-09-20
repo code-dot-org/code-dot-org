@@ -19,6 +19,7 @@ import {
   SET_TEMPERATURE_STEP,
 } from './constants';
 import FieldLabel from './FieldLabel';
+import SaveChangesAlerts from './SaveChangesAlerts';
 import UpdateButton from './UpdateButton';
 import {isVisible, isDisabled, isEditable} from './utils';
 
@@ -151,7 +152,7 @@ const SetupCustomization: React.FunctionComponent = () => {
                 dispatch(
                   setAiCustomizationProperty({
                     property: 'temperature',
-                    value: event.target.value,
+                    value: parseFloat(event.target.value),
                   })
                 )
               }
@@ -166,6 +167,7 @@ const SetupCustomization: React.FunctionComponent = () => {
               tooltipText="The system prompt controls how the chatbot behaves. Type your instructions into the text box."
             />
             <textarea
+              className={styles.systemPromptInput}
               id="system-prompt"
               value={aiCustomizations.systemPrompt}
               disabled={isDisabled(systemPrompt) || readOnlyWorkspace}
@@ -184,6 +186,7 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.footerButtonContainer}>
         <UpdateButton isDisabledDefault={allFieldsDisabled} />
       </div>
+      <SaveChangesAlerts isReadOnly={allFieldsDisabled} />
     </div>
   );
 };

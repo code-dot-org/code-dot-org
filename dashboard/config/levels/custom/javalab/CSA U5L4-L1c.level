@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-09-22T14:17:31.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Import `ImageEffect.java` from your **Backpack**.\r\n\r\nCreate a new class called `ColorEditor`.\r\n\r\n* Import `org.code.theater.*;`, `org.code.media.*`;, and `java.io.FileNotFoundException;`\r\n\r\n* A `ColorEditor` is an `Image` with one or more colors (red, green, or blue) modified.\r\n\r\n* A `ColorEditor` has a 2D `Pixel` array called `imagePixels`.\r\n\r\n* The constructor takes a `String filename` as a parameter and `throws FileNotFoundException`. Call `super()` with the `filename` and initialize `imagePixels` to the 2D `Pixel` array returned from the call to `ImageEffect.getPixels(this)`.\r\n\r\n* Write the `removeBlue()` method using an enhanced `for` loop and `setBlue()` to set the blue color value for each `Pixel` object to `0`.\r\n\r\nTest your `ColorEditor` in `MyConcert.java`.\r\n\r\n```\r\npublic void removeBlue() {\r\n\r\n   // TO DO: Traverse the imagePixels array and set\r\n   // the blue value for each Pixel object to 0.\r\n\r\n}\r\n```",
@@ -22,13 +26,10 @@
     "thumbnail_url": "https://images.code.org/007308b9bca96c2b21f129581738e7e6-image-1634243667285.gif",
     "reference_links": [
       "https://docs.google.com/document/d/e/2PACX-1vT9hI7CfPeweBqYhqYFj_Enz--AtabbyK2BVO5c6KsrDobWoaC42adeG1j_n6TzimzvQv9ZDVJZdjnl/pub"
-    ]
+    ],
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-09-22T14:17:31.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-09-22 14:17:33 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 17:41:20 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 17:42:13 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 17:45:00 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 18:05:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 19:01:03 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 20:34:40 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 21:18:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2022-01-03 16:16:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-12 15:29:23 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-12 15:34:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-24 15:02:35 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

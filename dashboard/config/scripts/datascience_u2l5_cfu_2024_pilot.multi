@@ -1,0 +1,11 @@
+name 'datascience-U2L5-CFU_2024-pilot'
+title 'Check for Understanding'
+
+question 'Which of the following statements correctly describes the difference between `info()` and `describe()` in pandas?'
+wrong '`info()` provides a summary of the count, mean, standard deviation, min, and max values for each column, while `describe()` provides data types and non-null counts.'
+right '`info()` provides data types and non-null counts of each column, while `describe()` provides a summary of the count, mean, standard deviation, min, and max values of numerical columns.'
+wrong 'both `info()` and `describe()` provide the same information, but `describe()` displays it in a more detailed format.'
+wrong '`info()` displays the first few rows of the dataset, while `describe()` provides statistical summaries of the entire dataset.'
+
+allow_multiple_attempts false
+

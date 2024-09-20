@@ -1,6 +1,5 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import {BodyThreeText, StrongText} from '@cdo/apps/componentLibrary/typography';
 
@@ -22,30 +21,13 @@ const ModelDescriptionPanel: React.FunctionComponent<{
   const [selectedModel, setSelectedModel] = useState<ModelDescription>(
     getModelFromId(initialSelectedModelId)
   );
-  const [userWantsScroll, setUserWantsScroll] = useState<boolean>(false);
-  const [contentNeedsScroll, setContentNeedsScroll] = useState<boolean>(false);
-
-  const descriptionsContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (
-      descriptionsContainerRef.current &&
-      descriptionsContainerRef.current.scrollHeight >
-        descriptionsContainerRef.current.clientHeight
-    ) {
-      setContentNeedsScroll(true);
-    }
-  }, [setContentNeedsScroll, descriptionsContainerRef]);
-
-  const showViewMoreButton = !userWantsScroll && contentNeedsScroll;
-  const shouldScroll = userWantsScroll && contentNeedsScroll;
 
   const onDropdownChange = (value: string) => {
     setSelectedModel(getModelFromId(value));
   };
 
   return (
-    <div className={styles.modelDescriptionContainer}>
+    <div className={styles.modelDescriptionPanelContainer}>
       <SimpleDropdown
         labelText="Choose a model"
         isLabelVisible={false}
@@ -58,12 +40,8 @@ const ModelDescriptionPanel: React.FunctionComponent<{
         size="s"
         className={styles.fullWidth}
       />
-      <div
-        ref={descriptionsContainerRef}
-        className={
-          shouldScroll ? styles.overflowYScroll : styles.overflowYHidden
-        }
-      >
+      <br />
+      <div className={styles.modelDescriptionContainer}>
         <StrongText>Overview</StrongText>
         <div className={styles.textContainer}>
           <BodyThreeText>{selectedModel.overview}</BodyThreeText>
@@ -74,18 +52,6 @@ const ModelDescriptionPanel: React.FunctionComponent<{
           <BodyThreeText>{selectedModel.trainingData}</BodyThreeText>
         </div>
       </div>
-      {showViewMoreButton && (
-        <div className={styles.rightAlign}>
-          <Button
-            size="xs"
-            type="secondary"
-            onClick={() => setUserWantsScroll(true)}
-            text="view more"
-            iconRight={{iconName: 'chevron-down'}}
-            className={styles.viewMoreButton}
-          />
-        </div>
-      )}
     </div>
   );
 };

@@ -16,11 +16,7 @@ module PartialRegistration
       cache_key = session[SESSION_KEY]
       json = CDO.shared_cache.read(cache_key)
       attributes = JSON.parse(json)
-      user = new(attributes, &block)
-      if user.primary_contact_info.nil?
-        user.primary_contact_info = user.authentication_options&.first
-      end
-      user
+      new(attributes, &block)
     end
   end
 

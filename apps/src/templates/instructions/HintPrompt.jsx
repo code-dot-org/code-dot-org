@@ -1,12 +1,13 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
+import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import msg from '@cdo/locale';
 
-import LegacyButton from '../../legacySharedComponents/LegacyButton';
-
 import ChatBubble from './ChatBubble';
+
+import styles from './hint-prompt.module.scss';
 
 const HintPrompt = ({
   onConfirm,
@@ -29,22 +30,26 @@ const HintPrompt = ({
       textToSpeechEnabled={textToSpeechEnabled}
     >
       <p id={'hint-prompt-message'}>{message}</p>
-      <LegacyButton
+      <Button
         id="hint-prompt-yes-button"
-        type="cancel"
+        type="primary"
+        text={msg.yes()}
+        color={buttonColors.white}
         onClick={onConfirm}
-        style={{marginRight: 5}}
-        aria-labelledby="hint-prompt-message"
-      >
-        {msg.yes()}
-      </LegacyButton>
-      <LegacyButton
-        type="cancel"
+        className={classNames(styles.button, styles.buttonYes)}
+        size="m"
+        ariaLabel={msg.yes()}
+      />
+      <Button
+        id="hint-prompt-no-button"
+        type="primary"
+        text={msg.no()}
+        color={buttonColors.white}
         onClick={onDismiss}
-        aria-labelledby="hint-prompt-message"
-      >
-        {msg.no()}
-      </LegacyButton>
+        className={classNames(styles.button)}
+        size="m"
+        ariaLabel={msg.no()}
+      />
     </ChatBubble>
   );
 };
@@ -59,4 +64,4 @@ HintPrompt.propTypes = {
   textToSpeechEnabled: PropTypes.bool,
 };
 
-export default Radium(HintPrompt);
+export default HintPrompt;

@@ -1,5 +1,10 @@
 import React, {useCallback, useState} from 'react';
 
+import {
+  getDeferredPromise,
+  DeferredPromiseObject,
+} from '@cdo/apps/lab2/utils/getDeferredPromise';
+
 import {DialogControlContext} from './DialogControlContext';
 import GenericAlertDialog from './GenericAlertDialog';
 import GenericConfirmationDialog from './GenericConfirmationDialog';
@@ -7,7 +12,13 @@ import GenericDialog from './GenericDialog';
 import GenericPrompt from './GenericPrompt';
 import SkipDialog from './SkipDialog';
 import StartOverDialog from './StartOverDialog';
-import {DialogType, TypedDialogProps, AnyDialogType} from './types';
+import {
+  DialogType,
+  TypedDialogProps,
+  AnyDialogType,
+  DialogCloseActionType,
+  DialogClosePromiseReturnType,
+} from './types';
 
 import moduleStyles from './dialog-manager.module.scss';
 
@@ -37,17 +48,37 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
   children,
 }) => {
   const [openDialog, setOpenDialog] = useState<DialogType | null>(null);
+  const [shouldThrowOnCancel, setShouldThrowOnCancel] =
+    useState<boolean>(false);
+  const [promiseArgs, setPromiseArgs] = useState<unknown>();
   const [dialogArgs, setDialogArgs] = useState<AnyDialogType>();
+  const [deferredPromiseObject, setDeferredPromiseObject] =
+    useState<DeferredPromiseObject>(getDeferredPromise());
 
   const showDialog = useCallback(
-    ({type, ...dialogArgs}: TypedDialogProps) => {
+    ({type, throwOnCancel = false, ...dialogArgs}: TypedDialogProps) => {
+      const newDeferredPromise = getDeferredPromise();
+      setDeferredPromiseObject(newDeferredPromise);
+      setPromiseArgs(undefined);
+      setShouldThrowOnCancel(throwOnCancel);
       setOpenDialog(type);
       setDialogArgs(dialogArgs);
+      return newDeferredPromise.deferred as Promise<DialogClosePromiseReturnType>;
     },
-    [setDialogArgs]
+    [setDialogArgs, setPromiseArgs]
   );
 
-  const closeDialog = useCallback(() => setOpenDialog(null), [setOpenDialog]);
+  const closeDialog = useCallback(
+    (closeType: DialogCloseActionType) => {
+      setOpenDialog(null);
+      const resolver =
+        shouldThrowOnCancel && closeType === 'cancel'
+          ? deferredPromiseObject.reject
+          : deferredPromiseObject.resolve;
+      resolver?.({type: closeType, args: promiseArgs});
+    },
+    [setOpenDialog, deferredPromiseObject, shouldThrowOnCancel, promiseArgs]
+  );
 
   // Allow the any because if it's NOT any, then line 63 with DialogView's args will toss an error.
   // Keep this until we have a better solution. ¯\_(ツ)_/¯
@@ -60,6 +91,9 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
       value={{
         closeDialog,
         showDialog,
+        deferredPromiseObject,
+        promiseArgs,
+        setPromiseArgs,
       }}
     >
       {DialogView && (

@@ -3,8 +3,8 @@ import React, {CSSProperties, useState, useEffect, useReducer} from 'react';
 import {useSelector} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
   requestParentalPermission,
@@ -30,7 +30,7 @@ import {hashString} from '../../utils';
  */
 const LockoutPanel: React.FC<LockoutPanelProps> = props => {
   const reportEvent = (eventName: string, payload: object = {}) => {
-    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+    analyticsReporter.sendEvent(eventName, payload);
   };
 
   // Determine if we think the given email matches the child email

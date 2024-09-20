@@ -1,0 +1,42 @@
+name 'self-paced-pl-gen-ai-customizing_05_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lessons 2-4: System Prompting
+
+<img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="system prompt with role, goal, tone, and restriction" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### Lessons 2 through 4 in the Customizing Large Language Models unit help students develop an understanding of system prompting. Students go through the **Explore-Practice-Synthesis** model of learning.
+
+## Exploration
+#### Students are introduced to the idea of a **system prompt** and explore how it impacts a chatbot's behavior. Students predict, discuss, and investigate the effects of system prompts, learning how prompt design can direct and limit chatbot interactions.
+
+## Practice
+#### Students build fluency in designing and applying system prompts. They learn to craft prompts that guide the **content, style, and appropriateness** of AI response's for different audiences and situations.
+
+## Synthesis
+#### Students learn advanced techniques including using **chain of reasoning** to build chatbots that provide precise responses and using **giving examples** to enhance accuracy.
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> As students struggle getting the chatbot to respond in a particular way, they may want to know the “trick” or “secret” to getting the chatbot to respond how they want. You can assure students that there is no trick, just a set of strategies that tend to work more often than others but are still unreliable.  
+</p>
+</div>
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 Engage with our Learning Community!
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;"> <p>
+
+#### Participating in the <a href="https://padlet.com/codeorgpl/exploring-generative-ai-self-paced-professional-learning-dgb4yws61unrun" target="_blank">Gen AI Self-Paced PL Learning Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader Gen AI learner community. **If you were to build a chatbot using AI Chat Lab to support your teaching practice, what  key development considerations would you want to keep in mind?**
+
+</p></div>
+</details>
+
+## Up Next!
+#### You’ll learn about system prompts yourself before you try out writing your own in some levels from the curriculum.
+
+MARKDOWN

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:39.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L9-L4c PBT_pilot-2022",
@@ -30,12 +34,9 @@
         "text": "#51: Gran Turismo 4\n#50: Super Mario Land\n#49: Mario Kart 7\n#48: Super Smash Bros. Ultimate\n#47: Call of Duty: Ghosts\n#46: Super Mario Bros. 3\n#45: Brain Age\n#44: The Legend of Zelda: Breath of the Wild\n#43: The Last of Us\n#42: Grand Theft Auto: Vice City\n#41: Lemmings\n#40: Frogger\n#39: Super Mario World\n#38: Borderlands 2\n#37: Pokémon Ruby / Sapphire / Emerald\n#36: Call of Duty: Modern Warfare 2\n#35: Mario Kart DS\n#34: Nintendogs\n#33: Sonic the Hedgehog\n#32: FIFA 18\n#31: Kinect Adventures!\n#30: Call of Duty: Black Ops II\n#29: Pokémon Diamond / Pearl / Platinum\n#28: Pokémon Sun / Moon / Ultra Sun / Ultra Moon\n#27: Grand Theft Auto IV\n#26: Call of Duty: Black Ops\n#25: Call of Duty: Modern Warfare 3\n#24: Grand Theft Auto: San Andreas\n#23: The Witcher 3\n#22: Wii Play\n#21: Duck Hunt\n#20: Pokémon Gold / Silver / Crystal\n#19: Diablo III\n#18: The Elder Scrolls V: Skyrim\n#17: New Super Mario Bros. Wii\n#16: Terraria\n#15: New Super Mario Bros.\n#14: Red Dead Redemption 2\n#13: Wii Sports Resort\n#12: Mario Kart 8 / Deluxe\n#11: Mario Kart Wii\n#10: Pac-Man\n#9: Tetris (Nintendo)\n#8: Wii Fit and Wii Fit Plus\n#7: Pokémon Red / Green / Blue / Yellow\n#6: Super Mario Bros.\n#5: PlayerUnknown's Battlegrounds\n#4: Wii Sports\n#3: Tetris (EA Mobile)\n#2: Grand Theft Auto V\n#1: Minecraft",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:39.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:39.671+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L5c CR_2022\\\"\"],\"cloned_from\":\"CSA U3L9-L5c CR_2022\"},{\"changed_at\":\"2022-09-09 00:48:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

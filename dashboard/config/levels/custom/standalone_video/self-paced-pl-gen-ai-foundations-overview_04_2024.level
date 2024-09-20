@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-09-11T16:50:54.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "how-ai-works-llms-part1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "\r\n\r\n#### In the Generative AI unit, students will learn the foundations of Large Language Models, and then work on the Code.org platform to customize and create one. LLMs can also be referred to as ChatBots. You may be familiar with models such as ChatGPT.\r\n\r\n## What is an LLM?\r\n\r\n#### A large language model, or LLM, is a type of artificial intelligence system designed to understand, generate, and work with human language at a vast scale.\r\n\r\n#### It's trained on a wide array of text data and learning patterns from an extensive database. This training enables it to perform tasks like answering questions, writing text, and translating languages, based on the context and information it has learned.\r\n\r\n---\r\n\r\n#### Watch this video clip to hear Mira Murati from Open AI and Cristobal Valenzuela from Runway explain how large language models work.\r\n\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-09-11T16:50:54.520+00:00\",\"changed\":[\"cloned from \\\"sp-pl-GenAI_LLM\\\"\"],\"cloned_from\":\"sp-pl-GenAI_LLM\"}]"
+}]]></config>
+</StandaloneVideo>

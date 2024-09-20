@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:56:57.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "There has been a spike in the number of travelers visiting The Neighborhood. The airport wants to create a program to help residents check whether a flight has arrived.\r\n\r\n##In FlightManager.java:\r\n\r\n1. Write the method `findFlight()`(#e7e8ea) to find the index location of a flight in `flightList`(#e7e8ea) using an iterative or recursive binary search. Return the index location of the flight or `-1`(#e7e8ea) if the flight number is not found.",
@@ -34,12 +38,9 @@
         "isVisible": true,
         "tabOrder": 3
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:56:57.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:56:57.238+00:00\",\"changed\":[\"cloned from \\\"CSA U8L4-L2c_2022\\\"\"],\"cloned_from\":\"CSA U8L4-L2c_2022\"},{\"changed_at\":\"2022-10-07 13:42:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 14:51:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 14:51:30 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 15:18:36 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 15:19:15 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>

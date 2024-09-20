@@ -1,6 +1,12 @@
+/ GA4 measurement ID for hourofcode.com
+- google_measurement = {id:"G-Z6QQP1041C"}
+
 :javascript
   window.userAnalyticsDimensions = {
     'dimension1': '#{@request.language}',
   };
 
-%script{src: webpack_asset_path("js/hourofcode.com/views/theme_google_analytics.js")}
+/ Google tag (gtag.js)
+%script{async: "", src: "https://www.googletagmanager.com/gtag/js?id=#{google_measurement[:id]}"}
+
+%script{src: webpack_asset_path("js/hourofcode.com/views/theme_google_analytics.js"), data: {googleMeasurement: google_measurement.to_json}}

@@ -48,6 +48,9 @@ module Dashboard
       end
     end
 
+    require 'cdo/rack/global_edition'
+    config.middleware.insert_before Rack::Cors, Rack::GlobalEdition
+
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
@@ -96,6 +99,12 @@ module Dashboard
       # Enables the setting of DCDO via cookies for testing purposes.
       require 'cdo/rack/cookie_dcdo'
       config.middleware.insert_after ActionDispatch::RequestId, Rack::CookieDCDO
+    end
+
+    if CDO.use_geolocation_override
+      # Apply the remote_addr middleware to allow pretending to be at a particular IP
+      require 'cdo/rack/geolocation_override'
+      config.middleware.insert_after ActionDispatch::RequestId, Rack::GeolocationOverride
     end
 
     config.encoding = 'utf-8'

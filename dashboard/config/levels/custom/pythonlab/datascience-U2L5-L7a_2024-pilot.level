@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-09-15T21:50:47.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Running Club\r\n\r\n::: details [**✅ Step 1**]\r\nLoad the data and print a summary using `info()` and `describe()`.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nConvert the **Distance** attribute from *float64* to *int64*.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nConvert the **Date** attribute from an *object* to *datetime*.\r\n:::\r\n\r\n::: details [**✅ Step 5**]\r\nPrint a new summary using `info()` to verify your changes worked.\r\n:::\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd \nimport matplotlib.pyplot as plt \n\n# STEP 1\n\n# STEP 2\n\n# STEP 3\n\n# STEP 4\n\n# Visualized data as a line graph\nsurvey_data = survey_data.sort_values(by='Date')\nplt.plot(survey_data['Date'], survey_data['Distance'], marker='D', linestyle='-', color='red')\nplt.title('My Running Chart')\nplt.xlabel('Date')\nplt.ylabel('Distance in Miles')\nplt.show()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "running_data.csv",
+          "language": "csv",
+          "contents": "Date,Distance,Location\n1/27/2023,5.326664766,Hilltop\n1/4/2023,9.778414588,Maplewood\n2/6/2023,16.00350165,Maplewood\n1/30/2023,10.78642921,Riverbend\n2/1/2023,22.28179909,Meadowview\n1/21/2023,16.08334589,Pinecrest\n1/23/2023,9.868253268,Cedar Grove\n2/17/2023,24.51010093,Maplewood\n1/13/2023,6.862872582,Meadowview\n1/18/2023,9.163073398,Eagle Park\n1/20/2023,1.305828432,Eagle Park\n1/14/2023,1,Riverbend\n1/22/2023,8.01397564,Lakeside\n1/19/2023,3.439471459,Lakeside\n2/7/2023,5.548588156,Meadowview\n1/6/2023,1.768090725,Lakeside\n2/16/2023,16.53354084,Brookfield\n2/8/2023,9.093763633,Sunnyvale\n1/3/2023,5.013952895,Eagle Park\n2/3/2023,8.507363723,Maplewood\n1/16/2023,4.004888884,Lakeside\n2/19/2023,11.18479922,Meadowview\n1/2/2023,1,Sunnyvale\n1/12/2023,2.936657355,Sunnyvale\n2/5/2023,8.467210322,Pinecrest\n2/18/2023,21.33033635,Riverbend\n1/31/2023,9.62412,Sunnyvale\n1/28/2023,13.34787785,Eagle Park\n2/12/2023,16.70747287,Lakeside\n1/26/2023,11.2484905,Cedar Grove\n2/13/2023,16.16795091,Cedar Grove\n1/10/2023,7.202596136,Hilltop\n1/5/2023,1.380253535,Pinecrest\n2/2/2023,13.34067714,Lakeside\n2/4/2023,18.29639803,Pinecrest\n2/9/2023,17.10675516,Maplewood\n1/17/2023,2.139926031,Pinecrest\n1/11/2023,2.560462556,Maplewood\n2/11/2023,17.75480059,Sunnyvale\n1/8/2023,7.55145936,Hilltop\n2/15/2023,14.84975855,Cedar Grove\n1/24/2023,2.794626416,Cedar Grove\n1/9/2023,1.754668887,Pinecrest\n1/7/2023,11.22259469,Brookfield\n1/25/2023,7.584208826,Hilltop\n1/1/2023,3.483570765,Cedar Grove\n2/14/2023,10.66861454,Sunnyvale\n1/15/2023,1,Meadowview\n1/29/2023,8.853949408,Meadowview\n2/10/2023,20.20253698,Brookfield\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Running Club",
+    "teacher_markdown": "This level practices and assesses students' ability to convert data types using .astype() and to_datetime() as well as loading data and looking at info() about the data.",
+    "bubble_choice_description": "Practice converting data types for a running club dataset.",
+    "thumbnail_url": "https://images.code.org/cbecd9d7277bfb3707eee1bbb77980b2-run.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-15T21:50:47.712+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L9a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L9a_2024-pilot\"},{\"changed_at\":\"2024-09-15 22:02:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"project_template_level_name\",\"teacher_markdown\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 22:04:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 22:07:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

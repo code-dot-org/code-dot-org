@@ -15,7 +15,8 @@
     "display_name": "Create Your Own Scene",
     "bubble_choice_description": "Use Math.random() to draw shapes and images in your scene.",
     "thumbnail_url": "https://images.code.org/7064e4a39ecec10a70b1393f04921efd-image-1651426887917.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:32:16.238+00:00\",\"changed\":[\"cloned from \\\"CSA U4L9-L5d CR_2022\\\"\"],\"cloned_from\":\"CSA U4L9-L5d CR_2022\"}]"

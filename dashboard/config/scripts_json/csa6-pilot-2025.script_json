@@ -9,6 +9,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csa-pilot-2025",
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
@@ -16,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-02 22:52:18 UTC",
-    "published_state": null,
+    "serialized_at": "2024-08-22 15:08:41 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -4239,6 +4240,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L1_pilot-2025"
+        ],
         "progression": "Natural Language Processing Projects"
       },
       "bonus": false,
@@ -4261,6 +4265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L2_pilot-2025"
+        ],
         "progression": "Practice: Javadocs Comments"
       },
       "bonus": false,
@@ -4283,6 +4290,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L3_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4305,6 +4315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: The substring() Method"
       },
       "bonus": false,
@@ -4327,6 +4340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The substring() Method"
       },
       "bonus": false,
@@ -4349,6 +4365,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The substring() Method"
       },
       "bonus": false,
@@ -4371,6 +4390,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The substring() Method"
       },
       "bonus": false,
@@ -4393,6 +4415,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L5_pilot-2025"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4415,6 +4440,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L6_pilot-2025"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4437,6 +4465,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L7_pilot-2025"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4459,6 +4490,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L8_pilot-2025"
+        ],
         "progression": "Practice: The substring() Method"
       },
       "bonus": false,
@@ -4481,6 +4515,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L9_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4503,6 +4540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Wrapper Classes"
       },
       "bonus": false,
@@ -4525,6 +4565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Wrapper Classes"
       },
       "bonus": false,
@@ -4547,6 +4590,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Wrapper Classes"
       },
       "bonus": false,
@@ -4569,6 +4615,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Wrapper Classes"
       },
       "bonus": false,
@@ -4591,6 +4640,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L5_pilot-2025"
+        ],
         "progression": "Practice: Wrapper Classes"
       },
       "bonus": false,
@@ -4613,6 +4665,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L6_pilot-2025"
+        ],
         "progression": "Practice: Wrapper Classes"
       },
       "bonus": false,
@@ -4635,6 +4690,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L7_pilot-2025"
+        ],
         "progression": "Practice: Wrapper Classes"
       },
       "bonus": false,
@@ -4657,6 +4715,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4679,6 +4740,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: The ArrayList Class"
       },
       "bonus": false,
@@ -4701,6 +4765,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The ArrayList Class"
       },
       "bonus": false,
@@ -4723,6 +4790,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The ArrayList Class"
       },
       "bonus": false,
@@ -4745,6 +4815,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The ArrayList Class"
       },
       "bonus": false,
@@ -4767,6 +4840,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L5_pilot-2025"
+        ],
         "progression": "Practice: Creating ArrayLists"
       },
       "bonus": false,
@@ -4789,6 +4865,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L6_pilot-2025"
+        ],
         "progression": "Practice: Creating ArrayLists"
       },
       "bonus": false,
@@ -4811,6 +4890,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L7_pilot-2025"
+        ],
         "progression": "Practice: Creating ArrayLists"
       },
       "bonus": false,
@@ -4833,6 +4915,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4855,6 +4940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Manipulating Elements"
       },
       "bonus": false,
@@ -4877,6 +4965,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Manipulating Elements"
       },
       "bonus": false,
@@ -4899,6 +4990,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Manipulating Elements"
       },
       "bonus": false,
@@ -4921,6 +5015,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Manipulating Elements"
       },
       "bonus": false,
@@ -4943,6 +5040,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L5_pilot-2025"
+        ],
         "progression": "Practice: Manipulating Elements"
       },
       "bonus": false,
@@ -4965,6 +5065,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L6_pilot-2025"
+        ],
         "progression": "Practice: Manipulating Elements"
       },
       "bonus": false,
@@ -4987,6 +5090,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L7_pilot-2025"
+        ],
         "progression": "Practice: Manipulating Elements"
       },
       "bonus": false,
@@ -5009,6 +5115,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5031,6 +5140,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: The compareTo() Method"
       },
       "bonus": false,
@@ -5053,6 +5165,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The compareTo() Method"
       },
       "bonus": false,
@@ -5075,6 +5190,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The compareTo() Method"
       },
       "bonus": false,
@@ -5097,6 +5215,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The compareTo() Method"
       },
       "bonus": false,
@@ -5119,6 +5240,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L5_pilot-2025"
+        ],
         "progression": "Practice: Comparing Strings"
       },
       "bonus": false,
@@ -5141,6 +5265,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L6_pilot-2025"
+        ],
         "progression": "Practice: Comparing Strings"
       },
       "bonus": false,
@@ -5163,6 +5290,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L7_pilot-2025"
+        ],
         "progression": "Practice: Comparing Strings"
       },
       "bonus": false,
@@ -5185,6 +5315,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5207,6 +5340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Lists of Objects"
       },
       "bonus": false,
@@ -5229,6 +5365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
@@ -5251,6 +5390,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
@@ -5273,6 +5415,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Lists of Objects"
       },
       "bonus": false,
@@ -5295,6 +5440,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L5_pilot-2025"
+        ],
         "progression": "Practice: Lists of Objects"
       },
       "bonus": false,
@@ -5317,6 +5465,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L6_pilot-2025"
+        ],
         "progression": "Practice: Lists of Objects"
       },
       "bonus": false,
@@ -5339,6 +5490,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L7_pilot-2025"
+        ],
         "progression": "Practice: Lists of Objects"
       },
       "bonus": false,
@@ -5361,6 +5515,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5383,6 +5540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Removing Elements"
       },
       "bonus": false,
@@ -5405,6 +5565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Removing Elements"
       },
       "bonus": false,
@@ -5427,6 +5590,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Removing Elements"
       },
       "bonus": false,
@@ -5449,6 +5615,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Removing Elements"
       },
       "bonus": false,
@@ -5471,6 +5640,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L5_pilot-2025"
+        ],
         "progression": "Practice: Removing Elements"
       },
       "bonus": false,
@@ -5493,6 +5665,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L6_pilot-2025"
+        ],
         "progression": "Practice: Removing Elements"
       },
       "bonus": false,
@@ -5515,6 +5690,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L7_pilot-2025"
+        ],
         "progression": "Practice: Removing Elements"
       },
       "bonus": false,
@@ -5537,6 +5715,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5559,6 +5740,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: NLP Techniques"
       },
       "bonus": false,
@@ -5581,6 +5765,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: NLP Techniques"
       },
       "bonus": false,
@@ -5603,6 +5790,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: NLP Techniques"
       },
       "bonus": false,
@@ -5625,6 +5815,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: NLP Techniques"
       },
       "bonus": false,
@@ -5647,6 +5840,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L5_pilot-2025"
+        ],
         "progression": "Practice: NLP Techniques"
       },
       "bonus": false,
@@ -5669,6 +5865,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L6_pilot-2025"
+        ],
         "progression": "Practice: NLP Techniques"
       },
       "bonus": false,
@@ -5691,6 +5890,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L7_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5713,6 +5915,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6 Natural Language Processing Project_pilot-2025"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -5735,6 +5940,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 6 Assessment_pilot-2025"
+        ],
         "progression": "Unit 6 Assessment"
       },
       "bonus": false,
@@ -5757,6 +5965,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa6_pilot-2025"
+        ],
         "progression": "Unit 6 Survey"
       },
       "bonus": false,
@@ -5779,6 +5990,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_pilot-2025"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -5801,6 +6015,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_pilot-2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5822,6 +6039,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_pilot-2025"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -5844,6 +6064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_pilot-2025"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -5866,6 +6089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_pilot-2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {

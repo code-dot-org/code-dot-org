@@ -33,11 +33,17 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       })}
       onClick={onClick}
     >
-      <FontAwesomeV6Icon
-        className={styles.optionIcon}
-        iconName={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon || ''}
-      />
-      <BodyTwoText className={styles.linkText}>
+      <div className={styles.iconContainer}>
+        <FontAwesomeV6Icon
+          className={styles.optionIcon}
+          iconName={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon || ''}
+        />
+      </div>
+      <BodyTwoText
+        className={classNames(styles.linkText, {
+          [styles.selected]: isSelected,
+        })}
+      >
         {LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
       </BodyTwoText>
     </NavLink>

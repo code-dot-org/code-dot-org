@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-02-15T14:15:26.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -355,15 +359,9 @@
     "bubble_choice_description": "Use an if statement and the isOnPaint() method to move forward one square if the Painter object is standing on paint.",
     "thumbnail_url": "https://images.code.org/f8277e8ce78db1f48ca867139b42bdd3-image-1646320204617.gif",
     "encrypted_exemplar_sources": "KNjm63MQ86iRZeyLht9Rk62smWHrvRJhg0SD7xLvYFSpkcukK7s7CyJlLISp\nouB5wLnHmVoT6gLE6+ESf8R0GrcsRRFv/0jT99ApmgVhEEgL69WMViMkD6Of\nu5s+w4+cWTJNacad+AXSTrReRsnfjsCPzwPyIWcS9LZnflAh9am1OviGpUAJ\n1IUjFSCaRK1LxHQCdk6w+TdpnV3uNwy4ogqcRve+SwO320DpPNVEtL/7kFyW\nHikV+Bk82KKOXvH54Mby4t1TY4AO8Su7wqNpfY+L0b1AGI+bCA6kcMhaVnZH\n0itHeMbXtMjecLx92wCUpBmTAY5aiEDGOrBdphmxg+TMuH3Qxqmq3M5dPJ9F\ndLL8fqXksBd2TXO0LsCZjjwtynTryPrkLOzl/gTcCSv6SnDiTkS/d1/XguZX\nzaC0qV5mOi+1SJrbUEUKoSWQWHrazaegoEiIFO5V5kuaHEizKzQSNl/FB+32\naeouFoPvTClp9naVXFMwW0BTCfFFC03uavDfmYUVfpzZTSH5KtTYIGg64T+S\n+XAG1YVldnQmSiRPQsRZZ4oJ5wqqVZxOxRbDwcX+dawMt1/8VNXfcou1KmYD\n4744cmjh4anYSC5POfbRyyZbm/CCbKDdTuel0cxdLKZtUDdfPSfulgF5cjf/\nXR5/TML1tOeLjhqfhJ2lqVEX579lhhyzz26l2eadi4Y28/fBCZA9+BGULYYX\n7jThDPgEXhyXr8lLE9+gILBJ+uSdlmI9kBNma+yBHvwC3mEHYyyegwlda34H\nMX3olXHpJg==\n",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-02-15T14:15:26.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-02-15T14:15:26.370+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L3a_2022\\\"\"],\"cloned_from\":\"CSA U1L5-L3a_2022\"},{\"changed_at\":\"2022-02-15 14:16:14 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 14:17:15 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 14:18:57 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 14:23:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-23 13:30:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 13:39:38 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:10:50 +0000\",\"changed\":[\"serialized_maze\",\"display_name\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:16:04 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 13:23:39 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 13:23:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-27 18:57:55 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-24 14:39:27 +0000\",\"changed\":[\"serialized_maze\",\"map_reference\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

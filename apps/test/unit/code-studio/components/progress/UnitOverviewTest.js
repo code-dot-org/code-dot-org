@@ -47,16 +47,6 @@ describe('UnitOverview', () => {
     expect(wrapper.find('Connect(EndOfLessonDialog)').length).toEqual(0);
   });
 
-  it('renders a UnversionedScriptRedirectDialog if showUnversionedRedirectWarning and not displaying dialog', () => {
-    const wrapper = setUp({showUnversionedRedirectWarning: true});
-    expect(wrapper.find('UnversionedScriptRedirectDialog').length).toEqual(1);
-  });
-
-  it('does not render a UnversionedScriptRedirectDialog if showUnversionedRedirectWarning is false', () => {
-    const wrapper = setUp({showUnversionedRedirectWarning: false});
-    expect(wrapper.find('UnversionedScriptRedirectDialog').length).toEqual(0);
-  });
-
   it('displays a course link if courseLink is present', () => {
     const wrapper = setUp({courseLink: '/some/link'});
     expect(wrapper.find('.unit-breadcrumb').length).toEqual(1);
@@ -84,17 +74,17 @@ describe('UnitOverview', () => {
 
   it('renders a UnitCalendar if viewAs is Instructor and showCalendar is true', () => {
     const wrapper = setUp({viewAs: ViewType.Instructor, showCalendar: true});
-    expect(wrapper.find('UnitCalendar').length).toEqual(1);
+    expect(wrapper.find('UnitCalendarGrid').length).toEqual(1);
   });
 
   it('does not render a UnitCalendar if viewAs is not Instructor and showCalendar is true', () => {
     const wrapper = setUp({viewAs: ViewType.Participant, showCalendar: true});
-    expect(wrapper.find('UnitCalendar').length).toEqual(0);
+    expect(wrapper.find('UnitCalendarGrid').length).toEqual(0);
   });
 
   it('does not render a UnitCalendar if viewAs is Instructor and showCalendar is false', () => {
     const wrapper = setUp({viewAs: ViewType.Instructor, showCalendar: false});
-    expect(wrapper.find('UnitCalendar').length).toEqual(0);
+    expect(wrapper.find('UnitCalendarGrid').length).toEqual(0);
   });
 
   it('renders a UnitOverviewTopRow', () => {

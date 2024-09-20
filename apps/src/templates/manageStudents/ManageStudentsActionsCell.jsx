@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -219,7 +219,7 @@ class ManageStudentsActionsCell extends Component {
 
     return (
       <div>
-        {!isEditing && (
+        {!isEditing && loginType !== SectionLoginType.lti_v1 && (
           <QuickActionsCell>
             {this.props.canEdit && (
               <PopUpMenu.Item onClick={this.onEdit}>

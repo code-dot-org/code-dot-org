@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-08-23T17:20:35.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "####Reflecting on your experience with CODAP, what has been the most interesting feature or tool you've learned to use so far? How did the resulting visualizations help you gain new insights into the data, and how might you apply this in your classroom to enhance your students' understanding of the data?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-23T17:20:35.222+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level9\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level9\"},{\"changed_at\":\"2024-08-23 17:33:24 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

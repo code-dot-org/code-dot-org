@@ -4,27 +4,19 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Lesson 2: Understanding Your User
+# Lesson 2: Understanding Your User
 
-## Investigation Goals
+## 🎯 Investigation Goals
 
-##### **Consider how this lesson supports students in thinking about intended users as well as potential users.  Also, consider how this lesson continues to include empathy as a part of the Problem Solving Process.**
+#### Consider how this lesson supports students in thinking about intended users as well as potential users.  Also, consider how this lesson continues to include empathy as a part of the Problem Solving Process.
 
-## Investigation Tasks
+## 📋 Investigation Tasks
 
-* ##### Read the lesson plan for <a href="https://studio.code.org/s/csd4-2023/lessons/2" target="_blank">Lesson 2: Understanding Your User </a> 
+* #### Read the lesson plan for <a href="https://studio.code.org/s/csd4-2024/lessons/2" target="_blank">Lesson 2: Understanding Your User</a>. 
 
-* ##### Review user profiles that students will use
+* #### Review user profiles that students will use.
 
-* ##### Identify ways for students to make connections between
-	* ##### a user profile and user preferences for a product
-    * ##### a user profile and adding features to a product
-
-
-
-
-
-
-
-
+* #### Identify ways for students to make connections between:
+	* #### a user profile and user preferences for a product.
+    * #### a user profile and adding features to a product.
 MARKDOWN

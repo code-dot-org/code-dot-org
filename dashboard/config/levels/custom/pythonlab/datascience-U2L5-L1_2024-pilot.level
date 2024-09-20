@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-29T18:15:57.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "student response",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\n\nsurvey_data = pd.read_csv('survey_data.csv')\n\nprint(survey_data.head())\n\nprint(survey_data.info())\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "survey_data.csv",
+          "language": "csv",
+          "contents": "Age,Height,Join Date,Feedback Score\n13,180.2,1/12/2024,1\n29,165.8,1/23/2024,2\n12,177.3,1/26/2024,1\n14,145.9,2/5/2024,2\n15,174.7,2/14/2024,2\n17,170,3/17/2024,1\n15,156.3,3/29/2024,3\n99,162.3,4/19/2024,2\n95,169.9,5/20/2024,4\n13,160.5,5/24/2024,2\n15,160,6/2/2024,4\n,175,7/1/2024,3\n18,172.4,7/14/2024,3\n20,158.6,8/8/2024,4\n17,175.1,9/26/2024,3\n16,180,10/7/2024,4\n16,152.2,10/31/2024,5\n18,168.8,11/29/2024,3\n18,172,12/3/2024,4\n13,165.9,12/31/2024,5",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "teacher_markdown": "This level prints the top 5 rows of the dataset and then information about the count and data type of each column. Students will probably be able to tell from the function name that it provides information, though they may not know until they run it what that information is.\r\n\r\nAfter running, they should know how many non-null values there are (they will probably know \"null\" means \"no value there\" and what the \"Dtype\" is. They may be able to guess that Dtype says something about the kind of data.\r\n\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-29 18:16:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:19:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:20:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:21:06 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-11 00:03:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-11 00:04:57 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

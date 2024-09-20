@@ -36,6 +36,7 @@ const GenericTemplate = args => (
       ...sampleSection,
       loginType: args.loginType,
     }}
+    loginTypeName={args.loginTypeName}
     teacherName="Minerva McGonagall"
   />
 );
@@ -55,12 +56,25 @@ GenericGoogleClassroom.args = {loginType: SectionLoginType.google_classroom};
 export const GenericClever = GenericTemplate.bind({});
 GenericClever.args = {loginType: SectionLoginType.clever};
 
+export const GenericCanvas = GenericTemplate.bind({});
+GenericCanvas.args = {
+  loginType: SectionLoginType.lti_v1,
+  loginTypeName: 'Canvas',
+};
+
+export const GenericSchoology = GenericTemplate.bind({});
+GenericSchoology.args = {
+  loginType: SectionLoginType.lti_v1,
+  loginTypeName: 'Schoology',
+};
+
 const PersonalizedTemplate = args => (
   <ParentLetter
     section={{
       ...sampleSection,
       loginType: args.loginType,
     }}
+    loginTypeName={args.loginTypeName}
     teacherName="Minerva McGonagall"
     students={sampleStudents}
     studentId={'101'}
@@ -83,3 +97,15 @@ PersonalizedGoogleClassroom.args = {
 
 export const PersonalizedClever = PersonalizedTemplate.bind({});
 PersonalizedClever.args = {loginType: SectionLoginType.clever};
+
+export const PersonalizedCanvas = PersonalizedTemplate.bind({});
+PersonalizedCanvas.args = {
+  loginType: SectionLoginType.lti_v1,
+  loginTypeName: 'Canvas',
+};
+
+export const PersonalizedSchoology = PersonalizedTemplate.bind({});
+PersonalizedSchoology.args = {
+  loginType: SectionLoginType.lti_v1,
+  loginTypeName: 'Schoology',
+};

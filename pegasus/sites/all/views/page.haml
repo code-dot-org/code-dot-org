@@ -9,12 +9,12 @@
       %meta{property: property, content: content}
 
     -if request.site == 'csedweek.org'
-      -title = (header['title'].nil?) ? 'The Hour of Code' : header['title']
-      -tagline = (header['tagline'].nil?) ? 'The Hour of Code' : header['tagline']
+      -title = header['title'].nil? ? 'The Hour of Code' : header['title']
+      -tagline = header['tagline'].nil? ? 'The Hour of Code' : header['tagline']
       -copyright = '&copy; Computer Science Education Week, 2014'
     -else
-      -title = (header['title'].nil?) ? 'Anybody can learn' : header['title']
-      -tagline = (header['tagline'].nil?) ? 'Code.org' : header['tagline']
+      -title = header['title'].nil? ? 'Anybody can learn' : header['title']
+      -tagline = header['tagline'].nil? ? 'Code.org' : header['tagline']
       -copyright = '&copy; Code.org, 2015'
 
     -full_title = (tagline == '' || title == tagline) ? title : title + ' | ' + tagline
@@ -131,5 +131,3 @@
           = partial('mobile_footer_responsive', :text=>copyright)
       -else
         = partial('page_footer')
-
-    = partial('google_analytics') if File.exists?(sites_dir("#{request.site}/views/google_analytics.haml"))

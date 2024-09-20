@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '../../../lib/util/firehose';
+import firehoseClient from '../../../metrics/firehose';
 import ProgressBox from '../ProgressBox';
 
 class ProgressBoxForLessonNumber extends Component {
