@@ -46,7 +46,6 @@ describe('LoginTypeSelection', () => {
   it('enables the confirm button only when all inputs are valid', () => {
     renderDefault();
 
-    const emailInput = screen.getByLabelText(locale.email_address());
     const passwordInput = screen.getByLabelText(locale.password());
     const confirmPasswordInput = screen.getByLabelText(
       locale.confirm_password()
@@ -58,10 +57,7 @@ describe('LoginTypeSelection', () => {
 
     expect(finishSignUpButton).toBeDisabled();
 
-    // Verify that the button is only enabled when all fields are valid
-    fireEvent.change(emailInput, {target: {value: 'myrandomemail@gmail.com'}});
-    expect(finishSignUpButton).toBeDisabled();
-
+    // Verify that the button is only enabled when all password fields are valid
     fireEvent.change(passwordInput, {target: {value: 'password'}});
     expect(finishSignUpButton).toBeDisabled();
 

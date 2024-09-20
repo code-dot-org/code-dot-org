@@ -52,11 +52,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   }, []);
 
   useEffect(() => {
-    if (
-      passwordIcon === CHECK_ICON &&
-      confirmPasswordIcon === CHECK_ICON &&
-      emailIcon === CHECK_ICON
-    ) {
+    if (passwordIcon === CHECK_ICON && confirmPasswordIcon === CHECK_ICON) {
       setCreateAccountButtonDisabled(false);
     } else {
       setCreateAccountButtonDisabled(true);
