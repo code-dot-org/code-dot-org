@@ -1086,6 +1086,7 @@ DEPENDENCIES
   open_uri_redirections
   os
   packs-rails (~> 0.0.5)
+  packwerk
   parallel
   parallel_tests
   paranoia (~> 2.5.0)

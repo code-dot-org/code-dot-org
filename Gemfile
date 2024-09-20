@@ -366,3 +366,4 @@ gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
 
 gem "packs-rails", "~> 0.0.5"
+gem 'packwerk'
