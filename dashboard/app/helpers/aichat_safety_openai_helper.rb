@@ -1,12 +1,12 @@
-module GenaiSafetyHelper
+module AichatSafetyOpenaiHelper
   OPEN_AI_URL = 'https://api.openai.com/v1/chat/completions'
-  OPENAI_GENAI_SAFETY_API_KEY = CDO.openai_genai_safety_api_key
+  OPENAI_API_KEY = CDO.openai_aichat_safety_api_key
   GPT_MODEL = 'gpt-4o-mini-2024-07-18'
   CHECK_FOR_INAPPROPRIATE_PROMPT = 'You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an american public middle school classroom. Examples of innapropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is innapropriate respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.'
   VALID_EVALUATION_RESPONSES = ['INAPPROPRIATE', 'OK']
 
   def self.safe?(text)
-    # Try twice in case of both network errors, or GPT not correctly following directions and
+    # Try twice in case of both network errors, or model not correctly following directions and
     # replying with something other than 'INAPPROPRIATE' or 'OK'.
     Retryable.retryable(tries: 2) do
       _openai_check_safe?(text)
@@ -14,12 +14,12 @@ module GenaiSafetyHelper
   end
 
   def self._openai_check_safe?(text)
-    # Use GPT 4o-mini with CHECK_FOR_INAPPROPRIATE_PROMPT to check if text is inappropriate or safe
+    # Call OpenAI with CHECK_FOR_INAPPROPRIATE_PROMPT to check if text is inappropriate or safe
     response = HTTParty.post(
       OPEN_AI_URL,
       headers: {
         "Content-Type" => "application/json",
-        "Authorization" => "Bearer #{OPENAI_GENAI_SAFETY_API_KEY}"
+        "Authorization" => "Bearer #{OPENAI_API_KEY}"
       },
       body: {
         model: GPT_MODEL,
