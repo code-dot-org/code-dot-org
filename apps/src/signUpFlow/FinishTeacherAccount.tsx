@@ -21,6 +21,7 @@ import {
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
+  SCHOOL_COUNTRY_SESSION_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -52,7 +53,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
     const school = sessionStorage.getItem(SCHOOL_ID_SESSION_KEY);
     const schoolZip = sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY);
     const schoolName = sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY);
-    const fetchNewUrlParams = `new_sign_up=true&user_type=teacher&email=${encodedEmail}&name=${name}&email_preference_opt_in=${emailOptInChecked}&school=${school}&school_id=${school}&school_zip=${schoolZip}&school_name=${schoolName}`;
+    const schoolCountry = sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY);
+    const fetchNewUrlParams = `new_sign_up=true&user_type=teacher&email=${encodedEmail}&name=${name}&email_preference_opt_in=${emailOptInChecked}&school=${school}&school_id=${school}&school_zip=${schoolZip}&school_name=${schoolName}&school_country=${schoolCountry}`;
 
     fetch(`/users/sign_up?${fetchNewUrlParams}`, {
       method: 'GET',

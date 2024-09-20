@@ -9,6 +9,7 @@ const USER_GENDER_SESSION_KEY = 'gender';
 const SCHOOL_ID_SESSION_KEY = 'schoolId';
 const SCHOOL_ZIP_SESSION_KEY = 'schoolZip';
 const SCHOOL_NAME_SESSION_KEY = 'schoolName';
+const SCHOOL_COUNTRY_SESSION_KEY = 'schoolCountry';
 
 export {
   ACCOUNT_TYPE_SESSION_KEY,
@@ -22,4 +23,5 @@ export {
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
+  SCHOOL_COUNTRY_SESSION_KEY,
 };
