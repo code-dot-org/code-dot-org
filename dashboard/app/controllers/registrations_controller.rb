@@ -24,14 +24,14 @@ class RegistrationsController < Devise::RegistrationsController
     if PartialRegistration.in_progress?(session)
       if params[:new_sign_up].present?
         user_params = params || ActionController::Parameters.new
-        user_params[:user_type] = params[:user_type] ? params[:user_type] : session[:default_sign_up_user_type]
+        user_params[:user_type] = params[:user_type].presence || session[:default_sign_up_user_type]
         user_params[:email] = params[:email]
         user_params[:age] = user_params[:user_type] == 'teacher' ? '21+' : params[:age]
 
         # Set email and data transfer preferences
         if user_params[:user_type] == 'teacher'
           user_params[:email_preference_opt_in_required] = true
-          user_params[:email_preference_opt_in] = params[:email_preference_opt_in] ? 'yes' : 'no'
+          user_params[:email_preference_opt_in] = params[:email_preference_opt_in] == 'true' ? 'yes' : 'no'
           user_params[:email_preference_request_ip] = request.ip
           user_params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
           user_params[:email_preference_form_kind] = '0'
