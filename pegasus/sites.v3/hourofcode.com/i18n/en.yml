@@ -10936,7 +10936,7 @@
 
   hoc_events:
     heading: "Register to host an Hour of Code"
-    desc: "Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October."
+    desc: "Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in September."
     button: "Register my event"
     register:
       heading: "Register your event"

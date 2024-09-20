@@ -1,7 +1,6 @@
 ---
 title: Shëmbuj Zgjidhjesh në Mbështetje të Javës së Arsmimit në Shkencat Kompjuterike dhe të Orës së Kodimit
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -12,7 +11,7 @@ nav: promote_nav
 
 * * *
 
-#### Rezolucioni  
+#### Rezolucioni
 
 
 #### Duke mbeshtetur qellimet dhe idealet e "Javes se Edukimit ne Shkenca Kompjuterike"

@@ -10,6 +10,6 @@
 
 %nav.section-nav
   - sections.each do |section|
-    %a.link-button{href: "#" + section[:id]}
+    %a.link-button{href: section[:id] == "emails" ? "#sample-emails" : "#" + section[:id]}
       %i{class: "fa-solid fa-#{section[:icon]}"}
       = hoc_s("hoc_resources.sections.#{section[:id]}")
