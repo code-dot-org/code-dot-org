@@ -5,7 +5,7 @@ module AichatSafetyOpenaiHelper
   CHECK_FOR_INAPPROPRIATE_PROMPT = 'You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an american public middle school classroom. Examples of innapropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is innapropriate respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.'
   VALID_EVALUATION_RESPONSES = ['INAPPROPRIATE', 'OK']
 
-  def self.safe?(text)
+  def self.appropriate?(text)
     # Try twice in case of both network errors, or model not correctly following directions and
     # replying with something other than 'INAPPROPRIATE' or 'OK'.
     Retryable.retryable(tries: 2) do
@@ -13,7 +13,7 @@ module AichatSafetyOpenaiHelper
     end
   end
 
-  def self._openai_check_safe?(text)
+  def self._openai_check_appropriate?(text)
     # Call OpenAI with CHECK_FOR_INAPPROPRIATE_PROMPT to check if text is inappropriate or safe
     response = HTTParty.post(
       OPEN_AI_URL,
