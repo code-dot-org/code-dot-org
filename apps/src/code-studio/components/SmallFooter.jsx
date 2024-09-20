@@ -141,6 +141,7 @@ export default class SmallFooter extends React.Component {
       base: {
         // subtract top/bottom padding from row height
         height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined,
+        alignItems: 'center',
       },
       // Additional styling to base, above.
       baseFullWidth: {

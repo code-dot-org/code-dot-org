@@ -29,19 +29,17 @@ const I18nDropdown: React.FC<I18nDropdownProps> = ({
       style={{marginBottom: '0px'}}
     >
       <input type="hidden" name="user_return_to" value={window.location.href} />
-      <div style={{display: 'flex', alignItems: 'center'}}>
-        <SimpleDropdown
-          className="languageSelect"
-          name="locale"
-          selectedValue={currentLocale()}
-          onChange={handleChange}
-          items={optionsForLocaleSelect}
-          labelText="Select Language"
-          isLabelVisible={false}
-          size="xs"
-          color="gray"
-        />
-      </div>
+      <SimpleDropdown
+        className="languageSelect"
+        name="locale"
+        selectedValue={currentLocale()}
+        onChange={handleChange}
+        items={optionsForLocaleSelect}
+        labelText="Select Language"
+        isLabelVisible={false}
+        size="xs"
+        color="gray"
+      />
     </form>
   );
 };

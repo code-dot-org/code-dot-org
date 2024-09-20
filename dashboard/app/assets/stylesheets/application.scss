@@ -724,7 +724,7 @@ $small-footer-standard-width: 400px;
     border: 0;
   }
 
-  .copyright-button, .i18n-dropdown-container, .globe-icon {
+  .copyright-button, .languageSelect {
     align-self: center;
   }
 
@@ -738,25 +738,6 @@ $small-footer-standard-width: 400px;
       border: 1px solid $lighter_gray;
       background-color: $background-gray;
     }
-  }
-
-  .globe-icon {
-    color: $charcoal;
-    font-size: 18px;
-    margin: 0 1px;
-  }
-
-  .i18n-dropdown-container {
-    display: flex;
-    border: 1px solid $lighter_gray;
-    border-radius: 4px;
-    background-color: $white;
-    padding: 0 0 0 4px;
-    margin: 0;
-  }
-
-  .i18n-dropdown-container:dir(rtl) {
-    padding: 0 4px 0 0;
   }
 }
 
@@ -855,12 +836,9 @@ $small-footer-standard-width: 400px;
       .version-caption {
         display: none;
       }
-    }
-
-    .i18n-dropdown-container, .copyright-link {
-      height: 26px;
-      box-sizing: border-box;
-      border: solid 1px $neutral_dark40;
+      p {
+        color: $neutral_dark40;
+      }
     }
 
     .copyright-button {
@@ -868,12 +846,32 @@ $small-footer-standard-width: 400px;
 
       .copyright-link {
         width: 26px;
+        height: 26px;
+        border: solid 1px;
+        box-sizing: border-box;
       }
     }
 
-    .i18n-dropdown-container, .globe-icon, #locale, .copyright-link {
+    .languageSelect, #locale, .copyright-link {
+      border-color: $neutral_dark40;
       background-color: initial;
       color: $neutral_dark40;
+
+      > div {
+        select {
+          height: 26px;
+          background-color: initial;
+          color: $neutral_dark40;
+        }
+        &::after {
+          background-color: initial;
+          color: $neutral_dark40;
+        }
+        &::before {
+          background-color: initial;
+          color: $neutral_dark40;
+        }
+      }
     }
   }
 
