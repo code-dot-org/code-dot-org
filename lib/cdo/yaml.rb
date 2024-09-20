@@ -14,7 +14,7 @@ module Cdo
     end
 
     # Return +nil+ if file not found.
-    def load_file(path)
+    def load_file(path, **kwargs)
       super
     rescue Errno::ENOENT
       nil
