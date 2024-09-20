@@ -1,10 +1,6 @@
 # LTI 1.3 Integration
 
-Code.org is developing an LTI 1.3 compliant integration for Canvas and Schoology.
-This integration is undergoing beta testing with a small group of Canvas users
-and is expected to release broadly in 2024.
-
-The following documentation details the steps required to install Code.org as an
+The following documentation details manual steps to install Code.org as an
 LTI Tool in Canvas and Schoology. Completing the following steps will generate a
 `Client ID`.
 
@@ -12,7 +8,12 @@ Please supply the Client ID to Code.org via
 [this portal][lti-integration-portal] to register your LMS & complete your 
 installation.
 
+For updated and more automated instructions, please visit the official
+[support pages][support-pages]. These instructions act as a secondary, less
+supported option for installing Code.org as an LTI Tool in Canvas and Schoology.
+
 [lti-integration-portal]: https://studio.code.org/lti/v1/integrations
+[support-pages]: https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org
 
 ## Table of Contents
 
@@ -34,12 +35,6 @@ Visual guides for Steps 1 - 3 can be [found here][install-canvas]
     - Notes: `(Optional) Add any notes about the LTI key, such as the reason it was created`
 
 ### Step 2: Configure your LTI Key
-
-There are two options for configuring your LTI key. The easiest is to paste in
-a JSON configuration snippet (Option 1). Optionally, you can elect to manually
-enter these settings (Option 2).
-
-#### Option 1 (Easiest): Enter JSON Details
 
 The easiest way to configure the LTI Tool in Canvas is via the `Paste JSON`
 option.  
@@ -77,15 +72,7 @@ option.
         "text": "Launch Code.org",
         "placements": [
           {
-            "placement": "account_navigation",
-            "message_type": "LtiResourceLinkRequest"
-          },
-          {
             "placement": "link_selection",
-            "message_type": "LtiResourceLinkRequest"
-          },
-          {
-            "placement": "assignment_menu",
             "message_type": "LtiResourceLinkRequest"
           },
           {
@@ -108,32 +95,6 @@ option.
   }
 }
 ```
-
-#### Option 2: Manual Entry 
-
-Optionally, you can manually enter the configuration details. Here are the values to enter in the associated text-input fields:
-
-1. Select `Manual Entry` under the `Method` drop-down menu
-1. Title: `Code.org`
-1. Description: `Code.org LTI Tool`
-1. Target Link URI: `https://studio.code.org/home`
-1. OpenID Connect Initiation URL: `https://studio.code.org/lti/v1/login`
-1. JWK Method - Public JWK URL: `https://studio.code.org/oauth/jwks`
-1. LTI Advantage Services: Enable all
-1. Placements: Select `Link Selection` and `Submission Type` from the Placements
-selector. NOTE: Code.org currently only supports `LtiResourceLinkRequest`. Do not
-select any placements that utilize an `LtiDeepLinkRequest`.
-1. Additional Settings - Custom Fields:
-    ```
-    email=$Person.email.primary
-    full_name=$Person.name.full
-    given_name=$Person.name.given
-    family_name=$Person.name.family
-    display_name=$Person.name.display
-    section_ids=$Canvas.course.sectionIds
-    section_names=$com.instructure.User.sectionNames
-    ```
-1. Click `Save`
 
 ### Step 3: Copy your Client ID
 
