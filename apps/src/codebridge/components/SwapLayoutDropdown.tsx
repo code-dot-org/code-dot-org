@@ -1,12 +1,14 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
+import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {EVENTS} from '../metrics/AnalyticsConstants';
-import {useAppSelector} from '../util/reduxHooks';
-
-import {useCodebridgeContext} from './codebridgeContext';
-import {sendCodebridgeAnalyticsEvent} from './utils/analyticsReporterHelper';
+import moduleStyles from './swap-layout-dropdown.module.scss';
 
 /*
   Please note - this is a fairly brittle component in that it's only allowing toggling between
@@ -21,14 +23,11 @@ import {sendCodebridgeAnalyticsEvent} from './utils/analyticsReporterHelper';
   Anyway, again, it's fine as is, but will require refactoring if we expand use cases.
 */
 
-const SwapLayoutButton: React.FunctionComponent = () => {
+const SwapLayoutDropdown: React.FunctionComponent = () => {
   const {config, setConfig} = useCodebridgeContext();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
-  const iconName =
-    config.activeGridLayout === 'horizontal' ? 'table-columns' : 'table-rows';
-
-  const onClick = useCallback(() => {
+  const onLayoutChange = useCallback(() => {
     const newLayout =
       config.activeGridLayout === 'horizontal' ? 'vertical' : 'horizontal';
     sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_CONSOLE, appName, {
@@ -44,16 +43,25 @@ const SwapLayoutButton: React.FunctionComponent = () => {
     return null;
   }
 
+  const iconName =
+    config.activeGridLayout === 'horizontal' ? 'up-down' : 'left-right';
+  const layoutLabel =
+    config.activeGridLayout === 'horizontal'
+      ? codebridgeI18n.verticalLayout()
+      : codebridgeI18n.defaultLayout();
+
   return (
-    <Button
-      icon={{iconStyle: 'solid', iconName}}
-      isIconOnly
-      color={'black'}
-      onClick={onClick}
-      ariaLabel={'change layout'}
-      size={'xs'}
-    />
+    <PopUpButton iconName="ellipsis-v" alignment="right">
+      <div onClick={onLayoutChange} className={moduleStyles.layoutItem}>
+        <FontAwesomeV6Icon
+          iconName={iconName}
+          iconStyle={'solid'}
+          className={moduleStyles.layoutIcon}
+        />
+        <div>{layoutLabel}</div>
+      </div>
+    </PopUpButton>
   );
 };
 
-export default SwapLayoutButton;
+export default SwapLayoutDropdown;
