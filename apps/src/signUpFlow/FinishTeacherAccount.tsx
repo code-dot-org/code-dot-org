@@ -44,7 +44,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     }
   };
 
-  const submitTeacherAccount = () => {
+  const submitTeacherAccount = async () => {
     sendFinishEvent();
 
     const encodedEmail = encodeURIComponent(
@@ -56,22 +56,23 @@ const FinishTeacherAccount: React.FunctionComponent<{
     const schoolCountry = sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY);
     const fetchNewUrlParams = `new_sign_up=true&user_type=teacher&email=${encodedEmail}&name=${name}&email_preference_opt_in=${emailOptInChecked}&school=${school}&school_id=${school}&school_zip=${schoolZip}&school_name=${schoolName}&school_country=${schoolCountry}`;
 
-    fetch(`/users/sign_up?${fetchNewUrlParams}`, {
+    await fetch(`/users/sign_up?${fetchNewUrlParams}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then(async () => {
-      fetch(`/users?new_sign_up=true&user_email=${encodedEmail}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': await getAuthenticityToken(),
-        },
-      }).then(() => {
-        navigateToHref('/home');
-      });
     });
+
+    const authToken = await getAuthenticityToken();
+    await fetch(`/users?new_sign_up=true&user_email=${encodedEmail}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': authToken,
+      },
+    });
+
+    navigateToHref('/home');
   };
 
   const sendFinishEvent = (): void => {
