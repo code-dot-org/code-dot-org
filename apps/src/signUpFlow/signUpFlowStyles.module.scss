@@ -68,6 +68,11 @@ span {
   margin-inline: auto;
   max-width: 100%;
 
+  a {
+    text-decoration: underline;
+    color: unset;
+  }
+
   .containerWrapper {
     display: flex;
     justify-content: space-between;
