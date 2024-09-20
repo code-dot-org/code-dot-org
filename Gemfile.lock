@@ -598,10 +598,9 @@ GEM
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
     oj (3.14.2)
-    omniauth (2.1.2)
+    omniauth (1.9.2)
       hashie (>= 3.4.6)
-      rack (>= 2.2.3)
-      rack-protection
+      rack (>= 1.6.2, < 3)
     omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
     omniauth-google-oauth2 (0.6.0)
@@ -611,9 +610,9 @@ GEM
     omniauth-oauth2 (1.7.3)
       oauth2 (>= 1.4, < 3)
       omniauth (>= 1.9, < 3)
-    omniauth-rails_csrf_protection (1.0.2)
+    omniauth-rails_csrf_protection (0.1.2)
       actionpack (>= 4.2)
-      omniauth (~> 2.0)
+      omniauth (>= 1.3.1)
     open-uri (0.1.0)
       stringio
       time
@@ -1028,7 +1027,7 @@ DEPENDENCIES
   omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.6.0)
   omniauth-microsoft_v2_auth!
-  omniauth-rails_csrf_protection (~> 1.0.2)
+  omniauth-rails_csrf_protection (~> 0.1)
   open_uri_redirections
   os
   parallel
