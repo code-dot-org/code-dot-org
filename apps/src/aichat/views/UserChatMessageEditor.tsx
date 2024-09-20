@@ -19,7 +19,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
 
   const dispatch = useAppDispatch();
 
-  const inputRef = useRef<HTMLDivElement | null>(null);
+  const inputRef = useRef<HTMLTextAreaElement | null>(null);
 
   const handleSubmit = useCallback(
     (userMessage: string) => {
@@ -36,7 +36,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
     if (!disabled) {
       // Return focus to user input textarea after user submits chat message and response displayed
       // or after user updates model customizations.
-      inputRef.current?.querySelector('textarea')?.focus();
+      inputRef.current?.focus();
     }
   }, [disabled]);
 

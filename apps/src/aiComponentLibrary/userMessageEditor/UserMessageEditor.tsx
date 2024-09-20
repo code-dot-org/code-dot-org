@@ -20,7 +20,7 @@ export interface UserMessageEditorProps {
 }
 
 const UserMessageEditor = React.forwardRef<
-  HTMLDivElement,
+  HTMLTextAreaElement,
   UserMessageEditorProps
 >(
   (
@@ -57,13 +57,13 @@ const UserMessageEditor = React.forwardRef<
     const icon = {iconName: 'paper-plane'};
     return (
       <div
-        ref={ref}
         className={classnames(
           moduleStyles.editorContainer,
           editorContainerClassName
         )}
       >
         <textarea
+          ref={ref}
           id="uitest-chat-textarea"
           className={moduleStyles.textArea}
           placeholder={
