@@ -53,11 +53,7 @@ const SwapLayoutDropdown: React.FunctionComponent = () => {
   return (
     <PopUpButton iconName="ellipsis-v" alignment="right">
       <div onClick={onLayoutChange} className={moduleStyles.layoutItem}>
-        <FontAwesomeV6Icon
-          iconName={iconName}
-          iconStyle={'solid'}
-          className={moduleStyles.layoutIcon}
-        />
+        <FontAwesomeV6Icon iconName={iconName} iconStyle={'solid'} />
         <div>{layoutLabel}</div>
       </div>
     </PopUpButton>

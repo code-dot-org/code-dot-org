@@ -17,7 +17,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
       <div className={moduleStyles.buttonContainer}>
         <Button
           isIconOnly
-          //color={'black'}
+          color={'black'}
           icon={{iconStyle: 'solid', iconName: 'eraser'}}
           ariaLabel="clear console"
           onClick={clearOutput}
@@ -25,7 +25,6 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
         />
         <SwapLayoutDropdown />
       </div>
-      <div className={moduleStyles.gap} />
     </>
   );
 };
