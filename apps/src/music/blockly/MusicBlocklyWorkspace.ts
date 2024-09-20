@@ -40,8 +40,7 @@ export default class MusicBlocklyWorkspace {
     if (this.isBlocklyEnvironmentSetup) {
       return;
     }
-
-    setUpBlocklyForMusicLab(blockMode);
+    setUpBlocklyForMusicLab();
     this.isBlocklyEnvironmentSetup = true;
   }
 
