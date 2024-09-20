@@ -22,7 +22,7 @@ Resources:
     Type: AWS::SageMaker::Model
     Properties:
       ModelName: !Sub "<%= "#{config[:model_name]}-${Environment}-#{Time.now.to_i}" %>"
-      ExecutionRoleArn: !ImportValue IAM-SagemakerModelExecutionRoleARN
+      ExecutionRoleArn: !ImportValue IAM-SagemakerExecutionRoleARN
       PrimaryContainer:
         Environment:
           {

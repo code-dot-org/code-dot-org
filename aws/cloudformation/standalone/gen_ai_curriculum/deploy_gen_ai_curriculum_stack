@@ -96,20 +96,28 @@ def main
   return unless $?&.exitstatus == 0
   puts "Success!".colorize(:light_green)
 
-  if options[:dry_run]
-    puts "\nCreated Cloudformation template. Re-run this script with dry-run: false to deploy.".colorize(:light_green)
-    return
-  end
+  puts "\nGetting AWS Account ID..."
+  identity = `aws sts get-caller-identity`
+  return unless $?&.exitstatus == 0
+  account_id = JSON.parse(identity)['Account']
+  puts "Using AWS Account ID: #{account_id.colorize(:light_cyan)}"
 
-  puts "\nDeploying stack..."
   cmd = "aws cloudformation deploy " \
     "--stack-name gen-ai-curriculum-#{options[:environment]} " \
     "--template-file gen_ai_curriculum.yml " \
+    "--role-arn arn:aws:iam::#{account_id}:role/admin/CloudFormationService " \
     "--parameter-overrides " \
     "Environment=#{options[:environment]} " \
     "HuggingFaceImageUri=#{image_uri} " \
     "HuggingFaceToken=#{options[:token]}"
 
+  if options[:dry_run]
+    puts "\nWould have run command: " + cmd.colorize(:light_cyan)
+    puts "\nCreated Cloudformation template. Re-run this script with dry-run: false to deploy.".colorize(:light_green)
+    return
+  end
+
+  puts "\nDeploying stack..."
   puts "Running command: " + cmd.colorize(:light_cyan)
   Open3.popen3 cmd do |_stdin, stdout, stderr, thread|
     while (line = stdout.gets || stderr.gets)
