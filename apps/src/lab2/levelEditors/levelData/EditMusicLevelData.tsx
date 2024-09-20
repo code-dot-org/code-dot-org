@@ -20,6 +20,7 @@ import RawJsonEditor from './RawJsonEditor';
 import moduleStyles from './edit-music-level-data.module.scss';
 
 const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024'];
+const RECOMMENDED_LIBRARY = 'launch2024';
 
 const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
 
@@ -39,6 +40,10 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
   }, []);
 
   const [levelData, setLevelData] = useState(initialLevelData);
+  // Immediately set a level, if needed, so we can populate its allowed sounds.
+  if (!levelData.library) {
+    levelData.library = RECOMMENDED_LIBRARY;
+  }
 
   const blockMode = levelData.blockMode || BlockMode.SIMPLE2;
   useEffect(() => {
@@ -85,6 +90,10 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       />
       <CollapsibleSection headerContent="Library & Sounds">
         <div className={moduleStyles.section}>
+          <i>
+            Note that currently, all levels within a lesson must use the same
+            library.
+          </i>
           <div>
             <SimpleDropdown
               labelText="Selected Library"
