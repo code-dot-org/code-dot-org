@@ -1,6 +1,5 @@
 require 'test_helper'
 require 'securerandom'
-require_relative '../../../lib/clients/lti_dynamic_registration_client'
 require 'webmock/minitest'
 WebMock.disable_net_connect!(allow_localhost: true)
 

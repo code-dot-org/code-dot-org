@@ -3,7 +3,6 @@ require "queries/lti"
 require "services/lti"
 require "policies/lti"
 require "concerns/partial_registration"
-require "clients/lti_advantage_client"
 require "cdo/honeybadger"
 require 'metrics/events'
 
