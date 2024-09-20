@@ -15,6 +15,7 @@
 @import url($font-awesome-regular-url);
 @import url($font-awesome-v4-fonts-url);
 @import url($font-awesome-v4-shims-url);
+@import url($font-awesome-custom-icons-url);
 
 /* Barlow font - used for headings */
 @font-face {
@@ -22,7 +23,7 @@
   font-style: normal;
   font-weight: 600;
   src: url('/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf') format('truetype'),
-local('?');
+  local('?');
 }
 
 @font-face {
