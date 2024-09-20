@@ -264,11 +264,16 @@ span {
     }
 
     .greyTextbox {
-      margin-top: 1rem;
+      margin: 0.5rem 1rem 0.75rem 1rem;
       background-color: $light_gray_50;
       padding: 1rem;
       border-radius: 4px;
       box-sizing: border-box;
+
+      .buttonContainer {
+        display: flex;
+        flex-direction: row;
+      }
 
       p {
         margin-bottom: .25rem;
@@ -280,31 +285,31 @@ span {
       }
 
       img {
-        height: 24px;
-        width: 24px;
+        height: 20px;
+        width: 20px;
       }
 
       i {
         float: right;
-        margin: .5rem 0 .5rem .5rem;
+        margin: .625rem 0 .5rem .5rem;
         font-size: 1rem;
-        color: $light_gray_200;
+        color: $light_gray_400;
       }
 
       span {
         font-weight: 600;
         font-size: .875rem;
+        color: $black;
       }
 
       a {
+        border-color: $light_gray_400;
         box-shadow: none;
-        margin: .75rem .25rem;
-        padding: 4px 14px;
-        height: 42px;
-
-        div {
-          line-height: 32px;
-        }
+        margin: 0.5rem 0.5rem 0 0;
+        padding-inline: 14px;
+        height: 37px;
+        display: flex;
+        align-items: center;
       }
     }
   }

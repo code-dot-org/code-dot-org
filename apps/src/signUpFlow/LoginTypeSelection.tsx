@@ -220,26 +220,28 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <BodyThreeText>
               {locale.access_detailed_instructions()}
             </BodyThreeText>
-            <Button
-              href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
-              onClick={sendLMSAnalyticsEvent}
-              color={Button.ButtonColor.white}
-              text={'Canvas'}
-              icon={'arrow-up-right-from-square'}
-              __useDeprecatedTag
-            >
-              <img src={canvas} alt="" />
-            </Button>
-            <Button
-              href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
-              onClick={sendLMSAnalyticsEvent}
-              color={Button.ButtonColor.white}
-              text={'Schoology'}
-              icon={'arrow-up-right-from-square'}
-              __useDeprecatedTag
-            >
-              <img src={schoology} alt="" />
-            </Button>
+            <div className={style.buttonContainer}>
+              <Button
+                href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
+                onClick={sendLMSAnalyticsEvent}
+                color={Button.ButtonColor.white}
+                text={'Canvas'}
+                icon={'arrow-up-right-from-square'}
+                __useDeprecatedTag
+              >
+                <img src={canvas} alt="" />
+              </Button>
+              <Button
+                href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
+                onClick={sendLMSAnalyticsEvent}
+                color={Button.ButtonColor.white}
+                text={'Schoology'}
+                icon={'arrow-up-right-from-square'}
+                __useDeprecatedTag
+              >
+                <img src={schoology} alt="" />
+              </Button>
+            </div>
           </div>
         </div>
         <div className={style.dividerContainer}>
