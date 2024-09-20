@@ -1,12 +1,16 @@
 import {BlocklyOptions, Workspace, WorkspaceSvg} from 'blockly';
+import GoogleBlockly from 'blockly/core';
 import {Abstract} from 'blockly/core/events/events_abstract';
+import {ToolboxItemInfo} from 'blockly/core/utils/toolbox';
 
 import {Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ValueOf} from '@cdo/apps/types/utils';
+import {nameComparator} from '@cdo/apps/util/sort';
 
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {BlockMode, Triggers} from '../constants';
@@ -19,7 +23,7 @@ import {
 } from './constants';
 import {setUpBlocklyForMusicLab} from './setup';
 import {getToolbox} from './toolbox';
-import {ToolboxData} from './toolbox/types';
+import {ToolboxType, ToolboxData} from './toolbox/types';
 
 const experiments = require('@cdo/apps/util/experiments');
 
@@ -51,6 +55,9 @@ export default class MusicBlocklyWorkspace {
   private lastExecutedEvents: CompiledEvents;
   private triggerIdToStartType: {[id: string]: string};
   private headlessMode: boolean;
+  private toolbox?: ToolboxData;
+  private toolboxType?: ToolboxType;
+  private blockMode?: ValueOf<typeof BlockMode>;
 
   constructor(
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
@@ -62,6 +69,9 @@ export default class MusicBlocklyWorkspace {
     this.triggerIdToStartType = {};
     this.lastExecutedEvents = {};
     this.headlessMode = false;
+    this.toolbox = undefined;
+    this.toolboxType = undefined;
+    this.blockMode = undefined;
   }
 
   /**
@@ -86,6 +96,9 @@ export default class MusicBlocklyWorkspace {
 
     this.container = container;
 
+    this.toolbox = toolbox;
+    this.toolboxType = toolbox?.type;
+    this.blockMode = blockMode;
     const toolboxBlocks = getToolbox(blockMode, toolbox);
 
     // This dialog is used for naming variables, which are only present in advanced mode.
@@ -444,6 +457,46 @@ export default class MusicBlocklyWorkspace {
     const codeCopy = JSON.parse(JSON.stringify(code));
 
     Blockly.serialization.workspaces.load(codeCopy, this.workspace);
+
+    if (this.toolboxType === 'flyout') {
+      this.generateFunctionCallBlocks();
+    }
+  }
+
+  generateFunctionCallBlocks() {
+    const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
+
+    // Find all functions in the workspace.
+    (this.workspace?.getTopBlocks() as ProcedureBlock[])
+      .filter(block => block.type === 'procedures_defnoreturn')
+      .forEach(block => {
+        allFunctions.push(
+          Blockly.serialization.procedures.saveProcedure(
+            block.getProcedureModel()
+          )
+        );
+      });
+
+    const blockList: ToolboxItemInfo[] = [];
+
+    allFunctions.sort(nameComparator).forEach(({name, id, parameters}) => {
+      blockList.push({
+        kind: 'block',
+        type: 'procedures_callnoreturn',
+        extraState: {
+          name,
+          id,
+          params: parameters?.map(param => param.name),
+        },
+      });
+    });
+
+    if (this.blockMode) {
+      const existingToolbox = getToolbox(this.blockMode, this.toolbox);
+      existingToolbox.contents = existingToolbox.contents.concat(blockList);
+      (this.workspace as WorkspaceSvg).updateToolbox(existingToolbox);
+      console.log(blockList);
+    }
   }
 
   private callUserGeneratedCode(
