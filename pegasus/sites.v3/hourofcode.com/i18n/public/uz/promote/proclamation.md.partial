@@ -1,7 +1,6 @@
 ---
 title: Namunaviy echim, kompyuter fanlari bo‘yicha ta'lim haftaligi va soat soati
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -12,7 +11,7 @@ nav: promote_nav
 
 * * *
 
-#### **QAROR**  
+#### **QAROR**
 
 
 #### “Kompyuter Fanlari Ta’lim Haftasi”ning maqsad va g‘oyalarini qo‘llab-quvvatlash

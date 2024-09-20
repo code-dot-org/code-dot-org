@@ -9,7 +9,7 @@ import {BodyThreeText, EmText} from '@cdo/apps/componentLibrary/typography';
 import {
   selectSection,
   sectionsNameAndId,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {reload} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 

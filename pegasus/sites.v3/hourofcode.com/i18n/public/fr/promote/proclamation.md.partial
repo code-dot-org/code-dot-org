@@ -1,7 +1,6 @@
 ---
 title: Modèle de résolution de soutien aux science de l'informatique et Une Heure de Code
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -12,7 +11,7 @@ nav: promote_nav
 
 * * *
 
-#### **RESOLUTION**  
+#### **RESOLUTION**
 
 
 #### Supporting the goals and ideals of "Computer Science Education Week"
