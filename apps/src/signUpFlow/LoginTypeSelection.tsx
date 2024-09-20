@@ -25,7 +25,7 @@ import {ACCOUNT_TYPE_SESSION_KEY} from './signUpFlowConstants';
 import style from './signUpFlowStyles.module.scss';
 
 const CHECK_ICON = 'circle-check';
-const X_ICON = 'circle-x';
+const X_ICON = 'circle-xmark';
 
 const LoginTypeSelection: React.FunctionComponent = () => {
   const [password, setPassword] = useState('');
