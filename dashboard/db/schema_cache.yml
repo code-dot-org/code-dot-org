@@ -8300,7 +8300,20 @@ indexes:
     type:
     using: :btree
     comment:
-  aichat_requests: []
+  aichat_requests:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: aichat_requests
+    name: index_aichat_requests_on_execution_status
+    unique: false
+    columns:
+    - execution_status
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   aichat_sessions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_sessions
@@ -13698,7 +13711,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240916200341
+version: 20240920175046
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
