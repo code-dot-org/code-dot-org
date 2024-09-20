@@ -6,6 +6,9 @@ import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import SubLevelDropdown from '@cdo/apps/templates/levelSummary/SubLevelDropdown';
 import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
 import SummaryTeacherInstructions from '@cdo/apps/templates/levelSummary/SummaryTeacherInstructions';
+import QuestionRenderer from '@cdo/apps/templates/levelSummary/QuestionRenderer';
+
+import styles from './summary.module.scss';
 
 const SummaryContainer = ({store, scriptData, isLevelGroup}) => {
   const [updatedScriptData, setUpdatedScriptData] = useState({
@@ -32,11 +35,17 @@ const SummaryContainer = ({store, scriptData, isLevelGroup}) => {
   return (
     <Provider store={store}>
       {isLevelGroup && (
-        <SubLevelDropdown
-          subLevels={scriptData.levels}
-          handleChange={updateSubLevel}
-        />
+        <div className={styles.subLevelDropdownContainer}>
+          <SubLevelDropdown
+            subLevels={scriptData.levels}
+            handleChange={updateSubLevel}
+            //className={styles.subLevelDropdown}
+          />
+        </div>
       )}
+      <QuestionRenderer
+        viewingLevelData={updatedScriptData.viewing_level_data}
+      />
       <InstructorsOnly>
         <SummaryResponses scriptData={updatedScriptData} />
         <SummaryTeacherInstructions scriptData={updatedScriptData} />
