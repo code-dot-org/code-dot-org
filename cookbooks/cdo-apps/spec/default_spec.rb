@@ -10,7 +10,7 @@ describe 'cdo-apps::default' do
     stub_command("which gem && gem --version | grep -q '3.3.22'").and_return(true)
     stub_command('bundle check').and_return(true)
     ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '14.04') do |node|
-      node.automatic['memory']['total'] = "#{(8 * 1024 * 1024)}kB"
+      node.automatic['memory']['total'] = "#{8 * 1024 * 1024}kB"
       node.automatic['cpu']['total'] = 32
       node.automatic['lsb']['codename'] = 'trusty'
       node.automatic[:home] = Dir.home
