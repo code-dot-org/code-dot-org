@@ -221,4 +221,18 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     assert_equal OmniAuthSection.column_for_attribute(:name).limit, section.name.length
     assert section.name.end_with?('...')
   end
+
+  test 'unarchive archived sections when imported' do
+    owner = create :teacher
+
+    section = create :section, user: owner, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM, hidden: true
+
+    OmniAuthSection.from_omniauth(
+      code: section.code,
+      type: section.login_type,
+      owner_id: owner.id,
+      students: [],
+        )
+    refute section.reload.hidden
+  end
 end

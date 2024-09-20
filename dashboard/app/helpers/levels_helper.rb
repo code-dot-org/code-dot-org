@@ -353,7 +353,7 @@ module LevelsHelper
     @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
 
     @app_options[:dialog] = {
-      skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
+      skipSound: !!@level.properties['options'].try(:[], 'skip_sound'),
       preTitle: @level.properties['pre_title'],
       fallbackResponse: @fallback_response.to_json,
       callback: @callback,

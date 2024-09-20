@@ -8,6 +8,8 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 
 import locale from './locale';
@@ -43,6 +45,22 @@ const FinishTeacherAccount: React.FunctionComponent<{
     sessionStorage.setItem(
       EMAIL_OPT_IN_SESSION_KEY,
       `${newOptInCheckedChoice}`
+    );
+  };
+
+  const sendFinishEvent = (): void => {
+    const hasSchool = !!document.querySelector(
+      'select[name="user[school_info_attributes][school_id]"]'
+    );
+    analyticsReporter.sendEvent(
+      EVENTS.SIGN_UP_FINISHED_EVENT,
+      {
+        'user type': 'teacher',
+        'has school': hasSchool,
+        'has marketing value selected': true,
+        'has display name': !showNameError,
+      },
+      PLATFORMS.BOTH
     );
   };
 
@@ -93,7 +111,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
           className={style.finishSignUpButton}
           color={buttonColors.purple}
           type="primary"
-          onClick={() => console.log('FINISH SIGN UP')}
+          onClick={() => sendFinishEvent()}
           text={locale.go_to_my_account()}
           iconRight={{
             iconName: 'arrow-right',

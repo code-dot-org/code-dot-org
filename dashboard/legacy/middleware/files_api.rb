@@ -1108,6 +1108,8 @@ class FilesApi < Sinatra::Base
       source = JSON.parse(body)['source']
       source_json = JSON.parse(source)
       text = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
+      # Nothing to check if there is no system prompt or retrieval
+      return nil if text.blank?
       # Use AWS Comprehend to check AI Chat contents for toxicity.
       # get_toxicity returns an object with the following fields:
       # text: string, toxicity: number, and max_category {name: string, score: number}
