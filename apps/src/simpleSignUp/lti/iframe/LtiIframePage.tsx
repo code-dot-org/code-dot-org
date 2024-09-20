@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import Typography from '@cdo/apps/componentLibrary/typography';
@@ -14,11 +14,24 @@ interface LtiIframePageProps {
 export const LtiIframePage = ({logoUrl, authUrl}: LtiIframePageProps) => {
   const [callToActionDisabled, setCallToActionDisabled] =
     useState<boolean>(false);
+  const [textContent, setTextContent] = useState(i18n.ltiIframeDescription());
 
   const handleCallToAction = () => {
     window.open(authUrl, '_blank');
     setCallToActionDisabled(true);
+    setTextContent(i18n.ltiIframeRefresh());
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!callToActionDisabled) {
+        setCallToActionDisabled(true);
+        setTextContent(i18n.ltiIframeTimedOut());
+      }
+    }, 300000); // Time out after 5 minutes
+
+    return () => clearTimeout(timer);
+  }, [callToActionDisabled]);
 
   return (
     <main className={styles.mainContentContainer}>
@@ -29,9 +42,7 @@ export const LtiIframePage = ({logoUrl, authUrl}: LtiIframePageProps) => {
           visualAppearance="body-one"
           className={styles.description}
         >
-          {callToActionDisabled
-            ? i18n.ltiIframeRefresh()
-            : i18n.ltiIframeDescription()}
+          {textContent}
         </Typography>
         <div>
           <Button

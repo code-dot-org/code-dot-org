@@ -1707,6 +1707,7 @@
   "ltiIframeDescription": "Please click the button below to continue to Code.org",
   "ltiIframeCallToAction": "Continue to Code.org",
   "ltiIframeRefresh": "Code.org was successfully launched in a new tab. Please refresh the page to access Code.org again.",
+  "ltiIframeTimedOut": "Your session has timed out. Please refresh the page to access Code.org.",
   "ltiLinkAccountExistingAccountCardHeaderLabel": "I have an existing Code.org account",
   "ltiLinkAccountExistingAccountCardContent": "You'll need to sign in to connect your existing Code.org account with {providerName}",
   "ltiLinkAccountExistingAccountCardActionLabel": "Sign in with my account",
