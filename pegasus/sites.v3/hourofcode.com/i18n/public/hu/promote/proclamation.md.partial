@@ -1,7 +1,6 @@
 ---
 title: Mintafelbontás, amely támogatja a számítástechnikai oktatási hetet és a kódolás óráját
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -12,7 +11,7 @@ nav: promote_nav
 
 * * *
 
-#### **CÉLOK**  
+#### **CÉLOK**
 
 
 #### A "Computer Science Education Week" céljait és gondolatát támogatva

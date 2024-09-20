@@ -17,7 +17,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 
 import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';
-import {getSectionRows} from './teacherSectionsRedux';
+import {getSectionRows} from './teacherSectionsReduxSelectors';
 
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 

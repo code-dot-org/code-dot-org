@@ -5,6 +5,8 @@ import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analytics
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
+import {RadioButton} from '@cdo/apps/componentLibrary/radioButton';
+import Tags from '@cdo/apps/componentLibrary/tags';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -26,8 +28,6 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import VersionHistoryRow from './VersionHistoryRow';
 
 import moduleStyles from './version-history.module.scss';
 
@@ -200,15 +200,32 @@ const VersionHistoryDropdown: React.FunctionComponent<
     successfulRestoreCleanUp,
   ]);
 
-  const parseDate = (date: string) => {
-    const dateObject = new Date(date);
-    return dateFormatter.format(dateObject);
-  };
+  const isLatestVersion = useCallback(
+    (versionId: string) => {
+      if (versionId === INITIAL_VERSION_ID) {
+        return versionList.length === 0;
+      }
+      const version = versionList.find(
+        version => version.versionId === versionId
+      );
+      return version && version.isLatest;
+    },
+    [versionList]
+  );
+
+  const parseDate = useCallback(
+    (date: string) => {
+      const dateObject = new Date(date);
+      return dateFormatter.format(dateObject);
+    },
+    [dateFormatter]
+  );
 
   const onVersionChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>, isLatest: boolean) => {
+    (e: React.ChangeEvent<HTMLInputElement>) => {
       setSelectedVersion(e.target.value);
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
+      const isLatest = isLatestVersion(e.target.value);
       if (!isLatest) {
         sendCodebridgeAnalyticsEvent(
           EVENTS.CODEBRIDGE_VERSION_VIEWED,
@@ -224,24 +241,18 @@ const VersionHistoryDropdown: React.FunctionComponent<
         dispatch(loadVersion({versionId: e.target.value}));
       }
     },
-    [appName, dispatch, startSource]
+    [appName, dispatch, isLatestVersion, startSource]
   );
 
   // Function called when clicking 'cancel'. This will reset the project to the current version
   // if the user is viewing an old version, then close the dropdown.
   const handleCancel = useCallback(() => {
     // Go back to current version if we are viewing an old version
-    const versionBeingViewed = versionList.find(
-      version => version.versionId === selectedVersion
-    );
-    if (
-      selectedVersion === INITIAL_VERSION_ID ||
-      (versionBeingViewed && !versionBeingViewed.isLatest)
-    ) {
+    if (!isLatestVersion(selectedVersion)) {
       dispatch(resetToCurrentVersion());
     }
     closeDropdown();
-  }, [closeDropdown, dispatch, selectedVersion, versionList]);
+  }, [closeDropdown, dispatch, isLatestVersion, selectedVersion]);
 
   return isOpen ? (
     <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
@@ -257,25 +268,47 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
       <div className={moduleStyles.versionHistoryList}>
         {versionList.map(version => (
-          <VersionHistoryRow
-            id={version.versionId}
-            key={version.versionId}
-            versionId={version.versionId}
-            versionLabel={parseDate(version.lastModified)}
-            isLatest={version.isLatest}
-            isSelected={selectedVersion === version.versionId}
-            onChange={e => onVersionChange(e, version.isLatest)}
-          />
+          <div id={version.versionId} key={version.versionId}>
+            <RadioButton
+              name={version.versionId}
+              value={version.versionId}
+              label={parseDate(version.lastModified)}
+              onChange={onVersionChange}
+              checked={selectedVersion === version.versionId}
+              className={moduleStyles.versionHistoryRow}
+            >
+              {version.isLatest && (
+                <Tags
+                  tagsList={[
+                    {
+                      label: commonI18n.current(),
+                      icon: {
+                        iconName: 'check',
+                        iconStyle: 'regular',
+                        title: 'check',
+                        placement: 'left',
+                      },
+                      tooltipContent: commonI18n.current(),
+                      tooltipId: 'current-version-tag',
+                      ariaLabel: commonI18n.current(),
+                    },
+                  ]}
+                  className={moduleStyles.latestTag}
+                />
+              )}
+            </RadioButton>
+          </div>
         ))}
-        <VersionHistoryRow
-          id={INITIAL_VERSION_ID}
-          key={INITIAL_VERSION_ID}
-          versionId={INITIAL_VERSION_ID}
-          versionLabel={lab2I18n.initialVersion()}
-          isLatest={versionList.length === 0}
-          isSelected={selectedVersion === INITIAL_VERSION_ID}
-          onChange={e => onVersionChange(e, versionList.length === 0)}
-        />
+        <div id={INITIAL_VERSION_ID}>
+          <RadioButton
+            name={INITIAL_VERSION_ID}
+            value={INITIAL_VERSION_ID}
+            label={lab2I18n.initialVersion()}
+            onChange={onVersionChange}
+            checked={selectedVersion === INITIAL_VERSION_ID}
+            className={moduleStyles.versionHistoryRow}
+          />
+        </div>
       </div>
 
       {loadError && (

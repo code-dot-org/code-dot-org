@@ -1,7 +1,6 @@
 ---
 title: Компьютерийн шинжлэх ухааны боловсролын долоо хоног, кодын цагийг дэмжих жишээ тогтоол
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -12,7 +11,7 @@ nav: promote_nav
 
 * * *
 
-#### **RESOLUTION**  
+#### **RESOLUTION**
 
 
 #### Supporting the goals and ideals of "Computer Science Education Week"

@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2024-08-28T17:50:14.000Z",
   "level_num": "custom",
@@ -12,8 +11,6 @@
     "hide_share_and_remix": "false",
     "level_data": {
       "toolbox": {
-        "blocks": {
-        }
       },
       "startSources": {
         "blocks": {
@@ -28,38 +25,42 @@
               "movable": false,
               "next": {
                 "block": {
-                  "type": "repeat_simple2",
-                  "id": "repeat_simple2",
-                  "movable": false,
-                  "editable": false,
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "E0?#QQSroTv@|],CKE~Q",
                   "fields": {
-                    "times": 1
+                    "sound": "mc_hammer_u_cant_touch_this/stop_hammer_time"
                   },
-                  "inputs": {
-                    "code": {
-                      "block": {
-                        "type": "play_sounds_together",
-                        "id": "play_sounds_together",
-                        "movable": false,
-                        "editable": false,
-                        "inputs": {
-                          "code": {
-                            "block": {
-                              "type": "play_sound_at_current_location_simple2",
-                              "id": "S1!Y?I*LAik!/e}J#VYl",
-                              "movable": false,
-                              "editable": false,
-                              "fields": {
-                                "sound": "bass/reggaeton_alternate_bass"
-                              },
-                              "next": {
+                  "next": {
+                    "block": {
+                      "type": "repeat_simple2",
+                      "id": "repeat_simple2",
+                      "fields": {
+                        "times": 1
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sounds_together",
+                            "id": "play_sounds_together",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "inputs": {
+                              "code": {
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
-                                  "id": "D15bA1q-D-C)S0g~;DU9",
-                                  "movable": false,
-                                  "editable": false,
+                                  "id": "play_sound_at_current_location_simple2",
                                   "fields": {
-                                    "sound": "beats/reggaeton_beat"
+                                    "sound": "mc_hammer_u_cant_touch_this/oohs"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": ":0tzbw|].#^}-X{06[1$",
+                                      "fields": {
+                                        "sound": "mc_hammer_u_cant_touch_this/beat"
+                                      }
+                                    }
                                   }
                                 }
                               }
@@ -68,28 +69,31 @@
                         }
                       }
                     }
-                  },
-                  "next": {
-                    "block": {
-                      "type": "play_sound_at_current_location_simple2",
-                      "id": "play_sound_at_current_location_simple2",
-                      "movable": false,
-                      "editable": false,
-                      "fields": {
-                        "sound": "effects/crash"
-                      }
-                    }
                   }
                 }
               }
             }
           ]
         }
-      }
+      },
+      "library": "launch2024",
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "stop_hammer_time",
+          "cant_touch_this",
+          "bass_breakdown",
+          "beat",
+          "main_loop",
+          "oohs",
+          "synth"
+        ]
+      },
+      "packId": "mc_hammer_u_cant_touch_this"
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-17 17:07:57 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:11:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:14:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:15:23 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-17 17:07:57 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:11:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:14:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 17:15:23 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:17:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:19:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:22:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
