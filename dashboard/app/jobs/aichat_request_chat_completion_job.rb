@@ -112,12 +112,8 @@ class AichatRequestChatCompletionJob < ApplicationJob
     # TODO: Check for PII. Currently we don't check for PII but we plan to add post-launch.
   end
 
-  private def gpt_enabled?(role)
-    DCDO.get("aichat_safety_gpt_enabled_#{role}", true)
-  end
-
   private def comprehend_enabled?(role)
-    DCDO.get("aichat_safety_comprehend_enabled_#{role}", false)
+    DCDO.get("aichat_safety_comprehend_enabled_#{role}", true)
   end
 
   private def webpurify_enabled?(role)
