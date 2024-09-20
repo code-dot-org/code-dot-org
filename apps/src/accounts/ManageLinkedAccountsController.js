@@ -17,7 +17,8 @@ export default class ManageLinkedAccountsController {
     userHasPassword,
     isGoogleClassroomStudent,
     isCleverStudent,
-    personalAccountLinkingEnabled
+    personalAccountLinkingEnabled,
+    lmsName
   ) {
     registerReducers({manageLinkedAccounts});
     const store = getStore();
@@ -29,6 +30,7 @@ export default class ManageLinkedAccountsController {
         isGoogleClassroomStudent,
         isCleverStudent,
         personalAccountLinkingEnabled,
+        lmsName,
       })
     );
 
