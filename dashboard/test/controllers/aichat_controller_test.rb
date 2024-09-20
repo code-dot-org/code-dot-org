@@ -301,7 +301,7 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@authorized_student1)
     retrieval_contexts = ['retrieval1', 'retrieval2']
     locale = 'en'
-    toxicity_response = {text: system_prompt, blocked_by: 'comprehend', details: {}}
+    toxicity_response = {text: retrieval_contexts.join(' '), blocked_by: 'comprehend', details: {}}
     AichatSafetyHelper.expects(:find_toxicity).with('user', retrieval_contexts.join(' '), locale).returns(toxicity_response)
 
     expected_response = {
