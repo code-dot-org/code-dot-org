@@ -12,7 +12,7 @@ export const currentGlobalRegion: () => string = () =>
  * This returns the current region's configuration data.
  */
 export const currentGlobalConfiguration: () => object = () =>
-  (Regions as {[key: string]: unknown})[currentGlobalRegion()] || {};
+  (Regions as {[key: string]: object})[currentGlobalRegion()] || {};
 
 /**
  * This queries the current global configuration for the given key.
@@ -46,16 +46,18 @@ export const currentGlobalConfiguration: () => object = () =>
  *
  * @param {string} key - The '.'-delimited key to read from the region configuration.
  */
-export const currentGlobalConfigurationFor: (key: string) => object = key => {
+export const currentGlobalConfigurationFor: (
+  key: string
+) => object | boolean = key => {
   // Split by '.' and then tap into the object
   const parts = key.split('.');
-  let context: unknown = currentGlobalConfiguration();
+  let context: object | boolean = currentGlobalConfiguration();
   for (const part of parts) {
-    if (context[part] === false) {
+    if ((context as {[key: string]: object | boolean})[part] === false) {
       context = false;
       break;
     }
-    context = context[part] || {};
+    context = (context as {[key: string]: object | boolean})[part] || {};
   }
 
   // Handle 'false' as falsey and an empty object as truth
