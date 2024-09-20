@@ -63,8 +63,10 @@ module AichatSagemakerHelper
     inputs = format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message, level_id)
     selected_model_id = aichat_model_customizations[:selectedModelId]
     sagemaker_response = request_sagemaker_chat_completion(inputs, selected_model_id)
+    puts "sagemaker_response #{sagemaker_response}"
     parsed_response = JSON.parse(sagemaker_response.body.string)
     generated_text = parsed_response[0]["generated_text"]
+    puts "generated_text #{generated_text}"
     model_processor = get_model_processor(selected_model_id)
     model_processor.format_model_output(generated_text)
   end
