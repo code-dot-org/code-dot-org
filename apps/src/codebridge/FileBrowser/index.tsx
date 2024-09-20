@@ -7,15 +7,22 @@ import {
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
-import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
+import {ProjectType, FileId, FolderId, ProjectFile} from '@codebridge/types';
 import {
   findFolder,
   getErrorMessage,
   getFileIcon,
   shouldShowFile,
 } from '@codebridge/utils';
+import {
+  DndContext,
+  DragStartEvent,
+  DragOverEvent,
+  DragEndEvent,
+  useDndMonitor,
+} from '@dnd-kit/core';
 import fileDownload from 'js-file-download';
-import React, {useMemo} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -33,6 +40,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
+import {Draggable} from './Draggable';
+import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {
   downloadFileType,
@@ -90,6 +99,20 @@ const InnerFileBrowser = React.memo(
     setFileType,
     appName,
   }: FilesComponentProps) => {
+    const [dragFileId, setDragFileId] = useState<FileId | undefined>(undefined);
+    const [dropFolderId, setDropFolderId] = useState<FolderId | undefined>(
+      undefined
+    );
+
+    useDndMonitor({
+      onDragStart: (e: DragStartEvent) => setDragFileId(e.active.id as FileId),
+      onDragOver: (e: DragOverEvent) => setDropFolderId(e.over.id as FolderId),
+      onDragEnd: (e: DragEndEvent) => {
+        setDragFileId(undefined);
+        setDropFolderId(undefined);
+      },
+    });
+
     const {
       openFile,
       deleteFile,
@@ -231,7 +254,7 @@ const InnerFileBrowser = React.memo(
               />
             );
             return (
-              <li key={f.id + f.open}>
+              <Droppable id={f.id} key={f.id + f.open} Component="li">
                 <span className={moduleStyles.label}>
                   <span className={moduleStyles.title}>
                     <span
@@ -240,9 +263,15 @@ const InnerFileBrowser = React.memo(
                     >
                       {caret}
                     </span>
-                    <span>{f.name}</span>
+                    <span
+                      style={{
+                        fontWeight: f.id === dropFolderId ? 'bold' : undefined,
+                      }}
+                    >
+                      {f.name}
+                    </span>
                   </span>
-                  {!isReadOnly && (
+                  {!isReadOnly && !dragFileId && (
                     <PopUpButton
                       iconName="ellipsis-v"
                       className={moduleStyles['button-kebab']}
@@ -285,20 +314,20 @@ const InnerFileBrowser = React.memo(
                     />
                   </ul>
                 )}
-              </li>
+              </Droppable>
             );
           })}
         {Object.values(files)
           .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
-            <li key={f.id}>
+            <Draggable id={f.id} key={f.id} Component="li">
               <span className={moduleStyles.label}>
                 <span onClick={() => openFile(f.id)}>
                   <i className={getFileIcon(f)} />
                   {f.name}
                 </span>
-                {!isReadOnly && (
+                {!isReadOnly && !dragFileId && (
                   <PopUpButton
                     iconName="ellipsis-v"
                     className={moduleStyles['button-kebab']}
@@ -327,7 +356,7 @@ const InnerFileBrowser = React.memo(
                   </PopUpButton>
                 )}
               </span>
-            </li>
+            </Draggable>
           ))}
       </>
     );
@@ -610,6 +639,14 @@ export const FileBrowser = React.memo(() => {
     [project.folders, dialogControl, renameFolder, appName]
   );
 
+  const handleDragEnd = (e: DragOverEvent) => {
+    console.log('DND END', e); //e.over, e.over.id === 'droppable');
+    if (e?.over) {
+      moveFile(e.active.id as string, e.over.id as string);
+      console.log('moves ', e.active.id, e.over.id);
+    }
+  };
+
   return (
     <PanelContainer
       id="file-browser"
@@ -624,21 +661,25 @@ export const FileBrowser = React.memo(() => {
         )
       }
     >
-      <ul>
-        <InnerFileBrowser
-          parentId={DEFAULT_FOLDER_ID}
-          folders={project.folders}
-          downloadFile={downloadFile}
-          newFolderPrompt={newFolderPrompt}
-          files={project.files}
-          newFilePrompt={newFilePrompt}
-          moveFilePrompt={moveFilePrompt}
-          renameFilePrompt={renameFilePrompt}
-          renameFolderPrompt={renameFolderPrompt}
-          setFileType={setFileType}
-          appName={appName}
-        />
-      </ul>
+      <DndContext onDragEnd={handleDragEnd}>
+        <Droppable id={DEFAULT_FOLDER_ID}>
+          <ul>
+            <InnerFileBrowser
+              parentId={DEFAULT_FOLDER_ID}
+              folders={project.folders}
+              downloadFile={downloadFile}
+              newFolderPrompt={newFolderPrompt}
+              files={project.files}
+              newFilePrompt={newFilePrompt}
+              moveFilePrompt={moveFilePrompt}
+              renameFilePrompt={renameFilePrompt}
+              renameFolderPrompt={renameFolderPrompt}
+              setFileType={setFileType}
+              appName={appName}
+            />
+          </ul>
+        </Droppable>
+      </DndContext>
     </PanelContainer>
   );
 });
