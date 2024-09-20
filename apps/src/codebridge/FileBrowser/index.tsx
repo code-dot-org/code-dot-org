@@ -7,7 +7,12 @@ import {
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
-import {ProjectType, FileId, FolderId, ProjectFile} from '@codebridge/types';
+import {
+  ProjectType,
+  FolderId,
+  ProjectFile,
+  ProjectFolder,
+} from '@codebridge/types';
 import {
   findFolder,
   getErrorMessage,
@@ -19,7 +24,10 @@ import {
   DragStartEvent,
   DragOverEvent,
   DragEndEvent,
+  PointerSensor,
   useDndMonitor,
+  useSensor,
+  useSensors,
 } from '@dnd-kit/core';
 import fileDownload from 'js-file-download';
 import React, {useMemo, useState} from 'react';
@@ -40,12 +48,13 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
-import {Draggable} from './Draggable';
-import {Droppable} from './Droppable';
+import {Draggable, DragDataType} from './Draggable';
+import {Droppable, DropDataType} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {
   downloadFileType,
   moveFilePromptType,
+  moveFolderPromptType,
   newFilePromptType,
   newFolderPromptType,
   renameFilePromptType,
@@ -62,6 +71,7 @@ type FilesComponentProps = {
 
   downloadFile: downloadFileType;
   moveFilePrompt: moveFilePromptType;
+  moveFolderPrompt: moveFolderPromptType;
   newFilePrompt: newFilePromptType;
   newFolderPrompt: newFolderPromptType;
   renameFilePrompt: renameFilePromptType;
@@ -94,22 +104,27 @@ const InnerFileBrowser = React.memo(
     newFolderPrompt,
     newFilePrompt,
     moveFilePrompt,
+    moveFolderPrompt,
     renameFilePrompt,
     renameFolderPrompt,
     setFileType,
     appName,
   }: FilesComponentProps) => {
-    const [dragFileId, setDragFileId] = useState<FileId | undefined>(undefined);
-    const [dropFolderId, setDropFolderId] = useState<FolderId | undefined>(
+    const [dragData, setDragData] = useState<DragDataType | undefined>(
+      undefined
+    );
+    const [dropData, setDropData] = useState<DropDataType | undefined>(
       undefined
     );
 
     useDndMonitor({
-      onDragStart: (e: DragStartEvent) => setDragFileId(e.active.id as FileId),
-      onDragOver: (e: DragOverEvent) => setDropFolderId(e.over.id as FolderId),
+      onDragStart: (e: DragStartEvent) =>
+        setDragData(e.active.data.current as DragDataType),
+      onDragOver: (e: DragOverEvent) =>
+        setDropData(e.over?.data.current as DropDataType),
       onDragEnd: (e: DragEndEvent) => {
-        setDragFileId(undefined);
-        setDropFolderId(undefined);
+        setDragData(undefined);
+        setDropData(undefined);
       },
     });
 
@@ -254,66 +269,78 @@ const InnerFileBrowser = React.memo(
               />
             );
             return (
-              <Droppable id={f.id} key={f.id + f.open} Component="li">
-                <span className={moduleStyles.label}>
-                  <span className={moduleStyles.title}>
-                    <span
-                      className={moduleStyles['caret-container']}
-                      onClick={() => toggleOpenFolder(f.id)}
-                    >
-                      {caret}
-                    </span>
-                    <span
-                      style={{
-                        fontWeight: f.id === dropFolderId ? 'bold' : undefined,
-                      }}
-                    >
-                      {f.name}
-                    </span>
-                  </span>
-                  {!isReadOnly && !dragFileId && (
-                    <PopUpButton
-                      iconName="ellipsis-v"
-                      className={moduleStyles['button-kebab']}
-                    >
-                      <span className={moduleStyles['button-bar']}>
-                        <span onClick={() => renameFolderPrompt(f.id)}>
-                          <i className="fa-solid fa-pencil" />{' '}
-                          {codebridgeI18n.renameFolder()}
-                        </span>
-                        <span onClick={() => newFolderPrompt(f.id)}>
-                          <i className="fa-solid fa-folder-plus" />{' '}
-                          {codebridgeI18n.addSubFolder()}
-                        </span>
-                        <span onClick={() => newFilePrompt(f.id)}>
-                          <i className="fa-solid fa-plus" />{' '}
-                          {codebridgeI18n.addFile()}
-                        </span>
-                        <span onClick={() => handleDeleteFolder(f.id)}>
-                          <i className="fa-solid fa-trash" />{' '}
-                          {codebridgeI18n.deleteFolder()}
-                        </span>
+              <Droppable data={{id: f.id}} key={f.id + f.open} Component="li">
+                <Draggable
+                  data={{id: f.id, type: 'FOLDER', parentId: f.parentId}}
+                >
+                  <span className={moduleStyles.label}>
+                    <span className={moduleStyles.title}>
+                      <span
+                        className={moduleStyles['caret-container']}
+                        onClick={() => toggleOpenFolder(f.id)}
+                      >
+                        {caret}
                       </span>
-                    </PopUpButton>
+                      <span
+                        style={{
+                          fontWeight:
+                            f.id === dropData?.id && dragData?.parentId !== f.id
+                              ? 'bold'
+                              : undefined,
+                        }}
+                      >
+                        {f.name}
+                      </span>
+                    </span>
+                    {!isReadOnly && !dragData?.id && (
+                      <PopUpButton
+                        iconName="ellipsis-v"
+                        className={moduleStyles['button-kebab']}
+                      >
+                        <span className={moduleStyles['button-bar']}>
+                          <span onClick={() => moveFolderPrompt(f.id)}>
+                            <i className="fa-solid fa-arrow-right" />{' '}
+                            {codebridgeI18n.moveFolder()}
+                          </span>
+                          <span onClick={() => renameFolderPrompt(f.id)}>
+                            <i className="fa-solid fa-pencil" />{' '}
+                            {codebridgeI18n.renameFolder()}
+                          </span>
+                          <span onClick={() => newFolderPrompt(f.id)}>
+                            <i className="fa-solid fa-folder-plus" />{' '}
+                            {codebridgeI18n.addSubFolder()}
+                          </span>
+                          <span onClick={() => newFilePrompt(f.id)}>
+                            <i className="fa-solid fa-plus" />{' '}
+                            {codebridgeI18n.addFile()}
+                          </span>
+                          <span onClick={() => handleDeleteFolder(f.id)}>
+                            <i className="fa-solid fa-trash" />{' '}
+                            {codebridgeI18n.deleteFolder()}
+                          </span>
+                        </span>
+                      </PopUpButton>
+                    )}
+                  </span>
+                  {f.open && (
+                    <ul>
+                      <InnerFileBrowser
+                        folders={folders}
+                        newFolderPrompt={newFolderPrompt}
+                        parentId={f.id}
+                        files={files}
+                        downloadFile={downloadFile}
+                        newFilePrompt={newFilePrompt}
+                        moveFilePrompt={moveFilePrompt}
+                        moveFolderPrompt={moveFolderPrompt}
+                        renameFilePrompt={renameFilePrompt}
+                        renameFolderPrompt={renameFolderPrompt}
+                        setFileType={setFileType}
+                        appName={appName}
+                      />
+                    </ul>
                   )}
-                </span>
-                {f.open && (
-                  <ul>
-                    <InnerFileBrowser
-                      folders={folders}
-                      newFolderPrompt={newFolderPrompt}
-                      parentId={f.id}
-                      files={files}
-                      downloadFile={downloadFile}
-                      newFilePrompt={newFilePrompt}
-                      moveFilePrompt={moveFilePrompt}
-                      renameFilePrompt={renameFilePrompt}
-                      renameFolderPrompt={renameFolderPrompt}
-                      setFileType={setFileType}
-                      appName={appName}
-                    />
-                  </ul>
-                )}
+                </Draggable>
               </Droppable>
             );
           })}
@@ -321,13 +348,17 @@ const InnerFileBrowser = React.memo(
           .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
-            <Draggable id={f.id} key={f.id} Component="li">
+            <Draggable
+              data={{id: f.id, type: 'FILE', parentId: f.folderId}}
+              key={f.id}
+              Component="li"
+            >
               <span className={moduleStyles.label}>
                 <span onClick={() => openFile(f.id)}>
                   <i className={getFileIcon(f)} />
                   {f.name}
                 </span>
-                {!isReadOnly && !dragFileId && (
+                {!isReadOnly && !dragData?.id && (
                   <PopUpButton
                     iconName="ellipsis-v"
                     className={moduleStyles['button-kebab']}
@@ -369,6 +400,7 @@ export const FileBrowser = React.memo(() => {
     newFile,
     renameFile,
     moveFile,
+    moveFolder,
 
     renameFolder,
     newFolder,
@@ -399,6 +431,28 @@ export const FileBrowser = React.memo(() => {
           ) {
             message = codebridgeI18n.duplicateSupportFileError({fileName});
           }
+        }
+
+        return message;
+      },
+    []
+  );
+
+  // Check if the foldername is already in use in the given folder.
+  // If it is, alert the user and return true, otherwise return false.
+  const checkForDuplicateFoldername = useMemo(
+    () =>
+      (
+        folderName: string,
+        folderId: string,
+        projectFolders: Record<string, ProjectFolder>
+      ) => {
+        let message = undefined;
+        const existingFolder = Object.values(projectFolders).find(
+          f => f.name === folderName && f.parentId === folderId
+        );
+        if (existingFolder) {
+          message = codebridgeI18n.duplicateFolderError({folderName});
         }
 
         return message;
@@ -557,6 +611,64 @@ export const FileBrowser = React.memo(() => {
     ]
   );
 
+  const moveFolderPrompt: FilesComponentProps['moveFolderPrompt'] = useMemo(
+    () => async folderId => {
+      const folder = project.folders[folderId];
+      const results = await dialogControl?.showDialog({
+        type: DialogType.GenericPrompt,
+        title: codebridgeI18n.moveFolderPrompt(),
+
+        validateInput: (destinationFolderName: string) => {
+          if (!destinationFolderName.length) {
+            return;
+          }
+          try {
+            const folderId = findFolder(destinationFolderName.split('/'), {
+              folders: Object.values(project.folders),
+              required: true,
+            });
+            const duplicate = checkForDuplicateFoldername(
+              folder.name,
+              folderId,
+              project.folders
+            );
+            if (duplicate) {
+              return duplicate;
+            }
+          } catch (e) {
+            return getErrorMessage(e);
+          }
+        },
+      });
+
+      if (results.type !== 'confirm') {
+        return;
+      }
+
+      const destinationFolderName = extractInput(results);
+      try {
+        const parentId = findFolder(destinationFolderName.split('/'), {
+          folders: Object.values(project.folders),
+          required: true,
+        });
+        moveFolder(folderId, parentId);
+      } catch (e) {
+        dialogControl?.showDialog({
+          type: DialogType.GenericAlert,
+          title: getErrorMessage(e),
+        });
+      }
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FOLDER, appName);
+    },
+    [
+      project.folders,
+      dialogControl,
+      appName,
+      checkForDuplicateFoldername,
+      moveFolder,
+    ]
+  );
+
   const renameFilePrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
     () => async fileId => {
       const file = project.files[fileId];
@@ -639,14 +751,32 @@ export const FileBrowser = React.memo(() => {
     [project.folders, dialogControl, renameFolder, appName]
   );
 
-  const handleDragEnd = (e: DragOverEvent) => {
-    console.log('DND END', e); //e.over, e.over.id === 'droppable');
-    if (e?.over) {
-      moveFile(e.active.id as string, e.over.id as string);
-      console.log('moves ', e.active.id, e.over.id);
-    }
-  };
+  const handleDragEnd = useMemo(
+    () => (e: DragOverEvent) => {
+      if (e?.over) {
+        if (e.active.data.current?.type === 'FOLDER') {
+          moveFolder(e.active.data.current.id as string, e.over.id as string);
+        } else if (e.active.data.current?.type === 'FILE') {
+          moveFile(e.active.data.current.id as string, e.over.id as string);
+        }
+      }
+    },
+    [moveFile, moveFolder]
+  );
 
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 2,
+      },
+    })
+  );
+
+  Object.values(project.folders).forEach(f => {
+    if (f.id === f.parentId) {
+      moveFolder(f.id, DEFAULT_FOLDER_ID);
+    }
+  });
   return (
     <PanelContainer
       id="file-browser"
@@ -661,8 +791,8 @@ export const FileBrowser = React.memo(() => {
         )
       }
     >
-      <DndContext onDragEnd={handleDragEnd}>
-        <Droppable id={DEFAULT_FOLDER_ID}>
+      <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
+        <Droppable data={{id: DEFAULT_FOLDER_ID}}>
           <ul>
             <InnerFileBrowser
               parentId={DEFAULT_FOLDER_ID}
@@ -672,6 +802,7 @@ export const FileBrowser = React.memo(() => {
               files={project.files}
               newFilePrompt={newFilePrompt}
               moveFilePrompt={moveFilePrompt}
+              moveFolderPrompt={moveFolderPrompt}
               renameFilePrompt={renameFilePrompt}
               renameFolderPrompt={renameFolderPrompt}
               setFileType={setFileType}

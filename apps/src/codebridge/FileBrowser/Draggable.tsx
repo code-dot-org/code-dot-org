@@ -1,19 +1,29 @@
 import {useDraggable} from '@dnd-kit/core';
 import React from 'react';
 
+import {FileId, FolderId} from '../types';
+
+export type DragDataType = {
+  id: FileId | FolderId;
+  type: 'FILE' | 'FOLDER';
+  parentId: FolderId;
+};
+
 type DraggableProps = {
   children: React.ReactNode;
-  id: string;
+  data: DragDataType;
   Component?: keyof JSX.IntrinsicElements;
 };
 
 export const Draggable = ({
   children,
-  id,
+  data,
   Component = 'div',
 }: DraggableProps) => {
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
-    id,
+    id: `${data.type}-${data.id}`,
+    data,
+    //disabled: true,
   });
   const style = transform
     ? {

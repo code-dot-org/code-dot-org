@@ -4,6 +4,7 @@ import {ProjectFileType} from '@cdo/apps/lab2/types';
 
 export type downloadFileType = (fileId: FileId) => void;
 export type moveFilePromptType = (fileId: FileId) => void;
+export type moveFolderPromptType = (folderId: FolderId) => void;
 export type newFilePromptType = (folderId?: FolderId) => void;
 export type newFolderPromptType = (parentId?: FolderId) => void;
 export type renameFilePromptType = (fileId: FileId) => void;
