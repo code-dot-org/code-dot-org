@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -29,6 +29,12 @@ const UserChatMessageEditor: React.FunctionComponent<{
   );
 
   const disabled = isWaitingForChatResponse || saveInProgress;
+
+  useEffect(() => {
+    if (!disabled) {
+      document.getElementById('uitest-chat-textarea')?.focus();
+    }
+  }, [disabled]);
 
   return (
     <UserMessageEditor

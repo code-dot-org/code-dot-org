@@ -24,8 +24,8 @@ import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import {
   asyncLoadSectionData,
   asyncLoadCoteacherInvite,
-  hiddenPlSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import {queryParams, updateQueryParam} from '../../utils';
