@@ -5,12 +5,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import DCDO from '@cdo/apps/dcdo';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {
   isReadOnlyWorkspace,
   setIsLoading,
   setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
@@ -235,6 +237,11 @@ class UnconnectedMusicView extends React.Component {
     if (libraryName === LEGACY_DEFAULT_LIBRARY) {
       libraryName = DEFAULT_LIBRARY;
     }
+
+    // In start mode, we always show the full toolbox for the given block mode.
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const toolboxData = isStartMode ? undefined : levelData?.toolbox;
+
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
     if (this.props.blockMode === BlockMode.SIMPLE2) {
@@ -251,7 +258,7 @@ class UnconnectedMusicView extends React.Component {
           document.getElementById(BLOCKLY_DIV_ID),
           this.onBlockSpaceChange,
           this.props.isReadOnlyWorkspace,
-          levelData?.toolbox,
+          toolboxData,
           this.props.isRtl,
           this.props.blockMode
         );
