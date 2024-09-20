@@ -26,7 +26,6 @@ import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import teacherSections, {
-  sectionProviderName,
   selectSection,
   setRosterProvider,
   setRosterProviderName,
@@ -34,6 +33,7 @@ import teacherSections, {
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import experiments from '@cdo/apps/util/experiments';
 

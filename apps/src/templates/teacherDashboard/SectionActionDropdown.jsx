@@ -22,12 +22,11 @@ import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
 import {sortableSectionShape} from './shapes.jsx';
 import {
-  sectionCode,
-  sectionName,
   removeSection,
   toggleSectionHidden,
   importOrUpdateRoster,
 } from './teacherSectionsRedux';
+import {sectionCode, sectionName} from './teacherSectionsReduxSelectors';
 
 class SectionActionDropdown extends Component {
   static propTypes = {

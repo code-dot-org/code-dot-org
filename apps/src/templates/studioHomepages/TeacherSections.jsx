@@ -12,8 +12,8 @@ import RosterDialog from '../teacherDashboard/RosterDialog';
 import {
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
-  hiddenStudentSectionIds,
 } from '../teacherDashboard/teacherSectionsRedux';
+import {hiddenStudentSectionIds} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import CoteacherInviteNotification from './CoteacherInviteNotification';
 import SetUpSections from './SetUpSections';
