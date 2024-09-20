@@ -13,6 +13,7 @@ type Lesson = {
   name: string;
   id: number;
   position: number;
+  lessonPlanHtmlUrl: string;
   resources: {
     Teacher: {
       key: string;
@@ -117,6 +118,7 @@ const LessonMaterialsContainer: React.FC = () => {
           unitNumber={unitNumber}
           lessonNumber={selectedLesson.position}
           resources={selectedLesson.resources.Teacher}
+          lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
         />
       )}
     </div>

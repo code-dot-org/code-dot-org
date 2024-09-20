@@ -10,6 +10,7 @@ import styles from './lesson-materials.module.scss';
 type TeacherResourcesProps = {
   unitNumber: number;
   lessonNumber: number;
+  lessonPlanUrl: string;
   resources: {
     key: string;
     name: string;
@@ -24,7 +25,24 @@ const TeacherResources: React.FC<TeacherResourcesProps> = ({
   unitNumber,
   resources,
   lessonNumber,
+  lessonPlanUrl,
 }) => {
+  const renderLessonPlanRow = (
+    <ResourceRow
+      key={'lessonPlan' + lessonNumber}
+      unitNumber={unitNumber}
+      lessonNumber={lessonNumber}
+      resource={{
+        key: 'lessonPlanKey',
+        name: 'Lesson Plan',
+        url: lessonPlanUrl,
+        downloadUrl: null,
+        audience: 'Teacher',
+        type: 'Lesson Plan',
+      }}
+    />
+  );
+
   return (
     <div className={styles.resourcesTable}>
       <div className={styles.topRowForResourcesTable}>
@@ -32,6 +50,7 @@ const TeacherResources: React.FC<TeacherResourcesProps> = ({
           {i18n.teacherResourcesforLessonMaterials()}
         </Heading6>
       </div>
+      {renderLessonPlanRow}
       {resources.map(resource => (
         <ResourceRow
           key={resource.key}

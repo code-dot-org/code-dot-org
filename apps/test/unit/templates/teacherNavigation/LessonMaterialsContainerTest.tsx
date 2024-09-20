@@ -18,20 +18,13 @@ describe('LessonMaterialsContainer', () => {
         name: 'First lesson',
         id: 1,
         position: 1,
+        lessonPlanHtmlUrl: 'studio.code.org/lesson1',
         resources: {
           Teacher: [
             {
               type: 'Handout',
               key: 'resourceKey2',
-              name: 'my resource',
-              url: 'google.com',
-              downloadUrl: 'google.com',
-              audience: 'Teacher',
-            },
-            {
-              type: 'Lesson Plan',
-              key: 'lessonPlanKey',
-              name: 'my lesson plan',
+              name: 'my link resource',
               url: 'google.com',
               downloadUrl: 'google.com',
               audience: 'Teacher',
@@ -43,12 +36,13 @@ describe('LessonMaterialsContainer', () => {
         name: 'Second lesson',
         id: 2,
         position: 2,
+        lessonPlanHtmlUrl: 'studio.code.org/lesson2',
         resources: {
           Teacher: [
             {
               type: 'Video',
               key: 'resourceKey2',
-              name: 'my resource',
+              name: 'my video resource',
               url: 'google.com',
               downloadUrl: 'google.com',
               audience: 'Teacher',
@@ -71,11 +65,13 @@ describe('LessonMaterialsContainer', () => {
     screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
   });
 
-  it('renders the teacher resources for the first lesson on render', () => {
+  it('renders the teacher resources, including the lesson plan, for the first lesson on render', () => {
     render(<LessonMaterialsContainer />);
 
     screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LINK.icon);
+    screen.getByText('my link resource');
     screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LESSON_PLAN.icon);
+    screen.getByText('Lesson Plan');
   });
 
   it('renders the teacher resources for the new lesson when lesson is changed', () => {
@@ -85,7 +81,11 @@ describe('LessonMaterialsContainer', () => {
 
     fireEvent.change(selectedLessonInput, {target: {value: '2'}});
 
+    screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LESSON_PLAN.icon);
+    screen.getByText('Lesson Plan');
+
     screen.getByTestId('resource-icon-' + RESOURCE_TYPE.VIDEO.icon);
+    screen.getByText('my video resource');
     expect(
       screen.queryAllByTestId('resource-icon-' + RESOURCE_TYPE.LINK.icon)
         .length === 0
