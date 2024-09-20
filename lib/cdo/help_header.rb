@@ -1,5 +1,7 @@
 # This class provides the content for help menu in the header.
 
+require 'cdo/global'
+
 class HelpHeader
   def self.get_help_contents(options)
     loc_prefix = options[:loc_prefix]
