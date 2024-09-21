@@ -451,6 +451,7 @@
   "childAccountConsentValidPermissionGranted": "Granted on {date}",
   "childAccountConsentValidMessage": "Thank you for approving your child’s Code.org account! You will receive a confirmation email within 24–48 hours. Please let your child know you’ve approved their account so they can get started learning and coding today!",
   "childAccountPolicy_ageGatedStudentsWarning": "Some students in this section are under 13 and will require parental consent to continue using their personal accounts after 7/1/2024.",
+  "childAccountPolicy_ageGatedStudentsWarning_button": "Students",
   "childAccountPolicy_consentStatus": "Consent Status",
   "childAccountPolicy_consentProcessReadMore": "Read more about this consent process and these changes here.",
   "childAccountPolicy_lockedOut": "Locked Out",
