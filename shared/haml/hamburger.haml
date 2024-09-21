@@ -1,7 +1,7 @@
 :ruby
   options = { level: level, script_level: script_level, language: language, user_type: user_type, loc_prefix: loc_prefix, request: request, ge_region: params[:ge_region], }
   dashboard ||= false
-  contents = request.path.include?('/global/fa')? Hamburger.get_farsi_hamburger_contents(options): Hamburger.get_hamburger_contents(options)
+  contents = Hamburger.get_hamburger_contents(options)
 
 #hamburger{class: contents[:visibility], tabindex: "0", 'aria-label': I18n.t('header_screen_reader_hamburger')}
   #hamburger-contents.hide-responsive-menu{class: request.path.include?('/global/fa') ? "farsi" : ""}
