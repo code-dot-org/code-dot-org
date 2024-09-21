@@ -8,16 +8,21 @@
 .file-browser ul {
   list-style: none;
   margin: 0;
+}
+
+.file-browser ul ul {
   padding-left: 8px;
 }
 
-.file-browser ul li span.label {
+.row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  font-size: 14px;
 }
-.file-browser ul li span.title {
+
+.title {
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
@@ -44,10 +49,6 @@
   white-space: nowrap;
 }
 
-span.caret-container {
-  padding-right: 2px;
-}
-
 .file-browser ul li span.label i,
 .file-browser ul li span.button-bar i {
   margin-right: 4px;
@@ -60,4 +61,26 @@ li .button-kebab {
 
 li :hover .button-kebab {
   display: inherit;
+}
+
+.nameContainer {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: auto;
+}
+
+.label {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.rowIcon {
+  margin: 2px 8px 2px 8px;
+  font-size: 13px;
+  line-height: 125%;
+}
+
+.acceptingDrop {
+  font-weight: bold;
 }

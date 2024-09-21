@@ -97,11 +97,6 @@ const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
                 }}
               />
             </div>
-            <i>
-              Note that currently, all levels will use the Simple2 sequencing
-              model by default. The advanced model is only usable by adding
-              '?blocks=advanced' to the URL.
-            </i>
           </div>
         </div>
       </div>

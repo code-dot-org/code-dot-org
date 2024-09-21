@@ -16,9 +16,10 @@ import {
 import {
   findFolder,
   getErrorMessage,
-  getFileIcon,
+  getFileIconNameAndStyle,
   shouldShowFile,
 } from '@codebridge/utils';
+import classNames from 'classnames';
 import {
   DndContext,
   DragStartEvent,
@@ -33,6 +34,7 @@ import fileDownload from 'js-file-download';
 import React, {useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -127,7 +129,6 @@ const InnerFileBrowser = React.memo(
         setDropData(undefined);
       },
     });
-
     const {
       openFile,
       deleteFile,
@@ -260,135 +261,141 @@ const InnerFileBrowser = React.memo(
         {Object.values(folders)
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map(f => {
-            const caret = (
-              <i
-                className={
-                  f.open ? 'fa-solid fa-caret-down' : 'fa-solid fa-caret-right'
-                }
-              />
-            );
-            return (
-              <Droppable data={{id: f.id}} key={f.id + f.open} Component="li">
-                <Draggable
-                  data={{id: f.id, type: 'FOLDER', parentId: f.parentId}}
-                >
-                  <span className={moduleStyles.label}>
-                    <span className={moduleStyles.title}>
-                      <span
-                        className={moduleStyles['caret-container']}
-                        onClick={() => toggleOpenFolder(f.id)}
-                      >
-                        {caret}
-                      </span>
-                      <span
-                        style={{
-                          fontWeight:
-                            f.id === dropData?.id && dragData?.parentId !== f.id
-                              ? 'bold'
-                              : undefined,
-                        }}
-                      >
-                        {f.name}
-                      </span>
+          .map(f => (
+            <Droppable data={{id: f.id}} key={f.id + f.open} Component="li">
+              <Draggable
+                data={{id: f.id, type: 'FOLDER', parentId: f.parentId}}
+              >
+                <div className={moduleStyles.row}>
+                  <span
+                    className={moduleStyles.title}
+                    onClick={() => toggleOpenFolder(f.id)}
+                  >
+                    <FontAwesomeV6Icon
+                      iconName={f.open ? 'caret-down' : 'caret-right'}
+                      iconStyle={'solid'}
+                      className={moduleStyles.rowIcon}
+                    />
+                    <span
+                      className={classNames(moduleStyles.nameContainer, {
+                        [moduleStyles.acceptingDrop]:
+                          f.id === dropData?.id && dragData?.parentId !== f.id,
+                      })}
+                    >
+                      {f.name}
                     </span>
-                    {!isReadOnly && !dragData?.id && (
-                      <PopUpButton
-                        iconName="ellipsis-v"
-                        className={moduleStyles['button-kebab']}
-                      >
-                        <span className={moduleStyles['button-bar']}>
-                          <span onClick={() => moveFolderPrompt(f.id)}>
-                            <i className="fa-solid fa-arrow-right" />{' '}
-                            {codebridgeI18n.moveFolder()}
-                          </span>
-                          <span onClick={() => renameFolderPrompt(f.id)}>
-                            <i className="fa-solid fa-pencil" />{' '}
-                            {codebridgeI18n.renameFolder()}
-                          </span>
-                          <span onClick={() => newFolderPrompt(f.id)}>
-                            <i className="fa-solid fa-folder-plus" />{' '}
-                            {codebridgeI18n.addSubFolder()}
-                          </span>
-                          <span onClick={() => newFilePrompt(f.id)}>
-                            <i className="fa-solid fa-plus" />{' '}
-                            {codebridgeI18n.addFile()}
-                          </span>
-                          <span onClick={() => handleDeleteFolder(f.id)}>
-                            <i className="fa-solid fa-trash" />{' '}
-                            {codebridgeI18n.deleteFolder()}
-                          </span>
-                        </span>
-                      </PopUpButton>
-                    )}
                   </span>
-                  {f.open && (
-                    <ul>
-                      <InnerFileBrowser
-                        folders={folders}
-                        newFolderPrompt={newFolderPrompt}
-                        parentId={f.id}
-                        files={files}
-                        downloadFile={downloadFile}
-                        newFilePrompt={newFilePrompt}
-                        moveFilePrompt={moveFilePrompt}
-                        moveFolderPrompt={moveFolderPrompt}
-                        renameFilePrompt={renameFilePrompt}
-                        renameFolderPrompt={renameFolderPrompt}
-                        setFileType={setFileType}
-                        appName={appName}
-                      />
-                    </ul>
+                  {!isReadOnly && !dragData?.id && (
+                    <PopUpButton
+                      iconName="ellipsis-v"
+                      className={moduleStyles['button-kebab']}
+                    >
+                      <span className={moduleStyles['button-bar']}>
+                        <span onClick={() => moveFolderPrompt(f.id)}>
+                          <i className="fa-solid fa-arrow-right" />{' '}
+                          {codebridgeI18n.moveFolder()}
+                        </span>
+                        <span onClick={() => renameFolderPrompt(f.id)}>
+                          <i className="fa-solid fa-pencil" />{' '}
+                          {codebridgeI18n.renameFolder()}
+                        </span>
+                        <span onClick={() => newFolderPrompt(f.id)}>
+                          <i className="fa-solid fa-folder-plus" />{' '}
+                          {codebridgeI18n.addSubFolder()}
+                        </span>
+                        <span onClick={() => newFilePrompt(f.id)}>
+                          <i className="fa-solid fa-plus" />{' '}
+                          {codebridgeI18n.addFile()}
+                        </span>
+                        <span onClick={() => handleDeleteFolder(f.id)}>
+                          <i className="fa-solid fa-trash" />{' '}
+                          {codebridgeI18n.deleteFolder()}
+                        </span>
+                      </span>
+                    </PopUpButton>
                   )}
-                </Draggable>
-              </Droppable>
-            );
-          })}
+                </div>
+                {f.open && (
+                  <ul>
+                    <InnerFileBrowser
+                      folders={folders}
+                      newFolderPrompt={newFolderPrompt}
+                      parentId={f.id}
+                      files={files}
+                      downloadFile={downloadFile}
+                      newFilePrompt={newFilePrompt}
+                      moveFilePrompt={moveFilePrompt}
+                      moveFolderPrompt={moveFolderPrompt}
+                      renameFilePrompt={renameFilePrompt}
+                      renameFolderPrompt={renameFolderPrompt}
+                      setFileType={setFileType}
+                      appName={appName}
+                    />
+                  </ul>
+                )}
+              </Draggable>
+            </Droppable>
+          ))}
         {Object.values(files)
           .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map(f => (
-            <Draggable
-              data={{id: f.id, type: 'FILE', parentId: f.folderId}}
-              key={f.id}
-              Component="li"
-            >
-              <span className={moduleStyles.label}>
-                <span onClick={() => openFile(f.id)}>
-                  <i className={getFileIcon(f)} />
-                  {f.name}
-                </span>
-                {!isReadOnly && !dragData?.id && (
-                  <PopUpButton
-                    iconName="ellipsis-v"
-                    className={moduleStyles['button-kebab']}
+          .map(f => {
+            const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(f);
+            const iconClassName = isBrand
+              ? classNames('fa-brands', moduleStyles.rowIcon)
+              : moduleStyles.rowIcon;
+            return (
+              <Draggable
+                data={{id: f.id, type: 'FILE', parentId: f.folderId}}
+                key={f.id}
+                Component="li"
+              >
+                <div className={moduleStyles.row}>
+                  <div
+                    className={moduleStyles.label}
+                    onClick={() => openFile(f.id)}
                   >
-                    <span className={moduleStyles['button-bar']}>
-                      <span onClick={() => moveFilePrompt(f.id)}>
-                        <i className="fa-solid fa-arrow-right" />{' '}
-                        {codebridgeI18n.moveFile()}
-                      </span>
-                      <span onClick={() => renameFilePrompt(f.id)}>
-                        <i className="fa-solid fa-pencil" />{' '}
-                        {codebridgeI18n.renameFile()}
-                      </span>
-                      {editableFileTypes.some(type => type === f.language) && (
-                        <span onClick={() => downloadFile(f.id)}>
-                          <i className="fa-solid fa-download" />{' '}
-                          {codebridgeI18n.downloadFile()}
+                    <FontAwesomeV6Icon
+                      iconName={iconName}
+                      iconStyle={iconStyle}
+                      className={iconClassName}
+                    />
+                    <span className={moduleStyles.nameContainer}>{f.name}</span>
+                  </div>
+                  {!isReadOnly && !dragData?.id && (
+                    <PopUpButton
+                      iconName="ellipsis-v"
+                      className={moduleStyles['button-kebab']}
+                    >
+                      <span className={moduleStyles['button-bar']}>
+                        <span onClick={() => moveFilePrompt(f.id)}>
+                          <i className="fa-solid fa-arrow-right" />{' '}
+                          {codebridgeI18n.moveFile()}
                         </span>
-                      )}
-                      <span onClick={() => handleDeleteFile(f.id)}>
-                        <i className="fa-solid fa-trash" />{' '}
-                        {codebridgeI18n.deleteFile()}
+                        <span onClick={() => renameFilePrompt(f.id)}>
+                          <i className="fa-solid fa-pencil" />{' '}
+                          {codebridgeI18n.renameFile()}
+                        </span>
+                        {editableFileTypes.some(
+                          type => type === f.language
+                        ) && (
+                          <span onClick={() => downloadFile(f.id)}>
+                            <i className="fa-solid fa-download" />{' '}
+                            {codebridgeI18n.downloadFile()}
+                          </span>
+                        )}
+                        <span onClick={() => handleDeleteFile(f.id)}>
+                          <i className="fa-solid fa-trash" />{' '}
+                          {codebridgeI18n.deleteFile()}
+                        </span>
+                        {isStartMode && startModeFileDropdownOptions(f)}
                       </span>
-                      {isStartMode && startModeFileDropdownOptions(f)}
-                    </span>
-                  </PopUpButton>
-                )}
-              </span>
-            </Draggable>
-          ))}
+                    </PopUpButton>
+                  )}
+                </div>
+              </Draggable>
+            );
+          })}
       </>
     );
   }
@@ -777,6 +784,7 @@ export const FileBrowser = React.memo(() => {
       moveFolder(f.id, DEFAULT_FOLDER_ID);
     }
   });
+
   return (
     <PanelContainer
       id="file-browser"
