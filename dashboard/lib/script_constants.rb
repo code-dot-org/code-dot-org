@@ -333,7 +333,6 @@ module ScriptConstants
 
     *CATEGORIES[:hoc],
     *CATEGORIES[:twenty_hour],
-    *CATEGORIES[:twenty_hour],
     *ADDITIONAL_I18N_UNITS,
     *TRANSLATEABLE_CSC_UNITS,
     *TRANSLATABLE_PD_PL_UNITS,
