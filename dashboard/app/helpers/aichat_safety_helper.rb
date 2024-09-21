@@ -24,6 +24,14 @@ module AichatSafetyHelper
         comprehend_response = AichatComprehendHelper.get_toxicity(text, locale)
         return {text: text, blocked_by: 'comprehend', details: comprehend_response} if comprehend_response && comprehend_response[:toxicity] > threshold
       end
+
+      if openai_enabled(role)
+        # Define system prompt here for now.
+        system_prompt = "You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an american public middle school classroom. Examples of innapropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is innapropriate respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`."
+        openai_response = OpenaiChatHelper.request_toxicity_detection(text, system_prompt)
+        toxicity_decision = openai_response[0].message.content
+        return {text: text, blocked_by: 'openai', details: toxicity_decision} if toxicity_decision == 'INAPPROPRIATE'
+      end
     end
 
     private def comprehend_enabled?(role)
@@ -32,6 +40,10 @@ module AichatSafetyHelper
 
     private def webpurify_enabled?(role)
       DCDO.get("aichat_safety_webpurify_enabled_#{role}", false)
+    end
+
+    private def openai_enabled?(role)
+      DCDO.get("aichat_safety_openai_enabled_#{role}", false)
     end
 
     private def blocklist_enabled?(role)
