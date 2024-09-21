@@ -23,12 +23,10 @@ import styles from './edit-music-level-data.module.scss';
 interface EditMusicToolboxProps {
   toolbox?: ToolboxData;
   blockMode: ValueOf<typeof BlockMode>;
-  addFunctionCallsToToolbox?: boolean;
+  addFunctionCalls?: boolean;
   onChange: (toolbox: ToolboxData) => void;
   onBlockModeChange: (blockMode: ValueOf<typeof BlockMode>) => void;
-  onAddFunctionCallsToToolboxChange: (
-    addFunctionCallsToToolbox: boolean
-  ) => void;
+  onAddFunctionCallsChange: (addFunctionCalls: boolean) => void;
 }
 
 const ChangeWarning: React.FC = () => (
@@ -46,10 +44,10 @@ const ChangeWarning: React.FC = () => (
 const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
   toolbox,
   blockMode,
-  addFunctionCallsToToolbox,
+  addFunctionCalls,
   onChange,
   onBlockModeChange,
-  onAddFunctionCallsToToolboxChange,
+  onAddFunctionCallsChange,
 }) => {
   const defaultBlocks = defaultMaps[blockMode];
   const onBlocksChange = useCallback(
@@ -138,11 +136,11 @@ const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
           />
           {toolbox?.type === 'flyout' && (
             <Checkbox
-              checked={!!addFunctionCallsToToolbox}
-              name="generateFunctionCallsInToolbox"
-              label="Generate function calls in toolbox"
+              checked={!!addFunctionCalls}
+              name="addFunctionCalls"
+              label="Add function calls"
               onChange={event => {
-                onAddFunctionCallsToToolboxChange(event.target.checked);
+                onAddFunctionCallsChange(event.target.checked);
               }}
             />
           )}

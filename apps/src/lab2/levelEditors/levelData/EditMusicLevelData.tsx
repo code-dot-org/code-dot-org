@@ -184,7 +184,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
         <EditMusicToolbox
           toolbox={levelData.toolbox}
           blockMode={levelData.blockMode || BlockMode.SIMPLE2}
-          addFunctionCallsToToolbox={levelData.addFunctionCallsToToolbox}
+          addFunctionCalls={levelData.toolbox?.addFunctionCalls}
           onChange={toolbox => setLevelData({...levelData, toolbox})}
           onBlockModeChange={blockMode =>
             // Reset toolbox blocks when changing block mode
@@ -194,15 +194,17 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               toolbox: {
                 ...levelData.toolbox,
                 blocks: undefined,
+                addFunctionCalls: undefined,
               },
             })
           }
-          onAddFunctionCallsToToolboxChange={(
-            addFunctionCallsToToolbox: boolean
-          ) => {
+          onAddFunctionCallsChange={(addFunctionCalls: boolean) => {
             setLevelData({
               ...levelData,
-              addFunctionCallsToToolbox,
+              toolbox: {
+                ...levelData.toolbox,
+                addFunctionCalls,
+              },
             });
           }}
         />

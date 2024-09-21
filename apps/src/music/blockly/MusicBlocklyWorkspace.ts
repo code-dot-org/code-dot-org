@@ -23,7 +23,7 @@ import {
 } from './constants';
 import {setUpBlocklyForMusicLab} from './setup';
 import {getToolbox} from './toolbox';
-import {ToolboxType, ToolboxData} from './toolbox/types';
+import {ToolboxData} from './toolbox/types';
 
 const experiments = require('@cdo/apps/util/experiments');
 
@@ -56,9 +56,7 @@ export default class MusicBlocklyWorkspace {
   private triggerIdToStartType: {[id: string]: string};
   private headlessMode: boolean;
   private toolbox?: ToolboxData;
-  private toolboxType?: ToolboxType;
   private blockMode?: ValueOf<typeof BlockMode>;
-  private addFunctionCallsToToolbox?: boolean;
 
   constructor(
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
@@ -71,9 +69,7 @@ export default class MusicBlocklyWorkspace {
     this.lastExecutedEvents = {};
     this.headlessMode = false;
     this.toolbox = undefined;
-    this.toolboxType = undefined;
     this.blockMode = undefined;
-    this.addFunctionCallsToToolbox = undefined;
   }
 
   /**
@@ -90,8 +86,7 @@ export default class MusicBlocklyWorkspace {
     isReadOnlyWorkspace: boolean,
     toolbox: ToolboxData | undefined,
     isRtl: boolean,
-    blockMode: ValueOf<typeof BlockMode>,
-    addFunctionCallsToToolbox: boolean
+    blockMode: ValueOf<typeof BlockMode>
   ) {
     if (this.workspace) {
       this.workspace.dispose();
@@ -100,9 +95,7 @@ export default class MusicBlocklyWorkspace {
     this.container = container;
 
     this.toolbox = toolbox;
-    this.toolboxType = toolbox?.type;
     this.blockMode = blockMode;
-    this.addFunctionCallsToToolbox = addFunctionCallsToToolbox;
 
     const toolboxBlocks = getToolbox(blockMode, toolbox);
 
@@ -463,7 +456,7 @@ export default class MusicBlocklyWorkspace {
 
     Blockly.serialization.workspaces.load(codeCopy, this.workspace);
 
-    if (this.addFunctionCallsToToolbox && this.toolboxType === 'flyout') {
+    if (this.toolbox?.addFunctionCalls && this.toolbox?.type === 'flyout') {
       this.generateFunctionCallBlocks();
     }
   }
