@@ -4,7 +4,7 @@ require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
 require 'policies/child_account'
-#require 'cdo/global'
+require 'cdo/global'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
 
   around_action :with_locale
 
-  #before_action :set_footer_config
+  before_action :set_footer_config
 
   before_action :fix_crawlers_with_bad_accept_headers
 
@@ -420,8 +420,8 @@ class ApplicationController < ActionController::Base
     RequestStore.store[:current_user] = nil
   end
 
-  # private def set_footer_config
-  #   ge_region = params[:ge_region]
-  #   @footer_config = Cdo::Global.configuration_for(ge_region)[:footer] || {}
-  # end
+  private def set_footer_config
+    ge_region = params[:ge_region]
+    @footer_config = Cdo::Global.configuration_for(ge_region)[:footer] || {}
+  end
 end
