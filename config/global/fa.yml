@@ -110,7 +110,11 @@ header:
 # The navigation region found at the bottom of each page
 footer:
   # Remove these links to support pages
-  bar: false
+  translate: false
+  help_support: false
+  store: false
+  locale_dropdown: false
+
 
 # Route matching to influence properties of components
 pages:
