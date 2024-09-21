@@ -16,6 +16,7 @@ export interface MusicLevelData extends ProjectLevelData {
   // determine which blocks to include.
   // TODO: Use this value to configure block mode rather than only URL param override.
   blockMode?: ValueOf<typeof BlockMode>;
+  addFunctionCallsToToolbox?: boolean;
 }
 
 export type LoadFinishedCallback = (

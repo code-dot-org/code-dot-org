@@ -184,6 +184,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
         <EditMusicToolbox
           toolbox={levelData.toolbox}
           blockMode={levelData.blockMode || BlockMode.SIMPLE2}
+          addFunctionCallsToToolbox={levelData.addFunctionCallsToToolbox}
           onChange={toolbox => setLevelData({...levelData, toolbox})}
           onBlockModeChange={blockMode =>
             // Reset toolbox blocks when changing block mode
@@ -196,6 +197,14 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               },
             })
           }
+          onAddFunctionCallsToToolboxChange={(
+            addFunctionCallsToToolbox: boolean
+          ) => {
+            setLevelData({
+              ...levelData,
+              addFunctionCallsToToolbox,
+            });
+          }}
         />
       </CollapsibleSection>
       <hr />

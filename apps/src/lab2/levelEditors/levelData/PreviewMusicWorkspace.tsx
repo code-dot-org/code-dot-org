@@ -37,7 +37,8 @@ const PreviewMusicWorkspace: React.FC<PreviewMusicWorkspaceProps> = ({
       false,
       toolboxData,
       false,
-      blockMode
+      blockMode,
+      false
     );
 
     const resizeObserver = new ResizeObserver(() => {

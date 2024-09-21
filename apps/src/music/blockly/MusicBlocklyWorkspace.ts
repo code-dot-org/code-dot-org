@@ -58,6 +58,7 @@ export default class MusicBlocklyWorkspace {
   private toolbox?: ToolboxData;
   private toolboxType?: ToolboxType;
   private blockMode?: ValueOf<typeof BlockMode>;
+  private addFunctionCallsToToolbox?: boolean;
 
   constructor(
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
@@ -72,6 +73,7 @@ export default class MusicBlocklyWorkspace {
     this.toolbox = undefined;
     this.toolboxType = undefined;
     this.blockMode = undefined;
+    this.addFunctionCallsToToolbox = undefined;
   }
 
   /**
@@ -88,7 +90,8 @@ export default class MusicBlocklyWorkspace {
     isReadOnlyWorkspace: boolean,
     toolbox: ToolboxData | undefined,
     isRtl: boolean,
-    blockMode: ValueOf<typeof BlockMode>
+    blockMode: ValueOf<typeof BlockMode>,
+    addFunctionCallsToToolbox: boolean
   ) {
     if (this.workspace) {
       this.workspace.dispose();
@@ -99,6 +102,8 @@ export default class MusicBlocklyWorkspace {
     this.toolbox = toolbox;
     this.toolboxType = toolbox?.type;
     this.blockMode = blockMode;
+    this.addFunctionCallsToToolbox = addFunctionCallsToToolbox;
+
     const toolboxBlocks = getToolbox(blockMode, toolbox);
 
     // This dialog is used for naming variables, which are only present in advanced mode.
@@ -458,7 +463,7 @@ export default class MusicBlocklyWorkspace {
 
     Blockly.serialization.workspaces.load(codeCopy, this.workspace);
 
-    if (this.toolboxType === 'flyout') {
+    if (this.addFunctionCallsToToolbox && this.toolboxType === 'flyout') {
       this.generateFunctionCallBlocks();
     }
   }

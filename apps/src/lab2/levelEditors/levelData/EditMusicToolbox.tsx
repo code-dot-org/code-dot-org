@@ -3,6 +3,7 @@ import {isEqual} from 'lodash';
 import React, {useCallback} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {defaultMaps} from '@cdo/apps/music/blockly/toolbox/definitions';
@@ -22,8 +23,12 @@ import styles from './edit-music-level-data.module.scss';
 interface EditMusicToolboxProps {
   toolbox?: ToolboxData;
   blockMode: ValueOf<typeof BlockMode>;
+  addFunctionCallsToToolbox?: boolean;
   onChange: (toolbox: ToolboxData) => void;
   onBlockModeChange: (blockMode: ValueOf<typeof BlockMode>) => void;
+  onAddFunctionCallsToToolboxChange: (
+    addFunctionCallsToToolbox: boolean
+  ) => void;
 }
 
 const ChangeWarning: React.FC = () => (
@@ -41,8 +46,10 @@ const ChangeWarning: React.FC = () => (
 const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
   toolbox,
   blockMode,
+  addFunctionCallsToToolbox,
   onChange,
   onBlockModeChange,
+  onAddFunctionCallsToToolboxChange,
 }) => {
   const defaultBlocks = defaultMaps[blockMode];
   const onBlocksChange = useCallback(
@@ -129,6 +136,16 @@ const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
             blockMode={blockMode}
             toolboxType={toolbox?.type}
           />
+          {toolbox?.type === 'flyout' && (
+            <Checkbox
+              checked={!!addFunctionCallsToToolbox}
+              name="generateFunctionCallsInToolbox"
+              label="Generate function calls in toolbox"
+              onChange={event => {
+                onAddFunctionCallsToToolboxChange(event.target.checked);
+              }}
+            />
+          )}
         </div>
         <div className={styles.verticalLine}>&nbsp;</div>
         <PreviewMusicWorkspace toolboxData={toolbox} blockMode={blockMode} />
