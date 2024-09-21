@@ -461,10 +461,11 @@ export default class MusicBlocklyWorkspace {
     }
   }
 
+  // For each function body in the current workspace, add a function call
+  // block to the toolbox.
   generateFunctionCallBlocks() {
     const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
 
-    // Find all functions in the workspace.
     (this.workspace?.getTopBlocks() as ProcedureBlock[])
       .filter(block => block.type === 'procedures_defnoreturn')
       .forEach(block => {
@@ -493,7 +494,6 @@ export default class MusicBlocklyWorkspace {
       const existingToolbox = getToolbox(this.blockMode, this.toolbox);
       existingToolbox.contents = existingToolbox.contents.concat(blockList);
       (this.workspace as WorkspaceSvg).updateToolbox(existingToolbox);
-      console.log(blockList);
     }
   }
 
