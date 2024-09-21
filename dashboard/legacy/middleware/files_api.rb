@@ -21,7 +21,7 @@ class FilesApi < Sinatra::Base
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
 
   # Can set this to an empty array if we do not want aichat checked for profanity.
-  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', ['aichat'])
+  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', [])
 
   DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES = 0.3
 
