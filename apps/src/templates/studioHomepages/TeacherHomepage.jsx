@@ -8,10 +8,10 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification from '@cdo/apps/sharedComponents/Notification';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
+import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import {currentGlobalConfigurationFor} from '@cdo/apps/util/globalRegions';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -196,15 +196,16 @@ export const UnconnectedTeacherHomepage = ({
         <ProtectedStatefulDiv ref={flashes} />
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
-        {specialAnnouncement &&
-          currentGlobalConfigurationFor(
-            'teacherHomepage.marketingAnnouncementBanner'
-          ) && (
-            <MarketingAnnouncementBanner
-              announcement={specialAnnouncement}
-              marginBottom="30px"
-            />
-          )}
+        {specialAnnouncement && (
+          <GlobalRegionWrapper
+            component={MarketingAnnouncementBanner}
+            componentId="MarketingAnnouncementBanner"
+            props={{
+              announcement: specialAnnouncement,
+              marginBottom: '30px',
+            }}
+          />
+        )}
         {announcement && showAnnouncement && (
           <div>
             <Notification
@@ -290,10 +291,12 @@ export const UnconnectedTeacherHomepage = ({
           />
         )}
         <TeacherResources />
-        {showIncubatorBanner &&
-          currentGlobalConfigurationFor('teacherHomepage.incubatorBanner') && (
-            <IncubatorBanner />
-          )}
+        {showIncubatorBanner && (
+          <GlobalRegionWrapper
+            component={IncubatorBanner}
+            componentId="IncubatorBanner"
+          />
+        )}
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
