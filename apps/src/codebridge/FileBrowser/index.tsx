@@ -19,7 +19,6 @@ import {
   getFileIconNameAndStyle,
   shouldShowFile,
 } from '@codebridge/utils';
-import classNames from 'classnames';
 import {
   DndContext,
   DragStartEvent,
@@ -30,6 +29,7 @@ import {
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
+import classNames from 'classnames';
 import fileDownload from 'js-file-download';
 import React, {useMemo, useState} from 'react';
 
