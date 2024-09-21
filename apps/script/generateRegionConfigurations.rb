@@ -43,10 +43,8 @@ def main
     # Get the configuration for this region
     configuration = Cdo::Global.configuration_for(region)
 
-    # Transform keys from the form of foo-bar to fooBar
-    configuration.deep_transform_keys! do |key|
-      key.to_s.gsub('-', '_').camelize(:lower)
-    end
+    # Complain if any pages keys are not URLs
+    raise "'pages' must contain URLs starting with '/'" unless (configuration['pages'] || {}).keys.all? {|url| url.to_s.include?('/')}
 
     # Build out the region specific table. This is, effectively, a JSON copy of the
     # configuration found in config/global/*.yml

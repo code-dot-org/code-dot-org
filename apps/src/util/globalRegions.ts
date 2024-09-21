@@ -1,5 +1,19 @@
 import {Regions} from '@cdo/generated-scripts/globalRegionConstants';
 
+interface RegionConfigurationObject {
+  [key: string]: object | boolean;
+}
+
+interface RegionConfigurationPageObject {
+  [key: string]: RegionConfigurationObject;
+}
+
+export interface RegionConfiguration {
+  header?: RegionConfigurationObject;
+  footer?: RegionConfigurationObject;
+  pages?: RegionConfigurationPageObject;
+}
+
 /**
  * This returns the current region, if known, the current page is rendered
  * within. This uses the current location, so it only returns a global region
@@ -11,8 +25,9 @@ export const currentGlobalRegion: () => string = () =>
 /**
  * This returns the current region's configuration data.
  */
-export const currentGlobalConfiguration: () => object = () =>
-  (Regions as {[key: string]: object})[currentGlobalRegion()] || {};
+export const currentGlobalConfiguration: () => RegionConfiguration = () =>
+  (Regions as {[key: string]: RegionConfiguration})[currentGlobalRegion()] ||
+  {};
 
 /**
  * This queries the current global configuration for the given key.
@@ -51,7 +66,9 @@ export const currentGlobalConfigurationFor: (
 ) => object | boolean = key => {
   // Split by '.' and then tap into the object
   const parts = key.split('.');
-  let context: object | boolean = currentGlobalConfiguration();
+  let context: object | boolean = currentGlobalConfiguration() as
+    | object
+    | boolean;
   for (const part of parts) {
     if ((context as {[key: string]: object | boolean})[part] === false) {
       context = false;
@@ -67,4 +84,37 @@ export const currentGlobalConfigurationFor: (
   }
 
   return !!context;
+};
+
+/**
+ * This wraps a component such that it updates its own properties to
+ * override them with the ones found in the global configuration.
+ *
+ * @param {React.FunctionComponent} WrappedComponent - The component to wrap.
+ * @param {string} componentId - The name of this component.
+ */
+export const globalRegionWrapper: (
+  WrappedComponent: React.FunctionComponent,
+  componentId: string
+) => React.FunctionComponent = (WrappedComponent, componentId) => {
+  const EmptyComponent = () => null;
+
+  const pages = currentGlobalConfiguration().pages || {};
+
+  // Retrieves the current page Global Region config based on the page path mask.
+  const pageConfigKey: string | undefined = (
+    Object.keys(pages) as Array<string>
+  ).find(pageMask => RegExp(pageMask).test(window.location.pathname));
+
+  if (pageConfigKey) {
+    const pageConfig = pages[pageConfigKey];
+
+    // Renders the component if it is enabled for the page
+    return !pageConfig || pageConfig[componentId]
+      ? WrappedComponent
+      : EmptyComponent;
+  }
+
+  // Just output the unaltered component if there's no rule
+  return WrappedComponent;
 };
