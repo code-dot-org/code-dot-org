@@ -1185,6 +1185,7 @@ Dashboard::Application.routes.draw do
     post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
     get '/aichat/chat_request/:id', to: 'aichat#chat_request'
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
+    post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
 
