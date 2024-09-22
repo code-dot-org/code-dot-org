@@ -7,7 +7,7 @@ module Rack
       CDO.dashboard_hostname,
     ].freeze
     AVAILABLE_REGIONS = Set[
-      FARSI_REGION = 'fa',
+      *Cdo::Global.regions.map(&:to_s)
     ].freeze
     ROOT_PATH = '/global'
     PATH_PATTERN = Regexp.new <<~REGEXP.remove(/\s+/)
