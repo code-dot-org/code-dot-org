@@ -6,153 +6,61 @@ class HelpHeader
   def self.get_help_contents(options)
     loc_prefix = options[:loc_prefix]
 
-    ge_region = options[:ge_region]
+    ge_region = options[:ge_region] || :root
     ge_config = Cdo::Global.configuration_for(ge_region)[:header] || {}
-    ge_help_config = ge_config[:'help-menu'] || {}
+    ge_help_config = ge_config[:help] || {}
 
-    entries = []
-
-    # Help-related.
-
-    if options[:level] && options[:level].game == Game.gamelab
-      if ge_help_config[:'gamelab-documentation'] != false
-        entries << {
-          title: I18n.t("#{loc_prefix}game_lab_documentation"),
-          url: "https://studio.code.org/docs/gamelab/",
-          id: "gamelab-docs"
-        }
-      end
-
-      if ge_help_config[:'gamelab-tutorials'] != false
-        entries << {
-          title: I18n.t("#{loc_prefix}game_lab_tutorials"),
-          url: CDO.code_org_url('/educate/gamelab'),
-          id: "gamelab-tutorials"
-        }
-      end
-    end
-
-    if options[:level] && options[:level].game == Game.applab
-      if ge_help_config[:'applab-documentation'] != false
-        entries << {
-          title: I18n.t("#{loc_prefix}app_lab_documentation"),
-          url: "https://studio.code.org/docs/applab/",
-          id: "applab-docs"
-        }
-      end
-
-      if ge_help_config[:'applab-tutorials'] != false
-        entries << {
-          title: I18n.t("#{loc_prefix}app_lab_tutorials"),
-          url: CDO.code_org_url('/educate/applab'),
-          id: "applab-tutorials"
-        }
-      end
-    end
-
-    if options[:level] && options[:level].game == Game.spritelab
-      if ge_help_config[:'spritelab-documentation'] != false
-        entries << {
-          title: I18n.t("#{loc_prefix}sprite_lab_documentation"),
-          url: "https://studio.code.org/docs/spritelab/",
-          id: "spritelab-docs"
-        }
-      end
-
-      if ge_help_config[:'spritelab-tutorials'] != false
-        entries << {
-          title: I18n.t("#{loc_prefix}sprite_lab_tutorials"),
-          url: CDO.code_org_url('/educate/spritelab'),
-          id: "spritelab-tutorials"
-        }
-      end
-    end
-
-    if options[:level] && options[:level].game == Game.weblab && (ge_help_config[:'weblab-documentation'] != false)
-      entries << {
-        title: I18n.t("#{loc_prefix}web_lab_documentation"),
-        url: "https://studio.code.org/docs/ide/weblab/",
-        id: "weblab-docs"
-      }
-    end
-
-    if options[:level] && options[:level].game == Game.music && (ge_help_config[:'musiclab-documentation'] != false)
-      entries << {
-        title: I18n.t("#{loc_prefix}music_lab_documentation"),
-        url: "/docs/ide/music",
-        id: "musiclab-docs"
-      }
-    end
-
-    if ge_help_config[:support] != false
-      entries << {
-        title: I18n.t("#{loc_prefix}help_support"),
-        url: "https://support.code.org",
-        id: "support",
-        target: "_blank"
-      }
-    end
-
+    # Determine, if possible, the report_bug link for the current page, and
+    # whether or not there is a report_abuse link
+    report_url = nil
+    report_abuse = false
     if options[:level] || options[:script_level]
       report_url = options[:script_level] ?
         options[:script_level].report_bug_url(options[:request]) :
         options[:level].report_bug_url(options[:request])
-      if ge_help_config[:'report-bug'] != false
-        entries << {
-          title: I18n.t("#{loc_prefix}report_bug"),
-          url: report_url,
-          id: "report-bug"
-        }
-      end
-      if ge_help_config[:'report-abuse'] != false
-        entries << {
-          title: I18n.t("#{loc_prefix}report_abuse"),
-          url: "/report_abuse",
-          id: "report-abuse"
-        }
-      end
+      report_abuse = true
     elsif options[:lesson]
       report_url = options[:lesson].report_bug_url(options[:request])
-      if ge_help_config[:'report-bug'] != false
-        entries << {
-          title: I18n.t("#{loc_prefix}report_bug"),
-          url: report_url,
-          id: "report-bug"
-        }
-      end
-    else
-      if ge_help_config[:'report-bug'] != false
-        entries << {
-          title: I18n.t("#{loc_prefix}report_bug"),
-          url: "https://support.code.org/hc/en-us/requests/new",
-          id: "report-bug"
-        }
-      end
     end
 
-    if options[:user_type] == "teacher" && (ge_help_config[:'teacher-forum'] != false)
-      entries << {
-        title: I18n.t("#{loc_prefix}teacher_community"),
-        url: "http://forum.code.org/",
-        id: "teacher-community"
-      }
-    end
+    # Gather the entries from the regional configuration
+    ge_help_config.filter_map do |link|
+      link = link.dup
 
-    # We want help links to open in a new window so students can refer to them in parallel with their code.
-    # However, there are security (and performance) risks to opening links in new windows.
-    # The current set of links are safe because they are internal.
-    # Adding external links to this help menu should be avoided while we are setting "target = _blank".
-    # The security risks are partially mitigated by setting the rel attribute to "noopener noreferrer nofollow",
-    # but not all browsers support these -- see these docs for more details:
-    # https://developers.google.com/web/tools/lighthouse/audits/noopener
-    entries.each do |entry|
-      entry[:target] = "_blank"
-      # We don't need to protect against cross-site issues if we are staying on our own site. We should avoid adding
-      # these protections because we use them. For example, the report abuse page uses the referrer attribute to know
-      # which page the user probably wants to report.
-      entry[:rel] = "noopener noreferrer nofollow" unless URI(entry[:url]).host.
-        blank?
+      next nil if link[:level] && (!options[:level] || Game.find_by_name(link[:level]) != options[:level].game)
+      next nil if link[:user_type] && link[:user_type] != options[:user_type]
+      next nil if link[:title] == 'report_abuse' && !report_abuse
+
+      # Handle the 'report_bug' link as a special case
+      if link[:title] == 'report_bug' && report_url
+        link[:url] = report_url
+      end
+
+      # Always open 'help' links in their own windows
+      link[:target] = "_blank"
+
+      # Add the appropriate domains to the links
+      if link[:domain] == 'studio.code.org'
+        link[:url] = CDO.studio_url(link[:url])
+      elsif link[:domain] == 'code.org'
+        link[:url] = CDO.code_org_url(link[:url])
+      else
+        # We want help links to open in a new window so students can refer to them in parallel with their code.
+        # However, there are security (and performance) risks to opening links in new windows.
+        # The security risks are partially mitigated by setting the rel attribute to "noopener noreferrer nofollow",
+        #
+        # 'noreferrer' prevents the next page to get the address of our page
+        # https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/noreferrer
+        # 'noopener' prevents the next page to see any context of our page
+        # https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/noopener
+        # The nofollow rule is for crawlers such that they do not click the link
+        # and associate the two pages in, say, search results.
+        link[:rel] = "noopener noreferrer nofollow"
+      end
+
+      # Translate the title
+      link[:title] = I18n.t("#{loc_prefix}#{link[:title]}")
+      link
     end
-    entries
   end
 end
