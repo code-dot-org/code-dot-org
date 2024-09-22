@@ -92,194 +92,37 @@ class Hamburger
     loc_prefix = options[:loc_prefix]
     is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
     is_level = options[:level]
-    hide_small_desktop = is_teacher_or_student || is_level
+    is_teacher_or_student || is_level
 
-    ge_region = options[:ge_region]
+    ge_region = options[:ge_region] || :root
     ge_config = Cdo::Global.configuration_for(ge_region)[:header] || {}
-
-    # Teacher-specific hamburger dropdown links.
-    teacher_entries = [
-      {title: "my_dashboard", url: CDO.studio_url("/home")},
-    ]
-
-    if ge_config[:'course-catalog'] != false
-      teacher_entries << {title: "course_catalog", url: CDO.studio_url("/catalog")}
-    end
-
-    if ge_config[:'project-gallery'] != false
-      teacher_entries << {title: "project_gallery", url: CDO.studio_url("/projects")}
-    end
-
-    if ge_config[:'professional-learning'] != false
-      teacher_entries << {title: "professional_learning", url: CDO.studio_url("/my-professional-learning")}
-    end
-
-    if ge_config[:incubator] != false
-      teacher_entries << {title: "incubator", url: CDO.studio_url("/incubator")}
-    end
-
-    teacher_entries.each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end
-
-    # Student-specific hamburger dropdown links.
-    student_entries = [
-      {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
-    ]
-
-    if ge_config[:'course-catalog'] != false
-      student_entries << {title: "course_catalog", url: CDO.code_org_url("/students")}
-    end
-
-    if ge_config[:'project-gallery'] != false
-      student_entries << {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"}
-    end
-
-    if ge_config[:incubator] != false
-      student_entries << {title: "incubator", url: CDO.studio_url("/incubator")}
-    end
-
-    student_entries.each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end
-
-    # Teach hamburger dropdown links.
-    educate_entries = []
-
-    ge_teach_config = ge_config[:'teach-menu'] || {}
-
-    if ge_teach_config[:overview] != false
-      educate_entries << {title: "educate_overview", url: CDO.code_org_url("/teach"), id: "educate-overview"}
-    end
-
-    if ge_teach_config[:'course-catalog'] != false
-      educate_entries << {title: "course_catalog", url: CDO.studio_url("/catalog"), id: "course-catalog"}
-    end
-
-    if ge_teach_config[:elementary] != false
-      educate_entries << {title: "educate_elementary", url: CDO.code_org_url("/educate/curriculum/elementary-school")}
-    end
-
-    if ge_teach_config[:middle] != false
-      educate_entries << {title: "educate_middle", url: CDO.code_org_url("/educate/curriculum/middle-school")}
-    end
-
-    if ge_teach_config[:high] != false
-      educate_entries << {title: "educate_high", url: CDO.code_org_url("/educate/curriculum/high-school")}
-    end
-
-    if ge_teach_config[:hoc] != false
-      educate_entries << {title: "educate_hoc", url: "https://hourofcode.com"}
-    end
-
-    if ge_teach_config[:beyond] != false
-      educate_entries << {title: "educate_beyond", url: CDO.code_org_url("/educate/curriculum/3rd-party")}
-    end
-
-    if ge_teach_config[:community] != false
-      educate_entries << {title: "educate_community", url: "https://forum.code.org/"}
-    end
-
-    if ge_teach_config[:requirements] != false
-      educate_entries << {title: "educate_requirements", url: CDO.code_org_url("/educate/it")}
-    end
-
-    if ge_teach_config[:tools] != false
-      educate_entries << {title: "educate_tools", url: CDO.code_org_url("/educate/resources/videos")}
-    end
-
-    # Remove Course Catalog link for teachers and students.
-    # This link is already in the teacher and student entries above.
-    if is_teacher_or_student
-      educate_entries.delete_if {|e| e[:title] == "course_catalog"}
-    end
-
-    # Return the rest of the educate links.
-    educate_entries.each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end
-
-    educate_entries.freeze
-
-    # About hamburger dropdown links.
-    ge_about_config = ge_config[:'about-menu'] || {}
-    about_entries = []
-
-    if ge_about_config[:us] != false
-      about_entries << {title: "about_us", url: CDO.code_org_url("/about"), id: "about-us"}
-    end
-
-    if ge_about_config[:leadership] != false
-      about_entries << {title: "about_leadership", url: CDO.code_org_url("/about/leadership")}
-    end
-
-    if ge_about_config[:donors] != false
-      about_entries << {title: "about_donors", url: CDO.code_org_url("/about/donors")}
-    end
-
-    if ge_about_config[:partners] != false
-      about_entries << {title: "about_partners", url: CDO.code_org_url("/about/partners")}
-    end
-
-    if ge_about_config[:team] != false
-      about_entries << {title: "about_team", url: CDO.code_org_url("/about/team")}
-    end
-
-    if ge_about_config[:news] != false
-      about_entries << {title: "about_news", url: CDO.code_org_url("/about/news")}
-    end
-
-    if ge_about_config[:jobs] != false
-      about_entries << {title: "about_jobs", url: CDO.code_org_url("/about/jobs")}
-    end
-
-    if ge_about_config[:contact] != false
-      about_entries << {title: "about_contact", url: CDO.code_org_url("/contact")}
-    end
-
-    if ge_about_config[:faqs] != false
-      about_entries << {title: "about_faqs", url: CDO.code_org_url("/faq")}
-    end
-
-    about_entries.each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
-
-    # Privacy & Legal hamburger dropdown links.
-    ge_legal_config = ge_config[:'legal-menu'] || {}
-
-    legal_entries = []
-
-    if ge_legal_config[:privacy] != false
-      legal_entries << {title: "legal_privacy", url: CDO.code_org_url("/privacy")}
-    end
-
-    if ge_legal_config[:'cookie-notice'] != false
-      legal_entries << {title: "legal_cookie_notice", url: CDO.code_org_url("/cookies")}
-    end
-
-    if ge_legal_config[:tos] != false
-      legal_entries << {title: "legal_tos", url: CDO.code_org_url("/tos")}
-    end
-
-    legal_entries.each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
+    ge_hamburger_config = ge_config[:hamburger] || {}
 
     # Get visibility CSS.
     visibility_options = {level: options[:level], language: options[:language], user_type: options[:user_type]}
     visibility = Hamburger.get_visibility(visibility_options)
 
-    # Generate the list of entries.
+    # We will build on the menu items here
     entries = []
 
-    # user_type-specific.
-    case options[:user_type]
-    when 'teacher'
-      entries = entries.concat(teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]})
+    # First, we get the header contents, which we put into the hamburger menu
+    # when the width prohibits their visibility
+    header_links = get_header_contents(options)
+
+    # Then we add those first, with the proper visibility
+    entries.concat(header_links.map do |header_link|
+      if options[:user_type] == "teacher"
+        header_link[:class] = visibility[:show_teacher_options]
+      elsif options[:user_type] == "student"
+        header_link[:class] = visibility[:show_student_options]
+      end
+      header_link
+    end
+)
+
+    if options[:user_type] == "teacher"
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_help_options]), id: "after-teacher"}
-    when 'student'
-      entries = entries.concat(student_entries.each {|e| e[:class] = visibility[:show_student_options]})
+    elsif options[:user_type] == "student"
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
     end
 
@@ -290,81 +133,39 @@ class Hamburger
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
     end
 
-    # Pegasus links.
-    if ge_config[:learn] != false
-      entries << {
-        title: I18n.t("#{loc_prefix}learn"),
-        url: CDO.code_org_url("/students"),
-        class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop"),
-        id: "learn"
-      }
+    # Then we negotiate the region configuration
+    hamburger_links = ge_hamburger_config[:teacher] || {}
+    if options[:user_type] == "student"
+      hamburger_links = ge_hamburger_config[:student] || {}
     end
 
-    if ge_config[:'teach-menu'] != false
-      entries << {
-        type: "expander",
-        title: I18n.t("#{loc_prefix}teach"),
-        id: "educate_entries",
-        subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-        class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop")
-      }
-    end
+    # For each one, we localize the link contents and add it to our list
+    entries.concat(hamburger_links.map do |link|
+      link = link.dup
+      link[:title] = I18n.t("#{loc_prefix}#{link[:title]}")
+      if link[:domain] == 'studio.code.org'
+        link[:url] = CDO.studio_url(link[:url])
+      elsif link[:domain] == 'code.org'
+        link[:url] = CDO.code_org_url(link[:url])
+      end
 
-    if ge_config[:districts] != false
-      entries << {
-        title: I18n.t("#{loc_prefix}districts"),
-        url: CDO.code_org_url("/administrators"),
-        class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop"),
-        id: "districts"
-      }
-    end
+      # Also handle subentries
+      if link[:subentries]
+        link[:subentries] = link[:subentries].map do |sublink|
+          sublink = sublink.dup
+          sublink[:title] = I18n.t("#{loc_prefix}#{sublink[:title]}")
+          if sublink[:domain] == 'studio.code.org'
+            sublink[:url] = CDO.studio_url(sublink[:url])
+          elsif sublink[:domain] == 'code.org'
+            sublink[:url] = CDO.code_org_url(sublink[:url])
+          end
+          sublink
+        end
+      end
 
-    if ge_config[:stats] != false
-      entries << {
-        title: I18n.t("#{loc_prefix}stats"),
-        url: CDO.code_org_url("/promote"),
-        class: visibility[:show_pegasus_options],
-        id: "stats"
-      }
+      link
     end
-
-    if ge_config[:'help-us'] != false
-      entries << {
-        title: I18n.t("#{loc_prefix}help_us"),
-        url: CDO.code_org_url("/help"),
-        class: visibility[:show_pegasus_options],
-        id: "help-us"
-      }
-    end
-
-    if !is_teacher_or_student && (ge_config[:incubator] != false)
-      entries << {
-        title: I18n.t("#{loc_prefix}incubator"),
-        url: CDO.studio_url("/incubator"),
-        class: visibility[:show_pegasus_options],
-        id: "incubator"
-      }
-    end
-
-    if ge_config[:'about-menu'] != false
-      entries << {
-        type: "expander",
-        title: I18n.t("#{loc_prefix}about"),
-        id: "about_entries",
-        subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-        class: visibility[:show_pegasus_options]
-      }
-    end
-
-    if ge_config[:'legal-menu'] != false
-      entries << {
-        type: "expander",
-        title: I18n.t("#{loc_prefix}legal"),
-        id: "legal_entries",
-        subentries: legal_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-        class: visibility[:show_pegasus_options]
-      }
-    end
+)
 
     # Show help links at the bottom of the list for signed out users.
     unless is_teacher_or_student
@@ -379,81 +180,31 @@ class Hamburger
   def self.get_header_contents(options)
     loc_prefix = options[:loc_prefix]
 
-    ge_region = options[:ge_region]
+    ge_region = options[:ge_region] || :root
     ge_config = Cdo::Global.configuration_for(ge_region)[:header] || {}
+    ge_top_config = ge_config[:top] || {}
 
-    any_teacher_links = [
-      {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
-    ]
-
-    if ge_config[:'course-catalog'] != false
-      any_teacher_links << {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/catalog"), id: "header-teacher-courses"}
-    end
-
-    if ge_config[:'project-gallery'] != false
-      any_teacher_links << {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"}
-    end
-
-    if ge_config[:'professional-learning'] != false
-      any_teacher_links << {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"}
-    end
-
-    if ge_config[:incubator] != false
-      any_teacher_links << {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-teacher-incubator"}
-    end
-
-    any_student_links = [
-      {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
-    ]
-
-    if ge_config[:'course-catalog'] != false
-      any_student_links << {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.code_org_url("/students"), id: "header-student-courses"}
-    end
-
-    if ge_config[:'project-gallery'] != false
-      any_student_links << {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
-    end
-
-    if ge_config[:incubator] != false
-      any_student_links << {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"}
-    end
-
-    signed_out_links = []
-
-    if ge_config[:learn] != false
-      signed_out_links << {title: I18n.t("#{loc_prefix}learn"), url: CDO.code_org_url("/students"), id: "header-learn"}
-    end
-
-    if ge_config[:teach] != false
-      signed_out_links << {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/teach"), id: "header-teach"}
-    end
-
-    if ge_config[:districts] != false
-      signed_out_links << {title: I18n.t("#{loc_prefix}districts"), url: CDO.code_org_url("/administrators"), id: "header-districts"}
-    end
-
-    if ge_config[:stats] != false
-      signed_out_links << {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-stats", class: "hide-small-desktop"}
-    end
-
-    if ge_config[:'help-us'] != false
-      signed_out_links << {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-help", class: "hide-small-desktop"}
-    end
-
-    if ge_config[:incubator] != false
-      signed_out_links << {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator", class: "hide-small-desktop"}
-    end
-
-    if ge_config[:about] != false
-      signed_out_links << {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-about", class: "hide-small-desktop"}
-    end
-
+    links = ge_top_config[:signed_out] || []
     if options[:user_type] == "teacher"
-      any_teacher_links
+      links = ge_top_config[:teacher] || []
     elsif options[:user_type] == "student"
-      any_student_links
-    else
-      signed_out_links
+      links = ge_top_config[:student] || []
     end
+
+    # Translate the titles and create fully-formed URLs
+    links = links.map do |info|
+      if info.is_a? Hash
+        info = info.dup
+        info[:title] = I18n.t("#{loc_prefix}#{info[:title]}")
+        if info[:domain] == 'studio.code.org'
+          info[:url] = CDO.studio_url(info[:url])
+        elsif info[:domain] == 'code.org'
+          info[:url] = CDO.code_org_url(info[:url])
+        end
+      end
+      info
+    end
+
+    links
   end
 end

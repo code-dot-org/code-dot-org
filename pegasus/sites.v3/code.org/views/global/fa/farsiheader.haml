@@ -18,7 +18,8 @@
   hamburger_options[:ge_region] = :fa
 
   header_contents_options = {}
-  header_contents_options[:user_type] = user_type
+  # Force signed out user for the header, for now
+  header_contents_options[:user_type] = 'signed_out'
   header_contents_options[:language] = request.language
   header_contents_options[:loc_prefix] = "header_"
   header_contents_options[:page_mode] = request.cookies['pm']
