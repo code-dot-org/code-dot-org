@@ -114,7 +114,15 @@ describe('TeacherHomepage', () => {
     const wrapper = setUp({
       specialAnnouncement,
     });
-    assert(wrapper.find('MarketingAnnouncementBanner').exists());
+    assert(
+      wrapper
+        .findWhere(
+          n =>
+            n.name() === 'GlobalRegionWrapper' &&
+            n.prop('componentId') === 'MarketingAnnouncementBanner'
+        )
+        .exists()
+    );
   });
 
   // Notifications are configured not to be rendered right now with showAnnouncement = false
