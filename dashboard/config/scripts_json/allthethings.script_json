@@ -9215,18 +9215,6 @@
         "lesson.key": "lesson-53",
         "lesson_group.key": "",
         "script.name": "allthethings",
-    {
-      "seeding_key": {
-        "level.key": "Allthethings Python Lab 8",
-        "script_level.level_keys": [
-          "Allthethings Python Lab 8"
-        ],
-        "lesson.key": "lesson-53",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
-      }
-    },
         "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
       }
     },
