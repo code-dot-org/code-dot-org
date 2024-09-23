@@ -60,18 +60,16 @@ module AichatSafetyHelper
       details
     end
 
-    # Temporarily disable comprehend for testing
     private def comprehend_enabled?(role)
-      DCDO.get("aichat_safety_comprehend_enabled_#{role}", false)
+      DCDO.get("aichat_safety_comprehend_enabled_#{role}", true)
     end
 
     private def webpurify_enabled?(role)
       DCDO.get("aichat_safety_webpurify_enabled_#{role}", false)
     end
 
-    # Temporarily enable openai for testing
     private def openai_enabled?(role)
-      DCDO.get("aichat_safety_openai_enabled_#{role}", true)
+      DCDO.get("aichat_safety_openai_enabled_#{role}", false)
     end
 
     private def get_openai_system_prompt

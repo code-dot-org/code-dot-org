@@ -33,7 +33,8 @@ module OpenaiChatHelper
     )
   end
 
-  def self.request_safety_check(text, system_prompt)
+  # Used to check safety content given text with the given moderation system prompt.
+  def self.request_safety_check(text, safety_system_prompt)
     # Set up the API endpoint URL and request headers
     headers = {
       "Content-Type" => "application/json",
@@ -43,7 +44,7 @@ module OpenaiChatHelper
     messages = [
       {
         role: "system",
-        content: system_prompt
+        content: safety_system_prompt
       },
       {
         role: "user",
