@@ -42,15 +42,16 @@ theme: responsive_full_width
       =hoc_s("gen_ai_page.teach_complete_course.title")
     %p.body-two
       =hoc_s("gen_ai_page.teach_complete_course.desc")
-    .action-block.action-block--two-col.content-block-margin
-      %img.col-50{src: "/images/ai/explore-gen-ai-bot-wizard.png", alt: ""}
+    .action-block.action-block--two-col
+      .media-wrapper.col-50
+        %img{src: "/images/ai/explore-gen-ai-bot-wizard.png", alt: ""}
       .text-wrapper.col-50
         %h3=hoc_s("gen_ai_page.teach_complete_course.explore_gen_ai_card.title")
         %p=hoc_s("gen_ai_page.teach_complete_course.explore_gen_ai_card.desc")
         %a.link-button{href: CDO.studio_url("/courses/exploring-gen-ai-2024?viewAs=Instructor")}
           =hoc_s(:call_to_action_explore_course)
         %br
-        %a.link-button.secondary.white-button{href: CDO.studio_url("/s/self-paced-gen-ai-2024")}
+        %a.link-button.secondary{href: CDO.studio_url("/s/self-paced-gen-ai-2024")}
           =hoc_s("gen_ai_page.teach_complete_course.explore_gen_ai_card.see_pl")
       .clear
 
@@ -76,14 +77,8 @@ theme: responsive_full_width
         =hoc_s("gen_ai_page.unlock_full_access_banner.button")
 
 %section
-  .wrapper.ai-chat-lab.flex-container.justify-space-between.align-items-center
-    %figure.action-wrapper.solid-bg
-      %img{src: "/images/ai/model-card-genai-example.png", alt: ""}
-    .text-wrapper
-      %h2
-        =hoc_s("gen_ai_page.new_ai_chat_lab.title")
-      %p.body-two
-        =hoc_s("gen_ai_page.new_ai_chat_lab.desc")
+  .wrapper
+    = view :section_basic_image_text, image_url: "/images/ai/model-card-genai-example.png", heading: hoc_s("gen_ai_page.new_ai_chat_lab.title"), desc: hoc_s("gen_ai_page.new_ai_chat_lab.desc"), url: nil, urlText: nil, wrap_reverse: false
 
 %section.quote.bg-neutral-dark
   .wrapper
@@ -97,8 +92,9 @@ theme: responsive_full_width
   .wrapper
     %h2
       =hoc_s("gen_ai_page.preparing_to_explore.title")
-    .action-block.action-block--two-col.content-block-margin.white
-      %img.col-50{src: "/images/ai/explore-gen-ai-bot-wizard.png", alt: ""}
+    .action-block.action-block--two-col.white
+      .media-wrapper.col-50
+        %img{src: "/images/ai/explore-gen-ai-bot-wizard.png", alt: ""}
       .text-wrapper.col-50
         %p.overline=hoc_s("gen_ai_page.preparing_to_explore.teaching_card.overline")
         %h3=hoc_s("gen_ai_page.preparing_to_explore.teaching_card.title")

@@ -67,14 +67,6 @@ section.hero-banner-basic {
   }
 }
 
-.content-block-margin {
-  margin-top: 2.5rem;
-}
-
-.white-button {
-  background: $white !important;
-}
-
 .verified-skinny-banner {
   background: #ABDFE580 !important;
   padding: 2.5rem;
@@ -98,24 +90,6 @@ section.hero-banner-basic {
 
   img {
     width: 100%;
-  }
-}
-
-.ai-chat-lab {
-  @media (min-width: 753px) {
-    .action-wrapper {
-      flex: 1;
-    }
-    
-    .text-wrapper {
-      flex: 1;
-      padding-inline-start: 4rem;
-    }
-  }
-
-  @media (max-width: 753px) {
-    flex-direction: column;
-    gap: 1rem;
   }
 }
 
