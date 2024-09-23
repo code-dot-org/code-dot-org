@@ -1,0 +1,33 @@
+name 'SP-PL-DS-Predict_Debrief'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Debriefing Predict and Run
+
+## Predict & Discuss
+#### These low-stakes, no-wrong-answer questions foster class discussion and introduce the upcoming lesson content. Although these predictions could be done through journals or group discussions, completing them directly in the platform allows student responses to be incorporated into the subsequent discussion.
+
+
+## Teaching Strategies for Python Prediction Levels
+#### These prediction-based questions should always include a discussion with a clear learning objective, outlined in the lesson plan. You can use student responses by clicking on the **'Veiw student responses'** button to amplify their voices and guide the conversation. 
+
+## Key strategies to facilitate a productive discussion:
+
+<img src="https://images.code.org/9ded5348ed943c276493c7edced20bc4-image-1726850791354.png" alt="Image CS Discoveries students" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+- #### **Highlight Select Student Responses**: As students submit predictions, select a few responses to discuss as a class. Use these responses to drive the conversation, highlighting patterns and insights.
+
+- #### **Show All Student Responses:** Share your screen to show all the submitted predictions, ensuring they are appropriate. This approach allows you to involve all student voices and identify trends or diverse viewpoints in their predictions.
+
+- #### **Secretly Prime the Discussion:** While monitoring responses, select interesting ones and subtly guide the conversation. For example, “I noticed some predictions mentioned [X]. Does anyone want to elaborate?” This technique allows you to shape the conversation using student input.
+
+#### These strategies help enhance class discussions, encourage critical thinking, and deepen students' understanding of Python programming predictions.
+<br>
+
+
+
+
+
+
+MARKDOWN

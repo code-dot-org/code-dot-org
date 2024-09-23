@@ -2,27 +2,23 @@ require "test_helper"
 
 class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   setup do
+    @locale = 'en'
     @student = create :student
     @model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}
     @new_message = {chatMessageText: 'hello', role: 'user', status: 'unknown', timestamp: Time.now.to_i}
-    @blocklist_blocked_word = "blocked_profanity"
-    @comprehend_response = {
-      flagged_segment: 'comprehend-toxicity',
-      toxicity: 0.9,
-      max_category: {
-        score: 0.7,
-        name: "INSULT"
+    @toxic_response = {
+      text: 'toxic',
+      blocked_by: 'comprehend',
+      details: {
+        flagged_segment: 'toxic',
+        max_category: {
+          score: 0.7,
+          name: 'INSULT'
+        }
       }
     }
-    @profane_message = "profanity hello #{@blocklist_blocked_word}"
 
-    DCDO.stubs(:get).with("aichat_toxicity_threshold_user_input", anything).returns(AichatRequestChatCompletionJob::DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
-    DCDO.stubs(:get).with("aichat_toxicity_threshold_model_output", anything).returns(AichatRequestChatCompletionJob::DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
-    DCDO.stubs(:get).with("aichat_safety_profane_word_blocklist", anything).returns([@blocklist_blocked_word])
-    ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'webpurify-profanity'))
-    AichatComprehendHelper.stubs(:get_toxicity).returns(@comprehend_response)
-
-    stub_safety_services(nil, 'user')
+    AichatSafetyHelper.stubs(:find_toxicity).returns(nil)
   end
 
   test 'execution status is set to QUEUED before perform' do
@@ -31,33 +27,32 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:QUEUED], request.reload.execution_status
   end
 
-  %w[blocklist webpurify comprehend].each do |service|
-    test "execution status is set to USER_PROFANITY if user input is blocked by #{service}" do
-      stub_safety_services(service, 'user')
-      request = create :aichat_request, new_message: {chatMessageText: @profane_message, role: 'user', status: 'unknown', timestamp: Time.now.to_i}.to_json
-      perform_enqueued_jobs do
-        AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
-      end
+  test "execution status is set to USER_PROFANITY if toxicity detected in user input" do
+    request = create :aichat_request
+    user_message = JSON.parse(request.new_message, symbolize_names: true)[:chatMessageText]
+    AichatSafetyHelper.expects(:find_toxicity).with('user', user_message, @locale).returns(@toxic_response)
 
-      assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], request.reload.execution_status
-      response = JSON.parse(request.response).deep_symbolize_keys
-      verify_safety_response(service, response)
+    perform_enqueued_jobs do
+      AichatRequestChatCompletionJob.perform_later(request: request, locale: @locale)
     end
+
+    assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], request.reload.execution_status
+    assert_equal @toxic_response.to_json, request.response
   end
 
-  %w[blocklist webpurify comprehend].each do |service|
-    test "execution status is set to MODEL_PROFANITY if model response is blocked by #{service}" do
-      stub_safety_services(service, 'assistant')
-      request = create :aichat_request
-      AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns(@profane_message)
-      perform_enqueued_jobs do
-        AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
-      end
+  test "execution status is set to MODEL_PROFANITY if toxicity detected in model output" do
+    AichatSafetyHelper.stubs(:find_toxicity).with('user', anything, anything).returns(nil)
+    AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns('response')
+    AichatSafetyHelper.stubs(:find_toxicity).with('assistant', anything, anything).returns(@toxic_response)
 
-      assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], request.reload.execution_status
-      response = JSON.parse(request.response).deep_symbolize_keys
-      verify_safety_response(service, response)
+    request = create :aichat_request
+
+    perform_enqueued_jobs do
+      AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
     end
+
+    assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], request.reload.execution_status
+    assert_equal @toxic_response.to_json, request.response
   end
 
   test 'execution status is set to SUCCESS if no profanity is detected' do
@@ -101,28 +96,5 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert request.response.include?(error_message)
     assert exception.message.include?(error_message)
     assert exception.message.include?(request.to_json)
-  end
-
-  def stub_safety_services(enabled_service, enabled_role)
-    %w[user assistant].each do |role|
-      DCDO.stubs(:get).with("aichat_safety_blocklist_enabled_#{role}", anything).returns(enabled_service == 'blocklist' && role == enabled_role)
-      DCDO.stubs(:get).with("aichat_safety_webpurify_enabled_#{role}", anything).returns(enabled_service == 'webpurify' && role == enabled_role)
-      DCDO.stubs(:get).with("aichat_safety_comprehend_enabled_#{role}", anything).returns(enabled_service == 'comprehend' && role == enabled_role)
-    end
-  end
-
-  def verify_safety_response(enabled_service, response)
-    assert_equal @profane_message, response[:text]
-    assert_equal enabled_service, response[:blocked_by]
-    details = response[:details]
-    case enabled_service
-    when 'blocklist'
-      assert_equal @blocklist_blocked_word, details[:blocked_word]
-    when 'webpurify'
-      assert_equal ShareFiltering::FailureType::PROFANITY, details[:type]
-      assert_equal 'webpurify-profanity', details[:content]
-    when 'comprehend'
-      assert_equal @comprehend_response, details
-    end
   end
 end
