@@ -11049,6 +11049,9 @@
         body_04: "No use of \"Hour of Code\" or \"Hora del Código\" in app names."
 
   hoc_how_to:
+    page_title:
+      teachers: "How-to guide for Teachers"
+      events: "How-to guide for Events"
     heading: "Your go-to guide starts here!"
     desc: "Choose the right guide for you:"
     label:

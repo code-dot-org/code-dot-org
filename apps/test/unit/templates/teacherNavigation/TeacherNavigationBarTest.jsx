@@ -13,9 +13,9 @@ import {
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
   selectSection,
-  serverSectionFromSection,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import TeacherNavigationBar from '@cdo/apps/templates/teacherNavigation/TeacherNavigationBar';
 import {
   SPECIFIC_SECTION_BASE_URL,
