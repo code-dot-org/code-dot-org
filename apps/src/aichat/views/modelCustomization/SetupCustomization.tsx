@@ -167,6 +167,7 @@ const SetupCustomization: React.FunctionComponent = () => {
               tooltipText="The system prompt controls how the chatbot behaves. Type your instructions into the text box."
             />
             <textarea
+              className={styles.systemPromptInput}
               id="system-prompt"
               value={aiCustomizations.systemPrompt}
               disabled={isDisabled(systemPrompt) || readOnlyWorkspace}
@@ -185,7 +186,7 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.footerButtonContainer}>
         <UpdateButton isDisabledDefault={allFieldsDisabled} />
       </div>
-      <SaveChangesAlerts />
+      <SaveChangesAlerts isReadOnly={allFieldsDisabled} />
     </div>
   );
 };

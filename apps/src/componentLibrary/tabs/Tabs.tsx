@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
@@ -72,6 +72,11 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
     },
     [setSelectedValue, onChange]
   );
+
+  // Reset selected tab whenever default selected value changes.
+  useEffect(() => {
+    setSelectedValue(defaultSelectedTabValue);
+  }, [defaultSelectedTabValue]);
 
   const nameStripped = name.replace(' ', '-');
 

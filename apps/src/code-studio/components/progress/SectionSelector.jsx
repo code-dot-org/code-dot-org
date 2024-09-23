@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {
   selectSection,
   sectionsNameAndId,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import {reload} from '../../../utils';

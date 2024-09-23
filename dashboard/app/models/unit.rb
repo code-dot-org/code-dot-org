@@ -1605,6 +1605,7 @@ class Unit < ApplicationRecord
       name: name,
       unitNumber: unit_number,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
+      scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
     }
@@ -1760,10 +1761,6 @@ class Unit < ApplicationRecord
   end
 
   def unit_number
-    has_prefix = unit_group&.has_numbered_units
-
-    return nil unless has_prefix
-
     unit_group_units&.first&.position
   end
 

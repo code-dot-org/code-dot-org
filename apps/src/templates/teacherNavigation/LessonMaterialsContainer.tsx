@@ -7,12 +7,16 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
-import ResourceRow from './ResourceRow';
+import TeacherResources from './TeacherResources';
+import UnitResourcesDropdown from './UnitResourcesDropdown';
+
+import styles from './lesson-materials.module.scss';
 
 type Lesson = {
   name: string;
   id: number;
   position: number;
+  lessonPlanHtmlUrl: string;
   resources: {
     Teacher: {
       key: string;
@@ -28,6 +32,8 @@ type Lesson = {
 interface LessonMaterialsData {
   title: string;
   unitNumber: number;
+  scriptOverviewPdfUrl: string;
+  scriptResourcesPdfUrl: string;
   lessons: Lesson[];
 }
 
@@ -51,6 +57,9 @@ export const lessonMaterialsLoader =
     const selectedSectionId = state.selectedSectionId;
     const sectionData = state.sections[selectedSectionId];
 
+    // NOTE: this page is not working for stand alone courses.
+    // this is because there is no "unitId" in the sectionData for stand alone courses.
+
     if (!selectedSectionId || !sectionData.unitId) {
       return null;
     }
@@ -68,6 +77,7 @@ const createDisplayName = (lessonName: string, lessonPosition: number) => {
 const LessonMaterialsContainer: React.FC = () => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
   const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
+  const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
 
   const getLessonFromId = (lessonId: number): Lesson | null => {
     return lessons.find(lesson => lesson.id === lessonId) || null;
@@ -99,23 +109,31 @@ const LessonMaterialsContainer: React.FC = () => {
 
   return (
     <div>
-      <SimpleDropdown
-        labelText={i18n.chooseLesson()}
-        isLabelVisible={false}
-        onChange={event => onDropdownChange(event.target.value)}
-        items={lessonOptions}
-        selectedValue={
-          selectedLesson ? selectedLesson.id.toString() : 'no lesson'
-        }
-        name={'lessons-in-assigned-unit-dropdown'}
-        size="s"
-      />
-      {/* Note that this is just a "proof of concept row" - the actual implementation would be more complex */}
+      <div className={styles.lessonMaterialsPageHeader}>
+        <SimpleDropdown
+          labelText={i18n.chooseLesson()}
+          isLabelVisible={false}
+          onChange={event => onDropdownChange(event.target.value)}
+          items={lessonOptions}
+          selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
+          name={'lessons-in-assigned-unit-dropdown'}
+          size="s"
+        />
+        {loadedData?.unitNumber && (
+          <UnitResourcesDropdown
+            unitNumber={loadedData.unitNumber || 0}
+            scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
+            scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
+          />
+        )}
+      </div>
+      {/*  Note that this only goes through Teacher resources - we have separate tickets to make sure that this is presented for all resources */}
       {selectedLesson && (
-        <ResourceRow
-          unitNumber={5} // note that this is a placeholder value
+        <TeacherResources
+          unitNumber={unitNumber}
           lessonNumber={selectedLesson.position}
-          resource={selectedLesson.resources.Teacher[0] || null} // note that this is a placeholder value
+          resources={selectedLesson.resources.Teacher}
+          lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
         />
       )}
     </div>

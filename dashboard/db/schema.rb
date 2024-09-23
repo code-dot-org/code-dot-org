@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_08_07_174943) do
+ActiveRecord::Schema.define(version: 2024_09_20_175046) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.text "response"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["execution_status"], name: "index_aichat_requests_on_execution_status"
   end
 
   create_table "aichat_sessions", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
@@ -543,7 +544,7 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
     t.text "handler", null: false
-    t.text "last_error"
+    t.text "last_error", size: :medium
     t.datetime "run_at"
     t.datetime "locked_at"
     t.datetime "failed_at"
@@ -933,6 +934,13 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["deployment_id"], name: "index_lti_deployments_on_deployment_id"
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
+  end
+
+  create_table "lti_deployments_user_identities", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "lti_deployment_id", null: false
+    t.bigint "lti_user_identity_id", null: false
+    t.index ["lti_deployment_id"], name: "index_lti_deployments_user_identities_on_lti_deployment_id"
+    t.index ["lti_user_identity_id"], name: "index_lti_deployments_user_identities_on_lti_user_identity_id"
   end
 
   create_table "lti_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

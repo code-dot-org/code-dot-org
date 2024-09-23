@@ -34,6 +34,17 @@
   overflow-y: scroll;
 }
 
+.versionHistoryRow {
+  padding: 8px;
+  span {
+    color: $white;
+  }
+}
+
+.versionHistoryRow:has(input[type="radio"]:checked) {
+  background-color: #3F444B;
+}
+
 .versionDropdownFooter {
   margin-top: 8px;
   padding: 8px;

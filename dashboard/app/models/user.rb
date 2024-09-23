@@ -299,8 +299,6 @@ class User < ApplicationRecord
     Services::Lti.create_lti_user_identity(self)
   end
 
-  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
-
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do
@@ -1638,7 +1636,7 @@ class User < ApplicationRecord
 
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
+    return if name.blank? || name.utf8mb4? || email&.utf8mb4?
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 
