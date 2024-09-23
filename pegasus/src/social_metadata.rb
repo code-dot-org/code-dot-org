@@ -19,6 +19,11 @@
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
+#   hourofcode.com/how-to
+#   hourofcode.com/how-to/events
+#   hourofcode.com/resources
+#   hourofcode.com/events
+#   hourofcode.com/faq
 
 def get_social_metadata_for_page(request)
   # Not currently used, but left here for reference in case we want to use videos again.
@@ -132,7 +137,7 @@ def get_social_metadata_for_page(request)
         image: images[:dance_2023_hoc]
       }
     },
-    "learn" => {
+    "hoc-default" => {
       "default" => {
         title: hoc_s("hoc_2024.social.title"),
         description: hoc_s("hoc_2024.social.desc"),
@@ -227,7 +232,17 @@ def get_social_metadata_for_page(request)
   elsif request.path == "/" && ["code.org", "hourofcode.com"].include?(request.site)
     page = request.site
   elsif request.path == "/learn" && request.site == "hourofcode.com"
-    page = "learn"
+    page = "hoc-default"
+  elsif request.path == "/how-to" && request.site == "hourofcode.com"
+    page = "hoc-default"
+  elsif request.path == "/how-to/events" && request.site == "hourofcode.com"
+    page = "hoc-default"
+  elsif request.path == "/resources" && request.site == "hourofcode.com"
+    page = "hoc-default"
+  elsif request.path == "/events" && request.site == "hourofcode.com"
+    page = "hoc-default"
+  elsif request.path == "/faq" && request.site == "hourofcode.com"
+    page = "hoc-default"
   elsif request.path == "/hourofcode" && request.site == "code.org"
     page = "hoc-overview"
   elsif request.path == "/maker" && request.site == "code.org"
