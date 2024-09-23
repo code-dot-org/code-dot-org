@@ -30,7 +30,7 @@ module OpenaiChatHelper
     )
   end
 
-  def self.request_toxicity_detection(text, system_prompt)
+  def self.request_safety_check(text, system_prompt)
     # Set up the API endpoint URL and request headers
     headers = {
       "Content-Type" => "application/json",
@@ -53,13 +53,15 @@ module OpenaiChatHelper
       messages: messages
     }
 
-    HTTParty.post(
+    response = HTTParty.post(
       OPEN_AI_URL,
       headers: headers,
       body: data.to_json,
       open_timeout: DCDO.get('openai_http_open_timeout', 5),
       read_timeout: DCDO.get('openai_http_read_timeout', 30)
     )
+    raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
+    response
   end
 
   def self.get_chat_completion_response_message(response)

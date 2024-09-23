@@ -4,10 +4,10 @@ module AichatSafetyHelper
   class ToxicityDetector
     DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.3
     DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.5
-    OPENAAI_SAFETY_SYSTEM_PROMPT =
+    OPENAI_SAFETY_SYSTEM_PROMPT =
       {
-        SIMPLE: 'You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an American public middle school classroom. Examples of innapropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is innapropriate respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.',
-        FEW_SHOT: '' # https://docs.google.com/document/d/1MkLLVefWTALBfiIr8is6qib76MLHA8qfEJsYi22Jan0/edit
+        simple: 'You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an American public middle school classroom. Examples of innapropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is innapropriate respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.',
+        few_shot: '' # https://docs.google.com/document/d/1MkLLVefWTALBfiIr8is6qib76MLHA8qfEJsYi22Jan0/edit
       }
     VALID_EVALUATION_RESPONSES_SIMPLE = ['INAPPROPRIATE', 'OK']
 
@@ -32,13 +32,34 @@ module AichatSafetyHelper
       end
 
       if openai_enabled?(role)
-        openai_response = OpenaiChatHelper.request_toxicity_detection(text, OPENAAI_SAFETY_SYSTEM_PROMPT[:SIMPLE])
-        puts "openai_response #{openai_response}"
-        evaluation = JSON.parse(openai_response.body)['choices'][0]['message']['content']
-        puts "evaluation #{evaluation}"
-        raise "Unexpected response from OpenAI: #{evaluation}" unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
-        return {text: text, blocked_by: 'openai', details: {}} if evaluation == 'INAPPROPRIATE'
+        details = openai_safety_check(text)
+        return {text: text, blocked_by: 'openai', details: details} if details
       end
+    end
+
+    private def openai_safety_check(text)
+      safety_system_prompt = OPENAI_SAFETY_SYSTEM_PROMPT[:simple]
+      system_prompt_option = get_openai_system_prompt
+      puts "system_prompt_option #{system_prompt_option}"
+      if system_prompt_option == 'few_shot'
+        safety_system_prompt = OPENAI_SAFETY_SYSTEM_PROMPT[:few_shot]
+      end
+      details = nil
+      # Try twice in case of network errors or model not correctly following directions and
+      # replying with something other valid expected output.
+      Retryable.retryable(tries: 2) do
+        openai_response = OpenaiChatHelper.request_safety_check(text, safety_system_prompt)
+        puts "openai_response #{openai_response}"
+        # For now, we only have one option for safety simple prompt.
+        if system_prompt_option == 'simple'
+          evaluation = JSON.parse(openai_response.body)['choices'][0]['message']['content']
+          raise "Unexpected response from OpenAI: #{evaluation}" unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
+          if evaluation == 'INAPPROPRIATE'
+            details = {evaluation: evaluation}
+          end
+        end
+      end
+      details
     end
 
     # Temporarily disable comprehend for testing
@@ -55,8 +76,8 @@ module AichatSafetyHelper
       DCDO.get("aichat_safety_openai_enabled_#{role}", true)
     end
 
-    private def openai_system_prompt
-      DCDO.get("aichat_openai_system_prompt", OPENAAI_SAFETY_SYSTEM_PROMPT[:SIMPLE])
+    private def get_openai_system_prompt
+      DCDO.get("aichat_openai_system_prompt", 'simple')
     end
 
     private def blocklist_enabled?(role)
