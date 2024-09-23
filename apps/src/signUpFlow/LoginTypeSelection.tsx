@@ -26,16 +26,15 @@ import style from './signUpFlowStyles.module.scss';
 
 const CHECK_ICON = 'circle-check';
 const X_ICON = 'circle-xmark';
+const EXCLAMATION_ICON = 'circle-exclamation';
 
 const LoginTypeSelection: React.FunctionComponent = () => {
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
   const [passwordIconClass, setPasswordIconClass] = useState(style.lightGray);
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [confirmPasswordIcon, setConfirmPasswordIcon] = useState(X_ICON);
-  const [confirmPasswordIconClass, setConfirmPasswordIconClass] = useState(
-    style.lightGray
-  );
+  const [showConfirmPasswordError, setShowConfirmPasswordError] =
+    useState(false);
   const [email, setEmail] = useState('');
   const [emailIcon, setEmailIcon] = useState(X_ICON);
   const [emailIconClass, setEmailIconClass] = useState(style.lightGray);
@@ -52,12 +51,17 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   }, []);
 
   useEffect(() => {
-    if (passwordIcon === CHECK_ICON && confirmPasswordIcon === CHECK_ICON) {
+    if (
+      passwordIcon === CHECK_ICON &&
+      !showConfirmPasswordError &&
+      confirmPassword !== '' &&
+      email !== ''
+    ) {
       setCreateAccountButtonDisabled(false);
     } else {
       setCreateAccountButtonDisabled(true);
     }
-  }, [passwordIcon, confirmPasswordIcon, emailIcon]);
+  }, [passwordIcon, showConfirmPasswordError, confirmPassword, email]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -86,26 +90,18 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       setPasswordIcon(X_ICON);
       setPasswordIconClass(style.lightGray);
     }
-    if (event.target.value === confirmPassword) {
-      setConfirmPasswordIcon(CHECK_ICON);
-      setConfirmPasswordIconClass(style.teal);
-    } else {
-      setConfirmPasswordIcon(X_ICON);
-      setConfirmPasswordIconClass(style.lightGray);
-    }
+    event.target.value === confirmPassword || confirmPassword === ''
+      ? setShowConfirmPasswordError(false)
+      : setShowConfirmPasswordError(true);
   };
 
   const handleConfirmPasswordChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setConfirmPassword(event.target.value);
-    if (event.target.value === password) {
-      setConfirmPasswordIcon(CHECK_ICON);
-      setConfirmPasswordIconClass(style.teal);
-    } else {
-      setConfirmPasswordIcon(X_ICON);
-      setConfirmPasswordIconClass(style.lightGray);
-    }
+    event.target.value === password
+      ? setShowConfirmPasswordError(false)
+      : setShowConfirmPasswordError(true);
   };
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -293,13 +289,17 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 name="confirmPasswordInput"
                 inputType="password"
               />
-              <div className={style.validationMessage}>
-                <FontAwesomeV6Icon
-                  className={confirmPasswordIconClass}
-                  iconName={confirmPasswordIcon}
-                />
-                <BodyThreeText>{i18n.passwordsMustMatch()}</BodyThreeText>
-              </div>
+              {showConfirmPasswordError && (
+                <div className={style.validationMessage}>
+                  <FontAwesomeV6Icon
+                    className={style.red}
+                    iconName={EXCLAMATION_ICON}
+                  />
+                  <BodyThreeText className={style.red}>
+                    {i18n.passwordsMustMatch()}
+                  </BodyThreeText>
+                </div>
+              )}
             </div>
           </div>
           <NewButton
