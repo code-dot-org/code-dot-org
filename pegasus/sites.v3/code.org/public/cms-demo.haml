@@ -54,16 +54,22 @@ video_player: true
         %h2.heading-lg.no-margin-bottom
           =hoc_s(:pl_middle_high_quotes_heading)
         = view :pl_middle_high_carousel
+  .clear
+
+-# from code.org/professional-learning/middle-high
+%section
+  .wrapper
+    = view :"professional_learning/regional_partners_questions"
+
+%section.bg-neutral-dark
+  .wrapper
+    = view :curriculum_pathway
 
 -# from code.org/ai
 %section.bg-neutral-light
   .wrapper 
     .quotes-wrapper
       = view :"ai_landing_page/ai_carousel_quotes"
-
--# %section.bg-neutral-dark
--#   .wrapper
--#    = view :curriculum_pathway
 
 = view :swiper_page_cms_demo
 
