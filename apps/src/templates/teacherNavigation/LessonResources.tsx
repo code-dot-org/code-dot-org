@@ -45,7 +45,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
         lessonNumber={lessonNumber}
         resource={{
           key: 'lessonPlanKey',
-          name: lessonName || i18n.lessonPlan(),
+          name: lessonName || '',
           url: lessonPlanUrl,
           downloadUrl: null,
           audience: 'Teacher',
