@@ -62,7 +62,7 @@ module TestRunUtils
 
     Dir.chdir(dashboard_dir('test/ui/')) do
       selenium_video_host = ENV.fetch('SELENIUM_VIDEO_HOST', 'localhost')
-      display_container_name = ENV.fetch('DISPLAY_CONTAINER_NAME', 'localhost')
+      display_container_name = ENV.fetch('DISPLAY_CONTAINER_NAME', "selenium.#{browser}")
 
       # For native hosted docker, the display num is different based on the browser
       display_num = 99
