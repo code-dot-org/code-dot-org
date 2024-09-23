@@ -1,6 +1,5 @@
 import {
   NO_SCHOOL_SETTING,
-  NO_SCHOOL_SETTING_SCHOOL_NAME,
   NON_SCHOOL_OPTIONS_ARRAY,
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
@@ -41,7 +40,6 @@ export function buildSchoolData({
         school_info_attributes: {
           country,
           school_type: NO_SCHOOL_SETTING,
-          school_name: NO_SCHOOL_SETTING_SCHOOL_NAME,
         },
       },
     };

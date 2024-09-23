@@ -2,7 +2,6 @@ import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';
 import {
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
-  NO_SCHOOL_SETTING_SCHOOL_NAME,
   SELECT_A_SCHOOL,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
@@ -118,7 +117,7 @@ describe('buildSchoolData', () => {
     });
   });
 
-  it('should return school info with country, schoolType, and schoolName when schoolId is NO_SCHOOL_SETTING', () => {
+  it('should return school info with country and school_type when schoolId is NO_SCHOOL_SETTING', () => {
     const result = buildSchoolData({
       schoolId: NO_SCHOOL_SETTING,
       country: 'US',
@@ -130,7 +129,6 @@ describe('buildSchoolData', () => {
       user: {
         school_info_attributes: {
           country: 'US',
-          school_name: NO_SCHOOL_SETTING_SCHOOL_NAME,
           school_type: NO_SCHOOL_SETTING,
         },
       },

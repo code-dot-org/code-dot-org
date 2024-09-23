@@ -5,7 +5,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
-  NO_SCHOOL_SETTING_SCHOOL_NAME,
   SCHOOL_COUNTRY_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
@@ -52,11 +51,9 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   const detectedSchoolName = useMemo(
     () =>
-      initialState.schoolName === NO_SCHOOL_SETTING_SCHOOL_NAME
-        ? ''
-        : initialState.schoolName ||
-          sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ||
-          '',
+      initialState.schoolName ||
+      sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) ||
+      '',
     [initialState.schoolName]
   );
 

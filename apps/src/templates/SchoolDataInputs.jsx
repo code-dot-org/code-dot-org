@@ -7,7 +7,6 @@ import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import {
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
-  NO_SCHOOL_SETTING_SCHOOL_NAME,
   SELECT_A_SCHOOL,
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
@@ -187,23 +186,15 @@ export default function SchoolDataInputs({
         )}
       </div>
       {/* hidden fields are needed when form is submitted in _finish_sign_up.js 
-      in order to pass the default schoolName and schoolType when the user does 
+      in order to pass the default schoolType when the user does 
       not teach in a school setting */}
       {schoolId === NO_SCHOOL_SETTING && (
-        <>
-          <input
-            hidden
-            readOnly
-            name={fieldNames.schoolName}
-            value={NO_SCHOOL_SETTING_SCHOOL_NAME}
-          />
-          <input
-            hidden
-            readOnly
-            name={fieldNames.schoolType}
-            value={NO_SCHOOL_SETTING}
-          />
-        </>
+        <input
+          hidden
+          readOnly
+          name={fieldNames.schoolType}
+          value={NO_SCHOOL_SETTING}
+        />
       )}
     </div>
   );
