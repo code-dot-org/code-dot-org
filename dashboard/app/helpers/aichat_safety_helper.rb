@@ -42,7 +42,7 @@ module AichatSafetyHelper
         openai_response = OpenaiChatHelper.request_safety_check(text, safety_system_prompt)
         # For now, we only have one option for safety simple prompt.
         if system_prompt_option == 'simple'
-          evaluation = JSON.parse(openai_response.body)['choices'][0]['message']['content']
+          evaluation = JSON.parse(openai_response)['choices'][0]['message']['content']
           raise "Unexpected response from OpenAI: #{evaluation}" unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
           if evaluation == 'INAPPROPRIATE'
             details = {evaluation: evaluation}

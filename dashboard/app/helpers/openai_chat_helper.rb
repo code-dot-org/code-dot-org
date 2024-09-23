@@ -65,7 +65,7 @@ module OpenaiChatHelper
       read_timeout: DCDO.get('openai_http_read_timeout', 30)
     )
     raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
-    response
+    response.body
   end
 
   def self.get_chat_completion_response_message(response)
