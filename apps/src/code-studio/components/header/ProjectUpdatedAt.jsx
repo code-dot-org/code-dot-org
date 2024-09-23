@@ -75,6 +75,8 @@ const styles = {
   container: {
     display: 'block',
     width: 160,
+    height: 14,
+    overflow: 'visible',
   },
 };
 
