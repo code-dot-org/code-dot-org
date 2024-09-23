@@ -23,35 +23,7 @@ class RegistrationsController < Devise::RegistrationsController
     session[:user_return_to] ||= params[:user_return_to]
     if PartialRegistration.in_progress?(session)
       if params[:new_sign_up].present?
-        user_params = params || ActionController::Parameters.new
-        user_params[:user_type] = params[:user_type].presence || session[:default_sign_up_user_type]
-        user_params[:email] = params[:email]
-        user_params[:age] = user_params[:user_type] == 'teacher' ? '21+' : params[:age]
-
-        # Set email and data transfer preferences
-        if user_params[:user_type] == 'teacher'
-          user_params[:email_preference_opt_in_required] = true
-          user_params[:email_preference_opt_in] = params[:email_preference_opt_in] == 'true' ? 'yes' : 'no'
-          user_params[:email_preference_request_ip] = request.ip
-          user_params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
-          user_params[:email_preference_form_kind] = '0'
-        elsif user_params[:user_type] == 'student'
-          user_params[:parent_email_preference_request_ip] = request.ip
-          user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
-        end
-
-        user_params[:data_transfer_agreement_accepted] = params[:data_transfer_agreement_accepted] == '1'
-        if user_params[:data_transfer_agreement_required] && params[:data_transfer_agreement_accepted]
-          user_params[:data_transfer_agreement_accepted] = true
-          user_params[:data_transfer_agreement_request_ip] = request.ip
-          user_params[:data_transfer_agreement_source] = User::ACCOUNT_SIGN_UP
-          user_params[:data_transfer_agreement_kind] = '0'
-          user_params[:data_transfer_agreement_at] = DateTime.now
-        end
-
-        @user = User.new_with_session(user_params.permit(Policies::Registration::NEW_USER_PERMITTED_PARAMS), session)
-        @user.save!
-        @user
+        Services::PartialRegistration::NewUserBuilder.call(request: request)
       else
         user_params = params[:user] || ActionController::Parameters.new
         user_params[:user_type] ||= session[:default_sign_up_user_type]
