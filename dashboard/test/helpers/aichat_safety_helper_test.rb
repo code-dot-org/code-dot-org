@@ -37,10 +37,11 @@ class AichatSafetyHelperTest < ActionView::TestCase
     }
     @openai_response_profanity_json = openai_response_profanity_hash.to_json
     @openai_response_safe_json = openai_response_safe_hash.to_json
+    @profane_message = "profanity hello #{@blocklist_blocked_word}"
     @openai_response = {
+      text: @profane_message,
       evaluation: "INAPPROPRIATE"
     }
-    @profane_message = "profanity hello #{@blocklist_blocked_word}"
     @webpurify_profanity = 'webpurify-profanity'
 
     DCDO.stubs(:get).with("aichat_toxicity_threshold_user_input", anything).returns(TEST_THRESHOLD)

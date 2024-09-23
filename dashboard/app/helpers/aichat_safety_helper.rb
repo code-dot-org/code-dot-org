@@ -45,7 +45,10 @@ module AichatSafetyHelper
           evaluation = JSON.parse(openai_response)['choices'][0]['message']['content']
           raise "Unexpected response from OpenAI: #{evaluation}" unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
           if evaluation == 'INAPPROPRIATE'
-            details = {evaluation: evaluation}
+            details = {
+              text: text,
+              evaluation: evaluation
+            }
           end
         end
       end
