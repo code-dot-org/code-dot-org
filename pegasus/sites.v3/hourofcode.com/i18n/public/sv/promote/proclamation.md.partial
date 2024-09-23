@@ -1,7 +1,6 @@
 ---
 title: Mall för brev som uppmuntrar till deltagande på Computer Science Education Week och Hour of Code
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -12,7 +11,7 @@ nav: promote_nav
 
 * * *
 
-#### **RESOLUTION**  
+#### **RESOLUTION**
 
 
 #### Supporting the goals and ideals of "Computer Science Education Week"

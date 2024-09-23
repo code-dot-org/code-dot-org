@@ -35,7 +35,7 @@
 }
 #hoc-nav ul {
   list-style: none;
-  margin: .2em 0;
+  margin: 1px 0;
   padding: 0;
 }
 #hoc-nav ul li {
@@ -178,6 +178,7 @@ iframe {
   }
   #hoc-nav-hamburger {
     display: inline-block;
+    margin-top: -8px;
   }
   #hoc-nav-hamburger:hover,
   #hoc-nav-hamburger:active {

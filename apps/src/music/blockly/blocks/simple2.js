@@ -27,22 +27,6 @@ import {
   fieldTriggerDefinition,
 } from '../fields';
 
-// A helper used when generating code to be used by the interpreter.
-export class GeneratorHelperSimple2 {
-  // Given the function's name, this returns the code for the function
-  // call.  All functions in this model play sounds sequentially by
-  // default.
-  static getFunctionCall(functionName) {
-    return `
-      Sequencer.startFunctionContext('${functionName}');
-      Sequencer.playSequential();
-      ${functionName}();
-      Sequencer.endSequential();
-      Sequencer.endFunctionContext();
-    `;
-  }
-}
-
 export const whenRunSimple2 = {
   definition: {
     type: BlockTypes.WHEN_RUN_SIMPLE2,
