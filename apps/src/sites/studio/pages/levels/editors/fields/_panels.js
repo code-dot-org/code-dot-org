@@ -12,6 +12,6 @@ $(document).ready(function () {
 
   ReactDOM.render(
     <EditPanels initialPanels={initialPanels} levelName={levelName} />,
-    document.getElementById('panels-container')
+    document.getElementById('panels-editor')
   );
 });

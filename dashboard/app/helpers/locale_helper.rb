@@ -74,7 +74,7 @@ module LocaleHelper
 
   # Tries to access translation, returning nil if not found
   def try_t(dotted_path, params = {})
-    I18n.t(dotted_path, **({raise: true}.merge(params)))
+    I18n.t(dotted_path, **{raise: true}.merge(params))
   rescue
     nil
   end

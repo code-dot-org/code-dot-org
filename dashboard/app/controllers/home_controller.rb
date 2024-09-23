@@ -57,7 +57,7 @@ class HomeController < ApplicationController
       if should_redirect_to_script_overview?
         redirect_to script_path(current_user.most_recently_assigned_script)
       else
-        redirect_to '/home'
+        redirect_to home_path
       end
     else
       redirect_to '/users/sign_in'
