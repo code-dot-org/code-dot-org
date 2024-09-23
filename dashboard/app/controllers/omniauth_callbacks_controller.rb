@@ -1,7 +1,6 @@
 require 'cdo/shared_cache'
 require 'honeybadger/ruby'
-require 'services/lti'
-require 'policies/lti'
+
 require 'metrics/events'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController

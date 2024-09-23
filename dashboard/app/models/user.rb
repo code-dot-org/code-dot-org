@@ -85,7 +85,6 @@ require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 require 'policies/child_account'
 require 'services/child_account'
-require 'policies/lti'
 require 'services/user'
 
 class User < ApplicationRecord

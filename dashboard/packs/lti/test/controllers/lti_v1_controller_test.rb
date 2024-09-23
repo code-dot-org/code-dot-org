@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'json'
 require 'jwt'
-require 'policies/lti'
+
 require "services/lti"
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest

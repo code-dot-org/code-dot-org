@@ -1,7 +1,6 @@
 - require '../shared/middleware/helpers/experiments'
 - require 'cpa'
 - require 'policies/child_account'
-- require 'policies/lti'
 - require 'queries/user'
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
