@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 
 import styles from './styles.module.scss';
 
-const IFRAME_TIMEOUT_MILLISECONDS = 300000; // Time out after 5 minutes
+export const LTI_IFRAME_TIMEOUT_MILLISECONDS = 300_000; // Time out after 5 minutes
 
 interface LtiIframePageProps {
   logoUrl: string;
@@ -30,7 +30,7 @@ export const LtiIframePage = ({logoUrl, authUrl}: LtiIframePageProps) => {
         setCallToActionDisabled(true);
         setTextContent(i18n.ltiIframeTimedOut());
       }
-    }, IFRAME_TIMEOUT_MILLISECONDS);
+    }, LTI_IFRAME_TIMEOUT_MILLISECONDS);
 
     return () => clearTimeout(timer);
   }, [callToActionDisabled]);

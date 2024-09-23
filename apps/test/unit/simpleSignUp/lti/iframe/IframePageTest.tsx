@@ -4,7 +4,10 @@ import React from 'react';
 import {act} from 'react-dom/test-utils'; // eslint-disable-line no-restricted-imports
 import sinon, {SinonStub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import LtiIframePage from '@cdo/apps/simpleSignUp/lti/iframe/LtiIframePage';
+import {
+  LtiIframePage,
+  LTI_IFRAME_TIMEOUT_MILLISECONDS,
+} from '@cdo/apps/simpleSignUp/lti/iframe/LtiIframePage';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -13,8 +16,6 @@ const DEFAULT_PROPS = {
   logoUrl: 'https://code.org/assets/logo.svg',
   authUrl: 'https://code.org/auth',
 };
-
-const IFRAME_TIMEOUT_MILLISECONDS = 300000;
 
 describe('LTI Iframe Page Test', () => {
   beforeEach(() => sinon.stub(window, 'open'));
@@ -46,7 +47,7 @@ describe('LTI Iframe Page Test', () => {
     const message = screen.getByText(i18n.ltiIframeDescription());
 
     act(() => {
-      jest.advanceTimersByTime(IFRAME_TIMEOUT_MILLISECONDS);
+      jest.advanceTimersByTime(LTI_IFRAME_TIMEOUT_MILLISECONDS);
     });
 
     expect(message.textContent).to.equal(i18n.ltiIframeTimedOut());
