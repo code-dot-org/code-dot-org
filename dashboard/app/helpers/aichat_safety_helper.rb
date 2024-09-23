@@ -40,7 +40,6 @@ module AichatSafetyHelper
     private def openai_safety_check(text)
       safety_system_prompt = OPENAI_SAFETY_SYSTEM_PROMPT[:simple]
       system_prompt_option = get_openai_system_prompt
-      puts "system_prompt_option #{system_prompt_option}"
       if system_prompt_option == 'few_shot'
         safety_system_prompt = OPENAI_SAFETY_SYSTEM_PROMPT[:few_shot]
       end
@@ -49,7 +48,6 @@ module AichatSafetyHelper
       # replying with something other valid expected output.
       Retryable.retryable(tries: 2) do
         openai_response = OpenaiChatHelper.request_safety_check(text, safety_system_prompt)
-        puts "openai_response #{openai_response}"
         # For now, we only have one option for safety simple prompt.
         if system_prompt_option == 'simple'
           evaluation = JSON.parse(openai_response.body)['choices'][0]['message']['content']

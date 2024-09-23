@@ -1,10 +1,13 @@
 module OpenaiChatHelper
   OPEN_AI_URL = "https://api.openai.com/v1/chat/completions"
   OPENAI_CHAT_COMPLETION_API_KEY = CDO.openai_chat_completion_api_key
-  OPENAI_AICHAT_SAFETY_API_KEY = CDO.openai_aichat_safety_api_key
   TEMPERATURE = 0
+  OPENAI_AICHAT_SAFETY_API_KEY = CDO.openai_aichat_safety_api_key
+  AICHAT_SAFETY_TEMPERATURE = 0
+
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   GPT_MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERISON
+  # TODO: specify version for 4o mini.
   AICHAT_SAFETY_GPT_MODEL = SharedConstants::AICHAT_SAFETY_MODEL_VERSION
 
   def self.request_chat_completion(messages)
@@ -36,7 +39,7 @@ module OpenaiChatHelper
       "Content-Type" => "application/json",
       "Authorization" => "Bearer #{OPENAI_AICHAT_SAFETY_API_KEY}"
     }
-    # Format messages with chat message and system prompt.
+    # Format messages with text to be checked for safety and moderation system prompt.
     messages = [
       {
         role: "system",
@@ -49,7 +52,7 @@ module OpenaiChatHelper
     ]
     data = {
       model: AICHAT_SAFETY_GPT_MODEL,
-      temperature: TEMPERATURE,
+      temperature: AICHAT_SAFETY_TEMPERATURE,
       messages: messages
     }
 
