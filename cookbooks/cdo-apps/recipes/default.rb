@@ -123,7 +123,8 @@ if node['cdo-secrets']["build_apps"] ||
     (node['cdo-apps']['daemon'] && %w[staging test adhoc].include?(node.chef_environment))
   include_recipe 'cdo-nodejs'
   include_recipe 'cdo-apps::google_chrome'
-  include_recipe 'cdo-apps::generate_pdf'
+  # TODO: Reenable this. Temporarily disabled because `yarn install` is somehow timing out after 3600s on full stack daemons.
+  # include_recipe 'cdo-apps::generate_pdf'
   apt_package 'parallel' # Used by apps/run-tests-in-parallel.sh
 end
 

@@ -139,11 +139,13 @@ cat <<JSON > $FIRST_BOOT
     "version": "$CHEF_VERSION"
   },
 <% end -%>
-<% if daemon -%>
+
   "cdo-apps": {
+<% if daemon -%>
     "daemon": true
-  },
 <% end -%>
+  },
+
   "run_list": []
 }
 JSON
