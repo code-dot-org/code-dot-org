@@ -212,12 +212,6 @@ Style/GlobalVars:
 Style/HashLikeCase:
   Enabled: false
 
-# Offense count: 21
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: InverseMethods, InverseBlocks.
-Style/InverseMethods:
-  Enabled: false
-
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Style/KeywordParametersOrder:
@@ -272,11 +266,6 @@ Style/RedundantCondition:
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: AllowComments.
 Style/RedundantInitialize:
-  Enabled: false
-
-# Offense count: 75
-# This cop supports safe autocorrection (--autocorrect).
-Style/RedundantParentheses:
   Enabled: false
 
 # Offense count: 26

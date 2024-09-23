@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
+import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   sectionCode,
   sectionName,
-  asyncLoadSectionData,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const ParentLetterButtonMetricsCategory = {

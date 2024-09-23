@@ -11,7 +11,7 @@ class RakeTaskEventLogger
     @start_time = 0
     @end_time = 0
     @rake_task = rake_task
-    @enabled_firehose = !([:development, :test].include?(rack_env))
+    @enabled_firehose = ![:development, :test].include?(rack_env)
   end
 
   def self.depth

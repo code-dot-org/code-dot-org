@@ -5,9 +5,9 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 
 import teacherSections, {
-  serverSectionFromSection,
   setSections,
 } from '../teacherDashboard/teacherSectionsRedux';
+import {serverSectionFromSection} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import TeacherSections from './TeacherSections';
 

@@ -6,7 +6,7 @@ import {
   studentLessonProgressType,
   studentLevelProgressType,
 } from '../progress/progressTypes';
-import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
+import {studentShape} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import LessonDataCell from './LessonDataCell';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
