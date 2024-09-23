@@ -8,9 +8,9 @@ Please supply the Client ID to Code.org via
 [this portal][lti-integration-portal] to register your LMS & complete your 
 installation.
 
-For updated and more automated instructions, please visit the official
-[support pages][support-pages]. These instructions act as a secondary, less
-supported option for installing Code.org as an LTI Tool in Canvas and Schoology.
+These instructions act as a secondary option for installing Code.org as an LTI
+Tool in Canvas and Schoology. For up to date and more automated instructions,
+please visit the official [support pages][support-pages].
 
 [lti-integration-portal]: https://studio.code.org/lti/v1/integrations
 [support-pages]: https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org
