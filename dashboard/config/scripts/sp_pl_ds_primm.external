@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # The PRIMM Method
 
-#### The lessons in this unit use the **PRIMM** methodology for learning. The **PRIMM** method is a structured approach to teaching and learning programming. 
+#### The lessons in this chapter use the **PRIMM** methodology for learning. The **PRIMM** method is a structured approach to teaching and learning programming. 
 
 #### It stands for Predict, Run, Investigate, Modify, and Make. As you work through the lessons, you will notice that they follow this approach.
 
