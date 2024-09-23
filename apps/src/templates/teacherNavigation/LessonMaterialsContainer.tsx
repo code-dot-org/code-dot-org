@@ -7,8 +7,7 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
-import StudentResources from './StudentResources';
-import TeacherResources from './TeacherResources';
+import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
@@ -116,6 +115,36 @@ const LessonMaterialsContainer: React.FC = () => {
     [generateLessonDropdownOptions]
   );
 
+  const renderTeacherResources = () => {
+    if (!selectedLesson) {
+      return null;
+    }
+
+    return (
+      <LessonResources
+        unitNumber={unitNumber}
+        lessonNumber={selectedLesson.position}
+        resources={selectedLesson.resources.Teacher}
+        lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
+      />
+    );
+  };
+
+  const renderStudentResources = () => {
+    if (!selectedLesson) {
+      return null;
+    }
+
+    return (
+      <LessonResources
+        unitNumber={unitNumber}
+        lessonNumber={selectedLesson.position}
+        resources={selectedLesson.resources.Student}
+        lessonPlanUrl={null}
+      />
+    );
+  };
+
   return (
     <div>
       <div className={styles.lessonMaterialsPageHeader}>
@@ -136,21 +165,8 @@ const LessonMaterialsContainer: React.FC = () => {
           />
         )}
       </div>
-      {selectedLesson && (
-        <div>
-          <TeacherResources
-            unitNumber={unitNumber}
-            lessonNumber={selectedLesson.position}
-            resources={selectedLesson.resources.Teacher}
-            lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
-          />
-          <StudentResources
-            unitNumber={unitNumber}
-            lessonNumber={selectedLesson.position}
-            resources={selectedLesson.resources.Student}
-          />
-        </div>
-      )}
+      {renderTeacherResources()}
+      {renderStudentResources()}
     </div>
   );
 };
