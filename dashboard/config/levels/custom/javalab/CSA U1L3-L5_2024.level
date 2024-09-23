@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-01-12T20:43:30.000Z",
   "level_num": "custom",
@@ -363,9 +364,11 @@
     "encrypted_validation": "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\n6RE1uNBadOAV\n",
     "video_key": "csa_creating_objects",
     "name_suffix": "_2024",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-01-12T20:43:30.310+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L5_2023\\\"\"],\"cloned_from\":\"CSA U1L3-L5_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T20:43:30.310+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L5_2023\\\"\"],\"cloned_from\":\"CSA U1L3-L5_2023\"},{\"changed_at\":\"2024-09-20 17:32:59 +0000\",\"changed\":[\"serialized_maze\",\"ai_tutor_available\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
