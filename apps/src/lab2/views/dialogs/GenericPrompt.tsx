@@ -52,7 +52,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   validateInput = () => undefined,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
-  const prompt = (promiseArgs || value || '') as string;
+  const prompt = (promiseArgs ?? (value || '')) as string;
   const [errorMessage, setErrorMessage] = useState<string | undefined>(
     undefined
   );
