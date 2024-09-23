@@ -1,4 +1,4 @@
-import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
@@ -19,58 +19,50 @@ const DEFAULT_PROPS = {
   sectionCourse: {},
 };
 
-const setUpShallow = (overrideProps = {}) => {
+const setUpRtl = (overrideProps = {}) => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<QuickAssignTable {...props} />);
-};
-
-const setUpMount = (overrideProps = {}) => {
-  const props = {...DEFAULT_PROPS, ...overrideProps};
-  return mount(<QuickAssignTable {...props} />);
+  return render(<QuickAssignTable {...props} />);
 };
 
 describe('QuickAssignTable', () => {
   it('renders Course as the first and only table/column header', () => {
-    const wrapper = setUpShallow({
+    setUpRtl({
       marketingAudience: MARKETING_AUDIENCE.ELEMENTARY,
       courseOfferings: elementarySchoolCourseOffering,
     });
-
-    expect(wrapper.find('table').length).toBe(1);
-    expect(wrapper.contains(i18n.courses())).toBe(true);
+    const tables = screen.getAllByRole('table');
+    expect(tables.length).toBe(1);
+    expect(screen.getByText(i18n.courses())).toBeInTheDocument();
   });
 
   it('renders two tables with correct headers', () => {
-    const wrapper = setUpShallow();
-    expect(wrapper.find('table').length).toBe(2);
-    expect(wrapper.contains(i18n.courses())).toBe(true);
-    expect(wrapper.contains(i18n.standaloneUnits())).toBe(true);
+    setUpRtl();
+    const tables = screen.getAllByRole('table');
+    expect(tables.length).toBe(2);
+    expect(screen.getByText(i18n.courses())).toBeInTheDocument();
+    expect(screen.getByText(i18n.standaloneUnits())).toBeInTheDocument();
   });
 
   it('calls updateSection when a radio button is pressed', () => {
     const updateSpy = jest.fn();
-    const wrapper = setUpMount({updateCourse: updateSpy});
+    setUpRtl({updateCourse: updateSpy});
 
-    const radio = wrapper.find("input[value='Computer Science A']");
+    const radio = screen.getByLabelText('Computer Science A');
     expect(updateSpy).not.toHaveBeenCalled();
-    radio.simulate('change', {
-      target: {value: 'Computer Science A', checked: true},
-    });
+    fireEvent.click(radio);
     expect(updateSpy).toHaveBeenCalled();
   });
 
   it('correctly falls back when a course has no recommended version', () => {
     const updateSpy = jest.fn();
-    const wrapper = setUpMount({
+    setUpRtl({
       updateCourse: updateSpy,
       courseOfferings: noRecommendedVersionsOfferings,
     });
 
-    const radio = wrapper.find('input');
+    const radio = screen.getByLabelText('Computer Science A');
     expect(updateSpy).not.toHaveBeenCalled();
-    radio.simulate('change', {
-      target: {value: 'Computer Science A', checked: true},
-    });
+    fireEvent.click(radio);
     expect(updateSpy).toHaveBeenCalledWith(
       expect.objectContaining({versionId: 373})
     );
@@ -84,8 +76,8 @@ describe('QuickAssignTable', () => {
       updateCourse: () => {},
       sectionCourse: {displayName: 'Computer Science A', courseOfferingId: 73},
     };
-    const wrapper = mount(<QuickAssignTable {...props} />);
-    const radio = wrapper.find("input[value='Computer Science A']");
-    expect(radio.props().checked).toBe(true);
+    render(<QuickAssignTable {...props} />);
+    const radio = screen.getByLabelText('Computer Science A');
+    expect(radio).toBeChecked();
   });
 });
