@@ -80,4 +80,12 @@ describe('QuickAssignTable', () => {
     const radio = screen.getByLabelText('Computer Science A');
     expect(radio).toBeChecked();
   });
+
+  it('shows TA icon when course offering has TA enabled', () => {
+    setUpRtl();
+    const taIcon = screen.getByAltText('AI Teaching Assistant available');
+    expect(taIcon.previousSibling).toHaveTextContent(
+      'Computer Science Discoveries'
+    );
+  });
 });
