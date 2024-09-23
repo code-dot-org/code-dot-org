@@ -4,11 +4,6 @@ module AichatSafetyHelper
   class ToxicityDetector
     DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.3
     DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.5
-    OPENAI_SAFETY_SYSTEM_PROMPT =
-      {
-        simple: 'You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an American public middle school classroom. Examples of innapropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is innapropriate respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.',
-        few_shot: '' # https://docs.google.com/document/d/1MkLLVefWTALBfiIr8is6qib76MLHA8qfEJsYi22Jan0/edit
-      }
     VALID_EVALUATION_RESPONSES_SIMPLE = ['INAPPROPRIATE', 'OK']
 
     # Checks for toxicity in the given text using various services, determined by DCDO settings.
@@ -38,11 +33,8 @@ module AichatSafetyHelper
     end
 
     private def openai_safety_check(text)
-      safety_system_prompt = OPENAI_SAFETY_SYSTEM_PROMPT[:simple]
       system_prompt_option = get_openai_system_prompt
-      if system_prompt_option == 'few_shot'
-        safety_system_prompt = OPENAI_SAFETY_SYSTEM_PROMPT[:few_shot]
-      end
+      safety_system_prompt = AichatSystemPromptHelper.get_system_prompt(system_prompt_option)
       details = nil
       # Try twice in case of network errors or model not correctly following directions and
       # replying with something other valid expected output.
