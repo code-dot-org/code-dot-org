@@ -134,7 +134,7 @@ const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
             blockMode={blockMode}
             toolboxType={toolbox?.type}
           />
-          {toolbox?.type === 'flyout' && (
+          {toolbox?.type === 'flyout' && blockMode === BlockMode.SIMPLE2 && (
             <Checkbox
               checked={!!addFunctionCalls}
               name="addFunctionCalls"

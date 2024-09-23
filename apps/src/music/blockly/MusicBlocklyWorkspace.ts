@@ -456,7 +456,11 @@ export default class MusicBlocklyWorkspace {
 
     Blockly.serialization.workspaces.load(codeCopy, this.workspace);
 
-    if (this.toolbox?.addFunctionCalls && this.toolbox?.type === 'flyout') {
+    if (
+      this.toolbox?.addFunctionCalls &&
+      this.toolbox?.type === 'flyout' &&
+      this.blockMode === BlockMode.SIMPLE2
+    ) {
       this.generateFunctionCallBlocks();
     }
   }
