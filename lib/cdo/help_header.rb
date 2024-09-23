@@ -27,7 +27,7 @@ class HelpHeader
     ge_help_config.filter_map do |link|
       link = link.dup
 
-      next nil if link[:level] && (!options[:level] || Game.find_by_name(link[:level]) != options[:level].game)
+      next nil if link[:level] && (!options[:level] || link[:level] != options[:level].game&.name)
       next nil if link[:user_type] && link[:user_type] != options[:user_type]
       next nil if link[:title] == 'report_abuse' && !report_abuse
 
