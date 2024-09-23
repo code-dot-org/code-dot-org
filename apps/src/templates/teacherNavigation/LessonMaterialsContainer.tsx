@@ -7,7 +7,6 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
-import NoUnitAssignedView from './NoUnitAssignedView';
 import TeacherResources from './TeacherResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
@@ -76,17 +75,10 @@ const createDisplayName = (lessonName: string, lessonPosition: number) => {
   });
 };
 
-type LessonMaterialsContainerProps = {
-  courseName: string;
-};
-
-const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
-  courseName,
-}) => {
+const LessonMaterialsContainer: React.FC = () => {
   const loadedData = useLoaderData() as LessonMaterialsData | null;
   const lessons = useMemo(() => loadedData?.lessons || [], [loadedData]);
   const unitNumber = useMemo(() => loadedData?.unitNumber || 1, [loadedData]);
-  const isUnitAssigned = useMemo(() => !!loadedData?.unitId, [loadedData]);
 
   const getLessonFromId = (lessonId: number): Lesson | null => {
     return lessons.find(lesson => lesson.id === lessonId) || null;
@@ -116,8 +108,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     [generateLessonDropdownOptions]
   );
 
-  const defaultView = (
-    <>
+  return (
+    <div>
       <div className={styles.lessonMaterialsPageHeader}>
         <SimpleDropdown
           labelText={i18n.chooseLesson()}
@@ -145,22 +137,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
         />
       )}
-    </>
+    </div>
   );
-
-  const renderView = () => {
-    if (!isUnitAssigned) {
-      return (
-        <div className={styles.centerContent}>
-          <NoUnitAssignedView courseName={courseName} />
-        </div>
-      );
-    } else {
-      return defaultView;
-    }
-  };
-
-  return <div>{renderView()}</div>;
 };
 
 export default LessonMaterialsContainer;

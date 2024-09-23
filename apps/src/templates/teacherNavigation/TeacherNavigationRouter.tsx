@@ -85,19 +85,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         : null
   );
 
-  const selectedSectionCourseName = useSelector(
-    (state: {
-      teacherSections: {
-        selectedSectionId: number | null;
-        sections: {[id: number]: Section};
-      };
-    }) =>
-      state.teacherSections.selectedSectionId
-        ? state.teacherSections.sections[
-            state.teacherSections.selectedSectionId
-          ].courseDisplayName
-        : null
-  );
+  const selectedSectionCourseName = selectedSection?.courseDisplayName;
+
+  const showNoUnitAssigned = !selectedSection?.unitId;
 
   const anyStudentHasProgress = React.useMemo(
     () => (selectedSection ? selectedSection.anyStudentHasProgress : true),
@@ -251,16 +241,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             element={
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
+                showNoUnitAssigned={showNoUnitAssigned}
+                courseName={selectedSectionCourseName}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={
-                  <LessonMaterialsContainer
-                    courseName={
-                      selectedSectionCourseName
-                        ? selectedSectionCourseName
-                        : 'this course'
-                    }
-                  />
-                }
+                element={applyV1TeacherDashboardWidth(
+                  <LessonMaterialsContainer />
+                )}
               />
             }
           />
@@ -336,6 +322,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       selectedSection,
       studioUrlPrefix,
       selectedSectionCourseName,
+      showNoUnitAssigned,
     ]
   );
 

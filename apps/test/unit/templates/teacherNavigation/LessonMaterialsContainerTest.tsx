@@ -60,7 +60,7 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders the component and dropdown with lessons', () => {
-    render(<LessonMaterialsContainer courseName="CSD" />);
+    render(<LessonMaterialsContainer />);
 
     // check for unit resources dropdown
     screen.getByRole('button', {name: 'View unit options dropdown'});
@@ -78,7 +78,7 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders the teacher resources, including the lesson plan, for the first lesson on render', () => {
-    render(<LessonMaterialsContainer courseName="CSD" />);
+    render(<LessonMaterialsContainer />);
 
     screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LINK.icon);
     screen.getByText('my link resource');
@@ -87,7 +87,7 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('renders the teacher resources for the new lesson when lesson is changed', () => {
-    render(<LessonMaterialsContainer courseName="CSD" />);
+    render(<LessonMaterialsContainer />);
 
     const selectedLessonInput = screen.getAllByRole('combobox')[0];
 
