@@ -37,7 +37,7 @@ module Services
           new_user_params[:data_transfer_agreement_at] = DateTime.now
         end
 
-        @user = User.new_with_session(new_user_params.permit(Policies::Registration::NEW_USER_PERMITTED_PARAMS), @session)
+        @user = ::User.new_with_session(new_user_params.permit(Policies::Registration::NEW_USER_PERMITTED_PARAMS), @session)
         @user.save!
         @user
       end
