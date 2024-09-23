@@ -116,7 +116,7 @@ const LessonMaterialsContainer: React.FC = () => {
   );
 
   const renderTeacherResources = () => {
-    if (!selectedLesson) {
+    if (!selectedLesson || !selectedLesson.resources.Teacher) {
       return null;
     }
 
@@ -126,12 +126,13 @@ const LessonMaterialsContainer: React.FC = () => {
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Teacher}
         lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
+        lessonName={selectedLesson.name}
       />
     );
   };
 
   const renderStudentResources = () => {
-    if (!selectedLesson) {
+    if (!selectedLesson || !selectedLesson.resources.Student) {
       return null;
     }
 
@@ -141,6 +142,7 @@ const LessonMaterialsContainer: React.FC = () => {
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Student}
         lessonPlanUrl={null}
+        lessonName={null}
       />
     );
   };

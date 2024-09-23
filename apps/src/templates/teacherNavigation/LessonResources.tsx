@@ -11,6 +11,7 @@ type LessonResourcesProps = {
   unitNumber: number;
   lessonNumber: number;
   lessonPlanUrl: string | null;
+  lessonName: string | null;
   resources: {
     key: string;
     name: string;
@@ -26,7 +27,14 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
   resources,
   lessonNumber,
   lessonPlanUrl,
+  lessonName,
 }) => {
+  // Note that lessonPlanUrl is not needed for student resources
+  // and should be null for student resoruces section
+  const sectionHeaderText = lessonPlanUrl
+    ? i18n.teacherResourcesforLessonMaterials()
+    : i18n.studentResources();
+
   const renderLessonPlanRow = () => {
     if (!lessonPlanUrl) return null;
 
@@ -37,7 +45,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
         lessonNumber={lessonNumber}
         resource={{
           key: 'lessonPlanKey',
-          name: i18n.lessonPlan(),
+          name: lessonName || i18n.lessonPlan(),
           url: lessonPlanUrl,
           downloadUrl: null,
           audience: 'Teacher',
@@ -50,9 +58,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
   return (
     <div className={styles.resourcesTable}>
       <div className={styles.topRowForResourcesTable}>
-        <Heading6 className={styles.headerText}>
-          {i18n.teacherResourcesforLessonMaterials()}
-        </Heading6>
+        <Heading6 className={styles.headerText}>{sectionHeaderText}</Heading6>
       </div>
       {renderLessonPlanRow()}
       {resources.map(resource => (
