@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
-import TemporaryBlankPage from '@cdo/apps/templates/teacherDashboard/teacherNavigation/TemporaryBlankPage';
+import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 
 import TeacherCourseOverview, {
   teacherCourseOverviewLoader,
@@ -270,13 +270,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.unitOverview}
-            element={
-              <ElementOrEmptyPage
-                showNoStudents={studentCount === 0}
-                showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
-              />
-            }
+            element={<TeacherUnitOverview />}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.settings}
