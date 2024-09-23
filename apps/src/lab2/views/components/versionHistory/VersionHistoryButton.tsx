@@ -90,7 +90,9 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
     text: commonI18n.versionHistory_header(),
     direction: 'onLeft',
     tooltipId: 'version-history-tooltip',
+    size: 'xs',
   };
+
   return (
     <>
       <WithTooltip tooltipProps={tooltipProps}>

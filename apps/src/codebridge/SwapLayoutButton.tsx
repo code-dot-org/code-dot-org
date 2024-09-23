@@ -7,6 +7,7 @@ import {useAppSelector} from '../util/reduxHooks';
 
 import {useCodebridgeContext} from './codebridgeContext';
 import {sendCodebridgeAnalyticsEvent} from './utils/analyticsReporterHelper';
+import WithTooltip from '../componentLibrary/tooltip/WithTooltip';
 
 /*
   Please note - this is a fairly brittle component in that it's only allowing toggling between
@@ -44,15 +45,24 @@ const SwapLayoutButton: React.FunctionComponent = () => {
     return null;
   }
 
+  const tooltipProps = {
+    text: 'Change Layout',
+    direction: 'onLeft',
+    tooltipId: 'change-layout-tooltip',
+    size: 'xs',
+  };
+
   return (
-    <Button
-      icon={{iconStyle: 'solid', iconName}}
-      isIconOnly
-      color={'black'}
-      onClick={onClick}
-      ariaLabel={'change layout'}
-      size={'xs'}
-    />
+    <WithTooltip tooltipProps={tooltipProps}>
+      <Button
+        icon={{iconStyle: 'solid', iconName}}
+        isIconOnly
+        color={'black'}
+        onClick={onClick}
+        ariaLabel={'change layout'}
+        size={'xs'}
+      />
+    </WithTooltip>
   );
 };
 

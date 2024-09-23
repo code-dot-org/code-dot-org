@@ -4,6 +4,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
 
 import {useCodebridgeContext} from './codebridgeContext';
+import WithTooltip from '../componentLibrary/tooltip/WithTooltip';
 
 /*
   This component will look to the `showFileBrowser` boolean in the config and flip it back and forth.
@@ -25,19 +26,28 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
     [config, setConfig]
   );
 
+  const tooltipProps = {
+    text: codebridgeI18n.toggleFileBrowser(),
+    direction: 'onRight',
+    tooltipId: 'toggle-file-browser-tooltip',
+    size: 'xs',
+  };
+
   return (
     <span>
-      <Button
-        icon={{
-          iconStyle: config.showFileBrowser ? 'solid' : 'regular',
-          iconName: 'folder',
-        }}
-        isIconOnly
-        color={'black'}
-        onClick={onClick}
-        ariaLabel={codebridgeI18n.toggleFileBrowser()}
-        size={'xs'}
-      />
+      <WithTooltip tooltipProps={tooltipProps}>
+        <Button
+          icon={{
+            iconStyle: config.showFileBrowser ? 'solid' : 'regular',
+            iconName: 'folder',
+          }}
+          isIconOnly
+          color={'black'}
+          onClick={onClick}
+          ariaLabel={codebridgeI18n.toggleFileBrowser()}
+          size={'xs'}
+        />
+      </WithTooltip>
     </span>
   );
 };

@@ -5,6 +5,7 @@ import {useDispatch} from 'react-redux';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
+import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -51,17 +52,26 @@ const Console: React.FunctionComponent = () => {
     setGraphModalOpen(true);
   };
 
+  const tooltipProps = {
+    text: 'Clear Console',
+    size: 'xs',
+    direction: 'onLeft',
+    tooltipId: 'clear-console-tooltip',
+  };
+
   const headerButton = () => {
     return (
       <>
-        <Button
-          isIconOnly
-          color={'black'}
-          icon={{iconStyle: 'solid', iconName: 'eraser'}}
-          ariaLabel="clear console"
-          onClick={clearOutput}
-          size={'xs'}
-        />
+        <WithTooltip tooltipProps={tooltipProps}>
+          <Button
+            isIconOnly
+            color={'black'}
+            icon={{iconStyle: 'solid', iconName: 'eraser'}}
+            ariaLabel="clear console"
+            onClick={clearOutput}
+            size={'xs'}
+          />
+        </WithTooltip>
         <SwapLayoutButton />
       </>
     );
