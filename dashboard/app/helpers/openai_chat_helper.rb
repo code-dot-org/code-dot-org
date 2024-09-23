@@ -7,7 +7,6 @@ module OpenaiChatHelper
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   GPT_MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERISON
-  # TODO: specify version for 4o mini.
   AICHAT_SAFETY_GPT_MODEL = SharedConstants::AICHAT_SAFETY_MODEL_VERSION
 
   def self.request_chat_completion(messages)
