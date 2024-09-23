@@ -134,6 +134,19 @@ class SchoolTest < ActiveSupport::TestCase
     assert school.afe_high_needs?
   end
 
+  test 'AFE high needs true when school is rural' do
+    school = create :school
+    school.school_stats_by_year << SchoolStatsByYear.new(
+      {
+        school_id: school.id,
+        school_year: '1998-1999',
+        community_type: 'rural_distant'
+      }
+    )
+    school.save!
+    assert school.afe_high_needs?
+  end
+
   test 'AFE high needs false when no criteria are met' do
     school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
