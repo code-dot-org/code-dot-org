@@ -40,6 +40,8 @@ mysql_admin = "mysql #{admin_password} #{admin_opt_str}"
 proxy_port = node['cdo-mysql']['proxy']['port']
 data_dir = '/var/lib/proxysql'
 
+throttle_connections_per_sec_to_hostgroup = node['cdo-mysql']['proxy']['throttle_connections_per_sec_to_hostgroup']
+
 template 'proxysql.cnf' do
   path "/etc/#{name}"
   source "#{name}.erb"
@@ -51,7 +53,8 @@ template 'proxysql.cnf' do
     data_dir: data_dir,
     is_aurora: true, # All environments that have ProxySQL enabled used Aurora.
     admin: admin,
-    port: proxy_port
+    port: proxy_port,
+    throttle_connections_per_sec_to_hostgroup: throttle_connections_per_sec_to_hostgroup
   )
 end
 

@@ -82,6 +82,13 @@ mysql_variables=
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-ping_timeout_server
   # [Milliseconds, default 200]
   ping_timeout_server=1000
+
+  # Prevent Connection Attempt spikes - a negative feedback cycle where a short period of high DB Load due to high usage
+  # or inefficient queries increases query latency, which increases the likelihood that ProxySQL needs to open new
+  # connections to execute new queries, which in turn further degrades query latency due to CPU load to service
+  # new connection attempts.
+  # https://proxysql.com/documentation/global-variables/mysql-variables/#mysql-throttle_connections_per_sec_to_hostgroup
+  throttle_connections_per_sec_to_hostgroup = <%= throttle_connections_per_sec_to_hostgroup  %>
 }
 
 # https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_servers
