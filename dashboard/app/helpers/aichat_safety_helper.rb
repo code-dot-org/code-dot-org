@@ -42,7 +42,6 @@ module AichatSafetyHelper
         raise "Unexpected response from OpenAI: #{evaluation}" unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
         if evaluation == 'INAPPROPRIATE'
           details = {
-            text: text,
             evaluation: evaluation
           }
         end

@@ -39,7 +39,6 @@ class AichatSafetyHelperTest < ActionView::TestCase
     @openai_response_safe_json = openai_response_safe_hash.to_json
     @profane_message = "profanity hello #{@blocklist_blocked_word}"
     @openai_response = {
-      text: @profane_message,
       evaluation: "INAPPROPRIATE"
     }
     @webpurify_profanity = 'webpurify-profanity'
@@ -65,7 +64,6 @@ class AichatSafetyHelperTest < ActionView::TestCase
 
   test "returns nil if no services are enabled for role" do
     stub_safety_services('comprehend', 'assistant')
-    stub_safety_services('openai', 'assistant')
     response = AichatSafetyHelper.find_toxicity('user', 'message', 'en')
     assert_nil response
   end
