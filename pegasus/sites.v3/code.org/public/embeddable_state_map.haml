@@ -1,0 +1,13 @@
+---
+theme: responsive
+no_header: true
+no_footer: true 
+---
+
+%script{:src=>"/js/jquery.placeholder.js"}
+%link{:href=>"/css/promote.css", :rel=>"stylesheet"}
+%link{:href=>"/css/interactive-map.css", :rel=>"stylesheet"}
+
+#interactive-map.section.clear
+  = view :interactive_map, use_url: false
+
