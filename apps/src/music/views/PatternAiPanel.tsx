@@ -22,6 +22,7 @@ import {Button} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 import {generatePattern} from '../ai/patternAi';
+import appConfig from '../appConfig';
 import musicI18n from '../locale';
 import {PatternEventValue} from '../player/interfaces/PatternEvent';
 import MusicLibrary, {SoundData} from '../player/MusicLibrary';
@@ -215,6 +216,12 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     startPreview(currentValue);
   }, [startPreview, currentValue]);
 
+  const delay = (time: number) => {
+    return new Promise(res => {
+      setTimeout(res, time);
+    });
+  };
+
   const handleAiClick = useCallback(async () => {
     stopPreview();
     const seedEvents = currentValue.events.filter(
@@ -226,10 +233,13 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       numEvents - numSeedEvents,
       aiTemperature / 10,
       newEvents => {
-        currentValue.events = newEvents;
-        onChange(currentValue);
-        setGenerateState('none');
-        playPreview();
+        const delayDuration = Number(appConfig.getValue('ai-delay')) || 0;
+        delay(delayDuration).then(() => {
+          currentValue.events = newEvents;
+          onChange(currentValue);
+          setGenerateState('none');
+          playPreview();
+        });
       }
     );
     setGenerateState('generating');
@@ -258,7 +268,10 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
         ))}
       </select>
 
-      <LoadingOverlay show={isLoading} />
+      <LoadingOverlay
+        show={isLoading || generateState === 'generating'}
+        delayAppearance={generateState === 'generating'}
+      />
 
       <div className={styles.body}>
         {userCompletedTask === 'none' && (
