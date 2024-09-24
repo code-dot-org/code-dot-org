@@ -1086,7 +1086,7 @@ class User < ApplicationRecord
   def set_user_type(user_type, email = nil, email_preference = nil)
     case user_type
     when TYPE_TEACHER
-      upgrade_to_teacher(email, email_preference)
+      Core::User.upgrade_to_teacher(self, email, email_preference)
     when TYPE_STUDENT
       downgrade_to_student
     else
