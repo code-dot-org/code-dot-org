@@ -779,12 +779,6 @@ export const FileBrowser = React.memo(() => {
     })
   );
 
-  Object.values(project.folders).forEach(f => {
-    if (f.id === f.parentId) {
-      moveFolder(f.id, DEFAULT_FOLDER_ID);
-    }
-  });
-
   return (
     <PanelContainer
       id="file-browser"
