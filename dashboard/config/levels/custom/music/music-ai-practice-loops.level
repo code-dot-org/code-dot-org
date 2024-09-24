@@ -8,18 +8,48 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Repeat\r\n\r\nSave time by using repeat to play the same sounds over and over.\r\n\r\n1. Click [Control](#clickable=toolbox-second-block) to find the repeat block. \r\n2. Use the [repeat](#clickable=repeat-block) block to play the same sound [3](#clickable=repeat-block-field-workspace) times.",
+    "long_instructions": "#### Repeat Sounds\r\n\r\nSave time by using repeat to play the same sounds over and over.\r\n\r\n- Use the [repeat](#clickable=repeat-block) block to play the same sound [3](#clickable=repeat-block-field-workspace) times.",
     "hide_share_and_remix": "false",
     "validations": [
       {
         "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
-        "message": "Nice work. You successfully played a sound five times!",
+        "message": "Nice work. You successfully played a sound three times!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-ai-practice-loops_b47115d5-575a-41d1-bbff-197985c42f0e",
+        "message": "You repeated a sound twice. Now make it play it [three](#clickable=repeat-block-field-workspace) times.",
         "next": false,
         "conditions": [
           {
             "name": "played_sounds",
-            "value": 5
+            "value": 2
           }
+        ]
+      },
+      {
+        "key": "music-ai-practice-loops_dc3c369b-1bfe-4914-b0d0-a8572b3fd044",
+        "message": "You played a sound once. Now make it play it three times by putting a [3](#clickable=repeat-block-field-workspace) in the [repeat](#clickable=repeat-block) block.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-practice-loops_cc714ab2-a120-4300-a80c-2e17578ebd02",
+        "message": "Play a sound three times. Attach a [repeat](#clickable=repeat-block) block to [when run](#clickable=when-run-block). Then put a [play](#clickable=play-sound-block) block inside of it.",
+        "next": false,
+        "conditions": [
+
         ]
       }
     ],
@@ -43,17 +73,19 @@
       "toolbox": {
         "blocks": {
           "Control": [
-            "repeat_simple2"
+            "repeat_simple2",
+            "play_sounds_together"
           ],
           "Play": [
             "play_sound_at_current_location_simple2"
           ]
-        }
+        },
+        "type": "flyout"
       }
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-15T22:57:54.506+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence\\\"\"],\"cloned_from\":\"music-ai-skill-sequence\"},{\"changed_at\":\"2024-08-15 23:03:16 +0000\",\"changed\":[\"tts_short_instructions_override\",\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 18:17:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-15T22:57:54.506+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence\\\"\"],\"cloned_from\":\"music-ai-skill-sequence\"},{\"changed_at\":\"2024-08-15 23:03:16 +0000\",\"changed\":[\"tts_short_instructions_override\",\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 18:17:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:27:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:28:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:46:04 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:47:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
