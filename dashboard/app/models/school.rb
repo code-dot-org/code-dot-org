@@ -61,14 +61,14 @@ class School < ApplicationRecord
   # Eligible if the school is any of the following:
   # a) title I school,
   # b) rural school,
-  # c) >40% URM students,
+  # c) >30% URM students,
   # or d) >40% of students eligible for free and reduced meals.
   def afe_high_needs?
     stats = most_recent_school_stats
     # Return false if we don't have all data for a given school.
     return false if stats.nil?
 
-    stats.title_i_eligible? || stats.rural_school? || (stats.urm_percent || 0) >= 40 || (stats.frl_eligible_percent || 0) >= 40
+    stats.title_i_eligible? || stats.rural_school? || (stats.urm_percent || 0) >= 30 || (stats.frl_eligible_percent || 0) >= 40
   end
 
   # Public school ids from NCES are always 12 digits, possibly with

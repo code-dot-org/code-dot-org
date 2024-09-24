@@ -93,7 +93,7 @@ class SchoolTest < ActiveSupport::TestCase
     assert school.afe_high_needs?
   end
 
-  test 'AFE high needs true when urm percent above 40 percent of students' do
+  test 'AFE high needs true when urm percent above 30 percent of students' do
     school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
@@ -107,7 +107,7 @@ class SchoolTest < ActiveSupport::TestCase
     assert school.afe_high_needs?
   end
 
-  test 'AFE high needs false when urm percent below 40 percent of students' do
+  test 'AFE high needs false when urm percent below 30 percent of students' do
     school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
