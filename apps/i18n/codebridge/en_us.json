@@ -6,6 +6,7 @@
   "cannotRun": "We don't know how to run your code. Please contact support.",
   "cannotStop": "We don't know how to stop your code. Please contact support.",
   "cannotTest": "We don't know how to run your tests. Please contact support.",
+  "defaultLayout": "Default layout",
   "delete": "Delete",
   "deleteFile": "Delete file",
   "deleteFileConfirm": "Are you sure you want to delete the file \"{filename}\"?",
@@ -49,6 +50,7 @@
   "validationNotYetPassedFinish": "You must pass tests before finishing.",
   "validationNotYetPassedSubmit": "You must pass tests before submitting.",
   "validationResults": "Validation Results",
+  "verticalLayout": "Vertical layout",
   "viewingOldVersion": "You are viewing an older version",
   "versionRestored": "Version successfully restored"
 }

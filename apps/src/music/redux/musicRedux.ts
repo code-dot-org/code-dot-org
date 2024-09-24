@@ -1,6 +1,10 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+import {RootState} from '@cdo/apps/types/redux';
+import {ValueOf} from '@cdo/apps/types/utils';
+
 import {
+  BlockMode,
   DEFAULT_BPM,
   DEFAULT_KEY,
   MAX_BPM,
@@ -9,6 +13,7 @@ import {
 } from '../constants';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {MusicLevelData} from '../types';
 import {Key} from '../utils/Notes';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
@@ -286,6 +291,15 @@ export const getCurrentlyPlayingBlockIds = (state: {
   });
 
   return playingBlockIds;
+};
+
+export const getBlockMode = (state: RootState): ValueOf<typeof BlockMode> => {
+  const {initialSources, levelProperties} = state.lab;
+  return (
+    (initialSources?.labConfig?.music.blockMode as ValueOf<typeof BlockMode>) ||
+    (levelProperties?.levelData as MusicLevelData | undefined)?.blockMode ||
+    BlockMode.SIMPLE2
+  );
 };
 
 // TODO: If/when a top-level component is created that wraps {@link MusicView}, then

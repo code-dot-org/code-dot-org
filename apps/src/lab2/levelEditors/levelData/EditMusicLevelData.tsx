@@ -4,6 +4,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import {BlockMode, DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
 import globals from '@cdo/apps/music/globals';
@@ -19,6 +20,7 @@ import RawJsonEditor from './RawJsonEditor';
 import moduleStyles from './edit-music-level-data.module.scss';
 
 const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024'];
+const RECOMMENDED_LIBRARY = 'launch2024';
 
 const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
 
@@ -32,13 +34,21 @@ interface EditMusicLevelDataProps {
 const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
   initialLevelData,
 }) => {
-  const blockMode = initialLevelData?.blockMode || BlockMode.SIMPLE2;
   useEffect(() => {
-    setUpBlocklyForMusicLab(blockMode);
+    setUpBlocklyForMusicLab();
     globals.setPlayer(new MusicPlayer());
-  }, [blockMode]);
+  }, []);
 
   const [levelData, setLevelData] = useState(initialLevelData);
+  // Immediately set a level, if needed, so we can populate its allowed sounds.
+  if (!levelData.library) {
+    levelData.library = RECOMMENDED_LIBRARY;
+  }
+
+  const blockMode = levelData.blockMode || BlockMode.SIMPLE2;
+  useEffect(() => {
+    installFunctionBlocks(blockMode);
+  }, [blockMode]);
 
   const [loadedLibraries, setLoadedLibraries] = useState<{
     [libraryName: string]: MusicLibrary;
@@ -80,6 +90,10 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       />
       <CollapsibleSection headerContent="Library & Sounds">
         <div className={moduleStyles.section}>
+          <i>
+            Note that currently, all levels within a lesson must use the same
+            library.
+          </i>
           <div>
             <SimpleDropdown
               labelText="Selected Library"
@@ -170,6 +184,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
         <EditMusicToolbox
           toolbox={levelData.toolbox}
           blockMode={levelData.blockMode || BlockMode.SIMPLE2}
+          addFunctionCalls={levelData.toolbox?.addFunctionCalls}
           onChange={toolbox => setLevelData({...levelData, toolbox})}
           onBlockModeChange={blockMode =>
             // Reset toolbox blocks when changing block mode
@@ -179,9 +194,19 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               toolbox: {
                 ...levelData.toolbox,
                 blocks: undefined,
+                addFunctionCalls: undefined,
               },
             })
           }
+          onAddFunctionCallsChange={(addFunctionCalls: boolean) => {
+            setLevelData({
+              ...levelData,
+              toolbox: {
+                ...levelData.toolbox,
+                addFunctionCalls,
+              },
+            });
+          }}
         />
       </CollapsibleSection>
       <hr />

@@ -256,6 +256,7 @@ const EVENTS = {
   AI_TUTOR_SUGGESTED_PROMPT_VALIDATION: 'Validation',
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
+  AI_TUTOR_FEEDBACK_SUBMITTED: 'AI Tutor Feedback Submitted',
 
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
@@ -373,8 +374,6 @@ const EVENTS = {
     'Recommended Stretch Curriculum Clicked',
 
   // LTI & LMS
-  LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
-  LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
   LTI_UNLINK_MODAL_SHOWN: 'lti_unlink_modal_shown',
   LTI_UNLINK_CLICK: 'lti_unlink_click',
   LTI_UNLINK_CANCEL: 'lti_unlink_cancel',

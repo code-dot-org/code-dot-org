@@ -22,7 +22,7 @@ import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelecto
 import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
-import {sectionProviderName} from '../teacherDashboard/teacherSectionsRedux';
+import {sectionProviderName} from '../teacherDashboard/teacherSectionsReduxSelectors';
 import TextResponses from '../textResponses/TextResponses';
 
 import DefaultTeacherNavRedirect from './DefaultTeacherNavRedirect';

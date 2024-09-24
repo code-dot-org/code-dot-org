@@ -19085,7 +19085,9 @@ en:
           description: ''
           student_description: ''
         creativity-with-ai-playground:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Lesson 1
           lesson_groups:
             lessonGroup-2:
               display_name: Text Generation
@@ -19111,6 +19113,32 @@ en:
           lesson_groups: {}
           name: image-generation
           title: Image Generation
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        music-lab-advanced-model-sandbox:
+          lessons:
+            lesson-1:
+              name: Variables
+            lesson-2:
+              name: Conditionals
+            lesson-3:
+              name: Functionsl
+            lesson-4:
+              name: Loops
+          lesson_groups: {}
+          name: music-lab-advanced-model-sandbox
+          title: "[Sandbox] Advanced Model"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoc-music-ai-pilot-2:
+          lessons: {}
+          lesson_groups: {}
+          name: hoc-music-ai-pilot-2
+          title: 'Play Tests 2: Hour of Code - Music Lab with AI '
           description_audience: ''
           description_short: ''
           description: ''
