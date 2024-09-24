@@ -66,7 +66,8 @@
   margin-right: 8px;
 }
 
-.versionHistoryButton{
+.versionHistoryButton {
+  margin: 4px;
   &:hover, &:active {
     // We use important here because the hover and active styles used by Button
     // are more specific than a single class.
