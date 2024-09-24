@@ -3,7 +3,6 @@ module OpenaiChatHelper
   OPENAI_CHAT_COMPLETION_API_KEY = CDO.openai_chat_completion_api_key
   TEMPERATURE = 0
   OPENAI_AICHAT_SAFETY_API_KEY = CDO.openai_aichat_safety_api_key
-  AICHAT_SAFETY_TEMPERATURE = 0
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   GPT_MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERISON
@@ -52,7 +51,6 @@ module OpenaiChatHelper
     ]
     data = {
       model: AICHAT_SAFETY_GPT_MODEL,
-      temperature: AICHAT_SAFETY_TEMPERATURE,
       messages: messages
     }
 
