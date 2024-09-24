@@ -565,16 +565,16 @@ export const FileBrowser = React.memo(() => {
       const results = await dialogControl?.showDialog({
         type: DialogType.GenericPrompt,
         title: codebridgeI18n.moveFilePrompt(),
+        placeholder: codebridgeI18n.rootFolder(),
+        requiresPrompt: false,
 
         validateInput: (destinationFolderName: string) => {
-          if (!destinationFolderName.length) {
-            return;
-          }
           try {
             const folderId = findFolder(destinationFolderName.split('/'), {
               folders: Object.values(project.folders),
               required: true,
             });
+
             const duplicate = checkForDuplicateFilename(
               file.name,
               folderId,
@@ -593,7 +593,7 @@ export const FileBrowser = React.memo(() => {
         return;
       }
 
-      const destinationFolderName = extractInput(results);
+      const destinationFolderName = extractInput(results) || '';
       try {
         const folderId = findFolder(destinationFolderName.split('/'), {
           folders: Object.values(project.folders),
@@ -624,11 +624,10 @@ export const FileBrowser = React.memo(() => {
       const results = await dialogControl?.showDialog({
         type: DialogType.GenericPrompt,
         title: codebridgeI18n.moveFolderPrompt(),
+        placeholder: codebridgeI18n.rootFolder(),
+        requiresPrompt: false,
 
         validateInput: (destinationFolderName: string) => {
-          if (!destinationFolderName.length) {
-            return;
-          }
           try {
             const folderId = findFolder(destinationFolderName.split('/'), {
               folders: Object.values(project.folders),
@@ -652,7 +651,7 @@ export const FileBrowser = React.memo(() => {
         return;
       }
 
-      const destinationFolderName = extractInput(results);
+      const destinationFolderName = extractInput(results) || '';
       try {
         const parentId = findFolder(destinationFolderName.split('/'), {
           folders: Object.values(project.folders),
