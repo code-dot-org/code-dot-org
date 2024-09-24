@@ -187,6 +187,7 @@ module Dashboard
     # once a version of the gem is released which includes that change, we can get rid of
     # this line.
     config.autoload_paths.map!(&:to_s)
+    Rails.autoloaders.logger = Logger.new("#{Rails.root}/log/autoloading.log")
 
     # Also make sure some of these directories are always loaded up front in production
     # environments.

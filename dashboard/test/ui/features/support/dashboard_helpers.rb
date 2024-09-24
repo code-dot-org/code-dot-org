@@ -9,7 +9,9 @@ module DashboardHelpers
     return if @rails_loaded
     puts 'Requiring rails env'
     start = Time.now
-    require File.expand_path('../../../../../config/environment.rb', __FILE__)
+    base_dir = Pathname.new(File.expand_path("../../../../", __dir__))
+    Dir.chdir(base_dir)
+    require_relative base_dir.join('config/environment')
     finish = Time.now
     puts "Requiring rails env took #{finish - start} seconds"
     @rails_loaded = true
