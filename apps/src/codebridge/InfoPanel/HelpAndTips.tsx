@@ -4,7 +4,6 @@ import HelpTabContents from '@cdo/apps/templates/instructions/HelpTabContents';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 const HelpAndTips: React.FunctionComponent = () => {
-  const labState = useAppSelector(state => state.lab);
   const mapReference = useAppSelector(
     state => state.lab.levelProperties?.mapReference
   );
@@ -15,7 +14,6 @@ const HelpAndTips: React.FunctionComponent = () => {
     state => state.lab.levelProperties?.helpVideos
   );
   const helpVideo = helpVideos ? helpVideos[0] : null;
-  console.log('state', labState);
   return (
     <HelpTabContents
       videoData={helpVideo}
