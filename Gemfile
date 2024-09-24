@@ -275,8 +275,8 @@ gem 'oj', '~> 3.10'
 gem 'rest-client', '~> 2.0.1'
 
 # A rest-client dependency
-# This is the latest version that's installing successfully
-gem 'unf_ext', '0.0.7.2'
+# Needs to be at least this version to install successfully on some ARM processors.
+gem 'unf_ext', '0.0.7.4'
 
 # Generate SSL certificates.
 gem 'acmesmith', '~> 2.3.1'
