@@ -23,7 +23,6 @@ export const Draggable = ({
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
     id: `${data.type}-${data.id}`,
     data,
-    //disabled: true,
   });
   const style = transform
     ? {
