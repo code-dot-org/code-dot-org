@@ -1,0 +1,9 @@
+@import 'color.scss';
+
+.iconOnlyTertiaryButton {
+  &:hover, &:active {
+    // We use important here because the hover and active styles used by Button
+    // are more specific than a single class.
+    background-color: $light_black_opacity-60 !important;
+  }
+}
