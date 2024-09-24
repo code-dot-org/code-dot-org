@@ -195,7 +195,7 @@ module Services
         if user_was_new
           lti_user_identity = Queries::Lti.lti_user_identity(user, lti_integration)
           deployment = lti_section.lti_course&.lti_deployment
-          unless deployment.lti_user_identities.include?(lti_user_identity) || deployment.nil?
+          unless deployment&.lti_user_identities&.include?(lti_user_identity)
             deployment.lti_user_identities << lti_user_identity
           end
 
