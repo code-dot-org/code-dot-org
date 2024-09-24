@@ -192,12 +192,13 @@ module Services
         user_was_new = user.new_record?
         had_changes ||= (user_was_new || user.changed?)
         user.save!
-        lti_user_identity = Queries::Lti.lti_user_identity(user, lti_integration)
-        deployment = lti_section.lti_course&.lti_deployment
-        unless deployment.lti_user_identities.include?(lti_user_identity) || deployment.nil?
-          deployment.lti_user_identities << lti_user_identity
-        end
         if user_was_new
+          lti_user_identity = Queries::Lti.lti_user_identity(user, lti_integration)
+          deployment = lti_section.lti_course&.lti_deployment
+          unless deployment.lti_user_identities.include?(lti_user_identity) || deployment.nil?
+            deployment.lti_user_identities << lti_user_identity
+          end
+
           Metrics::Events.log_event(
             user: user,
             event_name: 'lti_user_created',
