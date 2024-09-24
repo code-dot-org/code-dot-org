@@ -1,14 +1,37 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import plcHeaderReducer, {
+  setPlcHeader,
+} from '@cdo/apps/code-studio/plc/plcHeaderRedux';
+import {
+  initViewAsWithoutStore,
+  initCourseProgress,
+} from '@cdo/apps/code-studio/progress';
+import {registerReducers} from '@cdo/apps/redux';
+import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import googlePlatformApi, {
+  loadGooglePlatformApi,
+} from '@cdo/apps/templates/progress/googlePlatformApiRedux';
+import {
+  setPageType,
+  pageTypes,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {PeerReviewLessonInfo} from '@cdo/apps/types/progressTypes';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import experiments from '@cdo/apps/util/experiments';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  AppDispatch,
+  useAppDispatch,
+  useAppSelector,
+} from '@cdo/apps/util/reduxHooks';
 
-import {VisibilityType} from '../../announcementsRedux';
+import {addAnnouncement, VisibilityType} from '../../announcementsRedux';
+import {setStudentDefaultsSummaryView} from '../../progressRedux';
+import {setVerified, setVerifiedResources} from '../../verifiedInstructorRedux';
 
 import UnitOverview from './UnitOverview';
 
@@ -132,7 +155,7 @@ interface UnitData {
   show_script_version_warning: boolean;
   course_versions: {[id: number]: CourseVersion};
   supported_locales: string[] | null;
-  section_hidden_unit_info: {[sectionId: number]: number[]};
+  section_hidden_unit_info: {[sectionId: string]: string[]};
   pilot_experiment: string | null;
   editor_experiment: string | null;
   show_assign_button: boolean;
@@ -174,6 +197,67 @@ interface TeacherUnitOverviewProps {
   // Define any props you need here
 }
 
+const initializeRedux = (
+  unitSummaryResponse: UnitSummaryResponse,
+  dispatch: AppDispatch,
+  userType: string,
+  userId: number
+) => {
+  if (!unitSummaryResponse) {
+    return;
+  }
+  const unitData = unitSummaryResponse.unitData;
+  const plcBreadcrumb = unitSummaryResponse.plcBreadcrumb;
+
+  dispatch(setLocaleCode(unitData.locale_code));
+
+  if (plcBreadcrumb) {
+    // Dispatch breadcrumb props so that UnitOverviewHeader can add the breadcrumb
+    // as appropriate
+    registerReducers({plcHeader: plcHeaderReducer});
+    dispatch(
+      setPlcHeader(plcBreadcrumb.unit_name, plcBreadcrumb.course_view_path)
+    );
+  }
+
+  if (unitData.has_verified_resources) {
+    dispatch(setVerifiedResources(true));
+  }
+
+  if (unitData.is_verified_instructor) {
+    dispatch(setVerified());
+  }
+
+  if (unitData.announcements) {
+    unitData.announcements.forEach(announcement =>
+      dispatch(addAnnouncement(announcement))
+    );
+  }
+
+  if (unitData.student_detail_progress_view) {
+    dispatch(setStudentDefaultsSummaryView(false));
+  }
+
+  initViewAsWithoutStore(dispatch, userId !== null, unitData.is_instructor);
+  dispatch(initializeHiddenScripts(unitData.section_hidden_unit_info));
+  dispatch(setPageType(pageTypes.scriptOverview));
+
+  initCourseProgress(unitData);
+
+  const mountPoint = document.createElement('div');
+  $('.user-stats-block').prepend(mountPoint);
+
+  //TODO
+  // const completedLessonNumber = queryParams('completedLessonNumber');
+  // This query param is immediately removed so that it is not included in the links
+  // rendered on this page
+  // updateQueryParam('completedLessonNumber', undefined);
+  if (userType === 'teacher') {
+    registerReducers({googlePlatformApi});
+    dispatch(loadGooglePlatformApi()).catch(e => console.warn(e));
+  }
+};
+
 const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
   const [unitSummaryResponse, setUnitSummaryResponse] =
     useState<UnitSummaryResponse | null>(null);
@@ -194,8 +278,10 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
     userType: state.currentUser.userType,
   }));
 
+  const dispatch = useAppDispatch();
+
   React.useEffect(() => {
-    if (!unitName) {
+    if (!unitName || !userType || !userId) {
       return;
     }
     setUnitSummaryResponse(null);
@@ -211,8 +297,11 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
         })
       )
       .then(response => response.json())
-      .then(responseJson => setUnitSummaryResponse(responseJson));
-  }, [unitName]);
+      .then(responseJson => {
+        initializeRedux(responseJson, dispatch, userType, userId);
+        setUnitSummaryResponse(responseJson);
+      });
+  }, [unitName, userType, userId, dispatch]);
 
   if (!unitSummaryResponse) {
     return <Spinner size={'large'} />;

@@ -238,19 +238,28 @@ function extractLevelResults(userProgressResponse) {
  * Fetch and store progress for the course overview page.
  */
 progress.initCourseProgress = function (scriptData) {
+  initCourseProgress(scriptData);
+};
+
+export function initCourseProgress(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
   queryUserProgress(store, scriptData, null);
-};
+  console.log('lfm initCourseProgress', scriptData);
+}
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
 progress.initViewAs = function (store, isSignedInUser, isInstructor) {
+  initViewAsWithoutStore(store.dispatch, isSignedInUser, isInstructor);
+};
+
+export function initViewAsWithoutStore(dispatch, isSignedInUser, isInstructor) {
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
   if (isInstructor) {
     initialViewAs = ViewType.Instructor;
-    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+    dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 
   // If current user is signed out or an instructor, allow the
@@ -260,8 +269,9 @@ progress.initViewAs = function (store, isSignedInUser, isInstructor) {
     initialViewAs = query.viewAs || initialViewAs;
   }
 
-  store.dispatch(setViewType(initialViewAs));
-};
+  dispatch(setViewType(initialViewAs));
+  console.log('lfm initViewAsWithoutStore');
+}
 
 progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
   const store = getStore();
