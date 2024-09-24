@@ -52,7 +52,7 @@ module AichatSafetyHelper
     end
 
     private def comprehend_enabled?(role)
-      DCDO.get("aichat_safety_comprehend_enabled_#{role}", false)
+      DCDO.get("aichat_safety_comprehend_enabled_#{role}", true)
     end
 
     private def webpurify_enabled?(role)
@@ -60,7 +60,7 @@ module AichatSafetyHelper
     end
 
     private def openai_enabled?(role)
-      DCDO.get("aichat_safety_openai_enabled_#{role}", true)
+      DCDO.get("aichat_safety_openai_enabled_#{role}", false)
     end
 
     private def blocklist_enabled?(role)
