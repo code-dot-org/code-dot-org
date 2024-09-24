@@ -10,6 +10,7 @@ export type GenericPromptProps = Required<Pick<GenericDialogProps, 'title'>> & {
   handleCancel?: () => void;
   placeholder?: string;
   validateInput?: (prompt: string) => string | undefined;
+  requiresPrompt?: boolean;
 };
 
 /**
@@ -48,6 +49,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   handleCancel,
   placeholder,
   validateInput = () => undefined,
+  requiresPrompt = true,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
   const prompt = (promiseArgs || '') as string;
@@ -77,7 +79,9 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       buttons={{
         confirm: {
           callback: () => handleConfirm?.(prompt),
-          disabled: Boolean(errorMessage) || !prompt.length,
+          disabled:
+            requiresPrompt !== false &&
+            (Boolean(errorMessage) || !prompt.length),
         },
         cancel: {callback: () => handleCancel?.()},
       }}
