@@ -109,12 +109,26 @@ header:
 
 # The navigation region found at the bottom of each page
 footer:
+  links:
   # Remove these links to support pages
-  translate: false
-  help_support: false
-  store: false
-  locale_dropdown: false
+  - title: privacy_updated
+    url: /privacy
+    domain: code.org
+    style: 'color: #ffa400;'
+  - title: privacy
+    url: /privacy
+    domain: code.org
+    style: 'color: #ffa400;'
+  - title: cookie_notice
+    url: /cookies
+    domain: code.org
+  - title: tos_short
+    url: /tos'
+    domain: code.org
 
+locale_options:
+  - ['English', 'en-US']
+  - ['فارسی', 'fa-IR']
 
 # Route matching to influence properties of components
 pages:

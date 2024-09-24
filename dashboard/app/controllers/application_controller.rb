@@ -411,7 +411,8 @@ class ApplicationController < ActionController::Base
   end
 
   private def set_footer_config
-    ge_region = params[:ge_region]
+    ge_region = params[:ge_region] || 'en'
     @footer_config = Cdo::Global.configuration_for(ge_region)[:footer] || {}
+    @locale_options = Cdo::Global.configuration_for(ge_region)[:locale_options] || options_for_locale_select
   end
 end
