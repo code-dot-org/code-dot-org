@@ -15,6 +15,7 @@ export default class HelpTabContents extends Component {
   };
 
   render() {
+    console.log('videoData in HelpTabContents', this.props.videoData);
     return (
       <div style={styles.referenceArea}>
         {this.props.videoData && (
