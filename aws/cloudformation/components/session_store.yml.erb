@@ -10,9 +10,9 @@
     Type: AWS::ElastiCache::ReplicationGroup
     Properties:
       ReplicationGroupDescription: Session Store Replication Group
-      # 3 nodes of cache.r7g.xlarge will cost ($0.437 * 730 * 3) = ~$960/month
-      # and provide just under 80GB of storage.
-      CacheNodeType: <%= rack_env?(:production) ? 'cache.r7g.xlarge' : 'cache.t4g.micro' -%>
+      # 3 nodes of cache.r7g.2xlarge will cost ($0.873 * 730 * 3) = ~$1,912/month
+      # and provide just under 160GB of storage.
+      CacheNodeType: <%= rack_env?(:production) ? 'cache.r7g.2xlarge' : 'cache.t4g.micro' -%>
 
       Engine: Redis
       EngineVersion: 7.1
@@ -39,8 +39,8 @@
       AlarmName: <%="Redis Session Store CPU Usage Too High (#{stack_name})" %>
       AlarmDescription: AWS Documentation recommends maintaining
         EngineCPUUtilization below 90%. Note that we use EngineCPUUtilization
-        rather than CPUUtilization because the cache.r7g.xlarge nodes we're
-        using have 4vCPUs
+        rather than CPUUtilization because the cache.r7g.2xlarge nodes we're
+        using have 8 vCPUs
       ActionsEnabled: true
       AlarmActions:
         - !Ref InfraUrgent
@@ -96,8 +96,8 @@
     Properties:
       AlarmName: <%="Redis Session Store Incoming Network Traffic Too High (#{stack_name})" %>
       AlarmDescription:
-        The cache.r7g.xlarge nodes we use have a guaranteed performance of "Up
-        to 12.5 Gigabit"; because that includes both reads and writes and
+        The cache.r7g.2xlarge nodes we use have a guaranteed performance of "Up
+        to 15 Gigabit"; because that includes both reads and writes and
         because we generally read more than we write, set the write limit to
         1/4 of the total.
       ActionsEnabled: true
@@ -105,7 +105,7 @@
         - !Ref InfraUrgent
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
-      Threshold: 3125000000
+      Threshold: 3750000000
       ComparisonOperator: GreaterThanThreshold
       TreatMissingData: missing
       Metrics:
@@ -132,7 +132,7 @@
       AlarmName: <%="Redis Session Store Outgoing Network Traffic Too High (#{stack_name})" %>
       AlarmDescription:
         The cache.r7g.xlarge nodes we use have a guaranteed performance of "Up
-        to 12.5 Gigabit"; because that includes both reads and writes and
+        to 15 Gigabit"; because that includes both reads and writes and
         because we generally read more than we write, set the read limit to 1/2
         of the total.
       ActionsEnabled: true
@@ -140,7 +140,7 @@
         - !Ref InfraUrgent
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
-      Threshold: 6250000000
+      Threshold: 7500000000
       ComparisonOperator: GreaterThanThreshold
       TreatMissingData: missing
       Metrics:
