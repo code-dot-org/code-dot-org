@@ -826,7 +826,7 @@ class Unit < ApplicationRecord
   end
 
   def in_initiative?(initiative)
-    return cached&.course_version&.course_offering&.marketing_initiative == initiative
+    return cached&.get_course_version&.course_offering&.marketing_initiative == initiative
   end
 
   # Legacy levels have different video and title logic in LevelsHelper.
@@ -2129,7 +2129,8 @@ class Unit < ApplicationRecord
   end
 
   def show_ai_assessments_announcement?(user)
-    user&.teacher? && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
+    # limit to CSD to avoid showing on allthethings
+    user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
   private def teacher_feedback_enabled?
