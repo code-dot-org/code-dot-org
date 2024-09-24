@@ -371,6 +371,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
               disabled={generateState === 'generating'}
               type="primary"
               size="s"
+              className={styles.button}
             />
             {!hideAiTemperature && (
               <div>
