@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-07-30T13:50:11.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Create a new `Painter` using the parameterized constructor to navigate around The Neighborhood as shown below.\r\n\r\nSyntax for creating a new `Painter`:\r\n```\r\nClassName painterName = new ClassName(int x, int y, String direction, int paint);\r\n```\r\n\r\n![](https://images.code.org/183a09b74272aa8f106ed8d7b3dfa857-image-1625243313217.png)",
@@ -354,13 +358,10 @@
     "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYvoeTb+/Zzs+EtVdP0\nzpRWcRqFNmjXAjIm5l8A76EvRZYYLDv/fTC94S4YQ/jgsm2igUdUQFgDFTPx\nu35na3z2\n",
     "parent_level_id": 29352,
     "bubble_choice_description": "Create a new Painter using the parameterized constructor to navigate around The Neighborhood.",
-    "thumbnail_url": "https://images.code.org/183a09b74272aa8f106ed8d7b3dfa857-image-1625243313217.png"
+    "thumbnail_url": "https://images.code.org/183a09b74272aa8f106ed8d7b3dfa857-image-1625243313217.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-07-30T13:50:11.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-07-30T13:50:11.079+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L4a\\\"\"],\"cloned_from\":\"CSA U1L5-L4a\"},{\"changed_at\":\"2021-07-30 13:50:19 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:23:42 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:25:50 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-02 17:33:02 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

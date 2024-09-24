@@ -74,7 +74,8 @@
       "threeBananas.png": "23c921ea-7e7f-47ff-8888-f3dcc183692c.png",
       "tomatoes.png": "93a1bae8-cba9-4bd5-97ca-c8ee3c9379e1.png"
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:24:16.469+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1c_2023\\\"\"],\"cloned_from\":\"CSA U7L1-L1c_2023\"}]"

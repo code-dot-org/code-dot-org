@@ -3,7 +3,7 @@ import React from 'react';
 import {showDialog} from '@cdo/apps/code-studio/levels/dialogHelper';
 import Match from '@cdo/apps/code-studio/levels/match';
 import {LegacyMatchAngiGifDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 
 window.Match = Match;
 

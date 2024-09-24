@@ -4,13 +4,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
-import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
@@ -58,7 +57,6 @@ class UnitOverview extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
-    showUnversionedRedirectWarning: PropTypes.bool,
     isCsdOrCsp: PropTypes.bool,
     completedLessonNumber: PropTypes.string,
     isProfessionalLearningCourse: PropTypes.bool,
@@ -128,7 +126,6 @@ class UnitOverview extends React.Component {
       isMigrated,
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
-      showUnversionedRedirectWarning,
       isCsdOrCsp,
       completedLessonNumber,
       courseOfferingId,
@@ -147,18 +144,12 @@ class UnitOverview extends React.Component {
       !!scriptId &&
       isScriptHiddenForSection(hiddenLessonState, selectedSectionId, scriptId);
 
-    const showUnversionedRedirectWarningDialog =
-      showUnversionedRedirectWarning && !this.state.showRedirectDialog;
-
     return (
       <div>
         {completedLessonNumber && (
           <EndOfLessonDialog lessonNumber={completedLessonNumber} />
         )}
         <div>
-          {showUnversionedRedirectWarningDialog && (
-            <UnversionedScriptRedirectDialog />
-          )}
           {this.props.courseLink && (
             <div className="unit-breadcrumb" style={styles.navArea}>
               <a

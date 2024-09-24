@@ -17,7 +17,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 
 import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';
-import {getSectionRows} from './teacherSectionsRedux';
+import {getSectionRows} from './teacherSectionsReduxSelectors';
 
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
@@ -285,7 +285,7 @@ class OwnedPlSectionsTable extends Component {
     })(this.props.sectionRows);
 
     return (
-      <Table.Provider columns={columns}>
+      <Table.Provider className="uitest-owned-pl-sections" columns={columns}>
         <Table.Header />
         <Table.Body
           className="uitest-sorted-rows"

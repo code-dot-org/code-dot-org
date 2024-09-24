@@ -4,8 +4,8 @@ import React, {useState, useEffect} from 'react';
 import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {useSelector} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ParentalPermissionRequest} from '@cdo/apps/redux/parentalPermissionRequestReducer';
 import Notification, {
   NotificationType,

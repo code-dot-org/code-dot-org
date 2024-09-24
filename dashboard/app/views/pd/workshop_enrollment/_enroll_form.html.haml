@@ -58,7 +58,7 @@
       %span.form-required-field
         *
     -# Manually wrap an error highlight around the entire district dropdown.
-    - error_class = (@enrollment.errors.include?(:"school_info")) ? "field_with_errors_div" : ""
+    - error_class = @enrollment.errors.include?(:"school_info") ? "field_with_errors_div" : ""
     #school_info.span5{class: error_class, style: "border: solid 1px #bbb; border-radius: 4px; padding: 15px; margin-left: 0px; box-sizing: border-box;"}
       %div.controls
         -# ignore existing info if it was in the old data format, to avoid inclusion of bogus fields.

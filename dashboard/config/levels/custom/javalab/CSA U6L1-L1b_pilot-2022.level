@@ -52,7 +52,8 @@
     "display_name": "Keyword Analysis",
     "bubble_choice_description": "An example project that identifies the most frequent words used in a song to determine its main ideas.",
     "thumbnail_url": "https://images.code.org/6bd2f044accf80f823532afd2206792f-image-1638478918432.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:52:52.307+00:00\",\"changed\":[\"cloned from \\\"CSA U6L1-L1b_2022\\\"\"],\"cloned_from\":\"CSA U6L1-L1b_2022\"}]"

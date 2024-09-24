@@ -408,7 +408,7 @@ describe('activitiesEditorRedux reducer tests', () => {
       it('add activitySection', () => {
         const nextState = reducer(
           initialState,
-          addActivitySection(1, 'activitySection-key')
+          addActivitySection(1, 'activitySection-key', 2)
         ).activities;
         expect(nextState[0].activitySections.map(s => s.key)).toEqual([
           'a',

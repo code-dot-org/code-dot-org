@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

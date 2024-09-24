@@ -78,7 +78,8 @@
       "tomatoes.png": "e63a4e99-bd83-4687-8008-25c8407f3947.png"
     },
     "thumbnail_url": "https://images.code.org/69cc695dcbdf567edb05fafe213bb549-U7_project3.gif",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:31.470+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1c_2022\\\"\"],\"cloned_from\":\"CSA U7L1-L1c_2022\"}]"

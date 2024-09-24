@@ -5,13 +5,14 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "grade5-maker",
-    "serialized_at": "2024-07-19 21:57:27 UTC",
+    "serialized_at": "2024-09-05 17:02:32 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

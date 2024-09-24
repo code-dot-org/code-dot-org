@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:31:58.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The `SocialMediaScene`(#e7e8ea) class displays the icon for the social media app with the most users.\r\n\r\nIt has instance variables for `twitter`(#e7e8ea), `facebook`(#e7e8ea), and `instagram`(#e7e8ea) to store the number of users for each app. The `createScene()`(#e7e8ea) method draws the icon for the social media app with the most users.\r\n\r\n##In SocialMediaScene.java:\r\n\r\nWrite the `getImage()`(#e7e8ea) method to return the icon for the social media app with the most users.\r\n\r\n   * If `twitter`(#e7e8ea) is greater than `facebook`(#e7e8ea) and `instagram`(#e7e8ea), return `\"twitter.png\"`(#e7e8ea).\r\n   \r\n   * If `facebook`(#e7e8ea) is greater than `twitter`(#e7e8ea) and `instagram`(#e7e8ea), return `\"facebook.png\"`(#e7e8ea).\r\n   \r\n   * If `instagram`(#e7e8ea) is greater than `facebook`(#e7e8ea) and `twitter`(#e7e8ea), return `\"instagram.png\"`(#e7e8ea).",
@@ -29,12 +33,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:31:58.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:31:58.636+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L3c_2022\\\"\"],\"cloned_from\":\"CSA U4L3-L3c_2022\"},{\"changed_at\":\"2022-09-20 21:39:58 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-20 21:40:09 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-20 21:42:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-20 22:09:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-20 22:10:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-20 22:10:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-20 22:10:55 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-20 22:11:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-19 20:35:46 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

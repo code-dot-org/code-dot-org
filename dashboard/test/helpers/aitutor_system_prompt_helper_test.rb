@@ -44,7 +44,7 @@ class AitutorSystemPromptHelperTest < ActionView::TestCase
   end
 
   test "get_system_prompt with level_id and script_id" do
-    base_system_prompt_snippet = "As an AI assistant"
+    base_system_prompt_snippet = "You are responding to a student's query about programming."
     system_prompt = AitutorSystemPromptHelper.get_system_prompt(@javalab_level.id, @csa_unit.id)
     assert_includes system_prompt, base_system_prompt_snippet
     assert_includes system_prompt, 'Java'
@@ -53,7 +53,7 @@ class AitutorSystemPromptHelperTest < ActionView::TestCase
   end
 
   test "get_system_prompt without level_id and script_id" do
-    base_system_prompt_snippet = "As an AI assistant"
+    base_system_prompt_snippet = "You are responding to a student's query about programming."
     system_prompt = AitutorSystemPromptHelper.get_system_prompt(nil, nil)
     assert_includes system_prompt, base_system_prompt_snippet
     refute_includes system_prompt, 'Python'

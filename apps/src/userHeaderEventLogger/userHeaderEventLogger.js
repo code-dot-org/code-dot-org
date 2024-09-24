@@ -1,7 +1,8 @@
 import $ from 'jquery';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const USER_MENU_OPTION_IDS = ['my-projects', 'user-edit', 'user-signout'];
@@ -120,8 +121,18 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
   );
 
   const createAccountButton = document.querySelector('#create_account_button');
+  const isInSignupExperiment = statsigReporter.getIsInExperiment(
+    'new_sign_up_v1',
+    'showNewFlow',
+    false
+  );
+
   // Log if the Create Account button is clicked
   if (createAccountButton) {
+    if (isInSignupExperiment) {
+      createAccountButton.href =
+        'https://studio.code.org/users/new_sign_up/account_type';
+    }
     createAccountButton.addEventListener('click', () => {
       analyticsReporter.sendEvent(
         EVENTS.CREATE_ACCOUNT_BUTTON_CLICKED,
@@ -198,9 +209,11 @@ $(document).ready(function () {
   const headerCreateMenu = document.getElementById('header_create_menu');
   const pageUrl = window.location.href;
 
-  if (getScriptData('isSignedOut')) {
-    addSignedOutMetrics(pageUrl, headerCreateMenu);
-  } else {
-    addSignedInMetrics(pageUrl, headerCreateMenu);
+  if (!pageUrl.includes('/global/')) {
+    if (getScriptData('isSignedOut')) {
+      addSignedOutMetrics(pageUrl, headerCreateMenu);
+    } else {
+      addSignedInMetrics(pageUrl, headerCreateMenu);
+    }
   }
 });

@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "how-ai-works",
-    "serialized_at": "2024-08-20 17:27:00 UTC",
+    "serialized_at": "2024-09-09 23:23:21 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6113,7 +6113,7 @@
     {
       "key": "cb45ec87-ad2c-41f8-96e5-cb48a1181314",
       "properties": {
-        "description": "Reason about which types of tasks are should not be completed by an algorithm"
+        "description": "Reason about which types of tasks should not be completed by an algorithm"
       },
       "seeding_key": {
         "lesson.key": "Algorithmic Bias",

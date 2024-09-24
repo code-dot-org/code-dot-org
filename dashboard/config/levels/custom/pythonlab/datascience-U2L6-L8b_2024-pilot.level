@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-09-16T17:12:08.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Denver Air Pollution\r\n\r\n::: details [**✅ Step 1**]\r\nLoad the data and print the `head()`.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nYou'll notice there's a missing value in these rows. Replace the value of the empty element with **2004**.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nUse the indexing operator to create a new DataFrame that contains entries where **Ozone < 330**.  Print this subgroup.\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\n- Group data by the **Year** attribute. \r\n- Determine the median ozone value for each year. \r\n- Print these values.\r\n:::\r\n\r\n\r\n\r\n\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\n\n\n# Step 1\n\n\n# Step 2\n\n\n# Step 3\n\n\n# Step 4\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "ozone_denver.csv",
+          "language": "csv",
+          "contents": "Month,Year,Location,Nitrogen Dioxide,Ozone\nOctober,2004,Denver,9.5025,350.342\nNovember,,Denver,9.78342,325.471\nDecember,2004,Denver,7.02579,353.509\nJanuary,2005,Denver,9.82303,373.746\nFebruary,2005,Denver,9.43096,399.755\nMarch,2005,Denver,6.73239,433.279\nApril,2005,Denver,7.89964,408.964\nMay,2005,Denver,5.40416,407.446\nJune,2005,Denver,3.98741,388.935\nJuly,2005,Denver,2.94211,371.983\nAugust,2005,Denver,3.51008,355.633\nSeptember,2005,Denver,5.95566,346.565\nOctober,2005,Denver,9.44719,325.179\nNovember,2005,Denver,7.9107,333.616\nDecember,2005,Denver,7.63136,374.888\nJanuary,2006,Denver,7.06958,376.121\nFebruary,2006,Denver,7.41793,363.678\nMarch,2006,Denver,9.52886,411.836\nApril,2006,Denver,7.05538,393.017\nMay,2006,Denver,4.93367,393.46\nJune,2006,Denver,3.51001,382.409\nJuly,2006,Denver,3.02198,368.688\nAugust,2006,Denver,4.07512,362.079\nSeptember,2006,Denver,5.84119,371.595\nOctober,2006,Denver,9.42754,351.754\nNovember,2006,Denver,7.25101,361.401\nDecember,2006,Denver,10.8548,377.604\nJanuary,2007,Denver,13.426,399.929\nFebruary,2007,Denver,-1.00E+34,400.213\nMarch,2007,Denver,6.0918,411.987\nApril,2007,Denver,6.89594,416.325\nMay,2007,Denver,4.24692,418.479\nJune,2007,Denver,4.48103,388.41\nJuly,2007,Denver,3.02748,367.942\nAugust,2007,Denver,2.90787,357.012\nSeptember,2007,Denver,6.29434,346.983\nOctober,2007,Denver,6.84899,324.975\nNovember,2007,Denver,6.60829,330.75\nDecember,2007,Denver,6.34364,381.353\nJanuary,2008,Denver,11.0346,402.146\nFebruary,2008,Denver,8.15673,406.049\nMarch,2008,Denver,6.12111,403.517\nApril,2008,Denver,6.46333,415.703\nMay,2008,Denver,3.74808,399.25\nJune,2008,Denver,3.76116,386.862\nJuly,2008,Denver,3.21251,367.004\nAugust,2008,Denver,4.26563,363.983\nSeptember,2008,Denver,5.15605,352.745\nOctober,2008,Denver,7.40686,331.773\nNovember,2008,Denver,8.5903,344.546\nDecember,2008,Denver,5.71078,385.921\nJanuary,2009,Denver,4.90114,355.01\nFebruary,2009,Denver,4.06319,401.364\nMarch,2009,Denver,4.80125,396.63\nApril,2009,Denver,4.46603,411.071\nMay,2009,Denver,3.44571,401.733\nJune,2009,Denver,3.7419,382.577\nJuly,2009,Denver,2.04126,365.852\nAugust,2009,Denver,3.36702,366.778\nSeptember,2009,Denver,4.63153,354.956\nOctober,2009,Denver,7.36955,360.6\nNovember,2009,Denver,7.69174,343.312\nDecember,2009,Denver,5.53438,398.958\nJanuary,2010,Denver,11.2263,409.658\nFebruary,2010,Denver,8.35405,455.773\nMarch,2010,Denver,5.87676,427.044\nApril,2010,Denver,6.032,441.507\nMay,2010,Denver,3.27982,445.381\nJune,2010,Denver,3.29193,389.625\nJuly,2010,Denver,2.3461,374.119\nAugust,2010,Denver,2.75653,364.165\nSeptember,2010,Denver,4.45058,349.967\nOctober,2010,Denver,5.37641,333.625\nNovember,2010,Denver,6.27474,361.708\nDecember,2010,Denver,7.90656,353.987\nJanuary,2011,Denver,7.79995,369.094\nFebruary,2011,Denver,5.59448,382.812\nMarch,2011,Denver,5.16977,398.715\nApril,2011,Denver,4.62145,410.145\nMay,2011,Denver,4.20229,397.006\nJune,2011,Denver,2.63289,377.237\nJuly,2011,Denver,2.60125,357.033\nAugust,2011,Denver,2.46529,351.937\nSeptember,2011,Denver,3.93864,350.569\nOctober,2011,Denver,5.10389,331.798\nNovember,2011,Denver,5.94237,339.731\nDecember,2011,Denver,8.01269,368.625\nJanuary,2012,Denver,4.03155,393.781\nFebruary,2012,Denver,4.87369,422.239\nMarch,2012,Denver,5.33012,382.646\nApril,2012,Denver,4.54287,390.386\nMay,2012,Denver,3.22473,392.453\nJune,2012,Denver,2.84826,373.573\nJuly,2012,Denver,2.68326,366.52\nAugust,2012,Denver,2.22377,357.563\nSeptember,2012,Denver,3.90352,356.351\nOctober,2012,Denver,5.08828,351.351\nNovember,2012,Denver,7.90804,337.118\nDecember,2012,Denver,6.51806,378.013\nJanuary,2013,Denver,8.86839,372.176\nFebruary,2013,Denver,5.58074,415.837\nMarch,2013,Denver,5.50463,411.75\nApril,2013,Denver,4.44525,445.518\nMay,2013,Denver,3.45666,422.75\nJune,2013,Denver,2.91395,388.99\nJuly,2013,Denver,2.01304,369.698\nAugust,2013,Denver,2.80122,365.104\nSeptember,2013,Denver,3.73355,350.06\nOctober,2013,Denver,6.2796,354.925\nNovember,2013,Denver,7.73062,337.575\nDecember,2013,Denver,8.95337,378.581\nJanuary,2014,Denver,4.38846,390.294\nFebruary,2014,Denver,3.80272,422.59\nMarch,2014,Denver,4.30165,422.06\nApril,2014,Denver,4.95316,435.638\nMay,2014,Denver,3.58037,416.568\nJune,2014,Denver,3.03173,396.181\nJuly,2014,Denver,2.21822,374.524\nAugust,2014,Denver,2.82366,361.28\nSeptember,2014,Denver,3.5686,342.118\nOctober,2014,Denver,6.00352,329.559\nNovember,2014,Denver,7.76801,341.831\nDecember,2014,Denver,5.94249,371.467\nJanuary,2015,Denver,5.53667,370.787\nFebruary,2015,Denver,3.04899,403.84\nMarch,2015,Denver,5.82148,402.917\nApril,2015,Denver,4.11111,418.41\nMay,2015,Denver,4.25526,420.742\nJune,2015,Denver,3.06355,385.711\nJuly,2015,Denver,1.75768,372.524\nAugust,2015,Denver,1.84233,371.967\nSeptember,2015,Denver,3.28924,351.362\nOctober,2015,Denver,4.92062,332.553\nNovember,2015,Denver,5.43605,347.11\nDecember,2015,Denver,3.15919,393.651\nJanuary,2016,Denver,3.81711,403.16\nFebruary,2016,Denver,4.43659,394.729\nMarch,2016,Denver,3.25486,430.201\nApril,2016,Denver,4.5312,433.338\nMay,2016,Denver,3.39748,426.556\nJune,2016,Denver,2.54293,359.885\nJuly,2016,Denver,1.75388,361.913\nAugust,2016,Denver,1.88332,364.562\nSeptember,2016,Denver,3.35056,345.352\nOctober,2016,Denver,2.93334,333.41\nNovember,2016,Denver,4.08075,320.037\nDecember,2016,Denver,5.78611,364.875\nJanuary,2017,Denver,5.83866,378.458\nFebruary,2017,Denver,2.82803,387.523\nMarch,2017,Denver,2.62051,393.821\nApril,2017,Denver,2.85499,409.941\nMay,2017,Denver,2.02724,418.47\nJune,2017,Denver,2.22956,384.757\nJuly,2017,Denver,1.51498,359.518\nAugust,2017,Denver,2.35176,361.722\nSeptember,2017,Denver,2.71023,352.276\nOctober,2017,Denver,2.52942,342.71\nNovember,2017,Denver,3.97808,316.903\nDecember,2017,Denver,4.43634,383.465\nJanuary,2018,Denver,3.67037,408.199\nFebruary,2018,Denver,4.96195,411.07\nMarch,2018,Denver,3.57191,416.941\nApril,2018,Denver,3.73148,417.611\nMay,2018,Denver,2.76399,401.693\nJune,2018,Denver,2.188,382.781\nJuly,2018,Denver,1.73157,373.476\nAugust,2018,Denver,2.3012,364.199\nSeptember,2018,Denver,2.63449,345.549\nOctober,2018,Denver,3.31016,344.674\nNovember,2018,Denver,3.45848,359.257\nDecember,2018,Denver,3.84207,376.229\nJanuary,2019,Denver,6.78047,365.171\nFebruary,2019,Denver,4.78059,391.456\nMarch,2019,Denver,6.86099,412.599\nApril,2019,Denver,3.34493,407.221\nMay,2019,Denver,2.75858,436.362\nJune,2019,Denver,1.62484,400.684\nJuly,2019,Denver,1.78493,366.568\nAugust,2019,Denver,2.22505,362.875\nSeptember,2019,Denver,3.13311,343.605\nOctober,2019,Denver,3.3985,356.271\nNovember,2019,Denver,1.50457,345.514\nDecember,2019,Denver,2.64471,398.444\nJanuary,2020,Denver,3.84371,408.637\nFebruary,2020,Denver,2.83379,424.424\nMarch,2020,Denver,2.34036,410.444\nApril,2020,Denver,1.52607,424.967\nMay,2020,Denver,1.53324,392.908\nJune,2020,Denver,1.72283,374.553\nJuly,2020,Denver,1.12968,362.105\nAugust,2020,Denver,1.56635,357.45\nSeptember,2020,Denver,2.39091,352.838\nOctober,2020,Denver,3.13092,341.994\nNovember,2020,Denver,2.70517,337.25\nDecember,2020,Denver,3.04519,356.687\nJanuary,2021,Denver,4.46423,388.14\nFebruary,2021,Denver,2.13248,408.444\nMarch,2021,Denver,3.18486,413.671\nApril,2021,Denver,2.11379,419.994\nMay,2021,Denver,3.21428,408.295\nJune,2021,Denver,1.98521,385.97\nJuly,2021,Denver,2.11328,371.042\nAugust,2021,Denver,2.45843,365.394\nSeptember,2021,Denver,2.72204,356.946\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Denver Air Pollution",
+    "teacher_markdown": "When modifying data with iloc, students might accidentally reference the wrong position– remind students that rows and column indices begin at 0.\r\n\r\nWhen filtering data, it’s helpful to print out parts of the DataFrame before and after filtering to understand the changes.",
+    "bubble_choice_description": "Practice accessing and grouping data to determine the average air pollution each year in Denver.",
+    "thumbnail_url": "https://images.code.org/c1663ffdcb8781ff4c6637d0223b74a5-denver.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-16T17:12:08.143+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L6-L8a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L6-L8a_2024-pilot\"},{\"changed_at\":\"2024-09-16 17:13:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:14:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

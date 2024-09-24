@@ -1,15 +1,27 @@
-export const useReducerWithCallback = <StateType, ActionType>(
+type ActionType = {
+  type: string;
+  payload: unknown;
+};
+
+/*
+  given a reducer and a callback to call _after_ the reducer completes, gives you a new reducer that has the callback.
+  Optionally can take a third argument - `omit`, which is a Set of reducer action types for which we do -not- want to fire the callback.
+  Otherwise, all options are assumed included.
+*/
+
+export const useReducerWithCallback = <StateType>(
   reducer: (state: StateType, action: ActionType) => StateType,
-  callback: (state: StateType) => void
+  callback: (state: StateType) => void,
+  omit: Set<string> = new Set()
 ) => {
   return (state: StateType, action: ActionType) => {
     const newState = reducer(state, action);
-    // It's quite possible that the callback doesn't need to be in the setTimeout, but this is just explicitly not calling it until the newState
-    // has come back from the reducer and been processed by dispatch, by deferring the call until the next tick of the run loop.
-    //
-    // If it was called synchronously here, then theoretically there may be a way to invoke the callback and then be able to access a stale
-    // old reducer state before dispatch has finished. Or maybe it's not possible. :shrug:
-    setTimeout(() => callback(newState), 0);
+
+    if (!omit.has(action.type)) {
+      // call the callback asynchronously to ensure we never accidentally access stale state, and also so react doesn't gripe about us
+      // updating a different component out of turn.'
+      setTimeout(() => callback(newState), 0);
+    }
     return newState;
   };
 };

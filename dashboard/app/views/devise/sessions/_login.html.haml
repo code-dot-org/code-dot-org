@@ -1,3 +1,6 @@
+- content_for :head do
+  %script{src: webpack_asset_path('js/devise/sessions/_login.js')}
+
 %h2= t('signin_form.title')
 
 .flex-container
@@ -27,7 +30,7 @@
 
     / Not yet signed up? Sign up
     - if devise_mapping.registerable?
-      = link_to new_user_registration_path, class: 'field-aligned' do
+      %a#signup-link.field-aligned{href: new_user_registration_path}
         %button.neutral-button{:id => 'user_signup'}= t('nav.user.signup')
 
   %div.vertical-or

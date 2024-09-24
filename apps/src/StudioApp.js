@@ -56,8 +56,8 @@ import * as dropletUtils from './dropletUtils';
 import FeedbackUtils from './feedback';
 import Alert from './legacySharedComponents/alert';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
-import firehoseClient from './lib/util/firehose';
 import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
+import firehoseClient from './metrics/firehose';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {

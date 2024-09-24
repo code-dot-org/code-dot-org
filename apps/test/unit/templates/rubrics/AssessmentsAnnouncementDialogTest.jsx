@@ -1,8 +1,8 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AssessmentsAnnouncementDialog from '@cdo/apps/templates/rubrics/AssessmentsAnnouncementDialog';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

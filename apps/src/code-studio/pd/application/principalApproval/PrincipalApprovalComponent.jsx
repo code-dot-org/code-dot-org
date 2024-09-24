@@ -8,8 +8,8 @@ import {
   TextFields,
 } from '@cdo/apps/generated/pd/principalApprovalApplicationConstants';
 import {Year} from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
 

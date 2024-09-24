@@ -5,7 +5,7 @@ class SectionsController < ApplicationController
   authorize_resource :section, only: [:new]
 
   def new
-    redirect_to '/home' unless params[:loginType] && params[:participantType]
+    redirect_to home_path unless params[:loginType] && params[:participantType]
     @user_country = helpers.country_code(current_user, request)
     @is_users_first_section = current_user.sections_instructed.empty?
   end
@@ -47,6 +47,17 @@ class SectionsController < ApplicationController
     else
       flash[:alert] = I18n.t('signinsection.invalid_login')
       redirect_to section_path(id: @section.code)
+    end
+  end
+
+  def section_instructors_verified
+    new_params = params.transform_keys(&:underscore)
+    teachers = User.find_by(id: new_params[:user_id]).teachers
+
+    if teachers.any?(&:verified_teacher?)
+      render json: {verified: true}
+    else
+      render json: {verified: false}
     end
   end
 

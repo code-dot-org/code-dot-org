@@ -1,20 +1,57 @@
+# Provides functionality to detect toxicity in user input and model output used in the AI Chat Lab.
+# Uses various services to check for profanity and toxicity based on DCDO settings.
 module AichatSafetyHelper
-  # Tyrone's EC2 instance- TODO update when we have a better long-term solution
-  LLMGUARD_URL = "http://ec2-44-223-70-67.compute-1.amazonaws.com:8080/run-script"
-  def self.get_llmguard_response(message)
-    headers = {
-      "Content-Type" => "application/json",
-      "Accept" => "application/json"
-    }
+  class ToxicityDetector
+    DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.3
+    DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.5
 
-    data = {
-      input_text: message
-    }
+    # Checks for toxicity in the given text using various services, determined by DCDO settings.
+    # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}
+    def find_toxicity(role, text, locale)
+      if blocklist_enabled?(role)
+        text.split.each do |word|
+          return {text: text, blocked_by: 'blocklist', details: {blocked_word: word}} if profane_word_blocklist.include? word
+        end
+      end
 
-    HTTParty.post(
-      LLMGUARD_URL,
-      headers: headers,
-      body: data.to_json,
-    )
+      if webpurify_enabled?(role)
+        profanity = ShareFiltering.find_profanity_failure(text, locale)
+        return {text: text, blocked_by: 'webpurify', details: profanity.to_h} if profanity
+      end
+
+      if comprehend_enabled?(role)
+        threshold = role == 'user' ? get_toxicity_threshold_user_input : get_toxicity_threshold_model_output
+        comprehend_response = AichatComprehendHelper.get_toxicity(text, locale)
+        return {text: text, blocked_by: 'comprehend', details: comprehend_response} if comprehend_response && comprehend_response[:toxicity] > threshold
+      end
+    end
+
+    private def comprehend_enabled?(role)
+      DCDO.get("aichat_safety_comprehend_enabled_#{role}", true)
+    end
+
+    private def webpurify_enabled?(role)
+      DCDO.get("aichat_safety_webpurify_enabled_#{role}", false)
+    end
+
+    private def blocklist_enabled?(role)
+      DCDO.get("aichat_safety_blocklist_enabled_#{role}", false)
+    end
+
+    private def profane_word_blocklist
+      DCDO.get("aichat_safety_profane_word_blocklist", [])
+    end
+
+    private def get_toxicity_threshold_user_input
+      DCDO.get("aichat_toxicity_threshold_user_input", DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
+    end
+
+    private def get_toxicity_threshold_model_output
+      DCDO.get("aichat_toxicity_threshold_model_output", DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
+    end
+  end
+
+  def self.find_toxicity(role, text, locale)
+    ToxicityDetector.new.find_toxicity(role, text, locale)
   end
 end

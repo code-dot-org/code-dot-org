@@ -1,7 +1,8 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
-  "created_at": "2024-06-07T15:15:35.000Z",
+  "created_at": "2024-06-06T01:59:51.000Z",
   "level_num": "custom",
   "user_id": 2,
   "properties": {
@@ -23,9 +24,13 @@
       },
       "folders": {
       }
+    },
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "predict_settings": {
+      "isPredictLevel": false
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-07-11 16:41:38 -0400\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-07-11 16:41:38 -0400\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-09-06 00:32:09 +0000\",\"changed\":[],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
 }]]></config>
 </Pythonlab>
