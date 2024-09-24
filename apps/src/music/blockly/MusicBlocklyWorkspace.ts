@@ -17,6 +17,7 @@ import {
   TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
+import prompt from './prompt';
 import {setUpBlocklyForMusicLab} from './setup';
 import {getToolbox} from './toolbox';
 import {ToolboxData} from './toolbox/types';
@@ -89,20 +90,8 @@ export default class MusicBlocklyWorkspace {
     const toolboxBlocks = getToolbox(blockMode, toolbox);
 
     // This dialog is used for naming variables, which are only present in advanced mode.
-    // Other Blockly labs use FeedbackUtils.prototype.showSimpleDialog to create a prettier dialog.
-    // See StudioApp.prototype.inject for more information.
-    const customSimpleDialog = function (options: {
-      bodyText: string;
-      promptPrefill: string;
-      onCancel: (p1: string | null) => void;
-    }) {
-      Blockly.dialog.prompt(
-        options.bodyText,
-        options.promptPrefill,
-        options.onCancel
-      );
-    };
-
+    // Other Blockly labs use FeedbackUtils.prototype.showSimpleDialog to create a similar dialog.
+    const customSimpleDialog = prompt;
     this.workspace = Blockly.inject(container, {
       toolbox: toolboxBlocks,
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
