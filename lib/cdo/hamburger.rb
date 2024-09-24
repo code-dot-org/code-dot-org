@@ -105,17 +105,38 @@ class Hamburger
     # We will build on the menu items here
     entries = []
 
-    # First, we get the header contents, which we put into the hamburger menu
+    # We negotiate the region configuration for the hamburger items
+    hamburger_links = ge_hamburger_config[:teacher] || {}
+    if options[:user_type] == "student"
+      hamburger_links = ge_hamburger_config[:student] || {}
+    end
+    hamburger_items = hamburger_links.map {|item| item[:title]}
+
+    # Then, we get the header contents, which we put into the hamburger menu
     # when the width prohibits their visibility
     header_links = get_header_contents(options)
+    header_items = header_links.map {|item| item[:key]}
 
     # Then we add those first, with the proper visibility
-    entries.concat(header_links.map do |header_link|
+    # When we find a header entry that matches a hamburger option, we omit
+    # it in the hamburger menu unless it has mobile visibility
+    entries.concat(header_links.filter_map do |header_link|
+      # Ignore if it is already in the hamburger items
+      next nil if hamburger_items.include?(header_link[:key])
+
+      # Convert 'hide' into 'show' to invert the visibility logic
+      # so that we 'show' the hamburger options when we 'hide' the
+      # header links
+      header_link[:class].gsub!("hide", "show")
+
+      # Ensure a unique id that is prepended with 'hamburger-'
+      header_link[:id] = "hamburger-#{header_link[:id]}" if header_link[:id]
       if options[:user_type] == "teacher"
-        header_link[:class] = visibility[:show_teacher_options]
+        header_link[:class] = "#{header_link[:class]} #{visibility[:show_teacher_options]}"
       elsif options[:user_type] == "student"
-        header_link[:class] = visibility[:show_student_options]
+        header_link[:class] = "#{header_link[:class]} #{visibility[:show_student_options]}"
       end
+
       header_link
     end
 )
@@ -129,19 +150,28 @@ class Hamburger
     # Show help links before Pegasus links for signed in users.
     help_contents = HelpHeader.get_help_contents(options)
     if is_teacher_or_student
-      entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
+      entries.concat(help_contents.each do |e|
+        e[:class] = visibility[:show_help_options]
+        # Ensure a unique id that is prepended with 'hamburger-'
+        e[:id] = "hamburger-#{e[:id]}" if e[:id]
+      end
+)
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
-    end
-
-    # Then we negotiate the region configuration
-    hamburger_links = ge_hamburger_config[:teacher] || {}
-    if options[:user_type] == "student"
-      hamburger_links = ge_hamburger_config[:student] || {}
     end
 
     # For each one, we localize the link contents and add it to our list
     entries.concat(hamburger_links.map do |link|
       link = link.dup
+
+      # This item is also in the header, give it the same visibility class
+      # so that it appears when the header items disappear.
+      header_index = header_items.index(link[:title])
+      unless header_index.nil?
+        link[:class] = header_links[header_index][:class]
+        # Invert the visibility
+        link[:class].gsub!("hide", "show")
+      end
+
       link[:title] = I18n.t("#{loc_prefix}#{link[:title]}")
       if link[:domain] == 'studio.code.org'
         link[:url] = CDO.studio_url(link[:url])
@@ -192,16 +222,30 @@ class Hamburger
     end
 
     # Translate the titles and create fully-formed URLs
-    links = links.map do |info|
+    links = links.map.with_index do |info, i|
       if info.is_a? Hash
         info = info.dup
-        info[:title] = I18n.t("#{loc_prefix}#{info[:title]}")
+        info[:key] = info[:title]
+        i18n_prefix = info[:loc_prefix] || loc_prefix
+        info[:title] = I18n.t("#{i18n_prefix}#{info[:title]}")
         if info[:domain] == 'studio.code.org'
           info[:url] = CDO.studio_url(info[:url])
         elsif info[:domain] == 'code.org'
           info[:url] = CDO.code_org_url(info[:url])
         end
       end
+
+      # Only show three options when small
+      # We have a 'hide-small-desktop' which hides it when the width gets to be small
+      # And, confusingly, a 'show-small-desktop' which is for things that
+      # show up when the width is *very* small
+      # Specifying both will cause it to disappear for medium width but also
+      # continue to appear in very small widths.
+      info[:class] = if i > 2
+                       "hide-small-desktop"
+                     else
+                       "hide-mobile"
+                     end
       info
     end
 

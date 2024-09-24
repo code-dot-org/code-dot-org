@@ -134,7 +134,7 @@ class HamburgerTest < Minitest::Test
   def test_hamburger_content_student
     # Test that the header links also appear in the hamburger menu
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: "student", language: "en"})
-    assert_includes_id contents[:entries], "header-student-projects"
+    assert_includes_id contents[:entries], "hamburger-header-student-projects"
   end
 
   def test_hamburger_content_nobody
