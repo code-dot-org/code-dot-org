@@ -78,4 +78,8 @@
     // are more specific than a single class.
     background-color: $light_black_opacity-60 !important;
   }
+
+  &:disabled {
+    color: $light_gray_200 !important;
+  }
 }
