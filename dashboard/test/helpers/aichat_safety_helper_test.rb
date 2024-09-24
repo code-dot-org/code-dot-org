@@ -35,8 +35,18 @@ class AichatSafetyHelperTest < ActionView::TestCase
         }
       ]
     }
+    openai_response_invalid_hash = {
+      choices: [
+        {
+          message: {
+            content: "INVALID"
+          }
+        }
+      ]
+    }
     @openai_response_profanity_json = openai_response_profanity_hash.to_json
     @openai_response_safe_json = openai_response_safe_hash.to_json
+    @openai_response_invalid_json = openai_response_invalid_hash.to_json
     @profane_message = "profanity hello #{@blocklist_blocked_word}"
     @openai_response = {
       evaluation: "INAPPROPRIATE"
@@ -79,6 +89,26 @@ class AichatSafetyHelperTest < ActionView::TestCase
         response = AichatSafetyHelper.find_toxicity(role, 'clean message', 'en')
         assert_nil response
       end
+    end
+  end
+
+  test "request_safety_check returns a valid response.body the first time it is called" do
+    stub_safety_services('openai', 'user')
+    OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_safe_json).once
+    AichatSafetyHelper.find_toxicity('user', 'clean message', 'en')
+  end
+
+  test "retries if request_safety_check returns a response.body other than INAPPROPRIATE or OK" do
+    stub_safety_services('openai', 'user')
+    OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_invalid_json).returns(@openai_response_safe_json).once
+    AichatSafetyHelper.find_toxicity('user', 'clean message', 'en')
+  end
+
+  test "raises an error if request_safety_check returns a response.body other than INAPPROPRIATE or OK twice" do
+    stub_safety_services('openai', 'user')
+    OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_invalid_json)
+    assert_raises do
+      AichatSafetyHelper.find_toxicity('user', 'clean message', 'en')
     end
   end
 
