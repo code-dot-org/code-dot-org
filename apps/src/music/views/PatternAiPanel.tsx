@@ -18,7 +18,11 @@ const aiBotImageThinking = require(`@cdo/static/music/ai/ai-bot-thinking.png`);
 
 const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
 
+import {Button} from '@cdo/apps/componentLibrary/button';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+
 import {generatePattern} from '../ai/patternAi';
+import musicI18n from '../locale';
 import {PatternEventValue} from '../player/interfaces/PatternEvent';
 import MusicLibrary, {SoundData} from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
@@ -37,6 +41,7 @@ const arrayOfTicks = Array.from({length: numEvents}, (_, i) => i + 1);
 interface PatternAiPanelProps {
   library: MusicLibrary;
   initValue: PatternEventValue;
+  hideAiTemperature: boolean;
   onChange: (value: PatternEventValue) => void;
   previewSound: MusicPlayer['previewSound'];
   previewPattern: MusicPlayer['previewPattern'];
@@ -57,6 +62,7 @@ type GenerateStateType = 'none' | 'generating';
 const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   library,
   initValue,
+  hideAiTemperature,
   onChange,
   previewSound,
   previewPattern,
@@ -71,7 +77,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   // data.
   const currentValue: PatternEventValue = JSON.parse(JSON.stringify(initValue));
 
-  const [aiTemperature, setAiTemperature] = useState(1);
+  const [aiTemperature, setAiTemperature] = useState(10);
 
   const availableKits = useMemo(() => {
     return library.kits;
@@ -218,7 +224,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       seedEvents,
       numSeedEvents,
       numEvents - numSeedEvents,
-      aiTemperature,
+      aiTemperature / 10,
       newEvents => {
         currentValue.events = newEvents;
         onChange(currentValue);
@@ -229,8 +235,8 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     setGenerateState('generating');
   }, [currentValue, onChange, aiTemperature, stopPreview, playPreview]);
 
-  const aiTemperatureMin = 0.5;
-  const aiTemperatureMax = 2;
+  const aiTemperatureMin = 5;
+  const aiTemperatureMax = 20;
 
   const aiBotImageIndex = Math.min(
     Math.floor(
@@ -278,8 +284,8 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
         {userCompletedTask === 'drawnDrums' && (
           <div className={styles.helpContainer}>
             <div className={classNames(styles.help, styles.helpGenerate)}>
-              Click on A.I. and it will generate more drums based on what you
-              started.
+              Click this button and A.I. will generate more drums based on what
+              you started.
             </div>
             <div
               className={classNames(
@@ -355,24 +361,55 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                 styles.aiBot,
                 generateState === 'generating' && styles.aiBotGenerating
               )}
-              onClick={handleAiClick}
               alt=""
               draggable={false}
             />
-            <div>
-              <input
-                type="range"
-                min={aiTemperatureMin}
-                max={aiTemperatureMax}
-                step={0.1}
-                value={aiTemperature}
-                onChange={event => {
-                  setAiTemperature(event.target.valueAsNumber);
-                }}
-                className={styles.temperatureInput}
-              />
-              <div className={styles.temperatureText}>{aiTemperature}</div>
-            </div>
+            <Button
+              ariaLabel={musicI18n.generate()}
+              text={musicI18n.generate()}
+              onClick={handleAiClick}
+              disabled={generateState === 'generating'}
+              type="primary"
+              size="s"
+            />
+            {!hideAiTemperature && (
+              <div>
+                <div className={styles.temperatureText}>{aiTemperature}</div>
+                <div className={styles.temperatureRow}>
+                  <div
+                    className={styles.temperatureButton}
+                    onClick={() => {
+                      if (aiTemperature - 1 >= aiTemperatureMin) {
+                        setAiTemperature(aiTemperature - 1);
+                      }
+                    }}
+                  >
+                    <FontAwesomeV6Icon iconName={'minus'} iconStyle="solid" />
+                  </div>
+                  <input
+                    type="range"
+                    min={aiTemperatureMin}
+                    max={aiTemperatureMax}
+                    step={1}
+                    value={aiTemperature}
+                    onChange={event => {
+                      setAiTemperature(event.target.valueAsNumber);
+                    }}
+                    className={styles.temperatureInput}
+                  />
+                  <div
+                    className={styles.temperatureButton}
+                    onClick={() => {
+                      if (aiTemperature + 1 <= aiTemperatureMax) {
+                        setAiTemperature(aiTemperature + 1);
+                      }
+                    }}
+                  >
+                    <FontAwesomeV6Icon iconName={'plus'} iconStyle="solid" />
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

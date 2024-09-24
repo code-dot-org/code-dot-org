@@ -108,6 +108,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
       <PatternAiPanel
         library={this.options.getLibrary()}
         initValue={this.getValue()}
+        hideAiTemperature={this.options.getHideAiTemperature()}
         onChange={value => {
           this.setValue(value);
         }}
