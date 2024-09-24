@@ -9,7 +9,10 @@ import {
   SCHOOL_ZIP_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {SELECT_A_SCHOOL} from '@cdo/apps/templates/SchoolZipSearch';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
@@ -22,6 +25,7 @@ jest.mock('@cdo/apps/utils', () => ({
 }));
 
 const navigateToHrefMock = navigateToHref as jest.Mock;
+const getAuthenticityTokenMock = getAuthenticityToken as jest.Mock;
 
 describe('FinishTeacherAccount', () => {
   afterEach(() => {
@@ -135,13 +139,25 @@ describe('FinishTeacherAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 
-  it('clicking finish sign up button triggers fetch calls and redirects user to home page', async () => {
+  it('clicking finish sign up button triggers fetch call and redirects user to home page', async () => {
     const fetchSpy = sinon.stub(window, 'fetch');
     fetchSpy.returns(Promise.resolve(new Response()));
 
+    // Declare parameter values and set sessionStorage variables
     const name = 'FirstName';
     const email = 'fake@email.com';
-
+    const finishSignUpParams = {
+      new_sign_up: true,
+      user_type: UserTypes.TEACHER,
+      email: email,
+      name: name,
+      email_preference_opt_in: true,
+      school: SELECT_A_SCHOOL,
+      school_id: SELECT_A_SCHOOL,
+      school_zip: null,
+      school_name: null,
+      school_country: null,
+    };
     sessionStorage.setItem('email', email);
 
     await waitFor(() => {
@@ -168,15 +184,15 @@ describe('FinishTeacherAccount', () => {
       // Verify the button's click handler was called
       expect(handleClick).toHaveBeenCalled();
 
-      // Verify the button's fetch methods were called
-      const fetchCallNew = fetchSpy.getCall(0);
-      expect(fetchCallNew.args[0]).toEqual(
-        `/users/sign_up?new_sign_up=true&user_type=teacher&email=${email}&name=${name}&email_preference_opt_in=true&school=selectASchool&school_id=selectASchool&school_zip=null&school_name=null`
-      );
+      // Verify the authenticity token was obtained
+      expect(getAuthenticityTokenMock).toHaveBeenCalled;
 
-      const fetchCallCreate = fetchSpy.getCall(1);
-      expect(fetchCallCreate.args[0]).toEqual(
-        `/users?new_sign_up=true&user_email=${email}`
+      // Verify the button's fetch method was called
+      expect(fetchSpy).toHaveBeenCalled;
+      const fetchCall = fetchSpy.getCall(0);
+      expect(fetchCall.args[0]).toEqual('/users');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(finishSignUpParams)
       );
 
       // Verify the user is redirected to the finish sign up page

@@ -118,6 +118,12 @@ describe('LoginTypeSelection', () => {
     const confirmPasswordInput = screen.getByLabelText(
       locale.confirm_password()
     );
+    const beginSignUpParams = {
+      new_sign_up: true,
+      email: email,
+      password: password,
+      password_confirmation: password,
+    };
 
     fireEvent.change(emailInput, {
       target: {value: email},
@@ -139,8 +145,9 @@ describe('LoginTypeSelection', () => {
       // Verify the button's fetch method was called
       expect(fetchSpy).toHaveBeenCalled;
       const fetchCall = fetchSpy.getCall(0);
-      expect(fetchCall.args[0]).toEqual(
-        `/users/begin_sign_up?new_sign_up=true&email=${email}&password=${password}&password_confirmation=${password}`
+      expect(fetchCall.args[0]).toEqual('/users/begin_sign_up');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(beginSignUpParams)
       );
 
       // Verify the user is redirected to the finish sign up page
@@ -167,6 +174,12 @@ describe('LoginTypeSelection', () => {
     const confirmPasswordInput = screen.getByLabelText(
       locale.confirm_password()
     );
+    const beginSignUpParams = {
+      new_sign_up: true,
+      email: email,
+      password: password,
+      password_confirmation: password,
+    };
 
     // Set up create account button onClick jest function
     const finishSignUpButton = screen.getByRole('button', {
@@ -205,8 +218,9 @@ describe('LoginTypeSelection', () => {
       // Verify the button's fetch method was called
       expect(fetchSpy).toHaveBeenCalled;
       const fetchCall = fetchSpy.getCall(0);
-      expect(fetchCall.args[0]).toEqual(
-        `/users/begin_sign_up?new_sign_up=true&email=${email}&password=${password}&password_confirmation=${password}`
+      expect(fetchCall.args[0]).toEqual('/users/begin_sign_up');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(beginSignUpParams)
       );
 
       // Verify the user is redirected to the finish sign up page

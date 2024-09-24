@@ -12,6 +12,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {navigateToHref} from '../utils';
 
@@ -47,29 +48,26 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const submitTeacherAccount = async () => {
     sendFinishEvent();
 
-    const encodedEmail = encodeURIComponent(
-      sessionStorage.getItem(EMAIL_SESSION_KEY) || ''
-    );
-    const school = sessionStorage.getItem(SCHOOL_ID_SESSION_KEY);
-    const schoolZip = sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY);
-    const schoolName = sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY);
-    const schoolCountry = sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY);
-    const fetchNewUrlParams = `new_sign_up=true&user_type=teacher&email=${encodedEmail}&name=${name}&email_preference_opt_in=${emailOptInChecked}&school=${school}&school_id=${school}&school_zip=${schoolZip}&school_name=${schoolName}&school_country=${schoolCountry}`;
-
-    await fetch(`/users/sign_up?${fetchNewUrlParams}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
+    const signUpParams = {
+      new_sign_up: true,
+      user_type: UserTypes.TEACHER,
+      email: sessionStorage.getItem(EMAIL_SESSION_KEY),
+      name: name,
+      email_preference_opt_in: emailOptInChecked,
+      school: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
+      school_id: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
+      school_zip: sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY),
+      school_name: sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY),
+      school_country: sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY),
+    };
     const authToken = await getAuthenticityToken();
-    await fetch(`/users?new_sign_up=true&user_email=${encodedEmail}`, {
+    await fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'X-CSRF-Token': authToken,
       },
+      body: JSON.stringify(signUpParams),
     });
 
     navigateToHref('/home');

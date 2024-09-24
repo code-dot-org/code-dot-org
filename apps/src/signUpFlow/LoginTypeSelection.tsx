@@ -135,17 +135,23 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const submitLoginType = async () => {
     logUserLoginType('email');
 
-    const encodedEmail = encodeURIComponent(email);
-    const beginSignUpFetchParams = `new_sign_up=true&email=${encodedEmail}&password=${password}&password_confirmation=${password}`;
-    fetch(`/users/begin_sign_up?${beginSignUpFetchParams}`, {
+    const submitLoginTypeParams = {
+      new_sign_up: true,
+      email: email,
+      password: password,
+      password_confirmation: password,
+    };
+    const authToken = await getAuthenticityToken();
+    await fetch('/users/begin_sign_up', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-CSRF-Token': await getAuthenticityToken(),
+        'X-CSRF-Token': authToken,
       },
-    }).then(() => {
-      navigateToHref(finishAccountUrl);
+      body: JSON.stringify(submitLoginTypeParams),
     });
+
+    navigateToHref(finishAccountUrl);
   };
 
   const sendLMSAnalyticsEvent = () => {
