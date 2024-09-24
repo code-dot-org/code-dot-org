@@ -366,5 +366,8 @@ gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
 
 gem 'graphwerk', group: %i[development test]
-gem "packs-rails", "~> 0.0.5"
-gem 'packwerk'
+#gem "packs-rails", "~> 0.0.5"
+#gem 'packwerk'
+
+gem 'core', path: './dashboard/packs/user'
+gem 'lti', path: './dashboard/packs/lti'

@@ -88,6 +88,16 @@ GIT
   specs:
     full-name-splitter (0.1.2)
 
+PATH
+  remote: dashboard/packs/lti
+  specs:
+    lti (0.1.0)
+
+PATH
+  remote: dashboard/packs/user
+  specs:
+    core (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -269,7 +279,6 @@ GEM
       erubi (~> 1.4)
       parser (>= 2.4)
       smart_properties
-    bigdecimal (3.1.8)
     bindata (2.5.0)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -290,12 +299,6 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
-    code_ownership (1.37.0)
-      code_teams (~> 1.0)
-      packs-specification
-      sorbet-runtime (>= 0.5.11249)
-    code_teams (1.0.2)
-      sorbet-runtime
     coderay (1.1.3)
     colorize (0.8.1)
     composite_primary_keys (13.0.4)
@@ -638,22 +641,6 @@ GEM
     open_uri_redirections (0.2.1)
     orm_adapter (0.5.0)
     os (1.1.4)
-    packs (0.0.44)
-      bigdecimal
-      code_ownership (>= 1.33.0)
-      packs-specification
-      packwerk
-      parse_packwerk (>= 0.25.0)
-      rainbow
-      sorbet-runtime
-      thor
-      tty-prompt
-    packs-rails (0.0.5)
-      activesupport
-      packs
-      railties
-    packs-specification (0.0.10)
-      sorbet-runtime
     packwerk (3.2.1)
       activesupport (>= 6.0)
       ast
@@ -670,14 +657,9 @@ GEM
       parallel
     paranoia (2.5.3)
       activerecord (>= 5.1, < 7.1)
-    parse_packwerk (0.26.0)
-      bigdecimal
-      sorbet-runtime
     parser (3.2.2.3)
       ast (~> 2.4.1)
       racc
-    pastel (0.8.0)
-      tty-color (~> 0.5)
     pdf-reader (2.9.2)
       Ascii85 (~> 1.0)
       afm (~> 0.2.1)
@@ -918,16 +900,6 @@ GEM
     timeout (0.3.2)
     trailblazer-option (0.1.2)
     ttfunk (1.7.0)
-    tty-color (0.6.0)
-    tty-cursor (0.7.1)
-    tty-prompt (0.23.1)
-      pastel (~> 0.8)
-      tty-reader (~> 0.8)
-    tty-reader (0.9.0)
-      tty-cursor (~> 0.7)
-      tty-screen (~> 0.8)
-      wisper (~> 2.0)
-    tty-screen (0.8.2)
     twilio-ruby (5.77.0)
       faraday (>= 0.9, < 3.0)
       jwt (>= 1.5, < 3.0)
@@ -970,7 +942,6 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    wisper (2.0.1)
     xxhash (0.4.0)
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
@@ -1021,6 +992,7 @@ DEPENDENCIES
   cld
   colorize
   composite_primary_keys (~> 13.0)
+  core!
   crowdin-api (~> 1.10.0)
   cucumber
   daemons (= 1.1.9)
@@ -1066,6 +1038,7 @@ DEPENDENCIES
   kaminari
   lograge!
   loofah (~> 2.19.1)
+  lti!
   mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
   memory_profiler
@@ -1093,8 +1066,6 @@ DEPENDENCIES
   omniauth-rails_csrf_protection (~> 1.0.2)
   open_uri_redirections
   os
-  packs-rails (~> 0.0.5)
-  packwerk
   parallel
   parallel_tests
   paranoia (~> 2.5.0)
