@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 
 class CensusMapInfoWindow extends Component {
   static propTypes = {
-    onTakeSurveyClick: PropTypes.func.isRequired,
+    onTakeSurveyClick: PropTypes.func,
     schoolId: PropTypes.string.isRequired,
     schoolName: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
@@ -18,7 +18,6 @@ class CensusMapInfoWindow extends Component {
 
   render() {
     let censusMessage;
-    let missingCensusData = false;
     let color = '';
 
     switch (this.props.teachesCs) {
@@ -43,7 +42,6 @@ class CensusMapInfoWindow extends Component {
         break;
       default:
         censusMessage = 'We need data for this school.';
-        missingCensusData = true;
         color = 'white';
     }
 
@@ -72,30 +70,24 @@ class CensusMapInfoWindow extends Component {
         <div className="census-message">
           <div className={colorClass} />
           {censusMessage}
-          {!missingCensusData && (
-            <span>
-              &nbsp;
-              <a href="/yourschool/about" target="_blank">
-                (Why?)
-              </a>
-            </span>
-          )}
         </div>
-        <div className="button-container">
-          <div className="button-link-div">
-            <a
-              onClick={() =>
-                this.props.onTakeSurveyClick(schoolDropdownOption, false)
-              }
-            >
-              <div className="button">
-                <div className="button-text">
-                  Take the survey for this school
+        {this.props.onTakeSurveyClick && (
+          <div className="button-container">
+            <div className="button-link-div">
+              <a
+                onClick={() =>
+                  this.props.onTakeSurveyClick(schoolDropdownOption, false)
+                }
+              >
+                <div className="button">
+                  <div className="button-text">
+                    Take the survey for this school
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     );
   }
@@ -103,7 +95,7 @@ class CensusMapInfoWindow extends Component {
 
 export default class CensusMap extends Component {
   static propTypes = {
-    onTakeSurveyClick: PropTypes.func.isRequired,
+    onTakeSurveyClick: PropTypes.func,
     school: PropTypes.object,
     tileset: PropTypes.string.isRequired,
   };

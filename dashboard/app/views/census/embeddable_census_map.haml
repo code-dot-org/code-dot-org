@@ -1,0 +1,12 @@
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%link{rel: "stylesheet", type: "text/css", href: "//#{CDO.pegasus_site_host}/css/selectize.bootstrap3.css"}
+%link{rel: "stylesheet", href: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css"}
+%script{type: "text/javascript", src: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js"}
+:javascript
+  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
+%script{src: webpack_asset_path('js/census/embeddable_census_map.js'), data: {tileset: CDO.mapbox_access_tileset.to_json}}
+%link{rel: "stylesheet", type: "text/css", href: "//#{CDO.pegasus_site_host}/css/census-map.css"}
+
+#census-map
+

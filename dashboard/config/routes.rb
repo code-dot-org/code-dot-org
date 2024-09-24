@@ -1046,6 +1046,7 @@ Dashboard::Application.routes.draw do
 
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
+    get '/embeddable_census_map', to: 'census#embeddable_census_map'
 
     # Routes used by donor teacher banner
     post '/dashboardapi/v1/users/:user_id/dismiss_donor_teacher_banner', to: 'api/v1/users#dismiss_donor_teacher_banner'
