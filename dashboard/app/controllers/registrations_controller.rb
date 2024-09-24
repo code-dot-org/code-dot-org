@@ -22,14 +22,10 @@ class RegistrationsController < Devise::RegistrationsController
   def new
     session[:user_return_to] ||= params[:user_return_to]
     if PartialRegistration.in_progress?(session)
-      if params[:new_sign_up].present?
-        Services::PartialRegistration::NewUserBuilder.call(request: request)
-      else
-        user_params = params[:user] || ActionController::Parameters.new
-        user_params[:user_type] ||= session[:default_sign_up_user_type]
-        user_params[:email] ||= params[:email]
-        @user = User.new_with_session(user_params.permit(:user_type, :email), session)
-      end
+      user_params = params[:user] || ActionController::Parameters.new
+      user_params[:user_type] ||= session[:default_sign_up_user_type]
+      user_params[:email] ||= params[:email]
+      @user = User.new_with_session(user_params.permit(:user_type, :email), session)
     else
       save_default_sign_up_user_type
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
@@ -162,8 +158,9 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     if params[:new_sign_up].present?
-      curr_user = User.find_by_email_or_hashed_email(params[:user_email])
-      sign_in curr_user
+      session[:user_return_to] ||= params[:user_return_to]
+      @user = Services::PartialRegistration::UserBuilder.call(request: request)
+      sign_in @user
     end
 
     if current_user && current_user.errors.blank?
