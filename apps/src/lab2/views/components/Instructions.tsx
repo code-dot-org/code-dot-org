@@ -6,6 +6,7 @@ import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {
   isPredictAnswerLocked,
@@ -69,6 +70,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
+  const hocFinishUrl = useAppSelector(
+    state => state.lab.levelProperties?.hocFinishUrl
+  );
 
   // If there are no validation conditions, we can show the continue button so long as
   // there is another level and manageNavigation is true.
@@ -115,6 +119,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       layout={layout}
       handleInstructionsTextClick={handleInstructionsTextClick}
       offerTts={offerTts}
+      hocFinishUrl={hocFinishUrl}
       className={className}
     />
   );
@@ -150,6 +155,7 @@ interface InstructionsPanelProps {
   /** Optional classname for the container */
   className?: string;
   offerTts?: boolean;
+  hocFinishUrl?: string;
 }
 
 /**
@@ -178,6 +184,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   predictAnswerLocked,
   className,
   offerTts,
+  hocFinishUrl,
 }) => {
   const [isFinished, setIsFinished] = useState(false);
 
@@ -192,7 +199,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
       beforeFinish();
     }
     setIsFinished(true);
-  }, [beforeFinish]);
+
+    if (hocFinishUrl) {
+      shareLab2Project(hocFinishUrl);
+    }
+  }, [beforeFinish, hocFinishUrl]);
 
   // Reset the Finish button state when it changes from shown to hidden.
   useEffect(() => {
@@ -280,7 +291,9 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                     className={moduleStyles.buttonInstruction}
                     text={commonI18n.finish()}
                   />
-                  {isFinished && <Heading6>{finalMessage}</Heading6>}
+                  {isFinished && !hocFinishUrl && (
+                    <Heading6>{finalMessage}</Heading6>
+                  )}
                 </>
               )}
             </div>
