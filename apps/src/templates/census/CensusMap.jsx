@@ -18,7 +18,6 @@ class CensusMapInfoWindow extends Component {
 
   render() {
     let censusMessage;
-    let missingCensusData = false;
     let color = '';
 
     switch (this.props.teachesCs) {
@@ -43,7 +42,6 @@ class CensusMapInfoWindow extends Component {
         break;
       default:
         censusMessage = 'We need data for this school.';
-        missingCensusData = true;
         color = 'white';
     }
 
@@ -72,14 +70,6 @@ class CensusMapInfoWindow extends Component {
         <div className="census-message">
           <div className={colorClass} />
           {censusMessage}
-          {!missingCensusData && (
-            <span>
-              &nbsp;
-              <a href="/yourschool/about" target="_blank">
-                (Why?)
-              </a>
-            </span>
-          )}
         </div>
         <div className="button-container">
           <div className="button-link-div">
