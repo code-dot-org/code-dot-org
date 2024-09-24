@@ -101,7 +101,7 @@ class CensusMapInfoWindow extends Component {
   }
 }
 
-export default class CensusMapReplacement extends Component {
+export default class CensusMap extends Component {
   static propTypes = {
     onTakeSurveyClick: PropTypes.func.isRequired,
     school: PropTypes.object,
