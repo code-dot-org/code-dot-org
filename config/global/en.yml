@@ -319,6 +319,7 @@ header:
       id: report-bug
     # The report_abuse still only exists if it is on a relevant page
     - title: report_abuse
+      domain: studio.code.org
       url: /report_abuse
       id: report-abuse
     - title: teacher_community
