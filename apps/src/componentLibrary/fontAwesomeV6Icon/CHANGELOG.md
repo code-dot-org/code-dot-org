@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0]()
+
+* added support of `iconFamily` which allows to use different icon families (e.g. brands, duotone, custom icons, etc)
+* updated stories to show hot to use Brands, Duotone, and custom icons
+
 ## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/60788)
 
 * update stories to show how to use fa-brands or any other custom families icons
