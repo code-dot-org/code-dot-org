@@ -1,5 +1,4 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
-import SwapLayoutButton from '@codebridge/SwapLayoutButton';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
@@ -15,6 +14,7 @@ import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ControlButtons from './ControlButtons';
 import GraphModal from './GraphModal';
+import RightButtons from './RightButtons';
 
 import moduleStyles from './console.module.scss';
 
@@ -51,28 +51,12 @@ const Console: React.FunctionComponent = () => {
     setGraphModalOpen(true);
   };
 
-  const headerButton = () => {
-    return (
-      <>
-        <Button
-          isIconOnly
-          color={'black'}
-          icon={{iconStyle: 'solid', iconName: 'eraser'}}
-          ariaLabel="clear console"
-          onClick={clearOutput}
-          size={'xs'}
-        />
-        <SwapLayoutButton />
-      </>
-    );
-  };
-
   return (
     <PanelContainer
       id="codebridge-console"
       className={moduleStyles.consoleContainer}
       headerContent={'Console'}
-      rightHeaderContent={headerButton()}
+      rightHeaderContent={<RightButtons clearOutput={clearOutput} />}
       leftHeaderContent={<ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >
