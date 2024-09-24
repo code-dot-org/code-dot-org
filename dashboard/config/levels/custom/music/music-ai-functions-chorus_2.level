@@ -1,0 +1,178 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-09-23T17:50:24.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "###Functions in Music Making\r\n\r\nNotice how the code in the function named \"chorus\" stands on its own. \r\n- Call the `chorus` function by adding it under `when run`. \r\n- Press \"Run\" to see how it works. ",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_espresso",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 34,
+              "y": 34,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "!-;o4[rUU=MLhQAhS|9j",
+              "x": 210,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "extraState": {
+                "procedureId": "_;FW8D%-ZDN`m%OcF9Fc",
+                "initialDeleteConfig": false,
+                "initialEditConfig": true,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "intro"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "^fbpb)DaPk:Udqo(~A!.",
+                    "deletable": false,
+                    "movable": false,
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "N/KYOy.IXc7m*u(+;Buh",
+                          "movable": false,
+                          "fields": {
+                            "sound": "sabrina_carpenter_espresso/drums_intro"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "jN6v:04PQW@K=KC*]Ik]",
+                              "movable": false,
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/bass_intro"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "OJW^%gSWxo:Q]%_9Uv1V",
+                                  "movable": false,
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/keys_intro"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "~4#B+CLI?7q0bFzd|Z8[",
+                                      "movable": false,
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "_;FW8D%-ZDN`m%OcF9Fc",
+            "name": "intro",
+            "returnTypes": null
+          }
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Functions": [
+
+          ]
+        }
+      },
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "drums_intro",
+          "drums_main_beat",
+          "drums_hats",
+          "drums_fill",
+          "drums_percussion_1",
+          "drums_percussion_2",
+          "bass_intro",
+          "bass_main",
+          "keys_intro",
+          "keys_chorus_1",
+          "keys_chorus_2",
+          "keys_prechorus",
+          "synth",
+          "guitar_intro",
+          "guitar_1",
+          "guitar_2",
+          "crash",
+          "wow",
+          "mmm",
+          "breaths",
+          "reverse_vocal",
+          "vocals_now_hes",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_backgrounds",
+          "vocals_adlib_i_know",
+          "vocals_adlib_espresso",
+          "vocals_adlib"
+        ]
+      }
+    },
+    "validations": [
+      {
+        "key": "music-ai-functions-chorus_40e32b8b-3591-4266-82c8-cc24049aa1a0",
+        "message": "Nice work.  You successfully used the function to play a sound.",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f",
+        "message": "Connect the \"chorus\" block under [when run](#clickable=when-run-block) to play the sounds in the function.",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-23T17:50:24.541+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-chorus\\\"\"],\"cloned_from\":\"music-ai-functions-chorus\"},{\"changed_at\":\"2024-09-23 17:57:00 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:13:17 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:29:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:31:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
