@@ -47,7 +47,6 @@ module AichatSafetyHelper
           }
         end
       end
-      puts "details #{details}"
       details
     end
 
