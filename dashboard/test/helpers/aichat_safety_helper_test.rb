@@ -100,7 +100,7 @@ class AichatSafetyHelperTest < ActionView::TestCase
 
   test "retries if request_safety_check returns a response.body other than INAPPROPRIATE or OK" do
     stub_safety_services('openai', 'user')
-    OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_invalid_json).returns(@openai_response_safe_json).once
+    OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_invalid_json).returns(@openai_response_safe_json).twice
     AichatSafetyHelper.find_toxicity('user', 'clean message', 'en')
   end
 
