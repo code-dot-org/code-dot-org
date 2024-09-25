@@ -3,18 +3,13 @@ import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Link, {LinkBaseProps} from '@cdo/apps/componentLibrary/link';
+import Link, {LinkWithText} from '@cdo/apps/componentLibrary/link';
 
 import moduleStyles from './breadcrumbs.module.scss';
 
-interface BreadcrumbProps extends LinkBaseProps {
-  text: string;
-  href: string;
-}
-
 export interface BreadcrumbsProps {
   /** List of Breadcrumbs to render */
-  breadcrumbs: BreadcrumbProps[];
+  breadcrumbs: LinkWithText[];
   /** Breadcrumbs name */
   name: string;
   /** Size of Breadcrumbs */
