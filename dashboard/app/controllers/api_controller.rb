@@ -449,6 +449,7 @@ class ApiController < ApplicationController
       locale_code: request.locale,
       course_link: unit.course_link(params[:section_id]),
       course_title: unit.course_title || I18n.t('view_all_units'),
+      course_name: unit.unit_group&.name,
     }
 
     if unit.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: unit.plc_course_unit.plc_course)

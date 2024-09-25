@@ -37,6 +37,7 @@ import UnitOverview from './UnitOverview';
 
 interface Section {
   id: number;
+  courseId: number;
   courseVersionId: number;
   courseVersionName: string;
   courseOfferingId: number;
@@ -120,8 +121,9 @@ interface UnitData {
   is_verified_instructor: boolean;
   locale: string;
   locale_code: string;
-  course_link: string;
-  course_title: string;
+  course_link: string | null;
+  course_title: string | null;
+  course_name: string | null;
   id: string;
   name: string;
   title: string;
@@ -298,6 +300,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
       )
       .then(response => response.json())
       .then(responseJson => {
+        console.log('lfm unit summary response', responseJson);
         initializeRedux(responseJson, dispatch, userType, userId);
         setUnitSummaryResponse(responseJson);
       });
@@ -316,10 +319,12 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
     unitSummaryResponse.unitData.showAiAssessmentsAnnouncement &&
     experiments.isEnabled(experiments.AI_ASSESSMENTS_ANNOUNCEMENT);
 
+  console.log('lfm', selectedSection, unitSummaryResponse.unitData);
+
   return (
     <UnitOverview
       id={selectedSection.unitId}
-      courseId={selectedSection.courseVersionId} // TODO: This is not the correct prop
+      courseId={selectedSection.courseId}
       courseOfferingId={selectedSection.courseOfferingId}
       courseVersionId={selectedSection.courseVersionId}
       courseTitle={unitSummaryResponse.unitData.course_title}
@@ -336,7 +341,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
       showRedirectWarning={false} // TODO: https://codedotorg.atlassian.net/browse/TEACH-1374
       redirectScriptUrl={''}
       versions={unitSummaryResponse.unitData.course_versions}
-      courseName={selectedSection.courseDisplayName}
+      courseName={unitSummaryResponse.unitData.course_name}
       showAssignButton={unitSummaryResponse.unitData.show_assign_button}
       isProfessionalLearningCourse={unitSummaryResponse.unitData.isPlCourse}
       userId={userId}

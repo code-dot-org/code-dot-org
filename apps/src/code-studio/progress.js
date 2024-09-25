@@ -245,7 +245,6 @@ export function initCourseProgress(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
   queryUserProgress(store, scriptData, null);
-  console.log('lfm initCourseProgress', scriptData);
 }
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
@@ -270,7 +269,6 @@ export function initViewAsWithoutStore(dispatch, isSignedInUser, isInstructor) {
   }
 
   dispatch(setViewType(initialViewAs));
-  console.log('lfm initViewAsWithoutStore');
 }
 
 progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
