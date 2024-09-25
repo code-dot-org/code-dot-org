@@ -8,7 +8,7 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/Font
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import moduleStyles from './swap-layout-dropdown.module.scss';
+import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
 
 /*
   Please note - this is a fairly brittle component in that it's only allowing toggling between
@@ -47,7 +47,7 @@ const SwapLayoutDropdown: React.FunctionComponent = () => {
 
   return (
     <PopUpButton iconName="ellipsis-v" alignment="right">
-      <div onClick={onLayoutChange} className={moduleStyles.layoutItem}>
+      <div onClick={onLayoutChange} className={darkModeStyles.dropdownItem}>
         <FontAwesomeV6Icon iconName={iconName} iconStyle={'solid'} />
         <div>{layoutLabel}</div>
       </div>
