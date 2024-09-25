@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 
-import MusicLibrary from '../player/MusicLibrary';
 import {generateGraphDataFromPattern} from '../utils/Patterns';
 import PatternPanel from '../views/PatternPanel';
 
@@ -149,7 +148,6 @@ class FieldPattern extends GoogleBlockly.Field {
       height: FIELD_HEIGHT,
       padding: FIELD_PADDING,
       eventScale: 2,
-      library: MusicLibrary.getInstance(),
     });
 
     graphNotes.forEach(graphNote => {
