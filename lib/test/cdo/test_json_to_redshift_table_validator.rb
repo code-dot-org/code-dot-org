@@ -169,7 +169,9 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
     }
     result, modified = Cdo::JSONtoRedshiftTableValidator.validate(json, @schema, modify_invalid: true)
     assert modified
-    assert result["data_json"].is_a?(Hash)
-    assert_operator result["data_json"].to_json.bytesize, :<=, 65535
+    # Since the destination is a Redshift table and each top level Property of the JSON object maps to a destination
+    # column, top level Properties that have complex types are converted to string.
+    assert result["data_json"].is_a?(String)
+    assert_operator result["data_json"].bytesize, :<=, 65535
   end
 end

@@ -76,17 +76,15 @@ module Cdo
       private def validate_length(field, value, field_schema, errors, record, modify_invalid)
         return unless field_schema['maxLength'] && (value.is_a?(String) || value.is_a?(Hash))
 
-        string_value = value.is_a?(String) ? value : value.to_json
-        byte_length = string_value.encode('UTF-8').bytesize
+        multibyte_string = ActiveSupport::Multibyte::Chars.new(value.is_a?(String) ? value : value.to_json)
 
-        if byte_length > field_schema['maxLength']
-          error_msg = "Redshift column #{field} exceeds maximum byte length of #{field_schema['maxLength']} (current: #{byte_length} bytes)"
+        if multibyte_string.bytesize > field_schema['maxLength']
+          error_msg = "Redshift column #{field} exceeds maximum byte length of #{field_schema['maxLength']} (current: #{multibyte_string.length} characters, #{multibyte_string.bytesize} bytes)"
           errors << error_msg
           CDO.log.error(error_msg)
 
           if modify_invalid
-            truncated_value = truncate_to_byte_length(string_value, field_schema['maxLength'])
-            record[field] = value.is_a?(String) ? truncated_value : truncated_value.to_json
+            record[field] = multibyte_string.limit(field_schema['maxLength']).to_s
             CDO.log.warn("Truncated #{field} to fit Redshift column length")
           end
         end
@@ -101,14 +99,6 @@ module Cdo
         when 'null' then value.nil?
         else false
         end
-      end
-
-      private def truncate_to_byte_length(string, max_bytes)
-        return string if string.encode('UTF-8').bytesize <= max_bytes
-
-        truncated = string.encode('UTF-8')
-        truncated = truncated[0...-1] while truncated.bytesize > max_bytes
-        truncated
       end
     end
   end
