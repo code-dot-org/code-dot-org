@@ -401,6 +401,7 @@ class Section < ApplicationRecord
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
         course_id: course_id,
+        standalone_unit_id: unit_group ? nil : script_id,
         hidden: hidden,
         restrict_section: restrict_section,
         # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
