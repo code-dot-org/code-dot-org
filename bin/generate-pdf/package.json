@@ -9,7 +9,7 @@
   "author": "",
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
-    "puppeteer": "22.0.0",
+    "puppeteer": "23.4.1",
     "yargs": "^14.2.0"
   }
 }
