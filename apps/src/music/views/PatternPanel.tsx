@@ -7,9 +7,9 @@ import React, {
   useState,
 } from 'react';
 
+import MusicRegistry from '../MusicRegistry';
 import {PatternEventValue} from '../player/interfaces/PatternEvent';
 import MusicLibrary, {SoundData} from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
 
 import LoadingOverlay from './LoadingOverlay';
 import PreviewControls from './PreviewControls';
@@ -20,16 +20,8 @@ import styles from './patternPanel.module.scss';
 const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 
 interface PatternPanelProps {
-  library: MusicLibrary;
   initValue: PatternEventValue;
   onChange: (value: PatternEventValue) => void;
-  previewSound: MusicPlayer['previewSound'];
-  previewPattern: MusicPlayer['previewPattern'];
-  cancelPreviews: MusicPlayer['cancelPreviews'];
-  setupSampler: MusicPlayer['setupSampler'];
-  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
-  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
-  registerInstrumentLoadCallback: (callback: (kit: string) => void) => void;
 }
 
 /*
@@ -37,30 +29,24 @@ interface PatternPanelProps {
  * custom Blockly Field {@link FieldPattern}
  */
 const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
-  library,
   initValue,
   onChange,
-  previewSound,
-  previewPattern,
-  cancelPreviews,
-  setupSampler,
-  isInstrumentLoading,
-  isInstrumentLoaded,
-  registerInstrumentLoadCallback,
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
   const currentValue: PatternEventValue = JSON.parse(JSON.stringify(initValue));
 
-  const availableKits = useMemo(() => {
-    return library.kits;
-  }, [library.kits]);
+  const availableKits = useMemo(
+    () => MusicLibrary.getInstance()?.kits || [],
+    []
+  );
 
   const currentFolder = useMemo(() => {
     // Default to the first available kit if the current kit is not found in this library.
     return (
-      availableKits.find(kit => kit.id === currentValue.kit) || availableKits[0]
+      availableKits?.find(kit => kit.id === currentValue.kit) ||
+      availableKits?.[0]
     );
   }, [availableKits, currentValue.kit]);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
@@ -76,12 +62,12 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
       } else {
         // Not found, so add.
         currentValue.events.push({src: sound.src, tick, note});
-        previewSound(`${currentValue.kit}/${sound.src}`);
+        MusicRegistry.player.previewSound(`${currentValue.kit}/${sound.src}`);
       }
 
       onChange(currentValue);
     },
-    [onChange, previewSound, currentValue]
+    [onChange, currentValue]
   );
 
   const hasEvent = (sound: SoundData, tick: number) => {
@@ -113,41 +99,36 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   }, [onChange, currentValue]);
 
   const startPreview = useCallback(() => {
-    previewPattern(
+    MusicRegistry.player.previewPattern(
       currentValue,
       (tick: number) => setCurrentPreviewTick(tick),
       () => setCurrentPreviewTick(0)
     );
-  }, [previewPattern, setCurrentPreviewTick, currentValue]);
+  }, [setCurrentPreviewTick, currentValue]);
 
   const stopPreview = useCallback(() => {
     setCurrentPreviewTick(0);
-    cancelPreviews();
-  }, [setCurrentPreviewTick, cancelPreviews]);
+    MusicRegistry.player.cancelPreviews();
+  }, [setCurrentPreviewTick]);
 
   useEffect(() => {
-    if (!isInstrumentLoaded(currentValue.kit)) {
+    if (!MusicRegistry.player.isInstrumentLoaded(currentValue.kit)) {
       setIsLoading(true);
-      if (isInstrumentLoading(currentValue.kit)) {
+      if (MusicRegistry.player.isInstrumentLoading(currentValue.kit)) {
         // If the instrument is already loading, register a callback and wait for it to finish.
-        registerInstrumentLoadCallback(kit => {
+        MusicRegistry.player.registerCallback('InstrumentLoaded', kit => {
           if (kit === currentValue.kit) {
             setIsLoading(false);
           }
         });
       } else {
         // Otherwise, initiate the load.
-        setupSampler(currentValue.kit, () => setIsLoading(false));
+        MusicRegistry.player.setupSampler(currentValue.kit, () =>
+          setIsLoading(false)
+        );
       }
     }
-  }, [
-    setupSampler,
-    isInstrumentLoading,
-    isInstrumentLoaded,
-    currentValue.kit,
-    setIsLoading,
-    registerInstrumentLoadCallback,
-  ]);
+  }, [currentValue.kit, setIsLoading]);
 
   return (
     <div className={styles.patternPanel}>
@@ -165,7 +146,11 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
             <div className={styles.nameContainer}>
               <span
                 className={styles.name}
-                onClick={() => previewSound(`${currentValue.kit}/${sound.src}`)}
+                onClick={() =>
+                  MusicRegistry.player.previewSound(
+                    `${currentValue.kit}/${sound.src}`
+                  )
+                }
               >
                 {sound.name}
               </span>
