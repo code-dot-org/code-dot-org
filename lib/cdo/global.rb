@@ -52,5 +52,25 @@ module Cdo
       data = YAML.load_file(File.join(root, "config", "global", "#{region}.yml")) || {}
       data.deep_symbolize_keys
     end
+
+    # Loads all default locale from config/locales.yml
+    def self.load_default_locales
+      root = File.expand_path(File.join('..', '..'), __dir__)
+      unless defined? @@default_locales
+        @@default_locales = YAML.load_file(File.join(root, "dashboard", "config", "locales.yml"))
+        @@default_locales = @@default_locales.filter_map do |locale, data|
+          next nil unless data.is_a? Hash
+          [data['native'], locale].freeze
+        end.freeze
+      end
+      @@default_locales
+    end
+
+    # Returns the available locales specified for a region in the form of an Array of Arrays
+    # containing the native name and the locale key. ['native name', 'locale-key']
+    def self.locales_for(region)
+      config = configuration_for(region)
+      config[:locale_options] || load_default_locales
+    end
   end
 end

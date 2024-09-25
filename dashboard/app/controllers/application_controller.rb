@@ -26,8 +26,6 @@ class ApplicationController < ActionController::Base
 
   around_action :with_locale
 
-  before_action :set_footer_config
-
   before_action :fix_crawlers_with_bad_accept_headers
 
   before_action :clear_sign_up_session_vars
@@ -408,11 +406,5 @@ class ApplicationController < ActionController::Base
 
   private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
-  end
-
-  private def set_footer_config
-    ge_region = params[:ge_region] || 'en'
-    @footer_config = Cdo::Global.configuration_for(ge_region)[:footer] || {}
-    @locale_options = Cdo::Global.configuration_for(ge_region)[:locale_options] || options_for_locale_select
   end
 end

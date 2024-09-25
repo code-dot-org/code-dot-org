@@ -126,9 +126,11 @@ footer:
     url: /tos'
     domain: code.org
 
-locale_options:
-  - ['English', 'en-US']
-  - ['فارسی', 'fa-IR']
+# A subset of locales can be specified with the following structure
+#locale_options:
+#  - ['English', 'en-US']
+#  - ['فارسی', 'fa-IR']
+
 
 # Route matching to influence properties of components
 pages:

@@ -1,4 +1,5 @@
-# This is the configuration for the main code.org/ root
+# This is the configuration for /global/root
+# (which is mirroring the main site at the moment)
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)
   top:
@@ -326,6 +327,38 @@ header:
       user_type: teacher
       url: https://forum.code.org
       id: teacher-community
+
+# The navigation region found at the bottom of each page
+footer:
+  # Remove these links to support pages
+  links:
+    - title: privacy_updated
+      url: /privacy
+      domain: code.org
+      style: 'color: #ffa400;'
+    - title: privacy
+      url: /privacy
+      domain: code.org
+      style: 'color: #ffa400;'
+    - title: cookie_notice
+      url: /cookies
+      domain: code.org
+    - title: translate
+      url: /translate
+      domain: code.org
+    - title: help_support
+      url: https://support.code.org
+      target: _blank
+      id: support
+    - title: store
+      url: https://store.code.org
+    - title: tos_short
+      url: /tos'
+      domain: code.org
+
+# A subset of locales can be specified with the following structure
+#locale_options:
+#  - ['English', 'en-US']
 
 # These override specially wrapped components in particular pages.
 #

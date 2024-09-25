@@ -1,13 +1,15 @@
+- require 'cdo/footer'
 - full_width = local_assigns[:full_width]
-- footer_config = @footer_config
-- locale_options = @locale_options
+- options = {ge_region: params[:ge_region]}
+- footer_contents = Cdo::Footer.get_footer_contents(options)
+- locale_options = Cdo::Footer.get_locale_options(options)
 .navbar-static-top.footer
   .container{ style: 'padding: 10px;' + (full_width ? 'margin: auto' : '') }
     .row
       .span9{style: (full_width ? 'max-width: 80%;' : '')}
         - piped_spaces = ' | '
         - privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
-        - links = (footer_config[:links] || []).map(&:dup)
+        - links = (footer_contents[:links] || []).map(&:dup)
         - if privacy_updated
           - links.reject! { |link| link[:title] == 'privacy' }
         - else
