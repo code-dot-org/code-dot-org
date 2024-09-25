@@ -6,6 +6,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
   describe 'routing' do
     let(:international_page_path) {'/incubator'}
     let(:ge_region) {'fa'}
+    let(:ge_region_locale) {'fa-IR'}
     let(:regional_page_path) {File.join('/global', ge_region, international_page_path)}
 
     describe 'international page' do
@@ -27,12 +28,14 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
           must_respond_with 302
           must_redirect_to "#{regional_page_path}?#{params.to_query}"
+          _(cookies['language_']).must_equal nil
 
           follow_redirect!
 
           must_respond_with 200
           _(path).must_equal regional_page_path
           _(request.params[:foo]).must_equal params[:foo]
+          _(cookies['language_']).must_equal ge_region_locale
         end
 
         it 'does not redirect from not application routes' do
@@ -61,9 +64,26 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         _(path).must_equal regional_page_path
       end
 
-      it 'contains ge_region param' do
+      it 'request cookies contains ge_region' do
         get regional_page_path
-        _(request.params[:ge_region]).must_equal ge_region
+        _(request.cookies['ge_region']).must_equal ge_region
+      end
+
+      it 'request language cookie is set to regional language' do
+        get regional_page_path
+        _(request.cookies['language_']).must_equal ge_region_locale
+      end
+
+      it 'ge_region cookie is changed to region from the link' do
+        init_ge_region = 'en'
+        cookies['ge_region'] = init_ge_region
+        _ {get regional_page_path}.must_change -> {cookies['ge_region']}, from: init_ge_region, to: ge_region
+      end
+
+      it 'language cookie is changed to regional language' do
+        selected_locale = 'uk-UA'
+        cookies['language_'] = selected_locale
+        _ {get regional_page_path}.must_change -> {cookies['language_']}, from: selected_locale, to: ge_region_locale
       end
 
       it 'routing helpers generates region version of urls' do
