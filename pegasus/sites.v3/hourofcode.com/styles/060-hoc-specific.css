@@ -22,6 +22,7 @@
 #language-dropdown .selectize-input,
 #language-dropdown .selectize-dropdown {
   font-size: 12px;
+  text-align: initial;
 }
 #language-dropdown .selectize-input {
   padding: 2px 8px;
