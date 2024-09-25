@@ -7,7 +7,7 @@
   align-items: flex-end;
   overflow-x: scroll;
   max-width: 100%;
-  background-color: $charcoal;
+  background-color: $neutral_dark90;
   color: $white;
   scrollbar-width: none;
   grid-area: file-tabs;
@@ -44,5 +44,5 @@
 
 .active {
   font-weight: bold;
-  background-color: #292f36;
+  background-color: $neutral_dark;
 }

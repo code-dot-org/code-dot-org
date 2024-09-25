@@ -624,6 +624,7 @@ export const FileBrowser = React.memo(() => {
     <PanelContainer
       id="file-browser"
       headerContent={'Files'}
+      headerClassName={moduleStyles.fileBrowserHeader}
       className={moduleStyles['file-browser']}
       rightHeaderContent={
         !isReadOnly && (
