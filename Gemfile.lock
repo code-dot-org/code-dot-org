@@ -89,12 +89,12 @@ GIT
     full-name-splitter (0.1.2)
 
 PATH
-  remote: packs/lti
+  remote: dashboard/packs/lti
   specs:
     lti (0.1.0)
 
 PATH
-  remote: packs/user
+  remote: dashboard/packs/user
   specs:
     core (0.1.0)
 
