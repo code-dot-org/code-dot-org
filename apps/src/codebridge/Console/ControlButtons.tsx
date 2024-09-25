@@ -130,8 +130,8 @@ const ControlButtons: React.FunctionComponent = () => {
             onClick={handleRun}
             disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-            size={'s'}
-            color={'purple'}
+            size={'xs'}
+            color={'white'}
             className={moduleStyles.controlButton}
           />
         </WithConditionalTooltip>
