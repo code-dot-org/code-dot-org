@@ -1,8 +1,8 @@
 name 'gen-ai-foundations-studentsurvey-postmodule-q2'
-question 'How confident do you now feel in your understanding of computer vision concepts?'
-right 'Very confident'
-right 'Somewhat confident'
+question 'I found the topics in this unit interesting and engaging.'
+right 'Strongly disagree'
+right 'Disagree'
 right 'Neutral'
-right 'Somewhat unconfident'
-right 'Very unconfident'
+right 'Agree'
+right 'Strongly agree'
 allow_multiple_attempts true

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-09-23T17:50:23.000Z",
   "level_num": "custom",
@@ -122,15 +123,35 @@
           "strings_big",
           "drums_full",
           "bass"
+        ],
+        "i_need_a_dollar_aloe_blacc": [
+          "i_need_a_dollar_1",
+          "i_need_a_dollar_2",
+          "share_with_you",
+          "drums_1",
+          "drums_2",
+          "drums_3",
+          "bass_1",
+          "bass_2",
+          "bass_3",
+          "bass_4",
+          "organ_1",
+          "piano_1",
+          "horns_1",
+          "horns_3",
+          "horns_4",
+          "horns_5",
+          "organ_2",
+          "piano_2",
+          "i_need_a_dollar_3"
         ]
       },
-      "packId": "carly_rae_jepsen_call_me_maybe"
+      "packId": "i_need_a_dollar_aloe_blacc"
     },
     "name_suffix": "_2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-23T17:50:23.912+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-23T17:50:23.912+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether\"},{\"changed_at\":\"2024-09-24 18:33:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

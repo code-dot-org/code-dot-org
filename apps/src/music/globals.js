@@ -9,6 +9,7 @@
 
 let playerRef = null;
 let showSoundFilters = false;
+let hideAiTemperature = false;
 
 export default {
   setPlayer(player) {
@@ -25,5 +26,13 @@ export default {
 
   getShowSoundFilters() {
     return showSoundFilters;
+  },
+
+  setHideAiTemperature(hide) {
+    hideAiTemperature = hide;
+  },
+
+  getHideAiTemperature(hide) {
+    return hideAiTemperature;
   },
 };
