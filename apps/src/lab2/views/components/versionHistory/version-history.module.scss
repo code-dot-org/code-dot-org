@@ -3,8 +3,9 @@
 .versionHistoryDropdown {
   position: absolute;
   cursor: pointer;
-  border: 1px solid $black;
-  background-color: $darkest_gray;
+  border: 1px solid #54595E;
+  background-color: $light_gray_950;
+  scrollbar-color: $light_gray_200 $light_gray_950;
   color: $white;
   min-width: 400px;
   text-align: left;
@@ -42,7 +43,11 @@
 }
 
 .versionHistoryRow:has(input[type="radio"]:checked) {
-  background-color: #3F444B;
+  background-color: $neutral_dark90;
+}
+
+.versionHistoryRow:hover {
+  background-color: $neutral_dark90;
 }
 
 .versionDropdownFooter {
