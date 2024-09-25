@@ -1,0 +1,49 @@
+---
+title: Amazon Donor Spotlight
+nav: about_nav
+theme: responsive
+---
+
+:css
+  .overline-one {
+    margin-block: 3.5rem 0;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 2rem;
+      flex-direction: column;
+      align-items: start;
+      gap: 1rem;
+    }
+
+    & > h1 {
+      margin-top: 1rem
+    }
+
+    & > img {
+      width: 200px;
+    }
+  }
+
+%p.overline-one
+  Donor spotlight
+
+.flex-container
+  %h1.heading-xl
+    Amazon supports Code.org's mission to bring CS to everyone.
+  %img{src: "/images/avatars/amazon.png", alt: "Amazon logo"}
+
+%p Amazon believes education has the power to transform lives and create boundless opportunities. That's why the company invests heavily in programs to empower learners of all ages to unlock their full potential. Amazon understands that access to quality education opens doors, fuels innovation, and drives positive change in communities worldwide.
+
+%p Amazon's Future Engineer program remains dedicated to supporting Code.org's mission to make computer science accessible to over one million underserved students in the U.S. and worldwide. Together, Amazon and Code.org aim to teach K-12 students computer science and AI fundamentals, equipping the next generation with essential skills for the digital world.
+
+%p The Amazon Future Engineer program also supports curriculum development, teacher training, and student engagement, including the Hour of Code, while providing AWS technology support. Their partnership with Code.org co-creates innovative educational experiences like Dance Party and Dance Party: AI Edition, reaching millions globally.
+
+%p Amazon's commitment to innovation remains steadfast as it develops programs that equip students for future careers. Harnessing Amazon's culture of invention and Code.org's expertise, this collaboration prepares students for future careers in computer science and STEM, nurturing the next generation of innovators.
+
+%p More information on Amazon Future Engineer is <a href="https://www.amazonfutureengineer.com/" target="_blank" rel="nooopener nooreferrer" class="has-external-link">available here</a>.
