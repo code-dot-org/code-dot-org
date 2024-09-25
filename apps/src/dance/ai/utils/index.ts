@@ -10,5 +10,4 @@ export * from './getPreviewCode';
 export * from './getRangeArray';
 export * from './getAiEmojiItem';
 export * from './linearInterpolation';
-export * from './useInterval';
 export * from './validateAndSetFieldValue';

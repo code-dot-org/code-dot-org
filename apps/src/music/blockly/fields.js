@@ -77,6 +77,7 @@ export const fieldPatternAiDefinition = {
     Globals.getPlayer().previewPattern(patternValue, onTick, onStop);
   },
   currentValue: DEFAULT_PATTERN_AI,
+  getHideAiTemperature: () => Globals.getHideAiTemperature(),
   ...instrumentCommonOptions,
 };
 

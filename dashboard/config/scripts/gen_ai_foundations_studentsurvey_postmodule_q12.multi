@@ -1,0 +1,8 @@
+name 'gen-ai-foundations-studentsurvey-postmodule-q12'
+question 'I liked learning about computer science and AI through this unit'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Neutral'
+right 'Agree'
+right 'Strongly agree'
+allow_multiple_attempts true

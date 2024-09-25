@@ -97,75 +97,6 @@
                           }
                         }
                       }
-                    },
-                    "next": {
-                      "block": {
-                        "type": "play_sounds_together",
-                        "id": "db+=DFEZ*??(uIU_}w{!",
-                        "movable": false,
-                        "inputs": {
-                          "code": {
-                            "block": {
-                              "type": "play_sound_at_current_location_simple2",
-                              "id": "Lgl7;QTf.Ez]IIdQwj?X",
-                              "movable": false,
-                              "fields": {
-                                "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
-                              },
-                              "next": {
-                                "block": {
-                                  "type": "play_sound_at_current_location_simple2",
-                                  "id": "@U]T?iqd;tvVx-k]]Qt:",
-                                  "movable": false,
-                                  "fields": {
-                                    "sound": "sabrina_carpenter_espresso/vocals_chorus_backgrounds"
-                                  },
-                                  "next": {
-                                    "block": {
-                                      "type": "play_sound_at_current_location_simple2",
-                                      "id": "zNxr5kD7;%05D)pyq1-)",
-                                      "movable": false,
-                                      "fields": {
-                                        "sound": "sabrina_carpenter_espresso/drums_main_beat"
-                                      },
-                                      "next": {
-                                        "block": {
-                                          "type": "play_sound_at_current_location_simple2",
-                                          "id": "ya.*+_Pur_g,oh93SD=Z",
-                                          "movable": false,
-                                          "fields": {
-                                            "sound": "sabrina_carpenter_espresso/guitar_intro"
-                                          },
-                                          "next": {
-                                            "block": {
-                                              "type": "play_sound_at_current_location_simple2",
-                                              "id": "(qj;OYGt(95ER#TqUem,",
-                                              "movable": false,
-                                              "fields": {
-                                                "sound": "sabrina_carpenter_espresso/keys_chorus_1"
-                                              },
-                                              "next": {
-                                                "block": {
-                                                  "type": "play_sound_at_current_location_simple2",
-                                                  "id": "pTV1rj$1/5o9dUlyov92",
-                                                  "movable": false,
-                                                  "fields": {
-                                                    "sound": "sabrina_carpenter_espresso/bass_main"
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
                     }
                   }
                 }
@@ -252,7 +183,9 @@
           "Functions": [
 
           ]
-        }
+        },
+        "type": "flyout",
+        "addFunctionCalls": true
       },
       "sounds": {
         "sabrina_carpenter_espresso": [
@@ -294,7 +227,7 @@
     "validations": [
       {
         "key": "music-ai-functions-doubleChorus_2_8596d526-19f0-43f3-bc07-02366a151f2a",
-        "message": "Functions help your reuse code quickly. Great work! ",
+        "message": "You used both functions! Functions help you reuse code quickly. Great work! ",
         "next": true,
         "conditions": [
           {
@@ -308,8 +241,30 @@
         ]
       },
       {
+        "key": "music-ai-functions-doubleChorus_2_d72de94c-fc7b-4fa8-a9bf-4c67ec49841c",
+        "message": "Are both function blocks added? Make sure to add the `chorus` block under [when run](#clickable=when-run-block). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_in_function",
+            "value": "intro"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-functions-doubleChorus_2_211ec330-8549-468a-9359-6f58deb212a2",
+        "message": "Almost there! Make sure to add the `intro` block under [when run](#clickable=when-run-block).",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_in_function",
+            "value": "chorus"
+          }
+        ]
+      },
+      {
         "key": "music-ai-functions-chorus_e1d6c731-90ed-4e26-a2cd-040bfc5c373f",
-        "message": "Connect the \"chorus\" block under [when run](#clickable=when-run-block) to play the sounds in the function.",
+        "message": "Connect the 'intro' and 'chorus' blocks under [when run](#clickable=when-run-block) to play the sounds in each function.",
         "next": false,
         "conditions": [
 
@@ -319,7 +274,7 @@
     "name_suffix": "_2",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-23T17:57:40.802+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-chorus_2\\\"\"],\"cloned_from\":\"music-ai-functions-chorus_2\"},{\"changed_at\":\"2024-09-23 18:03:46 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:23:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:25:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 22:14:52 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 22:16:03 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 23:29:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-23T17:57:40.802+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-chorus_2\\\"\"],\"cloned_from\":\"music-ai-functions-chorus_2\"},{\"changed_at\":\"2024-09-23 18:03:46 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:23:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:25:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 22:14:52 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 22:16:03 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 23:29:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-24 18:00:47 +0000\",\"changed\":[\"level_data\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 18:06:19 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 18:07:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 18:20:39 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-25 04:16:17 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

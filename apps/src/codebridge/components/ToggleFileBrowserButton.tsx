@@ -1,9 +1,13 @@
+import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
 
-import {useCodebridgeContext} from './codebridgeContext';
+import {useCodebridgeContext} from '../codebridgeContext';
+
+import moduleStyles from './toggle-file-browser-button.module.scss';
+import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
 
 /*
   This component will look to the `showFileBrowser` boolean in the config and flip it back and forth.
@@ -33,10 +37,15 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
           iconName: 'folder',
         }}
         isIconOnly
-        color={'black'}
+        color={'white'}
         onClick={onClick}
         ariaLabel={codebridgeI18n.toggleFileBrowser()}
         size={'xs'}
+        type={'tertiary'}
+        className={classNames(
+          darkModeStyles.iconOnlyTertiaryButton,
+          moduleStyles.button
+        )}
       />
     </span>
   );
