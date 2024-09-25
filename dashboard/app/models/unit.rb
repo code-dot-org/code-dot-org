@@ -1859,6 +1859,8 @@ class Unit < ApplicationRecord
       :use_legacy_lesson_plans
     ]
 
+    puts unit_data.inspect
+
     result = {}
     # If a non-boolean prop was missing from the input, it'll get populated in the result hash as nil.
     nonboolean_keys.each {|k| result[k] = unit_data[k]}

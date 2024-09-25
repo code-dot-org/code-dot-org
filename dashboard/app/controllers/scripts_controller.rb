@@ -336,7 +336,7 @@ class ScriptsController < ApplicationController
       studentResourceIds: [],
       project_widget_types: [],
       supported_locales: [],
-      topic_tags: []
+      topic_tags: [],
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]

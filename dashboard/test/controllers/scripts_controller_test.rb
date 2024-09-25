@@ -935,6 +935,8 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_nil unit.project_sharing
     assert_nil unit.curriculum_umbrella
+    assert_nil unit.content_area
+    assert_nil unit.topic_tags
     assert_nil unit.family_name
     assert_nil unit.version_year
 
@@ -945,15 +947,21 @@ class ScriptsControllerTest < ActionController::TestCase
       lesson_groups: '[]',
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
+      content_area: '6-12',
       family_name: 'my-fam',
-      version_year: '2017'
+      version_year: '2017',
+      topic_tags: ['ai', 'maker']
     }
     unit.reload
 
+    puts unit.inspect
+
     assert unit.project_sharing
     assert_equal 'CSF', unit.curriculum_umbrella
+    assert_equal '6-12', unit.content_area
     assert_equal 'my-fam', unit.family_name
     assert_equal '2017', unit.version_year
+    assert_equal ['ai', 'maker'], unit.topic_tags
   end
 
   test 'set and unset all general_params' do
@@ -986,8 +994,10 @@ class ScriptsControllerTest < ActionController::TestCase
       pilot_experiment: 'fake-pilot-experiment',
       editor_experiment: 'fake-editor-experiment',
       curriculum_umbrella: 'CSF',
+      content_area: 'k-5',
       supported_locales: ['fake-locale'],
       project_widget_types: ['gamelab', 'weblab'],
+      topic_tags: ['ai', 'maker', 'virutal-pl'],
     }
 
     post :update, params: {
@@ -1019,8 +1029,10 @@ class ScriptsControllerTest < ActionController::TestCase
       pilot_experiment: '',
       editor_experiment: '',
       curriculum_umbrella: '',
+      content_area: '',
       supported_locales: [],
       project_widget_types: [],
+      topic_tags: [],
     }
     assert_response :success
     unit.reload
