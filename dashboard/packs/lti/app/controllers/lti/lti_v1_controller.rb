@@ -5,6 +5,7 @@ require 'metrics/events'
 
 module Lti
   class LtiV1Controller < ApplicationController
+    helper Rails.application.routes.url_helpers
     # Don't require an authenticity token because LTI Platforms POST to this
     # controller.
     skip_before_action :verify_authenticity_token
