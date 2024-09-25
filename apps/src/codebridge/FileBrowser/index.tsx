@@ -544,7 +544,7 @@ export const FileBrowser = React.memo(() => {
       const results = await dialogControl?.showDialog({
         type: DialogType.GenericPrompt,
         title: codebridgeI18n.renameFile(),
-        placeholder: file.name,
+        value: file.name,
         validateInput: (newName: string) => {
           if (!newName.length) {
             return;
@@ -591,7 +591,7 @@ export const FileBrowser = React.memo(() => {
       const results = await dialogControl?.showDialog({
         type: DialogType.GenericPrompt,
         title: codebridgeI18n.renameFolder(),
-        placeholder: folder.name,
+        value: folder.name,
         validateInput: (newName: string) => {
           if (!newName.length) {
             return;
