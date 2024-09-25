@@ -1,0 +1,132 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-09-19T19:48:06.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "startSources": {
+        "variables": [
+          {
+            "name": "currentTime",
+            "id": "Rz#SeWm)%Id~Ll*%ln,#"
+          },
+          {
+            "name": "i",
+            "id": ";:]5ZL.)zy1eT0D2O[_X"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "o8tu9ro(lP|pTF~svhPU",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "next": {
+                "block": {
+                  "type": "variables_set",
+                  "id": "70.ZV~YjRs(^]B;[N#Bg",
+                  "extraState": {
+                  },
+                  "fields": {
+                    "VAR": {
+                      "id": ";:]5ZL.)zy1eT0D2O[_X"
+                    }
+                  },
+                  "inputs": {
+                    "VALUE": {
+                      "block": {
+                        "type": "math_number",
+                        "id": "QDVq0@FysVAbrI1ic[4h",
+                        "fields": {
+                          "NUM": 2
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound",
+                      "id": "@9R:AGvPCA(;s]*-^l53",
+                      "fields": {
+                        "sound": "beats/disco_beat"
+                      },
+                      "inputs": {
+                        "measure": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "f6RlcH!B{_1bh_{=atLf",
+                            "fields": {
+                              "NUM": 1
+                            }
+                          },
+                          "block": {
+                            "type": "variables_get",
+                            "id": "ku)4)$k@v+!t#J-se|J+",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": ";:]5ZL.)zy1eT0D2O[_X"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound",
+                          "id": "YfzSwjx%;K/a%3K2X}D=",
+                          "fields": {
+                            "sound": "bass/funky_bass"
+                          },
+                          "inputs": {
+                            "measure": {
+                              "shadow": {
+                                "type": "math_number",
+                                "id": "B61{HWNuuZ+$v8JZNqU(",
+                                "fields": {
+                                  "NUM": 1
+                                }
+                              },
+                              "block": {
+                                "type": "variables_get",
+                                "id": "Xp,AA1Uyj+BZkmc[R{Mg",
+                                "extraState": {
+                                },
+                                "fields": {
+                                  "VAR": {
+                                    "id": ";:]5ZL.)zy1eT0D2O[_X"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-19 19:48:33 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:26:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:27:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:32:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:33:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-20 15:35:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-09-20 15:35:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-09-20 15:37:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

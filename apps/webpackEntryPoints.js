@@ -220,11 +220,15 @@ const PEGASUS_ENTRIES = {
   'code.org/views/tabs_section': './src/sites/code.org/pages/views/tabs_section.js',
   'code.org/views/classy_embed_form': './src/sites/code.org/pages/views/classy_embed_form.js',
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
+  'code.org/public/teach': './src/sites/code.org/pages/public/teach.js',
+  'code.org/public/students': './src/sites/code.org/pages/public/students.js',
+  'code.org/public/cms-demo': './src/sites/code.org/pages/public/cms-demo.js',
 
   // hourofcode.com
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
   'hourofcode.com/views/analytics_event_log_helper': './src/sites/hourofcode.com/pages/views/analytics_event_log_helper.js',
+  'hourofcode.com/views/swiper_page_resources': './src/sites/hourofcode.com/pages/views/swiper_page_resources.js',
 
   // shared between code.org and hourofcode.com
   'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',

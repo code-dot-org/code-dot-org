@@ -64,7 +64,7 @@ module Cdo
 
       # our HTTPS wildcard certificate only supports *.code.org
       # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
-      sep = (domain.include?('.code.org')) ? '-' : '.'
+      sep = domain.include?('.code.org') ? '-' : '.'
       # developers and CI servers use localhost
       return "localhost#{sep}#{domain}" if rack_env?(:development) || ci_webserver?
       return "translate#{sep}#{domain}" if name == 'crowdin'

@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# More Exploration\r\n\r\n::: details [**✅ Step 1**]\r\nAdd a print statement to find out the number of rows in the DataFrame using the `len()` function.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nDiscuss with your partner:\r\n- *What is the output?*\r\n- *How is that different from printing the `shape` of the DataFrame?*\r\n- *When might you want to use the `len()` function instead of the `shape`?*\r\n:::\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "# More Exploration\r\n\r\n::: details [**✅ Step 1**]\r\n- Add a print statement to find out the number of rows in the DataFrame using the `len()` function.\r\n  - *Check out the [documentation](https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit) to learn more about the `len()` function.*\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nDiscuss with your partner:\r\n- *What is the output?*\r\n- *How is that different from printing the `shape` of the DataFrame?*\r\n- *When might you want to use the `len()` function instead of the `shape`?*\r\n:::\r\n\r\n\r\n\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -43,6 +43,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-30T13:21:12.358+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L5_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L5_2024-pilot\"},{\"changed_at\":\"2024-08-30 13:22:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 15:26:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 21:38:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-13 18:34:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-30T13:21:12.358+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L5_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L5_2024-pilot\"},{\"changed_at\":\"2024-08-30 13:22:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 15:26:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 21:38:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-13 18:34:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 18:52:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -46,7 +46,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:27:36.569+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_nestedLoops1_2023\\\"\"],\"cloned_from\":\"courseD_bee_nestedLoops1_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:27:36.569+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_nestedLoops1_2023\\\"\"],\"cloned_from\":\"courseD_bee_nestedLoops1_2023\"},{\"changed_at\":\"2024-09-24 18:12:54 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2
@@ -74,17 +74,17 @@
       </xml>
     </toolbox_blocks>
     <solution_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false">
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16">
           <next>
             <block type="maze_move">
-              <title name="DIR">moveForward</title>
+              <field name="DIR">moveForward</field>
               <next>
                 <block type="controls_repeat">
-                  <title name="TIMES">2</title>
+                  <field name="TIMES">2</field>
                   <statement name="DO">
                     <block type="maze_move">
-                      <title name="DIR">moveForward</title>
+                      <field name="DIR">moveForward</field>
                       <next>
                         <block type="maze_nectar"/>
                       </next>
@@ -92,16 +92,16 @@
                   </statement>
                   <next>
                     <block type="maze_turn">
-                      <title name="DIR">turnRight</title>
+                      <field name="DIR">turnRight</field>
                       <next>
                         <block type="maze_move">
-                          <title name="DIR">moveForward</title>
+                          <field name="DIR">moveForward</field>
                           <next>
                             <block type="controls_repeat">
-                              <title name="TIMES">2</title>
+                              <field name="TIMES">2</field>
                               <statement name="DO">
                                 <block type="maze_move">
-                                  <title name="DIR">moveForward</title>
+                                  <field name="DIR">moveForward</field>
                                   <next>
                                     <block type="maze_nectar"/>
                                   </next>
@@ -109,26 +109,21 @@
                               </statement>
                               <next>
                                 <block type="maze_turn">
-                                  <title name="DIR">turnRight</title>
+                                  <field name="DIR">turnRight</field>
                                   <next>
                                     <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
+                                      <field name="DIR">moveForward</field>
                                       <next>
                                         <block type="controls_repeat">
-                                          <title name="TIMES">2</title>
+                                          <field name="TIMES">2</field>
                                           <statement name="DO">
                                             <block type="maze_move">
-                                              <title name="DIR">moveForward</title>
+                                              <field name="DIR">moveForward</field>
                                               <next>
                                                 <block type="maze_nectar"/>
                                               </next>
                                             </block>
                                           </statement>
-                                          <next>
-                                            <block type="maze_turn">
-                                              <title name="DIR">turnRight</title>
-                                            </block>
-                                          </next>
                                         </block>
                                       </next>
                                     </block>
