@@ -7,7 +7,6 @@
   "cannotRun": "We don't know how to run your code. Please contact support.",
   "cannotStop": "We don't know how to stop your code. Please contact support.",
   "cannotTest": "We don't know how to run your tests. Please contact support.",
-  "createFileOrFolder": "Create a file or folder",
   "defaultLayout": "Default layout",
   "delete": "Delete",
   "deleteFile": "Delete file",
