@@ -267,6 +267,14 @@ class Lesson < ApplicationRecord
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
+  def unit_standards_url
+    CDO.code_org_url "/s/#{script.name}/standards"
+  end
+
+  def unit_vocabulary_url
+    CDO.code_org_url "/s/#{script.name}/vocabulary"
+  end
+
   def course_version_standards_url
     script.get_course_version&.all_standards_url
   end
@@ -494,7 +502,9 @@ class Lesson < ApplicationRecord
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       lessonPlanHtmlUrl: lesson_plan_html_url,
-      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
+      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
+      standardsUrl: unit_standards_url,
+      vocabularyUrl: unit_vocabulary_url,
     }
   end
 

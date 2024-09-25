@@ -11,12 +11,14 @@ type LessonResourcesProps = {
   unitNumber: number;
   lessonNumber: number;
   lessonPlanUrl: string | null;
+  standardsUrl: string | null;
+  vocabularyUrl: string | null;
   lessonName: string | null;
   resources: {
     key: string;
     name: string;
     url: string;
-    downloadUrl: string | null;
+    downloadUrl?: string;
     audience: string;
     type: string;
   }[];
@@ -28,12 +30,50 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
   lessonNumber,
   lessonPlanUrl,
   lessonName,
+  standardsUrl,
+  vocabularyUrl,
 }) => {
   // Note that lessonPlanUrl is not needed for student resources
   // and should be null for student resoruces section
   const sectionHeaderText = lessonPlanUrl
     ? i18n.teacherResourcesforLessonMaterials()
     : i18n.studentResources();
+
+  const renderStandardsRow = () => {
+    if (!standardsUrl) return null;
+
+    return (
+      <ResourceRow
+        key={`standards-${lessonNumber}`}
+        unitNumber={unitNumber}
+        resource={{
+          key: 'standardsKey',
+          name: i18n.standards(),
+          url: standardsUrl,
+          audience: 'Teacher',
+          type: 'Standards',
+        }}
+      />
+    );
+  };
+
+  const renderVocabularyRow = () => {
+    if (!vocabularyUrl) return null;
+
+    return (
+      <ResourceRow
+        key={`vocabulary-${lessonNumber}`}
+        unitNumber={unitNumber}
+        resource={{
+          key: 'vocabularyKey',
+          name: i18n.vocabulary(),
+          url: vocabularyUrl,
+          audience: 'Teacher',
+          type: 'Vocabulary',
+        }}
+      />
+    );
+  };
 
   const renderLessonPlanRow = () => {
     if (!lessonPlanUrl) return null;
@@ -47,7 +87,6 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
           key: 'lessonPlanKey',
           name: lessonName || '',
           url: lessonPlanUrl,
-          downloadUrl: null,
           audience: 'Teacher',
           type: 'Lesson Plan',
         }}
@@ -69,6 +108,8 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
           resource={resource}
         />
       ))}
+      {renderStandardsRow()}
+      {renderVocabularyRow()}
     </div>
   );
 };

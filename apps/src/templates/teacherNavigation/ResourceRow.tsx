@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
 
 import ResourceIcon from './ResourceIcon';
 import ResourceViewOptionsDropdown from './ResourceViewOptionsDropdown';
@@ -8,13 +9,13 @@ import ResourceViewOptionsDropdown from './ResourceViewOptionsDropdown';
 import styles from './lesson-materials.module.scss';
 
 type ResourceRowProps = {
-  lessonNumber: number;
+  lessonNumber?: number;
   unitNumber: number;
   resource: {
     key: string;
     name: string;
     url: string;
-    downloadUrl: string | null;
+    downloadUrl?: string;
     audience: string;
     type: string;
   };
@@ -25,19 +26,30 @@ const ResourceRow: React.FC<ResourceRowProps> = ({
   unitNumber,
   resource,
 }) => {
-  const resourcePositionLabel = (
-    <strong>{unitNumber + '.' + lessonNumber + ' '}</strong>
-  );
+  const resourceDisplayText = () => {
+    if (!resource.type) {
+      return resource.name;
+    } else if (resource.type === 'Standards') {
+      return `${i18n.unit()} ${unitNumber} ${i18n.standards()}`;
+    } else if (resource.type === 'Vocabulary') {
+      return `${i18n.unit()} ${unitNumber} ${i18n.vocabulary()}`;
+    } else {
+      return `${resource.type}: ${resource.name}`;
+    }
+  };
 
-  const resourceDisplayText = () =>
-    resource.type ? `${resource.type}: ${resource.name}` : resource.name;
+  const resourceNumberingText = lessonNumber ? (
+    <StrongText>
+      <strong>{`${unitNumber}.${lessonNumber} `}</strong>
+    </StrongText>
+  ) : null;
 
   return (
     <div className={styles.rowContainer}>
       <div className={styles.iconAndName}>
         <ResourceIcon resourceType={resource.type} resourceUrl={resource.url} />
         <BodyTwoText className={styles.resourceLabel}>
-          <StrongText>{resourcePositionLabel}</StrongText>
+          {resourceNumberingText}
           {resourceDisplayText()}
         </BodyTwoText>
       </div>

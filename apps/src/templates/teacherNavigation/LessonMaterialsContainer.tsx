@@ -17,12 +17,14 @@ type Lesson = {
   id: number;
   position: number;
   lessonPlanHtmlUrl: string;
+  standardsUrl: string;
+  vocabularyUrl: string;
   resources: {
     Teacher: {
       key: string;
       name: string;
       url: string;
-      downloadUrl: string | null;
+      downloadUrl?: string;
       audience: string;
       type: string;
     }[];
@@ -30,7 +32,7 @@ type Lesson = {
       key: string;
       name: string;
       url: string;
-      downloadUrl: string | null;
+      downloadUrl?: string;
       audience: string;
       type: string;
     }[];
@@ -125,6 +127,8 @@ const LessonMaterialsContainer: React.FC = () => {
         unitNumber={unitNumber}
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Teacher}
+        standardsUrl={selectedLesson.standardsUrl}
+        vocabularyUrl={selectedLesson.vocabularyUrl}
         lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
         lessonName={selectedLesson.name}
       />
@@ -141,6 +145,8 @@ const LessonMaterialsContainer: React.FC = () => {
         unitNumber={unitNumber}
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Student}
+        standardsUrl={null}
+        vocabularyUrl={null}
         lessonPlanUrl={null}
         lessonName={null}
       />

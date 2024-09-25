@@ -5,7 +5,7 @@ import {ActionDropdown} from '@cdo/apps/componentLibrary/dropdown';
 type ResourceViewOptionsDropdownProps = {
   resource: {
     url: string;
-    downloadUrl: string | null;
+    downloadUrl?: string;
     type: string;
   };
 };
