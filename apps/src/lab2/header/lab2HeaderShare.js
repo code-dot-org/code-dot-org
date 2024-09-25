@@ -13,7 +13,7 @@ const PROJECT_SHARE_DIALOG_ID = 'project-share-dialog';
 /**
  * Save, then show the share dialog for a Lab2 project.
  */
-export function shareLab2Project(hocFinishUrl) {
+export function shareLab2Project(finishUrl) {
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   if (!projectManager) {
     return null;
@@ -30,10 +30,7 @@ export function shareLab2Project(hocFinishUrl) {
     }
     ReactDOM.render(
       <Provider store={getStore()}>
-        <Lab2ShareDialogWrapper
-          shareUrl={shareUrl}
-          hocFinishUrl={hocFinishUrl}
-        />
+        <Lab2ShareDialogWrapper shareUrl={shareUrl} finishUrl={finishUrl} />
       </Provider>,
       dialogDom
     );

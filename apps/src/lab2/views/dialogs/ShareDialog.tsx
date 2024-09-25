@@ -49,9 +49,9 @@ const CopyToClipboardButton: React.FunctionComponent<{
  */
 const ShareDialog: React.FunctionComponent<{
   shareUrl: string;
-  hocFinishUrl?: string;
+  finishUrl?: string;
   projectType: ProjectType;
-}> = ({shareUrl, hocFinishUrl, projectType}) => {
+}> = ({shareUrl, finishUrl, projectType}) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -78,10 +78,10 @@ const ShareDialog: React.FunctionComponent<{
             <div id="share-qrcode-container">
               <QRCode value={shareUrl + '?qr=true'} size={140} />
             </div>
-            {hocFinishUrl && (
+            {finishUrl && (
               <LinkButton
                 ariaLabel={i18n.done()}
-                href={hocFinishUrl}
+                href={finishUrl}
                 text={i18n.done()}
                 type="primary"
                 size="s"

@@ -70,8 +70,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
-  const hocFinishUrl = useAppSelector(
-    state => state.lab.levelProperties?.hocFinishUrl
+  const finishUrl = useAppSelector(
+    state => state.lab.levelProperties?.finishUrl
+  );
+  const finishDialog = useAppSelector(
+    state => state.lab.levelProperties?.finishDialog
   );
 
   // If there are no validation conditions, we can show the continue button so long as
@@ -119,7 +122,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       layout={layout}
       handleInstructionsTextClick={handleInstructionsTextClick}
       offerTts={offerTts}
-      hocFinishUrl={hocFinishUrl}
+      finishUrl={finishUrl}
+      finishDialog={finishDialog}
       className={className}
     />
   );
@@ -155,7 +159,8 @@ interface InstructionsPanelProps {
   /** Optional classname for the container */
   className?: string;
   offerTts?: boolean;
-  hocFinishUrl?: string;
+  finishUrl?: string;
+  finishDialog?: string;
 }
 
 /**
@@ -184,7 +189,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   predictAnswerLocked,
   className,
   offerTts,
-  hocFinishUrl,
+  finishUrl,
+  finishDialog,
 }) => {
   const [isFinished, setIsFinished] = useState(false);
 
@@ -195,15 +201,19 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   const canShowFinishButton = showFinishButton;
 
   const onFinish = useCallback(() => {
-    if (beforeFinish) {
+    if (!isFinished && beforeFinish) {
       beforeFinish();
+      setIsFinished(true);
     }
-    setIsFinished(true);
 
-    if (hocFinishUrl) {
-      shareLab2Project(hocFinishUrl);
+    if (finishUrl) {
+      if (finishDialog === 'hoc2024') {
+        shareLab2Project(finishUrl);
+      } else {
+        window.location.href = finishUrl;
+      }
     }
-  }, [beforeFinish, hocFinishUrl]);
+  }, [isFinished, beforeFinish, finishDialog, finishUrl]);
 
   // Reset the Finish button state when it changes from shown to hidden.
   useEffect(() => {
@@ -287,11 +297,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   <Button
                     id="instructions-finish-button"
                     onClick={onFinish}
-                    disabled={isFinished}
                     className={moduleStyles.buttonInstruction}
                     text={commonI18n.finish()}
                   />
-                  {isFinished && !hocFinishUrl && (
+                  {isFinished && !finishUrl && (
                     <Heading6>{finalMessage}</Heading6>
                   )}
                 </>

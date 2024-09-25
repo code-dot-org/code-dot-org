@@ -173,7 +173,8 @@ export interface LevelProperties {
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   submittable?: boolean;
-  hocFinishUrl?: string;
+  finishUrl?: string;
+  finishDialog?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
