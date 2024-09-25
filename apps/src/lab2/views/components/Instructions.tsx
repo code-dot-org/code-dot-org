@@ -5,7 +5,6 @@ import {useSelector} from 'react-redux';
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {Button} from '@cdo/apps/componentLibrary/button';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {
@@ -220,9 +219,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
     setIsFinished(false);
   }, [canShowFinishButton]);
 
-  const finalMessage =
-    'You finished this lesson! Check in with your teacher for the next activity';
-
   return (
     <div
       id="instructions"
@@ -300,9 +296,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                     className={moduleStyles.buttonInstruction}
                     text={commonI18n.finish()}
                   />
-                  {isFinished && !finishUrl && (
-                    <Heading6>{finalMessage}</Heading6>
-                  )}
                 </>
               )}
             </div>
