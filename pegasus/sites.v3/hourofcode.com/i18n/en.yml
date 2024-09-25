@@ -1282,7 +1282,6 @@
         desc: "Focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards."
         note: "Note:"
         note_desc: "AI Chat Lab levels require a [verified teacher account](%{verified_teacher_url}) or SSO login to make use of the tool."
-      button: "Explore unit"
     unlock_full_access_banner:
       title: "Unlock full access with a no-cost verified teacher account"
       desc: "Gain access to more resources, including the new AI Chat Lab, and exclusive materials to enhance your teaching at no cost! It’s quick and easy, get verified today!"
