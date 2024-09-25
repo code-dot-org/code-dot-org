@@ -134,24 +134,54 @@ section.grid-container {
   padding: 2em 0;
   display: grid;
   align-items: center;
-  grid-gap: 2em;
+  grid-gap: 1.5rem;
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+  &.col-2 {
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
   }
 
-  & > img {
-    width: 120px;
-    margin-inline: auto;
+  &.col-3 {
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
   }
 
-  & > p {
-    margin: 0;
-    font-size: 16px;
-    text-align: center;
-    font-family: var(--main-font);
-    font-weight: var(--semi-bold-font-weight);
+  &.col-4 {
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
+  }
+
+  & > figure {
+    width: 100%;
+    height: 90px;
+    border: 1px solid var(--neutral_dark20);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.tall {
+      height: 110px;
+    }
+
+    & > img {
+      margin-inline: auto;
+    }
+
+    & > p {
+      margin: 0;
+      width: 90%;
+      font-size: 16px;
+      text-align: center;
+      font-family: var(--main-font);
+      font-weight: var(--semi-bold-font-weight);
+    }
   }
 }
 
@@ -166,7 +196,7 @@ section.lists h3 {
   background: #00b2c0;
   color: white;
   padding: .75em;
-  margin: 2em 0 0;
+  margin: 0;
   width: 100%;
 }
   section.lists h4 {
