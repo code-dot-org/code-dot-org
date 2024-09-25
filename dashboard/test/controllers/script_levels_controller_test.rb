@@ -126,6 +126,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal body["sharedBlocks"], []
     assert_equal body["usesProjects"], false
     assert_equal body["exampleSolutions"], []
+    assert_equal body["helpVideos"], []
     assert_match Regexp.new("^/s/bogus-script-[0-9]+"), body["finishUrl"]
   end
 

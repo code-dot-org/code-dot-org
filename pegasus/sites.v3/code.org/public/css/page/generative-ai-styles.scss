@@ -1,0 +1,99 @@
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+section.hero-banner-basic {
+  &.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #0F1E2E 0%, #1C3651 100%);
+      z-index: 1;
+    }
+  
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/banners/banner-bg-horizontal-line-gaps.png');
+      background-repeat: repeat;
+      background-size: contain;
+      z-index: 2;
+    }
+  }
+  
+  @media screen and (max-width: $width-sm) {
+    background-size: 50%;
+  }
+  
+  .wrapper {
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: $width-md) {
+      gap: 2rem;
+    }
+  }
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .link-button {
+      width: fit-content;
+    }
+  }
+
+  .afe {
+    gap: 0.5rem;
+
+    & > figure {
+      width: 200px;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.verified-skinny-banner {
+  background: #ABDFE580 !important;
+  padding: 2.5rem;
+
+    @media (min-width: 753px) {
+      .text-wrapper {
+        width: 75%;
+      }
+    }
+
+    @media (max-width: 753px) {
+      .wrapper {
+        justify-content: center;
+      }
+    }
+}
+
+.solid-bg {
+  background: $brand_primary_light !important;
+  padding: 0.5rem 1rem !important;
+
+  img {
+    width: 100%;
+  }
+}
+
+.afe-partnership-logo {
+  width: 250px;
+  margin-top: -3px;
+}

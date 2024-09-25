@@ -19134,3 +19134,12 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        hoc-music-ai-pilot-2:
+          lessons: {}
+          lesson_groups: {}
+          name: hoc-music-ai-pilot-2
+          title: 'Play Tests 2: Hour of Code - Music Lab with AI '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: 'Click on the number 1 to get started! '

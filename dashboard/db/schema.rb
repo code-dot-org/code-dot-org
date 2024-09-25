@@ -450,6 +450,7 @@ ActiveRecord::Schema.define(version: 2024_09_20_175046) do
     t.string "video"
     t.datetime "published_date"
     t.integer "self_paced_pl_course_offering_id"
+    t.boolean "ai_teaching_assistant_available", default: false, null: false
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
