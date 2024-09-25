@@ -6,13 +6,14 @@
     "properties": {
       "is_course": true,
       "is_migrated": true,
+      "pilot_experiment": "hoc-music-ai-pilot-2",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "hoc-music-ai-pilot-2",
-    "serialized_at": "2024-09-23 19:23:15 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
+    "serialized_at": "2024-09-24 22:32:21 UTC",
+    "published_state": "pilot",
+    "instruction_type": "self_paced",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {
@@ -35,7 +36,7 @@
   "lessons": [
     {
       "key": "Music Lab: AI Edition for Hour of Code",
-      "name": "Music Lab: A.I. Edition for Hour of Code",
+      "name": "Playtest 2 - Music Lab: A.I. Edition for Hour of Code",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -69,7 +70,7 @@
       "position": 1,
       "properties": {
         "name": "Music Lab: A.I. Edition",
-        "progression_name": "Video: Introduction to Music Lab with A.I. "
+        "progression_name": "Introduction to Music Lab with A.I. "
       },
       "seeding_key": {
         "activity_section.key": "54c73e3e-49f6-4322-ab71-d53df1c3bbd2",
@@ -102,7 +103,7 @@
       "key": "26ea3dbf-221d-4b43-bdf6-4be508b98315",
       "position": 4,
       "properties": {
-        "progression_name": "loops"
+        "progression_name": "Loops"
       },
       "seeding_key": {
         "activity_section.key": "26ea3dbf-221d-4b43-bdf6-4be508b98315",
@@ -150,7 +151,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Introduction to Music Lab with A.I. "
+        "level_keys": [
+          "music_lab_intro_panels_start2_2"
+        ],
+        "progression": "Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -172,6 +176,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-sequence_2"
+        ],
         "progression": "Play Sound"
       },
       "bonus": false,
@@ -194,6 +201,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-sequence2_2"
+        ],
         "progression": "Play Sound"
       },
       "bonus": false,
@@ -216,6 +226,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_ai_panels_playtogether_2"
+        ],
         "progression": "Play Together"
       },
       "bonus": false,
@@ -238,6 +251,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-playtogether_2"
+        ],
         "progression": "Play Together"
       },
       "bonus": false,
@@ -260,6 +276,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-playtogether_sequence_2"
+        ],
         "progression": "Play Together"
       },
       "bonus": false,
@@ -282,7 +301,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "loops"
+        "level_keys": [
+          "music-ai-panels-loops"
+        ],
+        "progression": "Loops"
       },
       "bonus": false,
       "seeding_key": {
@@ -304,7 +326,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "loops"
+        "level_keys": [
+          "music-ai-practice-loops"
+        ],
+        "progression": "Loops"
       },
       "bonus": false,
       "seeding_key": {
@@ -326,6 +351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_ai_panels_function_2"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -348,6 +376,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-functions-chorus_2"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -370,6 +401,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-functions-doubleChorus_2"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -392,6 +426,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-function-verse_2"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -414,6 +451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_ai_panels_aibeatblock_2"
+        ],
         "progression": "AI Beat Block "
       },
       "bonus": false,
@@ -436,6 +476,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-aibeats_2"
+        ],
         "progression": "AI Beat Block "
       },
       "bonus": false,
@@ -458,6 +501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-freeplay"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,

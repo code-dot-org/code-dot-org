@@ -1,5 +1,5 @@
 name 'gen-ai-foundations-studentsurvey-premodule-q2'
-question 'How would you rate your current interest in computer vision?'
+question 'How would you rate your current interest in generative AI?'
 right 'Very interested'
 right 'Somewhat interested'
 right 'Neutral'

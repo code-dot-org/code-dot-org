@@ -181,24 +181,28 @@
           "description": "(Please select all that apply)",
           "choices": [
             {
-              "value": "lack_student_interest",
-              "text": "Lack of student interest or motivation."
+              "value": "standalone",
+              "text": "As a standalone unit focused exclusively on computer vision"
             },
             {
-              "value": "own_understanding_complex_concepts",
-              "text": "Difficulty in developing my own understanding or teaching complex concepts."
+              "value": "integrated_into_cs_course",
+              "text": "Integrated into a broader computer science or technology course."
             },
             {
-              "value": "time_constraints",
-              "text": "Time constraints within the academic calendar."
+              "value": "cross_curricular",
+              "text": "Cross-curricular integration with subjects like math, science, or art."
             },
             {
-              "value": "diverse_learning",
-              "text": "Managing diverse learning speeds and styles within the classroom."
+              "value": "extracurricular",
+              "text": "Through extracurricular/out-of-school clubs or activities."
             },
             {
-              "value": "other",
-              "text": "Other."
+              "value": "competition",
+              "text": "As a learning experience culminating in a showcase or competition."
+            },
+            {
+              "value": "interdisciplinary",
+              "text": "By aligning the unit with other existing content or projects to enhance interdisciplinary learning."
             }
           ]
         },
