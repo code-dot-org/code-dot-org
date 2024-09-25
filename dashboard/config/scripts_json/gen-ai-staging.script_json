@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-09-24 04:58:06 UTC",
+    "serialized_at": "2024-09-25 05:40:06 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5552,6 +5552,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-studentsurvey-premodule"
+        ],
         "progression": "Student Pre-Survey"
       },
       "bonus": false,
@@ -5574,6 +5577,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L1-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5621,6 +5627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L2-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5668,6 +5677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L3-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5765,6 +5777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L5-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5812,6 +5827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L6-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5859,6 +5877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L7-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5906,6 +5927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L8-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5953,6 +5977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L9-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -6025,6 +6052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L10-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -6072,6 +6102,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-studentsurvey-postmodule"
+        ],
         "progression": "Student Post-Survey"
       },
       "bonus": false,
@@ -12004,7 +12037,384 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "(Optional) Bias in the Machine",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "(Optional) Bias in the Machine",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "(Optional) Bias in the Machine",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "(Optional) Bias in the Machine",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-v.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "4-A-i.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "4-A-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "4-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-v.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "4-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hallucinations and Fabrications",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hallucinations and Fabrications",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hallucinations and Fabrications",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hallucinations and Fabrications",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input & Training Data",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input & Training Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Neural Networks: How They're Trained",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Neural Networks: How They're Trained",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-v.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Neural Networks: How They're Trained",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-B-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Neural Networks: How They're Trained",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Neural Networks: How They're Trained",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outputs & Probabilities",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outputs & Probabilities",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Demystifying Generative AI",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Demystifying Generative AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Demystifying Generative AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Demystifying Generative AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Demystifying Generative AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Demystifying Generative AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "4-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Neural Networks",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-B-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Neural Networks",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-B-ii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Neural Networks",
+        "framework.shortcode": "ai4k12-2023",
+        "standard.shortcode": "2-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Neural Networks",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Neural Networks",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
