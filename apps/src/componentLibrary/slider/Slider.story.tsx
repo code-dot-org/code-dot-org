@@ -60,6 +60,12 @@ GroupOfDefaultSliders.args = {
       value: 50,
       onChange: () => null,
     },
+    {
+      name: 'test-steps',
+      label: 'Label Steps',
+      steps: [0, 25, 50, 75, 100],
+      onChange: () => null,
+    },
   ],
 };
 

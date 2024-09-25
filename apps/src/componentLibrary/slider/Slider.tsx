@@ -23,6 +23,7 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
   color?: 'black' | 'brand' | 'white';
   isCentered?: boolean;
   step?: number | string;
+  steps?: number[];
   minValue?: number | string;
   maxValue?: number | string;
   showLeftButton?: boolean;
@@ -71,6 +72,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   color = 'black',
   isCentered = false,
   step = 1,
+  steps,
   minValue = 0,
   maxValue = 100,
   leftButtonProps,
@@ -83,6 +85,30 @@ const Slider: React.FunctionComponent<SliderProps> = ({
 
   // If isCentered is true and no value is provided, set the value to the center
   const sliderValue = isCentered && value === undefined ? centerValue : value;
+
+  // Function to snap the value to the nearest step in the steps array
+  const snapToStep = (value: number) => {
+    if (!steps || steps.length === 0) {
+      return value; // If no steps are provided, return the value as is
+    }
+    return steps.reduce((prev, curr) =>
+      Math.abs(curr - value) < Math.abs(prev - value) ? curr : prev
+    );
+  };
+
+  // Update the value on input change and snap it to the nearest step
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const snappedValue = snapToStep(Number(event.target.value));
+    onChange({...event, target: {...event.target, value: `${snappedValue}`}});
+  };
+
+  // Function to calculate the position of a step as a percentage
+  const calculateStepPosition = (stepValue: number) => {
+    const percentage =
+      ((stepValue - Number(minValue)) / (Number(maxValue) - Number(minValue))) *
+      100;
+    return `${percentage}%`;
+  };
 
   return (
     <label
@@ -125,7 +151,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             value={sliderValue}
             step={step}
             disabled={disabled}
-            onChange={onChange}
+            onChange={handleChange}
             aria-labelledby={labelId}
             {...HTMLAttributes}
           />
@@ -134,6 +160,18 @@ const Slider: React.FunctionComponent<SliderProps> = ({
               className={moduleStyles.centerMark}
               style={{left: `calc(${(centerValue / +maxValue) * 100}% - 1px)`}}
             />
+          )}
+          {/* Render visual step marks */}
+          {steps && steps.length > 0 && (
+            <div className={moduleStyles.stepMarksContainer}>
+              {steps.map((stepValue, index) => (
+                <div
+                  key={index}
+                  className={moduleStyles.stepMark}
+                  style={{left: calculateStepPosition(stepValue)}}
+                />
+              ))}
+            </div>
           )}
         </div>
         {true && (

@@ -31,6 +31,7 @@
 .sliderWrapper {
   position: relative;
   width: 100%;
+
   input {
     width: 100%;
   }
@@ -43,6 +44,14 @@
   width: 2px;
   height: 12px; /* Height of the center mark */
   background-color: red; /* Color for the center mark */
+}
+
+.stepMark {
+  position: absolute;
+  height: 10px;
+  width: 2px;
+  background-color: black;
+  bottom: -2px; /* Adjust as needed */
 }
 
 
