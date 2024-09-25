@@ -110,7 +110,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const vertical = layout === 'vertical';
 
   const onFinish = () => {
-    navigateToHref(linkWithQueryParams(`/s/${scriptName}`));
+    // No-op if there's no script. Students/teachers should always be
+    // accessing the level from a script.
+    if (scriptName) {
+      navigateToHref(linkWithQueryParams(`/s/${scriptName}`));
+    }
   };
 
   const onNextPanel = useCallback(() => {
