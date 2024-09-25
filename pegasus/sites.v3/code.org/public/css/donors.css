@@ -165,9 +165,11 @@ section.grid-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 
     &.tall {
-      height: 110px;
+      height: 140px;
     }
 
     & > img {
