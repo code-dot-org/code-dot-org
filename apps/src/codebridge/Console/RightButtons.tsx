@@ -4,7 +4,7 @@ import React from 'react';
 import Button from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './right-buttons.module.scss';
-import darkModeStyles from '@codebridge/styles/darkMode.module.scss';
+import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
 
 interface RightButtonsProps {
   clearOutput: () => void;

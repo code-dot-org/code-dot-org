@@ -7,7 +7,7 @@ import Button from '@cdo/apps/componentLibrary/button';
 import {useCodebridgeContext} from '../codebridgeContext';
 
 import moduleStyles from './toggle-file-browser-button.module.scss';
-import darkModeStyles from '@codebridge/styles/darkMode.module.scss';
+import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
 
 /*
   This component will look to the `showFileBrowser` boolean in the config and flip it back and forth.

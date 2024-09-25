@@ -12,7 +12,7 @@ import ForTeachersOnly from './ForTeachersOnly';
 import HelpAndTips from './HelpAndTips';
 
 import moduleStyles from './styles/info-panel.module.scss';
-import darkModeStyles from '@codebridge/styles/darkMode.module.scss';
+import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
 
 enum Panels {
   Instructions = 'Instructions',
