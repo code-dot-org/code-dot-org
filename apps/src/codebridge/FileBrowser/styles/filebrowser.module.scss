@@ -44,10 +44,6 @@
   grid-template-columns: 15px auto;
 }
 
-.button-bar button {
-  white-space: nowrap;
-}
-
 .file-browser ul li span.label i,
 .file-browser ul li span.button-bar i {
   margin-right: 4px;
@@ -78,4 +74,8 @@ div.row:hover .button-kebab {
   margin: 2px 8px 2px 8px;
   font-size: 13px;
   line-height: 125%;
+}
+
+.dropdownItem {
+  width: 100px;
 }
