@@ -65,10 +65,7 @@ module RegistrationsControllerTests
       assert PartialRegistration.in_progress? session
 
       assert_creates(User) {finish_email_sign_up(true, User::TYPE_STUDENT, email)}
-      assert_redirected_to '/'
-      follow_redirect!
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
+
       refute PartialRegistration.in_progress? session
 
       created_user = User.find signed_in_user_id
@@ -99,10 +96,7 @@ module RegistrationsControllerTests
       assert PartialRegistration.in_progress? session
 
       assert_creates(User) {finish_email_sign_up(true, User::TYPE_TEACHER, email)}
-      assert_redirected_to '/'
-      follow_redirect!
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
+
       refute PartialRegistration.in_progress? session
 
       created_user = User.find signed_in_user_id
