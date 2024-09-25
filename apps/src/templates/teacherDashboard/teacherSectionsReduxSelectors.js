@@ -138,7 +138,6 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionId: serverSection.course_version_id,
   courseDisplayName: serverSection.course_display_name,
   unitId: serverSection.unit_id,
-  unitName: serverSection.script?.name,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
   restrictSection: serverSection.restrict_section,

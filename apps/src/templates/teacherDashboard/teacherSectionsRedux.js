@@ -728,7 +728,6 @@ function newSectionData(participantType) {
     courseVersionId: null,
     courseDisplayName: null,
     unitId: null,
-    unitName: null,
     hidden: false,
     restrictSection: false,
     aiTutorEnabled: false,
