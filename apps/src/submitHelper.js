@@ -13,7 +13,10 @@ import dom from './dom';
 import DialogButtons from './legacySharedComponents/DialogButtons';
 
 // Parameters provided by the calling app.
-let studioApp, onPuzzleComplete, unsubmitUrl, aiRubric;
+let studioApp, onPuzzleComplete, unsubmitUrl;
+
+// Const to temporary disable pop up stating that student cannot resubmit assignment
+const DISABLEPOPUP = true;
 
 /**
  * Set up the handlers for the submit and unsubmit buttons.
@@ -24,13 +27,11 @@ let studioApp, onPuzzleComplete, unsubmitUrl, aiRubric;
  * @param {Object} params.studioApp - The studioApp itself.
  * @param {function} params.onPuzzleComplete - Function to call when submitting.
  * @param {string} params.unsubmitUrl - URL to post to when unsubmitting.
- * @param {boolean} params.aiRubric - Boolean to disable confirmation dialog on AI rubric levels
  */
 export function initializeSubmitHelper(params) {
   studioApp = params.studioApp;
   onPuzzleComplete = params.onPuzzleComplete;
   unsubmitUrl = params.unsubmitUrl;
-  aiRubric = params.aiRubric;
 
   const submitButton = document.getElementById('submitButton');
   if (submitButton) {
@@ -61,7 +62,7 @@ export function onSubmitComplete(response) {
  * When submit button is pressed, confirm, and then do it.
  */
 function onPuzzleSubmit() {
-  if (aiRubric) {
+  if (DISABLEPOPUP) {
     onPuzzleComplete(true);
   } else {
     showConfirmationDialog({

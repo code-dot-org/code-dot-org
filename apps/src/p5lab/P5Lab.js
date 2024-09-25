@@ -337,6 +337,12 @@ export default class P5Lab {
     config.enableShowCode = true;
     config.enableShowLinesCount = false;
 
+    // Callback to generate warning dialog at onbeforeunload event
+    this.warningCallback = event => {
+      event.preventDefault();
+      event.returnValue = true;
+    };
+
     const onMount = () => {
       try {
         const localeCode = window.appOptions.locale;
@@ -401,14 +407,18 @@ export default class P5Lab {
         studioApp: this.studioApp_,
         onPuzzleComplete: this.onPuzzleComplete.bind(this),
         unsubmitUrl: this.level.unsubmitUrl,
-        aiRubric: true,
       });
 
       this.setCrosshairCursorForPlaySpace();
 
       if (this.isBlockly) {
         this.currentCode = Blockly.getWorkspaceCode();
-        this.studioApp_.addChangeHandler(() => {
+      }
+
+      this.warnBeforeExit = false;
+
+      this.studioApp_.addChangeHandler(() => {
+        if (this.isBlockly) {
           const newCode = Blockly.getWorkspaceCode();
           if (newCode !== this.currentCode) {
             this.currentCode = newCode;
@@ -417,8 +427,22 @@ export default class P5Lab {
               this.preview.apply(this);
             }
           }
-        });
-      }
+        }
+        let lines = this.studioApp_.editor.aceEditor.session.doc.$lines;
+        if ((lines.length > 1 || lines[0] !== '') && !this.warnBeforeExit) {
+          this.warnBeforeExit = true;
+          console.log(this.warnBeforeExit);
+          window.addEventListener('beforeunload', this.warningCallback);
+        } else if (
+          lines.length === 1 &&
+          lines[0] === '' &&
+          this.warnBeforeExit
+        ) {
+          this.warnBeforeExit = false;
+          console.log(this.warnBeforeExit);
+          window.removeEventListener('beforeunload', this.warningCallback);
+        }
+      });
     };
 
     var showFinishButton =
@@ -990,6 +1014,11 @@ export default class P5Lab {
    * Click the run button.  Start the program.
    */
   runButtonClick() {
+    // remove dialog warning users before navigating away
+    if (this.warnBeforeExit) {
+      this.warnBeforeExit = false;
+      window.removeEventListener('beforeunload', this.warningCallback);
+    }
     this.studioApp_.toggleRunReset('reset');
     // document.getElementById('spinner').style.visibility = 'visible';
     if (this.studioApp_.isUsingBlockly()) {
