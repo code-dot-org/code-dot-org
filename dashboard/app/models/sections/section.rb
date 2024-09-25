@@ -37,7 +37,6 @@
 require 'full-name-splitter'
 require 'cdo/code_generation'
 require 'cdo/safe_names'
-require 'policies/lti'
 
 class Section < ApplicationRecord
   include SerializedProperties

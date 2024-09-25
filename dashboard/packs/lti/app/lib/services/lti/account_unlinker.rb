@@ -1,5 +1,4 @@
 require 'metrics/events'
-require 'policies/lti'
 
 module Services
   module Lti

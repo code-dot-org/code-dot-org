@@ -296,6 +296,7 @@ end
 
 def pass_time_for_user(name, amount_of_time)
   require_rails_env
+
   user = User.find_by_email_or_hashed_email(@users[name][:email])
   user.created_at = amount_of_time
   user.last_seen_school_info_interstitial = amount_of_time if user.last_seen_school_info_interstitial

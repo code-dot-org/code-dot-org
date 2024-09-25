@@ -1,4 +1,3 @@
-require 'policies/lti'
 require 'test_helper'
 require "clients/cache_client"
 require 'webmock/minitest'

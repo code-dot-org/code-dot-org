@@ -1,5 +1,3 @@
-require 'policies/lti'
-
 module InitialSectionCreationInterstitialHelper
   # Determine whether or not to show the initial section creation interstitial popup to a user
   # This interstitial should be shown only to teachers on their first sign-in

@@ -1,5 +1,5 @@
 require 'test_helper'
-require_relative '../../../lib/clients/lti_advantage_client'
+#require_relative '../../../app/lib/clients/lti_advantage_client'
 
 class LtiAdvantageClientTest < ActiveSupport::TestCase
   setup do

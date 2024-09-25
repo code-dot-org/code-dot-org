@@ -1,5 +1,4 @@
 require 'clients/cache_client'
-require 'clients/lti_dynamic_registration_client'
 require 'metrics/events'
 
 module Lti

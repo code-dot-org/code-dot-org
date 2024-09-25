@@ -3,7 +3,6 @@ require "queries/lti"
 require "services/lti"
 require "policies/lti"
 require "concerns/partial_registration"
-require "clients/lti_advantage_client"
 require "cdo/honeybadger"
 require 'metrics/events'
 
@@ -441,7 +440,7 @@ class LtiV1Controller < ApplicationController
       render(status: :bad_request, json: {error: I18n.t('lti.upgrade_to_teacher_account.error.missing_email')}) and return
     end
 
-    current_user.upgrade_to_teacher(params[:email])
+    Core::User.upgrade_to_teacher(current_user, params[:email])
     render status: :ok, json: {}
   end
 

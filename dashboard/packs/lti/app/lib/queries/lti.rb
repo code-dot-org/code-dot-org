@@ -1,4 +1,3 @@
-require 'policies/lti'
 require 'authentication_option'
 
 class Queries::Lti

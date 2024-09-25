@@ -85,7 +85,6 @@ require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 require 'policies/child_account'
 require 'services/child_account'
-require 'policies/lti'
 require 'services/user'
 
 class User < ApplicationRecord
@@ -1087,7 +1086,7 @@ class User < ApplicationRecord
   def set_user_type(user_type, email = nil, email_preference = nil)
     case user_type
     when TYPE_TEACHER
-      upgrade_to_teacher(email, email_preference)
+      Core::User.upgrade_to_teacher(self, email, email_preference)
     when TYPE_STUDENT
       downgrade_to_student
     else

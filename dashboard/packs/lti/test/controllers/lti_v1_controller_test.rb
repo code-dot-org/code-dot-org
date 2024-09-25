@@ -1,10 +1,8 @@
 require 'test_helper'
 require 'json'
 require 'jwt'
-require 'policies/lti'
+
 require "services/lti"
-require "clients/lti_advantage_client"
-require 'clients/lti_dynamic_registration_client'
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers

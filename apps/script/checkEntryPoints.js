@@ -91,6 +91,12 @@ const SILENCED = [
   'levelbuilder',
 ];
 const SITES_CONFIG = {
+  modules: {
+    entryPrefix: '',
+    templateRoot: '../dashboard/packs/lti/app/views',
+    templateGlobs: ['**/*.erb', '**/*.haml'],
+    templateExtensions: ['erb', 'haml'],
+  },
   studio: {
     entryPrefix: '',
     templateRoot: '../dashboard/app/views',

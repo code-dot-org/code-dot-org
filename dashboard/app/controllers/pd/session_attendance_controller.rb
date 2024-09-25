@@ -55,7 +55,7 @@ class Pd::SessionAttendanceController < ApplicationController
     if current_user.student?
       if User.hash_email(enrollment.email) == current_user.hashed_email
         # Email matches user's hashed email. Upgrade to teacher and set email.
-        current_user.upgrade_to_teacher(enrollment.email)
+        Core::User.upgrade_to_teacher(current_user, enrollment.email)
       else
         # No email match. Redirect to upgrade page.
         redirect_to action: 'upgrade_account'
@@ -80,7 +80,7 @@ class Pd::SessionAttendanceController < ApplicationController
       return
     end
 
-    current_user.upgrade_to_teacher(@email)
+    Core::User.upgrade_to_teacher(current_user, @email)
     redirect_to action: :attend
   end
 

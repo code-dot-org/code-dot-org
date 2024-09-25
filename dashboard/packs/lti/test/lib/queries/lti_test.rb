@@ -1,6 +1,6 @@
 require 'test_helper'
 require 'user'
-require 'policies/lti'
+
 require 'authentication_option'
 
 class Services::LtiTest < ActiveSupport::TestCase

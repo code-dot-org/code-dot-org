@@ -1,12 +1,12 @@
 require_relative '../../shared/test/common_test_helper'
 
 # Set up JUnit output for Circle
-reporters = [Minitest::Reporters::SpecReporter.new]
+reporters = [Minitest::Reporters::SpecReporter.new, Minitest::Reporters::HtmlReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CIRCLE_TEST_REPORTS', nil)}/lib")
 end
 # Skip this if the tests are run in RubyMine
-Minitest::Reporters.use! reporters unless ENV['RM_INFO']
+Minitest::Reporters.use! reporters
 
 class Level
   def report_bug_url(request)
