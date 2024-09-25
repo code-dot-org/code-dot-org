@@ -4,7 +4,7 @@
   contents = request.path.include?('/global/fa')? Hamburger.get_farsi_hamburger_contents(options): Hamburger.get_hamburger_contents(options)
 
 #hamburger{class: contents[:visibility], tabindex: "0", 'aria-label': I18n.t('header_screen_reader_hamburger')}
-  #hamburger-contents.hide-responsive-menu
+  #hamburger-contents.hide-responsive-menu{class: request.path.include?('/global/fa') ? "farsi" : ""}
     -# Show the Sign in and Create account buttons if the user is not signed in
     - unless user_type
       #hamburger-sign-up-buttons

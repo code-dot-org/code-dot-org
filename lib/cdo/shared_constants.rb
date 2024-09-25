@@ -704,7 +704,6 @@ module SharedConstants
     {
       INTEGRATION_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org',
       INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
-      INSTALL_GUIDE_FOR_CANVAS_URL: 'https://support.code.org/hc/en-us/articles/23123273783437-Install-the-Code-org-Integration-for-Canvas',
       ROSTER_SYNC_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System',
       ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
       # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation
