@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
@@ -26,6 +26,28 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [name, setName] = useState('');
   const [showNameError, setShowNameError] = useState(false);
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
+  const [gdprChecked, setGdprChecked] = useState(false);
+  const [showGDPR, setShowGDPR] = useState(false);
+
+  useEffect(() => {
+    const fetchGdprData = async () => {
+      try {
+        const response = await fetch('/users/gdpr_check');
+        const data = await response.json();
+        if (data.gdpr || data.force_in_eu) {
+          setShowGDPR(true);
+        }
+      } catch (error) {
+        console.error('Error fetching GDPR data:', error);
+      }
+    };
+
+    fetchGdprData();
+  }, []);
+
+  const gdprValid = useMemo(() => {
+    return (showGDPR && gdprChecked) || !showGDPR;
+  }, [showGDPR, gdprChecked]);
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
@@ -46,6 +68,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
       EMAIL_OPT_IN_SESSION_KEY,
       `${newOptInCheckedChoice}`
     );
+  };
+
+  const onGDPRChange = (): void => {
+    const newGdprCheckedChoice = !gdprChecked;
+    setGdprChecked(newGdprCheckedChoice);
   };
 
   const sendFinishEvent = (): void => {
@@ -90,6 +117,19 @@ const FinishTeacherAccount: React.FunctionComponent<{
           )}
         </div>
         <SchoolDataInputs usIp={usIp} includeHeaders={false} />
+        {showGDPR && (
+          <div>
+            <BodyThreeText className={style.teacherKeepMeUpdated}>
+              <strong>{locale.data_transfer_notice()}</strong>
+            </BodyThreeText>
+            <Checkbox
+              name="gdprAcknowledge"
+              label={locale.data_transfer_agreement_teacher()}
+              checked={gdprChecked}
+              onChange={onGDPRChange}
+            />
+          </div>
+        )}
         <div>
           <BodyThreeText className={style.teacherKeepMeUpdated}>
             <strong>{locale.keep_me_updated()}</strong>
@@ -118,7 +158,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             iconStyle: 'solid',
             title: 'arrow-right',
           }}
-          disabled={name === ''}
+          disabled={name === '' || !gdprValid}
         />
       </div>
     </div>

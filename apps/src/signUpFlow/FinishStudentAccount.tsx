@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
@@ -45,6 +45,34 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [showParentEmailError, setShowParentEmailError] = useState(false);
   const [showAgeError, setShowAgeError] = useState(false);
   const [showStateError, setShowStateError] = useState(false);
+
+  const [gdprChecked, setGdprChecked] = useState(false);
+  const [showGDPR, setShowGDPR] = useState(false);
+
+  useEffect(() => {
+    const fetchGdprData = async () => {
+      try {
+        const response = await fetch('/users/gdpr_check');
+        const data = await response.json();
+        if (data.gdpr || data.force_in_eu) {
+          setShowGDPR(true);
+        }
+      } catch (error) {
+        console.error('Error fetching GDPR data:', error);
+      }
+    };
+
+    fetchGdprData();
+  }, []);
+
+  const gdprValid = useMemo(() => {
+    return (showGDPR && gdprChecked) || !showGDPR;
+  }, [showGDPR, gdprChecked]);
+
+  const onGDPRChange = (): void => {
+    const newGdprCheckedChoice = !gdprChecked;
+    setGdprChecked(newGdprCheckedChoice);
+  };
 
   const onIsParentChange = (): void => {
     analyticsReporter.sendEvent(
@@ -235,6 +263,19 @@ const FinishStudentAccount: React.FunctionComponent<{
           placeholder={locale.female()}
           onChange={onGenderChange}
         />
+        {showGDPR && (
+          <div>
+            <BodyThreeText className={style.teacherKeepMeUpdated}>
+              <strong>{locale.data_transfer_notice()}</strong>
+            </BodyThreeText>
+            <Checkbox
+              name="gdprAcknowledge"
+              label={locale.data_transfer_agreement_student()}
+              checked={gdprChecked}
+              onChange={onGDPRChange}
+            />
+          </div>
+        )}
       </fieldset>
       <div className={style.finishSignUpButtonContainer}>
         <Button
@@ -252,7 +293,8 @@ const FinishStudentAccount: React.FunctionComponent<{
             name === '' ||
             age === '' ||
             (usIp && state === '') ||
-            (isParent && parentEmail === '')
+            (isParent && parentEmail === '') ||
+            !gdprValid
           }
         />
       </div>
