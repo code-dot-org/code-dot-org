@@ -115,6 +115,7 @@ footer:
 # Route matching to influence properties of components
 pages:
   # Home dashboards
-  /home:
-    MarketingAnnouncementBanner: false
-    IncubatorBanner: false
+  - path: /home
+    components:
+      MarketingAnnouncementBanner: false
+      IncubatorBanner: false

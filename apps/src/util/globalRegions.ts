@@ -4,14 +4,15 @@ interface RegionConfigurationObject {
   [key: string]: object | boolean;
 }
 
-interface RegionConfigurationPageObject {
-  [key: string]: RegionConfigurationObject;
+export interface RegionConfigurationPageObject {
+  path: string;
+  components: RegionConfigurationObject;
 }
 
 export interface RegionConfiguration {
   header?: RegionConfigurationObject;
   footer?: RegionConfigurationObject;
-  pages?: RegionConfigurationPageObject;
+  pages?: readonly [RegionConfigurationPageObject];
 }
 
 /**
@@ -28,36 +29,3 @@ export const currentGlobalRegion: () => string = () =>
 export const currentGlobalConfiguration: () => RegionConfiguration = () =>
   (Regions as {[key: string]: RegionConfiguration})[currentGlobalRegion()] ||
   {};
-
-/**
- * This wraps a component such that it updates its own properties to
- * override them with the ones found in the global configuration.
- *
- * @param {React.FunctionComponent} WrappedComponent - The component to wrap.
- * @param {string} componentId - The name of this component.
- */
-export const globalRegionWrapper: (
-  WrappedComponent: React.FunctionComponent,
-  componentId: string
-) => React.FunctionComponent = (WrappedComponent, componentId) => {
-  const EmptyComponent = () => null;
-
-  const pages = currentGlobalConfiguration().pages || {};
-
-  // Retrieves the current page Global Region config based on the page path mask.
-  const pageConfigKey: string | undefined = (
-    Object.keys(pages) as Array<string>
-  ).find(pageMask => RegExp(pageMask).test(window.location.pathname));
-
-  if (pageConfigKey) {
-    const pageConfig = pages[pageConfigKey];
-
-    // Renders the component if it is enabled for the page
-    return !pageConfig || pageConfig[componentId]
-      ? WrappedComponent
-      : EmptyComponent;
-  }
-
-  // Just output the unaltered component if there's no rule
-  return WrappedComponent;
-};
