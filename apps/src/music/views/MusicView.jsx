@@ -26,7 +26,7 @@ import {
   DEFAULT_PACK,
 } from '../constants';
 import {AnalyticsContext} from '../context';
-import Globals from '../globals';
+import MusicRegistry from '../MusicRegistry';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
@@ -121,7 +121,7 @@ class UnconnectedMusicView extends React.Component {
       key && Key[key.toUpperCase()],
       this.analyticsReporter
     );
-    Globals.setPlayer(this.player);
+    MusicRegistry.player = this.player;
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
@@ -311,16 +311,14 @@ class UnconnectedMusicView extends React.Component {
       this.musicBlocklyWorkspace.getAllBlocks()
     );
 
-    Globals.setShowSoundFilters(
+    MusicRegistry.showSoundFilters =
       AppConfig.getValue('show-sound-filters') !== 'false' &&
-        (AppConfig.getValue('show-sound-filters') === 'true' ||
-          levelData?.showSoundFilters)
-    );
+      (AppConfig.getValue('show-sound-filters') === 'true' ||
+        levelData?.showSoundFilters);
 
-    Globals.setHideAiTemperature(
+    MusicRegistry.hideAiTemperature =
       levelData?.hideAiTemperature ||
-        AppConfig.getValue('hide-ai-temperature') === 'true'
-    );
+      AppConfig.getValue('hide-ai-temperature') === 'true';
 
     Lab2Registry.getInstance()
       .getMetricsReporter()
