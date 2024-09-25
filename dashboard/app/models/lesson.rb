@@ -272,7 +272,7 @@ class Lesson < ApplicationRecord
   end
 
   def unit_vocabulary_url
-    CDO.code_org_url "/s/#{script.name}/vocabulary"
+    CDO.code_org_url "/s/#{script.name}/vocab"
   end
 
   def course_version_standards_url

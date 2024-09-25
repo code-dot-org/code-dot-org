@@ -40,7 +40,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
     : i18n.studentResources();
 
   const renderStandardsRow = () => {
-    if (!standardsUrl) return null;
+    if (!standardsUrl || !lessonPlanUrl) return null;
 
     return (
       <ResourceRow
@@ -58,7 +58,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
   };
 
   const renderVocabularyRow = () => {
-    if (!vocabularyUrl) return null;
+    if (!vocabularyUrl || !lessonPlanUrl) return null;
 
     return (
       <ResourceRow
