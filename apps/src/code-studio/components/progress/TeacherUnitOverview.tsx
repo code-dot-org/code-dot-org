@@ -300,7 +300,6 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
       )
       .then(response => response.json())
       .then(responseJson => {
-        console.log('lfm unit summary response', responseJson);
         initializeRedux(responseJson, dispatch, userType, userId);
         setUnitSummaryResponse(responseJson);
       });
@@ -318,8 +317,6 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
   const showAiAssessmentsAnnouncement =
     unitSummaryResponse.unitData.showAiAssessmentsAnnouncement &&
     experiments.isEnabled(experiments.AI_ASSESSMENTS_ANNOUNCEMENT);
-
-  console.log('lfm', selectedSection, unitSummaryResponse.unitData);
 
   return (
     <UnitOverview

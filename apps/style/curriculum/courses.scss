@@ -1,6 +1,7 @@
 @import "markdown";
 @import "pdf_printing";
 
+/* Copied in style/teacherDashboard/teacherDashboard.scss. Update there if anything is changed here. */
 @media print {
   /* we have many components that we never want to include in a print view */
   .announcement-notification,

@@ -136,8 +136,6 @@ class UnitOverview extends React.Component {
       showAiAssessmentsAnnouncement,
     } = this.props;
 
-    console.log('lfm props', this.props);
-
     const displayRedirectDialog =
       redirectScriptUrl && !dismissedRedirectDialog(courseName || scriptName);
 

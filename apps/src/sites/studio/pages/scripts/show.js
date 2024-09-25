@@ -107,8 +107,6 @@ function initPage() {
     scriptData.showAiAssessmentsAnnouncement &&
     experiments.isEnabled(experiments.AI_ASSESSMENTS_ANNOUNCEMENT);
 
-  console.log('lfm scriptData', scriptData);
-
   ReactDOM.render(
     <Provider store={store}>
       {parentalPermissionBannerData && (

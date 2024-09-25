@@ -4,7 +4,7 @@
 @media print {
   /* we have many components that we never want to include in a print view */
 
-  /* Unit Overview page - from apps/style/curriculum/scripts.scss */
+  /* Unit Overview page - from apps/style/curriculum/scripts.scss. Update there if anything is changed here. */
   #unit-breadcrumb,
   #teacher-panel-container,
   .__react_component_tooltip,
@@ -26,7 +26,7 @@
     padding: 10px 0 20px 0;
   }
 
-  /* Course Overview page - from apps/style/curriculum/courses.scss */
+  /* Course Overview page - from apps/style/curriculum/courses.scss Update there if anything is changed here. */
   .announcement-notification,
   .course-overview-top-row {
     display: none;
