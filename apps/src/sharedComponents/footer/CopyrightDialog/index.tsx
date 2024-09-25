@@ -27,12 +27,12 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
       onClose={closeModal}
       closeOnClickBackdrop={true}
     >
-      <div id="copyright-modal-content">
-        <div id="copyright-modal-header">
+      <div>
+        <div>
           <Heading3>{i18n.copyright()}</Heading3>
         </div>
         <hr aria-hidden="true" />
-        <div id="copyright-modal-body" className="copyrightScrollArea">
+        <div className="modalBody">
           <SafeMarkdown
             markdown={i18n.copyright_thanks({
               donors_link: pegasus('about/donors'),

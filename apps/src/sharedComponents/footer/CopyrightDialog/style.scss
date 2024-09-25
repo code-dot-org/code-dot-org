@@ -7,7 +7,8 @@
     display: flex;
     min-width: 37.5rem;
     max-width: 50rem;
-    max-height: 80vh !important;
+    max-height: 80vh;
+    box-sizing: border-box;
     padding: 1.5rem 2rem;
     flex-direction: column;
     align-items: flex-start;
@@ -38,37 +39,36 @@
         }
 
     }
-}
 
-.copyrightScrollArea {
-    max-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    overflow-x: hidden;
-    overflow-y: auto;
-    scrollbar-color: $light_gray_200 transparent; /* Scrollbar styling for Firefox browsers */
-}
+    .modalBody {
+        max-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        scrollbar-color: $light_gray_200 transparent; /* Scrollbar styling for Firefox browsers */
 
-/* Scrollbar styling for webkit browsers */
-.copyrightScrollArea::-webkit-scrollbar {
-    width: 0.5rem;
-}
+        ::-webkit-scrollbar {
+            width: 0.5rem;
+        }
 
-.copyrightScrollArea::-webkit-scrollbar-track {
-    background: transparent;
-}
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
 
-.copyrightScrollArea::-webkit-scrollbar-thumb {
-    background-color: $light_gray_200;
-    border-radius: 6rem;
-}
+        ::-webkit-scrollbar-thumb {
+            background-color: $light_gray_200;
+            border-radius: 6rem;
+        }
 
-.awsLogoContainer {
-    display: block;
-}
+        .awsLogoContainer {
+            display: block;
+        }
 
-.awsLogo {
-    width: 11.5rem;
+        .awsLogo {
+            width: 11.5rem;
+        }
+    }
 }
