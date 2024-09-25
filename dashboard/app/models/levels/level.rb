@@ -29,7 +29,8 @@ require 'cdo/shared_constants'
 class Level < ApplicationRecord
   include SharedConstants
   include Levels::LevelsWithinLevels
-  include LevelsHelper
+  include ScriptLevelsHelper
+  include Rails.application.routes.url_helpers
 
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
