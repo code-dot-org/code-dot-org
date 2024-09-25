@@ -954,8 +954,6 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     unit.reload
 
-    puts unit.inspect
-
     assert unit.project_sharing
     assert_equal 'CSF', unit.curriculum_umbrella
     assert_equal '6-12', unit.content_area
