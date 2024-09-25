@@ -68,11 +68,14 @@ export const lessonMaterialsLoader =
     // NOTE: this page is not working for stand alone courses.
     // this is because there is no "unitId" in the sectionData for stand alone courses.
 
-    if (!selectedSectionId || !sectionData.unitId) {
+    // sectionData.unitId is only set for units in courses
+    const unitId = sectionData?.unitId || sectionData?.standaloneUnitId;
+
+    if (!unitId) {
       return null;
     }
 
-    return lessonMaterialsCachedLoader(sectionData.unitId);
+    return lessonMaterialsCachedLoader(unitId);
   };
 
 const createDisplayName = (lessonName: string, lessonPosition: number) => {
