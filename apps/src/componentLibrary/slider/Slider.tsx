@@ -69,14 +69,20 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   value,
   disabled = false,
   color = 'black',
+  isCentered = false,
   step = 1,
-  minValue,
-  maxValue,
+  minValue = 0,
+  maxValue = 100,
   leftButtonProps,
   rightButtonProps,
   ...HTMLAttributes
 }) => {
   const labelId = `${name}-label`;
+  // Calculate the center value based on min and max values
+  const centerValue = (Number(minValue) + Number(maxValue)) / 2;
+
+  // If isCentered is true and no value is provided, set the value to the center
+  const sliderValue = isCentered && value === undefined ? centerValue : value;
 
   return (
     <label
@@ -110,18 +116,26 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             onClick={() => onChange({target: {value: +value - +step}})}
           />
         }
-        <input
-          type="range"
-          name={name}
-          min={minValue}
-          max={maxValue}
-          value={value}
-          step={step}
-          disabled={disabled}
-          onChange={onChange}
-          aria-labelledby={labelId}
-          {...HTMLAttributes}
-        />
+        <div className={moduleStyles.sliderWrapper}>
+          <input
+            type="range"
+            name={name}
+            min={minValue}
+            max={maxValue}
+            value={sliderValue}
+            step={step}
+            disabled={disabled}
+            onChange={onChange}
+            aria-labelledby={labelId}
+            {...HTMLAttributes}
+          />
+          {isCentered && (
+            <div
+              className={moduleStyles.centerMark}
+              style={{left: `calc(${(centerValue / +maxValue) * 100}% - 1px)`}}
+            />
+          )}
+        </div>
         {true && (
           <Button
             {...defaultSliderButtonProps}

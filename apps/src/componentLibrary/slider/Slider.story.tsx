@@ -42,6 +42,7 @@ export const DefaultSlider = SingleTemplate.bind({});
 DefaultSlider.args = {
   name: 'controlled_Slider',
   label: 'Slider Label',
+  isCentered: false,
 };
 //
 export const GroupOfDefaultSliders = MultipleTemplate.bind({});
@@ -53,8 +54,10 @@ GroupOfDefaultSliders.args = {
       onChange: () => null,
     },
     {
-      name: 'test-checked',
-      label: 'Label Checked',
+      name: 'test-centered',
+      label: 'Label Centered',
+      isCentered: true,
+      value: 50,
       onChange: () => null,
     },
   ],

@@ -26,10 +26,23 @@
   align-items: center;
   gap: 2px;
   align-self: stretch;
+}
 
+.sliderWrapper {
+  position: relative;
+  width: 100%;
   input {
     width: 100%;
   }
+}
+
+.centerMark {
+  position: absolute;
+  z-index: -1;
+  bottom: -5px; /* Adjust as needed */
+  width: 2px;
+  height: 12px; /* Height of the center mark */
+  background-color: red; /* Color for the center mark */
 }
 
 
