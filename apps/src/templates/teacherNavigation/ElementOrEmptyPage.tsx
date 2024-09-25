@@ -1,6 +1,5 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
-import {generatePath, useNavigate, NavLink} from 'react-router-dom';
+import {useNavigate, NavLink} from 'react-router-dom';
 
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import Button from '@cdo/apps/componentLibrary/button/Button';
@@ -10,10 +9,7 @@ import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curricul
 import TeacherDashboardEmptyState from '@cdo/apps/templates/teacherNavigation/images/TeacherDashboardEmptyState.svg';
 import i18n from '@cdo/locale';
 
-import {
-  TEACHER_NAVIGATION_PATHS,
-  LABELED_TEACHER_NAVIGATION_PATHS,
-} from './TeacherNavigationPaths';
+import {TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
@@ -33,11 +29,6 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
   courseName,
   element,
 }) => {
-  const selectedSectionId = useSelector(
-    (state: {teacherSections: {selectedSectionId: number}}) =>
-      state.teacherSections.selectedSectionId
-  );
-
   const textDescription = () => {
     if (showNoStudents) {
       return i18n.emptySectionDescription();
@@ -86,14 +77,9 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
   const navigate = useNavigate();
 
   const navigateToCoursePage = () => {
-    navigate(
-      generatePath(
-        LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
-        {
-          sectionId: selectedSectionId,
-        }
-      )
-    );
+    navigate(`../${TEACHER_NAVIGATION_PATHS.courseOverview}`, {
+      relative: 'path',
+    });
   };
 
   if (!showNoStudents && !showNoCurriculumAssigned && !showNoUnitAssigned) {
