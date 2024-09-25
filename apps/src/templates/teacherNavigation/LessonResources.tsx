@@ -108,8 +108,8 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
           resource={resource}
         />
       ))}
-      {renderStandardsRow()}
       {renderVocabularyRow()}
+      {renderStandardsRow()}
     </div>
   );
 };
