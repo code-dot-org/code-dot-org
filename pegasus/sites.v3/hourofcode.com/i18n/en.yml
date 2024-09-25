@@ -1282,7 +1282,6 @@
         desc: "Focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards."
         note: "Note:"
         note_desc: "AI Chat Lab levels require a [verified teacher account](%{verified_teacher_url}) or SSO login to make use of the tool."
-      button: "Explore unit"
     unlock_full_access_banner:
       title: "Unlock full access with a no-cost verified teacher account"
       desc: "Gain access to more resources, including the new AI Chat Lab, and exclusive materials to enhance your teaching at no cost! It’s quick and easy, get verified today!"
@@ -10936,7 +10935,7 @@
 
   hoc_events:
     heading: "Register to host an Hour of Code"
-    desc: "Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October."
+    desc: "Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in September."
     button: "Register my event"
     register:
       heading: "Register your event"
@@ -11049,6 +11048,9 @@
         body_04: "No use of \"Hour of Code\" or \"Hora del Código\" in app names."
 
   hoc_how_to:
+    page_title:
+      teachers: "How-to guide for Teachers"
+      events: "How-to guide for Events"
     heading: "Your go-to guide starts here!"
     desc: "Choose the right guide for you:"
     label:
@@ -12090,7 +12092,7 @@
   about_page_donors_link_1: "Make a donations"
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
 
-  districts_skinny_banner_title: "Over 100+ Districts have joined our District Program! [See district partners](%{district_partners_url})"
+  districts_skinny_banner_title: "Over 500+ Districts have joined our District Program! [See district partners](%{district_partners_url})"
 
   teach_ai_title: "Real-world Examples. Practical Resources."
   teach_ai_description: "The AI Guidance for Schools Toolkit is a resource for policymakers, school leaders, and staff to develop initial guidance on AI in their schools."

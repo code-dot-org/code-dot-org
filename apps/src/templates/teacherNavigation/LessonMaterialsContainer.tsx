@@ -7,14 +7,26 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
-import ResourceRow from './ResourceRow';
+import LessonResources from './LessonResources';
+import UnitResourcesDropdown from './UnitResourcesDropdown';
+
+import styles from './lesson-materials.module.scss';
 
 type Lesson = {
   name: string;
   id: number;
   position: number;
+  lessonPlanHtmlUrl: string;
   resources: {
     Teacher: {
+      key: string;
+      name: string;
+      url: string;
+      downloadUrl: string | null;
+      audience: string;
+      type: string;
+    }[];
+    Student: {
       key: string;
       name: string;
       url: string;
@@ -28,6 +40,8 @@ type Lesson = {
 interface LessonMaterialsData {
   title: string;
   unitNumber: number;
+  scriptOverviewPdfUrl: string;
+  scriptResourcesPdfUrl: string;
   lessons: Lesson[];
 }
 
@@ -101,32 +115,60 @@ const LessonMaterialsContainer: React.FC = () => {
     [generateLessonDropdownOptions]
   );
 
+  const renderTeacherResources = () => {
+    if (!selectedLesson || !selectedLesson.resources.Teacher) {
+      return null;
+    }
+
+    return (
+      <LessonResources
+        unitNumber={unitNumber}
+        lessonNumber={selectedLesson.position}
+        resources={selectedLesson.resources.Teacher}
+        lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
+        lessonName={selectedLesson.name}
+      />
+    );
+  };
+
+  const renderStudentResources = () => {
+    if (!selectedLesson || !selectedLesson.resources.Student) {
+      return null;
+    }
+
+    return (
+      <LessonResources
+        unitNumber={unitNumber}
+        lessonNumber={selectedLesson.position}
+        resources={selectedLesson.resources.Student}
+        lessonPlanUrl={null}
+        lessonName={null}
+      />
+    );
+  };
+
   return (
     <div>
-      <SimpleDropdown
-        labelText={i18n.chooseLesson()}
-        isLabelVisible={false}
-        onChange={event => onDropdownChange(event.target.value)}
-        items={lessonOptions}
-        selectedValue={
-          selectedLesson ? selectedLesson.id.toString() : 'no lesson'
-        }
-        name={'lessons-in-assigned-unit-dropdown'}
-        size="s"
-      />
-      {/*  Note that this only goes through Teacher resources - we have separate tickets to make sure that this is presented for all resources */}
-      {selectedLesson && (
-        <div>
-          {selectedLesson.resources.Teacher.map(resource => (
-            <ResourceRow
-              key={resource.key}
-              unitNumber={unitNumber}
-              lessonNumber={selectedLesson.position}
-              resource={resource}
-            />
-          ))}
-        </div>
-      )}
+      <div className={styles.lessonMaterialsPageHeader}>
+        <SimpleDropdown
+          labelText={i18n.chooseLesson()}
+          isLabelVisible={false}
+          onChange={event => onDropdownChange(event.target.value)}
+          items={lessonOptions}
+          selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
+          name={'lessons-in-assigned-unit-dropdown'}
+          size="s"
+        />
+        {loadedData?.unitNumber && (
+          <UnitResourcesDropdown
+            unitNumber={loadedData.unitNumber || 0}
+            scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
+            scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
+          />
+        )}
+      </div>
+      {renderTeacherResources()}
+      {renderStudentResources()}
     </div>
   );
 };

@@ -2,7 +2,8 @@
   Predict Level Settings
 
 #predict-settings-container.in.collapse
+  #predict-settings-editor
 
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_predict_settings.js'),
-        data: {predictsettings: (@level.properties["predict_settings"]).to_json}}
+        data: {predictsettings: @level.properties["predict_settings"].to_json}}

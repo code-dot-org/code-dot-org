@@ -125,3 +125,9 @@ export const AI_CUSTOMIZATIONS_LABELS: {
   retrievalContexts: 'Retrieval',
   modelCardInfo: 'Model card information',
 };
+
+// Model customization fields that are checked for toxicity before updating.
+export const FIELDS_CHECKED_FOR_TOXICITY = [
+  'systemPrompt',
+  'retrievalContexts',
+] as const satisfies (keyof AiCustomizations)[];

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-16 18:51:14 UTC",
+    "serialized_at": "2024-09-24 16:21:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -933,7 +933,7 @@
       "key": "7a21c79d-e0eb-4932-837e-0d3a13e6f2ca",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you notice about the code in this program?*\n- *What do you wonder about the code in this program?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** While students might not be able familiar with enough programming fundamentals to be able to understand what this code is doing, by reading the names of variables and the output message at the bottom of the program, they should be able to infer that it calculates the age of a dog in “dog years”. This predict level introduces the three main variable types which will be introduced in this lesson: `int`, `str`, and `list`. Additionally, it will expose students to concatenation, the `print()` function, and simple expressions. The goal is not for students to understand how to utilize these concepts independently yet – those skills will come in the next levels. Encourage them to share what they have learned and the questions that they have.\n\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you notice about the code in this program?*\n- *What do you wonder about the code in this program?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** While students might not be able familiar with enough programming fundamentals to be able to understand what this code is doing, by reading the names of variables and the output message at the bottom of the program, they should be able to infer that it calculates the age of a dog in “dog years”. This predict level introduces the three main variable types which are introduced in this lesson: `int`, `str`, and `list`. Additionally, students are exposed to concatenation, the `print()` function, and simple expressions. The goal is not for students to understand how to utilize these concepts independently yet – those skills will come in the next levels. Encourage them to share what they have learned and the questions that they have.\n\n",
         "progression_name": "Predict and Run"
       },
       "seeding_key": {
@@ -945,7 +945,7 @@
       "key": "c85cca63-e622-44ab-88b8-42876b3dbdcb",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 - 7 with their partner. Students use pair programming to investigate the program by modifying the program as prompted and observing the results.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 - 7 with their partner. Students use pair programming to investigate the program by modifying the program as prompted and observing the results.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python.\n",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -997,7 +997,7 @@
       "key": "c3254f84-8392-401b-826b-71c0c1a20f23",
       "position": 7,
       "properties": {
-        "description": "- **Level 8:** Students will practice creating string and numeric variables, creating an expression that involves a mathematical operation on those variables, and printing the results as output.\n- **Level 9:** Students will practice creating lists, accessing elements within those lists, creating an expression that involves a mathematical operation on the elements of the list, and printing the results as output.\n",
+        "description": "- **Level 8:** Students practice creating string and numeric variables, creating an expression that involves a mathematical operation on those variables, and printing the results as output.\n- **Level 9:** Students practice creating lists, accessing elements within those lists, creating an expression that involves a mathematical operation on the elements of the list, and printing the results as output.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1097,7 +1097,7 @@
       "key": "f605d2ab-efc9-48b9-b0e4-6f6a9b821a4c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 6.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 6.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python or Pandas functions.\n",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -1358,7 +1358,7 @@
       "key": "a8bbd8c9-2f58-4c3a-a663-eb12a4464ca9",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students discuss, listen to their conversations and engage with them, asking clarifying questions. Try to make sure all students get the chance to speak. Help facilitate the round robin protocol.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What differences do you notice in the types of responses received (e.g., numbers, words, dates) and what effect might that have when collecting data?\nStudents will discuss within their groups using the Round Robin Protocol\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might notice that some questions might be answered in different ways. For instance, to answer the question \"What is the ideal temperature for humans?\", some students might write an integer (e.g. 78), some students might write include a decimal (e.g. 98.6), and some students may choose to write it out (\"Eighty\"). Receiving different types of responses to the same question may hinder the ability to perform data analysis on the data collected. If one was expecting to receive a numerical response, but received a word or symbol instead, then this might make the data less reliable and accurate. You wouldn't be able to perform mathematical operations as easily, for instance.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students discuss, listen to their conversations and engage with them, asking clarifying questions. Try to make sure all students get the chance to speak. Help facilitate the round robin protocol.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What differences do you notice in the types of responses received (e.g., numbers, words, dates) and what effect might that have when collecting data?\nStudents discuss within their groups using the Round Robin Protocol\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might notice that some questions might be answered in different ways. For instance, to answer the question \"What is the ideal temperature for humans?\", some students might write an integer (e.g. 78), some students might write include a decimal (e.g. 98.6), and some students may choose to write it out (\"Eighty\"). Receiving different types of responses to the same question may hinder the ability to perform data analysis on the data collected. If one was expecting to receive a numerical response, but received a word or symbol instead, then this might make the data less reliable and accurate. You wouldn't be able to perform mathematical operations as easily, for instance.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "a8bbd8c9-2f58-4c3a-a663-eb12a4464ca9",
@@ -1392,7 +1392,7 @@
       "key": "1fa9cbcb-057b-4566-a102-7b9d5ff30f0c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 6 with their partner.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications. The levels provide possible mistakes and misconceptions and how to help.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 6 with their partner.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python, Pandas, or Matplotlib functions.\n\n",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -1404,7 +1404,7 @@
       "key": "e44ff1be-2379-42cd-b13a-90664789d245",
       "position": 4,
       "properties": {
-        "description": "- **Level 2:** Use the `info()` function for `survey_data` and examine the output\n- **Level 3:** Use the describe() function and compare the output with the output from `info()`\n- **Level 4:** Use `astype()` to convert `float64` to `int64`, and vice versa\n- **Level 5:** Use `to_datetime()` to convert an object to datetime.\n- **Level 6:** Students complete a quick check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how Pandas assigns data types.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the four main data types that students will encounter frequently: int64, float64, object, datetime\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that pandas auto-assigning data types is prone to errors at times.\n\n\n\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `info()` to see what data type was assigned to each column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `astype()` to update types for an entire column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `to_datetime()` to convert a column's data type to datetime."
+        "description": "- **Level 2:** Use the `info()` function for `survey_data` and examine the output\n- **Level 3:** Use the `describe()` function and compare the output with the output from `info()`\n- **Level 4:** Use `astype()` to convert `float64` to `int64`, and vice versa\n- **Level 5:** Use `to_datetime()` to convert an object to datetime.\n- **Level 6:** Students complete a quick check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how Pandas assigns data types.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the four main data types that students will encounter frequently: int64, float64, object, datetime\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that pandas auto-assigning data types is prone to errors at times.\n\n\n\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `info()` to see what data type was assigned to each column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `astype()` to update types for an entire column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `to_datetime()` to convert a column's data type to datetime."
       },
       "seeding_key": {
         "activity_section.key": "e44ff1be-2379-42cd-b13a-90664789d245",
@@ -1415,7 +1415,7 @@
       "key": "a27cc22f-52f1-471e-bc51-5f5afdf19f20",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 7 to complete Levels 7 and 8\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 7 to complete Levels 7 and 8\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python, Pandas, or Matplotlib.",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1427,7 +1427,7 @@
       "key": "f5edb261-cfd4-4ef8-95c8-2ab396ad489f",
       "position": 6,
       "properties": {
-        "description": "\n- **Level 7:** Students will use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a line graph.\n- **Level 8:** Students will use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a bar chart.\n\n",
+        "description": "\n- **Level 7:** Students use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a line graph.\n- **Level 8:** Students use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a bar chart.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1506,7 +1506,7 @@
       "key": "ae715c69-cf75-4df8-8f3b-8de7d170c59d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 7 with their partner.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications. Check the levels for common mistakes and misconceptions and how to help. Listen to students conversations in their pair programming partners and ask them questions about what the code is doing. Look for things students are noticing to share in the group discussion later.\n\n\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete Levels 2 through 7 with their partner.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python, Pandas, or Matplotlib.Check the levels for common mistakes and misconceptions and how to help. Listen to students conversations in their pair programming partners and ask them questions about what the code is doing. Look for things students are noticing to share in the group discussion later.\n\n\n\n",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -1518,7 +1518,7 @@
       "key": "30e7c379-81e7-48ad-bcd6-2498ce8a2e7c",
       "position": 4,
       "properties": {
-        "description": "- **Level 2 & 3:** Use the indexing operator to create and filter columns in a dataframe.\n- **Level 4:** Work with `.iloc[ ]` to access values\n- **Level 5:** Work with `.loc[ ]` to access and modify values\n- **Level 6:** Use the `groupby()` function and aggregate data based on created groups.\n- **Level 7:** Students complete a quick check for understanding.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What did you discover from the modifications you made to the code?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are lots of discoveries that students should make from the Investigate and Modify levels. Amongst those are:\n- How use the indexing operator to create subgroups of data\n- How to use `iloc` and `loc` to access and modify specific pieces of data\n- `iloc` is helpful when you know the index of something you want to change, - `loc` is helpful when you know the names\n- You can group data by specific factors using `groupby()`\n- You can then perform functions on that grouped data, like `mean()` and `sum()`"
+        "description": "- **Level 2 & 3:** Use the indexing operator to create and filter columns in a dataframe.\n- **Level 4:** Work with `.iloc[ ]` to access values\n- **Level 5:** Work with `.iloc[ ]` to access and modify values\n- **Level 6:** Use the `groupby()` function and aggregate data based on created groups.\n- **Level 7:** Students complete a quick check for understanding.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What did you discover from the modifications you made to the code?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are lots of discoveries that students should make from the Investigate and Modify levels. Amongst those are:\n- How use the indexing operator to create subgroups of data\n- How to use `iloc` and `loc` to access and modify specific pieces of data\n- `iloc` is helpful when you know the index of something you want to change, - `loc` is helpful when you know the names\n- You can group data by specific factors using `groupby()`\n- You can then perform functions on that grouped data, like `mean()` and `sum()`"
       },
       "seeding_key": {
         "activity_section.key": "30e7c379-81e7-48ad-bcd6-2498ce8a2e7c",
@@ -1540,7 +1540,7 @@
       "key": "638919fd-6f4b-4369-bf55-93f5581f72a1",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6 to complete Levels 8 and 9.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications. Check the levels for likely errors and misconceptions and how you can help students through them.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6 to complete Levels 8 and 9.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python, Pandas, or Matplotlib.",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1666,7 +1666,7 @@
       "key": "8bf4bf06-a0d2-4716-96ca-466533e97551",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 2 through 6.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students collaborate with each other, providing support to those who are stuck. As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.\n\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 2 through 6.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students collaborate with each other, providing support to those who are stuck. As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python, Pandas, or Matplotlib.\n\n\n",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -1814,7 +1814,7 @@
       "key": "c7e45adc-7675-4733-9e3b-713fa03258f2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 2 through 6.\n- **Level 2:** Students explore how `unstack()` and different grouping parameters affect the structure and readability of stacked bar charts.\n- **Level 3:** Students customize the stacked bar chart by changing the chart type, adjusting the legend position, and experimenting with other parameters to improve clarity\n- **Level 4:** Students enhance the stacked bar chart by adding custom colors and adjusting `xticks` rotation to improve readability and visual appeal.\n- **Level 5:** Students explore the creation of pie charts by changing grouping parameters (e.g., Weather Conditions vs. Time of Day) and discussing the impact on the distribution shown.\n- **Level 6:** Students customize pie charts by modifying parameters such as `colors`, `explode`, and `startangle` to explore how these changes affect clarity and impact.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 2 through 7.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, observe how they interact with the code and discuss their findings. Provide support to those who may struggle with understanding the role of functions like unstack() or size() and how different visual customizations affect readability. Encourage students to experiment with various parameters and discuss how each change enhances or detracts from the clarity of the data visualization. Remind them to work with their partner to talk through questions and to seek clarification. Students can also refer to the Python documentation to get more information about Python, Pandas, or Matplotlib.",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -1826,7 +1826,7 @@
       "key": "513adc84-8440-4097-94a6-62a93a15f30e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, observe how they interact with the code and discuss their findings. Provide support to those who may struggle with understanding the role of functions like unstack() or size() and how different visual customizations affect readability. Encourage students to experiment with various parameters and discuss how each change enhances or detracts from the clarity of the data visualization. Remind them to use the AI Tutor for additional programming support and clarifications.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code. Do a quick whip around to allow students to share one thing they discovered or ask students to Raise a Righteous Hand to volunteer to share.\n",
+        "description": "- **Level 2:** Students explore how `unstack()` and different grouping parameters affect the structure and readability of stacked bar charts.\n- **Level 3:** Students customize the stacked bar chart by changing the chart type, adjusting the legend position, and experimenting with other parameters to improve clarity\n- **Level 4:** Students enhance the stacked bar chart by adding custom colors and adjusting `xticks` rotation to improve readability and visual appeal.\n- **Level 5:** Students explore the creation of pie charts by changing grouping parameters (e.g., Weather Conditions vs. Time of Day) and discussing the impact on the distribution shown.\n- **Level 6:** Students customize pie charts by modifying parameters such as `colors`, `explode`, and `startangle` to explore how these changes affect clarity and impact.\n- **Level 7:** Students complete a quick check for understanding.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code. Do a quick whip around to allow students to share one thing they discovered or ask students to Raise a Righteous Hand to volunteer to share.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1854,7 +1854,8 @@
       "key": "a87b8dd2-9505-430f-8368-c38cdfe27667",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 7 through 9.\n- **Level 7:** Students choose to practice creating a stacked bar chart, a pie chart or both based on which one they think they need more practice with.\n- **Level 8:** Students create a stacked bar chart for a dataset of their choice to try to answer a data question\n- **Level 9:** Students create a pie chart for the same dataset they chose in level 8 to try to answer their data question"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 8 through 10.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the practice levels, circulate the room to ensure they are correctly using pandas functions to create their visualizations and are interpreting their charts effectively. Offer guidance by asking probing questions that encourage students to think about how their chosen visualization helps answer the data question. Help clarify any misunderstandings, particularly in choosing the appropriate chart type or grouping data correctly. Encourage students to reflect on how their findings connect to broader patterns in the data and to consider what additional insights they could uncover by refining their visualizations.",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "a87b8dd2-9505-430f-8368-c38cdfe27667",
@@ -1865,7 +1866,7 @@
       "key": "8718f15c-dea0-4883-b570-0d1752e98bf1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the practice levels, circulate the room to ensure they are correctly using pandas functions to create their visualizations and are interpreting their charts effectively. Offer guidance by asking probing questions that encourage students to think about how their chosen visualization helps answer the data question. Help clarify any misunderstandings, particularly in choosing the appropriate chart type or grouping data correctly. Encourage students to reflect on how their findings connect to broader patterns in the data and to consider what additional insights they could uncover by refining their visualizations.",
+        "description": "- **Level 8:** Students choose to practice creating a stacked bar chart, a pie chart or both based on which one they think they need more practice with.\n- **Level 9:** Students create a stacked bar chart for a dataset of their choice to try to answer a data question\n- **Level 10:** Students create a pie chart for the same dataset they chose in level 8 to try to answer their data question",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1972,7 +1973,7 @@
       "key": "f6907929-8d72-4b67-aef6-0a3545774baf",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 2 through 4.\n- **Level 2:** Students investigate the dataset by calculating the lowest sea level anomaly, then modify the code to find the highest sea level anomaly, discussing the differences and implications of these values.\n- **Level 3:** Students identify overall patterns and trends in the dataset by using the `sum()` function to calculate total sea level anomalies over time.\n- **Level 4:** Students perform multiple aggregations on the dataset using the `agg()` function, summarizing and visualizing total, average, minimum, and maximum sea level anomalies to uncover long-term trends and patterns.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 2 through 5.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students collaborate with each other, providing support to those who are stuck. As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python, Pandas, or Matplotlib.\n\n",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -1984,7 +1985,7 @@
       "key": "004034de-bb2b-4287-b380-50385e8bbf6f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students collaborate with each other, providing support to those who are stuck. As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications."
+        "description": "- **Level 2:** Students investigate the dataset by calculating the lowest sea level anomaly, then modify the code to find the highest sea level anomaly, discussing the differences and implications of these values.\n- **Level 3:** Students identify overall patterns and trends in the dataset by using the `sum()` function to calculate total sea level anomalies over time.\n- **Level 4:** Students perform multiple aggregations on the dataset using the `agg()` function, summarizing and visualizing total, average, minimum, and maximum sea level anomalies to uncover long-term trends and patterns.\n- **Level 5:** Students complete a quick check for understanding."
       },
       "seeding_key": {
         "activity_section.key": "004034de-bb2b-4287-b380-50385e8bbf6f",
@@ -2040,7 +2041,8 @@
       "key": "8f79dbc8-fd7f-4044-9706-2bed86264050",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 6 through 8.\n- **Level 5:** Student practice using the `sum()` function in combination with `groupby()`.\n- **Level 6:** Student practice using the `agg()` function in combination with `groupby()`.\n- **Level 7:** Students practice all the data analysis pandas functions with a dataset of their choice.\n- **Level 8:** Students reflect on and create a brief hypotheses based on their analysis from level 7."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 6 through 9.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the practice levels, circulate the room to ensure they are correctly applying pandas functions and interpreting their results. Offer guidance by asking probing questions that encourage deeper analysis and help clarify any misunderstandings, ensuring that students connect their findings to broader trends or hypotheses.",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "8f79dbc8-fd7f-4044-9706-2bed86264050",
@@ -2051,7 +2053,7 @@
       "key": "6bf4c226-272f-4257-bfbb-6b7b920ed01b",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the practice levels, circulate the room to ensure they are correctly applying pandas functions and interpreting their results. Offer guidance by asking probing questions that encourage deeper analysis and help clarify any misunderstandings, ensuring that students connect their findings to broader trends or hypotheses.",
+        "description": "\n\n- **Level 6:** Student practice using the `sum()` function in combination with `groupby()`.\n- **Level 7:** Student practice using the `agg()` function in combination with `groupby()`.\n- **Level 8:** Students practice all the data analysis pandas functions with a dataset of their choice.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2163,7 +2165,7 @@
       "key": "e4203a90-8223-471c-9792-aa4c659aceb1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 2 through 6.\n- **Level 2:** Introduction to the `str.endswith()` function and its application on both the Alias and City attributes in the superhero dataset.\n- **Level 3:** Introduction to the `notnull()` function. Students will uncomment a line within the code and discuss the difference in output before and after uncommenting.\n- **Level 4:** An exploration of how the `notnull()` function can be used to get more accurate results when aggregating data.\n- **Level 5:** An exploration of using multiple logical operators in order to apply filters and aggregate the results.\n- **Level 6:** Introduction to the not operator and how it might be used when filtering data.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 2 through 7.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python, Pandas, or Matplotlib.\n",
         "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
@@ -2175,7 +2177,7 @@
       "key": "994e49b9-212d-4471-83e5-d760e4020057",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications."
+        "description": "- **Level 2:** Introduction to the `str.endswith()` function and its application on both the Alias and City attributes in the superhero dataset.\n- **Level 3:** Introduction to the `notnull()` function. Students will uncomment a line within the code and discuss the difference in output before and after uncommenting.\n- **Level 4:** An exploration of how the `notnull()` function can be used to get more accurate results when aggregating data.\n- **Level 5:** An exploration of using multiple logical operators in order to apply filters and aggregate the results.\n- **Level 6:** Introduction to the not operator and how it might be used when filtering data.\n- **Level 7:** Students complete a quick check for understanding."
       },
       "seeding_key": {
         "activity_section.key": "994e49b9-212d-4471-83e5-d760e4020057",
@@ -2208,7 +2210,8 @@
       "key": "f8af965e-dd71-4bff-aba3-f75b1f73ef17",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 7 to complete Levels 7 and 8.\n- **Level #7:** Students will use `notnull()`, `str.endswith()`, and logical operators to create a complex filter for a new DataFrame.\n- **Level #8:** Students will create a complex filter and will use the new DataFrame that it creates in order to visualize the data in an insightful manner."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 8 to complete Levels 8 and 9.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to work with their partner to talk through questions and to seek clarifications. Students can also refer to the Python documentation to get more information about Python, Pandas, or Matplotlib.",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "f8af965e-dd71-4bff-aba3-f75b1f73ef17",
@@ -2219,10 +2222,10 @@
       "key": "d3ac2cf3-740d-49a0-ba31-9bb193ae7bc7",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through these levels, remind them to use the AI Tutor to ask questions and to seek clarifications.",
+        "description": "- **Level 8:** Students will use `notnull()`, `str.endswith()`, and logical operators to create a complex filter for a new DataFrame.\n- **Level 9:** Students will create a complex filter and will use the new DataFrame that it creates in order to visualize the data in an insightful manner.",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "assessmentOpportunity",
             "markdown": "These levels assess the following learning objectives:\n- Using logical operators (and, or, not) in conjunction with pandas functions to create complex data filters.\n- Using the str.endswith() function to filter data based on suffix criteria.\n- Combining str.endswith(), notnull(), and logical operators to apply multiple conditions for data filtering"
           }
         ]
@@ -2301,7 +2304,8 @@
       "key": "192a9698-4638-4512-9f76-9ba47ee20aeb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to explore their data. If students have time, they can also start creating visualizations.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Encourage students to share and discuss their exploration process and any initial insights or questions they have with a thought partner while working. Remind students to use their project guide to record the initial insights they gain from their data as well as any additional thoughts or questions that come up as they explore. As you move around the room, engage students with questions about their data decisions. Encourage students who finish exploring and making decisions with their data early to start creating visualizations that will help them answer their data question. \n\n\n"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to explore their data. If students have time, they can also start creating visualizations.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Encourage students to share and discuss their exploration process and any initial insights or questions they have with a thought partner while working. Remind students to use their project guide to record the initial insights they gain from their data as well as any additional thoughts or questions that come up as they explore. As you move around the room, engage students with questions about their data decisions. Encourage students who finish exploring and making decisions with their data early to start creating visualizations that will help them answer their data question. \n\n\n",
+        "progression_name": "Data Project"
       },
       "seeding_key": {
         "activity_section.key": "192a9698-4638-4512-9f76-9ba47ee20aeb",
@@ -3586,6 +3590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L7Prac_2024-pilot"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3608,6 +3615,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L8Prac_2024-pilot"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3780,6 +3790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L7Prac_2024-pilot"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3802,6 +3815,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L8Prac_2024-pilot"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3995,6 +4011,81 @@
     },
     {
       "chapter": 60,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "datascience-U2L8-L8Prac_2024-pilot"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L8-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "a87b8dd2-9505-430f-8368-c38cdfe27667"
+      },
+      "level_keys": [
+        "datascience-U2L8-L8Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "datascience-U2L8-L9Prac_2024-pilot"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L8-L9Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "a87b8dd2-9505-430f-8368-c38cdfe27667"
+      },
+      "level_keys": [
+        "datascience-U2L8-L9Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "datascience-U2L8-L10Prac_2024-pilot"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L8-L10Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "a87b8dd2-9505-430f-8368-c38cdfe27667"
+      },
+      "level_keys": [
+        "datascience-U2L8-L10Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4019,7 +4110,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4044,7 +4135,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4069,7 +4160,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4094,7 +4185,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4119,7 +4210,82 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "datascience-U2L9-L6_2024-pilot"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L9-L6_2024-pilot"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "8f79dbc8-fd7f-4044-9706-2bed86264050"
+      },
+      "level_keys": [
+        "datascience-U2L9-L6_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "datascience-U2L9-L7_2024-pilot"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L9-L7_2024-pilot"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "8f79dbc8-fd7f-4044-9706-2bed86264050"
+      },
+      "level_keys": [
+        "datascience-U2L9-L7_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "datascience-U2L9-L8Prac_2024-pilot"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L9-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "8f79dbc8-fd7f-4044-9706-2bed86264050"
+      },
+      "level_keys": [
+        "datascience-U2L9-L8Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4144,7 +4310,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4169,7 +4335,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4194,7 +4360,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 74,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4219,7 +4385,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 75,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4244,7 +4410,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 76,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4269,7 +4435,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 77,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4291,6 +4457,81 @@
       },
       "level_keys": [
         "datascience-U2L10-CFU_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "datascience-U2L10-L8Prac_2024-pilot"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L10-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "f8af965e-dd71-4bff-aba3-f75b1f73ef17"
+      },
+      "level_keys": [
+        "datascience-U2L10-L8Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "datascience-U2L10-L9Prac_2024-pilot"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L10-L9Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "f8af965e-dd71-4bff-aba3-f75b1f73ef17"
+      },
+      "level_keys": [
+        "datascience-U2L10-L9Prac_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "datascience-U2L11-L1_2024-pilot"
+        ],
+        "progression": "Data Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datascience-U2L11-L1_2024-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "192a9698-4638-4512-9f76-9ba47ee20aeb"
+      },
+      "level_keys": [
+        "datascience-U2L11-L1_2024-pilot"
       ]
     }
   ],
@@ -5005,6 +5246,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "datascience-U2L8-L8Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L8-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "a87b8dd2-9505-430f-8368-c38cdfe27667"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L8-L9Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L8-L9Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "a87b8dd2-9505-430f-8368-c38cdfe27667"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L8-L10Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L8-L10Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "a87b8dd2-9505-430f-8368-c38cdfe27667"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "datascience-U2L9-L1_2024-pilot",
         "script_level.level_keys": [
           "datascience-U2L9-L1_2024-pilot"
@@ -5061,6 +5338,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "data-science-with-python-2024",
         "activity_section.key": "f6907929-8d72-4b67-aef6-0a3545774baf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L9-L6_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L9-L6_2024-pilot"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "8f79dbc8-fd7f-4044-9706-2bed86264050"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L9-L7_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L9-L7_2024-pilot"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "8f79dbc8-fd7f-4044-9706-2bed86264050"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L9-L8Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L9-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "8f79dbc8-fd7f-4044-9706-2bed86264050"
       }
     },
     {
@@ -5146,6 +5459,42 @@
         "script.name": "data-science-with-python-2024",
         "activity_section.key": "e4203a90-8223-471c-9792-aa4c659aceb1"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L10-L8Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L10-L8Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "f8af965e-dd71-4bff-aba3-f75b1f73ef17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L10-L9Prac_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L10-L9Prac_2024-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "f8af965e-dd71-4bff-aba3-f75b1f73ef17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datascience-U2L11-L1_2024-pilot",
+        "script_level.level_keys": [
+          "datascience-U2L11-L1_2024-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "192a9698-4638-4512-9f76-9ba47ee20aeb"
+      }
     }
   ],
   "resources": [
@@ -5171,6 +5520,39 @@
       },
       "seeding_key": {
         "resource.key": "accessing_and_grouping_values"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/data-science-with-python-2024/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/data-science-with-python-2024/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/data-science-with-python-2024/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
       }
     },
     {
@@ -5210,6 +5592,39 @@
       }
     },
     {
+      "name": "Data Science Unit 2 Guided Notes",
+      "url": "https://docs.google.com/document/d/175Tq55HFroHz8RIv6MyEvPGV2bNFRvxm3LizFAcvx20/edit?usp=drive_link",
+      "key": "data_science_unit_2_guided_notes_1",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_guided_notes_1"
+      }
+    },
+    {
+      "name": "Data Science Unit 2 Overview",
+      "url": "https://docs.google.com/document/d/1S3LnMEV4V3A8eEA7bXAaYXtGXco2QbtiZSywaR5vIvw/view",
+      "key": "data_science_unit_2_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_overview"
+      }
+    },
+    {
+      "name": "Data Science Unit 2 Study Guide",
+      "url": "https://docs.google.com/document/d/1q-bcf53SVePWCeWuTmP0Lp3K2ju3ydH-dXFYHhXX3lk/edit?usp=drive_link",
+      "key": "data_science_unit_2_study_guide_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_study_guide_1"
+      }
+    },
+    {
       "name": "Exploratory Data Analysis",
       "url": "https://docs.google.com/presentation/d/1NnZk4lfwSDAgtI30pc32mmFLol1GyB3I2w9E8qEiWIk/template/preview",
       "key": "exploratory_data_analysis",
@@ -5243,6 +5658,38 @@
       },
       "seeding_key": {
         "resource.key": "getting_to_know_your_data"
+      }
+    },
+    {
+      "name": "Guide to Anchor Charts & Word Walls",
+      "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/view",
+      "key": "guide_to_anchor_charts_word_walls",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_anchor_charts_word_walls"
+      }
+    },
+    {
+      "name": "Guide to Language Routines",
+      "url": "https://docs.google.com/document/d/1B93Lzlo63VrBNjlc3puiujew8gtMFanxSdXx3lqzIrs/view",
+      "key": "guide_to_language_routines",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_language_routines"
+      }
+    },
+    {
+      "name": "Guide to Programming Levels",
+      "url": "https://docs.google.com/document/d/1OpnzuyuSCpkglUer9j4qFbjTI85RczLMy52AAIpxPQc/edit",
+      "key": "guide_to_programming_levels",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels"
       }
     },
     {
@@ -5365,6 +5812,17 @@
       },
       "seeding_key": {
         "resource.key": "python_anticipation_guide_1"
+      }
+    },
+    {
+      "name": "Python / Pandas Documentation",
+      "url": "https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit?usp=drive_link",
+      "key": "python_pandas_documentation_1",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "python_pandas_documentation_1"
       }
     },
     {
@@ -5570,7 +6028,66 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_guided_notes_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_overview",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_study_guide_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_anchor_charts_word_walls",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_language_routines",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "python_pandas_documentation_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

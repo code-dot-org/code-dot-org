@@ -1,0 +1,22 @@
+name 'SP-PL-DS-Predict_Debrief2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Debriefing Predict and Run
+
+![](https://images.code.org/0775ea481cc2e512a5a7e4c631f05dd7-image-1727200443017.png)
+
+## Prediction Discussion
+
+
+#### While you may not fully understand the code yet, you can infer it calculates a dog's age in "dog years" by looking at the variable names and the output message.
+
+#### You may have noticed: 
+
+- #### Variable types: int, str, and list
+- #### concatenation in the print() function
+- #### simple math expressions
+
+#### The goal at this stage isn't for your students to master these concepts yet—those skills will come in later lessons. Instead, the focus is on encouraging your students to analyze and discuss the code, sparking critical thinking about how it works.
+MARKDOWN

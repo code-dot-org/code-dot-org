@@ -2,6 +2,7 @@
 title: Teach Computer Science
 theme: responsive_full_width
 ---
+%script{src: webpack_asset_path('js/code.org/public/teach.js')}
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/teach-styles.css", rel: "stylesheet"}
@@ -13,7 +14,7 @@ theme: responsive_full_width
       %p=hoc_s(:teach_page_top_desc_01)
       %p.body-three
         =hoc_s(:teach_page_top_desc_02)
-      %a{href: CDO.studio_url("/users/sign_up"), class: "link-button"}
+      %a#signup-link{href: CDO.studio_url("/users/sign_up"), class: "link-button"}
         =hoc_s(:call_to_action_sign_up_free)
     %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
       %img.rounded-corners.box-shadow-primary{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
