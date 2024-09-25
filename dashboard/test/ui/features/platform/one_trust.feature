@@ -2,7 +2,8 @@
 Feature: OneTrust integration
   @eyes
   Scenario: User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on hourofcode
-    Given I am on "http://hourofcode.com/uk?otreset=true&otgeo=gb"
+    Given I am in Europe
+    Given I am on "http://hourofcode.com/es?otreset=true&otgeo=es"
     And I open my eyes to test "Hour of code Onetrust pop up"
     And I wait until element "#onetrust-banner-sdk" is visible
     And I see no difference for "Onetrust pop up: Hour of Code" using stitch mode "none"
@@ -11,29 +12,32 @@ Feature: OneTrust integration
   @eyes
   Scenario: User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org
     Given I create a student named "Alice"
-    Given I am on "http://studio.code.org/home?otreset=true&otgeo=gb"
+    Given I am in Europe
+    Given I am on "http://studio.code.org/home?otreset=true&otgeo=es"
     And I open my eyes to test "Code.org Onetrust pop up"
     And I wait until element "#onetrust-banner-sdk" is visible
     And I see no difference for "Onetrust pop up: code.org" using stitch mode "none"
     And I close my eyes
 
   Scenario: OneTrust cookie pop-up shows when self-hosting OneTrust libraries on hourofocode
-    Given I am on "http://hourofcode.com/uk?otreset=true&otgeo=gb"
+    Given I am in Europe
+    Given I am on "http://hourofcode.com/es?otreset=true&otgeo=es"
     And I wait until element "#onetrust-banner-sdk" is visible
 
   Scenario: OneTrust cookie pop-up shows when self-hosting OneTrust libraries on code.org
     Given I create a student named "Alice"
-    Given I am on "http://studio.code.org/home?otreset=true&otgeo=gb"
+    Given I am in Europe
+    Given I am on "http://studio.code.org/home?otreset=true&otgeo=es"
     And I wait until element "#onetrust-banner-sdk" is visible
 
   Scenario: The pages load the self hosted OneTrust libraries.
     Given I am on "http://studio.code.org/users/sign_in"
-    Then element "script[src$='onetrust/scripttemplates/otSDKStub.js']" does exist
+    Then element "script[src$='onetrust/cdo/scripttemplates/otSDKStub.js']" does exist
     Then element "script[src$='977d/OtAutoBlock.js']" does exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
 
     Given I am on "http://code.org/index"
-    Then element "script[src$='onetrust/scripttemplates/otSDKStub.js']" does exist
+    Then element "script[src$='onetrust/cdo/scripttemplates/otSDKStub.js']" does exist
     Then element "script[src$='977d/OtAutoBlock.js']" does exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
 
@@ -42,7 +46,7 @@ Feature: OneTrust integration
     Then element "script[src$='e345/OtAutoBlock.js']" does exist
     Then element "script[src$='e345-test/OtAutoBlock.js']" does not exist
 
-  Scenario: The pages load the Onetrust hosted prod libraries.
+  Scenario: The pages load the Onetrust prod libraries.
     Given I am on "http://studio.code.org/users/sign_in"
     When I use a cookie to mock the DCDO key "onetrust_cookie_scripts" as "prod"
     Given I am on "http://studio.code.org/users/sign_in"
@@ -113,9 +117,10 @@ Feature: OneTrust integration
 
   @as_student
   Scenario Outline: Embedded projects do not display the OneTrust banner
+    Given I am in Europe
     Given I am on "<url>"
     Then I switch to the embedded view of current project
-    Then I append "?otreset=true&otgeo=gb" to the URL
+    Then I append "?otreset=true&otgeo=es" to the URL
     Then element "script[src$='otSDKStub.js']" does not exist
     Then element "script[src$='OtAutoBlock.js']" does not exist
   Examples:

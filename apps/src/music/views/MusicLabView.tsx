@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React, {useCallback, useContext, useEffect} from 'react';
+import {useSelector} from 'react-redux';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
@@ -11,12 +12,14 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
-import AppConfig, {getBaseAssetUrl} from '../appConfig';
+import AppConfig from '../appConfig';
+import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import musicI18n from '../locale';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
 import {
+  getBlockMode,
   InstructionsPosition,
   setCurrentPlayheadPosition,
   showCallout,
@@ -89,6 +92,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+  const blockMode = useSelector(getBlockMode);
   // Pass music validator to Progress Manager
   useEffect(() => {
     if (progressManager && appName === 'music') {
@@ -107,6 +111,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       });
     }
   }, [blocklyWorkspace, isStartMode, levelData]);
+
+  useEffect(() => {
+    installFunctionBlocks(blockMode);
+  }, [blockMode]);
 
   // Update loop that runs while playback is in progress.
   const doPlaybackUpdate = useCallback(() => {
@@ -151,13 +159,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             hideHeaders={hideHeaders}
           >
             <Instructions
-              baseUrl={getBaseAssetUrl() || ''}
               layout={
                 position !== InstructionsPosition.TOP
                   ? 'vertical'
                   : 'horizontal'
               }
               handleInstructionsTextClick={onInstructionsTextClick}
+              offerTts={AppConfig.getValue('show-tts') === 'true'}
             />
           </PanelContainer>
         </div>

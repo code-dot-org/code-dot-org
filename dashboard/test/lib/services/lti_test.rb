@@ -491,6 +491,46 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert_equal lti_section.followers.last, user_to_remove
   end
 
+  test 'should add new user lti_user_identity to deployment when syncing a section' do
+    auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
+    user = create :teacher
+    create :lti_authentication_option, user: user, authentication_id: auth_id
+
+    section = create :section, user: user
+
+    lti_deployment = create :lti_deployment, lti_integration: @lti_integration
+    lti_course = create :lti_course, lti_integration: @lti_integration, lti_deployment: lti_deployment
+    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    nrps_section = parsed_response[@lms_section_ids.first.to_s]
+
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
+    assert_equal 4, lti_deployment.lti_user_identities.length
+  end
+
+  test 'should not add user lti_user_identity to deployment if it already exists' do
+    auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
+    user = create :teacher
+    create :lti_authentication_option, user: user, authentication_id: auth_id
+
+    section = create :section, user: user
+
+    lti_deployment = create :lti_deployment, lti_integration: @lti_integration
+    lti_course = create :lti_course, lti_integration: @lti_integration, lti_deployment: lti_deployment
+    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
+    nrps_section = parsed_response[@lms_section_ids.first.to_s]
+
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
+    assert_equal 4, lti_deployment.lti_user_identities.length
+
+    # Sync section again
+    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
+    assert_equal 4, lti_deployment.lti_user_identities.length
+  end
+
   test 'should unarchive synced sections' do
     auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
     user = create :teacher

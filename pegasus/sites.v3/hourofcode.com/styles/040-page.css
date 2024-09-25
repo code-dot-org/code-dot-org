@@ -336,6 +336,11 @@ td {
       flex-direction: column;
     }
   }
+  &.flex-direction-column-mobile-reverse {
+    @media screen and (max-width: 640px) {
+      flex-direction: column-reverse;
+    }
+  }
   &.flex-direction-row {
     flex-direction: row;
   }
@@ -440,7 +445,7 @@ swiper-slide {
 .carousel-wrapper .swiper-nav-prev,
 .carousel-wrapper .swiper-nav-next {
   position: absolute;
-  top: 40%;
+  top: calc(50% - 3.25rem);
   border: 0;
   height: 48px;
 }
@@ -460,7 +465,7 @@ swiper-slide {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .carousel-wrapper .swiper-nav-prev,
   .carousel-wrapper .swiper-nav-next {
     display: none;
@@ -480,7 +485,7 @@ swiper-slide {
 
 .carousel-wrapper.video-carousel .swiper-nav-prev,
 .carousel-wrapper.video-carousel .swiper-nav-next {
-  top: 28%;
+  top: 30%;
 }
 
 /* Begin legacy styles ------------------------ */
@@ -540,13 +545,21 @@ button {
   text-decoration: none;
   text-transform: none;
   vertical-align: middle;
-  white-space: nowrap;
 }
 
 a.link-button:hover,
 button:hover {
   background-color: var(--brand_secondary_dark);
   border-color: var(--brand_secondary_dark);
+}
+
+a.link-button:focus {
+  outline: var(--brand_primary_default) solid 2px;
+  outline-offset: 2px;
+
+  &:not(:focus-visible) {
+    outline: none;
+  }
 }
 
 a.link-button.secondary {
@@ -590,6 +603,28 @@ a.link-button.black {
     background: black;
     border-color: black;
   }
+}
+
+/* Adds an icon to external links
+  - apply this class to container elements or directly onto
+  an "a" tag when a link opens in a new tab or window */
+.has-external-link a::after,
+a.has-external-link::after {
+  display: inline-block;
+  font: var(--fa-font-solid);
+  content: "\f08e";
+  font-size: 0.875em;
+  margin-inline: 4px 2px;
+}
+
+.has-external-link a.link-button::after,
+a.link-button.has-external-link::after {
+  margin-inline: 4px 0;
+}
+
+html[dir="rtl"] .has-external-link a::after,
+html[dir="rtl"] a.has-external-link::after {
+  transform: scaleX(-1);
 }
 
 /* Button wrapper for side-by-side buttons */

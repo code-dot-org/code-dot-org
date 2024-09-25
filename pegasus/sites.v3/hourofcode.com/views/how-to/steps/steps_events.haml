@@ -2,23 +2,23 @@
   steps_educators_index = 7
 
   steps_educators_heading = [
-    hoc_s(:hoc_how_to_step_label_register_event),
-    hoc_s(:hoc_how_to_step_label_choose_activities),
-    hoc_s(:hoc_how_to_step_label_prepare_your_event),
-    hoc_s(:hoc_how_to_step_label_plan_your_hour),
-    hoc_s(:hoc_how_to_step_label_get_coding),
-    hoc_s(:hoc_how_to_step_label_after_event),
-    hoc_s(:hoc_how_to_step_label_beyond_hoc)
+    hoc_s("hoc_how_to.label.register"),
+    hoc_s("hoc_how_to.label.choose"),
+    hoc_s("hoc_how_to.label.prepare"),
+    hoc_s("hoc_how_to.label.plan_hour"),
+    hoc_s("hoc_how_to.label.get_coding"),
+    hoc_s("hoc_how_to.label.after"),
+    hoc_s("hoc_how_to.label.beyond")
   ]
 
   steps_educators_desc = [
-    hoc_s(:hoc_how_to_step_events_register_desc_01, markdown: :inline, locals:{share_url: "https://docs.google.com/forms/d/e/1FAIpQLSdD90kD2nkNZqTUMcAb2cQdOhUv99Q5XDQmkLDec25yZJHYhw/viewform"}),
-    hoc_s(:hoc_how_to_step_choose_activities_desc_01),
-    hoc_s(:hoc_how_to_step_events_prepare_desc_01),
-    hoc_s(:hoc_how_to_step_plan_hour_desc_01),
-    hoc_s(:hoc_how_to_step_events_get_coding_desc_01),
-    hoc_s(:hoc_how_to_step_events_after_desc_01),
-    hoc_s(:hoc_how_to_step_beyond_hoc_subhead)
+    hoc_s("hoc_how_to.events.steps.register"),
+    hoc_s("hoc_how_to.events.steps.choose_activity"),
+    "",
+    hoc_s("hoc_how_to.events.steps.plan.body_01"),
+    hoc_s("hoc_how_to.events.steps.get_coding.body_01"),
+    hoc_s("hoc_how_to.events.steps.after.body_01"),
+    hoc_s("hoc_how_to.events.steps.beyond.body_01")
   ]
 
 %section.steps
@@ -42,78 +42,72 @@
             - if index === 0
               %p.tag
                 =hoc_s(:before_hoc)
-              %p
-                =hoc_s(:hoc_how_to_step_events_register_desc_02, markdown: :inline, locals:{map_url: resolve_url("/map")})
               .button-wrapper
                 %a.link-button{href: resolve_url("/events")}
                   =hoc_s(:call_to_action_register_event)
-                %a.link-button.secondary{href: "https://docs.google.com/forms/d/e/1FAIpQLSdD90kD2nkNZqTUMcAb2cQdOhUv99Q5XDQmkLDec25yZJHYhw/viewform"}
-                  =hoc_s(:call_to_action_share_event_plan)
 
             -# Step 2 additional content
             - if index === 1
-              %p
-                =hoc_s(:hoc_how_to_step_choose_activities_desc_02, markdown: :inline, locals:{activities_url: resolve_url("/learn"), ai_activities_url: resolve_url("/learn?subject=ai")})
-              %p
-                =hoc_s(:hoc_how_to_step_choose_activities_desc_03, markdown: :inline, locals:{ai_url: resolve_url("/ai")})
-              %img{src: "/images/activites_2023.jpg", alt: ""}
-              .button-wrapper
-                %a.link-button{href: resolve_url("/learn")}
-                  =hoc_s(:call_to_action_select_coding_activity)
-                %a.link-button.secondary{href: resolve_url("/ai")}
-                  =hoc_s(:call_to_action_learn_about_ai)
+              %img{src: "/images/activities_2024.jpg", alt: ""}
+              %a.link-button{href: resolve_url("/learn")}
+                =hoc_s(:call_to_action_select_coding_activity)
 
             -# Step 3 additional content
             - if index === 2
-              %p
-                =hoc_s(:hoc_how_to_step_events_prepare_desc_02, markdown: :inline, locals:{letter_url: resolve_url("/promote/resources#sample-emails"), toolkit_url: "/files/elected-official.pdf"})
-              %p.no-margin-bottom
-                =hoc_s(:hoc_how_to_step_events_prepare_desc_03, markdown: :inline, locals:{press_kit_url: resolve_url("/promote/press-kit")})
+              %ul
+                %li
+                  =hoc_s("hoc_how_to.events.steps.prepare.list_01")
+                %li
+                  =hoc_s("hoc_how_to.events.steps.prepare.list_02")
+                %li.no-margin-bottom
+                  =hoc_s("hoc_how_to.events.steps.prepare.list_03")
+              %a.link-button{href: resolve_url("/promote")}
+                =hoc_s("hoc_how_to.button.get_resources")
 
             -# Step 4 additional content
             - if index === 3
               %ul
                 %li
-                  =hoc_s(:hoc_how_to_step_events_plan_hour_desc_02, markdown: :inline, locals:{videos_url: resolve_url("/promote/resources#videos")})
+                  =hoc_s(:hoc_how_to_step_events_plan_hour_desc_02, markdown: :inline, locals:{videos_url: resolve_url("/resources#videos")})
                 %li
-                  =hoc_s(:hoc_how_to_step_events_plan_hour_desc_03, markdown: :inline, locals:{stats_url: resolve_url("/promote/stats")})
+                  =hoc_s("hoc_how_to.events.steps.plan.list_02")
                 %li
-                  =hoc_s(:hoc_how_to_step_events_plan_hour_desc_04)
+                  =hoc_s("hoc_how_to.events.steps.plan.list_03")
                 %li
-                  =hoc_s(:hoc_how_to_step_events_plan_hour_desc_05)
+                  =hoc_s("hoc_how_to.events.steps.plan.list_04")
                 %li
-                  =hoc_s(:hoc_how_to_step_events_plan_hour_desc_06)
+                  =hoc_s("hoc_how_to.events.steps.plan.list_05")
                 %li
-                  =hoc_s(:hoc_how_to_step_events_plan_hour_desc_07)
+                  =hoc_s("hoc_how_to.events.steps.plan.list_06")
 
             -# Step 5 additional content
             - if index === 4
               %p.tag
                 =hoc_s(:day_of_hoc)
               %p.no-margin-bottom
-                =hoc_s(:hoc_how_to_step_events_get_coding_desc_02)
+                =hoc_s("hoc_how_to.events.steps.get_coding.body_02")
 
             -# Step 6 additional content
             - if index === 5
               %ul
                 %li
-                  =hoc_s(:hoc_how_to_step_events_after_desc_02)
+                  =hoc_s("hoc_how_to.events.steps.after.list_01")
                 %li
-                  =hoc_s(:hoc_how_to_step_events_after_desc_03)
+                  =hoc_s("hoc_how_to.events.steps.after.list_02")
                 %li
-                  =hoc_s(:hoc_how_to_step_events_after_desc_04)
+                  =hoc_s("hoc_how_to.events.steps.after.list_03")
                 %li
-                  =hoc_s(:hoc_how_to_step_events_after_desc_05)
+                  =hoc_s("hoc_how_to.events.steps.after.list_04")
                 %li
-                  =hoc_s(:hoc_how_to_step_events_after_desc_06)
-              %a.link-button{href: "https://code.org/certificates"}
-                =hoc_s(:call_to_action_print_certificates)
+                  =hoc_s("hoc_how_to.events.steps.after.list_05")
+              %a.link-button.has-external-link{href: "https://code.org/certificates", target: "_blank", rel: "noopener noreferrer"}
+                =hoc_s("hoc_how_to.button.print_certificates")
 
             -# Step 7 additional content
             - if index === 6
               %p.tag
                 =hoc_s(:after_hoc)
               %p
-                =hoc_s(:hoc_how_to_step_beyond_hoc_desc_generic)
-              %a.link-button{href: resolve_url("/beyond")}
-                =hoc_s(:call_to_action_go_beyond_hoc)
+                =hoc_s("hoc_how_to.events.steps.beyond.body_02")
+              %a.link-button.has-external-link{href: "https://code.org", target: "_blank", rel: "noopener noreferrer"}
+                =hoc_s("hoc_how_to.button.continue_learning")

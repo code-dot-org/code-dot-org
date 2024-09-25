@@ -18,9 +18,14 @@ Dashboard::Application.routes.draw do
   # This matches any host that is not the codeprojects hostname
   constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
-    get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
-    get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
-    get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
+    resource :teacher_dashboard, only: [] do
+      resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
+        member do
+          get :parent_letter
+          get '*path', action: :show, via: :all, as: :subpath
+        end
+      end
+    end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
 
@@ -114,6 +119,9 @@ Dashboard::Application.routes.draw do
     resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
+      end
+      collection do
+        post 'section_instructors_verified'
       end
     end
     # Section API routes (JSON only)
@@ -646,6 +654,7 @@ Dashboard::Application.routes.draw do
           get :finish_link
           post :link_email
           post :new_account
+          post :unlink
         end
       end
     end
@@ -882,6 +891,7 @@ Dashboard::Application.routes.draw do
     end
 
     get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
+    get 'dashboardapi/lesson_materials/:unit_id', to: 'api#lesson_materials'
 
     # Wildcard routes for API controller: select all public instance methods in the controller,
     # and all template names in `app/views/api/*`.
@@ -1175,6 +1185,7 @@ Dashboard::Application.routes.draw do
     post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
     get '/aichat/chat_request/:id', to: 'aichat#chat_request'
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
+    post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
 

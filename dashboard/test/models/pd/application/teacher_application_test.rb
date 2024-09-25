@@ -226,7 +226,7 @@ module Pd::Application
         )
       end
 
-      application = create :pd_teacher_application, form_data_hash: (
+      application = create :pd_teacher_application, form_data_hash:
       build(:pd_teacher_application_hash, :with_multiple_workshops,
         regional_partner_workshop_ids: workshops.map(&:id),
         able_to_attend_multiple: (
@@ -236,28 +236,28 @@ module Pd::Application
         end
         )
       )
-      )
+
       assert_equal workshops[1], application.get_first_selected_workshop
     end
 
     test 'get_first_selected_workshop multiple local workshops no selection returns first' do
       workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i}
 
-      application = create :pd_teacher_application, form_data_hash: (
+      application = create :pd_teacher_application, form_data_hash:
       build(:pd_teacher_application_hash, :with_multiple_workshops,
         regional_partner_workshop_ids: workshops.map(&:id),
         able_to_attend_multiple: ['Not a workshop', 'Not a workshop 2']
       )
-      )
+
       assert_equal workshops.first, application.get_first_selected_workshop
     end
 
     test 'get_first_selected_workshop with no workshops returns nil' do
-      application = create :pd_teacher_application, form_data_hash: (
+      application = create :pd_teacher_application, form_data_hash:
       build(:pd_teacher_application_hash, :with_multiple_workshops,
         regional_partner_workshop_ids: []
       )
-      )
+
       assert_nil application.get_first_selected_workshop
     end
 
@@ -265,11 +265,10 @@ module Pd::Application
       Pd::Workshop.any_instance.stubs(:process_location)
 
       workshop = create :summer_workshop, location_address: 'Buffalo, NY', sessions_from: Date.new(2020, 1, 1)
-      application = create :pd_teacher_application, form_data_hash: (
+      application = create :pd_teacher_application, form_data_hash:
       build(:pd_teacher_application_hash,
         regional_partner_workshop_ids: [workshop.id],
         able_to_attend_multiple: ['January 1-5, 2020 in Buffalo, NY']
-      )
       )
 
       workshop.destroy
@@ -279,11 +278,10 @@ module Pd::Application
     test 'get_first_selected_workshop ignores deleted workshop from multiple list' do
       workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i}
 
-      application = create :pd_teacher_application, form_data_hash: (
+      application = create :pd_teacher_application, form_data_hash:
       build(:pd_teacher_application_hash, :with_multiple_workshops,
         regional_partner_workshop_ids: workshops.map(&:id),
         able_to_attend: [workshops.first.id, workshops.second.id]
-      )
       )
 
       workshops[0].destroy
@@ -299,20 +297,18 @@ module Pd::Application
       workshop_1.update_column(:location_address, 'Location 1')
       workshop_2.update_column(:location_address, 'Location 2')
 
-      application = create :pd_teacher_application, form_data_hash: (
+      application = create :pd_teacher_application, form_data_hash:
       build(:pd_teacher_application_hash, :with_multiple_workshops,
         regional_partner_workshop_ids: [workshop_1.id, workshop_2.id],
         able_to_attend_multiple: ["#{workshop_2.friendly_date_range} in Location 2 hosted by Code.org"]
       )
-      )
 
       assert_equal workshop_2, application.get_first_selected_workshop
 
-      application_2 = create :pd_teacher_application, form_data_hash: (
+      application_2 = create :pd_teacher_application, form_data_hash:
       build(:pd_teacher_application_hash, :with_multiple_workshops,
         regional_partner_workshop_ids: [workshop_1.id, workshop_2.id],
         able_to_attend_multiple: ["#{workshop_2.friendly_date_range} in Location 1 hosted by Code.org"]
-      )
       )
 
       assert_equal workshop_1, application_2.get_first_selected_workshop

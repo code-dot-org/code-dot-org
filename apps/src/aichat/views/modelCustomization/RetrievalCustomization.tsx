@@ -52,7 +52,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
       <div className={modelCustomizationStyles.footerButtonContainer}>
         <UpdateButton isDisabledDefault={isReadOnly} />
       </div>
-      <SaveChangesAlerts />
+      <SaveChangesAlerts isReadOnly={isReadOnly} />
     </div>
   );
 };

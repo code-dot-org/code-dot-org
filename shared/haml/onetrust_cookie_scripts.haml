@@ -15,19 +15,25 @@
 :ruby
   one_trust_domains = {
     'code.org' => {
-      'test' => '27cca70a-7db3-4852-9ef0-a6660fd0977d-test',
-      'prod' => '27cca70a-7db3-4852-9ef0-a6660fd0977d',
+      'path' => 'cdo',
+      'domain_scripts' => {
+        'test' => '27cca70a-7db3-4852-9ef0-a6660fd0977d-test',
+        'prod' => '27cca70a-7db3-4852-9ef0-a6660fd0977d',
+      },
     },
     'hourofcode.com' => {
-      'test' => '7c79c547-a2fc-4998-9b21-0c7a5e67e345-test',
-      'prod' => '7c79c547-a2fc-4998-9b21-0c7a5e67e345',
+      'path' => 'hoc',
+      'domain_scripts' => {
+        'test' => '7c79c547-a2fc-4998-9b21-0c7a5e67e345-test',
+        'prod' => '7c79c547-a2fc-4998-9b21-0c7a5e67e345',
+      },
     }
   }
 -# Don't add the libraries if the feature is 'off' or an unknown
 -# domain was given.
-- one_trust_domain = one_trust_domains.dig(domain, cookie_script_env)
+- one_trust_domain = one_trust_domains.dig(domain, 'domain_scripts', cookie_script_env)
 - if cookie_script_env != 'off' && one_trust_domain.present?
-  - base_url = onetrust_version == 'self_hosted' ? "/onetrust" : "https://cdn.cookielaw.org"
+  - base_url = onetrust_version == 'self_hosted' ? "/onetrust/#{one_trust_domains.dig(domain, 'path')}" : "https://cdn.cookielaw.org"
   - auto_block_src = "#{base_url}/consent/#{one_trust_domain}/OtAutoBlock.js"
   - consent_banner_src = "#{base_url}/scripttemplates/otSDKStub.js"
   %script{src: auto_block_src, type: 'text/javascript', charset: 'UTF-8'}

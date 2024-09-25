@@ -47,20 +47,12 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
-  private def get_toxicity_threshold_user_input
-    DCDO.get("aichat_toxicity_threshold_user_input", DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
-  end
-
-  private def get_toxicity_threshold_model_output
-    DCDO.get("aichat_toxicity_threshold_model_output", DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
-  end
-
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
     # Moderate user input for toxicity.
     # get_toxicity returns an object with the following fields:
     # text: string, toxicity: number, and max_category {name: string, score: number}
-    user_comprehend_response = AichatComprehendHelper.get_toxicity(new_message[:chatMessageText], locale)
-    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], "Profanity detected in user input: #{user_comprehend_response}"] if user_comprehend_response[:toxicity] > get_toxicity_threshold_user_input
+    user_toxicity = AichatSafetyHelper.find_toxicity('user', new_message[:chatMessageText], locale)
+    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
     user_pii = find_pii(new_message[:chatMessageText], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
@@ -69,16 +61,16 @@ class AichatRequestChatCompletionJob < ApplicationJob
     response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
 
     # Moderate model output for toxicity. Report to HoneyBadger if the model returns toxicity.
-    model_comprehend_response = AichatComprehendHelper.get_toxicity(response, locale)
-    if model_comprehend_response[:toxicity] > get_toxicity_threshold_model_output
+    model_toxicity = AichatSafetyHelper.find_toxicity('assistant', response, locale)
+    if model_toxicity
       Honeybadger.notify(
         'Toxicity returned from aichat model (blocked before reaching student)',
         context: {
           response: response,
-          flagged_content: model_comprehend_response,
+          flagged_content: model_toxicity.to_json,
         }
       )
-      return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], "Profanity detected in model output: #{model_comprehend_response}"]
+      return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], model_toxicity.to_json]
     end
 
     model_pii = find_pii(response, locale)
