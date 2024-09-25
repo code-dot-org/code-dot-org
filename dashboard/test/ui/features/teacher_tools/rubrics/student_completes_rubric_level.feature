@@ -13,8 +13,7 @@ Feature: Student can complete rubric-enabled level
     And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until element "#submitButton" is visible
     And I click selector "#submitButton"
-    And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button" to load a new page
+    And I wait for the page to fully load
 
     # Student can see new progress in header
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
