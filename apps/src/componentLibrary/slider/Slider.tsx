@@ -1,8 +1,7 @@
 import classnames from 'classnames';
 import React, {ChangeEvent, HTMLAttributes} from 'react';
 
-import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
 import Typography from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './slider.module.scss';
@@ -16,17 +15,34 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
      Note: Only form elements with a name attribute will have their values passed when submitting a form. */
   name: string;
   /** The value attribute specifies the value of an input element. */
-  value?: string;
+  value?: number | string;
   /** Slider label */
   label?: string;
   /** Is Slider disabled */
   disabled?: boolean;
-  /** Size of Slider */
-  size?: ComponentSizeXSToL;
+  color?: 'black' | 'brand' | 'white';
+  isCentered?: boolean;
+  step?: number | string;
+  minValue?: number | string;
+  maxValue?: number | string;
+  showLeftButton?: boolean;
+  leftButtonProps?: ButtonProps;
+  showRightButton?: boolean;
+  rightButtonProps?: ButtonProps;
 }
+
+const defaultSliderButtonProps: ButtonProps = {
+  type: 'tertiary',
+  color: 'black',
+  isIconOnly: true,
+  size: 'xs',
+};
 
 // TODO:
 // * MARKUP
+//  - demo stepper
+//  - centered mode
+//  - percents mode
 // * styles
 // * add stories
 // * add tests
@@ -52,28 +68,71 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   name,
   value,
   disabled = false,
-  size = 'm',
+  color = 'black',
+  step = 1,
+  minValue,
+  maxValue,
+  leftButtonProps,
+  rightButtonProps,
   ...HTMLAttributes
 }) => {
-  const bodyTextSize = componentSizeToBodyTextSizeMap[size];
+  const labelId = `${name}-label`;
 
   return (
     <label
-      className={classnames(moduleStyles.label, moduleStyles[`label-${size}`])}
-    >
-      {label && (
-        <Typography semanticTag="span" visualAppearance={bodyTextSize}>
-          {label}
-        </Typography>
+      className={classnames(
+        moduleStyles.sliderLabel,
+        moduleStyles[`sliderLabel-${color}`]
       )}
-      <input
-        type="range"
-        name={name}
-        value={value}
-        disabled={disabled}
-        onChange={onChange}
-        {...HTMLAttributes}
-      />
+    >
+      <div className={moduleStyles.sliderLabelSection}>
+        {label && (
+          <Typography
+            id={labelId}
+            semanticTag="span"
+            visualAppearance={'body-two'}
+          >
+            {label}
+          </Typography>
+        )}
+
+        <span>{value || 0}</span>
+      </div>
+
+      <div className={moduleStyles.sliderMainContainer}>
+        {
+          <Button
+            {...defaultSliderButtonProps}
+            {...leftButtonProps}
+            aria-label={'hesta'}
+            icon={{iconName: 'turtle'}}
+            // @ts-expect-error fix types later
+            onClick={() => onChange({target: {value: +value - +step}})}
+          />
+        }
+        <input
+          type="range"
+          name={name}
+          min={minValue}
+          max={maxValue}
+          value={value}
+          step={step}
+          disabled={disabled}
+          onChange={onChange}
+          aria-labelledby={labelId}
+          {...HTMLAttributes}
+        />
+        {true && (
+          <Button
+            {...defaultSliderButtonProps}
+            {...rightButtonProps}
+            aria-label={'hesta'}
+            icon={{iconName: 'rabbit'}}
+            // @ts-expect-error fix types later
+            onClick={() => onChange({target: {value: +value + +step}})}
+          />
+        )}
+      </div>
     </label>
   );
 };

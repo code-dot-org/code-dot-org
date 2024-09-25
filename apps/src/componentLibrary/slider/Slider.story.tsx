@@ -1,5 +1,5 @@
 import {Meta, StoryFn} from '@storybook/react';
-import React from 'react';
+import React, {useState} from 'react';
 
 import Slider, {SliderProps} from './index';
 
@@ -17,13 +17,26 @@ const SingleTemplate: StoryFn<SliderProps> = args => <Slider {...args} />;
 
 const MultipleTemplate: StoryFn<{
   components: SliderProps[];
-}> = args => (
-  <>
-    {args.components?.map(componentArg => (
-      <Slider key={componentArg.name} {...componentArg} />
-    ))}
-  </>
-);
+}> = args => {
+  const [values, setValues] = useState({} as Record<string, string | number>);
+
+  return (
+    <>
+      {args.components?.map(componentArg => {
+        return (
+          <Slider
+            key={componentArg.name}
+            {...componentArg}
+            value={values[componentArg.name] || 0}
+            onChange={e =>
+              setValues({...values, [componentArg.name]: e.target.value})
+            }
+          />
+        );
+      })}
+    </>
+  );
+};
 
 export const DefaultSlider = SingleTemplate.bind({});
 DefaultSlider.args = {
@@ -71,25 +84,21 @@ GroupOfSizesOfSliders.args = {
     {
       name: 'test-xs',
       label: 'Label XS',
-      size: 'xs',
       onChange: () => null,
     },
     {
       name: 'test-s',
       label: 'Label S',
-      size: 's',
       onChange: () => null,
     },
     {
       name: 'test-m',
       label: 'Label M',
-      size: 'm',
       onChange: () => null,
     },
     {
       name: 'test-xl',
       label: 'Label XL',
-      size: 'l',
       onChange: () => null,
     },
   ],
