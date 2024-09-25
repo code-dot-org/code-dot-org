@@ -30,9 +30,9 @@ const ResourceRow: React.FC<ResourceRowProps> = ({
     if (!resource.type) {
       return resource.name;
     } else if (resource.type === 'Standards') {
-      return `${i18n.unit()} ${unitNumber} ${i18n.standards()}`;
+      return i18n.unitStandards({unitNumber: unitNumber});
     } else if (resource.type === 'Vocabulary') {
-      return `${i18n.unit()} ${unitNumber} ${i18n.vocabulary()}`;
+      return i18n.unitVocabulary({unitNumber: unitNumber});
     } else {
       return `${resource.type}: ${resource.name}`;
     }

@@ -2984,6 +2984,8 @@
   "unassignedStudents": "Unassigned Students",
   "uncompletedLessons": "Lesson not completed",
   "unit": "Unit",
+  "unitStandards": "Unit {unitNumber} Standards",
+  "unitVocabulary": "Unit {unitNumber} Vocabulary",
   "unitedStates": "United States",
   "unsubmit": "Unsubmit",
   "unsubmitAssessment": "Unsubmit your assessment",
