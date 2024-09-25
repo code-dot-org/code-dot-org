@@ -40,7 +40,7 @@ header:
         id: header-student-home
       - title: course_catalog
         url: /students
-        domain: studio.code.org
+        domain: code.org
         id: header-student-courses
       - title: project_gallery
         url: /projects
