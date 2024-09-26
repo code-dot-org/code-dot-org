@@ -21,9 +21,9 @@ const FileTab = ({file}: FileTabProps) => {
   const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
   const iconClassName = isBrand ? 'fa-brands' : undefined;
   const isActive = file.active || file === activeFile;
-  const className = isActive
-    ? classNames(moduleStyles.fileTab, moduleStyles.active)
-    : moduleStyles.fileTab;
+  const className = classNames(moduleStyles.fileTab, {
+    [moduleStyles.active]: isActive,
+  });
 
   return (
     <div className={className} key={file.id}>
@@ -39,11 +39,10 @@ const FileTab = ({file}: FileTabProps) => {
         onClick={() => closeFile(file.id)}
         color={'light'}
         aria-label={codebridgeI18n.closeFile()}
-        className={
-          isActive
-            ? classNames(moduleStyles.active, moduleStyles.closeButton)
-            : classNames(moduleStyles.closeButton, moduleStyles.inactive)
-        }
+        className={classNames(moduleStyles.closeButton, {
+          [moduleStyles.active]: isActive,
+          [moduleStyles.inactive]: !isActive,
+        })}
       />
     </div>
   );
