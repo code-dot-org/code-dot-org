@@ -8,6 +8,7 @@
   "cannotStop": "We don't know how to stop your code. Please contact support.",
   "cannotTest": "We don't know how to run your tests. Please contact support.",
   "defaultLayout": "Default layout",
+  "defaultNewFileContents": "Add your changes to {fileName}",
   "delete": "Delete",
   "deleteFile": "Delete file",
   "deleteFileConfirm": "Are you sure you want to delete the file \"{filename}\"?",
