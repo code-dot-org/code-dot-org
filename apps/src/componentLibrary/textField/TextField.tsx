@@ -25,10 +25,8 @@ export interface TextFieldProps extends AriaAttributes {
   value?: string;
   /** TextField label */
   label?: string;
-  /** TextField sub label */
-  subLabel?: string;
   /** TextField helper message */
-  helperMessage?: string | JSX.Element;
+  helperMessage?: string;
   /** TextField helper icon */
   helperIcon?: FontAwesomeV6IconProps;
   /** TextField placeholder */
@@ -70,7 +68,6 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   id,
   inputType = 'text',
   label,
-  subLabel,
   onChange,
   name,
   value,
@@ -101,9 +98,6 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
       aria-describedby={rest['aria-describedby']}
     >
       {label && <span className={moduleStyles.textFieldLabel}>{label}</span>}
-      {subLabel && (
-        <span className={moduleStyles.textFieldHelperSection}>{subLabel}</span>
-      )}
       <input
         id={id}
         type={inputType}

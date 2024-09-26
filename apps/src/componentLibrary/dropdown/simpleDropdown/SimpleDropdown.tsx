@@ -17,8 +17,6 @@ export interface SimpleDropdownProps extends AriaAttributes {
   onChange: (args: React.ChangeEvent<HTMLSelectElement>) => void;
   /** SimpleDropdown label text */
   labelText: string;
-  /** SimpleDropdown helper message */
-  helperMessage?: string;
   /** SimpleDropdown dropdown text thickness */
   dropdownTextThickness?: 'thick' | 'thin';
   /** Is SimpleDropdown label visible or added via aria-label attribute */
@@ -36,7 +34,7 @@ export interface SimpleDropdownProps extends AriaAttributes {
    * 'black' stands for black dropdown that'll be rendered on the white/light background. */
   color?: 'white' | 'black' | 'gray';
   /** SimpleDropdown size */
-  size?: ComponentSizeXSToL;
+  size: ComponentSizeXSToL;
 }
 
 /**
@@ -62,7 +60,6 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   id,
   className,
   labelText,
-  helperMessage,
   dropdownTextThickness = 'thick',
   isLabelVisible = true,
   disabled = false,
@@ -86,7 +83,6 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
       {isLabelVisible && (
         <span className={moduleStyles.dropdownLabel}>{labelText}</span>
       )}
-      {helperMessage && <span>{helperMessage}</span>}
 
       <div className={moduleStyles.dropdownArrowDiv}>
         <select
