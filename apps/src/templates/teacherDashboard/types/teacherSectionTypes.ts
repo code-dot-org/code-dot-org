@@ -10,7 +10,7 @@ import {
 // typescript we can deprecate the PropTypes definitions and use these instead.
 
 export interface Section {
-  id: number | null;
+  id: number;
   name: string;
   createdAt: string;
   loginType: keyof typeof SectionLoginType;
@@ -34,6 +34,12 @@ export interface Section {
   courseDisplayName: string | null;
   hidden: boolean;
   aiTutorEnabled: boolean;
+  courseVersionName?: string;
+  loginTypeName?: string;
+  codeReviewExpiresAt?: Date | null;
+  isAssignedCSA?: boolean;
+  sectionInstructors?: SectionInstructor[];
+  anyStudentHasProgress?: boolean;
 }
 
 export type OAuthSectionTypeName = keyof typeof OAuthSectionTypes;
@@ -85,6 +91,16 @@ export interface AssignmentCourseOffering {
   hoc: object;
   middle: object;
 }
+
+export type SectionInstructor = {
+  invited_by_name: string;
+  invited_by_email: string;
+  section_name: string;
+  section_id: number;
+  instructor_name: string;
+  instructor_email: string;
+  participant_type: string;
+};
 
 //TODO will probably need to convert other shapes from templates/teacherDashboard/shapes
 
