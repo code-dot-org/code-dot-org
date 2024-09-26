@@ -29,6 +29,8 @@ require 'cdo/shared_constants'
 class Level < ApplicationRecord
   include SharedConstants
   include Levels::LevelsWithinLevels
+  include ScriptLevelsHelper
+  include Rails.application.routes.url_helpers
 
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
@@ -845,6 +847,7 @@ class Level < ApplicationRecord
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
+    properties_camelized[:finishUrl] = script_completion_redirect(current_user, script) if script
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
