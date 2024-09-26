@@ -83,11 +83,11 @@ If you have trouble running the tests, see [troubleshooting dashboard tests](#tr
 #### Running a subset of Dashboard tests
 
 If you just want to run a single file of tests
-`bundle exec spring testunit ./path/to/your/test.rb` 
+`LAZY_LOAD_TRANSLATIONS=1 bundle exec spring testunit ./path/to/your/test.rb` 
 (if you get a seemingly unrelated error `Unable to autoload constant..` try running `spring stop` and trying again)
 
 To run a specific unit test
-`bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
+`LAZY_LOAD_TRANSLATIONS=1 bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
 The test name is `test_` concatenated with the name of the test listed in the test file (convert spaces to underscores). Ex: If the test is called "testing some unit" you would use `--name test_testing_some_unit`.
 
 You can get a local coverage report with
