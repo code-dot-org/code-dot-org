@@ -437,7 +437,7 @@ span {
 .finishAccountContainer {
   max-width: $content-width;
   display: grid;
-  margin: 4rem auto;
+  margin: 4rem 4rem 1rem 4rem;
   padding: 30px;
   text-align: center;
   background-color: $light_white;
@@ -509,4 +509,15 @@ span {
 .studentQuestionLabel {
   margin-top: 1.125rem;
   margin-bottom: 0.375rem !important;
+}
+
+.tosAndPrivacy {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+
+  a {
+    text-decoration: underline !important;
+    color: unset !important;
+  }
 }

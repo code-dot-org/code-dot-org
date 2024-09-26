@@ -7,9 +7,11 @@ import {
   Heading2,
   BodyTwoText,
   BodyThreeText,
+  BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 
 import locale from './locale';
@@ -31,17 +33,20 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
   useEffect(() => {
     const fetchGdprData = async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const forceInEu = urlParams.get('force_in_eu');
       try {
-        const response = await fetch('/users/gdpr_check');
+        const response = await fetch(
+          `/users/gdpr_check?force_in_eu=${forceInEu}`
+        );
         const data = await response.json();
-        if (data.gdpr || data.force_in_eu) {
+        if (data.gdpr || data.force_in_eu === '1') {
           setShowGDPR(true);
         }
       } catch (error) {
         console.error('Error fetching GDPR data:', error);
       }
     };
-
     fetchGdprData();
   }, []);
 
@@ -92,75 +97,86 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   return (
-    <div className={style.finishAccountContainer}>
-      <div className={style.headerTextContainer}>
-        <Heading2>{locale.finish_creating_teacher_account()}</Heading2>
-        <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
-      </div>
-      <fieldset className={style.inputContainer}>
-        <div>
-          <TextField
-            name="displayName"
-            label={locale.what_do_you_want_to_be_called()}
-            className={style.nameInput}
-            value={name}
-            placeholder={locale.msCoder()}
-            onChange={onNameChange}
-          />
-          <BodyThreeText className={style.displayNameSubtext}>
-            {locale.this_is_what_your_students_will_see()}
-          </BodyThreeText>
-          {showNameError && (
-            <BodyThreeText className={style.errorMessage}>
-              {locale.display_name_error_message()}
-            </BodyThreeText>
-          )}
+    <div>
+      <div className={style.finishAccountContainer}>
+        <div className={style.headerTextContainer}>
+          <Heading2>{locale.finish_creating_teacher_account()}</Heading2>
+          <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
         </div>
-        <SchoolDataInputs usIp={usIp} includeHeaders={false} />
-        {showGDPR && (
+        <fieldset className={style.inputContainer}>
+          <div>
+            <TextField
+              name="displayName"
+              label={locale.what_do_you_want_to_be_called()}
+              className={style.nameInput}
+              value={name}
+              placeholder={locale.msCoder()}
+              onChange={onNameChange}
+            />
+            <BodyThreeText className={style.displayNameSubtext}>
+              {locale.this_is_what_your_students_will_see()}
+            </BodyThreeText>
+            {showNameError && (
+              <BodyThreeText className={style.errorMessage}>
+                {locale.display_name_error_message()}
+              </BodyThreeText>
+            )}
+          </div>
+          <SchoolDataInputs usIp={usIp} includeHeaders={false} />
+          {showGDPR && (
+            <div>
+              <BodyThreeText className={style.teacherKeepMeUpdated}>
+                <strong>{locale.data_transfer_notice()}</strong>
+              </BodyThreeText>
+              <Checkbox
+                name="gdprAcknowledge"
+                label={locale.data_transfer_agreement_teacher()}
+                checked={gdprChecked}
+                onChange={onGDPRChange}
+                size="s"
+              />
+            </div>
+          )}
           <div>
             <BodyThreeText className={style.teacherKeepMeUpdated}>
-              <strong>{locale.data_transfer_notice()}</strong>
+              <strong>{locale.keep_me_updated()}</strong>
             </BodyThreeText>
             <Checkbox
-              name="gdprAcknowledge"
-              label={locale.data_transfer_agreement_teacher()}
-              checked={gdprChecked}
-              onChange={onGDPRChange}
+              name="userEmailOptIn"
+              label={locale.get_informational_emails()}
+              checked={emailOptInChecked}
+              onChange={onEmailOptInChange}
+              size="s"
             />
+            <BodyFourText className={style.emailOptInFootnote}>
+              <strong>{locale.note()}</strong>{' '}
+              {locale.after_creating_your_account()}
+            </BodyFourText>
           </div>
-        )}
-        <div>
-          <BodyThreeText className={style.teacherKeepMeUpdated}>
-            <strong>{locale.keep_me_updated()}</strong>
-          </BodyThreeText>
-          <Checkbox
-            name="userEmailOptIn"
-            label={locale.get_informational_emails()}
-            checked={emailOptInChecked}
-            onChange={onEmailOptInChange}
+        </fieldset>
+        <div className={style.finishSignUpButtonContainer}>
+          <Button
+            className={style.finishSignUpButton}
+            color={buttonColors.purple}
+            type="primary"
+            onClick={() => sendFinishEvent()}
+            text={locale.go_to_my_account()}
+            iconRight={{
+              iconName: 'arrow-right',
+              iconStyle: 'solid',
+              title: 'arrow-right',
+            }}
+            disabled={name === '' || !gdprValid}
           />
-          <BodyThreeText className={style.emailOptInFootnote}>
-            <strong>{locale.note()}</strong>{' '}
-            {locale.after_creating_your_account()}
-          </BodyThreeText>
         </div>
-      </fieldset>
-      <div className={style.finishSignUpButtonContainer}>
-        <Button
-          className={style.finishSignUpButton}
-          color={buttonColors.purple}
-          type="primary"
-          onClick={() => sendFinishEvent()}
-          text={locale.go_to_my_account()}
-          iconRight={{
-            iconName: 'arrow-right',
-            iconStyle: 'solid',
-            title: 'arrow-right',
-          }}
-          disabled={name === '' || !gdprValid}
-        />
       </div>
+      <SafeMarkdown
+        className={style.tosAndPrivacy}
+        markdown={locale.by_signing_up({
+          tosLink: 'code.org/tos',
+          privacyPolicyLink: 'code.org/privacy',
+        })}
+      />
     </div>
   );
 };
