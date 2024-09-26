@@ -4,27 +4,27 @@
       .padded-container
         .row
           .span3.lti-integration-field-label
-            = f.label :name, t('lti.integration.name')
+            = f.label :name, ('lti.integration.name')
           .span5
             = f.text_field :name, maxlength: 100, required: true
         .row
           .span3.lti-integration-field-label
-            = f.label :client_id, t('lti.integration.client_id')
+            = f.label :client_id, ('lti.integration.client_id')
           .span5
             = f.text_field :client_id, maxlength: 50, required: true
         .row
           .span3.lti-integration-field-label
-            = f.label :email, t('lti.integration.email')
+            = f.label :email, ('lti.integration.email')
           .span5
             = f.email_field :email, maxlength: 255, required: true
         .row
           .span3.lti-integration-field-label
-            = f.label :lms, t('lti.integration.lms_selector')
+            = f.label :lms, ('lti.integration.lms_selector')
           .span5
             = f.select :lms, form_data[:lms_platforms].map {|p| [p[:name], p[:platform].to_s]}
         .row
           .span10
             %p
-              != I18n.t('lti.integration.form_instructions_3', lms_guides: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org', contact_us: SharedConstants::EMAIL_LINKS.CONTACT_US_URL, markdown: true)
+              != "anything"
 
-        %button.lti-btn-purple= t('lti.integration.register')
+        %button.lti-btn-purple= ('lti.integration.register')

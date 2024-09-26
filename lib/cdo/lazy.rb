@@ -34,7 +34,7 @@ module Cdo
       class1 == Lazy || __getobj__.instance_of?(class1)
     end
 
-    undef_method(:nil?, :class)
+    #undef_method(:nil?, :class)
   end
 
   def self.lazy(&block)

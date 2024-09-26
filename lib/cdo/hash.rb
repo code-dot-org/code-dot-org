@@ -1,3 +1,4 @@
+module Cdo
 class Hash
   def deep_sort(&block)
     keys.sort(&block).reduce({}) do |seed, key|
@@ -8,4 +9,5 @@ class Hash
       seed
     end
   end
+end
 end

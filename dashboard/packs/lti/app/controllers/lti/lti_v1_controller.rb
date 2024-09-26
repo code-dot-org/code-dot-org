@@ -1,7 +1,6 @@
 require "base64"
-require "concerns/partial_registration"
-require "cdo/honeybadger"
-require 'metrics/events'
+#require "cdo/honeybadger" # TODO
+#require 'metrics/events' # TODO
 
 module Lti
   class LtiV1Controller < ApplicationController
@@ -245,7 +244,7 @@ module Lti
     def sync_course
       return unauthorized_status unless current_user
       unless Policies::Lti.roster_sync_enabled?(current_user)
-        return redirect_to home_path
+        return redirect_to '/'
       end
 
       if params[:section_code].blank?
@@ -355,7 +354,7 @@ module Lti
             flash.keep
             render sync_course_path
           else
-            redirect_to home_path
+            redirect_to '/'
           end
         end
         format.json {render json: result}

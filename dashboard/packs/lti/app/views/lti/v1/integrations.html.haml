@@ -7,10 +7,10 @@
     .span10
       %p= t('lti.integration.form_instructions')
       %p
-        != I18n.t('lti.integration.form_instructions_2', install_instructions: SharedConstants::LMS_LINKS.INSTALL_INSTRUCTIONS_URL, markdown: true)
+        != "test"
       = render partial: 'lti/v1/integrations/form', locals: {form_data: @form_data}
 
   .row
     .span10
       %em
-        != I18n.t('lti.integration.privacy_policy', privacy_policy: SharedConstants::EMAIL_LINKS.PRIVACY_POLICY_URL, markdown: true)
+        != "email"
