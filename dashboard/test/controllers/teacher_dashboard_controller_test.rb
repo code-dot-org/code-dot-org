@@ -56,8 +56,10 @@ class TeacherDashboardControllerTest < ActionController::TestCase
   test 'redirect_to_newest_section: redirects to newest section progress page if sections instructed' do
     sign_in @section_owner
 
+    section = create :section, user: @section_owner
+
     get :redirect_to_newest_section
 
-    assert_redirected_to "/teacher_dashboard/sections/#{@section.id}/progress?view=v2"
+    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/progress?view=v2"
   end
 end
