@@ -1,7 +1,6 @@
 require "base64"
-require "concerns/partial_registration"
-require "cdo/honeybadger"
-require 'metrics/events'
+#require "cdo/honeybadger"
+#require 'metrics/events'
 
 module Lti
   class LtiV1Controller < ApplicationController
