@@ -45,14 +45,14 @@ or consult your package management for your OS.
        ```
 
 1. Start the Colima service (and have it start on login)
-```shell
-brew services start colima
-```
+   ```shell
+   brew services start colima
+   ```
 
 1. Verify that Docker works
-```shell
-docker run --rm hello-world
-```
+   ```shell
+   docker run --rm hello-world
+   ```
 
 ### Ubuntu
 
