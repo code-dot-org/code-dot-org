@@ -9,7 +9,6 @@ class Policies::Registration
     :email_preference_source,
     :email_preference_form_kind,
     :school,
-    :school_info_id,
     :age,
     :parent_email_preference_email,
     :parent_email_preference_opt_in,

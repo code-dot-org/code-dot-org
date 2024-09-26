@@ -2,7 +2,7 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
-import {NO_SCHOOL_SETTING} from '@cdo/apps/templates/SchoolZipSearch';
+import {SchoolDropdownOtherOptions} from '@cdo/generated-scripts/sharedConstants.ts';
 import i18n from '@cdo/locale';
 
 describe('SchoolDataInputs', () => {
@@ -75,6 +75,8 @@ describe('SchoolDataInputs', () => {
   });
 
   it('autopopulates Zip and ID fields if you leave and come back', () => {
+    const NO_SCHOOL_SETTING = SchoolDropdownOtherOptions.NO_SCHOOL_SETTING;
+
     renderDefault({usIp: true});
     fireEvent.change(screen.getByRole('textbox'), {target: {value: '98112'}});
     fireEvent.change(screen.getAllByRole('combobox')[1], {

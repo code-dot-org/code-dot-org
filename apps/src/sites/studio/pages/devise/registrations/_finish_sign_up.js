@@ -6,13 +6,9 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
-import {
-  SELECT_A_SCHOOL,
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
-} from '@cdo/apps/templates/SchoolZipSearch';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import {SchoolDropdownOtherOptions} from '@cdo/generated-scripts/sharedConstants.ts';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -110,9 +106,7 @@ $(document).ready(() => {
       'select[name="user[school_info_attributes][school_id]"]'
     );
     if (
-      [NO_SCHOOL_SETTING, CLICK_TO_ADD, SELECT_A_SCHOOL].includes(
-        newSchoolIdEl.val()
-      )
+      Object.values(SchoolDropdownOtherOptions).includes(newSchoolIdEl.val())
     ) {
       newSchoolIdEl.val('');
       $('input[name="user[school_info_attributes][school_zip]"]').val('');

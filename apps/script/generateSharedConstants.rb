@@ -109,6 +109,7 @@ def main
       FEATURED_PROJECT_CONSTANTS
       LMS_LINKS
       USER_TYPES
+      SCHOOL_DROPDOWN_OTHER_OPTIONS
     ), 
     file_type: 'ts'
   )

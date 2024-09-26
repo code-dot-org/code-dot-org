@@ -8,6 +8,7 @@ import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
+import {SchoolDropdownOtherOptions} from '@cdo/generated-scripts/sharedConstants.ts';
 import i18n from '@cdo/locale';
 
 import {
@@ -17,9 +18,9 @@ import {
 
 import style from './school-association.module.scss';
 
-export const SELECT_A_SCHOOL = 'selectASchool';
-export const CLICK_TO_ADD = 'clickToAdd';
-export const NO_SCHOOL_SETTING = 'noSchoolSetting';
+const SELECT_A_SCHOOL = SchoolDropdownOtherOptions.SELECT_A_SCHOOL;
+const CLICK_TO_ADD = SchoolDropdownOtherOptions.CLICK_TO_ADD;
+const NO_SCHOOL_SETTING = SchoolDropdownOtherOptions.NO_SCHOOL_SETTING;
 const SEARCH_DEFAULTS = [
   {value: CLICK_TO_ADD, text: i18n.schoolClickToAdd()},
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},

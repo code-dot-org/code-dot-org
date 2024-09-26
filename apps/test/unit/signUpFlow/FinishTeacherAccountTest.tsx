@@ -9,10 +9,12 @@ import {
   SCHOOL_ZIP_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
-import {SELECT_A_SCHOOL} from '@cdo/apps/templates/SchoolZipSearch';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  UserTypes,
+  SchoolDropdownOtherOptions,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
@@ -152,8 +154,8 @@ describe('FinishTeacherAccount', () => {
       email: email,
       name: name,
       email_preference_opt_in: true,
-      school: SELECT_A_SCHOOL,
-      school_id: SELECT_A_SCHOOL,
+      school: SchoolDropdownOtherOptions.SELECT_A_SCHOOL,
+      school_id: SchoolDropdownOtherOptions.SELECT_A_SCHOOL,
       school_zip: null,
       school_name: null,
       school_country: null,
