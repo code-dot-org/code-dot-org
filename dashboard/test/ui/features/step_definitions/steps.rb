@@ -1195,8 +1195,7 @@ And(/^I submit this level$/) do
     And I press "runButton"
     And I wait to see "#submitButton"
     And I press "submitButton"
-    And I wait to see ".modal"
-    And I press "confirm-button" to load a new page
+    And I wait for 10 seconds
   GHERKIN
 end
 
