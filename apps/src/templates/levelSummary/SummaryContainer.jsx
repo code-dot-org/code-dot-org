@@ -3,10 +3,10 @@ import React, {useState, useEffect} from 'react';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import QuestionRenderer from '@cdo/apps/templates/levelSummary/QuestionRenderer';
 import SubLevelDropdown from '@cdo/apps/templates/levelSummary/SubLevelDropdown';
 import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
 import SummaryTeacherInstructions from '@cdo/apps/templates/levelSummary/SummaryTeacherInstructions';
-import QuestionRenderer from '@cdo/apps/templates/levelSummary/QuestionRenderer';
 
 import styles from './summary.module.scss';
 
