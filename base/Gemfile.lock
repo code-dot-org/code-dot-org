@@ -1,10 +1,10 @@
 PATH
-  remote: ../dashboard/packs/lti
+  remote: packs/lti
   specs:
     lti (0.1.0)
 
 PATH
-  remote: ../dashboard/packs/user
+  remote: packs/user
   specs:
     core (0.1.0)
 

@@ -48,8 +48,8 @@ gem 'aws-sdk-secretsmanager'
 # HAML
 gem 'haml-rails' # haml (instead of erb) generators
 
-gem 'core', path: '../dashboard/packs/user'
-gem 'lti', path: '../dashboard/packs/lti'
+gem 'core', path: './packs/user'
+gem 'lti', path: './packs/lti'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

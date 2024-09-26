@@ -28,9 +28,7 @@ module Cdo
     # dangerous things in the various `config.yml.erb` files loaded by this
     # method, we need to do so.
     def load_erb_file(path, binding = nil)
-      # rubocop:disable Security/YAMLLoad
-      YAML.load(erb_file_to_string(path, binding), aliases: true)
-      # rubocop:enable Security/YAMLLoad
+      YAML.unsafe_load(erb_file_to_string(path, binding), filename: path)
     rescue Errno::ENOENT
       nil
     end
