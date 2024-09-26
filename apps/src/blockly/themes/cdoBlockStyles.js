@@ -1,11 +1,11 @@
 // IMPORTANT! Whenever updating the styles in this file, be sure to also update
-// the styles in cdoAccessible.js as well. The accessible styles can be generated
+// the styles in ./cdoAccessibleStyle.js as well. The accessible styles can be generated
 // using accessibleStylesGenerator.mjs.
 // From this directory in your terminal, enter:
 // - yarn add nearest-color
 // - node accessibleStylesGenerator.mjs
 // - yarn remove nearest-color
-// Copy the values output by the script into cdoAccessible and commit both changes together.
+// Copy the values output by the script into cdoAccessibleStyles and commit both changes together.
 
 // These block styles are used in 4 or more of our Blockly labs.
 const commonBlockStyles = {
@@ -29,6 +29,9 @@ const commonBlockStyles = {
   },
   variable_blocks: {
     colourPrimary: '#a55b99', // Blockly default style
+    // We use the primary colour for variable shadow blocks. Shadow blocks cannot include a variable field,
+    // so this only ever applies to argument_reporter blocks.
+    colourSecondary: '#a55b99',
   },
   math_blocks: {
     colourPrimary: '#5b67a5', // Blockly default style
