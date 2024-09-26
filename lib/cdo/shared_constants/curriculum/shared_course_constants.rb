@@ -65,6 +65,25 @@ module Curriculum
       }
     ).freeze
 
+    # An allowlist of all topic tags that can be applied for units.
+    CURRICULUM_TOPIC_TAGS = OpenStruct.new(
+      {
+        AI: 'AI',
+        Maker: 'Maker',
+        Microbit: 'Micro-bit',
+        CircuitPlayground: 'Circuit-Playground',
+        CrossCurriculum: 'Cross curriculum',
+        DataStructures: 'Data structures',
+        Algorithms: 'Algorithms',
+        Networking: 'Networking',
+        CSS: 'CSS',
+        HTML: 'HTML',
+        DesignPatterns: 'Design patterns',
+        Storage: 'Storage',
+        Database: 'Database'
+      }
+    ).freeze
+
     # The curriculum types used in curriculum quick assign
     COURSE_OFFERING_CURRICULUM_TYPES = OpenStruct.new(
       {

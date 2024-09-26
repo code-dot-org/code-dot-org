@@ -10,6 +10,7 @@ import {
   InstructorAudience,
   ParticipantAudience,
   CurriculumUmbrella,
+  CurriculumTopicTags,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
@@ -33,6 +34,7 @@ import color from '@cdo/apps/util/color';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 
 import {lessonGroupShape} from './shapes';
+import { Chips } from '@cdo/apps/componentLibrary/chips';
 
 /**
  * Component for editing units in unit_groups or stand alone courses
@@ -79,6 +81,7 @@ class UnitEditor extends React.Component {
     initialCurriculumUmbrella: PropTypes.oneOf(
       Object.values(CurriculumUmbrella).push('')
     ),
+    initialTopicTags: PropTypes.arrayOf(PropTypes.string),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -142,6 +145,7 @@ class UnitEditor extends React.Component {
       locales: this.props.initialLocales,
       projectSharing: this.props.initialProjectSharing,
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
+      topicTags: this.props.initialTopicTags,
       versionYear: this.props.initialVersionYear,
       savedVersionYear: this.props.initialVersionYear,
       tts: this.props.initialTts,
@@ -351,6 +355,7 @@ class UnitEditor extends React.Component {
       locales: this.state.locales,
       project_sharing: this.state.projectSharing,
       curriculum_umbrella: this.state.curriculumUmbrella,
+      topic_tags: this.state.topicTags,
       version_year: this.state.versionYear,
       tts: this.state.tts,
       title: this.state.title,
@@ -704,6 +709,19 @@ class UnitEditor extends React.Component {
                     blocks and there will be information about CSTA Standards.
                   </p>
                 </HelpTip>
+              </label>
+              <label>
+                Topic tags
+                <Chips 
+                  name="topicTags"
+                  size="xs"
+                  options={Object.keys(CurriculumTopicTags).map(key => ({
+                      value: key,
+                      label: CurriculumTopicTags[key]
+                  }))}
+                  values={!!this.state.topicTags?this.state.topicTags : []}
+                  setValues={vals => this.setState({topicTags: vals})}
+                />
               </label>
               {this.props.hasCourse &&
                 this.state.publishedState !== PublishedState.in_development && (
