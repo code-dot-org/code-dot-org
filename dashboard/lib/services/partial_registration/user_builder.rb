@@ -16,7 +16,7 @@ module Services
       end
 
       private def user_params
-        user_params = ActionController::Parameters.new(params).permit(new_user_permitted_params)
+        user_params = ActionController::Parameters.new(params).require(:user).permit(new_user_permitted_params)
         user_params[:user_type] = user_params[:user_type].presence || session[:default_sign_up_user_type]
         case user_params[:user_type]
         when ::User::TYPE_TEACHER
