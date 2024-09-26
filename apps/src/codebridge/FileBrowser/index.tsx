@@ -5,6 +5,7 @@ import {
   findFiles,
   findSubFolders,
 } from '@codebridge/codebridgeContext';
+import OverflowTooltip from '@codebridge/components/OverflowTooltip';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {
@@ -277,14 +278,28 @@ const InnerFileBrowser = React.memo(
                       iconStyle={'solid'}
                       className={moduleStyles.rowIcon}
                     />
-                    <span
-                      className={classNames(moduleStyles.nameContainer, {
-                        [moduleStyles.acceptingDrop]:
-                          f.id === dropData?.id && dragData?.parentId !== f.id,
-                      })}
+
+                    <OverflowTooltip
+                      tooltipProps={{
+                        text: f.name,
+                        tooltipId: `folder-tooltip-${f.id}`,
+                        size: 's',
+                        direction: 'onBottom',
+                      }}
+                      tooltipOverlayClassName={moduleStyles.nameContainer}
+                      className={moduleStyles.nameContainer}
                     >
-                      {f.name}
-                    </span>
+                      <span
+                        className={classNames({
+                          [moduleStyles.acceptingDrop]:
+                            f.id === dropData?.id &&
+                            dragData?.parentId !== f.id,
+                        })}
+                        id={`folder-${f.id}`}
+                      >
+                        {f.name}
+                      </span>
+                    </OverflowTooltip>
                   </span>
                   {!isReadOnly && !dragData?.id && (
                     <PopUpButton
@@ -361,7 +376,19 @@ const InnerFileBrowser = React.memo(
                       iconStyle={iconStyle}
                       className={iconClassName}
                     />
-                    <span className={moduleStyles.nameContainer}>{f.name}</span>
+
+                    <OverflowTooltip
+                      tooltipProps={{
+                        text: f.name,
+                        tooltipId: `file-tooltip-${f.id}`,
+                        size: 's',
+                        direction: 'onBottom',
+                      }}
+                      tooltipOverlayClassName={moduleStyles.nameContainer}
+                      className={moduleStyles.nameContainer}
+                    >
+                      <span>{f.name}</span>
+                    </OverflowTooltip>
                   </div>
                   {!isReadOnly && !dragData?.id && (
                     <PopUpButton
