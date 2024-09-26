@@ -27,7 +27,7 @@
 -# domain was given.
 - one_trust_domain = one_trust_domains.dig(domain, 'domain_scripts', cookie_script_env)
 - if cookie_script_env != 'off' && one_trust_domain.present?
-  - base_url = onetrust_version == 'self_hosted' ? "/onetrust/#{one_trust_domains.dig(domain, 'path')}" : "https://cdn.cookielaw.org"
+  - base_url = onetrust_version == 'self_hosted' ? CDO.studio_url("/onetrust/#{one_trust_domains.dig(domain, 'path')}") : "https://cdn.cookielaw.org"
   - auto_block_src = "#{base_url}/consent/#{one_trust_domain}/OtAutoBlock.js"
   - consent_banner_src = "#{base_url}/scripttemplates/otSDKStub.js"
   %script{src: auto_block_src, type: 'text/javascript', charset: 'UTF-8'}
