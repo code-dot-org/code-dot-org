@@ -396,6 +396,7 @@ const EVENTS = {
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
   CODEBRIDGE_MOVE_FILE: 'Move file on codebridge',
+  CODEBRIDGE_MOVE_FOLDER: 'Move folder on codebridge',
   CODEBRIDGE_NEW_FILE: 'Create a new file on codebridge',
   CODEBRIDGE_NEW_FOLDER: 'Create a new folder on codebridge',
   CODEBRIDGE_NEW_SUBFOLDER: 'Create a new subfolder on codebridge',

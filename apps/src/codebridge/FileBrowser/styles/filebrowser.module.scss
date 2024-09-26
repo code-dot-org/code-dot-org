@@ -23,6 +23,7 @@
 .row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   font-size: 14px;
 }
@@ -80,6 +81,10 @@ div.row:hover .button-kebab {
   margin: 2px 8px 2px 8px;
   font-size: 13px;
   line-height: 125%;
+}
+
+.acceptingDrop {
+  font-weight: bold;
 }
 
 .dropdownItem {

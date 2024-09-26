@@ -34,6 +34,7 @@ export const PopUpButton = ({
         | React.MouseEvent<HTMLButtonElement>
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
+      e.stopPropagation();
       setButtonRect((e.target as HTMLElement).getBoundingClientRect());
       setOffsetParent(
         (e.target as HTMLElement).offsetParent?.getBoundingClientRect()
