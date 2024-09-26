@@ -140,9 +140,11 @@ describe('LoginTypeSelection', () => {
     );
     const beginSignUpParams = {
       new_sign_up: true,
-      email: email,
-      password: password,
-      password_confirmation: password,
+      user: {
+        email: email,
+        password: password,
+        password_confirmation: password,
+      },
     };
 
     fireEvent.change(emailInput, {
@@ -196,9 +198,11 @@ describe('LoginTypeSelection', () => {
     );
     const beginSignUpParams = {
       new_sign_up: true,
-      email: email,
-      password: password,
-      password_confirmation: password,
+      user: {
+        email: email,
+        password: password,
+        password_confirmation: password,
+      },
     };
 
     // Set up create account button onClick jest function
