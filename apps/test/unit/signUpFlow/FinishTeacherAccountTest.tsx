@@ -148,15 +148,17 @@ describe('FinishTeacherAccount', () => {
     const email = 'fake@email.com';
     const finishSignUpParams = {
       new_sign_up: true,
-      user_type: UserTypes.TEACHER,
-      email: email,
-      name: name,
-      email_preference_opt_in: true,
-      school: SELECT_A_SCHOOL,
-      school_id: SELECT_A_SCHOOL,
-      school_zip: null,
-      school_name: null,
-      school_country: null,
+      user: {
+        user_type: UserTypes.TEACHER,
+        email: email,
+        name: name,
+        email_preference_opt_in: true,
+        school: SELECT_A_SCHOOL,
+        school_id: SELECT_A_SCHOOL,
+        school_zip: null,
+        school_name: null,
+        school_country: null,
+      },
     };
     sessionStorage.setItem('email', email);
 

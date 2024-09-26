@@ -50,15 +50,17 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
     const signUpParams = {
       new_sign_up: true,
-      user_type: UserTypes.TEACHER,
-      email: sessionStorage.getItem(EMAIL_SESSION_KEY),
-      name: name,
-      email_preference_opt_in: emailOptInChecked,
-      school: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
-      school_id: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
-      school_zip: sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY),
-      school_name: sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY),
-      school_country: sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY),
+      user: {
+        user_type: UserTypes.TEACHER,
+        email: sessionStorage.getItem(EMAIL_SESSION_KEY),
+        name: name,
+        email_preference_opt_in: emailOptInChecked,
+        school: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
+        school_id: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
+        school_zip: sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY),
+        school_name: sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY),
+        school_country: sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY),
+      },
     };
     const authToken = await getAuthenticityToken();
     await fetch('/users', {
