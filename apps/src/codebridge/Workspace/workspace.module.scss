@@ -5,7 +5,8 @@
   grid-area: workspace;
   background-color: $darkest_gray;
   color: $white;
-  overflow: hidden;
+  overflow: visible;
+  z-index: 2;
 }
 
 .workspaceContainer {
@@ -53,7 +54,7 @@
 }
 
 .workspaceWorkarea.withFileBrowser {
-  grid-template-columns: 200px auto;
+  grid-template-columns: 156px auto;
 }
 
 .workspaceAndConsole {

@@ -29,7 +29,8 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
           data-tip
           data-for={this.tooltipId}
           aria-describedby={this.tooltipId}
-          data-event="mouseenter mouseleave click"
+          data-event="mouseenter focusin"
+          data-event-off="mouseleave focusout"
           className={moduleStyles.projectTemplateButton}
         >
           <img

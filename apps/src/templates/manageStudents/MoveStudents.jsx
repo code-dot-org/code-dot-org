@@ -9,7 +9,7 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';

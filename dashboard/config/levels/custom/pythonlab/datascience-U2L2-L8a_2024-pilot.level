@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Pizza!\r\n\r\n::: details [**✅ Step 1**]\r\nDeclare variables for the information we know – the number of friends and the total number of slices available.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nTo find out how many slices each friend gets, write an expression that divides the total number of slices available by the number of friends. Store the result in a variable.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nPrint a message that contains the number of slices each friend gets. For example: *\"Each person gets 4 slices of pizza.\"*\r\n:::\r\n\r\n",
+    "long_instructions": "# Pizza!\r\n\r\n::: details [**✅ Step 1**]\r\nDeclare variables for the information we know – the number of friends (**5**) and the total number of slices available (**20**).\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nTo find out how many slices each friend gets, write an expression that divides the total number of slices available by the number of friends. Store the result in a variable called `item_per_person`.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nPrint a message that contains the number of slices each friend gets. For example: *\"Each person gets 4 slices of pizza.\"*\r\n:::\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -20,22 +20,34 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "# Step 1\n\n\n# Step 2\n\n\n# Step 3\nmessage = \"\"\nprint(message)",
+          "contents": "# Step 1\n\n\n# Step 2\n\n# Step 3\nmessage = \"\"\nprint(message)",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "starter"
+        },
+        "1": {
+          "id": "1",
+          "name": "validation.py",
+          "language": "py",
+          "contents": "# Step 1\nfriends = 5\ntotal_slices= 20  \n\n\n# Step 2\nitem_per_person = total_slices / friends\n\n\n# Step 3\nmessage = \"Each person gets \" + str(item_per_person) + \" slices of pizza.\"\nprint(message)",
           "folderId": "0",
           "active": true,
-          "open": true
+          "open": true,
+          "type": "validation"
         }
       },
       "folders": {
       },
       "openFiles": [
-        "0"
+        "0",
+        "1"
       ]
     },
     "display_name": "Sharing is Caring!",
     "bubble_choice_description": "Practice python by splitting a pizza amongst friends.",
     "thumbnail_url": "https://images.code.org/7cd76fc2d6e13d5c752681678157c536-pizza.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-14T00:04:24.852+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L8_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L8_2024-pilot\"},{\"changed_at\":\"2024-09-14 00:07:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 00:08:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 00:08:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 00:17:32 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 00:28:24 +0000\",\"changed\":[\"predict_settings\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-14T00:04:24.852+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L8_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L8_2024-pilot\"},{\"changed_at\":\"2024-09-14 00:07:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 00:08:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 00:08:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 00:17:32 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 00:28:24 +0000\",\"changed\":[\"predict_settings\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-25 21:20:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-25 21:29:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-25 21:31:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-25 21:31:56 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-25 21:38:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-25 21:38:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-25 21:38:46 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-25 21:40:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-25 21:40:37 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

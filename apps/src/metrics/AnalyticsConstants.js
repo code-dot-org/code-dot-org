@@ -267,6 +267,7 @@ const EVENTS = {
   AI_TUTOR_SUGGESTED_PROMPT_VALIDATION: 'Validation',
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
+  AI_TUTOR_FEEDBACK_SUBMITTED: 'AI Tutor Feedback Submitted',
 
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
@@ -383,9 +384,10 @@ const EVENTS = {
   RECOMMENDED_STRETCH_CURRICULUM_CLICKED:
     'Recommended Stretch Curriculum Clicked',
 
-  // LTI Incubator
-  LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
-  LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
+  // LTI & LMS
+  LTI_UNLINK_MODAL_SHOWN: 'lti_unlink_modal_shown',
+  LTI_UNLINK_CLICK: 'lti_unlink_click',
+  LTI_UNLINK_CANCEL: 'lti_unlink_cancel',
 
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
@@ -404,13 +406,14 @@ const EVENTS = {
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
-  CODEBRIDGE_FILE_ADDED_TO_FOLDER: 'Add file to folder on codebridge',
   CODEBRIDGE_MOVE_FILE: 'Move file on codebridge',
+  CODEBRIDGE_MOVE_FOLDER: 'Move folder on codebridge',
   CODEBRIDGE_NEW_FILE: 'Create a new file on codebridge',
   CODEBRIDGE_NEW_FOLDER: 'Create a new folder on codebridge',
   CODEBRIDGE_NEW_SUBFOLDER: 'Create a new subfolder on codebridge',
   CODEBRIDGE_RENAME_FILE: 'Rename file on codebridge',
   CODEBRIDGE_RENAME_FOLDER: 'Rename folder on codebridge',
+  CODEBRIDGE_DOWNLOAD_FILE: 'Download file on codebridge',
 
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
@@ -420,6 +423,10 @@ const EVENTS = {
   CODEBRIDGE_VALIDATE_CLICK: 'Validate button clicked on codebridge',
   CODEBRIDGE_VERSION_RESTORED: 'Version restored on codebridge',
   CODEBRIDGE_VERSION_VIEWED: 'Version viewed on codebridge',
+  CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
+    'Toggled to For Teachers Only on codebridge',
+  CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
+  CODEBRIDGE_HELP_TIPS_TOGGLE: 'Toggled to Help and Tips on codebridge',
 };
 
 const EVENT_GROUP_NAMES = {

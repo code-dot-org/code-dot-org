@@ -54,12 +54,12 @@ import {
 } from '@cdo/apps/templates/tables/tableConstants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {
+  selectedSection,
+  syncEnabled,
   sectionCode,
   sectionName,
-  selectedSection,
   sectionUnitName,
-  syncEnabled,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';

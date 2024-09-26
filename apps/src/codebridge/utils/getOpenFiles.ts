@@ -5,7 +5,9 @@ import {sortFilesByName} from './sortFilesByName';
 
 export const getOpenFiles = (project: ProjectType) => {
   if (project.openFiles) {
-    return project.openFiles.map(fileId => project.files[fileId]);
+    return project.openFiles
+      .filter(f => shouldShowFile(project.files[f]))
+      .map(fileId => project.files[fileId]);
   } else {
     return sortFilesByName(project.files, {mustBeOpen: true}).filter(f =>
       shouldShowFile(f)
