@@ -1,0 +1,93 @@
+// This file can't be a module since it is overriding styles on the SmallFooter component
+// that is rendered outside of lab2.  Because it's not a module, it should only be imported in
+// components that are part of lazy-loaded lab2 entry points (see entrypoint.ts files
+// under apps/src/...) Otherwise, we might inadvertantly apply these styles to all labs,
+// including light-mode labs.  Even then, if we switch levels once this file is imported,
+// the styles will persist until the page is reloaded. This isn't ideal for level
+// progressions that include a mix of light and dark mode labs.  If we include this file for
+// musiclab which does have mixed level progressions, we'll probably want to at least give a
+// dark background-color to .small-footer-base to ensure the white text is readable in light mode.
+
+@import 'color.scss';
+
+.small-footer-base {
+  background-color: initial;
+  border-top: initial;
+}
+
+#page-small-footer {
+  user-select: none;
+
+  .small-footer-base {
+    margin-left: 10px;
+    max-width: 300px;
+
+    .version-caption {
+      display: none;
+    }
+    p {
+      color: $neutral_dark90;
+    }
+  }
+
+  .copyright-button {
+    user-select: none;
+
+    .copyright-link {
+      width: 26px;
+      height: 26px;
+      border: solid 1px;
+      box-sizing: border-box;
+    }
+  }
+
+  .languageSelect,
+  #locale,
+  .copyright-link {
+    border-color: $neutral_white;
+    background-color: initial;
+    color: $neutral_white;
+
+    > div {
+      select {
+        height: 26px;
+        background-color: initial;
+        color: $neutral_white;
+        option {
+          color: $neutral_dark90;
+        }
+      }
+      &::after {
+        background-color: initial;
+        color: $neutral_white;
+      }
+      &::before {
+        background-color: initial;
+        color: $neutral_white;
+      }
+    }
+  }
+
+  #copyright-flyout {
+    border: solid 1px $neutral_dark40;
+    box-sizing: border-box;
+
+    h4,
+    a:link {
+      color: $neutral_dark50;
+    }
+
+    img {
+      background-color: $neutral_light;
+      border-radius: 4px;
+      padding: 4px;
+      margin-bottom: 6px;
+    }
+  }
+
+  #copyright-flyout,
+  #copyright-scroll-area {
+    background-color: $neutral_dark;
+    color: $neutral_light;
+  }
+}
