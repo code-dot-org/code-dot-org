@@ -81,6 +81,7 @@
   }
 
   &:disabled {
-    color: $light_gray_200 !important;
+    color: $light_gray_600 !important;
+    border: none;
   }
 }
