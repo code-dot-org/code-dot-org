@@ -17,6 +17,11 @@ export const STEPS = [
     intro: sanitize(i18n.rubricTourStepOneText()),
   },
   {
+    element: '#class-data-button',
+    title: i18n.rubricTabClassManagement(),
+    intro: sanitize(i18n.rubricTourStepSevenText()),
+  },
+  {
     element: '#tour-ai-assessment',
     title: i18n.rubricTourStepTwoTitle(),
     intro: sanitize(i18n.rubricTourStepTwoText()),

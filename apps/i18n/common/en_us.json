@@ -2430,6 +2430,7 @@
   "rubricTourStepFiveText": "Once you have reviewed the AI Assessment and the student's code, assign a rubric score for the learning goal.",
   "rubricTourStepSixTitle": "How did Your AI Teaching Assistant do?",
   "rubricTourStepSixText": "Your feedback helps us make your AI Teaching Assistant more helpful to you – let us know how it did.",
+  "rubricTourStepSevenText": "Check out the Class Data tab to export class scores via csv and run the AI assessment for the full section.",
   "rubricTabStudent": "Assess a Student",
   "rubricTabClassManagement": "Class Data",
   "rubricNoStudentEvals": "You haven't evaluated any student work yet. Switch to the 'Assess a Student' tab and then use the dropdown menu to choose a student to evaluate.",

@@ -74,26 +74,31 @@ Scenario: Teacher views rubric product tour
 
   # Teacher views product tour step 2
   Then I wait until element "h3:contains(Lesson 3: Data Structures)" is visible
+  Then I wait until element "h1:contains(Class Data)" is visible
+  And I wait until element ".introjs-tooltiptext" is visible
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  
+  # Teacher views product tour step 3
   Then I wait until element "h1:contains(Understanding the AI Assessment)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
 
-  # Teacher views product tour step 3
+  # Teacher views product tour step 4
   Then I wait until element "h1:contains(Using Evidence)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
 
-  # Teacher views product tour step 4
+  # Teacher views product tour step 5
   Then I wait until element "h1:contains(Understanding AI Confidence)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
 
-  # Teacher views product tour step 5
+  # Teacher views product tour step 6
   Then I wait until element "h1:contains(Assigning a Rubric Score)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
 
-  # Teacher views product tour step 6
+  # Teacher views product tour step 7
   Then I wait until element "h1:contains(How did Your AI Teaching Assistant do?)" is visible
   And I wait until element ".introjs-tooltiptext" is visible
   And I click selector ".introjs-button:contains(Done)" once I see it
@@ -110,6 +115,7 @@ Scenario: Teacher views rubric product tour
 
   # Teacher clicks to the last step in the tour
   Then I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
