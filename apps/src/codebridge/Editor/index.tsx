@@ -7,7 +7,7 @@ import {BodyOneText} from '@cdo/apps/componentLibrary/typography';
 import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
-import {editableFileType} from '../utils';
+import {editableFileType, viewableImageFileType} from '../utils';
 
 import moduleStyles from './styles/editor.module.scss';
 
@@ -37,6 +37,17 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       return [];
     }
   }, [file?.language, langMapping]);
+
+  console.log('CHECK FILE : ', file);
+
+  if (file && viewableImageFileType(file.language)) {
+    const base64 = window.btoa(file.contents);
+    return (
+      <div>
+        <img src={`data:image/png;base64,${base64}`} alt={file.name} />
+      </div>
+    );
+  }
 
   if (file && !editableFileType(file.language, editableFileTypes)) {
     return (

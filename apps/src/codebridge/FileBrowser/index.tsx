@@ -36,6 +36,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
+import {FileUploader} from './FileUploader';
 import {
   downloadFileType,
   moveFilePromptType,
@@ -75,8 +76,9 @@ const extractInput = (promiseResults: DialogClosePromiseReturnType): string => {
   return '';
 };
 
-// restrict typed in input to what we consider to be valid names, which for now are [a-zA-Z0-9_.].
-const validateName = (name: string = '') => !Boolean(name.match(/[^\w.]/));
+// restrict typed in input to what we consider to be valid names, which for now are word characters + a dot + more word characters
+const validateName = (name: string = '') =>
+  Boolean(name.match(/^[\w-]+\.[\w-]+$/));
 
 const InnerFileBrowser = React.memo(
   ({
@@ -93,6 +95,7 @@ const InnerFileBrowser = React.memo(
     appName,
   }: FilesComponentProps) => {
     const {
+      newFile,
       openFile,
       deleteFile,
       toggleOpenFolder,
@@ -254,8 +257,46 @@ const InnerFileBrowser = React.memo(
                       </span>
                       <span onClick={() => newFilePrompt(f.id)}>
                         <i className="fa-solid fa-plus" />{' '}
-                        {codebridgeI18n.addFile()}
+                        {codebridgeI18n.newFile()}
                       </span>
+                      <FileUploader
+                        callback={(fileName, contents) => {
+                          console.log(
+                            'upload file[',
+                            name,
+                            '][',
+                            contents,
+                            ']'
+                          );
+
+                          if (!validateName(fileName)) {
+                            dialogControl?.showDialog({
+                              type: DialogType.GenericAlert,
+                              title: codebridgeI18n.invalidNameError(),
+                            });
+                            return;
+                          }
+
+                          const fileId = getNextFileId(Object.values(files));
+
+                          newFile({
+                            fileId,
+                            fileName,
+                            folderId: f.id,
+                            contents,
+                          });
+                          //finally, we click somewhere else to close our pop up
+                          //???.click();
+                        }}
+                        errorCallback={error => {
+                          console.log('Dang');
+                        }}
+                      >
+                        <span>
+                          <i className="fa-solid fa-upload" />{' '}
+                          {codebridgeI18n.uploadFile()}
+                        </span>
+                      </FileUploader>
                       <span onClick={() => handleDeleteFolder(f.id)}>
                         <i className="fa-solid fa-trash" />{' '}
                         {codebridgeI18n.deleteFolder()}
