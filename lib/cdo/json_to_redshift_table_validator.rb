@@ -105,43 +105,44 @@ module Cdo
     end
 
     private def validate_character(key, value, max_length)
-      unless value.is_a?(String)
-        @errors << "Invalid type for #{key}: expected String, got #{value.class}"
-        return @modify_invalid ? value.to_s : value
+      value_string = value.is_a?(Hash) ? value_string.to_json : value
+      unless value_string.is_a?(String)
+        @errors << "Invalid type for #{key}: expected String, got #{value_string.class}"
+        value_string = value_string.to_s if @modify_invalid
       end
 
-      multibyte_value = ActiveSupport::Multibyte::Chars.new(value)
+      multibyte_value_string = ActiveSupport::Multibyte::Chars.new(value_string)
 
-      if multibyte_value.bytes.size > max_length
-        @errors << "Value too long for #{key}: #{multibyte_value.bytes.size} bytes (max #{max_length})"
-        value = multibyte_value.limit(max_length).to_s if @modify_invalid
+      if multibyte_value_string.bytes.size > max_length
+        @errors << "Value too long for #{key}: #{multibyte_value_string.bytes.size} bytes (max #{max_length})"
+        value_string = multibyte_value_string.limit(max_length).to_s if @modify_invalid
       end
 
-      if multibyte_value.match?(/[^\x00-\x7F]/)
+      unless multibyte_value_string.ascii_only?
         @errors << "Invalid character(s) in CHAR column #{key}: contains non-ASCII characters"
         if @modify_invalid
-          value = multibyte_value.normalize(:kc).gsub(/[^\x00-\x7F]/, '?').to_s
+          value_string = multibyte_value_string.unicode_normalize(:nfkc).gsub(/[^\x00-\x7F]/, '?').to_s
         end
       end
 
-      value
+      value_string
     end
 
     private def validate_character_varying(key, value, max_length)
       value_string = value.is_a?(Hash) ? value.to_json : value
       unless value_string.is_a?(String)
         @errors << "Invalid type for #{key}: expected String, got #{value.class}"
-        return @modify_invalid ? value.to_s : value
+        value_string = value_string.to_s if @modify_invalid
       end
 
       multibyte_string_value = ActiveSupport::Multibyte::Chars.new(value_string)
 
       if multibyte_string_value.bytes.size > max_length
         @errors << "Value too long for #{key}: #{multibyte_string_value.bytes.size} bytes (max #{max_length})"
-        return @modify_invalid ? multibyte_string_value.limit(max_length).to_s : value
+        value_string =  multibyte_string_value.limit(max_length).to_s if @modify_invalid
       end
 
-      value
+      value_string
     end
 
     private def validate_integer(key, value)
