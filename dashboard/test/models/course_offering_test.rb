@@ -806,6 +806,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
       self_paced_pl_course.id
   end
 
+  test "can seed ai_teaching_assistant_available" do
+    course_offering = create :course_offering, key: 'course-offering-1'
+    refute course_offering.ai_teaching_assistant_available
+    serialization = course_offering.serialize
+    serialization[:ai_teaching_assistant_available] = true
+
+    File.stubs(:read).returns(serialization.to_json)
+
+    CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
+    new_course_offering = CourseOffering.find_by(key: course_offering.key)
+    assert new_course_offering.ai_teaching_assistant_available
+  end
+
   test "validates grade_levels" do
     assert_raises ActiveRecord::RecordInvalid do
       CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '1,2,3, 4')

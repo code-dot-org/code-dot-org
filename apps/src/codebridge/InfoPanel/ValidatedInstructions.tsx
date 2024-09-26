@@ -346,7 +346,10 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         {showNavigation && (
           <div
             id="instructions-navigation"
-            className={moduleStyles['bubble-' + theme]}
+            className={classNames(
+              moduleStyles['bubble-' + theme],
+              moduleStyles.button
+            )}
             ref={navigationScrollRef}
           >
             <Button
@@ -355,6 +358,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               color={'white'}
               className={moduleStyles.buttonInstruction}
               iconLeft={navigationIcon}
+              size={'s'}
             />
           </div>
         )}
