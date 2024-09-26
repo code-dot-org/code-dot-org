@@ -39,7 +39,9 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   }, [file?.language, langMapping]);
 
   if (file && !editableFileType(file.language, editableFileTypes)) {
-    return <div>Cannot currently edit files of type {file.language}</div>;
+    return (
+      <div>{codebridgeI18n.cannotEditFile({language: file.language})}</div>
+    );
   }
 
   return (

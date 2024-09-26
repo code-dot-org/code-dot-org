@@ -369,6 +369,6 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-01-12T20:43:30.310+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L5_2023\\\"\"],\"cloned_from\":\"CSA U1L3-L5_2023\"},{\"changed_at\":\"2024-09-20 17:32:59 +0000\",\"changed\":[\"serialized_maze\",\"ai_tutor_available\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T20:43:30.310+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L5_2023\\\"\"],\"cloned_from\":\"CSA U1L3-L5_2023\"},{\"changed_at\":\"2024-09-20 17:32:59 +0000\",\"changed\":[\"serialized_maze\",\"ai_tutor_available\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-09-23 19:17:43 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"},{\"changed_at\":\"2024-09-23 19:24:01 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -45,10 +45,6 @@
   grid-template-columns: 15px auto;
 }
 
-.button-bar button {
-  white-space: nowrap;
-}
-
 .file-browser ul li span.label i,
 .file-browser ul li span.button-bar i {
   margin-right: 4px;
@@ -59,7 +55,7 @@ li .button-kebab {
   height: 13px;
 }
 
-li :hover .button-kebab {
+div.row:hover .button-kebab {
   display: inherit;
 }
 
@@ -83,4 +79,8 @@ li :hover .button-kebab {
 
 .acceptingDrop {
   font-weight: bold;
+}
+
+.dropdownItem {
+  width: 100px;
 }

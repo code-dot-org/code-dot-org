@@ -28,13 +28,17 @@ const ResourceRow: React.FC<ResourceRowProps> = ({
   const resourcePositionLabel = (
     <strong>{unitNumber + '.' + lessonNumber + ' '}</strong>
   );
+
+  const resourceDisplayText = () =>
+    resource.type ? `${resource.type}: ${resource.name}` : resource.name;
+
   return (
     <div className={styles.rowContainer}>
       <div className={styles.iconAndName}>
         <ResourceIcon resourceType={resource.type} resourceUrl={resource.url} />
         <BodyTwoText className={styles.resourceLabel}>
           <StrongText>{resourcePositionLabel}</StrongText>
-          {resource.name}
+          {resourceDisplayText()}
         </BodyTwoText>
       </div>
       <ResourceViewOptionsDropdown resource={resource} />
