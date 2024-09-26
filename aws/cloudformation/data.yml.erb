@@ -13,8 +13,6 @@ Description: Data layer including RedShift cluster configuration and synchroniza
 # redshift_password: abcdef
 # Parameters are only required for initial stack creation, and reused if not provided on stack update.
 Parameters:
-  RDSIdentifier:
-    Type: String
   # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE
   # permissions, and must have SELECT permissions on all tables and must have
   # permissions to connect to the Production Reporting RDS Proxy.
@@ -29,11 +27,6 @@ Parameters:
   RDSHost:
     Type: String
     Description: Production MySQL database servername to use for exporting data to Redshift.
-  # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
-  RDSClusterEndpointRootDomain:
-    Type: String
-  ReportingCluster:
-    Type: String
   RedshiftDatabase:
     Type: String
     Default: dashboard
