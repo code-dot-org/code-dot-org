@@ -35,9 +35,9 @@ Feature: Using the manage students tab of the teacher dashboard
 
     # Test the US state Bulk Set modal
     When I click selector "#uitest-manage-students-table th:contains(State) i"
-    And I click selector ".pop-up-menu-item:contains(Add state for all students)"
+    And I click selector ".pop-up-menu-item:contains(Set state for all students)"
     Then I wait until element "#us-state-column-bulk-set-modal" is visible
-    And element "#us-state-column-bulk-set-modal h4" contains text "Add state for all students"
+    And element "#us-state-column-bulk-set-modal h4" contains text "Set state for all students"
     And element "#us-state-column-bulk-set-modal label[for='us-state']" contains text "State"
     And element "#us-state-column-bulk-set-modal select#us-state" contains text "Choose a state"
     And element "#us-state-column-bulk-set-modal" contains text "Please be sure to choose the correct state. For certain states, we may be required to obtain parental consent for student accounts."
