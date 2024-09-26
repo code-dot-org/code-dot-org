@@ -16,33 +16,43 @@ or consult your package management for your OS.
 ### macOS
 
 1. Install Docker itself:
-```shell
-brew install docker
-```
+    1. ```shell
+       brew install docker
+       ```
+    1. You can inspect that docker commands will use this Homebrew-managed version by checking that `which docker` returns either:
+        1. `/opt/homebrew/bin/docker` (on M1 or later processors)
+        1. `/usr/local/bin/docker` (on Intel processors)
 
 1. Install Docker Compose:
     1. ```shell
        export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
        mkdir -p $DOCKER_CONFIG/cli-plugins
-       curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-darwin-$(uname -m) -o $DOCKER_CONFIG/cli-plugins/docker-compose
+       architecture=$(uname -m); [ "$architecture" = "arm64" ] && architecture="aarch64"
+       curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-darwin-$architecture -o $DOCKER_CONFIG/cli-plugins/docker-compose
        chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
        ```
     1. You can inspect that the version is appropriate by running `docker compose version` and inspecting the result.
 
-1. Install Colima as a container runtime:
-```shell
-brew install colima
-```
+1. Install Colima as a container runtime, and, optionally, increase its allocated memory to 8 GB:
+    1. ```shell
+       brew install colima
+       ```
+    1. Open `~/.colima/default/colima.yaml` and update the memory allocation to 8 GB:
+       ```
+       # Size of the memory in GiB to be allocated to the virtual machine.
+       # Default: 2
+       memory: 8
+       ```
 
 1. Start the Colima service (and have it start on login)
-```shell
-brew services start colima
-```
+   ```shell
+   brew services start colima
+   ```
 
 1. Verify that Docker works
-```shell
-docker run --rm hello-world
-```
+   ```shell
+   docker run --rm hello-world
+   ```
 
 ### Ubuntu
 
