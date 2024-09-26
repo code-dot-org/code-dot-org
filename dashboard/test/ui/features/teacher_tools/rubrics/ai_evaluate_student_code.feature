@@ -20,12 +20,7 @@ Feature: Evaluate student code against rubrics using AI
     # Student submits code
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
-    And I click selector "#runButton"
-    And I wait until element ".project_updated_at" contains text "Saved"
-    And I wait until element "#submitButton" is visible
-    And I click selector "#submitButton"
-    And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button" to load a new page
+    And I submit this level
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
