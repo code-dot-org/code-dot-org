@@ -3,12 +3,17 @@
  * Copyright 2020 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  *
- * This file is sourced from @blockly/block-plus-minus (procedures.js) and Blockly Core:
+ * This file was sourced from @blockly/block-plus-minus (procedures.js) and Blockly Core:
  * https://github.com/google/blockly/blob/73416d4db559302d2b090d112e1c74612910445a/blocks/procedures.ts#L1237-L1352
  */
 
 /**
  * @fileoverview Changes the procedure blocks to use a +/- mutator UI.
+ * The + button adds a new argument input which contains an argument reporter block.
+ * The argument reporter works like a variable getter and can be used anywhere within
+ * a procedure that includes that parameter name.
+ * Argument inputs (and their associated reporter blocks) can be removed with the -
+ * button.
  */
 
 import * as GoogleBlockly from 'blockly/core';
