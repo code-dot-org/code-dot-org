@@ -7,13 +7,14 @@ import ResourceRow from './ResourceRow';
 
 import styles from './lesson-materials.module.scss';
 
+// lesson plans, standards, and vocabulary are only needed for teacher resources
 type LessonResourcesProps = {
   unitNumber: number;
   lessonNumber: number;
-  lessonPlanUrl: string | null;
-  standardsUrl: string | null;
-  vocabularyUrl: string | null;
-  lessonName: string | null;
+  lessonPlanUrl?: string;
+  standardsUrl?: string;
+  vocabularyUrl?: string;
+  lessonName?: string;
   resources: {
     key: string;
     name: string;
@@ -40,7 +41,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
     : i18n.studentResources();
 
   const renderStandardsRow = () => {
-    if (!standardsUrl || !lessonPlanUrl) return null;
+    if (!standardsUrl) return null;
 
     return (
       <ResourceRow
@@ -58,7 +59,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
   };
 
   const renderVocabularyRow = () => {
-    if (!vocabularyUrl || !lessonPlanUrl) return null;
+    if (!vocabularyUrl) return null;
 
     return (
       <ResourceRow

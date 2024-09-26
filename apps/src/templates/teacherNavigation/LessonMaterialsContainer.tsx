@@ -145,10 +145,6 @@ const LessonMaterialsContainer: React.FC = () => {
         unitNumber={unitNumber}
         lessonNumber={selectedLesson.position}
         resources={selectedLesson.resources.Student}
-        standardsUrl={null}
-        vocabularyUrl={null}
-        lessonPlanUrl={null}
-        lessonName={null}
       />
     );
   };
