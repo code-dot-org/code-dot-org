@@ -23,6 +23,17 @@
         ]
       },
       {
+        "key": "music-ai-skill-sequence2_2_481fb62f-741d-4134-ad1b-2bee448b8cf0",
+        "message": "You played two of the same sound! Now, try playing two different sounds. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": "1"
+          }
+        ]
+      },
+      {
         "key": "music-ai-skill-sequence2_e3a14922-603d-4ea2-8eaf-4e9ce817f651",
         "message": "You played one sound, now add another [sound](#clickable=play-sound-block). ",
         "next": false,
@@ -86,7 +97,7 @@
     "name_suffix": "_2",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-23T17:50:23.561+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence2\\\"\"],\"cloned_from\":\"music-ai-skill-sequence2\"},{\"changed_at\":\"2024-09-26 03:49:34 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-23T17:50:23.561+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence2\\\"\"],\"cloned_from\":\"music-ai-skill-sequence2\"},{\"changed_at\":\"2024-09-26 03:49:34 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-26 18:15:44 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-26 18:19:55 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
