@@ -7,6 +7,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+require 'cdo/shared_constants' # TODO: Why was this not autoloaded?
 require 'lti/engine'
 require 'core/engine'
 
