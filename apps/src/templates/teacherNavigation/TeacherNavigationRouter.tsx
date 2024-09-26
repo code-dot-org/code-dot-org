@@ -85,10 +85,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         : null
   );
 
-  const selectedSectionCourseName = selectedSection?.courseDisplayName;
-
-  const showNoUnitAssigned = !selectedSection?.unitId;
-
   const anyStudentHasProgress = React.useMemo(
     () => (selectedSection ? selectedSection.anyStudentHasProgress : true),
     [selectedSection]
@@ -241,12 +237,10 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             element={
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
-                showNoUnitAssigned={showNoUnitAssigned}
-                courseName={selectedSectionCourseName}
+                showNoUnitAssigned={!selectedSection?.unitId}
+                courseName={selectedSection?.courseDisplayName}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(
-                  <LessonMaterialsContainer />
-                )}
+                element={<LessonMaterialsContainer />}
               />
             }
           />
@@ -321,8 +315,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       showAITutorTab,
       selectedSection,
       studioUrlPrefix,
-      selectedSectionCourseName,
-      showNoUnitAssigned,
     ]
   );
 
