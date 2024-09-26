@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 gem 'aws-sdk-ec2'
 gem 'aws-sdk-secretsmanager'
 
+# HAML
+gem 'haml-rails' # haml (instead of erb) generators
+
 gem 'core', path: '../dashboard/packs/user'
 gem 'lti', path: '../dashboard/packs/lti'
 
