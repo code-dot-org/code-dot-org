@@ -1,25 +1,99 @@
-# SQLite. Versions 3.8.0 and up are supported.
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
-default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+<%
+require 'dynamic_config/dcdo'
+
+# TODO: Rails 4.1 may be able to be configured with the database url
+# instead of having to parse it here. Actually 4.0 can do that too but
+# it doesn't work with the way seamless_database_pool wants to
+# configure the read pool
+
+writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
+reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
+%>
+
+mysql_defaults: &mysql_defaults
+  adapter: mysql2
+  prepared_statements: false
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
+  default_group: 'cdo'
+
+  # ActiveRecord connection-pool settings:
+  # See: https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html
+  # maximum number of connections the pool may manage (default 5).
+  pool: 5
+
+  # number of seconds to wait for a connection to become available before giving up and raising a timeout error (default 5 seconds).
+  checkout_timeout: 3
+
+  # `mysql_options` client options forwarded through the mysql2 adapter:
+  # See: https://dev.mysql.com/doc/c-api/8.0/en/mysql-options.html
+
+  # `MYSQL_OPT_CONNECT_TIMEOUT`: The connect timeout in seconds.
+  connect_timeout: 2
+
+<% if DCDO.get('enable_mysql_client_reconnect', true) %>
+  # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
+  reconnect: true
+<% end %>
+
+  # `MYSQL_OPT_READ_TIMEOUT`: The timeout in seconds for each attempt to read from the server.
+  # There are retries if necessary, so the total effective timeout value is three times the option value.
+  # You can set the value so that a lost connection can be detected earlier than the TCP/IP Close_Wait_Timeout value of 10 minutes.
+  #
+  # NOTE: mysql2 reuses this variable as a query timeout without retry, so set it to the maximum query execution time.
+  read_timeout: 30
+
+  # `MYSQL_OPT_WRITE_TIMEOUT`: The timeout in seconds for each attempt to write to the server.
+  # There is a retry if necessary, so the total effective timeout value is two times the option value.
+  write_timeout: 5
+
+environment_defaults: &environment_defaults
+  primary:
+    <<: *mysql_defaults
+    database: <%= writer.path.sub(%r{^/},"") || "dashboard_#{Rails.env}" %>
+    host: <%= writer.host || 'localhost' %>
+    password: <%= writer.password || '' %>
+    port: <%= writer.port || 3306 %>
+    username: <%= writer.user || 'root' %>
+  <% if reader && reader != writer %>
+  primary_replica:
+    replica: true
+    <<: *mysql_defaults
+    database: <%= reader.path.sub(%r{^/},"") %>
+    host: <%= reader.host %>
+    password: <%= reader.password %>
+    port: <%= reader.port || 3306 %>
+    username: <%= reader.user %>
+  <% end %>
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  <<: *environment_defaults
+
+staging: &staging
+  <<: *environment_defaults
+
+adhoc:
+  <<: *environment_defaults
+
+# levelbuilder environment extends the staging environment
+levelbuilder:
+  <<: *staging
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: db/test.sqlite3
+  <<: *environment_defaults
+  # Override the default values for `database` and `pool` fields to accommodate
+  # CI needs. To do that, we have to redefine the whole `primary` block
+  primary:
+    <<: *mysql_defaults
+    database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
+    host: <%= writer.host || 'localhost' %>
+    password: <%= writer.password || '' %>
+    pool: <%= ENV['CI'] ? 20 : 5 %>
+    port: <%= writer.port || 3306 %>
+    username: <%= writer.user || 'root' %>
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  <<: *environment_defaults
