@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {ChangeEvent, AriaAttributes} from 'react';
+import React, {AriaAttributes, ChangeEvent} from 'react';
 
 import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
@@ -25,8 +25,10 @@ export interface TextFieldProps extends AriaAttributes {
   value?: string;
   /** TextField label */
   label?: string;
+  /** TextField sub label */
+  subLabel?: string;
   /** TextField helper message */
-  helperMessage?: string;
+  helperMessage?: string | JSX.Element;
   /** TextField helper icon */
   helperIcon?: FontAwesomeV6IconProps;
   /** TextField placeholder */
@@ -43,6 +45,12 @@ export interface TextFieldProps extends AriaAttributes {
   color?: 'black' | 'gray' | 'white';
   /** Size of TextField */
   size?: Exclude<ComponentSizeXSToL, 'xs'>;
+  /** max length of TextField */
+  maxLength?: number;
+  /** min length of TextField */
+  minLength?: number;
+  /** min length of TextField */
+  autoComplete?: string;
 }
 
 /**
@@ -62,6 +70,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   id,
   inputType = 'text',
   label,
+  subLabel,
   onChange,
   name,
   value,
@@ -72,6 +81,9 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   helperIcon,
   errorMessage,
   className,
+  maxLength,
+  minLength,
+  autoComplete,
   color = 'black',
   size = 'm',
   ...rest
@@ -89,6 +101,9 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
       aria-describedby={rest['aria-describedby']}
     >
       {label && <span className={moduleStyles.textFieldLabel}>{label}</span>}
+      {subLabel && (
+        <span className={moduleStyles.textFieldHelperSection}>{subLabel}</span>
+      )}
       <input
         id={id}
         type={inputType}
@@ -97,6 +112,9 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         placeholder={placeholder}
         readOnly={readOnly}
         disabled={disabled}
+        maxLength={maxLength}
+        minLength={minLength}
+        autoComplete={autoComplete}
         onChange={onChange}
         {...ariaProps}
         aria-disabled={disabled || ariaProps['aria-disabled']}
