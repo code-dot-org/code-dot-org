@@ -9,7 +9,7 @@ Feature: Student can complete rubric-enabled level
     # Student submits code
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
-    And I submit this gamelab level
+    And I submit this level
     
 
     # Student can see new progress in header
@@ -27,7 +27,7 @@ Feature: Student can complete rubric-enabled level
     # Student submits code
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
-    And I submit this gamelab level
+    And I submit this level
     # Student can see new progress in header
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the lab page to fully load

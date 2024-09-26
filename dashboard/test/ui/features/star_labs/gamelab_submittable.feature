@@ -8,7 +8,7 @@ Background:
 
 Scenario: Submit anything, unsubmit, be able to resubmit.
   # First, submit something.
-  When I submit this gamelab level
+  When I submit this level
 
   # Reload the page to see that unsubmit is the option.
   Then I am on "http://studio.code.org/s/allthethings/lessons/19/levels/1?noautoplay=true"
