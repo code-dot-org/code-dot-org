@@ -11,11 +11,11 @@ module Rack
       FARSI_REGION = 'fa',
     ].freeze
 
-    # TODO: Replace with the actual mapping list of regional locales from the Global Edition config file.
+    # TODO: Replace with the actual mapping list of regional locales from the Global Edition config files.
     # @example {'fa' => 'fa-IR', 'en' => 'en-US', ...}
-    REGIONS_LOCALES = YAML.load_file(Rails.root.join('config/locales.yml')).slice(*AVAILABLE_REGIONS)
+    REGIONS_LOCALES = YAML.load_file(CDO.dir('dashboard/config/locales.yml')).slice(*AVAILABLE_REGIONS)
 
-    class RoutingHandler
+    class RouteHandler
       ROOT_PATH = '/global'
       # @example Matches paths like `/global/fa/home`, capturing:
       # - ge_prefix: "/global/fa"
@@ -36,9 +36,17 @@ module Rack
         @request = request
       end
 
+      # @note Changes to the `request` should be made before the `response` is initialized to apply the changes.
       def call
-        if PATH_PATTERN.match?(request.path)
-          ge_prefix, ge_region, main_path = PATH_PATTERN.match(request.path).values_at(:ge_prefix, :ge_region, :main_path)
+        if request.params.key?(REGION_KEY)
+          setup_region(request.params[REGION_KEY]) if region_changed?(request.params[REGION_KEY])
+
+          redirect_uri = URI(request_path_vars(:main_path).first || request.path)
+          redirect_uri.query = URI.encode_www_form(request.params.except(REGION_KEY)).presence
+
+          response.redirect(redirect_uri.to_s)
+        elsif PATH_PATTERN.match?(request.path)
+          ge_prefix, ge_region, main_path = request_path_vars(:ge_prefix, :ge_region, :main_path)
 
           # Strips the Global Edition path prefix (e.g., `/global/fa`) from the request path.
           # request.path == request.script_name + request.path_info
@@ -48,28 +56,8 @@ module Rack
           request.script_name = ::File.join(ge_prefix, request.script_name).chomp('/')
           request.path_info = main_path
 
-          # Sets the request cookies to apply changes immediately without needing to reload the page.
-          request.cookies[REGION_KEY] = ge_region
-          request.cookies[LANGUAGE_COOKIE_KEY] = REGIONS_LOCALES[ge_region] if REGIONS_LOCALES[ge_region]
-
-          # Once the `response` instance is initialized, any changes to the `request` made afterward will not be applied.
-
-          # Updates the global `ge_region` cookie to lock the platform to the regional version.
-          response.set_cookie(REGION_KEY, {value: request.cookies[REGION_KEY], path: '/', same_site: :lax})
-          # Prevents the cookie from being discarded under resource constraints.
-          response.set_cookie_header = "#{response.set_cookie_header}; priority=high;"
-
-          # Updates the global `language` cookie to enforce the switch to the regional language.
-          response.set_cookie(
-            LANGUAGE_COOKIE_KEY,
-            {
-              value: request.cookies[LANGUAGE_COOKIE_KEY],
-              domain: ".#{PublicSuffix.parse(request.hostname).domain}", # Sets cookies to the root domain (e.g., ".code.org")
-              path: '/',
-              same_site: :lax,
-            }
-          )
-        elsif redirectable?
+          setup_region(ge_region) if region_changed?(ge_region)
+        elsif region_available?(request.cookies[REGION_KEY]) && request_redirectable?
           # Redirects to the regional version of the path.
           response.redirect ::File.join(ROOT_PATH, request.cookies[REGION_KEY], request.fullpath)
         end
@@ -77,31 +65,69 @@ module Rack
         response.finish
       end
 
+      # @note Once the `response` instance is initialized, any changes to the `request` made afterward will not be applied.
       private def response
         @response ||= Rack::Response[*app.call(request.env)]
       end
 
-      private def region_available?
-        region = request.cookies[REGION_KEY]
+      private def region_changed?(new_region)
+        request.cookies[REGION_KEY] != new_region
+      end
+
+      private def request_path_vars(*keys)
+        PATH_PATTERN.match(request.path)&.values_at(*keys) || []
+      end
+
+      private def set_global_cookie(key, value)
+        cookie_data = {
+          domain: ".#{PublicSuffix.parse(request.hostname).domain}", # the root domain (e.g., ".code.org")
+          path: '/',
+          same_site: :lax,
+        }
+
+        if value
+          response.set_cookie(key, cookie_data.merge(value: value, max_age: 10.years))
+        else
+          response.delete_cookie(key, cookie_data)
+        end
+
+        # Prevents the cookie from being discarded under resource constraints.
+        response.set_cookie_header = "#{response.set_cookie_header}; priority=high;"
+      end
+
+      private def region_available?(region)
         region.present? && AVAILABLE_REGIONS.include?(region)
       end
 
-      private def app_route?
-        Rails.application.routes.recognize_path(request.path).present?
+      private def setup_region(region)
+        # Resets the region if it's `nil` or sets it only if it's available.
+        return unless region.nil? || region_available?(region)
+
+        # Sets the request cookies to apply changes immediately without needing to reload the page.
+        request.cookies[REGION_KEY] = region
+        request.cookies[LANGUAGE_COOKIE_KEY] = REGIONS_LOCALES[region] if REGIONS_LOCALES[region]
+
+        # Updates the global `ge_region` cookie to lock the platform to the regional version.
+        set_global_cookie(REGION_KEY, request.cookies[REGION_KEY])
+        # Updates the global `language` cookie to enforce the switch to the regional language.
+        set_global_cookie(LANGUAGE_COOKIE_KEY, request.cookies[LANGUAGE_COOKIE_KEY])
+      end
+
+      private def app_route?(path)
+        Rails.application.routes.recognize_path(path).present?
       rescue ActionController::RoutingError
         false
       end
 
-      # Determines if the request is eligible for redirection to the regional version of the path.
+      # Determines if the request is eligible for redirection.
       # To improve efficiency, the redirection should only affect the browser's address bar,
       # avoiding redirection for non-visible to user requests such as AJAX, non-GET, or asset requests.
-      private def redirectable?
-        return false unless region_available?
-        # Only GET request can be redirected and only non-AJAX requests should be redirected.
-        return false unless request.get? && !request.xhr?
+      private def request_redirectable?
+        return false unless request.get? # only GET request can be redirected
+        return false if request.xhr? # only non-AJAX requests should be redirected
 
         # The application's routing path indicates that it is not an asset or public file path.
-        app_route?
+        app_route?(request.path)
       end
     end
 
@@ -113,7 +139,7 @@ module Rack
       request = Request.new(env)
 
       if TARGET_HOSTNAMES.include?(request.hostname)
-        RoutingHandler.new(@app, request).call
+        RouteHandler.new(@app, request).call
       else
         @app.call(env)
       end

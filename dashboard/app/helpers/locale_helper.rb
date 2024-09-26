@@ -79,11 +79,25 @@ module LocaleHelper
     nil
   end
 
+  def locale_options_for_select
+    options = options_for_locale_select
+    # Combines the current locale with the Global Edition region, e.g. "fa-IR|fa".
+    selected_option = [locale, cookies[Rack::GlobalEdition::REGION_KEY]].select(&:presence).join('|')
+
+    # Adds language options with the switch to the regional (global) version of the platform.
+    Rack::GlobalEdition::REGIONS_LOCALES.except('en').each do |region, region_locale|
+      locale_name = Dashboard::Application::LOCALES.dig(region_locale, :native)
+      options << ["#{locale_name} (global)", [region_locale, region].join('|')] if locale_name
+    end
+
+    options_for_select(options.sort_by(&:second), selected_option)
+  end
+
   def i18n_dropdown
     # NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
     # user input or to persist data without also updating it to enforce UTF-8
     form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
-      (hidden_field_tag :user_return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
+      (hidden_field_tag :user_return_to, request.url) + (select_tag :locale, locale_options_for_select, onchange: 'this.form.submit();')
     end
   end
 end

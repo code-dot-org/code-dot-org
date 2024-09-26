@@ -28,14 +28,12 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
           must_respond_with 302
           must_redirect_to "#{regional_page_path}?#{params.to_query}"
-          _(cookies['language_']).must_equal nil
 
           follow_redirect!
 
           must_respond_with 200
           _(path).must_equal regional_page_path
           _(request.params[:foo]).must_equal params[:foo]
-          _(cookies['language_']).must_equal ge_region_locale
         end
 
         it 'does not redirect from not application routes' do
@@ -56,7 +54,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
       end
     end
 
-    describe 'regional page' do
+    describe 'regional (global) page' do
       it 'is accessible' do
         get regional_page_path
 
@@ -74,13 +72,13 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         _(request.cookies['language_']).must_equal ge_region_locale
       end
 
-      it 'ge_region cookie is changed to region from the link' do
+      it 'global ge_region cookie is changed to region from the link' do
         init_ge_region = 'en'
         cookies['ge_region'] = init_ge_region
         _ {get regional_page_path}.must_change -> {cookies['ge_region']}, from: init_ge_region, to: ge_region
       end
 
-      it 'language cookie is changed to regional language' do
+      it 'global language cookie is changed to regional language' do
         selected_locale = 'uk-UA'
         cookies['language_'] = selected_locale
         _ {get regional_page_path}.must_change -> {cookies['language_']}, from: selected_locale, to: ge_region_locale
