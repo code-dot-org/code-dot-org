@@ -172,10 +172,9 @@ Resources:
       ReplicationTaskIdentifier: task-<%= task_name %>
       SourceEndpointArn: !Ref MySQLDatabaseSourceEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
-      ReplicationTaskSettings: !Sub |
-        <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
-      TableMappings: !Sub |
-          <%= table_mappings.to_json %>
+      # ReplicationTaskSettings and TableMappings must be provided as strings containing JSON
+      ReplicationTaskSettings: '<%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>'
+      TableMappings: '<%= table_mappings.to_json %>'
       Tags:
         -
           Key: schedule
