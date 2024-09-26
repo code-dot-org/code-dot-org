@@ -58,6 +58,7 @@ Resources:
   Tableau:
     Type: AWS::Redshift::Cluster
     DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
     Properties:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 5
