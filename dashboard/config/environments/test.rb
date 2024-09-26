@@ -25,14 +25,14 @@ Dashboard::Application.configure do
     config.stub_aichat_aws_services = true
   end
 
+  # Disable Rails.cache when running unit tests (also in Drone, not sure if this is strictly desired).
+  config.cache_store = :memory_store, {size: 64.megabytes} if ENV['UNIT_TEST'] || is_ci
+
   # Avoid loading all i18n files up front, which can significantly slow down initialization.
   # Instead, it only loads i18n files that belong to the current locale.
   if ENV['LAZY_LOAD_TRANSLATIONS']
     config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
   end
-
-  # Disable Rails.cache when running unit tests (also in Drone, not sure if this is strictly desired).
-  config.cache_store = :memory_store, {size: 64.megabytes} if ENV['UNIT_TEST'] || is_ci
 
   config.assets.quiet = true
 
