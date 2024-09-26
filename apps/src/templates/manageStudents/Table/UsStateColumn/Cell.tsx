@@ -5,7 +5,7 @@ import {STATE_CODES} from '@cdo/apps/geographyConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {editStudent} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {RootState} from '@cdo/apps/types/redux';
 
 import {CellProps} from './interface';

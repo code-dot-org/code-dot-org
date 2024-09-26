@@ -11,7 +11,7 @@ import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {bulkSet} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {BulkSetModalProps} from '@cdo/apps/templates/manageStudents/Table/UsStateColumn/interface';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {RootState} from '@cdo/apps/types/redux';
 import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
