@@ -83,3 +83,19 @@
   background-color: var(--sentiment-information-10);
   color: var(--sentiment-information-50);
 }
+
+.noUnitContainer {
+  margin-top: 60px;
+  text-align: center;
+  max-width: 594px;
+}
+
+.noUnitImage {
+  margin-bottom: 16px;
+}
+
+.centerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

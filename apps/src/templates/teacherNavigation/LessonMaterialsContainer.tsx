@@ -38,6 +38,7 @@ type Lesson = {
 };
 
 interface LessonMaterialsData {
+  unitId: number;
   title: string;
   unitNumber: number;
   scriptOverviewPdfUrl: string;
