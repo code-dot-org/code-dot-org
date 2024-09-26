@@ -1,15 +1,22 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import _ from 'lodash';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {
   SectionLoginType,
   // PlGradeValue,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {
+  sectionFromServerSection,
+  studentFromServerStudent,
+} from './teacherSectionsReduxSelectors';
+import {
   AssignmentCourseOffering,
   OAuthSectionTypeName,
   ServerOAuthSectionTypeName,
+  Section,
   ServerSection,
   SectionMap,
   Student,
@@ -53,6 +60,7 @@ interface TeacherSectionState {
   isRosterDialogOpen: boolean;
   // Track a section's roster provider. Must be of type OAuthSectionTypes.
   rosterProvider: RosterProvider;
+  rosterProviderName: string | null;
   // Set of oauth classrooms available for import from a third-party source.
   // Not populated until the RosterDialog is opened.
   classrooms: null;
@@ -104,6 +112,7 @@ const initialState: TeacherSectionState = {
   isRosterDialogOpen: false,
   // Track a section's roster provider. Must be of type OAuthSectionTypes.
   rosterProvider: null,
+  rosterProviderName: null,
   // Set of oauth classrooms available for import from a third-party source.
   // Not populated until the RosterDialog is opened.
   classrooms: null,
@@ -140,6 +149,111 @@ const sectionSlice = createSlice({
     },
     setPageType(state, action: PayloadAction<string>) {
       state.pageType = action.payload;
+    },
+    selectSection(state, action: PayloadAction<string>) {
+      let sectionId: number | null;
+      action.payload && state.sectionIds.includes(parseInt(action.payload, 10))
+        ? (sectionId = parseInt(action.payload, 10))
+        : (sectionId = NO_SECTION);
+      state.selectedSectionId = sectionId;
+      state.selectedSectionName =
+        sectionId !== NO_SECTION ? state.sections[sectionId].name : '';
+    },
+    updateSelectedSection(state, action: PayloadAction<ServerSection>) {
+      const sectionId = action.payload.id;
+      const oldSection: Section = sectionId
+        ? state.sections[sectionId]
+        : (sectionFromServerSection(action.payload) as Section);
+      if (sectionId) {
+        state.sections = {
+          ...state.sections,
+          [sectionId]: {
+            ...oldSection,
+            ...(sectionFromServerSection(action.payload) as Section),
+          },
+        };
+      }
+    },
+    setSections(state, action: PayloadAction<ServerSection[]>) {
+      const sections: Section[] = action.payload.map(
+        section => sectionFromServerSection(section) as Section
+      );
+
+      let selectedSectionId = state.selectedSectionId;
+      // If we have only one section, autoselect it
+      if (Object.keys(action.payload).length === 1) {
+        selectedSectionId = action.payload[0].id;
+      }
+
+      sections.forEach(section => {
+        // SET_SECTIONS is called in two different contexts. On some pages it is called
+        // in a way that only provides name/id per section, in other places (homepage, unit overview)
+        // it provides more detailed information. There are currently no pages where
+        // it should be called in both manners, but we want to make sure that if it
+        // were it will throw an error rather than destroy data.
+        const prevSection = state.sections[section.id];
+        if (prevSection) {
+          Object.keys(section).forEach(key => {
+            if (
+              section[key as keyof Section] === undefined &&
+              prevSection[key as keyof Section] !== undefined
+            ) {
+              throw new Error(
+                'SET_SECTIONS called multiple times in a way that would remove data'
+              );
+            }
+          });
+        }
+      });
+
+      const sectionIds = _.uniq(
+        state.sectionIds.concat(sections.map(section => section.id))
+      );
+
+      const studentSectionIds = sections
+        .filter(
+          section => section.participantType === ParticipantAudience.student
+        )
+        .map(section => section.id);
+      const plSectionIds = sections
+        .filter(
+          section => section.participantType !== ParticipantAudience.student
+        )
+        .map(section => section.id);
+
+      state.sectionsAreLoaded = true;
+      state.selectedSectionId = selectedSectionId;
+      state.sectionIds = sectionIds;
+      state.studentSectionIds = studentSectionIds;
+      state.plSectionIds = plSectionIds;
+      state.sections = {
+        ...state.sections,
+        ..._.keyBy(sections, 'id'),
+      };
+    },
+    startLoadingSectionData(state) {
+      state.isLoadingSectionData = true;
+    },
+    finishLoadingSectionData(state) {
+      state.isLoadingSectionData = false;
+    },
+    setStudentsForCurrentSection(
+      state,
+      action: PayloadAction<{
+        sectionId: number;
+        students: Student[];
+      }>
+    ) {
+      const students = action.payload.students || [];
+      const selectedStudents = students.map(
+        student =>
+          studentFromServerStudent(student, action.payload.sectionId) as Student
+      );
+
+      state.selectedStudents = selectedStudents;
+    },
+    setRosterProviderName(state, action: PayloadAction<string>) {
+      state.rosterProviderName = action.payload;
     },
     updateSectionAiTutorEnabled: {
       reducer(
@@ -198,15 +312,6 @@ export const {
   // type-checking (perhaps not included from any TS files?)
 } = {
   ...sectionSlice.actions,
-
-  // Method signatures to allow compiler type-checking to pass. Delete when implemented.
-  selectSection: (id: string | number) => {},
-  setSections: (sections: ServerSection[]) => {},
-  updateSelectedSection: (section: ServerSection) => {},
-  startLoadingSectionData: () => {},
-  setStudentsForCurrentSection: (id: number, students: Student[]) => {},
-  setRosterProviderName: (name: string) => {},
-  finishLoadingSectionData: () => {},
 };
 
 export default sectionSlice.reducer;
