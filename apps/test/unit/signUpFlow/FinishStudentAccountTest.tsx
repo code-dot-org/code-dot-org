@@ -331,4 +331,30 @@ describe('FinishStudentAccount', () => {
     screen.getByText(locale.email_error_message());
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
+
+  it('GDPR has expected behavior if api call returns true', async () => {
+    jest.spyOn(global, 'fetch').mockReturnValueOnce(
+      new Promise(() => ({
+        data: new Promise(() => {
+          JSON.stringify({gdpr: true, force_in_eu: false});
+        }),
+      }))
+    );
+
+    renderDefault();
+
+    // Check that GDPR message is displayed
+    await screen.findByText(locale.data_transfer_notice());
+
+    // Check that button is disabled until GDPR is checked
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    fireEvent.click(screen.getAllByRole('checkbox')[1]);
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('false');
+
+    // Restore the original fetch implementation
+    jest.clearAllMocks();
+  });
 });
