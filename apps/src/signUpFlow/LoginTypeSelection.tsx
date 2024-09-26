@@ -129,9 +129,11 @@ const LoginTypeSelection: React.FunctionComponent = () => {
 
     const submitLoginTypeParams = {
       new_sign_up: true,
-      email: email,
-      password: password,
-      password_confirmation: password,
+      user: {
+        email: email,
+        password: password,
+        password_confirmation: password,
+      },
     };
     const authToken = await getAuthenticityToken();
     await fetch('/users/begin_sign_up', {
