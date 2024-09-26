@@ -22,6 +22,16 @@
   }
 }
 
+.secondaryButton {
+  // We use important here because the disabled styles used by Button
+  // are more specific than a single class.
+  &:disabled {
+    background-color: $light_black !important;
+    color: $light_gray_800 !important;
+    border: none;
+  }
+}
+
 .dropdownItem {
   display: flex;
   padding: 8px 16px 8px 12px;

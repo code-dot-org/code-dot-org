@@ -112,7 +112,7 @@ const ControlButtons: React.FunctionComponent = () => {
           onClick={handleStop}
           color={'destructive'}
           iconLeft={{iconStyle: 'solid', iconName: 'square'}}
-          size={'s'}
+          size={'xs'}
           className={moduleStyles.controlButton}
         />
       ) : (
