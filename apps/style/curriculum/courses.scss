@@ -1,7 +1,7 @@
 @import "markdown";
 @import "pdf_printing";
 
-/* Copied in style/teacherDashboard/teacherDashboard.scss. Update there if anything is changed here. */
+/* Used for the course overview page and the teacher dashboard course overview page */
 @media print {
   /* we have many components that we never want to include in a print view */
   .announcement-notification,
