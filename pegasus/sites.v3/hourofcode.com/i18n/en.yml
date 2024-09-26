@@ -11916,6 +11916,21 @@
     focus:
       heading: "Focus more on what matters"
       desc: "The AI Teaching Assistant transforms CS education, easing the workload for new and experienced teachers alike. By streamlining assessments, it boosts educator confidence, enabling a focus on enriching student interactions and tailored learning experiences."
+    get_started:
+      header: "Get started with AI Teaching Assistant"
+      watch_demo: "Watch the demo video"
+      assign_csd_3: "Assign Computer Science Discoveries Unit 3"
+      become_verified: "Become a verified teacher"
+      use_rubric: "Use your first rubric in lesson 7!"
+      use_ta: "Use AI Teaching Assistant"
+    in_the_news:
+      header: "AI Teaching Assistant in the news"
+      education_week_label: "Education Week"
+      education_week_headline: "This AI Tool Cut One Teacher's Grading Time in Half. How It Works"
+      education_week_button: "Read Education Week Article"
+      blog_label: "Blog"
+      blog_headline: "Code.org wins 2024 Best of STEM award!"
+      blog_button: "Read Code.org blog post"
     pilot_apps:
       heading: "Accepting pilot applications through June 2024"
       desc: "We are enrolling **CSD Unit 3 teachers** into our AI Teaching Assistant pilot. You'll get the chance to help experience and test this exciting new tool!"
@@ -11949,18 +11964,21 @@
       units:
         question: "What Units is the AI Teaching Assistant available for?"
         answer: "The AI Teaching Assistant is launching in CSD's Interactive Games and Animations Unit. The team is hard at work building AI-supported features for additional curriculum."
+        answer_v2: "The AI Teaching Assistant is now available to all verified middle school teachers in the [Interactive Animations and Games unit](%{unit_url})."
       available:
-        question: "When will the AI Teaching Assistant be available to all Interactive Games and Animation users?"
+        question: "When will the AI Teaching Assistant be available to all Interactive Animations and Games users?"
         answer: "The AI Teaching Assistant will launch to all CSD teachers in August 2024, in time for the 2024-2025 school year."
       access:
         question: "How do I access the AI Teaching Assistant?"
         answer: "The AI Teaching Assistant is available for teachers accepted into the pilot in mini and end-of-unit projects in the Interactive Games and Animations unit. In those lessons, the AI Teaching Assistant will appear in the bottom left-hand corner of your screen."
+        answer_v2: "The AI Teaching Assistant is available for all verified teachers in mini and end-of-unit projects in the [Interactive Animations and Games unit](%{unit_url}). In those lessons, the AI Teaching assistant will appear in the bottom left-hand corner of your screen."
       keep_up:
         question: "Where should I go to keep up with Code.org's investment in AI-supported tools?"
         answer: "Code.org is investing in using AI to enhance teaching and learning.  Check out [code.org/ai](https://code.org/ai) to learn more about our AI curriculum, professional learning, and tools."
       demo:
         question: "Can I see a demo of how AI TA works?"
         answer: "Join our curriculum manager, Angelina, as she introduces the AI Teaching Assistant."
+      verification_link: "To get verified, fill out this form."
     partners:
       heading: "Developed in partnership with"
 

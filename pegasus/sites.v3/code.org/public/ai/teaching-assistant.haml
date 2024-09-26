@@ -13,13 +13,29 @@ theme: responsive_full_width
       %p.white
         =hoc_s("ai_ta_page.desc")
     %figure
-      %img{src: "/images/ai/page/teaching-assistant/ai-ta-banner.png", alt: "", style: "width: 100%; margin-block-start: -2rem; margin-inline-start: -2rem;"}
+      %img{src: "/images/ai/page/teaching-assistant/ai-ta-banner-winner.png", alt: "", style: "width: 100%; margin-block-start: -2rem; margin-inline-start: -2rem;"}
+
+%section.bg-neutral-light
+  .wrapper
+    .flex-container.justify-space-between.align-items-center.gap-2.wrap
+      %div.col-47
+        = view :display_video_thumbnail, id: "intro_ta", video_code: "Lj7uZx-BKhw", play_button: 'center', letterbox: 'false'
+      .text-wrapper.col-47
+        %h2=hoc_s("ai_ta_page.get_started.header")
+        %ol
+          %li=hoc_s("ai_ta_page.get_started.watch_demo")
+          %li=hoc_s("ai_ta_page.get_started.assign_csd_3")
+          %li
+            %a{href: "https://form.jotform.com/240863841362155"}
+              = hoc_s("ai_ta_page.get_started.become_verified")
+          %li=hoc_s("ai_ta_page.get_started.use_rubric")
+        .content-footer
+          %a.link-button{href: "https://studio.code.org/s/csd3-2024"}
+            = hoc_s("ai_ta_page.get_started.use_ta")
 
 %section.no-padding-bottom
   .wrapper
     .flex-container.justify-space-between.align-items-center.gap-2.wrap
-      %figure.col-47
-        %img.rounded-corners{src: "/images/ai/page/teaching-assistant/ai-ta-assessment-example.png", alt: "", style: "width: 100%;"}
       .text-wrapper.col-47
         %h2=hoc_s("ai_ta_page.assessment_power.heading")
         %p=hoc_s("ai_ta_page.assessment_power.desc")
@@ -27,10 +43,42 @@ theme: responsive_full_width
           %li=hoc_s("ai_ta_page.assessment_power.list_01", markdown: :inline)
           %li=hoc_s("ai_ta_page.assessment_power.list_02", markdown: :inline)
           %li=hoc_s("ai_ta_page.assessment_power.list_03", markdown: :inline)
+      %figure.col-47
+        %img.rounded-corners{src: "/images/ai/page/teaching-assistant/ai-ta-assessment-example.png", alt: "", style: "width: 100%;"}
+
+
 
 %section
   .wrapper
-    = view :section_basic_image_text, image_url: "/images/ai/page/teaching-assistant/ai-ta-focus-example.png", heading: hoc_s("ai_ta_page.focus.heading"), desc: hoc_s("ai_ta_page.focus.desc"), wrap_reverse: true, url: nil, urlText: nil
+    = view :section_basic_image_text, image_url: "/images/ai/page/teaching-assistant/ai-ta-focus-example.png", heading: hoc_s("ai_ta_page.focus.heading"), desc: hoc_s("ai_ta_page.focus.desc"), wrap_reverse: false, url: nil, urlText: nil
+
+:ruby
+  news_item = [
+    {
+      slug: "education_week",
+      url: "https://www.edweek.org/technology/this-ai-tool-cut-one-teachers-grading-time-in-half-how-it-works/2024/04",
+    },
+    {
+      slug: "blog",
+      url: "https://codeorg.medium.com/code-org-wins-2024-best-of-stem-award-155e55bde866",
+    },
+  ]
+
+%section.bg-neutral-dark
+  .wrapper.centered
+    %h2.white=hoc_s("ai_ta_page.in_the_news.header")
+    .action-block__wrapper.action-block__wrapper--two-col
+      - news_item.each do |news_item|
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline
+              =hoc_s("ai_ta_page.in_the_news.#{news_item[:slug]}_label")
+            %h3
+              =hoc_s("ai_ta_page.in_the_news.#{news_item[:slug]}_headline")
+            %img{src: "/images/ai/page/teaching-assistant/#{news_item[:slug]}-image.png", alt: ""}
+          .content-footer
+            %a.link-button{href: news_item[:url]}
+              =hoc_s("ai_ta_page.in_the_news.#{news_item[:slug]}_button")
 
 %section.bg-neutral-light
   .wrapper.centered
