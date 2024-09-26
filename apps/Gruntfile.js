@@ -317,10 +317,6 @@ module.exports = function (grunt) {
             'build/package/css/foorm_editor.css',
             'style/code-studio/foorm_editor.scss',
           ],
-          [
-            'build/package/css/teacherDashboard.css',
-            'style/teacherDashboard/teacherDashboard.scss',
-          ],
         ].concat(
           appsToBuild.map(function (app) {
             return [
