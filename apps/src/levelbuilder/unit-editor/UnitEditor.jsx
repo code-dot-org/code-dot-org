@@ -719,7 +719,7 @@ class UnitEditor extends React.Component {
                       value: key,
                       label: CurriculumTopicTags[key]
                   }))}
-                  values={!!this.state.topicTags?this.state.topicTags : []}
+                  values={this.state.topicTags}
                   setValues={vals => this.setState({topicTags: vals})}
                 />
               </label>
