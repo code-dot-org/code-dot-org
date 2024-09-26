@@ -1205,7 +1205,7 @@ And(/^I submit this gamelab level$/) do
     And I press "runButton"
     And I wait to see "#submitButton"
     And I press "submitButton"
-    And I wait for the page to fully load
+    And I wait for 10 seconds
   GHERKIN
 end
 
