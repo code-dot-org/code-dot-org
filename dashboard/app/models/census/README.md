@@ -7,9 +7,9 @@ There are several sources of census data.
 There are multiple forms which have gone through many revisions. This data is all stored in the `census_submissions` table using single table inheritance so that different types and versions of the form get different values for type. All of the form submissions are handled by the same [controller](https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/controllers/api/v1/census/census_controller.rb).
 
 The different forms are:
-* [Census form on code.org/yourschool](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/templates/census2017/CensusForm.jsx)
+* [Census form on code.org/yourschool](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/templates/census/CensusForm.jsx)
 * [Census form on the Hour of Code signup page](https://github.com/code-dot-org/code-dot-org/blob/73792287ac0a60759c83f2c0f1ae5a5bf5fcc1ce/pegasus/sites.v3/hourofcode.com/views/signup_form.haml#L125)
-* [Census banner that shows on the studio.code.org teacher homepage](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/templates/census2017/CensusTeacherBanner.jsx)
+* [Census banner that shows on the studio.code.org teacher homepage](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/templates/census/CensusTeacherBanner.jsx)
   * Showing the banner is controlled by [a check in the user model](https://github.com/code-dot-org/code-dot-org/blob/e68ae4ef08567b67d5a8ce876a14b7588b9ac692/dashboard/app/models/user.rb#L1632-L1636)
   * The time at which we next show the banner is set based on whether the teacher submitted or deferred the banner previously. That is handled in [users_controller.rb](https://github.com/code-dot-org/code-dot-org/blob/79c10e3e735f5c3d9dc72f9f1e701216b7613a54/dashboard/app/controllers/api/v1/users_controller.rb#L37-L69)
 
