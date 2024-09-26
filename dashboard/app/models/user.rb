@@ -567,10 +567,10 @@ class User < ApplicationRecord
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
-  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_opt_in, if: -> {email_preference_opt_in_required && user_type == TYPE_TEACHER}
+  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present? && user_type == TYPE_TEACHER}
+  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present? && user_type == TYPE_TEACHER}
+  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present? && user_type == TYPE_TEACHER}
 
   # Validations for adding parent email notifications
   before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
