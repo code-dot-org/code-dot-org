@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "long_instructions": "#### Customize a Drum Beat\r\n\r\nClick the [AI Beat block](#clickable=play-drums-ai-block) to create custom beats. AI Bot will help you generate a new beat for your song. ",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "validations": [
       {
         "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
@@ -178,7 +178,7 @@
     "name_suffix": "_2",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-23T17:50:25.170+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats\"},{\"changed_at\":\"2024-09-23 22:04:54 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 19:59:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 20:00:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 20:07:39 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 20:09:30 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 20:11:18 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 22:03:04 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-23T17:50:25.170+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-aibeats\\\"\"],\"cloned_from\":\"music-ai-skill-aibeats\"},{\"changed_at\":\"2024-09-23 22:04:54 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 19:59:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 20:00:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 20:07:39 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 20:09:30 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 20:11:18 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 22:03:04 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-26 03:51:11 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
