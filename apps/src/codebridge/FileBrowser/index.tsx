@@ -54,6 +54,7 @@ import {Draggable, DragDataType} from './Draggable';
 import {Droppable, DropDataType} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {
+  DragType,
   downloadFileType,
   moveFilePromptType,
   moveFolderPromptType,
@@ -264,7 +265,7 @@ const InnerFileBrowser = React.memo(
           .map(f => (
             <Droppable data={{id: f.id}} key={f.id + f.open} Component="li">
               <Draggable
-                data={{id: f.id, type: 'FOLDER', parentId: f.parentId}}
+                data={{id: f.id, type: DragType.FOLDER, parentId: f.parentId}}
               >
                 <div className={moduleStyles.row}>
                   <span
@@ -346,7 +347,7 @@ const InnerFileBrowser = React.memo(
               : moduleStyles.rowIcon;
             return (
               <Draggable
-                data={{id: f.id, type: 'FILE', parentId: f.folderId}}
+                data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
                 Component="li"
               >
@@ -760,9 +761,9 @@ export const FileBrowser = React.memo(() => {
   const handleDragEnd = useMemo(
     () => (e: DragOverEvent) => {
       if (e?.over) {
-        if (e.active.data.current?.type === 'FOLDER') {
+        if (e.active.data.current?.type === DragType.FOLDER) {
           moveFolder(e.active.data.current.id as string, e.over.id as string);
-        } else if (e.active.data.current?.type === 'FILE') {
+        } else if (e.active.data.current?.type === DragType.FILE) {
           moveFile(e.active.data.current.id as string, e.over.id as string);
         }
       }
