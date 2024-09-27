@@ -325,7 +325,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                 disabled={studentInLockoutFlow}
                 size="m"
                 dropdownTextThickness="thin"
-                className={classNames({
+                className={classNames(styles.input, {
                   [styles.lockedOut]: studentInLockoutFlow,
                 })}
               />
@@ -359,7 +359,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                     disabled={studentInLockoutFlow}
                     size="m"
                     dropdownTextThickness="thin"
-                    className={classNames({
+                    className={classNames(styles.input, {
                       [styles.lockedOut]: studentInLockoutFlow,
                     })}
                   />
