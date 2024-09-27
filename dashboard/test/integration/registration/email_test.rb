@@ -58,9 +58,11 @@ module RegistrationsControllerTests
 
       post '/users/begin_sign_up', params: {
         new_sign_up: true,
-        email: email,
-        password: 'mypassword',
-        password_confirmation: 'mypassword'
+        user: {
+          email: email,
+          password: 'mypassword',
+          password_confirmation: 'mypassword'
+        }
       }
       assert PartialRegistration.in_progress? session
 
@@ -74,7 +76,7 @@ module RegistrationsControllerTests
       assert_sign_up_tracking(
         SignUpTracking::NEW_SIGN_UP_GROUP,
         %w(
-          load-new-sign-up-page
+          load-sign-up-page
           begin-sign-up-success
           email-load-finish-sign-up-page
           email-sign-up-success
@@ -89,9 +91,11 @@ module RegistrationsControllerTests
 
       post '/users/begin_sign_up', params: {
         new_sign_up: true,
-        email: email,
-        password: 'mypassword',
-        password_confirmation: 'mypassword'
+        user: {
+          email: email,
+          password: 'mypassword',
+          password_confirmation: 'mypassword'
+        }
       }
       assert PartialRegistration.in_progress? session
 
@@ -105,7 +109,7 @@ module RegistrationsControllerTests
       assert_sign_up_tracking(
         SignUpTracking::NEW_SIGN_UP_GROUP,
         %w(
-          load-new-sign-up-page
+          load-sign-up-page
           begin-sign-up-success
           email-load-finish-sign-up-page
           email-sign-up-success
@@ -116,26 +120,26 @@ module RegistrationsControllerTests
     end
 
     private def finish_email_sign_up(new_sign_up, user_type, email)
-      finish_params = new_sign_up.presence ? build_new_finish_sign_up_params(user_type, email) : finish_sign_up_params(user_type: user_type, email: email)
+      override_params = new_sign_up.presence ? build_new_finish_sign_up_override_params(user_type, email) : {user_type: user_type, email: email}
+      finish_params = finish_sign_up_params(override_params, new_sign_up.presence)
       post '/users', params: finish_params
     end
 
-    private def build_new_finish_sign_up_params(user_type, email)
-      new_finish_params = {
-        new_sign_up: true,
+    private def build_new_finish_sign_up_override_params(user_type, email)
+      override_params = {
         user_type: user_type,
         email: email,
         name: 'FakeName'
       }
 
       if user_type == User::TYPE_TEACHER
-        new_finish_params[:email_preference_opt_in] = true
+        override_params[:email_preference_opt_in] = true
       elsif user_type == User::TYPE_STUDENT
-        new_finish_params[:age] = '8'
-        new_finish_params[:state] = 'AZ'
+        override_params[:age] = '8'
+        override_params[:state] = 'AZ'
       end
 
-      new_finish_params
+      override_params
     end
   end
 end

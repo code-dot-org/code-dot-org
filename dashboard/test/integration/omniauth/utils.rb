@@ -65,10 +65,10 @@ module OmniauthCallbacksControllerTests
       )
     end
 
-    def finish_sign_up_params(override_params)
+    def finish_sign_up_params(override_params, new_sign_up = false)
       user_type = override_params[:user_type] || User::TYPE_STUDENT
       if user_type == User::TYPE_STUDENT
-        {
+        student_params = {
           user: {
             locale: 'en-US',
             user_type: user_type,
@@ -83,8 +83,14 @@ module OmniauthCallbacksControllerTests
             email_preference_opt_in: nil,
           }.merge(override_params)
         }
+
+        if new_sign_up
+          student_params[:new_sign_up] = true
+        end
+
+        student_params
       else
-        {
+        teacher_params = {
           user: {
             locale: 'en-US',
             user_type: user_type,
@@ -99,6 +105,12 @@ module OmniauthCallbacksControllerTests
             email_preference_opt_in: 'yes',
           }.merge(override_params)
         }
+
+        if new_sign_up
+          teacher_params[:new_sign_up] = true
+        end
+
+        teacher_params
       end
     end
 

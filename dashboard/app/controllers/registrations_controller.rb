@@ -53,6 +53,10 @@ class RegistrationsController < Devise::RegistrationsController
   def begin_sign_up
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
+
+    if params[:new_sign_up].present?
+      SignUpTracking.log_load_sign_up session
+    end
     SignUpTracking.log_begin_sign_up(@user, session)
 
     if @user.errors.blank?
@@ -160,6 +164,7 @@ class RegistrationsController < Devise::RegistrationsController
     if params[:new_sign_up].present?
       session[:user_return_to] ||= params[:user_return_to]
       @user = Services::PartialRegistration::UserBuilder.call(request: request)
+      SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
       sign_in @user
     end
 
