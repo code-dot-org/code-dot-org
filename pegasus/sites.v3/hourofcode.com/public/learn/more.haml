@@ -19,11 +19,15 @@ layout: wide
     }
   }
 
-%main
-  %h1=hoc_s("hoc_activities_more.heading")
+%link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
 
-  %ul
-    - tutorials.each do |value|
-      %li
-        %a.has-external-link{href: value[:url_s], target: "_blank", rel: "noopener noreferrer", style: "display: block;"}
-          = value[:name_s]
+%main
+  %section
+    .wrapper
+      %h1.no-margin-top
+        =hoc_s("hoc_activities_more.heading")
+      %ul
+        - tutorials.each do |value|
+          %li
+            %a.has-external-link{href: value[:url_s], target: "_blank", rel: "noopener noreferrer", style: "display: block;"}
+              = value[:name_s]
