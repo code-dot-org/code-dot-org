@@ -38,6 +38,7 @@ import ValidationResults from './ValidationResults';
 import ValidationStatusIcon from './ValidationStatusIcon';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
+import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
 
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
@@ -248,7 +249,10 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             type={'secondary'}
             disabled={shouldValidateBeDisabled}
             iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
-            className={moduleStyles.buttonInstruction}
+            className={classNames(
+              darkModeStyles.secondaryButton,
+              moduleStyles.buttonInstruction
+            )}
             color={'white'}
             size={'s'}
           />
