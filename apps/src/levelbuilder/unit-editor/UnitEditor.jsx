@@ -4,6 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import {Chips} from '@cdo/apps/componentLibrary/chips';
 import {
   InstructionType,
   PublishedState,
@@ -34,7 +35,6 @@ import color from '@cdo/apps/util/color';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 
 import {lessonGroupShape} from './shapes';
-import { Chips } from '@cdo/apps/componentLibrary/chips';
 
 /**
  * Component for editing units in unit_groups or stand alone courses
@@ -712,12 +712,12 @@ class UnitEditor extends React.Component {
               </label>
               <label>
                 Topic tags
-                <Chips 
+                <Chips
                   name="topicTags"
                   size="xs"
                   options={Object.keys(CurriculumTopicTags).map(key => ({
-                      value: key,
-                      label: CurriculumTopicTags[key]
+                    value: key,
+                    label: CurriculumTopicTags[key],
                   }))}
                   values={this.state.topicTags}
                   setValues={vals => this.setState({topicTags: vals})}
