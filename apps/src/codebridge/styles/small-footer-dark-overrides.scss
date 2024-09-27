@@ -8,6 +8,10 @@
 // musiclab which does have mixed level progressions, we'll probably want to at least give a
 // dark background-color to .small-footer-base to ensure the white text is readable in light mode.
 
+// Another note: This is essentially a copy pasta with color tweaks from the .music-black rules in
+// application.scss. If we do use this file for music lab, we should clean up that file and whatever
+// is setting 'music-black' in music lab level properties.
+
 @import 'color.scss';
 
 .small-footer-base {
