@@ -108,7 +108,7 @@ If you want to run the server code natively, but leverage Docker to run the depe
 First, you want to follow the normal [SETUP.md](SETUP.md) instructions for your platform.
 You can skip over many steps that are related to running mysql and redis.
 
-Instead, once you have a working Ruby and Node environment, you can then use this command to spin up the database and redis servers:
+Instead, once you have a working Ruby and Node environment, you can then use this command to spin up the database and redis servers, as well as the S3 emulation service:
 
 ```shell
 docker compose run all-services
