@@ -307,7 +307,7 @@ const InnerFileBrowser = React.memo(
                         </span>
                         <span onClick={() => newFilePrompt(f.id)}>
                           <i className="fa-solid fa-plus" />{' '}
-                          {codebridgeI18n.addFile()}
+                          {codebridgeI18n.newFile()}
                         </span>
                         <FileUploader
                           callback={(fileName, contents) =>
