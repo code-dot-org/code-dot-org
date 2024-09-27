@@ -15,6 +15,7 @@ import ChangeEmailModal from '../ChangeEmailModal';
 
 import {AccountInformationProps} from './types';
 
+import commonStyles from '../common/common.styles.module.scss';
 import styles from './style.module.scss';
 
 export const AccountInformation: React.FC<AccountInformationProps> = ({
@@ -195,8 +196,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
       <Heading2 visualAppearance="heading-sm" className={styles.sectionHeader}>
         {i18n.accountInformation_accountInformation()}
       </Heading2>
-      <form>
-        <div className={styles.inputContainer}>
+      <form className={styles.accountForm}>
+        <div className={commonStyles.inputContainer}>
           {/* verified teacher account */}
           {verifiedTeacher && (
             <div className="field">
@@ -419,7 +420,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             <Alert
               text={i18n.accountInformation_reviewErrors()}
               type={alertTypes.danger}
-              className={styles.alert}
+              className={commonStyles.alert}
             />
           )}
           {showAccountUpdateSuccess && (
