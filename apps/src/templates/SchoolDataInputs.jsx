@@ -6,13 +6,13 @@ import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {SCHOOL_COUNTRY_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
 import i18n from '@cdo/locale';
 
 import style from './school-association.module.scss';
 
-const SCHOOL_COUNTRY = 'schoolCountry';
 const US_COUNTRY_CODE = 'US';
 
 export default function SchoolDataInputs({
@@ -27,7 +27,8 @@ export default function SchoolDataInputs({
 }) {
   // If the user filled out country before or we are detecting a US IP address
   const detectedCountry =
-    sessionStorage.getItem(SCHOOL_COUNTRY) || (usIp ? US_COUNTRY_CODE : '');
+    sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY) ||
+    (usIp ? US_COUNTRY_CODE : '');
   const [country, setCountry] = useState(detectedCountry);
   const [askForZip, setAskForZip] = useState(
     detectedCountry === US_COUNTRY_CODE
@@ -52,7 +53,7 @@ export default function SchoolDataInputs({
   const onCountryChange = e => {
     const country = e.target.value;
     setCountry(country);
-    sessionStorage.setItem(SCHOOL_COUNTRY, country);
+    sessionStorage.setItem(SCHOOL_COUNTRY_SESSION_KEY, country);
     analyticsReporter.sendEvent(
       EVENTS.COUNTRY_SELECTED,
       {country: country},

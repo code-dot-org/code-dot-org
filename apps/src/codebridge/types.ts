@@ -21,7 +21,6 @@ export type LeftNavElement = {
 
 export type PreviewComponent = (args: {file: ProjectFile}) => JSX.Element;
 export type EditorComponent = () => JSX.Element;
-export type EmptyEditorComponent = () => JSX.Element;
 
 export type SideBarItem = {
   icon: string;
@@ -41,7 +40,6 @@ export type ConfigType = {
   gridLayoutColumns?: string;
   editableFileTypes: string[];
   previewFileTypes?: string[];
-  blankEmptyEditor?: boolean;
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
   labeledGridLayouts?: {

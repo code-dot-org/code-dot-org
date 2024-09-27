@@ -3,15 +3,14 @@
 .soundsPanel {
   user-select: none;
   width: 600px;
-  height: 340px;
+  height: 290px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
 
   &Top {
     display: flex;
     justify-content: space-between;
-    margin: 5px 0;
+    margin-bottom: 5px;
 
     .segmentedButtons {
       span {
@@ -60,9 +59,6 @@
 
     &:first-child {
       margin-top: 1px;
-    }
-    &:not(:first-child) {
-      margin-top: 14px;
     }
 
     &Left {
