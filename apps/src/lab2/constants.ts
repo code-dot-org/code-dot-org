@@ -40,3 +40,5 @@ export enum WARNING_BANNER_MESSAGES {
 
 // Default height of the predict question free response text area.
 export const PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT = 50;
+
+export const DEFAULT_VALIDATION_ID = 'validationFile';

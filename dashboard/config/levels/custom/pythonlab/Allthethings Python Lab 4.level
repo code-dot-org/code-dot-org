@@ -1,8 +1,7 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
-  "created_at": "2024-06-06T01:59:51.000Z",
+  "created_at": "2024-06-04T00:54:53.000Z",
   "level_num": "custom",
   "user_id": 2,
   "properties": {
@@ -14,8 +13,38 @@
     "submittable": "false",
     "predict_settings": {
       "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print(\"Hello world!\")",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "test_level2.py",
+          "language": "py",
+          "contents": "import unittest\n\nclass Level2Test(unittest.TestCase):\n\n  def test_that_passes2(self):\n    \"\"\"A sample passing test on the second level\"\"\"\n    self.assertEqual(2, 2)",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "validation"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-03T10:54:53.225-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 3\\\"\"],\"cloned_from\":\"Allthethings Python Lab 3\"},{\"changed_at\":\"2024-06-03 10:55:00 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-06 00:32:30 +0000\",\"changed\":[],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-03T10:54:53.225-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 3\\\"\"],\"cloned_from\":\"Allthethings Python Lab 3\"},{\"changed_at\":\"2024-06-03 10:55:00 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-06 00:32:30 +0000\",\"changed\":[],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"},{\"changed_at\":\"2024-09-27 14:03:18 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

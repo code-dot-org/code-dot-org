@@ -4,7 +4,7 @@ import {AnyAction, Dispatch} from 'redux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
@@ -17,14 +17,15 @@ export async function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined,
-  progressManager: ProgressManager | null
+  progressManager: ProgressManager | null,
+  validationFile?: ProjectFile
 ) {
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
   }
   if (runTests) {
-    await runAllTests(source, dispatch, progressManager);
+    await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -56,16 +57,22 @@ export function stopPythonCode() {
 export async function runAllTests(
   source: MultiFileSource,
   dispatch: Dispatch<AnyAction>,
-  progressManager: ProgressManager | null
+  progressManager: ProgressManager | null,
+  validationFile?: ProjectFile
 ) {
   // If the project has a validation file, we just run those tests.
-  const validationFile = Object.values(source.files).find(
-    f => f.type === ProjectFileType.VALIDATION
-  );
   if (validationFile) {
     // We only support one validation file. If somehow there is more than one, just run the first one.
     dispatch(appendSystemMessage(`Running level tests...`));
     progressManager?.resetValidation();
+    // Ensure the right validation file is in the source.
+    source = {
+      ...source,
+      files: {
+        ...source.files,
+        [validationFile.id]: validationFile,
+      },
+    };
     const result = await runPythonCode(
       runValidationTests(validationFile.name),
       source

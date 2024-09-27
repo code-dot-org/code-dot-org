@@ -1,8 +1,7 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
-  "created_at": "2024-06-06T01:59:51.000Z",
+  "created_at": "2024-06-04T00:54:37.000Z",
   "level_num": "custom",
   "user_id": 2,
   "properties": {
@@ -18,12 +17,26 @@
           "language": "py",
           "contents": "print(\"Hello from start sources of a level with a template. You shouldn't see this outside of start mode.\")",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "test_level.py",
+          "language": "py",
+          "contents": "import unittest\n\nclass LevelTest(unittest.TestCase):\n\n  def test_that_passes(self):\n    \"\"\"A sample passing test on the level\"\"\"\n    self.assertEqual(1, 1)",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "validation"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
     },
     "ai_tutor_available": "true",
     "submittable": "false",
@@ -31,6 +44,7 @@
       "isPredictLevel": false
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-07-11 16:41:38 -0400\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-09-06 00:32:09 +0000\",\"changed\":[],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-07-11 16:41:38 -0400\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-09-06 00:32:09 +0000\",\"changed\":[],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"},{\"changed_at\":\"2024-09-27 13:10:52 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 13:11:52 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

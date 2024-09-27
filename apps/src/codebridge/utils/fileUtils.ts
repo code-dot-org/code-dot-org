@@ -1,6 +1,6 @@
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {ProjectFileType} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
 import {ProjectFile} from '../types';
 
@@ -34,4 +34,19 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
     // Starter files or files without a type, which default to starter.
     return {iconName: 'eye', iconStyle: 'regular'};
   }
+}
+
+export function filterOutValidationFile(source?: MultiFileSource) {
+  if (!source) {
+    return source;
+  }
+  const newFiles = Object.fromEntries(
+    Object.entries(source.files).filter(
+      ([_, file]) => file.type !== ProjectFileType.VALIDATION
+    )
+  );
+  return {
+    ...source,
+    files: newFiles,
+  };
 }
