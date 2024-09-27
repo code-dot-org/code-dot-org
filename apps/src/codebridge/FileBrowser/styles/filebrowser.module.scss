@@ -17,6 +17,7 @@
 .row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   font-size: 14px;
 }
@@ -42,10 +43,6 @@
 .file-browser ul li span.button-bar span {
   display: grid;
   grid-template-columns: 15px auto;
-}
-
-.button-bar button {
-  white-space: nowrap;
 }
 
 .file-browser ul li span.label i,
@@ -78,4 +75,12 @@ div.row:hover .button-kebab {
   margin: 2px 8px 2px 8px;
   font-size: 13px;
   line-height: 125%;
+}
+
+.acceptingDrop {
+  font-weight: bold;
+}
+
+.dropdownItem {
+  width: 100px;
 }
