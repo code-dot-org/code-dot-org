@@ -68,3 +68,8 @@
 .workspaceWarningArea {
   grid-column: span 2;
 }
+
+.workspaceHeader {
+  border-bottom: 1px solid $neutral_dark80;
+  margin-bottom: 0;
+}
