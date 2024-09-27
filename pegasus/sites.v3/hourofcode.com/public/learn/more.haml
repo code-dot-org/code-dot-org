@@ -1,0 +1,29 @@
+---
+layout: wide
+---
+
+:ruby
+  @header["title"] = hoc_s("hoc_activities_more.heading")
+
+  tutorials = DB[:cdo_tutorials_more].all
+
+:css
+  ul {
+    margin: unset;
+
+    & > li {
+      padding-left: unset;
+      text-indent: unset;
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+%main
+  %h1=hoc_s("hoc_activities_more.heading")
+
+  %ul
+    - tutorials.each do |value|
+      %li
+        %a.has-external-link{href: value[:url_s], target: "_blank", rel: "noopener noreferrer", style: "display: block;"}
+          = value[:name_s]

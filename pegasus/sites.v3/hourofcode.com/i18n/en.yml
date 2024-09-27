@@ -10965,6 +10965,9 @@
       desc: "We've moved all previous activities [here](%{archive_url})."
       button: "View archived activities"
 
+  hoc_activities_more:
+    heading: "More Hour of Code activities"
+
   hoc_resources:
     heading: "Resources for Hour of Code"
     desc: "Find all the resources you need for your Hour of Code. Not sure where to begin? Start with our [how-to guide](%{how_to_url}) for hosting an Hour of Code!"
