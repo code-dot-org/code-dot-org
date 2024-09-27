@@ -201,23 +201,25 @@ export default class SmallFooter extends React.Component {
   }
 
   renderCopyright() {
-    return (
-      <span className="copyright-button">
-        <Button
-          aria-label={i18n.copyrightInfoButton()}
-          className="copyright-link no-mc"
-          color={buttonColors.gray}
-          icon={{
-            iconName: 'copyright',
-            iconStyle: 'light',
-          }}
-          isIconOnly
-          onClick={this.clickBaseCopyright}
-          size="xs"
-          type="secondary"
-        />
-      </span>
-    );
+    if (this.props.copyrightInBase) {
+      return (
+        <span className="copyright-button">
+          <Button
+            aria-label={i18n.copyrightInfoButton()}
+            className="copyright-link no-mc"
+            color={buttonColors.gray}
+            icon={{
+              iconName: 'copyright',
+              iconStyle: 'light',
+            }}
+            isIconOnly
+            onClick={this.clickBaseCopyright}
+            size="xs"
+            type="secondary"
+          />
+        </span>
+      );
+    }
   }
 
   renderMoreMenuButton() {
