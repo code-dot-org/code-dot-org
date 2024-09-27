@@ -12,7 +12,7 @@ import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
@@ -307,21 +307,19 @@ export default class SmallFooter extends React.Component {
   renderCopyright() {
     if (this.props.copyrightInBase) {
       return (
-        <span className="copyright-button">
-          <Button
-            aria-label={i18n.copyrightInfoButton()}
-            className="copyright-link no-mc"
-            color={buttonColors.gray}
-            icon={{
-              iconName: 'copyright',
-              iconStyle: 'light',
-            }}
-            isIconOnly
-            onClick={this.clickBaseCopyright}
-            size="xs"
-            type="secondary"
-          />
-        </span>
+        <Button
+          aria-label={i18n.copyrightInfoButton()}
+          className="copyright-button no-mc"
+          color="gray"
+          icon={{
+            iconName: 'copyright',
+            iconStyle: 'light',
+          }}
+          isIconOnly
+          onClick={this.clickBaseCopyright}
+          size="xs"
+          type="secondary"
+        />
       );
     }
   }
