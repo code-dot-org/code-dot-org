@@ -47,7 +47,7 @@
   africa_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
   hoc_2024:
-    header: "Make the invisible, visible"
+    header: "Make the invisible visible"
     button_host_an_event: "Host an event"
     banner:
       header_register: "Register your Hour of Code"
@@ -944,7 +944,7 @@
     what_is_hoc:
       heading: "What is Hour of Code?"
       desc_01: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the 100 one-hour tutorials, available in over 45 languages."
-      desc_02: "**Make the Invisible, Visible** encourages the next generation of creators to explore, craft, and showcase how coding can bring their favorite things to life. Computer science and AI are wondrous forces that drive the epic apps, designs, and gadgets we use every day. This movement helps to highlight how coding is behind everything from your favorite shoes to the music you listen to. By jumping into fun activities and starting your own projects, you can learn how to use computer science to bring your passions to life and share them with others."
+      desc_02: "**Make the Invisible Visible** encourages the next generation of creators to explore, craft, and showcase how coding can bring their favorite things to life. Computer science and AI are wondrous forces that drive the epic apps, designs, and gadgets we use every day. This movement helps to highlight how coding is behind everything from your favorite shoes to the music you listen to. By jumping into fun activities and starting your own projects, you can learn how to use computer science to bring your passions to life and share them with others."
     activities:
       heading: "Lead an Hour of Code Activity"
       desc: "With 100 activities to choose from with classifications by grade level and experience, your choices are vast. When you know your plans, please [register your activity](%{register_url}) so we can celebrate all the events happening across the globe."
@@ -1282,7 +1282,6 @@
         desc: "Focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards."
         note: "Note:"
         note_desc: "AI Chat Lab levels require a [verified teacher account](%{verified_teacher_url}) or SSO login to make use of the tool."
-      button: "Explore unit"
     unlock_full_access_banner:
       title: "Unlock full access with a no-cost verified teacher account"
       desc: "Gain access to more resources, including the new AI Chat Lab, and exclusive materials to enhance your teaching at no cost! It’s quick and easy, get verified today!"
@@ -11916,6 +11915,21 @@
     focus:
       heading: "Focus more on what matters"
       desc: "The AI Teaching Assistant transforms CS education, easing the workload for new and experienced teachers alike. By streamlining assessments, it boosts educator confidence, enabling a focus on enriching student interactions and tailored learning experiences."
+    get_started:
+      header: "Get started with AI Teaching Assistant"
+      watch_demo: "Watch the demo video"
+      assign_csd_3: "Assign Computer Science Discoveries Unit 3"
+      become_verified: "Become a verified teacher"
+      use_rubric: "Use your first rubric in lesson 7!"
+      use_ta: "Use AI Teaching Assistant"
+    in_the_news:
+      header: "AI Teaching Assistant in the news"
+      education_week_label: "Education Week"
+      education_week_headline: "This AI Tool Cut One Teacher's Grading Time in Half. How It Works"
+      education_week_button: "Read Education Week Article"
+      blog_label: "Blog"
+      blog_headline: "Code.org wins 2024 Best of STEM award!"
+      blog_button: "Read Code.org blog post"
     pilot_apps:
       heading: "Accepting pilot applications through June 2024"
       desc: "We are enrolling **CSD Unit 3 teachers** into our AI Teaching Assistant pilot. You'll get the chance to help experience and test this exciting new tool!"
@@ -11949,18 +11963,21 @@
       units:
         question: "What Units is the AI Teaching Assistant available for?"
         answer: "The AI Teaching Assistant is launching in CSD's Interactive Games and Animations Unit. The team is hard at work building AI-supported features for additional curriculum."
+        answer_v2: "The AI Teaching Assistant is now available to all verified middle school teachers in the [Interactive Animations and Games unit](%{unit_url})."
       available:
-        question: "When will the AI Teaching Assistant be available to all Interactive Games and Animation users?"
+        question: "When will the AI Teaching Assistant be available to all Interactive Animations and Games users?"
         answer: "The AI Teaching Assistant will launch to all CSD teachers in August 2024, in time for the 2024-2025 school year."
       access:
         question: "How do I access the AI Teaching Assistant?"
         answer: "The AI Teaching Assistant is available for teachers accepted into the pilot in mini and end-of-unit projects in the Interactive Games and Animations unit. In those lessons, the AI Teaching Assistant will appear in the bottom left-hand corner of your screen."
+        answer_v2: "The AI Teaching Assistant is available for all verified teachers in mini and end-of-unit projects in the [Interactive Animations and Games unit](%{unit_url}). In those lessons, the AI Teaching assistant will appear in the bottom left-hand corner of your screen."
       keep_up:
         question: "Where should I go to keep up with Code.org's investment in AI-supported tools?"
         answer: "Code.org is investing in using AI to enhance teaching and learning.  Check out [code.org/ai](https://code.org/ai) to learn more about our AI curriculum, professional learning, and tools."
       demo:
         question: "Can I see a demo of how AI TA works?"
         answer: "Join our curriculum manager, Angelina, as she introduces the AI Teaching Assistant."
+      verification_link: "To get verified, fill out this form."
     partners:
       heading: "Developed in partnership with"
 

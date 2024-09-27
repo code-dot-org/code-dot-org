@@ -59,7 +59,7 @@ export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
 
 RubricErrorContainer.propTypes = {
   isOpen: PropTypes.bool,
-  setIsOpen: PropTypes.function,
+  setIsOpen: PropTypes.func,
 };
 
 function RubricFloatingActionButton({
