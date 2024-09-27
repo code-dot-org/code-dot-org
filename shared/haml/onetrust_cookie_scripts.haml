@@ -2,7 +2,7 @@
 
 -# OneTrust Cookies Consent Notice scripts for code.org
 -# default to loading the prod OneTrust configuration.
-- onetrust_version = experiment_value('onetrust_cookie_scripts', request) || 'prod'
+- onetrust_version = experiment_value('onetrust_cookie_scripts', request) || 'self_hosted'
 - cookie_script_env = onetrust_version == 'self_hosted' ? 'prod' : onetrust_version
 -# The OneTrust config to load should be passed in.
 - domain ||= nil
