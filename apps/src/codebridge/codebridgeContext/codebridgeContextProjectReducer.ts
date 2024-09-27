@@ -218,6 +218,24 @@ export const projectReducer = (
       };
     }
 
+    case PROJECT_REDUCER_ACTIONS.MOVE_FOLDER: {
+      const {folderId, parentId} = <
+        DefaultFolderPayload & {parentId: FolderId}
+      >action.payload;
+
+      if (folderId === parentId) {
+        return project;
+      }
+
+      return {
+        ...project,
+        folders: {
+          ...project.folders,
+          [folderId]: {...project.folders[folderId], parentId},
+        },
+      };
+    }
+
     case PROJECT_REDUCER_ACTIONS.NEW_FOLDER: {
       const {folderId, folderName, parentId} = <
         DefaultFolderPayload & {

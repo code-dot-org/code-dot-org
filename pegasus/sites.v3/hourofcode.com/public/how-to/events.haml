@@ -1,10 +1,13 @@
 ---
 layout: wide_index
-theme: how_to_guide
 ---
 
 :ruby
   @header["title"] = hoc_s("hoc_how_to.page_title.events")
+
+%link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
+%link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
+%link{href: "/css/generated/page/how-to.css", rel: "stylesheet", type: "text/css"}
 
 -# Hero banner
 = view :"how-to/how_to_banner"
@@ -17,3 +20,5 @@ theme: how_to_guide
 
 -# Resources
 = view :"how-to/how_to_resources"
+
+%script{src: "/js/how-to.js"}

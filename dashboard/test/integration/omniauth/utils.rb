@@ -150,11 +150,11 @@ module OmniauthCallbacksControllerTests
     def assert_sign_up_tracking(expected_study_group, expected_events)
       study_requests = @firehose_requests.select {|e| e[1][:study] == SignUpTracking::STUDY_NAME && e[0] == :analysis}
       study_records = study_requests.map {|e| e[1]}
-      study_groups = study_records.map {|e| e[:study_group]}.uniq.compact
-      study_events = study_records.map {|e| e[:event]}
+      study_groups = study_records.pluck(:study_group).uniq.compact
+      study_events = study_records.pluck(:event)
 
       assert(study_records.all? {|record| record[:data_string].present?})
-      assert_equal 1, study_records.map {|r| r[:data_string]}.uniq.count
+      assert_equal 1, study_records.pluck(:data_string).uniq.count
       assert_equal [expected_study_group], study_groups
       assert_equal expected_events, study_events
     end
