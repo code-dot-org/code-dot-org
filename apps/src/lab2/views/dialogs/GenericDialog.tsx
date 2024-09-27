@@ -1,3 +1,4 @@
+import FocusTrap from 'focus-trap-react';
 import React from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
@@ -80,69 +81,71 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   const dialogControl = useDialogControl();
 
   return (
-    <div className={moduleStyles.genericDialog}>
-      {titleComponent || (
-        <Typography semanticTag="h1" visualAppearance="heading-lg">
-          {title}
-        </Typography>
-      )}
+    <FocusTrap>
+      <div className={moduleStyles.genericDialog}>
+        {titleComponent || (
+          <Typography semanticTag="h1" visualAppearance="heading-lg">
+            {title}
+          </Typography>
+        )}
 
-      {bodyComponent || (
-        <Typography semanticTag="p" visualAppearance="body-two">
-          {message}
-        </Typography>
-      )}
-      <div className={moduleStyles.buttonContainer}>
-        <div className={moduleStyles.outerButtonContainer}>
-          {buttons?.cancel ? (
-            <Button
-              onClick={closingCallback(
-                dialogControl.closeDialog,
-                'cancel',
-                buttons.cancel.callback
-              )}
-              className={moduleStyles.cancel}
-              type="secondary"
-              disabled={buttons.cancel.disabled}
-              color={buttonColors.gray}
-              text={buttons.cancel.text || commonI18n.cancel()}
-            />
-          ) : (
-            <div />
-          )}
-          <div className={moduleStyles.innerButtonContainer}>
-            {buttons?.neutral && (
+        {bodyComponent || (
+          <Typography semanticTag="p" visualAppearance="body-two">
+            {message}
+          </Typography>
+        )}
+        <div className={moduleStyles.buttonContainer}>
+          <div className={moduleStyles.outerButtonContainer}>
+            {buttons?.cancel ? (
               <Button
                 onClick={closingCallback(
                   dialogControl.closeDialog,
-                  'neutral',
-                  buttons.neutral.callback
+                  'cancel',
+                  buttons.cancel.callback
                 )}
+                className={moduleStyles.cancel}
                 type="secondary"
-                disabled={buttons.neutral.disabled}
+                disabled={buttons.cancel.disabled}
                 color={buttonColors.gray}
-                text={buttons.neutral.text}
+                text={buttons.cancel.text || commonI18n.cancel()}
               />
+            ) : (
+              <div />
             )}
-            <Button
-              onClick={closingCallback(
-                dialogControl.closeDialog,
-                'confirm',
-                buttons?.confirm?.callback
+            <div className={moduleStyles.innerButtonContainer}>
+              {buttons?.neutral && (
+                <Button
+                  onClick={closingCallback(
+                    dialogControl.closeDialog,
+                    'neutral',
+                    buttons.neutral.callback
+                  )}
+                  type="secondary"
+                  disabled={buttons.neutral.disabled}
+                  color={buttonColors.gray}
+                  text={buttons.neutral.text}
+                />
               )}
-              disabled={buttons?.confirm?.disabled}
-              type="primary"
-              color={
-                buttons?.confirm?.destructive
-                  ? buttonColors.destructive
-                  : buttonColors.purple
-              }
-              text={buttons?.confirm?.text || commonI18n.dialogOK()}
-            />
+              <Button
+                onClick={closingCallback(
+                  dialogControl.closeDialog,
+                  'confirm',
+                  buttons?.confirm?.callback
+                )}
+                disabled={buttons?.confirm?.disabled}
+                type="primary"
+                color={
+                  buttons?.confirm?.destructive
+                    ? buttonColors.destructive
+                    : buttonColors.purple
+                }
+                text={buttons?.confirm?.text || commonI18n.dialogOK()}
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </FocusTrap>
   );
 };
 

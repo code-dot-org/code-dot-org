@@ -29,6 +29,8 @@ require 'cdo/shared_constants'
 class Level < ApplicationRecord
   include SharedConstants
   include Levels::LevelsWithinLevels
+  include ScriptLevelsHelper
+  include Rails.application.routes.url_helpers
 
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
@@ -256,7 +258,7 @@ class Level < ApplicationRecord
       end
     end
 
-    !(current_parent&.type == "LevelGroup")
+    current_parent&.type != "LevelGroup"
   end
 
   def to_xml(options = {})
@@ -840,10 +842,12 @@ class Level < ApplicationRecord
     properties_camelized = properties.camelize_keys
     properties_camelized[:id] = id
     properties_camelized[:levelData] = video if video
+    properties_camelized[:helpVideos] = related_videos.map(&:summarize)
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
+    properties_camelized[:finishUrl] = script_completion_redirect(current_user, script) if script
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)

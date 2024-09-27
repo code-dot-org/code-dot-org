@@ -21,7 +21,6 @@ interface GenerateGraphDataFromPatternOptions {
   width: number;
   height: number;
   padding: number;
-  library: MusicLibrary;
 }
 
 // Given a PatternEventValue, generate a set of data for graphing it.
@@ -30,7 +29,6 @@ export function generateGraphDataFromPattern({
   width,
   height,
   padding,
-  library,
 }: GenerateGraphDataFromPatternOptions): PatternGraphEvent[] {
   const length = patternEventValue.length || DEFAULT_PATTERN_LENGTH;
   const eventsLength = length * 16;
@@ -44,7 +42,9 @@ export function generateGraphDataFromPattern({
   const useWidth = width - 2 * padding - noteWidth;
   const useHeight = height - 2 * padding - noteHeight;
 
-  const currentFolder = library.getFolderForFolderId(patternEventValue.kit);
+  const currentFolder = MusicLibrary.getInstance()?.getFolderForFolderId(
+    patternEventValue.kit
+  );
   if (!currentFolder) {
     return [];
   }

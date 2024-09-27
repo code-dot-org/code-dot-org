@@ -99,11 +99,13 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         <Button
           isIconOnly
           icon={{iconStyle: 'solid', iconName: 'history'}}
-          color={'black'}
+          color={'white'}
           onClick={toggleVersionHistory}
           ariaLabel={commonI18n.versionHistory_header()}
           size={'xs'}
           disabled={buttonDisabled}
+          type={'tertiary'}
+          className={moduleStyles.versionHistoryButton}
         />
       </WithTooltip>
       {(loading || loadError) && (
