@@ -13,7 +13,7 @@ export interface Section {
   id: number;
   name: string;
   createdAt: string;
-  loginType: keyof typeof SectionLoginType;
+  loginType?: keyof typeof SectionLoginType;
   lessonExtras: boolean;
   pairingAllowed: boolean;
   ttsAutoplayEnabled: boolean;
@@ -23,7 +23,7 @@ export interface Section {
   courseVersionId: number | null;
   unitId: number | null;
   courseId: number | null;
-  scriptId: number;
+  scriptId: number | null;
   grades: string[];
   providerManaged: boolean;
   restrictSection: boolean;
@@ -36,10 +36,28 @@ export interface Section {
   aiTutorEnabled: boolean;
   courseVersionName?: string;
   loginTypeName?: string;
-  codeReviewExpiresAt?: Date | null;
+  codeReviewExpiresAt?: number | null;
   isAssignedCSA?: boolean;
   sectionInstructors?: SectionInstructor[];
   anyStudentHasProgress?: boolean;
+}
+
+export interface UserEditableSection {
+  name?: string;
+  loginType?: keyof typeof SectionLoginType;
+  lessonExtras?: boolean;
+  pairingAllowed?: boolean;
+  ttsAutoplayEnabled?: boolean;
+  participantType?: string;
+  courseId?: number | null;
+  courseOfferingId?: number | null;
+  courseVersionId?: number | null;
+  unitId?: number | null;
+  grades?: string[];
+  hidden?: boolean;
+  restrictSection?: boolean;
+  codeReviewExpiresAt?: number | null;
+  aiTutorEnabled?: boolean;
 }
 
 export type OAuthSectionTypeName = keyof typeof OAuthSectionTypes;
