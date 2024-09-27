@@ -1,33 +1,32 @@
 import {ProjectFile} from '@codebridge/types';
-import {useMemo} from 'react';
+import {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 
 export const useCheckForDuplicateFilename = () => {
-  return useMemo(
-    () =>
-      (
-        fileName: string,
-        folderId: string,
-        projectFiles: Record<string, ProjectFile>
-      ) => {
-        let message = undefined;
-        const existingFile = Object.values(projectFiles).find(
-          f => f.name === fileName && f.folderId === folderId
-        );
-        if (existingFile) {
-          message = codebridgeI18n.duplicateFileError({fileName});
-          if (
-            existingFile.type === ProjectFileType.SUPPORT ||
-            existingFile.type === ProjectFileType.VALIDATION
-          ) {
-            message = codebridgeI18n.duplicateSupportFileError({fileName});
-          }
+  return useCallback(
+    (
+      fileName: string,
+      folderId: string,
+      projectFiles: Record<string, ProjectFile>
+    ) => {
+      let message = undefined;
+      const existingFile = Object.values(projectFiles).find(
+        f => f.name === fileName && f.folderId === folderId
+      );
+      if (existingFile) {
+        message = codebridgeI18n.duplicateFileError({fileName});
+        if (
+          existingFile.type === ProjectFileType.SUPPORT ||
+          existingFile.type === ProjectFileType.VALIDATION
+        ) {
+          message = codebridgeI18n.duplicateSupportFileError({fileName});
         }
+      }
 
-        return message;
-      },
+      return message;
+    },
     []
   );
 };
