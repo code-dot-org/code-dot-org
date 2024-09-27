@@ -38,8 +38,6 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     }
   }, [file?.language, langMapping]);
 
-  console.log('CHECK FILE : ', file);
-
   if (file && viewableImageFileType(file.language)) {
     const base64 = window.btoa(file.contents);
     return (
