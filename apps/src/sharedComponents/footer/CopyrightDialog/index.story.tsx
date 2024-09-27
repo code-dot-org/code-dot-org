@@ -1,7 +1,7 @@
 import {StoryFn} from '@storybook/react';
 import React, {useState} from 'react';
 
-import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog';
+import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 
 export default {
   component: CopyrightDialog,
@@ -27,4 +27,4 @@ export const DefaultStory = Template.bind({
   onClose: () => {},
 });
 
-DefaultStory.storyName = 'ChildSectionsWarningDialog';
+DefaultStory.storyName = 'CopyrightDialog';
