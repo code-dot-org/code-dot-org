@@ -9,12 +9,10 @@
       .span9{style: (full_width ? 'max-width: 80%;' : '')}
         - piped_spaces = ' | '
         - privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
-        - links = (footer_contents[:links] || []).map(&:dup)
-        - if privacy_updated
-          - links.reject! { |link| link[:title] == 'privacy' }
-        - else
-          - links.reject! { |link| link[:title] == 'privacy_updated' }
+        - links = (footer_contents[:links][:studio] || []).map(&:dup)
         - links.each_with_index do |link, index|
+          - if privacy_updated && link[:title] == 'privacy'
+            - link[:title] = 'privacy_updated'
           - if link[:domain] == 'studio.code.org'
             - link[:url] = CDO.studio_url(link[:url])
           - elsif link[:domain] == 'code.org'
