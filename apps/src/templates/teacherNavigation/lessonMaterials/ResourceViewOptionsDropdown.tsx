@@ -14,16 +14,40 @@ const ResourceViewOptionsDropdown: React.FC<
   // This is a dummy options array that will be replaced with actual options in TEACH-1326
   const dummyOptions = [
     {
-      value: 'option-1',
+      value: 'view',
       label: 'View',
       icon: {iconName: 'check'},
-      onClick: () => console.log('option 1 with of types' + resource.type),
+      onClick: () => console.log('view clicked'),
     },
     {
-      value: 'option-2',
+      value: 'download-video',
       label: 'Download',
-      icon: {iconName: 'xmark'},
-      onClick: () => console.log('option 2'),
+      icon: {iconName: 'download'},
+      onClick: () => console.log('download-video clicked'),
+    },
+    {
+      value: 'download-pdf',
+      label: 'Download (PDF)',
+      icon: {iconName: 'download'},
+      onClick: () => console.log('download-pdf clicked'),
+    },
+    {
+      value: 'download-office',
+      label: 'Download (Microsoft Office)',
+      icon: {iconName: 'download'},
+      onClick: () => console.log('download-office clicked'),
+    },
+    {
+      value: 'copy-google-docs',
+      label: 'Make a Copy (Google Docs)',
+      icon: {iconName: 'copy'},
+      onClick: () => console.log('copy-google-docs clicked'),
+    },
+    {
+      value: 'watch-youtube',
+      label: 'Watch on Youtube',
+      icon: {iconName: 'youtube'},
+      onClick: () => console.log('watch-youtube clicked'),
     },
   ];
 
