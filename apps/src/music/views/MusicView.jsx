@@ -252,6 +252,12 @@ class UnconnectedMusicView extends React.Component {
       this.sequencer = new MusicPlayerStubSequencer();
     }
 
+    this.library.setAllowedSounds(levelData?.sounds);
+
+    let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
+    this.library.setCurrentPackId(packId);
+    this.props.setPackId(packId);
+
     this.props.isPlayView
       ? this.musicBlocklyWorkspace.initHeadless()
       : this.musicBlocklyWorkspace.init(
@@ -264,14 +270,9 @@ class UnconnectedMusicView extends React.Component {
           levelData?.addFunctionCallsToToolbox
         );
 
-    this.library.setAllowedSounds(levelData?.sounds);
     this.props.setShowInstructions(
       !!levelData?.text || !!this.props.longInstructions
     );
-
-    let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
-    this.library.setCurrentPackId(packId);
-    this.props.setPackId(packId);
 
     // Check if the user has already made changes to the code on the project level.
     let codeChangedOnProjectLevel = false;
