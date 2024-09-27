@@ -156,9 +156,9 @@ describe('FinishTeacherAccount', () => {
         email_preference_opt_in: true,
         school: SELECT_A_SCHOOL,
         school_id: SELECT_A_SCHOOL,
-        school_zip: null,
-        school_name: null,
-        school_country: null,
+        school_zip: '',
+        school_name: '',
+        school_country: 'US',
       },
     };
     sessionStorage.setItem('email', email);
