@@ -852,7 +852,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
     }
-    assert_equal(teacher_resources.map(&:key), Unit.find_by_name(unit.name).resources.map {|r| r[:key]})
+    assert_equal(teacher_resources.map(&:key), Unit.find_by_name(unit.name).resources.pluck(:key))
   end
 
   test 'updates migrated student resources' do
@@ -877,7 +877,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
     }
-    assert_equal(student_resources.map(&:key), Unit.find_by_name(unit.name).student_resources.map {|r| r[:key]})
+    assert_equal(student_resources.map(&:key), Unit.find_by_name(unit.name).student_resources.pluck(:key))
   end
 
   test 'updates pilot_experiment' do
