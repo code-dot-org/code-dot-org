@@ -249,6 +249,7 @@ export default function currentUser(state = initialState, action) {
       us_state_code,
       in_section,
       created_at,
+      is_verified_instructor,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -260,6 +261,7 @@ export default function currentUser(state = initialState, action) {
     statsigReporter.setUserProperties(
       id,
       user_type,
+      is_verified_instructor,
       experiments.getEnabledExperiments()
     );
     return {

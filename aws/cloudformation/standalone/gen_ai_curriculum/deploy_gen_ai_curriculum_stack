@@ -1,0 +1,178 @@
+#!/usr/bin/env ruby
+require 'aws-sdk-applicationautoscaling'
+require 'aws-sdk-secretsmanager'
+require 'colorize'
+require 'optparse'
+require 'open3'
+require_relative './config'
+
+VALID_ENVIRONMENTS = %w[production test].freeze
+# Manually retrieved by running get_huggingface_llm_image_uri using the Sagemaker Python SDK.
+# See script instructions for how to change or update this value.
+HUGGINGFACE_IMAGE_URI = "763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-tgi-inference:2.3.0-tgi2.2.0-gpu-py310-cu121-ubuntu22.04-v2.0".freeze
+HUGGINGFACE_IMAGE_URI_VERSION = "2.2.0".freeze
+
+def main
+  options = {}
+  OptionParser.new do |opts|
+    opts.banner = "Usage: ./deploy_gen_ai_curriculum_stack [options]"
+
+    opts.on("-e", "--environment ENVIRONMENT", String, "Stack environment (#{VALID_ENVIRONMENTS.join(' or ')})") do |v|
+      options[:environment] = v
+    end
+
+    opts.on("-d", "--dry-run [FLAG]", TrueClass, "Dry run (create template only but don't deploy)") do |v|
+      options[:dry_run] = v.nil? ? true : v
+    end
+
+    opts.on("-v", "--image-uri-version IMAGE_URI_VERSION", Numeric, "HuggingFace Image URI version") do |v|
+      options[:image_uri_version] = v
+    end
+
+    opts.on("-i", "--image-uri IMAGE_URI", String, "HuggingFace Image URI to use") do |v|
+      options[:image_uri] = v
+    end
+
+    opts.on("-t", "--huggingface-token HUGGINGFACE_TOKEN", String, "HuggingFace Access Token") do |v|
+      options[:token] = v
+    end
+  end.parse!
+
+  # Prompt for environment if not provided
+  unless options[:environment]
+    print "Environment (#{VALID_ENVIRONMENTS.join(' or ')}): "
+    options[:environment] = gets.chomp
+  end
+
+  unless VALID_ENVIRONMENTS.include?(options[:environment])
+    puts "Error: Invalid environment '#{options[:environment]}'. Must be #{VALID_ENVIRONMENTS.join(' or ')}."
+    exit 1
+  end
+
+  # Prompt for dry-run if not provided
+  unless options.key?(:dry_run)
+    print "Dry-run (create template only)? (y/n): "
+    response = gets.chomp.downcase
+    options[:dry_run] = response == 'y'
+  end
+
+  # Prompt for image URI if not provided
+  unless options.key?(:image_uri)
+    puts "\nHuggingFace Image URI Details".colorize(:light_yellow)
+    puts "-- Image URI version: " + HUGGINGFACE_IMAGE_URI_VERSION.colorize(:light_cyan)
+    puts "-- Image URI: " + HUGGINGFACE_IMAGE_URI.colorize(:light_cyan)
+    puts "\nTo generate a new image URI, use the #{'get_huggingface_llm_image_uri'.colorize(:light_blue)} Python API from the Sagemaker Python SDK. For example:"
+    puts "\n\t" + "from sagemaker.huggingface import get_huggingface_llm_image_uri".colorize(:light_white)
+    puts "\t" + "image_uri = get_huggingface_llm_image_uri(\"huggingface\", version=\"2.2.0\")".colorize(:light_white)
+    print "\nUse a custom image URI (blank to proceed with current): "
+    response = gets.chomp
+    image_uri = response.empty? ? HUGGINGFACE_IMAGE_URI : response
+  end
+
+  # Fetch token from secrets manager if not specified
+  unless options[:token]
+    print "\nFetching HuggingFace Access Token..."
+    secrets_manager = Aws::SecretsManager::Client.new
+    value = secrets_manager.get_secret_value(
+      {secret_id: "#{options[:environment]}/gen-ai-curriculum/huggingface_token"}
+    )
+    options[:token] = value.secret_string
+    puts "done".colorize(:light_green)
+  end
+
+  puts "\nHuggingFace Image URI: " + image_uri.to_s.colorize(:light_cyan)
+  puts "Environment: " + (options[:environment]).to_s.colorize(:light_cyan)
+  puts "Dry-run mode: " + (options[:dry_run]).to_s.colorize(:light_cyan)
+
+  unless options[:dry_run]
+    puts "\nChecking autoscaling targets...\n"
+    Config::ENDPOINT_CONFIGS.each do |config|
+      deregister_auto_scaling(config[:model_id], options[:environment])
+    end
+  end
+
+  puts "\nTransforming ERB to YAML..."
+  ` erb -T - environment=#{options[:environment]} -r ./config.rb gen_ai_curriculum.yml.erb > gen_ai_curriculum.yml `
+  return unless $?&.exitstatus == 0
+  puts "Success!".colorize(:light_green)
+
+  puts "\nGetting AWS Account ID..."
+  identity = `aws sts get-caller-identity`
+  return unless $?&.exitstatus == 0
+  account_id = JSON.parse(identity)['Account']
+  puts "Using AWS Account ID: #{account_id.colorize(:light_cyan)}"
+
+  cmd = "aws cloudformation deploy " \
+    "--stack-name gen-ai-curriculum-#{options[:environment]} " \
+    "--template-file gen_ai_curriculum.yml " \
+    "--role-arn arn:aws:iam::#{account_id}:role/admin/CloudFormationService " \
+    "--parameter-overrides " \
+    "Environment=#{options[:environment]} " \
+    "HuggingFaceImageUri=#{image_uri} " \
+    "HuggingFaceToken=#{options[:token]}"
+
+  if options[:dry_run]
+    puts "\nWould have run command: " + cmd.colorize(:light_cyan)
+    puts "\nCreated Cloudformation template. Re-run this script with dry-run: false to deploy.".colorize(:light_green)
+    return
+  end
+
+  puts "\nDeploying stack..."
+  puts "Running command: " + cmd.colorize(:light_cyan)
+  Open3.popen3 cmd do |_stdin, stdout, stderr, thread|
+    while (line = stdout.gets || stderr.gets)
+      puts line
+    end
+
+    # Handle the exit status after the command finishes
+    exit_status = thread.value
+    unless exit_status.success?
+      abort("Command failed with exit status: #{exit_status.exitstatus}")
+    end
+  end
+  puts "Success!".colorize(:light_green)
+
+  puts "\nRemoving generated template..."
+  ` rm gen_ai_curriculum.yml `
+  puts "Done!".colorize(:light_green)
+rescue StandardError => exception
+  puts "Error #{exception.message}"
+end
+
+# There is currently no Cloudformation support for deregistering scalable targets.
+# Existing scalable targets need to be deregistered before registering new scalable
+# targets if the instance_type has changed. Otherwise, the stack update will fail.
+def deregister_auto_scaling(model_id, environment)
+  client = Aws::ApplicationAutoScaling::Client.new
+  resource_id = "endpoint/#{model_id}-#{environment}/variant/AllTraffic"
+  scalable_dimension = 'sagemaker:variant:DesiredInstanceCount'
+
+  puts "Checking for existing scalable targets for #{model_id}..."
+  targets = client.describe_scalable_targets(
+    {
+      service_namespace: 'sagemaker',
+      resource_ids: [resource_id],
+      scalable_dimension: scalable_dimension
+    }
+  )
+
+  if targets[:scalable_targets].empty?
+    puts "No scalable targets found for #{model_id}."
+    return
+  end
+
+  puts "Deregistering auto scaling for #{model_id}..."
+  client.deregister_scalable_target(
+    {
+      service_namespace: 'sagemaker',
+      resource_id: resource_id,
+      scalable_dimension: scalable_dimension
+    }
+  )
+rescue StandardError => exception
+  puts "Error deregistering scalable target #{exception}"
+  # Raise to stop the script
+  raise
+end
+
+main

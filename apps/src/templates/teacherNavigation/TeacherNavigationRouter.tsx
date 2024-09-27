@@ -22,7 +22,7 @@ import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelecto
 import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
-import {sectionProviderName} from '../teacherDashboard/teacherSectionsRedux';
+import {sectionProviderName} from '../teacherDashboard/teacherSectionsReduxSelectors';
 import TextResponses from '../textResponses/TextResponses';
 
 import DefaultTeacherNavRedirect from './DefaultTeacherNavRedirect';
@@ -56,6 +56,7 @@ export interface Section {
   courseVersionName: string;
   courseOfferingId: number;
   unitId: number;
+  courseDisplayName: string;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -236,6 +237,8 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             element={
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
+                showNoUnitAssigned={!selectedSection?.unitId}
+                courseName={selectedSection?.courseDisplayName}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
                 element={<LessonMaterialsContainer />}
               />

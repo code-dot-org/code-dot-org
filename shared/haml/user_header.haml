@@ -9,6 +9,9 @@
   elsif local_assigns[:level]
     # Only show the create menu on project levels (and not on levels in units)
     show_create_menu = local_assigns[:level].try(:is_project_level)
+  elsif request.path_info.start_with?('/users/new_sign_up')
+    # Do not show create menu within sign up flow
+    show_create_menu = false
   else
     # Show the create menu on non-level pages
     show_create_menu = true
@@ -30,6 +33,8 @@
 %script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
 %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
 %script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
+
+= render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, user_type: user_type, page_controller_name: params[:controller], page_action_name: params[:action], create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
 
 - if show_create_menu && !(request.path_info.include? '/global/')
   .header_button.create_menu{id: "header_create_menu", tabindex: 0, role: "button", class: user_type ? "hide-mobile" : "show-small-desktop"}
@@ -92,13 +97,11 @@
     .header_button.header_user#header_user_signin
       %span= I18n.t("#{loc_prefix}signin")
   -# Hides the Create account button on the sign up page
-  - if request.path_info != '/users/sign_up'
+  - if request.path_info != '/users/sign_up' && !request.path_info.start_with?('/users/new_sign_up')
     %a.linktag{href: CDO.studio_url('users/sign_up'), class: 'button-create-account desktop', id: 'create_account_button'}
       .header_button.header_user#header_user_create_account
         %span= I18n.t("#{loc_prefix}create_account_low_cap")
         .signin_callout_wrapper
-
-= render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, user_type: user_type, page_controller_name: params[:controller], page_action_name: params[:action], create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
 
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';

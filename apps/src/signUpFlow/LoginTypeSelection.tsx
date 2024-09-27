@@ -20,28 +20,35 @@ import i18n from '@cdo/locale';
 
 import {navigateToHref} from '../utils';
 
-import {ACCOUNT_TYPE_SESSION_KEY} from './signUpFlowConstants';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
 const CHECK_ICON = 'circle-check';
-const X_ICON = 'circle-x';
+const X_ICON = 'circle-xmark';
+const EXCLAMATION_ICON = 'circle-exclamation';
 
 const LoginTypeSelection: React.FunctionComponent = () => {
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
   const [passwordIconClass, setPasswordIconClass] = useState(style.lightGray);
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [confirmPasswordIcon, setConfirmPasswordIcon] = useState(X_ICON);
-  const [confirmPasswordIconClass, setConfirmPasswordIconClass] = useState(
-    style.lightGray
-  );
+  const [showConfirmPasswordError, setShowConfirmPasswordError] =
+    useState(false);
   const [email, setEmail] = useState('');
   const [emailIcon, setEmailIcon] = useState(X_ICON);
   const [emailIconClass, setEmailIconClass] = useState(style.lightGray);
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
     useState(true);
+
+  const finishAccountUrl =
+    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
+      ? studio('/users/new_sign_up/finish_teacher_account')
+      : studio('/users/new_sign_up/finish_student_account');
 
   useEffect(() => {
     async function getToken() {
@@ -54,14 +61,15 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   useEffect(() => {
     if (
       passwordIcon === CHECK_ICON &&
-      confirmPasswordIcon === CHECK_ICON &&
-      emailIcon === CHECK_ICON
+      !showConfirmPasswordError &&
+      confirmPassword !== '' &&
+      email !== ''
     ) {
       setCreateAccountButtonDisabled(false);
     } else {
       setCreateAccountButtonDisabled(true);
     }
-  }, [passwordIcon, confirmPasswordIcon, emailIcon]);
+  }, [passwordIcon, showConfirmPasswordError, confirmPassword, email]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -90,26 +98,18 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       setPasswordIcon(X_ICON);
       setPasswordIconClass(style.lightGray);
     }
-    if (event.target.value === confirmPassword) {
-      setConfirmPasswordIcon(CHECK_ICON);
-      setConfirmPasswordIconClass(style.teal);
-    } else {
-      setConfirmPasswordIcon(X_ICON);
-      setConfirmPasswordIconClass(style.lightGray);
-    }
+    event.target.value === confirmPassword || confirmPassword === ''
+      ? setShowConfirmPasswordError(false)
+      : setShowConfirmPasswordError(true);
   };
 
   const handleConfirmPasswordChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setConfirmPassword(event.target.value);
-    if (event.target.value === password) {
-      setConfirmPasswordIcon(CHECK_ICON);
-      setConfirmPasswordIconClass(style.teal);
-    } else {
-      setConfirmPasswordIcon(X_ICON);
-      setConfirmPasswordIconClass(style.lightGray);
-    }
+    event.target.value === password
+      ? setShowConfirmPasswordError(false)
+      : setShowConfirmPasswordError(true);
   };
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -117,10 +117,35 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     if (isEmail(event.target.value)) {
       setEmailIcon(CHECK_ICON);
       setEmailIconClass(style.teal);
+      sessionStorage.setItem(EMAIL_SESSION_KEY, event.target.value);
     } else {
       setEmailIcon(X_ICON);
       setEmailIconClass(style.lightGray);
     }
+  };
+
+  const submitLoginType = async () => {
+    logUserLoginType('email');
+
+    const submitLoginTypeParams = {
+      new_sign_up: true,
+      user: {
+        email: email,
+        password: password,
+        password_confirmation: password,
+      },
+    };
+    const authToken = await getAuthenticityToken();
+    await fetch('/users/begin_sign_up', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': authToken,
+      },
+      body: JSON.stringify(submitLoginTypeParams),
+    });
+
+    navigateToHref(finishAccountUrl);
   };
 
   const sendLMSAnalyticsEvent = () => {
@@ -140,11 +165,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       PLATFORMS.STATSIG
     );
   }
-
-  const finishAccountUrl =
-    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
-      ? studio('/users/new_sign_up/finish_teacher_account')
-      : studio('/users/new_sign_up/finish_student_account');
 
   return (
     <div className={style.newSignupFlow}>
@@ -224,26 +244,28 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <BodyThreeText>
               {locale.access_detailed_instructions()}
             </BodyThreeText>
-            <Button
-              href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
-              onClick={sendLMSAnalyticsEvent}
-              color={Button.ButtonColor.white}
-              text={'Canvas'}
-              icon={'arrow-up-right-from-square'}
-              __useDeprecatedTag
-            >
-              <img src={canvas} alt="" />
-            </Button>
-            <Button
-              href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
-              onClick={sendLMSAnalyticsEvent}
-              color={Button.ButtonColor.white}
-              text={'Schoology'}
-              icon={'arrow-up-right-from-square'}
-              __useDeprecatedTag
-            >
-              <img src={schoology} alt="" />
-            </Button>
+            <div className={style.buttonContainer}>
+              <Button
+                href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
+                onClick={sendLMSAnalyticsEvent}
+                color={Button.ButtonColor.white}
+                text={'Canvas'}
+                icon={'arrow-up-right-from-square'}
+                __useDeprecatedTag
+              >
+                <img src={canvas} alt="" />
+              </Button>
+              <Button
+                href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
+                onClick={sendLMSAnalyticsEvent}
+                color={Button.ButtonColor.white}
+                text={'Schoology'}
+                icon={'arrow-up-right-from-square'}
+                __useDeprecatedTag
+              >
+                <img src={schoology} alt="" />
+              </Button>
+            </div>
           </div>
         </div>
         <div className={style.dividerContainer}>
@@ -295,24 +317,25 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 name="confirmPasswordInput"
                 inputType="password"
               />
-              <div className={style.validationMessage}>
-                <FontAwesomeV6Icon
-                  className={confirmPasswordIconClass}
-                  iconName={confirmPasswordIcon}
-                />
-                <BodyThreeText>{i18n.passwordsMustMatch()}</BodyThreeText>
-              </div>
+              {showConfirmPasswordError && (
+                <div className={style.validationMessage}>
+                  <FontAwesomeV6Icon
+                    className={style.red}
+                    iconName={EXCLAMATION_ICON}
+                  />
+                  <BodyThreeText className={style.red}>
+                    {i18n.passwordsMustMatch()}
+                  </BodyThreeText>
+                </div>
+              )}
             </div>
           </div>
           <NewButton
             id="createAccountButton"
             className={style.shortButton}
             text={locale.create_my_account()}
+            onClick={submitLoginType}
             disabled={createAccountButtonDisabled}
-            onClick={() => {
-              navigateToHref(finishAccountUrl);
-              logUserLoginType('email');
-            }}
           />
         </div>
       </div>

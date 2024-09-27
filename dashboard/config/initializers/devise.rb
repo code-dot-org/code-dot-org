@@ -326,7 +326,7 @@ Devise.setup do |config|
       end
     # Students younger than 13 shouldn't see App Lab and Game Lab unless they
     # are in a teacher's section for privacy reasons.
-    limit_project_types = user.under_13? && !user.sections_as_student.any?
+    limit_project_types = user.under_13? && user.sections_as_student.none?
     auth.cookies[environment_specific_cookie_name("_limit_project_types")] = {value: limit_project_types, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
