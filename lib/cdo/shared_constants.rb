@@ -697,7 +697,7 @@ module SharedConstants
     },
   }.freeze
   CENSUS_CONSTANTS = OpenStruct.new(
-    {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
+    {CURRENT_CENSUS_SCHOOL_YEAR: 2024}
   )
 
   LMS_LINKS = OpenStruct.new(
