@@ -1,5 +1,6 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
@@ -142,5 +143,31 @@ describe('FinishTeacherAccount', () => {
     // Error shows and button is disabled with empty display name
     screen.getByText(locale.display_name_error_message());
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+  });
+
+  it('GDPR has expected behavior if api call returns true', async () => {
+    const fetchStub = sinon.stub(window, 'fetch').resolves({
+      ok: true,
+      status: 200,
+      json: () => Promise.resolve({gdpr: true, force_in_eu: false}),
+    } as Response);
+
+    renderDefault();
+
+    // Check that GDPR message is displayed
+    await screen.findByText(locale.data_transfer_notice());
+
+    // Check that button is disabled until GDPR is checked (and other required fields are filled)
+    const displayNameInput = screen.getAllByRole('textbox')[0];
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+
+    // Restore the original fetch implementation
+    fetchStub.restore();
   });
 });
