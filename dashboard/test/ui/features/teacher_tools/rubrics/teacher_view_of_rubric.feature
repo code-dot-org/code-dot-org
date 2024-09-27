@@ -120,6 +120,7 @@ Scenario: Teacher views rubric product tour
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
   And I click selector ".introjs-button:contains(Next Tip)" once I see it
+  And I click selector ".introjs-button:contains(Next Tip)" once I see it
   And I wait until element "h1:contains(How did Your AI Teaching Assistant do?)" is visible
 
   # Teacher uses Back button to backtrack through tour
