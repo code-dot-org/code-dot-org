@@ -110,22 +110,40 @@ header:
 # The navigation region found at the bottom of each page
 footer:
   links:
-  # Remove these links to support pages
-  - title: privacy_updated
-    url: /privacy
-    domain: code.org
-    style: 'color: #ffa400;'
-  - title: privacy
-    url: /privacy
-    domain: code.org
-    style: 'color: #ffa400;'
-  - title: cookie_notice
-    url: /cookies
-    domain: code.org
-  - title: tos_short
-    url: /tos'
-    domain: code.org
-
+    studio:
+      - title: privacy_updated
+        url: /privacy
+        domain: code.org
+        style: 'color: #ffa400;'
+      - title: privacy
+        url: /privacy
+        domain: code.org
+        style: 'color: #ffa400;'
+      - title: cookie_notice
+        url: /cookies
+        domain: code.org
+      - title: tos_short
+        url: /tos'
+        domain: code.org
+    code_org:
+      - title: privacy_policy
+        url: /privacy
+        domain: code.org
+      - title: terms
+        url: /tos
+        domain: code.org
+    hour_of_code:
+      - title: terms
+        url: /tos
+        domain: code.org
+        target: _blank
+      - title: privacy
+        url: /privacy
+        domain: code.org
+        target: _blank
+      - title: cookie
+        url: /cookies
+        target: _blank
 # A subset of locales can be specified with the following structure
 #locale_options:
 #  - ['English', 'en-US']
