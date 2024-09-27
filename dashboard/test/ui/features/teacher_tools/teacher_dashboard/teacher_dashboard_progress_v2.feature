@@ -215,8 +215,10 @@ Scenario: Teacher can view choice levels
 
   # Student submits choice level
   Given I am on "http://studio.code.org/s/allthethings/lessons/40/levels/1/sublevel/2?noautoplay=true"
-  And I wait to see "#runButton"
-  And I submit this level
+  And I wait until I see selector "button:contains(Submit)"
+  And I click selector "button:contains(Submit)"
+  And I wait to see "#confirm-button"
+  And I press "confirm-button"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
