@@ -369,5 +369,5 @@ gem 'graphwerk', group: %i[development test]
 #gem "packs-rails", "~> 0.0.5"
 #gem 'packwerk'
 
-gem 'core', path: './dashboard/packs/user'
-gem 'lti', path: './dashboard/packs/lti'
+# Automatically include all rails engines
+Dir[File.join(Bundler.root.to_s, 'engines/*/')].each {|f| gemspec path: f}

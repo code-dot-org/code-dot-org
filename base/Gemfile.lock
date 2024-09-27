@@ -1,12 +1,12 @@
 PATH
-  remote: packs/lti
-  specs:
-    lti (0.1.0)
-
-PATH
-  remote: packs/user
+  remote: engines/core
   specs:
     core (0.1.0)
+
+PATH
+  remote: engines/lti
+  specs:
+    lti (0.1.0)
 
 GEM
   remote: https://rubygems.org/
