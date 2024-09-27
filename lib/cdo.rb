@@ -287,12 +287,6 @@ module Cdo
       rack_env?(:production) || !!ENV['AWS_PROFILE']&.include?('cdo')
     end
 
-    # The web server in connected to an emulated (non-production) AWS system.
-    def aws_emulated?
-      # This is true when an endpoint is set explicitly
-      !!(CDO.aws_endpoint && (rack_env?(:development) || rack_env?(:test)))
-    end
-
     # The web server is connected to an emulated S3 server local to this server.
     def aws_s3_emulated?
       # This is true when an endpoint is set explicitly
