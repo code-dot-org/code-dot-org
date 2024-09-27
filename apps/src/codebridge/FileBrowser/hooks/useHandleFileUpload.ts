@@ -11,13 +11,19 @@ import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 
 import {useCheckForDuplicateFilename} from './useCheckForDuplicateFilename';
 
+type handleFileUploadArgs = {
+  folderId: FolderId;
+  fileName: string;
+  contents: string;
+};
+
 export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
   const checkForDuplicateFilename = useCheckForDuplicateFilename();
   const {newFile} = useCodebridgeContext();
   const dialogControl = useDialogControl();
   return useCallback(
     // first of all, we just click on the document body to close our pop up
-    (folderId: FolderId, fileName: string, contents: string) => {
+    ({folderId, fileName, contents}: handleFileUploadArgs) => {
       // this is because we canceled the original click event inside of the FileUploader
       // of note - if additional clickhandlers were attached here, they won't be called.
       // So don't attach other handlers to this button.

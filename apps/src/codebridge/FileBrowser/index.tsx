@@ -259,8 +259,12 @@ const InnerFileBrowser = React.memo(
                         {codebridgeI18n.newFile()}
                       </span>
                       <FileUploader
-                        callback={(filename, contents) =>
-                          handleFileUpload(f.id, filename, contents)
+                        callback={(fileName, contents) =>
+                          handleFileUpload({
+                            folderId: f.id,
+                            fileName,
+                            contents,
+                          })
                         }
                         errorCallback={error => {
                           // close out of our pop up
