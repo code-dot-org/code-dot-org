@@ -1,10 +1,15 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import classNames from 'classnames';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 
+import {FileUploader} from './FileUploader';
+import {useHandleFileUpload} from './hooks';
 import {newFolderPromptType, newFilePromptType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
@@ -18,27 +23,59 @@ type FileBrowserHeaderPopUpButtonProps = {
 export const FileBrowserHeaderPopUpButton = ({
   newFolderPrompt,
   newFilePrompt,
-}: FileBrowserHeaderPopUpButtonProps) => (
-  <PopUpButton iconName="plus" alignment="left">
-    <div
-      onClick={() => newFolderPrompt()}
-      className={classNames(
-        darkModeStyles.dropdownItem,
-        moduleStyles.dropdownItem
-      )}
-    >
-      <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-      <div>{codebridgeI18n.newFolder()}</div>
-    </div>
-    <div
-      onClick={() => newFilePrompt()}
-      className={classNames(
-        darkModeStyles.dropdownItem,
-        moduleStyles.dropdownItem
-      )}
-    >
-      <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-      <div>{codebridgeI18n.newFile()}</div>
-    </div>
-  </PopUpButton>
-);
+}: FileBrowserHeaderPopUpButtonProps) => {
+  const {project} = useCodebridgeContext();
+  const dialogControl = useDialogControl();
+  const handleFileUpload = useHandleFileUpload(project.files);
+  return (
+    <PopUpButton iconName="plus" alignment="left">
+      <div
+        onClick={() => newFolderPrompt()}
+        className={classNames(
+          darkModeStyles.dropdownItem,
+          moduleStyles.dropdownItem
+        )}
+      >
+        <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+        <div>{codebridgeI18n.newFolder()}</div>
+      </div>
+      <div
+        onClick={() => newFilePrompt()}
+        className={classNames(
+          darkModeStyles.dropdownItem,
+          moduleStyles.dropdownItem
+        )}
+      >
+        <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+        <div>{codebridgeI18n.newFile()}</div>
+      </div>
+      <FileUploader
+        callback={(fileName, contents) =>
+          handleFileUpload({
+            folderId: DEFAULT_FOLDER_ID,
+            fileName,
+            contents,
+          })
+        }
+        errorCallback={error => {
+          // close out of our pop up
+          document.body.click();
+          dialogControl?.showDialog({
+            type: DialogType.GenericAlert,
+            title: error.message,
+          });
+        }}
+      >
+        <div
+          className={classNames(
+            darkModeStyles.dropdownItem,
+            moduleStyles.dropdownItem
+          )}
+        >
+          <FontAwesomeV6Icon iconName="upload" iconStyle="solid" />
+          <div>{codebridgeI18n.uploadFile()}</div>
+        </div>
+      </FileUploader>
+    </PopUpButton>
+  );
+};
