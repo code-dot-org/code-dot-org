@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
-import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
+
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';

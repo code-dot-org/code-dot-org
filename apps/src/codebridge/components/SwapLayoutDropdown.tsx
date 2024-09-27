@@ -5,7 +5,7 @@ import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import WithTooltip from '../componentLibrary/tooltip/WithTooltip';
+import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
