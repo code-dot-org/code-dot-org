@@ -97,6 +97,6 @@
 }
 
 .logos-wrapper.ai-logos-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
+  max-width: 950px;
+  flex-wrap: auto;
 }
