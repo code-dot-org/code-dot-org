@@ -334,9 +334,13 @@ describe('useSchoolInfo', () => {
       mockFetch = jest.fn().mockResolvedValue(mockResponse);
       window.fetch = mockFetch;
 
-      const {result} = renderHook(() => useSchoolInfo(initialState));
+      const {result, waitForNextUpdate} = renderHook(() =>
+        useSchoolInfo(initialState)
+      );
 
       hook = result;
+
+      await waitForNextUpdate();
     });
 
     it('returns the school list sorted alphabetically', () => {
