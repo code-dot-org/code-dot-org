@@ -310,6 +310,7 @@ const InnerFileBrowser = React.memo(
                           {codebridgeI18n.newFile()}
                         </span>
                         <FileUploader
+                          validMimeTypes={['text/']}
                           callback={(fileName, contents) =>
                             handleFileUpload({
                               folderId: f.id,

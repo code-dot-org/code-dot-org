@@ -8,6 +8,7 @@ type FileUploaderProps = {
   children?: React.ReactNode;
   callback: (filename: string, contents: string) => void;
   errorCallback: (error: string) => void;
+  validMimeTypes?: string[];
 };
 
 const bufferToString = (buffer: ArrayBuffer) => {
@@ -15,32 +16,35 @@ const bufferToString = (buffer: ArrayBuffer) => {
   return bytes.reduce((string, byte) => string + String.fromCharCode(byte), '');
 };
 
-const isValidMimeType = (mimeType: string) => {
-  const allowedMimeRegexes = [
-    'image/',
-    'text/',
-    'audio/',
-    'video/',
-    'application/json',
-    'application/ld+json',
-    'application/pdf',
-    'application/rtf',
-  ];
+const defaultAllowedMimeRegexes = [
+  'image/',
+  'text/',
+  'audio/',
+  'video/',
+  'application/json',
+  'application/ld+json',
+  'application/pdf',
+  'application/rtf',
+];
 
+const isValidMimeType = (
+  mimeType: string,
+  allowedMimeRegexes: string[] = defaultAllowedMimeRegexes
+) => {
   return Boolean(
     allowedMimeRegexes.find(regex => new RegExp(regex).exec(mimeType))?.length
   );
 };
 
 export const FileUploader = React.memo(
-  ({children, callback, errorCallback}: FileUploaderProps) => {
+  ({children, callback, errorCallback, validMimeTypes}: FileUploaderProps) => {
     const appName = useAppSelector(state => state.lab.levelProperties?.appName);
     const inputRef = useRef<HTMLInputElement>(null);
 
     const changeHandler = useCallback(() => {
       const file = inputRef.current?.files?.[0];
       if (file) {
-        if (!isValidMimeType(file.type)) {
+        if (!isValidMimeType(file.type, validMimeTypes)) {
           sendCodebridgeAnalyticsEvent(
             EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE,
             appName,
@@ -78,7 +82,7 @@ export const FileUploader = React.memo(
           }
         };
       }
-    }, [appName, callback, errorCallback]);
+    }, [appName, callback, errorCallback, validMimeTypes]);
 
     return (
       <div

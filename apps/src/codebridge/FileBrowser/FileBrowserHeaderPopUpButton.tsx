@@ -50,6 +50,7 @@ export const FileBrowserHeaderPopUpButton = ({
         <div>{codebridgeI18n.newFile()}</div>
       </div>
       <FileUploader
+        validMimeTypes={['text/']}
         callback={(fileName, contents) =>
           handleFileUpload({
             folderId: DEFAULT_FOLDER_ID,
