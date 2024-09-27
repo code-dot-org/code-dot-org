@@ -3,6 +3,8 @@ import {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
+// Check if the foldername is already in use in the given folder.
+// If it is, alert the user and return true, otherwise return false.
 export const useCheckForDuplicateFoldername = () => {
   return useCallback(
     (

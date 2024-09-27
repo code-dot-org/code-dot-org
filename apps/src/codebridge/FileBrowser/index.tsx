@@ -441,12 +441,7 @@ export const FileBrowser = React.memo(() => {
   const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
-  // Check if the filename is already in use in the given folder.
-  // If it is, alert the user and return true, otherwise return false.
   const checkForDuplicateFilename = useCheckForDuplicateFilename();
-
-  // Check if the foldername is already in use in the given folder.
-  // If it is, alert the user and return true, otherwise return false.
   const checkForDuplicateFoldername = useCheckForDuplicateFoldername();
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(

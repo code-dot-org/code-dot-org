@@ -4,6 +4,8 @@ import {useCallback} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 
+// Check if the filename is already in use in the given folder.
+// If it is, alert the user and return true, otherwise return false.
 export const useCheckForDuplicateFilename = () => {
   return useCallback(
     (

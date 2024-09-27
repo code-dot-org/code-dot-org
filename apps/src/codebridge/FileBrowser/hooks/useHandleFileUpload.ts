@@ -22,8 +22,8 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
   const {newFile} = useCodebridgeContext();
   const dialogControl = useDialogControl();
   return useCallback(
-    // first of all, we just click on the document body to close our pop up
     ({folderId, fileName, contents}: handleFileUploadArgs) => {
+      // first of all, we just click on the document body to close our pop up
       // this is because we canceled the original click event inside of the FileUploader
       // of note - if additional clickhandlers were attached here, they won't be called.
       // So don't attach other handlers to this button.
@@ -50,7 +50,7 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
       newFile({
         fileId,
         fileName,
-        folderId: folderId,
+        folderId,
         contents,
       });
     },
