@@ -282,6 +282,13 @@ const FinishStudentAccount: React.FunctionComponent<{
                 onChange={onGDPRChange}
                 size="s"
               />
+              <div className={style.inlineContainer}>
+                <strong className={style.inlineItem}>{locale.note()}</strong>{' '}
+                <SafeMarkdown
+                  className={style.inlineItem}
+                  markdown={locale.visit_privacy_policy()}
+                />
+              </div>
             </div>
           )}
         </fieldset>

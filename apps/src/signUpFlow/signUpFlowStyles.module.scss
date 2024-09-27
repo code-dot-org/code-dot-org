@@ -488,6 +488,20 @@ span {
   margin-top: 0.5rem;
 }
 
+.inlineContainer {
+  white-space: nowrap;
+  margin-top: 0.5rem;
+
+  .inlineItem {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  a {
+    color: unset !important;
+  }
+}
+
 .parentInfoContainer {
   display: flex;
   flex-direction: column;
