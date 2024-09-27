@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-06T23:46:32.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -21,16 +25,10 @@
     "contained_level_names": [
       "CSA U7L9-L2b Predict"
     ],
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/91ffffd52fe4e53cae3e4f3758e08b08-image-1639151263583.png"
+    "thumbnail_url": "https://images.code.org/91ffffd52fe4e53cae3e4f3758e08b08-image-1639151263583.png",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-12-06T23:46:32.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2021-12-06T23:46:32.598+00:00\",\"changed\":[\"cloned from \\\"CSA U7L9-L2a\\\"\"],\"cloned_from\":\"CSA U7L9-L2a\"},{\"changed_at\":\"2021-12-06 23:46:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-07 14:58:01 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-07 15:24:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-07 15:25:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-10 15:47:54 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -1,0 +1,612 @@
+{
+  "script": {
+    "name": "hoc-music-ai-pilot-1",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "pilot_experiment": "hoc-music-ai-pilot-1",
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "hoc-music-ai-pilot-1",
+    "serialized_at": "2024-09-16 15:37:15 UTC",
+    "published_state": "pilot",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "hoc-music-ai-pilot-1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Music Lab: AI Edition for Hour of Code",
+      "name": "Music Lab: A.I. Edition for Hour of Code",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "eabf3ade-f11d-47e1-b17a-5912c3e68a01",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eabf3ade-f11d-47e1-b17a-5912c3e68a01",
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "f49698ad-b43e-4d03-bb13-a964097d3e06",
+      "position": 1,
+      "properties": {
+        "name": "Music Lab: A.I. Edition",
+        "progression_name": "Video: Introduction to Music Lab with A.I. "
+      },
+      "seeding_key": {
+        "activity_section.key": "f49698ad-b43e-4d03-bb13-a964097d3e06",
+        "lesson_activity.key": "eabf3ade-f11d-47e1-b17a-5912c3e68a01"
+      }
+    },
+    {
+      "key": "88ff90ff-9b62-4631-b11c-f8d343fbb727",
+      "position": 2,
+      "properties": {
+        "progression_name": "Play Together & Sounds"
+      },
+      "seeding_key": {
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727",
+        "lesson_activity.key": "eabf3ade-f11d-47e1-b17a-5912c3e68a01"
+      }
+    },
+    {
+      "key": "3fd65bee-38cc-41ba-8a6a-214f6e8b6556",
+      "position": 3,
+      "properties": {
+        "progression_name": "Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fd65bee-38cc-41ba-8a6a-214f6e8b6556",
+        "lesson_activity.key": "eabf3ade-f11d-47e1-b17a-5912c3e68a01"
+      }
+    },
+    {
+      "key": "08180499-9438-4ac3-8aa4-02b7e6afb783",
+      "position": 4,
+      "properties": {
+        "progression_name": "AI Beat Block "
+      },
+      "seeding_key": {
+        "activity_section.key": "08180499-9438-4ac3-8aa4-02b7e6afb783",
+        "lesson_activity.key": "eabf3ade-f11d-47e1-b17a-5912c3e68a01"
+      }
+    },
+    {
+      "key": "9a1c56e4-a3a7-4dec-ba81-f593af396dd4",
+      "position": 5,
+      "properties": {
+        "progression_name": "Freeplay"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a1c56e4-a3a7-4dec-ba81-f593af396dd4",
+        "lesson_activity.key": "eabf3ade-f11d-47e1-b17a-5912c3e68a01"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music_lab_intro_panels_start2"
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_lab_intro_panels_start2"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "f49698ad-b43e-4d03-bb13-a964097d3e06"
+      },
+      "level_keys": [
+        "music_lab_intro_panels_start2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-ai-skill-sequence"
+        ],
+        "progression": "Play Together & Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-skill-sequence"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727"
+      },
+      "level_keys": [
+        "music-ai-skill-sequence"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-ai-skill-sequence2"
+        ],
+        "progression": "Play Together & Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-skill-sequence2"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727"
+      },
+      "level_keys": [
+        "music-ai-skill-sequence2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music_ai_panels_playtogether"
+        ],
+        "progression": "Play Together & Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_ai_panels_playtogether"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727"
+      },
+      "level_keys": [
+        "music_ai_panels_playtogether"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-ai-skill-playtogether"
+        ],
+        "progression": "Play Together & Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-skill-playtogether"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727"
+      },
+      "level_keys": [
+        "music-ai-skill-playtogether"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-ai-skill-playtogether_sequence"
+        ],
+        "progression": "Play Together & Sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-skill-playtogether_sequence"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727"
+      },
+      "level_keys": [
+        "music-ai-skill-playtogether_sequence"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music_ai_panels_function"
+        ],
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_ai_panels_function"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "3fd65bee-38cc-41ba-8a6a-214f6e8b6556"
+      },
+      "level_keys": [
+        "music_ai_panels_function"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-ai-functions-chorus"
+        ],
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-functions-chorus"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "3fd65bee-38cc-41ba-8a6a-214f6e8b6556"
+      },
+      "level_keys": [
+        "music-ai-functions-chorus"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-ai-skill-function-verse"
+        ],
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-skill-function-verse"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "3fd65bee-38cc-41ba-8a6a-214f6e8b6556"
+      },
+      "level_keys": [
+        "music-ai-skill-function-verse"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music_ai_panels_aibeatblock"
+        ],
+        "progression": "AI Beat Block "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_ai_panels_aibeatblock"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "08180499-9438-4ac3-8aa4-02b7e6afb783"
+      },
+      "level_keys": [
+        "music_ai_panels_aibeatblock"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-ai-skill-aibeats"
+        ],
+        "progression": "AI Beat Block "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-skill-aibeats"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "08180499-9438-4ac3-8aa4-02b7e6afb783"
+      },
+      "level_keys": [
+        "music-ai-skill-aibeats"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "usiclab_tutorial_panels_end"
+        ],
+        "progression": "Freeplay"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "usiclab_tutorial_panels_end"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "9a1c56e4-a3a7-4dec-ba81-f593af396dd4"
+      },
+      "level_keys": [
+        "usiclab_tutorial_panels_end"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "music_lab_intro_panels_start2",
+        "script_level.level_keys": [
+          "music_lab_intro_panels_start2"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "f49698ad-b43e-4d03-bb13-a964097d3e06"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-skill-sequence",
+        "script_level.level_keys": [
+          "music-ai-skill-sequence"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-skill-sequence2",
+        "script_level.level_keys": [
+          "music-ai-skill-sequence2"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music_ai_panels_playtogether",
+        "script_level.level_keys": [
+          "music_ai_panels_playtogether"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-skill-playtogether",
+        "script_level.level_keys": [
+          "music-ai-skill-playtogether"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-skill-playtogether_sequence",
+        "script_level.level_keys": [
+          "music-ai-skill-playtogether_sequence"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "88ff90ff-9b62-4631-b11c-f8d343fbb727"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music_ai_panels_function",
+        "script_level.level_keys": [
+          "music_ai_panels_function"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "3fd65bee-38cc-41ba-8a6a-214f6e8b6556"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-functions-chorus",
+        "script_level.level_keys": [
+          "music-ai-functions-chorus"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "3fd65bee-38cc-41ba-8a6a-214f6e8b6556"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-skill-function-verse",
+        "script_level.level_keys": [
+          "music-ai-skill-function-verse"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "3fd65bee-38cc-41ba-8a6a-214f6e8b6556"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music_ai_panels_aibeatblock",
+        "script_level.level_keys": [
+          "music_ai_panels_aibeatblock"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "08180499-9438-4ac3-8aa4-02b7e6afb783"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-skill-aibeats",
+        "script_level.level_keys": [
+          "music-ai-skill-aibeats"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "08180499-9438-4ac3-8aa4-02b7e6afb783"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "usiclab_tutorial_panels_end",
+        "script_level.level_keys": [
+          "usiclab_tutorial_panels_end"
+        ],
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "hoc-music-ai-pilot-1",
+        "activity_section.key": "9a1c56e4-a3a7-4dec-ba81-f593af396dd4"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

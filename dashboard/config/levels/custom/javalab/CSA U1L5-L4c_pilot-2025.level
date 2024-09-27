@@ -365,7 +365,8 @@
       "/courses/csa-2023/guides/while-loops"
     ],
     "video_key": "csa_while_loops",
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-01T20:45:39.891+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L4c_2025\\\"\"],\"cloned_from\":\"CSA U1L5-L4c_2025\"}]"

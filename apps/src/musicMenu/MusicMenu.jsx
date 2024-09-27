@@ -51,6 +51,14 @@ const optionsList = [
     ],
   },
   {
+    name: 'show-tts',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Hide text to speech.'},
+      {value: 'true', description: 'Show text to speech.'},
+    ],
+  },
+  {
     name: 'sounds-panel-2',
     type: 'radio',
     values: [
@@ -72,6 +80,14 @@ const optionsList = [
     values: [
       {value: 'false', description: 'Hide play pattern AI block (default).'},
       {value: 'true', description: 'Show play pattern AI block.'},
+    ],
+  },
+  {
+    name: 'hide-ai-temperature',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Show AI temperature (default).'},
+      {value: 'true', description: 'Hide AI temperature.'},
     ],
   },
   {

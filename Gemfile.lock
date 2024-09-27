@@ -39,15 +39,6 @@ GIT
       omniauth-oauth2 (>= 1.1, <= 1.8)
 
 GIT
-  remote: https://github.com/code-dot-org/omniauth-windowslive.git
-  revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
-  ref: cdo
-  specs:
-    omniauth-windowslive (0.0.11)
-      multi_json (>= 1.0.3)
-      omniauth-oauth2 (~> 1.4)
-
-GIT
   remote: https://github.com/code-dot-org/redis-slave-read.git
   revision: cfe1bd0f5cf65eee5b52560139cab133f22cb880
   ref: cfe1bd0f5cf65eee5b52560139cab133f22cb880
@@ -201,6 +192,9 @@ GEM
     aws-sdk-acm (1.74.0)
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
+    aws-sdk-applicationautoscaling (1.51.0)
+      aws-sdk-core (~> 3, >= 3.112.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-autoscaling (1.63.0)
       aws-sdk-core (~> 3, >= 3.112.0)
       aws-sigv4 (~> 1.1)
@@ -217,6 +211,9 @@ GEM
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
     aws-sdk-cloudwatchlogs (1.88.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-comprehend (1.87.0)
       aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
     aws-sdk-core (3.201.3)
@@ -604,9 +601,10 @@ GEM
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
     oj (3.14.2)
-    omniauth (1.9.2)
+    omniauth (2.1.2)
       hashie (>= 3.4.6)
-      rack (>= 1.6.2, < 3)
+      rack (>= 2.2.3)
+      rack-protection
     omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
     omniauth-google-oauth2 (0.6.0)
@@ -616,12 +614,9 @@ GEM
     omniauth-oauth2 (1.7.3)
       oauth2 (>= 1.4, < 3)
       omniauth (>= 1.9, < 3)
-    omniauth-openid (1.0.1)
-      omniauth (~> 1.0)
-      rack-openid (~> 1.3.1)
-    omniauth-rails_csrf_protection (0.1.2)
+    omniauth-rails_csrf_protection (1.0.2)
       actionpack (>= 4.2)
-      omniauth (>= 1.3.1)
+      omniauth (~> 2.0)
     open-uri (0.1.0)
       stringio
       time
@@ -669,9 +664,6 @@ GEM
       rack (>= 2.0.0)
     rack-mini-profiler (3.0.0)
       rack (>= 1.2.0)
-    rack-openid (1.3.1)
-      rack (>= 1.1.0)
-      ruby-openid (>= 2.1.8)
     rack-protection (2.2.3)
       rack
     rack-session (1.0.2)
@@ -789,7 +781,6 @@ GEM
       rubocop (>= 1.7.0, < 2.0)
     rubocop-rails-accessibility (0.2.0)
       rubocop (>= 1.0.0)
-    ruby-openid (2.9.2)
     ruby-prof (1.7.0)
     ruby-progressbar (1.13.0)
     ruby-rc4 (0.1.5)
@@ -890,7 +881,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.2)
+    unf_ext (0.0.7.4)
     unicode-display_width (2.4.2)
     unicode_utils (1.4.0)
     uri (0.13.0)
@@ -942,12 +933,14 @@ DEPENDENCIES
   auto_strip_attributes (~> 2.1)
   aws-google (~> 0.2.0)
   aws-sdk-acm
+  aws-sdk-applicationautoscaling
   aws-sdk-autoscaling
   aws-sdk-bedrockagentruntime (~> 1.10.0)
   aws-sdk-cloudformation
   aws-sdk-cloudfront
   aws-sdk-cloudwatch
   aws-sdk-cloudwatchlogs
+  aws-sdk-comprehend
   aws-sdk-core
   aws-sdk-databasemigrationservice
   aws-sdk-dynamodb
@@ -1039,9 +1032,7 @@ DEPENDENCIES
   omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.6.0)
   omniauth-microsoft_v2_auth!
-  omniauth-openid
-  omniauth-rails_csrf_protection (~> 0.1)
-  omniauth-windowslive (~> 0.0.11)!
+  omniauth-rails_csrf_protection (~> 1.0.2)
   open_uri_redirections
   os
   parallel
@@ -1108,7 +1099,7 @@ DEPENDENCIES
   timecop
   twilio-ruby (< 6.0)
   uglifier (>= 1.3.0)
-  unf_ext (= 0.0.7.2)
+  unf_ext (= 0.0.7.4)
   user_agent_parser
   validate_url (~> 1.0.15)
   validates_email_format_of

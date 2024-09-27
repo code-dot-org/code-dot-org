@@ -65,7 +65,10 @@ const PresentationView: React.FunctionComponent = () => {
         moduleStyles.container
       )}
     >
-      <Heading4 className={moduleStyles.modelCardTitle}>
+      <Heading4
+        id="uitest-presentation-view-header"
+        className={moduleStyles.modelCardTitle}
+      >
         {modelCardInfo['botName']}
       </Heading4>
       <div className={moduleStyles.modelCardFields}>

@@ -168,13 +168,10 @@ gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
-# Ref: https://github.com/joel/omniauth-windowslive/pull/16
-# Ref: https://github.com/joel/omniauth-windowslive/pull/17
-gem 'omniauth-windowslive', '~> 0.0.11', github: 'code-dot-org/omniauth-windowslive', ref: 'cdo'
 
 # Resolve CVE 2015 9284
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
-gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-rails_csrf_protection', '~> 1.0.2'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
@@ -229,12 +226,14 @@ gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
+gem 'aws-sdk-applicationautoscaling'
 gem 'aws-sdk-autoscaling'
 gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
 gem 'aws-sdk-cloudwatchlogs'
+gem 'aws-sdk-comprehend'
 gem 'aws-sdk-core'
 gem 'aws-sdk-databasemigrationservice'
 gem 'aws-sdk-dynamodb'
@@ -277,8 +276,8 @@ gem 'oj', '~> 3.10'
 gem 'rest-client', '~> 2.0.1'
 
 # A rest-client dependency
-# This is the latest version that's installing successfully
-gem 'unf_ext', '0.0.7.2'
+# Needs to be at least this version to install successfully on some ARM processors.
+gem 'unf_ext', '0.0.7.4'
 
 # Generate SSL certificates.
 gem 'acmesmith', '~> 2.3.1'
@@ -299,8 +298,6 @@ gem 'octokit'
 # Used to create a prefix trie of student names within a section
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie', '>= 2.1.1'
-
-gem 'omniauth-openid'
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.

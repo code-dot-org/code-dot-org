@@ -14,18 +14,20 @@ import {
   ChatCompletionApiResponse,
   ChatEvent,
   ChatMessage,
+  DetectToxicityResponse,
   LogChatEventApiResponse,
 } from './types';
+import {extractFieldsToCheckForToxicity} from './utils';
 
 const ROOT_URL = '/aichat';
 const paths = {
-  CHAT_CHECK_SAFETY_URL: `${ROOT_URL}/check_message_safety`,
   CHAT_COMPLETION_URL: `${ROOT_URL}/chat_completion`,
   GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
   LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
   START_CHAT_COMPLETION_URL: `${ROOT_URL}/start_chat_completion`,
   STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
   USER_HAS_AICHAT_ACCESS_URL: `${ROOT_URL}/user_has_access`,
+  FIND_TOXICITY_URL: `${ROOT_URL}/find_toxicity`,
 };
 
 const MAX_POLLING_TIME_MS = 45000;
@@ -89,33 +91,6 @@ export async function postLogChatEvent(
   return await response.json();
 }
 
-interface LLMGuardResponseResult {
-  body: string;
-  statusCode: number;
-}
-
-interface LLMGuardResponse {
-  result: LLMGuardResponseResult;
-}
-
-export async function postAichatCheckSafety(
-  message: string
-): Promise<LLMGuardResponse> {
-  const payload = {
-    message,
-  };
-  const response = await HttpClient.post(
-    paths.CHAT_CHECK_SAFETY_URL,
-    JSON.stringify(payload),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
-    }
-  );
-
-  return await response.json();
-}
-
 /**
  * This function sends a GET request to the aichat student chat history backend controller, then returns
  * a list of chat events if successful.
@@ -138,6 +113,25 @@ export async function getStudentChatHistory(
     paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );
   return response.value;
+}
+
+/**
+ * Detects toxicity in the provided AI customizations by invoking the toxicity detection endpoint.
+ * Returns a {@link DetectToxicityResponse}.
+ */
+export async function detectToxicityInCustomizations(
+  aiCustomizations: AiCustomizations
+): Promise<DetectToxicityResponse> {
+  const response = await HttpClient.post(
+    paths.FIND_TOXICITY_URL,
+    JSON.stringify(extractFieldsToCheckForToxicity(aiCustomizations)),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+
+  return (await response.json()) as DetectToxicityResponse;
 }
 
 interface StartChatCompletionResponse {
@@ -252,8 +246,20 @@ function getUpdatedMessages(
           status: AiInteractionStatus.PII_VIOLATION,
         },
       ];
-    case AiRequestExecutionStatus.FAILURE:
     case AiRequestExecutionStatus.MODEL_PROFANITY:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.ERROR,
+        },
+        {
+          chatMessageText: modelResponse,
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.PROFANITY_VIOLATION,
+        },
+      ];
+    case AiRequestExecutionStatus.FAILURE:
     case AiRequestExecutionStatus.MODEL_PII:
       return [
         {

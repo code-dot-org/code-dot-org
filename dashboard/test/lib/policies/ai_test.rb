@@ -5,7 +5,7 @@ require 'policies/ai'
 class Policies::AiTest < ActiveSupport::TestCase
   class AiRubricsEnabledTest < ActiveSupport::TestCase
     setup do
-      @user = create :user
+      @user = create :authorized_teacher
     end
 
     test 'ai_rubrics_enabled? should return true when the user ai_rubrics_disabled field is false' do
@@ -29,11 +29,11 @@ class Policies::AiTest < ActiveSupport::TestCase
       script = create :script
 
       # Create a student/teacher/section
-      @teacher = create :teacher
+      @teacher = create :authorized_teacher
       @section = create :section, user: @teacher, script: script
       @user = create(:follower, section: @section).student_user
 
-      opt_out_teacher = create :teacher
+      opt_out_teacher = create :authorized_teacher
       opt_out_teacher.ai_rubrics_disabled = true
       opt_out_teacher.save!
       opt_out_section = create :section, user: opt_out_teacher, script: script
@@ -81,7 +81,7 @@ class Policies::AiTest < ActiveSupport::TestCase
       @teacher.save!
 
       # Create a section without a Unit
-      alt_teacher = create :teacher
+      alt_teacher = create :authorized_teacher
       alt_section = create :section, user: alt_teacher
       create(:follower, student_user: @user, section: alt_section)
 

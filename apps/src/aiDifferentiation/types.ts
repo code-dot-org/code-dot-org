@@ -6,4 +6,9 @@ export type ChatTextMessage = {
   status: string;
 };
 
-export type ChatItem = ChatTextMessage | string[];
+export type ChatPrompt = {
+  label: string;
+  prompt: string;
+};
+
+export type ChatItem = ChatTextMessage | ChatPrompt[];

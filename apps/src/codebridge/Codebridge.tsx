@@ -23,6 +23,7 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 
 import Console from './Console';
 import Workspace from './Workspace';
+import WorkspaceAndConsole from './Workspace/WorkspaceAndConsole';
 
 type CodebridgeProps = {
   project: ProjectType;
@@ -73,6 +74,7 @@ export const Codebridge = React.memo(
       'info-panel': config.Instructions || InfoPanel,
       workspace: Workspace,
       console: Console,
+      'workspace-and-console': WorkspaceAndConsole,
     };
 
     let gridLayout: string;
@@ -94,6 +96,14 @@ export const Codebridge = React.memo(
     } else {
       throw new Error('Cannot render codebridge - no layout provided');
     }
+    // gridLayout is a css string that defines the components in the grid layout.
+    // In order to find which components are in the grid layout, we remove all quotes
+    // from the string and tokenize it.
+    const gridLayoutKeys = gridLayout
+      .trim()
+      .replaceAll(`"`, '')
+      .split(' ')
+      .map(key => key.trim());
 
     return (
       <CodebridgeContextProvider
@@ -117,7 +127,7 @@ export const Codebridge = React.memo(
           }}
         >
           {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
-            .filter(key => gridLayout.match(key))
+            .filter(key => gridLayoutKeys.includes(key))
             .map(key => {
               const Component = ComponentMap[key];
               return <Component key={key} />;

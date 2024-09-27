@@ -60,12 +60,15 @@ export interface ProjectSources {
 // We will eventually make this a union type to include other source types.
 export type Source = BlocklySource | MultiFileSource;
 
-export interface SourceUpdateOptions {
+export interface SaveSourceOptions {
+  projectType?: string;
+}
+
+export interface UpdateSourceOptions extends SaveSourceOptions {
   currentVersion: string;
   replace: boolean;
   firstSaveTimestamp: string;
   tabId: string | null;
-  projectType?: ProjectType;
 }
 
 // -- BLOCKLY -- //
@@ -163,6 +166,7 @@ export interface LevelProperties {
   // Help and Tips values
   mapReference?: string;
   referenceLinks?: string[];
+  helpVideos?: VideoData[];
   // Exemplars
   exampleSolutions?: string[];
   exemplarSources?: MultiFileSource;
@@ -170,6 +174,8 @@ export interface LevelProperties {
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   submittable?: boolean;
+  finishUrl?: string;
+  finishDialog?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -183,6 +189,16 @@ export interface ProjectLevelData {
 export interface VideoLevelData {
   src: string;
   download: string;
+  thumbnail: string;
+}
+
+// Addtional fields for videos that are linked as references in the
+// Help & Tips tab of Instructions.
+interface VideoData extends VideoLevelData {
+  name?: string;
+  key?: string;
+  enable_fallback?: boolean;
+  autoplay?: boolean;
 }
 
 export enum OptionsToAvoid {

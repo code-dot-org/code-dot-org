@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
@@ -12,7 +12,7 @@ import HttpClient from '../util/HttpClient';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
-import {ChatItem} from './types';
+import {ChatItem, ChatPrompt} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -48,10 +48,27 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       status: Status.OK,
     },
     [
-      'Explain a concept',
-      'Give an example to use with my class',
-      'Write an extension activity for students who finish early',
-      'Write an extension activity for students who need extra practice',
+      {
+        label: 'Explain a concept',
+        prompt:
+          'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
+      },
+      {
+        label: 'Give an example to use with my class',
+        prompt:
+          'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
+      },
+      {
+        label: 'Write an extension activity for students who finish early',
+        prompt:
+          'Write an extension activity for this lesson for students who finish early',
+      },
+      {
+        label:
+          'Write an extension activity for students who need extra practice',
+        prompt:
+          'Write an extension activity for this lesson for students who need extra practice',
+      },
     ],
   ]);
 
@@ -68,10 +85,18 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     };
 
     setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
+    getAIResponse(message);
+  };
+
+  const onPromptSelect = (prompt: ChatPrompt) => {
+    getAIResponse(prompt.prompt);
+  };
+
+  const getAIResponse = (prompt: string) => {
     setIsWaitingForResponse(true);
 
     const body = JSON.stringify({
-      inputText: message,
+      inputText: prompt,
       lessonId: lessonId,
       unitDisplayName: unitDisplayName,
       sessionId: sessionId,
@@ -95,15 +120,11 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       });
   };
 
-  const onPromptSelect = (prompt: string) => {
-    const newAiMessage = {
-      role: Role.ASSISTANT,
-      chatMessageText: `You selected "${prompt}". This is a placeholder response.`,
-      status: Status.OK,
-    };
-
-    setMessageHistory([...messageHistory, newAiMessage]);
-  };
+  // Scroll to bottom of content when a new message comes in
+  const chatWindowRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    chatWindowRef.current?.lastElementChild?.scrollIntoView();
+  }, [messageHistory]);
 
   return (
     <Draggable
@@ -137,7 +158,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         </div>
 
         <div className={style.fabBackground}>
-          <div className={style.chatContent}>
+          <div className={style.chatContent} ref={chatWindowRef}>
             {messageHistory.map((item: ChatItem, id: number) =>
               Array.isArray(item) ? (
                 <AiDiffSuggestedPrompts

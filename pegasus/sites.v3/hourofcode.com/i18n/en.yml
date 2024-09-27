@@ -47,7 +47,7 @@
   africa_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
   hoc_2024:
-    header: "Make the invisible, visible"
+    header: "Make the invisible visible"
     button_host_an_event: "Host an event"
     banner:
       header_register: "Register your Hour of Code"
@@ -670,8 +670,10 @@
   collection_data: "Focus on Data"
   collection_data_desc: "Empowers students to use data to solve problems."
 
+  module_label_accessibility_features: "Accessibility Features:"
   module_label_ages: "Ages:"
   module_label_grades: "Grades:"
+  module_label_compatible_devices: "Compatible Devices:"
   module_label_curriculum: "Curriculum:"
   module_label_curriculum_pure: "Curriculum"
   module_label_duration: "Duration:"
@@ -942,7 +944,7 @@
     what_is_hoc:
       heading: "What is Hour of Code?"
       desc_01: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the 100 one-hour tutorials, available in over 45 languages."
-      desc_02: "**Make the Invisible, Visible** encourages the next generation of creators to explore, craft, and showcase how coding can bring their favorite things to life. Computer science and AI are wondrous forces that drive the epic apps, designs, and gadgets we use every day. This movement helps to highlight how coding is behind everything from your favorite shoes to the music you listen to. By jumping into fun activities and starting your own projects, you can learn how to use computer science to bring your passions to life and share them with others."
+      desc_02: "**Make the Invisible Visible** encourages the next generation of creators to explore, craft, and showcase how coding can bring their favorite things to life. Computer science and AI are wondrous forces that drive the epic apps, designs, and gadgets we use every day. This movement helps to highlight how coding is behind everything from your favorite shoes to the music you listen to. By jumping into fun activities and starting your own projects, you can learn how to use computer science to bring your passions to life and share them with others."
     activities:
       heading: "Lead an Hour of Code Activity"
       desc: "With 100 activities to choose from with classifications by grade level and experience, your choices are vast. When you know your plans, please [register your activity](%{register_url}) so we can celebrate all the events happening across the globe."
@@ -1232,6 +1234,146 @@
         ai_101:
           aria_label: "Start the AI 101 for Teachers module"
 
+  gen_ai_page:
+    heading_banner:
+      heading: "Exploring Generative AI"
+      desc: "Empower students with hands-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
+      partner: "In partnership with"
+    course_description:
+      title: "Empower students with generative AI skills"
+      desc: "Prepare students to explore and create with generative AI, developing critical thinking and ethical awareness."
+      comprehensive_literacy:
+        title: "Comprehensive AI literacy"
+        desc: "From foundational AI concepts to advanced techniques like prompt engineering and chatbot design, this curriculum encompasses both how AI works and how to use AI."
+      flexible_curriculum:
+        title: "Flexible curriculum design"
+        desc: "Whether integrated into an existing course structure or taught as a standalone unit, this curriculum’s flexible structure allows you to adapt lessons to fit your classroom goals and timelines."
+      ethical_learning:
+        title: "Ethical and inclusive learning"
+        desc: "Promote responsible AI use and development with a focus on ethical considerations and inclusivity, ensuring all students can be responsible creators and critical consumers of AI technologies."
+    glance:
+      title: "Curriculum at a glance"
+      grades: "8-12"
+      level: "Beginner"
+      duration: "6 weeks"
+      topics: "Artificial Intelligence, Аpp Design"
+      compatible_devices: "Laptop, Chromebook"
+      suggested_tools: "Code.org AI Chat Lab"
+      professional_learning: "Available, Course-specific"
+      languages: "English"
+      accessibility_features: "Text-to-speech, Closed captioning"
+    teach_complete_course:
+      title: "Teach the complete course"
+      desc: "Equip students with a comprehensive understanding of generative AI through a full, structured curriculum"
+      explore_gen_ai_card:
+        title: "Exploring Generative AI"
+        desc: "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world."
+        see_pl: "See professional learrning"
+    flexible_units:
+      title: "Flexible units in this course"
+      desc: "Choose standalone units to fit your classroom needs or combine them for a deeper dive into AI concepts."
+      unit_1_card:
+        overline: "Unit 1"
+        title: "Foundations of Generative AI"
+        desc: "Introduces the basics of generative AI and how it works, covering neural networks, embeddings, and how large language models are trained to understand and represent language."
+      unit_2_card:
+        overline: "Unit 2"
+        title: "Customizing Language Models"
+        desc: "Focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards."
+        note: "Note:"
+        note_desc: "AI Chat Lab levels require a [verified teacher account](%{verified_teacher_url}) or SSO login to make use of the tool."
+    unlock_full_access_banner:
+      title: "Unlock full access with a no-cost verified teacher account"
+      desc: "Gain access to more resources, including the new AI Chat Lab, and exclusive materials to enhance your teaching at no cost! It’s quick and easy, get verified today!"
+      button: "Get verified"
+    new_ai_chat_lab:
+      title: "New AI Chat Lab"
+      desc: "The AI Chat Lab tool, accessible only through our curriculum, allows students to experiment with AI models, learn prompt engineering, and customize chatbots using real-world techniques. Designed with built-in safety and moderation features, AI Chat Lab ensures a secure environment for exploring AI concepts while promoting ethical development and responsible use."
+    cs_teacher_quote:
+      quote: "This unit let my students explore and make their own genuine choices, while teaching students how chatbots work. While they were able to create their own chatbots, it was not overly technical, so students do not need a strong computer background knowledge to participate in the course. However, because of the open and explore-based nature of the lesson format, my AP students were also able to engage, enjoy the lesson, and learn about AI."
+      credit: "CS Teacher"
+    preparing_to_explore:
+      title: "Preparing to teach Exploring Generative AI"
+      teaching_card:
+        overline: "8-12 Teachers"
+        title: "Teaching Exploring Generative AI"
+        desc: "This professional learning module prepares teachers to guide 8-12 students through Code.org's Exploring Generative UI units, where students work with hand-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
+        button: "Start professional learning"
+    faq:
+      how_to_fit_existing_curriculum:
+        question: "How does Exploring Generative AI fit into my existing curriculum?"
+        answer:
+          overview: "Exploring Generative AI was designed to address both \"How AI Works\" and \"How to Use AI\", [two essential elements of AI Literacy](%{essential_literacy_url}). The course offers flexible implementation options to suit your specific needs and curriculum structure:"
+          full_course:
+            label: "Full Course:"
+            desc: "Teach both units together as a cohesive course, providing a deep dive into generative AI concepts and applications."
+          individual_units:
+            label: "Individual Units:"
+            desc: "Teach each unit individually, focusing on specific aspects of generative AI that align with your curriculum goals. Optional \"ramp-up\" lessons are provided to quickly onboard students to each unit's topics, ensuring a smooth transition even if they haven't completed the previous unit."
+          conclusion: "Regardless of your chosen implementation approach, Exploring Generative AI is designed to complement and enhance your existing CS or STEM curriculum, equipping your students with essential AI skills and knowledge."
+      address_ethical_considerations:
+        question: "Does Exploring Generative AI address ethical considerations in AI?"
+        answer: "Yes, the curriculum emphasizes the importance of ethical AI development and use. It covers topics such as bias in AI, hallucinations and misinformation, and responsible AI practices such as model cards, encouraging students to think critically about the societal implications of AI technologies. Learn more about our approach to AI Ethics in our [Teachers Guide to Ethical Opportunities in Exploring Generative AI](%{teachers_guide_url})."
+      tools_and_setup:
+        question: "What tools and setup are required for teaching this module?"
+        answer: "The first unit of the course is entirely unplugged and doesn't require any student devices. The second unit requires student computers or Chromebooks - see our [IT Requirements page](%{it_requirements_url}) for additional information on accessing our Code.org platform. Additional information about accessing AI Chat Lab is available in this [technical support article](%{technical_support_url})."
+      projects_and_activities:
+        question: "What kind of projects and activities do students work on in Exploring Generative AI?"
+        answer:
+          overview: "Students engage in a variety of hands-on projects and activities throughout the curriculum, such as building chatbots, role-playing scenarios that address misinformation about AI, and exploring creative applications of AI. These allow students to apply their knowledge and develop practical AI skills. For example, in Exploring Generative AI, students:"
+          li_1: "Construct artifacts to help demystify AI to people in their community"
+          li_2: "Design chatbots to address personally relevant issues or creative tasks"
+          li_3: "Collaboratively construct guidance for appropriate AI usage in a real-world context"
+          li_4: "Develop a chatbot using a user-centered design process to address an issue in the community"
+      mapped_to_standards:
+        question: "Is this module mapped to standards?"
+        answer: "This curriculum is mapped to [CSTA K-12 Standards](%{csta_standards_url}) and the [AI for K-12 Guidelines](%{ai_guidelines_url}) when possible - [click here to see a mapping of standards to lessons in the curriculum](%{mapping_standards_url}). The curriculum is also aligned to a learning framework of skills and knowledge designed specifically for generative AI - [click here to view the learning framework](%{learning_framework_url})."
+      ai_chat_lab:
+        question: "Tell me more about AI Chat Lab - what safety precautions have been built in? What is the data retention policy?"
+        answer: "Please see our [technical support article](%{technical_support_url}) on AI Chat Lab for more information about this exciting new tool!"
+    stay_informed:
+      title: "Stay informed on AI at Code.org"
+      desc: "Keep up with Code.org's innovative AI tools and updates. Subscribe to our newsletter for the latest insights and developments. You can unsubscribe at any time."
+    additional_resources:
+      title: "Additional resources"
+      desc: "From diverse curriculum offerings, to short educational videos, explore all the things Code.org has to offer."
+      curriculum_catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      ai_resources:
+        title: "Code.org AI Resources"
+        desc: "Discover our extensive AI curriculum, professional learning, and other resources to build foundational skills, foster creativity, and encourage critical thinking."
+        button: "Explore AI resources"
+      support:
+        title: "Get Support"
+        desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
+        button: "Visit our support center"
+    developed_in_partnership: "Developed in partnership with"
+
+  gen_ai_banner:
+    overline: "Grades 8-12"
+    title: "Exploring Generative AI"
+    desc: "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world."
+
+  gen_ai_skinny_banner:
+    title: "Exploring Generative AI"
+    desc: "Empower students with hands-on projects and ethical insights into generative AI"
+    in_partnership: "In partnership with"
+
+  gen_ai_middle_high_carousel_card:
+    overline: "Grades: 8-12"
+    title: "Exploring Generative AI"
+    desc: "Empower students with hands-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
+    duration: "6 weeks"
+
+  gen_ai_pl_carousel_cared:
+    overline: "8-12 Teachers"
+    title: "Teaching Exploring Generative AI"
+    curriculum: "Exploring Generative AI"
+    duration: "2.5 hours"
+    prerequisites: "Verified teacher account or SSO-login needed to access AI Chat Lab"
+
   ai_integrations:
     heading: "AI Integrations"
     desc: "We are working on some exciting new technologies to empower students and teachers in the classroom."
@@ -1450,56 +1592,52 @@
   tenth_anniversary_testimonials_02: "I joined Hour of Code in your inaugural year and have been with you all the way! It has inspired me to seek out additional coding opportunities for my students. Thanks for all you have done to get kids engaged and excited about computer science! We wouldn't be where we are without you!"
   tenth_anniversary_testimonials_03: "I owe Code.org so much. I'm the teacher I am today because of the tools you provide for educators like me. I've been using Code.org since 2013 and I've been a facilitator since 2019. Thanks for making me look good for these many years, Code.org. I really appreciate it."
 
-  farsi_page_top_heading: "Code.org in Farsi"
-  farsi_page_top_heading_02: "Talent is everywhere, but opportunity is not. Code.org in Farsi opens a door to an opportunity that would otherwise be closed."
-  farsi_page_top_desc: "Today, there are over 110 million Farsi speakers worldwide. While the majority of native speakers live in Iran, Afghanistan, and Tajikistan, there are millions living as immigrants, migrants, and refugees around the world. With the Code.org in Farsi initiative, Farsi-speaking students will have the same access to our curricula that is already available to students in all other major languages of the world."
-  farsi_page_global_heading: "The Global Impact of Iranians in Education & Technology"
-  farsi_page_global_desc_01: "When you think of an algorithm, you may assume it's something new, but the concept of an algorithm was discovered in Iran over 1300 years ago. “Algorithm” is named after its inventor, the mathematician Al Khwarizmi, who lived in the land formerly known as Persia and now known as Iran. Once the epicenter of mathematics, science, philosophy, and medicine, Iran has made profound advances and impacts in technology."
-  farsi_page_global_desc_02: "Beyond the borders of the country itself, Iranians around the world have contributed in countless ways to science and technology — as co-founders or CEOs of technology companies such as Uber, eBay, Intuit, and Dropbox, or inventing technologies such as LASIK surgery or JPEG compression, or in scientific, academic, or engineering roles around the globe."
-  farsi_page_global_desc_03: "Finally, Code.org is led by Iranian American Hadi Partovi and has grown to become one of the largest education nonprofits globally."
-  farsi_timeline_heading: "Our Projected Timeline"
-  farsi_timeline_stage_title_01: "Stage 1"
-  farsi_timeline_stage_title_02: "Stage 2"
-  farsi_timeline_stage_title_03: "Stage 3"
-  farsi_timeline_stage_title_04: "Stage 4"
-  farsi_timeline_stage_title_05: "Stage 5"
-  farsi_timeline_stage_01_list_01: "Translate the CS Fundamentals curriculum, intended for primary school students."
-  farsi_timeline_stage_01_list_02: "Translate two CS Fundamentals Express courses for students ages 8 to 18 and pre-readers."
-  farsi_timeline_stage_01_list_03: "Translate 16 Hour of Code tutorials."
-  farsi_timeline_stage_01_desc: "Stage 1 includes more than 500,000 words and will be completed by October 2023."
-  farsi_timeline_stage_02_heading: "Localize Videos"
-  farsi_timeline_stage_02_list_01: "Subtitle 128 videos (75 videos for CS Fundamentals and 53 videos for Hour of Code)."
-  farsi_timeline_stage_02_list_02: "Dub 98 videos."
-  farsi_timeline_stage_02_list_03: "Recreate 30 videos and hire native speakers in appropriate cultural dress to reshoot videos."
-  farsi_timeline_stage_02_desc: "Stage 2 can take one year to complete and will begin in August 2023."
-  farsi_timeline_stage_03_list_01: "Translate CS Discoveries, our middle school curriculum."
-  farsi_timeline_stage_03_list_02: "Subtitle and dub 47 videos for CS Discoveries."
-  farsi_timeline_stage_03_list_03: "Recreate 29 videos and hire native speakers in appropriate cultural dress to reshoot videos."
-  farsi_timeline_stage_03_desc: "Stage 3 will begin in October 2023 and will likely be completed by July 2024."
-  farsi_timeline_stage_04_list_01: "Translate CS Principles & AP Computer Science A, our high school curriculum."
-  farsi_timeline_stage_04_list_02: "Subtitle and dub videos for CS Principles & AP Computer Science A."
-  farsi_timeline_stage_04_list_03: "Recreate videos with native speakers, in appropriate cultural dress."
-  farsi_timeline_stage_04_desc: "Stage 4 can take one year to complete, likely to begin in late 2024."
-  farsi_timeline_stage_05_heading: "Additional Content"
-  farsi_timeline_stage_05_list_01: "Translate remaining curriculum, including CS Connections."
-  farsi_timeline_stage_05_list_02: "Subtitle, dub, and reshoot any remaining videos from all courses."
-  farsi_timeline_stage_05_desc: "Stage 5 can take one year to complete, likely to begin in 2025."
-  farsi_page_supporters_heading: "Iranian Americans for CS Education"
-  farsi_page_supporters_desc: "Thank you to the following prominent Iranian American leaders who have come together to support computer science education, with a lead gift to Code.org in Farsi:"
-  farsi_page_supporters_desc_02: "We invite you to celebrate Iranian contributions in technology by supporting Code.org and computer science education so that every student in every school has the opportunity to learn computer science."
-  farsi_page_founders_heading: "Our Founders' Story"
-  farsi_page_founders_slide_01: "Born in Iran, Hadi and Ali Partovi grew up during the Iran-Iraq war. Their neighborhood in Tehran was bombed by Iraqi fighter jets."
-  farsi_page_founders_slide_02: "When they were 9 years old, their father, a physics professor, brought home a Commodore 64 computer from a trip abroad. This computer was their escape from their surroundings – they learned how to code and create apps, games, and music."
-  farsi_page_founders_slide_03: "They immigrated to the United States at age 11. Soon after they turned 15, they spent their summers working as software engineers to help pay their way through high school and college."
-  farsi_page_founders_slide_04: "Upon graduating from Harvard University with Masters degrees in computer science, Hadi and Ali pursued careers in technology."
-  farsi_page_founders_slide_05: "They attained success in the technology industry and founded numerous tech businesses, accomplishing the American dream. Additionally, they became prolific angel investors, backing companies such as Facebook, Uber, Airbnb, and Dropbox, among others."
-  farsi_page_founders_slide_06: "In 2013, Hadi and Ali launched the education nonprofit Code.org, which Hadi continues to lead as CEO. Since its inception, Code.org has started a massive movement to teach computer science and coding to K-12 students globally. It is also the largest provider of computer  science curricula in the world, with over 80 million student users in 180 countries."
-  farsi_page_support_heading: "Your Support and Your Voice"
-  farsi_page_support_heading_02: "Thank you for your interest in Code.org in Farsi."
-  farsi_page_support_get_updates: "[Sign up](%{form_url}) to learn more about this specific project and get updated on its staged release dates."
-  farsi_page_support_contact_us: "If you'd like to support this initiative or learn more, please [contact us](%{contact_link}) or donate below."
-  farsi_page_compliance_heading: "Compliance In Support Of Farsi Translations"
-  farsi_page_compliance_desc: "As a U.S. nonprofit, Code.org is subject to laws regarding sanctions with Iran. After consulting with U.S. legal counsel experienced in the Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in the United States and elsewhere around the world, including within Iran. The ITSR provides an exemption for “information and informational materials” (the IIM Exemption) and Code.org believes that this exemption will fully shield its funding, preparation, and distribution of the Farsi Translations and thus enable its Farsi Translations effort to proceed in full compliance with U.S. economic sanctions requirements."
+  farsi_site:
+    top_heading: "Code.org in Farsi"
+    top_heading_02: "“Capable is he who has knowledge; from knowledge, the withered heart becomes young.” –Ferdowsi"
+    top_desc: "This poem is often the first verse of poetry that Farsi-speaking kids ever learn. It shows how integral learning and knowledge are to Persian culture - they are instilled as core values early on in children’s lives."
+    global_heading: "Empowering Farsi Speakers"
+    global_desc_01: "Today, there are over 110 million Farsi speakers worldwide. While the majority of native speakers live in Iran, Afghanistan, and Tajikistan, there are millions living as immigrants, migrants, and refugees around the world. The empowerment that computer science education would provide for these underserved communities cannot be increasingly emphasized."
+    global_desc_02: "Talent is everywhere, but opportunity is not. Code.org in Farsi opens a door to an opportunity that would otherwise be closed."
+    global_desc_03: "With Code.org in Farsi, Farsi-speaking students will have the same access to our curricula that is already available to students in all other major languages of the world."
+    supporters_heading: "Iranian Americans for CS Education"
+    supporters_desc: "Thank you to the following prominent Iranian American leaders who have come together to support computer science education, with a lead gift to Code.org in Farsi:"
+    supporters_desc_02: "We invite you to celebrate Iranian contributions in technology by supporting Code.org and computer science education so that every student in every school has the opportunity to learn computer science."
+    founders_heading: "Our Founders' Story"
+    founders_slide_01: "Born in Iran, Hadi and Ali Partovi grew up during the Iran-Iraq war. Their neighborhood in Tehran was bombed by Iraqi fighter jets."
+    founders_slide_02: "When they were 9 years old, their father, a physics professor, brought home a Commodore 64 computer from a trip abroad. This computer was their escape from their surroundings – they learned how to code and create apps, games, and music."
+    founders_slide_03: "They immigrated to the United States at age 11. Soon after they turned 15, they spent their summers working as software engineers to help pay their way through high school and college."
+    founders_slide_04: "Upon graduating from Harvard University with Masters degrees in computer science, Hadi and Ali pursued careers in technology."
+    founders_slide_05: "They attained success in the technology industry and founded numerous tech businesses, accomplishing the American dream. Additionally, they became prolific angel investors, backing companies such as Facebook, Uber, Airbnb, and Dropbox, among others."
+    founders_slide_06: "In 2013, Hadi and Ali launched the education nonprofit Code.org, which Hadi continues to lead as CEO. Since its inception, Code.org has started a massive movement to teach computer science and coding to K-12 students globally. It is also the largest provider of computer  science curricula in the world, with over 80 million student users in 180 countries."
+    support_heading: "Your Support and Your Voice"
+    support_heading_02: "Thank you for your interest in Code.org in Farsi."
+    support_get_updates: "[Sign up](%{form_url}) to learn more about this specific project and get updated on its staged release dates."
+    support_contact_us: "If you'd like to support this initiative or learn more, please [contact us](%{contact_link}) or donate below."
+    farsi_homepage_hero_title: "Free foundational computer science curriculum"
+    farsi_homepage_hero_description: "Every student in every school should have the opportunity to learn computer science. Whether you are a student or teacher, you can start here!"
+    farsi_homepage_hero_button: "Create your free account"
+    farsi_homepage_curriculum_overline_1: "Ages 5-11"
+    farsi_homepage_curriculum_overline_2: "All Ages"
+    farsi_homepage_curriculum_title_1: "Hour of Code"
+    farsi_homepage_curriculum_title_2: "Unplugged"
+    farsi_homepage_curriculum_description_1: "Bite-sized, hour-long introductory tutorials introducing fundamental concepts of computer science in a fun, creative, and engaging way."
+    farsi_homepage_curriculum_description_2: "CS education does not always need to be in front of a screen and device access shouldn't be a barrier to learning computer science concepts."
+    farsi_homepage_video_title: "Video library"
+    farsi_homepage_video_description: "There are so many amazing offerings to explore. Here are just a few of the new and popular offerings."
+    farsi_homepage_video_card_title: "Short educational videos"
+    farsi_homepage_video_card_description: "Learn more about computer science through our video series covering topics like artificial intelligence, the internet, and how computers work! Watch our 5 - 10 minute long videos on your own or use them in the classroom"
+    farsi_homepage_video_card_cta: "Explore video library"
+    farsi_teach_page_why_1: "Tech skills are crucial for the future of any child, anywhere in the world. Computer science is key to ensuring equity, giving all children the tools to succeed in a digital world."
+    farsi_about_heading_1: "The Global Impact of Persians in Education & Technology"
+    farsi_about_description_1: "When you think of an algorithm, you may assume it's something new, but the concept of an algorithm was discovered in Iran over 1300 years ago. “Algorithm” is named after its inventor, the mathematician Al Khwarizmi, who lived in the land formerly known as Persia and now known as Iran. Once the epicenter of mathematics, science, philosophy, and medicine, Iran has made profound advances and impacts in technology."
+    farsi_about_description_2: "This importance given to learning and knowledge is clear in how Farsi-speaking people have excelled in a myriad of fields globally. Persians around the world have contributed in countless ways to science and technology — as co-founders or CEOs of technology companies such as Uber, eBay, Intuit, and Dropbox, or inventing technologies such as LASIK surgery or JPEG compression, or in scientific, academic, or engineering roles around the globe."
+    farsi_about_description_3: "Elsewhere in Central Asia, the Afghan Dreamers have shown the resilience and intelligence of Afghan girls, showcasing their extraordinary talent in robotics globally. Haroon Mokhtarzada, Afghan immigrant and US Entrepreneur of the Year award winner, showed exceptional drive and entrepreneurship as a CEO and angel investor. Finally, Code.org itself was created by Iranian-Americans Hadi and Ali Partovi, and has grown to become one of the largest education nonprofits globally. Hadi continues to lead Code.org as CEO today."
+    farsi_about_description_4: "We invite you to celebrate Persian contributions to technology by supporting Code.org and computer science education so that every student in every school has the opportunity to learn computer science."
+    farsi_csf_express_description: "These express courses are ideal for students who want to explore the basics of Computer Science on their own, outside of the classroom, or for teachers looking for an accelerated way to cover the fundamentals of Computer Science with older students."
+    farsi_csf_unplugged_description: "Go ahead, cut the cord (for a while)! CS education does not always need to be in front of a screen and you don’t need to make device access a barrier to learning computer science concepts. "
+    farsi_hello_world: "Hello World: Animals"
+    farsi_hello_world_cta: "Explore Hello World"
 
   naipi_page_heading: "Native American and Indigenous Peoples Initiative (NAIPI)"
   naipi_page_intro_heading: "What is NAIPI?"
@@ -1558,7 +1696,7 @@
   resources_tabs_assessments_desc: "These include rubrics, checklists, mini-projects, end-of-chapter projects, student-facing rubrics, sample projects, and post-project tests — all designed to support teachers in measuring student growth, providing feedback, and evaluating student understanding."
 
   teach_page_top_heading: "Teach computer science & ignite possibilities"
-  teach_page_top_desc_01: "Tap into your students' full potential with Code.org's free Computer Science (CS) curriculum."
+  teach_page_top_desc_01: "Tap into your students' full potential with Code.org's free Computer Science (CS) and Artificial Intelligence (AI) curriculum."
   teach_page_top_desc_02: "Join the global community of over 2 million educators empowering the next generation of innovators, problem solvers, and digital citizens! Code.org supports teachers the whole way with professional learning, comprehensive curricula, and support when you need it."
   teach_page_why_teach_cs_heading: "Why teach computer science with Code.org?"
   teach_page_why_teach_cs_block_heading_01: "Build foundational CS skills"
@@ -10797,7 +10935,7 @@
 
   hoc_events:
     heading: "Register to host an Hour of Code"
-    desc: "Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in October."
+    desc: "Hour of Code is available year-round, but every year in December your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. Registration for the annual celebration starts each year in September."
     button: "Register my event"
     register:
       heading: "Register your event"
@@ -10814,7 +10952,7 @@
         title: "How to Host an Hour"
         desc: "A step-by-step guide to preparing for, running, and celebrating your Hour of Code event with your class or group."
         button: "Read the guide"
-      host:
+      activity:
         title: "Choose an Activity"
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
@@ -10910,6 +11048,9 @@
         body_04: "No use of \"Hour of Code\" or \"Hora del Código\" in app names."
 
   hoc_how_to:
+    page_title:
+      teachers: "How-to guide for Teachers"
+      events: "How-to guide for Events"
     heading: "Your go-to guide starts here!"
     desc: "Choose the right guide for you:"
     label:
@@ -11029,6 +11170,7 @@
     when_is_hoc:
       q: "When is the Hour of Code?"
       a: "The Hour of Code takes place each year during Computer Science Education Week. The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code event all year-round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer Admiral Grace Murray Hopper (December 9, 1906)."
+      a_new: "The Hour of Code takes place each year during [Computer Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science Education Week will be %{campaign_date_full}, but you can host an Hour of Code event all year-round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{hopper_url}) (December 9, 1906)."
     why_cs:
       q: "Why computer science?"
       a: "Computer Science is foundational and impactful for students' futures. A recent study showed that participating in computer science education causes an earnings increase for all students, with even more significant impacts for historically underrepresented groups. By starting early, students will have a foundation for success in any 21st-century career path."
@@ -11050,6 +11192,7 @@
         body_01: "No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have."
         body_02: "Here are a few options:"
         list_01: "Work in pairs. [Research shows](%{research_url}) students learn best with [pair programming](%{pair_url}), sharing a computer and working together. Encourage your students to double up."
+        list_01_new: "Work in pairs. [Research shows](%{research_url}) students learn best with pair programming, sharing a computer and working together. Encourage your students to double up."
         list_02: "Use a projected screen. If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions."
         list_03: "Go unplugged. We offer [tutorials that require no computer at all](%{unplugged_url})."
     account:
@@ -11081,8 +11224,10 @@
         body_01: "The Hour of Code activities page includes a [filter for activities compatible with screen readers](%{filter_url})."
         body_02: "If you use a screen reader, the [Quorum tutorial for beginners](%{beginners_url}) or the [Quorum tutorial for comfortable students](%{comfortable_url}) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum."
         body_03: "If you use a screen reader and are interested in robotics, try the [Dash Joins a Dance Circle activity](%{k5_url}) (for grades K-5) or the [Dash Joins a Dance Circle with Functions activity](%{6_8_url}) (for grades 6-8) from Lauren Milne."
+        body_03_new: "If you use a screen reader and are interested in robotics, try the [Dash Joins a Dance Circle activity](%{k5_url}) (for grades K-5) or the [Dash Joins a Dance Circle with Functions activity](%{six_8_url}) (for grades 6-8) from Lauren Milne."
         body_04: "[For grades K-5](%{k5_url})"
         body_05: "[For grades 6-8](%{6_8_url})"
+        body_05_new: "[For grades 6-8](%{six_8_url})"
     without_audio:
       q: "What tutorials can I do without audio?"
       a: "The [Code.org tutorials](%{code_url}) can all be used with or without sound. All the videos have captions."
@@ -11947,7 +12092,7 @@
   about_page_donors_link_1: "Make a donations"
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
 
-  districts_skinny_banner_title: "Over 100+ Districts have joined our District Program! [See district partners](%{district_partners_url})"
+  districts_skinny_banner_title: "Over 500+ Districts have joined our District Program! [See district partners](%{district_partners_url})"
 
   teach_ai_title: "Real-world Examples. Practical Resources."
   teach_ai_description: "The AI Guidance for Schools Toolkit is a resource for policymakers, school leaders, and staff to develop initial guidance on AI in their schools."

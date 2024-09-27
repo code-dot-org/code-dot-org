@@ -2978,10 +2978,10 @@
     "long_instructions": "Try everything!"
   },
   "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
-    "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about Ada Lovelace?"
+    "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button. What can you learn about Ada Lovelace?"
   },
   "https://studio.code.org/s/allthethings/lessons/47/levels/2": {
-    "long_instructions": "# AI Chat 2\n\n## Sample Instructions\n\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\n\n### Do This\n\nType in a paragraph that you'd like to revise and press the `Submit`(#7435b2) button."
+    "long_instructions": "# AI Chat 2\n\n## Sample Instructions\n\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\n\n### Do This\n\nType in a paragraph that you'd like to revise and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button."
   },
   "https://studio.code.org/s/allthethings/lessons/47/levels/3": {
     "long_instructions": "Project Template Backed Level #1"

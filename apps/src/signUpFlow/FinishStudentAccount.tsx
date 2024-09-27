@@ -9,6 +9,8 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
 import locale from './locale';
@@ -26,8 +28,9 @@ import style from './signUpFlowStyles.module.scss';
 
 const FinishStudentAccount: React.FunctionComponent<{
   ageOptions: {value: string; text: string}[];
+  usIp: boolean;
   usStateOptions: {value: string; text: string}[];
-}> = ({ageOptions, usStateOptions}) => {
+}> = ({ageOptions, usIp, usStateOptions}) => {
   // Fields
   const [isParent, setIsParent] = useState(false);
   const [parentEmail, setParentEmail] = useState('');
@@ -44,6 +47,11 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [showStateError, setShowStateError] = useState(false);
 
   const onIsParentChange = (): void => {
+    analyticsReporter.sendEvent(
+      EVENTS.PARENT_OR_GUARDIAN_SIGN_UP_CLICKED,
+      {},
+      PLATFORMS.STATSIG
+    );
     const newIsParentCheckedChoice = !isParent;
     setIsParent(newIsParentCheckedChoice);
     sessionStorage.setItem(
@@ -115,6 +123,19 @@ const FinishStudentAccount: React.FunctionComponent<{
     const newGender = e.target.value;
     setGender(newGender);
     sessionStorage.setItem(USER_GENDER_SESSION_KEY, newGender);
+  };
+
+  const sendFinishEvent = (): void => {
+    analyticsReporter.sendEvent(
+      EVENTS.SIGN_UP_FINISHED_EVENT,
+      {
+        'user type': 'student',
+        'has school': false,
+        'has marketing value selected': true,
+        'has display name': !showNameError,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   return (
@@ -190,21 +211,23 @@ const FinishStudentAccount: React.FunctionComponent<{
             </BodyThreeText>
           )}
         </div>
-        <div>
-          <SimpleDropdown
-            name="userState"
-            labelText={locale.what_state_are_you_in()}
-            size="m"
-            items={usStateOptions}
-            selectedValue={state}
-            onChange={onStateChange}
-          />
-          {showStateError && (
-            <BodyThreeText className={style.errorMessage}>
-              {locale.state_error_message()}
-            </BodyThreeText>
-          )}
-        </div>
+        {usIp && (
+          <div>
+            <SimpleDropdown
+              name="userState"
+              labelText={locale.what_state_are_you_in()}
+              size="m"
+              items={usStateOptions}
+              selectedValue={state}
+              onChange={onStateChange}
+            />
+            {showStateError && (
+              <BodyThreeText className={style.errorMessage}>
+                {locale.state_error_message()}
+              </BodyThreeText>
+            )}
+          </div>
+        )}
         <TextField
           name="userGender"
           label={locale.what_is_your_gender()}
@@ -218,7 +241,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           className={style.finishSignUpButton}
           color={buttonColors.purple}
           type="primary"
-          onClick={() => console.log('FINISH SIGN UP')}
+          onClick={() => sendFinishEvent()}
           text={locale.go_to_my_account()}
           iconRight={{
             iconName: 'arrow-right',
@@ -228,7 +251,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           disabled={
             name === '' ||
             age === '' ||
-            state === '' ||
+            (usIp && state === '') ||
             (isParent && parentEmail === '')
           }
         />

@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 
 import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
 
+import {ChatPrompt} from './types';
+
 interface ComponentProps {
-  suggestedPrompts: string[];
+  suggestedPrompts: ChatPrompt[];
   isLatest: boolean;
-  onSubmit: (selectedPrompt: string) => void;
+  onSubmit: (selectedPrompt: ChatPrompt) => void;
 }
 
 const AiDiffSuggestedPrompts: React.FC<ComponentProps> = ({
@@ -13,9 +15,9 @@ const AiDiffSuggestedPrompts: React.FC<ComponentProps> = ({
   isLatest,
   onSubmit,
 }) => {
-  const [selectedPrompt, setSelectedPrompt] = useState<string>('');
+  const [selectedPrompt, setSelectedPrompt] = useState<ChatPrompt>();
 
-  const onClick = (prompt: string) => () => {
+  const onClick = (prompt: ChatPrompt) => () => {
     // The first prompt selected is final.
     // Can't select a prompt after something else has happened.
     if (selectedPrompt || !isLatest) {
@@ -28,7 +30,7 @@ const AiDiffSuggestedPrompts: React.FC<ComponentProps> = ({
 
   const structuredPrompts = suggestedPrompts.map(prompt => {
     return {
-      label: prompt,
+      label: prompt.label,
       selected: prompt === selectedPrompt,
       onClick: onClick(prompt),
       show: true,

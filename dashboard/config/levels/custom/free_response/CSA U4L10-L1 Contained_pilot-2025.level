@@ -14,7 +14,8 @@
     "skip_dialog": true,
     "skip_sound": true,
     "allow_multiple_attempts": "false",
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T16:58:39.181+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L1 Contained_2025\\\"\"],\"cloned_from\":\"CSA U4L10-L1 Contained_2025\"}]",

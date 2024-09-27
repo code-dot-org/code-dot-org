@@ -299,6 +299,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   const isFrozen = !!state.lab.channel?.frozen;
   const readonlyPredictLevel = isReadonlyPredictLevel(state);
   const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
+  const isViewingOldVersion = state.lab2Project.viewingOldVersion;
   const isRunningAndReadonly =
     (state.lab2System.isRunning || state.lab2System.isValidating) &&
     shouldBeReadonlyWhileRunning(state);
@@ -308,7 +309,8 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     isFrozen ||
     readonlyPredictLevel ||
     hasSubmitted ||
-    isRunningAndReadonly
+    isRunningAndReadonly ||
+    isViewingOldVersion
   );
 };
 

@@ -13,8 +13,8 @@ import {
   getCurrentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
@@ -22,7 +22,11 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {getStudentChatHistory, postAichatCompletionMessage} from '../aichatApi';
+import {
+  detectToxicityInCustomizations,
+  getStudentChatHistory,
+  postAichatCompletionMessage,
+} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
@@ -39,8 +43,11 @@ import {
   isModelUpdate,
   isNotification,
   isChatMessage,
+  FlaggedField,
 } from '../types';
+import {extractFieldsToCheckForToxicity} from '../utils';
 import {
+  AI_CUSTOMIZATIONS_LABELS,
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
@@ -185,10 +192,47 @@ const saveAiCustomization = async (
 
   // Notify the UI that a save is in progress.
   dispatch(startSave(saveType));
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .incrementCounter('Aichat.SaveStarted');
+
+  // Detect toxicity in the student's customizations
+  const toxicity = await detectToxicityInCustomizations(
+    trimmedCurrentAiCustomizations
+  );
+
+  // If any fields were flagged for toxicity, display a notification and don't try to save.
+  if (toxicity.flaggedFields.length > 0) {
+    // Log for analysis purposes
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logInfo({
+        message: 'Toxicity detected in AI customizations',
+        flaggedFields: toxicity.flaggedFields,
+        customizations: extractFieldsToCheckForToxicity(
+          trimmedCurrentAiCustomizations
+        ),
+      });
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('Aichat.SaveFailToxicityDetected');
+    const errorMessage = getToxicityErrorMessage(toxicity.flaggedFields);
+    dispatchSaveFailNotification(dispatch as AppDispatch, errorMessage, true);
+    return;
+  }
 
   await Lab2Registry.getInstance()
     .getProjectManager()
     ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
+};
+
+const getToxicityErrorMessage = (flaggedFields: FlaggedField[]) => {
+  const fieldLabels = flaggedFields.map(
+    flaggedField => AI_CUSTOMIZATIONS_LABELS[flaggedField.field]
+  );
+  return `The following customization(s) have been flagged by our content moderation policy: ${fieldLabels.join(
+    ', '
+  )}. Please try a different model customization.`;
 };
 
 // Thunk called after a save has completed successfully.
@@ -266,49 +310,15 @@ export const onSaveNoop =
   };
 
 // Thunk called when a save has failed.
-export const onSaveFail =
-  (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
-    // Default save error message.
-    let errorMessage =
-      'There was an error saving your project. Please try again.';
-    if (e instanceof NetworkError) {
-      e.response
-        .json()
-        .then(body => {
-          const changedProperties = findChangedProperties(
-            getState().aichat.savedAiCustomizations,
-            getState().aichat.currentAiCustomizations
-          );
-          let flaggedProperties;
-          if (
-            changedProperties.includes('systemPrompt') &&
-            changedProperties.includes('retrievalContexts')
-          ) {
-            flaggedProperties = 'system prompt and/or retrieval contexts';
-          } else if (changedProperties.includes('systemPrompt')) {
-            flaggedProperties = 'system prompt';
-          } else if (changedProperties.includes('retrievalContexts')) {
-            flaggedProperties = 'retrieval contexts';
-          }
-          if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
-            errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
-          }
-          dispatchSaveFailNotification(
-            dispatch,
-            errorMessage,
-            !!flaggedProperties
-          );
-        })
-        // Catch any errors in parsing the response body or if there was no response body
-        // and fall back to the default error message.
-        .catch(() => {
-          dispatchSaveFailNotification(dispatch, errorMessage);
-        });
-    } else {
-      // If an Error was passed instead of a NetworkError, fall back to the default error message.
-      dispatchSaveFailNotification(dispatch, errorMessage);
-    }
-  };
+export const onSaveFail = () => (dispatch: AppDispatch) => {
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .incrementCounter('Aichat.SaveFailError');
+  // Default save error message.
+  const errorMessage =
+    'There was an error saving your project. Please try again.';
+  dispatchSaveFailNotification(dispatch, errorMessage);
+};
 
 const dispatchSaveFailNotification = (
   dispatch: AppDispatch,

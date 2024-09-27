@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-09-14T00:09:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Recipes!\r\n\r\n::: details [**✅ Step 1**]\r\nDeclare variables for the information we know:\r\n- `original_serving`, which is **4**\r\n- `original_quantity` of ingredient, which is **2**\r\n- `desired_serving` size, which is **8**\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n- To find out the new amount of an ingredient needed, write an expression that divides `original_quantity` by `original_serving` size. \r\n- Multiply this result by the `desired_serving` size and store the result in a variable called `new_quantity`.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nPrint a message that contains the original quantity and the new quantity. For example: *\"Original Quantity: 2 | New Quantity: 4\"*\r\n:::\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Step 1\n\n\n# Step 2\n\n\n# Step 3\nmessage = \"\"\nprint(message)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "validation.py",
+          "language": "py",
+          "contents": "import unittest\nfrom io import StringIO\nimport sys\n\nclass TestIngredientQuantity(unittest.TestCase):\n\n    def setUp(self):\n        # Setup to capture the print output if needed later\n        self.captured_output = StringIO()\n        sys.stdout = self.captured_output\n\n    def tearDown(self):\n        # Reset redirect.\n        sys.stdout = sys.__stdout__\n\n    def test_step_1(self):\n        \"\"\"Test Step 1: Check that original_serving, original_quantity, and desired_serving are defined\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables\n        exec(script_content)\n\n        # Check if the variables are defined\n        self.assertIn('original_serving', locals(), \"Variable 'original_serving' should be defined in Step 1.\")\n        self.assertIn('original_quantity', locals(), \"Variable 'original_quantity' should be defined in Step 1.\")\n        self.assertIn('desired_serving', locals(), \"Variable 'desired_serving' should be defined in Step 1.\")\n\n        # Check if the variables have the correct values\n        self.assertEqual(locals()['original_serving'], 4, \"Variable 'original_serving' should be 4 in Step 1.\")\n        self.assertEqual(locals()['original_quantity'], 2, \"Variable 'original_quantity' should be 2 in Step 1.\")\n        self.assertEqual(locals()['desired_serving'], 8, \"Variable 'desired_serving' should be 8 in Step 1.\")\n\n    def test_step_2(self):\n        \"\"\"Test Step 2: Check that new_quantity is correctly calculated\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables\n        exec(script_content)\n\n        # Check if the variable 'new_quantity' is defined\n        self.assertIn('new_quantity', locals(), \"Variable 'new_quantity' should be defined in Step 2.\")\n\n        # Check if 'new_quantity' is correctly calculated\n        expected_new_quantity = (2 / 4) * 8\n        self.assertEqual(locals()['new_quantity'], expected_new_quantity, \"Variable 'new_quantity' should be the result of (original_quantity / original_serving) * desired_serving.\")\n\n    def test_step_3(self):\n        \"\"\"Test Step 3: Check that message is defined and is not empty\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables\n        exec(script_content)\n\n        # Check if the 'message' variable is defined\n        self.assertIn('message', locals(), \"Variable 'message' should be defined in Step 3.\")\n\n        # Ensure 'message' is not an empty string (we are not checking the exact content)\n        self.assertNotEqual(locals()['message'], \"\", \"Variable 'message' should not be an empty string.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "validation"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Recipe Helper",
+    "bubble_choice_description": "Practice python by adjusting the quantities of ingredients in a recipe based on the number of servings you want to make.",
+    "thumbnail_url": "https://images.code.org/34ef21745f85b8af34618bc5a56bec99-cook-book.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-14T00:09:04.997+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L8a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L8a_2024-pilot\"},{\"changed_at\":\"2024-09-14 00:10:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 00:25:28 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 18:41:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 18:44:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 18:44:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 18:45:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:12:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:17:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:22:32 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

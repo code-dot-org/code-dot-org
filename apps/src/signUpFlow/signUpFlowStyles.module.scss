@@ -68,6 +68,11 @@ span {
   margin-inline: auto;
   max-width: 100%;
 
+  a {
+    text-decoration: underline;
+    color: unset;
+  }
+
   .containerWrapper {
     display: flex;
     justify-content: space-between;
@@ -174,6 +179,9 @@ span {
         font-weight: 600;
         font-size: 1rem;
         padding-block: 0.75rem;
+        transition: all 0.2s ease-in-out;
+        border: unset;
+        margin: 0 0 .5rem 0;
       }
     }
 
@@ -203,6 +211,10 @@ span {
         color: $light_gray_500;
       }
 
+      .red {
+        color: $light_negative_500;
+      }
+
       p {
         margin-bottom: 0;
       }
@@ -215,7 +227,6 @@ span {
 
     .googleButton {
       background-color: $google_brand_color;
-      margin-bottom: .5rem;
       color: $white;
 
       &:hover {
@@ -226,7 +237,6 @@ span {
     .microsoftButton {
       background-color: $microsoft_brand_color;
       color: $black;
-      margin-bottom: .5rem;
 
       &:hover {
         background-color: darken($microsoft_brand_color, 10%);
@@ -235,7 +245,6 @@ span {
 
     .facebookButton {
       background-color: $facebook_brand_color;
-      margin-bottom: .5rem;
       color: $white;
 
       &:hover {
@@ -265,13 +274,46 @@ span {
       border-radius: 4px;
       box-sizing: border-box;
 
+      .buttonContainer {
+        display: flex;
+        flex-direction: row;
+      }
+
       p {
         margin-bottom: .25rem;
       }
 
       .subheader {
-        margin-top: .5rem;
         font-weight: 600;
+      }
+
+      img {
+        height: 20px;
+        width: 20px;
+      }
+
+      i {
+        float: right;
+        margin: .625rem 0 .5rem .5rem;
+        font-size: 1rem;
+        color: $light_gray_400;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: .875rem;
+        color: $black;
+      }
+
+      a {
+        border-color: $light_gray_400;
+        box-shadow: none;
+        margin: 0.5rem 0.5rem 0 0;
+        padding-inline: 14px;
+        height: 37px;
+        display: flex;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
       }
     }
   }

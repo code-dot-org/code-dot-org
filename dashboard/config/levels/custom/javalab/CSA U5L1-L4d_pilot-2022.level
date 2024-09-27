@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:49:54.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A nutritionist wants to store data about the nutritional values of cereal to create a visual based on the amount of sugar they have. They have the following values:\r\n\r\n![](https://images.code.org/aa7b95fba7af64eb9af8a459f1f11a5c-image-1650933211299.png)\r\n\r\nwhere each row represents Apple Jacks, Cheerios, Lucky Charms, and Raisin Bran, respectively. Each column represents the calories, grams of protein, grams of fat, grams of sodium, grams of fiber, grams of carbohydrates, and grams of sugar, respectively.\r\n\r\n##In CerealScene.java:\r\n\r\nWrite the `createDataArray()`(#e7e8ea) method:\r\n\r\n1. Declare and initialize a 2D `int`(#e7e8ea) array called `tempData`(#e7e8ea) to store the values using an initializer list.\r\n\r\n2. Return the `tempData`(#e7e8ea) array.\r\n\r\nWrite the `getCerealNutrition()`(#e7e8ea) method:\r\n\r\n3. Return the value in `nutrition`(#e7e8ea) at the row that corresponds with the parameter `user`(#e7e8ea) and the column that corresponds with the parameter `nutritionalValue`(#e7e8ea).\r\n\r\n**Hint:** Use the `getCerealRow()`(#e7e8ea) method to get the row in the `nutrition`(#e7e8ea) array for the parameter `cereal`(#e7e8ea) and the `getValueCol()`(#e7e8ea) method to get the column for the parameter `nutritionalValue`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n4. Call the `createScene()`(#e7e8ea) method with the name of a cereal and a nutritional value to display (for example, `\"Apple Jacks\", \"calories\"`(#e7e8ea)).\r\n\r\n5. Call `Theater.playScenes()`(#e7e8ea) to play the scene.\r\n\r\n::: details [**Show Me How**]\r\nA 2D array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[][] variableName = { {row1value1, row1value2, row1value3}, {row2value1, row2value2, row2value3} };\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, and add the values for each row in the 2D array inside curly braces `{ }`(#e7e8ea).\r\n\r\nValues are accessed using the following syntax:\r\n\r\n  ```\r\n  variableName[row][col];\r\n  ```\r\n  \r\nSpecify the specific `row`(#e7e8ea) and `col`(#e7e8ea) of the value you want to access.\r\n:::",
@@ -24,12 +28,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:49:54.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:49:54.095+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L4d_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L4d_2022\"},{\"changed_at\":\"2022-10-08 20:51:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 20:52:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 20:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 20:55:31 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 20:56:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 21:01:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 21:03:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 21:03:41 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 21:08:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 21:08:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 21:10:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-08 21:10:17 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-03 16:31:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>

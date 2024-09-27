@@ -9,10 +9,6 @@ const endpoints = [
     id: AI_TUTOR_ENDPOINT,
     name: 'AI Tutor + Webpurify',
   },
-  {
-    id: LLM_GUARD_ENDPOINT,
-    name: 'LLM Guard',
-  },
 ];
 
 const genAIEndpoints = [
