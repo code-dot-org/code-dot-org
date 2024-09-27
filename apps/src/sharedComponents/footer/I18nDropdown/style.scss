@@ -30,3 +30,27 @@
     }
   }
 }
+
+.music-black {
+  .languageSelect {
+    border-color: $neutral_dark40;
+    background-color: initial;
+    color: $neutral_dark40;
+
+    > div {
+      select {
+        height: 1.625rem;
+        background-color: initial;
+        color: $neutral_dark40;
+      }
+      &::after {
+        background-color: initial;
+        color: $neutral_dark40;
+      }
+      &::before {
+        background-color: initial;
+        color: $neutral_dark40;
+      }
+    }
+  }
+}

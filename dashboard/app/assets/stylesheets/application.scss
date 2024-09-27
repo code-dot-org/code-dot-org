@@ -825,13 +825,15 @@ $small-footer-standard-width: 400px;
   border-top: initial;
 }
 
-/* Custom styling for the locale & copyright buttons for Music Lab. */
+/* Custom styling for the small-footer-base for Music Lab. */
 .music-black {
   #page-small-footer {
     user-select: none;
 
     .small-footer-base {
-      margin-left: 10px;
+      max-width: 12.5rem;
+      margin-left: 0.625rem;
+      margin-bottom: 0.125rem;
 
       .version-caption {
         display: none;
@@ -852,7 +854,7 @@ $small-footer-standard-width: 400px;
       }
     }
 
-    .languageSelect, #locale, .copyright-link {
+    .copyright-link {
       border-color: $neutral_dark40;
       background-color: initial;
       color: $neutral_dark40;
