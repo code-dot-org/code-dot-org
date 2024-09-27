@@ -30,7 +30,7 @@ import {queryParams, updateQueryParam} from '../code-studio/utils';
 import {RootState} from '../types/redux';
 import HttpClient, {NetworkError} from '../util/HttpClient';
 
-import {DEFAULT_VALIDATION_ID, START_SOURCES} from './constants';
+import {START_SOURCES} from './constants';
 import Lab2Registry from './Lab2Registry';
 import {
   getInitialValidationState,
@@ -329,19 +329,14 @@ export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
 export const isProjectTemplateLevel = (state: {lab: LabState}) =>
   !!state.lab.levelProperties?.projectTemplateLevelName;
 
-export const getValidationFile = (state: RootState) => {
-  const startSources = state.lab.levelProperties?.startSources;
-  if (startSources) {
-    let validationFile = Object.values(startSources.files).find(
-      file => file.type === 'validation'
-    );
-    if (validationFile) {
-      validationFile = {
-        ...validationFile,
-        id: DEFAULT_VALIDATION_ID,
-      };
-    }
-    return validationFile;
+export const getFirstValidationFile = (state: RootState) => {
+  const validations = state.lab.levelProperties?.validations;
+  if (
+    validations &&
+    validations[0].conditions &&
+    validations[0].conditions.length
+  ) {
+    return validations[0].conditions[0].validationFile;
   }
 };
 

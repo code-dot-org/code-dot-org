@@ -176,6 +176,7 @@ export interface LevelProperties {
   submittable?: boolean;
   finishUrl?: string;
   finishDialog?: string;
+  validationFile?: ProjectFile;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -289,6 +290,7 @@ export type StandaloneAppName =
 export interface Condition {
   name: string;
   value?: string | number;
+  validationFile?: ProjectFile;
 }
 
 export interface ConditionType {

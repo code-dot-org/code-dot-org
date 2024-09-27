@@ -81,13 +81,14 @@ class Pythonlab < Level
   # Return the validation condition for this level. If the level has a validation file, the condition
   # is that all tests passed. If there is no validation file, there are no conditions.
   def get_validations
-    has_validation = start_sources && start_sources["files"]&.any? {|(_, file)| file["type"] == 'validation'}
-    if has_validation
+    validation = start_sources && start_sources["files"]&.find {|(_, file)| file["type"] == 'validation'}
+    if validation
       [{
         conditions: [
           {
             name: 'PASSED_ALL_TESTS',
-            value: "true"
+            value: "true",
+            validationFile: validation[1]
           }
         ],
         message: '',

@@ -2,7 +2,10 @@ import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {getValidationFile, isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {
+  getFirstValidationFile,
+  isReadOnlyWorkspace,
+} from '@cdo/apps/lab2/lab2Redux';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
@@ -13,8 +16,6 @@ import {
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {filterOutValidationFile} from '../utils';
 
 import {useInitialSources} from './useInitialSources';
 
@@ -30,15 +31,15 @@ export const useSource = (defaultSources: ProjectSources) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const initialSources = useInitialSources(defaultSources);
-  const levelStartSource = filterOutValidationFile(
-    useAppSelector(state => state.lab.levelProperties?.startSources)
+  const levelStartSource = useAppSelector(
+    state => state.lab.levelProperties?.startSources
   );
-  const templateStartSource = filterOutValidationFile(
-    useAppSelector(state => state.lab.levelProperties?.templateSources)
+  const templateStartSource = useAppSelector(
+    state => state.lab.levelProperties?.templateSources
   );
   const previousLevelIdRef = useRef<number | null>(null);
   const previousInitialSources = useRef<ProjectSources | null>(null);
-  const validationFile = useAppSelector(state => getValidationFile(state));
+  const validationFile = useAppSelector(state => getFirstValidationFile(state));
 
   // keep track of whatever project the user has set locally. This happens after any change in CodeBridge
   // in the setSource function below
