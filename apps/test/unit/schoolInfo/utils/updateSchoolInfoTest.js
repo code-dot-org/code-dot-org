@@ -16,9 +16,6 @@ window.fetch = jest.fn();
 describe('updateSchoolInfo', () => {
   const mockBuildSchoolData = buildSchoolData;
   const mockGetAuthenticityToken = getAuthenticityToken;
-  const formUrl = 'https://example.com/update';
-  const authTokenName = 'auth_token';
-  const authTokenValue = 'token123';
   const schoolId = '1';
   const country = 'US';
   const schoolName = 'Test School';
@@ -45,26 +42,19 @@ describe('updateSchoolInfo', () => {
     });
 
     await updateSchoolInfo({
-      formUrl,
-      authTokenName,
-      authTokenValue,
       schoolId,
       country,
       schoolName,
       schoolZip,
     });
 
-    expect(fetch).toHaveBeenCalledWith(formUrl, {
+    expect(fetch).toHaveBeenCalledWith('/api/v1/user_school_infos', {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
         'X-CSRF-Token': 'authenticity-token',
       },
-      body: JSON.stringify({
-        _method: 'patch',
-        [authTokenName]: authTokenValue,
-        ...mockSchoolData,
-      }),
+      body: JSON.stringify(mockSchoolData),
     });
   });
 
@@ -86,9 +76,6 @@ describe('updateSchoolInfo', () => {
 
     await expect(
       updateSchoolInfo({
-        formUrl,
-        authTokenName,
-        authTokenValue,
         schoolId,
         country,
         schoolName,
@@ -101,9 +88,6 @@ describe('updateSchoolInfo', () => {
     mockBuildSchoolData.mockReturnValueOnce(undefined);
 
     await updateSchoolInfo({
-      formUrl,
-      authTokenName,
-      authTokenValue,
       schoolId,
       country,
       schoolName,

@@ -3,17 +3,11 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {buildSchoolData} from './buildSchoolData';
 
 export async function updateSchoolInfo({
-  formUrl,
-  authTokenName,
-  authTokenValue,
   schoolId,
   country,
   schoolName,
   schoolZip,
 }: {
-  formUrl: string;
-  authTokenName: string;
-  authTokenValue: string;
   schoolId: string;
   country: string;
   schoolName: string;
@@ -28,17 +22,13 @@ export async function updateSchoolInfo({
   if (!schoolData) {
     return;
   }
-  const response = await fetch(formUrl, {
+  const response = await fetch('/api/v1/user_school_infos', {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
       'X-CSRF-Token': await getAuthenticityToken(),
     },
-    body: JSON.stringify({
-      _method: 'patch',
-      [authTokenName]: authTokenValue,
-      ...schoolData,
-    }),
+    body: JSON.stringify(schoolData),
   });
 
   if (!response.ok) {

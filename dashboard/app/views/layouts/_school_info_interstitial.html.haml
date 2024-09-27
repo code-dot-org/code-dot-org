@@ -11,9 +11,6 @@
 - current_user_school_info = current_user.school_info
 
 - script_data = {}
-- script_data[:formUrl] = '/api/v1/user_school_infos'
-- script_data[:authTokenName] = request_forgery_protection_token.to_s
-- script_data[:authTokenValue] = form_authenticity_token
 - script_data[:existingSchoolInfo] = {}
 - if current_user_school_info
   - script_data[:existingSchoolInfo] = current_user_school_info.slice(:country, :school_id, :school_name, :school_type)

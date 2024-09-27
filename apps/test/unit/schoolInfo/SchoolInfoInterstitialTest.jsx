@@ -99,9 +99,6 @@ describe('SchoolInfoInterstitial', () => {
 
     await waitFor(() => {
       expect(mockUpdateSchoolInfo).toHaveBeenCalledWith({
-        formUrl: 'form/url',
-        authTokenName: 'authTokenName',
-        authTokenValue: 'authTokenValue',
         schoolId: '1',
         country: 'US',
         schoolName: 'Test School',

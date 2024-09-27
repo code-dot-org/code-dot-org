@@ -23,13 +23,7 @@ import {useSchoolInfo} from './hooks/useSchoolInfo';
 import {updateSchoolInfo} from './utils/updateSchoolInfo';
 
 export default function SchoolInfoInterstitial({
-  scriptData: {
-    existingSchoolInfo,
-    usIp,
-    formUrl,
-    authTokenName,
-    authTokenValue,
-  },
+  scriptData: {existingSchoolInfo, usIp},
   onClose,
 }) {
   const schoolInfo = useSchoolInfo({
@@ -119,9 +113,6 @@ export default function SchoolInfoInterstitial({
 
     try {
       await updateSchoolInfo({
-        formUrl,
-        authTokenName,
-        authTokenValue,
         schoolId: schoolInfo.schoolId,
         country: schoolInfo.country,
         schoolName: schoolInfo.schoolName,
@@ -213,9 +204,6 @@ SchoolInfoInterstitial.propTypes = {
   // populates its props, and similarly to the User update API that
   // it uses to save entered school info.
   scriptData: PropTypes.shape({
-    formUrl: PropTypes.string.isRequired,
-    authTokenName: PropTypes.string.isRequired,
-    authTokenValue: PropTypes.string.isRequired,
     usIp: PropTypes.bool.isRequired,
     existingSchoolInfo: PropTypes.shape({
       country: PropTypes.string,
