@@ -1,4 +1,8 @@
+import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback, useRef} from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 type FileUploaderProps = {
   children?: React.ReactNode;
@@ -30,12 +34,18 @@ const isValidMimeType = (mimeType: string) => {
 
 export const FileUploader = React.memo(
   ({children, callback, errorCallback}: FileUploaderProps) => {
+    const appName = useAppSelector(state => state.lab.levelProperties?.appName);
     const inputRef = useRef<HTMLInputElement>(null);
 
     const changeHandler = useCallback(() => {
       const file = inputRef.current?.files?.[0];
       if (file) {
         if (!isValidMimeType(file.type)) {
+          sendCodebridgeAnalyticsEvent(
+            EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE,
+            appName,
+            {name: file.name, type: file.type}
+          );
           errorCallback(`Cannot upload files of type ${file.type}`);
           return;
         }
@@ -59,11 +69,16 @@ export const FileUploader = React.memo(
         };
         reader.onerror = () => {
           if (reader.error) {
+            sendCodebridgeAnalyticsEvent(
+              EVENTS.CODEBRIDGE_UPLOAD_FAILED,
+              appName,
+              {error: reader.error.message}
+            );
             errorCallback(reader.error.message);
           }
         };
       }
-    }, [callback, errorCallback]);
+    }, [appName, callback, errorCallback]);
 
     return (
       <div
