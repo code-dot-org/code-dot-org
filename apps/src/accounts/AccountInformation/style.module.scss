@@ -1,0 +1,53 @@
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+
+  label.input {
+    margin-bottom: 1rem;
+
+    &.emailInput {
+      margin-bottom: 0.25rem;
+    }
+
+    &.lockedOut {
+      margin-bottom: 0;
+    }
+
+    &.authorizedTeacher {
+      font-weight: bold;
+      color: $realgreen;
+      margin: 0;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+
+  span.lockedOutHelperMessage {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    margin-top: 0.125rem;
+  }
+
+  a.link {
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .alert {
+    margin: 1rem 0;
+  }
+}
+
+button.submit {
+  margin: 1rem 0;
+}
+
+h2.sectionHeader {
+  color: $light_primary_500;
+}
