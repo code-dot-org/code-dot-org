@@ -11,11 +11,18 @@ import {
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {navigateToHref} from '../utils';
 
 import locale from './locale';
 import {
-  DISPLAY_NAME_SESSION_KEY,
-  EMAIL_OPT_IN_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+  SCHOOL_ID_SESSION_KEY,
+  SCHOOL_ZIP_SESSION_KEY,
+  SCHOOL_NAME_SESSION_KEY,
+  SCHOOL_COUNTRY_SESSION_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -30,7 +37,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
     setName(newName);
-    sessionStorage.setItem(DISPLAY_NAME_SESSION_KEY, newName);
 
     if (newName === '') {
       setShowNameError(true);
@@ -39,13 +45,34 @@ const FinishTeacherAccount: React.FunctionComponent<{
     }
   };
 
-  const onEmailOptInChange = (): void => {
-    const newOptInCheckedChoice = !emailOptInChecked;
-    setEmailOptInChecked(newOptInCheckedChoice);
-    sessionStorage.setItem(
-      EMAIL_OPT_IN_SESSION_KEY,
-      `${newOptInCheckedChoice}`
-    );
+  const submitTeacherAccount = async () => {
+    sendFinishEvent();
+
+    const signUpParams = {
+      new_sign_up: true,
+      user: {
+        user_type: UserTypes.TEACHER,
+        email: sessionStorage.getItem(EMAIL_SESSION_KEY),
+        name: name,
+        email_preference_opt_in: emailOptInChecked,
+        school: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
+        school_id: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
+        school_zip: sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY),
+        school_name: sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY),
+        school_country: sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY),
+      },
+    };
+    const authToken = await getAuthenticityToken();
+    await fetch('/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': authToken,
+      },
+      body: JSON.stringify(signUpParams),
+    });
+
+    navigateToHref('/home');
   };
 
   const sendFinishEvent = (): void => {
@@ -98,7 +125,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             name="userEmailOptIn"
             label={locale.get_informational_emails()}
             checked={emailOptInChecked}
-            onChange={onEmailOptInChange}
+            onChange={e => setEmailOptInChecked(e.target.checked)}
           />
           <BodyThreeText className={style.emailOptInFootnote}>
             <strong>{locale.note()}</strong>{' '}
@@ -111,7 +138,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
           className={style.finishSignUpButton}
           color={buttonColors.purple}
           type="primary"
-          onClick={() => sendFinishEvent()}
+          onClick={submitTeacherAccount}
           text={locale.go_to_my_account()}
           iconRight={{
             iconName: 'arrow-right',

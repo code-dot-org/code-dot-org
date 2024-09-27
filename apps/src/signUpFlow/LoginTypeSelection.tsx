@@ -20,7 +20,10 @@ import i18n from '@cdo/locale';
 
 import {navigateToHref} from '../utils';
 
-import {ACCOUNT_TYPE_SESSION_KEY} from './signUpFlowConstants';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
@@ -41,6 +44,11 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
     useState(true);
+
+  const finishAccountUrl =
+    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
+      ? studio('/users/new_sign_up/finish_teacher_account')
+      : studio('/users/new_sign_up/finish_student_account');
 
   useEffect(() => {
     async function getToken() {
@@ -109,10 +117,35 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     if (isEmail(event.target.value)) {
       setEmailIcon(CHECK_ICON);
       setEmailIconClass(style.teal);
+      sessionStorage.setItem(EMAIL_SESSION_KEY, event.target.value);
     } else {
       setEmailIcon(X_ICON);
       setEmailIconClass(style.lightGray);
     }
+  };
+
+  const submitLoginType = async () => {
+    logUserLoginType('email');
+
+    const submitLoginTypeParams = {
+      new_sign_up: true,
+      user: {
+        email: email,
+        password: password,
+        password_confirmation: password,
+      },
+    };
+    const authToken = await getAuthenticityToken();
+    await fetch('/users/begin_sign_up', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': authToken,
+      },
+      body: JSON.stringify(submitLoginTypeParams),
+    });
+
+    navigateToHref(finishAccountUrl);
   };
 
   const sendLMSAnalyticsEvent = () => {
@@ -132,11 +165,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       PLATFORMS.STATSIG
     );
   }
-
-  const finishAccountUrl =
-    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
-      ? studio('/users/new_sign_up/finish_teacher_account')
-      : studio('/users/new_sign_up/finish_student_account');
 
   return (
     <div className={style.newSignupFlow}>
@@ -306,11 +334,8 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             id="createAccountButton"
             className={style.shortButton}
             text={locale.create_my_account()}
+            onClick={submitLoginType}
             disabled={createAccountButtonDisabled}
-            onClick={() => {
-              navigateToHref(finishAccountUrl);
-              logUserLoginType('email');
-            }}
           />
         </div>
       </div>

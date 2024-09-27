@@ -27,6 +27,7 @@ import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {navigateToHref, linkWithQueryParams} from '@cdo/apps/utils';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
@@ -105,6 +106,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const shouldValidateBeDisabled = isLoadingEnvironment || isRunning;
 
+  const scriptName =
+    useAppSelector(state => state.progress.scriptName) || undefined;
+
   const dispatch = useAppDispatch();
 
   const {theme} = useContext(ThemeContext);
@@ -112,8 +116,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const vertical = layout === 'vertical';
 
   const onFinish = () => {
-    // no op for now
-    // Tracked here: https://codedotorg.atlassian.net/browse/CT-664
+    // No-op if there's no script. Students/teachers should always be
+    // accessing the level from a script.
+    if (scriptName) {
+      navigateToHref(linkWithQueryParams(`/s/${scriptName}`));
+    }
   };
 
   const onNextPanel = useCallback(() => {
