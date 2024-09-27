@@ -12,11 +12,7 @@ Scenario: GameLab with a submittable contained level
   Then I see no difference for "initial load" using stitch mode "none"
   Then I press "unchecked_0"
   And I see no difference for "answer entered" using stitch mode "none"
-  Then I press "runButton"
-  And I see no difference for "level run" using stitch mode "none"
-  And I press "submitButton"
-  And I press "confirm-button"
-  And I wait until current URL contains "/lessons/41/levels/8"
+  Then I submit this level
   Then I close my eyes
 
 @eyes
