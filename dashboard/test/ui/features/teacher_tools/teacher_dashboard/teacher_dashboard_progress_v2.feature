@@ -33,8 +33,6 @@ Scenario: Viewing student metadata
   Given I am assigned to unit "allthethings"
   And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/9?noautoplay=true"
   And I wait to see "#runButton"
-  When I press "runButton"
-  And I wait for 5 seconds
   And I submit this level
 
   # Progress tab
@@ -217,6 +215,7 @@ Scenario: Teacher can view choice levels
 
   # Student submits choice level
   Given I am on "http://studio.code.org/s/allthethings/lessons/40/levels/1/sublevel/2?noautoplay=true"
+  And I wait to see "#runButton"
   And I submit this level
 
   When I sign in as "Teacher_Sally" and go home
