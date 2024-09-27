@@ -14,7 +14,7 @@ import {
   UnconnectedCensusForm as CensusForm,
   censusFormPrefillDataShape,
 } from './CensusForm';
-import CensusMapReplacement from './CensusMapReplacement';
+import CensusMap from './CensusMap';
 import YourSchoolResources from './YourSchoolResources';
 
 class YourSchool extends Component {
@@ -112,7 +112,7 @@ class YourSchool extends Component {
               schoolFilter={this.hasLocation}
             />
             <br />
-            <CensusMapReplacement
+            <CensusMap
               school={schoolForMap}
               onTakeSurveyClick={this.handleTakeSurveyClick}
               tileset={this.props.tileset}
