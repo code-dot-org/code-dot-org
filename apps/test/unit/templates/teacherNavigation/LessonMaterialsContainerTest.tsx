@@ -76,7 +76,7 @@ describe('LessonMaterialsContainer', () => {
     (useLoaderData as jest.Mock).mockReturnValue(mockLessonData);
   });
 
-  it('renders dropdown with lessons and dropdown with unit resources', () => {
+  it('renders the component and dropdown with lessons', () => {
     render(<LessonMaterialsContainer />);
 
     // check for unit resources dropdown

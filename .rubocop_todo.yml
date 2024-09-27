@@ -138,11 +138,6 @@ Rails/I18nLocaleTexts:
 Rails/Output:
   Enabled: false
 
-# Offense count: 51
-# This cop supports safe autocorrection (--autocorrect).
-Rails/Pluck:
-  Enabled: false
-
 # Offense count: 4
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: Include.
@@ -260,12 +255,6 @@ Style/RedundantAssignment:
 # Offense count: 31
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantCondition:
-  Enabled: false
-
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: AllowComments.
-Style/RedundantInitialize:
   Enabled: false
 
 # Offense count: 26

@@ -1,0 +1,389 @@
+{
+  "title": "Code.org Teacher Survey - {unit_variable_name}",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "testing_panel",
+          "visible": false,
+          "title": " ",
+          "elements": [
+            {
+              "type": "html",
+              "name": "testing_warning",
+              "html": "<h2 style='background-color: yellow'>Panel for variable testing</P> (hide before shipping and set readOnly = True)</h2>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "unit_variable_name",
+              "defaultValueExpression": "{unit_number}",
+              "startWithNewLine": false,
+              "readOnly": true,
+              "visible": true,
+              "choices": [
+                {
+                  "value": "unit_1",
+                  "text": "Unit 1: Foundations of Generative AI"
+                },
+                {
+                  "value": "unit_2",
+                  "text": "Unit 2: Customizing Language Models"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "variable_testing",
+              "visible": true,
+              "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>unit_variable_name = {unit_variable_name}</p>"
+            },
+            {
+              "type": "html",
+              "name": "testing_warning",
+              "html": "<p style='background-color: yellow; text-align:center'>-- End of testing panel -- </p>"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "intro_text",
+          "html": "<h1>Welcome to Code.org's Exploring with Generative AI \n<p><h2>{unit_variable_name}</h2><h3>Post-Unit Teacher Survey\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better our teachers' experience with Code.org's Lesson 2: Research Process.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+        },
+        {
+          "type": "html",
+          "name": "curriculum_perceptions",
+          "html": "<h2>Your Perceptions About Code.org's {unit_variable_name}</h1>\n<p><span style='font-size: 12pt;'>Please share with us your thoughts about the design and content of the Exploring Generative AI curriculum.</span></p>"
+        },
+        {
+          "type": "checkbox",
+          "name": "previous_units",
+          "title": "Have you taught other Code.org Generative AI units already?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "unit_1",
+              "text": "Unit 1: Foundations of Generative AI",
+              "visibleIf": "{unit_variable_name} <> 'unit_1'"
+            },
+            {
+              "value": "unit_2",
+              "text": "Unit 2: Customizing Language Models",
+              "visibleIf": "{unit_variable_name} <> 'unit_2'"
+            },
+            {
+              "value": "none",
+              "text": "Not yet, this is the first Code.org Generative AI unit I've taught"
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "met_learning_objectives",
+          "title": "After completing <this unit - Q.0>, what percentage of students were able to...",
+          "columns": [
+            {
+              "value": "pct0_24",
+              "text": "0-24%"
+            },
+            {
+              "value": "pct_25_49",
+              "text": "25-49%"
+            },
+            {
+              "value": "pct_50_74",
+              "text": "50-74%"
+            },
+            {
+              "value": "pct_75_89",
+              "text": "75-89%"
+            },
+            {
+              "value": "pct_90_100",
+              "text": "90% or more"
+            }
+          ],
+          "rows": [
+            {
+              "value": "explain_how_llms_are_created",
+              "text": "Explain how large-language models are created using training data and machine learning techniques",
+              "visibleIf": "{unit_variable_name} = 'unit_1'"
+            },
+            {
+              "value": "explain_how_information_flows_llms",
+              "text": "Explain how information flows through a large-language model to generate new output",
+              "visibleIf": "{unit_variable_name} = 'unit_1'"
+            },
+            {
+              "value": "customize_llms",
+              "text": "Apply techniques to customize large-language models",
+              "visibleIf": "{unit_variable_name} = 'unit_2'"
+            },
+            {
+              "value": "decide_best_method_customization",
+              "text": "Decide and explain which methods to customize a model are most appropriate for the specified task",
+              "visibleIf": "{unit_variable_name} = 'unit_2'"
+            },
+            {
+              "value": "apply_user_centered_design",
+              "text": "Apply a user-centered design process to developing a chatbot",
+              "visibleIf": "{unit_variable_name} = 'unit_2'"
+            },
+            {
+              "value": "explain_impact_gen_ai",
+              "text": "Describe and explain the real-world impacts of generative AI"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "effective_ethical_impact",
+          "title": "Was the content in {unit_variable_name} effective in introducing students to ethical and real-world impacts of generative AI?",
+          "visible": false,
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Effective At All",
+          "maxRateDescription": "Very Effective"
+        },
+        {
+          "type": "rating",
+          "name": "student_engagement",
+          "title": "Were students engaged and interested in the topics covered in {unit_variable_name}?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Engaged At All",
+          "maxRateDescription": "Very Engaged"
+        },
+        {
+          "type": "rating",
+          "name": "unit_easy_to_teach",
+          "title": "Did this unit’s structure and content made it easy to teach it effectively?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Easy at all",
+          "maxRateDescription": "Very Easy"
+        },
+        {
+          "type": "rating",
+          "name": "instructional_materials",
+          "title": "Were instructional materials clear and easy to follow?",
+          "visible": false,
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Clear or Easy to Follow",
+          "maxRateDescription": "Very Clear and Easy to Follow"
+        },
+        {
+          "type": "rating",
+          "name": "concepts_easy_to_teach",
+          "title": "How easy was it for you to teach the concepts in {unit_variable_name} with the resources provided?",
+          "visible": false,
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Easy at all",
+          "maxRateDescription": "Very Easy"
+        },
+        {
+          "type": "rating",
+          "name": "ai_discussions_easy_to_facilitate",
+          "title": "How easy was it for you facilitate discussions on the ethical implications of generative AI with the resources provided in this unit?",
+          "visible": false,
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Easy at All",
+          "maxRateDescription": "Very Easy"
+        },
+        {
+          "type": "matrix",
+          "name": "teaching_resources_useful_matrix",
+          "title": "How useful did you find each of the following to support your teaching:",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Not Helpful at All"
+            },
+            {
+              "value": "2",
+              "text": "Not Helpful"
+            },
+            {
+              "value": "3",
+              "text": "Not Too helpful"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Somewhat helpful"
+            },
+            {
+              "value": "6",
+              "text": "Helpful"
+            },
+            {
+              "value": "7",
+              "text": "Very Helpful"
+            }
+          ],
+          "rows": [
+            {
+              "value": "class_discussions",
+              "text": "Class discussions and discussion strategies"
+            },
+            {
+              "value": "ethical_opportunities",
+              "text": "Ethical Opportunities and LEADERS Framework"
+            },
+            {
+              "value": "in_class_activities",
+              "text": "In-class activities and activity guides"
+            },
+            {
+              "value": "chatbot_interface",
+              "text": "Chatbot interface",
+              "visibleIf": "{unit_variable_name} = 'unit_2'"
+            },
+            {
+              "value": "chatbot_features",
+              "text": "Features available in the chatbot tool",
+              "visibleIf": "{unit_variable_name} = 'unit_2'"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "chatbot_interface",
+          "title": "Was the chatbot interface easy to use by your students?",
+          "visibleIf": "{unit_variable_name} = 'unit_2'",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Easy at All",
+          "maxRateDescription": "Very Easy"
+        },
+        {
+          "type": "rating",
+          "name": "chatbot_features",
+          "title": "Were the features available in the chatbot tool enough for your students to buuld the applications they wanted?",
+          "visibleIf": "{unit_variable_name} = 'unit_2'",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "No, Students Wanted More Features",
+          "maxRateDescription": "Features were Adequate"
+        },
+        {
+          "type": "rating",
+          "name": "speaker_notes_frequency_use",
+          "title": "We are experimenting with a new way of presenting lesson plans by embedding them in the “speaker notes” section of each slide of the lesson slideshow. How often did you use the speaker notes in the slide deck when teaching these lessons?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "I Didn't See The Speaker Notes/Never Used Them",
+          "maxRateDescription": "I Referred to the Speaker Notes While Teaching the Lesson"
+        },
+        {
+          "type": "rating",
+          "name": "lesson_plans_frequency_use",
+          "title": "The lesson plans on our webpage also included tables that paired the slides with directions for that section of the lesson. How often did you refer to the actual lesson plan on our website or as a printed PDF?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "I Didn't See The lesson Plans/Never Used Them",
+          "maxRateDescription": "I Used The Lesson Plans While Teaching the Lesson"
+        },
+        {
+          "type": "rating",
+          "name": "confidence_teaching",
+          "visible": false,
+          "title": "Compared to when you started teaching {unit_variable_name}, how confident did you feel about teaching generative AI concepts by the end of the unit?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Much Less Confident",
+          "maxRateDescription": "Much More Confident"
+        },
+        {
+          "type": "rating",
+          "name": "likely_teach_again",
+          "title": "How likely are you to teach {unit_variable_name} again?",
+          "visible": false,
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Likely At All",
+          "maxRateDescription": "Extremely Likely"
+        },
+        {
+          "type": "text",
+          "name": "likely_teach_again_not_comment",
+          "visibleIf": "{likely_teach_again} < '4'",
+          "visible": false,
+          "title": "Could you share why you are not inclined to teach it again?"
+        },
+        {
+          "type": "rating",
+          "name": "nps_value",
+          "title": "How likely are you to recommend this unit to other teachers? ",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not At All Likely",
+          "maxRateDescription": "Extremely Likely"
+        },
+        {
+          "type": "checkbox",
+          "name": "challenges_teaching",
+          "title": "What challenges did you encounter while teaching this unit?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "lack_student_engagement",
+              "text": "Lack of student engagement or motivation"
+            },
+            {
+              "value": "difficult_explain_ai_concepts",
+              "text": "Difficulty in explaining complex AI concepts"
+            },
+            {
+              "value": "time_constraints",
+              "text": "Time constraints in covering all the material"
+            },
+            {
+              "value": "integrate_curriculum_requirements",
+              "text": "Integrating the unit with other curriculum requirements"
+            },
+            {
+              "value": "diverse_learning",
+              "text": "Managing diverse learning speeds and styles"
+            },
+            {
+              "value": "none",
+              "text": "None of these"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "challenges_teaching_other_comment",
+          "visibleIf": "{challenges_teaching} anyOf ['other']",
+          "title": "Please describe what other challenges did you run into when teaching this unit."
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback_FR",
+          "title": "Is there anything else you’d like to tell us about your experience teaching {unit_variable_name}?",
+          "rows": 3
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}
