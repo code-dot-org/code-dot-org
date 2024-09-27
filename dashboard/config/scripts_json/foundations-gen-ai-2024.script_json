@@ -2,7 +2,7 @@
   "script": {
     "name": "foundations-gen-ai-2024",
     "wrapup_video_id": null,
-    "login_required": true,
+    "login_required": false,
     "properties": {
       "curriculum_umbrella": "AI",
       "has_verified_resources": true,
@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "foundations-gen-ai",
-    "serialized_at": "2024-09-26 21:26:47 UTC",
+    "serialized_at": "2024-09-27 03:18:05 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
