@@ -934,7 +934,7 @@ DEPENDENCIES
   aws-google (~> 0.2.0)
   aws-sdk-acm
   aws-sdk-applicationautoscaling
-  aws-sdk-autoscaling
+  aws-sdk-autoscaling (>= 1.121.0)
   aws-sdk-bedrockagentruntime (~> 1.10.0)
   aws-sdk-cloudformation
   aws-sdk-cloudfront
