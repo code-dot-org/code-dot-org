@@ -322,7 +322,7 @@ const InnerFileBrowser = React.memo(
                             document.body.click();
                             dialogControl?.showDialog({
                               type: DialogType.GenericAlert,
-                              title: error.message,
+                              title: error,
                             });
                           }}
                         >

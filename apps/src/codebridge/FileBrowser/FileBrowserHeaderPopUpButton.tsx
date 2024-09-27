@@ -62,7 +62,7 @@ export const FileBrowserHeaderPopUpButton = ({
           document.body.click();
           dialogControl?.showDialog({
             type: DialogType.GenericAlert,
-            title: error.message,
+            title: error,
           });
         }}
       >

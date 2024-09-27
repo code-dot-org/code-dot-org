@@ -3,12 +3,29 @@ import React, {useCallback, useRef} from 'react';
 type FileUploaderProps = {
   children?: React.ReactNode;
   callback: (filename: string, contents: string) => void;
-  errorCallback: (error: DOMException) => void;
+  errorCallback: (error: string) => void;
 };
 
 const bufferToString = (buffer: ArrayBuffer) => {
   const bytes = new Uint8Array(buffer);
   return bytes.reduce((string, byte) => string + String.fromCharCode(byte), '');
+};
+
+const isValidMimeType = (mimeType: string) => {
+  const allowedMimeRegexes = [
+    'image/',
+    'text/',
+    'audio/',
+    'video/',
+    'application/json',
+    'application/ld+json',
+    'application/pdf',
+    'application/rtf',
+  ];
+
+  return Boolean(
+    allowedMimeRegexes.find(regex => new RegExp(regex).exec(mimeType))?.length
+  );
 };
 
 export const FileUploader = React.memo(
@@ -18,6 +35,10 @@ export const FileUploader = React.memo(
     const changeHandler = useCallback(() => {
       const file = inputRef.current?.files?.[0];
       if (file) {
+        if (!isValidMimeType(file.type)) {
+          errorCallback(`Cannot upload files of type ${file.type}`);
+          return;
+        }
         const reader = new FileReader();
         if (file.type.match(/^text/)) {
           reader.readAsText(file);
@@ -38,7 +59,7 @@ export const FileUploader = React.memo(
         };
         reader.onerror = () => {
           if (reader.error) {
-            errorCallback(reader.error);
+            errorCallback(reader.error.message);
           }
         };
       }
