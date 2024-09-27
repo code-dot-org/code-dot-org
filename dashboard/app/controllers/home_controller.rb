@@ -33,11 +33,13 @@ class HomeController < ApplicationController
     # Query parameter for browser cache to be avoided and load new locale
     redirect_path = "#{redirect_path}?lang=#{params[:locale]}" if params[:locale]
 
-    redirect_uri = URI(redirect_path)
-    redirect_params = URI.decode_www_form(redirect_uri.query.to_s).to_h
-    redirect_params[Rack::GlobalEdition::REGION_KEY] = ge_region
-    redirect_uri.query = URI.encode_www_form(redirect_params) unless redirect_params.empty?
-    redirect_path = redirect_uri.to_s
+    unless cookies[Rack::GlobalEdition::REGION_KEY] == ge_region
+      redirect_uri = URI(redirect_path)
+      redirect_params = URI.decode_www_form(redirect_uri.query.to_s).to_h
+      redirect_params[Rack::GlobalEdition::REGION_KEY] = ge_region
+      redirect_uri.query = URI.encode_www_form(redirect_params).presence
+      redirect_path = redirect_uri.to_s
+    end
 
     redirect_to redirect_path
   rescue URI::InvalidURIError
