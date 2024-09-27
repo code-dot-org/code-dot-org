@@ -84,28 +84,7 @@ module AWS
       return unless CDO.aws_s3_emulated?
       return if exists_in_bucket(bucket, key)
 
-      # Determine the Populator class that can generate files for this bucket, if it
-      # exists. We allow subdirectories to have their own populators, so this will find
-      # them, in that case, or ascend up the hierarchy instead.
-      path_parts = [bucket, *key.split('/')]
-      class_parts = path_parts.map do |part|
-        part.tr('-', '_').camelize
-      end
-
-      # The 'base' will be the most specific populator found for the path within the
-      # bucket.
-      base = nil
-      relative_path = []
-      until class_parts.empty?
-        begin
-          base = [*class_parts, 'Populate'].join('::').constantize
-          relative_path << path_parts.pop
-          break if base
-        rescue NameError
-          class_parts.pop
-        end
-      end
-
+      base, relative_path = Populator.find_populator(bucket, key)
       base.new.populate(File.join(*relative_path)) if base && relative_path
     end
 
