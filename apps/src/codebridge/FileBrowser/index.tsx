@@ -9,9 +9,12 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
 import {
+  checkForDuplicateFilename,
+  checkForDuplicateFoldername,
   findFolder,
   getErrorMessage,
   getFileIconNameAndStyle,
+  sendCodebridgeAnalyticsEvent,
   shouldShowFile,
   validateFileName,
   validateFolderName,
@@ -45,17 +48,11 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
-
 import {Draggable, DragDataType} from './Draggable';
 import {Droppable, DropDataType} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {FileUploader} from './FileUploader';
-import {
-  useCheckForDuplicateFilename,
-  useCheckForDuplicateFoldername,
-  useHandleFileUpload,
-} from './hooks';
+import {useHandleFileUpload} from './hooks';
 import {
   DragType,
   downloadFileType,
@@ -442,9 +439,6 @@ export const FileBrowser = React.memo(() => {
   const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
-  const checkForDuplicateFilename = useCheckForDuplicateFilename();
-  const checkForDuplicateFoldername = useCheckForDuplicateFoldername();
-
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
     () =>
       async (parentId = DEFAULT_FOLDER_ID) => {
@@ -534,7 +528,7 @@ export const FileBrowser = React.memo(() => {
 
         sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, appName);
       },
-    [dialogControl, project.files, newFile, appName, checkForDuplicateFilename]
+    [dialogControl, project.files, newFile, appName]
   );
 
   const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(
@@ -586,14 +580,7 @@ export const FileBrowser = React.memo(() => {
       }
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE, appName);
     },
-    [
-      project.files,
-      project.folders,
-      dialogControl,
-      appName,
-      checkForDuplicateFilename,
-      moveFile,
-    ]
+    [project.files, project.folders, dialogControl, appName, moveFile]
   );
 
   const moveFolderPrompt: FilesComponentProps['moveFolderPrompt'] = useMemo(
@@ -644,13 +631,7 @@ export const FileBrowser = React.memo(() => {
       }
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FOLDER, appName);
     },
-    [
-      project.folders,
-      dialogControl,
-      appName,
-      checkForDuplicateFoldername,
-      moveFolder,
-    ]
+    [project.folders, dialogControl, appName, moveFolder]
   );
 
   const renameFilePrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
@@ -691,13 +672,7 @@ export const FileBrowser = React.memo(() => {
       renameFile(fileId, newName);
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, appName);
     },
-    [
-      dialogControl,
-      project.files,
-      checkForDuplicateFilename,
-      renameFile,
-      appName,
-    ]
+    [dialogControl, project.files, renameFile, appName]
   );
 
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
@@ -769,15 +744,7 @@ export const FileBrowser = React.memo(() => {
         }
       }
     },
-    [
-      checkForDuplicateFilename,
-      checkForDuplicateFoldername,
-      dialogControl,
-      moveFile,
-      moveFolder,
-      project.files,
-      project.folders,
-    ]
+    [dialogControl, moveFile, moveFolder, project.files, project.folders]
   );
 
   const sensors = useSensors(

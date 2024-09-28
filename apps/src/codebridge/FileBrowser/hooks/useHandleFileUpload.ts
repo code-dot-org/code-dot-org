@@ -3,7 +3,7 @@ import {
   useCodebridgeContext,
 } from '@codebridge/codebridgeContext';
 import {FolderId, ProjectFile} from '@codebridge/types';
-import {validateFileName} from '@codebridge/utils';
+import {checkForDuplicateFilename, validateFileName} from '@codebridge/utils';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
@@ -11,8 +11,6 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {useCheckForDuplicateFilename} from './useCheckForDuplicateFilename';
 
 type handleFileUploadArgs = {
   folderId: FolderId;
@@ -22,7 +20,7 @@ type handleFileUploadArgs = {
 
 export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const checkForDuplicateFilename = useCheckForDuplicateFilename();
+
   const {newFile} = useCodebridgeContext();
   const dialogControl = useDialogControl();
   return useCallback(
@@ -67,6 +65,6 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
         fileName,
       });
     },
-    [appName, checkForDuplicateFilename, dialogControl, files, newFile]
+    [appName, dialogControl, files, newFile]
   );
 };

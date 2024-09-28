@@ -1,3 +1,6 @@
+export * from './analyticsReporterHelper';
+export * from './checkForDuplicateFilename';
+export * from './checkForDuplicateFoldername';
 export * from './editableFileType';
 export * from './fileUtils';
 export * from './findFolder';
