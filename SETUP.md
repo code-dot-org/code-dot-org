@@ -3,7 +3,7 @@
 
 👋 This document describes how to set up your workstation to develop for Code.org.
 
-You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu in a VM/WSL). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
+You can do Code.org development using macOS, Ubuntu, or Windows. Make sure you follow the instructions for your platform in the subsections below.
 
 ## Overview
 
@@ -265,8 +265,11 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 
 ### Windows
 
-Windows Subsystem for Linux (WSL) allows you to run a GNU/Linux environment directly on Windows without the overhead of a virtual machine. This is the easiest way to get Ruby and other prerequisites running on Windows.
+For developing on Windows, you have a couple options:
+- **Windows Subsystem for Linux (WSL)**: This option allows you to run a GNU/Linux environment directly on Windows without the overhead of a virtual machine. This is the easiest way to get Ruby and other prerequisites running on Windows.
+- **VSCode connected to an EC2 instance**: This option enables you to more closely mimic the production environment while still allowing you to use VSCode's rich IDE instead of a terminal editor. It also allows you to work from any device that supports VSCode, not just your primary development machine.
 
+#### WSL
 It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 in the past resulted in errors with mysql and pdftk installation. In order to use WSL 2, you must be running Windows 10, updated to version 2004, Build 19041 or higher. If your Windows update service doesn't give you the update automatically, you can download it [from the Windows download page](https://www.microsoft.com/en-us/software-download/windows10).
 
 1. Enable WSL ([unabridged WSL instructions here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)). You should run Powershell as Administrator for the following commands:
@@ -276,8 +279,8 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
 1. Make sure virtualization is turned on your BIOS settings.
-1. Install [Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) or [Ubuntu 22.04.3 LTS](https://apps.microsoft.com/detail/9PN20MSR04DW) 
-    * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
+1. Via the Microsoft Store, install [Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) or [Ubuntu 22.04.3 LTS](https://apps.microsoft.com/detail/9PN20MSR04DW) 
+    * If instead you want to exactly follow the Ubuntu setup instructions in the [Alternative note](#alternative-use-an-ubuntu-vm), or if the Microsoft Store app is not available for some reason, you can download and manually install Linux distributions linked to from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
 1. Optionally configure your **zsh** experience. [instructions](https://itsfoss.com/zsh-ubuntu/)
 1. Make it so that you can run apps tests locally by setting up the `CHROME_BIN` env var. You have a few options here:
@@ -299,6 +302,12 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 1. Follow the [overview instructions](#overview), _with the following modifications_:
     * Before running `bundle exec rake install`, restart the mysql service: `sudo service mysql start`
     * If localhost responds slowly and you have exhausted conventional options (e.g. turning off Firewall during testing), try moving the code-dot-org repo outside of the /mnt/ directory (e.g. ~) to improve responsiveness
+
+#### VSCode + EC2
+The following steps assume that you have already installed VSCode and completed the steps for setting up an Amazon EC2 instance in Option C of the [Alternative note](#alternative-use-an-ubuntu-vm) below, including the updates to your ~/.ssh/config file.
+2. In VSCode, search for and install the extension “Remote-SSH” from the VSCode marketplace. You'll see a new status bar item appear in the lower left corner of VSCode once installation is complete.
+3. From the extension (easiest access is by clicking the new status bar item), click on "Connect to host", then click on the name of your ec2 instance as defined in ~/.ssh/config.
+4. When prompted, enter the passphrase for the ssh key specified in ~./ssh/config.
 
 ### Alternative: Use an Ubuntu VM
 
