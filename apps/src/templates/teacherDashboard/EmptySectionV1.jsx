@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useEffect} from 'react';
+import {connect} from 'react-redux';
 import {NavLink} from 'react-router-dom';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {
   Heading3,
   BodyTwoText,
   Heading1,
 } from '@cdo/apps/componentLibrary/typography';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import i18n from '@cdo/locale';
@@ -22,10 +26,19 @@ function EmptySectionV1({
   hasCurriculumAssigned,
   showProgressPageHeader = false,
   element,
+  setShowProgressTableV2,
 }) {
   const textDescription = !hasStudents
     ? i18n.emptySectionDescription()
     : i18n.noCurriculumAssigned();
+
+  useEffect(() => {
+    const params = queryParams('view');
+    if (params === 'v2') {
+      setShowProgressTableV2(true);
+      new UserPreferences().setShowProgressTableV2(true);
+    }
+  }, [setShowProgressTableV2]);
 
   const displayedImage = !hasStudents ? (
     <img src={emptyDesk} alt="empty desk" />
@@ -80,6 +93,14 @@ EmptySectionV1.propTypes = {
   hasCurriculumAssigned: PropTypes.bool,
   showProgressPageHeader: PropTypes.bool,
   element: PropTypes.element,
+  setShowProgressTableV2: PropTypes.func.isRequired,
 };
 
-export default EmptySectionV1;
+export const UnconnectedEmptySectionV1 = EmptySectionV1;
+
+const mapDispatchToProps = dispatch => ({
+  setShowProgressTableV2: showProgressTableV2 =>
+    dispatch(setShowProgressTableV2(showProgressTableV2)),
+});
+
+export default connect(null, mapDispatchToProps)(EmptySectionV1);
