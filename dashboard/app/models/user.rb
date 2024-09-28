@@ -97,6 +97,12 @@ class User < ApplicationRecord
   include PartialRegistration
   include Rails.application.routes.url_helpers
 
+  self.inheritance_column = :user_type
+
+  def self.find_sti_class(type_name)
+    type_name.classify.constantize
+  end
+
   # Notes:
   #   data_transfer_agreement_source: Indicates the source of the data transfer
   #     agreement.
