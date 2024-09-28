@@ -300,6 +300,7 @@ export interface ConditionType {
 export interface Validation {
   conditions: Condition[];
   message: string;
+  callout?: string;
   next: boolean;
   key: string;
 }

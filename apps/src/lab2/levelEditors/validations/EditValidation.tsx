@@ -95,6 +95,22 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
         />
       </div>
       <div className={moduleStyles.row}>
+        <label htmlFor="callout" className={moduleStyles.label}>
+          Callout (optional):
+        </label>
+        <textarea
+          id="callout"
+          name="callout"
+          rows={1}
+          className={moduleStyles.callout}
+          value={validation.callout}
+          onChange={e => {
+            validation.callout = e.target.value;
+            onValidationChange(validation);
+          }}
+        />
+      </div>
+      <div className={moduleStyles.row}>
         <label htmlFor="next" className={moduleStyles.label}>
           Passes Level?
         </label>
