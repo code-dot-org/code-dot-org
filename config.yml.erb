@@ -543,8 +543,6 @@ logs_bucket:
 redshift_host:
 redshift_password:
 
-devinternal_db_writer: !Secret
-
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
 db_cluster_id: !StackSecret
 db_endpoint_writer: !StackSecret
