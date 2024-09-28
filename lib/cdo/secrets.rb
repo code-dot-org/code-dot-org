@@ -29,7 +29,7 @@ module Cdo
     # @return [Concurrent::Promises::Future<Aws::SecretsManager::Client>] Secrets Manager Client
     def client_promise
       @client_promise ||= Concurrent::Promises.future_on(@pool) do
-        @client || Aws::SecretsManager::Client.new
+        @client || Aws::SecretsManager::Client.new(endpoint: "http://localhost:4566")
       end
     end
 
