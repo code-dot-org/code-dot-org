@@ -24,6 +24,7 @@ class FieldPattern extends GoogleBlockly.Field {
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
     this.backgroundElement = null;
+    this.onValueChange = value => this.setValue(value);
   }
 
   saveState() {
@@ -92,7 +93,7 @@ class FieldPattern extends GoogleBlockly.Field {
     this.renderContent();
 
     this.newDiv_.style.color = color.neutral_light;
-    this.newDiv_.style.width = '420px';
+    // this.newDiv_.style.width = '420px';
     this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
 
@@ -107,9 +108,7 @@ class FieldPattern extends GoogleBlockly.Field {
     ReactDOM.render(
       <PatternPanel
         initValue={this.getValue()}
-        onChange={value => {
-          this.setValue(value);
-        }}
+        onChange={this.onValueChange}
       />,
       this.newDiv_
     );

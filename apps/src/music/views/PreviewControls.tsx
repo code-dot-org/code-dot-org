@@ -1,7 +1,6 @@
-import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {Button} from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './preview-controls.module.scss';
 
@@ -31,16 +30,12 @@ const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
     onClickClear();
   }, [cancelPreviews, onClickClear]);
   return (
-    <button
-      className={moduleStyles.buttonContainer}
+    <Button
       onClick={onClick}
-      type="button"
-    >
-      <FontAwesomeV6Icon
-        iconName={'trash-can'}
-        className={moduleStyles.previewButton}
-      />
-    </button>
+      isIconOnly={true}
+      icon={{iconName: 'ban'}}
+      size="s"
+    />
   );
 };
 
@@ -66,19 +61,13 @@ const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
   }, [cancelPreviews, isPlayingPreview, playPreview]);
 
   return (
-    <button
-      className={moduleStyles.buttonContainer}
-      onClick={enabled ? onClick : undefined}
-      type="button"
-    >
-      <FontAwesomeV6Icon
-        iconName={isPlayingPreview ? 'stop-circle' : 'play-circle'}
-        className={classNames(
-          moduleStyles.previewButton,
-          !enabled && moduleStyles.previewButtonDisabled
-        )}
-      />
-    </button>
+    <Button
+      onClick={onClick}
+      isIconOnly={true}
+      icon={{iconName: isPlayingPreview ? 'stop' : 'play'}}
+      size="s"
+      disabled={!enabled}
+    />
   );
 };
 

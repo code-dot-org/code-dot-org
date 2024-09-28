@@ -1,0 +1,190 @@
+@import '../../mixins.scss';
+@import 'color.scss';
+
+$colors-simple: #2980b9, #16a085, #2ecc71, #f1c40f, #f39c12, #d35400, #e74c3c,
+  #ff4c3c;
+$colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
+  #55efc4;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px;
+}
+
+.controlRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sequenceEditor {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pitchRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
+      .cell-simple {
+        &.activeCell,
+        &.activeCell:hover {
+          background-color: nth($colors-simple, 8 - $i + 1);
+        }
+      }
+
+      .cell-drums {
+        &.activeCell,
+        &.activeCell:hover {
+          background-color: nth($colors-drums, 8 - $i + 1);
+        }
+      }
+    }
+  }
+}
+
+.label {
+  width: 100px;
+}
+
+.cellRow {
+  display: flex;
+  gap: 4px;
+}
+
+%cell {
+  @include remove-button-styles;
+  width: 25px;
+  height: 30px;
+  background-color: $neutral_dark80;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+    background-color: $neutral_dark40;
+    z-index: 1;
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+.cell-simple {
+  @extend %cell;
+  width: 50px;
+}
+
+.cell-chromatic {
+  @extend %cell;
+}
+
+.cell-drums {
+  @extend %cell;
+  width: 25px;
+}
+
+.activeCell {
+  background-color: $brand_primary_default;
+  &.previewCell {
+    transform: scale(1.2);
+  }
+}
+
+.previewCell {
+  background-color: $neutral_dark70;
+}
+
+.middleArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.advancedToggleContainer {
+  display: flex;
+  flex-direction: row;
+  color: $neutral_light;
+  gap: 4px;
+  align-items: center;
+
+  .toggleLabel {
+    margin: 0;
+    color: $neutral_light;
+  }
+}
+
+.advancedControlsDrawer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  height: 0;
+  visibility: hidden;
+
+  &.show {
+    height: 100%;
+    visibility: visible;
+  }
+}
+
+.controlLabel {
+  color: $neutral_light;
+  margin: 0;
+}
+
+.pageSwitcher {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+
+  .pageButton {
+    @include remove-button-styles;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $neutral_dark80;
+    transition: background-color 0.2s ease;
+    &.selected {
+      background-color: $neutral_light;
+    }
+  }
+
+  .changePageButton {
+    @include remove-button-styles;
+    width: 20px;
+    height: 20px;
+    color: $neutral_light;
+
+    &:hover {
+      color: $neutral_dark40;
+    }
+  }
+}
+
+.keyLabel {
+  width: 50px;
+  height: 30px;
+  background-color: $neutral_light;
+  color: $neutral_dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 2px 2px 0;
+
+  &.blackKey {
+    background-color: black;
+    color: $neutral_light;
+  }
+}

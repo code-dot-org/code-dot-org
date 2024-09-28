@@ -17,3 +17,18 @@ export interface TuneTickEvent {
   tick: number;
   note: number;
 }
+
+export interface InstrumentEvent extends PlaybackEvent {
+  type: 'instrument';
+  value: InstrumentEventValue;
+}
+
+export interface InstrumentEventValue {
+  instrument: string;
+  events: InstrumentTickEvent[];
+}
+
+export interface InstrumentTickEvent {
+  tick: number;
+  note: number;
+}
