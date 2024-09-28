@@ -273,7 +273,7 @@ gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
 gem 'httparty'
 gem 'oj', '~> 3.10'
 
-gem 'rest-client', '~> 2.0.1'
+gem 'rest-client', '~> 2.1.0'
 
 # A rest-client dependency
 # Needs to be at least this version to install successfully on some ARM processors.
