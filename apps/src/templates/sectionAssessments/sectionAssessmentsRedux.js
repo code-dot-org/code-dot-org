@@ -1073,6 +1073,12 @@ export const getExportableFeedbackData = state => {
 
   Object.keys(feedbackForCurrentScript).forEach(feedbackId => {
     feedbackId = parseInt(feedbackId, 10);
+    let feedbackItem = {...feedbackForCurrentScript[feedbackId]};
+    // First standardize all newline characters to \n, then replace \n with a space
+    if (feedbackItem.comment) {
+      feedbackItem.comment = feedbackItem.comment.replace(/\r\n/g, '\n'); // Only convert to \n, keep for CSV multiline support
+
+    }
     feedback.push(feedbackForCurrentScript[feedbackId]);
   });
 
