@@ -31,7 +31,7 @@ module Cdo::CloudFormation
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-0261755bbcb8c4a84'
     INSTANCE_TYPE = rack_env?(:production) ? 'm5.12xlarge' : 't2.2xlarge'
     ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
-    CHEF_VERSION = '17.6.18'
+    CHEF_VERSION = '18.0.185'
     DOMAIN = 'cdn-code.org'
     SSH_KEY_NAME = 'server_access_key'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
