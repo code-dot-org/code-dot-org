@@ -8829,7 +8829,6 @@ __metadata:
     pixelmatch: ^5.2.0
     playground-io: "code-dot-org/playground-io#v0.6.0-cdo.2"
     prettier: 2.8.7
-    process: ^0.11.10
     progress-bar-webpack-plugin: ^2.1.0
     prop-types: ^15.6.2
     pusher-js: 4.1.0
