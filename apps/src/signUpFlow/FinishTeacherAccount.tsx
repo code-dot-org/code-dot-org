@@ -179,7 +179,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
               name="userEmailOptIn"
               label={locale.get_informational_emails()}
               checked={emailOptInChecked}
-              onChange={onEmailOptInChange}
+              onChange={e => setEmailOptInChecked(e.target.checked)}
               size="s"
             />
             <BodyFourText className={style.emailOptInFootnote}>
@@ -203,7 +203,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
             disabled={name === '' || !gdprValid}
           />
         </div>
-
       </div>
       <SafeMarkdown
         className={style.tosAndPrivacy}
