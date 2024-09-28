@@ -13,9 +13,7 @@ describe I18n::Resources::Dashboard::Blocks::SyncIn do
     assert_equal I18n::Utils::SyncInBase, described_class.superclass
   end
 
-  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/blocks.en.yml')}
-  let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/dashboard/blocks.yml')}
-  let(:i18n_original_file_path) {CDO.dir('i18n/locales/original/dashboard/blocks.yml')}
+  let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/dashboard/blocks.json')}
 
   describe '#process' do
     let(:run_process) {described_instance.process}
@@ -24,7 +22,6 @@ describe I18n::Resources::Dashboard::Blocks::SyncIn do
       execution_sequence = sequence('execution')
 
       described_instance.expects(:prepare).in_sequence(execution_sequence)
-      described_instance.expects(:redact).in_sequence(execution_sequence)
 
       run_process
     end
@@ -79,54 +76,21 @@ describe I18n::Resources::Dashboard::Blocks::SyncIn do
     end
   end
 
-  describe '#i18n_data' do
-    let(:i18n_data) {described_instance.send(:i18n_data)}
-
-    it 'returns correct i18n data' do
-      expected_blocks_data = 'expected_blocks_data'
-
-      described_instance.expects(:blocks_data).once.returns(expected_blocks_data)
-
-      assert_equal({'en' => {'data' => {'blocks' => expected_blocks_data}}}, i18n_data)
-    end
-  end
-
   describe '#prepare' do
     let(:prepare_i18n_source_file) {described_instance.send(:prepare)}
 
     let(:expected_i18n_data) {'expected_i18n_data'}
-    let(:expected_i18n_yaml) {'expected_i18n_yaml'}
+    let(:expected_i18n_json) {'expected_i18n_json'}
 
     before do
-      described_instance.expects(:i18n_data).once.returns(expected_i18n_data)
-      I18nScriptUtils.expects(:to_crowdin_yaml).with(expected_i18n_data).once.returns(expected_i18n_yaml)
+      described_instance.expects(:blocks_data).once.returns(expected_i18n_data)
+      JSON.expects(:pretty_generate).with(expected_i18n_data).once.returns(expected_i18n_json)
     end
 
-    it 'updates the origin i18n file' do
+    it 'prepares clocks data and writes source file to a JSON file' do
       prepare_i18n_source_file
-
-      assert File.exist?(origin_i18n_file_path)
-      assert_equal expected_i18n_yaml, YAML.load_file(origin_i18n_file_path)
-    end
-
-    it 'prepares the i18n source file' do
-      prepare_i18n_source_file
-
       assert File.exist?(i18n_source_file_path)
-      assert_equal expected_i18n_yaml, YAML.load_file(i18n_source_file_path)
-    end
-  end
-
-  describe '#redact' do
-    let(:redact_i18n_source_file) {described_instance.send(:redact)}
-
-    it 'creates a backup and then redacts the i18n source file' do
-      execution_sequence = sequence('execution')
-
-      I18nScriptUtils.expects(:copy_file).with(i18n_source_file_path, i18n_original_file_path).in_sequence(execution_sequence)
-      RedactRestoreUtils.expects(:redact).with(i18n_source_file_path, i18n_source_file_path, %w[blockfield], 'txt').in_sequence(execution_sequence)
-
-      redact_i18n_source_file
+      assert_equal expected_i18n_json, File.read(i18n_source_file_path)
     end
   end
 end

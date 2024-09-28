@@ -12,10 +12,6 @@ module I18n
         class SyncIn < I18n::Utils::SyncInBase
           def process
             prepare
-            progress_bar.progress = 50
-
-            redact
-            progress_bar.progress = 100
           end
 
           private def blocks_data
@@ -39,24 +35,8 @@ module I18n
             end
           end
 
-          private def i18n_data
-            {
-              'en' => {
-                'data' => {
-                  'blocks' => blocks_data
-                }
-              }
-            }
-          end
-
           private def prepare
-            I18nScriptUtils.write_yaml_file(ORIGIN_I18N_FILE_PATH, i18n_data)
-            I18nScriptUtils.copy_file(ORIGIN_I18N_FILE_PATH, I18N_SOURCE_FILE_PATH)
-          end
-
-          private def redact
-            I18nScriptUtils.copy_file(I18N_SOURCE_FILE_PATH, I18N_BACKUP_FILE_PATH)
-            RedactRestoreUtils.redact(I18N_SOURCE_FILE_PATH, I18N_SOURCE_FILE_PATH, REDACT_PLUGINS, REDACT_FORMAT)
+            I18nScriptUtils.write_json_file(I18N_SOURCE_FILE_PATH, blocks_data)
           end
         end
       end
