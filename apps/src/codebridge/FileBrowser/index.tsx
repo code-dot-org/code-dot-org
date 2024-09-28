@@ -52,7 +52,7 @@ import {Draggable, DragDataType} from './Draggable';
 import {Droppable, DropDataType} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {FileUploader} from './FileUploader';
-import {useHandleFileUpload} from './hooks';
+import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
 import {
   DragType,
   downloadFileType,
@@ -137,6 +137,7 @@ const InnerFileBrowser = React.memo(
     const dialogControl = useDialogControl();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const handleFileUpload = useHandleFileUpload(files);
+    const fileUploadErrorCallback = useFileUploadErrorCallback();
 
     const handleConfirmDeleteFile = (fileId: string) => {
       deleteFile(fileId);
@@ -315,14 +316,7 @@ const InnerFileBrowser = React.memo(
                               contents,
                             })
                           }
-                          errorCallback={error => {
-                            // close out of our pop up
-                            document.body.click();
-                            dialogControl?.showDialog({
-                              type: DialogType.GenericAlert,
-                              title: error,
-                            });
-                          }}
+                          errorCallback={fileUploadErrorCallback}
                         >
                           <span>
                             <i className="fa-solid fa-upload" />{' '}

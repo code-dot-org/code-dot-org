@@ -6,10 +6,9 @@ import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 
 import {FileUploader} from './FileUploader';
-import {useHandleFileUpload} from './hooks';
+import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
 import {newFolderPromptType, newFilePromptType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
@@ -25,7 +24,7 @@ export const FileBrowserHeaderPopUpButton = ({
   newFilePrompt,
 }: FileBrowserHeaderPopUpButtonProps) => {
   const {project} = useCodebridgeContext();
-  const dialogControl = useDialogControl();
+  const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(project.files);
   return (
     <PopUpButton iconName="plus" alignment="left">
@@ -58,14 +57,7 @@ export const FileBrowserHeaderPopUpButton = ({
             contents,
           })
         }
-        errorCallback={error => {
-          // close out of our pop up
-          document.body.click();
-          dialogControl?.showDialog({
-            type: DialogType.GenericAlert,
-            title: error,
-          });
-        }}
+        errorCallback={uploadErrorCallback}
       >
         <div
           className={classNames(
