@@ -2,7 +2,7 @@
 @skip
 @no_mobile
 @as_taught_student
-@no_circle
+@no_ci
 Feature: Submittable WebLab
 
 Background:

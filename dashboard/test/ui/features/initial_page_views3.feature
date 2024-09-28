@@ -4,7 +4,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
-  @no_circle
+  @no_ci
   Scenario Outline: Temporarily circle disabled simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     And I am a student
@@ -31,7 +31,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
       | http://studio.code.org/                           | logged out studio homepage |
       | http://studio.code.org/s/allthethings             | logged out script progress |
 
-  @no_circle
+  @no_ci
   Scenario Outline: Temporarily eyes disabled simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     When I open my eyes to test "<test_name>"

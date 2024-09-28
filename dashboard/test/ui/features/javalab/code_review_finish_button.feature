@@ -1,4 +1,4 @@
-@no_circle
+@no_ci
 @no_mobile
 Feature: Code review Finish Button
   Background:
