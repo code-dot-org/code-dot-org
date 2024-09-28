@@ -215,6 +215,7 @@ Dashboard::Application.routes.draw do
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
+      delete '/expire_other', to: 'sessions#expire_other'
       get '/users/existing_account', to: 'registrations#existing_account'
       get '/users/edit', to: 'registrations#edit'
     end

@@ -533,6 +533,9 @@ en:
     new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: '(we need your current password to confirm your changes)'
+    expire_other_sessions: 'Manage Other Sessions'
+    expire_other_sessions_description: 'Click the button below to sign out of any other browsers and devices where you might be signed in.'
+    expire_other_sessions_button: 'Sign Out All Other Sessions'
     delete: 'Delete Account'
     delete_text: "Deleting your account will erase all information and progress connected to this account."
     delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
