@@ -1,6 +1,7 @@
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback, useRef} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -50,7 +51,9 @@ export const FileUploader = React.memo(
             appName,
             {name: file.name, type: file.type}
           );
-          errorCallback(`Cannot upload files of type ${file.type}`);
+          errorCallback(
+            codebridgeI18n.invalidFileUpload({fileType: file.type})
+          );
           return;
         }
         const reader = new FileReader();
