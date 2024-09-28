@@ -2,6 +2,7 @@
 - twitter ||= nil
 - download_filename ||= nil
 - download_path ||= nil
+%script{type: "text/javascript", src: "/shared/js/helpers.js"}
 
 .modal.fade{id: "showVideo_#{id}"}
   .modal-dialog.modal-lg
@@ -20,10 +21,10 @@
   }
 
 :javascript
-
   window["showVideo_#{id}"] = function()
   {
     $("#showVideo_#{id}").modal('show');
+    $("#showVideo_#{id}").on('shown.bs.modal', focusTrap("#showVideo_#{id}"));
     setupPopupWindows();
     window["playVideo_#{id}"](true);
   };
