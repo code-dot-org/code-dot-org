@@ -19,7 +19,7 @@
   background-color: $neutral_light;
   border-radius: 5px;
   padding: 7px 20px;
-  width: calc(100% - 120px);
+  width: 400px;
   max-height: calc(100% - 84px);
 }
 
@@ -42,9 +42,24 @@
     border: solid 1px $neutral_dark60;
     top: -15px;
 
+    &FullWidth {
+      width: calc(100% - 120px);
+    }
+
     .heading {
       color: $neutral_light;
       margin: 0 0 7px 0;
+    }
+
+    .body {
+      margin-bottom: 14px;
+    }
+
+    .segmentedButtons {
+      span {
+        font-size: 12px !important;
+      }
+      margin-bottom: 14px;
     }
 
     .footer {
@@ -52,10 +67,6 @@
       flex-direction: row;
       align-items: center;
       margin-top: 7px;
-
-      .body {
-        //margin-bottom: 14px;
-      }
     }
 
     .packsContainer {
@@ -88,7 +99,7 @@
           }
 
           &ImageContainer {
-            width: 60px;
+            width: 45px;
             transform: scale(1, 1);
             transition: 0.1s ease-in-out;
 
@@ -237,15 +248,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: auto;
+  //margin-left: auto;
   //margin-top: 7px;
+  width: 100%;
 
   .skip {
     @extend %button;
     background-color: initial;
     color: $neutral_light;
     border-color: $neutral_light;
-    margin-left: auto;
+    //margin-left: auto;
 
     &:hover, &:active {
       background-color: $neutral_dark70;

@@ -3,6 +3,7 @@ import React, {useCallback, useState, useRef, useContext} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -119,6 +120,8 @@ interface PackDialogProps {
   player: MusicPlayer;
 }
 
+type Mode = 'popular' | 'song' | 'artist';
+
 /**
  * The PackDialog allows the user to preview and choose from the set of restricted
  * sound packs.
@@ -133,6 +136,8 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
   // Use a ref for instant access to this value inside onPreview.
   const playingPreview = useRef<string | null>(null);
 
+  const [mode, setMode] = useState<Mode>('popular');
+
   // Use state so that we can re-render when the preview state changes.
   const [playingPreviewState, setPlayingPreviewState] = useState<string | null>(
     null
@@ -141,6 +146,10 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
   const [selectedFolderId, setSelectedFolderId] = useState<string | null>(null);
 
   const analyticsReporter = useContext(AnalyticsContext);
+
+  const onModeChange = useCallback((value: Mode) => {
+    setMode(value);
+  }, []);
 
   const handleSelectFolder = useCallback(
     (folder: SoundFolder) => {
@@ -215,6 +224,25 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
     return null;
   }
 
+  const sortedFolders =
+    mode === 'popular'
+      ? folders
+      : mode === 'song'
+      ? folders.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0))
+      : folders.sort((a, b) =>
+          a.artist && b.artist
+            ? a.artist < b.artist
+              ? -1
+              : a.artist > b.artist
+              ? 1
+              : a.name < b.name
+              ? -1
+              : a.name > b.name
+              ? 1
+              : 0
+            : 0
+        );
+
   return (
     <FocusLock className={styles.focusLock}>
       <div className={styles.dialogContainer}>
@@ -228,9 +256,22 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
             {musicI18n.packDialogTitle()}
           </Typography>
 
+          <div className={styles.body}>{musicI18n.packDialogBody()}</div>
+
+          <SegmentedButtons
+            selectedButtonValue={mode}
+            buttons={[
+              {label: musicI18n.packModePopular(), value: 'popular'},
+              {label: musicI18n.packModeSong(), value: 'song'},
+              {label: musicI18n.packModeArtist(), value: 'artist'},
+            ]}
+            onChange={value => onModeChange(value as Mode)}
+            className={styles.segmentedButtons}
+          />
+
           <div className={styles.packsContainer}>
             <div className={styles.packsThin}>
-              {folders.map((folder, folderIndex) => {
+              {sortedFolders.map((folder, folderIndex) => {
                 return (
                   <PackEntryThin
                     key={folderIndex}
@@ -247,8 +288,6 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
           </div>
 
           <div className={styles.footer}>
-            <div className={styles.body}>{musicI18n.packDialogBody()}</div>
-
             <div className={styles.buttonContainer}>
               <button
                 onClick={setPackToDefault}
@@ -267,7 +306,7 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
                 disabled={!selectedFolderId}
                 type="button"
               >
-                {musicI18n.continue()}
+                {musicI18n.select()}
               </button>
             </div>
           </div>
