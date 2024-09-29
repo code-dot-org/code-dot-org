@@ -16,5 +16,5 @@
   "video": null,
   "published_date": "2023-07-10 09:00:00 UTC",
   "self_paced_pl_course_offering_key": "self-paced-pl-csd",
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": true
 }

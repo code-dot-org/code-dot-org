@@ -5,19 +5,13 @@ import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 
-import AppConfig from '../appConfig';
 import MusicRegistry from '../MusicRegistry';
 import MusicLibrary from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
 import SoundsPanel from '../views/SoundsPanel';
-import SoundsPanel2 from '../views/SoundsPanel2';
 
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
-
-// Default to using SoundsPanel, unless a URL parameter forces the use of
-// the newer SoundsPanel2.
-const useSoundsPanel2 = AppConfig.getValue('sounds-panel-2') === 'true';
 
 /**
  * A custom field that renders the sample previewing and choosing UI, used in
@@ -121,10 +115,8 @@ class FieldSounds extends GoogleBlockly.Field {
       return;
     }
 
-    const CurrentSoundsPanel = useSoundsPanel2 ? SoundsPanel2 : SoundsPanel;
-
     ReactDOM.render(
-      <CurrentSoundsPanel
+      <SoundsPanel
         library={MusicLibrary.getInstance()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
