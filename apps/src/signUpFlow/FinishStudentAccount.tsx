@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useState, useEffect, useMemo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
@@ -270,7 +271,12 @@ const FinishStudentAccount: React.FunctionComponent<{
           />
           {showGDPR && (
             <div>
-              <BodyThreeText className={style.teacherKeepMeUpdated}>
+              <BodyThreeText
+                className={classNames(
+                  style.teacherKeepMeUpdated,
+                  style.required
+                )}
+              >
                 <strong>{locale.data_transfer_notice()}</strong>
               </BodyThreeText>
               <Checkbox
