@@ -17,12 +17,14 @@ type Lesson = {
   id: number;
   position: number;
   lessonPlanHtmlUrl: string;
+  standardsUrl: string;
+  vocabularyUrl: string;
   resources: {
     Teacher: {
       key: string;
       name: string;
       url: string;
-      downloadUrl: string | null;
+      downloadUrl?: string;
       audience: string;
       type: string;
     }[];
@@ -30,7 +32,7 @@ type Lesson = {
       key: string;
       name: string;
       url: string;
-      downloadUrl: string | null;
+      downloadUrl?: string;
       audience: string;
       type: string;
     }[];
@@ -117,7 +119,7 @@ const LessonMaterialsContainer: React.FC = () => {
   );
 
   const renderTeacherResources = () => {
-    if (!selectedLesson || !selectedLesson.resources.Teacher) {
+    if (!selectedLesson) {
       return null;
     }
 
@@ -125,7 +127,9 @@ const LessonMaterialsContainer: React.FC = () => {
       <LessonResources
         unitNumber={unitNumber}
         lessonNumber={selectedLesson.position}
-        resources={selectedLesson.resources.Teacher}
+        resources={selectedLesson.resources.Teacher || []}
+        standardsUrl={selectedLesson.standardsUrl}
+        vocabularyUrl={selectedLesson.vocabularyUrl}
         lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
         lessonName={selectedLesson.name}
       />
@@ -133,7 +137,7 @@ const LessonMaterialsContainer: React.FC = () => {
   };
 
   const renderStudentResources = () => {
-    if (!selectedLesson || !selectedLesson.resources.Student) {
+    if (!selectedLesson) {
       return null;
     }
 
@@ -141,9 +145,7 @@ const LessonMaterialsContainer: React.FC = () => {
       <LessonResources
         unitNumber={unitNumber}
         lessonNumber={selectedLesson.position}
-        resources={selectedLesson.resources.Student}
-        lessonPlanUrl={null}
-        lessonName={null}
+        resources={selectedLesson.resources.Student || []}
       />
     );
   };

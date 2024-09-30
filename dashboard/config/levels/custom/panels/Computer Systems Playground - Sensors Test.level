@@ -1,0 +1,27 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-09-27T21:28:34.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "**Data Event**\nEach of these sensors emits a special event called \"data\" which occurs every time new data comes in from the sensor. Using this event, you can rewrite the first program you worked on in this lesson so that it continually updates.",
+        "imageUrl": "https://images.code.org/4b0c008606336525e8b55a6d942bee8e-changeEvent.gif",
+        "key": "Computer Systems Playground - Sensors Test-7e09f82e-9713-4e6d-8539-f60fe420fcce",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "**Change Event**\nThe data event is fine if you don't mind your code running constantly, but sometimes that's not the most efficient solution to your problem. The sensor change event only fires if the sensor value has changed since the last reading, which can make sure your program isn't running code when it's not necessary.",
+        "imageUrl": "https://images.code.org/68ab568a5191ececbf10806437f5412b-changeEvent2.gif",
+        "key": "Computer Systems Playground - Sensors Test-dd3e77bb-8cc7-4d37-8586-adf90a9d5fa5",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-27 21:30:50 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 23:01:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 23:06:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Panels>
