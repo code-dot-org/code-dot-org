@@ -308,11 +308,6 @@ module AWS
       raise 'missing CDO.cloudfront_key_pair_id' unless CDO.cloudfront_key_pair_id
       raise 'missing CDO.cloudfront_private_key' unless CDO.cloudfront_private_key
 
-      signer = Aws::CloudFront::CookieSigner.new(
-        key_pair_id: CDO.cloudfront_key_pair_id,
-        private_key: CDO.cloudfront_private_key
-      )
-
       policy = {
         "Statement" => [
           {
@@ -323,6 +318,18 @@ module AWS
           }
         ]
       }.to_json
+
+      # If we are emulating AWS at all, we just return mock cloudfront policy output
+      if CDO.aws_emulated? || CDO.aws_s3_emulated?
+        return {
+          'CloudFront-Policy-Emulated': Base64.encode64(policy).tr('+=/', '-_~')
+        }
+      end
+
+      signer = Aws::CloudFront::CookieSigner.new(
+        key_pair_id: CDO.cloudfront_key_pair_id,
+        private_key: CDO.cloudfront_private_key
+      )
 
       # Generate signed cookies representing a custom policy.
       signer.signed_cookie(

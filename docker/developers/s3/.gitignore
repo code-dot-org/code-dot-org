@@ -1,0 +1,5 @@
+*.*
+!**/README.md
+!**/populate.rb
+!populator.rb
+!.gitignore

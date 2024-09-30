@@ -111,10 +111,18 @@ You can skip over many steps that are related to running mysql and redis.
 Instead, once you have a working Ruby and Node environment, you can then use this command to spin up the database and redis servers:
 
 ```shell
+docker compose run all-services
+```
+
+If you are Code.org staff and want to be using an AWS credential, you do not need to start the S3 emulation. It is, however, still
+recommended. However, if you want to run all essential services and not run AWS emulation, use this command instead:
+
+```shell
 docker compose run dashboard-services
 ```
 
-This will tell you which items you will need to place in your `locals.yml` file for the server to connect to the contained database.
+This will tell you which items you will need to place in your `locals.yml` file for the server to connect to the contained database and
+emulated S3 environment, if you elect to use that (recommended).
 
 Just copy those lines into your `locals.yml` and start your Dashboard server via:
 
@@ -225,3 +233,30 @@ rake test:ui browser=chrome record=my-video selenium=http://localhost:4444/wd/hu
 ```
 
 You will then find a `my-video.chrome.mp4` file in your temporary directory (usually `/tmp`).
+
+## Managing Local S3 Buckets
+
+When running with AWS emulation, we use a service called MinIO to emulate S3 locally.
+When that service is running, you can log on to its dashboard on port `3001` at
+[http://localhost:3001](http://localhost:3001).
+
+By default, the username is `local-development` and the password is `allstudents`.
+
+Once you are logged in, you can visit the "Object Browser" like so:
+
+![The Object Browsers button on the left-hand navigation column](docker/developers/minio.png)
+
+On these pages, you can navigate into buckets as though they were normal folders and view
+file metadata, delete files, and download content that is locally stored.
+
+### Removing Local S3 Data
+
+If you want to remove all data, you can delete the buckets on the dashboard and re-run the
+minio install script via:
+
+```shell
+docker compose run minio-install
+```
+
+This will recreate any missing buckets corresponding to subdirectories found in
+[`docker/developers/s3`](docker/developers/s3).

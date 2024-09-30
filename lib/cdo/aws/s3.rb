@@ -47,7 +47,17 @@ module AWS
     # the credentials specified in the CDO config.
     # @return [Aws::S3::Client]
     def self.connect_v2!
-      self.s3 ||= Aws::S3::Client.new
+      self.s3 ||= if CDO.aws_s3_emulated?
+                    Aws::S3::Client.new(
+                      endpoint: CDO.aws_s3_endpoint || CDO.aws_endpoint,
+                      access_key_id: CDO.aws_access_key_id,
+                      secret_access_key: CDO.aws_secret_access_key,
+                      region: CDO.aws_region,
+                      force_path_style: true,
+                    )
+                  else
+                    Aws::S3::Client.new
+                  end
 
       # Adjust s3_timeout using a dynamic variable,
       # updating the S3 client if the variable changes.
@@ -69,11 +79,47 @@ module AWS
       connect_v2!
     end
 
+    # Populates locally hosted buckets for development environments without full AWS access.
+    def self.populate_local_bucket(bucket, key)
+      return unless CDO.aws_s3_emulated?
+      return if exists_in_bucket(bucket, key)
+
+      # Determine the Populator class that can generate files for this bucket, if it
+      # exists. We allow subdirectories to have their own populators, so this will find
+      # them, in that case, or ascend up the hierarchy instead.
+      path_parts = [bucket, *key.split('/')]
+      class_parts = path_parts.map do |part|
+        part.tr('-', '_').camelize
+      end
+
+      # The 'base' will be the most specific populator found for the path within the
+      # bucket.
+      base = nil
+      relative_path = []
+      until class_parts.empty?
+        begin
+          base = [*class_parts, 'Populate'].join('::').constantize
+          relative_path << path_parts.pop
+          break if base
+        rescue NameError
+          class_parts.pop
+        end
+      end
+
+      base.new.populate(File.join(*relative_path)) if base && relative_path
+    end
+
     # Returns the value of the specified S3 key in bucket.
     # @param [String] bucket
     # @param [String] key
     # @return [String]
     def self.download_from_bucket(bucket, key, options = {})
+      if CDO.aws_s3_emulated?
+        # For development environments, we look to see if we should lazily populate the
+        # local bucket first.
+        populate_local_bucket(bucket, key)
+      end
+
       create_client.get_object(bucket: bucket, key: key).body.read.force_encoding(Encoding::BINARY)
     rescue Aws::S3::Errors::NoSuchKey
       raise NoSuchKey.new("No such key `#{key}'")
@@ -87,6 +133,13 @@ module AWS
       create_client.head_object(bucket: bucket, key: key)
       return true
     rescue Aws::S3::Errors::NotFound, Aws::S3::Errors::Forbidden
+      if CDO.aws_s3_emulated?
+        # If there was some problem and we are emulating our buckets,
+        # look to see if there is a way to 'populate' the file locally.
+
+        # Find out if we have a Populator for this bucket and path
+      end
+
       return false
     end
 

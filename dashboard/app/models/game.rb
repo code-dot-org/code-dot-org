@@ -277,6 +277,7 @@ class Game < ApplicationRecord
 
   def use_restricted_songs?
     return false unless [DANCE, MUSIC].include? app
+    return true if CDO.aws_s3_emulated?
     dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
     CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV.fetch('CI', nil))
   end
