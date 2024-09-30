@@ -712,18 +712,16 @@ class UnitEditor extends React.Component {
               </label>
               <label>
                 Topic tags
-                <div data-testid="topic-tags-selector">
-                  <Chips
-                    name="topicTags"
-                    size="xs"
-                    options={Object.keys(CurriculumTopicTags).map(key => ({
-                      value: key,
-                      label: CurriculumTopicTags[key],
-                    }))}
-                    values={this.state.topicTags}
-                    setValues={vals => this.setState({topicTags: vals})}
-                  />
-                </div>
+                <Chips
+                  name="unit-editor-topic-tags"
+                  size="xs"
+                  options={Object.keys(CurriculumTopicTags).map(key => ({
+                    value: key,
+                    label: CurriculumTopicTags[key],
+                  }))}
+                  values={this.state.topicTags}
+                  setValues={vals => this.setState({topicTags: vals})}
+                />
               </label>
               {this.props.hasCourse &&
                 this.state.publishedState !== PublishedState.in_development && (

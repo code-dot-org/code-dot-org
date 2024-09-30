@@ -24,7 +24,6 @@ import {
   restoreRedux,
   getStore,
   registerReducers,
-  getActions,
 } from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
@@ -132,23 +131,32 @@ describe('UnitEditor', () => {
     });
 
     it('topic tags is a multiple chips component with initial options selected', () => {
-      renderDefault({initialTopicTags: ['Maker','Microbit']});
-      const topicTags = screen.getByTestId('topic-tags-selector');
-      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(13);
+      renderDefault({initialTopicTags: ['music_lab', 'ai']});
+      const topicTags = screen.getByTestId('chips-unit-editor-topic-tags');
+      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(3);
 
-      expect(within(topicTags).getByRole('checkbox', {name: 'Maker'}).checked).to.equal(true);
-      expect(within(topicTags).getByRole('checkbox', {name: 'Micro-bit'}).checked).to.equal(true);
-      expect(within(topicTags).getAllByRole('checkbox').filter(c => c.checked).length).to.equal(2);
+      expect(within(topicTags).getByLabelText('Music lab').checked).to.equal(
+        true
+      );
+      expect(within(topicTags).getByLabelText('AI').checked).to.equal(true);
+      expect(
+        within(topicTags)
+          .getAllByRole('checkbox')
+          .filter(c => c.checked).length
+      ).to.equal(2);
     });
 
     it('selecting topic tag chips updates state', () => {
-      renderDefault({initialTopicTags: ['Maker','Microbit']});
-      const topicTags = screen.getByTestId('topic-tags-selector');
-      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(13);
+      renderDefault({initialTopicTags: ['music_lab', 'ai']});
+      const topicTags = screen.getByTestId('chips-unit-editor-topic-tags');
+      expect(within(topicTags).getAllByRole('checkbox').length).to.equal(3);
 
-      const datastructure = within(topicTags).getByRole('checkbox', {name: 'Data structures'});
-      fireEvent.click(datastructure);
-      expect(datastructure.checked).to.be.true;
+      expect(within(topicTags).getByLabelText('Maker').checked).to.equal(false);
+
+      const maker = within(topicTags).getByLabelText('Maker');
+      fireEvent.click(maker);
+
+      expect(within(topicTags).getByLabelText('Maker').checked).to.equal(true);
     });
   });
 
