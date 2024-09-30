@@ -2,10 +2,7 @@ import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {
-  getFirstValidationFile,
-  isReadOnlyWorkspace,
-} from '@cdo/apps/lab2/lab2Redux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
@@ -17,7 +14,7 @@ import {
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {filterOutValidationFile} from '../utils';
+import {splitOutValidationFile} from '../utils';
 
 import {useInitialSources} from './useInitialSources';
 
@@ -33,31 +30,33 @@ export const useSource = (defaultSources: ProjectSources) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const initialSources = useInitialSources(defaultSources);
-  const rawLevelStartSource = useAppSelector(
+  const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.startSources
   );
-  const rawTemplateStartSource = useAppSelector(
+  const templateStartSource = useAppSelector(
     state => state.lab.levelProperties?.templateSources
   );
   const previousLevelIdRef = useRef<number | null>(null);
   const previousInitialSources = useRef<ProjectSources | null>(null);
-  const validationFile = useAppSelector(state => getFirstValidationFile(state));
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
+  );
 
-  const levelStartSource = useMemo(() => {
-    if (isStartMode) {
-      return rawLevelStartSource;
-    } else {
-      return filterOutValidationFile(rawLevelStartSource);
-    }
-  }, [rawLevelStartSource, isStartMode]);
+  // const levelStartSource = useMemo(() => {
+  //   if (isStartMode) {
+  //     return rawLevelStartSource;
+  //   } else {
+  //     return filterOutValidationFile(rawLevelStartSource);
+  //   }
+  // }, [rawLevelStartSource, isStartMode]);
 
-  const templateStartSource = useMemo(() => {
-    if (isStartMode) {
-      return rawTemplateStartSource;
-    } else {
-      return filterOutValidationFile(rawTemplateStartSource);
-    }
-  }, [rawTemplateStartSource, isStartMode]);
+  // const templateStartSource = useMemo(() => {
+  //   if (isStartMode) {
+  //     return rawTemplateStartSource;
+  //   } else {
+  //     return filterOutValidationFile(rawTemplateStartSource);
+  //   }
+  // }, [rawTemplateStartSource, isStartMode]);
 
   // keep track of whatever project the user has set locally. This happens after any change in CodeBridge
   // in the setSource function below
@@ -104,7 +103,8 @@ export const useSource = (defaultSources: ProjectSources) => {
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
-        return {start_sources: source};
+        const {parsedSource, validationFile} = splitOutValidationFile(source);
+        return {start_sources: parsedSource, validation_file: validationFile};
       });
     } else if (isEditingExemplarMode) {
       header.showLevelBuilderSaveButton(

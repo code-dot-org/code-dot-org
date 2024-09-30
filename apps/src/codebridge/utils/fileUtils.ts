@@ -36,17 +36,20 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
   }
 }
 
-export function filterOutValidationFile(source?: MultiFileSource) {
+export function splitOutValidationFile(source?: MultiFileSource) {
   if (!source) {
-    return source;
+    return {parsedSource: source, validationFile: undefined};
   }
   const newFiles = Object.fromEntries(
     Object.entries(source.files).filter(
       ([_, file]) => file.type !== ProjectFileType.VALIDATION
     )
   );
+  const validationFile = Object.values(source.files).find(
+    f => f.type === ProjectFileType.VALIDATION
+  );
   return {
-    ...source,
-    files: newFiles,
+    parsedSource: {...source, files: newFiles},
+    validationFile,
   };
 }
