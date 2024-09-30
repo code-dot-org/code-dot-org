@@ -23,7 +23,10 @@ export const FileBrowserHeaderPopUpButton = ({
   newFolderPrompt,
   newFilePrompt,
 }: FileBrowserHeaderPopUpButtonProps) => {
-  const {project} = useCodebridgeContext();
+  const {
+    project,
+    config: {validMimeTypes},
+  } = useCodebridgeContext();
   const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(project.files);
   return (
@@ -49,7 +52,7 @@ export const FileBrowserHeaderPopUpButton = ({
         <div>{codebridgeI18n.newFile()}</div>
       </div>
       <FileUploader
-        validMimeTypes={['text/']}
+        validMimeTypes={validMimeTypes}
         callback={(fileName, contents) =>
           handleFileUpload({
             folderId: DEFAULT_FOLDER_ID,

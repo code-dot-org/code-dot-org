@@ -132,7 +132,7 @@ const InnerFileBrowser = React.memo(
       deleteFile,
       toggleOpenFolder,
       deleteFolder,
-      config: {editableFileTypes},
+      config: {editableFileTypes, validMimeTypes},
     } = useCodebridgeContext();
     const dialogControl = useDialogControl();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -308,7 +308,7 @@ const InnerFileBrowser = React.memo(
                           {codebridgeI18n.newFile()}
                         </span>
                         <FileUploader
-                          validMimeTypes={['text/']}
+                          validMimeTypes={validMimeTypes}
                           callback={(fileName, contents) =>
                             handleFileUpload({
                               folderId: f.id,
