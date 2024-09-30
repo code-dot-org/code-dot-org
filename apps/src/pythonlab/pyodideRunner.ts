@@ -80,7 +80,10 @@ export async function runAllTests(
         ...source,
         files: {
           ...source.files,
-          [VALIDATION_FILE_ID]: validationFile,
+          [VALIDATION_FILE_ID]: {
+            ...validationFile,
+            id: VALIDATION_FILE_ID,
+          },
         },
       };
     }
