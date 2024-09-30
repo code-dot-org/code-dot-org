@@ -178,20 +178,20 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
           key: batch_status.undelivered_batch_object_key
         ).body.read
         modified_batch = ''
-        # Split JSON batch text into an array of JSON records and iterate over the event records, validating each one.
+        # Split JSON batch text into an array of JSON record strings and iterate over the event records, validating each one.
         undelivered_batch.
           delete_prefix('{').
           delete_suffix('}').
           split('}{').
-          map {|obj| JSON.parse("{#{obj}}")}.
+          map {|obj| "{#{obj}}"}.
           tap {|array| batch_status.records_in_batch = array.length}.
-          each_with_index do |record, _position_in_batch|
-          modified_record, record_validation_status = validate_record(record, event_json_schema, modify_invalid: options[:modify_invalid])
+          each_with_index do |record_string, _position_in_batch|
+          modified_record_string, record_validation_status = Cdo::JSONtoRedshiftTableValidator.validate(record_string, event_json_schema, modify_invalid: options[:modify_invalid])
           batch_status.records_modified += 1 if record_validation_status && options[:modify_invalid]
-          modified_batch += modified_record.to_json
-        rescue RecordValidationError => exception
+          modified_batch += modified_record_string
+        rescue Cdo::JSONtoRedshiftTableValidator::ValidationError => exception
           batch_status.records_skipped += 1
-          CDO.log.info record
+          CDO.log.info record_string
           CDO.log.info exception.message
         end
         raise SkipRedeliveryError.new('Skipping redelivery. --actually-redeliver is set to false.') unless options[:actually_redeliver]
