@@ -14,7 +14,10 @@ import {
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {splitOutValidationFile} from '../utils';
+import {
+  combineStartSourcesAndValidation,
+  splitOutValidationFile,
+} from '../utils';
 
 import {useInitialSources} from './useInitialSources';
 
@@ -41,22 +44,6 @@ export const useSource = (defaultSources: ProjectSources) => {
   const validationFile = useAppSelector(
     state => state.lab.levelProperties?.validationFile
   );
-
-  // const levelStartSource = useMemo(() => {
-  //   if (isStartMode) {
-  //     return rawLevelStartSource;
-  //   } else {
-  //     return filterOutValidationFile(rawLevelStartSource);
-  //   }
-  // }, [rawLevelStartSource, isStartMode]);
-
-  // const templateStartSource = useMemo(() => {
-  //   if (isStartMode) {
-  //     return rawTemplateStartSource;
-  //   } else {
-  //     return filterOutValidationFile(rawTemplateStartSource);
-  //   }
-  // }, [rawTemplateStartSource, isStartMode]);
 
   // keep track of whatever project the user has set locally. This happens after any change in CodeBridge
   // in the setSource function below
@@ -87,10 +74,18 @@ export const useSource = (defaultSources: ProjectSources) => {
 
   const startSource = useMemo(() => {
     // When resetting in start mode, we always use the level start source.
+    let finalLevelStartSource = levelStartSource;
+    if (isStartMode) {
+      finalLevelStartSource = combineStartSourcesAndValidation(
+        levelStartSource,
+        validationFile
+      );
+    }
+    console.log({finalLevelStartSource});
     return {
       source:
         (!isStartMode && templateStartSource) ||
-        levelStartSource ||
+        finalLevelStartSource ||
         (defaultSources.source as MultiFileSource),
     };
   }, [
@@ -98,6 +93,7 @@ export const useSource = (defaultSources: ProjectSources) => {
     isStartMode,
     templateStartSource,
     levelStartSource,
+    validationFile,
   ]);
 
   useEffect(() => {

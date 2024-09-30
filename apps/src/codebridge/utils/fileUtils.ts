@@ -53,3 +53,17 @@ export function splitOutValidationFile(source?: MultiFileSource) {
     validationFile,
   };
 }
+
+export function combineStartSourcesAndValidation(
+  source?: MultiFileSource,
+  validationFile?: ProjectFile
+) {
+  let returnValue = source;
+  if (source && validationFile) {
+    returnValue = {
+      ...source,
+      files: {...source.files, [validationFile.id]: validationFile},
+    };
+  }
+  return returnValue;
+}
