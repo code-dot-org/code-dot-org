@@ -1,10 +1,6 @@
 import {useDraggable} from '@dnd-kit/core';
 import React from 'react';
 
-import {FileId, FolderId} from '../types';
-
-import {DragType} from './types';
-
 /*
   This component adds draggable functionality to files/folders in the file browser. The intent is that the user can drag a file into a new folder as well
   as drag a folder into a new parent folder.
@@ -12,12 +8,6 @@ import {DragType} from './types';
   Should be used as a wrapper component around the contents which should be draggable, and can be given an html tag as a string to define the rendered component
   on the page (defaults to 'div')
 */
-
-export type DragDataType = {
-  id: FileId | FolderId;
-  type: DragType;
-  parentId: FolderId;
-};
 
 type DraggableProps = {
   children: React.ReactNode;

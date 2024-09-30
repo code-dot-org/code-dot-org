@@ -78,7 +78,15 @@ div.row:hover .button-kebab {
 }
 
 .acceptingDrop {
-  font-weight: bold;
+  background-color: $light_gray;
+}
+
+.droppableArea {
+  border: 1px solid transparent;
+}
+
+.expandedDroppableArea {
+  padding-bottom: 1rem;
 }
 
 .dropdownItem {
