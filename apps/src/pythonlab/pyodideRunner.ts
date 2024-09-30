@@ -11,6 +11,7 @@ import {
   asyncRun,
   restartPyodideIfProgramIsRunning,
 } from './pyodideWorkerManager';
+import {VALIDATION_FILE_ID} from './pythonHelpers/constants';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
 export async function handleRunClick(
@@ -18,14 +19,21 @@ export async function handleRunClick(
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined,
   progressManager: ProgressManager | null,
-  validationFile?: ProjectFile
+  validationFile?: ProjectFile,
+  copyValidationFile?: boolean
 ) {
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
   }
   if (runTests) {
-    await runAllTests(source, dispatch, progressManager, validationFile);
+    await runAllTests(
+      source,
+      dispatch,
+      progressManager,
+      validationFile,
+      copyValidationFile
+    );
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -58,21 +66,24 @@ export async function runAllTests(
   source: MultiFileSource,
   dispatch: Dispatch<AnyAction>,
   progressManager: ProgressManager | null,
-  validationFile?: ProjectFile
+  validationFile?: ProjectFile,
+  copyValidationFile: boolean = true
 ) {
   // If the project has a validation file, we just run those tests.
   if (validationFile) {
     // We only support one validation file. If somehow there is more than one, just run the first one.
     dispatch(appendSystemMessage(`Running level tests...`));
     progressManager?.resetValidation();
-    // Ensure the right validation file is in the source.
-    source = {
-      ...source,
-      files: {
-        ...source.files,
-        [validationFile.id]: validationFile,
-      },
-    };
+    // Ensure the right validation file is in the source. We don't need to copy it in start mode.
+    if (copyValidationFile) {
+      source = {
+        ...source,
+        files: {
+          ...source.files,
+          [VALIDATION_FILE_ID]: validationFile,
+        },
+      };
+    }
     const result = await runPythonCode(
       runValidationTests(validationFile.name),
       source

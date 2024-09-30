@@ -7,6 +7,7 @@ import {HOME_FOLDER} from './pythonHelpers/constants';
 import {SETUP_CODE} from './pythonHelpers/patches';
 import {
   getCleanupCode,
+  getSkippedFilenames,
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
   resetGlobals,
@@ -84,7 +85,8 @@ onmessage = async event => {
     source,
     id,
     pyodide,
-    postMessage
+    postMessage,
+    getSkippedFilenames(source)
   );
   postMessage({type: 'updated_source', message: updatedSource, id});
   resetGlobals(pyodide, pyodideGlobals);

@@ -17,6 +17,8 @@ import {
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {filterOutValidationFile} from '../utils';
+
 import {useInitialSources} from './useInitialSources';
 
 // Hook for handling the project source for the current level.
@@ -31,15 +33,31 @@ export const useSource = (defaultSources: ProjectSources) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const initialSources = useInitialSources(defaultSources);
-  const levelStartSource = useAppSelector(
+  const rawLevelStartSource = useAppSelector(
     state => state.lab.levelProperties?.startSources
   );
-  const templateStartSource = useAppSelector(
+  const rawTemplateStartSource = useAppSelector(
     state => state.lab.levelProperties?.templateSources
   );
   const previousLevelIdRef = useRef<number | null>(null);
   const previousInitialSources = useRef<ProjectSources | null>(null);
   const validationFile = useAppSelector(state => getFirstValidationFile(state));
+
+  const levelStartSource = useMemo(() => {
+    if (isStartMode) {
+      return rawLevelStartSource;
+    } else {
+      return filterOutValidationFile(rawLevelStartSource);
+    }
+  }, [rawLevelStartSource, isStartMode]);
+
+  const templateStartSource = useMemo(() => {
+    if (isStartMode) {
+      return rawTemplateStartSource;
+    } else {
+      return filterOutValidationFile(rawTemplateStartSource);
+    }
+  }, [rawTemplateStartSource, isStartMode]);
 
   // keep track of whatever project the user has set locally. This happens after any change in CodeBridge
   // in the setSource function below
