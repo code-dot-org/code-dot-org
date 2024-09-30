@@ -11,7 +11,7 @@
   "delete": "Delete",
   "deleteFile": "Delete",
   "deleteFileConfirm": "Are you sure you want to delete the file \"{filename}\"?",
-  "deleteFolder": "Delete folder",
+  "deleteFolder": "Delete",
   "deleteFolderConfirm": "Are you sure you want to delete the folder \"{folderName}\"?",
   "deleteFolderConfirmBoth": "This will also delete {fileCount} files and {folderCount} subfolders inside \"{folderName}\".",
   "deleteFolderConfirmFiles": "This will also delete {fileCount} files inside \"{folderName}\".",
