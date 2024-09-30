@@ -47,7 +47,7 @@ const SwapLayoutDropdown: React.FunctionComponent = () => {
       : codebridgeI18n.defaultLayout();
 
   const tooltipProps = {
-    text: 'Change Layout',
+    text: codebridgeI18n.changeLayout(),
     direction: 'onLeft',
     tooltipId: 'change-layout-tooltip',
     size: 'xs',
