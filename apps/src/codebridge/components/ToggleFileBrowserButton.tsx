@@ -3,6 +3,8 @@ import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
+import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
+import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 
@@ -29,24 +31,33 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
     [config, setConfig]
   );
 
+  const tooltipProps: TooltipProps = {
+    text: codebridgeI18n.toggleFileBrowser(),
+    direction: 'onRight',
+    tooltipId: 'toggle-file-browser-tooltip',
+    size: 'xs',
+  };
+
   return (
     <span>
-      <Button
-        icon={{
-          iconStyle: config.showFileBrowser ? 'solid' : 'regular',
-          iconName: 'folder',
-        }}
-        isIconOnly
-        color={'white'}
-        onClick={onClick}
-        ariaLabel={codebridgeI18n.toggleFileBrowser()}
-        size={'xs'}
-        type={'tertiary'}
-        className={classNames(
-          darkModeStyles.iconOnlyTertiaryButton,
-          moduleStyles.button
-        )}
-      />
+      <WithTooltip tooltipProps={tooltipProps}>
+        <Button
+          icon={{
+            iconStyle: config.showFileBrowser ? 'solid' : 'regular',
+            iconName: 'folder',
+          }}
+          isIconOnly
+          color={'white'}
+          onClick={onClick}
+          ariaLabel={codebridgeI18n.toggleFileBrowser()}
+          size={'xs'}
+          type={'tertiary'}
+          className={classNames(
+            darkModeStyles.iconOnlyTertiaryButton,
+            moduleStyles.button
+          )}
+        />
+      </WithTooltip>
     </span>
   );
 };

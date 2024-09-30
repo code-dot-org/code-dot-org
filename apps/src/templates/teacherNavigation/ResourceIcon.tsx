@@ -28,6 +28,10 @@ const ResourceIcon: React.FC<ResourceIconProps> = ({
       return RESOURCE_TYPE.VIDEO;
     } else if (resourceType === 'Lesson Plan') {
       return RESOURCE_TYPE.LESSON_PLAN;
+    } else if (resourceType === 'Standards') {
+      return RESOURCE_TYPE.STANDARDS;
+    } else if (resourceType === 'Vocabulary') {
+      return RESOURCE_TYPE.VOCABULARY;
     } else {
       return RESOURCE_TYPE.LINK;
     }

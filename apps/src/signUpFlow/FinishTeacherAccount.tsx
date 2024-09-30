@@ -5,10 +5,10 @@ import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
-  Heading2,
-  BodyTwoText,
   BodyThreeText,
   BodyFourText,
+  BodyTwoText,
+  Heading2,
 } from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -17,15 +17,16 @@ import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
 import {navigateToHref} from '../utils';
 
 import locale from './locale';
 import {
   EMAIL_SESSION_KEY,
-  SCHOOL_ID_SESSION_KEY,
-  SCHOOL_ZIP_SESSION_KEY,
-  SCHOOL_NAME_SESSION_KEY,
   SCHOOL_COUNTRY_SESSION_KEY,
+  SCHOOL_ID_SESSION_KEY,
+  SCHOOL_NAME_SESSION_KEY,
+  SCHOOL_ZIP_SESSION_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -33,6 +34,7 @@ import style from './signUpFlowStyles.module.scss';
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
 }> = ({usIp}) => {
+  const schoolInfo = useSchoolInfo({usIp});
   const [name, setName] = useState('');
   const [showNameError, setShowNameError] = useState(false);
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
@@ -157,7 +159,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
               </BodyThreeText>
             )}
           </div>
-          <SchoolDataInputs usIp={usIp} includeHeaders={false} />
+          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>
               <BodyThreeText
