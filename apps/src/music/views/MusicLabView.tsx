@@ -86,6 +86,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const levelData = useAppSelector(
     state => state.lab.levelProperties?.levelData
   );
+  const offerTts =
+    useAppSelector(state => state.lab.levelProperties?.offerTts) ||
+    AppConfig.getValue('show-tts') === 'true';
   const isPlayView = useAppSelector(state => state.lab.isShareView);
 
   const progressManager = useContext(ProgressManagerContext);
@@ -165,13 +168,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   : 'horizontal'
               }
               handleInstructionsTextClick={onInstructionsTextClick}
-              offerTts={AppConfig.getValue('show-tts') === 'true'}
+              offerTts={offerTts}
             />
           </PanelContainer>
         </div>
       );
     },
-    [hideHeaders, onInstructionsTextClick]
+    [hideHeaders, onInstructionsTextClick, offerTts]
   );
 
   const renderPlayArea = useCallback(
