@@ -660,7 +660,8 @@ nav.main #hamburger #hamburger-contents {
   with appropriate links hidden */
 @media (min-width: 1024px) and (max-width: 1268px) {
   nav.main .left ul li:nth-child(n + 4),
-  nav.main #hamburger-contents > div:nth-child(-n + 5) {
+  nav.main #hamburger-contents:not(.farsi) > div:nth-child(-n + 5),
+  nav.main #hamburger-contents.farsi > div:nth-child(-n + 4) {
     display: none !important;
   }
 }

@@ -26,7 +26,6 @@ import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import teacherSections, {
-  sectionProviderName,
   selectSection,
   setRosterProvider,
   setRosterProviderName,
@@ -34,6 +33,7 @@ import teacherSections, {
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -83,7 +83,13 @@ $(document).ready(function () {
 
   // When removing v1TeacherDashboard after v2 launch, remove `selectedSection` from api response.
   const getV1TeacherDashboard = () => {
-    const baseUrl = `/teacher_dashboard/sections/${section.id}`;
+    // Removes the trailing part of the current location path that is not needed for the router `basename`.
+    // For example, if the current location path is `/teacher_dashboard/sections/1/progress`,
+    // the router `basename` should be `/teacher_dashboard/sections/1`.
+    const baseUrl = window.location.pathname.replace(
+      RegExp(`(/teacher_dashboard/sections/${section.id}).*`),
+      '$1'
+    );
 
     const selectedSectionFromList = sections.find(s => s.id === section.id);
     const selectedSection = {...selectedSectionFromList, ...section};

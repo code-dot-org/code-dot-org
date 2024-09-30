@@ -7,7 +7,7 @@ import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
@@ -59,7 +59,7 @@ export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
 
 RubricErrorContainer.propTypes = {
   isOpen: PropTypes.bool,
-  setIsOpen: PropTypes.function,
+  setIsOpen: PropTypes.func,
 };
 
 function RubricFloatingActionButton({

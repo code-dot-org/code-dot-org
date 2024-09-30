@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React, {useCallback, useContext, useEffect} from 'react';
+import {useSelector} from 'react-redux';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
@@ -12,11 +13,13 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import AppConfig from '../appConfig';
+import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import musicI18n from '../locale';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
 import {
+  getBlockMode,
   InstructionsPosition,
   setCurrentPlayheadPosition,
   showCallout,
@@ -83,12 +86,20 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const levelData = useAppSelector(
     state => state.lab.levelProperties?.levelData
   );
+  const offerTts =
+    useAppSelector(state => state.lab.levelProperties?.offerTts) ||
+    AppConfig.getValue('show-tts') === 'true';
   const isPlayView = useAppSelector(state => state.lab.isShareView);
+  const validationStateCallout = useAppSelector(
+    state => state.lab.validationState.callout
+  );
 
   const progressManager = useContext(ProgressManagerContext);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+  const blockMode = useSelector(getBlockMode);
+
   // Pass music validator to Progress Manager
   useEffect(() => {
     if (progressManager && appName === 'music') {
@@ -107,6 +118,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       });
     }
   }, [blocklyWorkspace, isStartMode, levelData]);
+
+  useEffect(() => {
+    installFunctionBlocks(blockMode);
+  }, [blockMode]);
 
   // Update loop that runs while playback is in progress.
   const doPlaybackUpdate = useCallback(() => {
@@ -133,6 +148,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [dispatch]
   );
 
+  useEffect(() => {
+    if (validationStateCallout) {
+      dispatch(showCallout(validationStateCallout));
+    }
+  }, [dispatch, validationStateCallout]);
+
   const renderInstructions = useCallback(
     (position: InstructionsPosition) => {
       return (
@@ -157,13 +178,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   : 'horizontal'
               }
               handleInstructionsTextClick={onInstructionsTextClick}
-              offerTts={AppConfig.getValue('show-tts') === 'true'}
+              offerTts={offerTts}
             />
           </PanelContainer>
         </div>
       );
     },
-    [hideHeaders, onInstructionsTextClick]
+    [hideHeaders, onInstructionsTextClick, offerTts]
   );
 
   const renderPlayArea = useCallback(

@@ -621,15 +621,17 @@ html, body {
 }
 
 /* Styling that keeps the small footer consistent with other page elements */
-$codeApp-left-margin: 25px;
+$codeApp-left-margin: 15px;
+$codeApp-bottom-margin: 12px;
 $small-footer-horizontal-margin: 15px;
 $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
 .small-footer-base, #more-menu {
-  background-color: $background_gray;
+  background-color: initial;
   color: $dimgray;
   font-size: 14px;
+  margin: 8px;
   a {
     @include main-font-semi-bold;
     &:link {
@@ -700,9 +702,7 @@ $small-footer-standard-width: 400px;
 .small-footer-base {
   position: absolute;
   bottom: 0;
-  margin: 0 $codeApp-left-margin;
   display: flex;
-  border-top: 1px solid $lighter_gray;
   padding: 6px 0 3px 0;
   width: 100%;
   max-width: $small-footer-standard-width;
@@ -711,7 +711,7 @@ $small-footer-standard-width: 400px;
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
    * fit between the visualization above and the .small-footer
    */
-  margin-top: 5px;
+  margin: 5px 0 $codeApp-bottom-margin $codeApp-left-margin;
 
   select {
     color: $charcoal;
@@ -732,11 +732,11 @@ $small-footer-standard-width: 400px;
     margin: 0 10px;
     button {
       padding: 3px;
-      font-size: 16px;
-      line-height: 16px;
+      font-size: 1rem;
+      line-height: 1rem;
       margin: 0;
       border: 1px solid $lighter_gray;
-      background-color: $background-gray;
+      background-color: initial;
     }
   }
 }
@@ -825,60 +825,35 @@ $small-footer-standard-width: 400px;
   border-top: initial;
 }
 
+
 /* Custom styling for the small-footer-base for Music Lab. */
 .music-black {
   #page-small-footer {
     user-select: none;
 
     .small-footer-base {
+
       max-width: 12.5rem;
-      margin-left: 0.625rem;
-      margin-bottom: 0.125rem;
+      margin-left: 8px;
+      margin-bottom: 8px;
 
       .version-caption {
         display: none;
       }
+
       p {
         color: $neutral_dark40;
       }
     }
 
     .copyright-button {
-      user-select: none;
-
-      .copyright-link {
-        width: 26px;
-        height: 26px;
-        border: solid 1px;
-        box-sizing: border-box;
-      }
-    }
-
-    .copyright-link {
-      border-color: $neutral_dark40;
+      height: 1.625rem;
+      width: 1.625rem;
+      box-sizing: border-box;
+      border: solid 1px $light_white;
       background-color: initial;
-      color: $neutral_dark40;
-
-      > div {
-        select {
-          height: 26px;
-          background-color: initial;
-          color: $neutral_dark40;
-        }
-        &::after {
-          background-color: initial;
-          color: $neutral_dark40;
-        }
-        &::before {
-          background-color: initial;
-          color: $neutral_dark40;
-        }
-      }
+      color: $light_white;
     }
-  }
-
-  .blocklyDropDownContent {
-    max-height: initial;
   }
 }
 
