@@ -417,6 +417,10 @@ export const FileBrowser = React.memo(() => {
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
+  );
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   // Check if the filename is already in use in the given folder.
   // If it is, alert the user and return true, otherwise return false.
@@ -428,22 +432,27 @@ export const FileBrowser = React.memo(() => {
         projectFiles: Record<string, ProjectFile>
       ) => {
         let message = undefined;
-        const existingFile = Object.values(projectFiles).find(
-          f => f.name === fileName && f.folderId === folderId
-        );
-        if (existingFile) {
-          message = codebridgeI18n.duplicateFileError({fileName});
-          if (
-            existingFile.type === ProjectFileType.SUPPORT ||
-            existingFile.type === ProjectFileType.VALIDATION
-          ) {
-            message = codebridgeI18n.duplicateSupportFileError({fileName});
+        // The validation file is in the project files in start mode.
+        if (!isStartMode && validationFile?.name === fileName) {
+          message = codebridgeI18n.duplicateSupportFileError({fileName});
+        } else {
+          const existingFile = Object.values(projectFiles).find(
+            f => f.name === fileName && f.folderId === folderId
+          );
+          if (existingFile) {
+            message = codebridgeI18n.duplicateFileError({fileName});
+            if (
+              existingFile.type === ProjectFileType.SUPPORT ||
+              existingFile.type === ProjectFileType.VALIDATION
+            ) {
+              message = codebridgeI18n.duplicateSupportFileError({fileName});
+            }
           }
         }
 
         return message;
       },
-    []
+    [validationFile?.name, isStartMode]
   );
 
   // Check if the foldername is already in use in the given folder.
@@ -547,7 +556,12 @@ export const FileBrowser = React.memo(() => {
         }
         const fileName = extractInput(results);
 
-        const fileId = getNextFileId(Object.values(project.files));
+        const files = Object.values(project.files);
+        // The validation file is in the project files in start mode.
+        if (validationFile && !isStartMode) {
+          files.push(validationFile);
+        }
+        const fileId = getNextFileId(files);
 
         newFile({
           fileId,
@@ -557,7 +571,15 @@ export const FileBrowser = React.memo(() => {
 
         sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, appName);
       },
-    [dialogControl, project.files, newFile, appName, checkForDuplicateFilename]
+    [
+      dialogControl,
+      project.files,
+      newFile,
+      appName,
+      checkForDuplicateFilename,
+      validationFile,
+      isStartMode,
+    ]
   );
 
   const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(

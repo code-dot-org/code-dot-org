@@ -4,7 +4,11 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
 import {ProjectFile} from '../types';
 
-export function shouldShowFile(file: ProjectFile) {
+export function shouldShowFile(file?: ProjectFile) {
+  // We could have an undefined file if the file referenced is a validation file.
+  if (!file) {
+    return false;
+  }
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   // If we are in start mode, show all files. If we are not in start mode,

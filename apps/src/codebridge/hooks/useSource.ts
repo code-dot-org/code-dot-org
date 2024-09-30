@@ -81,7 +81,6 @@ export const useSource = (defaultSources: ProjectSources) => {
         validationFile
       );
     }
-    console.log({finalLevelStartSource});
     return {
       source:
         (!isStartMode && templateStartSource) ||

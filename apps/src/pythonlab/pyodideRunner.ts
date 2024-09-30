@@ -11,7 +11,6 @@ import {
   asyncRun,
   restartPyodideIfProgramIsRunning,
 } from './pyodideWorkerManager';
-import {VALIDATION_FILE_ID} from './pythonHelpers/constants';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
 export async function handleRunClick(
@@ -78,22 +77,11 @@ export async function runAllTests(
     // We only support one validation file. If somehow there is more than one, just run the first one.
     dispatch(appendSystemMessage(`Running level tests...`));
     progressManager?.resetValidation();
-    // Ensure the right validation file is in the source. We don't need to copy it in start mode.
-    if (copyValidationFile) {
-      source = {
-        ...source,
-        files: {
-          ...source.files,
-          [VALIDATION_FILE_ID]: {
-            ...validationFile,
-            id: VALIDATION_FILE_ID,
-          },
-        },
-      };
-    }
+    // We don't need to send the validation file in start mode, as it is already in the source.
     const result = await runPythonCode(
       runValidationTests(validationFile.name),
-      source
+      source,
+      copyValidationFile ? validationFile : undefined
     );
     if (result?.message) {
       // Get validation test results
