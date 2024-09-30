@@ -89,11 +89,9 @@ describe('AccountInformation', () => {
     ).toBeInTheDocument();
   });
 
-  it('submits form with updated information', async () => {
-    const mockRedirectUrl = '/success';
+  it('submits form with updated information and displays success alert', async () => {
     mockFetch.mockResolvedValueOnce({
       ok: true,
-      json: () => Promise.resolve({redirect_url: mockRedirectUrl}),
     });
 
     render(<AccountInformation {...defaultProps} />);
@@ -120,7 +118,9 @@ describe('AccountInformation', () => {
 
     await waitFor(() => {
       expect(mockFetch).toHaveBeenCalledWith('/users', expect.any(Object));
-      expect(mockWindowLocation.href).toBe(mockRedirectUrl);
+      expect(
+        screen.getByText(/account information successfully updated/i)
+      ).toBeInTheDocument();
     });
 
     const fetchArgs = mockFetch.mock.calls[0][1];

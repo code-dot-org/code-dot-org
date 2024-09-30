@@ -1886,6 +1886,7 @@
   "accountInformationUpdateEmail": "Update email",
   "accountInformationSelectState": "Select state",
   "accountInformationReviewErrors": "Review errors above and try again.",
+  "accountInformationUpdateSuccess": "Account information successfully updated.",
 
   "name": "Name",
   "nameRequired": "Student name (required)",

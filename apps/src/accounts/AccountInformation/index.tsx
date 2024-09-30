@@ -55,6 +55,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [currentPassword, setCurrentPassword] = useState('');
   const [showChangeEmailModal, setShowChangeEmailModal] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string[]>>({});
 
   const displayNameHelperMessage = useMemo(
@@ -77,6 +78,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   );
 
   const handleSubmitAccountSettingsUpdate = async () => {
+    setErrors({});
     const userUpdates = {
       name,
       username,
@@ -101,15 +103,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     });
 
     if (response.ok) {
-      const {redirect_url} = await response.json();
-      if (redirect_url) {
-        /**
-         * This refreshes the page so the success flash message from rails/devise is shown.
-         * TODO: When the full account page is 100% react, we'll drop the flash message in
-         * favor of the design system Alert component for each section
-         */
-        window.location.href = redirect_url;
-      }
+      setSuccess(true);
     } else {
       const validationErrors = await response.json();
       setErrors(validationErrors);
@@ -375,6 +369,14 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               text={i18n.accountInformationReviewErrors()}
               type={alertTypes.danger}
               className={styles.alert}
+            />
+          )}
+          {success && (
+            <Alert
+              text={i18n.accountInformationUpdateSuccess()}
+              type={alertTypes.success}
+              className={styles.alert}
+              onClose={() => setSuccess(false)}
             />
           )}
         </div>
