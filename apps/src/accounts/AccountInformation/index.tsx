@@ -80,6 +80,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   );
 
   const handleSubmitAccountSettingsUpdate = async () => {
+    resetMessages();
     setErrors({});
     const userUpdates = {
       name,
@@ -121,6 +122,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     currentPassword: string;
     emailOptIn: string;
   }) => {
+    resetMessages();
     const hashedEmail = hashEmail(newEmail);
     const response = await fetch('/users/email', {
       method: 'PATCH',
@@ -162,6 +164,11 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     setShowChangeEmailModal(false);
     setEmail(newEmail);
     setShowEmailUpdateSuccess(true);
+  };
+
+  const resetMessages = () => {
+    setShowAccountUpdateSuccess(false);
+    setShowEmailUpdateSuccess(false);
   };
 
   return (
