@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
 import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
@@ -22,12 +22,11 @@ import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
 import {sortableSectionShape} from './shapes.jsx';
 import {
-  sectionCode,
-  sectionName,
   removeSection,
   toggleSectionHidden,
   importOrUpdateRoster,
 } from './teacherSectionsRedux';
+import {sectionCode, sectionName} from './teacherSectionsReduxSelectors';
 
 class SectionActionDropdown extends Component {
   static propTypes = {

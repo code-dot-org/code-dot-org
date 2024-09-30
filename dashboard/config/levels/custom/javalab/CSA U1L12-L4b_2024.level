@@ -1044,7 +1044,8 @@
     "bubble_choice_description": "The `Painter` has volunteered to decorate The Neighborhood, and they need help navigating and painting the streets.",
     "thumbnail_url": "https://images.code.org/3e7421c2e2e581fca1fdf049fbad3732-U1L12-L4b.gif",
     "video_key": "csa_two_way_selection_and_not",
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:44:20.456+00:00\",\"changed\":[\"cloned from \\\"CSA U1L12-L4b_2023\\\"\"],\"cloned_from\":\"CSA U1L12-L4b_2023\"}]"

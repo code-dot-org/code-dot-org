@@ -366,7 +366,8 @@
     "bubble_choice_description": "Help the `Painter` navigate through The Neighborhood to reach the food truck.",
     "thumbnail_url": "https://images.code.org/c87092e04fad321caf7a1d27a64ac05c-U1L4-L4a.gif",
     "video_key": "csa_calling_methods",
-    "name_suffix": "_alt-2025"
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:07:40.837+00:00\",\"changed\":[\"cloned from \\\"CSA U1L4-L4a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L4-L4a_pilot-2025\"}]"

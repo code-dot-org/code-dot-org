@@ -39,12 +39,10 @@ class AuthenticationOption < ApplicationRecord
 
   after_create :set_primary_contact_info
 
-  # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_CREDENTIAL_TYPES = [
     CLEVER = 'clever',
     FACEBOOK = 'facebook',
     GOOGLE = 'google_oauth2',
-    POWERSCHOOL = 'powerschool',
     QWIKLABS = 'lti_lti_prod_kids.qwikcamps.com',
     TWITTER = 'twitter',
     MICROSOFT = 'microsoft_v2_auth',
@@ -70,7 +68,6 @@ class AuthenticationOption < ApplicationRecord
   # user, and instead to rely exclusively on authentication_id
   UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
     CLEVER,
-    POWERSCHOOL,
     LTI_V1,
   ].freeze
 

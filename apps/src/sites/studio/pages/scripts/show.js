@@ -30,7 +30,6 @@ import {
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
@@ -108,8 +107,7 @@ function initPage() {
   );
 
   const showAiAssessmentsAnnouncement =
-    scriptData.showAiAssessmentsAnnouncement &&
-    experiments.isEnabled(experiments.AI_ASSESSMENTS_ANNOUNCEMENT);
+    scriptData.showAiAssessmentsAnnouncement;
 
   ReactDOM.render(
     <Provider store={store}>
@@ -147,9 +145,6 @@ function initPage() {
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
-        showUnversionedRedirectWarning={
-          scriptData.show_unversioned_redirect_warning
-        }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
         publishedState={scriptData.publishedState}

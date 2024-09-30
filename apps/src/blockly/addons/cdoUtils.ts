@@ -1,4 +1,3 @@
-import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
 import {Block, BlockSvg, Field, Theme, WorkspaceSvg} from 'blockly';
 import {
   ToolboxItemInfo,
@@ -45,6 +44,7 @@ import {
   hasBlocks,
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
+import {advancedProceduresBlocks} from './plusMinusBlocks/advancedProcedures';
 
 /**
  * Loads blocks to a workspace.
@@ -524,9 +524,19 @@ export function locationField(icon: SVGElement, onClick: () => void) {
   });
 }
 
+// Installs function blocks for all older Blockly labs or Simple2 (Music Lab)
 export function registerCustomProcedureBlocks() {
-  unregisterProcedureBlocks();
+  // Delete both "no return" blocks before redefining them.
+  delete Blockly.Blocks['procedures_defnoreturn'];
+  delete Blockly.Blocks['procedures_callnoreturn'];
   Blockly.common.defineBlocks(procedureBlocks);
+}
+// Installs function blocks for Advanced Music Lab
+export function registerCustomAdvancedProcedureBlocks() {
+  // Delete both definition blocks before redefining them.
+  delete Blockly.Blocks['procedures_defnoreturn'];
+  delete Blockly.Blocks['procedures_defreturn'];
+  Blockly.common.defineBlocks(advancedProceduresBlocks);
 }
 
 /**

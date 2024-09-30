@@ -301,19 +301,6 @@ Devise.setup do |config|
   # with a log in with facebook button)
   config.omniauth :clever, CDO.dashboard_clever_key, CDO.dashboard_clever_secret, provider_ignores_state: true
 
-  # Powerschool OpenID config
-  config.omniauth :openid, {
-    provider_ignores_state: true,
-    name: :powerschool,
-    identifier_param: 'openid_identifier',
-    required: %w(
-      http://powerschool.com/entity/type
-      http://powerschool.com/entity/email
-      http://powerschool.com/entity/firstName
-      http://powerschool.com/entity/lastName
-    ).freeze
-  }
-
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
@@ -339,7 +326,7 @@ Devise.setup do |config|
       end
     # Students younger than 13 shouldn't see App Lab and Game Lab unless they
     # are in a teacher's section for privacy reasons.
-    limit_project_types = user.under_13? && !user.sections_as_student.any?
+    limit_project_types = user.under_13? && user.sections_as_student.none?
     auth.cookies[environment_specific_cookie_name("_limit_project_types")] = {value: limit_project_types, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}

@@ -821,6 +821,21 @@ roles.each do |name, config| %>
       Path: /
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
+  # TODO: Move this to gen_ai_curriculum.yml.erb
+  # Execution role for GenAI Sagemaker Models
+  SagemakerModelExecutionRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      RoleName: SagemakerModelExecutionRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: sagemaker.amazonaws.com
+            Action: 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AmazonSageMakerFullAccess'
   SessionPermissions:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -875,3 +890,7 @@ Outputs:
     Description: Session Permissions
     Value: !Ref SessionPermissions
     Export: {Name: !Sub "${AWS::StackName}-SessionPermissions"}
+  SagemakerModelExecutionRoleARN:
+    Description: Execution Role for GenAI Sagemaker Models
+    Value: !GetAtt SagemakerModelExecutionRole.Arn
+    Export: {Name: !Sub "${AWS::StackName}-SagemakerExecutionRoleARN"}

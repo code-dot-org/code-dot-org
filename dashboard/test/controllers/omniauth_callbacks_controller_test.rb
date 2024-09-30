@@ -287,38 +287,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
-  test "login: authorizing with unknown powerschool student account does not save email" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '12345',
-      provider: 'powerschool',
-      info: {
-        name: nil,
-      },
-      extra: {
-        response: {
-          message: {
-            args: {
-              '["http://openid.net/srv/ax/1.0", "value.ext0"]': 'student',
-              '["http://openid.net/srv/ax/1.0", "value.ext1"]': 'splat.cat@example.com',
-              '["http://openid.net/srv/ax/1.0", "value.ext2"]': 'splat',
-              '["http://openid.net/srv/ax/1.0", "value.ext3"]': 'cat',
-            }
-          }
-        }
-      }
-    )
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_creates(User) do
-      get :powerschool
-    end
-
-    user = User.last
-    assert_equal '', user.email
-    assert_equal user.id, signed_in_user_id
-  end
-
   test "login: authorizing with known clever student account does not alter email or hashed email" do
     clever_student = create(:student, provider: 'clever', uid: '111133')
     student_hashed_email = clever_student.hashed_email
@@ -1236,20 +1204,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_auth_option(user, auth)
   end
 
-  test 'connect_provider: creates new powerschool auth option for signed in user' do
-    user = create :user, uid: 'some-uid'
-    auth = generate_auth_user_hash(provider: 'powerschool', uid: user.uid)
-
-    setup_should_connect_provider(user, auth)
-    assert_creates(AuthenticationOption) do
-      get :powerschool
-    end
-
-    user.reload
-    assert_redirected_to 'http://test-studio.code.org/users/edit'
-    assert_auth_option(user, auth)
-  end
-
   test 'connect_provider: redirects to account edit page with an error if AuthenticationOption cannot save' do
     user = create :user, uid: 'some-uid'
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: user.uid, refresh_token: '54321')
@@ -1642,7 +1596,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     AuthenticationOption::OAUTH_CREDENTIAL_TYPES.excluding(
       AuthenticationOption::QWIKLABS,
       AuthenticationOption::TWITTER,
-      AuthenticationOption::POWERSCHOOL,
     ).each do |provider|
       context "when provider is #{provider}" do
         let(:auth_hash) {generate_auth_user_hash(provider: provider, uid: user_uid)}

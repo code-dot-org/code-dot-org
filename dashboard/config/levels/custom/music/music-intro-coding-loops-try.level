@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "long_instructions": "#### Repeat\r\n\r\nSave time by using repeat to play the same sounds over and over.\r\n\r\n1. Add a sound into the [repeat](#clickable=repeat-block) block to play the same sound [3](#clickable=repeat-block-field-workspace) times.\r\n2. Then press [Run](#clickable=run-button).\r\n",
+    "long_instructions": "####🛠️Customize the loop!\r\n\r\n\r\n1. Change the number of times the sound [repeats](#clickable=repeat-block).\r\n2. Then press [Run](#clickable=run-button).\r\n",
     "level_data": {
       "startSources": {
         "blocks": {
@@ -21,25 +21,78 @@
               "x": 30,
               "y": 30,
               "deletable": false,
-              "movable": false
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "fields": {
+                    "times": 1
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "fields": {
+                          "sound": "hiphop/drum_beat_trap"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           ]
         }
       },
       "toolbox": {
+        "type": "flyout",
         "blocks": {
-          "Control": [
-            "repeat_simple2"
-          ],
-          "Play": [
-            "play_sound_at_current_location_simple2"
-          ]
         }
-      }
+      },
+      "library": "launch2024",
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "break_it_down",
+          "bass_breakdown",
+          "breakdown_oohs"
+        ],
+        "hiphop": [
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat"
+        ]
+      },
+      "packId": "rosa_linn_hallelujah"
     },
+    "validations": [
+      {
+        "key": "music-intro-coding-loops-try_8cd25d45-3fae-4795-b099-946a1786552f",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-intro-coding-loops-try_c514cdbe-6925-4db8-bd3b-22cce5639912",
+        "message": "Edit the number on the repeat loop to play the sound more than once.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-28 19:14:42 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:33:19 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 19:33:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 19:34:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-28 19:14:42 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 19:33:19 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 19:33:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 19:34:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:22:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:23:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:23:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:29:28 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:31:32 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:32:10 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 16:36:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:10:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:12:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:14:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:26:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:27:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:27:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:28:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

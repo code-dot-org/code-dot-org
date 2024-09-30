@@ -53,6 +53,10 @@ $default-spacing: 4px;
     }
   }
 
+  .systemPromptInput {
+    height: 240px;
+  }
+
   textarea {
     @extend %full-width;
     height: 120px;

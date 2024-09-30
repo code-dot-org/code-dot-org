@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 // Log page visits on document.ready.
 $(document).ready(() => {

@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-01-12T20:43:25.000Z",
   "level_num": "custom",
@@ -367,11 +366,9 @@
       "/courses/csa-2023/guides/reading-error-messages"
     ],
     "name_suffix": "_2024",
-    "encrypted_examples": [
-
-    ],
-    "ai_tutor_available": "true"
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T20:43:25.274+00:00\",\"changed\":[\"cloned from \\\"CSA U1L2-L4a_2023\\\"\"],\"cloned_from\":\"CSA U1L2-L4a_2023\"},{\"changed_at\":\"2024-09-06 00:17:02 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
 }]]></config>
 </Javalab>

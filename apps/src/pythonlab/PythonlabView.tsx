@@ -11,11 +11,15 @@ import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
+import {restartPyodideIfProgramIsRunning} from './pyodideWorkerManager';
 
 import moduleStyles from './pythonlab-view.module.scss';
 
@@ -42,19 +46,18 @@ const defaultProject: ProjectSources = {
 
 const labeledGridLayouts = {
   horizontal: {
-    gridLayoutRows: '2fr 1fr ',
-    gridLayoutColumns: '300px minmax(0, 1fr)',
+    gridLayoutRows: '1fr',
+    gridLayoutColumns: '340px minmax(0, 1fr)',
     gridLayout: `
-  "info-panel workspace"
-  "file-browser console"
+  "info-panel workspace-and-console"
   `,
   },
   vertical: {
-    gridLayoutRows: '1fr 1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
+    gridLayoutRows: '1fr',
+    gridLayoutColumns: '340px minmax(0, 1fr) 400px',
     gridLayout: `
     "info-panel workspace console"
-    "file-browser workspace console"`,
+    `,
   },
 };
 const defaultConfig: ConfigType = {
@@ -90,6 +93,7 @@ const defaultConfig: ConfigType = {
 
   labeledGridLayouts,
   activeGridLayout: 'horizontal',
+  showFileBrowser: true,
 };
 
 const PythonlabView: React.FunctionComponent = () => {
@@ -111,6 +115,12 @@ const PythonlabView: React.FunctionComponent = () => {
       );
     }
   }, [progressManager, appName]);
+
+  // Ensure any in-progress program is stopped when the level is switched.
+  useLifecycleNotifier(
+    LifecycleEvent.LevelLoadStarted,
+    restartPyodideIfProgramIsRunning
+  );
 
   const onRun = async (
     runTests: boolean,

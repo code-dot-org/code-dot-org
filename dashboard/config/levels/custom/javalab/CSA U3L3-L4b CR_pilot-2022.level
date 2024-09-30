@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:10.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3L3-L3b PBT_pilot-2022",
@@ -22,12 +26,9 @@
         "text": "/*\n * Represents a single Food Truck at the\n * Project Mercury Pastries Food Truck business\n */\npublic class FoodTruck {\n\n  private String owner;        // The owner of the Food Truck\n  private double[] prices;       // The prices of desserts at the Food Truck\n\n  /*\n   * Creates a Food Truck with the specified owner and array of prices\n   */\n  public FoodTruck(String owner, double[] prices) {\n    this.owner = owner;\n    this.prices = prices;\n  }\n\n  /*\n   * Returns the owner of the food truck\n   */\n  public String getOwner() {\n    return owner;\n  }\n\n  /*\n   * Returns the array of prices\n   */\n  public double[] getPrices() {\n    return prices;\n  }\n\n  /*\n   * Updates the values in prices to half off\n   */\n  public void discountPrices() {\n    // TO DO #1: Update the values in the prices array\n    // to half of the original prices.\n\n\n    \n  }\n\n  /*\n   * Prints the values in the prices array\n   */\n  public void printPrices() {\n    for (int index = 0; index < prices.length; index++) {\n      System.out.println(prices[index]);\n    }\n  }\n\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:10.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:10.259+00:00\",\"changed\":[\"cloned from \\\"CSA U3L3-L4b CR_2022\\\"\"],\"cloned_from\":\"CSA U3L3-L4b CR_2022\"},{\"changed_at\":\"2022-08-31 14:20:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

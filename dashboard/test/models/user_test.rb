@@ -839,28 +839,6 @@ class UserTest < ActiveSupport::TestCase
     assert_empty user.lti_user_identities
   end
 
-  test 'LTI teacher should be verified after creation' do
-    lti_integration = create(:lti_integration)
-    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
-
-    lti_teacher = build(:teacher)
-    lti_teacher.authentication_options << build(:lti_authentication_option, user: lti_teacher, authentication_id: auth_id)
-    lti_teacher.save!
-
-    assert lti_teacher.verified_teacher?
-  end
-
-  test 'LTI student should not be verified after creation' do
-    lti_integration = create(:lti_integration)
-    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
-
-    lti_student = build(:student)
-    lti_student.authentication_options << build(:lti_authentication_option, user: lti_student, authentication_id: auth_id)
-    lti_student.save!
-
-    refute lti_student.verified_teacher?
-  end
-
   # FND-1130: This test will no longer be required
   test "teacher with no email created after 2016-06-14 should be invalid" do
     user = create :teacher, :without_email
@@ -3767,7 +3745,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal(['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.map {|cs| cs[:title]})
+      assert_equal(['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.pluck(:title))
     end
 
     test "it does not return pl scripts that are in returned pl courses" do
@@ -3777,7 +3755,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal(['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.map {|cs| cs[:title]})
+      assert_equal(['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.pluck(:title))
     end
 
     test "it optionally does not return primary course in returned student courses" do
@@ -3799,7 +3777,7 @@ class UserTest < ActiveSupport::TestCase
 
       assert_equal 1, courses_and_scripts.length
 
-      assert_equal(['testcourse'], courses_and_scripts.map {|cs| cs[:name]})
+      assert_equal(['testcourse'], courses_and_scripts.pluck(:name))
     end
   end
 

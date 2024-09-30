@@ -3,30 +3,26 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching Strategies in Computer Vision
+# Learning Support in Data Science
 
-#### This unit offers many ways to differentiate and customize learning in your class. Take time to look at the resources provided. 
+#### This unit utilizes technology such as **CODAP** and **Python Lab** that may be new to your students. Documentation and strategies are embedded in the lesson plans to help your students succeed. 
 
-## Prior knowledge  
+###Check out these resources: 
+
+## CODAP
 
 #### In the lessons that use **CODAP**, consider your students experience with these tools and decide if you will need to take extra time to support these lessons. Using the Getting Started Tutorials could be helpful for students who need extra support. 
+
+- #### Student Activity Guide <a href= "https://docs.google.com/document/d/1Tr6BRZAZItLCZlj3A_-fSWBwnTXY4s3InPIbmAw6sXE/edit?usp=sharing" target = "blank" rel = "noopener noreferrer">CODAP Tutorial</a> and <a href= "https://docs.google.com/document/d/10Ea_6HRtDrBtltUTjqSV_diKFnSk-kUr0uz3apOmZMU/edit?usp=sharing" target = "blank" rel= "noopener noreferrer"> Teacher Key </a>
 
 - #### Getting Started in CODAP,  <a href="https://codap.concord.org/app/static/dg/en/cert/index.html#file=examples:Getting%20started%20with%20CODAP" target="blank" rel="noopener noreferrer">Part 1</a>
 - #### Getting Started in CODAP,  <a href="https://codap.concord.org/app/static/dg/en/cert/index.html?url=https://concord-consortium.github.io/codap-data/example-documents/src/documents/get_started_2.codap" target="blank" rel="noopener noreferrer">Part 2</a>
 
-## Differentiation 
-#### Some of the lessons offer choice activities and extension options to help you customize the lesson to your needs. Carefully read over these options to decide how you want your class to proceed. 
+## Python 
 
-## Teaching tips
-#### Notice the orange boxes in the teaching guides. These teaching tips provide useful suggestions for managing your class during the different activities. 
+#### Documentation is available to help support students through the Python and Pandas lessons. Virtually sharing or making copies for reference can help students feel more confident in the tasks. 
 
-<img src="https://images.code.org/6cf83f3a0a7961a2671af46ec2a836b5-image-1715182229076.png" alt="orange teaching tip box from lesson guide" width="850px" style="border-radius:10px;">
+- #### Python and Pandas <a href= "https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit?usp=sharing" target = "blank" rel ="noopener noreferrer"> Doucmentation </a>
 
-
-## Materials
-#### Decide how you want to share materials with your students. In some instances, it may benefit to share the handouts digitally, in others,  you may prefer to make copies. 
-
-## External Websites 
-#### Check if the lessons involve external websites and verify whether they are blocked by your school in advance. If they are blocked, either find alternative sites or follow your school's procedure to unblock the websites.
 
 MARKDOWN

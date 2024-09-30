@@ -5,6 +5,13 @@
   grid-area: workspace;
   background-color: $darkest_gray;
   color: $white;
+  overflow: visible;
+  z-index: 2;
+}
+
+.workspaceContainer {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -15,4 +22,49 @@
   padding: 5px;
   width: 100%;
   color: $black;
+}
+
+.workspaceToggleButtonContainer {
+  background-color: $charcoal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workspaceToggleButtonContainer.withFileBrowser {
+  justify-content: left;
+}
+
+.workplaceEditorWrapper {
+  overflow: scroll;
+  flex: 1;
+  grid-column: span 2;
+}
+
+.workplaceEditorWrapper.withFileBrowser {
+  grid-column: auto;
+}
+
+.workspaceWorkarea {
+  display: grid;
+  grid-template-columns: 30px auto;
+  grid-auto-rows: auto 1fr auto;
+  overflow: hidden;
+  flex: 1;
+}
+
+.workspaceWorkarea.withFileBrowser {
+  grid-template-columns: 156px auto;
+}
+
+.workspaceAndConsole {
+  height: 100%;
+  grid-area: workspace-and-console;
+  background-color: $darkest_gray;
+  color: $white;
+  overflow: hidden;
+}
+
+.workspaceWarningArea {
+  grid-column: span 2;
 }
