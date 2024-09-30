@@ -1,4 +1,4 @@
-import {render, screen, waitFor, fireEvent} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -6,15 +6,16 @@ import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
 import {
   SCHOOL_ID_SESSION_KEY,
-  SCHOOL_ZIP_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
+  SCHOOL_ZIP_SESSION_KEY,
+  SELECT_A_SCHOOL,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
-import {SELECT_A_SCHOOL} from '@cdo/apps/templates/SchoolZipSearch';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools');
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
   getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
 }));
@@ -155,9 +156,9 @@ describe('FinishTeacherAccount', () => {
         email_preference_opt_in: true,
         school: SELECT_A_SCHOOL,
         school_id: SELECT_A_SCHOOL,
-        school_zip: null,
-        school_name: null,
-        school_country: null,
+        school_zip: '',
+        school_name: '',
+        school_country: 'US',
       },
     };
     sessionStorage.setItem('email', email);
