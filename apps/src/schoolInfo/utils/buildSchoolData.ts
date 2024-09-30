@@ -51,7 +51,6 @@ export function buildSchoolData({
         school_info_attributes: {
           country,
           school_name: schoolName,
-          zip: country === US_COUNTRY_CODE ? schoolZip : undefined,
         },
       },
     };
