@@ -21,6 +21,8 @@ describe('LessonMaterialsContainer', () => {
         id: 1,
         position: 1,
         lessonPlanHtmlUrl: 'studio.code.org/lesson1',
+        standardsUrl: 'studio.code.org/standards',
+        vocabularyUrl: 'studio.code.org/vocab',
         resources: {
           Teacher: [
             {
@@ -76,7 +78,7 @@ describe('LessonMaterialsContainer', () => {
     (useLoaderData as jest.Mock).mockReturnValue(mockLessonData);
   });
 
-  it('renders dropdown with lessons and dropdown with unit resources', () => {
+  it('renders the component and dropdown with lessons', () => {
     render(<LessonMaterialsContainer />);
 
     // check for unit resources dropdown
@@ -97,12 +99,15 @@ describe('LessonMaterialsContainer', () => {
   it('renders the student and teacher resources for the first lesson on render', () => {
     render(<LessonMaterialsContainer />);
 
-    // Teacher resources, including lesson plan
+    // Teacher resources, including lesson plan, unit vocab and unit standards
     screen.getByText('Teacher Resources');
     screen.getByTestId('resource-icon-' + RESOURCE_TYPE.SLIDES.icon);
     screen.getByText('Slides: my slides');
     screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LESSON_PLAN.icon);
     screen.getByText('Lesson Plan: First lesson');
+    // checks that standards and vocab are rendered only once and not rendred in the "student resoruces section"
+    screen.getByText('Unit 3 Standards');
+    screen.getByText('Unit 3 Vocabulary');
 
     // Student resources
     screen.getByText('Student Resources');

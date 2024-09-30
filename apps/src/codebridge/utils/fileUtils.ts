@@ -24,7 +24,7 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
     if (file.name.endsWith('.py')) {
       return {iconName: 'python', iconStyle: 'regular', isBrand: true};
     }
-    return {iconName: 'file', iconStyle: 'solid'};
+    return {iconName: 'file', iconStyle: 'regular'};
   }
   if (file.type === ProjectFileType.VALIDATION) {
     return {iconName: 'flask', iconStyle: 'solid'};

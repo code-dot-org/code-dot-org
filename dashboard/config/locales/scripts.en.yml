@@ -18982,9 +18982,9 @@ en:
           name: foundations-gen-ai-2024
           title: Foundations of Generative AI
           description_audience: ''
-          description_short: ''
+          description_short: Builds a foundational understanding of text-based generative AI models
           description: This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
-          student_description: ''
+          student_description: Learn how chatbots and large-language models work behind the scenes!
         customizing-llms-2024:
           lessons: {}
           lesson_groups: {}
@@ -19148,7 +19148,15 @@ en:
           description: ''
           student_description: 'Click on the number 1 to get started! '
         computer-systems-playground:
-          lessons: {}
+          lessons:
+            lesson-2:
+              name: Lesson 1
+            lesson-3:
+              name: Lesson 2
+            lesson-1:
+              name: Lesson 3 - Buttons
+            lesson-4:
+              name: Sensors
           lesson_groups: {}
           name: computer-systems-playground
           title: "[PLAYGROUND] Computer Systems and Devices (with micro:bit)"

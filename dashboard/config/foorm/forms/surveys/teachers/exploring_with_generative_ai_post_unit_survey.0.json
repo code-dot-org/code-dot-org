@@ -8,20 +8,20 @@
         {
           "type": "panel",
           "name": "testing_panel",
-          "visible": true,
+          "visible": false,
           "title": " ",
           "elements": [
             {
               "type": "html",
               "name": "testing_warning",
-              "html": "<h2 style='background-color: yellow'>Panel for variable testing (hide before shipping and set readOnly = True)</h2>"
+              "html": "<h2 style='background-color: yellow'>Panel for variable testing</P> (hide before shipping and set readOnly = True)</h2>"
             },
             {
               "type": "radiogroup",
               "name": "unit_variable_name",
-              "defaultValueExpression": "{survey_variable}",
+              "defaultValueExpression": "{unit_number}",
               "startWithNewLine": false,
-              "readOnly": false,
+              "readOnly": true,
               "visible": true,
               "choices": [
                 {
@@ -82,7 +82,7 @@
         {
           "type": "matrix",
           "name": "met_learning_objectives",
-          "title": "After completing <this unit - Q.0>, what percentage of students were able to...",
+          "title": "After completing this unit, what percentage of students were able to...",
           "columns": [
             {
               "value": "pct0_24",
@@ -134,6 +134,15 @@
             {
               "value": "explain_impact_gen_ai",
               "text": "Describe and explain the real-world impacts of generative AI"
+            },
+            {
+              "value": "articulate_bias_ai",
+              "text": "Identify and articulate potential biases in AI models"
+            },
+            {
+              "value": "create_model_cards",
+              "text": "Create Model Cards that document the intended use, risks, and limitations of their AI applications",
+              "visibleIf": "{unit_variable_name} = 'unit_2'"
             }
           ]
         },
@@ -141,6 +150,7 @@
           "type": "rating",
           "name": "effective_ethical_impact",
           "title": "Was the content in {unit_variable_name} effective in introducing students to ethical and real-world impacts of generative AI?",
+          "visible": false,
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Effective At All",
@@ -157,8 +167,18 @@
         },
         {
           "type": "rating",
+          "name": "unit_easy_to_teach",
+          "title": "Did this unit’s structure and content made it easy to teach it effectively?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Easy at all",
+          "maxRateDescription": "Very Easy"
+        },
+        {
+          "type": "rating",
           "name": "instructional_materials",
           "title": "Were instructional materials clear and easy to follow?",
+          "visible": false,
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Clear or Easy to Follow",
@@ -168,6 +188,7 @@
           "type": "rating",
           "name": "concepts_easy_to_teach",
           "title": "How easy was it for you to teach the concepts in {unit_variable_name} with the resources provided?",
+          "visible": false,
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Easy at all",
@@ -177,37 +198,70 @@
           "type": "rating",
           "name": "ai_discussions_easy_to_facilitate",
           "title": "How easy was it for you facilitate discussions on the ethical implications of generative AI with the resources provided in this unit?",
+          "visible": false,
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Easy at All",
           "maxRateDescription": "Very Easy"
         },
         {
-          "type": "rating",
-          "name": "ethical_opportunities",
-          "title": "Were Ethical Opportunities and LEADERS Framework helpful to support your teaching?",
-          "rateCount": 7,
-          "rateMax": 7,
-          "minRateDescription": "Not Helpful at All",
-          "maxRateDescription": "Very Helpful"
-        },
-        {
-          "type": "rating",
-          "name": "in_class_activities",
-          "title": "Were in-class activities and activity guides helpful to support your teaching?",
-          "rateCount": 7,
-          "rateMax": 7,
-          "minRateDescription": "Not Helpful at All",
-          "maxRateDescription": "Very Helpful"
-        },
-        {
-          "type": "rating",
-          "name": "class_discussions",
-          "title": "Were class discussions and discussion strategies helpful to support your teaching?",
-          "rateCount": 7,
-          "rateMax": 7,
-          "minRateDescription": "Not Helpful at All",
-          "maxRateDescription": "Very Helpful"
+          "type": "matrix",
+          "name": "teaching_resources_useful_matrix",
+          "title": "How useful did you find each of the following to support your teaching:",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Not Helpful at All"
+            },
+            {
+              "value": "2",
+              "text": "Not Helpful"
+            },
+            {
+              "value": "3",
+              "text": "Not Too helpful"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Somewhat helpful"
+            },
+            {
+              "value": "6",
+              "text": "Helpful"
+            },
+            {
+              "value": "7",
+              "text": "Very Helpful"
+            }
+          ],
+          "rows": [
+            {
+              "value": "class_discussions",
+              "text": "Class discussions and discussion strategies"
+            },
+            {
+              "value": "ethical_opportunities",
+              "text": "Ethical Opportunities and LEADERS Framework"
+            },
+            {
+              "value": "in_class_activities",
+              "text": "In-class activities and activity guides"
+            },
+            {
+              "value": "chatbot_interface",
+              "text": "Chatbot interface",
+              "visibleIf": "{unit_variable_name} = 'unit_2'"
+            },
+            {
+              "value": "chatbot_features",
+              "text": "Features available in the chatbot tool",
+              "visibleIf": "{unit_variable_name} = 'unit_2'"
+            }
+          ]
         },
         {
           "type": "rating",
@@ -250,6 +304,7 @@
         {
           "type": "rating",
           "name": "confidence_teaching",
+          "visible": false,
           "title": "Compared to when you started teaching {unit_variable_name}, how confident did you feel about teaching generative AI concepts by the end of the unit?",
           "rateCount": 7,
           "rateMax": 7,
@@ -260,6 +315,7 @@
           "type": "rating",
           "name": "likely_teach_again",
           "title": "How likely are you to teach {unit_variable_name} again?",
+          "visible": false,
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Likely At All",
@@ -269,6 +325,7 @@
           "type": "text",
           "name": "likely_teach_again_not_comment",
           "visibleIf": "{likely_teach_again} < '4'",
+          "visible": false,
           "title": "Could you share why you are not inclined to teach it again?"
         },
         {
