@@ -104,12 +104,13 @@ $(document).ready(() => {
   });
 
   function cleanSchoolInfo() {
-    // Clear school_id if the id is one of the non-school options
+    // Clear school_id and zip if the searched school is not found.
     const newSchoolIdEl = $(
       'select[name="user[school_info_attributes][school_id]"]'
     );
     if (NON_SCHOOL_OPTIONS_ARRAY.includes(newSchoolIdEl.val())) {
       newSchoolIdEl.val('');
+      $('input[name="user[school_info_attributes][school_zip]"]').val('');
     }
 
     // Clear country if not selected
