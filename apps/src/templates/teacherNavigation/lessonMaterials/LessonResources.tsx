@@ -3,6 +3,7 @@ import React from 'react';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
+import {Resource} from './LessonMaterialTypes';
 import ResourceRow from './ResourceRow';
 
 import styles from './lesson-materials.module.scss';
@@ -15,14 +16,7 @@ type LessonResourcesProps = {
   standardsUrl?: string;
   vocabularyUrl?: string;
   lessonName?: string;
-  resources: {
-    key: string;
-    name: string;
-    url: string;
-    downloadUrl?: string;
-    audience: string;
-    type: string;
-  }[];
+  resources: Resource[];
 };
 
 const LessonResources: React.FC<LessonResourcesProps> = ({

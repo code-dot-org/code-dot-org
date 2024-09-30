@@ -1,8 +1,8 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
-import {RESOURCE_TYPE} from '@cdo/apps/templates/teacherNavigation/ResourceIconType';
-import ResourceRow from '@cdo/apps/templates/teacherNavigation/ResourceRow';
+import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import ResourceRow from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceRow';
 
 describe('ResourceRow', () => {
   const mockResourceData = {
@@ -30,7 +30,7 @@ describe('ResourceRow', () => {
     screen.getByText('Handout: Handout for teacher');
     screen.getByText('3.2');
 
-    screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LINK.icon);
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LINK.icon);
 
     screen.getByTestId('view-options-dropdown');
   });
