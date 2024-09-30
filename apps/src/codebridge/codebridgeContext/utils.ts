@@ -6,6 +6,8 @@ import {
 } from '@codebridge/types';
 import {useMemo} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+
 import {DEFAULT_FOLDER_ID} from '../constants';
 
 import {PROJECT_REDUCER_ACTIONS} from './constants';
@@ -27,8 +29,6 @@ import {
   DeleteFolderFunction,
   SetFileTypeFunction,
 } from './types';
-
-const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
 
 export const getNextFileId = (files: ProjectFile[]) => {
   return String(Math.max(0, ...files.map(f => Number(f.id))) + 1);
@@ -77,7 +77,7 @@ export const useProjectUtilities = (
         fileId,
         fileName,
         folderId = DEFAULT_FOLDER_ID,
-        contents = DEFAULT_NEW_FILE_CONTENTS,
+        contents = codebridgeI18n.defaultNewFileContents({fileName}),
       }) => {
         dispatch({
           type: PROJECT_REDUCER_ACTIONS.NEW_FILE,
