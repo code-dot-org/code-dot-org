@@ -6,21 +6,16 @@ export type Lesson = {
   standardsUrl: string;
   vocabularyUrl: string;
   resources: {
-    Teacher: {
-      key: string;
-      name: string;
-      url: string;
-      downloadUrl?: string;
-      audience: string;
-      type: string;
-    }[];
-    Student: {
-      key: string;
-      name: string;
-      url: string;
-      downloadUrl?: string;
-      audience: string;
-      type: string;
-    }[];
+    Teacher: Resource[];
+    Student: Resource[];
   };
+};
+
+export type Resource = {
+  key: string;
+  name: string;
+  url: string;
+  downloadUrl?: string;
+  audience: string;
+  type: string;
 };
