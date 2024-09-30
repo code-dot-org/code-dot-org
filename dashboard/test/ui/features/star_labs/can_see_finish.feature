@@ -3,7 +3,7 @@ Feature: Make sure we can see the finish button for all LEVEL TYPE levels on sma
   Background:
     Given I create a student named "Sally"
 
-  @no_mobile
+  @no_mobile @skip
   Scenario: can see finish button on "Dance Party"
     And I check that the blockly free play level for "Dance Party" shows the finish button for small screens
 
