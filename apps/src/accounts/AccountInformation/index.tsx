@@ -171,7 +171,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     <>
       <hr />
       <Heading2 visualAppearance="heading-sm" className={styles.sectionHeader}>
-        Account information
+        {i18n.accountInformationAccountInformation()}
       </Heading2>
       <form>
         <div className={styles.inputContainer}>
