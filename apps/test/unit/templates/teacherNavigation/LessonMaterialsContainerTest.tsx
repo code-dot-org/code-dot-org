@@ -31,6 +31,23 @@ describe('LessonMaterialsContainer', () => {
               downloadUrl: 'google.com',
               audience: 'Teacher',
             },
+            {
+              type: 'Slides',
+              key: 'teacherSlides',
+              name: 'my slides',
+              url: 'https://docs.google.com/presentation/d/ABC/edit',
+              audience: 'Teacher',
+            },
+          ],
+          Student: [
+            {
+              type: 'Video',
+              key: 'resourceKey2',
+              name: 'my linked video',
+              url: 'google.com',
+              downloadUrl: 'google.com',
+              audience: 'Student',
+            },
           ],
         },
       },
@@ -59,7 +76,7 @@ describe('LessonMaterialsContainer', () => {
     (useLoaderData as jest.Mock).mockReturnValue(mockLessonData);
   });
 
-  it('renders dropdown with lessons and dropdown with unit resources', () => {
+  it('renders the component and dropdown with lessons', () => {
     render(<LessonMaterialsContainer />);
 
     // check for unit resources dropdown
@@ -77,16 +94,23 @@ describe('LessonMaterialsContainer', () => {
     screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
   });
 
-  it('renders the teacher resources, including the lesson plan, for the first lesson on render', () => {
+  it('renders the student and teacher resources for the first lesson on render', () => {
     render(<LessonMaterialsContainer />);
 
-    screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LINK.icon);
-    screen.getByText('my link resource');
+    // Teacher resources, including lesson plan
+    screen.getByText('Teacher Resources');
+    screen.getByTestId('resource-icon-' + RESOURCE_TYPE.SLIDES.icon);
+    screen.getByText('Slides: my slides');
     screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LESSON_PLAN.icon);
-    screen.getByText('Lesson Plan');
+    screen.getByText('Lesson Plan: First lesson');
+
+    // Student resources
+    screen.getByText('Student Resources');
+    screen.getByTestId('resource-icon-' + RESOURCE_TYPE.VIDEO.icon);
+    screen.getByText('Video: my linked video');
   });
 
-  it('renders the teacher resources for the new lesson when lesson is changed', () => {
+  it('renders the resources for the new lesson when lesson is changed', () => {
     render(<LessonMaterialsContainer />);
 
     const selectedLessonInput = screen.getAllByRole('combobox')[0];
@@ -94,12 +118,12 @@ describe('LessonMaterialsContainer', () => {
     fireEvent.change(selectedLessonInput, {target: {value: '2'}});
 
     screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LESSON_PLAN.icon);
-    screen.getByText('Lesson Plan');
+    screen.getByText('Lesson Plan: Second lesson');
 
     screen.getByTestId('resource-icon-' + RESOURCE_TYPE.VIDEO.icon);
-    screen.getByText('my video resource');
+    screen.getByText('Video: my video resource');
     expect(
-      screen.queryAllByTestId('resource-icon-' + RESOURCE_TYPE.LINK.icon)
+      screen.queryAllByTestId('resource-icon-' + RESOURCE_TYPE.SLIDES.icon)
         .length === 0
     );
   });

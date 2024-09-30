@@ -1,0 +1,264 @@
+{
+  "title": "Code.org Teacher Survey",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro_text",
+          "html": "<h1>Welcome to Code.org's Exploring with Generative AI \n<p><h2>Getting Started</h2><h3>Teacher Survey\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better our teachers' experience with Code.org's Lesson 2: Research Process.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "first_time_teaching_gen_ai",
+          "title": "Is this your first time teaching a Code.org Generative AI Unit?",
+          "description": "This getting started survey appears at the beginning of each Code.org Generative AI unit. If you are teaching multiple units, please only complete this survey once.",
+          "choices": [
+            {
+              "value": true,
+              "text": "Yes, this is the first Code.org Generative AI unit I am teaching"
+            },
+            {
+              "value": false,
+              "text": "No, I have already taught other Code.org Generative AI units"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "skip_survey",
+          "visibleIf": "{first_time_teaching_gen_ai} = false",
+          "html": "<h2><strong>You can skip this survey</strong></h3>\n<p></p><b><font size=3>If you've already completed this survey when you taught another Code.org Gen AI unit: thank you! You do not need to complete it again.</p>"
+        },
+        {
+          "type": "html",
+          "name": "teaching_background_header",
+          "visibleIf": "{first_time_teaching_gen_ai} = true",
+          "html": "<h2>Your Background</h1>\n<p><span style='font-size: 12pt;'>We'd like to get to know you. Please share with us a little bit about you and your background.</span></p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "teacher_role",
+          "visibleIf": "{first_time_teaching_gen_ai} = true",
+          "title": "Which best describes you?",
+          "choices": [
+            {
+              "value": "cs_teacher",
+              "text": "Computer Science teacher"
+            },
+            {
+              "value": "classroom_teacher",
+              "text": "Classroom teacher"
+            },
+            {
+              "value": "stem_teacher",
+              "text": "STEM / Technology teacher"
+            },
+            {
+              "value": "Librarian",
+              "text": "Librarian / school media specialist"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "teaching_experience_cs_year_groups",
+          "visibleIf": "{first_time_teaching_gen_ai} = true",
+          "title": "How many years have you been teaching Computer Science?",
+          "choices": [
+            {
+              "value": "none",
+              "text": "I have not taught Computer Science before"
+            },
+            {
+              "value": "years_0",
+              "text": "Less than one year"
+            },
+            {
+              "value": "years_1_2",
+              "text": "Between 1 and 2 years"
+            },
+            {
+              "value": "years_3_5",
+              "text": "Between 3 and 5 years"
+            },
+            {
+              "value": "years_6_plus",
+              "text": "More than 5 years"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "experience_teaching_ai",
+          "visibleIf": "{first_time_teaching_gen_ai} = true",
+          "title": "Have you taught AI concepts before?",
+          "choices": [
+            {
+              "value": true,
+              "text": "Yes"
+            },
+            {
+              "value": false,
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "experience_teaching_ai_description",
+          "visibleIf": "{experience_teaching_ai} = true",
+          "title": "Please briefly describe the AI content you've taught before and the context in which you taught it.",
+          "rows": 2
+        },
+        {
+          "type": "html",
+          "name": "module_expectations_header",
+          "visibleIf": "{first_time_teaching_gen_ai} = true",
+          "html": "<h2>Your Goals and Expectations</h1>\n<p><span style='font-size: 12pt;'>Please share with us what drives you to teach Generative AI and what barriers do you anticipate.</span></p>"
+        },
+        {
+          "type": "checkbox",
+          "name": "module_goals",
+          "visibleIf": "{first_time_teaching_gen_ai} = true",
+          "title": "What are your primary goals in teaching this unit?",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "student_understanding_concepts",
+              "text": "Enhance students' understanding of generative AI and large language models (LLMs)."
+            },
+            {
+              "value": "stimulate_interest_cs_careers",
+              "text": "Stimulate interest in AI and technology-related careers among students."
+            },
+            {
+              "value": "critical_thinking",
+              "text": "Develop students' critical thinking and problem-solving abilities through AI projects."
+            },
+            {
+              "value": "ethical_considerations",
+              "text": "Integrate ethical considerations of technology use into students' learning."
+            },
+            {
+              "value": "creativity_innovation",
+              "text": "Encourage creativity and innovation in the development of AI-driven applications."
+            },
+            {
+              "value": "other",
+              "text": "Other."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "module_goals_other_comment",
+          "visibleIf": "{module_goals} anyOf ['other']",
+          "title": "Please describe what other goal do you have for this unit."
+        },
+        {
+          "type": "checkbox",
+          "name": "module_challenges",
+          "visibleIf": "{first_time_teaching_gen_ai} = true",
+          "title": "What challenges do you anticipate in teaching Exploring Generative AI?",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "lack_student_interest",
+              "text": "Lack of student interest or motivation."
+            },
+            {
+              "value": "own_understanding_complex_concepts",
+              "text": "Difficulty in developing my own understanding of complex AI concepts."
+            },
+            {
+              "value": "teaching_complex_concepts",
+              "text": "Difficulty of teaching complex AI concepts."
+            },
+            {
+              "value": "time_constraints",
+              "text": "Time constraints within the academic calendar that limit how much content I can teach."
+            },
+            {
+              "value": "integrate_into_standards",
+              "text": "Integrating the unit with existing curriculum standards and requirements."
+            },
+            {
+              "value": "diverse_learning",
+              "text": "Managing diverse learning speeds and styles within the classroom."
+            },
+            {
+              "value": "address_ethical_implications",
+              "text": "Addressing ethical implications and societal impacts of AI effectively."
+            },
+            {
+              "value": "other",
+              "text": "Other."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "module_challenges_other_comment",
+          "visibleIf": "{module_challenges} anyOf ['other']",
+          "title": "Please describe what other challenges you anticipate for this unit."
+        },
+        {
+          "type": "checkbox",
+          "name": "plans_curriculum_integration",
+          "visibleIf": "{first_time_teaching_gen_ai} = true",
+          "title": "How do you plan to integrate the unit into your existing curriculum?",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "standalone",
+              "text": "As a standalone unit focused exclusively on generative AI"
+            },
+            {
+              "value": "integrated_into_cs_course",
+              "text": "Integrated into a broader computer science or technology course."
+            },
+            {
+              "value": "cross_curricular",
+              "text": "Cross-curricular integration into a course for subjects other than computer science (ie: math, science, art)."
+            },
+            {
+              "value": "extracurricular",
+              "text": "Through extracurricular/out-of-school clubs or activities."
+            },
+            {
+              "value": "competition",
+              "text": "As a learning experience culminating in a showcase or competition."
+            },
+            {
+              "value": "interdisciplinary",
+              "text": "By aligning the unit with other content  or projects to enhance interdisciplinary learning."
+            },
+            {
+              "value": "other",
+              "text": "Other."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "plans_curriculum_integration_other",
+          "visibleIf": "{plans_curriculum_integration} anyOf ['other']",
+          "title": "Please describe in what other ways you plan to integrate this unit into your curriculum."
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

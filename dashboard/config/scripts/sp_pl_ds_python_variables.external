@@ -1,0 +1,56 @@
+name 'sp-pl-DS_Python-Variables'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Variables
+
+<img src="https://images.code.org/5de949b2444cea4cd726ff53548b8702-image-1727203455539.png" alt="pandas logo" width="50px" style="border-radius:20px; float:left; margin: 0 0 10px 0px;">
+
+### What did you discover from the modifications you made to the previous code?
+
+<img src="https://images.code.org/051f1d57020960bc5c4374e4691379d2-image-1727203669873.png" alt="pandas logo" width="150px" style="border-radius:20px; float:right; margin: 0 0 10px 0px;">
+
+## Variables
+#### A **variable** is a container that stores a value in memory. 
+#### A variable can only hold **one value** at a time. 
+
+
+
+## Data Type
+#### A **data type** is the format of the data that can be stored in a variable.
+
+![](https://images.code.org/83801bad4dc34715b6cfd9ada97d5313-image-1727203773189.png)
+#### *Notice how data types are not named when defining variables in Python. Instead, Python automatically assigns the data type based on the value you input.*
+
+## Creating a Variable 
+
+   <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/4c3ef8ef7dc7363dc0b8ed512ab3836a-image-1727209826025.png" alt="my_score=575" width="100%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+            When we want to create a variable, we write the <b>name</b> we want to use for the information we store.
+            </td>
+        </tr>
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/370df57b0518a3aee2e4c9861b45f7a5-image-1727211074412.png" alt="my_score=75" width="100%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+                We use the <b>assignment operator</b> (=) to set or change the value assigned to the variable.
+            </td>
+        </tr>
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/00824a86b12347424b5e6f2cbba0d745-image-1727210984964.png" alt="Image 3" width="100%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+                Then we can specifiy the <b>starting value</b> to what we want the variable to store.
+            </td>
+        </tr>
+    </table>
+
+![]()
+MARKDOWN

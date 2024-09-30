@@ -226,7 +226,8 @@ gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
-gem 'aws-sdk-autoscaling'
+gem 'aws-sdk-applicationautoscaling'
+gem 'aws-sdk-autoscaling', '>= 1.121.0'
 gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
@@ -275,8 +276,8 @@ gem 'oj', '~> 3.10'
 gem 'rest-client', '~> 2.0.1'
 
 # A rest-client dependency
-# This is the latest version that's installing successfully
-gem 'unf_ext', '0.0.7.2'
+# Needs to be at least this version to install successfully on some ARM processors.
+gem 'unf_ext', '0.0.7.4'
 
 # Generate SSL certificates.
 gem 'acmesmith', '~> 2.3.1'

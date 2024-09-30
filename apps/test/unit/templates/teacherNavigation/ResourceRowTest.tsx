@@ -28,7 +28,7 @@ describe('ResourceRow', () => {
   it('renders the resource name, position, icon, and dropdown correctly', () => {
     renderDefault();
 
-    screen.getByText('Handout for teacher');
+    screen.getByText('Handout: Handout for teacher');
     screen.getByText('3.2');
 
     screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LINK.icon);

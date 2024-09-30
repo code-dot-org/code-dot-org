@@ -28,13 +28,13 @@ export interface LinkBaseProps {
   role?: string;
 }
 
-type LinkWithChildren = LinkBaseProps & {
+export type LinkWithChildren = LinkBaseProps & {
   /** Link content */
   children: React.ReactNode;
   text?: never;
 };
 
-type LinkWithText = LinkBaseProps & {
+export type LinkWithText = LinkBaseProps & {
   /** Link text content */
   text: string;
   children?: never;
