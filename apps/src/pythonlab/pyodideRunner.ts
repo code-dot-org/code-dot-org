@@ -19,14 +19,21 @@ export async function handleRunClick(
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined,
   progressManager: ProgressManager | null,
-  validationFile?: ProjectFile
+  validationFile?: ProjectFile,
+  copyValidationFile?: boolean
 ) {
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
   }
   if (runTests) {
-    await runAllTests(source, dispatch, progressManager, validationFile);
+    await runAllTests(
+      source,
+      dispatch,
+      progressManager,
+      validationFile,
+      copyValidationFile
+    );
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;

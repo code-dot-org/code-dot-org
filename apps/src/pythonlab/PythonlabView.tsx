@@ -149,7 +149,8 @@ const PythonlabView: React.FunctionComponent = () => {
       dispatch,
       source,
       progressManager,
-      validationFileToSend
+      validationFileToSend,
+      !isStartMode // Don't copy the validation file in start mode.
     );
     // Only send a predict level report if this is a predict level and the predict
     // answer was not locked.
