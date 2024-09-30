@@ -65,7 +65,6 @@ experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 // Enables LMS cards in the LoginTypePicker during section creation
 experiments.SECTION_CREATE_LMS_CARDS = 'section_create_lms_cards';
-experiments.AI_ASSESSMENTS_ANNOUNCEMENT = 'ai-assessments-announcement';
 experiments.LTI_ACCOUNT_UNLINKING = 'lti_account_unlinking';
 
 /**

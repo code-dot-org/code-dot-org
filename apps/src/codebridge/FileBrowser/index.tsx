@@ -7,17 +7,17 @@ import {
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
+import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
 import {
-  ProjectType,
-  FolderId,
-  ProjectFile,
-  ProjectFolder,
-} from '@codebridge/types';
-import {
+  checkForDuplicateFilename,
+  checkForDuplicateFoldername,
   findFolder,
   getErrorMessage,
   getFileIconNameAndStyle,
+  sendCodebridgeAnalyticsEvent,
   shouldShowFile,
+  validateFileName,
+  validateFolderName,
 } from '@codebridge/utils';
 import {
   DndContext,
@@ -48,11 +48,11 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
-
 import {Draggable, DragDataType} from './Draggable';
 import {Droppable, DropDataType} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
+import {FileUploader} from './FileUploader';
+import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
 import {
   DragType,
   downloadFileType,
@@ -95,9 +95,6 @@ const extractInput = (promiseResults: DialogClosePromiseReturnType): string => {
   return '';
 };
 
-// restrict typed in input to what we consider to be valid names, which for now are [a-zA-Z0-9_.].
-const validateName = (name: string = '') => !Boolean(name.match(/[^\w.]/));
-
 const InnerFileBrowser = React.memo(
   ({
     parentId,
@@ -135,10 +132,12 @@ const InnerFileBrowser = React.memo(
       deleteFile,
       toggleOpenFolder,
       deleteFolder,
-      config: {editableFileTypes},
+      config: {editableFileTypes, validMimeTypes},
     } = useCodebridgeContext();
     const dialogControl = useDialogControl();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const handleFileUpload = useHandleFileUpload(files);
+    const fileUploadErrorCallback = useFileUploadErrorCallback();
 
     const handleConfirmDeleteFile = (fileId: string) => {
       deleteFile(fileId);
@@ -306,8 +305,24 @@ const InnerFileBrowser = React.memo(
                         </span>
                         <span onClick={() => newFilePrompt(f.id)}>
                           <i className="fa-solid fa-plus" />{' '}
-                          {codebridgeI18n.addFile()}
+                          {codebridgeI18n.newFile()}
                         </span>
+                        <FileUploader
+                          validMimeTypes={validMimeTypes}
+                          callback={(fileName, contents) =>
+                            handleFileUpload({
+                              folderId: f.id,
+                              fileName,
+                              contents,
+                            })
+                          }
+                          errorCallback={fileUploadErrorCallback}
+                        >
+                          <span>
+                            <i className="fa-solid fa-upload" />{' '}
+                            {codebridgeI18n.uploadFile()}
+                          </span>
+                        </FileUploader>
                         <span onClick={() => handleDeleteFolder(f.id)}>
                           <i className="fa-solid fa-trash" />{' '}
                           {codebridgeI18n.deleteFolder()}
@@ -418,56 +433,6 @@ export const FileBrowser = React.memo(() => {
   const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
-  // Check if the filename is already in use in the given folder.
-  // If it is, alert the user and return true, otherwise return false.
-  const checkForDuplicateFilename = useMemo(
-    () =>
-      (
-        fileName: string,
-        folderId: string,
-        projectFiles: Record<string, ProjectFile>
-      ) => {
-        let message = undefined;
-        const existingFile = Object.values(projectFiles).find(
-          f => f.name === fileName && f.folderId === folderId
-        );
-        if (existingFile) {
-          message = codebridgeI18n.duplicateFileError({fileName});
-          if (
-            existingFile.type === ProjectFileType.SUPPORT ||
-            existingFile.type === ProjectFileType.VALIDATION
-          ) {
-            message = codebridgeI18n.duplicateSupportFileError({fileName});
-          }
-        }
-
-        return message;
-      },
-    []
-  );
-
-  // Check if the foldername is already in use in the given folder.
-  // If it is, alert the user and return true, otherwise return false.
-  const checkForDuplicateFoldername = useMemo(
-    () =>
-      (
-        folderName: string,
-        folderId: string,
-        projectFolders: Record<string, ProjectFolder>
-      ) => {
-        let message = undefined;
-        const existingFolder = Object.values(projectFolders).find(
-          f => f.name === folderName && f.parentId === folderId
-        );
-        if (existingFolder) {
-          message = codebridgeI18n.duplicateFolderError({folderName});
-        }
-
-        return message;
-      },
-    []
-  );
-
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
     () =>
       async (parentId = DEFAULT_FOLDER_ID) => {
@@ -478,7 +443,7 @@ export const FileBrowser = React.memo(() => {
             if (!folderName.length) {
               return;
             }
-            if (!validateName(folderName)) {
+            if (!validateFolderName(folderName)) {
               return codebridgeI18n.invalidNameError();
             }
             const existingFolder = Object.values(project.folders).some(
@@ -525,7 +490,7 @@ export const FileBrowser = React.memo(() => {
             if (!fileName.length) {
               return;
             }
-            if (!validateName(fileName)) {
+            if (!validateFileName(fileName)) {
               return codebridgeI18n.invalidNameError();
             }
             const duplicate = checkForDuplicateFilename(
@@ -557,7 +522,7 @@ export const FileBrowser = React.memo(() => {
 
         sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, appName);
       },
-    [dialogControl, project.files, newFile, appName, checkForDuplicateFilename]
+    [dialogControl, project.files, newFile, appName]
   );
 
   const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(
@@ -609,14 +574,7 @@ export const FileBrowser = React.memo(() => {
       }
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE, appName);
     },
-    [
-      project.files,
-      project.folders,
-      dialogControl,
-      appName,
-      checkForDuplicateFilename,
-      moveFile,
-    ]
+    [project.files, project.folders, dialogControl, appName, moveFile]
   );
 
   const moveFolderPrompt: FilesComponentProps['moveFolderPrompt'] = useMemo(
@@ -667,13 +625,7 @@ export const FileBrowser = React.memo(() => {
       }
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FOLDER, appName);
     },
-    [
-      project.folders,
-      dialogControl,
-      appName,
-      checkForDuplicateFoldername,
-      moveFolder,
-    ]
+    [project.folders, dialogControl, appName, moveFolder]
   );
 
   const renameFilePrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
@@ -690,7 +642,7 @@ export const FileBrowser = React.memo(() => {
           if (newName === file.name) {
             return;
           }
-          if (!validateName(newName)) {
+          if (!validateFileName(newName)) {
             return codebridgeI18n.invalidNameError();
           }
           const duplicate = checkForDuplicateFilename(
@@ -714,13 +666,7 @@ export const FileBrowser = React.memo(() => {
       renameFile(fileId, newName);
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, appName);
     },
-    [
-      dialogControl,
-      project.files,
-      checkForDuplicateFilename,
-      renameFile,
-      appName,
-    ]
+    [dialogControl, project.files, renameFile, appName]
   );
 
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
@@ -737,7 +683,7 @@ export const FileBrowser = React.memo(() => {
           if (newName === folder.name) {
             return;
           }
-          if (!validateName(newName)) {
+          if (!validateFolderName(newName)) {
             return codebridgeI18n.invalidNameError();
           }
           const existingFolder = Object.values(project.folders).some(
@@ -762,13 +708,37 @@ export const FileBrowser = React.memo(() => {
     () => (e: DragOverEvent) => {
       if (e?.over) {
         if (e.active.data.current?.type === DragType.FOLDER) {
-          moveFolder(e.active.data.current.id as string, e.over.id as string);
+          const duplicate = checkForDuplicateFoldername(
+            project.folders[e.active.data.current.id].name,
+            e.over.id as string,
+            project.folders
+          );
+          if (duplicate) {
+            dialogControl?.showDialog({
+              type: DialogType.GenericAlert,
+              title: duplicate,
+            });
+          } else {
+            moveFolder(e.active.data.current.id as string, e.over.id as string);
+          }
         } else if (e.active.data.current?.type === DragType.FILE) {
-          moveFile(e.active.data.current.id as string, e.over.id as string);
+          const duplicate = checkForDuplicateFilename(
+            project.files[e.active.data.current.id].name,
+            e.over.id as string,
+            project.files
+          );
+          if (duplicate) {
+            dialogControl?.showDialog({
+              type: DialogType.GenericAlert,
+              title: duplicate,
+            });
+          } else {
+            moveFile(e.active.data.current.id as string, e.over.id as string);
+          }
         }
       }
     },
-    [moveFile, moveFolder]
+    [dialogControl, moveFile, moveFolder, project.files, project.folders]
   );
 
   const sensors = useSensors(

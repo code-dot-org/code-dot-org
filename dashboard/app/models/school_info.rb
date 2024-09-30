@@ -32,6 +32,7 @@ class SchoolInfo < ApplicationRecord
     SCHOOL_TYPE_HOMESCHOOL = "homeschool".freeze,
     SCHOOL_TYPE_AFTER_SCHOOL = "afterschool".freeze,
     SCHOOL_TYPE_ORGANIZATION = "organization".freeze,
+    SCHOOL_TYPE_NO_SCHOOL_SETTING = "noSchoolSetting".freeze,
     SCHOOL_TYPE_OTHER = "other".freeze
   ].freeze
 
@@ -286,6 +287,7 @@ class SchoolInfo < ApplicationRecord
       SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL,
       SchoolInfo::SCHOOL_TYPE_ORGANIZATION,
       SchoolInfo::SCHOOL_TYPE_OTHER,
+      SchoolInfo::SCHOOL_TYPE_NO_SCHOOL_SETTING,
     ].include?(school_type)
 
     # Given we got past above cases, school name is sufficient
