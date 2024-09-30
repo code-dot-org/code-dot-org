@@ -39,10 +39,13 @@ module Rack
       # @note Changes to the `request` should be made before the `response` is initialized to apply the changes.
       def call
         if request.params.key?(REGION_KEY)
-          setup_region(request.params[REGION_KEY]) if region_changed?(request.params[REGION_KEY])
+          new_region = request.params[REGION_KEY]
 
-          redirect_uri = URI(request_path_vars(:main_path).first || request.path)
+          main_path = request_path_vars(:main_path).first || request.path
+          redirect_uri = URI.parse region_available?(new_region) ? regional_path_for(new_region, main_path) : main_path
           redirect_uri.query = URI.encode_www_form(request.params.except(REGION_KEY)).presence
+
+          setup_region(new_region) if region_changed?(new_region)
 
           response.redirect(redirect_uri.to_s)
         elsif PATH_PATTERN.match?(request.path)
@@ -59,7 +62,7 @@ module Rack
           setup_region(ge_region) if region_changed?(ge_region)
         elsif region_available?(request.cookies[REGION_KEY]) && request_redirectable?
           # Redirects to the regional version of the path.
-          response.redirect ::File.join(ROOT_PATH, request.cookies[REGION_KEY], request.fullpath)
+          response.redirect regional_path_for(request.cookies[REGION_KEY], request.fullpath)
         end
 
         response.finish
@@ -128,6 +131,10 @@ module Rack
 
         # The application's routing path indicates that it is not an asset or public file path.
         app_route?(request.path)
+      end
+
+      private def regional_path_for(region, main_path)
+        ::File.join(ROOT_PATH, region, main_path)
       end
     end
 
