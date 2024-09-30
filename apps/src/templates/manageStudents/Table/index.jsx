@@ -6,6 +6,7 @@ import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
+import DCDO from '@cdo/apps/dcdo';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -537,7 +538,18 @@ class ManageStudentsTable extends Component {
     }
 
     if (this.props.currentUser?.isTeacher && this.props.currentUser?.inUSA) {
-      columns.push(UsStateColumn());
+      const availableUserNames = DCDO.get(
+        'section_us_state_column_enabled_for',
+        []
+      );
+
+      const usStateColumnEnabled =
+        Array.isArray(availableUserNames) &&
+        availableUserNames.some(userName =>
+          ['all', this.props.currentUser.userName].includes(userName)
+        );
+
+      usStateColumnEnabled && columns.push(UsStateColumn());
     }
 
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
