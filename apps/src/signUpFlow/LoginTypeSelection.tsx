@@ -44,11 +44,12 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
     useState(true);
+  const isTeacher =
+    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher';
 
-  const finishAccountUrl =
-    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
-      ? studio('/users/new_sign_up/finish_teacher_account')
-      : studio('/users/new_sign_up/finish_student_account');
+  const finishAccountUrl = isTeacher
+    ? studio('/users/new_sign_up/finish_teacher_account')
+    : studio('/users/new_sign_up/finish_student_account');
 
   useEffect(() => {
     async function getToken() {
@@ -238,34 +239,46 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <div className={style.greyTextbox}>
+            {!isTeacher && (
+              <div className={style.iconContainer}>
+                <img src={canvas} alt="Canvas logo" />
+                <img src={schoology} alt="Schoology logo" />
+              </div>
+            )}
             <BodyThreeText className={style.subheader}>
-              {locale.using_lms_platforms()}
+              {isTeacher
+                ? locale.using_lms_platforms()
+                : locale.does_your_school_use_an_lms()}
             </BodyThreeText>
             <BodyThreeText>
-              {locale.access_detailed_instructions()}
+              {isTeacher
+                ? locale.access_detailed_instructions()
+                : locale.ask_your_teacher_lms()}
             </BodyThreeText>
-            <div className={style.buttonContainer}>
-              <Button
-                href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
-                onClick={sendLMSAnalyticsEvent}
-                color={Button.ButtonColor.white}
-                text={'Canvas'}
-                icon={'arrow-up-right-from-square'}
-                __useDeprecatedTag
-              >
-                <img src={canvas} alt="" />
-              </Button>
-              <Button
-                href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
-                onClick={sendLMSAnalyticsEvent}
-                color={Button.ButtonColor.white}
-                text={'Schoology'}
-                icon={'arrow-up-right-from-square'}
-                __useDeprecatedTag
-              >
-                <img src={schoology} alt="" />
-              </Button>
-            </div>
+            {isTeacher && (
+              <div className={style.buttonContainer}>
+                <Button
+                  href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
+                  onClick={sendLMSAnalyticsEvent}
+                  color={Button.ButtonColor.white}
+                  text={'Canvas'}
+                  icon={'arrow-up-right-from-square'}
+                  __useDeprecatedTag
+                >
+                  <img src={canvas} alt="" />
+                </Button>
+                <Button
+                  href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
+                  onClick={sendLMSAnalyticsEvent}
+                  color={Button.ButtonColor.white}
+                  text={'Schoology'}
+                  icon={'arrow-up-right-from-square'}
+                  __useDeprecatedTag
+                >
+                  <img src={schoology} alt="" />
+                </Button>
+              </div>
+            )}
           </div>
         </div>
         <div className={style.dividerContainer}>
