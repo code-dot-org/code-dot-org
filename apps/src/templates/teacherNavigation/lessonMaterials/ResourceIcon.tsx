@@ -14,22 +14,27 @@ type ResourceIconProps = {
 };
 
 const computeIconType = (resourceType: string, resourceUrl: string) => {
+  const materialType = computeMaterialType(resourceType, resourceUrl);
+  return RESOURCE_TYPE[materialType];
+};
+
+const computeMaterialType = (resourceType: string, resourceUrl: string) => {
   if (isGDocsUrl(resourceUrl)) {
     if (resourceType === 'Slides') {
-      return RESOURCE_TYPE.SLIDES;
+      return 'SLIDES';
     } else {
-      return RESOURCE_TYPE.GOOGLE_DOC;
+      return 'GOOGLE_DOC';
     }
   } else if (resourceType === 'Video') {
-    return RESOURCE_TYPE.VIDEO;
+    return 'VIDEO';
   } else if (resourceType === 'Lesson Plan') {
-    return RESOURCE_TYPE.LESSON_PLAN;
+    return 'LESSON_PLAN';
   } else if (resourceType === 'Standards') {
-    return RESOURCE_TYPE.STANDARDS;
+    return 'STANDARDS';
   } else if (resourceType === 'Vocabulary') {
-    return RESOURCE_TYPE.VOCABULARY;
+    return 'VOCABULARY';
   } else {
-    return RESOURCE_TYPE.LINK;
+    return 'LINK';
   }
 };
 
