@@ -14,7 +14,7 @@ Feature: Using the manage students tab of the teacher dashboard
     And I wait until element "#uitest-manage-students-table" is visible
 
     # Add a family name for Sally
-    And I click selector ".ui-test-section-dropdown" once I see it
+    And I click selector "#uitest-manage-students-table th:contains(Actions) i" once I see it
     And I press the child number 0 of class ".pop-up-menu-item"
     And I wait until element with css selector "input[name='uitest-family-name']" is enabled
     And I press keys "SallyAlsoHasAVeryVeryLongLastName" for element "input[name='uitest-family-name']"
@@ -39,7 +39,7 @@ Feature: Using the manage students tab of the teacher dashboard
     Then I wait until element "#us-state-column-bulk-set-modal" is visible
     And element "#us-state-column-bulk-set-modal h4" contains text "Set state for all students"
     And element "#us-state-column-bulk-set-modal label[for='us-state']" contains text "State"
-    And element "#us-state-column-bulk-set-modal select#us-state" contains text "Choose a state"
+    And element "#us-state-column-bulk-set-modal select#us-state option:checked" contains text "Choose a state"
     And element "#us-state-column-bulk-set-modal" contains text "Please be sure to choose the correct state. For certain states, we may be required to obtain parental consent for student accounts."
     And the href of selector "#us-state-column-bulk-set-modal a:contains(Learn more about parental consent)" contains "https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts"
 
