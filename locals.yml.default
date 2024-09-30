@@ -42,6 +42,10 @@ use_my_apps: true
 # due to a difference in the language cookie between production and localhost.
 #load_locales: true
 
+# Avoid loading all i18n files up front, which can significantly slow down initialization.
+# Instead, it only loads i18n files that belong to the current locale.
+# Particularly useful when running subsets of unit tests locally.
+lazy_load_locales: true
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
