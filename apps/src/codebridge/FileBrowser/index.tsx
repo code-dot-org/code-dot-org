@@ -205,55 +205,36 @@ const InnerFileBrowser = React.memo(
       });
     };
 
-    const hasValidationFile = Object.values(files).find(
-      f => f.type === ProjectFileType.VALIDATION
-    );
     const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
-    const startModeFileDropdownOptions = (file: ProjectFile) => {
-      // We only support one validation file per project, so if we already have one,
-      // do not show the option to mark another file as validation.
-      const options = [];
-      if (!hasValidationFile) {
-        options.push(
-          <span
-            onClick={() => setFileType(file.id, ProjectFileType.VALIDATION)}
-            key={'make-validation'}
-          >
-            <i className={`fa-solid fa-flask`} />{' '}
-            {codebridgeI18n.makeValidation()}
-          </span>
-        );
+    const startModeFileDropdownOption = (file: ProjectFile) => {
+      if (file.type === ProjectFileType.VALIDATION) {
+        return null;
       }
-      if (
-        file.type === ProjectFileType.VALIDATION ||
-        file.type === ProjectFileType.SUPPORT
-      ) {
-        options.push(
-          <span
-            onClick={() => setFileType(file.id, ProjectFileType.STARTER)}
-            key={'make-starter'}
-          >
-            <i className={`fa-solid fa-eye`} /> {codebridgeI18n.makeStarter()}
-          </span>
-        );
-      }
-      if (
-        file.type === ProjectFileType.VALIDATION ||
-        file.type === ProjectFileType.STARTER ||
-        !file.type // A file wihtout a type is a starter file.
-      ) {
-        options.push(
-          <span
-            onClick={() => setFileType(file.id, ProjectFileType.SUPPORT)}
-            key={'make-support'}
-          >
-            <i className={`fa-solid fa-eye-slash`} />{' '}
-            {codebridgeI18n.makeSupport()}
-          </span>
-        );
-      }
-      return options;
+      const configurationOptions = {
+        type:
+          file.type === ProjectFileType.SUPPORT
+            ? ProjectFileType.STARTER
+            : ProjectFileType.SUPPORT,
+        key: `make-${
+          file.type === ProjectFileType.SUPPORT ? 'starter' : 'support'
+        }`,
+        icon: file.type === ProjectFileType.SUPPORT ? 'fa-eye' : 'fa-eye-slash',
+        text:
+          file.type === ProjectFileType.SUPPORT
+            ? codebridgeI18n.makeStarter()
+            : codebridgeI18n.makeSupport(),
+      };
+
+      return (
+        <span
+          onClick={() => setFileType(file.id, configurationOptions.type)}
+          key={configurationOptions.key}
+        >
+          <i className={`fa-solid ${configurationOptions.icon}`} />{' '}
+          {configurationOptions.text}
+        </span>
+      );
     };
 
     return (
@@ -404,7 +385,7 @@ const InnerFileBrowser = React.memo(
                           <i className="fa-solid fa-trash" />{' '}
                           {codebridgeI18n.deleteFile()}
                         </span>
-                        {isStartMode && startModeFileDropdownOptions(f)}
+                        {isStartMode && startModeFileDropdownOption(f)}
                       </span>
                     </PopUpButton>
                   )}
@@ -482,7 +463,7 @@ export const FileBrowser = React.memo(() => {
 
   const newFilePrompt: FilesComponentProps['newFilePrompt'] = useMemo(
     () =>
-      async (folderId = DEFAULT_FOLDER_ID) => {
+      async (folderId = DEFAULT_FOLDER_ID, type = ProjectFileType.STARTER) => {
         const results = await dialogControl?.showDialog({
           type: DialogType.GenericPrompt,
           title: codebridgeI18n.newFilePrompt(),

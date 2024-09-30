@@ -176,7 +176,6 @@ export interface LevelProperties {
   submittable?: boolean;
   finishUrl?: string;
   finishDialog?: string;
-  validationFile?: ProjectFile;
   offerTts?: boolean;
 }
 

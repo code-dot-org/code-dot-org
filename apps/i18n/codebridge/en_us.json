@@ -39,6 +39,7 @@
   "newFilePrompt": "Please name your new file",
   "newFolder": "New Folder",
   "newFolderPrompt": "Please name your new folder",
+  "newValidationFile": "New Validation File",
   "noFileExtensionError": "Please include a file extension",
   "noOpenFiles": "Open a file to get started!",
   "predictRunDisabledTooltip": "You must answer the question in the instructions before running the code.",

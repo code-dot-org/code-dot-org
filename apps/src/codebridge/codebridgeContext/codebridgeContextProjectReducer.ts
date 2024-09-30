@@ -26,11 +26,18 @@ export const projectReducer = (
       return newProject;
     }
     case PROJECT_REDUCER_ACTIONS.NEW_FILE: {
-      const {fileId, fileName, folderId, contents = ''} = <
+      const {
+        fileId,
+        fileName,
+        folderId,
+        contents = '',
+        type = ProjectFileType.STARTER,
+      } = <
         DefaultFilePayload & {
           fileName: string;
           contents?: string;
           folderId: FolderId;
+          type?: ProjectFileType;
         }
       >action.payload;
 
@@ -45,6 +52,7 @@ export const projectReducer = (
         contents,
 
         folderId,
+        type,
       };
 
       return projectReducer(newProject, {
