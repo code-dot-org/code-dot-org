@@ -38,6 +38,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
+  const [isGdprLoaded, setIsGdprLoaded] = useState(false);
 
   useEffect(() => {
     const fetchGdprData = async () => {
@@ -53,14 +54,20 @@ const FinishTeacherAccount: React.FunctionComponent<{
         }
       } catch (error) {
         console.error('Error fetching GDPR data:', error);
+      } finally {
+        setIsGdprLoaded(true);
       }
     };
     fetchGdprData();
   }, []);
 
+  // GDPR is valid if
+  // 1. The fetch call has completed AND
+  //   2. GDPR is showing AND checked OR
+  //   3. GDPR is not relevant (not showing)
   const gdprValid = useMemo(() => {
-    return (showGDPR && gdprChecked) || !showGDPR;
-  }, [showGDPR, gdprChecked]);
+    return isGdprLoaded && ((showGDPR && gdprChecked) || !showGDPR);
+  }, [showGDPR, gdprChecked, isGdprLoaded]);
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;

@@ -49,6 +49,7 @@ const FinishStudentAccount: React.FunctionComponent<{
 
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
+  const [isGdprLoaded, setIsGdprLoaded] = useState(false);
 
   useEffect(() => {
     const fetchGdprData = async () => {
@@ -64,14 +65,20 @@ const FinishStudentAccount: React.FunctionComponent<{
         }
       } catch (error) {
         console.error('Error fetching GDPR data:', error);
+      } finally {
+        setIsGdprLoaded(true);
       }
     };
     fetchGdprData();
   }, []);
 
+  // GDPR is valid if
+  // 1. The fetch call has completed AND
+  //   2. GDPR is showing AND checked OR
+  //   3. GDPR is not relevant (not showing)
   const gdprValid = useMemo(() => {
-    return (showGDPR && gdprChecked) || !showGDPR;
-  }, [showGDPR, gdprChecked]);
+    return isGdprLoaded && ((showGDPR && gdprChecked) || !showGDPR);
+  }, [showGDPR, gdprChecked, isGdprLoaded]);
 
   const onGDPRChange = (): void => {
     const newGdprCheckedChoice = !gdprChecked;
