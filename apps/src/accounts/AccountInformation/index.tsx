@@ -55,7 +55,9 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [currentPassword, setCurrentPassword] = useState('');
   const [showChangeEmailModal, setShowChangeEmailModal] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [showAccountUpdateSuccess, setShowAccountUpdateSuccess] =
+    useState(false);
+  const [showEmailUpdateSuccess, setShowEmailUpdateSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string[]>>({});
 
   const displayNameHelperMessage = useMemo(
@@ -103,7 +105,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     });
 
     if (response.ok) {
-      setSuccess(true);
+      setShowAccountUpdateSuccess(true);
     } else {
       const validationErrors = await response.json();
       setErrors(validationErrors);
@@ -159,6 +161,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     // update succeeded, hide modal and update email state with the new email
     setShowChangeEmailModal(false);
     setEmail(newEmail);
+    setShowEmailUpdateSuccess(true);
   };
 
   return (
@@ -207,7 +210,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
           {/* email */}
           {!teacherManagedAccount && !parentManagedAccount && (
-            <>
+            <div>
               <TextField
                 className={classNames(styles.input, styles.emailInput)}
                 label={i18n.accountInformationEmail()}
@@ -232,8 +235,15 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                     e.preventDefault();
                     setShowChangeEmailModal(true);
                   }}
-                  className={styles.link}
                   size="s"
+                />
+              )}
+              {showEmailUpdateSuccess && (
+                <Alert
+                  text={i18n.accountInformationEmailUpdateSuccess()}
+                  type={alertTypes.success}
+                  className={styles.alert}
+                  onClose={() => setShowEmailUpdateSuccess(false)}
                 />
               )}
               {showChangeEmailModal && (
@@ -245,7 +255,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                   currentHashedEmail={hashedEmail}
                 />
               )}
-            </>
+            </div>
           )}
 
           {/* no password because sponsored hint text */}
@@ -371,12 +381,12 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               className={styles.alert}
             />
           )}
-          {success && (
+          {showAccountUpdateSuccess && (
             <Alert
               text={i18n.accountInformationUpdateSuccess()}
               type={alertTypes.success}
               className={styles.alert}
-              onClose={() => setSuccess(false)}
+              onClose={() => setShowAccountUpdateSuccess(false)}
             />
           )}
         </div>
