@@ -3,6 +3,7 @@ import React, {useCallback, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
+import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
 import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -86,7 +87,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
     [isVersionHistoryOpen, loadError, loading]
   );
 
-  const tooltipProps = {
+  const tooltipProps: TooltipProps = {
     text: commonI18n.versionHistory_header(),
     direction: 'onLeft',
     tooltipId: 'version-history-tooltip',

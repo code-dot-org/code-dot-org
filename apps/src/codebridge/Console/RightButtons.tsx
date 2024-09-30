@@ -3,7 +3,7 @@ import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
-import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
+import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 import moduleStyles from './right-buttons.module.scss';
 import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
@@ -12,7 +12,7 @@ interface RightButtonsProps {
   clearOutput: () => void;
 }
 
-const tooltipProps = {
+const tooltipProps: TooltipProps = {
   text: codebridgeI18n.clearConsole(),
   size: 'xs',
   direction: 'onLeft',

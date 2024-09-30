@@ -5,6 +5,7 @@ import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
 import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -46,7 +47,7 @@ const SwapLayoutDropdown: React.FunctionComponent = () => {
       ? codebridgeI18n.verticalLayout()
       : codebridgeI18n.defaultLayout();
 
-  const tooltipProps = {
+  const tooltipProps: TooltipProps = {
     text: codebridgeI18n.changeLayout(),
     direction: 'onLeft',
     tooltipId: 'change-layout-tooltip',
