@@ -2,7 +2,7 @@ require 'selenium/webdriver'
 require 'webdrivers'
 
 module SeleniumBrowser
-  def self.local(browser: :chrome, headless: true)
+  def self.local(browser: :chrome, headless: true, selenium_url: nil)
     browser = browser.to_sym
     options = {}
     case browser
@@ -14,7 +14,17 @@ module SeleniumBrowser
       options[:options] = Selenium::WebDriver::Firefox::Options.new
       options[:options].headless! if headless
       options[:options].add_argument('window-size=1280,1024')
+    when :edge
+      options[:options] = Selenium::WebDriver::Edge::Options.new
+      options[:options].headless! if headless
+      options[:options].add_argument('window-size=1280,1024')
     end
+
+    if selenium_url
+      browser = :remote
+      options[:url] = selenium_url
+    end
+
     Selenium::WebDriver.for browser, options
   end
 

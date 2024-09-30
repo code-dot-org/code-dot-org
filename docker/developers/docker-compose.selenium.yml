@@ -1,0 +1,448 @@
+include:
+  - path: ./docker-compose.networks.yml
+
+services:
+  # This is a proxy service to allow our localhost-*.code.org domains to work
+  # when there is no network host.
+  selenium-proxy:
+    image: nginx:1.27.1-alpine3.20-perl
+    volumes:
+      - ./nginx-proxy.conf:/root/nginx-proxy.conf
+      - ./nginx-startup.sh:/docker-entrypoint.d/nginx-startup.sh
+    networks:
+      cdo_network_test:
+        aliases:
+          # The test aliases to map to host
+          - localhost-studio.code.org
+          - localhost.code.org
+          - localhost.hourofcode.com
+          - localhost.codeprojects.org
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # A Selenium grid hub that will run *-node services that are described below
+  selenium-grid-base: &selenium-grid-base
+    image: selenium/hub:${SELENIUM_HUB_VERSION}
+    hostname: selenium
+    expose:
+      # The Selenium 'Publish' port
+      - "4442:4442"
+      # The Selenium 'Subscribe' port
+      - "4443:4443"
+      # The Protocol port that our testing infrastructure connects to
+      - "4444:4444"  
+    ulimits: &selenium-ulimits
+      nofile:
+        soft: 32768
+        hard: 32768
+    networks:
+      cdo_network_test:
+
+  # This just runs selenium-grid within the isolated container network
+  selenium-grid-contained:
+    environment: &selenium-grid-contained-environment
+      SE_EVENT_BUS_HOST: selenium
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+    <<: *selenium-grid-base
+
+  # This runs selenium-grid such that it is visible to the host machine
+  selenium-grid:
+    <<: *selenium-grid-base
+    environment: &selenium-grid-environment
+      SE_EVENT_BUS_HOST: selenium
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+    ports:
+      # The Selenium 'Publish' port
+      - "4442:4442"
+      # The Selenium 'Subscribe' port
+      - "4443:4443"
+      # The Protocol port that our testing infrastructure connects to
+      - "4444:4444"  
+
+  selenium-video-contained: &selenium-video-base
+    hostname: selenium-video
+    image: codedotorg/selenium-video
+    build:
+      dockerfile: ./selenium-video.Dockerfile
+      context: ./selenium-video
+    expose:
+      - "9001" # The control server for the video service
+    ports:
+      - "9001:9001"
+    volumes:
+      - /tmp:/videos
+    networks:
+      cdo_network_test:
+
+  # Runs selenium grid and spins up all possible browser nodes
+  selenium-video:
+    image: alpine
+    depends_on:
+      selenium-video-contained:
+        condition: service_started
+    command: >
+      /bin/sh -c "
+        echo 'Selenium Video Service Started.' &&
+        echo &&
+        echo 'To run a UI test while recording, use the normal command and append \"record=<filename>\" to it:' &&
+        echo '  (you may substitute browser=firefox with chrome or edge as needed)' &&
+        echo 'bundle exec rake test:ui record=my-test-video browser=firefox selenium= feature=dashboard/test/ui/features/platform/signing_in.feature' &&
+        echo &&
+        echo 'Then you will find /tmp/my-test-video.firefox.mp4 afterward.'
+      "
+
+  # A Selenium server running Chrome for running UI tests contained in Docker
+  selenium-chrome-base: &selenium-chrome-base
+    hostname: selenium-chrome
+    image: seleniarm/standalone-chromium:${SELENIUM_CHROME_VERSION}
+    environment:
+      SE_VNC_PORT: 5910
+      SE_NO_VNC_PORT: 7910
+      DISPLAY_NUM: 100
+      DISPLAY: ':100.0'
+      JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
+    shm_size: '2gb'
+    expose:
+      - "5910" # The selenium direct VNC port
+      - "4444" # The selenium router port
+      - "7910" # The selenium NoVNC service port
+    # Many default ulimits are just too high
+    # And, so, it will consume way too much memory (16GB+)
+    ulimits: *selenium-ulimits
+
+  # A Selenium server running Chrome for running UI tests locally against a
+  # containerized dashboard server.
+  selenium-chrome-contained:
+    <<: *selenium-chrome-base
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Chrome for running UI tests locally
+  selenium-chrome-native:
+    <<: *selenium-chrome-base
+    hostname: selenium-chrome-native
+    ports:
+      - "5910:5910" # The selenium direct VNC port
+      - "4444:4444" # The selenium router port
+      - "7910:7910" # The selenium NoVNC service port
+    depends_on:
+      selenium-proxy:
+        condition: service_started
+    networks:
+      cdo_network_test:
+        aliases:
+          - selenium.chrome
+
+  selenium-chrome:
+    image: alpine
+    depends_on:
+      selenium-chrome-native:
+        condition: service_started
+    command: >
+      /bin/sh -c "
+        echo 'Selenium Chrome Started.' &&
+        echo &&
+        echo 'To see and interact with this browser session:' &&
+        echo '- http://localhost:7910/?autoconnect=1&resize=scale&password=secret (VNC port 5910)' &&
+        echo &&
+        echo 'To shut down all selenium nodes, use:' &&
+        echo 'docker compose down selenium-chrome-native' &&
+        echo &&
+        echo 'To run a UI test with a locally running dashboard server:' &&
+        echo 'bundle exec rake test:ui browser=chrome selenium=http://localhost:4444/wd/hub feature=dashboard/test/ui/features/platform/signing_in.feature'
+      "
+
+  # A Selenium server that connects through the selenium grid
+  selenium-chrome-node-base: &selenium-chrome-node-base
+    # We need an explicit container name for the target of the video service
+    hostname: chrome
+    image: selenium/node-chrome:${SELENIUM_CHROME_VERSION}
+    shm_size: 2gb
+    ulimits: *selenium-ulimits
+
+  # Runs the selenium Chrome as a node in our fully dockerized environment
+  selenium-chrome-node-contained:
+    <<: *selenium-chrome-node-base
+    environment:
+      <<: *selenium-grid-contained-environment
+      SE_VNC_PORT: 5910
+      SE_NO_VNC_PORT: 7910
+      JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
+    depends_on:
+      selenium-grid-contained:
+        condition: service_started
+    networks:
+      cdo_network_test:
+
+  # Runs the selenium Chrome as a node on our hosted selenium-grid
+  selenium-chrome-node:
+    <<: *selenium-chrome-node-base
+    container_name: code-dot-org-selenium-chrome-node
+    environment:
+      <<: *selenium-grid-environment
+      SE_NODE_PORT: 5555
+      SE_VNC_PORT: 5910
+      SE_NO_VNC_PORT: 7910
+      DISPLAY_NUM: 100
+      DISPLAY: ':100.0'
+      JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
+    expose:
+      - "5555" # Selenium Grid Port
+    ports:
+      - "7910:7910" # The selenium NoVNC service port
+      - "5910:5910" # The selenium direct VNC port
+    depends_on:
+      selenium-grid:
+        condition: service_started
+      selenium-proxy:
+        condition: service_started
+    networks:
+      cdo_network_test:
+        aliases:
+          - selenium.chrome
+
+  # A Selenium server running Firefox for running UI tests contained in Docker
+  selenium-firefox-base: &selenium-firefox-base
+    hostname: selenium-firefox
+    image: seleniarm/standalone-firefox:${SELENIUM_FIREFOX_VERSION}
+    shm_size: '2gb'
+    expose:
+      - "5911" # The selenium direct VNC port
+      - "4444" # The selenium router port
+      - "7911" # The selenium NoVNC service port
+    environment:
+      SE_VNC_PORT: 5911
+      SE_NO_VNC_PORT: 7911
+      DISPLAY_NUM: 101
+      DISPLAY: ':101.0'
+    ulimits: *selenium-ulimits
+
+  # A Selenium server running Firefox for running UI tests locally against a
+  # containerized dashboard server.
+  selenium-firefox-contained:
+    <<: *selenium-firefox-base
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Firefox for running UI tests locally
+  selenium-firefox-native:
+    <<: *selenium-firefox-base
+    hostname: selenium-firefox-native
+    environment:
+      SE_OPTS: "--port 4445"
+      SE_VNC_PORT: 5911
+      SE_NO_VNC_PORT: 7911
+      DISPLAY_NUM: 101
+      DISPLAY: ':101.0'
+    ports:
+      - "5911:5911" # The selenium direct VNC port
+      - "4445:4445" # The selenium router port
+      - "7911:7911" # The selenium NoVNC service port
+    depends_on:
+      selenium-proxy:
+        condition: service_started
+    networks:
+      cdo_network_test:
+
+  selenium-firefox:
+    image: alpine
+    depends_on:
+      selenium-firefox-native:
+        condition: service_started
+    command: >
+      /bin/sh -c "
+        echo 'Selenium Firefox Started.' &&
+        echo &&
+        echo 'To see and interact with this browser session:' &&
+        echo '- http://localhost:7911/?autoconnect=1&resize=scale&password=secret (VNC port 5911)' &&
+        echo &&
+        echo 'To shut down this selenium service, use:' &&
+        echo 'docker compose down selenium-firefox-native' &&
+        echo &&
+        echo 'To run a UI test with a locally running dashboard server:' &&
+        echo 'bundle exec rake test:ui browser=firefox selenium=http://localhost:4445/wd/hub feature=dashboard/test/ui/features/platform/signing_in.feature'
+      "
+
+  # A Selenium server that connects through the selenium grid
+  selenium-firefox-node-base: &selenium-firefox-node-base
+    # We need an explicit container name for the target of the video service
+    container_name: code-dot-org-selenium-firefox
+    hostname: firefox
+    image: seleniarm/node-firefox:${SELENIUM_FIREFOX_VERSION}
+    shm_size: 2gb
+    ulimits: *selenium-ulimits
+
+  # Runs the selenium Firefox as a node in our fully dockerized environment
+  selenium-firefox-node-contained:
+    <<: *selenium-firefox-node-base
+    environment:
+      <<: *selenium-grid-contained-environment
+      SE_VNC_PORT: 5911
+      SE_NO_VNC_PORT: 7911
+    depends_on:
+      selenium-grid-contained:
+        condition: service_started
+    networks:
+      cdo_network_test:
+
+  # Runs the selenium Firefox as a node on our hosted selenium-grid
+  selenium-firefox-node:
+    <<: *selenium-firefox-node-base
+    container_name: code-dot-org-selenium-firefox-node
+    environment:
+      <<: *selenium-grid-environment
+      SE_NODE_PORT: 5556
+      SE_VNC_PORT: 5911
+      SE_NO_VNC_PORT: 7911
+      DISPLAY_NUM: 101
+      DISPLAY: ':101.0'
+    expose:
+      - "5556" # Selenium Grid Port
+    ports:
+      - "7911:7911" # The selenium NoVNC service port
+      - "5911:5911" # The selenium direct VNC port
+    depends_on:
+      selenium-grid:
+        condition: service_started
+      selenium-proxy:
+        condition: service_started
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Edge for running UI tests contained in Docker
+  selenium-edge-base: &selenium-edge-base
+    hostname: selenium-edge
+    image: selenium/standalone-edge:${SELENIUM_EDGE_VERSION}
+    environment:
+      SE_VNC_PORT: 5912
+      SE_NO_VNC_PORT: 7912
+      DISPLAY_NUM: 102
+      DISPLAY: ':102.0'
+    expose:
+      - "5912" # The selenium direct VNC port
+      - "4444" # The selenium router port
+      - "7912" # The selenium NoVNC service port
+    shm_size: '2gb'
+    ulimits: *selenium-ulimits
+
+  # A Selenium server running Edge for running UI tests locally against a
+  # containerized dashboard server.
+  selenium-edge-contained:
+    <<: *selenium-edge-base
+    networks:
+      cdo_network_test:
+
+  # A Selenium server running Firefox for running UI tests locally
+  selenium-edge-native:
+    <<: *selenium-edge-base
+    hostname: selenium-edge-native
+    environment:
+      DISPLAY_NUM: 102
+      SE_VNC_PORT: 5912
+      SE_NO_VNC_PORT: 7912
+      SE_OPTS: "--port 4446"
+      DISPLAY: ':102.0'
+    ports:
+      - "5912:5912" # The selenium direct VNC port
+      - "4446:4446" # The selenium router port
+      - "7912:7912" # The selenium NoVNC service port
+    depends_on:
+      selenium-proxy:
+        condition: service_started
+    networks:
+      cdo_network_test:
+
+  selenium-edge:
+    image: alpine
+    depends_on:
+      selenium-edge-native:
+        condition: service_started
+    command: >
+      /bin/sh -c "
+        echo 'Selenium Edge Started.' &&
+        echo &&
+        echo 'To see and interact with this browser session:' &&
+        echo '- http://localhost:7912/?autoconnect=1&resize=scale&password=secret (VNC port 5912)' &&
+        echo &&
+        echo 'To shut down this selenium service, use:' &&
+        echo 'docker compose down selenium-edge-native' &&
+        echo &&
+        echo 'To run a UI test with a locally running dashboard server:' &&
+        echo 'bundle exec rake test:ui browser=edge selenium=http://localhost:4446/wd/hub feature=dashboard/test/ui/features/platform/signing_in.feature'
+      "
+
+  # A Selenium server that connects through the selenium grid
+  selenium-edge-node-base: &selenium-edge-node-base
+    # We need an explicit container name for the target of the video service
+    container_name: code-dot-org-selenium-edge
+    hostname: edge
+    image: selenium/node-edge:${SELENIUM_EDGE_VERSION}
+    shm_size: 2gb
+    ulimits: *selenium-ulimits
+
+  # Runs the selenium Edge as a node in our fully dockerized environment
+  selenium-edge-node-contained:
+    <<: *selenium-edge-node-base
+    environment:
+      <<: *selenium-grid-contained-environment
+      SE_VNC_PORT: 5912
+      SE_NO_VNC_PORT: 7912
+    depends_on:
+      selenium-grid-contained:
+        condition: service_started
+    networks:
+      cdo_network_test:
+
+  # Runs the selenium edge as a node on our hosted selenium-grid
+  selenium-edge-node:
+    <<: *selenium-edge-node-base
+    container_name: code-dot-org-selenium-edge-node
+    environment:
+      <<: *selenium-grid-environment
+      SE_NODE_PORT: 5557
+      SE_VNC_PORT: 5912
+      SE_NO_VNC_PORT: 7912
+      DISPLAY_NUM: 102
+      DISPLAY: ':102.0'
+    expose:
+      - "5557" # Selenium Grid Port
+    ports:
+      - "7912:7912" # The selenium NoVNC service port
+      - "5912:5912" # The selenium direct VNC port
+    depends_on:
+      selenium-grid:
+        condition: service_started
+      selenium-proxy:
+        condition: service_started
+    networks:
+      cdo_network_test:
+
+  # Runs selenium grid and spins up all possible browser nodes
+  selenium-nodes:
+    image: alpine
+    depends_on:
+      selenium-chrome-node:
+        condition: service_started
+      selenium-firefox-node:
+        condition: service_started
+      selenium-edge-node:
+        condition: service_started
+    command: >
+      /bin/sh -c "
+        echo 'Selenium Grid Started.' &&
+        echo &&
+        echo 'To see and interact with the browser sessions:' &&
+        echo 'Chrome: http://localhost:7910/?autoconnect=1&resize=scale&password=secret (VNC port 5910)' &&
+        echo 'Firefox: http://localhost:7911/?autoconnect=1&resize=scale&password=secret (VNC port 5911)' &&
+        echo 'Edge: http://localhost:7912/?autoconnect=1&resize=scale&password=secret (VNC port 5912)' &&
+        echo &&
+        echo 'To shut down all selenium nodes, use:' &&
+        echo 'docker compose stop $(docker compose ps --services | grep selenium | awk \'{print $1}\')' &&
+        echo 'or just \'docker compose stop\'' &&
+        echo &&
+        echo 'To run a UI test with a locally running dashboard server:' &&
+        echo '  (you may substitute browser=firefox with chrome or edge)' &&
+        echo 'bundle exec rake test:ui browser=firefox selenium= feature=dashboard/test/ui/features/platform/signing_in.feature'
+      "

@@ -127,7 +127,11 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
    ```
    git lfs install --skip-repo
    ```
-1. Start your local **Redis server**
+
+1. **Optional**: Install Docker (this lets you skip installing other services manually):
+   View the [DOCKER.md](DOCKER.md#installing-docker) document to install Docker and Docker Compose on your platform, then return here.
+
+1. Start your local **Redis server** (Skip if using Docker)
    1. Start redis server:
        ```
        brew services start redis
@@ -137,7 +141,8 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
        ==> Successfully started `redis` (label: homebrew.mxcl.redis)
        ```
    3. macOS will notify you that `redis` has been configured to start automatically upon user login. Confirm this in System Settings --> General --> Login Items --> `redis-server` 
-1. Setup your local **MySQL database server**
+
+1. Setup your local **MySQL database server** (Skip if using Docker)
    1. Link MySQL 8
         ```
         brew link --force --overwrite mysql@8.0
@@ -269,7 +274,7 @@ Windows Subsystem for Linux (WSL) allows you to run a GNU/Linux environment dire
 
 It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 in the past resulted in errors with mysql and pdftk installation. In order to use WSL 2, you must be running Windows 10, updated to version 2004, Build 19041 or higher. If your Windows update service doesn't give you the update automatically, you can download it [from the Windows download page](https://www.microsoft.com/en-us/software-download/windows10).
 
-1. Enable WSL ([unabridged WSL instructions here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)). You should run Powershell as Administrator for the following commands:
+1. Enable WSL ([unabridged WSL instructions here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)). You should run PowerShell as Administrator for the following commands:
     1. `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
     1. `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
     1. Restart your machine. WSL 2 will be the default if your Windows version is sufficiently updated.
@@ -415,7 +420,7 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 
 #### ImageMagick with Pango
 
-**Note:** Most developers won't need to peronsonalize certificates locally, but some will.  Here are notes on getting this working on macOS.
+**Note:** Most developers won't need to personalize certificates locally, but some will.  Here are notes on getting this working on macOS.
 
 Certificates have been greatly improved with the ability to apply text in many languages.  
 

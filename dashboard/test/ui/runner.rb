@@ -144,6 +144,9 @@ def parse_options
         options.hourofcode_domain = 'localhost.hourofcode.com:3000'
         options.csedweek_domain = 'localhost.csedweek.org:3000'
       end
+      opts.on("-u", "--selenium-hub-url URL", "The Selenium hub URL to use to remotely run tests. Can also be forced via the SELENIUM_URL environment variable.") do |url|
+        options.selenium_hub_url = url
+      end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
       end
@@ -733,6 +736,12 @@ def run_feature(browser, feature, options)
 
   run_environment = {}
   run_environment['BROWSER_CONFIG'] = options.local ? browser['browser'] : browser_name
+
+  # Add a selenium URL, if given, which forces the Selenium browser target to be 'remote'
+  # in the Selenium browser selection.
+  if options.selenium_hub_url
+    run_environment['SELENIUM_URL'] = options.selenium_hub_url
+  end
 
   run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   run_environment['PEGASUS_TEST_DOMAIN'] = options.pegasus_domain if options.pegasus_domain

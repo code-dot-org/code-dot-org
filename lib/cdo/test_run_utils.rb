@@ -1,6 +1,7 @@
 require_relative './rake_utils'
 require_relative '../../deployment'
 require 'cdo/chat_client'
+require 'net/http'
 
 module TestRunUtils
   def self.run_apps_tests
@@ -20,9 +21,73 @@ module TestRunUtils
   end
 
   def self.run_local_ui_test
-    feature_path = File.expand_path(ENV.fetch('feature', nil))
+    args = [
+      "--verbose",
+      "--pegasus=localhost.code.org:3000",
+      "--dashboard=localhost-studio.code.org:3000",
+      "--local",
+      "--headed",
+    ]
+
+    if ENV.fetch('feature', nil)
+      # Perform one or more specific test files (delimited by commas)
+      features = ENV.fetch('feature', nil).split(',')
+      feature_path = features.map do |feature|
+        File.expand_path(feature)
+      end.join(',')
+      args << "--feature=#{feature_path}"
+    else
+      # Perform all tests
+      args << "--with-status-page"
+    end
+
+    # If 'browser=' specified, we pass along our desired browser (firefox, chrome, etc)
+    browser = 'chrome'
+    if ENV.fetch('browser', nil)
+      browser = ENV.fetch('browser', nil)
+      args << "--browser=#{ENV.fetch('browser', nil)}"
+    end
+
+    # If 'selenium=' is specified, we point the UI tests to the given selenium URL
+    if ENV.fetch('selenium', nil)
+      url = ENV.fetch('selenium', nil) == "" ? "http://localhost:4444/wd/hub" : ENV.fetch('selenium', nil)
+      args << "--selenium-hub-url=#{url}"
+    end
+
+    # Check if we are recording a video of this test
+    record_video = false
+    if ENV.fetch('record', nil)
+      record_video = "#{ENV.fetch('record', 'video')}.#{browser}.mp4"
+    end
+
     Dir.chdir(dashboard_dir('test/ui/')) do
-      RakeUtils.system "./runner.rb --verbose --pegasus=localhost.code.org:3000 --dashboard=localhost-studio.code.org:3000 --local --headed --feature=#{feature_path}"
+      selenium_video_host = ENV.fetch('SELENIUM_VIDEO_HOST', 'localhost')
+      display_container_name = ENV.fetch('DISPLAY_CONTAINER_NAME', "selenium.#{browser}")
+
+      # For native hosted docker, the display num is different based on the browser
+      display_num = 99
+      if selenium_video_host == 'localhost'
+        case browser
+        when 'chrome'
+          display_num = 100
+        when 'firefox'
+          display_num = 101
+        when 'edge'
+          display_num = 102
+        end
+      end
+
+      if record_video
+        # Ping the selenium-video service
+        url = "http://#{selenium_video_host}:9001/start?FILE_NAME=#{record_video}&DISPLAY_CONTAINER_NAME=#{display_container_name}&DISPLAY_NUM=#{display_num}"
+        Net::HTTP.get(URI.parse(url))
+      end
+      RakeUtils.system "./runner.rb #{args.join(' ')}"
+      if record_video
+        # Stop recording
+        url = "http://#{selenium_video_host}:9001/stopall"
+        Net::HTTP.get(URI.parse(url))
+      end
     end
   end
 
