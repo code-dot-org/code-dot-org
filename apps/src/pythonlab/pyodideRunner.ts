@@ -19,21 +19,14 @@ export async function handleRunClick(
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined,
   progressManager: ProgressManager | null,
-  validationFile?: ProjectFile,
-  copyValidationFile?: boolean
+  validationFile?: ProjectFile
 ) {
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
   }
   if (runTests) {
-    await runAllTests(
-      source,
-      dispatch,
-      progressManager,
-      validationFile,
-      copyValidationFile
-    );
+    await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -46,9 +39,13 @@ export async function handleRunClick(
   }
 }
 
-export async function runPythonCode(mainFile: string, source: MultiFileSource) {
+export async function runPythonCode(
+  mainFile: string,
+  source: MultiFileSource,
+  validationFile?: ProjectFile
+) {
   try {
-    return await asyncRun(mainFile, source);
+    return await asyncRun(mainFile, source, validationFile);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     console.log(

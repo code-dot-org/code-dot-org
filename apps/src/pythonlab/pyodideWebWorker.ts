@@ -3,11 +3,10 @@ import {loadPyodide, PyodideInterface, version} from 'pyodide';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
-import {HOME_FOLDER} from './pythonHelpers/constants';
+import {HOME_FOLDER, VALIDATION_FILE_ID} from './pythonHelpers/constants';
 import {SETUP_CODE} from './pythonHelpers/patches';
 import {
   getCleanupCode,
-  getSkippedFilenames,
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
   resetGlobals,
@@ -65,11 +64,24 @@ initializePyodide();
 onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
-  const {id, python, source} = event.data;
+  const {id, python, source, validationFile} = event.data;
   let results = undefined;
+  let sourceToWrite = source;
+  if (validationFile) {
+    sourceToWrite = {
+      ...source,
+      files: {
+        ...source.files,
+        [VALIDATION_FILE_ID]: {
+          ...validationFile,
+          id: VALIDATION_FILE_ID,
+        },
+      },
+    };
+  }
   try {
-    writeSource(source, DEFAULT_FOLDER_ID, '', pyodide);
-    await importPackagesFromFiles(source, pyodide);
+    writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
+    await importPackagesFromFiles(sourceToWrite, pyodide);
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
@@ -77,16 +89,17 @@ onmessage = async event => {
     postMessage({type: 'error', message: (error as Error).message, id});
   }
   // Clean up environment.
-  await runInternalCode(getCleanupCode(source), id);
+  await runInternalCode(getCleanupCode(sourceToWrite), id);
   // We run setup code at the end to prepare the environment for the next run.
   await runInternalCode(SETUP_CODE, id);
+  const filenamesToSkip = validationFile ? [validationFile.name] : [];
 
   const updatedSource = getUpdatedSourceAndDeleteFiles(
     source,
     id,
     pyodide,
     postMessage,
-    getSkippedFilenames(source)
+    filenamesToSkip
   );
   postMessage({type: 'updated_source', message: updatedSource, id});
   resetGlobals(pyodide, pyodideGlobals);

@@ -144,14 +144,12 @@ const PythonlabView: React.FunctionComponent = () => {
         validationFileToSend = validationFileFromSource;
       }
     }
-    const shouldCopyValidationFile = !isStartMode;
     await handleRunClick(
       runTests,
       dispatch,
       source,
       progressManager,
-      validationFileToSend,
-      shouldCopyValidationFile
+      validationFileToSend
     );
     // Only send a predict level report if this is a predict level and the predict
     // answer was not locked.
