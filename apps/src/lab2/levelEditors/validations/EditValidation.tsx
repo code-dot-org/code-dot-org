@@ -98,10 +98,10 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
         <label htmlFor="callout" className={moduleStyles.label}>
           Callout (optional):
         </label>
-        <textarea
-          id="callout"
+        <input
+          type="text"
+          id="edit-validation-callout"
           name="callout"
-          rows={1}
           className={moduleStyles.callout}
           value={validation.callout}
           onChange={e => {
