@@ -13,12 +13,24 @@ type ResourceIconProps = {
   resourceUrl: string;
 };
 
+type MaterialType =
+  | 'SLIDES'
+  | 'GOOGLE_DOC'
+  | 'VIDEO'
+  | 'LESSON_PLAN'
+  | 'STANDARDS'
+  | 'VOCABULARY'
+  | 'LINK';
+
 const computeIconType = (resourceType: string, resourceUrl: string) => {
   const materialType = computeMaterialType(resourceType, resourceUrl);
   return RESOURCE_TYPE[materialType];
 };
 
-const computeMaterialType = (resourceType: string, resourceUrl: string) => {
+const computeMaterialType = (
+  resourceType: string,
+  resourceUrl: string
+): MaterialType => {
   if (isGDocsUrl(resourceUrl)) {
     if (resourceType === 'Slides') {
       return 'SLIDES';
