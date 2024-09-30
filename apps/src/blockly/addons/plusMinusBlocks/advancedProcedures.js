@@ -648,7 +648,7 @@ function argumentReporterValidator(newValue) {
    *     datum associated with this field.
    * @this {GoogleBlockly.FieldTextInput}
    */
-  const hasDifName = argDatum => {
+  const isValidArgDatum = argDatum => {
     // The field name (aka id) is always equal to the arg id.
     return (
       argDatum.argId === argName ||
@@ -656,7 +656,7 @@ function argumentReporterValidator(newValue) {
     );
   };
 
-  if (!newValue || !argData.every(hasDifName)) {
+  if (!newValue || !argData.every(isValidArgDatum)) {
     GoogleBlockly.Procedures.mutateCallers(sourceArgBlock.getRootBlock());
     return null;
   }
@@ -685,6 +685,11 @@ GoogleBlockly.Extensions.register('argument_reporter_validator', function () {
     const eventBlock = workspace.getBlockById(event.blockId);
     if (eventBlock?.type === BLOCK_TYPES.argumentReporter) {
       switch (event.type) {
+        // For a field value change events, we update other matching blocks within
+        // the stack, and update the warning text. For block change and block move
+        // events, we only need to update the warning text. The fallthrough between
+        // the cases below is deliberate so that we ensure the warning text gets
+        // updated for any of the event types that we care about.
         case GoogleBlockly.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE:
           workspace
             .getAllBlocks()
