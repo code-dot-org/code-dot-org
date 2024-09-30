@@ -817,12 +817,13 @@ class User < ApplicationRecord
   def email_and_hashed_email_must_be_unique
     # skip the db lookup if we are already invalid
     return if errors.present?
-    # allow duplicate accounts to be created for LMS users that are unlinked
-    return if authentication_options.length == 1 && authentication_options.first&.lti?
 
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
         (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
         other_user != self
+      # allow duplicate accounts to be created for LMS users that are unlinked
+      return if other_user.authentication_options.length == 1 && other_user.authentication_options.first&.lti?
+
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end
