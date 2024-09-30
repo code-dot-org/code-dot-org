@@ -208,7 +208,8 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
                   {ticks.map(tick => {
                     return (
                       <>
-                        <div
+                        <button
+                          type="button"
                           className={classNames(
                             editorType === 'drums'
                               ? styles['cell-drums']
