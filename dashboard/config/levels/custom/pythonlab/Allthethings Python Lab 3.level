@@ -19,16 +19,6 @@
           "folderId": "0",
           "active": false,
           "open": true
-        },
-        "1": {
-          "id": "1",
-          "name": "test_level.py",
-          "language": "py",
-          "contents": "import unittest\n\nclass LevelTest(unittest.TestCase):\n\n  def test_that_passes(self):\n    \"\"\"A sample passing test on the level\"\"\"\n    self.assertEqual(1, 1)",
-          "folderId": "0",
-          "active": true,
-          "open": true,
-          "type": "validation"
         }
       },
       "folders": {
@@ -42,9 +32,19 @@
     "submittable": "false",
     "predict_settings": {
       "isPredictLevel": false
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test_level.py",
+      "language": "py",
+      "contents": "import unittest\n\nclass LevelTest(unittest.TestCase):\n\n  def test_that_passes(self):\n    \"\"\"A sample passing test on the level\"\"\"\n    self.assertEqual(1, 1)",
+      "folderId": "0",
+      "active": true,
+      "open": true,
+      "type": "validation"
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-07-11 16:41:38 -0400\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-09-06 00:32:09 +0000\",\"changed\":[],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"},{\"changed_at\":\"2024-09-27 13:10:52 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 13:11:52 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-07-11 16:41:38 -0400\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-09-06 00:32:09 +0000\",\"changed\":[],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"},{\"changed_at\":\"2024-09-27 13:10:52 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 13:11:52 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-30 16:52:33 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
