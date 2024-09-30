@@ -32,8 +32,8 @@ class SchoolInfo < ApplicationRecord
     SCHOOL_TYPE_HOMESCHOOL = "homeschool".freeze,
     SCHOOL_TYPE_AFTER_SCHOOL = "afterschool".freeze,
     SCHOOL_TYPE_ORGANIZATION = "organization".freeze,
-    SCHOOL_TYPE_OTHER = "other".freeze,
-    SCHOOL_TYPE_NO_SCHOOL_SETTING = "noSchoolSetting".freeze
+    SCHOOL_TYPE_NO_SCHOOL_SETTING = "noSchoolSetting".freeze,
+    SCHOOL_TYPE_OTHER = "other".freeze
   ].freeze
 
   SCHOOL_STATE_OTHER = "other"
