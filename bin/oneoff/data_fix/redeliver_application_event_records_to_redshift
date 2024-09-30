@@ -56,65 +56,67 @@ sts_client = Aws::STS::Client.new
 ACCOUNT_ID = sts_client.get_caller_identity.account
 
 event_json_schema = {
-  "type" => "object",
-  "properties" => {
-    "created_at" => {
-      "type" => "string",
-      "format" => "date-time"
+  type: "redshift_table",
+  columns: {
+    created_at: {
+      type: "timestamp without time zone",
+      nullable: false
     },
-    "environment" => {
-      "type" => "string",
-      "maxLength" => 128
+    environment: {
+      type: "character",
+      maxLength: 128,
+      nullable: false
     },
-    "study" => {
-      "type" => "string",
-      "maxLength" => 128
+    study: {
+      type: "character",
+      maxLength: 128,
+      nullable: false
     },
-    "study_group" => {
-      "type" => ["string", "object", "null"],
-      "maxLength" => 128
+    study_group: {
+      type: "character",
+      maxLength: 128
     },
-    "device" => {
-      "type" => ["string", "object", "null"],
-      "maxLength" => 1024
+    device: {
+      type: "character",
+      maxLength: 1024
     },
-    "uuid" => {
-      "type" => ["string", "null"],
-      "maxLength" => 128
+    uuid: {
+      type: "character",
+      maxLength: 128
     },
-    "user_id" => {
-      "type" => ["integer", "null"]
+    user_id: {
+      type: "integer"
     },
-    "script_id" => {
-      "type" => ["integer", "null"]
+    script_id: {
+      type: "integer"
     },
-    "level_id" => {
-      "type" => ["integer", "null"]
+    level_id: {
+      type: "integer"
     },
-    "project_id" => {
-      "type" => ["string", "integer", "null"],
-      "maxLength" => 128
+    project_id: {
+      type: "character",
+      maxLength: 128
     },
-    "event" => {
-      "type" => ["string", "object", "null"],
-      "maxLength" => 128
+    event: {
+      type: "character",
+      maxLength: 128,
+      nullable: false
     },
-    "data_int" => {
-      "type" => ["integer", "null"]
+    data_int: {
+      type: "integer"
     },
-    "data_float" => {
-      "type" => ["number", "null"]
+    data_float: {
+      type: "double precision"
     },
-    "data_string" => {
-      "type" => ["string", "null"],
-      "maxLength" => 4096
+    data_string: {
+      type: "character",
+      maxLength: 4096
     },
-    "data_json" => {
-      "type" => ["string", "object", "null"],
-      "maxLength" => 65535
+    data_json: {
+      type: "character varying",
+      maxLength: 65535
     }
-  },
-  "required" => ["created_at", "environment", "study", "event"]
+  }
 }
 
 class RecordValidationError < StandardError
