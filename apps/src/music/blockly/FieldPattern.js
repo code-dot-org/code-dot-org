@@ -8,6 +8,8 @@ import experiments from '@cdo/apps/util/experiments';
 import {generateGraphDataFromPattern} from '../utils/Patterns';
 import PatternPanel from '../views/PatternPanel';
 
+import styles from './fields.module.scss';
+
 const FIELD_WIDTH = 32;
 const FIELD_HEIGHT = 18;
 const FIELD_PADDING = 2;
@@ -96,6 +98,7 @@ class FieldPattern extends GoogleBlockly.Field {
     // this.newDiv_.style.width = '420px';
     this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
+    this.newDiv_.className = styles.blocklyDropdownFullHeightClass;
 
     return this.newDiv_;
   }

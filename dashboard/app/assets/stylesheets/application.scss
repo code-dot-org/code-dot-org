@@ -2792,6 +2792,14 @@ a.download-video {
   stroke: none;
 }
 
+// Allows certain custom Blockly fields to use the full height of their
+// content, if the specific full height class name is applied.
+.blocklyDropDownContent {
+  &:has(.#{$blockly-dropdown-full-height-class}) {
+    max-height: initial;
+  }
+}
+
 #blockly-frame {
   width: 70%;
   height: 800px;

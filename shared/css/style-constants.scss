@@ -12,3 +12,7 @@ $delete-opacity: 0.5;
 
 // Width of pegasus content as of 2017 redesign
 $content-width: 970px;
+
+// Special class name that custom Blockly fields can use to make dropdowns
+// use up the full height of the content.
+$blockly-dropdown-full-height-class: blocklyDropDownFullHeight;

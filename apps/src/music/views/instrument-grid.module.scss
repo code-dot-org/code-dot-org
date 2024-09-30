@@ -29,7 +29,7 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
 .pitchRow {
   display: flex;
   gap: 8px;
-  align-items: center;
+  align-items: stretch;
 
   @for $i from 1 through 8 {
     &:nth-child(#{$i}) {
@@ -52,6 +52,8 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
 
 .label {
   width: 100px;
+  display: flex;
+  align-items: center;
 }
 
 .cellRow {
@@ -86,11 +88,12 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
 
 .cell-chromatic {
   @extend %cell;
+  height: 20px;
 }
 
 .cell-drums {
   @extend %cell;
-  width: 25px;
+  height: 25px;
 }
 
 .activeCell {
@@ -175,7 +178,6 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
 
 .keyLabel {
   width: 50px;
-  height: 30px;
   background-color: $neutral_light;
   color: $neutral_dark;
   display: flex;
