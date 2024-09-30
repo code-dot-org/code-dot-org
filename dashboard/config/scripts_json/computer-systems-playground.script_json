@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "computer-systems-playground",
-    "serialized_at": "2024-09-26 20:05:19 UTC",
+    "serialized_at": "2024-09-27 23:24:09 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -221,8 +221,52 @@
       }
     },
     {
-      "key": "ab1f0ac1-a636-437d-a0b7-22c2f70c673b",
+      "key": "ca460988-4e27-4e92-9235-7146d0686ff3",
       "position": 1,
+      "properties": {
+        "progression_name": "Predict and Run"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca460988-4e27-4e92-9235-7146d0686ff3",
+        "lesson_activity.key": "138283ae-e1ab-4468-97e3-d85e912c46b0"
+      }
+    },
+    {
+      "key": "6758c420-0c19-48ed-81bf-c4514b349fb9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Investigate and Modify - If/else"
+      },
+      "seeding_key": {
+        "activity_section.key": "6758c420-0c19-48ed-81bf-c4514b349fb9",
+        "lesson_activity.key": "138283ae-e1ab-4468-97e3-d85e912c46b0"
+      }
+    },
+    {
+      "key": "c8b0cd08-bdfd-4176-8d4e-5c63fc3b8864",
+      "position": 3,
+      "properties": {
+        "progression_name": "Sensor Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8b0cd08-bdfd-4176-8d4e-5c63fc3b8864",
+        "lesson_activity.key": "138283ae-e1ab-4468-97e3-d85e912c46b0"
+      }
+    },
+    {
+      "key": "894b1e42-f719-443c-b89d-5580b3273fab",
+      "position": 4,
+      "properties": {
+        "progression_name": "Investigate and Modify - Sensor Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "894b1e42-f719-443c-b89d-5580b3273fab",
+        "lesson_activity.key": "138283ae-e1ab-4468-97e3-d85e912c46b0"
+      }
+    },
+    {
+      "key": "ab1f0ac1-a636-437d-a0b7-22c2f70c673b",
+      "position": 5,
       "properties": {
         "progression_name": "Project Level"
       },
@@ -239,6 +283,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Buttons 1"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -261,6 +308,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Buttons 2"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -283,6 +333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Buttons 3"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -305,6 +358,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Buttons 4"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -327,6 +383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Buttons CFU"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -349,6 +408,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Buttons Project Level"
+        ],
         "progression": "Project Level"
       },
       "bonus": false,
@@ -371,6 +433,97 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict and Run"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Sensors 1 2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "ca460988-4e27-4e92-9235-7146d0686ff3"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Sensors 1 2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify - If/else"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Sensors 2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "6758c420-0c19-48ed-81bf-c4514b349fb9"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Sensors 2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sensor Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Sensors Test"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "c8b0cd08-bdfd-4176-8d4e-5c63fc3b8864"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Sensors Test"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify - Sensor Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Sensors 3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "894b1e42-f719-443c-b89d-5580b3273fab"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Sensors 3"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Sensors Project Level"
+        ],
         "progression": "Project Level"
       },
       "bonus": false,
@@ -459,6 +612,54 @@
         "lesson_group.key": "",
         "script.name": "computer-systems-playground",
         "activity_section.key": "07d57e43-bdb5-478d-9f64-6bb3b7020a95"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Sensors 1 2",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Sensors 1 2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "ca460988-4e27-4e92-9235-7146d0686ff3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Sensors 2",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Sensors 2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "6758c420-0c19-48ed-81bf-c4514b349fb9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Sensors Test",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Sensors Test"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "c8b0cd08-bdfd-4176-8d4e-5c63fc3b8864"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Sensors 3",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Sensors 3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "894b1e42-f719-443c-b89d-5580b3273fab"
       }
     },
     {
