@@ -23,6 +23,7 @@ interface PackEntryProps {
   onSelect: (path: SoundFolder) => void;
   onPreview: (path: string) => void;
   onStopPreview: () => void;
+  mode: Mode;
 }
 
 const PackEntryThin: React.FunctionComponent<PackEntryProps> = ({
@@ -32,6 +33,7 @@ const PackEntryThin: React.FunctionComponent<PackEntryProps> = ({
   onSelect,
   onPreview,
   onStopPreview,
+  mode,
 }) => {
   const library = MusicLibrary.getInstance();
 
@@ -116,6 +118,110 @@ const PackEntryThin: React.FunctionComponent<PackEntryProps> = ({
   );
 };
 
+const PackEntryLine: React.FunctionComponent<PackEntryProps> = ({
+  playingPreview,
+  folder,
+  isSelected,
+  onSelect,
+  onPreview,
+  onStopPreview,
+  mode,
+}) => {
+  const library = MusicLibrary.getInstance();
+
+  const previewSound = folder.sounds.find(sound => sound.type === 'preview');
+  const soundPath = previewSound && folder.id + '/' + previewSound.src;
+  const isPlayingPreview = previewSound && playingPreview === soundPath;
+  const imageSrc = library?.getPackImageUrl(folder.id);
+  const imageAttributionAuthor = folder.imageAttribution?.author;
+  const imageAttributionColor = folder.imageAttribution?.color;
+  const packImageAttributionLeft = folder.imageAttribution?.position === 'left';
+
+  const onEntryClick = useCallback(() => {
+    onSelect(folder);
+
+    if (soundPath && !isPlayingPreview) {
+      onPreview(soundPath);
+    }
+  }, [folder, isPlayingPreview, onPreview, onSelect, soundPath]);
+
+  return (
+    <div
+      className={classNames(styles.pack, isSelected && styles.packSelected)}
+      onClick={onEntryClick}
+      onKeyDown={event => {
+        if (event.key === 'Enter') {
+          onEntryClick();
+        }
+      }}
+      aria-label={folder.name}
+      tabIndex={0}
+      role="button"
+    >
+      <div>
+        {imageSrc && (
+          <div
+            className={classNames(
+              styles.packImageContainer,
+              isSelected && styles.packImageContainerSelected
+            )}
+          >
+            <img
+              className={styles.packImage}
+              src={imageSrc}
+              alt=""
+              draggable={false}
+            />
+            {imageAttributionAuthor && (
+              <div
+                className={classNames(
+                  styles.packImageAttribution,
+                  packImageAttributionLeft && styles.packImageAttributionLeft
+                )}
+                style={{color: imageAttributionColor}}
+              >
+                <FontAwesomeV6Icon
+                  iconName={'brands fa-creative-commons'}
+                  iconStyle="solid"
+                  className={styles.icon}
+                />
+                &nbsp;
+                <FontAwesomeV6Icon
+                  iconName={'brands fa-creative-commons-by'}
+                  iconStyle="solid"
+                  className={styles.icon}
+                />
+                &nbsp;
+                {imageAttributionAuthor}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+      <div className={styles.packFooter}>
+        <div
+          className={classNames(
+            styles.packFooterName,
+            mode !== 'artist' && styles.packFooterBold
+          )}
+        >
+          {folder.name}
+        </div>
+        {folder.artist && (
+          <div
+            className={classNames(
+              styles.packFooterArtist,
+              mode === 'artist' && styles.packFooterBold
+            )}
+          >
+            {folder.artist}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 interface PackDialogProps {
   player: MusicPlayer;
 }
@@ -159,11 +265,12 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
       if (selectedFolderId === folder.id) {
         setSelectedFolderId(null);
+        player.cancelPreviews();
       } else {
         setSelectedFolderId(folder.id);
       }
     },
-    [selectedFolderId, library]
+    [selectedFolderId, library, player]
   );
 
   const selectPack = useCallback(
@@ -273,7 +380,7 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
             <div className={styles.packsThin}>
               {sortedFolders.map((folder, folderIndex) => {
                 return (
-                  <PackEntryThin
+                  <PackEntryLine
                     key={folderIndex}
                     playingPreview={playingPreviewState}
                     folder={folder}
@@ -281,6 +388,7 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
                     onSelect={handleSelectFolder}
                     onPreview={onPreview}
                     onStopPreview={onStopPreview}
+                    mode={mode}
                   />
                 );
               })}
