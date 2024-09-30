@@ -146,7 +146,7 @@ describe('UnitEditor', () => {
       ).to.equal(2);
     });
 
-    it('selecting topic tag chips updates state', () => {
+    it('selecting topic tag chips updates input element selection state', () => {
       renderDefault({initialTopicTags: ['music_lab', 'ai']});
       const topicTags = screen.getByTestId('chips-unit-editor-topic-tags');
       expect(within(topicTags).getAllByRole('checkbox').length).to.equal(3);
@@ -210,8 +210,8 @@ describe('UnitEditor', () => {
       });
 
       // To update based on the list of topic tags
-      // expect(wrapper.find('input').length).to.equal(24);
-      // expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
+      expect(wrapper.find('input').length).to.equal(27);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(14);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
