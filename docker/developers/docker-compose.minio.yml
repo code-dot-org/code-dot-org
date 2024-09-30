@@ -48,11 +48,11 @@ services:
       - AWS_ACCESS_KEY_ID=local-development
       - AWS_SECRET_ACCESS_KEY=allstudents
       - AWS_DEFAULT_REGION=us-east-1
-      - AWS_S3_ENDPOINT_URL=http://localhost:9000
+      - MINIO_ENDPOINT_URL=http://localhost:9000
       - WITHIN_DOCKER=1
     volumes:
       - ../..:/app/src
-    command: /bin/bash ./install-s3.sh
+    command: /bin/bash ./install-minio-s3.sh
 
   minio-install:
     <<: *minio-install-base
@@ -66,7 +66,7 @@ services:
       - AWS_ACCESS_KEY_ID=local-development
       - AWS_SECRET_ACCESS_KEY=allstudents
       - AWS_DEFAULT_REGION=us-east-1
-      - AWS_S3_ENDPOINT_URL=http://minio:9000
+      - MINIO_ENDPOINT_URL=http://minio:9000
       - WITHIN_DOCKER=1
     networks:
       cdo_network:

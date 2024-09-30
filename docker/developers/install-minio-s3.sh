@@ -12,7 +12,7 @@ fi
 # See: https://stackoverflow.com/questions/57953187/aws-cli-has-no-output
 export AWS_PAGER=
 
-export AWS_ENDPOINT_URL=${AWS_S3_ENDPOINT_URL}
+export AWS_ENDPOINT_URL=${MINIO_ENDPOINT_URL}
 
 # Determine all the buckets that exist in the s3 path and create those buckets
 cd s3
