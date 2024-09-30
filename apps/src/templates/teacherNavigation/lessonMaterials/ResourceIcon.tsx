@@ -4,7 +4,7 @@ import React from 'react';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 import {computeMaterialType} from './LessonMaterialTypes';
-import {RESOURCE_TYPE} from './ResourceIconType';
+import {RESOURCE_ICONS} from './ResourceIconType';
 
 import styles from './lesson-materials.module.scss';
 
@@ -15,7 +15,7 @@ type ResourceIconProps = {
 
 const computeIconType = (resourceType: string, resourceUrl: string) => {
   const materialType = computeMaterialType(resourceType, resourceUrl);
-  return RESOURCE_TYPE[materialType];
+  return RESOURCE_ICONS[materialType];
 };
 
 const ResourceIcon: React.FC<ResourceIconProps> = ({
