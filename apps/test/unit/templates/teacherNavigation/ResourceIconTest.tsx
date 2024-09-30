@@ -1,8 +1,8 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
-import ResourceIcon from '@cdo/apps/templates/teacherNavigation/ResourceIcon';
-import {RESOURCE_TYPE} from '@cdo/apps/templates/teacherNavigation/ResourceIconType';
+import ResourceIcon from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIcon';
+import {RESOURCE_TYPE} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
 
 describe('ResourceIcon', () => {
   const googleSlidesUrl =

@@ -2,8 +2,8 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {useLoaderData} from 'react-router-dom';
 
-import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/LessonMaterialsContainer';
-import {RESOURCE_TYPE} from '@cdo/apps/templates/teacherNavigation/ResourceIconType';
+import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
+import {RESOURCE_TYPE} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
 import i18n from '@cdo/locale';
 
 jest.mock('react-router-dom', () => ({

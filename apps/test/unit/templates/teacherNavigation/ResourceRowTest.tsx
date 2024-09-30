@@ -1,8 +1,8 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
-import {RESOURCE_TYPE} from '@cdo/apps/templates/teacherNavigation/ResourceIconType';
-import ResourceRow from '@cdo/apps/templates/teacherNavigation/ResourceRow';
+import {RESOURCE_TYPE} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import ResourceRow from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceRow';
 
 describe('ResourceRow', () => {
   const mockResourceData = {
