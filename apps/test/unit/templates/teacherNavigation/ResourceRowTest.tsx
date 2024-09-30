@@ -9,7 +9,6 @@ describe('ResourceRow', () => {
     key: 'resourceKey1',
     name: 'Handout for teacher',
     url: 'code.org',
-    downloadUrl: null,
     audience: 'Teacher',
     type: 'Handout',
   };
