@@ -90,12 +90,16 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     useAppSelector(state => state.lab.levelProperties?.offerTts) ||
     AppConfig.getValue('show-tts') === 'true';
   const isPlayView = useAppSelector(state => state.lab.isShareView);
+  const validationStateCallout = useAppSelector(
+    state => state.lab.validationState.callout
+  );
 
   const progressManager = useContext(ProgressManagerContext);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
+
   // Pass music validator to Progress Manager
   useEffect(() => {
     if (progressManager && appName === 'music') {
@@ -143,6 +147,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     },
     [dispatch]
   );
+
+  useEffect(() => {
+    if (validationStateCallout) {
+      dispatch(showCallout(validationStateCallout));
+    }
+  }, [dispatch, validationStateCallout]);
 
   const renderInstructions = useCallback(
     (position: InstructionsPosition) => {
