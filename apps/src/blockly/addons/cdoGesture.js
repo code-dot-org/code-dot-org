@@ -28,7 +28,7 @@ export function overrideHandleTouchMove(blocklyWrapper) {
   /**
    * Record the block that a gesture started on, and set the target block
    * appropriately.
-   * Additionally, begin tracking shadow argument_report blocks for duplicateOnDrag
+   * Additionally, begin tracking shadow argument_report blocks for duplicateOnDrag.
    *
    * @param block The block the gesture started on.
    * @internal
