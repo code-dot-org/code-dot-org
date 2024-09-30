@@ -10,10 +10,7 @@ export enum DragType {
 export type downloadFileType = (fileId: FileId) => void;
 export type moveFilePromptType = (fileId: FileId) => void;
 export type moveFolderPromptType = (folderId: FolderId) => void;
-export type newFilePromptType = (
-  folderId?: FolderId,
-  fileType?: ProjectFileType
-) => void;
+export type newFilePromptType = (folderId?: FolderId) => void;
 export type newFolderPromptType = (parentId?: FolderId) => void;
 export type renameFilePromptType = (fileId: FileId) => void;
 export type renameFolderPromptType = (folderId: FolderId) => void;

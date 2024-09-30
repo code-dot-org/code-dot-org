@@ -7,7 +7,6 @@ import {
 import {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {ProjectFileType} from '@cdo/apps/lab2/types';
 
 import {DEFAULT_FOLDER_ID} from '../constants';
 
@@ -79,7 +78,6 @@ export const useProjectUtilities = (
         fileName,
         folderId = DEFAULT_FOLDER_ID,
         contents = codebridgeI18n.defaultNewFileContents({fileName}),
-        type = ProjectFileType.STARTER,
       }) => {
         dispatch({
           type: PROJECT_REDUCER_ACTIONS.NEW_FILE,
@@ -88,7 +86,6 @@ export const useProjectUtilities = (
             fileName,
             folderId,
             contents: contents.replace(/\${fileName}/g, fileName),
-            type,
           },
         });
       }),
