@@ -13,31 +13,31 @@ type ResourceIconProps = {
   resourceUrl: string;
 };
 
+const computeIconType = (resourceType: string, resourceUrl: string) => {
+  if (isGDocsUrl(resourceUrl)) {
+    if (resourceType === 'Slides') {
+      return RESOURCE_TYPE.SLIDES;
+    } else {
+      return RESOURCE_TYPE.GOOGLE_DOC;
+    }
+  } else if (resourceType === 'Video') {
+    return RESOURCE_TYPE.VIDEO;
+  } else if (resourceType === 'Lesson Plan') {
+    return RESOURCE_TYPE.LESSON_PLAN;
+  } else if (resourceType === 'Standards') {
+    return RESOURCE_TYPE.STANDARDS;
+  } else if (resourceType === 'Vocabulary') {
+    return RESOURCE_TYPE.VOCABULARY;
+  } else {
+    return RESOURCE_TYPE.LINK;
+  }
+};
+
 const ResourceIcon: React.FC<ResourceIconProps> = ({
   resourceType,
   resourceUrl,
 }) => {
-  const computeIconType = () => {
-    if (isGDocsUrl(resourceUrl)) {
-      if (resourceType === 'Slides') {
-        return RESOURCE_TYPE.SLIDES;
-      } else {
-        return RESOURCE_TYPE.GOOGLE_DOC;
-      }
-    } else if (resourceType === 'Video') {
-      return RESOURCE_TYPE.VIDEO;
-    } else if (resourceType === 'Lesson Plan') {
-      return RESOURCE_TYPE.LESSON_PLAN;
-    } else if (resourceType === 'Standards') {
-      return RESOURCE_TYPE.STANDARDS;
-    } else if (resourceType === 'Vocabulary') {
-      return RESOURCE_TYPE.VOCABULARY;
-    } else {
-      return RESOURCE_TYPE.LINK;
-    }
-  };
-
-  const iconType = computeIconType();
+  const iconType = computeIconType(resourceType, resourceUrl);
 
   return (
     <div
