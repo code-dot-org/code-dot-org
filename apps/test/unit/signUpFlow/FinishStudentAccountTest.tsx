@@ -1,4 +1,4 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {render, screen, fireEvent, act, waitFor} from '@testing-library/react';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -14,6 +14,7 @@ import {
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 
 describe('FinishStudentAccount', () => {
+  let fetchStub: sinon.SinonStub;
   const ageOptions = [
     {value: '', text: ''},
     {value: '4', text: '4'},
@@ -28,8 +29,17 @@ describe('FinishStudentAccount', () => {
     {value: 'WA', text: 'Washington'},
   ];
 
+  beforeEach(() => {
+    fetchStub = sinon.stub(window, 'fetch').resolves({
+      ok: true,
+      status: 200,
+      json: () => Promise.resolve({gdpr: false, force_in_eu: false}),
+    } as Response);
+  });
+
   afterEach(() => {
     sessionStorage.clear();
+    fetchStub.restore();
   });
 
   function renderDefault(usIp: boolean = true) {
@@ -169,8 +179,11 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 
-  it('leaving the displayName field empty shows error message and disabled submit button until display name is entered', () => {
+  it('leaving the displayName field empty shows error message and disabled submit button until display name is entered', async () => {
     renderDefault();
+    await waitFor(() => {
+      expect(fetchStub.calledOnce).toBe(true);
+    });
     const displayNameInput = screen.getAllByDisplayValue('')[1];
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
@@ -201,8 +214,11 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 
-  it('leaving the age field empty shows error message and disabled submit button until age is entered', () => {
+  it('leaving the age field empty shows error message and disabled submit button until age is entered', async () => {
     renderDefault();
+    await waitFor(() => {
+      expect(fetchStub.calledOnce).toBe(true);
+    });
     const ageInput = screen.getAllByRole('combobox')[0];
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
@@ -233,8 +249,11 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 
-  it('leaving the state field empty shows error message and disabled submit button until state is entered for US users', () => {
+  it('leaving the state field empty shows error message and disabled submit button until state is entered for US users', async () => {
     renderDefault();
+    await waitFor(() => {
+      expect(fetchStub.calledOnce).toBe(true);
+    });
     const stateInput = screen.getAllByRole('combobox')[1];
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
@@ -265,8 +284,11 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 
-  it('state field is not required if user is not detected in the U.S.', () => {
+  it('state field is not required if user is not detected in the U.S.', async () => {
     renderDefault(false);
+    await waitFor(() => {
+      expect(fetchStub.calledOnce).toBe(true);
+    });
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
@@ -281,8 +303,11 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
   });
 
-  it('parentEmail error shows if parent checkbox is selected and parentEmail is selected then cleared', () => {
+  it('parentEmail error shows if parent checkbox is selected and parentEmail is selected then cleared', async () => {
     renderDefault();
+    await waitFor(() => {
+      expect(fetchStub.calledOnce).toBe(true);
+    });
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
@@ -322,12 +347,15 @@ describe('FinishStudentAccount', () => {
   });
 
   it('GDPR has expected behavior if api call returns true', async () => {
-    const fetchStub = sinon.stub(window, 'fetch').resolves({
-      ok: true,
-      status: 200,
-      json: () => Promise.resolve({gdpr: true, force_in_eu: false}),
-    } as Response);
-
+    act(() => {
+      fetchStub.callsFake(() => {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({gdpr: true, force_in_eu: false}),
+        } as Response);
+      });
+    });
     renderDefault();
 
     // Check that GDPR message is displayed
@@ -346,8 +374,5 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
     fireEvent.click(screen.getAllByRole('checkbox')[1]);
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
-
-    // Restore the original fetch implementation
-    fetchStub.restore();
   });
 });
