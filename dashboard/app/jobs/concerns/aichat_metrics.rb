@@ -42,7 +42,15 @@ class AichatMetrics
     )
   end
 
-  def self.report_openai_safety_check(metric_name:, safety_system_prompt:, value: 1)
+  def self.report_openai_safety_check(metric_name:, safety_system_prompt:, num_attempts: nil, value: 1)
+    openai_dimensions = [
+      {name: 'Environment', value: CDO.rack_env},
+      {name: 'SafetySystemPrompt', value: safety_system_prompt},
+    ]
+    if num_attempts
+      openai_dimensions << {name: 'Attempts', value: num_attempts}
+    end
+
     Cdo::Metrics.push(METRICS_NAMESPACE,
       [
         {
@@ -50,10 +58,7 @@ class AichatMetrics
           value: value,
           unit: 'Count',
           timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-            {name: 'SafetySystemPrompt', value: safety_system_prompt}
-          ],
+          dimensions: openai_dimensions
         }
       ]
     )

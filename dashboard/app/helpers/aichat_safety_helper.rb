@@ -36,19 +36,18 @@ module AichatSafetyHelper
 
     private def openai_safety_check(text)
       details = nil
+      start_time = Time.now
+      AichatMetrics.report_openai_safety_check(metric_name: "#{self.class.name}.OpenaiStart", safety_system_prompt: get_safety_system_prompt_version)
+
       # Try twice in case of network errors or model not correctly following directions and
       # replying with something other valid expected output.
+      attempts = 1
       Retryable.retryable(tries: 2) do
-        start_time = Time.now
-        AichatMetrics.report_openai_safety_check(metric_name: "#{self.class.name}.OpenaiRequest", safety_system_prompt: get_safety_system_prompt_version)
         openai_response = OpenaiChatHelper.request_safety_check(text, get_safety_system_prompt)
-        AichatMetrics.report_openai_safety_check(metric_name: "#{self.class.name}.OpenaiResponse", safety_system_prompt: get_safety_system_prompt_version)
-        latency = Time.now - start_time
-        AichatMetrics.report_openai_safety_latency(metric_name: "#{self.class.name}.OpenaiLatency", safety_system_prompt: get_safety_system_prompt_version, latency: latency)
-
         evaluation = JSON.parse(openai_response)['choices'][0]['message']['content']
         unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
           AichatMetrics.report_openai_safety_check(metric_name: "#{self.class.name}.OpenaiInvalidResponse", safety_system_prompt: get_safety_system_prompt_version)
+          attempts += 1
           raise "Unexpected response from OpenAI: #{evaluation}"
         end
         if evaluation == 'INAPPROPRIATE'
@@ -57,6 +56,9 @@ module AichatSafetyHelper
           }
         end
       end
+      AichatMetrics.report_openai_safety_check(metric_name: "#{self.class.name}.OpenaiFinish", safety_system_prompt: get_safety_system_prompt_version, num_attempts: attempts)
+      latency = Time.now - start_time
+      AichatMetrics.report_openai_safety_latency(metric_name: "#{self.class.name}.OpenaiLatency", safety_system_prompt: get_safety_system_prompt_version, latency: latency)
       details
     end
 
