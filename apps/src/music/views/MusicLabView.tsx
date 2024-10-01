@@ -122,7 +122,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   }, [blocklyWorkspace, isStartMode, levelData]);
 
   // Use the Lab2 generic prompt for Blockly prompt dialogs.
-  const genericPrompt = useCallback(
+  const showGenericPrompt = useCallback(
     (
       message: string,
       value: string,
@@ -138,7 +138,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     },
     [dialogControl]
   );
-  Blockly.dialog.setPrompt(genericPrompt);
+  Blockly.dialog.setPrompt(showGenericPrompt);
 
   useEffect(() => {
     installFunctionBlocks(blockMode);
