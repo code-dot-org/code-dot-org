@@ -62,13 +62,13 @@ markdown <<MARKDOWN
 
  <table>
         <tr>
-            <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+            <td style="width: 330px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
                 <img src="https://images.code.org/24815a5ef848a7ae17799879e481847f-image-1724079815627.png" alt="education icon" style="width: 75px; border-radius: 10px;">
             </td>
-            <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+            <td style="width: 330px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
                 <img src="https://images.code.org/5cc860b95a9d00dc52d3498c31e05673-image-1724079929431.png" alt="Sports icon" style="width:70px; border-radius: 10px;">
             </td>
-            <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+            <td style="width: 330px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
                 <img src="https://images.code.org/a93502230072c87cd257ac2516e45e91-image-1724080036483.png" alt="Earth icon" style="width:75px; border-radius: 10px;">
             </td>
         
