@@ -122,8 +122,8 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
       AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
     end
 
-    # Verify two calls to Cdo::Metrics.push
-    assert_equal 2, reported_metrics.length
+    # Verify three calls to Cdo::Metrics.push
+    assert_equal 3, reported_metrics.length
     # Verify job start metric
     job_start_metrics = reported_metrics[0]
     assert_equal 1, job_start_metrics.length
@@ -137,7 +137,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
     # Verify job finish metrics
     job_finish_metrics = reported_metrics[1]
-    assert_equal 2, job_finish_metrics.length
+    assert_equal 1, job_finish_metrics.length
 
     finish_metric = job_finish_metrics[0]
     verify_common_metric_properties(finish_metric)
@@ -147,7 +147,9 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal 3, finish_metric[:dimensions].length
     assert_equal 'SUCCESS', finish_metric[:dimensions][2][:value]
 
-    execution_time_metric = job_finish_metrics[1]
+    job_execution_metrics = reported_metrics[2]
+    assert_equal 1, job_execution_metrics.length
+    execution_time_metric = job_execution_metrics[0]
     verify_common_metric_properties(execution_time_metric)
     assert_equal "#{AichatRequestChatCompletionJob.name}.ExecutionTime", execution_time_metric[:metric_name]
     assert execution_time_metric[:value].is_a?(Numeric)
@@ -173,12 +175,12 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
       AichatRequestChatCompletionJob.perform_now(request: request, locale: 'en')
     end
 
-    # Verify two calls to Cdo::Metrics.push
-    assert_equal 2, reported_metrics.length
+    # Verify three calls to Cdo::Metrics.push
+    assert_equal 3, reported_metrics.length
 
     # Verify job finish metric
     job_finish_metrics = reported_metrics[1]
-    assert_equal 2, job_finish_metrics.length
+    assert_equal 1, job_finish_metrics.length
 
     finish_metric = job_finish_metrics[0]
     verify_common_metric_properties(finish_metric)

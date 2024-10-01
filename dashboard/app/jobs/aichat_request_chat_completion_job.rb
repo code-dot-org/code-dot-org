@@ -95,49 +95,13 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   private def report_job_start(request)
     @start_time = Time.now
-    Cdo::Metrics.push(METRICS_NAMESPACE,
-      [
-        {
-          metric_name: "#{self.class.name}.Start",
-          value: 1,
-          unit: 'Count',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-            {name: 'ModelId', value: get_model_id(request)},
-          ],
-        }
-      ]
-    )
+    AichatMetrics.report_aichat_job(metric_name: "#{self.class.name}.Start", model_id: get_model_id(request))
   end
 
   private def report_job_finish(request)
     execution_time = Time.now - @start_time
     status_name = SharedConstants::AI_REQUEST_EXECUTION_STATUS.key(request.execution_status).to_s
-    Cdo::Metrics.push(METRICS_NAMESPACE,
-      [
-        {
-          metric_name: "#{self.class.name}.Finish",
-          value: 1,
-          unit: 'Count',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-            {name: 'ModelId', value: get_model_id(request)},
-            {name: 'ExecutionStatus', value: status_name},
-          ],
-        },
-        {
-          metric_name: "#{self.class.name}.ExecutionTime",
-          value: execution_time,
-          unit: 'Seconds',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-            {name: 'ModelId', value: get_model_id(request)},
-          ],
-        }
-      ]
-    )
+    AichatMetrics.report_aichat_job(metric_name: "#{self.class.name}.Finish", model_id: get_model_id(request), execution_status: status_name)
+    AichatMetrics.report_aichat_job_execution(metric_name: "#{self.class.name}.ExecutionTime", model_id: get_model_id(request), execution_time: execution_time)
   end
 end
