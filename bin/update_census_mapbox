@@ -21,6 +21,10 @@ end
 
 def main
   year = SharedConstants::CENSUS_CONSTANTS.CURRENT_CENSUS_SCHOOL_YEAR
+
+  puts 'START'
+  puts year.inspect
+
   geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
   Census::CensusSummary.where(school_year: year).find_each do |summary|
     school = summary.school
@@ -44,8 +48,15 @@ def main
 
   file = Tempfile.new(['census', 'geojson'])
   tiles = Tempfile.new([CDO.mapbox_upload_tileset, 'mbtiles'])
+
+  puts 'TILESETS'
+  upload_tileset_puts = CDO.mapbox_upload_tileset.presence || 'NO UPLOAD FOUND'
+  access_tileset_puts = CDO.mapbox_access_tileset.presence || 'NO ACCESS FOUND'
+  puts upload_tileset_puts.inspect
+  puts access_tileset_puts.inspect
+
   file.write(JSON.pretty_generate(geojson))
-  _stdout, stderr, tippecanoe_status = Open3.capture3(
+  stdout, stderr, tippecanoe_status = Open3.capture3(
     # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
     # clusters points that are approximately 2 pixels apart, and drops points to make them fit if they can't.
     # The layer is called "census". DO NOT change the layer name without changing the map
@@ -53,8 +64,20 @@ def main
     "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"census\" --force #{file.path}"
   )
   upload_successful = false
+
+  puts 'CHECK BEFORE'
+  puts stdout.inspect
+  puts stderr.inspect
+  puts tippecanoe_status.inspect
+
   if tippecanoe_status.success?
+
+    puts 'TIPPECANOE SUCCESS'
+
     upload_successful = upload_maptiles(tiles.path, CDO.mapbox_upload_tileset)
+
+    puts 'UPLOAD SUCCESS:'
+    puts upload_successful.inspect
   end
   unless tippecanoe_status.success? && upload_successful
     Honeybadger.notify(
