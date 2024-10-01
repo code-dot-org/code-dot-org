@@ -1,7 +1,7 @@
 import React, {useState, useCallback} from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
-import Typography, {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
 import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
