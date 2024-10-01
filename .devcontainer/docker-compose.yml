@@ -7,23 +7,23 @@
 
 include:
   # Services the dashboard server depends on
-  - path: ./docker/developers/docker-compose.mysql.yml
-  - path: ./docker/developers/docker-compose.redis.yml
+  - path: ../docker/developers/docker-compose.mysql.yml
+  - path: ../docker/developers/docker-compose.redis.yml
 
   # Selenium services for UI testing
-  - path: ./docker/developers/docker-compose.selenium.yml
+  # - path: ../docker/developers/docker-compose.selenium.yml
 
   # MinIO S3 Emulation
-  - path: ./docker/developers/docker-compose.minio.yml
+  - path: ../docker/developers/docker-compose.minio.yml
 
   # The dashboard server
-  - path: ./docker/developers/docker-compose.dashboard.yml
+  - path: ../docker/developers/docker-compose.dashboard.yml
 
   # Useful commands
-  - path: ./docker/developers/docker-compose.commands.yml
+  - path: ../docker/developers/docker-compose.commands.yml
 
   # Git hooks
-  - path: ./docker/developers/docker-compose.hooks.yml
+  - path: ../docker/developers/docker-compose.hooks.yml
 
 services:
   all-services:
