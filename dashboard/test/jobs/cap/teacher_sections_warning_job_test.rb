@@ -1,3 +1,4 @@
+test/jobs/cap/teacher_sections_warning_job_test.rb
 # frozen_string_literal: true
 
 require 'test_helper'
@@ -5,8 +6,6 @@ require 'test_helper'
 class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
   describe '.perform_later' do
     subject(:perform_later) {described_class.perform_later}
-
-    let(:cap_teacher_section_warning_emails) {['all']}
 
     let(:student_aga_gate_start_date) {30.days.ago}
     let(:teacher_email) {Faker::Internet.unique.email}
@@ -51,8 +50,6 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
     before do
       MailjetDeliveryJob.stubs(:perform_later)
       Metrics::Events.stubs(:log_event)
-
-      DCDO.stubs(:get).with('cap_teacher_section_warning_emails', []).returns(cap_teacher_section_warning_emails)
     end
 
     it 'enqueues job to "default" queue' do
@@ -107,30 +104,6 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never
         expect_event_logging.never
-
-        perform_enqueued_jobs {perform_later}
-        assert_performed_jobs 1
-      end
-    end
-
-    context 'when emails whitelist is empty' do
-      let(:cap_teacher_section_warning_emails) {[]}
-
-      it 'does not warn teacher' do
-        expect_teacher_warning_to_be_sent.never
-        expect_event_logging.never
-
-        perform_enqueued_jobs {perform_later}
-        assert_performed_jobs 1
-      end
-    end
-
-    context 'when teacher email is in whitelist' do
-      let(:cap_teacher_section_warning_emails) {[teacher_email]}
-
-      it 'schedules teacher warning email' do
-        expect_teacher_warning_to_be_sent.once
-        expect_event_logging.once
 
         perform_enqueued_jobs {perform_later}
         assert_performed_jobs 1
