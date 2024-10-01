@@ -11,13 +11,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         libxml2-dev sqlite3 imagemagick \
         libmagickcore-dev python3-pip git-lfs
 
-# Install PDM
-RUN pip install --user pdm
-
-# Instantiate Git LFS
-WORKDIR /workspaces
-RUN git lfs install
-
 # Add the Rails main Gemfile and install the gems. This means the gem install can be done
 # during build instead of on start. When a fork or branch has different gems, we still have an
 # advantage due to caching of the other gems.
@@ -30,4 +23,12 @@ RUN cd /tmp/rails \
     && rm -rf /tmp/rails
 RUN chown -R vscode:vscode /usr/local/rvm
 
+# Rootless user command execution
 USER vscode
+
+# Install PDM
+RUN pip install --user pdm
+
+# Instantiate Git LFS
+WORKDIR /workspaces
+RUN git lfs install
