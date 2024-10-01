@@ -1,7 +1,6 @@
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
 import {BlockMode} from '../constants';
-import musicI18n from '../locale';
 
 import {BlockTypes} from './blockTypes';
 import {DOCS_BASE_URL} from './constants';
@@ -75,8 +74,9 @@ export function installFunctionBlocks(blockMode) {
     Blockly.cdoUtils.registerCustomAdvancedProcedureBlocks();
     // Re-define blocks from core, in case they were deleted for Simple2 mode.
     restoreBlockDefinitions();
-    // Replaces "variable:" with "parameter:" block text for added parameters
-    Blockly.Msg['PROCEDURE_VARIABLE'] = musicI18n.parameterLabel();
+    // Copies the generator function for variables to our function argument reporters.
+    Blockly.JavaScript.forBlock.argument_reporter =
+      Blockly.JavaScript.forBlock.variables_get;
   } else {
     Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Remove two advanced blocks in the toolbox's Functions category that

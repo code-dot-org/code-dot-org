@@ -29,7 +29,7 @@ import DefaultTeacherNavRedirect from './DefaultTeacherNavRedirect';
 import ElementOrEmptyPage from './ElementOrEmptyPage';
 import LessonMaterialsContainer, {
   lessonMaterialsLoader,
-} from './LessonMaterialsContainer';
+} from './lessonMaterials/LessonMaterialsContainer';
 import PageHeader from './PageHeader';
 import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import TeacherNavigationBar from './TeacherNavigationBar';

@@ -539,6 +539,9 @@ module Poste2
       partner@code.org
     ]
 
+    def initialize(settings = nil)
+    end
+
     def deliver!(mail)
       attachments = nil
 
