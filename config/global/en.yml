@@ -88,10 +88,6 @@ header:
             domain: code.org
             url: /teach
             id: educate-overview
-          - title: course_catalog
-            domain: studio.code.org
-            url: /catalog
-            id: course-catalog
           - title: educate_elementary
             domain: code.org
             url: /educate/curriculum/elementary-school
@@ -185,10 +181,6 @@ header:
             domain: code.org
             url: /teach
             id: educate-overview
-          - title: course_catalog
-            domain: studio.code.org
-            url: /catalog
-            id: course-catalog
           - title: educate_elementary
             domain: code.org
             url: /educate/curriculum/elementary-school
