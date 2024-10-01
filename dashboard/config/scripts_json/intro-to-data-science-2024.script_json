@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-04 15:32:22 UTC",
+    "serialized_at": "2024-09-30 17:10:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4815,6 +4815,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/intro-to-data-science-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/intro-to-data-science-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/intro-to-data-science-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Anchor Charts in Data Science",
       "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/template/preview",
       "key": "anchor_charts_in_data_science",
@@ -5018,6 +5051,59 @@
       }
     },
     {
+      "name": "Data Science - CODAP Teacher Tutorial",
+      "url": "https://docs.google.com/document/d/1rvW9lgAsALg8zJHHqaYf0lx60RCAbEb1h_5ldLWNQeo/edit?usp=sharing",
+      "key": "data_science_-_codap_teacher_tutorial",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "data_science_-_codap_teacher_tutorial"
+      }
+    },
+    {
+      "name": "Data Science Charts in CODAP",
+      "url": "https://docs.google.com/document/d/1C_EwhsozPJFZ8LNP0yhLOb17nlc1RJpb6SUJA_MDsiM/edit?usp=sharing",
+      "key": "data_science_charts_in_codap",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_charts_in_codap"
+      }
+    },
+    {
+      "name": "Data Science Unit 1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=drive_link",
+      "key": "data_science_unit_1_guided_notes",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_guided_notes"
+      }
+    },
+    {
+      "name": "Data Science Unit 1 Overview",
+      "url": "https://docs.google.com/document/d/14V8-mxHA1cz--owWOLPbwN8iqXXlDbr_KFOrbG0iA18/view",
+      "key": "data_science_unit_1_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_overview"
+      }
+    },
+    {
+      "name": "Data Science Unit 1 Study Guide",
+      "url": "https://docs.google.com/document/d/1bW29rP0OZBZL_FuXsMrnwq5pWiqB7oA1qegVL7ZeQwc/edit?usp=drive_link",
+      "key": "data_science_unit_1_study_guide_1",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_study_guide_1"
+      }
+    },
+    {
       "name": "Data Scientist Bingo",
       "url": "https://docs.google.com/document/d/1AneTWDfmrXLWXQ_LSagemgSD_a8BRjFl5_FC-gx5ovU/view",
       "key": "data_scientist_bingo",
@@ -5102,6 +5188,26 @@
       },
       "seeding_key": {
         "resource.key": "ethical_data_collection"
+      }
+    },
+    {
+      "name": "Guide to Anchor Charts & Word Walls",
+      "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/view",
+      "key": "guide_to_anchor_charts_word_walls",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_anchor_charts_word_walls"
+      }
+    },
+    {
+      "name": "Guide to Language Routines",
+      "url": "https://docs.google.com/document/d/1B93Lzlo63VrBNjlc3puiujew8gtMFanxSdXx3lqzIrs/view",
+      "key": "guide_to_language_routines",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_language_routines"
       }
     },
     {
@@ -5412,7 +5518,66 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "intro-to-data-science-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "intro-to-data-science-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "intro-to-data-science-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_-_codap_teacher_tutorial",
+        "script.name": "intro-to-data-science-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_charts_in_codap",
+        "script.name": "intro-to-data-science-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_guided_notes",
+        "script.name": "intro-to-data-science-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_overview",
+        "script.name": "intro-to-data-science-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_study_guide_1",
+        "script.name": "intro-to-data-science-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_anchor_charts_word_walls",
+        "script.name": "intro-to-data-science-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_language_routines",
+        "script.name": "intro-to-data-science-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

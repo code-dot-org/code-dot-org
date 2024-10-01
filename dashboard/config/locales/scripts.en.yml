@@ -10245,6 +10245,8 @@ en:
               name: Assessments
             lesson-6:
               name: Lesson 1
+            lesson-7:
+              name: Pygame
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -10256,6 +10258,8 @@ en:
               display_name: Coding w/AI
             lessonGroup-6:
               display_name: PL Stuff
+            lessonGroup-7:
+              display_name: Python
           name: angelina-playground
           title: Angelina's Place To Do Stuff
           description_audience: ''
@@ -18476,9 +18480,9 @@ en:
           name: intro-to-data-science-2024
           title: Introduction to Data Science
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
+          description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use CODAP for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n  <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n   <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n  <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n* Understand the foundations of data science and its interdisciplinary nature. \n* Create and refine data questions to guide investigations. \n* Analyze data using CODAP and apply various analysis techniques. \n* Develop visualizations to help answer data questions. \n* Use analysis results to tell a compelling data story. \n* Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n</div> \n</details>"
+          student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using CODAP to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n<p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n* Understand the foundations of data science and its interdisciplinary nature. \n* Create and refine data questions to guide investigations. \n* Analyze data using CODAP and apply various analysis techniques. \n* Develop visualizations to help answer data questions. \n* Use analysis results to tell a compelling data story. \n* Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n</div> \n</details>"
         data-science-with-python-2024:
           lessons:
             lesson-1:
@@ -18513,9 +18517,9 @@ en:
           name: data-science-with-python-2024
           title: Data Science with Python
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Students learn to leverage Python and popular data science libraries for data analysis, enhancing their data interpretation skills through programming.
+          description: "In this unit, students dive into data analysis using the Python programming language. They start by learning the basics of Python syntax and then progress to using data science libraries such as Pandas and Matplotlib to explore, manipulate, and visualize complex datasets. Students develop skills in data cleaning, filtering, and statistical analysis, using these tools to answer data-driven questions. The unit includes a strong emphasis on creating custom visualizations and communicating insights effectively. By the end of this unit, students will have experience in using Python to transform raw data into actionable insights, culminating in a project that addresses a community or school-based issue through a data-driven approach.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n* Formulate data questions and create data collection plans. \n* Write and run simple Python programs focusing on data science applications. \n* Explore, manipulate, and analyze data using Pandas. \n* Create and customize data visualizations with Matplotlib. \n* Clean and filter datasets to ensure data integrity and uncover insights. \n* Perform statistical analysis using key Pandas functions and interpret the results. \n* Use advanced filtering techniques in Pandas to refine and analyze data. \n</div> \n</details>"
+          student_description: "This unit focuses on using Python to analyze and interpret real-world data sets. You learn how to use libraries like Pandas and Matplotlib to explore, manipulate, and visualize data, creating custom visualizations such as stacked bar charts and pie charts. Throughout the unit, you refine your programming and analytical skills to uncover insights from complex datasets. The unit ends with a project that allows you to apply your learning to a community or school-based issue, presenting your findings through a combination of data visualizations and Python code.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n* Formulate data questions and create data collection plans. \n* Write and run simple Python programs focusing on data science applications. \n* Explore, manipulate, and analyze data using Pandas. \n* Create and customize data visualizations with Matplotlib. \n* Clean and filter datasets to ensure data integrity and uncover insights. \n* Perform statistical analysis using key Pandas functions and interpret the results. \n* Use advanced filtering techniques in Pandas to refine and analyze data. \n</div> \n</details>"
         tess-getting-started:
           lessons: {}
           lesson_groups: {}
@@ -18978,9 +18982,9 @@ en:
           name: foundations-gen-ai-2024
           title: Foundations of Generative AI
           description_audience: ''
-          description_short: ''
+          description_short: Builds a foundational understanding of text-based generative AI models
           description: This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
-          student_description: ''
+          student_description: Learn how chatbots and large-language models work behind the scenes!
         customizing-llms-2024:
           lessons: {}
           lesson_groups: {}
@@ -19130,6 +19134,232 @@ en:
           lesson_groups: {}
           name: music-lab-advanced-model-sandbox
           title: "[Sandbox] Advanced Model"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoc-music-ai-pilot-2:
+          lessons: {}
+          lesson_groups: {}
+          name: hoc-music-ai-pilot-2
+          title: 'Play Tests 2: Hour of Code - Music Lab with AI '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: 'Click on the number 1 to get started! '
+        computer-systems-playground:
+          lessons:
+            lesson-2:
+              name: Lesson 1
+            lesson-3:
+              name: Lesson 2
+            lesson-1:
+              name: Lesson 3 - Buttons
+            lesson-4:
+              name: Sensors
+          lesson_groups: {}
+          name: computer-systems-playground
+          title: "[PLAYGROUND] Computer Systems and Devices (with micro:bit)"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        computer-systems-nondevice-playground:
+          lessons: {}
+          lesson_groups: {}
+          name: computer-systems-nondevice-playground
+          title: "[PLAYGROUND] Computer Systems and Devices (non-device)"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        networks-and-internet-playground:
+          lessons: {}
+          lesson_groups: {}
+          name: networks-and-internet-playground
+          title: "[PLAYGROUND] Networks and the Internet"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        intro-to-programming-playground:
+          lessons: {}
+          lesson_groups: {}
+          name: intro-to-programming-playground
+          title: "[PLAYGROUND] Introduction to Programming with Python"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        programming-with-music-lab-playground:
+          lessons: {}
+          lesson_groups: {}
+          name: programming-with-music-lab-playground
+          title: "[PLAYGROUND] Programming with Music Lab"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        computer-systems-and-devices-2024:
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: Real-World Computer Systems
+            lesson-3:
+              name: Designing Computer Systems
+            lesson-4:
+              name: Buttons and Console
+            lesson-5:
+              name: Sensors
+            lesson-6:
+              name: LEDs
+            lesson-7:
+              name: Peer Feedback
+            lesson-8:
+              name: Additional Input
+            lesson-9:
+              name: External Output
+            lesson-10:
+              name: Prototype Testing
+            lesson-11:
+              name: Peer Feedback
+            lesson-12:
+              name: Operating Systems
+            lesson-13:
+              name: Hardware Lifecycle
+            lesson-14:
+              name: Future of Computer Systems
+            lesson-15:
+              name: Prepare to Present
+            lesson-16:
+              name: Presentation Day
+            lesson-17:
+              name: Post-Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Post-Assessment
+          name: computer-systems-and-devices-2024
+          title: "[PILOT] Computer Systems and Devices"
+          description_audience: "'24-'25"
+          description_short: ''
+          description: ''
+          student_description: ''
+        computer-systems-and-devices-no-device-2024:
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: Post-Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Post-Assessment
+          name: computer-systems-and-devices-no-device-2024
+          title: "[PILOT] Computer Systems and Devices (no device)"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        networks-and-the-internet-2024:
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: Post-Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Post-Assessment
+          name: networks-and-the-internet-2024
+          title: "[PILOT] Networks and the Internet"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        intro-to-programming-python-2024:
+          lessons:
+            lesson-2:
+              name: Pre-Assessment
+            lesson-3:
+              name: Project Launch
+            lesson-4:
+              name: Algorithms and Flowcharts
+            lesson-5:
+              name: Variables and Data Types
+            lesson-6:
+              name: Conditionals
+            lesson-7:
+              name: Loops
+            lesson-8:
+              name: Documenting Code
+            lesson-9:
+              name: Peer Feedback
+            lesson-10:
+              name: Lists
+            lesson-11:
+              name: Functions
+            lesson-12:
+              name: Project Refinement
+            lesson-13:
+              name: Bias and Accessibility
+            lesson-14:
+              name: User Testing and Feedback
+            lesson-15:
+              name: Program Development
+            lesson-1:
+              name: Post-Assessment
+            lesson-16:
+              name: Preparing to Present
+            lesson-17:
+              name: Project Presentations
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Post-Assessment
+          name: intro-to-programming-python-2024
+          title: "[PILOT] Introduction to Programming with Python"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        programming-with-music-lab-2024:
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: Post-Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Post-Assessment
+          name: programming-with-music-lab-2024
+          title: "[PILOT] Programming with Music Lab"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoc-music-ai-pilot-3:
+          lessons: {}
+          lesson_groups: {}
+          name: hoc-music-ai-pilot-3
+          title: 'Playtest 3 - Music Lab: A.I. Edition for Hour of Code'
           description_audience: ''
           description_short: ''
           description: ''

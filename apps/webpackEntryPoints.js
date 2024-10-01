@@ -222,6 +222,7 @@ const PEGASUS_ENTRIES = {
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
   'code.org/public/teach': './src/sites/code.org/pages/public/teach.js',
   'code.org/public/students': './src/sites/code.org/pages/public/students.js',
+  'code.org/public/cms-demo': './src/sites/code.org/pages/public/cms-demo.js',
 
   // hourofcode.com
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',

@@ -5,17 +5,13 @@ import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 
-import AppConfig from '../appConfig';
+import MusicRegistry from '../MusicRegistry';
+import MusicLibrary from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
 import SoundsPanel from '../views/SoundsPanel';
-import SoundsPanel2 from '../views/SoundsPanel2';
 
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
-
-// Default to using SoundsPanel, unless a URL parameter forces the use of
-// the newer SoundsPanel2.
-const useSoundsPanel2 = AppConfig.getValue('sounds-panel-2') === 'true';
 
 /**
  * A custom field that renders the sample previewing and choosing UI, used in
@@ -24,7 +20,7 @@ const useSoundsPanel2 = AppConfig.getValue('sounds-panel-2') === 'true';
 class FieldSounds extends GoogleBlockly.Field {
   constructor(options) {
     const currentValue =
-      options.currentValue || options.getLibrary().getDefaultSound();
+      options.currentValue || MusicLibrary.getInstance().getDefaultSound();
 
     super(currentValue);
 
@@ -119,19 +115,17 @@ class FieldSounds extends GoogleBlockly.Field {
       return;
     }
 
-    const CurrentSoundsPanel = useSoundsPanel2 ? SoundsPanel2 : SoundsPanel;
-
     ReactDOM.render(
-      <CurrentSoundsPanel
-        library={this.options.getLibrary()}
+      <SoundsPanel
+        library={MusicLibrary.getInstance()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
-        showSoundFilters={this.options.getShowSoundFilters()}
+        showSoundFilters={MusicRegistry.showSoundFilters}
         onPreview={value => {
           this.playingPreview = value;
           this.renderContent();
 
-          this.options.playPreview(value, () => {
+          MusicRegistry.player.previewSound(value, () => {
             // If the user starts another preview while one is
             // already playing, it will have started playing before
             // we get this stop event.  We want to wait until the
@@ -151,7 +145,7 @@ class FieldSounds extends GoogleBlockly.Field {
   }
 
   dropdownDispose_() {
-    this.options.cancelPreviews();
+    MusicRegistry.player.cancelPreviews();
 
     this.newDiv_ = null;
     this.showingEditor = false;
@@ -180,9 +174,9 @@ class FieldSounds extends GoogleBlockly.Field {
       height: 20,
     });
 
-    const soundType = this.options
-      .getLibrary()
-      .getSoundForId(this.getValue())?.type;
+    const soundType = MusicLibrary.getInstance().getSoundForId(
+      this.getValue()
+    )?.type;
 
     if (soundType === 'vocal') {
       textElement.setAttribute('font-style', 'italic');
@@ -259,7 +253,9 @@ class FieldSounds extends GoogleBlockly.Field {
   }
 
   getText() {
-    return this.options.getLibrary().getSoundForId(this.getValue())?.name || '';
+    return (
+      MusicLibrary.getInstance().getSoundForId(this.getValue())?.name || ''
+    );
   }
 
   updateSize_() {

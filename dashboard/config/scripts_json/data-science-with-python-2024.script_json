@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-19 18:22:49 UTC",
+    "serialized_at": "2024-09-30 17:09:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -933,7 +933,7 @@
       "key": "7a21c79d-e0eb-4932-837e-0d3a13e6f2ca",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you notice about the code in this program?*\n- *What do you wonder about the code in this program?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** While students might not be able familiar with enough programming fundamentals to be able to understand what this code is doing, by reading the names of variables and the output message at the bottom of the program, they should be able to infer that it calculates the age of a dog in “dog years”. This predict level introduces the three main variable types which will be introduced in this lesson: `int`, `str`, and `list`. Additionally, it will expose students to concatenation, the `print()` function, and simple expressions. The goal is not for students to understand how to utilize these concepts independently yet – those skills will come in the next levels. Encourage them to share what they have learned and the questions that they have.\n\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you notice about the code in this program?*\n- *What do you wonder about the code in this program?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** While students might not be able familiar with enough programming fundamentals to be able to understand what this code is doing, by reading the names of variables and the output message at the bottom of the program, they should be able to infer that it calculates the age of a dog in “dog years”. This predict level introduces the three main variable types which are introduced in this lesson: `int`, `str`, and `list`. Additionally, students are exposed to concatenation, the `print()` function, and simple expressions. The goal is not for students to understand how to utilize these concepts independently yet – those skills will come in the next levels. Encourage them to share what they have learned and the questions that they have.\n\n",
         "progression_name": "Predict and Run"
       },
       "seeding_key": {
@@ -997,7 +997,7 @@
       "key": "c3254f84-8392-401b-826b-71c0c1a20f23",
       "position": 7,
       "properties": {
-        "description": "- **Level 8:** Students will practice creating string and numeric variables, creating an expression that involves a mathematical operation on those variables, and printing the results as output.\n- **Level 9:** Students will practice creating lists, accessing elements within those lists, creating an expression that involves a mathematical operation on the elements of the list, and printing the results as output.\n",
+        "description": "- **Level 8:** Students practice creating string and numeric variables, creating an expression that involves a mathematical operation on those variables, and printing the results as output.\n- **Level 9:** Students practice creating lists, accessing elements within those lists, creating an expression that involves a mathematical operation on the elements of the list, and printing the results as output.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1358,7 +1358,7 @@
       "key": "a8bbd8c9-2f58-4c3a-a663-eb12a4464ca9",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students discuss, listen to their conversations and engage with them, asking clarifying questions. Try to make sure all students get the chance to speak. Help facilitate the round robin protocol.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What differences do you notice in the types of responses received (e.g., numbers, words, dates) and what effect might that have when collecting data?\nStudents will discuss within their groups using the Round Robin Protocol\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might notice that some questions might be answered in different ways. For instance, to answer the question \"What is the ideal temperature for humans?\", some students might write an integer (e.g. 78), some students might write include a decimal (e.g. 98.6), and some students may choose to write it out (\"Eighty\"). Receiving different types of responses to the same question may hinder the ability to perform data analysis on the data collected. If one was expecting to receive a numerical response, but received a word or symbol instead, then this might make the data less reliable and accurate. You wouldn't be able to perform mathematical operations as easily, for instance.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students discuss, listen to their conversations and engage with them, asking clarifying questions. Try to make sure all students get the chance to speak. Help facilitate the round robin protocol.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What differences do you notice in the types of responses received (e.g., numbers, words, dates) and what effect might that have when collecting data?\nStudents discuss within their groups using the Round Robin Protocol\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might notice that some questions might be answered in different ways. For instance, to answer the question \"What is the ideal temperature for humans?\", some students might write an integer (e.g. 78), some students might write include a decimal (e.g. 98.6), and some students may choose to write it out (\"Eighty\"). Receiving different types of responses to the same question may hinder the ability to perform data analysis on the data collected. If one was expecting to receive a numerical response, but received a word or symbol instead, then this might make the data less reliable and accurate. You wouldn't be able to perform mathematical operations as easily, for instance.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "a8bbd8c9-2f58-4c3a-a663-eb12a4464ca9",
@@ -1404,7 +1404,7 @@
       "key": "e44ff1be-2379-42cd-b13a-90664789d245",
       "position": 4,
       "properties": {
-        "description": "- **Level 2:** Use the `info()` function for `survey_data` and examine the output\n- **Level 3:** Use the describe() function and compare the output with the output from `info()`\n- **Level 4:** Use `astype()` to convert `float64` to `int64`, and vice versa\n- **Level 5:** Use `to_datetime()` to convert an object to datetime.\n- **Level 6:** Students complete a quick check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how Pandas assigns data types.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the four main data types that students will encounter frequently: int64, float64, object, datetime\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that pandas auto-assigning data types is prone to errors at times.\n\n\n\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `info()` to see what data type was assigned to each column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `astype()` to update types for an entire column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `to_datetime()` to convert a column's data type to datetime."
+        "description": "- **Level 2:** Use the `info()` function for `survey_data` and examine the output\n- **Level 3:** Use the `describe()` function and compare the output with the output from `info()`\n- **Level 4:** Use `astype()` to convert `float64` to `int64`, and vice versa\n- **Level 5:** Use `to_datetime()` to convert an object to datetime.\n- **Level 6:** Students complete a quick check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how Pandas assigns data types.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the four main data types that students will encounter frequently: int64, float64, object, datetime\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that pandas auto-assigning data types is prone to errors at times.\n\n\n\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `info()` to see what data type was assigned to each column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `astype()` to update types for an entire column.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we can use `to_datetime()` to convert a column's data type to datetime."
       },
       "seeding_key": {
         "activity_section.key": "e44ff1be-2379-42cd-b13a-90664789d245",
@@ -1427,7 +1427,7 @@
       "key": "f5edb261-cfd4-4ef8-95c8-2ab396ad489f",
       "position": 6,
       "properties": {
-        "description": "\n- **Level 7:** Students will use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a line graph.\n- **Level 8:** Students will use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a bar chart.\n\n",
+        "description": "\n- **Level 7:** Students use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a line graph.\n- **Level 8:** Students use `info()`, `describe()`, `astype()`, and `to_datetime()` to define and update types in the creation of a bar chart.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -5523,6 +5523,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/data-science-with-python-2024/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/data-science-with-python-2024/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/data-science-with-python-2024/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
       "name": "Cleaning Data",
       "url": "https://docs.google.com/presentation/d/1746UQoze6wGE4b9FGDt2sLHTIoQ2hixYs9nJL5ocFhE/template/preview",
       "key": "cleaning_data_1",
@@ -5559,6 +5592,39 @@
       }
     },
     {
+      "name": "Data Science Unit 2 Guided Notes",
+      "url": "https://docs.google.com/document/d/175Tq55HFroHz8RIv6MyEvPGV2bNFRvxm3LizFAcvx20/edit?usp=drive_link",
+      "key": "data_science_unit_2_guided_notes_1",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_guided_notes_1"
+      }
+    },
+    {
+      "name": "Data Science Unit 2 Overview",
+      "url": "https://docs.google.com/document/d/1S3LnMEV4V3A8eEA7bXAaYXtGXco2QbtiZSywaR5vIvw/view",
+      "key": "data_science_unit_2_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_overview"
+      }
+    },
+    {
+      "name": "Data Science Unit 2 Study Guide",
+      "url": "https://docs.google.com/document/d/1q-bcf53SVePWCeWuTmP0Lp3K2ju3ydH-dXFYHhXX3lk/edit?usp=drive_link",
+      "key": "data_science_unit_2_study_guide_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_study_guide_1"
+      }
+    },
+    {
       "name": "Exploratory Data Analysis",
       "url": "https://docs.google.com/presentation/d/1NnZk4lfwSDAgtI30pc32mmFLol1GyB3I2w9E8qEiWIk/template/preview",
       "key": "exploratory_data_analysis",
@@ -5592,6 +5658,26 @@
       },
       "seeding_key": {
         "resource.key": "getting_to_know_your_data"
+      }
+    },
+    {
+      "name": "Guide to Anchor Charts & Word Walls",
+      "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/view",
+      "key": "guide_to_anchor_charts_word_walls",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_anchor_charts_word_walls"
+      }
+    },
+    {
+      "name": "Guide to Language Routines",
+      "url": "https://docs.google.com/document/d/1B93Lzlo63VrBNjlc3puiujew8gtMFanxSdXx3lqzIrs/view",
+      "key": "guide_to_language_routines",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_language_routines"
       }
     },
     {
@@ -5726,6 +5812,17 @@
       },
       "seeding_key": {
         "resource.key": "python_anticipation_guide_1"
+      }
+    },
+    {
+      "name": "Python / Pandas Documentation",
+      "url": "https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit?usp=drive_link",
+      "key": "python_pandas_documentation_1",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "python_pandas_documentation_1"
       }
     },
     {
@@ -5933,7 +6030,61 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_guided_notes_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_overview",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_2_study_guide_1",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_anchor_charts_word_walls",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_language_routines",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "guide_to_programming_levels",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "python_pandas_documentation_1",
         "script.name": "data-science-with-python-2024"
       }
     }

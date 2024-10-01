@@ -80,4 +80,28 @@ describe('ElementOrEmptyPage', () => {
     expect(screen.queryByText(i18n.browseCurriculum())).toBeNull();
     screen.getByText(TEST_ELEMENT_TEXT);
   });
+
+  it('Shows no unit assigned', () => {
+    render(
+      <Router>
+        <ElementOrEmptyPage
+          showNoStudents={false}
+          showNoCurriculumAssigned={false}
+          showNoUnitAssigned={true}
+          courseName="CSD"
+          element={<div>{TEST_ELEMENT_TEXT}</div>}
+        />
+      </Router>
+    );
+
+    screen.getByAltText(i18n.almostThere());
+    screen.getByText(i18n.almostThere());
+    screen.getByText(i18n.noUnitAssigned({courseName: 'CSD'}));
+    screen.getByRole('button', {name: i18n.assignAUnit()});
+    expect(screen.queryByAltText('blank screen')).toBeNull();
+    expect(screen.queryByText(i18n.browseCurriculum())).toBeNull();
+    expect(screen.queryByAltText('empty desk')).toBeNull();
+    expect(screen.queryByText(i18n.addStudents())).toBeNull();
+    expect(screen.queryByText(TEST_ELEMENT_TEXT)).toBeNull();
+  });
 });

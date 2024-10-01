@@ -1702,6 +1702,14 @@ columns:
     default_function:
     collation:
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_teaching_assistant_available
+    sql_type_metadata: *7
+    'null': false
+    default: '0'
+    default_function:
+    collation:
+    comment:
   course_offerings_pd_workshops:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: pd_workshop_id

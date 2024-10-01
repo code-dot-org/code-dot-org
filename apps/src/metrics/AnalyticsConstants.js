@@ -374,8 +374,6 @@ const EVENTS = {
     'Recommended Stretch Curriculum Clicked',
 
   // LTI & LMS
-  LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
-  LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
   LTI_UNLINK_MODAL_SHOWN: 'lti_unlink_modal_shown',
   LTI_UNLINK_CLICK: 'lti_unlink_click',
   LTI_UNLINK_CANCEL: 'lti_unlink_cancel',
@@ -398,12 +396,19 @@ const EVENTS = {
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
   CODEBRIDGE_MOVE_FILE: 'Move file on codebridge',
+  CODEBRIDGE_MOVE_FOLDER: 'Move folder on codebridge',
   CODEBRIDGE_NEW_FILE: 'Create a new file on codebridge',
   CODEBRIDGE_NEW_FOLDER: 'Create a new folder on codebridge',
   CODEBRIDGE_NEW_SUBFOLDER: 'Create a new subfolder on codebridge',
   CODEBRIDGE_RENAME_FILE: 'Rename file on codebridge',
   CODEBRIDGE_RENAME_FOLDER: 'Rename folder on codebridge',
   CODEBRIDGE_DOWNLOAD_FILE: 'Download file on codebridge',
+  CODEBRIDGE_UPLOAD_FILE: 'Upload file on codebridge',
+  CODEBRIDGE_UPLOAD_INVALID_FILE_NAME:
+    'Attempted upload of invalid file name on codebridge',
+  CODEBRIDGE_UPLOAD_UNACCEPTED_FILE:
+    'Attempted upload of unaccepted file on codebridge',
+  CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',
 
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
