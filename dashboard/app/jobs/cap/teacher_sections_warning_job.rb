@@ -40,6 +40,7 @@ module CAP
 
     private def cap_affected_sections
       @cap_affected_sections ||= Queries::Section.cap_affected(
+        scope: ::Section.visible,
         period: Policies::ChildAccount::TEACHER_WARNING_PERIOD.ago..
       )
     end

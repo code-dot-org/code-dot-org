@@ -106,6 +106,8 @@ class Section < ApplicationRecord
 
   before_validation :strip_emoji_from_name
 
+  scope :visible, -> {where(hidden: false)}
+
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
   def pl_sections_must_use_email_logins
