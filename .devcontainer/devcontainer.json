@@ -18,10 +18,10 @@
   "containerEnv": {
     "CDO_SLACK_BOT_TOKEN": "localoverride",
     "CDO_PARDOT_PRIVATE_KEY": "localoverride",
-    "PGHOST": "postgres",
-    "PGUSER": "postgres",
-    "PGPASSWORD": "postgres",
-    "MYSQL_HOST": "mariadb",
+    "CDO_DB_WRITER": 'mysql://root@db/',
+    "CDO_DB_ENDPOINT_WRITER": 'db',
+    "CDO_DB_ENDPOINT_PROXY_REPORTING": 'db',
+    "CDO_DB_ENDPOINT_PROXY_READER": 'db',
     "REDIS_URL": "redis://redis/0",
     "MEMCACHE_SERVERS": "memcached:11211"
   },
