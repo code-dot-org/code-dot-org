@@ -76,7 +76,18 @@ const ResourceViewOptionsDropdown: React.FC<
       },
     ];
 
-    if (isGDocsUrl(resource.url)) {
+    if (materialType === 'LESSON_PLAN') {
+      options.push({
+        value: 'download-pdf',
+        label: 'Download (PDF)',
+        icon: {iconName: 'download'},
+        onClick: () => {
+          if (resource.downloadUrl) {
+            openDownloadUrl(resource.downloadUrl);
+          }
+        },
+      });
+    } else if (isGDocsUrl(resource.url)) {
       options.push({
         value: 'download-pdf',
         label: 'Download (PDF)',

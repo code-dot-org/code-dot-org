@@ -5,6 +5,7 @@ export type Lesson = {
   id: number;
   position: number;
   lessonPlanHtmlUrl: string;
+  lessonPlanPdfUrl: string;
   standardsUrl: string;
   vocabularyUrl: string;
   resources: {
