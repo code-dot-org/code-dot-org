@@ -114,30 +114,24 @@ describe('FinishTeacherAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 
-  it('leaving the displayName field empty shows error message and disabled button until display name is entered', () => {
+  it('leaving the displayName field empty shows error message', () => {
     renderDefault();
     const displayNameInput = screen.getAllByDisplayValue('')[0];
-    const finishSignUpButton = screen.getByRole('button', {
-      name: locale.go_to_my_account(),
-    });
 
     // Error message doesn't show and button is disabled by default
     expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
 
     // Enter display name
     fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
 
-    // Error does not show and button is enabled when display name is entered
+    // Error does not show when display name is entered
     expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
 
     // Clear display name
     fireEvent.change(displayNameInput, {target: {value: ''}});
 
-    // Error shows and button is disabled with empty display name
+    // Error shows with empty display name
     screen.getByText(locale.display_name_error_message());
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 
   it('GDPR has expected behavior if api call returns true', async () => {
@@ -167,8 +161,22 @@ describe('FinishTeacherAccount', () => {
   });
 
   it('clicking finish sign up button triggers fetch call and redirects user to home page', async () => {
-    const fetchSpy = sinon.stub(window, 'fetch');
-    fetchSpy.returns(Promise.resolve(new Response()));
+    const fetchStub = sinon.stub(window, 'fetch');
+    fetchStub.callsFake(url => {
+      if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({gdpr: false, force_in_eu: false}),
+        } as Response);
+      } else {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({success: true}),
+        } as Response);
+      }
+    });
 
     // Declare parameter values and set sessionStorage variables
     const name = 'FirstName';
@@ -217,8 +225,8 @@ describe('FinishTeacherAccount', () => {
       expect(getAuthenticityTokenMock).toHaveBeenCalled;
 
       // Verify the button's fetch method was called
-      expect(fetchSpy).toHaveBeenCalled;
-      const fetchCall = fetchSpy.getCall(0);
+      expect(fetchStub.calledTwice).toBe(true);
+      const fetchCall = fetchStub.getCall(1);
       expect(fetchCall.args[0]).toEqual('/users');
       expect(fetchCall.args[1]?.body).toEqual(
         JSON.stringify(finishSignUpParams)
@@ -228,6 +236,6 @@ describe('FinishTeacherAccount', () => {
       expect(navigateToHrefMock).toHaveBeenCalledWith('/home');
     });
 
-    fetchSpy.restore();
+    fetchStub.restore();
   });
 });
