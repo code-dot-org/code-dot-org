@@ -782,4 +782,6 @@ module SharedConstants
   }
 
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
+
+  AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 end
