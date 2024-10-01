@@ -223,6 +223,9 @@ export default function RubricContainer({
       }
       tourStep.current = nextStepIndex;
       if (nextStepIndex === 1) {
+        document.getElementById('tour-fab-bg').scrollBy(0, -1000);
+      }
+      if (nextStepIndex === 2) {
         document.getElementById('tour-fab-bg').scrollBy(0, 1000);
       }
     }
