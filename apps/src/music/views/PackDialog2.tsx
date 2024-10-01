@@ -29,7 +29,6 @@ interface PackEntryProps {
   isSelected: boolean;
   onSelect: (path: SoundFolder) => void;
   onPreview: (path: string) => void;
-  onStopPreview: () => void;
   mode: Mode;
   currentFolderRefCallback: (ref: HTMLDivElement) => void;
 }
@@ -41,7 +40,6 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   isSelected,
   onSelect,
   onPreview,
-  onStopPreview,
   mode,
   currentFolderRefCallback,
 }) => {
@@ -95,7 +93,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
               alt=""
               draggable={false}
             />
-            {imageAttributionAuthor && (
+            {false && imageAttributionAuthor && (
               <div
                 className={classNames(
                   styles.packImageAttribution,

@@ -19,7 +19,8 @@
   background-color: $neutral_light;
   border-radius: 5px;
   padding: 7px 20px;
-  width: 600px;
+  width: 80%;
+  max-width: 800px;
   max-height: calc(100% - 84px);
 }
 
@@ -89,7 +90,8 @@
           width: 100%;
           padding: 8px;
           display: flex;
-          gap: 10px;
+          gap: 20px;
+          align-items: center;
 
           &Alternate {
             background-color: #31373d;
@@ -132,18 +134,14 @@
           }
 
           &Name {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
             flex: 1;
+            font-size: 16px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
           }
 
           &Artist {
-            display: flex;
-            align-items: center;
             flex: 1;
             font-size: 16px;
             white-space: nowrap;
@@ -154,15 +152,6 @@
           &Bold {
             font-weight: 600;
           }
-
-          &Preview {
-            margin: 3px 6px 0 3px;
-            font-size: 18px;
-
-            .preview {
-              color: $neutral_dark40;
-            }
-          }
         }
       }
     }
@@ -172,6 +161,7 @@
 %button {
   border: 2px solid;
   transition: background-color 0.1s ease;
+  margin: 5px 0;
 
   &:hover, &:active {
     box-shadow: none;
