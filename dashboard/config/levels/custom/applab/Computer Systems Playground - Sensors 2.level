@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-09-27T19:00:21.000Z",
   "level_num": "custom",
@@ -73,7 +74,7 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/maker/setup"
     ],
-    "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\n  console.log(lightSensor.value);\n  //Update the value on the right side of the\n  //conditional to fit your definition of bright\n  if (lightSensor.value > 200) {\n    console.log(\"That's too bright!\");\n  }\n  //Add an else that prints something different \n});\nonBoardEvent(buttonB, \"down\", function() {\n  console.log(tempSensor.F);\n  //Update the value on the right side of the  \n  //conditional to fit your definition of cold \n  if (tempSensor.F < 75) {\n    console.log(\"It's cold in here!\");\n  }\n  //Add an else that prints something different \n});\n",
+    "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\r\n  console.log(lightSensor.value);\r\n  //Update the value on the right side of the\r\n  //conditional to fit your definition of bright\r\n  if (lightSensor.value > 200) {\r\n    console.log(\"That's too bright!\");\r\n  }\r\n  //Add an else that prints something different\r\n  \r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  console.log(tempSensor.F);\r\n  //Update the value on the right side of the  \r\n  //conditional to fit your definition of cold \r\n  if (tempSensor.F < 75) {\r\n    console.log(\"It's cold in here!\");\r\n  }\r\n  //Add an else that prints something different\r\n  \r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "code_functions": {
       "console.log": null,
@@ -98,11 +99,13 @@
       "divideOperator": null
     },
     "palette_category_at_start": "microbit",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-09-27T19:00:21.332+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Sensors 1 2\\\"\"],\"cloned_from\":\"Computer Systems Playground - Sensors 1 2\"},{\"changed_at\":\"2024-09-27 19:00:35 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 19:08:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 20:01:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-27T19:00:21.332+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Sensors 1 2\\\"\"],\"cloned_from\":\"Computer Systems Playground - Sensors 1 2\"},{\"changed_at\":\"2024-09-27 19:00:35 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 19:08:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 20:01:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-30 19:34:33 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

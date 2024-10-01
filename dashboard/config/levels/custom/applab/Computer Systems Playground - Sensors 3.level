@@ -1,6 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
   "created_at": "2024-09-27T20:39:23.000Z",
   "level_num": "custom",
@@ -74,8 +73,8 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/maker/setup"
     ],
-    "start_blocks": "//1) Update the event to continuously check the `lightSensor`\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  if (lightSensor.value < 20) {\r\n    console.log(\"very dim\");\r\n  }\r\n  if (lightSensor.value > 230) {\r\n    console.log(\"very bright\");\r\n  }\r\n});\r\n\r\n//2) Create an event to check the tempSensor when it changes\r\n//3) Print the temperature to the console when the temperature changes\r\n",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "start_blocks": "//1) Update the event to fire when the `lightSensor` value changes\nonBoardEvent(buttonA, \"down\", function() {\n  console.log(lightSensor.value);\n});\n\n//2) Create an event to check the tempSensor when it changes\n//3) Print the temperature to the console when the temperature changes\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "code_functions": {
       "console.log": null,
       "onBoardEvent": null,
@@ -100,13 +99,11 @@
       "isPressed": null
     },
     "palette_category_at_start": "microbit",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-09-27T20:39:23.431+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Sensors 2\\\"\"],\"cloned_from\":\"Computer Systems Playground - Sensors 2\"},{\"changed_at\":\"2024-09-27 20:39:36 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 20:53:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 21:05:33 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 21:14:24 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 21:16:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 21:26:28 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 23:37:02 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-27T20:39:23.431+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Sensors 2\\\"\"],\"cloned_from\":\"Computer Systems Playground - Sensors 2\"},{\"changed_at\":\"2024-09-27 20:39:36 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 20:53:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 21:05:33 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 21:14:24 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 21:16:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 21:26:28 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-27 23:37:02 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-30 19:41:43 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
