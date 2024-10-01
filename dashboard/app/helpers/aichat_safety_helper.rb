@@ -50,6 +50,7 @@ module AichatSafetyHelper
               timestamp: Time.now,
               dimensions: [
                 {name: 'Environment', value: CDO.rack_env},
+                {name: 'SafetySystemPrompt', value: get_safety_system_prompt_version}
               ],
             }
           ]
@@ -65,6 +66,7 @@ module AichatSafetyHelper
               timestamp: Time.now,
               dimensions: [
                 {name: 'Environment', value: CDO.rack_env},
+                {name: 'SafetySystemPrompt', value: get_safety_system_prompt_version}
               ],
             },
             {
@@ -74,6 +76,7 @@ module AichatSafetyHelper
               timestamp: Time.now,
               dimensions: [
                 {name: 'Environment', value: CDO.rack_env},
+                {name: 'SafetySystemPrompt', value: get_safety_system_prompt_version}
               ],
             }
           ]
@@ -88,6 +91,7 @@ module AichatSafetyHelper
               timestamp: Time.now,
               dimensions: [
                 {name: 'Environment', value: CDO.rack_env},
+                {name: 'SafetySystemPrompt', value: get_safety_system_prompt_version}
               ],
             }]
           )
@@ -132,6 +136,10 @@ module AichatSafetyHelper
 
     private def get_safety_system_prompt
       'You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an American public middle school classroom. Examples of inappropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is inappropriate, respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.'
+    end
+
+    private def get_safety_system_prompt_version
+      'V0'
     end
   end
 
