@@ -1,7 +1,7 @@
 import React, {useState, useCallback} from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import Typography, {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
 import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
@@ -39,11 +39,7 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
 }) => {
   return (
     <>
-      {message && (
-        <Typography semanticTag="p" visualAppearance="body-two">
-          {message}
-        </Typography>
-      )}
+      {message && <BodyTwoText>{message}</BodyTwoText>}
       <TextField
         name="prompt-field"
         placeholder={placeholder}
