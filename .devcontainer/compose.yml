@@ -20,22 +20,23 @@ services:
       - "3000:3000"
 
     depends_on:
-      - mariadb
+      - db
       - redis
       - memcached
 
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
-  mariadb:
-    image: mariadb:latest
+  db:
+    image: mysql:8.0
     restart: unless-stopped
     networks:
       - default
     volumes:
-      - mariadb-data:/var/lib/mysql
+      - mysql-data:/var/lib/mysql
     environment:
-      MARIADB_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
 
   redis:
     image: redis:latest
@@ -56,5 +57,5 @@ networks:
   default:
 
 volumes:
-  mariadb-data:
+  mysql-data:
   redis-data:
