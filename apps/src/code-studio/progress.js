@@ -31,6 +31,7 @@ import {renderTeacherPanel} from './teacherPanelHelpers';
 import {setViewType, ViewType} from './viewAsRedux';
 
 var progress = module.exports;
+export default progress;
 
 function showDisabledBubblesModal() {
   const div = $('<div>');
@@ -238,22 +239,23 @@ function extractLevelResults(userProgressResponse) {
  * Fetch and store progress for the course overview page.
  */
 progress.initCourseProgress = function (scriptData) {
-  initCourseProgress(scriptData);
-};
-
-export function initCourseProgress(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
   queryUserProgress(store, scriptData, null);
-}
+};
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
 progress.initViewAs = function (store, isSignedInUser, isInstructor) {
-  initViewAsWithoutStore(store.dispatch, isSignedInUser, isInstructor);
+  progress.initViewAsWithoutStore(store.dispatch, isSignedInUser, isInstructor);
 };
 
-export function initViewAsWithoutStore(dispatch, isSignedInUser, isInstructor) {
+progress.initViewAsWithoutStore = function (
+  dispatch,
+  isSignedInUser,
+  isInstructor
+) {
+  console.log('lfm');
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
   if (isInstructor) {
@@ -269,7 +271,7 @@ export function initViewAsWithoutStore(dispatch, isSignedInUser, isInstructor) {
   }
 
   dispatch(setViewType(initialViewAs));
-}
+};
 
 progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
   const store = getStore();
