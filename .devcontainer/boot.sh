@@ -1,7 +1,7 @@
-bundle install
-. ${NVM_DIR}/nvm.sh && nvm install --lts
-yarn install
+#bundle install
+#. ${NVM_DIR}/nvm.sh && nvm install --lts
+#yarn install
 
-cd activerecord
+#cd activerecord
 
-MYSQL_CODESPACES=1 bundle exec rake db:mysql:rebuild
+#MYSQL_CODESPACES=1 bundle exec rake db:mysql:rebuild
