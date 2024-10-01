@@ -1,5 +1,11 @@
 import classNames from 'classnames';
-import React, {useCallback, useState, useRef, useContext} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useState,
+  useRef,
+  useContext,
+} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
@@ -25,6 +31,7 @@ interface PackEntryProps {
   onPreview: (path: string) => void;
   onStopPreview: () => void;
   mode: Mode;
+  currentFolderRefCallback: (ref: HTMLDivElement) => void;
 }
 
 const PackEntry: React.FunctionComponent<PackEntryProps> = ({
@@ -36,6 +43,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   onPreview,
   onStopPreview,
   mode,
+  currentFolderRefCallback,
 }) => {
   const library = MusicLibrary.getInstance();
 
@@ -71,6 +79,7 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
       aria-label={folder.name}
       tabIndex={0}
       role="button"
+      ref={isSelected ? currentFolderRefCallback : null}
     >
       <div>
         {imageSrc && (
@@ -163,6 +172,9 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   const [selectedFolderId, setSelectedFolderId] = useState<string | null>(null);
 
+  const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
+    useRef(null);
+
   const analyticsReporter = useContext(AnalyticsContext);
 
   const onModeChange = useCallback((value: Mode) => {
@@ -235,6 +247,15 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
     player.cancelPreviews();
   }, [player]);
 
+  const currentFolderRefCallback = (ref: HTMLDivElement) => {
+    currentFolderRef.current = ref;
+  };
+
+  // Scroll the current pack into view each time the mode changes.
+  useEffect(() => {
+    currentFolderRef.current?.scrollIntoView();
+  }, [mode]);
+
   if (!library) return null;
 
   const folders = library.getRestrictedPacks();
@@ -296,6 +317,7 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
                     onPreview={onPreview}
                     onStopPreview={onStopPreview}
                     mode={mode}
+                    currentFolderRefCallback={currentFolderRefCallback}
                   />
                 );
               })}
