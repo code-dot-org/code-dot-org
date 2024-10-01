@@ -171,6 +171,14 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     setShowEmailUpdateSuccess(false);
   };
 
+  const clearError = (key: string) => {
+    if (errors[key]) {
+      const errorsCopy = {...errors};
+      delete errorsCopy[key];
+      setErrors(errorsCopy);
+    }
+  };
+
   return (
     <>
       <hr />
@@ -192,7 +200,10 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           <TextField
             className={styles.input}
             label={i18n.accountInformationDisplayName()}
-            onChange={e => setName(e.target.value)}
+            onChange={e => {
+              setName(e.target.value);
+              clearError('name');
+            }}
             value={name}
             name="user[name]"
             readOnly={secretPictureAccountOnly}
@@ -206,7 +217,10 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             <TextField
               className={styles.input}
               label={i18n.accountInformationUsername()}
-              onChange={e => setUsername(e.target.value)}
+              onChange={e => {
+                setUsername(e.target.value);
+                clearError('username');
+              }}
               value={username}
               name="user[username]"
               maxLength={20}
@@ -280,7 +294,10 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               <TextField
                 className={styles.input}
                 label={i18n.accountInformationPassword()}
-                onChange={e => setPassword(e.target.value)}
+                onChange={e => {
+                  setPassword(e.target.value);
+                  clearError('password');
+                }}
                 value={password}
                 name="user[password]"
                 inputType="password"
@@ -293,7 +310,10 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               <TextField
                 className={styles.input}
                 label={i18n.accountInformationPasswordConfirmation()}
-                onChange={e => setPasswordConfirmation(e.target.value)}
+                onChange={e => {
+                  setPasswordConfirmation(e.target.value);
+                  clearError('password_confirmation');
+                }}
                 value={passwordConfirmation}
                 name="user[password_confirmation]"
                 inputType="password"
@@ -310,7 +330,10 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               className={styles.input}
               label={i18n.accountInformationCurrentPassword()}
               helperMessage={i18n.accountInformationCurrentPasswordHint()}
-              onChange={e => setCurrentPassword(e.target.value)}
+              onChange={e => {
+                setCurrentPassword(e.target.value);
+                clearError('current_password');
+              }}
               value={currentPassword}
               name="user[current_password]"
               inputType="password"
@@ -326,7 +349,10 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                 labelText={i18n.age()}
                 name="user[age]"
                 selectedValue={age}
-                onChange={e => setAge(e.target.value)}
+                onChange={e => {
+                  setAge(e.target.value);
+                  clearError('age');
+                }}
                 items={ageDropdownOptions.map((value: string | number) => ({
                   value: String(value),
                   text: String(value),
@@ -361,7 +387,10 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                     labelText={i18n.accountInformationState()}
                     name="user[us_state]"
                     selectedValue={usState}
-                    onChange={e => setUsState(e.target.value)}
+                    onChange={e => {
+                      setUsState(e.target.value);
+                      clearError('us_state');
+                    }}
                     items={usStateOptions}
                     disabled={studentInLockoutFlow}
                     dropdownTextThickness="thin"
