@@ -41,12 +41,34 @@ module AichatSafetyHelper
       # replying with something other valid expected output.
       Retryable.retryable(tries: 2) do
         start_time = Time.now
+        Cdo::Metrics.push(METRICS_NAMESPACE,
+          [
+            {
+              metric_name: "#{self.class.name}.OpenaiRequest",
+              value: 1,
+              unit: 'Count',
+              timestamp: Time.now,
+              dimensions: [
+                {name: 'Environment', value: CDO.rack_env},
+              ],
+            }
+          ]
+        )
         openai_response = OpenaiChatHelper.request_safety_check(text, get_safety_system_prompt)
         latency = Time.now - start_time
         Cdo::Metrics.push(METRICS_NAMESPACE,
           [
             {
-              metric_name: "#{self.class.name}.Latency",
+              metric_name: "#{self.class.name}.OpenaiResponse",
+              value: 1,
+              unit: 'Count',
+              timestamp: Time.now,
+              dimensions: [
+                {name: 'Environment', value: CDO.rack_env},
+              ],
+            },
+            {
+              metric_name: "#{self.class.name}.OpenaiLatency",
               value: latency,
               unit: 'Seconds',
               timestamp: Time.now,
@@ -60,7 +82,7 @@ module AichatSafetyHelper
         unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
           Cdo::Metrics.push(METRICS_NAMESPACE,
             [{
-              metric_name: "#{self.class.name}.InvalidOpenaiResponse",
+              metric_name: "#{self.class.name}.OpenaiInvalidResponse",
               value: 1,
               unit: 'Count',
               timestamp: Time.now,
