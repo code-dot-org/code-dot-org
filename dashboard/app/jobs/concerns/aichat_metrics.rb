@@ -1,3 +1,5 @@
+require 'cdo/aws/metrics'
+
 class AichatMetrics
   # The CloudWatch metric namespace
   METRICS_NAMESPACE = 'GenAICurriculum'.freeze
@@ -42,15 +44,7 @@ class AichatMetrics
     )
   end
 
-  def self.report_openai_safety_check(metric_name:, safety_system_prompt:, num_attempts: nil, value: 1)
-    openai_dimensions = [
-      {name: 'Environment', value: CDO.rack_env},
-      {name: 'SafetySystemPrompt', value: safety_system_prompt},
-    ]
-    if num_attempts
-      openai_dimensions << {name: 'Attempts', value: num_attempts}
-    end
-
+  def self.report_openai_safety_check(metric_name:, safety_system_prompt:, value: 1)
     Cdo::Metrics.push(METRICS_NAMESPACE,
       [
         {
@@ -58,13 +52,16 @@ class AichatMetrics
           value: value,
           unit: 'Count',
           timestamp: Time.now,
-          dimensions: openai_dimensions
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+            {name: 'SafetySystemPrompt', value: safety_system_prompt},
+          ]
         }
       ]
     )
   end
 
-  def self.report_openai_safety_latency(metric_name:, safety_system_prompt:, latency:)
+  def self.report_openai_safety_latency(metric_name:, safety_system_prompt:, latency:, num_attempts:)
     Cdo::Metrics.push(METRICS_NAMESPACE,
       [
         {
@@ -74,7 +71,8 @@ class AichatMetrics
           timestamp: Time.now,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
-            {name: 'SafetySystemPrompt', value: safety_system_prompt}
+            {name: 'SafetySystemPrompt', value: safety_system_prompt},
+            {name: 'Attempts', value: num_attempts},
           ],
         }
       ]

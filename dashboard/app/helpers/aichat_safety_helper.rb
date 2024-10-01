@@ -56,9 +56,9 @@ module AichatSafetyHelper
           }
         end
       end
-      AichatMetrics.report_openai_safety_check(metric_name: "#{self.class.name}.OpenaiFinish", safety_system_prompt: get_safety_system_prompt_version, num_attempts: attempts)
+      AichatMetrics.report_openai_safety_check(metric_name: "#{self.class.name}.OpenaiFinish", safety_system_prompt: get_safety_system_prompt_version)
       latency = Time.now - start_time
-      AichatMetrics.report_openai_safety_latency(metric_name: "#{self.class.name}.OpenaiLatency", safety_system_prompt: get_safety_system_prompt_version, latency: latency)
+      AichatMetrics.report_openai_safety_latency(metric_name: "#{self.class.name}.OpenaiLatency", safety_system_prompt: get_safety_system_prompt_version, latency: latency, num_attempts: attempts)
       details
     end
 
