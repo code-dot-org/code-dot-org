@@ -8,7 +8,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification from '@cdo/apps/sharedComponents/Notification';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import GlobalRegionWrapper from '@cdo/apps/templates/GlobalRegionWrapper';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
@@ -197,13 +196,9 @@ export const UnconnectedTeacherHomepage = ({
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
         {specialAnnouncement && (
-          <GlobalRegionWrapper
-            component={MarketingAnnouncementBanner}
-            componentId="MarketingAnnouncementBanner"
-            props={{
-              announcement: specialAnnouncement,
-              marginBottom: '30px',
-            }}
+          <MarketingAnnouncementBanner
+            announcement={specialAnnouncement}
+            marginBottom="30px"
           />
         )}
         {announcement && showAnnouncement && (
@@ -291,12 +286,7 @@ export const UnconnectedTeacherHomepage = ({
           />
         )}
         <TeacherResources />
-        {showIncubatorBanner && (
-          <GlobalRegionWrapper
-            component={IncubatorBanner}
-            componentId="IncubatorBanner"
-          />
-        )}
+        {showIncubatorBanner && <IncubatorBanner />}
         <ProjectWidgetWithData
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
