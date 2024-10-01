@@ -3,6 +3,7 @@ import React from 'react';
 import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
+import {Resource} from './LessonMaterialTypes';
 import ResourceIcon from './ResourceIcon';
 import ResourceViewOptionsDropdown from './ResourceViewOptionsDropdown';
 
@@ -11,14 +12,7 @@ import styles from './lesson-materials.module.scss';
 type ResourceRowProps = {
   lessonNumber?: number;
   unitNumber: number;
-  resource: {
-    key: string;
-    name: string;
-    url: string;
-    downloadUrl?: string;
-    audience: string;
-    type: string;
-  };
+  resource: Resource;
 };
 
 const ResourceRow: React.FC<ResourceRowProps> = ({

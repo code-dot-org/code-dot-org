@@ -7,37 +7,11 @@ import {getStore} from '@cdo/apps/redux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
+import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
-
-type Lesson = {
-  name: string;
-  id: number;
-  position: number;
-  lessonPlanHtmlUrl: string;
-  standardsUrl: string;
-  vocabularyUrl: string;
-  resources: {
-    Teacher: {
-      key: string;
-      name: string;
-      url: string;
-      downloadUrl?: string;
-      audience: string;
-      type: string;
-    }[];
-    Student: {
-      key: string;
-      name: string;
-      url: string;
-      downloadUrl?: string;
-      audience: string;
-      type: string;
-    }[];
-  };
-};
 
 interface LessonMaterialsData {
   unitId: number;
