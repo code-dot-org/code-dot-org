@@ -1194,7 +1194,9 @@ And(/^I submit this level$/) do
   steps <<~GHERKIN
     And I press "runButton"
     And I wait to see "#submitButton"
-    And I press "submitButton" to load a new page
+    And I press "submitButton"
+    And I wait to see ".modal"
+    And I press "confirm-button" to load a new page
   GHERKIN
 end
 
