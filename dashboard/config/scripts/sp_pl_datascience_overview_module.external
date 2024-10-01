@@ -11,20 +11,18 @@ markdown <<MARKDOWN
 
 #### This professional learning module is made up of four parts:
 
-### 🏘️ **Introduction to Web Development** - ⭐️ You're here!
-#### This section will give you an overview of what is included in Unit 2 - Web Development. We'll share what you can expect when reading lesson plans, an overview of the two chapters (or parts) of the unit, and through-unit frameworks.
+### 🏘️ **Introduction to Teaching Data Science** - ⭐️ You're here!
+#### This lesson provides an introduction to the Data Science course and professional learning module. It offers a brief overview of key data science concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the course..
 
-### 🖥️ **Build a Website with HTML**
-#### This section covers what Hypertext Markup Language (HTML) is, its syntax, and how it is used. You will have ample opportunities to practice adding structure and images to a webpage using HTML.
+### 🖥️ **Overview of Unit 1: Introduction to Data Science**
+#### This lesson focuses on building skills in data analysis and visualization using tools like CODAP. You will explore how to transform raw data into meaningful visualizations while addressing ethical considerations, such as data privacy and bias. Each unit equips you to guide students in solving real-world problems through data-driven projects.
 
-### 🎨 **Style a Website with CSS**
-#### This section builds on the previous one by reviewing Cascading Style Sheets (CSS), its syntax, and how it is used. You will practice styling a webpage using CSS and learn about Flexbox.
+### 📊 **Overview of Unit 2: Data Science and Python**
+#### This lesson prepares you to teach data analysis using Python. You'll explore guiding students through Python basics, data manipulation with Pandas and Matplotlib, and creating visualizations. The unit focuses on data cleaning, analysis, and communicating insights, culminating in a real-world data-driven project.
 
-### 🤔 **Consider Roles and Responsibilities in Digital Media**
-#### Several lessons within Unit 2 - Web Development cover students and their role and responsibilities as both creators and consumers of digital media. This section reviews those topics to prepare you to teach about them.
 
-### 🎁 **Unit Wrap Up**
-#### This section goes over the unit projects to prepare you to lead them with your students.
+### 🧑‍🏫 **Teaching Resources for Data Science**
+#### This lesson covers best practices and strategies for teaching bias in data science. You'll explore effective methods to guide discussions on data ethics and bias, with suggestions for further learning to deepen understanding and application in the classroom.
 
 ## Engaging with This Module
 

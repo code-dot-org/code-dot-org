@@ -6,10 +6,7 @@ import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import plcHeaderReducer, {
   setPlcHeader,
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
-import {
-  initViewAsWithoutStore,
-  initCourseProgress,
-} from '@cdo/apps/code-studio/progress';
+import progress from '@cdo/apps/code-studio/progress';
 import {registerReducers} from '@cdo/apps/redux';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
@@ -241,11 +238,15 @@ const initializeRedux = (
     dispatch(setStudentDefaultsSummaryView(false));
   }
 
-  initViewAsWithoutStore(dispatch, userId !== null, unitData.is_instructor);
+  progress.initViewAsWithoutStore(
+    dispatch,
+    userId !== null,
+    unitData.is_instructor
+  );
   dispatch(initializeHiddenScripts(unitData.section_hidden_unit_info));
   dispatch(setPageType(pageTypes.scriptOverview));
 
-  initCourseProgress(unitData);
+  progress.initCourseProgress(unitData);
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
