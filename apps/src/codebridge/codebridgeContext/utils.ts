@@ -6,7 +6,9 @@ import {
 } from '@codebridge/types';
 import {useMemo} from 'react';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
+// disabling locales and falling back on the hardwired default due to apparent circular dep
+// import codebridgeI18n from '@codebridge/locale';
+const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
 
 import {DEFAULT_FOLDER_ID} from '../constants';
 
@@ -77,7 +79,9 @@ export const useProjectUtilities = (
         fileId,
         fileName,
         folderId = DEFAULT_FOLDER_ID,
-        contents = codebridgeI18n.defaultNewFileContents({fileName}),
+        // this line causes the apparent circular dependency issue
+        // contents = codebridgeI18n.defaultNewFileContents({fileName}),
+        contents = DEFAULT_NEW_FILE_CONTENTS,
       }) => {
         dispatch({
           type: PROJECT_REDUCER_ACTIONS.NEW_FILE,
