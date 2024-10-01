@@ -15,17 +15,14 @@
       margin-bottom: 0.5rem;
     }
 
-    &.lockedOut {
-      margin-bottom: 0;
-    }
-
     &.authorizedTeacher {
       font-weight: bold;
       color: $light_affirmative_500;
       margin: 0;
     }
 
-    input {
+    input,
+    > div {
       width: 100%;
     }
   }

@@ -332,17 +332,15 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                   text: String(value),
                 }))}
                 disabled={studentInLockoutFlow}
-                size="m"
                 dropdownTextThickness="thin"
-                className={classNames(styles.input, {
-                  [styles.lockedOut]: studentInLockoutFlow,
-                })}
+                className={styles.input}
+                helperMessage={
+                  studentInLockoutFlow
+                    ? i18n.accountInformationUpdateFieldParentPermissionRequired()
+                    : undefined
+                }
+                errorMessage={errors.age?.[0]}
               />
-              {studentInLockoutFlow && (
-                <span className={styles.lockedOutHelperMessage}>
-                  {i18n.accountInformationUpdateFieldParentPermissionRequired()}
-                </span>
-              )}
 
               {/* student gender */}
               {showGenderInput && (
@@ -366,17 +364,15 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                     onChange={e => setUsState(e.target.value)}
                     items={usStateOptions}
                     disabled={studentInLockoutFlow}
-                    size="m"
                     dropdownTextThickness="thin"
-                    className={classNames(styles.input, {
-                      [styles.lockedOut]: studentInLockoutFlow,
-                    })}
+                    className={styles.input}
+                    helperMessage={
+                      studentInLockoutFlow
+                        ? i18n.accountInformationUpdateFieldParentPermissionRequired()
+                        : undefined
+                    }
+                    errorMessage={errors.us_state?.[0]}
                   />
-                  {studentInLockoutFlow && (
-                    <span className={styles.lockedOutHelperMessage}>
-                      {i18n.accountInformationUpdateFieldParentPermissionRequired()}
-                    </span>
-                  )}
                 </>
               )}
             </>
