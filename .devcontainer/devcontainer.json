@@ -1,8 +1,8 @@
 // For format details, see https://aka.ms/devcontainer.json.
 {
   "name": "Rails project development",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "web",
+  "dockerComposeFile": "compose.yml",
+  "service": "dashboard",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
   // Features to add to the dev container. More info: https://containers.dev/features.
@@ -16,6 +16,8 @@
 //  },
 
   "containerEnv": {
+    "CDO_SLACK_BOT_TOKEN": "localoverride",
+    "CDO_PARDOT_PRIVATE_KEY": "localoverride",
     "PGHOST": "postgres",
     "PGUSER": "postgres",
     "PGPASSWORD": "postgres",
