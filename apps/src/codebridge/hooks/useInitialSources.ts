@@ -1,3 +1,4 @@
+import {combineStartSourcesAndValidation} from '@codebridge/utils';
 import {useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -8,8 +9,6 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {combineStartSourcesAndValidation} from '../utils';
 
 /**
  * Custom hook that determines the initial sources for the current level.
@@ -42,6 +41,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     state => state.lab.levelProperties?.validationFile
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+
   // We memoize these objects so that they don't cause an unexpected re-render.
   const projectStartSource: ProjectSources | undefined = useMemo(() => {
     const source = isStartMode

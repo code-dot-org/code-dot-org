@@ -1,3 +1,7 @@
+import {
+  combineStartSourcesAndValidation,
+  prepareSourceForLevelbuilderSave,
+} from '@codebridge/utils';
 import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
@@ -13,11 +17,6 @@ import {
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {
-  combineStartSourcesAndValidation,
-  splitOutValidationFile,
-} from '../utils';
 
 import {useInitialSources} from './useInitialSources';
 
@@ -73,7 +72,8 @@ export const useSource = (defaultSources: ProjectSources) => {
   );
 
   const startSource = useMemo(() => {
-    // When resetting in start mode, we always use the level start source.
+    // When resetting in start mode, we always use the level start source
+    // combined with the validation file.
     let finalLevelStartSource = levelStartSource;
     if (isStartMode) {
       finalLevelStartSource = combineStartSourcesAndValidation(
@@ -98,7 +98,8 @@ export const useSource = (defaultSources: ProjectSources) => {
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
-        const {parsedSource, validationFile} = splitOutValidationFile(source);
+        const {parsedSource, validationFile} =
+          prepareSourceForLevelbuilderSave(source);
         return {start_sources: parsedSource, validation_file: validationFile};
       });
     } else if (isEditingExemplarMode) {

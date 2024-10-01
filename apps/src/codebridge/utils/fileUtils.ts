@@ -40,7 +40,19 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
   }
 }
 
-export function splitOutValidationFile(source?: MultiFileSource) {
+/**
+ * Prepare the source for saving in levelbuilder. This moves the validation file
+ * into a separate field and removes it from the files and list of open files, if
+ * it was open.
+ *
+ * We split out the validation file because it is handled differently from start sources
+ * in user code. The validation file is not saved to the user's project, and we always use
+ * the validation file from the level, even if the level is template backed (and we are using
+ * start code from the template).
+ * @param source: MultiFileSource
+ * @returns {parsedSource: MultiFileSource, validationFile: ProjectFile}
+ */
+export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
   if (!source) {
     return {parsedSource: source, validationFile: undefined};
   }
@@ -49,15 +61,28 @@ export function splitOutValidationFile(source?: MultiFileSource) {
       ([_, file]) => file.type !== ProjectFileType.VALIDATION
     )
   );
-  const validationFile = Object.values(source.files).find(
+  let validationFile = Object.values(source.files).find(
     f => f.type === ProjectFileType.VALIDATION
   );
+  let openFiles = source.openFiles;
+  if (validationFile && source.openFiles?.includes(validationFile.id)) {
+    openFiles = source.openFiles.filter(id => id !== validationFile?.id);
+    //validationFile.open = false;
+    validationFile = {...validationFile, open: false, active: false};
+  }
   return {
-    parsedSource: {...source, files: newFiles},
+    parsedSource: {...source, files: newFiles, openFiles: openFiles},
     validationFile,
   };
 }
 
+/**
+ * In start mode we combine the start sources with the validation file
+ * so levelbuilders can edit the validation file.
+ * @param source: MultiFileSource | undefined
+ * @param validationFile: ProjectFile | undefined
+ * @returns: MultiFileSource with the validation file added to the files, if it exists.
+ */
 export function combineStartSourcesAndValidation(
   source?: MultiFileSource,
   validationFile?: ProjectFile
