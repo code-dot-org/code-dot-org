@@ -45,7 +45,14 @@ module Populator
   def populate(path = nil)
     return populate_all if path.nil?
 
-    download(path)
+    data = download(path)
+    process_and_upload(data)
+
+    data
+  end
+
+  def process_and_upload(data)
+    # Do nothing if no override is provided
   end
 
   def populate_all

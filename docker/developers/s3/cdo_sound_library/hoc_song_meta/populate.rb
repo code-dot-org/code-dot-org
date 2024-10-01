@@ -40,58 +40,53 @@ class CdoSoundLibrary::HocSongMeta::Populate
     to
   end
 
-  # Hook into the populate call to produce the appropriate mp3 as well
-  def populate(path = nil)
-    data = super(path)
+  def process_and_upload(data)
+    # This is song metadata so we want some song as well
+    metadata = JSON.parse(data)
+    song_path = metadata['file']
+    file_name = File.basename(song_path)
+    bpm = metadata['bpm'].to_f
+    puts "Creating #{file_name} with #{bpm} bpm"
 
-    unless path.nil? || path.include?('songManifest') || path.include?('testManifest')
-      # This is song metadata so we want some song as well
-      metadata = JSON.parse(data)
-      song_path = metadata['file']
-      file_name = File.basename(song_path)
-      bpm = metadata['bpm'].to_f
-      puts "Creating #{file_name} with #{bpm} bpm"
+    # Download the 'synthesize' music file which is in 110 bpm
+    test_music_path = download_test_music
 
-      # Download the 'synthesize' music file which is in 110 bpm
-      test_music_path = download_test_music
+    # If we have ffmpeg support, we can get the music to match
+    # its metadata.
+    if ffmpeg?
+      # Get the expected delay in milliseoncds (the test music has no delay)
+      delay = data['delay'].to_f * 1000
 
-      # If we have ffmpeg support, we can get the music to match
-      # its metadata.
-      if ffmpeg?
-        # Get the expected delay in milliseoncds (the test music has no delay)
-        delay = data['delay'].to_f * 1000
+      # Get the relative speed as a percentage of the test music
+      speed = bpm / TEST_MUSIC_BPM
 
-        # Get the relative speed as a percentage of the test music
-        speed = bpm / TEST_MUSIC_BPM
+      # These go in the 'restricted' bucket
 
-        # These go in the 'restricted' bucket
+      # Use ffmpeg to add delay and to speed up / slow down test music to match bpm
+      #system("ffmpeg -i #{test_music_path} -af adelay=#{delay}|#{delay} #{file_name}.mp3")
+      file_path = local_path("../../cdo_restricted/restricted/#{file_name}")
 
-        # Use ffmpeg to add delay and to speed up / slow down test music to match bpm
-        #system("ffmpeg -i #{test_music_path} -af adelay=#{delay}|#{delay} #{file_name}.mp3")
-        file_path = local_path("../../cdo_restricted/restricted/#{file_name}")
+      dir_path = File.dirname(file_path)
+      FileUtils.mkdir_p(dir_path)
 
-        dir_path = File.dirname(file_path)
-        FileUtils.mkdir_p(dir_path)
-
-        unless File.exist?(file_path)
-          ffmpeg_command = "ffmpeg -i #{test_music_path} -af atempo=#{speed},adelay=\"#{delay}|#{delay}\" #{file_path}"
-          system ffmpeg_command
-        end
-      else
-        # Just use the test music at the wrong dimensions
-        puts "WARN: No ffmpeg available! The sound files might not be in sync with metadata."
-        file_path = test_music_path
+      unless File.exist?(file_path)
+        ffmpeg_command = "ffmpeg -i #{test_music_path} -af atempo=#{speed},adelay=\"#{delay}|#{delay}\" #{file_path}"
+        system ffmpeg_command
       end
-
-      # Ensure we write the audio data to the cdo-restricted bucket
-      put('cdo-restricted', "restricted/#{file_name}", -> {File.read(file_path)})
+    else
+      # Just use the test music at the wrong dimensions
+      puts "WARN: No ffmpeg available! The sound files might not be in sync with metadata."
+      file_path = test_music_path
     end
 
-    data
+    # Ensure we write the audio data to the cdo-restricted bucket
+    put('cdo-restricted', "restricted/#{file_name}", -> {File.read(file_path)})
   end
 
+  # Not in active use, but in theory could be used to generate test versions of all restricted songs
+  # with the appropriate speed.
   def populate_all
-    data = JSON.parse(populate("songManifest2024_v2.json"))
+    data = JSON.parse(download("songManifest2024_v2.json"))
 
     # Write out the song metadata
     data["songs"].each do |info|
