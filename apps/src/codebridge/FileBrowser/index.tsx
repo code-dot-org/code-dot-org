@@ -500,7 +500,9 @@ export const FileBrowser = React.memo(() => {
             const duplicate = checkForDuplicateFilename(
               fileName,
               folderId,
-              project.files
+              project.files,
+              isStartMode,
+              validationFile
             );
             if (duplicate) {
               return duplicate;
@@ -560,7 +562,9 @@ export const FileBrowser = React.memo(() => {
             const duplicate = checkForDuplicateFilename(
               file.name,
               folderId,
-              project.files
+              project.files,
+              isStartMode,
+              validationFile
             );
             if (duplicate) {
               return duplicate;
@@ -590,7 +594,15 @@ export const FileBrowser = React.memo(() => {
       }
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE, appName);
     },
-    [project.files, project.folders, dialogControl, appName, moveFile]
+    [
+      project.files,
+      project.folders,
+      dialogControl,
+      appName,
+      isStartMode,
+      validationFile,
+      moveFile,
+    ]
   );
 
   const moveFolderPrompt: FilesComponentProps['moveFolderPrompt'] = useMemo(
@@ -664,7 +676,9 @@ export const FileBrowser = React.memo(() => {
           const duplicate = checkForDuplicateFilename(
             newName,
             file.folderId,
-            project.files
+            project.files,
+            isStartMode,
+            validationFile
           );
           if (duplicate) {
             return duplicate;
@@ -682,7 +696,14 @@ export const FileBrowser = React.memo(() => {
       renameFile(fileId, newName);
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, appName);
     },
-    [dialogControl, project.files, renameFile, appName]
+    [
+      project.files,
+      dialogControl,
+      renameFile,
+      appName,
+      isStartMode,
+      validationFile,
+    ]
   );
 
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
@@ -741,7 +762,9 @@ export const FileBrowser = React.memo(() => {
           const duplicate = checkForDuplicateFilename(
             project.files[e.active.data.current.id].name,
             e.over.id as string,
-            project.files
+            project.files,
+            isStartMode,
+            validationFile
           );
           if (duplicate) {
             dialogControl?.showDialog({
@@ -754,7 +777,15 @@ export const FileBrowser = React.memo(() => {
         }
       }
     },
-    [dialogControl, moveFile, moveFolder, project.files, project.folders]
+    [
+      dialogControl,
+      isStartMode,
+      moveFile,
+      moveFolder,
+      project.files,
+      project.folders,
+      validationFile,
+    ]
   );
 
   const sensors = useSensors(
