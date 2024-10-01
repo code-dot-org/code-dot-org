@@ -40,20 +40,13 @@ module CAP
 
     private def cap_affected_sections
       @cap_affected_sections ||= Queries::Section.cap_affected(
+        scope: ::Section.visible,
         period: Policies::ChildAccount::TEACHER_WARNING_PERIOD.ago..
       )
     end
 
     private def teachers
-      return @teachers if defined? @teachers
-
-      available_emails = DCDO.get('cap_teacher_section_warning_emails', [])
-      return @teachers = User.none if available_emails.blank?
-
-      @teachers = User.where(id: cap_affected_sections.select(:user_id))
-      return @teachers if available_emails.include?('all')
-
-      @teachers = @teachers.where(email: available_emails)
+      @teachers ||= User.where(id: cap_affected_sections.select(:user_id))
     end
   end
 end
