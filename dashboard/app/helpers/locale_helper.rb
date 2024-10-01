@@ -23,26 +23,31 @@ module LocaleHelper
     locale_code.to_s.downcase.tr('-', '_')
   end
 
-  def options_for_locale_select
+  def options_for_locale_select(global_edition: false)
     options = []
+
     Dashboard::Application::LOCALES.each do |locale, data|
       next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
       name = data[:native]
       name = (data[:debug] ? "#{name} DBG" : name)
       options << [name, locale]
     end
-    options
+
+    if global_edition
+      # Adds language options with the switch to the regional (global) version of the platform.
+      Rack::GlobalEdition::REGIONS_LOCALES.except('en').each do |region, region_locale|
+        locale_name = Dashboard::Application::LOCALES.dig(region_locale, :native)
+        options << ["#{locale_name} (global)", [region_locale, region].join('|')] if locale_name
+      end
+    end
+
+    options.sort_by(&:second)
   end
 
-  def options_for_locale_dropdown
-    options = []
-    Dashboard::Application::LOCALES.each do |locale, data|
-      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-      name = data[:native]
-      name = (data[:debug] ? "#{name} DBG" : name)
-      options << {value: locale, text: name}
-    end
-    options
+  def current_locale_option(global_edition: false)
+    return locale unless global_edition
+    # Combines the current locale with the Global Edition region, e.g. "fa-IR|fa".
+    [locale, cookies[Rack::GlobalEdition::REGION_KEY]].select(&:presence).join('|')
   end
 
   def options_for_locale_code_select
@@ -88,19 +93,5 @@ module LocaleHelper
     I18n.t(dotted_path, **{raise: true}.merge(params))
   rescue
     nil
-  end
-
-  def locale_options_for_select
-    options = options_for_locale_select
-    # Combines the current locale with the Global Edition region, e.g. "fa-IR|fa".
-    selected_option = [locale, cookies[Rack::GlobalEdition::REGION_KEY]].select(&:presence).join('|')
-
-    # Adds language options with the switch to the regional (global) version of the platform.
-    Rack::GlobalEdition::REGIONS_LOCALES.except('en').each do |region, region_locale|
-      locale_name = Dashboard::Application::LOCALES.dig(region_locale, :native)
-      options << ["#{locale_name} (global)", [region_locale, region].join('|')] if locale_name
-    end
-
-    options_for_select(options.sort_by(&:second), selected_option)
   end
 end
