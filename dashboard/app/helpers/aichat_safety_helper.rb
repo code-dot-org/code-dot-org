@@ -1,3 +1,5 @@
+require 'cdo/aws/metrics'
+
 # Provides functionality to detect toxicity in user input and model output used in the AI Chat Lab.
 # Uses various services to check for profanity and toxicity based on DCDO settings.
 module AichatSafetyHelper
@@ -5,6 +7,7 @@ module AichatSafetyHelper
     DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.3
     DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.5
     VALID_EVALUATION_RESPONSES_SIMPLE = ['INAPPROPRIATE', 'OK']
+    METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
     # Checks for toxicity in the given text using various services, determined by DCDO settings.
     # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}
@@ -37,9 +40,37 @@ module AichatSafetyHelper
       # Try twice in case of network errors or model not correctly following directions and
       # replying with something other valid expected output.
       Retryable.retryable(tries: 2) do
+        start_time = Time.now
         openai_response = OpenaiChatHelper.request_safety_check(text, get_safety_system_prompt)
+        latency = Time.now - start_time
+        Cdo::Metrics.push(METRICS_NAMESPACE,
+          [
+            {
+              metric_name: "#{self.class.name}.Latency",
+              value: latency,
+              unit: 'Seconds',
+              timestamp: Time.now,
+              dimensions: [
+                {name: 'Environment', value: CDO.rack_env},
+              ],
+            }
+          ]
+        )
         evaluation = JSON.parse(openai_response)['choices'][0]['message']['content']
-        raise "Unexpected response from OpenAI: #{evaluation}" unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
+        unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
+          Cdo::Metrics.push(METRICS_NAMESPACE,
+            [{
+              metric_name: "#{self.class.name}.InvalidOpenaiResponse",
+              value: 1,
+              unit: 'Count',
+              timestamp: Time.now,
+              dimensions: [
+                {name: 'Environment', value: CDO.rack_env},
+              ],
+            }]
+          )
+          raise "Unexpected response from OpenAI: #{evaluation}"
+        end
         if evaluation == 'INAPPROPRIATE'
           details = {
             evaluation: evaluation
