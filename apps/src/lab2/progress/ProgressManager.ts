@@ -8,7 +8,7 @@ import {Condition, Validation} from '@cdo/apps/lab2/types';
 export abstract class Validator {
   abstract shouldCheckConditions(): boolean;
   abstract shouldCheckNextConditionsOnly(): boolean;
-  abstract checkConditions(): void;
+  abstract checkConditions(validations: Validation[]): void;
   abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
   abstract getValidationResults(): ValidationResult[] | undefined;
@@ -90,7 +90,7 @@ export default class ProgressManager {
     // Give the lab-specific code a chance to check conditions.  We do
     // it once each update in case it's expensive, and since conditions
     // can be used by multiple validations.
-    this.validator.checkConditions();
+    this.validator.checkConditions(this.currentValidations);
 
     // Go through each validation to see if we have a match.
     for (const validation of this.currentValidations) {

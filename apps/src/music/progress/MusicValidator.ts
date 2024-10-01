@@ -5,7 +5,7 @@ import {
   ValidationResult,
   Validator,
 } from '@cdo/apps/lab2/progress/ProgressManager';
-import {Condition, ConditionType} from '@cdo/apps/lab2/types';
+import {Condition, ConditionType, Validation} from '@cdo/apps/lab2/types';
 
 import {ChordEvent} from '../player/interfaces/ChordEvent';
 import {PatternEvent} from '../player/interfaces/PatternEvent';
@@ -67,7 +67,45 @@ export default class MusicValidator extends Validator {
     );
   }
 
-  checkConditions() {
+  checkConditions(validations: Validation[]) {
+    const conditions = validations.flatMap(
+      validation => validation.conditions || []
+    );
+    const validationConditions = new Set(conditions.map(cond => cond.name));
+    const soundConditions = new Set([
+      MusicConditions.PLAYED_SOUNDS_TOGETHER.name,
+      MusicConditions.PLAYED_DIFFERENT_SOUNDS_TOGETHER.name,
+      MusicConditions.PLAYED_SOUNDS.name,
+      MusicConditions.PLAYED_SOUND_ID.name,
+      MusicConditions.PLAYED_SOUND_TRIGGERED.name,
+      MusicConditions.PLAYED_SOUND_IN_FUNCTION.name,
+    ]);
+    const patternConditions = new Set([
+      MusicConditions.PLAYED_EMPTY_PATTERNS.name,
+      MusicConditions.PLAYED_PATTERNS.name,
+      MusicConditions.PLAYED_EMPTY_PATTERNS_AI.name,
+      MusicConditions.PLAYED_PATTERNS_AI.name,
+    ]);
+    const chordConditions = new Set([
+      MusicConditions.PLAYED_EMPTY_CHORDS.name,
+      MusicConditions.PLAYED_CHORDS.name,
+    ]);
+
+    // Check if there are any relevant conditions before processing sounds, patterns, or chords.
+    const shouldCheckSounds = [...soundConditions].some(condition =>
+      validationConditions.has(condition)
+    );
+    const shouldCheckPatterns = [...patternConditions].some(condition =>
+      validationConditions.has(condition)
+    );
+    const shouldCheckChords = [...chordConditions].some(condition =>
+      validationConditions.has(condition)
+    );
+
+    if (!shouldCheckSounds && !shouldCheckPatterns && !shouldCheckChords) {
+      return;
+    }
+
     // Get number of sounds currently playing simultaneously.
     let currentNumberSounds = 0;
 
@@ -102,7 +140,7 @@ export default class MusicValidator extends Validator {
 
       const length = eventData.length;
 
-      if (eventData.type === 'sound') {
+      if (eventData.type === 'sound' && shouldCheckSounds) {
         if (eventData.when + length > currentPlayheadPosition) {
           currentNumberSounds++;
 
@@ -111,27 +149,38 @@ export default class MusicValidator extends Validator {
             uniqueCurrentSounds.push(eventData.id);
           }
 
-          if (eventData.triggered) {
+          if (
+            eventData.triggered &&
+            validationConditions.has(
+              MusicConditions.PLAYED_SOUND_TRIGGERED.name
+            )
+          ) {
             this.conditionsChecker.addSatisfiedCondition({
               name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
             });
           }
 
-          if (eventData.functionContext) {
+          if (
+            eventData.functionContext &&
+            validationConditions.has(
+              MusicConditions.PLAYED_SOUND_IN_FUNCTION.name
+            )
+          ) {
             this.conditionsChecker.addSatisfiedCondition({
               name: MusicConditions.PLAYED_SOUND_IN_FUNCTION.name,
               value: eventData.functionContext.name,
             });
           }
-
-          this.conditionsChecker.addSatisfiedCondition({
-            name: MusicConditions.PLAYED_SOUND_ID.name,
-            value: eventData.id,
-          });
+          if (validationConditions.has(MusicConditions.PLAYED_SOUND_ID.name)) {
+            this.conditionsChecker.addSatisfiedCondition({
+              name: MusicConditions.PLAYED_SOUND_ID.name,
+              value: eventData.id,
+            });
+          }
         }
 
         playedNumberSounds++;
-      } else if (eventData.type === 'pattern') {
+      } else if (eventData.type === 'pattern' && shouldCheckPatterns) {
         const patternEvent = eventData as PatternEvent;
         if (patternEvent.value.events.length === 0) {
           if (patternEvent.value.ai) {
@@ -146,7 +195,7 @@ export default class MusicValidator extends Validator {
             playedNumberPatterns++;
           }
         }
-      } else if (eventData.type === 'chord') {
+      } else if (eventData.type === 'chord' && shouldCheckChords) {
         const chordEvent = eventData as ChordEvent;
         if (chordEvent.value.notes.length === 0) {
           playedNumberEmptyChords++;
@@ -156,73 +205,104 @@ export default class MusicValidator extends Validator {
       }
     });
 
-    this.checkConditionPlayedDifferentSoundsTogetherMultipleTimes(
-      currentPlayheadPosition
-    );
+    if (
+      validationConditions.has(
+        MusicConditions.PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES.name
+      )
+    ) {
+      this.checkConditionPlayedDifferentSoundsTogetherMultipleTimes(
+        currentPlayheadPosition
+      );
+    }
 
     // Check for up to a certain number of sounds playing simultaneously.
     // Note that if, for example, 3 sounds are playing, then we'll consider
     // that 2 sounds and 1 sound have also been played together.
-    for (
-      let numberSounds = currentNumberSounds;
-      numberSounds >= 1;
-      numberSounds--
-    ) {
-      this.conditionsChecker.addSatisfiedCondition({
-        name: MusicConditions.PLAYED_SOUNDS_TOGETHER.name,
-        value: numberSounds,
-      });
+    if (validationConditions.has(MusicConditions.PLAYED_SOUNDS_TOGETHER.name)) {
+      for (
+        let numberSounds = currentNumberSounds;
+        numberSounds >= 1;
+        numberSounds--
+      ) {
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.PLAYED_SOUNDS_TOGETHER.name,
+          value: numberSounds,
+        });
+      }
     }
 
     // Check for up to a certain number of different sounds playing simultaneously.
     // Note that if, for example, 3 different sounds are playing, then we'll consider
     // that 2 different sounds and 1 different sound have also been played together.
-    for (
-      let numberDifferentSounds = currentNumberDifferentSounds;
-      numberDifferentSounds >= 1;
-      numberDifferentSounds--
+    if (
+      validationConditions.has(
+        MusicConditions.PLAYED_DIFFERENT_SOUNDS_TOGETHER.name
+      )
     ) {
-      this.conditionsChecker.addSatisfiedCondition({
-        name: MusicConditions.PLAYED_DIFFERENT_SOUNDS_TOGETHER.name,
-        value: numberDifferentSounds,
-      });
+      for (
+        let numberDifferentSounds = currentNumberDifferentSounds;
+        numberDifferentSounds >= 1;
+        numberDifferentSounds--
+      ) {
+        this.conditionsChecker.addSatisfiedCondition({
+          name: MusicConditions.PLAYED_DIFFERENT_SOUNDS_TOGETHER.name,
+          value: numberDifferentSounds,
+        });
+      }
     }
 
     // Add satisfied conditions for the played sounds.
-    this.addPlayedConditions(
-      MusicConditions.PLAYED_SOUNDS.name,
-      playedNumberSounds
-    );
+    if (validationConditions.has(MusicConditions.PLAYED_SOUNDS.name)) {
+      this.addPlayedConditions(
+        MusicConditions.PLAYED_SOUNDS.name,
+        playedNumberSounds
+      );
+    }
 
     // Add satisfied conditions for the played patterns.
-    this.addPlayedConditions(
-      MusicConditions.PLAYED_EMPTY_PATTERNS.name,
-      playedNumberEmptyPatterns
-    );
-    this.addPlayedConditions(
-      MusicConditions.PLAYED_PATTERNS.name,
-      playedNumberPatterns
-    );
+    if (validationConditions.has(MusicConditions.PLAYED_EMPTY_PATTERNS.name)) {
+      this.addPlayedConditions(
+        MusicConditions.PLAYED_EMPTY_PATTERNS.name,
+        playedNumberEmptyPatterns
+      );
+    }
+    if (validationConditions.has(MusicConditions.PLAYED_PATTERNS.name)) {
+      this.addPlayedConditions(
+        MusicConditions.PLAYED_PATTERNS.name,
+        playedNumberPatterns
+      );
+    }
 
     // And the same for patterns made with AI.
-    this.addPlayedConditions(
-      MusicConditions.PLAYED_EMPTY_PATTERNS_AI.name,
-      playedNumberEmptyPatternsAi
-    );
-    this.addPlayedConditions(
-      MusicConditions.PLAYED_PATTERNS_AI.name,
-      playedNumberPatternsAi
-    );
+
+    if (
+      validationConditions.has(MusicConditions.PLAYED_EMPTY_PATTERNS_AI.name)
+    ) {
+      this.addPlayedConditions(
+        MusicConditions.PLAYED_EMPTY_PATTERNS_AI.name,
+        playedNumberEmptyPatternsAi
+      );
+    }
+    if (validationConditions.has(MusicConditions.PLAYED_PATTERNS_AI.name)) {
+      this.addPlayedConditions(
+        MusicConditions.PLAYED_PATTERNS_AI.name,
+        playedNumberPatternsAi
+      );
+    }
 
     // Add satisfied conditions for the played chords.
-    this.addPlayedConditions(
-      MusicConditions.PLAYED_EMPTY_CHORDS.name,
-      playedNumberEmptyChords
-    );
-    this.addPlayedConditions(
-      MusicConditions.PLAYED_CHORDS.name,
-      playedNumberChords
-    );
+    if (validationConditions.has(MusicConditions.PLAYED_EMPTY_CHORDS.name)) {
+      this.addPlayedConditions(
+        MusicConditions.PLAYED_EMPTY_CHORDS.name,
+        playedNumberEmptyChords
+      );
+    }
+    if (validationConditions.has(MusicConditions.PLAYED_CHORDS.name)) {
+      this.addPlayedConditions(
+        MusicConditions.PLAYED_CHORDS.name,
+        playedNumberChords
+      );
+    }
   }
 
   // Check for PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES.

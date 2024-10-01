@@ -1,5 +1,5 @@
 import {Validator} from '@cdo/apps/lab2/progress/ProgressManager';
-import {Condition} from '@cdo/apps/lab2/types';
+import {Condition, Validation} from '@cdo/apps/lab2/types';
 
 import PythonValidationTracker from './PythonValidationTracker';
 
@@ -24,7 +24,7 @@ export default class PythonValidator extends Validator {
   }
 
   // No-op, conditions are reported to pythonValidationTracker.
-  checkConditions(): void {}
+  checkConditions(validations: Validation[]): void {}
 
   conditionsMet(conditions: Condition[]): boolean {
     for (const condition of conditions) {
