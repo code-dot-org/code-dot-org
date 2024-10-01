@@ -921,4 +921,15 @@ class RegistrationsControllerTest < ActionController::TestCase
     assigns(:user).expects(:verify_teacher!).never
     refute assigns(:user).verified_teacher?
   end
+
+  test 'redirects signed-in user to home' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    # Attempt to reach a new sign up page
+    get :account_type
+
+    assert_redirected_to home_path
+  end
 end
