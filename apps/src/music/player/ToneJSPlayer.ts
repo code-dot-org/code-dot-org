@@ -256,6 +256,8 @@ class ToneJSPlayer implements AudioPlayer {
       this.currentSequencePreviewTimer = null;
     }
 
+    this.currentPreview = null;
+
     this.stopAllSamplers();
   }
 

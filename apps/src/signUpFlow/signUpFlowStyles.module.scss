@@ -448,7 +448,7 @@ span {
 .finishAccountContainer {
   max-width: $content-width;
   display: grid;
-  margin: 4rem auto;
+  margin: 4rem 4rem 1rem 4rem;
   padding: 30px;
   text-align: center;
   background-color: $light_white;
@@ -491,12 +491,31 @@ span {
   margin-bottom: 0.375rem !important;
 }
 
+.required::after {
+  content: '*';
+  font-weight: 600;
+}
+
 .displayNameSubtext {
   margin-top: 0.125rem;
 }
 
 .emailOptInFootnote {
   margin-top: 0.5rem;
+}
+
+.inlineContainer {
+  white-space: nowrap;
+  margin-top: 0.5rem;
+
+  .inlineItem {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  a {
+    color: unset !important;
+  }
 }
 
 .parentInfoContainer {
@@ -520,4 +539,15 @@ span {
 .studentQuestionLabel {
   margin-top: 1.125rem;
   margin-bottom: 0.375rem !important;
+}
+
+.tosAndPrivacy {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+
+  a {
+    text-decoration: underline !important;
+    color: unset !important;
+  }
 }
