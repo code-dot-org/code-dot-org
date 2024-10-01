@@ -825,14 +825,12 @@ $small-footer-standard-width: 400px;
   border-top: initial;
 }
 
-
 /* Custom styling for the small-footer-base for Music Lab. */
 .music-black {
   #page-small-footer {
     user-select: none;
 
     .small-footer-base {
-
       max-width: 12.5rem;
       margin-left: 8px;
       margin-bottom: 8px;
@@ -841,8 +839,8 @@ $small-footer-standard-width: 400px;
         display: none;
       }
 
-      p {
-        color: $neutral_dark40;
+      > p {
+        color: $light_white;
       }
     }
 
