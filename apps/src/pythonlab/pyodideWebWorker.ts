@@ -3,7 +3,7 @@ import {loadPyodide, PyodideInterface, version} from 'pyodide';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
-import {HOME_FOLDER, VALIDATION_FILE_ID} from './pythonHelpers/constants';
+import {HOME_FOLDER} from './pythonHelpers/constants';
 import {SETUP_CODE} from './pythonHelpers/patches';
 import {
   getCleanupCode,
@@ -73,10 +73,7 @@ onmessage = async event => {
       ...source,
       files: {
         ...source.files,
-        [VALIDATION_FILE_ID]: {
-          ...validationFile,
-          id: VALIDATION_FILE_ID,
-        },
+        [validationFile.id]: validationFile,
       },
     };
   }

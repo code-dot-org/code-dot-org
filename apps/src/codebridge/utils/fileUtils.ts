@@ -54,16 +54,17 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
  */
 export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
   if (!source) {
-    return {parsedSource: source, validationFile: undefined};
+    return {parsedSource: null, validationFile: null};
   }
   const newFiles = Object.fromEntries(
     Object.entries(source.files).filter(
       ([_, file]) => file.type !== ProjectFileType.VALIDATION
     )
   );
-  let validationFile = Object.values(source.files).find(
-    f => f.type === ProjectFileType.VALIDATION
-  );
+  let validationFile =
+    Object.values(source.files).find(
+      f => f.type === ProjectFileType.VALIDATION
+    ) || null;
   let openFiles = source.openFiles;
   if (validationFile && source.openFiles?.includes(validationFile.id)) {
     openFiles = source.openFiles.filter(id => id !== validationFile?.id);
