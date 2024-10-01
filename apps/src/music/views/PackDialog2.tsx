@@ -175,10 +175,6 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   const analyticsReporter = useContext(AnalyticsContext);
 
-  const onModeChange = useCallback((value: Mode) => {
-    setMode(value);
-  }, []);
-
   const handleSelectFolder = useCallback(
     (folder: SoundFolder) => {
       if (!library) {
@@ -292,7 +288,7 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
                 {label: musicI18n.packModeSong(), value: 'song'},
                 {label: musicI18n.packModeArtist(), value: 'artist'},
               ]}
-              onChange={value => onModeChange(value as Mode)}
+              onChange={value => setMode(value as Mode)}
               className={styles.segmentedButtons}
             />
           </div>
