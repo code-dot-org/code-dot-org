@@ -5,6 +5,8 @@
   width: 100%;
   height: 100%;
   scrollbar-color: $neutral_dark70 $darkest_gray;
+  // Background color and gap make a border around the grid items.
+  background-color: $neutral_dark80;
   gap: 1px;
 }
 

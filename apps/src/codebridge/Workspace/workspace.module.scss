@@ -3,7 +3,6 @@
 .workspace {
   height: 100%;
   grid-area: workspace;
-  background-color: $darkest_gray;
   color: $white;
   overflow: visible;
   z-index: 2;
@@ -48,7 +47,7 @@
 .workspaceWorkarea {
   display: grid;
   grid-template-columns: 30px auto;
-  grid-auto-rows: auto 1fr auto;
+  grid-auto-rows: 32px 1fr auto;
   overflow: hidden;
   flex: 1;
 }

@@ -9,6 +9,10 @@
   overflow: hidden;
 }
 
+.infoPanelHeader {
+  border-bottom: 1px solid $neutral_dark80;
+}
+
 // This is adapted from customDropdown.module.scss in the component library.
 // The component library does not have a dropdown that comes from an icon-only button.
 .dropdownContainer {
