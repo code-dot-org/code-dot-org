@@ -49,9 +49,9 @@ module AWS
     def self.connect_v2!
       self.s3 ||= if CDO.aws_s3_emulated?
                     Aws::S3::Client.new(
-                      endpoint: CDO.aws_s3_endpoint || CDO.aws_endpoint,
-                      access_key_id: CDO.aws_access_key_id,
-                      secret_access_key: CDO.aws_secret_access_key,
+                      endpoint: CDO.minio_s3_endpoint,
+                      access_key_id: CDO.minio_access_key_id,
+                      secret_access_key: CDO.minio_secret_access_key,
                       region: CDO.aws_region,
                       force_path_style: true,
                     )

@@ -101,9 +101,9 @@ services:
         echo &&
         echo 'You need to add the following to locals.yml to have your server use these services:' &&
         echo &&
-        echo 'aws_s3_endpoint: http://localhost:9000' &&
-        echo 'aws_access_key_id: local-development' &&
-        echo 'aws_secret_access_key: allstudents'
+        echo 'minio_s3_endpoint: http://localhost:9000' &&
+        echo 'minio_access_key_id: local-development' &&
+        echo 'minio_secret_access_key: allstudents'
       "
 
 volumes:
