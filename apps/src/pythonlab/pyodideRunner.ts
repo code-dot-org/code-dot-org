@@ -4,7 +4,11 @@ import {AnyAction, Dispatch} from 'redux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
-import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {
+  MultiFileSource,
+  ProjectFile,
+  ProjectFileType,
+} from '@cdo/apps/lab2/types';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
@@ -18,21 +22,14 @@ export async function handleRunClick(
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined,
   progressManager: ProgressManager | null,
-  validationFile?: ProjectFile,
-  copyValidationFile?: boolean
+  validationFile?: ProjectFile
 ) {
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
   }
   if (runTests) {
-    await runAllTests(
-      source,
-      dispatch,
-      progressManager,
-      validationFile,
-      copyValidationFile
-    );
+    await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -69,19 +66,24 @@ export async function runAllTests(
   source: MultiFileSource,
   dispatch: Dispatch<AnyAction>,
   progressManager: ProgressManager | null,
-  validationFile?: ProjectFile,
-  copyValidationFile: boolean = true
+  validationFile?: ProjectFile
 ) {
-  // If the project has a validation file, we just run those tests.
-  if (validationFile) {
-    // We only support one validation file. If somehow there is more than one, just run the first one.
+  // We default to using the validation file passed in. If it does not exist,
+  // we check the source for the validation file (this is the case in start mode).
+  const validationToRun =
+    validationFile ||
+    Object.values(source.files).find(
+      f => f.type === ProjectFileType.VALIDATION
+    );
+  if (validationToRun) {
     dispatch(appendSystemMessage(`Running level tests...`));
     progressManager?.resetValidation();
-    // We don't need to send the validation file in start mode, as it is already in the source.
+    // We only send the separate validation file, because otherwise the
+    // source already has the validation file.
     const result = await runPythonCode(
-      runValidationTests(validationFile.name),
+      runValidationTests(validationToRun.name),
       source,
-      copyValidationFile ? validationFile : undefined
+      validationFile
     );
     if (result?.message) {
       // Get validation test results

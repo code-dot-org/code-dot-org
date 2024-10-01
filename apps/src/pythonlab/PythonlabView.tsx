@@ -7,15 +7,10 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useState} from 'react';
 
 import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
-import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {
-  MultiFileSource,
-  ProjectFileType,
-  ProjectSources,
-} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -113,7 +108,6 @@ const PythonlabView: React.FunctionComponent = () => {
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
   const progressManager = useContext(ProgressManagerContext);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   useEffect(() => {
     if (progressManager && appName === 'pythonlab') {
@@ -134,24 +128,12 @@ const PythonlabView: React.FunctionComponent = () => {
     dispatch: AppDispatch,
     source: MultiFileSource | undefined
   ) => {
-    let validationFileToSend = validationFile;
-    // In start mode, pull the validation file from the source, rather
-    // than the level.
-    if (isStartMode) {
-      const validationFileFromSource = Object.values(source?.files || {}).find(
-        file => file.type === ProjectFileType.VALIDATION
-      );
-      if (validationFileFromSource) {
-        validationFileToSend = validationFileFromSource;
-      }
-    }
     await handleRunClick(
       runTests,
       dispatch,
       source,
       progressManager,
-      validationFileToSend,
-      !isStartMode // Don't copy the validation file in start mode.
+      validationFile
     );
     // Only send a predict level report if this is a predict level and the predict
     // answer was not locked.

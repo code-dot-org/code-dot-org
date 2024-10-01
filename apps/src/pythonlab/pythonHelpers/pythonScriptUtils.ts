@@ -179,7 +179,8 @@ function updateAndDeleteSourceWithContents(
         newFolderId,
         id,
         pyodide,
-        sendMessage
+        sendMessage,
+        skippedFilenames
       );
       // Now that we've handled the contents, delete the folder.
       try {

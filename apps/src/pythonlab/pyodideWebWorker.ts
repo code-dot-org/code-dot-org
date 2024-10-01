@@ -67,6 +67,7 @@ onmessage = async event => {
   const {id, python, source, validationFile} = event.data;
   let results = undefined;
   let sourceToWrite = source;
+  // Add the validation file to the source if it exists.
   if (validationFile) {
     sourceToWrite = {
       ...source,
@@ -92,14 +93,16 @@ onmessage = async event => {
   await runInternalCode(getCleanupCode(sourceToWrite), id);
   // We run setup code at the end to prepare the environment for the next run.
   await runInternalCode(SETUP_CODE, id);
-  const filenamesToSkip = validationFile ? [validationFile.name] : [];
+  // We don't want to send back the validation file as part of the sources,
+  // so we skip adding it to updatedSource.
+  const filenamesToSkipSaving = validationFile ? [validationFile.name] : [];
 
   const updatedSource = getUpdatedSourceAndDeleteFiles(
     source,
     id,
     pyodide,
     postMessage,
-    filenamesToSkip
+    filenamesToSkipSaving
   );
   postMessage({type: 'updated_source', message: updatedSource, id});
   resetGlobals(pyodide, pyodideGlobals);
