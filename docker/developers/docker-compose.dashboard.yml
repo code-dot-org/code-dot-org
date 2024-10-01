@@ -86,6 +86,7 @@ services:
       CDO_AWS_S3_ENDPOINT: 'http://minio:9000'
       CDO_CLOUDFRONT_PRIVATE_KEY: '!Secret'
       CDO_CLOUDFRONT_KEY_PAIR_ID: '!Secret'
+      CDO_OPENAI_AICHAT_SAFETY_API_KEY: 'localoverride'
     volumes:
       - rbenv:/home/cdodev/.rbenv
       - nvm:/home/cdodev/.nvm

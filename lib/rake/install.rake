@@ -50,8 +50,12 @@ namespace :install do
     if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        RakeUtils.rake 'install:python'
+      end
 
+      # Ensure python is installed
+      RakeUtils.rake 'install:python'
+
+      Dir.chdir(dashboard_dir) do
         if ENV['CI']
           # Prepare for dashboard unit tests to run. We can't seed UI test data
           # yet because doing so would break unit tests.
