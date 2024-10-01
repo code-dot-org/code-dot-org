@@ -63,7 +63,7 @@ def main
     CDO.log.info "Census summaries loading: done processing #{filename}.\n"
 
     file = Tempfile.new(['census', 'geojson'])
-    tiles = Tempfile.new(['censustiles-test-staging', 'mbtiles'])
+    tiles = Tempfile.new(['censustiles-dev', 'mbtiles'])
     file.write(JSON.pretty_generate(geojson))
     _stdout, stderr, tippecanoe_status = Open3.capture3(
       # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
@@ -74,7 +74,7 @@ def main
     )
     upload_successful = false
     if tippecanoe_status.success?
-      upload_successful = upload_maptiles(tiles.path, 'censustiles-test-staging')
+      upload_successful = upload_maptiles(tiles.path, 'censustiles-dev')
     end
     unless tippecanoe_status.success? && upload_successful
       CDO.log.info "Error in uploading"
