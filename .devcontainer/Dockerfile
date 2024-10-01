@@ -9,10 +9,14 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends libpq-dev \
         ffmpeg mupdf mupdf-tools libvips-dev poppler-utils \
         libxml2-dev sqlite3 imagemagick \
-        libmagickcore-dev python3-pip
+        libmagickcore-dev python3-pip git-lfs
 
 # Install PDM
 RUN pip install --user pdm
+
+# Instantiate Git LFS
+WORKDIR /workspaces
+RUN git lfs install
 
 # Add the Rails main Gemfile and install the gems. This means the gem install can be done
 # during build instead of on start. When a fork or branch has different gems, we still have an
@@ -25,3 +29,5 @@ RUN cd /tmp/rails \
     && bundle install \
     && rm -rf /tmp/rails
 RUN chown -R vscode:vscode /usr/local/rvm
+
+USER vscode
