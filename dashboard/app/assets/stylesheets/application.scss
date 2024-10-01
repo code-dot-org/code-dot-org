@@ -711,7 +711,11 @@ $small-footer-standard-width: 400px;
    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
    * fit between the visualization above and the .small-footer
    */
-  margin: 5px 0 $codeApp-bottom-margin $codeApp-left-margin;
+  margin-top: 5px;
+  margin-bottom: $codeApp-bottom-margin;
+  margin-inline-end: 0;
+  margin-inline-start: $codeApp-left-margin;
+
 
   select {
     color: $charcoal;
@@ -724,7 +728,7 @@ $small-footer-standard-width: 400px;
     border: 0;
   }
 
-  .copyright-button, .i18n-dropdown-container, .globe-icon {
+  .copyright-button, .languageSelect {
     align-self: center;
   }
 
@@ -738,25 +742,6 @@ $small-footer-standard-width: 400px;
       border: 1px solid $lighter_gray;
       background-color: initial;
     }
-  }
-
-  .globe-icon {
-    color: $charcoal;
-    font-size: 18px;
-    margin: 0 1px;
-  }
-
-  .i18n-dropdown-container {
-    display: flex;
-    border: 1px solid $lighter_gray;
-    border-radius: 4px;
-    background-color: $white;
-    padding: 0 0 0 4px;
-    margin: 0;
-  }
-
-  .i18n-dropdown-container:dir(rtl) {
-    padding: 0 4px 0 0;
   }
 }
 
@@ -844,31 +829,30 @@ $small-footer-standard-width: 400px;
   border-top: initial;
 }
 
-/* Custom styling for the locale & copyright buttons for Music Lab. */
+/* Custom styling for the small-footer-base for Music Lab. */
 .music-black {
   #page-small-footer {
     user-select: none;
 
     .small-footer-base {
-      margin-left: 8px;
+      max-width: 12.5rem;
+      margin-inline-start: 8px;
       margin-bottom: 8px;
 
       .version-caption {
         display: none;
       }
-    }
 
-    .i18n-dropdown-container, .copyright-button {
-      height: 1.625rem;
-      box-sizing: border-box;
-      border: solid 1px $light_white;
+      > p {
+        color: $light_white;
+      }
     }
 
     .copyright-button {
+      height: 1.625rem;
       width: 1.625rem;
-  }
-
-    .i18n-dropdown-container, .globe-icon, #locale, .copyright-button {
+      box-sizing: border-box;
+      border: solid 1px $light_white;
       background-color: initial;
       color: $light_white;
     }
