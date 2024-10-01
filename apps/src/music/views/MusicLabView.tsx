@@ -123,13 +123,17 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
   // Use the Lab2 generic prompt for Blockly prompt dialogs.
   const genericPrompt = useCallback(
-    (p1: string, p2: string, p3: (p1: string | null) => void) => {
+    (
+      message: string,
+      value: string,
+      handleConfirm: (input: string | null) => void
+    ) => {
       dialogControl.showDialog({
         type: DialogType.GenericPrompt,
         title: '',
-        message: p1,
-        value: p2,
-        handleConfirm: p3,
+        message,
+        value,
+        handleConfirm,
       });
     },
     [dialogControl]
