@@ -255,7 +255,6 @@ progress.initViewAsWithoutStore = function (
   isSignedInUser,
   isInstructor
 ) {
-  console.log('lfm');
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
   if (isInstructor) {
