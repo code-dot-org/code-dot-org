@@ -36,7 +36,7 @@
     width: 1.625rem;
     box-sizing: border-box;
     border: solid 1px $light_white;
-    background-color: $neutral_dark;
+    background-color: $light_black;
     color: $light_white;
   }
 }
@@ -45,7 +45,7 @@
   > div {
     select {
       border-color: $light_white;
-      background-color: $neutral_dark;
+      background-color: $light_black;
       color: $light_white;
     }
     &::after {
@@ -62,7 +62,7 @@
     &:has(select:hover) {
       select:not(:disabled) {
         color: $light_white;
-        background-color: $neutral_dark;
+        background-color: $light_black;
       }
       &::before {
         color: $light_white;
@@ -75,7 +75,7 @@
     &:has(select:active) {
       select:not(:disabled) {
         color: $light_white;
-        background-color: $neutral_dark;
+        background-color: $light_black;
       }
 
       &::before {
