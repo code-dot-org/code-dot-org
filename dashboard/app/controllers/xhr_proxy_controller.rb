@@ -24,12 +24,7 @@ class XhrProxyController < ApplicationController
       text/plain
     )
   ).freeze
-
-  # bible-api.com has been replaced with the more official api.scripture.api.bible. However, since
-  # bible-api.com is still working, we'll leave it up during a transition period. If today's date is
-  # later than June 1, 2024 and you are reading this, go ahead and remove bible-api.com as well as
-  # this comment.
-
+  
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     api.amadeus.com
@@ -72,7 +67,6 @@ class XhrProxyController < ApplicationController
     api.weatherapi.com
     api.wolframalpha.com
     api.zippopotam.us
-    bible-api.com
     bnefoodtrucks.com.au
     ch.tetr.io
     code.org
