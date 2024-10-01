@@ -87,7 +87,7 @@ class Pythonlab < Level
         conditions: [
           {
             name: 'PASSED_ALL_TESTS',
-            value: "true",
+            value: "true"
           }
         ],
         message: '',

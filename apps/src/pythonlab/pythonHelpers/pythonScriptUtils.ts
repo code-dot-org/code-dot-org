@@ -11,7 +11,7 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {PyodideMessage, PyodidePathContent} from '../types';
 
-import {HIDDEN_FOLDERS, VALIDATION_FILE_ID} from './constants';
+import {HIDDEN_FOLDERS} from './constants';
 import {TEARDOWN_CODE} from './patches';
 
 // Returns the cleanup code to be run after the user's code.
@@ -223,12 +223,6 @@ export function resetGlobals(
       pyodide.globals.delete(key);
     }
   });
-}
-
-export function getSkippedFilenames(source: MultiFileSource) {
-  return Object.entries(source.files)
-    .filter(([key, _]) => key === VALIDATION_FILE_ID)
-    .map(([_, file]) => file.name);
 }
 
 // For the given fileId, return the module version of the file. For example, a file at
