@@ -2,25 +2,18 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
-import manageStudents, {
-  RowType,
-  blankStudentTransfer,
-} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import {reduxStore} from '@cdo/storybook/decorators';
 
-import {UnconnectedManageStudentsTable} from './index';
+import teacherSections from '../teacherDashboard/teacherSectionsRedux';
 
-const currentUserData = {
-  isTeacher: true,
-  inUSA: true,
-  usStateCode: 'CO',
-};
+import manageStudents, {
+  RowType,
+  blankStudentTransfer,
+} from './manageStudentsRedux';
+import {UnconnectedManageStudentsTable} from './ManageStudentsTable';
 
 const initialState = {
-  currentUser: currentUserData,
   manageStudents: {
     loginType: '',
     studentData: {},
@@ -28,14 +21,14 @@ const initialState = {
   },
   teacherSections: {
     selectedSectionId: 53,
-    sections: {
-      53: {
+    sections: [
+      {
         id: 53,
         name: 'Test section',
         loginType: SectionLoginType.email,
         hidden: false,
       },
-    },
+    ],
   },
   unitSelection: {
     scriptId: 22,
@@ -66,7 +59,6 @@ const passwordAccountData = [
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
-    usState: 'CO',
   },
   {
     id: 2,
@@ -82,7 +74,6 @@ const passwordAccountData = [
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
-    usState: 'CO',
   },
   {
     id: 3,
@@ -98,7 +89,6 @@ const passwordAccountData = [
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
-    usState: 'CO',
   },
   {
     id: 4,
@@ -115,7 +105,6 @@ const passwordAccountData = [
     sectionId: 53,
     isEditing: false,
     rowType: RowType.TEACHER,
-    usState: 'CO',
   },
 ];
 
@@ -323,7 +312,7 @@ export default {
 const Template = args => (
   <Provider
     store={reduxStore(
-      {currentUser, manageStudents, teacherSections, unitSelection},
+      {manageStudents, teacherSections, unitSelection},
       initialState
     )}
   >
@@ -368,11 +357,4 @@ export const TableForCleverAccounts = Template.bind({});
 TableForCleverAccounts.args = {
   studentData: cleverData,
   loginType: SectionLoginType.clever,
-};
-
-export const TableForUSTeacher = Template.bind({});
-TableForUSTeacher.args = {
-  currentUser: currentUserData,
-  studentData: passwordAccountData,
-  loginType: SectionLoginType.email,
 };

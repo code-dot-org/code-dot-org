@@ -1,16 +1,16 @@
 import styles from './lesson-materials.module.scss';
 
-interface ResourceType {
+interface ResourceIcon {
   icon: string;
   class: string;
 }
 
-const makeObjectType = (icon: string, className: string): ResourceType => ({
+const makeObjectType = (icon: string, className: string): ResourceIcon => ({
   icon,
   class: className,
 });
 
-export const RESOURCE_TYPE = Object.freeze({
+export const RESOURCE_ICONS = Object.freeze({
   SLIDES: makeObjectType('presentation-screen', styles.slides),
   LESSON_PLAN: makeObjectType('file-lines', styles.lessonPlan),
   LINK: makeObjectType('link-simple', styles.link),

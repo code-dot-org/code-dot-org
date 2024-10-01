@@ -299,10 +299,6 @@ class User < ApplicationRecord
     Services::Lti.create_lti_user_identity(self)
   end
 
-  after_update if: -> {cap_status? && property_previously_changed?(:us_state)} do
-    Services::ChildAccount.remove_compliance(self)
-  end
-
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do
@@ -2264,7 +2260,6 @@ class User < ApplicationRecord
       at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
       child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
-      us_state: us_state,
     }
   end
 
@@ -2741,12 +2736,31 @@ class User < ApplicationRecord
     get_us_state_abbr_from_name(state, include_dc: true)
   end
 
+  US_STATE_DROPDOWN_OPTIONS = {
+    'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
+    'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
+    'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
+    'ID' => 'Idaho', 'IL' => 'Illinois', 'IN' => 'Indiana', 'IA' => 'Iowa',
+    'KS' => 'Kansas', 'KY' => 'Kentucky', 'LA' => 'Louisiana', 'ME' => 'Maine',
+    'MD' => 'Maryland', 'MA' => 'Massachusetts', 'MI' => 'Michigan',
+    'MN' => 'Minnesota', 'MS' => 'Mississippi', 'MO' => 'Missouri',
+    'MT' => 'Montana', 'NE' => 'Nebraska', 'NV' => 'Nevada',
+    'NH' => 'New Hampshire', 'NJ' => 'New Jersey', 'NM' => 'New Mexico',
+    'NY' => 'New York', 'NC' => 'North Carolina', 'ND' => 'North Dakota',
+    'OH' => 'Ohio', 'OK' => 'Oklahoma', 'OR' => 'Oregon',
+    'PA' => 'Pennsylvania', 'RI' => 'Rhode Island', 'SC' => 'South Carolina',
+    'SD' => 'South Dakota', 'TN' => 'Tennessee', 'TX' => 'Texas',
+    'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
+    'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
+    'WY' => 'Wyoming'
+  }.freeze
+
   # Returns a Hash of US state codes to state names meant for use in dropdown
   # selection inputs for User accounts.
   # Includes a '??' state code for a location not listed.
   def self.us_state_dropdown_options
     {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
-      merge(SharedConstants::US_STATES.stringify_keys)
+      merge(US_STATE_DROPDOWN_OPTIONS)
   end
 
   def us_state_changed?
@@ -2787,10 +2801,7 @@ class User < ApplicationRecord
     potentially_locked = Policies::ChildAccount.underage?(user_before_update)
     # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
     if potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(user_before_update)
-      # Only teachers can update the US State of CAP covered students
-      if us_state_changed? && !RequestStore.store[:current_user]&.teacher?
-        errors.add(:us_state,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow'))
-      end
+      errors.add(:us_state,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow')) if us_state_changed?
       errors.add(:age,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow')) if birthday_changed?
     end
   end

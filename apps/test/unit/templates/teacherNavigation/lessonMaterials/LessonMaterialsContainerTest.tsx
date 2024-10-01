@@ -2,8 +2,8 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {useLoaderData} from 'react-router-dom';
 
-import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/LessonMaterialsContainer';
-import {RESOURCE_TYPE} from '@cdo/apps/templates/teacherNavigation/ResourceIconType';
+import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
+import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
 import i18n from '@cdo/locale';
 
 jest.mock('react-router-dom', () => ({
@@ -101,9 +101,9 @@ describe('LessonMaterialsContainer', () => {
 
     // Teacher resources, including lesson plan, unit vocab and unit standards
     screen.getByText('Teacher Resources');
-    screen.getByTestId('resource-icon-' + RESOURCE_TYPE.SLIDES.icon);
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon);
     screen.getByText('Slides: my slides');
-    screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LESSON_PLAN.icon);
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LESSON_PLAN.icon);
     screen.getByText('Lesson Plan: First lesson');
     // checks that standards and vocab are rendered only once and not rendred in the "student resoruces section"
     screen.getByText('Unit 3 Standards');
@@ -111,7 +111,7 @@ describe('LessonMaterialsContainer', () => {
 
     // Student resources
     screen.getByText('Student Resources');
-    screen.getByTestId('resource-icon-' + RESOURCE_TYPE.VIDEO.icon);
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
     screen.getByText('Video: my linked video');
   });
 
@@ -122,13 +122,13 @@ describe('LessonMaterialsContainer', () => {
 
     fireEvent.change(selectedLessonInput, {target: {value: '2'}});
 
-    screen.getByTestId('resource-icon-' + RESOURCE_TYPE.LESSON_PLAN.icon);
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.LESSON_PLAN.icon);
     screen.getByText('Lesson Plan: Second lesson');
 
-    screen.getByTestId('resource-icon-' + RESOURCE_TYPE.VIDEO.icon);
+    screen.getByTestId('resource-icon-' + RESOURCE_ICONS.VIDEO.icon);
     screen.getByText('Video: my video resource');
     expect(
-      screen.queryAllByTestId('resource-icon-' + RESOURCE_TYPE.SLIDES.icon)
+      screen.queryAllByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon)
         .length === 0
     );
   });
