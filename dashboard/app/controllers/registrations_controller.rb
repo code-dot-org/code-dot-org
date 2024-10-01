@@ -487,7 +487,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   private def redirect_if_signed_in
     if user_signed_in?
-      redirect_to home_path, notice: 'You are already signed in.'
+      redirect_to home_path, alert: I18n.t('devise.failure.already_authenticated', locale: locale)
     end
   end
 
