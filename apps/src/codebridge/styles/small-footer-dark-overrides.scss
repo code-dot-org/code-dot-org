@@ -4,13 +4,12 @@
 // under apps/src/...) Otherwise, we might inadvertantly apply these styles to all labs,
 // including light-mode labs.  Even then, if we switch levels once this file is imported,
 // the styles will persist until the page is reloaded. This isn't ideal for level
-// progressions that include a mix of light and dark mode labs.  If we include this file for
-// musiclab which does have mixed level progressions, we'll probably want to at least give a
-// dark background-color to .small-footer-base to ensure the white text is readable in light mode.
+// progressions that include a mix of light and dark mode labs.
 
-// Another note: This is essentially a copy pasta with color tweaks from the .music-black rules in
-// application.scss. If we do use this file for music lab, we should clean up that file and whatever
-// is setting 'music-black' in music lab level properties.
+// Another note: This is essentially a copy pasta from the .music-black rules in application.scss
+// and I18nDropdown/style.css.  If music lab becomes a lazy-loaded entry point, this file can be
+// applied in MusicView rather than the current approach that music lab is applying the
+// .music-black class.
 
 @import 'color.scss';
 
@@ -23,75 +22,72 @@
   user-select: none;
 
   .small-footer-base {
-    margin-left: 10px;
-    max-width: 300px;
+    max-width: 12.5rem;
+    margin-inline-start: 8px;
+    margin-bottom: 8px;
 
     .version-caption {
       display: none;
     }
-    p {
-      color: $neutral_dark90;
+
+    > p {
+      color: $light_white;
     }
   }
 
   .copyright-button {
-    user-select: none;
-
-    .copyright-link {
-      width: 26px;
-      height: 26px;
-      border: solid 1px;
-      box-sizing: border-box;
-    }
+    height: 1.625rem;
+    width: 1.625rem;
+    box-sizing: border-box;
+    border: solid 1px $light_white;
+    background-color: $neutral_dark;
+    color: $light_white;
   }
+}
 
-  .languageSelect,
-  #locale,
-  .copyright-link {
-    border-color: $neutral_white;
-    background-color: initial;
-    color: $neutral_white;
+.languageSelect {
+  > div {
+    select {
+      border-color: $light_white;
+      background-color: $neutral_dark;
+      color: $light_white;
+    }
+    &::after {
+      background-color: initial;
 
-    > div {
-      select {
-        height: 26px;
-        background-color: initial;
-        color: $neutral_white;
-        option {
-          color: $neutral_dark90;
-        }
-      }
-      &::after {
-        background-color: initial;
-        color: $neutral_white;
+      // This will otherwise get overridden by the simpleDropdown DSCO component
+      color: $light_white !important;
+    }
+    &::before {
+      background-color: initial;
+      color: $light_white;
+    }
+
+    &:has(select:hover) {
+      select:not(:disabled) {
+        color: $light_white;
+        background-color: $neutral_dark;
       }
       &::before {
-        background-color: initial;
-        color: $neutral_white;
+        color: $light_white;
+      }
+      &::after {
+        color: $light_white;
       }
     }
-  }
 
-  #copyright-flyout {
-    border: solid 1px $neutral_dark40;
-    box-sizing: border-box;
+    &:has(select:active) {
+      select:not(:disabled) {
+        color: $light_white;
+        background-color: $neutral_dark;
+      }
 
-    h4,
-    a:link {
-      color: $neutral_dark50;
+      &::before {
+        color: $light_white;
+      }
+      &::after {
+        color: $light_white;
+      }
     }
-
-    img {
-      background-color: $neutral_light;
-      border-radius: 4px;
-      padding: 4px;
-      margin-bottom: 6px;
-    }
-  }
-
-  #copyright-flyout,
-  #copyright-scroll-area {
-    background-color: $neutral_dark;
-    color: $neutral_light;
   }
 }
