@@ -715,10 +715,12 @@ class UnitEditor extends React.Component {
                 <Chips
                   name="unit-editor-topic-tags"
                   size="xs"
-                  options={Object.entries(CurriculumTopicTags).map(([key, val]) => ({
-                    value: key,
-                    label: val,
-                  }))}
+                  options={Object.entries(CurriculumTopicTags).map(
+                    ([key, val]) => ({
+                      value: key,
+                      label: val,
+                    })
+                  )}
                   values={this.state.topicTags}
                   setValues={vals => this.setState({topicTags: vals})}
                 />
