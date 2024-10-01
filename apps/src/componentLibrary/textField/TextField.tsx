@@ -110,6 +110,9 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         minLength={minLength}
         autoComplete={autoComplete}
         onChange={onChange}
+        className={classNames({
+          [moduleStyles.error]: errorMessage,
+        })}
         {...ariaProps}
         aria-disabled={disabled || ariaProps['aria-disabled']}
       />

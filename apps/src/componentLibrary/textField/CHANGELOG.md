@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.4](https://github.com/code-dot-org/code-dot-org/pull/60852)
+
+* Added error state border-color to `TextField` component
+
 ## [0.2.3](https://github.com/code-dot-org/code-dot-org/pull/60852)
 
 * Added native input props maxLength, minLength, and autoComplete for `TextField` component
