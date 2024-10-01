@@ -126,7 +126,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     (p1: string, p2: string, p3: (p1: string | null) => void) => {
       dialogControl.showDialog({
         type: DialogType.GenericPrompt,
-        title: p1,
+        title: '',
+        message: p1,
         value: p2,
         handleConfirm: p3,
       });
