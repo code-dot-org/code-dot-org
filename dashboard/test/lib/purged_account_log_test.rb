@@ -95,6 +95,9 @@ class PurgedAccountLogTest < ActiveSupport::TestCase
     log_obj.purged_at = purge_time
 
     class StubUploader
+      def initialize(_bucket = '', _prefix = '')
+      end
+
       def upload_log(_name, _body)
       end
     end

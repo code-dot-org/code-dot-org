@@ -12,6 +12,7 @@ import {
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {queryParams} from '../code-studio/utils';
 import useWindowSize from '../util/hooks/useWindowSize';
 
 import PanelsView from './PanelsView';
@@ -30,6 +31,9 @@ const PanelsLabView: React.FunctionComponent = () => {
     state => state.lab.levelProperties?.appName
   );
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+  const offerTts =
+    useAppSelector(state => state.lab.levelProperties?.offerTts) ||
+    queryParams('show-tts') === 'true';
 
   const dialogControl = useDialogControl();
 
@@ -73,6 +77,7 @@ const PanelsLabView: React.FunctionComponent = () => {
       onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}
       targetHeight={windowHeight}
+      offerTts={offerTts}
     />
   );
 };
