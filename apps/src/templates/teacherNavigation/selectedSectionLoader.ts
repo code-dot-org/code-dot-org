@@ -66,5 +66,6 @@ export const asyncLoadSelectedSection = async (sectionId: string) => {
     getStore().dispatch(updateSelectedSection(selectedSection));
 
     getStore().dispatch(finishLoadingSectionData());
+    console.log('Finished loading section data');
   });
 };
