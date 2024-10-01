@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-08-30T17:25:01.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL-genAI-neuralnetworks",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_23",
+    "encrypted": "false",
+    "long_instructions": "## Lesson 6: Understanding Neural Networks\r\n#### This lesson introduces **neural networks** through a hands-on activity where students create a lunch recommender. They learn how hidden layers and weights in neural networks influence decisions and connect these ideas back to language and word meanings.\r\n\r\n## Lesson 7: Neural Networks: How They're Trained\r\n#### This lesson explores **supervised learning** through trial and error. Students engage in a fictional language game, improving as they identify patterns. They reflect on whether this process shows true \"intelligence\" or just sophisticated rule-following.\r\n\r\n## To Do:\r\n#### Watch the video below to learn more about processing.\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-30T17:25:01.293+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations_06b_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations_06b_2024\"},{\"changed_at\":\"2024-08-30 17:25:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 17:27:42 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 17:36:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-03 15:21:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

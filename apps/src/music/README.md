@@ -22,6 +22,7 @@ This is the client-side code for **Music Lab**, as instantiated by a `music` lev
 - Custom blockly field implementations for specialized blocks:
   - The `play` block opens a sound library explorer.
   - The `play drums` block opens a drum pattern editor, and has a custom rendering of the drum pattern in the block itself.
+  - The `play AI drums` block opens a drum pattern editor, and has a custom rendering of the drum pattern in the block itself, and uses AI to generate drums given some initial ones.
   - The `play notes` block opens a note editor, and has a custom rendering of the note pattern in the block itself.
   - The `play tune` block opens a "piano roll" editor, and has a custom rendering of the note events.
 
@@ -98,6 +99,6 @@ The contents of a user's project are represented as various types corresponding 
 - [MusicView](./views/MusicView.jsx) is the entrypoint into Music Lab, and is the top-level container view that is rendered by the Lab2 framework. MusicView handles orchestrating a lot of the overarching app logic, such as connecting UI events to player APIs and loading the music library.
 - MusicView renders [MusicLabView](./views/MusicLabView.tsx) which actually renders most of the UI. MusicLabView was created primarly to reduce the size of the MusicView file and convert more of the UI code into functional React/TypeScript (as MusicView is currently class-based and JavaScript). Most other view components are rendered by MusicLabView.
 - There are a few view components rendered by custom Blockly fields. These include:
-  - [SoundsPanel](./views/SoundsPanel.tsx) and [SoundsPanel2](./views/SoundsPanel2.tsx) which represent sound picker UI (the latter is an updated variant).
+  - [SoundsPanel](./views/SoundsPanel.tsx) which represents the sound picker UI.
   - [ChordPanel](./views/ChordPanel.tsx) which represents the "play notes" keyboard/chord selection UI.
   - [PatternPanel](./views/PatternPanel.tsx) which represents the "play drums" grid drum editor.

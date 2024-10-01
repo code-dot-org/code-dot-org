@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
-import PopUpMenu from '../../lib/ui/PopUpMenu';
+import PopUpMenu from '../../sharedComponents/PopUpMenu';
 import color from '../../util/color';
 
 import {sectionForDropdownShape} from './shapes';

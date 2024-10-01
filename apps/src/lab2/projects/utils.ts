@@ -1,4 +1,5 @@
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
 import {MultiFileSource, ProjectFile, ProjectFileType} from '../types';
@@ -105,7 +106,8 @@ export function getFileByName(
 /**
  * Given a map of {fileId: ProjectFile}, return the first non-hidden, active file.
  * @param project - The folders and files for a given project.
- * @returns The first non-hidden, active file, or the first file.
+ * @returns The first non-hidden, active file, the first open file if no files are active,
+ * or undefined if no files are open.
  */
 export function getActiveFileForProject(project: MultiFileSource) {
   const files = Object.values(project.files);
@@ -116,6 +118,14 @@ export function getActiveFileForProject(project: MultiFileSource) {
     f => isStartMode || !f.type || f.type === ProjectFileType.STARTER
   );
 
-  // Get the first active file, or the first file.
-  return visibleFiles.find(f => f.active) || visibleFiles[0];
+  // Get the first active file, if no active file then the first open file,
+  // or undefined if no files are open.
+  return visibleFiles.find(f => f.active) || visibleFiles.find(f => f.open);
+}
+
+/**
+ * Returns the value of the language cookie (eg, en-US, which is also the default if the cookie is not set).
+ */
+export function getCurrentLocale(): string {
+  return currentLocale();
 }

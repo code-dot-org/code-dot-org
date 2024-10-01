@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 #### Everything you need to deliver engaging and effective classes is included with each **lesson plan** to help make your teaching experience as seamless as possible.
 
-<img src="https://images.code.org/8623a78db05455fd94ee74da055733f2-image-1716219139057.png" alt="lesson plan diagram" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px; border: 5px solid black;">
+<img src="https://images.code.org/a3c69e6a2d28dcb426e53430e18a5bca-image-1724089602360.png" alt="lesson plan diagram" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px; border: 5px solid black;">
 
 
 
@@ -17,7 +17,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 16pt; font-weight: bold;"><b>1.</b> Clear Objectives</summary>
 <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
        	<p style= "font-size: 14pt">
-         These statements outline the specific knowledge and skills students will gain by the end of each lesson.
+         Statements outline the specific knowledge and skills students will gain by the end of each lesson.
         </p>
    </div>
 </details>
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 16pt; font-weight: bold;"><b>2. </b>Detailed teaching guides</summary>
 <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
        	<p style= "font-size: 14pt">
-         These step-by-step guides walks you through each lesson, including teacher tips to ensure smooth delivery and maximize student learning.
+         Step-by-step guides walks you through each lesson, including teacher tips to ensure smooth delivery and maximize student learning.
         </p>
    </div>
 </details>
@@ -41,7 +41,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 16pt; font-weight: bold;"><b>4. </b>Interactive student handouts</summary>
 <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
        	<p style= "font-size: 14pt">
-         These handouts offer activities, practice problems, and note-taking guides to reinforce key concepts. 
+         Handouts offer activities, practice problems, and note-taking guides to reinforce key concepts. 
         </p>
    </div>
 </details>
@@ -51,5 +51,4 @@ markdown <<MARKDOWN
 
 ## Let's dive in!
 
-![]()
 MARKDOWN

@@ -37,6 +37,7 @@ import {
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
 } from './functionEditorConstants';
+import {registerCloseModalEditorShortcut} from './shortcutItems';
 import WorkspaceSvgFrame from './workspaceSvgFrame';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
@@ -108,7 +109,8 @@ export default class FunctionEditor {
     document
       .getElementById(MODAL_EDITOR_CLOSE_ID)
       ?.addEventListener('click', () => this.hide());
-
+    // Adds an ESC key shortcut to Blockly's shortcut registry.
+    registerCloseModalEditorShortcut(this.hide.bind(this));
     // Handler for delete button. We only enable the delete button for writeable workspaces.
     if (!this.isReadOnly) {
       document
@@ -168,6 +170,11 @@ export default class FunctionEditor {
     if (this.primaryWorkspace) {
       Blockly.common.setMainWorkspace(this.primaryWorkspace);
     }
+    // This method is also used as a callback for the Blockly shortcut registry.
+    // The registry expects callbacks to return a boolean. We return false
+    // explicitly so that other shortcuts assigned to the same key code still run.
+    // This includes 'escape' (hide chaff, from Core) and 'exit' (from keyboard navigation).
+    return false;
   }
 
   // We kept this around for backwards compatibility with the CDO

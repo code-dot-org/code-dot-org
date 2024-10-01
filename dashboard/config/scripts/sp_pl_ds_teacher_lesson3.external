@@ -1,0 +1,41 @@
+name 'sp-pl-DS-teacher-lesson3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Ethical Data Collection 
+
+#### In this lesson,  your students will analyze three different scenarios. This professional learning module just covers one. 
+
+#### As your students work through the scenarios, they should pay attention to how data is collected, whether through surveys, automated methods, or measurements.
+
+#### This activity will naturally lead to discussions about ethical concerns related to data collection, such as privacy issues, misuse of data, accuracy, and bias.
+
+![](https://images.code.org/9145933afbe673b1f8165dab633a1ed2-image-1724339822547.png)
+
+##
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/fcd9539d70bf656c9818b43c6cba8c46-image-1724340037765.png" style="float: left; height: 225px; clear: both; margin: 0 30px 20px 0;">
+
+<div style="background-color: #f9cfcf; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.2px 10px 1px 10px;">
+
+
+<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+<p style="font-size: 16px; line-height: 1.5; margin-left: 10px; margin-right: 30px;">A great strategy for this activity is to stop after each of the three scenarios to facilitate a discussion. Let the students lead and make their own observations about the data collection methods. By breaking it up, you give them the opportunity to think critically and engage in meaningful conversations.
+</p>
+<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
+</p>
+</div>
+
+  <div style="clear: both;"></div>
+
+
+
+
+## Let's continue to data questions and stories!
+
+
+MARKDOWN

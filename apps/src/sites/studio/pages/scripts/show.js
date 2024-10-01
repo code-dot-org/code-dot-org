@@ -106,6 +106,9 @@ function initPage() {
     false
   );
 
+  const showAiAssessmentsAnnouncement =
+    scriptData.showAiAssessmentsAnnouncement;
+
   ReactDOM.render(
     <Provider store={store}>
       {parentalPermissionBannerData && (
@@ -142,13 +145,11 @@ function initPage() {
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
-        showUnversionedRedirectWarning={
-          scriptData.show_unversioned_redirect_warning
-        }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
         publishedState={scriptData.publishedState}
         participantAudience={scriptData.participantAudience}
+        showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
       />
     </Provider>,
     mountPoint

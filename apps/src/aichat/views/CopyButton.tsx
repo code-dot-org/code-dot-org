@@ -1,11 +1,15 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-import {selectAllVisibleMessages} from '@cdo/apps/aichat/redux/aichatRedux';
+import {
+  addChatEvent,
+  selectAllVisibleMessages,
+  sendAnalytics,
+} from '@cdo/apps/aichat/redux/aichatRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {timestampToDateTime} from '../redux/utils';
@@ -18,8 +22,11 @@ import {
 
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
-const CopyButton: React.FunctionComponent = () => {
+const CopyButton: React.FunctionComponent<{isDisabled: boolean}> = ({
+  isDisabled,
+}) => {
   const messages = useSelector(selectAllVisibleMessages);
+  const dispatch = useAppDispatch();
 
   const handleCopy = () => {
     const textToCopy = messages.map(chatEventToFormattedString).join('\n');
@@ -30,12 +37,18 @@ const CopyButton: React.FunctionComponent = () => {
         console.error('Error in copying text');
       }
     );
-    analyticsReporter.sendEvent(
-      EVENTS.CHAT_ACTION,
-      {
+    dispatch(
+      sendAnalytics(EVENTS.CHAT_ACTION, {
         action: 'Copy chat history',
-      },
-      PLATFORMS.BOTH
+      })
+    );
+
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'COPY_CHAT',
+        hideForParticipants: true,
+      })
     );
   };
 
@@ -47,6 +60,7 @@ const CopyButton: React.FunctionComponent = () => {
       size="s"
       color="gray"
       type="secondary"
+      disabled={isDisabled}
     />
   );
 };

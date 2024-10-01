@@ -506,6 +506,12 @@ class UserTest < ActiveSupport::TestCase
     user.valid?
   end
 
+  test "email does not have to be unique when existing user has LTI authentication" do
+    user = create :teacher, :with_lti_auth
+    dupe_user = create(:teacher, email: user.email)
+    assert dupe_user.valid?
+  end
+
   test "cannot create multi-auth LTI user multiple auth options and duplicate of multi-auth user's second email" do
     create :student, email: COLLISION_EMAIL
     # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
@@ -837,28 +843,6 @@ class UserTest < ActiveSupport::TestCase
   test "non LTI users should not have a LtiUserIdentity when created" do
     user = create :user
     assert_empty user.lti_user_identities
-  end
-
-  test 'LTI teacher should be verified after creation' do
-    lti_integration = create(:lti_integration)
-    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
-
-    lti_teacher = build(:teacher)
-    lti_teacher.authentication_options << build(:lti_authentication_option, user: lti_teacher, authentication_id: auth_id)
-    lti_teacher.save!
-
-    assert lti_teacher.verified_teacher?
-  end
-
-  test 'LTI student should not be verified after creation' do
-    lti_integration = create(:lti_integration)
-    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
-
-    lti_student = build(:student)
-    lti_student.authentication_options << build(:lti_authentication_option, user: lti_student, authentication_id: auth_id)
-    lti_student.save!
-
-    refute lti_student.verified_teacher?
   end
 
   # FND-1130: This test will no longer be required
@@ -3767,7 +3751,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal(['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.map {|cs| cs[:title]})
+      assert_equal(['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.pluck(:title))
     end
 
     test "it does not return pl scripts that are in returned pl courses" do
@@ -3777,7 +3761,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal(['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.map {|cs| cs[:title]})
+      assert_equal(['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.pluck(:title))
     end
 
     test "it optionally does not return primary course in returned student courses" do
@@ -3799,7 +3783,7 @@ class UserTest < ActiveSupport::TestCase
 
       assert_equal 1, courses_and_scripts.length
 
-      assert_equal(['testcourse'], courses_and_scripts.map {|cs| cs[:name]})
+      assert_equal(['testcourse'], courses_and_scripts.pluck(:name))
     end
   end
 
@@ -5431,6 +5415,50 @@ class UserTest < ActiveSupport::TestCase
     student.update!(us_state: 'WA')
     student.reload
     assert_equal student.us_state, 'WA'
+  end
+
+  test "teacher with oauth account can access AI Chat" do
+    teacher = create :teacher, :google_sso_provider
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with LTI account can access AI Chat" do
+    teacher = create :teacher, :with_lti_auth
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with AUTHORIZED_TEACHER permissions can access AI Chat" do
+    teacher = create :authorized_teacher
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with email account cannot access AI Chat" do
+    teacher = create :teacher
+    refute teacher.teacher_can_access_ai_chat?
+  end
+
+  test "student with email account cannot access AI Chat" do
+    student = create :student
+    refute student.student_can_access_ai_chat?
+  end
+
+  test "student with verified teacher and in appropriate section can access AI Chat" do
+    unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher, unit_group: unit_group
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    assert student.student_can_access_ai_chat?
+  end
+
+  test "student with verified teacher but not in appropriate section cannot access AI Chat" do
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    refute student.student_can_access_ai_chat?
   end
 
   describe '#latest_parental_permission_request' do

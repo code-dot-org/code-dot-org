@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-02-17T18:32:20.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A physician is in need of a quick way to determine which of their patients might be sick based on their body temperature. A person's normal body temperature is supposed to be 98.6 degrees and shouldn't be more than 0.5 degrees from the norm.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Physician.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getSickPatients()</code> method to find and return the number of patients with temperatures that are more than <code style=\"background-color: #ececec; color: black; font-weight: bold;\">0.5</code> degrees from the norm. The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getSickPatients()</code> method should:\r\n\r\n1. Traverse the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">patients</code> array.\r\n\r\n2. Check if the result of each patient's temperature minus <code style=\"background-color: #ececec; color: black; font-weight: bold;\">98.6</code> is greater than <code style=\"background-color: #ececec; color: black; font-weight: bold;\">0.5</code>. If this is true, add one to the count.\r\n\r\n3. Return the number of patients with temperatures that are more than <code style=\"background-color: #ececec; color: black; font-weight: bold;\">0.5</code> degrees from normal.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PhysicianRunner.java</code>, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getSickPatients()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Math</code> class in the <strong>Documentation</strong> tab ⬆️ for help with using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Math.abs()</code> method.\r\n</div>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 Need help with your algorithm?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    \t<p>Here is one approach to solving this problem.</p>\r\n        <pre style=\"background-color: #333333; color: white;\">\r\ncount = 0\r\n&nbsp;\r\nloop from 0 to patients.length\r\n  if (abs value of patients[index].getTemp() - 98.6 > 0.5)\r\n    count++\r\n&nbsp;\r\nreturn count\r\n</pre>\r\n    </div>\r\n</details>",
@@ -29,15 +33,9 @@
         "tabOrder": 2
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2023-02-17T18:32:20.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:32:20.679+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L6a_2023\\\"\"],\"cloned_from\":\"CSA U4L3-L6a_2023\"},{\"changed_at\":\"2023-02-17 18:32:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-09 15:46:33 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-13 23:02:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-13 23:02:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-13 23:08:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-13 23:08:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-13 23:09:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-13 23:09:49 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-13 23:10:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-13 23:10:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-13 23:10:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-14 02:04:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

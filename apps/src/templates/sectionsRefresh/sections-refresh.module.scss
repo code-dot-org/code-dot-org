@@ -2,11 +2,6 @@
 @import 'font.scss';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 
-// In order to make typography work correctly with em units. (Design system is build for 16px default font size)
-body {
-  font-size: 16px;
-}
-
 .containerWithMarginTop {
   margin-top: 40px;
 }
@@ -162,19 +157,20 @@ label.typographyLabelTwo {
 
 .courseOption {
   margin-top: 20px;
-  align-items: baseline;
+  align-items: center;
 }
 
 .flexDisplay .radio {
-  margin: 0 0 0 0;
+  margin: -2px 0 0 0;
 }
 
 .courseOptionLabel {
-  margin: 0 10px 0 5px;
+  margin: 0 0 0 5px;
 }
 
 .unitDropdown {
   @include main-font-semi-bold;
+  font-size: 16px;
   margin: 4px 0 0 10px;
   padding: 0.3em;
 }
@@ -230,4 +226,9 @@ button.advancedSettingsButton {
       margin-left: 5px;
     }
   }
+}
+
+.taImage {
+  margin-left: 5px;
+  margin-top: -5px;
 }

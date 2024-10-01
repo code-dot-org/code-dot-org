@@ -14,20 +14,24 @@ export function shouldShowFile(file: ProjectFile) {
     : file.type === ProjectFileType.STARTER || !file.type;
 }
 
-export function getFileIcon(file: ProjectFile) {
+export function getFileIconNameAndStyle(file: ProjectFile): {
+  iconName: string;
+  iconStyle: 'solid' | 'regular';
+  isBrand?: boolean;
+} {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  let icon = 'fa-solid ';
-  if (isStartMode) {
-    if (file.type === ProjectFileType.VALIDATION) {
-      icon += 'fa-flask';
-    } else if (file.type === ProjectFileType.SUPPORT) {
-      icon += 'fa-eye-slash';
-    } else {
-      // Starter files or files without a type, which default to starter.
-      icon += 'fa-eye';
+  if (!isStartMode) {
+    if (file.name.endsWith('.py')) {
+      return {iconName: 'python', iconStyle: 'regular', isBrand: true};
     }
-  } else {
-    icon += 'fa-file';
+    return {iconName: 'file', iconStyle: 'regular'};
   }
-  return icon;
+  if (file.type === ProjectFileType.VALIDATION) {
+    return {iconName: 'flask', iconStyle: 'solid'};
+  } else if (file.type === ProjectFileType.SUPPORT) {
+    return {iconName: 'eye-slash', iconStyle: 'regular'};
+  } else {
+    // Starter files or files without a type, which default to starter.
+    return {iconName: 'eye', iconStyle: 'regular'};
+  }
 }

@@ -1,8 +1,9 @@
-@import "color.scss";
-@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import 'color.scss';
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
 
 .expandedSection {
   margin-top: 5px;
+  font-size: 16px;
 }
 
 .settings {
@@ -44,7 +45,7 @@
 
   .form {
     display: flex;
-    width: 100%; 
+    width: 100%;
     margin: 0;
   }
 
@@ -99,7 +100,7 @@
 
   &RemoveButton {
     margin: 0;
-    border:  none;
+    border: none;
     background-color: $white;
     color: $neutral_dark60;
     height: 40px;
@@ -127,15 +128,15 @@
     background-color: $light_affirmative_100;
   }
 
-  &Pending{
+  &Pending {
     background-color: $neutral_dark10;
   }
 
-  &Declined{
+  &Declined {
     background-color: $product_negative_light;
   }
 
-  &Error{
+  &Error {
     background-color: $neutral_dark10;
   }
 

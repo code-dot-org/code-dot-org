@@ -25,7 +25,8 @@
     "bubble_choice_description": "Calculate the sum of all numbers in an ArrayList.",
     "thumbnail_url": "https://images.code.org/fd53d6cb975da83c57edf7be9021db71-image-1651686279623.png",
     "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M2WGe08A+Lhq6UMQalQ\njzNqeXPELkX6DFkNG2rxcTu7/JA6kBq1ti12XYI6Me3yeeZKcFqV82IcvP0F\nTDOvBt5Q8RhOlj8bDxpvaCysDzru61SeeTIxfM3r5t2JxoICqQ+eEpVxXno5\nxf+kbQBC+olm0AybfBdn023CemW9nrBCiXcfPs1X1iSKgKcXqJy2B0HBLLEF\nEuhw/hXsRZmPUjQz1sRSsLIlaIMmo9gP+R4XZx+jpgW5fJ54BTnVQSZzSr9F\n9rc+VNBz/4zCMXLM+rYsxNG/j/mDSgWCSgJnoCVLg3/TrDQvtMS9zPEmMaK0\n5QpIlwU8/Pzg+Mg/FJ3JCxA3cCIo/2wW5kil54DnBnJsaARhcDwBiAl52dFB\nksj0PGQXm/rGD+VYwH9Q2xCiqEp3lKzZQjK1XZnUeLTCfqWNn9RBEaKhp93a\nDPm8XDCiEnxoQj/N1FMfXaWLY4qply1BslH5vQ3/2PVAANuu5US0XICfCotF\nJswC5mqTGsOhhQqipt2/10/pParjP+9cv0OXedPY5VpZTMCshkKd9KQmzgNv\nM98AUd6HJGIXJpWMq7bbh7TQkZMwsXSSstwtwqAk2V5pIR29cgllIZF4mboO\nqOmdQ4pgzfbvC3/M10A+UOdAY+zY3YbVyDGEq6/zbRiItJt8mlSwm4FCM2pu\ntywKyKzkfJVuNV/lmd+XEENWGhIyTrcNqm4JsW8kH4z+HLi4ukMlEjEdSLlX\n+tLl4tWyX8cXTiIT6MNryCR5804otANYTzVcD+Xu20fXgBYXoXjuFz0OZx0q\n1M06dM+ZqDJWMr5reLIYRpgxzAxy0H4DB4IOtC3fYBzJPCZiv6vCc3F1Bjvu\nOZQQTo2Hd/+ztePO5EIbcEsD8vxVxObMKxYe2bvvcYT4Wo3TR3u4HmYWR+5l\navFpGA2wfSkPR3VlVHQgzstjgAY+b7e5PAe1rnwzCtgijTGfKGuO5jIlLs2k\nlqKgX0cSFXaDZuFdShesp040qvX8ftshrYx8TwxiHiMZa8iwP5/gYtw6/zHG\nust7UvaMS9ReTmJR+DQMpgIMGIRG6BRLWP6utipEdThrBMyiB/ngoAtnDdoY\nEUzGGhtT1Etyt4U6l71o22sfq4NDL2bsHQ6cKu2WeT+6hoU0QT5GyypYPsic\nbdHSxI98kND/yBdIOfzZR3k57wP/KHyTcRM3rWkh3nS+d8RxybRZtrbPg6j8\nn/6cYf5myD555wz/kPOhI+uGeyUG6fUisjgv5lWl7Nk0yE/CuAb3mIrQHoMb\nr/TBM9gPHCS/60MC/e+ROpbjnVbnyFqe0mEQVJFY+2gBVpKplkWDkvJQK/UQ\ndDsqj4I=\n",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:00.133+00:00\",\"changed\":[\"cloned from \\\"CSA U6L4-L3a_2022\\\"\"],\"cloned_from\":\"CSA U6L4-L3a_2022\"}]"

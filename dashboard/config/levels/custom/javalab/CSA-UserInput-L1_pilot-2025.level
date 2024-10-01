@@ -1,0 +1,27 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-09-01T22:11:46.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "import java.util.Scanner;\n\npublic class MyConsole {\n  public static void main(String[] args) {\n\n    Scanner input = new Scanner(System.in);\n\n    System.out.print(\"Enter the first number: \");\n    int first = input.nextInt();\n\n    System.out.print(\"Enter the second number: \");\n    int second = input.nextInt();\n\n    int sum = first + second;\n\n    System.out.println(\"The sum of \" + first + \" and \" + second + \" is \" + sum);\n\n    input.close();\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "contained_level_names": [
+      "CSA-UserInput-L1 Contained_pilot-2025"
+    ],
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-01T22:11:46.303+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L1v2_2022\\\"\"],\"cloned_from\":\"CSA U2L5-L1v2_2022\"},{\"changed_at\":\"2024-09-01 22:14:30 +0000\",\"changed\":[\"contained_level_names\",\"ai_tutor_available\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Javalab>

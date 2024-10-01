@@ -11,6 +11,7 @@ export abstract class Validator {
   abstract checkConditions(): void;
   abstract conditionsMet(conditions: Condition[]): boolean;
   abstract clear(): void;
+  abstract getValidationResults(): ValidationResult[] | undefined;
 }
 
 // The current progress validation state.
@@ -18,13 +19,30 @@ export interface ValidationState {
   hasConditions: boolean;
   satisfied: boolean;
   message: string | null;
+  callout?: string;
   index: number;
+  validationResults?: ValidationResult[];
 }
+
+export interface ValidationResult {
+  message: string;
+  result: TestStatus;
+}
+
+// Test results for upper-grade labs (labs that use levelbuilder-written unit tests for validation)
+export type TestStatus =
+  | 'PASS'
+  | 'FAIL'
+  | 'SKIP'
+  | 'ERROR'
+  | 'EXPECTED_FAILURE'
+  | 'UNEXPECTED_SUCCESS';
 
 export const getInitialValidationState: () => ValidationState = () => ({
   hasConditions: false,
   satisfied: false,
   message: null,
+  callout: undefined,
   index: 0,
 });
 
@@ -83,12 +101,15 @@ export default class ProgressManager {
       }
 
       if (validation.conditions) {
+        this.currentValidationState.validationResults =
+          this.validator.getValidationResults();
         // Ask the lab-specific validator if this validation's
         // conditions are met.
         if (this.validator.conditionsMet(validation.conditions)) {
           if (!this.currentValidationState.satisfied) {
             this.currentValidationState.satisfied = validation.next;
             this.currentValidationState.message = validation.message;
+            this.currentValidationState.callout = validation.callout;
             this.onProgressChange();
           }
           return;
@@ -114,6 +135,7 @@ export default class ProgressManager {
       hasConditions,
       satisfied: false,
       message: null,
+      callout: undefined,
       // Ensure that the validation feedback UI is rendered fresh.  This index is
       // used as part of the key for that React component; having a unique value
       // ensures that the UI is rendered fresh, and any apperance animation is

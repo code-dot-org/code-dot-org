@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
 import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
-import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import VisualizationResizeBar from '@cdo/apps/code-studio/components/VisualizationResizeBar';
 import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
 import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1]()
+
+* set max-width for `_Tab` component
+* overflown text in `_Tab` component is now ellipsized
+
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/59675)
 
 * added `light` and `dark` mode support

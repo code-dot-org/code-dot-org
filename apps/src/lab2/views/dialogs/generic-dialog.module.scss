@@ -14,6 +14,10 @@
   &:hover {
     box-shadow: none;
   }
+
+  &:disabled {
+    opacity: 50%;
+  }
 }
 
 .buttonContainer {
@@ -24,41 +28,9 @@
     margin-top: 20px;
 
     .innerButtonContainer {
-      display : flex;
-      flex-direction : row;
-      justify-content : flex-end;
-    }
-  }
-
-  .cancel {
-    @extend %button;
-    background-color: $neutral_light;
-    border-color: $neutral_dark;
-
-    &:hover {
-      background-color: $neutral_dark20;
-    }
-  }
-
-  .neutral {
-    @extend %button;
-    background-color: $neutral_light;
-    border-color: $neutral_dark;
-
-    &:hover {
-      background-color: $neutral_dark20;
-    }
-  }
-
-  .confirm {
-    @extend %button;
-    background-color: $brand_secondary_default;
-    border-color: $brand_secondary_default;
-    color: $neutral_light;
-
-    &:hover {
-      background-color: $brand_secondary_dark;
-      border-color: $brand_secondary_dark;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
     }
   }
 }

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:50:12.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##In ImagePlus.java:\r\n\r\n1. Write the method `zeroRed()`(#e7e8ea) that sets the red value of each `Pixel`(#e7e8ea) to `0`(#e7e8ea).\r\n\r\n   * The `setRed()`(#e7e8ea) method in the `Pixel`(#e7e8ea) class has a parameter `value`(#e7e8ea) that sets the red value to the value specified.\r\n\r\n##In MyTheater.java:\r\n\r\n2. Call the `setRed`(#e7e8ea) method on the image then draw the image in the scene.\r\n\r\n![](https://images.code.org/062843b34d78c1ff2bff589701a24f50-image-1651234781336.gif)",
@@ -25,12 +29,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:50:12.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:12.657+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L3a_2022\\\"\"],\"cloned_from\":\"CSA U5L6-L3a_2022\"},{\"changed_at\":\"2022-10-09 22:57:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 23:00:19 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 23:03:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 23:03:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 23:03:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 23:04:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 23:04:37 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

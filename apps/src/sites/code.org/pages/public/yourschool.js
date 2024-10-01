@@ -7,7 +7,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import initResponsive from '@cdo/apps/code-studio/responsive';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import YourSchool from '@cdo/apps/templates/census2017/YourSchool';
+import YourSchool from '@cdo/apps/templates/census/YourSchool';
 
 registerReducers({isRtl, responsive});
 

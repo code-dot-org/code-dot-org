@@ -1,0 +1,12 @@
+name 'sp-pl-DS-DotPlots'
+title 'Dot Plot'
+
+
+markdown <<MARKDOWN
+#Dot Plots
+###Navigate to the CODAP link and create a dot plot with the following steps:
+###1. Click on the Graph icon to create a new graph.
+###2. Drag an attribute into the graph to see a dot plot.
+
+###[School Party Survey Data - CODAP](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FbmRtgGWIm4yEfQjEOp9c%2Ffile.json)
+MARKDOWN

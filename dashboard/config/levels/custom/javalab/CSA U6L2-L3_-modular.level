@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-02-16T05:19:21.000Z",
   "level_num": "custom",
@@ -22,11 +21,9 @@
     "project_template_level_name": "CSA U6L2-Substring PBT_-modular",
     "teacher_markdown": "When we change the parameter for the `aSubstring` to `30`, the value that is printed to the console is `\" the lazy dog.\"` This is because the `substring()` method is returning a `Strin`g composed from the characters from index `30` (inclusive) until the end of the original `String`.",
     "name_suffix": "_-modular",
-    "ai_tutor_available": "true",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-02-16T05:19:21.906+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L3_2025\\\"\"],\"cloned_from\":\"CSA U6L2-L3_2025\"},{\"changed_at\":\"2024-02-23 04:20:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-02-23 04:26:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-03-10 03:58:44 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-03-10 04:01:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-03-10 04:02:38 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>

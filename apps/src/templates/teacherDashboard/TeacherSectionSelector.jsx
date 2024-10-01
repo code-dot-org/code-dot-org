@@ -7,7 +7,7 @@ import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import PopUpMenu from '../../lib/ui/PopUpMenu';
+import PopUpMenu from '../../sharedComponents/PopUpMenu';
 import {reload} from '../../utils';
 
 import {sectionForDropdownShape} from './shapes';

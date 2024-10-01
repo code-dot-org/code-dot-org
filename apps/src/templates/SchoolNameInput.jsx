@@ -1,35 +1,30 @@
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
-import {SCHOOL_NAME_SESSION_KEY} from '../signUpFlow/signUpFlowConstants';
-
-import style from './school-association.module.scss';
-
-export default function SchoolNameInput({fieldNames}) {
-  const detectedName = sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) || '';
-  const [schoolName, setSchoolName] = useState(detectedName);
+export default function SchoolNameInput({
+  fieldNames,
+  schoolName,
+  setSchoolName,
+}) {
+  const handleSchoolNameChange = name => {
+    setSchoolName(name);
+  };
 
   return (
-    <label>
-      <BodyThreeText className={style.padding}>
-        <strong>{i18n.schoolOrganizationQuestion()}</strong>
-      </BodyThreeText>
-      <TextField
-        name={fieldNames.schoolName}
-        onChange={e => {
-          setSchoolName(e.target.value);
-          sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, e.target.value);
-        }}
-        value={schoolName}
-      />
-    </label>
+    <TextField
+      name={fieldNames.schoolName}
+      label={i18n.schoolOrganizationQuestion()}
+      onChange={e => handleSchoolNameChange(e.target.value)}
+      value={schoolName}
+    />
   );
 }
 
 SchoolNameInput.propTypes = {
   fieldNames: PropTypes.object,
+  schoolName: PropTypes.string,
+  setSchoolName: PropTypes.func,
 };

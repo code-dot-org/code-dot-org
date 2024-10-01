@@ -10,8 +10,8 @@ import {
   LinkButton,
 } from '@cdo/apps/componentLibrary/button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
 import {
   CreateSectionsToAssignSectionsDialog,
@@ -29,9 +29,9 @@ import {
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   assignToSection,
-  sectionsForDropdown,
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import {

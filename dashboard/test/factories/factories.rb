@@ -104,7 +104,7 @@ FactoryBot.define do
 
   factory :user do
     birthday {Time.zone.today - 21.years}
-    email {("#{user_type}_#{SecureRandom.uuid}@code.org")}
+    email {"#{user_type}_#{SecureRandom.uuid}@code.org"}
     password {"00secret"}
     locale {'en-US'}
     sequence(:name) {|n| "User#{n} Codeberg"}
@@ -479,7 +479,7 @@ FactoryBot.define do
 
     trait :sso_provider do
       encrypted_password {nil}
-      provider {%w(facebook windowslive clever).sample}
+      provider {%w(facebook clever).sample}
       sequence(:uid) {|n| n}
     end
 
@@ -520,16 +520,6 @@ FactoryBot.define do
       provider {'microsoft_v2_auth'}
     end
 
-    trait :powerschool_sso_provider do
-      untrusted_email_sso_provider
-      provider {'powerschool'}
-    end
-
-    trait :the_school_project_sso_provider do
-      sso_provider
-      provider {'the_school_project'}
-    end
-
     trait :twitter_sso_provider do
       sso_provider
       provider {'twitter'}
@@ -538,11 +528,6 @@ FactoryBot.define do
     trait :qwiklabs_sso_provider do
       sso_provider
       provider {'lti_lti_prod_kids.qwikcamps.com'}
-    end
-
-    trait :windowslive_sso_provider do
-      sso_provider_with_token
-      provider {'windowslive'}
     end
 
     trait :with_facebook_authentication_option do
@@ -1626,7 +1611,7 @@ FactoryBot.define do
 
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {((School.maximum(:id) || 0).next).to_s}
+    id {(School.maximum(:id) || 0).next.to_s}
     address_line1 {"123 Sample St"}
     address_line2 {"attn: Main Office"}
     city {"Seattle"}
@@ -1929,6 +1914,18 @@ FactoryBot.define do
     association :lesson
     association :level
 
+    trait :with_learning_goals do
+      transient do
+        num_learning_goals {2}
+      end
+
+      after(:create) do |rubric, evaluator|
+        evaluator.num_learning_goals.times do
+          create :learning_goal, rubric: rubric
+        end
+      end
+    end
+
     trait :with_teacher_evaluations do
       transient do
         num_learning_goals {1}
@@ -2041,7 +2038,7 @@ FactoryBot.define do
 
   factory :aichat_request do
     association :user
-    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.to_json}
+    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: "test"}.to_json}
     new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}.to_json}
     stored_messages {[].to_json}
     level_id {1}

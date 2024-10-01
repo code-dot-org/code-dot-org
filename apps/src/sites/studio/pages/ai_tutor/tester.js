@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AITutorTester from '@cdo/apps/lib/levelbuilder/ai-tutor/AITutorTester';
+import AITutorTester from '@cdo/apps/levelbuilder/ai-tutor/AITutorTester';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {

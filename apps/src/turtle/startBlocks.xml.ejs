@@ -96,7 +96,7 @@ var spiral = function(i) {
 %>
 <% if (page === 1) { -%>
   <% if (level === 1) { -%>
-    <block type="draw_move_by_constant" x="20" y="20"></block>
+    <block type="draw_move_by_constant" x="20" y="20" id="startBlock"></block>
   <% } else if (level === 2) { -%>
     <block type="draw_colour" inline="true" x="20" y="20">
       <value name="COLOUR">

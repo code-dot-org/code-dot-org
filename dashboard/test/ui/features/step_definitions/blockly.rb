@@ -8,6 +8,17 @@ Given(/^block "([^"]*)" is at a ((?:blockly )?)location "([^"]*)"$/) do |block, 
   @locations[identifier] = BlocklyHelpers::Point.new(x, y)
 end
 
+When /^I add a "([^"]*)" block with id "([^"]*)" to workspace$/ do |type, id|
+  script = <<~JS
+    Blockly.serialization.blocks.append({
+      "type": "#{type}",
+      "id": "#{id}"
+    }, Blockly.getMainWorkspace());
+  JS
+
+  @browser.execute_script(script)
+end
+
 When(/^I click block "([^"]*)"$/) do |block|
   id_selector = get_id_selector
   @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
@@ -57,11 +68,6 @@ end
 
 When /^I delete block "([^"]*)"$/ do |id|
   code = delete_block(id)
-  @browser.execute_script code
-end
-
-When /^I drag block matching selector "([^"]*)" to block matching selector "([^"]*)"$/ do |from, to|
-  code = generate_selector_drag_code(from, to, 0, 30)
   @browser.execute_script code
 end
 

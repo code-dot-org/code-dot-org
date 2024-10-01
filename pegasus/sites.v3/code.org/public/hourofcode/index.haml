@@ -3,38 +3,51 @@ title: Hour of Code
 theme: responsive_full_width
 ---
 
+:ruby
+  hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/hour-of-code-styles.css", rel: "stylesheet", type: "text/css"}
 
-%section.hero-banner-basic
-  .wrapper.centered
-    %p.hoc-label
-      =hoc_s(:hour_of_code)
-    %h1=hoc_s(:hoc2023_header)
+-# TODO - clean up soon-hoc logic once this is launched
+-# Show 2024 HOC banner if hoc_mode is "soon-hoc", otherwise show 2023 banner
+- if hoc_mode == "soon-hoc"
+  %section.hero-banner-basic.hoc-2024
+    .wrapper.centered.flex-container.align-items-center.flex-direction-column.gap-2
+      %figure
+        %img{src: "/images/banners/banner-hoc-2024.png", alt: ""}
+      .text-wrapper
+        %h1=hoc_s("hoc_2024.header")
+        %a.link-button.black.has-external-link{href: "https://hourofcode.com/events", target: "_blank", rel: "noopener noreferrer"}
+          =hoc_s("hoc_2024.button_host_an_event")
+- else
+  %section.hero-banner-basic
+    .wrapper.centered
+      %p.hoc-label
+        =hoc_s(:hour_of_code)
+      %h1=hoc_s(:hoc2023_header)
 
 %section.bg-neutral-light
-  .wrapper.flex-container.justify-space-between.wrap
-    .text-wrapper.col-50
-      %h2=hoc_s(:hoc_page_what_is_hoc_heading)
-      %p.body-three.has-external-link
-        =hoc_s(:hoc_page_desc, markdown: :inline, locals:{hoc_url: "https://hourofcode.com"})
-      %p.body-three
-        =hoc_s(:hoc_page_desc_2023)
-    %div.col-45
-      = view :display_video_thumbnail, id: "hoc_celebrities_2023", video_code: "ybBUd9-0ZJQ", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/hour_of_code_celebrities_2023.mp4"
-      %a.body-three{href: "/educate/resources/videos"}
-        =hoc_s(:call_to_action_see_more_insp_videos)
-  .clear
+  .wrapper
+    %h2=hoc_s("hoc_page.what_is_hoc.heading")
+    .flex-container.justify-space-between.wrap.gap-1
+      .text-wrapper.col-50
+        %p.body-three.has-external-link
+          =hoc_s("hoc_page.what_is_hoc.desc_01", markdown: :inline, locals:{hoc_url: "https://hourofcode.com"})
+        - if hoc_mode == "soon-hoc"
+          %p.body-three
+            =hoc_s("hoc_page.what_is_hoc.desc_02", markdown: :inline)
+        - else
+          %p.body-three
+            =hoc_s(:hoc_page_desc_2023)
+      %figure.col-45
+        %img{src: "/images/hoc-page-kids-computer.png", alt: "", style: "width: 100%"}
 
 %section
   .wrapper
-    %p.heading-sm.centered{style: "margin-bottom: 4rem"}
-      =hoc_s(:hoc_page_place_to_start)
-    %hr
-    %h2=hoc_s(:hoc_page_lead_activity_heading)
+    %h2=hoc_s("hoc_page.activities.heading")
     %p.has-external-link
-      =hoc_s(:hoc_page_lead_activity_desc, markdown: :inline, locals:{register_activity_url: "https://hourofcode.com/events"})
+      =hoc_s("hoc_page.activities.desc", markdown: :inline, locals:{register_url: "https://hourofcode.com/events"})
     = view :hoc_activites_featured
     .centered{style: "margin-top: 3rem"}
       %hr
@@ -48,51 +61,9 @@ theme: responsive_full_width
       %a.link-button.secondary{href: CDO.studio_url("/catalog?marketingInitiative=hoc")}
         =hoc_s(:call_to_action_explore_activities)
 
-= view :section_divider_line
-
-%section
-  .wrapper
-    %h2=hoc_s(:learn_how_ai_works)
-    %p=hoc_s(:hoc_page_how_ai_works_desc)
-    .action-block.action-block--two-col
-      .media-wrapper.col-50
-        = view :display_video_thumbnail, id: "intro_csp", video_code: "YlwVMtNEWKA", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/ai_series/ai-intro-to-how-ai-works-lessons.mp4"
-      .text-wrapper.col-50
-        .flex-container.justify-space-between.align-items-start
-          %p.overline
-            =hoc_s(:module_label_grades)
-            =hoc_s(:module_grade_6_12)
-        %h3.heading-md
-          = hoc_s(:hoc_page_how_ai_works_title)
-        %p
-          = hoc_s(:how_ai_works_intro_desc)
-        %a.link-button{href: "/ai/how-ai-works"}
-          = hoc_s(:call_to_action_explore_how_ai_works)
-      .clear
-
-= view :section_divider_line
-
-%section
-  .wrapper
-    %h2=hoc_s(:hoc_page_ai_101_heading)
-    %p=hoc_s(:hoc_page_ai_101_desc)
-    .action-block.action-block--two-col
-      .media-wrapper.col-50
-        %img{src: "shared/images/social-media/ai-101-social.png", alt: hoc_s(:hoc_live)}
-      .text-wrapper.col-50
-        .flex-container.justify-space-between.align-items-start
-          %p.overline
-            =hoc_s(:module_professional_learning)
-        %h3.heading-md
-          = hoc_s(:hoc_page_ai_101_block_title)
-        %p
-          = hoc_s(:hoc_page_ai_101_block_desc)
-        %a.link-button{href: "/ai/pl/101"}
-          = hoc_s(:csa_ai_page_learn_more_title)
-      .clear
-
 %section.bg-neutral-light
   .wrapper.centered
-    %h2=hoc_s(:hoc_page_go_beyond_hoc)
+    %h2=hoc_s("hoc_page.beyond.heading")
     = view :hoc_page_beyond
 
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::HOC_LANDING_PAGE_VISITED

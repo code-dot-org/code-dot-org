@@ -19,6 +19,7 @@ import {
   DeleteFileFunction,
   SetActiveFileFunction,
   MoveFileFunction,
+  MoveFolderFunction,
   NewFolderFunction,
   RearrangeFilesFunction,
   RenameFolderFunction,
@@ -87,7 +88,6 @@ export const useProjectUtilities = (
             contents: contents.replace(/\${fileName}/g, fileName),
           },
         });
-        utils.setActiveFile(fileId);
       }),
       renameFile: <RenameFileFunction>((fileId, newName) => {
         dispatch({
@@ -129,6 +129,12 @@ export const useProjectUtilities = (
         dispatch({
           type: PROJECT_REDUCER_ACTIONS.MOVE_FILE,
           payload: {fileId, folderId},
+        });
+      }),
+      moveFolder: <MoveFolderFunction>((folderId, parentId) => {
+        dispatch({
+          type: PROJECT_REDUCER_ACTIONS.MOVE_FOLDER,
+          payload: {folderId, parentId},
         });
       }),
 

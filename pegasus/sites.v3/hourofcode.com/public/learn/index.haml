@@ -1,5 +1,4 @@
 ---
-title: Learn
 layout: wide_index
 social:
   twitter:card: photo
@@ -8,9 +7,25 @@ social:
   og:image:height: '630'
 ---
 
+:ruby
+  @header["title"] = hoc_s("hoc_activities.heading")
+
+:css
+  section.archive {
+    max-width: 1156px;
+    margin: 4rem auto 0;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--neutral_dark20);
+  }
+
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 
-#fullwidth
+-# Get the default HOC mode
+-hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::HOC_ACTIVITIES_PAGE_VISITED
+
+#fullwidth{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
   = view :header
   %section.banner
     = view :learn_banner_text
@@ -49,6 +64,13 @@ social:
 
 .clear{style: "clear: both"}
 
+%section.archive
+  .flex-container.justify-space-between.align-items-center
+    %h2.heading-sm
+      =hoc_s("hoc_activities.archive.heading")
+    %a.link-button.secondary{href: resolve_url("/learn/archive")}
+      =hoc_s("hoc_activities.archive.button")
+
 :javascript
 
   $(document).ready(function() {
@@ -67,14 +89,6 @@ social:
     // Add the rel tag to attempt to mitigate the inherent danger in opening
     // links in a new tab; will only work for modern browsers, though.
     $(".banner a").attr({target: "_blank", rel: "noopener noreferrer nofollow"});
-
-    // Set up google analytics tracking
-    $('.bannerTeachers a[href$="join"]').click(function () {
-      ga('send', 'event', 'learn', 'click', 'teacher_banner_host');
-    });
-    $('.bannerTeachers a[href$="how-to"]').click(function () {
-      ga('send', 'event', 'learn', 'click', 'teacher_banner_howto');
-    });
 
     $(".bannerTeachers").fadeTo('slow', 1);
   });

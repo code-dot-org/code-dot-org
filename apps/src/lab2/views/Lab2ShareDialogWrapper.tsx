@@ -15,12 +15,12 @@ import ShareDialog from './dialogs/ShareDialog';
  */
 const Lab2ShareDialogWrapper: React.FunctionComponent<
   Lab2ShareDialogWrapperProps
-> = ({shareUrl}) => {
+> = ({shareUrl, finishUrl}) => {
   const isProjectLevel =
     useSelector(
       (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
     ) || false;
-  const appType = useSelector(
+  const projectType = useSelector(
     (state: {lab: LabState}) => state.lab.channel?.projectType
   );
   const channelId = useSelector(
@@ -45,37 +45,43 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   // TODO: support abuse reporting.
   const exceedsAbuseThreshold = false;
   // TODO: When we support publishing, we can use this logic to determine if we can publish
-  // const canPublish = isSignedIn && appType && AllPublishableProjectTypes.includes(appType);
+  // const canPublish = isSignedIn && projectType && AllPublishableProjectTypes.includes(projectType);
   const canPublish = false;
   // TODO: this should come from labRedux once we support publishing.
   const isPublished = false;
   const canShareSocial = isSignedIn && is13Plus;
 
-  if (!channelId || !appType) {
+  if (!channelId || !projectType) {
     return null;
   }
 
-  if (LABS_USING_NEW_SHARE_DIALOG.includes(appType)) {
+  if (LABS_USING_NEW_SHARE_DIALOG.includes(projectType)) {
     if (!isOpen) {
       return null;
     }
 
-    return <ShareDialog shareUrl={shareUrl} />;
+    return (
+      <ShareDialog
+        shareUrl={shareUrl}
+        finishUrl={finishUrl}
+        projectType={projectType}
+      />
+    );
   }
 
   return (
     <ShareDialogLegacy
       isProjectLevel={isProjectLevel}
-      allowSignedOutShare={appType === 'dance'}
+      allowSignedOutShare={projectType === 'dance'}
       shareUrl={shareUrl}
       selectedSong={selectedSong}
       thumbnailUrl={thumbnailUrl}
       isAbusive={exceedsAbuseThreshold}
-      canPrint={appType === 'artist'}
+      canPrint={projectType === 'artist'}
       canPublish={canPublish}
       isPublished={isPublished}
       channelId={channelId}
-      appType={appType}
+      appType={projectType}
       onClickPopup={popupWindow}
       canShareSocial={canShareSocial}
       userSharingDisabled={false}
@@ -85,6 +91,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
 interface Lab2ShareDialogWrapperProps {
   shareUrl: string;
+  finishUrl?: string;
 }
 
 export default Lab2ShareDialogWrapper;

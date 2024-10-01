@@ -1,12 +1,18 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
+import type {
+  AiInteractionStatus,
+  AiChatModelIds,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {Role} from '../aiComponentLibrary/chatMessage/types';
 import type {ValueOf} from '../types/utils';
 
+import {FIELDS_CHECKED_FOR_TOXICITY} from './views/modelCustomization/constants';
+
 export const ChatEventDescriptions = {
-  CLEAR_CHAT: 'The user clears the chat workspace.',
-  LOAD_LEVEL: 'The user loads the aichat level.',
+  COPY_CHAT: 'The user copied the chat history.',
+  CLEAR_CHAT: 'The user cleared the chat workspace.',
+  LOAD_LEVEL: 'The user loaded the aichat level.',
 } as const;
 
 export interface ChatEvent {
@@ -86,7 +92,7 @@ export interface AichatLevelProperties extends LevelProperties {
 /** Model customizations and model card information for aichat levels.
  *  selectedModelId is a foreign key to ModelDescription.id */
 export interface AiCustomizations {
-  selectedModelId: string;
+  selectedModelId: ValueOf<typeof AiChatModelIds>;
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
@@ -112,7 +118,7 @@ export interface ModelCardInfo {
 
 /** Metadata about a given model, common across all aichat levels */
 export interface ModelDescription {
-  id: string;
+  id: ValueOf<typeof AiChatModelIds>;
   name: string;
   overview: string;
   trainingData: string;
@@ -132,11 +138,49 @@ export enum Visibility {
 export interface LevelAichatSettings {
   initialCustomizations: AiCustomizations;
   visibilities: {[key in keyof AiCustomizations]: Visibility};
+  // This system prompt is hidden from students and adds additional safety features or hidden guidelines to a level.
+  levelSystemPrompt: string;
   /** If the presentation panel is hidden from the student. */
   hidePresentationPanel: boolean;
   /** list of ModelDescription.ids to limit the models available to choose from in the level */
-  availableModelIds: string[];
+  availableModelIds: ValueOf<typeof AiChatModelIds>[];
 }
 
 // The type of save action being performed (customization update, publish, model card save, etc).
 export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
+
+/** Response structure for the detect toxicity API */
+export interface DetectToxicityResponse {
+  flaggedFields: FlaggedField[];
+}
+
+export type ToxicityCheckedField = (typeof FIELDS_CHECKED_FOR_TOXICITY)[number];
+
+export interface FlaggedField {
+  field: ToxicityCheckedField;
+  toxicity: {
+    text: string;
+    blockedBy: SafetyService;
+    details: BlocklistDetails | WebPurifyDetails | ComprehendDetails;
+  };
+}
+
+type SafetyService = 'blocklist' | 'webpurify' | 'comprehend';
+
+interface BlocklistDetails {
+  blockedWord: string;
+}
+
+interface WebPurifyDetails {
+  type: 'email' | 'address' | 'phone' | 'profanity';
+  content: string;
+}
+
+interface ComprehendDetails {
+  flaggedSegment: string;
+  toxicity: number;
+  maxCategory: {
+    name: string;
+    score: number;
+  };
+}

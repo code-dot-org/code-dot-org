@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import NewReferenceGuideForm from '@cdo/apps/lib/levelbuilder/reference-guide-editor/NewReferenceGuideForm';
+import NewReferenceGuideForm from '@cdo/apps/levelbuilder/reference-guide-editor/NewReferenceGuideForm';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {

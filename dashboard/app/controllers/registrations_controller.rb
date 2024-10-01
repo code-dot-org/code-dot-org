@@ -14,7 +14,7 @@ class RegistrationsController < Devise::RegistrationsController
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
-  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
+  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
 
   #
   # GET /users/sign_up
@@ -25,7 +25,6 @@ class RegistrationsController < Devise::RegistrationsController
       user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
       user_params[:email] ||= params[:email]
-
       @user = User.new_with_session(user_params.permit(:user_type, :email), session)
     else
       save_default_sign_up_user_type
@@ -60,29 +59,47 @@ class RegistrationsController < Devise::RegistrationsController
       PartialRegistration.persist_attributes(session, @user)
     end
 
-    render 'new'
+    if params[:new_sign_up].blank?
+      render 'new'
+    end
   end
 
   #
-  # Get /users/new_sign_up
+  # Get /users/new_sign_up/account_type
   #
-  def new_sign_up
-    render 'new_sign_up'
-  end
-
-  # Part of the new sign up flow - work in progress
   def account_type
     view_options(full_width: true, responsive_content: true)
   end
 
   #
-  # Get /users/finish_teacher_account
+  # Get /users/new_sign_up/login_type
+  #
+  def login_type
+    view_options(full_width: true, responsive_content: true)
+    render 'login_type'
+  end
+
+  #
+  # Get /users/new_sign_up/finish_student_account
+  #
+  def finish_student_account
+    @age_options = [{value: '', text: ''}] + User::AGE_DROPDOWN_OPTIONS.map do |age|
+      {value: age.to_s, text: age.to_s}
+    end
+
+    @us_ip = us_ip?
+    @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
+      {value: code, text: name}
+    end
+
+    render 'finish_student_account'
+  end
+
+  #
+  # Get /users/new_sign_up/finish_teacher_account
   #
   def finish_teacher_account
-    # Get the request location
-    location = Geocoder.search(request.ip).try(:first)
-    country_code = location&.country_code.to_s.upcase
-    @us_ip = ['US', 'RD'].include?(country_code)
+    @us_ip = us_ip?
     render 'finish_teacher_account'
   end
 
@@ -140,6 +157,12 @@ class RegistrationsController < Devise::RegistrationsController
       super
     end
 
+    if params[:new_sign_up].present?
+      session[:user_return_to] ||= params[:user_return_to]
+      @user = Services::PartialRegistration::UserBuilder.call(request: request)
+      sign_in @user
+    end
+
     if current_user && current_user.errors.blank?
       if current_user.teacher?
         begin
@@ -162,6 +185,7 @@ class RegistrationsController < Devise::RegistrationsController
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
       if Policies::Lti.lti? current_user
+        current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
         lms_name = Queries::Lti.get_lms_name_from_user(current_user)
         metadata = {
           'user_type' => current_user.user_type,
@@ -280,11 +304,11 @@ class RegistrationsController < Devise::RegistrationsController
     student_information = {}
 
     student_information[:age] = params[:user][:age] if current_user.age.blank?
-    student_information[:us_state] = params[:user][:us_state] unless current_user.user_provided_us_state
+    us_state_param = params[:user][:us_state]
+    student_information[:us_state] = us_state_param if us_state_param.present? && !current_user.user_provided_us_state
     student_information[:user_provided_us_state] = params[:user][:us_state].present? unless current_user.user_provided_us_state
     student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
     student_information[:country_code] = params[:user][:country_code] if current_user.country_code.blank?
-
     current_user.update(student_information) unless student_information.empty?
   end
 
@@ -651,5 +675,12 @@ class RegistrationsController < Devise::RegistrationsController
     User.ignore_deleted_at_index.destroy(user_ids_to_destroy)
 
     log_account_deletion_to_firehose(current_user, dependent_users)
+  end
+
+  private def us_ip?
+    # Get the request location
+    location = Geocoder.search(request.ip).try(:first)
+    country_code = location&.country_code.to_s.upcase
+    ['US', 'RD'].include?(country_code)
   end
 end

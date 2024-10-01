@@ -183,7 +183,7 @@ module AWS
               Id: app_name == proxy ? 'cdo' : app_name,
               CustomOriginConfig: {
                 OriginProtocolPolicy: 'match-viewer',
-                OriginSSLProtocols: %w(TLSv1.2 TLSv1.1),
+                OriginSSLProtocols: %w(TLSv1.2),
                 OriginReadTimeout: rack_env?(:levelbuilder) ? 60 : 30
               },
               DomainName: origin,
@@ -225,9 +225,10 @@ module AWS
         },
         ViewerCertificate: ssl_cert ? ssl_cert : {
           CloudFrontDefaultCertificate: true,
-          MinimumProtocolVersion: 'TLSv1' # accepts SSLv3, TLSv1
+          MinimumProtocolVersion: 'TLSv1.2_2021'
         },
-        HttpVersion: 'http2'
+        HttpVersion: 'http2',
+        WebACLId: {'Fn::Sub': 'arn:aws:wafv2:${AWS::Region}:${AWS::AccountId}:global/webacl/code-dot-org/a79a67de-dabf-4555-a8dc-98c3a20b562f'}
       }.to_json
     end
 

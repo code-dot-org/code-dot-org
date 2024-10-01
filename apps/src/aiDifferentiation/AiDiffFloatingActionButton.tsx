@@ -11,7 +11,15 @@ import style from './ai-differentiation.module.scss';
  * toggling an AI element open and closed.
  */
 
-const AiDiffFloatingActionButton: React.FunctionComponent = () => {
+interface AiDiffFloatingActionButtonProps {
+  lessonId: number;
+  unitDisplayName: string;
+}
+
+const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
+  lessonId,
+  unitDisplayName,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -27,7 +35,12 @@ const AiDiffFloatingActionButton: React.FunctionComponent = () => {
       >
         <img alt="AI bot" src={aiFabIcon} />
       </button>
-      <AiDiffContainer open={isOpen} closeTutor={handleClick} />
+      <AiDiffContainer
+        open={isOpen}
+        closeTutor={handleClick}
+        lessonId={lessonId}
+        unitDisplayName={unitDisplayName}
+      />
     </div>
   );
 };

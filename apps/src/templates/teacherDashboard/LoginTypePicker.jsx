@@ -8,16 +8,17 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
   OAuthSectionTypes,
   LmsLoginTypeNames,
   LmsLoginInstructionUrls,
-} from '@cdo/apps/lib/ui/accounts/constants';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+} from '@cdo/apps/accounts/constants';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {Heading3} from '@cdo/apps/legacySharedComponents/Headings';
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
@@ -25,7 +26,6 @@ import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {Heading3} from '../../legacySharedComponents/Headings';
 import styleConstants from '../../styleConstants';
 
 import CardContainer from './CardContainer';
@@ -106,7 +106,6 @@ class LoginTypePicker extends Component {
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
-    const withLti = providers && providers.includes(SectionLoginType.lti_v1);
     const withAllLmsProviders =
       providers &&
       [
@@ -262,20 +261,16 @@ class LoginTypePicker extends Component {
                     }
                   />
                 )}
-                {!withLti && (
-                  <>
-                    <LmsInformationalCard
-                      lmsName={LmsLoginTypeNames.canvas}
-                      lmsLogo={canvasLogo}
-                      lmsInformationalUrl={LmsLoginInstructionUrls.canvas}
-                    />
-                    <LmsInformationalCard
-                      lmsName={LmsLoginTypeNames.schoology}
-                      lmsLogo={schoologyLogo}
-                      lmsInformationalUrl={LmsLoginInstructionUrls.schoology}
-                    />
-                  </>
-                )}
+                <LmsInformationalCard
+                  lmsName={LmsLoginTypeNames.canvas}
+                  lmsLogo={canvasLogo}
+                  lmsInformationalUrl={LmsLoginInstructionUrls.canvas}
+                />
+                <LmsInformationalCard
+                  lmsName={LmsLoginTypeNames.schoology}
+                  lmsLogo={schoologyLogo}
+                  lmsInformationalUrl={LmsLoginInstructionUrls.schoology}
+                />
               </div>
             </>
           )}

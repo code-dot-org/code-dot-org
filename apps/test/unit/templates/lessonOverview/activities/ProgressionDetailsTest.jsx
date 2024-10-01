@@ -3,7 +3,7 @@ import React from 'react';
 
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
 
-import {sampleActivities} from '../../../lib/levelbuilder/lesson-editor/activitiesTestData';
+import {sampleActivities} from '../../../levelbuilder/lesson-editor/activitiesTestData';
 
 describe('ProgressionDetails', () => {
   let defaultProps;

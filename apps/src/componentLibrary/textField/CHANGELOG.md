@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.3](https://github.com/code-dot-org/code-dot-org/pull/60852)
+
+* Added native input props maxLength, minLength, and autoComplete for `TextField` component
+
+## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/60852)
+
+* Added inputType options and stories for `TextField` component
+
 ## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/59052)
 
 * minor changelog update

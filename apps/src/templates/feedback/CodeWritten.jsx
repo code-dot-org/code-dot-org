@@ -4,8 +4,6 @@ import React from 'react';
 
 import msg from '@cdo/locale';
 
-import trackEvent from '../../util/trackEvent';
-
 class CodeWritten extends React.Component {
   static propTypes = {
     numLinesWritten: PropTypes.number.isRequired,
@@ -37,7 +35,6 @@ class CodeWritten extends React.Component {
             ...styles.summary,
             ...(useChallengeStyles ? styles.challengeSummary : {}),
           }}
-          onClick={() => trackEvent('showCode', 'click', 'dialog')}
         >
           <b>{msg.showGeneratedCode()}</b>
         </summary>

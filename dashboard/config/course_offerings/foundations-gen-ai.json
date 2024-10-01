@@ -1,0 +1,20 @@
+{
+  "key": "foundations-gen-ai",
+  "display_name": "Foundations of Generative AI",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "8,9,10,11,12",
+  "header": "teacher_led",
+  "image": "https://images.code.org/22aba262b704ae8c27dbafa5b4cb93df-Foundations of Gen AI.png",
+  "cs_topic": "artificial_intelligence",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"ideal\"}",
+  "description": "Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output.",
+  "professional_learning_program": null,
+  "video": "https://www.youtube-nocookie.com/embed/JO9MgO1Zp3E/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=JO9MgO1Zp3E&wmode=transparent",
+  "published_date": "2024-09-26 07:00:00 UTC",
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false
+}

@@ -461,14 +461,16 @@ class UnitGroup < ApplicationRecord
   end
 
   # @param user [User]
+  # @param locale_code [String] Locale code for user or request. Optional.
   # @return [Boolean] Whether the user can view the course.
-  def can_view_version?(user = nil)
+  def can_view_version?(user = nil, locale_code = 'en-us')
     return false unless Ability.new(user).can?(:read, self)
 
     latest_course_version = UnitGroup.latest_stable_version(family_name)
-    is_latest = latest_course_version == self
+    latest_in_locale = UnitGroup.latest_stable_version(family_name, locale: locale_code)
+    is_latest = latest_course_version == self || latest_in_locale == self
 
-    # All users can see the latest course version.
+    # All users can see the latest course version in English and in their locale.
     return true if is_latest
 
     # Restrictions only apply to participants and logged out users.

@@ -21,12 +21,19 @@ const MultipleTemplate: StoryFn<{
   components: FontAwesomeV6IconProps[];
 }> = args => (
   <>
-    {args.components?.map(componentArg => (
-      <FontAwesomeV6Icon
-        key={componentArg.iconName + componentArg.iconStyle}
-        {...componentArg}
-      />
-    ))}
+    <p>
+      * Font size and Margins on this screen does not represent Component's
+      margins, and are only added to improve storybook view *
+    </p>
+    <p>Multiple Icons:</p>
+    <div style={{display: 'flex', gap: '20px', fontSize: '25px'}}>
+      {args.components?.map(componentArg => (
+        <FontAwesomeV6Icon
+          key={componentArg.iconName + componentArg.iconStyle}
+          {...componentArg}
+        />
+      ))}
+    </div>
   </>
 );
 
@@ -37,11 +44,79 @@ DefaultFontAwesomeV6Icon.args = {
   title: 'check',
 };
 
-export const ClassExampleFontAwesomeV6Icon = SingleTemplate.bind({});
-ClassExampleFontAwesomeV6Icon.args = {
-  iconStyle: 'light',
-  iconName: 'brands fa-microsoft',
-  title: 'microsoft',
+export const BrandsIconExampleFontAwesomeV6Icon = MultipleTemplate.bind({});
+BrandsIconExampleFontAwesomeV6Icon.args = {
+  components: [
+    {
+      iconStyle: 'light',
+      iconName: 'microsoft',
+      iconFamily: 'brands',
+      title: 'microsoft',
+    },
+    {
+      iconName: 'google',
+      iconFamily: 'brands',
+      title: 'google',
+    },
+    {
+      iconName: 'apple',
+      iconFamily: 'brands',
+      title: 'apple',
+    },
+  ],
+};
+
+export const GroupOfFamiliesOfFontAwesomeV6Icon = MultipleTemplate.bind({});
+GroupOfFamiliesOfFontAwesomeV6Icon.args = {
+  components: [
+    {
+      iconFamily: 'brands',
+      iconName: 'github',
+      title: 'github-brands',
+    },
+    {
+      iconStyle: 'solid',
+      iconFamily: 'duotone',
+      iconName: 'house',
+      title: 'house-duotone',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'text-speech',
+      title: 'text-speach-kit',
+    },
+  ],
+};
+
+export const GroupOfCustomIconsOfFontAwesomeV6Icon = MultipleTemplate.bind({});
+GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
+  components: [
+    {
+      iconFamily: 'kit',
+      iconName: 'text-speech-pause',
+      title: 'text-speech-pause-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'text-speech',
+      title: 'text-speech',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'solid-thumbtack-slash',
+      title: 'solid-thumbtack-slash-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'solid-gear-pen',
+      title: 'solid-gear-pen-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'clever',
+      title: 'clever-kit',
+    },
+  ],
 };
 
 export const GroupOfStylesOfFontAwesomeV6Icon = MultipleTemplate.bind({});

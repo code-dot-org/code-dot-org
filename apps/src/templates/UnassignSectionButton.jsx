@@ -3,11 +3,9 @@ import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {
-  unassignSection,
-  sectionName,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 import i18n from '@cdo/locale';
 

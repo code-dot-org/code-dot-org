@@ -34,14 +34,14 @@ describe('PythonValidator', () => {
   it('should meet all passed condition if all tests pass', () => {
     const validationTracker = new PythonValidationTracker();
     const validator = new PythonValidator(validationTracker);
-    validationTracker.setTestResults(PASSED_TESTS);
+    validationTracker.setValidationResults(PASSED_TESTS);
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(true);
   });
 
   it('should not meet all passed condition if some tests failed', () => {
     const validationTracker = new PythonValidationTracker();
     const validator = new PythonValidator(validationTracker);
-    validationTracker.setTestResults(SOME_FAILED_TESTS);
+    validationTracker.setValidationResults(SOME_FAILED_TESTS);
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
   });
 

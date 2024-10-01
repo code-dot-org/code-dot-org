@@ -8,15 +8,16 @@ markdown <<MARKDOWN
 
 #### Welcome! This professional learning module is designed to help you prepare to teach Code.org’s Data Science unit.
 
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/830b0690e59be4fa5c2874ed9b88f365-image-1724077617808.png" alt="Image of AI bot and a model card" style="border-radius:0px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0px 0px 0px 0;">
 
-#### The Computer Vision unit is designed as a standalone unit for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. 
+#### The Data Science unit is designed as a standalone unit for 9-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. 
 
-## In this module, you will: 
-- #### Get an introduction to Teaching Computer Vision
-- #### Define and identify different uses of computer vision
-- #### Utilize the design process to solve problems
-- #### Explore Computer Vision lessons
+## **In this module, you will:** 
+- #### Get an introduction to Teaching Data Science
+- #### Define and explore foundational concepts of data science
+- #### Utilize Python and Pandas libraries to analyze, manipulate, and visualize data
+- #### Explore Data Science lessons
+
 
 
 
@@ -26,9 +27,9 @@ markdown <<MARKDOWN
 
 ## Take the pre-survey
 
-#### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/selfpaced_pd_computer_vision_pre_survey" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
+#### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/linkhere" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
 
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_computer_vision_pre_survey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/linkhere" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 
 ## Let's get started!
 

@@ -37,7 +37,7 @@ Scenario: Applab Flow
   And selector "#codeWorkspace" doesn't have class "readonly"
   And I should see title includes "Code Ninja - App Lab - Code.org"
 
-  Then I am on "http://studio.code.org/users/sign_out"
+  And I sign out
   And I navigate to the last shared URL
   And I wait to see "#footerDiv"
   And element "#codeWorkspace" is hidden
@@ -62,7 +62,7 @@ Scenario: Applab Flow
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" has class "readonly"
 
-  Then I am on "http://studio.code.org/users/sign_out"
+  And I sign out
   And I am on "http://studio.code.org/"
   # TODO - maybe we do a remix and/or create new as well
 
@@ -82,7 +82,7 @@ Scenario: Save Project After Signing Out
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
 
-  When I sign out using jquery
+  And I sign out
   And I add code "// comment 2" to ace editor
   And ace editor code is equal to "// comment 1// comment 2"
   And I press "resetButton"
@@ -108,7 +108,7 @@ Scenario: Save Script Level After Signing Out
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
 
-  When I sign out using jquery
+  And I sign out
   And I add code "// turtle 2" to ace editor
   And ace editor code is equal to "// turtle 1// turtle 2"
   And I press "resetButton"

@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2023-04-11T14:10:42.000Z",
   "level_num": "custom",
@@ -40,10 +39,9 @@
     "starter_assets": {
       "cloudy.png": "76946d82-bdd0-4e57-bf30-b15ba2c6104e.png"
     },
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-11T14:10:42.929+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L6c_2023\\\"\"],\"cloned_from\":\"CSA U7L5-L6c_2023\"},{\"changed_at\":\"2023-04-11 14:10:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 02:35:19 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-07 18:54:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-07 18:54:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-07 18:55:01 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-07 18:55:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-07 18:55:22 +0000\",\"changed\":[],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-07 18:55:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-07 18:55:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-07 18:56:03 +0000\",\"changed\":[],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-09 20:14:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-09 20:15:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-09 20:15:39 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-09 20:16:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-09 20:16:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-09 20:21:06 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-09 20:21:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-09 20:21:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-09 20:22:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"},{\"changed_at\":\"2023-05-10 13:46:24 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"}]"
 }]]></config>
 </Javalab>

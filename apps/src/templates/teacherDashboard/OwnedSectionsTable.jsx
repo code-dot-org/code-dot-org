@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
 import {
@@ -21,9 +21,9 @@ import wrappedSortable from '../tables/wrapped_sortable';
 
 import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';
-import {getSectionRows} from './teacherSectionsRedux';
+import {getSectionRows} from './teacherSectionsReduxSelectors';
 
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -340,7 +340,11 @@ class OwnedSectionsTable extends Component {
     })(this.props.sectionRows);
 
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+      <Table.Provider
+        className="uitest-owned-sections"
+        columns={columns}
+        style={tableLayoutStyles.table}
+      >
         <Table.Header />
         <Table.Body
           className="uitest-sorted-rows"

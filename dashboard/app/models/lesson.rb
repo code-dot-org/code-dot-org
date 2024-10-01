@@ -300,7 +300,8 @@ class Lesson < ApplicationRecord
         description_teacher: description_teacher,
         unplugged: unplugged,
         lessonEditPath: get_uncached_edit_path,
-        lessonStartUrl: start_url
+        lessonStartUrl: start_url,
+        duration: total_lesson_duration,
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -480,6 +481,22 @@ class Lesson < ApplicationRecord
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       link: script_lesson_path(script, self)
+    }
+  end
+
+  def summarize_for_lesson_materials(user)
+    {
+      id: id,
+      unit: script.summarize_for_lesson_show,
+      position: relative_position,
+      key: key,
+      name: localized_name,
+      resources: resources_for_lesson_plan(user&.verified_instructor?),
+      lessonPlanPdfUrl: lesson_plan_pdf_url,
+      lessonPlanHtmlUrl: lesson_plan_html_url,
+      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
+      standardsUrl: standards_script_path(script),
+      vocabularyUrl: vocab_script_path(script),
     }
   end
 

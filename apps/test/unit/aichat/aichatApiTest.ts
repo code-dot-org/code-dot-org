@@ -16,6 +16,7 @@ import {
   type GetResponse,
 } from '@cdo/apps/util/HttpClient';
 import {
+  AiChatModelIds,
   AiInteractionStatus,
   AiRequestExecutionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -51,7 +52,7 @@ describe('aichatApi', () => {
       },
     ];
     aiCustomizations = {
-      selectedModelId: '123',
+      selectedModelId: AiChatModelIds.ARITHMO,
       temperature: 0.5,
       retrievalContexts: ['123'],
       systemPrompt: 'hello',
@@ -119,7 +120,6 @@ describe('aichatApi', () => {
           storedMessages,
           aiCustomizations,
           aichatContext,
-          true,
           maxPollingTime
         )
       ).messages;
@@ -214,13 +214,8 @@ describe('aichatApi', () => {
       });
     });
 
-    // Check all model error statuses
     (
-      [
-        'FAILURE',
-        'MODEL_PROFANITY',
-        'MODEL_PII',
-      ] as (keyof typeof AiRequestExecutionStatus)[]
+      ['FAILURE', 'MODEL_PII'] as (keyof typeof AiRequestExecutionStatus)[]
     ).forEach(status => {
       it(`returns user and bot message with ERROR if status is ${status}`, async () => {
         const modelResponse = 'Error: something went wrong';
@@ -233,6 +228,18 @@ describe('aichatApi', () => {
         expect(messages[1].status).toBe(AiInteractionStatus.ERROR);
         expect(messages[1].chatMessageText).toBe(modelResponse);
       });
+    });
+
+    it('returns bot message with PROFANITY_VIOLATION if status is MODEL_PROFANITY', async () => {
+      const modelResponse = 'Error: something went wrong';
+      fetchJson.mockResolvedValue(
+        createResponse(AiRequestExecutionStatus.MODEL_PROFANITY, modelResponse)
+      );
+      const messages = await callApiGetMessages();
+      expect(messages.length).toBe(2);
+      expect(messages[0].status).toBe(AiInteractionStatus.ERROR);
+      expect(messages[1].status).toBe(AiInteractionStatus.PROFANITY_VIOLATION);
+      expect(messages[1].chatMessageText).toBe(modelResponse);
     });
 
     it('throws an error if an unknown status is returned', async () => {

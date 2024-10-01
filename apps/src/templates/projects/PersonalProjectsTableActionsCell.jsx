@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

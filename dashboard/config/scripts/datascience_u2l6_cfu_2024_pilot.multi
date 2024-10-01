@@ -1,0 +1,30 @@
+name 'datascience-U2L6-CFU_2024-pilot'
+title 'Check for Understanding'
+
+description 'Consider the following DataFrame `df`:'
+question 'You want to group the data by "City" and then access the "Income" values of each city to calculate the mean income for all cities. Which of the following code snippets will correctly accomplish this?'
+wrong 'https://images.code.org/3ff283820732879ab8de5d7c57f4f672-B.png'
+right 'https://images.code.org/77b707a471ef2d8e1b29dbb2d10c8cb8-A.png'
+wrong 'https://images.code.org/609994b83b372aeb6106d53433ba7637-C.png'
+wrong 'https://images.code.org/fc4ac2e0bcf79b18178c779c169f9ca1-D.png'
+
+allow_multiple_attempts false
+
+
+markdown <<MARKDOWN
+```
+
+data = {"City": ["New York", "Los Angels", "New York", "Chicago", "Chicago"],
+		"Age": [25, 30, 22, 35, 40],
+        "Income": [50000, 70000, 45000, 80000, 85000]}
+
+df = pd.DataFrame(data)
+
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Step 1: The code `df.groupby('City')['Income']` groups the DataFrame by the 'City' column and selects the 'Income' column.
+
+Step 2: The `.mean()` function calculates the mean income for each city.
+MARKDOWN

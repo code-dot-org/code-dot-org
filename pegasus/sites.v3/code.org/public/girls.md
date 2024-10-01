@@ -172,7 +172,7 @@ Take a look at some <a href="https://code.org/careers-with-cs">great examples</a
 
 <h2>Show them a day in the life of a CS professional</h2>
 
-Dispel misconceptions about what a future in computer science looks like by using our [inspirational videos](https://code.org/educate/resources/inspire), many of which feature women in a variety of creative and impactful industries!
+Dispel misconceptions about what a future in computer science looks like by using our [inspirational videos](https://code.org/videos), many of which feature women in a variety of creative and impactful industries!
 
 Students have positive attitudes about science careers when they’re able to see what a day in the life really looks like, especially if it’s highly collaborative. In addition to [videos that dive deep into potential careers](https://code.org/careers-with-cs), it’s a great idea to connect with a local university or college’s CS department to coordinate a school visit or guest speaker.
 

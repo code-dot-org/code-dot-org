@@ -51,19 +51,14 @@ class ScriptsController < ApplicationController
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
       @section = current_user&.sections_instructed&.all&.find {|s| s.id.to_s == params[:section_id]}&.summarize
-      sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
-      @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:script_id] == @script.id})}
+      @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
     end
-
-    @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !@script.is_course
-    session[:show_unversioned_redirect_warning] = false
 
     additional_script_data = {
       course_name: @script.unit_group&.name,
       course_id: @script.unit_group&.id,
       show_redirect_warning: @show_redirect_warning,
       redirect_script_url: @redirect_unit_url,
-      show_unversioned_redirect_warning: !!@show_unversioned_redirect_warning,
       section: @section,
       user_type: current_user&.user_type,
       user_id: current_user&.id,
@@ -74,7 +69,7 @@ class ScriptsController < ApplicationController
       locale_code: request.locale,
       course_link: @script.course_link(params[:section_id]),
       course_title: @script.course_title || I18n.t('view_all_units'),
-      sections: @sections_with_assigned_info
+      sections: @sections
     }
 
     @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
@@ -281,7 +276,6 @@ class ScriptsController < ApplicationController
 
     if Unit.family_names.include?(unit_name)
       script = Unit.get_unit_family_redirect_for_user(unit_name, user: current_user, locale: request.locale)
-      session[:show_unversioned_redirect_warning] = true
       Unit.log_redirect(unit_name, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
       return script
     end
@@ -337,10 +331,12 @@ class ScriptsController < ApplicationController
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
       :lesson_groups,
+      :content_area,
       resourceIds: [],
       studentResourceIds: [],
       project_widget_types: [],
       supported_locales: [],
+      topic_tags: [],
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]

@@ -396,10 +396,11 @@ class Section < ApplicationRecord
         tts_autoplay_enabled: tts_autoplay_enabled,
         sharing_disabled: sharing_disabled?,
         studentCount: students.distinct(&:id).size,
-        code: code,        course_display_name: course_display_name,
+        code: code,
+        course_display_name: course_display_name,
         course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
-        unit_id: unit_group ? script_id : nil,
+        unit_id: script_id,
         course_id: course_id,
         hidden: hidden,
         restrict_section: restrict_section,
@@ -436,6 +437,7 @@ class Section < ApplicationRecord
           name: script.try(:name),
           project_sharing: script.try(:project_sharing),
         },
+        any_student_has_progress: any_student_has_progress?
       }
     end
   end
@@ -494,7 +496,7 @@ class Section < ApplicationRecord
         linkToCurrentUnit: link_to_current_unit,
         courseVersionName: course_version_name,
         numberOfStudents: num_students,
-        linkToStudents: "#{base_url}#{id}/manage_students",
+        linkToStudents: manage_students_url,
         code: code,
         lesson_extras: lesson_extras,
         pairing_allowed: pairing_allowed,
@@ -527,6 +529,10 @@ class Section < ApplicationRecord
         ai_tutor_enabled: ai_tutor_enabled,
       }
     end
+  end
+
+  def manage_students_url
+    CDO.studio_url("/teacher_dashboard/sections/#{id}/manage_students")
   end
 
   def provider_managed?
@@ -605,6 +611,16 @@ class Section < ApplicationRecord
     script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
   end
 
+  def assigned_gen_ai?
+    [
+      'exploring-gen-ai1-2024',
+      'exploring-gen-ai2-2024',
+      'foundations-gen-ai-2024',
+      'customizing-llms-2024'
+    ].include?(script&.name) ||
+      unit_group&.name == 'exploring-gen-ai-2024'
+  end
+
   def reset_code_review_groups(new_groups)
     ActiveRecord::Base.transaction do
       code_review_groups.destroy_all
@@ -678,6 +694,10 @@ class Section < ApplicationRecord
     elsif students.exists?(email: instructor.email)
       raise ArgumentError.new('already a student')
     end
+  end
+
+  def lti?
+    lti_section.present?
   end
 
   private def soft_delete_lti_section

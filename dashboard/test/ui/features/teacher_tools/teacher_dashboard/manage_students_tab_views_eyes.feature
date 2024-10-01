@@ -16,8 +16,10 @@ Feature: Using the manage students tab of the teacher dashboard
     # Add a family name for Sally
     And I click selector ".ui-test-section-dropdown" once I see it
     And I press the child number 0 of class ".pop-up-menu-item"
+    And I wait until element with css selector "input[name='uitest-family-name']" is enabled
     And I press keys "SallyAlsoHasAVeryVeryLongLastName" for element "input[name='uitest-family-name']"
-    And I click selector "button:contains(Save)"
+    And I wait until element "input[value='SallyAlsoHasAVeryVeryLongLastName']" is visible
+    And I click selector "button:contains(Save)" once I see it
     And I see no difference for "manage students tab"
 
     And I close my eyes

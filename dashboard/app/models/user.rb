@@ -163,6 +163,7 @@ class User < ApplicationRecord
     lms_landing_opted_out
     failed_attempts
     locked_at
+    has_seen_ai_assessments_announcement
   )
 
   attr_accessor(
@@ -297,8 +298,6 @@ class User < ApplicationRecord
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
-
-  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
 
   before_destroy :soft_delete_channels
 
@@ -550,7 +549,7 @@ class User < ApplicationRecord
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
+  defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -818,12 +817,16 @@ class User < ApplicationRecord
   def email_and_hashed_email_must_be_unique
     # skip the db lookup if we are already invalid
     return if errors.present?
-    # allow duplicate accounts to be created for LMS users that are unlinked
+
+    # allow duplicate accounts to be created for LMS users that are unlinked -- new user is lti
     return if authentication_options.length == 1 && authentication_options.first&.lti?
 
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
         (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
         other_user != self
+      # allow duplicate accounts to be created for LMS users that are unlinked
+      return if other_user.authentication_options.length == 1 && other_user.authentication_options.first&.lti?
+
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end
@@ -877,13 +880,6 @@ class User < ApplicationRecord
     # Store emails, except when using an authentication provider whose emails
     # we don't trust
     user.email = auth.info.email unless user.user_type == 'student' && AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider)
-
-    if auth.provider == :the_school_project
-      user.username = auth.extra.raw_info.nickname
-      user.user_type = auth.extra.raw_info.role
-      user.locale = auth.extra.raw_info.locale
-      user.school = auth.extra.raw_info.school.name
-    end
 
     # treat clever admin types as teachers
     if CLEVER_ADMIN_USER_TYPES.include? user.user_type
@@ -968,6 +964,7 @@ class User < ApplicationRecord
   # address associated with them because it wasn't required when they were
   # created. Those old accounts are allowed to skip the email validation.
   def teacher_email_required?
+    return false if Policies::Lti.lti? self
     # non-teachers are not relevant to this method.
     return false unless teacher? && purged_at.nil?
 
@@ -982,12 +979,12 @@ class User < ApplicationRecord
   end
 
   def email_or_hashed_email_required?
+    return false if Policies::Lti.lti? self
     return true if teacher?
     return false if manual?
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
-    return false if Policies::Lti.lti? self
     true
   end
 
@@ -1555,6 +1552,19 @@ class User < ApplicationRecord
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 
+  def teacher_can_access_ai_chat?
+    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
+  end
+
+  def student_can_access_ai_chat?
+    teachers.any?(&:teacher_can_access_ai_chat?) &&
+      sections_as_student.any?(&:assigned_gen_ai?)
+  end
+
+  def has_aichat_access?
+    teacher_can_access_ai_chat? || student_can_access_ai_chat?
+  end
+
   # Students
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
@@ -1630,7 +1640,7 @@ class User < ApplicationRecord
 
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
+    return if name.blank? || name.utf8mb4? || email&.utf8mb4?
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 

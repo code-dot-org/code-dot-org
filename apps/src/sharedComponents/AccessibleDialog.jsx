@@ -10,11 +10,13 @@ import i18n from '@cdo/locale';
 import defaultStyle from './accessible-dialogue.module.scss';
 
 function AccessibleDialog({
+  id,
   styles,
   onClose,
   onDismiss,
   children,
   className,
+  fallbackFocus,
   initialFocus = true,
   closeOnClickBackdrop = false,
 }) {
@@ -36,10 +38,13 @@ function AccessibleDialog({
             initialFocus: initialFocus,
             onDeactivate: onClose,
             clickOutsideDeactivates: closeOnClickBackdrop,
+            fallbackFocus: fallbackFocus,
           }}
         >
           <div
+            id={id}
             aria-modal
+            aria-labelledby={`${id}-title`}
             className={classnames(modalStyle, className)}
             role="dialog"
           >
@@ -57,11 +62,13 @@ function AccessibleDialog({
 }
 
 AccessibleDialog.propTypes = {
+  id: PropTypes.string,
   styles: PropTypes.object,
   onClose: PropTypes.func.isRequired,
   onDismiss: PropTypes.func,
   children: PropTypes.node,
   className: PropTypes.string,
+  fallbackFocus: PropTypes.string,
   initialFocus: PropTypes.bool,
   closeOnClickBackdrop: PropTypes.bool,
 };

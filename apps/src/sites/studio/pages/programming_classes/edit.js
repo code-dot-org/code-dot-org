@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import ProgrammingClassEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingClassEditor';
+import ProgrammingClassEditor from '@cdo/apps/levelbuilder/code-docs-editor/ProgrammingClassEditor';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';

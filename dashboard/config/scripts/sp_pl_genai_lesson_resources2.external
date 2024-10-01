@@ -1,0 +1,50 @@
+name 'sp-pl-GenAI_Lesson_resources2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ***New*** Lesson Features
+
+#### This course includes new features designed to enhance and streamline your teaching experience. 
+
+
+
+<img src="https://images.code.org/c2474240995301bc81531a518b68ef0b-image-1726238391394.png" alt="lesson plan screenshot" width="380px" style="border-radius:10px; float:right; margin: 0 0 40px 40px; border: 5px solid black;">
+
+## Lesson Plans
+#### These lesson plans have images of slides embedded to make it easier for you to follow along with the lesson. 
+
+#### <b>See  <a href="https://studio.code.org/s/foundations-gen-ai-2024/lessons/1" target="blank" rel="noopener noreferrer">example</a> lesson </b>
+
+<div style="clear:both;"></div>
+
+
+<img src="https://images.code.org/6c12e8a851953ae244fd24d384eed606-image-1726237961800.png" alt="screenshot of slide with notes below" width="380px" style="border-radius:10px; float:right; margin: 0 0 40px 40px; border: 5px solid black;">
+
+## Slide Decks 
+
+#### The slide decks for this unit include embedded lesson plans in the speaker note section of the slide for easy access, allowing you to choose the most convenient format to guide your students through the lesson.
+
+#### <b> See  <a href="https://docs.google.com/presentation/d/1mhE3Ick_TD9x0LMA-LFF-2x0Trxc3pR94omhNiSAZVs/edit?usp=sharing" target="blank" rel="noopener noreferrer">example</a> slide deck </b>
+
+
+<div style="clear:both;"></div>
+
+<img src="https://images.code.org/1d08a4dcb851892ffb5ac783913e200f-image-1726239528052.png" alt="screenshot of student bubbles in lessonplan" width="380px" style="border-radius:10px; float:right; margin: 0 0 40px 40px; border: 5px solid black;">
+
+## Student levels 
+#### The student levels are at the top of the lesson plan instead of embedded throughout to make it easier for you to explore the student experience. 
+
+#### <b> See  <a href="https://docs.google.com/presentation/d/1mhE3Ick_TD9x0LMA-LFF-2x0Trxc3pR94omhNiSAZVs/edit?usp=sharing" target="blank" rel="noopener noreferrer">example</a> lesson plan </b>
+
+<div style="clear:both;"></div>
+
+<img src="https://images.code.org/ac8c806826fa6c5021e6da9ad4f0db2d-image-1726240599454.png" alt="screenshot of student bubbles in lessonplan" width="380px" style="border-radius:10px; float:right; margin: 0 0 40px 40px; border: 5px solid black;">
+
+## Ethical Opportunities 
+#### In addition to teacher tips and assessment callouts, this unit introduces ethical opportunity callouts (in green) to help guide discussions on ethical scenarios. Engaging in these conversations with your class fosters critical thinking and prepares students to navigate ethical challenges in the real world. 
+
+#### <b>See  <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/12" target="blank" rel="noopener noreferrer">example</a> lesson plan </b>
+
+
+MARKDOWN

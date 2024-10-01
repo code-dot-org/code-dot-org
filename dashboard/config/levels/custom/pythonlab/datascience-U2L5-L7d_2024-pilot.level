@@ -1,0 +1,63 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-09-15T22:17:33.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Height Info\r\n\r\n::: details [**✅ Step 1**]\r\nLoad the data and print a summary using `info()` and `describe()`.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nConvert the **Height** attribute from *float64* to *int64*.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nConvert the **Date** attribute from an *object* to *datetime*.\r\n:::\r\n\r\n::: details [**✅ Step 5**]\r\nPrint a new summary using `info()` to verify your changes worked.\r\n:::\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd \nimport matplotlib.pyplot as plt \n\n# STEP 1\n\n# STEP 2\n\n# STEP 3\n\n# STEP 4\n\n# Visualized data as a line graph\nsurvey_data = survey_data.sort_values(by='Date')\nplt.plot(survey_data['Age'], survey_data['Height'], marker='D', linestyle='-', color='red')\nplt.title('Average Height Over Time')\nplt.xlabel('Age')\nplt.ylabel('Height (inches)')\nplt.show()",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "height_data.csv",
+          "language": "csv",
+          "contents": "Date,Age,Height\n1/1/1928,0,19.69028743\n1/2/1928,1,21\n1/7/1928,2,30\n1/11/1928,3,33.3410675\n1/19/1928,4,36.27027354\n1/31/1928,5,38.49821104\n1/31/1928,6,40.88299078\n2/2/1928,7,43.87166671\n2/12/1928,8,47.62255727\n2/13/1928,9,52.56938698\n2/15/1928,10,53.345345\n2/18/1928,11,54.15750891\n2/22/1928,12,55\n3/7/1928,13,58.85620769\n3/8/1928,14,62.39299736\n3/12/1928,15,64.73935644\n3/15/1928,16,68.84756175\n3/16/1928,17,69.6846381\n3/17/1928,18,70\n3/29/1928,19,70.54502711\n4/4/1928,20,69.6846381\n4/16/1928,21,69.98736979\n4/20/1928,22,70.24549751\n4/23/1928,23,70.08100982\n4/26/1928,24,69.45079662\n4/26/1928,25,69.0797326\n4/26/1928,26,70.75700591\n5/9/1928,27,70.24224713\n5/9/1928,28,69.96634305\n5/10/1928,29,69.93158934\n5/16/1928,30,69.97959835\n5/20/1928,31,70.60745057\n5/26/1928,32,70.43407371\n5/26/1928,33,69.16808642\n5/27/1928,34,69.44373384\n5/27/1928,35,70.80138171\n5/28/1928,36,70.11380176\n6/8/1928,37,70.54604306\n6/8/1928,38,69.93240749\n6/8/1928,39,69.55887398\n6/9/1928,40,69.43152529\n6/17/1928,41,70.0531731\n6/21/1928,42,70.98842137\n6/26/1928,43,70.52534759\n6/26/1928,44,70.93508086\n6/30/1928,45,70.1854404\n7/4/1928,46,70.37613042\n7/12/1928,47,69.03507877\n7/13/1928,48,69.9422508\n7/15/1928,49,70.33010459\n7/16/1928,50,70\n7/17/1928,51,69.87749824\n7/17/1928,52,69.78574602\n7/21/1928,53,69.68642534\n7/27/1928,54,69.22336912\n7/27/1928,55,69.46872899\n8/9/1928,56,69.33469417\n8/12/1928,57,69.00845265\n8/15/1928,58,69.05540012\n8/18/1928,59,68.81740795\n8/18/1928,60,68.24175582\n8/19/1928,61,68.10772357\n8/21/1928,62,67.76281908\n8/23/1928,63,68.33509523\n8/24/1928,64,68.34447576\n8/26/1928,65,68.04460311\n8/30/1928,66,67.46796529\n9/1/1928,67,68.2752224\n9/4/1928,68,67.6813668\n9/6/1928,69,66.98903389\n9/12/1928,70,67.17939673\n9/23/1928,71,66.34836716\n9/25/1928,72,67.39760201\n9/26/1928,73,65.50419887\n10/3/1928,74,67.42344839\n10/3/1928,75,65.616289\n10/7/1928,76,66.95822207\n10/20/1928,77,65.85327961\n10/23/1928,78,65.88679786\n10/24/1928,79,66.71737794\n10/30/1928,80,65.37717989\n10/31/1928,81,64.5612983\n11/3/1928,82,66.63332456\n11/19/1928,83,64.61527499\n11/23/1928,84,64.82530958\n11/26/1928,85,63.27831811\n12/4/1928,86,64.32768485\n12/5/1928,87,65.01117239\n12/6/1928,88,62.44483256\n12/7/1928,89,64.68796863\n12/8/1928,90,63.86802617\n12/10/1928,91,62.71098319\n12/12/1928,92,62.1535054\n12/13/1928,93,61.97425459\n12/15/1928,94,62.3100506\n12/26/1928,95,62.95363999\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "2": {
+          "id": "2",
+          "name": "test.py",
+          "language": "py",
+          "contents": "import unittest\nfrom io import StringIO\nimport sys\nimport ast\nimport pandas as pd\n\nclass TestHeightDateModifications(unittest.TestCase):\n\n    def setUp(self):\n        # Setup to capture the print output if needed later\n        self.captured_output = StringIO()\n        sys.stdout = self.captured_output\n\n    def tearDown(self):\n        # Reset redirect and clear print capture\n        sys.stdout = sys.__stdout__\n\n    def test_step_1(self):\n        \"\"\"Test Step 1: Check that a DataFrame is loaded and 'info()' and 'describe()' is called\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Parse the script to check for 'info()' and 'describe()' being called using AST\n        tree = ast.parse(script_content)\n\n        # Traverse the AST to look for 'info()' and 'describe()' method calls on a DataFrame\n        info_called = False\n        describe_called = False\n        for node in ast.walk(tree):\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'info':\n                  info_called = True\n                elif node.func.attr == 'describe':\n                  describe_called = True \n\n        # Assert that both info() and  describe() are called at least once\n        self.assertTrue(info_called, \"The code should call 'info()' on a DataFrame in Step 1.\")\n        self.assertTrue(describe_called, \"The code should call 'describe()' on a DataFrame in Step 1.\")\n        self.assertTrue(info_called and describe_called, \"The code should call both 'info()' and 'describe()' on a DataFrame in Step 1.\")\n\n    def test_step_2(self):\n        \"\"\"Test Step 2: Check that the 'Height' attribute is converted to 'int64'\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access the modified DataFrame\n        local_vars = {}\n        exec(script_content, local_vars)\n\n        # Search for any DataFrame in the global variables\n        df_detected = None\n        for var in local_vars.values():\n            if isinstance(var, pd.DataFrame):\n                df_detected = var\n                break\n\n        # Ensure a DataFrame is detected\n        self.assertIsNotNone(df_detected, \"A DataFrame should be loaded and modified in Step 2.\")\n\n        # Check if the 'Height' attribute has the correct type 'int64'\n        self.assertIn('Height', df_detected.columns, \"The DataFrame should contain a 'Height' column.\")\n        self.assertEqual(df_detected['Height'].dtype, 'int64', \"The 'Height' column should be converted to 'int64'.\")\n\n    def test_step_3(self):\n        \"\"\"Test Step 3: Check that the 'Date' attribute is converted to 'datetime64[ns]'\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access the modified DataFrame\n        local_vars = {}\n        exec(script_content, local_vars)\n\n        # Search for any DataFrame in the global variables\n        df_detected = None\n        for var in local_vars.values():\n            if isinstance(var, pd.DataFrame):\n                df_detected = var\n                break\n\n        # Ensure a DataFrame is detected\n        self.assertIsNotNone(df_detected, \"A DataFrame should be loaded and modified in Step 3.\")\n\n        # Check if the 'Date' attribute has the correct type 'datetime64[ns]'\n        self.assertIn('Date', df_detected.columns, \"The DataFrame should contain a 'Date' column.\")\n        self.assertEqual(df_detected['Date'].dtype, 'datetime64[ns]', \"The 'Date' column should be converted to 'datetime64[ns]'.\")\n\n    def test_step_4(self):\n        \"\"\"Test Step 4: Check that 'info()' is called again to verify the changes\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Parse the script to check for multiple 'info()' calls using AST\n        tree = ast.parse(script_content)\n\n        # Traverse the AST to count the number of 'info()' calls\n        info_count = 0\n        for node in ast.walk(tree):\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'info':\n                    info_count += 1\n\n        # Assert that info() is called more than once (before and after changes)\n        self.assertGreaterEqual(info_count, 2, \"The code should call 'info()' at least twice to verify changes in Step 4.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "validation"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "display_name": "Height Over Time",
+    "teacher_markdown": "This level practices and assesses students' ability to convert data types using .astype() and to_datetime() as well as loading data and looking at info() about the data.",
+    "bubble_choice_description": "Practice converting data types for height data for a fictional human.",
+    "thumbnail_url": "https://images.code.org/ea3cc440d07601b9ed0ed9ac65d2acff-size.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-15T22:17:33.384+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L7c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L7c_2024-pilot\"},{\"changed_at\":\"2024-09-15 22:19:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 22:19:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 22:20:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 18:41:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 18:41:26 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 18:41:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 18:41:46 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 19:01:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-28 19:01:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

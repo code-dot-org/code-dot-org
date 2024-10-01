@@ -1,13 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
 
+import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
 export type GenericPromptProps = Required<Pick<GenericDialogProps, 'title'>> & {
-  handleConfirm: (prompt: string) => void;
+  handleConfirm?: (prompt: string) => void;
   handleCancel?: () => void;
   placeholder?: string;
+  value?: string;
+  validateInput?: (prompt: string) => string | undefined;
+  requiresPrompt?: boolean;
 };
 
 /**
@@ -19,20 +23,23 @@ export type GenericPromptProps = Required<Pick<GenericDialogProps, 'title'>> & {
 type GenericPromptBodyProps = {
   placeholder?: string;
   prompt: string;
-  setPrompt: (newPrompt: string) => void;
+  handleInputChange: (newInput: string) => void;
+  errorMessage?: string;
 };
 
 const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
   placeholder,
   prompt,
-  setPrompt,
+  handleInputChange,
+  errorMessage,
 }) => {
   return (
     <TextField
       name="prompt-field"
       placeholder={placeholder}
       value={prompt}
-      onChange={e => setPrompt(e.target.value)}
+      onChange={e => handleInputChange(e.target.value)}
+      errorMessage={errorMessage}
     />
   );
 };
@@ -40,9 +47,26 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
 const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   title,
   handleConfirm,
+  handleCancel,
   placeholder,
+  value,
+  validateInput = () => undefined,
+  requiresPrompt = true,
 }) => {
-  const [prompt, setPrompt] = useState('');
+  const {promiseArgs, setPromiseArgs} = useDialogControl();
+  const prompt = (promiseArgs ?? (value || '')) as string;
+  const [errorMessage, setErrorMessage] = useState<string | undefined>(
+    undefined
+  );
+
+  const handleInputChange = useCallback(
+    (newInput: string) => {
+      setPromiseArgs(newInput);
+      setErrorMessage(validateInput(newInput));
+    },
+    [validateInput, setPromiseArgs, setErrorMessage]
+  );
+
   return (
     <GenericDialog
       title={title}
@@ -50,14 +74,18 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
         <GenericPromptBody
           placeholder={placeholder}
           prompt={prompt}
-          setPrompt={setPrompt}
+          handleInputChange={handleInputChange}
+          errorMessage={errorMessage}
         />
       }
       buttons={{
         confirm: {
-          callback: () => handleConfirm(prompt),
+          callback: () => handleConfirm?.(prompt),
+          disabled:
+            requiresPrompt !== false &&
+            (Boolean(errorMessage) || !prompt.length),
         },
-        cancel: {},
+        cancel: {callback: () => handleCancel?.()},
       }}
     />
   );

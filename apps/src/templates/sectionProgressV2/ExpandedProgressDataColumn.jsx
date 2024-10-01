@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
 import {studentLevelProgressType} from '../progress/progressTypes';
-import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
+import {studentShape} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
 import LevelDataCell, {getStudentRowHeaderId} from './LevelDataCell';
 
 import styles from './progress-table-v2.module.scss';
-
-const getFullName = student =>
-  student.familyName ? `${student.name} ${student.familyName}` : student.name;
 
 function ExpandedProgressDataColumn({
   lesson,

@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 
 import EmbeddedWorkspace from '../EmbeddedWorkspace';
 import SafeMarkdown from '../SafeMarkdown';

@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:53:29 UTC",
+    "serialized_at": "2024-08-21 18:08:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -130,6 +130,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS1 Workshop Overview_2024"
+        ],
         "progression": "Module 1 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -152,6 +155,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 Unit 3 Context-21_2024"
+        ],
         "progression": "Wrapping up Unit 3 (~20 minutes)"
       },
       "bonus": false,
@@ -174,6 +180,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Unit 4 tasks overview_2024"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -196,6 +205,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - U4 L12 Practice PT 1_2024"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -218,6 +230,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL U4 L12 Practice PT 2_2024"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -240,6 +255,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 Unit 4 Reflection_2024"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -262,6 +280,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 EIPM Reflection_2024"
+        ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
       "bonus": false,
@@ -284,6 +305,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 1 Wrap Up_2024"
+        ],
         "progression": "Module 1 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,

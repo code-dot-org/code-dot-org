@@ -7,8 +7,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import LtiLinkAccountPage from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage';
-import {LtiProviderContext} from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/context';
+import LtiLinkAccountPage from '@cdo/apps/simpleSignUp/lti/link/LtiLinkAccountPage';
+import {LtiProviderContext} from '@cdo/apps/simpleSignUp/lti/link/LtiLinkAccountPage/context';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {

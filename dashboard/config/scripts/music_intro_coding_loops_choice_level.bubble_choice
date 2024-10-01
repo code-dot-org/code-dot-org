@@ -1,0 +1,9 @@
+name 'music-intro-coding-loops-choice-level'
+display_name 'Practice'
+description 'Choose a level to complete.'
+
+sublevels
+level 'music-intro-coding-loops-choice-simplify'
+level 'music-intro-coding-loops-choice-create'
+level 'music-intro-coding-loops-choice-add-sounds'
+level 'music-intro-coding-loops-choice-play-together'
