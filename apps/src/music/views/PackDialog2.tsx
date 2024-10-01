@@ -241,10 +241,6 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
     [player]
   );
 
-  const onStopPreview = useCallback(() => {
-    player.cancelPreviews();
-  }, [player]);
-
   const currentFolderRefCallback = (ref: HTMLDivElement) => {
     currentFolderRef.current = ref;
   };
@@ -313,7 +309,6 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
                     isSelected={folder.id === selectedFolderId}
                     onSelect={handleSelectFolder}
                     onPreview={onPreview}
-                    onStopPreview={onStopPreview}
                     mode={mode}
                     currentFolderRefCallback={currentFolderRefCallback}
                   />

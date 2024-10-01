@@ -51,6 +51,14 @@ const optionsList = [
     ],
   },
   {
+    name: 'pack-dialog-2',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Use regular pack dialog.'},
+      {value: 'true', description: 'Use pack dialog 2.'},
+    ],
+  },
+  {
     name: 'show-tts',
     type: 'radio',
     values: [
