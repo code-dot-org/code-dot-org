@@ -7,7 +7,6 @@ module AichatSafetyHelper
     DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.3
     DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.5
     VALID_EVALUATION_RESPONSES_SIMPLE = ['INAPPROPRIATE', 'OK']
-    METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
     # Checks for toxicity in the given text using various services, determined by DCDO settings.
     # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}
@@ -41,60 +40,15 @@ module AichatSafetyHelper
       # replying with something other valid expected output.
       Retryable.retryable(tries: 2) do
         start_time = Time.now
-        Cdo::Metrics.push(METRICS_NAMESPACE,
-          [
-            {
-              metric_name: "#{self.class.name}.OpenaiRequest",
-              value: 1,
-              unit: 'Count',
-              timestamp: Time.now,
-              dimensions: [
-                {name: 'Environment', value: CDO.rack_env},
-                {name: 'SafetySystemPrompt', value: get_safety_system_prompt_version}
-              ],
-            }
-          ]
-        )
+        AichatMetrics.report_openai_safety_check(metric_name: "#{self.class.name}.OpenaiRequest", safety_system_prompt: get_safety_system_prompt_version)
         openai_response = OpenaiChatHelper.request_safety_check(text, get_safety_system_prompt)
+        AichatMetrics.report_openai_safety_check(metric_name: "#{self.class.name}.OpenaiResponse", safety_system_prompt: get_safety_system_prompt_version)
         latency = Time.now - start_time
-        Cdo::Metrics.push(METRICS_NAMESPACE,
-          [
-            {
-              metric_name: "#{self.class.name}.OpenaiResponse",
-              value: 1,
-              unit: 'Count',
-              timestamp: Time.now,
-              dimensions: [
-                {name: 'Environment', value: CDO.rack_env},
-                {name: 'SafetySystemPrompt', value: get_safety_system_prompt_version}
-              ],
-            },
-            {
-              metric_name: "#{self.class.name}.OpenaiLatency",
-              value: latency,
-              unit: 'Seconds',
-              timestamp: Time.now,
-              dimensions: [
-                {name: 'Environment', value: CDO.rack_env},
-                {name: 'SafetySystemPrompt', value: get_safety_system_prompt_version}
-              ],
-            }
-          ]
-        )
+        AichatMetrics.report_openai_safety_latency(metric_name: "#{self.class.name}.OpenaiLatency", safety_system_prompt: get_safety_system_prompt_version, latency: latency)
+
         evaluation = JSON.parse(openai_response)['choices'][0]['message']['content']
         unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
-          Cdo::Metrics.push(METRICS_NAMESPACE,
-            [{
-              metric_name: "#{self.class.name}.OpenaiInvalidResponse",
-              value: 1,
-              unit: 'Count',
-              timestamp: Time.now,
-              dimensions: [
-                {name: 'Environment', value: CDO.rack_env},
-                {name: 'SafetySystemPrompt', value: get_safety_system_prompt_version}
-              ],
-            }]
-          )
+          AichatMetrics.report_openai_safety_check(metric_name: "#{self.class.name}.OpenaiInvalidResponse", safety_system_prompt: get_safety_system_prompt_version)
           raise "Unexpected response from OpenAI: #{evaluation}"
         end
         if evaluation == 'INAPPROPRIATE'

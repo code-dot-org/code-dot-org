@@ -41,4 +41,38 @@ class AichatMetrics
       ]
     )
   end
+
+  def self.report_openai_safety_check(metric_name:, safety_system_prompt:, value: 1)
+    Cdo::Metrics.push(METRICS_NAMESPACE,
+      [
+        {
+          metric_name: metric_name,
+          value: value,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+            {name: 'SafetySystemPrompt', value: safety_system_prompt}
+          ],
+        }
+      ]
+    )
+  end
+
+  def self.report_openai_safety_latency(latency:)
+    Cdo::Metrics.push(METRICS_NAMESPACE,
+      [
+        {
+          metric_name: metric_name,
+          value: latency,
+          unit: 'Seconds',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+            {name: 'SafetySystemPrompt', value: safety_system_prompt}
+          ],
+        }
+      ]
+    )
+  end
 end
