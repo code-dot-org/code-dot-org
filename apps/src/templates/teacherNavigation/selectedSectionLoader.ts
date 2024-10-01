@@ -1,5 +1,5 @@
 import {getStore} from '@cdo/apps/redux';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId, setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {
@@ -55,6 +55,10 @@ export const asyncLoadSelectedSection = async (sectionId: string) => {
     ) {
       getStore().dispatch(setShowSharingColumn(true));
     }
+
+    // TODO: update sections list with selected section data to ensure consistency.
+
+    getStore().dispatch(setUnitName(selectedSection.script.name));
     getStore().dispatch(setLoginType(selectedSection.login_type));
     getStore().dispatch(setRosterProvider(selectedSection.login_type));
     getStore().dispatch(setRosterProviderName(selectedSection.login_type_name));

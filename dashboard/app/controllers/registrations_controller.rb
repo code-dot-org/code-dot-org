@@ -82,6 +82,13 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
+  # Get /users/gdpr_check
+  #
+  def gdpr_check
+    render json: {gdpr: request.gdpr?, force_in_eu: request.params['force_in_eu']}
+  end
+
+  #
   # Get /users/new_sign_up/finish_student_account
   #
   def finish_student_account

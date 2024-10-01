@@ -1,0 +1,29 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-09-30T17:16:43.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "finish_dialog": "hoc2024",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "###Your turn\r\nThere are lots of new sounds and effects in your toolbox now. Explore and make some music!",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "showSoundFilters": true,
+      "toolbox": {
+        "includeAi": true,
+        "type": "category",
+        "addFunctionCalls": true
+      }
+    },
+    "name_suffix": "_3",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:43.435+00:00\",\"changed\":[\"cloned from \\\"music-ai-freeplay\\\"\"],\"cloned_from\":\"music-ai-freeplay\"},{\"changed_at\":\"2024-09-30 21:19:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
