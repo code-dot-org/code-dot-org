@@ -92,6 +92,51 @@ DisabledDropdown.args = {
   size: 'm',
 };
 
+export const WithErrorDropdown = SingleTemplate.bind({});
+DisabledDropdown.args = {
+  name: 'error-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Error Dropdown',
+  onChange: args => console.log(args),
+  errorMessage: 'Error message',
+  size: 'm',
+};
+
+export const WithHelperMessageDropdown = SingleTemplate.bind({});
+DisabledDropdown.args = {
+  name: 'helper-message-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Helper Message Dropdown',
+  onChange: args => console.log(args),
+  helperMessage: 'Helper message',
+  size: 'm',
+};
+
+export const WithHelperMessageAndIconDropdown = SingleTemplate.bind({});
+DisabledDropdown.args = {
+  name: 'helper-icon-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Helper Icon Dropdown',
+  onChange: args => console.log(args),
+  helperIcon: {
+    iconName: 'info-circle',
+  },
+  helperMessage: 'Helper message',
+  size: 'm',
+};
+
 export const GroupedOptionsDropdown = SingleTemplate.bind({});
 GroupedOptionsDropdown.args = {
   name: 'grouped-options-dropdown',
