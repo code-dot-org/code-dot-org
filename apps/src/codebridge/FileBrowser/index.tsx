@@ -720,7 +720,11 @@ export const FileBrowser = React.memo(() => {
 
   const handleDragEnd = useMemo(
     () => (e: DragOverEvent) => {
-      if (e?.over) {
+      if (e?.over && e?.active) {
+        // first, if we're dragging something into the folder which currently contains it, just bow out.
+        if (e.active.data.current?.parentId === e.over.id) {
+          return;
+        }
         if (e.active.data.current?.type === DragType.FOLDER) {
           const duplicate = checkForDuplicateFoldername(
             project.folders[e.active.data.current.id].name,
