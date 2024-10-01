@@ -48,10 +48,14 @@
 
     .heading {
       color: $neutral_light;
-      margin: 0 0 7px 0;
+      margin: 0;
     }
 
     .body {
+      display: flex;
+      align-items: end;
+      gap: 10px;
+      justify-content: space-between;
       margin-bottom: 14px;
     }
 
@@ -59,7 +63,7 @@
       span {
         font-size: 12px !important;
       }
-      margin-bottom: 14px;
+      //margin-bottom: 14px;
     }
 
     .footer {
@@ -79,12 +83,7 @@
       box-sizing: border-box;
       border-radius: 5px;
 
-      .packsThin {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 600px);
-        grid-gap: 4px;
-        justify-content: space-around;
-
+      .packs {
         .pack {
           box-sizing: border-box;
           cursor: pointer;
@@ -92,8 +91,10 @@
           padding: 8px;
           display: flex;
           gap: 10px;
+          display: flex;
 
-          &:nth-child(2n) {
+          //&:nth-child(2n) {
+          &Alternate {
             background-color: #31373d;
           }
 
@@ -133,116 +134,36 @@
             }
           }
 
-          &Footer {
-            margin-top: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            &Name {
-              font-size: 16px;
-              //font-weight: 600;
-              //line-height: 1.3;
-              width: 240px;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-
-            &Artist {
-              font-size: 16px;
-              width: 240px;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-
-            &Bold {
-              font-weight: 600;
-            }
-
-            &Preview {
-              margin: 3px 6px 0 3px;
-              font-size: 18px;
-
-              .preview {
-                color: $neutral_dark40;
-              }
-            }
-          }
-        }
-      }
-
-      .packs {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 232px);
-        grid-gap: 4px;
-        justify-content: space-around;
-
-        .pack {
-          box-sizing: border-box;
-          cursor: pointer;
-          width: 232px;
-          padding: 16px;
-
-          &Selected {
-            background-color: $dark_black;
-            border-radius: 5px;
+          &Name {
+            font-size: 16px;
+            //font-weight: 600;
+            //line-height: 1.3;
+            //width: 240px;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
 
-          &ImageContainer {
-            width: 100%;
-            transform: scale(1, 1);
-            transition: 0.1s ease-in-out;
-
-            &:hover, &Selected {
-              transform: scale(1.03, 1.03);
-              transition: 0.1s ease-in-out;
-            }
+          &Artist {
+            flex: 1;
+            font-size: 16px;
+            //width: 240px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
 
-          &Image {
-            border-radius: 5px;
-
-            &Attribution {
-              transform: rotate(270deg) translate(0, 0);
-              position: absolute;
-              top: 6px;
-              right: 18px;
-              transform-origin: top right;
-              font-size: 8px;
-              opacity: 0.3;
-
-              &Left {
-                top: -10px;
-                right: initial;
-                transform: translate(-100%, 100%) rotate(270deg);
-              }
-            }
+          &Bold {
+            font-weight: 600;
           }
 
-          &Footer {
-            margin-top: 8px;
-            display: flex;
-            justify-content: space-between;
+          &Preview {
+            margin: 3px 6px 0 3px;
+            font-size: 18px;
 
-            &Name {
-              font-size: 18px;
-              font-weight: 600;
-              line-height: 1.3;
-            }
-
-            &Artist {
-              font-size: 11px;
-            }
-
-            &Preview {
-              margin: 3px 6px 0 3px;
-              font-size: 18px;
-
-              .preview {
-                color: $neutral_dark40;
-              }
+            .preview {
+              color: $neutral_dark40;
             }
           }
         }

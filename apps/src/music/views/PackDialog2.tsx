@@ -19,6 +19,7 @@ import styles from './PackDialog2.module.scss';
 interface PackEntryProps {
   playingPreview: string | null;
   folder: SoundFolder;
+  folderIndex: number;
   isSelected: boolean;
   onSelect: (path: SoundFolder) => void;
   onPreview: (path: string) => void;
@@ -26,9 +27,10 @@ interface PackEntryProps {
   mode: Mode;
 }
 
-const PackEntryThin: React.FunctionComponent<PackEntryProps> = ({
+const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   playingPreview,
   folder,
+  folderIndex,
   isSelected,
   onSelect,
   onPreview,
@@ -55,7 +57,11 @@ const PackEntryThin: React.FunctionComponent<PackEntryProps> = ({
 
   return (
     <div
-      className={classNames(styles.pack, isSelected && styles.packSelected)}
+      className={classNames(
+        styles.pack,
+        !isSelected && folderIndex % 2 === 1 && styles.packAlternate,
+        isSelected && styles.packSelected
+      )}
       onClick={onEntryClick}
       onKeyDown={event => {
         if (event.key === 'Enter') {
@@ -106,118 +112,24 @@ const PackEntryThin: React.FunctionComponent<PackEntryProps> = ({
           </div>
         )}
       </div>
-      <div className={styles.packFooter}>
-        <div>
-          <div className={styles.packFooterName}>{folder.name}</div>
-          {folder.artist && (
-            <div className={styles.packFooteArtist}>{folder.artist}</div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const PackEntryLine: React.FunctionComponent<PackEntryProps> = ({
-  playingPreview,
-  folder,
-  isSelected,
-  onSelect,
-  onPreview,
-  onStopPreview,
-  mode,
-}) => {
-  const library = MusicLibrary.getInstance();
-
-  const previewSound = folder.sounds.find(sound => sound.type === 'preview');
-  const soundPath = previewSound && folder.id + '/' + previewSound.src;
-  const isPlayingPreview = previewSound && playingPreview === soundPath;
-  const imageSrc = library?.getPackImageUrl(folder.id);
-  const imageAttributionAuthor = folder.imageAttribution?.author;
-  const imageAttributionColor = folder.imageAttribution?.color;
-  const packImageAttributionLeft = folder.imageAttribution?.position === 'left';
-
-  const onEntryClick = useCallback(() => {
-    onSelect(folder);
-
-    if (soundPath && !isPlayingPreview) {
-      onPreview(soundPath);
-    }
-  }, [folder, isPlayingPreview, onPreview, onSelect, soundPath]);
-
-  return (
-    <div
-      className={classNames(styles.pack, isSelected && styles.packSelected)}
-      onClick={onEntryClick}
-      onKeyDown={event => {
-        if (event.key === 'Enter') {
-          onEntryClick();
-        }
-      }}
-      aria-label={folder.name}
-      tabIndex={0}
-      role="button"
-    >
-      <div>
-        {imageSrc && (
-          <div
-            className={classNames(
-              styles.packImageContainer,
-              isSelected && styles.packImageContainerSelected
-            )}
-          >
-            <img
-              className={styles.packImage}
-              src={imageSrc}
-              alt=""
-              draggable={false}
-            />
-            {imageAttributionAuthor && (
-              <div
-                className={classNames(
-                  styles.packImageAttribution,
-                  packImageAttributionLeft && styles.packImageAttributionLeft
-                )}
-                style={{color: imageAttributionColor}}
-              >
-                <FontAwesomeV6Icon
-                  iconName={'brands fa-creative-commons'}
-                  iconStyle="solid"
-                  className={styles.icon}
-                />
-                &nbsp;
-                <FontAwesomeV6Icon
-                  iconName={'brands fa-creative-commons-by'}
-                  iconStyle="solid"
-                  className={styles.icon}
-                />
-                &nbsp;
-                {imageAttributionAuthor}
-              </div>
-            )}
-          </div>
+      <div
+        className={classNames(
+          styles.packName,
+          mode !== 'artist' && styles.packBold
         )}
+      >
+        {folder.name}
       </div>
-      <div className={styles.packFooter}>
+      {folder.artist && (
         <div
           className={classNames(
-            styles.packFooterName,
-            mode !== 'artist' && styles.packFooterBold
+            styles.packArtist,
+            mode === 'artist' && styles.packBold
           )}
         >
-          {folder.name}
+          {folder.artist}
         </div>
-        {folder.artist && (
-          <div
-            className={classNames(
-              styles.packFooterArtist,
-              mode === 'artist' && styles.packFooterBold
-            )}
-          >
-            {folder.artist}
-          </div>
-        )}
-      </div>
+      )}
     </div>
   );
 };
@@ -335,18 +247,10 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
     mode === 'popular'
       ? folders
       : mode === 'song'
-      ? folders.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0))
+      ? folders.sort((a, b) => a.name.localeCompare(b.name))
       : folders.sort((a, b) =>
           a.artist && b.artist
-            ? a.artist < b.artist
-              ? -1
-              : a.artist > b.artist
-              ? 1
-              : a.name < b.name
-              ? -1
-              : a.name > b.name
-              ? 1
-              : 0
+            ? a.artist.localeCompare(b.artist) || a.name.localeCompare(b.name)
             : 0
         );
 
@@ -363,27 +267,30 @@ const PackDialog2: React.FunctionComponent<PackDialogProps> = ({player}) => {
             {musicI18n.packDialogTitle()}
           </Typography>
 
-          <div className={styles.body}>{musicI18n.packDialogBody()}</div>
+          <div className={styles.body}>
+            <div>{musicI18n.packDialogBody()}</div>
 
-          <SegmentedButtons
-            selectedButtonValue={mode}
-            buttons={[
-              {label: musicI18n.packModePopular(), value: 'popular'},
-              {label: musicI18n.packModeSong(), value: 'song'},
-              {label: musicI18n.packModeArtist(), value: 'artist'},
-            ]}
-            onChange={value => onModeChange(value as Mode)}
-            className={styles.segmentedButtons}
-          />
+            <SegmentedButtons
+              selectedButtonValue={mode}
+              buttons={[
+                {label: musicI18n.packModePopular(), value: 'popular'},
+                {label: musicI18n.packModeSong(), value: 'song'},
+                {label: musicI18n.packModeArtist(), value: 'artist'},
+              ]}
+              onChange={value => onModeChange(value as Mode)}
+              className={styles.segmentedButtons}
+            />
+          </div>
 
           <div className={styles.packsContainer}>
-            <div className={styles.packsThin}>
+            <div className={styles.packs}>
               {sortedFolders.map((folder, folderIndex) => {
                 return (
-                  <PackEntryLine
+                  <PackEntry
                     key={folderIndex}
                     playingPreview={playingPreviewState}
                     folder={folder}
+                    folderIndex={folderIndex}
                     isSelected={folder.id === selectedFolderId}
                     onSelect={handleSelectFolder}
                     onPreview={onPreview}
