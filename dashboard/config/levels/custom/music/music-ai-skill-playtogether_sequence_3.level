@@ -1,0 +1,123 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-09-30T17:16:41.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Play Together Sequence\r\n\r\nAdd at least two [sounds](#clickable=play-sound-block) into each [play together](#clickable=play-sounds-together-block-workspace) block.\r\n",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-playtogether_sequence_7e5b311d-9f61-4fdf-8431-5b05e71bcc8e",
+        "message": "Those sounds are great together! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-playtogether_sequence_524d0be3-14c2-4736-bdbf-d709eda13ff1",
+        "message": "You played two sounds together, now add sounds into the second [play together](#clickable=play-sounds-together-block-workspace) block. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-playtogether_sequence_2_c60a465c-3f07-4f14-a758-de2c1cddc382",
+        "message": "You chose two of the same sound. Choose two different [sounds](#clickable=play-sound-block-workspace) to play together. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1",
+        "message": "Nothing has played yet. ",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together_1",
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "play_sounds_together_2",
+                      "deletable": false,
+                      "movable": false
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "library": "launch2024",
+      "packId": "lady_gaga_born_this_way",
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "stop_hammer_time",
+          "cant_touch_this"
+        ],
+        "lady_gaga_born_this_way": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_tag",
+          "synth_big_chorus",
+          "synth_plink",
+          "synth_bounce",
+          "piano",
+          "strings",
+          "synth_main_chorus",
+          "synth_main_small"
+        ]
+      }
+    },
+    "name_suffix": "_3",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:41.647+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence_2\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence_2\"},{\"changed_at\":\"2024-09-30 20:34:22 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-30 20:36:19 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-30 20:37:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-30 20:38:57 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2024-09-16T17:00:58.000Z",
   "level_num": "custom",
@@ -32,13 +33,24 @@
           "folderId": "0",
           "active": false,
           "open": true
+        },
+        "2": {
+          "id": "2",
+          "name": "test.py",
+          "language": "py",
+          "contents": "import unittest\nfrom io import StringIO\nimport sys\nimport pandas as pd\nimport ast\n\nclass TestTemperatureAnalysis(unittest.TestCase):\n\n    def setUp(self):\n        # Setup to capture the print output if needed later\n        self.captured_output = StringIO()\n        sys.stdout = self.captured_output\n\n    def tearDown(self):\n        # Reset redirect and clear print capture\n        sys.stdout = sys.__stdout__\n\n    def test_step_1(self):\n        \"\"\"A DataFrame is loaded and .head() is called to confirm the data is read successfully.\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to confirm data loading\n        local_vars = {}\n        exec(script_content, local_vars)\n\n        # Check if a DataFrame is defined and .head() is called\n        df_found = False\n        for var_name, var_value in local_vars.items():\n            if isinstance(var_value, pd.DataFrame):\n                df_found = True\n                break\n\n        # Assert that at least one DataFrame is found\n        self.assertTrue(df_found, \"The code should load the data into a DataFrame and call .head() to confirm.\")\n\n    def test_step_2(self):\n        \"\"\"Check for filtered data, groupby operation, and mean calculation on 'Average Temperature'.\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Step 1: Parse the script using AST\n        tree = ast.parse(script_content)\n\n        # Flags for detecting groupby and mean operations\n        groupby_detected = False\n        mean_detected = False\n\n        # Traverse the AST to identify `groupby` and `mean` operations\n        for node in ast.walk(tree):\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                # Check for groupby('Decade')\n                if node.func.attr == 'groupby':\n                    # Ensure it is grouping by 'Decade'\n                    if len(node.args) > 0 and isinstance(node.args[0], ast.Str) and node.args[0].s == 'Decade':\n                        groupby_detected = True\n                        print(f\"Groupby Detected: {ast.dump(node, indent=4)}\")\n\n                # Check for .mean() applied on Average Temperature\n                if node.func.attr == 'mean':\n                    mean_detected = True\n                    print(f\"Mean Detected: {ast.dump(node, indent=4)}\")\n\n        # Debugging Output\n        print(f\"\\n--- AST Analysis Results ---\")\n        print(f\"Groupby Detected: {groupby_detected}, Mean Detected: {mean_detected}\\n\")\n\n        # Validate that both `groupby` and `mean` operations are detected in the correct order\n        self.assertTrue(groupby_detected, \"The code should group the filtered DataFrame by 'Decade'.\")\n        self.assertTrue(mean_detected, \"The code should calculate the average 'Average Temperature' after grouping by 'Decade'.\")\n\n    def test_step_3(self):\n        \"\"\"The printed message contains the correct decades, a location reference, and the calculated change in average monthly temperature.\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to capture the print output\n        local_vars = {}\n        exec(script_content, local_vars)\n\n        # Retrieve the print output\n        printed_output = self.captured_output.getvalue().strip()\n\n        # Check if the printed message contains the correct decade references, a location, and a numeric value for the change\n        self.assertIn(\"1980s\", printed_output, \"The printed message should mention the '1980s' to reflect the grouping by decade.\")\n        self.assertIn(\"2020s\", printed_output, \"The printed message should mention the '2020s' to reflect the grouping by decade.\")\n        self.assertRegex(printed_output, r\"\\d+(\\.\\d+)?\", \"The printed message should include a numeric value representing the change in average monthly temperature.\")\n        self.assertRegex(printed_output, r\"in .+ has changed\", \"The printed message should include the name of a location to indicate which location was analyzed.\")\n        self.assertIn(\"°C\", printed_output, \"The printed message should include the temperature unit '°C' to indicate the value is in Celsius.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "validation"
         }
       },
       "folders": {
       },
       "openFiles": [
         "0",
-        "1"
+        "1",
+        "2"
       ]
     },
     "display_name": "Surface Temperatures",
@@ -46,7 +58,6 @@
     "bubble_choice_description": "Calculate the average monthly temperature for New Delhi, Tokyo, or Rio de Janeiro",
     "thumbnail_url": "https://images.code.org/fe39617c74c47099c4b5ece1af57b9f3-hot.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-16T17:00:58.397+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L6-L7c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L6-L7c_2024-pilot\"},{\"changed_at\":\"2024-09-16 17:02:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:03:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-16T17:00:58.397+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L6-L7c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L6-L7c_2024-pilot\"},{\"changed_at\":\"2024-09-16 17:02:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 17:03:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-29 18:56:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-29 18:56:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-29 18:56:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-29 18:57:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-29 18:57:26 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

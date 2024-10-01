@@ -270,6 +270,12 @@ describe('LoginTypeSelection', () => {
         .toString()
         .includes("href: '/users/new_sign_up/finish_student_account'")
     ).toBeTruthy;
+
+    // Checks that the page is displaying student-facing LMS content
+    screen.getByText(locale.does_your_school_use_an_lms());
+    screen.getByText(locale.ask_your_teacher_lms());
+    screen.getByAltText('Canvas logo');
+    screen.getByAltText('Schoology logo');
   });
 
   it('if user selected teacher then finish sign up button sends user to finish teacher page', async () => {
@@ -286,6 +292,12 @@ describe('LoginTypeSelection', () => {
         .toString()
         .includes("href: '/users/new_sign_up/finish_teacher_account'")
     ).toBeTruthy;
+
+    // Checks that the page is displaying teacher-facing LMS content
+    screen.getByText(locale.using_lms_platforms());
+    screen.getByText(locale.access_detailed_instructions());
+    screen.getByText('Canvas', {selector: 'span'});
+    screen.getByText('Schoology', {selector: 'span'});
   });
 
   it('valid email is stored in sessionStorage', async () => {
