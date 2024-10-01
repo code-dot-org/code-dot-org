@@ -13,7 +13,7 @@
   min-height: 32px;
   font-size: 14px;
   font-weight: 600;
-  color: $neutral_dark20;
+  color: $light_gray_200;
 }
 
 .fileTab {
@@ -35,12 +35,12 @@
 }
 
 .active {
-  background-color: $neutral_dark;
+  background-color: $light_black;
   color: $white;
 }
 
 .inactive {
-  color: $neutral_dark20;
+  color: $light_gray_200;
 }
 
 .closeButton {

@@ -19,7 +19,7 @@ $default-spacing: 2px;
 
 .panelContainerHeader-dark {
   @extend %panel-container-header;
-  background-color: $neutral_dark90;
+  background-color: $light_gray_900;
   color: $neutral_white;
   margin-bottom: $default-spacing;
 }
