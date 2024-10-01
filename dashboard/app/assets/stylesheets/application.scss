@@ -621,15 +621,17 @@ html, body {
 }
 
 /* Styling that keeps the small footer consistent with other page elements */
-$codeApp-left-margin: 25px;
+$codeApp-left-margin: 15px;
+$codeApp-bottom-margin: 12px;
 $small-footer-horizontal-margin: 15px;
 $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
 .small-footer-base, #more-menu {
-  background-color: $background_gray;
+  background-color: initial;
   color: $dimgray;
   font-size: 14px;
+  margin: 8px;
   a {
     @include main-font-semi-bold;
     &:link {
@@ -700,9 +702,7 @@ $small-footer-standard-width: 400px;
 .small-footer-base {
   position: absolute;
   bottom: 0;
-  margin: 0 $codeApp-left-margin;
   display: flex;
-  border-top: 1px solid $lighter_gray;
   padding: 6px 0 3px 0;
   width: 100%;
   max-width: $small-footer-standard-width;
@@ -712,6 +712,10 @@ $small-footer-standard-width: 400px;
    * fit between the visualization above and the .small-footer
    */
   margin-top: 5px;
+  margin-bottom: $codeApp-bottom-margin;
+  margin-inline-end: 0;
+  margin-inline-start: $codeApp-left-margin;
+
 
   select {
     color: $charcoal;
@@ -724,7 +728,7 @@ $small-footer-standard-width: 400px;
     border: 0;
   }
 
-  .copyright-button, .i18n-dropdown-container, .globe-icon {
+  .copyright-button, .languageSelect {
     align-self: center;
   }
 
@@ -732,31 +736,12 @@ $small-footer-standard-width: 400px;
     margin: 0 10px;
     button {
       padding: 3px;
-      font-size: 16px;
-      line-height: 16px;
+      font-size: 1rem;
+      line-height: 1rem;
       margin: 0;
       border: 1px solid $lighter_gray;
-      background-color: $background-gray;
+      background-color: initial;
     }
-  }
-
-  .globe-icon {
-    color: $charcoal;
-    font-size: 18px;
-    margin: 0 1px;
-  }
-
-  .i18n-dropdown-container {
-    display: flex;
-    border: 1px solid $lighter_gray;
-    border-radius: 4px;
-    background-color: $white;
-    padding: 0 0 0 4px;
-    margin: 0;
-  }
-
-  .i18n-dropdown-container:dir(rtl) {
-    padding: 0 4px 0 0;
   }
 }
 
@@ -844,36 +829,32 @@ $small-footer-standard-width: 400px;
   border-top: initial;
 }
 
-/* Custom styling for the locale & copyright buttons for Music Lab. */
+/* Custom styling for the small-footer-base for Music Lab. */
 .music-black {
   #page-small-footer {
     user-select: none;
 
     .small-footer-base {
-      margin-left: 10px;
+      max-width: 12.5rem;
+      margin-inline-start: 8px;
+      margin-bottom: 8px;
 
       .version-caption {
         display: none;
       }
-    }
 
-    .i18n-dropdown-container, .copyright-link {
-      height: 26px;
-      box-sizing: border-box;
-      border: solid 1px $neutral_dark40;
-    }
-
-    .copyright-button {
-      user-select: none;
-
-      .copyright-link {
-        width: 26px;
+      > p {
+        color: $light_white;
       }
     }
 
-    .i18n-dropdown-container, .globe-icon, #locale, .copyright-link {
+    .copyright-button {
+      height: 1.625rem;
+      width: 1.625rem;
+      box-sizing: border-box;
+      border: solid 1px $light_white;
       background-color: initial;
-      color: $neutral_dark40;
+      color: $light_white;
     }
   }
 }

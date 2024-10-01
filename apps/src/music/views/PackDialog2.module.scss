@@ -1,0 +1,206 @@
+@import 'color.scss';
+
+// A translucent overlay that covers the entire container.
+%full-container-overlay {
+  background-color: rgba(0 0 0 / 0.5);
+  color: $neutral_dark;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 80;
+}
+
+%dialog {
+  background-color: $neutral_light;
+  border-radius: 5px;
+  padding: 7px 20px;
+  width: 80%;
+  max-width: 800px;
+  max-height: calc(100% - 84px);
+}
+
+.focusLock {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.dialogContainer {
+  @extend %full-container-overlay;
+
+  .packDialog {
+    @extend %dialog;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: $neutral_dark90;
+    color: $neutral_light;
+    border: solid 1px $neutral_dark60;
+    top: -15px;
+
+    &FullWidth {
+      width: calc(100% - 120px);
+    }
+
+    .heading {
+      color: $neutral_light;
+      margin: 0;
+    }
+
+    .body {
+      display: flex;
+      align-items: end;
+      gap: 10px;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .segmentedButtons {
+      span {
+        font-size: 12px !important;
+      }
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 7px;
+    }
+
+    .packsContainer {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      flex: 1;
+      background-color: $neutral_dark;
+      border: solid $neutral_dark 2px;
+      box-sizing: border-box;
+      border-radius: 5px;
+
+      .packs {
+        .pack {
+          box-sizing: border-box;
+          cursor: pointer;
+          width: 100%;
+          padding: 8px;
+          display: flex;
+          gap: 20px;
+          align-items: center;
+
+          &Alternate {
+            background-color: #31373d;
+          }
+
+          &Selected {
+            background-color: $dark_black;
+            border-radius: 5px;
+          }
+
+          &ImageContainer {
+            width: 30px;
+            transform: scale(1, 1);
+            transition: 0.1s ease-in-out;
+
+            &:hover, &Selected {
+              transform: scale(1.03, 1.03);
+              transition: 0.1s ease-in-out;
+            }
+          }
+
+          &Image {
+            border-radius: 5px;
+
+            &Attribution {
+              transform: rotate(270deg) translate(0, 0);
+              position: absolute;
+              top: 6px;
+              right: 18px;
+              transform-origin: top right;
+              font-size: 8px;
+              opacity: 0.3;
+
+              &Left {
+                top: -10px;
+                right: initial;
+                transform: translate(-100%, 100%) rotate(270deg);
+              }
+            }
+          }
+
+          &Name {
+            flex: 1;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &Artist {
+            flex: 1;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &Bold {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+%button {
+  border: 2px solid;
+  transition: background-color 0.1s ease;
+  margin: 5px 0;
+
+  &:hover, &:active {
+    box-shadow: none;
+    border: 2px solid !important;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  .skip {
+    @extend %button;
+    background-color: initial;
+    color: $neutral_light;
+    border-color: $neutral_light;
+
+    &:hover, &:active {
+      background-color: $neutral_dark70;
+      border-color: $neutral_light !important;
+    }
+  }
+
+  .continue {
+    @extend %button;
+    background-color: $neutral_light;
+    border-color: $neutral_light;
+    color: $neutral_dark;
+
+    &:hover {
+      background-color: $neutral_light;
+      border-color: $neutral_light !important;
+    }
+
+    &Disabled {
+      opacity: 30%;
+      cursor: default;
+    }
+  }
+}
