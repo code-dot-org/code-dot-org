@@ -8,6 +8,8 @@ require 'policies/lti'
 require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
+  before_action :redirect_if_signed_in, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account]
+
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
@@ -473,6 +475,12 @@ class RegistrationsController < Devise::RegistrationsController
 
       partially_locked = Policies::ChildAccount.partially_locked_out?(current_user) && experiment_value('cpa-partial-lockout', request)
       @personal_account_linking_enabled = false if partially_locked
+    end
+  end
+
+  private def redirect_if_signed_in
+    if user_signed_in?
+      redirect_to home_path, notice: 'You are already signed in.'
     end
   end
 
