@@ -9,8 +9,19 @@ import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 import {Section} from './TeacherNavigationRouter';
 
 import styles from './teacher-navigation.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
+
+const skeletonSectionName = (
+  <span className={skeletonizeContent.skeletonizeContent}>
+    SKELETON SECTION NAME
+  </span>
+);
 
 const PageHeader: React.FC = () => {
+  const isLoadingSectionData = useSelector(
+    (state: {teacherSections: {isLoadingSectionData: boolean}}) =>
+      state.teacherSections.isLoadingSectionData
+  );
   const selectedSection = useSelector(
     (state: {
       teacherSections: {
@@ -39,7 +50,9 @@ const PageHeader: React.FC = () => {
 
   return (
     <div className={styles.header}>
-      <span className={styles.headerSectionName}>{sectionName}</span>
+      <span className={styles.headerSectionName}>
+        {isLoadingSectionData ? skeletonSectionName : sectionName}
+      </span>
       <Heading1>{pathName}</Heading1>
     </div>
   );
