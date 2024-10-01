@@ -892,6 +892,7 @@ Dashboard::Application.routes.draw do
     end
 
     get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
+    get 'dashboardapi/unit_summary/:unit_name', to: 'api#unit_summary'
     get 'dashboardapi/lesson_materials/:unit_id', to: 'api#lesson_materials'
 
     # Wildcard routes for API controller: select all public instance methods in the controller,
