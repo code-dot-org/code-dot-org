@@ -2,12 +2,10 @@ import React from 'react';
 
 import {ActionDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
+import {Resource} from './LessonMaterialTypes';
+
 type ResourceViewOptionsDropdownProps = {
-  resource: {
-    url: string;
-    downloadUrl?: string;
-    type: string;
-  };
+  resource: Resource;
 };
 
 const ResourceViewOptionsDropdown: React.FC<
