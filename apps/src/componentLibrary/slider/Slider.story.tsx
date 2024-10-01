@@ -13,7 +13,17 @@ export default {
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const SingleTemplate: StoryFn<SliderProps> = args => <Slider {...args} />;
+const SingleTemplate: StoryFn<SliderProps> = args => {
+  const [value, setValue] = useState(args.value);
+
+  return (
+    <Slider
+      {...args}
+      value={value || args.value}
+      onChange={e => setValue(e.target.value)}
+    />
+  );
+};
 
 const MultipleTemplate: StoryFn<{
   components: SliderProps[];
@@ -27,7 +37,7 @@ const MultipleTemplate: StoryFn<{
           <Slider
             key={componentArg.name}
             {...componentArg}
-            value={values[componentArg.name] || 0}
+            value={values[componentArg.name] || componentArg.value}
             onChange={e =>
               setValues({...values, [componentArg.name]: e.target.value})
             }
@@ -44,25 +54,48 @@ DefaultSlider.args = {
   label: 'Slider Label',
   isCentered: false,
 };
-//
+
+export const PercentModeSlider = SingleTemplate.bind({});
+PercentModeSlider.args = {
+  name: 'controlled_Slider_percent',
+  label: 'Slider Label',
+  isCentered: false,
+  isPercentMode: true,
+};
+
+export const CenteredSlider = SingleTemplate.bind({});
+CenteredSlider.args = {
+  name: 'controlled_Slider_centered',
+  label: 'Slider Label',
+  isCentered: true,
+};
+
 export const GroupOfDefaultSliders = MultipleTemplate.bind({});
 GroupOfDefaultSliders.args = {
   components: [
     {
-      name: 'test',
-      label: 'Label',
+      name: 'test-regular-slider',
+      label: 'Regular Slider',
       onChange: () => null,
     },
     {
-      name: 'test-centered',
-      label: 'Label Centered',
+      name: 'test-percent-slider',
+      label: 'Percent Slider',
+      isPercentMode: true,
+      onChange: () => null,
+    },
+    {
+      name: 'test-centered-slider',
+      label: 'Centered Slider',
       isCentered: true,
-      value: 50,
+      value: 0,
+      minValue: -100,
+      maxValue: 100,
       onChange: () => null,
     },
     {
       name: 'test-steps',
-      label: 'Label Steps',
+      label: 'Steps Slider',
       steps: [0, 25, 50, 75, 100],
       onChange: () => null,
     },
@@ -73,41 +106,83 @@ export const GroupOfDisabledSliders = MultipleTemplate.bind({});
 GroupOfDisabledSliders.args = {
   components: [
     {
-      name: 'test-disabled',
-      label: 'Label',
-      disabled: true,
+      name: 'slider-black-disabled',
+      label: 'Slider Black Disabled',
+      color: 'black',
       onChange: () => null,
     },
     {
-      name: 'test-disabled-checked',
-      label: 'Label Checked',
-      disabled: true,
+      name: 'slider-brand-disabled',
+      label: 'Slider Brand Disabled',
+      color: 'brand',
+      onChange: () => null,
+    },
+    {
+      name: 'slider-white-disabled',
+      label: 'Slider White Disabled',
+      onChange: () => null,
+    },
+    {
+      name: 'slider-black-centered-disabled',
+      label: 'Slider Black Centered Disabled',
+      color: 'black',
+      isCentered: true,
+      onChange: () => null,
+    },
+    {
+      name: 'slider-brand-centered-disabled',
+      label: 'Slider Brand Centered Disabled',
+      color: 'brand',
+      isCentered: true,
+      onChange: () => null,
+    },
+    {
+      name: 'slider-white-centered-disabled',
+      label: 'Slider White Centered Disabled',
+      isCentered: true,
       onChange: () => null,
     },
   ],
 };
 
-export const GroupOfSizesOfSliders = MultipleTemplate.bind({});
-GroupOfSizesOfSliders.args = {
+export const GroupOfColorsOfSliders = MultipleTemplate.bind({});
+GroupOfColorsOfSliders.args = {
   components: [
     {
-      name: 'test-xs',
-      label: 'Label XS',
+      name: 'slider-black',
+      label: 'Slider Black',
+      color: 'black',
       onChange: () => null,
     },
     {
-      name: 'test-s',
-      label: 'Label S',
+      name: 'slider-brand',
+      label: 'Slider Brand',
+      color: 'brand',
       onChange: () => null,
     },
     {
-      name: 'test-m',
-      label: 'Label M',
+      name: 'slider-white',
+      label: 'Slider White',
       onChange: () => null,
     },
     {
-      name: 'test-xl',
-      label: 'Label XL',
+      name: 'slider-black-centered',
+      label: 'Slider Black Centered',
+      color: 'black',
+      isCentered: true,
+      onChange: () => null,
+    },
+    {
+      name: 'slider-brand-centered',
+      label: 'Slider Brand Centered',
+      color: 'brand',
+      isCentered: true,
+      onChange: () => null,
+    },
+    {
+      name: 'slider-white-centered',
+      label: 'Slider White Centered',
+      isCentered: true,
       onChange: () => null,
     },
   ],

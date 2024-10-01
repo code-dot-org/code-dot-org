@@ -22,8 +22,10 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
   disabled?: boolean;
   color?: 'black' | 'brand' | 'white';
   isCentered?: boolean;
+  isPercentMode?: boolean;
   step?: number | string;
   steps?: number[];
+  defaultValue?: number | string;
   minValue?: number | string;
   maxValue?: number | string;
   showLeftButton?: boolean;
@@ -41,9 +43,9 @@ const defaultSliderButtonProps: ButtonProps = {
 
 // TODO:
 // * MARKUP
-//  - demo stepper
-//  - centered mode
-//  - percents mode
+//  - demo stepper +
+//  - centered mode +
+//  - percents mode +
 // * styles
 // * add stories
 // * add tests
@@ -71,20 +73,29 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   disabled = false,
   color = 'black',
   isCentered = false,
+  isPercentMode = false,
   step = 1,
   steps,
+  defaultValue = 0,
   minValue = 0,
   maxValue = 100,
   leftButtonProps,
   rightButtonProps,
-  ...HTMLAttributes
+  ...HTMLInputAttributes
 }) => {
   const labelId = `${name}-label`;
+
+  // Override min and max values for percent mode
+  const minSliderValue = isPercentMode && minValue === undefined ? 0 : minValue;
+  const maxSliderValue =
+    isPercentMode && minValue === undefined ? 100 : maxValue;
+
   // Calculate the center value based on min and max values
   const centerValue = (Number(minValue) + Number(maxValue)) / 2;
 
   // If isCentered is true and no value is provided, set the value to the center
-  const sliderValue = isCentered && value === undefined ? centerValue : value;
+  const sliderValue =
+    isCentered && value === undefined ? centerValue : value || defaultValue;
 
   // Function to snap the value to the nearest step in the steps array
   const snapToStep = (value: number) => {
@@ -122,13 +133,16 @@ const Slider: React.FunctionComponent<SliderProps> = ({
           <Typography
             id={labelId}
             semanticTag="span"
-            visualAppearance={'body-two'}
+            visualAppearance="body-two"
           >
             {label}
           </Typography>
         )}
 
-        <span>{value || 0}</span>
+        {/* Display the value with a % sign if percentMode is true */}
+        <span>
+          {isPercentMode ? `${sliderValue}%` : sliderValue || defaultValue}
+        </span>
       </div>
 
       <div className={moduleStyles.sliderMainContainer}>
@@ -146,19 +160,26 @@ const Slider: React.FunctionComponent<SliderProps> = ({
           <input
             type="range"
             name={name}
-            min={minValue}
-            max={maxValue}
+            min={minSliderValue}
+            max={maxSliderValue}
+            defaultValue={defaultValue}
             value={sliderValue}
             step={step}
             disabled={disabled}
             onChange={handleChange}
             aria-labelledby={labelId}
-            {...HTMLAttributes}
+            {...HTMLInputAttributes}
           />
           {isCentered && (
             <div
               className={moduleStyles.centerMark}
-              style={{left: `calc(${(centerValue / +maxValue) * 100}% - 1px)`}}
+              style={{
+                left: `calc(${
+                  ((centerValue - Number(minSliderValue)) /
+                    (Number(maxSliderValue) - Number(minSliderValue))) *
+                  100
+                }% - 1px)`,
+              }}
             />
           )}
           {/* Render visual step marks */}
