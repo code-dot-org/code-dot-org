@@ -6,7 +6,7 @@
 // the styles will persist until the page is reloaded. This isn't ideal for level
 // progressions that include a mix of light and dark mode labs.
 
-// Another note: This is essentially a copy pasta from the .music-black rules in application.scss
+// Another note: This is mostly a copy pasta from the .music-black rules in application.scss
 // and I18nDropdown/style.css.  If music lab becomes a lazy-loaded entry point, this file can be
 // applied in MusicView rather than the current approach that music lab is applying the
 // .music-black class.
@@ -22,10 +22,6 @@
   user-select: none;
 
   .small-footer-base {
-    max-width: 12.5rem;
-    margin-inline-start: 8px;
-    margin-bottom: 8px;
-
     .version-caption {
       display: none;
     }
