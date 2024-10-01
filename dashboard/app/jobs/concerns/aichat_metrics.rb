@@ -59,7 +59,7 @@ class AichatMetrics
     )
   end
 
-  def self.report_openai_safety_latency(latency:)
+  def self.report_openai_safety_latency(metric_name:, safety_system_prompt:, latency:)
     Cdo::Metrics.push(METRICS_NAMESPACE,
       [
         {
