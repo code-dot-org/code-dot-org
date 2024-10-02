@@ -111,7 +111,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         autoComplete={autoComplete}
         onChange={onChange}
         className={classNames({
-          [moduleStyles.error]: errorMessage,
+          [moduleStyles.hasError]: errorMessage,
         })}
         {...ariaProps}
         aria-disabled={disabled || ariaProps['aria-disabled']}

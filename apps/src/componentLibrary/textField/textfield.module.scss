@@ -44,7 +44,7 @@
     border-color: $light_black;
     background: $light_white;
 
-    &.error {
+    &.hasError {
       border-color: $light_negative_500;
     }
 
@@ -95,7 +95,7 @@
   input {
     border-color: $light_gray_400;
 
-    &.error {
+    &.hasError {
       border-color: $light_negative_500;
     }
 
