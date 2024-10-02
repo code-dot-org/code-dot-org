@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# Initialize Rails, which configures CDO.log to stream to syslog. On systems provisioned with Chef
+# CloudWatch Agent streams syslog to a CloudWatch Log.
 require_relative '../../../dashboard/config/environment'
 require 'cdo/aws/s3'
 require 'optparse'
@@ -13,9 +15,7 @@ require 'cdo/json_to_redshift_table_validator'
 
 # This script redelivers application event ('firehose') event records to Redshift from the Intermediate S3 bucket
 # where batches of records were stored by the Firehose data stream and where manifest objects identify the batches
-# that succeeded delivery to Redshift and those that failed delivery to Redshift.
-
-CDO.log = Logger.new($stdout)
+# that succeeded delivery to Redshift and error manifests identify batches that failed delivery to Redshift.
 
 options = {}
 options[:actually_redeliver] = false
@@ -37,7 +37,9 @@ OptionParser.new do |opts|
     exit
   end
 end.parse!
-CDO.log.info "Called with options: #{options}"
+
+puts "Called with options: #{options}"
+puts "Script logs are streaming to CloudWatch."
 
 class SkipRedeliveryError < StandardError; end
 
@@ -258,7 +260,7 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
   end
 end
 
-CDO.log.info "Script completed."
 CDO.log.info "Batches Processed: #{batches_processed}"
 CDO.log.info "Batches Successfully Redelivered: #{batches_redelivered}"
 CDO.log.info "Batches Failed Redelivery: #{batches_failed}"
+puts "Script execution complete."
