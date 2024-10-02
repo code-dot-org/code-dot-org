@@ -56,6 +56,7 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
   useEffect(() => {
     // The levelValidations may be the same between two different levels,
     // but we still want the progressManager to reset itself when the levelId changes.
+    // Override validations are used in start mode only.
     if (overrideValidations) {
       progressManager.current.onLevelChange(overrideValidations);
     } else {
