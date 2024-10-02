@@ -22,6 +22,9 @@ include:
   # Useful commands
   - path: ./docker/developers/docker-compose.commands.yml
 
+  # Test commands
+  - path: ./docker/developers/docker-compose.testing.yml
+
   # Git hooks
   - path: ./docker/developers/docker-compose.hooks.yml
 

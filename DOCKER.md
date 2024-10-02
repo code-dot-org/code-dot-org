@@ -112,7 +112,7 @@ then skip ahead to the next section and all other sections referring to the "Nat
 For the fully contained setup, you need to build the Dashboard code-dot-org Docker image:
 
 ```shell
-FIXUID=$(id -u) docker compose build web test selenium-video
+FIXUID=$(id -u) docker compose build web selenium-video
 ```
 
 Then we install all the necessary libraries and such into our environment:
@@ -134,6 +134,69 @@ docker compose up web
 ```
 
 And then navigate to `http://localhost-studio.code.org:3000`.
+
+To shell into the development environment:
+
+```
+docker compose run shell
+```
+
+## Running tests and other interactions with the Dashboard Server
+
+From outside of the container, you can access most operations from convenient
+Docker services. For instance, you can run any rake command without a local Ruby
+environment via:
+
+```
+docker compose run rake <task>
+```
+
+For instance `docker compose run rake install` will run the `rake install` command
+within the running `web` container. Of course, this is a common operation which
+we've provided as part of the `install-all` command above.
+
+For running rake within the `dashboard` or `pegasus` paths, use `dashboard-rake` or
+`pegasus-rake`, respectively, instead.
+
+### UI Testing
+
+You can run the UI tests with the `ui-test` service like so where any argument
+is interpreted as the feature file you want to run:
+
+```
+docker compose run ui-test dashboard/test/ui/features/platform/signing_in.feature
+```
+
+This will run it via the running `web` container (starting it in the background
+if you haven't started it already) and run it on the local Selenium Grid service.
+
+It will tell you how to view the visuals of the running test via a local URL, most
+likely: `http://localhost:7910/?autoconnect=1&resize=scale&password=secret` which
+you can also use to interact with the test browser. Different browsers you are
+using will run in different ports. This one (`7910`) is Chrome, which is the
+default browser target.
+
+You can run on specific browsers by appending the browser name to the service:
+
+```
+docker compose run ui-test-firefox dashboard/test/ui/features/platform/signing_in.feature
+docker compose run ui-test-edge dashboard/test/ui/features/platform/signing_in.feature
+```
+
+You can also record a video of the testing session via the `record-ui-test-...` options:
+
+```
+docker compose run record-ui-test-edge dashboard/test/ui/features/platform/signing_in.feature
+```
+
+This will create a `ui-test.edge.mp4` file in your local `/tmp` path. To change the name of
+the video file use the `record=` environment variable:
+
+```
+record=my-video docker compose run record-ui-test-edge dashboard/test/ui/features/platform/signing_in.feature
+```
+
+This will create `/tmp/my-video.edge.mp4` instead.
 
 ## Running a Native Dashboard Server
 

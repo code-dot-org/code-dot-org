@@ -93,6 +93,8 @@ services:
       - python-venv:/app/src/.venv
       - python-pdm:/home/cdodev/.local/share/pdm
       - ../..:/app/src
+    expose:
+      - "3000"
     ports:
       - "3000:3000"
     depends_on:
@@ -102,10 +104,23 @@ services:
         condition: service_started
       minio-contained:
         condition: service_started
+    healthcheck:
+      test: "curl --fail --head http://localhost:3000/"
+      interval: 2s
+      retries: 100
+      start_period: 30s
+      timeout: 10s
     tty: true
     command: /bin/bash -l -c './bin/dashboard-server'
     networks:
       cdo_network:
+      cdo_network_test:
+        aliases:
+          # The test aliases to map to host
+          - localhost-studio.code.org
+          - localhost.code.org
+          - localhost.hourofcode.com
+          - localhost.codeprojects.org
 
   web-https:
     <<: *cdo-web
