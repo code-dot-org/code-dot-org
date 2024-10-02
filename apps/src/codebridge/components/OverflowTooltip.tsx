@@ -9,8 +9,9 @@ interface OverflowTooltipProps {
   className?: string;
 }
 
-// Component that wraps children with a tooltip is showTooltip is true,
-// otherwise it just renders the children wrapped in a div.
+// Component that wraps children with a tooltip if the contents of the children
+// are larger than a div wrapping them (with the given className).
+// This allows us to show a tooltip on hover if the contents are overflowing.
 const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
   children,
   tooltipOverlayClassName,
@@ -25,7 +26,7 @@ const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
         containerRef.current.offsetWidth < containerRef.current.scrollWidth
       );
     }
-  }, [containerRef]);
+  }, [children]);
 
   const containedChildren = useMemo(() => {
     return (
@@ -34,6 +35,7 @@ const OverflowTooltip: React.FunctionComponent<OverflowTooltipProps> = ({
       </div>
     );
   }, [children, className]);
+
   return showTooltip ? (
     <WithTooltip
       tooltipProps={tooltipProps}
