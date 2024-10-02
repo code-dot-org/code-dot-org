@@ -27,7 +27,7 @@ describe('LessonMaterialsContainer', () => {
           Teacher: [
             {
               type: 'Handout',
-              key: 'resourceKey2',
+              key: 'resourceKey',
               name: 'my link resource',
               url: 'google.com',
               downloadUrl: 'google.com',
@@ -44,7 +44,7 @@ describe('LessonMaterialsContainer', () => {
           Student: [
             {
               type: 'Video',
-              key: 'resourceKey2',
+              key: 'videoKey1',
               name: 'my linked video',
               url: 'google.com',
               downloadUrl: 'google.com',
@@ -62,7 +62,7 @@ describe('LessonMaterialsContainer', () => {
           Teacher: [
             {
               type: 'Video',
-              key: 'resourceKey2',
+              key: 'videoKey2',
               name: 'my video resource',
               url: 'google.com',
               downloadUrl: 'google.com',

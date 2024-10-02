@@ -7,6 +7,7 @@ import {
   gDocsCopyUrl,
   gDocsPdfUrl,
 } from '@cdo/apps/templates/lessonOverview/googleDocsUtils';
+import {windowOpen} from '@cdo/apps/utils';
 
 import {Resource, computeMaterialType} from './LessonMaterialTypes';
 
@@ -26,12 +27,12 @@ const normalizeUrl = (url: string) => {
 
 const openDownloadUrl = (url: string) => {
   url = normalizeUrl(url);
-  window.open(url, '_self');
+  windowOpen(url, '_self');
 };
 
 const openInNewTab = (url: string) => {
   url = normalizeUrl(url);
-  window.open(url, '_blank', 'noopener,noreferrer');
+  windowOpen(url, '_blank', 'noopener,noreferrer');
 };
 
 const ResourceViewOptionsDropdown: React.FC<
