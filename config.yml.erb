@@ -364,6 +364,7 @@ cache:
 app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
+https_certificate:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
 allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net https://*.lausd.iap.allhere.co'
 

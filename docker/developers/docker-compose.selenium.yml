@@ -24,13 +24,17 @@ services:
   selenium-grid-base: &selenium-grid-base
     image: selenium/hub:${SELENIUM_HUB_VERSION}
     hostname: selenium
+    environment: &selenium-grid-environment
+      SE_EVENT_BUS_HOST: selenium
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
     expose:
       # The Selenium 'Publish' port
-      - "4442:4442"
+      - "4442"
       # The Selenium 'Subscribe' port
-      - "4443:4443"
+      - "4443"
       # The Protocol port that our testing infrastructure connects to
-      - "4444:4444"  
+      - "4444"  
     ulimits: &selenium-ulimits
       nofile:
         soft: 32768
@@ -40,19 +44,11 @@ services:
 
   # This just runs selenium-grid within the isolated container network
   selenium-grid-contained:
-    environment: &selenium-grid-contained-environment
-      SE_EVENT_BUS_HOST: selenium
-      SE_EVENT_BUS_PUBLISH_PORT: 4442
-      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
     <<: *selenium-grid-base
 
   # This runs selenium-grid such that it is visible to the host machine
   selenium-grid:
     <<: *selenium-grid-base
-    environment: &selenium-grid-environment
-      SE_EVENT_BUS_HOST: selenium
-      SE_EVENT_BUS_PUBLISH_PORT: 4442
-      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
     ports:
       # The Selenium 'Publish' port
       - "4442:4442"
@@ -69,18 +65,21 @@ services:
       context: ./selenium-video
     expose:
       - "9001" # The control server for the video service
-    ports:
-      - "9001:9001"
     volumes:
       - /tmp:/videos
     networks:
       cdo_network_test:
 
+  selenium-video-native:
+    <<: *selenium-video-base
+    ports:
+      - "9001:9001"
+
   # Runs selenium grid and spins up all possible browser nodes
   selenium-video:
     image: alpine
     depends_on:
-      selenium-video-contained:
+      selenium-video-native:
         condition: service_started
     command: >
       /bin/sh -c "
@@ -166,7 +165,7 @@ services:
   selenium-chrome-node-contained:
     <<: *selenium-chrome-node-base
     environment:
-      <<: *selenium-grid-contained-environment
+      <<: *selenium-grid-environment
       SE_VNC_PORT: 5910
       SE_NO_VNC_PORT: 7910
       JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
@@ -175,6 +174,8 @@ services:
         condition: service_started
     networks:
       cdo_network_test:
+        aliases:
+          - selenium.chrome
 
   # Runs the selenium Chrome as a node on our hosted selenium-grid
   selenium-chrome-node:
@@ -278,7 +279,7 @@ services:
   selenium-firefox-node-contained:
     <<: *selenium-firefox-node-base
     environment:
-      <<: *selenium-grid-contained-environment
+      <<: *selenium-grid-environment
       SE_VNC_PORT: 5911
       SE_NO_VNC_PORT: 7911
     depends_on:
@@ -286,6 +287,8 @@ services:
         condition: service_started
     networks:
       cdo_network_test:
+        aliases:
+          - selenium.firefox
 
   # Runs the selenium Firefox as a node on our hosted selenium-grid
   selenium-firefox-node:
@@ -313,7 +316,6 @@ services:
 
   # A Selenium server running Edge for running UI tests contained in Docker
   selenium-edge-base: &selenium-edge-base
-    hostname: selenium-edge
     image: selenium/standalone-edge:${SELENIUM_EDGE_VERSION}
     environment:
       SE_VNC_PORT: 5912
@@ -381,12 +383,16 @@ services:
     image: selenium/node-edge:${SELENIUM_EDGE_VERSION}
     shm_size: 2gb
     ulimits: *selenium-ulimits
+    ports:
+      - "7912:7912" # The selenium NoVNC service port
+      - "5912:5912" # The selenium direct VNC port
 
   # Runs the selenium Edge as a node in our fully dockerized environment
   selenium-edge-node-contained:
     <<: *selenium-edge-node-base
+    hostname: selenium-edge
     environment:
-      <<: *selenium-grid-contained-environment
+      <<: *selenium-grid-environment
       SE_VNC_PORT: 5912
       SE_NO_VNC_PORT: 7912
     depends_on:
@@ -394,6 +400,8 @@ services:
         condition: service_started
     networks:
       cdo_network_test:
+        aliases:
+          - selenium.edge
 
   # Runs the selenium edge as a node on our hosted selenium-grid
   selenium-edge-node:
@@ -408,9 +416,6 @@ services:
       DISPLAY: ':102.0'
     expose:
       - "5557" # Selenium Grid Port
-    ports:
-      - "7912:7912" # The selenium NoVNC service port
-      - "5912:5912" # The selenium direct VNC port
     depends_on:
       selenium-grid:
         condition: service_started

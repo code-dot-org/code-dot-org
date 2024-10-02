@@ -1,0 +1,211 @@
+services:
+  # Just run a bash shell with/without AWS access
+  # The 'shell-isolated' container has no connections to other services
+  shell-isolated: &command-isolated-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    command: /bin/bash -l
+  shell: &command-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web
+    volumes: &common-shell-volumes
+      - home:/mnt/home
+    command: /bin/bash -l
+  shell-aws: &command-aws-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-aws
+    volumes: *common-shell-volumes
+    command: /bin/bash -l
+
+  # Spins up an environment to authenticate a Code.org staff engineer's
+  # AWS credentials.
+  aws-access:
+    <<: *command-aws-base
+    command: /bin/bash -l -c "./bin/aws_access"
+
+  # Spins up a dashboard server console with contributor access
+  console:
+    <<: *command-base
+    environment:
+      SKIP_I18N_INIT: true
+    command: /bin/bash -l -c './bin/dashboard-console'
+  console-full-init:
+    <<: *command-base
+    command: /bin/bash -l -c './bin/dashboard-console'
+  console-aws:
+    <<: *command-aws-base
+    environment:
+      SKIP_I18N_INIT: true
+    command: /bin/bash -l -c './bin/dashboard-console'
+  console-aws-full-init:
+    <<: *command-aws-base
+    command: /bin/bash -l -c './bin/dashboard-console'
+
+  # Open the MySQL client on the web instance to connect to the database
+  # service running in the other container.
+  mysql-client-admin:
+    <<: *command-base
+    command: /bin/bash -l -c './bin/mysql-client-admin'
+
+  # Run the 'rake build' step with/without AWS
+  build:
+    <<: *command-base
+    command: /bin/bash -i -c "bundle exec rake build"
+  build-aws:
+    <<: *command-aws-base
+    command: /bin/bash -i -c "bundle exec rake build"
+
+  # Run any rake task
+  rake:
+    <<: *command-base
+    entrypoint: ['/bin/bash', '-l', './docker/developers/run.sh', 'rake']
+    command: ['--tasks']
+
+  # Run any rake task within the dashboard project
+  dashboard-rake:
+    <<: *command-base
+    working_dir: /app/src/dashboard
+    entrypoint: ['/bin/bash', '../docker/developers/run.sh', 'rake']
+    command: ['--tasks']
+
+  # Run any rake task within the pegasus project
+  pegasus-rake:
+    <<: *command-base
+    working_dir: /app/src/pegasus
+    entrypoint: ['/bin/bash', '../docker/developers/run.sh', 'rake']
+    command: ['--tasks']
+
+  # Run any database migrations
+  migrations:
+    <<: *command-base
+    command: /bin/bash -l -c 'cd dashboard && ../docker/developers/run.sh bundle exec rake db:migrate && RAILS_ENV=test ../docker/developers/run.sh bundle exec rake db:migrate && cd ../pegasus && ../docker/developers/run.sh bundle exec rake db:migrate'
+
+  lint-ruby:
+    <<: *command-base
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'bundle', 'exec', 'rubocop']
+    command: []
+
+  # Builds the JavaScript for the site
+  build-js:
+    <<: *command-isolated-base
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - ../..:/app/src
+    working_dir: /app/src/apps
+    command: /bin/bash -l -c '../docker/developers/run.sh yarn build'
+
+  # Runs a server that watches for changes made to JS code and rebuilds on update
+  build-js-server:
+    <<: *command-isolated-base
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - ../..:/app/src
+    tty: false
+    working_dir: /app/src/apps
+    command: /bin/bash -l -c '../docker/developers/run.sh yarn start'
+
+  # This just installs / updates rbenv / Ruby inside the web instance
+  install-rbenv:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    hostname: install-rbenv
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../../.ruby-version:/app/src/.ruby-version
+      - .:/app/src # This is not the application source code!
+    command: /bin/bash -l -c "./install-local-rbenv.sh"
+
+  # This just installs / updates nvm / Node / nvm inside the web instance
+  install-nvm:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    hostname: install-nvm
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - ../../apps/package.json:/app/src/apps/package.json
+      - .:/app/src # This is not the application source code!
+    command: /bin/bash -l -c "./install-local-nvm.sh"
+
+  # This installs the virtual environment into the container volume
+  install-python:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web
+    hostname: install-python
+    command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install:python'
+
+  # This just installs the Ruby gems, in case they have changed
+  install-gems:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../..:/app/src
+    command: /bin/bash -l -c "bundle install"
+
+  # Installs the node/npm/js libraries
+  install-js:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    volumes:
+      - nvm:/home/cdodev/.nvm
+      - ../../docker:/app/src/docker
+      - ../../apps:/app/src/apps
+    working_dir: /app/src/apps
+    command: /bin/bash -l -c '../docker/developers/run.sh yarn install'
+
+  # Run the 'rake install' step with/without AWS
+  install: &install-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web
+    environment: &install-environment
+      AFTER: "rm -f .git/hooks/pre-commit .git/hooks/post-checkout .git/hooks/post-merge; ln -s ../../docker/developers/hooks/pre-commit .git/hooks/pre-commit; ln -s ../../docker/developers/hooks/post-merge .git/hooks/post-merge; ln -s ../../docker/developers/hooks/post-checkout .git/hooks/post-checkout"
+    command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install'
+
+  install-aws: &install-aws-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-aws
+    environment:
+      <<: *install-environment
+    command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install'
+
+  install-low-memory:
+    <<: *install-base
+    environment:
+      # Level seeding batch size to be more appropriate for lower-memory situations
+      CDO_LEVEL_SEED_BATCH_SIZE: 500
+
+  install-all-base:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    depends_on:
+      install-rbenv:
+        condition: service_completed_successfully
+      install-nvm:
+        condition: service_completed_successfully
+      install-gems:
+        condition: service_completed_successfully
+      install-js:
+        condition: service_completed_successfully
+    entrypoint: /bin/bash -c
+    command: "echo 'Installed libraries and environment dependencies.'"
+
+  # Performs all install steps for an initial setup
+  install-all:
+    <<: *install-base
+    depends_on:
+      install-all-base:
+        condition: service_completed_successfully
+
+volumes:
+  home:

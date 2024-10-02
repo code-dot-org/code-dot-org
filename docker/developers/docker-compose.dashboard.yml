@@ -49,3 +49,133 @@ services:
         echo 'slack_bot_token: localoverride' &&
         echo \"properties_encryption_key: ''\"
       "
+
+  # The base for all dashboard servers
+  web-base: &cdo-web-base
+    image: codedotorg/codedotorg-test
+    build:
+      dockerfile: ./docker/developers/Dockerfile
+      context: ../..
+      target: cdo-web-dev
+      args:
+        UID: ${FIXUID:-1000}
+        GID: ${FIXGID:-${FIXUID:-1000}}
+    cap_add:
+      - SYS_PTRACE
+    working_dir: /app/src
+
+  # Spins up a dashboard server with contributor access
+  web: &cdo-web
+    <<: *cdo-web-base
+    hostname: web
+    environment: &server-locals
+      HOST_PWD: ${PWD}
+      CDO_SLACK_BOT_TOKEN: ''
+      CDO_PARDOT_PRIVATE_KEY: ''
+      CDO_PROPERTIES_ENCRYPTION_KEY: ''
+      CDO_DB_WRITER: 'mysql://root:password@db/'
+      CDO_DB_ENDPOINT_WRITER: 'db'
+      CDO_DB_ENDPOINT_PROXY_REPORTING: 'db'
+      CDO_DB_ENDPOINT_PROXY_READER: 'db'
+      CDO_STATSIG_SERVER_SECRET_KEY: 'secret-fake-key'
+      CDO_STATSIG_API_CLIENT_KEY: 'client-fake-key'
+      CDO_SESSION_STORE_SERVER: 'redis://redis:6379/0/session'
+      CDO_GEOCODER_REDIS_URL: 'redis://redis:6379/0/geocoder'
+      CDO_AWS_ACCESS_KEY_ID: 'local-development'
+      CDO_AWS_SECRET_ACCESS_KEY: 'allstudents'
+      CDO_AWS_S3_ENDPOINT: 'http://minio:9000'
+      CDO_CLOUDFRONT_PRIVATE_KEY: '!Secret'
+      CDO_CLOUDFRONT_KEY_PAIR_ID: '!Secret'
+      CDO_OPENAI_AICHAT_SAFETY_API_KEY: 'localoverride'
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - nvm:/home/cdodev/.nvm
+      - python-venv:/app/src/.venv
+      - python-pdm:/home/cdodev/.local/share/pdm
+      - ../..:/app/src
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    depends_on:
+      mysql-contained:
+        condition: service_healthy
+      redis-contained:
+        condition: service_started
+      minio-contained:
+        condition: service_started
+    healthcheck:
+      test: "curl --fail --head http://localhost:3000/"
+      interval: 2s
+      retries: 100
+      start_period: 30s
+      timeout: 10s
+    tty: true
+    command: /bin/bash -l -c './bin/dashboard-server'
+    networks:
+      cdo_network:
+      cdo_network_test:
+        aliases:
+          # The test aliases to map to host
+          - localhost-studio.code.org
+          - localhost.code.org
+          - localhost.hourofcode.com
+          - localhost.codeprojects.org
+
+  web-https:
+    <<: *cdo-web
+    ports:
+      - "443:443"
+    environment:
+      <<: *server-locals
+      CDO_HTTPS_DEVELOPMENT: true
+      CDO_HTTPS_CERTIFICATE: '/var/keys/server'
+      CDO_DEFAULT_SCHEME: https
+      CDO_DASHBOARD_PORT: 443
+
+  # This adds an AWS credential into the environment
+  web-aws:
+    <<: *cdo-web
+    environment:
+      AWS_PROFILE: 'cdo'
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - nvm:/home/cdodev/.nvm
+      - python-venv:/app/src/.venv
+      - python-pdm:/home/cdodev/.local/share/pdm
+      - ../..:/app/src
+      - ~/.aws:/home/cdodev/.aws
+
+  # Runs just a pegasus server on its own.
+  # Currently, it will run into some trouble since it does try to load some
+  # assets that are served by dashboard but assumes that dashboard is on the
+  # same host and port.
+  pegasus:
+    <<: *cdo-web-base
+    hostname: pegasus
+    volumes:
+      - ../..:/app/src
+    ports:
+      - "3001:3000"
+    environment:
+      <<: *server-locals
+    depends_on:
+      mysql-contained:
+        condition: service_healthy
+    working_dir: /app/src/pegasus
+    command: /bin/bash -l -c '../docker/developers/run.sh bundle exec thin start'
+    networks:
+      cdo_network:
+
+volumes:
+  # Holds the ruby interpreter and our gemset
+  rbenv:
+
+  # Holds nvm and our global node binaries
+  nvm:
+
+  # Holds the venv for Python
+  python-venv:
+
+  # Hold the local pdm installation
+  python-pdm:

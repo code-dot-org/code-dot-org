@@ -1,0 +1,100 @@
+include:
+  - path: ./docker-compose.networks.yml
+
+  # Selenium infrastructure to allow for local browser testing for our UI tests
+  - path: ./docker-compose.selenium.yml
+
+  # We run the tests on the running dashboard server
+  - path: ./docker-compose.dashboard.yml
+
+services:
+  # runs a ui test in chrome
+  ui-test-chrome: &ui-test-chrome
+    extends:
+      file: ./docker-compose.commands.yml
+      service: shell
+    volumes:
+      - rbenv:/home/cdodev/.rbenv
+      - ../../.ruby-version:/app/src/.ruby-version
+      - ../..:/app/src
+    environment: &ui-test-environment
+      PATH_ARG_OPTION: 'feature='
+      SELENIUM_URL: 'http://selenium:4444/wd/hub'
+      ECHO_MESSAGE: 'To see the browser session: http://localhost:7910/?autoconnect=1&resize=scale&password=secret (VNC port 5910)'
+    depends_on: &ui-test-dependencies-chrome
+      selenium-chrome-node-contained:
+        condition: service_started
+      web:
+        condition: service_started
+    entrypoint: ['/bin/bash', '-l', './docker/developers/run.sh', 'bundle', 'exec', 'rake', 'test:ui']
+    command: []
+    networks:
+      cdo_network_test:
+
+  # Runs a UI test (default is chrome)
+  ui-test:
+    <<: *ui-test-chrome
+
+  # Runs a UI test on firefox
+  ui-test-firefox: &ui-test-firefox
+    <<: *ui-test-chrome
+    environment: &ui-test-environment-firefox
+      <<: *ui-test-environment
+      ECHO_MESSAGE: 'To see the browser session: http://localhost:7911/?autoconnect=1&resize=scale&password=secret (VNC port 5911)'
+    depends_on: &ui-test-dependencies-firefox
+      selenium-firefox-node-contained:
+        condition: service_started
+      web:
+        condition: service_started
+    entrypoint: ['/bin/bash', '-l', './docker/developers/run.sh', 'bundle', 'exec', 'rake', 'test:ui', 'browser=firefox']
+
+  # Runs a UI test on edge
+  ui-test-edge: &ui-test-edge
+    <<: *ui-test-chrome
+    environment: &ui-test-environment-edge
+      <<: *ui-test-environment
+      ECHO_MESSAGE: 'To see the browser session: http://localhost:7912/?autoconnect=1&resize=scale&password=secret (VNC port 5912)'
+    depends_on: &ui-test-dependencies-edge
+      selenium-edge-node-contained:
+        condition: service_started
+      web:
+        condition: service_started
+    entrypoint: ['/bin/bash', '-l', './docker/developers/run.sh', 'bundle', 'exec', 'rake', 'test:ui', 'browser=edge']
+
+  # Records the UI test to the video file chosen
+  record-ui-test: &record-ui-test-chrome
+    <<: *ui-test-chrome
+    depends_on:
+      <<: *ui-test-dependencies-chrome
+      selenium-video-contained:
+        condition: service_started
+    environment:
+      <<: *ui-test-environment
+      record: "${record:-ui-test}"
+      SELENIUM_VIDEO_HOST: 'selenium-video'
+
+  # Records the UI test to the video file chosen (default is chrome)
+  record-ui-test-chrome:
+    <<: *record-ui-test-chrome
+
+  record-ui-test-firefox:
+    <<: *ui-test-firefox
+    depends_on:
+      <<: *ui-test-dependencies-firefox
+      selenium-video-contained:
+        condition: service_started
+    environment:
+      <<: *ui-test-environment-firefox
+      record: "${record:-ui-test}"
+      SELENIUM_VIDEO_HOST: 'selenium-video'
+
+  record-ui-test-edge:
+    <<: *ui-test-edge
+    depends_on:
+      <<: *ui-test-dependencies-edge
+      selenium-video-contained:
+        condition: service_started
+    environment:
+      <<: *ui-test-environment-edge
+      record: "${record:-ui-test}"
+      SELENIUM_VIDEO_HOST: 'selenium-video'
