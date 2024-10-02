@@ -74,6 +74,21 @@ module Curriculum
       }
     ).freeze
 
+    # A list of all content area categories that can be set to units.
+    CURRICULUM_CONTENT_AREA = OpenStruct.new(
+      {
+        curriculum_k_5: 'K-5 Curriculum',
+        curriculum_6_8: '6-8 Curriculum',
+        curriculum_9_12: '9-12 Curriculum',
+        hoc: 'HOC',
+        pl_workshop_activities: 'PL Workshop activities',
+        self_paced_pl_k_5: 'K-5 self-paced PL',
+        self_paced_pl_6_8: '6-8 self-paced PL',
+        skills_focused_self_paced_pl: 'Skills-focused self-paced PL',
+        other: 'Other'
+      }
+    ).freeze
+
     # The curriculum types used in curriculum quick assign
     COURSE_OFFERING_CURRICULUM_TYPES = OpenStruct.new(
       {
