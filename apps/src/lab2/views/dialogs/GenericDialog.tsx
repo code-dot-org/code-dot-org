@@ -67,17 +67,21 @@ type UseClosingCallbackArgs = {
   closeDialog: DialogCloseFunctionType;
   closeType: DialogCloseActionType;
   callback: dialogCallback | undefined;
+  disabled: boolean | undefined;
 };
 
 const useClosingCallback = ({
   closeDialog,
   closeType,
   callback,
+  disabled,
 }: UseClosingCallbackArgs) =>
   useCallback(() => {
-    closeDialog(closeType);
-    callback && callback();
-  }, [closeDialog, closeType, callback]);
+    if (!disabled) {
+      closeDialog(closeType);
+      callback && callback();
+    }
+  }, [closeDialog, closeType, callback, disabled]);
 
 const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   buttons,
@@ -92,18 +96,21 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
     closeDialog: dialogControl.closeDialog,
     closeType: 'cancel',
     callback: buttons?.cancel?.callback,
+    disabled: buttons?.cancel?.disabled,
   });
 
   const neutralCallback = useClosingCallback({
     closeDialog: dialogControl.closeDialog,
     closeType: 'neutral',
     callback: buttons?.neutral?.callback,
+    disabled: buttons?.neutral?.disabled,
   });
 
   const confirmCallback = useClosingCallback({
     closeDialog: dialogControl.closeDialog,
     closeType: 'confirm',
     callback: buttons?.confirm?.callback,
+    disabled: buttons?.confirm?.disabled,
   });
 
   useEscapeKeyboardTrap(cancelCallback);
