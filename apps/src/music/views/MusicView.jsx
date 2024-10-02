@@ -1,5 +1,6 @@
 /** @file Top-level view for Music */
 import {isEqual} from 'lodash';
+import markdownToTxt from 'markdown-to-txt';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -222,6 +223,9 @@ class UnconnectedMusicView extends React.Component {
   }
 
   async onLevelLoad(levelData, initialSources) {
+    // Stop playback if needed.
+    this.stopSong();
+
     // Load and initialize the library and player if not done already.
     // Read the library name first from level data, or from the project
     // sources if not present on the level. If there is no library name
@@ -646,7 +650,10 @@ class UnconnectedMusicView extends React.Component {
     // If this level has validation, and the user has seen a validation message,
     // log an attempt.
     if (hasConditions && message) {
-      this.analyticsReporter.onValidationAttempt(satisfied);
+      this.analyticsReporter.onValidationAttempt(
+        satisfied,
+        markdownToTxt(message)
+      );
     }
 
     this.player.stopSong();

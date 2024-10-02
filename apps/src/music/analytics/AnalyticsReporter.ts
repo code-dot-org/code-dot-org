@@ -212,8 +212,8 @@ export default class AnalyticsReporter {
     });
   }
 
-  onValidationAttempt(passed: boolean) {
-    this.trackUIEvent('Validation attempt', {passed});
+  onValidationAttempt(passed: boolean, message: string) {
+    this.trackUIEvent('Validation attempt', {passed, message});
   }
 
   private trackUIEvent(eventType: string, payload: object) {
