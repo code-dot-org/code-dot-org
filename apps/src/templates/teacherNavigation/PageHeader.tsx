@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import _ from 'lodash';
 import React from 'react';
 import {useSelector} from 'react-redux';
@@ -12,7 +13,12 @@ import styles from './teacher-navigation.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const skeletonSectionName = (
-  <span className={skeletonizeContent.skeletonizeContent}>
+  <span
+    className={classNames(
+      skeletonizeContent.skeletonizeContent,
+      styles.skeletonHeaderSectionName
+    )}
+  >
     SKELETON SECTION NAME
   </span>
 );

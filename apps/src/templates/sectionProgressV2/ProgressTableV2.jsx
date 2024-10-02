@@ -35,6 +35,7 @@ function ProgressTableV2({
   isSkeleton,
   unitId,
   levelProgressByStudent,
+  isLoadingSectionData,
 }) {
   const outsideTableRef = React.useRef();
 
@@ -152,7 +153,9 @@ function ProgressTableV2({
         sortedStudents={sortedStudents}
         unitName={unitData?.title}
         sectionId={sectionId}
-        isSkeleton={isSkeleton && students.length === 0}
+        isSkeleton={
+          isSkeleton && (students.length === 0 || isLoadingSectionData)
+        }
       />
       {table}
     </div>
@@ -170,6 +173,7 @@ ProgressTableV2.propTypes = {
   levelProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLevelProgressType)
   ),
+  isLoadingSectionData: PropTypes.bool.isRequired,
 };
 
 export default connect(state => ({
@@ -186,4 +190,5 @@ export default connect(state => ({
     state.sectionProgress.expandedLessonIds[
       state.teacherSections.selectedSectionId
     ] || [],
+  isLoadingSectionData: state.teacherSections.isLoadingSectionData,
 }))(ProgressTableV2);

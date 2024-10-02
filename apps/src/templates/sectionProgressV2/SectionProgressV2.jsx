@@ -25,9 +25,8 @@ function SectionProgressV2({
   scriptId,
   sectionId,
   unitData,
-  isLoadingProgress,
-  isRefreshingProgress,
   isLevelProgressLoaded,
+  isLoadingSectionData,
   expandedLessonIds,
   loadExpandedLessonsFromLocalStorage,
   hideTopHeading,
@@ -47,10 +46,10 @@ function SectionProgressV2({
   }, [unitData, isLevelProgressLoaded]);
 
   React.useEffect(() => {
-    if (!unitData && !isLoadingProgress && !isRefreshingProgress && scriptId) {
+    if (sectionId && scriptId) {
       loadUnitProgress(scriptId, sectionId);
     }
-  }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
+  }, [scriptId, sectionId]);
 
   const isViewingValidatedLevel = React.useMemo(() => {
     return unitData?.lessons
@@ -75,7 +74,9 @@ function SectionProgressV2({
           <MoreOptionsDropdown />
         </Heading6>
       </div>
-      <ProgressTableV2 isSkeleton={!levelDataInitialized} />
+      <ProgressTableV2
+        isSkeleton={!levelDataInitialized || isLoadingSectionData}
+      />
     </div>
   );
 }
@@ -87,6 +88,7 @@ SectionProgressV2.propTypes = {
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
   isLevelProgressLoaded: PropTypes.bool.isRequired,
+  isLoadingSectionData: PropTypes.bool.isRequired,
   expandedLessonIds: PropTypes.array,
   loadExpandedLessonsFromLocalStorage: PropTypes.func.isRequired,
   hideTopHeading: PropTypes.bool,
@@ -103,6 +105,7 @@ export default connect(
       !!state.sectionProgress.studentLevelProgressByUnit[
         state.unitSelection.scriptId
       ],
+    isLoadingSectionData: state.teacherSections.isLoadingSectionData,
     expandedLessonIds:
       state.sectionProgress.expandedLessonIds[
         state.teacherSections.selectedSectionId
