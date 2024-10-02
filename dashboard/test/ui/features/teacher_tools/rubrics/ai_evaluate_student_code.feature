@@ -20,7 +20,7 @@ Feature: Evaluate student code against rubrics using AI
     # Student submits code
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
-    And I submit this level
+    And I submit this gamelab level
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"

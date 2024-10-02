@@ -8,7 +8,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I click selector ".uitest-taRubricTab" once I see it
   Then I wait to see "#runButton"
-  And I submit this level
+  And I submit this gamelab level
 
   # Teacher can see and submit feedback for a student
   Then I sign in as "Teacher_Lillian" and go home
