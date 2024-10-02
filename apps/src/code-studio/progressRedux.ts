@@ -353,6 +353,18 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
   };
 }
 
+// The user has attempted the level (as defined by the app type). Currently only used by Lab2 labs.
+export function sendInProgressReport(appType: string): ProgressThunkAction {
+  return (dispatch, getState) => {
+    sendReportHelper(
+      appType,
+      TestResults.LEVEL_INCOMPLETE_FAIL,
+      dispatch,
+      getState
+    );
+  };
+}
+
 export const sendPredictLevelReport = createAsyncThunk<
   void,
   {appType: string; predictResponse: string},
