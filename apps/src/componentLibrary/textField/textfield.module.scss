@@ -19,10 +19,6 @@
     box-sizing: border-box;
     height: unset;
 
-    &.error {
-      border-color: $light_negative_500;
-    }
-
     &:focus-visible {
       outline: 2px solid $light_primary_500;
       outline-offset: 2px;
@@ -38,16 +34,18 @@
 }
 
 // TextField colors
-.textField.textField-black, .textField.textField-gray {
+.textField.textField-black,
+.textField.textField-gray {
   .textFieldLabel {
     color: $light-black;
   }
 
   input {
+    border-color: $light_black;
     background: $light_white;
 
-    &:not(.error) {
-      border-color: $light_black;
+    &.error {
+      border-color: $light_negative_500;
     }
 
     &::placeholder {
@@ -78,7 +76,8 @@
       color: $light_gray_200;
     }
 
-    .textFieldHelperSection, .textFieldErrorSection {
+    .textFieldHelperSection,
+    .textFieldErrorSection {
       color: $light_gray_200;
     }
   }
@@ -94,8 +93,10 @@
 
 .textField.textField-gray {
   input {
-    &:not(.error) {
-      border-color: $light_gray_400;
+    border-color: $light_gray_400;
+
+    &.error {
+      border-color: $light_negative_500;
     }
 
     &:focus-visible {
@@ -110,12 +111,9 @@
   }
 
   input {
+    border-color: $light_white;
     background: $light_black;
     color: $light_white;
-
-    &:not(.error) {
-      border-color: $light_white;
-    }
 
     &::placeholder {
       color: $light_gray_600;
@@ -126,7 +124,8 @@
     }
   }
 
-  .textFieldHelperSection, .textFieldErrorSection {
+  .textFieldHelperSection,
+  .textFieldErrorSection {
     color: $light_white;
   }
 
@@ -141,7 +140,8 @@
       color: $light_gray_800;
     }
 
-    .textFieldHelperSection, .textFieldErrorSection {
+    .textFieldHelperSection,
+    .textFieldErrorSection {
       color: $light_gray_700;
     }
   }
