@@ -25,6 +25,8 @@ function SectionProgressV2({
   scriptId,
   sectionId,
   unitData,
+  isLoadingProgress,
+  isRefreshingProgress,
   isLevelProgressLoaded,
   isLoadingSectionData,
   expandedLessonIds,
@@ -75,7 +77,12 @@ function SectionProgressV2({
         </Heading6>
       </div>
       <ProgressTableV2
-        isSkeleton={!levelDataInitialized || isLoadingSectionData}
+        isSkeleton={
+          !levelDataInitialized ||
+          isLoadingSectionData ||
+          isLoadingProgress ||
+          isRefreshingProgress
+        }
       />
     </div>
   );
