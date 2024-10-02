@@ -750,6 +750,12 @@ module SharedConstants
     TEACHER: 'teacher',
   ).freeze
 
+  NON_SCHOOL_OPTIONS = OpenStruct.new(
+    SELECT_A_SCHOOL: 'selectASchool',
+    CLICK_TO_ADD: 'clickToAdd',
+    NO_SCHOOL_SETTING: 'noSchoolSetting'
+  ).freeze
+
   AI_REQUEST_EXECUTION_STATUS = {
     # The request has been created but has not yet been processed.
     NOT_STARTED: 0,
