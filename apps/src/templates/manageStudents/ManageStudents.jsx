@@ -6,48 +6,54 @@ import SyncOmniAuthSectionControl from '@cdo/apps/accounts/SyncOmniAuthSectionCo
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {loadSectionStudentData} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
-import ManageStudentsTable from './Table';
+import ManageStudentsTable from './ManageStudentsTable';
 
-class ManageStudents extends React.Component {
-  static propTypes = {
-    studioUrlPrefix: PropTypes.string,
+function ManageStudents({
+  studioUrlPrefix,
+  sectionId,
+  isLoadingStudents,
+  loadSectionStudentData,
+  isLoadingSectionData,
+}) {
+  React.useEffect(() => {
+    if (!isLoadingSectionData) {
+      loadSectionStudentData(sectionId);
+    }
+  }, [sectionId, isLoadingSectionData, loadSectionStudentData]);
 
-    // Provided by redux
-    sectionId: PropTypes.number,
-    isLoadingStudents: PropTypes.bool.isRequired,
-    loadSectionStudentData: PropTypes.func.isRequired,
-  };
-
-  componentDidMount() {
-    this.props.loadSectionStudentData(this.props.sectionId);
-  }
-
-  render() {
-    const {sectionId, studioUrlPrefix, isLoadingStudents} = this.props;
-
-    return (
-      <div data-testid={'manage-students-tab'}>
-        {isLoadingStudents && <Spinner />}
-        {!isLoadingStudents && (
-          <div>
-            <SyncOmniAuthSectionControl
-              sectionId={sectionId}
-              studioUrlPrefix={studioUrlPrefix}
-            />
-            <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
-          </div>
-        )}
-      </div>
-    );
-  }
+  return (
+    <div data-testid={'manage-students-tab'}>
+      {isLoadingStudents && <Spinner />}
+      {!isLoadingStudents && (
+        <div>
+          <SyncOmniAuthSectionControl
+            sectionId={sectionId}
+            studioUrlPrefix={studioUrlPrefix}
+          />
+          <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
+        </div>
+      )}
+    </div>
+  );
 }
 
 export const UnconnectedManageStudents = ManageStudents;
+
+ManageStudents.propTypes = {
+  studioUrlPrefix: PropTypes.string,
+
+  // Provided by redux
+  sectionId: PropTypes.number,
+  isLoadingStudents: PropTypes.bool.isRequired,
+  loadSectionStudentData: PropTypes.func.isRequired,
+  isLoadingSectionData: PropTypes.bool.isRequired,
+};
 
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     isLoadingStudents: state.manageStudents.isLoadingStudents,
+    isLoadingSectionData: state.teacherSections.isLoadingSectionData,
   }),
   dispatch => ({
     loadSectionStudentData(sectionId) {

@@ -1,3 +1,4 @@
+import {combineStartSourcesAndValidation} from '@codebridge/utils';
 import {useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -36,17 +37,23 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const exemplarSources = useAppSelector(
     state => state.lab.levelProperties?.exemplarSources
   );
-  // We memoize these objects so that they don't cause an unexpected re-render.
-  const projectStartSource: ProjectSources | undefined = useMemo(
-    () => (levelStartSource ? {source: levelStartSource} : undefined),
-    [levelStartSource]
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
   );
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+
+  // We memoize these objects so that they don't cause an unexpected re-render.
+  const projectStartSource: ProjectSources | undefined = useMemo(() => {
+    const source = isStartMode
+      ? combineStartSourcesAndValidation(levelStartSource, validationFile)
+      : levelStartSource;
+    return source ? {source} : undefined;
+  }, [levelStartSource, validationFile, isStartMode]);
   const templateStartSource: ProjectSources | undefined = useMemo(
     () => (levelTemplateSource ? {source: levelTemplateSource} : undefined),
     [levelTemplateSource]
   );
 
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplar = getAppOptionsEditingExemplar();
   const isViewingExemplar = getAppOptionsViewingExemplar();
 

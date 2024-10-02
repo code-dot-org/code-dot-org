@@ -389,6 +389,8 @@ class Section < ApplicationRecord
         id: id,
         name: name,
         courseVersionName: unit_group ? unit_group.name : script&.name,
+        unitName: script&.name,
+        isAssignedStandaloneCourse: !unit_group && !!script,
         createdAt: created_at,
         login_type: login_type,
         grades: grades,
