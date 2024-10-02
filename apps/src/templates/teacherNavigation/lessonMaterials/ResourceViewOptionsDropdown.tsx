@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {ActionDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {
@@ -39,7 +39,7 @@ const ResourceViewOptionsDropdown: React.FC<
 > = ({resource}) => {
   const materialType = computeMaterialType(resource.type, resource.url);
 
-  const getDropdownOptions = () => {
+  const dropdownOptions = useMemo(() => {
     if (materialType === 'VIDEO') {
       const options = [];
       if (resource.downloadUrl) {
@@ -129,8 +129,7 @@ const ResourceViewOptionsDropdown: React.FC<
     }
 
     return options;
-  };
-  const dropdownOptions = getDropdownOptions();
+  }, [materialType, resource]);
 
   return (
     <div data-testid={'view-options-dropdown'}>
