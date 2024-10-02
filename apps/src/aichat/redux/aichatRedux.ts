@@ -294,6 +294,7 @@ export const onSaveComplete =
     dispatch(setSavedAiCustomizations(currentAiCustomizations));
     // Notify the UI that the save is complete.
     dispatch(endSave());
+    // Send a report that user has started the aichat level - a teacher will view that level is now in progress.
     dispatch(sendInProgressReport('aichat', TestResults.LEVEL_STARTED));
     // Go to the presentation page if we just finished publishing the model card.
     if (currentSaveType === 'publishModelCard') {
@@ -460,6 +461,7 @@ export const submitChatContents = createAsyncThunk(
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
+    // Send a report that user has started the aichat level - a teacher will view that level is now in progress.
     dispatch(sendInProgressReport('aichat', TestResults.LEVEL_STARTED));
     chatApiResponse.messages.forEach(message => {
       dispatch(addChatEvent({...message, timestamp: Date.now()}));
