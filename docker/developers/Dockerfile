@@ -2,7 +2,7 @@
 # ----------------
 
 # Ubuntu 20.04
-FROM ubuntu:focal AS cdo-web
+FROM ubuntu:20.04 AS cdo-web
 
 ARG USERNAME=cdodev
 
