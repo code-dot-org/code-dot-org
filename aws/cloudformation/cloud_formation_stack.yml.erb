@@ -211,7 +211,7 @@ Resources:
           - Effect: Allow
             Action:
               - 'bedrock:Retrieve'
-            Resource
+            Resource:
               # TODO: Deploy KB with Cloudformation and !Ref it here
               - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/1WHRENJ0OA'
           - Effect: Allow
