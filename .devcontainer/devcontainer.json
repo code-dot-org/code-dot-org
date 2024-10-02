@@ -19,6 +19,7 @@
     "CDO_SLACK_BOT_TOKEN": "localoverride",
     "CDO_PARDOT_PRIVATE_KEY": "localoverride",
     "CDO_PROPERTIES_ENCRYPTION_KEY": "",
+    "CDO_OPENAI_AICHAT_SAFETY_API_KEY": "",
     "CDO_DB_WRITER": "mysql://root@db/",
     "CDO_DB_ENDPOINT_WRITER": "db",
     "CDO_DB_ENDPOINT_PROXY_REPORTING": "db",
