@@ -24,6 +24,10 @@ export const MusicConditions: ConditionNames = {
     valueType: 'number',
   },
   PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
+  PLAYED_SOUND_TRIGGERED_MULTIPLE_TIMES: {
+    name: 'played_sound_triggered_multiple_times',
+    valueType: 'number',
+  },
   PLAYED_SOUND_IN_FUNCTION: {
     name: 'played_sound_in_function',
     valueType: 'string',
@@ -49,10 +53,6 @@ export const MusicConditions: ConditionNames = {
   },
   TRIGGER_ID_PRESSED: {
     name: 'trigger_id_pressed',
-    valueType: 'number',
-  },
-  TRIGGER_PRESSED_MULTIPLE_TIMES: {
-    name: 'trigger_pressed_multiple_times',
     valueType: 'number',
   },
 };
@@ -93,6 +93,9 @@ export default class MusicValidator extends Validator {
 
     // Get number of different sounds that have been started.
     let playedNumberDifferentSounds = 0;
+
+    // Get number of different sounds that have been started.
+    let playedNumberTriggeredSounds = 0;
 
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
@@ -149,6 +152,10 @@ export default class MusicValidator extends Validator {
         }
 
         playedNumberSounds++;
+
+        if (eventData.triggered) {
+          playedNumberTriggeredSounds++;
+        }
 
         if (!uniqueSounds.includes(eventData.id)) {
           playedNumberDifferentSounds++;
@@ -223,6 +230,11 @@ export default class MusicValidator extends Validator {
       playedNumberDifferentSounds
     );
 
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_SOUND_TRIGGERED_MULTIPLE_TIMES.name,
+      playedNumberTriggeredSounds
+    );
+
     // Add satisfied conditions for the played patterns.
     this.addPlayedConditions(
       MusicConditions.PLAYED_EMPTY_PATTERNS.name,
@@ -253,21 +265,12 @@ export default class MusicValidator extends Validator {
       playedNumberChords
     );
 
-    // Add satisfied conditions for playing triggers. These do not require a playback event.
+    // Add satisfied condition for playing triggers. This does not require a playback event.
     const playingTriggers = this.getPlayingTriggers();
     playingTriggers.forEach((trigger: PlayingTrigger) => {
       this.setSatisfiedCondition(
         MusicConditions.TRIGGER_ID_PRESSED.name,
         parseInt(trigger.id.replace('trigger', ''))
-      );
-    });
-    const uniqueTriggerIds = new Set(
-      playingTriggers.map(trigger => trigger.id)
-    );
-    uniqueTriggerIds.forEach(id => {
-      this.setSatisfiedCondition(
-        MusicConditions.TRIGGER_PRESSED_MULTIPLE_TIMES.name,
-        playingTriggers.filter(trigger => trigger.id === id).length
       );
     });
   }
