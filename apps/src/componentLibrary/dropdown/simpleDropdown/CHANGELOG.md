@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.6.2] ()
+## [0.6.2] (https://github.com/code-dot-org/code-dot-org/pull/61460)
 
 * added `errorMessage` prop to `SimpleDropdown`
 * added error state border color to `SimpleDropdown` when `errorMessage` exists
