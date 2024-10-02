@@ -41,10 +41,6 @@ import color from '../../util/color';
  *     color?: string;
  *     textAlign?: string;
  *   };
- *   flexCell: {
- *     display?: string;
- *     alignItems?: string;
- *   };
  * }}
  */
 export const tableLayoutStyles = {
@@ -80,10 +76,6 @@ export const tableLayoutStyles = {
     paddingBottom: 20,
     color: color.charcoal,
     textAlign: 'inherit',
-  },
-  flexCell: {
-    display: 'flex',
-    alignItems: 'center',
   },
   link: {
     ...fontConstants['main-font-semi-bold'],
