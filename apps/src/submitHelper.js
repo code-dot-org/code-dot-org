@@ -15,8 +15,6 @@ import DialogButtons from './legacySharedComponents/DialogButtons';
 // Parameters provided by the calling app.
 let studioApp, onPuzzleComplete, unsubmitUrl;
 
-// Const to temporary disable pop up stating that student cannot resubmit assignment
-
 /**
  * Set up the handlers for the submit and unsubmit buttons.
  * The DOM should have submitButton and unsubmitButton by now.
@@ -61,7 +59,6 @@ export function onSubmitComplete(response) {
  * When submit button is pressed, confirm, and then do it.
  */
 function onPuzzleSubmit() {
-  console.log(studioApp);
   if (studioApp.skin.id === 'gamelab') {
     onPuzzleComplete(true);
   } else {
