@@ -6,7 +6,7 @@ import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
-export type GenericPromptProps = Required<Pick<GenericDialogProps, 'title'>> & {
+export type GenericPromptProps = Pick<GenericDialogProps, 'title'> & {
   handleConfirm?: (prompt: string) => void;
   handleCancel?: () => void;
   placeholder?: string;
