@@ -396,12 +396,19 @@ const EVENTS = {
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
   CODEBRIDGE_MOVE_FILE: 'Move file on codebridge',
+  CODEBRIDGE_MOVE_FOLDER: 'Move folder on codebridge',
   CODEBRIDGE_NEW_FILE: 'Create a new file on codebridge',
   CODEBRIDGE_NEW_FOLDER: 'Create a new folder on codebridge',
   CODEBRIDGE_NEW_SUBFOLDER: 'Create a new subfolder on codebridge',
   CODEBRIDGE_RENAME_FILE: 'Rename file on codebridge',
   CODEBRIDGE_RENAME_FOLDER: 'Rename folder on codebridge',
   CODEBRIDGE_DOWNLOAD_FILE: 'Download file on codebridge',
+  CODEBRIDGE_UPLOAD_FILE: 'Upload file on codebridge',
+  CODEBRIDGE_UPLOAD_INVALID_FILE_NAME:
+    'Attempted upload of invalid file name on codebridge',
+  CODEBRIDGE_UPLOAD_UNACCEPTED_FILE:
+    'Attempted upload of unaccepted file on codebridge',
+  CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',
 
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',

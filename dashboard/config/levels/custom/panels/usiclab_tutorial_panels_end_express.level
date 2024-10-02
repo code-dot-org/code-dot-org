@@ -13,11 +13,10 @@
       {
         "imageUrl": "https://images.code.org/846388521fe0f07f2577b346a7ba51d9-musiclab-big-banner-image.png",
         "text": "#### 🎶 Ready to jam? 🎶\n\nYou've learned the basics, and now you're ready to make your own song!\n\nCheck out all the new sounds and customizations in the toolbox.\n\nClick Continue to get started.",
-        "key": "musiclab_intro_panels_end_pdx-88ca8817-6cb7-4c5b-a08a-69fc2267eb0b",
-        "nextUrl": "https://studio.code.org/projects/music/new"
+        "key": "musiclab_intro_panels_end_pdx-88ca8817-6cb7-4c5b-a08a-69fc2267eb0b"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-16T22:03:25.234+00:00\",\"changed\":[\"cloned from \\\"usiclab_tutorial_panels_end\\\"\"],\"cloned_from\":\"usiclab_tutorial_panels_end\"},{\"changed_at\":\"2024-09-19 19:49:45 +0000\",\"changed\":[\"level_data\",\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-16T22:03:25.234+00:00\",\"changed\":[\"cloned from \\\"usiclab_tutorial_panels_end\\\"\"],\"cloned_from\":\"usiclab_tutorial_panels_end\"},{\"changed_at\":\"2024-09-19 19:49:45 +0000\",\"changed\":[\"level_data\",\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-30 17:14:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

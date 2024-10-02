@@ -419,14 +419,14 @@ class Services::LtiTest < ActiveSupport::TestCase
     expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    actual_section_names = parsed_response.values.map {|v| v[:name]}
+    actual_section_names = parsed_response.values.pluck(:name)
     assert_empty expected_section_names - actual_section_names
   end
 
   test 'course name should match section name when parsing NRPS response with no resource link provided' do
     expected_section_name = [@course_name]
     parsed_response = Services::Lti.parse_nrps_response(@nrps_response_no_rlid_provided, @id_token[:iss])
-    actual_section_name = parsed_response.values.map {|v| v[:name]}
+    actual_section_name = parsed_response.values.pluck(:name)
     assert_empty expected_section_name - actual_section_name
   end
 

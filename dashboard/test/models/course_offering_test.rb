@@ -587,7 +587,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.display_name
     ].sort
 
-    assignable_course_offering_names = CourseOffering.assignable_course_offerings_info(@levelbuilder).values.map {|co| co[:display_name]}
+    assignable_course_offering_names = CourseOffering.assignable_course_offerings_info(@levelbuilder).values.pluck(:display_name)
     expected_course_offering_names.each {|name| assert_includes(assignable_course_offering_names, name)}
   end
 

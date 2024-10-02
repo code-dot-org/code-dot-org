@@ -51,6 +51,7 @@ export type ConfigType = {
   };
   activeGridLayout?: string;
   showFileBrowser: boolean;
+  validMimeTypes?: string[];
 };
 
 export type ProjectType = MultiFileSource;
