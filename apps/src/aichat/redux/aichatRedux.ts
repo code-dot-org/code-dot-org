@@ -8,7 +8,7 @@ import {
 } from '@reduxjs/toolkit';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {sendInProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentScriptLevelId,
   getCurrentLevel,
@@ -296,7 +296,7 @@ export const onSaveComplete =
     dispatch(endSave());
     // Send a report that user has started the aichat level after a successful save.
     // A teacher will view that the level is now in progress.
-    dispatch(sendInProgressReport('aichat', TestResults.LEVEL_STARTED));
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     // Go to the presentation page if we just finished publishing the model card.
     if (currentSaveType === 'publishModelCard') {
       dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -465,7 +465,7 @@ export const submitChatContents = createAsyncThunk(
     // Send a report that the user has started the aichat level after successfully sending
     // a chat message and then receiving a response from the chatbot.
     // A teacher will view that the level is now in progress.
-    dispatch(sendInProgressReport('aichat', TestResults.LEVEL_STARTED));
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     chatApiResponse.messages.forEach(message => {
       dispatch(addChatEvent({...message, timestamp: Date.now()}));
     });
