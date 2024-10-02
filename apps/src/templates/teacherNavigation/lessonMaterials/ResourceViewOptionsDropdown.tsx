@@ -106,7 +106,7 @@ const ResourceViewOptionsDropdown: React.FC<
       });
       options.push({
         value: 'copy-google-docs',
-        label: 'Make a Copy (Google Docs)',
+        label: 'Make a copy (Google Docs)',
         icon: {iconName: 'copy'},
         onClick: () => {
           openInNewTab(gDocsCopyUrl(resource.url));
