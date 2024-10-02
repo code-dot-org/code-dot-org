@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-09-19T21:23:49.000Z",
   "level_num": "custom",
@@ -9,47 +10,16 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "level_data": {
-      "blockMode": "Simple2",
+      "blockMode": "Advanced",
       "toolbox": {
       },
       "startSources": {
-        "blocks": {
-          "languageVersion": 0,
-          "blocks": [
-            {
-              "type": "when_run_simple2",
-              "id": "when-run-block",
-              "x": 30,
-              "y": 30,
-              "deletable": false,
-              "movable": false,
-              "next": {
-                "block": {
-                  "type": "play_sound_at_current_location_simple2",
-                  "id": "play_sound_at_current_location_simple2",
-                  "fields": {
-                    "sound": "beats/drum_kit_disco"
-                  },
-                  "next": {
-                    "block": {
-                      "type": "play_sound_at_current_location_simple2",
-                      "id": "Qik7*Nk_MD[2=:T!!D@|",
-                      "fields": {
-                        "sound": "bass/boom_bass"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      }
+      },
+      "library": "intro2024"
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-19T21:23:49.461+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-loops-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-loops-1\"},{\"changed_at\":\"2024-09-19 21:23:52 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:57:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:58:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-19T21:23:49.461+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-loops-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-loops-1\"},{\"changed_at\":\"2024-09-19 21:23:52 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:57:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:58:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-01 18:06:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-01 18:07:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-01 18:13:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-10-01 18:13:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-10-01 18:49:39 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-01 18:50:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

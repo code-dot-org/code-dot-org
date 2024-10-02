@@ -50,6 +50,7 @@ const Workspace = () => {
       headerContent={headerContent}
       rightHeaderContent={<HeaderButtons />}
       className={moduleStyles.workspace}
+      headerClassName={moduleStyles.workspaceHeader}
     >
       <div
         className={classnames(moduleStyles.workspaceWorkarea, {
