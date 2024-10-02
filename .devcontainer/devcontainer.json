@@ -6,14 +6,14 @@
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
   // Features to add to the dev container. More info: https://containers.dev/features.
-//  "features": {
+  "features": {
 //    "ghcr.io/devcontainers/features/github-cli:1": {
 //      "version": "latest"
 //    },
-//    "ghcr.io/devcontainers/features/node:1": {
-//      "version": "latest"
-//    }
-//  },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
 
   "containerEnv": {
     "CDO_SLACK_BOT_TOKEN": "localoverride",
