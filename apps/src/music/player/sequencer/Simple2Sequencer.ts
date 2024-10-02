@@ -62,9 +62,11 @@ export default class Simple2Sequencer extends Sequencer {
   /**
    * Resets to the default new sequence and clears all sequenced events
    */
-  clear() {
+  clear(preserveEvents?: boolean) {
     this.newSequence();
-    this.functionMap = {};
+    if (!preserveEvents) {
+      this.functionMap = {};
+    }
   }
 
   getLastMeasure(): number {

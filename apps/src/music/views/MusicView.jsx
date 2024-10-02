@@ -502,7 +502,7 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    this.sequencer.clear();
+    this.sequencer.clear(true /* Do not clear events */);
     this.musicBlocklyWorkspace.executeTrigger(id, triggerStartPosition);
     const playbackEvents = this.sequencer.getPlaybackEvents();
     this.props.addPlaybackEvents({

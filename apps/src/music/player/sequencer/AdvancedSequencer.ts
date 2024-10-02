@@ -99,8 +99,10 @@ export default class AdvancedSequencer extends Sequencer {
     return this.playbackEvents;
   }
 
-  clear(): void {
-    this.playbackEvents = [];
+  clear(preserveEvents?: boolean): void {
+    if (!preserveEvents) {
+      this.playbackEvents = [];
+    }
     this.effects = {};
   }
 
