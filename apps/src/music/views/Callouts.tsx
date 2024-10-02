@@ -114,7 +114,7 @@ const Callouts: React.FunctionComponent = () => {
 
   useEffect(() => {
     const toolbox = Blockly.getMainWorkspace()?.getToolbox();
-    if (openToolboxCategory) {
+    if (openToolboxCategory !== undefined) {
       // Open toolbox category if a position is specified.
       // This actually toggles whether a toolbox category is selected.  Ideally, we would only call
       // this if the correct category isn't yet selected, but IToolbox doesn't expose the necessary
