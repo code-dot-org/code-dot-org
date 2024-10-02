@@ -1,0 +1,8 @@
+name 'SP-PL-DSU2L3-L7-Choice'
+display_name 'Pandas Practice'
+description ' Practice importing pandas and converting a csv to a DataFrame. Choose one of the options below!'
+
+sublevels
+level 'datascience-U2L3-L7a_2024-pilot'
+level 'datascience-U2L3-L7b_2024-pilot'
+level 'datascience-U2L3-L7c_2024-pilot'

@@ -1,0 +1,108 @@
+name 'SP-PL-DS-UnitStructure-w-lessons'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course Structure
+
+#### The Data Science unit is divided into **two units**. Each units includes several small projects and activities that provide an opportunity for students to practice new skills.
+
+
+## Role of the teacher
+
+#### The lessons at the start of the unit are designed to help students build foundational knowledge what data science is. All lessons within the Data Science unit are intended to be **facilitated by a teacher**. These lessons are **not designed as self-paced experiences for students** to work through at their own pace.
+
+## Chapters
+
+##### Click on the arrows to expand each section.
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📘 Unit 1: Introduction to Data Science</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### <strong>Description:</strong> In this unit, students explore foundational concepts of data science by developing and refining data questions for analysis. Through hands-on activities using CODAP, they practice basic data analysis, ethical data practices, and visualization techniques. The unit progresses from data science concepts to data cleaning and interpretation, culminating in a project that encourages students to craft a compelling data story using their skills.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📗 Unit 2: Data Science with Python</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### <strong>Description:</strong> In this unit, students explore data analysis using Python. They begin with Python syntax and advance to using libraries like Pandas and Matplotlib to manipulate and visualize complex datasets. Students develop skills in data cleaning, filtering, and statistical analysis to answer data-driven questions. Emphasizing custom visualizations and effective communication, the unit culminates in a project that applies Python skills to address a community or school-based issue.
+
+</p></div>
+</details>
+</details>
+
+## Lessons
+#### Most lessons are designed for **45-minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
+
+### **Lesson Components**
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm Up</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Each lesson begins with a warm up, which serves as a highly approachable shared experience that highlights the need for the skills and understandings presented in the lesson. These should be kept short so that students can quickly move into the main activity of the lesson. Warm ups end with a big question that articulates the problem space students will be exploring during the lesson. This question sets the stage for the target learning.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💃 Activity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Students spend the majority of their time engaging in the lesson activity. Activities provide students with opportunities to explore new computing concepts. Exploration is essential for students to build the content knowledge they will need to understand and participate in computing activities. Lesson activities are scaffolded to provide students with just-in-time information to solve their problems as they build their computing knowledge and skills.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🏁 Wrap Up</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Wrap ups end every lesson and provide students with opportunities to reflect on the skills and understandings presented in the lesson. Wrap ups include a review of any vocabulary introduced in the lesson, and return to the big question introduced in the warm up. Wrap ups are often journal prompts and short discussions that can be used as an exit ticket or short formative assessment.
+</p></div>
+</details>
+
+### **Lesson Types**
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💻 Programming Lessons</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### Programming lessons introduce new programming concepts and skills to students. Although students will spend a majority of their time on the computer during these lessons, programming lessons also include offline components. Students are expected to complete many of the activities in small groups or as a class. The teacher plays an active role facilitating opportunities for sense making and formative assessment as students engage in lesson content. 
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Non-Programming Lessons</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Non-programming lessons focus on process skills and non-programming computing concepts. These lessons are mostly offline, but some do include online components. Offline lessons typically include an activity guide that students will use throughout the lesson as a guide for their learning. Non-programming lessons present students with opportunities for collaboration and discussion in small groups as well as individual reflection.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">👩‍💻 Project Lessons</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### ***Mini-projects*** are opportunities for students to apply what they have learned by creating something new in a more open-ended setting. Mini-projects appear throughout the unit as opportunities for students to practice open-ended application of a small set of new skills. These projects can be expanded or condensed depending on the class time available. 
+
+#### ***Projects*** are multi-day open-ended lessons found at the end of each chapter or unit. Projects challenge students to create using skills developed throughout the unit. Projects often include opportunities for planning, creation, and reflection. 
+</p></div>
+</details>
+
+
+MARKDOWN

@@ -104,7 +104,7 @@ FactoryBot.define do
 
   factory :user do
     birthday {Time.zone.today - 21.years}
-    email {("#{user_type}_#{SecureRandom.uuid}@code.org")}
+    email {"#{user_type}_#{SecureRandom.uuid}@code.org"}
     password {"00secret"}
     locale {'en-US'}
     sequence(:name) {|n| "User#{n} Codeberg"}
@@ -1611,7 +1611,7 @@ FactoryBot.define do
 
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {((School.maximum(:id) || 0).next).to_s}
+    id {(School.maximum(:id) || 0).next.to_s}
     address_line1 {"123 Sample St"}
     address_line2 {"attn: Main Office"}
     city {"Seattle"}
@@ -2038,7 +2038,7 @@ FactoryBot.define do
 
   factory :aichat_request do
     association :user
-    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.to_json}
+    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: "test"}.to_json}
     new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}.to_json}
     stored_messages {[].to_json}
     level_id {1}

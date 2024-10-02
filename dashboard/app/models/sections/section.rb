@@ -106,6 +106,8 @@ class Section < ApplicationRecord
 
   before_validation :strip_emoji_from_name
 
+  scope :visible, -> {where(hidden: false)}
+
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
   def pl_sections_must_use_email_logins
@@ -396,10 +398,11 @@ class Section < ApplicationRecord
         tts_autoplay_enabled: tts_autoplay_enabled,
         sharing_disabled: sharing_disabled?,
         studentCount: students.distinct(&:id).size,
-        code: code,        course_display_name: course_display_name,
+        code: code,
+        course_display_name: course_display_name,
         course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
-        unit_id: unit_group ? script_id : nil,
+        unit_id: script_id,
         course_id: course_id,
         hidden: hidden,
         restrict_section: restrict_section,
@@ -693,6 +696,10 @@ class Section < ApplicationRecord
     elsif students.exists?(email: instructor.email)
       raise ArgumentError.new('already a student')
     end
+  end
+
+  def lti?
+    lti_section.present?
   end
 
   private def soft_delete_lti_section

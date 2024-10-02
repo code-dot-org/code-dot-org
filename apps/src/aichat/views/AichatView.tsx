@@ -100,8 +100,8 @@ const AichatView: React.FunctionComponent = () => {
     projectManager.addSaveSuccessListener(() => {
       dispatch(onSaveComplete());
     });
-    projectManager.addSaveFailListener((e: Error) => {
-      dispatch(onSaveFail(e));
+    projectManager.addSaveFailListener(() => {
+      dispatch(onSaveFail());
     });
   }, [projectManager, dispatch]);
 

@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 ## Unit 1: Foundations of Generative AI 
 
-#### This unit consists of 11 lessons and takes about 2.5 weeks to complete.
+#### This unit consists of 11 lessons and takes about 2.5 weeks to complete. It is primarily unplugged and can be done without devices.
 
 <img src="https://images.code.org/253b0e26c460cbe7c84792effee1a70e-image-1712672034629.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 190px; width: 210px; margin: 20px 50px 50px 20px; ">
 
@@ -24,11 +24,11 @@ markdown <<MARKDOWN
 - #### Demystify generative AI models by exploring their internal structures through input, storage, process, and output.
 - #### Understand the impact of training data on model performance and the potential for bias in generative AI systems.
 
-#### <b> Explore Unit One <a href = "link" target = "blank" rel = "noopener noreferrer"> here </a></b>
+#### <b> Explore Unit One <a href = "https://studio.code.org/s/foundations-gen-ai-2024" target = "blank" rel = "noopener noreferrer"> here </a></b>
 
 ## Unit 2: Customizing Language Models
 
-#### This unit consists of 15 lessons and takes about 4 weeks to complete.
+#### This unit consists of 15 lessons and takes about 4 weeks to complete and features the new AI Chat lab tool.
 
 <img src="https://images.code.org/4adb0f9acc3b4e3c089acb44c14e8d39-image-1726074091862.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 205px; margin: 20px 50px 50px 20px; ">
 

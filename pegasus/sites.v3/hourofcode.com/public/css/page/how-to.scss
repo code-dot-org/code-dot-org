@@ -79,6 +79,10 @@ nav.choose-guide {
       background: var(--neutral_white);
       border-color: var(--neutral_white);
     }
+
+    &:is(:hover, :active):not(.active) {
+      background: rgba(255, 255, 255, 0.4);
+    }
   }
 
   // TODO clean this up after soon-hoc launch

@@ -537,7 +537,7 @@ module Api::V1::Pd
       assert_response :success
 
       assert_equal(
-        expected_applications.map {|application| application[:status]}.sort,
+        expected_applications.pluck(:status).sort,
         JSON.parse(@response.body).map {|application| application['status']}.sort
       )
     end

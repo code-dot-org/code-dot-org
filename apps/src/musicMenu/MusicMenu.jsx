@@ -51,19 +51,19 @@ const optionsList = [
     ],
   },
   {
+    name: 'pack-dialog-2',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Use regular pack dialog.'},
+      {value: 'true', description: 'Use pack dialog 2.'},
+    ],
+  },
+  {
     name: 'show-tts',
     type: 'radio',
     values: [
       {value: 'false', description: 'Hide text to speech.'},
       {value: 'true', description: 'Show text to speech.'},
-    ],
-  },
-  {
-    name: 'sounds-panel-2',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Use original sounds panel (default).'},
-      {value: 'true', description: 'Use new sounds panel.'},
     ],
   },
   {
@@ -80,6 +80,14 @@ const optionsList = [
     values: [
       {value: 'false', description: 'Hide play pattern AI block (default).'},
       {value: 'true', description: 'Show play pattern AI block.'},
+    ],
+  },
+  {
+    name: 'hide-ai-temperature',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Show AI temperature (default).'},
+      {value: 'true', description: 'Hide AI temperature.'},
     ],
   },
   {

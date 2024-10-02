@@ -183,7 +183,7 @@ function drawHand(x, y){
  * Checks for unclicked sprites, and show hand with rings 
  * at unclicked sprites.
  */
-function checkForUnclickedSprites(spriteIds, eventLog){
+function checkForUnclickedSprites(spriteIds, eventLog, isTransformers){
   for(var i=0;i<spriteIds.length;i++){
     var foundClick=false;
     for(var j=0;j<eventLog.length;j++){
@@ -195,8 +195,14 @@ function checkForUnclickedSprites(spriteIds, eventLog){
       }
     }
     if(!foundClick){
-      drawRings(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
-      drawHand(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
+      var offset = 0;
+      if(isTransformers) {
+        // Move the pointers up and away from the Transformer's crotch. @@
+        console.log(getProp({id: i}, "scale"));
+        offset = getProp({id: i}, "scale") / 4;
+      }
+      drawRings(getProp({id: i}, "x"),400-getProp({id: i}, "y")-offset);
+      drawHand(getProp({id: i}, "x"),400-getProp({id: i}, "y")-offset);
     }
   }
 }
@@ -475,31 +481,6 @@ function checkTwoSprites(spriteIds){
 function checkBackgroundChanged(){
   var background = getBackground();
   return background !== undefined && background !== "#ffffff";
-}
-
-
-
-/**
- * Checks for unclicked sprites, and show hand with rings
- *
- * @return 
- */
-function checkForUnclickedSprites(spriteIds, eventLog){
-  for(var i=0;i<spriteIds.length;i++){
-    var foundClick=false;
-    for(var j=0;j<eventLog.length;j++){
-      if(eventLog[j].includes(i)){
-        foundClick=true;
-        if(validationProps.clickedSprites.indexOf(i)==-1){
-          validationProps.clickedSprites.push(i);
-        }
-      }
-    }
-    if(!foundClick){
-      drawRings(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
-      drawHand(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
-    }
-  }
 }
 
 

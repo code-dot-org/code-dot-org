@@ -10,6 +10,6 @@ $(document).ready(function () {
 
   ReactDOM.render(
     <EditAichatSettings initialSettings={initialSettings} />,
-    document.getElementById('aichat-settings-container')
+    document.getElementById('aichat-settings-editor')
   );
 });
