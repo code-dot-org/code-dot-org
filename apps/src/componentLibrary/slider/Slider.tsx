@@ -185,7 +185,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   ]);
 
   return (
-    <label
+    <div
       className={classnames(
         moduleStyles.slider,
         moduleStyles[`slider-${color}`]
@@ -193,9 +193,9 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     >
       <div className={moduleStyles.sliderLabelSection}>
         {label && (
-          <span id={labelId} className={moduleStyles.sliderLabel}>
+          <label id={labelId} className={moduleStyles.sliderLabel}>
             {label}
-          </span>
+          </label>
         )}
 
         {/* Display the value with a % sign if percentMode is true */}
@@ -208,6 +208,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
         {
           <Button
             {...defaultSliderButtonProps}
+            color={color === 'white' ? 'white' : 'black'}
             {...leftButtonProps}
             aria-label={'hesta'}
             icon={{iconName: 'turtle'}}
@@ -258,6 +259,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
         {true && (
           <Button
             {...defaultSliderButtonProps}
+            color={color === 'white' ? 'white' : 'black'}
             {...rightButtonProps}
             aria-label={'hesta'}
             icon={{iconName: 'rabbit'}}
@@ -266,7 +268,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
           />
         )}
       </div>
-    </label>
+    </div>
   );
 };
 
