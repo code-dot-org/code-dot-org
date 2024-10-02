@@ -99,7 +99,7 @@ const defaultConfig: ConfigType = {
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource, startSource, projectVersion} =
+  const {source, setSource, startSource, projectVersion, validationFile} =
     useSource(defaultProject);
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
@@ -128,7 +128,13 @@ const PythonlabView: React.FunctionComponent = () => {
     dispatch: AppDispatch,
     source: MultiFileSource | undefined
   ) => {
-    await handleRunClick(runTests, dispatch, source, progressManager);
+    await handleRunClick(
+      runTests,
+      dispatch,
+      source,
+      progressManager,
+      validationFile
+    );
     // Only send a predict level report if this is a predict level and the predict
     // answer was not locked.
     if (isPredictLevel && !predictAnswerLocked) {

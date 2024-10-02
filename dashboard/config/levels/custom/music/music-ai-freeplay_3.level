@@ -9,7 +9,7 @@
     "finish_dialog": "hoc2024",
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "###Your turn\r\nThere are lots of new sounds and effects in your toolbox now. Explore and make some music!",
+    "long_instructions": "###Your turn\r\nCheck out all the new blocks and make some music! ",
     "hide_share_and_remix": "false",
     "level_data": {
       "library": "launch2024",
@@ -23,7 +23,7 @@
     "name_suffix": "_3",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:43.435+00:00\",\"changed\":[\"cloned from \\\"music-ai-freeplay\\\"\"],\"cloned_from\":\"music-ai-freeplay\"},{\"changed_at\":\"2024-09-30 21:19:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:43.435+00:00\",\"changed\":[\"cloned from \\\"music-ai-freeplay\\\"\"],\"cloned_from\":\"music-ai-freeplay\"},{\"changed_at\":\"2024-09-30 21:19:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:39:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

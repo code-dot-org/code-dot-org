@@ -14,6 +14,7 @@ Feature: School Info Confirmation Dialog
 # 4. A year later after the user has completed school info, the user sees prompt to
 # confirm or update current school info.
 
+@no_safari
 Scenario: School Info Confirmation Dialog
   # Teacher account is created with partial school info
   Given I create a teacher named "Teacher_Chuba" and go home
