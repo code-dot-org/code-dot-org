@@ -3,8 +3,8 @@
 # Read PATH from devcontainer defaults
 . $HOME/.profile
 
-# Install PDM
-pdm install
+bundle exec rake install
+bundle exec rake package
 
 cd dashboard
 bundle exec rake dashboard:setup_db
