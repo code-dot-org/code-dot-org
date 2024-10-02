@@ -138,13 +138,36 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   // Calculate percentage fill for gradient
   const calculateFillPercent = useCallback(
     (value: number) => {
-      return `${
-        (100 * (value - Number(minSliderValue))) /
-        (Number(maxSliderValue) - Number(minSliderValue))
-      }%`;
+      const center = (Number(minSliderValue) + Number(maxSliderValue)) / 2;
+      if (isCentered) {
+        if (value >= center) {
+          // Value is on the right side of the center
+          return {
+            fillPercent:
+              ((value - center) / (Number(maxSliderValue) - center)) * 50 + 50,
+            leftFill: false, // No left fill, fill right side only
+          };
+        } else {
+          // Value is on the left side of the center
+          return {
+            fillPercent:
+              50 - ((center - value) / (center - Number(minSliderValue))) * 50,
+            leftFill: true, // Left fill from center
+          };
+        }
+      } else {
+        // Regular fill calculation
+        return {
+          fillPercent:
+            (100 * (value - Number(minSliderValue))) /
+            (Number(maxSliderValue) - Number(minSliderValue)),
+          leftFill: false,
+        };
+      }
     },
-    [minSliderValue, maxSliderValue]
+    [isCentered, minSliderValue, maxSliderValue]
   );
+
   // Function to snap the value to the nearest step in the steps array
   const snapToStep = (value: number) => {
     if (!steps || steps.length === 0) {
@@ -169,12 +192,20 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     return `${percentage}%`;
   };
 
-  // Function to calculate the background style for the slider
   useEffect(() => {
-    const fillPercent = calculateFillPercent(Number(sliderValue));
-    setBackgroundStyle(
-      `linear-gradient(to right, ${fillColor} ${fillPercent}, ${emptyColor} ${fillPercent})`
-    );
+    const {fillPercent, leftFill} = calculateFillPercent(Number(sliderValue));
+    if (isCentered) {
+      // Centered mode: adjust gradient to fill from center outwards
+      setBackgroundStyle(
+        leftFill
+          ? `linear-gradient(to right, ${emptyColor} ${fillPercent}%, ${fillColor} ${fillPercent}%, ${fillColor} 50%, ${emptyColor} 50%)`
+          : `linear-gradient(to right, ${emptyColor} 50%, ${fillColor} 50%, ${fillColor} ${fillPercent}%, ${emptyColor} ${fillPercent}%)`
+      );
+    } else {
+      setBackgroundStyle(
+        `linear-gradient(to right, ${fillColor} ${fillPercent}%, ${emptyColor} ${fillPercent}%)`
+      );
+    }
   }, [
     sliderValue,
     fillColor,
@@ -182,6 +213,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     minSliderValue,
     maxSliderValue,
     calculateFillPercent,
+    isCentered,
   ]);
 
   return (
