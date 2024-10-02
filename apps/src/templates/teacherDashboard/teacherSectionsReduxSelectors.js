@@ -123,6 +123,8 @@ export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
   courseVersionName: serverSection.courseVersionName,
+  unitName: serverSection.unitName,
+  isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   loginTypeName: serverSection.login_type_name,
