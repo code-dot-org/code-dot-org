@@ -49,6 +49,18 @@ module MailJetConstants
         default: 10_443_291,
         'es-MX': 10_443_295,
       },
-    }
+    },
+    hoc_guide_series: {
+      production: {
+        default: 10_456_457,
+      },
+      staging: {
+        default: 407_739,
+      },
+      development: {
+        default: 10_443_291,
+        'es-MX': 10_443_295,
+      },
+    },
   }
 end
