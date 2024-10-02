@@ -107,8 +107,10 @@ def main
       AI_CHAT_MODEL_IDS
       FEATURED_PROJECT_STATUS
       FEATURED_PROJECT_CONSTANTS
+      CAP_LINKS
       LMS_LINKS
       USER_TYPES
+      US_STATES
     ), 
     file_type: 'ts'
   )
