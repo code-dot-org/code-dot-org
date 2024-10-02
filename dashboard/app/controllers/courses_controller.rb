@@ -37,15 +37,6 @@ class CoursesController < ApplicationController
       return
     end
 
-    if current_user&.user_type == "teacher"
-      sections = current_user.sections_instructed
-      section = sections.order(created_at: :desc).find {|s| s.unit_group == @unit_group}
-      if section
-        redirect_to "/teacher_dashboard/sections/#{section.id}/course/#{section.unit_group.name}"
-        return
-      end
-    end
-
     @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
 
     @locale_code = request.locale
