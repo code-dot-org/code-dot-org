@@ -80,11 +80,11 @@ class UnitEditor extends React.Component {
       .isRequired,
     initialProjectSharing: PropTypes.bool,
     initialCurriculumUmbrella: PropTypes.oneOf(
-      Object.values(CurriculumUmbrella).push('')
+      [...Object.values(CurriculumUmbrella), '']
     ),
     initialTopicTags: PropTypes.arrayOf(PropTypes.string),
     initialContentArea: PropTypes.oneOf(
-      Object.keys(CurriculumContentArea).push('')
+      [...Object.keys(CurriculumContentArea), '']
     ),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
