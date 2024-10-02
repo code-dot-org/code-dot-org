@@ -94,8 +94,8 @@ export default class MusicValidator extends Validator {
     // Get number of different sounds that have been started.
     let playedNumberDifferentSounds = 0;
 
-    // Get number of different sounds that have been started.
-    let playedNumberTriggeredSounds = 0;
+    // A list of unique invocated ids associated with played trigger sounds.
+    const playedTriggerSoundUniqueInvocationIds = [] as number[];
 
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
@@ -132,6 +132,7 @@ export default class MusicValidator extends Validator {
             uniqueCurrentSounds.push(eventData.id);
           }
 
+          // Simple2 only
           if (eventData.triggered) {
             this.conditionsChecker.addSatisfiedCondition({
               name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
@@ -153,8 +154,16 @@ export default class MusicValidator extends Validator {
 
         playedNumberSounds++;
 
+        // In order to check that the user has pressed the beat map buttons multiple times,
+        // we look at the unique invocation id. (Simple2 only)
         if (eventData.triggered) {
-          playedNumberTriggeredSounds++;
+          const invocationId = eventData.functionContext?.uniqueInvocationId;
+          if (
+            invocationId &&
+            !playedTriggerSoundUniqueInvocationIds.includes(invocationId)
+          ) {
+            playedTriggerSoundUniqueInvocationIds.push(invocationId);
+          }
         }
 
         if (!uniqueSounds.includes(eventData.id)) {
@@ -232,7 +241,7 @@ export default class MusicValidator extends Validator {
 
     this.addPlayedConditions(
       MusicConditions.PLAYED_SOUND_TRIGGERED_MULTIPLE_TIMES.name,
-      playedNumberTriggeredSounds
+      playedTriggerSoundUniqueInvocationIds.length
     );
 
     // Add satisfied conditions for the played patterns.
