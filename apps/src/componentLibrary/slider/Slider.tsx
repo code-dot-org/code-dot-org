@@ -1,8 +1,13 @@
 import classnames from 'classnames';
-import React, {ChangeEvent, HTMLAttributes} from 'react';
+import React, {
+  ChangeEvent,
+  HTMLAttributes,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
 
 import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
-import Typography from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './slider.module.scss';
 
@@ -41,6 +46,21 @@ const defaultSliderButtonProps: ButtonProps = {
   size: 'xs',
 };
 
+const sliderTrackColorsMap = {
+  black: {
+    fill: moduleStyles.sliderBlackTrackFillColor,
+    empty: moduleStyles.sliderBlackTrackEmptyColor,
+  },
+  brand: {
+    fill: moduleStyles.sliderBrandTrackFillColor,
+    empty: moduleStyles.sliderBrandTrackEmptyColor,
+  },
+  white: {
+    fill: moduleStyles.sliderWhiteTrackFillColor,
+    empty: moduleStyles.sliderWhiteTrackEmptyColor,
+  },
+};
+
 // TODO:
 // * MARKUP
 //  - demo stepper +
@@ -51,6 +71,20 @@ const defaultSliderButtonProps: ButtonProps = {
 // * add tests
 // * cleanup
 // * update README
+
+// structure:
+// .slider
+//  .sliderLabelSection
+//    span - label
+//    span - value
+//  .sliderMainContainer
+//    button - left button
+//    .sliderWrapper
+//      input[type="range"]
+//      .centerMark
+//      .stepMarksContainer
+//        .stepMark[]
+//    button - right button
 
 /**
  * ### Production-ready Checklist:
@@ -84,6 +118,10 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   ...HTMLInputAttributes
 }) => {
   const labelId = `${name}-label`;
+  const fillColor = sliderTrackColorsMap[color].fill;
+  const emptyColor = sliderTrackColorsMap[color].empty;
+
+  const [backgroundStyle, setBackgroundStyle] = useState('');
 
   // Override min and max values for percent mode
   const minSliderValue = isPercentMode && minValue === undefined ? 0 : minValue;
@@ -97,6 +135,16 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   const sliderValue =
     isCentered && value === undefined ? centerValue : value || defaultValue;
 
+  // Calculate percentage fill for gradient
+  const calculateFillPercent = useCallback(
+    (value: number) => {
+      return `${
+        (100 * (value - Number(minSliderValue))) /
+        (Number(maxSliderValue) - Number(minSliderValue))
+      }%`;
+    },
+    [minSliderValue, maxSliderValue]
+  );
   // Function to snap the value to the nearest step in the steps array
   const snapToStep = (value: number) => {
     if (!steps || steps.length === 0) {
@@ -121,22 +169,33 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     return `${percentage}%`;
   };
 
+  // Function to calculate the background style for the slider
+  useEffect(() => {
+    const fillPercent = calculateFillPercent(Number(sliderValue));
+    setBackgroundStyle(
+      `linear-gradient(to right, ${fillColor} ${fillPercent}, ${emptyColor} ${fillPercent})`
+    );
+  }, [
+    sliderValue,
+    fillColor,
+    emptyColor,
+    minSliderValue,
+    maxSliderValue,
+    calculateFillPercent,
+  ]);
+
   return (
     <label
       className={classnames(
-        moduleStyles.sliderLabel,
-        moduleStyles[`sliderLabel-${color}`]
+        moduleStyles.slider,
+        moduleStyles[`slider-${color}`]
       )}
     >
       <div className={moduleStyles.sliderLabelSection}>
         {label && (
-          <Typography
-            id={labelId}
-            semanticTag="span"
-            visualAppearance="body-two"
-          >
+          <span id={labelId} className={moduleStyles.sliderLabel}>
             {label}
-          </Typography>
+          </span>
         )}
 
         {/* Display the value with a % sign if percentMode is true */}
@@ -168,6 +227,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             disabled={disabled}
             onChange={handleChange}
             aria-labelledby={labelId}
+            style={{background: backgroundStyle}} // Apply dynamic background gradient style
             {...HTMLInputAttributes}
           />
           {isCentered && (

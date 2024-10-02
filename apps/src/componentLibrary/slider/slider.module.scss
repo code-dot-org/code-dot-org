@@ -1,7 +1,28 @@
 @import "color";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
+
+//Slider colors for use in JSX/TSX
+$slider-black-track-fill-color: $light_black;
+$slider-black-track-empty-color: $light_gray_400;
+$slider-brand-track-fill-color: $light_primary_500;
+$slider-brand-track-empty-color: $light_gray_400;
+$slider-white-track-fill-color: $light_white;
+$slider-white-track-empty-color: $light_gray_400;
+
+:export {
+  sliderBlackTrackFillColor: $slider-black-track-fill-color;
+  sliderBlackTrackEmptyColor: $slider-black-track-empty-color;
+
+  sliderBrandTrackFillColor: $slider-brand-track-fill-color;
+  sliderBrandTrackEmptyColor: $slider-brand-track-empty-color;
+
+  sliderWhiteTrackFillColor: $slider-white-track-fill-color;
+  sliderWhiteTrackEmptyColor: $slider-white-track-empty-color;
+}
+
 
 // Slider common styles
-.sliderLabel {
+.slider {
   display: flex;
   width: 300px;
   flex-direction: column;
@@ -16,8 +37,10 @@
   gap: 8px;
   align-self: stretch;
 
-  > :first-child {
+  .sliderLabel {
+    @include label-two;
     flex: 1;
+    margin-bottom: 0;
   }
 }
 
@@ -26,33 +49,198 @@
   align-items: center;
   gap: 2px;
   align-self: stretch;
-}
 
-.sliderWrapper {
-  position: relative;
-  width: 100%;
-
-  input {
+  .sliderWrapper {
+    position: relative;
     width: 100%;
+
+    input {
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+      appearance: none;
+      background-image: unset;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 8px;
+      cursor: pointer;
+      background: transparent;
+      border-radius: 5px;
+    }
+
+    input[type="range"]::-moz-range-track {
+      width: 100%;
+      height: 8px;
+      cursor: pointer;
+      background: transparent;
+      border-radius: 5px;
+    }
+
+    input[type="range"]::-ms-track {
+      width: 100%;
+      height: 8px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+    input[type="range"]::-moz-range-progress {
+      background: transparent;
+      height: 8px;
+      border-radius: 5px;
+    }
+
+    input[type="range"]::-ms-fill-lower {
+      background: transparent;
+      border-radius: 10px;
+    }
+
+    input[type="range"]::-ms-fill-upper {
+      background: transparent;
+      border-radius: 10px;
+    }
+
+
+    /* Special styling for WebKit/Blink */
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      z-index: 2;
+      box-sizing: border-box;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background-color: transparent;
+      cursor: pointer;
+      margin-top: -3px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    }
+
+    /* All the same stuff for Firefox */
+    input[type="range"]::-moz-range-thumb {
+      -webkit-appearance: none;
+      z-index: 2;
+      box-sizing: border-box;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background-color: transparent;
+      cursor: pointer;
+      margin-top: -3px;
+    }
+
+    /* All the same stuff for IE */
+    input[type="range"]::-ms-thumb {
+      -webkit-appearance: none;
+      z-index: 2;
+      box-sizing: border-box;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background-color: transparent;
+      cursor: pointer;
+    }
   }
-}
 
-.centerMark {
-  position: absolute;
-  z-index: -1;
-  bottom: -5px; /* Adjust as needed */
-  width: 2px;
-  height: 12px; /* Height of the center mark */
-  background-color: red; /* Color for the center mark */
-}
+  .centerMark {
+    position: absolute;
+    z-index: 1;
+    bottom: 4.5px;
+    width: 2px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 2px;
+  }
 
-.stepMark {
-  position: absolute;
-  height: 10px;
-  width: 2px;
-  background-color: black;
-  bottom: -2px; /* Adjust as needed */
+  .stepMark {
+    position: absolute;
+    height: 10px;
+    width: 2px;
+    background-color: black;
+    bottom: -2px; /* Adjust as needed */
+  }
 }
 
 
 // Slider Colors
+.slider-black {
+  .sliderMainContainer {
+    .sliderWrapper {
+      input[type="range"]::-webkit-slider-thumb {
+        background-color: $light_white;
+        border-color: $light_black;
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        background-color: $light_white;
+        border-color: $light_black;
+      }
+
+      input[type="range"]::-ms-thumb {
+        background-color: $light_white;
+        border-color: $light_black;
+      }
+
+      .centerMark {
+        border-color: $light_black;
+      }
+    }
+  }
+
+}
+
+.slider-brand {
+  .sliderMainContainer {
+    .sliderWrapper {
+      input[type="range"]::-webkit-slider-thumb {
+        background-color: $light_white;
+        border-color: $light_black;
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        background-color: $light_white;
+        border-color: $light_black;
+      }
+
+      input[type="range"]::-ms-thumb {
+        background-color: $light_white;
+        border-color: $light_black;
+      }
+
+      .centerMark {
+        border-color: $light_black;
+      }
+    }
+  }
+}
+
+.slider-white {
+  .sliderMainContainer {
+    .sliderWrapper {
+      input[type="range"]::-webkit-slider-thumb {
+        background-color: $light_black;
+        border-color: $light_white;
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        background-color: $light_black;
+        border-color: $light_white;
+      }
+
+      input[type="range"]::-ms-thumb {
+        background-color: $light_black;
+        border-color: $light_white;
+      }
+
+      .centerMark {
+        border-color: $light_white;
+      }
+    }
+  }
+}

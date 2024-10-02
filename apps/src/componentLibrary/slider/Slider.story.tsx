@@ -170,6 +170,7 @@ GroupOfColorsOfSliders.args = {
     {
       name: 'slider-white',
       label: 'Slider White',
+      color: 'white',
       onChange: () => null,
     },
     {
@@ -189,6 +190,7 @@ GroupOfColorsOfSliders.args = {
     {
       name: 'slider-white-centered',
       label: 'Slider White Centered',
+      color: 'white',
       isCentered: true,
       onChange: () => null,
     },
