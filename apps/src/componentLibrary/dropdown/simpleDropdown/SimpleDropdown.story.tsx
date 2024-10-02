@@ -93,7 +93,7 @@ DisabledDropdown.args = {
 };
 
 export const WithErrorDropdown = SingleTemplate.bind({});
-DisabledDropdown.args = {
+WithErrorDropdown.args = {
   name: 'error-dropdown',
   items: [
     {value: 'option-1', text: 'Option 1'},
@@ -107,7 +107,7 @@ DisabledDropdown.args = {
 };
 
 export const WithHelperMessageDropdown = SingleTemplate.bind({});
-DisabledDropdown.args = {
+WithHelperMessageDropdown.args = {
   name: 'helper-message-dropdown',
   items: [
     {value: 'option-1', text: 'Option 1'},
@@ -121,7 +121,7 @@ DisabledDropdown.args = {
 };
 
 export const WithHelperMessageAndIconDropdown = SingleTemplate.bind({});
-DisabledDropdown.args = {
+WithHelperMessageAndIconDropdown.args = {
   name: 'helper-icon-dropdown',
   items: [
     {value: 'option-1', text: 'Option 1'},
