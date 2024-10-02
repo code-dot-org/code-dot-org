@@ -103,7 +103,7 @@ module AichatSafetyHelper
         {name: 'PromptVersion', value: get_safety_system_prompt},
       ]
       if metric_name == 'Finish'
-        safety_dimensions << {name: 'Attempts', value: num_attempts}
+        safety_dimensions << {name: 'Attempts', value: num_attempts.to_s}
       end
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
@@ -129,7 +129,7 @@ module AichatSafetyHelper
             dimensions: [
               {name: 'Environment', value: CDO.rack_env},
               {name: 'SafetySystemPrompt', value: get_safety_system_prompt},
-              {name: 'Attempts', value: num_attempts},
+              {name: 'Attempts', value: num_attempts.to_s},
             ]
           }
         ]
