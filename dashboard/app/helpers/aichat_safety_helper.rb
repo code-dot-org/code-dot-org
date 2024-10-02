@@ -37,7 +37,7 @@ module AichatSafetyHelper
     private def openai_safety_check(text)
       details = nil
       start_time = Time.now
-      report_openai_safety_check("#{self.class.name}.OpenaiStart")
+      report_openai_safety_check("Start")
       # Try twice in case of network errors or model not correctly following directions and
       # replying with something other valid expected output.
       attempts = 1
@@ -45,7 +45,7 @@ module AichatSafetyHelper
         openai_response = OpenaiChatHelper.request_safety_check(text, get_safety_system_prompt)
         evaluation = JSON.parse(openai_response)['choices'][0]['message']['content']
         unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
-          report_openai_safety_check("#{self.class.name}.OpenaiInvalidResponse")
+          report_openai_safety_check("InvalidResponse")
           attempts += 1
           raise "Unexpected response from OpenAI: #{evaluation}"
         end
@@ -55,7 +55,7 @@ module AichatSafetyHelper
           }
         end
       end
-      report_openai_safety_check("#{self.class.name}.OpenaiFinish")
+      report_openai_safety_check("Finish", attempts)
       latency = Time.now - start_time
       report_openai_safety_latency(latency, attempts)
       details
@@ -97,18 +97,22 @@ module AichatSafetyHelper
       'V0'
     end
 
-    private def report_openai_safety_check(metric_name)
+    private def report_openai_safety_check(metric_name, num_attempts = 1)
+      safety_dimensions = [
+        {name: 'Environment', value: CDO.rack_env},
+        {name: 'PromptVersion', value: get_safety_system_prompt},
+      ]
+      if metric_name == 'Finish'
+        safety_dimensions << {name: 'Attempts', value: num_attempts}
+      end
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
           {
-            metric_name: metric_name,
+            metric_name: "AichatSafety.Openai.#{metric_name}",
             value: 1,
             unit: 'Count',
             timestamp: Time.now,
-            dimensions: [
-              {name: 'Environment', value: CDO.rack_env},
-              {name: 'SafetySystemPrompt', value: get_safety_system_prompt},
-            ]
+            dimensions: safety_dimensions
           }
         ]
       )
@@ -118,7 +122,7 @@ module AichatSafetyHelper
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
           {
-            metric_name: "#{self.class.name}.OpenaiLatency",
+            metric_name: "AichatSafety.Openai.Latency",
             value: latency,
             unit: 'Seconds',
             timestamp: Time.now,
