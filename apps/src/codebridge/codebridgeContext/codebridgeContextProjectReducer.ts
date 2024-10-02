@@ -302,6 +302,12 @@ export const projectReducer = (
         Object.values(newProject.files)
           .filter(f => files.has(f.id))
           .forEach(f => delete newProject.files[f.id]);
+        if (newProject.openFiles) {
+          // Delete files from the list of open files.
+          newProject.openFiles = newProject.openFiles.filter(
+            fileId => !files.has(fileId)
+          );
+        }
       }
 
       return newProject;
