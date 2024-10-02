@@ -47,11 +47,37 @@ function SectionProgressV2({
     return unitData && isLevelProgressLoaded;
   }, [unitData, isLevelProgressLoaded]);
 
+  // We don't want to load data more than necessary, so we only load data when
+  // the scriptId or sectionId changes, and only if we haven't already loaded
+  // data for that scriptId and sectionId recently.
+  const [loadedData, setLoadedData] = React.useState({
+    scriptId: null,
+    sectionId: null,
+  });
+
   React.useEffect(() => {
-    if (sectionId && scriptId) {
-      loadUnitProgress(scriptId, sectionId);
+    if (
+      (!unitData || unitData.id !== scriptId) &&
+      (scriptId !== loadedData.scriptId ||
+        sectionId !== loadedData.sectionId) &&
+      !isLoadingProgress &&
+      !isRefreshingProgress &&
+      sectionId &&
+      scriptId
+    ) {
+      loadUnitProgress(scriptId, sectionId).then(() =>
+        setLoadedData({scriptId, sectionId})
+      );
     }
-  }, [scriptId, sectionId]);
+  }, [
+    scriptId,
+    sectionId,
+    unitData,
+    isLoadingProgress,
+    isRefreshingProgress,
+    loadedData,
+    setLoadedData,
+  ]);
 
   const isViewingValidatedLevel = React.useMemo(() => {
     return unitData?.lessons
