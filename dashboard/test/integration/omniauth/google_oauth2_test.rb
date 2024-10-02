@@ -20,8 +20,7 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      new_omniauth_redirect
-      assert_redirected_to '/users/new_sign_up/finish_student_account'
+      omniauth_redirect
       assert PartialRegistration.in_progress? session
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
@@ -53,7 +52,8 @@ module OmniauthCallbacksControllerTests
 
       get '/users/new_sign_up/login_type'
       sign_in_through_google
-      omniauth_redirect
+      new_omniauth_redirect
+      assert_redirected_to '/users/new_sign_up/finish_student_account'
       assert PartialRegistration.in_progress? session
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
