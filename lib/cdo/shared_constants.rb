@@ -1,5 +1,6 @@
 require 'json'
 require_relative 'http_cache'
+require_relative '../state_abbr'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
@@ -700,6 +701,10 @@ module SharedConstants
     {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
   )
 
+  CAP_LINKS = OpenStruct.new(
+    PARENTAL_CONSENT_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts',
+  )
+
   LMS_LINKS = OpenStruct.new(
     {
       INTEGRATION_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org',
@@ -745,6 +750,12 @@ module SharedConstants
     TEACHER: 'teacher',
   ).freeze
 
+  NON_SCHOOL_OPTIONS = OpenStruct.new(
+    SELECT_A_SCHOOL: 'selectASchool',
+    CLICK_TO_ADD: 'clickToAdd',
+    NO_SCHOOL_SETTING: 'noSchoolSetting'
+  ).freeze
+
   AI_REQUEST_EXECUTION_STATUS = {
     # The request has been created but has not yet been processed.
     NOT_STARTED: 0,
@@ -775,4 +786,6 @@ module SharedConstants
     KAREN: "gen-ai-karen-creative-mistral-7b",
     PIRATE: "gen-ai-mistral-pirate-7b"
   }
+
+  US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 end

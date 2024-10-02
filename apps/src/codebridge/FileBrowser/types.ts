@@ -7,6 +7,14 @@ export enum DragType {
   FOLDER,
 }
 
+export type DragDataType = {
+  id: FileId | FolderId;
+  type: DragType;
+  parentId: FolderId;
+};
+
+export type DropDataType = {id: string};
+
 export type downloadFileType = (fileId: FileId) => void;
 export type moveFilePromptType = (fileId: FileId) => void;
 export type moveFolderPromptType = (folderId: FolderId) => void;

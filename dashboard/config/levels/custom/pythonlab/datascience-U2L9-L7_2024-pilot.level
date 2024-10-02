@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2024-09-17T21:09:51.000Z",
   "level_num": "custom",
@@ -32,13 +33,24 @@
           "folderId": "0",
           "active": false,
           "open": true
+        },
+        "2": {
+          "id": "2",
+          "name": "test.py",
+          "language": "py",
+          "contents": "import unittest\nimport ast\n\nclass TestSeaLevelYearlyAggregation(unittest.TestCase):\n\n    def setUp(self):\n        pass\n\n    def tearDown(self):\n        pass\n\n    def test_groupby_and_agg_on_sea_level_anomalies(self):\n        \"\"\"Use the groupby() function to group the data by year and apply the agg() function to calculate the total, average, minimum, and maximum sea level anomalies.\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Parse the script using AST\n        tree = ast.parse(script_content)\n        year_groupby_detected = False\n        agg_function_detected = False\n        required_aggregations = {'sum', 'mean', 'min', 'max'}\n        detected_aggregations = set()\n\n        # Traverse the AST to detect groupby for 'Year' and agg() usage\n        for node in ast.walk(tree):\n            # Detect `groupby` operations on 'Year'\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'groupby':\n                    # Look for groupby parameters matching 'Year'\n                    if len(node.args) > 0 and isinstance(node.args[0], ast.Constant):\n                        if node.args[0].value == 'Year':\n                            year_groupby_detected = True\n\n            # Detect `agg()` function applied to grouped data\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'agg':\n                    agg_function_detected = True\n\n                    # Detect specific aggregation functions used within `agg()`\n                    if len(node.args) > 0 and isinstance(node.args[0], ast.List):\n                        for element in node.args[0].elts:\n                            if isinstance(element, ast.Constant) and element.value in required_aggregations:\n                                detected_aggregations.add(element.value)\n\n        # Assert that both groupby and agg with required aggregations are detected\n        self.assertTrue(year_groupby_detected, \"Group the data by 'Year' to show the yearly sea level changes.\")\n        self.assertTrue(agg_function_detected, \"Use the agg() function to calculate the total, average, minimum, and maximum sea level anomalies.\")\n        self.assertTrue(required_aggregations.issubset(detected_aggregations), \n                        \"The agg() function should include 'sum', 'mean', 'min', and 'max' calculations for sea level anomalies.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "validation"
         }
       },
       "folders": {
       },
       "openFiles": [
         "0",
-        "1"
+        "1",
+        "2"
       ]
     },
     "display_name": "agg() with groupby()",
@@ -46,7 +58,6 @@
     "thumbnail_url": "https://images.code.org/774d58f8e624f47d745742ca84d7871c-trend.png",
     "teacher_markdown": "**What Students Should Take Away:**\r\n- Students gain practical experience using the agg() function in combination with the groupby() function to calculate multiple statistics (total, average, min, max) over specific time periods\r\n- By grouping the data by year, students see how sea levels have changed annually, helping them identify significant trends, patterns, or anomalies that may not be visible when looking at longer time frames like decades.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n- Students might think that year-by-year analysis is less useful than decade-by-decade analysis.\r\n  - Tip: Encourage students to think about the value of finer detail in data analysis. Discuss how yearly analysis can reveal short-term trends or anomalies that might be averaged out over a decade.\r\n- Students may have difficulty understanding how the agg() function can provide different insights compared to just using sum() or mean() alone.\r\n  - Tip: Guide students to compare the different statistics calculated by agg(). Ask them how each statistic (total, average, min, max) contributes to their understanding of the data and what unique insights it provides.\r\n- Students might think that the results of agg() are self-explanatory and not explore them further.\r\n  - Tip: Encourage students to interpret the results critically. Ask them to identify specific years with significant changes and discuss what might have caused those changes."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-17T21:09:51.756+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L6_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L6_2024-pilot\"},{\"changed_at\":\"2024-09-17 21:12:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:13:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-17T21:09:51.756+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L6_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L6_2024-pilot\"},{\"changed_at\":\"2024-09-17 21:12:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:13:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:01:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:01:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:02:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-02 00:02:20 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

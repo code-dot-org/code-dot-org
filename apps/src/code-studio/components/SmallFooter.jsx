@@ -14,6 +14,7 @@ import React from 'react';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
+import I18nDropdown from '@cdo/apps/sharedComponents/footer/I18nDropdown/index';
 import i18n from '@cdo/locale';
 
 const MenuState = {
@@ -27,9 +28,15 @@ export default class SmallFooter extends React.Component {
   static propTypes = {
     // We let dashboard generate our i18n dropdown and pass it along as an
     // encode string of html
-    i18nDropdown: PropTypes.string,
+    i18nDropdownInBase: PropTypes.bool.isRequired,
+    localeUrl: PropTypes.string,
+    localeOptions: PropTypes.arrayOf(
+      PropTypes.shape({
+        value: PropTypes.string,
+        text: PropTypes.string,
+      })
+    ),
     copyrightInBase: PropTypes.bool.isRequired,
-    baseCopyrightString: PropTypes.string,
     baseMoreMenuString: PropTypes.string.isRequired,
     baseStyle: PropTypes.object,
     menuItems: PropTypes.arrayOf(
@@ -134,6 +141,7 @@ export default class SmallFooter extends React.Component {
       base: {
         // subtract top/bottom padding from row height
         height: this.props.rowHeight ? this.props.rowHeight - 6 : undefined,
+        alignItems: 'center',
       },
       // Additional styling to base, above.
       baseFullWidth: {
@@ -168,8 +176,13 @@ export default class SmallFooter extends React.Component {
           style={combinedBaseStyle}
           onClick={this.clickBase}
         >
-          {this.renderI18nDropdown()}
-          {this.renderCopyright()}
+          {this.props.i18nDropdownInBase && (
+            <I18nDropdown
+              localeUrl={this.props.localeUrl}
+              optionsForLocaleSelect={this.props.localeOptions}
+            />
+          )}
+          {this.props.copyrightInBase && this.renderCopyright()}
           <CopyrightDialog
             isOpen={this.state.menuState === MenuState.COPYRIGHT}
             closeModal={this.closeCopyrightDialog}
@@ -187,41 +200,22 @@ export default class SmallFooter extends React.Component {
     );
   }
 
-  renderI18nDropdown() {
-    if (this.props.i18nDropdown) {
-      return (
-        <div className="i18n-dropdown-container">
-          <span className="globe-icon">
-            <i className="fa fa-globe" aria-hidden="true" />
-          </span>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: decodeURIComponent(this.props.i18nDropdown),
-            }}
-          />
-        </div>
-      );
-    }
-  }
-
   renderCopyright() {
-    if (this.props.copyrightInBase) {
-      return (
-        <Button
-          aria-label={i18n.copyrightInfoButton()}
-          className="copyright-button no-mc"
-          color="gray"
-          icon={{
-            iconName: 'copyright',
-            iconStyle: 'light',
-          }}
-          isIconOnly
-          onClick={this.clickBaseCopyright}
-          size="xs"
-          type="secondary"
-        />
-      );
-    }
+    return (
+      <Button
+        aria-label={i18n.copyrightInfoButton()}
+        className="copyright-button no-mc"
+        color="gray"
+        icon={{
+          iconName: 'copyright',
+          iconStyle: 'light',
+        }}
+        isIconOnly
+        onClick={this.clickBaseCopyright}
+        size="xs"
+        type="secondary"
+      />
+    );
   }
 
   renderMoreMenuButton() {
