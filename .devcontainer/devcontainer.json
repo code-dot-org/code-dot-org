@@ -23,7 +23,7 @@
     "CDO_DB_ENDPOINT_WRITER": 'db',
     "CDO_DB_ENDPOINT_PROXY_REPORTING": 'db',
     "CDO_DB_ENDPOINT_PROXY_READER": 'db',
-    "REDIS_URL": "redis://redis/0",
+    "CDO_SESSION_STORE_SERVER": "redis://redis:6379/0/session",
     "MEMCACHE_SERVERS": "memcached:11211"
   },
 
