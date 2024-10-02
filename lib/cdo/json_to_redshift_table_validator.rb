@@ -26,7 +26,7 @@ module Cdo
     #
     # @return [Array<String, Boolean>] A two-element array containing:
     #   1. The validated (and possibly modified) JSON string representation of the record
-    #   2. A boolean indicating whether any modifications were made (true if modified, false otherwise)
+    #   2. An Array of validation errors found in the record. Empty if none were found.
     #
     # @raise [JSON::ParserError] If the input record is invalid JSON and cannot be parsed
     # @raise [ValidationError] If the schema is invalid (not a Redshift table schema)
@@ -73,7 +73,7 @@ module Cdo
 
       raise ValidationError, @errors.join(", ") if @errors.any? && !@modify_invalid
 
-      [validated_record.to_json, @errors.any?]
+      [validated_record.to_json, @errors]
     end
 
     private def validate_column(key, value, column_schema)

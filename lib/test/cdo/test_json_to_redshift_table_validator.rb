@@ -78,9 +78,9 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
       "study" => "example_study",
       "event" => "login"
     }.to_json
-    validated_record_string, modified = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema)
+    validated_record_string, validation_errors = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema)
     assert_equal validated_record_string, record_string
-    refute modified
+    assert_empty validation_errors
   end
 
   def test_wrong_datatype
@@ -129,8 +129,8 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
       "event" => "login",
       "data_string" => "a" * 5000
     }.to_json
-    validated_record_string, modified = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema, modify_invalid: true)
-    assert modified
+    validated_record_string, validation_errors = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema, modify_invalid: true)
+    refute_empty validation_errors
     validated_record = JSON.parse(validated_record_string)  # Reparse result to check.
     assert_equal 4096, validated_record["data_string"].length
   end
@@ -172,8 +172,8 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
       "event" => "login",
       "data_json" => {"key" => "a" * 70000}
     }.to_json
-    validated_record_string, modified = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema, modify_invalid: true)
-    assert modified
+    validated_record_string, validation_errors = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema, modify_invalid: true)
+    refute_empty validation_errors
     validated_record = JSON.parse(validated_record_string)  # Reparse result
     assert validated_record["data_json"].is_a?(String)
     assert_operator ActiveSupport::Multibyte::Chars.new(validated_record["data_json"]).bytes.size, :<=, 65535
@@ -203,8 +203,8 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
       "project_id" => "project123\u00A9"  # Copyright symbol (non-ASCII)
     }.to_json
 
-    validated_record_string, modified = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema, modify_invalid: true)
-    assert modified
+    validated_record_string, validation_errors = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema, modify_invalid: true)
+    refute_empty validation_errors
     validated_record = JSON.parse(validated_record_string)
     assert_equal "project123?", validated_record["project_id"]
   end
@@ -218,8 +218,8 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
       "data_json" => "Valid UTF-8 \u00A9\u20AC"  # Copyright and Euro symbols
     }.to_json
 
-    result, modified = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema)
-    refute modified
+    result, validation_errors = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema)
+    assert_empty validation_errors
     parsed_result = JSON.parse(result)
     assert_equal "Valid UTF-8 ©€", parsed_result["data_json"]
   end
@@ -266,8 +266,8 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
       "short_text" => multibyte_string
     }.to_json
 
-    validated_record_string, modified = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema, modify_invalid: true)
-    assert modified
+    validated_record_string, validation_errors = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema, modify_invalid: true)
+    refute_empty validation_errors
 
     validated_record = JSON.parse(validated_record_string)
     assert_equal "あいう", validated_record["short_text"]  # Should be truncated to fit within 10 bytes
