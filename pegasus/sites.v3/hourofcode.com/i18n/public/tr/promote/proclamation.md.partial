@@ -1,7 +1,6 @@
 ---
 title: Bilgisayar Bilimleri Haftası ve Hour of Code Kararname Örneği
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -1,7 +1,6 @@
 ---
 title: Näytevastaus, joka tukee Tietojenkäsittelytietokoulusviikkoa ja Hour of Codea
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

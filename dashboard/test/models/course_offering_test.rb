@@ -587,7 +587,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.display_name
     ].sort
 
-    assignable_course_offering_names = CourseOffering.assignable_course_offerings_info(@levelbuilder).values.map {|co| co[:display_name]}
+    assignable_course_offering_names = CourseOffering.assignable_course_offerings_info(@levelbuilder).values.pluck(:display_name)
     expected_course_offering_names.each {|name| assert_includes(assignable_course_offering_names, name)}
   end
 
@@ -804,6 +804,19 @@ class CourseOfferingTest < ActiveSupport::TestCase
     new_course_offering = CourseOffering.find_by(key: course_offering.key)
     assert_equal new_course_offering.self_paced_pl_course_offering_id,
       self_paced_pl_course.id
+  end
+
+  test "can seed ai_teaching_assistant_available" do
+    course_offering = create :course_offering, key: 'course-offering-1'
+    refute course_offering.ai_teaching_assistant_available
+    serialization = course_offering.serialize
+    serialization[:ai_teaching_assistant_available] = true
+
+    File.stubs(:read).returns(serialization.to_json)
+
+    CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
+    new_course_offering = CourseOffering.find_by(key: course_offering.key)
+    assert new_course_offering.ai_teaching_assistant_available
   end
 
   test "validates grade_levels" do
