@@ -171,6 +171,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     setShowEmailUpdateSuccess(false);
   };
 
+  const getError = (key: string): string | undefined => errors[key]?.[0];
+
   const clearError = (key: string) => {
     if (errors[key]) {
       const errorsCopy = {...errors};
@@ -209,7 +211,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             readOnly={secretPictureAccountOnly}
             maxLength={255}
             helperMessage={displayNameHelperMessage}
-            errorMessage={errors.name?.[0]}
+            errorMessage={getError('name')}
           />
 
           {/* username */}
@@ -225,7 +227,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               name="user[username]"
               maxLength={20}
               minLength={5}
-              errorMessage={errors.username?.[0]}
+              errorMessage={getError('username')}
             />
           )}
 
@@ -244,7 +246,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                 onChange={() => {}}
                 value={emailValue}
                 name="user[email]"
-                errorMessage={errors.email?.[0]}
+                errorMessage={getError('email')}
               />
               {/* TODO: replace Link with design system semantic button styled as an inline link when it exists */}
               {shouldSeeEditEmailLink && (
@@ -303,7 +305,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                 inputType="password"
                 autoComplete="off"
                 maxLength={255}
-                errorMessage={errors.password?.[0]}
+                errorMessage={getError('password')}
               />
 
               {/* new password confirmation */}
@@ -319,7 +321,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                 inputType="password"
                 autoComplete="off"
                 maxLength={255}
-                errorMessage={errors.password_confirmation?.[0]}
+                errorMessage={getError('password_confirmation')}
               />
             </>
           )}
@@ -338,7 +340,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               name="user[current_password]"
               inputType="password"
               maxLength={255}
-              errorMessage={errors.current_password?.[0]}
+              errorMessage={getError('current_password')}
             />
           )}
 
