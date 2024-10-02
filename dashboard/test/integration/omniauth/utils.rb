@@ -171,5 +171,10 @@ module OmniauthCallbacksControllerTests
       }
       assert_template partial: '_finish_sign_up'
     end
+
+    def new_omniauth_redirect
+      @form_data = {email: 'test@code.org'}
+      render partial: 'omniauth/redirect', locals: {new_sign_up_url: '/users/new_sign_up/finish_student_account', form_data: @form_data}
+    end
   end
 end

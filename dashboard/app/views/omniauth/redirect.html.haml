@@ -6,16 +6,20 @@
     %title= t('nav.user.loading')
 
     -if new_sign_up_url.present?
-      = form_with(url: new_sign_up_url, method: :post, html: {id: 'redirect-form'}) do |f|
-        = f.hidden_field "user[email]", value: @form_data[:email]
+      :javascript
+        (function() {
+          var email = "#{@form_data[:email]}";
+          sessionStorage.setItem('email', email);
+          window.location.href = "#{new_sign_up_url}";
+        })();
     -else
       = form_with(url: users_finish_sign_up_path, method: :post, html: {id: 'redirect-form'}) do |f|
         = f.hidden_field "user[email]", value: @form_data[:email]
 
-    :javascript
-      window.onload = function() {
-        document.getElementById("redirect-form").submit()
-      };
+      :javascript
+        window.onload = function() {
+          document.getElementById("redirect-form").submit()
+        };
 
   %body
     %p=t('nav.user.loading')

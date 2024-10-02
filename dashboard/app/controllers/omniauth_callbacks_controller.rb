@@ -22,10 +22,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/clever/callback
   def clever
-    new_sign_up_url = ''
-    if params[:finish_url].present?
-      new_sign_up_url = params[:finish_url]
-    end
+    new_sign_up_url = params[:finish_url].presence || ''
     return connect_provider if should_connect_provider?
 
     user = find_user_by_credential
@@ -39,10 +36,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/facebook/callback
   def facebook
-    new_sign_up_url = ''
-    if params[:finish_url].present?
-      new_sign_up_url = params[:finish_url]
-    end
+    new_sign_up_url = params[:finish_url].presence || ''
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
@@ -53,10 +47,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/google_oauth2/callback
   def google_oauth2
-    new_sign_up_url = ''
-    if params[:finish_url].present?
-      new_sign_up_url = params[:finish_url]
-    end
+    new_sign_up_url = params[:finish_url].presence || ''
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
@@ -76,10 +67,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # GET /users/auth/microsoft_v2_auth/callback
   def microsoft_v2_auth
-    new_sign_up_url = ''
-    if params[:finish_url].present?
-      new_sign_up_url = params[:finish_url]
-    end
+    new_sign_up_url = params[:finish_url].presence || ''
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 

@@ -20,6 +20,39 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
+      new_omniauth_redirect
+      assert_redirected_to '/users/new_sign_up/finish_student_account'
+      assert PartialRegistration.in_progress? session
+
+      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
+      assert_redirected_to '/'
+      follow_redirect!
+      assert_redirected_to '/home'
+      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
+      refute PartialRegistration.in_progress? session
+
+      created_user = User.find signed_in_user_id
+      assert_valid_student created_user, expected_email: auth_hash.info.email
+      assert_credentials auth_hash, created_user
+
+      assert_sign_up_tracking(
+        SignUpTracking::CONTROL_GROUP,
+        %w(
+          load-sign-up-page
+          google_oauth2-callback
+          google_oauth2-load-finish-sign-up-page
+          google_oauth2-sign-up-success
+        )
+      )
+    ensure
+      created_user&.destroy!
+    end
+
+    test "student sign-up (newest sign up flow)" do
+      auth_hash = mock_oauth
+
+      get '/users/new_sign_up/login_type'
+      sign_in_through_google
       omniauth_redirect
       assert PartialRegistration.in_progress? session
 
