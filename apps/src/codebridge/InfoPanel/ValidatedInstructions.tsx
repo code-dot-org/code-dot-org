@@ -238,33 +238,29 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     if (!hasConditions) {
       return null;
     }
-    return (
-      <div className={moduleStyles['bubble-' + theme]}>
-        {isValidating ? (
-          <Button
-            text={codebridgeI18n.stopValidation()}
-            onClick={handleStop}
-            color={'destructive'}
-            iconLeft={{iconStyle: 'solid', iconName: 'square'}}
-            className={moduleStyles.buttonInstruction}
-            size={'s'}
-          />
-        ) : (
-          <Button
-            text={codebridgeI18n.validate()}
-            onClick={() => handleValidate()}
-            type={'secondary'}
-            disabled={shouldValidateBeDisabled}
-            iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
-            className={classNames(
-              darkModeStyles.secondaryButton,
-              moduleStyles.buttonInstruction
-            )}
-            color={'white'}
-            size={'s'}
-          />
+    return isValidating ? (
+      <Button
+        text={codebridgeI18n.stopValidation()}
+        onClick={handleStop}
+        color={'destructive'}
+        iconLeft={{iconStyle: 'solid', iconName: 'square'}}
+        className={moduleStyles.buttonInstruction}
+        size={'s'}
+      />
+    ) : (
+      <Button
+        text={codebridgeI18n.validate()}
+        onClick={() => handleValidate()}
+        type={'secondary'}
+        disabled={shouldValidateBeDisabled}
+        iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
+        className={classNames(
+          darkModeStyles.secondaryButton,
+          moduleStyles.buttonInstruction
         )}
-      </div>
+        color={'white'}
+        size={'s'}
+      />
     );
   };
 
@@ -341,9 +337,12 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               predictAnswerLocked={predictAnswerLocked}
               className={moduleStyles.predictQuestion}
             />
+            {renderValidationButton()}
           </div>
         )}
 
+        {validationResults && <div ref={validationScrollRef} />}
+        <ValidationResults className={moduleStyles['bubble-' + theme]} />
         {predictSettings?.isPredictLevel && (
           <InstructorsOnly>
             <div className={moduleStyles['bubble-' + theme]}>
@@ -351,9 +350,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             </div>
           </InstructorsOnly>
         )}
-        {renderValidationButton()}
-        {validationResults && <div ref={validationScrollRef} />}
-        <ValidationResults className={moduleStyles['bubble-' + theme]} />
         {showNavigation && (
           <div
             id="instructions-navigation"
