@@ -8,7 +8,27 @@
   }
 
   &:disabled {
-    color: $light_gray_200 !important; 
+    color: $light_gray_600 !important; 
+  }
+}
+
+.primaryButton {
+  // We use important here because the disabled styles used by Button
+  // are more specific than a single class.
+  &:disabled {
+    background-color: $light_gray_700 !important;
+    color: $light_gray_900 !important;
+    border: none;
+  }
+}
+
+.secondaryButton {
+  // We use important here because the disabled styles used by Button
+  // are more specific than a single class.
+  &:disabled {
+    background-color: $light_black !important;
+    color: $light_gray_800 !important;
+    border: none;
   }
 }
 

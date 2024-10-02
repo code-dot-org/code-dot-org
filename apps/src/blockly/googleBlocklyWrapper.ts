@@ -740,7 +740,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         connectionChecker: CdoConnectionChecker,
       },
       renderer: optOptionsExtended.renderer || Renderers.DEFAULT,
-      comments: false,
+      comments: !!optOptionsExtended.comments,
       media: '/blockly/media/google_blockly',
       modalInputs: false, // Prevents pop-up editor on mobile
     };
