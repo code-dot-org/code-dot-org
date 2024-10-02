@@ -8,6 +8,10 @@ import {Message} from './types';
 // @ts-expect-error because
 const worker = new Worker(new URL('patternAiWorker.ts', import.meta.url));
 
+// Track the first generate attempt per page load separately, as it typically
+// takes much longer than subsequent attempts.
+let isInitialGenerate = true;
+
 export function generatePattern(
   seed: PatternTickEvent[],
   seedLength: number,
@@ -33,10 +37,12 @@ export function generatePattern(
         reportCreateModelTime(reporter, e.data[1]);
         break;
       case Message.GenerateFinished:
-        reportGeneratePatternTime(reporter, e.data[1]);
+        reportGeneratePatternTime(reporter, e.data[1], isInitialGenerate);
         break;
       case Message.Result:
         onComplete(e.data[1]);
+        // Flip the flag after the first successful generate.
+        isInitialGenerate = false;
         break;
     }
   };
@@ -59,10 +65,13 @@ function reportCreateModelTime(reporter: LabMetricsReporter, timeMs: number) {
 
 function reportGeneratePatternTime(
   reporter: LabMetricsReporter,
-  timeMs: number
+  timeMs: number,
+  isInitialGenerate: boolean
 ) {
   console.log(`Music AI: Generate pattern time: ${timeMs}ms`);
-  reporter.reportLoadTime('MusicAI.GeneratePatternTime', timeMs);
+  reporter.reportLoadTime('MusicAI.GeneratePatternTime', timeMs, [
+    {name: 'Instance', value: isInitialGenerate ? 'Initial' : 'Subsequent'},
+  ]);
 }
 
 function reportError(
