@@ -29,10 +29,6 @@
     -webkit-appearance: none;
     appearance: none;
 
-    &.error {
-      border-color: $light_negative_500;
-    }
-
     &:focus-visible {
       outline: 2px solid $light_primary_500;
       border-radius: 0.25rem;
@@ -70,6 +66,10 @@
     color: $light_black;
     border-color: $light_black;
     background-color: $light_white;
+
+    &.hasError {
+      border-color: $light_negative_500;
+    }
   }
 
   .dropdownArrowDiv:after {
@@ -131,6 +131,10 @@
     color: $light_black;
     border-color: $light_gray_400;
     background-color: $light_white;
+
+    &.hasError {
+      border-color: $light_negative_500;
+    }
   }
 
   .dropdownArrowDiv:after {

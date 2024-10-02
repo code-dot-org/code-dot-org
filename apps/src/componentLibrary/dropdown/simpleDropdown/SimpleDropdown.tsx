@@ -105,7 +105,7 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
           id={id}
           disabled={disabled}
           className={classNames({
-            [moduleStyles.error]: errorMessage,
+            [moduleStyles.hasError]: errorMessage,
           })}
           {...ariaProps}
         >
