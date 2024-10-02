@@ -6,10 +6,9 @@
 # Install PDM
 pdm install
 
-#bundle install
-#. ${NVM_DIR}/nvm.sh && nvm install --lts
-#yarn install
+bundle exec rake dashboard:setup_db
 
-#cd activerecord
-
-#MYSQL_CODESPACES=1 bundle exec rake db:mysql:rebuild
+cd apps
+yarn install
+yarn build
+cd ..
