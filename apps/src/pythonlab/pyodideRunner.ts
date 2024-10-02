@@ -92,8 +92,8 @@ export async function runAllTests(
       // "PASS/FAIL/ERROR/SKIP/EXPECTED_FAILURE/UNEXPECTED_SUCCESS"
       // See this PR for details: https://github.com/code-dot-org/pythonlab-packages/pull/5
       const testResults = result.message as Map<string, string>[];
+      PythonValidationTracker.getInstance().setValidationResults(testResults);
       if (progressManager) {
-        PythonValidationTracker.getInstance().setValidationResults(testResults);
         progressManager.updateProgress();
       }
     }

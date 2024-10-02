@@ -7,7 +7,7 @@ import {
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
-import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
+import {ProjectType, FolderId, ProjectFile, FileId} from '@codebridge/types';
 import {
   checkForDuplicateFilename,
   checkForDuplicateFoldername,
@@ -35,9 +35,12 @@ import React, {useMemo, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {
+  isReadOnlyWorkspace,
+  setOverrideValidations,
+} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {ProjectFileType} from '@cdo/apps/lab2/types';
+import {ProjectFileType, Validation} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {
   useDialogControl,
@@ -45,7 +48,7 @@ import {
   DialogClosePromiseReturnType,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   DndDataContextProvider,
@@ -436,6 +439,7 @@ export const FileBrowser = React.memo(() => {
 
   const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
   const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
+  const dispatch = useAppDispatch();
 
   const dndMonitor = useMemo(
     () => ({
@@ -806,6 +810,37 @@ export const FileBrowser = React.memo(() => {
     ]
   );
 
+  const handleSetFileType = useMemo(
+    () => (fileId: FileId, type: ProjectFileType) => {
+      const file = project.files[fileId];
+      if (
+        file.type === ProjectFileType.VALIDATION &&
+        type !== ProjectFileType.VALIDATION
+      ) {
+        // delete condition
+        dispatch(setOverrideValidations([]));
+      } else if (type === ProjectFileType.VALIDATION) {
+        // add condition
+        const validations: Validation[] = [
+          {
+            conditions: [
+              {
+                name: 'PASSED_ALL_TESTS',
+                value: 'true',
+              },
+            ],
+            message: '',
+            next: true,
+            key: 'override_validation',
+          },
+        ];
+        dispatch(setOverrideValidations(validations));
+      }
+      setFileType(fileId, type);
+    },
+    [dispatch, project.files, setFileType]
+  );
+
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
@@ -857,7 +892,7 @@ export const FileBrowser = React.memo(() => {
                 moveFolderPrompt={moveFolderPrompt}
                 renameFilePrompt={renameFilePrompt}
                 renameFolderPrompt={renameFolderPrompt}
-                setFileType={setFileType}
+                setFileType={handleSetFileType}
                 appName={appName}
               />
             </ul>

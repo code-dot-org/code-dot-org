@@ -47,14 +47,23 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
   const levelValidations = useAppSelector(
     state => state.lab.levelProperties?.validations
   );
+  const overrideValidations = useAppSelector(
+    state => state.lab.overrideValidations
+  );
 
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
 
   useEffect(() => {
     // The levelValidations may be the same between two different levels,
     // but we still want the progressManager to reset itself when the levelId changes.
-    progressManager.current.onLevelChange(levelValidations);
-  }, [levelValidations, levelId]);
+    if (overrideValidations) {
+      console.log('resetting progress manager with override validations');
+      console.log({overrideValidations});
+      progressManager.current.onLevelChange(overrideValidations);
+    } else {
+      progressManager.current.onLevelChange(levelValidations);
+    }
+  }, [levelValidations, levelId, overrideValidations]);
 
   return (
     <ProgressManagerContext.Provider value={progressManager.current}>
