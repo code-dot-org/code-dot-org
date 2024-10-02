@@ -353,8 +353,9 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
   };
 }
 
-// The user has attempted the level (as defined by the app type). Currently only used by Lab2 labs.
-export function sendInProgressReport(
+// Send a report of user progress (e.g., TestResults.LEVEL_ATTEMPTED) on an appType level.
+// Currently only used by Lab2 labs.
+export function sendProgressReport(
   appType: string,
   result: TestResults
 ): ProgressThunkAction {
