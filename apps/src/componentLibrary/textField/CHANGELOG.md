@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.4](https://github.com/code-dot-org/code-dot-org/pull/60852)
+## [0.2.4](https://github.com/code-dot-org/code-dot-org/pull/61464)
 
 * Added error state border-color to `TextField` component
 
