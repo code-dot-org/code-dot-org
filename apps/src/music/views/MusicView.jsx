@@ -129,7 +129,8 @@ class UnconnectedMusicView extends React.Component {
       this.getIsPlaying,
       this.getPlaybackEvents,
       this.getValidationTimeout,
-      this.player
+      this.player,
+      this.getPlayingTriggers
     );
 
     // Set default for instructions position.
@@ -383,6 +384,10 @@ class UnconnectedMusicView extends React.Component {
 
   getPlaybackEvents = () => {
     return this.sequencer.getPlaybackEvents();
+  };
+
+  getPlayingTriggers = () => {
+    return this.playingTriggers;
   };
 
   getCurrentPlayheadPosition = () => {

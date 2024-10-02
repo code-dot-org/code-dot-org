@@ -10,6 +10,7 @@ import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 import {ChordEvent} from '../player/interfaces/ChordEvent';
 import {PatternEvent} from '../player/interfaces/PatternEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {PlayingTrigger} from '../player/interfaces/PlayingTrigger';
 import MusicPlayer from '../player/MusicPlayer';
 
 export interface ConditionNames {
@@ -46,6 +47,14 @@ export const MusicConditions: ConditionNames = {
     name: 'played_different_sounds_together_multiple_times',
     valueType: 'number',
   },
+  TRIGGER_ID_PRESSED: {
+    name: 'trigger_id_pressed',
+    valueType: 'number',
+  },
+  TRIGGER_PRESSED_MULTIPLE_TIMES: {
+    name: 'trigger_pressed_multiple_times',
+    valueType: 'number',
+  },
 };
 
 export default class MusicValidator extends Validator {
@@ -54,6 +63,7 @@ export default class MusicValidator extends Validator {
     private readonly getPlaybackEvents: () => PlaybackEvent[],
     private readonly getValidationTimeout: () => number,
     private readonly player: MusicPlayer,
+    private readonly getPlayingTriggers: () => PlayingTrigger[],
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
       Object.values(MusicConditions).map(condition => condition.name)
     )
@@ -242,6 +252,24 @@ export default class MusicValidator extends Validator {
       MusicConditions.PLAYED_CHORDS.name,
       playedNumberChords
     );
+
+    // Add satisfied conditions for playing triggers. These do not require a playback event.
+    const playingTriggers = this.getPlayingTriggers();
+    playingTriggers.forEach((trigger: PlayingTrigger) => {
+      this.setSatisfiedCondition(
+        MusicConditions.TRIGGER_ID_PRESSED.name,
+        parseInt(trigger.id.replace('trigger', ''))
+      );
+    });
+    const uniqueTriggerIds = new Set(
+      playingTriggers.map(trigger => trigger.id)
+    );
+    uniqueTriggerIds.forEach(id => {
+      this.setSatisfiedCondition(
+        MusicConditions.TRIGGER_PRESSED_MULTIPLE_TIMES.name,
+        playingTriggers.filter(trigger => trigger.id === id).length
+      );
+    });
   }
 
   // Check for PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES.
