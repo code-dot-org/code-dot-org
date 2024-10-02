@@ -78,7 +78,8 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
 
 /**
  * In start mode we combine the start sources with the validation file
- * so levelbuilders can edit the validation file.
+ * so levelbuilders can edit the validation file. Automatically open
+ * the validation file if it exists.
  * @param source: MultiFileSource | undefined
  * @param validationFile: ProjectFile | undefined
  * @returns: MultiFileSource with the validation file added to the files, if it exists.
@@ -91,7 +92,13 @@ export function combineStartSourcesAndValidation(
   if (source && validationFile) {
     returnValue = {
       ...source,
-      files: {...source.files, [validationFile.id]: validationFile},
+      files: {
+        ...source.files,
+        [validationFile.id]: {...validationFile, open: true},
+      },
+      openFiles: source.openFiles
+        ? [...source.openFiles, validationFile.id]
+        : [validationFile.id],
     };
   }
   return returnValue;

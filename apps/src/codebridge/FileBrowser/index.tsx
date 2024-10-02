@@ -39,8 +39,9 @@ import {
   isReadOnlyWorkspace,
   setOverrideValidations,
 } from '@cdo/apps/lab2/lab2Redux';
+import {PASSED_ALL_TESTS_VALIDATION} from '@cdo/apps/lab2/progress/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {ProjectFileType, Validation} from '@cdo/apps/lab2/types';
+import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {
   useDialogControl,
@@ -817,24 +818,9 @@ export const FileBrowser = React.memo(() => {
         file.type === ProjectFileType.VALIDATION &&
         type !== ProjectFileType.VALIDATION
       ) {
-        // delete condition
         dispatch(setOverrideValidations([]));
       } else if (type === ProjectFileType.VALIDATION) {
-        // add condition
-        const validations: Validation[] = [
-          {
-            conditions: [
-              {
-                name: 'PASSED_ALL_TESTS',
-                value: 'true',
-              },
-            ],
-            message: '',
-            next: true,
-            key: 'override_validation',
-          },
-        ];
-        dispatch(setOverrideValidations(validations));
+        dispatch(setOverrideValidations([PASSED_ALL_TESTS_VALIDATION]));
       }
       setFileType(fileId, type);
     },
