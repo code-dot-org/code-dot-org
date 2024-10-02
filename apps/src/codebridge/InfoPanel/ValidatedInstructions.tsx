@@ -1,11 +1,5 @@
 import classNames from 'classnames';
-import React, {
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-} from 'react';
+import React, {useCallback, useContext, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -20,8 +14,6 @@ import {
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   isPredictAnswerLocked,
   setPredictResponse,
@@ -41,7 +33,6 @@ import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 import {appendSystemMessage} from '../redux/consoleRedux';
-import {getValidationFromSource} from '../utils';
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ValidationResults from './ValidationResults';
@@ -114,7 +105,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const shouldValidateBeDisabled = isLoadingEnvironment || isRunning;
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const scriptName =
     useAppSelector(state => state.progress.scriptName) || undefined;
@@ -124,14 +114,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const {theme} = useContext(ThemeContext);
 
   const vertical = layout === 'vertical';
-
-  const hasValidation = useMemo(() => {
-    if (isStartMode && source) {
-      return !!getValidationFromSource(source);
-    } else {
-      return hasConditions;
-    }
-  }, [isStartMode, source, hasConditions]);
 
   const onFinish = () => {
     // No-op if there's no script. Students/teachers should always be
@@ -199,7 +181,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   // If the level has conditions, they must be satisfied.
   // If the level has no conditions, the user must run their code at least once.
   const hasMetValidation =
-    (!hasValidation && hasRun) || (hasValidation && satisfied);
+    (!hasConditions && hasRun) || (hasConditions && satisfied);
 
   /**
    * Returns the props for the navigation (continue/finish/submit/unsubmit)
@@ -253,7 +235,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   // TODO: If we go with the test button in the instructions panel long-term,
   // we should refactor this to a separate component.
   const renderValidationButton = () => {
-    if (!hasValidation) {
+    if (!hasConditions) {
       return null;
     }
     return (

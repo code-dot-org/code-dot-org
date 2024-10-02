@@ -131,8 +131,14 @@ const InnerFileBrowser = React.memo(
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const handleFileUpload = useHandleFileUpload(files);
     const fileUploadErrorCallback = useFileUploadErrorCallback();
+    const dispatch = useAppDispatch();
 
     const handleConfirmDeleteFile = (fileId: string) => {
+      // If we are deleting a validation file, we are in start mode, and we should
+      // ensure that the override validation is set to an empty list.
+      if (files[fileId]?.type === ProjectFileType.VALIDATION) {
+        dispatch(setOverrideValidations([]));
+      }
       deleteFile(fileId);
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE, appName);
     };
@@ -198,6 +204,32 @@ const InnerFileBrowser = React.memo(
       });
     };
 
+    // setFileType only gets called in start mode. If we are setting a file to
+    // validation or changing a validation file to a non-validation file, also
+    // set the override validation to a passed all tests condition.
+    // This makes it so the progress manager gets updated accordingly and
+    // levelbuilders can run the new validation file and see results.
+    // All files are set to starter by default, so we will catch all new validation
+    // files with this method.
+    const handleSetFileType = useMemo(
+      () => (fileId: FileId, type: ProjectFileType) => {
+        const file = files[fileId];
+        if (
+          file.type === ProjectFileType.VALIDATION &&
+          type !== ProjectFileType.VALIDATION
+        ) {
+          // If this was a validation file and we are changing it to a non-validation file,
+          // remove the override validation.
+          dispatch(setOverrideValidations([]));
+        } else if (type === ProjectFileType.VALIDATION) {
+          // If the new type is validation, use the passed all tests validation condition.
+          dispatch(setOverrideValidations([PASSED_ALL_TESTS_VALIDATION]));
+        }
+        setFileType(fileId, type);
+      },
+      [dispatch, files, setFileType]
+    );
+
     const hasValidationFile = Object.values(files).find(
       f => f.type === ProjectFileType.VALIDATION
     );
@@ -210,7 +242,9 @@ const InnerFileBrowser = React.memo(
       if (!hasValidationFile) {
         options.push(
           <span
-            onClick={() => setFileType(file.id, ProjectFileType.VALIDATION)}
+            onClick={() =>
+              handleSetFileType(file.id, ProjectFileType.VALIDATION)
+            }
             key={'make-validation'}
           >
             <i className={`fa-solid fa-flask`} />{' '}
@@ -224,7 +258,7 @@ const InnerFileBrowser = React.memo(
       ) {
         options.push(
           <span
-            onClick={() => setFileType(file.id, ProjectFileType.STARTER)}
+            onClick={() => handleSetFileType(file.id, ProjectFileType.STARTER)}
             key={'make-starter'}
           >
             <i className={`fa-solid fa-eye`} /> {codebridgeI18n.makeStarter()}
@@ -238,7 +272,7 @@ const InnerFileBrowser = React.memo(
       ) {
         options.push(
           <span
-            onClick={() => setFileType(file.id, ProjectFileType.SUPPORT)}
+            onClick={() => handleSetFileType(file.id, ProjectFileType.SUPPORT)}
             key={'make-support'}
           >
             <i className={`fa-solid fa-eye-slash`} />{' '}
@@ -440,7 +474,6 @@ export const FileBrowser = React.memo(() => {
 
   const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
   const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
-  const dispatch = useAppDispatch();
 
   const dndMonitor = useMemo(
     () => ({
@@ -811,32 +844,6 @@ export const FileBrowser = React.memo(() => {
     ]
   );
 
-  // setFileType only gets called in start mode. If we are setting a file to
-  // validation or changing a validation file to a non-validation file, also
-  // set the override validation to a passed all tests condition.
-  // This makes it so the progress manager gets updated accordingly and
-  // levelbuilders can run the new validation file and see results.
-  // All files are set to starter by default, so we will catch all new validation
-  // files with this method.
-  const handleSetFileType = useMemo(
-    () => (fileId: FileId, type: ProjectFileType) => {
-      const file = project.files[fileId];
-      if (
-        file.type === ProjectFileType.VALIDATION &&
-        type !== ProjectFileType.VALIDATION
-      ) {
-        // If this was a validation file and we are changing it to a non-validation file,
-        // remove the override validation.
-        dispatch(setOverrideValidations([]));
-      } else if (type === ProjectFileType.VALIDATION) {
-        // If the new type is validation, use the passed all tests validation condition.
-        dispatch(setOverrideValidations([PASSED_ALL_TESTS_VALIDATION]));
-      }
-      setFileType(fileId, type);
-    },
-    [dispatch, project.files, setFileType]
-  );
-
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
@@ -888,7 +895,7 @@ export const FileBrowser = React.memo(() => {
                 moveFolderPrompt={moveFolderPrompt}
                 renameFilePrompt={renameFilePrompt}
                 renameFolderPrompt={renameFolderPrompt}
-                setFileType={handleSetFileType}
+                setFileType={setFileType}
                 appName={appName}
               />
             </ul>
