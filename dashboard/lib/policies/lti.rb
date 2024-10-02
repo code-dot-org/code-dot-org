@@ -146,7 +146,7 @@ class Policies::Lti
   end
 
   def self.only_lti_auth?(user)
-    !user.authentication_options.empty? && user.authentication_options.all?(&:lti?)
+    user.authentication_options.any? && user.authentication_options.all?(&:lti?)
   end
 
   def self.issuer(user)
