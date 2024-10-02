@@ -26,6 +26,22 @@ module Services
           user_params[:email_preference_request_ip] = request.ip
           user_params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
           user_params[:email_preference_form_kind] = '0'
+
+          if ['selectASchool', 'clickToAdd', 'noSchoolSetting'].include?(user_params[:school_info_attributes]['schoolId'])
+            user_params[:school_info_attributes]['schoolId'] = nil
+          end
+
+          school_params = {
+            school_id: user_params[:school_info_attributes]['schoolId'],
+            school_name: user_params[:school_info_attributes]['schoolName'],
+            school_type: user_params[:school_info_attributes]['schoolType'],
+            school_zip: user_params[:school_info_attributes]['schoolZip'],
+            school_state: user_params[:school_info_attributes]['schoolState'],
+            country: user_params[:school_info_attributes]['country'],
+            full_address: user_params[:school_info_attributes]['fullAddress']
+          }
+
+          user_params[:school_info_attributes] = ActionController::Parameters.new(school_params).permit(:school_id, :school_name, :school_type, :school_zip, :school_state, :country, :full_address)
         when ::User::TYPE_STUDENT
           user_params[:parent_email_preference_request_ip] = request.ip
           user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
@@ -54,6 +70,7 @@ module Services
           :email_preference_form_kind,
           :school,
           :school_info_id,
+          {school_info_attributes: [:schoolId, :schoolName, :schoolType, :schoolZip, :schoolState, :country, :fullAddress]},
           :age,
           :parent_email_preference_email,
           :parent_email_preference_opt_in,
