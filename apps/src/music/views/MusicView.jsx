@@ -108,6 +108,7 @@ class UnconnectedMusicView extends React.Component {
     clearCallout: PropTypes.func,
     isPlayView: PropTypes.bool,
     blockMode: PropTypes.string,
+    playbackEvents: PropTypes.array,
   };
 
   constructor(props) {
@@ -382,7 +383,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getPlaybackEvents = () => {
-    return this.sequencer.getPlaybackEvents();
+    return this.props.playbackEvents;
   };
 
   getCurrentPlayheadPosition = () => {
@@ -502,7 +503,7 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    this.sequencer.clear(true /* Do not clear events */);
+    this.sequencer.clear();
     this.musicBlocklyWorkspace.executeTrigger(id, triggerStartPosition);
     const playbackEvents = this.sequencer.getPlaybackEvents();
     this.props.addPlaybackEvents({
@@ -719,6 +720,7 @@ const MusicView = connect(
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     startingPlayheadPosition: state.music.startingPlayheadPosition,
     isPlayView: state.lab.isShareView,
+    playbackEvents: state.music.playbackEvents,
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),
