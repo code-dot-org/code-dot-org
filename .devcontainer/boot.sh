@@ -6,7 +6,9 @@
 # Install PDM
 pdm install
 
+cd dashboard
 bundle exec rake dashboard:setup_db
+cd ..
 
 cd apps
 yarn install
