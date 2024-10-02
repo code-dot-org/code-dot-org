@@ -61,7 +61,20 @@ module Curriculum
         pd_workshop_activity_csp: 'PD Workshop Activity CSP',
         pd_workshop_activity_csa: 'PD Workshop Activity CSA',
         foundations_of_cs: 'Foundations of CS',
-        foundations_of_programming: 'Foundations of Programming'
+        foundations_of_programming: 'Foundations of Programming',
+        CSC_K_5: 'CSC K-5',
+        CSC_6_8: 'CSC 6-8',
+        CSC_9_12: 'CSC 9-12',
+        special_topics_k_5: 'K-5 Special topics',
+        special_topics_6_8: '6-8 Special topics',
+        special_topics_9_12: '9-12 Special topics',
+        foundations_of_cs_selfpaced_pl: 'Foundations of CS selfpaced pl',
+        ai_for_teachers_selfpaced_pl: 'AI for teachers selfpaced pl',
+        special_topics_curriculum_selfpaced_pl_k_5: 'K-5 Special topics curriculum selfpaced pl',
+        special_topics_curriculum_selfpaced_pl_6_8: '6-8 Special topics curriculum selfpaced pl',
+        special_topics_curriculum_selfpaced_pl_9_12: '9-12 Special topics curriculum selfpaced pl',
+        pedagogy_special_topics_selfpaced_pl: 'Pedagogy special topics selfpaced pl',
+        cs_basics_selfpaced_pl: 'CS Basics selfpaced pl'
       }
     ).freeze
 
