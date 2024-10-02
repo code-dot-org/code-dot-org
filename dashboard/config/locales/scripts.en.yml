@@ -19157,6 +19157,14 @@ en:
               name: Lesson 3 - Buttons
             lesson-4:
               name: Sensors
+            lesson-5:
+              name: LEDs
+            lesson-6:
+              name: Peer Feedback
+            lesson-7:
+              name: Additional Input
+            lesson-8:
+              name: Additional Output
           lesson_groups: {}
           name: computer-systems-playground
           title: "[PLAYGROUND] Computer Systems and Devices (with micro:bit)"
