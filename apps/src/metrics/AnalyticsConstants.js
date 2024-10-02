@@ -258,6 +258,11 @@ const EVENTS = {
   TA_RUBRIC_ANNOUNCEMENT_CLICKED: 'TA Rubric Announcement Clicked',
   TA_RUBRIC_ANNOUNCEMENT_DISMISSED: 'TA Rubric Announcement Dismissed',
 
+  //AI Differentiation
+  AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
+  AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',
+  AI_DIFF_CHAT_EVENT: 'AI Differentiation Message Event',
+
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
   AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',

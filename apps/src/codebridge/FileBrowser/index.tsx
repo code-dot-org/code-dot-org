@@ -429,6 +429,10 @@ export const FileBrowser = React.memo(() => {
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
+  );
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
   const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
@@ -510,7 +514,9 @@ export const FileBrowser = React.memo(() => {
             const duplicate = checkForDuplicateFilename(
               fileName,
               folderId,
-              project.files
+              project.files,
+              isStartMode,
+              validationFile
             );
             if (duplicate) {
               return duplicate;
@@ -526,7 +532,12 @@ export const FileBrowser = React.memo(() => {
         }
         const fileName = extractInput(results);
 
-        const fileId = getNextFileId(Object.values(project.files));
+        const files = Object.values(project.files);
+        // The validation file is in the project files in start mode.
+        if (validationFile && !isStartMode) {
+          files.push(validationFile);
+        }
+        const fileId = getNextFileId(files);
 
         newFile({
           fileId,
@@ -536,7 +547,14 @@ export const FileBrowser = React.memo(() => {
 
         sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, appName);
       },
-    [dialogControl, project.files, newFile, appName]
+    [
+      dialogControl,
+      project.files,
+      newFile,
+      appName,
+      validationFile,
+      isStartMode,
+    ]
   );
 
   const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(
@@ -558,7 +576,9 @@ export const FileBrowser = React.memo(() => {
             const duplicate = checkForDuplicateFilename(
               file.name,
               folderId,
-              project.files
+              project.files,
+              isStartMode,
+              validationFile
             );
             if (duplicate) {
               return duplicate;
@@ -588,7 +608,15 @@ export const FileBrowser = React.memo(() => {
       }
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE, appName);
     },
-    [project.files, project.folders, dialogControl, appName, moveFile]
+    [
+      project.files,
+      project.folders,
+      dialogControl,
+      appName,
+      isStartMode,
+      validationFile,
+      moveFile,
+    ]
   );
 
   const moveFolderPrompt: FilesComponentProps['moveFolderPrompt'] = useMemo(
@@ -662,7 +690,9 @@ export const FileBrowser = React.memo(() => {
           const duplicate = checkForDuplicateFilename(
             newName,
             file.folderId,
-            project.files
+            project.files,
+            isStartMode,
+            validationFile
           );
           if (duplicate) {
             return duplicate;
@@ -680,7 +710,14 @@ export const FileBrowser = React.memo(() => {
       renameFile(fileId, newName);
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, appName);
     },
-    [dialogControl, project.files, renameFile, appName]
+    [
+      project.files,
+      dialogControl,
+      renameFile,
+      appName,
+      isStartMode,
+      validationFile,
+    ]
   );
 
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
@@ -743,7 +780,9 @@ export const FileBrowser = React.memo(() => {
           const duplicate = checkForDuplicateFilename(
             project.files[e.active.data.current.id].name,
             e.over.id as string,
-            project.files
+            project.files,
+            isStartMode,
+            validationFile
           );
           if (duplicate) {
             dialogControl?.showDialog({
@@ -756,7 +795,15 @@ export const FileBrowser = React.memo(() => {
         }
       }
     },
-    [dialogControl, moveFile, moveFolder, project.files, project.folders]
+    [
+      dialogControl,
+      isStartMode,
+      moveFile,
+      moveFolder,
+      project.files,
+      project.folders,
+      validationFile,
+    ]
   );
 
   const sensors = useSensors(
@@ -771,6 +818,7 @@ export const FileBrowser = React.memo(() => {
     <PanelContainer
       id="file-browser"
       headerContent={'Files'}
+      headerClassName={moduleStyles.fileBrowserHeader}
       className={moduleStyles['file-browser']}
       rightHeaderContent={
         !isReadOnly && (
