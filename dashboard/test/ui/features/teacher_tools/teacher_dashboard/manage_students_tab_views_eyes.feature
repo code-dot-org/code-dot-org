@@ -60,4 +60,4 @@ Feature: Using the manage students tab of the teacher dashboard
     And I wait until element "#uitest-manage-students-table tbody tr:nth-child(1) select[name='usState']" is not visible
     # Check usState cells after reloading the page to ensure they has been saved in the database
     Then I reload the page
-    And element "#uitest-manage-students-table tr:nth-child(1):contains(Student) td:contains(AL)" is visible
+    And I wait until element "#uitest-manage-students-table tr:nth-child(1):contains(Student) td:contains(AL)" is visible
