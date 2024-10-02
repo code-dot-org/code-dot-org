@@ -68,7 +68,6 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
   let openFiles = source.openFiles;
   if (validationFile && source.openFiles?.includes(validationFile.id)) {
     openFiles = source.openFiles.filter(id => id !== validationFile?.id);
-    //validationFile.open = false;
     validationFile = {...validationFile, open: false, active: false};
   }
   return {
