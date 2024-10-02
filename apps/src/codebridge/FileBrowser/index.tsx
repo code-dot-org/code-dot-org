@@ -291,7 +291,6 @@ const InnerFileBrowser = React.memo(
                             f.id === dropData?.id &&
                             dragData?.parentId !== f.id,
                         })}
-                        id={`folder-${f.id}`}
                       >
                         {f.name}
                       </span>
