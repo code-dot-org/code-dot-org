@@ -4,11 +4,9 @@ import {AnyAction, Dispatch} from 'redux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
-import {
-  MultiFileSource,
-  ProjectFile,
-  ProjectFileType,
-} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+
+import {getValidationFromSource} from '../codebridge';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
@@ -70,11 +68,7 @@ export async function runAllTests(
 ) {
   // We default to using the validation file passed in. If it does not exist,
   // we check the source for the validation file (this is the case in start mode).
-  const validationToRun =
-    validationFile ||
-    Object.values(source.files).find(
-      f => f.type === ProjectFileType.VALIDATION
-    );
+  const validationToRun = validationFile || getValidationFromSource(source);
   if (validationToRun) {
     dispatch(appendSystemMessage(`Running level tests...`));
     progressManager?.resetValidation();
@@ -92,8 +86,8 @@ export async function runAllTests(
       // "PASS/FAIL/ERROR/SKIP/EXPECTED_FAILURE/UNEXPECTED_SUCCESS"
       // See this PR for details: https://github.com/code-dot-org/pythonlab-packages/pull/5
       const testResults = result.message as Map<string, string>[];
-      PythonValidationTracker.getInstance().setValidationResults(testResults);
       if (progressManager) {
+        PythonValidationTracker.getInstance().setValidationResults(testResults);
         progressManager.updateProgress();
       }
     }

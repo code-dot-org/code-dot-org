@@ -27,7 +27,7 @@ import {
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {setIsValidating} from '@cdo/apps/lab2/redux/systemRedux';
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -41,6 +41,7 @@ import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 import {appendSystemMessage} from '../redux/consoleRedux';
+import {getValidationFromSource} from '../utils';
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ValidationResults from './ValidationResults';
@@ -126,9 +127,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const hasValidation = useMemo(() => {
     if (isStartMode && source) {
-      return !!Object.values(source.files).find(
-        f => f.type === ProjectFileType.VALIDATION
-      );
+      return !!getValidationFromSource(source);
     } else {
       return hasConditions;
     }

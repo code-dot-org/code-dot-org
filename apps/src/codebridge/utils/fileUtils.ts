@@ -61,10 +61,7 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
       ([_, file]) => file.type !== ProjectFileType.VALIDATION
     )
   );
-  let validationFile =
-    Object.values(source.files).find(
-      f => f.type === ProjectFileType.VALIDATION
-    ) || null;
+  let validationFile = getValidationFromSource(source) || null;
   let openFiles = source.openFiles;
   if (validationFile && source.openFiles?.includes(validationFile.id)) {
     openFiles = source.openFiles.filter(id => id !== validationFile?.id);
@@ -102,4 +99,10 @@ export function combineStartSourcesAndValidation(
     };
   }
   return returnValue;
+}
+
+export function getValidationFromSource(source: MultiFileSource) {
+  return Object.values(source.files).find(
+    f => f.type === ProjectFileType.VALIDATION
+  );
 }
