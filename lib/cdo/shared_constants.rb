@@ -781,5 +781,7 @@ module SharedConstants
     PIRATE: "gen-ai-mistral-pirate-7b"
   }
 
+  AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
+
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 end

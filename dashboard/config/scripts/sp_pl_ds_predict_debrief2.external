@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 #### While you may not fully understand the code yet, you can infer it calculates a dog's age in "dog years" by looking at the variable names and the output message.
 
-#### You may have noticed: 
+### **You may have noticed**: 
 
 - #### Variable types: int, str, and list
 - #### concatenation in the print() function

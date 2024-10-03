@@ -110,6 +110,7 @@ class UnconnectedMusicView extends React.Component {
     clearCallout: PropTypes.func,
     isPlayView: PropTypes.bool,
     blockMode: PropTypes.string,
+    playbackEvents: PropTypes.array,
     validationState: PropTypes.object,
   };
 
@@ -385,7 +386,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getPlaybackEvents = () => {
-    return this.sequencer.getPlaybackEvents();
+    return this.props.playbackEvents;
   };
 
   getCurrentPlayheadPosition = () => {
@@ -732,6 +733,7 @@ const MusicView = connect(
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     startingPlayheadPosition: state.music.startingPlayheadPosition,
     isPlayView: state.lab.isShareView,
+    playbackEvents: state.music.playbackEvents,
     validationState: state.lab.validationState,
   }),
   dispatch => ({
