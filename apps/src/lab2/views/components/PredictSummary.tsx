@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -11,7 +12,13 @@ import moduleStyles from './predict-summary.module.scss';
 
 const SUMMARY_PATH = '/summary';
 
-const PredictSummary: React.FunctionComponent = () => {
+interface PredictSummaryProps {
+  className?: string;
+}
+
+const PredictSummary: React.FunctionComponent<PredictSummaryProps> = ({
+  className,
+}) => {
   // If viewing the page as Participant, be sure to rewrite the link URL
   // to view as Instructor, so we don't just get redirected back.
   const params = document.location.search.replace(
@@ -52,7 +59,9 @@ const PredictSummary: React.FunctionComponent = () => {
   };
 
   return (
-    <div className={moduleStyles.predictSummaryContainer}>
+    <div
+      className={classNames(moduleStyles.predictSummaryContainer, className)}
+    >
       {responseCount !== null && numStudents !== null && (
         <div className={moduleStyles.responses}>
           <div className={moduleStyles.responseIcon}>

@@ -65,7 +65,6 @@
   border-radius: 4px;
   margin-bottom: 10px;
   animation: slidein 0.5s;
-  overflow: hidden;
 }
 
 .bubble-dark {
@@ -138,7 +137,13 @@
   padding: 12px;
 }
 
-.instructionsContent {
+// Wrap scrollingContent in a scrollingBubble
+// to get a scrolling bubble.
+.scrollingBubble {
+  overflow: hidden;
+}
+
+.scrollingContent {
   height: 100%;
   overflow-y: auto;
   box-sizing: border-box;

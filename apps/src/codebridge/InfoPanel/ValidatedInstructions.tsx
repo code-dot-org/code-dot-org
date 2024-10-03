@@ -315,9 +315,12 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           <div
             key={instructionsText}
             id="instructions-text"
-            className={classNames(moduleStyles['bubble-' + theme])}
+            className={classNames(
+              moduleStyles['bubble-' + theme],
+              moduleStyles.scrollingBubble
+            )}
           >
-            <div className={moduleStyles.instructionsContent}>
+            <div className={moduleStyles.scrollingContent}>
               <div className={moduleStyles.mainInstructions}>
                 <ValidationStatusIcon
                   status={showPassedIcon ? 'passed' : 'pending'}
@@ -346,15 +349,25 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         {validationResults && (
           <>
             <div ref={validationScrollRef} />
-            <div className={moduleStyles['bubble-' + theme]}>
-              <ValidationResults className={moduleStyles.instructionsContent} />
+            <div
+              className={classNames(
+                moduleStyles['bubble-' + theme],
+                moduleStyles.scrollingBubble
+              )}
+            >
+              <ValidationResults className={moduleStyles.scrollingContent} />
             </div>
           </>
         )}
         {predictSettings?.isPredictLevel && (
           <InstructorsOnly>
-            <div className={moduleStyles['bubble-' + theme]}>
-              <PredictSummary />
+            <div
+              className={classNames(
+                moduleStyles['bubble-' + theme],
+                moduleStyles.scrollingBubble
+              )}
+            >
+              <PredictSummary className={moduleStyles.scrollingContent} />
             </div>
           </InstructorsOnly>
         )}
