@@ -79,6 +79,14 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     [usStateDropdownOptions]
   );
 
+  const lockedOutStudentMessage = useMemo(
+    () =>
+      studentInLockoutFlow
+        ? i18n.accountInformationUpdateFieldParentPermissionRequired()
+        : undefined,
+    [studentInLockoutFlow]
+  );
+
   const handleSubmitAccountSettingsUpdate = async () => {
     resetMessages();
     setErrors({});
@@ -362,12 +370,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                 disabled={studentInLockoutFlow}
                 dropdownTextThickness="thin"
                 className={styles.input}
-                helperMessage={
-                  studentInLockoutFlow
-                    ? i18n.accountInformationUpdateFieldParentPermissionRequired()
-                    : undefined
-                }
-                errorMessage={errors.age?.[0]}
+                helperMessage={lockedOutStudentMessage}
+                errorMessage={getError('age')}
               />
 
               {/* student gender */}
@@ -397,12 +401,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                     disabled={studentInLockoutFlow}
                     dropdownTextThickness="thin"
                     className={styles.input}
-                    helperMessage={
-                      studentInLockoutFlow
-                        ? i18n.accountInformationUpdateFieldParentPermissionRequired()
-                        : undefined
-                    }
-                    errorMessage={errors.us_state?.[0]}
+                    helperMessage={lockedOutStudentMessage}
+                    errorMessage={getError('us_state')}
                   />
                 </>
               )}
