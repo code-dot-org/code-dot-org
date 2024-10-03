@@ -71,7 +71,7 @@ Resources:
       Type: encryption
       Policy: !Sub |
         {
-          "AWSOwnedKey":true,
+          "AWSOwnedKey": true,
           "Rules": [
             {
               "ResourceType": "collection",
