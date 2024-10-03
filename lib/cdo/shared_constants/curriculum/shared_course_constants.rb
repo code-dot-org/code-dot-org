@@ -55,6 +55,7 @@ module Curriculum
         CSD_self_paced_pl: 'CSD Self Paced PL',
         CSF_self_paced_pl: 'CSF Self Paced PL',
         CSC_self_paced_pl: 'CSC Self Paced PL',
+        CSC_k_5_self_paced_pl: 'CSC K-5 self-paced PL',
         student_self_paced: 'Student Self Paced Courses',
         pd_workshop_activity_csf: 'PD Workshop Activity CSF',
         pd_workshop_activity_csd: 'PD Workshop Activity CSD',
@@ -97,6 +98,7 @@ module Curriculum
         pl_workshop_activities: 'PL Workshop activities',
         self_paced_pl_k_5: 'K-5 self-paced PL',
         self_paced_pl_6_8: '6-8 self-paced PL',
+        self_paced_pl_9_12: '9-12 self-paced PL',
         skills_focused_self_paced_pl: 'Skills-focused self-paced PL',
         other: 'Other'
       }

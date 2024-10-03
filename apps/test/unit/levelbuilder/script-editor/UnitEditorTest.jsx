@@ -163,7 +163,7 @@ describe('UnitEditor', () => {
       renderDefault({initialContentArea: 'self_paced_pl_k_5'});
 
       const contentArea = screen.getByLabelText('Content Area');
-      expect(within(contentArea).getAllByRole('option').length).to.equal(10);
+      expect(within(contentArea).getAllByRole('option').length).to.equal(11);
       expect(
         within(contentArea).getByText('K-5 self-paced PL').selected
       ).to.equal(true);
