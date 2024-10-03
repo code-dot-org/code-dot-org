@@ -66,7 +66,7 @@ Scenario: Teacher can reset progress on multiple choice contained level
   And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2"
   And I wait for the lab page to fully load
   Then I press "unchecked_0"
-  And I wait until element "#checked_0" is visible
+  And I wait up to 5 seconds for element "#checked_0" to be visible
   Then I press "runButton"
   And I verify progress in the header of the current page is "perfect" for level 2
   Then I press "resetButton"
@@ -75,7 +75,7 @@ Scenario: Teacher can reset progress on multiple choice contained level
   And I wait for 5 seconds
   And I verify progress in the header of the current page is "not_tried" for level 2
   Then I press "unchecked_1"
-  And I wait until element "#checked_1" is visible
+  And I wait up to 5 seconds for element "#checked_1" to be visible
   Then I press "runButton"
   Then I press "resetButton"
   And I verify progress in the header of the current page is "perfect" for level 2
@@ -85,16 +85,16 @@ Scenario: Student can retry multiple choice contained level that allows multiple
   And I rotate to landscape
   And I wait for the lab page to fully load
   Then I press "unchecked_0"
-  And I wait until element "#checked_0" is visible
+  And I wait up to 5 seconds for element "#checked_0" to be visible
   Then I press "runButton"
   Then I press "resetButton"
   And I verify progress in the header of the current page is "perfect" for level 10
   Then I press "unchecked_1"
-  And I wait until element "#checked_1" is visible
+  And I wait up to 5 seconds for element "#checked_1" to be visible
   Then I press "runButton"
   Then I press "resetButton"
   And I verify progress in the header of the current page is "perfect" for level 10
   Then I am on "http://studio.code.org/s/allthethings/lessons/41/levels/10"
   And I rotate to landscape
   And I wait for the lab page to fully load
-  And I wait until element "#checked_1" is visible
+  And I wait up to 5 seconds for element "#checked_1" to be visible
