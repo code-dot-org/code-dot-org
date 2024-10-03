@@ -90,9 +90,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       buttons={{
         confirm: {
           callback: () => handleConfirm?.(prompt),
-          disabled:
-            Boolean(errorMessage) ||
-            (requiresPrompt === true && !prompt.length),
+          disabled: Boolean(errorMessage) || (requiresPrompt && !prompt.length),
         },
         cancel: {callback: () => handleCancel?.()},
       }}
