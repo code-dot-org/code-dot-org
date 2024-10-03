@@ -1,0 +1,103 @@
+# TeachAI DNS Configuration
+# This template is manually deployed to the 'teachai-dns' stack.
+
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Knowledge Base and data sources for the AI Differentiation chat feature.
+
+Resources:
+  AiDiffKnowledgeBaseWithAoss:
+    Type: AWS::Bedrock::KnowledgeBase
+    Properties:
+      Name: "ai-differentiation-knowledge-base"
+      Description: "Embedded lesson plans and supporting documents for contextual differentiation chat with AI Teaching assistant"
+      # TODO: define this role in code
+      RoleArn: !GetAtt AiDiffKnowledgeBaseRole.Arn
+      KnowledgeBaseConfiguration:
+        Type: "VECTOR"
+        VectorKnowledgeBaseConfiguration:
+          EmbeddingModelArn: "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0"
+          EmbeddingModelConfiguration:
+            BedrockEmbeddingModelConfiguration:
+              Dimensions: 1024
+      StorageConfiguration:
+        Type: "OPENSEARCH_SERVERLESS"
+        OpensearchServerlessConfiguration:
+          CollectionArn: !Ref AiDiffCollection
+          VectorIndexName: "ai-diff-index"
+          FieldMapping:
+            VectorField: "ai-diff-vector-field"
+            TextField: "text"
+            MetadataField: "metadata"
+  AiDiffS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "cdo-ai-differentiation"
+      VersioningConfiguration:
+        Status: Enabled
+      LifecycleConfiguration:
+        Rules:
+          - Id: "ExpireOldVersions"
+            Status: Enabled
+            NoncurrentVersionExpirationInDays: 365
+  AiDiffDataSource:
+    Type: AWS::Bedrock::DataSource
+    Properties:
+      KnowledgeBaseId: !Ref AiDiffKnowledgeBaseWithAoss
+      Name: "AI_Differentiation_data"
+      Description: "Lesson Plans and Supporting documents for code.org lessons"
+      DataDeletionPolicy: "RETAIN"
+      DataSourceConfiguration:
+        Type: "S3"
+        S3Configuration:
+          BucketArn: !GetAtt AiDiffS3Bucket.Arn
+          InclusionPrefixes: ["live/"]
+  AiDiffCollection:
+    Type: 'AWS::OpenSearchServerless::Collection'
+    Properties:
+      Name: ai-diff-collection
+      Type: VECTORSEARCH
+      Description: AI Differentiation search collection
+    DependsOn: EncryptionPolicy
+  EncryptionPolicy:
+    Type: 'AWS::OpenSearchServerless::SecurityPolicy'
+    Properties:
+      Name: test-encryption-policy
+      Type: encryption
+      Description: Encryption policy for test collection
+      Policy: |
+        {
+          "Rules": [
+            {
+              "Resource": "collection/ai-diff-collection",
+              "Action": "encrypt",
+              "Effect": "Allow"
+            }
+          ]
+        }
+  AiDiffKnowledgeBaseRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: "AiDiffKnowledgeBaseRole"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: "bedrock.amazonaws.com"
+            Action: "sts:AssumeRole"
+      Policies:
+        - PolicyName: "AiDiffKnowledgeBasePolicy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "s3:GetObject"
+                  - "s3:ListBucket"
+                  - "aoss:APIAccessAll"
+                  - "bedrock:InvokeModel"
+                Resource:
+                  - !GetAtt AiDiffS3Bucket.Arn
+                  - !GetAtt AiDiffCollection.Arn
+                  - "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0"
