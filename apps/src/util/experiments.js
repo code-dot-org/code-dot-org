@@ -45,8 +45,6 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 experiments.CPA_EXPERIENCE = 'cpa_experience';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
-experiments.AI_RUBRICS = 'ai-rubrics';
-experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 // Uses Google Blockly for a given user across labs/levels until the experiment is disabled
@@ -65,9 +63,8 @@ experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
 experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
 // Allows user to view the new version of the teacher navigation
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
-// Enables LMS cards in the LoginTypePicker during section creation
-experiments.SECTION_CREATE_LMS_CARDS = 'section_create_lms_cards';
-experiments.AI_ASSESSMENTS_ANNOUNCEMENT = 'ai-assessments-announcement';
+// Enables LTI account disconnect buttons on the Account Settings page
+experiments.LTI_ACCOUNT_UNLINKING = 'lti_account_unlinking';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

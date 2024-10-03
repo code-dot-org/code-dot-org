@@ -73,6 +73,7 @@ export default function initPage(unitEditorData) {
         initialLocales={locales}
         initialProjectSharing={scriptData.project_sharing || false}
         initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
+        initialTopicTags={scriptData.topic_tags || []}
         initialFamilyName={scriptData.family_name || ''}
         initialVersionYear={scriptData.version_year || ''}
         unitFamilies={unitEditorData.script_families}

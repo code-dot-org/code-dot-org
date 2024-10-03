@@ -28,4 +28,5 @@ export interface CurrentUserState {
   progressTableV2ClosedBeta: boolean;
   childAccountComplianceState: string | null;
   inSection: boolean | null;
+  usStateCode: string | null;
 }

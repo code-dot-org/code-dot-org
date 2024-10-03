@@ -458,6 +458,22 @@ Style/RedundantDoubleSplatHashBraces:
 Style/RedundantInitialize:
   Enabled: false
 
+# Offense count: 26
+# This cop supports safe autocorrection (--autocorrect).
+Style/RedundantCurrentDirectoryInPath:
+  Enabled: false
+
+# Offense count: 1
+# This cop supports safe autocorrection (--autocorrect).
+Style/RedundantDoubleSplatHashBraces:
+  Enabled: false
+
+# Offense count: 2
+# This cop supports unsafe autocorrection (--autocorrect-all).
+# Configuration parameters: AutoCorrect, AllowComments.
+Style/RedundantInitialize:
+  Enabled: false
+
 # Offense count: 82
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantParentheses:

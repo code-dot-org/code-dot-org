@@ -2,11 +2,14 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useCallback, useMemo} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {BodyOneText} from '@cdo/apps/componentLibrary/typography';
 import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
-import './styles/editor.css';
-import {editableFileType} from '../utils';
+import {editableFileType, viewableImageFileType} from '../utils';
+
+import moduleStyles from './styles/editor.module.scss';
 
 interface EditorProps {
   langMapping: {[key: string]: LanguageSupport};
@@ -35,13 +38,24 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     }
   }, [file?.language, langMapping]);
 
+  if (file && viewableImageFileType(file.language)) {
+    const base64 = window.btoa(file.contents);
+    return (
+      <div>
+        <img src={`data:image/png;base64,${base64}`} alt={file.name} />
+      </div>
+    );
+  }
+
   if (file && !editableFileType(file.language, editableFileTypes)) {
-    return <div>Cannot currently edit files of type {file.language}</div>;
+    return (
+      <div>{codebridgeI18n.cannotEditFile({language: file.language})}</div>
+    );
   }
 
   return (
-    <div className="editor-container">
-      {file && (
+    <div className={moduleStyles.editorContainer}>
+      {file ? (
         <CodeEditor
           key={`${file.id}/${1}`}
           darkMode={true}
@@ -49,6 +63,10 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
           startCode={file.contents}
           editorConfigExtensions={editorConfigExtensions}
         />
+      ) : (
+        <BodyOneText className={moduleStyles.noOpenFilesMessage}>
+          {codebridgeI18n.noOpenFiles()}
+        </BodyOneText>
       )}
     </div>
   );

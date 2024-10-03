@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-07T17:21:49.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Upload your own images to the **Asset Manager** and draw them in your scene!\r\n\r\n##In ImageScene.java:\r\n\r\n1. Write the method `createScene()`(#e7e8ea) to draw the images in the scene. You choose where you want to draw the images and the sizes of the images.\r\n\r\nTry using the `pause()`(#e7e8ea) or `clear()`(#e7e8ea) methods to turn your scene into an animation! Add a `pause()`(#e7e8ea) after drawing each image or after drawing a set of images. Use the `clear()`(#e7e8ea) method to clear the scene before drawing another image if you don't want the previous image to still display in the scene.\r\n\r\nYou can use one (or both!) of the following methods in the `Scene`(#e7e8ea) class to draw images:\r\n\r\n```\r\ndrawImage(String filename, int x, int y, int size)\r\nDraws an image at the given location and size\r\n\r\ndrawImage(String filename, int x, int y, int size, double rotation)\r\nDraws an image at the given location and size with a specified amount to rotate the image\r\n```\r\n\r\n##In MyTheater.java:\r\n\r\n2. Create a `String`(#e7e8ea) array to store the image files that you uploaded to the **Asset Manager**.\r\n\r\n3. Instantiate an `ImageScene`(#e7e8ea) object.\r\n\r\n4. Call the `createScene()`(#e7e8ea) method on your `ImageScene`(#e7e8ea) object.\r\n\r\n5. Use the method `Theater.playScenes(Scene scene)`(#e7e8ea) to play the scene.\r\n\r\n###Finding Images\r\nThe following are some websites you can find images. Images in The Theater are limited to a **5 MB** file size.\r\n\r\n* [Unsplash](https://unsplash.com/)\r\n\r\n* [pixabay](https://pixabay.com/)\r\n\r\n* [Pexels](https://www.pexels.com/)\r\n\r\n* [FreeImages](https://www.freeimages.com/)\r\n\r\n* [Free-Images.com](https://free-images.com/)",
@@ -27,15 +31,9 @@
       "lightbulb.png": "ad7f44ee-7697-46f1-9f57-d0062fb9f411.png",
       "teamwork.png": "b4262d51-69a2-42c3-a22b-52b7b0bb9537.png"
     },
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-04-07T17:21:49.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-04-07T17:21:49.900+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L3c_2022\\\"\"],\"cloned_from\":\"CSA U4L1-L3c_2022\"},{\"changed_at\":\"2022-04-07 17:21:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 14:01:20 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 14:23:28 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 14:59:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 15:20:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 15:20:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 15:31:12 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 15:37:21 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 17:05:39 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 17:08:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 17:17:31 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 20:00:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

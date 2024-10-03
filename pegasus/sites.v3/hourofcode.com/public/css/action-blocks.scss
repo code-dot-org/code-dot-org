@@ -1,3 +1,5 @@
+@import 'breakpoints';
+
 // Action blocks wrappers
 .action-block__wrapper {
   margin-top: 2rem;
@@ -35,7 +37,9 @@
 
   h3 {
     width: 100%;
-    margin-top: 0;
+    margin: 0 0 0.5em;
+    font-size: 1.25rem;
+    line-height: 1.4;
   }
 
   figure {
@@ -95,8 +99,35 @@
   flex-wrap: wrap;
   overflow: hidden;
 
+  @media (max-width: $width-md) {
+    flex-direction: column;
+  }
+
+  .media-wrapper {
+    flex: 1;
+
+    & > * {
+      margin: 1.25rem;
+      width: calc(100% - 1.25rem);
+
+      @media (max-width: $width-md) {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    &.right > * {
+      float: right;
+
+      html[dir="rtl"] & {
+        float: left;
+      }
+    }
+  }
+
   .text-wrapper {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 1.5rem;
+    flex: 1;
   }
 
   figure.video-responsive {

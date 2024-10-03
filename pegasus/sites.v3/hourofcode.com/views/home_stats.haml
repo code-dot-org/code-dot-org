@@ -1,22 +1,19 @@
 :ruby
   stat_item = [
     {
-      image: "/images/hoc-stats-languages.png",
-      caption: hoc_s(:hoc_stat_languages)
+      stat: "1.8B",
+      caption: hoc_s("hoc_homepage.global.stats.served")
     },
     {
-      image: "/images/hoc-stats-hours-served.png",
-      caption: hoc_s(:hoc_stat_hours_served)
-    },
-    {
-      image: "/images/hoc-stats-females.png",
-      caption: hoc_s(:hoc_stat_females)
+      stat: "180+",
+      caption: hoc_s("hoc_homepage.global.stats.countries")
     },
   ]
 
 .stats-wrapper
   - stat_item.each do |stat_item|
-    %figure
-      %img{src: stat_item[:image], alt: ""}
-      %figcaption.body-two
+    .stat-item
+      %p.stat
+        = stat_item[:stat]
+      %p.body-two.white.no-margin-bottom
         = stat_item[:caption]

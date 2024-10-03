@@ -15,9 +15,9 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/0446e33e857726829127b5984b2a8d4f-image-1724771056575.png" alt="project planning guide" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
 
-#### In this lesson, students kick off their Data Science for Community Impact Project by identifying the communities they belong to and brainstorming relevant problems within these communities. 
+#### In this lesson, students begin their **Data Science for Community Impact Project** by identifying their communities and brainstorming relevant problems. 
 
-#### They work collaboratively to turn their observations into well-defined data questions, create a data collection plan, and ensure their plans are specific, actionable, and ethically sound.
+#### They collaboratively turn observations into clear data questions, create a data collection plan, and ensure it is specific, actionable, and ethical.
 
 ### <b><a href="https://docs.google.com/document/d/1zI55ag_XNooqQOHcaVQ5AxBF5IaDSn0uM2IyX7-GkUs/copy" target="blank" rel="noopener noreferrer">Project Planning Guide</a>.</b>
 
@@ -30,5 +30,5 @@ markdown <<MARKDOWN
 
 ## Let’s continue to Pyhton 
 
-![]()
+
 MARKDOWN

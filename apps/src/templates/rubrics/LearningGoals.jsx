@@ -10,8 +10,8 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ai_rubric_cyan} from '@cdo/apps/util/color';
 import HttpClient from '@cdo/apps/util/HttpClient';

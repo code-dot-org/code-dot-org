@@ -15,7 +15,8 @@
     "display_name": "Art Animation",
     "bubble_choice_description": "An artist wants to create an animation of their favorite artwork and has a 2D array of images they want to use in their scene.",
     "thumbnail_url": "https://images.code.org/9a9704f6654f324489770d9d828715c7-image-1651170296817.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:09.762+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L4c CR_2022\\\"\"],\"cloned_from\":\"CSA U5L5-L4c CR_2022\"}]"

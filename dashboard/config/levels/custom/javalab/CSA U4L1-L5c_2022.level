@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-04-07T17:27:34.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Add music to the scene!\r\n\r\n##In MusicScene.java:\r\n\r\n1. In the `createScene()`(#e7e8ea) method, use the `playSound(String filename)`(#e7e8ea) method to play `sound`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n2. Instantiate an `MusicScene`(#e7e8ea) object with the `\"gamemusic.wav\"`(#e7e8ea) sound file in the **Asset Manager**\r\n\r\n3. Call the `createScene()`(#e7e8ea) method on your `MusicScene`(#e7e8ea) object.\r\n\r\n4. Use the method `Theater.playScenes(Scene scene)`(#e7e8ea) to play the scene.",
@@ -24,12 +28,9 @@
         "isVisible": true
       }
     },
-    "encrypted_exemplar_sources": "88cqqh4PFE13VUB7Wdee/b0dxeEfZcOIwxv+hsPvwwIyB0M0ZHSefy9Jy2Q9\n0IpEXQH3m7Y3wezasvneocoK8im2qLT/56AQUC9pkhZKnOEbowo+yj496amF\nDT408DTYVSZ7WuVL7IE5HZSFWYNtwn+aqRdG6TJR3q9iMLtwBOdLlPlkZs8T\nxxo+dxfttzHj6qYGmbNkBvYCWajeT/dSWf9nXzup3KnfcZ6jaMj0JUlz6yvv\nlRcC/AN0I3xY6LlHJus8kYAIMABq4fqPf9uEIWhyTe+3oDFPE8CHwTPeG8Xo\nLm7u6/T8brKio8fqpTuLoQ/8cH37cfLeqJnfVzvzXv5IH+sGAkmoAheaRAB3\nOjsB/DJvJYCMgMljLtzFskYVhCmwR0ir1DhKXjlBCYgxNw81npPRTaOxxtF7\nka5R7JShyfBWDJjqA0S5trbN6wk6O4S3I8R6RotRrB2mP72YsZpRb8Isb0ch\nrTh8tBO08cmcHLFQxHXdx2c+spXKIVEi+EGi75nY4oBD9zhcN4UydncaxaMx\nj4uFQTj24oqdUlGAiO52Qv7IUCDw+4EsdZM+ymyAoCN2FKF2kRQPDfB8Jdcp\nIjfWWu8VkyC6ZWVRMXuLltBp7LLFBs+CK1R1vW70mgi0etvmjvkzRWNtsIhc\nWiu0Dvo+Mbe2C8ulbcjtNYtoPy0cLcas1kVPsjmHn8nBYs4ch88rSEVw+Q9u\nW0wXVOA7ae9Tdo5p9Put2LX6n1kmPmfM5Z0vBEZKafV9n7lxNzmGW4O5SBps\njSgfbEX1XLi1Aa/RbAdjgtPun2MtFNyR6cWc6B+CuO3jYocELp/LCQpYHKfN\n7dMV9eFwul5IJCH4E5PgbEiGaq6bnHsXCzHH8Gorh/RC6OWGcqzvjAah/5y6\nokkIcLLORa4j6qxaFKl80WiQzBUhLxdxjcWRjWS0h4AR97/WHw2Rbuyv572+\n7YfKsngT4lW2o6OJSBYQac5cne0Bbd2Iuf2RuN4666hEWymxtMDLy4adRtrc\n4rYVl72/sFI1H+GqAkwWc6DKF4CMbxV4m4nm98esY95t47FsySwo2Iy/jhM6\n0OrR/pDf30dzprV5aH425KBAeQ0l+VnizCHBsMrZ+dxiAG0BLbwtoilW0Vic\nCLUgDOEgmodJTl/P7M5HZDnDfHwoeDtjFBGR8VXSyuAGL38rAF1MDWaQDPfj\nSqgNfiUmRGFXtJYzw8Fbv5gTbhiCtTT5VwkqQ/lI3O0LHeXn1jUfwm/mB3py\n6c8gth7+00HuTfrtSEqCDg1kiUgqwjo9GHiye1NQeTSGUn3QZyIFtl9fKdbX\n7kpt2cpPaG8p391OEBmzHOemsNXrRJqDZOPfMFFDBCGsCKdaxgfADQBuJVoj\nDufaalM=\n"
+    "encrypted_exemplar_sources": "88cqqh4PFE13VUB7Wdee/b0dxeEfZcOIwxv+hsPvwwIyB0M0ZHSefy9Jy2Q9\n0IpEXQH3m7Y3wezasvneocoK8im2qLT/56AQUC9pkhZKnOEbowo+yj496amF\nDT408DTYVSZ7WuVL7IE5HZSFWYNtwn+aqRdG6TJR3q9iMLtwBOdLlPlkZs8T\nxxo+dxfttzHj6qYGmbNkBvYCWajeT/dSWf9nXzup3KnfcZ6jaMj0JUlz6yvv\nlRcC/AN0I3xY6LlHJus8kYAIMABq4fqPf9uEIWhyTe+3oDFPE8CHwTPeG8Xo\nLm7u6/T8brKio8fqpTuLoQ/8cH37cfLeqJnfVzvzXv5IH+sGAkmoAheaRAB3\nOjsB/DJvJYCMgMljLtzFskYVhCmwR0ir1DhKXjlBCYgxNw81npPRTaOxxtF7\nka5R7JShyfBWDJjqA0S5trbN6wk6O4S3I8R6RotRrB2mP72YsZpRb8Isb0ch\nrTh8tBO08cmcHLFQxHXdx2c+spXKIVEi+EGi75nY4oBD9zhcN4UydncaxaMx\nj4uFQTj24oqdUlGAiO52Qv7IUCDw+4EsdZM+ymyAoCN2FKF2kRQPDfB8Jdcp\nIjfWWu8VkyC6ZWVRMXuLltBp7LLFBs+CK1R1vW70mgi0etvmjvkzRWNtsIhc\nWiu0Dvo+Mbe2C8ulbcjtNYtoPy0cLcas1kVPsjmHn8nBYs4ch88rSEVw+Q9u\nW0wXVOA7ae9Tdo5p9Put2LX6n1kmPmfM5Z0vBEZKafV9n7lxNzmGW4O5SBps\njSgfbEX1XLi1Aa/RbAdjgtPun2MtFNyR6cWc6B+CuO3jYocELp/LCQpYHKfN\n7dMV9eFwul5IJCH4E5PgbEiGaq6bnHsXCzHH8Gorh/RC6OWGcqzvjAah/5y6\nokkIcLLORa4j6qxaFKl80WiQzBUhLxdxjcWRjWS0h4AR97/WHw2Rbuyv572+\n7YfKsngT4lW2o6OJSBYQac5cne0Bbd2Iuf2RuN4666hEWymxtMDLy4adRtrc\n4rYVl72/sFI1H+GqAkwWc6DKF4CMbxV4m4nm98esY95t47FsySwo2Iy/jhM6\n0OrR/pDf30dzprV5aH425KBAeQ0l+VnizCHBsMrZ+dxiAG0BLbwtoilW0Vic\nCLUgDOEgmodJTl/P7M5HZDnDfHwoeDtjFBGR8VXSyuAGL38rAF1MDWaQDPfj\nSqgNfiUmRGFXtJYzw8Fbv5gTbhiCtTT5VwkqQ/lI3O0LHeXn1jUfwm/mB3py\n6c8gth7+00HuTfrtSEqCDg1kiUgqwjo9GHiye1NQeTSGUn3QZyIFtl9fKdbX\n7kpt2cpPaG8p391OEBmzHOemsNXrRJqDZOPfMFFDBCGsCKdaxgfADQBuJVoj\nDufaalM=\n",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-04-07T17:27:34.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-07T17:27:34.200+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L5b_2022\\\"\"],\"cloned_from\":\"CSA U4L1-L5b_2022\"},{\"changed_at\":\"2022-04-07 17:27:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 20:15:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 20:17:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 20:20:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

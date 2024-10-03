@@ -8,8 +8,8 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import * as utils from '@cdo/apps/code-studio/utils';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
@@ -1163,6 +1163,8 @@ describe('RubricContainer', () => {
     tourFabBg.scrollBy = jest.fn();
     const nextButton = await findByText('Next Tip');
 
+    fireEvent.click(nextButton);
+    await findByText('Class Data');
     fireEvent.click(nextButton);
     await findByText('Understanding the AI Assessment');
     fireEvent.click(nextButton);

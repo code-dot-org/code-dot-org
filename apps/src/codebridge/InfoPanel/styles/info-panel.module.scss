@@ -5,9 +5,12 @@
   width: 100%;
   grid-area: info-panel;
   color: $white;
-  background-color: $neutral_dark;
-  border: 1px solid $neutral_dark80;
+  background-color: $light_black;
   overflow: hidden;
+}
+
+.infoPanelHeader {
+  border-bottom: 1px solid $light_gray_800;
 }
 
 // This is adapted from customDropdown.module.scss in the component library.

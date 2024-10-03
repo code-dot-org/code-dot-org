@@ -36,6 +36,9 @@ const availableCallouts: {
   'play-sound-block-workspace': {
     selector: `g[data-id="${BlockTypes.WHEN_RUN_SIMPLE2}"] g[data-id="${BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2}"]`,
   },
+  'play-drums-ai-block-workspace': {
+    selector: `.blocklyWorkspace g[data-id="${BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2}"]`,
+  },
   'play-sounds-together-block-workspace': {
     selector: `.blocklyWorkspace g[data-id="${BlockTypes.PLAY_SOUNDS_TOGETHER}"] path`,
   },
@@ -51,6 +54,10 @@ const availableCallouts: {
   'run-button': {selector: '#run-button'},
   'trigger-button-1': {selector: `#${Triggers[0].id}`},
   'toolbox-first-row': {selector: '.blocklyTreeRow'},
+  'flyout-first-block': {
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable:nth-of-type(1)',
+  },
   'toolbox-second-block': {
     openToolboxCategory: 0,
     selector:

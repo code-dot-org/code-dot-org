@@ -98,26 +98,15 @@ class Blockly < Level
       # Karel
       "farmer", "farmer_night", "bee", "bee_night", "collector", "harvester", "planter",
       # Spelling Bee
-      "letters"
-    ]
-  end
-
-  def self.artist_skins
-    [
-      # To be merged with migrated_skins after DCDO check is removed.
+      "letters",
+      # Artist
       "artist", "artist_zombie", "elsa", "anna"
     ]
   end
 
   def uses_google_blockly?
     skin = properties['skin']
-    if self.class.migrated_skins.include?(skin)
-      true
-    elsif self.class.artist_skins.include?(skin)
-      DCDO.get('artist_google_blockly', true)
-    else
-      false
-    end
+    self.class.migrated_skins.include?(skin)
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
@@ -880,7 +869,7 @@ class Blockly < Level
 
   def self.asset_host_prefix
     host = ActionController::Base.asset_host
-    (host.blank?) ? "" : "//#{host}"
+    host.blank? ? "" : "//#{host}"
   end
 
   # If true, don't autoplay videos before this level (but do keep them in the

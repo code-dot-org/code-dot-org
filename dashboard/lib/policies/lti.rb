@@ -137,6 +137,10 @@ class Policies::Lti
     (Set.new(roles) & TEACHER_ROLES).any?
   end
 
+  def self.unverified_teacher?(user)
+    user.teacher? && !user.verified_teacher?
+  end
+
   def self.lti?(user)
     !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
   end
@@ -204,7 +208,7 @@ class Policies::Lti
 
   # Check if a partial registration is in progress for an LTI user.
   def self.lti_registration_in_progress?(session)
-    PartialRegistration.in_progress?(session) && PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
+    ::PartialRegistration.in_progress?(session) && ::PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
   end
 
   def self.account_linking?(session, user)

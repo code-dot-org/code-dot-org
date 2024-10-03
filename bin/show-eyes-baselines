@@ -106,7 +106,7 @@ def main
   unique_scenarios = scenarios.map {|item| item[SCENARIO_NAME]}.uniq {|item| item}.sort
 
   # Print header
-  puts "#{'Scenario:'.ljust(COLUMN1_WIDTH)}#{("#{branch1}:").ljust(COLUMN2_WIDTH)}#{branch2}:"
+  puts "#{'Scenario:'.ljust(COLUMN1_WIDTH)}#{"#{branch1}:".ljust(COLUMN2_WIDTH)}#{branch2}:"
   # Print status of both branches for each scenario
   unique_scenarios.each do |scenario_name|
     status1, status2 = get_scenario_status(baseline_data, scenario_name, branch1, branch2)

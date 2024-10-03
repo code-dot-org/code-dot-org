@@ -12,7 +12,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -100,8 +100,8 @@ const AichatView: React.FunctionComponent = () => {
     projectManager.addSaveSuccessListener(() => {
       dispatch(onSaveComplete());
     });
-    projectManager.addSaveFailListener((e: Error) => {
-      dispatch(onSaveFail(e));
+    projectManager.addSaveFailListener(() => {
+      dispatch(onSaveFail());
     });
   }, [projectManager, dispatch]);
 

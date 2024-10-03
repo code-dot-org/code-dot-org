@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-03-27T23:59:05.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A social media analyst wants to create an animation to visualize the number of social media users on Twitter, Facebook, and Instagram for 2018, 2019, and 2020. They have a 2D array that contains the following values\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nRow 1: 1318, 9021, 2755\r\nRow 2: 1330, 9736, 3586\r\nRow 3: 1358, 10841, 4031\r\n</pre>\r\n\r\nwhere each row represents 2018, 2019, and 2020, respectively. Each column represents the number of users for that year on Twitter, Facebook, and Instagram, respectively.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SocialMediaScene</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getValuesByYear()</code> method using enhanced <code style=\"background-color: #ececec; color: black; font-weight: bold;\">for</code> loops to return a 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">SocialMedia</code> objects that match the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">yearToFind</code>.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getValuesByYear()</code> and pass the 1D array returned to a call to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with traversing a two-dimensional (2D) array using an enhanced <code style=\"background-color: #ececec; color: black; font-weight: bold;\">for</code> loop.\r\n</div>",
@@ -37,12 +41,9 @@
         "isVisible": true,
         "tabOrder": 2
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2023-03-27T23:59:05.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-03-27T23:59:05.799+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L7c_2023\\\"\"],\"cloned_from\":\"CSA U5L5-L7c_2023\"},{\"changed_at\":\"2023-03-27 23:59:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:46:47 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-22 00:03:01 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 16:22:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 16:24:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 16:25:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 16:28:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 16:28:23 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 16:28:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 16:28:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 16:28:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 16:28:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

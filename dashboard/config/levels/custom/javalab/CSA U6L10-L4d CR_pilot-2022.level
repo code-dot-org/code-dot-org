@@ -15,7 +15,8 @@
     "display_name": "Assign Stars",
     "bubble_choice_description": "Find the overall sentiment of text and assign star ratings based on its sentiment.",
     "thumbnail_url": "https://images.code.org/12ef7dab8c8cc924603219d27c6a78ad-rating.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:28.233+00:00\",\"changed\":[\"cloned from \\\"CSA U6L10-L4d CR_2022\\\"\"],\"cloned_from\":\"CSA U6L10-L4d CR_2022\"}]"

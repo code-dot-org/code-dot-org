@@ -12,7 +12,8 @@
     "display_name": "SocialSense",
     "bubble_choice_description": "Dive into the world of public opinion with SocialSense! Ever wonder what the Internet is really saying about your favorite movie, song, or celebrity? Let SocialSense decode the mood of the masses, and explore the good, the bad, and the neutral with just one click!",
     "thumbnail_url": "https://images.code.org/d15dc09184a2bb5d6e9c8fd2d45cf3df-socialsense.gif",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:47:51.663+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L2b_2023\\\"\"],\"cloned_from\":\"CSA-SE-L2-L2b_2023\"}]"

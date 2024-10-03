@@ -15,7 +15,8 @@
     "display_name": "Social Media Users",
     "bubble_choice_description": "A social media analyst wants to create an animation to visualize the number of social media users on Twitter, Facebook, and Instagram for 2018, 2019, and 2020.",
     "thumbnail_url": "https://images.code.org/ebc1bb29842a77a0606f3d036bcba30c-image-1651171229830.png",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:09.917+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L4d CR_2022\\\"\"],\"cloned_from\":\"CSA U5L5-L4d CR_2022\"}]"
