@@ -90,6 +90,8 @@
 
     %script{src: webpack_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json, under13: under_13.to_json}, 'data-ot-ignore' => ''}
 
+    = global_edition_region_switch_confirm_partial
+
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - unless view_options[:no_header]
         = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, lesson: @lesson, full_width: view_options[:full_width]}

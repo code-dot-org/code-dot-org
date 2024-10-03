@@ -1,0 +1,33 @@
+@import 'color';
+@import 'font';
+
+#global-edition-region-switch-confirm {
+  max-width: 34rem;
+  padding: 4rem 2.5rem;
+  text-align: center;
+
+  & > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  & p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  &-accept {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &-reject {
+    display: block;
+    color: $light_gray_500;
+
+    &:hover {
+      color: $light_gray_700;
+    }
+  }
+};

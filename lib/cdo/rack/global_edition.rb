@@ -6,6 +6,9 @@ module Rack
   class GlobalEdition
     REGION_KEY = 'ge_region'
     LANGUAGE_COOKIE_KEY = 'language_'
+    COUNTIES_REGIONS = {
+      'IR' => 'fa',
+    }.freeze
 
     class RouteHandler
       ROOT_PATH = '/global'

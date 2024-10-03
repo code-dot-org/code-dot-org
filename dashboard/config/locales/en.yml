@@ -1517,3 +1517,6 @@ en:
         parent_email_is_own: A request cannot be sent to your own email address
         resend_limit_reached: The limit for resend requests has been reached
   not_applicable_abbreviation: "N/A"
+  global_edition:
+    regions:
+      fa: Farsi
