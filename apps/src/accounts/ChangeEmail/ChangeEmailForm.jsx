@@ -8,7 +8,7 @@ import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import i18n from '@cdo/locale';
 
-import {pegasus} from '../lib/util/urlHelpers';
+import {pegasus} from '../../lib/util/urlHelpers';
 
 import styles from './formStyle.module.scss';
 

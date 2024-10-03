@@ -7,9 +7,9 @@ import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
-import {hashEmail} from '../code-studio/hashEmail';
-import BaseDialog from '../templates/BaseDialog';
-import {isEmail} from '../util/formatValidation';
+import {hashEmail} from '../../code-studio/hashEmail';
+import BaseDialog from '../../templates/BaseDialog';
+import {isEmail} from '../../util/formatValidation';
 
 import ChangeEmailForm from './ChangeEmailForm';
 
