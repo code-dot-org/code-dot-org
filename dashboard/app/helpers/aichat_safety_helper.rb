@@ -100,7 +100,7 @@ module AichatSafetyHelper
     private def report_openai_safety_check(metric_name, num_attempts = 1)
       safety_dimensions = [
         {name: 'Environment', value: CDO.rack_env},
-        {name: 'PromptVersion', value: get_safety_system_prompt},
+        {name: 'PromptVersion', value: get_safety_system_prompt_version},
       ]
       if metric_name == 'Finish'
         safety_dimensions << {name: 'Attempts', value: num_attempts.to_s}
@@ -128,7 +128,7 @@ module AichatSafetyHelper
             timestamp: Time.now,
             dimensions: [
               {name: 'Environment', value: CDO.rack_env},
-              {name: 'SafetySystemPrompt', value: get_safety_system_prompt},
+              {name: 'PromptVersion', value: get_safety_system_prompt_version},
               {name: 'Attempts', value: num_attempts.to_s},
             ]
           }
