@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-02-17T18:45:36.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Fix the Error\r\n\r\nThe <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findMatchingDog()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PetStore</code> class is supposed to return a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> containing the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Dog</code> object that has the same age as the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dogToFind</code>, but it has a bug 🪲\r\n\r\nFind and fix the error in the program.\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 Help! I can't find the bug!</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    \t<p>The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">equals()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Dog</code> class returns <code style=\"background-color: #ececec; color: black; font-weight: bold;\">true</code> if two <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Dog</code> objects have the same age. Check if this is being used in the condition in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">findMatchingDog()</code> method.</p>\r\n    </div>\r\n</details>",
@@ -29,16 +33,10 @@
         "tabOrder": 1
       }
     },
-    "encrypted_examples": [
-
-    ],
-    "video_key": "csa_equals_and_aliases"
+    "video_key": "csa_equals_and_aliases",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2023-02-17T18:45:36.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:45:36.836+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L4_2023\\\"\"],\"cloned_from\":\"CSA U4L6-L4_2023\"},{\"changed_at\":\"2023-02-17 18:45:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 18:51:03 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-14 19:39:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-14 19:40:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-14 19:47:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-14 19:49:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-14 19:49:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-14 19:49:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-14 19:49:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-14 19:49:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-14 19:50:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 13:42:38 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

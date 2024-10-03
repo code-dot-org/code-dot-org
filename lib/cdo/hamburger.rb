@@ -296,4 +296,131 @@ class Hamburger
       signed_out_links
     end
   end
+
+  def self.get_farsi_header_contents(options)
+    loc_prefix = options[:loc_prefix]
+
+    signed_out_links = [
+      {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/global/fa/teacher"), id: "header-teach"},
+      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/global/fa/about"), id: "header-about"},
+      {title: I18n.t("#{loc_prefix}csf"), url: CDO.code_org_url("/global/fa/csf"), id: "header-csf"},
+      {title: I18n.t("#{loc_prefix}hour_of_code"), url: CDO.code_org_url("/global/fa/hourofcode"), id: "header-hoc"},
+      {title: I18n.t("#{loc_prefix}videos"), url: CDO.code_org_url("/global/fa/videos"), id: "header-videos"}
+    ]
+
+    signed_out_links
+  end
+
+  def self.get_farsi_hamburger_contents(options)
+    loc_prefix = options[:loc_prefix]
+    is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
+    is_level = options[:level]
+    hide_small_desktop = is_teacher_or_student || is_level
+
+    # Teacher-specific hamburger dropdown links.
+    teacher_entries = [
+      {title: "my_dashboard", url: CDO.studio_url("/home")},
+      {title: "course_catalog", url: CDO.studio_url("/catalog")},
+      {title: "project_gallery", url: CDO.studio_url("/projects")},
+      {title: "professional_learning", url: CDO.studio_url("/my-professional-learning")},
+      {title: "incubator", url: CDO.studio_url("/incubator")}
+    ].each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end
+
+    # Student-specific hamburger dropdown links.
+    student_entries = [
+      {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
+      {title: "course_catalog", url: CDO.code_org_url("/students")},
+      {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"},
+      {title: "incubator", url: CDO.studio_url("/incubator")}
+    ].each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end
+
+    # Privacy & Legal hamburger dropdown links.
+    legal_entries = [
+      {title: "legal_privacy", url: "https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp"},
+      {title: "legal_cookie_notice", url: CDO.code_org_url("/cookies")},
+      {title: "legal_tos", url: "https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp"},
+    ].each do |entry|
+      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
+    end.freeze
+
+    # Get visibility CSS.
+    visibility_options = {level: options[:level], language: options[:language], user_type: options[:user_type]}
+    visibility = Hamburger.get_visibility(visibility_options)
+
+    # Generate the list of entries.
+    entries = []
+
+    # user_type-specific.
+    case options[:user_type]
+    when 'teacher'
+      entries = entries.concat(teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]})
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_help_options]), id: "after-teacher"}
+    when 'student'
+      entries = entries.concat(student_entries.each {|e| e[:class] = visibility[:show_student_options]})
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
+    end
+
+    # Show help links before Pegasus links for signed in users.
+    help_contents = HelpHeader.get_help_contents(options)
+    if is_teacher_or_student
+      entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
+    end
+
+    # Pegasus links.
+    entries << {
+      title: I18n.t("#{loc_prefix}teach"),
+      url: CDO.code_org_url("/global/fa/teacher"),
+      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop"),
+      id: "header-teach"
+    }
+
+    entries << {
+      title: I18n.t("#{loc_prefix}about"),
+      url: CDO.code_org_url("/global/fa/about"),
+      id: "header-about",
+      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop")
+    }
+
+    entries << {
+      title: I18n.t("#{loc_prefix}csf"),
+      url: CDO.code_org_url("/global/fa/csf"),
+      id: "header-csf",
+      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop")
+    }
+
+    entries << {
+      title: I18n.t("#{loc_prefix}hour_of_code"),
+      url: CDO.code_org_url("/global/fa/hourofcode"),
+      id: "header-hoc",
+      class: visibility[:show_pegasus_options]
+    }
+
+    entries << {
+      title: I18n.t("#{loc_prefix}videos"),
+      url: CDO.code_org_url("/global/fa/videos"),
+      id: "header-videos",
+      class: visibility[:show_pegasus_options]
+    }
+
+    entries << {
+      type: "expander",
+      title: I18n.t("#{loc_prefix}legal"),
+      id: "legal_entries",
+      subentries: legal_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+      class: visibility[:show_pegasus_options]
+    }
+
+    # Show help links at the bottom of the list for signed out users.
+    unless is_teacher_or_student
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]) + (is_level ? "  hide-large-desktop" : ""), id: "before-help"}
+      entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
+    end
+
+    {entries: entries, visibility: visibility[:hamburger_class]}
+  end
 end

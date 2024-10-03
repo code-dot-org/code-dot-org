@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:31:56.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "##In BirthdayScene.java:\r\n\r\n1. Write the `equals()`(#e7e8ea) method. It should return `true`(#e7e8ea) if the `name`(#e7e8ea) of both `BirthdayScene`(#e7e8ea) objects are the same. Otherwise, return `false`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Write an `if/else`(#e7e8ea) statement using your `equals()`(#e7e8ea) method to check if `firstBirthday`(#e7e8ea) and `secondBirthday`(#e7e8ea) are equivalent.\r\n\r\n   a. If the `equals()`(#e7e8ea) method returns `true`(#e7e8ea), use `Theater.playScenes(firstBirthday)`(#e7e8ea) to play only `firstBirthday`(#e7e8ea).\r\n   \r\n   b. If the `equals()`(#e7e8ea) method returns `false`(#e7e8ea), call `secondBirthday.createScene()`(#e7e8ea) then use `Theater.playScenes(firstBirthday, secondBirthday)`(#e7e8ea) to play both scenes.\r\n   \r\n![](https://images.code.org/276fab383f81ec5c964dd045c605ed7f-image-1653075248031.gif)\r\n\r\n::: details [**Show Me How**]\r\nThe `equals()`(#e7e8ea) method uses the following syntax:\r\n  \r\n  ```\r\n  public boolean equals(Object otherObject) {\r\n    // code to compare values\r\n  }\r\n  ```\r\n\r\nDon't forget to first check if `otherObject`(#e7e8ea) is `null`(#e7e8ea)!\r\n\r\nTo call the `equals()`(#e7e8ea) method in an `if`(#e7e8ea) statement, use the following syntax:\r\n\r\n   ```\r\n   if (firstObject.equals(secondObject) {\r\n     // code to execute\r\n   }\r\n   ```\r\n:::",
@@ -25,12 +29,9 @@
         "text": "import org.code.theater.*;\n\n/*\n * Represents a birthday scene\n */\npublic class BirthdayScene extends Scene {\n\n  private String name;  // The name of the person\n\n  /*\n   * Constructor to create a BirthdayScene with\n   * the specified name\n   */\n  public BirthdayScene(String name) {\n    this.name = name;\n  }\n\n  /*\n   * Returns the name of the person\n   */\n  public String getName() {\n    return name;\n  }\n\n  /*\n   * Creates the birthday scene with a happy birthday\n   * message and birthday cake image\n   */\n  public void createScene() {   \n    String birthdayGreeting = \"Happy Birthday \" + name + \"!\";\n\n    drawText(birthdayGreeting, 100, 50);\n    drawImage(\"birthday.png\", 100, 100, 200);\n\n    pause(2);\n    clear(\"yellow\");\n  }\n\n  // TO DO #1: Write the equals() method.\n  \n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:31:56.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:31:56.055+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L4c_2022\\\"\"],\"cloned_from\":\"CSA U4L2-L4c_2022\"},{\"changed_at\":\"2022-09-21 02:31:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-21 02:31:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-21 02:32:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

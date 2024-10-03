@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {ChangeEvent, AriaAttributes} from 'react';
+import React, {AriaAttributes, ChangeEvent} from 'react';
 
 import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
@@ -43,6 +43,12 @@ export interface TextFieldProps extends AriaAttributes {
   color?: 'black' | 'gray' | 'white';
   /** Size of TextField */
   size?: Exclude<ComponentSizeXSToL, 'xs'>;
+  /** max length of TextField */
+  maxLength?: number;
+  /** min length of TextField */
+  minLength?: number;
+  /** min length of TextField */
+  autoComplete?: string;
 }
 
 /**
@@ -72,6 +78,9 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   helperIcon,
   errorMessage,
   className,
+  maxLength,
+  minLength,
+  autoComplete,
   color = 'black',
   size = 'm',
   ...rest
@@ -97,7 +106,13 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         placeholder={placeholder}
         readOnly={readOnly}
         disabled={disabled}
+        maxLength={maxLength}
+        minLength={minLength}
+        autoComplete={autoComplete}
         onChange={onChange}
+        className={classNames({
+          [moduleStyles.hasError]: errorMessage,
+        })}
         {...ariaProps}
         aria-disabled={disabled || ariaProps['aria-disabled']}
       />

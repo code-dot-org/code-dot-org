@@ -78,7 +78,7 @@
 
 .bubble-dark {
   @extend %bubble;
-  background-color: $neutral_dark90;
+  background-color: $light_gray_950;
   color: $light_white;
 
   h1, h2, h3, h4 {
@@ -132,7 +132,6 @@
 }
 
 .validationIcon {
-  color: $light_affirmative_500;
   width: 20px;
   height: 20px;
   margin-top: 6px;
@@ -141,4 +140,8 @@
 .predictQuestion {
   width: auto;
   margin: 4px;
+}
+
+.button {
+  padding: 12px;
 }

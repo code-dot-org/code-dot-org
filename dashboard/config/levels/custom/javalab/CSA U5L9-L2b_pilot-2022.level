@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:50:23.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A student is choosing books they want to read each week, but they want to be sure they don't choose the same book more than once. They have the information stored in a 2D array, where each row represents a different week.\r\n\r\n##In Books.java:\r\n\r\n1. Write the method `findDuplicates()`(#e7e8ea) to check if `currentValue`(#e7e8ea) appears in the `bookList`(#e7e8ea) array more than once.\r\n\r\n   * If `currentValue`(#e7e8ea) is found in `bookList`(#e7e8ea) at a different row and column location, return `true`(#e7e8ea). Otherwise, return `false`(#e7e8ea).\r\n\r\n2. Write the method `hasDuplicateBooks()`(#e7e8ea) to determine if there are any duplicate books in the 2D array `bookList`(#e7e8ea).\r\n\r\n   * Return `true`(#e7e8ea) if a book appears in the array more than once. Otherwise, return `false`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `hasDuplicateBooks()`(#e7e8ea) method and print the results.",
@@ -25,12 +29,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:50:23.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:23.844+00:00\",\"changed\":[\"cloned from \\\"CSA U5L9-L2b_2022\\\"\"],\"cloned_from\":\"CSA U5L9-L2b_2022\"},{\"changed_at\":\"2022-10-12 21:57:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 21:59:56 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 22:01:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-12 22:01:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

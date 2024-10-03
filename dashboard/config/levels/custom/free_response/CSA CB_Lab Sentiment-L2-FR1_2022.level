@@ -1,5 +1,9 @@
 <FreeResponse>
   <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2022-08-09T14:05:23.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
   "properties": {
     "encrypted": "false",
     "long_instructions": "## An Algorithm for Sentiment Analysis\r\n---\r\n\r\nWith a partner, discuss what a simple algorithm might look like to determine the overall sentiment of the following sentence:\r\n\r\n*This was a terrible restaurant! The pizza crust was too chewy, and I disliked the pasta. I would definitely not come back.*\r\n\r\nUse the supplied file, `cleanSentiment.csv`, to aid in determining your algorithm. In the box below, describe the steps of your algorithm and how it might determine sentiment.",
@@ -10,12 +14,9 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "allow_multiple_attempts": "false"
+    "allow_multiple_attempts": "false",
+    "ai_tutor_available": true
   },
-  "level_num": "custom",
-  "game_id": 52,
-  "created_at": "2022-08-09T14:05:23.000Z",
-  "user_id": 18603,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-09 14:05:29 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {

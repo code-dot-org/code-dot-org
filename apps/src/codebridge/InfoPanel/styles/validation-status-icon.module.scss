@@ -1,0 +1,17 @@
+@import 'color';
+.duotone {
+  --fa-primary-color: white;
+  --fa-secondary-opacity: 1.0;
+}
+
+.green {
+  color: $light_affirmative_500;
+}
+
+.red {
+  color: $light_negative_500;
+}
+
+.yellow {
+  color: $light_caution_700;
+}

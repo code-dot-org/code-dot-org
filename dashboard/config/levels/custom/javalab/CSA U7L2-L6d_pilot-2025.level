@@ -44,7 +44,8 @@
       }
     },
     "thumbnail_url": "https://images.code.org/c98a14223ad15e86b738d993f23b82e1-image-1652303047805.gif",
-    "name_suffix": "_pilot-2025"
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T21:40:25.586+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L6d_2025\\\"\"],\"cloned_from\":\"CSA U7L2-L6d_2025\"}]"

@@ -9,9 +9,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   skip_before_action :clear_sign_up_session_vars
 
-  # TODO: figure out how to avoid skipping CSRF verification for Powerschool
-  skip_before_action :verify_authenticity_token, only: :powerschool
-
   before_action :check_account_linking_lock
 
   # Note: We can probably remove these once we've broken out all providers
@@ -169,11 +166,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     SignUpTracking.begin_sign_up_tracking(session)
     SignUpTracking.log_oauth_callback provider, session
 
-    # Fiddle with data if it's a Powerschool request (other OpenID 2.0 providers might need similar treatment if we add any)
-    if provider == 'powerschool'
-      auth_hash = extract_powerschool_data(auth_hash)
-    end
-
     # Microsoft formats email and name differently, so update it to match expected structure
     if provider == AuthenticationOption::MICROSOFT
       auth_hash = extract_microsoft_data(auth_hash)
@@ -323,22 +315,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     }
 
     render 'omniauth/redirect', {layout: false}
-  end
-
-  private def extract_powerschool_data(auth)
-    # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
-    args = JSON.parse(auth.extra.response.message.to_json)['args']
-    powerschool_data = OmniAuth::AuthHash.new(
-      user_type: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext0\"]"],
-      email: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext1\"]"],
-      name: {
-        first: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext2\"]"],
-        last: args["[\"http://openid.net/srv/ax/1.0\", \"value.ext3\"]"],
-      }
-    )
-
-    auth.info.merge!(powerschool_data)
-    auth
   end
 
   private def extract_microsoft_data(auth)

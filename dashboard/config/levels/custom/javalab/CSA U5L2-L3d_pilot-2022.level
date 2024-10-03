@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:49:56.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A students wants to store data about the bestselling books to create a visual based on the number of reviews each book received. They have a 2D array of `Book`(#e7e8ea) objects, where each row represents each year from 2016 to 2019. Each row contains `Book`(#e7e8ea) objects that represent bestselling books for that year.\r\n\r\n##In BookScene.java:\r\n\r\n1. Write the `countBooks()`(#e7e8ea) method to count the number of `Book`(#e7e8ea) objects in the `bestsellers`(#e7e8ea) array that have reviews greater than or equal to the parameter `minReviews`(#e7e8ea). Return the count.\r\n\r\n2. Write the `findMinReviews()`(#e7e8ea) method to create and return a 1D `Book`(#e7e8ea) array containing the `Book`(#e7e8ea) objects that have at least `minimum`(#e7e8ea) reviews.\r\n\r\n   * Call the `countBooks()`(#e7e8ea) method to get the number of `Book`(#e7e8ea) objects that have at least `minimum`(#e7e8ea) reviews. Use the result as the length of the 1D `Book`(#e7e8ea) array.\r\n   \r\n   * Add each `Book`(#e7e8ea) object that has at least `minimum`(#e7e8ea) reviews to the 1D array.\r\n   \r\n   * Return the 1D array of `Book`(#e7e8ea) objects found.\r\n\r\n3. Write the `createScene()`(#e7e8ea) method to find which `Book`(#e7e8ea) objects have at least `minReviews`(#e7e8ea) reviews.\r\n\r\n   * Call the `findMinReviews()`(#e7e8ea) method to get the 1D array of `Book`(#e7e8ea) objects to draw.\r\n   \r\n   * Draw the book cover for each `Book`(#e7e8ea) object in the array.\r\n   \r\n   * Use the `pause`(#e7e8ea) and `clear()`(#e7e8ea) methods in the `Scene`(#e7e8ea) class to pause and clear the scene before drawing the next book cover.\r\n\r\n::: details [**Show Me How**]\r\nTraversing a 2D array uses the following syntax:\r\n  \r\n  ```\r\n  for (int row = 0; row < arrayName.length; row++) {\r\n    for (int col = 0; col < arrayName[0].length; col++) {\r\n      // code to execute\r\n    }\r\n  }\r\n  ```\r\n:::",
@@ -43,12 +47,9 @@
         "isVisible": true,
         "tabOrder": 2
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:49:56.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:49:56.370+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L3d_2022\\\"\"],\"cloned_from\":\"CSA U5L2-L3d_2022\"},{\"changed_at\":\"2022-10-09 01:16:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 01:16:51 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 01:17:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 01:18:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 01:33:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 12:46:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 12:49:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 12:53:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 12:53:48 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

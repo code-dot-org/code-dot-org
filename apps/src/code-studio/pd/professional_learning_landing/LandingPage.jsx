@@ -8,9 +8,9 @@ import {connect, useDispatch} from 'react-redux';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
@@ -24,8 +24,8 @@ import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import {
   asyncLoadSectionData,
   asyncLoadCoteacherInvite,
-  hiddenPlSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import {queryParams, updateQueryParam} from '../../utils';

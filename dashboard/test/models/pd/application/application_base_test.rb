@@ -296,7 +296,7 @@ module Pd::Application
 
       assert_equal(
         [expected_entry],
-        (application.sanitize_status_timestamp_change_log)
+        application.sanitize_status_timestamp_change_log
       )
 
       application.update(status: 'approved')

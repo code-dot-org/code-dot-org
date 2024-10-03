@@ -3,8 +3,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import locale from '@cdo/locale';
 
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
@@ -15,9 +15,9 @@ import {classroomShape, loadErrorShape} from './shapes';
 import {
   cancelImportRosterFlow,
   importOrUpdateRoster,
-  isRosterDialogOpen,
   rosterImportFailed,
 } from './teacherSectionsRedux';
+import {isRosterDialogOpen} from './teacherSectionsReduxSelectors';
 
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';

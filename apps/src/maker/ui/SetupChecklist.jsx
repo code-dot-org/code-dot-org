@@ -5,10 +5,10 @@ import {connect} from 'react-redux';
 
 import applabI18n from '@cdo/applab/locale';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import MBFirmataUpdater from '@cdo/apps/maker/boards/microBit/MBFirmataUpdater';
 import WebSerialPortWrapper from '@cdo/apps/maker/WebSerialPortWrapper';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
