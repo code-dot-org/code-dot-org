@@ -9,7 +9,7 @@ import React, {
 
 import MusicRegistry from '../MusicRegistry';
 import {PatternEventValue} from '../player/interfaces/PatternEvent';
-import MusicLibrary, {SoundData} from '../player/MusicLibrary';
+import MusicLibrary from '../player/MusicLibrary';
 
 import LoadingOverlay from './LoadingOverlay';
 import PreviewControls from './PreviewControls';
@@ -52,17 +52,17 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
   const toggleEvent = useCallback(
-    (sound: SoundData, tick: number, note: number) => {
+    (tick: number, note: number) => {
       const index = currentValue.events.findIndex(
-        event => event.src === sound.src && event.tick === tick
+        event => event.note === note && event.tick === tick
       );
       if (index !== -1) {
         // If found, delete.
         currentValue.events.splice(index, 1);
       } else {
         // Not found, so add.
-        currentValue.events.push({src: sound.src, tick, note});
-        MusicRegistry.player.previewSound(`${currentValue.kit}/${sound.src}`);
+        currentValue.events.push({tick, note});
+        MusicRegistry.player.previewNote(note, currentValue.kit);
       }
 
       onChange(currentValue);
@@ -70,9 +70,9 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
     [onChange, currentValue]
   );
 
-  const hasEvent = (sound: SoundData, tick: number) => {
+  const hasEvent = (note: number, tick: number) => {
     const element = currentValue.events.find(
-      event => event.src === sound.src && event.tick === tick
+      event => event.note === note && event.tick === tick
     );
     return !!element;
   };
@@ -82,8 +82,8 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
     onChange(currentValue);
   };
 
-  const getCellClasses = (sound: SoundData, tick: number) => {
-    const isSet = hasEvent(sound, tick);
+  const getCellClasses = (note: number, tick: number) => {
+    const isSet = hasEvent(note, tick);
     const isHighlighted = !isSet && (tick - 1) % 4 === 0;
 
     return classNames(
@@ -140,19 +140,20 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
         ))}
       </select>
       <LoadingOverlay show={isLoading} />
-      {currentFolder.sounds.map((sound, index) => {
+      {currentFolder.sounds.map(({name, note}, index) => {
         return (
-          <div className={styles.row} key={sound.src}>
+          <div className={styles.row} key={note}>
             <div className={styles.nameContainer}>
               <span
                 className={styles.name}
                 onClick={() =>
-                  MusicRegistry.player.previewSound(
-                    `${currentValue.kit}/${sound.src}`
+                  MusicRegistry.player.previewNote(
+                    note || index,
+                    currentValue.kit
                   )
                 }
               >
-                {sound.name}
+                {name}
               </span>
             </div>
             {arrayOfTicks.map(tick => {
@@ -162,10 +163,10 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
                     styles.outerCell,
                     tick === currentPreviewTick && styles.outerCellPlaying
                   )}
-                  onClick={() => toggleEvent(sound, tick, index)}
+                  onClick={() => toggleEvent(tick, note || index)}
                   key={tick}
                 >
-                  <div className={getCellClasses(sound, tick)} />
+                  <div className={getCellClasses(note || index, tick)} />
                 </div>
               );
             })}
