@@ -38,7 +38,7 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
   /** Step value for the slider
    * @default 1 */
   step?: number;
-  /** Array of step values for the slider */
+  /** [WIP] Array of step values for the slider */
   steps?: number[];
   /** Is the slider in right-to-left mode
    * @default false */
@@ -134,9 +134,6 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   // Calculate the center value based on min and max values
   const centerValue = (Number(minValue) + Number(maxValue)) / 2;
 
-  // If isCentered is true and no value is provided, set the value to the center
-  const sliderValue = isCentered && value === undefined ? centerValue : value;
-
   // Calculate percentage fill for gradient
   const calculateFillPercent = useCallback(
     (value: number) => {
@@ -170,19 +167,23 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     [isCentered, minSliderValue, maxSliderValue]
   );
 
-  // Function to snap the value to the nearest step in the steps array
-  const snapToStep = (value: number) => {
-    if (!steps || steps.length === 0) {
-      return value; // If no steps are provided, return the value as is
-    }
-    return steps.reduce((prev, curr) =>
-      Math.abs(curr - value) < Math.abs(prev - value) ? curr : prev
-    );
-  };
+  // TODO: Uncomment when working on adding steps support
+  // // Function to snap the value to the nearest step in the steps array
+  // const snapToStep = (value: number) => {
+  //   if (!steps || steps.length === 0) {
+  //     return value; // If no steps are provided, return the value as is
+  //   }
+  //   return steps.reduce((prev, curr) =>
+  //     Math.abs(curr - value) < Math.abs(prev - value) ? curr : prev
+  //   );
+  // };
 
   // Update the value on input change and snap it to the nearest step
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const snappedValue = snapToStep(Number(event.target.value));
+    // TODO: Uncomment when working on adding steps support
+    // const snappedValue = snapToStep(Number(event.target.value));
+
+    const snappedValue = Number(event.target.value);
     onChange({...event, target: {...event.target, value: `${snappedValue}`}});
   };
 
@@ -199,17 +200,18 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     [maxValue, minValue, onChange, step, value]
   );
 
-  // Function to calculate the position of a step as a percentage
-  const calculateStepPosition = (stepValue: number) => {
-    const percentage =
-      ((stepValue - Number(minValue)) / (Number(maxValue) - Number(minValue))) *
-      100;
-    return `${percentage}%`;
-  };
+  // TODO: Uncomment when working on adding steps support
+  // // Function to calculate the position of a step as a percentage
+  // const calculateStepPosition = (stepValue: number) => {
+  //   const percentage =
+  //     ((stepValue - Number(minValue)) / (Number(maxValue) - Number(minValue))) *
+  //     100;
+  //   return `${percentage}%`;
+  // };
 
   // Update the background gradient style based on the slider value
   useEffect(() => {
-    const {fillPercent, leftFill} = calculateFillPercent(Number(sliderValue));
+    const {fillPercent, leftFill} = calculateFillPercent(Number(value));
     if (isCentered) {
       // Centered mode: adjust gradient to fill from center outwards
       setBackgroundStyle(
@@ -223,7 +225,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
       );
     }
   }, [
-    sliderValue,
+    value,
     fillColor,
     emptyColor,
     minSliderValue,
@@ -249,7 +251,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
         )}
 
         {/* Display the value with a % sign if percentMode is true */}
-        <span>{isPercentMode ? `${sliderValue}%` : sliderValue}</span>
+        <span>{isPercentMode ? `${value}%` : value}</span>
       </div>
 
       <div className={moduleStyles.sliderMainContainer}>
@@ -267,7 +269,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             name={name}
             min={minSliderValue}
             max={maxSliderValue}
-            value={sliderValue}
+            value={value}
             step={step}
             disabled={disabled}
             onChange={handleChange}
@@ -288,18 +290,20 @@ const Slider: React.FunctionComponent<SliderProps> = ({
               }}
             />
           )}
-          {/* Render visual step marks */}
-          {steps && steps.length > 0 && (
-            <div className={moduleStyles.stepMarksContainer}>
-              {steps.map((stepValue, index) => (
-                <div
-                  key={index}
-                  className={moduleStyles.stepMark}
-                  style={{left: calculateStepPosition(stepValue)}}
-                />
-              ))}
-            </div>
-          )}
+
+          {/*// TODO: Uncomment when working on adding steps support*/}
+          {/*/!* Render visual step marks *!/*/}
+          {/*{steps && steps.length > 0 && (*/}
+          {/*  <div className={moduleStyles.stepMarksContainer}>*/}
+          {/*    {steps.map((stepValue, index) => (*/}
+          {/*      <div*/}
+          {/*        key={index}*/}
+          {/*        className={moduleStyles.stepMark}*/}
+          {/*        style={{left: calculateStepPosition(stepValue)}}*/}
+          {/*      />*/}
+          {/*    ))}*/}
+          {/*  </div>*/}
+          {/*/!*)}*!/*/}
         </div>
         {rightButtonProps && (
           <Button

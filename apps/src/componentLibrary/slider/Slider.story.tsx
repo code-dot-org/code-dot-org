@@ -137,13 +137,14 @@ GroupOfDefaultSliders.args = {
       maxValue: 100,
       onChange: () => null,
     },
-    {
-      name: 'test-steps',
-      label: 'Steps Slider',
-      value: 0,
-      steps: [0, 25, 50, 75, 100],
-      onChange: () => null,
-    },
+    // TODO: Uncomment when working on adding steps support
+    // {
+    //   name: 'test-steps',
+    //   label: 'Steps Slider',
+    //   value: 0,
+    //   steps: [0, 25, 50, 75, 100],
+    //   onChange: () => null,
+    // },
   ],
 };
 
