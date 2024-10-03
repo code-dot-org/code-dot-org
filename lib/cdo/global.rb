@@ -2,20 +2,10 @@ module Cdo
   # Lazily loads global configurations for regional pages
   module Global
     # Freezes an entire complex data structure
-    def self.deep_freeze(data)
-      if data.is_a? Array
-        data.map! do |v|
-          if v.is_a?(Hash) || v.is_a?(Array)
-            deep_freeze(v)
-          else
-            v
-          end
-        end
-      elsif data.is_a? Hash
-        data.each do |k, v|
-          if v.is_a?(Hash) || v.is_a?(Array)
-            data[k] = deep_freeze(v)
-          end
+    def deep_freeze(data)
+      if data.is_a?(Enumerable)
+        data.each do |item|
+          deep_freeze(item)
         end
       end
 
