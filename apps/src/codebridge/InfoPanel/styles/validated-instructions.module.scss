@@ -135,16 +135,9 @@
 
 .button {
   padding: 12px;
-  //margin-top: 10px;
-}
-
-// Wrap scrollingContent in a scrollingBubble
-// to get a scrolling bubble.
-.scrollingBubble {
-  overflow: hidden;
 }
 
 .scrollingContent {
   overflow-y: auto;
-  box-sizing: border-box;
+  //box-sizing: border-box;
 }

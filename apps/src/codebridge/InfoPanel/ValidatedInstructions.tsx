@@ -267,25 +267,18 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const {showNavigation, navigationText, navigationIcon, handleNavigation} =
     getNavigationButtonProps();
 
-  const navigationScrollRef = useRef<HTMLDivElement>(null);
   const validationScrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let refToScrollTo;
-    if (showNavigation) {
-      refToScrollTo = navigationScrollRef;
-    } else if (validationResults) {
-      refToScrollTo = validationScrollRef;
-    }
-    if (refToScrollTo) {
+    if (validationResults) {
       // We must at least set a timeout with a wait of 0 to ensure the scroll happens at all,
       // because the DOM needs to update before we can scroll to the new element.
       setTimeout(
-        () => refToScrollTo.current?.scrollIntoView({behavior: 'smooth'}),
+        () => validationScrollRef.current?.scrollIntoView({behavior: 'smooth'}),
         0
       );
     }
-  }, [showNavigation, validationResults]);
+  }, [validationResults]);
 
   const showPassedIcon = hasMetValidation || hasSubmitted;
 
@@ -365,7 +358,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               moduleStyles['bubble-' + theme],
               moduleStyles.button
             )}
-            ref={navigationScrollRef}
           >
             <Button
               text={navigationText}
