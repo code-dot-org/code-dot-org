@@ -1339,12 +1339,13 @@ end
 
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
-  @browser.navigate.to url
+  navigate_to url
 end
 
-Then /^I switch to the embedded view of current project$/ do
+Then /^I switch to the embedded view of current project(?: with query "(.*)")?$/ do |query|
   embed_url = @browser.current_url.sub('/edit', '/embed')
-  @browser.navigate.to embed_url
+  embed_url = "#{embed_url}?#{query}" if query
+  navigate_to embed_url
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|

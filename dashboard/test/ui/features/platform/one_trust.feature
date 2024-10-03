@@ -119,8 +119,7 @@ Feature: OneTrust integration
   Scenario Outline: Embedded projects do not display the OneTrust banner
     Given I am in Europe
     Given I am on "<url>"
-    Then I switch to the embedded view of current project
-    Then I append "?otreset=true&otgeo=es" to the URL
+    Given I switch to the embedded view of current project with query "otreset=true&otgeo=es"
     Then element "script[src$='otSDKStub.js']" does not exist
     Then element "script[src$='OtAutoBlock.js']" does not exist
   Examples:
