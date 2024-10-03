@@ -5,11 +5,16 @@ AWSTemplateFormatVersion: 2010-09-09
 
 Description: Knowledge Base and data sources for the AI Differentiation chat feature.
 
+Parameters:  
+  Environment:
+    Type: String
+    Description: "Environment being deployed to (ex: production, test)"
+
 Resources:
   AiDiffKnowledgeBaseWithAoss:
     Type: AWS::Bedrock::KnowledgeBase
     Properties:
-      Name: "ai-differentiation-knowledge-base"
+      Name: !Sub ai-diff-${Environment}
       Description: "Embedded lesson plans and supporting documents for contextual differentiation chat with AI Teaching assistant"
       # TODO: define this role in code
       RoleArn: !GetAtt AiDiffKnowledgeBaseRole.Arn
@@ -32,7 +37,7 @@ Resources:
   AiDiffS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: "cdo-ai-differentiation"
+      BucketName: !Sub cdo-ai-diff-${Environment}
       VersioningConfiguration:
         Status: Enabled
       LifecycleConfiguration:
@@ -55,7 +60,7 @@ Resources:
   AiDiffCollection:
     Type: 'AWS::OpenSearchServerless::Collection'
     Properties:
-      Name: ai-diff-collection
+      Name: !Sub ai-diff-${Environment}
       Type: VECTORSEARCH
       Description: AI Differentiation search collection
     DependsOn: EncryptionPolicy
@@ -65,11 +70,11 @@ Resources:
       Name: test-encryption-policy
       Type: encryption
       Description: Encryption policy for test collection
-      Policy: |
+      Policy: !Sub |
         {
           "Rules": [
             {
-              "Resource": "collection/ai-diff-collection",
+              "Resource": "collection/ai-diff-${Environment}",
               "Action": "encrypt",
               "Effect": "Allow"
             }
