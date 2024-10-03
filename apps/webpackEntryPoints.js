@@ -65,6 +65,7 @@ const CODE_STUDIO_ENTRIES = {
   'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
   'followers/student_user_new': './src/sites/studio/pages/followers/student_user_new.js',
   'essential': './src/sites/studio/pages/essential.js',
+  'global_edition/_region_switch_confirm': './src/sites/studio/pages/global_edition/_region_switch_confirm.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
   'layouts/_race_interstitial': './src/sites/studio/pages/layouts/_race_interstitial.js',
