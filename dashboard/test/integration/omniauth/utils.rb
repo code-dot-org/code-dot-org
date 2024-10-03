@@ -49,11 +49,15 @@ module OmniauthCallbacksControllerTests
       sign_in_through AuthenticationOption::GOOGLE
     end
 
-    def finish_sign_up(auth_hash, user_type)
-      post '/users', params: finish_sign_up_params(
-        name: auth_hash[:info]&.name,
-        user_type: user_type,
+    def finish_sign_up(auth_hash, user_type, new_sign_up = false)
+      complete_params = finish_sign_up_params(
+        {
+          name: auth_hash[:info]&.name,
+          user_type: user_type
+        },
+        new_sign_up
       )
+      post '/users', params: complete_params
     end
 
     # Intentionally fail to finish sign-up by _not_ checking the terms-of-service box
@@ -65,10 +69,11 @@ module OmniauthCallbacksControllerTests
       )
     end
 
-    def finish_sign_up_params(override_params)
+    def finish_sign_up_params(override_params, new_sign_up = false)
       user_type = override_params[:user_type] || User::TYPE_STUDENT
       if user_type == User::TYPE_STUDENT
         {
+          new_sign_up: new_sign_up,
           user: {
             locale: 'en-US',
             user_type: user_type,
@@ -85,6 +90,7 @@ module OmniauthCallbacksControllerTests
         }
       else
         {
+          new_sign_up: new_sign_up,
           user: {
             locale: 'en-US',
             user_type: user_type,
@@ -170,11 +176,6 @@ module OmniauthCallbacksControllerTests
         'user[email]': "test@code.org"
       }
       assert_template partial: '_finish_sign_up'
-    end
-
-    def new_omniauth_redirect
-      @form_data = {email: 'test@code.org'}
-      render partial: 'omniauth/redirect', locals: {new_sign_up_url: '/users/new_sign_up/finish_student_account', form_data: @form_data}
     end
   end
 end

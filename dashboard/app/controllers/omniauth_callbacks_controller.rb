@@ -57,7 +57,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # to Google Classroom courses and rosters
     return redirect_to '/home?open=rosterDialog' if just_authorized_google_classroom?
     return connect_provider if should_connect_provider?
-
     if user
       sign_in_google_oauth2 user
     else
@@ -229,7 +228,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       u.oauth_refresh_token = auth_hash.credentials&.refresh_token
     end
     prepare_locale_cookie user
-
     if email_already_taken(user)
       return sign_in_user user if auth_already_exists(auth_hash)
       if allows_silent_takeover(user, auth_hash)
@@ -317,8 +315,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @form_data = {
       email: user.email
     }
-
-    render 'omniauth/redirect', {layout: false}, locals: {new_sign_up_url: new_sign_up_url}
+    render 'omniauth/redirect', layout: false, locals: {new_sign_up_url: new_sign_up_url}
   end
 
   private def extract_microsoft_data(auth)
