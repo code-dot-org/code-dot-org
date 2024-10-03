@@ -61,10 +61,7 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
       ([_, file]) => file.type !== ProjectFileType.VALIDATION
     )
   );
-  let validationFile =
-    Object.values(source.files).find(
-      f => f.type === ProjectFileType.VALIDATION
-    ) || null;
+  let validationFile = getValidationFromSource(source) || null;
   let openFiles = source.openFiles;
   if (validationFile && source.openFiles?.includes(validationFile.id)) {
     openFiles = source.openFiles.filter(id => id !== validationFile?.id);
@@ -78,7 +75,8 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
 
 /**
  * In start mode we combine the start sources with the validation file
- * so levelbuilders can edit the validation file.
+ * so levelbuilders can edit the validation file. Automatically open
+ * the validation file if it exists.
  * @param source: MultiFileSource | undefined
  * @param validationFile: ProjectFile | undefined
  * @returns: MultiFileSource with the validation file added to the files, if it exists.
@@ -91,8 +89,20 @@ export function combineStartSourcesAndValidation(
   if (source && validationFile) {
     returnValue = {
       ...source,
-      files: {...source.files, [validationFile.id]: validationFile},
+      files: {
+        ...source.files,
+        [validationFile.id]: {...validationFile, open: true},
+      },
+      openFiles: source.openFiles
+        ? [...source.openFiles, validationFile.id]
+        : [validationFile.id],
     };
   }
   return returnValue;
+}
+
+export function getValidationFromSource(source: MultiFileSource) {
+  return Object.values(source.files).find(
+    f => f.type === ProjectFileType.VALIDATION
+  );
 }
