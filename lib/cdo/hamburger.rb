@@ -92,7 +92,6 @@ class Hamburger
     loc_prefix = options[:loc_prefix]
     is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
     is_level = options[:level]
-    is_teacher_or_student || is_level
 
     ge_region = options[:ge_region] || :root
     ge_config = Cdo::Global.configuration_for(ge_region)[:header] || {}
