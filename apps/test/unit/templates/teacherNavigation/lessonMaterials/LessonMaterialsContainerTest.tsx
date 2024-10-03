@@ -158,7 +158,7 @@ describe('LessonMaterialsContainer', () => {
         '[data-testid="resource-row"]'
       ) as HTMLElement;
       expect(resourceRow).toBeDefined();
-      const menuButton = resourceRow.querySelector('button') as HTMLElement;
+      const menuButton = within(resourceRow).getByRole('button')
       expect(menuButton).toBeDefined();
       fireEvent.click(menuButton);
 
