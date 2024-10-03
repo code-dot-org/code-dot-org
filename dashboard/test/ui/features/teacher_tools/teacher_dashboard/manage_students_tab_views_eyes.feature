@@ -15,7 +15,7 @@ Feature: Using the manage students tab of the teacher dashboard
 
     # Add a family name for Sally
     And I click selector "#uitest-manage-students-table th:contains(Actions) i" once I see it
-    And I click selector ".pop-up-menu-item:contains(Edit all)"
+    And I click selector ".pop-up-menu-item:contains(Edit all)" once I see it
     And I wait until element with css selector "input[name='uitest-family-name']" is enabled
     And I press keys "SallyAlsoHasAVeryVeryLongLastName" for element "input[name='uitest-family-name']"
     And I wait until element "input[value='SallyAlsoHasAVeryVeryLongLastName']" is visible
