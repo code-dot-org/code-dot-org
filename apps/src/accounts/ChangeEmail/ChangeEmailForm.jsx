@@ -30,23 +30,31 @@ export default class ChangeEmailForm extends React.Component {
     onChange: PropTypes.func.isRequired,
   };
 
-  onNewEmailChange = event =>
+  state = {touched: false};
+
+  onNewEmailChange = event => {
+    this.setState({touched: true});
     this.props.onChange({
       ...this.props.values,
       newEmail: event.target.value,
     });
+  };
 
-  onCurrentPasswordChange = event =>
+  onCurrentPasswordChange = event => {
+    this.setState({touched: true});
     this.props.onChange({
       ...this.props.values,
       currentPassword: event.target.value,
     });
+  };
 
-  onEmailOptInChange = event =>
+  onEmailOptInChange = event => {
+    this.setState({touched: true});
     this.props.onChange({
       ...this.props.values,
       emailOptIn: event.target.value,
     });
+  };
 
   render() {
     const {values, validationErrors, disabled, userType, isPasswordRequired} =
@@ -56,7 +64,9 @@ export default class ChangeEmailForm extends React.Component {
         <TextField
           inputType="email"
           label={i18n.changeEmailModal_newEmail_label()}
-          errorMessage={validationErrors.newEmail}
+          errorMessage={
+            this.state.touched ? validationErrors.newEmail : undefined
+          }
           onChange={this.onNewEmailChange}
           autoComplete="off"
           maxLength={255}
@@ -67,7 +77,9 @@ export default class ChangeEmailForm extends React.Component {
           <TextField
             inputType="password"
             label={i18n.changeEmailModal_currentPassword_label()}
-            errorMessage={validationErrors.currentPassword}
+            errorMessage={
+              this.state.touched ? validationErrors.currentPassword : undefined
+            }
             onChange={this.onCurrentPasswordChange}
             maxLength={255}
             value={values.currentPassword}
@@ -106,7 +118,7 @@ export default class ChangeEmailForm extends React.Component {
                   },
                 ]}
               />
-              {validationErrors.emailOptIn && (
+              {this.state.touched && validationErrors.emailOptIn && (
                 <div className={styles.errorMessage}>
                   <FontAwesomeV6Icon iconName={'circle-exclamation'} />
                   <span>{validationErrors.emailOptIn}</span>

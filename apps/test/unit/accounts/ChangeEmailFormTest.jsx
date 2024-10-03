@@ -174,4 +174,68 @@ describe('ChangeEmailForm', () => {
       expect(wrapper.find(OPT_OUT_SELECTOR)).to.have.attr('disabled');
     });
   });
+
+  describe('validation', () => {
+    let wrapper;
+    let newEmailValidation = 'email is required';
+    let currentPasswordValidation = 'password is required';
+    let emailOptInValidation = 'opt in selection is required';
+
+    beforeEach(() => {
+      wrapper = mount(
+        <ChangeEmailForm
+          {...DEFAULT_PROPS}
+          userType="teacher"
+          validationErrors={{
+            newEmail: newEmailValidation,
+            currentPassword: currentPasswordValidation,
+            emailOptIn: emailOptInValidation,
+          }}
+        />
+      );
+    });
+
+    it('does not show validation on initial render', () => {
+      expect(wrapper.contains(newEmailValidation)).to.be.false;
+      expect(wrapper.contains(currentPasswordValidation)).to.be.false;
+      expect(wrapper.contains(emailOptInValidation)).to.be.false;
+    });
+
+    it('onChange on email input reveals form validation', () => {
+      expect(wrapper.contains(newEmailValidation)).to.be.false;
+      expect(wrapper.contains(currentPasswordValidation)).to.be.false;
+      expect(wrapper.contains(emailOptInValidation)).to.be.false;
+
+      wrapper
+        .find(EMAIL_SELECTOR)
+        .simulate('change', {target: {value: 'email@mail.com'}});
+
+      expect(wrapper.contains(currentPasswordValidation)).to.be.true;
+      expect(wrapper.contains(emailOptInValidation)).to.be.true;
+    });
+
+    it('onChange on password input reveals form validation', () => {
+      expect(wrapper.contains(newEmailValidation)).to.be.false;
+      expect(wrapper.contains(currentPasswordValidation)).to.be.false;
+      expect(wrapper.contains(emailOptInValidation)).to.be.false;
+
+      wrapper
+        .find(PASSWORD_SELECTOR)
+        .simulate('change', {target: {value: 'abc123'}});
+
+      expect(wrapper.contains(newEmailValidation)).to.be.true;
+      expect(wrapper.contains(emailOptInValidation)).to.be.true;
+    });
+
+    it('onChange on opt-in/out input reveals form validation', () => {
+      expect(wrapper.contains(newEmailValidation)).to.be.false;
+      expect(wrapper.contains(currentPasswordValidation)).to.be.false;
+      expect(wrapper.contains(emailOptInValidation)).to.be.false;
+
+      wrapper.find(OPT_IN_SELECTOR).simulate('change');
+
+      expect(wrapper.contains(newEmailValidation)).to.be.true;
+      expect(wrapper.contains(currentPasswordValidation)).to.be.true;
+    });
+  });
 });
