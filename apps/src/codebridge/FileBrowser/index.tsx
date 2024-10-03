@@ -25,7 +25,6 @@ import {
   DragOverEvent,
   DragEndEvent,
   PointerSensor,
-  useDndMonitor,
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
@@ -48,13 +47,19 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {Draggable, DragDataType} from './Draggable';
-import {Droppable, DropDataType} from './Droppable';
+import {
+  DndDataContextProvider,
+  useDndDataContext,
+} from './DnDDataContextProvider';
+import {Draggable} from './Draggable';
+import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {FileUploader} from './FileUploader';
 import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
 import {
   DragType,
+  DragDataType,
+  DropDataType,
   downloadFileType,
   moveFilePromptType,
   moveFolderPromptType,
@@ -110,23 +115,6 @@ const InnerFileBrowser = React.memo(
     setFileType,
     appName,
   }: FilesComponentProps) => {
-    const [dragData, setDragData] = useState<DragDataType | undefined>(
-      undefined
-    );
-    const [dropData, setDropData] = useState<DropDataType | undefined>(
-      undefined
-    );
-
-    useDndMonitor({
-      onDragStart: (e: DragStartEvent) =>
-        setDragData(e.active.data.current as DragDataType),
-      onDragOver: (e: DragOverEvent) =>
-        setDropData(e.over?.data.current as DropDataType),
-      onDragEnd: (e: DragEndEvent) => {
-        setDragData(undefined);
-        setDropData(undefined);
-      },
-    });
     const {
       openFile,
       deleteFile,
@@ -134,6 +122,7 @@ const InnerFileBrowser = React.memo(
       deleteFolder,
       config: {editableFileTypes, validMimeTypes},
     } = useCodebridgeContext();
+    const {dragData, dropData} = useDndDataContext();
     const dialogControl = useDialogControl();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const handleFileUpload = useHandleFileUpload(files);
@@ -262,7 +251,15 @@ const InnerFileBrowser = React.memo(
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
-            <Droppable data={{id: f.id}} key={f.id + f.open} Component="li">
+            <Droppable
+              data={{id: f.id}}
+              key={f.id + f.open}
+              Component="li"
+              className={classNames(moduleStyles.droppableArea, {
+                [moduleStyles.acceptingDrop]:
+                  f.id === dropData?.id && dragData?.parentId !== f.id,
+              })}
+            >
               <Draggable
                 data={{id: f.id, type: DragType.FOLDER, parentId: f.parentId}}
               >
@@ -432,6 +429,27 @@ export const FileBrowser = React.memo(() => {
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
+  );
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+
+  const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
+  const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
+
+  const dndMonitor = useMemo(
+    () => ({
+      onDragStart: (e: DragStartEvent) =>
+        setDragData(e.active.data.current as DragDataType),
+      onDragOver: (e: DragOverEvent) =>
+        setDropData(e.over?.data.current as DropDataType),
+      onDragEnd: (e: DragEndEvent) => {
+        setDragData(undefined);
+        setDropData(undefined);
+      },
+    }),
+    [setDragData, setDropData]
+  );
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
     () =>
@@ -496,7 +514,9 @@ export const FileBrowser = React.memo(() => {
             const duplicate = checkForDuplicateFilename(
               fileName,
               folderId,
-              project.files
+              project.files,
+              isStartMode,
+              validationFile
             );
             if (duplicate) {
               return duplicate;
@@ -512,7 +532,12 @@ export const FileBrowser = React.memo(() => {
         }
         const fileName = extractInput(results);
 
-        const fileId = getNextFileId(Object.values(project.files));
+        const files = Object.values(project.files);
+        // The validation file is in the project files in start mode.
+        if (validationFile && !isStartMode) {
+          files.push(validationFile);
+        }
+        const fileId = getNextFileId(files);
 
         newFile({
           fileId,
@@ -522,7 +547,14 @@ export const FileBrowser = React.memo(() => {
 
         sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, appName);
       },
-    [dialogControl, project.files, newFile, appName]
+    [
+      dialogControl,
+      project.files,
+      newFile,
+      appName,
+      validationFile,
+      isStartMode,
+    ]
   );
 
   const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(
@@ -544,7 +576,9 @@ export const FileBrowser = React.memo(() => {
             const duplicate = checkForDuplicateFilename(
               file.name,
               folderId,
-              project.files
+              project.files,
+              isStartMode,
+              validationFile
             );
             if (duplicate) {
               return duplicate;
@@ -574,7 +608,15 @@ export const FileBrowser = React.memo(() => {
       }
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE, appName);
     },
-    [project.files, project.folders, dialogControl, appName, moveFile]
+    [
+      project.files,
+      project.folders,
+      dialogControl,
+      appName,
+      isStartMode,
+      validationFile,
+      moveFile,
+    ]
   );
 
   const moveFolderPrompt: FilesComponentProps['moveFolderPrompt'] = useMemo(
@@ -648,7 +690,9 @@ export const FileBrowser = React.memo(() => {
           const duplicate = checkForDuplicateFilename(
             newName,
             file.folderId,
-            project.files
+            project.files,
+            isStartMode,
+            validationFile
           );
           if (duplicate) {
             return duplicate;
@@ -666,7 +710,14 @@ export const FileBrowser = React.memo(() => {
       renameFile(fileId, newName);
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, appName);
     },
-    [dialogControl, project.files, renameFile, appName]
+    [
+      project.files,
+      dialogControl,
+      renameFile,
+      appName,
+      isStartMode,
+      validationFile,
+    ]
   );
 
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
@@ -706,7 +757,11 @@ export const FileBrowser = React.memo(() => {
 
   const handleDragEnd = useMemo(
     () => (e: DragOverEvent) => {
-      if (e?.over) {
+      if (e?.over && e?.active) {
+        // first, if we're dragging something into the folder which currently contains it, just bow out.
+        if (e.active.data.current?.parentId === e.over.id) {
+          return;
+        }
         if (e.active.data.current?.type === DragType.FOLDER) {
           const duplicate = checkForDuplicateFoldername(
             project.folders[e.active.data.current.id].name,
@@ -725,7 +780,9 @@ export const FileBrowser = React.memo(() => {
           const duplicate = checkForDuplicateFilename(
             project.files[e.active.data.current.id].name,
             e.over.id as string,
-            project.files
+            project.files,
+            isStartMode,
+            validationFile
           );
           if (duplicate) {
             dialogControl?.showDialog({
@@ -738,7 +795,15 @@ export const FileBrowser = React.memo(() => {
         }
       }
     },
-    [dialogControl, moveFile, moveFolder, project.files, project.folders]
+    [
+      dialogControl,
+      isStartMode,
+      moveFile,
+      moveFolder,
+      project.files,
+      project.folders,
+      validationFile,
+    ]
   );
 
   const sensors = useSensors(
@@ -753,6 +818,7 @@ export const FileBrowser = React.memo(() => {
     <PanelContainer
       id="file-browser"
       headerContent={'Files'}
+      headerClassName={moduleStyles.fileBrowserHeader}
       className={moduleStyles['file-browser']}
       rightHeaderContent={
         !isReadOnly && (
@@ -764,24 +830,39 @@ export const FileBrowser = React.memo(() => {
       }
     >
       <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
-        <Droppable data={{id: DEFAULT_FOLDER_ID}}>
-          <ul>
-            <InnerFileBrowser
-              parentId={DEFAULT_FOLDER_ID}
-              folders={project.folders}
-              downloadFile={downloadFile}
-              newFolderPrompt={newFolderPrompt}
-              files={project.files}
-              newFilePrompt={newFilePrompt}
-              moveFilePrompt={moveFilePrompt}
-              moveFolderPrompt={moveFolderPrompt}
-              renameFilePrompt={renameFilePrompt}
-              renameFolderPrompt={renameFolderPrompt}
-              setFileType={setFileType}
-              appName={appName}
-            />
-          </ul>
-        </Droppable>
+        <DndDataContextProvider
+          value={{dragData, dropData}}
+          dndMonitor={dndMonitor}
+        >
+          <Droppable
+            data={{id: DEFAULT_FOLDER_ID}}
+            className={classNames(
+              moduleStyles.droppableArea,
+              moduleStyles.expandedDroppableArea,
+              {
+                [moduleStyles.acceptingDrop]:
+                  DEFAULT_FOLDER_ID === dropData?.id,
+              }
+            )}
+          >
+            <ul>
+              <InnerFileBrowser
+                parentId={DEFAULT_FOLDER_ID}
+                folders={project.folders}
+                downloadFile={downloadFile}
+                newFolderPrompt={newFolderPrompt}
+                files={project.files}
+                newFilePrompt={newFilePrompt}
+                moveFilePrompt={moveFilePrompt}
+                moveFolderPrompt={moveFolderPrompt}
+                renameFilePrompt={renameFilePrompt}
+                renameFolderPrompt={renameFolderPrompt}
+                setFileType={setFileType}
+                appName={appName}
+              />
+            </ul>
+          </Droppable>
+        </DndDataContextProvider>
       </DndContext>
     </PanelContainer>
   );

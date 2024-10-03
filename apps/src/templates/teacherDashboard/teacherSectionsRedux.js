@@ -728,6 +728,8 @@ function newSectionData(participantType) {
     courseVersionId: null,
     courseDisplayName: null,
     unitId: null,
+    unitName: null,
+    isAssignedStandaloneCourse: false,
     hidden: false,
     restrictSection: false,
     aiTutorEnabled: false,
@@ -972,6 +974,7 @@ export default function teacherSections(state = initialState, action) {
       initialUnitId: initialSectionData.unitId,
       initialCourseOfferingId: initialSectionData.courseOfferingId,
       initialCourseVersionId: initialSectionData.courseVersionId,
+      initialUnitName: initialSectionData.unitName,
       initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
     };
@@ -1124,6 +1127,9 @@ export default function teacherSections(state = initialState, action) {
     }
     if (section.courseVersionId !== state.initialCourseVersionId) {
       assignmentData.course_version_id = section.courseVersionId;
+    }
+    if (section.unitName !== state.initialUnitName) {
+      assignmentData.unitName = section.unitName;
     }
     if (
       // If either of these is not undefined, then assignment changed and should be logged
