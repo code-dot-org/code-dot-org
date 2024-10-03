@@ -151,10 +151,8 @@ describe('LessonMaterialsContainer', () => {
       jest.resetAllMocks();
     });
 
-    it('opens lesson plan links in a new tab', () => {
-      render(<LessonMaterialsContainer />);
-
-      const label = screen.getByText('Lesson Plan: First lesson');
+    function viewResource(resourceName: string, resourceAction: string) {
+      const label = screen.getByText(resourceName);
       const resourceRow = label.closest(
         '[data-testid="resource-row"]'
       ) as HTMLElement;
@@ -166,9 +164,15 @@ describe('LessonMaterialsContainer', () => {
       const dropdown = menuButton?.nextElementSibling as HTMLElement;
       expect(dropdown.classList.contains('dropdownMenuContainer')).toBe(true);
 
-      const viewButton = within(dropdown).getByText('View') as HTMLElement;
+      const viewButton = within(dropdown).getByText(
+        resourceAction
+      ) as HTMLElement;
       fireEvent.click(viewButton);
+    }
 
+    it('opens lesson plan links in a new tab', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Lesson Plan: First lesson', 'View');
       expect(windowOpenMock).toHaveBeenCalledWith(
         'https://studio.code.org/lesson1',
         '_blank',
