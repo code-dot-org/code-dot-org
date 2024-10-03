@@ -73,8 +73,8 @@ Resources:
         {
           "Rules": [
             {
-              "ResourceType": "collection"
-              "Resource": "collection/ai-diff-${Environment}"
+              "ResourceType": "collection",
+              "Resource": "collection/ai-diff-${Environment}",
               "AWSOwnedKey":true
             }
           ]
