@@ -2,7 +2,7 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import ChangeEmailForm from '@cdo/apps/accounts/ChangeEmailForm';
+import ChangeEmailForm from '@cdo/apps/accounts/ChangeEmail/ChangeEmailForm';
 
 import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
@@ -18,7 +18,6 @@ describe('ChangeEmailForm', () => {
     userType: 'student',
     isPasswordRequired: true,
     onChange: () => {},
-    onSubmit: () => {},
   };
 
   describe('the emailOptIn field', () => {
@@ -144,74 +143,13 @@ describe('ChangeEmailForm', () => {
       expect(onChange).not.to.have.been.called;
 
       const changedOptIn = 'no';
-      wrapper.find(OPT_OUT_SELECTOR).simulate('click');
+      wrapper.find(OPT_OUT_SELECTOR).simulate('change');
 
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
         emailOptIn: changedOptIn,
       });
-    });
-  });
-
-  describe('calls onSubmit', () => {
-    let onSubmit, wrapper;
-
-    beforeEach(() => {
-      onSubmit = sinon.spy();
-      wrapper = mount(
-        <ChangeEmailForm {...DEFAULT_PROPS} onSubmit={onSubmit} />
-      );
-    });
-
-    it('when the enter key is pressed in the email field', () => {
-      expect(onSubmit).not.to.have.been.called;
-
-      wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
-
-      expect(onSubmit).to.have.been.calledOnce;
-      expect(onSubmit.firstCall.args).to.be.empty;
-    });
-
-    it('when the enter key is pressed in the password field', () => {
-      expect(onSubmit).not.to.have.been.called;
-
-      wrapper.find(PASSWORD_SELECTOR).simulate('keydown', {key: 'Enter'});
-
-      expect(onSubmit).to.have.been.calledOnce;
-      expect(onSubmit.firstCall.args).to.be.empty;
-    });
-
-    it('when the enter key is pressed on the opt-in field', () => {
-      wrapper.setProps({userType: 'teacher'});
-      expect(onSubmit).not.to.have.been.called;
-
-      wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
-
-      expect(onSubmit).to.have.been.calledOnce;
-      expect(onSubmit.firstCall.args).to.be.empty;
-    });
-
-    it('but not when other keys are pressed', () => {
-      expect(onSubmit).not.to.have.been.called;
-
-      wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'a'});
-      wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Backspace'});
-      wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Escape'});
-
-      expect(onSubmit).not.to.have.been.called;
-    });
-
-    it('and not when the form is disabled', () => {
-      wrapper.setProps({userType: 'teacher'});
-      wrapper.setProps({disabled: true});
-      expect(onSubmit).not.to.have.been.called;
-
-      wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
-      wrapper.find(PASSWORD_SELECTOR).simulate('keydown', {key: 'Enter'});
-      wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
-
-      expect(onSubmit).not.to.have.been.called;
     });
   });
 
@@ -234,73 +172,6 @@ describe('ChangeEmailForm', () => {
       wrapper.setProps({userType: 'teacher'});
       expect(wrapper.find(OPT_IN_SELECTOR)).to.have.attr('disabled');
       expect(wrapper.find(OPT_OUT_SELECTOR)).to.have.attr('disabled');
-    });
-  });
-
-  describe('focusOnAnError()', () => {
-    let wrapper, emailSpy, passwordSpy;
-
-    beforeEach(() => {
-      wrapper = mount(
-        <ChangeEmailForm {...DEFAULT_PROPS} userType="teacher" />
-      );
-      emailSpy = sinon.stub(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus');
-      passwordSpy = sinon.stub(
-        wrapper.find(PASSWORD_SELECTOR).getDOMNode(),
-        'focus'
-      );
-    });
-
-    afterEach(() => {
-      emailSpy.restore();
-      passwordSpy.restore();
-    });
-
-    it('does nothing if there are no validation errors', () => {
-      wrapper.setProps({
-        validationErrors: {},
-      });
-
-      wrapper.instance().focusOnAnError();
-      expect(emailSpy).not.to.have.been.called;
-      expect(passwordSpy).not.to.have.been.called;
-    });
-
-    it('focuses on the email field if there is an email validation error', () => {
-      wrapper.setProps({
-        validationErrors: {
-          newEmail: 'Something is wrong with the email',
-        },
-      });
-
-      wrapper.instance().focusOnAnError();
-      expect(emailSpy).to.have.been.calledOnce;
-      expect(passwordSpy).not.to.have.been.called;
-    });
-
-    it('focuses on the password field if there is a password validation error', () => {
-      wrapper.setProps({
-        validationErrors: {
-          currentPassword: 'Something is wrong with the password',
-        },
-      });
-
-      wrapper.instance().focusOnAnError();
-      expect(emailSpy).not.to.have.been.called;
-      expect(passwordSpy).to.have.been.calledOnce;
-    });
-
-    it('focuses on the email field if there are both email and password validation errors', () => {
-      wrapper.setProps({
-        validationErrors: {
-          newEmail: 'Something is wrong with the email',
-          currentPassword: 'Something is wrong with the password',
-        },
-      });
-
-      wrapper.instance().focusOnAnError();
-      expect(emailSpy).to.have.been.calledOnce;
-      expect(passwordSpy).not.to.have.been.called;
     });
   });
 });

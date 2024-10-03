@@ -28,7 +28,6 @@ export default class ChangeEmailForm extends React.Component {
     isPasswordRequired: PropTypes.bool.isRequired,
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
-    onSubmit: PropTypes.func.isRequired,
   };
 
   onNewEmailChange = event =>
@@ -48,21 +47,6 @@ export default class ChangeEmailForm extends React.Component {
       ...this.props.values,
       emailOptIn: event.target.value,
     });
-
-  emailOptInLabelDetails() {
-    return (
-      <span>
-        {i18n.changeEmailModal_emailOptIn_description()}{' '}
-        <Link
-          text={i18n.changeEmailModal_emailOptIn_privacyPolicy()}
-          href={pegasus('/privacy')}
-          openInNewTab={true}
-          external={true}
-          size="s"
-        />
-      </span>
-    );
-  }
 
   render() {
     const {values, validationErrors, disabled, userType, isPasswordRequired} =
