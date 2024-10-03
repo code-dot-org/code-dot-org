@@ -149,11 +149,18 @@ class Policies::ChildAccount
     # start_date: the date on which this policy first went into effect.
     {
       'CO' => {
-        name: Cpa::NAME,
+        name: 'CPA',
         max_age: 12,
-        grace_period_duration: DCDO.get('cpa_grace_period_duration', Cpa::GRACE_PERIOD_DURATION)&.seconds,
-        lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::ALL_USER_LOCKOUT] || Cpa::ALL_USER_LOCKOUT_DATE.iso8601),
-        start_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::NEW_USER_LOCKOUT] || Cpa::NEW_USER_LOCKOUT_DATE.iso8601),
+        grace_period_duration: 14.days.seconds,
+        lockout_date: DateTime.parse('2024-07-01T00:00:00MDT').iso8601,
+        start_date: DateTime.parse('2023-07-05T23:15:00+00:00').iso8601,
+      },
+      'DE' => {
+        name: 'DPDPA',
+        max_age: 12,
+        grace_period_duration: 14.days.seconds,
+        lockout_date: DateTime.parse('2025-01-01T00:00:00-05:00').iso8601,
+        start_date: DateTime.parse('2025-01-01T00:00:00-05:00').iso8601,
       }
     }
   end

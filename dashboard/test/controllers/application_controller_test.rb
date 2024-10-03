@@ -4,14 +4,12 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
   describe 'CAP lockout' do
     let(:user) {create(:student)}
 
-    let(:cpa_experience_phase) {Cpa::ALL_USER_LOCKOUT}
     let(:user_is_locked_out?) {true}
 
     let(:expect_grace_period_handler_call) {Services::ChildAccount::GracePeriodHandler.expects(:call).with(user: user)}
     let(:expect_lockout_handler_call) {Services::ChildAccount::LockoutHandler.expects(:call).with(user: user)}
 
     before do
-      Cpa.stubs(:cpa_experience).returns(cpa_experience_phase)
       Services::ChildAccount::LockoutHandler.stubs(:call).with(user: user).returns(user_is_locked_out?)
 
       sign_in user
@@ -83,25 +81,6 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
     context 'when user is not locked out' do
       let(:user_is_locked_out?) {false}
-
-      it 'does not redirect to lockout page' do
-        get root_path
-        refute_redirect_to lockout_path
-      end
-    end
-
-    context 'when no CPA experience' do
-      let(:cpa_experience_phase) {nil}
-
-      it 'does not call CAP grace period handler' do
-        expect_grace_period_handler_call.never
-        get root_path
-      end
-
-      it 'does not call CAP lockout handler' do
-        expect_lockout_handler_call.never
-        get root_path
-      end
 
       it 'does not redirect to lockout page' do
         get root_path

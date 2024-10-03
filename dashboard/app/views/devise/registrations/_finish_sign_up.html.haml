@@ -141,7 +141,7 @@
       .span5
         = f.select :age, age_options, include_blank: true
 
-    - if us_ip && Cpa.cpa_experience(request)
+    - if us_ip
       .row#us-state-dropdown{style: "display: none;"}
         .span3.signup-field-label.required
           = f.label :us_state

@@ -22,7 +22,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -118,8 +117,7 @@ class LoginTypePicker extends Component {
       ['US', 'RD'].includes(currentUser.countryCode) ||
       !!currentUser.usStateCode;
     const showStudentsToSectionPermissionWarning =
-      (inUSA && currentUser.isTeacher) ||
-      experiments.isEnabledAllowingQueryString(experiments.CPA_EXPERIENCE);
+      inUSA && currentUser.isTeacher;
 
     const style = {
       container: {

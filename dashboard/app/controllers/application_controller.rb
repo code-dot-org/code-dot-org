@@ -335,9 +335,6 @@ class ApplicationController < ActionController::Base
   # Check that the user is compliant with the Child Account Policy. If they
   # are not compliant, then we need to send them to the lockout page.
   protected def handle_cap_lockout
-    # Check that the child account policy is currently enabled.
-    return unless ::Cpa.cpa_experience(request)
-
     # Transits the user to the CAP grace period if they are eligible.
     Services::ChildAccount::GracePeriodHandler.call(user: current_user)
 
