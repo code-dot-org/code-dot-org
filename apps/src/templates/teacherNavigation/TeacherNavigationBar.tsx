@@ -39,6 +39,12 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     (state: {teacherSections: {selectedSectionId: number}}) =>
       state.teacherSections.selectedSectionId
   );
+
+  const isLoadingSectionData = useSelector(
+    (state: {teacherSections: {isLoadingSectionData: boolean}}) =>
+      state.teacherSections.isLoadingSectionData
+  );
+
   useEffect(() => {
     const updatedSectionArray = Object.entries(sections)
       .filter(([id, section]) => !section.hidden)
@@ -163,6 +169,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           className={styles.sectionDropdown}
           name="section-dropdown"
           color="gray"
+          disabled={isLoadingSectionData}
         />
         {navbarComponents.map(component => component)}
       </div>

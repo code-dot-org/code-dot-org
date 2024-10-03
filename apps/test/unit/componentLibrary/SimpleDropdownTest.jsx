@@ -38,6 +38,72 @@ describe('Design System - Dropdown Select Component', () => {
     expect(option3).toBeDefined();
   });
 
+  it('SimpleDropdown - renders a helper message', () => {
+    render(
+      <SimpleDropdown
+        name="test-dropdown"
+        items={[
+          {value: 'option-1', text: 'option1'},
+          {value: 'option-2', text: 'option2'},
+          {value: 'option-3', text: 'option3'},
+        ]}
+        selectedValue={dropdownValue}
+        onChange={e => onDropdownChange(e.target.value)}
+        labelText="Dropdown label"
+        helperMessage="Helper message"
+      />
+    );
+
+    const helperMessage = screen.getByText(/helper message/i);
+
+    expect(helperMessage).toBeInTheDocument();
+  });
+
+  it('SimpleDropdown - renders an error message', () => {
+    render(
+      <SimpleDropdown
+        name="test-dropdown"
+        items={[
+          {value: 'option-1', text: 'option1'},
+          {value: 'option-2', text: 'option2'},
+          {value: 'option-3', text: 'option3'},
+        ]}
+        selectedValue={dropdownValue}
+        onChange={e => onDropdownChange(e.target.value)}
+        labelText="Dropdown label"
+        errorMessage="Error message"
+      />
+    );
+
+    const errorMessage = screen.getByText(/error message/i);
+
+    expect(errorMessage).toBeInTheDocument();
+  });
+
+  it('SimpleDropdown - renders an error message instead of a helper message if both are passed', () => {
+    render(
+      <SimpleDropdown
+        name="test-dropdown"
+        items={[
+          {value: 'option-1', text: 'option1'},
+          {value: 'option-2', text: 'option2'},
+          {value: 'option-3', text: 'option3'},
+        ]}
+        selectedValue={dropdownValue}
+        onChange={e => onDropdownChange(e.target.value)}
+        labelText="Dropdown label"
+        errorMessage="Error message"
+        helperMessage="Helper message"
+      />
+    );
+
+    const errorMessage = screen.getByText(/error message/i);
+    const helperMessage = screen.queryByText(/helper message/i);
+
+    expect(errorMessage).toBeInTheDocument();
+    expect(helperMessage).toBeNull();
+  });
+
   it('SimpleDropdown - renders with correct text and options, changes selected value on when one is selected', async () => {
     const user = userEvent.setup();
     const spyOnChange = jest.fn();
