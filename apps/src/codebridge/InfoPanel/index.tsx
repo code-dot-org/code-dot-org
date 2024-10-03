@@ -124,6 +124,7 @@ export const InfoPanel = React.memo(() => {
       headerContent={currentPanel}
       rightHeaderContent={renderHeaderButton()}
       className={moduleStyles.infoPanel}
+      headerClassName={moduleStyles.infoPanelHeader}
     >
       {isDropdownOpen && (
         <form className={moduleStyles.dropdownContainer}>

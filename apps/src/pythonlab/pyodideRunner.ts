@@ -4,7 +4,11 @@ import {AnyAction, Dispatch} from 'redux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {
+  MultiFileSource,
+  ProjectFile,
+  ProjectFileType,
+} from '@cdo/apps/lab2/types';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
@@ -17,14 +21,15 @@ export async function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined,
-  progressManager: ProgressManager | null
+  progressManager: ProgressManager | null,
+  validationFile?: ProjectFile
 ) {
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
   }
   if (runTests) {
-    await runAllTests(source, dispatch, progressManager);
+    await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -37,9 +42,13 @@ export async function handleRunClick(
   }
 }
 
-export async function runPythonCode(mainFile: string, source: MultiFileSource) {
+export async function runPythonCode(
+  mainFile: string,
+  source: MultiFileSource,
+  validationFile?: ProjectFile
+) {
   try {
-    return await asyncRun(mainFile, source);
+    return await asyncRun(mainFile, source, validationFile);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     console.log(
@@ -56,19 +65,25 @@ export function stopPythonCode() {
 export async function runAllTests(
   source: MultiFileSource,
   dispatch: Dispatch<AnyAction>,
-  progressManager: ProgressManager | null
+  progressManager: ProgressManager | null,
+  validationFile?: ProjectFile
 ) {
-  // If the project has a validation file, we just run those tests.
-  const validationFile = Object.values(source.files).find(
-    f => f.type === ProjectFileType.VALIDATION
-  );
-  if (validationFile) {
-    // We only support one validation file. If somehow there is more than one, just run the first one.
+  // We default to using the validation file passed in. If it does not exist,
+  // we check the source for the validation file (this is the case in start mode).
+  const validationToRun =
+    validationFile ||
+    Object.values(source.files).find(
+      f => f.type === ProjectFileType.VALIDATION
+    );
+  if (validationToRun) {
     dispatch(appendSystemMessage(`Running level tests...`));
     progressManager?.resetValidation();
+    // We only send the separate validation file, because otherwise the
+    // source already has the validation file.
     const result = await runPythonCode(
-      runValidationTests(validationFile.name),
-      source
+      runValidationTests(validationToRun.name),
+      source,
+      validationFile
     );
     if (result?.message) {
       // Get validation test results

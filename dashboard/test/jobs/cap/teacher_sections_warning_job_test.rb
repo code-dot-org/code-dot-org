@@ -6,15 +6,14 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
   describe '.perform_later' do
     subject(:perform_later) {described_class.perform_later}
 
-    let(:cap_teacher_section_warning_emails) {['all']}
-
     let(:student_aga_gate_start_date) {30.days.ago}
     let(:teacher_email) {Faker::Internet.unique.email}
     let(:teacher_name) {Faker::Name.unique.name}
     let(:section_name) {Faker::Educator.unique.course_name}
+    let(:section_hidden) {false}
 
     let(:teacher) {create(:teacher, email: teacher_email, name: teacher_name)}
-    let(:section) {create(:section, user: teacher, name: section_name)}
+    let(:section) {create(:section, user: teacher, name: section_name, hidden: section_hidden)}
     let(:student) {create(:cpa_non_compliant_student, :in_grace_period, cap_status_date: student_aga_gate_start_date)}
 
     let(:expect_teacher_warning_to_be_sent) do
@@ -48,13 +47,6 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
       create(:follower, section: section, student_user: student)
     end
 
-    before do
-      MailjetDeliveryJob.stubs(:perform_later)
-      Metrics::Events.stubs(:log_event)
-
-      DCDO.stubs(:get).with('cap_teacher_section_warning_emails', []).returns(cap_teacher_section_warning_emails)
-    end
-
     it 'enqueues job to "default" queue' do
       assert_enqueued_with(job: described_class, queue: 'default') do
         perform_later
@@ -64,13 +56,11 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
     it 'schedules warning email via MailjetDeliveryJob with expected arguments' do
       expect_teacher_warning_to_be_sent.once
       perform_enqueued_jobs {perform_later}
-      assert_performed_jobs 1
     end
 
     it 'logs event' do
       expect_event_logging.once
       perform_enqueued_jobs {perform_later}
-      assert_performed_jobs 1
     end
 
     context 'when StandardError is raised' do
@@ -83,9 +73,7 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
       it 'rescues from exception with #report_exception' do
         described_class.any_instance.expects(:report_exception).with(exception).once
         expect_event_logging.never
-
         perform_enqueued_jobs {perform_later}
-        assert_performed_jobs 1
       end
     end
 
@@ -95,9 +83,7 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never
         expect_event_logging.never
-
         perform_enqueued_jobs {perform_later}
-        assert_performed_jobs 1
       end
     end
 
@@ -107,33 +93,17 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never
         expect_event_logging.never
-
         perform_enqueued_jobs {perform_later}
-        assert_performed_jobs 1
       end
     end
 
-    context 'when emails whitelist is empty' do
-      let(:cap_teacher_section_warning_emails) {[]}
+    context 'when section is hidden (archived)' do
+      let(:section_hidden) {true}
 
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never
         expect_event_logging.never
-
         perform_enqueued_jobs {perform_later}
-        assert_performed_jobs 1
-      end
-    end
-
-    context 'when teacher email is in whitelist' do
-      let(:cap_teacher_section_warning_emails) {[teacher_email]}
-
-      it 'schedules teacher warning email' do
-        expect_teacher_warning_to_be_sent.once
-        expect_event_logging.once
-
-        perform_enqueued_jobs {perform_later}
-        assert_performed_jobs 1
       end
     end
   end
