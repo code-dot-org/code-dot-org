@@ -23,11 +23,11 @@
       width: 1rem;
       padding-inline-start: 0.5rem;
 
-      color: $light_black;
+      color: $light_gray_950;
       content: '\f0ac';
       text-align: center;
 
-      font-family: "Font Awesome 6 Pro", sans-serif;;
+      font-family: 'Font Awesome 6 Pro', sans-serif;
       font-size: 0.8125rem;
 
       font-style: normal;
@@ -42,7 +42,7 @@
     > div {
       select {
         border-color: $light_white;
-        background-color: initial;
+        background-color: $light_gray_950;
         color: $light_white;
       }
       &::after {
@@ -53,32 +53,33 @@
         background-color: initial;
         color: $light_white;
       }
+
       &:has(select:hover) {
         select:not(:disabled) {
-          color:  $light_white;
-          background-color: $light_gray_800;
+          color: $light_white;
+          background-color: $light_gray_950;
         }
         &::before {
-          color:  $light_white;
+          color: $light_white;
         }
         &::after {
-          color:  $light_white;
+          color: $light_white;
         }
       }
 
       &:has(select:active) {
         select:not(:disabled) {
-          color:  $light_white;
+          color: $light_white;
+          background-color: $light_gray_950;
         }
 
         &::before {
-          color:  $light_white;
+          color: $light_white;
         }
         &::after {
-          color:  $light_white;
+          color: $light_white;
         }
       }
-
     }
   }
 }

@@ -506,6 +506,12 @@ class UserTest < ActiveSupport::TestCase
     user.valid?
   end
 
+  test "email does not have to be unique when existing user has LTI authentication" do
+    user = create :teacher, :with_lti_auth
+    dupe_user = create(:teacher, email: user.email)
+    assert dupe_user.valid?
+  end
+
   test "cannot create multi-auth LTI user multiple auth options and duplicate of multi-auth user's second email" do
     create :student, email: COLLISION_EMAIL
     # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
