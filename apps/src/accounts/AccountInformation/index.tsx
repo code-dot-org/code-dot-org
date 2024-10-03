@@ -208,6 +208,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
           {/* display name */}
           <TextField
+            id="user_name"
             className={styles.input}
             label={i18n.accountInformationDisplayName()}
             onChange={e => {
@@ -225,6 +226,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           {/* username */}
           {userUsername && (
             <TextField
+              id="user_username"
               className={styles.input}
               label={i18n.accountInformationUsername()}
               onChange={e => {
@@ -243,6 +245,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           {!teacherManagedAccount && !parentManagedAccount && (
             <div>
               <TextField
+                id="user_email"
                 className={classNames(styles.input, styles.emailInput)}
                 label={i18n.accountInformationEmail()}
                 helperMessage={
@@ -302,6 +305,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             <>
               {/* new password */}
               <TextField
+                id="user_password"
                 className={styles.input}
                 label={i18n.accountInformationPassword()}
                 onChange={e => {
@@ -318,6 +322,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
               {/* new password confirmation */}
               <TextField
+                id="user_password_confirmation"
                 className={styles.input}
                 label={i18n.accountInformationPasswordConfirmation()}
                 onChange={e => {
@@ -337,6 +342,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           {/* current password */}
           {encryptedPasswordPresent && (
             <TextField
+              id="user_current_password"
               className={styles.input}
               label={i18n.accountInformationCurrentPassword()}
               helperMessage={i18n.accountInformationCurrentPasswordHint()}
@@ -356,6 +362,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             <>
               {/* student age */}
               <SimpleDropdown
+                id="user_age"
                 labelText={i18n.age()}
                 name="user[age]"
                 selectedValue={age}
@@ -377,6 +384,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               {/* student gender */}
               {showGenderInput && (
                 <TextField
+                  id="user_gender_student_input"
                   className={styles.input}
                   label={i18n.accountInformationGender()}
                   onChange={e => setGender(e.target.value)}
@@ -390,6 +398,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               {isUSA && (
                 <>
                   <SimpleDropdown
+                    id="user_us_state"
                     labelText={i18n.accountInformationState()}
                     name="user[us_state]"
                     selectedValue={usState}
@@ -426,6 +435,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
         </div>
         <div>
           <Button
+            id="submit-update"
             className={styles.submit}
             text={i18n.accountInformationUpdateAccountInformation()}
             onClick={handleSubmitAccountSettingsUpdate}
