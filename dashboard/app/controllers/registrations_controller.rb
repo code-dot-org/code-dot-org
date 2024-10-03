@@ -8,7 +8,7 @@ require 'policies/lti'
 require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
-  before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account]
+  before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
 
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [

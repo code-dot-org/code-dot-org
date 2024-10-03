@@ -929,7 +929,6 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     # Attempt to reach a new sign up page
     get :account_type
-
     assert_redirected_to '/'
   end
 
@@ -940,7 +939,6 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     # Attempt to reach a new sign up page
     get :login_type
-
     assert_redirected_to '/'
   end
 
@@ -951,7 +949,6 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     # Attempt to reach a new sign up page
     get :finish_teacher_account
-
     assert_redirected_to '/'
   end
 
@@ -962,7 +959,33 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     # Attempt to reach a new sign up page
     get :finish_student_account
+    assert_redirected_to '/'
+  end
 
+  test 'redirects signed-in user to home if they attempt to access new' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    get :new
+    assert_redirected_to '/'
+  end
+
+  test 'redirects signed-in user to home if they attempt to access cancel' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    get :cancel
+    assert_redirected_to '/'
+  end
+
+  test 'redirects signed-in user to home if they attempt to access create' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    get :create
     assert_redirected_to '/'
   end
 end
