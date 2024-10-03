@@ -3971,8 +3971,10 @@ class UserTest < ActiveSupport::TestCase
 
   test 'summarize' do
     latest_permission_request_sent_at = 1.month.ago.change(usec: 0)
-
     create(:parental_permission_request, user: @student, updated_at: latest_permission_request_sent_at)
+
+    us_state = 'CO'
+    @student.update!(us_state: us_state)
 
     assert_equal(
       {
@@ -3997,6 +3999,7 @@ class UserTest < ActiveSupport::TestCase
         at_risk_age_gated: false,
         child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
+        us_state: us_state,
       },
       @student.summarize
     )
@@ -5411,6 +5414,18 @@ class UserTest < ActiveSupport::TestCase
     assert_equal student.us_state, 'WA'
   end
 
+  test 'teacher can change us_state of student in cpa lockout flow' do
+    new_us_state = 'WA'
+
+    teacher = create(:teacher)
+    student = create(:student, :U13, :in_colorado, :without_parent_permission)
+
+    RequestStore.store[:current_user] = teacher
+    student.update!(us_state: new_us_state)
+
+    assert_equal new_us_state, student.reload.us_state
+  end
+
   test "teacher with oauth account can access AI Chat" do
     teacher = create :teacher, :google_sso_provider
     assert teacher.teacher_can_access_ai_chat?
@@ -5479,6 +5494,58 @@ class UserTest < ActiveSupport::TestCase
 
       it 'returns resend parental permission request' do
         _(latest_parental_permission_request).must_equal user_permission_request1
+      end
+    end
+  end
+
+  describe 'CAP compliance status removing after #us_state updating' do
+    subject(:user) {create(:user, us_state: old_us_state, cap_status: cap_status)}
+
+    let(:cap_status) {'l'}
+    let(:old_us_state) {'CO'}
+    let(:new_us_state) {'WA'}
+
+    let(:update_us_state) do
+      user.us_state = new_us_state
+      user.save(validate: false)
+    end
+
+    let(:expect_cap_compliance_removing) do
+      Services::ChildAccount.expects(:remove_compliance).with(user)
+    end
+
+    it 'calls CAP compliance removing service' do
+      expect_cap_compliance_removing.once
+      update_us_state
+    end
+
+    it 'removes #cap_status' do
+      assert_changes -> {user.reload.cap_status}, from: cap_status, to: nil do
+        update_us_state
+      end
+    end
+
+    it 'updates #us_state' do
+      assert_changes -> {user.reload.us_state}, from: old_us_state, to: new_us_state do
+        update_us_state
+      end
+    end
+
+    context 'when #us_state property is not changed' do
+      let(:new_us_state) {old_us_state}
+
+      it 'does not call CAP compliance removing service' do
+        expect_cap_compliance_removing.never
+        update_us_state
+      end
+    end
+
+    context 'when no CAP compliance status' do
+      let(:cap_status) {nil}
+
+      it 'does not call CAP compliance removing service' do
+        expect_cap_compliance_removing.never
+        update_us_state
       end
     end
   end

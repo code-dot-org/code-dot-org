@@ -202,6 +202,15 @@
   &Generate {
     top: 143px;
     right: 196px;
+
+    &Error {
+      top: 100px;
+    }
+  }
+
+  &Error {
+    top: 143px;
+    right: 196px;
   }
 }
 
@@ -232,4 +241,8 @@
     transform: rotate(90deg);
     animation: left-right 0.75s infinite;
   }
+}
+
+.errorMessage {
+  color: $product_negative_default;
 }

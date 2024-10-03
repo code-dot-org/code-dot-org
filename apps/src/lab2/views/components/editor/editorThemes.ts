@@ -13,12 +13,12 @@ const chalky = '#e5c07b',
   coral = '#e06c75',
   cyan = '#56b6c2',
   invalid = '#ffffff',
-  stone = '#7d8799',
+  stone = color.light_gray_500,
   malibu = '#61afef',
   sage = '#98c379',
   whiskey = '#d19a66',
   violet = '#c678dd',
-  darkBackground = '#21252b',
+  darkBackground = color.light_black,
   highlightBackground = '#2c313a',
   selection = '#484D57',
   cursor = '#528bff';
@@ -30,7 +30,7 @@ export const darkTheme = EditorView.theme(
   {
     '&': {
       color: color.lighter_gray,
-      backgroundColor: color.darkest_slate_gray,
+      backgroundColor: darkBackground,
     },
     '.cm-content': {
       caretColor: cursor,
@@ -57,7 +57,7 @@ export const darkTheme = EditorView.theme(
       outline: '1px solid #515a6b',
     },
     '.cm-gutters': {
-      backgroundColor: color.darkest_slate_gray,
+      backgroundColor: darkBackground,
       color: stone,
       border: 'none',
     },

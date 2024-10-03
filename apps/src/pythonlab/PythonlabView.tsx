@@ -7,7 +7,7 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useState} from 'react';
 
 import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -15,6 +15,7 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
+import {getAppOptionsEditBlocks} from '../lab2/projects/utils';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
@@ -99,7 +100,7 @@ const defaultConfig: ConfigType = {
 
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource, startSource, projectVersion} =
+  const {source, setSource, startSource, projectVersion, validationFile} =
     useSource(defaultProject);
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
@@ -108,6 +109,7 @@ const PythonlabView: React.FunctionComponent = () => {
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
   const progressManager = useContext(ProgressManagerContext);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   useEffect(() => {
     if (progressManager && appName === 'pythonlab') {
@@ -128,7 +130,15 @@ const PythonlabView: React.FunctionComponent = () => {
     dispatch: AppDispatch,
     source: MultiFileSource | undefined
   ) => {
-    await handleRunClick(runTests, dispatch, source, progressManager);
+    // We don't send the validation file to the runner if we are in start mode,
+    // as we want to use the validation from the sources instead.
+    await handleRunClick(
+      runTests,
+      dispatch,
+      source,
+      progressManager,
+      isStartMode ? undefined : validationFile
+    );
     // Only send a predict level report if this is a predict level and the predict
     // answer was not locked.
     if (isPredictLevel && !predictAnswerLocked) {

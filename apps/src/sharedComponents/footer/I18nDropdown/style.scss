@@ -1,5 +1,10 @@
 @import 'color';
 
+#localeForm {
+  min-width: 6.25rem;
+  max-width: 50%;
+}
+
 .languageSelect {
   > div {
     display: flex;

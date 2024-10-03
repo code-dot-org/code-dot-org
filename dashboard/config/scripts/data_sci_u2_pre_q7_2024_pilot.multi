@@ -1,0 +1,10 @@
+name 'Data Sci U2 Pre Q7_2024-pilot'
+
+question 'You used the Pandas function `describe()` to see certain statistics of your dataset, but would prefer to see the spread of each column in graph form. What would be a matplotlib function to use to do so?'
+
+wrong 'Using `plt.plot()` to create a line plot for each column\'s data, visualizing the trends over the dataset.'
+wrong 'Using `df.hist()` to create histograms for each numerical column, visualizing the frequency distribution of the data.'
+right 'Using `df.boxplot()` to create box plots for each numerical column, visualizing the summary statistics including the median, quartiles, and potential outliers.'
+wrong 'Using `sns.heatmap()` from Seaborn to create a heatmap of the correlation matrix, visualizing the relationships between numerical columns.'
+
+allow_multiple_attempts false
