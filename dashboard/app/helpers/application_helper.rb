@@ -214,6 +214,10 @@ module ApplicationHelper
     obj
   end
 
+  def render_shared_haml(name, locals = {})
+    render inline: File.read(CDO.dir("shared/haml/#{name}.haml")), type: :haml, locals: locals # rubocop:disable Rails/RenderInline
+  end
+
   private def share_failure_message(failure_type)
     case failure_type
     when ShareFiltering::FailureType::EMAIL

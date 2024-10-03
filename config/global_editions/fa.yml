@@ -9,6 +9,7 @@
 
 locales: [fa-IR, en-US]
 locale_lock: true
+countries: [IR]
 
 # The top bar on the site consisting of dropdown menus and navigation links
 header:
