@@ -67,16 +67,15 @@ Resources:
   EncryptionPolicy:
     Type: 'AWS::OpenSearchServerless::SecurityPolicy'
     Properties:
-      Name: test-encryption-policy
+      Name: !Sub ai-diff-${Environment}
       Type: encryption
-      Description: Encryption policy for test collection
       Policy: !Sub |
         {
           "Rules": [
             {
-              "Resource": "collection/ai-diff-${Environment}",
-              "Action": "encrypt",
-              "Effect": "Allow"
+              "ResourceType": "collection"
+              "Resource": "collection/ai-diff-${Environment}"
+              "AWSOwnedKey":true
             }
           ]
         }
