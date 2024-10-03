@@ -1,0 +1,13 @@
+name 'Data Sci U2 Pre Q15_2024-pilot'
+
+question 'What type of plot is best suited for visualizing the distribution of a numerical variable in Matplotlib?'
+
+right 'Histogram'
+wrong 'Line plot'
+wrong 'Bar chart'
+wrong 'Pie chart'
+
+
+
+
+allow_multiple_attempts false
