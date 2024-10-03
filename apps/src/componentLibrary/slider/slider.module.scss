@@ -158,13 +158,15 @@ $slider-white-track-empty-color: $light_gray_400;
     border-radius: 2px;
   }
 
-  .stepMark {
-    position: absolute;
-    height: 10px;
-    width: 2px;
-    background-color: black;
-    bottom: -2px; /* Adjust as needed */
-  }
+
+  // TODO: Uncomment when working on adding steps support
+  //.stepMark {
+  //  position: absolute;
+  //  height: 10px;
+  //  width: 2px;
+  //  background-color: black;
+  //  bottom: -2px; /* Adjust as needed */
+  //}
 }
 
 
