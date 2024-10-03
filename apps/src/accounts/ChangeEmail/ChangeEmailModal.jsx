@@ -73,11 +73,10 @@ export default class ChangeEmailModal extends React.Component {
     }
   };
 
-  isFormValid(validationErrors) {
-    return Object.keys(validationErrors).every(key => !validationErrors[key]);
-  }
+  isFormValid = validationErrors =>
+    Object.keys(validationErrors).every(key => !validationErrors[key]);
 
-  getValidationErrors() {
+  getValidationErrors = () => {
     const {serverErrors} = this.state;
     return {
       newEmail: serverErrors.newEmail || this.getNewEmailValidationError(),
@@ -87,7 +86,7 @@ export default class ChangeEmailModal extends React.Component {
       emailOptIn:
         serverErrors.emailOptIn || this.getEmailOptInValidationError(),
     };
-  }
+  };
 
   getNewEmailValidationError = () => {
     const {newEmail} = this.state.values;
@@ -153,14 +152,12 @@ export default class ChangeEmailModal extends React.Component {
             {i18n.changeEmailModal_title()}
           </Heading3>
           <ChangeEmailForm
-            ref={x => (this.changeEmailForm = x)}
             values={values}
             validationErrors={validationErrors}
             disabled={STATE_SAVING === saveState}
             userType={userType}
             isPasswordRequired={isPasswordRequired}
             onChange={this.onFormChange}
-            onSubmit={this.save}
           />
           {STATE_UNKNOWN_ERROR === saveState && (
             <Alert
