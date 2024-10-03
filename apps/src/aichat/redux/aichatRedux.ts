@@ -8,10 +8,12 @@ import {
 } from '@reduxjs/toolkit';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentScriptLevelId,
   getCurrentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -292,6 +294,9 @@ export const onSaveComplete =
     dispatch(setSavedAiCustomizations(currentAiCustomizations));
     // Notify the UI that the save is complete.
     dispatch(endSave());
+    // Send a report that user has started the aichat level after a successful save.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     // Go to the presentation page if we just finished publishing the model card.
     if (currentSaveType === 'publishModelCard') {
       dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -457,6 +462,10 @@ export const submitChatContents = createAsyncThunk(
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
+    // Send a report that the user has started the aichat level after successfully sending
+    // a chat message and then receiving a response from the chatbot.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     chatApiResponse.messages.forEach(message => {
       dispatch(addChatEvent({...message, timestamp: Date.now()}));
     });
