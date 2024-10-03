@@ -355,7 +355,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             id="instructions-navigation"
             className={classNames(
               moduleStyles['bubble-' + theme],
-              moduleStyles.button
+              moduleStyles.button,
+              moduleStyles.navigationButton
             )}
             ref={navigationScrollRef}
           >

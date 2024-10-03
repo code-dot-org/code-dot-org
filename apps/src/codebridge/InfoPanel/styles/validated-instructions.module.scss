@@ -22,7 +22,7 @@
   font-size: 14px;
   line-height: 1.5;
   display: flex;
-  overflow: scroll;
+  overflow: hidden;
 
   &.vertical {
     flex-direction: column;
@@ -74,6 +74,7 @@
   border-radius: 4px;
   margin-bottom: 10px;
   animation: slidein 0.5s;
+  overflow: scroll;
 }
 
 .bubble-dark {
@@ -144,4 +145,8 @@
 
 .button {
   padding: 12px;
+}
+
+.navigationButton {
+  overflow: visible;
 }
