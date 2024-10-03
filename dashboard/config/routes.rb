@@ -24,6 +24,7 @@ Dashboard::Application.routes.draw do
           get :parent_letter
           get '*path', action: :show, via: :all, as: :subpath
         end
+        resources :courses, only: %i[show], param: :course_name, controller: :teacher_dashboard
       end
     end
 
