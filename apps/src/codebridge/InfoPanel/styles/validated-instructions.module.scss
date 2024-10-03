@@ -23,6 +23,7 @@
   line-height: 1.5;
   display: flex;
   overflow: hidden;
+  margin-bottom: 45px; // space for copyright footer
 
   &.vertical {
     flex-direction: column;
@@ -44,20 +45,10 @@
   pointer-events: auto;
   flex: 1;
   opacity: 1;
+  height: 100%;
 
   &.itemVertical {
     flex-direction: column;
-  }
-}
-
-.itemTitle {
-  font-size: 18px;
-  text-align: left;
-  overflow-wrap: break-word;
-  padding: 5px;
-
-  &Horizontal {
-    max-width: 140px;
   }
 }
 
@@ -74,7 +65,7 @@
   border-radius: 4px;
   margin-bottom: 10px;
   animation: slidein 0.5s;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .bubble-dark {
@@ -147,6 +138,8 @@
   padding: 12px;
 }
 
-.navigationButton {
-  overflow: visible;
+.instructionsContent {
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
