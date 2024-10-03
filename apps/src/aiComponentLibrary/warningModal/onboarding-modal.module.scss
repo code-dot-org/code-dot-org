@@ -9,19 +9,6 @@
     margin: 1rem 0;
     border-color: $light_gray_200;
   }
-
-  a {
-    @include main-font-semi-bold;
-    font-size: 1rem;
-    color: $brand_secondary_default;
-    margin: 1rem 0;
-    text-decoration: underline;
-    transition: color ease-in-out .2s;
-
-    &:hover {
-      color: $brand_secondary_dark;
-    }
-  }
 }
 
 .headerContainer {
@@ -29,10 +16,28 @@
   height: 2rem;
 }
 
-.onboardingModuleTextContainer {
+.contentContainer {
   display: flex;
   overflow-y: auto;
   flex-direction: column;
+}
+
+.textContainer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.warning {
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $product_negative_default;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+
+  background-color: #FFE1DD;
+  color: $darkest_gray;
 }
 
 .bottomSection {
