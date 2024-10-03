@@ -1,9 +1,10 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import {useLoaderData} from 'react-router-dom';
 
 import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
 import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 jest.mock('react-router-dom', () => ({
@@ -74,6 +75,11 @@ describe('LessonMaterialsContainer', () => {
     ],
   };
 
+  let windowOpenMock: jest.SpyInstance<
+    Window | null,
+    Parameters<typeof utils.windowOpen>
+  >;
+
   beforeEach(() => {
     (useLoaderData as jest.Mock).mockReturnValue(mockLessonData);
   });
@@ -131,5 +137,43 @@ describe('LessonMaterialsContainer', () => {
       screen.queryAllByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon)
         .length === 0
     );
+  });
+
+  describe('resource links', () => {
+    beforeEach(() => {
+      windowOpenMock = jest
+        .spyOn(utils, 'windowOpen')
+        .mockImplementation(() => null);
+    });
+
+    afterEach(() => {
+      windowOpenMock.mockRestore();
+      jest.resetAllMocks();
+    });
+
+    it('opens lesson plan links in a new tab', () => {
+      render(<LessonMaterialsContainer />);
+
+      const label = screen.getByText('Lesson Plan: First lesson');
+      const resourceRow = label.closest(
+        '[data-testid="resource-row"]'
+      ) as HTMLElement;
+      expect(resourceRow).toBeDefined();
+      const menuButton = resourceRow.querySelector('button') as HTMLElement;
+      expect(menuButton).toBeDefined();
+      fireEvent.click(menuButton);
+
+      const dropdown = menuButton?.nextElementSibling as HTMLElement;
+      expect(dropdown.classList.contains('dropdownMenuContainer')).toBe(true);
+
+      const viewButton = within(dropdown).getByText('View') as HTMLElement;
+      fireEvent.click(viewButton);
+
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://studio.code.org/lesson1',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
   });
 });
