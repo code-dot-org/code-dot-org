@@ -61,7 +61,7 @@ services:
   # Run any rake task
   rake:
     <<: *command-base
-    entrypoint: ['/bin/bash', '-l', './docker/developers/run.sh', 'rake']
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'rake']
     command: ['--tasks']
 
   # Run any rake task within the dashboard project
@@ -130,14 +130,6 @@ services:
       - ../../apps/package.json:/app/src/apps/package.json
       - .:/app/src # This is not the application source code!
     command: /bin/bash -l -c "./install-local-nvm.sh"
-
-  # This installs the virtual environment into the container volume
-  install-python:
-    extends:
-      file: docker-compose.dashboard.yml
-      service: web
-    hostname: install-python
-    command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install:python'
 
   # This just installs the Ruby gems, in case they have changed
   install-gems:

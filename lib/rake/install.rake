@@ -37,21 +37,14 @@ namespace :install do
     end
   end
 
-  timed_task_with_logging :python do
-    if RakeUtils.local_environment?
-      Dir.chdir(dashboard_dir) do
-        RakeUtils.python_venv_install
-      end
-    end
-  end
-
   desc 'Install Dashboard rubygems and setup database.'
   timed_task_with_logging :dashboard do
     if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        RakeUtils.rake 'install:python'
+        RakeUtils.python_venv_install
 
+        puts CDO.dashboard_db_writer
         if ENV['CI']
           # Prepare for dashboard unit tests to run. We can't seed UI test data
           # yet because doing so would break unit tests.
@@ -86,7 +79,6 @@ namespace :install do
   tasks << :hooks if rack_env?(:development)
   tasks << :locals_yml if rack_env?(:development)
   tasks << :apps if CDO.build_apps
-  tasks << :python if CDO.build_dashboard
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :i18n if CDO.build_i18n
