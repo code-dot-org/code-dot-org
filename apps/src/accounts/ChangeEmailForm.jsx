@@ -1,10 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import Link from '@cdo/apps/componentLibrary/link/Link';
+import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
+import TextField from '@cdo/apps/componentLibrary/textField/TextField';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import i18n from '@cdo/locale';
 
 import {pegasus} from '../lib/util/urlHelpers';
-import {Field} from '../sharedComponents/SystemDialog/SystemDialog';
+
+import styles from './formStyle.module.scss';
 
 export default class ChangeEmailForm extends React.Component {
   static propTypes = {
@@ -25,19 +31,6 @@ export default class ChangeEmailForm extends React.Component {
     onSubmit: PropTypes.func.isRequired,
   };
 
-  componentDidMount() {
-    this.newEmailInput.focus();
-  }
-
-  focusOnAnError() {
-    const {validationErrors} = this.props;
-    if (validationErrors.newEmail) {
-      this.newEmailInput.focus();
-    } else if (validationErrors.currentPassword) {
-      this.currentPasswordInput.focus();
-    }
-  }
-
   onNewEmailChange = event =>
     this.props.onChange({
       ...this.props.values,
@@ -56,24 +49,17 @@ export default class ChangeEmailForm extends React.Component {
       emailOptIn: event.target.value,
     });
 
-  onKeyDown = event => {
-    if (event.key === 'Enter' && !this.props.disabled) {
-      this.props.onSubmit();
-    }
-  };
-
   emailOptInLabelDetails() {
     return (
       <span>
         {i18n.changeEmailModal_emailOptIn_description()}{' '}
-        <a
+        <Link
+          text={i18n.changeEmailModal_emailOptIn_privacyPolicy()}
           href={pegasus('/privacy')}
-          tabIndex="3"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {i18n.changeEmailModal_emailOptIn_privacyPolicy()}
-        </a>
+          openInNewTab={true}
+          external={true}
+          size="s"
+        />
       </span>
     );
   }
@@ -82,89 +68,70 @@ export default class ChangeEmailForm extends React.Component {
     const {values, validationErrors, disabled, userType, isPasswordRequired} =
       this.props;
     return (
-      <div>
-        <Field
+      <form className={styles.form}>
+        <TextField
+          inputType="email"
           label={i18n.changeEmailModal_newEmail_label()}
-          error={validationErrors.newEmail}
-        >
-          <input
-            type="email"
-            value={values.newEmail}
-            disabled={disabled}
-            tabIndex="1"
-            onKeyDown={this.onKeyDown}
-            onChange={this.onNewEmailChange}
-            autoComplete="off"
-            maxLength="255"
-            size="255"
-            style={styles.input}
-            ref={el => (this.newEmailInput = el)}
-          />
-        </Field>
+          errorMessage={validationErrors.newEmail}
+          onChange={this.onNewEmailChange}
+          autoComplete="off"
+          maxLength={255}
+          value={values.newEmail}
+          disabled={disabled}
+        />
         {isPasswordRequired && (
-          <Field
+          <TextField
+            inputType="password"
             label={i18n.changeEmailModal_currentPassword_label()}
-            error={validationErrors.currentPassword}
-          >
-            <input
-              type="password"
-              value={values.currentPassword}
-              disabled={disabled}
-              tabIndex="1"
-              onKeyDown={this.onKeyDown}
-              onChange={this.onCurrentPasswordChange}
-              maxLength="255"
-              size="255"
-              style={styles.input}
-              ref={el => (this.currentPasswordInput = el)}
-            />
-          </Field>
+            errorMessage={validationErrors.currentPassword}
+            onChange={this.onCurrentPasswordChange}
+            maxLength={255}
+            value={values.currentPassword}
+            disabled={disabled}
+          />
         )}
         {userType === 'teacher' && (
-          <Field
-            labelDetails={this.emailOptInLabelDetails()}
-            error={validationErrors.emailOptIn}
-          >
-            <>
-              <label>
-                <input
-                  style={styles.radio}
-                  type="radio"
-                  value="yes"
-                  name="email-opt-in-buttons"
-                  onClick={this.onEmailOptInChange}
-                  disabled={disabled}
-                  onKeyDown={this.onKeyDown}
-                  tabIndex="1"
-                />
-                {i18n.yes()}
-              </label>
-              <label>
-                <input
-                  style={styles.radio}
-                  type="radio"
-                  value="no"
-                  name="email-opt-in-buttons"
-                  onClick={this.onEmailOptInChange}
-                  disabled={disabled}
-                  onKeyDown={this.onKeyDown}
-                  tabIndex="1"
-                />
-                {i18n.no()}
-              </label>
-            </>
-          </Field>
+          <div>
+            <Typography semanticTag="span" visualAppearance="body-three">
+              {i18n.changeEmailModal_emailOptIn_description()}{' '}
+              <Link
+                text={i18n.changeEmailModal_emailOptIn_privacyPolicy()}
+                href={pegasus('/privacy')}
+                openInNewTab={true}
+                external={true}
+                size="s"
+              />
+            </Typography>
+            <div className={styles.radioContainer}>
+              <RadioButtonsGroup
+                onChange={this.onEmailOptInChange}
+                radioButtons={[
+                  {
+                    name: 'email-opt-in',
+                    value: 'yes',
+                    label: i18n.yes(),
+                    size: 'xs',
+                    disabled,
+                  },
+                  {
+                    name: 'email-opt-out',
+                    value: 'no',
+                    label: i18n.no(),
+                    size: 'xs',
+                    disabled,
+                  },
+                ]}
+              />
+              {validationErrors.emailOptIn && (
+                <div className={styles.errorMessage}>
+                  <FontAwesomeV6Icon iconName={'circle-exclamation'} />
+                  <span>{validationErrors.emailOptIn}</span>
+                </div>
+              )}
+            </div>
+          </div>
         )}
-      </div>
+      </form>
     );
   }
 }
-
-const styles = {
-  input: {
-    marginBottom: 4,
-  },
-  radio: {
-    margin: '0px 5px 0px 0px',
-  },
-};
