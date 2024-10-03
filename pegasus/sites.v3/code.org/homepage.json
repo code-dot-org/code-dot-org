@@ -2,7 +2,6 @@
   "pages": {
     "homepage": [
       "hoc2024-soon-hoc",
-      "hoc2023-actual-hoc",
       "pl-launch-superhero",
       "curriculum-launch-2024",
       "best-of-stem-2024"
@@ -24,38 +23,6 @@
           "button_link": "https://hourofcode.com/events",
           "button_text": "hoc_2024.button_host_an_event",
           "img_src": "/images/banners/banner-hoc-2024.png"
-        }
-      ]
-    },
-    "hoc2023-actual-hoc": {
-      "hoc_modes": ["actual-hoc"],
-      "class": "hoc-banner homepage",
-      "desktopImage": "/images/hoc2023-codeorg-hero-banner.png",
-      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.png",
-      "leftImage": "/images/hoc2023-codeorg-hero-banner-left.svg",
-      "rightImage": "/images/hoc2023-codeorg-hero-banner-right.svg",
-      "actions": [
-        {
-          "type": "text",
-          "text": "homepage_hero_hoc_is_here"
-        },
-        {
-          "type": "heading",
-          "text": "curriculum_name_dance_party_ai_edition"
-        },
-        {
-          "type": "heading-two",
-          "text": "codeorg_homepage_hoc2023_body"
-        },
-        {
-          "type": "cta_button_solid_yellow",
-          "text": "hoc2022_cta_primary",
-          "url": "/dance"
-        },
-        {
-          "type": "cta_button_solid_white",
-          "text": "hoc2022_cta_secondary",
-          "url": "https://hourofcode.com/learn"
         }
       ]
     },
