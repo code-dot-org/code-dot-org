@@ -3,6 +3,8 @@
 // Most settings should be set in this config file.
 {
   "include": [
+    "./.storybook/**/*.js",
+    "./.storybook/**/*.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./test/**/*.ts",
@@ -26,6 +28,7 @@
     "baseUrl": "./",
     "paths": {
       "@cdo/apps/*": ["./src/*"],
+      "@cdo/storybook/*": ["./.storybook/*"],
       "@cdo/static/*": ["./static/*"],
       "@cdo/i18n/*": ["./i18n/*"],
       "@codebridge/*": ["./src/codebridge/*"],

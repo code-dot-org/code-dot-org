@@ -8,7 +8,7 @@ import {
 
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {setLoadingCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 
@@ -85,7 +85,11 @@ let pyodideWorker = setUpPyodideWorker();
 
 const asyncRun = (() => {
   let id = 0; // identify a Promise
-  return (script: string, source: MultiFileSource) => {
+  return (
+    script: string,
+    source: MultiFileSource,
+    validationFile?: ProjectFile
+  ) => {
     // the id could be generated more carefully
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
     return new Promise<PyodideMessage>(onSuccess => {
@@ -94,6 +98,7 @@ const asyncRun = (() => {
         python: script,
         id,
         source,
+        validationFile,
       };
       pyodideWorker.postMessage(messageData);
     });

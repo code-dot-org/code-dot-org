@@ -1,3 +1,7 @@
+import {
+  combineStartSourcesAndValidation,
+  prepareSourceForLevelbuilderSave,
+} from '@codebridge/utils';
 import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
@@ -36,6 +40,9 @@ export const useSource = (defaultSources: ProjectSources) => {
   );
   const previousLevelIdRef = useRef<number | null>(null);
   const previousInitialSources = useRef<ProjectSources | null>(null);
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
+  );
 
   // keep track of whatever project the user has set locally. This happens after any change in CodeBridge
   // in the setSource function below
@@ -65,11 +72,19 @@ export const useSource = (defaultSources: ProjectSources) => {
   );
 
   const startSource = useMemo(() => {
-    // When resetting in start mode, we always use the level start source.
+    // When resetting in start mode, we always use the level start source
+    // combined with the validation file.
+    let finalLevelStartSource = levelStartSource;
+    if (isStartMode) {
+      finalLevelStartSource = combineStartSourcesAndValidation(
+        levelStartSource,
+        validationFile
+      );
+    }
     return {
       source:
         (!isStartMode && templateStartSource) ||
-        levelStartSource ||
+        finalLevelStartSource ||
         (defaultSources.source as MultiFileSource),
     };
   }, [
@@ -77,12 +92,15 @@ export const useSource = (defaultSources: ProjectSources) => {
     isStartMode,
     templateStartSource,
     levelStartSource,
+    validationFile,
   ]);
 
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
-        return {start_sources: source};
+        const {parsedSource, validationFile} =
+          prepareSourceForLevelbuilderSave(source);
+        return {start_sources: parsedSource, validation_file: validationFile};
       });
     } else if (isEditingExemplarMode) {
       header.showLevelBuilderSaveButton(
@@ -125,5 +143,5 @@ export const useSource = (defaultSources: ProjectSources) => {
     return projectVersionRef.current;
   }, [source]);
 
-  return {source, setSource, startSource, projectVersion};
+  return {source, setSource, startSource, projectVersion, validationFile};
 };

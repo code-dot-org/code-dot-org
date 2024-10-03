@@ -45,7 +45,7 @@ interface PatternAiPanelProps {
 }
 
 type UserCompletedTaskType = 'none' | 'generated' | 'drawnDrums';
-type GenerateStateType = 'none' | 'generating';
+type GenerateStateType = 'none' | 'generating' | 'error';
 
 /*
  * Renders a UI for designing a pattern, with AI generation. This is currently
@@ -204,6 +204,10 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     const seedEvents = currentValue.events.filter(
       event => event.tick <= numSeedEvents
     );
+    const onError = (e: Error) => {
+      console.error(e);
+      setGenerateState('error');
+    };
     generatePattern(
       seedEvents,
       numSeedEvents,
@@ -217,7 +221,8 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
           setGenerateState('none');
           playPreview();
         });
-      }
+      },
+      onError
     );
     setGenerateState('generating');
   }, [currentValue, onChange, aiTemperature, stopPreview, playPreview]);
@@ -273,9 +278,21 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
         )}
         {userCompletedTask === 'drawnDrums' && (
           <div className={styles.helpContainer}>
-            <div className={classNames(styles.help, styles.helpGenerate)}>
+            <div
+              className={classNames(
+                styles.help,
+                styles.helpGenerate,
+                generateState === 'error' && styles.helpGenerateError
+              )}
+            >
               Click this button and A.I. will generate more drums based on what
               you started.
+              {generateState === 'error' && (
+                <div className={styles.errorMessage}>
+                  <br />
+                  Something went wrong. Try again.
+                </div>
+              )}
             </div>
             <div
               className={classNames(
@@ -289,6 +306,19 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
               >
                 <img src={arrowImage} alt="" />
               </div>
+            </div>
+          </div>
+        )}
+        {userCompletedTask === 'generated' && generateState === 'error' && (
+          <div className={styles.helpContainer}>
+            <div
+              className={classNames(
+                styles.help,
+                styles.helpError,
+                styles.errorMessage
+              )}
+            >
+              Something went wrong. Try again.
             </div>
           </div>
         )}

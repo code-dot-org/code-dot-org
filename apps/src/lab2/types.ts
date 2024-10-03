@@ -177,6 +177,7 @@ export interface LevelProperties {
   finishUrl?: string;
   finishDialog?: string;
   offerTts?: boolean;
+  validationFile?: ProjectFile;
 }
 
 // Level configuration data used by project-backed labs that don't require
