@@ -71,11 +71,11 @@ Resources:
       Type: encryption
       Policy: !Sub |
         {
+          "AWSOwnedKey":true
           "Rules": [
             {
               "ResourceType": "collection",
-              "Resource": "collection/ai-diff-${Environment}",
-              "AWSOwnedKey":true
+              "Resource": ["collection/ai-diff-${Environment}"]
             }
           ]
         }
