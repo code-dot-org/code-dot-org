@@ -22,7 +22,7 @@ module Services
         when ::User::TYPE_TEACHER
           user_params[:age] = '21+'
           user_params[:email_preference_opt_in_required] = true
-          user_params[:email_preference_opt_in] = user_params[:email_preference_opt_in] == 'true' ? 'yes' : 'no'
+          user_params[:email_preference_opt_in] = user_params[:email_preference_opt_in].present? ? 'yes' : 'no'
           user_params[:email_preference_request_ip] = request.ip
           user_params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
           user_params[:email_preference_form_kind] = '0'
