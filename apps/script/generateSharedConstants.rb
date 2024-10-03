@@ -9,6 +9,7 @@ require 'active_support/inflector'
 require 'active_support/core_ext/hash'
 require 'fileutils'
 require 'require_all'
+require 'ostruct'
 
 require_relative '../../lib/cdo/shared_constants'
 require_relative '../../lib/cdo/shared_constants/curriculum/shared_course_constants'
