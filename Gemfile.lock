@@ -893,8 +893,6 @@ GEM
     uber (0.1.0)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
-    unf (0.1.4)
-      unf_ext
     unf_ext (0.0.7.4)
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)
@@ -922,7 +920,7 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    webrick (1.7.0)
+    webrick (1.8.2)
     websocket (1.2.11)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
