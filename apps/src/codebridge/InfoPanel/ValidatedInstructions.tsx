@@ -345,7 +345,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           )}
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>
-              <div className={classNames(moduleStyles['bubble-' + theme])}>
+              <div className={moduleStyles['bubble-' + theme]}>
                 <PredictSummary />
               </div>
             </InstructorsOnly>
