@@ -78,6 +78,15 @@ module Curriculum
       }
     ).freeze
 
+    # An allowlist of all topic tags that can be applied for units.
+    CURRICULUM_TOPIC_TAGS = OpenStruct.new(
+      {
+        ai: 'AI',
+        maker: 'Maker',
+        music_lab: 'Music lab'
+      }
+    ).freeze
+
     # The curriculum types used in curriculum quick assign
     COURSE_OFFERING_CURRICULUM_TYPES = OpenStruct.new(
       {
