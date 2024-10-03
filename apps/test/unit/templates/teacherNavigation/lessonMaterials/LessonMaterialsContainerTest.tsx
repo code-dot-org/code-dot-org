@@ -163,13 +163,8 @@ describe('LessonMaterialsContainer', () => {
       ) as HTMLElement;
       fireEvent.click(menuButton);
 
-      const dropdown = menuButton?.nextElementSibling as HTMLElement;
-      expect(dropdown.classList.contains('dropdownMenuContainer')).toBe(true);
-
-      const viewButton = within(dropdown).getByText(
-        resourceAction
-      ) as HTMLElement;
-      fireEvent.click(viewButton);
+      const actionButton = within(resourceRow).getByText(resourceAction);
+      fireEvent.click(actionButton);
     }
 
     it('opens lesson plan', () => {
