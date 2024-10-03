@@ -164,7 +164,9 @@ describe('UnitEditor', () => {
 
       const contentArea = screen.getByLabelText('Content Area');
       expect(within(contentArea).getAllByRole('option').length).to.equal(10);
-      expect(within(contentArea).getByText('K-5 self-paced PL').selected).to.equal(true);
+      expect(
+        within(contentArea).getByText('K-5 self-paced PL').selected
+      ).to.equal(true);
     });
   });
 

@@ -79,13 +79,15 @@ class UnitEditor extends React.Component {
     initialLocales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
       .isRequired,
     initialProjectSharing: PropTypes.bool,
-    initialCurriculumUmbrella: PropTypes.oneOf(
-      [...Object.values(CurriculumUmbrella), '']
-    ),
+    initialCurriculumUmbrella: PropTypes.oneOf([
+      ...Object.values(CurriculumUmbrella),
+      '',
+    ]),
     initialTopicTags: PropTypes.arrayOf(PropTypes.string),
-    initialContentArea: PropTypes.oneOf(
-      [...Object.keys(CurriculumContentArea), '']
-    ),
+    initialContentArea: PropTypes.oneOf([
+      ...Object.keys(CurriculumContentArea),
+      '',
+    ]),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -721,13 +723,10 @@ class UnitEditor extends React.Component {
                 <select
                   style={styles.dropdown}
                   value={this.state.contentArea}
-                  onChange={e =>
-                    this.setState({contentArea: e.target.value})
-                  }
+                  onChange={e => this.setState({contentArea: e.target.value})}
                 >
                   <option value="">(None)</option>
-                  {Object.entries(CurriculumContentArea).map(
-                    ([key, val]) => (
+                  {Object.entries(CurriculumContentArea).map(([key, val]) => (
                     <option key={key} value={key}>
                       {val}
                     </option>
