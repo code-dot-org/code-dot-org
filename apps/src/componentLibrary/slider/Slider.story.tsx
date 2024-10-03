@@ -38,6 +38,7 @@ const MultipleTemplate: StoryFn<{
             key={componentArg.name}
             {...componentArg}
             value={values[componentArg.name] || componentArg.value}
+            isRtl={document.documentElement.dir === 'rtl'}
             onChange={e =>
               setValues({...values, [componentArg.name]: e.target.value})
             }
@@ -53,6 +54,7 @@ DefaultSlider.args = {
   name: 'controlled_Slider',
   label: 'Slider Label',
   isCentered: false,
+  value: 0,
 };
 
 export const PercentModeSlider = SingleTemplate.bind({});
@@ -61,6 +63,7 @@ PercentModeSlider.args = {
   label: 'Slider Label',
   isCentered: false,
   isPercentMode: true,
+  value: 0,
 };
 
 export const CenteredSlider = SingleTemplate.bind({});
@@ -68,6 +71,29 @@ CenteredSlider.args = {
   name: 'controlled_Slider_centered',
   label: 'Slider Label',
   isCentered: true,
+  value: 50,
+};
+
+export const SliderWithButtons = SingleTemplate.bind({});
+SliderWithButtons.args = {
+  name: 'controlled_Slider_buttons',
+  label: 'Slider Label',
+  leftButtonProps: {
+    icon: {iconName: 'minus', title: 'Decrease'},
+    ['aria-label']: 'Decrease',
+  },
+  rightButtonProps: {
+    icon: {iconName: 'plus', title: 'Increase'},
+    ['aria-label']: 'Increase',
+  },
+  value: 0,
+};
+
+export const SliderWithoutButtons = SingleTemplate.bind({});
+SliderWithoutButtons.args = {
+  name: 'controlled_Slider_no_buttons',
+  label: 'Slider Label',
+  value: 0,
 };
 
 export const GroupOfDefaultSliders = MultipleTemplate.bind({});
@@ -77,12 +103,30 @@ GroupOfDefaultSliders.args = {
       name: 'test-regular-slider',
       label: 'Regular Slider',
       onChange: () => null,
+      value: 0,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'test-percent-slider',
       label: 'Percent Slider',
       isPercentMode: true,
       onChange: () => null,
+      value: 0,
+      leftButtonProps: {
+        icon: {iconName: 'turtle', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'rabbit', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'test-centered-slider',
@@ -96,6 +140,7 @@ GroupOfDefaultSliders.args = {
     {
       name: 'test-steps',
       label: 'Steps Slider',
+      value: 0,
       steps: [0, 25, 50, 75, 100],
       onChange: () => null,
     },
@@ -111,6 +156,15 @@ GroupOfDisabledSliders.args = {
       color: 'black',
       disabled: true,
       onChange: () => null,
+      value: 0,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'slider-brand-disabled',
@@ -118,6 +172,15 @@ GroupOfDisabledSliders.args = {
       color: 'brand',
       disabled: true,
       onChange: () => null,
+      value: 0,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'slider-white-disabled',
@@ -125,6 +188,15 @@ GroupOfDisabledSliders.args = {
       color: 'white',
       disabled: true,
       onChange: () => null,
+      value: 0,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'slider-black-centered-disabled',
@@ -133,6 +205,15 @@ GroupOfDisabledSliders.args = {
       disabled: true,
       isCentered: true,
       onChange: () => null,
+      value: 50,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'slider-brand-centered-disabled',
@@ -141,6 +222,15 @@ GroupOfDisabledSliders.args = {
       disabled: true,
       isCentered: true,
       onChange: () => null,
+      value: 50,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'slider-white-centered-disabled',
@@ -148,6 +238,15 @@ GroupOfDisabledSliders.args = {
       disabled: true,
       isCentered: true,
       onChange: () => null,
+      value: 50,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
   ],
 };
@@ -160,18 +259,45 @@ GroupOfColorsOfSliders.args = {
       label: 'Slider Black',
       color: 'black',
       onChange: () => null,
+      value: 0,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'slider-brand',
       label: 'Slider Brand',
       color: 'brand',
       onChange: () => null,
+      value: 0,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'slider-white',
       label: 'Slider White',
       color: 'white',
       onChange: () => null,
+      value: 0,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'slider-black-centered',
@@ -179,6 +305,15 @@ GroupOfColorsOfSliders.args = {
       color: 'black',
       isCentered: true,
       onChange: () => null,
+      value: 50,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'slider-brand-centered',
@@ -186,6 +321,15 @@ GroupOfColorsOfSliders.args = {
       color: 'brand',
       isCentered: true,
       onChange: () => null,
+      value: 50,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
     {
       name: 'slider-white-centered',
@@ -193,6 +337,15 @@ GroupOfColorsOfSliders.args = {
       color: 'white',
       isCentered: true,
       onChange: () => null,
+      value: 50,
+      leftButtonProps: {
+        icon: {iconName: 'minus', title: 'Decrease'},
+        ['aria-label']: 'Decrease',
+      },
+      rightButtonProps: {
+        icon: {iconName: 'plus', title: 'Increase'},
+        ['aria-label']: 'Increase',
+      },
     },
   ],
 };
