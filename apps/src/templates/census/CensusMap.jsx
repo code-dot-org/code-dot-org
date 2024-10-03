@@ -21,21 +21,21 @@ class CensusMapInfoWindow extends Component {
     let color = '';
 
     switch (this.props.teachesCs) {
-      case 'YES':
+      case ('YES', 'Y'):
         censusMessage = 'We believe this school offers Computer Science.';
         color = 'green';
         break;
-      case 'NO':
+      case ('NO', 'N'):
         censusMessage =
           'We believe this school offers no Computer Science opportunities.';
         color = 'blue';
         break;
-      case 'HISTORICAL_YES':
+      case ('HISTORICAL_YES', 'HY'):
         censusMessage =
           'We believe this school historically offered Computer Science.';
         color = 'green';
         break;
-      case 'HISTORICAL_NO':
+      case ('HISTORICAL_NO', 'HN'):
         censusMessage =
           'We believe this school historically offered no Computer Science opportunities.';
         color = 'blue';
@@ -202,7 +202,7 @@ export default class CensusMap extends Component {
           'circle-color': [
             'match',
             ['get', 'teaches_cs'],
-            ['NO', 'HISTORICAL_NO'],
+            ['NO', 'N', 'HISTORICAL_NO', 'HN'],
             '#989CF8',
             'white',
           ],
@@ -212,7 +212,9 @@ export default class CensusMap extends Component {
         filter: [
           'all',
           ['!=', 'teaches_cs', 'YES'],
+          ['!=', 'teaches_cs', 'Y'],
           ['!=', 'teaches_cs', 'HISTORICAL_YES'],
+          ['!=', 'teaches_cs', 'HY'],
           ['!=', 'teaches_cs', 'EXCLUDED'],
         ],
       });
@@ -230,7 +232,9 @@ export default class CensusMap extends Component {
         filter: [
           'any',
           ['==', 'teaches_cs', 'YES'],
+          ['==', 'teaches_cs', 'Y'],
           ['==', 'teaches_cs', 'HISTORICAL_YES'],
+          ['==', 'teaches_cs', 'HY'],
         ],
       });
 
