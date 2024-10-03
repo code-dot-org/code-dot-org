@@ -12,30 +12,46 @@ import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
 import moduleStyles from './slider.module.scss';
 
 export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
-  /** Slider onChange handler*/
+  /** Slider onChange handler
+   * @param {ChangeEvent<HTMLInputElement>} event - The change event triggered by the slider. */
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   /** The name attribute specifies the name of an input element.
-     The name attribute is used to reference elements in a JavaScript,
-     or to reference form data after a form is submitted.
-     Note: Only form elements with a name attribute will have their values passed when submitting a form. */
+   * The name attribute is used to reference elements in JavaScript,
+   * or to reference form data after a form is submitted.
+   * Note: Only form elements with a name attribute will have their values passed when submitting a form. */
   name: string;
   /** The value attribute specifies the value of an input element. */
-  value?: number | string;
+  value: number | string;
   /** Slider label */
   label?: string;
   /** Is Slider disabled */
   disabled?: boolean;
+  /** Color of the slider track
+   * @default 'black'* */
   color?: 'black' | 'brand' | 'white';
+  /** Is the slider centered
+   * @default false */
   isCentered?: boolean;
+  /** Is the slider in percent mode
+   * @default false */
   isPercentMode?: boolean;
-  step?: number | string;
+  /** Step value for the slider
+   * @default 1 */
+  step?: number;
+  /** Array of step values for the slider */
   steps?: number[];
-  defaultValue?: number | string;
-  minValue?: number | string;
-  maxValue?: number | string;
-  showLeftButton?: boolean;
+  /** Is the slider in right-to-left mode
+   * @default false */
+  isRtl?: boolean;
+  /** Minimum value for the slider
+   * @default 0 */
+  minValue?: number;
+  /** Maximum value for the slider
+   * @default 100 */
+  maxValue?: number;
+  /** Props for the left control button */
   leftButtonProps?: ButtonProps;
-  showRightButton?: boolean;
+  /** Props for the right control button */
   rightButtonProps?: ButtonProps;
 }
 
@@ -67,24 +83,10 @@ const sliderTrackColorsMap = {
 //  - centered mode +
 //  - percents mode +
 // * styles
-// * add stories
+// * add stories +
 // * add tests
 // * cleanup
 // * update README
-
-// structure:
-// .slider
-//  .sliderLabelSection
-//    span - label
-//    span - value
-//  .sliderMainContainer
-//    button - left button
-//    .sliderWrapper
-//      input[type="range"]
-//      .centerMark
-//      .stepMarksContainer
-//        .stepMark[]
-//    button - right button
 
 /**
  * ### Production-ready Checklist:
@@ -110,7 +112,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   isPercentMode = false,
   step = 1,
   steps,
-  defaultValue = 0,
+  isRtl = document.documentElement.dir === 'rtl',
   minValue = 0,
   maxValue = 100,
   leftButtonProps,
@@ -120,6 +122,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   const labelId = `${name}-label`;
   const fillColor = sliderTrackColorsMap[color].fill;
   const emptyColor = sliderTrackColorsMap[color].empty;
+  const gradientDirection = isRtl ? 'left' : 'right';
 
   const [backgroundStyle, setBackgroundStyle] = useState('');
 
@@ -132,8 +135,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   const centerValue = (Number(minValue) + Number(maxValue)) / 2;
 
   // If isCentered is true and no value is provided, set the value to the center
-  const sliderValue =
-    isCentered && value === undefined ? centerValue : value || defaultValue;
+  const sliderValue = isCentered && value === undefined ? centerValue : value;
 
   // Calculate percentage fill for gradient
   const calculateFillPercent = useCallback(
@@ -184,6 +186,19 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     onChange({...event, target: {...event.target, value: `${snappedValue}`}});
   };
 
+  const handleControlButtonClick = useCallback(
+    (operation: 'subtract' | 'add') => {
+      const newValue = operation === 'subtract' ? +value - step : +value + step;
+
+      if (newValue >= minValue && newValue <= maxValue) {
+        onChange({
+          target: {value: `${newValue}`},
+        } as ChangeEvent<HTMLInputElement>);
+      }
+    },
+    [maxValue, minValue, onChange, step, value]
+  );
+
   // Function to calculate the position of a step as a percentage
   const calculateStepPosition = (stepValue: number) => {
     const percentage =
@@ -192,18 +207,19 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     return `${percentage}%`;
   };
 
+  // Update the background gradient style based on the slider value
   useEffect(() => {
     const {fillPercent, leftFill} = calculateFillPercent(Number(sliderValue));
     if (isCentered) {
       // Centered mode: adjust gradient to fill from center outwards
       setBackgroundStyle(
         leftFill
-          ? `linear-gradient(to right, ${emptyColor} ${fillPercent}%, ${fillColor} ${fillPercent}%, ${fillColor} 50%, ${emptyColor} 50%)`
-          : `linear-gradient(to right, ${emptyColor} 50%, ${fillColor} 50%, ${fillColor} ${fillPercent}%, ${emptyColor} ${fillPercent}%)`
+          ? `linear-gradient(to ${gradientDirection}, ${emptyColor} ${fillPercent}%, ${fillColor} ${fillPercent}%, ${fillColor} 50%, ${emptyColor} 50%)`
+          : `linear-gradient(to ${gradientDirection}, ${emptyColor} 50%, ${fillColor} 50%, ${fillColor} ${fillPercent}%, ${emptyColor} ${fillPercent}%)`
       );
     } else {
       setBackgroundStyle(
-        `linear-gradient(to right, ${fillColor} ${fillPercent}%, ${emptyColor} ${fillPercent}%)`
+        `linear-gradient(to ${gradientDirection}, ${fillColor} ${fillPercent}%, ${emptyColor} ${fillPercent}%)`
       );
     }
   }, [
@@ -214,6 +230,8 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     maxSliderValue,
     calculateFillPercent,
     isCentered,
+    gradientDirection,
+    isRtl,
   ]);
 
   return (
@@ -231,30 +249,24 @@ const Slider: React.FunctionComponent<SliderProps> = ({
         )}
 
         {/* Display the value with a % sign if percentMode is true */}
-        <span>
-          {isPercentMode ? `${sliderValue}%` : sliderValue || defaultValue}
-        </span>
+        <span>{isPercentMode ? `${sliderValue}%` : sliderValue}</span>
       </div>
 
       <div className={moduleStyles.sliderMainContainer}>
-        {
+        {leftButtonProps && (
           <Button
             {...defaultSliderButtonProps}
             color={color === 'white' ? 'white' : 'black'}
+            onClick={() => handleControlButtonClick('subtract')}
             {...leftButtonProps}
-            aria-label={'hesta'}
-            icon={{iconName: 'turtle'}}
-            // @ts-expect-error fix types later
-            onClick={() => onChange({target: {value: +value - +step}})}
           />
-        }
+        )}
         <div className={moduleStyles.sliderWrapper}>
           <input
             type="range"
             name={name}
             min={minSliderValue}
             max={maxSliderValue}
-            defaultValue={defaultValue}
             value={sliderValue}
             step={step}
             disabled={disabled}
@@ -263,6 +275,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             style={{background: backgroundStyle}} // Apply dynamic background gradient style
             {...HTMLInputAttributes}
           />
+          {/* Render center mark */}
           {isCentered && (
             <div
               className={moduleStyles.centerMark}
@@ -288,15 +301,12 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             </div>
           )}
         </div>
-        {true && (
+        {rightButtonProps && (
           <Button
             {...defaultSliderButtonProps}
             color={color === 'white' ? 'white' : 'black'}
+            onClick={() => handleControlButtonClick('add')}
             {...rightButtonProps}
-            aria-label={'hesta'}
-            icon={{iconName: 'rabbit'}}
-            // @ts-expect-error fix types later
-            onClick={() => onChange({target: {value: +value + +step}})}
           />
         )}
       </div>
