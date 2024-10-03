@@ -84,16 +84,16 @@ const sliderTrackColorsMap = {
 //  - percents mode +
 // * styles
 // * add stories +
-// * add tests
+// * add tests +
 // * cleanup
 // * update README
 
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
- * * (?) has storybook, covered with stories and documentation;
- * * (?) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/SliderTest.jsx)
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see apps/test/unit/componentLibrary/SliderTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```WIP```
@@ -281,6 +281,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
           {isCentered && (
             <div
               className={moduleStyles.centerMark}
+              data-testid="slider-center-mark"
               style={{
                 left: `calc(${
                   ((centerValue - Number(minSliderValue)) /
