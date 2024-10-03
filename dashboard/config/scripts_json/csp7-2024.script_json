@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-27 22:23:14 UTC",
+    "serialized_at": "2024-10-03 05:34:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -135,8 +135,8 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students use the knowledge and skills they've developed working with parameters and return values to develop a Rock Paper Scissors App. Unlike typical Make projects, students are given a significant portion of the starter code but are given three functions with parameters and return values that they'll need to develop themselves. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* Review the app students will need to make and ideally spend some time working on the project yourself to anticipate the challenges students will encounter\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/12em1bSUXefv_5SW-40ywMAYU9hyhscI1TjNJHxep7As/edit?usp=sharing)",
+        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Reminder app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps and answer a free-response question in the style of a Create performance task written response prompt. Student apps and written responses can be assessed using a provided rubric.",
+        "preparation": "* Review the app students will need to make and ideally spend some time working on the project yourself to anticipate the challenges students will encounter\n* Review the Free-Response Supports and consider which, if any, supports are suitable for your classroom. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/12em1bSUXefv_5SW-40ywMAYU9hyhscI1TjNJHxep7As/edit?usp=sharing)",
         "student_overview": "Make an app that uses functions with parameters and return."
       },
       "seeding_key": {
@@ -768,21 +768,8 @@
       }
     },
     {
-      "key": "c35e1d0c-ff77-4e47-9f53-657cd0f1a63f",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c35e1d0c-ff77-4e47-9f53-657cd0f1a63f",
-        "lesson.key": "Project   Make a Library Part 3",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2024"
-      }
-    },
-    {
       "key": "7e91e500-296d-4121-824b-487892d50d9a",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Warm Up"
       },
@@ -795,7 +782,7 @@
     },
     {
       "key": "09b0d9a2-db2e-4025-a88d-3322b3598249",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -809,7 +796,7 @@
     },
     {
       "key": "bc1228f0-6b2b-44b4-abad-0a4c9a7318af",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1433,8 +1420,37 @@
       }
     },
     {
-      "key": "a0ea1aeb-50b9-4f03-9707-aa2d542f8ba8",
+      "key": "2c4845dc-ad01-4cfd-bae6-770aadca80e7",
       "position": 1,
+      "properties": {
+        "description": "Great work on your Rock, Paper, Scissors app today. Before wrapping up, we will practice writing for the style of questions that are asked as part of the Create performance task on the AP exam. Respond to the question in Step 5 in your activity guide, and submit it along with your project. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2c4845dc-ad01-4cfd-bae6-770aadca80e7",
+        "lesson_activity.key": "a8f03eec-acfc-4bd7-b57f-b88994117e7b"
+      }
+    },
+    {
+      "key": "0d566d57-9044-42c7-a973-99f98192773d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete the written response in Step 5 of the Activity Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/16O0wCa9rqp31bZBvWlBq-jrHub1NsoU9nV13eKmFs7A/edit): Provide students with these sentence starters for guiding their response. \n\n[App Interface Support](https://docs.google.com/document/d/1FhVF076oaTWDklWAk0vCOe4xtH8j4S2pxWKEkSbJmIk/edit?usp=sharing): For students who did not fully complete their app, provide them with this snippet from the exemplar code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0d566d57-9044-42c7-a973-99f98192773d",
+        "lesson_activity.key": "a8f03eec-acfc-4bd7-b57f-b88994117e7b"
+      }
+    },
+    {
+      "key": "a0ea1aeb-50b9-4f03-9707-aa2d542f8ba8",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How could using parameters and return help you write programs collaboratively?*\n\n**Discussion Goal:** This should help review ideas that students saw in this project, in particuarly that parameters and return help break programs into chunks. It should also help them see that this approach could be used to collaboratively design programs. If teammates agree in advance what each function should do they can go off and write them separately before coming back together to make the entire app work.\n"
       },
@@ -1445,7 +1461,7 @@
     },
     {
       "key": "a932f197-2ffd-4a07-9852-423e34f231af",
-      "position": 2,
+      "position": 4,
       "properties": {
         "description": "Parameters and return help us chunk programs into pieces. Each important piece can be made into its own function which can be written and tested separately from the others. If you and your partner agree in advance how to split up the way a program is written and are clear on what each function needs to do, you could develop a program just like this make project.",
         "remarks": true
@@ -1457,7 +1473,7 @@
     },
     {
       "key": "8db2ba0e-ea1f-4409-b633-df560db9ef52",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "---"
       },
@@ -1468,10 +1484,16 @@
     },
     {
       "key": "a816b756-b1f0-448b-b978-7ac56c181495",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "**Rubric:** Use the rubric provided with the project to assess student projects.",
-        "name": "Assessment: Grading the Project\r"
+        "name": "Assessment: Grading the Project\r",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student responses can be used as a formative assessment to evaluate their understanding of connections between user interface features and functionality. Review their explanations for clarity, accuracy, and alignment with the AP exam’s expectations. The provided rubric can be used to guide this review, and to help provide students with feedback to guide their learning and improvement."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a816b756-b1f0-448b-b978-7ac56c181495",
@@ -2219,17 +2241,6 @@
       }
     },
     {
-      "key": "376d9266-88ce-49d3-bce1-4795c5c48e65",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/14iyyUyRuc8iXosXTgOoTWwuJ2leYLrTFXpaDrrR7CuI/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "376d9266-88ce-49d3-bce1-4795c5c48e65",
-        "lesson_activity.key": "c35e1d0c-ff77-4e47-9f53-657cd0f1a63f"
-      }
-    },
-    {
       "key": "36c33f77-90b6-4f9e-bdf9-a662b6001d71",
       "position": 1,
       "properties": {
@@ -2258,30 +2269,31 @@
       }
     },
     {
-      "key": "21f444dc-9b79-4dcd-bada-578f75b39522",
+      "key": "fc7d2ef0-d92c-475a-b3d6-5b530a8e61d2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 7 - Acknowledge Collaborators / Sources - 2 mins:** If students worked in pairs or imported some code from elsewhere they should acknowledge the sources of that code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 8 - Free Response - 20 mins:** With students quickly review the questions students need to answer about one of the functions in their library. These questions are taken nearly exactly from the Create PT and should help students prepare to independently answer these questions when they complete that task.\n\n**Work Time - 18 mins:** Students should work on their free response answers early in the lesson. Once they've finished working on their responses they can go back to their project to make any final edits to their project code. Encourage students to review the Scoring Guidelines to make sure they're not missing anything in their projects.",
-        "progression_name": "Build Your Library"
-      },
-      "seeding_key": {
-        "activity_section.key": "21f444dc-9b79-4dcd-bada-578f75b39522",
-        "lesson_activity.key": "09b0d9a2-db2e-4025-a88d-3322b3598249"
-      }
-    },
-    {
-      "key": "ac97f325-650e-4b8e-a7d8-d132b91c0b94",
-      "position": 3,
-      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 7 - Acknowledge Collaborators / Sources - 2 mins:** If students worked in pairs or imported some code from elsewhere they should acknowledge the sources of that code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 8 - Free Response - 20 mins:** With students quickly review the questions students need to answer about one of the functions in their library. These questions are taken nearly exactly from the Create PT and should help students prepare to independently answer these questions when they complete that task.",
         "tips": [
           {
-            "type": "assessmentOpportunity",
-            "markdown": "<b>Create Performance Task Written Response Practice</b>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\n</br>\n\nSample Prompt: <i>Analyze one of the functions (procedures) that you have written for your library. Describe two calls to the selected function. Each call must pass different arguments (inputs) that cause a different segment of code in the algorithm to execute. Then, describe what condition(s) is being tested by each call to the procedure. Finally, identify the result (output) of each call.\n</i>\n\n\n<a href=\"https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing\">Make a Library Project Step 8:  Free Response</a>\n\n<b>Sample Response for Instructors</b> (<i>coming soon...</i>)"
+            "type": "teachingTip",
+            "markdown": "Each student, in every classroom, will come to the written response with a different level of comfort, ability, and familiarity with writing for these style of questions. As such, consider offering one or more of the following supports:\n\n[Writing Support](https://docs.google.com/document/d/1RFsiOdlTuv-xIgWInUKz5jr-UnMujwvyKt9-tX9nuTU/edit?usp=sharing): Provide students with these sentence starters for guiding their response. \n\n[App Code Support](https://docs.google.com/document/d/1_7Qeri3jXWWT5U07BLX1aW91kT6O83HlQI74QOXrgi4/edit?usp=sharing): For students who did not fully complete their app, provide them with this adaptation from the exemplar code."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "ac97f325-650e-4b8e-a7d8-d132b91c0b94",
+        "activity_section.key": "fc7d2ef0-d92c-475a-b3d6-5b530a8e61d2",
+        "lesson_activity.key": "09b0d9a2-db2e-4025-a88d-3322b3598249"
+      }
+    },
+    {
+      "key": "21f444dc-9b79-4dcd-bada-578f75b39522",
+      "position": 3,
+      "properties": {
+        "description": "**Work Time - 18 mins:** Students should work on their free response answers early in the lesson. Once they've finished working on their responses they can go back to their project to make any final edits to their project code. Encourage students to review the Scoring Guidelines to make sure they're not missing anything in their projects.",
+        "progression_name": "Build Your Library"
+      },
+      "seeding_key": {
+        "activity_section.key": "21f444dc-9b79-4dcd-bada-578f75b39522",
         "lesson_activity.key": "09b0d9a2-db2e-4025-a88d-3322b3598249"
       }
     },
@@ -3759,6 +3771,18 @@
   ],
   "resources": [
     {
+      "name": "[EXEMPLAR] CSP Parameters and Return Make - Rock, Paper, Scissors App - Activity Guide",
+      "url": "https://docs.google.com/document/d/1auInpU9B8FM3jfj-ZBn4TgZC5zAUNMiX9YEtbzG32UA/edit",
+      "key": "_exemplar_csp_parameters_and_return_make_-_rock_paper_scissors_app_-_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_csp_parameters_and_return_make_-_rock_paper_scissors_app_-_activity_guide"
+      }
+    },
+    {
       "name": "Activity Guide - Function Houses",
       "url": "https://docs.google.com/document/d/1SdMlqfeAFtIVh3BKjRDQguOL5d4jC2nsvtdNAi0x-ts/view",
       "key": "activity_guide_-_function_houses",
@@ -3790,6 +3814,30 @@
       },
       "seeding_key": {
         "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "App Code Support - Parameters and Return Make",
+      "url": "https://docs.google.com/document/d/1FhVF076oaTWDklWAk0vCOe4xtH8j4S2pxWKEkSbJmIk/edit?usp=sharing",
+      "key": "app_code_support_-_parameters_and_return_make",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "app_code_support_-_parameters_and_return_make"
+      }
+    },
+    {
+      "name": "App Code Support - Unit 7 Project - Libraries",
+      "url": "https://docs.google.com/document/d/1_7Qeri3jXWWT5U07BLX1aW91kT6O83HlQI74QOXrgi4/edit?usp=sharing",
+      "key": "app_code_support_-_unit_7_project_-_libraries",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "app_code_support_-_unit_7_project_-_libraries"
       }
     },
     {
@@ -3968,6 +4016,18 @@
       }
     },
     {
+      "name": "FRQ EXEMPLAR Project - Make a Library",
+      "url": "https://docs.google.com/document/d/1Zko4WGyKmIwtmptuioiJYIfwrNZdL0ipABIqFWgZksg/edit?usp=sharing",
+      "key": "frq_exemplar_project_-_make_a_library",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "frq_exemplar_project_-_make_a_library"
+      }
+    },
+    {
       "name": "Functions with Parameters",
       "url": "https://youtu.be/M17C4rBwstE",
       "key": "functions_with_parameters",
@@ -4100,6 +4160,30 @@
       "seeding_key": {
         "resource.key": "unit_7_journal_interactive_notebook_"
       }
+    },
+    {
+      "name": "Writing Support - Parameters and Return Make",
+      "url": "https://docs.google.com/document/d/16O0wCa9rqp31bZBvWlBq-jrHub1NsoU9nV13eKmFs7A/edit",
+      "key": "writing_support_-_parameters_and_return_make",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_support_-_parameters_and_return_make"
+      }
+    },
+    {
+      "name": "Writing Support - Unit 7 Project - Make a Library",
+      "url": "https://docs.google.com/document/d/1RFsiOdlTuv-xIgWInUKz5jr-UnMujwvyKt9-tX9nuTU/edit?usp=sharing",
+      "key": "writing_support_-_unit_7_project_-_make_a_library",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_support_-_unit_7_project_-_make_a_library"
+      }
     }
   ],
   "lessons_resources": [
@@ -4178,6 +4262,18 @@
     {
       "seeding_key": {
         "lesson.key": "Parameters and Return Make",
+        "resource.key": "_exemplar_csp_parameters_and_return_make_-_rock_paper_scissors_app_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "resource.key": "app_code_support_-_parameters_and_return_make"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
         "resource.key": "csp_parameters_and_return_make_-_rock_paper_scissors_app"
       }
     },
@@ -4191,6 +4287,12 @@
       "seeding_key": {
         "lesson.key": "Parameters and Return Make",
         "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "resource.key": "writing_support_-_parameters_and_return_make"
       }
     },
     {
@@ -4226,6 +4328,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Make a Library Part 3",
+        "resource.key": "app_code_support_-_unit_7_project_-_libraries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Make a Library Part 3",
         "resource.key": "csp_bingo_cards_-_unit_6_7"
       }
     },
@@ -4244,6 +4352,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Make a Library Part 3",
+        "resource.key": "frq_exemplar_project_-_make_a_library"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Make a Library Part 3",
         "resource.key": "project_guide_-_make_a_library"
       }
     },
@@ -4257,6 +4371,12 @@
       "seeding_key": {
         "lesson.key": "Project   Make a Library Part 3",
         "resource.key": "u7_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Make a Library Part 3",
+        "resource.key": "writing_support_-_unit_7_project_-_make_a_library"
       }
     }
   ],
