@@ -311,16 +311,13 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           vertical && moduleStyles.itemVertical
         )}
       >
-        {instructionsText && (
-          <div
-            key={instructionsText}
-            id="instructions-text"
-            className={classNames(
-              moduleStyles['bubble-' + theme],
-              moduleStyles.scrollingBubble
-            )}
-          >
-            <div className={moduleStyles.scrollingContent}>
+        <div className={moduleStyles.scrollingContent}>
+          {instructionsText && (
+            <div
+              key={instructionsText}
+              id="instructions-text"
+              className={classNames(moduleStyles['bubble-' + theme])}
+            >
               <div className={moduleStyles.mainInstructions}>
                 <ValidationStatusIcon
                   status={showPassedIcon ? 'passed' : 'pending'}
@@ -343,34 +340,24 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               />
               {renderValidationButton()}
             </div>
-          </div>
-        )}
+          )}
 
-        {validationResults && (
-          <>
-            <div ref={validationScrollRef} />
-            <div
-              className={classNames(
-                moduleStyles['bubble-' + theme],
-                moduleStyles.scrollingBubble
-              )}
-            >
-              <ValidationResults className={moduleStyles.scrollingContent} />
-            </div>
-          </>
-        )}
-        {predictSettings?.isPredictLevel && (
-          <InstructorsOnly>
-            <div
-              className={classNames(
-                moduleStyles['bubble-' + theme],
-                moduleStyles.scrollingBubble
-              )}
-            >
-              <PredictSummary className={moduleStyles.scrollingContent} />
-            </div>
-          </InstructorsOnly>
-        )}
+          {validationResults && (
+            <>
+              <div ref={validationScrollRef} />
+              <div className={classNames(moduleStyles['bubble-' + theme])}>
+                <ValidationResults />
+              </div>
+            </>
+          )}
+          {predictSettings?.isPredictLevel && (
+            <InstructorsOnly>
+              <div className={classNames(moduleStyles['bubble-' + theme])}>
+                <PredictSummary />
+              </div>
+            </InstructorsOnly>
+          )}
+        </div>
         {showNavigation && (
           <div
             id="instructions-navigation"
