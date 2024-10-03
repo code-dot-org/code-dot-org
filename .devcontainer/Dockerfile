@@ -9,7 +9,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends libpq-dev \
         ffmpeg mupdf mupdf-tools libvips-dev poppler-utils \
         libxml2-dev sqlite3 imagemagick \
-        libmagickcore-dev python3-pip git-lfs
+        libmagickcore-dev python3-pip git-lfs mariadb-client
 
 # Add the Rails main Gemfile and install the gems. This means the gem install can be done
 # during build instead of on start. When a fork or branch has different gems, we still have an
