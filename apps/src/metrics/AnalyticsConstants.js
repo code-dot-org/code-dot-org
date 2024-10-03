@@ -147,6 +147,17 @@ const EVENTS = {
     'Section table sync google classroom clicked',
   SECTION_TABLE_SYNC_CLEVER_CLICKED: 'Section table sync clever clicked',
 
+  // Section students table on teacher My Dashboard
+  SECTION_STUDENTS_TABLE_US_STATE_SET: 'Section students table US state set',
+  SECTION_STUDENTS_TABLE_US_STATE_BULK_SET:
+    'Section students table US state bulk set',
+  SECTION_STUDENTS_TABLE_ADD_ROW_CLICKED:
+    'Section students table add row clicked',
+  SECTION_STUDENTS_TABLE_SAVE_ROW_CLICKED:
+    'Section students table save row clicked',
+  SECTION_STUDENTS_TABLE_SAVE_ALL_CLICKED:
+    'Section students table save all clicked',
+
   // Section progress v2
   PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
   PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
@@ -246,6 +257,11 @@ const EVENTS = {
   TA_RUBRIC_ANNOUNCEMENT_VIEWED: 'TA Rubric Announcement Viewed',
   TA_RUBRIC_ANNOUNCEMENT_CLICKED: 'TA Rubric Announcement Clicked',
   TA_RUBRIC_ANNOUNCEMENT_DISMISSED: 'TA Rubric Announcement Dismissed',
+
+  //AI Differentiation
+  AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
+  AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',
+  AI_DIFF_CHAT_EVENT: 'AI Differentiation Message Event',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -403,6 +419,12 @@ const EVENTS = {
   CODEBRIDGE_RENAME_FILE: 'Rename file on codebridge',
   CODEBRIDGE_RENAME_FOLDER: 'Rename folder on codebridge',
   CODEBRIDGE_DOWNLOAD_FILE: 'Download file on codebridge',
+  CODEBRIDGE_UPLOAD_FILE: 'Upload file on codebridge',
+  CODEBRIDGE_UPLOAD_INVALID_FILE_NAME:
+    'Attempted upload of invalid file name on codebridge',
+  CODEBRIDGE_UPLOAD_UNACCEPTED_FILE:
+    'Attempted upload of unaccepted file on codebridge',
+  CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',
 
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',

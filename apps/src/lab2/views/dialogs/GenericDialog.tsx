@@ -2,7 +2,7 @@ import FocusTrap from 'focus-trap-react';
 import React from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import commonI18n from '@cdo/locale';
 
 import {useDialogControl} from './DialogControlContext';
@@ -83,17 +83,13 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   return (
     <FocusTrap>
       <div className={moduleStyles.genericDialog}>
-        {titleComponent || (
-          <Typography semanticTag="h1" visualAppearance="heading-lg">
-            {title}
-          </Typography>
-        )}
+        {titleComponent ? (
+          titleComponent
+        ) : title ? (
+          <Heading3>{title}</Heading3>
+        ) : null}
 
-        {bodyComponent || (
-          <Typography semanticTag="p" visualAppearance="body-two">
-            {message}
-          </Typography>
-        )}
+        {bodyComponent || <BodyTwoText>{message}</BodyTwoText>}
         <div className={moduleStyles.buttonContainer}>
           <div className={moduleStyles.outerButtonContainer}>
             {buttons?.cancel ? (

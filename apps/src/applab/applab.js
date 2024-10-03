@@ -230,7 +230,7 @@ function renderFooterInSharedGame() {
 
   ReactDOM.render(
     <SmallFooter
-      i18nDropdown={''}
+      i18nDropdownInBase={false}
       privacyPolicyInBase={false}
       copyrightInBase={false}
       baseMoreMenuString={commonMsg.builtOnCodeStudio()}

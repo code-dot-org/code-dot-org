@@ -18,7 +18,7 @@ export const TEACHER_NAVIGATION_PATHS = {
   lessonMaterials: 'materials',
   calendar: 'calendar',
   courseOverview: 'course',
-  unitOverview: 'unit',
+  unitOverview: 'unit/:unitName?',
   settings: 'settings',
 };
 
