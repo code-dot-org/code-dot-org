@@ -12,14 +12,15 @@ export type ButtonType = 'confirm' | 'cancel' | 'neutral';
 
 export type dialogCallback = (args?: unknown) => void;
 
-// Either a title or titleComponent may be supplied, but not both.
-type GenericDialogTitleProps = {
-  title?: string;
-  titleComponent?: React.ReactNode;
-} & (
-  | {title?: string; titleComponent?: never}
-  | {title?: never; titleComponent?: React.ReactNode}
-);
+type GenericDialogTitleProps =
+  | {
+      title?: never;
+      titleComponent?: React.ReactNode;
+    }
+  | {
+      title?: string;
+      titleComponent?: never;
+    };
 
 type GenericDialogBodyProps =
   | {
