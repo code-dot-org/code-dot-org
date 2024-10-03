@@ -158,8 +158,9 @@ describe('LessonMaterialsContainer', () => {
         '[data-testid="resource-row"]'
       ) as HTMLElement;
       expect(resourceRow).toBeDefined();
-      const menuButton = within(resourceRow).getByRole('button')
-      expect(menuButton).toBeDefined();
+      const menuButton = within(resourceRow).getByLabelText(
+        'View options dropdown'
+      ) as HTMLElement;
       fireEvent.click(menuButton);
 
       const dropdown = menuButton?.nextElementSibling as HTMLElement;
