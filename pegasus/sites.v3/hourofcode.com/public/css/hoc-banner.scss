@@ -38,8 +38,12 @@ section.banner {
     margin-bottom: 0;
   }
 
-  a.link-button {
-    text-decoration: none;
+  a {
+    color: var(--neutral_dark);
+
+    &.link-button {
+      text-decoration: none;
+    }
   }
 
   figure {
