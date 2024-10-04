@@ -14,14 +14,8 @@ module Cdo
 
     # Retrieves the global configuration for the given region.
     def self.configuration_for(region)
-      unless defined?(@@configurations)
-        @@configurations = {}
-      end
-
-      return @@configurations[region] if @@configurations.key?(region)
-
-      data = load_config(region)
-      @@configurations[region] = deep_freeze(data)
+      @@configurations ||= {}
+      @@configurations[region] ||= load_config(region)
     end
 
     # Retrieves a list a global region names.
