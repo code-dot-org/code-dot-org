@@ -149,7 +149,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const isTeacherFirstAichatEncounter = useCallback(() => {
     if (isUserTeacher) {
-      // trySetLocalStorage('teacherSawOnboarding', 'no'); // For testing - set back to 'no'.
       const teacherSawOnboarding = tryGetLocalStorage(
         'teacherSawOnboarding',
         'no'
