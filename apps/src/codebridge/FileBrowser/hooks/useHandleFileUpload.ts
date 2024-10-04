@@ -20,7 +20,9 @@ type handleFileUploadArgs = {
   contents: string;
 };
 
-export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
+export const useHandleFileUpload = (
+  projectFiles: Record<string, ProjectFile>
+) => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const validationFile = useAppSelector(
@@ -50,13 +52,13 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
         );
         return;
       }
-      const duplicate = checkForDuplicateFilename(
+      const duplicate = checkForDuplicateFilename({
         fileName,
         folderId,
-        files,
+        projectFiles,
         isStartMode,
-        validationFile
-      );
+        validationFile,
+      });
       if (duplicate) {
         dialogControl?.showDialog({
           type: DialogType.GenericAlert,
@@ -65,7 +67,7 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
         return;
       }
 
-      const fileId = getNextFileId(Object.values(files));
+      const fileId = getNextFileId(Object.values(projectFiles));
 
       newFile({
         fileId,
@@ -77,6 +79,6 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
         fileName,
       });
     },
-    [appName, dialogControl, files, newFile, isStartMode, validationFile]
+    [appName, dialogControl, projectFiles, newFile, isStartMode, validationFile]
   );
 };

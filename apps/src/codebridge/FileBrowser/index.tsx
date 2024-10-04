@@ -511,13 +511,13 @@ export const FileBrowser = React.memo(() => {
             if (!validateFileName(fileName)) {
               return codebridgeI18n.invalidNameError();
             }
-            const duplicate = checkForDuplicateFilename(
+            const duplicate = checkForDuplicateFilename({
               fileName,
               folderId,
-              project.files,
+              projectFiles: project.files,
               isStartMode,
-              validationFile
-            );
+              validationFile,
+            });
             if (duplicate) {
               return duplicate;
             }
@@ -573,13 +573,13 @@ export const FileBrowser = React.memo(() => {
               required: true,
             });
 
-            const duplicate = checkForDuplicateFilename(
-              file.name,
+            const duplicate = checkForDuplicateFilename({
+              fileName: file.name,
               folderId,
-              project.files,
+              projectFiles: project.files,
               isStartMode,
-              validationFile
-            );
+              validationFile,
+            });
             if (duplicate) {
               return duplicate;
             }
@@ -634,11 +634,11 @@ export const FileBrowser = React.memo(() => {
               folders: Object.values(project.folders),
               required: true,
             });
-            const duplicate = checkForDuplicateFoldername(
-              folder.name,
+            const duplicate = checkForDuplicateFoldername({
+              folderName: folder.name,
               folderId,
-              project.folders
-            );
+              projectFolders: project.folders,
+            });
             if (duplicate) {
               return duplicate;
             }
@@ -687,13 +687,13 @@ export const FileBrowser = React.memo(() => {
           if (!validateFileName(newName)) {
             return codebridgeI18n.invalidNameError();
           }
-          const duplicate = checkForDuplicateFilename(
-            newName,
-            file.folderId,
-            project.files,
+          const duplicate = checkForDuplicateFilename({
+            fileName: newName,
+            folderId: file.folderId,
+            projectFiles: project.files,
             isStartMode,
-            validationFile
-          );
+            validationFile,
+          });
           if (duplicate) {
             return duplicate;
           }
@@ -763,11 +763,11 @@ export const FileBrowser = React.memo(() => {
           return;
         }
         if (e.active.data.current?.type === DragType.FOLDER) {
-          const duplicate = checkForDuplicateFoldername(
-            project.folders[e.active.data.current.id].name,
-            e.over.id as string,
-            project.folders
-          );
+          const duplicate = checkForDuplicateFoldername({
+            folderName: project.folders[e.active.data.current.id].name,
+            folderId: e.over.id as string,
+            projectFolders: project.folders,
+          });
           if (duplicate) {
             dialogControl?.showDialog({
               type: DialogType.GenericAlert,
@@ -777,13 +777,13 @@ export const FileBrowser = React.memo(() => {
             moveFolder(e.active.data.current.id as string, e.over.id as string);
           }
         } else if (e.active.data.current?.type === DragType.FILE) {
-          const duplicate = checkForDuplicateFilename(
-            project.files[e.active.data.current.id].name,
-            e.over.id as string,
-            project.files,
+          const duplicate = checkForDuplicateFilename({
+            fileName: project.files[e.active.data.current.id].name,
+            folderId: e.over.id as string,
+            projectFiles: project.files,
             isStartMode,
-            validationFile
-          );
+            validationFile,
+          });
           if (duplicate) {
             dialogControl?.showDialog({
               type: DialogType.GenericAlert,
