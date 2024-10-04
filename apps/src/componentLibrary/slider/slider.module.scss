@@ -193,6 +193,10 @@ $slider-white-track-disabled-color: $light_gray_900;
 
 // Slider Colors
 .slider-black {
+  .sliderLabelSection {
+    color: $light_black;
+  }
+
   .sliderMainContainer {
     .sliderWrapper {
       input[type='range']::-webkit-slider-thumb {
@@ -277,6 +281,10 @@ $slider-white-track-disabled-color: $light_gray_900;
 }
 
 .slider-brand {
+  .sliderLabelSection {
+    color: $light_black;
+  }
+
   .sliderMainContainer {
     .sliderWrapper {
       input[type='range']::-webkit-slider-thumb {
@@ -361,6 +369,10 @@ $slider-white-track-disabled-color: $light_gray_900;
 }
 
 .slider-white {
+  .sliderLabelSection {
+    color: $light_white;
+  }
+
   .sliderMainContainer {
     .sliderWrapper {
       input[type='range']::-webkit-slider-thumb {
