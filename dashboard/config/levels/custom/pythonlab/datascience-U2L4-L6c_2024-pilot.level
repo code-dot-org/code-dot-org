@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2024-09-15T20:51:49.000Z",
   "level_num": "custom",
@@ -22,7 +21,7 @@
           "language": "py",
           "contents": "import matplotlib.pyplot as plt\nimport pandas as pd\n\n#Import the data\ndf = pd.read_csv('US_Gas_Prices.csv', sep=',')\ndf.columns\n\n# Create the chart\nplt.plot(df['Date'], df['US Average'], linestyle=':', color='blue')\n\n# ADD CODE HERE To Display the chart\n\n\n# Add title and labels\nplt.title( 'US Average Gas Prices')\nplt.xlabel('Date')\nplt.ylabel('US Dollars')",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
         },
         "1": {
@@ -46,8 +45,19 @@
     "project_template_level_name": "datascience-U2L4-L6cTempl_2024-pilot",
     "teacher_markdown": "Remind students of the purpose of each library: pandas for data manipulation and matplotlib for plotting graphs.\r\n",
     "bubble_choice_description": "Practice importing the necessary libraries with heart health datasets.",
-    "thumbnail_url": "https://images.code.org/51b370e23d0f3bc610d64676e839b144-heart.png"
+    "thumbnail_url": "https://images.code.org/51b370e23d0f3bc610d64676e839b144-heart.png",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestMatPlotLibImport(unittest.TestCase):\n    def setUp(self):\n        # Read the student's code from 'main.py' and parse it into an AST\n        with open('main.py', 'r') as f:\n            self.tree = ast.parse(f.read())\n\n    def detect_pandas_import(self):\n        \"\"\"Detects if pandas is imported in the code.\"\"\"\n        for node in ast.walk(self.tree):\n            if isinstance(node, ast.Import):\n                for alias in node.names:\n                    if alias.name == 'pandas':\n                        return True\n            if isinstance(node, ast.ImportFrom):\n                if node.module == 'pandas':\n                    return True\n        return False\n      \n    def detect_matplotlib_import(self):\n        \"\"\"Detects if matplotlib is imported in the code.\"\"\"\n        for node in ast.walk(self.tree):\n            if isinstance(node, ast.Import):\n                for alias in node.names:\n                    if alias.name == 'matplotlib.pyplot':\n                        return True\n            if isinstance(node, ast.ImportFrom):\n                if node.module == 'matplotlib.pyplot':\n                    return True\n        return False\n\n    def test_step_1_import_pandas(self):\n        \"\"\"Import the pandas library.\"\"\"\n        self.assertTrue(self.detect_pandas_import(), \"The pandas library was not correctly imported.\")\n\n    def test_step_2_import_matplotlib(self):\n        \"\"\"Import the matplotlib library.\"\"\"\n        self.assertTrue(self.detect_matplotlib_import(), \"The matplotlib library was not correctly imported.\")\n\nif __name__ == '__main__':\n    unittest.main()",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-15T20:51:49.724+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L6b_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L6b_2024-pilot\"},{\"changed_at\":\"2024-09-15 20:53:28 +0000\",\"changed\":[\"predict_settings\",\"display_name\",\"project_template_level_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-15T20:51:49.724+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L6b_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L6b_2024-pilot\"},{\"changed_at\":\"2024-09-15 20:53:28 +0000\",\"changed\":[\"predict_settings\",\"display_name\",\"project_template_level_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 22:24:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Pythonlab>

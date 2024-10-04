@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -8,7 +7,6 @@ import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 
-import moduleStyles from './toggle-file-browser-button.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 /*
@@ -53,10 +51,7 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
           ariaLabel={codebridgeI18n.toggleFileBrowser()}
           size={'xs'}
           type={'tertiary'}
-          className={classNames(
-            darkModeStyles.iconOnlyTertiaryButton,
-            moduleStyles.button
-          )}
+          className={darkModeStyles.iconOnlyTertiaryButton}
         />
       </WithTooltip>
     </span>

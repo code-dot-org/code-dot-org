@@ -9,7 +9,7 @@ import {commonI18n} from '../types/locale';
 
 import {Panel} from './types';
 
-import styles from './panels.module.scss';
+import styles from './panelsView.module.scss';
 
 // Leave a margin to the left and the right of the panels, to the edges
 // of the screen.
