@@ -12,6 +12,8 @@ import {
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
+import aichatI18n from '../locale';
+
 import moduleStyles from './onboarding-modal.module.scss';
 
 /**
@@ -31,53 +33,52 @@ const TeacherOnboardingModal: React.FunctionComponent<
       className={moduleStyles.teacherOnboardingModal}
     >
       <div className={moduleStyles.headerContainer}>
-        <Heading3>Welcome to AI Chat Lab</Heading3>
+        <Heading3>{aichatI18n.welcomeToAichatLab()}</Heading3>
       </div>
       <hr />
       <div className={moduleStyles.contentContainer}>
         <div className={moduleStyles.warning}>
           <BodyTwoText>
-            While Code.org's content moderation policy reviews both student
-            customizations and chat messages, violations will be flagged
-            accordingly. However, because this is a generative AI tool, we
-            cannot fully predict or guarantee that the chatbot's output will
-            always be free from disruption.
+            {aichatI18n.teacherOnboardingModalWarning()}
           </BodyTwoText>
         </div>
         <div className={moduleStyles.textContainer}>
-          <BodyOneText>AI Chat Components</BodyOneText>
+          <BodyOneText>{aichatI18n.chatComponentsHeader()}</BodyOneText>
           <ul>
             <li>
               <BodyTwoText>
-                <StrongText>Instructions</StrongText>: Clear directions and
-                goals for each level.
+                <StrongText>{aichatI18n.instructions()}</StrongText>
+                {aichatI18n.colonSpace()}
+                {aichatI18n.instructionsDescription()}
               </BodyTwoText>
             </li>
             <li>
               <BodyTwoText>
-                <StrongText>Model Customizations </StrongText>
-                <EmText>(optional)</EmText>: Clear directions and goals for each
-                level.
+                <StrongText>{aichatI18n.modelCustomizations()}</StrongText>
+                <EmText>{aichatI18n.optionalInParentheses()}</EmText>
+                {aichatI18n.colonSpace()}
+                {aichatI18n.modelCustomizationsDescription()}
               </BodyTwoText>
             </li>
             <li>
               <BodyTwoText>
-                <StrongText>AI Chat</StrongText>: The area where students can
-                interact directly with the chatbot they've created.
+                <StrongText>{aichatI18n.aichatWorkspaceHeader()}</StrongText>
+                {aichatI18n.colonSpace()}
+                {aichatI18n.aichatWorkspaceDescription()}
               </BodyTwoText>
             </li>
             <li>
               <BodyTwoText>
-                <StrongText>User View </StrongText>
-                <EmText>(optional)</EmText>: Allows students to use their
-                chatbot as a user, without the instructions or customization
-                visible.
+                <StrongText>{aichatI18n.userView()}</StrongText>
+                <EmText>{aichatI18n.optionalInParentheses()}</EmText>
+                {aichatI18n.colonSpace()}
+                {aichatI18n.userViewDescription()}
               </BodyTwoText>
             </li>
           </ul>
           <BodyTwoText>
-            As a teacher, you have access to all of your students' chat history
-            and customizations. <Link href="">[Learn more here]</Link>.
+            {aichatI18n.teacherOnboardingModalChatHistoryAccess()}
+            <Link href="">{aichatI18n.learnMoreHereInBrackets()}</Link>
           </BodyTwoText>
         </div>
       </div>

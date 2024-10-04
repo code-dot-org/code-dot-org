@@ -7,8 +7,8 @@ import {
   setShowOnboardingModal,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
+import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
-import TeacherOnboardingModal from '@cdo/apps/aiComponentLibrary/warningModal/TeacherOnboardingModal';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
