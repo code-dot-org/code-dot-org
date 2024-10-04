@@ -7,6 +7,7 @@ import {
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
+import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
 import {
   checkForDuplicateFilename,
@@ -56,7 +57,6 @@ import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {FileUploader} from './FileUploader';
 import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
-import {PopUpButtonOption} from './PopUpButtonOption';
 import {
   DragType,
   DragDataType,

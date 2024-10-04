@@ -1,13 +1,13 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
+import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
 import {FileUploader} from './FileUploader';
 import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
-import {PopUpButtonOption} from './PopUpButtonOption';
 import {newFolderPromptType, newFilePromptType} from './types';
 
 type FileBrowserHeaderPopUpButtonProps = {
