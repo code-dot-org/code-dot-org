@@ -337,8 +337,8 @@ const renderInstructionsHeaderRight = (
 ) => {
   return isUserTeacher ? (
     <ActionDropdown
-      name="default"
-      labelText="hello"
+      name="instructionsInfoDropdown"
+      labelText="Instructions Info Dropdown"
       size="xs"
       triggerButtonProps={{
         type: 'tertiary',
@@ -349,7 +349,7 @@ const renderInstructionsHeaderRight = (
       options={[
         {
           value: 'teacherOnboardingModal',
-          label: 'About AI Chat Lab',
+          label: aichatI18n.aboutAichatLab(),
           icon: {iconName: 'circle-info', iconStyle: 'solid'},
           onClick: onInfoClick,
         },

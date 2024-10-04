@@ -154,16 +154,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         'no'
       );
       if (teacherSawOnboarding !== 'yes') {
-        if (showOnboardingModal) {
-          // The first time a teacher opens an aichat level, the onboarding modal is displayed.
-          // The onboarding modal remains displayed until the teacher closes the modal.
-          // When the teacher closes the onboarding modal, the 'teacherSawOnboarding' value
-          // is set to 'yes'.
-          trySetLocalStorage('teacherSawOnboarding', 'inProgress');
-          return true;
-        } else {
-          return false;
-        }
+        return showOnboardingModal ? true : false;
       }
     }
     return false;

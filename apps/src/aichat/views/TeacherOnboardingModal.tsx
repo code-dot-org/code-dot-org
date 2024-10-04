@@ -5,11 +5,10 @@ import Link from '@cdo/apps/componentLibrary/link/Link';
 import {
   BodyOneText,
   BodyTwoText,
-  EmText,
   Heading3,
-  StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
 import aichatI18n from '../locale';
@@ -39,45 +38,31 @@ const TeacherOnboardingModal: React.FunctionComponent<
       <div className={moduleStyles.contentContainer}>
         <div className={moduleStyles.warning}>
           <BodyTwoText>
-            {aichatI18n.teacherOnboardingModalWarning()}
+            {aichatI18n.teacherOnboardingModal_warning()}
           </BodyTwoText>
         </div>
         <div className={moduleStyles.textContainer}>
           <BodyOneText>{aichatI18n.chatComponentsHeader()}</BodyOneText>
           <ul>
             <li>
-              <BodyTwoText>
-                <StrongText>{aichatI18n.instructions()}</StrongText>
-                {aichatI18n.colonSpace()}
-                {aichatI18n.instructionsDescription()}
-              </BodyTwoText>
+              <SafeMarkdown markdown={aichatI18n.instructionsDescription()} />
             </li>
             <li>
-              <BodyTwoText>
-                <StrongText>{aichatI18n.modelCustomizations()}</StrongText>
-                <EmText>{aichatI18n.optionalInParentheses()}</EmText>
-                {aichatI18n.colonSpace()}
-                {aichatI18n.modelCustomizationsDescription()}
-              </BodyTwoText>
+              <SafeMarkdown
+                markdown={aichatI18n.modelCustomizationsDescription()}
+              />
             </li>
             <li>
-              <BodyTwoText>
-                <StrongText>{aichatI18n.aichatWorkspaceHeader()}</StrongText>
-                {aichatI18n.colonSpace()}
-                {aichatI18n.aichatWorkspaceDescription()}
-              </BodyTwoText>
+              <SafeMarkdown
+                markdown={aichatI18n.aichatWorkspaceDescription()}
+              />
             </li>
             <li>
-              <BodyTwoText>
-                <StrongText>{aichatI18n.userView()}</StrongText>
-                <EmText>{aichatI18n.optionalInParentheses()}</EmText>
-                {aichatI18n.colonSpace()}
-                {aichatI18n.userViewDescription()}
-              </BodyTwoText>
+              <SafeMarkdown markdown={aichatI18n.userViewDescription()} />
             </li>
           </ul>
           <BodyTwoText>
-            {aichatI18n.teacherOnboardingModalChatHistoryAccess()}
+            {aichatI18n.teacherOnboardingModal_chatHistoryAccess()}
             <Link href="https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher">
               {aichatI18n.learnMoreHereInBrackets()}
             </Link>
