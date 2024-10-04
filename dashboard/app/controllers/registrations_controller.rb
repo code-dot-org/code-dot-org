@@ -8,6 +8,8 @@ require 'policies/lti'
 require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
+  before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
+
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
@@ -77,6 +79,13 @@ class RegistrationsController < Devise::RegistrationsController
   def login_type
     view_options(full_width: true, responsive_content: true)
     render 'login_type'
+  end
+
+  #
+  # Get /users/gdpr_check
+  #
+  def gdpr_check
+    render json: {gdpr: request.gdpr?, force_in_eu: request.params['force_in_eu']}
   end
 
   #

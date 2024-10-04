@@ -82,7 +82,7 @@
         {
           "type": "matrix",
           "name": "met_learning_objectives",
-          "title": "After completing <this unit - Q.0>, what percentage of students were able to...",
+          "title": "After completing this unit, what percentage of students were able to...",
           "columns": [
             {
               "value": "pct0_24",
@@ -134,6 +134,15 @@
             {
               "value": "explain_impact_gen_ai",
               "text": "Describe and explain the real-world impacts of generative AI"
+            },
+            {
+              "value": "articulate_bias_ai",
+              "text": "Identify and articulate potential biases in AI models"
+            },
+            {
+              "value": "create_model_cards",
+              "text": "Create Model Cards that document the intended use, risks, and limitations of their AI applications",
+              "visibleIf": "{unit_variable_name} = 'unit_2'"
             }
           ]
         },

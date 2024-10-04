@@ -176,6 +176,7 @@ class UnitOverview extends React.Component {
             courseName={courseName}
             userId={userId}
           />
+          {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}
           {showCalendar && viewAs === ViewType.Instructor && (
             <div className="unit-calendar-for-printing print-only">
               <UnitCalendarGrid

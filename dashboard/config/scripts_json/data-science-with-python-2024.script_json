@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-24 16:21:09 UTC",
+    "serialized_at": "2024-10-03 20:29:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -21,9 +21,21 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Getting Started"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Content"
       },
@@ -35,7 +47,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Show What You Know"
       },
@@ -47,12 +59,30 @@
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Project Kickoff",
+      "key": "lesson-13",
+      "name": "Pre-Assessment",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+        "overview": "Students complete a multiple-choice pre-assessment that covers the unit topics.",
+        "preparation": "- Preview the assessment questions\n- Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "student_overview": "Students complete a multiple-choice pre-assessment that covers the unit topics."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Project Kickoff",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
       "properties": {
         "overview": "**How can I create an ethical plan to collect data for my data question?**\n\nIn this lesson, students kick off their Data Science for Community Impact Project by identifying the communities they belong to and brainstorming relevant problems within these communities. They work collaboratively to turn their observations into well-defined data questions, create a data collection plan, and ensure their plans are specific, actionable, and ethically sound.\n\n",
         "student_overview": "**How can I create an ethical plan to collect data for my data question?**\n\nToday, you start your Data Science for Community Impact Project by identifying the communities you are part of, brainstorming problems within these communities, and developing a plan to collect data to address these problems.\n\n\n"
@@ -66,10 +96,10 @@
     {
       "key": "lesson-2",
       "name": "Introduction to Python",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
         "overview": "**What can I do with Python?**\n\nIn this lesson students will be exposed to some of the uses of the Python programming language, focusing on its strong appeal for data science applications. Utilizing the PRIMM methodology, students will be introduced to some of the basic Python syntax that will be necessary to begin manipulating and visualizing data in the lessons to come.\n\n",
         "preparation": "- Print copies of the Python anticipation guide (one for each student)",
@@ -84,10 +114,10 @@
     {
       "key": "lesson-3",
       "name": "Introduction to Pandas",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
         "overview": "**What tools and techniques does pandas offer to help us explore and analyze the structure of a dataset?**\n\nIn this lesson, students are introduced to the pandas library and learn how to read CSV files into DataFrames. They explore key functions such as `len()`, `shape`, `head()`, and `tail()` to understand the structure and size of datasets. The lesson emphasizes the practical application of pandas for efficient data manipulation and analysis, preparing students for more advanced data science tasks.\n\n\n",
         "preparation": "- Print copies of the US Gas Prices Dataset handout (one for each student)\n",
@@ -102,10 +132,10 @@
     {
       "key": "lesson-4",
       "name": "Introduction to Matplotlib",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nIn this lesson, students discover the need for a library with functions that create data visualizations in Python. Students explore the syntax and functionality of matplotlib – learning how to create line and bar charts, editing these charts' appearance, title and axis labels.\n\n",
         "student_overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nCreate and modify data visualizations using matplotlib, a library professional Data Scientists use.\n\n\n"
@@ -119,10 +149,10 @@
     {
       "key": "lesson-5",
       "name": "Getting to Know Your Data",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "overview": "**How does the data type impact how the data is interpreted?**\n\nStudents learn the names and uses of four main data types in pandas: int64 (integers), float64 (decimals), object (mixed strings), and datetime (dates with days, months, and years). Students practice converting columns of data from one type to another. Additionally, they use the `info()` and `describe()` functions to understand more about data as a whole.\n\n",
         "preparation": "- Have enough blank sheets of paper available for each student to write a question on.\n",
@@ -137,10 +167,10 @@
     {
       "key": "lesson-6",
       "name": "Accessing and Grouping Values",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "overview": "**What insights can we uncover by grouping and aggregating data?**\n\nStudents learn the basics of using the indexing operator, iloc, and the groupby() functions to create subgroups of data. They have the opportunity to analyze and draw insight from their groupings that will help to answer a data question.\n\n",
         "preparation": "- Print copies of the Stars Data Roundtable activity guide (one per group of students)\n",
@@ -155,10 +185,10 @@
     {
       "key": "lesson-7",
       "name": "Cleaning Data",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "overview": "**What are the best practices for cleaning data to ensure its integrity and usability?**\n\nIn this lesson, students learn the importance of data cleaning and the key functions used to identify and handle data quality issues, including `isnull()`, `isnull().sum()`, `dropna()`, `fillna()`, and `value_counts()`. Through a series of investigate and modify levels, they explore how to evaluate datasets, identify missing, invalid, and inconsistent data, and apply techniques to clean the data. \n\n",
         "preparation": "- Print copies of the Occupations Dataset handout (one for each student)\n- Print and prepare the Quiz, Quiz, Trade cards for the wrap up activity.\n",
@@ -173,10 +203,10 @@
     {
       "key": "lesson-8",
       "name": "More Visualization Types",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "overview": "**How do we create and choose data visualizations that help find insights to data questions?**\n\nStudents explore the creation and interpretation of stacked bar charts and pie charts using Matplotlib. They learn how different visualizations can be applied to answer specific data questions, compare the effectiveness of each chart type, and refine their data visualization skills by working with various datasets.\n\n",
         "preparation": "- Print copies of the Mythical Creatures Dataset handout (one for each student)\n",
@@ -191,10 +221,10 @@
     {
       "key": "lesson-9",
       "name": "Exploratory Data Analysis",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "overview": "**How can we use pandas to find insights about data?**\n\nIn this lesson, students practice using key pandas functions such as `min()`, `max()`, `agg()`, and `sum()` to perform exploratory data analysis on sea level anomaly data from New York's East River. They analyze and visualize the data to identify trends, patterns, and significant moments, building their skills in data science techniques.\n\n",
         "preparation": "- Print copies of the Sea Level Anomalies handout (one for each student)\n",
@@ -209,10 +239,10 @@
     {
       "key": "lesson-10",
       "name": "Querying Your Data",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "overview": "**How can advanced data filtering techniques reveal further insights within datasets?**\n\nIn this lesson, students learn to filter data attributes to exclude entries that contain null values. Additionally, they learn how to filter by examining the value of string data within an entry. Last, they combine many of the previous filtering techniques that they have learned throughout the unit and combine them with the use of multiple logical operators in order to create focused and precise subsets of data.\n\n",
         "student_overview": "**How can advanced data filtering techniques reveal further insights within datasets?**\n\nIn this lesson, you learn how to filter data entries within attributes that are null (empty) or which contain certain string values. Additionally, you learn how to employ logical operators when filtering in order to create focused and precise subsets of data.\n\n\n"
@@ -226,10 +256,10 @@
     {
       "key": "lesson-11",
       "name": "Data Science for Community Impact Project",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "overview": "**How can I use data to answer a meaningful question, uncover patterns and insights, and effectively communicate my findings to others?**\n\nIn this project, students use the data they have collected to explore and answer a specific data question. They start by cleaning and organizing their data, then create and analyze visualizations to uncover patterns, trends, and insights. Throughout the project, students document their process, refine their visualizations, and develop a narrative that clearly communicates their findings. The project culminates in a gallery walk where they present their hypothesis, conclusions, and visual evidence.\n",
         "preparation": "- Print copies of the Community Impact project guide",
@@ -243,12 +273,16 @@
     },
     {
       "key": "lesson-12",
-      "name": "Assessment",
-      "absolute_position": 12,
+      "name": "Assessment Day",
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
+        "assessment": true,
+        "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
+        "preparation": "- Preview the assessment questions\n- Unlock the assessment questions as indicated on the Unlocking Assessments resource",
+        "student_overview": "Students complete a multiple-choice assessment that covers the unit topics."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -258,6 +292,20 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "d67a0120-374a-4efe-bdc0-4c0e4be44156",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d67a0120-374a-4efe-bdc0-4c0e4be44156",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
     {
       "key": "69328af5-be34-4ed2-8a65-1b4d956c47cb",
       "position": 1,
@@ -733,9 +781,48 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "data-science-with-python-2024"
       }
+    },
+    {
+      "key": "a8eefb2b-3d92-4c83-97a1-2ab65f841b20",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8eefb2b-3d92-4c83-97a1-2ab65f841b20",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-with-python-2024"
+      }
+    },
+    {
+      "key": "5c7f5af9-cfa3-402f-a59e-746a519421c0",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5c7f5af9-cfa3-402f-a59e-746a519421c0",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-with-python-2024"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "5dfa1105-dbae-4532-a189-27e570e010c2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to answer the pre-assessment questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take a few minutes to answer the questions. Assure students that they probably won’t know the answers to many or even most of the questions and that is okay since it is a pre-assessment. \n\n",
+        "progression_name": "Pre-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dfa1105-dbae-4532-a189-27e570e010c2",
+        "lesson_activity.key": "d67a0120-374a-4efe-bdc0-4c0e4be44156"
+      }
+    },
     {
       "key": "8220071c-8c8b-4e64-a64e-4c79c857899f",
       "position": 1,
@@ -2531,11 +2618,78 @@
         "activity_section.key": "92f9fcf8-7adf-417b-a154-ca0034bdedaa",
         "lesson_activity.key": "10bc5c70-e3d0-4949-b204-3e93eb1bac53"
       }
+    },
+    {
+      "key": "d65c3fad-630d-4eb8-8b0e-30ddd19c53a9",
+      "position": 1,
+      "properties": {
+        "description": "> <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> **Say:** Congratulations! After learning how to evaluate, clean, filter, and visualize data, you have successfully made it to the end of Unit 2. Today, you will each complete a multiple-choice assessment to put your skills to the test.",
+        "name": "Unit 2 Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "d65c3fad-630d-4eb8-8b0e-30ddd19c53a9",
+        "lesson_activity.key": "a8eefb2b-3d92-4c83-97a1-2ab65f841b20"
+      }
+    },
+    {
+      "key": "4370c478-1365-4087-82b6-7d6561170ff3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete their Unit 2 Assessment.\n\n\n\n\n",
+        "progression_name": "Unit 2 Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "4370c478-1365-4087-82b6-7d6561170ff3",
+        "lesson_activity.key": "a8eefb2b-3d92-4c83-97a1-2ab65f841b20"
+      }
+    },
+    {
+      "key": "74b36269-03a1-49da-9bde-5fc4ddc69a14",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n\n* Students write down solutions to questions in their unit guides that they answered incorrectly.\n* Identify mostly missed questions and review as a class together.\n* Review answers asynchronously and allow students to do corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectation, follow up so they have the opportunity to learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "74b36269-03a1-49da-9bde-5fc4ddc69a14",
+        "lesson_activity.key": "5c7f5af9-cfa3-402f-a59e-746a519421c0"
+      }
     }
   ],
   "script_levels": [
     {
       "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Data Sci U2 Pre-Test_2024-pilot"
+        ],
+        "progression": "Pre-Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Data Sci U2 Pre-Test_2024-pilot"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "5dfa1105-dbae-4532-a189-27e570e010c2"
+      },
+      "level_keys": [
+        "Data Sci U2 Pre-Test_2024-pilot"
+      ]
+    },
+    {
+      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2560,7 +2714,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2585,7 +2739,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2610,7 +2764,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2635,7 +2789,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -2660,7 +2814,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -2685,7 +2839,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -2710,7 +2864,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2735,7 +2889,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -2760,7 +2914,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2785,7 +2939,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2810,7 +2964,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2835,7 +2989,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2860,7 +3014,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -2885,7 +3039,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -2910,7 +3064,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2935,7 +3089,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -2960,7 +3114,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -2985,7 +3139,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3010,7 +3164,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3035,7 +3189,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3060,7 +3214,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3085,7 +3239,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3110,7 +3264,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3135,7 +3289,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -3160,7 +3314,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -3185,7 +3339,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -3210,7 +3364,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3235,7 +3389,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3260,7 +3414,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3285,7 +3439,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3310,7 +3464,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3335,7 +3489,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3360,7 +3514,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3385,7 +3539,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -3410,7 +3564,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3435,7 +3589,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3460,7 +3614,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3485,7 +3639,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3510,7 +3664,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3535,7 +3689,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3560,7 +3714,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -3585,7 +3739,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3610,7 +3764,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -3635,7 +3789,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3660,7 +3814,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3685,7 +3839,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3710,7 +3864,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3735,7 +3889,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3760,7 +3914,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3785,7 +3939,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3810,7 +3964,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -3835,7 +3989,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3860,7 +4014,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3885,7 +4039,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3910,7 +4064,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3935,7 +4089,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3960,7 +4114,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3985,7 +4139,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4010,7 +4164,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4035,7 +4189,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4060,7 +4214,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4085,7 +4239,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4110,7 +4264,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4135,7 +4289,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4160,7 +4314,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4185,7 +4339,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4210,7 +4364,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4235,7 +4389,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4260,7 +4414,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -4285,7 +4439,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4310,7 +4464,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4335,7 +4489,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4360,7 +4514,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4385,7 +4539,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4410,7 +4564,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4435,7 +4589,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4460,7 +4614,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4485,7 +4639,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4510,7 +4664,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4533,9 +4687,46 @@
       "level_keys": [
         "datascience-U2L11-L1_2024-pilot"
       ]
+    },
+    {
+      "chapter": 82,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Data Sci U2 Post-Test_2024-pilot"
+        ],
+        "progression": "Unit 2 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Data Sci U2 Post-Test_2024-pilot"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "4370c478-1365-4087-82b6-7d6561170ff3"
+      },
+      "level_keys": [
+        "Data Sci U2 Post-Test_2024-pilot"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Data Sci U2 Pre-Test_2024-pilot",
+        "script_level.level_keys": [
+          "Data Sci U2 Pre-Test_2024-pilot"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "5dfa1105-dbae-4532-a189-27e570e010c2"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "datascience-U2L2-L1_2024-pilot",
@@ -5494,6 +5685,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "data-science-with-python-2024",
         "activity_section.key": "192a9698-4638-4512-9f76-9ba47ee20aeb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Data Sci U2 Post-Test_2024-pilot",
+        "script_level.level_keys": [
+          "Data Sci U2 Post-Test_2024-pilot"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-science-with-python-2024",
+        "activity_section.key": "4370c478-1365-4087-82b6-7d6561170ff3"
       }
     }
   ],

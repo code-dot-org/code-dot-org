@@ -75,6 +75,7 @@
   "panelHeaderTimeline": "Timeline",
   "skip": "Skip",
   "continue": "Continue",
+  "select": "Select",
   "undo": "Undo",
   "redo": "Redo",
   "soundsFilterPacks": "Packs",
@@ -87,6 +88,9 @@
   "soundsFilterVocals": "Vocals",
   "packDialogTitle": "Choose a featured track",
   "packDialogBody": "Level up your mix by adding sounds from a featured track.",
+  "packModePopular": "Popular",
+  "packModeSong": "Song",
+  "packModeArtist": "Artist",
   "effectsLabelsFull": "Full",
   "effectsLabelsHigh": "High",
   "effectsLabelsMedium": "Medium",
@@ -95,6 +99,5 @@
   "effectsLabelsVolume": "Volume",
   "effectsLabelsDelay": "Delay",
   "effectsLabelsFilter": "Filter",
-  "parameterLabel": "parameter:",
   "generate": "Generate"
 }

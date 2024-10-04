@@ -7,17 +7,17 @@ import {
 } from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
+import {ProjectType, FolderId, ProjectFile, FileId} from '@codebridge/types';
 import {
-  ProjectType,
-  FolderId,
-  ProjectFile,
-  ProjectFolder,
-} from '@codebridge/types';
-import {
+  checkForDuplicateFilename,
+  checkForDuplicateFoldername,
   findFolder,
   getErrorMessage,
   getFileIconNameAndStyle,
+  sendCodebridgeAnalyticsEvent,
   shouldShowFile,
+  validateFileName,
+  validateFolderName,
 } from '@codebridge/utils';
 import {
   DndContext,
@@ -25,7 +25,6 @@ import {
   DragOverEvent,
   DragEndEvent,
   PointerSensor,
-  useDndMonitor,
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
@@ -36,7 +35,11 @@ import React, {useMemo, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {
+  isReadOnlyWorkspace,
+  setOverrideValidations,
+} from '@cdo/apps/lab2/lab2Redux';
+import {PASSED_ALL_TESTS_VALIDATION} from '@cdo/apps/lab2/progress/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -46,15 +49,21 @@ import {
   DialogClosePromiseReturnType,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
-
-import {Draggable, DragDataType} from './Draggable';
-import {Droppable, DropDataType} from './Droppable';
+import {
+  DndDataContextProvider,
+  useDndDataContext,
+} from './DnDDataContextProvider';
+import {Draggable} from './Draggable';
+import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
+import {FileUploader} from './FileUploader';
+import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
 import {
   DragType,
+  DragDataType,
+  DropDataType,
   downloadFileType,
   moveFilePromptType,
   moveFolderPromptType,
@@ -95,9 +104,6 @@ const extractInput = (promiseResults: DialogClosePromiseReturnType): string => {
   return '';
 };
 
-// restrict typed in input to what we consider to be valid names, which for now are [a-zA-Z0-9_.].
-const validateName = (name: string = '') => !Boolean(name.match(/[^\w.]/));
-
 const InnerFileBrowser = React.memo(
   ({
     parentId,
@@ -113,34 +119,26 @@ const InnerFileBrowser = React.memo(
     setFileType,
     appName,
   }: FilesComponentProps) => {
-    const [dragData, setDragData] = useState<DragDataType | undefined>(
-      undefined
-    );
-    const [dropData, setDropData] = useState<DropDataType | undefined>(
-      undefined
-    );
-
-    useDndMonitor({
-      onDragStart: (e: DragStartEvent) =>
-        setDragData(e.active.data.current as DragDataType),
-      onDragOver: (e: DragOverEvent) =>
-        setDropData(e.over?.data.current as DropDataType),
-      onDragEnd: (e: DragEndEvent) => {
-        setDragData(undefined);
-        setDropData(undefined);
-      },
-    });
     const {
       openFile,
       deleteFile,
       toggleOpenFolder,
       deleteFolder,
-      config: {editableFileTypes},
+      config: {editableFileTypes, validMimeTypes},
     } = useCodebridgeContext();
+    const {dragData, dropData} = useDndDataContext();
     const dialogControl = useDialogControl();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const handleFileUpload = useHandleFileUpload(files);
+    const fileUploadErrorCallback = useFileUploadErrorCallback();
+    const dispatch = useAppDispatch();
 
     const handleConfirmDeleteFile = (fileId: string) => {
+      // If we are deleting a validation file, we are in start mode, and we should
+      // ensure that the override validation is set to an empty list.
+      if (files[fileId]?.type === ProjectFileType.VALIDATION) {
+        dispatch(setOverrideValidations([]));
+      }
       deleteFile(fileId);
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE, appName);
     };
@@ -206,6 +204,32 @@ const InnerFileBrowser = React.memo(
       });
     };
 
+    // setFileType only gets called in start mode. If we are setting a file to
+    // validation or changing a validation file to a non-validation file, also
+    // set the override validation to a passed all tests condition.
+    // This makes it so the progress manager gets updated accordingly and
+    // levelbuilders can run the new validation file and see results.
+    // All files are set to starter by default, so we will catch all new validation
+    // files with this method.
+    const handleSetFileType = useMemo(
+      () => (fileId: FileId, type: ProjectFileType) => {
+        const file = files[fileId];
+        if (
+          file.type === ProjectFileType.VALIDATION &&
+          type !== ProjectFileType.VALIDATION
+        ) {
+          // If this was a validation file and we are changing it to a non-validation file,
+          // remove the override validation.
+          dispatch(setOverrideValidations([]));
+        } else if (type === ProjectFileType.VALIDATION) {
+          // If the new type is validation, use the passed all tests validation condition.
+          dispatch(setOverrideValidations([PASSED_ALL_TESTS_VALIDATION]));
+        }
+        setFileType(fileId, type);
+      },
+      [dispatch, files, setFileType]
+    );
+
     const hasValidationFile = Object.values(files).find(
       f => f.type === ProjectFileType.VALIDATION
     );
@@ -218,7 +242,9 @@ const InnerFileBrowser = React.memo(
       if (!hasValidationFile) {
         options.push(
           <span
-            onClick={() => setFileType(file.id, ProjectFileType.VALIDATION)}
+            onClick={() =>
+              handleSetFileType(file.id, ProjectFileType.VALIDATION)
+            }
             key={'make-validation'}
           >
             <i className={`fa-solid fa-flask`} />{' '}
@@ -232,7 +258,7 @@ const InnerFileBrowser = React.memo(
       ) {
         options.push(
           <span
-            onClick={() => setFileType(file.id, ProjectFileType.STARTER)}
+            onClick={() => handleSetFileType(file.id, ProjectFileType.STARTER)}
             key={'make-starter'}
           >
             <i className={`fa-solid fa-eye`} /> {codebridgeI18n.makeStarter()}
@@ -246,7 +272,7 @@ const InnerFileBrowser = React.memo(
       ) {
         options.push(
           <span
-            onClick={() => setFileType(file.id, ProjectFileType.SUPPORT)}
+            onClick={() => handleSetFileType(file.id, ProjectFileType.SUPPORT)}
             key={'make-support'}
           >
             <i className={`fa-solid fa-eye-slash`} />{' '}
@@ -263,7 +289,15 @@ const InnerFileBrowser = React.memo(
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => (
-            <Droppable data={{id: f.id}} key={f.id + f.open} Component="li">
+            <Droppable
+              data={{id: f.id}}
+              key={f.id + f.open}
+              Component="li"
+              className={classNames(moduleStyles.droppableArea, {
+                [moduleStyles.acceptingDrop]:
+                  f.id === dropData?.id && dragData?.parentId !== f.id,
+              })}
+            >
               <Draggable
                 data={{id: f.id, type: DragType.FOLDER, parentId: f.parentId}}
               >
@@ -306,8 +340,24 @@ const InnerFileBrowser = React.memo(
                         </span>
                         <span onClick={() => newFilePrompt(f.id)}>
                           <i className="fa-solid fa-plus" />{' '}
-                          {codebridgeI18n.addFile()}
+                          {codebridgeI18n.newFile()}
                         </span>
+                        <FileUploader
+                          validMimeTypes={validMimeTypes}
+                          callback={(fileName, contents) =>
+                            handleFileUpload({
+                              folderId: f.id,
+                              fileName,
+                              contents,
+                            })
+                          }
+                          errorCallback={fileUploadErrorCallback}
+                        >
+                          <span>
+                            <i className="fa-solid fa-upload" />{' '}
+                            {codebridgeI18n.uploadFile()}
+                          </span>
+                        </FileUploader>
                         <span onClick={() => handleDeleteFolder(f.id)}>
                           <i className="fa-solid fa-trash" />{' '}
                           {codebridgeI18n.deleteFolder()}
@@ -417,55 +467,26 @@ export const FileBrowser = React.memo(() => {
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const dialogControl = useDialogControl();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-
-  // Check if the filename is already in use in the given folder.
-  // If it is, alert the user and return true, otherwise return false.
-  const checkForDuplicateFilename = useMemo(
-    () =>
-      (
-        fileName: string,
-        folderId: string,
-        projectFiles: Record<string, ProjectFile>
-      ) => {
-        let message = undefined;
-        const existingFile = Object.values(projectFiles).find(
-          f => f.name === fileName && f.folderId === folderId
-        );
-        if (existingFile) {
-          message = codebridgeI18n.duplicateFileError({fileName});
-          if (
-            existingFile.type === ProjectFileType.SUPPORT ||
-            existingFile.type === ProjectFileType.VALIDATION
-          ) {
-            message = codebridgeI18n.duplicateSupportFileError({fileName});
-          }
-        }
-
-        return message;
-      },
-    []
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
   );
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
-  // Check if the foldername is already in use in the given folder.
-  // If it is, alert the user and return true, otherwise return false.
-  const checkForDuplicateFoldername = useMemo(
-    () =>
-      (
-        folderName: string,
-        folderId: string,
-        projectFolders: Record<string, ProjectFolder>
-      ) => {
-        let message = undefined;
-        const existingFolder = Object.values(projectFolders).find(
-          f => f.name === folderName && f.parentId === folderId
-        );
-        if (existingFolder) {
-          message = codebridgeI18n.duplicateFolderError({folderName});
-        }
+  const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
+  const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
 
-        return message;
+  const dndMonitor = useMemo(
+    () => ({
+      onDragStart: (e: DragStartEvent) =>
+        setDragData(e.active.data.current as DragDataType),
+      onDragOver: (e: DragOverEvent) =>
+        setDropData(e.over?.data.current as DropDataType),
+      onDragEnd: (e: DragEndEvent) => {
+        setDragData(undefined);
+        setDropData(undefined);
       },
-    []
+    }),
+    [setDragData, setDropData]
   );
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
@@ -478,7 +499,7 @@ export const FileBrowser = React.memo(() => {
             if (!folderName.length) {
               return;
             }
-            if (!validateName(folderName)) {
+            if (!validateFolderName(folderName)) {
               return codebridgeI18n.invalidNameError();
             }
             const existingFolder = Object.values(project.folders).some(
@@ -525,13 +546,15 @@ export const FileBrowser = React.memo(() => {
             if (!fileName.length) {
               return;
             }
-            if (!validateName(fileName)) {
+            if (!validateFileName(fileName)) {
               return codebridgeI18n.invalidNameError();
             }
             const duplicate = checkForDuplicateFilename(
               fileName,
               folderId,
-              project.files
+              project.files,
+              isStartMode,
+              validationFile
             );
             if (duplicate) {
               return duplicate;
@@ -547,7 +570,12 @@ export const FileBrowser = React.memo(() => {
         }
         const fileName = extractInput(results);
 
-        const fileId = getNextFileId(Object.values(project.files));
+        const files = Object.values(project.files);
+        // The validation file is in the project files in start mode.
+        if (validationFile && !isStartMode) {
+          files.push(validationFile);
+        }
+        const fileId = getNextFileId(files);
 
         newFile({
           fileId,
@@ -557,7 +585,14 @@ export const FileBrowser = React.memo(() => {
 
         sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, appName);
       },
-    [dialogControl, project.files, newFile, appName, checkForDuplicateFilename]
+    [
+      dialogControl,
+      project.files,
+      newFile,
+      appName,
+      validationFile,
+      isStartMode,
+    ]
   );
 
   const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(
@@ -579,7 +614,9 @@ export const FileBrowser = React.memo(() => {
             const duplicate = checkForDuplicateFilename(
               file.name,
               folderId,
-              project.files
+              project.files,
+              isStartMode,
+              validationFile
             );
             if (duplicate) {
               return duplicate;
@@ -614,7 +651,8 @@ export const FileBrowser = React.memo(() => {
       project.folders,
       dialogControl,
       appName,
-      checkForDuplicateFilename,
+      isStartMode,
+      validationFile,
       moveFile,
     ]
   );
@@ -667,13 +705,7 @@ export const FileBrowser = React.memo(() => {
       }
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FOLDER, appName);
     },
-    [
-      project.folders,
-      dialogControl,
-      appName,
-      checkForDuplicateFoldername,
-      moveFolder,
-    ]
+    [project.folders, dialogControl, appName, moveFolder]
   );
 
   const renameFilePrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
@@ -690,13 +722,15 @@ export const FileBrowser = React.memo(() => {
           if (newName === file.name) {
             return;
           }
-          if (!validateName(newName)) {
+          if (!validateFileName(newName)) {
             return codebridgeI18n.invalidNameError();
           }
           const duplicate = checkForDuplicateFilename(
             newName,
             file.folderId,
-            project.files
+            project.files,
+            isStartMode,
+            validationFile
           );
           if (duplicate) {
             return duplicate;
@@ -715,11 +749,12 @@ export const FileBrowser = React.memo(() => {
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, appName);
     },
     [
-      dialogControl,
       project.files,
-      checkForDuplicateFilename,
+      dialogControl,
       renameFile,
       appName,
+      isStartMode,
+      validationFile,
     ]
   );
 
@@ -737,7 +772,7 @@ export const FileBrowser = React.memo(() => {
           if (newName === folder.name) {
             return;
           }
-          if (!validateName(newName)) {
+          if (!validateFolderName(newName)) {
             return codebridgeI18n.invalidNameError();
           }
           const existingFolder = Object.values(project.folders).some(
@@ -760,15 +795,53 @@ export const FileBrowser = React.memo(() => {
 
   const handleDragEnd = useMemo(
     () => (e: DragOverEvent) => {
-      if (e?.over) {
+      if (e?.over && e?.active) {
+        // first, if we're dragging something into the folder which currently contains it, just bow out.
+        if (e.active.data.current?.parentId === e.over.id) {
+          return;
+        }
         if (e.active.data.current?.type === DragType.FOLDER) {
-          moveFolder(e.active.data.current.id as string, e.over.id as string);
+          const duplicate = checkForDuplicateFoldername(
+            project.folders[e.active.data.current.id].name,
+            e.over.id as string,
+            project.folders
+          );
+          if (duplicate) {
+            dialogControl?.showDialog({
+              type: DialogType.GenericAlert,
+              title: duplicate,
+            });
+          } else {
+            moveFolder(e.active.data.current.id as string, e.over.id as string);
+          }
         } else if (e.active.data.current?.type === DragType.FILE) {
-          moveFile(e.active.data.current.id as string, e.over.id as string);
+          const duplicate = checkForDuplicateFilename(
+            project.files[e.active.data.current.id].name,
+            e.over.id as string,
+            project.files,
+            isStartMode,
+            validationFile
+          );
+          if (duplicate) {
+            dialogControl?.showDialog({
+              type: DialogType.GenericAlert,
+              title: duplicate,
+            });
+          } else {
+            moveFile(e.active.data.current.id as string, e.over.id as string);
+          }
         }
       }
     },
-    [moveFile, moveFolder]
+    [
+      dialogControl,
+      isStartMode,
+      moveFile,
+      moveFolder,
+      project.files,
+      project.folders,
+      validationFile,
+    ]
   );
 
   const sensors = useSensors(
@@ -783,6 +856,7 @@ export const FileBrowser = React.memo(() => {
     <PanelContainer
       id="file-browser"
       headerContent={'Files'}
+      headerClassName={moduleStyles.fileBrowserHeader}
       className={moduleStyles['file-browser']}
       rightHeaderContent={
         !isReadOnly && (
@@ -794,24 +868,39 @@ export const FileBrowser = React.memo(() => {
       }
     >
       <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
-        <Droppable data={{id: DEFAULT_FOLDER_ID}}>
-          <ul>
-            <InnerFileBrowser
-              parentId={DEFAULT_FOLDER_ID}
-              folders={project.folders}
-              downloadFile={downloadFile}
-              newFolderPrompt={newFolderPrompt}
-              files={project.files}
-              newFilePrompt={newFilePrompt}
-              moveFilePrompt={moveFilePrompt}
-              moveFolderPrompt={moveFolderPrompt}
-              renameFilePrompt={renameFilePrompt}
-              renameFolderPrompt={renameFolderPrompt}
-              setFileType={setFileType}
-              appName={appName}
-            />
-          </ul>
-        </Droppable>
+        <DndDataContextProvider
+          value={{dragData, dropData}}
+          dndMonitor={dndMonitor}
+        >
+          <Droppable
+            data={{id: DEFAULT_FOLDER_ID}}
+            className={classNames(
+              moduleStyles.droppableArea,
+              moduleStyles.expandedDroppableArea,
+              {
+                [moduleStyles.acceptingDrop]:
+                  DEFAULT_FOLDER_ID === dropData?.id,
+              }
+            )}
+          >
+            <ul>
+              <InnerFileBrowser
+                parentId={DEFAULT_FOLDER_ID}
+                folders={project.folders}
+                downloadFile={downloadFile}
+                newFolderPrompt={newFolderPrompt}
+                files={project.files}
+                newFilePrompt={newFilePrompt}
+                moveFilePrompt={moveFilePrompt}
+                moveFolderPrompt={moveFolderPrompt}
+                renameFilePrompt={renameFilePrompt}
+                renameFolderPrompt={renameFolderPrompt}
+                setFileType={setFileType}
+                appName={appName}
+              />
+            </ul>
+          </Droppable>
+        </DndDataContextProvider>
       </DndContext>
     </PanelContainer>
   );

@@ -212,6 +212,10 @@ export default class AnalyticsReporter {
     });
   }
 
+  onValidationAttempt(passed: boolean, message: string) {
+    this.trackUIEvent('Validation attempt', {passed, message});
+  }
+
   private trackUIEvent(eventType: string, payload: object) {
     const logMessage = `${eventType}. Payload: ${JSON.stringify(payload)}`;
 
