@@ -17,6 +17,7 @@
 .row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   font-size: 14px;
 }
@@ -44,10 +45,6 @@
   grid-template-columns: 15px auto;
 }
 
-.button-bar button {
-  white-space: nowrap;
-}
-
 .file-browser ul li span.label i,
 .file-browser ul li span.button-bar i {
   margin-right: 4px;
@@ -58,7 +55,7 @@ li .button-kebab {
   height: 13px;
 }
 
-li :hover .button-kebab {
+div.row:hover .button-kebab {
   display: inherit;
 }
 
@@ -78,4 +75,16 @@ li :hover .button-kebab {
   margin: 2px 8px 2px 8px;
   font-size: 13px;
   line-height: 125%;
+}
+
+.acceptingDrop {
+  background-color: $light_gray;
+}
+
+.expandedDroppableArea {
+  padding-bottom: 1rem;
+}
+
+.dropdownItem {
+  width: 100px;
 }

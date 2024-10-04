@@ -68,3 +68,4 @@ pegasus/sites*/**/*.scss !text !filter !merge !diff
 
 # INCLUDE these specific files in Git LFS, no matter what:
 pegasus/sites.v3/code.org/public/schools.json filter=lfs diff=lfs merge=lfs -text
+pegasus/sites.v3/hourofcode.com/public/onetrust/** filter=lfs diff=lfs merge=lfs -text

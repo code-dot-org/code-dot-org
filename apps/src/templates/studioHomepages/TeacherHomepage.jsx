@@ -15,7 +15,7 @@ import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
+import CensusTeacherBanner from '../census/CensusTeacherBanner';
 import HeaderBanner from '../HeaderBanner';
 import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
