@@ -13,6 +13,7 @@ type LessonResourcesProps = {
   unitNumber: number;
   lessonNumber: number;
   lessonPlanUrl?: string;
+  lessonPlanPdfUrl?: string;
   standardsUrl?: string;
   vocabularyUrl?: string;
   lessonName?: string;
@@ -24,6 +25,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
   resources,
   lessonNumber,
   lessonPlanUrl,
+  lessonPlanPdfUrl,
   lessonName,
   standardsUrl,
   vocabularyUrl,
@@ -82,6 +84,7 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
           key: 'lessonPlanKey',
           name: lessonName || '',
           url: lessonPlanUrl,
+          downloadUrl: lessonPlanPdfUrl,
           audience: 'Teacher',
           type: 'Lesson Plan',
         }}
