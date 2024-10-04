@@ -4,7 +4,8 @@ import {useSelector} from 'react-redux';
 import {
   fetchStudentChatHistory,
   selectAllVisibleMessages,
-  setShowModal,
+  setShowOnboardingModal,
+  setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import TeacherOnboardingModal from '@cdo/apps/aiComponentLibrary/warningModal/TeacherOnboardingModal';
@@ -50,7 +51,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showModal, studentChatHistory} = useAppSelector(state => state.aichat);
+  const {showOnboardingModal, showWarningModal, studentChatHistory} =
+    useAppSelector(state => state.aichat);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
@@ -141,7 +143,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     ) {
       trySetLocalStorage('teacherSawOnboarding', 'yes');
     }
-    dispatch(setShowModal(false));
+    dispatch(setShowWarningModal(false));
+    dispatch(setShowOnboardingModal(false));
   }, [dispatch, isUserTeacher]);
 
   const isTeacherFirstAichatEncounter = useCallback(() => {
@@ -152,7 +155,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         'no'
       );
       if (teacherSawOnboarding !== 'yes') {
-        if (showModal) {
+        if (showOnboardingModal) {
           trySetLocalStorage('teacherSawOnboarding', 'inProgress');
           return true;
         } else {
@@ -161,17 +164,22 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       }
     }
     return false;
-  }, [isUserTeacher, showModal]);
+  }, [isUserTeacher, showOnboardingModal]);
 
   const displayAichatModal = useCallback(() => {
-    if (showModal) {
+    if (showWarningModal || showOnboardingModal) {
       return isTeacherFirstAichatEncounter() ? (
         <TeacherOnboardingModal onClose={onCloseModal} />
       ) : (
         <ChatWarningModal onClose={onCloseModal} />
       );
     }
-  }, [isTeacherFirstAichatEncounter, onCloseModal, showModal]);
+  }, [
+    isTeacherFirstAichatEncounter,
+    onCloseModal,
+    showOnboardingModal,
+    showWarningModal,
+  ]);
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>

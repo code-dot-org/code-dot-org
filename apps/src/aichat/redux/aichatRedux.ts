@@ -81,8 +81,10 @@ export interface AichatState {
   isWaitingForChatResponse: boolean;
   // Student events viewed by a teacher user in chat workspace
   studentChatHistory: ChatEvent[];
-  // Denotes whether we should show the warning or teacher onboarding modal
-  showModal: boolean;
+  // Denotes whether we should show the warning modal
+  showWarningModal: boolean;
+  // Denotes whether we should show the teacher onboarding modal
+  showOnboardingModal: boolean;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   initialAiCustomizations: AiCustomizations;
@@ -103,7 +105,8 @@ const initialState: AichatState = {
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
   studentChatHistory: [],
-  showModal: true,
+  showWarningModal: true,
+  showOnboardingModal: true,
   chatMessageError: false,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -615,8 +618,11 @@ const aichatSlice = createSlice({
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
     },
-    setShowModal: (state, action: PayloadAction<boolean>) => {
-      state.showModal = action.payload;
+    setShowWarningModal: (state, action: PayloadAction<boolean>) => {
+      state.showWarningModal = action.payload;
+    },
+    setShowOnboardingModal: (state, action: PayloadAction<boolean>) => {
+      state.showOnboardingModal = action.payload;
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
@@ -826,7 +832,8 @@ export const {
   setAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
-  setShowModal,
+  setShowOnboardingModal,
+  setShowWarningModal,
   setStartingAiCustomizations,
   setStudentChatHistory,
   setUserHasAichatAccess,
