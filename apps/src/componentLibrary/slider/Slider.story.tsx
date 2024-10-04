@@ -236,6 +236,7 @@ GroupOfDisabledSliders.args = {
     {
       name: 'slider-white-centered-disabled',
       label: 'Slider White Centered Disabled',
+      color: 'white',
       disabled: true,
       isCentered: true,
       onChange: () => null,

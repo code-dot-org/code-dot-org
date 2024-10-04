@@ -68,14 +68,17 @@ const sliderTrackColorsMap = {
   black: {
     fill: moduleStyles.sliderBlackTrackFillColor,
     empty: moduleStyles.sliderBlackTrackEmptyColor,
+    disabled: moduleStyles.sliderBlackTrackDisabledColor,
   },
   brand: {
     fill: moduleStyles.sliderBrandTrackFillColor,
     empty: moduleStyles.sliderBrandTrackEmptyColor,
+    disabled: moduleStyles.sliderBrandTrackDisabledColor,
   },
   white: {
     fill: moduleStyles.sliderWhiteTrackFillColor,
     empty: moduleStyles.sliderWhiteTrackEmptyColor,
+    disabled: moduleStyles.sliderWhiteTrackDisabledColor,
   },
 };
 
@@ -124,8 +127,9 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   ...HTMLInputAttributes
 }) => {
   const labelId = `${name}-label`;
-  const fillColor = sliderTrackColorsMap[color].fill;
-  const emptyColor = sliderTrackColorsMap[color].empty;
+  const fillColor = sliderTrackColorsMap[color][disabled ? 'disabled' : 'fill'];
+  const emptyColor =
+    sliderTrackColorsMap[color][disabled ? 'disabled' : 'empty'];
   const gradientDirection = isRtl ? 'left' : 'right';
 
   const [backgroundStyle, setBackgroundStyle] = useState('');
@@ -246,6 +250,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
       className={classnames(
         moduleStyles.slider,
         moduleStyles[`slider-${color}`],
+        disabled && moduleStyles.isDisabled,
         className
       )}
     >

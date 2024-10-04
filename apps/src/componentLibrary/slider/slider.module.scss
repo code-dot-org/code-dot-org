@@ -4,20 +4,26 @@
 //Slider colors for use in JSX/TSX
 $slider-black-track-fill-color: $light_black;
 $slider-black-track-empty-color: $light_gray_400;
+$slider-black-track-disabled-color: $light_gray_100;
 $slider-brand-track-fill-color: $light_primary_500;
 $slider-brand-track-empty-color: $light_gray_400;
+$slider-brand-track-disabled-color: $light_gray_100;
 $slider-white-track-fill-color: $light_white;
 $slider-white-track-empty-color: $light_gray_400;
+$slider-white-track-disabled-color: $light_gray_900;
 
 :export {
   sliderBlackTrackFillColor: $slider-black-track-fill-color;
   sliderBlackTrackEmptyColor: $slider-black-track-empty-color;
+  sliderBlackTrackDisabledColor: $slider-black-track-disabled-color;
 
   sliderBrandTrackFillColor: $slider-brand-track-fill-color;
   sliderBrandTrackEmptyColor: $slider-brand-track-empty-color;
+  sliderBrandTrackDisabledColor: $slider-brand-track-disabled-color;
 
   sliderWhiteTrackFillColor: $slider-white-track-fill-color;
   sliderWhiteTrackEmptyColor: $slider-white-track-empty-color;
+  sliderWhiteTrackDisabledColor: $slider-white-track-disabled-color;
 }
 
 // Slider common styles
@@ -60,16 +66,20 @@ $slider-white-track-empty-color: $light_gray_400;
       -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
       appearance: none;
       background-image: unset;
+      cursor: pointer;
 
       &:focus-visible {
         outline: none;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
       }
     }
 
     input[type='range']::-webkit-slider-runnable-track {
       width: 100%;
       height: 8px;
-      cursor: pointer;
       background: transparent;
       border-radius: 5px;
     }
@@ -77,7 +87,6 @@ $slider-white-track-empty-color: $light_gray_400;
     input[type='range']::-moz-range-track {
       width: 100%;
       height: 8px;
-      cursor: pointer;
       background: transparent;
       border-radius: 5px;
     }
@@ -85,7 +94,6 @@ $slider-white-track-empty-color: $light_gray_400;
     input[type='range']::-ms-track {
       width: 100%;
       height: 8px;
-      cursor: pointer;
       background: transparent;
       border-color: transparent;
       color: transparent;
@@ -116,7 +124,6 @@ $slider-white-track-empty-color: $light_gray_400;
       border-radius: 50%;
       border: 2px solid transparent;
       background-color: transparent;
-      cursor: pointer;
       margin-top: -3px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
     }
 
@@ -129,7 +136,6 @@ $slider-white-track-empty-color: $light_gray_400;
       border-radius: 50%;
       border: 2px solid transparent;
       background-color: transparent;
-      cursor: pointer;
       margin-top: -3px;
     }
 
@@ -142,7 +148,6 @@ $slider-white-track-empty-color: $light_gray_400;
       border-radius: 50%;
       border: 2px solid transparent;
       background-color: transparent;
-      cursor: pointer;
     }
 
     // Focus Styles
@@ -237,10 +242,35 @@ $slider-white-track-empty-color: $light_gray_400;
         }
       }
 
-      // Disabled Styles
-
       .centerMark {
         border-color: $light_black;
+      }
+    }
+  }
+
+  // Disabled Styles
+  &.isDisabled {
+    // Using .isDisabled here because :has(input[type='range']:disabled) is not working here
+    .sliderLabelSection {
+      color: $light_gray_200;
+    }
+
+    .sliderMainContainer {
+      .sliderWrapper {
+        input[type='range']::-webkit-slider-thumb {
+          background-color: $light_white;
+          border-color: $light_gray_100;
+        }
+
+        input[type='range']::-moz-range-thumb {
+          background-color: $light_white;
+          border-color: $light_gray_100;
+        }
+
+        input[type='range']::-ms-thumb {
+          background-color: $light_white;
+          border-color: $light_gray_100;
+        }
       }
     }
   }
@@ -301,6 +331,33 @@ $slider-white-track-empty-color: $light_gray_400;
       }
     }
   }
+
+  // Disabled Styles
+  &.isDisabled {
+    // Using .isDisabled here because :has(input[type='range']:disabled) is not working here
+    .sliderLabelSection {
+      color: $light_gray_200;
+    }
+
+    .sliderMainContainer {
+      .sliderWrapper {
+        input[type='range']::-webkit-slider-thumb {
+          background-color: $light_white;
+          border-color: $light_gray_100;
+        }
+
+        input[type='range']::-moz-range-thumb {
+          background-color: $light_white;
+          border-color: $light_gray_100;
+        }
+
+        input[type='range']::-ms-thumb {
+          background-color: $light_white;
+          border-color: $light_gray_100;
+        }
+      }
+    }
+  }
 }
 
 .slider-white {
@@ -355,6 +412,33 @@ $slider-white-track-empty-color: $light_gray_400;
 
       .centerMark {
         border-color: $light_white;
+      }
+    }
+  }
+
+  // Disabled Styles
+  &.isDisabled {
+    // Using .isDisabled here because :has(input[type='range']:disabled) is not working here
+    .sliderLabelSection {
+      color: $light_gray_800;
+    }
+
+    .sliderMainContainer {
+      .sliderWrapper {
+        input[type='range']::-webkit-slider-thumb {
+          background-color: $light_black;
+          border-color: $neutral_dark90;
+        }
+
+        input[type='range']::-moz-range-thumb {
+          background-color: $light_black;
+          border-color: $neutral_dark90;
+        }
+
+        input[type='range']::-ms-thumb {
+          background-color: $light_black;
+          border-color: $neutral_dark90;
+        }
       }
     }
   }
