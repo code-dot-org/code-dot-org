@@ -440,22 +440,18 @@ export default class MusicPlayer {
       }
 
       for (const event of patternEvent.value.events) {
-        const soundData = library.getSoundForId(`${folder.id}/${event.src}`);
-        if (soundData === null) {
+        const sampleUrl = this.getSampleForNote(event.note, kit);
+        if (sampleUrl === null) {
           return [];
         }
 
-        const resultEvent = {
-          id: `${folder.id}/${event.src}`,
-          sampleUrl: library.generateSoundUrl(folder, soundData),
+        results.push({
+          sampleUrl,
           playbackPosition: patternEvent.when + (event.tick - 1) / eventsLength,
-          triggered: patternEvent.triggered,
-          effects: patternEvent.effects,
           originalBpm: this.bpm,
           pitchShift: 0,
-        };
-
-        results.push(resultEvent);
+          ...patternEvent,
+        });
       }
 
       return results;
