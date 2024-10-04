@@ -6,7 +6,7 @@ import Button from '@cdo/apps/componentLibrary/button';
 import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 import moduleStyles from './right-buttons.module.scss';
-import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface RightButtonsProps {
   clearOutput: () => void;
@@ -17,6 +17,7 @@ const tooltipProps: TooltipProps = {
   size: 'xs',
   direction: 'onLeft',
   tooltipId: 'clear-console-tooltip',
+  className: darkModeStyles.tooltipLeft,
 };
 
 const RightButtons: React.FunctionComponent<RightButtonsProps> = ({

@@ -43,3 +43,43 @@
     background-color: $neutral_dark80;
   }
 }
+
+%tooltip {
+  background-color: $black;
+}
+
+.tooltipRight {
+  @extend %tooltip;
+  &::after {
+    border-color: transparent $black transparent transparent;
+
+    html[dir='rtl'] & {
+      border-color: transparent transparent transparent $black;
+    }
+  }
+}
+
+.tooltipLeft {
+  @extend %tooltip;
+  &::after {
+    border-color: transparent transparent transparent $black;
+
+    html[dir='rtl'] & {
+      border-color: transparent $black transparent transparent;
+    }
+  }
+}
+
+.tooltipTop {
+  @extend %tooltip;
+  &::after {
+    border-color: $black transparent transparent transparent;
+  }
+}
+
+.tooltipBottom {
+  @extend %tooltip;
+  &::after {
+    border-color: transparent transparent $black transparent;
+  }
+}
