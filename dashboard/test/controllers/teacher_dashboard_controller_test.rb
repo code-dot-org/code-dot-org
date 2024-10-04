@@ -37,6 +37,17 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'index: redirects to generic course page if requested section does not belong to teacher' do
+    @section_owner_2 = create :teacher
+    @sections_2 = create_list :section, 3, user: @section_owner_2
+    @section_2 = @sections_2.first
+    sign_in @section_owner_2
+    section = create :section, user: @section_owner
+    get :show, params: {section_id: section.id, course_version_name: 'csd-2024'}
+    assert_response :redirect
+    assert_redirected_to "http://test.host/courses/csd-2024"
+  end
+
   test 'index: returns success if requested section is an instructed section for a coteacher' do
     cotaught_section = create(:section, user: @section_owner, login_type: 'word')
     other_teacher = create :teacher
