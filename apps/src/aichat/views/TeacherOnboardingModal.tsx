@@ -78,7 +78,9 @@ const TeacherOnboardingModal: React.FunctionComponent<
           </ul>
           <BodyTwoText>
             {aichatI18n.teacherOnboardingModalChatHistoryAccess()}
-            <Link href="">{aichatI18n.learnMoreHereInBrackets()}</Link>
+            <Link href="https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher">
+              {aichatI18n.learnMoreHereInBrackets()}
+            </Link>
           </BodyTwoText>
         </div>
       </div>
