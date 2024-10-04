@@ -55,6 +55,7 @@ module Services
           :school,
           :school_info_id,
           :age,
+          :us_state,
           :parent_email_preference_email,
           :parent_email_preference_opt_in,
           :parent_email_preference_request_ip,
