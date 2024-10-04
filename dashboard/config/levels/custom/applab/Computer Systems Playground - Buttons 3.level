@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-09-26T19:55:37.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Design Your App\r\n\r\nUse this level to add **design elements** to your app in Design Mode. Use the sketch from your Project Guide to add elements to the screen. Don't worry about adding code yet - you can do that in the next few levels.\r\n\r\nWhenever your finished, press Run and then Finish to continue to the next level",
+    "long_instructions": "# Skill Building\r\n\r\nFollow the instructions below",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -73,13 +74,15 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/maker/setup"
     ],
-    "start_blocks": "var score = 0;\nonBoardEvent(buttonA, \"down\", function() {\n  score = score + 1;\n  // Add in a console print statement below\n  \n});\n",
+    "start_blocks": "var score = 0;\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  score = score + 1;\r\n  // Add in a console print statement below\r\n  \r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-09-26T19:55:37.263+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Buttons 2\\\"\"],\"cloned_from\":\"Computer Systems Playground - Buttons 2\"},{\"changed_at\":\"2024-09-26 19:55:41 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-26 20:47:04 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-26 20:48:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-26T19:55:37.263+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Buttons 2\\\"\"],\"cloned_from\":\"Computer Systems Playground - Buttons 2\"},{\"changed_at\":\"2024-09-26 19:55:41 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-26 20:47:04 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-26 20:48:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-01 19:54:48 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

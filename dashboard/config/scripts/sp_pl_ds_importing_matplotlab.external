@@ -1,0 +1,42 @@
+name 'SP-PL-DS-importing-matplotlab'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Importing Matplotlib and the *pyplot* Module
+
+<img src="https://images.code.org/86ab0746de8893cc114e6adf92d7d614-image-1727972906356.png" alt="python logo" width="150px" style="border-radius:10px; float:right; margin: 0 0 0px 0px;">
+
+## What is a Module?
+
+#### A **module** is a file in a library that contains thematically related functions.
+
+
+## Importing Matplotlib and the *pyplot* Module
+
+   <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="45%">
+                <img src="https://images.code.org/69f26802bd01ac007f35e3998613671a-image-1727973228533.png" alt="import matplotlab" width="100%">
+            </td>
+            <td width="55%" style="font-size:14pt;">
+            This line imports the <b>pyplot</b> module of the library Matplotlib. It contains everything we need for making visualizations.
+            </td>
+        </tr>
+        <tr>
+            <td width="45%">
+                <img src="https://images.code.org/e349454c47d1fc0f55b04ad59904cdc8-image-1727973346520.png" alt="plt alias" width="100%">
+            </td>
+            <td width="55%" style="font-size:14pt;">
+                We give it the alias <b>plt</b> to make it easier to use in our code.
+            </td>
+        </tr>
+    </table>
+
+
+### **Next, let's examine the code to make line charts and bar charts**.
+
+
+
+
+MARKDOWN

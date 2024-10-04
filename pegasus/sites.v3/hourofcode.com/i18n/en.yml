@@ -10960,14 +10960,14 @@
   hoc_activities:
     heading: "Explore activities"
     desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
-    archive:
+    more:
       heading: "Can't find your favorite activity?"
-      button: "Explore our archives"
+      button: "Explore more here"
 
-  hoc_activities_archive:
-    heading: "Archived activities"
+  hoc_activities_more:
+    heading: "Additional activities"
     desc_01: "Thank you for your incredible participation in Hour of Code activities over the years!"
-    desc_02: "As we continue to focus on providing the most impactful and relevant activities for this year's Hour of Code, some activities will no longer be featured. Below is a list of all previous activities that are available. Please note that Hour of Code organizers will no longer actively monitor or review them."
+    desc_02: "As we continue to focus on providing the most impactful activities for this year's Hour of Code, some activities will no longer be featured on the homepage. Below is a list of additional activities that are available. Please note that Hour of Code organizers will no longer actively monitor or review them."
     desc_03: "Thank you once again for your ongoing support. We can't wait to see the incredible innovations and learning moments this year brings!"
 
   hoc_resources:
