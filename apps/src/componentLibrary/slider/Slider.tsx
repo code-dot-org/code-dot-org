@@ -82,21 +82,9 @@ const sliderTrackColorsMap = {
   },
 };
 
-// TODO:
-// * MARKUP
-//  - demo stepper +
-//  - centered mode +
-//  - percents mode +
-// * styles
-// * cleanup
-// * add stories +
-// * add tests +
-// * update README +
-// * width - 300px default, should be adjustable with custom styles +
-
 /**
  * ### Production-ready Checklist:
- * * (?) implementation of component approved by design team;
+ * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/SliderTest.tsx)
