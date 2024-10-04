@@ -61,6 +61,10 @@ const availableCallouts: AvailableCallouts = {
   'run-button': {selector: '#run-button'},
   'trigger-button-1': {selector: `#${Triggers[0].id}`},
   'toolbox-first-row': {selector: '.blocklyTreeRow'},
+  'flyout-first-block': {
+    selector:
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable:nth-of-type(1)',
+  },
   'toolbox-second-block': {
     openToolboxCategory: 0,
     selector:

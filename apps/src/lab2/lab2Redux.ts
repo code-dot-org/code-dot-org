@@ -46,6 +46,7 @@ import {
   LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
+  Validation,
 } from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
 
@@ -75,6 +76,7 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
+  overrideValidations: Validation[] | undefined;
 }
 
 const initialState: LabState = {
@@ -86,6 +88,7 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
+  overrideValidations: undefined,
 };
 
 // Thunks
@@ -374,6 +377,12 @@ const labSlice = createSlice({
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
     },
+    setOverrideValidations(
+      state,
+      action: PayloadAction<Validation[] | undefined>
+    ) {
+      state.overrideValidations = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -578,6 +587,7 @@ export const {
   clearPageError,
   setValidationState,
   setIsShareView,
+  setOverrideValidations,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

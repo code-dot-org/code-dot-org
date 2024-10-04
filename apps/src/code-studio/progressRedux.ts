@@ -353,6 +353,17 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
   };
 }
 
+// Send a report of user progress (e.g., TestResults.LEVEL_ATTEMPTED) on an appType level.
+// Currently only used by Lab2 labs.
+export function sendProgressReport(
+  appType: string,
+  result: TestResults
+): ProgressThunkAction {
+  return (dispatch, getState) => {
+    sendReportHelper(appType, result, dispatch, getState);
+  };
+}
+
 export const sendPredictLevelReport = createAsyncThunk<
   void,
   {appType: string; predictResponse: string},

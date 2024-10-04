@@ -9,6 +9,7 @@ import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer'
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -75,6 +76,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   analyticsReporter,
   blocklyWorkspace,
 }) => {
+  const dialogControl = useDialogControl();
   useUpdatePlayer(player);
   useUpdateAnalytics(analyticsReporter);
   const dispatch = useAppDispatch();
@@ -123,6 +125,24 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       });
     }
   }, [blocklyWorkspace, isStartMode, levelData]);
+
+  // Use the Lab2 generic prompt for Blockly prompt dialogs.
+  const showGenericPrompt = useCallback(
+    (
+      message: string,
+      value: string,
+      handleConfirm: (input: string | null) => void
+    ) => {
+      dialogControl.showDialog({
+        type: DialogType.GenericPrompt,
+        message,
+        value,
+        handleConfirm,
+      });
+    },
+    [dialogControl]
+  );
+  Blockly.dialog.setPrompt(showGenericPrompt);
 
   useEffect(() => {
     installFunctionBlocks(blockMode);

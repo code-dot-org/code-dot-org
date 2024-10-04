@@ -19,6 +19,7 @@ import {
 import React, {useEffect, useReducer, useRef} from 'react';
 
 import './styles/cdoIDE.scss';
+import './styles/small-footer-dark-overrides.scss';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
 import Console from './Console';
