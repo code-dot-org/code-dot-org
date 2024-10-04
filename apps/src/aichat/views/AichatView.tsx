@@ -31,6 +31,7 @@ import {
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   sendAnalytics,
+  setShowOnboardingModal,
   setStartingAiCustomizations,
   setUserHasAichatAccess,
   setViewMode,
@@ -58,6 +59,7 @@ const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
 
   const beforeNextLevel = useCallback(() => {
     dispatch(sendSuccessReport('aichat'));
@@ -245,7 +247,12 @@ const AichatView: React.FunctionComponent = () => {
                 headerContent={commonI18n.instructions()}
                 className={moduleStyles.panelContainer}
                 headerClassName={moduleStyles.panelHeader}
-                rightHeaderContent={renderInstructionsHeaderRight()}
+                rightHeaderContent={renderInstructionsHeaderRight(
+                  isUserTeacher,
+                  () => {
+                    dispatch(setShowOnboardingModal(true));
+                  }
+                )}
               >
                 <Instructions
                   beforeNextLevel={beforeNextLevel}
@@ -324,8 +331,11 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
   );
 };
 
-const renderInstructionsHeaderRight = () => {
-  return (
+const renderInstructionsHeaderRight = (
+  isUserTeacher: boolean | undefined,
+  onInfoClick: () => void
+) => {
+  return isUserTeacher ? (
     <ActionDropdown
       name="default"
       labelText="hello"
@@ -341,11 +351,11 @@ const renderInstructionsHeaderRight = () => {
           value: 'teacherOnboardingModal',
           label: 'About AI Chat Lab',
           icon: {iconName: 'circle-info', iconStyle: 'solid'},
-          onClick: () => console.log('teacher onboarding modal'),
+          onClick: onInfoClick,
         },
       ]}
     />
-  );
+  ) : null;
 };
 
 export default AichatView;

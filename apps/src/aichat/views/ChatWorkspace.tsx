@@ -166,24 +166,26 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     return false;
   }, [isUserTeacher, showOnboardingModal]);
 
-  const displayAichatModal = useCallback(() => {
-    if (showWarningModal || showOnboardingModal) {
+  const displayAichatModalOnStart = useCallback(() => {
+    if (showWarningModal) {
       return isTeacherFirstAichatEncounter() ? (
         <TeacherOnboardingModal onClose={onCloseModal} />
       ) : (
         <ChatWarningModal onClose={onCloseModal} />
       );
     }
-  }, [
-    isTeacherFirstAichatEncounter,
-    onCloseModal,
-    showOnboardingModal,
-    showWarningModal,
-  ]);
+  }, [isTeacherFirstAichatEncounter, onCloseModal, showWarningModal]);
+
+  const displayTeacherOnboardingModal = useCallback(() => {
+    if (showOnboardingModal && !showWarningModal) {
+      return <TeacherOnboardingModal onClose={onCloseModal} />;
+    }
+  }, [onCloseModal, showOnboardingModal, showWarningModal]);
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {displayAichatModal()}
+      {displayAichatModalOnStart()}
+      {displayTeacherOnboardingModal()}
       {viewAsUserId ? (
         <Tabs {...tabArgs} />
       ) : (
