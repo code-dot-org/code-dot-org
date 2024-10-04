@@ -5,23 +5,22 @@ export const MusicConditions: ConditionNames = {
     name: 'played_sounds_together',
     valueType: 'number',
     description:
-      'Successful when a minimum number of sounds are playing simultaneously. Ex. Value: 2',
+      'Successful when at least this many sounds are playing simultaneously. Ex. Value: 2',
   },
   PLAYED_DIFFERENT_SOUNDS_TOGETHER: {
     name: 'played_different_sounds_together',
     valueType: 'number',
     description:
-      'Successful when a minimum number of unique sounds are playing simultaneously. Ex. Value: 2',
+      'Successful when at least this many unique sounds are playing simultaneously. Ex. Value: 2',
   },
   PLAYED_SOUND_TRIGGERED: {
     name: 'played_sound_triggered',
-    description:
-      'Successful when a triggered playback event begins once. Simple2 only.',
+    description: 'Successful when a triggered sound is playing. Simple2 only.',
   },
   PLAYED_SOUND_TRIGGERED_MULTIPLE_TIMES: {
     name: 'played_sound_triggered_multiple_times',
     description:
-      'Successful when a triggered playback event begins a given number of times. Simple2 only. Ex. Value: 5',
+      'Successful when at least this many triggered sounds have played . Simple2 only. Ex. Value: 5',
   },
   PLAYED_SOUND_IN_FUNCTION: {
     name: 'played_sound_in_function',
@@ -33,13 +32,13 @@ export const MusicConditions: ConditionNames = {
     name: 'played_sounds',
     valueType: 'number',
     description:
-      'Successful when a minimum number of sounds are playing. Ex. Value: 2',
+      'Successful when at least this many sounds have played. Ex. Value: 2',
   },
   PLAYED_DIFFERENT_SOUNDS: {
     name: 'played_different_sounds',
     valueType: 'number',
     description:
-      'Successful when a minimum number of unique sounds are playing. Ex. Value: 2',
+      'Successful when at least this many unique sounds have played. Ex. Value: 2',
   },
   PLAYED_SOUND_ID: {
     name: 'played_sound_id',
@@ -51,46 +50,46 @@ export const MusicConditions: ConditionNames = {
     name: 'played_empty_chords',
     valueType: 'number',
     description:
-      'Successful when a minimum number of empty chords (`play notes` block with no notes) are playing.' +
+      'Successful when at least this many empty chords (`play notes` block with no notes) have played.' +
       ' Useful for prompting the student to add notes. Ex. Value: 1',
   },
   PLAYED_CHORDS: {
     name: 'played_chords',
     valueType: 'number',
     description:
-      'Successful when a minimum number of chords (`play notes` block with at least 1 note) are playing. Ex. Value: 2',
+      'Successful when at least this many chords (`play notes` block with at least 1 note) have played. Ex. Value: 2',
   },
   PLAYED_EMPTY_PATTERNS: {
     name: 'played_empty_patterns',
     valueType: 'number',
     description:
-      'Successful when a minimum number of empty patterns (`play drums` block with no ticks) are playing.' +
+      'Successful when at least this many empty patterns (`play drums` block with no ticks) have played.' +
       ' Useful for prompting the student to add their own beat. Ex. Value: 1',
   },
   PLAYED_PATTERNS: {
     name: 'played_patterns',
     valueType: 'number',
     description:
-      'Successful when a minimum number of patterns (`play drums` block with at least 1 tick) are playing. Ex. Value: 2',
+      'Successful when at least this many patterns (`play drums` block with at least 1 tick) have played. Ex. Value: 2',
   },
   PLAYED_EMPTY_PATTERNS_AI: {
     name: 'played_empty_patterns_ai',
     valueType: 'number',
     description:
-      'Successful when a minimum number of empty AI patterns (`play AI drums` block with no ticks) are playing.' +
+      'Successful when at least this many empty AI patterns (`play AI drums` block with no ticks) have played.' +
       ' Useful for prompting the student to generate a new beat. Ex. Value: 1',
   },
   PLAYED_PATTERNS_AI: {
     name: 'played_patterns_ai',
     valueType: 'number',
     description:
-      'Successful when a minimum number of AI patterns (`play AI drums` block with at least 1 tick) are playing. Ex. Value: 2',
+      'Successful when at least this many AI patterns (`play AI drums` block with at least 1 tick) have played. Ex. Value: 2',
   },
   PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES: {
     name: 'played_different_sounds_together_multiple_times',
     valueType: 'number',
     description:
-      'Successful when at least 2 sounds are playing together at the same time a minum number of times. Ex. Value: 2',
+      'Successful when at least 2 sounds have played together at least this many times. Ex. Value: 2',
   },
   TRIGGER_ID_PRESSED: {
     name: 'trigger_id_pressed',
