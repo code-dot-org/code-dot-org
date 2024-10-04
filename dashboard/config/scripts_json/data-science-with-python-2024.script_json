@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-03 00:48:22 UTC",
+    "serialized_at": "2024-10-03 20:29:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -297,7 +297,7 @@
       "position": 1,
       "properties": {
         "duration": 45,
-        "name": "Pre-Assessment"
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "d67a0120-374a-4efe-bdc0-4c0e4be44156",
@@ -2669,6 +2669,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci U2 Pre-Test_2024-pilot"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -4691,6 +4694,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci U2 Post-Test_2024-pilot"
+        ],
         "progression": "Unit 2 Assessment"
       },
       "bonus": false,

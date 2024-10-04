@@ -3,9 +3,9 @@ layout: wide
 ---
 
 :ruby
-  @header["title"] = hoc_s("hoc_activities_archive.heading")
+  @header["title"] = hoc_s("hoc_activities_more.heading")
 
-  tutorials = DB[:cdo_tutorials_archive].all
+  tutorials = DB[:cdo_tutorials_more].all
 
 :css
 
@@ -30,10 +30,10 @@ layout: wide
   %section
     .wrapper
       %h1.no-margin-top
-        =hoc_s("hoc_activities_archive.heading")
-      %p=hoc_s("hoc_activities_archive.desc_01")
-      %p=hoc_s("hoc_activities_archive.desc_02")
-      %p=hoc_s("hoc_activities_archive.desc_03")
+        =hoc_s("hoc_activities_more.heading")
+      %p=hoc_s("hoc_activities_more.desc_01")
+      %p=hoc_s("hoc_activities_more.desc_02")
+      %p=hoc_s("hoc_activities_more.desc_03")
       %ul
         - tutorials.each do |value|
           %li
