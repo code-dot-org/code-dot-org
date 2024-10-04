@@ -284,7 +284,9 @@ module UsersHelper
   end
 
   def account_linking_lock_reason(user)
-    return I18n.t('auth.parental_permission_required') unless Policies::ChildAccount.compliant?(user)
+    if !Policies::ChildAccount.compliant?(user) || Policies::ChildAccount.grace_period?(user)
+      return I18n.t('auth.parental_permission_required')
+    end
 
     nil
   end
