@@ -1,0 +1,30 @@
+name 'Data Sci U1 Pre Q4_2024-pilot'
+
+
+
+wrong 'Both Price and Review as qualitative.'
+right 'Price as quantitative, Review as qualitative.'
+wrong 'Price as qualitative, Review as quantitative.'
+wrong 'Both Price and Review as quantitative.'
+
+
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Analyze the following dataset:
+
+```
+| ID  | Product    | Price | Review    |
+|-----|------------|-------|-----------|
+| 001 | Laptop     | 1200  | Excellent |
+| 002 | Tablet     | 600   | Good      |
+| 003 | Smartphone | 800   | Average   |
+
+```
+What do the values in the "Price" and "Review" columns represent in terms of data types?
+
+MARKDOWN
