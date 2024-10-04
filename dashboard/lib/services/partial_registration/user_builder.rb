@@ -29,8 +29,6 @@ module Services
 
           if SharedConstants::NON_SCHOOL_OPTIONS.to_h.value?(user_params[:school_info_attributes]['schoolId'])
             user_params[:school_info_attributes]['schoolId'] = nil
-          else
-            user_params[:school] = user_params[:school_info_attributes]['schoolId']
           end
           school_params = {
             school_id: user_params[:school_info_attributes]['schoolId'],
@@ -68,8 +66,6 @@ module Services
           :email_preference_request_ip,
           :email_preference_source,
           :email_preference_form_kind,
-          :school,
-          :school_info_id,
           {school_info_attributes: [:schoolId, :schoolName, :schoolType, :schoolZip, :schoolState, :country, :fullAddress]},
           :age,
           :parent_email_preference_email,
