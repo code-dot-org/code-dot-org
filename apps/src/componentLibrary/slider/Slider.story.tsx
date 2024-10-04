@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import Slider, {SliderProps} from './index';
 
 export default {
-  title: 'DesignSystem/[WIP]Slider', // eslint-disable-line storybook/no-title-property-in-meta
+  title: 'DesignSystem/Slider', // eslint-disable-line storybook/no-title-property-in-meta
   component: Slider,
 } as Meta;
 
