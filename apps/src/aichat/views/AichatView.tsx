@@ -318,7 +318,7 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
         ariaLabel={'Start Over'}
         size={'xs'}
         type="tertiary"
-        className={moduleStyles.aichatViewButton}
+        className={moduleStyles.startOverButton}
       />
     </div>
   );
@@ -329,24 +329,19 @@ const renderInstructionsHeaderRight = () => {
     <ActionDropdown
       name="default"
       labelText="hello"
+      size="xs"
       triggerButtonProps={{
-        color: 'purple',
-        type: 'primary',
+        type: 'tertiary',
         isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'black',
+        icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
       }}
       options={[
         {
-          value: 'option-1',
-          label: 'Option 1',
-          icon: {iconName: 'check', iconStyle: 'solid'},
-          onClick: () => console.log('option 1'),
-        },
-        {
-          value: 'option-2',
-          label: 'Option 2',
-          icon: {iconName: 'xmark', iconStyle: 'solid'},
-          onClick: () => console.log('option 2'),
+          value: 'teacherOnboardingModal',
+          label: 'About AI Chat Lab',
+          icon: {iconName: 'circle-info', iconStyle: 'solid'},
+          onClick: () => console.log('teacher onboarding modal'),
         },
       ]}
     />
