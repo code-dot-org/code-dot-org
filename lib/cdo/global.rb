@@ -32,9 +32,9 @@ module Cdo
 
     # Returns the parsed configuration for the given region.
     def self.load_config(region)
-      root = File.expand_path(File.join('..', '..'), __dir__)
-      data = YAML.load_file(File.join(root, "config", "global", "#{region}.yml")) || {}
-      data.deep_symbolize_keys
+      raise ArgumentError, "Region #{region} is not available" unless REGIONS.include?(region)
+      configs = YAML.load_file(CDO.dir('config', 'global', "#{region}.yml")) || {}
+      configs.deep_symbolize_keys
     end
   end
 end
