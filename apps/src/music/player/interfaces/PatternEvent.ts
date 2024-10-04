@@ -17,6 +17,5 @@ export interface PatternEventValue {
 
 export interface PatternTickEvent {
   tick: number;
-  src: string;
   note: number;
 }

@@ -1,0 +1,15 @@
+name 'Data Sci U2 Post Q7_2024-pilot'
+
+question 'Which answer correctly matches the Python methods with their intended use case for exploratory data analysis?'
+
+wrong 'Using `agg()` to compute the total sum of all values in a single column and using `sum()` to find the maximum and minimum values in multiple columns simultaneously.' 
+wrong 'Using `sum()` to count the number of unique values in a single column and using `agg()` to sort the DataFrame based on the values of a specific column.' 
+wrong 'Using `agg()` to find both the total sum and average values in multiple columns simultaneously and using `sum()` to identify the maximum value in each column.'
+right 'Using `sum()` to compute the total sum of all values in a single column and using `agg()` to apply multiple aggregation functions to multiple columns.' 
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

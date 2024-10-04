@@ -3,6 +3,9 @@ import React, {AriaAttributes} from 'react';
 
 import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './simpleDropdown.module.scss';
 
@@ -34,7 +37,13 @@ export interface SimpleDropdownProps extends AriaAttributes {
    * 'black' stands for black dropdown that'll be rendered on the white/light background. */
   color?: 'white' | 'black' | 'gray';
   /** SimpleDropdown size */
-  size: ComponentSizeXSToL;
+  size?: ComponentSizeXSToL;
+  /** SimpleDropdown helper message */
+  helperMessage?: string;
+  /** TextField helper icon */
+  helperIcon?: FontAwesomeV6IconProps;
+  /** SimpleDropdown error message */
+  errorMessage?: string;
 }
 
 /**
@@ -60,6 +69,9 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   id,
   className,
   labelText,
+  helperMessage,
+  helperIcon,
+  errorMessage,
   dropdownTextThickness = 'thick',
   isLabelVisible = true,
   disabled = false,
@@ -92,6 +104,9 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
           value={selectedValue}
           id={id}
           disabled={disabled}
+          className={classNames({
+            [moduleStyles.hasError]: errorMessage,
+          })}
           {...ariaProps}
         >
           {itemGroups.length > 0
@@ -111,6 +126,23 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
               ))}
         </select>
       </div>
+      {!errorMessage && (helperMessage || helperIcon) && (
+        <div className={moduleStyles.helperSection}>
+          {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
+          {helperMessage && <span>{helperMessage}</span>}
+        </div>
+      )}
+      {errorMessage && (
+        <div
+          className={classNames(
+            moduleStyles.errorSection,
+            moduleStyles.helperSection
+          )}
+        >
+          <FontAwesomeV6Icon iconName={'circle-exclamation'} />
+          <span>{errorMessage}</span>
+        </div>
+      )}
     </label>
   );
 };

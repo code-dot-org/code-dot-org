@@ -1,0 +1,89 @@
+// This file can't be a module since it is overriding styles on the SmallFooter component
+// that is rendered outside of lab2.  Because it's not a module, it should only be imported in
+// components that are part of lazy-loaded lab2 entry points (see entrypoint.ts files
+// under apps/src/...) Otherwise, we might inadvertantly apply these styles to all labs,
+// including light-mode labs.  Even then, if we switch levels once this file is imported,
+// the styles will persist until the page is reloaded. This isn't ideal for level
+// progressions that include a mix of light and dark mode labs.
+
+// Another note: This is mostly a copy pasta from the .music-black rules in application.scss
+// and I18nDropdown/style.css.  If music lab becomes a lazy-loaded entry point, this file can be
+// applied in MusicView rather than the current approach that music lab is applying the
+// .music-black class.
+
+@import 'color.scss';
+
+.small-footer-base {
+  background-color: initial;
+  border-top: initial;
+}
+
+#page-small-footer {
+  user-select: none;
+
+  .small-footer-base {
+    .version-caption {
+      display: none;
+    }
+
+    > p {
+      color: $light_white;
+    }
+  }
+
+  .copyright-button {
+    height: 1.625rem;
+    width: 1.625rem;
+    box-sizing: border-box;
+    border: solid 1px $light_white;
+    background-color: $light_black;
+    color: $light_white;
+  }
+}
+
+.languageSelect {
+  > div {
+    select {
+      border-color: $light_white;
+      background-color: $light_black;
+      color: $light_white;
+    }
+    &::after {
+      background-color: initial;
+
+      // This will otherwise get overridden by the simpleDropdown DSCO component
+      color: $light_white !important;
+    }
+    &::before {
+      background-color: initial;
+      color: $light_white;
+    }
+
+    &:has(select:hover) {
+      select:not(:disabled) {
+        color: $light_white;
+        background-color: $light_black;
+      }
+      &::before {
+        color: $light_white;
+      }
+      &::after {
+        color: $light_white;
+      }
+    }
+
+    &:has(select:active) {
+      select:not(:disabled) {
+        color: $light_white;
+        background-color: $light_black;
+      }
+
+      &::before {
+        color: $light_white;
+      }
+      &::after {
+        color: $light_white;
+      }
+    }
+  }
+}
