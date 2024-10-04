@@ -1339,7 +1339,7 @@ end
 
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
-  navigate_to url
+  @browser.navigate.to url
 end
 
 Then /^I switch to the embedded view of current project(?: with query "(.*)")?$/ do |query|
