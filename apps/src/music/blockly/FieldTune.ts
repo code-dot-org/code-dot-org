@@ -7,6 +7,8 @@ import {getNoteName} from '../utils/Notes';
 import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
 import TunePanel, {TunePanelProps} from '../views/TunePanel';
 
+import styles from './fields.module.scss';
+
 const color = require('@cdo/apps/util/color');
 const experiments = require('@cdo/apps/util/experiments');
 
@@ -169,6 +171,7 @@ export default class FieldTune extends Field {
     this.newDiv.style.width = 'auto';
     this.newDiv.style.backgroundColor = color.dark_black;
     this.newDiv.style.padding = '5px';
+    this.newDiv.className = styles.blocklyDropdownFullHeightClass;
 
     return this.newDiv;
   }

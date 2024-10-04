@@ -8,6 +8,8 @@ import experiments from '@cdo/apps/util/experiments';
 import {generateGraphDataFromPattern} from '../utils/Patterns';
 import PatternPanel from '../views/PatternPanel';
 
+import styles from './fields.module.scss';
+
 const FIELD_WIDTH = 32;
 const FIELD_HEIGHT = 18;
 const FIELD_PADDING = 2;
@@ -24,6 +26,7 @@ class FieldPattern extends GoogleBlockly.Field {
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
     this.backgroundElement = null;
+    this.onValueChange = value => this.setValue(value);
   }
 
   saveState() {
@@ -92,9 +95,10 @@ class FieldPattern extends GoogleBlockly.Field {
     this.renderContent();
 
     this.newDiv_.style.color = color.neutral_light;
-    this.newDiv_.style.width = '420px';
+    // this.newDiv_.style.width = '420px';
     this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
+    this.newDiv_.className = styles.blocklyDropdownFullHeightClass;
 
     return this.newDiv_;
   }
@@ -107,9 +111,7 @@ class FieldPattern extends GoogleBlockly.Field {
     ReactDOM.render(
       <PatternPanel
         initValue={this.getValue()}
-        onChange={value => {
-          this.setValue(value);
-        }}
+        onChange={this.onValueChange}
       />,
       this.newDiv_
     );

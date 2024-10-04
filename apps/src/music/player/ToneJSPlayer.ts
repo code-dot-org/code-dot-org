@@ -3,6 +3,7 @@ import {
   GrainPlayer,
   PingPongDelay,
   Player,
+  Reverb,
   Sampler,
   ToneAudioNode,
   Transport,
@@ -130,10 +131,18 @@ class ToneJSPlayer implements AudioPlayer {
       }
     });
 
+    // TODO: Put behind URL flag
+    const reverb = new Reverb({
+      decay: 1,
+      wet: 0.3,
+    }).toDestination();
+
+    await reverb.ready;
+
     // Create a separate sampler for each set of effects
     const effectsSamplers: {[effectsKey: string]: Sampler} = {
       // Default Sampler without effects
-      [EMPTY_EFFECTS_KEY]: new Sampler(urls).toDestination(),
+      [EMPTY_EFFECTS_KEY]: new Sampler(urls).connect(reverb),
     };
     for (const keyString of Object.keys(this.effectBusses)) {
       const sampler = new Sampler(urls);
