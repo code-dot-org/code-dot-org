@@ -4,13 +4,15 @@ import {useSelector} from 'react-redux';
 import {
   fetchStudentChatHistory,
   selectAllVisibleMessages,
-  setShowWarningModal,
+  setShowModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
+import TeacherOnboardingModal from '@cdo/apps/aiComponentLibrary/warningModal/TeacherOnboardingModal';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {getShortName} from '../utils';
 
@@ -48,9 +50,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showWarningModal, studentChatHistory} = useAppSelector(
-    state => state.aichat
-  );
+  const {showModal, studentChatHistory} = useAppSelector(state => state.aichat);
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const visibleItems = useSelector(selectAllVisibleMessages);
@@ -133,14 +134,48 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  const onCloseWarningModal = useCallback(
-    () => dispatch(setShowWarningModal(false)),
-    [dispatch]
-  );
+  const onCloseModal = useCallback(() => {
+    if (
+      isUserTeacher &&
+      tryGetLocalStorage('teacherSawOnboarding', 'no') !== 'yes'
+    ) {
+      trySetLocalStorage('teacherSawOnboarding', 'yes');
+    }
+    dispatch(setShowModal(false));
+  }, [dispatch, isUserTeacher]);
+
+  const isTeacherFirstAichatEncounter = useCallback(() => {
+    if (isUserTeacher) {
+      // trySetLocalStorage('teacherSawOnboarding', 'no'); // For testing - set back to 'no'.
+      const teacherSawOnboarding = tryGetLocalStorage(
+        'teacherSawOnboarding',
+        'no'
+      );
+      if (teacherSawOnboarding !== 'yes') {
+        if (showModal) {
+          trySetLocalStorage('teacherSawOnboarding', 'inProgress');
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+    return false;
+  }, [isUserTeacher, showModal]);
+
+  const displayAichatModal = useCallback(() => {
+    if (showModal) {
+      return isTeacherFirstAichatEncounter() ? (
+        <TeacherOnboardingModal onClose={onCloseModal} />
+      ) : (
+        <ChatWarningModal onClose={onCloseModal} />
+      );
+    }
+  }, [isTeacherFirstAichatEncounter, onCloseModal, showModal]);
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
+      {displayAichatModal()}
       {viewAsUserId ? (
         <Tabs {...tabArgs} />
       ) : (
