@@ -111,6 +111,7 @@ def main
       CAP_LINKS
       LMS_LINKS
       USER_TYPES
+      NON_SCHOOL_OPTIONS
       US_STATES
     ), 
     file_type: 'ts'

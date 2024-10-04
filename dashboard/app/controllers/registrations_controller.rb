@@ -156,6 +156,12 @@ class RegistrationsController < Devise::RegistrationsController
   # POST /users
   #
   def create
+    if params[:new_sign_up].present?
+      session[:user_return_to] ||= params[:user_return_to]
+      @user = Services::PartialRegistration::UserBuilder.call(request: request)
+      sign_in @user
+    end
+
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
         Honeybadger.notify(
@@ -164,12 +170,6 @@ class RegistrationsController < Devise::RegistrationsController
         )
       end
       super
-    end
-
-    if params[:new_sign_up].present?
-      session[:user_return_to] ||= params[:user_return_to]
-      @user = Services::PartialRegistration::UserBuilder.call(request: request)
-      sign_in @user
     end
 
     if current_user && current_user.errors.blank?
