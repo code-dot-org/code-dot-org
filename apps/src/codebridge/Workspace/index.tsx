@@ -81,7 +81,6 @@ const Workspace = () => {
           />
         </div>
         <div className={moduleStyles.workspaceWarningArea}>
-          {' '}
           {isStartMode && (
             <Alert
               text={
