@@ -72,6 +72,11 @@ const availableCallouts: AvailableCallouts = {
   },
 };
 
+interface Target {
+  left: number;
+  top: number;
+}
+
 /**
  * Renders one of several pre-defined callouts.
  *
@@ -91,16 +96,9 @@ const Callouts: React.FunctionComponent = () => {
     calloutId => availableCallouts[calloutId]
   );
 
-  const calloutIndex = callout.index;
-
-  interface Target {
-    left: number;
-    top: number;
-  }
-
   const targets: Target[] = [];
 
-  validCallouts?.map(validCallout => {
+  validCallouts?.forEach(validCallout => {
     const element = document.querySelector(validCallout.selector);
     const elementRect = element?.getBoundingClientRect();
     if (elementRect && elementRect.width > 0) {
@@ -115,6 +113,8 @@ const Callouts: React.FunctionComponent = () => {
 
   const openToolboxCategory =
     validCallouts && validCallouts[0].openToolboxCategory;
+
+  const calloutIndex = callout.index;
 
   useEffect(() => {
     const toolbox = Blockly.getMainWorkspace()?.getToolbox();
