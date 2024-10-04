@@ -53,6 +53,8 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
   leftButtonProps?: ButtonProps;
   /** Props for the right control button */
   rightButtonProps?: ButtonProps;
+  /** Custom class name */
+  className?: string;
 }
 
 const defaultSliderButtonProps: ButtonProps = {
@@ -83,10 +85,11 @@ const sliderTrackColorsMap = {
 //  - centered mode +
 //  - percents mode +
 // * styles
+// * cleanup
 // * add stories +
 // * add tests +
-// * cleanup
-// * update README
+// * update README +
+// * width - 300px default, should be adjustable with custom styles +
 
 /**
  * ### Production-ready Checklist:
@@ -96,7 +99,7 @@ const sliderTrackColorsMap = {
  * * (see apps/test/unit/componentLibrary/SliderTest.tsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Slider Component.
  * Can be used to render a slider or as a part of bigger/more complex components (e.g. some forms).
@@ -117,6 +120,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   maxValue = 100,
   leftButtonProps,
   rightButtonProps,
+  className,
   ...HTMLInputAttributes
 }) => {
   const labelId = `${name}-label`;
@@ -131,8 +135,9 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   const maxSliderValue =
     isPercentMode && minValue === undefined ? 100 : maxValue;
 
-  // Calculate the center value based on min and max values
-  const centerValue = (Number(minValue) + Number(maxValue)) / 2;
+  // TODO: Uncomment when working on adding steps support OR working on adding center mark
+  // // Calculate the center value based on min and max values
+  // const centerValue = (Number(minValue) + Number(maxValue)) / 2;
 
   // Calculate percentage fill for gradient
   const calculateFillPercent = useCallback(
@@ -240,7 +245,8 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     <div
       className={classnames(
         moduleStyles.slider,
-        moduleStyles[`slider-${color}`]
+        moduleStyles[`slider-${color}`],
+        className
       )}
     >
       <div className={moduleStyles.sliderLabelSection}>
@@ -260,6 +266,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             {...defaultSliderButtonProps}
             color={color === 'white' ? 'white' : 'black'}
             onClick={() => handleControlButtonClick('subtract')}
+            disabled={disabled}
             {...leftButtonProps}
           />
         )}
@@ -277,20 +284,21 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             style={{background: backgroundStyle}} // Apply dynamic background gradient style
             {...HTMLInputAttributes}
           />
-          {/* Render center mark */}
-          {isCentered && (
-            <div
-              className={moduleStyles.centerMark}
-              data-testid="slider-center-mark"
-              style={{
-                left: `calc(${
-                  ((centerValue - Number(minSliderValue)) /
-                    (Number(maxSliderValue) - Number(minSliderValue))) *
-                  100
-                }% - 1px)`,
-              }}
-            />
-          )}
+          {/* // TODO: Uncomment when working on adding steps support OR working on adding center mark*/}
+          {/*/!* Render center mark *!/*/}
+          {/*{isCentered && (*/}
+          {/*  <div*/}
+          {/*    className={moduleStyles.centerMark}*/}
+          {/*    data-testid="slider-center-mark"*/}
+          {/*    style={{*/}
+          {/*      left: `calc(${*/}
+          {/*        ((centerValue - Number(minSliderValue)) /*/}
+          {/*          (Number(maxSliderValue) - Number(minSliderValue))) **/}
+          {/*        100*/}
+          {/*      }% - 1px)`,*/}
+          {/*    }}*/}
+          {/*  />*/}
+          {/*)}*/}
 
           {/*// TODO: Uncomment when working on adding steps support*/}
           {/*/!* Render visual step marks *!/*/}
@@ -311,6 +319,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
             {...defaultSliderButtonProps}
             color={color === 'white' ? 'white' : 'black'}
             onClick={() => handleControlButtonClick('add')}
+            disabled={disabled}
             {...rightButtonProps}
           />
         )}
