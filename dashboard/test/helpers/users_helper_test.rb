@@ -524,7 +524,7 @@ class UsersHelperTest < ActionView::TestCase
 
     before do
       Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
-      Policies::ChildAccount.stubs(:grace_period?).with(user).returns(user_in_grace_period?)
+      Policies::ChildAccount::ComplianceState.stubs(:grace_period?).with(user).returns(user_in_grace_period?)
     end
 
     it 'returns nil' do
