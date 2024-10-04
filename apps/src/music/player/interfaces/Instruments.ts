@@ -6,5 +6,7 @@ import {TuneEvent} from './TuneEvent';
 export function hasInstrument(
   event: PlaybackEvent
 ): event is ChordEvent | TuneEvent | PatternEvent {
-  return 'instrument' in event;
+  return (
+    event.type === 'chord' || event.type === 'tune' || event.type === 'pattern'
+  );
 }
