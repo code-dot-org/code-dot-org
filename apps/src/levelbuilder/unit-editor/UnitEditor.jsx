@@ -84,8 +84,8 @@ class UnitEditor extends React.Component {
       '',
     ]),
     initialTopicTags: PropTypes.arrayOf(PropTypes.string),
-    // Using keys here so the snake case equivalent of values
-    // would get deserialized, and are preferred for easier querying
+    // Using keys here so the snake case equivalent of values would get
+    // deserialized, and are preferred for easier querying by RED team
     initialContentArea: PropTypes.oneOf([
       ...Object.keys(CurriculumContentArea),
       '',
