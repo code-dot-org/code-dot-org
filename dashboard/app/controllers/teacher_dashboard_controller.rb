@@ -4,6 +4,8 @@ class TeacherDashboardController < ApplicationController
   rescue_from CanCan::AccessDenied do
     if params[:course_version_name]
       redirect_to "/courses/#{params[:course_version_name]}"
+    elsif params[:unitName]
+      redirect_to "/s/#{params[:unitName]}"
     else
       redirect_to "/home"
     end
