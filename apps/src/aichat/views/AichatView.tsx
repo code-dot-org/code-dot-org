@@ -4,6 +4,7 @@ import React, {useCallback, useEffect} from 'react';
 
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import ActionDropdown from '@cdo/apps/componentLibrary/dropdown/actionDropdown/ActionDropdown';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
@@ -244,6 +245,7 @@ const AichatView: React.FunctionComponent = () => {
                 headerContent={commonI18n.instructions()}
                 className={moduleStyles.panelContainer}
                 headerClassName={moduleStyles.panelHeader}
+                rightHeaderContent={renderInstructionsHeaderRight()}
               >
                 <Instructions
                   beforeNextLevel={beforeNextLevel}
@@ -307,7 +309,7 @@ const AichatView: React.FunctionComponent = () => {
 
 const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
   return (
-    <div className={moduleStyles.chatHeaderRight}>
+    <div>
       <Button
         icon={{iconStyle: 'solid', iconName: 'refresh'}}
         isIconOnly={true}
@@ -319,6 +321,35 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
         className={moduleStyles.aichatViewButton}
       />
     </div>
+  );
+};
+
+const renderInstructionsHeaderRight = () => {
+  return (
+    <ActionDropdown
+      name="default"
+      labelText="hello"
+      triggerButtonProps={{
+        color: 'purple',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      }}
+      options={[
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => console.log('option 1'),
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => console.log('option 2'),
+        },
+      ]}
+    />
   );
 };
 
