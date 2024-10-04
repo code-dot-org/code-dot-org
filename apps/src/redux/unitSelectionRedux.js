@@ -4,6 +4,7 @@
 
 // Action type constants
 export const SET_SCRIPT = 'unitSelection/SET_SCRIPT';
+export const SET_UNIT_NAME = 'unitSelection/SET_UNIT_NAME';
 export const SET_COURSES = 'unitSelection/SET_COURSES';
 
 export const START_LOADING_COURSES = 'unitSelection/START_LOADING_COURSES';
@@ -12,6 +13,7 @@ export const FINISHED_LOADING_COURSES =
 
 // Action creators
 export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
+export const setUnitName = unitName => ({type: SET_UNIT_NAME, unitName});
 export const setCoursesWithProgress = coursesWithProgress => ({
   type: SET_COURSES,
   coursesWithProgress,
@@ -105,6 +107,7 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
 // Initial state of unitSelectionRedux
 const initialState = {
   scriptId: null,
+  unitName: null,
   coursesWithProgress: [],
   isLoadingCoursesWithProgress: false,
 };
@@ -126,6 +129,15 @@ export default function unitSelection(state = initialState, action) {
     return {
       ...state,
       scriptId: action.scriptId,
+    };
+  }
+
+  // TODO: instead of setting unit name here, we should be updating the sections list based on the selected section
+  // And adding the script information to the section object.
+  if (action.type === SET_UNIT_NAME) {
+    return {
+      ...state,
+      unitName: action.unitName,
     };
   }
 

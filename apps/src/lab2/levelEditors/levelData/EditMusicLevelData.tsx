@@ -7,7 +7,7 @@ import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import {BlockMode, DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
-import globals from '@cdo/apps/music/globals';
+import MusicRegistry from '@cdo/apps/music/MusicRegistry';
 import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
 import MusicPlayer from '@cdo/apps/music/player/MusicPlayer';
 import {MusicLevelData} from '@cdo/apps/music/types';
@@ -36,7 +36,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
 }) => {
   useEffect(() => {
     setUpBlocklyForMusicLab();
-    globals.setPlayer(new MusicPlayer());
+    MusicRegistry.player = new MusicPlayer();
   }, []);
 
   const [levelData, setLevelData] = useState(initialLevelData);

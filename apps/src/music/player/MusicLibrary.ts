@@ -184,12 +184,9 @@ export default class MusicLibrary {
       return this.libraryJson?.defaultSound;
     }
 
-    // The fallback is the first non-instrument/kit folder's first non-preview sound.
+    // The fallback is the first available pack's first available non-preview sound.
     // We will skip restricted folders unless it's the currently selected pack.
-    const firstFolder = this.packs.find(
-      group =>
-        !group.type && (!group.restricted || group.id === this.currentPackId)
-    );
+    const firstFolder = this.getAvailableSounds()[0];
     const firstSound = firstFolder?.sounds.find(
       sound => sound.type !== 'preview'
     );

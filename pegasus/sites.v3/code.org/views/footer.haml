@@ -1,36 +1,26 @@
+- require 'cdo/footer'
+- options = {ge_region: params[:ge_region]}
+- footer_contents = Cdo::Footer.get_footer_contents(options)
 %footer#pagefooter
   .content
     .left{:style=>"float:left; max-width: 80%;"}
-      %a.whitefooterlink{:href=>"/privacy", :style=>"color: #ffa400;"}
-        - @privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
-        - if @privacy_updated
-          !=I18n.t(:footer_privacy_policy_updated)
+      - @privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
+      - links = (footer_contents[:links][:code_org] || []).map(&:dup)
+      - links.each_with_index do |link, index|
+        - if @privacy_updated && link[:title] == 'privacy_policy'
+          - link[:title] = 'privacy_policy_updated'
+        - if link[:domain] == 'studio.code.org'
+          - link[:href] = CDO.studio_url(link[:url])
+        - elsif link[:domain] == 'code.org'
+          - link[:href] = CDO.code_org_url(link[:url])
         - else
-          !=I18n.t(:footer_privacy_policy)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/cookies"}
-        !=I18n.t(:footer_cookie_notice)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/about"}
-        !=I18n.t(:footer_about)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/partners"}
-        !=I18n.t(:footer_partners)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"https://medium.com/@codeorg", :target=>"_blank"}
-        !=I18n.t(:footer_blog)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/donate"}
-        !=I18n.t(:footer_donate)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/shop"}
-        !=I18n.t(:footer_store)
-      .dim &nbsp; | &nbsp;
-      %a#support.whitefooterlink{:href=>"http://support.code.org/", :target=>"_blank"}
-        !=I18n.t(:footer_support)
-      .dim &nbsp; | &nbsp;
-      %a.whitefooterlink{:href=>"/tos"}
-        !=I18n.t(:footer_terms)
+          - link[:href] = link[:url]
+          - link[:rel] = "noopener noreferrer nofollow"
+        %a.whitefooterlink{link.except(:title, :url, :domain)}
+          !=I18n.t("footer_#{link[:title]}")
+        - unless index == links.length - 1
+          .dim &nbsp; | &nbsp;
+
       %small.dim
         !=I18n.t(:footer_trademark, current_year: Time.now.year, cs_discoveries: "CS Discoveries&reg;")
         %br

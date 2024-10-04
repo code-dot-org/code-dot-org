@@ -10,7 +10,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {StickyContainer} from 'react-sticky';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 import FilterHeader from './filterHeader';
@@ -538,12 +537,6 @@ export default class TutorialExplorer extends React.Component {
   }
 
   render() {
-    const bottomLinksContainerStyle = {
-      ...styles.bottomLinksContainer,
-      textAlign: getResponsiveValue({xs: 'left', md: 'right'}),
-      visibility: this.shouldShowTutorials() ? 'visible' : 'hidden',
-    };
-
     const grade = this.state.filters.grade[0];
 
     return (
@@ -637,17 +630,6 @@ export default class TutorialExplorer extends React.Component {
                   />
                 )}
               </div>
-
-              <div style={bottomLinksContainerStyle}>
-                <div>
-                  <a
-                    style={styles.bottomLinksLink}
-                    href="https://support.code.org/hc/en-us/articles/115001306531-How-can-students-with-special-needs-or-disabilities-participate-"
-                  >
-                    {i18n.bottomSpecialNeedsLink()}
-                  </a>
-                </div>
-              </div>
             </div>
           </StickyContainer>
         )}
@@ -655,21 +637,6 @@ export default class TutorialExplorer extends React.Component {
     );
   }
 }
-
-const styles = {
-  bottomLinksContainer: {
-    padding: '10px 7px 40px 7px',
-    fontSize: 13,
-    lineHeight: '17px',
-    clear: 'both',
-  },
-  bottomLinksLink: {
-    ...fontConstants['main-font-semi-bold'],
-  },
-  bottomLinksLinkFirst: {
-    paddingBottom: 10,
-  },
-};
 
 function getFilters({mobile}) {
   const filters = [

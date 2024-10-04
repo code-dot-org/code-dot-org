@@ -249,7 +249,7 @@ class SchoolDistrict < ApplicationRecord
       if !new_districts.empty? && is_dry_run
         summary_message <<
           "Districts#{future_tense_dry_run} added:\n" \
-          "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
+          "#{new_districts.pluck(:name).join("\n")}\n"
       end
 
       CDO.log.info summary_message

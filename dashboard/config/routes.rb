@@ -200,6 +200,7 @@ Dashboard::Application.routes.draw do
       post '/users/finish_sign_up', to: 'registrations#new'
       get '/users/new_sign_up/account_type', to: 'registrations#account_type'
       get '/users/new_sign_up/login_type', to: 'registrations#login_type'
+      get '/users/gdpr_check', to: 'registrations#gdpr_check'
       get '/users/new_sign_up/finish_student_account', to: 'registrations#finish_student_account'
       get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
@@ -891,6 +892,7 @@ Dashboard::Application.routes.draw do
     end
 
     get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
+    get 'dashboardapi/unit_summary/:unit_name', to: 'api#unit_summary'
     get 'dashboardapi/lesson_materials/:unit_id', to: 'api#lesson_materials'
 
     # Wildcard routes for API controller: select all public instance methods in the controller,

@@ -10,7 +10,7 @@
         %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
       -# Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
       -# can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
-      - is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+      - is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
       - if Rails.application.config.levelbuilder_mode  && !is_standalone_project
         - if can? :edit, @level
           %li

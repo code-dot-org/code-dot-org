@@ -157,15 +157,15 @@ label.typographyLabelTwo {
 
 .courseOption {
   margin-top: 20px;
-  align-items: baseline;
+  align-items: center;
 }
 
 .flexDisplay .radio {
-  margin: 0 0 0 0;
+  margin: -2px 0 0 0;
 }
 
 .courseOptionLabel {
-  margin: 0 10px 0 5px;
+  margin: 0 0 0 5px;
 }
 
 .unitDropdown {
@@ -226,4 +226,9 @@ button.advancedSettingsButton {
       margin-left: 5px;
     }
   }
+}
+
+.taImage {
+  margin-left: 5px;
+  margin-top: -5px;
 }

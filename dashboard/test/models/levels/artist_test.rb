@@ -5,13 +5,7 @@ class ArtistTest < ActiveSupport::TestCase
     @artist = Artist.new
   end
 
-  test 'uses_google_blockly? returns true when DCDO flag is true' do
-    DCDO.stubs(:get).with('artist_google_blockly', true).returns(true)
+  test 'uses_google_blockly? returns true' do
     assert @artist.uses_google_blockly?
-  end
-
-  test 'uses_google_blockly? returns false when DCDO flag is false' do
-    DCDO.stubs(:get).with('artist_google_blockly', true).returns(false)
-    refute @artist.uses_google_blockly?
   end
 end

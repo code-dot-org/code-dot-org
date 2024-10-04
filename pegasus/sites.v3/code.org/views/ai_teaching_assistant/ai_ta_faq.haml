@@ -1,4 +1,5 @@
 :ruby
+  unit_url = "https://studio.code.org/s/csd3-2024"
   faq_items = [
     {
       question: hoc_s("ai_ta_page.faq.support.question"),
@@ -10,7 +11,7 @@
     },
     {
       question: hoc_s("ai_ta_page.faq.units.question"),
-      answer: hoc_s("ai_ta_page.faq.units.answer"),
+      answer: hoc_s("ai_ta_page.faq.units.answer_v2", markdown: :inline, locals: {unit_url: unit_url}),
     },
     {
       question: hoc_s("ai_ta_page.faq.available.question"),
@@ -18,7 +19,7 @@
     },
     {
       question: hoc_s("ai_ta_page.faq.access.question"),
-      answer: hoc_s("ai_ta_page.faq.access.answer"),
+      answer: hoc_s("ai_ta_page.faq.access.answer_v2", markdown: :inline, locals: {unit_url: unit_url}),
     },
     {
       question: hoc_s("ai_ta_page.faq.keep_up.question"),
@@ -43,6 +44,9 @@
           %li= faq_item[:list_02]
           %li= faq_item[:list_03]
         = faq_item[:answer_02]
+      - if index === 1 || index === 3
+        %a{href: "https://form.jotform.com/240863841362155"}
+          = hoc_s("ai_ta_page.faq.verification_link")
       - if index === 5
         = view :display_video_thumbnail, id: "ai_ta_demo", video_code: "Lj7uZx-BKhw", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/ai_teaching_assistant/ai_ta_demo_v1.mp4"
 

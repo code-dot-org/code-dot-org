@@ -14,7 +14,7 @@
     }
   },
   "https://studio.code.org/s/music-tutorial-2024/lessons/1/levels/3": {
-    "long_instructions": "#### Play more sounds\n\nTry playing one sound after another.\n\n1.  Drag one or more [play][0] blocks into the program. \n2.  Then press [Run][1].",
+    "long_instructions": "#### Play more sounds\n\nTry playing one sound after another.\n\n-   Drag one or more [play][0] blocks into the program. \n-   Then press [Run][1].",
     "validations": {
       "musiclab_intro_change_sound_v2_6054328e-dc95-47fe-8c65-980ce00299f1": "Great work! You added new sounds to your song. ",
       "musiclab_intro_change_sound_v2_9ddfc062-5d48-4090-aa06-ff26c4a75916": "Add at least one more sound."

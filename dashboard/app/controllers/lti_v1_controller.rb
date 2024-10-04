@@ -183,6 +183,12 @@ class LtiV1Controller < ApplicationController
           metadata: metadata,
         )
 
+        # Add user's lti_user_identity to deployment if it doesn't exist
+        lti_user_identity = Queries::Lti.lti_user_identity(user, integration)
+        unless deployment.lti_user_identities.include?(lti_user_identity)
+          deployment.lti_user_identities << lti_user_identity
+        end
+
         # If this is the user's first login, send them into the account linking flow
         unless user.lms_landing_opted_out
           Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)

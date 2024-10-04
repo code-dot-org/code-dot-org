@@ -31,6 +31,7 @@ import {renderTeacherPanel} from './teacherPanelHelpers';
 import {setViewType, ViewType} from './viewAsRedux';
 
 var progress = module.exports;
+export default progress;
 
 function showDisabledBubblesModal() {
   const div = $('<div>');
@@ -246,11 +247,19 @@ progress.initCourseProgress = function (scriptData) {
 /* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
 progress.initViewAs = function (store, isSignedInUser, isInstructor) {
+  progress.initViewAsWithoutStore(store.dispatch, isSignedInUser, isInstructor);
+};
+
+progress.initViewAsWithoutStore = function (
+  dispatch,
+  isSignedInUser,
+  isInstructor
+) {
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
   if (isInstructor) {
     initialViewAs = ViewType.Instructor;
-    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+    dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 
   // If current user is signed out or an instructor, allow the
@@ -260,7 +269,7 @@ progress.initViewAs = function (store, isSignedInUser, isInstructor) {
     initialViewAs = query.viewAs || initialViewAs;
   }
 
-  store.dispatch(setViewType(initialViewAs));
+  dispatch(setViewType(initialViewAs));
 };
 
 progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {

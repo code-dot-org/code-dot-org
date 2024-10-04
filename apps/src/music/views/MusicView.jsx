@@ -26,7 +26,7 @@ import {
   DEFAULT_PACK,
 } from '../constants';
 import {AnalyticsContext} from '../context';
-import Globals from '../globals';
+import MusicRegistry from '../MusicRegistry';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
@@ -121,7 +121,7 @@ class UnconnectedMusicView extends React.Component {
       key && Key[key.toUpperCase()],
       this.analyticsReporter
     );
-    Globals.setPlayer(this.player);
+    MusicRegistry.player = this.player;
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
@@ -252,6 +252,12 @@ class UnconnectedMusicView extends React.Component {
       this.sequencer = new MusicPlayerStubSequencer();
     }
 
+    this.library.setAllowedSounds(levelData?.sounds);
+
+    let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
+    this.library.setCurrentPackId(packId);
+    this.props.setPackId(packId);
+
     this.props.isPlayView
       ? this.musicBlocklyWorkspace.initHeadless()
       : this.musicBlocklyWorkspace.init(
@@ -264,14 +270,9 @@ class UnconnectedMusicView extends React.Component {
           levelData?.addFunctionCallsToToolbox
         );
 
-    this.library.setAllowedSounds(levelData?.sounds);
     this.props.setShowInstructions(
       !!levelData?.text || !!this.props.longInstructions
     );
-
-    let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
-    this.library.setCurrentPackId(packId);
-    this.props.setPackId(packId);
 
     // Check if the user has already made changes to the code on the project level.
     let codeChangedOnProjectLevel = false;
@@ -311,11 +312,14 @@ class UnconnectedMusicView extends React.Component {
       this.musicBlocklyWorkspace.getAllBlocks()
     );
 
-    Globals.setShowSoundFilters(
+    MusicRegistry.showSoundFilters =
       AppConfig.getValue('show-sound-filters') !== 'false' &&
-        (AppConfig.getValue('show-sound-filters') === 'true' ||
-          levelData?.showSoundFilters)
-    );
+      (AppConfig.getValue('show-sound-filters') === 'true' ||
+        levelData?.showSoundFilters);
+
+    MusicRegistry.hideAiTemperature =
+      levelData?.hideAiTemperature ||
+      AppConfig.getValue('hide-ai-temperature') === 'true';
 
     Lab2Registry.getInstance()
       .getMetricsReporter()

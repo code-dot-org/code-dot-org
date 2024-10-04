@@ -15,7 +15,7 @@ const UnitCalendar: React.FC = () => {
   const lessons = useSelector(state => getCurrentUnitData(state)?.lessons);
   const [isLoading, setIsLoading] = useState(true);
   const [weeklyInstructionalMinutes, setWeeklyInstructionalMinutes] =
-    useState<number>(WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS[0]);
+    useState<number>(WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS[4]);
 
   useEffect(() => {
     if (lessons) {
@@ -37,8 +37,7 @@ const UnitCalendar: React.FC = () => {
   };
 
   return (
-    <div>
-      <h2>{i18n.weeklyLessonLayout()}</h2>
+    <div style={styles.contentContainer}>
       <div style={styles.minutesPerWeekWrapper}>
         <div style={styles.minutesPerWeekDescription}>
           {i18n.instructionalMinutesPerWeek()}
@@ -89,5 +88,8 @@ const styles = {
   minutesPerWeekDescription: {
     fontWeight: 'bold' as const,
     marginRight: 10,
+  },
+  contentContainer: {
+    width: 'fit-content',
   },
 };

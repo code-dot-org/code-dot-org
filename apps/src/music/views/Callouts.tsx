@@ -36,6 +36,9 @@ const availableCallouts: {
   'play-sound-block-workspace': {
     selector: `g[data-id="${BlockTypes.WHEN_RUN_SIMPLE2}"] g[data-id="${BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2}"]`,
   },
+  'play-drums-ai-block-workspace': {
+    selector: `.blocklyWorkspace g[data-id="${BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2}"]`,
+  },
   'play-sounds-together-block-workspace': {
     selector: `.blocklyWorkspace g[data-id="${BlockTypes.PLAY_SOUNDS_TOGETHER}"] path`,
   },

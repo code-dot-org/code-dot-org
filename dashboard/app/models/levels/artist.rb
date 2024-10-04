@@ -61,9 +61,8 @@ class Artist < Blockly
     %w(artist artist_zombie elsa anna)
   end
 
-  # Use a DCDO flag here so we can revert back to CDO Blockly without a deploy
   def uses_google_blockly?
-    DCDO.get('artist_google_blockly', true)
+    true
   end
 
   def self.create_from_level_builder(params, level_params)

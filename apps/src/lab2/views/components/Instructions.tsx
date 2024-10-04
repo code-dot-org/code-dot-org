@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {Button} from '@cdo/apps/componentLibrary/button';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {
   isPredictAnswerLocked,
@@ -69,6 +69,12 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
+  const finishUrl = useAppSelector(
+    state => state.lab.levelProperties?.finishUrl
+  );
+  const finishDialog = useAppSelector(
+    state => state.lab.levelProperties?.finishDialog
+  );
 
   // If there are no validation conditions, we can show the continue button so long as
   // there is another level and manageNavigation is true.
@@ -115,6 +121,8 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       layout={layout}
       handleInstructionsTextClick={handleInstructionsTextClick}
       offerTts={offerTts}
+      finishUrl={finishUrl}
+      finishDialog={finishDialog}
       className={className}
     />
   );
@@ -150,6 +158,8 @@ interface InstructionsPanelProps {
   /** Optional classname for the container */
   className?: string;
   offerTts?: boolean;
+  finishUrl?: string;
+  finishDialog?: string;
 }
 
 /**
@@ -178,6 +188,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   predictAnswerLocked,
   className,
   offerTts,
+  finishUrl,
+  finishDialog,
 }) => {
   const [isFinished, setIsFinished] = useState(false);
 
@@ -188,19 +200,24 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   const canShowFinishButton = showFinishButton;
 
   const onFinish = useCallback(() => {
-    if (beforeFinish) {
+    if (!isFinished && beforeFinish) {
       beforeFinish();
+      setIsFinished(true);
     }
-    setIsFinished(true);
-  }, [beforeFinish]);
+
+    if (finishUrl) {
+      if (finishDialog === 'hoc2024') {
+        shareLab2Project(finishUrl);
+      } else {
+        window.location.href = finishUrl;
+      }
+    }
+  }, [isFinished, beforeFinish, finishDialog, finishUrl]);
 
   // Reset the Finish button state when it changes from shown to hidden.
   useEffect(() => {
     setIsFinished(false);
   }, [canShowFinishButton]);
-
-  const finalMessage =
-    'You finished this lesson! Check in with your teacher for the next activity';
 
   return (
     <div
@@ -276,11 +293,9 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   <Button
                     id="instructions-finish-button"
                     onClick={onFinish}
-                    disabled={isFinished}
                     className={moduleStyles.buttonInstruction}
                     text={commonI18n.finish()}
                   />
-                  {isFinished && <Heading6>{finalMessage}</Heading6>}
                 </>
               )}
             </div>

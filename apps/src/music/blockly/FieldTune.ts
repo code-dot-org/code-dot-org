@@ -3,8 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {TuneEventValue} from '../player/interfaces/TuneEvent';
-import MusicLibrary from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
 import {getNoteName} from '../utils/Notes';
 import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
 import TunePanel, {TunePanelProps} from '../views/TunePanel';
@@ -18,17 +16,7 @@ const FIELD_HEIGHT = 18;
 const FIELD_PADDING = 2;
 
 interface FieldTuneOptions {
-  getLibrary: () => MusicLibrary;
-  previewTune: MusicPlayer['previewTune'];
-  previewNote: MusicPlayer['previewNote'];
-  cancelPreviews: MusicPlayer['cancelPreviews'];
   currentValue: TuneEventValue;
-  setupSampler: MusicPlayer['setupSampler'];
-  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
-  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
-  registerInstrumentLoadCallback: (
-    callback: (instrumentName: string) => void
-  ) => void;
 }
 
 /**
@@ -192,10 +180,8 @@ export default class FieldTune extends Field {
 
     ReactDOM.render(
       React.createElement<TunePanelProps>(TunePanel, {
-        library: this.options.getLibrary(),
         initValue: this.getValue(),
         onChange: this.onValueChange,
-        ...this.options,
       }),
       this.newDiv
     );

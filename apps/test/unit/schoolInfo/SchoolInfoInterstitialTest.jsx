@@ -1,954 +1,423 @@
-import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import '@testing-library/jest-dom';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolInfoInterstitial from '@cdo/apps/schoolInfo/SchoolInfoInterstitial';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
+import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
+import {
+  CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
+  SELECT_A_SCHOOL,
+  SELECT_COUNTRY,
+  US_COUNTRY_CODE,
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+// Mock the dependencies
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  sendEvent: jest.fn(),
+}));
+
+jest.mock('@cdo/apps/schoolInfo/utils/updateSchoolInfo', () => ({
+  updateSchoolInfo: jest.fn(),
+}));
+
+const mockUpdateSchoolInfo = updateSchoolInfo;
+const mockSendEvent = analyticsReporter.sendEvent;
 
 describe('SchoolInfoInterstitial', () => {
-  const MINIMUM_PROPS = {
+  let mockFetch;
+  let mockOnClose = jest.fn();
+
+  const defaultProps = {
     scriptData: {
-      formUrl: '',
-      authTokenName: 'auth_token',
-      authTokenValue: 'fake_auth_token',
-      existingSchoolInfo: {},
+      existingSchoolInfo: {
+        country: 'US',
+        school_id: '1',
+        school_name: 'Test School',
+        school_zip: '12345',
+      },
+      usIp: true,
+      formUrl: 'form/url',
+      authTokenName: 'authTokenName',
+      authTokenValue: 'authTokenValue',
     },
-    onClose: function () {},
+    onClose: mockOnClose,
   };
 
-  beforeEach(() => sinon.stub(firehoseClient, 'putRecord'));
-  afterEach(() => firehoseClient.putRecord.restore());
+  function renderDefault(overrideProps = {}) {
+    render(<SchoolInfoInterstitial {...defaultProps} {...overrideProps} />);
+  }
 
-  it('renders an uncloseable dialog with school info inputs, a dismiss button and a save button', () => {
-    const wrapper = shallow(<SchoolInfoInterstitial {...MINIMUM_PROPS} />);
-    expect(wrapper).to.containMatchingElement(
-      <BaseDialog>
-        <div>
-          <div>
-            <SchoolInfoInputs
-              country={''}
-              schoolType={''}
-              ncesSchoolId={''}
-              schoolName={''}
-              schoolLocation={''}
-              useLocationSearch={true}
-              showErrors={false}
-              showRequiredIndicator={true}
-              onCountryChange={wrapper.instance().onCountryChange}
-              onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
-              onSchoolChange={wrapper.instance().onSchoolChange}
-              onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
-            />
-          </div>
-          <div>
-            <Button
-              text={i18n.dismiss()}
-              onClick={wrapper
-                .find('Button[id="dismiss-button"]')
-                .prop('onClick')}
-            />
-            <Button
-              text={i18n.save()}
-              onClick={wrapper.find('Button[id="save-button"]').prop('onClick')}
-            />
-          </div>
-        </div>
-      </BaseDialog>
-    );
+  beforeEach(() => {
+    jest.clearAllMocks();
+    sessionStorage.clear();
+    const mockResponse = {
+      ok: true,
+      json: jest.fn().mockResolvedValue([
+        {nces_id: '1', name: 'Cool School'},
+        {nces_id: '2', name: 'Other School'},
+      ]),
+    };
+    mockFetch = jest.fn().mockResolvedValue(mockResponse);
+    window.fetch = mockFetch;
   });
 
-  it('closes the school info interstitial modal when the dismiss button is clicked', () => {
-    const wrapper = mount(
-      <SchoolInfoInterstitial
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {},
-        }}
-      />
-    );
-    const wrapperInstance = wrapper.instance();
-    sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
-    /**
-     * When you shallow render a component, the render method of that component is called.
-     * The onClick is already bound to the original, so if you do not re-render the component, spying on the
-     * component will fail.  Thus, the original dissmissSchoolInfoForm function is called and the spied function
-     * will not be called. This will cause the assertion that checks if the dismissSchoolInfoForm function was
-     * called to fail.  However, the second assertion that checks if the modal was closed will pass.
-     * The typical approach to solve this is to trigger a force update that also triggers a re-render of the
-     * component and consequently, the click event listener is re-set with the spied method.
-     * However, forcing a re-render using "wrapper.update()" does not work.
-     * Using wrapper.setState({}) forces a re-render of the component. setState triggers a re-render of the
-     * component and since an empty object is passed there is no change to the current state.  This is a hacky
-     * way of handling the re-render.  The test was updated to use mount() and the component was re-rendered by
-     * forcing an update on the instance of the wrapper.
-     */
-    wrapper.instance().forceUpdate();
-    wrapper.find('Button[id="dismiss-button"]').simulate('click');
-    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
-    expect(wrapper.state('isOpen')).to.be.false;
+  it('should render the component correctly', async () => {
+    renderDefault();
+    await waitFor(() => {
+      expect(
+        screen.getByRole('button', {name: i18n.save()})
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('button', {name: i18n.dismiss()})
+      ).toBeInTheDocument();
+    });
   });
 
-  it('closes the school info confirmation dialog when the dismiss button is clicked', () => {
-    const onClose = sinon.spy();
-    const wrapper = mount(
-      <SchoolInfoInterstitial
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {},
-        }}
-        onClose={onClose}
-      />
-    );
-    const wrapperInstance = wrapper.instance();
-    sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
-    wrapper.instance().forceUpdate();
-    wrapper.find('Button[id="dismiss-button"]').simulate('click');
-    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
-    expect(wrapper.state('isOpen')).to.be.false;
-    expect(onClose).to.have.been.calledOnce;
-  });
-
-  it('passes empty school info if created with no existing school info', () => {
-    const wrapper = shallow(
-      <SchoolInfoInterstitial
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {},
-        }}
-      />
-    );
-    expect(wrapper).to.containMatchingElement(
-      <SchoolInfoInputs
-        country={''}
-        schoolType={''}
-        ncesSchoolId={''}
-        schoolName={''}
-        schoolLocation={''}
-        useLocationSearch={true}
-        onCountryChange={wrapper.instance().onCountryChange}
-        onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
-        onSchoolChange={wrapper.instance().onSchoolChange}
-        onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
-      />
-    );
-  });
-
-  it('passes existing school info if it is provided', () => {
-    const wrapper = shallow(
-      <SchoolInfoInterstitial
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {
-            school_id: '123',
-            country: 'United States',
-            school_type: 'public',
-            school_name: 'Test School',
-            full_address: 'Seattle',
-          },
-        }}
-      />
-    );
-    expect(wrapper).to.containMatchingElement(
-      <SchoolInfoInputs
-        country={'United States'}
-        schoolType={'public'}
-        ncesSchoolId={'123'}
-        schoolName={'Test School'}
-        schoolLocation={'Seattle'}
-        useLocationSearch={true}
-        onCountryChange={wrapper.instance().onCountryChange}
-        onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
-        onSchoolChange={wrapper.instance().onSchoolChange}
-        onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
-      />
-    );
-  });
-
-  it('clears the school ID when country is changed', () => {
-    const wrapper = shallow(
-      <SchoolInfoInterstitial
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {
-            school_id: '123',
-            country: 'United States',
-            school_type: 'public',
-            school_name: 'Test School',
-            full_address: 'Seattle',
-          },
-        }}
-      />
-    );
-    expect(wrapper.state('country')).to.equal('United States');
-    expect(wrapper.state('ncesSchoolId')).to.equal('123');
-    wrapper.instance().onCountryChange(undefined, {value: 'Sweden'});
-    expect(wrapper.state('country')).to.equal('Sweden');
-    expect(wrapper.state('ncesSchoolId')).to.equal('');
-  });
-
-  it('clears the school ID when school_type is changed', () => {
-    const wrapper = shallow(
-      <SchoolInfoInterstitial
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {
-            school_id: '123',
-            country: 'United States',
-            school_type: 'public',
-            school_name: 'Test School',
-            full_address: 'Seattle',
-          },
-        }}
-      />
-    );
-    expect(wrapper.state('schoolType')).to.equal('public');
-    expect(wrapper.state('ncesSchoolId')).to.equal('123');
-    wrapper.instance().onSchoolTypeChange({target: {value: 'after school'}});
-    expect(wrapper.state('schoolType')).to.equal('after school');
-    expect(wrapper.state('ncesSchoolId')).to.equal('');
-  });
-
-  it('interprets initial country "US" as "United States"', () => {
-    const wrapper = shallow(
-      <SchoolInfoInterstitial
-        {...MINIMUM_PROPS}
-        scriptData={{
-          ...MINIMUM_PROPS.scriptData,
-          existingSchoolInfo: {
-            country: 'US',
-          },
-        }}
-      />
-    );
-    expect(wrapper.find(SchoolInfoInputs)).to.have.prop(
-      'country',
-      'United States'
-    );
-  });
-
-  describe('initial NCES ID', () => {
-    // Tricky behavior of inner component null (or other falsy) NCES id
-    // shows the school dropdown in an initial state.  An NCES id of '-1' will
-    // show the dropdown with the "I can't find my school" checkbox checked
-    // so additional fields are visible.
-    // We attempt to create the most appropriate initial state based on
-    // previously entered information.
-
-    it('is the provided ID if it is provided', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              school_id: '123',
-            },
-          }}
-        />
-      );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop(
-        'ncesSchoolId',
-        '123'
+  it('should call sendEvent when component mounts', async () => {
+    renderDefault();
+    await waitFor(() => {
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        EVENTS.SCHOOL_INTERSTITIAL_SHOW,
+        {},
+        PLATFORMS.BOTH
       );
     });
+  });
 
-    it('is blank if country is not US', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'Canada',
-              school_type: 'public',
-              school_name: 'Test School Name',
-            },
-          }}
-        />
-      );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop('ncesSchoolId', '');
+  it('should call sendEvent and updateSchoolInfo on save button click', async () => {
+    renderDefault();
+
+    await waitFor(() => {
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
     });
 
-    it('is blank if school type is not public/private/charter', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'homeschool',
-              school_name: 'Test School Name',
-            },
-          }}
-        />
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
+
+    await waitFor(() => {
+      expect(mockUpdateSchoolInfo).toHaveBeenCalledWith({
+        schoolId: '1',
+        country: 'US',
+        schoolName: 'Test School',
+        schoolZip: '12345',
+      });
+
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
+        {
+          hasNcesId: 'true',
+          attempt: 1,
+        },
+        PLATFORMS.BOTH
       );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop('ncesSchoolId', '');
+
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
+        {
+          attempt: 1,
+        },
+        PLATFORMS.BOTH
+      );
+
+      expect(mockOnClose).toHaveBeenCalled();
+    });
+  });
+
+  it('should handle errors from updateSchoolInfo and retry', async () => {
+    mockUpdateSchoolInfo.mockRejectedValueOnce(new Error('Update failed'));
+
+    renderDefault();
+
+    await waitFor(() => {
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
     });
 
-    it('is blank if none of school name/address have been entered', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
+
+    await waitFor(() => {
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
+        {
+          hasNcesId: 'true',
+          attempt: 1,
+        },
+        PLATFORMS.BOTH
+      );
+
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
+        {
+          attempt: 1,
+        },
+        PLATFORMS.BOTH
+      );
+
+      expect(
+        screen.getByText(i18n.schoolInfoInterstitialUnknownError())
+      ).toBeInTheDocument();
+    });
+
+    // second failure
+    mockUpdateSchoolInfo.mockRejectedValueOnce(new Error('Update failed'));
+
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
+
+    await waitFor(() => {
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
+        {
+          hasNcesId: 'true',
+          attempt: 2,
+        },
+        PLATFORMS.BOTH
+      );
+
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
+        {
+          attempt: 2,
+        },
+        PLATFORMS.BOTH
+      );
+
+      expect(mockOnClose).toHaveBeenCalled();
+    });
+  });
+
+  it('should call sendEvent on dismiss button click', async () => {
+    await act(async () => {
+      renderDefault();
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: i18n.dismiss()}));
+
+    await waitFor(() => {
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
+        {},
+        PLATFORMS.BOTH
+      );
+      expect(mockOnClose).toHaveBeenCalled();
+    });
+  });
+
+  describe('initial school info state', () => {
+    it('disables submit form with no info', async () => {
+      await act(async () => {
+        renderDefault({
+          scriptData: {
+            ...defaultProps.scriptData,
             existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'public',
+              country: SELECT_COUNTRY,
+              school_id: SELECT_A_SCHOOL,
               school_name: '',
-              full_address: '',
+              school_zip: '',
             },
-          }}
-        />
-      );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop('ncesSchoolId', '');
-    });
-
-    // Matrix of conditions where NCES ID initializes to "-1":
-    ['public', 'private', 'charter'].forEach(schoolType => {
-      ['school_name', 'full_address'].forEach(schoolDetailFieldName => {
-        it(`is "-1" if country is US and schoolType is ${schoolType} and ${schoolDetailFieldName} was provided`, () => {
-          const wrapper = shallow(
-            <SchoolInfoInterstitial
-              {...MINIMUM_PROPS}
-              scriptData={{
-                ...MINIMUM_PROPS.scriptData,
-                existingSchoolInfo: {
-                  country: 'United States',
-                  school_type: schoolType,
-                  school_name: '',
-                  [schoolDetailFieldName]: 'provided value',
-                },
-              }}
-            />
-          );
-          expect(wrapper.find(SchoolInfoInputs)).to.have.prop(
-            'ncesSchoolId',
-            '-1'
-          );
+            usIp: false,
+          },
         });
       });
+
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeDisabled();
     });
   });
 
-  describe('form submission', () => {
-    let server;
-
-    beforeEach(() => {
-      server = sinon.createFakeServer();
-    });
-
-    afterEach(() => {
-      server.restore();
-    });
-
-    it('does not submit form with no info', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {},
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests.length).to.equal(0);
-      expect(wrapper.state('errors').country).to.equal(true);
-    });
-
-    it('does not submit form with only country=US', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
+  describe('US country selected', () => {
+    it('disables submit form if zip code is missing', async () => {
+      await act(async () => {
+        renderDefault({
+          scriptData: {
+            ...defaultProps.scriptData,
             existingSchoolInfo: {
-              country: 'United States',
+              country: US_COUNTRY_CODE,
+              school_id: 'abc',
+              school_name: '',
+              school_zip: '',
             },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests.length).to.equal(0);
-      expect(wrapper.state('errors')).to.not.have.property('country');
-      expect(wrapper.state('errors').schoolType).to.equal(true);
+            usIp: false,
+          },
+        });
+      });
+
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeDisabled();
     });
 
-    it('does not submit form with US and an NCES school type', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
+    it('disables submit form if school is not selected and not named', async () => {
+      await act(async () => {
+        renderDefault({
+          scriptData: {
+            ...defaultProps.scriptData,
             existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'public',
+              country: US_COUNTRY_CODE,
+              school_id: SELECT_A_SCHOOL,
+              school_name: '',
+              school_zip: '12345',
             },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests.length).to.equal(0);
-      expect(wrapper.state('errors')).to.not.have.property('country');
-      expect(wrapper.state('errors')).to.not.have.property('school_type');
+            usIp: false,
+          },
+        });
+      });
+
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeDisabled();
     });
 
-    it('submits with US, NCES school type, and school id from dropdown', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
+    it('enables submit form if zip is provided and not in a school setting', async () => {
+      await act(async () => {
+        renderDefault({
+          scriptData: {
+            ...defaultProps.scriptData,
             existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'public',
-              school_id: '123',
+              country: US_COUNTRY_CODE,
+              school_id: NO_SCHOOL_SETTING,
+              school_name: '',
+              school_zip: '12345',
             },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      // No need to send anything but ID if it's available...
-      // All other info will be backfilled from records on the server.
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bschool_id%5D=123',
-        ].join('&')
-      );
+            usIp: false,
+          },
+        });
+      });
+
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
+
+      fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
+
+      expect(mockUpdateSchoolInfo).toHaveBeenCalled();
     });
 
-    it('submits with US, NCES school type, and school name', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
+    it('enables submit with US and school id from dropdown', async () => {
+      await act(async () => {
+        renderDefault({
+          scriptData: {
+            ...defaultProps.scriptData,
             existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'public',
-              school_name: 'Test School',
+              country: US_COUNTRY_CODE,
+              school_id: '1',
+              school_name: '',
+              school_zip: '12345',
             },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
+            usIp: false,
+          },
+        });
+      });
+
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
+
+      fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
+
+      expect(mockUpdateSchoolInfo).toHaveBeenCalled();
     });
 
-    it('submits with US, NCES school type, name, address', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
+    it('enables submit with US and school name', async () => {
+      await act(async () => {
+        renderDefault({
+          scriptData: {
+            ...defaultProps.scriptData,
             existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'public',
-              school_name: 'Test School',
-              full_address: '12222 SE Sunnyside Ln',
+              country: 'US',
+              school_id: CLICK_TO_ADD,
+              school_name: 'Cool School',
+              school_zip: '12345',
             },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=12222+SE+Sunnyside+Ln',
-        ].join('&')
-      );
-    });
+            usIp: false,
+          },
+        });
+      });
 
-    it('submits with US and non-NCES school type', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'organization',
-            },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
-    });
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
 
-    it('submits with US, non-NCES school type, school name', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'organization',
-              school_name: 'Test School',
-            },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
-    });
+      fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
 
-    it('does not send a name for "homeschool" school type', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'homeschool',
-              school_name: 'Test School',
-            },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=homeschool',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
-    });
-
-    it('does not send a name for "other" school type', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'other',
-              school_name: 'Test School',
-            },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=other',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
-    });
-
-    it('submits with US, non-NCES school type, school name, location', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'organization',
-              school_name: 'Test School',
-              full_address: 'Boring, OR',
-            },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Boring%2C+OR',
-        ].join('&')
-      );
-    });
-
-    it('submits with only non-US', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'Algeria',
-              school_type: '',
-            },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=Algeria',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=',
-        ].join('&')
-      );
-    });
-
-    it('submits with non-US, NCES school type', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'Tanzania',
-              school_type: 'public',
-            },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
-    });
-
-    it('submits with non-US, NCES school type, school name', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'Tanzania',
-              school_type: 'public',
-              school_name: 'Test School',
-            },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
-    });
-
-    it('submits with non-US, NCES school type, school name, location', () => {
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'Tanzania',
-              school_type: 'public',
-              school_name: 'Test School',
-              full_address:
-                'Tanzania National Stadium, Taifa Road, Dar es Salaam, Tanzania',
-            },
-          }}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Tanzania+National+Stadium%2C+Taifa+Road%2C+Dar+es+Salaam%2C+Tanzania',
-        ].join('&')
-      );
-    });
-
-    it('closes the dialog on successful submission', () => {
-      const onClose = sinon.spy();
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'public',
-              school_name: 'Test School',
-              full_address: '12222 SE Sunnyside Ln',
-            },
-          }}
-          onClose={onClose}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(onClose).not.to.have.been.called;
-
-      server.requests[0].respond(204, {}, '');
-      expect(onClose).to.have.been.calledOnce;
-    });
-
-    it('shows an error message on first failed submission', () => {
-      const onClose = sinon.spy();
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'public',
-              school_name: 'Test School',
-              full_address: '12222 SE Sunnyside Ln',
-            },
-          }}
-          onClose={onClose}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      server.requests[0].respond(404, {}, '');
-      expect(onClose).not.to.have.been.called;
-      expect(wrapper).to.containMatchingElement(
-        <p>We encountered an error with your submission. Please try again.</p>
-      );
-    });
-
-    it('closes the dialog on a second failed submission', () => {
-      const onClose = sinon.spy();
-      const wrapper = shallow(
-        <SchoolInfoInterstitial
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'United States',
-              school_type: 'public',
-              school_name: 'Test School',
-              full_address: '12222 SE Sunnyside Ln',
-            },
-          }}
-          onClose={onClose}
-        />
-      );
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      server.requests[0].respond(404, {}, '');
-      expect(onClose).not.to.have.been.called;
-
-      wrapper.find('Button[id="save-button"]').simulate('click');
-      server.requests[1].respond(404, {}, '');
-      expect(onClose).to.have.been.calledOnce;
+      expect(mockUpdateSchoolInfo).toHaveBeenCalled();
     });
   });
 
-  // Mirrors a set of tests in
-  // dashboard/test/models/school_info_test.rb
-  describe('isSchoolInfoComplete', () => {
-    it('is complete if all school info is provided', () => {
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: 'public',
-          schoolName: 'Test School',
-          schoolLocation: 'Seattle, WA, USA',
-          ncesSchoolId: '-1',
-        })
-      ).to.be.true;
+  describe('non-US country selected', () => {
+    it('disables submit with only non-US country', async () => {
+      await act(async () => {
+        renderDefault({
+          scriptData: {
+            ...defaultProps.scriptData,
+            existingSchoolInfo: {
+              country: 'UK',
+              school_id: SELECT_A_SCHOOL,
+              school_name: '',
+              school_zip: '',
+            },
+            usIp: false,
+          },
+        });
+      });
+
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeDisabled();
     });
 
-    it('is complete if all school info but location is provided', () => {
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: 'public',
-          schoolName: 'Test School',
-          schoolLocation: '',
-          ncesSchoolId: '-1',
-        })
-      ).to.be.true;
+    it('enables submit with non-US and school name', async () => {
+      await act(async () => {
+        renderDefault({
+          scriptData: {
+            ...defaultProps.scriptData,
+            existingSchoolInfo: {
+              country: 'UK',
+              school_id: SELECT_A_SCHOOL,
+              school_name: 'UK School',
+              school_zip: '',
+            },
+            usIp: false,
+          },
+        });
+      });
+
+      expect(screen.getByRole('button', {name: i18n.save()})).toBeEnabled();
+
+      fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
+
+      expect(mockUpdateSchoolInfo).toHaveBeenCalled();
+    });
+  });
+
+  it('shows an error message on first failed submission', async () => {
+    mockUpdateSchoolInfo.mockRejectedValueOnce(new Error('Update failed'));
+
+    await act(async () => {
+      renderDefault();
     });
 
-    it('is complete if school is found by NCES id', () => {
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
+
+    await waitFor(() => {
       expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: 'public',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '12345',
-        })
-      ).to.be.true;
+        screen.getByText(i18n.schoolInfoInterstitialUnknownError())
+      ).toBeInTheDocument();
+      expect(mockOnClose).not.toHaveBeenCalled();
+    });
+  });
+
+  it('closes the dialog on a second failed submission', async () => {
+    mockUpdateSchoolInfo.mockRejectedValueOnce(new Error('Update failed'));
+
+    await act(async () => {
+      renderDefault();
     });
 
-    it('is complete if school type is homeschool/after school/organization/other', () => {
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: 'homeschool',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '',
-        })
-      ).to.be.true;
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
 
+    await waitFor(() => {
       expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: 'after school',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '',
-        })
-      ).to.be.true;
-
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: 'organization',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '',
-        })
-      ).to.be.true;
-
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: 'other',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '',
-        })
-      ).to.be.true;
+        screen.getByText(i18n.schoolInfoInterstitialUnknownError())
+      ).toBeInTheDocument();
+      expect(mockOnClose).not.toHaveBeenCalled();
     });
 
-    it('is complete if country is not US', () => {
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'Canada',
-          schoolType: '',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '',
-        })
-      ).to.be.true;
-    });
+    // second failure
+    mockUpdateSchoolInfo.mockRejectedValueOnce(new Error('Update failed'));
 
-    it('is not complete without country', () => {
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: '',
-          schoolType: '',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '',
-        })
-      ).to.be.false;
-    });
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
 
-    it('is not complete if country is US but no school type is set', () => {
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: '',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '',
-        })
-      ).to.be.false;
-    });
-
-    it('is not complete if country is US and school type is public/private/charter but other information is missing', () => {
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: 'public',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '',
-        })
-      ).to.be.false;
-
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: 'private',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '',
-        })
-      ).to.be.false;
-
-      expect(
-        SchoolInfoInterstitial.isSchoolInfoComplete({
-          country: 'United States',
-          schoolType: 'charter',
-          schoolName: '',
-          schoolLocation: '',
-          ncesSchoolId: '',
-        })
-      ).to.be.false;
+    await waitFor(() => {
+      expect(mockOnClose).toHaveBeenCalled();
     });
   });
 });

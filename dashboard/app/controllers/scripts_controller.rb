@@ -331,10 +331,12 @@ class ScriptsController < ApplicationController
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
       :lesson_groups,
+      :content_area,
       resourceIds: [],
       studentResourceIds: [],
       project_widget_types: [],
       supported_locales: [],
+      topic_tags: [],
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]

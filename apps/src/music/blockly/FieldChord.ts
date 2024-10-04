@@ -3,8 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
-import MusicLibrary from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 import {getNoteName} from '../utils/Notes';
 import ChordPanel, {ChordPanelProps} from '../views/ChordPanel';
@@ -18,17 +16,7 @@ const FIELD_HEIGHT = 18;
 const FIELD_PADDING = 2;
 
 interface FieldChordOptions {
-  getLibrary: () => MusicLibrary;
-  previewChord: MusicPlayer['previewChord'];
-  previewNote: MusicPlayer['previewNote'];
-  cancelPreviews: MusicPlayer['cancelPreviews'];
   currentValue: ChordEventValue;
-  setupSampler: MusicPlayer['setupSampler'];
-  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
-  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
-  registerInstrumentLoadCallback: (
-    callback: (instrumentName: string) => void
-  ) => void;
 }
 
 /**
@@ -192,10 +180,8 @@ export default class FieldChord extends Field {
 
     ReactDOM.render(
       React.createElement<ChordPanelProps>(ChordPanel, {
-        library: this.options.getLibrary(),
         initValue: this.getValue(),
         onChange: this.onValueChange,
-        ...this.options,
       }),
       this.newDiv
     );

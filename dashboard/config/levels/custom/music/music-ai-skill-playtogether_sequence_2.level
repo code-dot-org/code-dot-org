@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "long_instructions": "#### Play Together Sequence\r\n\r\nAdd at least two sounds into each [play together](#clickable=play-sounds-together-block) block.\r\n",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "validations": [
       {
         "key": "music-ai-skill-playtogether_sequence_7e5b311d-9f61-4fdf-8431-5b05e71bcc8e",
@@ -120,7 +120,7 @@
     "name_suffix": "_2",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-23T17:50:24.117+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence\"},{\"changed_at\":\"2024-09-23 18:41:04 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:42:56 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 22:11:03 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 22:14:01 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 18:39:10 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 18:40:31 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-23T17:50:24.117+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence\"},{\"changed_at\":\"2024-09-23 18:41:04 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:42:56 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 22:11:03 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 22:14:01 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 18:39:10 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-24 18:40:31 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-26 06:54:44 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

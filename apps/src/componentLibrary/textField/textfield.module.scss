@@ -16,6 +16,8 @@
     border-radius: 0.25rem;
     border: 1px solid unset;
     caret-color: $light_primary_500;
+    box-sizing: border-box;
+    height: unset;
 
     &:focus-visible {
       outline: 2px solid $light_primary_500;

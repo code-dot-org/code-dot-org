@@ -517,7 +517,7 @@ class SectionTest < ActiveSupport::TestCase
         course_display_name: script.course_version.localized_title,
         course_offering_id: script.course_version.course_offering.id,
         course_version_id: script.course_version.id,
-        unit_id: nil,
+        unit_id: script.id,
         course_id: nil,
         hidden: false,
         restrict_section: false,

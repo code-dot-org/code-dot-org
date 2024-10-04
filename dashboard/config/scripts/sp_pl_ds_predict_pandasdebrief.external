@@ -1,0 +1,28 @@
+name 'SP-PL-DS-Predict_PandasDebrief'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Debriefing Predict and Run
+
+![](https://images.code.org/0775ea481cc2e512a5a7e4c631f05dd7-image-1727200443017.png)
+
+## Prediction Discussion
+
+
+#### While you may not fully understand the code yet, the lists of data separated by commas stands out.
+
+#### **You may have noticed:** 
+
+- ####  The code imports pandas and reads *USGasPrices.csv* into *gas_data*.
+- ####  **'print(gas_data.shape)'** outputs the number of rows and columns.
+
+#### **You might wonder:**
+- ####  Why pandas is shortened to *pd*? 
+- ####  What other functions are in panda?
+
+--- 
+#### Remember, at this stage, the aim isn't for students to master these concepts yet, but rather to encourage them to analyze and discuss the code.
+
+
+MARKDOWN

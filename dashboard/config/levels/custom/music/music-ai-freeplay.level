@@ -6,6 +6,7 @@
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
+    "finish_dialog": "hoc2024",
     "encrypted": "false",
     "instructions_important": "false",
     "long_instructions": "###Your turn\r\nThere are lots of new sounds and effects in your toolbox now. Explore and make some music!",

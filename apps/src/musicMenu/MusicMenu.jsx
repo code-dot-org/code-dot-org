@@ -59,14 +59,6 @@ const optionsList = [
     ],
   },
   {
-    name: 'sounds-panel-2',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Use original sounds panel (default).'},
-      {value: 'true', description: 'Use new sounds panel.'},
-    ],
-  },
-  {
     name: 'play-tune-block',
     type: 'radio',
     values: [
@@ -80,6 +72,14 @@ const optionsList = [
     values: [
       {value: 'false', description: 'Hide play pattern AI block (default).'},
       {value: 'true', description: 'Show play pattern AI block.'},
+    ],
+  },
+  {
+    name: 'hide-ai-temperature',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Show AI temperature (default).'},
+      {value: 'true', description: 'Hide AI temperature.'},
     ],
   },
   {

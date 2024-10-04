@@ -53,7 +53,7 @@ module AichatSagemakerHelper
 
   def self.request_sagemaker_chat_completion(inputs, selected_model_id)
     create_sagemaker_client.invoke_endpoint(
-      endpoint_name: selected_model_id, # required
+      endpoint_name: get_endpoint_name(selected_model_id), # required
       body: inputs.to_json, # required
       content_type: "application/json"
     )
@@ -71,6 +71,10 @@ module AichatSagemakerHelper
 
   def self.can_request_aichat_chat_completion?
     DCDO.get("aichat_chat_completion", true)
+  end
+
+  def self.get_endpoint_name(model_id)
+    "#{model_id}-#{rack_env?(:production) ? 'production' : 'test'}"
   end
 end
 

@@ -2,6 +2,12 @@
 @import 'style-constants';
 @import '@cdo/apps/componentLibrary/common/styles/colors.css';
 
+@media print {
+  .sidebarContainer {
+    display: none !important;
+  }
+}
+
 .pageAndSidebar {
   display: flex;
   flex-direction: row;

@@ -5,19 +5,42 @@ description 'description here'
 markdown <<MARKDOWN
 # Data Science Course Overview
  
-#### The Data Science unit is designed as a standalone unit for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.
+#### The Data Science Course can serve as a standalone unit for 9-12 students that can be integrated seamlessly into any existing Computer Science curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.
 
-<img src="https://images.code.org/384395754f9060f684fba88efd6d679b-image-1724077977393.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 200px; margin: 50px 50px 50px 20px; ">
-
-## In this unit, students will: 
+#### This course consists of two units. You can choose to teach one or both units, whichever works for your class and schedule.
 
 
-- #### Understand the fundamental concepts of data science.
+
+## Unit l: Foundations of Data Science
+#### This unit consists of 13 lessons and takes about three weeks to complete and does not have python programming.
+
+<img src="https://images.code.org/384395754f9060f684fba88efd6d679b-image-1724077977393.png" alt="icon with computer and data symbols" style="border-radius:10px; float: right; ; height: 200px; margin: 50px 00px 50px 20px; ">
+
+#### **Students will;**
+- #### Understand the **fundamental concepts** of data science
 - #### Engage in hands-on activities that involve data analysis, data manipulation, and data visualizations
 - #### Explore and discuss the ethical implications and responsibilities associated data science
-- #### Use Python and the Pandas library to create a community impact project
 
-##Let’s start learning!
+#### <b> Explore Unit One <a href = "https://studio.code.org/s/intro-to-data-science-2024" target = "blank" rel = "noopener noreferrer"> here </a></b>
+
+
+<div style="clear:both;"></div>
+
+## Unit 2: Data Science with Python
+
+#### This unit consists of 13 lessons and takes about 3 weeks to complete and features Python and Pandas in the new Python Lab.
+
+<img src="https://images.code.org/6fd3e81dbbba4b9575faa0cde3cf8372-image-1727728740354.png" alt="icon of computer with python logo" style="border-radius:10px; float: right; ; height: 205px; margin: 50px 0px 50px 20px; ">
+
+### **Students will:**
+- #### Explore **Python** syntax and foundational programming concepts
+- #### Utilize data science libraries like **Pandas and Matplotlib** to manipulate and visualize datasets
+- #### Apply techniques for data cleaning, filtering, and statistical analysis to answer data-driven questions.
+- #### Create custom visualizations and effectively communicate insights through a project addressing a real-world issue.
+
+#### <b>Explore Unit Two <a href = "data-science-with-python-2024" target = "blank" rel = "noopener noreferrer"> here </a>
+
+<div style="clear:both;"></div>
 
 
 MARKDOWN

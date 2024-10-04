@@ -1,9 +1,9 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';
 
 import musicI18n from '../locale';
+import MusicRegistry from '../MusicRegistry';
 import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 
 import Keybed from './Keybed';
@@ -24,31 +24,13 @@ const styleDropdownOptions: [PlayStyle, string][] = [
 ];
 
 export interface ChordPanelProps {
-  library: MusicLibrary;
   initValue: ChordEventValue;
   onChange: (value: ChordEventValue) => void;
-  previewChord: MusicPlayer['previewChord'];
-  previewNote: MusicPlayer['previewNote'];
-  cancelPreviews: MusicPlayer['cancelPreviews'];
-  setupSampler: MusicPlayer['setupSampler'];
-  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
-  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
-  registerInstrumentLoadCallback: (
-    callback: (instrumentName: string) => void
-  ) => void;
 }
 
 const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   initValue,
   onChange,
-  previewChord,
-  previewNote,
-  cancelPreviews,
-  library,
-  setupSampler,
-  isInstrumentLoading,
-  isInstrumentLoaded,
-  registerInstrumentLoadCallback,
 }) => {
   const [selectedNotes, setSelectedNotes] = useState<number[]>(initValue.notes);
   const [playStyle, setPlayStyle] = useState<PlayStyle>(initValue.playStyle);
@@ -59,10 +41,14 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [isPlayingPreview, setIsPlayingPreview] = useState(false);
 
-  const instruments: [string, string][] = library.instruments.map(folder => [
-    folder.name,
-    folder.id,
-  ]);
+  const instruments: [string, string][] = useMemo(
+    () =>
+      MusicLibrary.getInstance()?.instruments.map(folder => [
+        folder.name,
+        folder.id,
+      ]) || [],
+    []
+  );
 
   const onPressKey = useCallback(
     (note: number) => {
@@ -71,36 +57,34 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         newSelectedNotes.splice(newSelectedNotes.indexOf(note), 1);
       } else {
         newSelectedNotes.push(note);
-        previewNote(note, instrument);
+        MusicRegistry.player.previewNote(note, instrument);
       }
       setSelectedNotes(newSelectedNotes);
     },
-    [selectedNotes, instrument, setSelectedNotes, previewNote]
+    [selectedNotes, instrument, setSelectedNotes]
   );
 
   useEffect(() => {
-    if (!isInstrumentLoaded(instrument)) {
+    if (!MusicRegistry.player.isInstrumentLoaded(instrument)) {
       setIsLoading(true);
       // If the instrument is already loading, register a callback and wait for it to finish.
-      if (isInstrumentLoading(instrument)) {
-        registerInstrumentLoadCallback(instrumentName => {
-          if (instrumentName === instrument) {
-            setIsLoading(false);
+      if (MusicRegistry.player.isInstrumentLoading(instrument)) {
+        MusicRegistry.player.registerCallback(
+          'InstrumentLoaded',
+          instrumentName => {
+            if (instrumentName === instrument) {
+              setIsLoading(false);
+            }
           }
-        });
+        );
       } else {
         // Otherwise, initiate the load.
-        setupSampler(instrument, () => setIsLoading(false));
+        MusicRegistry.player.setupSampler(instrument, () =>
+          setIsLoading(false)
+        );
       }
     }
-  }, [
-    setupSampler,
-    isInstrumentLoading,
-    isInstrumentLoaded,
-    instrument,
-    setIsLoading,
-    registerInstrumentLoadCallback,
-  ]);
+  }, [setIsLoading, instrument]);
 
   useEffect(() => {
     onChange({
@@ -115,7 +99,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
   }, [selectedNotes]);
 
   const playPreview = useCallback(() => {
-    previewChord(
+    MusicRegistry.player.previewChord(
       {
         notes: selectedNotes,
         playStyle,
@@ -125,12 +109,12 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
       () => setIsPlayingPreview(false)
     );
     setIsPlayingPreview(true);
-  }, [previewChord, selectedNotes, playStyle, instrument]);
+  }, [selectedNotes, playStyle, instrument]);
 
   const stopPreview = useCallback(() => {
-    cancelPreviews();
+    MusicRegistry.player.cancelPreviews();
     setIsPlayingPreview(false);
-  }, [cancelPreviews, setIsPlayingPreview]);
+  }, [setIsPlayingPreview]);
 
   const onClear = useCallback(() => setSelectedNotes([]), [setSelectedNotes]);
 

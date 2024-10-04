@@ -62,13 +62,18 @@ export default function RubricTabButtons({
 
   return (
     <div className="uitest-rubric-tab-buttons">
-      <div className={style.rubricTabGroup}>
+      <div id="tour-tab-buttons" className={style.rubricTabGroup}>
         <SegmentedButtons
           selectedButtonValue={selectedTab}
           size="s"
           buttons={[
-            {label: i18n.rubricTabStudent(), value: TAB_NAMES.RUBRIC},
             {
+              id: 'assess-a-student-button',
+              label: i18n.rubricTabStudent(),
+              value: TAB_NAMES.RUBRIC,
+            },
+            {
+              id: 'class-data-button',
               label: i18n.rubricTabClassManagement(),
               value: TAB_NAMES.SETTINGS,
               disabled: !showSettings,

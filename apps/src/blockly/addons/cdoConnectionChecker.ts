@@ -1,5 +1,7 @@
 import GoogleBlockly, {Connection} from 'blockly/core';
 
+import {BLOCK_TYPES} from '../constants';
+
 import {customConnectionBlockTypes} from './cdoConstants';
 
 /**
@@ -9,6 +11,10 @@ import {customConnectionBlockTypes} from './cdoConstants';
  * type checks, and still looks for intersections in the arrays. Unlike the
  * default checker, check arrays that contain a custom connection type are
  * only compatible with other check arrays with the same connection type.
+ *
+ * This implementation also includes an additional check to prevent
+ * connections to inputs of function definitions that include argument_reporter
+ * shadow block.
  * @implements {Blockly.IConnectionChecker}
  */
 
@@ -37,6 +43,19 @@ export default class CdoConnectionChecker extends GoogleBlockly.ConnectionChecke
       customConnectionChecks.includes(check)
     );
     if (checkArrayOneContainsCustomType !== checkArrayTwoContainsCustomType) {
+      return false;
+    }
+
+    // Prevent connection if a shadow argument_reporter block is connected to
+    // the value input of a function definition block. This connection represents
+    // a function parameter, which should not be displaced by another block.
+    if (
+      Blockly.cdoUtils.isFunctionBlock(b.getSourceBlock()) &&
+      b.type === Blockly.ConnectionType.INPUT_VALUE &&
+      b.isConnected() &&
+      b.targetConnection?.getSourceBlock().isShadow() &&
+      b.targetConnection?.getSourceBlock().type === BLOCK_TYPES.argumentReporter
+    ) {
       return false;
     }
 

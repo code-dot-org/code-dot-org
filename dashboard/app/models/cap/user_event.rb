@@ -19,7 +19,7 @@
 #
 module CAP
   class UserEvent < ApplicationRecord
-    POLICIES = Policies::ChildAccount.state_policies.each_value.map {|policy| policy[:name]}.freeze
+    POLICIES = Policies::ChildAccount.state_policies.each_value.pluck(:name).freeze
 
     NAMES = [
       PARENT_EMAIL_SUBMIT = 'parent_email_submit'.freeze,

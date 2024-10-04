@@ -30,7 +30,7 @@
           "type": "html",
           "name": "skip_survey",
           "visibleIf": "{first_time_teaching_gen_ai} = false",
-          "html": "<h2><strong>You can skip this survey</strong></h3>\n<p></p><b><font size=3>If have already taught a Code.org Generative AI unit and completed this survey, you can go back to teaching.</p>"
+          "html": "<h2><strong>You can skip this survey</strong></h3>\n<p></p><b><font size=3>If you've already completed this survey when you taught another Code.org Gen AI unit: thank you! You do not need to complete it again.</p>"
         },
         {
           "type": "html",

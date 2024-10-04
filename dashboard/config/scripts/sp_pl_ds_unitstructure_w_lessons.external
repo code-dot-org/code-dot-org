@@ -3,38 +3,37 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Unit Structure
+# Course Structure
 
-#### The Web Development unit is divided into **two chapters**. Each chapter includes several small projects and activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of the unit.
+#### The Data Science unit is divided into **two units**. Each units includes several small projects and activities that provide an opportunity for students to practice new skills.
+
+
+## Role of the teacher
+
+#### The lessons at the start of the unit are designed to help students build foundational knowledge what data science is. All lessons within the Data Science unit are intended to be **facilitated by a teacher**. These lessons are **not designed as self-paced experiences for students** to work through at their own pace.
 
 ## Chapters
 
 ##### Click on the arrows to expand each section.
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📘 Chapter 1: Creating Webpages</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">📘 Unit 1: Introduction to Data Science</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### <strong>Description:</strong> Students use computing as a form of self-expression as they design and develop basic web pages. Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page. They also explore the privacy and intellectual property implications of publishing their work online.
+#### <strong>Description:</strong> In this unit, students explore foundational concepts of data science by developing and refining data questions for analysis. Through hands-on activities using CODAP, they practice basic data analysis, ethical data practices, and visualization techniques. The unit progresses from data science concepts to data cleaning and interpretation, culminating in a project that encourages students to craft a compelling data story using their skills.
 
-* #### Why do people create websites?
-* #### How can text communicate content, structure, and style on a web page?
-* #### How do I safely and appropriately make use of the content published on the Internet?
-* #### What strategies can I use when coding to find and fix issues?
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📗 Chapter 2: Multi-Page Websites</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">📗 Unit 2: Data Science with Python</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-#### <strong>Description:</strong> Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems. Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.
+#### <strong>Description:</strong> In this unit, students explore data analysis using Python. They begin with Python syntax and advance to using libraries like Pandas and Matplotlib to manipulate and visualize complex datasets. Students develop skills in data cleaning, filtering, and statistical analysis to answer data-driven questions. Emphasizing custom visualizations and effective communication, the unit culminates in a project that applies Python skills to address a community or school-based issue.
 
-* #### How can websites be used to address problems in the world?
-* #### What strategies can teams use to work better together?
-* #### How do I know what information can be trusted online?
 </p></div>
+</details>
 </details>
 
 ## Lessons

@@ -494,7 +494,9 @@ class Lesson < ApplicationRecord
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       lessonPlanHtmlUrl: lesson_plan_html_url,
-      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
+      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
+      standardsUrl: standards_script_path(script),
+      vocabularyUrl: vocab_script_path(script),
     }
   end
 

@@ -1079,9 +1079,9 @@ class UnitTest < ActiveSupport::TestCase
 
     [foo16, foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:teacher))
-      assert_equal(["foo-2016", "foo-2017", "foo-2018"], summary.values.map {|h| h[:name]})
-      assert_equal([true, true, false], summary.values.map {|h| h[:is_stable]})
-      assert_equal([false, true, false], summary.values.map {|h| h[:is_recommended]})
+      assert_equal(["foo-2016", "foo-2017", "foo-2018"], summary.values.pluck(:name))
+      assert_equal([true, true, false], summary.values.pluck(:is_stable))
+      assert_equal([false, true, false], summary.values.pluck(:is_recommended))
     end
   end
 
@@ -1109,9 +1109,9 @@ class UnitTest < ActiveSupport::TestCase
 
     [foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:student))
-      assert_equal(["foo-2017"], summary.values.map {|h| h[:name]})
-      assert_equal([true], summary.values.map {|h| h[:is_stable]})
-      assert_equal([true], summary.values.map {|h| h[:is_recommended]})
+      assert_equal(["foo-2017"], summary.values.pluck(:name))
+      assert_equal([true], summary.values.pluck(:is_stable))
+      assert_equal([true], summary.values.pluck(:is_recommended))
     end
   end
 
@@ -1755,6 +1755,17 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal ['English', 'fr-fr'], unit.supported_locale_names
   end
 
+  test 'initiative mapping fields' do
+    unit_init_fields = create(:script, content_area: 'k-5')
+    assert_equal "k-5", unit_init_fields.content_area
+
+    unit_init_fields.topic_tags = ['ai']
+    assert_equal ['ai'], unit_init_fields.topic_tags
+
+    unit_init_fields.topic_tags += ['maker']
+    assert_equal ['ai', 'maker'], unit_init_fields.topic_tags
+  end
+
   test 'section_hidden_unit_info' do
     teacher = create :teacher
     section1 = create :section, user: teacher
@@ -2163,7 +2174,7 @@ class UnitTest < ActiveSupport::TestCase
       Unit.any_instance.stubs(:write_script_json)
       Unit.stubs(:merge_and_write_i18n)
 
-      @standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
+      @standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021', content_area: 'k-5', topic_tags: ['ai', 'maker']
       create :course_version, content_root: @standalone_unit
 
       @deeper_learning_unit = create :script, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, professional_learning_course: 'DLP 2021'
@@ -2206,6 +2217,8 @@ class UnitTest < ActiveSupport::TestCase
       assert_equal cloned_unit.instruction_type, @standalone_unit.instruction_type
       assert_equal cloned_unit.instructor_audience, @standalone_unit.instructor_audience
       assert_equal cloned_unit.participant_audience, @standalone_unit.participant_audience
+      assert_equal cloned_unit.content_area, 'k-5'
+      assert_equal cloned_unit.topic_tags, ['ai', 'maker']
     end
 
     test 'can update markdown on clone' do

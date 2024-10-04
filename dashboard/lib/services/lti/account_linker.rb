@@ -20,7 +20,7 @@ module Services
           user.lms_landing_opted_out = true
           user.verify_teacher! if Policies::Lti.unverified_teacher?(user)
           user.save!
-          PartialRegistration.delete(session)
+          ::PartialRegistration.delete(session)
           unless rehydrated_user.id
             # For fresh LTI users who are linking their account, we want to count
             # them as "new" users for metrics, since they won't hit the registration
@@ -82,7 +82,7 @@ module Services
       # created via roster sync, there might be a fully-created user with an ID.
       # Prefer this user if it exists.
       private def find_cached_user
-        cache_key = session[PartialRegistration::SESSION_KEY]
+        cache_key = session[::PartialRegistration::SESSION_KEY]
         user_attrs = CDO.shared_cache.read(cache_key)
         return unless user_attrs
 

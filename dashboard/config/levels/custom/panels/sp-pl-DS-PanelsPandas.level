@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-09-25T20:39:21.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "Now, let's take a look some basic Panda commands.\n\n",
+        "imageUrl": "https://images.code.org/d2e70a4a110c1e9d5410159eff87744b-pandas1import.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/b8a2e80d5f6a9425971195cec6326866-pandas2csv.png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/1c7f0cb602bd26cc742d09eca8eb1350-pandas3dataframe.png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/f9368be05dbf02bf957f95a4b5061c7e-pandas4shape.png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/be8062782829369a93ac06064834a9b6-pandas5len.png",
+        "key": "sp-pl-DS-SpreadsheetVocab-79e6faa9-6b7f-4aab-a8d7-c91fdc3ca442"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/847787f3fcd57c3e2b2a92970a9f98eb-pandas6head.png",
+        "key": "sp-pl-DS-PanelsPandas-cfc88da3-3fc6-4f62-8618-22e091abd30c"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/fccb294e40fbe54e5f492d4171a902d1-pandas7tail3.png",
+        "key": "sp-pl-DS-PanelsPandas-9c3c994c-cb36-4dd7-9fe3-a0bd8f76c9fb"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-25T20:39:21.429+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-PanelsExpressions\\\"\"],\"cloned_from\":\"sp-pl-DS-PanelsExpressions\"},{\"changed_at\":\"2024-09-26 18:32:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-09-26 18:42:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-09-26 18:43:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

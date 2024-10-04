@@ -196,7 +196,7 @@ const TeacherCourseOverview: React.FC = () => {
       showVersionWarning={
         !!false && Object.values(courseSummary.course_versions).length > 1
       }
-      showRedirectWarning={false}
+      showRedirectWarning={false} // TODO: https://codedotorg.atlassian.net/browse/TEACH-1374
       redirectToCourseUrl={''}
       showAssignButton={courseSummary.show_assign_button}
       userId={userId}

@@ -1,0 +1,91 @@
+{
+  "title": "Code.org CS Ambassador Program - Training Survey",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro_text",
+          "html": "<p><h1>Thank you for being a Code.org Ambassador! </h1><h3>Your leadership will make a meaningful impact for young women in CS!</strong></p><p> We ask that you please complete this survey as a requirement of your role as a CS Ambassador. Data from this survey will provide our team access to your Code Studio account activity so that we may better support you in your role and measure program impact.</p></li></ul>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "teacher_account",
+          "title": "Are you logged in to your teacher account?",
+          "description": "If you are logged into your teacher account you will see an option to create a section on your dashboard.",
+          "choices": [
+            {
+              "value": true,
+              "text": "Yes, I am logged into my teacher account"
+            },
+            {
+              "value": false,
+              "text": "No, I am logged into my student account"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "student_account",
+          "visibleIf": "{teacher_account} = false",
+          "html": "<h2><strong>Please sign out and sign back in using your teacher account credentials</strong></h3>\n<p></p><b><font size=3>Remember that you should sign in using your Code.org teacher account for all activities you do as an ambassador.</p>"
+        },
+        {
+          "type": "html",
+          "name": "demographics_header",
+          "visibleIf": "{teacher_account} = true",
+          "html": "<h2>Demographic Information</h2>\n<p><span style='font-size: 12pt;'>This question gathers demographic information for reporting purposes.</span></p>"
+        },
+        {
+          "type": "checkbox",
+          "name": "race",
+          "visibleIf": "{teacher_account} = true",
+          "title": "What is your racial or ethnic identity?",
+          "description": "Check all that apply.",
+          "choices": [
+            {
+              "value": "am_indian_alaska_nat",
+              "text": "American Indian/Alaska Native"
+            },
+            {
+              "value": "asian",
+              "text": "Asian"
+            },
+            {
+              "value": "black_aa",
+              "text": "Black or African American"
+            },
+            {
+              "value": "hispanic_latino",
+              "text": "Hispanic or Latino"
+            },
+            {
+              "value": "nat_hawaiian_pac_islander",
+              "text": "Native Hawaiian or other Pacific Islander"
+            },
+            {
+              "value": "white",
+              "text": "White"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            },
+            {
+              "value": "prefer_not_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "cdo_heart_you",
+          "html": "<p><span style='font-size: 12pt;'><br /><img style='display: block; margin-left: auto; margin-right: auto;' src='https://www.jotform.com/uploads/bakerfranke/form_files/codeorg_heart_you.5cc89a7c7f2f20.88587690.png' /></span></p>\n<p><span style='font-size: 12pt;'>Since you're already logged into your teacher account, take a moment and check that you have your school selected in your account details. Thanks from Code.org for your time, commitment and passion for Computer Science.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

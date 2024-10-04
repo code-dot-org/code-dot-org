@@ -7,7 +7,7 @@ PUZZLE_SOLUTIONS = {
     And I drag block "moveForward" to block "whenRun"
     And I drag block "moveForward" to block "moveForward"
   },
-  "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new&blocklyVersion=google" => %{
+  "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new" => %{
     And I drag block "moveForward" to block "topBlock"
     And I drag block "turnRight" to block "moveForward"
     And I drag block "moveForward" to block "turnRight"

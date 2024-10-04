@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 
 import {STATES} from '../geographyConstants';
 
-import {styles} from './census2017/censusFormStyles';
+import {styles} from './census/censusFormStyles';
 import MapboxLocationSearchField from './MapboxLocationSearchField';
 
 const schoolTypes = [

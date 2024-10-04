@@ -2,7 +2,7 @@
 Feature: Angle Helper
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7?blocklyVersion=google"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7"
   And I wait to see "#runButton"
 
 @eyes

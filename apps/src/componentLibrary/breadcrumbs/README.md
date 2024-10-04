@@ -15,4 +15,4 @@ import {Breadcrumbs} from '@cdo/apps/componentLibrary/breadcrumbs';
 
 For guidelines on how to use these components and the features they offer, [visit Storybook](https://code-dot-org.github.io/dsco_)
 (link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go to [DesignSystem / Chip Component](http://localhost:9001/?path=/story/designsystem-radio-button-component--default-radio-button).
+Or run storybook locally and go to [DesignSystem / Breadcrumbs Component](http://localhost:9001/?path=/docs/designsystem-breadcrumbs--docs).

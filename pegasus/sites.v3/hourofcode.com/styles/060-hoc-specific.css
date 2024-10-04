@@ -22,6 +22,7 @@
 #language-dropdown .selectize-input,
 #language-dropdown .selectize-dropdown {
   font-size: 12px;
+  text-align: initial;
 }
 #language-dropdown .selectize-input {
   padding: 2px 8px;
@@ -37,12 +38,13 @@
   list-style: none;
   margin: 1px 0;
   padding: 0;
+  text-align: initial;
+  display: flex;
+  gap: 2rem;
 }
 #hoc-nav ul li {
   font-size: 18px;
-  color: white;
   display: inline-block;
-  margin-right: 1.5em;
   padding: 0;
   text-indent: 0;
   list-style-type: none;
@@ -54,9 +56,6 @@
 }
 #hoc-nav ul li:before {
   content: none;      /* Needed to remove the bullet disc. This was set from other CSS. */
-}
-#hoc-nav ul li:last-child {
-  margin-right: 0;    /* No margin needed for the last item */
 }
 #hoc-nav ul li a {
   font-family: var(--main-font);
@@ -155,6 +154,9 @@ iframe {
     left: -2em;
     background-color: rgba(215, 240, 243, .95);
     z-index: 99;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
   }
   #hoc-nav ul:after {   /* This is the arrow in the responsive menu */
     bottom: 100%;
@@ -168,13 +170,6 @@ iframe {
     border-color: rgba(0, 178, 192, 0);
     border-bottom-color: rgba(215, 240, 243, .95);
     border-width: 8px;
-  }
-  #hoc-nav ul li {
-    display: block;
-    float: none;
-    margin: 1em 2em 1em 1em;
-    white-space: normal;
-    overflow: visible;
   }
   #hoc-nav-hamburger {
     display: inline-block;

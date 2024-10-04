@@ -1,0 +1,29 @@
+:ruby
+  list_items = [
+    {
+      icon: "fa-solid fa-microchip-ai",
+      heading: hoc_s("gen_ai_page.course_description.comprehensive_literacy.title"),
+      desc: hoc_s("gen_ai_page.course_description.comprehensive_literacy.desc"),
+    },
+    {
+      icon: "fa-solid fa-puzzle",
+      heading: hoc_s("gen_ai_page.course_description.flexible_curriculum.title"),
+      desc: hoc_s("gen_ai_page.course_description.flexible_curriculum.desc"),
+    },
+    {
+      icon: "fa-solid fa-hands",
+      heading: hoc_s("gen_ai_page.course_description.ethical_learning.title"),
+      desc: hoc_s("gen_ai_page.course_description.ethical_learning.desc"),
+    },
+  ]
+
+%ul.steps-list.three-col
+  - list_items.each do |list_item|
+    %li
+      .icon-wrapper
+        %span
+          %i{class: list_item[:icon]}
+      %h3
+        = list_item[:heading]
+      %p
+        = list_item[:desc]

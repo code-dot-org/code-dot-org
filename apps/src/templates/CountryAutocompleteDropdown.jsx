@@ -9,7 +9,7 @@ import loadable from '../util/loadable';
 
 const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
 
-import {styles} from './census2017/censusFormStyles';
+import {styles} from './census/censusFormStyles';
 
 const singleLineLayoutStyles = {
   display: 'table-cell',

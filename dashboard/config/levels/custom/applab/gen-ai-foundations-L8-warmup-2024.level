@@ -36,11 +36,14 @@
     "start_blocks": "setScreen(\"screen2\");\r\n",
     "name_suffix": "_2024",
     "preload_asset_list": null,
+    "contained_level_names": [
+      "genai-lesson8-warmup-v2"
+    ],
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-24T00:09:11.517+00:00\",\"changed\":[\"cloned from \\\"gen-ai-foundations-L7-warmup-2024\\\"\"],\"cloned_from\":\"gen-ai-foundations-L7-warmup-2024\"},{\"changed_at\":\"2024-09-24 00:09:20 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-24T00:09:11.517+00:00\",\"changed\":[\"cloned from \\\"gen-ai-foundations-L7-warmup-2024\\\"\"],\"cloned_from\":\"gen-ai-foundations-L7-warmup-2024\"},{\"changed_at\":\"2024-09-24 00:09:20 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-09-26 20:22:09 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

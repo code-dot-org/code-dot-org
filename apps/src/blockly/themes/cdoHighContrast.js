@@ -5,8 +5,13 @@ import fontConstants from '@cdo/apps/fontConstants';
 
 import {Themes} from '../constants';
 
+// We use the primary colour for variable shadow blocks. Shadow blocks cannot include a variable field,
+// so this only applies to argument_reporter blocks.
+const variableColor =
+  HighContrastTheme.blockStyles.variable_blocks.colourPrimary;
+
 // Intentionally overriden styles from Google Blockly.
-// We do not override list, math, text, or variable blocks.
+// We do not override list, math, or text blocks.
 const coreBlocklyOverrides = {
   logic_blocks: {
     colourPrimary: '#007FAD',
@@ -25,6 +30,10 @@ const coreBlocklyOverrides = {
     colourPrimary: '#39700F',
     colourSecondary: '#B0C69F',
     colourTertiary: '#749B57',
+  },
+  variable_blocks: {
+    colourPrimary: variableColor,
+    colourSecondary: variableColor,
   },
 };
 

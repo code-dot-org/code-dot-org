@@ -14,7 +14,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
     partial_lti_teacher.authentication_options = [ao]
-    PartialRegistration.persist_attributes @session, partial_lti_teacher
+    ::PartialRegistration.persist_attributes @session, partial_lti_teacher
     assert_equal 1, @user.authentication_options.count
     refute Policies::Lti.lti?(@user)
 
@@ -30,7 +30,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
     partial_lti_teacher.authentication_options = [ao]
-    PartialRegistration.persist_attributes @session, partial_lti_teacher
+    ::PartialRegistration.persist_attributes @session, partial_lti_teacher
     Services::Lti::AccountLinker.call(user: @user, session: @session)
 
     assert_equal true, @user.reload.lti_roster_sync_enabled
@@ -44,7 +44,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
     partial_lti_teacher.authentication_options = [ao]
-    PartialRegistration.persist_attributes @session, partial_lti_teacher
+    ::PartialRegistration.persist_attributes @session, partial_lti_teacher
     Services::Lti::AccountLinker.call(user: @user, session: @session)
 
     assert @user.reload.verified_teacher?
@@ -62,7 +62,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
     new_student.authentication_options = [ao]
-    PartialRegistration.persist_attributes @session, new_student
+    ::PartialRegistration.persist_attributes @session, new_student
 
     new_student.expects(:verify_teacher!).never
     Services::Lti::AccountLinker.call(user: existing_student, session: @session)
@@ -81,7 +81,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
     new_student.authentication_options = [ao]
-    PartialRegistration.persist_attributes @session, new_student
+    ::PartialRegistration.persist_attributes @session, new_student
     assert_equal 1, existing_student.authentication_options.count
     refute Policies::Lti.lti?(existing_student)
 
@@ -104,7 +104,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
     new_teacher.authentication_options = [ao]
-    PartialRegistration.persist_attributes @session, new_teacher
+    ::PartialRegistration.persist_attributes @session, new_teacher
     assert_equal 1, existing_teacher.authentication_options.count
     refute Policies::Lti.lti?(existing_teacher)
 
@@ -128,7 +128,7 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao.update(authentication_id: auth_id)
     new_teacher.authentication_options = [ao]
-    PartialRegistration.persist_attributes @session, new_teacher
+    ::PartialRegistration.persist_attributes @session, new_teacher
     assert_equal 1, existing_teacher.authentication_options.count
     refute Policies::Lti.lti?(existing_teacher)
 

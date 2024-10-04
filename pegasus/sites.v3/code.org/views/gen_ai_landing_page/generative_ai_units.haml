@@ -1,0 +1,40 @@
+:ruby
+  unit_items = [
+    {
+      overline: hoc_s("gen_ai_page.flexible_units.unit_1_card.overline"),
+      title: hoc_s("gen_ai_page.flexible_units.unit_1_card.title"),
+      image: "/images/ai/foundations-gen-ai-bot-wizard.png",
+      desc: hoc_s("gen_ai_page.flexible_units.unit_1_card.desc"),
+      url: CDO.studio_url("/s/foundations-gen-ai-2024?viewAs=Instructor"),
+      aria_label: hoc_s("gen_ai_page.flexible_units.unit_1_card.title")
+    },
+    {
+      overline: hoc_s("gen_ai_page.flexible_units.unit_2_card.overline"),
+      title: hoc_s("gen_ai_page.flexible_units.unit_2_card.title"),
+      image: "/images/ai/customizing-language-models-gen-ai-bot-wizard.png",
+      desc: hoc_s("gen_ai_page.flexible_units.unit_2_card.desc"),
+      url: CDO.studio_url("/s/customizing-llms-2024?viewAs=Instructor"),
+      aria_label: hoc_s("gen_ai_page.flexible_units.unit_2_card.title"),
+      note_desc: hoc_s("gen_ai_page.flexible_units.unit_2_card.note_desc", markdown: :inline, locals: {verified_teacher_url: "https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher"}) 
+    }
+  ]
+
+.action-block__wrapper.action-block__wrapper--two-col.content-block-margin
+  - unit_items.each do |unit_item|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        %p.overline
+          = unit_item[:overline]
+        %h3
+          = unit_item[:title]
+        %img{src: "#{unit_item[:image]}", alt: ""}
+        %p
+          = unit_item[:desc]
+        - unless unit_item[:note_desc].nil?
+          %p
+            %strong
+              =hoc_s("gen_ai_page.flexible_units.unit_2_card.note")
+            = unit_item[:note_desc]
+      .content-footer
+        %a.link-button{href: "#{unit_item[:url]}", "aria-label": "#{unit_item[:aria_label]}"}
+          =hoc_s(:call_to_action_explore_unit)

@@ -28,6 +28,10 @@ export const MusicConditions: ConditionNames = {
     valueType: 'string',
   },
   PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
+  PLAYED_DIFFERENT_SOUNDS: {
+    name: 'played_different_sounds',
+    valueType: 'number',
+  },
   PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
   PLAYED_EMPTY_CHORDS: {name: 'played_empty_chords', valueType: 'number'},
   PLAYED_CHORDS: {name: 'played_chords', valueType: 'number'},
@@ -72,10 +76,13 @@ export default class MusicValidator extends Validator {
     let currentNumberSounds = 0;
 
     // Get number of different sounds currently playing simultaneously.
-    let currentNumberDifferentSounds = 0;
+    let currentNumberDifferentSoundsTogether = 0;
 
     // Get number of sounds that have been started.
     let playedNumberSounds = 0;
+
+    // Get number of different sounds that have been started.
+    let playedNumberDifferentSounds = 0;
 
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
@@ -91,6 +98,7 @@ export default class MusicValidator extends Validator {
     let playedNumberEmptyChords = 0;
     let playedNumberChords = 0;
 
+    const uniqueSounds: string[] = [];
     const uniqueCurrentSounds: string[] = [];
 
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
@@ -107,7 +115,7 @@ export default class MusicValidator extends Validator {
           currentNumberSounds++;
 
           if (!uniqueCurrentSounds.includes(eventData.id)) {
-            currentNumberDifferentSounds++;
+            currentNumberDifferentSoundsTogether++;
             uniqueCurrentSounds.push(eventData.id);
           }
 
@@ -131,6 +139,11 @@ export default class MusicValidator extends Validator {
         }
 
         playedNumberSounds++;
+
+        if (!uniqueSounds.includes(eventData.id)) {
+          playedNumberDifferentSounds++;
+          uniqueSounds.push(eventData.id);
+        }
       } else if (eventData.type === 'pattern') {
         const patternEvent = eventData as PatternEvent;
         if (patternEvent.value.events.length === 0) {
@@ -178,7 +191,7 @@ export default class MusicValidator extends Validator {
     // Note that if, for example, 3 different sounds are playing, then we'll consider
     // that 2 different sounds and 1 different sound have also been played together.
     for (
-      let numberDifferentSounds = currentNumberDifferentSounds;
+      let numberDifferentSounds = currentNumberDifferentSoundsTogether;
       numberDifferentSounds >= 1;
       numberDifferentSounds--
     ) {
@@ -192,6 +205,12 @@ export default class MusicValidator extends Validator {
     this.addPlayedConditions(
       MusicConditions.PLAYED_SOUNDS.name,
       playedNumberSounds
+    );
+
+    // Add satisfied conditions for the played different sounds.
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_DIFFERENT_SOUNDS.name,
+      playedNumberDifferentSounds
     );
 
     // Add satisfied conditions for the played patterns.

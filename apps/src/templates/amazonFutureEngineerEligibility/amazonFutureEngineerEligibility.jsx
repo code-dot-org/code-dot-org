@@ -5,7 +5,7 @@ import {FormGroup, Button} from 'react-bootstrap'; // eslint-disable-line no-res
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census/SchoolAutocompleteDropdownWithLabel';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 

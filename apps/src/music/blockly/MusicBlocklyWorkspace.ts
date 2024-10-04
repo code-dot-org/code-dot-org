@@ -131,6 +131,7 @@ export default class MusicBlocklyWorkspace {
       rtl: isRtl,
       editBlocks: getAppOptionsEditBlocks(),
       customSimpleDialog,
+      comments: true,
     } as BlocklyOptions);
 
     this.resizeBlockly();

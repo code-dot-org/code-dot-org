@@ -10,6 +10,7 @@ import i18n from '@cdo/locale';
 import defaultStyle from './accessible-dialogue.module.scss';
 
 function AccessibleDialog({
+  id,
   styles,
   onClose,
   onDismiss,
@@ -41,7 +42,9 @@ function AccessibleDialog({
           }}
         >
           <div
+            id={id}
             aria-modal
+            aria-labelledby={`${id}-title`}
             className={classnames(modalStyle, className)}
             role="dialog"
           >
@@ -59,6 +62,7 @@ function AccessibleDialog({
 }
 
 AccessibleDialog.propTypes = {
+  id: PropTypes.string,
   styles: PropTypes.object,
   onClose: PropTypes.func.isRequired,
   onDismiss: PropTypes.func,

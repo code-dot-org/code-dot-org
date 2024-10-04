@@ -205,7 +205,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
         email: partial_lti_teacher.email,
       )
       partial_lti_teacher.authentication_options = [ao]
-      PartialRegistration.persist_attributes session, partial_lti_teacher
+      ::PartialRegistration.persist_attributes session, partial_lti_teacher
 
       assert Policies::Lti.lti_registration_in_progress?(session)
     end
@@ -213,7 +213,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
     test 'returns false for a partial non-LTI registration' do
       session = {}
       partial_teacher = create :teacher, :with_google_authentication_option
-      PartialRegistration.persist_attributes session, partial_teacher
+      ::PartialRegistration.persist_attributes session, partial_teacher
 
       refute Policies::Lti.lti_registration_in_progress?(session)
     end

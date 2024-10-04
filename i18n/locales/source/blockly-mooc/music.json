@@ -95,5 +95,6 @@
   "effectsLabelsVolume": "Volume",
   "effectsLabelsDelay": "Delay",
   "effectsLabelsFilter": "Filter",
-  "parameterLabel": "parameter:"
+  "parameterLabel": "parameter:",
+  "generate": "Generate"
 }

@@ -6,7 +6,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# E-Sports\r\n\r\n::: details [**✅ Step 1**]\r\nCreate two lists named `team1_points` and `team2_points` that contain two numeric scores each.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nCreate two new expressions that sum all of the elements in their respective lists. Save these values into two new variables.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nPrint a message variable that will concatenate the total amount of points earned for both teams. For example: *Team One: 25 | Team Two: 45”*\r\n:::\r\n\r\n\r\n",
+    "long_instructions": "# E-Sports\r\n\r\n::: details [**✅ Step 1**]\r\nCreate two lists named `team1_points` and `team2_points` that contain two numeric scores each.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nCreate two new expressions that sum all of the elements in their respective lists. Save these values into the provided variables `total_points_team1` and `total_points_team2`.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nPrint a message variable that will concatenate the total amount of points earned for both teams. For example: *Team One: 25 | Team Two: 45”*\r\n:::\r\n\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -23,12 +23,23 @@
           "folderId": "0",
           "active": true,
           "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "test.py",
+          "language": "py",
+          "contents": "import unittest\nfrom io import StringIO\nimport sys\n\nclass TestTeamPoints(unittest.TestCase):\n\n    def setUp(self):\n        # Setup to capture the print output if needed later\n        self.captured_output = StringIO()\n        sys.stdout = self.captured_output\n\n    def tearDown(self):\n        # Reset redirect.\n        sys.stdout = sys.__stdout__\n\n    def test_step_1(self):\n        \"\"\"Test Step 1: Check that team1_points and team2_points lists are defined\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables\n        exec(script_content)\n\n        # Check if the lists are defined\n        self.assertIn('team1_points', locals(), \"List 'team1_points' should be defined in Step 1.\")\n        self.assertIn('team2_points', locals(), \"List 'team2_points' should be defined in Step 1.\")\n\n        # Check that both lists contain values\n        self.assertGreater(len(locals()['team1_points']), 0, \"'team1_points' list should not be empty.\")\n        self.assertGreater(len(locals()['team2_points']), 0, \"'team2_points' list should not be empty.\")\n\n    def test_step_2(self):\n        \"\"\"Test Step 2: Check that total_points_team1 and total_points_team2 are correctly calculated\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables\n        exec(script_content)\n\n        # Check if the variables 'total_points_team1' and 'total_points_team2' are defined\n        self.assertIn('total_points_team1', locals(), \"Variable 'total_points_team1' should be defined in Step 2.\")\n        self.assertIn('total_points_team2', locals(), \"Variable 'total_points_team2' should be defined in Step 2.\")\n\n        # Ensure both total_points variables are numbers and have some value\n        self.assertIsInstance(locals()['total_points_team1'], (int, float), \"'total_points_team1' should be a number.\")\n        self.assertIsInstance(locals()['total_points_team2'], (int, float), \"'total_points_team2' should be a number.\")\n        self.assertGreater(locals()['total_points_team1'], 0, \"'total_points_team1' should have a positive value.\")\n        self.assertGreater(locals()['total_points_team2'], 0, \"'total_points_team2' should have a positive value.\")\n\n    def test_step_3(self):\n        \"\"\"Test Step 3: Check that message is defined, is not empty, and contains total points for both teams\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Execute the script to access variables\n        exec(script_content)\n\n        # Check if the 'message' variable is defined\n        self.assertIn('message', locals(), \"Variable 'message' should be defined in Step 3.\")\n\n        # Ensure 'message' is not an empty string\n        self.assertNotEqual(locals()['message'], \"\", \"Variable 'message' should not be an empty string.\")\n\n        # Optionally check if the message contains total points for both teams (flexible check)\n        self.assertIn(str(locals()['total_points_team1']), locals()['message'], \"The 'message' should contain 'total_points_team1'.\")\n        self.assertIn(str(locals()['total_points_team2']), locals()['message'], \"The 'message' should contain 'total_points_team2'.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "validation"
         }
       },
       "folders": {
       },
       "openFiles": [
-        "0"
+        "0",
+        "1"
       ]
     },
     "display_name": "E-Sports Points",
@@ -36,6 +47,6 @@
     "thumbnail_url": "https://images.code.org/3b548b79c08aaae90282c1ce4d146213-video-game.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-14T16:33:05.316+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L9b_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L9b_2024-pilot\"},{\"changed_at\":\"2024-09-14 16:35:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 16:35:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-14T16:33:05.316+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L9b_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L2-L9b_2024-pilot\"},{\"changed_at\":\"2024-09-14 16:35:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-14 16:35:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:41:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:42:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:42:55 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:43:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:44:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-26 20:44:46 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-27 20:16:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

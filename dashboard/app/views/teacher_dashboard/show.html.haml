@@ -1,5 +1,8 @@
 - @page_title = I18n.t('teacher.dashboard')
 
+%link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
+%link{href: asset_path('css/courses.css'), rel: 'stylesheet', type: 'text/css'}
+
 :ruby
   teacher_dashboard_data = {}
   teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url('', CDO.default_scheme)
@@ -11,6 +14,8 @@
   teacher_dashboard_data[:localeCode] = request.locale
   teacher_dashboard_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
   teacher_dashboard_data[:canViewStudentAIChatMessages] = @current_user.can_view_student_ai_chat_messages?
+
+= render partial: 'shared/emulate_print_media'
 
 %script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
 
