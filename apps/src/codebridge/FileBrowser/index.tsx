@@ -290,6 +290,11 @@ const InnerFileBrowser = React.memo(
                     >
                       <span className={moduleStyles['button-bar']}>
                         <PopUpButtonOption
+                          iconName="arrow-right"
+                          labelText={codebridgeI18n.moveFolder()}
+                          clickHandler={() => moveFolderPrompt(f.id)}
+                        />
+                        <PopUpButtonOption
                           iconName="pencil"
                           labelText={codebridgeI18n.renameFolder()}
                           clickHandler={() => renameFolderPrompt(f.id)}
@@ -382,6 +387,11 @@ const InnerFileBrowser = React.memo(
                       className={moduleStyles['button-kebab']}
                     >
                       <span className={moduleStyles['button-bar']}>
+                        <PopUpButtonOption
+                          iconName="arrow-right"
+                          labelText={codebridgeI18n.moveFile()}
+                          clickHandler={() => moveFilePrompt(f.id)}
+                        />
                         <PopUpButtonOption
                           iconName="pencil"
                           labelText={codebridgeI18n.renameFile()}
