@@ -9,7 +9,7 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
 import {
-  checkForDuplicateFilename,
+  checkForDuplicateFilename as globalCheckForDuplicateFilename,
   checkForDuplicateFoldername,
   findFolder,
   getErrorMessage,
@@ -35,6 +35,7 @@ import React, {useMemo, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
@@ -434,6 +435,15 @@ export const FileBrowser = React.memo(() => {
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
+  const checkForDuplicateFilename = usePartialApply(
+    globalCheckForDuplicateFilename,
+    {
+      isStartMode,
+      validationFile,
+      projectFiles: project.files,
+    } satisfies PAFunctionArgs<typeof globalCheckForDuplicateFilename>
+  );
+
   const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
   const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
 
@@ -514,9 +524,6 @@ export const FileBrowser = React.memo(() => {
             const duplicate = checkForDuplicateFilename({
               fileName,
               folderId,
-              projectFiles: project.files,
-              isStartMode,
-              validationFile,
             });
             if (duplicate) {
               return duplicate;
@@ -552,8 +559,9 @@ export const FileBrowser = React.memo(() => {
       project.files,
       newFile,
       appName,
-      validationFile,
       isStartMode,
+      validationFile,
+      checkForDuplicateFilename,
     ]
   );
 
@@ -576,9 +584,6 @@ export const FileBrowser = React.memo(() => {
             const duplicate = checkForDuplicateFilename({
               fileName: file.name,
               folderId,
-              projectFiles: project.files,
-              isStartMode,
-              validationFile,
             });
             if (duplicate) {
               return duplicate;
@@ -613,8 +618,7 @@ export const FileBrowser = React.memo(() => {
       project.folders,
       dialogControl,
       appName,
-      isStartMode,
-      validationFile,
+      checkForDuplicateFilename,
       moveFile,
     ]
   );
@@ -690,9 +694,6 @@ export const FileBrowser = React.memo(() => {
           const duplicate = checkForDuplicateFilename({
             fileName: newName,
             folderId: file.folderId,
-            projectFiles: project.files,
-            isStartMode,
-            validationFile,
           });
           if (duplicate) {
             return duplicate;
@@ -715,8 +716,7 @@ export const FileBrowser = React.memo(() => {
       dialogControl,
       renameFile,
       appName,
-      isStartMode,
-      validationFile,
+      checkForDuplicateFilename,
     ]
   );
 
@@ -780,9 +780,6 @@ export const FileBrowser = React.memo(() => {
           const duplicate = checkForDuplicateFilename({
             fileName: project.files[e.active.data.current.id].name,
             folderId: e.over.id as string,
-            projectFiles: project.files,
-            isStartMode,
-            validationFile,
           });
           if (duplicate) {
             dialogControl?.showDialog({
@@ -797,12 +794,11 @@ export const FileBrowser = React.memo(() => {
     },
     [
       dialogControl,
-      isStartMode,
       moveFile,
       moveFolder,
       project.files,
       project.folders,
-      validationFile,
+      checkForDuplicateFilename,
     ]
   );
 
