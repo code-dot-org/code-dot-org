@@ -3,29 +3,38 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Debriefing Strategies
+# Importing Matplotlib and the *pyplot* Module
 
-## Predict & Discuss
-#### These low-stakes, no-wrong-answer questions foster class discussion and introduce the upcoming lesson content. Although these predictions could be done through journals or group discussions, completing them directly in the platform allows student responses to be incorporated into the subsequent discussion.
+<img src="https://images.code.org/86ab0746de8893cc114e6adf92d7d614-image-1727972906356.png" alt="python logo" width="150px" style="border-radius:10px; float:right; margin: 0 0 0px 0px;">
 
+## What is a Module?
 
-## Teaching Strategies for Python Prediction Levels
-#### These prediction-based questions should always include a discussion with a clear learning objective, outlined in the lesson plan. You can use student responses by clicking on the **'Veiw student responses'** button to amplify their voices and guide the conversation. 
-
-## Key strategies to facilitate a productive discussion:
-
-<img src="https://images.code.org/9ded5348ed943c276493c7edced20bc4-image-1726850791354.png" alt="Image CS Discoveries students" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
-
-- #### **Highlight Select Student Responses**: As students submit predictions, select a few responses to discuss as a class. Use these responses to drive the conversation, highlighting patterns and insights.
-
-- #### **Show All Student Responses:** Share your screen to show all the submitted predictions, ensuring they are appropriate. This approach allows you to involve all student voices and identify trends or diverse viewpoints in their predictions.
-
-- #### **Secretly Prime the Discussion:** While monitoring responses, select interesting ones and subtly guide the conversation. For example, “I noticed some predictions mentioned [X]. Does anyone want to elaborate?” This technique allows you to shape the conversation using student input.
-
-#### These strategies help enhance class discussions, encourage critical thinking, and deepen students' understanding of Python programming predictions.
-<br>
+#### A **module** is a file in a library that contains thematically related functions.
 
 
+## Importing Matplotlib and the *pyplot* Module
+
+   <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="45%">
+                <img src="https://images.code.org/69f26802bd01ac007f35e3998613671a-image-1727973228533.png" alt="import matplotlab" width="100%">
+            </td>
+            <td width="55%" style="font-size:14pt;">
+            This line imports the <b>pyplot</b> module of the library Matplotlib. It contains everything we need for making visualizations.
+            </td>
+        </tr>
+        <tr>
+            <td width="45%">
+                <img src="https://images.code.org/e349454c47d1fc0f55b04ad59904cdc8-image-1727973346520.png" alt="plt alias" width="100%">
+            </td>
+            <td width="55%" style="font-size:14pt;">
+                We give it the alias <b>plt</b> to make it easier to use in our code.
+            </td>
+        </tr>
+    </table>
+
+
+### **Next, let's examine the code to make line charts and bar charts**.
 
 
 

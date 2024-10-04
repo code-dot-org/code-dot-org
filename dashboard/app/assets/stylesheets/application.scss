@@ -290,6 +290,9 @@ img.video_thumbnail {
       text-decoration: none;
       background-color: $orange;
     }
+    &:active {
+      border: 2px solid $white !important;
+    }
   }
 
   .user_menu, .create_menu, .help_button {
