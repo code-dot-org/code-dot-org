@@ -197,7 +197,6 @@ const PEGASUS_ENTRIES = {
   'code.org/public/transformersone': './src/sites/code.org/pages/public/transformersone.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
-  'code.org/public/yourschoolteststaging': './src/sites/code.org/pages/public/yourschoolteststaging.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
   'code.org/views/admins_email_signup_form': './src/sites/code.org/pages/views/admins_email_signup_form.js',
   'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
