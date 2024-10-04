@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
-import TemporaryBlankPage from '@cdo/apps/templates/teacherDashboard/teacherNavigation/TemporaryBlankPage';
+import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 
 import TeacherCourseOverview, {
   teacherCourseOverviewLoader,
@@ -29,7 +29,7 @@ import DefaultTeacherNavRedirect from './DefaultTeacherNavRedirect';
 import ElementOrEmptyPage from './ElementOrEmptyPage';
 import LessonMaterialsContainer, {
   lessonMaterialsLoader,
-} from './LessonMaterialsContainer';
+} from './lessonMaterials/LessonMaterialsContainer';
 import PageHeader from './PageHeader';
 import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import TeacherNavigationBar from './TeacherNavigationBar';
@@ -56,6 +56,7 @@ export interface Section {
   courseVersionName: string;
   courseOfferingId: number;
   unitId: number;
+  courseDisplayName: string;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -236,6 +237,8 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             element={
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
+                showNoUnitAssigned={!selectedSection?.unitId}
+                courseName={selectedSection?.courseDisplayName}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
                 element={<LessonMaterialsContainer />}
               />
@@ -270,13 +273,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.unitOverview}
-            element={
-              <ElementOrEmptyPage
-                showNoStudents={studentCount === 0}
-                showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
-              />
-            }
+            element={<TeacherUnitOverview />}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.settings}

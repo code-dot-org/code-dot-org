@@ -1,8 +1,8 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import ToggleFileBrowserButton from '@codebridge/components/ToggleFileBrowserButton';
 import {Editor} from '@codebridge/Editor';
 import {FileBrowser} from '@codebridge/FileBrowser';
 import {FileTabs} from '@codebridge/FileTabs';
-import ToggleFileBrowserButton from '@codebridge/ToggleFileBrowserButton';
 import classnames from 'classnames';
 import React from 'react';
 
@@ -50,6 +50,7 @@ const Workspace = () => {
       headerContent={headerContent}
       rightHeaderContent={<HeaderButtons />}
       className={moduleStyles.workspace}
+      headerClassName={moduleStyles.workspaceHeader}
     >
       <div
         className={classnames(moduleStyles.workspaceWorkarea, {

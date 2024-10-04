@@ -27,6 +27,7 @@ import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {navigateToHref, linkWithQueryParams} from '@cdo/apps/utils';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
@@ -38,6 +39,7 @@ import ValidationResults from './ValidationResults';
 import ValidationStatusIcon from './ValidationStatusIcon';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
+import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
 
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
@@ -104,6 +106,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const shouldValidateBeDisabled = isLoadingEnvironment || isRunning;
 
+  const scriptName =
+    useAppSelector(state => state.progress.scriptName) || undefined;
+
   const dispatch = useAppDispatch();
 
   const {theme} = useContext(ThemeContext);
@@ -111,8 +116,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const vertical = layout === 'vertical';
 
   const onFinish = () => {
-    // no op for now
-    // Tracked here: https://codedotorg.atlassian.net/browse/CT-664
+    // No-op if there's no script. Students/teachers should always be
+    // accessing the level from a script.
+    if (scriptName) {
+      navigateToHref(linkWithQueryParams(`/s/${scriptName}`));
+    }
   };
 
   const onNextPanel = useCallback(() => {
@@ -230,55 +238,47 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     if (!hasConditions) {
       return null;
     }
-    return (
-      <div className={moduleStyles['bubble-' + theme]}>
-        {isValidating ? (
-          <Button
-            text={codebridgeI18n.stopValidation()}
-            onClick={handleStop}
-            color={'destructive'}
-            iconLeft={{iconStyle: 'solid', iconName: 'square'}}
-            className={moduleStyles.buttonInstruction}
-            size={'s'}
-          />
-        ) : (
-          <Button
-            text={codebridgeI18n.validate()}
-            onClick={() => handleValidate()}
-            type={'secondary'}
-            disabled={shouldValidateBeDisabled}
-            iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
-            className={moduleStyles.buttonInstruction}
-            color={'white'}
-            size={'s'}
-          />
+    return isValidating ? (
+      <Button
+        text={codebridgeI18n.stopValidation()}
+        onClick={handleStop}
+        color={'destructive'}
+        iconLeft={{iconStyle: 'solid', iconName: 'square'}}
+        className={moduleStyles.buttonInstruction}
+        size={'s'}
+      />
+    ) : (
+      <Button
+        text={codebridgeI18n.validate()}
+        onClick={() => handleValidate()}
+        type={'secondary'}
+        disabled={shouldValidateBeDisabled}
+        iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
+        className={classNames(
+          darkModeStyles.secondaryButton,
+          moduleStyles.buttonInstruction
         )}
-      </div>
+        color={'white'}
+        size={'s'}
+      />
     );
   };
 
   const {showNavigation, navigationText, navigationIcon, handleNavigation} =
     getNavigationButtonProps();
 
-  const navigationScrollRef = useRef<HTMLDivElement>(null);
   const validationScrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let refToScrollTo;
-    if (showNavigation) {
-      refToScrollTo = navigationScrollRef;
-    } else if (validationResults) {
-      refToScrollTo = validationScrollRef;
-    }
-    if (refToScrollTo) {
+    if (validationResults) {
       // We must at least set a timeout with a wait of 0 to ensure the scroll happens at all,
       // because the DOM needs to update before we can scroll to the new element.
       setTimeout(
-        () => refToScrollTo.current?.scrollIntoView({behavior: 'smooth'}),
+        () => validationScrollRef.current?.scrollIntoView({behavior: 'smooth'}),
         0
       );
     }
-  }, [showNavigation, validationResults]);
+  }, [validationResults]);
 
   const showPassedIcon = hasMetValidation || hasSubmitted;
 
@@ -304,50 +304,60 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           vertical && moduleStyles.itemVertical
         )}
       >
-        {instructionsText && (
-          <div
-            key={instructionsText}
-            id="instructions-text"
-            className={classNames(moduleStyles['bubble-' + theme])}
-          >
-            <div className={moduleStyles.mainInstructions}>
-              <ValidationStatusIcon
-                status={showPassedIcon ? 'passed' : 'pending'}
-                className={moduleStyles.validationIcon}
+        <div className={moduleStyles.scrollingContent}>
+          {instructionsText && (
+            <div
+              key={instructionsText}
+              id="instructions-text"
+              className={classNames(moduleStyles['bubble-' + theme])}
+            >
+              <div className={moduleStyles.mainInstructions}>
+                <ValidationStatusIcon
+                  status={showPassedIcon ? 'passed' : 'pending'}
+                  className={moduleStyles.validationIcon}
+                />
+                <EnhancedSafeMarkdown
+                  markdown={instructionsText}
+                  className={moduleStyles.markdownText}
+                  handleInstructionsTextClick={handleInstructionsTextClick}
+                />
+              </div>
+              <PredictQuestion
+                predictSettings={predictSettings}
+                predictResponse={predictResponse}
+                setPredictResponse={response =>
+                  dispatch(setPredictResponse(response))
+                }
+                predictAnswerLocked={predictAnswerLocked}
+                className={moduleStyles.predictQuestion}
               />
-              <EnhancedSafeMarkdown
-                markdown={instructionsText}
-                className={moduleStyles.markdownText}
-                handleInstructionsTextClick={handleInstructionsTextClick}
-              />
+              {renderValidationButton()}
             </div>
-            <PredictQuestion
-              predictSettings={predictSettings}
-              predictResponse={predictResponse}
-              setPredictResponse={response =>
-                dispatch(setPredictResponse(response))
-              }
-              predictAnswerLocked={predictAnswerLocked}
-              className={moduleStyles.predictQuestion}
-            />
-          </div>
-        )}
+          )}
 
-        {predictSettings?.isPredictLevel && (
-          <InstructorsOnly>
-            <div className={moduleStyles['bubble-' + theme]}>
-              <PredictSummary />
-            </div>
-          </InstructorsOnly>
-        )}
-        {renderValidationButton()}
-        {validationResults && <div ref={validationScrollRef} />}
-        <ValidationResults className={moduleStyles['bubble-' + theme]} />
+          {validationResults && (
+            <>
+              <div ref={validationScrollRef} />
+              <div className={classNames(moduleStyles['bubble-' + theme])}>
+                <ValidationResults />
+              </div>
+            </>
+          )}
+          {predictSettings?.isPredictLevel && (
+            <InstructorsOnly>
+              <div className={moduleStyles['bubble-' + theme]}>
+                <PredictSummary />
+              </div>
+            </InstructorsOnly>
+          )}
+        </div>
         {showNavigation && (
           <div
             id="instructions-navigation"
-            className={moduleStyles['bubble-' + theme]}
-            ref={navigationScrollRef}
+            className={classNames(
+              moduleStyles['bubble-' + theme],
+              moduleStyles.button
+            )}
           >
             <Button
               text={navigationText}
@@ -355,6 +365,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               color={'white'}
               className={moduleStyles.buttonInstruction}
               iconLeft={navigationIcon}
+              size={'s'}
             />
           </div>
         )}

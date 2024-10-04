@@ -166,6 +166,7 @@ export interface LevelProperties {
   // Help and Tips values
   mapReference?: string;
   referenceLinks?: string[];
+  helpVideos?: VideoData[];
   // Exemplars
   exampleSolutions?: string[];
   exemplarSources?: MultiFileSource;
@@ -173,6 +174,10 @@ export interface LevelProperties {
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   submittable?: boolean;
+  finishUrl?: string;
+  finishDialog?: string;
+  offerTts?: boolean;
+  validationFile?: ProjectFile;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -187,6 +192,15 @@ export interface VideoLevelData {
   src: string;
   download: string;
   thumbnail: string;
+}
+
+// Addtional fields for videos that are linked as references in the
+// Help & Tips tab of Instructions.
+interface VideoData extends VideoLevelData {
+  name?: string;
+  key?: string;
+  enable_fallback?: boolean;
+  autoplay?: boolean;
 }
 
 export enum OptionsToAvoid {
@@ -288,6 +302,7 @@ export interface ConditionType {
 export interface Validation {
   conditions: Condition[];
   message: string;
+  callout?: string;
   next: boolean;
   key: string;
 }

@@ -294,6 +294,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
                     },
                   ]}
                   className={moduleStyles.latestTag}
+                  size="s"
                 />
               )}
             </RadioButton>
@@ -325,20 +326,22 @@ const VersionHistoryDropdown: React.FunctionComponent<
         {!viewAsUserId && (
           <Button
             text={commonI18n.restore()}
-            color={'purple'}
-            size={'m'}
+            color={'white'}
+            size={'s'}
             onClick={restoreSelectedVersion}
             disabled={loading}
             className={moduleStyles.actionButton}
+            type={'primary'}
           />
         )}
         <Button
           text={commonI18n.cancel()}
           color={'white'}
-          size={'m'}
+          size={'s'}
           onClick={handleCancel}
           disabled={loading}
           className={moduleStyles.actionButton}
+          type={'secondary'}
         />
       </div>
     </div>

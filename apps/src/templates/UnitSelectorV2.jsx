@@ -40,6 +40,7 @@ function UnitSelectorV2({
   setScriptId,
   asyncLoadCoursesWithProgress,
   isLoadingCourses,
+  isLoadingSectionData,
 }) {
   React.useEffect(() => {
     if (!coursesWithProgress || coursesWithProgress.length === 0) {
@@ -85,7 +86,8 @@ function UnitSelectorV2({
     />
   );
 
-  return isLoadingCourses ||
+  return isLoadingSectionData ||
+    isLoadingCourses ||
     !coursesWithProgress ||
     coursesWithProgress.length === 0 ? (
     loadingDropdown()
@@ -113,6 +115,7 @@ UnitSelectorV2.propTypes = {
   className: PropTypes.string,
   asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
   isLoadingCourses: PropTypes.bool,
+  isLoadingSectionData: PropTypes.bool.isRequired,
 };
 
 export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
@@ -123,6 +126,7 @@ export default connect(
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,
+    isLoadingSectionData: state.teacherSections.isLoadingSectionData,
   }),
   dispatch => ({
     setScriptId(scriptId) {

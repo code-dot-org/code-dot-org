@@ -1,0 +1,16 @@
+name 'Data Sci U1 Pre Q13_2024-pilot'
+
+question 'Which best exemplifies a data-driven question to analyze customer satisfaction based on purchase history and customer feedback.'
+
+right 'What are the trends in customer satisfaction scores over the past year, and how does it relate to purchase frequency?'
+wrong 'How can we improve our products based on customer preferences and market trends?'
+wrong 'Why are some customers dissatisfied with their purchases?'
+wrong 'What marketing strategies should we implement to enhance customer satisfaction?'
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

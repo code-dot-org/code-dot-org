@@ -35,6 +35,7 @@ function ProgressTableV2({
   isSkeleton,
   unitId,
   levelProgressByStudent,
+  isLoadingSectionData,
 }) {
   const outsideTableRef = React.useRef();
 
@@ -49,10 +50,10 @@ function ProgressTableV2({
   }, [students, levelProgressByStudent, isSkeleton]);
 
   React.useEffect(() => {
-    if (filteredStudents.length !== students.length) {
+    if (!isSkeleton && filteredStudents.length !== students.length) {
       loadUnitProgress(unitId, sectionId);
     }
-  }, [filteredStudents, students, unitId, sectionId]);
+  }, [filteredStudents, students, unitId, sectionId, isSkeleton]);
 
   const sortedStudents = React.useMemo(() => {
     if (isSkeleton && filteredStudents.length === 0) {
@@ -98,7 +99,7 @@ function ProgressTableV2({
   );
 
   const table = React.useMemo(() => {
-    if (isSkeleton && unitData === undefined) {
+    if (isSkeleton && (isLoadingSectionData || unitData === undefined)) {
       const lessons = LESSON_SKELETON_DATA.map(id => ({id, isFake: true}));
       return (
         <div className={styles.tableLoading}>
@@ -136,6 +137,7 @@ function ProgressTableV2({
       </div>
     );
   }, [
+    isLoadingSectionData,
     isSkeleton,
     getRenderedColumn,
     unitData,
@@ -152,7 +154,9 @@ function ProgressTableV2({
         sortedStudents={sortedStudents}
         unitName={unitData?.title}
         sectionId={sectionId}
-        isSkeleton={isSkeleton && students.length === 0}
+        isSkeleton={
+          isSkeleton && (students.length === 0 || isLoadingSectionData)
+        }
       />
       {table}
     </div>
@@ -170,6 +174,7 @@ ProgressTableV2.propTypes = {
   levelProgressByStudent: PropTypes.objectOf(
     PropTypes.objectOf(studentLevelProgressType)
   ),
+  isLoadingSectionData: PropTypes.bool.isRequired,
 };
 
 export default connect(state => ({
@@ -186,4 +191,5 @@ export default connect(state => ({
     state.sectionProgress.expandedLessonIds[
       state.teacherSections.selectedSectionId
     ] || [],
+  isLoadingSectionData: state.teacherSections.isLoadingSectionData,
 }))(ProgressTableV2);

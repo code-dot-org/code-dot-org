@@ -7,9 +7,9 @@ import React, {
   useCallback,
 } from 'react';
 
+import MusicRegistry from '../MusicRegistry';
 import {TuneEventValue} from '../player/interfaces/TuneEvent';
 import MusicLibrary from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
 
 import Keybed from './Keybed';
 import LoadingOverlay from './LoadingOverlay';
@@ -21,31 +21,13 @@ const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
 
 export interface TunePanelProps {
-  library: MusicLibrary;
   initValue: TuneEventValue;
   onChange: (value: TuneEventValue) => void;
-  previewNote: MusicPlayer['previewNote'];
-  previewTune: MusicPlayer['previewTune'];
-  cancelPreviews: MusicPlayer['cancelPreviews'];
-  setupSampler: MusicPlayer['setupSampler'];
-  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
-  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
-  registerInstrumentLoadCallback: (
-    callback: (instrument: string) => void
-  ) => void;
 }
 
 const TunePanel: React.FunctionComponent<TunePanelProps> = ({
-  library,
   initValue,
   onChange,
-  previewNote,
-  previewTune,
-  cancelPreviews,
-  setupSampler,
-  isInstrumentLoading,
-  isInstrumentLoaded,
-  registerInstrumentLoadCallback,
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   // Make a copy of the value object so that we don't overwrite Blockly's
@@ -53,8 +35,8 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
   const currentValue: TuneEventValue = JSON.parse(JSON.stringify(initValue));
 
   const availableInstruments = useMemo(() => {
-    return library.instruments;
-  }, [library.instruments]);
+    return MusicLibrary.getInstance()?.instruments || [];
+  }, []);
 
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
@@ -69,12 +51,12 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
       } else {
         // Not found, so add.
         currentValue.events.push({note, tick});
-        previewNote(note, currentValue.instrument);
+        MusicRegistry.player.previewNote(note, currentValue.instrument);
       }
 
       onChange(currentValue);
     },
-    [onChange, previewNote, currentValue]
+    [onChange, currentValue]
   );
 
   const hasEvent = (note: number, tick: number) => {
@@ -106,41 +88,39 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
   }, [onChange, currentValue]);
 
   const startPreview = useCallback(() => {
-    previewTune(
+    MusicRegistry.player.previewTune(
       currentValue,
       (tick: number) => setCurrentPreviewTick(tick),
       () => setCurrentPreviewTick(0)
     );
-  }, [previewTune, setCurrentPreviewTick, currentValue]);
+  }, [setCurrentPreviewTick, currentValue]);
 
   const stopPreview = useCallback(() => {
     setCurrentPreviewTick(0);
-    cancelPreviews();
-  }, [setCurrentPreviewTick, cancelPreviews]);
+    MusicRegistry.player.cancelPreviews();
+  }, [setCurrentPreviewTick]);
 
   useEffect(() => {
-    if (!isInstrumentLoaded(currentValue.instrument)) {
+    if (!MusicRegistry.player.isInstrumentLoaded(currentValue.instrument)) {
       setIsLoading(true);
-      if (isInstrumentLoading(currentValue.instrument)) {
+      if (MusicRegistry.player.isInstrumentLoading(currentValue.instrument)) {
         // If the instrument is already loading, register a callback and wait for it to finish.
-        registerInstrumentLoadCallback(instrument => {
-          if (instrument === currentValue.instrument) {
-            setIsLoading(false);
+        MusicRegistry.player.registerCallback(
+          'InstrumentLoaded',
+          instrument => {
+            if (instrument === currentValue.instrument) {
+              setIsLoading(false);
+            }
           }
-        });
+        );
       } else {
         // Otherwise, initiate the load.
-        setupSampler(currentValue.instrument, () => setIsLoading(false));
+        MusicRegistry.player.setupSampler(currentValue.instrument, () =>
+          setIsLoading(false)
+        );
       }
     }
-  }, [
-    setupSampler,
-    isInstrumentLoading,
-    isInstrumentLoaded,
-    currentValue.instrument,
-    setIsLoading,
-    registerInstrumentLoadCallback,
-  ]);
+  }, [currentValue.instrument, setIsLoading]);
 
   // Generate an array of notes.
   const arrayOfNotes = Array.from(

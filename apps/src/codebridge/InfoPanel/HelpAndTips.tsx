@@ -10,8 +10,13 @@ const HelpAndTips: React.FunctionComponent = () => {
   const referenceLinks = useAppSelector(
     state => state.lab.levelProperties?.referenceLinks
   );
+  const helpVideos = useAppSelector(
+    state => state.lab.levelProperties?.helpVideos
+  );
+  const helpVideo = helpVideos ? helpVideos[0] : null;
   return (
     <HelpTabContents
+      videoData={helpVideo}
       mapReference={mapReference}
       referenceLinks={referenceLinks}
       openReferenceLinksInNewTab
