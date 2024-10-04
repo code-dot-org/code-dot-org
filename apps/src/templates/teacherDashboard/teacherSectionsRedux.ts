@@ -3,30 +3,43 @@ import _ from 'lodash';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {
   PlGradeValue,
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {
-  sectionFromServerSection,
+  sectionFromServerSection as untypedSectionFromServerSection,
   studentFromServerStudent,
   newSectionData,
   USER_EDITABLE_SECTION_PROPS,
 } from './teacherSectionsReduxSelectors';
 import {
   AssignmentCourseOffering,
+  Classroom,
+  LtiSectionSyncResult,
   OAuthSectionTypeName,
-  ServerOAuthSectionTypeName,
   Section,
-  ServerSection,
+  SectionInstructor,
   SectionMap,
+  ServerOAuthSectionTypeName,
+  ServerSection,
   Student,
   UserEditableSection,
-  SectionInstructor,
 } from './types/teacherSectionTypes';
 
 type RosterProvider = string | keyof typeof SectionLoginType | null;
+
+type AssignmentData = {
+  section_id: number;
+  section_creation_timestamp: string;
+  page_name: string;
+  unit_id?: number;
+  course_id?: number;
+  course_version_id?: number;
+  course_offering_id?: number;
+};
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface TeacherSectionState {
@@ -67,17 +80,17 @@ interface TeacherSectionState {
   rosterProviderName: string | null;
   // Set of oauth classrooms available for import from a third-party source.
   // Not populated until the RosterDialog is opened.
-  classrooms: null;
+  classrooms: Classroom[];
   // Error that occurred while loading oauth classrooms
   loadError: {status: number; message: string} | null;
   // The page where the action is occurring
   pageType: string;
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: boolean | null;
-  ltiSyncResult: null;
+  ltiSyncResult: LtiSectionSyncResult | null;
   isLoadingSectionData: boolean;
-  initialCourseId?: number | null;
-  initialUnitId?: number | null;
+  initialCourseId?: number;
+  initialUnitId?: number;
   initialCourseOfferingId?: number | null;
   initialCourseVersionId?: number | null;
   initialLoginType?: keyof typeof SectionLoginType;
@@ -126,7 +139,7 @@ const initialState: TeacherSectionState = {
   rosterProviderName: null,
   // Set of oauth classrooms available for import from a third-party source.
   // Not populated until the RosterDialog is opened.
-  classrooms: null,
+  classrooms: [],
   // Error that occurred while loading oauth classrooms
   loadError: null,
   // The page where the action is occurring
@@ -148,6 +161,9 @@ const mapProviderToSectionType = (provider: ServerOAuthSectionTypeName) => {
   }
 };
 
+const sectionFromServerSection = (section: ServerSection) =>
+  untypedSectionFromServerSection(section) as Section;
+
 const sectionSlice = createSlice({
   name: 'teacherSection',
   initialState,
@@ -156,45 +172,57 @@ const sectionSlice = createSlice({
       state.providers = action.payload.map(mapProviderToSectionType);
     },
     setRosterProvider(state, action: PayloadAction<RosterProvider>) {
-      state.rosterProvider = action.payload;
+      // No-op if this action is called with a non-OAuth section type,
+      // since this action is triggered on every section load.
+      if (
+        action.payload &&
+        (OAuthSectionTypes[action.payload] ||
+          action.payload === SectionLoginType.lti_v1)
+      ) {
+        state.rosterProvider = action.payload;
+      }
     },
     setPageType(state, action: PayloadAction<string>) {
       state.pageType = action.payload;
     },
-    selectSection(state, action: PayloadAction<string>) {
-      let sectionId: number | null;
-      action.payload && state.sectionIds.includes(parseInt(action.payload, 10))
-        ? (sectionId = parseInt(action.payload, 10))
-        : (sectionId = NO_SECTION);
-      state.selectedSectionId = sectionId;
-      state.selectedSectionName =
-        sectionId !== NO_SECTION ? state.sections[sectionId].name : '';
+    selectSection(state, action: PayloadAction<string | number>) {
+      if (action.payload) {
+        const id = parseInt(action.payload.toString(), 10);
+        if (state.sectionIds.includes(id)) {
+          state.selectedSectionId = id;
+          state.selectedSectionName = state.sections[id].name;
+        } else {
+          state.selectedSectionId = NO_SECTION;
+          state.selectedSectionName = '';
+        }
+      } else {
+        state.selectedSectionId = NO_SECTION;
+        state.selectedSectionName = '';
+      }
     },
     updateSelectedSection(state, action: PayloadAction<ServerSection>) {
       const sectionId = action.payload.id;
       const oldSection: Section = sectionId
         ? state.sections[sectionId]
-        : (sectionFromServerSection(action.payload) as Section);
+        : sectionFromServerSection(action.payload);
       if (sectionId) {
         state.sections = {
           ...state.sections,
           [sectionId]: {
             ...oldSection,
-            ...(sectionFromServerSection(action.payload) as Section),
+            ...sectionFromServerSection(action.payload),
           },
         };
       }
     },
     setSections(state, action: PayloadAction<ServerSection[]>) {
-      const sections: Section[] = action.payload.map(
-        section => sectionFromServerSection(section) as Section
-      );
+      const sections = action.payload.map(sectionFromServerSection);
 
-      let selectedSectionId = state.selectedSectionId;
       // If we have only one section, autoselect it
-      if (Object.keys(action.payload).length === 1) {
-        selectedSectionId = action.payload[0].id;
-      }
+      const selectedSectionId =
+        Object.keys(action.payload).length === 1
+          ? action.payload[0].id
+          : state.selectedSectionId;
 
       sections.forEach(section => {
         // SET_SECTIONS is called in two different contexts. On some pages it is called
@@ -248,48 +276,51 @@ const sectionSlice = createSlice({
     finishLoadingSectionData(state) {
       state.isLoadingSectionData = false;
     },
-    setStudentsForCurrentSection(
-      state,
-      action: PayloadAction<{
-        sectionId: number;
-        students: Student[];
-      }>
-    ) {
-      const students = action.payload.students || [];
-      const selectedStudents = students.map(
-        student =>
-          studentFromServerStudent(student, action.payload.sectionId) as Student
-      );
-
-      state.selectedStudents = selectedStudents;
-    },
-    setRosterProviderName(state, action: PayloadAction<string>) {
-      state.rosterProviderName = action.payload;
-    },
-    updateSectionAiTutorEnabled: {
+    setStudentsForCurrentSection: {
       reducer(
         state,
         action: PayloadAction<{
           sectionId: number;
-          aiTutorEnabled: boolean;
+          students: Student[];
         }>
       ) {
-        const {sectionId, aiTutorEnabled} = action.payload;
-        const section = state.sections[sectionId];
-        if (!section) {
-          throw new Error('section does not exist');
-        }
+        const students = action.payload.students || [];
+        const selectedStudents = students.map(
+          student =>
+            studentFromServerStudent(
+              student,
+              action.payload.sectionId
+            ) as Student
+        );
 
-        state.sections[sectionId].aiTutorEnabled = aiTutorEnabled;
+        state.selectedStudents = selectedStudents;
       },
-      prepare(sectionId: number, aiTutorEnabled: boolean) {
+      prepare(sectionId: number, students: Student[]) {
         return {
           payload: {
             sectionId,
-            aiTutorEnabled,
+            students,
           },
         };
       },
+    },
+    setRosterProviderName(state, action: PayloadAction<string>) {
+      state.rosterProviderName = action.payload;
+    },
+    updateSectionAiTutorEnabled(
+      state,
+      action: PayloadAction<{
+        sectionId: number;
+        aiTutorEnabled: boolean;
+      }>
+    ) {
+      const {sectionId, aiTutorEnabled} = action.payload;
+      const section = state.sections[sectionId];
+      if (!section) {
+        throw new Error('section does not exist');
+      }
+
+      state.sections[sectionId].aiTutorEnabled = aiTutorEnabled;
     },
     setCourseOfferings(
       state,
@@ -304,28 +335,32 @@ const sectionSlice = createSlice({
     setShowLockSectionField(state, action: PayloadAction<boolean>) {
       state.showLockSectionField = action.payload;
     },
-    setSectionCodeReviewExpiresAt(
-      state,
-      action: PayloadAction<{
-        sectionId: number;
-        codeReviewExpiresAt: string;
-      }>
-    ) {
-      // const {sectionId, codeReviewExpiresAt} = action.payload;
-      const section = state.sections[action.payload.sectionId];
-      if (!section) {
-        throw new Error('section does not exist');
-      }
+    setSectionCodeReviewExpiresAt: {
+      reducer(
+        state,
+        action: PayloadAction<{
+          sectionId: number;
+          codeReviewExpiresAt: string;
+        }>
+      ) {
+        const section = state.sections[action.payload.sectionId];
+        if (!section) {
+          throw new Error('section does not exist');
+        }
 
-      state.sections = {
-        ...state.sections,
-        [action.payload.sectionId]: {
-          ...state.sections[action.payload.sectionId],
-          codeReviewExpiresAt: action.payload.codeReviewExpiresAt
-            ? Date.parse(action.payload.codeReviewExpiresAt)
-            : null,
-        },
-      };
+        state.sections[action.payload.sectionId].codeReviewExpiresAt = action
+          .payload.codeReviewExpiresAt
+          ? Date.parse(action.payload.codeReviewExpiresAt)
+          : null;
+      },
+      prepare(sectionId: number, codeReviewExpiresAt: string) {
+        return {
+          payload: {
+            sectionId,
+            codeReviewExpiresAt,
+          },
+        };
+      },
     },
     removeSection(state, action: PayloadAction<number>) {
       const sectionId = action.payload;
@@ -338,56 +373,80 @@ const sectionSlice = createSlice({
       state.plSectionIds = _.without(state.plSectionIds, sectionId);
       state.sections = _.omit(state.sections, sectionId);
     },
-    beginCreatingSection(
-      state,
-      action: PayloadAction<{
-        courseOfferingId: number;
-        courseVersionId: number;
-        unitId: number;
-        participantType: string;
-      }>
-    ) {
-      const initialSectionData = newSectionData(
-        action.payload.participantType
-      ) as Section;
-      if (action.payload.courseOfferingId) {
-        initialSectionData.courseOfferingId = action.payload.courseOfferingId;
-      }
-      if (action.payload.courseVersionId) {
-        initialSectionData.courseVersionId = action.payload.courseVersionId;
-      }
-      if (action.payload.unitId) {
-        initialSectionData.unitId = action.payload.unitId;
-      }
-      state.initialCourseId = initialSectionData.courseId;
-      state.initialUnitId = initialSectionData.unitId;
-      state.initialCourseOfferingId = initialSectionData.courseOfferingId;
-      state.initialCourseVersionId = initialSectionData.courseVersionId;
-      state.initialLoginType = initialSectionData.loginType;
-      state.sectionBeingEdited = initialSectionData;
+    beginCreatingSection: {
+      reducer(
+        state,
+        action: PayloadAction<{
+          courseOfferingId?: number;
+          courseVersionId?: number;
+          unitId?: number;
+          participantType?: string;
+        }>
+      ) {
+        const initialSectionData = newSectionData(
+          action.payload.participantType
+        ) as Section;
+        if (action.payload.courseOfferingId) {
+          initialSectionData.courseOfferingId = action.payload.courseOfferingId;
+        }
+        if (action.payload.courseVersionId) {
+          initialSectionData.courseVersionId = action.payload.courseVersionId;
+        }
+        if (action.payload.unitId) {
+          initialSectionData.unitId = action.payload.unitId;
+        }
+        state.initialCourseId = initialSectionData.courseId;
+        state.initialUnitId = initialSectionData.unitId;
+        state.initialCourseOfferingId = initialSectionData.courseOfferingId;
+        state.initialCourseVersionId = initialSectionData.courseVersionId;
+        state.initialLoginType = initialSectionData.loginType;
+        state.sectionBeingEdited = initialSectionData;
+      },
+      prepare(
+        courseOfferingId?: number,
+        courseVersionId?: number,
+        unitId?: number,
+        participantType?: string
+      ) {
+        return {
+          payload: {
+            courseOfferingId,
+            courseVersionId,
+            unitId,
+            participantType,
+          },
+        };
+      },
     },
-    beginEditingSection(
-      state,
-      action: PayloadAction<{sectionId?: number | null; silent?: boolean}>
-    ) {
-      const silent = action.payload.silent ? action.payload.silent : false;
-      const initialParticipantType =
-        state.availableParticipantTypes.length === 1
-          ? state.availableParticipantTypes[0]
-          : undefined;
-      const initialSectionData = action.payload.sectionId
-        ? {...state.sections[action.payload.sectionId]}
-        : newSectionData(initialParticipantType);
-      return {
-        ...state,
-        initialCourseId: initialSectionData.courseId,
-        initialUnitId: initialSectionData.unitId,
-        initialCourseOfferingId: initialSectionData.courseOfferingId,
-        initialCourseVersionId: initialSectionData.courseVersionId,
-        initialLoginType: initialSectionData.loginType,
-        sectionBeingEdited: initialSectionData,
-        showSectionEditDialog: !silent,
-      };
+    beginEditingSection: {
+      reducer(
+        state,
+        action: PayloadAction<{sectionId?: number; silent: boolean}>
+      ) {
+        const silent = !!action.payload.silent;
+        const initialParticipantType =
+          state.availableParticipantTypes.length === 1
+            ? state.availableParticipantTypes[0]
+            : undefined;
+        const initialSectionData: Section = action.payload.sectionId
+          ? {...state.sections[action.payload.sectionId]}
+          : newSectionData(initialParticipantType);
+        state.initialCourseId = initialSectionData.courseId;
+        state.initialUnitId = initialSectionData.unitId;
+        state.initialCourseOfferingId = initialSectionData.courseOfferingId;
+        state.initialCourseVersionId = initialSectionData.courseVersionId;
+        state.initialLoginType = initialSectionData.loginType;
+        state.sectionBeingEdited = initialSectionData;
+        state.showSectionEditDialog = !silent;
+      },
+      prepare(sectionId = undefined, silent = false) {
+        return {
+          payload: {
+            sectionId,
+            silent,
+          },
+        };
+      },
     },
     editSectionProperties(state, action: PayloadAction<UserEditableSection>) {
       if (!state.sectionBeingEdited) {
@@ -428,6 +487,106 @@ const sectionSlice = createSlice({
         ...action.payload,
       };
     },
+    startSaveRequest(state) {
+      state.saveInProgress = true;
+    },
+    finishSaveRequest(
+      state,
+      action: PayloadAction<{
+        sectionId: number;
+        serverSection: ServerSection;
+      }>
+    ) {
+      // When updating a persisted section, oldSectionId will be identical to
+      // section.id. However, if this is a newly persisted section, oldSectionId
+      // will represent our temporary section. In that case, we want to delete
+      // that section, and replace it with our new one.
+      const section = sectionFromServerSection(action.payload.serverSection);
+      const oldSectionId = action.payload.sectionId;
+      const isNewSection = section.id !== oldSectionId;
+
+      if (isNewSection) {
+        if (state.sectionIds.includes(oldSectionId)) {
+          state.sectionIds = state.sectionIds.map(id =>
+            id === oldSectionId ? section.id : id
+          );
+        } else {
+          state.sectionIds = [section.id, ...state.sectionIds];
+        }
+      }
+
+      delete state.sections[oldSectionId];
+      state.sections[section.id] = {...state.sections[section.id], ...section};
+
+      state.studentSectionIds = Object.values(state.sections)
+        .filter(
+          section => section.participantType === ParticipantAudience.student
+        )
+        .map(section => section.id);
+      state.plSectionIds = Object.values(state.sections)
+        .filter(
+          section => section.participantType !== ParticipantAudience.student
+        )
+        .map(section => section.id);
+
+      if (section.loginType !== state.initialLoginType) {
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'edit-section-details',
+            event: 'change-login-type',
+            data_json: JSON.stringify({
+              sectionId: section.id,
+              initialLoginType: state.initialLoginType,
+              updatedLoginType: section.loginType,
+            }),
+          },
+          {includeUserId: true}
+        );
+      }
+
+      const assignmentData: AssignmentData = {
+        section_id: section.id,
+        section_creation_timestamp: section.createdAt,
+        page_name: state.pageType,
+      };
+      if (section.unitId !== state.initialUnitId) {
+        assignmentData.unit_id = section.unitId;
+      }
+      if (section.courseId !== state.initialCourseId) {
+        assignmentData.course_id = section.courseId;
+      }
+      if (section.courseOfferingId !== state.initialCourseOfferingId) {
+        assignmentData.course_offering_id = section.courseOfferingId;
+      }
+      if (section.courseVersionId !== state.initialCourseVersionId) {
+        assignmentData.course_version_id = section.courseVersionId;
+      }
+      // If either of these has been set, assignment changed and should be logged
+      if (assignmentData.unit_id || assignmentData.course_id) {
+        firehoseClient.putRecord(
+          {
+            study: 'assignment',
+            study_group: 'v1',
+            event: isNewSection ? 'create_section' : 'edit_section_details',
+            data_json: JSON.stringify(assignmentData),
+          },
+          {includeUserId: true}
+        );
+      }
+
+      state.sectionBeingEdited = null;
+      state.saveInProgress = false;
+    },
+    failSaveRequest(state) {
+      state.saveInProgress = false;
+    },
+    beginAsyncLoad(state) {
+      state.asyncLoadComplete = false;
+    },
+    endAsyncLoad(state) {
+      state.asyncLoadComplete = true;
+    },
     cancelEditingSession(state) {
       state.sectionBeingEdited = null;
     },
@@ -437,10 +596,17 @@ const sectionSlice = createSlice({
     setCoteacherInviteForPl(state, action: PayloadAction<SectionInstructor>) {
       state.coteacherInviteForPl = action.payload;
     },
+    beginImportRosterFlow(state) {
+      state.isRosterDialogOpen = true;
+      state.classrooms = [];
+    },
+    importRosterFlowListLoaded(state, action: PayloadAction<Classroom[]>) {
+      state.classrooms = action.payload;
+    },
     cancelImportRosterFlow(state) {
       state.isRosterDialogOpen = false;
       state.rosterProvider = null;
-      state.classrooms = null;
+      state.classrooms = [];
     },
     rosterImportFailed(
       state,
@@ -451,8 +617,32 @@ const sectionSlice = createSlice({
         message: action.payload.message,
       };
     },
+    rosterImportRequest(state) {
+      state.classrooms = [];
+    },
+    rosterImportSuccess(state, action: PayloadAction<number>) {
+      state.isRosterDialogOpen = false;
+      state.sectionBeingEdited = {
+        ...state.sections[action.payload],
+        // explicitly unhide after importing
+        hidden: false,
+      };
+    },
+    ltiRosterImportSuccess(state, action: PayloadAction<LtiSectionSyncResult>) {
+      state.ltiSyncResult = action.payload;
+    },
   },
 });
+
+/** @const A few constants exposed for unit test setup */
+export const __testInterface__ = {
+  EDIT_SECTION_REQUEST: 'teacherSection/editSectionRequest',
+  EDIT_SECTION_SUCCESS: 'teacherSection/editSectionSuccess',
+  IMPORT_ROSTER_FLOW_BEGIN: 'teacherSection/importRosterFlowBegin',
+  IMPORT_ROSTER_FLOW_LIST_LOADED: 'teacherSection/importRosterFlowListLoaded',
+  PENDING_NEW_SECTION_ID: 'teacherSection/pendingNewSectionId',
+  USER_EDITABLE_SECTION_PROPS,
+};
 
 //Thunks
 
@@ -478,8 +668,6 @@ export const {
   setStudentsForCurrentSection,
   setRosterProviderName,
   finishLoadingSectionData,
-
-  // Not implemented yet
   setCourseOfferings,
   setAvailableParticipantTypes,
   setShowLockSectionField,
@@ -493,12 +681,6 @@ export const {
   setCoteacherInviteForPl,
   cancelImportRosterFlow,
   rosterImportFailed,
-  // Lots of other reducers need to be implemented too, but not essential for
-  // type-checking (perhaps not included from any TS files?)
-} = {
-  ...sectionSlice.actions,
-
-  // Method signatures to allow compiler type-checking to pass. Delete when implemented.
-};
+} = sectionSlice.actions;
 
 export default sectionSlice.reducer;

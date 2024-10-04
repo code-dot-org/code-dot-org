@@ -19,10 +19,10 @@ export interface Section {
   ttsAutoplayEnabled: boolean;
   studentCount: number;
   code: string;
-  courseOfferingId: number | null;
-  courseVersionId: number | null;
-  unitId: number | null;
-  courseId: number | null;
+  courseOfferingId?: number;
+  courseVersionId?: number;
+  unitId?: number;
+  courseId?: number;
   scriptId: number | null;
   grades: string[];
   providerManaged: boolean;
@@ -49,10 +49,10 @@ export interface UserEditableSection {
   pairingAllowed?: boolean;
   ttsAutoplayEnabled?: boolean;
   participantType?: string;
-  courseId?: number | null;
-  courseOfferingId?: number | null;
-  courseVersionId?: number | null;
-  unitId?: number | null;
+  courseId?: number;
+  courseOfferingId?: number;
+  courseVersionId?: number;
+  unitId?: number;
   grades?: string[];
   hidden?: boolean;
   restrictSection?: boolean;
@@ -118,6 +118,24 @@ export type SectionInstructor = {
   instructor_name: string;
   instructor_email: string;
   participant_type: string;
+};
+
+export type Classroom = {
+  id: string;
+  name: string;
+  section: string | null;
+  enrollment_code: string;
+};
+
+type LtiSection = {
+  name: string;
+  size: number;
+};
+
+export type LtiSectionSyncResult = {
+  all: {[key: number]: LtiSection};
+  changed: {[key: number]: LtiSection};
+  error?: string;
 };
 
 //TODO will probably need to convert other shapes from templates/teacherDashboard/shapes
