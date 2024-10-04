@@ -8,6 +8,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import Congrats from '@cdo/apps/templates/certificates/Congrats';
+import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 $(document).ready(function () {
@@ -33,6 +34,12 @@ $(document).ready(function () {
   const isPlCourse = congratsData.is_pl_course;
   const isK5PlCourse = congratsData.is_k5_pl_course;
   const courseName = congratsData.course_name || 'hourofcode';
+  const assignableCourseSuggestions =
+    congratsData.assignable_course_suggestions;
+
+  if (congratsData.sections) {
+    store.dispatch(setSections(congratsData.sections));
+  }
 
   let certificateId = '';
   try {
@@ -70,6 +77,7 @@ $(document).ready(function () {
         nextCourseTitle={nextCourseTitle}
         nextCourseDesc={nextCourseDesc}
         curriculumUrl={curriculumUrl}
+        assignableCourseSuggestions={assignableCourseSuggestions}
       />
     </Provider>,
     document.getElementById('congrats-container')
