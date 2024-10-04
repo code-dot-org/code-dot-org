@@ -14,8 +14,7 @@ Scenario: GameLab with a submittable contained level
   And I see no difference for "answer entered" using stitch mode "none"
   Then I press "runButton"
   And I see no difference for "level run" using stitch mode "none"
-  And I press "submitButton"
-  And I press "confirm-button"
+  And I press "submitButton" to load a new page
   And I wait until current URL contains "/lessons/41/levels/8"
   Then I close my eyes
 

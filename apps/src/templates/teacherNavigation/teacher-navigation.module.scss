@@ -136,4 +136,9 @@
   font-weight: 600;
   color: $light_primary_500;
   text-transform: uppercase;
+  height: 18px;
+}
+
+.skeletonHeaderSectionName {
+  width: fit-content;
 }
