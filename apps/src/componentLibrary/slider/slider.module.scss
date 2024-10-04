@@ -1,5 +1,5 @@
-@import "color";
-@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
 
 //Slider colors for use in JSX/TSX
 $slider-black-track-fill-color: $light_black;
@@ -19,7 +19,6 @@ $slider-white-track-empty-color: $light_gray_400;
   sliderWhiteTrackFillColor: $slider-white-track-fill-color;
   sliderWhiteTrackEmptyColor: $slider-white-track-empty-color;
 }
-
 
 // Slider common styles
 .slider {
@@ -61,9 +60,13 @@ $slider-white-track-empty-color: $light_gray_400;
       -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
       appearance: none;
       background-image: unset;
+
+      &:focus-visible {
+        outline: none;
+      }
     }
 
-    input[type="range"]::-webkit-slider-runnable-track {
+    input[type='range']::-webkit-slider-runnable-track {
       width: 100%;
       height: 8px;
       cursor: pointer;
@@ -71,7 +74,7 @@ $slider-white-track-empty-color: $light_gray_400;
       border-radius: 5px;
     }
 
-    input[type="range"]::-moz-range-track {
+    input[type='range']::-moz-range-track {
       width: 100%;
       height: 8px;
       cursor: pointer;
@@ -79,7 +82,7 @@ $slider-white-track-empty-color: $light_gray_400;
       border-radius: 5px;
     }
 
-    input[type="range"]::-ms-track {
+    input[type='range']::-ms-track {
       width: 100%;
       height: 8px;
       cursor: pointer;
@@ -88,27 +91,25 @@ $slider-white-track-empty-color: $light_gray_400;
       color: transparent;
     }
 
-    input[type="range"]::-moz-range-progress {
+    input[type='range']::-moz-range-progress {
       background: transparent;
       height: 8px;
       border-radius: 5px;
     }
 
-    input[type="range"]::-ms-fill-lower {
+    input[type='range']::-ms-fill-lower {
       background: transparent;
       border-radius: 10px;
     }
 
-    input[type="range"]::-ms-fill-upper {
+    input[type='range']::-ms-fill-upper {
       background: transparent;
       border-radius: 10px;
     }
-
 
     /* Special styling for WebKit/Blink */
-    input[type="range"]::-webkit-slider-thumb {
+    input[type='range']::-webkit-slider-thumb {
       -webkit-appearance: none;
-      z-index: 2;
       box-sizing: border-box;
       height: 14px;
       width: 14px;
@@ -120,9 +121,8 @@ $slider-white-track-empty-color: $light_gray_400;
     }
 
     /* All the same stuff for Firefox */
-    input[type="range"]::-moz-range-thumb {
+    input[type='range']::-moz-range-thumb {
       -webkit-appearance: none;
-      z-index: 2;
       box-sizing: border-box;
       height: 14px;
       width: 14px;
@@ -134,9 +134,8 @@ $slider-white-track-empty-color: $light_gray_400;
     }
 
     /* All the same stuff for IE */
-    input[type="range"]::-ms-thumb {
+    input[type='range']::-ms-thumb {
       -webkit-appearance: none;
-      z-index: 2;
       box-sizing: border-box;
       height: 14px;
       width: 14px;
@@ -145,11 +144,30 @@ $slider-white-track-empty-color: $light_gray_400;
       background-color: transparent;
       cursor: pointer;
     }
+
+    // Focus Styles
+    input[type='range']:focus-visible {
+      outline: none;
+
+      &::-webkit-slider-thumb {
+        outline: 2px solid $light_primary_500;
+        outline-offset: 2px;
+      }
+
+      &::-moz-range-thumb {
+        outline: 2px solid $light_primary_500;
+        outline-offset: 2px;
+      }
+
+      &::-ms-thumb {
+        outline: 2px solid $light_primary_500;
+        outline-offset: 2px;
+      }
+    }
   }
 
   .centerMark {
     position: absolute;
-    z-index: 1;
     bottom: 3.5px;
     width: 2px;
     height: 10px;
@@ -157,7 +175,6 @@ $slider-white-track-empty-color: $light_gray_400;
     border: 1px solid transparent;
     border-radius: 2px;
   }
-
 
   // TODO: Uncomment when working on adding steps support
   //.stepMark {
@@ -169,50 +186,114 @@ $slider-white-track-empty-color: $light_gray_400;
   //}
 }
 
-
 // Slider Colors
 .slider-black {
   .sliderMainContainer {
     .sliderWrapper {
-      input[type="range"]::-webkit-slider-thumb {
+      input[type='range']::-webkit-slider-thumb {
         background-color: $light_white;
         border-color: $light_black;
       }
 
-      input[type="range"]::-moz-range-thumb {
+      input[type='range']::-moz-range-thumb {
         background-color: $light_white;
         border-color: $light_black;
       }
 
-      input[type="range"]::-ms-thumb {
+      input[type='range']::-ms-thumb {
         background-color: $light_white;
         border-color: $light_black;
       }
+
+      // Hover Styles
+      input[type='range']:hover {
+        &::-webkit-slider-thumb {
+          background-color: $light_primary_100;
+        }
+
+        &::-moz-range-thumb {
+          background-color: $light_primary_100;
+        }
+
+        &::-ms-thumb {
+          background-color: $light_primary_100;
+        }
+      }
+
+      // Focus Styles
+      input[type='range']:focus-visible {
+        outline: none;
+
+        &::-webkit-slider-thumb {
+          background-color: $light_primary_100;
+        }
+
+        &::-moz-range-thumb {
+          background-color: $light_primary_100;
+        }
+
+        &::-ms-thumb {
+          background-color: $light_primary_100;
+        }
+      }
+
+      // Disabled Styles
 
       .centerMark {
         border-color: $light_black;
       }
     }
   }
-
 }
 
 .slider-brand {
   .sliderMainContainer {
     .sliderWrapper {
-      input[type="range"]::-webkit-slider-thumb {
+      input[type='range']::-webkit-slider-thumb {
         background-color: $light_white;
         border-color: $light_black;
       }
 
-      input[type="range"]::-moz-range-thumb {
+      input[type='range']::-moz-range-thumb {
         background-color: $light_white;
         border-color: $light_black;
       }
 
-      input[type="range"]::-ms-thumb {
+      input[type='range']::-ms-thumb {
         background-color: $light_white;
         border-color: $light_black;
+      }
+
+      // Hover Styles
+      input[type='range']:hover {
+        &::-webkit-slider-thumb {
+          background-color: $light_primary_100;
+        }
+
+        &::-moz-range-thumb {
+          background-color: $light_primary_100;
+        }
+
+        &::-ms-thumb {
+          background-color: $light_primary_100;
+        }
+      }
+
+      // Focus Styles
+      input[type='range']:focus-visible {
+        outline: none;
+
+        &::-webkit-slider-thumb {
+          background-color: $light_primary_100;
+        }
+
+        &::-moz-range-thumb {
+          background-color: $light_primary_100;
+        }
+
+        &::-ms-thumb {
+          background-color: $light_primary_100;
+        }
       }
 
       .centerMark {
@@ -225,19 +306,51 @@ $slider-white-track-empty-color: $light_gray_400;
 .slider-white {
   .sliderMainContainer {
     .sliderWrapper {
-      input[type="range"]::-webkit-slider-thumb {
+      input[type='range']::-webkit-slider-thumb {
         background-color: $light_black;
         border-color: $light_white;
       }
 
-      input[type="range"]::-moz-range-thumb {
+      input[type='range']::-moz-range-thumb {
         background-color: $light_black;
         border-color: $light_white;
       }
 
-      input[type="range"]::-ms-thumb {
+      input[type='range']::-ms-thumb {
         background-color: $light_black;
         border-color: $light_white;
+      }
+
+      // Hover Styles
+      input[type='range']:hover {
+        &::-webkit-slider-thumb {
+          background-color: $neutral_dark90;
+        }
+
+        &::-moz-range-thumb {
+          background-color: $neutral_dark90;
+        }
+
+        &::-ms-thumb {
+          background-color: $neutral_dark90;
+        }
+      }
+
+      // Focus Styles
+      input[type='range']:focus-visible {
+        outline: none;
+
+        &::-webkit-slider-thumb {
+          background-color: $neutral_dark90;
+        }
+
+        &::-moz-range-thumb {
+          background-color: $neutral_dark90;
+        }
+
+        &::-ms-thumb {
+          background-color: $neutral_dark90;
+        }
       }
 
       .centerMark {
