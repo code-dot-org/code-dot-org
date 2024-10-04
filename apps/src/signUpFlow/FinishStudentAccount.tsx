@@ -16,14 +16,6 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
 import locale from './locale';
-import {
-  IS_PARENT_SESSION_KEY,
-  PARENT_EMAIL_SESSION_KEY,
-  PARENT_EMAIL_OPT_IN_SESSION_KEY,
-  USER_AGE_SESSION_KEY,
-  USER_STATE_SESSION_KEY,
-  USER_GENDER_SESSION_KEY,
-} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
@@ -93,10 +85,6 @@ const FinishStudentAccount: React.FunctionComponent<{
     );
     const newIsParentCheckedChoice = !isParent;
     setIsParent(newIsParentCheckedChoice);
-    sessionStorage.setItem(
-      IS_PARENT_SESSION_KEY,
-      `${newIsParentCheckedChoice}`
-    );
   };
 
   const onParentEmailChange = (
@@ -104,22 +92,12 @@ const FinishStudentAccount: React.FunctionComponent<{
   ): void => {
     const newParentEmail = e.target.value;
     setParentEmail(newParentEmail);
-    sessionStorage.setItem(PARENT_EMAIL_SESSION_KEY, newParentEmail);
 
     if (!isEmail(newParentEmail)) {
       setShowParentEmailError(true);
     } else {
       setShowParentEmailError(false);
     }
-  };
-
-  const onParentEmailOptInChange = (): void => {
-    const newParentEmailOptInCheckedChoice = !parentEmailOptInChecked;
-    setParentEmailOptInChecked(newParentEmailOptInCheckedChoice);
-    sessionStorage.setItem(
-      PARENT_EMAIL_OPT_IN_SESSION_KEY,
-      `${newParentEmailOptInCheckedChoice}`
-    );
   };
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -136,7 +114,6 @@ const FinishStudentAccount: React.FunctionComponent<{
   const onAgeChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     const newAge = e.target.value;
     setAge(newAge);
-    sessionStorage.setItem(USER_AGE_SESSION_KEY, newAge);
 
     if (newAge === '') {
       setShowAgeError(true);
@@ -148,19 +125,12 @@ const FinishStudentAccount: React.FunctionComponent<{
   const onStateChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     const newState = e.target.value;
     setState(newState);
-    sessionStorage.setItem(USER_STATE_SESSION_KEY, newState);
 
     if (newState === '') {
       setShowStateError(true);
     } else {
       setShowStateError(false);
     }
-  };
-
-  const onGenderChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const newGender = e.target.value;
-    setGender(newGender);
-    sessionStorage.setItem(USER_GENDER_SESSION_KEY, newGender);
   };
 
   const sendFinishEvent = (): void => {
@@ -216,7 +186,7 @@ const FinishStudentAccount: React.FunctionComponent<{
                     name="parentEmailOptIn"
                     label={locale.email_me_with_updates()}
                     checked={parentEmailOptInChecked}
-                    onChange={onParentEmailOptInChange}
+                    onChange={e => setParentEmailOptInChecked(e.target.checked)}
                     size="s"
                   />
                 </div>
@@ -274,7 +244,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             label={locale.what_is_your_gender()}
             value={gender}
             placeholder={locale.female()}
-            onChange={onGenderChange}
+            onChange={e => setGender(e.target.value)}
           />
           {showGDPR && (
             <div>
