@@ -50,8 +50,7 @@ module OmniauthCallbacksControllerTests
     test "teacher sign up for newest sign up flow" do
       auth_hash = mock_oauth
 
-      get '/users/new_sign_up/login_type'
-      sign_in_through_google
+      post "/users/auth/google_oauth2"
       get '/users/auth/google_oauth2/callback', params: {finish_url: '/users/new_sign_up/finish_teacher_account'}
       assert_template 'omniauth/redirect'
       assert PartialRegistration.in_progress? session
@@ -67,7 +66,6 @@ module OmniauthCallbacksControllerTests
         SignUpTracking::CONTROL_GROUP,
         %w(
           google_oauth2-callback
-          google_oauth2-load-finish-sign-up-page
           google_oauth2-sign-up-success
         )
       )

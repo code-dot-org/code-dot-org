@@ -160,15 +160,15 @@ class RegistrationsController < Devise::RegistrationsController
       sign_in @user
     end
 
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
-      if retries > 0
-        Honeybadger.notify(
-          error_class: 'User creation required multiple attempts',
-          error_message: "retry ##{retries} failed with exception: #{exception}"
-        )
-      end
-      super
-    end
+    # Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
+    #   if retries > 0
+    #     Honeybadger.notify(
+    #       error_class: 'User creation required multiple attempts',
+    #       error_message: "retry ##{retries} failed with exception: #{exception}"
+    #     )
+    #   end
+    #   super
+    # end
 
     if current_user && current_user.errors.blank?
       if current_user.teacher?
