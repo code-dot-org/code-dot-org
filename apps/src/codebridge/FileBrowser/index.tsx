@@ -56,6 +56,7 @@ import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {FileUploader} from './FileUploader';
 import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
+import {PopUpButtonOption} from './PopUpButtonOption';
 import {
   DragType,
   DragDataType,
@@ -288,22 +289,21 @@ const InnerFileBrowser = React.memo(
                       className={moduleStyles['button-kebab']}
                     >
                       <span className={moduleStyles['button-bar']}>
-                        <span onClick={() => moveFolderPrompt(f.id)}>
-                          <i className="fa-solid fa-arrow-right" />{' '}
-                          {codebridgeI18n.moveFolder()}
-                        </span>
-                        <span onClick={() => renameFolderPrompt(f.id)}>
-                          <i className="fa-solid fa-pencil" />{' '}
-                          {codebridgeI18n.renameFolder()}
-                        </span>
-                        <span onClick={() => newFolderPrompt(f.id)}>
-                          <i className="fa-solid fa-folder-plus" />{' '}
-                          {codebridgeI18n.addSubFolder()}
-                        </span>
-                        <span onClick={() => newFilePrompt(f.id)}>
-                          <i className="fa-solid fa-plus" />{' '}
-                          {codebridgeI18n.newFile()}
-                        </span>
+                        <PopUpButtonOption
+                          iconName="pencil"
+                          labelText={codebridgeI18n.renameFolder()}
+                          clickHandler={() => renameFolderPrompt(f.id)}
+                        />
+                        <PopUpButtonOption
+                          iconName="folder-plus"
+                          labelText={codebridgeI18n.addSubFolder()}
+                          clickHandler={() => newFolderPrompt(f.id)}
+                        />
+                        <PopUpButtonOption
+                          iconName="plus"
+                          labelText={codebridgeI18n.newFile()}
+                          clickHandler={() => newFilePrompt(f.id)}
+                        />
                         <FileUploader
                           validMimeTypes={validMimeTypes}
                           callback={(fileName, contents) =>
@@ -315,15 +315,16 @@ const InnerFileBrowser = React.memo(
                           }
                           errorCallback={fileUploadErrorCallback}
                         >
-                          <span>
-                            <i className="fa-solid fa-upload" />{' '}
-                            {codebridgeI18n.uploadFile()}
-                          </span>
+                          <PopUpButtonOption
+                            iconName="upload"
+                            labelText={codebridgeI18n.uploadFile()}
+                          />
                         </FileUploader>
-                        <span onClick={() => handleDeleteFolder(f.id)}>
-                          <i className="fa-solid fa-trash" />{' '}
-                          {codebridgeI18n.deleteFolder()}
-                        </span>
+                        <PopUpButtonOption
+                          iconName="trash"
+                          labelText={codebridgeI18n.deleteFolder()}
+                          clickHandler={() => handleDeleteFolder(f.id)}
+                        />
                       </span>
                     </PopUpButton>
                   )}
@@ -381,26 +382,25 @@ const InnerFileBrowser = React.memo(
                       className={moduleStyles['button-kebab']}
                     >
                       <span className={moduleStyles['button-bar']}>
-                        <span onClick={() => moveFilePrompt(f.id)}>
-                          <i className="fa-solid fa-arrow-right" />{' '}
-                          {codebridgeI18n.moveFile()}
-                        </span>
-                        <span onClick={() => renameFilePrompt(f.id)}>
-                          <i className="fa-solid fa-pencil" />{' '}
-                          {codebridgeI18n.renameFile()}
-                        </span>
+                        <PopUpButtonOption
+                          iconName="pencil"
+                          labelText={codebridgeI18n.renameFile()}
+                          clickHandler={() => renameFilePrompt(f.id)}
+                        />
                         {editableFileTypes.some(
                           type => type === f.language
                         ) && (
-                          <span onClick={() => downloadFile(f.id)}>
-                            <i className="fa-solid fa-download" />{' '}
-                            {codebridgeI18n.downloadFile()}
-                          </span>
+                          <PopUpButtonOption
+                            iconName="download"
+                            labelText={codebridgeI18n.downloadFile()}
+                            clickHandler={() => downloadFile(f.id)}
+                          />
                         )}
-                        <span onClick={() => handleDeleteFile(f.id)}>
-                          <i className="fa-solid fa-trash" />{' '}
-                          {codebridgeI18n.deleteFile()}
-                        </span>
+                        <PopUpButtonOption
+                          iconName="trash"
+                          labelText={codebridgeI18n.deleteFile()}
+                          clickHandler={() => handleDeleteFile(f.id)}
+                        />
                         {isStartMode && startModeFileDropdownOptions(f)}
                       </span>
                     </PopUpButton>
