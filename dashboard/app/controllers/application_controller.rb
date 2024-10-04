@@ -4,7 +4,6 @@ require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
 require 'policies/child_account'
-require 'cdo/global'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
