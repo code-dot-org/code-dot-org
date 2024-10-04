@@ -63,11 +63,11 @@ module Cdo
 
       validated_record = {}
       @schema[:columns].each do |key, column_schema|
-        if parsed_record.key?(key.to_s)
+        if parsed_record[key.to_s].present?
           validated_record[key.to_s] = validate_column(key.to_s, parsed_record[key.to_s], column_schema)
           # Redshift columns are nullable by default, so make sure the 'nullable' setting is present for the current column.
         elsif column_schema.key?(:nullable) && column_schema[:nullable] == false
-          @errors << "Missing non-nullable column: #{key}"
+          @errors << "Required column is missing or empty: #{key}"
         end
       end
 
@@ -105,7 +105,7 @@ module Cdo
     end
 
     private def validate_character(key, value, max_length)
-      value_string = value.is_a?(Hash) ? value_string.to_json : value
+      value_string = value.is_a?(Hash) ? value_string.to_json : value.to_s
       unless value_string.is_a?(String)
         @errors << "Invalid type for #{key}: expected String, got #{value_string.class}"
         value_string = value_string.to_s if @modify_invalid
@@ -129,7 +129,7 @@ module Cdo
     end
 
     private def validate_character_varying(key, value, max_length)
-      value_string = value.is_a?(Hash) ? value.to_json : value
+      value_string = value.is_a?(Hash) ? value.to_json : value.to_s
       unless value_string.is_a?(String)
         @errors << "Invalid type for #{key}: expected String, got #{value.class}"
         value_string = value_string.to_s if @modify_invalid

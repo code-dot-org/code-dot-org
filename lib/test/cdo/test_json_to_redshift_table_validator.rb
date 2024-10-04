@@ -96,6 +96,20 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
     end
   end
 
+  def test_compatible_datatype_is_valid_and_converted
+    record_string = {
+      "created_at" => "2023-09-03T12:00:00Z",
+      "environment" => "production",
+      "study" => "example_study",
+      "event" => "login",
+      "project_id" => 8_675_309 # project_id is a `character` column but Integer can be safely cast to String
+    }.to_json
+    validated_record_string, validation_errors = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema, modify_invalid: true)
+    assert_empty validation_errors
+    validated_record = JSON.parse(validated_record_string)  # Reparse result to check.
+    assert_equal "8675309", validated_record["project_id"]
+  end
+
   def test_exceeds_max_length
     json_string = {
       "created_at" => "2023-09-03T12:00:00Z",
@@ -115,6 +129,18 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
       "environment" => "production",
       "study" => "example_study"
       # "event" is missing
+    }.to_json
+    assert_raises(Cdo::JSONtoRedshiftTableValidator::ValidationError) do
+      Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema)
+    end
+  end
+
+  def test_required_property_is_empty
+    record_string = {
+      "created_at" => "2023-09-03T12:00:00Z",
+      "environment" => "production",
+      "study" => "example_study",
+      "event" => ""
     }.to_json
     assert_raises(Cdo::JSONtoRedshiftTableValidator::ValidationError) do
       Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema)
