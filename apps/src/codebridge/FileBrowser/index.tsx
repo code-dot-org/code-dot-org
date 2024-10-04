@@ -1,7 +1,6 @@
 import {
   useCodebridgeContext,
   getNextFileId,
-  getNextFolderId,
   findFiles,
   findSubFolders,
 } from '@codebridge/codebridgeContext';
@@ -43,7 +42,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {
   useDialogControl,
   DialogType,
-  DialogClosePromiseReturnType,
+  extractDialogClosePromiseInput as extractInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -56,7 +55,11 @@ import {Draggable} from './Draggable';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {FileUploader} from './FileUploader';
-import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
+import {
+  useFileUploadErrorCallback,
+  useHandleFileUpload,
+  usePrompts,
+} from './hooks';
 import {
   DragType,
   DragDataType,
@@ -65,7 +68,6 @@ import {
   moveFilePromptType,
   moveFolderPromptType,
   newFilePromptType,
-  newFolderPromptType,
   renameFilePromptType,
   renameFolderPromptType,
   setFileType,
@@ -82,23 +84,10 @@ type FilesComponentProps = {
   moveFilePrompt: moveFilePromptType;
   moveFolderPrompt: moveFolderPromptType;
   newFilePrompt: newFilePromptType;
-  newFolderPrompt: newFolderPromptType;
   renameFilePrompt: renameFilePromptType;
   renameFolderPrompt: renameFolderPromptType;
   setFileType: setFileType;
   appName?: string;
-};
-
-// given a promise returned from DialogManager.showDialog({type : DialogType.GenericPrompt}), will return the input
-// that was typed in by the user.
-// Note that if the user did not press the `confirm` button, then an empty string will be returned instead.
-const extractInput = (promiseResults: DialogClosePromiseReturnType): string => {
-  const {type, args} = promiseResults;
-  if (type === 'confirm') {
-    return args as string;
-  }
-
-  return '';
 };
 
 const InnerFileBrowser = React.memo(
@@ -107,7 +96,6 @@ const InnerFileBrowser = React.memo(
     folders,
     files,
     downloadFile,
-    newFolderPrompt,
     newFilePrompt,
     moveFilePrompt,
     moveFolderPrompt,
@@ -116,6 +104,7 @@ const InnerFileBrowser = React.memo(
     setFileType,
     appName,
   }: FilesComponentProps) => {
+    const {openNewFolderPrompt} = usePrompts();
     const {
       openFile,
       deleteFile,
@@ -297,7 +286,9 @@ const InnerFileBrowser = React.memo(
                           <i className="fa-solid fa-pencil" />{' '}
                           {codebridgeI18n.renameFolder()}
                         </span>
-                        <span onClick={() => newFolderPrompt(f.id)}>
+                        <span
+                          onClick={() => openNewFolderPrompt({parentId: f.id})}
+                        >
                           <i className="fa-solid fa-folder-plus" />{' '}
                           {codebridgeI18n.addSubFolder()}
                         </span>
@@ -333,7 +324,6 @@ const InnerFileBrowser = React.memo(
                   <ul>
                     <InnerFileBrowser
                       folders={folders}
-                      newFolderPrompt={newFolderPrompt}
                       parentId={f.id}
                       files={files}
                       downloadFile={downloadFile}
@@ -424,7 +414,6 @@ export const FileBrowser = React.memo(() => {
     moveFolder,
 
     renameFolder,
-    newFolder,
     setFileType,
   } = useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
@@ -459,44 +448,6 @@ export const FileBrowser = React.memo(() => {
       },
     }),
     [setDragData, setDropData]
-  );
-
-  const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
-    () =>
-      async (parentId = DEFAULT_FOLDER_ID) => {
-        const results = await dialogControl.showDialog({
-          type: DialogType.GenericPrompt,
-          title: codebridgeI18n.newFolderPrompt(),
-          validateInput: (folderName: string) => {
-            if (!folderName.length) {
-              return;
-            }
-            if (!validateFolderName(folderName)) {
-              return codebridgeI18n.invalidNameError();
-            }
-            const existingFolder = Object.values(project.folders).some(
-              f => f.name === folderName && f.parentId === parentId
-            );
-            if (existingFolder) {
-              return codebridgeI18n.folderExistsError();
-            }
-          },
-        });
-        if (results.type !== 'confirm') {
-          return;
-        }
-        const folderName = extractInput(results);
-
-        const folderId = getNextFolderId(Object.values(project.folders));
-        newFolder({parentId, folderName, folderId});
-
-        const eventName =
-          parentId === DEFAULT_FOLDER_ID
-            ? EVENTS.CODEBRIDGE_NEW_FOLDER
-            : EVENTS.CODEBRIDGE_NEW_SUBFOLDER;
-        sendCodebridgeAnalyticsEvent(eventName, appName);
-      },
-    [appName, dialogControl, newFolder, project.folders]
   );
 
   const downloadFile: FilesComponentProps['downloadFile'] = useMemo(
@@ -818,10 +769,7 @@ export const FileBrowser = React.memo(() => {
       className={moduleStyles['file-browser']}
       rightHeaderContent={
         !isReadOnly && (
-          <FileBrowserHeaderPopUpButton
-            newFolderPrompt={newFolderPrompt}
-            newFilePrompt={newFilePrompt}
-          />
+          <FileBrowserHeaderPopUpButton newFilePrompt={newFilePrompt} />
         )
       }
     >
@@ -846,7 +794,6 @@ export const FileBrowser = React.memo(() => {
                 parentId={DEFAULT_FOLDER_ID}
                 folders={project.folders}
                 downloadFile={downloadFile}
-                newFolderPrompt={newFolderPrompt}
                 files={project.files}
                 newFilePrompt={newFilePrompt}
                 moveFilePrompt={moveFilePrompt}

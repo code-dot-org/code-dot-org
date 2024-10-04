@@ -8,21 +8,24 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 import {FileUploader} from './FileUploader';
-import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
-import {newFolderPromptType, newFilePromptType} from './types';
+import {
+  useFileUploadErrorCallback,
+  useHandleFileUpload,
+  usePrompts,
+} from './hooks';
+import {newFilePromptType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
 import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
 
 type FileBrowserHeaderPopUpButtonProps = {
-  newFolderPrompt: newFolderPromptType;
   newFilePrompt: newFilePromptType;
 };
 
 export const FileBrowserHeaderPopUpButton = ({
-  newFolderPrompt,
   newFilePrompt,
 }: FileBrowserHeaderPopUpButtonProps) => {
+  const {openNewFolderPrompt} = usePrompts();
   const {
     project,
     config: {validMimeTypes},
@@ -32,7 +35,7 @@ export const FileBrowserHeaderPopUpButton = ({
   return (
     <PopUpButton iconName="plus" alignment="left">
       <div
-        onClick={() => newFolderPrompt()}
+        onClick={() => openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})}
         className={classNames(
           darkModeStyles.dropdownItem,
           moduleStyles.dropdownItem
