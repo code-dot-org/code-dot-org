@@ -157,7 +157,7 @@ GroupOfDisabledSliders.args = {
       color: 'black',
       disabled: true,
       onChange: () => null,
-      value: 0,
+      value: 25,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -173,7 +173,7 @@ GroupOfDisabledSliders.args = {
       color: 'brand',
       disabled: true,
       onChange: () => null,
-      value: 0,
+      value: 50,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -189,7 +189,7 @@ GroupOfDisabledSliders.args = {
       color: 'white',
       disabled: true,
       onChange: () => null,
-      value: 0,
+      value: 75,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -206,7 +206,7 @@ GroupOfDisabledSliders.args = {
       disabled: true,
       isCentered: true,
       onChange: () => null,
-      value: 50,
+      value: 25,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -223,7 +223,7 @@ GroupOfDisabledSliders.args = {
       disabled: true,
       isCentered: true,
       onChange: () => null,
-      value: 50,
+      value: 65,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -239,7 +239,7 @@ GroupOfDisabledSliders.args = {
       disabled: true,
       isCentered: true,
       onChange: () => null,
-      value: 50,
+      value: 75,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -260,7 +260,7 @@ GroupOfColorsOfSliders.args = {
       label: 'Slider Black',
       color: 'black',
       onChange: () => null,
-      value: 0,
+      value: 25,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -275,7 +275,7 @@ GroupOfColorsOfSliders.args = {
       label: 'Slider Brand',
       color: 'brand',
       onChange: () => null,
-      value: 0,
+      value: 50,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -290,7 +290,7 @@ GroupOfColorsOfSliders.args = {
       label: 'Slider White',
       color: 'white',
       onChange: () => null,
-      value: 0,
+      value: 75,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -306,7 +306,7 @@ GroupOfColorsOfSliders.args = {
       color: 'black',
       isCentered: true,
       onChange: () => null,
-      value: 50,
+      value: 25,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -322,7 +322,7 @@ GroupOfColorsOfSliders.args = {
       color: 'brand',
       isCentered: true,
       onChange: () => null,
-      value: 50,
+      value: 65,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
@@ -338,7 +338,7 @@ GroupOfColorsOfSliders.args = {
       color: 'white',
       isCentered: true,
       onChange: () => null,
-      value: 50,
+      value: 75,
       leftButtonProps: {
         icon: {iconName: 'minus', title: 'Decrease'},
         ['aria-label']: 'Decrease',
