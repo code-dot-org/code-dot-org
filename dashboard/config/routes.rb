@@ -22,7 +22,7 @@ Dashboard::Application.routes.draw do
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
-          get :course, params: :course_version_name, action: :show
+          get :courses, params: :course_version_name, action: :show
           get '*path', action: :show, via: :all, as: :subpath
         end
       end
