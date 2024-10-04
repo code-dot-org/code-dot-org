@@ -9,20 +9,20 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     @section = @sections.first
   end
 
-  test 'index: returns forbidden if no logged in user' do
+  test 'index: redirects home if no logged in user' do
     get :show, params: {section_id: @section.id}
     assert_response :redirect
     assert_redirected_to "http://test.host/home"
   end
 
-  test 'index: returns forbidden if logged in user is not a teacher' do
+  test 'index: redirects home if logged in user is not a teacher' do
     sign_in create(:student)
     get :show, params: {section_id: @section.id}
     assert_response :redirect
     assert_redirected_to "http://test.host/home"
   end
 
-  test 'index: returns forbidden if requested section does not belong to teacher' do
+  test 'index: redirects home if requested section does not belong to teacher' do
     sign_in @section_owner
     other_teacher_section = create :section
     get :show, params: {section_id: other_teacher_section.id}
