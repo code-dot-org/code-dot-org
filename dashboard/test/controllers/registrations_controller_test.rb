@@ -921,4 +921,71 @@ class RegistrationsControllerTest < ActionController::TestCase
     assigns(:user).expects(:verify_teacher!).never
     refute assigns(:user).verified_teacher?
   end
+
+  test 'redirects signed-in user to home if they attempt to access account_type url' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    # Attempt to reach a new sign up page
+    get :account_type
+    assert_redirected_to '/'
+  end
+
+  test 'redirects signed-in user to home if they attempt to access login_type url' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    # Attempt to reach a new sign up page
+    get :login_type
+    assert_redirected_to '/'
+  end
+
+  test 'redirects signed-in user to home if they attempt to access finish_teacher_account url' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    # Attempt to reach a new sign up page
+    get :finish_teacher_account
+    assert_redirected_to '/'
+  end
+
+  test 'redirects signed-in user to home if they attempt to access finish_student_account url' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    # Attempt to reach a new sign up page
+    get :finish_student_account
+    assert_redirected_to '/'
+  end
+
+  test 'redirects signed-in user to home if they attempt to access new' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    get :new
+    assert_redirected_to '/'
+  end
+
+  test 'redirects signed-in user to home if they attempt to access cancel' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    get :cancel
+    assert_redirected_to '/'
+  end
+
+  test 'redirects signed-in user to home if they attempt to access create' do
+    # Create a new user and sign them in
+    picture_student = create(:student_in_picture_section)
+    sign_in picture_student
+
+    get :create
+    assert_redirected_to '/'
+  end
 end

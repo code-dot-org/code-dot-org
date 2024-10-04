@@ -13,6 +13,8 @@ import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {PlayingTrigger} from '../player/interfaces/PlayingTrigger';
 import MusicPlayer from '../player/MusicPlayer';
 
+import {MusicConditions} from './MusicConditions';
+
 export interface ConditionNames {
   [key: string]: ConditionType;
 }
@@ -24,10 +26,6 @@ export const MusicConditions: ConditionNames = {
     valueType: 'number',
   },
   PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
-  PLAYED_SOUND_TRIGGERED_MULTIPLE_TIMES: {
-    name: 'played_sound_triggered_multiple_times',
-    valueType: 'number',
-  },
   PLAYED_SOUND_IN_FUNCTION: {
     name: 'played_sound_in_function',
     valueType: 'string',
@@ -49,10 +47,6 @@ export const MusicConditions: ConditionNames = {
   PLAYED_PATTERNS_AI: {name: 'played_patterns_ai', valueType: 'number'},
   PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES: {
     name: 'played_different_sounds_together_multiple_times',
-    valueType: 'number',
-  },
-  TRIGGER_ID_PRESSED: {
-    name: 'trigger_id_pressed',
     valueType: 'number',
   },
 };

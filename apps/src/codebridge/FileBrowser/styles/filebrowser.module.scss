@@ -32,6 +32,7 @@
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .file-browser ul li span.button-bar {
@@ -82,6 +83,10 @@ div.row:hover .button-kebab {
   margin: 2px 8px 2px 8px;
   font-size: 13px;
   line-height: 125%;
+
+  // prevents caret-down icon from pushing
+  // text to the right when toggling folders
+  min-width: 9px;
 }
 
 .acceptingDrop {

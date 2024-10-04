@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2024-09-17T21:02:32.000Z",
   "level_num": "custom",
@@ -33,31 +32,31 @@
           "folderId": "0",
           "active": false,
           "open": true
-        },
-        "2": {
-          "id": "2",
-          "name": "test.py",
-          "language": "py",
-          "contents": "import unittest\nimport ast\n\nclass TestSeaLevelAnalysis(unittest.TestCase):\n\n    def setUp(self):\n        pass\n\n    def tearDown(self):\n        pass\n\n    def test_groupby_and_sum_on_sea_level_anomalies(self):\n        \"\"\"Use the groupby() function to group the data by decade and calculate the total sea level anomalies using the sum() function.\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Parse the script using AST\n        tree = ast.parse(script_content)\n        decade_groupby_detected = False\n        sum_function_detected = False\n\n        # Traverse the AST to detect groupby for 'Decade' and sum() usage\n        for node in ast.walk(tree):\n            # Detect `groupby` operations on 'Decade'\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'groupby':\n                    # Look for groupby parameters matching 'Decade'\n                    if len(node.args) > 0 and isinstance(node.args[0], ast.Constant):\n                        if node.args[0].value == 'Decade':\n                            decade_groupby_detected = True\n\n            # Detect `sum()` function applied to grouped data\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'sum':\n                    sum_function_detected = True\n\n        # Assert that both groupby and sum are detected\n        self.assertTrue(decade_groupby_detected, \"Group the data by 'Decade' to show the total sea level anomalies for each decade.\")\n        self.assertTrue(sum_function_detected, \"Use the sum() function to calculate the total sea level anomalies for each decade.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
-          "folderId": "0",
-          "active": false,
-          "open": true,
-          "type": "validation"
         }
       },
       "folders": {
       },
       "openFiles": [
         "0",
-        "1",
-        "2"
+        "1"
       ]
     },
     "display_name": "sum() with groupby()",
     "bubble_choice_description": "Use the `sum()` function to calculate total values in order to help quantify the overall impact of the changes in the East River.",
     "thumbnail_url": "https://images.code.org/103744967c1b54d1b69300cd9b7d46bf-flood.png",
-    "teacher_markdown": "**What Students Should Take Away:**\r\n- Students gain hands-on experience using the sum() function in combination with the groupby() function to calculate totals over specific time periods.\r\n- By grouping the data by decade, students see how sea levels have changed over longer periods, helping them identify significant trends or anomalies that may not be visible in shorter time frames.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n- Students might think that grouping by decade is arbitrary or doesn’t add much value.\r\n  - Tip: Encourage students to think about how grouping data by longer periods can reveal broader trends that might be missed when looking at shorter time frames. Ask them to consider why decade-based analysis is useful for identifying long-term changes.\r\n- Students may have difficulty understanding why the sum of sea levels over a decade is significant compared to annual or monthly sums.\r\n  - Tip: Guide students to think about how cumulative data over a decade can show significant shifts or trends that indicate broader environmental changes. Discuss how these long-term trends are critical for understanding the overall impact of sea level changes."
+    "teacher_markdown": "**What Students Should Take Away:**\r\n- Students gain hands-on experience using the sum() function in combination with the groupby() function to calculate totals over specific time periods.\r\n- By grouping the data by decade, students see how sea levels have changed over longer periods, helping them identify significant trends or anomalies that may not be visible in shorter time frames.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n- Students might think that grouping by decade is arbitrary or doesn’t add much value.\r\n  - Tip: Encourage students to think about how grouping data by longer periods can reveal broader trends that might be missed when looking at shorter time frames. Ask them to consider why decade-based analysis is useful for identifying long-term changes.\r\n- Students may have difficulty understanding why the sum of sea levels over a decade is significant compared to annual or monthly sums.\r\n  - Tip: Guide students to think about how cumulative data over a decade can show significant shifts or trends that indicate broader environmental changes. Discuss how these long-term trends are critical for understanding the overall impact of sea level changes.",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestSeaLevelAnalysis(unittest.TestCase):\n\n    def setUp(self):\n        pass\n\n    def tearDown(self):\n        pass\n\n    def test_groupby_and_sum_on_sea_level_anomalies(self):\n        \"\"\"Use the groupby() function to group the data by decade and calculate the total sea level anomalies using the sum() function.\"\"\"\n        with open('main.py') as f:\n            script_content = f.read()\n\n        # Parse the script using AST\n        tree = ast.parse(script_content)\n        decade_groupby_detected = False\n        sum_function_detected = False\n\n        # Traverse the AST to detect groupby for 'Decade' and sum() usage\n        for node in ast.walk(tree):\n            # Detect `groupby` operations on 'Decade'\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'groupby':\n                    # Look for groupby parameters matching 'Decade'\n                    if len(node.args) > 0 and isinstance(node.args[0], ast.Constant):\n                        if node.args[0].value == 'Decade':\n                            decade_groupby_detected = True\n\n            # Detect `sum()` function applied to grouped data\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'sum':\n                    sum_function_detected = True\n\n        # Assert that both groupby and sum are detected\n        self.assertTrue(decade_groupby_detected, \"Group the data by 'Decade' to show the total sea level anomalies for each decade.\")\n        self.assertTrue(sum_function_detected, \"Use the sum() function to calculate the total sea level anomalies for each decade.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-17T21:02:32.977+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L4_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L4_2024-pilot\"},{\"changed_at\":\"2024-09-17 21:06:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:08:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:09:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 23:57:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 23:57:54 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 23:58:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 23:58:58 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-17T21:02:32.977+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L9-L4_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L9-L4_2024-pilot\"},{\"changed_at\":\"2024-09-17 21:06:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:08:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 21:09:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 23:57:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 23:57:54 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 23:58:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-01 23:58:58 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 16:30:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18753,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

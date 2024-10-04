@@ -290,6 +290,9 @@ img.video_thumbnail {
       text-decoration: none;
       background-color: $orange;
     }
+    &:active {
+      border: 2px solid $white !important;
+    }
   }
 
   .user_menu, .create_menu, .help_button {
@@ -853,7 +856,7 @@ $small-footer-standard-width: 400px;
       width: 1.625rem;
       box-sizing: border-box;
       border: solid 1px $light_white;
-      background-color: initial;
+      background-color: $light_gray_950;
       color: $light_white;
     }
   }
