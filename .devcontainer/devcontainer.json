@@ -33,7 +33,7 @@
   // "forwardPorts": [3000, 5432],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": ".devcontainer/boot.sh",
+  // "postCreateCommand": ".devcontainer/boot.sh",
 
   // Configure tool-specific properties.
   "customizations": {
