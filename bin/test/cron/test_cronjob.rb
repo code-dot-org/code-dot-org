@@ -1,11 +1,11 @@
 require_relative '../test_helper'
 
 BIN_DIR = File.expand_path('../../', __dir__)
-BIN_CRONJOB = File.join(BIN_DIR, 'cronjob')
+BIN_CRONJOB_PATH = File.join(BIN_DIR, 'cronjob')
 
 describe 'bin/cronjob' do
   it 'can run the true command' do
-    success = system("#{BIN_CRONJOB} true")
+    success = system("#{BIN_CRONJOB_PATH} true")
     assert success, 'Expected `bin/cronjob true` to return 0'
   end
 
@@ -41,6 +41,6 @@ describe 'bin/cronjob' do
   # This allows us to stub Honeybadger.notify and thereby verify its called/not-called.
   private def bin_cronjob(command:)
     ARGV.replace([command])
-    load BIN_CRONJOB
+    load BIN_CRONJOB_PATH
   end
 end
