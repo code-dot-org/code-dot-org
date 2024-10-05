@@ -51,6 +51,11 @@ const TeacherOnboardingModal: React.FunctionComponent<
                 goals for each level.
               </BodyTwoText>
             </li>
+            <BodyTwoText>
+              <StrongText>Model Customizations </StrongText>
+              <EmText>(optional)</EmText>: Clear directions and goals for each
+              level.
+            </BodyTwoText>
             <li>
               <BodyTwoText>
                 <StrongText>AI Chat</StrongText>: The area where students can
@@ -63,13 +68,6 @@ const TeacherOnboardingModal: React.FunctionComponent<
                 <EmText>(optional)</EmText>: Allows students to use their
                 chatbot as a user, without the instructions or customization
                 visible.
-              </BodyTwoText>
-            </li>
-            <li>
-              <BodyTwoText>
-                As a teacher, you have access to all of your students' chat
-                history and customizations.{' '}
-                <Link href="">[Learn more here]</Link>.
               </BodyTwoText>
             </li>
           </ul>
