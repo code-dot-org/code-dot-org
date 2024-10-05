@@ -23,6 +23,7 @@ Dashboard::Application.routes.draw do
         member do
           get :parent_letter
           get :courses, params: :course_version_name, action: :show
+          get :unit, params: :unitName, action: :show
           get '*path', action: :show, via: :all, as: :subpath
         end
       end
