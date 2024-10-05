@@ -1,0 +1,15 @@
+name 'Data Sci U1 Pre Q18_2024-pilot'
+
+question 'Why is data filtering essential for effective analysis?'
+
+wrong 'It increases the dataset size for comprehensive analysis.'
+right 'It helps focus on relevant data subsets, improving analysis quality.'
+wrong 'It hides unnecessary data points, simplifying the dataset.'
+wrong 'It reduces the accuracy of data visualizations, making them easier to create.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -299,6 +299,21 @@ CSTA K-12 Computer Science Standards (2017)
 1,1,1,1,1,hello-world-animals-2021,Hello World,Code.org,https://code.org/helloworld,"Learn the basics of computer science by programming in Sprite Lab. You will create and animate sprites, and make your own interactive scenes.",/images/tutorials/hoc2021/hello-world.png,do-not-show,do-not-show,do-not-show,helloanimals21,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,none,do-not-show,999,999,999,999,999
 1,1,1,1,1,hello-world-soccer-2022,Hello World,Code.org,https://code.org/helloworld,"Learn the basics of computer science by programming in Sprite Lab. You will create and animate sprites, and make your own interactive scenes.",/images/tutorials/hoc2021/hello-world.png,do-not-show,do-not-show,do-not-show,hellosoccer22,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,none,do-not-show,999,999,999,999,999
 1,1,1,1,1,hello-world-space-2022,Hello World,Code.org,https://code.org/helloworld,"Learn the basics of computer science by programming in Sprite Lab. You will create and animate sprites, and make your own interactive scenes.",/images/tutorials/hoc2021/hello-world.png,do-not-show,do-not-show,do-not-show,hellospace22,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,none,do-not-show,999,999,999,999,999
+1319,1,1319,1319,1319,mee,Minecraft Hour of Code: AI for Good,Minecraft Education,https://education.minecraft.net/en-us/resources/hour-code-2019,"Program the Minecraft Agent to collect data about forest fires. Then write code to help prevent the spread of fire, save the village, and bring life back to the forest. Learn coding basics and explore a real-world example of artificial intelligence.",/images/tutorials/hoc2019/mee.png,"2019-tutorial,do-not-show",https://education.minecraft.net/en-us/lessons/minecraft-hour-of-code,"bg,zh-CN,zh-TW,cs,da,nl,en,en-GB,fi,fr,de,el,hu,id,it,ja,ko,no,pl,pt-BR,pt-PT,ru,sk,es,es-MX,sv,tr,uk",mee,"all,2-5,6-8,9+",Grades 2+,"beginner,do-not-show","beginner,do-not-show",online-tutorial,science,"computers,android,ios","All modern browsers, Mac, Windows, Chromebook, iPhone, iPad, Android phones and tablets",,"1hour,1hour-follow",blocks,Blocks,tts,"CSTA K-12:
+1A-AP-08
+1A-AP-09
+1A-AP-11
+1B-DA-07
+1B-AP-10
+1B-AP-13
+1B-IC-18
+
+ISTE:
+1C
+2B
+3A
+3B
+6B",999,999,999,999,999
 1,1,1,1,1,minecraft,Minecraft Hour of Code,Code.org,http://studio.code.org/s/mc-events/reset,"Build a Minecraft game. Create your own versions of chicken, sheep, Creepers, zombies and more.",/images/mc/MC_Panorama_Stack_V2.jpg,"2016-tutorial,do-not-show",,do-not-show,minecraft-2016,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,none,do-not-show,999,999,999,999,999
 1,1,1,1,1,minecraft,Minecraft Hour of Code,Code.org,http://studio.code.org/s/mc-events/reset,"Build a Minecraft game. Create your own versions of chicken, sheep, Creepers, zombies and more.",/images/mc/MC_Panorama_Stack_V2.jpg,"2016-tutorial,do-not-show",,do-not-show,minecraft-2016,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,none,do-not-show,999,999,999,999,999
 1,1,1,1,1,hero,Minecraft Hour of Code,Code.org,http://studio.code.org/s/hero/reset,Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.,/images/tutorials/hoc2017/minecraft.png,"2017-tutorial,do-not-show",https://code.org/hourofcode/mc,do-not-show,mchero,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,none,do-not-show,999,999,999,999,999

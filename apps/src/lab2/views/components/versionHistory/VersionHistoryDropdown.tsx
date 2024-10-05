@@ -294,6 +294,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
                     },
                   ]}
                   className={moduleStyles.latestTag}
+                  size="s"
                 />
               )}
             </RadioButton>
