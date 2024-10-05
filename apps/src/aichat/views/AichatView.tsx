@@ -31,7 +31,7 @@ import {
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   sendAnalytics,
-  setShowOnboardingModal,
+  setShowModal,
   setStartingAiCustomizations,
   setUserHasAichatAccess,
   setViewMode,
@@ -250,7 +250,7 @@ const AichatView: React.FunctionComponent = () => {
                 rightHeaderContent={renderInstructionsHeaderRight(
                   isUserTeacher,
                   () => {
-                    dispatch(setShowOnboardingModal(true));
+                    dispatch(setShowModal('teacherOnboarding'));
                   }
                 )}
               >
