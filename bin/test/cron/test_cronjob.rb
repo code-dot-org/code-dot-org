@@ -38,7 +38,7 @@ describe 'bin/cronjob' do
   end
 
   # We use load('bin/cronjob'), as opposed to system('bin/cronjob'), to run cronjob in-process.
-  # This allows us to stub Honeybadger.notify and thereby simulate behavior.
+  # This allows us to stub Honeybadger.notify and thereby verify its called/not-called.
   private def bin_cronjob(command:)
     ARGV.replace([command])
     load BIN_CRONJOB
