@@ -1,16 +1,12 @@
 {
   "aboutAichatLab": "About AI Chat Lab",
-  "aichatWorkspaceDescription": "<h5><strong>AI Chat</strong>: The area where students can interact directly with the chatbot they've created.</h5>",
   "aichatWorkspaceHeader": "AI Chat",
   "chatComponentsHeader": "AI Chat Components",
   "continue": "Continue",
-  "instructionsDescription": "<strong>Instructions</strong>: Clear directions and goals for each level.",
   "learnMoreHereInBrackets": "[Learn more here.]",
-  "modelCustomizationsDescription": "<strong>Model Customizations</strong> <em>(optional)</em>: A space where students can adjust the chatbot's behavior.",
   "startOverAichatModelCustomizations": "This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.",
   "teacherOnboardingModal_warning": "While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption.",
   "teacherOnboardingModal_chatHistoryAccess": "As a teacher, you have access to all of your students' chat history and customizations. ",
-  "userViewDescription": "<strong>User View</strong> <em>(optional)</em>: Allows students to use their chatbot as a user, without the instructions or customization visible.",
   "waitingForChatResponse": "Waiting for a response...",
   "welcomeToAichatLab": "Welcome to AI Chat Lab",
   "whatIsPersonalInformation": "What is considered personal information?"

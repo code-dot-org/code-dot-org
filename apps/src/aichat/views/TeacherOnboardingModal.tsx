@@ -5,10 +5,11 @@ import Link from '@cdo/apps/componentLibrary/link/Link';
 import {
   BodyOneText,
   BodyTwoText,
+  EmText,
   Heading3,
+  StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
 import aichatI18n from '../locale';
@@ -45,20 +46,31 @@ const TeacherOnboardingModal: React.FunctionComponent<
           <BodyOneText>{aichatI18n.chatComponentsHeader()}</BodyOneText>
           <ul>
             <li>
-              <SafeMarkdown markdown={aichatI18n.instructionsDescription()} />
+              <BodyTwoText>
+                <StrongText>Instructions</StrongText>: Clear directions and
+                goals for each level.
+              </BodyTwoText>
             </li>
             <li>
-              <SafeMarkdown
-                markdown={aichatI18n.modelCustomizationsDescription()}
-              />
+              <BodyTwoText>
+                <StrongText>AI Chat</StrongText>: The area where students can
+                interact directly with the chatbot they've created.
+              </BodyTwoText>
             </li>
             <li>
-              <SafeMarkdown
-                markdown={aichatI18n.aichatWorkspaceDescription()}
-              />
+              <BodyTwoText>
+                <StrongText>User View </StrongText>
+                <EmText>(optional)</EmText>: Allows students to use their
+                chatbot as a user, without the instructions or customization
+                visible.
+              </BodyTwoText>
             </li>
             <li>
-              <SafeMarkdown markdown={aichatI18n.userViewDescription()} />
+              <BodyTwoText>
+                As a teacher, you have access to all of your students' chat
+                history and customizations.{' '}
+                <Link href="">[Learn more here]</Link>.
+              </BodyTwoText>
             </li>
           </ul>
           <BodyTwoText>
