@@ -6523,6 +6523,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-typist@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "@types/react-typist@npm:2.0.6"
+  dependencies:
+    "@types/react": "*"
+  checksum: d5eed551856c559c2ceb374c835b999a30325210889cc4aef7fb7fe28e4ce45da07b2b45951d57561b3397b555abd8f781d6120d9feb913809f1a9119da7dbca
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:^18.0.28":
   version: 18.0.28
   resolution: "@types/react@npm:18.0.28"
@@ -8734,6 +8743,7 @@ __metadata:
     "@types/react-bootstrap": ^0.32.36
     "@types/react-dom": ^18.0.11
     "@types/react-router-dom": ^5.3.3
+    "@types/react-typist": ^2.0.6
     "@types/reactabular-table": ^8.14.6
     "@types/sinon": ^10.0.14
     "@types/video.js": ^7.3.58
@@ -8893,6 +8903,7 @@ __metadata:
     react-tether: ^1.0.4
     react-tooltip: ^3.2.7
     react-transition-group: 2.9.0
+    react-typist: ^2.0.5
     react-virtualized: ^9.18.5
     react-virtualized-select: ^3.0.1
     react-with-context: ^2.0.0

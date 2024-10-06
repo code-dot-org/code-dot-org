@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import Typist from 'react-typist';
 
+import {Button} from '@cdo/apps/componentLibrary/button';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 
 import FontAwesome from '../legacySharedComponents/FontAwesome';
@@ -92,6 +94,11 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     }
   }, [currentPanel, panels]);
 
+  const lastPanel =
+    currentPanel > 0 && panels[currentPanel - 1]
+      ? panels[currentPanel - 1]
+      : null;
+
   const panel = panels[currentPanel];
   if (!panel) {
     return null;
@@ -107,6 +114,13 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       ? styles.markdownTextBottomRight
       : styles.markdownTextTopRight;
 
+  const buttonText =
+    currentPanel < panels.length - 1
+      ? commonI18n.next()
+      : commonI18n.continue();
+
+  const showTyping = true;
+
   return (
     <div
       id="panels-container"
@@ -114,8 +128,16 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       key={currentPanel}
     >
       <div className={styles.panel} style={{width, height}}>
+        {lastPanel && (
+          <div
+            className={styles.image}
+            style={{
+              backgroundImage: `url("${lastPanel.imageUrl}")`,
+            }}
+          />
+        )}
         <div
-          className={styles.image}
+          className={classNames(styles.image, styles.imageCurrent)}
           style={{
             backgroundImage: `url("${panel.imageUrl}")`,
           }}
@@ -128,23 +150,32 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           )}
         >
           {offerTts && <TextToSpeech text={panel.text} />}
-          <EnhancedSafeMarkdown markdown={panel.text} />
+          {showTyping ? (
+            <Typist
+              startDelay={2500}
+              avgTypingDelay={35}
+              stdTypingDelay={15}
+              cursor={{show: false}}
+              onTypingDone={() => {}}
+            >
+              {panel.text}
+            </Typist>
+          ) : (
+            <EnhancedSafeMarkdown markdown={panel.text} />
+          )}
         </div>
       </div>
       <div
         className={styles.childrenArea}
         style={{width: width, height: childrenAreaHeight}}
       >
-        <button
+        <Button
           id="panels-button"
-          type="button"
           onClick={handleButtonClick}
           className={styles.button}
-        >
-          {currentPanel < panels.length - 1
-            ? commonI18n.next()
-            : commonI18n.continue()}
-        </button>
+          text={buttonText}
+        />
+
         {panels.length > 1 && (
           <div id="panels-bubbles">
             {Array.from(Array(panels.length).keys()).map(index => {

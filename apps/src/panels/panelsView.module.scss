@@ -45,7 +45,10 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      animation: fade-in 0.5s;
+
+      &Current {
+        animation: fade-in 2s;
+      }
     }
 
     .markdownText {
@@ -54,7 +57,8 @@
       width: 40%;
       position: absolute;
       padding: 20px;
-      animation: fade-in 1.5s;
+      animation: fade-in 4s;
+      font-size: 16px;
 
       h1, h2, h3, h4 {
         margin: 0 0 10px 0;
@@ -66,6 +70,10 @@
       p {
         font-size: 16px;
         line-height: 1.5;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
       &Small {
@@ -104,17 +112,10 @@
     position: relative;
 
     .button {
-      font-size: 14px;
-      background-color: $brand_secondary_default;
-      border-color: $brand_secondary_default;
-      color: $neutral_light;
-      padding: 5px 10px;
-      border-radius: 8px;
-      height: 38px;
-      margin: 0;
       position: absolute;
       right: 0;
-      animation: fade-in 3s, delay-pointer-events 3s;
+      height: 38px;
+      animation: fade-in 9s, delay-pointer-events 9s;
     }
 
     .bubble {
