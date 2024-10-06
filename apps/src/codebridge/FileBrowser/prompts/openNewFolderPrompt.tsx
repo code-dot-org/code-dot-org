@@ -2,10 +2,7 @@ import {getNextFolderId} from '@codebridge/codebridgeContext';
 import {NewFolderFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {ProjectType, FolderId} from '@codebridge/types';
-import {
-  sendCodebridgeAnalyticsEvent,
-  validateFolderName,
-} from '@codebridge/utils';
+import {validateFolderName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
@@ -18,9 +15,10 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 type OpenNewFilePromptArgsType = {
   parentId: FolderId;
   appName: string;
-  dialogControl: DialogControlInterface;
+  dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   newFolder: NewFolderFunction;
   projectFolders: ProjectType['folders'];
+  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
 };
 
 export const openNewFolderPrompt = async ({
@@ -29,6 +27,7 @@ export const openNewFolderPrompt = async ({
   dialogControl,
   newFolder,
   projectFolders,
+  sendCodebridgeAnalyticsEvent,
 }: OpenNewFilePromptArgsType) => {
   const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
@@ -60,5 +59,5 @@ export const openNewFolderPrompt = async ({
     parentId === DEFAULT_FOLDER_ID
       ? EVENTS.CODEBRIDGE_NEW_FOLDER
       : EVENTS.CODEBRIDGE_NEW_SUBFOLDER;
-  sendCodebridgeAnalyticsEvent(eventName, appName);
+  sendCodebridgeAnalyticsEvent(eventName);
 };
