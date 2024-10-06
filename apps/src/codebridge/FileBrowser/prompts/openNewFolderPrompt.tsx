@@ -21,6 +21,32 @@ type OpenNewFilePromptArgsType = {
   sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
 };
 
+type ValidateInputArgs = {
+  folderName: string;
+  parentId: FolderId;
+  projectFolders: ProjectType['folders'];
+};
+
+export const validateNewFolderName = ({
+  folderName,
+  parentId,
+  projectFolders,
+}: ValidateInputArgs) => {
+  if (!folderName.length) {
+    return;
+  }
+  if (!validateFolderName(folderName)) {
+    return codebridgeI18n.invalidNameError();
+  }
+
+  const existingFolder = Object.values(projectFolders).some(
+    f => f.name === folderName && f.parentId === parentId
+  );
+  if (existingFolder) {
+    return codebridgeI18n.folderExistsError();
+  }
+};
+
 export const openNewFolderPrompt = async ({
   parentId = DEFAULT_FOLDER_ID,
   appName,
@@ -32,20 +58,8 @@ export const openNewFolderPrompt = async ({
   const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
     title: codebridgeI18n.newFolderPrompt(),
-    validateInput: (folderName: string) => {
-      if (!folderName.length) {
-        return;
-      }
-      if (!validateFolderName(folderName)) {
-        return codebridgeI18n.invalidNameError();
-      }
-      const existingFolder = Object.values(projectFolders).some(
-        f => f.name === folderName && f.parentId === parentId
-      );
-      if (existingFolder) {
-        return codebridgeI18n.folderExistsError();
-      }
-    },
+    validateInput: (folderName: string) =>
+      validateNewFolderName({folderName, parentId, projectFolders}),
   });
   if (results.type !== 'confirm') {
     return;

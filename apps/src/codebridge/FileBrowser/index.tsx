@@ -649,13 +649,13 @@ export const FileBrowser = React.memo(() => {
 
         validateInput: (destinationFolderName: string) => {
           try {
-            const folderId = findFolder(destinationFolderName.split('/'), {
+            const parentId = findFolder(destinationFolderName.split('/'), {
               folders: Object.values(project.folders),
               required: true,
             });
             const duplicate = checkForDuplicateFoldername({
               folderName: folder.name,
-              folderId,
+              parentId,
               projectFolders: project.folders,
             });
             if (duplicate) {
@@ -780,7 +780,7 @@ export const FileBrowser = React.memo(() => {
         if (e.active.data.current?.type === DragType.FOLDER) {
           const duplicate = checkForDuplicateFoldername({
             folderName: project.folders[e.active.data.current.id].name,
-            folderId: e.over.id as string,
+            parentId: e.over.id as string,
             projectFolders: project.folders,
           });
           if (duplicate) {
