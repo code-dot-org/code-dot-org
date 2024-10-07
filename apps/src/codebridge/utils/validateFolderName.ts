@@ -29,6 +29,6 @@ export const validateFolderName = ({
     projectFolders,
   });
   if (duplicate) {
-    return codebridgeI18n.folderExistsError();
+    return codebridgeI18n.duplicateFolderError({folderName});
   }
 };
