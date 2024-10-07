@@ -6,11 +6,6 @@ Feature: Using the manage students tab of the teacher dashboard
     And I save the section id from row 0 of the section table
     And I navigate to manage students for the section I saved
 
-    # Enable the US state column
-    When I use a cookie to mock the DCDO key "section_us_state_column_enabled_for" as "["all"]"
-    And I reload the page
-    Then I wait until element "#uitest-manage-students-table th:contains(State)" is visible
-
     # Test the US state Bulk Set modal
     When I click selector "#uitest-manage-students-table th:contains(State) i"
     And I click selector ".pop-up-menu-item:contains(Set state for all students)"

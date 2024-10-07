@@ -52,12 +52,9 @@ export function generateGraphDataFromPattern({
   const numSounds = currentFolder.sounds.length;
 
   return patternEventValue.events.map((event: PatternTickEvent) => {
-    const soundIndex = currentFolder.sounds.findIndex(
-      sound => sound.src === event.src
-    );
     return {
       x: 1 + ((event.tick - 1) * useWidth) / (eventsLength - 1) + padding,
-      y: 1 + padding + (soundIndex * useHeight) / (numSounds - 1),
+      y: 1 + padding + (event.note * useHeight) / (numSounds - 1),
       width: noteWidth,
       height: noteHeight,
       tick: event.tick,

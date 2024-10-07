@@ -1,11 +1,11 @@
 name 'Data Sci U1 Pre Q15_2024-pilot'
 
-question 'Design a visualization to compare the monthly sales performance of three different products over a year. Which type of chart would you use and why?'
+question 'When analyzing data from a class survey, which of the following visualization types would be most appropriate to show the distribution of favorite ice cream flavors?'
 
-wrong 'Pie chart, because it shows proportional sales distribution for each product.'
-wrong 'Bar chart, because it effectively displays sales data for each month.'
-right 'Line graph, because it shows trends over time for multiple products and allows for easy comparison.'
-wrong 'Scatter plot, because it shows the relationship between sales and time.'
+wrong 'Line graph'
+wrong 'Box plot'
+right 'Pie chart'
+wrong 'Histogram'
 
 
 allow_multiple_attempts false
