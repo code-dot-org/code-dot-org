@@ -2289,12 +2289,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0":
-  version: 7.4.3
-  resolution: "@babel/runtime@npm:7.4.3"
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.13":
+  version: 7.25.7
+  resolution: "@babel/runtime@npm:7.25.7"
   dependencies:
-    regenerator-runtime: ^0.13.2
-  checksum: 5644c59cef2f0468d37cd81cd4b29a4c46a402103167ab7d93de7db76ac867814375b3f72681b821c7d66b6f79d744394fff716cebb8051d502c4156c0b39156
+    regenerator-runtime: ^0.14.0
+  checksum: 1d6133ed1cf1de1533cfe84a4a8f94525271a0d93f6af4f2cdae14884ec3c8a7148664ddf7fd2a14f82cc4485904a1761821a55875ad241c8b4034e95e7134b2
   languageName: node
   linkType: hard
 
@@ -2313,15 +2313,6 @@ __metadata:
   dependencies:
     regenerator-runtime: ^0.13.4
   checksum: c40825430400e47c19b97e4142d5315d2910305b9714d44a711472587ee2fd4521fdba5f02ddd9df3902f5e988d9854fa83f4da1e0c091f70f6983fa52480606
-  languageName: node
-  linkType: hard
-
-"@babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.23.9":
-  version: 7.23.9
-  resolution: "@babel/runtime@npm:7.23.9"
-  dependencies:
-    regenerator-runtime: ^0.14.0
-  checksum: 6bbebe8d27c0c2dd275d1ac197fc1a6c00e18dab68cc7aaff0adc3195b45862bae9c4cc58975629004b0213955b2ed91e99eccb3d9b39cabea246c657323d667
   languageName: node
   linkType: hard
 
@@ -2349,6 +2340,15 @@ __metadata:
   dependencies:
     regenerator-runtime: ^0.14.0
   checksum: 1a8eaf3d3a103ef5227b60ca7ab5c589118c36ca65ef2d64e65380b32a98a3f3b5b3ef96660fa0471b079a18b619a8317f3e7f03ab2b930c45282a8b69ed9a16
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:^7.23.9":
+  version: 7.23.9
+  resolution: "@babel/runtime@npm:7.23.9"
+  dependencies:
+    regenerator-runtime: ^0.14.0
+  checksum: 6bbebe8d27c0c2dd275d1ac197fc1a6c00e18dab68cc7aaff0adc3195b45862bae9c4cc58975629004b0213955b2ed91e99eccb3d9b39cabea246c657323d667
   languageName: node
   linkType: hard
 
@@ -7880,7 +7880,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aria-hidden@npm:^1.1.1":
+"aria-hidden@npm:^1.1.1, aria-hidden@npm:^1.2.2":
   version: 1.2.4
   resolution: "aria-hidden@npm:1.2.4"
   dependencies:
@@ -8872,7 +8872,7 @@ __metadata:
     react-dom: ^17.0.2
     react-dom-confetti: ^0.2.0
     react-draggable: ^4.4.6
-    react-focus-lock: ^2.11.2
+    react-focus-on: ^3.9.4
     react-google-charts: 2
     react-idle-timer: ^4.2.7
     react-inspector: 2.3.1
@@ -13696,12 +13696,12 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"focus-lock@npm:^1.3.2":
-  version: 1.3.3
-  resolution: "focus-lock@npm:1.3.3"
+"focus-lock@npm:^1.3.5":
+  version: 1.3.5
+  resolution: "focus-lock@npm:1.3.5"
   dependencies:
     tslib: ^2.0.3
-  checksum: fa54aa749213e0dda5c916690d90456189d2cce789a0755131b9aff7ad39a400f1c26ea0d89617974920d69e1b69c272106aa542fd955363b9595495f12dae4e
+  checksum: 09fb0e4402694aabafa8f7d49a656f683bbf39c94efc0c0240934d880792ef86d8c11bb7d77ef6f5d68ccfdfb7f191ecc2b38a259182a6791bcf96860a408d1c
   languageName: node
   linkType: hard
 
@@ -22014,15 +22014,15 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"react-focus-lock@npm:^2.11.2":
-  version: 2.11.2
-  resolution: "react-focus-lock@npm:2.11.2"
+"react-focus-lock@npm:^2.11.3":
+  version: 2.13.2
+  resolution: "react-focus-lock@npm:2.13.2"
   dependencies:
     "@babel/runtime": ^7.0.0
-    focus-lock: ^1.3.2
+    focus-lock: ^1.3.5
     prop-types: ^15.6.2
     react-clientside-effect: ^1.2.6
-    use-callback-ref: ^1.3.0
+    use-callback-ref: ^1.3.2
     use-sidecar: ^1.1.2
   peerDependencies:
     "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -22030,7 +22030,27 @@ es6-shim@latest:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 358fa8899fa1cea26a6f403df58863d9f00fd8fc6523e5277ff928977bd514a094168435ffbd52461d59be2109428fbf5f7641b7839d5dabdadfa9b89b9d648b
+  checksum: 7ddc64f5987dca606460178efffc125ee6a357992965b72567bdde1976d618cef21bbdb0745b04d2b31367a5c61b4151271f43d493a0a6bd6978dd67b6b9d56a
+  languageName: node
+  linkType: hard
+
+"react-focus-on@npm:^3.9.4":
+  version: 3.9.4
+  resolution: "react-focus-on@npm:3.9.4"
+  dependencies:
+    aria-hidden: ^1.2.2
+    react-focus-lock: ^2.11.3
+    react-remove-scroll: ^2.6.0
+    react-style-singleton: ^2.2.1
+    tslib: ^2.3.1
+    use-sidecar: ^1.1.2
+  peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 12aa99b1e41999bf4341b36eb30d686762410e04a4788e4d9ef7712ea765495fdaf8f25af1d371ebb8969c62053bf5849bf28a9b92ab0dae8fc3d3980fc64d67
   languageName: node
   linkType: hard
 
@@ -22346,7 +22366,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"react-remove-scroll-bar@npm:^2.3.4":
+"react-remove-scroll-bar@npm:^2.3.4, react-remove-scroll-bar@npm:^2.3.6":
   version: 2.3.6
   resolution: "react-remove-scroll-bar@npm:2.3.6"
   dependencies:
@@ -22378,6 +22398,25 @@ es6-shim@latest:
     "@types/react":
       optional: true
   checksum: e0dbb6856beaed2cff4996d9ca62d775686ff72e3e9de34043034d932223b588993b2fc7a18644750dd3d73eb19bd3f2cedb8d91f0e424c1ef8403010da24b1d
+  languageName: node
+  linkType: hard
+
+"react-remove-scroll@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "react-remove-scroll@npm:2.6.0"
+  dependencies:
+    react-remove-scroll-bar: ^2.3.6
+    react-style-singleton: ^2.2.1
+    tslib: ^2.1.0
+    use-callback-ref: ^1.3.0
+    use-sidecar: ^1.1.2
+  peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: e7ad2383ce20d63cf28f3ed14e63f684e139301fc4a5c1573da330d4465b733e6084c33b2bfcaee448c9b1df0e37993a15d6cba8a1dd80fe631f803e48e9f798
   languageName: node
   linkType: hard
 
@@ -27064,6 +27103,21 @@ temporal@latest:
     "@types/react":
       optional: true
   checksum: 6a6a3a8bfe88f466eab982b8a92e5da560a7127b3b38815e89bc4d195d4b33aa9a53dba50d93e8138e7502bcc7e39efe9f2735a07a673212630990c73483e8e9
+  languageName: node
+  linkType: hard
+
+"use-callback-ref@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "use-callback-ref@npm:1.3.2"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: df690f2032d56aabcea0400313a04621429f45bceb4d65d38829b3680cae3856470ce72958cb7224b332189d8faef54662a283c0867dd7c769f9a5beff61787d
   languageName: node
   linkType: hard
 

@@ -26,7 +26,7 @@ import appConfig from '../appConfig';
 import musicI18n from '../locale';
 import MusicRegistry from '../MusicRegistry';
 import {PatternEventValue} from '../player/interfaces/PatternEvent';
-import MusicLibrary, {SoundData} from '../player/MusicLibrary';
+import MusicLibrary from '../player/MusicLibrary';
 
 import LoadingOverlay from './LoadingOverlay';
 import PreviewControls from './PreviewControls';
@@ -79,17 +79,17 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
   const toggleEvent = useCallback(
-    (sound: SoundData, tick: number, note: number) => {
+    (tick: number, note: number) => {
       const index = currentValue.events.findIndex(
-        event => event.src === sound.src && event.tick === tick
+        event => event.note === note && event.tick === tick
       );
       if (index !== -1) {
         // If found, delete.
         currentValue.events.splice(index, 1);
       } else {
         // Not found, so add.
-        currentValue.events.push({src: sound.src, tick, note});
-        MusicRegistry.player.previewSound(`${currentValue.kit}/${sound.src}`);
+        currentValue.events.push({tick, note});
+        MusicRegistry.player.previewNote(note, currentValue.kit);
       }
 
       onChange(currentValue);
@@ -97,9 +97,9 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     [onChange, currentValue]
   );
 
-  const hasEvent = (sound: SoundData, tick: number) => {
+  const hasEvent = (note: number, tick: number) => {
     const element = currentValue.events.find(
-      event => event.src === sound.src && event.tick === tick
+      event => event.note === note && event.tick === tick
     );
     return !!element;
   };
@@ -109,10 +109,10 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     onChange(currentValue);
   };
 
-  const getCellClasses = (sound: SoundData, tick: number) => {
+  const getCellClasses = (note: number, tick: number) => {
     const isSeed = tick < 9;
     const isHighlighted = (tick - 1) % 4 === 0;
-    const isActive = hasEvent(sound, tick);
+    const isActive = hasEvent(note, tick);
     const isPlaying = isActive && tick === currentPreviewTick;
 
     return classNames(
@@ -324,19 +324,20 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
         )}
 
         <div className={styles.leftArea}>
-          {currentFolder.sounds.map((sound, index) => {
+          {currentFolder.sounds.map(({name, note}, index) => {
             return (
-              <div className={styles.row} key={sound.src}>
+              <div className={styles.row} key={note}>
                 <div className={styles.nameContainer}>
                   <span
                     className={styles.name}
                     onClick={() =>
-                      MusicRegistry.player.previewSound(
-                        `${currentValue.kit}/${sound.src}`
+                      MusicRegistry.player.previewNote(
+                        note || index,
+                        currentValue.kit
                       )
                     }
                   >
-                    {sound.name}
+                    {name}
                   </span>
                 </div>
                 {arrayOfTicks
@@ -355,10 +356,10 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                             generateState === 'none' &&
                             styles.outerCellPlaying
                         )}
-                        onClick={() => toggleEvent(sound, tick, index)}
+                        onClick={() => toggleEvent(tick, index)}
                         key={tick}
                       >
-                        <div className={getCellClasses(sound, tick)} />
+                        <div className={getCellClasses(note || index, tick)} />
                       </div>
                     );
                   })}

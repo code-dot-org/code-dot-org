@@ -181,7 +181,6 @@ function fromNoteSequence(
         res.push({
           note: reverseMidiMapping.get(pitch) || 0,
           tick: 8 + quantizedStartStep + 1, // 4 + quantizedStartStep * 2 + 1,
-          src: 'sound_' + ((reverseMidiMapping.get(pitch) || 0) + 1),
         });
       }
     }
