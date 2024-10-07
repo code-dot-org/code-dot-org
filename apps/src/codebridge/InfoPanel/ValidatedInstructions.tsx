@@ -38,8 +38,8 @@ import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 import ValidationResults from './ValidationResults';
 import ValidationStatusIcon from './ValidationStatusIcon';
 
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
-import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
 
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
