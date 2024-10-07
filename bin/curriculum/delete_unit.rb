@@ -2,6 +2,7 @@
 
 require 'json'
 require 'optparse'
+require 'ostruct'
 
 # Deletes a given script from the DB in the current environment
 # after checking for the current state of script and possible references
