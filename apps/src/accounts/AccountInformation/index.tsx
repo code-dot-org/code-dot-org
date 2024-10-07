@@ -1,22 +1,22 @@
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
+import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
+import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
+import {Button} from '@cdo/apps/componentLibrary/button';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import Link from '@cdo/apps/componentLibrary/link/Link';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
-import {hashEmail} from '../../code-studio/hashEmail';
-import Alert, {alertTypes} from '../../componentLibrary/alert/Alert';
-import {Button} from '../../componentLibrary/button';
-import {SimpleDropdown} from '../../componentLibrary/dropdown';
-import Link from '../../componentLibrary/link/Link';
-import {Heading2} from '../../componentLibrary/typography';
-import {getAuthenticityToken} from '../../util/AuthenticityTokenStore';
 import ChangeEmailModal from '../ChangeEmailModal';
 
 import {AccountInformationProps} from './types';
 
-import commonStyles from '../common/common.styles.module.scss';
 import styles from './style.module.scss';
+import commonStyles from '../common/common.styles.module.scss';
 
 export const AccountInformation: React.FC<AccountInformationProps> = ({
   verifiedTeacher,
@@ -193,7 +193,10 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   return (
     <>
       <hr />
-      <Heading2 visualAppearance="heading-sm" className={styles.sectionHeader}>
+      <Heading2
+        visualAppearance="heading-sm"
+        className={commonStyles.sectionHeader}
+      >
         {i18n.accountInformation_accountInformation()}
       </Heading2>
       <form className={styles.accountForm}>
@@ -210,7 +213,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           {/* display name */}
           <TextField
             id="user_name"
-            className={styles.input}
+            className={commonStyles.input}
             label={i18n.displayName()}
             onChange={e => {
               setName(e.target.value);
@@ -228,7 +231,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           {userUsername && (
             <TextField
               id="user_username"
-              className={styles.input}
+              className={commonStyles.input}
               label={i18n.username()}
               onChange={e => {
                 setUsername(e.target.value);
@@ -247,7 +250,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             <div>
               <TextField
                 id="user_email"
-                className={classNames(styles.input, styles.emailInput)}
+                className={classNames(commonStyles.input, styles.emailInput)}
                 label={i18n.emailAddress()}
                 helperMessage={
                   migrated && !isStudent
@@ -307,7 +310,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               {/* new password */}
               <TextField
                 id="user_password"
-                className={styles.input}
+                className={commonStyles.input}
                 label={i18n.password()}
                 onChange={e => {
                   setPassword(e.target.value);
@@ -324,7 +327,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               {/* new password confirmation */}
               <TextField
                 id="user_password_confirmation"
-                className={styles.input}
+                className={commonStyles.input}
                 label={i18n.passwordConfirmation()}
                 onChange={e => {
                   setPasswordConfirmation(e.target.value);
@@ -344,7 +347,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           {encryptedPasswordPresent && (
             <TextField
               id="user_current_password"
-              className={styles.input}
+              className={commonStyles.input}
               label={i18n.accountInformation_currentPassword()}
               helperMessage={i18n.accountInformation_currentPasswordHint()}
               onChange={e => {
@@ -377,7 +380,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                 }))}
                 disabled={studentInLockoutFlow}
                 dropdownTextThickness="thin"
-                className={styles.input}
+                className={commonStyles.input}
                 helperMessage={lockedOutStudentMessage}
                 errorMessage={getError('age')}
               />
@@ -386,7 +389,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               {showGenderInput && (
                 <TextField
                   id="user_gender_student_input"
-                  className={styles.input}
+                  className={commonStyles.input}
                   label={i18n.genderOptional()}
                   onChange={e => setGender(e.target.value)}
                   value={gender}
@@ -409,7 +412,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                   items={usStateOptions}
                   disabled={studentInLockoutFlow}
                   dropdownTextThickness="thin"
-                  className={styles.input}
+                  className={commonStyles.input}
                   helperMessage={lockedOutStudentMessage}
                   errorMessage={getError('us_state')}
                 />
@@ -428,15 +431,15 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               id="account-update-success"
               text={i18n.accountInformation_updateSuccess()}
               type={alertTypes.success}
-              className={styles.alert}
               onClose={() => setShowAccountUpdateSuccess(false)}
+              className={commonStyles.alert}
             />
           )}
         </div>
         <div>
           <Button
             id="submit-update"
-            className={styles.submit}
+            className={commonStyles.submit}
             text={i18n.accountInformation_updateAccountInformation()}
             onClick={handleSubmitAccountSettingsUpdate}
           />
