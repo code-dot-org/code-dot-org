@@ -10,6 +10,7 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
+import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getShortName} from '../utils';
@@ -94,20 +95,24 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     iconName: 'lock',
     iconStyle: 'solid',
   };
-
+  const viewStudentChatHistoryLabel =
+    `${selectedStudentName}'s chat history` +
+    (selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+      ? ' (view only)'
+      : '');
   const tabs = [
     {
       value: 'viewStudentChatHistory',
-      text:
-        `${selectedStudentName}'s chat history` +
-        (selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
-          ? ' (view only)'
-          : ''),
-
+      text: viewStudentChatHistoryLabel,
       tabContent: (
         <ChatEventsList events={studentChatHistory} isTeacherView={true} />
       ),
       iconLeft: iconValue,
+      tooltip: {
+        text: viewStudentChatHistoryLabel,
+        tooltipId: 'tooltipChatHistory',
+        direction: 'onBottom',
+      } as TooltipProps,
     },
     {
       value: 'testStudentModel',
