@@ -762,7 +762,6 @@ GoogleBlockly.Extensions.register('argument_reporter_validator', function () {
       (event.type === GoogleBlockly.Events.BLOCK_CHANGE &&
         eventBlock.type === BLOCK_TYPES.argumentReporter)
     ) {
-      console.log(event.type, eventBlock?.type);
       const argReporterBlocks = GoogleBlockly.getMainWorkspace()
         .getAllBlocks()
         .filter(block => block.type === BLOCK_TYPES.argumentReporter);
