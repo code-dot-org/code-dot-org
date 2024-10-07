@@ -12,41 +12,11 @@ import {PatternEvent} from '../player/interfaces/PatternEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import MusicPlayer from '../player/MusicPlayer';
 
+import {MusicConditions} from './MusicConditions';
+
 export interface ConditionNames {
   [key: string]: ConditionType;
 }
-
-export const MusicConditions: ConditionNames = {
-  PLAYED_SOUNDS_TOGETHER: {name: 'played_sounds_together', valueType: 'number'},
-  PLAYED_DIFFERENT_SOUNDS_TOGETHER: {
-    name: 'played_different_sounds_together',
-    valueType: 'number',
-  },
-  PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
-  PLAYED_SOUND_IN_FUNCTION: {
-    name: 'played_sound_in_function',
-    valueType: 'string',
-  },
-  PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
-  PLAYED_DIFFERENT_SOUNDS: {
-    name: 'played_different_sounds',
-    valueType: 'number',
-  },
-  PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
-  PLAYED_EMPTY_CHORDS: {name: 'played_empty_chords', valueType: 'number'},
-  PLAYED_CHORDS: {name: 'played_chords', valueType: 'number'},
-  PLAYED_EMPTY_PATTERNS: {name: 'played_empty_patterns', valueType: 'number'},
-  PLAYED_PATTERNS: {name: 'played_patterns', valueType: 'number'},
-  PLAYED_EMPTY_PATTERNS_AI: {
-    name: 'played_empty_patterns_ai',
-    valueType: 'number',
-  },
-  PLAYED_PATTERNS_AI: {name: 'played_patterns_ai', valueType: 'number'},
-  PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES: {
-    name: 'played_different_sounds_together_multiple_times',
-    valueType: 'number',
-  },
-};
 
 export default class MusicValidator extends Validator {
   constructor(
