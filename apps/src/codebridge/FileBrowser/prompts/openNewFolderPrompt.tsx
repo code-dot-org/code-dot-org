@@ -2,7 +2,10 @@ import {getNextFolderId} from '@codebridge/codebridgeContext';
 import {NewFolderFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {ProjectType, FolderId} from '@codebridge/types';
-import {isValidFolderName} from '@codebridge/utils';
+import {
+  checkForDuplicateFoldername,
+  isValidFolderName,
+} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
@@ -21,7 +24,7 @@ type OpenNewFilePromptArgsType = {
   sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
 };
 
-type ValidateInputArgs = {
+type ValidateNewFolderNameArgs = {
   folderName: string;
   parentId: FolderId;
   projectFolders: ProjectType['folders'];
@@ -31,7 +34,7 @@ export const validateNewFolderName = ({
   folderName,
   parentId,
   projectFolders,
-}: ValidateInputArgs) => {
+}: ValidateNewFolderNameArgs) => {
   if (!folderName.length) {
     return;
   }
@@ -39,11 +42,13 @@ export const validateNewFolderName = ({
     return codebridgeI18n.invalidNameError();
   }
 
-  const existingFolder = Object.values(projectFolders).some(
-    f => f.name === folderName && f.parentId === parentId
-  );
-  if (existingFolder) {
-    return codebridgeI18n.folderExistsError();
+  const duplicate = checkForDuplicateFoldername({
+    folderName,
+    parentId,
+    projectFolders,
+  });
+  if (duplicate) {
+    return duplicate;
   }
 };
 
