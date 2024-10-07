@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, {CSSProperties, useState} from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -82,6 +83,13 @@ export default function LtiSectionSyncDialog({
             markdown={errorMessage}
           />
         ))}
+        {syncResult.honeybadger_id && (
+          <Typography semanticTag="p" visualAppearance="body-four">
+            {`${i18n.ltiSectionSyncDialogErrorCodeLabel()}: ${
+              syncResult.honeybadger_id
+            }`}
+          </Typography>
+        )}
       </div>
     );
   };

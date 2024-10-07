@@ -1724,6 +1724,8 @@
   "ltiSectionSyncDialogDescription": "New to Code.org? A [section]({aboutSectionsUrl}) is used to manage your classroom and assign curricula. We've identified the following sections & students associated with your course.\n\nNot seeing all of your sections? Make sure you are enrolled as a teacher in each section you want to sync. Learn more [about syncing here]({aboutSyncingUrl}).",
   "ltiSectionSyncDialogDescriptionNoChange": "You're all set! Your sections & students are already up to date.\n\nYou can re-sync your sections at any time. Learn more [about syncing here]({aboutSyncingUrl})",
   "ltiSectionSyncDialogError": "We encountered an error when trying to sync with your LMS.",
+  "ltiSectionSyncDialogErrorCodeLabel": "Error Code",
+  "ltiSectionSyncDialogErrorNoCourseFound": "We couldn't find your course. Please try launching Code.org from your LMS again.",
   "ltiSectionSyncDialogErrorNoIntegration": "LTI Integration not found",
   "ltiSectionSyncDialogErrorNoSectionFound": "We couldn't find the given section.",
   "ltiSectionSyncDialogErrorWrongContext": "Sorry, looks like you are attempting to sync a course or section from the wrong place. Please launch the Code.org Integration from inside the course or section you would like to sync. Read more about supported placements [here]({url}).",
