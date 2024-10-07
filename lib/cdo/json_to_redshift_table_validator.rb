@@ -91,7 +91,7 @@ module Cdo
       when 'double precision'
         validate_double(key, value)
       else
-        @errors << "Unknown Redshift type for column #{key}: #{column_schema[:type]}"
+        @errors << "Unknown Redshift type for column `#{key}`: `#{column_schema[:type]}`"
         value
       end
     end
@@ -100,26 +100,26 @@ module Cdo
       DateTime.iso8601(value)
       value
     rescue ArgumentError
-      @errors << "Invalid timestamp format for #{key}: #{value}"
+      @errors << "Invalid timestamp format for `#{key}`: `#{value}`"
       @modify_invalid ? nil : value
     end
 
     private def validate_character(key, value, max_length)
       value_string = value.is_a?(Hash) ? value.to_json : value.to_s
       unless value_string.is_a?(String)
-        @errors << "Invalid type for #{key}: expected String, got #{value_string.class}"
+        @errors << "Invalid type for `#{key}`: expected String, got #{value_string.class}"
         value_string = value_string.to_s if @modify_invalid
       end
 
       multibyte_value_string = ActiveSupport::Multibyte::Chars.new(value_string)
 
       if multibyte_value_string.bytes.size > max_length
-        @errors << "Value too long for #{key}: #{multibyte_value_string.bytes.size} bytes (max #{max_length})"
+        @errors << "Value too long for `#{key}`: #{multibyte_value_string.bytes.size} bytes (max #{max_length})"
         value_string = multibyte_value_string.limit(max_length).to_s if @modify_invalid
       end
 
       unless multibyte_value_string.ascii_only?
-        @errors << "Invalid character(s) in CHAR column #{key}: contains non-ASCII characters"
+        @errors << "Invalid character(s) in CHAR column `#{key}`: contains non-ASCII characters"
         if @modify_invalid
           value_string = multibyte_value_string.unicode_normalize(:nfkc).gsub(/[^\x00-\x7F]/, '?').to_s
         end
@@ -131,14 +131,14 @@ module Cdo
     private def validate_character_varying(key, value, max_length)
       value_string = value.is_a?(Hash) ? value.to_json : value.to_s
       unless value_string.is_a?(String)
-        @errors << "Invalid type for #{key}: expected String, got #{value.class}"
+        @errors << "Invalid type for `#{key}`: expected String, got #{value.class}"
         value_string = value_string.to_s if @modify_invalid
       end
 
       multibyte_string_value = ActiveSupport::Multibyte::Chars.new(value_string)
 
       if multibyte_string_value.bytes.size > max_length
-        @errors << "Value too long for #{key}: #{multibyte_string_value.bytes.size} bytes (max #{max_length})"
+        @errors << "Value too long for `#{key}`: #{multibyte_string_value.bytes.size} bytes (max #{max_length})"
         value_string =  multibyte_string_value.limit(max_length).to_s if @modify_invalid
       end
 
@@ -149,13 +149,13 @@ module Cdo
       begin
         integer_value = value.is_a?(String) ? Integer(value) : value
       rescue ArgumentError
-        @errors << "Not an integer for #{key}: #{value}."
+        @errors << "Not an integer for `#{key}`: `#{value}`."
         return @modify_invalid ? nil : value
       end
 
       # Redshift integer range: -2^31 to 2^31 - 1
       if integer_value < -2_147_483_648 || integer_value > 2_147_483_647
-        @errors << "Integer out of range for #{key}: #{value}"
+        @errors << "Integer out of range for `#{key}`: `#{value}`"
         return @modify_invalid ? nil : value
       end
 
@@ -166,18 +166,18 @@ module Cdo
       begin
         float_value = value.is_a?(String) ? Float(value) : value
       rescue ArgumentError
-        @errors << "Not a double precision for #{key}: #{value}."
+        @errors << "Not a double precision for `#{key}`: `#{value}`."
         return @modify_invalid ? nil : value
       end
 
       unless float_value.is_a?(Float)
-        @errors << "Invalid double precision for #{key}: #{value}"
+        @errors << "Invalid double precision for `#{key}`: `#{value}`"
         return @modify_invalid ? nil : value
       end
 
       # Redshift double precision range
       if float_value.abs > 1.79769313486231570e+308 || (float_value.abs < 2.22507385850720140e-308 && float_value != 0)
-        @errors << "Double precision out of range for #{key}: #{value}"
+        @errors << "Double precision out of range for `#{key}`: `#{value}`"
         return @modify_invalid ? nil : value
       end
 

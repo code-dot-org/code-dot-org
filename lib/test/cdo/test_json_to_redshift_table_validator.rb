@@ -186,8 +186,8 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
     error = assert_raises(Cdo::JSONtoRedshiftTableValidator::ValidationError) do
       Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema)
     end
-    assert_includes error.message, "Not an integer for user_id: not_an_integer."
-    assert_includes error.message, "Value too long for data_string"
+    assert_includes error.message, "Not an integer for `user_id`: `not_an_integer`."
+    assert_includes error.message, "Value too long for `data_string`"
   end
 
   def test_complex_object_truncation
@@ -233,7 +233,7 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
     error = assert_raises(Cdo::JSONtoRedshiftTableValidator::ValidationError) do
       Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema)
     end
-    assert_includes error.message, "Invalid character(s) in CHAR column project_id: contains non-ASCII characters"
+    assert_includes error.message, "Invalid character(s) in CHAR column `project_id`: contains non-ASCII characters"
   end
 
   def test_non_ascii_character_in_character_column_with_modify_invalid
@@ -287,7 +287,7 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
     error = assert_raises(Cdo::JSONtoRedshiftTableValidator::ValidationError) do
       Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema)
     end
-    assert_includes error.message, "Value too long for short_text: 15 bytes (max 10)"
+    assert_includes error.message, "Value too long for `short_text`: 15 bytes (max 10)"
   end
 
   def test_multibyte_characters_exceeding_column_size_with_modify_invalid
