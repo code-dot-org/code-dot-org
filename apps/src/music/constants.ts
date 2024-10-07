@@ -1,4 +1,6 @@
 import {Effects} from './player/interfaces/Effects';
+import {PatternEventValue} from './player/interfaces/PatternEvent';
+import {TuneEventValue} from './player/interfaces/TuneEvent';
 import {Key} from './utils/Notes';
 
 export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
@@ -43,20 +45,16 @@ export const BlockMode = {
   ADVANCED: 'Advanced',
 } as const;
 
-// For reference, events look like this:
-// events: [{src: 'sound_1', tick: 3}]
-export const DEFAULT_PATTERN = {
-  kit: 'drums',
+export const DEFAULT_PATTERN: PatternEventValue = {
+  instrument: 'drums',
   events: [],
   ai: false,
 };
 
 export const DEFAULT_PATTERN_LENGTH = 1;
 
-// For reference, events look like this:
-// events: [{src: 'sound_1', tick: 3}]
-export const DEFAULT_PATTERN_AI = {
-  kit: 'drums',
+export const DEFAULT_PATTERN_AI: PatternEventValue = {
+  instrument: 'drums',
   length: 2,
   events: [],
   ai: true,
@@ -73,9 +71,7 @@ export const DEFAULT_CHORD = {
 
 export const DEFAULT_CHORD_LENGTH = 1;
 
-// For reference, events look like this:
-// events: [{note: 60, tick: 3}]
-export const DEFAULT_TUNE = {
+export const DEFAULT_TUNE: TuneEventValue = {
   instrument: 'piano',
   events: [],
 };
