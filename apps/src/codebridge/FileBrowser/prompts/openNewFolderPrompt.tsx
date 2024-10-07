@@ -2,7 +2,7 @@ import {getNextFolderId} from '@codebridge/codebridgeContext';
 import {NewFolderFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {ProjectType, FolderId} from '@codebridge/types';
-import {validateFolderName} from '@codebridge/utils';
+import {isValidFolderName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
@@ -35,7 +35,7 @@ export const validateNewFolderName = ({
   if (!folderName.length) {
     return;
   }
-  if (!validateFolderName(folderName)) {
+  if (!isValidFolderName(folderName)) {
     return codebridgeI18n.invalidNameError();
   }
 

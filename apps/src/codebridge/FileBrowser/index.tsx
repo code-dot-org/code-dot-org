@@ -17,7 +17,7 @@ import {
   sendCodebridgeAnalyticsEvent,
   shouldShowFile,
   validateFileName,
-  validateFolderName,
+  isValidFolderName,
 } from '@codebridge/utils';
 import {
   DndContext,
@@ -749,7 +749,7 @@ export const FileBrowser = React.memo(() => {
           if (newName === folder.name) {
             return;
           }
-          if (!validateFolderName(newName)) {
+          if (!isValidFolderName(newName)) {
             return codebridgeI18n.invalidNameError();
           }
           const existingFolder = Object.values(project.folders).some(
