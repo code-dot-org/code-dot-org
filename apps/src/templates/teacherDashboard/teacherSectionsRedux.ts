@@ -560,7 +560,9 @@ const sectionSlice = createSlice({
       if (section.courseVersionId !== state.initialCourseVersionId) {
         assignmentData.course_version_id = section.courseVersionId;
       }
-      if (section.unitName !== state.)
+      if (section.unitName !== state.initialUnitName) {
+        assignmentData.unitName = section.unitName;
+      }
       // If either of these has been set, assignment changed and should be logged
       if (assignmentData.unit_id || assignmentData.course_id) {
         firehoseClient.putRecord(
