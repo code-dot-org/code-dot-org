@@ -1,11 +1,11 @@
 name 'Data Sci U1 Post Q16_2024-pilot'
 
-question 'When creating a dashboard to monitor key performance indicators (KPIs) across multiple departments, which type of visualization would be most effective for comparing performance between departments at a glance, and why?'
+question 'Why is it important to consider your audience when designing a data visualization?'
 
-right 'Bar charts to compare the performance of different departments side by side, making it easy to see relative performance.'
-wrong 'Line graphs to show changes over time for each KPI, allowing easy comparison of trends.'
-wrong 'Scatter plots to display the relationship between different KPIs across departments.'
-wrong 'Heat maps to show the intensity of KPIs, making it easy to identify areas of concern.'
+right 'To ensure the message is clear and accessible to the intended viewers.'
+wrong 'To select complex visualizations that showcase technical skills.'
+wrong 'To prevent data from being misinterpreted.'
+wrong 'To choose colors that are visually appealing.'
 
 
 
