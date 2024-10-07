@@ -45,19 +45,15 @@ options.unit_names.each do |unit_nm|
   unit_to_del = Unit.find_by(name: unit_nm)
   raise "Unit with name #{unit_nm} not found" if unit_to_del.nil?
 
-  # Ensure the unit getting deleted is not marked stable. Using the get_published_state method to address units that are part of unit groups
-  # This would return the state for the unit if not null else fall back to return state of unit group
-  raise "Published units (state set as 'Stable') cannot be deleted as they could have active sections and progress." unless unit_to_del.get_published_state != "stable"
+  # Ensure the unit doesn't have any existing breaking dependencies
+  raise "Unit cannot be deleted if it is marked stable or has sections that have it assigned." unless Policies::Unit.can_be_deleted?(unit_to_del)
 
-  # Include additional warning if the script is not in one of the safe states where its not available for use externally.
+  # Include additional warning if the script is in one of the status that could have internal usage.
   if unit_to_del.get_published_state != "in_development"
     print "Published state for Unit [#{unit_nm}] is not in_development, script might have usage. " \
       "Please confirm with curriculum team and ensure comms has been sent before deletion. Continue? (Y/N)"
     next unless gets.chomp.casecmp('y').zero?
   end
-
-  assigned_section_count = Section.where(script_id: unit_to_del.id).count
-  raise "Unit is currently assigned to some sections, deleting will break loading dashboard for those teachers." unless assigned_section_count == 0
 
   user_progress_count = UserScript.where(script_id: unit_to_del.id).count
   if user_progress_count > 0
