@@ -2,9 +2,15 @@
 
 .file-browser {
   height: 100%;
-  background-color: $darkest_gray;
+  background-color: $light_gray_950;
   color: $white;
 }
+
+.fileBrowserHeader {
+  background-color: $light_gray_950;
+  border-bottom: 1px solid #54595E;
+}
+
 .file-browser ul {
   list-style: none;
   margin: 0;
@@ -17,6 +23,7 @@
 .row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   font-size: 14px;
 }
@@ -25,6 +32,7 @@
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .file-browser ul li span.button-bar {
@@ -44,10 +52,6 @@
   grid-template-columns: 15px auto;
 }
 
-.button-bar button {
-  white-space: nowrap;
-}
-
 .file-browser ul li span.label i,
 .file-browser ul li span.button-bar i {
   margin-right: 4px;
@@ -58,7 +62,7 @@ li .button-kebab {
   height: 13px;
 }
 
-li :hover .button-kebab {
+div.row:hover .button-kebab {
   display: inherit;
 }
 
@@ -72,10 +76,27 @@ li :hover .button-kebab {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
+  margin-right: 4px;
 }
 
 .rowIcon {
   margin: 2px 8px 2px 8px;
   font-size: 13px;
   line-height: 125%;
+
+  // prevents caret-down icon from pushing
+  // text to the right when toggling folders
+  min-width: 9px;
+}
+
+.acceptingDrop {
+  background-color: $light_gray;
+}
+
+.expandedDroppableArea {
+  padding-bottom: 1rem;
+}
+
+.dropdownItem {
+  width: 100px;
 }

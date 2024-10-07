@@ -218,6 +218,24 @@ export const projectReducer = (
       };
     }
 
+    case PROJECT_REDUCER_ACTIONS.MOVE_FOLDER: {
+      const {folderId, parentId} = <
+        DefaultFolderPayload & {parentId: FolderId}
+      >action.payload;
+
+      if (folderId === parentId) {
+        return project;
+      }
+
+      return {
+        ...project,
+        folders: {
+          ...project.folders,
+          [folderId]: {...project.folders[folderId], parentId},
+        },
+      };
+    }
+
     case PROJECT_REDUCER_ACTIONS.NEW_FOLDER: {
       const {folderId, folderName, parentId} = <
         DefaultFolderPayload & {
@@ -284,6 +302,12 @@ export const projectReducer = (
         Object.values(newProject.files)
           .filter(f => files.has(f.id))
           .forEach(f => delete newProject.files[f.id]);
+        if (newProject.openFiles) {
+          // Delete files from the list of open files.
+          newProject.openFiles = newProject.openFiles.filter(
+            fileId => !files.has(fileId)
+          );
+        }
       }
 
       return newProject;

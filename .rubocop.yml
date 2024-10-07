@@ -23,7 +23,7 @@ AllCops:
     - 'dashboard/db/schema.rb'
     - 'pegasus/test/test_string.rb' # Parser does not support non-utf8 escape sequences
   DisplayCopNames: true
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.3
 
 Rails:
   Enabled: true

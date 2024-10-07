@@ -12,12 +12,7 @@ Feature: Student pairing
     And I verify the user menu shows "Thing_One" and "Thing_Two" are in a pairing group
     # complete the level
     And I wait until element "#runButton" is visible
-    And I click selector "#runButton"
-    And I wait until element "#submitButton" is visible
-    And I click selector "#submitButton"
-    Then I wait to see ".modal"
-    And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button" to load a new page
+    And I submit this level
     And I wait for the lab page to fully load
     And check that the URL contains "/s/allthethings/lessons/18/levels/8"
     And I verify progress in the header of the current page is "perfect_assessment" for level 7

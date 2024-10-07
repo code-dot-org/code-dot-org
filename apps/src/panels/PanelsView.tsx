@@ -1,13 +1,15 @@
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+
 import FontAwesome from '../legacySharedComponents/FontAwesome';
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
 
 import {Panel} from './types';
 
-import styles from './panels.module.scss';
+import styles from './panelsView.module.scss';
 
 // Leave a margin to the left and the right of the panels, to the edges
 // of the screen.
@@ -27,6 +29,7 @@ interface PanelsProps {
   onSkip?: () => void;
   targetWidth: number;
   targetHeight: number;
+  offerTts: boolean;
   resetOnChange?: boolean;
 }
 
@@ -39,6 +42,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   onSkip,
   targetWidth,
   targetHeight,
+  offerTts,
   resetOnChange = true,
 }) => {
   const [currentPanel, setCurrentPanel] = useState(0);
@@ -116,14 +120,16 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             backgroundImage: `url("${panel.imageUrl}")`,
           }}
         />
-        <EnhancedSafeMarkdown
-          markdown={panel.text}
+        <div
           className={classNames(
             styles.markdownText,
             showSmallText && styles.markdownTextSmall,
             textLayoutClass
           )}
-        />
+        >
+          {offerTts && <TextToSpeech text={panel.text} />}
+          <EnhancedSafeMarkdown markdown={panel.text} />
+        </div>
       </div>
       <div
         className={styles.childrenArea}

@@ -24,6 +24,7 @@ export interface Section {
   hidden: boolean;
   id: number;
   isAssignedCSA?: boolean;
+  isAssignedStandaloneCourse: boolean;
   lessonExtras: boolean;
   loginType?: keyof typeof SectionLoginType;
   loginTypeName?: string;
@@ -33,13 +34,13 @@ export interface Section {
   postMilestoneDisabled: boolean;
   providerManaged: boolean;
   restrictSection: boolean;
-  scriptId: number | null;
   sectionInstructors?: SectionInstructor[];
   sharingDisabled: boolean;
   studentCount: number;
   syncEnabled: boolean;
   ttsAutoplayEnabled: boolean;
   unitId?: number | null;
+  unitName: string | null;
 }
 
 export interface UserEditableSection {
@@ -74,6 +75,7 @@ export interface ServerSection {
   grades?: string[];
   hidden: boolean;
   id: number;
+  isAssignedStandaloneCourse: boolean;
   lesson_extras: boolean;
   login_type: string;
   name: string;

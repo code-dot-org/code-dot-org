@@ -12,11 +12,17 @@
     "panels": [
       {
         "imageUrl": "https://images.code.org/2843a02314c84e8efb37bfcfa95138ba-loop.gif",
-        "text": "###Repeat a sound\n\nChoose a sound and set the number of times to play it using a repeat block.\n",
+        "text": "###Repeat a sound\n\nAdd the sounds you want into the **repeat** block. \n",
         "key": "musiclab_intro_panels_playtogether_pdx-a0d88b4a-e9a8-4641-8ec9-3ce98e7a1cc4"
+      },
+      {
+        "text": "###Set the number of times you want your sounds to repeat. ",
+        "imageUrl": "https://images.code.org/1404184006d67591b048880fa0362cb6-add three.gif",
+        "key": "music-ai-panels-loops-506fe51b-bdfb-42b2-bf3a-4c92794363fa",
+        "layout": "text-top-right"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-30T18:28:27.732+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_repeat\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_repeat\"},{\"changed_at\":\"2024-08-30 18:28:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-30T18:28:27.732+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_repeat\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_repeat\"},{\"changed_at\":\"2024-08-30 18:28:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-09-23 18:53:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>

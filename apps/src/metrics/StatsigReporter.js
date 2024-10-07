@@ -63,15 +63,20 @@ class StatsigReporter {
   }
 
   // Utilizes Statsig's function for updating a user once we've recognized a sign in
-  async setUserProperties(userId, userType, enabledExperiments) {
+  async setUserProperties(
+    userId,
+    userType,
+    isVerifiedInstructor,
+    enabledExperiments
+  ) {
     const formattedUserId = this.formatUserId(userId);
     const user = {
       userID: formattedUserId,
-      custom: {userType: userType, enabledExperiments: enabledExperiments},
+      custom: {userType, isVerifiedInstructor, enabledExperiments},
     };
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(
-        `User properties: userId: ${formattedUserId}, userType: ${userType}, signInState: ${!!userId}`
+        `User properties: userId: ${formattedUserId}, userType: ${userType}, isVerifiedInstructor: ${isVerifiedInstructor}, signInState: ${!!userId}`
       );
     } else {
       await Statsig.updateUser(user);

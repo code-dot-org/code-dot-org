@@ -9,6 +9,7 @@ import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer'
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -33,9 +34,14 @@ import useUpdateAnalytics from './hooks/useUpdateAnalytics';
 import useUpdatePlayer from './hooks/useUpdatePlayer';
 import MusicPlayView from './MusicPlayView';
 import PackDialog from './PackDialog';
+import PackDialog2 from './PackDialog2';
 import Timeline from './Timeline';
 
 import moduleStyles from './music-view.module.scss';
+
+// Default to using PackDialog, unless a URL parameter forces the use of
+// the newer PackDialog2.
+const usePackDialog2 = AppConfig.getValue('pack-dialog-2') === 'true';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -70,6 +76,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   analyticsReporter,
   blocklyWorkspace,
 }) => {
+  const dialogControl = useDialogControl();
   useUpdatePlayer(player);
   useUpdateAnalytics(analyticsReporter);
   const dispatch = useAppDispatch();
@@ -86,13 +93,20 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const levelData = useAppSelector(
     state => state.lab.levelProperties?.levelData
   );
+  const offerTts =
+    useAppSelector(state => state.lab.levelProperties?.offerTts) ||
+    AppConfig.getValue('show-tts') === 'true';
   const isPlayView = useAppSelector(state => state.lab.isShareView);
+  const validationStateCallout = useAppSelector(
+    state => state.lab.validationState.callout
+  );
 
   const progressManager = useContext(ProgressManagerContext);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
+
   // Pass music validator to Progress Manager
   useEffect(() => {
     if (progressManager && appName === 'music') {
@@ -111,6 +125,24 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       });
     }
   }, [blocklyWorkspace, isStartMode, levelData]);
+
+  // Use the Lab2 generic prompt for Blockly prompt dialogs.
+  const showGenericPrompt = useCallback(
+    (
+      message: string,
+      value: string,
+      handleConfirm: (input: string | null) => void
+    ) => {
+      dialogControl.showDialog({
+        type: DialogType.GenericPrompt,
+        message,
+        value,
+        handleConfirm,
+      });
+    },
+    [dialogControl]
+  );
+  Blockly.dialog.setPrompt(showGenericPrompt);
 
   useEffect(() => {
     installFunctionBlocks(blockMode);
@@ -141,6 +173,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [dispatch]
   );
 
+  useEffect(() => {
+    if (validationStateCallout) {
+      dispatch(showCallout(validationStateCallout));
+    }
+  }, [dispatch, validationStateCallout]);
+
   const renderInstructions = useCallback(
     (position: InstructionsPosition) => {
       return (
@@ -165,13 +203,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   : 'horizontal'
               }
               handleInstructionsTextClick={onInstructionsTextClick}
-              offerTts={AppConfig.getValue('show-tts') === 'true'}
+              offerTts={offerTts}
             />
           </PanelContainer>
         </div>
       );
     },
-    [hideHeaders, onInstructionsTextClick]
+    [hideHeaders, onInstructionsTextClick, offerTts]
   );
 
   const renderPlayArea = useCallback(
@@ -230,9 +268,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     return <MusicPlayView setPlaying={setPlaying} />;
   }
 
+  const CurrentPackDialog = usePackDialog2 ? PackDialog2 : PackDialog;
+
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
-      {allowPackSelection && <PackDialog player={player} />}
+      {allowPackSelection && <CurrentPackDialog player={player} />}
 
       {showInstructions &&
         instructionsPosition === InstructionsPosition.TOP &&

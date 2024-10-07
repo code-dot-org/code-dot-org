@@ -8,13 +8,15 @@ require 'policies/lti'
 require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
+  before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
+
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
-  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
+  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
 
   #
   # GET /users/sign_up
@@ -25,7 +27,6 @@ class RegistrationsController < Devise::RegistrationsController
       user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
       user_params[:email] ||= params[:email]
-
       @user = User.new_with_session(user_params.permit(:user_type, :email), session)
     else
       save_default_sign_up_user_type
@@ -60,10 +61,14 @@ class RegistrationsController < Devise::RegistrationsController
       PartialRegistration.persist_attributes(session, @user)
     end
 
-    render 'new'
+    if params[:new_sign_up].blank?
+      render 'new'
+    end
   end
 
-  # Part of the new sign up flow - work in progress
+  #
+  # Get /users/new_sign_up/account_type
+  #
   def account_type
     view_options(full_width: true, responsive_content: true)
   end
@@ -74,6 +79,13 @@ class RegistrationsController < Devise::RegistrationsController
   def login_type
     view_options(full_width: true, responsive_content: true)
     render 'login_type'
+  end
+
+  #
+  # Get /users/gdpr_check
+  #
+  def gdpr_check
+    render json: {gdpr: request.gdpr?, force_in_eu: request.params['force_in_eu']}
   end
 
   #
@@ -152,6 +164,12 @@ class RegistrationsController < Devise::RegistrationsController
         )
       end
       super
+    end
+
+    if params[:new_sign_up].present?
+      session[:user_return_to] ||= params[:user_return_to]
+      @user = Services::PartialRegistration::UserBuilder.call(request: request)
+      sign_in @user
     end
 
     if current_user && current_user.errors.blank?

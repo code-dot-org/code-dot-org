@@ -1,8 +1,8 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import ToggleFileBrowserButton from '@codebridge/components/ToggleFileBrowserButton';
 import {Editor} from '@codebridge/Editor';
 import {FileBrowser} from '@codebridge/FileBrowser';
 import {FileTabs} from '@codebridge/FileTabs';
-import ToggleFileBrowserButton from '@codebridge/ToggleFileBrowserButton';
 import classnames from 'classnames';
 import React from 'react';
 
@@ -50,6 +50,7 @@ const Workspace = () => {
       headerContent={headerContent}
       rightHeaderContent={<HeaderButtons />}
       className={moduleStyles.workspace}
+      headerClassName={moduleStyles.workspaceHeader}
     >
       <div
         className={classnames(moduleStyles.workspaceWorkarea, {
@@ -74,22 +75,22 @@ const Workspace = () => {
             [moduleStyles.withFileBrowser]: config.showFileBrowser,
           })}
         >
-          {isStartMode && (
-            <div
-              id="startSourcesWarningBanner"
-              className={moduleStyles.warningBanner}
-            >
-              {projectTemplateLevel
-                ? WARNING_BANNER_MESSAGES.TEMPLATE
-                : WARNING_BANNER_MESSAGES.STANDARD}
-            </div>
-          )}
           <Editor
             langMapping={config.languageMapping}
             editableFileTypes={config.editableFileTypes}
           />
         </div>
         <div className={moduleStyles.workspaceWarningArea}>
+          {isStartMode && (
+            <Alert
+              text={
+                projectTemplateLevel
+                  ? WARNING_BANNER_MESSAGES.TEMPLATE
+                  : WARNING_BANNER_MESSAGES.STANDARD
+              }
+              type={'warning'}
+            />
+          )}
           {viewingOldVersion && (
             <Alert text={codebridgeI18n.viewingOldVersion()} type={'warning'} />
           )}

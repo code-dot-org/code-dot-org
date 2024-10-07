@@ -171,6 +171,7 @@ class AuthenticationOption < ApplicationRecord
 
     other = User.find_by_email_or_hashed_email(email)
     if other && other != user
+      return if Policies::Lti.only_lti_auth?(other)
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end
@@ -181,6 +182,7 @@ class AuthenticationOption < ApplicationRecord
 
     other = User.find_by_hashed_email(hashed_email)
     if other && other != user
+      return if Policies::Lti.only_lti_auth?(other)
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end

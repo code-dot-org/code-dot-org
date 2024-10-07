@@ -100,6 +100,7 @@ export interface TeacherSectionState {
   isLoadingSectionData: boolean;
   initialCourseId?: number | null;
   initialUnitId?: number | null;
+  initialUnitName?: string | null;
   initialCourseOfferingId?: number | null;
   initialCourseVersionId?: number | null;
   initialLoginType?: keyof typeof SectionLoginType;
@@ -152,6 +153,7 @@ const initialState: TeacherSectionState = {
   pageType: '',
   ltiSyncResult: null,
   isLoadingSectionData: false,
+  initialUnitName: null,
 };
 
 // Maps authentication provider to OAuthSectionTypes for ease of comparison
@@ -395,6 +397,7 @@ const sectionSlice = createSlice({
         state.initialCourseOfferingId = initialSectionData.courseOfferingId;
         state.initialCourseVersionId = initialSectionData.courseVersionId;
         state.initialLoginType = initialSectionData.loginType;
+        state.initialUnitName = initialSectionData.unitName;
         state.sectionBeingEdited = initialSectionData;
       },
       prepare(
@@ -557,6 +560,7 @@ const sectionSlice = createSlice({
       if (section.courseVersionId !== state.initialCourseVersionId) {
         assignmentData.course_version_id = section.courseVersionId;
       }
+      if (section.unitName !== state.)
       // If either of these has been set, assignment changed and should be logged
       if (assignmentData.unit_id || assignmentData.course_id) {
         firehoseClient.putRecord(

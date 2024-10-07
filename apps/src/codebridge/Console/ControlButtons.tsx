@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -21,6 +22,7 @@ import {appendSystemMessage} from '../redux/consoleRedux';
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import moduleStyles from './console.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 // Control buttons for running and stopping code.
 // Can be extended in the future to include a test button.
@@ -110,7 +112,7 @@ const ControlButtons: React.FunctionComponent = () => {
           onClick={handleStop}
           color={'destructive'}
           iconLeft={{iconStyle: 'solid', iconName: 'square'}}
-          size={'s'}
+          size={'xs'}
           className={moduleStyles.controlButton}
         />
       ) : (
@@ -123,6 +125,7 @@ const ControlButtons: React.FunctionComponent = () => {
             text: disabledCodeActionsTooltip || '',
             size: 's',
             tooltipId: 'code-actions-tooltip',
+            className: darkModeStyles.tooltipRight,
           }}
         >
           <Button
@@ -130,9 +133,12 @@ const ControlButtons: React.FunctionComponent = () => {
             onClick={handleRun}
             disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-            size={'s'}
-            color={'purple'}
-            className={moduleStyles.controlButton}
+            size={'xs'}
+            color={'white'}
+            className={classNames(
+              moduleStyles.controlButton,
+              darkModeStyles.primaryButton
+            )}
           />
         </WithConditionalTooltip>
       )}

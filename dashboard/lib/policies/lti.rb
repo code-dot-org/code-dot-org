@@ -146,7 +146,7 @@ class Policies::Lti
   end
 
   def self.only_lti_auth?(user)
-    user.authentication_options&.length == 1 && user.authentication_options.first.lti?
+    user.authentication_options.any? && user.authentication_options.all?(&:lti?)
   end
 
   def self.issuer(user)
@@ -208,7 +208,7 @@ class Policies::Lti
 
   # Check if a partial registration is in progress for an LTI user.
   def self.lti_registration_in_progress?(session)
-    PartialRegistration.in_progress?(session) && PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
+    ::PartialRegistration.in_progress?(session) && ::PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
   end
 
   def self.account_linking?(session, user)

@@ -1164,6 +1164,8 @@ describe('RubricContainer', () => {
     const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
+    await findByText('Class Data');
+    fireEvent.click(nextButton);
     await findByText('Understanding the AI Assessment');
     fireEvent.click(nextButton);
     await findByText('Using Evidence');

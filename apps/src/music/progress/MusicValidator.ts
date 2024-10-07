@@ -12,37 +12,11 @@ import {PatternEvent} from '../player/interfaces/PatternEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import MusicPlayer from '../player/MusicPlayer';
 
+import {MusicConditions} from './MusicConditions';
+
 export interface ConditionNames {
   [key: string]: ConditionType;
 }
-
-export const MusicConditions: ConditionNames = {
-  PLAYED_SOUNDS_TOGETHER: {name: 'played_sounds_together', valueType: 'number'},
-  PLAYED_DIFFERENT_SOUNDS_TOGETHER: {
-    name: 'played_different_sounds_together',
-    valueType: 'number',
-  },
-  PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
-  PLAYED_SOUND_IN_FUNCTION: {
-    name: 'played_sound_in_function',
-    valueType: 'string',
-  },
-  PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
-  PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
-  PLAYED_EMPTY_CHORDS: {name: 'played_empty_chords', valueType: 'number'},
-  PLAYED_CHORDS: {name: 'played_chords', valueType: 'number'},
-  PLAYED_EMPTY_PATTERNS: {name: 'played_empty_patterns', valueType: 'number'},
-  PLAYED_PATTERNS: {name: 'played_patterns', valueType: 'number'},
-  PLAYED_EMPTY_PATTERNS_AI: {
-    name: 'played_empty_patterns_ai',
-    valueType: 'number',
-  },
-  PLAYED_PATTERNS_AI: {name: 'played_patterns_ai', valueType: 'number'},
-  PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES: {
-    name: 'played_different_sounds_together_multiple_times',
-    valueType: 'number',
-  },
-};
 
 export default class MusicValidator extends Validator {
   constructor(
@@ -72,10 +46,13 @@ export default class MusicValidator extends Validator {
     let currentNumberSounds = 0;
 
     // Get number of different sounds currently playing simultaneously.
-    let currentNumberDifferentSounds = 0;
+    let currentNumberDifferentSoundsTogether = 0;
 
     // Get number of sounds that have been started.
     let playedNumberSounds = 0;
+
+    // Get number of different sounds that have been started.
+    let playedNumberDifferentSounds = 0;
 
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
@@ -91,6 +68,7 @@ export default class MusicValidator extends Validator {
     let playedNumberEmptyChords = 0;
     let playedNumberChords = 0;
 
+    const uniqueSounds: string[] = [];
     const uniqueCurrentSounds: string[] = [];
 
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
@@ -107,7 +85,7 @@ export default class MusicValidator extends Validator {
           currentNumberSounds++;
 
           if (!uniqueCurrentSounds.includes(eventData.id)) {
-            currentNumberDifferentSounds++;
+            currentNumberDifferentSoundsTogether++;
             uniqueCurrentSounds.push(eventData.id);
           }
 
@@ -131,6 +109,11 @@ export default class MusicValidator extends Validator {
         }
 
         playedNumberSounds++;
+
+        if (!uniqueSounds.includes(eventData.id)) {
+          playedNumberDifferentSounds++;
+          uniqueSounds.push(eventData.id);
+        }
       } else if (eventData.type === 'pattern') {
         const patternEvent = eventData as PatternEvent;
         if (patternEvent.value.events.length === 0) {
@@ -178,7 +161,7 @@ export default class MusicValidator extends Validator {
     // Note that if, for example, 3 different sounds are playing, then we'll consider
     // that 2 different sounds and 1 different sound have also been played together.
     for (
-      let numberDifferentSounds = currentNumberDifferentSounds;
+      let numberDifferentSounds = currentNumberDifferentSoundsTogether;
       numberDifferentSounds >= 1;
       numberDifferentSounds--
     ) {
@@ -192,6 +175,12 @@ export default class MusicValidator extends Validator {
     this.addPlayedConditions(
       MusicConditions.PLAYED_SOUNDS.name,
       playedNumberSounds
+    );
+
+    // Add satisfied conditions for the played different sounds.
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_DIFFERENT_SOUNDS.name,
+      playedNumberDifferentSounds
     );
 
     // Add satisfied conditions for the played patterns.
