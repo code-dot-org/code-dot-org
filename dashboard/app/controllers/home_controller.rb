@@ -39,6 +39,17 @@ class HomeController < ApplicationController
       redirect_params[Rack::GlobalEdition::REGION_KEY] = ge_region
       redirect_uri.query = URI.encode_www_form(redirect_params).presence
       redirect_path = redirect_uri.to_s
+
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'Global Edition Region And Locale Changed',
+        metadata: {
+          country: request.country_code,
+          locale: params[:locale],
+          region: ge_region,
+          prevRegion: cookies[Rack::GlobalEdition::REGION_KEY],
+        }
+      )
     end
 
     redirect_to redirect_path
