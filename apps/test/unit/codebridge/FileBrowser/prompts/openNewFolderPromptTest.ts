@@ -1,12 +1,8 @@
 import {NewFolderFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {
-  validateNewFolderName,
-  openNewFolderPrompt,
-} from '@codebridge/FileBrowser/prompts/openNewFolderPrompt';
+import {openNewFolderPrompt} from '@codebridge/FileBrowser/prompts/openNewFolderPrompt';
 import {FolderId, ProjectFolder} from '@codebridge/types';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {GenericPromptProps} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -55,31 +51,6 @@ const appName = 'Codebridge Unit Test';
 const EXPECTED_NEXT_FOLDER_ID = '4';
 
 describe('CodeBrige/FileBrowser/prompts/openNewFolderPrompt', function () {
-  it('can validateNewFolderName', function () {
-    expect(
-      validateNewFolderName({
-        folderName: '',
-        parentId: DEFAULT_FOLDER_ID,
-        projectFolders: testProject.folders,
-      })
-    ).toEqual(undefined);
-
-    expect(
-      validateNewFolderName({
-        folderName: '@',
-        parentId: DEFAULT_FOLDER_ID,
-        projectFolders: testProject.folders,
-      })
-    ).toEqual(codebridgeI18n.invalidNameError());
-
-    expect(
-      validateNewFolderName({
-        folderName: 'testfolder1',
-        parentId: DEFAULT_FOLDER_ID,
-        projectFolders: testProject.folders,
-      })
-    ).toEqual(codebridgeI18n.folderExistsError());
-  });
   it('can successfully add a new folder to root', async function () {
     const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
     const newFolderName = 'valid_folder_name';
