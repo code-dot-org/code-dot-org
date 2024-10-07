@@ -426,6 +426,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           )}
           {showAccountUpdateSuccess && (
             <Alert
+              id="account-update-success"
               text={i18n.accountInformationUpdateSuccess()}
               type={alertTypes.success}
               className={styles.alert}
