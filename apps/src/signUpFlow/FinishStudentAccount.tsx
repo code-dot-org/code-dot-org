@@ -13,7 +13,11 @@ import {
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {navigateToHref} from '../utils';
 
 import locale from './locale';
 
@@ -144,6 +148,44 @@ const FinishStudentAccount: React.FunctionComponent<{
       },
       PLATFORMS.BOTH
     );
+  };
+
+  const submitStudentAccount = async () => {
+    sendFinishEvent();
+
+    const signUpParams = {
+      new_sign_up: true,
+      user: {
+        user_type: UserTypes.STUDENT,
+        // email: sessionStorage.getItem(EMAIL_SESSION_KEY),
+        // name: name,
+        // email_preference_opt_in: emailOptInChecked,
+        // school: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
+        // school_id: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
+        // school_zip: sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY),
+        // school_name: sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY),
+        // school_country: sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY),
+
+        // const [isParent, setIsParent] = useState(false);
+        // const [parentEmail, setParentEmail] = useState('');
+        // const [parentEmailOptInChecked, setParentEmailOptInChecked] = useState(false);
+        // const [name, setName] = useState('');
+        // const [age, setAge] = useState('');
+        // const [state, setState] = useState('');
+        // const [gender, setGender] = useState('');
+      },
+    };
+    const authToken = await getAuthenticityToken();
+    await fetch('/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': authToken,
+      },
+      body: JSON.stringify(signUpParams),
+    });
+
+    navigateToHref('/home');
   };
 
   return (
@@ -278,7 +320,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             className={style.finishSignUpButton}
             color={buttonColors.purple}
             type="primary"
-            onClick={() => sendFinishEvent()}
+            onClick={submitStudentAccount}
             text={locale.go_to_my_account()}
             iconRight={{
               iconName: 'arrow-right',
