@@ -20,6 +20,7 @@ import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import {navigateToHref} from '../utils';
 
 import locale from './locale';
+import {EMAIL_SESSION_KEY} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
@@ -157,22 +158,13 @@ const FinishStudentAccount: React.FunctionComponent<{
       new_sign_up: true,
       user: {
         user_type: UserTypes.STUDENT,
-        // email: sessionStorage.getItem(EMAIL_SESSION_KEY),
-        // name: name,
-        // email_preference_opt_in: emailOptInChecked,
-        // school: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
-        // school_id: sessionStorage.getItem(SCHOOL_ID_SESSION_KEY),
-        // school_zip: sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY),
-        // school_name: sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY),
-        // school_country: sessionStorage.getItem(SCHOOL_COUNTRY_SESSION_KEY),
-
-        // const [isParent, setIsParent] = useState(false);
-        // const [parentEmail, setParentEmail] = useState('');
-        // const [parentEmailOptInChecked, setParentEmailOptInChecked] = useState(false);
-        // const [name, setName] = useState('');
-        // const [age, setAge] = useState('');
-        // const [state, setState] = useState('');
-        // const [gender, setGender] = useState('');
+        email: sessionStorage.getItem(EMAIL_SESSION_KEY),
+        name: name,
+        age: age,
+        gender: gender,
+        us_state: state,
+        parent_email_preference_email: parentEmail,
+        parent_email_preference_opt_in: parentEmailOptInChecked,
       },
     };
     const authToken = await getAuthenticityToken();
