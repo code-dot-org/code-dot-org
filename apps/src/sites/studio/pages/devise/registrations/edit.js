@@ -13,6 +13,7 @@ import LtiRosterSyncSettings from '@cdo/apps/accounts/LtiRosterSyncSettings';
 import ManageLinkedAccountsController from '@cdo/apps/accounts/ManageLinkedAccountsController';
 import MigrateToMultiAuth from '@cdo/apps/accounts/MigrateToMultiAuth';
 import RemoveParentEmailController from '@cdo/apps/accounts/RemoveParentEmailController';
+import {SchoolInformation} from '@cdo/apps/accounts/SchoolInformation';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -60,6 +61,18 @@ $(document).ready(() => {
         <AccountInformation {...scriptData} />
       </Provider>,
       accountInformationMountPoint
+    );
+  }
+
+  const schoolInformationMountPoint =
+    document.getElementById('school-information');
+  if (schoolInformationMountPoint) {
+    const store = getStore();
+    ReactDOM.render(
+      <Provider store={store}>
+        <SchoolInformation {...scriptData} />
+      </Provider>,
+      schoolInformationMountPoint
     );
   }
 
