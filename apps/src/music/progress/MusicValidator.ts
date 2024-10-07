@@ -57,7 +57,7 @@ export default class MusicValidator extends Validator {
     let playedNumberDifferentSounds = 0;
 
     // A list of unique invocated ids associated with played trigger sounds.
-    const playedTriggerSoundUniqueInvocationIds = [] as number[];
+    const playedTriggerSoundUniqueInvocationIds: number[] = [];
 
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
