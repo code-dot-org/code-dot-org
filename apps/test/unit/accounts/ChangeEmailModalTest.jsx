@@ -40,6 +40,9 @@ describe('ChangeEmailModal', () => {
 
   beforeEach(() => {
     wrapper = mount(<ChangeEmailModal {...DEFAULT_PROPS} />);
+
+    // causing a blank change event to reveal validation messages
+    emailInput(wrapper).simulate('change');
   });
 
   afterEach(() => {
@@ -50,7 +53,7 @@ describe('ChangeEmailModal', () => {
     describe(`as ${userType}`, () => {
       beforeEach(() => wrapper.setProps({userType}));
 
-      it('disables everything and shows save text when saving', () => {
+      it('disables everything and shows spinner when saving', () => {
         wrapper.setState({saveState: 'saving'});
         expect(emailInput(wrapper)).to.have.attr('disabled');
         expect(passwordInput(wrapper)).to.have.attr('disabled');
