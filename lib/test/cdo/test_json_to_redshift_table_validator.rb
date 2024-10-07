@@ -205,6 +205,22 @@ class JSONtoRedshiftTableValidatorTest < Minitest::Test
     assert_operator ActiveSupport::Multibyte::Chars.new(validated_record["data_json"]).bytes.size, :<=, 65535
   end
 
+  def test_complex_object_is_converted_to_string
+    nested_object = {"key" => "a"}
+    record_string = {
+      "created_at" => "2023-09-03T12:00:00Z",
+      "environment" => "production",
+      "study" => "example_study",
+      "event" => "login",
+      "data_json" => nested_object
+    }.to_json
+    validated_record_string, validation_errors = Cdo::JSONtoRedshiftTableValidator.validate(record_string, @schema, modify_invalid: true)
+    assert_empty validation_errors
+    validated_record = JSON.parse(validated_record_string)  # Reparse result
+    assert validated_record["data_json"].is_a?(String)
+    assert_equal nested_object.to_json, validated_record["data_json"]
+  end
+
   def test_non_ascii_character_in_character_column
     record_string = {
       "created_at" => "2023-09-03T12:00:00Z",

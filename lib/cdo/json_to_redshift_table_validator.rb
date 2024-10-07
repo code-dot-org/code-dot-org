@@ -105,7 +105,7 @@ module Cdo
     end
 
     private def validate_character(key, value, max_length)
-      value_string = value.is_a?(Hash) ? value_string.to_json : value.to_s
+      value_string = value.is_a?(Hash) ? value.to_json : value.to_s
       unless value_string.is_a?(String)
         @errors << "Invalid type for #{key}: expected String, got #{value_string.class}"
         value_string = value_string.to_s if @modify_invalid
