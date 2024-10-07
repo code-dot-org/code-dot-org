@@ -1,7 +1,11 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
-import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
+import {
+  DEFAULT_CHORD_LENGTH,
+  DEFAULT_PATTERN_LENGTH,
+  DEFAULT_TUNE_LENGTH,
+} from '../../constants';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
 import {FunctionEvents} from '../interfaces/FunctionEvents';
@@ -261,7 +265,7 @@ export default class Simple2Sequencer extends Sequencer {
       instrumentType: 'melodic',
       id: JSON.stringify(value),
       value,
-      length: value.length,
+      length: value.length || DEFAULT_TUNE_LENGTH,
       blockId,
       ...this.getCommonEventFields(),
     });
