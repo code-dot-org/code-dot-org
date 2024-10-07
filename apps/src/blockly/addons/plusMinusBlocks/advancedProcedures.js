@@ -745,13 +745,6 @@ GoogleBlockly.Extensions.register('argument_reporter_validator', function () {
 // If a block is disconnected or in the wrong "scope", we add a clickable warning
 // icon to the block with instructive text.
 function updateArgReporterWarningText(block) {
-  // It's possible that clicking a warning icon could close a field editor, which
-  // could cause a warning bubble to show just as it should be removed.
-  // Remove any existing warning text bubbles before this happens.
-  $('.blocklyBubbleCanvas').each(function () {
-    $(this).remove();
-  });
-
   const rootBlock = block.getRootBlock();
   const isConnected = block.outputConnection.isConnected();
   const isInDefinition = Blockly.cdoUtils.isFunctionBlock(rootBlock);
