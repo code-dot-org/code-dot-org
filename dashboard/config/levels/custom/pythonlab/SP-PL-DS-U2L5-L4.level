@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2024-10-03T19:37:38.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# astype()\r\n\r\n::: details [**✅ Step 1**]\r\n- Use the `astype()` function to convert the **Height** data type from `float64` to `int64` and the `info()` function to confirm the change.\r\n- *Check out the [documentation](https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit) to learn more about how to use the `astytpe()` function.*\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nDiscuss with your partner how changing the data type affected the summary of the data.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nConvert the **Height** data type *back* to `int64` and use the `info()` function to confirm the change.\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\nDiscuss with your partner what happened with the data as a result of the conversion. Can the original values be recovered?\r\n:::\r\n\r\n\r\n\r\n",
+    "long_instructions": "> Play around with this level and try to figure out what the astype() function does.\r\n# astype()\r\n\r\n::: details [**✅ Step 1**]\r\n- Use the `astype()` function to convert the **Height** data type from `float64` to `int64` and the `info()` function to confirm the change.\r\n- *Check out the [documentation](https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit) to learn more about how to use the `astytpe()` function.*\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nDiscuss with your partner how changing the data type affected the summary of the data.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nConvert the **Height** data type *back* to `int64` and use the `info()` function to confirm the change.\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\nDiscuss with your partner what happened with the data as a result of the conversion. Can the original values be recovered?\r\n:::\r\n\r\n\r\n\r\n",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -42,7 +43,6 @@
       ]
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-03T19:37:38.131+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L4_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L4_2024-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-03T19:37:38.131+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L5-L4_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L5-L4_2024-pilot\"},{\"changed_at\":\"2024-10-04 16:01:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

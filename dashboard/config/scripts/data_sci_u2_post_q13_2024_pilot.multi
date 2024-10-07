@@ -1,11 +1,11 @@
 name 'Data Sci U2 Post Q13_2024-pilot'
 
-question 'In what scenarios would a box plot be more informative than a histogram, and how does the box plot\’s ability to highlight outliers benefit the data analysis process?'
+question 'Which of the following best describes the purpose of the `groupby()` function in Pandas?'
 
-right 'A box plot is more informative when comparing the distribution of a dataset across multiple categories, as it provides a summary of central tendency and variability.'
-wrong 'A box plot is more informative when dealing with large datasets, as it compresses all data points into a single, compact visualization.'
-wrong 'A box plot is preferred for visualizing time series data because it highlights trends and seasonality.'
-wrong 'A box plot is less informative than a histogram, as it hides the underlying distribution and focuses only on summary statistics.'
+right 'To group rows that have the same values in specified columns and perform aggregate functions on each group.'
+wrong 'To sort data by a single column.'
+wrong 'To visualize relationships between grouped data points.'
+wrong 'To filter rows based on a single condition.'
 
 
 
