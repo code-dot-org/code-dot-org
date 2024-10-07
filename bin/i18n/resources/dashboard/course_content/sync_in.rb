@@ -200,6 +200,28 @@ module I18n
                   i18n_strings[BLOCK_CATEGORIES_TYPE][name] = name if name
                 end
 
+                ## Lab2 Function Names
+                if level.uses_lab2?
+                  functions = level.
+                    try(:level_data).
+                    try(:[], "startSources").
+                    try(:[], "blocks").try(:[], "blocks").
+                    filter {|block| block.try(:[], "type") == "procedures_defnoreturn"}
+
+                  i18n_strings['function_definitions'] = Hash.new unless functions.empty?
+
+                  functions&.each do |function|
+                    name = function.try(:[], "fields").try(:[], "NAME")
+                    # The name is used to uniquely identify the function. Skip if there is no name.
+                    next unless name
+                    function_definition = Hash.new
+                    function_definition["name"] = name
+                    i18n_strings['function_definitions'][name] = function_definition
+                    puts "just wrote"
+                    pp i18n_strings['function_definitions']
+                  end
+                end
+
                 ## Function Names
                 functions = blocks.xpath("//block[@type=\"procedures_defnoreturn\"]")
                 i18n_strings['function_definitions'] = Hash.new unless functions.empty?
