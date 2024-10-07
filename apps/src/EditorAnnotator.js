@@ -830,7 +830,7 @@ export default class EditorAnnotator {
       return EditorAnnotator.code_;
     }
 
-    let code = EditorAnnotator.annotator()?.getCode();
+    let code = EditorAnnotator.annotator()?.getCode() || '';
     EditorAnnotator.code_ = code;
 
     if (options.stripComments && code) {
