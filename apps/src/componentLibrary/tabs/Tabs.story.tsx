@@ -561,3 +561,61 @@ GroupOfSizesOfTabs.args = {
     },
   ],
 };
+
+export const GroupOfTabsWithClosableTabs = MultipleTemplate.bind({});
+GroupOfTabsWithClosableTabs.args = {
+  components: [
+    {
+      name: 'primary_tabs_with_closable_tabs',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1',
+          tabContent: <div>Tab 1 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+          isClosable: true,
+        },
+      ],
+      defaultSelectedTabValue: 'tab1',
+      onChange: () => null,
+      type: 'primary',
+    },
+    {
+      name: 'secondary_tabs_with_closable_tabs',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1',
+          tabContent: <div>Tab 1 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+          isClosable: true,
+        },
+      ],
+      defaultSelectedTabValue: 'tab1',
+      onChange: () => null,
+      type: 'secondary',
+    },
+  ],
+};
