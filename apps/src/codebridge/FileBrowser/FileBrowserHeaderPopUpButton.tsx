@@ -13,19 +13,12 @@ import {
   useHandleFileUpload,
   usePrompts,
 } from './hooks';
-import {newFilePromptType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
-type FileBrowserHeaderPopUpButtonProps = {
-  newFilePrompt: newFilePromptType;
-};
-
-export const FileBrowserHeaderPopUpButton = ({
-  newFilePrompt,
-}: FileBrowserHeaderPopUpButtonProps) => {
-  const {openNewFolderPrompt} = usePrompts();
+export const FileBrowserHeaderPopUpButton = () => {
+  const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
   const {
     project,
     config: {validMimeTypes},
@@ -45,7 +38,7 @@ export const FileBrowserHeaderPopUpButton = ({
         <div>{codebridgeI18n.newFolder()}</div>
       </div>
       <div
-        onClick={() => newFilePrompt()}
+        onClick={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
         className={classNames(
           darkModeStyles.dropdownItem,
           moduleStyles.dropdownItem
