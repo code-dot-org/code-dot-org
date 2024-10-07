@@ -8,11 +8,13 @@ import {
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
-  SELECT_A_SCHOOL,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  UserTypes,
+  NonSchoolOptions,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/schoolInfo/utils/fetchSchools');
@@ -84,7 +86,6 @@ describe('FinishTeacherAccount', () => {
   it('school info is tracked in sessionStorage', () => {
     renderDefault();
     const zipCode = '98122';
-    const clickToAddSchool = 'clickToAdd';
     const schoolName = 'Seattle Academy';
 
     // Fill out zip code and add school by name
@@ -92,14 +93,14 @@ describe('FinishTeacherAccount', () => {
       target: {value: zipCode},
     });
     fireEvent.change(screen.getAllByRole('combobox')[1], {
-      target: {value: clickToAddSchool},
+      target: {value: NonSchoolOptions.CLICK_TO_ADD},
     });
     fireEvent.change(screen.getAllByRole('textbox')[2], {
       target: {value: schoolName},
     });
 
     expect(sessionStorage.getItem(SCHOOL_ID_SESSION_KEY)).toBe(
-      clickToAddSchool
+      NonSchoolOptions.CLICK_TO_ADD
     );
     expect(sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY)).toBe(zipCode);
     expect(sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY)).toBe(schoolName);
@@ -188,8 +189,8 @@ describe('FinishTeacherAccount', () => {
         email: email,
         name: name,
         email_preference_opt_in: true,
-        school: SELECT_A_SCHOOL,
-        school_id: SELECT_A_SCHOOL,
+        school: NonSchoolOptions.SELECT_A_SCHOOL,
+        school_id: NonSchoolOptions.SELECT_A_SCHOOL,
         school_zip: '',
         school_name: '',
         school_country: 'US',
