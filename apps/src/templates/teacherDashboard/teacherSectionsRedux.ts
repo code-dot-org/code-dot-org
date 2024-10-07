@@ -50,6 +50,7 @@ type AssignmentData = {
   course_id?: number | null;
   course_version_id?: number | null;
   course_offering_id?: number | null;
+  unitName?: string | null;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
