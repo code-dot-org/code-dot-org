@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
+// import CloseButton from '@cdo/apps/componentLibrary/closeButton';
+import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -23,10 +25,16 @@ export interface TabModel {
   tooltip?: TooltipProps;
   /** Tab icon */
   icon?: FontAwesomeV6IconProps;
+  /** Tab size (e.g. Used for closableButton) */
+  size?: ComponentSizeXSToL;
   /** Tab content */
   tabContent: React.ReactNode;
   /** Is tab disabled */
   disabled?: boolean;
+  /** Is tab closable */
+  isClosable?: boolean;
+  /** Callback when tab is closed */
+  onClose?: () => void;
 }
 
 interface TabsProps extends TabModel {
@@ -59,7 +67,9 @@ const renderTabButtonContent = (
   icon?: FontAwesomeV6IconProps,
   text?: string,
   iconLeft?: FontAwesomeV6IconProps,
-  iconRight?: FontAwesomeV6IconProps
+  iconRight?: FontAwesomeV6IconProps,
+  isClosable?: boolean,
+  onClose?: () => void
 ) => {
   if (isIconOnly && icon) {
     return <FontAwesomeV6Icon {...icon} />;
@@ -68,11 +78,11 @@ const renderTabButtonContent = (
     <>
       {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
       {text && <span>{text}</span>}
-      {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+      {iconRight && !isClosable && <FontAwesomeV6Icon {...iconRight} />}
+      {/*{isClosable && <div>123</div>}*/}
     </>
   );
 };
-
 const _Tab: React.FunctionComponent<TabsProps> = ({
   isSelected,
   onClick,
@@ -82,10 +92,13 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   iconRight,
   icon,
   tooltip,
+  size,
   tabPanelId,
   tabButtonId,
   disabled = false,
   isIconOnly = false,
+  isClosable = false,
+  onClose = () => {},
 }) => {
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
   checkTabForErrors(isIconOnly, icon, text);
@@ -95,7 +108,9 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     icon,
     text,
     iconLeft,
-    iconRight
+    iconRight,
+    isClosable,
+    onClose
   );
 
   const buttonElement = (
@@ -113,17 +128,24 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
       disabled={disabled}
     >
       {buttonContent}
+      {/*{isClosable && (*/}
+      {/*  <CloseButton*/}
+      {/*    onClick={onClose}*/}
+      {/*    size={size}*/}
+      {/*    aria-label={`${text}-tab-close`}*/}
+      {/*  />*/}
+      {/*)}*/}
     </button>
   );
 
   return (
-    <li role="presentation">
+    <>
       {tooltip ? (
         <WithTooltip tooltipProps={tooltip}>{buttonElement}</WithTooltip>
       ) : (
         buttonElement
       )}
-    </li>
+    </>
   );
 };
 

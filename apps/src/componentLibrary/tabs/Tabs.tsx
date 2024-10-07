@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
 import _TabPanel from '@cdo/apps/componentLibrary/tabs/_TabPanel';
@@ -12,6 +13,8 @@ export interface TabsProps {
   tabs: TabModel[];
   /** The function that is called when a Tab is clicked/selected tab is changed */
   onChange: (value: string) => void;
+  /** The function that is called when a Tab is closed (If it's closable) */
+  onClose?: () => void;
   /** The value of the default selected Tab */
   defaultSelectedTabValue: string;
   /** The name attribute specifies the name of a Tabs group.
@@ -51,6 +54,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   tabs,
   name,
   onChange,
+  onClose = () => {},
   defaultSelectedTabValue,
   tabsContainerId,
   tabsContainerClassName,
@@ -63,6 +67,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   const [selectedTabValue, setSelectedValue] = useState(
     defaultSelectedTabValue
   );
+
   const handleChange = useCallback(
     (value: string) => {
       setSelectedValue(value);
@@ -94,14 +99,22 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
       >
         <ul role="tablist">
           {tabs.map((tab, index) => (
-            <_Tab
-              {...tab}
-              key={tab.value}
-              isSelected={tab.value === selectedTabValue}
-              onClick={handleChange}
-              tabPanelId={`${nameStripped}-panel-${tab.value}`}
-              tabButtonId={`${nameStripped}-tab-${tab.value}`}
-            />
+            <li role="presentation" key={tab.value}>
+              <_Tab
+                {...tab}
+                key={tab.value}
+                isSelected={tab.value === selectedTabValue}
+                onClick={handleChange}
+                size={size}
+                onClose={onClose}
+                tabPanelId={`${nameStripped}-panel-${tab.value}`}
+                tabButtonId={`${nameStripped}-tab-${tab.value}`}
+              />
+              <CloseButton
+                onClick={onClose}
+                aria-label={`${nameStripped}-tab-close`}
+              />
+            </li>
           ))}
         </ul>
       </div>
