@@ -121,6 +121,7 @@ export default function Congrats(props) {
     nextCourseDesc,
     curriculumUrl,
     assignableCourseSuggestions,
+    isEnglish,
   } = props;
 
   // Determine what time we should consider the current time to be when
@@ -445,6 +446,7 @@ export default function Congrats(props) {
           {assignableCourseSuggestions && (
             <SuggestedAssignableCourses
               assignableCourseSuggestions={assignableCourseSuggestions}
+              isEnglish={isEnglish}
             />
           )}
           {renderRecommendedOptions()}
@@ -481,4 +483,5 @@ Congrats.propTypes = {
   nextCourseDesc: PropTypes.string,
   currentDate: PropTypes.object,
   assignableCourseSuggestions: PropTypes.array,
+  isEnglish: PropTypes.bool,
 };

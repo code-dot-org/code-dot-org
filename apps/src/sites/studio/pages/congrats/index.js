@@ -36,6 +36,7 @@ $(document).ready(function () {
   const courseName = congratsData.course_name || 'hourofcode';
   const assignableCourseSuggestions =
     congratsData.assignable_course_suggestions;
+  const isEnglish = congratsData.is_english;
 
   if (congratsData.sections) {
     store.dispatch(setSections(congratsData.sections));
@@ -78,6 +79,7 @@ $(document).ready(function () {
         nextCourseDesc={nextCourseDesc}
         curriculumUrl={curriculumUrl}
         assignableCourseSuggestions={assignableCourseSuggestions}
+        isEnglish={isEnglish}
       />
     </Provider>,
     document.getElementById('congrats-container')
