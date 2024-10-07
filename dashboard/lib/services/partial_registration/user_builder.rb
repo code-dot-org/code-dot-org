@@ -27,8 +27,16 @@ module Services
           user_params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
           user_params[:email_preference_form_kind] = '0'
         when ::User::TYPE_STUDENT
-          user_params[:parent_email_preference_request_ip] = request.ip
-          user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
+          if user_params[:parent_email_preference_email].present?
+            user_params[:parent_email_preference_opt_in_required] = '1'
+            user_params[:parent_email_preference_opt_in] = user_params[:parent_email_preference_opt_in].present? ? 'yes' : 'no'
+            user_params[:parent_email_update_only] = '0'
+            user_params[:parent_email_preference_request_ip] = request.ip
+            user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
+          else
+            user_params[:parent_email_preference_opt_in_required] = '0'
+            user_params[:parent_email_update_only] = '1'
+          end
         end
 
         user_params[:data_transfer_agreement_accepted] = user_params[:data_transfer_agreement_accepted] == '1'
@@ -46,6 +54,7 @@ module Services
         [
           :user_type,
           :email,
+          :hashed_email,
           :name,
           :email_preference_opt_in_required,
           :email_preference_opt_in,
