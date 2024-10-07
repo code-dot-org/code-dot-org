@@ -2,7 +2,7 @@ import {getNextFileId} from '@codebridge/codebridgeContext';
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
-import {checkForDuplicateFilename, isValidFileName} from '@codebridge/utils';
+import {validateFileName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
@@ -11,40 +11,6 @@ import {
   extractDialogClosePromiseInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-
-type ValidateNewFileNameArgs = {
-  fileName: string;
-  folderId: FolderId;
-  projectFiles: ProjectType['files'];
-  isStartMode: boolean;
-};
-
-const validateNewFileName = ({
-  fileName,
-  folderId,
-  projectFiles,
-  isStartMode,
-}: ValidateNewFileNameArgs) => {
-  if (!fileName.length) {
-    return;
-  }
-  if (!isValidFileName(fileName)) {
-    return codebridgeI18n.invalidNameError();
-  }
-  const duplicate = checkForDuplicateFilename({
-    fileName,
-    folderId,
-    projectFiles,
-    isStartMode,
-  });
-  if (duplicate) {
-    return duplicate;
-  }
-  const [, extension] = fileName.split('.');
-  if (!extension) {
-    return codebridgeI18n.noFileExtensionError();
-  }
-};
 
 type OpenNewFilePromptArgsType = {
   folderId: FolderId;
@@ -71,7 +37,13 @@ export const openNewFilePrompt = async ({
     type: DialogType.GenericPrompt,
     title: codebridgeI18n.newFilePrompt(),
     validateInput: (fileName: string) =>
-      validateNewFileName({fileName, folderId, projectFiles, isStartMode}),
+      validateFileName({
+        fileName,
+        folderId,
+        projectFiles,
+        isStartMode,
+        validationFile,
+      }),
   });
   if (results.type !== 'confirm') {
     return;

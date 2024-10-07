@@ -1,9 +1,8 @@
 import {ProjectFile} from '@codebridge/types';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 
-type CheckForDuplicateFilenameArgs = {
+type IsDuplicateFileNameArgs = {
   fileName: string;
   folderId: string;
   projectFiles: Record<string, ProjectFile>;
@@ -11,31 +10,36 @@ type CheckForDuplicateFilenameArgs = {
   validationFile?: ProjectFile;
 };
 
-export const checkForDuplicateFilename = ({
+export enum DuplicateFileError {
+  DUPLICATE_FILE = 'DUPLICATE_FILE',
+  DUPLICATE_SUPPORT_FILE = 'DUPLICATE_SUPPORT_FILE',
+}
+
+export const isDuplicateFileName = ({
   fileName,
   folderId,
   projectFiles,
   isStartMode,
   validationFile,
-}: CheckForDuplicateFilenameArgs) => {
-  let message = undefined;
+}: IsDuplicateFileNameArgs) => {
   // The validation file is in the project files in start mode.
   if (!isStartMode && validationFile?.name === fileName) {
-    message = codebridgeI18n.duplicateSupportFileError({fileName});
+    return DuplicateFileError.DUPLICATE_SUPPORT_FILE;
   } else {
     const existingFile = Object.values(projectFiles).find(
       f => f.name === fileName && f.folderId === folderId
     );
     if (existingFile) {
-      message = codebridgeI18n.duplicateFileError({fileName});
       if (
         existingFile.type === ProjectFileType.SUPPORT ||
         existingFile.type === ProjectFileType.VALIDATION
       ) {
-        message = codebridgeI18n.duplicateSupportFileError({fileName});
+        return DuplicateFileError.DUPLICATE_SUPPORT_FILE;
+      } else {
+        return DuplicateFileError.DUPLICATE_FILE;
       }
     }
   }
 
-  return message;
+  return false;
 };

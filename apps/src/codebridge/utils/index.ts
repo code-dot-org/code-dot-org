@@ -1,6 +1,6 @@
 export * from './analyticsReporterHelper';
-export * from './checkForDuplicateFilename';
 export * from './editableFileType';
+export * from './isDuplicateFileName';
 export * from './isDuplicateFolderName';
 export * from './isValidFileName';
 export * from './isValidFolderName';
@@ -11,5 +11,6 @@ export * from './getErrorMessage';
 export * from './getOpenFiles';
 export * from './previewFileType';
 export * from './sortFilesByName';
+export * from './validateFileName';
 export * from './validateFolderName';
 export * from './viewableImageFileType';
