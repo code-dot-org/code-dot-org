@@ -158,6 +158,16 @@ describe('UnitEditor', () => {
 
       expect(within(topicTags).getByLabelText('Maker').checked).to.equal(true);
     });
+
+    it('content area is a drop down selector with initial option selected', () => {
+      renderDefault({initialContentArea: 'self_paced_pl_k_5'});
+
+      const contentArea = screen.getByLabelText('Content Area');
+      expect(within(contentArea).getAllByRole('option').length).to.equal(11);
+      expect(
+        within(contentArea).getByText('K-5 self-paced PL').selected
+      ).to.equal(true);
+    });
   });
 
   describe('Script Editor - Legacy (Enzyme)', () => {
@@ -213,7 +223,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('input').length).to.equal(27);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(14);
       expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('select').length).to.equal(6);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
       expect(wrapper.find('SaveBar').length).to.equal(1);
       expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
