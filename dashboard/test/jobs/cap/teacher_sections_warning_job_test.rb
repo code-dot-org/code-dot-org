@@ -106,5 +106,16 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
         perform_enqueued_jobs {perform_later}
       end
     end
+
+    # We have legacy teacher accounts which don't have a plaintext email
+    context 'teacher email is blank' do
+      let(:teacher) {create(:teacher, :without_email, name: teacher_name)}
+
+      it 'does not warn teacher' do
+        expect_teacher_warning_to_be_sent.never
+        expect_event_logging.never
+        perform_enqueued_jobs {perform_later}
+      end
+    end
   end
 end
