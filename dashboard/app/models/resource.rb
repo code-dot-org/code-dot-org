@@ -126,7 +126,7 @@ class Resource < ApplicationRecord
       key: key,
       markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
       name: get_localized_property(:name),
-      url: get_localized_property(:url)
+      url: url
     }
   end
 

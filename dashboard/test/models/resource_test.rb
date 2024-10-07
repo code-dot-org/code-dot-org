@@ -150,7 +150,7 @@ class ResourceTest < ActiveSupport::TestCase
     assert_equal existing_resource, copied_resource
   end
 
-  test "summarize retrives translations" do
+  test "summarize retrieves translations" do
     resource = create(:resource, name: "English name")
     test_locale = :'te-ST'
     custom_i18n = {
@@ -166,6 +166,28 @@ class ResourceTest < ActiveSupport::TestCase
     assert_equal("English name", resource.summarize_for_lesson_plan[:name])
     I18n.locale = test_locale
     assert_equal("Translated name", resource.summarize_for_lesson_plan[:name])
+    I18n.locale = I18n.default_locale
+  end
+
+  test "summarize_for_resources_dropdown retrieves translations" do
+    resource = create(:resource, name: "English name", url: "original-url")
+    test_locale = :'te-ST'
+    custom_i18n = {
+      "data" => {
+        "resources" => {
+          Services::GloballyUniqueIdentifiers.build_resource_key(resource) => {
+            "name" => "Translated name",
+            "url" => "translated-url"
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations(test_locale, custom_i18n)
+    assert_equal("English name", resource.summarize_for_resources_dropdown[:name])
+    assert_equal("original-url", resource.summarize_for_resources_dropdown[:url])
+    I18n.locale = test_locale
+    assert_equal("Translated name", resource.summarize_for_resources_dropdown[:name])
+    assert_equal("original-url", resource.summarize_for_resources_dropdown[:url])
     I18n.locale = I18n.default_locale
   end
 end
