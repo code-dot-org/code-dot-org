@@ -9,14 +9,13 @@ import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {ProjectType, FolderId, ProjectFile, FileId} from '@codebridge/types';
 import {
   checkForDuplicateFilename as globalCheckForDuplicateFilename,
-  checkForDuplicateFoldername,
+  validateFolderName,
   findFolder,
   getErrorMessage,
   getFileIconNameAndStyle,
   sendCodebridgeAnalyticsEvent,
   shouldShowFile,
   isValidFileName,
-  isValidFolderName,
 } from '@codebridge/utils';
 import {
   DndContext,
@@ -592,14 +591,11 @@ export const FileBrowser = React.memo(() => {
               folders: Object.values(project.folders),
               required: true,
             });
-            const duplicate = checkForDuplicateFoldername({
+            return validateFolderName({
               folderName: folder.name,
               parentId,
               projectFolders: project.folders,
             });
-            if (duplicate) {
-              return duplicate;
-            }
           } catch (e) {
             return getErrorMessage(e);
           }
@@ -688,15 +684,12 @@ export const FileBrowser = React.memo(() => {
           if (newName === folder.name) {
             return;
           }
-          if (!isValidFolderName(newName)) {
-            return codebridgeI18n.invalidNameError();
-          }
-          const existingFolder = Object.values(project.folders).some(
-            f => f.name === newName && f.parentId === folder.parentId
-          );
-          if (existingFolder) {
-            return codebridgeI18n.folderExistsError();
-          }
+
+          return validateFolderName({
+            folderName: newName,
+            parentId: folder.parentId,
+            projectFolders: project.folders,
+          });
         },
       });
       if (results.type !== 'confirm') {
@@ -717,15 +710,15 @@ export const FileBrowser = React.memo(() => {
           return;
         }
         if (e.active.data.current?.type === DragType.FOLDER) {
-          const duplicate = checkForDuplicateFoldername({
+          const validationError = validateFolderName({
             folderName: project.folders[e.active.data.current.id].name,
             parentId: e.over.id as string,
             projectFolders: project.folders,
           });
-          if (duplicate) {
+          if (validationError) {
             dialogControl?.showDialog({
               type: DialogType.GenericAlert,
-              title: duplicate,
+              title: validationError,
             });
           } else {
             moveFolder(e.active.data.current.id as string, e.over.id as string);
