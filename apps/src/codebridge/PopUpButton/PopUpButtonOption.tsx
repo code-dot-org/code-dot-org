@@ -3,8 +3,8 @@ import React from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 import moduleStyles from '@codebridge/FileBrowser/styles/filebrowser.module.scss';
-import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
 
 /*
   This component provides a default layout & styling for an item in the PopUpButton.
