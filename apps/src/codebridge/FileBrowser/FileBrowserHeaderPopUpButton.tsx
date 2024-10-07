@@ -16,7 +16,7 @@ import {
 import {newFilePromptType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
-import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 type FileBrowserHeaderPopUpButtonProps = {
   newFilePrompt: newFilePromptType;

@@ -74,6 +74,7 @@ export default function initPage(unitEditorData) {
         initialProjectSharing={scriptData.project_sharing || false}
         initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
         initialTopicTags={scriptData.topic_tags || []}
+        initialContentArea={scriptData.content_area || ''}
         initialFamilyName={scriptData.family_name || ''}
         initialVersionYear={scriptData.version_year || ''}
         unitFamilies={unitEditorData.script_families}

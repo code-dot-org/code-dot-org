@@ -4,7 +4,7 @@ import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './PopUpButton.module.scss';
-import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 type PopUpButtonProps = {
   iconName: string;
