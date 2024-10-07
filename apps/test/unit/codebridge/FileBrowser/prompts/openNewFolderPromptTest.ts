@@ -3,24 +3,10 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {openNewFolderPrompt} from '@codebridge/FileBrowser/prompts/openNewFolderPrompt';
 import {FolderId, ProjectFolder} from '@codebridge/types';
 
-import {DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
-import {GenericPromptProps} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
+import {getDialogControlMock, getAnalyticsMock} from '../../test_utils';
 import testProject from '../../testProject.json';
-
-const getDialogControlMock = (
-  newFolderName: string
-): Pick<DialogControlInterface, 'showDialog'> => ({
-  showDialog: ({validateInput}: GenericPromptProps) => {
-    const error = validateInput?.(newFolderName);
-    if (error) {
-      return Promise.resolve({type: 'cancel', args: error});
-    } else {
-      return Promise.resolve({type: 'confirm', args: newFolderName});
-    }
-  },
-});
 
 const getNewFolderMock = (
   parentId: FolderId
@@ -35,22 +21,10 @@ const getNewFolderMock = (
   return [newFolderData, mock];
 };
 
-type AnalyticsDataType = {event: string};
-type AnalyticsMockType = (event: string) => void;
-
-const getAnalyticsMock = (): [AnalyticsDataType, AnalyticsMockType] => {
-  const analyticsData = {} as AnalyticsDataType;
-  const mock = (event: string) => {
-    analyticsData.event = event;
-  };
-
-  return [analyticsData, mock];
-};
-
 const appName = 'Codebridge Unit Test';
 const EXPECTED_NEXT_FOLDER_ID = '4';
 
-describe('CodeBrige/FileBrowser/prompts/openNewFolderPrompt', function () {
+describe('openNewFolderPrompt', function () {
   it('can successfully add a new folder to root', async function () {
     const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
     const newFolderName = 'valid_folder_name';

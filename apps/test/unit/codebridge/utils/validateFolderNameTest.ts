@@ -5,8 +5,16 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
 import testProject from '../testProject.json';
 
-describe('CodeBrige/FileBrowser/utils/validateFolderName', function () {
+describe('validateFolderName', function () {
   it('can validateFolderName', function () {
+    expect(
+      validateFolderName({
+        folderName: 'valid_folder_name',
+        parentId: DEFAULT_FOLDER_ID,
+        projectFolders: testProject.folders,
+      })
+    ).toEqual(undefined);
+
     expect(
       validateFolderName({
         folderName: '',
@@ -23,12 +31,16 @@ describe('CodeBrige/FileBrowser/utils/validateFolderName', function () {
       })
     ).toEqual(codebridgeI18n.invalidNameError());
 
+    const duplicateFolderName = 'testfolder1';
+
     expect(
       validateFolderName({
-        folderName: 'testfolder1',
+        folderName: duplicateFolderName,
         parentId: DEFAULT_FOLDER_ID,
         projectFolders: testProject.folders,
       })
-    ).toEqual(codebridgeI18n.folderExistsError());
+    ).toEqual(
+      codebridgeI18n.duplicateFolderError({folderName: duplicateFolderName})
+    );
   });
 });
