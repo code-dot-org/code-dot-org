@@ -290,6 +290,9 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     levelbuilderText: 'Number',
     kind: 'block',
     type: 'math_number',
+    fields: {
+      NUM: 1,
+    },
   },
   ['math_round']: {
     levelbuilderText: 'Round',
