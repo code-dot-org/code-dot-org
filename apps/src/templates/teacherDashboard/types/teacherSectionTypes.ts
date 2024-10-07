@@ -10,96 +10,108 @@ import {
 // typescript we can deprecate the PropTypes definitions and use these instead.
 
 export interface Section {
-  id: number;
-  name: string;
-  createdAt: string;
-  loginType?: keyof typeof SectionLoginType;
-  lessonExtras: boolean;
-  pairingAllowed: boolean;
-  ttsAutoplayEnabled: boolean;
-  studentCount: number;
+  aiTutorEnabled: boolean;
+  anyStudentHasProgress?: boolean;
   code: string;
-  courseOfferingId?: number;
-  courseVersionId?: number;
-  unitId?: number;
-  courseId?: number;
-  scriptId: number | null;
+  codeReviewExpiresAt?: number | null;
+  courseDisplayName: string | null;
+  courseId?: number | null;
+  courseOfferingId?: number | null;
+  courseVersionId?: number | null;
+  courseVersionName?: string;
+  createdAt: string;
   grades: string[];
+  hidden: boolean;
+  id: number;
+  isAssignedCSA?: boolean;
+  lessonExtras: boolean;
+  loginType?: keyof typeof SectionLoginType;
+  loginTypeName?: string;
+  name: string;
+  pairingAllowed: boolean;
+  participantType: string | undefined;
+  postMilestoneDisabled: boolean;
   providerManaged: boolean;
   restrictSection: boolean;
-  postMilestoneDisabled: boolean;
-  syncEnabled: boolean;
-  sharingDisabled: boolean;
-  participantType: string | undefined;
-  courseDisplayName: string | null;
-  hidden: boolean;
-  aiTutorEnabled: boolean;
-  courseVersionName?: string;
-  loginTypeName?: string;
-  codeReviewExpiresAt?: number | null;
-  isAssignedCSA?: boolean;
+  scriptId: number | null;
   sectionInstructors?: SectionInstructor[];
-  anyStudentHasProgress?: boolean;
+  sharingDisabled: boolean;
+  studentCount: number;
+  syncEnabled: boolean;
+  ttsAutoplayEnabled: boolean;
+  unitId?: number | null;
 }
 
 export interface UserEditableSection {
-  name?: string;
-  loginType?: keyof typeof SectionLoginType;
-  lessonExtras?: boolean;
-  pairingAllowed?: boolean;
-  ttsAutoplayEnabled?: boolean;
-  participantType?: string;
-  courseId?: number;
-  courseOfferingId?: number;
-  courseVersionId?: number;
-  unitId?: number;
+  aiTutorEnabled?: boolean;
+  codeReviewExpiresAt?: number | null;
+  courseId?: number | null;
+  courseOfferingId?: number | null;
+  courseVersionId?: number | null;
   grades?: string[];
   hidden?: boolean;
+  lessonExtras?: boolean;
+  loginType?: keyof typeof SectionLoginType;
+  name?: string;
+  pairingAllowed?: boolean;
+  participantType?: string;
   restrictSection?: boolean;
-  codeReviewExpiresAt?: number | null;
-  aiTutorEnabled?: boolean;
+  ttsAutoplayEnabled?: boolean;
+  unitId?: number | null;
 }
 
 export type OAuthSectionTypeName = keyof typeof OAuthSectionTypes;
 export type ServerOAuthSectionTypeName = OAuthSectionTypeName | 'google_oauth2';
 
 export interface ServerSection {
-  id: number | null;
-  name: string;
-  createdAt?: string;
-  login_type: string;
-  lesson_extras: boolean;
-  pairing_allowed: boolean;
-  tts_autoplay_enabled?: boolean;
-  studentCount: number;
+  ai_tutor_enabled?: boolean;
   code: string;
+  course_display_name?: string | null;
+  course_id: number | null;
   course_offering_id?: number | null;
   course_version_id?: number | null;
-  unit_id?: number | null;
-  course_id: number | null;
-  script_id?: number;
+  createdAt?: string;
   grades?: string[];
+  hidden: boolean;
+  id: number;
+  lesson_extras: boolean;
+  login_type: string;
+  name: string;
+  pairing_allowed: boolean;
+  participant_type?: string;
+  post_milestone_disabled?: boolean;
   provider_managed?: boolean;
   restrict_section?: boolean;
-  post_milestone_disabled?: boolean;
-  sync_enabled?: boolean;
+  script_id?: number;
   sharing_disabled: boolean;
-  participant_type: string | undefined;
-  course_display_name?: string | null;
-  hidden: boolean;
-  ai_tutor_enabled?: boolean;
+  studentCount: number;
+  sync_enabled?: boolean;
+  tts_autoplay_enabled?: boolean;
+  unit_id?: number | null;
 }
 
 export interface Student {
-  sectionId: number;
+  familyName: string;
   id: number;
   name: string;
-  familyName: string;
-  sharingDisabled: boolean;
-  secretPicturePath: string;
   secretPictureName: string;
+  secretPicturePath: string;
   secretWords: string;
+  sectionId: number;
+  sharingDisabled: boolean;
   userType: keyof typeof UserTypes;
+}
+
+export interface ServerStudent {
+  family_name: string;
+  id: number;
+  name: string;
+  secret_picture_name: string;
+  secret_picture_path: string;
+  secret_words: string;
+  sectionId: number;
+  sharing_disabled: boolean;
+  user_type: keyof typeof UserTypes;
 }
 
 //TODO: better types here
@@ -111,20 +123,21 @@ export interface AssignmentCourseOffering {
 }
 
 export type SectionInstructor = {
-  invited_by_name: string;
-  invited_by_email: string;
-  section_name: string;
-  section_id: number;
-  instructor_name: string;
   instructor_email: string;
+  instructor_name: string;
+  invited_by_email: string;
+  invited_by_name: string;
   participant_type: string;
+  section_id: number;
+  section_name: string;
+  status: string;
 };
 
 export type Classroom = {
+  enrollment_code: string;
   id: string;
   name: string;
   section: string | null;
-  enrollment_code: string;
 };
 
 type LtiSection = {

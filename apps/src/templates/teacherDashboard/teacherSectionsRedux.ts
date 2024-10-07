@@ -1,8 +1,16 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {
+  createSlice,
+  AnyAction,
+  PayloadAction,
+  ThunkAction,
+  ThunkDispatch,
+} from '@reduxjs/toolkit';
 import _ from 'lodash';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {
   PlGradeValue,
@@ -10,7 +18,9 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {
+  isAddingSection,
   sectionFromServerSection as untypedSectionFromServerSection,
+  serverSectionFromSection,
   studentFromServerStudent,
   newSectionData,
   USER_EDITABLE_SECTION_PROPS,
@@ -25,6 +35,7 @@ import {
   SectionMap,
   ServerOAuthSectionTypeName,
   ServerSection,
+  ServerStudent,
   Student,
   UserEditableSection,
 } from './types/teacherSectionTypes';
@@ -35,14 +46,14 @@ type AssignmentData = {
   section_id: number;
   section_creation_timestamp: string;
   page_name: string;
-  unit_id?: number;
-  course_id?: number;
-  course_version_id?: number;
-  course_offering_id?: number;
+  unit_id?: number | null;
+  course_id?: number | null;
+  course_version_id?: number | null;
+  course_offering_id?: number | null;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-interface TeacherSectionState {
+export interface TeacherSectionState {
   nextTempId: number;
   studioUrl: string;
   // List of teacher's authentication providers (mapped to OAuthSectionTypes
@@ -68,7 +79,7 @@ interface TeacherSectionState {
   // We can edit exactly one section at a time.
   // While editing we store that section's 'in-progress' state separate from
   // its persisted state in the sections map.
-  sectionBeingEdited: Section | null;
+  sectionBeingEdited?: Section;
   showSectionEditDialog: boolean;
   saveInProgress: boolean;
   // Track whether we've async-loaded our section and assignment data
@@ -85,12 +96,10 @@ interface TeacherSectionState {
   loadError: {status: number; message: string} | null;
   // The page where the action is occurring
   pageType: string;
-  // DCDO Flag - show/hide Lock Section field
-  showLockSectionField: boolean | null;
   ltiSyncResult: LtiSectionSyncResult | null;
   isLoadingSectionData: boolean;
-  initialCourseId?: number;
-  initialUnitId?: number;
+  initialCourseId?: number | null;
+  initialUnitId?: number | null;
   initialCourseOfferingId?: number | null;
   initialCourseVersionId?: number | null;
   initialLoginType?: keyof typeof SectionLoginType;
@@ -100,6 +109,7 @@ interface TeacherSectionState {
 
 /** @const {null} null used to indicate no section selected */
 export const NO_SECTION = null;
+export const SELECT_SECTION = 'teacherDashboard/selectSection';
 
 const initialState: TeacherSectionState = {
   nextTempId: -1,
@@ -124,10 +134,6 @@ const initialState: TeacherSectionState = {
   // List of students in section currently being edited (see studentShape PropType)
   selectedStudents: [],
   sectionsAreLoaded: false,
-  // We can edit exactly one section at a time.
-  // While editing we store that section's 'in-progress' state separate from
-  // its persisted state in the sections map.
-  sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
   // Track whether we've async-loaded our section and assignment data
@@ -144,8 +150,6 @@ const initialState: TeacherSectionState = {
   loadError: null,
   // The page where the action is occurring
   pageType: '',
-  // DCDO Flag - show/hide Lock Section field
-  showLockSectionField: null,
   ltiSyncResult: null,
   isLoadingSectionData: false,
 };
@@ -165,7 +169,7 @@ const sectionFromServerSection = (section: ServerSection) =>
   untypedSectionFromServerSection(section) as Section;
 
 const sectionSlice = createSlice({
-  name: 'teacherSection',
+  name: 'teacherSections',
   initialState,
   reducers: {
     setAuthProviders(state, action: PayloadAction<string[]>) {
@@ -202,16 +206,10 @@ const sectionSlice = createSlice({
     },
     updateSelectedSection(state, action: PayloadAction<ServerSection>) {
       const sectionId = action.payload.id;
-      const oldSection: Section = sectionId
-        ? state.sections[sectionId]
-        : sectionFromServerSection(action.payload);
       if (sectionId) {
-        state.sections = {
-          ...state.sections,
-          [sectionId]: {
-            ...oldSection,
-            ...sectionFromServerSection(action.payload),
-          },
+        state.sections[sectionId] = {
+          ...state.sections[sectionId],
+          ...sectionFromServerSection(action.payload),
         };
       }
     },
@@ -281,7 +279,7 @@ const sectionSlice = createSlice({
         state,
         action: PayloadAction<{
           sectionId: number;
-          students: Student[];
+          students: ServerStudent[];
         }>
       ) {
         const students = action.payload.students || [];
@@ -295,7 +293,7 @@ const sectionSlice = createSlice({
 
         state.selectedStudents = selectedStudents;
       },
-      prepare(sectionId: number, students: Student[]) {
+      prepare(sectionId: number, students: ServerStudent[]) {
         return {
           payload: {
             sectionId,
@@ -331,9 +329,6 @@ const sectionSlice = createSlice({
     },
     setAvailableParticipantTypes(state, action: PayloadAction<string[]>) {
       state.availableParticipantTypes = action.payload;
-    },
-    setShowLockSectionField(state, action: PayloadAction<boolean>) {
-      state.showLockSectionField = action.payload;
     },
     setSectionCodeReviewExpiresAt: {
       reducer(
@@ -377,9 +372,9 @@ const sectionSlice = createSlice({
       reducer(
         state,
         action: PayloadAction<{
-          courseOfferingId?: number;
-          courseVersionId?: number;
-          unitId?: number;
+          courseOfferingId?: number | null;
+          courseVersionId?: number | null;
+          unitId?: number | null;
           participantType?: string;
         }>
       ) {
@@ -575,7 +570,7 @@ const sectionSlice = createSlice({
         );
       }
 
-      state.sectionBeingEdited = null;
+      delete state.sectionBeingEdited;
       state.saveInProgress = false;
     },
     failSaveRequest(state) {
@@ -587,13 +582,19 @@ const sectionSlice = createSlice({
     endAsyncLoad(state) {
       state.asyncLoadComplete = true;
     },
-    cancelEditingSession(state) {
-      state.sectionBeingEdited = null;
+    cancelEditingSection(state) {
+      delete state.sectionBeingEdited;
     },
-    setCoteacherInvite(state, action: PayloadAction<SectionInstructor>) {
+    setCoteacherInvite(
+      state,
+      action: PayloadAction<SectionInstructor | undefined>
+    ) {
       state.coteacherInvite = action.payload;
     },
-    setCoteacherInviteForPl(state, action: PayloadAction<SectionInstructor>) {
+    setCoteacherInviteForPl(
+      state,
+      action: PayloadAction<SectionInstructor | undefined>
+    ) {
       state.coteacherInviteForPl = action.payload;
     },
     beginImportRosterFlow(state) {
@@ -636,15 +637,413 @@ const sectionSlice = createSlice({
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
-  EDIT_SECTION_REQUEST: 'teacherSection/editSectionRequest',
-  EDIT_SECTION_SUCCESS: 'teacherSection/editSectionSuccess',
+  EDIT_SECTION_REQUEST: 'teacherSection/startSaveRequest',
+  EDIT_SECTION_SUCCESS: 'teacherSection/finishSaveRequest',
   IMPORT_ROSTER_FLOW_BEGIN: 'teacherSection/importRosterFlowBegin',
   IMPORT_ROSTER_FLOW_LIST_LOADED: 'teacherSection/importRosterFlowListLoaded',
   PENDING_NEW_SECTION_ID: 'teacherSection/pendingNewSectionId',
   USER_EDITABLE_SECTION_PROPS,
 };
 
+type RootState = {teacherSections: TeacherSectionState};
+
 //Thunks
+type SectionThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
+
+/**
+ * Changes the hidden state of a given section, persisting these changes to the
+ * server
+ * @param {number} sectionId
+ */
+export const toggleSectionHidden =
+  (sectionId: number): SectionThunkAction =>
+  (dispatch, getState) => {
+    dispatch(beginEditingSection(sectionId, true));
+    const state = getState().teacherSections;
+    const currentlyHidden = state.sections[sectionId].hidden;
+    dispatch(editSectionProperties({hidden: !currentlyHidden}));
+
+    // Track archive/restore section action
+    firehoseClient.putRecord({
+      study: 'teacher_dashboard_actions',
+      study_group: 'toggleSectionHidden',
+      event: currentlyHidden ? 'restoreSection' : 'archiveSection',
+      data_json: JSON.stringify({
+        section_id: sectionId,
+      }),
+    });
+    return dispatch(finishEditingSection());
+  };
+
+const submitEditingSection = (
+  dispatch: ThunkDispatch<
+    {teacherSections: TeacherSectionState},
+    undefined,
+    AnyAction
+  >,
+  getState: () => RootState
+) => {
+  dispatch(startSaveRequest());
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
+
+  if (!section) {
+    throw new Error('section does not exist');
+  }
+
+  if (isAddingSection(state)) {
+    return $.ajax({
+      url: '/dashboardapi/sections',
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(serverSectionFromSection(section)),
+    });
+  } else {
+    return $.ajax({
+      url: `/dashboardapi/sections/${section.id}`,
+      method: 'PATCH',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(serverSectionFromSection(section)),
+    });
+  }
+};
+
+/**
+ * Submit staged section changes to the server.
+ * Closes UI and updates section table on success.
+ */
+export const finishEditingSection =
+  (): SectionThunkAction => (dispatch, getState) => {
+    const state = getState().teacherSections;
+    const section = state.sectionBeingEdited;
+
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+
+    return new Promise((resolve, reject) => {
+      submitEditingSection(dispatch, getState)
+        .done(result => {
+          dispatch(
+            finishSaveRequest({
+              sectionId: section.id,
+              serverSection: result,
+            })
+          );
+          resolve(result);
+        })
+        .fail((jqXhr: object, status: string) => {
+          dispatch(failSaveRequest());
+          reject(status);
+        });
+    });
+  };
+
+type ParticipantTypesResponse = {
+  availableParticipantTypes: string[];
+};
+
+export const asyncLoadSectionData =
+  (id: number | void): SectionThunkAction =>
+  dispatch => {
+    dispatch(beginAsyncLoad());
+
+    const promises: Promise<object>[] = [
+      fetchJSON('/dashboardapi/sections').then(sections =>
+        dispatch(setSections(sections as ServerSection[]))
+      ),
+      fetchJSON('/dashboardapi/sections/valid_course_offerings').then(
+        offerings =>
+          dispatch(setCourseOfferings(offerings as AssignmentCourseOffering[]))
+      ),
+      fetchJSON('/dashboardapi/sections/available_participant_types').then(
+        participantTypes =>
+          dispatch(
+            setAvailableParticipantTypes(
+              (participantTypes as ParticipantTypesResponse)
+                .availableParticipantTypes
+            )
+          )
+      ),
+    ];
+
+    // If section id is provided, load students for the current section.
+    if (id) {
+      promises.push(
+        fetchJSON(`/dashboardapi/sections/${id}/students`).then(students =>
+          dispatch(
+            setStudentsForCurrentSection(id, students as ServerStudent[])
+          )
+        )
+      );
+    }
+
+    return Promise.all(promises)
+      .catch(err => {
+        console.error(err.message);
+      })
+      .then(() => {
+        dispatch(endAsyncLoad());
+      });
+  };
+
+function fetchJSON(url: string, params?: object) {
+  return new Promise((resolve, reject) => {
+    $.getJSON(url, params)
+      .done(resolve)
+      .fail(jqxhr =>
+        reject(
+          new Error(`
+        url: ${url}
+        status: ${jqxhr.status}
+        statusText: ${jqxhr.statusText}
+        responseText: ${jqxhr.responseText}
+      `)
+        )
+      );
+  });
+}
+
+export const asyncLoadCoteacherInvite = (): SectionThunkAction => dispatch => {
+  fetchJSON('/api/v1/section_instructors')
+    .then(response => {
+      const sectionInstructors = response as SectionInstructor[];
+      const coteacherInviteForPl = sectionInstructors.find(instructorInvite => {
+        return (
+          instructorInvite.status === 'invited' &&
+          instructorInvite.participant_type !== 'student'
+        );
+      });
+      const coteacherInviteForClassrooms = sectionInstructors.find(
+        instructorInvite => {
+          return (
+            instructorInvite.status === 'invited' &&
+            instructorInvite.participant_type === 'student'
+          );
+        }
+      );
+
+      dispatch(setCoteacherInvite(coteacherInviteForClassrooms));
+      dispatch(setCoteacherInviteForPl(coteacherInviteForPl));
+    })
+    .catch(err => {
+      console.error(err.message);
+    });
+};
+
+/**
+ * Assigns a course to a given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ * @param {number} courseId
+ * @param {number} courseOfferingId
+ * @param {number} courseVersionId
+ * @param {number} unitId
+ * @param {string} pageType
+ */
+export const assignToSection = (
+  sectionId: number,
+  courseId: number,
+  courseOfferingId: number,
+  courseVersionId: number,
+  unitId: number,
+  pageType: string
+): SectionThunkAction => {
+  firehoseClient.putRecord(
+    {
+      study: 'assignment',
+      event: 'course-assigned-to-section',
+      data_json: JSON.stringify(
+        {
+          sectionId,
+          unitId,
+          courseId,
+          date: new Date(),
+        },
+        removeNullValues
+      ),
+    },
+    {includeUserId: true}
+  );
+  return (dispatch, getState) => {
+    const section = getState().teacherSections.sections[sectionId];
+    // Only log if the assignment is changing.
+    // We need an OR here because unitId will be null for standalone units
+    if (
+      (courseOfferingId && section.courseOfferingId !== courseOfferingId) ||
+      (courseVersionId && section.courseVersionId !== courseVersionId) ||
+      (unitId && section.unitId !== unitId)
+    ) {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_ASSIGNED,
+        {
+          sectionName: section.name,
+          sectionId,
+          sectionLoginType: section.loginType,
+          previousUnitId: section.unitId,
+          previousCourseId: section.courseOfferingId,
+          previousCourseVersionId: section.courseVersionId,
+          newUnitId: unitId,
+          newCourseId: courseOfferingId,
+          newCourseVersionId: courseVersionId,
+        },
+        PLATFORMS.BOTH
+      );
+    }
+
+    dispatch(beginEditingSection(sectionId, true));
+    dispatch(
+      editSectionProperties({
+        courseId: courseId,
+        courseOfferingId: courseOfferingId,
+        courseVersionId: courseVersionId,
+        unitId: unitId,
+      })
+    );
+    return dispatch(finishEditingSection());
+  };
+};
+
+/**
+ * Removes assignments from the given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ */
+export const unassignSection =
+  (sectionId: number, location: string): SectionThunkAction =>
+  (dispatch, getState) => {
+    dispatch(beginEditingSection(sectionId, true));
+    const {initialCourseId, initialUnitId} = getState().teacherSections;
+
+    dispatch(
+      editSectionProperties({
+        courseId: null,
+        courseOfferingId: null,
+        courseVersionId: null,
+        unitId: null,
+      })
+    );
+    firehoseClient.putRecord(
+      {
+        study: 'assignment',
+        event: 'course-unassigned-from-section',
+        data_json: JSON.stringify(
+          {
+            sectionId,
+            scriptId: initialUnitId,
+            courseId: initialCourseId,
+            location: location,
+            date: new Date(),
+          },
+          removeNullValues
+        ),
+      },
+      {includeUserId: true}
+    );
+    return dispatch(finishEditingSection());
+  };
+
+/**
+ * Removes null values from stringified object before sending firehose record
+ */
+function removeNullValues(key: string, val?: string | number | null) {
+  if (val === null || typeof val === 'undefined') {
+    return undefined;
+  }
+  return val;
+}
+
+/** @const {Object} Map oauth section type to relative "list rosters" URL. */
+const urlByProvider: {[key: string]: string} = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
+  [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms',
+} as const;
+
+/**
+ * Start the process of importing a section from a third-party provider
+ * (like Google Classroom or Clever) by opening the RosterDialog and
+ * loading the list of classrooms available for import.
+ */
+export const beginImportRosterFlow =
+  (): SectionThunkAction => (dispatch, getState) => {
+    const state = getState().teacherSections;
+    const provider = state.rosterProvider;
+    if (!provider || !Object.keys(urlByProvider).includes(provider)) {
+      return Promise.reject(
+        new Error('Unable to begin import roster flow without a provider')
+      );
+    }
+
+    if (state.isRosterDialogOpen) {
+      return Promise.resolve();
+    }
+
+    dispatch(sectionSlice.actions.beginImportRosterFlow());
+    return new Promise<void>((resolve, reject) => {
+      const url = urlByProvider[provider] as string;
+      $.ajax(url)
+        .done(response => {
+          dispatch(importRosterFlowListLoaded(response.courses || []));
+          resolve();
+        })
+        .fail(result => {
+          const message = result.responseJSON
+            ? result.responseJSON.error
+            : 'Unknown error.';
+          dispatch(rosterImportFailed({status: result.status, message}));
+          reject(new Error(message));
+        });
+    });
+  };
+
+/** @const {Object} Map oauth section type to relative import URL. */
+const importUrlByProvider: {[key: string]: string} = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
+  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
+  [SectionLoginType.lti_v1]: '/lti/v1/sync_course',
+} as const;
+
+/**
+ * Import the course with the given courseId from a third-party provider
+ * (like Google Classroom or Clever), creating a new section. If the course
+ * in question has already been imported, update the existing section already
+ * associated with it.
+ * @param {string} courseId
+ * @param {string} courseName
+ * @return {function():Promise}
+ */
+export const importOrUpdateRoster =
+  (courseId: string, courseName: string): SectionThunkAction =>
+  (dispatch, getState) => {
+    const state = getState();
+    const provider = state.teacherSections.rosterProvider;
+
+    if (!provider) {
+      throw new Error('Roster provider has not been set.');
+    }
+
+    const importSectionUrl = importUrlByProvider[provider];
+
+    dispatch(rosterImportRequest());
+    if (provider === SectionLoginType.lti_v1) {
+      return fetch(`${importSectionUrl}?section_code=${courseId}`, {
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+        .then(response => {
+          return response.json();
+        })
+        .then(results => {
+          return dispatch(ltiRosterImportSuccess(results));
+        });
+    }
+    let sectionId: number;
+    return fetchJSON(importSectionUrl, {courseId, courseName})
+      .then(newSection => (sectionId = (newSection as ServerSection).id))
+      .then(() => dispatch(asyncLoadSectionData()))
+      .then(() => dispatch(rosterImportSuccess(sectionId)));
+  };
 
 // pageType describes the current route the user is on. Used only for logging.
 // Enum of allowed values:
@@ -656,31 +1055,43 @@ export const pageTypes = {
   homepage: 'homepage',
 } as const;
 
-export const {
-  setAuthProviders,
-  setRosterProvider,
-  setPageType,
-  updateSectionAiTutorEnabled,
-  selectSection,
-  setSections,
-  updateSelectedSection,
-  startLoadingSectionData,
-  setStudentsForCurrentSection,
-  setRosterProviderName,
-  finishLoadingSectionData,
-  setCourseOfferings,
+// Actions used only by thunks within this file don't need to be exported.
+const {
+  beginAsyncLoad,
+  endAsyncLoad,
+  failSaveRequest,
+  finishSaveRequest,
+  importRosterFlowListLoaded,
+  ltiRosterImportSuccess,
+  rosterImportRequest,
+  rosterImportSuccess,
   setAvailableParticipantTypes,
-  setShowLockSectionField,
-  setSectionCodeReviewExpiresAt,
-  removeSection,
+  startSaveRequest,
+} = sectionSlice.actions;
+
+export const {
   beginCreatingSection,
   beginEditingSection,
+  cancelEditingSection,
+  cancelImportRosterFlow,
   editSectionProperties,
-  cancelEditingSession,
+  finishLoadingSectionData,
+  removeSection,
+  rosterImportFailed,
+  selectSection,
+  setAuthProviders,
   setCoteacherInvite,
   setCoteacherInviteForPl,
-  cancelImportRosterFlow,
-  rosterImportFailed,
+  setCourseOfferings,
+  setPageType,
+  setRosterProvider,
+  setRosterProviderName,
+  setSectionCodeReviewExpiresAt,
+  setSections,
+  setStudentsForCurrentSection,
+  startLoadingSectionData,
+  updateSectionAiTutorEnabled,
+  updateSelectedSection,
 } = sectionSlice.actions;
 
 export default sectionSlice.reducer;
