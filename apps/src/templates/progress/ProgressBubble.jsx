@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import i18n from '@cdo/locale';
+
+import {getStore} from '../../redux.js';
 
 import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {
@@ -48,6 +52,17 @@ export default class ProgressBubble extends React.Component {
   }
 
   onClickLevel = () => {
+    // Only send LEVEL_ACTIVITUY event for students or non-authnenticated users
+    if (getStore().getState().currentUser?.userType !== 'teacher') {
+      analyticsReporter.sendEvent(
+        EVENTS.LEVEL_ACTIVITY,
+        {
+          is_not_teacher:
+            getStore().getState().currentUser?.userType !== 'teacher',
+        },
+        PLATFORMS.BOTH
+      );
+    }
     if (this.props.onClick) {
       this.props.onClick(this.props.level);
     }
