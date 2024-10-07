@@ -85,6 +85,32 @@ describe('LockedLessonUtils', () => {
       );
       expect(result).toEqual({1: true, 2: false});
     });
+
+    it('is false if student not found', () => {
+      const lesson = {lockable: true, levels: [{id: 1}, {id: 2}]};
+      const levelProgressByStudent = {
+        2: {1: {locked: false}, 2: {locked: true}},
+      };
+      const result = getLockedStatusPerStudent(
+        levelProgressByStudent,
+        STUDENTS,
+        lesson
+      );
+      expect(result).toEqual({1: false, 2: false});
+    });
+
+    it('is false when level not found', () => {
+      const lesson = {lockable: true, levels: [{id: 1}, {id: 2}]};
+      const levelProgressByStudent = {
+        1: {2: {locked: true}},
+      };
+      const result = getLockedStatusPerStudent(
+        levelProgressByStudent,
+        [STUDENT_1],
+        lesson
+      );
+      expect(result).toEqual({1: false});
+    });
   });
 
   describe('areAllLevelsLocks', () => {

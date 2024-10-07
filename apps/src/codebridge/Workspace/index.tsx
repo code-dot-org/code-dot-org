@@ -75,22 +75,22 @@ const Workspace = () => {
             [moduleStyles.withFileBrowser]: config.showFileBrowser,
           })}
         >
-          {isStartMode && (
-            <div
-              id="startSourcesWarningBanner"
-              className={moduleStyles.warningBanner}
-            >
-              {projectTemplateLevel
-                ? WARNING_BANNER_MESSAGES.TEMPLATE
-                : WARNING_BANNER_MESSAGES.STANDARD}
-            </div>
-          )}
           <Editor
             langMapping={config.languageMapping}
             editableFileTypes={config.editableFileTypes}
           />
         </div>
         <div className={moduleStyles.workspaceWarningArea}>
+          {isStartMode && (
+            <Alert
+              text={
+                projectTemplateLevel
+                  ? WARNING_BANNER_MESSAGES.TEMPLATE
+                  : WARNING_BANNER_MESSAGES.STANDARD
+              }
+              type={'warning'}
+            />
+          )}
           {viewingOldVersion && (
             <Alert text={codebridgeI18n.viewingOldVersion()} type={'warning'} />
           )}

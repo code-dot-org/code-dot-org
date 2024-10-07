@@ -14,20 +14,11 @@
   overflow: hidden;
 }
 
-.warningBanner {
-  z-index: 99;
-  background-color: $light_yellow;
-  height: 20px;
-  padding: 5px;
-  width: 100%;
-  color: $black;
-}
-
 .workspaceToggleButtonContainer {
   background-color: $light_gray_900;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 4px;
 }
 
 .workspaceToggleButtonContainer.withFileBrowser {
@@ -35,7 +26,7 @@
 }
 
 .workplaceEditorWrapper {
-  overflow: scroll;
+  overflow: hidden;
   flex: 1;
   grid-column: span 2;
 }
@@ -46,7 +37,7 @@
 
 .workspaceWorkarea {
   display: grid;
-  grid-template-columns: 30px auto;
+  grid-template-columns: 34px auto;
   grid-auto-rows: 32px 1fr auto;
   overflow: hidden;
   flex: 1;

@@ -1,0 +1,14 @@
+name 'Data Sci U1 Post Q7_2024-pilot'
+
+question 'Analyze the following scenario: A fitness app denies a user\'s request to access their data and provides no explanation. Which data right is being violated and what can the user do?'
+
+wrong 'The right to be forgotten; the user should delete the app.'
+wrong 'The right to data portability; the user should contact customer support.'
+right 'The right to access; the user should file a complaint with the relevant data protection authority.'
+wrong 'The right to privacy; the user should stop using the app.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

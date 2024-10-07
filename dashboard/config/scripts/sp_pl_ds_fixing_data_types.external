@@ -1,0 +1,55 @@
+name 'SP-PL-DS-fixing_data_types'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Converting Data Types
+
+
+#### Sometimes Pandas does not assign the correct data type and we need to update these types to work with our data. 
+
+
+#### Look at the output on the console here. What do you notice about the data types?
+
+   <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="45%">
+                <img src="https://images.code.org/7c13aaa6735b609ca410ecc776ff3903-image-1728059087633.png" alt="data info pandas" width="100%">
+            </td>
+            <td width="55%" style="font-size:14pt;">
+            <img src="https://images.code.org/713c96851eb95edfdb8d8bebb116e61d-image-1728059104170.png" alt="console null data" width="100%">
+            </td>
+        </tr>
+        
+        </table>
+        
+<br>
+
+## The astype()function
+
+#### Since **'Age'** is typically represented as a **Int** and not a **Float**, we will make that change using the **astype()** function. 
+
+#### We will also convert **'Date'** to the **datetime** variable in Pandas.
+        
+   <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="45%">
+                <img src="https://images.code.org/9038faa40180e743a52ae5b2a62cfb84-image-1728059576956.png" alt="astype function" width="100%">
+            </td>
+            <td width="55%" style="font-size:14pt;">
+              <img src="https://images.code.org/c50bfd033c0a98a4e58febd6184d3512-image-1728059620814.png" alt="age to int" width="100%">
+            </td>
+        </tr>
+                <tr>
+            <td width="45%">
+                <img src="https://images.code.org/3054713eab3b29ffa5691e98747b8244-image-1728059754839.png" alt="date time code" width="100%">
+            </td>
+            <td width="55%" style="font-size:14pt;">
+              <img src="https://images.code.org/11e8a1f77746d229acf6436a1a4a9b13-image-1728059844540.png" alt="date time console" width="100%">
+            </td>
+        </tr>
+    </table>
+
+
+### **Let's practice!**
+MARKDOWN

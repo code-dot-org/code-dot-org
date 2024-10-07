@@ -7,12 +7,10 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SchoolInfoInterstitial from '@cdo/apps/schoolInfo/SchoolInfoInterstitial';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
 import {
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
-  SELECT_A_SCHOOL,
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 // Mock the dependencies
@@ -212,7 +210,7 @@ describe('SchoolInfoInterstitial', () => {
             ...defaultProps.scriptData,
             existingSchoolInfo: {
               country: SELECT_COUNTRY,
-              school_id: SELECT_A_SCHOOL,
+              school_id: NonSchoolOptions.SELECT_A_SCHOOL,
               school_name: '',
               school_zip: '',
             },
@@ -252,7 +250,7 @@ describe('SchoolInfoInterstitial', () => {
             ...defaultProps.scriptData,
             existingSchoolInfo: {
               country: US_COUNTRY_CODE,
-              school_id: SELECT_A_SCHOOL,
+              school_id: NonSchoolOptions.SELECT_A_SCHOOL,
               school_name: '',
               school_zip: '12345',
             },
@@ -271,7 +269,7 @@ describe('SchoolInfoInterstitial', () => {
             ...defaultProps.scriptData,
             existingSchoolInfo: {
               country: US_COUNTRY_CODE,
-              school_id: NO_SCHOOL_SETTING,
+              school_id: NonSchoolOptions.NO_SCHOOL_SETTING,
               school_name: '',
               school_zip: '12345',
             },
@@ -317,7 +315,7 @@ describe('SchoolInfoInterstitial', () => {
             ...defaultProps.scriptData,
             existingSchoolInfo: {
               country: 'US',
-              school_id: CLICK_TO_ADD,
+              school_id: NonSchoolOptions.CLICK_TO_ADD,
               school_name: 'Cool School',
               school_zip: '12345',
             },
@@ -342,7 +340,7 @@ describe('SchoolInfoInterstitial', () => {
             ...defaultProps.scriptData,
             existingSchoolInfo: {
               country: 'UK',
-              school_id: SELECT_A_SCHOOL,
+              school_id: NonSchoolOptions.SELECT_A_SCHOOL,
               school_name: '',
               school_zip: '',
             },
@@ -361,7 +359,7 @@ describe('SchoolInfoInterstitial', () => {
             ...defaultProps.scriptData,
             existingSchoolInfo: {
               country: 'UK',
-              school_id: SELECT_A_SCHOOL,
+              school_id: NonSchoolOptions.SELECT_A_SCHOOL,
               school_name: 'UK School',
               school_zip: '',
             },

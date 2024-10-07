@@ -5,13 +5,11 @@ import ReactDOM from 'react-dom';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
-import {
-  NON_SCHOOL_OPTIONS_ARRAY,
-  SELECT_COUNTRY,
-} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {SELECT_COUNTRY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {SchoolDataInputsContainer} from '@cdo/apps/templates/SchoolDataInputsContainer';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -108,7 +106,7 @@ $(document).ready(() => {
     const newSchoolIdEl = $(
       'select[name="user[school_info_attributes][school_id]"]'
     );
-    if (NON_SCHOOL_OPTIONS_ARRAY.includes(newSchoolIdEl.val())) {
+    if (Object.values(NonSchoolOptions).includes(newSchoolIdEl.val())) {
       newSchoolIdEl.val('');
       $('input[name="user[school_info_attributes][school_zip]"]').val('');
     }

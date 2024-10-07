@@ -1,6 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
   "created_at": "2024-10-01T19:51:52.000Z",
   "level_num": "custom",
@@ -74,7 +73,7 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/maker/setup"
     ],
-    "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\r\n  console.log(lightSensor.value);\r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  console.log(tempSensor.F);\r\n});\r\n",
+    "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\n  ledScreen.display([\n  ([0, 0, 0, 0, 0]),\n  ([0, 1, 0, 1, 0]),\n  ([0, 0, 0, 0, 0]),\n  ([1, 0, 0, 0, 1]),\n  ([0, 1, 1, 1, 0])\n  ]);\n});\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "code_functions": {
       "console.log": null,
@@ -102,13 +101,11 @@
     "contained_level_names": [
       "Computer Systems Playground - LEDs Contained"
     ],
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-10-01T19:51:52.773+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Sensors 1 2\\\"\"],\"cloned_from\":\"Computer Systems Playground - Sensors 1 2\"},{\"changed_at\":\"2024-10-01 19:52:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-01T19:51:52.773+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Sensors 1 2\\\"\"],\"cloned_from\":\"Computer Systems Playground - Sensors 1 2\"},{\"changed_at\":\"2024-10-01 19:52:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-02 14:14:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
