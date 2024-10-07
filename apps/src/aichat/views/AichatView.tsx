@@ -21,6 +21,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getUserHasAichatAccess} from '../aichatApi';
+import {MODAL_TYPES} from '../constants';
 import aichatI18n from '../locale';
 import {
   addChatEvent,
@@ -31,7 +32,7 @@ import {
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   sendAnalytics,
-  setShowModal,
+  setShowModalType,
   setStartingAiCustomizations,
   setUserHasAichatAccess,
   setViewMode,
@@ -250,7 +251,7 @@ const AichatView: React.FunctionComponent = () => {
                 rightHeaderContent={renderInstructionsHeaderRight(
                   isUserTeacher,
                   () => {
-                    dispatch(setShowModal('teacherOnboarding'));
+                    dispatch(setShowModalType(MODAL_TYPES.TEACHER_ONBOARDING));
                   }
                 )}
               >
