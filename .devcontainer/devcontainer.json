@@ -15,6 +15,10 @@
     }
   },
 
+  "runArgs": [
+    "--ulimit", "nofile=65536:65536"
+  ],
+
   "containerEnv": {
     "CDO_SLACK_BOT_TOKEN": "localoverride",
     "CDO_PARDOT_PRIVATE_KEY": "localoverride",
