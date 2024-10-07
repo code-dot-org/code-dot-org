@@ -1,11 +1,11 @@
 name 'Data Sci U2 Pre Q15_2024-pilot'
 
-question 'What type of plot is best suited for visualizing the distribution of a numerical variable in Matplotlib?'
+question 'Which of the following parameters for the `plt.pie()`  allows you to make one of the wedges of a pie chart stand out?'
 
-right 'Histogram'
-wrong 'Line plot'
-wrong 'Bar chart'
-wrong 'Pie chart'
+right '`explode`'
+wrong '`labels`'
+wrong '`startangle`'
+wrong '`shadow`'
 
 
 
