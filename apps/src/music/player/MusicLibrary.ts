@@ -120,6 +120,14 @@ export default class MusicLibrary {
     this.libraryJson = libraryJson;
     this.allowedSounds = null;
 
+    // Add notes for drum kits based on index if they don't already have them.
+    for (const kit of libraryJson.kits) {
+      kit.sounds = kit.sounds.map((sound, i) => ({
+        ...sound,
+        note: i,
+      }));
+    }
+
     // Combine the JSON-specified folders into one flat list of folders.
     this.folders = [
       ...libraryJson.packs,

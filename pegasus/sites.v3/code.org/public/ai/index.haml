@@ -127,12 +127,13 @@ theme: responsive_full_width
   .wrapper.centered
     %h2.heading-sm
       =hoc_s("ai_donors.desc")
-    .logos-wrapper.no-margin-bottom
+    .logos-wrapper.no-margin-bottom{style: "max-width: 950px; margin-inline: auto;"}
       %img{src: "/images/avatars/microsoft.png", alt: "Microsoft logo", style: "max-width: 150px"}
       %img{src: "/images/avatars/infosys_foundation_usa.png", alt: "Infosys logo", style: "max-width: 50px"}
       %img{src: "/images/avatars/schmidt-futures.png", alt: "Schmidt Futures logo", style: "max-width: 340px"}
       %img{src: "/images/avatars/fortive.png", alt: "Fortive logo", style: "max-width: 160px"}
       %img{src: "/images/avatars/amd.png", alt: "AMD logo", style: "max-width: 100px"}
+      %img{src: "/images/avatars/cognizant.png", alt: "Cognizant logo", style: "max-width: 150px"}
 
 = view :swiper_page_ai
 
