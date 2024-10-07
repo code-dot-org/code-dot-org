@@ -14,7 +14,7 @@ import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
-import {MODAL_TYPES} from '../constants';
+import {ModalTypes} from '../constants';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
@@ -86,6 +86,18 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   useEffect(() => {
+    const teacherSawAichatOnboardingModal = tryGetLocalStorage(
+      'teacherSawAichatOnboarding',
+      'no'
+    );
+    const modalToShow =
+      isUserTeacher && teacherSawAichatOnboardingModal !== 'yes'
+        ? ModalTypes.TEACHER_ONBOARDING
+        : ModalTypes.WARNING;
+    dispatch(setShowModalType(modalToShow));
+  }, [isUserTeacher, dispatch]);
+
+  useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
     if (viewAsUserId && !selectedTab) {
       setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
@@ -137,49 +149,30 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
+  const ChatModal = useMemo(
+    () =>
+      showModalType === ModalTypes.TEACHER_ONBOARDING
+        ? TeacherOnboardingModal
+        : showModalType === ModalTypes.WARNING
+        ? ChatWarningModal
+        : undefined,
+    [showModalType]
+  );
+
   const onCloseModal = useCallback(() => {
     if (
       isUserTeacher &&
-      tryGetLocalStorage('teacherSawOnboarding', 'no') !== 'yes'
+      showModalType === ModalTypes.TEACHER_ONBOARDING &&
+      tryGetLocalStorage('teacherSawAichatOnboarding', 'no') !== 'yes'
     ) {
-      trySetLocalStorage('teacherSawOnboarding', 'yes');
+      trySetLocalStorage('teacherSawAichatOnboarding', 'yes');
     }
     dispatch(setShowModalType(undefined));
-  }, [dispatch, isUserTeacher]);
-
-  const isTeacherFirstAichatEncounter = useCallback(() => {
-    if (isUserTeacher) {
-      const teacherSawOnboarding = tryGetLocalStorage(
-        'teacherSawOnboarding',
-        'no'
-      );
-      if (teacherSawOnboarding !== 'yes') {
-        return showModalType ? true : false;
-      }
-    }
-    return false;
-  }, [isUserTeacher, showModalType]);
-
-  const displayAichatModalOnStart = useCallback(() => {
-    if (showModalType === MODAL_TYPES.WARNING) {
-      return isTeacherFirstAichatEncounter() ? (
-        <TeacherOnboardingModal onClose={onCloseModal} />
-      ) : (
-        <ChatWarningModal onClose={onCloseModal} />
-      );
-    }
-  }, [isTeacherFirstAichatEncounter, onCloseModal, showModalType]);
-
-  const displayTeacherOnboardingModal = useCallback(() => {
-    if (isUserTeacher && showModalType === MODAL_TYPES.TEACHER_ONBOARDING) {
-      return <TeacherOnboardingModal onClose={onCloseModal} />;
-    }
-  }, [isUserTeacher, onCloseModal, showModalType]);
+  }, [dispatch, isUserTeacher, showModalType]);
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {displayAichatModalOnStart()}
-      {displayTeacherOnboardingModal()}
+      {ChatModal && <ChatModal onClose={onCloseModal} />}
       {viewAsUserId ? (
         <Tabs {...tabArgs} />
       ) : (

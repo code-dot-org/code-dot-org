@@ -25,7 +25,7 @@ export const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
 
 export const MAX_NAME_LENGTH = 15;
 
-export enum MODAL_TYPES {
+export enum ModalTypes {
   WARNING = 'warning',
   TEACHER_ONBOARDING = 'teacherOnboarding',
 }

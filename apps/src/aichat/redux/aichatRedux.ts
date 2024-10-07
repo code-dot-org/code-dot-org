@@ -30,7 +30,7 @@ import {
   postAichatCompletionMessage,
 } from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
-import {MODAL_TYPES, saveTypeToAnalyticsEvent} from '../constants';
+import {ModalTypes, saveTypeToAnalyticsEvent} from '../constants';
 import {
   AichatContext,
   AiCustomizations,
@@ -68,10 +68,7 @@ type MessageLocation = {
   index: number;
   messageListKey: (typeof messageListKeys)[number];
 };
-type ModalType =
-  | MODAL_TYPES.WARNING
-  | MODAL_TYPES.TEACHER_ONBOARDING
-  | undefined;
+type ModalType = ModalTypes.WARNING | ModalTypes.TEACHER_ONBOARDING | undefined;
 
 export interface AichatState {
   // Content from previous chat sessions that we track purely for visibility to the user
@@ -107,7 +104,7 @@ const initialState: AichatState = {
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
   studentChatHistory: [],
-  showModalType: MODAL_TYPES.WARNING,
+  showModalType: undefined,
   chatMessageError: false,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
