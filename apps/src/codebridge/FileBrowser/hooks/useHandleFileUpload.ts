@@ -3,7 +3,7 @@ import {
   useCodebridgeContext,
 } from '@codebridge/codebridgeContext';
 import {FolderId, ProjectFile} from '@codebridge/types';
-import {checkForDuplicateFilename, validateFileName} from '@codebridge/utils';
+import {checkForDuplicateFilename, isValidFileName} from '@codebridge/utils';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
@@ -39,7 +39,7 @@ export const useHandleFileUpload = (
       // So don't attach other handlers to this button.
       document.body.click();
 
-      if (!validateFileName(fileName)) {
+      if (!isValidFileName(fileName)) {
         dialogControl?.showDialog({
           type: DialogType.GenericAlert,
           title: codebridgeI18n.invalidNameError(),

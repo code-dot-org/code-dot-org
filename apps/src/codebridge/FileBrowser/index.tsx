@@ -16,7 +16,7 @@ import {
   getFileIconNameAndStyle,
   sendCodebridgeAnalyticsEvent,
   shouldShowFile,
-  validateFileName,
+  isValidFileName,
   isValidFolderName,
 } from '@codebridge/utils';
 import {
@@ -533,7 +533,7 @@ export const FileBrowser = React.memo(() => {
             if (!fileName.length) {
               return;
             }
-            if (!validateFileName(fileName)) {
+            if (!isValidFileName(fileName)) {
               return codebridgeI18n.invalidNameError();
             }
             const duplicate = checkForDuplicateFilename({
@@ -703,7 +703,7 @@ export const FileBrowser = React.memo(() => {
           if (newName === file.name) {
             return;
           }
-          if (!validateFileName(newName)) {
+          if (!isValidFileName(newName)) {
             return codebridgeI18n.invalidNameError();
           }
           const duplicate = checkForDuplicateFilename({
