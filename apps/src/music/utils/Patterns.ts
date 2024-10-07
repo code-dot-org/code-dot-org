@@ -43,7 +43,7 @@ export function generateGraphDataFromPattern({
   const useHeight = height - 2 * padding - noteHeight;
 
   const currentFolder = MusicLibrary.getInstance()?.getFolderForFolderId(
-    patternEventValue.kit
+    patternEventValue.instrument
   );
   if (!currentFolder) {
     return [];

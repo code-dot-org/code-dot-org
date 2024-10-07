@@ -3,15 +3,13 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
   SCHOOL_COUNTRY_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
-  SELECT_A_SCHOOL,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/metrics/AnalyticsReporter');
 jest.mock('@cdo/apps/util/AuthenticityTokenStore');
@@ -95,7 +93,7 @@ describe('useSchoolInfo', () => {
     // sessionStorage state does not have a valid zip code, so no need to await anything
 
     expect(result.current.country).toBe('CA');
-    expect(result.current.schoolId).toBe(SELECT_A_SCHOOL);
+    expect(result.current.schoolId).toBe(NonSchoolOptions.SELECT_A_SCHOOL);
     expect(result.current.schoolName).toBe('Stored School');
     expect(result.current.schoolZip).toBe('');
   });
@@ -265,7 +263,7 @@ describe('useSchoolInfo', () => {
 
       it('should send analytics events', () => {
         act(() => {
-          hook.current.setSchoolId(NO_SCHOOL_SETTING);
+          hook.current.setSchoolId(NonSchoolOptions.NO_SCHOOL_SETTING);
         });
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
@@ -275,7 +273,7 @@ describe('useSchoolInfo', () => {
         );
 
         act(() => {
-          hook.current.setSchoolId(CLICK_TO_ADD);
+          hook.current.setSchoolId(NonSchoolOptions.CLICK_TO_ADD);
         });
 
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(

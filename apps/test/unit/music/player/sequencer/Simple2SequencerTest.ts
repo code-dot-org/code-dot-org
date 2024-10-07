@@ -79,7 +79,7 @@ describe('Simple2Sequencer', () => {
 
   it('adds a pattern event', () => {
     const patternValue: PatternEventValue = {
-      kit: 'machine',
+      instrument: 'machine',
       events: [],
     };
 
