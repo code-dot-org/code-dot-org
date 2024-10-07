@@ -3,6 +3,8 @@
 # Read PATH from devcontainer defaults
 . $HOME/.profile
 
+set -x
+
 git lfs pull && \
 bundle exec rake install:hooks && \
 mysql -uroot -hdb < ../bootstrap-osx.sql && \
