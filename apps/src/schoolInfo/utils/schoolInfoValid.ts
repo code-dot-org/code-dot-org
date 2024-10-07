@@ -1,10 +1,8 @@
 import {
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
-  SELECT_A_SCHOOL,
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import {SchoolDropdownOption} from '../types';
 
@@ -41,15 +39,15 @@ export function schoolInfoValid({
     return true;
   }
   // disable true if school is not selected
-  if (schoolId === SELECT_A_SCHOOL) {
+  if (schoolId === NonSchoolOptions.SELECT_A_SCHOOL) {
     return true;
   }
   // for non school settings, don't disable
-  if (schoolId === NO_SCHOOL_SETTING) {
+  if (schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
     return false;
   }
   // if school not in list, disable true if no name
-  if (schoolId === CLICK_TO_ADD) {
+  if (schoolId === NonSchoolOptions.CLICK_TO_ADD) {
     return !schoolName;
   }
 
