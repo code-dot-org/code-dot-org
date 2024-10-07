@@ -1,0 +1,821 @@
+{
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/1/levels/1": {
+    "dsls": {
+      "title": "Foundations of Generative AI Pre-Survey"
+    },
+    "sublevels": {
+      "gen-ai-foundations-studentsurvey-premodule-preamble": {
+        "dsls": {
+          "markdown": "###Please take a moment to respond to this short survey.\n\nCode.org takes your privacy seriously. Your responses here will be kept **anonymous**. Your teacher can see responses for the whole class but without names attached.\n",
+          "teacher_markdown": "**Teacher Start-Of-Unit Survey:** While your students complete the survey, we would appreciate you completing a short teacher survey.\n\n##[Click Here for Teacher Survey](https://studio.code.org/form/exploring_with_generative_ai_pre_survey)\n"
+        }
+      },
+      "gen-ai-foundations-studentsurvey-premodule-q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "This is the first I am learning about Generative AI",
+              "correct": true
+            },
+            {
+              "text": "I have done smaller Generative AI activities (for example: an hour of code), but this is my first longer class",
+              "correct": true
+            },
+            {
+              "text": "I have already taken a class or done longer online tutorials on Generative AI (for example: the Foundations of Generative AI unit in Code.org)",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "What prior experiences have you had learning about Generative AI?"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-premodule-q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Very interested",
+              "correct": true
+            },
+            {
+              "text": "Somewhat interested",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Not very interested",
+              "correct": true
+            },
+            {
+              "text": "Not interested at all",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "How would you rate your current interest in generative AI?"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-premodule-q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Understand how large language models (LLMs) work and generate text.",
+              "correct": true
+            },
+            {
+              "text": "Complete a project.",
+              "correct": true
+            },
+            {
+              "text": "Learn about the ethical implications of AI",
+              "correct": true
+            },
+            {
+              "text": "Explore potential careers in computer vision and AI",
+              "correct": true
+            },
+            {
+              "text": "Nothing",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "What are you most hoping to learn or achieve in Exploring Generative AI? (Choose Top 2)"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-premodule-q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Watching videos",
+              "correct": true
+            },
+            {
+              "text": "Reading text (books, articles, websites)",
+              "correct": true
+            },
+            {
+              "text": "Hands-on projects and experiments",
+              "correct": true
+            },
+            {
+              "text": "Group discussions and collaborations",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "How do you prefer to learn new topics? (Choose top 2)"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-premodule-q5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Understanding complex concepts",
+              "correct": true
+            },
+            {
+              "text": "Keeping up with assignments",
+              "correct": true
+            },
+            {
+              "text": "Working on group projects",
+              "correct": true
+            },
+            {
+              "text": "Lack of interest in the topic",
+              "correct": true
+            },
+            {
+              "text": "No challenges",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which of the following do you expect will make learning difficult in Exploring Generative AI? (Choose top 2)"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/1/levels/2": {
+    "contained levels": [
+      {
+        "long_instructions": "#### **What’s an example of a significant technological innovation from the last century?**\n\nFor example: think of something that didn’t exist when your grandparents were your age, but you use everyday now.",
+        "teacher_markdown": "This prompt is intentionally open-ended to invite all students into the conversation and offer some kind of technological innovation. Some potential answers might be the internet, social media, driverless cars, smartphones, and (of course) artificial intelligence."
+      }
+    ]
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/1/levels/3": {
+    "long_instructions": "#### 1) What is something new you learned about AI today?\n\n#### 2) What is a question you still have about AI after today?",
+    "title": "Wrap Up"
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/2/levels/1": {
+    "contained levels": [
+      {
+        "long_instructions": "1.  Banana\n2.  aka7sj23ksw\n3.  cherimoya\n4.  wierd\n5.  Reykjavik\n6.  Shirt\n7.  @&!\\*@^#\n8.  ullaakkut\n9.  ATM\n10. yá'át'ééh\n\n### From the above list, which items are considered **words**, and which are **not words**?",
+        "teacher_markdown": "Discuss: Have students discuss in groups before sharing out as a full class. Instead of going line-by-line through these words, ask students which decisions they are “most confident” about and sharing their classification for those words first. Using this strategy, students will likely sort “1) banana” and “6) shirt” as words, and “2) aka7sj23ksw” and “7) @&!\\*@^#” as not words. The remaining words are deliberately chosen to motivate certain discussions and create moments of cognitive dissonance and curiosity, hopefully allowing students to lead the discussion by asking questions or respectfully challenging ideas.\n\nLet students know they will likely change their minds as the discussion continues and that’s okay, and allowing students to state their confidence level for their initial thoughts can make them more comfortable speaking up since it feels less “high-stakes”. Be prepared to address the following situations in this discussion:\n\n\"3) cherimoya\" is a fruit common to South America, but may not be a common fruit your students have heard of. It’s possible many students may say “this isn’t a word”, but one or two students may speak up because they’re familiar with this fruit. Be sure to elevate those voices and highlight how our own knowledge is sometimes limited by lack of exposure to different words or phrases. Or, if no one raises this point, be sure to point this out to students explicitly such as showing them the Wikipedia page. In either case, make sure cherimoya is classified as a “word” before leaving the discussion\n\n\"8) ullaakkut\" and \"10) yá'át'ééh\" are both words in other languages - ullaakkut means hello in Inuktitut, a language spoken by Inuit peoples in Canada and Greenland; and yá'át'ééh means “hello” in the Navajo / Diné language. Similar to above, students may initially classify these as not words because they are unfamiliar with them, but it is important to surface the meaning and use of these words to students either with a quick google search or elevating the voice of a student in class who is already familiar with these words. As a result, make sure these terms don’t end up in the “Not Words” category by the end of the discussion.\n\n\"4) wierd\" is a misspelling of either the word “weird” or the word “wired”. Students may initially say that this is “not a word”, but another student or yourself should challenge them by pointing out that if this is typed into a device with autocorrect, it will automatically correct it to one of these other words. Even in this slide deck, the word has a red squiggly underline representing that the computer recognizes it as something, even if it’s not a correctly spelled word. This may inspire the class to create a new category to represent this term - it’s not a correctly spelled word, but it’s also not a made-up word, so maybe there’s a new category for “misspelled words” or “important terms that aren’t words”. Let students guide how they want to handle this situation, even if they decide not to make a new category and it remains in “not word”.\n\nAt some point, students who are more familiar with the Scrabble game may try to invoke the “rules of Scrabble” which restrict words in other languages, proper nouns, or abbreviations. From this perspective, words (8) and (10) above would be restricted, as would 5) Reykjavik (the capital of Iceland) and 9) ATM (since it is an abbreviation for Automatic Teller Machine). If this comes up, use this as an opportunity to question the effect that arbitrary rules have on what we consider valid language, since these are all definitely words that are used in society even if not officially allowed in Scrabble. You could consider creating new categories to represent these phrases, such as “Still words but not allowed in Scrabble” or “Part of language, but not allowed in Scrabble”. Or, the class could decide these belong in the Words category, regardless of what Scrabble thinks, and that’s the end of the story.\n\n Discussion Goal: Ultimately, this is an exercise to surface that the way we identify words versus nonsense - much like Calvin and Hobbes in the comic panel - can be contextual to our lived experiences and influences what we consider important information versus random noise that can be ignored. It’s okay if the discussion ends without closure, so long as students have wrestled with how what they initially considered “words” may have been expanded as they were exposed to new contexts in the discussion. However, be very intentional that the discussion ends with very few items in the “Not Words” category, especially making sure ullaakkut and yá'át'ééh are not in this category and are instead classified as either a Word or a new category the class has created."
+      }
+    ]
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/2/levels/2": {
+    "long_instructions": "### After the Video: What is the pre-training stage of a language model?",
+    "title": "Wrap Up"
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/3/levels/1": {
+    "contained levels": [
+      {
+        "long_instructions": "Imagine you are going to study abroad in a country where you don’t know the language, but you plan to learn it during your stay. You have 3 options for where to stay:\n\n-   A hotel room with a bakery and restaurant on the ground floor\n-   A barn on a fruit farm with a shop that repairs farm equipment\n-   An apartment across from a florist with several young children\n\n### As you try to learn the language and listen to conversations around you:\n\n#### - What are some words you think you'll learn no matter where you stay?\n\n#### - What are some specialized words you'll learn because of where you're staying?",
+        "teacher_markdown": " Discussion Goal: Students should call out how they may learn the same conversational words and phrases in all three places - things like “Hello”, “goodbye”, “where is the bathroom?” - but they should call out how the secondary details in these scenarios may influence the types of words and phrases they learn. For example, in the hotel room, they are more likely to learn words associated with cooking and baking, whereas in the barn they are more likely to learn mechanical and technical terms. Emphasize how these differences are primarily due to circumstance and exposure rather than intent - whether you or not you wanted to learn certain phrases, the proximity to these situations makes it somewhat inevitable."
+      }
+    ]
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/3/levels/2": {
+    "long_instructions": "#### Another student not in this class has decided to try and make their own chatbot that can discuss and recommend movies. What is one piece of bias-related advice you would you give them when curating their training data?",
+    "title": "Wrap Up"
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/4/levels/1": {
+    "dsls": {
+      "markdown": "#Warm Up\n\n###As a class, or on your own, play the Semantris Game:\n\n##[Semantris](https://research.google.com/semantris/)\n"
+    }
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/4/levels/2": {
+    "long_instructions": "#### Imagine you have a friend who isn't taking this class and they say \"Chatbots are so magical - they know all these words that I've never seen before. How do they even do it? They must be way smarter than me\".\n\n#### What would you say in response?",
+    "title": "Warm Up"
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/5/levels/1": {
+    "contained levels": [
+      {
+        "long_instructions": "#### In the glimmering **glump** of Flimflam, every **blibber** clutched their **flagress** blibbertwig. These blibbertwigs, **flagress** in the **glump's** gleam, **zibbled flagressly** under the Flimflam sky. During the **flagress** festival, **blibbers** and blibbertwigs **zibbled** in **flagress** sync, weaving a dance of **flagress** jaggleshot.\n\n##### 1. Where is the glimmering glump?\n\n##### 2. What did the blibber clutch?\n\n##### 3. What did the blibbertwigs do under the Flimflam sky?\n\n##### 4. What happened during the flagress festival?",
+        "teacher_markdown": "Ask students to answer the questions. Don’t ask any follow-up questions yet about “how do you know?” - wait for the next discussion to expand on how students were able to answer these questions\n\n1.  Where is the glimmering glump? **Flimflam**\n2.  What did the blibber clutch? **Flagress blibbertwig**\n3.  What did the blibbertwigs do under the Flimflam sky? **Zibbled flagressly**\n4.  What happened during the flagress festival? **Blibbers and blibbertwigs zibbled in flagress sync**"
+      }
+    ]
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/5/levels/2": {
+    "long_instructions": "#### In your graphic organizer, update the **Embedding** section of the organizer with an explanation of how embeddings are used and created",
+    "title": "Wrap Up"
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/6/levels/1": {
+    "contained levels": [
+      {
+        "long_instructions": "#### **1) Complete this mad-lib:** The ****\\_\\_**** was dancing in rain\n\n#### **2) Complete this mad-lib:** Dancing was ****\\_\\_\\_**** in the rain"
+      }
+    ]
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/6/levels/2": {
+    "long_instructions": "#### Think of a phrase where each word means something individually that is different from when the phrase is combined together.\n\n#### Using what we’ve learned today, **describe how a neural network could be used to represent these different meanings.**",
+    "title": "Wrap Up"
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/7/levels/1": {
+    "contained levels": [
+      {
+        "long_instructions": "#### Can you guess the rule for the Green Glass Door game?\n\n#### How did you figure it out?",
+        "teacher_markdown": " Discussion Goal: Ask a student to share the rule with the class and share how they figured it out. Emphasize answers that rely on noticing patterns within the responses, and responses that used an educated-guess to test their hypothesis (for example: “I suspected it was double letters, so I guessed a word like that to see if it was correct, and that confirmed my suspicions”). To help manage emotions for students who may not have figured out the pattern, remind students that it takes both correct and incorrect answers to determine the rule, which makes all responses valuable."
+      }
+    ]
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/8/levels/1": {
+    "contained levels": [
+      {
+        "long_instructions": "### What animal do you see in the picture below?\n\n[][0]"
+      }
+    ]
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/8/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "#Wrap Up\n###In your graphic organizer, update the **Storage** and **Processing** sections based on your understanding of today's lesson. Try to incorporate the Attention process in your explanation.\n"
+    }
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/9/levels/1": {
+    "long_instructions": "#### Imagine you have a friend who isn't taking this class and they say \"The really incredible thing about chatbots is they can generate entirely new ideas that no one has ever thought of before! I can't wait until AI is inventing or discovering brand new things!\".\n\n#### What would you say in response?",
+    "title": "Warm Up"
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/9/levels/2": {
+    "long_instructions": "# Mad Lib App!\n\nThis app corresponds to the Outputs & Probabilities lesson in the Foundations of Generative AI unit.\n\n**Teachers: Click the 'For Teachers Only' text in the header of these instructions to view additional details about this app!**",
+    "teacher_markdown": "## Part 1: Generating a Mad-Lib\n\nAfter students have decided on the words for their mad lib, you can use this screen to generate some of the mad libs and read them as a class. This can be a lighthearted moment in class before continuing.\n\n## Part 2: Viewing the Data & Random Mad-Lib\n\nYou can do two things on this screen:\n\n1.  View the data from 1000 peolple who completed the same mad lib, so  you can see all of the different choices they made for filling in the blanks\n2.  Randomly view one of those mad-libs\n\nThis is important for the next step, where the mad lib generated by the computer uses the \"most popular\" choices from this data to make its decisions.\n\n## Part 3: Highest Probability Mad-Lib\n\nOn this screen, you will use suggestions from the class to generate possibilities for each blank in the mad lib and then the computer will decide which suggestion to use. The computer bases its choice on the \"most popular\" word from the 1000 person dataset viewed in the last screen. This process emphasizes the idea that even when we have a list of different words that make sense in the context of the sentence, the final decider is based on probability learned from the initial training data.\n\n1.  On the left, enter all of the possible responses the class generated for Noun 1\n2.  Click the \"Calculate Scores\" button. This will compare the list of class possibilities to the dataset representing what 1000 other people submitted for their madlib. The scores will appear next to each word. After reviewing, press the Continue button\n3.  The highest score will be chosen, and the top of the screen will update. Then the side-panel will refresh and you can now enter the class possibilities for Noun 2.\n4.  Follow the same steps until all of the most popular nouns have been chosen\n5.  Once all the nouns have been selected, A Generate Mad Lib button will appear. Press it to generate the mad lib!\n\nAt any time, press the \"Restart This Screen\" button to start this process over",
+    "start_libraries": {
+      "I18n_GENAIU124L9": {
+        "titleLabel_0": "Mad Lib Widget",
+        "probabilityTitle2Label_1": "Start Here!",
+        "probabilityTitle_2": "Generate Probability Mad Lib",
+        "probabilityLockedNoun1_3": "Noun 1: ?????",
+        "probabilityLockedNoun2_4": "Noun 2: ?????",
+        "probabilityLockedNoun3_5": "Noun 3: ?????",
+        "probabilityLockedNoun4_6": "Noun 4: ?????",
+        "probabilityLockedNoun5_7": "Noun 5: ?????",
+        "probabilityLockedNoun6_8": "Noun 6: ?????",
+        "probabilityNoun2Score_9": "100",
+        "probabilityNoun3Score_10": "100",
+        "probabilityNoun4Score_11": "100",
+        "probabilityNoun5Score_12": "100",
+        "probabilityNoun6Score_13": "100",
+        "probabilityNoun1Score_14": "100",
+        "probabilityNounLabel_15": "set with PROBABILITYLABEL",
+        "dataTitle_16": "View Data",
+        "generateTitleLabel_17": "Generate a Mad Lib",
+        "homeGenerateButton_18": "Generate a Mad Lib",
+        "homeDataButton_19": "View Data + Random Mad Lib",
+        "homeProbabilityButton_20": "Probability Mad Lib",
+        "probabilityGenerateButton_21": "Generate Mad Lib",
+        "probabilityRestartButton_22": "Restart This Screen",
+        "probabilityCalculateButton_23": "Calculate Scores",
+        "probabilityContinueButton_24": "Continue",
+        "dataViewButton_25": "View Data",
+        "dataRandomButton_26": "Random Mad Lib From the Data",
+        "generateGenerateButton_27": "Generate Mad Lib",
+        "probabilityMadlibText_28": "Set with PROBABILITYMADLIBSTRING",
+        "dataTextArea_29": "use DATATEXTSTRING variable to fill this box",
+        "generateMadLibText_30": "use GENERATETEXTSTRING variable to fill this box",
+        "DATATEXTSTRING": "You can do two things on this screen:\n\n1) View the data from 1000 peolple who completed the same mad lib, so  you can see all of the different choices they made for filling in the blanks\n\n2) Randomly view one of those mad-libs\n\nThe results will appear in this box!",
+        "GENERATETEXTSTRING": "Type in each noun into the screen above, then click Generate Mad Lib. The resulting mad lib will show up here!",
+        "PROBABILITYMADLIBSTRING": "1) On the left, enter all of the possible responses the class generated for Noun 1\n\n2) Click \"Calculate Scores\" button. This will compare the list of class possibilities to the dataset representing what 1000 other people submitted for their madlib. The scores will appear next to each word. After reviewing, press the Continue button\n\n3) The highest score will be chosen, and the top of the screen will update. Then the side-panel will refresh and you can now enter the class possibilities for Noun 2.\n\n4) Follow the same steps until all of the most popular nouns have been chosen\n\n5) Once all the nouns have been selected, A Generate Mad Lib button will appear. Press it to generate the mad lib!\n\nAt any time, press the \"Restart This Screen\" button to start this process over",
+        "DETAILSLABELSTRING": "Hover over a button to see what it does",
+        "PROBABILITYLABEL": "Enter possibilities for Noun "
+      }
+    }
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/10/levels/1": {
+    "contained levels": [
+      {
+        "long_instructions": "#### Fill in the following mad-libs:\n\n##### - Thank **\\_\\_\\_\\_**.\n\n##### - He dipped his french fries in **\\_\\_\\_\\_**.\n\n##### - The smallest planet in our solar system is **\\_\\_\\_\\_**."
+      }
+    ]
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/10/levels/2": {
+    "long_instructions": "#### A friend said “I love using LLMs to help me with my homework. I asked it to help me write my history paper - it came up with all these interesting sources and information I had never heard of before”.\n\n#### **What would you say to this person?**",
+    "title": "Wrap Up"
+  },
+  "https://studio.code.org/s/foundations-gen-ai-2024/lessons/11/levels/1": {
+    "dsls": {
+      "title": "Foundations of Generative AI: Post-Survey"
+    },
+    "sublevels": {
+      "gen-ai-foundations-studentsurvey-postmodule-preamble": {
+        "dsls": {
+          "markdown": "###Please take a moment to respond to this short survey.\n\nCode.org takes your privacy seriously. Your responses here will be kept **anonymous**. Your teacher can see responses for the whole class but without names attached.\n",
+          "teacher_markdown": "**Teacher End-Of-Unit Survey:** While your students complete the survey, we would appreciate you completing a short teacher survey.\n\n##[Click Here for Teacher Survey](https://studio.code.org/form/exploring_with_generative_ai_post_unit_survey)\n"
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I understand the concepts covered in this unit."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I found the topics in this unit interesting and engaging."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q3": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "The lessons and activities were clear and easy to follow."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q4": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel confident in applying what I learned in this unit to real-world problems or projects."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I got to be creative in this unit"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q6": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I got to make choices that aligned with my interests or personal preferences"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q7a": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I learned about and discussed the impact of AI in society"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q8a": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Understanding the concepts",
+              "correct": true
+            },
+            {
+              "text": "Keeping up with assignments",
+              "correct": true
+            },
+            {
+              "text": "Working on group projects",
+              "correct": true
+            },
+            {
+              "text": "Lack of interest in the topic",
+              "correct": true
+            },
+            {
+              "text": "No challenges",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "What challenges did you face during this unit? (Choose top 2)"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q9a": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I felt supported by the teacher and resources provided throughout this unit."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q10a": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "After this unit, I am interested in learning more about AI and related topics than I was before."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q11a": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Overall, I am satisfied with my learning experience in this unit."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q12": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I liked learning about computer science and AI through this unit"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q13": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q14": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I could be myself in this class during this generative AI unit."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q15": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "This unit made me more interested in pursuing a career in computer science and/or AI."
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q16": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Definitely yes",
+              "correct": true
+            },
+            {
+              "text": "Probably yes",
+              "correct": true
+            },
+            {
+              "text": "Might or might not",
+              "correct": true
+            },
+            {
+              "text": "Probably no",
+              "correct": true
+            },
+            {
+              "text": "Definitely no",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Would you recommend this unit to other students?"
+            }
+          ]
+        }
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q17": {
+        "long_instructions": "What improvements would you suggest for the module?"
+      },
+      "gen-ai-foundations-studentsurvey-postmodule-q18": {
+        "long_instructions": "Any other comments or feedback you'd like to share about your experience?"
+      }
+    }
+  }
+}
