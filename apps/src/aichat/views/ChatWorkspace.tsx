@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
@@ -81,6 +81,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
     [selectedTab]
   );
+  const spanRef = useRef<HTMLSpanElement>(null);
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  useEffect(() => {
+    if (spanRef.current) {
+      setShowTooltip(spanRef.current.offsetWidth < spanRef.current.scrollWidth);
+    }
+  }, []);
 
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
@@ -108,11 +116,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList events={studentChatHistory} isTeacherView={true} />
       ),
       iconLeft: iconValue,
-      tooltip: {
-        text: viewStudentChatHistoryLabel,
-        tooltipId: 'tooltipChatHistory',
-        direction: 'onBottom',
-      } as TooltipProps,
+      tooltip: showTooltip
+        ? ({
+            text: viewStudentChatHistoryLabel,
+            tooltipId: 'tooltipChatHistory',
+            direction: 'onBottom',
+          } as TooltipProps)
+        : undefined,
     },
     {
       value: 'testStudentModel',
