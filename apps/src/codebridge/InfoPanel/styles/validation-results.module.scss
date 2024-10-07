@@ -5,7 +5,6 @@
 }
 
 .validationResultsTable {
-  table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
   border: 1px solid $light_white;
@@ -17,7 +16,7 @@
 
   td {
     border: 1px solid $light_white;
-    padding: 4px;
+    padding: 4px 6px;
   }
 }
 
