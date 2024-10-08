@@ -46,7 +46,7 @@ module Services
         when ::User::TYPE_STUDENT
           if user_params[:parent_email_preference_email].present?
             user_params[:parent_email_preference_opt_in_required] = '1'
-            user_params[:parent_email_preference_opt_in] = user_params[:parent_email_preference_opt_in].present? ? 'yes' : 'no'
+            user_params[:parent_email_preference_opt_in] = ActiveModel::Type::Boolean.new.cast(user_params[:parent_email_preference_opt_in]) ? 'yes' : 'no'
             user_params[:parent_email_update_only] = '0'
             user_params[:parent_email_preference_request_ip] = request.ip
             user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
