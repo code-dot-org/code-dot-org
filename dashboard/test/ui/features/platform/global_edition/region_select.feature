@@ -1,5 +1,5 @@
 @no_mobile
-Feature: Global Edition
+Feature: Global Edition - Region Select
 
   Scenario: User can switch between the international and regional versions using the language selector on a Studio page
     Given I am on "http://studio.code.org/incubator"
