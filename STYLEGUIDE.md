@@ -64,7 +64,51 @@ Fallback: https://github.com/styleguide/ruby
     first_method.
     second_method
   ```
+  
+### Writing Unit Test
+Our unit test testing library is [Minitest](https://github.com/minitest/minitest). 
 
+When writing unit test we prefer to use [Specs Syntax](https://github.com/minitest/minitest?tab=readme-ov-file#specs-)
+
+#### General Guidelines
+- Group related tests using `describe` blocks.
+- Use `let` to define memoized helper methods.
+- Use `before` blocks for setup tasks that need to be run before each example.
+- Prefer `assert_` methods over `expect` syntax for assertions, for consistency.
+
+You can find more detailed guidelines and examples of best practices at [betterspecs.org](https://www.betterspecs.org/). 
+
+#### Example Structure
+- Describe the method or class being tested. Use the Ruby documentation convention of . (or ::) when referring to a class method's name and # when referring to an instance method's name.
+- Use context blocks to describe different states or conditions. When describing a context, start its description with 'when', 'with' or 'without'.
+- Write test cases using `it` blocks for individual behaviors.
+
+#### Example
+```ruby
+describe MyClass do
+  let(:instance) { MyClass.new }
+
+  before do
+    # Setup code
+  end
+
+  describe '#my_method' do
+    context 'when condition A is met' do
+      it 'returns expected result' do
+        result = instance.my_method(condition: 'A')
+        assert_equal expected_result, result
+      end
+    end
+
+    context 'when condition B is met' do
+      it 'returns another result' do
+        result = instance.my_method(condition: 'B')
+        assert_equal another_result, result
+      end
+    end
+  end
+end
+```
 ### Rails
 
 Prefer skinny controllers.  Leverage the framework where possible and write as little custom code as possible to implement the feature.  Guidelines here are not set in stone: when in doubt prefer readable code over strict adherence to the style guide.
