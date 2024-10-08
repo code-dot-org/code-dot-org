@@ -19,7 +19,7 @@ import {
   setVerified,
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import {DCDO} from '@cdo/apps/dcdo';
+import DCDO from '@cdo/apps/dcdo';
 import {registerReducers} from '@cdo/apps/redux';
 import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 import googlePlatformApi, {
