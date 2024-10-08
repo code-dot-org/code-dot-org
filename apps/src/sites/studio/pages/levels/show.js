@@ -21,6 +21,10 @@ import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 $(document).ready(initPage);
 
 function initPage() {
+  // Only send LEVEL_ACTIVITY event for students or non-authnenticated users
+  if (getStore().getState().currentUser?.userType !== 'teacher') {
+    analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
+  }
   const script = document.querySelector('script[data-level]');
   const config = JSON.parse(script.dataset.level);
 

@@ -5,8 +5,6 @@ import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
@@ -17,7 +15,6 @@ import {
 import color from '@cdo/apps/util/color';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
-import {getStore} from '../../redux.js';
 
 import {isLevelAssessment} from './progressHelpers';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
@@ -89,22 +86,10 @@ class ProgressPill extends React.Component {
 
     const url = this.getUrl();
 
-    let onClick = () => {
-      // Only send LEVEL_ACTIVITUY event for students or non-authnenticated users
-      if (getStore().getState().currentUser?.userType !== 'teacher') {
-        analyticsReporter.sendEvent(
-          EVENTS.LEVEL_ACTIVITY,
-          {
-            is_not_teacher:
-              getStore().getState().currentUser?.userType !== 'teacher',
-          },
-          PLATFORMS.BOTH
-        );
-      }
-      return !multiLevelStep && !disabled && !url
+    let onClick =
+      !multiLevelStep && !disabled && !url
         ? () => onSingleLevelClick(firstLevel)
         : undefined;
-    };
 
     let style = {
       ...styles.levelPill,
