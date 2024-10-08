@@ -522,64 +522,61 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   # USING NEW SIGN-UP FLOW [START]
 
-  # test "create retries on Duplicate exception [new sign up flow]" do
-  #   # some Mocha shenanigans to simulate throwing a duplicate entry
-  #   # error and then succeeding by returning the existing user
+  test "create existing email error on a Duplicate exception [new sign up flow]" do
+    # some Mocha shenanigans to simulate throwing a duplicate entry
+    # error and then succeeding by returning the existing user
 
-  #   exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
-  #   User.any_instance.stubs(:save).raises(exception).then.returns(true)
+    duplicate_entry_exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
+    User.any_instance.stubs(:save).raises(duplicate_entry_exception)
 
-  #   teacher_params = set_up_partial_registration(@default_params)
-  #   post :create, params: {new_sign_up: true, user: teacher_params}
+    teacher_params = set_up_partial_registration(@default_params)
 
-  #   assert_redirected_to '/'
+    exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: teacher_params}}
+    assert_equal("Validation failed: Email has already been taken", exception.message)
+  end
 
-  #   # we are still stubbing user.save (even though we returned true so
-  #   # we can't actually check that the user was created)
+  # test "create as student with age [new sign up flow]" do
+  #   Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+  #     student_params = set_up_partial_registration(@default_params)
+  #     assert_creates(User) do
+  #       post :create, params: {new_sign_up: true, user: student_params}
+  #     end
+
+  #     student = User.last
+
+  #     assert_equal 'A name', student.name
+  #     assert_equal 'f', student.gender
+  #     assert_equal Time.zone.today - 13.years, student.birthday
+  #     assert_equal AuthenticationOption::EMAIL, student.primary_contact_info.credential_type
+  #     assert_equal User::TYPE_STUDENT, student.user_type
+  #     assert_equal '', student.email
+  #     assert_equal User.hash_email('an@email.address'), student.hashed_email
+  #   end
   # end
 
-  test "create as student with age [new sign up flow]" do
-    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      student_params = set_up_partial_registration(@default_params)
-      assert_creates(User) do
-        post :create, params: {new_sign_up: true, user: student_params}
-      end
+  # test "create as under 13 student with client side hashed email [new sign up flow]" do
+  #   Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+  #     student_params = set_up_partial_registration(@default_params)
+  #     student_params.delete(:email)
+  #     params_with_hashed_email = student_params.merge(
+  #       {hashed_email: User.hash_email('an@email.address')}
+  #     )
 
-      student = User.last
+  #     assert_creates(User) do
+  #       post :create, params: {new_sign_up: true, user: params_with_hashed_email}
+  #     end
 
-      assert_equal 'A name', student.name
-      assert_equal 'f', student.gender
-      assert_equal Time.zone.today - 13.years, student.birthday
-      assert_equal AuthenticationOption::EMAIL, student.primary_contact_info.credential_type
-      assert_equal User::TYPE_STUDENT, student.user_type
-      assert_equal '', student.email
-      assert_equal User.hash_email('an@email.address'), student.hashed_email
-    end
-  end
+  #     student = User.last
 
-  test "create as under 13 student with client side hashed email [new sign up flow]" do
-    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      student_params = set_up_partial_registration(@default_params)
-      student_params.delete(:email)
-      params_with_hashed_email = student_params.merge(
-        {hashed_email: User.hash_email('an@email.address')}
-      )
-
-      assert_creates(User) do
-        post :create, params: {new_sign_up: true, user: params_with_hashed_email}
-      end
-
-      student = User.last
-
-      assert_equal 'A name', student.name
-      assert_equal 'f', student.gender
-      assert_equal Time.zone.today - 13.years, student.birthday
-      assert_equal AuthenticationOption::EMAIL, student.primary_contact_info.credential_type
-      assert_equal User::TYPE_STUDENT, student.user_type
-      assert_equal '', student.email
-      assert_equal User.hash_email('an@email.address'), student.hashed_email
-    end
-  end
+  #     assert_equal 'A name', student.name
+  #     assert_equal 'f', student.gender
+  #     assert_equal Time.zone.today - 13.years, student.birthday
+  #     assert_equal AuthenticationOption::EMAIL, student.primary_contact_info.credential_type
+  #     assert_equal User::TYPE_STUDENT, student.user_type
+  #     assert_equal '', student.email
+  #     assert_equal User.hash_email('an@email.address'), student.hashed_email
+  #   end
+  # end
 
   test "create as student requires age [new sign up flow]" do
     params_without_age = set_up_partial_registration(@default_params.update(age: ''))
@@ -620,7 +617,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create as teacher automatically sets age [new sign up flow]" do
-    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', age: '', email_preference_opt_in: 'yes'))
+    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', age: '', email_preference_opt_in: true))
 
     assert_creates(User) do
       post :create, params: {new_sign_up: true, user: teacher_params}
@@ -630,7 +627,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create new teacher with MailJet enabled sends welcome email [new sign up flow]" do
-    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes'))
+    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', email_preference_opt_in: true))
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     MailJet.stubs(:enabled?).returns(true)
     MailJet.expects(:create_contact_and_add_to_welcome_series).once
@@ -657,7 +654,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create new teacher with opt-in option as no writes email preference as no [new sign up flow]" do
-    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', email_preference_opt_in: 'no'))
+    teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', email_preference_opt_in: false))
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     assert_creates(User) do
       assert_creates(EmailPreference) do

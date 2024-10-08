@@ -1,0 +1,22 @@
+name 'SP-PL-DS-groupby'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Grouping Values
+
+
+## .groupby()
+
+#### **.groupby()** helps aggregate data based on created groups
+
+
+![](https://images.code.org/13e726570c3de4e87e1aee1a5b21897e-image-1728328849626.png)
+
+## Grouping Functions
+#### Functions like **sum(), mean(),** and **count()** can be used to calculate values on specific groups of data. 
+
+![](https://images.code.org/1728365a69bc0cbe3642efface65f94b-image-1728329251246.png)
+
+
+MARKDOWN

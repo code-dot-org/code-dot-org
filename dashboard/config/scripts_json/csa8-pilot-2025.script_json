@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-22 15:08:23 UTC",
+    "serialized_at": "2024-10-08 01:56:28 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -5524,7 +5524,7 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U8L2 Guided Notes",
+      "name": "[EXEMPLAR] Searching Guided Notes",
       "url": "https://docs.google.com/document/d/1TNhrfOD0naGpBwX_efXdEwT1iSRb_ziiM1bfyYHi3fw/edit?usp=sharing",
       "key": "_exemplar_u8l2_guided_notes",
       "properties": {
@@ -5704,7 +5704,7 @@
       }
     },
     {
-      "name": "[KEY] U8L2 Extra Practice",
+      "name": "[KEY] Searching Extra Practice",
       "url": "https://docs.google.com/document/d/1aWbCCyduXoeKUML43oQXnThjUzwN8qImans2_gXkuyY/edit?usp=sharing",
       "key": "_key_u8l2_extra_practice",
       "properties": {
@@ -5897,6 +5897,26 @@
       },
       "seeding_key": {
         "resource.key": "data_privacy_and_security"
+      }
+    },
+    {
+      "name": "Developing Project Management Skills",
+      "url": "https://docs.google.com/document/d/1kgVoutrFAiSLDtVwTYUUG_K5ys2vjw-NrBpEx10ZVpY/edit?usp=sharing",
+      "key": "developing_project_management_skills",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "developing_project_management_skills"
+      }
+    },
+    {
+      "name": "Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls"
       }
     },
     {
@@ -6173,7 +6193,7 @@
       }
     },
     {
-      "name": "U8L2 Extra Practice",
+      "name": "Searching Extra Practice",
       "url": "https://docs.google.com/document/d/1ir0n846IY_VQhM25N-Ii5pAWvOCkSg_64zZBiNGM1I8/edit?usp=sharing",
       "key": "u8l2_extra_practice",
       "properties": {
@@ -6186,7 +6206,7 @@
       }
     },
     {
-      "name": "U8L2 Guided Notes",
+      "name": "Searching Guided Notes",
       "url": "https://docs.google.com/document/d/1AzoUYqo_ocobQqwUJurDhDYOmZv5IHadYWvxD4bZ3_g/edit?usp=sharing",
       "key": "u8l2_guided_notes",
       "properties": {
@@ -6888,7 +6908,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "developing_project_management_skills",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls",
+        "script.name": "csa8-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa",
+        "script.name": "csa8-pilot-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -7631,36 +7668,22 @@
     {
       "seeding_key": {
         "lesson.key": "Searching",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.H.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.12.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Searching",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.K.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.14.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Searching",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.K.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.M.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.N.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.14.A.2"
       }
     },
     {
