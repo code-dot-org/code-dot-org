@@ -205,10 +205,10 @@ module I18n
                   functions = level.
                     try(:level_data).
                     try(:[], "startSources").
-                    try(:[], "blocks").try(:[], "blocks").
+                    try(:[], "blocks").try(:[], "blocks")&.
                     filter {|block| block.try(:[], "type") == "procedures_defnoreturn"}
 
-                  i18n_strings['function_definitions'] = Hash.new unless functions.empty?
+                  i18n_strings['function_definitions'] = Hash.new unless functions.nil? || functions.empty?
 
                   functions&.each do |function|
                     name = function.try(:[], "fields").try(:[], "NAME")
