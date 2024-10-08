@@ -125,9 +125,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       ),
       iconLeft: iconValue,
       tooltip: {
-        text: `${viewStudentChatHistoryLabel} - Click on Instructions header for more info.`,
+        text: `${viewStudentChatHistoryLabel} - Click on Instructions header button for more info.`,
         tooltipId: 'tooltipChatHistory',
         direction: 'onBottom',
+        size: 'xs',
       } as TooltipProps,
     },
     {
