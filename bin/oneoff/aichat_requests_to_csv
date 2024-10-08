@@ -91,7 +91,7 @@ def main
         # Parse response for openai/comprehend/blocklist/webpurify details for user message.
         # There is no model response recorded if user message was flagged.
         # After https://github.com/code-dot-org/code-dot-org/pull/61095, response was updated to JSON.
-        # Handle response from before and after update.
+        # Only handle json responses.
         if valid_json?(response)
           user_safety_layer_response = JSON.parse(response).deep_symbolize_keys
           user_blocked_by = user_safety_layer_response[:blocked_by]
@@ -101,7 +101,7 @@ def main
       elsif execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
         # Model response is recorded in addition to blocked by service details.
         # After https://github.com/code-dot-org/code-dot-org/pull/61095, response was updated to JSON.
-        # Handle response from before and after update.
+        # Only handle json responses.
         if valid_json?(response)
           model_safety_layer_response = JSON.parse(response).deep_symbolize_keys
           model_blocked_by = model_safety_layer_response[:blocked_by]
