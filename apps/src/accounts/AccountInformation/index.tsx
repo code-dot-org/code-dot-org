@@ -199,7 +199,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
       >
         {i18n.accountInformation_accountInformation()}
       </Heading2>
-      <form className={styles.accountForm}>
+      <form name="account-information-form" className={styles.accountForm}>
         <div className={commonStyles.inputContainer}>
           {/* verified teacher account */}
           {verifiedTeacher && (

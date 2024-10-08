@@ -78,7 +78,7 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
       >
         {i18n.schoolInformationSchoolInformation()}
       </Heading2>
-      <form>
+      <form name="school-information-form">
         <div className={commonStyles.inputContainer}>
           <SchoolDataInputs {...schoolDataInfoProps} includeHeaders={false} />
           {success && (
