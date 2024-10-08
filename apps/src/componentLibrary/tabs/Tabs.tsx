@@ -13,8 +13,8 @@ export interface TabsProps {
   /** The function that is called when a Tab is clicked/selected tab is changed */
   onChange: (value: string) => void;
   /** The function that is called when a Tab is closed (If it's closable) */
-  onClose?: () => void;
-  /** The value of the default selected Tab */
+  onTabClose?: (value: string, name?: string) => void;
+  /** The value of the default selected Tab. Also can be used to change Selected tab from Consumer(Parent Component) */
   defaultSelectedTabValue: string;
   /** The name attribute specifies the name of a Tabs group.
      The name attribute is used to reference elements in a JavaScript.
@@ -36,24 +36,11 @@ export interface TabsProps {
   tabPanelsContainerId?: string;
 }
 
-/**
- * ### Production-ready Checklist:
- * * (✔) implementation of component approved by design team;
- * * (✔) has storybook, covered with stories and documentation;
- * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/TabsTest.jsx)
- * * (?) passes accessibility checks;
- *
- * ###  Status: ```Ready for dev```
- *
- * Design System: Tabs Component.
- * Can be used to render a set of Tabs and Tab's content.
- */
 const Tabs: React.FunctionComponent<TabsProps> = ({
   tabs,
   name,
   onChange,
-  onClose = () => {},
+  onTabClose = () => {},
   defaultSelectedTabValue,
   tabsContainerId,
   tabsContainerClassName,
@@ -77,10 +64,24 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
     [setSelectedValue, onChange]
   );
 
+  const handleTabClose = useCallback(
+    (value: string) => {
+      onTabClose(value, name);
+    },
+    [name, onTabClose]
+  );
+
   // Reset selected tab whenever default selected value changes.
   useEffect(() => {
     setSelectedValue(defaultSelectedTabValue);
   }, [defaultSelectedTabValue]);
+
+  // If selected tab value is not in tabs array, set selected tab value to first tab value.
+  useEffect(() => {
+    if (!tabs.find(tab => tab.value === selectedTabValue)) {
+      setSelectedValue(tabs[0].value);
+    }
+  }, [tabs, selectedTabValue]);
 
   const nameStripped = name.replace(' ', '-');
 
@@ -104,7 +105,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
               isSelected={tab.value === selectedTabValue}
               onClick={handleChange}
               size={size}
-              onClose={onClose}
+              onClose={handleTabClose}
               tabPanelId={`${nameStripped}-panel-${tab.value}`}
               tabButtonId={`${nameStripped}-tab-${tab.value}`}
             />
