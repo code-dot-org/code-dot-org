@@ -23,24 +23,26 @@ module Services
         when ::User::TYPE_TEACHER
           user_params[:age] = '21+'
           user_params[:email_preference_opt_in_required] = true
-          user_params[:email_preference_opt_in] = user_params[:email_preference_opt_in].present? ? 'yes' : 'no'
+          user_params[:email_preference_opt_in] = ActiveModel::Type::Boolean.new.cast(user_params[:email_preference_opt_in]) ? 'yes' : 'no'
           user_params[:email_preference_request_ip] = request.ip
           user_params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
           user_params[:email_preference_form_kind] = '0'
 
-          if SharedConstants::NON_SCHOOL_OPTIONS.to_h.value?(user_params[:school_info_attributes]['schoolId'])
-            user_params[:school_info_attributes]['schoolId'] = nil
+          if user_params[:school_info_attributes].present?
+            if SharedConstants::NON_SCHOOL_OPTIONS.to_h.value?(user_params[:school_info_attributes]['schoolId'])
+              user_params[:school_info_attributes]['schoolId'] = nil
+            end
+            school_params = {
+              school_id: user_params[:school_info_attributes]['schoolId'],
+              school_name: user_params[:school_info_attributes]['schoolName'],
+              school_type: user_params[:school_info_attributes]['schoolType'],
+              school_zip: user_params[:school_info_attributes]['schoolZip'],
+              school_state: user_params[:school_info_attributes]['schoolState'],
+              country: user_params[:school_info_attributes]['country'],
+              full_address: user_params[:school_info_attributes]['fullAddress']
+            }
+            user_params[:school_info_attributes] = ActionController::Parameters.new(school_params).permit(:school_id, :school_name, :school_type, :school_zip, :school_state, :country, :full_address)
           end
-          school_params = {
-            school_id: user_params[:school_info_attributes]['schoolId'],
-            school_name: user_params[:school_info_attributes]['schoolName'],
-            school_type: user_params[:school_info_attributes]['schoolType'],
-            school_zip: user_params[:school_info_attributes]['schoolZip'],
-            school_state: user_params[:school_info_attributes]['schoolState'],
-            country: user_params[:school_info_attributes]['country'],
-            full_address: user_params[:school_info_attributes]['fullAddress']
-          }
-          user_params[:school_info_attributes] = ActionController::Parameters.new(school_params).permit(:school_id, :school_name, :school_type, :school_zip, :school_state, :country, :full_address)
         when ::User::TYPE_STUDENT
           user_params[:parent_email_preference_request_ip] = request.ip
           user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
@@ -49,7 +51,7 @@ module Services
         user_params[:data_transfer_agreement_accepted] = user_params[:data_transfer_agreement_accepted] == '1'
         if user_params[:data_transfer_agreement_required] && user_params[:data_transfer_agreement_accepted]
           user_params[:data_transfer_agreement_request_ip] = request.ip
-          user_params[:data_transfer_agreement_source] = User::ACCOUNT_SIGN_UP
+          user_params[:data_transfer_agreement_source] = ::User::ACCOUNT_SIGN_UP
           user_params[:data_transfer_agreement_kind] = '0'
           user_params[:data_transfer_agreement_at] = DateTime.now
         end
