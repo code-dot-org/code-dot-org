@@ -13,7 +13,7 @@ import SchoolDataInputs from '../templates/SchoolDataInputs';
 import color from '../util/color';
 
 import {useSchoolInfo} from './hooks/useSchoolInfo';
-import {schoolInfoValid} from './utils/schoolInfoValid';
+import {schoolInfoInvalid} from './utils/schoolInfoInvalid';
 import {updateSchoolInfo} from './utils/updateSchoolInfo';
 
 export default function SchoolInfoInterstitial({
@@ -43,7 +43,7 @@ export default function SchoolInfoInterstitial({
 
   const saveDisabled = useMemo(
     () =>
-      schoolInfoValid({
+      schoolInfoInvalid({
         schoolId: schoolInfo.schoolId,
         country: schoolInfo.country,
         schoolName: schoolInfo.schoolName,

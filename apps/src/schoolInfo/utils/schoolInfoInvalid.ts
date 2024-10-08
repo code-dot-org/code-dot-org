@@ -6,7 +6,7 @@ import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import {SchoolDropdownOption} from '../types';
 
-export function schoolInfoValid({
+export function schoolInfoInvalid({
   country,
   schoolName,
   schoolZip,

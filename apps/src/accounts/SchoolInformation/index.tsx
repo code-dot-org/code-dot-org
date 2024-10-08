@@ -4,7 +4,7 @@ import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
-import {schoolInfoValid} from '@cdo/apps/schoolInfo/utils/schoolInfoValid';
+import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import i18n from '@cdo/locale';
@@ -53,7 +53,7 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
 
   const saveDisabled = useMemo(
     () =>
-      schoolInfoValid({
+      schoolInfoInvalid({
         schoolId: schoolDataInfoProps.schoolId,
         country: schoolDataInfoProps.country,
         schoolName: schoolDataInfoProps.schoolName,
