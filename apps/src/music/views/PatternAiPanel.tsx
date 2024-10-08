@@ -372,6 +372,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
           <div
             className={classNames(
               styles.botArea,
+              MusicRegistry.hideAiTemperature && styles.botAreaGap,
               ['drawnDrums', 'generated'].includes(userCompletedTask) &&
                 styles.botAreaVisible
             )}
@@ -386,15 +387,6 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
               )}
               alt=""
               draggable={false}
-            />
-            <Button
-              ariaLabel={musicI18n.generate()}
-              text={musicI18n.generate()}
-              onClick={handleAiClick}
-              disabled={generateState === 'generating'}
-              type="primary"
-              size="s"
-              className={styles.button}
             />
             {!MusicRegistry.hideAiTemperature && (
               <div>
@@ -434,6 +426,15 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                 </div>
               </div>
             )}
+            <Button
+              ariaLabel={musicI18n.generate()}
+              text={musicI18n.generate()}
+              onClick={handleAiClick}
+              disabled={generateState === 'generating'}
+              type="primary"
+              size="s"
+              className={styles.button}
+            />
           </div>
         </div>
       </div>
