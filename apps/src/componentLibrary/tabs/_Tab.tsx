@@ -34,7 +34,7 @@ export interface TabModel {
   /** Is tab closable */
   isClosable?: boolean;
   /** Callback when tab is closed */
-  onClose?: () => void;
+  onClose?: (value: string) => void;
 }
 
 interface TabsProps extends TabModel {
@@ -99,6 +99,8 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   onClose = () => {},
 }) => {
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
+  const handleClose = useCallback(() => onClose(value), [onClose, value]);
+
   checkTabForErrors(isIconOnly, icon, text);
 
   const buttonContent = renderTabButtonContent(
@@ -127,7 +129,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
       {buttonContent}
       {isClosable && (
         <CloseButton
-          onClick={onClose}
+          onClick={handleClose}
           size={size}
           aria-label={`Close ${text}`}
         />
