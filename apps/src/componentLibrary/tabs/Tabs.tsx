@@ -32,6 +32,7 @@ export interface TabsProps {
   tabPanelsContainerClassName?: string;
   /** Custom id for Tab Panels container */
   tabPanelsContainerId?: string;
+  ref?: HTMLDivElement;
 }
 
 /**
@@ -59,6 +60,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   type = 'primary',
   mode = 'light',
   size = 'm',
+  ref,
 }) => {
   const [selectedTabValue, setSelectedValue] = useState(
     defaultSelectedTabValue
@@ -101,6 +103,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
               onClick={handleChange}
               tabPanelId={`${nameStripped}-panel-${tab.value}`}
               tabButtonId={`${nameStripped}-tab-${tab.value}`}
+              ref={ref}
             />
           ))}
         </ul>

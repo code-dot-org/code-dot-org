@@ -81,12 +81,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
     [selectedTab]
   );
-  const spanRef = useRef<HTMLSpanElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
-    if (spanRef.current) {
-      setShowTooltip(spanRef.current.offsetWidth < spanRef.current.scrollWidth);
+    if (ref.current) {
+      setShowTooltip(ref.current.offsetWidth < ref.current.scrollWidth);
     }
   }, []);
 
@@ -123,6 +123,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             direction: 'onBottom',
           } as TooltipProps)
         : undefined,
+      ref: ref,
     },
     {
       value: 'testStudentModel',

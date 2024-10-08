@@ -38,6 +38,7 @@ interface TabsProps extends TabModel {
   tabPanelId: string;
   /** The ID of the button element (_Tab) */
   tabButtonId: string;
+  ref?: HTMLDivElement;
 }
 
 const checkTabForErrors = (
@@ -59,7 +60,8 @@ const renderTabButtonContent = (
   icon?: FontAwesomeV6IconProps,
   text?: string,
   iconLeft?: FontAwesomeV6IconProps,
-  iconRight?: FontAwesomeV6IconProps
+  iconRight?: FontAwesomeV6IconProps,
+  ref?: HTMLDivElement
 ) => {
   if (isIconOnly && icon) {
     return <FontAwesomeV6Icon {...icon} />;
@@ -86,6 +88,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   tabButtonId,
   disabled = false,
   isIconOnly = false,
+  ref,
 }) => {
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
   checkTabForErrors(isIconOnly, icon, text);
@@ -95,7 +98,8 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     icon,
     text,
     iconLeft,
-    iconRight
+    iconRight,
+    ref
   );
 
   const buttonElement = (
@@ -119,7 +123,9 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   return (
     <li role="presentation">
       {tooltip ? (
-        <WithTooltip tooltipProps={tooltip}>{buttonElement}</WithTooltip>
+        <WithTooltip tooltipProps={tooltip}>
+          <div ref={ref}>{buttonElement}</div>
+        </WithTooltip>
       ) : (
         buttonElement
       )}
