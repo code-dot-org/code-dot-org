@@ -42,7 +42,7 @@ module Services
         user_params[:data_transfer_agreement_accepted] = user_params[:data_transfer_agreement_accepted] == '1'
         if user_params[:data_transfer_agreement_required] && user_params[:data_transfer_agreement_accepted]
           user_params[:data_transfer_agreement_request_ip] = request.ip
-          user_params[:data_transfer_agreement_source] = User::ACCOUNT_SIGN_UP
+          user_params[:data_transfer_agreement_source] = ::User::ACCOUNT_SIGN_UP
           user_params[:data_transfer_agreement_kind] = '0'
           user_params[:data_transfer_agreement_at] = DateTime.now
         end
