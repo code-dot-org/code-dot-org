@@ -269,6 +269,15 @@ export const playSoundsTogether = {
     `,
 };
 
+export const playSoundsTogetherNoNext = {
+  ...playSoundsTogether,
+  definition: {
+    ...playSoundsTogether.definition,
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
+    nextStatement: undefined,
+  },
+};
+
 export const playSoundsSequential = {
   definition: {
     type: BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
