@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.1]()
+## [0.3.2]()
+
+* add native tooltip for `_Tab` component when tab has overflown text(label)
+
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/61120)
 
 * set max-width for `_Tab` component
 * overflown text in `_Tab` component is now ellipsized
