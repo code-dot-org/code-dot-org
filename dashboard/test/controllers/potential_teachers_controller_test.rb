@@ -13,6 +13,15 @@ class PotentialTeachersControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "adds potential teacher to HOC guide series" do
+    params = {
+      name: "Test Name",
+      email: "test@test.com",
+    }
+    MailJet.expects(:create_contact_and_add_to_hoc_guide_series).with(params[:email], params[:name])
+    post potential_teachers_url, params: params
+  end
+
   test "show returns correct information for a potential teacher" do
     script = create :script, name: "test"
     example_potential_teacher = create :potential_teacher, script_id: script.id

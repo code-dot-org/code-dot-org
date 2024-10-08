@@ -76,6 +76,22 @@ module MailJet
     add_to_contact_list(contact, contact_list_id)
   end
 
+  def self.create_contact_and_add_to_hoc_guide_series(email, name)
+    return unless enabled?
+
+    return unless email.present?
+
+    contact = find_or_create_contact(email, name)
+    update_contact_fields(contact,
+      [
+        {name: 'display_name', value: name},
+      ]
+    )
+
+    contact_list_id = CONTACT_LISTS[:hoc_guide_series][subaccount.to_sym][:default]
+    add_to_contact_list(contact, contact_list_id)
+  end
+
   def self.find_or_create_contact(email, name)
     return nil unless enabled?
     return nil unless valid_email?(email)

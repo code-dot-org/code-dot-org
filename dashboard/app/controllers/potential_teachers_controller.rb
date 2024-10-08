@@ -1,3 +1,5 @@
+require 'cdo/mailjet'
+
 class PotentialTeachersController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :set_potential_teacher, only: [:show]
@@ -34,10 +36,7 @@ class PotentialTeachersController < ApplicationController
   def send_hoc_email(params)
     name = current_user&.name || params[:name]
     email = current_user&.email || params[:email]
-    unit_id = params[:script_id]
-    lessons = Unit.get_from_cache(unit_id).lessons
-    lesson_plan_html_url = lessons&.first&.lesson_plan_html_url
-    TeacherMailer.hoc_tutorial_email(name, email, lesson_plan_html_url).deliver_now
+    MailJet.create_contact_and_add_to_hoc_guide_series(email, name)
   end
 
   def set_potential_teacher
