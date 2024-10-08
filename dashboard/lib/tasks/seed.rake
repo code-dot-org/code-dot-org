@@ -195,7 +195,7 @@ namespace :seed do
     csa7-2024
     csa8-2024
     csa9-2024
-    csa10-2024
+    csa-postap-se-and-computer-vision-2024
     dance
     events
     flappy
