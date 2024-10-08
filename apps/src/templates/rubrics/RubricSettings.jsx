@@ -154,41 +154,43 @@ function RubricSettings({
     return () => abort.abort();
   }, [rubricId, sectionId]);
 
+  const parseTeacherEvaluationData = data => {
+    var teachEvalArr = [];
+    var count = 0;
+    data.forEach(student => {
+      var teachEvalRow = {
+        user_name: student.user_name,
+        user_family_name: !!student.user_family_name
+          ? student.user_family_name
+          : '',
+      };
+      if (student.eval.length > 0) {
+        count++;
+        student.eval.forEach(e => {
+          teachEvalRow[String(e.learning_goal_id)] =
+            e.understanding !== null
+              ? UNDERSTANDING_LEVEL_STRINGS_V2[e.understanding]
+              : '';
+        });
+      } else {
+        // add dummy values to keep the shape for students
+        // with no evaluations
+        getHeadersSlice().forEach(h => {
+          teachEvalRow[String(h.key)] = '';
+        });
+      }
+      teachEvalArr.push(teachEvalRow);
+    });
+    setTeacherEval(teachEvalArr);
+    setTeacherEvalCount(count);
+  };
+
   useEffect(() => {
     const abort = new AbortController();
     if (!!rubricId && !!sectionId) {
       fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
         if (response.ok) {
-          response.json().then(data => {
-            var teachEvalArr = [];
-            var count = 0;
-            data.forEach(student => {
-              var teachEvalRow = {
-                user_name: student.user_name,
-                user_family_name: !!student.user_family_name
-                  ? student.user_family_name
-                  : '',
-              };
-              if (student.eval.length > 0) {
-                count++;
-                student.eval.forEach(e => {
-                  teachEvalRow[String(e.learning_goal_id)] =
-                    e.understanding !== null
-                      ? UNDERSTANDING_LEVEL_STRINGS_V2[e.understanding]
-                      : '';
-                });
-              } else {
-                // add dummy values to keep the shape for students
-                // with no evaluations
-                getHeadersSlice().forEach(h => {
-                  teachEvalRow[String(h.key)] = '';
-                });
-              }
-              teachEvalArr.push(teachEvalRow);
-            });
-            setTeacherEval(teachEvalArr);
-            setTeacherEvalCount(count);
-          });
+          response.json().then(parseTeacherEvaluationData);
         }
       });
     }
