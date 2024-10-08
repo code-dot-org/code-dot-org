@@ -449,19 +449,21 @@ const procedureDefMutator = {
    * @private
    */
   removeArg_: function (argId) {
-    const variable = this.argData_.find(arg => arg.argId === argId);
+    const argDatum = this.argData_.find(arg => arg.argId === argId);
 
-    // Find other arg blocks in the same stack with the same field value,
-    // then remove them.
-    const matchingArgReporters = this.workspace.getAllBlocks().filter(
-      block =>
-        // Block must be in the same stack (e.g. function definition)
-        block.getRootBlock() === this.getRootBlock() &&
-        block.type === BLOCK_TYPES.argumentReporter &&
-        !block.isShadow() &&
-        block.getVarModels().includes(variable.model)
-    );
-    matchingArgReporters.forEach(block => block.dispose());
+    if (argDatum) {
+      // Find other arg blocks in the same stack with the same field value,
+      // then remove them.
+      const matchingArgReporters = this.workspace.getAllBlocks().filter(
+        block =>
+          // Block must be in the same stack (e.g. function definition)
+          block.getRootBlock() === this.getRootBlock() &&
+          block.type === BLOCK_TYPES.argumentReporter &&
+          !block.isShadow() &&
+          block.getVarModels().includes(argDatum.model)
+      );
+      matchingArgReporters.forEach(block => block.dispose());
+    }
 
     // Remove the arg input and, if it was the only one, remove the "with:" label
     if (this.removeInput(argId, true)) {
@@ -478,11 +480,11 @@ const procedureDefMutator = {
    * block.
    * @param {string} name The name of the argument.
    * @param {string} argId The UUID of the argument (different from var ID).
-   * @param {Blockly.VariableModel} variable The variable model for the parameter
+   * @param {Blockly.VariableModel} variableModel The variable model for the parameter
    * @this {GoogleBlockly.Block}
    * @private
    */
-  addVarInput_: function (name, argId, variable) {
+  addVarInput_: function (name, argId, variableModel) {
     this.appendValueInput(argId)
       .setAlign(GoogleBlockly.inputs.RIGHT)
       .appendField(createMinusField(argId));
@@ -492,7 +494,7 @@ const procedureDefMutator = {
       {type: 'argument_reporter', fields: {VAR: name}},
       this.workspace
     );
-    argBlock.model = variable;
+    argBlock.model = variableModel;
     this.getInput(argId).connection.connect(argBlock.outputConnection);
     argBlock.setShadow(true);
   },
