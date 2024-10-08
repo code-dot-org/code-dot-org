@@ -68,13 +68,13 @@ Fallback: https://github.com/styleguide/ruby
 ### Writing Unit Test
 Our unit test testing library is [Minitest](https://github.com/minitest/minitest). 
 
-When writing unit test we prefer to use [Specs Syntax](https://github.com/minitest/minitest?tab=readme-ov-file#specs-)
+When writing unit test we prefer to use [Specs Syntax](https://github.com/minitest/minitest?tab=readme-ov-file#specs-). Our default MiniTest Spec has been extended to inlcude some RSpec features such as [`subject`](https://rspec.info/features/3-13/rspec-core/subject/explicit-subject/) or [`let!`](https://rspec.info/features/3-13/rspec-core/helper-methods/let/)
 
 #### General Guidelines
 - Group related tests using `describe` blocks.
 - Use `let` to define memoized helper methods and lazy-loaded variables.
 - Use `before` blocks for setup tasks that need to be run before each example.
-- Use `subject` in the group scope to explicitly define the value that is returned by the subject method in the example scope.
+- Use `subject` to explicitly define the value that is returned by the subject method in the example scope.
 - Prefer `.must_` methods over `expect` or `assert_` syntax for assertions, for consistency. See all possible expectations [here](https://github.com/minitest/minitest/blob/v5.18.0/lib/minitest/expectations.rb).
 
 You can find more detailed guidelines and examples of best practices at [betterspecs.org](https://www.betterspecs.org/). 
