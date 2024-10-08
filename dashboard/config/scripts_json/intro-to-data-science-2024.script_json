@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-03 21:09:46 UTC",
+    "serialized_at": "2024-10-06 17:16:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -91,7 +91,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**What is data science, and how can it be used?**\n\nThis is a survey lesson introducing students to all sorts of things data science can do. Students start with a pre-assessment asking them to find data in an image of a class pizza party, to introduce the concept of data and data science. Students then learn about a specific data scientist, who they will represent in conversations with their classmates. As they discuss with their classmates, they will learn about the other data scientists.",
-        "preparation": "* Print copies of the Data Scientist Bingo Card (one for each student)\n* Print copies of the Data Scientists Tents (one for each student)\n* Gather several sticky notes (2-3 for each student)",
+        "preparation": "* Provide copies of the Unit 1 Guided Notes for each student\n* Print copies of the Data Scientist Bingo Card (one for each student)\n* Print copies of the Data Scientists Tents (one for each student)\n* Gather several sticky notes (2-3 for each student)",
         "student_overview": "**What is data science, and how can it be used?**\n\nBecome an expert in a data scientist, what they do and their path to getting there. Then, represent that data scientist for the rest of the class, and learn about other data scientists."
       },
       "seeding_key": {
@@ -3316,6 +3316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci U1 Pre-Test_2024-pilot"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -4388,6 +4391,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci U1 Post-Test_2024-pilot"
+        ],
         "progression": "Unit 1 Assessment"
       },
       "bonus": false,
@@ -5444,6 +5450,18 @@
       }
     },
     {
+      "name": "Unit 1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit#heading=h.gqwpeghz4npc",
+      "key": "unit_1_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_guided_notes"
+      }
+    },
+    {
       "name": "Visualization Techniques",
       "url": "https://docs.google.com/document/d/1dQM0oBAF7E69ji75o0GOncvCe-hPk_fXAqGo0HKOa8Y/edit?usp=sharing",
       "key": "visualization_techniques",
@@ -5486,6 +5504,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "introduction_to_data_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_1_guided_notes"
       }
     },
     {

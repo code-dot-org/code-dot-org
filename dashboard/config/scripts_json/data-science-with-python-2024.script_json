@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-03 20:29:04 UTC",
+    "serialized_at": "2024-10-06 17:23:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -102,7 +102,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**What can I do with Python?**\n\nIn this lesson students will be exposed to some of the uses of the Python programming language, focusing on its strong appeal for data science applications. Utilizing the PRIMM methodology, students will be introduced to some of the basic Python syntax that will be necessary to begin manipulating and visualizing data in the lessons to come.\n\n",
-        "preparation": "- Print copies of the Python anticipation guide (one for each student)",
+        "preparation": "- Provide copies of the Unit 2 Guided Notes for each student\n- Print copies of the Python anticipation guide (one for each student)",
         "student_overview": "**What can I do with Python?**\n\nIn this lesson, you will learn about many of the interesting and varied uses of the Python programming language, including its use as a premiere tool for data science. You will learn many of the basic Python commands necessary to begin your journey as a data scientist.\n\n"
       },
       "seeding_key": {
@@ -6077,6 +6077,18 @@
       }
     },
     {
+      "name": "Unit 2 Guided Notes",
+      "url": "https://docs.google.com/document/d/175Tq55HFroHz8RIv6MyEvPGV2bNFRvxm3LizFAcvx20/edit#heading=h.gqwpeghz4npc",
+      "key": "unit_2_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_guided_notes"
+      }
+    },
+    {
       "name": "US Gas Prices Dataset",
       "url": "https://docs.google.com/document/d/1t6PiigVhrmC98fV-5Py35br4AWV6lUPglPW2vmDHnoI/edit",
       "key": "us_gas_prices_dataset",
@@ -6149,6 +6161,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "python_anticipation_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_2_guided_notes"
       }
     },
     {

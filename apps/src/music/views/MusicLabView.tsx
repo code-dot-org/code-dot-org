@@ -142,7 +142,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     },
     [dialogControl]
   );
+  const showGenericAlert = useCallback(
+    (message: string) => {
+      dialogControl.showDialog({type: DialogType.GenericAlert, message});
+    },
+    [dialogControl]
+  );
   Blockly.dialog.setPrompt(showGenericPrompt);
+  Blockly.dialog.setAlert(showGenericAlert);
 
   useEffect(() => {
     installFunctionBlocks(blockMode);

@@ -1,11 +1,11 @@
 name 'Data Sci U1 Pre Q14_2024-pilot'
 
-question 'Which answer best describes the relationship between quantitative and qualitative data as they relate to story telling?'
+question 'Which of the following is an example of an ethical issue in data collection?'
 
-wrong 'Only quantitative data is necessary for accurate storytelling and analysis.'
-right 'Including both types of data provides a comprehensive view and understanding.'
-wrong 'Qualitative data should be prioritized over quantitative data to provide a clearer narrative.'
-wrong 'Data storytelling should rely on either qualitative or quantitative data, but not both.'
+wrong 'Creating a bar chart instead of a line graph.'
+right 'Using a dataset without verifying its source or accuracy.'
+wrong 'Using open-ended survey questions.'
+wrong 'Organizing data by categories.'
 
 
 

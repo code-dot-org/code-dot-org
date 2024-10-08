@@ -30,7 +30,6 @@ import teacherSections, {
   setRosterProvider,
   setRosterProviderName,
   setSections,
-  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -71,9 +70,6 @@ $(document).ready(function () {
   );
   store.dispatch(setSections(sections));
   store.dispatch(setLocaleCode(localeCode));
-
-  // DCDO Flag - show/hide Lock Section field
-  store.dispatch(setShowLockSectionField(scriptData.showLockSectionField));
 
   const showAITutorTab = canViewStudentAIChatMessages;
 

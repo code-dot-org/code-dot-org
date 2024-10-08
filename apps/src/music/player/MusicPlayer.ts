@@ -12,11 +12,11 @@ import {
 } from '../constants';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-//import {generateNotesFromTune, TuneNote} from '../utils/Tunes';
 import {getPitchName, getTranposedNote, Key} from '../utils/Notes';
 
 import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
 import {Effects} from './interfaces/Effects';
+import {hasInstrument} from './interfaces/Instruments';
 import {PatternEvent, PatternEventValue} from './interfaces/PatternEvent';
 import {PlaybackEvent} from './interfaces/PlaybackEvent';
 import {SoundEvent} from './interfaces/SoundEvent';
@@ -140,12 +140,8 @@ export default class MusicPlayer {
     if (this.audioPlayer.supportsSamplers()) {
       const instrumentNames = new Set(
         events
-          .filter(event => event.type !== 'sound')
-          .map(event =>
-            event.type === 'chord'
-              ? (event as ChordEvent).value.instrument
-              : (event as PatternEvent).value.kit
-          )
+          .filter(event => hasInstrument(event))
+          .map(event => event.value.instrument)
       );
       for (const instrumentName of instrumentNames) {
         const sampleMap = this.generateSampleMap(instrumentName);
@@ -427,7 +423,7 @@ export default class MusicPlayer {
 
       const results: SampleEvent[] = [];
 
-      const kit = patternEvent.value.kit;
+      const kit = patternEvent.value.instrument;
 
       const folder: SoundFolder | null = library.getFolderForFolderId(kit);
 
@@ -611,7 +607,7 @@ export default class MusicPlayer {
       return null;
     }
 
-    const kit = patternEvent.value.kit;
+    const kit = patternEvent.value.instrument;
     const folder = library.getFolderForFolderId(kit);
     if (folder === null) {
       this.metricsReporter.logWarning(`No instrument ${kit}`);
