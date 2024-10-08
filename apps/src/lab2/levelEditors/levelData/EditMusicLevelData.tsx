@@ -64,16 +64,6 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
     });
   }, [levelData.library, loadedLibraries]);
 
-  // Reset the start sources whenever the block mode changes.
-  useEffect(() => {
-    const startSourcesFilename = `startSources${blockMode}`;
-    const startSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
-    setLevelData(prevLevelData => ({
-      ...prevLevelData,
-      startSources,
-    }));
-  }, [blockMode]);
-
   const hasRestrictedSounds = useMemo(
     () =>
       levelData.library &&
@@ -196,18 +186,22 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
           blockMode={levelData.blockMode || BlockMode.SIMPLE2}
           addFunctionCalls={levelData.toolbox?.addFunctionCalls}
           onChange={toolbox => setLevelData({...levelData, toolbox})}
-          onBlockModeChange={blockMode =>
+          onBlockModeChange={blockMode => {
+            const startSourcesFilename = `startSources${blockMode}`;
+            const startSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
+
             // Reset toolbox blocks when changing block mode
             setLevelData({
               ...levelData,
               blockMode,
+              startSources,
               toolbox: {
                 ...levelData.toolbox,
                 blocks: undefined,
                 addFunctionCalls: undefined,
               },
-            })
-          }
+            });
+          }}
           onAddFunctionCallsChange={(addFunctionCalls: boolean) => {
             setLevelData({
               ...levelData,
