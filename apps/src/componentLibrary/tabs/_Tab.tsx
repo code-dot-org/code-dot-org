@@ -90,14 +90,14 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
   const handleTooltip = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.currentTarget;
-    // Locate the element that contains the text (if nested inside spans or other elements)
+    // Locate the element that contains the text (if nested inside spans or other elements).
     const textElement = target.querySelector('span') || target;
 
     if (textElement.scrollWidth > textElement.clientWidth) {
-      // Set the tooltip text if overflow occurs
+      // Set the tooltip text if overflow occurs.
       target.title = textElement.textContent || '';
     } else {
-      // Clear tooltip if no overflow
+      // Clear tooltip if no overflow.
       target.title = '';
     }
   };

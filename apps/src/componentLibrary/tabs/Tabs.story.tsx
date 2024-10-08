@@ -49,6 +49,25 @@ DefaultTabs.args = {
   onChange: () => null,
 };
 
+export const DefaultTabsOverflownLabel = SingleTemplate.bind({});
+DefaultTabsOverflownLabel.args = {
+  name: 'default_tabs_with_overflown_label',
+  tabs: [
+    {
+      value: 'tab1',
+      text: 'Tab 1 with very long label name',
+      tabContent: <div>Tab 1 Content</div>,
+    },
+    {
+      value: 'tab2',
+      text: 'Tab 2 with very long label name',
+      tabContent: <div>Tab 2 Content</div>,
+    },
+  ],
+  defaultSelectedTabValue: 'tab1',
+  onChange: () => null,
+};
+
 export const DefaultTabsWithDisabledTab = SingleTemplate.bind({});
 DefaultTabsWithDisabledTab.args = {
   name: 'default_tabs_with_disabled_tab',
