@@ -390,7 +390,7 @@ class Blockly < Level
         try(:[], "blocks").try(:[], "blocks")&.
         filter {|block| block.try(:[], "type") == "procedures_defnoreturn"}
 
-      functions.each do |function|
+      functions&.each do |function|
         function_name = function.try(:[], "fields").try(:[], "NAME")
         next unless function_name
 
@@ -499,6 +499,7 @@ class Blockly < Level
       # Set some values that Blockly expects on the root of its options string
       level_prop.compact!
     end
+
     options.freeze
   end
 
