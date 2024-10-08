@@ -522,21 +522,18 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   # USING NEW SIGN-UP FLOW [START]
 
-  # test "create retries on Duplicate exception [new sign up flow]" do
-  #   # some Mocha shenanigans to simulate throwing a duplicate entry
-  #   # error and then succeeding by returning the existing user
+  test "create existing email error on a Duplicate exception [new sign up flow]" do
+    # some Mocha shenanigans to simulate throwing a duplicate entry
+    # error and then succeeding by returning the existing user
 
-  #   exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
-  #   User.any_instance.stubs(:save).raises(exception).then.returns(true)
+    duplicate_entry_exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
+    User.any_instance.stubs(:save).raises(duplicate_entry_exception)
 
-  #   teacher_params = set_up_partial_registration(@default_params)
-  #   post :create, params: {new_sign_up: true, user: teacher_params}
+    teacher_params = set_up_partial_registration(@default_params)
 
-  #   assert_redirected_to '/'
-
-  #   # we are still stubbing user.save (even though we returned true so
-  #   # we can't actually check that the user was created)
-  # end
+    exception = assert_raise(Exception) {post :create, params: {new_sign_up: true, user: teacher_params}}
+    assert_equal("Validation failed: Email has already been taken", exception.message)
+  end
 
   # test "create as student with age [new sign up flow]" do
   #   Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
