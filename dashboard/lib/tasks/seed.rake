@@ -150,6 +150,61 @@ namespace :seed do
     oceans
     sports
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
+
+  ADHOC_TEST_SCRIPTS = UI_TEST_SCRIPTS + %w(
+    allthehiddenthings
+    allthemigratedthings
+    alltheplcthings
+    alltheselfpacedplthings
+    allthethings
+    allthettsthings
+    coursea-2024
+    courseb-2024
+    coursec-2024
+    coursed-2024
+    coursee-2024
+    coursef-2024
+    interactive-games-animations-2023
+    focus-on-creativity3-2023
+    focus-on-coding3-2023
+    csd1-2024
+    csd2-2024
+    csd3-2024
+    csd4-2024
+    csd5-2024
+    csd6a-2024
+    csd6b-2024
+    csd-post-survey-2024
+    interactive-games-animations-2024
+    focus-on-creativity3-2024
+    focus-on-coding3-2024
+    csp1-2024
+    csp2-2024
+    csp3-2024
+    csp4-2024
+    csp5-2024
+    csp6-2024
+    csp7-2024
+    csp8-2024
+    csp9-2024
+    csp10-2024
+    csp-post-survey-2024
+    dance
+    events
+    flappy
+    frozen
+    hero
+    hourofcode
+    infinity
+    mc
+    minecraft
+    playlab
+    starwars
+    starwarsblocks
+    step
+    oceans
+    sports
+  ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
   SEEDED = "#{CURRICULUM_CONTENT_DIR}/config/scripts/.seeded".freeze
 
   # Update scripts in the database from their file definitions.
@@ -218,6 +273,10 @@ namespace :seed do
     update_scripts(script_files: UI_TEST_SCRIPTS)
   end
 
+  timed_task_with_logging scripts_adhoc: SCRIPTS_DEPENDENCIES do
+    update_scripts(script_files: ADHOC_TEST_SCRIPTS)
+  end
+
   timed_task_with_logging courses: :environment do
     Dir.glob(UnitGroup.file_path('**', CURRICULUM_CONTENT_PATHNAME)).sort.map do |path|
       UnitGroup.load_from_path(path)
@@ -231,6 +290,13 @@ namespace :seed do
     end
     %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
       UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
+    end
+  end
+
+  timed_task_with_logging courses_adhoc: :environment do
+    # seed those courses that are best to test on for adhoc
+    %w(allthethingscourse csp-2024 csd-2024).each do |course_name|
+      UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
   end
 
@@ -334,6 +400,12 @@ namespace :seed do
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
     %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course).each do |course_offering_name|
+      CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
+    end
+  end
+
+  timed_task_with_logging course_offerings_adhoc: :environment do
+    %w(ui-test-course).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end
@@ -493,7 +565,9 @@ namespace :seed do
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data, :datablock_storage].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data, :datablock_storage].freeze
-  DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
+  # todo update course_offerings_ui_tests, scripts_ui_tests and courses_ui_tests
+  ADHOC_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data, :datablock_storage].freeze
+  DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_TEST_SEED_TASKS else FULL_SEED_TASKS end
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
