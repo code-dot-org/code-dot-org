@@ -217,8 +217,6 @@ module I18n
                     function_definition = Hash.new
                     function_definition["name"] = name
                     i18n_strings['function_definitions'][name] = function_definition
-                    puts "just wrote"
-                    pp i18n_strings['function_definitions']
                   end
                 end
 
