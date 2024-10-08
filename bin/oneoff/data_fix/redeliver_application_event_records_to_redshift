@@ -188,14 +188,17 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
           map {|obj| "{#{obj}}"}.
           tap {|array| batch_status.records_in_batch = array.length}.
           each_with_index do |record_string, _position_in_batch|
+            uuid = JSON.parse(record_string)['uuid']
             modified_record_string, validation_errors = Cdo::JSONtoRedshiftTableValidator.validate(record_string, event_json_schema, modify_invalid: options[:modify_invalid])
-            CDO.log.warn validation_errors.join(", ") if validation_errors.any?
+            CDO.log.warn "Errors Found/Fixed in Record with UUID: #{JSON.parse(record_string)['uuid']} :" + validation_errors.join(", ") if validation_errors.any?
             batch_status.records_modified += 1 if validation_errors.any? && options[:modify_invalid]
             modified_batch += modified_record_string
+          rescue JSON::ParserError => exception
+            batch_status.records_skipped += 1
+            CDO.log.error "Record is not valid JSON; omitting it from redelivery batch: #{exception.message}"
           rescue Cdo::JSONtoRedshiftTableValidator::ValidationError => exception
             batch_status.records_skipped += 1
-            CDO.log.error record_string
-            CDO.log.error exception.message
+            CDO.log.error "Fatal error(s) found in Record with UUID: #{uuid}; omitting it from redelivery batch: #{exception.message}"
           end
         raise SkipRedeliveryError.new('Skipping redelivery. --actually-redeliver is set to false.') unless options[:actually_redeliver]
         batch_status.redelivery_batch_object_key = REDELIVER_DATA_PREFIX + undelivered_batch_uri.path

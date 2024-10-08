@@ -9,8 +9,8 @@ module Cdo
 
     # Validate a JSON Record against a destination Redshift table schema.
     #
-    # @param record [String] The JSON string representation of a record to validate and possibly modify.
-    # @param schema [Hash] The schema definition for the Redshift table. Expected to have the following structure:
+    # @param record_string [String] The JSON string representation of a record to validate and possibly modify.
+    # @param redshift_schema [Hash] The schema definition for the Redshift table. Expected to have the following structure:
     #   {
     #     type: "redshift_table",
     #     columns: {
@@ -24,8 +24,8 @@ module Cdo
     #   }
     # @param modify_invalid [Boolean] If true, attempt to modify invalid data to make it valid. If false, raise an error for any invalid data. Default is false.
     #
-    # @return [Array<String, Boolean>] A two-element array containing:
-    #   1. The validated (and possibly modified) JSON string representation of the record
+    # @return [String, Array<String>] A two-element array containing:
+    #   1. The validated (and possibly modified) JSON string representation of the record.
     #   2. An Array of validation errors found in the record. Empty if none were found.
     #
     # @raise [JSON::ParserError] If the input record is invalid JSON and cannot be parsed
@@ -41,30 +41,32 @@ module Cdo
     #     }
     #   }
     #   json_string = '{"id": 1, "name": "John Doe"}'
-    #   validated_data, modified = JSONtoRedshiftTableValidator.validate(json_string, schema)
-    def self.validate(record, schema, modify_invalid: false)
-      new(schema, modify_invalid).validate(record)
+    #   validated_record, errors = JSONtoRedshiftTableValidator.validate(record_string, redshift_schema)
+    def self.validate(record_string, redshift_schema, modify_invalid: false)
+      new(redshift_schema, modify_invalid).validate(record_string)
     end
 
-    def initialize(schema, modify_invalid)
-      @schema = schema
+    def initialize(redshift_schema, modify_invalid)
+      @redshift_schema = redshift_schema
       @modify_invalid = modify_invalid
       @errors = []
     end
 
-    def validate(record)
-      raise ValidationError, "Invalid schema type" unless @schema[:type] == "redshift_table"
+    def validate(record_string)
+      raise ValidationError, "Invalid schema type" unless @redshift_schema[:type] == "redshift_table"
 
       begin
-        parsed_record = JSON.parse(record)
+        record = JSON.parse(record_string)
       rescue JSON::ParserError => exception
         raise ValidationError, "Invalid JSON string: #{exception.message}"
       end
 
-      validated_record = {}
-      @schema[:columns].each do |key, column_schema|
-        if parsed_record[key.to_s].present?
-          validated_record[key.to_s] = validate_column(key.to_s, parsed_record[key.to_s], column_schema)
+      modified_record = {}
+      # One side effect of iterating through the Redshift schema to build up the modified_record is that we remove any top level
+      # attribute of the input record that doesn't have a corresponding destination column in Redshift.
+      @redshift_schema[:columns].each do |key, column_schema|
+        if record[key.to_s].present?
+          modified_record[key.to_s] = validate_column(key.to_s, record[key.to_s], column_schema)
           # Redshift columns are nullable by default, so make sure the 'nullable' setting is present for the current column.
         elsif column_schema.key?(:nullable) && column_schema[:nullable] == false
           @errors << "Required column is missing or empty: #{key}"
@@ -73,7 +75,7 @@ module Cdo
 
       raise ValidationError, @errors.join(", ") if @errors.any? && !@modify_invalid
 
-      [validated_record.to_json, @errors]
+      [@modify_invalid ? modified_record.to_json : record_string, @errors]
     end
 
     private def validate_column(key, value, column_schema)
