@@ -1,5 +1,4 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
-import SwapLayoutButton from '@codebridge/SwapLayoutButton';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
@@ -8,10 +7,14 @@ import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ControlButtons from './ControlButtons';
 import GraphModal from './GraphModal';
+import RightButtons from './RightButtons';
 
 import moduleStyles from './console.module.scss';
 
@@ -29,8 +32,9 @@ const Console: React.FunctionComponent = () => {
 
   const clearOutput = useCallback(() => {
     dispatch(resetOutput());
+    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
     setGraphModalOpen(false);
-  }, [dispatch]);
+  }, [dispatch, appName]);
 
   // Clear console when we change levels.
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, clearOutput);
@@ -42,24 +46,9 @@ const Console: React.FunctionComponent = () => {
   }, [codeOutput]);
 
   const popOutGraph = (index: number) => {
+    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_POP_OUT_IMAGE, appName);
     setActiveGraphIndex(index);
     setGraphModalOpen(true);
-  };
-
-  const headerButton = () => {
-    return (
-      <>
-        <Button
-          isIconOnly
-          color={'black'}
-          icon={{iconStyle: 'solid', iconName: 'eraser'}}
-          ariaLabel="clear console"
-          onClick={clearOutput}
-          size={'xs'}
-        />
-        <SwapLayoutButton />
-      </>
-    );
   };
 
   return (
@@ -67,7 +56,7 @@ const Console: React.FunctionComponent = () => {
       id="codebridge-console"
       className={moduleStyles.consoleContainer}
       headerContent={'Console'}
-      rightHeaderContent={headerButton()}
+      rightHeaderContent={<RightButtons clearOutput={clearOutput} />}
       leftHeaderContent={<ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >

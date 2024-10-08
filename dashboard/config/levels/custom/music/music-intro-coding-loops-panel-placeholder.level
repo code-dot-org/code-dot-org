@@ -31,14 +31,14 @@
                         "type": "play_sound_at_current_location_simple2",
                         "id": "play_sound_at_current_location_simple2",
                         "fields": {
-                          "sound": "bass/reggaeton_alternate_bass"
+                          "sound": "chainsmokers_riptide/drums_claps"
                         },
                         "next": {
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
-                            "id": "Rj-9-G=tuh*zK2Or||j`",
+                            "id": "m)jo[vcgE@P`AP:XDTb+",
                             "fields": {
-                              "sound": "beats/hats_beat"
+                              "sound": "chainsmokers_riptide/bass_1"
                             }
                           }
                         }
@@ -54,11 +54,19 @@
       "toolbox": {
         "blocks": {
         }
-      }
+      },
+      "library": "launch2024",
+      "sounds": {
+        "chainsmokers_riptide": [
+          "drums_claps",
+          "bass_1"
+        ]
+      },
+      "packId": "chainsmokers_riptide"
     },
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "###Loop Two Sounds\r\n\r\n1. Change the number of times both sounds repeat.\r\n2. Then press Run.",
+    "long_instructions": "###🛠️Customize the loop with two sounds\r\n\r\n1. Change the number of times both sounds repeat.\r\n2. Then press Run.",
     "hide_share_and_remix": "false",
     "validations": [
       {
@@ -75,7 +83,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-16 20:36:44 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:38:47 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:40:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-16 20:36:44 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:38:47 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-16 20:40:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 16:37:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:52:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:53:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:53:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-18 21:55:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

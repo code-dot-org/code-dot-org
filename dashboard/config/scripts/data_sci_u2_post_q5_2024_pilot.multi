@@ -1,0 +1,15 @@
+name 'Data Sci U2 Post Q5_2024-pilot'
+
+question 'Describe how the `groupby()` function in pandas can be used to perform sophisticated data grouping and analysis tasks, and provide an example of its application.'
+
+wrong 'The `groupby()` function splits the DataFrame into groups based on specified criteria, allowing for detailed sorting and reordering of rows, such as using `df.groupby("Category").sort_values()`.'
+wrong 'The `groupby()` function combines multiple DataFrames based on common columns, enabling complex merging operations, for instance, `df.groupby("Category").merge(other_df)`'
+right 'The `groupby()` function divides the DataFrame into subsets based on multiple columns and enables operations like calculating the mean of each group, such as `df.groupby(["Category", "Subcategory"]).mean()`.'
+wrong 'The `groupby()` function generates data visualizations directly from grouped data, allowing for plots like `df.groupby("Category").plot()`, which illustrate trends within each group.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

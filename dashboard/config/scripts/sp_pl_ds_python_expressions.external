@@ -1,0 +1,50 @@
+name 'sp-pl-DS_Python-Expressions'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Expressions
+
+<img src="https://images.code.org/5de949b2444cea4cd726ff53548b8702-image-1727203455539.png" alt="pandas logo" width="50px" style="border-radius:20px; float:left; margin: 0 0 10px 0px;">
+
+### What did you discover from the modifications you made to the previous code?
+
+## Expressions
+
+#### An **expression** is a combination of data and operators that evaluates a to a single value.
+
+![](https://images.code.org/57475ec41c652afa5db079b72fc99945-image-1727211392306.png)
+
+## Python Operators 
+#### A Python operator is a special symbol or keyword that performs a specific operation on one or more operands (values or variables). 
+
+#### **Common operators:** 
+
+
+   <table border="1" width="100%" cellpadding="10" style="table-layout: fixed;">
+        <tr>
+            <th style="font-size: 14pt; text-align: center; width: 20%;">Operator</th>
+            <th style="font-size: 14pt; width: 80%;">Description</th>
+        </tr>
+        <tr style="height: 50px;">
+            <td style="font-size: 14pt; font-weight: bold; text-align: center;">+</td>
+            <td style="font-size: 14pt;">Addition (for numbers) / String concatenation (for strings)</td>
+        </tr>
+        <tr style="height: 50px;">
+            <td style="font-size: 14pt; font-weight: bold; text-align: center;">-</td>
+            <td style="font-size: 14pt;">Subtraction</td>
+        </tr>
+        <tr style="height: 50px;">
+            <td style="font-size: 14pt; font-weight: bold; text-align: center;">*</td>
+            <td style="font-size: 14pt;">Multiplication</td>
+        </tr>
+        <tr style="height: 50px;">
+            <td style="font-size: 14pt; font-weight: bold; text-align: center;">/</td>
+            <td style="font-size: 14pt;">Division</td>
+        </tr>
+        <tr style="height: 50px;">
+            <td style="font-size: 14pt; font-weight: bold; text-align: center;">%</td>
+            <td style="font-size: 14pt;">Modulus (remainder of division)</td>
+        </tr>
+    </table>
+MARKDOWN

@@ -1,0 +1,28 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-09-30T17:16:41.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_3",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/2843a02314c84e8efb37bfcfa95138ba-loop.gif",
+        "text": "###Repeat a sound\n\nAdd the sounds you want into the **repeat** block. \n",
+        "key": "musiclab_intro_panels_playtogether_pdx-a0d88b4a-e9a8-4641-8ec9-3ce98e7a1cc4"
+      },
+      {
+        "text": "###Set the number of times you want your sounds to repeat. ",
+        "imageUrl": "https://images.code.org/1404184006d67591b048880fa0362cb6-add three.gif",
+        "key": "music-ai-panels-loops-506fe51b-bdfb-42b2-bf3a-4c92794363fa",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:41.879+00:00\",\"changed\":[\"cloned from \\\"music-ai-panels-loops\\\"\"],\"cloned_from\":\"music-ai-panels-loops\"}]"
+}]]></config>
+</Panels>

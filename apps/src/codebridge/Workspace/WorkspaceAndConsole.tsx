@@ -5,6 +5,7 @@ import React, {useEffect, useMemo} from 'react';
 
 import globalStyleConstants from '@cdo/apps/styleConstants';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
+import color from '@cdo/apps/util/color';
 
 import moduleStyles from './workspace.module.scss';
 
@@ -21,7 +22,8 @@ const PANEL_TOP_COORDINATE = 80;
 // We also will want resizing to be accessible, and the HeightResizer component only works with mouse and touch
 // events.
 const WorkspaceAndConsole: React.FunctionComponent = () => {
-  const [consoleHeight, setConsoleHeight] = React.useState(350);
+  // Default console height is 200px.
+  const [consoleHeight, setConsoleHeight] = React.useState(200);
   const [columnHeight, setColumnHeight] = React.useState(800);
 
   useEffect(() => {
@@ -79,7 +81,7 @@ const WorkspaceAndConsole: React.FunctionComponent = () => {
         resizeItemTop={() => PANEL_TOP_COORDINATE}
         position={editorHeight}
         onResize={handleResize}
-        style={{position: 'static'}}
+        style={{position: 'static', backgroundColor: color.light_gray_950}}
       />
       <div style={{height: consoleHeight}}>
         <Console />

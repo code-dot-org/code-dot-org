@@ -22,7 +22,9 @@ import {
 
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
-const CopyButton: React.FunctionComponent = () => {
+const CopyButton: React.FunctionComponent<{isDisabled: boolean}> = ({
+  isDisabled,
+}) => {
   const messages = useSelector(selectAllVisibleMessages);
   const dispatch = useAppDispatch();
 
@@ -58,6 +60,7 @@ const CopyButton: React.FunctionComponent = () => {
       size="s"
       color="gray"
       type="secondary"
+      disabled={isDisabled}
     />
   );
 };

@@ -8,10 +8,12 @@ import {
 } from '@reduxjs/toolkit';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentScriptLevelId,
   getCurrentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -22,9 +24,13 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {getStudentChatHistory, postAichatCompletionMessage} from '../aichatApi';
+import {
+  detectToxicityInCustomizations,
+  getStudentChatHistory,
+  postAichatCompletionMessage,
+} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
-import {saveTypeToAnalyticsEvent} from '../constants';
+import {ModalTypes, saveTypeToAnalyticsEvent} from '../constants';
 import {
   AichatContext,
   AiCustomizations,
@@ -39,8 +45,11 @@ import {
   isModelUpdate,
   isNotification,
   isChatMessage,
+  FlaggedField,
 } from '../types';
+import {extractFieldsToCheckForToxicity} from '../utils';
 import {
+  AI_CUSTOMIZATIONS_LABELS,
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
@@ -59,6 +68,7 @@ type MessageLocation = {
   index: number;
   messageListKey: (typeof messageListKeys)[number];
 };
+type ModalType = ModalTypes.WARNING | ModalTypes.TEACHER_ONBOARDING | undefined;
 
 export interface AichatState {
   // Content from previous chat sessions that we track purely for visibility to the user
@@ -72,8 +82,8 @@ export interface AichatState {
   isWaitingForChatResponse: boolean;
   // Student events viewed by a teacher user in chat workspace
   studentChatHistory: ChatEvent[];
-  // Denotes whether we should show the warning modal
-  showWarningModal: boolean;
+  // Denotes whether we should show the warning or teacher onboarding modal
+  showModalType: ModalType;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   initialAiCustomizations: AiCustomizations;
@@ -94,7 +104,7 @@ const initialState: AichatState = {
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
   studentChatHistory: [],
-  showWarningModal: true,
+  showModalType: undefined,
   chatMessageError: false,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -185,10 +195,47 @@ const saveAiCustomization = async (
 
   // Notify the UI that a save is in progress.
   dispatch(startSave(saveType));
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .incrementCounter('Aichat.SaveStarted');
+
+  // Detect toxicity in the student's customizations
+  const toxicity = await detectToxicityInCustomizations(
+    trimmedCurrentAiCustomizations
+  );
+
+  // If any fields were flagged for toxicity, display a notification and don't try to save.
+  if (toxicity.flaggedFields.length > 0) {
+    // Log for analysis purposes
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logInfo({
+        message: 'Toxicity detected in AI customizations',
+        flaggedFields: toxicity.flaggedFields,
+        customizations: extractFieldsToCheckForToxicity(
+          trimmedCurrentAiCustomizations
+        ),
+      });
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('Aichat.SaveFailToxicityDetected');
+    const errorMessage = getToxicityErrorMessage(toxicity.flaggedFields);
+    dispatchSaveFailNotification(dispatch as AppDispatch, errorMessage, true);
+    return;
+  }
 
   await Lab2Registry.getInstance()
     .getProjectManager()
     ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
+};
+
+const getToxicityErrorMessage = (flaggedFields: FlaggedField[]) => {
+  const fieldLabels = flaggedFields.map(
+    flaggedField => AI_CUSTOMIZATIONS_LABELS[flaggedField.field]
+  );
+  return `The following customization(s) have been flagged by our content moderation policy: ${fieldLabels.join(
+    ', '
+  )}. Please try a different model customization.`;
 };
 
 // Thunk called after a save has completed successfully.
@@ -248,6 +295,9 @@ export const onSaveComplete =
     dispatch(setSavedAiCustomizations(currentAiCustomizations));
     // Notify the UI that the save is complete.
     dispatch(endSave());
+    // Send a report that user has started the aichat level after a successful save.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     // Go to the presentation page if we just finished publishing the model card.
     if (currentSaveType === 'publishModelCard') {
       dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -266,43 +316,15 @@ export const onSaveNoop =
   };
 
 // Thunk called when a save has failed.
-export const onSaveFail =
-  (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
-    // Default save error message.
-    let errorMessage =
-      'There was an error saving your project. Please try again.';
-    if (e instanceof NetworkError) {
-      e.response
-        .json()
-        .then(body => {
-          const changedProperties = findChangedProperties(
-            getState().aichat.savedAiCustomizations,
-            getState().aichat.currentAiCustomizations
-          );
-          const flaggedProperties =
-            changedProperties.includes('systemPrompt') ||
-            changedProperties.includes('retrievalContexts')
-              ? 'system prompt and/or retrieval contexts'
-              : undefined;
-          if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
-            errorMessage = `The ${flaggedProperties} have been flagged by our content moderation policy. Please try a different model customization.`;
-          }
-          dispatchSaveFailNotification(
-            dispatch,
-            errorMessage,
-            !!flaggedProperties
-          );
-        })
-        // Catch any errors in parsing the response body or if there was no response body
-        // and fall back to the default error message.
-        .catch(() => {
-          dispatchSaveFailNotification(dispatch, errorMessage);
-        });
-    } else {
-      // If an Error was passed instead of a NetworkError, fall back to the default error message.
-      dispatchSaveFailNotification(dispatch, errorMessage);
-    }
-  };
+export const onSaveFail = () => (dispatch: AppDispatch) => {
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .incrementCounter('Aichat.SaveFailError');
+  // Default save error message.
+  const errorMessage =
+    'There was an error saving your project. Please try again.';
+  dispatchSaveFailNotification(dispatch, errorMessage);
+};
 
 const dispatchSaveFailNotification = (
   dispatch: AppDispatch,
@@ -441,6 +463,10 @@ export const submitChatContents = createAsyncThunk(
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
+    // Send a report that the user has started the aichat level after successfully sending
+    // a chat message and then receiving a response from the chatbot.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     chatApiResponse.messages.forEach(message => {
       dispatch(addChatEvent({...message, timestamp: Date.now()}));
     });
@@ -590,8 +616,8 @@ const aichatSlice = createSlice({
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
     },
-    setShowWarningModal: (state, action: PayloadAction<boolean>) => {
-      state.showWarningModal = action.payload;
+    setShowModalType: (state, action: PayloadAction<ModalType>) => {
+      state.showModalType = action.payload;
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
@@ -801,7 +827,7 @@ export const {
   setAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
-  setShowWarningModal,
+  setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
   setUserHasAichatAccess,

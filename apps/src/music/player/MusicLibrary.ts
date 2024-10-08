@@ -120,6 +120,14 @@ export default class MusicLibrary {
     this.libraryJson = libraryJson;
     this.allowedSounds = null;
 
+    // Add notes for drum kits based on index if they don't already have them.
+    for (const kit of libraryJson.kits) {
+      kit.sounds = kit.sounds.map((sound, i) => ({
+        ...sound,
+        note: i,
+      }));
+    }
+
     // Combine the JSON-specified folders into one flat list of folders.
     this.folders = [
       ...libraryJson.packs,
@@ -184,12 +192,9 @@ export default class MusicLibrary {
       return this.libraryJson?.defaultSound;
     }
 
-    // The fallback is the first non-instrument/kit folder's first non-preview sound.
+    // The fallback is the first available pack's first available non-preview sound.
     // We will skip restricted folders unless it's the currently selected pack.
-    const firstFolder = this.packs.find(
-      group =>
-        !group.type && (!group.restricted || group.id === this.currentPackId)
-    );
+    const firstFolder = this.getAvailableSounds()[0];
     const firstSound = firstFolder?.sounds.find(
       sound => sound.type !== 'preview'
     );

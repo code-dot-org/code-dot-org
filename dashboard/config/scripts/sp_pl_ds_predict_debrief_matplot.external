@@ -1,0 +1,41 @@
+name 'SP-PL-DS-Predict_Debrief-Matplot'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Debriefing Predict and Run
+
+
+## You might have noticed:
+<img src="https://images.code.org/fee63fd0e5ad5d4734a8fe28cc69edb7-image-1727886727528.png" alt="notice emoji" width="250px" style="border-radius:10px; float:right; margin: 0 40px 0px 0px;">
+
+- #### The code creates a line chart based on the label "date" or "line style."
+- #### The line in the chart will be "blue."
+- #### The line chart has a title and axis labels.
+- #### The code mentions [type=bar], indicating the creation of a bar chart.
+- #### The bar chart does not yet have a title or axis labels, unlike the line chart.
+
+## You might Wonder: 
+
+<img src="https://images.code.org/848c3672cf46fce0d2e63eb58f7580e3-image-1727886614718.png" alt="notice emoji" width="130px" style="border-radius:10px; float:right; margin: 0 90px 0px 0px;">
+
+- #### Why the code doesn't explicitly state that it creates a line chart.
+- #### Why the bar chart lacks a title and axis labels.
+- #### The importance of adding titles and axis labels to a chart.
+
+<br>
+
+<div style="clear:both;"></div>
+<br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "> <b>Teacher Tip:</b> Discussing these observations in class helps students think critically about what the code might produce and establish a foundation for deeper understanding through prediction and analysis.     
+</p>
+</div>
+
+##Let's continue to the **Investigate & Modify** levels.
+
+
+
+MARKDOWN

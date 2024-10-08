@@ -13,9 +13,9 @@ import {
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
   selectSection,
-  serverSectionFromSection,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import TeacherNavigationBar from '@cdo/apps/templates/teacherNavigation/TeacherNavigationBar';
 import {
   SPECIFIC_SECTION_BASE_URL,
@@ -35,16 +35,19 @@ describe('TeacherNavigationBar', () => {
       id: 11,
       name: 'Period 1',
       hidden: false,
+      courseVersionName: 'csd-2024',
     },
     {
       id: 12,
       name: 'Period 2',
       hidden: false,
+      courseVersionName: 'csd-2023',
     },
     {
       id: 13,
       name: 'Period 3',
       hidden: true,
+      courseVersionName: 'csd-2022',
     },
   ];
   const serverSections = sections.map(serverSectionFromSection);

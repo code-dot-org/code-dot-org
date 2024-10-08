@@ -16,42 +16,6 @@ $border-radius: 4px;
   content: "";
 }
 
-section.banner {
-  padding: 0;
-
-  h1 {
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    color: var(--neutral_white);
-  }
-
-  .show-overflow {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 3rem;
-    padding: 0 1rem;
-    width: 100%;
-  }
-
-  .flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  // TODO clean up all of these banner styles after soon-hoc launch
-  &.hoc-2024 {
-    color: var(--neutral_dark);
-
-    h1 {
-      color: var(--neutral_dark);
-    }
-  }
-}
-
 nav.choose-guide {
   margin-top: 2rem;
 
@@ -61,8 +25,8 @@ nav.choose-guide {
 
   a {
     min-width: 132px;
-    color: var(--neutral_white);
-    border: 2px solid var(--neutral_white);
+    color: var(--neutral_dark);
+    border: 2px solid var(--neutral_dark);
     border-radius: 4px;
     padding: 1rem 1rem 0.875rem;
     text-decoration: none;
@@ -75,23 +39,13 @@ nav.choose-guide {
     }
 
     &.active {
-      color: var(--neutral_dark);
-      background: var(--neutral_white);
-      border-color: var(--neutral_white);
-    }
-  }
-
-  // TODO clean this up after soon-hoc launch
-  &.hoc-2024 {
-    a {
-      color: var(--neutral_dark);
+      color: var(--neutral_white);
+      background: var(--neutral_dark);
       border-color: var(--neutral_dark);
+    }
 
-      &.active {
-        color: var(--neutral_white);
-        background: var(--neutral_dark);
-        border-color: var(--neutral_dark);
-      }
+    &:is(:hover, :active):not(.active) {
+      background: rgba(255, 255, 255, 0.4);
     }
   }
 }

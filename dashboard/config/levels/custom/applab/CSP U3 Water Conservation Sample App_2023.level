@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2022-10-19T18:15:41.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
@@ -184,7 +189,7 @@
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
     },
-    "embed": "true",
+    "embed": "false",
     "instructions_important": "false",
     "long_instructions": "# Do This\r\n\r\nWith a partner discuss the following:\r\n\r\n* How does the user interact with the app? \r\n* What is the overall purpose of this app? \r\n* Who is the target audience? \r\n",
     "mini_rubric": "false",
@@ -211,21 +216,16 @@
     "widget_mode": "false",
     "parent_level_id": 18759,
     "name_suffix": "_2023",
+    "libraries_enabled": "false",
+    "validation_enabled": "true",
+    "ai_enabled": "false",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "libraries_enabled": "false",
-    "validation_enabled": "false",
-    "ai_enabled": "false"
+    ]
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-10-19T18:15:41.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-19T18:15:41.305+00:00\",\"changed\":[\"cloned from \\\"CSP U3 Water Conservation Sample App2022\\\"\"],\"cloned_from\":\"CSP U3 Water Conservation Sample App2022\"},{\"changed_at\":\"2023-01-11 20:26:19 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-19T18:15:41.305+00:00\",\"changed\":[\"cloned from \\\"CSP U3 Water Conservation Sample App2022\\\"\"],\"cloned_from\":\"CSP U3 Water Conservation Sample App2022\"},{\"changed_at\":\"2023-01-11 20:26:19 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-24 17:56:57 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-09-24 20:52:24 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-24 20:53:55 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-09-24 20:54:27 +0000\",\"changed\":[\"code_functions\",\"embed\",\"validation_enabled\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

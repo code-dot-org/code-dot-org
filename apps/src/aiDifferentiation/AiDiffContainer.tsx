@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
@@ -8,6 +8,8 @@ import Button from '@cdo/apps/componentLibrary/button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
+import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
+import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
@@ -20,6 +22,7 @@ interface AiDiffContainerProps {
   closeTutor?: () => void;
   open: boolean;
   lessonId: number;
+  lessonName: string;
   unitDisplayName: string;
 }
 
@@ -27,12 +30,19 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   open,
   lessonId,
+  lessonName,
   unitDisplayName,
 }) => {
   // TODO: Update to support i18n
   const aiDiffHeaderText = 'AI Teaching Assistant';
 
   const aiDiffChatMessageEndpoint = '/ai_diff/chat_completion';
+
+  const reportingData = {
+    lessonId: lessonId,
+    lessonName: lessonName,
+    unitName: unitDisplayName,
+  };
 
   const [positionX, setPositionX] = useState(0);
   const [positionY, setPositionY] = useState(0);
@@ -85,15 +95,39 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     };
 
     setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
-    getAIResponse(message);
+    getAIResponse(message, false);
   };
 
   const onPromptSelect = (prompt: ChatPrompt) => {
-    getAIResponse(prompt.prompt);
+    getAIResponse(prompt.prompt, true);
   };
 
-  const getAIResponse = (prompt: string) => {
+  const sendChatEvent = (
+    role: string,
+    prompt: string,
+    preset: boolean,
+    session: string
+  ) => {
+    const responseEventData = {
+      ...reportingData,
+      role: role,
+      isPreset: preset,
+      text: prompt,
+      sessionId: session,
+    };
+    analyticsReporter.sendEvent(
+      EVENTS.AI_DIFF_CHAT_EVENT,
+      responseEventData,
+      PLATFORMS.STATSIG
+    );
+  };
+
+  const getAIResponse = (prompt: string, isPreset: boolean) => {
     setIsWaitingForResponse(true);
+
+    if (sessionId !== null) {
+      sendChatEvent(Role.USER, prompt, isPreset, sessionId);
+    }
 
     const body = JSON.stringify({
       inputText: prompt,
@@ -111,6 +145,19 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           chatMessageText: json.chat_message_text,
           status: json.status,
         };
+
+        // logging here because on the first user message the sessionId is null
+        // we only get a sessionID initialized in the response
+        if (sessionId === null) {
+          sendChatEvent(Role.USER, prompt, isPreset, json.session_id);
+        }
+
+        sendChatEvent(
+          Role.ASSISTANT,
+          json.chat_message_text,
+          isPreset,
+          json.session_id
+        );
         setSessionId(json.session_id);
         setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
       })
@@ -119,6 +166,12 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         setIsWaitingForResponse(false);
       });
   };
+
+  // Scroll to bottom of content when a new message comes in
+  const chatWindowRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    chatWindowRef.current?.lastElementChild?.scrollIntoView();
+  }, [messageHistory]);
 
   return (
     <Draggable
@@ -152,7 +205,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         </div>
 
         <div className={style.fabBackground}>
-          <div className={style.chatContent}>
+          <div className={style.chatContent} ref={chatWindowRef}>
             {messageHistory.map((item: ChatItem, id: number) =>
               Array.isArray(item) ? (
                 <AiDiffSuggestedPrompts

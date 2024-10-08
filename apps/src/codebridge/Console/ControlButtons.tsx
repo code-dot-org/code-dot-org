@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -12,13 +13,16 @@ import {
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 import WithConditionalTooltip from '../components/WithConditionalTooltip';
 import {appendSystemMessage} from '../redux/consoleRedux';
+import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import moduleStyles from './console.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 // Control buttons for running and stopping code.
 // Can be extended in the future to include a test button.
@@ -40,6 +44,7 @@ const ControlButtons: React.FunctionComponent = () => {
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -54,15 +59,14 @@ const ControlButtons: React.FunctionComponent = () => {
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
 
-  const handleRun = (runTests: boolean) => {
+  const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      onRun(runTests, dispatch, source).finally(() =>
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName);
+      onRun(/*runTests*/ false, dispatch, source).finally(() =>
         dispatch(setIsRunning(false))
       );
-      if (!runTests) {
-        dispatch(setHasRun(true));
-      }
+      dispatch(setHasRun(true));
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
     }
@@ -108,7 +112,7 @@ const ControlButtons: React.FunctionComponent = () => {
           onClick={handleStop}
           color={'destructive'}
           iconLeft={{iconStyle: 'solid', iconName: 'square'}}
-          size={'s'}
+          size={'xs'}
           className={moduleStyles.controlButton}
         />
       ) : (
@@ -121,16 +125,20 @@ const ControlButtons: React.FunctionComponent = () => {
             text: disabledCodeActionsTooltip || '',
             size: 's',
             tooltipId: 'code-actions-tooltip',
+            className: darkModeStyles.tooltipRight,
           }}
         >
           <Button
             text={'Run'}
-            onClick={() => handleRun(false)}
+            onClick={handleRun}
             disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-            size={'s'}
-            color={'purple'}
-            className={moduleStyles.controlButton}
+            size={'xs'}
+            color={'white'}
+            className={classNames(
+              moduleStyles.controlButton,
+              darkModeStyles.primaryButton
+            )}
           />
         </WithConditionalTooltip>
       )}

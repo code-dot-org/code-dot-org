@@ -2,23 +2,42 @@
 
 .file-browser {
   height: 100%;
-  background-color: $darkest_gray;
+  background-color: $light_gray_950;
   color: $white;
 }
-.file-browser ul {
-  list-style: none;
-  padding-left: 5px;
+
+.fileBrowserHeader {
+  background-color: $light_gray_950;
+  border-bottom: 1px solid #54595E;
 }
 
-.file-browser ul li span.label {
+.file-browser ul {
+  list-style: none;
+  margin: 0;
+}
+
+.file-browser ul ul {
+  padding-left: 8px;
+}
+
+.row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
+  font-size: 14px;
+  min-height: 24px;
+
+  &:hover {
+    background-color: $light_gray_800;
+  }
 }
-.file-browser ul li span.title {
+
+.title {
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .file-browser ul li span.button-bar {
@@ -38,14 +57,6 @@
   grid-template-columns: 15px auto;
 }
 
-.button-bar button {
-  white-space: nowrap;
-}
-
-span.caret-container {
-  padding-right: 2px;
-}
-
 .file-browser ul li span.label i,
 .file-browser ul li span.button-bar i {
   margin-right: 4px;
@@ -53,9 +64,47 @@ span.caret-container {
 
 li .button-kebab {
   display: none;
-  height: 13px;
+  height: 20px;
+  width: 20px;
+  margin: 2px;
 }
 
-li :hover .button-kebab {
+div.row:hover .button-kebab {
   display: inherit;
+}
+
+.nameContainer {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: auto;
+}
+
+.label {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  margin-right: 4px;
+}
+
+.rowIcon {
+  margin: 2px 8px 2px 8px;
+  font-size: 13px;
+  line-height: 125%;
+
+  // prevents caret-down icon from pushing
+  // text to the right when toggling folders
+  min-width: 9px;
+}
+
+.acceptingDrop {
+  background-color: $light_gray;
+}
+
+.expandedDroppableArea {
+  padding-bottom: 1rem;
+}
+
+.dropdownItem {
+  width: auto;
+  min-width: 100px;
 }

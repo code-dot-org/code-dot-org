@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-09-17T19:19:07.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Airline Quality\r\n\r\n::: details [**✅ Step 1**]\r\n**Explore the Dataset**\r\n- Run the starter code to explore the dataset using `info()`, `describe()` and `head()`.\r\n- Begin thinking about which of the attributes you might want to use to uncover insights into the question: ***How does the distribution of passengers across different classes relate to their satisfaction levels within those classes?***\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\n**Group the data:**\r\n- Consider how passenger satisfaction might vary by class. How can you use a stacked bar chart to visualize the distribution of satisfaction levels within each class?\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\n**Generate the Stacked Bar Chart:**\r\n- Use `stacked_data.plot` to create the chart\r\n- Use `plt.legend`, `plt.xticks`, `plt.xlabel`, `plt.ylabel`, and `plt.title` to label the chart\r\n- Use `plt.show` to display the chart\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\n**Interpret the Stacked Bar Chart:**\r\n- What does the chart reveal about the variation in satisfaction levels by class?\r\n- Are there specific classes where passengers report higher or lower satisfaction?\r\n:::\r\n\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\n# Read the dataset\ndata = pd.read_csv('Airline_Ratings.csv')\n\n# Explore the dataset\nprint(data.info())\nprint(data.describe())\nprint(data.head())\n\n\n# Step 2 - Group the data\n\n\n# Step 3 - Generate a stacked bar chart\n\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "Airline_Ratings.csv",
+          "language": "csv",
+          "contents": "Class,Satisfaction,Count\nBusiness,Neutral or Dissatisfied,18994\nBusiness,Satisfied,43166\nEconomy,Neutral or Dissatisfied,47366\nEconomy,Satisfied,10943\nEconomy Plus,Neutral or Dissatisfied,7092\nEconomy Plus,Satisfied,2319\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "teacher_markdown": "**What Students Should Take Away:**\r\n- Visualizing Passenger Satisfaction: Students should understand how to use groupby() and sum() to analyze and visualize passenger satisfaction across different airline classes.\r\n- Interpreting Stacked Bar Charts: Students should be able to interpret the stacked bar chart to draw conclusions about how class influences passenger satisfaction levels.\r\n\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n-  Students might think that satisfaction is evenly distributed across classes without considering the factors that influence satisfaction levels.\r\n  - Tip: Encourage students to think about the factors that might affect passenger satisfaction, such as service quality and comfort. Discuss how these factors could vary by class and how this is reflected in the data.\r\n- Students may have difficulty understanding how to sum passenger counts in each satisfaction level and how this relates to class.\r\n  - Tip: Guide students through the grouping and summing process, helping them see how different satisfaction levels contribute to the overall picture of passenger experience by class\r\n\r\n",
+    "display_name": "Airline Quality Ratings",
+    "bubble_choice_description": "Practice creating a **stacked bar chart** to answer a question about airline quality!",
+    "thumbnail_url": "https://images.code.org/3a1eb30553b7e33e5e4bf26c8b929dd6-dashboard.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-17T19:19:07.471+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L8-L9b_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L8-L9b_2024-pilot\"},{\"changed_at\":\"2024-09-17 19:24:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 19:25:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-17 20:44:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

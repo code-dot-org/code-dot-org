@@ -1,12 +1,24 @@
 ---
-title: Learn
 layout: wide_index
-social:
-  twitter:card: photo
-  twitter:site: "@codeorg"
-  og:image:width: '1200'
-  og:image:height: '630'
 ---
+
+:ruby
+  @header["title"] = hoc_s("hoc_activities.heading")
+
+:scss
+  section.more {
+    max-width: 1156px;
+    margin: 5rem auto 0;
+    padding: 0;
+
+    @media (max-width: 1156px) {
+      padding-inline: 1.25rem;
+    }
+
+    .flex-container {
+      padding-top: 2rem;
+    }
+  }
 
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 
@@ -15,7 +27,7 @@ social:
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::HOC_ACTIVITIES_PAGE_VISITED
 
-#fullwidth{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
+#fullwidth
   = view :header
   %section.banner
     = view :learn_banner_text
@@ -53,6 +65,14 @@ social:
 #tutorials
 
 .clear{style: "clear: both"}
+
+%section.more
+  %hr
+  .flex-container.justify-space-between.align-items-center.flex-direction-column-mobile.gap-1
+    %h2.heading-sm
+      =hoc_s("hoc_activities.more.heading")
+    %a.link-button.secondary{href: resolve_url("/learn/more")}
+      =hoc_s("hoc_activities.more.button")
 
 :javascript
 

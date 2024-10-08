@@ -292,6 +292,10 @@ class Unit < ApplicationRecord
   #   all /s, /lessons and /levels page in that unit to our "This course is deprecated" page.
   #   We don't use published_state here because some courses in the deprecated published state
   #   are not ready to be redirected. In the future we should unify these two states.
+  # content_area - field to categorize the bigger curriculum umbrella to which this unit belongs
+  #   for example, k-5, 6-12, pl, etc.
+  # topic_tags - a collection of tags that help classify the unit based on the content. A unit can
+  #   have multiple topic tags associated with it. For example, AI, Maker
   serialized_attrs %w(
     hideable_lessons
     professional_learning_course
@@ -320,6 +324,8 @@ class Unit < ApplicationRecord
     seeded_from
     use_legacy_lesson_plans
     is_deprecated
+    content_area
+    topic_tags
   )
 
   def self.twenty_hour_unit
@@ -826,7 +832,7 @@ class Unit < ApplicationRecord
   end
 
   def in_initiative?(initiative)
-    return cached&.course_version&.course_offering&.marketing_initiative == initiative
+    return cached&.get_course_version&.course_offering&.marketing_initiative == initiative
   end
 
   # Legacy levels have different video and title logic in LevelsHelper.
@@ -1581,6 +1587,8 @@ class Unit < ApplicationRecord
         updated_at: updated_at.to_s,
         isPlCourse: pl_course?,
         showAiAssessmentsAnnouncement: show_ai_assessments_announcement?(user),
+        content_area: content_area,
+        topic_tags: topic_tags,
       }
 
       #TODO: lessons should be summarized through lesson groups in the future
@@ -1600,11 +1608,12 @@ class Unit < ApplicationRecord
 
   def summarize_for_lesson_materials_view(user)
     summary = {
-      id: id,
+      unitId: id,
       title: title_for_display,
       name: name,
       unitNumber: unit_number,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
+      scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
     }
@@ -1760,10 +1769,6 @@ class Unit < ApplicationRecord
   end
 
   def unit_number
-    has_prefix = unit_group&.has_numbered_units
-
-    return nil unless has_prefix
-
     unit_group_units&.first&.position
   end
 
@@ -1840,6 +1845,8 @@ class Unit < ApplicationRecord
       :editor_experiment,
       :curriculum_umbrella,
       :weekly_instructional_minutes,
+      :content_area,
+      :topic_tags
     ]
     boolean_keys = [
       :has_verified_resources,
@@ -2132,7 +2139,8 @@ class Unit < ApplicationRecord
   end
 
   def show_ai_assessments_announcement?(user)
-    user&.teacher? && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
+    # limit to CSD to avoid showing on allthethings
+    user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
   private def teacher_feedback_enabled?

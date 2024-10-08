@@ -28,6 +28,7 @@ function SectionProgressV2({
   isLoadingProgress,
   isRefreshingProgress,
   isLevelProgressLoaded,
+  isLoadingSectionData,
   expandedLessonIds,
   loadExpandedLessonsFromLocalStorage,
   hideTopHeading,
@@ -46,11 +47,37 @@ function SectionProgressV2({
     return unitData && isLevelProgressLoaded;
   }, [unitData, isLevelProgressLoaded]);
 
+  // We don't want to load data more than necessary, so we only load data when
+  // the scriptId or sectionId changes, and only if we haven't already loaded
+  // data for that scriptId and sectionId recently.
+  const [loadedData, setLoadedData] = React.useState({
+    scriptId: null,
+    sectionId: null,
+  });
+
   React.useEffect(() => {
-    if (!unitData && !isLoadingProgress && !isRefreshingProgress && scriptId) {
-      loadUnitProgress(scriptId, sectionId);
+    if (
+      (!unitData || unitData.id !== scriptId) &&
+      (scriptId !== loadedData.scriptId ||
+        sectionId !== loadedData.sectionId) &&
+      !isLoadingProgress &&
+      !isRefreshingProgress &&
+      sectionId &&
+      scriptId
+    ) {
+      loadUnitProgress(scriptId, sectionId).then(() =>
+        setLoadedData({scriptId, sectionId})
+      );
     }
-  }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
+  }, [
+    scriptId,
+    sectionId,
+    unitData,
+    isLoadingProgress,
+    isRefreshingProgress,
+    loadedData,
+    setLoadedData,
+  ]);
 
   const isViewingValidatedLevel = React.useMemo(() => {
     return unitData?.lessons
@@ -75,7 +102,14 @@ function SectionProgressV2({
           <MoreOptionsDropdown />
         </Heading6>
       </div>
-      <ProgressTableV2 isSkeleton={!levelDataInitialized} />
+      <ProgressTableV2
+        isSkeleton={
+          !levelDataInitialized ||
+          isLoadingSectionData ||
+          isLoadingProgress ||
+          isRefreshingProgress
+        }
+      />
     </div>
   );
 }
@@ -87,6 +121,7 @@ SectionProgressV2.propTypes = {
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
   isLevelProgressLoaded: PropTypes.bool.isRequired,
+  isLoadingSectionData: PropTypes.bool.isRequired,
   expandedLessonIds: PropTypes.array,
   loadExpandedLessonsFromLocalStorage: PropTypes.func.isRequired,
   hideTopHeading: PropTypes.bool,
@@ -103,6 +138,7 @@ export default connect(
       !!state.sectionProgress.studentLevelProgressByUnit[
         state.unitSelection.scriptId
       ],
+    isLoadingSectionData: state.teacherSections.isLoadingSectionData,
     expandedLessonIds:
       state.sectionProgress.expandedLessonIds[
         state.teacherSections.selectedSectionId

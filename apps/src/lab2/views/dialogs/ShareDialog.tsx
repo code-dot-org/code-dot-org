@@ -3,6 +3,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
@@ -48,8 +49,9 @@ const CopyToClipboardButton: React.FunctionComponent<{
  */
 const ShareDialog: React.FunctionComponent<{
   shareUrl: string;
+  finishUrl?: string;
   projectType: ProjectType;
-}> = ({shareUrl, projectType}) => {
+}> = ({shareUrl, finishUrl, projectType}) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -76,6 +78,15 @@ const ShareDialog: React.FunctionComponent<{
             <div id="share-qrcode-container">
               <QRCode value={shareUrl + '?qr=true'} size={140} />
             </div>
+            {finishUrl && (
+              <LinkButton
+                ariaLabel={i18n.done()}
+                href={finishUrl}
+                text={i18n.done()}
+                type="primary"
+                size="s"
+              />
+            )}
           </div>
           <button
             type="button"

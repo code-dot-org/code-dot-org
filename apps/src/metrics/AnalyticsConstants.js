@@ -19,6 +19,10 @@ const EVENTS = {
   ACCOUNT_SETTINGS_PAGE_VISITED: 'Account Settings Page Visited',
   LOGIN_PAGE_VISITED: 'Login Page Visited',
   LOGIN_PAGE_CREATE_ACCOUNT_CLICKED: 'Login Page Create Account Button Clicked',
+  CURRICULUM_FREE_DIALOG_BUTTON_CLICKED:
+    'Curriculum Free Dialog Button Clicked',
+  LMS_INFORMATION_BUTTON_CLICKED: 'LMS Information Button Clicked',
+  PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
 
   // School Association
   // Update School Info Dialog
@@ -143,6 +147,17 @@ const EVENTS = {
     'Section table sync google classroom clicked',
   SECTION_TABLE_SYNC_CLEVER_CLICKED: 'Section table sync clever clicked',
 
+  // Section students table on teacher My Dashboard
+  SECTION_STUDENTS_TABLE_US_STATE_SET: 'Section students table US state set',
+  SECTION_STUDENTS_TABLE_US_STATE_BULK_SET:
+    'Section students table US state bulk set',
+  SECTION_STUDENTS_TABLE_ADD_ROW_CLICKED:
+    'Section students table add row clicked',
+  SECTION_STUDENTS_TABLE_SAVE_ROW_CLICKED:
+    'Section students table save row clicked',
+  SECTION_STUDENTS_TABLE_SAVE_ALL_CLICKED:
+    'Section students table save all clicked',
+
   // Section progress v2
   PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
   PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
@@ -243,6 +258,11 @@ const EVENTS = {
   TA_RUBRIC_ANNOUNCEMENT_CLICKED: 'TA Rubric Announcement Clicked',
   TA_RUBRIC_ANNOUNCEMENT_DISMISSED: 'TA Rubric Announcement Dismissed',
 
+  //AI Differentiation
+  AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
+  AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',
+  AI_DIFF_CHAT_EVENT: 'AI Differentiation Message Event',
+
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
   AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
@@ -252,6 +272,7 @@ const EVENTS = {
   AI_TUTOR_SUGGESTED_PROMPT_VALIDATION: 'Validation',
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
+  AI_TUTOR_FEEDBACK_SUBMITTED: 'AI Tutor Feedback Submitted',
 
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
@@ -368,9 +389,10 @@ const EVENTS = {
   RECOMMENDED_STRETCH_CURRICULUM_CLICKED:
     'Recommended Stretch Curriculum Clicked',
 
-  // LTI Incubator
-  LTI_INCUBATOR_SIGNUP_CLICK: 'lti_incubator_signup_click',
-  LTI_INCUBATOR_GUIDES_CLICK: 'lti_incubator_guides_click',
+  // LTI & LMS
+  LTI_UNLINK_MODAL_SHOWN: 'lti_unlink_modal_shown',
+  LTI_UNLINK_CLICK: 'lti_unlink_click',
+  LTI_UNLINK_CANCEL: 'lti_unlink_cancel',
 
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
@@ -385,6 +407,37 @@ const EVENTS = {
   SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
     'Unauthorized user attempts to submit aichat request and fails',
+
+  // Codebridge - File broswer-related events
+  CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
+  CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
+  CODEBRIDGE_MOVE_FILE: 'Move file on codebridge',
+  CODEBRIDGE_MOVE_FOLDER: 'Move folder on codebridge',
+  CODEBRIDGE_NEW_FILE: 'Create a new file on codebridge',
+  CODEBRIDGE_NEW_FOLDER: 'Create a new folder on codebridge',
+  CODEBRIDGE_NEW_SUBFOLDER: 'Create a new subfolder on codebridge',
+  CODEBRIDGE_RENAME_FILE: 'Rename file on codebridge',
+  CODEBRIDGE_RENAME_FOLDER: 'Rename folder on codebridge',
+  CODEBRIDGE_DOWNLOAD_FILE: 'Download file on codebridge',
+  CODEBRIDGE_UPLOAD_FILE: 'Upload file on codebridge',
+  CODEBRIDGE_UPLOAD_INVALID_FILE_NAME:
+    'Attempted upload of invalid file name on codebridge',
+  CODEBRIDGE_UPLOAD_UNACCEPTED_FILE:
+    'Attempted upload of unaccepted file on codebridge',
+  CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',
+
+  // Codebridge - Other events
+  CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
+  CODEBRIDGE_MOVE_CONSOLE: 'Console moved on codebridge',
+  CODEBRIDGE_POP_OUT_IMAGE: 'Image popped out of console on codebridge',
+  CODEBRIDGE_RUN_CLICK: 'Run button clicked on codebridge',
+  CODEBRIDGE_VALIDATE_CLICK: 'Validate button clicked on codebridge',
+  CODEBRIDGE_VERSION_RESTORED: 'Version restored on codebridge',
+  CODEBRIDGE_VERSION_VIEWED: 'Version viewed on codebridge',
+  CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
+    'Toggled to For Teachers Only on codebridge',
+  CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
+  CODEBRIDGE_HELP_TIPS_TOGGLE: 'Toggled to Help and Tips on codebridge',
 };
 
 const EVENT_GROUP_NAMES = {

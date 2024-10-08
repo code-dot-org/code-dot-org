@@ -31,6 +31,8 @@ class ApplicationController < ActionController::Base
 
   before_action :initialize_statsig_session
 
+  around_action :with_global_current_user
+
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
     if request.formats.include?("image/*") &&
@@ -405,5 +407,13 @@ class ApplicationController < ActionController::Base
 
   private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
+  end
+
+  # Makes `current_user` accessible everywhere within an HTTP request.
+  private def with_global_current_user
+    RequestStore.store[:current_user] = current_user
+    yield
+  ensure
+    RequestStore.store[:current_user] = nil
   end
 end

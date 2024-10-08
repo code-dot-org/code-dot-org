@@ -6,6 +6,10 @@ import {
 } from '@codebridge/types';
 import {useMemo} from 'react';
 
+// disabling locales and falling back on the hardwired default due to apparent circular dep
+// import codebridgeI18n from '@cdo/apps/codebridge/locale';
+const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
+
 import {DEFAULT_FOLDER_ID} from '../constants';
 
 import {PROJECT_REDUCER_ACTIONS} from './constants';
@@ -19,6 +23,7 @@ import {
   DeleteFileFunction,
   SetActiveFileFunction,
   MoveFileFunction,
+  MoveFolderFunction,
   NewFolderFunction,
   RearrangeFilesFunction,
   RenameFolderFunction,
@@ -26,8 +31,6 @@ import {
   DeleteFolderFunction,
   SetFileTypeFunction,
 } from './types';
-
-const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
 
 export const getNextFileId = (files: ProjectFile[]) => {
   return String(Math.max(0, ...files.map(f => Number(f.id))) + 1);
@@ -76,6 +79,8 @@ export const useProjectUtilities = (
         fileId,
         fileName,
         folderId = DEFAULT_FOLDER_ID,
+        // this line causes the apparent circular dependency issue
+        // contents = codebridgeI18n.defaultNewFileContents({fileName}),
         contents = DEFAULT_NEW_FILE_CONTENTS,
       }) => {
         dispatch({
@@ -128,6 +133,12 @@ export const useProjectUtilities = (
         dispatch({
           type: PROJECT_REDUCER_ACTIONS.MOVE_FILE,
           payload: {fileId, folderId},
+        });
+      }),
+      moveFolder: <MoveFolderFunction>((folderId, parentId) => {
+        dispatch({
+          type: PROJECT_REDUCER_ACTIONS.MOVE_FOLDER,
+          payload: {folderId, parentId},
         });
       }),
 

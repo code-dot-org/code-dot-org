@@ -31,6 +31,10 @@ class FieldPattern extends GoogleBlockly.Field {
   }
 
   loadState(state) {
+    if (state.kit) {
+      state.instrument = state.kit;
+      delete state.kit;
+    }
     this.setValue(state);
   }
 
@@ -106,12 +110,10 @@ class FieldPattern extends GoogleBlockly.Field {
 
     ReactDOM.render(
       <PatternPanel
-        library={this.options.getLibrary()}
         initValue={this.getValue()}
         onChange={value => {
           this.setValue(value);
         }}
-        {...this.options}
       />,
       this.newDiv_
     );
@@ -150,7 +152,6 @@ class FieldPattern extends GoogleBlockly.Field {
       height: FIELD_HEIGHT,
       padding: FIELD_PADDING,
       eventScale: 2,
-      library: this.options.getLibrary(),
     });
 
     graphNotes.forEach(graphNote => {

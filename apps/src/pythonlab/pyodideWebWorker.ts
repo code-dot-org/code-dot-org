@@ -64,11 +64,22 @@ initializePyodide();
 onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
-  const {id, python, source} = event.data;
+  const {id, python, source, validationFile} = event.data;
   let results = undefined;
+  let sourceToWrite = source;
+  // Add the validation file to the source if it exists.
+  if (validationFile) {
+    sourceToWrite = {
+      ...source,
+      files: {
+        ...source.files,
+        [validationFile.id]: validationFile,
+      },
+    };
+  }
   try {
-    writeSource(source, DEFAULT_FOLDER_ID, '', pyodide);
-    await importPackagesFromFiles(source, pyodide);
+    writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
+    await importPackagesFromFiles(sourceToWrite, pyodide);
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
@@ -76,15 +87,19 @@ onmessage = async event => {
     postMessage({type: 'error', message: (error as Error).message, id});
   }
   // Clean up environment.
-  await runInternalCode(getCleanupCode(source), id);
+  await runInternalCode(getCleanupCode(sourceToWrite), id);
   // We run setup code at the end to prepare the environment for the next run.
   await runInternalCode(SETUP_CODE, id);
+  // We don't want to send back the validation file as part of the sources,
+  // so we skip adding it to updatedSource.
+  const filenamesToSkipSaving = validationFile ? [validationFile.name] : [];
 
   const updatedSource = getUpdatedSourceAndDeleteFiles(
     source,
     id,
     pyodide,
-    postMessage
+    postMessage,
+    filenamesToSkipSaving
   );
   postMessage({type: 'updated_source', message: updatedSource, id});
   resetGlobals(pyodide, pyodideGlobals);
@@ -93,7 +108,14 @@ onmessage = async event => {
   // Documentation on this method:
   // https://pyodide.org/en/stable/usage/api/js-api.html#pyodide.ffi.PyProxy.toJs
   const resultsObject = results?.toJs();
-  postMessage({type: 'run_complete', message: resultsObject, id});
+  try {
+    postMessage({type: 'run_complete', message: resultsObject, id});
+  } catch (e) {
+    // Likely we hit a DataCloneError trying to send the resultsObject.
+    // In this case, don't try to send the results object, as if it can't be
+    // sent, it wasn't going to be parsed by us anyway.
+    postMessage({type: 'run_complete', id});
+  }
 };
 
 // Run code owned by us (not the user). If there is an error, post a
