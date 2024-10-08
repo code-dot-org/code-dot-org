@@ -21,10 +21,12 @@ interface SchoolInfo {
 
 interface SchoolInformationProps {
   schoolInfo?: SchoolInfo;
+  isStudent: boolean;
 }
 
 export const SchoolInformation: React.FC<SchoolInformationProps> = ({
   schoolInfo,
+  isStudent,
 }) => {
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState(false);
@@ -82,6 +84,10 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
     setFailure(false);
     setSuccess(false);
   };
+
+  if (isStudent) {
+    return null;
+  }
 
   return (
     <>

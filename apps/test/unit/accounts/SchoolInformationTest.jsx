@@ -22,6 +22,7 @@ describe('SchoolInformation', () => {
       school_id: '54321',
       school_type: undefined,
     },
+    isStudent: false,
   };
 
   const mockSchoolInfo = {
@@ -46,11 +47,18 @@ describe('SchoolInformation', () => {
     jest.clearAllMocks();
   });
 
-  it('renders the component', () => {
+  it('renders the component for teachers', () => {
     render(<SchoolInformation {...defaultProps} />);
     expect(
       screen.getByText(i18n.schoolInformationSchoolInformation())
     ).toBeInTheDocument();
+  });
+
+  it('does not render the component for students', () => {
+    render(<SchoolInformation {...defaultProps} isStudent={true} />);
+    expect(
+      screen.queryByText(i18n.schoolInformationSchoolInformation())
+    ).toBeNull();
   });
 
   it('renders the form fields and the button', () => {
