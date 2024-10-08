@@ -1,0 +1,29 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-10-07T22:05:49.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_1",
+    "panels": [
+      {
+        "text": "In the next level, you'll find a function in your workspace.\nNotice how it does not connect to the `when run` block. ",
+        "imageUrl": "https://images.code.org/d834eb8e2ad99b1107fce23d9ce02dad-Screen Shot 2024-09-30 at 1.54.00 PM.png",
+        "key": "music_ai_panels_function_2-c8877cb4-6e4a-4df6-8f35-d07d428a37ed",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "The function won't work until you \"call\" it:\n- Find the block with the function's name in your Toolbox.\n- Add it under 'when run.'\n- You can use it multiple times!\n\n",
+        "imageUrl": "https://images.code.org/73c335ff2947ca7f53a0a4dbb69fcb05-functions_gif.gif",
+        "key": "music_ai_panels_function_2-4c0067c6-4389-4f22-9bb1-9e80df2d3cf6",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.457+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function_3\\\"\"],\"cloned_from\":\"music_ai_panels_function_3\"}]"
+}]]></config>
+</Panels>
