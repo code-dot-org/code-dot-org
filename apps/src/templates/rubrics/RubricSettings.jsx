@@ -51,6 +51,7 @@ function RubricSettings({
   reportingData,
   aiRubricsDisabled,
   setAiRubricsDisabled,
+  allTeacherEvaluationData,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
@@ -80,12 +81,6 @@ function RubricSettings({
   const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
     return fetch(
       `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
-    );
-  };
-
-  const fetchTeacherEvaluationAll = (rubricId, sectionId) => {
-    return fetch(
-      `/rubrics/${rubricId}/get_teacher_evaluations_for_all?section_id=${sectionId}`
     );
   };
 
@@ -186,17 +181,11 @@ function RubricSettings({
   };
 
   useEffect(() => {
-    const abort = new AbortController();
-    if (!!rubricId && !!sectionId) {
-      fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
-        if (response.ok) {
-          response.json().then(parseTeacherEvaluationData);
-        }
-      });
+    if (allTeacherEvaluationData && allTeacherEvaluationData.length > 0) {
+      parseTeacherEvaluationData(allTeacherEvaluationData);
     }
-    return () => abort.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [rubricId, sectionId]);
+  }, [allTeacherEvaluationData]);
 
   // after ai eval is requested, poll for status changes
   useEffect(() => {
@@ -406,6 +395,7 @@ RubricSettings.propTypes = {
   reportingData: reportingDataShape,
   aiRubricsDisabled: PropTypes.bool,
   setAiRubricsDisabled: PropTypes.func.isRequired,
+  allTeacherEvaluationData: PropTypes.array,
 };
 
 export const UnconnectedRubricSettings = RubricSettings;
