@@ -13,7 +13,7 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenNewFilePromptArgsType = {
-  folderId: FolderId;
+  folderId?: FolderId;
   appName: string;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   newFile: NewFileFunction;
@@ -33,7 +33,7 @@ export const openNewFilePrompt = async ({
   isStartMode,
   validationFile,
 }: OpenNewFilePromptArgsType) => {
-  const results = await dialogControl?.showDialog({
+  const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
     title: codebridgeI18n.newFilePrompt(),
     validateInput: (fileName: string) =>

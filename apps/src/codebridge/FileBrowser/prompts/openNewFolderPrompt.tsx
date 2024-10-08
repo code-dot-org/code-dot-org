@@ -13,7 +13,7 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenNewFilePromptArgsType = {
-  parentId: FolderId;
+  parentId?: FolderId;
   appName: string;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   newFolder: NewFolderFunction;

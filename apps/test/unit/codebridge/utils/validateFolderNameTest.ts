@@ -3,7 +3,7 @@ import {validateFolderName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
-import testProject from '../testProject.json';
+import {testProject} from '../test-files';
 
 describe('validateFolderName', function () {
   it('can validateFolderName', function () {
