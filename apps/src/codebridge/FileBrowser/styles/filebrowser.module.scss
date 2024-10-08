@@ -2,9 +2,15 @@
 
 .file-browser {
   height: 100%;
-  background-color: $darkest_gray;
+  background-color: $light_gray_950;
   color: $white;
 }
+
+.fileBrowserHeader {
+  background-color: $light_gray_950;
+  border-bottom: 1px solid #54595E;
+}
+
 .file-browser ul {
   list-style: none;
   margin: 0;
@@ -20,12 +26,18 @@
   align-items: center;
   cursor: pointer;
   font-size: 14px;
+  min-height: 24px;
+
+  &:hover {
+    background-color: $light_gray_800;
+  }
 }
 
 .title {
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .file-browser ul li span.button-bar {
@@ -52,7 +64,9 @@
 
 li .button-kebab {
   display: none;
-  height: 13px;
+  height: 20px;
+  width: 20px;
+  margin: 2px;
 }
 
 div.row:hover .button-kebab {
@@ -69,12 +83,17 @@ div.row:hover .button-kebab {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
+  margin-right: 4px;
 }
 
 .rowIcon {
   margin: 2px 8px 2px 8px;
   font-size: 13px;
   line-height: 125%;
+
+  // prevents caret-down icon from pushing
+  // text to the right when toggling folders
+  min-width: 9px;
 }
 
 .acceptingDrop {
@@ -86,5 +105,6 @@ div.row:hover .button-kebab {
 }
 
 .dropdownItem {
-  width: 100px;
+  width: auto;
+  min-width: 100px;
 }

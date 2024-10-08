@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-09-30T17:16:41.000Z",
   "level_num": "custom",
@@ -10,13 +11,32 @@
     "name_suffix": "_3",
     "panels": [
       {
+        "text": "Great job! You just wrote your first lines of code.\n\nKnowing how code works helps me solve big problems as a product manager.\n",
+        "imageUrl": "https://images.code.org/ae51290ff3510701802fe31cc7dc1803-Screen Shot 2024-10-01 at 9.02.44 PM.png",
+        "key": "music_ai_panels_playtogether_3-fa7e7e9c-4ae6-45a7-8248-bef386648cff"
+      },
+      {
+        "text": "I loved team sports as a kid.\n\nNow I lead a team of coders!",
+        "imageUrl": "https://images.code.org/31e825f2d3e38313125d703af1114c38-Screen Shot 2024-10-01 at 9.10.35 PM.png",
+        "key": "music_ai_panels_playtogether_3-b01a9362-2f56-4898-b3d6-983fe3eb598b"
+      },
+      {
+        "text": "I'm like a band leader.\n\nI guide my team to create a great music listening experience for the audience on our app.",
+        "imageUrl": "https://images.code.org/851cc86c0dd59fda80d60a43e013e373-jazz-band-concert-music-band-musicians-singing-and-playing-guitar-and-drums-and-bass-modern-jazz-team-rock-band-performance-illustration-vector.jpg",
+        "key": "music_ai_panels_playtogether_3-3f141e1d-8f98-458f-ab5e-d64387c3b87e"
+      },
+      {
         "imageUrl": "https://images.code.org/b886435ca56512e7c56016cbae52574e-play together (1).gif",
-        "text": "###Play Together\n\nPlay sounds at the same time! Drag two or more sounds into the **play together** block.",
+        "text": "Working together is how we’re successful.\n\nNext, you’ll learn to make sounds work together.",
         "key": "musiclab_intro_panels_playtogether_pdx-a5066092-2920-4c8d-89ea-00b7a8531ad0"
+      },
+      {
+        "text": "Use the \"play together\" block to combine sounds. \n\nTry out different combinations to create great music!",
+        "imageUrl": "https://images.code.org/6c0d2e221de0041a36395cb5289b12ad-Screen Shot 2024-10-01 at 9.25.07 PM.png",
+        "key": "music_ai_panels_playtogether_3-6c8a20ce-7787-4113-90a5-d366ecd7355f"
       }
     ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:41.312+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_playtogether_2\\\"\"],\"cloned_from\":\"music_ai_panels_playtogether_2\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:41.312+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_playtogether_2\\\"\"],\"cloned_from\":\"music_ai_panels_playtogether_2\"},{\"changed_at\":\"2024-10-02 04:25:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-02 04:43:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2024-10-02 04:45:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2024-10-02 04:45:40 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2024-10-02 04:53:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2024-10-02 04:54:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2024-10-02 04:55:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2024-10-02 04:56:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Panels>

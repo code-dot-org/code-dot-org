@@ -39,7 +39,7 @@ const ResourceRow: React.FC<ResourceRowProps> = ({
   ) : null;
 
   return (
-    <div className={styles.rowContainer}>
+    <div className={styles.rowContainer} data-testid="resource-row">
       <div className={styles.iconAndName}>
         <ResourceIcon resourceType={resource.type} resourceUrl={resource.url} />
         <BodyTwoText className={styles.resourceLabel}>

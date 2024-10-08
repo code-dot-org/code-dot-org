@@ -105,6 +105,7 @@ const LessonMaterialsContainer: React.FC = () => {
         standardsUrl={selectedLesson.standardsUrl}
         vocabularyUrl={selectedLesson.vocabularyUrl}
         lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
+        lessonPlanPdfUrl={selectedLesson.lessonPlanPdfUrl}
         lessonName={selectedLesson.name}
       />
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
 import {useNavigate, NavLink} from 'react-router-dom';
 
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
@@ -29,6 +30,11 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
   courseName,
   element,
 }) => {
+  const isLoadingSectionData = useSelector(
+    (state: {teacherSections: {isLoadingSectionData: boolean}}) =>
+      state.teacherSections.isLoadingSectionData
+  );
+
   const textDescription = () => {
     if (showNoStudents) {
       return i18n.emptySectionDescription();
@@ -82,7 +88,11 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
     });
   };
 
-  if (!showNoStudents && !showNoCurriculumAssigned && !showNoUnitAssigned) {
+  // Don't show the empty state if we're still loading data
+  if (
+    isLoadingSectionData ||
+    (!showNoStudents && !showNoCurriculumAssigned && !showNoUnitAssigned)
+  ) {
     return element;
   } else {
     return (

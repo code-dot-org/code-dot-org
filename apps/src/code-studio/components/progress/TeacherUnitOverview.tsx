@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
+import {useNavigate, useParams} from 'react-router-dom';
 
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import plcHeaderReducer, {
@@ -34,13 +35,13 @@ import UnitOverview from './UnitOverview';
 
 interface Section {
   id: number;
-  courseId: number;
+  courseId: number | null;
   courseVersionId: number;
-  courseVersionName: string;
-  courseOfferingId: number;
-  unitId: number;
-  unitName: string;
-  courseDisplayName: string;
+  courseVersionName: string | null;
+  courseOfferingId: number | null;
+  unitId: number | null;
+  unitName: string | null;
+  courseDisplayName: string | null;
 }
 
 interface Resource {
@@ -272,16 +273,21 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
   );
 
-  const unitName = useSelector(
-    (state: {unitSelection: {unitName: string}}) => state.unitSelection.unitName
-  );
-
   const {userId, userType} = useAppSelector(state => ({
     userId: state.currentUser.userId,
     userType: state.currentUser.userType,
   }));
 
   const dispatch = useAppDispatch();
+
+  const navigate = useNavigate();
+  const {unitName} = useParams();
+
+  React.useEffect(() => {
+    if (!unitName && selectedSection.unitName) {
+      navigate(selectedSection.unitName, {replace: true});
+    }
+  });
 
   React.useEffect(() => {
     if (!unitName || !userType || !userId) {

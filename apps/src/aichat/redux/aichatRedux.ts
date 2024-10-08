@@ -8,10 +8,12 @@ import {
 } from '@reduxjs/toolkit';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentScriptLevelId,
   getCurrentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -28,7 +30,7 @@ import {
   postAichatCompletionMessage,
 } from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
-import {saveTypeToAnalyticsEvent} from '../constants';
+import {ModalTypes, saveTypeToAnalyticsEvent} from '../constants';
 import {
   AichatContext,
   AiCustomizations,
@@ -66,6 +68,7 @@ type MessageLocation = {
   index: number;
   messageListKey: (typeof messageListKeys)[number];
 };
+type ModalType = ModalTypes.WARNING | ModalTypes.TEACHER_ONBOARDING | undefined;
 
 export interface AichatState {
   // Content from previous chat sessions that we track purely for visibility to the user
@@ -79,8 +82,8 @@ export interface AichatState {
   isWaitingForChatResponse: boolean;
   // Student events viewed by a teacher user in chat workspace
   studentChatHistory: ChatEvent[];
-  // Denotes whether we should show the warning modal
-  showWarningModal: boolean;
+  // Denotes whether we should show the warning or teacher onboarding modal
+  showModalType: ModalType;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   initialAiCustomizations: AiCustomizations;
@@ -101,7 +104,7 @@ const initialState: AichatState = {
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
   studentChatHistory: [],
-  showWarningModal: true,
+  showModalType: undefined,
   chatMessageError: false,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -292,6 +295,9 @@ export const onSaveComplete =
     dispatch(setSavedAiCustomizations(currentAiCustomizations));
     // Notify the UI that the save is complete.
     dispatch(endSave());
+    // Send a report that user has started the aichat level after a successful save.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     // Go to the presentation page if we just finished publishing the model card.
     if (currentSaveType === 'publishModelCard') {
       dispatch(setViewMode(ViewMode.PRESENTATION));
@@ -457,6 +463,10 @@ export const submitChatContents = createAsyncThunk(
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
+    // Send a report that the user has started the aichat level after successfully sending
+    // a chat message and then receiving a response from the chatbot.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     chatApiResponse.messages.forEach(message => {
       dispatch(addChatEvent({...message, timestamp: Date.now()}));
     });
@@ -606,8 +616,8 @@ const aichatSlice = createSlice({
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
     },
-    setShowWarningModal: (state, action: PayloadAction<boolean>) => {
-      state.showWarningModal = action.payload;
+    setShowModalType: (state, action: PayloadAction<ModalType>) => {
+      state.showModalType = action.payload;
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
@@ -817,7 +827,7 @@ export const {
   setAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
-  setShowWarningModal,
+  setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
   setUserHasAichatAccess,
