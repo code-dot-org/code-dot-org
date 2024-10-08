@@ -8,7 +8,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
   DialogType,
   DialogControlInterface,
-  extractDialogClosePromiseInput,
+  extractUserInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
@@ -48,7 +48,7 @@ export const openNewFilePrompt = async ({
   if (results.type !== 'confirm') {
     return;
   }
-  const fileName = extractDialogClosePromiseInput(results);
+  const fileName = extractUserInput(results);
 
   const files = Object.values(projectFiles);
   // The validation file is in the project files in start mode.

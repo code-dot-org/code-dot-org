@@ -1,6 +1,6 @@
 import {isValidFolderName} from '@codebridge/utils';
 
-describe('CodeBrige/utils/isValidFolderName', function () {
+describe('isValidFolderName', function () {
   it('can determine isValidFolderName', function () {
     expect(isValidFolderName('test')).toBe(true);
     expect(isValidFolderName('test_underscore')).toBe(true); // can have underscores

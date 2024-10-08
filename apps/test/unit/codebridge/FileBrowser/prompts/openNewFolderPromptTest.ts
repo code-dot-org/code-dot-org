@@ -1,5 +1,6 @@
 import {NewFolderFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+
 import {openNewFolderPrompt} from '@codebridge/FileBrowser/prompts/openNewFolderPrompt';
 import {FolderId, ProjectFolder} from '@codebridge/types';
 

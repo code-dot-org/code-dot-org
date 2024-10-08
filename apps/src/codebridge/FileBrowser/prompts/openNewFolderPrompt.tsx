@@ -8,7 +8,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
   DialogType,
   DialogControlInterface,
-  extractDialogClosePromiseInput,
+  extractUserInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
@@ -38,7 +38,7 @@ export const openNewFolderPrompt = async ({
   if (results.type !== 'confirm') {
     return;
   }
-  const folderName = extractDialogClosePromiseInput(results);
+  const folderName = extractUserInput(results);
 
   const folderId = getNextFolderId(Object.values(projectFolders));
   newFolder({parentId, folderName, folderId});
