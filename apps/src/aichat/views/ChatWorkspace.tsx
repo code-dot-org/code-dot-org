@@ -10,6 +10,7 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
+import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getShortName} from '../utils';
@@ -107,6 +108,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList events={studentChatHistory} isTeacherView={true} />
       ),
       iconLeft: iconValue,
+      tooltip: {
+        text: `${viewStudentChatHistoryLabel} - Click on Instructions header for more info.`,
+        tooltipId: 'tooltipChatHistory',
+        direction: 'onBottom',
+      } as TooltipProps,
     },
     {
       value: 'testStudentModel',
