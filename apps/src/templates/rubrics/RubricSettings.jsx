@@ -120,6 +120,22 @@ function RubricSettings({
     setDisplayDetails(!displayDetails);
   };
 
+  const parseAiEvaluationStatusAll = data => {
+    // we can't fetch the csrf token from the DOM because CSRF protection
+    // is disabled on script level pages.
+    setCsrfToken(data.csrfToken);
+    setUnevaluatedCount(data.attemptedUnevaluatedCount);
+    setTotalCount(data.attemptedCount + data.notAttemptedCount);
+    setEvaluatedCount(data.lastAttemptEvaluatedCount);
+    if (data.attemptedCount === 0) {
+      setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
+    } else if (data.attemptedUnevaluatedCount === 0) {
+      setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
+    } else {
+      setStatusAll(STATUS_ALL.READY);
+    }
+  };
+
   // load initial ai evaluation status
   useEffect(() => {
     const abort = new AbortController();
@@ -128,21 +144,7 @@ function RubricSettings({
         if (!response.ok) {
           setStatusAll(STATUS_ALL.ERROR);
         } else {
-          response.json().then(data => {
-            // we can't fetch the csrf token from the DOM because CSRF protection
-            // is disabled on script level pages.
-            setCsrfToken(data.csrfToken);
-            setUnevaluatedCount(data.attemptedUnevaluatedCount);
-            setTotalCount(data.attemptedCount + data.notAttemptedCount);
-            setEvaluatedCount(data.lastAttemptEvaluatedCount);
-            if (data.attemptedCount === 0) {
-              setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
-            } else if (data.attemptedUnevaluatedCount === 0) {
-              setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
-            } else {
-              setStatusAll(STATUS_ALL.READY);
-            }
-          });
+          response.json().then(parseAiEvaluationStatusAll);
         }
       });
     }
