@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -37,6 +37,15 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
     schoolType: schoolInfo?.school_type,
   });
 
+  useEffect(() => {
+    resetAlerts();
+  }, [
+    schoolDataInfoProps.schoolId,
+    schoolDataInfoProps.schoolName,
+    schoolDataInfoProps.country,
+    schoolDataInfoProps.schoolZip,
+  ]);
+
   const handleSchoolInformationUpdate = async () => {
     try {
       await updateSchoolInfo({
@@ -68,6 +77,11 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
       schoolDataInfoProps.schoolsList,
     ]
   );
+
+  const resetAlerts = () => {
+    setFailure(false);
+    setSuccess(false);
+  };
 
   return (
     <>
