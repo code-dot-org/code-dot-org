@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-04 16:02:33 UTC",
+    "serialized_at": "2024-10-07 18:54:18 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -2811,15 +2811,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS-chkUnderstandingASsesandgroup"
-        ],
         "progression": "Assessing and Grouping Data "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "sp-pl-DS-chkUnderstandingASsesandgroup"
+          "SP-PL_DS-U2L6-L1"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2827,12 +2824,144 @@
         "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
       },
       "level_keys": [
-        "sp-pl-DS-chkUnderstandingASsesandgroup"
+        "SP-PL_DS-U2L6-L1"
       ]
     },
     {
       "chapter": 99,
       "position": 49,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessing and Grouping Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-PL-DS-Predict_Debrief_Grouping"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      },
+      "level_keys": [
+        "SP-PL-DS-Predict_Debrief_Grouping"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 50,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessing and Grouping Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-PL-DS-U2L6-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      },
+      "level_keys": [
+        "SP-PL-DS-U2L6-L3"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 51,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessing and Grouping Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-PL-DS-U2L6-L7"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      },
+      "level_keys": [
+        "SP-PL-DS-U2L6-L7"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 52,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessing and Grouping Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS-Panels_indexing"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      },
+      "level_keys": [
+        "sp-pl-DS-Panels_indexing"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 53,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessing and Grouping Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-PL-DS-groupby"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      },
+      "level_keys": [
+        "SP-PL-DS-groupby"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 54,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessing and Grouping Data "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-PL-DS-U2L6-L7Prac"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      },
+      "level_keys": [
+        "SP-PL-DS-U2L6-L7Prac"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 55,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2856,8 +2985,8 @@
       ]
     },
     {
-      "chapter": 100,
-      "position": 50,
+      "chapter": 106,
+      "position": 56,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2881,8 +3010,8 @@
       ]
     },
     {
-      "chapter": 101,
-      "position": 51,
+      "chapter": 107,
+      "position": 57,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2906,8 +3035,8 @@
       ]
     },
     {
-      "chapter": 102,
-      "position": 52,
+      "chapter": 108,
+      "position": 58,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2931,8 +3060,8 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 53,
+      "chapter": 109,
+      "position": 59,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2956,8 +3085,8 @@
       ]
     },
     {
-      "chapter": 104,
-      "position": 54,
+      "chapter": 110,
+      "position": 60,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2981,8 +3110,8 @@
       ]
     },
     {
-      "chapter": 105,
-      "position": 55,
+      "chapter": 111,
+      "position": 61,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3006,8 +3135,8 @@
       ]
     },
     {
-      "chapter": 106,
-      "position": 56,
+      "chapter": 112,
+      "position": 62,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3031,8 +3160,8 @@
       ]
     },
     {
-      "chapter": 107,
-      "position": 57,
+      "chapter": 113,
+      "position": 63,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3056,8 +3185,8 @@
       ]
     },
     {
-      "chapter": 108,
-      "position": 58,
+      "chapter": 114,
+      "position": 64,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3081,8 +3210,8 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 59,
+      "chapter": 115,
+      "position": 65,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3106,8 +3235,8 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 60,
+      "chapter": 116,
+      "position": 66,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3131,7 +3260,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 117,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3156,7 +3285,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 118,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3181,7 +3310,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 119,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3206,7 +3335,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 120,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3231,7 +3360,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 121,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4423,9 +4552,81 @@
     },
     {
       "seeding_key": {
-        "level.key": "sp-pl-DS-chkUnderstandingASsesandgroup",
+        "level.key": "SP-PL_DS-U2L6-L1",
         "script_level.level_keys": [
-          "sp-pl-DS-chkUnderstandingASsesandgroup"
+          "SP-PL_DS-U2L6-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-PL-DS-Predict_Debrief_Grouping",
+        "script_level.level_keys": [
+          "SP-PL-DS-Predict_Debrief_Grouping"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-PL-DS-U2L6-L3",
+        "script_level.level_keys": [
+          "SP-PL-DS-U2L6-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-PL-DS-U2L6-L7",
+        "script_level.level_keys": [
+          "SP-PL-DS-U2L6-L7"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS-Panels_indexing",
+        "script_level.level_keys": [
+          "sp-pl-DS-Panels_indexing"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-PL-DS-groupby",
+        "script_level.level_keys": [
+          "SP-PL-DS-groupby"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "3f61926f-2b20-40f5-8e5b-f79f72284d99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-PL-DS-U2L6-L7Prac",
+        "script_level.level_keys": [
+          "SP-PL-DS-U2L6-L7Prac"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
