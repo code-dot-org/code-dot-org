@@ -4,15 +4,18 @@ import {useSelector} from 'react-redux';
 import {
   fetchStudentChatHistory,
   selectAllVisibleMessages,
-  setShowWarningModal,
+  setShowModalType,
 } from '@cdo/apps/aichat/redux/aichatRedux';
+import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
+import {ModalTypes} from '../constants';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
@@ -49,9 +52,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showWarningModal, studentChatHistory} = useAppSelector(
+  const {showModalType, studentChatHistory} = useAppSelector(
     state => state.aichat
   );
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const visibleItems = useSelector(selectAllVisibleMessages);
@@ -81,6 +85,18 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
     [selectedTab]
   );
+
+  useEffect(() => {
+    const teacherSawAichatOnboardingModal = tryGetLocalStorage(
+      'teacherSawAichatOnboarding',
+      'no'
+    );
+    const modalToShow =
+      isUserTeacher && teacherSawAichatOnboardingModal !== 'yes'
+        ? ModalTypes.TEACHER_ONBOARDING
+        : ModalTypes.WARNING;
+    dispatch(setShowModalType(modalToShow));
+  }, [isUserTeacher, dispatch]);
 
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
@@ -138,14 +154,30 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  const onCloseWarningModal = useCallback(
-    () => dispatch(setShowWarningModal(false)),
-    [dispatch]
+  const ChatModal = useMemo(
+    () =>
+      showModalType === ModalTypes.TEACHER_ONBOARDING
+        ? TeacherOnboardingModal
+        : showModalType === ModalTypes.WARNING
+        ? ChatWarningModal
+        : undefined,
+    [showModalType]
   );
+
+  const onCloseModal = useCallback(() => {
+    if (
+      isUserTeacher &&
+      showModalType === ModalTypes.TEACHER_ONBOARDING &&
+      tryGetLocalStorage('teacherSawAichatOnboarding', 'no') !== 'yes'
+    ) {
+      trySetLocalStorage('teacherSawAichatOnboarding', 'yes');
+    }
+    dispatch(setShowModalType(undefined));
+  }, [dispatch, isUserTeacher, showModalType]);
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
+      {ChatModal && <ChatModal onClose={onCloseModal} />}
       {viewAsUserId ? (
         <Tabs {...tabArgs} />
       ) : (

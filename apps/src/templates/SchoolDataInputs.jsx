@@ -5,15 +5,13 @@ import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import {
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
-  SELECT_A_SCHOOL,
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
   ZIP_REGEX,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {getCountriesUsFirst} from '../schoolInfo/utils/getCountriesUsFirst';
@@ -21,8 +19,8 @@ import {getCountriesUsFirst} from '../schoolInfo/utils/getCountriesUsFirst';
 import style from './school-association.module.scss';
 
 const SEARCH_DEFAULTS = [
-  {value: CLICK_TO_ADD, text: i18n.schoolClickToAdd()},
-  {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
+  {value: NonSchoolOptions.CLICK_TO_ADD, text: i18n.schoolClickToAdd()},
+  {value: NonSchoolOptions.NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
 
 const COUNTRIES_US_FIRST = getCountriesUsFirst();
@@ -56,10 +54,13 @@ export default function SchoolDataInputs({
     [country, usIp]
   );
 
-  const inputManually = useMemo(() => schoolId === CLICK_TO_ADD, [schoolId]);
+  const inputManually = useMemo(
+    () => schoolId === NonSchoolOptions.CLICK_TO_ADD,
+    [schoolId]
+  );
 
   const showNoSchoolSettingButton = useMemo(
-    () => schoolId !== NO_SCHOOL_SETTING,
+    () => schoolId !== NonSchoolOptions.NO_SCHOOL_SETTING,
     [schoolId]
   );
 
@@ -70,7 +71,7 @@ export default function SchoolDataInputs({
 
   const schoolSelectOptions = useMemo(
     () => [
-      {value: SELECT_A_SCHOOL, text: i18n.selectASchool()},
+      {value: NonSchoolOptions.SELECT_A_SCHOOL, text: i18n.selectASchool()},
       ...schoolsList,
     ],
     [schoolsList]
@@ -160,7 +161,7 @@ export default function SchoolDataInputs({
                 size={'xs'}
                 onClick={e => {
                   e.preventDefault();
-                  handleSchoolChange(NO_SCHOOL_SETTING);
+                  handleSchoolChange(NonSchoolOptions.NO_SCHOOL_SETTING);
                 }}
               />
             )}
@@ -179,7 +180,7 @@ export default function SchoolDataInputs({
               type={'tertiary'}
               size={'xs'}
               onClick={() => {
-                handleSchoolChange(SELECT_A_SCHOOL);
+                handleSchoolChange(NonSchoolOptions.SELECT_A_SCHOOL);
               }}
             />
           </div>
@@ -188,12 +189,12 @@ export default function SchoolDataInputs({
       {/* hidden fields are needed when form is submitted in _finish_sign_up.js 
       in order to pass the default schoolType when the user does 
       not teach in a school setting */}
-      {schoolId === NO_SCHOOL_SETTING && (
+      {schoolId === NonSchoolOptions.NO_SCHOOL_SETTING && (
         <input
           hidden
           readOnly
           name={fieldNames.schoolType}
-          value={NO_SCHOOL_SETTING}
+          value={NonSchoolOptions.NO_SCHOOL_SETTING}
         />
       )}
     </div>

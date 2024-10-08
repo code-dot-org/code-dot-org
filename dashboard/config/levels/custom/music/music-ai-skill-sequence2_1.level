@@ -1,0 +1,229 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-07T22:05:47.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "####Play More than One Sound\r\n\r\n- Drag two or more [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block). \r\n- Choose two different sounds. \r\n- Press [Run](#clickable=run-button).",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_d6a47c71-67df-4b83-950a-71b503c6cdb6",
+        "message": "That sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "electro/drum_beat_edm"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence2_3_cc846575-fc94-438c-a446-41ca46e828a2",
+        "message": "That sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "electro/drum_beat_fashion"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence2_3_a73de379-9a46-4c14-8cbf-e4af5ec56370",
+        "message": "That sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "electro/drum_beat_noise"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence2_3_4116f123-a6d2-499e-bd1e-aa81bdb77b6d",
+        "message": "That sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "electro/bass_synth_candy"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence2_3_bdf7ebe3-6e7c-41e2-950c-e7fbeaffeff2",
+        "message": "That sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "electro/synth_cave"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence2_3_0f4e2e3e-fbf3-4fb6-98f7-890d38a2e280",
+        "message": "That sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "electro/bass_synth_blocks"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence2_3_1aca0f88-2ab4-41e0-a026-8a3bbbd5cbd4",
+        "message": "That sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "electro/synth_sleek"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence2_3_ab984b1f-77bb-4212-b9b2-7f01679e3bca",
+        "message": "That sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "electro/guitar_melody"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence2_3_42073586-a6b1-4601-8537-f251f003dbd4",
+        "message": "That sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          },
+          {
+            "name": "played_sound_id",
+            "value": "electro/guitar_shimmy"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence2_3_1e873460-2b14-4dd3-b75a-a97489b29c58",
+        "message": "Did you know you can change the sound? Click on the [sound's](#clickable=play-sound-block-workspace) name. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_id",
+            "value": "electro/drum_beat_cowbell"
+          }
+        ],
+        "callout": "play-sound-block-workspace"
+      },
+      {
+        "key": "music-ai-skill-sequence2_e3a14922-603d-4ea2-8eaf-4e9ce817f651",
+        "message": "You played one sound, now add another [sound](#clickable=play-sound-block). ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ],
+        "callout": "play-sound-block"
+      },
+      {
+        "key": "music-ai-skill-sequence_100f6390-0a0c-4ff7-bc67-2979e4beed57",
+        "message": "Drag at least two [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block). ",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "play-sound-block"
+      }
+    ],
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_edm",
+          "drum_beat_noise",
+          "bass_synth_candy",
+          "bass_synth_blocks",
+          "synth_cave",
+          "synth_sleek",
+          "guitar_melody",
+          "guitar_shimmy"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      }
+    },
+    "name_suffix": "_1",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:47.060+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence2_3\\\"\"],\"cloned_from\":\"music-ai-skill-sequence2_3\"}]"
+}]]></config>
+  <blocks/>
+</Music>
