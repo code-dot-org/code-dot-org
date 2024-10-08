@@ -10,6 +10,9 @@ module Rack
     AVAILABLE_REGIONS = Set[
       FARSI_REGION = 'fa',
     ].freeze
+    COUNTIES_REGIONS = {
+      'IR' => 'fa',
+    }.freeze
 
     # TODO: Replace with the actual mapping list of regional locales from the Global Edition config files.
     # @example {'fa' => 'fa-IR', 'en' => 'en-US', ...}
