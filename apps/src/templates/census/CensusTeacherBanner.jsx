@@ -173,7 +173,7 @@ export default function CensusTeacherBanner({
   };
 
   const getData = () => {
-    const schoolId = schoolInfo;
+    const schoolId = schoolInfo.schoolId;
     const data = {
       submitter_role: 'TEACHER',
       submitter_name: teacherName,
