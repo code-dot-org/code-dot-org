@@ -118,6 +118,9 @@ export default function SchoolDataInputs({
               schoolZip={schoolZip}
               setSchoolZip={setSchoolZip}
               schoolsList={schoolsList}
+              clearSchoolId={() =>
+                setSchoolId(NonSchoolOptions.SELECT_A_SCHOOL)
+              }
             />
           </div>
         )}

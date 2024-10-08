@@ -57,19 +57,18 @@ export const UnconnectedTeacherHomepage = ({
   showIncubatorBanner,
   currentUserId,
 }) => {
-  const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
 
   /*
    * Determines whether the AFE banner will take premium space on the Teacher Homepage
    */
-  const shouldShowAFEBanner = true;
+  const shouldShowAFEBanner = false;
 
   /*
    * Set to true to hide the census banner
    */
-  const forceHideCensusBanner = true;
+  const forceHideCensusBanner = false;
 
   /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
    * when we want to show the PL banner again set this to true
@@ -79,14 +78,10 @@ export const UnconnectedTeacherHomepage = ({
   const [displayCensusBanner, setDisplayCensusBanner] = useState(
     showCensusBanner && !forceHideCensusBanner
   );
-  const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
-    useState(null);
   const [censusBannerTeachesSelection, setCensusBannerTeachesSelection] =
     useState(null);
   const [censusBannerInClassSelection, setCensusBannerInClassSelection] =
     useState(null);
-  const [showCensusUnknownError, setShowCensusUnknownError] = useState(false);
-  const [showCensusInvalidError, setShowCensusInvalidError] = useState(false);
 
   useEffect(() => {
     // The component used here is implemented in legacy HAML/CSS rather than React.
@@ -104,26 +99,6 @@ export const UnconnectedTeacherHomepage = ({
   useEffect(() => {
     analyticsReporter.sendEvent(EVENTS.TEACHER_HOMEPAGE_VISITED);
   }, []);
-
-  const handleCensusBannerSubmit = () => {
-    if (censusBanner.current.isValid()) {
-      $.ajax({
-        url: '/dashboardapi/v1/census/CensusTeacherBannerV1',
-        type: 'post',
-        dataType: 'json',
-        data: censusBanner.current.getData(),
-      })
-        .done(() => {
-          setCensusSubmittedSuccessfully(true);
-          dismissCensusBanner(null, null);
-        })
-        .fail(() => {
-          setShowCensusUnknownError(true);
-        });
-    } else {
-      setShowCensusInvalidError(true);
-    }
-  };
 
   const dismissCensusBanner = (onSuccess, onFailure) => {
     $.ajax({
@@ -238,7 +213,6 @@ export const UnconnectedTeacherHomepage = ({
         {displayCensusBanner && (
           <div>
             <CensusTeacherBanner
-              ref={censusBanner}
               schoolYear={schoolYear}
               ncesSchoolId={ncesSchoolId}
               question={censusQuestion}
@@ -247,10 +221,7 @@ export const UnconnectedTeacherHomepage = ({
               teacherId={teacherId}
               teacherName={teacherName}
               teacherEmail={teacherEmail}
-              showInvalidError={showCensusInvalidError}
-              showUnknownError={showCensusUnknownError}
-              submittedSuccessfully={censusSubmittedSuccessfully}
-              onSubmit={() => handleCensusBannerSubmit()}
+              onSubmitSuccess={() => dismissCensusBanner(null, null)}
               onDismiss={() => dismissAndHideCensusBanner()}
               onPostpone={() => postponeCensusBanner()}
               onTeachesChange={event =>

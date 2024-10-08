@@ -8,7 +8,12 @@ import i18n from '@cdo/locale';
 
 import style from './school-association.module.scss';
 
-export default function SchoolZipSearch({fieldNames, schoolZip, setSchoolZip}) {
+export default function SchoolZipSearch({
+  fieldNames,
+  schoolZip,
+  setSchoolZip,
+  clearSchoolId,
+}) {
   const schoolZipIsValid = useMemo(
     () => ZIP_REGEX.test(schoolZip),
     [schoolZip]
@@ -16,6 +21,7 @@ export default function SchoolZipSearch({fieldNames, schoolZip, setSchoolZip}) {
 
   const handleZipChange = zip => {
     setSchoolZip(zip);
+    clearSchoolId();
   };
 
   return (
@@ -43,4 +49,5 @@ SchoolZipSearch.propTypes = {
   fieldNames: PropTypes.object,
   schoolZip: PropTypes.string,
   setSchoolZip: PropTypes.func,
+  clearSchoolId: PropTypes.func,
 };
