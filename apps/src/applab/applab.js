@@ -14,6 +14,8 @@ import applabMsg from '@cdo/applab/locale';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import commonMsg from '@cdo/locale';
@@ -139,6 +141,10 @@ function stepDelayFromStepSpeed(stepSpeed) {
 }
 
 function loadLevel() {
+  // Only send PROJECT_ACTIVITY event for students or non-authenticated users
+  if (getStore().getState().currentUser?.userType !== 'teacher') {
+    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
+  }
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};

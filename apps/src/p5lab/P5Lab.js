@@ -10,6 +10,8 @@ import {
   outputError,
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 
 import {TOOLBOX_EDIT_MODE} from '../constants';
@@ -217,6 +219,10 @@ export default class P5Lab {
    * @param {!GameLabLevel} config.level
    */
   init(config) {
+    // Only send PROJECT_ACTIVITY event for students or non-authenticated users
+    if (getStore().getState().currentUser?.userType !== 'teacher') {
+      analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
+    }
     if (!this.studioApp_) {
       throw new Error('P5Lab requires a StudioApp');
     }

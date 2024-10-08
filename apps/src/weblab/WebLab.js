@@ -4,6 +4,8 @@ import {Provider} from 'react-redux';
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {FatalErrorType} from '@cdo/apps/weblab/constants';
 import {
   DisallowedHtmlWarningDialog,
@@ -92,6 +94,10 @@ window.getWebLab = function () {
  * Initialize this WebLab instance.  Called on page load.
  */
 WebLab.prototype.init = function (config) {
+  // Only send LEVEL_ACTIVITY event for students or non-authenticated users
+  if (getStore().getState().currentUser?.userType !== 'teacher') {
+    analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
+  }
   if (!this.studioApp_) {
     throw new Error('WebLab requires a StudioApp');
   }

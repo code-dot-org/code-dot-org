@@ -28,6 +28,8 @@
 import Visualization from '@code-dot-org/artist';
 
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
@@ -326,6 +328,10 @@ Artist.prototype.isFrozenSkin = function () {
  * Initialize Blockly and the turtle.  Called on page load.
  */
 Artist.prototype.init = function (config) {
+  // Only send PROJECT_ACTIVITY event for students or non-authenticated users
+  if (getStore().getState().currentUser?.userType !== 'teacher') {
+    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
+  }
   if (!this.studioApp_) {
     throw new Error('Artist requires a StudioApp');
   }

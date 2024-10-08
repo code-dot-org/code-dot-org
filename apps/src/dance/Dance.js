@@ -19,7 +19,7 @@ import {TestResults} from '../constants';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '../lib/util/audioApi';
 import logToCloud from '../logToCloud';
-import {EVENTS} from '../metrics/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
@@ -103,6 +103,10 @@ Dance.prototype.injectStudioApp = function (studioApp) {
  * @param {!Dancelab} config.level
  */
 Dance.prototype.init = function (config) {
+  // Only send LEVEL_ACTIVITY event for students or non-authenticated users
+  if (getStore().getState().currentUser?.userType !== 'teacher') {
+    analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
+  }
   if (!this.studioApp_) {
     throw new Error('Dance requires a StudioApp');
   }

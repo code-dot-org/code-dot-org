@@ -194,6 +194,9 @@ const EVENTS = {
   SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED: 'Summary Page Back To Level Clicked',
   LEVEL_ACTIVITY: 'Level Activity',
 
+  // Projects
+  PROJECT_ACTIVITY: 'Project Activity',
+
   // Check for understanding
   CFU_NAMES_TOGGLED_ON: 'Summary Page Names Toggled On',
   CFU_NAMES_TOGGLED_OFF: 'Summary Page Names Toggled Off',
