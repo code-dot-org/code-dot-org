@@ -112,13 +112,13 @@ Feature: Header navigation bar
     And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"
     And I see "#header-teacher-incubator"
     And element "#header-teacher-incubator" has "es" text from key "nav.header.incubator"
+
   @chrome
   Scenario: Teacher can click on the header links
     Given I create a teacher named "Sir Clicks-A-Lot Teacher" and go home
     And I set the language cookie
     And I set the cookie named "_loc_notice" to "1"
     And I wait to see ".headerlinks"
-
     # We click on each header link and see where we go
     And I press "header-teacher-home" to load a new page
     Then check that I am on "http://studio.code.org/home"
