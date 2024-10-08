@@ -111,6 +111,7 @@ class Blockly < Level
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
     level_properties = super
+    level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
     localize_blockly_level_options_for_lab2(script)
     level_properties
   end
@@ -382,7 +383,6 @@ class Blockly < Level
   def localize_blockly_level_options_for_lab2(script)
     options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Unit.should_cache?) do
       level_options = blockly_level_options.dup
-      set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
 
       functions = level_options.
         try(:[], "levelData").
@@ -404,7 +404,6 @@ class Blockly < Level
         function["fields"]["NAME"] = localized_name
       end
     end
-
     options.freeze
   end
 
@@ -499,7 +498,6 @@ class Blockly < Level
       # Set some values that Blockly expects on the root of its options string
       level_prop.compact!
     end
-
     options.freeze
   end
 
