@@ -49,6 +49,8 @@ GroupOfColorsOfCloseButton.args = {
 export const GroupOfSizesOfCloseButton = MultipleTemplate.bind({});
 GroupOfSizesOfCloseButton.args = {
   components: [
+    {onClick: () => null, size: 'xs', 'aria-label': 'Close xs'},
+    {onClick: () => null, size: 's', 'aria-label': 'Close s'},
     {onClick: () => null, size: 'm', 'aria-label': 'Close m'},
     {onClick: () => null, size: 'l', 'aria-label': 'Close l'},
   ],

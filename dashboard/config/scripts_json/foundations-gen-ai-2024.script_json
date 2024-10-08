@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "foundations-gen-ai",
-    "serialized_at": "2024-09-27 03:18:05 UTC",
+    "serialized_at": "2024-10-07 21:47:14 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2601,7 +2601,7 @@
       "key": "0d097162-ffd1-438f-998c-0fab07a87a62",
       "position": 2,
       "properties": {
-        "description": "While students take their survey, please [complete this post-survey for teachers as well](https://studio.code.org/form/exploring_with_generative_ai_post_unit_survey). Your feedback is valued and appreciated!"
+        "description": "While students take their survey, please [complete this post-survey for teachers as well](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data[unit_number]=unit_1). Your feedback is valued and appreciated!"
       },
       "seeding_key": {
         "activity_section.key": "0d097162-ffd1-438f-998c-0fab07a87a62",
@@ -2616,6 +2616,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-studentsurvey-premodule"
+        ],
         "progression": "Student Pre-Survey"
       },
       "bonus": false,
@@ -2638,6 +2641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L1-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2660,6 +2666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson1-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2682,6 +2691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L2-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2704,6 +2716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson2-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2726,6 +2741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L3-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2748,6 +2766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2770,6 +2791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson4-warmup-level1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2792,6 +2816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson4-wrapup"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2814,6 +2841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L5-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2836,6 +2866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson5-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2858,6 +2891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L6-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2880,6 +2916,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2902,6 +2941,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L7-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2924,6 +2966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L8-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2946,6 +2991,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson8-wrapup-level1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2968,6 +3016,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson9-wrapup"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -2990,6 +3041,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Foundations AI - Outputs - Mad Lib Widget_2024"
+        ],
         "progression": "[For Teachers] Mad Lib Widget"
       },
       "bonus": false,
@@ -3012,6 +3066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-L10-warmup-2024"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3034,6 +3091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson10-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -3056,6 +3116,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-foundations-studentsurvey-postmodule"
+        ],
         "progression": "Student Post-Survey"
       },
       "bonus": false,

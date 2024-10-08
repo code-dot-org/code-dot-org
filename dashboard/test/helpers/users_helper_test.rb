@@ -535,7 +535,7 @@ class UsersHelperTest < ActionView::TestCase
       let(:user_cap_compliant?) {false}
 
       it 'returns lock reason message' do
-        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account.'
+        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent.'
       end
     end
 
@@ -543,7 +543,7 @@ class UsersHelperTest < ActionView::TestCase
       let(:user_in_grace_period?) {true}
 
       it 'returns lock reason message' do
-        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account.'
+        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent.'
       end
     end
   end
