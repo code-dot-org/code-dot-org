@@ -271,7 +271,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   test "create as under 13 student with client side hashed email" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       @default_params.delete(:email)
-      params_with_hashed_email = @default_params.update(
+      params_with_hashed_email = @default_params.merge(
         {hashed_email: User.hash_email('an@email.address')}
       )
 
@@ -535,48 +535,48 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal("Validation failed: Email has already been taken", exception.message)
   end
 
-  # test "create as student with age [new sign up flow]" do
-  #   Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-  #     student_params = set_up_partial_registration(@default_params)
-  #     assert_creates(User) do
-  #       post :create, params: {new_sign_up: true, user: student_params}
-  #     end
+  test "create as student with age [new sign up flow]" do
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+      student_params = set_up_partial_registration(@default_params)
+      assert_creates(User) do
+        post :create, params: {new_sign_up: true, user: student_params}
+      end
 
-  #     student = User.last
+      student = User.last
 
-  #     assert_equal 'A name', student.name
-  #     assert_equal 'f', student.gender
-  #     assert_equal Time.zone.today - 13.years, student.birthday
-  #     assert_equal AuthenticationOption::EMAIL, student.primary_contact_info.credential_type
-  #     assert_equal User::TYPE_STUDENT, student.user_type
-  #     assert_equal '', student.email
-  #     assert_equal User.hash_email('an@email.address'), student.hashed_email
-  #   end
-  # end
+      assert_equal 'A name', student.name
+      assert_equal 'f', student.gender
+      assert_equal Time.zone.today - 13.years, student.birthday
+      assert_equal AuthenticationOption::EMAIL, student.primary_contact_info.credential_type
+      assert_equal User::TYPE_STUDENT, student.user_type
+      assert_equal '', student.email
+      assert_equal User.hash_email('an@email.address'), student.hashed_email
+    end
+  end
 
-  # test "create as under 13 student with client side hashed email [new sign up flow]" do
-  #   Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-  #     student_params = set_up_partial_registration(@default_params)
-  #     student_params.delete(:email)
-  #     params_with_hashed_email = student_params.merge(
-  #       {hashed_email: User.hash_email('an@email.address')}
-  #     )
+  test "create as under 13 student with client side hashed email [new sign up flow]" do
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
+      student_params = set_up_partial_registration(@default_params)
+      student_params.delete(:email)
+      params_with_hashed_email = student_params.merge(
+        {hashed_email: User.hash_email('an@email.address')}
+      )
 
-  #     assert_creates(User) do
-  #       post :create, params: {new_sign_up: true, user: params_with_hashed_email}
-  #     end
+      assert_creates(User) do
+        post :create, params: {new_sign_up: true, user: params_with_hashed_email}
+      end
 
-  #     student = User.last
+      student = User.last
 
-  #     assert_equal 'A name', student.name
-  #     assert_equal 'f', student.gender
-  #     assert_equal Time.zone.today - 13.years, student.birthday
-  #     assert_equal AuthenticationOption::EMAIL, student.primary_contact_info.credential_type
-  #     assert_equal User::TYPE_STUDENT, student.user_type
-  #     assert_equal '', student.email
-  #     assert_equal User.hash_email('an@email.address'), student.hashed_email
-  #   end
-  # end
+      assert_equal 'A name', student.name
+      assert_equal 'f', student.gender
+      assert_equal Time.zone.today - 13.years, student.birthday
+      assert_equal AuthenticationOption::EMAIL, student.primary_contact_info.credential_type
+      assert_equal User::TYPE_STUDENT, student.user_type
+      assert_equal '', student.email
+      assert_equal User.hash_email('an@email.address'), student.hashed_email
+    end
+  end
 
   test "create as student requires age [new sign up flow]" do
     params_without_age = set_up_partial_registration(@default_params.update(age: ''))
