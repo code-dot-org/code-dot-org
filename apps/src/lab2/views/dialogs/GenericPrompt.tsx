@@ -1,7 +1,8 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useContext} from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {Theme, ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 
 import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
@@ -37,6 +38,8 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
   handleInputChange,
   errorMessage,
 }) => {
+  const {theme} = useContext(ThemeContext);
+
   return (
     <>
       {message && <BodyTwoText>{message}</BodyTwoText>}
@@ -46,6 +49,7 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
         value={prompt}
         onChange={e => handleInputChange(e.target.value)}
         errorMessage={errorMessage}
+        color={theme === Theme.DARK ? 'white' : undefined}
       />
     </>
   );

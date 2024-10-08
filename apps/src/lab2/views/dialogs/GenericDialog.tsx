@@ -1,5 +1,5 @@
 import FocusTrap from 'focus-trap-react';
-import React, {useCallback} from 'react';
+import React, {useCallback, useContext} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
@@ -7,6 +7,7 @@ import {
   useEnterKeyboardTrap,
   useEscapeKeyboardTrap,
 } from '@cdo/apps/lab2/hooks';
+import {Theme, ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import commonI18n from '@cdo/locale';
 
 import {useDialogControl} from './DialogControlContext';
@@ -93,6 +94,8 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
 }) => {
   const dialogControl = useDialogControl();
 
+  const {theme} = useContext(ThemeContext);
+
   const cancelCallback = useClosingCallback({
     closeDialog: dialogControl.closeDialog,
     closeType: 'cancel',
@@ -119,7 +122,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
 
   return (
     <FocusTrap>
-      <div className={moduleStyles.genericDialog}>
+      <div className={moduleStyles['genericDialog-' + theme]}>
         {titleComponent ? (
           titleComponent
         ) : title ? (
@@ -135,7 +138,9 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                 className={moduleStyles.cancel}
                 type="secondary"
                 disabled={buttons.cancel.disabled}
-                color={buttonColors.gray}
+                color={
+                  theme === Theme.LIGHT ? buttonColors.gray : buttonColors.white
+                }
                 text={buttons.cancel.text || commonI18n.cancel()}
               />
             ) : (
@@ -158,7 +163,9 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                 color={
                   buttons?.confirm?.destructive
                     ? buttonColors.destructive
-                    : buttonColors.purple
+                    : theme === Theme.LIGHT
+                    ? buttonColors.purple
+                    : buttonColors.white
                 }
                 text={buttons?.confirm?.text || commonI18n.dialogOK()}
               />
