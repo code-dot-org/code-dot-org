@@ -66,12 +66,12 @@ Fallback: https://github.com/styleguide/ruby
   ```
   
 ### Writing Unit Test
-Our unit test testing library is [Minitest](https://github.com/minitest/minitest). 
+Our unit tests testing library is [Minitest](https://github.com/minitest/minitest). 
 
-When writing unit test we prefer to use [Specs Syntax](https://github.com/minitest/minitest?tab=readme-ov-file#specs-). Our default MiniTest Spec has been extended to inlcude some RSpec features such as [`subject`](https://rspec.info/features/3-13/rspec-core/subject/explicit-subject/) or [`let!`](https://rspec.info/features/3-13/rspec-core/helper-methods/let/)
+When writing unit test we prefer to use [Specs Syntax](https://github.com/minitest/minitest?tab=readme-ov-file#specs-). Our default MiniTest Spec has been extended to include some RSpec features such as [`subject`](https://rspec.info/features/3-13/rspec-core/subject/explicit-subject/) or [`let!`](https://rspec.info/features/3-13/rspec-core/helper-methods/let/)
 
 #### General Guidelines
-- Group related tests using `describe` blocks.
+- Group-related tests using `describe` blocks.
 - Use `let` to define memoized helper methods and lazy-loaded variables.
 - Use `before` blocks for setup tasks that need to be run before each example.
 - Use `subject` to explicitly define the value that is returned by the subject method in the example scope.
@@ -80,14 +80,14 @@ When writing unit test we prefer to use [Specs Syntax](https://github.com/minite
 You can find more detailed guidelines and examples of best practices at [betterspecs.org](https://www.betterspecs.org/). 
 
 #### Example Structure
-- Describe the method or class being tested. Use the Ruby documentation convention of . (or ::) when referring to a class method's name and # when referring to an instance method's name.
+- Describe the method or class being tested. Use the Ruby documentation convention of `.` (or `::`) when referring to a class method's name and # when referring to an instance method's name.
 - Use context blocks to describe different states or conditions. When describing a context, start its description with 'when', 'with' or 'without'.
-- Write test cases using `it` blocks for individual behaviors.
+- Write test cases using `it` blocks for individual behaviours.
 
 #### Example
 ```ruby
 describe MyClassTest do
-  # `described_class` is a helper method that returns the class or module that is currently being described, e.g. `MyClass` for describe `MyClassTest`.
+  # `described_class` is a helper method that returns the class or module that is currently being tested, e.g. `MyClass` is returned when described_class is used in `MyClassTest`.
   let(:described_instance) {described_class.new}
 
   before do
@@ -118,6 +118,9 @@ describe MyClassTest do
   end
 end
 ```
+
+See a real example in our codebase in the `Queries::SectionTest` [test](https://github.com/code-dot-org/code-dot-org/blob/012a3bcb13f4a265d6570b8995ae872e92a0ab42/dashboard/test/lib/queries/section_test.rb) for the `Queries::Section` [Module](https://github.com/code-dot-org/code-dot-org/blob/012a3bcb13f4a265d6570b8995ae872e92a0ab42/dashboard/lib/queries/section.rb).
+
 ### Rails
 
 Prefer skinny controllers.  Leverage the framework where possible and write as little custom code as possible to implement the feature.  Guidelines here are not set in stone: when in doubt prefer readable code over strict adherence to the style guide.
