@@ -48,11 +48,6 @@
       white-space: nowrap;
     }
   }
-
-  button:not([role="tab"]) {
-    position: absolute;
-    inset-inline-end: 4px;
-  }
 }
 
 // Tabs Colors

@@ -1,7 +1,6 @@
 import classnames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
 import _TabPanel from '@cdo/apps/componentLibrary/tabs/_TabPanel';
@@ -99,22 +98,16 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
       >
         <ul role="tablist">
           {tabs.map((tab, index) => (
-            <li role="presentation" key={tab.value}>
-              <_Tab
-                {...tab}
-                key={tab.value}
-                isSelected={tab.value === selectedTabValue}
-                onClick={handleChange}
-                size={size}
-                onClose={onClose}
-                tabPanelId={`${nameStripped}-panel-${tab.value}`}
-                tabButtonId={`${nameStripped}-tab-${tab.value}`}
-              />
-              <CloseButton
-                onClick={onClose}
-                aria-label={`${nameStripped}-tab-close`}
-              />
-            </li>
+            <_Tab
+              {...tab}
+              key={tab.value}
+              isSelected={tab.value === selectedTabValue}
+              onClick={handleChange}
+              size={size}
+              onClose={onClose}
+              tabPanelId={`${nameStripped}-panel-${tab.value}`}
+              tabButtonId={`${nameStripped}-tab-${tab.value}`}
+            />
           ))}
         </ul>
       </div>

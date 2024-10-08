@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
-// import CloseButton from '@cdo/apps/componentLibrary/closeButton';
+import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
@@ -68,8 +68,7 @@ const renderTabButtonContent = (
   text?: string,
   iconLeft?: FontAwesomeV6IconProps,
   iconRight?: FontAwesomeV6IconProps,
-  isClosable?: boolean,
-  onClose?: () => void
+  isClosable?: boolean
 ) => {
   if (isIconOnly && icon) {
     return <FontAwesomeV6Icon {...icon} />;
@@ -79,7 +78,6 @@ const renderTabButtonContent = (
       {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
       {text && <span>{text}</span>}
       {iconRight && !isClosable && <FontAwesomeV6Icon {...iconRight} />}
-      {/*{isClosable && <div>123</div>}*/}
     </>
   );
 };
@@ -109,8 +107,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     text,
     iconLeft,
     iconRight,
-    isClosable,
-    onClose
+    isClosable
   );
 
   const buttonElement = (
@@ -128,24 +125,24 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
       disabled={disabled}
     >
       {buttonContent}
-      {/*{isClosable && (*/}
-      {/*  <CloseButton*/}
-      {/*    onClick={onClose}*/}
-      {/*    size={size}*/}
-      {/*    aria-label={`${text}-tab-close`}*/}
-      {/*  />*/}
-      {/*)}*/}
+      {isClosable && (
+        <CloseButton
+          onClick={onClose}
+          size={size}
+          aria-label={`Close ${text}`}
+        />
+      )}
     </button>
   );
 
   return (
-    <>
+    <li role="presentation">
       {tooltip ? (
         <WithTooltip tooltipProps={tooltip}>{buttonElement}</WithTooltip>
       ) : (
         buttonElement
       )}
-    </>
+    </li>
   );
 };
 
