@@ -15,6 +15,10 @@ end
 
 def get_blocked_by_details(blocked_by, details)
   case blocked_by
+  when "openai"
+    return {
+      evaluation: details[:evaluation]
+    }
   when "comprehend"
     return {
       flagged_text: details[:flagged_segment],
@@ -41,7 +45,7 @@ def main
 
   CSV.open("aichat_requests.csv", "w") do |csv|
     headers = %w[
-      aichat_request_id user_id username name path created_at updated_at role chat_message status toxicity max_category score blocked_by flagged_text
+      aichat_request_id user_id username name path created_at updated_at role chat_message status blocked_by block_by_details
     ]
     csv << headers
 
@@ -84,45 +88,25 @@ def main
       end
 
       if execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY]
-        # Parse response for comprehend/blocklist/webpurify details for user message.
+        # Parse response for openai/comprehend/blocklist/webpurify details for user message.
         # There is no model response recorded if user message was flagged.
         # After https://github.com/code-dot-org/code-dot-org/pull/61095, response was updated to JSON.
         # Handle response from before and after update.
         if valid_json?(response)
-          user_comprehend_response = JSON.parse(response).deep_symbolize_keys
-          user_blocked_by = user_comprehend_response[:blocked_by]
-          details = user_comprehend_response[:details]
+          user_safety_layer_response = JSON.parse(response).deep_symbolize_keys
+          user_blocked_by = user_safety_layer_response[:blocked_by]
+          details = user_safety_layer_response[:details]
           user_blocked_by_details = get_blocked_by_details(user_blocked_by, details)
-          user_toxicity = user_blocked_by_details[:toxicity]
-          user_max_category = user_blocked_by_details[:max_category]
-          user_score = user_blocked_by_details[:score]
-          user_flagged_text = user_blocked_by_details[:flagged_text]
-        else
-          user_comprehend_response = response.delete_prefix("Profanity detected in user input: ")
-          user_toxicity = get_substring_in_between(user_comprehend_response, ":toxicity=>", ",").to_f
-          user_max_category = get_substring_in_between(user_comprehend_response, ":max_category=>#<struct Aws::Comprehend::Types::ToxicContent name=", ",").delete_prefix('"').delete_suffix('"')
-          user_score = get_substring_in_between(user_comprehend_response, "score=", ">").to_f
         end
       elsif execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
         # Model response is recorded in addition to blocked by service details.
         # After https://github.com/code-dot-org/code-dot-org/pull/61095, response was updated to JSON.
         # Handle response from before and after update.
         if valid_json?(response)
-          model_comprehend_response = JSON.parse(response).deep_symbolize_keys
-          model_blocked_by = model_comprehend_response[:blocked_by]
-          details = model_comprehend_response[:details]
+          model_safety_layer_response = JSON.parse(response).deep_symbolize_keys
+          model_blocked_by = model_safety_layer_response[:blocked_by]
+          details = model_safety_layer_response[:details]
           model_blocked_by_details = get_blocked_by_details(model_blocked_by, details)
-          model_message_text = model_comprehend_response[:text]
-          model_toxicity = model_blocked_by_details[:toxicity]
-          model_max_category = model_blocked_by_details[:max_category]
-          model_score = model_blocked_by_details[:score]
-          model_flagged_text = model_blocked_by_details[:flagged_text]
-        else
-          model_comprehend_response = response.delete_prefix("Profanity detected in model output: ")
-          model_message_text = get_substring_in_between(model_comprehend_response, ":text=>", ", :toxicity").delete_prefix('"').delete_suffix('"')
-          model_toxicity = get_substring_in_between(model_comprehend_response, ":toxicity=>", ",").to_f
-          model_max_category = get_substring_in_between(model_comprehend_response, ":max_category=>#<struct Aws::Comprehend::Types::ToxicContent name=", ",").delete_prefix('"').delete_suffix('"')
-          model_score = get_substring_in_between(model_comprehend_response, "score=", ">").to_f
         end
       elsif execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS]
         # Model response is recorded.
@@ -160,11 +144,8 @@ def main
         'user',
         user_message_text,
         status,
-        user_toxicity,
-        user_max_category,
-        user_score,
         user_blocked_by,
-        user_flagged_text
+        user_blocked_by_details
       ]
 
       next if execution_status != SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS] && execution_status != SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
@@ -177,11 +158,8 @@ def main
         'assistant',
         model_message_text,
         status,
-        model_toxicity,
-        model_max_category,
-        model_score,
         model_blocked_by,
-        model_flagged_text
+        model_blocked_by_details
       ]
     end
   end
