@@ -296,6 +296,7 @@ export interface Condition {
 export interface ConditionType {
   name: string;
   valueType?: 'string' | 'number';
+  description: string;
 }
 
 // Validation in the level.
