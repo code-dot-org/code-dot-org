@@ -822,8 +822,11 @@ GoogleBlockly.Extensions.register(
 );
 
 export function filterFunctionArgVariables(workspace, flyoutContents) {
+  if (!workspace) {
+    return flyoutContents;
+  }
+  const nonParamVarIds = getNonFunctionVariableIds(workspace);
   return flyoutContents.filter(toolboxItem => {
-    const nonParamVarIds = getNonFunctionVariableIds(workspace);
     // If we don't have any variables to show, just show the button to create one.
     if (
       !nonParamVarIds.length &&
