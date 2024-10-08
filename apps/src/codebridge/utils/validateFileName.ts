@@ -23,13 +23,14 @@ export const validateFileName = ({
   if (!fileName.length) {
     return;
   }
-  if (!isValidFileName(fileName)) {
-    return codebridgeI18n.invalidNameError();
-  }
 
   const [, extension] = fileName.split('.');
   if (!extension) {
     return codebridgeI18n.noFileExtensionError();
+  }
+
+  if (!isValidFileName(fileName)) {
+    return codebridgeI18n.invalidNameError();
   }
 
   const duplicateFileError = isDuplicateFileName({
