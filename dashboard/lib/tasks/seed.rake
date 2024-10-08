@@ -164,9 +164,6 @@ namespace :seed do
     coursed-2024
     coursee-2024
     coursef-2024
-    interactive-games-animations-2023
-    focus-on-creativity3-2023
-    focus-on-coding3-2023
     csd1-2024
     csd2-2024
     csd3-2024
@@ -189,6 +186,16 @@ namespace :seed do
     csp9-2024
     csp10-2024
     csp-post-survey-2024
+    csa1-2024
+    csa2-2024
+    csa3-2024
+    csa4-2024
+    csa5-2024
+    csa6-2024
+    csa7-2024
+    csa8-2024
+    csa9-2024
+    csa10-2024
     dance
     events
     flappy
@@ -295,7 +302,7 @@ namespace :seed do
 
   timed_task_with_logging courses_adhoc: :environment do
     # seed those courses that are best to test on for adhoc
-    %w(allthethingscourse csp-2024 csd-2024).each do |course_name|
+    %w(allthethingscourse csp-2024 csd-2024 csa-2024).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
   end
