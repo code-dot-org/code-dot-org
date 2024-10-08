@@ -20,7 +20,8 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
    * or to reference form data after a form is submitted.
    * Note: Only form elements with a name attribute will have their values passed when submitting a form. */
   name: string;
-  /** The value attribute specifies the value of an input element. */
+  /** The value attribute specifies the value of an input element. Value is always converted to number.
+   *  String type here is only for ChangeEvent<HTMLInputElement> support */
   value: number | string;
   /** Slider label */
   label?: string;
@@ -38,8 +39,9 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
   /** Step value for the slider
    * @default 1 */
   step?: number;
-  /** [WIP] Array of step values for the slider */
-  steps?: number[];
+  // TODO: Uncomment when working on adding steps support
+  // /** [WIP] Array of step values for the slider */
+  // steps?: number[];
   /** Is the slider in right-to-left mode
    * @default false */
   isRtl?: boolean;
@@ -105,7 +107,8 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   isCentered = false,
   isPercentMode = false,
   step = 1,
-  steps,
+  // TODO: Uncomment when working on adding steps support
+  // steps,
   isRtl = document.documentElement.dir === 'rtl',
   minValue = 0,
   maxValue = 100,
