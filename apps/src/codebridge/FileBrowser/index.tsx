@@ -47,7 +47,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {
   useDialogControl,
   DialogType,
-  extractDialogClosePromiseInput as extractInput,
+  extractUserInput as extractInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';

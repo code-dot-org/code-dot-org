@@ -1,3 +1,3 @@
-export * from './extractDialogClosePromiseInput';
+export * from './extractUserInput';
 export * from './DialogControlContext';
 export * from './types';

@@ -1,6 +1,6 @@
 import {isValidFileName} from '@codebridge/utils';
 
-describe('CodeBrige/utils/isValidFileName', function () {
+describe('isValidFileName', function () {
   it('can determine isValidFileName', function () {
     expect(isValidFileName('test')).toBe(false); // files must have extensions
     expect(isValidFileName('test.')).toBe(false); // files must have extensions

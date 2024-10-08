@@ -54,7 +54,7 @@ const getAnalyticsMock = (): [AnalyticsDataType, AnalyticsMockType] => {
 const appName = 'Codebridge Unit Test';
 const EXPECTED_NEXT_FOLDER_ID = '4';
 
-describe('CodeBrige/FileBrowser/prompts/openNewFolderPrompt', function () {
+describe('openNewFolderPrompt', function () {
   it('can validateNewFolderName', function () {
     expect(
       validateNewFolderName({
