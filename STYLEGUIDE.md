@@ -72,9 +72,10 @@ When writing unit test we prefer to use [Specs Syntax](https://github.com/minite
 
 #### General Guidelines
 - Group related tests using `describe` blocks.
-- Use `let` to define memoized helper methods.
+- Use `let` to define memoized helper methods and lazy-loaded variables.
 - Use `before` blocks for setup tasks that need to be run before each example.
-- Prefer `assert_` methods over `expect` syntax for assertions, for consistency.
+- Use `subject` in the group scope to explicitly define the value that is returned by the subject method in the example scope.
+- Prefer `.must_` methods over `expect` or `assert_` syntax for assertions, for consistency. See all possible expectations [here](https://github.com/minitest/minitest/blob/v5.18.0/lib/minitest/expectations.rb).
 
 You can find more detailed guidelines and examples of best practices at [betterspecs.org](https://www.betterspecs.org/). 
 
@@ -85,25 +86,33 @@ You can find more detailed guidelines and examples of best practices at [betters
 
 #### Example
 ```ruby
-describe MyClass do
-  let(:instance) { MyClass.new }
+describe MyClassTest do
+  # `described_class` is a helper method that returns the class or module that is currently being described, e.g. `MyClass` for describe `MyClassTest`.
+  let(:described_instance) {described_class.new}
 
   before do
     # Setup code
   end
 
   describe '#my_method' do
+    subject(:my_method) {described_instance.my_method(argument)}
+
+    let(:argument) {'argument'}
+
     context 'when condition A is met' do
+      let(:argument) {'argument_a'}
+
       it 'returns expected result' do
-        result = instance.my_method(condition: 'A')
-        assert_equal expected_result, result
+        # `_my_method` is a helper method assertion method defined for the test `subject`.
+        _my_method.must_equal 'expected result for argument_a'
       end
     end
 
     context 'when condition B is met' do
+      let(:argument) {'argument_b'}
+
       it 'returns another result' do
-        result = instance.my_method(condition: 'B')
-        assert_equal another_result, result
+        _my_method.must_equal 'expected result for argument_b'
       end
     end
   end
