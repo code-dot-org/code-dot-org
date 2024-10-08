@@ -18,6 +18,14 @@ def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   end
 end
 
+def wait_until_interactable(timeout = DEFAULT_WAIT_TIMEOUT)
+  wait_until(timeout) do
+    yield
+  rescue Selenium::WebDriver::Error::ElementNotInteractableError
+    false
+  end
+end
+
 def wait_short_until(&block)
   wait_until(SHORT_WAIT_TIMEOUT, &block)
 end
@@ -383,11 +391,33 @@ When /^I rotate to (landscape|portrait)$/ do |orientation|
   end
 end
 
+When /^I click on the link reading "([^"]*)"(?: within element "([^"]*)")?(?: to load a new (page|tab))?$/ do |text, parent, load|
+  link = nil
+  wait_short_until do
+    parent = @browser.find_element(:css, parent) if parent
+    parent ||= @browser
+    xpath = "//a[text()='#{text}']"
+    link = parent.find_element(:xpath, xpath)
+  end
+  page_load(load) {link.click}
+end
+
+Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
+  link = nil
+  wait_short_until do
+    parent = @browser.find_element(:css, parent) if parent
+    parent ||= @browser
+    xpath = "//a[text()='#{text}']"
+    link = parent.find_element(:xpath, xpath)
+  end
+  expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
+end
+
 When /^I press "([^"]*)"(?: to load a new (page|tab))?$/ do |button, load|
   wait_short_until do
-    @button = @browser.find_element(id: button)
+    button = @browser.find_element(id: button)
   end
-  page_load(load) {@button.click}
+  page_load(load) {button.click}
 end
 
 When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ do |number, selector, load|
@@ -719,7 +749,6 @@ end
 
 Then /^I reopen the congrats dialog unless I see the sharing input/ do
   next if @browser.execute_script("return $('#sharing-dialog-copy-button').length > 0;")
-  puts "reopening congrats dialog"
   individual_steps %{
     And I press "again-button"
     And I wait until element ".congrats" is not visible
