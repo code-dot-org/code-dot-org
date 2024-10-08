@@ -637,7 +637,20 @@ const procedureVars = function () {
       if (!argData) {
         return; // Not on this block.
       }
-      this.setFieldValue(variable.name, argData.argId);
+      // Update the name shown on each instance of argument reporter within
+      // this function definition block.
+      const argBlocksInDef = this.workspace
+        .getAllBlocks()
+        .filter(
+          block =>
+            block.getRootBlock() === this &&
+            block.type === BLOCK_TYPES.argumentReporter &&
+            block.getVarModels().includes(variable)
+        );
+      argBlocksInDef.forEach(block => {
+        block.setFieldValue(variable.name, 'VAR');
+        block.model = variable;
+      });
       argData.model = variable;
     },
   };
