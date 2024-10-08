@@ -46,10 +46,6 @@ class ChatClient
     )
   end
 
-  def self.snippet(message)
-    Slack.snippet(CDO.slack_log_room, message)
-  end
-
   def self.wrap(name, backtrace: false)
     start_time = Time.now
     ChatClient.log "Running #{name}..."

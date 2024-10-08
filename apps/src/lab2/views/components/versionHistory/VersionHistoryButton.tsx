@@ -16,6 +16,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import VersionHistoryDropdown from './VersionHistoryDropdown';
 
 import moduleStyles from './version-history.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface VersionHistoryProps {
   startSource: ProjectSources;
@@ -92,6 +93,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
     direction: 'onLeft',
     tooltipId: 'version-history-tooltip',
     size: 'xs',
+    className: darkModeStyles.tooltipLeft,
   };
 
   return (
@@ -106,7 +108,10 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           size={'xs'}
           disabled={buttonDisabled}
           type={'tertiary'}
-          className={moduleStyles.versionHistoryButton}
+          className={classNames(
+            moduleStyles.versionHistoryButton,
+            darkModeStyles.iconOnlyTertiaryButton
+          )}
         />
       </WithTooltip>
       {(loading || loadError) && (
