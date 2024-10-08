@@ -169,7 +169,7 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     type: BlockTypes.PLAY_SOUNDS_TOGETHER,
   },
   [BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT]: {
-    levelbuilderText: 'Play Together',
+    levelbuilderText: 'Play Together (no next)',
     id: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
