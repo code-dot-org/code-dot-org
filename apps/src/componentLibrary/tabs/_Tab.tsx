@@ -88,6 +88,20 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   isIconOnly = false,
 }) => {
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
+  const handleTooltip = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.currentTarget;
+    // Locate the element that contains the text (if nested inside spans or other elements)
+    const textElement = target.querySelector('span') || target;
+
+    if (textElement.scrollWidth > textElement.clientWidth) {
+      // Set the tooltip text if overflow occurs
+      target.title = textElement.textContent || '';
+    } else {
+      // Clear tooltip if no overflow
+      target.title = '';
+    }
+  };
+
   checkTabForErrors(isIconOnly, icon, text);
 
   const buttonContent = renderTabButtonContent(
@@ -110,6 +124,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
         isIconOnly && moduleStyles.iconOnlyTab
       )}
       onClick={handleClick}
+      onMouseOver={handleTooltip}
       disabled={disabled}
     >
       {buttonContent}
