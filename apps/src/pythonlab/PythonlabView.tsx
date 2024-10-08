@@ -8,15 +8,14 @@ import React, {useContext, useEffect, useState} from 'react';
 
 import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
 import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
-import Lab2Registry from '../lab2/Lab2Registry';
-import {getAppOptionsEditBlocks} from '../lab2/projects/utils';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
