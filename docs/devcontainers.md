@@ -8,12 +8,17 @@
 
 1. Follow the [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to clone the `code-dot-org/code-dot-org` repository
 
-### Install Docker
+### Install Docker on MacOS/Windows
 
 1. Follow the instructions to install [Docker Desktop](https://docs.docker.com/get-started/introduction/get-docker-desktop/) for your system
 2. [Configure Docker Desktop](https://docs.docker.com/desktop/settings/) to allow either 12 GB memory usage (see sample setups below):
     1. Fastest: Allow Docker Desktop to use 12 GB of RAM and 1 GB of swap
     2. Slower: Allow Docker Desktop to use 8 GB of RAM and 4 GB of swap
+  
+### Install Docker on Linux
+
+1. Follow the instructions to install [Docker Engine](https://docs.docker.com/engine/install/) for Linux. (Do not install Docker Desktop due to [permission issues](https://github.com/moby/moby/issues/2259))
+2. Follow [post installation instructions](https://docs.docker.com/engine/install/linux-postinstall/) for Docker
 
 ### Visual Studio Code
 
