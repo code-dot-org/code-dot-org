@@ -231,6 +231,27 @@ class MailJetTest < Minitest::Test
     MailJet.create_contact_and_add_to_welcome_series(user, 'es-MX')
   end
 
+  def test_create_contact_and_add_to_hoc_guide_series
+    email = 'fake.email@test.xx'
+    name = 'Fake Name'
+
+    mock_contact_id = 123
+    mock_contact = mock('Mailjet::Contact')
+    mock_contact.stubs(:id).returns(mock_contact_id)
+    mock_contactdata = mock('Mailjet::Contactdata')
+    Mailjet::Contactdata.expects(:find).with(mock_contact_id).returns(mock_contactdata)
+    mock_contact.stubs(:id).returns(mock_contact_id)
+
+    MailJet.expects(:find_or_create_contact).with(email, name).returns(mock_contact)
+
+    mock_contactdata.expects(:update_attributes).with(data: [{name: "display_name", value: "Fake Name"}])
+
+    MailJet.stubs(:subaccount).returns('development')
+    MailJet.expects(:add_to_contact_list).with(mock_contact, MailJet::CONTACT_LISTS[:hoc_guide_series][:development][:default])
+
+    MailJet.create_contact_and_add_to_hoc_guide_series(email, name)
+  end
+
   def test_valid_email_deliverable
     Mailgun::Address.any_instance.expects(:validate).returns({'result' => 'deliverable'})
     assert MailJet.valid_email?('test@email.com')

@@ -36,7 +36,7 @@ class PotentialTeachersController < ApplicationController
   def send_hoc_email(params)
     name = current_user&.name || params[:name]
     email = current_user&.email || params[:email]
-    MailJet.create_contact_and_add_to_hoc_guide_series(email, name, request.locale)
+    MailJet.create_contact_and_add_to_hoc_guide_series(email, name)
   end
 
   def set_potential_teacher

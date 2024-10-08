@@ -76,7 +76,7 @@ module MailJet
     add_to_contact_list(contact, contact_list_id)
   end
 
-  def self.create_contact_and_add_to_hoc_guide_series(email, name, locale)
+  def self.create_contact_and_add_to_hoc_guide_series(email, name)
     return unless enabled?
 
     return unless email.present?
@@ -88,8 +88,7 @@ module MailJet
       ]
     )
 
-    subaccount_contact_list_config = CONTACT_LISTS[:hoc_guide_series][subaccount.to_sym]
-    contact_list_id = subaccount_contact_list_config[locale.to_sym] || subaccount_contact_list_config[:default]
+    contact_list_id = CONTACT_LISTS[:hoc_guide_series][subaccount.to_sym][:default]
     add_to_contact_list(contact, contact_list_id)
   end
 
