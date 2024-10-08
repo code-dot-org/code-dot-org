@@ -17,8 +17,8 @@ export const TEACHER_NAVIGATION_PATHS = {
   aiTutorChatMessages: 'ai_tutor',
   lessonMaterials: 'materials',
   calendar: 'calendar',
-  courseOverview: 'course',
-  unitOverview: 'unit',
+  courseOverview: 'courses/:courseVersionName',
+  unitOverview: 'unit/:unitName?',
   settings: 'settings',
 };
 

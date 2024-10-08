@@ -3,11 +3,13 @@ import {
   useCodebridgeContext,
 } from '@codebridge/codebridgeContext';
 import {FolderId, ProjectFile} from '@codebridge/types';
-import {checkForDuplicateFilename, validateFileName} from '@codebridge/utils';
+import {checkForDuplicateFilename, isValidFileName} from '@codebridge/utils';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -18,8 +20,14 @@ type handleFileUploadArgs = {
   contents: string;
 };
 
-export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
+export const useHandleFileUpload = (
+  projectFiles: Record<string, ProjectFile>
+) => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
+  );
 
   const {newFile} = useCodebridgeContext();
   const dialogControl = useDialogControl();
@@ -31,7 +39,7 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
       // So don't attach other handlers to this button.
       document.body.click();
 
-      if (!validateFileName(fileName)) {
+      if (!isValidFileName(fileName)) {
         dialogControl?.showDialog({
           type: DialogType.GenericAlert,
           title: codebridgeI18n.invalidNameError(),
@@ -44,7 +52,13 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
         );
         return;
       }
-      const duplicate = checkForDuplicateFilename(fileName, folderId, files);
+      const duplicate = checkForDuplicateFilename({
+        fileName,
+        folderId,
+        projectFiles,
+        isStartMode,
+        validationFile,
+      });
       if (duplicate) {
         dialogControl?.showDialog({
           type: DialogType.GenericAlert,
@@ -53,7 +67,7 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
         return;
       }
 
-      const fileId = getNextFileId(Object.values(files));
+      const fileId = getNextFileId(Object.values(projectFiles));
 
       newFile({
         fileId,
@@ -65,6 +79,6 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
         fileName,
       });
     },
-    [appName, dialogControl, files, newFile]
+    [appName, dialogControl, projectFiles, newFile, isStartMode, validationFile]
   );
 };

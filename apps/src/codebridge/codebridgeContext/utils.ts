@@ -7,7 +7,7 @@ import {
 import {useMemo} from 'react';
 
 // disabling locales and falling back on the hardwired default due to apparent circular dep
-// import codebridgeI18n from '@codebridge/locale';
+// import codebridgeI18n from '@cdo/apps/codebridge/locale';
 const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
 
 import {DEFAULT_FOLDER_ID} from '../constants';

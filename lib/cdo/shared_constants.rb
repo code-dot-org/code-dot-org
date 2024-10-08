@@ -698,7 +698,7 @@ module SharedConstants
     },
   }.freeze
   CENSUS_CONSTANTS = OpenStruct.new(
-    {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
+    {CURRENT_CENSUS_SCHOOL_YEAR: 2024}
   )
 
   CAP_LINKS = OpenStruct.new(
@@ -786,6 +786,8 @@ module SharedConstants
     KAREN: "gen-ai-karen-creative-mistral-7b",
     PIRATE: "gen-ai-mistral-pirate-7b"
   }
+
+  AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 end

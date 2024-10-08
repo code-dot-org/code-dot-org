@@ -9,6 +9,8 @@ import MusicLibrary from '../MusicLibrary';
 
 import Sequencer from './Sequencer';
 
+const DEFAULT_START_MEASURE = 1;
+
 /**
  * A {@link Sequencer} used in the Advanced (programming with variables) block mode.
  */
@@ -38,7 +40,7 @@ export default class AdvancedSequencer extends Sequencer {
       soundType: soundData.type,
       blockId,
       triggered: false,
-      when: measure,
+      when: measure ?? DEFAULT_START_MEASURE,
       effects: {...this.effects},
     } as PlaybackEvent);
   }
@@ -56,7 +58,7 @@ export default class AdvancedSequencer extends Sequencer {
       length: length,
       blockId,
       triggered: false,
-      when: measure,
+      when: measure ?? DEFAULT_START_MEASURE,
       value,
       effects: {...this.effects},
     } as PlaybackEvent);
@@ -73,7 +75,7 @@ export default class AdvancedSequencer extends Sequencer {
       length: DEFAULT_CHORD_LENGTH,
       blockId,
       triggered: false,
-      when: measure,
+      when: measure ?? DEFAULT_START_MEASURE,
       value,
       effects: {...this.effects},
     } as PlaybackEvent);

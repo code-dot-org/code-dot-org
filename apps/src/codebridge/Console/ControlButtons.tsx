@@ -22,7 +22,7 @@ import {appendSystemMessage} from '../redux/consoleRedux';
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import moduleStyles from './console.module.scss';
-import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 // Control buttons for running and stopping code.
 // Can be extended in the future to include a test button.
@@ -125,6 +125,7 @@ const ControlButtons: React.FunctionComponent = () => {
             text: disabledCodeActionsTooltip || '',
             size: 's',
             tooltipId: 'code-actions-tooltip',
+            className: darkModeStyles.tooltipRight,
           }}
         >
           <Button

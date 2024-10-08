@@ -1,0 +1,15 @@
+name 'Data Sci U1 Post Q13_2024-pilot'
+
+question 'What is an example of a specific and measurable data-driven question for a retail business?'
+
+wrong 'How can we improve overall sales performance across different regions?'
+wrong 'Why do customers prefer certain products over others in our stores?'
+right 'What is the average sales growth rate per quarter for each product category?'
+wrong 'What are the common customer preferences across different age groups?'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN
