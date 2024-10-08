@@ -26,6 +26,11 @@
   align-items: center;
   cursor: pointer;
   font-size: 14px;
+  min-height: 24px;
+
+  &:hover {
+    background-color: $light_gray_800;
+  }
 }
 
 .title {
@@ -59,7 +64,9 @@
 
 li .button-kebab {
   display: none;
-  height: 13px;
+  height: 20px;
+  width: 20px;
+  margin: 2px;
 }
 
 div.row:hover .button-kebab {
@@ -98,5 +105,6 @@ div.row:hover .button-kebab {
 }
 
 .dropdownItem {
-  width: 100px;
+  width: auto;
+  min-width: 100px;
 }
