@@ -25,6 +25,11 @@ $default-spacing: 16px;
 
 .tabsContainer {
   background-color: #eaebeb;
+  ul {
+    li > button[role="tab"] {
+      max-width: 300px;  
+    }
+  }
 }
 
 .tabPanelsContainer {
