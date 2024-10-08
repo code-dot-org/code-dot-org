@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -9,9 +10,12 @@ import moduleStyles from './callouts.module.scss';
 
 const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
 
+type DirectionString = 'up' | 'left';
+
 interface AvailableCallout {
-  openToolboxCategory?: number;
   selector: string;
+  openToolboxCategory?: number;
+  direction?: DirectionString;
 }
 
 interface AvailableCallouts {
@@ -48,6 +52,11 @@ const availableCallouts: AvailableCallouts = {
   },
   'play-sounds-together-block-workspace': {
     selector: `.blocklyWorkspace g[data-id="${BlockTypes.PLAY_SOUNDS_TOGETHER}"] path`,
+    direction: 'left',
+  },
+  'play-sounds-together-block-2-workspace': {
+    selector: `.blocklyWorkspace g[data-id="${BlockTypes.PLAY_SOUNDS_TOGETHER}_2"] path`,
+    direction: 'left',
   },
   'trigger-block-workspace': {
     selector: `.blocklyWorkspace g[data-id="${BlockTypes.TRIGGERED_AT_SIMPLE2}"]`,
@@ -66,9 +75,9 @@ const availableCallouts: AvailableCallouts = {
       '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable:nth-of-type(1)',
   },
   'toolbox-second-block': {
-    openToolboxCategory: 0,
     selector:
       '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable:nth-of-type(3)',
+    openToolboxCategory: 0,
   },
 };
 
@@ -97,16 +106,28 @@ const Callouts: React.FunctionComponent = () => {
   );
 
   const targets: Target[] = [];
+  let calloutClassName;
 
   validCallouts?.forEach(validCallout => {
     const element = document.querySelector(validCallout.selector);
     const elementRect = element?.getBoundingClientRect();
     if (elementRect && elementRect.width > 0) {
-      const elementWidth = elementRect.right - elementRect.left + 1;
-      const target: Target = {
-        left: elementRect.left + elementWidth / 2,
-        top: elementRect.bottom + 4,
-      };
+      let target: Target;
+      if (validCallout.direction === 'left') {
+        const elementHeight = elementRect.bottom - elementRect.top + 1;
+        target = {
+          left: elementRect.right + 4,
+          top: elementRect.top + elementHeight / 2,
+        };
+        calloutClassName = moduleStyles.calloutLeft;
+      } else {
+        const elementWidth = elementRect.right - elementRect.left + 1;
+        target = {
+          left: elementRect.left + elementWidth / 2,
+          top: elementRect.bottom + 4,
+        };
+        calloutClassName = moduleStyles.calloutUp;
+      }
       targets.push(target);
     }
   });
@@ -143,7 +164,7 @@ const Callouts: React.FunctionComponent = () => {
         id="callout"
         key={callout.index}
         style={{left: targets[0].left, top: targets[0].top}}
-        className={moduleStyles.callout}
+        className={classNames(moduleStyles.callout, calloutClassName)}
       >
         <div id="callout-arrow" className={moduleStyles.arrow}>
           <img src={arrowImage} alt="" />
