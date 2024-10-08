@@ -21,6 +21,7 @@ interface SectionsData {
   [sectionId: number]: {
     name: string;
     hidden: boolean;
+    courseVersionName: string;
   };
 }
 
@@ -115,6 +116,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       navigate(
         generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
           sectionId: selectedSectionId,
+          courseVersionName: sections[selectedSectionId].courseVersionName,
         })
       );
     }
@@ -128,6 +130,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         key={'ui-test-sidebar-' + key}
         isSelected={currentPathName === key}
         sectionId={+selectedSectionId}
+        courseVersionName={sections[selectedSectionId].courseVersionName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
         onClick={() => navigateToDifferentPage(key)}
       />
