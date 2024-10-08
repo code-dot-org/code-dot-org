@@ -101,8 +101,12 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const textLayoutClass =
     panel.layout === 'text-top-left'
       ? styles.markdownTextTopLeft
+      : panel.layout === 'text-top-center'
+      ? styles.markdownTextTopCenter
       : panel.layout === 'text-bottom-left'
       ? styles.markdownTextBottomLeft
+      : panel.layout === 'text-bottom-center'
+      ? styles.markdownTextBottomCenter
       : panel.layout === 'text-bottom-right'
       ? styles.markdownTextBottomRight
       : styles.markdownTextTopRight;
