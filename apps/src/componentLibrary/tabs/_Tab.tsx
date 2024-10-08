@@ -38,7 +38,6 @@ interface TabsProps extends TabModel {
   tabPanelId: string;
   /** The ID of the button element (_Tab) */
   tabButtonId: string;
-  ref?: HTMLDivElement;
 }
 
 const checkTabForErrors = (
@@ -60,8 +59,7 @@ const renderTabButtonContent = (
   icon?: FontAwesomeV6IconProps,
   text?: string,
   iconLeft?: FontAwesomeV6IconProps,
-  iconRight?: FontAwesomeV6IconProps,
-  ref?: HTMLDivElement
+  iconRight?: FontAwesomeV6IconProps
 ) => {
   if (isIconOnly && icon) {
     return <FontAwesomeV6Icon {...icon} />;
@@ -88,10 +86,12 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   tabButtonId,
   disabled = false,
   isIconOnly = false,
-  ref,
 }) => {
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
   const handleTooltip = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (tooltip) {
+      return;
+    }
     const target = e.currentTarget;
     // Locate the element that contains the text (if nested inside spans or other elements)
     const textElement = target.querySelector('span') || target;
@@ -112,8 +112,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     icon,
     text,
     iconLeft,
-    iconRight,
-    ref
+    iconRight
   );
 
   const buttonElement = (
@@ -138,9 +137,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   return (
     <li role="presentation">
       {tooltip ? (
-        <WithTooltip tooltipProps={tooltip}>
-          <div ref={ref}>{buttonElement}</div>
-        </WithTooltip>
+        <WithTooltip tooltipProps={tooltip}>{buttonElement}</WithTooltip>
       ) : (
         buttonElement
       )}

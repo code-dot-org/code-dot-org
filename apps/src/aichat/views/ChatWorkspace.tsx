@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
@@ -10,7 +10,6 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
-import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getShortName} from '../utils';
@@ -81,14 +80,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
     [selectedTab]
   );
-  const ref = useRef<HTMLDivElement>(null);
-  const [showTooltip, setShowTooltip] = useState(false);
-
-  useEffect(() => {
-    if (ref.current) {
-      setShowTooltip(ref.current.offsetWidth < ref.current.scrollWidth);
-    }
-  }, []);
 
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
@@ -116,14 +107,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList events={studentChatHistory} isTeacherView={true} />
       ),
       iconLeft: iconValue,
-      tooltip: showTooltip
-        ? ({
-            text: viewStudentChatHistoryLabel,
-            tooltipId: 'tooltipChatHistory',
-            direction: 'onBottom',
-          } as TooltipProps)
-        : undefined,
-      ref: ref,
     },
     {
       value: 'testStudentModel',
