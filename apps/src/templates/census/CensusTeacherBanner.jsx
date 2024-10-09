@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
@@ -9,109 +9,138 @@ import color from '@cdo/apps/util/color';
 import styleConstants from '../../styleConstants';
 import SchoolInfoInputs from '../SchoolInfoInputs';
 
-export default class CensusTeacherBanner extends Component {
-  static propTypes = {
-    schoolYear: PropTypes.number.isRequired,
-    onSubmit: PropTypes.func.isRequired,
-    onDismiss: PropTypes.func.isRequired,
-    onPostpone: PropTypes.func.isRequired,
-    onTeachesChange: PropTypes.func.isRequired,
-    onInClassChange: PropTypes.func.isRequired,
-    ncesSchoolId: PropTypes.string.isRequired,
-    question: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours'])
-      .isRequired,
-    teaches: PropTypes.bool,
-    inClass: PropTypes.bool,
-    teacherId: PropTypes.number.isRequired,
-    teacherName: PropTypes.string.isRequired,
-    teacherEmail: PropTypes.string.isRequired,
-    showInvalidError: PropTypes.bool,
-    showUnknownError: PropTypes.bool,
-    submittedSuccessfully: PropTypes.bool,
+export default function CensusTeacherBanner({
+  onDismiss,
+  onPostpone,
+  onTeachesChange,
+  onInClassChange,
+  initialNcesSchoolId,
+  question,
+  teaches,
+  inClass,
+  teacherName,
+  teacherEmail,
+  onSubmitSuccess,
+  schoolYear,
+}) {
+  const [showSchoolInfoForm, setShowSchoolInfoForm] = useState(false);
+  const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
+    useState(false);
+  const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
+    useState(null);
+  const [showCensusInvalidError, setShowCensusInvalidError] = useState(false);
+  const [showCensusUnknownError, setShowCensusUnknownError] = useState(false);
+
+  const [country, setCountry] = useState('United States');
+  const [schoolType, setSchoolType] = useState('');
+  const [ncesSchoolId, setNcesSchoolId] = useState(initialNcesSchoolId);
+  const [schoolName, setSchoolName] = useState('');
+  const [schoolDisplayName, setSchoolDisplayName] = useState(null);
+  const [schoolState, setSchoolState] = useState('');
+  const [schoolZip, setSchoolZip] = useState('');
+  const [schoolLocation, setSchoolLocation] = useState('');
+  const [showSchoolInfoErrors, setShowSchoolInfoErrors] = useState(false);
+  const schoolInfoInputs = useRef(null);
+
+  const loadSchoolNameSuccess = response => {
+    setSchoolDisplayName(response.name);
+    setSchoolType(response.school_type);
   };
 
-  componentDidMount() {
-    this.loadSchoolName(this.props.ncesSchoolId);
-  }
-
-  initialState = {
-    showSchoolInfoForm: false,
-    country: 'United States',
-    schoolType: '',
-    ncesSchoolId: null,
-    schoolName: '',
-    schoolDisplayName: null,
-    schoolState: '',
-    schoolZip: '',
-    schoolLocation: '',
-    showSchoolInfoErrors: false,
-    showSchoolInfoUnknownError: false,
+  const loadSchoolNameError = error => {
+    setSchoolDisplayName('your school');
   };
 
-  state = this.initialState;
+  const loadSchoolName = useCallback(schoolId => {
+    if (schoolId && schoolId !== '-1') {
+      $.ajax({
+        url: `/api/v1/schools/${schoolId}`,
+        type: 'get',
+      })
+        .done(loadSchoolNameSuccess)
+        .fail(loadSchoolNameError);
+    } else {
+      setSchoolDisplayName('');
+    }
+  }, []);
 
-  handleCountryChange = (_, event) => {
+  useEffect(() => {
+    loadSchoolName(ncesSchoolId);
+  }, [ncesSchoolId, loadSchoolName]);
+
+  const handleCountryChange = (_, event) => {
     const newCountry = event ? event.value : '';
-    this.setState({country: newCountry});
+    setCountry(newCountry);
   };
 
-  handleSchoolTypeChange = event => {
+  const handleSchoolTypeChange = event => {
     const newType = event ? event.target.value : '';
-    this.setState({schoolType: newType});
+    setSchoolType(newType);
   };
 
-  handleSchoolChange = (_, event) => {
+  const handleSchoolChange = (_, event) => {
     const newSchool = event ? event.value : '';
-    this.setState({ncesSchoolId: newSchool});
-    this.loadSchoolName(newSchool);
+    setNcesSchoolId(newSchool);
   };
 
-  handleSchoolNotFoundChange = (field, event) => {
-    const newValue = event ? event.target.value : '';
-    this.setState({
-      [field]: newValue,
-    });
+  const handleSchoolNotFoundChange = (field, event) => {
+    const value = event ? event.target.value : '';
+    switch (field) {
+      case 'schoolType':
+        setSchoolType(value);
+        break;
+      case 'schoolName':
+        setSchoolName(value);
+        break;
+      case 'schoolLocation':
+        setSchoolLocation(value);
+        break;
+      default:
+        console.warn(`Unknown field: ${field}`);
+    }
   };
 
-  showSchoolInfoForm = () => {
-    this.setState({showSchoolInfoForm: true});
+  const hideSchoolInfoForm = () => {
+    setShowSchoolInfoForm(false);
+    setShowSchoolInfoErrors(false);
   };
 
-  hideSchoolInfoForm = () => {
-    this.setState({
-      showSchoolInfoForm: false,
-      showSchoolInfoErrors: false,
-    });
-  };
-
-  dismissSchoolInfoForm = () => {
+  const dismissSchoolInfoForm = () => {
     // This is handling the case where the user dismissed the
     // "update your school" view, not the entire banner. In that case, there
     // may have been partial state about the school changed. We do not want
     // to use that partial state in the census submission so we need to reset
     // to the previous values.
-    this.setState(this.initialState);
-    this.loadSchoolName(this.props.ncesSchoolId);
+    setShowSchoolInfoForm(false);
+    setCountry('United States');
+    setSchoolType('');
+    setNcesSchoolId(null);
+    setSchoolName('');
+    setSchoolDisplayName(null);
+    setSchoolState('');
+    setSchoolZip('');
+    setSchoolLocation('');
+    setShowSchoolInfoErrors(false);
+    setShowSchoolInfoUnknownError(false);
   };
 
-  handleSchoolInfoSubmit = () => {
-    if (this.schoolInfoInputs.isValid()) {
+  const handleSchoolInfoSubmit = () => {
+    if (schoolInfoInputs.current.isValid()) {
       let schoolData;
-      if (this.state.ncesSchoolId === '-1') {
+      if (ncesSchoolId === '-1') {
         schoolData = {
           _method: 'patch',
-          'user[school_info_attributes][country]': this.state.country,
-          'user[school_info_attributes][school_type]': this.state.schoolType,
-          'user[school_info_attributes][school_name]': this.state.schoolName,
-          'user[school_info_attributes][school_state]': this.state.schoolState,
-          'user[school_info_attributes][school_zip]': this.state.schoolZip,
-          'user[school_info_attributes][full_address]':
-            this.state.schoolLocation,
+          'user[school_info_attributes][country]': country,
+          'user[school_info_attributes][school_type]': schoolType,
+          'user[school_info_attributes][school_name]': schoolName,
+          'user[school_info_attributes][school_state]': schoolState,
+          'user[school_info_attributes][school_zip]': schoolZip,
+          'user[school_info_attributes][full_address]': schoolLocation,
         };
       } else {
         schoolData = {
           _method: 'patch',
-          'user[school_info_attributes][school_id]': this.state.ncesSchoolId,
+          'user[school_info_attributes][school_id]': ncesSchoolId,
         };
       }
       $.ajax({
@@ -120,92 +149,67 @@ export default class CensusTeacherBanner extends Component {
         dataType: 'json',
         data: schoolData,
       })
-        .done(this.hideSchoolInfoForm)
-        .fail(this.updateSchoolInfoError);
+        .done(hideSchoolInfoForm)
+        .fail(updateSchoolInfoError);
     } else {
-      this.setState({
-        showSchoolInfoErrors: true,
-      });
+      setShowSchoolInfoErrors(true);
     }
   };
 
-  updateSchoolInfoError = () => {
+  const updateSchoolInfoError = () => {
     // It isn't clear what could cause an error here since none of the fields are required.
-    this.setState({
-      showSchoolInfoUnknownError: true,
-    });
+    setShowSchoolInfoUnknownError(true);
   };
 
-  loadSchoolName = schoolId => {
-    if (schoolId && schoolId !== '-1') {
-      $.ajax({
-        url: `/api/v1/schools/${schoolId}`,
-        type: 'get',
-      })
-        .done(this.loadSchoolNameSuccess)
-        .fail(this.loadSchoolNameError);
-    } else {
-      this.setState({
-        schoolDisplayName: '',
-      });
-    }
+  const isValid = () => {
+    return !teaches || inClass === true || inClass === false;
   };
 
-  loadSchoolNameSuccess = response => {
-    this.setState({
-      schoolDisplayName: response.name,
-      schoolType: response.school_type,
-    });
-  };
-
-  loadSchoolNameError = error => {
-    this.setState({
-      schoolDisplayName: 'your school',
-    });
-  };
-
-  bindSchoolInfoInputs = inputs => {
-    this.schoolInfoInputs = inputs;
-  };
-
-  isValid = () => {
-    return (
-      !this.props.teaches ||
-      this.props.inClass === true ||
-      this.props.inClass === false
-    );
-  };
-
-  getData = () => {
-    const schoolId = this.state.ncesSchoolId
-      ? this.state.ncesSchoolId
-      : this.props.ncesSchoolId;
+  const getData = () => {
     let data = {
       submitter_role: 'TEACHER',
-      submitter_name: this.props.teacherName,
-      submitter_email_address: this.props.teacherEmail,
-      school_year: this.props.schoolYear,
+      submitter_name: teacherName,
+      submitter_email_address: teacherEmail,
+      school_year: schoolYear,
     };
-    const question = this.props.inClass
-      ? this.props.question
-      : 'how_many_after_school';
-    data[question] = 'SOME';
+    const dataQuestion = inClass ? question : 'how_many_after_school';
+    data[dataQuestion] = 'SOME';
 
-    if (schoolId === '-1') {
-      data['country_s'] = this.state.country;
-      data['school_type_s'] = this.state.schoolType;
-      data['school_name_s'] = this.state.schoolName;
-      data['school_state_s'] = this.state.schoolState;
-      data['school_zip_s'] = this.state.schoolZip;
-      data['school_location'] = this.state.schoolLocation;
+    if (ncesSchoolId === '-1') {
+      data['country_s'] = country;
+      data['school_type_s'] = schoolType;
+      data['school_name_s'] = schoolName;
+      data['school_state_s'] = schoolState;
+      data['school_zip_s'] = schoolZip;
+      data['school_location'] = schoolLocation;
     } else {
-      data['nces_school_s'] = schoolId;
+      data['nces_school_s'] = ncesSchoolId;
     }
 
     return data;
   };
 
-  renderThankYou() {
+  const handleCensusBannerSubmit = () => {
+    if (isValid()) {
+      $.ajax({
+        url: '/dashboardapi/v1/census/CensusTeacherBannerV1',
+        type: 'post',
+        dataType: 'json',
+        data: getData(),
+      })
+        .done(() => {
+          setCensusSubmittedSuccessfully(true);
+          onSubmitSuccess();
+        })
+        .fail(() => {
+          setShowCensusUnknownError(true);
+        });
+    } else {
+      setShowCensusInvalidError(true);
+    }
+  };
+
+  const renderThankYou = () => {
     const yourschoolUrl = encodeURIComponent('https://code.org/yourschool');
     const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${yourschoolUrl}`;
     const twitterText = encodeURIComponent(
@@ -238,18 +242,14 @@ export default class CensusTeacherBanner extends Component {
         </div>
       </div>
     );
-  }
+  };
 
-  renderSchoolInfoForm() {
-    let schoolId =
-      this.state.ncesSchoolId !== null
-        ? this.state.ncesSchoolId
-        : this.props.ncesSchoolId;
+  const renderSchoolInfoForm = () => {
     return (
       <div>
         <div style={styles.header}>
           <h2>Update your school information</h2>
-          {this.state.showSchoolInfoUnknownError && (
+          {showSchoolInfoUnknownError && (
             <p style={styles.error}>
               We encountered an error with your submission. Please try again.
             </p>
@@ -257,27 +257,27 @@ export default class CensusTeacherBanner extends Component {
         </div>
         <div style={styles.message}>
           <SchoolInfoInputs
-            ref={this.bindSchoolInfoInputs}
-            onCountryChange={this.handleCountryChange}
-            onSchoolTypeChange={this.handleSchoolTypeChange}
-            onSchoolChange={this.handleSchoolChange}
-            onSchoolNotFoundChange={this.handleSchoolNotFoundChange}
-            country={this.state.country}
-            schoolType={this.state.schoolType}
-            ncesSchoolId={schoolId}
-            schoolName={this.state.schoolName}
-            schoolState={this.state.schoolState}
-            schoolZip={this.state.schoolZip}
-            schoolLocation={this.state.schoolLocation}
+            ref={schoolInfoInputs}
+            onCountryChange={handleCountryChange}
+            onSchoolTypeChange={handleSchoolTypeChange}
+            onSchoolChange={handleSchoolChange}
+            onSchoolNotFoundChange={handleSchoolNotFoundChange}
+            country={country}
+            schoolType={schoolType}
+            ncesSchoolId={ncesSchoolId}
+            schoolName={schoolName}
+            schoolState={schoolState}
+            schoolZip={schoolZip}
+            schoolLocation={schoolLocation}
             useLocationSearch={true}
-            showErrors={this.state.showSchoolInfoErrors}
+            showErrors={showSchoolInfoErrors}
             showRequiredIndicator={true}
           />
         </div>
         <div style={styles.buttonDiv}>
           <Button
             __useDeprecatedTag
-            onClick={this.dismissSchoolInfoForm}
+            onClick={dismissSchoolInfoForm}
             style={styles.button}
             color="gray"
             size="large"
@@ -285,7 +285,7 @@ export default class CensusTeacherBanner extends Component {
           />
           <Button
             __useDeprecatedTag
-            onClick={this.handleSchoolInfoSubmit}
+            onClick={handleSchoolInfoSubmit}
             style={styles.button}
             size="large"
             text="Submit"
@@ -293,33 +293,33 @@ export default class CensusTeacherBanner extends Component {
         </div>
       </div>
     );
-  }
+  };
 
-  renderCensusForm() {
-    const numHours = this.props.question === 'how_many_20_hours' ? '20' : '10';
+  const renderCensusForm = () => {
+    const numHours = question === 'how_many_20_hours' ? '20' : '10';
     let buttons;
     let footer;
-    if (this.props.teaches === true) {
+    if (teaches === true) {
       footer = <hr />;
       buttons = (
         <div style={styles.buttonDiv}>
           <Button
             __useDeprecatedTag
-            onClick={this.props.onDismiss}
+            onClick={onDismiss}
             style={styles.button}
             color={Button.ButtonColor.neutralDark}
             text="No thanks"
           />
           <Button
             __useDeprecatedTag
-            onClick={this.props.onSubmit}
+            onClick={handleCensusBannerSubmit}
             style={styles.button}
             color={Button.ButtonColor.brandSecondaryDefault}
             text="Add my school to the map!"
           />
         </div>
       );
-    } else if (this.props.teaches === false) {
+    } else if (teaches === false) {
       footer = (
         <div>
           <hr />
@@ -330,17 +330,14 @@ export default class CensusTeacherBanner extends Component {
           </p>
         </div>
       );
-      const schoolId = this.state.ncesSchoolId
-        ? this.state.ncesSchoolId
-        : this.props.ncesSchoolId;
       const link = encodeURI(
-        `/yourschool?schoolId=${schoolId}&isTeacher=true&name=${this.props.teacherName}&email=${this.props.teacherEmail}#form`
+        `/yourschool?schoolId=${ncesSchoolId}&isTeacher=true&name=${teacherName}&email=${teacherEmail}#form`
       );
       buttons = (
         <div style={styles.buttonDiv}>
           <Button
             __useDeprecatedTag
-            onClick={this.props.onPostpone}
+            onClick={onPostpone}
             style={styles.button}
             color="gray"
             size="large"
@@ -348,7 +345,7 @@ export default class CensusTeacherBanner extends Component {
           />
           <Button
             __useDeprecatedTag
-            onClick={this.props.onPostpone}
+            onClick={onPostpone}
             href={pegasus(link)}
             target="_blank"
             rel="noopener noreferrer"
@@ -360,29 +357,29 @@ export default class CensusTeacherBanner extends Component {
       );
     }
 
-    let schoolName;
+    let schoolNameForDisplay;
 
-    if (this.state.schoolDisplayName) {
-      schoolName = this.state.schoolDisplayName;
-    } else if (this.state.schoolName) {
-      schoolName = this.state.schoolName;
+    if (schoolDisplayName) {
+      schoolNameForDisplay = schoolDisplayName;
+    } else if (schoolName) {
+      schoolNameForDisplay = schoolName;
     }
 
-    if (schoolName) {
+    if (schoolNameForDisplay) {
       return (
         <div>
           <div style={styles.header}>
-            <h2 style={styles.title}>Add {schoolName} to our map!</h2>
+            <h2 style={styles.title}>Add {schoolNameForDisplay} to our map!</h2>
             <p style={styles.updateSchool}>
               Not teaching at this school anymore?&ensp;
               <a
                 style={styles.updateSchoolLink}
-                onClick={this.showSchoolInfoForm}
+                onClick={() => setShowSchoolInfoForm(true)}
               >
                 Update here
               </a>
             </p>
-            {this.props.showUnknownError && (
+            {showCensusUnknownError && (
               <p style={styles.error}>
                 We encountered an error with your submission. Please try again.
               </p>
@@ -398,11 +395,11 @@ export default class CensusTeacherBanner extends Component {
               <input
                 type="radio"
                 id="teachesYes"
-                name={this.props.question}
+                name={question}
                 value="SOME"
                 style={styles.radio}
-                onChange={this.props.onTeachesChange}
-                checked={this.props.teaches === true}
+                onChange={onTeachesChange}
+                checked={teaches === true}
               />
               Yes, we’ve done {numHours} hours.
             </label>
@@ -410,20 +407,20 @@ export default class CensusTeacherBanner extends Component {
               <input
                 type="radio"
                 id="teachesNo"
-                name={this.props.question}
+                name={question}
                 style={styles.radio}
-                onChange={this.props.onTeachesChange}
+                onChange={onTeachesChange}
                 value="not yet"
-                checked={this.props.teaches === false}
+                checked={teaches === false}
               />
               Not yet.
             </label>
-            {this.props.teaches && this.props.showInvalidError && (
+            {teaches && showCensusInvalidError && (
               <p style={styles.error}>
                 Please select one of the options below.
               </p>
             )}
-            {this.props.teaches && (
+            {teaches && (
               <div>
                 <p style={styles.introQuestion}>
                   Which of the following best describes where you teach
@@ -435,8 +432,8 @@ export default class CensusTeacherBanner extends Component {
                     id="inClass"
                     value="inclass"
                     style={styles.radio}
-                    onChange={this.props.onInClassChange}
-                    checked={this.props.inClass === true}
+                    onChange={onInClassChange}
+                    checked={inClass === true}
                   />
                   In a classroom
                 </label>
@@ -445,9 +442,9 @@ export default class CensusTeacherBanner extends Component {
                     type="radio"
                     id="afterSchool"
                     style={styles.radio}
-                    onChange={this.props.onInClassChange}
+                    onChange={onInClassChange}
                     value="afterschool"
-                    checked={this.props.inClass === false}
+                    checked={inClass === false}
                   />
                   In an afterschool program or club
                 </label>
@@ -462,35 +459,48 @@ export default class CensusTeacherBanner extends Component {
       // Don't display until school name has been loaded
       return null;
     }
+  };
+
+  let mainForm;
+
+  if (censusSubmittedSuccessfully) {
+    mainForm = renderThankYou();
+  } else if (showSchoolInfoForm) {
+    mainForm = renderSchoolInfoForm();
+  } else {
+    mainForm = renderCensusForm();
   }
 
-  render() {
-    let mainForm;
-
-    if (this.props.submittedSuccessfully) {
-      mainForm = this.renderThankYou();
-    } else if (this.state.showSchoolInfoForm) {
-      mainForm = this.renderSchoolInfoForm();
-    } else {
-      mainForm = this.renderCensusForm();
-    }
-
-    return (
-      <div style={styles.main}>
-        <div style={styles.image}>
-          <img
-            src="/shared/images/misc/census-map-with-flag.png"
-            alt="Map with flag"
-            width="180"
-            height="180"
-          />
-        </div>
-        {mainForm}
-        <div style={styles.clear} />
+  return (
+    <div style={styles.main}>
+      <div style={styles.image}>
+        <img
+          src="/shared/images/misc/census-map-with-flag.png"
+          alt="Map with flag"
+          width="180"
+          height="180"
+        />
       </div>
-    );
-  }
+      {mainForm}
+      <div style={styles.clear} />
+    </div>
+  );
 }
+
+CensusTeacherBanner.propTypes = {
+  onDismiss: PropTypes.func.isRequired,
+  onPostpone: PropTypes.func.isRequired,
+  onTeachesChange: PropTypes.func.isRequired,
+  onInClassChange: PropTypes.func.isRequired,
+  initialNcesSchoolId: PropTypes.string,
+  question: PropTypes.string.isRequired,
+  teaches: PropTypes.bool,
+  inClass: PropTypes.bool,
+  teacherName: PropTypes.string.isRequired,
+  teacherEmail: PropTypes.string.isRequired,
+  onSubmitSuccess: PropTypes.func.isRequired,
+  schoolYear: PropTypes.number.isRequired,
+};
 
 const styles = {
   button: {
