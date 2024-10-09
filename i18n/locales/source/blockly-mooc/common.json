@@ -151,7 +151,7 @@
   "aiUserMessagePlaceholder": "Add a chat message...",
   "aiWarningModalHeader": "Remember to chat responsibly!",
   "aiWarningModalInappropriateFlagged": "Inappropriate messages will be flagged by our content moderation policy.",
-  "aiWarningModalMessagesAreRecorded": "All messages you send will be visible to your teacher, including blocked messages.",
+  "aiWarningModalMessagesAreRecorded": "All messages you send are recorded and visible to your teacher.",
   "aiWarningModalPersonalNotSubmitted": "In order to protect your privacy, anything considered personal information (name, phone number, address, etc.) should not be submitted.",
   "aiWarningModalOk": "Start chatting",
   "aiWarningUnsaved": "All unsaved changes will be lost.",
