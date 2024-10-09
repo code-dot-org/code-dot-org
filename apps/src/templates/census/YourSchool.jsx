@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import DCDO from '@cdo/apps/dcdo';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
@@ -9,6 +10,7 @@ import Notification, {
   NotificationType,
 } from '../../sharedComponents/Notification';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+import MarketingAnnouncementBanner from '../studioHomepages/MarketingAnnouncementBanner';
 
 import {
   UnconnectedCensusForm as CensusForm,
@@ -16,6 +18,17 @@ import {
 } from './CensusForm';
 import CensusMap from './CensusMap';
 import YourSchoolResources from './YourSchoolResources';
+
+const showAccessReportBanner = !!DCDO.get('access-report-launch', false);
+const accessReportBannerParams = {
+  id: 'announcement-id',
+  image: '/images/marketing/accessreport_teacherdash.png',
+  title: i18n.accessReportBannerTitle(),
+  body: i18n.accessReportBannerDesc(),
+  buttonUrl: 'https://advocacy.code.org/stateofcs/',
+  buttonText: i18n.accessReportBannerButton(),
+  buttonId: 'access-report-launch-2024',
+};
 
 class YourSchool extends Component {
   static propTypes = {
@@ -87,6 +100,12 @@ class YourSchool extends Component {
         <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
         <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
         <YourSchoolResources />
+        {showAccessReportBanner && (
+          <MarketingAnnouncementBanner
+            announcement={accessReportBannerParams}
+            marginBottom="30px"
+          />
+        )}
         {!this.props.hideMap && (
           <div id="map">
             <h1 style={styles.heading}>
