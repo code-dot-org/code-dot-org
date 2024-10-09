@@ -3,7 +3,7 @@ import GoogleBlockly from 'blockly/core';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {ToolboxItemInfo} from 'blockly/core/utils/toolbox';
 
-import {Renderers} from '@cdo/apps/blockly/constants';
+import {BLOCK_TYPES, Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
@@ -14,6 +14,7 @@ import {nameComparator} from '@cdo/apps/util/sort';
 
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {BlockMode, Triggers} from '../constants';
+import musicI18n from '../locale';
 
 import {BlockTypes} from './blockTypes';
 import {
@@ -454,23 +455,32 @@ export default class MusicBlocklyWorkspace {
     const codeCopy = JSON.parse(JSON.stringify(code));
 
     Blockly.serialization.workspaces.load(codeCopy, this.workspace);
-
-    if (
-      this.toolbox?.addFunctionCalls &&
-      this.toolbox?.type === 'flyout' &&
-      this.blockMode === BlockMode.SIMPLE2
-    ) {
-      this.generateFunctionCallBlocks();
-    }
   }
 
   // For each function body in the current workspace, add a function call
-  // block to the toolbox.
-  generateFunctionCallBlocks() {
+  // block to the toolbox. Also add a function defintion block, if required.
+  generateFunctionBlocks() {
+    const blockList: ToolboxItemInfo[] = [];
+
+    if (this.toolbox?.addFunctionDefinition) {
+      blockList.push({
+        kind: 'block',
+        type: BLOCK_TYPES.procedureDefinition,
+        fields: {
+          NAME: musicI18n.blockly_functionNamePlaceholder(),
+        },
+      });
+    }
+
     const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
 
     (this.workspace?.getTopBlocks() as ProcedureBlock[])
-      .filter(block => block.type === 'procedures_defnoreturn')
+      .filter(
+        // Disregarding unrendered blocks prevents duplicating call blocks
+        // for a defintion block that was just pulled from the toolbox.
+        block =>
+          block.type === BLOCK_TYPES.procedureDefinition && block.rendered
+      )
       .forEach(block => {
         allFunctions.push(
           Blockly.serialization.procedures.saveProcedure(
@@ -479,12 +489,10 @@ export default class MusicBlocklyWorkspace {
         );
       });
 
-    const blockList: ToolboxItemInfo[] = [];
-
     allFunctions.sort(nameComparator).forEach(({name, id, parameters}) => {
       blockList.push({
         kind: 'block',
-        type: 'procedures_callnoreturn',
+        type: BLOCK_TYPES.procedureCall,
         extraState: {
           name,
           id,
