@@ -3,7 +3,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {ProjectType} from '@cdo/apps/lab2/types';
@@ -28,18 +28,19 @@ const CopyToClipboardButton: React.FunctionComponent<{
   }, [shareUrl, projectType]);
 
   return (
-    <button
-      type="button"
-      onClick={handleCopyToClipboard}
-      className={moduleStyles.copyToClipboard}
-    >
-      <FontAwesomeV6Icon
-        iconName={copiedToClipboard ? 'clipboard-check' : 'clipboard'}
-        iconStyle="thin"
-        className={moduleStyles.copyToClipboardIcon}
+    <div>
+      <Button
+        iconLeft={{
+          iconName: copiedToClipboard ? 'clipboard-check' : 'clipboard',
+        }}
+        ariaLabel={i18n.copyLinkToProject()}
+        text={i18n.copyLinkToProject()}
+        type="primary"
+        color="black"
+        size="m"
+        onClick={handleCopyToClipboard}
       />
-      {i18n.copyLinkToProject()}
-    </button>
+    </div>
   );
 };
 
@@ -47,15 +48,17 @@ const CopyToClipboardButton: React.FunctionComponent<{
  * A new implementation of the project share dialog for Lab2 labs.  Currently only used
  * by Music Lab and Python Lab, and only supports a minimal subset of functionality.
  */
+
 const ShareDialog: React.FunctionComponent<{
+  id?: string;
   shareUrl: string;
   finishUrl?: string;
   projectType: ProjectType;
-}> = ({shareUrl, finishUrl, projectType}) => {
+}> = ({id, shareUrl, finishUrl, projectType}) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    trackEvent('share', 'share_open_dialog', {value: projectType});
+    trackEvent('congrats', 'congrats_open_dialog', {value: projectType});
   });
 
   const handleClose = useCallback(
@@ -63,30 +66,70 @@ const ShareDialog: React.FunctionComponent<{
     [dispatch]
   );
 
+  const careersUrl =
+    'https://www.amazonfutureengineer.com/careertours/careervideos';
+
   return (
     <FocusLock>
       <div className={moduleStyles.dialogContainer}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>
-          <Typography semanticTag="h1" visualAppearance="heading-lg">
-            {i18n.shareTitle()}
+          <Typography
+            semanticTag="h1"
+            visualAppearance="heading-lg"
+            className={moduleStyles.heading}
+          >
+            {id === 'hoc2024' ? i18n.congratulations() : i18n.shareTitle()}
           </Typography>
-          <div className={moduleStyles.itemsContainer}>
-            <CopyToClipboardButton
-              shareUrl={shareUrl}
-              projectType={projectType}
-            />
-            <div id="share-qrcode-container">
-              <QRCode value={shareUrl + '?qr=true'} size={140} />
+          <div className={moduleStyles.columns}>
+            <div className={moduleStyles.column}>
+              <div className={moduleStyles.share}>
+                <div id="share-qrcode-container">
+                  <QRCode value={shareUrl + '?qr=true'} size={140} />
+                </div>
+                <CopyToClipboardButton
+                  shareUrl={shareUrl}
+                  projectType={projectType}
+                />
+              </div>
             </div>
-            {finishUrl && (
-              <LinkButton
-                ariaLabel={i18n.done()}
-                href={finishUrl}
-                text={i18n.done()}
-                type="primary"
-                size="s"
-              />
-            )}
+            <div className={moduleStyles.column}>
+              {id === 'hoc2024' ? (
+                <div className={moduleStyles.careers}>
+                  Learn more about careers in technology and music.
+                  <LinkButton
+                    ariaLabel={i18n.learnMore()}
+                    href={careersUrl}
+                    text={i18n.learnMore()}
+                    type="primary"
+                    color="black"
+                    size="m"
+                    target="_blank"
+                  />
+                </div>
+              ) : (
+                <div>Share your project by using these links.</div>
+              )}
+
+              {finishUrl ? (
+                <LinkButton
+                  ariaLabel={i18n.finish()}
+                  href={finishUrl}
+                  text={i18n.finish()}
+                  type="primary"
+                  size="m"
+                  className={moduleStyles.doneButton}
+                />
+              ) : (
+                <Button
+                  ariaLabel={i18n.done()}
+                  text={i18n.done()}
+                  type="primary"
+                  size="m"
+                  onClick={handleClose}
+                  className={moduleStyles.doneButton}
+                />
+              )}
+            </div>
           </div>
           <button
             type="button"
