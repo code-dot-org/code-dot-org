@@ -107,44 +107,48 @@ module Cdo
     end
 
     private def validate_character(key, value, max_length)
-      value_string = value.is_a?(Hash) ? value.to_json : value.to_s
-      unless value_string.is_a?(String)
-        @errors << "Invalid type for `#{key}`: expected String, got #{value_string.class}"
-        value_string = value_string.to_s if @modify_invalid
+      # If a JSON Object (Hash) was inadvertently published to the current Redshift column, convert to its JSON string
+      # representation. If an Integer, Float, etc was inadvertently published to this column, convert to string.
+      modified_value = value.is_a?(Hash) ? value.to_json : value.to_s
+
+      # This type check will likely never fail due to the above logic.
+      unless modified_value.is_a?(String)
+        @errors << "Invalid type for `#{key}`: expected String, got #{modified_value.class}"
       end
 
-      multibyte_value_string = ActiveSupport::Multibyte::Chars.new(value_string)
+      modified_value = ActiveSupport::Multibyte::Chars.new(modified_value)
 
-      if multibyte_value_string.bytes.size > max_length
-        @errors << "Value too long for `#{key}`: #{multibyte_value_string.bytes.size} bytes (max #{max_length})"
-        value_string = multibyte_value_string.limit(max_length).to_s if @modify_invalid
-      end
-
-      unless multibyte_value_string.ascii_only?
+      unless modified_value.ascii_only?
         @errors << "Invalid character(s) in CHAR column `#{key}`: contains non-ASCII characters"
-        if @modify_invalid
-          value_string = multibyte_value_string.unicode_normalize(:nfkc).gsub(/[^\x00-\x7F]/, '?').to_s
-        end
+        modified_value = modified_value.unicode_normalize(:nfkc).gsub(/[^\x00-\x7F]/, '?').to_s
       end
 
-      value_string
+      if modified_value.bytes.size > max_length
+        @errors << "Value too long for `#{key}`: #{modified_value.bytes.size} bytes (max #{max_length})"
+        modified_value = modified_value.limit(max_length).to_s if @modify_invalid
+      end
+
+      return @modify_invalid ? modified_value.to_s : value
     end
 
     private def validate_character_varying(key, value, max_length)
-      value_string = value.is_a?(Hash) ? value.to_json : value.to_s
-      unless value_string.is_a?(String)
-        @errors << "Invalid type for `#{key}`: expected String, got #{value.class}"
-        value_string = value_string.to_s if @modify_invalid
+      # If a JSON Object (Hash) was inadvertently published to the current Redshift column, convert to its JSON string
+      # representation. If an Integer, Float, etc was inadvertently published to this column, convert to string.
+      modified_value = value.is_a?(Hash) ? value.to_json : value.to_s
+
+      # This type check will likely never fail due to the above logic.
+      unless modified_value.is_a?(String)
+        @errors << "Invalid type for `#{key}`: expected String, got #{modified_value.class}"
       end
 
-      multibyte_string_value = ActiveSupport::Multibyte::Chars.new(value_string)
+      modified_value = ActiveSupport::Multibyte::Chars.new(modified_value)
 
-      if multibyte_string_value.bytes.size > max_length
-        @errors << "Value too long for `#{key}`: #{multibyte_string_value.bytes.size} bytes (max #{max_length})"
-        value_string =  multibyte_string_value.limit(max_length).to_s if @modify_invalid
+      if modified_value.bytes.size > max_length
+        @errors << "Value too long for `#{key}`: #{modified_value.bytes.size} bytes (max #{max_length})"
+        modified_value = modified_value.limit(max_length).to_s if @modify_invalid
       end
 
-      value_string
+      return @modify_invalid ? modified_value.to_s : value
     end
 
     private def validate_integer(key, value)

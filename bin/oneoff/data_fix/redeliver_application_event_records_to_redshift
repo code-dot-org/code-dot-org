@@ -156,10 +156,10 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
       continuation_token: continuation_token
     )
 
-    CDO.log.info "Retrieving #{list_error_manifests_response.contents.length} error manifests."
+    CDO.log.info "[REDELIVER FIREHOSE EVENTS] Retrieving #{list_error_manifests_response.contents.length} error manifests."
     # Iterate through each Firehose error manifest within the current batch.
     list_error_manifests_response.contents.each do |error_manifest_object|
-      CDO.log.info "Error Manifest: #{error_manifest_object.key}"
+      CDO.log.info "[REDELIVER FIREHOSE EVENTS] Error Manifest: #{error_manifest_object.key}"
       error_manifest_json = s3_client.get_object(
         bucket: FIREHOSE_INTERMEDIATE_BUCKET,
         key: error_manifest_object.key
@@ -174,7 +174,7 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
         batch_status.undelivered_batch_position_in_manifest = position_in_error_manifest
         batch_status.records_modified = 0
         batch_status.records_skipped = 0
-        CDO.log.info "Attempting to redeliver error batch: #{batch_status.undelivered_batch_object_key}"
+        CDO.log.info "[REDELIVER FIREHOSE EVENTS] Attempting to redeliver error batch: #{batch_status.undelivered_batch_object_key}"
         undelivered_batch = s3_client.get_object(
           bucket: undelivered_batch_uri.host,
           key: batch_status.undelivered_batch_object_key
@@ -188,17 +188,17 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
           map {|obj| "{#{obj}}"}.
           tap {|array| batch_status.records_in_batch = array.length}.
           each_with_index do |record_string, _position_in_batch|
-            uuid = JSON.parse(record_string)['uuid']
+            record_id = JSON.parse(record_string)['uuid']
             modified_record_string, validation_errors = Cdo::JSONtoRedshiftTableValidator.validate(record_string, event_json_schema, modify_invalid: options[:modify_invalid])
-            CDO.log.warn "Errors Found/Fixed in Record with UUID: #{JSON.parse(record_string)['uuid']} :" + validation_errors.join(", ") if validation_errors.any?
+            CDO.log.warn "[REDELIVER FIREHOSE EVENTS] Errors Found/Fixed in Record with UUID: #{JSON.parse(record_string)['uuid']} :" + validation_errors.join(", ") if validation_errors.any?
             batch_status.records_modified += 1 if validation_errors.any? && options[:modify_invalid]
             modified_batch += modified_record_string
           rescue JSON::ParserError => exception
             batch_status.records_skipped += 1
-            CDO.log.error "Record is not valid JSON; omitting it from redelivery batch: #{exception.message}"
+            CDO.log.error "[REDELIVER FIREHOSE EVENTS] Record is not valid JSON; omitting it from redelivery batch: #{exception.message}"
           rescue Cdo::JSONtoRedshiftTableValidator::ValidationError => exception
             batch_status.records_skipped += 1
-            CDO.log.error "Fatal error(s) found in Record with UUID: #{uuid}; omitting it from redelivery batch: #{exception.message}"
+            CDO.log.error "[REDELIVER FIREHOSE EVENTS] Fatal error(s) found in Record with UUID: #{record_id}; omitting it from redelivery batch: #{exception.message}"
           end
         raise SkipRedeliveryError.new('Skipping redelivery. --actually-redeliver is set to false.') unless options[:actually_redeliver]
         batch_status.redelivery_batch_object_key = REDELIVER_DATA_PREFIX + undelivered_batch_uri.path
@@ -217,7 +217,7 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
           # Check if there's a manifest for successful redelivery of this batch because Redshift does not enforce
           # unique constraints and we must avoid duplicate redelivery.
           s3_client.head_object(bucket: FIREHOSE_INTERMEDIATE_BUCKET, key: REDELIVERY_MANIFESTS_PREFIX + undelivered_batch_uri.path)
-          CDO.log.info "The batch #{undelivered_batch_uri.path} has already been redelivered."
+          CDO.log.info "[REDELIVER FIREHOSE EVENTS] The batch #{undelivered_batch_uri.path} has already been redelivered."
           batches_failed += 1
         rescue Aws::S3::Errors::NotFound
           # Redelivery manifest does not exist, load the batch identified in the manifest into Redshift and then upload the manifest.
@@ -239,12 +239,12 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
           batch_status.redelivery_date_time = DateTime.now.to_s
           batch_status.redelivery_status = true
           batches_redelivered += 1
-          CDO.log.info "Successfully redelivered #{undelivered_batch_uri.path} to Redshift."
+          CDO.log.info "[REDELIVER FIREHOSE EVENTS] Successfully redelivered #{undelivered_batch_uri.path} to Redshift."
         end
       rescue RedshiftClient::PostgreSQLQueryError, Aws::Errors::ServiceError, SkipRedeliveryError, StandardError => exception
+        # TODO: For query errors, get the error from the Redshift `stl_load_errors` table and log here.
         batches_failed += 1
-        CDO.log.info "Error redelivering batch: #{undelivered_batch_uri.path}"
-        CDO.log.info exception.message
+        CDO.log.info "[REDELIVER FIREHOSE EVENTS] Error redelivering batch: #{undelivered_batch_uri.path} / #{exception.message}"
         s3_client.put_object(
           bucket: FIREHOSE_INTERMEDIATE_BUCKET,
           key: REDELIVERY_ERROR_MANIFESTS_PREFIX + undelivered_batch_uri.path,
@@ -263,7 +263,7 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
   end
 end
 
-CDO.log.info "Batches Processed: #{batches_processed}"
-CDO.log.info "Batches Successfully Redelivered: #{batches_redelivered}"
-CDO.log.info "Batches Failed Redelivery: #{batches_failed}"
+CDO.log.info "[REDELIVER FIREHOSE EVENTS] Batches Processed: #{batches_processed}"
+CDO.log.info "[REDELIVER FIREHOSE EVENTS] Batches Successfully Redelivered: #{batches_redelivered}"
+CDO.log.info "[REDELIVER FIREHOSE EVENTS] Batches Failed Redelivery: #{batches_failed}"
 puts "Script execution complete."
