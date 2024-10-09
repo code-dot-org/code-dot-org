@@ -95,6 +95,9 @@ class Resource < ApplicationRecord
       key: key,
       name: get_localized_property(:name),
       url: get_localized_property(:url),
+      # used by lesson materials page
+      downloadUrl: download_url,
+      # used by lesson plan page and others
       download_url: download_url,
       audience: audience || 'All',
       type: get_localized_property(:type)

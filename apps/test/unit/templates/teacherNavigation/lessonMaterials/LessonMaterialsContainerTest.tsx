@@ -1,9 +1,10 @@
-import {render, screen, fireEvent} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import {useLoaderData} from 'react-router-dom';
 
 import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
 import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 jest.mock('react-router-dom', () => ({
@@ -20,17 +21,18 @@ describe('LessonMaterialsContainer', () => {
         name: 'First lesson',
         id: 1,
         position: 1,
-        lessonPlanHtmlUrl: 'studio.code.org/lesson1',
+        lessonPlanHtmlUrl: '/s/unit/lessons/1',
+        lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
         standardsUrl: 'studio.code.org/standards',
         vocabularyUrl: 'studio.code.org/vocab',
         resources: {
           Teacher: [
             {
               type: 'Handout',
-              key: 'resourceKey2',
+              key: 'resourceKey',
               name: 'my link resource',
-              url: 'google.com',
-              downloadUrl: 'google.com',
+              url: 'https://google.com/resource',
+              downloadUrl: 'https://google.com/resource.pdf',
               audience: 'Teacher',
             },
             {
@@ -44,10 +46,10 @@ describe('LessonMaterialsContainer', () => {
           Student: [
             {
               type: 'Video',
-              key: 'resourceKey2',
+              key: 'videoKey1',
               name: 'my linked video',
-              url: 'google.com',
-              downloadUrl: 'google.com',
+              url: 'https://youtu.be/WsXNpY3SXe8',
+              downloadUrl: 'https://videos.code.org/video.mp4',
               audience: 'Student',
             },
           ],
@@ -62,7 +64,7 @@ describe('LessonMaterialsContainer', () => {
           Teacher: [
             {
               type: 'Video',
-              key: 'resourceKey2',
+              key: 'videoKey2',
               name: 'my video resource',
               url: 'google.com',
               downloadUrl: 'google.com',
@@ -131,5 +133,154 @@ describe('LessonMaterialsContainer', () => {
       screen.queryAllByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon)
         .length === 0
     );
+  });
+
+  describe('resource links', () => {
+    let windowOpenMock: jest.SpyInstance<
+      Window | null,
+      Parameters<typeof utils.windowOpen>
+    >;
+
+    beforeEach(() => {
+      windowOpenMock = jest
+        .spyOn(utils, 'windowOpen')
+        .mockImplementation(() => null);
+    });
+
+    afterEach(() => {
+      windowOpenMock.mockRestore();
+      jest.resetAllMocks();
+    });
+
+    function viewResource(resourceName: string, resourceAction: string) {
+      const label = screen.getByText(resourceName);
+      const resourceRow = label.closest(
+        '[data-testid="resource-row"]'
+      ) as HTMLElement;
+      expect(resourceRow).toBeDefined();
+      const menuButton = within(resourceRow).getByLabelText(
+        'View options dropdown'
+      ) as HTMLElement;
+      fireEvent.click(menuButton);
+
+      const actionButton = within(resourceRow).getByText(resourceAction);
+      fireEvent.click(actionButton);
+    }
+
+    it('opens lesson plan', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Lesson Plan: First lesson', 'View');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        '/s/unit/lessons/1',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('downloads lesson plan pdf', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Lesson Plan: First lesson', 'Download (PDF)');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://lesson-plans.code.org/lesson-plan.pdf',
+        '_self'
+      );
+    });
+
+    it('opens handout', () => {
+      render(<LessonMaterialsContainer />);
+      // screen.debug(undefined, Infinity);
+      viewResource('Handout: my link resource', 'View');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://google.com/resource',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('downloads handout', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Handout: my link resource', 'Download');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://google.com/resource.pdf',
+        '_self'
+      );
+    });
+
+    it('opens slides', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Slides: my slides', 'View');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://docs.google.com/presentation/d/ABC/edit',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('downloads slides as pdf', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Slides: my slides', 'Download (PDF)');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://docs.google.com/presentation/d/ABC/export?format=pdf',
+        '_self'
+      );
+    });
+
+    it('downloads slides as microsoft office', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Slides: my slides', 'Download (Microsoft Office)');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://docs.google.com/presentation/d/ABC/export?format=pptx',
+        '_self'
+      );
+    });
+
+    it('makes a copy of slides in google docs', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Slides: my slides', 'Make a copy (Google Docs)');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://docs.google.com/presentation/d/ABC/copy',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('opens unit vocabulary', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Unit 3 Vocabulary', 'View');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://studio.code.org/vocab',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('opens unit standards', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Unit 3 Standards', 'View');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://studio.code.org/standards',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('opens video', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Video: my linked video', 'Watch');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://youtu.be/WsXNpY3SXe8',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+
+    it('downloads video', () => {
+      render(<LessonMaterialsContainer />);
+      viewResource('Video: my linked video', 'Download');
+      expect(windowOpenMock).toHaveBeenCalledWith(
+        'https://videos.code.org/video.mp4',
+        '_self'
+      );
+    });
   });
 });
