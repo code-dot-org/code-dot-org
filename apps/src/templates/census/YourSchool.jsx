@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import DCDO from '@cdo/apps/dcdo';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
@@ -19,7 +18,6 @@ import {
 import CensusMap from './CensusMap';
 import YourSchoolResources from './YourSchoolResources';
 
-const showAccessReportBanner = !!DCDO.get('access-report-launch', false);
 const accessReportBannerParams = {
   id: 'announcement-id',
   image: '/images/marketing/accessreport_teacherdash.png',
@@ -41,6 +39,7 @@ class YourSchool extends Component {
     currentCensusYear: PropTypes.number,
     teacherApplicationMode: PropTypes.string,
     tileset: PropTypes.string.isRequired,
+    showReportLaunchBanner: PropTypes.bool,
   };
 
   state = {
@@ -100,7 +99,7 @@ class YourSchool extends Component {
         <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
         <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
         <YourSchoolResources />
-        {showAccessReportBanner && (
+        {this.props.showReportLaunchBanner && (
           <MarketingAnnouncementBanner
             announcement={accessReportBannerParams}
             marginBottom="30px"
