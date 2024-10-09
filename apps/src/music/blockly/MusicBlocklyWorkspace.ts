@@ -476,10 +476,13 @@ export default class MusicBlocklyWorkspace {
 
     (this.workspace?.getTopBlocks() as ProcedureBlock[])
       .filter(
-        // Disregarding unrendered blocks prevents duplicating call blocks
-        // for a defintion block that was just pulled from the toolbox.
+        // When a block is dragged from the toolbox, an insertion marker is
+        // created with the same type. Insertion markers just provide a
+        // visual indication of where the actual block will go. They should
+        // not be counted here or we could end up with duplicate call blocks.
         block =>
-          block.type === BLOCK_TYPES.procedureDefinition && block.rendered
+          block.type === BLOCK_TYPES.procedureDefinition &&
+          !block.isInsertionMarker()
       )
       .forEach(block => {
         allFunctions.push(
