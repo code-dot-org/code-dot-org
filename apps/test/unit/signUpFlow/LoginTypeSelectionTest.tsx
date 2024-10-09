@@ -115,6 +115,39 @@ describe('LoginTypeSelection', () => {
     });
   });
 
+  it('gives email invalid message if given invalid email and create account pressed', async () => {
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    const emailInput = screen.getByLabelText(locale.email_address());
+    await waitFor(() => {
+      fireEvent.change(emailInput, {target: {value: 'invalidEmail'}});
+    });
+    const password = 'password';
+    const passwordInput = screen.getByLabelText(locale.password());
+    const confirmPasswordInput = screen.getByLabelText(
+      locale.confirm_password()
+    );
+    fireEvent.change(passwordInput, {target: {value: password}});
+    fireEvent.change(confirmPasswordInput, {target: {value: password}});
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.create_my_account(),
+    }) as HTMLButtonElement;
+    await waitFor(() => {
+      expect(finishSignUpButton).not.toBeDisabled();
+    });
+
+    // Confirm we don't have an error message yet
+    expect(screen.queryByText(i18n.censusInvalidEmail())).toBeNull();
+
+    // Click create account button
+    fireEvent.click(finishSignUpButton);
+    // Confirm we have an error message
+    expect(screen.queryByText(i18n.censusInvalidEmail()));
+  });
+
   it('clicking the create account button triggers fetch call and redirects user', async () => {
     const fetchSpy = sinon.stub(window, 'fetch');
     fetchSpy.returns(Promise.resolve(new Response()));
@@ -150,7 +183,6 @@ describe('LoginTypeSelection', () => {
     fireEvent.change(emailInput, {
       target: {value: email},
     });
-    fireEvent.change(passwordInput, {target: {value: password}});
     fireEvent.change(passwordInput, {target: {value: password}});
     fireEvent.change(confirmPasswordInput, {target: {value: password}});
     await waitFor(() => {
@@ -300,7 +332,7 @@ describe('LoginTypeSelection', () => {
     screen.getByText('Schoology', {selector: 'span'});
   });
 
-  it('valid email is stored in sessionStorage', async () => {
+  it('email is stored in sessionStorage', async () => {
     await waitFor(() => {
       renderDefault();
     });
@@ -310,18 +342,9 @@ describe('LoginTypeSelection', () => {
     // Session storage starts empty
     expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(null);
 
-    // Session storage doesn't update for an invalid email
     await waitFor(() => {
       fireEvent.change(emailInput, {target: {value: 'invalidEmail'}});
     });
-    expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(null);
-
-    // Session storage updates for valid email
-    await waitFor(() => {
-      fireEvent.change(emailInput, {target: {value: 'validEmail@email.com'}});
-    });
-    expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe(
-      'validEmail@email.com'
-    );
+    expect(sessionStorage.getItem(EMAIL_SESSION_KEY)).toBe('invalidEmail');
   });
 });
