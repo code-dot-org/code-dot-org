@@ -106,11 +106,12 @@
               "id": "S2[22DMKS[`Bycg%T8B1",
               "x": 250,
               "y": 30,
+              "movable": false,
               "extraState": {
                 "procedureId": "-|(]2^6)J+b=}wD0}zVz",
                 "initialDeleteConfig": true,
                 "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "intro"
@@ -120,11 +121,13 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "^fbpb)DaPk:Udqo(~A!.",
+                    "movable": false,
                     "inputs": {
                       "code": {
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "N/KYOy.IXc7m*u(+;Buh",
+                          "movable": false,
                           "fields": {
                             "sound": "sabrina_carpenter_espresso/drums_intro"
                           },
@@ -132,6 +135,7 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "jN6v:04PQW@K=KC*]Ik]",
+                              "movable": false,
                               "fields": {
                                 "sound": "sabrina_carpenter_espresso/bass_intro"
                               },
@@ -139,6 +143,7 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "OJW^%gSWxo:Q]%_9Uv1V",
+                                  "movable": false,
                                   "fields": {
                                     "sound": "sabrina_carpenter_espresso/keys_intro"
                                   },
@@ -146,6 +151,7 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "~4#B+CLI?7q0bFzd|Z8[",
+                                      "movable": false,
                                       "fields": {
                                         "sound": "sabrina_carpenter_espresso/guitar_intro"
                                       }
@@ -274,7 +280,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.813+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-doubleChorus_3\\\"\"],\"cloned_from\":\"music-ai-functions-doubleChorus_3\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.813+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-doubleChorus_3\\\"\"],\"cloned_from\":\"music-ai-functions-doubleChorus_3\"},{\"changed_at\":\"2024-10-08 20:12:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

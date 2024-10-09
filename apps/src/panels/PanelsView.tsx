@@ -98,14 +98,19 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   }
 
   const showSmallText = height < 300;
-  const textLayoutClass =
-    panel.layout === 'text-top-left'
-      ? styles.markdownTextTopLeft
-      : panel.layout === 'text-bottom-left'
-      ? styles.markdownTextBottomLeft
-      : panel.layout === 'text-bottom-right'
-      ? styles.markdownTextBottomRight
-      : styles.markdownTextTopRight;
+
+  const layoutClassMap = {
+    'text-top-left': styles.markdownTextTopLeft,
+    'text-top-center': styles.markdownTextTopCenter,
+    'text-bottom-left': styles.markdownTextBottomLeft,
+    'text-bottom-center': styles.markdownTextBottomCenter,
+    'text-bottom-right': styles.markdownTextBottomRight,
+    'text-top-right': styles.markdownTextTopRight,
+  };
+
+  const textLayoutClass = panel.layout
+    ? layoutClassMap[panel.layout]
+    : styles.markdownTextTopRight;
 
   return (
     <div

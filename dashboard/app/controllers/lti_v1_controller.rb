@@ -231,14 +231,15 @@ class LtiV1Controller < ApplicationController
   end
 
   def render_sync_course_error(reason, status, error = nil, message: nil)
-    @lti_section_sync_result = {error: error, message: message}
-    Honeybadger.notify(
+    honeybadger_id = Honeybadger.notify(
       'LTI roster sync error',
       context: {
         reason: reason,
         details: message,
       }
     )
+    @lti_section_sync_result = {error: error, message: message}
+    @lti_section_sync_result[:honeybadger_id] = honeybadger_id if honeybadger_id
     return respond_to do |format|
       format.html do
         render lti_v1_sync_course_path, status: status
@@ -303,7 +304,11 @@ class LtiV1Controller < ApplicationController
     end
 
     lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
-    nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+    begin
+      nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+    rescue
+      return render_sync_course_error('Error calling NRPS', :bad_request, 'nrps_error')
+    end
     if Policies::Lti.issuer_accepts_resource_link?(lti_integration.issuer)
       nrps_response_errors = Services::Lti::NRPSResponseValidator.call(nrps_response)
 

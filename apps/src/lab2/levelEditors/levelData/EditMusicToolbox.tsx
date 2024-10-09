@@ -33,7 +33,7 @@ const ChangeWarning: React.FC = () => (
   <Alert
     type="warning"
     size="xs"
-    text="Changing this setting will reset toolbox blocks."
+    text="Changing this setting will reset toolbox blocks and start sources."
   />
 );
 

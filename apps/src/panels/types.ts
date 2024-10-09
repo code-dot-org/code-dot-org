@@ -6,8 +6,10 @@ export interface PanelsLevelProperties extends LevelProperties {
 
 export type PanelLayout =
   | 'text-top-left'
+  | 'text-top-center'
   | 'text-top-right'
   | 'text-bottom-left'
+  | 'text-bottom-center'
   | 'text-bottom-right';
 
 export interface Panel {
