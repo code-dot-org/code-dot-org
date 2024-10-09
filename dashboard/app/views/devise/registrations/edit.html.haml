@@ -220,7 +220,7 @@
       dependentStudentsCount: Queries::User.dependent_students_count(current_user.id),
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
       lmsName: Queries::Lti.get_lms_name_from_user(current_user),
-      authorizedTeacher: current_user.permission?(UserPermission::AUTHORIZED_TEACHER),
+      verifiedTeacher: current_user.verified_teacher?,
       canChangeUserType: current_user.can_change_own_user_type?,
       secretPictureAccountOnly: current_user.secret_picture_account_only?,
       errors: current_user.errors,

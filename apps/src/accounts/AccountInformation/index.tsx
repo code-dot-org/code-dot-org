@@ -18,7 +18,7 @@ import {AccountInformationProps} from './types';
 import styles from './style.module.scss';
 
 export const AccountInformation: React.FC<AccountInformationProps> = ({
-  authorizedTeacher,
+  verifiedTeacher,
   secretPictureAccountOnly,
   teacherManagedAccount,
   parentManagedAccount,
@@ -198,9 +198,9 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
       <form>
         <div className={styles.inputContainer}>
           {/* verified teacher account */}
-          {authorizedTeacher && (
+          {verifiedTeacher && (
             <div className="field">
-              <label className={styles.authorizedTeacher}>
+              <label className={styles.verifiedTeacher}>
                 ✔ {i18n.accountInformationVerifiedTeacher()}
               </label>
             </div>

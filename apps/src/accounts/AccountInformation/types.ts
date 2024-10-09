@@ -4,7 +4,7 @@ interface UserProperties {
   [key: string]: unknown;
 }
 export interface AccountInformationProps {
-  authorizedTeacher: boolean;
+  verifiedTeacher: boolean;
   secretPictureAccountOnly: boolean;
   teacherManagedAccount: boolean;
   parentManagedAccount: boolean;

@@ -14,7 +14,7 @@ Object.defineProperty(window, 'location', {
 jest.mock('@cdo/apps/util/AuthenticityTokenStore');
 
 const defaultProps = {
-  authorizedTeacher: false,
+  verifiedTeacher: false,
   secretPictureAccountOnly: false,
   teacherManagedAccount: false,
   parentManagedAccount: false,
@@ -62,8 +62,8 @@ describe('AccountInformation', () => {
     ).toBeInTheDocument();
   });
 
-  it('displays authorized teacher badge when authorizedTeacher is true', () => {
-    render(<AccountInformation {...defaultProps} authorizedTeacher={true} />);
+  it('displays authorized teacher badge when verifiedTeacher is true', () => {
+    render(<AccountInformation {...defaultProps} verifiedTeacher={true} />);
     expect(screen.getByText(/✔ verified teacher/i)).toBeInTheDocument();
   });
 
