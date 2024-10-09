@@ -65,18 +65,18 @@ Fallback: https://github.com/styleguide/ruby
     second_method
   ```
   
-### Writing Unit Test
-Our unit tests testing library is [Minitest](https://github.com/minitest/minitest). 
+### Writing Unit Tests
+Our unit testing library is [Minitest](https://github.com/minitest/minitest). 
 
-When writing unit test we recommend to use [Specs Syntax](https://github.com/minitest/minitest?tab=readme-ov-file#specs-). Our default MiniTest Spec has been extended to include some RSpec features such as [`subject`](https://rspec.info/features/3-13/rspec-core/subject/explicit-subject/) or [`let!`](https://rspec.info/features/3-13/rspec-core/helper-methods/let/)
+When writing unit tests we recommend you use the [Specs Syntax](https://github.com/minitest/minitest?tab=readme-ov-file#specs-). Our default MiniTest Spec has been extended to include some RSpec features such as [`subject`](https://rspec.info/features/3-13/rspec-core/subject/explicit-subject/) or [`let!`](https://rspec.info/features/3-13/rspec-core/helper-methods/let/)
 
 This documentation represents a collection of references and resources for following best practices of Specs Syntax. It is intended to guide developers in writing clean, maintainable, and consistent unit tests using the Specs Syntax.
 
-However, it is important to acknowledge that much of our codebase (the majority of our codebase) does not actually follow this recommendation. This document serves as a guide to encourage moving towards these best practices in new code and when refactoring existing tests. 
+However, it is important to acknowledge most of our codebase does not actually follow this recommendation. This document serves as a guide to encourage moving towards these best practices when writing new code or refactoring existing tests. 
 Additionally, note that multiple syntaxes can exist in the same test file, and this flexibility accommodates different styles and transitions.
 
 #### General Guidelines
-- Group-related tests using `describe` blocks.
+- Group related tests using `describe` blocks.
 - Use `let` to define memoized helper methods and lazy-loaded variables.
 - Use `before` blocks for setup tasks that need to be run before each example.
 - Use `subject` to explicitly define the value that is returned by the subject method in the example scope.
@@ -220,7 +220,7 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
   });
   ```
 
-- <a name="js-operator-continuations"></a>
+* <a name="js-operator-continuations"></a>
   Binary and Ternary line continuations should have the operator at the beginning of the line (note this is different from Google's JavaScript style guide).
   <sup>[[link](#js-operator-continuations)]</sup>
   ```javascript
