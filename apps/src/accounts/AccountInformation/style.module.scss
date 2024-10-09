@@ -8,17 +8,17 @@
   gap: 1.125rem;
   margin: 1rem 0;
 
+  .verifiedTeacher {
+    font-weight: bold;
+    color: $light_affirmative_500;
+    margin: 0;
+  }
+
   label.input {
     width: 100%;
 
     &.emailInput {
       margin-bottom: 0.5rem;
-    }
-
-    &.verifiedTeacher {
-      font-weight: bold;
-      color: $light_affirmative_500;
-      margin: 0;
     }
 
     input,
