@@ -27,14 +27,17 @@ const FileTab = ({file}: FileTabProps) => {
 
   return (
     <div className={className} key={file.id}>
-      <span onClick={() => setActiveFile(file.id)}>
+      <div
+        onClick={() => setActiveFile(file.id)}
+        className={moduleStyles.label}
+      >
         <FontAwesomeV6Icon
           iconName={iconName}
           iconStyle={iconStyle}
           className={iconClassName}
         />
         <span>{file.name}</span>
-      </span>
+      </div>
       <CloseButton
         onClick={() => closeFile(file.id)}
         color={'light'}

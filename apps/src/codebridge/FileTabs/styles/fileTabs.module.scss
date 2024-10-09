@@ -21,7 +21,6 @@
   cursor: pointer;
   white-space: nowrap;
   justify-content: space-between;
-  gap: 10px;
   padding: 0 6px;
   height: 28px;
   background-color: $light_gray_950;
@@ -32,10 +31,12 @@
   }
 }
 
-.fileTab > span {
+.label {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
+  padding-right: 10px;
 }
 
 .active {
