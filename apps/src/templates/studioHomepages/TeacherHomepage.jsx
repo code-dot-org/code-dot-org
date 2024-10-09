@@ -39,7 +39,7 @@ export const UnconnectedTeacherHomepage = ({
   afeEligible,
   joinedStudentSections,
   joinedPlSections,
-  ncesSchoolId,
+  existingSchoolInfo,
   queryStringOpen,
   schoolYear,
   showCensusBanner,
@@ -214,7 +214,7 @@ export const UnconnectedTeacherHomepage = ({
           <div>
             <CensusTeacherBanner
               schoolYear={schoolYear}
-              initialNcesSchoolId={ncesSchoolId}
+              existingSchoolInfo={existingSchoolInfo}
               question={censusQuestion}
               teaches={censusBannerTeachesSelection}
               inClass={censusBannerInClassSelection}
@@ -284,7 +284,13 @@ UnconnectedTeacherHomepage.propTypes = {
   hocLaunch: PropTypes.string,
   joinedStudentSections: shapes.sections,
   joinedPlSections: shapes.sections,
-  ncesSchoolId: PropTypes.string,
+  existingSchoolInfo: PropTypes.shape({
+    country: PropTypes.string,
+    id: PropTypes.string,
+    name: PropTypes.string,
+    zip: PropTypes.string,
+    type: PropTypes.string,
+  }),
   queryStringOpen: PropTypes.string,
   schoolYear: PropTypes.number,
   showCensusBanner: PropTypes.bool.isRequired,

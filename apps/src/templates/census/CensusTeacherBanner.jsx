@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useState} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
+import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
 import color from '@cdo/apps/util/color';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import styleConstants from '../../styleConstants';
-import SchoolInfoInputs from '../SchoolInfoInputs';
+import SchoolDataInputs from '../SchoolDataInputs';
 
 export default function CensusTeacherBanner({
   onDismiss,
   onPostpone,
   onTeachesChange,
   onInClassChange,
-  initialNcesSchoolId,
+  existingSchoolInfo,
   question,
   teaches,
   inClass,
@@ -31,78 +34,19 @@ export default function CensusTeacherBanner({
   const [showCensusInvalidError, setShowCensusInvalidError] = useState(false);
   const [showCensusUnknownError, setShowCensusUnknownError] = useState(false);
 
-  const [country, setCountry] = useState('United States');
-  const [schoolType, setSchoolType] = useState('');
-  const [ncesSchoolId, setNcesSchoolId] = useState(initialNcesSchoolId);
-  const [schoolName, setSchoolName] = useState('');
-  const [schoolDisplayName, setSchoolDisplayName] = useState(null);
-  const [schoolState, setSchoolState] = useState('');
-  const [schoolZip, setSchoolZip] = useState('');
-  const [schoolLocation, setSchoolLocation] = useState('');
-  const [showSchoolInfoErrors, setShowSchoolInfoErrors] = useState(false);
-  const schoolInfoInputs = useRef(null);
+  const schoolInfo = useSchoolInfo({
+    schoolId: existingSchoolInfo.id,
+    country: existingSchoolInfo.country,
+    schoolName: existingSchoolInfo.name,
 
-  const loadSchoolNameSuccess = response => {
-    setSchoolDisplayName(response.name);
-    setSchoolType(response.school_type);
-  };
+    schoolZip: existingSchoolInfo.zip,
+    schoolType: existingSchoolInfo.type,
+  });
 
-  const loadSchoolNameError = error => {
-    setSchoolDisplayName('your school');
-  };
-
-  const loadSchoolName = useCallback(schoolId => {
-    if (schoolId && schoolId !== '-1') {
-      $.ajax({
-        url: `/api/v1/schools/${schoolId}`,
-        type: 'get',
-      })
-        .done(loadSchoolNameSuccess)
-        .fail(loadSchoolNameError);
-    } else {
-      setSchoolDisplayName('');
-    }
-  }, []);
-
-  useEffect(() => {
-    loadSchoolName(ncesSchoolId);
-  }, [ncesSchoolId, loadSchoolName]);
-
-  const handleCountryChange = (_, event) => {
-    const newCountry = event ? event.value : '';
-    setCountry(newCountry);
-  };
-
-  const handleSchoolTypeChange = event => {
-    const newType = event ? event.target.value : '';
-    setSchoolType(newType);
-  };
-
-  const handleSchoolChange = (_, event) => {
-    const newSchool = event ? event.value : '';
-    setNcesSchoolId(newSchool);
-  };
-
-  const handleSchoolNotFoundChange = (field, event) => {
-    const value = event ? event.target.value : '';
-    switch (field) {
-      case 'schoolType':
-        setSchoolType(value);
-        break;
-      case 'schoolName':
-        setSchoolName(value);
-        break;
-      case 'schoolLocation':
-        setSchoolLocation(value);
-        break;
-      default:
-        console.warn(`Unknown field: ${field}`);
-    }
-  };
+  console.log(schoolInfo);
 
   const hideSchoolInfoForm = () => {
     setShowSchoolInfoForm(false);
-    setShowSchoolInfoErrors(false);
   };
 
   const dismissSchoolInfoForm = () => {
@@ -112,48 +56,18 @@ export default function CensusTeacherBanner({
     // to use that partial state in the census submission so we need to reset
     // to the previous values.
     setShowSchoolInfoForm(false);
-    setCountry('United States');
-    setSchoolType('');
-    setNcesSchoolId(null);
-    setSchoolName('');
-    setSchoolDisplayName(null);
-    setSchoolState('');
-    setSchoolZip('');
-    setSchoolLocation('');
-    setShowSchoolInfoErrors(false);
     setShowSchoolInfoUnknownError(false);
   };
 
   const handleSchoolInfoSubmit = () => {
-    if (schoolInfoInputs.current.isValid()) {
-      let schoolData;
-      if (ncesSchoolId === '-1') {
-        schoolData = {
-          _method: 'patch',
-          'user[school_info_attributes][country]': country,
-          'user[school_info_attributes][school_type]': schoolType,
-          'user[school_info_attributes][school_name]': schoolName,
-          'user[school_info_attributes][school_state]': schoolState,
-          'user[school_info_attributes][school_zip]': schoolZip,
-          'user[school_info_attributes][full_address]': schoolLocation,
-        };
-      } else {
-        schoolData = {
-          _method: 'patch',
-          'user[school_info_attributes][school_id]': ncesSchoolId,
-        };
-      }
-      $.ajax({
-        url: '/users.json',
-        type: 'post',
-        dataType: 'json',
-        data: schoolData,
-      })
-        .done(hideSchoolInfoForm)
-        .fail(updateSchoolInfoError);
-    } else {
-      setShowSchoolInfoErrors(true);
-    }
+    updateSchoolInfo({
+      schoolId: schoolInfo.schoolId,
+      country: schoolInfo.country,
+      schoolName: schoolInfo.schoolName,
+      schoolZip: schoolInfo.schoolZip,
+    })
+      .then(hideSchoolInfoForm)
+      .catch(updateSchoolInfoError);
   };
 
   const updateSchoolInfoError = () => {
@@ -166,24 +80,24 @@ export default function CensusTeacherBanner({
   };
 
   const getData = () => {
-    let data = {
+    const schoolId = schoolInfo.schoolId;
+    const data = {
       submitter_role: 'TEACHER',
       submitter_name: teacherName,
       submitter_email_address: teacherEmail,
       school_year: schoolYear,
     };
-    const dataQuestion = inClass ? question : 'how_many_after_school';
-    data[dataQuestion] = 'SOME';
+    const questionToSubmit = inClass ? question : 'how_many_after_school';
+    data[questionToSubmit] = 'SOME';
 
-    if (ncesSchoolId === '-1') {
-      data['country_s'] = country;
-      data['school_type_s'] = schoolType;
-      data['school_name_s'] = schoolName;
-      data['school_state_s'] = schoolState;
-      data['school_zip_s'] = schoolZip;
-      data['school_location'] = schoolLocation;
+    if (schoolId === NonSchoolOptions.CLICK_TO_ADD) {
+      data['country_s'] = schoolInfo.country;
+      data['school_name_s'] = schoolInfo.schoolName;
+      data['school_state_s'] = schoolInfo.schoolState;
+      data['school_zip_s'] = schoolInfo.schoolZip;
+      data['school_location'] = schoolInfo.schoolLocation;
     } else {
-      data['nces_school_s'] = ncesSchoolId;
+      data['nces_school_s'] = schoolId;
     }
 
     return data;
@@ -245,6 +159,8 @@ export default function CensusTeacherBanner({
   };
 
   const renderSchoolInfoForm = () => {
+    const submitDisabled =
+      schoolInfo.schoolId === NonSchoolOptions.SELECT_A_SCHOOL;
     return (
       <div>
         <div style={styles.header}>
@@ -256,23 +172,7 @@ export default function CensusTeacherBanner({
           )}
         </div>
         <div style={styles.message}>
-          <SchoolInfoInputs
-            ref={schoolInfoInputs}
-            onCountryChange={handleCountryChange}
-            onSchoolTypeChange={handleSchoolTypeChange}
-            onSchoolChange={handleSchoolChange}
-            onSchoolNotFoundChange={handleSchoolNotFoundChange}
-            country={country}
-            schoolType={schoolType}
-            ncesSchoolId={ncesSchoolId}
-            schoolName={schoolName}
-            schoolState={schoolState}
-            schoolZip={schoolZip}
-            schoolLocation={schoolLocation}
-            useLocationSearch={true}
-            showErrors={showSchoolInfoErrors}
-            showRequiredIndicator={true}
-          />
+          <SchoolDataInputs {...schoolInfo} />
         </div>
         <div style={styles.buttonDiv}>
           <Button
@@ -289,6 +189,7 @@ export default function CensusTeacherBanner({
             style={styles.button}
             size="large"
             text="Submit"
+            disabled={submitDisabled}
           />
         </div>
       </div>
@@ -331,7 +232,7 @@ export default function CensusTeacherBanner({
         </div>
       );
       const link = encodeURI(
-        `/yourschool?schoolId=${ncesSchoolId}&isTeacher=true&name=${teacherName}&email=${teacherEmail}#form`
+        `/yourschool?schoolId=${schoolInfo.schoolId}&isTeacher=true&name=${teacherName}&email=${teacherEmail}#form`
       );
       buttons = (
         <div style={styles.buttonDiv}>
@@ -357,19 +258,13 @@ export default function CensusTeacherBanner({
       );
     }
 
-    let schoolNameForDisplay;
-
-    if (schoolDisplayName) {
-      schoolNameForDisplay = schoolDisplayName;
-    } else if (schoolName) {
-      schoolNameForDisplay = schoolName;
-    }
-
-    if (schoolNameForDisplay) {
+    if (schoolInfo.schoolName) {
       return (
         <div>
           <div style={styles.header}>
-            <h2 style={styles.title}>Add {schoolNameForDisplay} to our map!</h2>
+            <h2 style={styles.title}>
+              Add {schoolInfo.schoolName} to our map!
+            </h2>
             <p style={styles.updateSchool}>
               Not teaching at this school anymore?&ensp;
               <a
@@ -492,8 +387,15 @@ CensusTeacherBanner.propTypes = {
   onPostpone: PropTypes.func.isRequired,
   onTeachesChange: PropTypes.func.isRequired,
   onInClassChange: PropTypes.func.isRequired,
-  initialNcesSchoolId: PropTypes.string,
-  question: PropTypes.string.isRequired,
+  existingSchoolInfo: PropTypes.shape({
+    country: PropTypes.string,
+    id: PropTypes.string,
+    name: PropTypes.string,
+    zip: PropTypes.string,
+    type: PropTypes.string,
+  }),
+  question: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours'])
+    .isRequired,
   teaches: PropTypes.bool,
   inClass: PropTypes.bool,
   teacherName: PropTypes.string.isRequired,
