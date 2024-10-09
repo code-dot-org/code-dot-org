@@ -15,6 +15,21 @@ export enum DuplicateFileError {
   DUPLICATE_SUPPORT_FILE = 'DUPLICATE_SUPPORT_FILE',
 }
 
+/**
+ * Checks if a file name already exists within a given folder.
+ *
+ * @param args An object containing the following properties:
+ *   - **fileName:** The name of the file to check.
+ *   - **folderId:** The ID of the parent folder for the file.
+ *   - **projectFiles:** An array of project files.
+ *   - **isStartMode:** Indicates if the application is in start mode.
+ *   - **validationFile:** The validation file (optional).
+ *
+ * @returns A truthy value indicating a duplicate file situation or `false` if not a duplicate:
+ *   - **DuplicateFileError.DUPLICATE_SUPPORT_FILE:** If the file name matches the validation file name in non-start mode, or if an existing file with the same name and folder ID is a support or validation file.
+ *   - **DuplicateFileError.DUPLICATE_FILE:** If an existing file with the same name and folder ID is not a support or validation file.
+ *   - **false:** If the file name is not a duplicate.
+ */
 export const isDuplicateFileName = ({
   fileName,
   folderId,
