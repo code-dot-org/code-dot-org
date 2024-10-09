@@ -2,7 +2,6 @@
 @import './aichat-common.module.scss';
 
 $default-spacing: 16px;
-$tabs-default-spacing: 4px;
 
 .chatWorkspace {
   @extend %panel-section;
@@ -26,12 +25,6 @@ $tabs-default-spacing: 4px;
 
 .tabsContainer {
   background-color: #eaebeb;
-  padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
-  ul {
-    li > button[role="tab"] {
-      max-width: 300px;  
-    }
-  }
 }
 
 .tabPanelsContainer {
