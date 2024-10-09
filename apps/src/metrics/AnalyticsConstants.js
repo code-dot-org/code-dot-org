@@ -420,8 +420,6 @@ const EVENTS = {
   CODEBRIDGE_RENAME_FOLDER: 'Rename folder on codebridge',
   CODEBRIDGE_DOWNLOAD_FILE: 'Download file on codebridge',
   CODEBRIDGE_UPLOAD_FILE: 'Upload file on codebridge',
-  CODEBRIDGE_UPLOAD_INVALID_FILE_NAME:
-    'Attempted upload of invalid file name on codebridge',
   CODEBRIDGE_UPLOAD_UNACCEPTED_FILE:
     'Attempted upload of unaccepted file on codebridge',
   CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',

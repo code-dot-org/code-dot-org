@@ -189,6 +189,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
             styles.typeIcon,
             SoundStyle[sound.type]?.classNameColor
           )}
+          iconStyle="regular"
         />
         <div
           className={classNames(
