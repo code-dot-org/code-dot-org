@@ -396,24 +396,22 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
               {/* US state */}
               {isUSA && (
-                <>
-                  <SimpleDropdown
-                    id="user_us_state"
-                    labelText={i18n.accountInformationState()}
-                    name="user[us_state]"
-                    selectedValue={usState}
-                    onChange={e => {
-                      setUsState(e.target.value);
-                      clearError('us_state');
-                    }}
-                    items={usStateOptions}
-                    disabled={studentInLockoutFlow}
-                    dropdownTextThickness="thin"
-                    className={styles.input}
-                    helperMessage={lockedOutStudentMessage}
-                    errorMessage={getError('us_state')}
-                  />
-                </>
+                <SimpleDropdown
+                  id="user_us_state"
+                  labelText={i18n.accountInformationState()}
+                  name="user[us_state]"
+                  selectedValue={usState}
+                  onChange={e => {
+                    setUsState(e.target.value);
+                    clearError('us_state');
+                  }}
+                  items={usStateOptions}
+                  disabled={studentInLockoutFlow}
+                  dropdownTextThickness="thin"
+                  className={styles.input}
+                  helperMessage={lockedOutStudentMessage}
+                  errorMessage={getError('us_state')}
+                />
               )}
             </>
           )}
