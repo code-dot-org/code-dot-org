@@ -33,19 +33,6 @@ const UnitCalendar: React.FC = () => {
     })
   );
 
-  // const generateDropdownOptions = () => {
-  //   const options = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS;
-  //   if (!options.includes(weeklyInstructionalMinutes)) {
-  //     options.push(weeklyInstructionalMinutes);
-  //   }
-  //   options.sort((a, b) => a - b);
-  //   return options.map(val => (
-  //     <option value={parseInt(val.toString())} key={`minutes-${val}`}>
-  //       {i18n.minutesLabel({number: val})}
-  //     </option>
-  //   ));
-  // };
-
   const handleDropdownChange = (value: string) => {
     setWeeklyInstructionalMinutes(value);
   };
@@ -66,15 +53,6 @@ const UnitCalendar: React.FC = () => {
           labelText="minutes per week dropdown"
           isLabelVisible={false}
         />
-        {/* <select
-          onChange={e =>
-            setWeeklyInstructionalMinutes(parseInt(e.target.value))
-          }
-          value={weeklyInstructionalMinutes}
-          className={styles.calendarDropdown}
-        >
-          {generateDropdownOptions()}
-        </select> */}
       </div>
       {!isLoading && (
         <UnitCalendarGrid
