@@ -11,10 +11,15 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+    gap: 8px;
 
     .segmentedButtons {
-      span {
-        font-size: 12px !important;
+      button {
+        padding: 7px 12px;
+
+        span {
+          font-size: 12px !important;
+        }
       }
     }
   }
