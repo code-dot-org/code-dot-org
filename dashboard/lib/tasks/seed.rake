@@ -151,13 +151,9 @@ namespace :seed do
     sports
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
 
-  ADHOC_TEST_SCRIPTS = UI_TEST_SCRIPTS + %w(
-    allthehiddenthings
-    allthemigratedthings
-    alltheplcthings
-    alltheselfpacedplthings
-    allthethings
-    allthettsthings
+  # To improve adhoc start time, we only seed the most recent year of our common curriculum
+  # Each year we should update this list and :courses_adhoc
+  MOST_RECENT_ADHOC_SCRIPTS = %w(
     coursea-2024
     courseb-2024
     coursec-2024
@@ -197,6 +193,14 @@ namespace :seed do
     csa8-2024
     csa9-2024
     csa-postap-se-and-computer-vision-2024
+  ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
+  ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
+    allthehiddenthings
+    allthemigratedthings
+    alltheplcthings
+    alltheselfpacedplthings
+    allthethings
+    allthettsthings
     dance
     events
     flappy
@@ -282,7 +286,7 @@ namespace :seed do
   end
 
   timed_task_with_logging scripts_adhoc: SCRIPTS_DEPENDENCIES do
-    update_scripts(script_files: ADHOC_TEST_SCRIPTS)
+    update_scripts(script_files: ADHOC_SCRIPTS)
   end
 
   timed_task_with_logging courses: :environment do
@@ -302,7 +306,7 @@ namespace :seed do
   end
 
   timed_task_with_logging courses_adhoc: :environment do
-    # seed those courses that are best to test on for adhoc
+    # seed those courses that are best to test on adhoc for the most current year
     %w(allthethingscourse csp-2024 csd-2024 csa-2024).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
@@ -396,7 +400,6 @@ namespace :seed do
   timed_task_with_logging callouts: :environment do
     Callout.transaction do
       Callout.reset_db
-      # TODO: If the id of the callout is important, specify it in the tsv
       # preferably the id of the callout is not important ;)
       Callout.find_or_create_all_from_tsv!('config/callouts.tsv')
     end
@@ -573,9 +576,8 @@ namespace :seed do
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data, :datablock_storage].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data, :datablock_storage].freeze
-  # todo update course_offerings_ui_tests, scripts_ui_tests and courses_ui_tests
-  ADHOC_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data, :datablock_storage].freeze
-  DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_TEST_SEED_TASKS else FULL_SEED_TASKS end
+  ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data, :datablock_storage].freeze
+  DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
