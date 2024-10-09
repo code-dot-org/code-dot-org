@@ -24,7 +24,7 @@ Feature: Hamburger dropdown
     And element "#districts" is not visible
     And I see "#stats"
     And I see "#help-us"
-    And I see "#incubator"
+    And I see "#hamburger-header-incubator"
     And I see "#about_entries"
     And I see "#legal_entries"
     And I see "#support"
@@ -46,7 +46,7 @@ Feature: Hamburger dropdown
     And I see "#districts"
     And I see "#stats"
     And I see "#help-us"
-    And I see "#incubator"
+    And I see "#hamburger-header-incubator"
     And I see "#about_entries"
     And I see "#legal_entries"
     And I see "#support"
