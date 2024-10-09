@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "####Let's add two sounds\r\n\r\n1. Start with one sound.\r\n1. Then drag another sound block and connect it under to [when run](#clickable=when-run-block). Remember you can choose which sounds are played.\r\n2. Then press [Run](#clickable=run-button).\r\n",
+    "long_instructions": "####✨Try making your own melody with code!\r\n\r\n1. Start with connecting one sound under [when run](#clickable=when-run-block).\r\n2. Then drag another sound block under the first one.\r\n3. Add as many as you like!\r\n4. Press [Run](#clickable=run-button) to hear your song.\r\n",
     "hide_share_and_remix": "false",
     "level_data": {
       "startSources": {
@@ -33,16 +33,62 @@
           "drum_beat_club",
           "drum_beat_knock",
           "drum_kit_pop"
+        ],
+        "shakira_maluma_chantaje": [
+          "kick_verse_1",
+          "kick_verse_2",
+          "kick_build_1",
+          "kick_build_2",
+          "snap_sample",
+          "snap_sample_full",
+          "percussion",
+          "shaker",
+          "bass_small_1",
+          "bass_small_2",
+          "bass_medium_1",
+          "bass_medium_2",
+          "bass_big_1",
+          "bass_big_2",
+          "ambience",
+          "impact_1",
+          "impact_2",
+          "synth_pulse_1",
+          "synth_pulse_2",
+          "synth_accent_1",
+          "synth_accent_2",
+          "clippy_synth_1",
+          "clippy_synth_2",
+          "pad_1",
+          "pad_2",
+          "guitar_1",
+          "guitar_2",
+          "intro_swell",
+          "vocals_sample_1",
+          "vocals_sample_2",
+          "vocals_chop",
+          "vocals_maluma_1",
+          "vocals_maluma_2",
+          "vocals_maluma_3",
+          "vocals_maluma_4",
+          "vocals_shakira_1",
+          "vocals_shakira_2",
+          "vocals_shakira_3",
+          "vocals_shakira_maluma_4"
         ]
       },
       "toolbox": {
         "blocks": {
           "Play": [
             "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
           ]
         },
         "type": "flyout"
-      }
+      },
+      "library": "launch2024",
+      "packId": "shakira_maluma_chantaje"
     },
     "validations": [
       {
@@ -65,7 +111,8 @@
             "name": "played_sounds",
             "value": 1
           }
-        ]
+        ],
+        "callout": "play-sound-block---play-sound-block-workspace"
       },
       {
         "key": "music-intro-coding-seq-make-two-sounds_e17cc797-9774-4906-a4a4-fcdd00b184da",
@@ -73,12 +120,13 @@
         "next": false,
         "conditions": [
 
-        ]
+        ],
+        "callout": "play-sound-block---when-run-block"
       }
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-29 20:25:56 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:27:24 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:30:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:33:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:37:05 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29 20:25:56 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:27:24 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:30:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:33:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:37:05 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-08 18:09:46 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:10:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:11:26 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:11:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:21:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:23:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 21:22:08 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

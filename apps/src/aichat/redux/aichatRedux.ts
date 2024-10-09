@@ -30,7 +30,7 @@ import {
   postAichatCompletionMessage,
 } from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
-import {saveTypeToAnalyticsEvent} from '../constants';
+import {ModalTypes, saveTypeToAnalyticsEvent} from '../constants';
 import {
   AichatContext,
   AiCustomizations,
@@ -68,6 +68,7 @@ type MessageLocation = {
   index: number;
   messageListKey: (typeof messageListKeys)[number];
 };
+type ModalType = ModalTypes.WARNING | ModalTypes.TEACHER_ONBOARDING | undefined;
 
 export interface AichatState {
   // Content from previous chat sessions that we track purely for visibility to the user
@@ -81,8 +82,8 @@ export interface AichatState {
   isWaitingForChatResponse: boolean;
   // Student events viewed by a teacher user in chat workspace
   studentChatHistory: ChatEvent[];
-  // Denotes whether we should show the warning modal
-  showWarningModal: boolean;
+  // Denotes whether we should show the warning or teacher onboarding modal
+  showModalType: ModalType;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
   initialAiCustomizations: AiCustomizations;
@@ -103,7 +104,7 @@ const initialState: AichatState = {
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
   studentChatHistory: [],
-  showWarningModal: true,
+  showModalType: undefined,
   chatMessageError: false,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -615,8 +616,8 @@ const aichatSlice = createSlice({
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
     },
-    setShowWarningModal: (state, action: PayloadAction<boolean>) => {
-      state.showWarningModal = action.payload;
+    setShowModalType: (state, action: PayloadAction<ModalType>) => {
+      state.showModalType = action.payload;
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
@@ -826,7 +827,7 @@ export const {
   setAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
-  setShowWarningModal,
+  setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
   setUserHasAichatAccess,

@@ -6,13 +6,10 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
-  NON_SCHOOL_OPTIONS_ARRAY,
-  SELECT_A_SCHOOL,
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../templates/BaseDialog';
@@ -69,15 +66,15 @@ export default function SchoolInfoInterstitial({
       return true;
     }
     // disable true if school is not selected
-    if (schoolInfo.schoolId === SELECT_A_SCHOOL) {
+    if (schoolInfo.schoolId === NonSchoolOptions.SELECT_A_SCHOOL) {
       return true;
     }
     // for non school settings, don't disable
-    if (schoolInfo.schoolId === NO_SCHOOL_SETTING) {
+    if (schoolInfo.schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
       return false;
     }
     // if school not in list, disable true if no name
-    if (schoolInfo.schoolId === CLICK_TO_ADD) {
+    if (schoolInfo.schoolId === NonSchoolOptions.CLICK_TO_ADD) {
       return !schoolInfo.schoolName;
     }
 
@@ -101,7 +98,7 @@ export default function SchoolInfoInterstitial({
   const handleSchoolInfoSubmit = async () => {
     const hasNcesId =
       schoolInfo.schoolId &&
-      !NON_SCHOOL_OPTIONS_ARRAY.includes(schoolInfo.schoolId);
+      !Object.values(NonSchoolOptions).includes(schoolInfo.schoolId);
     analyticsReporter.sendEvent(
       EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
       {

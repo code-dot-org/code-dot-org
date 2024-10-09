@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {AccountInformation} from '@cdo/apps/accounts/AccountInformation';
 import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailController';
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
 import ChangeEmailController from '@cdo/apps/accounts/ChangeEmailController';
@@ -46,6 +47,19 @@ $(document).ready(() => {
         <MigrateToMultiAuth />
       </Provider>,
       migrateMultiAuthMountPoint
+    );
+  }
+
+  const accountInformationMountPoint = document.getElementById(
+    'account-information'
+  );
+  if (accountInformationMountPoint) {
+    const store = getStore();
+    ReactDOM.render(
+      <Provider store={store}>
+        <AccountInformation {...scriptData} />
+      </Provider>,
+      accountInformationMountPoint
     );
   }
 

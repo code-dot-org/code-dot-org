@@ -25,6 +25,7 @@ export enum BlockTypes {
   SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2 = 'set_filter_effect_at_current_location_simple2',
   SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2 = 'set_delay_effect_at_current_location_simple2',
   PLAY_SOUNDS_TOGETHER = 'play_sounds_together',
+  PLAY_SOUNDS_TOGETHER_NO_NEXT = 'play_sounds_together_no_next',
   PLAY_SOUNDS_SEQUENTIAL = 'play_sounds_sequential',
   PLAY_SOUNDS_RANDOM = 'play_sounds_random',
   REPEAT_SIMPLE2 = 'repeat_simple2',

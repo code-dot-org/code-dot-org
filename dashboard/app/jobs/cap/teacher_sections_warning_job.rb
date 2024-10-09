@@ -8,6 +8,8 @@ module CAP
 
     def perform
       teachers.find_each do |teacher|
+        next if teacher.email.blank?
+
         cap_section_ids = []
         email_cap_sections = []
 

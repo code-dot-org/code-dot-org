@@ -38,9 +38,8 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showConfirmPasswordError, setShowConfirmPasswordError] =
     useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
   const [email, setEmail] = useState('');
-  const [emailIcon, setEmailIcon] = useState(X_ICON);
-  const [emailIconClass, setEmailIconClass] = useState(style.lightGray);
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
     useState(true);
@@ -115,19 +114,15 @@ const LoginTypeSelection: React.FunctionComponent = () => {
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
-    if (isEmail(event.target.value)) {
-      setEmailIcon(CHECK_ICON);
-      setEmailIconClass(style.teal);
-      sessionStorage.setItem(EMAIL_SESSION_KEY, event.target.value);
-    } else {
-      setEmailIcon(X_ICON);
-      setEmailIconClass(style.lightGray);
-    }
+    sessionStorage.setItem(EMAIL_SESSION_KEY, event.target.value);
   };
 
   const submitLoginType = async () => {
     logUserLoginType('email');
-
+    if (!isEmail(email)) {
+      setShowEmailError(true);
+      return;
+    }
     const submitLoginTypeParams = {
       new_sign_up: true,
       user: {
@@ -186,6 +181,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             </BodyThreeText>
           </div>
           <form action="/users/auth/google_oauth2" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.googleButton}
               onClick={() => logUserLoginType('google')}
@@ -200,6 +196,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/microsoft_v2_auth" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.microsoftButton}
               onClick={() => logUserLoginType('microsoft')}
@@ -214,6 +211,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/facebook" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.facebookButton}
               onClick={() => logUserLoginType('facebook')}
@@ -228,6 +226,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/clever" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.cleverButton}
               onClick={() => logUserLoginType('clever')}
@@ -298,13 +297,17 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 onChange={handleEmailChange}
                 name="emailInput"
               />
-              <div className={style.validationMessage}>
-                <FontAwesomeV6Icon
-                  className={emailIconClass}
-                  iconName={emailIcon}
-                />
-                <BodyThreeText>{i18n.censusInvalidEmail()}</BodyThreeText>
-              </div>
+              {showEmailError && (
+                <div className={style.validationMessage}>
+                  <FontAwesomeV6Icon
+                    className={style.red}
+                    iconName={EXCLAMATION_ICON}
+                  />
+                  <BodyThreeText className={style.red}>
+                    {i18n.censusInvalidEmail()}
+                  </BodyThreeText>
+                </div>
+              )}
             </div>
             <div>
               <TextField
