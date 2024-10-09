@@ -181,6 +181,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             </BodyThreeText>
           </div>
           <form action="/users/auth/google_oauth2" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.googleButton}
               onClick={() => logUserLoginType('google')}
@@ -195,6 +196,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/microsoft_v2_auth" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.microsoftButton}
               onClick={() => logUserLoginType('microsoft')}
@@ -209,6 +211,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/facebook" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.facebookButton}
               onClick={() => logUserLoginType('facebook')}
@@ -223,6 +226,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/clever" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.cleverButton}
               onClick={() => logUserLoginType('clever')}
