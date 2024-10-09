@@ -13,6 +13,19 @@ type ValidateFileNameArgs = {
   validationFile: ProjectFile | undefined;
 };
 
+/**
+ * Validates a file name. Internally, this checks to confirm that the file has an extension, the file name does not already exist
+   in the parent folder, and that the file name is valid. Be aware that an empty string is considered a valid name.
+ *
+ * @param args An object containing the following properties:
+ *   - **fileName:** The name of the file to validate.
+ *   - **folderId:** The ID of the parent folder.
+ *   - **projectFiles:** An array of project files.
+ *   - **isStartMode:** Indicates if the application is in start mode.
+ *   - **validationFile:** The validation file.
+ *
+ * @returns A string error message if the file name is invalid, or undefined if the file name is valid.
+ */
 export const validateFileName = ({
   fileName,
   folderId,
@@ -42,14 +55,10 @@ export const validateFileName = ({
   });
 
   if (duplicateFileError) {
-    if (duplicateFileError === DuplicateFileError.DUPLICATE_FILE) {
-      return codebridgeI18n.duplicateFileError({fileName});
-    } else if (
-      duplicateFileError === DuplicateFileError.DUPLICATE_SUPPORT_FILE
-    ) {
+    if (duplicateFileError === DuplicateFileError.DUPLICATE_SUPPORT_FILE) {
       return codebridgeI18n.duplicateSupportFileError({fileName});
     } else {
-      throw new Error(`Unknown Duplicate File Error : ${duplicateFileError}`);
+      return codebridgeI18n.duplicateFileError({fileName});
     }
   }
 };
