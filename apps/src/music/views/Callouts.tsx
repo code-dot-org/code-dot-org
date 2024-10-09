@@ -71,12 +71,11 @@ const availableCallouts: AvailableCallouts = {
   'trigger-button-1': {selector: `#${Triggers[0].id}`},
   'toolbox-first-row': {selector: '.blocklyTreeRow'},
   'flyout-first-block': {
-    selector:
-      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable:nth-of-type(1)',
+    selector: '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable',
   },
   'toolbox-second-block': {
     selector:
-      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable:nth-of-type(3)',
+      '.blocklyFlyout:not([style*="display: none;"]) .blocklyDraggable ~ .blocklyDraggable',
     openToolboxCategory: 0,
   },
 };
