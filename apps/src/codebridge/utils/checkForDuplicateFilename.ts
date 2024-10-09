@@ -3,13 +3,21 @@ import {ProjectFile} from '@codebridge/types';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 
-export const checkForDuplicateFilename = (
-  fileName: string,
-  folderId: string,
-  projectFiles: Record<string, ProjectFile>,
-  isStartMode: boolean,
-  validationFile?: ProjectFile
-) => {
+type CheckForDuplicateFilenameArgs = {
+  fileName: string;
+  folderId: string;
+  projectFiles: Record<string, ProjectFile>;
+  isStartMode: boolean;
+  validationFile?: ProjectFile;
+};
+
+export const checkForDuplicateFilename = ({
+  fileName,
+  folderId,
+  projectFiles,
+  isStartMode,
+  validationFile,
+}: CheckForDuplicateFilenameArgs) => {
   let message = undefined;
   // The validation file is in the project files in start mode.
   if (!isStartMode && validationFile?.name === fileName) {
