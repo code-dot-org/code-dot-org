@@ -112,11 +112,13 @@ Feature: Header navigation bar
     And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"
     And I see "#header-teacher-incubator"
     And element "#header-teacher-incubator" has "es" text from key "nav.header.incubator"
-
   @chrome
   Scenario: Teacher can click on the header links
     Given I create a teacher named "Sir Clicks-A-Lot Teacher" and go home
+    And I set the language cookie
+    And I set the cookie named "_loc_notice" to "1"
     And I wait to see ".headerlinks"
+
     # We click on each header link and see where we go
     And I press "header-teacher-home" to load a new page
     Then check that I am on "http://studio.code.org/home"
@@ -131,3 +133,48 @@ Feature: Header navigation bar
     # The logo itself
     And I press "logo_home_link" to load a new page
     Then check that I am on "http://studio.code.org/home"
+
+  @chrome
+  Scenario: Student can click on the header links
+    Given I create a student named "Squire Clicks-A-Lot Student" and go home
+    And I set the language cookie
+    And I set the cookie named "_loc_notice" to "1"
+    And I wait to see ".headerlinks"
+
+    # We click on each header link and see where we go
+    And I press "header-student-home" to load a new page
+    Then check that I am on "http://studio.code.org/home"
+    And I press "header-student-courses" to load a new page
+    Then check that I am on "http://code.org/students"
+    And I press "header-student-projects" to load a new page
+    Then check that I am on "http://studio.code.org/projects"
+    And I press "header-incubator" to load a new page
+    Then check that I am on "http://studio.code.org/incubator"
+    # The logo itself
+    And I press "logo_home_link" to load a new page
+    Then check that I am on "http://studio.code.org/home"
+
+  @chrome
+  Scenario: Signed out user can click on the header links
+    Given I am on "http://code.org"
+    And I set the language cookie
+    And I set the cookie named "_loc_notice" to "1"
+
+    Then I reload the page
+    And I wait to see "#headerlinks"
+
+    # We click on each header link and see where we go
+    And I press "header-learn" to load a new page
+    Then check that I am on "http://code.org/students"
+    And I press "header-teach" to load a new page
+    Then check that I am on "http://code.org/teach"
+    And I press "header-districts" to load a new page
+    Then check that I am on "http://code.org/administrators"
+    And I press "header-stats" to load a new page
+    Then check that I am on "http://code.org/promote"
+    And I press "header-help" to load a new page
+    Then check that I am on "http://code.org/help"
+    And I press "header-incubator" to load a new page
+    Then check that I am on "http://studio.code.org/incubator"
+    And I press "header-about" to load a new page
+    Then check that I am on "http://code.org/about"
