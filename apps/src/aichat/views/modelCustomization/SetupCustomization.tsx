@@ -78,7 +78,7 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const renderChooseAndCompareModels = () => {
     return (
-      <div className={styles.inputContainer}>
+      <div>
         <FieldLabel
           id="selected-model"
           label="Selected model"
@@ -132,7 +132,7 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.customizationContainer}>
         {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
-          <div className={styles.inputContainer}>
+          <div>
             <div className={styles.horizontalFlexContainer}>
               <FieldLabel
                 id="temperature"
@@ -160,7 +160,7 @@ const SetupCustomization: React.FunctionComponent = () => {
           </div>
         )}
         {isVisible(systemPrompt) && (
-          <div className={styles.inputContainer}>
+          <div>
             <FieldLabel
               id="system-prompt"
               label="System Prompt"

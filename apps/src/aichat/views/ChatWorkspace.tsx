@@ -160,6 +160,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   const onCloseModal = useCallback(() => {
+    // We only want to show the teacher onboarding modal the first time a teacher user
+    // interacts with the aichat tool. Thus, we store a value in local storage when
+    // closing the modal. After the first time viewing the modal, the teacher user
+    // sees the warning modal on page load from then on.
     if (
       isUserTeacher &&
       showModalType === ModalTypes.TEACHER_ONBOARDING &&
