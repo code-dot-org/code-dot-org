@@ -72,6 +72,10 @@ export function deleteUnusedVariables(workspace: GoogleBlockly.Workspace) {
 export function getNonFunctionVariableIds(workspace: GoogleBlockly.Workspace) {
   const allVariableIds =
     workspace?.getVariablesOfType('').map(variable => variable.getId()) || [];
+  if (!workspace.rendered) {
+    // We don't need to worry about filtering variables in toolboxes or flyouts.
+    return allVariableIds;
+  }
   const nonFunctionIds = allVariableIds.filter(id => {
     const varUses = workspace.getVariableUsesById(id);
     return (

@@ -1,0 +1,30 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-08T17:50:22.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "###📝 Sequence Matters\nThe computer runs your code runs **in order** from top to bottom.",
+        "imageUrl": "https://images.code.org/5d3d60ebbd10254c67d4998a18b61e68-Oct-08-2024 11-48-12.gif",
+        "key": "music-intro-coding-seq-panel-3ad5bdff-9161-4fad-af85-4095174d23d7"
+      },
+      {
+        "text": "🎵You can add blocks to build a sequence of sounds. ",
+        "imageUrl": "https://images.code.org/71a2b2a32f313c7d2e54fe3b5e2ebee2-Slide 16_9 - 1.png",
+        "key": "music-intro-coding-seq-panel-c89c8094-7ebd-4fdf-8e56-6b3283b69e64"
+      },
+      {
+        "text": "🔀You can also change the order of the blocks whenever you want.",
+        "imageUrl": "",
+        "key": "music-intro-coding-seq-panel-1691297d-ba17-44dc-9a45-d24db5194f15"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-08 17:53:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:25:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 21:37:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
