@@ -1,0 +1,69 @@
+name 'self-paced-pl-gen-ai-foundations-preview-03_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Embeddings
+
+## Lesson Highlight: Character Quiz Activity
+
+<img src="https://images.code.org/9a52d33d49d488c302d04354a96a3d2d-bed5925cbfe2b9a80368293aa21cf84b-Slide19.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="float:right; margin: 20px 20px 20px 20px;">
+
+#### During **Lesson 4: Understanding Embeddings**, students investigate how characters from stories or movies can be similar as a way to understand how words can be similar.
+
+#### Students create a representation of chosen characters based on their different traits, and then compare their characters to others in the class. 
+
+#### After students collect some data on various characters, students should compare two characters row-by-row, noticing when dots are close together or far apart. For example, Kim and Hawa's characters are on opposite ends of the good/bad spectrum, but are close in several other areas. 
+
+<img src="https://images.code.org/5587e0a3e25e4642f2da11c4f317800e-3d83c1f988e645b8de16c95ee6709055-Slide22.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="float:right; margin: 20px 20px 20px 20px;">
+
+#### During discussions, emphasize responses that are explicitly counting spaces between dots and comparing distances. Students will eventually understand that they can compare numbers in each position to determine how similar or different characters are. This can be done by comparing each number from left-to-right. One powerful insight is that it doesn’t matter what each position represents, only how close or far the numbers are in that same position.
+
+#### These key concepts helps us generalize the idea of “character traits” to **embeddings** which the set of numbers used to represent a word in a large-language model.
+
+## Lesson Previews
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Understanding Embeddings</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/83dee75d875fa88fe7d45afc04bf1d79-Screenshot 2024-10-08 at 2.58.18 PM.png" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can we begin to understand Generative AI’s impact on how we live and work?
+
+#### **Lesson Overview:**
+
+#### This lesson introduces the learning goals focused on artificial intelligence (AI), transitioning into generative AI. It begins with a discussion on the impact of past technological innovations on society. Students then explore the concept of generative AI through the lens of someone familiar only with its hype, aiming to foster understanding and responsible engagement with AI technology. A key part of the lesson is the introduction of the Input, Storage, Processing, Output (ISPO) framework, essential for understanding generative AI's workings. The lesson concludes with students receiving a graphic organizer for the unit and sharing their anticipations about learning more on generative AI.
+
+#### **Students will be able to:**
+* #### Distinguish between different types of AI, including machine learning, deep learning, and generative AI.
+* #### Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations.
+* #### Identify and explain the four key components that make up a computer system.
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/1" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Embeddings: How They're Created</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/83dee75d875fa88fe7d45afc04bf1d79-Screenshot 2024-10-08 at 2.58.18 PM.png" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can we begin to understand Generative AI’s impact on how we live and work?
+
+#### **Lesson Overview:**
+
+#### This lesson introduces the learning goals focused on artificial intelligence (AI), transitioning into generative AI. It begins with a discussion on the impact of past technological innovations on society. Students then explore the concept of generative AI through the lens of someone familiar only with its hype, aiming to foster understanding and responsible engagement with AI technology. A key part of the lesson is the introduction of the Input, Storage, Processing, Output (ISPO) framework, essential for understanding generative AI's workings. The lesson concludes with students receiving a graphic organizer for the unit and sharing their anticipations about learning more on generative AI.
+
+#### **Students will be able to:**
+* #### Distinguish between different types of AI, including machine learning, deep learning, and generative AI.
+* #### Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations.
+* #### Identify and explain the four key components that make up a computer system.
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/1" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+
+MARKDOWN

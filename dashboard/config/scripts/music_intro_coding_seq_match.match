@@ -1,6 +1,6 @@
 name 'music-intro-coding-seq-match'
-title 'Sequence Matters!'
-description '**In Music Lab, your code runs in order from top to bottom.** <br> Match the description to the code.'
+title '<i class="fa-solid fa-magnifying-glass"></i> 🔍👀 Investigate how Sequence Matters!'
+description 'Can you <i class="fa-solid fa-shuffle"></i> match the description to the code?'
 
 height '210'
 width '200'
