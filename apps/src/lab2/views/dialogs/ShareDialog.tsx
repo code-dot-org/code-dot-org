@@ -50,15 +50,20 @@ const CopyToClipboardButton: React.FunctionComponent<{
  */
 
 const ShareDialog: React.FunctionComponent<{
-  id?: string;
+  dialogId?: string;
   shareUrl: string;
   finishUrl?: string;
   projectType: ProjectType;
-}> = ({id, shareUrl, finishUrl, projectType}) => {
+}> = ({dialogId, shareUrl, finishUrl, projectType}) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    trackEvent('congrats', 'congrats_open_dialog', {value: projectType});
+    trackEvent('share', 'share_open_dialog', {
+      value:
+        dialogId === 'hoc2024'
+          ? 'share_open_dialog_congrats_hoc2024'
+          : projectType,
+    });
   });
 
   const handleClose = useCallback(
@@ -78,7 +83,9 @@ const ShareDialog: React.FunctionComponent<{
             visualAppearance="heading-lg"
             className={moduleStyles.heading}
           >
-            {id === 'hoc2024' ? i18n.congratulations() : i18n.shareTitle()}
+            {dialogId === 'hoc2024'
+              ? i18n.congratulations()
+              : i18n.shareTitle()}
           </Typography>
           <div className={moduleStyles.columns}>
             <div className={moduleStyles.column}>
@@ -93,7 +100,7 @@ const ShareDialog: React.FunctionComponent<{
               </div>
             </div>
             <div className={moduleStyles.column}>
-              {id === 'hoc2024' ? (
+              {dialogId === 'hoc2024' ? (
                 <div className={moduleStyles.careers}>
                   Learn more about careers in technology and music.
                   <LinkButton

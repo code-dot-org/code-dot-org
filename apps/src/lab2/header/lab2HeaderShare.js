@@ -31,7 +31,7 @@ export function shareLab2Project(id, finishUrl) {
     ReactDOM.render(
       <Provider store={getStore()}>
         <Lab2ShareDialogWrapper
-          id={id}
+          dialogId={id}
           shareUrl={shareUrl}
           finishUrl={finishUrl}
         />

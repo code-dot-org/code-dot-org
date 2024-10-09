@@ -15,7 +15,7 @@ import ShareDialog from './dialogs/ShareDialog';
  */
 const Lab2ShareDialogWrapper: React.FunctionComponent<
   Lab2ShareDialogWrapperProps
-> = ({id, shareUrl, finishUrl}) => {
+> = ({dialogId, shareUrl, finishUrl}) => {
   const isProjectLevel =
     useSelector(
       (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
@@ -62,7 +62,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
     return (
       <ShareDialog
-        id={id}
+        dialogId={dialogId}
         shareUrl={shareUrl}
         finishUrl={finishUrl}
         projectType={projectType}
@@ -91,7 +91,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 };
 
 interface Lab2ShareDialogWrapperProps {
-  id?: string;
+  dialogId?: string;
   shareUrl: string;
   finishUrl?: string;
 }
