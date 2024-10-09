@@ -28,8 +28,8 @@ const FileTab = ({file}: FileTabProps) => {
   return (
     <div className={className} key={file.id}>
       <div
-        onClick={() => setActiveFile(file.id)}
         className={moduleStyles.label}
+        onClick={() => setActiveFile(file.id)}
       >
         <FontAwesomeV6Icon
           iconName={iconName}
