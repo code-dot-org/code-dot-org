@@ -30,6 +30,10 @@ export interface SegmentedButtonsProps {
   className?: string;
 }
 
+// TODO: DSCO - SegmentedButtons - use DSCO variables for light/dark mode,
+//  implement black/gray options for segmentedButton (like in Dropdowns (black/gray)),
+//  update hover background color
+
 /**
  * ### Production-ready Checklist:
  * * (✔) implementation of component approved by design team;
