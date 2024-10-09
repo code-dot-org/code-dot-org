@@ -52,6 +52,7 @@ function RubricSettings({
   aiRubricsDisabled,
   setAiRubricsDisabled,
   allTeacherEvaluationData,
+  allAiEvaluationStatus,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
@@ -136,20 +137,13 @@ function RubricSettings({
     }
   };
 
-  // load initial ai evaluation status
+  // parse initial ai evaluation status
   useEffect(() => {
-    const abort = new AbortController();
-    if (!!rubricId && !!sectionId) {
-      fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
-        if (!response.ok) {
-          setStatusAll(STATUS_ALL.ERROR);
-        } else {
-          response.json().then(parseAiEvaluationStatusAll);
-        }
-      });
+    if (allAiEvaluationStatus) {
+      parseAiEvaluationStatusAll(allAiEvaluationStatus);
     }
-    return () => abort.abort();
-  }, [rubricId, sectionId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allAiEvaluationStatus]);
 
   const parseTeacherEvaluationData = data => {
     var teachEvalArr = [];
@@ -398,6 +392,7 @@ RubricSettings.propTypes = {
   aiRubricsDisabled: PropTypes.bool,
   setAiRubricsDisabled: PropTypes.func.isRequired,
   allTeacherEvaluationData: PropTypes.array,
+  allAiEvaluationStatus: PropTypes.array,
 };
 
 export const UnconnectedRubricSettings = RubricSettings;

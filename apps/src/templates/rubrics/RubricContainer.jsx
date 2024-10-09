@@ -125,6 +125,26 @@ export default function RubricContainer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricId, sectionId]);
 
+  const [allAiEvaluationStatus, setAllAiEvaluationStatus] = useState(null);
+
+  const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
+    return fetch(
+      `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
+    );
+  };
+
+  useEffect(() => {
+    const abort = new AbortController();
+    if (!!rubricId && !!sectionId) {
+      fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
+        if (response.ok) {
+          response.json().then(data => setAllAiEvaluationStatus(data));
+        }
+      });
+    }
+    return () => abort.abort();
+  }, [rubricId, sectionId]);
+
   useEffect(() => {
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
   }, [selectedTab]);
@@ -377,6 +397,7 @@ export default function RubricContainer({
               tabSelectCallback={tabSelectCallback}
               reportingData={reportingData}
               allTeacherEvaluationData={allTeacherEvaluationData}
+              allAiEvaluationStatus={allAiEvaluationStatus}
             />
           )}
         </div>
