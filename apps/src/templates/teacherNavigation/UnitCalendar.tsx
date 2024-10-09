@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCalendarGrid';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import i18n from '@cdo/locale';
 
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
@@ -17,7 +18,7 @@ const UnitCalendar: React.FC = () => {
   const lessons = useSelector(state => getCurrentUnitData(state)?.lessons);
   const [isLoading, setIsLoading] = useState(true);
   const [weeklyInstructionalMinutes, setWeeklyInstructionalMinutes] =
-    useState<number>(WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS[4]);
+    useState<string>(WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS[4].toString());
 
   useEffect(() => {
     if (lessons) {
@@ -25,17 +26,28 @@ const UnitCalendar: React.FC = () => {
     }
   }, [lessons]);
 
-  const generateDropdownOptions = () => {
-    const options = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS;
-    if (!options.includes(weeklyInstructionalMinutes)) {
-      options.push(weeklyInstructionalMinutes);
-    }
-    options.sort((a, b) => a - b);
-    return options.map(val => (
-      <option value={parseInt(val.toString())} key={`minutes-${val}`}>
-        {i18n.minutesLabel({number: val})}
-      </option>
-    ));
+  const weeklyMinutesOptions = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS.map(
+    value => ({
+      value: value.toString(),
+      text: i18n.minutesLabel({number: value}),
+    })
+  );
+
+  // const generateDropdownOptions = () => {
+  //   const options = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS;
+  //   if (!options.includes(weeklyInstructionalMinutes)) {
+  //     options.push(weeklyInstructionalMinutes);
+  //   }
+  //   options.sort((a, b) => a - b);
+  //   return options.map(val => (
+  //     <option value={parseInt(val.toString())} key={`minutes-${val}`}>
+  //       {i18n.minutesLabel({number: val})}
+  //     </option>
+  //   ));
+  // };
+
+  const handleDropdownChange = (value: string) => {
+    setWeeklyInstructionalMinutes(value);
   };
 
   return (
@@ -44,7 +56,17 @@ const UnitCalendar: React.FC = () => {
         <div className={styles.minutesPerWeekDescription}>
           {i18n.instructionalMinutesPerWeek()}
         </div>
-        <select
+        <SimpleDropdown
+          name="minutesPerWeek"
+          onChange={event => handleDropdownChange(event.target.value)}
+          items={weeklyMinutesOptions}
+          selectedValue={weeklyInstructionalMinutes}
+          size="s"
+          dropdownTextThickness="thin"
+          labelText="minutes per week dropdown"
+          isLabelVisible={false}
+        />
+        {/* <select
           onChange={e =>
             setWeeklyInstructionalMinutes(parseInt(e.target.value))
           }
@@ -52,7 +74,7 @@ const UnitCalendar: React.FC = () => {
           className={styles.calendarDropdown}
         >
           {generateDropdownOptions()}
-        </select>
+        </select> */}
       </div>
       {!isLoading && (
         <UnitCalendarGrid
