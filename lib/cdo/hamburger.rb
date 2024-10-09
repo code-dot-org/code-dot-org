@@ -3,7 +3,7 @@
 # As part of this content, it also provides CSS classes which determine
 # responsive visibility for the header itself and the items inside it.
 
-require 'cdo/global'
+require 'cdo/global_edition'
 
 require_relative 'help_header'
 
@@ -94,7 +94,7 @@ class Hamburger
     is_level = options[:level]
 
     ge_region = options[:ge_region] || :root
-    ge_config = Cdo::Global.configuration_for(ge_region)[:header] || {}
+    ge_config = Cdo::GlobalEdition.configuration_for(ge_region)[:header] || {}
     ge_hamburger_config = ge_config[:hamburger] || {}
 
     # Get visibility CSS.
@@ -210,7 +210,7 @@ class Hamburger
     loc_prefix = options[:loc_prefix]
 
     ge_region = options[:ge_region] || :root
-    ge_config = Cdo::Global.configuration_for(ge_region)[:header] || {}
+    ge_config = Cdo::GlobalEdition.configuration_for(ge_region)[:header] || {}
     ge_top_config = ge_config[:top] || {}
 
     links = ge_top_config[:signed_out] || []

@@ -1,6 +1,6 @@
 module Cdo
   # Lazily loads global configurations for regional pages
-  module Global
+  module GlobalEdition
     # Freezes an entire complex data structure
     def deep_freeze(data)
       if data.is_a?(Enumerable)
@@ -32,7 +32,7 @@ module Cdo
 
     # Returns the parsed configuration for the given region.
     def self.load_config(region)
-      raise ArgumentError, "Region #{region} is not available" unless REGIONS.include?(region)
+      raise ArgumentError, "Region #{region} is not available" unless regions.include?(region.intern)
       configs = YAML.load_file(CDO.dir('config', 'global', "#{region}.yml")) || {}
       configs.deep_symbolize_keys
     end
