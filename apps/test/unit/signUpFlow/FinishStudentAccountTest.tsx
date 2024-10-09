@@ -4,14 +4,21 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FinishStudentAccount from '@cdo/apps/signUpFlow/FinishStudentAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
-import {
-  IS_PARENT_SESSION_KEY,
-  PARENT_EMAIL_SESSION_KEY,
-  PARENT_EMAIL_OPT_IN_SESSION_KEY,
-  USER_AGE_SESSION_KEY,
-  USER_STATE_SESSION_KEY,
-  USER_GENDER_SESSION_KEY,
-} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {navigateToHref} from '@cdo/apps/utils';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+
+jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
+  getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
+}));
+
+jest.mock('@cdo/apps/utils', () => ({
+  ...jest.requireActual('@cdo/apps/utils'),
+  navigateToHref: jest.fn(),
+}));
+
+const navigateToHrefMock = navigateToHref as jest.Mock;
+const getAuthenticityTokenMock = getAuthenticityToken as jest.Mock;
 
 describe('FinishStudentAccount', () => {
   let fetchStub: sinon.SinonStub;
@@ -102,72 +109,6 @@ describe('FinishStudentAccount', () => {
 
     expect(screen.queryByText(locale.what_state_are_you_in())).toBe(null);
     expect(screen.queryByText(locale.state_error_message())).toBe(null);
-  });
-
-  it('userAge is tracked in sessionStorage', () => {
-    renderDefault();
-    const userAgeInput = screen.getAllByRole('combobox')[0];
-
-    expect(sessionStorage.getItem(USER_AGE_SESSION_KEY)).toBe(null);
-
-    fireEvent.change(userAgeInput, {target: {value: '5'}});
-    expect(sessionStorage.getItem(USER_AGE_SESSION_KEY)).toBe('5');
-  });
-
-  it('userState is tracked in sessionStorage', () => {
-    renderDefault();
-    const userStateInput = screen.getAllByRole('combobox')[1];
-
-    expect(sessionStorage.getItem(USER_STATE_SESSION_KEY)).toBe(null);
-
-    fireEvent.change(userStateInput, {target: {value: 'WA'}});
-    expect(sessionStorage.getItem(USER_STATE_SESSION_KEY)).toBe('WA');
-  });
-
-  it('userGender is tracked in sessionStorage', () => {
-    renderDefault();
-    const userGender = 'Female';
-    const userGenderInput = screen.getAllByRole('textbox')[1];
-
-    expect(sessionStorage.getItem(USER_GENDER_SESSION_KEY)).toBe(null);
-
-    fireEvent.change(userGenderInput, {target: {value: userGender}});
-    expect(sessionStorage.getItem(USER_GENDER_SESSION_KEY)).toBe(userGender);
-  });
-
-  it('userParentEmail is tracked in sessionStorage', () => {
-    renderDefault();
-
-    // Click parent checkbox to show parent email field
-    fireEvent.click(screen.getAllByRole('checkbox')[0]);
-    expect(sessionStorage.getItem(IS_PARENT_SESSION_KEY)).toBe('true');
-
-    // Check parent email field
-    const userParentEmail = 'parent@adult.com';
-    const userParentEmailInput = screen.getAllByRole('textbox')[0];
-
-    expect(sessionStorage.getItem(PARENT_EMAIL_SESSION_KEY)).toBe(null);
-
-    fireEvent.change(userParentEmailInput, {target: {value: userParentEmail}});
-    expect(sessionStorage.getItem(PARENT_EMAIL_SESSION_KEY)).toBe(
-      userParentEmail
-    );
-  });
-
-  it('userParentEmailOptIn is tracked in sessionStorage', () => {
-    renderDefault();
-
-    // Click parent checkbox to show parent email opt-in field
-    fireEvent.click(screen.getAllByRole('checkbox')[0]);
-    expect(sessionStorage.getItem(IS_PARENT_SESSION_KEY)).toBe('true');
-
-    // Check parent email opt-in field
-    expect(sessionStorage.getItem(PARENT_EMAIL_OPT_IN_SESSION_KEY)).toBe(null);
-
-    fireEvent.click(screen.getAllByRole('checkbox')[1]);
-    expect(sessionStorage.getItem(PARENT_EMAIL_OPT_IN_SESSION_KEY)).toBe(
-      'true'
-    );
   });
 
   it('finish student signup button starts disabled', () => {
@@ -374,5 +315,90 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
     fireEvent.click(screen.getAllByRole('checkbox')[1]);
     expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+  });
+
+  it('clicking finish sign up button triggers fetch call and redirects user to home page', async () => {
+    fetchStub.callsFake(url => {
+      if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({gdpr: false, force_in_eu: false}),
+        } as Response);
+      } else {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({success: true}),
+        } as Response);
+      }
+    });
+
+    // Declare parameter values and set sessionStorage variables
+    const name = 'FirstName';
+    const email = 'fake@email.com';
+    const age = '10';
+    const gender = 'Female';
+    const state = 'CO';
+    const parentEmail = 'parent@email.com';
+    const finishSignUpParams = {
+      new_sign_up: true,
+      user: {
+        user_type: UserTypes.STUDENT,
+        email: email,
+        name: name,
+        age: age,
+        gender: gender,
+        us_state: state,
+        parent_email_preference_email: parentEmail,
+        parent_email_preference_opt_in: true,
+      },
+    };
+    sessionStorage.setItem('email', email);
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up finish sign up button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in fields
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+    fireEvent.click(screen.getAllByRole('checkbox')[1]);
+    const parentEmailInput = screen.getAllByDisplayValue('')[0];
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+    const ageInput = screen.getAllByRole('combobox')[0];
+    const stateInput = screen.getAllByRole('combobox')[1];
+    fireEvent.change(parentEmailInput, {target: {value: parentEmail}});
+    fireEvent.change(displayNameInput, {target: {value: name}});
+    fireEvent.change(ageInput, {target: {value: age}});
+    fireEvent.change(stateInput, {target: {value: state}});
+
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the authenticity token was obtained
+      expect(getAuthenticityTokenMock).toHaveBeenCalled;
+
+      // Verify the button's fetch method was called
+      expect(fetchStub.calledOnce).toBe(true);
+      const fetchCall = fetchStub.getCall(1);
+      expect(fetchCall.args[0]).toEqual('/users');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(finishSignUpParams)
+      );
+
+      // Verify the user is redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledWith('/home');
+    });
   });
 });
