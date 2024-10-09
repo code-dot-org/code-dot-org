@@ -13,7 +13,7 @@ import {Key} from '../utils/Notes';
 
 // This value can be modifed each time we know that there is an important new version
 // of the library on S3, to help bypass any caching of an older version.
-const requestVersion = 'launch2024-0';
+const requestVersion = 'launch2024-1';
 
 /**
  * Loads a sound library JSON file.

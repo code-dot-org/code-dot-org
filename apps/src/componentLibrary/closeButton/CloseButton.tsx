@@ -11,11 +11,13 @@ export interface CloseButtonProps extends AriaAttributes {
   /** Close Button onClick */
   onClick: () => void;
   /** Close Button size */
-  size?: Exclude<ComponentSizeXSToL, 's' | 'xs'>;
+  size?: ComponentSizeXSToL;
   /** Close Button Color*/
   color?: 'light' | 'dark';
   /** Close Button Custom class name */
   className?: string;
+  /** Close Button id */
+  id?: string;
   /** Close Button an accessible label indicating invisible label for the Close Button */
   'aria-label': string;
 }
@@ -39,6 +41,7 @@ const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
   size = 'm',
   'aria-label': ariaLabel,
   color = 'dark',
+  id,
   className,
   ...rest
 }) => {
@@ -47,7 +50,7 @@ const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
   return (
     <button
       type="button"
-      id="ui-close-dialog"
+      id={id}
       aria-label={ariaLabel}
       className={classNames(
         moduleStyles.closeButton,

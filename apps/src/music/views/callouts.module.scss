@@ -36,8 +36,15 @@
   opacity: 0;
   width: 32px;
   height: 32px;
-  transform: translateX(-50%);
   animation: fade-in-out 2.5s;
+
+  &Up {
+    transform: translateX(-50%);
+  }
+
+  &Left {
+    transform: translateY(-50%) rotateZ(-90deg);
+  }
 
   .arrow {
     position: absolute;

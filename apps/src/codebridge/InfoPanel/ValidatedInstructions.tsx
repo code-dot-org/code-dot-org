@@ -244,7 +244,10 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         onClick={handleStop}
         color={'destructive'}
         iconLeft={{iconStyle: 'solid', iconName: 'square'}}
-        className={moduleStyles.buttonInstruction}
+        className={classNames(
+          moduleStyles.buttonInstruction,
+          moduleStyles.validationButton
+        )}
         size={'s'}
       />
     ) : (
@@ -256,7 +259,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
         className={classNames(
           darkModeStyles.secondaryButton,
-          moduleStyles.buttonInstruction
+          moduleStyles.buttonInstruction,
+          moduleStyles.validationButton
         )}
         color={'white'}
         size={'s'}
