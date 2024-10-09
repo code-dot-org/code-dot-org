@@ -98,13 +98,13 @@ class YourSchool extends Component {
           )}
         <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
         <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
-        <YourSchoolResources />
         {this.props.showReportLaunchBanner && (
           <MarketingAnnouncementBanner
             announcement={accessReportBannerParams}
-            marginBottom="30px"
+            marginBottom="16px"
           />
         )}
+        <YourSchoolResources />
         {!this.props.hideMap && (
           <div id="map">
             <h1 style={styles.heading}>
