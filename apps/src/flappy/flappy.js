@@ -5,6 +5,8 @@
  *
  */
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import placeholder from '../../static/flappy/placeholder.jpg';
@@ -86,6 +88,10 @@ var AVATAR_HEIGHT = constants.AVATAR_HEIGHT;
 var AVATAR_WIDTH = constants.AVATAR_WIDTH;
 
 var loadLevel = function () {
+  // Only send PROJECT_ACTIVITY event for students or non-authenticated users
+  if (getStore().getState().currentUser?.userType !== 'teacher') {
+    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
+  }
   // Load maps.
   infoText = utils.valueOr(level.infoText, true);
   if (!infoText) {

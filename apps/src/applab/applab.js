@@ -141,6 +141,7 @@ function stepDelayFromStepSpeed(stepSpeed) {
 }
 
 function loadLevel() {
+  console.log('APP LAB CALLED ------------ '); // TODO: It's here, this get's logged in levels as well\'
   // Only send PROJECT_ACTIVITY event for students or non-authenticated users
   if (getStore().getState().currentUser?.userType !== 'teacher') {
     analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);

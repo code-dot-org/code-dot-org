@@ -11,6 +11,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   showArrowButtons,
   dismissSwipeOverlay,
@@ -364,6 +366,10 @@ const REMIX_PROPS = [
 ];
 
 Studio.loadLevel = function () {
+  // Only send PROJECT_ACTIVITY event for students or non-authenticated users
+  if (getStore().getState().currentUser?.userType !== 'teacher') {
+    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
+  }
   // Load maps.
   Studio.map = level.map.map(row =>
     row.map(cell => {
