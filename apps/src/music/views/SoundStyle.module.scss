@@ -3,7 +3,10 @@
 @mixin sound-type-style($type, $color, $fill, $background, $border) {
   &#{$type} {
     &Color { color: $color }
-    &Fill { fill: $fill }
+    &Fill {
+      fill: $fill;
+      font-weight: 600;
+    }
     &Background { background: $background }
     &Border { border-color: $border }
   }
