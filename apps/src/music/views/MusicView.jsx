@@ -411,7 +411,16 @@ class UnconnectedMusicView extends React.Component {
       this.library.setCurrentPackId(null);
     }
 
-    this.loadCode(this.getStartSources());
+    // Check if we are in start mode, and if so, load sources from the default JSON.
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    if (isStartMode) {
+      const startSourcesFilename = 'startSources' + this.props.blockMode;
+      const defaultSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
+      this.loadCode(defaultSources);
+    } else {
+      // Otherwise, use getStartSources which handles levelData and fallback logic.
+      this.loadCode(this.getStartSources());
+    }
     this.setPlaying(false);
   };
 
