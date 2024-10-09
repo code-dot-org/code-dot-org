@@ -6,6 +6,8 @@ import i18n from '@cdo/locale';
 
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 
+import styles from './teacher-navigation.module.scss';
+
 const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [
   45, 90, 135, 180, 225, 270, 315, 360, 405, 450,
 ];
@@ -37,9 +39,9 @@ const UnitCalendar: React.FC = () => {
   };
 
   return (
-    <div style={styles.contentContainer}>
-      <div style={styles.minutesPerWeekWrapper}>
-        <div style={styles.minutesPerWeekDescription}>
+    <div className={styles.calendarContentContainer}>
+      <div className={styles.minutesPerWeekWrapper}>
+        <div className={styles.minutesPerWeekDescription}>
           {i18n.instructionalMinutesPerWeek()}
         </div>
         <select
@@ -47,7 +49,7 @@ const UnitCalendar: React.FC = () => {
             setWeeklyInstructionalMinutes(parseInt(e.target.value))
           }
           value={weeklyInstructionalMinutes}
-          style={styles.dropdown}
+          className={styles.calendarDropdown}
         >
           {generateDropdownOptions()}
         </select>
@@ -64,32 +66,3 @@ const UnitCalendar: React.FC = () => {
 };
 
 export default UnitCalendar;
-
-const styles = {
-  dialog: {
-    textAlign: 'left',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-  },
-  button: {
-    float: 'right',
-    marginTop: 30,
-  },
-  dropdown: {
-    width: 'fit-content',
-    marginBottom: 0,
-  },
-  minutesPerWeekWrapper: {
-    display: 'flex',
-    marginBottom: 10,
-    alignItems: 'center',
-  },
-  minutesPerWeekDescription: {
-    fontWeight: 'bold' as const,
-    marginRight: 10,
-  },
-  contentContainer: {
-    width: 'fit-content',
-  },
-};
