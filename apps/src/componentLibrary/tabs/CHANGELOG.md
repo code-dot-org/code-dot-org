@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.2]()
+## [0.3.2](https://github.com/code-dot-org/code-dot-org/pull/61624)
 
-* add native tooltip for `_Tab` component when tab has overflown text(label)
+* add native tooltip for `_Tab` component when tab has overflown text(label) and no tooltip prop
 
 ## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/61120)
 
