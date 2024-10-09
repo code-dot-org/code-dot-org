@@ -393,23 +393,20 @@ end
 
 When /^I click on the link reading "([^"]*)"(?: within element "([^"]*)")?(?: to load a new (page|tab))?$/ do |text, parent, load|
   link = nil
-  wait_short_until do
-    parent = @browser.find_element(:css, parent) if parent
-    parent ||= @browser
-    xpath = "//a[text()='#{text}']"
-    link = parent.find_element(:xpath, xpath)
+  wait_until_interactable(5) do
+    context = @browser.find_element(:css, parent) if parent
+    context ||= @browser
+    xpath = ".//a[text()='#{text}']"
+    link = context.find_element(:xpath, xpath)
+    page_load(load) {link.click}
   end
-  page_load(load) {link.click}
 end
 
 Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
-  link = nil
-  wait_short_until do
-    parent = @browser.find_element(:css, parent) if parent
-    parent ||= @browser
-    xpath = "//a[text()='#{text}']"
-    link = parent.find_element(:xpath, xpath)
-  end
+  context = @browser.find_element(:css, parent) if parent
+  context ||= @browser
+  xpath = ".//a[text()='#{text}']"
+  link = context.find_element(:xpath, xpath)
   expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
 end
 

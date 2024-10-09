@@ -246,8 +246,133 @@ Feature: Hamburger dropdown
     And I wait for 2 seconds
 
   @chrome
+  Scenario: Logged out user can click on the hamburger links
+    Given I am on "http://code.org/"
+    And I set the language cookie
+    And I set the cookie named "_loc_notice" to "1"
+
+    # For signed-out users, they only see the hamburger menu at a smaller size
+    And I change the browser window size to 1023 by 768
+    And I reload the page
+
+    # We click on each hamburger link and see where we go
+    Then I can navigate the following hamburger menu items:
+      | text                   | url                                          |
+      | Learn                  | http://code.org/students                     |
+      | Districts              | http://code.org/administrators               |
+      | Stats                  | http://code.org/promote                      |
+      | Help Us                | http://code.org/help                         |
+      | Incubator              | http://studio.code.org/incubator             |
+
+    # The Teach submenu
+    Then I can navigate the following hamburger menu items within the educate_entries submenu:
+      | text                   | url                                          |
+      | Educator Overview      | http://code.org/teach                        |
+      | Course Catalog         | http://studio.code.org/catalog               |
+      | Elementary School      | http://code.org/curriculum/elementary-school |
+      | Middle School          | http://code.org/curriculum/middle-school     |
+      | High School            | http://code.org/curriculum/high-school       |
+      | Beyond Code.org        | http://code.org/curriculum/3rd-party         |
+      | Technical Requirements | http://code.org/educate/it                   |
+      | Tools and Videos       | http://code.org/educate/resources/videos     |
+
+    # These URLs are not possible to visit in our UI tests because they either take too long
+    # to load or are external links, so we just look at the link targets
+    Then I could navigate the following hamburger menu items within the educate_entries submenu:
+      | text                   | url                                          |
+      | Online Community       | https://forum.code.org/                      |
+      | Hour of Code           | https://hourofcode.com/                      |
+
+    # The About submenu
+    Then I can navigate the following hamburger menu items within the about_entries submenu:
+      | text                   | url                                          |
+      | About Us               | http://code.org/about                        |
+      | Leadership             | http://code.org/about/leadership             |
+      | Donors                 | http://code.org/about/supporters             |
+      | Full Team              | http://code.org/about/team                   |
+      | Newsroom               | http://code.org/about/news                   |
+
+    # These URLs are not possible to visit in our UI tests because they either take too long
+    # to load or are external links, so we just look at the link targets
+    Then I could navigate the following hamburger menu items within the about_entries submenu:
+      | text                   | url                                          |
+      | FAQs                   | http://code.org/faq                          |
+      | Careers                | http://code.org/about/jobs                   |
+      | Contact Us             | http://code.org/contact                      |
+      | Partners               | http://code.org/about/partners               |
+
+    # The Privacy & Legal submenu
+    Then I can navigate the following hamburger menu items within the legal_entries submenu:
+      | text                   | url                                          |
+      | Privacy Policy         | http://code.org/privacy                      |
+      | Cookie Notice          | http://code.org/privacy/cookies              |
+      | Terms of Service       | http://code.org/tos                          |
+
+    Then I change the browser window size to 1280 by 1024
+    And I delete the cookie named "_loc_notice"
+
+  @chrome
   Scenario: Teacher can click on the hamburger links
     Given I create a teacher named "Sir Clicks-A-Lot Teacher" and go home
+    And I set the language cookie
+    And I set the cookie named "_loc_notice" to "1"
+
+    # We click on each hamburger link and see where we go
+    Then I can navigate the following hamburger menu items:
+      | text                   | url                                          |
+      | Learn                  | http://code.org/students                     |
+      | Districts              | http://code.org/administrators               |
+      | Stats                  | http://code.org/promote                      |
+      | Help Us                | http://code.org/help                         |
+
+    # The Teach submenu
+    Then I can navigate the following hamburger menu items within the educate_entries submenu:
+      | text                   | url                                          |
+      | Educator Overview      | http://code.org/teach                        |
+      | Elementary School      | http://code.org/curriculum/elementary-school |
+      | Middle School          | http://code.org/curriculum/middle-school     |
+      | High School            | http://code.org/curriculum/high-school       |
+      | Beyond Code.org        | http://code.org/curriculum/3rd-party         |
+      | Technical Requirements | http://code.org/educate/it                   |
+      | Tools and Videos       | http://code.org/educate/resources/videos     |
+
+    # These URLs are not possible to visit in our UI tests because they either take too long
+    # to load or are external links, so we just look at the link targets
+    Then I could navigate the following hamburger menu items within the educate_entries submenu:
+      | text                   | url                                          |
+      | Online Community       | https://forum.code.org/                      |
+      | Hour of Code           | https://hourofcode.com/                      |
+
+    # The About submenu
+    Then I can navigate the following hamburger menu items within the about_entries submenu:
+      | text                   | url                                          |
+      | About Us               | http://code.org/about                        |
+      | Leadership             | http://code.org/about/leadership             |
+      | Donors                 | http://code.org/about/supporters             |
+      | Full Team              | http://code.org/about/team                   |
+      | Newsroom               | http://code.org/about/news                   |
+
+    # These URLs are not possible to visit in our UI tests because they either take too long
+    # to load or are external links, so we just look at the link targets
+    Then I could navigate the following hamburger menu items within the about_entries submenu:
+      | text                   | url                                          |
+      | FAQs                   | http://code.org/faq                          |
+      | Careers                | http://code.org/about/jobs                   |
+      | Contact Us             | http://code.org/contact                      |
+      | Partners               | http://code.org/about/partners               |
+
+    # The Privacy & Legal submenu
+    Then I can navigate the following hamburger menu items within the legal_entries submenu:
+      | text                   | url                                          |
+      | Privacy Policy         | http://code.org/privacy                      |
+      | Cookie Notice          | http://code.org/privacy/cookies              |
+      | Terms of Service       | http://code.org/tos                          |
+
+    Then I delete the cookie named "_loc_notice"
+
+  @chrome
+  Scenario: Student can click on the hamburger links
+    Given I create a student named "Squire Clicks-A-Lot Student" and go home
     And I set the language cookie
     And I set the cookie named "_loc_notice" to "1"
 

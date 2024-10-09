@@ -61,13 +61,8 @@ Then /^I (can|could) navigate the following hamburger menu items(?: within the (
     end
 
     if visit == "can"
-      wait_until_interactable(5) do
-        steps <<-STEPS
-          And I click on the link reading "#{item['text']}" within element "#hamburger-contents" to load a new page
-        STEPS
-      end
-
       steps <<-STEPS
+        And I click on the link reading "#{item['text']}" within element "#hamburger-contents" to load a new page
         Then check that I am on "#{item['url']}"
       STEPS
     else
