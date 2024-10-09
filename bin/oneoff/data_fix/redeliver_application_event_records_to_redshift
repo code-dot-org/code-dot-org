@@ -42,6 +42,7 @@ puts "Called with options: #{options}"
 puts "Script logs are streaming to CloudWatch."
 
 class SkipRedeliveryError < StandardError; end
+class BatchAlreadyRedeliveredError < StandardError; end
 
 # TODO: Limit the range of batches to reprocess. Until then, pick a single prefix and reprocess all matching error manifests.
 ERROR_MANIFESTS_PREFIX = 'errors/manifests/2024/07/14'.freeze
@@ -217,8 +218,7 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
           # Check if there's a manifest for successful redelivery of this batch because Redshift does not enforce
           # unique constraints and we must avoid duplicate redelivery.
           s3_client.head_object(bucket: FIREHOSE_INTERMEDIATE_BUCKET, key: REDELIVERY_MANIFESTS_PREFIX + undelivered_batch_uri.path)
-          CDO.log.info "[REDELIVER FIREHOSE EVENTS] The batch #{undelivered_batch_uri.path} has already been redelivered."
-          batches_failed += 1
+          raise BatchAlreadyRedeliveredError.new("The batch #{undelivered_batch_uri.path} has already been redelivered.")
         rescue Aws::S3::Errors::NotFound
           # Redelivery manifest does not exist, load the batch identified in the manifest into Redshift and then upload the manifest.
           s3_client.put_object(bucket: FIREHOSE_INTERMEDIATE_BUCKET, key: batch_status.redelivery_batch_object_key, body: modified_batch)
@@ -244,7 +244,7 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
       rescue RedshiftClient::PostgreSQLQueryError, Aws::Errors::ServiceError, SkipRedeliveryError, StandardError => exception
         # TODO: For query errors, get the error from the Redshift `stl_load_errors` table and log here.
         batches_failed += 1
-        CDO.log.info "[REDELIVER FIREHOSE EVENTS] Error redelivering batch: #{undelivered_batch_uri.path} / #{exception.message}"
+        CDO.log.error "[REDELIVER FIREHOSE EVENTS] Error redelivering batch: #{undelivered_batch_uri.path} / #{exception.message}"
         s3_client.put_object(
           bucket: FIREHOSE_INTERMEDIATE_BUCKET,
           key: REDELIVERY_ERROR_MANIFESTS_PREFIX + undelivered_batch_uri.path,
