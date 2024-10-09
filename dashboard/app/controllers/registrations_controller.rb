@@ -164,7 +164,7 @@ class RegistrationsController < Devise::RegistrationsController
         )
       end
 
-      if params[:new_sign_up].present? && params[:new_sign_up] == 'true'
+      if ActiveModel::Type::Boolean.new.cast(params[:new_sign_up]).present?
         session[:user_return_to] ||= params[:user_return_to]
         @user = Services::PartialRegistration::UserBuilder.call(request: request)
         sign_in @user
