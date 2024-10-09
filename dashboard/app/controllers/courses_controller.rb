@@ -35,6 +35,8 @@ class CoursesController < ApplicationController
       return
     end
 
+    puts 'lfm1', @unit_group.name
+
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
     if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {useLoaderData} from 'react-router-dom';
+import {generatePath, useNavigate, useParams} from 'react-router-dom';
 
 import {
   addAnnouncement,
@@ -14,7 +14,6 @@ import {
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {getStore} from '@cdo/apps/redux';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -27,6 +26,7 @@ import {
   setUserSignedIn,
 } from '../currentUserRedux';
 import {pageTypes, setPageType} from '../teacherDashboard/teacherSectionsRedux';
+import {TEACHER_NAVIGATION_PATHS} from '../teacherNavigation/TeacherNavigationPaths';
 
 import CourseOverview from './CourseOverview';
 
@@ -83,10 +83,12 @@ interface Announcement {
   buttonText: string | null;
 }
 
-interface CourseOverviewData {
-  courseSummary: CourseSummary;
-  isVerifiedInstructor: boolean;
-  hiddenScripts: string[];
+interface Section {
+  id: number;
+  name: string;
+  courseId: number | null;
+  unitName: string | null;
+  courseVersionName: string | null;
 }
 
 const courseSummaryCachedLoader = _.memoize(async courseVersionName =>
@@ -103,35 +105,76 @@ const courseSummaryCachedLoader = _.memoize(async courseVersionName =>
     .then(response => response.json())
 );
 
-export const teacherCourseOverviewLoader =
-  async (): Promise<CourseOverviewData | null> => {
-    const state = getStore().getState().teacherSections;
-
-    const selectedSection = state.sections[state.selectedSectionId];
-
-    if (!selectedSection || !selectedSection?.courseVersionName) {
-      return null;
-    }
-
-    return courseSummaryCachedLoader(selectedSection.courseVersionName).then(
-      response => ({
-        courseSummary: response.unit_group,
-        isVerifiedInstructor: response.is_verified_instructor,
-        hiddenScripts: response.hidden_scripts,
-      })
-    );
-  };
-
 const TeacherCourseOverview: React.FC = () => {
-  const loadedData = useLoaderData() as CourseOverviewData | null;
+  const [courseSummary, setCourseSummary] =
+    React.useState<CourseSummary | null>(null);
+  const [isVerifiedInstructor, setIsVerifiedInstructor] =
+    React.useState<boolean>(false);
+  const [hiddenScripts, setHiddenScripts] = React.useState<string[] | null>(
+    null
+  );
+
+  const navigate = useNavigate();
+
+  const params = useParams();
 
   const sections = useSelector(
     (state: {
       teacherSections: {
-        sections: {id: number; name: string}[];
+        sections: Section[];
       };
-    }) => Object.values(state.teacherSections.sections)
+    }) => state.teacherSections.sections
   );
+
+  const selectedSection = useSelector(
+    (state: {
+      teacherSections: {
+        sections: Section[];
+        selectedSectionId: number;
+      };
+    }) =>
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+  );
+
+  React.useEffect(() => {
+    if (!selectedSection || !selectedSection?.courseVersionName) {
+      return;
+    }
+    if (!selectedSection.courseId && selectedSection.unitName) {
+      navigate(
+        generatePath('../' + TEACHER_NAVIGATION_PATHS.unitOverview, {
+          unitName: selectedSection.unitName,
+        }),
+        {replace: true}
+      );
+      return;
+    }
+
+    if (selectedSection.courseVersionName !== params.courseVersionName) {
+      navigate(
+        generatePath('../' + TEACHER_NAVIGATION_PATHS.courseOverview, {
+          courseVersionName: selectedSection.courseVersionName,
+        }),
+        {replace: true}
+      );
+      return;
+    }
+
+    courseSummaryCachedLoader(selectedSection.courseVersionName).then(
+      response => {
+        setCourseSummary(response.unit_group);
+        setIsVerifiedInstructor(response.is_verified_instructor);
+        setHiddenScripts(response.hidden_scripts);
+      }
+    );
+  }, [
+    navigate,
+    selectedSection,
+    params.courseVersionName,
+    setCourseSummary,
+    setIsVerifiedInstructor,
+    setHiddenScripts,
+  ]);
 
   const userId = useSelector(
     (state: {currentUser: {userId: number}}) => state.currentUser.userId
@@ -140,11 +183,10 @@ const TeacherCourseOverview: React.FC = () => {
   const dispatch = useAppDispatch();
 
   React.useEffect(() => {
-    if (!loadedData) {
+    if (!courseSummary) {
       return;
     }
 
-    const courseSummary = loadedData.courseSummary;
     if (courseSummary.has_verified_resources) {
       dispatch(setVerifiedResources());
     }
@@ -156,12 +198,12 @@ const TeacherCourseOverview: React.FC = () => {
     dispatch(setViewType(ViewType.Instructor));
     dispatch(setUserRoleInCourse(CourseRoles.Instructor));
 
-    if (loadedData.isVerifiedInstructor) {
+    if (isVerifiedInstructor) {
       dispatch(setVerified());
     }
 
-    if (loadedData.hiddenScripts) {
-      dispatch(initializeHiddenScripts(loadedData.hiddenScripts));
+    if (hiddenScripts) {
+      dispatch(initializeHiddenScripts(hiddenScripts));
     }
 
     const announcements = courseSummary.announcements as Announcement[];
@@ -170,13 +212,11 @@ const TeacherCourseOverview: React.FC = () => {
         dispatch(addAnnouncement(announcement))
       );
     }
-  }, [loadedData, dispatch]);
+  }, [courseSummary, isVerifiedInstructor, hiddenScripts, dispatch]);
 
-  if (!loadedData) {
+  if (!courseSummary) {
     return <Spinner />;
   }
-
-  const {courseSummary} = loadedData;
 
   return (
     <CourseOverview

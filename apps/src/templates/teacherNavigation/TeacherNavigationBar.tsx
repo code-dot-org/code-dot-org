@@ -112,6 +112,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const navigateToDifferentPage = (
     page: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS
   ) => {
+    console.log('lfm', {section: sections[selectedSectionId]});
     if (LABELED_TEACHER_NAVIGATION_PATHS[page]) {
       navigate(
         generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {

@@ -69,6 +69,7 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
     } else if (showNoCurriculumAssigned) {
       return <LinkButton href="/catalog" text={i18n.browseCurriculum()} />;
     } else {
+      // TODO: change to href
       return (
         <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />
       );
