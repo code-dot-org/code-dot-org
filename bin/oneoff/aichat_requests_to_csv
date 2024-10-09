@@ -14,24 +14,27 @@ rescue JSON::ParserError
 end
 
 def get_blocked_by_details(blocked_by, details)
+  if details.class != Hash
+    return details
+  end
   case blocked_by
   when "openai"
     return {
       evaluation: details[:evaluation]
-    }
+    }.to_json
   when "comprehend"
     return {
       flagged_text: details[:flagged_segment],
       toxicity: details[:toxicity],
       max_category: details[:max_category][:name],
       score: details[:max_category][:score]
-    }
+    }.to_json
   when "blocklist"
-    return {flagged_text: details[:blocked_word]}
+    return {flagged_text: details[:blocked_word]}.to_json
   when "webpurify"
-    return {flagged_text: details[:content]}
+    return {flagged_text: details[:content]}.to_json
   else
-    return {}
+    return {}.to_json
   end
 end
 
@@ -45,7 +48,7 @@ def main
 
   CSV.open("aichat_requests.csv", "w") do |csv|
     headers = %w[
-      aichat_request_id user_id username name path created_at updated_at role chat_message status blocked_by block_by_details
+      aichat_request_id user_id username name path created_at updated_at model_id role chat_message status blocked_by block_by_details
     ]
     csv << headers
 
@@ -58,10 +61,10 @@ def main
 
     rows.each do |row|
       user = row.user
-      user_message = JSON.parse(row.new_message)
       response = row.response
-      user_message_text = user_message["chatMessageText"]
+      user_message_text = JSON.parse(row.new_message)["chatMessageText"]
       execution_status = row.execution_status
+      selected_model_id = JSON.parse(row.model_customizations)["selectedModelId"]
 
       level = Level.find(row.level_id)
       path = ""
@@ -104,8 +107,9 @@ def main
         # Only handle json responses.
         if valid_json?(response)
           model_safety_layer_response = JSON.parse(response).deep_symbolize_keys
+          model_message_text = model_safety_layer_response[:text]
           model_blocked_by = model_safety_layer_response[:blocked_by]
-          details = model_safety_layer_response[:details]
+          details = model_safety_layer_response[:details][:evaluation]
           model_blocked_by_details = get_blocked_by_details(model_blocked_by, details)
         end
       elsif execution_status == SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS]
@@ -122,20 +126,21 @@ def main
         path,
         row.created_at,
         row.updated_at,
+        selected_model_id,
       ]
 
       status =
         case execution_status
         when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS] || SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY]
-          "okay"
+          "SUCCESS"
         when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE]
-          "unexpected error"
+          "UNEXPECTED_ERROR #{response}"
         when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY]
-          "user profanity detected"
+          "USER_PROFANITY_DETECTED"
         when SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE]
-          "user input too large"
+          "USER_INPUT_TOO_LARGE"
         else
-          "unknown"
+          "UNKNOWN"
         end
 
       # Add user message to csv.
