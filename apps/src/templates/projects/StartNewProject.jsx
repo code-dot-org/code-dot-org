@@ -4,7 +4,8 @@ import React from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
-import Button from '../../legacySharedComponents/Button';
+// import Button from '../../legacySharedComponents/Button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import color from '../../util/color';
 
 import NewProjectButtons from './NewProjectButtons';
@@ -86,11 +87,20 @@ export default class StartNewProject extends React.Component {
           <Button
             id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
-            color={Button.ButtonColor.neutralDark}
+            color={buttonColors.white}
+            type="primary"
             icon={showFullList ? 'caret-up' : 'caret-down'}
             text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
             style={styles.button}
           />
+          // <Button
+          //   id="uitest-view-full-list"
+          //   onClick={this.toggleShowFullList}
+          //   color={Button.ButtonColor.neutralDark}
+          //   icon={showFullList ? 'caret-up' : 'caret-down'}
+          //   text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
+          //   style={styles.button}
+          // />
         )}
 
         <div style={{clear: 'both'}} />
