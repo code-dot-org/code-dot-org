@@ -92,9 +92,6 @@ class CourseScript extends Component {
       showAssignButton,
     } = this.props;
 
-    //DEBUG
-    console.log(location.pathname.includes('teacher_dashboard'));
-
     const isHidden = isScriptHiddenForSection(
       hiddenLessonState,
       selectedSectionId,
