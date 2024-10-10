@@ -3,7 +3,13 @@
 .textContainer {
   background-color: $light_gray_50;
   border-radius: 4px;
-  padding: 2px 0;
+}
+
+.modelText {
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .modelDescriptionPanelContainer {

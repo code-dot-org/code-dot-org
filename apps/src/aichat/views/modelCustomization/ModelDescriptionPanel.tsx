@@ -44,12 +44,16 @@ const ModelDescriptionPanel: React.FunctionComponent<{
       <div className={styles.modelDescriptionContainer}>
         <StrongText>Overview</StrongText>
         <div className={styles.textContainer}>
-          <BodyThreeText>{selectedModel.overview}</BodyThreeText>
+          <BodyThreeText className={styles.modelText}>
+            {selectedModel.overview}
+          </BodyThreeText>
         </div>
         <br />
         <StrongText>Training Data</StrongText>
         <div className={styles.textContainer}>
-          <BodyThreeText>{selectedModel.trainingData}</BodyThreeText>
+          <BodyThreeText className={styles.modelText}>
+            {selectedModel.trainingData}
+          </BodyThreeText>
         </div>
       </div>
     </div>
