@@ -156,10 +156,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
       if (validationErrors) {
         error = {
           serverErrors: {
-            newEmail: validationErrors.email && validationErrors.email[0],
-            currentPassword:
-              validationErrors.current_password &&
-              validationErrors.current_password[0],
+            newEmail: validationErrors.email?.[0],
+            currentPassword: validationErrors.current_password?.[0],
           },
         };
       } else {
