@@ -19,7 +19,6 @@ import {
   isLabLoading,
   hasPageError,
   setIsShareView,
-  setTextToSpeechHasVoices,
 } from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
 import {getAppOptionsLevelId, getIsShareView} from '../projects/utils';
@@ -62,12 +61,6 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
       dispatch(setIsShareView(isShareView));
     }
   }, [isShareView, dispatch]);
-
-  useEffect(() => {
-    window.speechSynthesis.onvoiceschanged = () => {
-      dispatch(setTextToSpeechHasVoices(true));
-    };
-  }, [dispatch]);
 
   return (
     <ErrorBoundary

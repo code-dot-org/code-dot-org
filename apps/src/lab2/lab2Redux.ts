@@ -77,7 +77,6 @@ export interface LabState {
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
   overrideValidations: Validation[] | undefined;
-  textToSpeechHasVoices: boolean;
 }
 
 const initialState: LabState = {
@@ -90,7 +89,6 @@ const initialState: LabState = {
   levelProperties: undefined,
   isShareView: undefined,
   overrideValidations: undefined,
-  textToSpeechHasVoices: false,
 };
 
 // Thunks
@@ -379,9 +377,6 @@ const labSlice = createSlice({
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
     },
-    setTextToSpeechHasVoices(state, action: PayloadAction<boolean>) {
-      state.textToSpeechHasVoices = action.payload;
-    },
     setOverrideValidations(
       state,
       action: PayloadAction<Validation[] | undefined>
@@ -593,7 +588,6 @@ export const {
   setValidationState,
   setIsShareView,
   setOverrideValidations,
-  setTextToSpeechHasVoices,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.
