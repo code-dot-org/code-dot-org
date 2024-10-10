@@ -61,6 +61,7 @@ describe('RubricSettings', () => {
   let fetchStub;
   let store;
   let refreshAiEvaluationsSpy;
+  let sendEventSpy;
 
   async function wait() {
     for (let _ = 0; _ < 10; _++) {
@@ -90,6 +91,7 @@ describe('RubricSettings', () => {
   beforeEach(() => {
     fetchStub = sinon.stub(window, 'fetch');
     fetchStub.returns(Promise.resolve(new Response(JSON.stringify(''))));
+    sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     refreshAiEvaluationsSpy = sinon.spy();
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
@@ -103,6 +105,7 @@ describe('RubricSettings', () => {
     jest.useRealTimers();
     restoreRedux();
     utils.queryParams.restore();
+    sendEventSpy.restore();
     fetchStub.restore();
   });
 
@@ -303,8 +306,6 @@ describe('RubricSettings', () => {
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
     stubFetch(ready, evals);
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
-
     jest.useFakeTimers();
 
     render(
@@ -357,7 +358,6 @@ describe('RubricSettings', () => {
       screen.getByRole('button', {name: i18n.runAiAssessmentClass()})
     ).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_success());
-    sendEventSpy.restore();
   });
 
   it('displays switch tab text and button when there are no evaluations', async () => {
@@ -403,7 +403,6 @@ describe('RubricSettings', () => {
   });
 
   it('sends event when download CSV is clicked', async () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetch(ready, evals);
     render(
       <Provider store={store}>
@@ -433,7 +432,6 @@ describe('RubricSettings', () => {
         sectionId: 1,
       }
     );
-    sendEventSpy.restore();
   });
 
   it('displays the AI enable toggle', () => {
