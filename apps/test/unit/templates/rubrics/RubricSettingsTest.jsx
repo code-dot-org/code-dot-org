@@ -81,7 +81,7 @@ describe('RubricSettings', () => {
 
   beforeEach(() => {
     fetchStub = jest.spyOn(window, 'fetch');
-    stubFetch();
+    stubFetch(ready, evals);
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
     refreshAiEvaluationsSpy = jest.fn();
     jest.spyOn(utils, 'queryParams').mockImplementation(arg => {
@@ -177,8 +177,6 @@ describe('RubricSettings', () => {
   };
 
   it('displays Section selector', () => {
-    stubFetch(ready, evals);
-
     render(
       <Provider store={store}>
         <RubricSettings
@@ -195,8 +193,6 @@ describe('RubricSettings', () => {
   });
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
-    stubFetch(ready, evals);
-
     render(
       <Provider store={store}>
         <RubricSettings
@@ -260,9 +256,6 @@ describe('RubricSettings', () => {
 
   it('shows pending status when eval is pending', async () => {
     // show ready state on initial load
-
-    stubFetch(ready, evals);
-
     render(
       <Provider store={store}>
         <RubricSettings
@@ -298,7 +291,6 @@ describe('RubricSettings', () => {
   });
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
-    stubFetch(ready, evals);
     jest.useFakeTimers();
 
     render(
@@ -376,7 +368,6 @@ describe('RubricSettings', () => {
   });
 
   it('displays generate CSV button when there are evaluations to export', async () => {
-    stubFetch(ready, evals);
     render(
       <Provider store={store}>
         <RubricSettings
@@ -397,7 +388,6 @@ describe('RubricSettings', () => {
   });
 
   it('sends event when download CSV is clicked', async () => {
-    stubFetch(ready, evals);
     render(
       <Provider store={store}>
         <RubricSettings
@@ -426,8 +416,6 @@ describe('RubricSettings', () => {
   });
 
   it('displays the AI enable toggle', () => {
-    stubFetch(ready, evals);
-
     render(
       <Provider store={store}>
         <RubricSettings
@@ -444,8 +432,6 @@ describe('RubricSettings', () => {
   });
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
-    stubFetch(ready, evals);
-
     // Set the user's opt-out setting to true (our setting will now be false)
     store.dispatch(setAiRubricsDisabled(true));
 
@@ -465,8 +451,6 @@ describe('RubricSettings', () => {
   });
 
   it('updates the AI disabled user setting when the toggle is used', async () => {
-    stubFetch(ready, evals);
-
     render(
       <Provider store={store}>
         <RubricSettings
