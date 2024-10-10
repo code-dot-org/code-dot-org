@@ -82,6 +82,11 @@ describe('RubricSettings', () => {
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
+  function stubFetch(evalStatus = {}, teacherEvals = {}) {
+    stubFetchEvalStatusForAll(evalStatus);
+    stubFetchTeacherEvaluations(teacherEvals);
+  }
+
   beforeEach(() => {
     fetchStub = sinon.stub(window, 'fetch');
     fetchStub.returns(Promise.resolve(new Response(JSON.stringify(''))));
@@ -176,8 +181,7 @@ describe('RubricSettings', () => {
   };
 
   it('displays Section selector', () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
+    stubFetch(ready, evals);
 
     render(
       <Provider store={store}>
@@ -195,8 +199,7 @@ describe('RubricSettings', () => {
   });
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
+    stubFetch(ready, evals);
 
     render(
       <Provider store={store}>
@@ -218,8 +221,7 @@ describe('RubricSettings', () => {
   });
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
-    stubFetchEvalStatusForAll(noAttempts);
-    stubFetchTeacherEvaluations(evals);
+    stubFetch(noAttempts, evals);
 
     render(
       <Provider store={store}>
@@ -238,8 +240,7 @@ describe('RubricSettings', () => {
   });
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
-    stubFetchEvalStatusForAll(noUnevaluated);
-    stubFetchTeacherEvaluations(evals);
+    stubFetch(noUnevaluated, evals);
 
     render(
       <Provider store={store}>
@@ -264,8 +265,7 @@ describe('RubricSettings', () => {
   it('shows pending status when eval is pending', async () => {
     // show ready state on initial load
 
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
+    stubFetch(ready, evals);
 
     render(
       <Provider store={store}>
@@ -289,7 +289,7 @@ describe('RubricSettings', () => {
 
     // show pending state after clicking run
 
-    stubFetchEvalStatusForAll(onePending);
+    stubFetch(onePending);
 
     fireEvent.click(button);
 
@@ -302,8 +302,7 @@ describe('RubricSettings', () => {
   });
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
+    stubFetch(ready, evals);
     const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     jest.useFakeTimers();
@@ -323,7 +322,7 @@ describe('RubricSettings', () => {
     await wait();
 
     // Next time it asks, we have no unevaluated as a status
-    stubFetchEvalStatusForAll(noUnevaluated);
+    stubFetch(noUnevaluated);
 
     const button = screen.getByRole('button', {
       name: i18n.runAiAssessmentClass(),
@@ -362,12 +361,7 @@ describe('RubricSettings', () => {
   });
 
   it('displays switch tab text and button when there are no evaluations', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
+    stubFetch(ready, noEvals);
     render(
       <Provider store={store}>
         <RubricSettings
@@ -388,12 +382,7 @@ describe('RubricSettings', () => {
   });
 
   it('displays generate CSV button when there are evaluations to export', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    stubFetch(ready, evals);
     render(
       <Provider store={store}>
         <RubricSettings
@@ -415,12 +404,7 @@ describe('RubricSettings', () => {
 
   it('sends event when download CSV is clicked', async () => {
     const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    stubFetch(ready, evals);
     render(
       <Provider store={store}>
         <RubricSettings
@@ -453,8 +437,7 @@ describe('RubricSettings', () => {
   });
 
   it('displays the AI enable toggle', () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
+    stubFetch(ready, evals);
 
     render(
       <Provider store={store}>
@@ -472,8 +455,7 @@ describe('RubricSettings', () => {
   });
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
+    stubFetch(ready, evals);
 
     // Set the user's opt-out setting to true (our setting will now be false)
     store.dispatch(setAiRubricsDisabled(true));
@@ -494,8 +476,7 @@ describe('RubricSettings', () => {
   });
 
   it('updates the AI disabled user setting when the toggle is used', async () => {
-    stubFetchEvalStatusForAll(ready);
-    stubFetchTeacherEvaluations(evals);
+    stubFetch(ready, evals);
 
     render(
       <Provider store={store}>
