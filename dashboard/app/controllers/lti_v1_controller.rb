@@ -158,9 +158,10 @@ class LtiV1Controller < ApplicationController
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
 
       # If deployment name is nil, update it with the name from the JWT. This
-      # could likeyl be removed after a period of time, as we also write the name
-      # for all new deployments in the next block. This block is necessary to backfill
-      # existing deployments that were created before we started writing the name.
+      # could likely be removed after a period of time, as we also write the name
+      # for all new deployments in the next block. This block is necessary to
+      # backfill existing deployments that were created before we started
+      # writing the name.
       if deployment && deployment.name.nil?
         deployment.update(name: deployment_name)
       end
