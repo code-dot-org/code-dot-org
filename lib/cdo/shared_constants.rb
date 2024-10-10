@@ -698,7 +698,7 @@ module SharedConstants
     },
   }.freeze
   CENSUS_CONSTANTS = OpenStruct.new(
-    {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
+    {CURRENT_CENSUS_SCHOOL_YEAR: 2024}
   )
 
   CAP_LINKS = OpenStruct.new(
@@ -748,6 +748,12 @@ module SharedConstants
   USER_TYPES = OpenStruct.new(
     STUDENT: 'student',
     TEACHER: 'teacher',
+  ).freeze
+
+  NON_SCHOOL_OPTIONS = OpenStruct.new(
+    SELECT_A_SCHOOL: 'selectASchool',
+    CLICK_TO_ADD: 'clickToAdd',
+    NO_SCHOOL_SETTING: 'noSchoolSetting'
   ).freeze
 
   AI_REQUEST_EXECUTION_STATUS = {

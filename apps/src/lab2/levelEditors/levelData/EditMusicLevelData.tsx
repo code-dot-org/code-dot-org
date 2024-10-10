@@ -184,25 +184,48 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
         <EditMusicToolbox
           toolbox={levelData.toolbox}
           blockMode={levelData.blockMode || BlockMode.SIMPLE2}
+          addFunctionDefinition={levelData.toolbox?.addFunctionDefinition}
           addFunctionCalls={levelData.toolbox?.addFunctionCalls}
           onChange={toolbox => setLevelData({...levelData, toolbox})}
-          onBlockModeChange={blockMode =>
+          onBlockModeChange={blockMode => {
+            const startSourcesFilename = `startSources${blockMode}`;
+            const startSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
+
             // Reset toolbox blocks when changing block mode
             setLevelData({
               ...levelData,
               blockMode,
+              startSources,
               toolbox: {
                 ...levelData.toolbox,
                 blocks: undefined,
+                addFunctionDefinition: undefined,
                 addFunctionCalls: undefined,
               },
-            })
-          }
+            });
+          }}
+          onAddFunctionDefinitionChange={(addFunctionDefinition: boolean) => {
+            setLevelData({
+              ...levelData,
+              toolbox: {
+                ...levelData.toolbox,
+                addFunctionDefinition,
+                // Call blocks are required if definitions are included.
+                addFunctionCalls: addFunctionDefinition
+                  ? true
+                  : levelData.toolbox?.addFunctionCalls,
+              },
+            });
+          }}
           onAddFunctionCallsChange={(addFunctionCalls: boolean) => {
             setLevelData({
               ...levelData,
               toolbox: {
                 ...levelData.toolbox,
+                // Definitions are prohibited unless call blocks are included.
+                addFunctionDefinition: !addFunctionCalls
+                  ? false
+                  : levelData.toolbox?.addFunctionDefinition,
                 addFunctionCalls,
               },
             });

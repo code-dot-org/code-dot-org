@@ -35,16 +35,19 @@ describe('TeacherNavigationBar', () => {
       id: 11,
       name: 'Period 1',
       hidden: false,
+      courseVersionName: 'csd-2024',
     },
     {
       id: 12,
       name: 'Period 2',
       hidden: false,
+      courseVersionName: 'csd-2023',
     },
     {
       id: 13,
       name: 'Period 3',
       hidden: true,
+      courseVersionName: 'csd-2022',
     },
   ];
   const serverSections = sections.map(serverSectionFromSection);

@@ -1,4 +1,5 @@
 /** @file Top-level view for Music */
+import {ProcedureBase} from '@blockly/block-shareable-procedures';
 import {isEqual} from 'lodash';
 import markdownToTxt from 'markdown-to-txt';
 import PropTypes from 'prop-types';
@@ -133,7 +134,8 @@ class UnconnectedMusicView extends React.Component {
       this.getIsPlaying,
       this.getPlaybackEvents,
       this.getValidationTimeout,
-      this.player
+      this.player,
+      this.getPlayingTriggers
     );
 
     // Set default for instructions position.
@@ -389,6 +391,10 @@ class UnconnectedMusicView extends React.Component {
     return this.props.playbackEvents;
   };
 
+  getPlayingTriggers = () => {
+    return this.playingTriggers;
+  };
+
   getCurrentPlayheadPosition = () => {
     return this.player.getCurrentPlayheadPosition();
   };
@@ -406,7 +412,16 @@ class UnconnectedMusicView extends React.Component {
       this.library.setCurrentPackId(null);
     }
 
-    this.loadCode(this.getStartSources());
+    // Check if we are in start mode, and if so, load sources from the default JSON.
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    if (isStartMode) {
+      const startSourcesFilename = 'startSources' + this.props.blockMode;
+      const defaultSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
+      this.loadCode(defaultSources);
+    } else {
+      // Otherwise, use getStartSources which handles levelData and fallback logic.
+      this.loadCode(this.getStartSources());
+    }
     this.setPlaying(false);
   };
 
@@ -442,6 +457,22 @@ class UnconnectedMusicView extends React.Component {
         this.props.setSelectedTriggerId(
           this.musicBlocklyWorkspace.getSelectedTriggerId(e.blockId)
         );
+      }
+    }
+
+    // Procedure events should regenerate function blocks in the (uncategorized) toolbox.
+    // This keeps call blocks in sync when functions are created/deleted/renamed.
+    if (
+      e instanceof ProcedureBase ||
+      e.type === Blockly.Events.FINISHED_LOADING
+    ) {
+      const workspace = this.musicBlocklyWorkspace;
+      if (
+        workspace.toolbox?.addFunctionCalls &&
+        workspace.toolbox?.type === 'flyout' &&
+        workspace.blockMode === BlockMode.SIMPLE2
+      ) {
+        workspace.generateFunctionBlocks();
       }
     }
 

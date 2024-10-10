@@ -31,6 +31,10 @@ class FieldPattern extends GoogleBlockly.Field {
   }
 
   loadState(state) {
+    if (state.kit) {
+      state.instrument = state.kit;
+      delete state.kit;
+    }
     this.setValue(state);
   }
 
