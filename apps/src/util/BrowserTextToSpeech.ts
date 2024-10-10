@@ -1,6 +1,6 @@
 import markdownToTxt from 'markdown-to-txt';
 
-import {getCurrentLocale} from '../lab2/projects/utils';
+import currentLocale from './currentLocale';
 
 /**
  * Manages native Browser Text to Speech functionality.
@@ -32,10 +32,9 @@ function speak(text: string) {
     console.log('TextToSpeech: not ready or no voices available to play.');
     return;
   }
-  const currentLocale = getCurrentLocale();
   const plainText = markdownToTxt(text);
   const utterance = new SpeechSynthesisUtterance(plainText);
-  utterance.lang = currentLocale;
+  utterance.lang = currentLocale();
   speechSynthesis.cancel();
   speechSynthesis.speak(utterance);
 }
