@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2024-10-08T19:08:32.000Z",
+  "created_at": "2024-10-09T22:17:26.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -73,14 +73,14 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/maker/setup"
     ],
-    "start_blocks": "var pitch = 0;\nonBoardEvent(accelerometer, \"change\", function() {\n  pitch = accelerometer.getOrientation(\"pitch\");\n  if (pitch < -2) {\n    ledScreen.clear();\n  } else if ((pitch >= -2 && pitch < 2)) {\n    ledScreen.display([\n    ([0, 0, 0, 0, 0]),\n    ([0, 0, 0, 0, 0]),\n    ([0, 0, 0, 0, 0]),\n    ([1, 1, 1, 1, 1]),\n    ([1, 1, 1, 1, 1])\n    ]);\n  } else {\n    ledScreen.display([\n    ([1, 1, 1, 1, 1]),\n    ([1, 1, 1, 1, 1]),\n    ([1, 1, 1, 1, 1]),\n    ([1, 1, 1, 1, 1]),\n    ([1, 1, 1, 1, 1])\n    ]);\n  }\n});\n",
+    "start_blocks": "var shake = 0;\n\nonBoardEvent(accelerometer, \"change\", function() {\n  shake = accelerometer.getAcceleration(\"x\");\n  if (shake > 10) {\n    playSpeech(\"Earthquake detected. Seek shelter immediately.\", \"female\", \"English\");\n  }\n});\n\n\n\n\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
-    "watchers_prepopulated": "[\"pitch\"]",
+    "watchers_prepopulated": "[\"shake\"]\r\n",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-10-08T19:08:32.197+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Additional Input Warm Up\\\"\"],\"cloned_from\":\"Computer Systems Playground - Additional Input Warm Up\"},{\"changed_at\":\"2024-10-08 19:08:36 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 19:16:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 19:54:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 19:55:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 20:00:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 20:03:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 20:04:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 17:59:43 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-10-09 18:00:00 +0000\",\"changed\":[\"expand_debugger\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-10-09 18:13:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-09T22:17:26.138+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Additional Input Warm Up\\\"\"],\"cloned_from\":\"Computer Systems Playground - Additional Input Warm Up\"},{\"changed_at\":\"2024-10-09 22:17:35 +0000\",\"changed\":[\"start_blocks\",\"watchers_prepopulated\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 22:17:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 22:22:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

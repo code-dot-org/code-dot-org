@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "computer-systems-playground",
-    "serialized_at": "2024-10-08 19:12:02 UTC",
+    "serialized_at": "2024-10-09 22:18:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -474,8 +474,19 @@
       }
     },
     {
-      "key": "11a6e6e9-1af2-494b-b531-3bb0701de3f0",
+      "key": "981d7116-2941-4e1e-b4e9-35f523145575",
       "position": 2,
+      "properties": {
+        "progression_name": "Predict and Run"
+      },
+      "seeding_key": {
+        "activity_section.key": "981d7116-2941-4e1e-b4e9-35f523145575",
+        "lesson_activity.key": "2e4ab2c0-f5cf-490c-b533-c316e38c54ca"
+      }
+    },
+    {
+      "key": "11a6e6e9-1af2-494b-b531-3bb0701de3f0",
+      "position": 3,
       "properties": {
         "progression_name": "Investigate and Modify"
       },
@@ -486,7 +497,7 @@
     },
     {
       "key": "e5f9e7a1-bfb0-4f10-af58-192f8274a07f",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Check for Understanding"
       },
@@ -497,7 +508,7 @@
     },
     {
       "key": "417d7a7e-d317-4a46-96ad-fcc81dfccb20",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Project Level"
       },
@@ -989,6 +1000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input Warm Up"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -1011,6 +1025,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict and Run"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input Predict"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "981d7116-2941-4e1e-b4e9-35f523145575"
+      },
+      "level_keys": [
+        "Computer Systems Playground - Additional Input Predict"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input 1"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -1028,11 +1067,14 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 3,
+      "chapter": 23,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input 2"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -1050,11 +1092,14 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 4,
+      "chapter": 24,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input 3"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -1072,11 +1117,14 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 5,
+      "chapter": 25,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input CFU"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1094,11 +1142,14 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 6,
+      "chapter": 26,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Systems Playground - Additional Input Project Level"
+        ],
         "progression": "Project Level"
       },
       "bonus": false,
@@ -1355,6 +1406,18 @@
         "lesson_group.key": "",
         "script.name": "computer-systems-playground",
         "activity_section.key": "f013bc11-8a59-49f9-88ab-5f896bbc747d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Systems Playground - Additional Input Predict",
+        "script_level.level_keys": [
+          "Computer Systems Playground - Additional Input Predict"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "computer-systems-playground",
+        "activity_section.key": "981d7116-2941-4e1e-b4e9-35f523145575"
       }
     },
     {
