@@ -9,7 +9,6 @@ import {
 import {
   InstrumentEvent,
   InstrumentEventValue,
-  isInstrumentEvent,
 } from '@cdo/apps/music/player/interfaces/InstrumentEvent';
 import {SoundEvent} from '@cdo/apps/music/player/interfaces/SoundEvent';
 import MusicLibrary, {SoundData} from '@cdo/apps/music/player/MusicLibrary';
@@ -93,8 +92,7 @@ describe('Simple2Sequencer', () => {
     expect(playbackEvents.length).to.equal(1);
 
     const event = playbackEvents[0];
-    expect(isInstrumentEvent(event)).to.be.true;
-    expect(event.type).to.equal('pattern');
+    expect(event.type).to.equal('instrument');
     expect(event.id).to.equal(JSON.stringify(patternValue));
     expect(event.blockId).to.equal('blockId');
     expect(event.when).to.equal(1);
