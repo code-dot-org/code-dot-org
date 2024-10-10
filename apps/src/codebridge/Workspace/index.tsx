@@ -36,7 +36,9 @@ const Workspace = () => {
   const headerContent = (
     <>
       {commonI18n.workspaceHeaderShort()}{' '}
-      {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 dark={true} />}
+      {projectTemplateLevel && (
+        <ProjectTemplateWorkspaceIconV2 darkMode={true} />
+      )}
     </>
   );
 
