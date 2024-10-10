@@ -32,16 +32,7 @@ module Services
             if SharedConstants::NON_SCHOOL_OPTIONS.to_h.value?(user_params[:school_info_attributes]['schoolId'])
               user_params[:school_info_attributes]['schoolId'] = nil
             end
-            school_params = {
-              school_id: user_params[:school_info_attributes]['schoolId'],
-              school_name: user_params[:school_info_attributes]['schoolName'],
-              school_type: user_params[:school_info_attributes]['schoolType'],
-              school_zip: user_params[:school_info_attributes]['schoolZip'],
-              school_state: user_params[:school_info_attributes]['schoolState'],
-              country: user_params[:school_info_attributes]['country'],
-              full_address: user_params[:school_info_attributes]['fullAddress']
-            }
-            user_params[:school_info_attributes] = ActionController::Parameters.new(school_params).permit(:school_id, :school_name, :school_type, :school_zip, :school_state, :country, :full_address)
+            user_params[:school_info_attributes].transform_keys!(&:underscore).permit(:school_id, :school_name, :school_type, :school_zip, :school_state, :country, :full_address)
           end
         when ::User::TYPE_STUDENT
           user_params[:parent_email_preference_request_ip] = request.ip
