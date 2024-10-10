@@ -1276,6 +1276,19 @@ p.detailsHidden {
   }
 }
 
+.redStatusBlob {
+  background-color: $lightest_red;
+  border-radius: 20px;
+  padding: 4px 10px 0;
+  height: 22px;
+  min-width: 80px;
+  display: inline;
+  margin-right: 17px;
+  p {
+    margin-bottom: 0;
+  }
+}
+
 .grayStatusBlob {
   background-color: $light_gray_100;
   border-radius: 20px;
