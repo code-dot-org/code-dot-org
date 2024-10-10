@@ -120,9 +120,14 @@
   p {
     font-size: 14px;
   }
-  
+
   details {
-    line-height: 1.2;
+    line-height: 0;
+    summary {
+      line-height: 1.2;
+      font-weight: bold;
+      margin: 4px 0;
+    }
   }
 }
 
