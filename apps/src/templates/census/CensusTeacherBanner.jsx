@@ -162,7 +162,6 @@ export default function CensusTeacherBanner({
     return (
       <div>
         <div style={styles.header}>
-          <h2>Update your school information</h2>
           {showSchoolInfoUnknownError && (
             <p style={styles.error}>
               We encountered an error with your submission. Please try again.
@@ -172,7 +171,7 @@ export default function CensusTeacherBanner({
         <div style={styles.message}>
           <SchoolDataInputs {...schoolInfo} />
         </div>
-        <div style={styles.buttonDiv}>
+        <div style={{...styles.buttonDiv, ...styles.updateSchoolButtonDiv}}>
           <Button
             __useDeprecatedTag
             onClick={dismissSchoolInfoForm}
@@ -411,6 +410,9 @@ const styles = {
   },
   buttonDiv: {
     textAlign: 'center',
+  },
+  updateSchoolButtonDiv: {
+    marginRight: 190,
   },
   clear: {
     clear: 'both',
