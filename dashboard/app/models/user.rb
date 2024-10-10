@@ -839,19 +839,17 @@ class User < ApplicationRecord
   def validate_for_finish_sign_up
     raise "Cannot call validate_for_finish_sign_up on a persisted user" if persisted?
 
-    # Always check email uniqueness first
-    email_and_hashed_email_must_be_unique
-
     valid? # Run all other validations
 
     # For this step, we only care about email, password, and password confirmation.
     required_fields = [:email, :password, :password_confirmation]
-    errors_to_keep = errors.keys & required_fields
 
     # Retain only the required field errors and email uniqueness errors
     errors.each do |attribute, _|
-      errors.delete(attribute) unless errors_to_keep.include?(attribute) || error.full_messages.include?(I18n.t('errors.messages.taken'))
+      errors.delete(attribute) unless required_fields.include?(attribute)
     end
+
+    email_and_hashed_email_must_be_unique
   end
 
   def self.name_from_omniauth(raw_name)
