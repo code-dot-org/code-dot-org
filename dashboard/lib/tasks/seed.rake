@@ -416,7 +416,7 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings_adhoc: :environment do
-    %w(ui-test-course).each do |course_offering_name|
+    %w(csp csa csd coursea courseb coursec coursed coursee coursef).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end
