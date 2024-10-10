@@ -61,6 +61,7 @@ $column-min-width: 200px;
   border: 1px $light_gray_200 solid;
   border-radius: $border-radius;
   box-sizing: border-box;
+  background: $white;
 }
 
 .panelHeader {
@@ -69,5 +70,5 @@ $column-min-width: 200px;
 
 .instructions {
   @extend %panel-section;
-  height: 93%;
+  height: 90%;
 }
