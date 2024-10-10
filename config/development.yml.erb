@@ -64,12 +64,16 @@ jwk_private_key_data:
 
 openai_chat_completion_api_key: ''
 openai_evaluate_rubric_api_key:
+openai_aichat_safety_api_key: !Secret
 
 # Mapbox
 mapbox_upload_tileset:    'censustiles-dev'
 
 # Enables DCDO settings via cookies
 use_cookie_dcdo: true
+
+# Allows Geolocation to be altered via cookies.
+use_geolocation_override: true
 
 # ActiveJob Queue Adapter, default to async which doesn't require manually
 # starting the worker processes. See locals.yml.default for more discussion.

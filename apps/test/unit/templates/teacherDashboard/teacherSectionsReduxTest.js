@@ -2,7 +2,7 @@ import $ from 'jquery';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   stubRedux,
   restoreRedux,
@@ -25,26 +25,28 @@ import reducer, {
   cancelEditingSection,
   finishEditingSection,
   asyncLoadSectionData,
-  assignmentNames,
-  assignmentPaths,
-  sectionFromServerSection,
-  isAddingSection,
   beginImportRosterFlow,
   cancelImportRosterFlow,
   importOrUpdateRoster,
-  isRosterDialogOpen,
-  sectionCode,
-  sectionName,
-  sectionProvider,
-  isSectionProviderManaged,
-  getVisibleSections,
-  sectionsNameAndId,
-  getSectionRows,
-  sortedSectionsList,
-  sortSectionsList,
   assignToSection,
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  assignmentNames,
+  assignmentPaths,
+  getSectionRows,
+  getVisibleSections,
+  isAddingSection,
+  isRosterDialogOpen,
+  isSectionProviderManaged,
+  sectionCode,
+  sectionFromServerSection,
+  sectionName,
+  sectionProvider,
+  sectionsNameAndId,
+  sortedSectionsList,
+  sortSectionsList,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -75,7 +77,10 @@ const sections = [
     sharing_disabled: false,
     course_offering_id: 2,
     course_version_id: 3,
+    script: {name: null},
+    unitName: null,
     unit_id: null,
+    isAssignedStandaloneCourse: false,
     createdAt: createdAt,
     studentCount: 10,
     hidden: false,
@@ -106,7 +111,10 @@ const sections = [
     sharing_disabled: false,
     course_offering_id: 1,
     course_version_id: 1,
+    unitName: 'coursea-2017',
     unit_id: null,
+    isAssignedStandaloneCourse: true,
+    script: {name: null},
     createdAt: createdAt,
     studentCount: 1,
     hidden: false,
@@ -143,7 +151,10 @@ const sections = [
     sharing_disabled: false,
     course_offering_id: 3,
     course_version_id: 5,
+    unitName: null,
     unit_id: 7,
+    isAssignedStandaloneCourse: false,
+    script: {name: null},
     createdAt: createdAt,
     studentCount: 0,
     hidden: false,
@@ -193,18 +204,12 @@ describe('teacherSectionsRedux', () => {
 
   describe('setAuthProviders', () => {
     it("sets teacher's auth providers", () => {
-      const action = setAuthProviders([
-        'google_oauth2',
-        'clever',
-        'email',
-        'windowslive',
-      ]);
+      const action = setAuthProviders(['google_oauth2', 'clever', 'email']);
       const nextState = reducer(initialState, action);
       assert.deepEqual(nextState.providers, [
         'google_classroom',
         'clever',
         'email',
-        'windowslive',
       ]);
     });
   });
@@ -362,7 +367,9 @@ describe('teacherSectionsRedux', () => {
         courseOfferingId: null,
         courseVersionId: null,
         courseDisplayName: null,
+        unitName: null,
         unitId: null,
+        isAssignedStandaloneCourse: false,
         hidden: false,
         restrictSection: false,
         aiTutorEnabled: false,
@@ -395,7 +402,9 @@ describe('teacherSectionsRedux', () => {
         courseOfferingId: courseOfferingId,
         courseVersionId: courseVersionId,
         courseDisplayName: null,
+        unitName: null,
         unitId: unitId,
+        isAssignedStandaloneCourse: false,
         hidden: false,
         restrictSection: false,
         aiTutorEnabled: false,
@@ -424,7 +433,9 @@ describe('teacherSectionsRedux', () => {
         courseOfferingId: null,
         courseVersionId: null,
         courseDisplayName: null,
+        unitName: null,
         unitId: null,
+        isAssignedStandaloneCourse: false,
         hidden: false,
         restrictSection: false,
         aiTutorEnabled: false,
@@ -452,7 +463,9 @@ describe('teacherSectionsRedux', () => {
         courseOfferingId: 1,
         courseVersionId: 1,
         courseDisplayName: 'Course A',
+        unitName: 'coursea-2017',
         unitId: null,
+        isAssignedStandaloneCourse: true,
         courseId: undefined,
         createdAt: createdAt,
         studentCount: 1,
@@ -790,7 +803,9 @@ describe('teacherSectionsRedux', () => {
           courseOfferingId: undefined,
           courseVersionId: undefined,
           courseDisplayName: undefined,
+          unitName: undefined,
           unitId: undefined,
+          isAssignedStandaloneCourse: undefined,
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,
@@ -1809,7 +1824,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('doesnt send an event when course offering is unchanged', () => {
-      jest.mock('@cdo/apps/lib/util/firehose');
+      jest.mock('@cdo/apps/metrics/firehose');
       store.dispatch(assignToSection(11, 2, 2, 3, null));
       expect(analyticsSpy).to.not.be.called;
     });

@@ -48,7 +48,8 @@
       "starwars.jpg": "e0bc8deb-d769-4383-aa1d-c40b781bd2aa.jpg",
       "track.jpg": "ef4ee77e-9161-4d92-90a7-0ed7d391a472.jpg"
     },
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:01:38.749+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-ImagePlus PBT_2023\\\"\"],\"cloned_from\":\"CSA U5L6-ImagePlus PBT_2023\"}]"

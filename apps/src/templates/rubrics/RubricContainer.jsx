@@ -5,8 +5,8 @@ import Draggable from 'react-draggable';
 
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -223,6 +223,9 @@ export default function RubricContainer({
       }
       tourStep.current = nextStepIndex;
       if (nextStepIndex === 1) {
+        document.getElementById('tour-fab-bg').scrollBy(0, -1000);
+      }
+      if (nextStepIndex === 2) {
         document.getElementById('tour-fab-bg').scrollBy(0, 1000);
       }
     }
@@ -241,6 +244,7 @@ export default function RubricContainer({
       defaultPosition={{x: positionX, y: positionY}}
       onStart={onStartHandler}
       onStop={onStopHandler}
+      handle=".ai-rubric-handle"
     >
       <div
         data-testid="draggable-test-id"
@@ -269,7 +273,10 @@ export default function RubricContainer({
             showStepNumbers: true,
           }}
         />
-        <div className={style.rubricHeaderRedesign}>
+        <div
+          className={classnames(style.rubricHeaderRedesign, 'ai-rubric-handle')}
+          data-testid="ai-rubric-handle-test-id"
+        >
           <div className={style.rubricHeaderLeftSide}>
             <img
               src={aiBotOutlineIcon}

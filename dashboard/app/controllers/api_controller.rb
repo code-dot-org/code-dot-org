@@ -413,6 +413,55 @@ class ApiController < ApplicationController
     render json: standards
   end
 
+  def lesson_materials
+    unit_id = params[:unit_id]
+    script = Unit.get_from_cache(unit_id)
+    render json: script.summarize_for_lesson_materials_view(current_user)
+  end
+
+  def course_summary
+    course_name = params[:course_name]
+    unit_group = UnitGroup.get_from_cache(course_name)
+
+    # When the url of a course family is requested, redirect to a specific course version.
+    if !unit_group && UnitGroup.family_names.include?(params[:course_name])
+      unit_group = UnitGroup.latest_stable_version(params[:course_name])
+      if unit_group
+        redirect_path = url_for(action: params[:action], course_name: unit_group.name)
+        redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+        redirect_to "#{redirect_path}#{redirect_query_string}"
+      end
+    end
+
+    render json: {is_verified_instructor: current_user.try(:verified_instructor?) || false,
+                  unit_group: unit_group.summarize(current_user, for_edit: false, locale_code: request.locale),
+                  hidden_scripts: current_user.try(:get_hidden_unit_ids, unit_group)}
+  end
+
+  def unit_summary
+    unit_name = params[:unit_name]
+    unit = Unit.get_from_cache(unit_name)
+
+    additional_script_data = {
+      is_instructor: unit.can_be_instructor?(current_user),
+      is_verified_instructor: current_user&.verified_instructor?,
+      locale: Unit.locale_english_name_map[request.locale],
+      locale_code: request.locale,
+      course_link: unit.course_link(params[:section_id]),
+      course_title: unit.course_title || I18n.t('view_all_units'),
+      course_name: unit.unit_group&.name,
+    }
+
+    if unit.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: unit.plc_course_unit.plc_course)
+      plc_breadcrumb = {unit_name: unit.plc_course_unit.unit_name, course_view_path: course_path(unit.plc_course_unit.plc_course.unit_group)}
+    end
+
+    render json: {
+      unitData: unit.summarize(true, current_user, false, request.locale).merge(additional_script_data),
+      plcBreadcrumb: plc_breadcrumb
+    }
+  end
+
   use_reader_connection_for_route(:user_progress)
 
   # Return a JSON summary of the user's progress for params[:script].

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:20.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The `APExams`(#e7e8ea) class analyzes data about AP CS exams and has an instance variable for the number of AP CS exams taken.\r\n\r\n##In APExams.java:\r\n\r\nThe method `calculateSum()`(#e7e8ea) returns the sum of all the values in a 1D array. In the `calculateSum()`(#e7e8ea) method,\r\n\r\n1. Declare and initialize a variable called `sum`(#e7e8ea) to `0`(#e7e8ea).\r\n\r\n2. Traverse the instance variable `numTests`(#e7e8ea) using an enhanced `for`(#e7e8ea) loop.\r\n\r\n3. Add each value in the array to `sum`(#e7e8ea).\r\n\r\n4. Return the `sum`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n5. Print the result of a call to `calculateSum()`(#e7e8ea) on the `totalStats`(#e7e8ea) object.\r\n\r\n6. Print the result of a call to `calculateSum()`(#e7e8ea) on the `femaleStats`(#e7e8ea) object.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://code.org/promote/ap)!*\r\n\r\n::: details [**Show Me How**]\r\nAn enhanced `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (dataType variableName : arrayName) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data stored in the 1D array. The `variableName`(#e7e8ea) should be a name that is easily recognizable and represents the data stored in the array. The `arrayName`(#e7e8ea) should be the name of the array to traverse.\r\n:::",
@@ -22,12 +26,9 @@
         "text": "public class APExams {\n\n  private int[] numTests;\n\n  public APExams(int[] numTests) {\n    this.numTests = numTests;\n  }\n\n  public int calculateSum() {\n    // TO DO #1-4: Traverse the numTests array using an enhanced\n    // for loop and calculate the sum of the values.\n\n\n    return 0;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:20.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:20.254+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L5a_2022\\\"\"],\"cloned_from\":\"CSA U3L5-L5a_2022\"},{\"changed_at\":\"2022-09-04 20:12:27 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 20:13:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 20:13:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 20:14:38 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 20:49:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 20:53:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-04 20:54:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 21:35:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 21:35:24 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 21:39:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 21:39:34 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

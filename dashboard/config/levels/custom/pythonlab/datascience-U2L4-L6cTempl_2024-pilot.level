@@ -1,0 +1,57 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-09-15T20:50:09.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "health_data.csv",
+          "language": "csv",
+          "contents": ",Duration,Date,Pulse,Maxpulse,Calories\n0,60,2020-12-01,110,130,409.1\n1,60,2020-12-02,117,145,479.0\n2,60,2020-12-03,103,135,340.0\n3,45,2020-12-04,109,175,282.4\n4,45,2020-12-05,117,148,406.0\n5,60,2020-12-06,102,127,300.0\n6,60,2020-12-07,110,136,374.0\n7,450,2020-12-08,104,134,253.3\n8,30,2020-12-09,109,133,195.1\n9,60,2020-12-10,98,124,269.0\n10,60,2020-12-11,103,147,329.3\n11,60,2020-12-12,100,120,250.7\n12,60,2020-12-12,100,120,250.7\n13,60,2020-12-13,106,128,345.3\n14,60,2020-12-14,104,132,379.3\n15,60,2020-12-15,98,123,275.0\n16,60,2020-12-16,98,120,215.2\n17,60,2020-12-17,100,120,300.0\n18,45,2020-12-18,90,112,\n19,60,2020-12-19,103,123,323.0\n20,45,2020-12-20,97,125,243.0\n21,60,2020-12-21,108,131,364.2\n22,45,,100,119,282.0\n23,60,2020-12-23,130,101,300.0\n24,45,2020-12-24,105,132,246.0\n25,60,2020-12-25,102,126,334.5\n26,60,2020-12-26,100,120,250.0\n27,60,2020-12-27,92,118,241.0\n28,60,2020-12-28,103,132,\n29,60,2020-12-29,100,132,280.0\n30,60,2020-12-30,102,129,380.3\n31,60,2020-12-31,92,115,243.0\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "2": {
+          "id": "2",
+          "name": "pulse_counts.csv",
+          "language": "csv",
+          "contents": ",Pulse values,count\n0,100,6\n1,103,4\n2,102,3\n3,98,3\n4,110,2\n5,117,2\n6,109,2\n7,104,2\n8,92,2\n9,106,1\n10,90,1\n11,97,1\n12,108,1\n13,130,1\n14,105,1",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-15T20:50:09.099+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L6bTempl_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L6bTempl_2024-pilot\"},{\"changed_at\":\"2024-09-15 20:50:19 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 20:50:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 20:51:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 20:51:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

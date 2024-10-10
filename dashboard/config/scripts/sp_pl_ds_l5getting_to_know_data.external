@@ -3,10 +3,10 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-## Lesson 5: Getting to Know your Data  
+#Data Science
+## Lesson 6: Getting to Know your Data  
 
-#### Students will learn four of the major data types which they will work with while using pandas: int64, float64, object, and datetime.
-#### Students will practice converting columns of data from one type to another. 
+#### Students will learn four of the major data types which they will work with while using pandas and practice converting columns of data from one type to another. 
 
 #### Additionally, they will be able to use the info() and describe() functions to get insight into their imported data.
 
@@ -16,17 +16,15 @@ markdown <<MARKDOWN
 
 
 
-## Key concepts 
-
-- #### **info()** - Displays a DataFrame's column names, non-null counts, and data types
-- #### **describe()** - Generates summary statistics of a DataFrame's numerical columns
-- #### **astype()** - Converts a DataFrame's column data type to specified type
-- #### **to_datetime()** - Converts a DataFrame's column data type to datetime format
+>## Key concepts:
+>- #### **info()** - Displays a DataFrame's column names, non-null counts, and data types
+>- #### **describe()** - Generates summary statistics of a DataFrame's numerical columns
+>- #### **astype()** - Converts a DataFrame's column data type to specified type
+>- #### **to_datetime()** - Converts a DataFrame's column data type to datetime format
 
 
 
 
 ## Let's practice!  
 
-![]()
 MARKDOWN

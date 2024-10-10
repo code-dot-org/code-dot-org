@@ -19,8 +19,8 @@ $default-spacing: 2px;
 
 .panelContainerHeader-dark {
   @extend %panel-container-header;
-  background-color: $neutral_dark80;
-  color: $neutral_light;
+  background-color: $light_gray_900;
+  color: $neutral_white;
   margin-bottom: $default-spacing;
 }
 
@@ -44,10 +44,12 @@ $default-spacing: 2px;
   [dir='ltr'] &Right,
   [dir='rtl'] &Left {
     right: 4px;
+    z-index: 1;
   }
 
   [dir='ltr'] &Left,
   [dir='rtl'] &Right {
     left: 4px;
+    z-index: 1;
   }
 }

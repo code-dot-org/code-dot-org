@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-01-11T21:16:09.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayPainter</code> class declares an instance variable for a 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> values to store the paint colors an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayPainter</code> object can use to paint with. The constructor initializes the 1D array to store the number of values specified by the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">numPainterColors</code>.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayPainter</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">toString()</code> method to return a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> containing the text <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Number of Paint Colors: \"</code> followed by the length of the 1D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">paintColors</code>.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">NeighborhoodRunner.java</code>, print the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayPainter</code> object.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with accessing the length of a 1D array.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
@@ -366,15 +370,9 @@
       }
     },
     "video_key": "csa_one_dimensional_arrays",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2023-01-11T21:16:09.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2023-01-11T21:16:09.703+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L6c_2023\\\"\"],\"cloned_from\":\"CSA U3L1-L6c_2023\"},{\"changed_at\":\"2023-01-11 21:16:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 19:25:23 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 20:32:54 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 20:58:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 20:58:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 20:58:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 20:58:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 20:58:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 20:58:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-13 20:58:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-18 19:25:45 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-02-02 15:24:32 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-22 15:46:31 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

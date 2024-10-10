@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:00.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "The local pet adoption center wants to create a list of the dog breeds currently available for adoption.\r\n\r\n##In Pets.java:\r\n\r\n1. Write the `createPetBreeds()`(#e7e8ea) method to declare, initialize, and return a `String`(#e7e8ea) array using an initializer list. The array should contain the following values:\r\n\r\n```\r\n\"Alaskan Husky\", \"Beagle\", \"Dalmatian\", \"German Shepherd\", \"Great Dane\", \"Lhasa Apso\", \"Pug\", \"Whippet\"\r\n```\r\n\r\n2. Write the `getNumBreeds()`(#e7e8ea) method to return the length of the `petBreeds`(#e7e8ea) array.\r\n\r\n##In MyConsole.java:\r\n\r\n3. Call the `getNumBreeds`(#e7e8ea) method and print the result.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://thedogapi.com/)!*\r\n\r\n::: details [**Show Me How**]\r\nA 1D array is declared and initialized with an initializer list using the following syntax:\r\n  \r\n  ```\r\n  dataType[] variableName = {value1, value2, . . . };\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data the array will store. The `variableName`(#e7e8ea) should be the name of the array. Inside the curly braces ( `{ }`(#e7e8ea) ), list the values the array will store.\r\n:::",
@@ -22,12 +26,9 @@
         "text": "/*\n * Manages pets for a pet adoption center\n */\npublic class Pets {\n\n  private String[] petBreeds;\n\n  /*\n   * Creates a Pets object by initializing the petBreeds array\n   */\n  public Pets() {\n    this.petBreeds = createPetBreeds();\n  }\n\n  /*\n   * Returns the array petBreeds\n   */\n  public String[] getPetBreeds() {\n    return petBreeds;\n  }\n\n  /*\n   * Creates and returns an array containing the names of pet breeds\n   */\n  public String[] createPetBreeds() {\n    // TO DO #1: Declare, initialize, and return a String array containing the values.\n\n    return null;\n  }\n\n  /*\n   * Returns the number of pet breeds in the petBreeds array\n   */\n  public int getNumBreeds() {\n    // TO DO #2: Return the length of the petBreeds array.\n\n    return 0;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:00.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:00.652+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L3b_2022\\\"\"],\"cloned_from\":\"CSA U3L1-L3b_2022\"},{\"changed_at\":\"2022-08-30 14:47:24 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 14:49:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 14:50:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 14:51:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 15:03:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 15:03:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 15:04:03 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 15:11:19 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 17:05:31 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 18:16:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 18:16:44 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

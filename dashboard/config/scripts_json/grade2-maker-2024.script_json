@@ -5,6 +5,7 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "tts": true,
@@ -12,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "grade2-maker",
-    "serialized_at": "2024-07-19 21:51:30 UTC",
+    "serialized_at": "2024-09-05 17:01:48 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

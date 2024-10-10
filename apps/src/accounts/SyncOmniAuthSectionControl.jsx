@@ -5,21 +5,21 @@ import {connect} from 'react-redux';
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {Heading1} from '@cdo/apps/legacySharedComponents/Headings';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
 } from '@cdo/apps/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {importOrUpdateRoster} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
-  importOrUpdateRoster,
   sectionCode,
   sectionProvider,
   sectionProviderName,
   sectionName,
   ltiSyncResult,
   syncEnabled,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

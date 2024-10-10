@@ -191,10 +191,34 @@ Resources:
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
-          # SageMaker Invoke Endpoint access
+          # TODO: Move to dedicated policy for GenAI
+          # GenAI Sagemaker access
           - Effect: Allow
-            Action: 'sagemaker:InvokeEndpoint'
+            Action:
+              - 'sagemaker:InvokeEndpoint'
             Resource: !Sub "arn:aws:sagemaker:${AWS::Region}:${AWS::AccountId}:endpoint/gen-ai-*"
+          # GenAI Comprehend access
+          - Effect: Allow
+            Action:
+              - 'comprehend:DetectToxicContent'
+            Resource: '*'
+          # TODO: Move to dedicated policy for AI TA
+          # AI TA Bedrock access
+          - Effect: Allow
+            Action:
+              - 'bedrock:RetrieveAndGenerate'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'bedrock:Retrieve'
+            Resource:
+              # TODO: Deploy KB with Cloudformation and !Ref it here
+              - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/1WHRENJ0OA'
+          - Effect: Allow
+            Action:
+              - 'bedrock:InvokeModel'
+            Resource:
+              - 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0'
 
   # ---------------------------------------------
   # Frontend Servers

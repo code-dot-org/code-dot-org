@@ -17,8 +17,8 @@ import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {Heading3} from '@cdo/apps/legacySharedComponents/Headings';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
@@ -231,49 +231,46 @@ class LoginTypePicker extends Component {
             <EmailLoginCard onClick={this.onLoginTypeSelect} />
           </CardContainer>
         </div>
-        {experiments.isEnabled(experiments.SECTION_CREATE_LMS_CARDS) &&
-          !withAllLmsProviders && (
-            <>
-              <Typography
-                style={style.subheader}
-                semanticTag={'h6'}
-                visualAppearance={'heading-xs'}
-              >
-                {i18n.lmsIntegrations()}
-              </Typography>
-              <div
-                style={style.lmsInfoCardsContainer}
-                data-testid={'lms-info-cards-container'}
-              >
-                {!withClever && (
-                  <LmsInformationalCard
-                    lmsName={LmsLoginTypeNames.clever}
-                    lmsLogo={cleverLogo}
-                    lmsInformationalUrl={LmsLoginInstructionUrls.clever}
-                  />
-                )}
-                {!withGoogle && (
-                  <LmsInformationalCard
-                    lmsName={LmsLoginTypeNames.google_classroom}
-                    lmsLogo={googleClassroomLogo}
-                    lmsInformationalUrl={
-                      LmsLoginInstructionUrls.google_classroom
-                    }
-                  />
-                )}
+        {!withAllLmsProviders && (
+          <>
+            <Typography
+              style={style.subheader}
+              semanticTag={'h6'}
+              visualAppearance={'heading-xs'}
+            >
+              {i18n.lmsIntegrations()}
+            </Typography>
+            <div
+              style={style.lmsInfoCardsContainer}
+              data-testid={'lms-info-cards-container'}
+            >
+              {!withClever && (
                 <LmsInformationalCard
-                  lmsName={LmsLoginTypeNames.canvas}
-                  lmsLogo={canvasLogo}
-                  lmsInformationalUrl={LmsLoginInstructionUrls.canvas}
+                  lmsName={LmsLoginTypeNames.clever}
+                  lmsLogo={cleverLogo}
+                  lmsInformationalUrl={LmsLoginInstructionUrls.clever}
                 />
+              )}
+              {!withGoogle && (
                 <LmsInformationalCard
-                  lmsName={LmsLoginTypeNames.schoology}
-                  lmsLogo={schoologyLogo}
-                  lmsInformationalUrl={LmsLoginInstructionUrls.schoology}
+                  lmsName={LmsLoginTypeNames.google_classroom}
+                  lmsLogo={googleClassroomLogo}
+                  lmsInformationalUrl={LmsLoginInstructionUrls.google_classroom}
                 />
-              </div>
-            </>
-          )}
+              )}
+              <LmsInformationalCard
+                lmsName={LmsLoginTypeNames.canvas}
+                lmsLogo={canvasLogo}
+                lmsInformationalUrl={LmsLoginInstructionUrls.canvas}
+              />
+              <LmsInformationalCard
+                lmsName={LmsLoginTypeNames.schoology}
+                lmsLogo={schoologyLogo}
+                lmsInformationalUrl={LmsLoginInstructionUrls.schoology}
+              />
+            </div>
+          </>
+        )}
         <div style={style.footer}>
           <p style={{...style.mediumText, ...style.emailPolicyNote}}>
             {i18n.note()}

@@ -6,6 +6,7 @@ import 'whatwg-fetch';
 import '../build/locales/en_us/common_locale.js';
 import '../build/locales/en_us/aichat_locale.js';
 import '../build/locales/en_us/applab_locale.js';
+import '../build/locales/en_us/codebridge_locale.js';
 import '../build/locales/en_us/javalab_locale.js';
 import '../build/locales/en_us/signup_locale.js';
 import '../build/locales/en_us/music_locale.js';
@@ -81,7 +82,7 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.PISKEL_DEVELOPMENT_MODE = 'false';
 
-jest.mock('@cdo/apps/lib/util/firehose', () => ({
+jest.mock('@cdo/apps/metrics/firehose', () => ({
   putRecord: jest.fn(),
 }));
 // Mock out toImage as it produces a live image relying on browser callbacks to properly instantiate

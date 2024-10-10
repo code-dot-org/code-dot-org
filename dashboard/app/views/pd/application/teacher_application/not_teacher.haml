@@ -6,13 +6,3 @@
 
 %p
   != I18n.t('pd.not_teacher.more_markdown', pl_overview: CDO.code_org_url('/educate/professional-learning'), markdown: true)
-
-- ga_link = "/pd/application/teacher/not_teacher"
-- ga_link += "?nominated=true" if params[:nominated]
-
-:javascript
-  $(document).ready(function() {
-    // Report a unique page view to GA.
-    ga('set', 'page', "#{ga_link}");
-    ga('send', 'pageview');
-  });

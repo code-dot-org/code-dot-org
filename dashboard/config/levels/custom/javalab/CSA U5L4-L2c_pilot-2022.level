@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:50:02.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "A video game enthusiast wants to create an animation that displays information about bestselling video games from last to first. They have the information stored in a 2D array, where row represents the year the games were released. Each column represents a unique video game made released that year and is ordered from most sales to least sales.\r\n\r\nThey want to reverse the order of video games in each row (year released).\r\n\r\n##In GameScene.java:\r\n\r\n1. Write the `reverseGames()`(#e7e8ea) method to reverse each row in the 2D array `gameImages`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n2. Call the `reverseGames()`(#e7e8ea) method.",
@@ -26,15 +30,9 @@
         "tabOrder": 1
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-08-23T20:50:02.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:02.267+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L2c_2022\\\"\"],\"cloned_from\":\"CSA U5L4-L2c_2022\"},{\"changed_at\":\"2022-10-09 20:47:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 20:52:18 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 20:53:43 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 20:54:01 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 20:55:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 20:55:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-03 17:17:24 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

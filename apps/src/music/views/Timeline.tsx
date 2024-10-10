@@ -1,18 +1,17 @@
 import classNames from 'classnames';
 import React, {MouseEvent, useCallback, useRef} from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
-import {getBlockMode} from '../appConfig';
 import {BlockMode, MIN_NUM_MEASURES} from '../constants';
 import {
   clearSelectedBlockId,
+  getBlockMode,
   setStartPlayheadPosition,
 } from '../redux/musicRedux';
 
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import TimelineSampleEvents from './TimelineSampleEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
-import TimelineTrackEvents from './TimelineTrackEvents';
 import {useMusicSelector} from './types';
 
 import moduleStyles from './timeline.module.scss';
@@ -55,6 +54,8 @@ const getEventHeight = (
  */
 const Timeline: React.FunctionComponent = () => {
   const isPlaying = useMusicSelector(state => state.music.isPlaying);
+
+  const blockMode = useSelector(getBlockMode);
   const dispatch = useDispatch();
   const currentPlayheadPosition = useMusicSelector(
     state => state.music.currentPlayheadPosition
@@ -197,9 +198,7 @@ const Timeline: React.FunctionComponent = () => {
       </div>
 
       <div id="timeline-soundsarea" className={moduleStyles.soundsArea}>
-        {getBlockMode() === BlockMode.TRACKS ? (
-          <TimelineTrackEvents {...timelineElementProps} />
-        ) : getBlockMode() === BlockMode.SIMPLE2 ? (
+        {blockMode === BlockMode.SIMPLE2 ? (
           <TimelineSimple2Events {...timelineElementProps} />
         ) : (
           <TimelineSampleEvents {...timelineElementProps} />

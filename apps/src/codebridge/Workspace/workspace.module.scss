@@ -3,15 +3,63 @@
 .workspace {
   height: 100%;
   grid-area: workspace;
-  background-color: $darkest_gray;
   color: $white;
+  overflow: visible;
+  z-index: 2;
 }
 
-.warningBanner {
-  z-index: 99;
-  background-color: $light_yellow;
-  height: 20px;
-  padding: 5px;
-  width: 100%;
-  color: $black;
+.workspaceContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.workspaceToggleButtonContainer {
+  background-color: $light_gray_900;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+}
+
+.workspaceToggleButtonContainer.withFileBrowser {
+  justify-content: left;
+}
+
+.workplaceEditorWrapper {
+  overflow: hidden;
+  flex: 1;
+  grid-column: span 2;
+}
+
+.workplaceEditorWrapper.withFileBrowser {
+  grid-column: auto;
+}
+
+.workspaceWorkarea {
+  display: grid;
+  grid-template-columns: 34px auto;
+  grid-auto-rows: 32px 1fr auto;
+  overflow: hidden;
+  flex: 1;
+}
+
+.workspaceWorkarea.withFileBrowser {
+  grid-template-columns: 156px auto;
+}
+
+.workspaceAndConsole {
+  height: 100%;
+  grid-area: workspace-and-console;
+  background-color: $light_black;
+  color: $white;
+  overflow: hidden;
+}
+
+.workspaceWarningArea {
+  grid-column: span 2;
+}
+
+.workspaceHeader {
+  border-bottom: 1px solid $light_gray_800;
+  margin-bottom: 0;
 }

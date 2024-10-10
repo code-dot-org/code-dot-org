@@ -1,4 +1,4 @@
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
@@ -24,3 +24,8 @@ export const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
 };
 
 export const MAX_NAME_LENGTH = 15;
+
+export enum ModalTypes {
+  WARNING = 'warning',
+  TEACHER_ONBOARDING = 'teacherOnboarding',
+}

@@ -267,10 +267,6 @@ class Ability
         can :index, AiTutorInteraction
       end
 
-      if user.has_ai_tutor_access? && user.levelbuilder?
-        can :check_message_safety, :aichat
-      end
-
       if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :chat_completion, :ai_diff
       end
@@ -355,7 +351,7 @@ class Ability
       can :extra_links, Level
     end
 
-    if user.persisted? && (user.permission?(UserPermission::PROJECT_VALIDATOR))
+    if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       can :extra_links, ProjectsController
     end
 
@@ -483,7 +479,7 @@ class Ability
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      can [:chat_completion, :log_chat_event, :start_chat_completion, :chat_request], :aichat do
+      can [:log_chat_event, :start_chat_completion, :chat_request, :find_toxicity], :aichat do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
       # Additional logic that confirms that a given teacher should have access
@@ -491,6 +487,7 @@ class Ability
       can :student_chat_history, :aichat do
         user.teacher_can_access_ai_chat?
       end
+      can :user_has_access, :aichat
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)

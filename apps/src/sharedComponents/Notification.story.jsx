@@ -146,7 +146,6 @@ AnnouncementWithButton.args = {
     user_id: 1,
     important_data_point: 2,
   },
-  googleAnalyticsId: 'sample_announcement',
 };
 AnnouncementWithButton.storyName = 'Announcement - with button';
 

@@ -3,7 +3,8 @@ updates:
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "sunday"
     groups:
       auth:
         patterns:
@@ -39,8 +40,14 @@ updates:
   - package-ecosystem: "npm"
     directory: "/apps"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
+    ignore:
+      # Exclude Blockly, for more info: https://github.com/code-dot-org/code-dot-org/pull/61094
+      - dependency-name: "@blockly/*"
+      - dependency-name: "blockly"
+      - dependency-name: "pepjs"
+      - dependency-name: "@code-dot-org/blockly"
     groups:
       amplitude:
         patterns:
@@ -161,45 +168,55 @@ updates:
       - "dependencies"
   # Platform NPM/Yarn Packages
   - package-ecosystem: "npm"
+    open-pull-requests-limit: 0
     directories: 
     - "/apps/eslint"
     - "/bin/i18n"
     - "/tools/scripts/brokenLinkChecker"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
   # Infrastructure NPM/Yarn Packages
   - package-ecosystem: "npm"
-    directories: 
+    open-pull-requests-limit: 0
+    directories:
     - "/aws/cloudformation"
     - "/aws/cloudformation/lambdas/sql-user"
     - "/aws/offsite/aurora-snapshots-fargate"
     - "/aws/offsite/prune-aurora-backups/src"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
   # Teacher Tools NPM/Yarn Packages
   - package-ecosystem: "npm"
     directories: 
     - "/bin/generate-pdf"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
   # Docker Images
   - package-ecosystem: "docker"
-    directories: 
+    open-pull-requests-limit: 0
+    directories:
     - "/aws/offsite/aurora-snapshots-fargate"
     - "/docker/dockerfiles"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
   # Github Actions
   - package-ecosystem: "github-actions"
-    directories: 
+    open-pull-requests-limit: 0
+    directories:
     - "/.github"
     - "/.github/actions/**/"
     - "/.github/workflows"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 0
+      interval: "weekly"
+      day: "sunday"
 
+  - package-ecosystem: 'pip'
+    open-pull-requests-limit: 0
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: "sunday"

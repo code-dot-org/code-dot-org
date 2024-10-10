@@ -21,6 +21,7 @@ interface SectionsData {
   [sectionId: number]: {
     name: string;
     hidden: boolean;
+    courseVersionName: string;
   };
 }
 
@@ -37,6 +38,11 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const selectedSectionId = useSelector(
     (state: {teacherSections: {selectedSectionId: number}}) =>
       state.teacherSections.selectedSectionId
+  );
+
+  const isLoadingSectionData = useSelector(
+    (state: {teacherSections: {isLoadingSectionData: boolean}}) =>
+      state.teacherSections.isLoadingSectionData
   );
 
   useEffect(() => {
@@ -110,6 +116,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       navigate(
         generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
           sectionId: selectedSectionId,
+          courseVersionName: sections[selectedSectionId].courseVersionName,
         })
       );
     }
@@ -123,6 +130,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         key={'ui-test-sidebar-' + key}
         isSelected={currentPathName === key}
         sectionId={+selectedSectionId}
+        courseVersionName={sections[selectedSectionId].courseVersionName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
         onClick={() => navigateToDifferentPage(key)}
       />
@@ -160,6 +168,8 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           selectedValue={String(selectedSectionId)}
           className={styles.sectionDropdown}
           name="section-dropdown"
+          color="gray"
+          disabled={isLoadingSectionData}
         />
         {navbarComponents.map(component => component)}
       </div>

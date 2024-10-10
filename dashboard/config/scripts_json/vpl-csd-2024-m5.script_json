@@ -7,12 +7,13 @@
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-19 23:33:55 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-09-04 20:44:20 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -91,8 +92,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Purpose:**\nFacilitators guide participants in a lesson investigation of the in-person model lesson, Unit 6: Lesson 5, to support participants during this virtual workshop. Facilitators share specific implementation strategies for the different level types discussed in the last session.\n\n**Objectives:**\n\n* Participants are exposed to the essential content knowledge necessary to plan and implement Lesson 5 of Unit 6.\n* Participants become familiar with how to attach an event handler to a hardware input.\n* Participants experience lesson level types (predict, programming, assessment, Helps & Tips).\n\n**Circuit Playground Lesson Plan:** <a href=\"https://studio.code.org/s/csd6a-2023/lessons/5\" target=\"blank\">U6AL5: Board Events</a><br>\n**micro:bit Lesson Plan:** <a href=\"https://studio.code.org/s/csd6b-2023/lessons/5\" target=\"blank\">U6BL5: Board Events</a>\n\n**Suggested time:** 35 minutes",
-        "student_overview": "**You will:**\n\n* Be exposed to the essential content knowledge necessary to plan and implement Lesson 5 of Unit 6.\n* Become familiar with how to attach an event handler to a hardware input.\n* Experience lesson level types (predict, programming, assessment, Helps & Tips).\n\n**Circuit Playground Lesson Plan:** <a href=\"https://studio.code.org/s/csd6a-2023/lessons/5\" target=\"blank\">U6AL5: Board Events</a><br>\n**micro:bit Lesson Plan:** <a href=\"https://studio.code.org/s/csd6b-2023/lessons/5\" target=\"blank\">U6BL5: Board Events</a>\n"
+        "overview": "**Purpose:**\nFacilitators guide participants in a lesson investigation of the in-person model lesson, Unit 6: Lesson 5, to support participants during this virtual workshop. Facilitators share specific implementation strategies for the different level types discussed in the last session.\n\n**Objectives:**\n\n* Participants are exposed to the essential content knowledge necessary to plan and implement Lesson 5 of Unit 6.\n* Participants become familiar with how to attach an event handler to a hardware input.\n* Participants experience lesson level types (predict, programming, assessment, Helps & Tips).\n\n**Circuit Playground Lesson Plan:** <a href=\"https://studio.code.org/s/csd6a-2024/lessons/5\" target=\"blank\">U6AL5: Board Events</a><br>\n**micro:bit Lesson Plan:** <a href=\"https://studio.code.org/s/csd6b-2024/lessons/5\" target=\"blank\">U6BL5: Board Events</a>\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Be exposed to the essential content knowledge necessary to plan and implement Lesson 5 of Unit 6.\n* Become familiar with how to attach an event handler to a hardware input.\n* Experience lesson level types (predict, programming, assessment, Helps & Tips).\n\n**Circuit Playground Lesson Plan:** <a href=\"https://studio.code.org/s/csd6a-2024/lessons/5\" target=\"blank\">U6AL5: Board Events</a><br>\n**micro:bit Lesson Plan:** <a href=\"https://studio.code.org/s/csd6b-2024/lessons/5\" target=\"blank\">U6BL5: Board Events</a>\n"
       },
       "seeding_key": {
         "lesson.key": "Synchronous Session 3: Lesson Investigation",

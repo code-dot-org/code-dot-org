@@ -156,7 +156,7 @@ class LevelsController < ApplicationController
     bubble_choice_parents = BubbleChoice.parent_levels(@level.name)
     any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
     @in_script = @level.script_levels.any? || any_parent_in_script
-    @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+    @standalone = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
     if @level.is_a? Applab
       @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     end
@@ -300,10 +300,14 @@ class LevelsController < ApplicationController
 
     if @level.save
       reset = !!params[:reset]
-      redirect = if reset
-                   params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+      redirect = if params[:redirect_start_mode]
+                   edit_blocks_level_path(@level, :start_sources)
                  else
-                   params["redirect"] || level_url(@level, show_callouts: 1)
+                   if reset
+                     params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+                   else
+                     params["redirect"] || level_url(@level, show_callouts: 1)
+                   end
                  end
       render json: {redirect: redirect}
     else
@@ -381,7 +385,9 @@ class LevelsController < ApplicationController
     rescue ActiveRecord::RecordInvalid => exception
       render(status: :not_acceptable, plain: exception) && return
     end
-    if params[:do_not_redirect]
+    if params[:redirect_start_mode]
+      render json: {redirect: edit_blocks_level_path(@level, :start_sources)}
+    elsif params[:do_not_redirect]
       render json: @level
     else
       render json: {redirect: edit_level_path(@level)}
@@ -499,19 +505,22 @@ class LevelsController < ApplicationController
     links = {}
 
     links[@level.name] = [{text: level_path(@level), url: level_url(@level)}]
+    links[@level.name] << {text: "#{level_path(@level)} (reset version history)", url: "#{level_url(@level)}?reset=true"}
     if @level.level_concept_difficulty && !@level.level_concept_difficulty.concept_difficulties_as_string.empty?
       links[@level.name] << {text: "LCD: #{@level.level_concept_difficulty.concept_difficulties_as_string}", url: ''}
     end
-    is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+    is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
     # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
     if Rails.application.config.levelbuilder_mode && !is_standalone_project
       can_edit_level = can? :edit, @level
       if can_edit_level
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
-        if @level.is_a?(Javalab) || @level.is_a?(Pythonlab) || @level.is_a?(Weblab2)
+        if [Javalab, Music, Pythonlab, Weblab2].include?(@level.class)
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
-          links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
+          if @level.class != Music
+            links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
+          end
         end
       else
         links[@level.name] << {text: '(Cannot edit)', url: ''}

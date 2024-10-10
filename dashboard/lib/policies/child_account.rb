@@ -34,6 +34,10 @@ class Policies::ChildAccount
   # The maximum number of times a student can resend a request to a parent.
   MAX_PARENT_PERMISSION_RESENDS = 3
 
+  # The maximum number of days a student should be age-gated before
+  # a teacher stops receiving warnings about the sections the student is following.
+  TEACHER_WARNING_PERIOD = 30.days
+
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
   # parent permission before the student can start using their account.

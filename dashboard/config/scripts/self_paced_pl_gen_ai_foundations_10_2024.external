@@ -1,0 +1,20 @@
+name 'self-paced-pl-gen-ai-foundations_10_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 10: Hallucinations and Fabrications
+
+<img src="https://images.code.org/da2d6f6c30ac5b47931d9affb929f6a5-Screenshot 2024-08-30 at 1.38.26 PM.png" alt="examples headlines of AI bias" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### In this lesson, students **explore** why language models produce **hallucinations** or inaccurate outputs. They discuss how **bias** in training data leads to errors and act as AI Auditors to suggest proactive measures for mitigating harm from language models.
+
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Bias occurs when a decision favors some things and de-prioritizes or excludes others. Bias within an AI system is a direct reflection of the data a system was trained on and the way it is trained. You'll get a chance to learn more about bias in Lesson 5 of this module.
+</p>
+</div>
+
+
+MARKDOWN

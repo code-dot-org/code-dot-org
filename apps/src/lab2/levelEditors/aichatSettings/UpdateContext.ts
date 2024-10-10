@@ -11,9 +11,9 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 export const UpdateContext = createContext({
   aichatSettings: {} as LevelAichatSettings,
-  setPropertyValue: (
-    property: keyof AiCustomizations,
-    value: AiCustomizations[keyof AiCustomizations]
+  setPropertyValue: <T extends keyof AiCustomizations>(
+    property: T,
+    value: AiCustomizations[T]
   ) => {},
   setPropertyVisibility: (
     property: keyof AiCustomizations,

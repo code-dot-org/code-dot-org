@@ -31,7 +31,6 @@ import {singleton as studioApp} from '../../StudioApp';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import trackEvent from '../../util/trackEvent';
 import craftMsg from '../locale';
 
 import CraftVisualizationColumn from './CraftVisualizationColumn';
@@ -456,7 +455,6 @@ export default class Craft {
   }
 
   static setCurrentCharacter(name = DEFAULT_CHARACTER) {
-    trackEvent('Minecraft', 'ChoseCharacter', name);
     Craft.clearPlayerState();
     trySetLocalStorage('craftSelectedPlayer', name);
   }

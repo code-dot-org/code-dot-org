@@ -359,7 +359,8 @@
     "bubble_choice_description": "Use an if statement and the isOnBucket() method to take all of the paint from the paint bucket if the Painter object is standing on a paint bucket.",
     "thumbnail_url": "https://images.code.org/b5c5ddce9715bd518d1b26b5a008732f-image-1646320116969.gif",
     "encrypted_exemplar_sources": "KNjm63MQ86iRZeyLht9Rk62smWHrvRJhg0SD7xLvYFRjBribjRJBPPxye5tZ\nSw+yR0g4yUhcRSYQWkDGM5E5qQ1lVV/SXzOvpd6fH2RjMomDsv0B6T20w4El\n7Iy7tSI9WDgsXrHBqdEGrOIzxms3Fz7e+AvIzg8flBeXudWa6xHRQwJMM1K0\n6OOaykbPBSjRutrNxEbYJtd/dSYX1E/zr+7Wfapn793i6jhDoIZE4f1OqTCi\nBrFQ0lNS6vBnuVqBazppJKApt0lgmnzRsyvviGCcBomg7jw2vt4qov/DLLBO\nuyIpU2C0/4TWLjiLfDlgPpZybc8f4EeYSyRB43+F8EdZ4tCEXg3h1c6YvMEC\nNc7e9I3yl5Tuold9I9sc1nimS/YY93KRz2YY5MDUmP7EWCG324l4AU9yKeAu\nJqLaiGMJxQD31AH22HclRXciN0XvtkEZJ6mTMFwcmQw92k7sD8xAzfmGGsri\ndDhagIL/41N/l/5HgmgPgOP9zHIjT1WW4V3+Lay+A1cO/Ta+h8bOwfJmz6h+\nmsnzn/j9+Be+3RlI5YDO7KsBiS9hX4InHnXG4TC6wSeezzpx0dl14MDNmgvH\n/jSyo3cqyZ6i51pqQ5hnt+jHRuR7U6MZL8a1bd6Vkm6Z4Da/dNI53WolgD7Z\nCTfeXfQCylICv/c4CRDy1vnf7VGC33ikwiZKGJ1e0S5m2CCL4PAIeSt+Uugx\nMnG8KQ==\n",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:25.403+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L3a_2022\\\"\"],\"cloned_from\":\"CSA U1L5-L3a_2022\"}]"

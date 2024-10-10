@@ -61,6 +61,10 @@ class Artist < Blockly
     %w(artist artist_zombie elsa anna)
   end
 
+  def uses_google_blockly?
+    true
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(

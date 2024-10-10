@@ -78,7 +78,7 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const renderChooseAndCompareModels = () => {
     return (
-      <div className={styles.inputContainer}>
+      <div>
         <FieldLabel
           id="selected-model"
           label="Selected model"
@@ -132,7 +132,7 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.customizationContainer}>
         {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
-          <div className={styles.inputContainer}>
+          <div>
             <div className={styles.horizontalFlexContainer}>
               <FieldLabel
                 id="temperature"
@@ -152,7 +152,7 @@ const SetupCustomization: React.FunctionComponent = () => {
                 dispatch(
                   setAiCustomizationProperty({
                     property: 'temperature',
-                    value: event.target.value,
+                    value: parseFloat(event.target.value),
                   })
                 )
               }
@@ -160,13 +160,14 @@ const SetupCustomization: React.FunctionComponent = () => {
           </div>
         )}
         {isVisible(systemPrompt) && (
-          <div className={styles.inputContainer}>
+          <div>
             <FieldLabel
               id="system-prompt"
               label="System Prompt"
               tooltipText="The system prompt controls how the chatbot behaves. Type your instructions into the text box."
             />
             <textarea
+              className={styles.systemPromptInput}
               id="system-prompt"
               value={aiCustomizations.systemPrompt}
               disabled={isDisabled(systemPrompt) || readOnlyWorkspace}
@@ -185,7 +186,7 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.footerButtonContainer}>
         <UpdateButton isDisabledDefault={allFieldsDisabled} />
       </div>
-      <SaveChangesAlerts />
+      <SaveChangesAlerts isReadOnly={allFieldsDisabled} />
     </div>
   );
 };

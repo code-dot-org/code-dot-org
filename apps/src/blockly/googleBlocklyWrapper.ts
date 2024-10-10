@@ -21,7 +21,7 @@ import {
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
 import DCDO from '@cdo/apps/dcdo';
-import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -67,6 +67,7 @@ import initializeBlocklyXml, {
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import registerLogicCompareMutator from './addons/extensions/logic_compare';
 import FunctionEditor from './addons/functionEditor';
+import {filterFunctionArgVariables} from './addons/plusMinusBlocks/advancedProcedures';
 import registerIfMutator from './addons/plusMinusBlocks/if';
 import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
@@ -740,7 +741,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         connectionChecker: CdoConnectionChecker,
       },
       renderer: optOptionsExtended.renderer || Renderers.DEFAULT,
-      comments: false,
+      comments: !!optOptionsExtended.comments,
       media: '/blockly/media/google_blockly',
       modalInputs: false, // Prevents pop-up editor on mobile
     };
@@ -841,7 +842,18 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     blocklyWrapper.setMainWorkspace(workspace);
 
-    if (!optOptionsExtended.useBlocklyDynamicCategories) {
+    if (optOptionsExtended.useBlocklyDynamicCategories) {
+      const originalVariableFlyoutCategory =
+        workspace.getToolboxCategoryCallback('VARIABLE');
+      if (originalVariableFlyoutCategory) {
+        workspace.registerToolboxCategoryCallback('VARIABLE', workspace =>
+          filterFunctionArgVariables(
+            workspace,
+            originalVariableFlyoutCategory(workspace)
+          )
+        );
+      }
+    } else {
       // Same flyout callbacks are used for both main workspace categories
       // and categories when modal function editor is enabled.
       workspace.registerToolboxCategoryCallback(

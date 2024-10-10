@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {AccountInformation} from '@cdo/apps/accounts/AccountInformation';
 import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailController';
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
 import ChangeEmailController from '@cdo/apps/accounts/ChangeEmailController';
@@ -12,8 +13,8 @@ import LtiRosterSyncSettings from '@cdo/apps/accounts/LtiRosterSyncSettings';
 import ManageLinkedAccountsController from '@cdo/apps/accounts/ManageLinkedAccountsController';
 import MigrateToMultiAuth from '@cdo/apps/accounts/MigrateToMultiAuth';
 import RemoveParentEmailController from '@cdo/apps/accounts/RemoveParentEmailController';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 import color from '@cdo/apps/util/color';
@@ -46,6 +47,19 @@ $(document).ready(() => {
         <MigrateToMultiAuth />
       </Provider>,
       migrateMultiAuthMountPoint
+    );
+  }
+
+  const accountInformationMountPoint = document.getElementById(
+    'account-information'
+  );
+  if (accountInformationMountPoint) {
+    const store = getStore();
+    ReactDOM.render(
+      <Provider store={store}>
+        <AccountInformation {...scriptData} />
+      </Provider>,
+      accountInformationMountPoint
     );
   }
 
@@ -147,7 +161,8 @@ $(document).ready(() => {
       isPasswordRequired,
       isGoogleClassroomStudent,
       isCleverStudent,
-      personalAccountLinkingEnabled
+      personalAccountLinkingEnabled,
+      lmsName
     );
   }
 

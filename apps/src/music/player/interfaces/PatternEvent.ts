@@ -9,13 +9,13 @@ export interface PatternEvent extends PlaybackEvent {
 }
 
 export interface PatternEventValue {
-  kit: string;
+  instrument: string;
   length?: 1 | 2;
   events: PatternTickEvent[];
+  ai?: boolean;
 }
 
 export interface PatternTickEvent {
   tick: number;
-  src: string;
   note: number;
 }

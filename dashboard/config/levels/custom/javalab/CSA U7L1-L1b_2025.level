@@ -76,7 +76,8 @@
       "squidWard1.png": "f7556ebb-2ace-4977-b107-5df35d6817e3.png",
       "squidwardSound.wav": "22a7dc8e-b2cc-4dcf-8507-db26ccd03908.wav"
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-17T00:24:16.299+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b_2023\\\"\"],\"cloned_from\":\"CSA U7L1-L1b_2023\"}]"

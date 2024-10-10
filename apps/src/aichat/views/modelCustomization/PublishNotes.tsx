@@ -58,13 +58,29 @@ const PublishNotes: React.FunctionComponent = () => {
     : ['In order to publish, you must fill out a model card', 'warning'];
 
   return (
-    <div className={modelCustomizationStyles.verticalFlexContainer}>
+    <div
+      id="uitest-publish-notes-tab-content"
+      className={modelCustomizationStyles.verticalFlexContainer}
+    >
       <div className={modelCustomizationStyles.customizationContainer}>
         {!isReadOnly && <Alert text={alertText} type={type} size="s" />}
         {MODEL_CARD_FIELDS_LABELS_ICONS.map(data => {
           const {property, label, editTooltip} = data;
           const InputTag = getInputTag(property);
 
+          if (property === 'exampleTopics') {
+            return (
+              <ExampleTopicsInputs
+                key={property}
+                fieldLabel={label}
+                fieldId={property}
+                tooltipText={editTooltip}
+                topics={modelCardInfo.exampleTopics}
+                readOnly={isReadOnly}
+                visibility={visibility}
+              />
+            );
+          }
           return (
             <div
               className={modelCustomizationStyles.inputContainer}
@@ -75,13 +91,7 @@ const PublishNotes: React.FunctionComponent = () => {
                 id={property}
                 tooltipText={editTooltip}
               />
-              {property === 'exampleTopics' && (
-                <ExampleTopicsInputs
-                  topics={modelCardInfo.exampleTopics}
-                  readOnly={isReadOnly}
-                />
-              )}
-              {property !== 'exampleTopics' && property !== 'isPublished' && (
+              {property !== 'isPublished' && (
                 <InputTag
                   id={property}
                   type="text"
@@ -103,6 +113,7 @@ const PublishNotes: React.FunctionComponent = () => {
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
         <Button
+          id="uitest-publish-notes-save"
           text="Save"
           iconLeft={
             saveInProgress && currentSaveType === 'saveModelCard'
@@ -116,6 +127,7 @@ const PublishNotes: React.FunctionComponent = () => {
           className={modelCustomizationStyles.updateButton}
         />
         <Button
+          id="uitest-publish-notes-publish"
           text="Publish"
           iconLeft={
             saveInProgress && currentSaveType === 'publishModelCard'
@@ -127,7 +139,7 @@ const PublishNotes: React.FunctionComponent = () => {
           className={modelCustomizationStyles.updateButton}
         />
       </div>
-      <SaveChangesAlerts />
+      <SaveChangesAlerts isReadOnly={isReadOnly} />
     </div>
   );
 };

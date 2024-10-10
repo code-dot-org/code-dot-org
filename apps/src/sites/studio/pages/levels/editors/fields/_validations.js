@@ -18,6 +18,6 @@ $(document).ready(function () {
       levelName={levelName}
       appName={appName}
     />,
-    document.getElementById('validations-container')
+    document.getElementById('validations-editor')
   );
 });

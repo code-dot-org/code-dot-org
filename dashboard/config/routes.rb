@@ -18,9 +18,16 @@ Dashboard::Application.routes.draw do
   # This matches any host that is not the codeprojects hostname
   constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
-    get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
-    get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
-    get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
+    resource :teacher_dashboard, only: [] do
+      resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
+        member do
+          get :parent_letter
+          get :courses, params: :course_version_name, action: :show
+          get :unit, params: :unitName, action: :show
+          get '*path', action: :show, via: :all, as: :subpath
+        end
+      end
+    end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
 
@@ -115,6 +122,9 @@ Dashboard::Application.routes.draw do
       member do
         post 'log_in'
       end
+      collection do
+        post 'section_instructors_verified'
+      end
     end
     # Section API routes (JSON only)
     concern :section_api_routes do
@@ -190,9 +200,9 @@ Dashboard::Application.routes.draw do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       post '/users/finish_sign_up', to: 'registrations#new'
-      get '/users/new_sign_up', to: 'registrations#new_sign_up'
-      # Part of the new sign up flow - work in progress
       get '/users/new_sign_up/account_type', to: 'registrations#account_type'
+      get '/users/new_sign_up/login_type', to: 'registrations#login_type'
+      get '/users/gdpr_check', to: 'registrations#gdpr_check'
       get '/users/new_sign_up/finish_student_account', to: 'registrations#finish_student_account'
       get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
@@ -647,6 +657,7 @@ Dashboard::Application.routes.draw do
           get :finish_link
           post :link_email
           post :new_account
+          post :unlink
         end
       end
     end
@@ -882,6 +893,10 @@ Dashboard::Application.routes.draw do
       concerns :assessments_routes
     end
 
+    get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
+    get 'dashboardapi/unit_summary/:unit_name', to: 'api#unit_summary'
+    get 'dashboardapi/lesson_materials/:unit_id', to: 'api#lesson_materials'
+
     # Wildcard routes for API controller: select all public instance methods in the controller,
     # and all template names in `app/views/api/*`.
     api_methods = (ApiController.instance_methods(false) +
@@ -942,6 +957,7 @@ Dashboard::Application.routes.draw do
         post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
         post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
+        post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
 
@@ -1168,12 +1184,12 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
-    post '/aichat/chat_completion', to: 'aichat#chat_completion'
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
     get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
-    post '/aichat/check_message_safety', to: 'aichat#check_message_safety'
     post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
     get '/aichat/chat_request/:id', to: 'aichat#chat_request'
+    get '/aichat/user_has_access', to: 'aichat#user_has_access'
+    post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
 

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification from '@cdo/apps/sharedComponents/Notification';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
@@ -14,7 +14,7 @@ import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
+import CensusTeacherBanner from '../census/CensusTeacherBanner';
 import HeaderBanner from '../HeaderBanner';
 import ProfessionalLearningSkinnyBanner from '../ProfessionalLearningSkinnyBanner';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -211,7 +211,6 @@ export const UnconnectedTeacherHomepage = ({
               buttonText={announcement.buttonText}
               buttonLink={announcement.link}
               newWindow={true}
-              googleAnalyticsId={announcement.id}
             />
             <div style={styles.clear} />
           </div>

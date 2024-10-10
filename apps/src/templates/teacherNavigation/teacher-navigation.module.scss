@@ -1,32 +1,41 @@
 @import 'color.scss';
 @import 'style-constants';
+@import '@cdo/apps/componentLibrary/common/styles/colors.css';
+
+@media print {
+  .sidebarContainer {
+    display: none !important;
+  }
+}
 
 .pageAndSidebar {
   display: flex;
   flex-direction: row;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .pageWithHeader {
   flex-grow: 1;
-  padding: 20px;
+  padding: 20px 48px 28px 38px;
   overflow-y: auto;
 }
 
 .widthLockedPage {
   max-width: $content-width;
-  padding: 10px 64px 64px 64px;
+  padding: 10px 0 64px 0;
 }
 
 .sidebarContainer {
   width: 242px;
   flex: 0 0 242px;
   background-color: $light_gray_50;
+  height: auto;
 }
 
 .sidebarContent {
   position: sticky;
   top: 0;
+  padding-bottom: 16px;
 }
 
 .sectionDropdown {
@@ -35,7 +44,6 @@
 }
 
 .optionIcon {
-  color: $neutral_dark80;
   font-size: 16px;
   line-height: normal;
 }
@@ -43,7 +51,13 @@
 .linkText {
   margin-bottom: 0 !important;
   font-weight: 600 !important;
-  color: $neutral_dark80;
+  color: var(--text-neutral-tertiary);
+  &.selected {
+    color: var(--text-neutral-primary);
+  }
+  &:hover {
+    color: var(--text-neutral-primary);
+  }
 }
 
 .sidebarOption {
@@ -54,12 +68,14 @@
   padding-left: 32px;
   text-decoration: none;
   margin-top: 4px;
+  color: var(--text-neutral-tertiary);
 
   &.selected {
     border-left: 4px solid $light_primary_500;
     background-color: $neutral_gray10;
     padding-left: 28px;
     text-decoration: none;
+    color: var(--text-neutral-primary);
   }
 
   &:hover {
@@ -73,7 +89,7 @@
   margin-bottom: 2px;
   padding-left: 16px;
   padding-top: 20px;
-  color: $neutral_dark80;
+  color: var(--text-neutral-quaternary);
 }
 
 .navLink {
@@ -108,4 +124,41 @@
 .iconContainer {
   width: 20px;
   text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSectionName {
+  font-size: 12px;
+  font-weight: 600;
+  color: $light_primary_500;
+  text-transform: uppercase;
+  height: 18px;
+}
+
+.skeletonHeaderSectionName {
+  width: fit-content;
+}
+
+.calendarContentContainer {
+  width: fit-content;
+}
+
+.minutesPerWeekWrapper {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.minutesPerWeekDescription {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.calendarDropdown {
+  width: fit-content;
+  margin-bottom: 0;
 }

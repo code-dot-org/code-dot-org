@@ -8,13 +8,15 @@ require 'policies/lti'
 require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
+  before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
+
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
-  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
+  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
 
   #
   # GET /users/sign_up
@@ -25,7 +27,6 @@ class RegistrationsController < Devise::RegistrationsController
       user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
       user_params[:email] ||= params[:email]
-
       @user = User.new_with_session(user_params.permit(:user_type, :email), session)
     else
       save_default_sign_up_user_type
@@ -60,19 +61,31 @@ class RegistrationsController < Devise::RegistrationsController
       PartialRegistration.persist_attributes(session, @user)
     end
 
-    render 'new'
+    if params[:new_sign_up].blank?
+      render 'new'
+    end
   end
 
   #
-  # Get /users/new_sign_up
+  # Get /users/new_sign_up/account_type
   #
-  def new_sign_up
-    render 'new_sign_up'
-  end
-
-  # Part of the new sign up flow - work in progress
   def account_type
     view_options(full_width: true, responsive_content: true)
+  end
+
+  #
+  # Get /users/new_sign_up/login_type
+  #
+  def login_type
+    view_options(full_width: true, responsive_content: true)
+    render 'login_type'
+  end
+
+  #
+  # Get /users/gdpr_check
+  #
+  def gdpr_check
+    render json: {gdpr: request.gdpr?, force_in_eu: request.params['force_in_eu']}
   end
 
   #
@@ -83,6 +96,7 @@ class RegistrationsController < Devise::RegistrationsController
       {value: age.to_s, text: age.to_s}
     end
 
+    @us_ip = us_ip?
     @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
       {value: code, text: name}
     end
@@ -94,10 +108,7 @@ class RegistrationsController < Devise::RegistrationsController
   # Get /users/new_sign_up/finish_teacher_account
   #
   def finish_teacher_account
-    # Get the request location
-    location = Geocoder.search(request.ip).try(:first)
-    country_code = location&.country_code.to_s.upcase
-    @us_ip = ['US', 'RD'].include?(country_code)
+    @us_ip = us_ip?
     render 'finish_teacher_account'
   end
 
@@ -152,7 +163,14 @@ class RegistrationsController < Devise::RegistrationsController
           error_message: "retry ##{retries} failed with exception: #{exception}"
         )
       end
-      super
+
+      if ActiveModel::Type::Boolean.new.cast(params[:new_sign_up])
+        session[:user_return_to] ||= params[:user_return_to]
+        @user = Services::PartialRegistration::UserBuilder.call(request: request)
+        sign_in @user
+      else
+        super
+      end
     end
 
     if current_user && current_user.errors.blank?
@@ -177,6 +195,7 @@ class RegistrationsController < Devise::RegistrationsController
       current_user.generate_progress_from_storage_id(storage_id) if storage_id
       PartialRegistration.delete session
       if Policies::Lti.lti? current_user
+        current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
         lms_name = Queries::Lti.get_lms_name_from_user(current_user)
         metadata = {
           'user_type' => current_user.user_type,
@@ -666,5 +685,12 @@ class RegistrationsController < Devise::RegistrationsController
     User.ignore_deleted_at_index.destroy(user_ids_to_destroy)
 
     log_account_deletion_to_firehose(current_user, dependent_users)
+  end
+
+  private def us_ip?
+    # Get the request location
+    location = Geocoder.search(request.ip).try(:first)
+    country_code = location&.country_code.to_s.upcase
+    ['US', 'RD'].include?(country_code)
   end
 end

@@ -1,0 +1,15 @@
+name 'datascience-U2L8-CFU_2024-pilot'
+title 'Check for Understanding'
+height '80'
+width '50'
+description 'Match the type of visualization to the mythical creature sighting scenario where it would be most appropriate.'
+question 'Pie Chart'
+answer 'Showing the distribution of sightings across different creatures (e.g., Dragon, Phoenix, Griffin, and Yeti)'
+question 'Stacked Bar Chart'
+answer 'Comparing the total sightings of Unicorns and Yetis across multiple forests'
+question 'Line Graph'
+answer 'Comparing the growth of Griffin and Phoenix sightings over the past decade'
+question 'Bar Chart'
+answer 'Comparing the number of sightings of each mythical creature in a single forest'
+
+allow_multiple_attempts false

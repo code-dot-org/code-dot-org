@@ -434,7 +434,7 @@ export type ProcedureType =
 
 export type PointerMetadataMap = {
   [blockType: string]: {
-    imageSourceType: string;
+    expectedRootBlockType: string;
     imageIndex: number;
   };
 };

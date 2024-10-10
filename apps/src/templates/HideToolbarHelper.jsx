@@ -5,8 +5,6 @@ import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import msg from '@cdo/locale';
 
-import trackEvent from '../util/trackEvent';
-
 // Note that additional styling can be found in apps/style/HideToolbarHelper.scss.
 
 const HideToolbarHelperCookieName = 'hide_toolbar_helper';
@@ -76,10 +74,6 @@ export default class HideToolbarHelper extends React.Component {
     // If we previously have shown the helper, and aren't now, and it's the
     // first time we've encountered this situation, then do a couple things.
     if (this.wasHelperShowing && !showHelper && !this.didTrackToolbarHide) {
-      // Let's track the disapearance of the toolbar after we had previously
-      // shown the helper.
-      trackEvent('Research', 'HideToolbarHelper', 'hid-' + window.innerHeight);
-
       // And also set the cookie so this user doesn't see the helper again
       // for a year.
       this.setHideHelperCookie();
@@ -106,13 +100,6 @@ export default class HideToolbarHelper extends React.Component {
   onClick = () => {
     this.setHideHelperCookie();
     this.updateLayout();
-
-    // Let's track the click-to-dismiss event.
-    trackEvent(
-      'Research',
-      'HideToolbarHelper',
-      'click-' + window.innerHeight + '-' + document.body.offsetHeight
-    );
   };
 
   setHideHelperCookie() {

@@ -13,8 +13,8 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
 import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getSimilarRecommendations,
   getStretchRecommendations,

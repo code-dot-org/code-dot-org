@@ -4,18 +4,18 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   asyncLoadCoursesWithProgress,
   setScriptId,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 
-import firehoseClient from '../lib/util/firehose';
+import firehoseClient from '../metrics/firehose';
 
 import styles from './unit-selector-v2.module.scss';
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const recordEvent = (eventName, sectionId, dataJson = {}) => {
   firehoseClient.putRecord(
@@ -40,6 +40,7 @@ function UnitSelectorV2({
   setScriptId,
   asyncLoadCoursesWithProgress,
   isLoadingCourses,
+  isLoadingSectionData,
 }) {
   React.useEffect(() => {
     if (!coursesWithProgress || coursesWithProgress.length === 0) {
@@ -85,7 +86,8 @@ function UnitSelectorV2({
     />
   );
 
-  return isLoadingCourses ||
+  return isLoadingSectionData ||
+    isLoadingCourses ||
     !coursesWithProgress ||
     coursesWithProgress.length === 0 ? (
     loadingDropdown()
@@ -113,6 +115,7 @@ UnitSelectorV2.propTypes = {
   className: PropTypes.string,
   asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
   isLoadingCourses: PropTypes.bool,
+  isLoadingSectionData: PropTypes.bool.isRequired,
 };
 
 export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
@@ -123,6 +126,7 @@ export default connect(
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,
+    isLoadingSectionData: state.teacherSections.isLoadingSectionData,
   }),
   dispatch => ({
     setScriptId(scriptId) {

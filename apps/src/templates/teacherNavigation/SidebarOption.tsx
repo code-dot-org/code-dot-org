@@ -12,6 +12,7 @@ import styles from './teacher-navigation.module.scss';
 interface SidebarOptionProps {
   isSelected: boolean;
   sectionId: number;
+  courseVersionName: string | null;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
   onClick: () => void;
 }
@@ -19,6 +20,7 @@ interface SidebarOptionProps {
 const SidebarOption: React.FC<SidebarOptionProps> = ({
   isSelected,
   sectionId,
+  courseVersionName,
   pathKey,
   onClick,
 }) => {
@@ -27,6 +29,7 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       key={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
       to={generatePath(LABELED_TEACHER_NAVIGATION_PATHS[pathKey].absoluteUrl, {
         sectionId: sectionId,
+        courseVersionName: courseVersionName,
       })}
       className={classNames(styles.sidebarOption, {
         [styles.selected]: isSelected,
@@ -39,7 +42,11 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
           iconName={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon || ''}
         />
       </div>
-      <BodyTwoText className={styles.linkText}>
+      <BodyTwoText
+        className={classNames(styles.linkText, {
+          [styles.selected]: isSelected,
+        })}
+      >
         {LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
       </BodyTwoText>
     </NavLink>

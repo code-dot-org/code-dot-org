@@ -12,90 +12,18 @@
   %i.fa.fa-chevron-left
   %span= t('crud.back')
 
-%h2= @page_title
+%h1.text-black= @page_title
 
 - unless current_user.migrated?
   -# Mount point for React MigrateToMultiAuth component.
   %div#migrate-multi-auth
 
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
-  - email_mismatch = current_user.errors.delete(:email_mismatch)
-  - current_user.reload if email_mismatch.present?
-  = render "devise/shared/error_messages", resource: resource
-  - if current_user.permission?(UserPermission::AUTHORIZED_TEACHER)
-    .field
-      = f.label '✔ '+t('activerecord.attributes.user.verified_teacher'), class: 'label-bold', style: 'color:green; text-transform: capitalize';
-  %div
-  .field
-    = f.label :name, class: "label-bold"
-    - if f.object.secret_picture_account_only?
-      = f.object.name
-    - else # most users are allowed to edit username
-      = f.text_field :name, autofocus: true, maxlength: 255
-  - if !f.object.teacher_managed_account?
-    - if !current_user.parent_managed_account?
-      .field
-        = f.label :email, class: "label-bold"
-        - if current_user.migrated? && !current_user.student?
-          %em= t('user.new_email_hint')
-          %br/
-        %span#displayed-user-email= f.object.email.present? ? f.object.email : "***#{t('user.encrypted')}***"
-        - if current_user.should_see_edit_email_link?
-          (
-          %a#edit-email-link{href: '#'}= t('user.update_email')
-          )
-  - if resource.username.present?
-    .field
-      = f.label :username, class: "label-bold"
-      = f.text_field :username, autofocus: false, maxlength: 20, minlength: 5
-  - if f.object.can_edit_password? && f.object.encrypted_password.present?
-    %div
-      = f.label :password, maxlength: 255, class: "label-bold"
-      %em= t('user.new_password_hint')
-      %br/
-      = f.password_field :password, autocomplete: 'off', maxlength: 255
-    %div
-      = f.label :password_confirmation, class: "label-bold"
-      = f.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
-  - if f.object.sponsored?
-    .field
-      = f.label :password, class: "label-bold"
-      = t('user.no_password_because_sponsored')
-  - if f.object.encrypted_password.present?
-    %div
-      = f.label :current_password, class: "label-bold"
-      %em= t('user.current_password_hint')
-      %br/
-      = f.password_field :current_password, maxlength: 255
-  - if !resource.teacher?
-    .field
-      = f.label t('signup_form.age'), class: "label-bold"
-      - if @student_in_lockout_flow
-        %em= t('user.update_field_parent_permission_required')
-        %br/
-      = f.select :age, User::AGE_DROPDOWN_OPTIONS, {}, disabled: @student_in_lockout_flow
-    - if experiment_value('gender', request)
-      .field
-        = f.label :gender_student_input, t('signup_form.gender'), class: "label-bold"
-        = f.text_field :gender_student_input, maxlength: 50
-    - if @is_usa
-      .field
-        = f.label :us_state, t('activerecord.attributes.user.us_state'), class: 'label-bold'
-        - if @student_in_lockout_flow
-          %em= t('user.update_field_parent_permission_required')
-          %br/
-        = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, disabled: @student_in_lockout_flow, required: true
-        = f.hidden_field :country_code, value: @country_code
-  - if resource.teacher?
-    .field
-      = f.label :school, class: "label-bold"
-      = f.text_field :school, class: 'input-xlarge', maxlength: 255
-    .field
-      = f.label :full_address, class: "label-bold"
-      = f.text_area :full_address, class: 'input-xxlarge', rows: 4, maxlength: 255
-    = f.hidden_field :age, value: "21"
+- email_mismatch = current_user.errors.delete(:email_mismatch)
+- current_user.reload if email_mismatch.present?
+= render "devise/shared/error_messages", resource: current_user
 
-  %div#submit-update= f.submit t('user.update'), class: 'btn btn-primary'
+-# Mount point for React AccountInformation component.
+%div#account-information
 
 - if current_user.should_see_add_password_form?
   -# Mount point for React AddPasswordForm component.
@@ -152,19 +80,6 @@
       providers: JSON.dump(current_user.providers.filter_map(&:presence)),
     },
   }
-
--# Skip this section as ai-rubrics experiment needs to be unit aware
--# if Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
-  - if current_user.verified_teacher?
-    = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |form|
-      %hr
-      %h2= t('activerecord.attributes.user.ai_settings_header')
-      .field
-        = form.label :ai_rubrics_disabled, class: "label-bold" do
-          = form.check_box :ai_rubrics_disabled
-          %span{style: "position: relative; top: 3px"}
-            = t('activerecord.attributes.user.ai_rubrics_disabled')
-      %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
 
 - if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
@@ -292,6 +207,10 @@
     edit: {
       userAge: current_user.age,
       userType: current_user.user_type,
+      userUsername: current_user.username,
+      userDisplayName: current_user.name,
+      userEmail: current_user.email,
+      userProperties: current_user.properties,
       isAdmin: current_user.admin,
       isOauth: current_user.oauth?,
       isPasswordRequired: current_user.encrypted_password.present?,
@@ -300,7 +219,27 @@
       isCleverStudent: current_user.clever_student?,
       dependentStudentsCount: Queries::User.dependent_students_count(current_user.id),
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
-      lmsName: Queries::Lti.get_lms_name_from_user(current_user)
+      lmsName: Queries::Lti.get_lms_name_from_user(current_user),
+      verifiedTeacher: current_user.verified_teacher?,
+      canChangeUserType: current_user.can_change_own_user_type?,
+      secretPictureAccountOnly: current_user.secret_picture_account_only?,
+      errors: current_user.errors,
+      migrated: current_user.migrated?,
+      parentManagedAccount: current_user.parent_managed_account?,
+      teacherManagedAccount: current_user.teacher_managed_account?,
+      isStudent: current_user.student?,
+      shouldSeeEditEmailLink: current_user.should_see_edit_email_link?,
+      hashedEmail: current_user.hashed_email,
+      encryptedPasswordPresent: current_user.encrypted_password.present?,
+      canEditPassword: current_user.can_edit_password?,
+      sponsored: current_user.sponsored?,
+      showGenderInput: experiment_value('gender', request),
+      userTypeOptions: user_type_options,
+      usStateDropdownOptions: us_state_options,
+      ageDropdownOptions: User::AGE_DROPDOWN_OPTIONS,
+      studentInLockoutFlow: @student_in_lockout_flow,
+      countryCode: @country_code,
+      isUSA: @is_usa,
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}

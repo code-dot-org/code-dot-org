@@ -1,5 +1,6 @@
 require 'json'
 require_relative 'http_cache'
+require_relative '../state_abbr'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
@@ -697,14 +698,17 @@ module SharedConstants
     },
   }.freeze
   CENSUS_CONSTANTS = OpenStruct.new(
-    {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
+    {CURRENT_CENSUS_SCHOOL_YEAR: 2024}
+  )
+
+  CAP_LINKS = OpenStruct.new(
+    PARENTAL_CONSENT_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts',
   )
 
   LMS_LINKS = OpenStruct.new(
     {
       INTEGRATION_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org',
       INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
-      INSTALL_GUIDE_FOR_CANVAS_URL: 'https://support.code.org/hc/en-us/articles/23123273783437-Install-the-Code-org-Integration-for-Canvas',
       ROSTER_SYNC_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System',
       ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
       # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation
@@ -720,6 +724,7 @@ module SharedConstants
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
   AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
+  AICHAT_SAFETY_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   # These reflect the 'status' of an AI Interaction,
   # and are used in both AI Tutor and AI Chat.
@@ -727,6 +732,7 @@ module SharedConstants
     ERROR: 'error',
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
+    USER_INPUT_TOO_LARGE: 'user_input_too_large',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
@@ -742,6 +748,12 @@ module SharedConstants
   USER_TYPES = OpenStruct.new(
     STUDENT: 'student',
     TEACHER: 'teacher',
+  ).freeze
+
+  NON_SCHOOL_OPTIONS = OpenStruct.new(
+    SELECT_A_SCHOOL: 'selectASchool',
+    CLICK_TO_ADD: 'clickToAdd',
+    NO_SCHOOL_SETTING: 'noSchoolSetting'
   ).freeze
 
   AI_REQUEST_EXECUTION_STATUS = {
@@ -762,7 +774,9 @@ module SharedConstants
     # Profanity detected in the model's output.
     MODEL_PROFANITY: 1003,
     # PII detected in the model's output.
-    MODEL_PII: 1004
+    MODEL_PII: 1004,
+    # The user input request exceeded the maximum token size allowed.
+    USER_INPUT_TOO_LARGE: 1005
   }
 
   AI_CHAT_MODEL_IDS = {
@@ -772,4 +786,8 @@ module SharedConstants
     KAREN: "gen-ai-karen-creative-mistral-7b",
     PIRATE: "gen-ai-mistral-pirate-7b"
   }
+
+  AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
+
+  US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 end

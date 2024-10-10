@@ -122,8 +122,6 @@ module Services
         email: email_address,
         )
       user.authentication_options = [ao]
-      user.primary_contact_info = ao
-      # TODO As final step of the LTI user creation, create LtiUserIdentity for the new user. https://codedotorg.atlassian.net/browse/P20-788
       user
     end
 
@@ -195,6 +193,12 @@ module Services
         had_changes ||= (user_was_new || user.changed?)
         user.save!
         if user_was_new
+          lti_user_identity = Queries::Lti.lti_user_identity(user, lti_integration)
+          deployment = lti_section.lti_course&.lti_deployment
+          unless deployment&.lti_user_identities&.include?(lti_user_identity)
+            deployment.lti_user_identities << lti_user_identity
+          end
+
           Metrics::Events.log_event(
             user: user,
             event_name: 'lti_user_created',
@@ -239,6 +243,9 @@ module Services
           had_changes = true
         end
       end
+
+      # Unarchive archived sections, even if there are no changes
+      section.update(hidden: false) if section.hidden
 
       {
         had_changes: had_changes,

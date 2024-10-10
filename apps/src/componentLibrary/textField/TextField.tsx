@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {ChangeEvent, AriaAttributes} from 'react';
+import React, {AriaAttributes, ChangeEvent} from 'react';
 
 import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
@@ -14,6 +14,8 @@ export interface TextFieldProps extends AriaAttributes {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   /** TextField id */
   id?: string;
+  /** Specifies the type of input; see included options below. */
+  inputType?: 'text' | 'email' | 'password' | 'number';
   /** The name attribute specifies the name of an input element.
      The name attribute is used to reference elements in a JavaScript,
      or to reference form data after a form is submitted.
@@ -41,6 +43,12 @@ export interface TextFieldProps extends AriaAttributes {
   color?: 'black' | 'gray' | 'white';
   /** Size of TextField */
   size?: Exclude<ComponentSizeXSToL, 'xs'>;
+  /** max length of TextField */
+  maxLength?: number;
+  /** min length of TextField */
+  minLength?: number;
+  /** min length of TextField */
+  autoComplete?: string;
 }
 
 /**
@@ -58,6 +66,7 @@ export interface TextFieldProps extends AriaAttributes {
  */
 const TextField: React.FunctionComponent<TextFieldProps> = ({
   id,
+  inputType = 'text',
   label,
   onChange,
   name,
@@ -69,6 +78,9 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   helperIcon,
   errorMessage,
   className,
+  maxLength,
+  minLength,
+  autoComplete,
   color = 'black',
   size = 'm',
   ...rest
@@ -88,13 +100,19 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
       {label && <span className={moduleStyles.textFieldLabel}>{label}</span>}
       <input
         id={id}
-        type="text"
+        type={inputType}
         name={name}
         value={value}
         placeholder={placeholder}
         readOnly={readOnly}
         disabled={disabled}
+        maxLength={maxLength}
+        minLength={minLength}
+        autoComplete={autoComplete}
         onChange={onChange}
+        className={classNames({
+          [moduleStyles.hasError]: errorMessage,
+        })}
         {...ariaProps}
         aria-disabled={disabled || ariaProps['aria-disabled']}
       />

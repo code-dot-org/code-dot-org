@@ -5,27 +5,26 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import ValidationStatusIcon from './ValidationStatusIcon';
+
 import moduleStyles from './styles/validation-results.module.scss';
 
 interface ValidationResultsProps {
   className?: string;
 }
 
-function getClassForResult(result: ValidationResult) {
+function getStatusForResult(result: ValidationResult) {
   switch (result.result) {
     case 'PASS':
     case 'EXPECTED_FAILURE':
-      return classNames(moduleStyles.passIcon, 'fa-solid fa-check-circle');
+      return 'passed';
     case 'FAIL':
     case 'UNEXPECTED_SUCCESS':
-      return classNames(moduleStyles.failIcon, 'fa-solid fa-times-circle');
+      return 'failed';
     case 'SKIP':
-      return classNames(moduleStyles.cautionIcon, 'fa-solid fa-minus-circle');
+      return 'caution';
     case 'ERROR':
-      return classNames(
-        moduleStyles.failIcon,
-        'fa-solid fa-exclamation-circle'
-      );
+      return 'error';
   }
 }
 
@@ -35,7 +34,7 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   const {validationResults, satisfied} = useAppSelector(
     state => state.lab.validationState
   );
-  const isTesting = useAppSelector(state => state.lab2System.isTesting);
+  const isValidating = useAppSelector(state => state.lab2System.isValidating);
 
   if (!validationResults) {
     return null;
@@ -44,8 +43,8 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   return (
     <div className={classNames(className, moduleStyles.validationResults)}>
       <h4>{codebridgeI18n.validationResults()}</h4>
-      {isTesting && <i className="fa fa-spinner fa-spin" />}
-      {!isTesting && (
+      {isValidating && <i className="fa fa-spinner fa-spin" />}
+      {!isValidating && (
         <div>
           <table className={moduleStyles.validationResultsTable}>
             <thead>
@@ -59,7 +58,10 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
                 <tr key={index}>
                   <td>{result.message}</td>
                   <td>
-                    <i className={getClassForResult(result)} />
+                    <ValidationStatusIcon
+                      status={getStatusForResult(result)}
+                      className={moduleStyles.icon}
+                    />
                     {result.result}
                   </td>
                 </tr>
@@ -69,21 +71,17 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
           <div className={moduleStyles.testSummary}>
             {satisfied ? (
               <>
-                <i
-                  className={classNames(
-                    moduleStyles.passIcon,
-                    'fa-solid fa-check-circle'
-                  )}
+                <ValidationStatusIcon
+                  status="passed"
+                  className={moduleStyles.icon}
                 />{' '}
                 {codebridgeI18n.allTestsPassed()}
               </>
             ) : (
               <>
-                <i
-                  className={classNames(
-                    moduleStyles.failIcon,
-                    'fa-solid fa-exclamation-circle'
-                  )}
+                <ValidationStatusIcon
+                  status="failed"
+                  className={moduleStyles.icon}
                 />{' '}
                 {codebridgeI18n.testsDidNotPass()}
               </>
