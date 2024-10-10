@@ -372,7 +372,6 @@ class RubricsController < ApplicationController
   end
 
   private def compute_ai_eval_status_for_user(attempted:, last_attempt_evaluated:)
-    # TODO: return 'EVALUATED' if teacher_evaluated
     if attempted
       if last_attempt_evaluated
         return 'READY_TO_REVIEW'

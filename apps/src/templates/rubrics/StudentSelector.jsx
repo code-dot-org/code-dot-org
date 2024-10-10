@@ -29,6 +29,7 @@ function StudentSelector({
   reloadOnChange,
   reportingData,
   sectionId,
+  allTeacherEvaluationData,
   aiEvalStatusForUser,
 
   //from redux
@@ -57,6 +58,13 @@ function StudentSelector({
   if (students.length === 0) {
     return null;
   }
+
+  const hasTeacherEvalByUser = {};
+  allTeacherEvaluationData.forEach(userEvalData => {
+    if (userEvalData?.user_id) {
+      hasTeacherEvalByUser[userEvalData.user_id] = userEvalData.eval.length > 0;
+    }
+  });
 
   return (
     <Select
@@ -98,6 +106,7 @@ function StudentSelector({
                 {!!levelsWithProgress && aiEvalStatusForUser && (
                   <StudentProgressStatus
                     aiEvalStatus={aiEvalStatusForUser[student.id]}
+                    hasTeacherEval={hasTeacherEvalByUser[student.id]}
                   />
                 )}
               </div>
@@ -115,6 +124,7 @@ StudentSelector.propTypes = {
   reloadOnChange: PropTypes.bool,
   sectionId: PropTypes.number,
   reportingData: reportingDataShape,
+  allTeacherEvaluationData: PropTypes.array,
   aiEvalStatusForUser: PropTypes.object,
 
   //from redux
@@ -145,20 +155,21 @@ export default connect(
 const STATUS_BUBBLE_COLOR = {
   NOT_STARTED: style.grayStatusBlob,
   IN_PROGRESS: style.yellowStatusBlob,
-  SUBMITTED: style.greenStatusBlob,
   READY_TO_REVIEW: style.redStatusBlob,
+  EVALUATED: style.greenStatusBlob,
 };
 
 const STATUS_BUBBLE_TEXT = {
   NOT_STARTED: i18n.notStarted(),
   IN_PROGRESS: i18n.inProgress(),
-  SUBMITTED: i18n.submitted(),
   READY_TO_REVIEW: i18n.readyToReview(),
+  EVALUATED: i18n.evaluated(),
 };
 
-function StudentProgressStatus({aiEvalStatus}) {
-  const bubbleColor = STATUS_BUBBLE_COLOR[aiEvalStatus];
-  const bubbleText = STATUS_BUBBLE_TEXT[aiEvalStatus];
+function StudentProgressStatus({aiEvalStatus, hasTeacherEval}) {
+  const status = hasTeacherEval ? 'EVALUATED' : aiEvalStatus;
+  const bubbleColor = STATUS_BUBBLE_COLOR[status];
+  const bubbleText = STATUS_BUBBLE_TEXT[status];
 
   if (bubbleText === null) {
     return null;
@@ -172,4 +183,5 @@ function StudentProgressStatus({aiEvalStatus}) {
 StudentProgressStatus.propTypes = {
   level: levelWithProgress,
   aiEvalStatus: PropTypes.string,
+  hasTeacherEval: PropTypes.bool,
 };
