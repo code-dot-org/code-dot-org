@@ -65,28 +65,29 @@ def main
       user_message_text = JSON.parse(row.new_message)["chatMessageText"]
       execution_status = row.execution_status
       selected_model_id = JSON.parse(row.model_customizations)["selectedModelId"]
+      path = row.level_id
+      # In case a data row does not include level_id.
+      if row.level_id.is_a? Integer
+        level = Level.find(row.level_id)
+        script_level = level.script_levels.find_by_script_id(row.script_id)
+        if script_level
+          # This handles chat requests that occurred on standard levels in a progression
+          path = script_level.path
+        else
+          # This handles chat requests that occurred on a sublevel
+          parent_levels = BubbleChoice.parent_levels(level.name)
+          parent_levels_in_script = parent_levels.filter do |pl|
+            pl.script_levels.any? {|sl| sl.script_id == row.script_id}
+          end
 
-      level = Level.find(row.level_id)
-      path = ""
-
-      script_level = level.script_levels.find_by_script_id(row.script_id)
-      if script_level
-        # This handles chat requests that occurred on standard levels in a progression
-        path = script_level.path
-      else
-        # This handles chat requests that occurred on a sublevel
-        parent_levels = BubbleChoice.parent_levels(level.name)
-        parent_levels_in_script = parent_levels.filter do |pl|
-          pl.script_levels.any? {|sl| sl.script_id == row.script_id}
-        end
-
-        if parent_levels_in_script
-          parent_level = parent_levels_in_script.first
-          sublevel_position = parent_level.sublevel_position(level)
-          path = parent_level.build_script_level_path(
-            parent_level.script_levels.first,
-            {sublevel_position: sublevel_position}
-          )
+          if parent_levels_in_script
+            parent_level = parent_levels_in_script.first
+            sublevel_position = parent_level.sublevel_position(level)
+            path = parent_level.build_script_level_path(
+              parent_level.script_levels.first,
+              {sublevel_position: sublevel_position}
+            )
+          end
         end
       end
 
