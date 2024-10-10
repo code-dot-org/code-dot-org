@@ -127,6 +127,10 @@
       line-height: 1.2;
       font-weight: bold;
       margin: 4px 0;
+
+      &:hover {
+        background-color: $light_gray_800;
+      }
     }
   }
 }
