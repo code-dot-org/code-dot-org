@@ -96,14 +96,14 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
         visualAppearance="heading-sm"
         className={commonStyles.sectionHeader}
       >
-        {i18n.schoolInformationSchoolInformation()}
+        {i18n.schoolInformation_schoolInformation()}
       </Heading2>
       <form name="school-information-form">
         <div className={commonStyles.inputContainer}>
           <SchoolDataInputs {...schoolDataInfoProps} includeHeaders={false} />
           {success && (
             <Alert
-              text={i18n.schoolInformationUpdateSuccess()}
+              text={i18n.schoolInformation_updateSuccess()}
               type={alertTypes.success}
               className={commonStyles.alert}
               onClose={() => setSuccess(false)}
@@ -111,7 +111,7 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
           )}
           {failure && (
             <Alert
-              text={i18n.schoolInformationUpdateFailure()}
+              text={i18n.schoolInformation_updateFailure()}
               type={alertTypes.danger}
               className={commonStyles.alert}
               onClose={() => setFailure(false)}
@@ -121,7 +121,7 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
         <div>
           <Button
             className={commonStyles.submit}
-            text={i18n.schoolInformationUpdateSchoolInformation()}
+            text={i18n.schoolInformation_updateSchoolInformation()}
             onClick={handleSchoolInformationUpdate}
             disabled={saveDisabled}
           />

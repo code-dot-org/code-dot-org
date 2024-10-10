@@ -50,14 +50,14 @@ describe('SchoolInformation', () => {
   it('renders the component for teachers', () => {
     render(<SchoolInformation {...defaultProps} />);
     expect(
-      screen.getByText(i18n.schoolInformationSchoolInformation())
+      screen.getByText(i18n.schoolInformation_schoolInformation())
     ).toBeInTheDocument();
   });
 
   it('does not render the component for students', () => {
     render(<SchoolInformation {...defaultProps} isStudent={true} />);
     expect(
-      screen.queryByText(i18n.schoolInformationSchoolInformation())
+      screen.queryByText(i18n.schoolInformation_schoolInformation())
     ).toBeNull();
   });
 
@@ -66,7 +66,7 @@ describe('SchoolInformation', () => {
     expect(screen.getByRole('form')).toBeInTheDocument();
     expect(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     ).toBeInTheDocument();
   });
@@ -76,7 +76,7 @@ describe('SchoolInformation', () => {
     render(<SchoolInformation {...defaultProps} />);
     expect(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     ).toBeDisabled();
   });
@@ -85,7 +85,7 @@ describe('SchoolInformation', () => {
     render(<SchoolInformation {...defaultProps} />);
     expect(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     ).toBeEnabled();
   });
@@ -94,17 +94,17 @@ describe('SchoolInformation', () => {
     render(<SchoolInformation {...defaultProps} />);
     fireEvent.click(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     );
 
     await waitFor(() =>
       expect(
-        screen.getByText(i18n.schoolInformationUpdateSuccess())
+        screen.getByText(i18n.schoolInformation_updateSuccess())
       ).toBeInTheDocument()
     );
     expect(
-      screen.queryByText(i18n.schoolInformationUpdateFailure())
+      screen.queryByText(i18n.schoolInformation_updateFailure())
     ).not.toBeInTheDocument();
   });
 
@@ -113,17 +113,17 @@ describe('SchoolInformation', () => {
     render(<SchoolInformation {...defaultProps} />);
     fireEvent.click(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     );
 
     await waitFor(() =>
       expect(
-        screen.getByText(i18n.schoolInformationUpdateFailure())
+        screen.getByText(i18n.schoolInformation_updateFailure())
       ).toBeInTheDocument()
     );
     expect(
-      screen.queryByText(i18n.schoolInformationUpdateSuccess())
+      screen.queryByText(i18n.schoolInformation_updateSuccess())
     ).not.toBeInTheDocument();
   });
 
@@ -131,14 +131,14 @@ describe('SchoolInformation', () => {
     const {rerender} = render(<SchoolInformation {...defaultProps} />);
     fireEvent.click(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     );
 
     // Simulate success alert
     await waitFor(() =>
       expect(
-        screen.getByText(i18n.schoolInformationUpdateSuccess())
+        screen.getByText(i18n.schoolInformation_updateSuccess())
       ).toBeInTheDocument()
     );
 
@@ -151,10 +151,10 @@ describe('SchoolInformation', () => {
     rerender(<SchoolInformation {...defaultProps} />);
 
     expect(
-      screen.queryByText(i18n.schoolInformationUpdateSuccess())
+      screen.queryByText(i18n.schoolInformation_updateSuccess())
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByText(i18n.schoolInformationUpdateFailure())
+      screen.queryByText(i18n.schoolInformation_updateFailure())
     ).not.toBeInTheDocument();
   });
 
@@ -162,7 +162,7 @@ describe('SchoolInformation', () => {
     render(<SchoolInformation {...defaultProps} />);
     fireEvent.click(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     );
 
@@ -180,18 +180,18 @@ describe('SchoolInformation', () => {
     render(<SchoolInformation {...defaultProps} />);
     fireEvent.click(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     );
 
     // Wait for success alert to appear
     await waitFor(() => {
       expect(
-        screen.getByText(i18n.schoolInformationUpdateSuccess())
+        screen.getByText(i18n.schoolInformation_updateSuccess())
       ).toBeInTheDocument();
     });
     expect(
-      screen.queryByText(i18n.schoolInformationUpdateFailure())
+      screen.queryByText(i18n.schoolInformation_updateFailure())
     ).not.toBeInTheDocument();
   });
 
@@ -200,18 +200,18 @@ describe('SchoolInformation', () => {
     render(<SchoolInformation {...defaultProps} />);
     fireEvent.click(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     );
 
     // Wait for failure alert to appear
     await waitFor(() => {
       expect(
-        screen.getByText(i18n.schoolInformationUpdateFailure())
+        screen.getByText(i18n.schoolInformation_updateFailure())
       ).toBeInTheDocument();
     });
     expect(
-      screen.queryByText(i18n.schoolInformationUpdateSuccess())
+      screen.queryByText(i18n.schoolInformation_updateSuccess())
     ).not.toBeInTheDocument();
   });
 
@@ -219,21 +219,21 @@ describe('SchoolInformation', () => {
     render(<SchoolInformation {...defaultProps} />);
     fireEvent.click(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     );
 
     // Simulate success alert
     await waitFor(() =>
       expect(
-        screen.getByText(i18n.schoolInformationUpdateSuccess())
+        screen.getByText(i18n.schoolInformation_updateSuccess())
       ).toBeInTheDocument()
     );
 
     // Close the success alert
     fireEvent.click(screen.getByRole('button', {name: /close/i}));
     expect(
-      screen.queryByText(i18n.schoolInformationUpdateSuccess())
+      screen.queryByText(i18n.schoolInformation_updateSuccess())
     ).not.toBeInTheDocument();
   });
 
@@ -242,21 +242,21 @@ describe('SchoolInformation', () => {
     render(<SchoolInformation {...defaultProps} />);
     fireEvent.click(
       screen.getByRole('button', {
-        name: i18n.schoolInformationUpdateSchoolInformation(),
+        name: i18n.schoolInformation_updateSchoolInformation(),
       })
     );
 
     // Simulate success alert
     await waitFor(() =>
       expect(
-        screen.getByText(i18n.schoolInformationUpdateFailure())
+        screen.getByText(i18n.schoolInformation_updateFailure())
       ).toBeInTheDocument()
     );
 
     // Close the success alert
     fireEvent.click(screen.getByRole('button', {name: /close/i}));
     expect(
-      screen.queryByText(i18n.schoolInformationUpdateFailure())
+      screen.queryByText(i18n.schoolInformation_updateFailure())
     ).not.toBeInTheDocument();
   });
 });
