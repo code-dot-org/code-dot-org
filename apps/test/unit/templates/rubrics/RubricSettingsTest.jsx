@@ -24,7 +24,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect as chaiExpect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const fakeStudent = {
   id: 1,
@@ -211,10 +211,13 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
+
+    await wait();
+
     const button = screen.getByRole('button', {
       name: i18n.runAiAssessmentClass(),
     });
-    expect(button).to.not.be.disabled;
+    expect(button).not.toBeDisabled();
   });
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
@@ -234,7 +237,7 @@ describe('RubricSettings', () => {
     const button = screen.getByRole('button', {
       name: i18n.runAiAssessmentClass(),
     });
-    expect(button).to.be.disabled;
+    expect(button).toBeDisabled();
   });
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
@@ -258,7 +261,7 @@ describe('RubricSettings', () => {
     const button = screen.getByRole('button', {
       name: i18n.runAiAssessmentClass(),
     });
-    expect(button).to.not.be.disabled;
+    expect(button).toBeDisabled();
   });
 
   it('shows pending status when eval is pending', async () => {
@@ -285,7 +288,7 @@ describe('RubricSettings', () => {
     let button = screen.getByRole('button', {
       name: i18n.runAiAssessmentClass(),
     });
-    expect(button).to.not.be.disabled;
+    expect(button).not.toBeDisabled();
 
     // show pending state after clicking run
 
@@ -298,7 +301,7 @@ describe('RubricSettings', () => {
     button = screen.getByRole('button', {
       name: i18n.runAiAssessmentClass(),
     });
-    expect(button).to.be.disabled;
+    expect(button).toBeDisabled();
   });
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
@@ -331,7 +334,7 @@ describe('RubricSettings', () => {
     fireEvent.click(button);
 
     //sends event on click
-    expect(sendEventSpy).to.have.been.calledWith(
+    chaiExpect(sendEventSpy).to.have.been.calledWith(
       EVENTS.TA_RUBRIC_SECTION_AI_EVAL,
       {
         rubricId: defaultRubric.id,
@@ -342,8 +345,9 @@ describe('RubricSettings', () => {
     // Perform fetches and re-renders
     await wait();
 
-    expect(screen.getByRole('button', {name: i18n.runAiAssessmentClass()})).to
-      .be.disabled;
+    expect(
+      screen.getByRole('button', {name: i18n.runAiAssessmentClass()})
+    ).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_pending());
 
     // Advance clock 5 seconds
@@ -352,9 +356,10 @@ describe('RubricSettings', () => {
     // Perform fetches and re-renders
     await wait();
 
-    expect(fetchStub).to.have.callCount(4);
-    expect(screen.getByRole('button', {name: i18n.runAiAssessmentClass()})).to
-      .be.disabled;
+    chaiExpect(fetchStub).to.have.callCount(4);
+    expect(
+      screen.getByRole('button', {name: i18n.runAiAssessmentClass()})
+    ).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_success());
     sendEventSpy.restore();
   });
@@ -438,7 +443,7 @@ describe('RubricSettings', () => {
     screen.getByText(i18n.rubricNumberStudentEvals({teacherEvalCount: 2}));
     const button = screen.getByRole('button', {name: i18n.downloadCSV()});
     fireEvent.click(button);
-    expect(sendEventSpy).to.have.been.calledWith(
+    chaiExpect(sendEventSpy).to.have.been.calledWith(
       EVENTS.TA_RUBRIC_CSV_DOWNLOADED,
       {
         unitName: 'test-2023',
@@ -466,7 +471,7 @@ describe('RubricSettings', () => {
     );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
-    expect(input.checked).to.be.true;
+    expect(input.checked).toBe(true);
   });
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
@@ -488,7 +493,7 @@ describe('RubricSettings', () => {
     );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
-    expect(input.checked).to.be.false;
+    expect(input.checked).toBe(false);
   });
 
   it('updates the AI disabled user setting when the toggle is used', async () => {
@@ -516,8 +521,8 @@ describe('RubricSettings', () => {
     fireEvent.click(input);
     fireEvent.change(input);
 
-    expect(input.checked).to.be.false;
-    expect(setStub).to.have.been.calledWith(true);
+    expect(input.checked).toBe(false);
+    chaiExpect(setStub).to.have.been.calledWith(true);
     setStub.restore();
   });
 });
