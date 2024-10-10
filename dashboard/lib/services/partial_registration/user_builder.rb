@@ -50,9 +50,6 @@ module Services
             user_params[:parent_email_update_only] = '0'
             user_params[:parent_email_preference_request_ip] = request.ip
             user_params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
-          else
-            user_params[:parent_email_preference_opt_in_required] = '0'
-            user_params[:parent_email_update_only] = '1'
           end
         end
 
