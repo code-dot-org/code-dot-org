@@ -14,7 +14,6 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {reload} from '@cdo/apps/utils';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {reportingDataShape} from './rubricShapes';
@@ -30,6 +29,7 @@ function StudentSelector({
   reloadOnChange,
   reportingData,
   sectionId,
+  aiEvalStatusForUser,
 
   //from redux
   students,
@@ -95,11 +95,9 @@ function StudentSelector({
                           .concat('', '...')
                     : `${student.name}`}
                 </BodyThreeText>
-                {!!levelsWithProgress && (
+                {!!levelsWithProgress && aiEvalStatusForUser && (
                   <StudentProgressStatus
-                    level={levelsWithProgress.find(
-                      userLevel => student.id === userLevel.userId
-                    )}
+                    aiEvalStatus={aiEvalStatusForUser[student.id]}
                   />
                 )}
               </div>
@@ -117,6 +115,7 @@ StudentSelector.propTypes = {
   reloadOnChange: PropTypes.bool,
   sectionId: PropTypes.number,
   reportingData: reportingDataShape,
+  aiEvalStatusForUser: PropTypes.object,
 
   //from redux
   students: PropTypes.arrayOf(
@@ -147,38 +146,19 @@ const STATUS_BUBBLE_COLOR = {
   NOT_STARTED: style.grayStatusBlob,
   IN_PROGRESS: style.yellowStatusBlob,
   SUBMITTED: style.greenStatusBlob,
+  READY_TO_REVIEW: style.redStatusBlob,
 };
 
 const STATUS_BUBBLE_TEXT = {
   NOT_STARTED: i18n.notStarted(),
   IN_PROGRESS: i18n.inProgress(),
   SUBMITTED: i18n.submitted(),
+  READY_TO_REVIEW: i18n.readyToReview(),
 };
 
-const computeBubbleStatus = level => {
-  if (!level || level.status === LevelStatus.not_tried) {
-    return 'NOT_STARTED';
-  } else if (
-    level.status === LevelStatus.attempted ||
-    level.status === LevelStatus.passed
-  ) {
-    return 'IN_PROGRESS';
-  } else if (
-    level.status === LevelStatus.submitted ||
-    level.status === LevelStatus.perfect ||
-    level.status === LevelStatus.completed_assessment ||
-    level.status === LevelStatus.free_play_complete
-  ) {
-    return 'SUBMITTED';
-  } else {
-    return null;
-  }
-};
-
-function StudentProgressStatus({level}) {
-  const status = computeBubbleStatus(level);
-  const bubbleColor = STATUS_BUBBLE_COLOR[status];
-  const bubbleText = STATUS_BUBBLE_TEXT[status];
+function StudentProgressStatus({aiEvalStatus}) {
+  const bubbleColor = STATUS_BUBBLE_COLOR[aiEvalStatus];
+  const bubbleText = STATUS_BUBBLE_TEXT[aiEvalStatus];
 
   if (bubbleText === null) {
     return null;
@@ -191,4 +171,5 @@ function StudentProgressStatus({level}) {
 
 StudentProgressStatus.propTypes = {
   level: levelWithProgress,
+  aiEvalStatus: PropTypes.string,
 };
