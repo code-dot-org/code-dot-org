@@ -51,7 +51,7 @@ export default function RubricContent({
   feedbackAdded,
   setFeedbackAdded,
   sectionId,
-  allTeacherEvaluationData,
+  hasTeacherFeedbackByUser,
   aiEvalStatusForUser,
 }) {
   const {lesson} = rubric;
@@ -91,7 +91,7 @@ export default function RubricContent({
             reloadOnChange={true}
             sectionId={sectionId}
             reportingData={reportingData}
-            allTeacherEvaluationData={allTeacherEvaluationData}
+            hasTeacherFeedbackByUser={hasTeacherFeedbackByUser}
             aiEvalStatusForUser={aiEvalStatusForUser}
           />
         </div>
@@ -168,7 +168,7 @@ RubricContent.propTypes = {
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
   sectionId: PropTypes.number,
-  allTeacherEvaluationData: PropTypes.array,
+  hasTeacherFeedbackByUser: PropTypes.object,
   aiEvalStatusForUser: PropTypes.object,
 };
 
