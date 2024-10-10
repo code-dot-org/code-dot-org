@@ -10,6 +10,16 @@
   }
 }
 
+// Fade out the moving callout.
+@keyframes moving-fade-in-out {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+}
+
 // Move the arrow up and down.
 @keyframes up-down {
   0%, 100% {
@@ -22,17 +32,37 @@
 
 .callout {
   position: fixed;
-  color: yellow;
-  font-size: 24px;
+  z-index: 70;
+  opacity: 0;
+  width: 32px;
+  height: 32px;
+  animation: fade-in-out 2.5s;
+
+  &Up {
+    transform: translateX(-50%);
+  }
+
+  &Left {
+    transform: translateY(-50%) rotateZ(-90deg);
+  }
+
+  .arrow {
+    position: absolute;
+    animation: up-down 0.75s infinite;
+  }
+}
+
+.movingCallout {
+  position: fixed;
   z-index: 70;
   opacity: 0;
   width: 32px;
   height: 32px;
   transform: translateX(-50%);
-  animation: fade-in-out 2.5s;
+  animation: moving-fade-in-out 3.5s;
+  transition-duration: 2.5s;
 
   .arrow {
     position: absolute;
-    animation: up-down 0.75s infinite;
   }
 }

@@ -1,0 +1,170 @@
+@import "color.scss";
+@import 'font.scss';
+@import '../mixins.scss';
+
+@keyframes fade-in {
+  0%, 50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes delay-pointer-events {
+  0%, 49% {
+    pointer-events: none;
+  }
+  50%, 100% {
+    pointer-events: initial;
+  }
+}
+
+.panelsContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+
+  .panel {
+    margin: 0 auto;
+    position: relative;
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: fade-in 0.5s;
+    }
+
+    .markdownText {
+      background-color: $neutral_light;
+      border-radius: 5px;
+      width: 40%;
+      position: absolute;
+      padding: 20px;
+      animation: fade-in 1.5s;
+
+      h1, h2, h3, h4 {
+        margin: 0 0 10px 0;
+        font-family: $barlowSemiCondensed-semibold;
+        font-size: 1.75em;
+        line-height: 1.2em;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      &Small {
+        p {
+          font-size: 13px;
+        }
+      }
+
+      &TopLeft {
+        top: 40px;
+        left: -20px;
+      }
+
+      &TopCenter {
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &TopRight {
+        top: 40px;
+        right: -20px;
+      }
+
+      &BottomLeft {
+        bottom: 40px;
+        left: -20px;
+      }
+
+      &BottomCenter {
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &BottomRight {
+        bottom: 40px;
+        right: -20px;
+      }
+    }
+  }
+
+  .childrenArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .button {
+      font-size: 14px;
+      background-color: $brand_secondary_default;
+      border-color: $brand_secondary_default;
+      color: $neutral_light;
+      padding: 5px 10px;
+      border-radius: 8px;
+      height: 38px;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      animation: fade-in 3s, delay-pointer-events 3s;
+    }
+
+    .bubble {
+      margin: 0 7px;
+
+      &Current {
+        color: $neutral_light;
+      }
+
+      &NotCurrent {
+        color: $neutral_dark70;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .skipContainer {
+    position: absolute;
+    top: 1px;
+    right: 4px;
+
+    .buttonSkip {
+      @include remove-button-styles;
+      background-color: $neutral_dark;
+      color: $neutral_light;
+      display: flex;
+      height: 24px;
+      width: initial;
+      padding: 0 11px;
+      font-size: 13px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3px;
+      margin: 2px;
+      transition: opacity 0.2s ease;
+
+      &Content {
+        margin-right: 9px;
+      }
+    }
+  }
+}

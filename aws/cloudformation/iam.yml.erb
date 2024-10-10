@@ -343,6 +343,7 @@ roles = {
     RoleName: 'ProductManager_FullAccess',
     GoogleIdsSSMParameter: 'ProductGoogleIDs',
     ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess'
       '!Ref BedrockKnowledgeBaseInvocationPolicy',
       '!Ref CloudwatchDashboardViewerPolicy',
     ]

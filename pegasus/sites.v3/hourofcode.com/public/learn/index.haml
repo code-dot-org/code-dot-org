@@ -1,10 +1,5 @@
 ---
 layout: wide_index
-social:
-  twitter:card: photo
-  twitter:site: "@codeorg"
-  og:image:width: '1200'
-  og:image:height: '630'
 ---
 
 :ruby
@@ -32,7 +27,7 @@ social:
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::HOC_ACTIVITIES_PAGE_VISITED
 
-#fullwidth{class: hoc_mode == "soon-hoc" ? 'hoc-2024' : nil}
+#fullwidth
   = view :header
   %section.banner
     = view :learn_banner_text

@@ -168,6 +168,12 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     kind: 'block',
     type: BlockTypes.PLAY_SOUNDS_TOGETHER,
   },
+  [BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT]: {
+    levelbuilderText: 'Play Together (no next)',
+    id: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
+    kind: 'block',
+    type: BlockTypes.PLAY_SOUNDS_TOGETHER_NO_NEXT,
+  },
   [BlockTypes.PLAY_SOUNDS_SEQUENTIAL]: {
     levelbuilderText: 'Play Sequential',
     kind: 'block',
@@ -290,6 +296,9 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
     levelbuilderText: 'Number',
     kind: 'block',
     type: 'math_number',
+    fields: {
+      NUM: 1,
+    },
   },
   ['math_round']: {
     levelbuilderText: 'Round',

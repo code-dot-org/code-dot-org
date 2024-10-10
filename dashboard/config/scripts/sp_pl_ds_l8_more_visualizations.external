@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Python and Pandas
 
-## Lesson 8: More Visualizations 
+## Lesson 9: More Visualizations 
 
 #### In this lesson, students will explore heat maps and stacked line charts, as well as line charts that are plotting multiple lines.
 #### They will learn how to make these charts in matplotlib. They will also discuss the pros and cons of each visualization variety.

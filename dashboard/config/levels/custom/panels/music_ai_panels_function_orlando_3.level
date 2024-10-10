@@ -12,43 +12,43 @@
     "name_suffix": "_3",
     "panels": [
       {
-        "text": "### Wow.  You just used functions in your code. You’re looking like an expert coder now!\n\n",
+        "text": "Wow.  You just used functions in your code. \n\nYou’re looking like an expert coder now!\n\n",
         "imageUrl": "https://images.code.org/96d3db917ff632010b55c2529741f13e-Frame1.gif",
         "key": "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677",
         "layout": "text-bottom-right"
       },
       {
         "imageUrl": "https://images.code.org/63ec4cafcddc7c35559c03d0e8c22eae-Frame5.gif",
-        "text": "### I use functions a lot. They save me so much time.",
+        "text": "I use functions a lot. They save me so much time.",
         "key": "musiclab_intro_panels_function_pdx-f1f658c0-64a9-471c-9f2a-399ba1ea8538",
         "layout": "text-bottom-right"
       },
       {
-        "text": "### Functions are useful for creating big things with a little code.",
+        "text": "Functions are useful for creating big things with a little code.",
         "imageUrl": "https://images.code.org/6d698334e11b9ac549d8dcbd54d07bbc-building functions.gif",
         "key": "music_ai_panels_function_orlando_3-37c593a7-2cf3-44e3-9b22-f8a2de64646f",
         "layout": "text-bottom-right"
       },
       {
-        "text": "### When I was a kid, I dreamed of making cool things. ",
+        "text": "When I was a kid, I dreamed of making cool things. ",
         "imageUrl": "https://images.code.org/39c9b95d0d80670125dcfaeebad4f66f-imagination2.gif",
         "key": "music_ai_panels_function-c72da2a5-cee8-4254-b1e7-6d487a2ebcde",
         "layout": "text-bottom-right"
       },
       {
-        "text": "### Today, I can build those ideas with the superpower of code.",
+        "text": "Today, I can build those ideas with the superpower of code.",
         "imageUrl": "https://images.code.org/3d55709a1ffa33d61937e6e79a1836d0-Frame4.gif",
         "key": "music_ai_panels_function_orlando_3-2ab47291-490a-409a-87e7-22b140c0a9f3",
         "layout": "text-bottom-right"
       },
       {
-        "text": "### I encourage you to keep coding and build something you’re proud of! It can be your superpower, too!",
+        "text": "I encourage you to keep coding and build something you’re proud of! It can be your superpower, too!",
         "imageUrl": "https://images.code.org/e116c9c113a97dd271a46c80f53fa573-hand music big.gif",
         "key": "music_ai_panels_function-f164a0ad-f4a0-4fb7-a4a4-a0269980b587",
         "layout": "text-bottom-right"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-30T20:40:21.279+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function_3\\\"\"],\"cloned_from\":\"music_ai_panels_function_3\"},{\"changed_at\":\"2024-09-30 20:49:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 17:59:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 19:24:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 19:26:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:01:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:16:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:24:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:44:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:09:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:10:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:25:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-30T20:40:21.279+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function_3\\\"\"],\"cloned_from\":\"music_ai_panels_function_3\"},{\"changed_at\":\"2024-09-30 20:49:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 17:59:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 19:24:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 19:26:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:01:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:16:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:24:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 20:44:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:09:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:10:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:25:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-03 17:23:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Panels>
