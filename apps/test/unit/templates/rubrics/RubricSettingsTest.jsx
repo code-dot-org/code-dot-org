@@ -1,6 +1,4 @@
-import {screen} from '@testing-library/dom';
-import {render, fireEvent, act} from '@testing-library/react';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen, fireEvent, act} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -18,11 +16,46 @@ import {
 import currentUser, {
   setAiRubricsDisabled,
 } from '@cdo/apps/templates/currentUserRedux';
+import {RowType} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  selectSection,
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+const fakeStudent = {
+  id: 1,
+  name: 'Clark Kent',
+  username: 'clark_kent',
+  sectionId: 101,
+  hasEverSignedIn: true,
+  dependsOnThisSectionForLogin: true,
+  loginType: 'picture',
+  rowType: RowType.STUDENT,
+};
+const fakeStudents = {
+  [fakeStudent.id]: fakeStudent,
+};
+const fakeSection = {
+  id: 101,
+  location: '/v2/sections/101',
+  name: 'My Section',
+  login_type: 'picture',
+  participant_type: 'student',
+  grade: '2',
+  code: 'PMTKVH',
+  lesson_extras: false,
+  pairing_allowed: true,
+  sharing_disabled: false,
+  script: null,
+  course_id: 29,
+  studentCount: 10,
+  students: Object.values(fakeStudents),
+  hidden: false,
+};
 
 describe('RubricSettings', () => {
   let clock;
@@ -58,6 +91,8 @@ describe('RubricSettings', () => {
     stubRedux();
     registerReducers({teacherSections, currentUser});
     store = getStore();
+    store.dispatch(setSections([fakeSection]));
+    store.dispatch(selectSection(fakeSection.id));
   });
 
   afterEach(() => {
@@ -147,7 +182,7 @@ describe('RubricSettings', () => {
     stubFetchEvalStatusForAll(ready);
     stubFetchTeacherEvaluations(evals);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -158,14 +193,15 @@ describe('RubricSettings', () => {
       </Provider>
     );
 
-    expect(wrapper.find('SectionSelector').length).to.equal(1);
+    // section selector is visible
+    screen.getByText(fakeSection.name);
   });
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
     stubFetchEvalStatusForAll(ready);
     stubFetchTeacherEvaluations(evals);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -175,19 +211,17 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-
-    // Perform fetches
-    await wait();
-
-    wrapper.update();
-    expect(wrapper.find('Button').first().props().disabled).to.be.false;
+    const button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    expect(button).to.not.be.disabled;
   });
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
     stubFetchEvalStatusForAll(noAttempts);
     stubFetchTeacherEvaluations(evals);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -197,19 +231,17 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
-
-    // Perform fetches and re-render
-    await wait();
-    wrapper.update();
-
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    const button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    expect(button).to.be.disabled;
   });
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
     stubFetchEvalStatusForAll(noUnevaluated);
     stubFetchTeacherEvaluations(evals);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -222,9 +254,11 @@ describe('RubricSettings', () => {
 
     // Perform fetches and re-render
     await wait();
-    wrapper.update();
 
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    const button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    expect(button).to.not.be.disabled;
   });
 
   it('shows pending status when eval is pending', async () => {
@@ -233,7 +267,7 @@ describe('RubricSettings', () => {
     stubFetchEvalStatusForAll(ready);
     stubFetchTeacherEvaluations(evals);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -246,24 +280,25 @@ describe('RubricSettings', () => {
 
     // Perform fetches and re-render
     await wait();
-    wrapper.update();
 
-    let status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
-    expect(status.text()).to.include(
-      i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1})
-    );
-    expect(wrapper.find('Button').first().props().disabled).to.be.false;
+    screen.getByText(i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1}));
+    let button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    expect(button).to.not.be.disabled;
 
     // show pending state after clicking run
 
     stubFetchEvalStatusForAll(onePending);
 
-    wrapper.find('button.uitest-run-ai-assessment-all').simulate('click');
+    fireEvent.click(button);
 
-    status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
-    expect(status.text()).to.include(i18n.aiEvaluationStatus_pending());
+    screen.getByText(i18n.aiEvaluationStatus_pending());
 
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    expect(button).to.be.disabled;
   });
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
@@ -273,7 +308,7 @@ describe('RubricSettings', () => {
 
     clock = sinon.useFakeTimers();
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -286,12 +321,14 @@ describe('RubricSettings', () => {
 
     // Perform fetches and re-renders
     await wait();
-    wrapper.update();
 
     // Next time it asks, we have no unevaluated as a status
     stubFetchEvalStatusForAll(noUnevaluated);
 
-    wrapper.find('Button').first().simulate('click');
+    const button = screen.getByRole('button', {
+      name: i18n.runAiAssessmentClass(),
+    });
+    fireEvent.click(button);
 
     //sends event on click
     expect(sendEventSpy).to.have.been.calledWith(
@@ -304,20 +341,21 @@ describe('RubricSettings', () => {
 
     // Perform fetches and re-renders
     await wait();
-    wrapper.update();
 
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
-    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pending());
+    expect(screen.getByRole('button', {name: i18n.runAiAssessmentClass()})).to
+      .be.disabled;
+    screen.getByText(i18n.aiEvaluationStatus_pending());
 
     // Advance clock 5 seconds
     clock.tick(5000);
 
     // Perform fetches and re-renders
     await wait();
-    wrapper.update();
+
     expect(fetchStub).to.have.callCount(4);
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
-    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_success());
+    expect(screen.getByRole('button', {name: i18n.runAiAssessmentClass()})).to
+      .be.disabled;
+    screen.getByText(i18n.aiEvaluationStatus_success());
     sendEventSpy.restore();
   });
 
@@ -328,7 +366,7 @@ describe('RubricSettings', () => {
     fetchStub
       .onCall(1)
       .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -339,14 +377,12 @@ describe('RubricSettings', () => {
       </Provider>
     );
     await wait();
-    wrapper.update();
+
     //fetch for get_teacher_evaluations_all is the 2nd fetch
     await wait();
-    wrapper.update();
-    expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
-    expect(wrapper.find('Button').at(1).text()).to.include(
-      i18n.rubricTabStudent()
-    );
+
+    screen.getByText(i18n.rubricNoStudentEvals());
+    screen.getByRole('button', {name: i18n.rubricTabStudent()});
   });
 
   it('displays generate CSV button when there are evaluations to export', async () => {
@@ -356,7 +392,7 @@ describe('RubricSettings', () => {
     fetchStub
       .onCall(1)
       .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -367,16 +403,12 @@ describe('RubricSettings', () => {
       </Provider>
     );
     await wait();
-    wrapper.update();
+
     //fetch for get_teacher_evaluations_all is the 2nd fetch
     await wait();
-    wrapper.update();
-    expect(wrapper.text()).to.include(
-      i18n.rubricNumberStudentEvals({
-        teacherEvalCount: 2,
-      })
-    );
-    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
+
+    screen.getByText(i18n.rubricNumberStudentEvals({teacherEvalCount: 2}));
+    screen.getByRole('button', {name: i18n.downloadCSV()});
   });
 
   it('sends event when download CSV is clicked', async () => {
@@ -387,7 +419,7 @@ describe('RubricSettings', () => {
     fetchStub
       .onCall(1)
       .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricSettings
           visible
@@ -399,17 +431,13 @@ describe('RubricSettings', () => {
       </Provider>
     );
     await wait();
-    wrapper.update();
+
     //fetch for get_teacher_evaluations_all is the 2nd fetch
     await wait();
-    wrapper.update();
-    expect(wrapper.text()).to.include(
-      i18n.rubricNumberStudentEvals({
-        teacherEvalCount: 2,
-      })
-    );
-    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
-    wrapper.find('Button').at(1).simulate('click');
+
+    screen.getByText(i18n.rubricNumberStudentEvals({teacherEvalCount: 2}));
+    const button = screen.getByRole('button', {name: i18n.downloadCSV()});
+    fireEvent.click(button);
     expect(sendEventSpy).to.have.been.calledWith(
       EVENTS.TA_RUBRIC_CSV_DOWNLOADED,
       {
