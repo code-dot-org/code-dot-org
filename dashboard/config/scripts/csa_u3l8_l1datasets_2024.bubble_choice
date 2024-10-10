@@ -1,0 +1,9 @@
+name 'csa-u3l8-l1datasets_2024'
+display_name 'Data Sets'
+description 'level description here'
+
+sublevels
+level 'csa-u3l8-l1a_2024'
+level 'csa-u3l8-l1b_2024'
+level 'csa-u3l8-l1c_2024'
+level 'csa-u3l8-l1d_2024'
