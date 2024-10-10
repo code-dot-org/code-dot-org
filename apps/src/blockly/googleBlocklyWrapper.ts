@@ -67,6 +67,7 @@ import initializeBlocklyXml, {
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import registerLogicCompareMutator from './addons/extensions/logic_compare';
 import FunctionEditor from './addons/functionEditor';
+import {filterFunctionArgVariables} from './addons/plusMinusBlocks/advancedProcedures';
 import registerIfMutator from './addons/plusMinusBlocks/if';
 import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
@@ -841,7 +842,18 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     blocklyWrapper.setMainWorkspace(workspace);
 
-    if (!optOptionsExtended.useBlocklyDynamicCategories) {
+    if (optOptionsExtended.useBlocklyDynamicCategories) {
+      const originalVariableFlyoutCategory =
+        workspace.getToolboxCategoryCallback('VARIABLE');
+      if (originalVariableFlyoutCategory) {
+        workspace.registerToolboxCategoryCallback('VARIABLE', workspace =>
+          filterFunctionArgVariables(
+            workspace,
+            originalVariableFlyoutCategory(workspace)
+          )
+        );
+      }
+    } else {
       // Same flyout callbacks are used for both main workspace categories
       // and categories when modal function editor is enabled.
       workspace.registerToolboxCategoryCallback(
