@@ -1719,45 +1719,35 @@ class User < ApplicationRecord
     end
 
     email = attributes[:email]
-    associated_users = User.associated_users(email)
-    return User.new(email: email).send_reset_password_for_users(email, associated_users)
+    # If we aren't sending to parents, we only need to grab the first user we find
+    # (a user with an Email auth option first, otherwise a user that has that email)
+    associated_user = User.find_by_email_or_hashed_email(email)
+    return User.new(email: email).send_reset_password_for_users(email, associated_user)
   end
 
-  def send_reset_password_for_users(email, users)
-    if users.empty?
+  def send_reset_password_for_users(email, user)
+    if user.nil?
       not_found_user = User.new(email: email)
-      not_found_user.errors.add :email, :not_found
+      Cdo::Metrics.put(
+        'User', 'PasswordResetUserNotFound', 1, {
+          Environment: CDO.rack_env,
+          UserType: user_type
+        }
+      )
       return not_found_user
     end
 
-    unique_users = users.uniq
-
-    # Normal case: single user, owner of the email attached to this account
-    if unique_users.length == 1 && (unique_users.first.email == email || unique_users.first.hashed_email == User.hash_email(email))
-      primary_user = unique_users.first
-      primary_user.raw_token = primary_user.send_reset_password_instructions(email) # protected in the superclass
-      return primary_user
+    if user.authentication_options.any?(&:email?)
+      user.raw_token = user.send_reset_password_instructions(email) # protected in the superclass
+    else
+      Cdo::Metrics.put(
+        'User', 'PasswordResetEmailAuthNotFound', 1, {
+          Environment: CDO.rack_env,
+          UserType: user_type
+        }
+      )
     end
-
-    # One or more users are associated with parent email, generate reset tokens for each one
-    unique_users.each do |user|
-      raw, enc = Devise.token_generator.generate(User, :reset_password_token)
-      user.raw_token = raw
-      user.reset_password_token   = enc
-      user.reset_password_sent_at = Time.now.utc
-      user.save(validate: false)
-    end
-
-    begin
-      # Send the password reset to the parent
-      raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
-      self.child_users = unique_users
-      send_devise_notification(:reset_password_instructions, raw, {to: email})
-      return self
-    rescue ArgumentError
-      errors.add :base, I18n.t('password.reset_errors.invalid_email')
-      return nil
-    end
+    user
   end
 
   # Send a password reset email to the user (not to their parent)
