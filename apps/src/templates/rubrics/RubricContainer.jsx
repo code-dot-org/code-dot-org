@@ -117,7 +117,10 @@ export default function RubricContainer({
     if (!!rubricId && !!sectionId) {
       fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
         if (response.ok) {
-          response.json().then(data => setAllTeacherEvaluationData(data));
+          response.json().then(data => {
+            initializeHasTeacherFeedback(data);
+            setAllTeacherEvaluationData(data);
+          });
         }
       });
     }
@@ -144,6 +147,25 @@ export default function RubricContainer({
     }
     return () => abort.abort();
   }, [rubricId, sectionId]);
+
+  const [hasTeacherFeedbackByUser, setHasTeacherFeedbackByUser] = useState({});
+
+  const initializeHasTeacherFeedback = allTeacherEvaluationData => {
+    const hasFeedbackByUser = {};
+    allTeacherEvaluationData.forEach(userEvalData => {
+      if (userEvalData?.user_id) {
+        hasFeedbackByUser[userEvalData.user_id] = userEvalData.eval.length > 0;
+      }
+    });
+    setHasTeacherFeedbackByUser(hasFeedbackByUser);
+  };
+
+  const updateHasTeacherFeedback = userId => {
+    setHasTeacherFeedbackByUser({
+      ...hasTeacherFeedbackByUser,
+      [userId]: true,
+    });
+  };
 
   useEffect(() => {
     trySetSessionStorage(rubricTabSessionKey, selectedTab);
@@ -387,7 +409,7 @@ export default function RubricContainer({
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
-            allTeacherEvaluationData={allTeacherEvaluationData}
+            hasTeacherFeedbackByUser={hasTeacherFeedbackByUser}
             aiEvalStatusForUser={allAiEvaluationStatus?.aiEvalStatusForUser}
           />
           {showSettings && (
@@ -411,6 +433,7 @@ export default function RubricContainer({
             studentLevelInfo={studentLevelInfo}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
+            updateHasTeacherFeedback={updateHasTeacherFeedback}
           />
         )}
       </div>

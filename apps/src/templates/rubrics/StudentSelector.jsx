@@ -29,7 +29,7 @@ function StudentSelector({
   reloadOnChange,
   reportingData,
   sectionId,
-  allTeacherEvaluationData,
+  hasTeacherFeedbackByUser,
   aiEvalStatusForUser,
 
   //from redux
@@ -58,13 +58,6 @@ function StudentSelector({
   if (students.length === 0) {
     return null;
   }
-
-  const hasTeacherEvalByUser = {};
-  allTeacherEvaluationData.forEach(userEvalData => {
-    if (userEvalData?.user_id) {
-      hasTeacherEvalByUser[userEvalData.user_id] = userEvalData.eval.length > 0;
-    }
-  });
 
   return (
     <Select
@@ -106,7 +99,7 @@ function StudentSelector({
                 {!!levelsWithProgress && aiEvalStatusForUser && (
                   <StudentProgressStatus
                     aiEvalStatus={aiEvalStatusForUser[student.id]}
-                    hasTeacherEval={hasTeacherEvalByUser[student.id]}
+                    hasTeacherFeedback={hasTeacherFeedbackByUser[student.id]}
                   />
                 )}
               </div>
@@ -124,7 +117,7 @@ StudentSelector.propTypes = {
   reloadOnChange: PropTypes.bool,
   sectionId: PropTypes.number,
   reportingData: reportingDataShape,
-  allTeacherEvaluationData: PropTypes.array,
+  hasTeacherFeedbackByUser: PropTypes.object,
   aiEvalStatusForUser: PropTypes.object,
 
   //from redux
@@ -166,8 +159,8 @@ const STATUS_BUBBLE_TEXT = {
   EVALUATED: i18n.evaluated(),
 };
 
-function StudentProgressStatus({aiEvalStatus, hasTeacherEval}) {
-  const status = hasTeacherEval ? 'EVALUATED' : aiEvalStatus;
+function StudentProgressStatus({aiEvalStatus, hasTeacherFeedback}) {
+  const status = hasTeacherFeedback ? 'EVALUATED' : aiEvalStatus;
   const bubbleColor = STATUS_BUBBLE_COLOR[status];
   const bubbleText = STATUS_BUBBLE_TEXT[status];
 
@@ -183,5 +176,5 @@ function StudentProgressStatus({aiEvalStatus, hasTeacherEval}) {
 StudentProgressStatus.propTypes = {
   level: levelWithProgress,
   aiEvalStatus: PropTypes.string,
-  hasTeacherEval: PropTypes.bool,
+  hasTeacherFeedback: PropTypes.bool,
 };
