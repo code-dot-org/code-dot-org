@@ -387,6 +387,7 @@ export default function RubricContainer({
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
+            allTeacherEvaluationData={allTeacherEvaluationData}
             aiEvalStatusForUser={allAiEvaluationStatus?.aiEvalStatusForUser}
           />
           {showSettings && (
