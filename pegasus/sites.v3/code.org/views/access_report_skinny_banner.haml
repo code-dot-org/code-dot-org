@@ -1,7 +1,4 @@
-:ruby
-  hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-
-- if hoc_mode != "soon-hoc" && !!DCDO.get('access-report-launch', false)
+- if !!DCDO.get('access-report-launch', false)
   %link{href: "/css/generated/access-report-skinny-banner.css", rel: "stylesheet"}
   %aside.access-report-skinny-banner
     .wrapper.flex-container.justify-space-between.align-items-center.wrap
