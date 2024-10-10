@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-10-09T19:37:39.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "Explain how the `Scanner` class and `File` class work together to read data from a text file in Java. What are the necessary steps to set up file reading in a Java program?",
+    "encrypted_solution": "QpEhEPuGiwUlpW+RSllgpIJWh8JYhVp8IU5GIDYJx2/VrwVyKy6Gs2Jv3shE\nOlGLrnFcrFgPdjF0RimOl7XfbZPl9SBBpu/5IpuYCdX4XDWFrp7e0N20PiL5\nW1Q5SgClY5tORBffekmTWNCjrQSZLHW68ar/23waxsBoWMiSBDOATBE3BSrN\nllwr7hbHn2aHhPeMWIVBmFwuF8Q4ZSFCAEw1iwPHYXnz15hGdsGs2YPB2DkD\n1W89eYahcJy7xUTzY5kRpF9ZqZUBW4WrQuyshX08ktDZafyTUHO+w4rVCn5Z\nMeXv19BVDOhLMQSsLm8gzMpyVI7gXmTwmXyhWrNYIMvhZJXFwQMYd1JKd3tj\nCeelYe1IJ4/dmIZ8WYvw6EqjxFk5SdGHcgPqFZ98I8CDBF2/ecCw0HsziEXn\nRgj69mbe7CJ15uO7Mnc5txKqR3kiw0z4HruF6hl9U5iR/0gQOiitOR1bP06n\nSxkVPyG10Jn1lMfweR+iTESRTaOnpM8VdWANzjGiFxh1yM7osWdRPv3PF3Dd\nF35ZYfAxsC+fx7aOjqNv28dC/j1aQ0LM+u5I\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-09 19:37:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

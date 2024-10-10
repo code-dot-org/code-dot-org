@@ -1,0 +1,66 @@
+name 'self-paced-pl-gen-ai-foundations-preview-06_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Output
+
+## Lesson Highlight: Character Quiz Activity
+
+<img src="https://images.code.org/9a52d33d49d488c302d04354a96a3d2d-bed5925cbfe2b9a80368293aa21cf84b-Slide19.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="float:right; margin: 20px 20px 20px 20px;">
+
+#### During **Lesson 4: Understanding Embeddings**, students investigate how characters from stories or movies can be similar as a way to understand how words can be similar.
+
+#### Students create a representation of chosen characters based on their different traits, and then compare their characters to others in the class. 
+
+#### After students collect some data on various characters, students should compare two characters row-by-row, noticing when dots are close together or far apart. For example, Kim and Hawa's characters are on opposite ends of the good/bad spectrum, but are close in several other areas. 
+
+<img src="https://images.code.org/5587e0a3e25e4642f2da11c4f317800e-3d83c1f988e645b8de16c95ee6709055-Slide22.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="float:right; margin: 20px 20px 20px 20px;">
+
+#### During discussions, emphasize responses that are explicitly counting spaces between dots and comparing distances. Students will eventually understand that they can compare numbers in each position to determine how similar or different characters are. This can be done by comparing each number from left-to-right. One powerful insight is that it doesn’t matter what each position represents, only how close or far the numbers are in that same position.
+
+#### These key concepts helps us generalize the idea of “character traits” to **embeddings** which the set of numbers used to represent a word in a large-language model.
+
+## Lesson Previews
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 9: Outputs & Probabilities
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/ee2c1e06e0231d2da55f0092134eeefd-1019ee4f65d7f4008dc7f8bd9da98cc4-Slide4.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** What is the last step for language models to generate output responses?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students investigate how language models generate output based on probabilities. The lesson kicks off with the class collaboratively crafting a story, with a twist to alternate between realistic and fantastical elements. This leads into a group activity where students fill in a mad lib with predetermined words, aiming for either coherent or absurd outcomes. They are then introduced to an app that aggregates responses from numerous users to the same mad lib, showcasing a variety of popular choices for each blank. Through selecting the most popular choices based on this data, students experience firsthand how language models select words with the highest probability from training data.
+
+#### **Students will be able to:**
+* #### Explain how a language model uses probabilities to generate words as ouput
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/9" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 10: Hallucinations and Fabrications</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/625b1702fa6b7def7fa356f43241c365-9121715a2b9b4b3d3fe248ffa4b4247f-Slide14.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** What happens when a language model gives inaccurate information?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students investigate why language models may produce inaccurate outputs, known as hallucinations. They start by understanding the probabilistic nature of generative AI and how bias in training data can lead to such errors. Following discussions on examples of AI systems recalled for bias and hallucinations, students assume the role of AI Auditors to explore proactive measures for mitigating harm caused by deployed language models. After their exploration, they watch a video of a professional AI Auditor, reflecting on the parallels between the professional's work and their class activity.
+
+#### **Students will be able to:**
+* #### Make recommendations regarding the input and output of a language model to avoid bias and harm
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/10" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+
+MARKDOWN
