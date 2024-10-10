@@ -337,9 +337,9 @@ describe('FinishStudentAccount', () => {
     // Declare parameter values and set sessionStorage variables
     const name = 'FirstName';
     const email = 'fake@email.com';
-    const age = '10';
+    const age = '6';
     const gender = 'Female';
-    const state = 'CO';
+    const state = 'AZ';
     const parentEmail = 'parent@email.com';
     const finishSignUpParams = {
       new_sign_up: true,
@@ -370,14 +370,16 @@ describe('FinishStudentAccount', () => {
     // Fill in fields
     fireEvent.click(screen.getAllByRole('checkbox')[0]);
     fireEvent.click(screen.getAllByRole('checkbox')[1]);
-    const parentEmailInput = screen.getAllByDisplayValue('')[0];
-    const displayNameInput = screen.getAllByDisplayValue('')[1];
-    const ageInput = screen.getAllByRole('combobox')[0];
-    const stateInput = screen.getAllByRole('combobox')[1];
+    const parentEmailInput = screen.getAllByDisplayValue('')[1];
+    const displayNameInput = screen.getAllByDisplayValue('')[3];
+    const ageInput = screen.getAllByDisplayValue('')[4];
+    const stateInput = screen.getAllByDisplayValue('')[5];
+    const genderInput = screen.getAllByDisplayValue('')[6];
     fireEvent.change(parentEmailInput, {target: {value: parentEmail}});
     fireEvent.change(displayNameInput, {target: {value: name}});
     fireEvent.change(ageInput, {target: {value: age}});
     fireEvent.change(stateInput, {target: {value: state}});
+    fireEvent.change(genderInput, {target: {value: gender}});
 
     // Click finish sign up button
     fireEvent.click(finishSignUpButton);
@@ -390,7 +392,7 @@ describe('FinishStudentAccount', () => {
       expect(getAuthenticityTokenMock).toHaveBeenCalled;
 
       // Verify the button's fetch method was called
-      expect(fetchStub.calledOnce).toBe(true);
+      expect(fetchStub.calledTwice).toBe(true);
       const fetchCall = fetchStub.getCall(1);
       expect(fetchCall.args[0]).toEqual('/users');
       expect(fetchCall.args[1]?.body).toEqual(
