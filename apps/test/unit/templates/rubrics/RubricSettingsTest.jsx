@@ -58,7 +58,6 @@ const fakeSection = {
 };
 
 describe('RubricSettings', () => {
-  let clock;
   let fetchStub;
   let store;
   let refreshAiEvaluationsSpy;
@@ -96,9 +95,7 @@ describe('RubricSettings', () => {
   });
 
   afterEach(() => {
-    if (clock) {
-      clock.restore();
-    }
+    jest.useRealTimers();
     restoreRedux();
     utils.queryParams.restore();
     fetchStub.restore();
@@ -309,7 +306,7 @@ describe('RubricSettings', () => {
     stubFetchTeacherEvaluations(evals);
     const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    clock = sinon.useFakeTimers();
+    jest.useFakeTimers();
 
     render(
       <Provider store={store}>
@@ -351,7 +348,7 @@ describe('RubricSettings', () => {
     screen.getByText(i18n.aiEvaluationStatus_pending());
 
     // Advance clock 5 seconds
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
 
     // Perform fetches and re-renders
     await wait();
