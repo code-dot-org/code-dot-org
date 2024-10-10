@@ -113,6 +113,7 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
       target.title = '';
     }
   };
+
   checkTabForErrors(isIconOnly, icon, text);
 
   const buttonContent = renderTabButtonContent(
