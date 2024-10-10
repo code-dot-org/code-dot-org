@@ -1,10 +1,9 @@
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
+import {ComponentPlacementDirection} from '@cdo/apps/componentLibrary/common/types';
+import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import commonI18n from '@cdo/locale';
-
-import {ComponentPlacementDirection} from '../componentLibrary/common/types';
-import {WithTooltip} from '../componentLibrary/tooltip';
 
 import moduleStyles from './project-template-workspace-icon-v2.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
