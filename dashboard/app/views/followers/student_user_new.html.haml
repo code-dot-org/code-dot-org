@@ -1,4 +1,3 @@
-- require 'cpa'
 - location = Geocoder.search(request.ip).try(:first)
 - country_code = location&.country_code.to_s.upcase
 -# 'RD' is the 'Reserved' country code for private IP's, i.e. localhost.

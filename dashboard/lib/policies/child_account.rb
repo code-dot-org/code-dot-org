@@ -1,5 +1,4 @@
 require 'cdo/shared_constants'
-require 'cpa'
 require 'date'
 
 class Policies::ChildAccount
@@ -73,7 +72,7 @@ class Policies::ChildAccount
 
     # Due to a leaky bucket issue, roster-synced Google accounts weren't being locked out as intended.
     # Therefore, it was decided to move their locking out to the "all-user lockout" phase.
-    return true if user_state_policy[:name] == Cpa::NAME &&
+    return true if user_state_policy[:name] == state_policies['CO'][:name] &&
       user.created_at < user_state_policy[:lockout_date] &&
       user.authentication_options.any?(&:google?)
 
@@ -152,15 +151,15 @@ class Policies::ChildAccount
         name: 'CPA',
         max_age: 12,
         grace_period_duration: 14.days.seconds,
-        lockout_date: DateTime.parse('2024-07-01T00:00:00MDT').iso8601,
-        start_date: DateTime.parse('2023-07-05T23:15:00+00:00').iso8601,
+        lockout_date: DateTime.parse('2024-07-01T00:00:00MDT'),
+        start_date: DateTime.parse('2023-07-05T23:15:00+00:00'),
       },
       'DE' => {
         name: 'DPDPA',
         max_age: 12,
         grace_period_duration: 14.days.seconds,
-        lockout_date: DateTime.parse('2025-01-01T00:00:00-05:00').iso8601,
-        start_date: DateTime.parse('2025-01-01T00:00:00-05:00').iso8601,
+        lockout_date: DateTime.parse('2025-01-01T00:00:00-05:00'),
+        start_date: DateTime.parse('2025-01-01T00:00:00-05:00'),
       }
     }
   end

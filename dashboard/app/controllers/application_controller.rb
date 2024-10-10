@@ -3,7 +3,6 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
-require 'cpa'
 require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
