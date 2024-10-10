@@ -87,6 +87,10 @@ header:
             domain: code.org
             url: /teach
             id: educate-overview
+          - title: course_catalog
+            url: /students
+            domain: code.org
+            id: educate_courses
           - title: educate_elementary
             domain: code.org
             url: /educate/curriculum/elementary-school
@@ -121,6 +125,10 @@ header:
         domain: code.org
         url: /help
         id: help-us
+      - title: incubator
+        url: /incubator
+        domain: studio.code.org
+        id: incubator
       - title: about
         type: expander
         id: about_entries
@@ -180,6 +188,10 @@ header:
             domain: code.org
             url: /teach
             id: educate-overview
+          - title: course_catalog
+            url: /catalog
+            domain: studio.code.org
+            id: educate_courses
           - title: educate_elementary
             domain: code.org
             url: /educate/curriculum/elementary-school
@@ -214,6 +226,10 @@ header:
         domain: code.org
         url: /help
         id: help-us
+      - title: incubator
+        url: /incubator
+        domain: studio.code.org
+        id: incubator
       - title: about
         type: expander
         id: about_entries
