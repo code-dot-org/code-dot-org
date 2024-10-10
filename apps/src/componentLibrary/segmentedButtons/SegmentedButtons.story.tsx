@@ -172,6 +172,44 @@ SizesOfSegmentedButtons.args = {
   ],
 };
 
+export const GroupOfColorsOfSegmentedButtons = MultipleTemplate.bind({});
+GroupOfColorsOfSegmentedButtons.args = {
+  components: [
+    {
+      buttons: [
+        {label: 'Label Primary', value: 'label-primary'},
+        {
+          label: 'Another label',
+          value: 'another-label-primary',
+        },
+        {
+          label: 'Text',
+          value: 'text-primary',
+        },
+      ],
+      color: 'primary',
+      selectedButtonValue: 'label-primary',
+      onChange: value => console.log('clicked: ', value),
+    },
+    {
+      buttons: [
+        {label: 'Label Secondary', value: 'label-strong'},
+        {
+          label: 'Another label',
+          value: 'another-label-strong',
+        },
+        {
+          label: 'Text',
+          value: 'text-strong',
+        },
+      ],
+      color: 'strong',
+      selectedButtonValue: 'another-label-strong',
+      onChange: value => console.log('clicked: ', value),
+    },
+  ],
+};
+
 export const TypesOfSegmentedButtons = MultipleTemplate.bind({});
 TypesOfSegmentedButtons.args = {
   components: [
