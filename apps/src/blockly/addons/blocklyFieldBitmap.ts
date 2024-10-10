@@ -292,8 +292,8 @@ export class FieldBitmap extends Blockly.Field<number[][]> {
     // This prevents the normal max-height from adding a scroll bar for large images.
     Blockly.DropDownDiv.getContentDiv().classList.add('contains-bitmap-editor');
 
-    this.bindEvent(dropdownEditor, 'mouseup', this.onMouseUp);
-    this.bindEvent(dropdownEditor, 'mouseleave', this.onMouseUp);
+    this.bindEvent(dropdownEditor, 'pointerup', this.onMouseUp); // FIX: change to pointer event type
+    this.bindEvent(dropdownEditor, 'pointerleave', this.onMouseUp); // FIX: change to pointer event type
     this.bindEvent(dropdownEditor, 'dragstart', (e: Event) => {
       e.preventDefault();
     });
@@ -315,13 +315,15 @@ export class FieldBitmap extends Blockly.Field<number[][]> {
           : this.pixelColours.empty;
 
         // Handle clicking a pixel
-        this.bindEvent(button, 'mousedown', () => {
+        // FIX: change to pointer event type
+        this.bindEvent(button, 'pointerdown', () => {
           this.onMouseDownInPixel(r, c);
           return true;
         });
 
         // Handle dragging into a pixel when mouse is down
-        this.bindEvent(button, 'mouseenter', () => {
+        // FIX: change to pointer event type
+        this.bindEvent(button, 'pointerenter', () => {
           this.onMouseEnterPixel(r, c);
         });
       }
@@ -597,7 +599,7 @@ export class FieldBitmap extends Blockly.Field<number[][]> {
     callback: (e: Event) => void
   ) {
     this.boundEvents.push(
-      Blockly.browserEvents.conditionalBind(element, eventName, this, callback)
+      Blockly.browserEvents.bind(element, eventName, this, callback) // FIX: change from conditionalBind
     );
   }
 
