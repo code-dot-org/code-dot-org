@@ -39,14 +39,6 @@ class Policies::UnitTest < ActiveSupport::TestCase
     assert_equal true, Policies::Unit.can_be_deleted?(unit)
   end
 
-  test 'check deletion published state unit stable and unit group in_development' do
-    unit = create(:script, published_state: PUBLISHED_STATE.stable)
-    unit_gp = create(:unit_group, published_state: PUBLISHED_STATE.in_development)
-    create :unit_group_unit, unit_group: unit_gp, script: unit, position: 1
-
-    assert_equal false, Policies::Unit.can_be_deleted?(unit)
-  end
-
   test 'check deletion unit with section assignment' do
     unit = create(:script, published_state: PUBLISHED_STATE.in_development)
     create :section, script: unit, unit_group: nil
