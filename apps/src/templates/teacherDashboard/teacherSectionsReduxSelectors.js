@@ -235,16 +235,16 @@ export function newSectionData(participantType) {
     studentCount: 0,
     participantType: participantType,
     code: '',
+    courseId: null,
+    courseOfferingId: null,
+    courseVersionId: null,
     courseDisplayName: null,
+    unitId: null,
+    unitName: null,
+    isAssignedStandaloneCourse: false,
     hidden: false,
     restrictSection: false,
     aiTutorEnabled: false,
-    createdAt: '',
-    scriptId: null,
-    postMilestoneDisabled: false,
-    syncEnabled: false,
-    isAssignedStandaloneCourse: false,
-    unitName: null,
   };
 }
 

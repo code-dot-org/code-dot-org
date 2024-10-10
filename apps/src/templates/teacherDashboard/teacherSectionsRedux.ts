@@ -44,7 +44,7 @@ type RosterProvider = string | keyof typeof SectionLoginType | null;
 
 type AssignmentData = {
   section_id: number;
-  section_creation_timestamp: string;
+  section_creation_timestamp?: string;
   page_name: string;
   unit_id?: number | null;
   course_id?: number | null;
@@ -80,7 +80,7 @@ export interface TeacherSectionState {
   // We can edit exactly one section at a time.
   // While editing we store that section's 'in-progress' state separate from
   // its persisted state in the sections map.
-  sectionBeingEdited?: Section;
+  sectionBeingEdited: Section | null;
   showSectionEditDialog: boolean;
   saveInProgress: boolean;
   // Track whether we've async-loaded our section and assignment data
@@ -92,7 +92,7 @@ export interface TeacherSectionState {
   rosterProviderName: string | null;
   // Set of oauth classrooms available for import from a third-party source.
   // Not populated until the RosterDialog is opened.
-  classrooms: Classroom[];
+  classrooms: Classroom[] | null;
   // Error that occurred while loading oauth classrooms
   loadError: {status: number; message: string} | null;
   // The page where the action is occurring
@@ -147,7 +147,8 @@ const initialState: TeacherSectionState = {
   rosterProviderName: null,
   // Set of oauth classrooms available for import from a third-party source.
   // Not populated until the RosterDialog is opened.
-  classrooms: [],
+  classrooms: null,
+  sectionBeingEdited: null,
   // Error that occurred while loading oauth classrooms
   loadError: null,
   // The page where the action is occurring
@@ -438,7 +439,7 @@ const sectionSlice = createSlice({
         state.sectionBeingEdited = initialSectionData;
         state.showSectionEditDialog = !silent;
       },
-      prepare(sectionId = undefined, silent = false) {
+      prepare(sectionId = null, silent = false) {
         return {
           payload: {
             sectionId,
@@ -577,7 +578,7 @@ const sectionSlice = createSlice({
         );
       }
 
-      delete state.sectionBeingEdited;
+      state.sectionBeingEdited = null;
       state.saveInProgress = false;
     },
     failSaveRequest(state) {
@@ -590,7 +591,7 @@ const sectionSlice = createSlice({
       state.asyncLoadComplete = true;
     },
     cancelEditingSection(state) {
-      delete state.sectionBeingEdited;
+      state.sectionBeingEdited = null;
     },
     setCoteacherInvite(
       state,
@@ -606,7 +607,7 @@ const sectionSlice = createSlice({
     },
     beginImportRosterFlow(state) {
       state.isRosterDialogOpen = true;
-      state.classrooms = [];
+      state.classrooms = null;
     },
     importRosterFlowListLoaded(state, action: PayloadAction<Classroom[]>) {
       state.classrooms = action.payload;
@@ -614,7 +615,7 @@ const sectionSlice = createSlice({
     cancelImportRosterFlow(state) {
       state.isRosterDialogOpen = false;
       state.rosterProvider = null;
-      state.classrooms = [];
+      state.classrooms = null;
     },
     rosterImportFailed(
       state,
@@ -626,7 +627,7 @@ const sectionSlice = createSlice({
       };
     },
     rosterImportRequest(state) {
-      state.classrooms = [];
+      state.classrooms = null;
     },
     rosterImportSuccess(state, action: PayloadAction<number>) {
       state.isRosterDialogOpen = false;
@@ -644,11 +645,11 @@ const sectionSlice = createSlice({
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
-  EDIT_SECTION_REQUEST: 'teacherSection/startSaveRequest',
-  EDIT_SECTION_SUCCESS: 'teacherSection/finishSaveRequest',
-  IMPORT_ROSTER_FLOW_BEGIN: 'teacherSection/importRosterFlowBegin',
-  IMPORT_ROSTER_FLOW_LIST_LOADED: 'teacherSection/importRosterFlowListLoaded',
-  PENDING_NEW_SECTION_ID: 'teacherSection/pendingNewSectionId',
+  EDIT_SECTION_REQUEST: 'teacherSections/startSaveRequest',
+  EDIT_SECTION_SUCCESS: 'teacherSections/finishSaveRequest',
+  IMPORT_ROSTER_FLOW_BEGIN: 'teacherSections/beginImportRosterFlow',
+  IMPORT_ROSTER_FLOW_LIST_LOADED: 'teacherSections/importRosterFlowListLoaded',
+  PENDING_NEW_SECTION_ID: -1,
   USER_EDITABLE_SECTION_PROPS,
 };
 

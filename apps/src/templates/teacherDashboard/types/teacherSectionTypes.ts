@@ -19,7 +19,7 @@ export interface Section {
   courseOfferingId?: number | null;
   courseVersionId?: number | null;
   courseVersionName?: string;
-  createdAt: string;
+  createdAt?: string;
   grades: string[];
   hidden: boolean;
   id: number;
@@ -31,13 +31,13 @@ export interface Section {
   name: string;
   pairingAllowed: boolean;
   participantType: string | undefined;
-  postMilestoneDisabled: boolean;
+  postMilestoneDisabled?: boolean;
   providerManaged: boolean;
   restrictSection: boolean;
   sectionInstructors?: SectionInstructor[];
   sharingDisabled: boolean;
   studentCount: number;
-  syncEnabled: boolean;
+  syncEnabled?: boolean;
   ttsAutoplayEnabled: boolean;
   unitId?: number | null;
   unitName: string | null;
