@@ -1,5 +1,10 @@
 @import 'color';
 
+hr {
+  margin: 1rem 0;
+  border-color: $light_gray_200;
+}
+
 .textContainer {
   background-color: $light_gray_50;
   border-radius: 4px;
