@@ -33,6 +33,15 @@
 .instructions-dark {
   @extend %instructions;
   background-color: $neutral_dark;
+
+  a {
+    color: $light_white;
+    text-decoration: underline;
+    &:hover {
+      color: $light_gray_100;
+    }
+  }
+
 }
 
 .instructions-light {
