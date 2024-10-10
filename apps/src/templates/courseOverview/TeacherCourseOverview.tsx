@@ -16,7 +16,7 @@ import {
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -72,6 +72,12 @@ interface CourseSummary {
   has_verified_resources: boolean;
 }
 
+interface Response {
+  unit_group: CourseSummary;
+  is_verified_instructor: boolean;
+  hidden_scripts: string[];
+}
+
 interface Announcement {
   key: string;
   notice: string;
@@ -92,17 +98,9 @@ interface Section {
 }
 
 const courseSummaryCachedLoader = _.memoize(async courseVersionName =>
-  getAuthenticityToken()
-    .then(token =>
-      fetch(`/dashboardapi/course_summary/${courseVersionName}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': token,
-        },
-      })
-    )
-    .then(response => response.json())
+  HttpClient.fetchJson<Response>(
+    `/dashboardapi/course_summary/${courseVersionName}`
+  ).then(response => response?.value)
 );
 
 const TeacherCourseOverview: React.FC = () => {
@@ -121,7 +119,7 @@ const TeacherCourseOverview: React.FC = () => {
   const sections = useSelector(
     (state: {
       teacherSections: {
-        sections: Section[];
+        sections: {[id: number]: Section};
       };
     }) => state.teacherSections.sections
   );
@@ -129,7 +127,7 @@ const TeacherCourseOverview: React.FC = () => {
   const selectedSection = useSelector(
     (state: {
       teacherSections: {
-        sections: Section[];
+        sections: {[id: number]: Section};
         selectedSectionId: number;
       };
     }) =>
@@ -162,9 +160,11 @@ const TeacherCourseOverview: React.FC = () => {
 
     courseSummaryCachedLoader(selectedSection.courseVersionName).then(
       response => {
-        setCourseSummary(response.unit_group);
-        setIsVerifiedInstructor(response.is_verified_instructor);
-        setHiddenScripts(response.hidden_scripts);
+        if (response) {
+          setCourseSummary(response.unit_group as CourseSummary);
+          setIsVerifiedInstructor(response.is_verified_instructor);
+          setHiddenScripts(response.hidden_scripts as string[]);
+        }
       }
     );
   }, [
@@ -198,21 +198,25 @@ const TeacherCourseOverview: React.FC = () => {
     dispatch(setViewType(ViewType.Instructor));
     dispatch(setUserRoleInCourse(CourseRoles.Instructor));
 
-    if (isVerifiedInstructor) {
-      dispatch(setVerified());
-    }
-
-    if (hiddenScripts) {
-      dispatch(initializeHiddenScripts(hiddenScripts));
-    }
-
     const announcements = courseSummary.announcements as Announcement[];
     if (announcements) {
       announcements.forEach(announcement =>
         dispatch(addAnnouncement(announcement))
       );
     }
-  }, [courseSummary, isVerifiedInstructor, hiddenScripts, dispatch]);
+  }, [courseSummary, dispatch]);
+
+  React.useEffect(() => {
+    if (isVerifiedInstructor) {
+      dispatch(setVerified());
+    }
+  }, [isVerifiedInstructor, dispatch]);
+
+  React.useEffect(() => {
+    if (hiddenScripts) {
+      dispatch(initializeHiddenScripts(hiddenScripts));
+    }
+  }, [hiddenScripts, dispatch]);
 
   if (!courseSummary) {
     return <Spinner />;
@@ -228,7 +232,7 @@ const TeacherCourseOverview: React.FC = () => {
       courseVersionId={courseSummary.course_version_id}
       descriptionStudent={courseSummary.description_student}
       descriptionTeacher={courseSummary.description_teacher}
-      sectionsInfo={sections}
+      sectionsInfo={Object.values(sections)}
       teacherResources={courseSummary.teacher_resources}
       studentResources={courseSummary.student_resources}
       scripts={courseSummary.scripts}
