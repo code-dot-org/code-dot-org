@@ -180,14 +180,21 @@ class Hamburger
 
       # Also handle subentries
       if link[:subentries]
-        link[:subentries] = link[:subentries].map do |sublink|
+        link[:subentries] = link[:subentries].filter_map do |sublink|
           sublink = sublink.dup
-          sublink[:title] = I18n.t("#{loc_prefix}#{sublink[:title]}")
           if sublink[:domain] == 'studio.code.org'
             sublink[:url] = CDO.studio_url(sublink[:url])
           elsif sublink[:domain] == 'code.org'
             sublink[:url] = CDO.code_org_url(sublink[:url])
           end
+
+          # Also handle subentries that are already header items and make sure those
+          # do not appear in the submenu.
+          header_index = header_items.index(sublink[:title])
+          next nil unless header_index.nil?
+
+          # Localize the title
+          sublink[:title] = I18n.t("#{loc_prefix}#{sublink[:title]}")
           sublink
         end
       end
