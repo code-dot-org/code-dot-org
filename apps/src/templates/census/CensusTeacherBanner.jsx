@@ -43,8 +43,6 @@ export default function CensusTeacherBanner({
     schoolType: existingSchoolInfo.type,
   });
 
-  console.log(schoolInfo);
-
   const hideSchoolInfoForm = () => {
     setShowSchoolInfoForm(false);
   };
@@ -296,7 +294,7 @@ export default function CensusTeacherBanner({
                 onChange={onTeachesChange}
                 checked={teaches === true}
               />
-              Yes, we’ve done {numHours} hours.
+              Yes, we've done {numHours} hours.
             </label>
             <label>
               <input
