@@ -55,39 +55,43 @@ def main
     student_users_in_section = Section.find(options[:section_id]).followers.map(&:student_user)
     teacher_users_in_section = Section.find(options[:section_id]).active_section_instructors.map(&:instructor)
     all_users_in_section = student_users_in_section + teacher_users_in_section
+    # start_date is when we began using OpenAI for safety layer.
+    start_date = DateTime.new(2024, 9, 26, 0, 0, 0)
+    end_date = DateTime.now
+    time_range = start_date..end_date
     rows = AichatRequest.where(
       user: all_users_in_section,
+      created_at: time_range,
     )
 
     rows.each do |row|
+      # In the case a data row does not include level_id (indicates an invalid test request).
+      next unless row.level_id.is_a? Integer
       user = row.user
       response = row.response
       user_message_text = JSON.parse(row.new_message)["chatMessageText"]
       execution_status = row.execution_status
       selected_model_id = JSON.parse(row.model_customizations)["selectedModelId"]
-      path = row.level_id
-      # In case a data row does not include level_id.
-      if row.level_id.is_a? Integer
-        level = Level.find(row.level_id)
-        script_level = level.script_levels.find_by_script_id(row.script_id)
-        if script_level
-          # This handles chat requests that occurred on standard levels in a progression
-          path = script_level.path
-        else
-          # This handles chat requests that occurred on a sublevel
-          parent_levels = BubbleChoice.parent_levels(level.name)
-          parent_levels_in_script = parent_levels.filter do |pl|
-            pl.script_levels.any? {|sl| sl.script_id == row.script_id}
-          end
+      path = ""
+      level = Level.find(row.level_id)
+      script_level = level.script_levels.find_by_script_id(row.script_id)
+      if script_level
+        # This handles chat requests that occurred on standard levels in a progression
+        path = script_level.path
+      else
+        # This handles chat requests that occurred on a sublevel
+        parent_levels = BubbleChoice.parent_levels(level.name)
+        parent_levels_in_script = parent_levels.filter do |pl|
+          pl.script_levels.any? {|sl| sl.script_id == row.script_id}
+        end
 
-          if parent_levels_in_script
-            parent_level = parent_levels_in_script.first
-            sublevel_position = parent_level.sublevel_position(level)
-            path = parent_level.build_script_level_path(
-              parent_level.script_levels.first,
-              {sublevel_position: sublevel_position}
-            )
-          end
+        if parent_levels_in_script
+          parent_level = parent_levels_in_script.first
+          sublevel_position = parent_level.sublevel_position(level)
+          path = parent_level.build_script_level_path(
+            parent_level.script_levels.first,
+            {sublevel_position: sublevel_position}
+          )
         end
       end
 
