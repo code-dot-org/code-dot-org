@@ -7,18 +7,14 @@ import React from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
 import {FileUploader} from './FileUploader';
-import {useFileUploadErrorCallback, useHandleFileUpload} from './hooks';
-import {newFolderPromptType, newFilePromptType} from './types';
+import {
+  useFileUploadErrorCallback,
+  useHandleFileUpload,
+  usePrompts,
+} from './hooks';
 
-type FileBrowserHeaderPopUpButtonProps = {
-  newFolderPrompt: newFolderPromptType;
-  newFilePrompt: newFilePromptType;
-};
-
-export const FileBrowserHeaderPopUpButton = ({
-  newFolderPrompt,
-  newFilePrompt,
-}: FileBrowserHeaderPopUpButtonProps) => {
+export const FileBrowserHeaderPopUpButton = () => {
+  const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
   const {
     project,
     config: {validMimeTypes},
@@ -30,12 +26,12 @@ export const FileBrowserHeaderPopUpButton = ({
       <PopUpButtonOption
         iconName="plus"
         labelText={codebridgeI18n.newFolder()}
-        clickHandler={() => newFolderPrompt()}
+        clickHandler={() => openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})}
       />
       <PopUpButtonOption
         iconName="plus"
         labelText={codebridgeI18n.newFile()}
-        clickHandler={() => newFilePrompt()}
+        clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
       />
       <FileUploader
         validMimeTypes={validMimeTypes}

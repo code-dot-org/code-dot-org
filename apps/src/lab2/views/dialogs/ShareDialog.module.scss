@@ -2,9 +2,10 @@
 @import '../common.scss';
 
 %dialog {
-  background-color: $neutral_light;
+  background-color: $light_gray_950;
+  color: $neutral_light;
   border-radius: 5px;
-  padding: 20px 50px;
+  padding: 20px 32px;
   width: 600px;
 }
 
@@ -30,27 +31,49 @@
     flex-direction: column;
     position: relative;
 
-    .itemsContainer {
+    .heading {
+      color: $neutral_light;
+      margin-bottom: 20px;
+    }
+
+    .columns {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 12px;
+      flex-direction: row;
+      gap: 40px;
 
-      .copyToClipboard {
-        @extend %button;
-        background-color: $light_secondary_500;
-        color: $neutral_light;
-
-        &:hover {
-          background-color: $light_secondary_500;
-        }
-
-        &Icon {
-          font-size: 24px;
-          margin-right: 10px;
-          padding-bottom: 3px;
-        }
+      .column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 25px;
       }
+    }
+
+    .share {
+      background-color: $white;
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .careers {
+      background-color: $neutral_dark80;
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .doneButton {
+      margin-top: auto;
+      margin-bottom: 20px;
     }
 
     .closeButton {

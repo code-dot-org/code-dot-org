@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Python and Pandas
+# Data Science with Python
 
-## Lesson 10 Quarrying your Data 
+## Lesson 11 Quarrying your Data 
 
 <img src="https://images.code.org/2df9050dff40b9e5fa362d87339c5ceb-image-1724862949854.png" alt="notnull() chart example" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 

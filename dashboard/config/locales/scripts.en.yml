@@ -19175,6 +19175,8 @@ en:
               name: Additional Input
             lesson-8:
               name: Additional Output
+            lesson-9:
+              name: Pre-assessment
           lesson_groups: {}
           name: computer-systems-playground
           title: "[PLAYGROUND] Computer Systems and Devices (with micro:bit)"

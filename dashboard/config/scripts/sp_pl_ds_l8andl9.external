@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 
 ---
 
-## Lesson 8 - Data Cleaning and Analysis Techniques
+## Lesson 9 - Data Cleaning and Analysis Techniques
 
 
 <img src="https://images.code.org/01467ad73fa6fe46843fe7e62d99adb8-image-1724423225270.png" alt="codap logo" width="180px"   style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 
 <div style="clear:both;"></div>
 
-## Lesson 9 - Data Interpretation 
+## Lesson 10 - Data Interpretation 
 <img src="https://images.code.org/ebfa1afbe8f17eae9192bde2b7314eb6-image-1724423378353.png" alt="graph icon" width="180px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
 #### This lesson explores how different data visualizations shape our understanding by highlighting trends, patterns, and outliers. 
@@ -46,7 +46,7 @@ markdown <<MARKDOWN
 
 ## What's Next?
 
-####Let’s take a look at a cleaning data activity from **Lesson 8!** 
+####Let’s take a look at a cleaning data activity from **Lesson 9!** 
 
 
 MARKDOWN

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-10-07T22:05:47.000Z",
   "level_num": "custom",
@@ -167,7 +168,7 @@
             "value": 1
           }
         ],
-        "callout": "play-sound-block"
+        "callout": "play-sound-block---play-sound-block-workspace"
       },
       {
         "key": "music-ai-skill-sequence_100f6390-0a0c-4ff7-bc67-2979e4beed57",
@@ -176,7 +177,7 @@
         "conditions": [
 
         ],
-        "callout": "play-sound-block"
+        "callout": "play-sound-block---when-run-block"
       }
     ],
     "level_data": {
@@ -222,8 +223,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:47.060+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence2_3\\\"\"],\"cloned_from\":\"music-ai-skill-sequence2_3\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:47.060+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence2_3\\\"\"],\"cloned_from\":\"music-ai-skill-sequence2_3\"},{\"changed_at\":\"2024-10-08 19:42:49 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
