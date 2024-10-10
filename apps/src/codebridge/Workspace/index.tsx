@@ -34,12 +34,15 @@ const Workspace = () => {
   const dispatch = useAppDispatch();
 
   const headerContent = (
-    <>
-      {commonI18n.workspaceHeaderShort()}{' '}
+    <div className={moduleStyles.centerHeaderContent}>
+      <div>{commonI18n.workspaceHeaderShort()}</div>
       {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 darkMode={true} />
+        <ProjectTemplateWorkspaceIconV2
+          darkMode={true}
+          className={moduleStyles.projectTemplateIcon}
+        />
       )}
-    </>
+    </div>
   );
 
   const closeRestoredVersionBanner = () => {

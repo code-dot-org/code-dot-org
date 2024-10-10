@@ -1,16 +1,15 @@
-import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {ComponentPlacementDirection} from '@cdo/apps/componentLibrary/common/types';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import commonI18n from '@cdo/locale';
 
-import moduleStyles from './project-template-workspace-icon-v2.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface ProjectTemplateWorkspaceIconV2Props {
   tooltipPlace?: ComponentPlacementDirection;
   darkMode?: boolean;
+  className?: string;
 }
 
 /**
@@ -22,11 +21,12 @@ interface ProjectTemplateWorkspaceIconV2Props {
  * the DSCO ComponentPlacementDirection enum.
  * @param darkMode - boolean to indicate if the workspace is in dark mode. This is only
  * used to style the tooltip. The icon will inherit its color from the parent component.
+ * @param className - Additional class name to apply to the icon container.
  * @returns
  */
 const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
   ProjectTemplateWorkspaceIconV2Props
-> = ({tooltipPlace, darkMode}) => {
+> = ({tooltipPlace, darkMode, className}) => {
   const tooltipClassName = useMemo(() => {
     if (!darkMode) {
       return undefined;
@@ -53,12 +53,10 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
         className: tooltipClassName,
         size: 'xs',
       }}
-      tooltipOverlayClassName={moduleStyles.container}
+      tooltipOverlayClassName={className}
     >
       {/* FontAwesomeV6Icon does not work with WithTooltip. */}
-      <i
-        className={classNames('fa-kit fa-connected-level', moduleStyles.icon)}
-      />
+      <i className={'fa-kit fa-connected-level'} />
     </WithTooltip>
   );
 };
