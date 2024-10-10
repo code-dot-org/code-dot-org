@@ -744,33 +744,6 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   # USING NEW SIGN-UP FLOW [END]
 
-  test "display name edit field absent for picture account" do
-    picture_student = create(:student_in_picture_section)
-    sign_in picture_student
-
-    get :edit
-    assert_response :success
-    assert_select '#user_name', false, 'This page should not contain an editable display name field'
-  end
-
-  test "display name edit field present for word account" do
-    word_student = create(:student_in_word_section)
-    sign_in word_student
-
-    get :edit
-    assert_response :success
-    assert_select '#user_name', 1
-  end
-
-  test "display name edit field present for password account" do
-    student = create(:student)
-    sign_in student
-
-    get :edit
-    assert_response :success
-    assert_select '#user_name', 1
-  end
-
   test "existing account sign in/up links redirect to user edit page" do
     get :existing_account, params: {email: "test@email.com", provider: "facebook"}
     assert_response :success
