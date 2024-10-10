@@ -11,7 +11,7 @@ import {hashEmail} from '../../code-studio/hashEmail';
 import BaseDialog from '../../templates/BaseDialog';
 import {isEmail} from '../../util/formatValidation';
 
-import ChangeEmailForm from './ChangeEmailForm';
+import {ChangeEmailForm} from './ChangeEmailForm';
 
 import styles from './modalStyle.module.scss';
 

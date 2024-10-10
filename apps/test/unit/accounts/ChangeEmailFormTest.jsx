@@ -2,7 +2,7 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import ChangeEmailForm from '@cdo/apps/accounts/ChangeEmail/ChangeEmailForm';
+import {ChangeEmailForm} from '@cdo/apps/accounts/ChangeEmail/ChangeEmailForm';
 
 import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
