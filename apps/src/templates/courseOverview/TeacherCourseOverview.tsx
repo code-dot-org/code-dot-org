@@ -136,11 +136,9 @@ const TeacherCourseOverview: React.FC = () => {
 
   React.useEffect(() => {
     if (!selectedSection || !selectedSection?.courseVersionName) {
-      console.log('lfm early return');
       return;
     }
     if (!selectedSection.courseId && selectedSection.unitName) {
-      console.log('lfm unit');
       navigate(
         generatePath('../' + TEACHER_NAVIGATION_PATHS.unitOverview, {
           unitName: selectedSection.unitName,
@@ -151,7 +149,6 @@ const TeacherCourseOverview: React.FC = () => {
     }
 
     if (selectedSection.courseVersionName !== params.courseVersionName) {
-      console.log('lfm course');
       navigate(
         generatePath('../' + TEACHER_NAVIGATION_PATHS.courseOverview, {
           courseVersionName: selectedSection.courseVersionName,
@@ -163,7 +160,6 @@ const TeacherCourseOverview: React.FC = () => {
 
     courseSummaryCachedLoader(selectedSection.courseVersionName).then(
       response => {
-        console.log('lfm set');
         if (response) {
           setCourseSummary(response.unit_group as CourseSummary);
           setIsVerifiedInstructor(response.is_verified_instructor);
