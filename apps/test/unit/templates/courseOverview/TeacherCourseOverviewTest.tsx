@@ -8,12 +8,16 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 
-import announcements from '@cdo/apps/code-studio/announcementsRedux';
+import announcements, {
+  VisibilityType,
+} from '@cdo/apps/code-studio/announcementsRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import TeacherCourseOverview from '@cdo/apps/templates/courseOverview/TeacherCourseOverview';
 import currentUser, {
   setInitialData,
@@ -35,6 +39,20 @@ jest.mock('@cdo/apps/code-studio/initSigninState', () => ({
     userType: 'teacher',
   }),
 }));
+
+const navigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => navigate,
+}));
+
+const fakeTeacherAnnouncement = {
+  notice: 'Notice - Teacher',
+  details: 'Teachers are the best',
+  link: '/foo/bar/teacher',
+  type: NotificationType.information,
+  visibility: VisibilityType.teacher,
+};
 
 const COURSE_SUMMARY = {
   name: 'csp',
@@ -68,40 +86,18 @@ const COURSE_SUMMARY = {
   show_assign_button: true,
   participant_audience: 'Student',
   course_versions: {},
-  announcements: [],
+  announcements: [fakeTeacherAnnouncement],
   has_verified_resources: false,
 };
-
-// const fakeTeacherAnnouncement = {
-//   notice: 'Notice - Teacher',
-//   details: 'Teachers are the best',
-//   link: '/foo/bar/teacher',
-//   type: NotificationType.information,
-//   visibility: VisibilityType.teacher,
-// };
-// const fakeStudentAnnouncement = {
-//   notice: 'Notice - Student',
-//   details: 'Students are the best',
-//   link: '/foo/bar/student',
-//   type: NotificationType.information,
-//   visibility: VisibilityType.student,
-// };
-// const fakeTeacherAndStudentAnnouncement = {
-//   notice: 'Notice - Teacher And Student',
-//   details: 'More detail here',
-//   link: '/foo/bar/teacherAndStudent',
-//   type: NotificationType.information,
-//   visibility: VisibilityType.teacherAndStudent,
-// };
 
 const sections = [
   {
     id: 11,
     name: 'Period 1',
-    course_id: 30,
-    unitName: 'csd1-2024',
-    courseVersionName: 'csd-2024',
-    scriptId: 1,
+    course_id: null,
+    unitName: 'coursea-2024',
+    courseVersionName: 'coursea-2024',
+    scriptId: 2,
   },
   {
     id: 12,
@@ -122,6 +118,8 @@ const sections = [
 ];
 
 describe('TeacherCourseOverview', () => {
+  let fetchSpy: jest.SpyInstance;
+
   beforeEach(() => {
     const store = getStore();
 
@@ -133,6 +131,7 @@ describe('TeacherCourseOverview', () => {
       viewAs,
       hiddenLesson,
       progress,
+      isRtl,
     });
 
     store.dispatch(setInitialData({id: 1}));
@@ -140,17 +139,7 @@ describe('TeacherCourseOverview', () => {
     store.dispatch(setSections(sections));
     store.dispatch(selectSection(12));
 
-    // jest.spyOn(globalAny, 'fetch').mockImplementation(
-    //   jest.fn(() =>
-    //     Promise.resolve({
-    //       json: () =>
-    //         Promise.resolve({
-    //
-    //         }),
-    //     })
-    //   ) as jest.Mock
-    // );
-    HttpClient.fetchJson = jest.fn().mockResolvedValue({
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
       value: {
         unit_group: COURSE_SUMMARY,
         is_verified_instructor: true,
@@ -158,6 +147,10 @@ describe('TeacherCourseOverview', () => {
       },
       response: new Response(),
     });
+  });
+
+  afterEach(() => {
+    jest.resetAllMocks();
   });
 
   function renderDefault(initialRoute = '/sections/12/courses/csd-2024') {
@@ -185,5 +178,45 @@ describe('TeacherCourseOverview', () => {
 
     await screen.findByText('Computer Science Principles');
     screen.getByText('Teacher description');
+    // renders announcement
+    screen.getByText('Teachers are the best');
+    expect(fetchSpy).toHaveBeenCalled();
+  });
+
+  it('redirects to course if no course name in URL', async () => {
+    renderDefault('/sections/12/courses/');
+
+    expect(navigate).toHaveBeenCalledWith('../courses/csd-2024', {
+      replace: true,
+    });
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('redirects to course if wrong course in URL', async () => {
+    renderDefault('/sections/12/courses/csp-2024');
+
+    expect(navigate).toHaveBeenCalledWith('../courses/csd-2024', {
+      replace: true,
+    });
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('redirects to unit if standalone unit', async () => {
+    getStore().dispatch(selectSection(11));
+
+    renderDefault('/sections/11/courses/csd-2024');
+
+    expect(navigate).toHaveBeenCalledWith('../unit/coursea-2024', {
+      replace: true,
+    });
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('shows loading spinner while fetching data', async () => {
+    HttpClient.fetchJson = jest.fn().mockResolvedValue(new Promise(() => {}));
+
+    renderDefault();
+
+    screen.getByTitle('Loading...');
   });
 });
