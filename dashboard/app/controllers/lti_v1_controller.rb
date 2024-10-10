@@ -153,11 +153,20 @@ class LtiV1Controller < ApplicationController
       nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM]&.[](:context_memberships_url)
       resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM]&.[](:id)
       deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
+      deployment_name = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_PLATFORM_CLAIM]&.[](:name)
       deployment = Queries::Lti.get_deployment(integration[:id], deployment_id)
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[Policies::Lti::LTI_ROLES_KEY])
 
+      # If deployment name is nil, update it with the name from the JWT. This
+      # could likeyl be removed after a period of time, as we also write the name
+      # for all new deployments in the next block. This block is necessary to backfill
+      # existing deployments that were created before we started writing the name.
+      if deployment && deployment.name.nil?
+        deployment.update(name: deployment_name)
+      end
+
       if deployment.nil?
-        deployment = Services::Lti.create_lti_deployment(integration[:id], deployment_id)
+        deployment = Services::Lti.create_lti_deployment(integration[:id], deployment_id, deployment_name)
       end
       redirect_params = {
         lti_integration_id: integration[:id],
