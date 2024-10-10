@@ -27,20 +27,19 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Understanding Embeddings</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-<img src="https://images.code.org/83dee75d875fa88fe7d45afc04bf1d79-Screenshot 2024-10-08 at 2.58.18 PM.png" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/f8f255ae13beed4bb8255ee46c235786-170a15084c6c3ae34f619c8d0ff22954-Slide27.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
-#### **Question of the Day:** How can we begin to understand Generative AI’s impact on how we live and work?
+#### **Question of the Day:** How do computers represent the meanings of words?
 
 #### **Lesson Overview:**
 
-#### This lesson introduces the learning goals focused on artificial intelligence (AI), transitioning into generative AI. It begins with a discussion on the impact of past technological innovations on society. Students then explore the concept of generative AI through the lens of someone familiar only with its hype, aiming to foster understanding and responsible engagement with AI technology. A key part of the lesson is the introduction of the Input, Storage, Processing, Output (ISPO) framework, essential for understanding generative AI's workings. The lesson concludes with students receiving a graphic organizer for the unit and sharing their anticipations about learning more on generative AI.
+#### In this lesson, students explore how language models understand and represent word meanings. Beginning with a game, they investigate the concept of words being "close" in meaning. This leads to an activity where students assume the roles of fictional characters, using a sequence of numbers to represent their "character traits" and comparing these numerical representations to others. The lesson demonstrates that language models use a similar method, known as embeddings, to represent words as sequences of numbers, with similar words being numerically close to each other. The lesson concludes with students updating the storage section of their graphic organizer to encapsulate the idea of word embeddings.
 
 #### **Students will be able to:**
-* #### Distinguish between different types of AI, including machine learning, deep learning, and generative AI.
-* #### Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations.
-* #### Identify and explain the four key components that make up a computer system.
+* #### Describe how embeddings show the similarity or difference between two items
+* #### Explain how language models use embeddings to store the meaning of wordss
 
-### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/1" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/4" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
 </p></div>
 </details>
 
@@ -48,20 +47,19 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Embeddings: How They're Created</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-<img src="https://images.code.org/83dee75d875fa88fe7d45afc04bf1d79-Screenshot 2024-10-08 at 2.58.18 PM.png" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/088a71b0747a8b137cd39ac44767ce18-c25ee550d58ce9ea5e005f9a5bb11a4d-Slide19.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
-#### **Question of the Day:** How can we begin to understand Generative AI’s impact on how we live and work?
+#### **Question of the Day:** How do language models learn the embeddings they use to represent words?
 
 #### **Lesson Overview:**
 
-#### This lesson introduces the learning goals focused on artificial intelligence (AI), transitioning into generative AI. It begins with a discussion on the impact of past technological innovations on society. Students then explore the concept of generative AI through the lens of someone familiar only with its hype, aiming to foster understanding and responsible engagement with AI technology. A key part of the lesson is the introduction of the Input, Storage, Processing, Output (ISPO) framework, essential for understanding generative AI's workings. The lesson concludes with students receiving a graphic organizer for the unit and sharing their anticipations about learning more on generative AI.
+#### In this lesson, students delve into the creation of word embeddings. They start by interpreting a passage in a made-up language, using context clues to understand word meanings based on their relationships with other words. Following this, they engage in an activity to construct embeddings from sentences by noting word proximity. The climax reveals that students worked with two distinct passages, illustrating how the same word can have different representations based on its usage context. This insight sets the stage for upcoming lessons on how language models use sentence structure and context to determine word meanings accurately.
 
 #### **Students will be able to:**
-* #### Distinguish between different types of AI, including machine learning, deep learning, and generative AI.
-* #### Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations.
-* #### Identify and explain the four key components that make up a computer system.
+* #### Construct an embedding for a text passage
+* #### Explain how different passages can create different embeddings
 
-### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/1" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/5" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
 </p></div>
 </details>
 

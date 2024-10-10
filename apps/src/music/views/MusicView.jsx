@@ -1,4 +1,5 @@
 /** @file Top-level view for Music */
+import {ProcedureBase} from '@blockly/block-shareable-procedures';
 import {isEqual} from 'lodash';
 import markdownToTxt from 'markdown-to-txt';
 import PropTypes from 'prop-types';
@@ -456,6 +457,22 @@ class UnconnectedMusicView extends React.Component {
         this.props.setSelectedTriggerId(
           this.musicBlocklyWorkspace.getSelectedTriggerId(e.blockId)
         );
+      }
+    }
+
+    // Procedure events should regenerate function blocks in the (uncategorized) toolbox.
+    // This keeps call blocks in sync when functions are created/deleted/renamed.
+    if (
+      e instanceof ProcedureBase ||
+      e.type === Blockly.Events.FINISHED_LOADING
+    ) {
+      const workspace = this.musicBlocklyWorkspace;
+      if (
+        workspace.toolbox?.addFunctionCalls &&
+        workspace.toolbox?.type === 'flyout' &&
+        workspace.blockMode === BlockMode.SIMPLE2
+      ) {
+        workspace.generateFunctionBlocks();
       }
     }
 
