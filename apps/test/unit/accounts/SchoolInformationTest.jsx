@@ -90,74 +90,6 @@ describe('SchoolInformation', () => {
     ).toBeEnabled();
   });
 
-  it('shows success alert when update is successful', async () => {
-    render(<SchoolInformation {...defaultProps} />);
-    fireEvent.click(
-      screen.getByRole('button', {
-        name: i18n.schoolInformation_updateSchoolInformation(),
-      })
-    );
-
-    await waitFor(() =>
-      expect(
-        screen.getByText(i18n.schoolInformation_updateSuccess())
-      ).toBeInTheDocument()
-    );
-    expect(
-      screen.queryByText(i18n.schoolInformation_updateFailure())
-    ).not.toBeInTheDocument();
-  });
-
-  it('shows failure alert when update fails', async () => {
-    updateSchoolInfo.mockRejectedValue(new Error('Update failed'));
-    render(<SchoolInformation {...defaultProps} />);
-    fireEvent.click(
-      screen.getByRole('button', {
-        name: i18n.schoolInformation_updateSchoolInformation(),
-      })
-    );
-
-    await waitFor(() =>
-      expect(
-        screen.getByText(i18n.schoolInformation_updateFailure())
-      ).toBeInTheDocument()
-    );
-    expect(
-      screen.queryByText(i18n.schoolInformation_updateSuccess())
-    ).not.toBeInTheDocument();
-  });
-
-  it('resets alerts when school information changes', async () => {
-    const {rerender} = render(<SchoolInformation {...defaultProps} />);
-    fireEvent.click(
-      screen.getByRole('button', {
-        name: i18n.schoolInformation_updateSchoolInformation(),
-      })
-    );
-
-    // Simulate success alert
-    await waitFor(() =>
-      expect(
-        screen.getByText(i18n.schoolInformation_updateSuccess())
-      ).toBeInTheDocument()
-    );
-
-    // Update school info to trigger useEffect
-    useSchoolInfo.mockReturnValue({
-      ...mockSchoolInfo,
-      schoolName: 'New School',
-    });
-
-    rerender(<SchoolInformation {...defaultProps} />);
-
-    expect(
-      screen.queryByText(i18n.schoolInformation_updateSuccess())
-    ).not.toBeInTheDocument();
-    expect(
-      screen.queryByText(i18n.schoolInformation_updateFailure())
-    ).not.toBeInTheDocument();
-  });
-
   it('calls updateSchoolInfo with correct parameters when the button is clicked', async () => {
     render(<SchoolInformation {...defaultProps} />);
     fireEvent.click(
@@ -255,6 +187,37 @@ describe('SchoolInformation', () => {
 
     // Close the success alert
     fireEvent.click(screen.getByRole('button', {name: /close/i}));
+    expect(
+      screen.queryByText(i18n.schoolInformation_updateFailure())
+    ).not.toBeInTheDocument();
+  });
+
+  it('resets alerts when school information changes', async () => {
+    const {rerender} = render(<SchoolInformation {...defaultProps} />);
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: i18n.schoolInformation_updateSchoolInformation(),
+      })
+    );
+
+    // Simulate success alert
+    await waitFor(() =>
+      expect(
+        screen.getByText(i18n.schoolInformation_updateSuccess())
+      ).toBeInTheDocument()
+    );
+
+    // Update school info to trigger useEffect
+    useSchoolInfo.mockReturnValue({
+      ...mockSchoolInfo,
+      schoolName: 'New School',
+    });
+
+    rerender(<SchoolInformation {...defaultProps} />);
+
+    expect(
+      screen.queryByText(i18n.schoolInformation_updateSuccess())
+    ).not.toBeInTheDocument();
     expect(
       screen.queryByText(i18n.schoolInformation_updateFailure())
     ).not.toBeInTheDocument();
