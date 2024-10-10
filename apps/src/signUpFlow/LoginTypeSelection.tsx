@@ -39,6 +39,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const [showConfirmPasswordError, setShowConfirmPasswordError] =
     useState(false);
   const [showEmailError, setShowEmailError] = useState(false);
+  const [emailErrorMessage, setEmailErrorMessage] = useState('');
   const [email, setEmail] = useState('');
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
@@ -118,8 +119,10 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   };
 
   const submitLoginType = async () => {
+    const authToken = await getAuthenticityToken();
     logUserLoginType('email');
     if (!isEmail(email)) {
+      setEmailErrorMessage(i18n.censusInvalidEmail());
       setShowEmailError(true);
       return;
     }
@@ -131,17 +134,26 @@ const LoginTypeSelection: React.FunctionComponent = () => {
         password_confirmation: password,
       },
     };
-    const authToken = await getAuthenticityToken();
-    await fetch('/users/begin_sign_up', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': authToken,
-      },
-      body: JSON.stringify(submitLoginTypeParams),
-    });
+    try {
+      const response = await fetch('/users/begin_sign_up', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': authToken,
+        },
+        body: JSON.stringify(submitLoginTypeParams),
+      });
 
-    navigateToHref(finishAccountUrl);
+      if (!response.ok) {
+        setEmailErrorMessage(i18n.duplicate_email_error_message());
+        setShowEmailError(true);
+        return;
+      }
+      navigateToHref(finishAccountUrl);
+    } catch (error) {
+      // Handle network or other errors
+      console.error('Fetch error:', error);
+    }
   };
 
   const sendLMSAnalyticsEvent = () => {
@@ -304,7 +316,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                     iconName={EXCLAMATION_ICON}
                   />
                   <BodyThreeText className={style.red}>
-                    {i18n.censusInvalidEmail()}
+                    {emailErrorMessage}
                   </BodyThreeText>
                 </div>
               )}

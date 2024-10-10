@@ -1103,6 +1103,7 @@
   "dropletBlock_whileBlock_description": "Creates a loop consisting of a conditional expression and a block of statements executed for each iteration of the loop. The loop continues to execute as long as the condition evaluates to true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "duplicate": "Duplicate",
+  "duplicate_email_error_message": "This email is already taken",
   "duration": "Duration",
   "durationLabel": "Duration: {duration}",
   "edit": "Edit",

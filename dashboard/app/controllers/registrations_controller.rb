@@ -59,6 +59,10 @@ class RegistrationsController < Devise::RegistrationsController
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
+    else
+      # Render the errors if they exist
+      render json: {errors: @user.errors.full_messages}, status: :unprocessable_entity
+      return
     end
 
     if params[:new_sign_up].blank?
