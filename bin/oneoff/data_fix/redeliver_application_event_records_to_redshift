@@ -144,6 +144,7 @@ BatchRedeliveryStatus = Struct.new(
 
 batches_processed = 0
 batches_redelivered = 0
+batches_skipped = 0
 batches_failed = 0
 
 # Log each batch that we attempt to redeliver to a CSV file.
@@ -262,8 +263,8 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
             batch_status.redelivery_status = false
             batch_status.redelivery_status_reason = exception.message
           end
-        rescue SkipRedeliveryError => exception
-          batches_failed += 1
+        rescue SkipRedeliveryError, BatchAlreadyRedeliveredError => exception
+          batches_skipped += 1
           CDO.log.error "[REDELIVER FIREHOSE EVENTS] Error redelivering batch: #{undelivered_batch_uri.path} / #{exception.message}"
           batch_status.redelivery_status = false
           batch_status.redelivery_status_reason = exception.message
@@ -281,4 +282,5 @@ end
 CDO.log.info "[REDELIVER FIREHOSE EVENTS] Batches Processed: #{batches_processed}"
 CDO.log.info "[REDELIVER FIREHOSE EVENTS] Batches Successfully Redelivered: #{batches_redelivered}"
 CDO.log.info "[REDELIVER FIREHOSE EVENTS] Batches Failed Redelivery: #{batches_failed}"
+CDO.log.info "[REDELIVER FIREHOSE EVENTS] Batches Skipped Redelivery: #{batches_skipped}"
 puts "Script execution complete."
