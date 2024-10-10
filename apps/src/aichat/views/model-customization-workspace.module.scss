@@ -144,6 +144,7 @@ $default-spacing: 4px;
 .selectedModelDropdown {
   @extend %full-width;
   padding-bottom: 10px;
+  display: inline-block;
 }
 
 .updateButton {

@@ -12,7 +12,7 @@ import styles from './teacher-navigation.module.scss';
 interface SidebarOptionProps {
   isSelected: boolean;
   sectionId: number;
-  courseVersionName: string;
+  courseVersionName: string | null;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
   onClick: () => void;
 }
