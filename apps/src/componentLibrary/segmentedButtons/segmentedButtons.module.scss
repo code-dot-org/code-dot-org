@@ -1,5 +1,6 @@
-@import "color";
-@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import '@cdo/apps/componentLibrary/common/styles/colors.css';
 
 .segmentedButtons {
   display: flex;
@@ -8,6 +9,7 @@
 
   .segmentedButton {
     z-index: 1;
+
     &:first-child {
       border-start-start-radius: 4px;
       border-end-start-radius: 4px;
@@ -24,7 +26,7 @@
   }
 
   // Selected styles
-  .selectedSegmentedButton {
+  .selectedSegmentedButton.segmentedButton {
     z-index: 0;
     background-color: $light_primary_500;
     border-color: $light_primary_500;
@@ -67,7 +69,7 @@
   gap: 0.5rem;
 
   background-color: $light_white;
-  border: 1px solid $light_gray_200;
+  border: 1px solid transparent;
   border-radius: 0;
   color: $light_black;
   margin: 0;
@@ -99,6 +101,133 @@
     background-color: $light_white;
     border-color: $light_gray_200;
     color: $light_gray_200;
+  }
+}
+
+// Colors
+.segmentedButtons-primary {
+  // Selected styles
+  .selectedSegmentedButton {
+    //background-color: $light_primary_500;
+    //border-color: $light_primary_500;
+    //// Hover styles
+    //&:hover {
+    //  background-color: $light_primary_500;
+    //  border-color: $light_primary_500;
+    //}
+
+    // Focus styles
+    &:focus-visible {
+      //background-color: $light_primary_100;
+      border-color: var(--borders-neutral-primary);
+    }
+
+    //// Pressed styles
+    //&:active {
+    //  background-color: $light_primary_500;
+    //  border-color: $light_primary_500;
+    //}
+
+    // Disabled styles
+    &:disabled {
+      background-color: var(--background-neutral-primary);
+      //border-color: $light_primary_100;
+    }
+  }
+
+  .segmentedButton {
+    background-color: var(--background-neutral-primary);
+    border-color: var(--borders-neutral-primary);
+
+    // Hover styles
+    &:hover {
+      background-color: var(--background-neutral-tertiary);
+      border-color: var(--borders-neutral-primary);
+    }
+
+    // Focus styles
+    &:focus-visible {
+      //background-color: $light_primary_100;
+      border-color: var(--borders-neutral-primary);
+    }
+
+    //// Pressed styles
+    //&:active {
+    //  background-color: $light_primary_700;
+    //  // Important here is needed to rewrite line 3328, app/assets/stylesheets/application.scss */
+    //  border-color: $light_primary_500 !important;
+    //  color: $light_white;
+    //}
+
+    // Disabled styles
+    &:disabled {
+      background-color: var(--background-neutral-primary);
+      //border-color: $light_gray_200;
+      //color: $light_gray_200;
+    }
+  }
+}
+
+.segmentedButtons-strong {
+  // Selected styles
+  .selectedSegmentedButton {
+    //background-color: $light_primary_500;
+    //border-color: $light_primary_500;
+    //// Hover styles
+    //&:hover {
+    //  background-color: $light_primary_500;
+    //  border-color: $light_primary_500;
+    //}
+
+    // Focus styles
+    &:focus-visible {
+      //background-color: $light_primary_100;
+      border-color: var(--borders-neutral-primary);
+    }
+
+    //// Pressed styles
+    //&:active {
+    //  background-color: $light_primary_500;
+    //  border-color: $light_primary_500;
+    //}
+
+    // Disabled styles
+    &:disabled {
+      background-color: var(--background-neutral-primary);
+      //border-color: $light_primary_100;
+    }
+  }
+
+  .segmentedButton {
+    background-color: var(--background-neutral-primary);
+    border-color: var(--borders-neutral-primary);
+
+    // Hover styles
+    &:hover {
+      background-color: var(--background-neutral-tertiary);
+      border-color: var(--borders-neutral-primary);
+    }
+
+    // Focus styles
+    &:focus-visible {
+      //background-color: $light_primary_100;
+      border-color: var(--borders-neutral-primary);
+    }
+
+    //// Pressed styles
+    //&:active {
+    //  background-color: $light_primary_700;
+    //  // Important here is needed to rewrite line 3328, app/assets/stylesheets/application.scss */
+    //  border-color: $light_primary_500 !important;
+    //  color: $light_white;
+    //}
+
+    // Disabled styles
+    &:disabled {
+      background-color: var(--background-neutral-primary);
+      //border-color: $light_gray_200;
+      //color: $light_gray_200;
+    }
   }
 }
 
