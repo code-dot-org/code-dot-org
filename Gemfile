@@ -312,20 +312,15 @@ gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'loofah', '~> 2.19.1'
 
-# TODO: Remove this after testing this feature branch on an adhoc and restore original logic.
-group :adhoc do
-  gem 'pg'
+# Install pg gem only on specific production hosts and the i18n-dev server.
+require_pg = lambda do
+  require 'socket'
+  %w[production-daemon production-console i18n-dev].include?(Socket.gethostname)
 end
 
-# Install pg gem only on specific production hosts and the i18n-dev server.
-# require_pg = -> do
-#   require 'socket'
-#   %w[production-daemon production-console i18n-dev].include?(Socket.gethostname)
-# end
-#
-# install_if require_pg do
-#   gem 'pg', require: false
-# end
+install_if require_pg do
+  gem 'pg', require: false
+end
 
 gem 'activerecord-import', '~> 1.0.3'
 gem 'active_record_union'
