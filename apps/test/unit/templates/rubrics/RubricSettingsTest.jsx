@@ -1,7 +1,6 @@
 import {render, screen, fireEvent, act} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
@@ -23,8 +22,6 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
-
-import {expect as chaiExpect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const fakeStudent = {
   id: 1,
@@ -71,29 +68,27 @@ describe('RubricSettings', () => {
     }
   }
 
-  function stubFetchEvalStatusForAll(data) {
-    fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
-  }
-
-  function stubFetchTeacherEvaluations(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
-  }
-
   function stubFetch(evalStatus = {}, teacherEvals = {}) {
-    stubFetchEvalStatusForAll(evalStatus);
-    stubFetchTeacherEvaluations(teacherEvals);
+    fetchStub = jest.spyOn(window, 'fetch').mockImplementation(url => {
+      if (/rubrics\/\d+\/ai_evaluation_status_for_all.*/.test(url)) {
+        return Promise.resolve(new Response(JSON.stringify(evalStatus)));
+      } else if (/rubrics\/\d+\/get_teacher_evaluations_for_all.*/.test(url)) {
+        return Promise.resolve(new Response(JSON.stringify(teacherEvals)));
+      }
+      return Promise.resolve(new Response(JSON.stringify({})));
+    });
   }
 
   beforeEach(() => {
-    fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(Promise.resolve(new Response(JSON.stringify(''))));
-    sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
-    refreshAiEvaluationsSpy = sinon.spy();
-    sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
+    fetchStub = jest.spyOn(window, 'fetch');
+    stubFetch();
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+    refreshAiEvaluationsSpy = jest.fn();
+    jest.spyOn(utils, 'queryParams').mockImplementation(arg => {
+      if (arg === 'section_id') {
+        return '1';
+      }
+    });
     stubRedux();
     registerReducers({teacherSections, currentUser});
     store = getStore();
@@ -104,9 +99,7 @@ describe('RubricSettings', () => {
   afterEach(() => {
     jest.useRealTimers();
     restoreRedux();
-    utils.queryParams.restore();
-    sendEventSpy.restore();
-    fetchStub.restore();
+    jest.restoreAllMocks();
   });
 
   const defaultRubric = {
@@ -331,12 +324,13 @@ describe('RubricSettings', () => {
     fireEvent.click(button);
 
     //sends event on click
-    chaiExpect(sendEventSpy).to.have.been.calledWith(
+    expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.TA_RUBRIC_SECTION_AI_EVAL,
       {
         rubricId: defaultRubric.id,
         sectionId: 1,
-      }
+      },
+      'Both'
     );
 
     // Perform fetches and re-renders
@@ -353,7 +347,7 @@ describe('RubricSettings', () => {
     // Perform fetches and re-renders
     await wait();
 
-    chaiExpect(fetchStub).to.have.callCount(4);
+    expect(fetchStub).toHaveBeenCalledTimes(4);
     expect(
       screen.getByRole('button', {name: i18n.runAiAssessmentClass()})
     ).toBeDisabled();
@@ -423,15 +417,12 @@ describe('RubricSettings', () => {
     screen.getByText(i18n.rubricNumberStudentEvals({teacherEvalCount: 2}));
     const button = screen.getByRole('button', {name: i18n.downloadCSV()});
     fireEvent.click(button);
-    chaiExpect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_CSV_DOWNLOADED,
-      {
-        unitName: 'test-2023',
-        courseName: 'course-2023',
-        levelName: 'Test Blah Blah Blah',
-        sectionId: 1,
-      }
-    );
+    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_CSV_DOWNLOADED, {
+      unitName: 'test-2023',
+      courseName: 'course-2023',
+      levelName: 'Test Blah Blah Blah',
+      sectionId: 1,
+    });
   });
 
   it('displays the AI enable toggle', () => {
@@ -488,7 +479,7 @@ describe('RubricSettings', () => {
     );
 
     // Let's stub out setting the field via UserPreferences
-    const setStub = sinon.stub(
+    const setStub = jest.spyOn(
       UserPreferences.prototype,
       'setAiRubricsDisabled'
     );
@@ -498,7 +489,6 @@ describe('RubricSettings', () => {
     fireEvent.change(input);
 
     expect(input.checked).toBe(false);
-    chaiExpect(setStub).to.have.been.calledWith(true);
-    setStub.restore();
+    expect(setStub).toHaveBeenCalledWith(true);
   });
 });
