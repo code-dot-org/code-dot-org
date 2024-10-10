@@ -38,7 +38,7 @@ const ModelDescriptionPanel: React.FunctionComponent<{
         selectedValue={selectedModel.id}
         name={dropdownName}
         size="s"
-        className={styles.fullWidth}
+        className={styles.compareModelsDropdown}
       />
       <br />
       <div className={styles.modelDescriptionContainer}>
