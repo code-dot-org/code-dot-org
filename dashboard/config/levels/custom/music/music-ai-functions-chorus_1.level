@@ -27,14 +27,13 @@
             },
             {
               "type": "procedures_defnoreturn",
-              "id": "!-;o4[rUU=MLhQAhS|9j",
               "x": 210,
               "y": 30,
               "deletable": false,
               "movable": false,
               "editable": false,
               "extraState": {
-                "procedureId": "_;FW8D%-ZDN`m%OcF9Fc",
+                "procedureId": "intro-procedure-id",
                 "initialDeleteConfig": false,
                 "initialEditConfig": false,
                 "initialMoveConfig": false
@@ -45,7 +44,7 @@
               "inputs": {
                 "STACK": {
                   "block": {
-                    "type": "play_sounds_together",
+                    "type": "play_sounds_together_no_next",
                     "id": "^fbpb)DaPk:Udqo(~A!.",
                     "deletable": false,
                     "movable": false,
@@ -99,7 +98,7 @@
         },
         "procedures": [
           {
-            "id": "flyout-first-block",
+            "id": "intro-procedure-id",
             "name": "intro",
             "returnTypes": null
           }
@@ -170,13 +169,13 @@
         "conditions": [
 
         ],
-        "callout": "flyout-first-block"
+        "callout": "flyout-first-block---when-run-block"
       }
     ],
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.605+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-chorus_3\\\"\"],\"cloned_from\":\"music-ai-functions-chorus_3\"},{\"changed_at\":\"2024-10-08 20:04:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:49.605+00:00\",\"changed\":[\"cloned from \\\"music-ai-functions-chorus_3\\\"\"],\"cloned_from\":\"music-ai-functions-chorus_3\"},{\"changed_at\":\"2024-10-08 20:04:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:33:08 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:34:37 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:36:29 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:38:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:39:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:41:38 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:14:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-11 03:11:13 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-11 03:45:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-11 03:46:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-11 03:48:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-11 03:50:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

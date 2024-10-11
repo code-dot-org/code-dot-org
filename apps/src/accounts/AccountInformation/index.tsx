@@ -62,7 +62,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
   const displayNameHelperMessage = useMemo(
     () =>
-      isStudent ? undefined : i18n.accountInformationDisplayNameHintTeacher(),
+      isStudent ? undefined : i18n.accountInformation_displayNameHintTeacher(),
     [isStudent]
   );
 
@@ -73,7 +73,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
   const usStateOptions = useMemo(
     () =>
-      [[i18n.accountInformationSelectState(), '']]
+      [[i18n.accountInformation_selectState(), '']]
         .concat(usStateDropdownOptions)
         .map(([text, value]) => ({text, value})),
     [usStateDropdownOptions]
@@ -82,7 +82,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   const lockedOutStudentMessage = useMemo(
     () =>
       studentInLockoutFlow
-        ? i18n.accountInformationUpdateFieldParentPermissionRequired()
+        ? i18n.accountInformation_updateFieldParentPermissionRequired()
         : undefined,
     [studentInLockoutFlow]
   );
@@ -193,7 +193,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     <>
       <hr />
       <Heading2 visualAppearance="heading-sm" className={styles.sectionHeader}>
-        {i18n.accountInformationAccountInformation()}
+        {i18n.accountInformation_accountInformation()}
       </Heading2>
       <form>
         <div className={styles.inputContainer}>
@@ -201,7 +201,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           {verifiedTeacher && (
             <div className="field">
               <label className={styles.verifiedTeacher}>
-                ✔ {i18n.accountInformationVerifiedTeacher()}
+                ✔ {i18n.accountInformation_verifiedTeacher()}
               </label>
             </div>
           )}
@@ -210,7 +210,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           <TextField
             id="user_name"
             className={styles.input}
-            label={i18n.accountInformationDisplayName()}
+            label={i18n.displayName()}
             onChange={e => {
               setName(e.target.value);
               clearError('name');
@@ -228,7 +228,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             <TextField
               id="user_username"
               className={styles.input}
-              label={i18n.accountInformationUsername()}
+              label={i18n.username()}
               onChange={e => {
                 setUsername(e.target.value);
                 clearError('username');
@@ -247,10 +247,10 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               <TextField
                 id="user_email"
                 className={classNames(styles.input, styles.emailInput)}
-                label={i18n.accountInformationEmail()}
+                label={i18n.emailAddress()}
                 helperMessage={
                   migrated && !isStudent
-                    ? i18n.accountInformationEmailHint()
+                    ? i18n.accountInformation_emailHint()
                     : undefined
                 }
                 readOnly={true}
@@ -264,7 +264,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                 <Link
                   role="button"
                   href="#"
-                  text={i18n.accountInformationUpdateEmail()}
+                  text={i18n.accountInformation_updateEmail()}
                   onClick={e => {
                     e.preventDefault();
                     setShowChangeEmailModal(true);
@@ -274,7 +274,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               )}
               {showEmailUpdateSuccess && (
                 <Alert
-                  text={i18n.accountInformationEmailUpdateSuccess()}
+                  text={i18n.accountInformation_emailUpdateSuccess()}
                   type={alertTypes.success}
                   className={styles.alert}
                   onClose={() => setShowEmailUpdateSuccess(false)}
@@ -296,7 +296,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           {sponsored && (
             <div className="field">
               <label className="label-bold">
-                {i18n.accountInformationNoPasswordBecauseSponsored()}
+                {i18n.accountInformation_noPasswordBecauseSponsored()}
               </label>
             </div>
           )}
@@ -307,7 +307,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               <TextField
                 id="user_password"
                 className={styles.input}
-                label={i18n.accountInformationPassword()}
+                label={i18n.password()}
                 onChange={e => {
                   setPassword(e.target.value);
                   clearError('password');
@@ -324,7 +324,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               <TextField
                 id="user_password_confirmation"
                 className={styles.input}
-                label={i18n.accountInformationPasswordConfirmation()}
+                label={i18n.passwordConfirmation()}
                 onChange={e => {
                   setPasswordConfirmation(e.target.value);
                   clearError('password_confirmation');
@@ -344,8 +344,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             <TextField
               id="user_current_password"
               className={styles.input}
-              label={i18n.accountInformationCurrentPassword()}
-              helperMessage={i18n.accountInformationCurrentPasswordHint()}
+              label={i18n.accountInformation_currentPassword()}
+              helperMessage={i18n.accountInformation_currentPasswordHint()}
               onChange={e => {
                 setCurrentPassword(e.target.value);
                 clearError('current_password');
@@ -386,7 +386,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
                 <TextField
                   id="user_gender_student_input"
                   className={styles.input}
-                  label={i18n.accountInformationGender()}
+                  label={i18n.genderOptional()}
                   onChange={e => setGender(e.target.value)}
                   value={gender}
                   name="user[gender_student_input]"
@@ -398,7 +398,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               {isUSA && (
                 <SimpleDropdown
                   id="user_us_state"
-                  labelText={i18n.accountInformationState()}
+                  labelText={i18n.usState()}
                   name="user[us_state]"
                   selectedValue={usState}
                   onChange={e => {
@@ -417,7 +417,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           )}
           {Object.keys(errors).length > 0 && (
             <Alert
-              text={i18n.accountInformationReviewErrors()}
+              text={i18n.accountInformation_reviewErrors()}
               type={alertTypes.danger}
               className={styles.alert}
             />
@@ -425,7 +425,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           {showAccountUpdateSuccess && (
             <Alert
               id="account-update-success"
-              text={i18n.accountInformationUpdateSuccess()}
+              text={i18n.accountInformation_updateSuccess()}
               type={alertTypes.success}
               className={styles.alert}
               onClose={() => setShowAccountUpdateSuccess(false)}
@@ -436,7 +436,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           <Button
             id="submit-update"
             className={styles.submit}
-            text={i18n.accountInformationUpdateAccountInformation()}
+            text={i18n.accountInformation_updateAccountInformation()}
             onClick={handleSubmitAccountSettingsUpdate}
           />
         </div>
