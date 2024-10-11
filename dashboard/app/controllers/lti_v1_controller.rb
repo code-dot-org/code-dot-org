@@ -159,12 +159,10 @@ class LtiV1Controller < ApplicationController
 
       # If deployment name is nil, update it with the name from the JWT. This
       # could likely be removed after a period of time, as we also write the name
-      # for all new deployments in the next block. This block is necessary to
+      # for all new deployments in the next block. This line is necessary to
       # backfill existing deployments that were created before we started
       # writing the name.
-      if deployment && deployment.name.nil?
-        deployment.update(name: deployment_name)
-      end
+      deployment&.update(name: deployment_name) if deployment&.name.nil?
 
       if deployment.nil?
         deployment = Services::Lti.create_lti_deployment(integration[:id], deployment_id, deployment_name)
