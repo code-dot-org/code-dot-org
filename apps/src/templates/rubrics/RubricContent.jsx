@@ -52,7 +52,7 @@ export default function RubricContent({
   setFeedbackAdded,
   sectionId,
   hasTeacherFeedbackByUser,
-  aiEvalStatusForUser,
+  aiEvalStatusMap,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
@@ -92,7 +92,7 @@ export default function RubricContent({
             sectionId={sectionId}
             reportingData={reportingData}
             hasTeacherFeedbackByUser={hasTeacherFeedbackByUser}
-            aiEvalStatusForUser={aiEvalStatusForUser}
+            aiEvalStatusMap={aiEvalStatusMap}
           />
         </div>
 
@@ -169,7 +169,7 @@ RubricContent.propTypes = {
   setFeedbackAdded: PropTypes.func,
   sectionId: PropTypes.number,
   hasTeacherFeedbackByUser: PropTypes.object,
-  aiEvalStatusForUser: PropTypes.object,
+  aiEvalStatusMap: PropTypes.object,
 };
 
 export const InfoAlert = ({text, dismissable}) => {

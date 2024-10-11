@@ -129,7 +129,7 @@ export default function RubricContainer({
   }, [rubricId, sectionId]);
 
   const [allAiEvaluationStatus, setAllAiEvaluationStatus] = useState(null);
-  const [aiEvalStatusForUser, setAiEvalStatusForUser] = useState(null);
+  const [aiEvalStatusMap, setAiEvalStatusMap] = useState(null);
 
   const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
     return fetch(
@@ -143,8 +143,8 @@ export default function RubricContainer({
       fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
         if (response.ok) {
           response.json().then(data => {
-            setAiEvalStatusForUser(data?.aiEvalStatusForUser);
-            delete data.aiEvalStatusForUser;
+            setAiEvalStatusMap(data?.aiEvalStatusMap);
+            delete data.aiEvalStatusMap;
             setAllAiEvaluationStatus(data);
           });
         }
@@ -154,14 +154,14 @@ export default function RubricContainer({
   }, [rubricId, sectionId]);
 
   const updateAiEvalStatusForUser = (userId, status) => {
-    setAiEvalStatusForUser({
-      ...aiEvalStatusForUser,
+    setAiEvalStatusMap({
+      ...aiEvalStatusMap,
       [userId]: status,
     });
   };
 
-  const updateAiEvalStatusForAll = aiEvalStatusForUser => {
-    setAiEvalStatusForUser(aiEvalStatusForUser);
+  const updateAiEvalStatusMap = aiEvalStatusMap => {
+    setAiEvalStatusMap(aiEvalStatusMap);
   };
 
   const [hasTeacherFeedbackByUser, setHasTeacherFeedbackByUser] = useState({});
@@ -427,7 +427,7 @@ export default function RubricContainer({
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
             hasTeacherFeedbackByUser={hasTeacherFeedbackByUser}
-            aiEvalStatusForUser={aiEvalStatusForUser}
+            aiEvalStatusMap={aiEvalStatusMap}
           />
           {showSettings && (
             <RubricSettings
@@ -439,7 +439,7 @@ export default function RubricContainer({
               reportingData={reportingData}
               allTeacherEvaluationData={allTeacherEvaluationData}
               allAiEvaluationStatus={allAiEvaluationStatus}
-              updateAiEvalStatusForAll={updateAiEvalStatusForAll}
+              updateAiEvalStatusMap={updateAiEvalStatusMap}
             />
           )}
         </div>
