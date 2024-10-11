@@ -1719,8 +1719,8 @@ class User < ApplicationRecord
     end
 
     email = attributes[:email]
-    # If we aren't sending to parents, we only need to grab the first user we find
-    # (a user with an Email auth option first, otherwise a user that has that email)
+    # We are no longer sending an email to parents, so grab the first user we find
+    # (a user with an Email auth option first, otherwise any user that has that email)
     associated_user = User.find_by_email_or_hashed_email(email)
     return User.new(email: email).send_reset_password_for_users(email, associated_user)
   end
