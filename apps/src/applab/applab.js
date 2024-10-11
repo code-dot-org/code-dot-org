@@ -784,7 +784,6 @@ Applab.init = function (config) {
         });
       }
     });
-  console.log(`Is project level? ----- ${!!config.level.isProjectLevel}`);
   // Only send PROJECT_ACTIVITY event for students or non-authenticated users,
   // AND only if they're on a project level.
   if (
