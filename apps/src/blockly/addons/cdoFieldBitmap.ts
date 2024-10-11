@@ -17,7 +17,8 @@ interface FieldBitmapFromJsonConfig extends Blockly.FieldConfig {
 export class CdoFieldBitmap extends FieldBitmap {
   /**
    * Constructs a new instance of CdoFieldBitmap.
-   * @param {number[][] | null} value - The initial value of the field, represented as a 2D array of any length, or null/undefined.
+   * @param {number[][] | ypeof Blockly.Field.SKIP_SETUP} value - The initial value of the field, represented
+   * as a 2D array of any length, or undefined.
    * @param {object | null} options - The options for the field, can be an object or null/undefined.
    * @param {object | null} config - Additional configuration options, can be an object or null/undefined.
    */
@@ -31,6 +32,8 @@ export class CdoFieldBitmap extends FieldBitmap {
 
   /**
    * Show the bitmap editor dialog.
+   * This override can be removed once this issue is resolved:
+   * https://github.com/google/blockly-samples/issues/2463
    *
    * @param e Optional mouse event that triggered the field to open, or
    *    undefined if triggered programmatically.
@@ -65,6 +68,8 @@ export class CdoFieldBitmap extends FieldBitmap {
 
   /**
    * Binds an event listener to the specified element.
+   * This override can be removed once this issue is resolved:
+   * https://github.com/google/blockly-samples/issues/2463
    *
    * @param element Specified element.
    * @param eventName Name of the event to bind.
