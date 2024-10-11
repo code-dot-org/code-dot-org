@@ -214,7 +214,7 @@ Resources:
         - Key: sqlworkbench-team
           Value: codedotorg
 
-# TODO: Migrate to REDTeam_Analyst
+# TODO: Migrate to DataAnalyst_FullAccess
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
@@ -345,7 +345,7 @@ roles = {
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess'
       '!Ref BedrockKnowledgeBaseInvocationPolicy',
-      '!Ref CloudwatchDashboardViewerPolicy',
+      '!Ref CloudwatchViewerPolicy',
     ]
   }
 }
@@ -730,10 +730,10 @@ roles.each do |name, config| %>
             Resource:
               - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/*'
 
-  CloudwatchDashboardViewerPolicy:
+  CloudwatchViewerPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
-      ManagedPolicyName: CloudwatchDashboardViewerPolicy
+      ManagedPolicyName: CloudwatchViewerPolicy
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -742,6 +742,8 @@ roles.each do |name, config| %>
               - cloudwatch:GetDashboard
               - cloudwatch:ListDashboards
               - cloudwatch:GetMetricData
+              - cloudwatch:ListMetrics
+              - cloudwatch:'cloudwatch:GetMetricStatistics'
             Resource: '*'
 
   # Used by FirehoseMicroservice Lambda function.
