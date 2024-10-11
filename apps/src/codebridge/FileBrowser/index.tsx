@@ -69,7 +69,6 @@ import {
   DragDataType,
   DropDataType,
   downloadFileType,
-  moveFilePromptType,
   moveFolderPromptType,
   renameFilePromptType,
   renameFolderPromptType,
@@ -84,7 +83,6 @@ type FilesComponentProps = {
   parentId?: FolderId;
 
   downloadFile: downloadFileType;
-  moveFilePrompt: moveFilePromptType;
   moveFolderPrompt: moveFolderPromptType;
   renameFilePrompt: renameFilePromptType;
   renameFolderPrompt: renameFolderPromptType;
@@ -98,14 +96,14 @@ const InnerFileBrowser = React.memo(
     folders,
     files,
     downloadFile,
-    moveFilePrompt,
     moveFolderPrompt,
     renameFilePrompt,
     renameFolderPrompt,
     setFileType,
     appName,
   }: FilesComponentProps) => {
-    const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
+    const {openMoveFilePrompt, openNewFilePrompt, openNewFolderPrompt} =
+      usePrompts();
     const {
       openFile,
       deleteFile,
@@ -383,7 +381,6 @@ const InnerFileBrowser = React.memo(
                       parentId={f.id}
                       files={files}
                       downloadFile={downloadFile}
-                      moveFilePrompt={moveFilePrompt}
                       moveFolderPrompt={moveFolderPrompt}
                       renameFilePrompt={renameFilePrompt}
                       renameFolderPrompt={renameFolderPrompt}
@@ -442,7 +439,9 @@ const InnerFileBrowser = React.memo(
                         <PopUpButtonOption
                           iconName="arrow-right"
                           labelText={codebridgeI18n.moveFile()}
-                          clickHandler={() => moveFilePrompt(f.id)}
+                          clickHandler={() =>
+                            openMoveFilePrompt({fileId: f.id})
+                          }
                         />
                         <PopUpButtonOption
                           iconName="pencil"
@@ -524,61 +523,6 @@ export const FileBrowser = React.memo(() => {
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
     },
     [appName, project.files]
-  );
-
-  const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(
-    () => async fileId => {
-      const file = project.files[fileId];
-      const results = await dialogControl?.showDialog({
-        type: DialogType.GenericPrompt,
-        title: codebridgeI18n.moveFilePrompt(),
-        placeholder: codebridgeI18n.rootFolder(),
-        requiresPrompt: false,
-
-        validateInput: (destinationFolderName: string) => {
-          try {
-            const folderId = findFolder(destinationFolderName.split('/'), {
-              folders: Object.values(project.folders),
-              required: true,
-            });
-
-            return validateFileName({
-              fileName: file.name,
-              folderId,
-            });
-          } catch (e) {
-            return getErrorMessage(e);
-          }
-        },
-      });
-
-      if (results.type !== 'confirm') {
-        return;
-      }
-
-      const destinationFolderName = extractInput(results) || '';
-      try {
-        const folderId = findFolder(destinationFolderName.split('/'), {
-          folders: Object.values(project.folders),
-          required: true,
-        });
-        moveFile(fileId, folderId);
-      } catch (e) {
-        dialogControl?.showDialog({
-          type: DialogType.GenericAlert,
-          title: getErrorMessage(e),
-        });
-      }
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FILE, appName);
-    },
-    [
-      project.files,
-      project.folders,
-      dialogControl,
-      appName,
-      validateFileName,
-      moveFile,
-    ]
   );
 
   const moveFolderPrompt: FilesComponentProps['moveFolderPrompt'] = useMemo(
@@ -784,7 +728,6 @@ export const FileBrowser = React.memo(() => {
                 folders={project.folders}
                 downloadFile={downloadFile}
                 files={project.files}
-                moveFilePrompt={moveFilePrompt}
                 moveFolderPrompt={moveFolderPrompt}
                 renameFilePrompt={renameFilePrompt}
                 renameFolderPrompt={renameFolderPrompt}

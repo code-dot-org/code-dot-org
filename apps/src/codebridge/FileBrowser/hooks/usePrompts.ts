@@ -2,6 +2,7 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {
   openNewFolderPrompt as globalOpenNewFolderPrompt,
   openNewFilePrompt as globalOpenNewFilePrompt,
+  openMoveFilePrompt as globalOpenMoveFilePrompt,
 } from '@codebridge/FileBrowser/prompts';
 import {sendCodebridgeAnalyticsEvent as globalSendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
@@ -16,6 +17,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
  * Provides functions to open new file or folder prompts within the application.
  *
  * @returns An object containing the following functions:
+ *   - **openMoveFilePrompt:** Opens a prompt for moving a file within the project.
  *   - **openNewFilePrompt:** Opens a prompt for creating a new file within the project.
  *   - **openNewFolderPrompt:** Opens a prompt for creating a new folder within the project.
  */
@@ -27,7 +29,7 @@ export const usePrompts = () => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const dialogControl = useDialogControl();
 
-  const {project, newFolder, newFile} = useCodebridgeContext();
+  const {project, moveFile, newFolder, newFile} = useCodebridgeContext();
 
   const sendCodebridgeAnalyticsEvent = useCallback(
     (event: string) => globalSendCodebridgeAnalyticsEvent(event, appName),
@@ -52,8 +54,19 @@ export const usePrompts = () => {
     validationFile,
   } satisfies PAFunctionArgs<typeof globalOpenNewFilePrompt>);
 
+  const openMoveFilePrompt = usePartialApply(globalOpenMoveFilePrompt, {
+    appName,
+    dialogControl,
+    moveFile,
+    projectFiles: project.files,
+    projectFolders: project.folders,
+    sendCodebridgeAnalyticsEvent,
+    isStartMode,
+    validationFile,
+  } satisfies PAFunctionArgs<typeof globalOpenMoveFilePrompt>);
+
   return useMemo(
-    () => ({openNewFilePrompt, openNewFolderPrompt}),
-    [openNewFilePrompt, openNewFolderPrompt]
+    () => ({openNewFilePrompt, openNewFolderPrompt, openMoveFilePrompt}),
+    [openNewFilePrompt, openNewFolderPrompt, openMoveFilePrompt]
   );
 };
