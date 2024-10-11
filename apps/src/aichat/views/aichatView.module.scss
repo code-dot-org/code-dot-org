@@ -70,5 +70,5 @@ $column-min-width: 200px;
 
 .instructions {
   @extend %panel-section;
-  height: 90%;
+  margin-bottom: 28px; // Added to avoid collision with language dropdown footer.
 }
