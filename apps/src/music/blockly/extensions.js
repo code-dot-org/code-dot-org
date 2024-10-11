@@ -11,6 +11,7 @@ import {
   FIELD_EFFECTS_VALUE,
   FIELD_EFFECTS_VALUE_OPTIONS,
   DEFAULT_EFFECT_VALUE,
+  FIELD_SOUNDS_NAME,
 } from './constants';
 
 export const getDefaultTrackNameExtension = player =>
@@ -155,7 +156,7 @@ export const effectsFieldExtension = function () {
 };
 
 export const fieldSoundsValidator = function () {
-  this.getField('sound').setValidator(newValue => {
+  this.getField(FIELD_SOUNDS_NAME).setValidator(newValue => {
     if (MusicLibrary.getInstance()?.getSoundForId(newValue)) {
       return newValue;
     } else {
