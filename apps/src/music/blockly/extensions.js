@@ -1,3 +1,5 @@
+import MusicLibrary from '../player/MusicLibrary';
+
 import {BlockTypes} from './blockTypes';
 import {
   EXTRA_SOUND_INPUT_PREFIX,
@@ -150,4 +152,14 @@ export const effectsFieldExtension = function () {
 
     baseHandler.call(fieldEffectsName, menu, menuItem);
   };
+};
+
+export const fieldSoundsValidator = function () {
+  this.getField('sound').setValidator(newValue => {
+    if (MusicLibrary.getInstance()?.getSoundForId(newValue)) {
+      return newValue;
+    } else {
+      return MusicLibrary.getInstance()?.getDefaultSound();
+    }
+  });
 };
