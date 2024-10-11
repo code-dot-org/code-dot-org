@@ -1,0 +1,41 @@
+name 'self-paced-pl-gen-ai-foundations-preview-05_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Attention
+
+## Lesson Highlight: Meaning from Context Activity
+
+<img src="https://images.code.org/042ebb58f4d8c4d131d1aa5bc9980de4-c379b162ffaae9e3dfc974b814d12a2a-Slide11.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+
+#### During **Lesson 8: Attention Is All You Need**, students explore how words can have multiple meanings, but we can usually determine the intended meaning based on context clues in the sentence. This could be from looking at other words in the sentence or the grammar of the sentence.
+
+#### Students do this by exploring the different meanings of the word “bat” used various passages and then by coming up with words that have at least 3 different meanings such as date, spring, or fly.
+
+#### In language models **attention** is the process that updates the meaning of each word by using the context from other words in the input. Neural networks are used to detect relationships between each word in the sentence, and then the embedding of each word is updated to reflect the meaning of the word in the sentence.
+
+## Lesson Preview
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 8: Attention Is All You Need
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/ffb88967c446f891ff869c2399d66624-d42f141647823ec967845edf94706034-Slide30.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How does a language model determine the meaning of words within a sentence?
+
+#### **Lesson Overview:**
+
+#### This lesson delves into the ambiguity of language and the necessity of context for meaning. Students first discuss examples of ambiguous language, followed by an activity where they brainstorm words with multiple meanings and craft sentences to clarify their intended meanings through context. After trading papers with a partner, students guess the intended meanings, identifying which words provided the most context. Reflecting on this, the lesson connects the activity to how language models use embeddings for word meanings and neural networks for relational meaning, introducing the concept of Attention as the process of updating word meanings based on context.
+
+#### **Students will be able to:**
+* #### Construct examples of words and sentences that require context clues to understand fully
+* #### Explain how embeddings and neural networks are used in the attention process
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/8" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+MARKDOWN
