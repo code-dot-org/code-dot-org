@@ -17,7 +17,7 @@ class PasswordsController < Devise::PasswordsController
     if current_user.try(:admin)
       new_user_password_path
     else
-      flash[:notice] = "If we find your email address in our system, you will receive a password recovery link in a few minutes."
+      flash[:notice] = I18n.t('password.reset_form.confirmation')
       new_session_path(resource_name) if is_navigational_format?
     end
   end
