@@ -308,6 +308,13 @@ Feature: Hamburger dropdown
       | Cookie Notice          | http://code.org/privacy/cookies              |
       | Terms of Service       | http://code.org/tos                          |
 
+    # These URLs are not possible to visit in our UI tests because they either take too long
+    # to load or are external links, so we just look at the link targets
+    Then I could navigate the following hamburger menu items:
+      | text                   | url                                             |
+      | Help and support       | https://support.code.org/                       |
+      | Report a problem       | https://support.code.org/hc/en-us/requests/new  |
+
     Then I change the browser window size to 1280 by 1024
     And I delete the cookie named "_loc_notice"
 
@@ -427,4 +434,56 @@ Feature: Hamburger dropdown
       | Cookie Notice          | http://code.org/privacy/cookies              |
       | Terms of Service       | http://code.org/tos                          |
 
+    Then I delete the cookie named "_loc_notice"
+
+  @chrome
+  Scenario: Teacher can click on the header links in the hamburger menu on tablet
+    Given I create a teacher named "Sir Clicks-A-Lot Teacher" and go home
+    And I set the language cookie
+    And I set the cookie named "_loc_notice" to "1"
+    And I change the browser window size to 1023 by 768
+
+    # We click on each hamburger link and see where we go
+    Then I can navigate the following hamburger menu items:
+      | text                   | url                                             |
+      | My Dashboard           | http://studio.code.org/home                     |
+      | Course Catalog         | http://studio.code.org/catalog                  |
+      | Projects               | http://studio.code.org/projects                 |
+      | Professional Learning  | http://studio.code.org/my-professional-learning |
+      | Incubator              | http://studio.code.org/incubator                |
+
+    # These URLs are not possible to visit in our UI tests because they either take too long
+    # to load or are external links, so we just look at the link targets
+    Then I could navigate the following hamburger menu items:
+      | text                   | url                                             |
+      | Help and support       | https://support.code.org/                       |
+      | Report a problem       | https://support.code.org/hc/en-us/requests/new  |
+      | Teacher forum          | http://forum.code.org/                          |
+
+    Then I change the browser window size to 1280 by 1024
+    Then I delete the cookie named "_loc_notice"
+
+  @chrome
+  Scenario: Student can click on the header links in the hamburger menu on tablet
+    Given I create a student named "Squire Clicks-A-Lot Student" and go home
+    And I set the language cookie
+    And I set the cookie named "_loc_notice" to "1"
+    And I change the browser window size to 1023 by 768
+
+    # We click on each hamburger link and see where we go
+    Then I can navigate the following hamburger menu items:
+      | text                   | url                                            |
+      | My Dashboard           | http://studio.code.org/home                    |
+      | Course Catalog         | http://code.org/students                       |
+      | Projects               | http://studio.code.org/projects                |
+      | Incubator              | http://studio.code.org/incubator               |
+
+    # These URLs are not possible to visit in our UI tests because they either take too long
+    # to load or are external links, so we just look at the link targets
+    Then I could navigate the following hamburger menu items:
+      | text                   | url                                            |
+      | Help and support       | https://support.code.org/                      |
+      | Report a problem       | https://support.code.org/hc/en-us/requests/new |
+
+    Then I change the browser window size to 1280 by 1024
     Then I delete the cookie named "_loc_notice"
