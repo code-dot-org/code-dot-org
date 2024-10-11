@@ -84,14 +84,14 @@ function createDashboard(environment = 'production'): Dashboard {
         height: 5,
       }),
       // Browser Section
+      createTitleWidget('Browser Metrics', 'h1'),
+      ...browserMetrics,
+      // Model-specific section
       createMarkdownWidget(
         '# Model Metrics\n*[Metrics Descriptions](https://docs.aws.amazon.com/sagemaker/latest/dg/monitoring-cloudwatch.html#cloudwatch-metrics-jobs)*',
         24,
         2
       ),
-      ...browserMetrics,
-      // Model-specific section
-      createTitleWidget('Model Metrics', 'h1'),
       ...modelWidgets,
     ],
   };

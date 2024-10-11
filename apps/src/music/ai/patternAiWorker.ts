@@ -3,7 +3,7 @@ import mm from '@magenta/music/es6';
 import {sequences} from '@magenta/music/es6/core';
 import {MusicRNN} from '@magenta/music/es6/music_rnn';
 
-import {PatternTickEvent} from '../player/interfaces/PatternEvent';
+import {InstrumentTickEvent} from '../player/interfaces/InstrumentEvent';
 
 import {Message} from './types';
 
@@ -106,7 +106,7 @@ onmessage = async e => {
 };
 
 async function generatePattern(
-  seed: PatternTickEvent[],
+  seed: InstrumentTickEvent[],
   seedLength: number,
   generateLength: number,
   temperature: number
@@ -134,7 +134,7 @@ async function generatePattern(
   return result;
 }
 
-function toNoteSequence(pattern: PatternTickEvent[], patternLength: number) {
+function toNoteSequence(pattern: InstrumentTickEvent[], patternLength: number) {
   return sequences.quantizeNoteSequence(
     {
       ticksPerQuarter: 220,
@@ -167,8 +167,8 @@ function toNoteSequence(pattern: PatternTickEvent[], patternLength: number) {
 function fromNoteSequence(
   seq: mm.INoteSequence,
   patternLength: number
-): PatternTickEvent[] {
-  const res: PatternTickEvent[] = [];
+): InstrumentTickEvent[] {
+  const res: InstrumentTickEvent[] = [];
 
   if (seq.notes) {
     for (const {pitch, quantizedStartStep} of seq.notes) {
