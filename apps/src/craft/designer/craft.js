@@ -14,6 +14,8 @@ import {getCodeBlocks} from '@cdo/apps/blockly/utils';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
 import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   showArrowButtons,
   hideArrowButtons,
@@ -448,6 +450,11 @@ Craft.init = function (config) {
   studioApp().setPageConstants(config, {
     isMinecraft: true,
   });
+
+  // Only send LEVEL_ACTIVITY event for students or non-authenticated users
+  if (getStore().getState().currentUser?.userType !== 'teacher') {
+    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
+  }
 
   ReactDOM.render(
     <Provider store={getStore()}>

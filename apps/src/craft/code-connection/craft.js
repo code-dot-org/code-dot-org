@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import AppView from '@cdo/apps/templates/AppView';
@@ -555,6 +557,11 @@ export default class Craft {
         preloadImage(url);
       });
     };
+
+    // Only send LEVEL_ACTIVITY event for students or non-authenticated users
+    if (getStore().getState().currentUser?.userType !== 'teacher') {
+      analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
+    }
 
     ReactDOM.render(
       <Provider store={getStore()}>
