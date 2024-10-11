@@ -129,6 +129,7 @@ export default function RubricContainer({
   }, [rubricId, sectionId]);
 
   const [allAiEvaluationStatus, setAllAiEvaluationStatus] = useState(null);
+  const [aiEvalStatusForUser, setAiEvalStatusForUser] = useState(null);
 
   const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
     return fetch(
@@ -141,12 +142,23 @@ export default function RubricContainer({
     if (!!rubricId && !!sectionId) {
       fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
         if (response.ok) {
-          response.json().then(data => setAllAiEvaluationStatus(data));
+          response.json().then(data => {
+            setAiEvalStatusForUser(data?.aiEvalStatusForUser);
+            delete data.aiEvalStatusForUser;
+            setAllAiEvaluationStatus(data);
+          });
         }
       });
     }
     return () => abort.abort();
   }, [rubricId, sectionId]);
+
+  const updateAiEvalStatusForUser = (userId, status) => {
+    setAiEvalStatusForUser({
+      ...aiEvalStatusForUser,
+      [userId]: status,
+    });
+  };
 
   const [hasTeacherFeedbackByUser, setHasTeacherFeedbackByUser] = useState({});
 
@@ -382,6 +394,7 @@ export default function RubricContainer({
             refreshAiEvaluations={fetchAiEvaluations}
             rubric={rubric}
             studentName={studentLevelInfo && studentLevelInfo.name}
+            updateAiEvalStatusForUser={updateAiEvalStatusForUser}
           />
           <RubricContent
             productTour={productTour}
@@ -410,7 +423,7 @@ export default function RubricContainer({
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
             hasTeacherFeedbackByUser={hasTeacherFeedbackByUser}
-            aiEvalStatusForUser={allAiEvaluationStatus?.aiEvalStatusForUser}
+            aiEvalStatusForUser={aiEvalStatusForUser}
           />
           {showSettings && (
             <RubricSettings
