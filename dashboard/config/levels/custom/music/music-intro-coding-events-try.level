@@ -8,14 +8,14 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "####🧐 What do you think?\r\n\r\nCheck out the code!\r\n\r\n\r\n1. What do you predict will happen if you press 1?\r\n2. What do you predict will happen if you press 2? \r\n3. What will happen if you don't press any keys?\r\n\r\nTo test your predictions, press [Run](#clickable=run-button).",
+    "long_instructions": "####<i class=\"fa-regular fa-face-thinking\"></i> What do you think?\r\n\r\nCheck out the code!\r\n\r\n**Predict:**\r\n1. What happens if you press 1?\r\n2. What happens if you press 2? \r\n3. What happens if you don't press any keys?\r\n\r\nTo test your predictions, press [Run](#clickable=run-button).",
     "hide_share_and_remix": "false",
     "level_data": {
       "library": "launch2024"
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-04 20:55:22 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-04 20:55:22 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 20:57:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

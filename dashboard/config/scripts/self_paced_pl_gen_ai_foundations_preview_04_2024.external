@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ## Lesson Highlight: Neural Networks Activity
 
-<img src="https://images.code.org/1d9eec2b4cd7ddb50ccb82d71d2223ec-96bdfbaafb6aedb4c412eb366a21876d-Slide22.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="float:right; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/1d9eec2b4cd7ddb50ccb82d71d2223ec-96bdfbaafb6aedb4c412eb366a21876d-Slide22.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
 
 #### During **Lesson 6: Neural Networks**, students help a computer design meals for an elementary school cafeteria.
 
@@ -17,10 +17,11 @@ markdown <<MARKDOWN
 
 #### The final component of the neural network is **weights**. When the network combines the weights at the end, it can look at the total weight and use that to make a final decision as to whether or not to accept or reject a set of inputs. For example, we can add lower weights to the “just avocados” and “just ice-cream” connections, and a higher weight to the “both” connection.
 
+#### Since the hidden layers are “activated” by previous layers, it can feel similar to how our brains work and how some neurons can activate other neurons to create chain-reactions and complex thoughts. 
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; clear: both;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Erasable Materials - Students will be drawing their own neural network and iterating on the design. This means students will be doing some trial and error, which will involve lots of erasing. If your classroom has them available, consider using whiteboards for this activity instead of the activity guide so students can quickly and easily erase their work as the lesson progresses.
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Students will be drawing their own neural network and iterating on the design. This means students will be doing some trial and error, which will involve lots of erasing. If your classroom has them available, consider using whiteboards for this activity instead of the activity guide so students can quickly and easily erase their work as the lesson progresses.
 </p>
 </div>
 

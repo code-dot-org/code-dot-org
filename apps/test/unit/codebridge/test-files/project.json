@@ -39,6 +39,20 @@
       "folderId": "0",
       "type": "support"
     },
+    "4": {
+      "id": "4",
+      "name": "testFile3.txt",
+      "language": "txt",
+      "contents": "This is test file 3",
+      "folderId": "0"
+    },
+    "5": {
+      "id": "5",
+      "name": "testFile1.txt",
+      "language": "txt",
+      "contents": "This is test file 1, in testfolder1",
+      "folderId": "1"
+    },
     "7": {
       "id": "7",
       "name": "validation_file.vld",
