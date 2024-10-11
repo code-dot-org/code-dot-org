@@ -29,35 +29,56 @@ const SingleTemplate: StoryFn<SegmentedButtonsProps> = args => {
 const MultipleTemplate: StoryFn<{
   components: SegmentedButtonsProps[];
 }> = args => {
-  const [value, setValues] = useState({} as Record<string, string>);
+  const [value, setValues] = useState<Record<string, string>>({});
 
-  return (
-    <>
-      <p>
-        * Margins on this screen does not represent Component's margins, and are
-        only added to improve storybook view *
-      </p>
+  // Handler for updating the state
+  const handleValueChange = (key: string, newValue: string) => {
+    setValues(prevValues => ({...prevValues, [key]: newValue}));
+  };
+
+  // Render theme content to avoid duplication
+  const renderTheme = (
+    theme: string,
+    style: React.CSSProperties,
+    titleStyle?: React.CSSProperties
+  ) => (
+    <div data-theme={theme} style={style}>
+      <h3 style={titleStyle}>{theme} Theme</h3>
       {args.components?.map(componentArg => (
-        <div key={componentArg.size} style={{marginTop: 15}}>
+        <div key={`${theme}-${componentArg.size}`} style={{marginTop: 15}}>
           <SegmentedButtons
             {...componentArg}
             selectedButtonValue={
-              value[componentArg.selectedButtonValue] ||
+              value[`${componentArg.selectedButtonValue}-${theme}`] ||
               componentArg.selectedButtonValue
             }
-            onChange={value =>
-              setValues(values => ({
-                ...values,
-                [componentArg.selectedButtonValue]: value,
-              }))
+            onChange={newValue =>
+              handleValueChange(
+                `${componentArg.selectedButtonValue}-${theme}`,
+                newValue
+              )
             }
           />
         </div>
       ))}
+    </div>
+  );
+
+  return (
+    <>
+      <p>
+        * Margins on this screen do not represent the component's margins and
+        are only added to improve Storybook view *
+      </p>
+      {renderTheme('Light', {padding: 20})}
+      {renderTheme(
+        'Dark',
+        {background: '#292F36', padding: 20},
+        {color: '#FFF'}
+      )}
     </>
   );
 };
-
 export const DefaultSegmentedButtons = SingleTemplate.bind({});
 DefaultSegmentedButtons.args = {
   buttons: [
