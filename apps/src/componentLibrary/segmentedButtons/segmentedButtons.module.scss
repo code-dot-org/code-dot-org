@@ -9,6 +9,16 @@
 
   .segmentedButton {
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.5rem;
+    border-radius: 0;
+    margin: 0;
+
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--text-neutral-primary);
 
     &:first-child {
       border-start-start-radius: 4px;
@@ -23,38 +33,68 @@
     &:not(:last-child) {
       margin-right: -1px;
     }
+
+    // Hover styles
+    &:hover {
+      box-shadow: none;
+      //background-color: $light_gray_100;
+      //border-color: $light_gray_200;
+    }
+
+    // Focus styles
+    &:focus-visible {
+      outline: none;
+      background-color: var(--background-brand-teal-light);
+      //border-color: $light_gray_200;
+    }
+
+    // Pressed styles
+    &:active {
+      background-color: var(--background-brand-teal-primary);
+      // Important here is needed to rewrite line 3328, app/assets/stylesheets/application.scss */
+      border-color: var(--borders-brand-teal-primary) !important;
+      color: var(--text-neutral-white-fixed);
+    }
+
+    // Disabled styles
+    &:disabled {
+      //background-color: $light_white;
+      border-color: var(--borders-neutral-disabled);
+      color: var(--text-neutral-disabled);
+    }
   }
 
   // Selected styles
   .selectedSegmentedButton.segmentedButton {
     z-index: 0;
-    background-color: $light_primary_500;
-    border-color: $light_primary_500;
-    color: $light_white;
+    background-color: var(--background-brand-teal-primary);
+    border-color: var(--borders-brand-teal-primary);
+    color: var(--text-neutral-white-fixed);
 
     // Hover styles
     &:hover {
-      background-color: $light_primary_500;
-      border-color: $light_primary_500;
-      color: $light_white;
+      background-color: var(--background-brand-teal-primary);
+      border-color: var(--borders-brand-teal-primary);
+      color: var(--text-neutral-white-fixed);
     }
 
     // Focus styles
     &:focus-visible {
-      background-color: $light_primary_100;
-      border-color: $light_gray_200;
-      color: $light_black;
+      background-color: var(--background-brand-teal-light);
+      //border-color: $light_gray_200;
+      color: var(--text-neutral-primary);
     }
 
     // Pressed styles
     &:active {
-      background-color: $light_primary_500;
-      border-color: $light_primary_500;
-      color: $light_white;
+      background-color: var(--background-brand-teal-primary);
+      border-color: var(--borders-brand-teal-primary);
+      color: var(--text-neutral-white-fixed);
     }
 
     // Disabled styles
     &:disabled {
+      // TODO: Do we need this?
       background-color: $light_primary_100;
       border-color: $light_primary_100;
       color: $light_white;
@@ -62,79 +102,8 @@
   }
 }
 
-.segmentedButton {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  gap: 0.5rem;
-
-  background-color: $light_white;
-  border: 1px solid transparent;
-  border-radius: 0;
-  color: $light_black;
-  margin: 0;
-
-  // Hover styles
-  &:hover {
-    box-shadow: none;
-    background-color: $light_gray_100;
-    border-color: $light_gray_200;
-  }
-
-  // Focus styles
-  &:focus-visible {
-    outline: none;
-    background-color: $light_primary_100;
-    border-color: $light_gray_200;
-  }
-
-  // Pressed styles
-  &:active {
-    background-color: $light_primary_700;
-    // Important here is needed to rewrite line 3328, app/assets/stylesheets/application.scss */
-    border-color: $light_primary_500 !important;
-    color: $light_white;
-  }
-
-  // Disabled styles
-  &:disabled {
-    background-color: $light_white;
-    border-color: $light_gray_200;
-    color: $light_gray_200;
-  }
-}
-
 // Colors
 .segmentedButtons-primary {
-  // Selected styles
-  .selectedSegmentedButton {
-    //background-color: $light_primary_500;
-    //border-color: $light_primary_500;
-    //// Hover styles
-    //&:hover {
-    //  background-color: $light_primary_500;
-    //  border-color: $light_primary_500;
-    //}
-
-    // Focus styles
-    &:focus-visible {
-      //background-color: $light_primary_100;
-      border-color: var(--borders-neutral-primary);
-    }
-
-    //// Pressed styles
-    //&:active {
-    //  background-color: $light_primary_500;
-    //  border-color: $light_primary_500;
-    //}
-
-    // Disabled styles
-    &:disabled {
-      background-color: var(--background-neutral-primary);
-      //border-color: $light_primary_100;
-    }
-  }
-
   .segmentedButton {
     background-color: var(--background-neutral-primary);
     border-color: var(--borders-neutral-primary);
@@ -164,54 +133,54 @@
       background-color: var(--background-neutral-primary);
       //border-color: $light_gray_200;
       //color: $light_gray_200;
+    }
+  }
+
+  // Selected styles
+  .selectedSegmentedButton.segmentedButton {
+    //background-color: $light_primary_500;
+    //border-color: $light_primary_500;
+    //// Hover styles
+    //&:hover {
+    //  background-color: $light_primary_500;
+    //  border-color: $light_primary_500;
+    //}
+
+    // Focus styles
+    &:focus-visible {
+      //background-color: $light_primary_100;
+      border-color: var(--borders-neutral-primary);
+    }
+
+    //// Pressed styles
+    //&:active {
+    //  background-color: $light_primary_500;
+    //  border-color: $light_primary_500;
+    //}
+
+    // Disabled styles
+    &:disabled {
+      background-color: var(--background-neutral-primary);
+      //border-color: $light_primary_100;
     }
   }
 }
 
 .segmentedButtons-strong {
-  // Selected styles
-  .selectedSegmentedButton {
-    //background-color: $light_primary_500;
-    //border-color: $light_primary_500;
-    //// Hover styles
-    //&:hover {
-    //  background-color: $light_primary_500;
-    //  border-color: $light_primary_500;
-    //}
-
-    // Focus styles
-    &:focus-visible {
-      //background-color: $light_primary_100;
-      border-color: var(--borders-neutral-primary);
-    }
-
-    //// Pressed styles
-    //&:active {
-    //  background-color: $light_primary_500;
-    //  border-color: $light_primary_500;
-    //}
-
-    // Disabled styles
-    &:disabled {
-      background-color: var(--background-neutral-primary);
-      //border-color: $light_primary_100;
-    }
-  }
-
   .segmentedButton {
-    background-color: var(--background-neutral-primary);
-    border-color: var(--borders-neutral-primary);
+    background-color: transparent;
+    border-color: var(--borders-neutral-strong);
 
     // Hover styles
     &:hover {
-      background-color: var(--background-neutral-tertiary);
-      border-color: var(--borders-neutral-primary);
+      background-color: var(--background-neutral-quaternary);
+      border-color: var(--borders-neutral-strong);
     }
 
     // Focus styles
     &:focus-visible {
       //background-color: $light_primary_100;
-      border-color: var(--borders-neutral-primary);
+      border-color: var(--borders-neutral-strong);
     }
 
     //// Pressed styles
@@ -224,9 +193,38 @@
 
     // Disabled styles
     &:disabled {
-      background-color: var(--background-neutral-primary);
+      background-color: transparent;
       //border-color: $light_gray_200;
       //color: $light_gray_200;
+    }
+  }
+
+  // Selected styles
+  .selectedSegmentedButton.segmentedButton {
+    //background-color: $light_primary_500;
+    //border-color: $light_primary_500;
+    //// Hover styles
+    //&:hover {
+    //  background-color: $light_primary_500;
+    //  border-color: $light_primary_500;
+    //}
+
+    // Focus styles
+    &:focus-visible {
+      //background-color: $light_primary_100;
+      border-color: var(--borders-neutral-strong);
+    }
+
+    //// Pressed styles
+    //&:active {
+    //  background-color: $light_primary_500;
+    //  border-color: $light_primary_500;
+    //}
+
+    // Disabled styles
+    &:disabled {
+      background-color: transparent;
+      //border-color: $light_primary_100;
     }
   }
 }
