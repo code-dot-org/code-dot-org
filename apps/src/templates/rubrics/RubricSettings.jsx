@@ -52,7 +52,7 @@ function RubricSettings({
   aiRubricsDisabled,
   setAiRubricsDisabled,
   allTeacherEvaluationData,
-  allAiEvaluationStatus,
+  aiEvalStatusCounters,
   updateAiEvalStatusMap,
 }) {
   const rubricId = rubric.id;
@@ -144,10 +144,10 @@ function RubricSettings({
 
   // parse initial ai evaluation status
   useEffect(() => {
-    if (allAiEvaluationStatus) {
-      parseAiEvaluationStatusAll(allAiEvaluationStatus);
+    if (aiEvalStatusCounters) {
+      parseAiEvaluationStatusAll(aiEvalStatusCounters);
     }
-  }, [allAiEvaluationStatus, parseAiEvaluationStatusAll]);
+  }, [aiEvalStatusCounters, parseAiEvaluationStatusAll]);
 
   const parseTeacherEvaluationData = useCallback(
     data => {
@@ -406,7 +406,7 @@ RubricSettings.propTypes = {
   aiRubricsDisabled: PropTypes.bool,
   setAiRubricsDisabled: PropTypes.func.isRequired,
   allTeacherEvaluationData: PropTypes.array,
-  allAiEvaluationStatus: PropTypes.object,
+  aiEvalStatusCounters: PropTypes.object,
   updateAiEvalStatusMap: PropTypes.func,
 };
 

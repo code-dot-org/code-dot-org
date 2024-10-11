@@ -128,7 +128,7 @@ export default function RubricContainer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rubricId, sectionId]);
 
-  const [allAiEvaluationStatus, setAllAiEvaluationStatus] = useState(null);
+  const [aiEvalStatusCounters, setAiEvalStatusCounters] = useState(null);
   const [aiEvalStatusMap, setAiEvalStatusMap] = useState(null);
 
   const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
@@ -145,7 +145,7 @@ export default function RubricContainer({
           response.json().then(data => {
             setAiEvalStatusMap(data?.aiEvalStatusMap);
             delete data.aiEvalStatusMap;
-            setAllAiEvaluationStatus(data);
+            setAiEvalStatusCounters(data);
           });
         }
       });
@@ -438,7 +438,7 @@ export default function RubricContainer({
               tabSelectCallback={tabSelectCallback}
               reportingData={reportingData}
               allTeacherEvaluationData={allTeacherEvaluationData}
-              allAiEvaluationStatus={allAiEvaluationStatus}
+              aiEvalStatusCounters={aiEvalStatusCounters}
               updateAiEvalStatusMap={updateAiEvalStatusMap}
             />
           )}
