@@ -53,6 +53,7 @@ function RubricSettings({
   setAiRubricsDisabled,
   allTeacherEvaluationData,
   allAiEvaluationStatus,
+  updateAiEvalStatusForAll,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
@@ -209,6 +210,7 @@ function RubricSettings({
                 setStatusAll(STATUS_ALL.EVALUATION_PENDING);
               } else {
                 setStatusAll(STATUS_ALL.SUCCESS);
+                updateAiEvalStatusForAll(data.aiEvalStatusForUser);
               }
             });
           }
@@ -217,7 +219,14 @@ function RubricSettings({
       return () => clearInterval(intervalId);
     }
     return () => abort.abort();
-  }, [rubricId, polling, sectionId, statusAll, refreshAiEvaluations]);
+  }, [
+    rubricId,
+    polling,
+    sectionId,
+    statusAll,
+    refreshAiEvaluations,
+    updateAiEvalStatusForAll,
+  ]);
 
   const handleRunAiAssessmentAll = () => {
     setStatusAll(STATUS_ALL.EVALUATION_PENDING);
@@ -398,6 +407,7 @@ RubricSettings.propTypes = {
   setAiRubricsDisabled: PropTypes.func.isRequired,
   allTeacherEvaluationData: PropTypes.array,
   allAiEvaluationStatus: PropTypes.object,
+  updateAiEvalStatusForAll: PropTypes.func,
 };
 
 export const UnconnectedRubricSettings = RubricSettings;

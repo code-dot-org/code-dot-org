@@ -160,6 +160,10 @@ export default function RubricContainer({
     });
   };
 
+  const updateAiEvalStatusForAll = aiEvalStatusForUser => {
+    setAiEvalStatusForUser(aiEvalStatusForUser);
+  };
+
   const [hasTeacherFeedbackByUser, setHasTeacherFeedbackByUser] = useState({});
 
   const initializeHasTeacherFeedback = allTeacherEvaluationData => {
@@ -435,6 +439,7 @@ export default function RubricContainer({
               reportingData={reportingData}
               allTeacherEvaluationData={allTeacherEvaluationData}
               allAiEvaluationStatus={allAiEvaluationStatus}
+              updateAiEvalStatusForAll={updateAiEvalStatusForAll}
             />
           )}
         </div>
