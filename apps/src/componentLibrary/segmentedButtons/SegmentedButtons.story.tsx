@@ -214,7 +214,7 @@ GroupOfColorsOfSegmentedButtons.args = {
     },
     {
       buttons: [
-        {label: 'Label Secondary', value: 'label-strong'},
+        {label: 'Label Strong', value: 'label-strong'},
         {
           label: 'Another label',
           value: 'another-label-strong',
