@@ -87,9 +87,11 @@ export default function SchoolDataInputs({
   const handleSchoolChange = id => {
     setSchoolId(id);
 
-    const schoolName = schoolsList.find(school => school.value === id).text;
-    if (schoolName) {
-      setSchoolName(schoolName);
+    if (!Object.values(NonSchoolOptions).includes(id)) {
+      const schoolName = schoolsList.find(school => school.value === id)?.text;
+      if (schoolName) {
+        setSchoolName(schoolName);
+      }
     }
   };
 
