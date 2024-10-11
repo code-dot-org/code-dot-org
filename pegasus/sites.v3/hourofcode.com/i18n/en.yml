@@ -1366,6 +1366,7 @@
     title: "Exploring Generative AI"
     desc: "Empower students with hands-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
     duration: "6 weeks"
+    aria_label: "Explore the Exploring Generative AI course"
 
   gen_ai_pl_carousel_card:
     overline: "8-12 Teachers"
