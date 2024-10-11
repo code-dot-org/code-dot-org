@@ -807,8 +807,11 @@ window.TutorialExplorerManager = function (options) {
     initialFilters = providedParameters;
   }
 
-  // Sort by popularity by default.
-  const defaultSortBy = options.defaultSortByPopularity;
+  // The caller can provide defaultSortByPopularity, and when true, the default sort will
+  // be by popularity.  Otherwise, the default sort will be by display weight.
+  const defaultSortBy = options.defaultSortByPopularity
+    ? TutorialsSortByOptions.popularityrank
+    : TutorialsSortByOptions.displayweight;
 
   this.renderToElement = function (element) {
     ReactDOM.render(
