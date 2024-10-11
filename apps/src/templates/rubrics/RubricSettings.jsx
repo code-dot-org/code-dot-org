@@ -126,7 +126,7 @@ function RubricSettings({
     setDisplayDetails(!displayDetails);
   };
 
-  const parseAiEvaluationStatusAll = useCallback(data => {
+  const parseAiEvalStatusCounters = useCallback(data => {
     // we can't fetch the csrf token from the DOM because CSRF protection
     // is disabled on script level pages.
     setCsrfToken(data.csrfToken);
@@ -145,9 +145,9 @@ function RubricSettings({
   // parse initial ai evaluation status
   useEffect(() => {
     if (aiEvalStatusCounters) {
-      parseAiEvaluationStatusAll(aiEvalStatusCounters);
+      parseAiEvalStatusCounters(aiEvalStatusCounters);
     }
-  }, [aiEvalStatusCounters, parseAiEvaluationStatusAll]);
+  }, [aiEvalStatusCounters, parseAiEvalStatusCounters]);
 
   const parseTeacherEvaluationData = useCallback(
     data => {
