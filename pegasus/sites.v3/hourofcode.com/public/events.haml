@@ -18,6 +18,7 @@ layout: wide_index
 
 %link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
 %link{href: '/css/generated/action-blocks.css', rel:'stylesheet', type:'text/css'}
+%link{href: '/css/generated/page/events.css', rel:'stylesheet', type:'text/css'}
 
 #fullwidth
   = view :header
@@ -34,6 +35,23 @@ layout: wide_index
           =hoc_s("hoc_events.button")
       %figure.flex-1
         %img.rounded-corners{src: "/images/events-page-header.png", alt: "", style: "width: 100%;"}
+
+  - if @country == "us"
+    %section.sweepstakes
+      .wrapper.flex-container.flex-direction-column-tablet.align-items-center.gap-2
+        %figure.flex-1
+          %img.rounded-corners{src: "/images/donors_choose_blue_bg.png", alt: "", style: "width: 100%;"}
+        .text-wrapper.flex-1
+          %h2.no-margin-top=hoc_s("hoc_events.sweepstakes.heading")
+          %p=hoc_s("hoc_events.sweepstakes.desc", markdown: :inline, locals:{rules_url: "/sweepstakes"})
+          %ul
+            %li
+              %i{class: "fa fa-check-circle"}
+              %p=hoc_s("hoc_events.sweepstakes.must_be_18")
+            %li
+              %i{class: "fa fa-check-circle"}
+              %p.no-margin-bottom
+                =hoc_s("hoc_events.sweepstakes.must_be_employed")
 
   %section#form.bg-neutral-light
     .wrapper

@@ -10980,7 +10980,7 @@
         title: "Choose an Activity"
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
-    prize:
+    sweepstakes:
       heading: "Win $500 worth of DonorsChoose Credits!"
       desc: "Now's your chance to win! Code.org is giving away DonorsChoose credits to 250 inspiring teachers! Register your Hour of Code event now, and choose to be entered for a chance to win! [See Official Rules](%{rules_url})"
       must_be_18: "Must be at least 18 years old at the time you enter"
