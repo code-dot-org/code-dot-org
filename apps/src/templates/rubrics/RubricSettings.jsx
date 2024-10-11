@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useMemo, useCallback} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
@@ -65,13 +65,17 @@ function RubricSettings({
   const [teacherEval, setTeacherEval] = useState(null);
   const [teacherEvalCount, setTeacherEvalCount] = useState(0);
   const polling = statusAll === STATUS_ALL.EVALUATION_PENDING;
-  const headers = [
-    {label: i18n.studentName(), key: 'user_name'},
-    {label: i18n.familyName(), key: 'user_family_name'},
-  ].concat(
-    ..._.sortBy(rubric.learningGoals, 'id').map(lg => {
-      return {label: String(lg.learningGoal), key: String(lg.id)};
-    })
+  const headers = useMemo(
+    () =>
+      [
+        {label: i18n.studentName(), key: 'user_name'},
+        {label: i18n.familyName(), key: 'user_family_name'},
+      ].concat(
+        ..._.sortBy(rubric.learningGoals, 'id').map(lg => {
+          return {label: String(lg.learningGoal), key: String(lg.id)};
+        })
+      ),
+    [rubric.learningGoals]
   );
 
   const updateAiRubricsDisabled = () => {
@@ -85,9 +89,9 @@ function RubricSettings({
     );
   };
 
-  const getHeadersSlice = () => {
+  const getHeadersSlice = useCallback(() => {
     return headers.slice(2, headers.length);
-  };
+  }, [headers]);
 
   const statusAllText = () => {
     switch (statusAll) {
@@ -121,7 +125,7 @@ function RubricSettings({
     setDisplayDetails(!displayDetails);
   };
 
-  const parseAiEvaluationStatusAll = data => {
+  const parseAiEvaluationStatusAll = useCallback(data => {
     // we can't fetch the csrf token from the DOM because CSRF protection
     // is disabled on script level pages.
     setCsrfToken(data.csrfToken);
@@ -135,53 +139,54 @@ function RubricSettings({
     } else {
       setStatusAll(STATUS_ALL.READY);
     }
-  };
+  }, []);
 
   // parse initial ai evaluation status
   useEffect(() => {
     if (allAiEvaluationStatus) {
       parseAiEvaluationStatusAll(allAiEvaluationStatus);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allAiEvaluationStatus]);
+  }, [allAiEvaluationStatus, parseAiEvaluationStatusAll]);
 
-  const parseTeacherEvaluationData = data => {
-    var teachEvalArr = [];
-    var count = 0;
-    data.forEach(student => {
-      var teachEvalRow = {
-        user_name: student.user_name,
-        user_family_name: !!student.user_family_name
-          ? student.user_family_name
-          : '',
-      };
-      if (student.eval.length > 0) {
-        count++;
-        student.eval.forEach(e => {
-          teachEvalRow[String(e.learning_goal_id)] =
-            e.understanding !== null
-              ? UNDERSTANDING_LEVEL_STRINGS_V2[e.understanding]
-              : '';
-        });
-      } else {
-        // add dummy values to keep the shape for students
-        // with no evaluations
-        getHeadersSlice().forEach(h => {
-          teachEvalRow[String(h.key)] = '';
-        });
-      }
-      teachEvalArr.push(teachEvalRow);
-    });
-    setTeacherEval(teachEvalArr);
-    setTeacherEvalCount(count);
-  };
+  const parseTeacherEvaluationData = useCallback(
+    data => {
+      var teachEvalArr = [];
+      var count = 0;
+      data.forEach(student => {
+        var teachEvalRow = {
+          user_name: student.user_name,
+          user_family_name: !!student.user_family_name
+            ? student.user_family_name
+            : '',
+        };
+        if (student.eval.length > 0) {
+          count++;
+          student.eval.forEach(e => {
+            teachEvalRow[String(e.learning_goal_id)] =
+              e.understanding !== null
+                ? UNDERSTANDING_LEVEL_STRINGS_V2[e.understanding]
+                : '';
+          });
+        } else {
+          // add dummy values to keep the shape for students
+          // with no evaluations
+          getHeadersSlice().forEach(h => {
+            teachEvalRow[String(h.key)] = '';
+          });
+        }
+        teachEvalArr.push(teachEvalRow);
+      });
+      setTeacherEval(teachEvalArr);
+      setTeacherEvalCount(count);
+    },
+    [getHeadersSlice]
+  );
 
   useEffect(() => {
     if (allTeacherEvaluationData && allTeacherEvaluationData.length > 0) {
       parseTeacherEvaluationData(allTeacherEvaluationData);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allTeacherEvaluationData]);
+  }, [allTeacherEvaluationData, parseTeacherEvaluationData]);
 
   // after ai eval is requested, poll for status changes
   useEffect(() => {
