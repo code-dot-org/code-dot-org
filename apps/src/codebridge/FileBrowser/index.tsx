@@ -7,13 +7,12 @@ import OverflowTooltip from '@codebridge/components/OverflowTooltip';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
-import {ProjectType, FolderId, ProjectFile} from '@codebridge/types';
+import {ProjectType, FolderId} from '@codebridge/types';
 import {
   validateFileName as globalValidateFileName,
   validateFolderName,
   findFolder,
   getErrorMessage,
-  getFileIconNameAndStyle,
   sendCodebridgeAnalyticsEvent,
   shouldShowFile,
   isValidFileName,
@@ -28,7 +27,6 @@ import {
   useSensors,
 } from '@dnd-kit/core';
 import classNames from 'classnames';
-import fileDownload from 'js-file-download';
 import React, {useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -57,13 +55,13 @@ import {
 import {Draggable} from './Draggable';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
+import FileRow from './FileRow';
 import {FileUploader} from './FileUploader';
 import {
   useFileUploadErrorCallback,
   useHandleFileUpload,
   usePrompts,
 } from './hooks';
-import StartModeFileDropdownOptions from './StartModeFileDropdownOptions';
 import {
   DragType,
   DragDataType,
@@ -75,11 +73,6 @@ import {
 } from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
-
-const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
-  fileDownload(file.contents, file.name);
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
-};
 
 type FilesComponentProps = {
   files: ProjectType['files'];
@@ -103,14 +96,12 @@ const InnerFileBrowser = React.memo(
     setFileType,
     appName,
   }: FilesComponentProps) => {
-    const {openMoveFilePrompt, openNewFilePrompt, openNewFolderPrompt} =
-      usePrompts();
+    const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
     const {
-      openFile,
       deleteFile,
       toggleOpenFolder,
       deleteFolder,
-      config: {editableFileTypes, validMimeTypes},
+      config: {validMimeTypes},
     } = useCodebridgeContext();
     const {dragData, dropData} = useDndDataContext();
     const dialogControl = useDialogControl();
@@ -321,87 +312,40 @@ const InnerFileBrowser = React.memo(
         {Object.values(files)
           .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map(f => {
-            const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(f);
-            const iconClassName = isBrand
-              ? classNames('fa-brands', moduleStyles.rowIcon)
-              : moduleStyles.rowIcon;
-            return (
+          .map(f =>
+            !isStartMode && f.type === ProjectFileType.LOCKED_STARTER ? (
+              <FileRow
+                file={f}
+                isReadOnly={isReadOnly}
+                renameFilePrompt={renameFilePrompt}
+                appName={appName}
+                handleDeleteFile={handleDeleteFile}
+                hasValidationFile={hasValidationFile}
+                setFileType={setFileType}
+                isStartMode={isStartMode}
+                enableMenu={true}
+                key={f.id}
+              />
+            ) : (
               <Draggable
                 data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
                 Component="li"
               >
-                <div className={moduleStyles.row}>
-                  <div
-                    className={moduleStyles.label}
-                    onClick={() => openFile(f.id)}
-                  >
-                    <FontAwesomeV6Icon
-                      iconName={iconName}
-                      iconStyle={iconStyle}
-                      className={iconClassName}
-                    />
-
-                    <OverflowTooltip
-                      tooltipProps={{
-                        text: f.name,
-                        tooltipId: `file-tooltip-${f.id}`,
-                        size: 's',
-                        direction: 'onBottom',
-                      }}
-                      tooltipOverlayClassName={moduleStyles.nameContainer}
-                      className={moduleStyles.nameContainer}
-                    >
-                      <span>{f.name}</span>
-                    </OverflowTooltip>
-                  </div>
-                  {!isReadOnly && !dragData?.id && (
-                    <PopUpButton
-                      iconName="ellipsis-v"
-                      className={moduleStyles['button-kebab']}
-                    >
-                      <span className={moduleStyles['button-bar']}>
-                        <PopUpButtonOption
-                          iconName="arrow-right"
-                          labelText={codebridgeI18n.moveFile()}
-                          clickHandler={() =>
-                            openMoveFilePrompt({fileId: f.id})
-                          }
-                        />
-                        <PopUpButtonOption
-                          iconName="pencil"
-                          labelText={codebridgeI18n.renameFile()}
-                          clickHandler={() => renameFilePrompt(f.id)}
-                        />
-                        {editableFileTypes.some(
-                          type => type === f.language
-                        ) && (
-                          <PopUpButtonOption
-                            iconName="download"
-                            labelText={codebridgeI18n.downloadFile()}
-                            clickHandler={() => handleFileDownload(f, appName)}
-                          />
-                        )}
-                        <PopUpButtonOption
-                          iconName="trash"
-                          labelText={codebridgeI18n.deleteFile()}
-                          clickHandler={() => handleDeleteFile(f.id)}
-                        />
-                        {isStartMode && (
-                          <StartModeFileDropdownOptions
-                            file={f}
-                            projectHasValidationFile={hasValidationFile}
-                            setFileType={setFileType}
-                          />
-                        )}
-                      </span>
-                    </PopUpButton>
-                  )}
-                </div>
+                <FileRow
+                  file={f}
+                  isReadOnly={isReadOnly}
+                  renameFilePrompt={renameFilePrompt}
+                  appName={appName}
+                  handleDeleteFile={handleDeleteFile}
+                  hasValidationFile={hasValidationFile}
+                  setFileType={setFileType}
+                  isStartMode={isStartMode}
+                  enableMenu={!dragData?.id}
+                />
               </Draggable>
-            );
-          })}
+            )
+          )}
       </>
     );
   }
