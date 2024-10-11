@@ -111,7 +111,7 @@ export interface TeacherSectionState {
 
 /** @const {null} null used to indicate no section selected */
 export const NO_SECTION = null;
-export const SELECT_SECTION = 'teacherDashboard/selectSection';
+export const SELECT_SECTION = 'teacherSections/selectSection';
 
 const initialState: TeacherSectionState = {
   nextTempId: -1,
