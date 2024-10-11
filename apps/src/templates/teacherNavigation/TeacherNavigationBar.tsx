@@ -21,6 +21,8 @@ interface SectionsData {
   [sectionId: number]: {
     name: string;
     hidden: boolean;
+    courseVersionName: string;
+    unitName: string;
   };
 }
 
@@ -68,11 +70,13 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   };
 
   const coursecontentSectionTitle = getSectionHeader(i18n.courseContent());
-  const courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] = [
-    'courseOverview',
-    'lessonMaterials',
-    'calendar',
-  ];
+
+  let courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[];
+  if (sections[selectedSectionId].unitName) {
+    courseContentKeys = ['unitOverview', 'lessonMaterials', 'calendar'];
+  } else {
+    courseContentKeys = ['courseOverview', 'lessonMaterials', 'calendar'];
+  }
 
   const performanceSectionTitle = getSectionHeader(i18n.performance());
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
@@ -115,6 +119,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       navigate(
         generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
           sectionId: selectedSectionId,
+          courseVersionName: sections[selectedSectionId].courseVersionName,
         })
       );
     }
@@ -128,6 +133,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         key={'ui-test-sidebar-' + key}
         isSelected={currentPathName === key}
         sectionId={+selectedSectionId}
+        courseVersionName={sections[selectedSectionId].courseVersionName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
         onClick={() => navigateToDifferentPage(key)}
       />

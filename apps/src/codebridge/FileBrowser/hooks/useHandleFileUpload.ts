@@ -3,11 +3,10 @@ import {
   useCodebridgeContext,
 } from '@codebridge/codebridgeContext';
 import {FolderId, ProjectFile} from '@codebridge/types';
-import {checkForDuplicateFilename, validateFileName} from '@codebridge/utils';
+import {validateFileName} from '@codebridge/utils';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -20,7 +19,9 @@ type handleFileUploadArgs = {
   contents: string;
 };
 
-export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
+export const useHandleFileUpload = (
+  projectFiles: Record<string, ProjectFile>
+) => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const validationFile = useAppSelector(
@@ -37,35 +38,27 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
       // So don't attach other handlers to this button.
       document.body.click();
 
-      if (!validateFileName(fileName)) {
-        dialogControl?.showDialog({
-          type: DialogType.GenericAlert,
-          title: codebridgeI18n.invalidNameError(),
-        });
-
-        sendCodebridgeAnalyticsEvent(
-          EVENTS.CODEBRIDGE_UPLOAD_INVALID_FILE_NAME,
-          appName,
-          {fileName}
-        );
-        return;
-      }
-      const duplicate = checkForDuplicateFilename(
+      const validationError = validateFileName({
         fileName,
         folderId,
-        files,
+        projectFiles,
         isStartMode,
-        validationFile
-      );
-      if (duplicate) {
+        validationFile,
+      });
+
+      if (validationError) {
         dialogControl?.showDialog({
           type: DialogType.GenericAlert,
-          title: duplicate,
+          title: validationError,
+        });
+        sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, appName, {
+          fileName,
+          error: validationError,
         });
         return;
       }
 
-      const fileId = getNextFileId(Object.values(files));
+      const fileId = getNextFileId(Object.values(projectFiles));
 
       newFile({
         fileId,
@@ -77,6 +70,6 @@ export const useHandleFileUpload = (files: Record<string, ProjectFile>) => {
         fileName,
       });
     },
-    [appName, dialogControl, files, newFile, isStartMode, validationFile]
+    [appName, dialogControl, projectFiles, newFile, isStartMode, validationFile]
   );
 };

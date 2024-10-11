@@ -2376,6 +2376,11 @@
         desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
         button_label: "Explore the catalog"
 
+  access_report_skinny_banner:
+    title: "The 2024 State of CS Report is here!"
+    desc: "Check out the latest data on national and state-level computer science education policy, including policy trends, maps, state summaries, and implementation data."
+    read_report: "Read the report"
+
   app_lab_page:
     heading: "App Lab"
     subheading: "Create an app with Javascript"
@@ -10860,6 +10865,25 @@
   tutorial_codeofethicsai_string_detail_programming_languages: "Language independent"
   tutorial_socimpactofgenaiai_string_detail_programming_languages: "Language independent"
   tutorial_generationai_string_detail_programming_languages: "Blocks, Python"
+
+  tutorial_scratch_inventing_name: "Inventing with Scratch and Gitanjali Rao"
+  tutorial_scratch_spreading_kindness_name: "Spreading Kindness with Scratch and Gitanjali Rao"
+  tutorial_mc_show_must_go_on_name: "The Show Must Go On"
+  tutorial_scratch_inventing_longdescription: "Remix our starter project to design your own invention, share the invention's goal or purpose through text and/or a voice recording, and learn about Gitanjali's innovation process."
+  tutorial_scratch_spreading_kindness_longdescription: "Remix our starter project to develop and share a message of kindness, inspired by Gitanjali's innovative approach to anti-bullying efforts for young people around the world."
+  tutorial_show_must_go_on_longdescription: "Welcome to The Show Must Go On, where your creativity and coding skills take center stage! The big show is in chaos—the Agent has vanished! Use problem-solving and computational thinking to code through fun challenges, unlock surprises, and bring the show to life. Compose a song, choreograph a dance, craft a costume and save the show—all while learning key coding skills in blocks or Python."
+  tutorial_scratch_inventing_string_detail_grades: "Grades 2+"
+  tutorial_scratch_spreading_kindness_string_detail_grades: "Grades 2+"
+  tutorial_show_must_go_on_string_detail_grades: "Grades 2+"
+  tutorial_scratch_inventing_string_platforms: "All modern browsers"
+  tutorial_scratch_spreading_kindness_string_platforms: "All modern browsers"
+  tutorial_show_must_go_on_string_platforms: "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone"
+  tutorial_scratch_inventing_string_detail_platforms: ""
+  tutorial_scratch_spreading_kindness_string_detail_platforms: ""
+  tutorial_show_must_go_on_string_detail_platforms: ""
+  tutorial_scratch_inventing_string_detail_programming_languages: "Blocks"
+  tutorial_scratch_spreading_kindness_string_detail_programming_languages: "Blocks"
+  tutorial_show_must_go_on_string_detail_programming_languages: "Blocks, Python"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"

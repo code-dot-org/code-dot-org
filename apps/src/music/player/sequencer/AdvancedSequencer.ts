@@ -2,12 +2,18 @@ import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
+import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
-import {PatternEventValue} from '../interfaces/PatternEvent';
+import {
+  InstrumentEvent,
+  InstrumentEventValue,
+} from '../interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import MusicLibrary from '../MusicLibrary';
 
 import Sequencer from './Sequencer';
+
+const DEFAULT_START_MEASURE = 1;
 
 /**
  * A {@link Sequencer} used in the Advanced (programming with variables) block mode.
@@ -38,45 +44,48 @@ export default class AdvancedSequencer extends Sequencer {
       soundType: soundData.type,
       blockId,
       triggered: false,
-      when: measure,
+      when: measure ?? DEFAULT_START_MEASURE,
       effects: {...this.effects},
     } as PlaybackEvent);
   }
 
   playPatternAtMeasureById(
-    value: PatternEventValue,
+    value: InstrumentEventValue,
     measure: number,
     blockId: string
   ) {
     const length = value.length || DEFAULT_PATTERN_LENGTH;
 
-    this.playbackEvents.push({
+    const event: InstrumentEvent = {
       id: JSON.stringify(value),
-      type: 'pattern',
-      length: length,
+      type: 'instrument',
+      instrumentType: 'drums',
+      length,
       blockId,
       triggered: false,
-      when: measure,
+      when: measure ?? DEFAULT_START_MEASURE,
       value,
       effects: {...this.effects},
-    } as PlaybackEvent);
+    };
+    this.playbackEvents.push(event);
   }
 
   playChordAtMeasureById(
-    value: PatternEventValue,
+    value: ChordEventValue,
     measure: number,
     blockId: string
   ) {
-    this.playbackEvents.push({
+    const event: ChordEvent = {
       id: JSON.stringify(value),
       type: 'chord',
       length: DEFAULT_CHORD_LENGTH,
       blockId,
       triggered: false,
-      when: measure,
+      when: measure ?? DEFAULT_START_MEASURE,
       value,
       effects: {...this.effects},
-    } as PlaybackEvent);
+    };
+    this.playbackEvents.push(event);
   }
 
   setEffect(type: keyof Effects, value: EffectValue) {

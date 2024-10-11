@@ -3,17 +3,15 @@ import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
-  CLICK_TO_ADD,
-  NO_SCHOOL_SETTING,
   SCHOOL_COUNTRY_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
-  SELECT_A_SCHOOL,
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
   ZIP_REGEX,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import {SchoolDropdownOption, SchoolInfoInitialState} from '../types';
 import {constructSchoolOption} from '../utils/constructSchoolOption';
@@ -33,11 +31,11 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
 
   const detectedSchoolId = useMemo(
     () =>
-      initialState.schoolType === NO_SCHOOL_SETTING
-        ? NO_SCHOOL_SETTING
+      initialState.schoolType === NonSchoolOptions.NO_SCHOOL_SETTING
+        ? NonSchoolOptions.NO_SCHOOL_SETTING
         : initialState.schoolId ||
           sessionStorage.getItem(SCHOOL_ID_SESSION_KEY) ||
-          SELECT_A_SCHOOL,
+          NonSchoolOptions.SELECT_A_SCHOOL,
     [initialState.schoolId, initialState.schoolType]
   );
 
@@ -125,13 +123,13 @@ export function useSchoolInfo(initialState: SchoolInfoInitialState) {
     sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, schoolId);
     if (!mounted.current) return;
 
-    if (schoolId === NO_SCHOOL_SETTING) {
+    if (schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
       analyticsReporter.sendEvent(
         EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
         {},
         PLATFORMS.BOTH
       );
-    } else if (schoolId === CLICK_TO_ADD) {
+    } else if (schoolId === NonSchoolOptions.CLICK_TO_ADD) {
       analyticsReporter.sendEvent(
         EVENTS.ADD_MANUALLY_CLICKED,
         {},

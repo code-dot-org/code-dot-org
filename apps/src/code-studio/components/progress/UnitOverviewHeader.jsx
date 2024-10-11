@@ -210,7 +210,9 @@ class UnitOverviewHeader extends Component {
               />
             )}
           </div>
-          <ProtectedStatefulDiv ref={element => (this.protected = element)} />
+          {!location.pathname.includes('teacher_dashboard') && (
+            <ProtectedStatefulDiv ref={element => (this.protected = element)} />
+          )}
         </div>
       </div>
     );

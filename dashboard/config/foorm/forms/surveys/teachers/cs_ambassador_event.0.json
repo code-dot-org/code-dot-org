@@ -1,0 +1,87 @@
+{
+  "title": "Code.org CS Ambassador Program - Event Survey",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro_text",
+          "html": "<p><h1>Thank you for running this event as a Code.org Ambassador! </h1></p><p>In order to measure the impact of our program, we need to gather some information about your event. This step is required for your event to be counted towards the Ambassador Program.</p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "teacher_account",
+          "title": "Are you logged in to your teacher account?",
+          "description": "If you are logged into your teacher account you will see an option to create a section on your dashboard.",
+          "choices": [
+            {
+              "value": true,
+              "text": "Yes, I am logged into my teacher account"
+            },
+            {
+              "value": false,
+              "text": "No, I am logged into my student account"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "student_account",
+          "visibleIf": "{teacher_account} = false",
+          "html": "<h2><strong>Please sign out and sign back in using your teacher account credentials</strong></h3>\n<p></p><b><font size=3>Remember that you should sign in using your Code.org teacher account for all activities you do as an ambassador.</p>"
+        },
+        {
+          "type": "html",
+          "name": "event_info_header",
+          "visibleIf": "{teacher_account} = true",
+          "html": "<h2>Event Information</h2>\n<p><span style='font-size: 12pt;'>These questions gather information about your event.</span></p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "event_type",
+          "visibleIf": "{teacher_account} = true",
+          "title": "Was this an Experience CS event or a Connect with CS event? ",
+          "choices": [
+            {
+              "value": "experience_cs",
+              "text": "Experience CS (in Code Studio)"
+            },
+            {
+              "value": "connect_cs",
+              "text": "Connect with CS (not in Code Studio)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "total_participants",
+          "visibleIf": "{teacher_account} = true",
+          "title": "How many students attended your event?",
+          "inputType": "number"
+        },
+        {
+          "type": "text",
+          "name": "pre_enrollment",
+          "visibleIf": "{teacher_account} = true",
+          "title": "At the *start* of your event, how many students indicated interest in enrolling in CS next year?",
+          "inputType": "number"
+        },
+        {
+          "type": "text",
+          "name": "post_enrollment",
+          "visibleIf": "{teacher_account} = true",
+          "title": "At the *end* of your event, how many students indicated interest in enrolling in CS next year?",
+          "inputType": "number"
+        },
+        {
+          "type": "html",
+          "name": "cdo_heart_you",
+          "html": "<p><span style='font-size: 12pt;'><br /><img style='display: block; margin-left: auto; margin-right: auto;' src='https://www.jotform.com/uploads/bakerfranke/form_files/codeorg_heart_you.5cc89a7c7f2f20.88587690.png' /></span></p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

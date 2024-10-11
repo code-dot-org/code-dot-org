@@ -3308,6 +3308,7 @@ columns:
   - *67
   - *14
   - *15
+  - *42
   lti_deployments_user_identities:
   - *68
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -13719,7 +13720,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240920175046
+version: 20241009182721
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
