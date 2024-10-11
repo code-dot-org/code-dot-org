@@ -1,0 +1,44 @@
+@import 'color', 'breakpoints';
+
+.gen-ai-launch-skinny-banner {
+  background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
+  padding: 2rem;
+
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    gap: 4rem;
+
+    @media (max-width: 900px) {
+      gap: 2rem;
+    }
+
+    @media (max-width: $width-sm) {
+      padding-block: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  .text-wrapper {
+    flex: 2;
+
+    @media (max-width: $width-sm) {
+      text-align: center;
+    }
+  }
+
+  img {
+    max-width: 15rem;
+  }
+
+  a.link-button {
+    max-width: 15rem;
+  }
+
+  .afe-partnership-logo {
+    width: 250px;
+    margin-top: -3px;
+  }
+}

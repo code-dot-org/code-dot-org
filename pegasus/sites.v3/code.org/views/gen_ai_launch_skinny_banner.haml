@@ -1,0 +1,16 @@
+- if !!DCDO.get('gen_ai_launch', CDO.default_hoc_mode)
+  %link{href: "/css/generated/gen-ai-launch-skinny-banner.css", rel: "stylesheet"}
+  %aside.gen-ai-launch-skinny-banner
+    .wrapper.flex-container.justify-space-between.align-items-center.wrap
+      .text-wrapper
+        %h5
+          =hoc_s("gen_ai_skinny_banner.title")
+        %p.no-margin-bottom
+          =hoc_s("gen_ai_skinny_banner.desc")
+        %span
+          %h5.strong.no-margin-bottom
+            =hoc_s("gen_ai_skinny_banner.in_partnership")
+          %img.afe-partnership-logo{src: "/images/avatars/amazon_future_engineer_light.png", alt: hoc_s(:afe_partnership_logo_alt)}
+      %img{src: "/images/ai/explore-gen-ai-bot-wizard.png", alt: ""}
+      %a.link-button{href: "/curriculum/generative-ai", target: "_blank", rel: "noopener noreferrer", aria: {label: hoc_s("gen_ai_middle_high_carousel_card.aria_label")}}
+        =hoc_s(:call_to_action_learn_more)
