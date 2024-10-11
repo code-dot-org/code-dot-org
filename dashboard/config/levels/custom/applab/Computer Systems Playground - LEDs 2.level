@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-10-01T19:57:04.000Z",
   "level_num": "custom",
@@ -41,7 +42,7 @@
     "beginner_mode": "false",
     "hide_view_data_button": "true",
     "show_debug_watch": "true",
-    "expand_debugger": "false",
+    "expand_debugger": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "microbit",
@@ -73,13 +74,16 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/maker/setup"
     ],
-    "start_blocks": "onBoardEvent(lightSensor, \"change\", function() {\n  if ((lightSensor.value) <= 200) {\n    ledScreen.display([\n    ([1, 0, 0, 0, 1]),\n    ([0, 1, 0, 1, 0]),\n    ([0, 0, 1, 0, 0]),\n    ([0, 1, 0, 1, 0]),\n    ([1, 0, 0, 0, 1])\n    ]);\n  } else {\n    ledScreen.display([\n    ([0, 0, 0, 0, 0]),\n    ([0, 0, 0, 0, 1]),\n    ([0, 0, 0, 1, 0]),\n    ([1, 0, 1, 0, 0]),\n    ([0, 1, 0, 0, 0])\n    ]);\n  }\n});\n\n",
+    "start_blocks": "onBoardEvent(lightSensor, \"change\", function() {\r\n  if ((lightSensor.value) <= ) {\r\n    ledScreen.display([\r\n    ([1, 0, 0, 0, 1]),\r\n    ([0, 1, 0, 1, 0]),\r\n    ([0, 0, 1, 0, 0]),\r\n    ([0, 1, 0, 1, 0]),\r\n    ([1, 0, 0, 0, 1])\r\n    ]);\r\n  } else {\r\n    ledScreen.display([\r\n    ([0, 0, 0, 0, 0]),\r\n    ([0, 0, 0, 0, 1]),\r\n    ([0, 0, 0, 1, 0]),\r\n    ([1, 0, 1, 0, 0]),\r\n    ([0, 1, 0, 0, 0])\r\n    ]);\r\n  }\r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
-    "preload_asset_list": null
+    "watchers_prepopulated": "[\"lightSensor.value\"]",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-10-01T19:57:04.759+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Buttons 3\\\"\"],\"cloned_from\":\"Computer Systems Playground - Buttons 3\"},{\"changed_at\":\"2024-10-01 19:57:07 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-02 14:27:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-01T19:57:04.759+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Buttons 3\\\"\"],\"cloned_from\":\"Computer Systems Playground - Buttons 3\"},{\"changed_at\":\"2024-10-01 19:57:07 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-02 14:27:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-10 21:02:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:02:40 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:02:48 +0000\",\"changed\":[\"expand_debugger\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:03:26 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"watchers_prepopulated\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:05:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:45:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:45:59 +0000\",\"changed\":[\"start_blocks\",\"watchers_prepopulated\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 21:47:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 22:00:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 22:00:35 +0000\",\"changed\":[\"start_blocks\",\"watchers_prepopulated\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -22,6 +22,7 @@ interface SectionsData {
     name: string;
     hidden: boolean;
     courseVersionName: string;
+    unitName: string;
   };
 }
 
@@ -69,11 +70,13 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   };
 
   const coursecontentSectionTitle = getSectionHeader(i18n.courseContent());
-  const courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] = [
-    'courseOverview',
-    'lessonMaterials',
-    'calendar',
-  ];
+
+  let courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[];
+  if (sections[selectedSectionId].unitName) {
+    courseContentKeys = ['unitOverview', 'lessonMaterials', 'calendar'];
+  } else {
+    courseContentKeys = ['courseOverview', 'lessonMaterials', 'calendar'];
+  }
 
   const performanceSectionTitle = getSectionHeader(i18n.performance());
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =

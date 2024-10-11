@@ -5,21 +5,20 @@ description 'description here'
 markdown <<MARKDOWN
 # Output
 
-## Lesson Highlight: Character Quiz Activity
+## Lesson Highlight: Mad Lib Activity
 
-<img src="https://images.code.org/9a52d33d49d488c302d04354a96a3d2d-bed5925cbfe2b9a80368293aa21cf84b-Slide19.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="float:right; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/01fd008e4d6048055a571f437280fdc4-1ca792f16c9de3956ac12df63b575695-Slide17.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
 
-#### During **Lesson 4: Understanding Embeddings**, students investigate how characters from stories or movies can be similar as a way to understand how words can be similar.
+#### During **Lesson 9: Outputs & Probabilities**, students investigate how language models generate output based on probabilities through creating mad-libs together.
 
-#### Students create a representation of chosen characters based on their different traits, and then compare their characters to others in the class. 
+#### Student groups create a mad-lib using a predetermined set of words. As groups share, you'll type in their responses in the **Mad Lib App** to explore how their choices compare to what others said. You'll have the opportunity to try out the **Mad Lib App** on the next level.
 
-#### After students collect some data on various characters, students should compare two characters row-by-row, noticing when dots are close together or far apart. For example, Kim and Hawa's characters are on opposite ends of the good/bad spectrum, but are close in several other areas. 
+#### As you explore computer generated mad-lib answers, you and your students will notice that the most probable responses are often predictable and generic. This is also what tends to happen with real language models - when asked to be creative without special prompting, the results from a language model can be bland and lukewarm since it’s pulling from the most commonly used phrases associated with the input
 
-<img src="https://images.code.org/5587e0a3e25e4642f2da11c4f317800e-3d83c1f988e645b8de16c95ee6709055-Slide22.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="float:right; margin: 20px 20px 20px 20px;">
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; clear: both;">
 
-#### During discussions, emphasize responses that are explicitly counting spaces between dots and comparing distances. Students will eventually understand that they can compare numbers in each position to determine how similar or different characters are. This can be done by comparing each number from left-to-right. One powerful insight is that it doesn’t matter what each position represents, only how close or far the numbers are in that same position.
-
-#### These key concepts helps us generalize the idea of “character traits” to **embeddings** which the set of numbers used to represent a word in a large-language model.
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> There are several sets of cards and half-sheets to manage in this activity. The lesson plan has some material management strategies recommended by teachers who piloted this unit.</p>
+</div>
 
 ## Lesson Previews
 
