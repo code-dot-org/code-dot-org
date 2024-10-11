@@ -298,6 +298,20 @@ export class FieldBitmap extends Blockly.Field<number[][]> {
       e.preventDefault();
     });
 
+    // FIX: Detect pointermove on dropdown editor instead of pointerenter on button.
+    // Handle dragging into a pixel when pointer is down
+    this.bindEvent(dropdownEditor, 'pointermove', e => {
+      if (!(e instanceof PointerEvent)) {
+        return;
+      }
+      const currentElement = document.elementFromPoint(e.clientX, e.clientY);
+      const rowIndex = currentElement?.getAttribute('data-row');
+      const colIndex = currentElement?.getAttribute('data-col');
+      if (rowIndex && colIndex) {
+        this.onMouseEnterPixel(parseInt(rowIndex), parseInt(colIndex));
+      }
+    });
+
     this.editorPixels = [];
     for (let r = 0; r < this.imgHeight; r++) {
       this.editorPixels.push([]);
@@ -305,6 +319,11 @@ export class FieldBitmap extends Blockly.Field<number[][]> {
       for (let c = 0; c < this.imgWidth; c++) {
         // Add the button to the UI and save a reference to it
         const button = this.createElementWithClassname('div', 'pixelButton');
+
+        //FIX: Add row and data indices to pixel button data attributes.
+        button.setAttribute('data-row', r.toString());
+        button.setAttribute('data-col', c.toString());
+
         this.editorPixels[r].push(button);
         rowDiv.appendChild(button);
 
@@ -319,12 +338,6 @@ export class FieldBitmap extends Blockly.Field<number[][]> {
         this.bindEvent(button, 'pointerdown', () => {
           this.onMouseDownInPixel(r, c);
           return true;
-        });
-
-        // Handle dragging into a pixel when mouse is down
-        // FIX: change to pointer event type
-        this.bindEvent(button, 'pointerenter', () => {
-          this.onMouseEnterPixel(r, c);
         });
       }
       pixelContainer.appendChild(rowDiv);
