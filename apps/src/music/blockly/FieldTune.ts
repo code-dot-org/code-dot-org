@@ -2,9 +2,7 @@ import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {TuneEventValue} from '../player/interfaces/TuneEvent';
-import MusicLibrary from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
+import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 import {getNoteName} from '../utils/Notes';
 import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
 import TunePanel, {TunePanelProps} from '../views/TunePanel';
@@ -18,17 +16,7 @@ const FIELD_HEIGHT = 18;
 const FIELD_PADDING = 2;
 
 interface FieldTuneOptions {
-  getLibrary: () => MusicLibrary;
-  previewTune: MusicPlayer['previewTune'];
-  previewNote: MusicPlayer['previewNote'];
-  cancelPreviews: MusicPlayer['cancelPreviews'];
-  currentValue: TuneEventValue;
-  setupSampler: MusicPlayer['setupSampler'];
-  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
-  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
-  registerInstrumentLoadCallback: (
-    callback: (instrumentName: string) => void
-  ) => void;
+  currentValue: InstrumentEventValue;
 }
 
 /**
@@ -58,7 +46,7 @@ export default class FieldTune extends Field {
     return this.getValue();
   }
 
-  loadState(state: TuneEventValue) {
+  loadState(state: InstrumentEventValue) {
     this.setValue(state);
   }
 
@@ -122,7 +110,7 @@ export default class FieldTune extends Field {
     );
 
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
-      tuneEventValue: this.getValue(),
+      value: this.getValue(),
       width: FIELD_WIDTH,
       height: FIELD_HEIGHT,
       numOctaves: 3,
@@ -192,10 +180,8 @@ export default class FieldTune extends Field {
 
     ReactDOM.render(
       React.createElement<TunePanelProps>(TunePanel, {
-        library: this.options.getLibrary(),
         initValue: this.getValue(),
         onChange: this.onValueChange,
-        ...this.options,
       }),
       this.newDiv
     );
@@ -213,5 +199,5 @@ export default class FieldTune extends Field {
     return notes.length > MAX_DISPLAY_NOTES ? allNotes + '...' : allNotes;
   }
 
-  private onValueChange = (value: TuneEventValue) => this.setValue(value);
+  private onValueChange = (value: InstrumentEventValue) => this.setValue(value);
 }

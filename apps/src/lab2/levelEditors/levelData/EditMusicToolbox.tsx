@@ -3,6 +3,7 @@ import {isEqual} from 'lodash';
 import React, {useCallback} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {defaultMaps} from '@cdo/apps/music/blockly/toolbox/definitions';
@@ -22,15 +23,19 @@ import styles from './edit-music-level-data.module.scss';
 interface EditMusicToolboxProps {
   toolbox?: ToolboxData;
   blockMode: ValueOf<typeof BlockMode>;
+  addFunctionDefinition?: boolean;
+  addFunctionCalls?: boolean;
   onChange: (toolbox: ToolboxData) => void;
   onBlockModeChange: (blockMode: ValueOf<typeof BlockMode>) => void;
+  onAddFunctionDefinitionChange: (addDefinitionCalls: boolean) => void;
+  onAddFunctionCallsChange: (addFunctionCalls: boolean) => void;
 }
 
 const ChangeWarning: React.FC = () => (
   <Alert
     type="warning"
     size="xs"
-    text="Changing this setting will reset toolbox blocks."
+    text="Changing this setting will reset toolbox blocks and start sources."
   />
 );
 
@@ -41,8 +46,12 @@ const ChangeWarning: React.FC = () => (
 const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
   toolbox,
   blockMode,
+  addFunctionDefinition,
+  addFunctionCalls,
   onChange,
   onBlockModeChange,
+  onAddFunctionDefinitionChange,
+  onAddFunctionCallsChange,
 }) => {
   const defaultBlocks = defaultMaps[blockMode];
   const onBlocksChange = useCallback(
@@ -129,6 +138,27 @@ const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
             blockMode={blockMode}
             toolboxType={toolbox?.type}
           />
+          {toolbox?.type === 'flyout' && blockMode === BlockMode.SIMPLE2 && (
+            <div className={styles.checkbox}>
+              <Checkbox
+                checked={!!addFunctionDefinition}
+                name="addFunctionDefinition"
+                label="Add function definition"
+                onChange={event => {
+                  onAddFunctionDefinitionChange(event.target.checked);
+                }}
+              />
+              <Checkbox
+                checked={!!addFunctionCalls}
+                name="addFunctionCalls"
+                label="Add function calls"
+                disabled={!!addFunctionDefinition}
+                onChange={event =>
+                  onAddFunctionCallsChange(event.target.checked)
+                }
+              />
+            </div>
+          )}
         </div>
         <div className={styles.verticalLine}>&nbsp;</div>
         <PreviewMusicWorkspace toolboxData={toolbox} blockMode={blockMode} />

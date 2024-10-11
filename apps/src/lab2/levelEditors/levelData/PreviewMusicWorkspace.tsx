@@ -61,13 +61,19 @@ const PreviewMusicWorkspace: React.FC<PreviewMusicWorkspaceProps> = ({
       ref={containerRef}
     >
       <Alert
-        text="
-        The workspace below is not functional and is just for toolbox
-        demonstration purposes. Blocks added to the workspace, and changes made
-        to field values on blocks within the flyout will not be saved."
+        text={
+          `The workspace below is not functional and is just used to preview
+        the toolbox. Blocks added to the workspace and changes made
+        to field values will not be saved. ` +
+          (toolboxData?.type === 'flyout' && blockMode === BlockMode.SIMPLE2
+            ? `Function blocks are dynamically generated and will not be shown
+            in this preview.`
+            : ``)
+        }
         type="info"
         size="xs"
       />
+
       <PanelContainer id="preview-workspace" headerContent="Toolbox Preview">
         <div ref={workspaceDivRef} />
       </PanelContainer>

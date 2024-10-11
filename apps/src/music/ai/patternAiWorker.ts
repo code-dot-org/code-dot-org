@@ -3,7 +3,9 @@ import mm from '@magenta/music/es6';
 import {sequences} from '@magenta/music/es6/core';
 import {MusicRNN} from '@magenta/music/es6/music_rnn';
 
-import {PatternTickEvent} from '../player/interfaces/PatternEvent';
+import {InstrumentTickEvent} from '../player/interfaces/InstrumentEvent';
+
+import {Message} from './types';
 
 let model: MusicRNN | undefined = undefined;
 
@@ -85,44 +87,54 @@ const reverseMidiMapping = new Map([
 ]);
 
 onmessage = async e => {
-  if (e.data[0] === 'generatePattern') {
-    const result = await generatePattern(
-      e.data[1],
-      e.data[2],
-      e.data[3],
-      e.data[4]
-    );
-    postMessage(['result', result]);
+  if (e.data[0] === Message.GeneratePattern) {
+    try {
+      const result = await generatePattern(
+        e.data[1],
+        e.data[2],
+        e.data[3],
+        e.data[4]
+      );
+      postMessage([Message.Result, result]);
+    } catch (e) {
+      // Using setTimeout to ensure the error is handled by the onerror callback.
+      setTimeout(() => {
+        throw e;
+      });
+    }
   }
 };
 
 async function generatePattern(
-  seed: PatternTickEvent[],
+  seed: InstrumentTickEvent[],
   seedLength: number,
   generateLength: number,
   temperature: number
 ) {
   if (!model) {
-    console.time('AI: create model');
+    const createModelStartTime = Date.now();
     model = new MusicRNN(
       'https://curriculum.code.org/media/musiclab/ai/music_rnn/drum_kit_rnn'
     );
-    console.timeLog('AI: create model');
     await model.initialize();
-    console.timeEnd('AI: create model');
+    postMessage([Message.ModelCreated, Date.now() - createModelStartTime]);
   }
 
-  console.time('AI: generate pattern');
+  const generatePatternStartTime = Date.now();
   const seedSeq = toNoteSequence(seed, seedLength);
   const result = model
     .continueSequence(seedSeq, generateLength, temperature)
     .then(r => seed.concat(fromNoteSequence(r, generateLength)));
-  console.timeEnd('AI: generate pattern');
+
+  postMessage([
+    Message.GenerateFinished,
+    Date.now() - generatePatternStartTime,
+  ]);
 
   return result;
 }
 
-function toNoteSequence(pattern: PatternTickEvent[], patternLength: number) {
+function toNoteSequence(pattern: InstrumentTickEvent[], patternLength: number) {
   return sequences.quantizeNoteSequence(
     {
       ticksPerQuarter: 220,
@@ -155,8 +167,8 @@ function toNoteSequence(pattern: PatternTickEvent[], patternLength: number) {
 function fromNoteSequence(
   seq: mm.INoteSequence,
   patternLength: number
-): PatternTickEvent[] {
-  const res: PatternTickEvent[] = [];
+): InstrumentTickEvent[] {
+  const res: InstrumentTickEvent[] = [];
 
   if (seq.notes) {
     for (const {pitch, quantizedStartStep} of seq.notes) {
@@ -169,7 +181,6 @@ function fromNoteSequence(
         res.push({
           note: reverseMidiMapping.get(pitch) || 0,
           tick: 8 + quantizedStartStep + 1, // 4 + quantizedStartStep * 2 + 1,
-          src: 'sound_' + ((reverseMidiMapping.get(pitch) || 0) + 1),
         });
       }
     }

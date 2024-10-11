@@ -12,10 +12,8 @@ export interface MusicLevelData extends ProjectLevelData {
   library?: string;
   packId?: string;
   showSoundFilters?: boolean;
-  // This is currently only used in the levelbuilder editor to
-  // determine which blocks to include.
-  // TODO: Use this value to configure block mode rather than only URL param override.
   blockMode?: ValueOf<typeof BlockMode>;
+  hideAiTemperature?: boolean;
 }
 
 export type LoadFinishedCallback = (

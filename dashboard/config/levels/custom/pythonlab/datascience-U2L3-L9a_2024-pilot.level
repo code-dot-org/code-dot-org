@@ -20,7 +20,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "\n",
+          "contents": "",
           "folderId": "0",
           "active": true,
           "open": true
@@ -45,8 +45,18 @@
     "display_name": "NBA Stats",
     "bubble_choice_description": "Print the shape and length of the NBA stats DataFrame.",
     "thumbnail_url": "https://images.code.org/b997c65328aa2a62ef7608a3f902179b-basketball.png",
-    "project_template_level_name": "datascience-U2L3-L7aTempl_2024-pilot"
+    "project_template_level_name": "datascience-U2L3-L7aTempl_2024-pilot",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestPrintHeadAndTail(unittest.TestCase):\n    def setUp(self):\n        # Read and parse the student's main.py file\n        with open('main.py', 'r') as f:\n            self.tree = ast.parse(f.read())\n\n    def detect_head_function(self):\n        \"\"\"Detect if head() is used in a print statement.\"\"\"\n        for node in ast.walk(self.tree):\n            if isinstance(node, ast.Expr) and isinstance(node.value, ast.Call):\n                # Check for a print statement with head()\n                if isinstance(node.value.func, ast.Name) and node.value.func.id == 'print':\n                    if node.value.args:\n                        if isinstance(node.value.args[0], ast.Call):\n                            if isinstance(node.value.args[0].func, ast.Attribute):\n                                if node.value.args[0].func.attr == 'head':\n                                    return True\n        return False\n\n    def detect_tail_function(self):\n        \"\"\"Detect if tail() is used in a print statement.\"\"\"\n        for node in ast.walk(self.tree):\n            if isinstance(node, ast.Expr) and isinstance(node.value, ast.Call):\n                # Check for a print statement with tail()\n                if isinstance(node.value.func, ast.Name) and node.value.func.id == 'print':\n                    if node.value.args:\n                        if isinstance(node.value.args[0], ast.Call):\n                            if isinstance(node.value.args[0].func, ast.Attribute):\n                                if node.value.args[0].func.attr == 'tail':\n                                    return True\n        return False\n\n    def test_step_1_print_head(self):\n        \"\"\"The first few rows of the DataFrame are printed using head().\"\"\"\n        head_detected = self.detect_head_function()\n        self.assertTrue(head_detected, \"The first few rows of the DataFrame are printed using head().\")\n\n    def test_step_2_print_tail(self):\n        \"\"\"The last few rows of the DataFrame are printed using tail().\"\"\"\n        tail_detected = self.detect_tail_function()\n        self.assertTrue(tail_detected, \"The last few rows of the DataFrame are printed using tail().\")\n\nif __name__ == '__main__':\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-14T17:21:33.121+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L8a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L8a_2024-pilot\"},{\"changed_at\":\"2024-09-14 17:24:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-14T17:21:33.121+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L8a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L8a_2024-pilot\"},{\"changed_at\":\"2024-09-14 17:24:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 18:43:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 18:47:37 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 18:47:46 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

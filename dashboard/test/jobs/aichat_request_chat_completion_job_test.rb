@@ -17,6 +17,9 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
         }
       }
     }
+    @test_env = 'unit-test-env'
+    @metrics_model_id = 'metrics-test-model-id'
+    CDO.stubs(:rack_env).returns(@test_env)
 
     AichatSafetyHelper.stubs(:find_toxicity).returns(nil)
   end
@@ -84,17 +87,113 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   end
 
   test 'execution status is set to USER_INPUT_TOO_LARGE and an exception is raised if the input validation error occurs' do
-    error_message = 'Input validation error: `inputs` must have less than 3000 tokens'
-    AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).raises(StandardError.new(error_message))
+    [
+      'Input validation error: `inputs` must have less than 3000 tokens',
+      'Input validation error: `inputs` tokens + `max_new_tokens` must be <= 4096.'
+    ].each do |error_message|
+      AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).raises(Aws::SageMakerRuntime::Errors::ModelError.new(nil, error_message))
 
-    request = create :aichat_request
-    exception = assert_raises(StandardError) do
+      request = create :aichat_request
+      perform_enqueued_jobs do
+        AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
+      end
+
+      assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE], request.reload.execution_status
+      assert request.response.include?(error_message)
+    end
+  end
+
+  test 'reports metrics for successful job' do
+    customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}.to_json
+    request = create :aichat_request, model_customizations: customizations
+
+    reported_metrics = []
+
+    Cdo::Metrics.stubs(:push)
+    Cdo::Metrics.expects(:push).with do |namespace, metrics|
+      if namespace == SharedConstants::AICHAT_METRICS_NAMESPACE
+        reported_metrics << metrics
+      end
+    end
+
+    AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns('response')
+
+    perform_enqueued_jobs do
+      AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
+    end
+
+    # Verify two calls to Cdo::Metrics.push
+    assert_equal 2, reported_metrics.length
+    # Verify job start metric
+    job_start_metrics = reported_metrics[0]
+    assert_equal 1, job_start_metrics.length
+
+    job_start_metric = job_start_metrics.first
+    verify_common_metric_properties(job_start_metric)
+    assert_equal "#{AichatRequestChatCompletionJob.name}.Start", job_start_metric[:metric_name]
+    assert_equal 1, job_start_metric[:value]
+    assert_equal 'Count', job_start_metric[:unit]
+    assert_equal 2, job_start_metric[:dimensions].length
+
+    # Verify job finish metrics
+    job_finish_metrics = reported_metrics[1]
+    assert_equal 2, job_finish_metrics.length
+
+    finish_metric = job_finish_metrics[0]
+    verify_common_metric_properties(finish_metric)
+    assert_equal "#{AichatRequestChatCompletionJob.name}.Finish", finish_metric[:metric_name]
+    assert_equal 1, finish_metric[:value]
+    assert_equal 'Count', finish_metric[:unit]
+    assert_equal 3, finish_metric[:dimensions].length
+    assert_equal 'SUCCESS', finish_metric[:dimensions][2][:value]
+
+    execution_time_metric = job_finish_metrics[1]
+    verify_common_metric_properties(execution_time_metric)
+    assert_equal "#{AichatRequestChatCompletionJob.name}.ExecutionTime", execution_time_metric[:metric_name]
+    assert execution_time_metric[:value].is_a?(Numeric)
+    assert_equal 'Seconds', execution_time_metric[:unit]
+  end
+
+  test 'reports metrics for failed job' do
+    customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}.to_json
+    request = create :aichat_request, model_customizations: customizations
+
+    reported_metrics = []
+
+    Cdo::Metrics.stubs(:push)
+    Cdo::Metrics.expects(:push).with do |namespace, metrics|
+      if namespace == SharedConstants::AICHAT_METRICS_NAMESPACE
+        reported_metrics << metrics
+      end
+    end
+
+    AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).raises(StandardError.new('error'))
+
+    assert_raises(StandardError) do
       AichatRequestChatCompletionJob.perform_now(request: request, locale: 'en')
     end
 
-    assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE], request.reload.execution_status
-    assert request.response.include?(error_message)
-    assert exception.message.include?(error_message)
-    assert exception.message.include?(request.to_json)
+    # Verify two calls to Cdo::Metrics.push
+    assert_equal 2, reported_metrics.length
+
+    # Verify job finish metric
+    job_finish_metrics = reported_metrics[1]
+    assert_equal 2, job_finish_metrics.length
+
+    finish_metric = job_finish_metrics[0]
+    verify_common_metric_properties(finish_metric)
+    assert_equal "#{AichatRequestChatCompletionJob.name}.Finish", finish_metric[:metric_name]
+    assert_equal 1, finish_metric[:value]
+    assert_equal 'Count', finish_metric[:unit]
+    assert_equal 3, finish_metric[:dimensions].length
+    assert_equal 'FAILURE', finish_metric[:dimensions][2][:value]
+  end
+
+  def verify_common_metric_properties(metric)
+    assert metric[:timestamp].is_a?(Time)
+    assert_equal 'Environment', metric[:dimensions][0][:name]
+    assert_equal @test_env, metric[:dimensions][0][:value]
+    assert_equal 'ModelId', metric[:dimensions][1][:name]
+    assert_equal @metrics_model_id, metric[:dimensions][1][:value]
   end
 end

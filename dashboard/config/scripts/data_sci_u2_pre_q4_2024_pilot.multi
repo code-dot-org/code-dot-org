@@ -1,0 +1,10 @@
+name 'Data Sci U2 Pre Q4_2024-pilot'
+
+question 'How does the `info()` function in pandas help in understanding the structure of a DataFrame, and what key information does it provide?'
+
+right 'The `info()` function provides a concise summary of a DataFrame, including the number of non-null entries, data types of each column, and memory usage.'
+wrong 'The `info()` function generates descriptive statistics for numerical columns, such as mean, median, and standard deviation.'
+wrong 'The `info()` function visualizes data distributions and identifies outliers within the dataset.'
+wrong 'The `info()` function is used to sort the DataFrame based on specified columns, aiding in data organization.'
+
+allow_multiple_attempts false

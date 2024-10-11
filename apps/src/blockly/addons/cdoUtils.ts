@@ -829,3 +829,10 @@ export function getCategoryBlocksJson(category: string) {
 
   return flyoutJson;
 }
+
+export function isFunctionBlock(block: Block) {
+  return [
+    BLOCK_TYPES.procedureDefinition,
+    BLOCK_TYPES.procedureDefinitionReturn,
+  ].includes(block.type as BLOCK_TYPES);
+}

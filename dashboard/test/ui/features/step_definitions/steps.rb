@@ -1200,6 +1200,14 @@ And(/^I submit this level$/) do
   GHERKIN
 end
 
+And(/^I submit this gamelab level$/) do
+  steps <<~GHERKIN
+    And I press "runButton"
+    And I wait to see "#submitButton"
+    And I press "submitButton" to load a new page
+  GHERKIN
+end
+
 And(/^I wait until I am on the join page$/) do
   wait_short_until {/^\/join/.match(@browser.execute_script("return location.pathname"))}
 end
@@ -1332,6 +1340,12 @@ end
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
   @browser.navigate.to url
+end
+
+Then /^I switch to the embedded view of current project(?: with query "(.*)")?$/ do |query|
+  embed_url = @browser.current_url.sub('/edit', '/embed')
+  embed_url = "#{embed_url}?#{query}" if query
+  navigate_to embed_url
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|

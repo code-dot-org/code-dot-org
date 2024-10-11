@@ -6,27 +6,25 @@ markdown <<MARKDOWN
 # Python Basics
 
 
-## Lesson 2: Introduction to Python
+## Lesson 3: Introduction to Python
 
 <img src="https://images.code.org/9392a1a8c8ff8123791c7b55f9d24ccc-image-1724771698857.png" alt="judicial scale icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 20px 40px;">
 
 
-#### In this lesson students will be exposed to some of the uses of the Python programming language, focusing on its strong appeal for data science applications. 
-
-#### Utilizing the **PRIMM** methodology, students will be introduced to some of the basic Python syntax that will be necessary to begin manipulating and visualizing data in the lessons to come.
+#### In this lesson, students will explore Python's key uses, particularly in data science. Using the **PRIMM** methodology, they’ll learn essential Python syntax to start working with and visualizing data.
 
 ### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
 
 <div style="clear:both;"></div>
 
-## Key concepts
-- #### **data type** - the format of the data that can be stored in a variable
-- #### **variable** - a container that stores a value in memory
-- #### **expression** - a combination of data and operators that evaluates to a single value
-- #### **list** - a comma-separated list of values or objects inside square brackets [ ]
-- #### **index** - an integer value that indicates the position of a value inside of a list
+>## Key concepts
+>- #### **data type** - the format of the data that can be stored in a variable
+>- #### **variable** - a container that stores a value in memory
+>- #### **expression** - a combination of data and operators that evaluates to a single value
+>- #### **list** - a comma-separated list of values or objects inside square brackets [ ]
+>- #### **index** - an integer value that indicates the position of a value inside of a list
 
-<br>
+
 
 
 

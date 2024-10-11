@@ -5,7 +5,7 @@ default['cdo-mysql'] = {
     port: 6033,
     admin: 'mysql2://admin:admin@127.0.0.1:6032',
     # Past Connection Attempt spikes have peaked at about 2 per second per web application server EC2 Instance.
-    throttle_connections_per_sec_to_hostgroup: 10
+    throttle_connections_per_sec_to_hostgroup: 100
   }
 }
 default['cdo-secrets'] = {}

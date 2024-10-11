@@ -20,28 +20,35 @@ import i18n from '@cdo/locale';
 
 import {navigateToHref} from '../utils';
 
-import {ACCOUNT_TYPE_SESSION_KEY} from './signUpFlowConstants';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
 const CHECK_ICON = 'circle-check';
-const X_ICON = 'circle-x';
+const X_ICON = 'circle-xmark';
+const EXCLAMATION_ICON = 'circle-exclamation';
 
 const LoginTypeSelection: React.FunctionComponent = () => {
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
   const [passwordIconClass, setPasswordIconClass] = useState(style.lightGray);
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [confirmPasswordIcon, setConfirmPasswordIcon] = useState(X_ICON);
-  const [confirmPasswordIconClass, setConfirmPasswordIconClass] = useState(
-    style.lightGray
-  );
+  const [showConfirmPasswordError, setShowConfirmPasswordError] =
+    useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
   const [email, setEmail] = useState('');
-  const [emailIcon, setEmailIcon] = useState(X_ICON);
-  const [emailIconClass, setEmailIconClass] = useState(style.lightGray);
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
     useState(true);
+  const isTeacher =
+    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher';
+
+  const finishAccountUrl = isTeacher
+    ? studio('/users/new_sign_up/finish_teacher_account')
+    : studio('/users/new_sign_up/finish_student_account');
 
   useEffect(() => {
     async function getToken() {
@@ -54,14 +61,15 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   useEffect(() => {
     if (
       passwordIcon === CHECK_ICON &&
-      confirmPasswordIcon === CHECK_ICON &&
-      emailIcon === CHECK_ICON
+      !showConfirmPasswordError &&
+      confirmPassword !== '' &&
+      email !== ''
     ) {
       setCreateAccountButtonDisabled(false);
     } else {
       setCreateAccountButtonDisabled(true);
     }
-  }, [passwordIcon, confirmPasswordIcon, emailIcon]);
+  }, [passwordIcon, showConfirmPasswordError, confirmPassword, email]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -90,37 +98,50 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       setPasswordIcon(X_ICON);
       setPasswordIconClass(style.lightGray);
     }
-    if (event.target.value === confirmPassword) {
-      setConfirmPasswordIcon(CHECK_ICON);
-      setConfirmPasswordIconClass(style.teal);
-    } else {
-      setConfirmPasswordIcon(X_ICON);
-      setConfirmPasswordIconClass(style.lightGray);
-    }
+    event.target.value === confirmPassword || confirmPassword === ''
+      ? setShowConfirmPasswordError(false)
+      : setShowConfirmPasswordError(true);
   };
 
   const handleConfirmPasswordChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setConfirmPassword(event.target.value);
-    if (event.target.value === password) {
-      setConfirmPasswordIcon(CHECK_ICON);
-      setConfirmPasswordIconClass(style.teal);
-    } else {
-      setConfirmPasswordIcon(X_ICON);
-      setConfirmPasswordIconClass(style.lightGray);
-    }
+    event.target.value === password
+      ? setShowConfirmPasswordError(false)
+      : setShowConfirmPasswordError(true);
   };
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
-    if (isEmail(event.target.value)) {
-      setEmailIcon(CHECK_ICON);
-      setEmailIconClass(style.teal);
-    } else {
-      setEmailIcon(X_ICON);
-      setEmailIconClass(style.lightGray);
+    sessionStorage.setItem(EMAIL_SESSION_KEY, event.target.value);
+  };
+
+  const submitLoginType = async () => {
+    logUserLoginType('email');
+    if (!isEmail(email)) {
+      setShowEmailError(true);
+      return;
     }
+    const submitLoginTypeParams = {
+      new_sign_up: true,
+      user: {
+        email: email,
+        password: password,
+        password_confirmation: password,
+      },
+    };
+    const authToken = await getAuthenticityToken();
+    await fetch('/users/begin_sign_up', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': authToken,
+      },
+      body: JSON.stringify(submitLoginTypeParams),
+    });
+
+    navigateToHref(finishAccountUrl);
   };
 
   const sendLMSAnalyticsEvent = () => {
@@ -141,11 +162,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     );
   }
 
-  const finishAccountUrl =
-    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
-      ? studio('/users/new_sign_up/finish_teacher_account')
-      : studio('/users/new_sign_up/finish_student_account');
-
   return (
     <div className={style.newSignupFlow}>
       <AccountBanner
@@ -165,6 +181,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             </BodyThreeText>
           </div>
           <form action="/users/auth/google_oauth2" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.googleButton}
               onClick={() => logUserLoginType('google')}
@@ -179,6 +196,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/microsoft_v2_auth" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.microsoftButton}
               onClick={() => logUserLoginType('microsoft')}
@@ -193,6 +211,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/facebook" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.facebookButton}
               onClick={() => logUserLoginType('facebook')}
@@ -207,6 +226,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/clever" method="POST">
+            <input type="hidden" name="finish_url" value={finishAccountUrl} />
             <button
               className={style.cleverButton}
               onClick={() => logUserLoginType('clever')}
@@ -218,32 +238,46 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <div className={style.greyTextbox}>
+            {!isTeacher && (
+              <div className={style.iconContainer}>
+                <img src={canvas} alt="Canvas logo" />
+                <img src={schoology} alt="Schoology logo" />
+              </div>
+            )}
             <BodyThreeText className={style.subheader}>
-              {locale.using_lms_platforms()}
+              {isTeacher
+                ? locale.using_lms_platforms()
+                : locale.does_your_school_use_an_lms()}
             </BodyThreeText>
             <BodyThreeText>
-              {locale.access_detailed_instructions()}
+              {isTeacher
+                ? locale.access_detailed_instructions()
+                : locale.ask_your_teacher_lms()}
             </BodyThreeText>
-            <Button
-              href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
-              onClick={sendLMSAnalyticsEvent}
-              color={Button.ButtonColor.white}
-              text={'Canvas'}
-              icon={'arrow-up-right-from-square'}
-              __useDeprecatedTag
-            >
-              <img src={canvas} alt="" />
-            </Button>
-            <Button
-              href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
-              onClick={sendLMSAnalyticsEvent}
-              color={Button.ButtonColor.white}
-              text={'Schoology'}
-              icon={'arrow-up-right-from-square'}
-              __useDeprecatedTag
-            >
-              <img src={schoology} alt="" />
-            </Button>
+            {isTeacher && (
+              <div className={style.buttonContainer}>
+                <Button
+                  href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
+                  onClick={sendLMSAnalyticsEvent}
+                  color={Button.ButtonColor.white}
+                  text={'Canvas'}
+                  icon={'arrow-up-right-from-square'}
+                  __useDeprecatedTag
+                >
+                  <img src={canvas} alt="" />
+                </Button>
+                <Button
+                  href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
+                  onClick={sendLMSAnalyticsEvent}
+                  color={Button.ButtonColor.white}
+                  text={'Schoology'}
+                  icon={'arrow-up-right-from-square'}
+                  __useDeprecatedTag
+                >
+                  <img src={schoology} alt="" />
+                </Button>
+              </div>
+            )}
           </div>
         </div>
         <div className={style.dividerContainer}>
@@ -263,13 +297,17 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 onChange={handleEmailChange}
                 name="emailInput"
               />
-              <div className={style.validationMessage}>
-                <FontAwesomeV6Icon
-                  className={emailIconClass}
-                  iconName={emailIcon}
-                />
-                <BodyThreeText>{i18n.censusInvalidEmail()}</BodyThreeText>
-              </div>
+              {showEmailError && (
+                <div className={style.validationMessage}>
+                  <FontAwesomeV6Icon
+                    className={style.red}
+                    iconName={EXCLAMATION_ICON}
+                  />
+                  <BodyThreeText className={style.red}>
+                    {i18n.censusInvalidEmail()}
+                  </BodyThreeText>
+                </div>
+              )}
             </div>
             <div>
               <TextField
@@ -295,24 +333,25 @@ const LoginTypeSelection: React.FunctionComponent = () => {
                 name="confirmPasswordInput"
                 inputType="password"
               />
-              <div className={style.validationMessage}>
-                <FontAwesomeV6Icon
-                  className={confirmPasswordIconClass}
-                  iconName={confirmPasswordIcon}
-                />
-                <BodyThreeText>{i18n.passwordsMustMatch()}</BodyThreeText>
-              </div>
+              {showConfirmPasswordError && (
+                <div className={style.validationMessage}>
+                  <FontAwesomeV6Icon
+                    className={style.red}
+                    iconName={EXCLAMATION_ICON}
+                  />
+                  <BodyThreeText className={style.red}>
+                    {i18n.passwordsMustMatch()}
+                  </BodyThreeText>
+                </div>
+              )}
             </div>
           </div>
           <NewButton
             id="createAccountButton"
             className={style.shortButton}
             text={locale.create_my_account()}
+            onClick={submitLoginType}
             disabled={createAccountButtonDisabled}
-            onClick={() => {
-              navigateToHref(finishAccountUrl);
-              logUserLoginType('email');
-            }}
           />
         </div>
       </div>

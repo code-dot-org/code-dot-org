@@ -100,5 +100,6 @@ Error.args = {
   isOpen: true,
   syncResult: {
     error: 'no_integration',
+    honeybadger_id: 'some-honeybadger-id',
   },
 };

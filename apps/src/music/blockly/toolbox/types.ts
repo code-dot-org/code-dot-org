@@ -36,4 +36,6 @@ export interface ToolboxData {
   blocks?: CategoryBlocksMap;
   type?: ToolboxType;
   includeAi?: boolean;
+  addFunctionDefinition?: boolean;
+  addFunctionCalls?: boolean;
 }

@@ -67,6 +67,7 @@ en:
       Be a Super Digital Citizen: Be a Super Digital Citizen
       Begin planning your project: Begin planning your project
       Begin planning your project_2018: Begin planning your project_2018
+      Behaviors: Behaviors
       Binary Bracelets - Student Resources: Binary Bracelets - Student Resources
       Binary Bracelets - Unplugged Activity: Binary Bracelets - Unplugged Activity
       Binary Number Widget: Binary Number Widget
@@ -139,6 +140,9 @@ en:
       Code Prediction: Code Prediction
       Code Your Own Flappy Game: Code Your Own Flappy Game
       Code Your Page: Code Your Page
+      Coding with Algorithms and Sequences: Coding with Algorithms and Sequences
+      Coding with Conditionals: Coding with Conditionals
+      Coding with Loops: Coding with Loops
       Collector Game: Collector Game
       Collision Detection: Collision Detection
       Collision Detection Review: Collision Detection Review
@@ -152,6 +156,7 @@ en:
       Conditionals with Cards - Video: Conditionals with Cards - Video
       'Conditionals: If Statements': 'Conditionals: If Statements'
       'Conditionals: If and If/Else Statements': 'Conditionals: If and If/Else Statements'
+      Continuing your CS Journey: Continuing your CS Journey
       Control Your Player: Control Your Player
       Course E Artist Project: Course E Artist Project
       Course E Sprite Lab Project: Course E Sprite Lab Project
@@ -174,10 +179,12 @@ en:
       Create your project: Create your project
       Creating Sprites: Creating Sprites
       Creative Commons Search: Creative Commons Search
+      Creativity + Code with Event-based Programs: Creativity + Code with Event-based Programs
       Cropping Widget: Cropping Widget
       Custom notes & beats: Custom notes & beats
       Customize: Customize
       Customize Your App: Customize Your App
+      Customizing Sprites: Customizing Sprites
       Customizing Your App: Customizing Your App
       Dance Crews: Dance Crews
       Data Visualization: Data Visualization
@@ -220,6 +227,7 @@ en:
       Ethics Exploration: Ethics Exploration
       Event Types: Event Types
       Events: Events
+      Events Challenge: Events Challenge
       Events and Linking Screens: Events and Linking Screens
       Events and Properties: Events and Properties
       Example: Example
@@ -339,6 +347,7 @@ en:
       Intro to Side Scrollers: Intro to Side Scrollers
       Intro to Sprites: Intro to Sprites
       Intro to Variables: Intro to Variables
+      Introducing Events: Introducing Events
       Introducing Sprite Lab: Introducing Sprite Lab
       Introduction: Introduction
       Introduction to Arrays: Introduction to Arrays
@@ -436,6 +445,7 @@ en:
       Nested Loops with the Bee: Nested Loops with the Bee
       New Challenge Introduction: New Challenge Introduction
       New Shapes: New Shapes
+      Next Steps: Next Steps
       Noisy Image Widget: Noisy Image Widget
       Orientation: Orientation
       Outro: Outro
@@ -477,6 +487,8 @@ en:
       Post-Module Survey: Post-Module Survey
       Practice: Practice
       Practice Levels: Practice Levels
+      Practicing Block-Based Coding: Practicing Block-Based Coding
+      'Practicing CS Skills ': 'Practicing CS Skills '
       Pre-Assessment: Pre-Assessment
       Pre-Module Survey: Pre-Module Survey
       Predict: Predict
@@ -498,6 +510,7 @@ en:
       Prototype Components: Prototype Components
       Prototype an Innovation: Prototype an Innovation
       Publishing Your Website: Publishing Your Website
+      'Putting it All Together ': 'Putting it All Together '
       QR Code Exploration: QR Code Exploration
       Quarter Notes: Quarter Notes
       Quick Check: Quick Check
@@ -596,15 +609,19 @@ en:
       Sprite Properties: Sprite Properties
       Sprite Scenes: Sprite Scenes
       Sprite Velocity: Sprite Velocity
+      Sprites and Backgrounds: Sprites and Backgrounds
       Sprites and the Draw Loop: Sprites and the Draw Loop
       Star Chaser: Star Chaser
       Star Quilts Video: Star Quilts Video
+      Student Post-Survey: Student Post-Survey
+      Student Pre-Survey: Student Pre-Survey
       Styling Text: Styling Text
       Styling with Classes: Styling with Classes
       Styling your Website: Styling your Website
       Teach A.I. a new word: Teach A.I. a new word
       Teach AI a New Word: Teach AI a New Word
       Teachable Machine: Teachable Machine
+      Teaching and Learning Strategies: Teaching and Learning Strategies
       'Technique: Frequency Analysis': 'Technique: Frequency Analysis'
       Terminology Recap: Terminology Recap
       Text Compression: Text Compression
@@ -792,11 +809,13 @@ en:
       WeTube Video Recommendations (2.0): WeTube Video Recommendations (2.0)
       WeTube Video Recommendations (Beta): WeTube Video Recommendations (Beta)
       Website Project: Website Project
+      Welcome and Introduction: Welcome and Introduction
       Welcome to Monster Town: Welcome to Monster Town
       What Is a Time Capsule?: What Is a Time Capsule?
       Where'd They Go?: Where'd They Go?
       While Loops with the Farmer: While Loops with the Farmer
       'Widget: Text Compression': 'Widget: Text Compression'
+      Wrap Up: Wrap Up
       Wrap-up: Wrap-up
       Written Voice Simulator Widget: Written Voice Simulator Widget
       'You Choose: Improve Your App': 'You Choose: Improve Your App'
@@ -804,6 +823,7 @@ en:
       Your Personal Website: Your Personal Website
       Your Team Project: Your Team Project
       Zoo Predictions: Zoo Predictions
+      "[For Teachers] Mad Lib Widget": "[For Teachers] Mad Lib Widget"
       getNumber: getNumber
       getProperty: getProperty
       getText vs getNumber: getText vs getNumber
