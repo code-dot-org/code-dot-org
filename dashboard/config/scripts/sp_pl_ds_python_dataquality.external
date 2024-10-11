@@ -1,0 +1,66 @@
+name 'sp-pl-DS_Python-DataQuality'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Variables
+
+<img src="https://images.code.org/5de949b2444cea4cd726ff53548b8702-image-1727203455539.png" alt="pandas logo" width="50px" style="border-radius:20px; float:left; margin: 0 0 10px 0px;">
+
+### What did you discover from the modifications you made to the previous code?
+
+<img src="https://images.code.org/e805f88c49d82f9248141b3a47398b84-image-1728506327931.png" alt="pandas logo" width="150px" style="border-radius:20px; float:right; margin: 0 0 10px 0px;">
+
+## Why We Clean Data 
+- #### Identify data quality issues 
+- #### Handle missing, invalid, and inconsistent data entries
+- #### Ensure data integrity and usability
+
+
+
+## Data Quality Issues
+- #### **Missing Data:** no value stored in a cell
+- #### **Invalid Data Entries:** Cell values that do not conform to expected format
+- #### **Inconsistent Data Formats:** Similar data is stored in different formats
+
+---
+
+## Identifying Missing Values 
+
+   <table border="1" width="100%" cellpadding="10" height="400">
+        <tr>
+            <td width="50%" height="25%">
+                <img src="https://images.code.org/1034801d9c69422a42917cadd6efb542-image-1728506476340.png" alt="isNull()" width="100%">
+            </td>
+            <td width="50%" style="font-size:14pt;">
+            This identifies the missing values.
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" height="25%">
+                <img src="https://images.code.org/40061fd901c381b07e4b755fc376238e-image-1728506561148.png" alt="isNull sum" width="100%">
+            </td>
+            <td width="50%" style="font-size:14pt;">
+                This counts the total missing values in each column.
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" height="25%">
+                <img src="https://images.code.org/064caa39fedef4f273e1cdb6f0fb79b5-image-1728506664659.png" alt="iidentifies a specific value" width="100%">
+            </td>
+            <td width="50%" style="font-size:14pt;">
+                This identifies missing values in a specific column.
+            </td>
+        </tr>
+         <tr>
+           <td width="50%" height="25%">
+                <img src="https://images.code.org/4c380b8400675ba9b889f014d9a378f6-image-1728506783437.png" alt="iidentifies a specific value" width="100%">
+            </td>
+            <td width="50%" style="font-size:14pt;">
+                This counts missing values in a specific column.
+            </td>
+        </tr>
+    </table>
+
+![]()
+MARKDOWN

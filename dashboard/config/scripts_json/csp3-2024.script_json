@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-03 04:49:07 UTC",
+    "serialized_at": "2024-10-05 16:49:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4106,6 +4106,8 @@
       "url": "https://docs.google.com/presentation/d/1fhkhXMCx7LAwkjzq3r4oXLkCn2m6A9EA2e5NoNnndhg/edit?usp=drive_link",
       "key": "csp_unit_3_slides",
       "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_3_slides"

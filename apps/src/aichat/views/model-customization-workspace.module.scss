@@ -138,12 +138,13 @@ $default-spacing: 4px;
   justify-content: center;
   align-items: center;
   border-top: 1px solid $light_gray_200;
-  padding: 10px 26px;
+  padding: 10px 7px;
 }
 
 .selectedModelDropdown {
   @extend %full-width;
   padding-bottom: 10px;
+  display: inline-block;
 }
 
 .updateButton {
@@ -177,7 +178,7 @@ $default-spacing: 4px;
 }
 
 .saveAlert {
-  margin-left: 20px;
+  margin-left: 4px;
   height: 10px;
   padding-top: 0;
   padding-bottom: 0;

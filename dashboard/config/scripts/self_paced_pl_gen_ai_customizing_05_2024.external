@@ -5,18 +5,70 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 2-4: System Prompting
 
-<img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="system prompt with role, goal, tone, and restriction" width="400px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+#### Now that you have an idea of how **System Prompting** works, take a look the lesson plans associated with this learning concept. These lessons go through the **Exploration, Practice, Synthesis** model described earlier in this module.
 
-#### Lessons 2 through 4 in the Customizing Large Language Models unit help students develop an understanding of system prompting. Students go through the **Explore-Practice-Synthesis** model of learning.
+#### Take as much time as you'd like to review these lessons.
 
-## Exploration
-#### Students are introduced to the idea of a **system prompt** and explore how it impacts a chatbot's behavior. Students predict, discuss, and investigate the effects of system prompts, learning how prompt design can direct and limit chatbot interactions.
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: System Prompting - Exploration</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
-## Practice
-#### Students build fluency in designing and applying system prompts. They learn to craft prompts that guide the **content, style, and appropriateness** of AI response's for different audiences and situations.
+#### **Question of the Day:** How can we influence how a chatbot behaves?
 
-## Synthesis
-#### Students learn advanced techniques including using **chain of reasoning** to build chatbots that provide precise responses and using **giving examples** to enhance accuracy.
+#### **Lesson Overview:**
+
+#### This Explore lesson introduces the system prompt and guides students through an investigation on how it impacts a chatbot's behavior. Students start by predicting and discussing how a system prompt can impact a chatbot’s behavior, and then investigate and modify existing chatbots to confirm or expand their initial guesses. Through guided activities, they will learn how the design of a prompt can direct and limit chatbot interactions. Students will practice crafting prompts to elicit specific responses from the AI and engage in activities that incorporate personal experiences to see the effect of their prompt design on how the chatbot functions.
+
+#### **Students will be able to:**
+* #### Explain how system prompts can influence the behavior of a chatbot
+* #### Modify system prompts to achieve desired chatbot responses
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/13" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: System Prompting - Practice
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/d87274abcc3a70f1f7db2db2850267a3-Screenshot 2024-10-07 at 12.30.16 PM.png" alt="The Activity Guide for Unit 2 Lesson 5 directing students through the mini project" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How do we write system prompts to meet specific needs?
+
+#### **Lesson Overview:**
+
+#### This Practice lesson builds fluency in designing and applying system prompts, expanding the knowledge students developed in the previous lesson. Through examples and guided practice, students learn to craft prompts that guide not only the content but also the style and appropriateness of AI responses based on different audiences and situations. Students apply these skills through practice scenarios simulating real-life use cases and user-stories, emphasizing how problem-solving with system prompts can be applied to address real-world issues.
+
+#### **Students will be able to:**
+* #### Refine system prompts by considering role, tone, audience, and delivery modality
+* #### Write system prompts that meet specific user needs
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/14" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: System Prompting - Synthesis</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/4e168b9d7bad9acb0d4cb84a9ef312d0-Screenshot 2024-10-07 at 12.31.26 PM.png" alt="The Activity Guide for Unit 2 Lesson 5 directing students through the mini project" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** What are more complex strategies for system prompting?
+
+#### **Lesson Overview:**
+
+#### This Synthesis lesson expands on the prompting techniques students have learned in the previous two lessons, and invites them to revisit and reflect on how their skills have grown. Students explore two advanced prompting techniques: (1) chain of reasoning, which helps chatbots deliver more precise and relevant responses by giving explicit steps, and (2) providing examples, which enhances the chatbot's accuracy and context appropriateness. After practicing these skills in specific contexts, students revisit and refine earlier lesson activities using the knowledge they’ve accumulated so far.
+
+#### **Students will be able to:**
+* #### Use chain-of-reasoning techniques to create system prompts for complex tasks
+* #### Use examples to guide chatbots in generating accurate and specific responses
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/15" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
@@ -37,6 +89,6 @@ markdown <<MARKDOWN
 </details>
 
 ## Up Next!
-#### You’ll learn about system prompts yourself before you try out writing your own in some levels from the curriculum.
+#### You’ll learn about the next tool in our AI tool box - **retrieval**.
 
 MARKDOWN

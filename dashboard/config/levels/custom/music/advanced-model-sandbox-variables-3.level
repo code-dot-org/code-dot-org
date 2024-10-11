@@ -1,0 +1,131 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-10T15:59:58.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "startSources": {
+        "variables": [
+          {
+            "name": "i",
+            "id": "]6|r|l_3)Rb+,NM!a~Ln"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "variables_set",
+                  "id": "HL_?QUG$YqO5L@e!fLFG",
+                  "extraState": {
+                  },
+                  "fields": {
+                    "VAR": {
+                      "id": "]6|r|l_3)Rb+,NM!a~Ln"
+                    }
+                  },
+                  "inputs": {
+                    "VALUE": {
+                      "block": {
+                        "type": "math_number",
+                        "id": "}]:F=uZu).=-9Wk1Ul+Y",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound",
+                      "id": "2.U!}|2L#9TEdzPHDv?^",
+                      "fields": {
+                        "sound": "alessia_cara_scars_to_your_beautiful/drums_verse"
+                      },
+                      "inputs": {
+                        "measure": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "R:Ho-=$J^4*F@lyQvXnc",
+                            "fields": {
+                              "NUM": 1
+                            }
+                          },
+                          "block": {
+                            "type": "variables_get",
+                            "id": "wGdQ;I~cGYNB(.v4uH_+",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "]6|r|l_3)Rb+,NM!a~Ln"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sound",
+              "id": "Ap0n_Yo!xRo;=!X+T,.l",
+              "x": 30,
+              "y": 210,
+              "fields": {
+                "sound": "alessia_cara_scars_to_your_beautiful/bass_verse"
+              },
+              "inputs": {
+                "measure": {
+                  "shadow": {
+                    "type": "math_number",
+                    "id": "klu~l(:9Lrz%^l:y5vYG",
+                    "fields": {
+                      "NUM": 1
+                    }
+                  },
+                  "block": {
+                    "type": "variables_get",
+                    "id": "x)[t0ZMUtW)^UubiG1)N",
+                    "extraState": {
+                    },
+                    "fields": {
+                      "VAR": {
+                        "id": "]6|r|l_3)Rb+,NM!a~Ln"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "packId": "alessia_cara_scars_to_your_beautiful"
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-10T15:59:58.719+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-variables-2\\\"\"],\"cloned_from\":\"advanced-model-sandbox-variables-2\"},{\"changed_at\":\"2024-10-10 16:00:01 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 16:01:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 16:03:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

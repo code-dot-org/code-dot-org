@@ -33,6 +33,15 @@
 .instructions-dark {
   @extend %instructions;
   background-color: $neutral_dark;
+
+  a {
+    color: $light_white;
+    text-decoration: underline;
+    &:hover {
+      color: #e4e6e9;
+    }
+  }
+
 }
 
 .instructions-light {
@@ -88,6 +97,10 @@
   height: 32px;
 }
 
+.validationButton {
+  margin-top: 8px;
+}
+
 .markdownText {
   line-height: 0;
 
@@ -116,9 +129,18 @@
   p {
     font-size: 14px;
   }
-  
+
   details {
-    line-height: 1.2;
+    line-height: 0;
+    summary {
+      line-height: 1.2;
+      font-weight: bold;
+      margin: 4px 0;
+
+      &:hover {
+        background-color: $light_gray_800;
+      }
+    }
   }
 }
 

@@ -1,24 +1,14 @@
 name 'Data Sci U1 Post Q4_2024-pilot'
 
-wrong 'Temperature and Humidity as qualitative, Weather Condition as quantitative.'
-wrong 'Temperature as qualitative, Weather Condition and Humidity as quantitative.'
-right 'Temperature and Humidity as quantitative, Weather Condition as qualitative.'
-wrong 'Temperature, Weather Condition, and Humidity as qualitative.'
+question 'Which of the following is an essential step before beginning to analyze data?'
+
+wrong 'Randomly modifying entries in the dataset.'
+right 'Removing duplicate entries and standardizing values.'
+wrong 'Creating a data visualization to predict trends.'
+wrong 'Selecting a sample dataset without checking its source.'
 
 allow_multiple_attempts false
 
 markdown <<MARKDOWN
-You are given the following dataset in a spreadsheet:
-
-```
-| Temperature | Weather Condition | Humidity |
-|-------------|-------------------|----------|
-| 85°F        | Sunny             | 60%      |
-| 78°F        | Cloudy            | 70%      |
-| 90°F        | Rainy             | 80%      |
-
-```
-
-How would you classify these columns for analysis?
 
 MARKDOWN

@@ -163,13 +163,14 @@ class RegistrationsController < Devise::RegistrationsController
           error_message: "retry ##{retries} failed with exception: #{exception}"
         )
       end
-      super
-    end
 
-    if params[:new_sign_up].present?
-      session[:user_return_to] ||= params[:user_return_to]
-      @user = Services::PartialRegistration::UserBuilder.call(request: request)
-      sign_in @user
+      if ActiveModel::Type::Boolean.new.cast(params[:new_sign_up])
+        session[:user_return_to] ||= params[:user_return_to]
+        @user = Services::PartialRegistration::UserBuilder.call(request: request)
+        sign_in @user
+      else
+        super
+      end
     end
 
     if current_user && current_user.errors.blank?

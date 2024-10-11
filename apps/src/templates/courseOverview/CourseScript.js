@@ -131,7 +131,11 @@ class CourseScript extends Component {
             <Button
               __useDeprecatedTag
               text={i18n.goToUnit()}
-              href={`/s/${name}${location.search}`}
+              href={
+                location.pathname.includes('teacher_dashboard')
+                  ? `/teacher_dashboard/sections/${selectedSectionId}/unit/${name}`
+                  : `/s/${name}${location.search}`
+              }
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />

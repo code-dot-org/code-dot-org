@@ -42,6 +42,7 @@ class Policies::Lti
   LTI_CONTEXT_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/context".freeze
   LTI_RESOURCE_LINK_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/resource_link".freeze
   LTI_DEPLOYMENT_ID_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/deployment_id".freeze
+  LTI_DEPLOYMENT_PLATFORM_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/tool_platform".freeze
   LTI_NRPS_CLAIM = "https://purl.imsglobal.org/spec/lti-nrps/claim/namesroleservice".freeze
   LTI_PLATFORM_CONFIGURATION = "https://purl.imsglobal.org/spec/lti-platform-configuration".freeze
   CANVAS_ACCOUNT_NAME = "https://canvas.instructure.com/lti/account_name".freeze

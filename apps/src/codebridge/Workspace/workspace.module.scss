@@ -14,15 +14,6 @@
   overflow: hidden;
 }
 
-.warningBanner {
-  z-index: 99;
-  background-color: $light_yellow;
-  height: 20px;
-  padding: 5px;
-  width: 100%;
-  color: $black;
-}
-
 .workspaceToggleButtonContainer {
   background-color: $light_gray_900;
   display: flex;
@@ -35,7 +26,7 @@
 }
 
 .workplaceEditorWrapper {
-  overflow: scroll;
+  overflow: hidden;
   flex: 1;
   grid-column: span 2;
 }
@@ -71,4 +62,14 @@
 .workspaceHeader {
   border-bottom: 1px solid $light_gray_800;
   margin-bottom: 0;
+}
+
+.centerHeaderContent {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.projectTemplateIcon {
+  margin-top: 1px;
 }

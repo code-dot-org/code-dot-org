@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
@@ -74,6 +74,10 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
     },
     [validateInput, setPromiseArgs, setErrorMessage]
   );
+
+  // fire the handleInputChange callback once upon loading. This'll populate the given prompt into the promiseArgs
+  // as well as calling validateInput on it to confirm it's acceptable.'
+  useEffect(() => handleInputChange(prompt), []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <GenericDialog
