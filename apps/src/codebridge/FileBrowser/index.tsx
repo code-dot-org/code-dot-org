@@ -68,7 +68,6 @@ import {
   DragType,
   DragDataType,
   DropDataType,
-  downloadFileType,
   moveFolderPromptType,
   renameFilePromptType,
   renameFolderPromptType,
@@ -77,12 +76,15 @@ import {
 
 import moduleStyles from './styles/filebrowser.module.scss';
 
+const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
+  fileDownload(file.contents, file.name);
+  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
+};
+
 type FilesComponentProps = {
   files: ProjectType['files'];
   folders: ProjectType['folders'];
   parentId?: FolderId;
-
-  downloadFile: downloadFileType;
   moveFolderPrompt: moveFolderPromptType;
   renameFilePrompt: renameFilePromptType;
   renameFolderPrompt: renameFolderPromptType;
@@ -95,7 +97,6 @@ const InnerFileBrowser = React.memo(
     parentId,
     folders,
     files,
-    downloadFile,
     moveFolderPrompt,
     renameFilePrompt,
     renameFolderPrompt,
@@ -380,7 +381,6 @@ const InnerFileBrowser = React.memo(
                       folders={folders}
                       parentId={f.id}
                       files={files}
-                      downloadFile={downloadFile}
                       moveFolderPrompt={moveFolderPrompt}
                       renameFilePrompt={renameFilePrompt}
                       renameFolderPrompt={renameFolderPrompt}
@@ -454,7 +454,7 @@ const InnerFileBrowser = React.memo(
                           <PopUpButtonOption
                             iconName="download"
                             labelText={codebridgeI18n.downloadFile()}
-                            clickHandler={() => downloadFile(f.id)}
+                            clickHandler={() => handleFileDownload(f, appName)}
                           />
                         )}
                         <PopUpButtonOption
@@ -514,15 +514,6 @@ export const FileBrowser = React.memo(() => {
       },
     }),
     [setDragData, setDropData]
-  );
-
-  const downloadFile: FilesComponentProps['downloadFile'] = useMemo(
-    () => fileId => {
-      const file = project.files[fileId];
-      fileDownload(file.contents, file.name);
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
-    },
-    [appName, project.files]
   );
 
   const moveFolderPrompt: FilesComponentProps['moveFolderPrompt'] = useMemo(
@@ -726,7 +717,6 @@ export const FileBrowser = React.memo(() => {
               <InnerFileBrowser
                 parentId={DEFAULT_FOLDER_ID}
                 folders={project.folders}
-                downloadFile={downloadFile}
                 files={project.files}
                 moveFolderPrompt={moveFolderPrompt}
                 renameFilePrompt={renameFilePrompt}
