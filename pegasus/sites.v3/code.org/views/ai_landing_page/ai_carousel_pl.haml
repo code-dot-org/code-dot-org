@@ -1,6 +1,21 @@
 :ruby
   block_items = [
      {
+      overline: hoc_s("gen_ai_pl_carousel_card.overline"),
+      title: hoc_s("gen_ai_pl_carousel_card.title"),
+      img: "/images/ai/explore-gen-ai-bot-wizard.png",
+      curriculum: hoc_s("gen_ai_pl_carousel_card.curriculum"),
+      duration: hoc_s("gen_ai_pl_carousel_card.duration"),
+      prerequisites: hoc_s("gen_ai_pl_carousel_card.prerequisites"),
+      url: CDO.studio_url("/courses/self-paced-exploring-gen-ai-2024"),
+      aria_label: hoc_s("gen_ai_pl_carousel_card.aria_label"),
+      button_label: hoc_s(:call_to_action_start_pl),
+      secondary_url: "/curriculum/generative-ai",
+      secondary_aria_label: hoc_s("gen_ai_pl_carousel_card.title"),
+      secondary_button_label: hoc_s(:call_to_action_explore_curriculum),
+      new: true,
+     },
+     {
       overline: hoc_s(:module_label_self_paced),
       title: hoc_s(:ai_pl_101_title),
       img: "/images/self-paced-pl-tile-ai-101.jpg",
@@ -9,7 +24,6 @@
       url: CDO.studio_url("/courses/self-paced-pl-ai-101"),
       aria_label: hoc_s("ai_page.pl.tile.ai_101.aria_label"),
       button_label: hoc_s(:call_to_action_start_module),
-      new: true,
     },
     {
       overline: hoc_s("ai_page.pl.tile.decisions.overline"),
@@ -84,15 +98,29 @@
             %h3
               = block_item[:title]
             %img{src: block_item[:img], alt: ""}
-            %p
-              = block_item[:desc]
+            - if block_item[:desc]
+              %p
+                = block_item[:desc]
+            - if block_item[:curriculum]
+              %p
+                %strong
+                  =hoc_s(:module_label_curriculum)
+                = block_item[:curriculum]
             %p
               %strong
                 =hoc_s(:module_label_duration)
               = block_item[:duration]
+            - if block_item[:prerequisites]
+              %p
+                %strong
+                  =hoc_s(:module_label_prerequisites)
+                = block_item[:prerequisites]
           .content-footer
             %a.link-button{href: block_item[:url], aria:{label: block_item[:aria_label]}}
               = block_item[:button_label]
+            - if block_item[:secondary_url]
+              %a.link-button.secondary{href: block_item[:secondary_url], aria: {label: block_item[:secondary_aria_label]}}
+                = block_item[:secondary_button_label]
 
   %button.swiper-nav-prev.nav-prev-pl
   %button.swiper-nav-next.nav-next-pl

@@ -1,6 +1,17 @@
 :ruby
   block_items = [
     {
+      overline: hoc_s("gen_ai_middle_high_carousel_card.overline"),
+      title: hoc_s("gen_ai_middle_high_carousel_card.title"),
+      img: "/images/ai/explore-gen-ai-bot-wizard.png",
+      desc: hoc_s("gen_ai_middle_high_carousel_card.desc"),
+      duration: hoc_s("gen_ai_middle_high_carousel_card.duration"),
+      url: "/curriculum/generative-ai",
+      aria_label: hoc_s("gen_ai_middle_high_carousel_card.title"),
+      button_label: hoc_s(:call_to_action_explore_course),
+      new: true,
+    },
+    {
       overline: hoc_s("ai_page.curricula.tile.humanities.overline"),
       title: hoc_s("ai_page.curricula.tile.humanities.title"),
       img: "/images/action-blocks/action-block-ai-humanities.png",
@@ -9,7 +20,6 @@
       url: CDO.studio_url("/s/gen-ai-humanities"),
       aria_label: hoc_s("ai_page.curricula.tile.humanities.aria_label"),
       button_label: hoc_s("ai_page.curricula.tile.humanities.button"),
-      new: true,
     },
     {
       overline: hoc_s(:module_grade_6_12),
