@@ -88,7 +88,7 @@ function SuggestedAssignableCourses({assignableCourseSuggestions, isEnglish}) {
           selfPacedPlCourseOfferingPath={self_paced_pl_course_offering_path}
           isExpanded={expandedCardKey === key}
           handleSetExpandedCardKey={() =>
-            console.log('handleSetExpandedCardKey')
+            setExpandedCardKey(expandedCardKey === key ? null : key)
           }
           onQuickViewClick={() => handleQuickViewClicked(key)}
           availableResources={available_resources}
