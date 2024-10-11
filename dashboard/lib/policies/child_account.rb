@@ -125,6 +125,7 @@ class Policies::ChildAccount
   # For example, some accounts are created and owned by schools (Clever).
   def self.personal_account?(user)
     return false if user.sponsored?
+
     # List of credential types which we believe schools have ownership of.
     # Does the user have an authentication method which is not controlled by
     # their school? The presence of at least one authentication method which
@@ -194,7 +195,7 @@ class Policies::ChildAccount
 
     # Check to see if they are old enough at the current date
     # We cannot trust 'user.age' because that is a different time zone and broken for leap years
-    today = Time.zone.today.in_time_zone(lockout_date.utc_offset)
+    today = current_time.in_time_zone(lockout_date.utc_offset)
     student_age = today.year - student_birthday.year
     ((student_birthday + student_age.years > today) ? (student_age - 1) : student_age) <= policy[:max_age]
   end
@@ -219,12 +220,19 @@ class Policies::ChildAccount
     return false unless policy
 
     # Parental permission is not required until the policy is in effect.
-    return false if policy[:start_date] > DateTime.now
+    return false if policy[:start_date] > current_time
 
     # Parental permission is not required for students
     # whose age cannot be identified or who are older than the maximum age covered by the policy.
     return false unless underage?(user)
 
     personal_account?(user)
+  end
+
+  # Allows for manual an automated tests to override what the "current time" is
+  # for CAP calculations. Testers can set the DCDO key "cap_current_time" to a
+  # string representing the DateTime they want to simulate.
+  def self.current_time
+    DateTime.parse(DCDO.get('cap_current_time', DateTime.now.iso8601))
   end
 end

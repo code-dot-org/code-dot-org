@@ -14,7 +14,7 @@ module Services
         return false if Policies::ChildAccount.compliant?(user)
 
         user_lockout_date = Policies::ChildAccount.lockout_date(user)
-        return false if user_lockout_date.nil? || user_lockout_date > DateTime.now
+        return false if user_lockout_date.nil? || user_lockout_date > Policies::ChildAccount.current_time
 
         Services::ChildAccount.lock_out(user)
 

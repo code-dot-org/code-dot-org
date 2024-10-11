@@ -43,12 +43,14 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:non_compliant_child, :with_interpolated_colorado], true],
       [[:non_compliant_child, :with_interpolated_wa], true],
     ]
+    failures = []
     test_matrix.each do |traits, compliance|
       user = create(*traits)
       actual = Policies::ChildAccount.compliant?(user)
       failure_msg = "Expected compliant?(#{traits}) to be #{compliance} but it was #{actual}"
-      assert_equal compliance, actual, failure_msg
+      failures.append(failure_msg) if compliance != actual
     end
+    assert failures.empty?, failures.join("\n")
   end
 
   test 'show_cap_state_modal?' do
@@ -101,7 +103,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
   describe 'state_policies' do
     let(:state_policies) {Policies::ChildAccount.state_policies}
-    let(:dcdo_cpa_grace_period_duration) {99.days}
 
     around do |test|
       Timecop.freeze {test.call}
@@ -121,7 +122,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       end
 
       it 'contains expected grace_period_duration' do
-        _(co_state_policy[:grace_period_duration]).must_equal dcdo_cpa_grace_period_duration
+        _(co_state_policy[:grace_period_duration]).must_equal 14.days
       end
 
       it 'contains expected default start_date' do
@@ -545,7 +546,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
 
     # This is the policy: max age of 12 with a lockout date 1 year after the start date
-    let(:user_state_policy_start_date) {DateTime.now}
+    let(:user_state_policy_start_date) {1.second.ago}
     let(:user_state_policy_max_age) {12}
     let(:user_lockout_date) {user_state_policy_start_date + 1.year}
     let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
