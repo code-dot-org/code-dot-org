@@ -37,15 +37,12 @@
     // Hover styles
     &:hover {
       box-shadow: none;
-      //background-color: $light_gray_100;
-      //border-color: $light_gray_200;
     }
 
     // Focus styles
     &:focus-visible {
       outline: none;
       background-color: var(--background-brand-teal-light);
-      //border-color: $light_gray_200;
     }
 
     // Pressed styles
@@ -58,7 +55,6 @@
 
     // Disabled styles
     &:disabled {
-      //background-color: $light_white;
       border-color: var(--borders-neutral-disabled);
       color: var(--text-neutral-disabled);
     }
@@ -81,7 +77,6 @@
     // Focus styles
     &:focus-visible {
       background-color: var(--background-brand-teal-light);
-      //border-color: $light_gray_200;
       color: var(--text-neutral-primary);
     }
 
@@ -116,52 +111,25 @@
 
     // Focus styles
     &:focus-visible {
-      //background-color: $light_primary_100;
       border-color: var(--borders-neutral-primary);
     }
-
-    //// Pressed styles
-    //&:active {
-    //  background-color: $light_primary_700;
-    //  // Important here is needed to rewrite line 3328, app/assets/stylesheets/application.scss */
-    //  border-color: $light_primary_500 !important;
-    //  color: $light_white;
-    //}
 
     // Disabled styles
     &:disabled {
       background-color: var(--background-neutral-primary);
-      //border-color: $light_gray_200;
-      //color: $light_gray_200;
     }
   }
 
   // Selected styles
   .selectedSegmentedButton.segmentedButton {
-    //background-color: $light_primary_500;
-    //border-color: $light_primary_500;
-    //// Hover styles
-    //&:hover {
-    //  background-color: $light_primary_500;
-    //  border-color: $light_primary_500;
-    //}
-
     // Focus styles
     &:focus-visible {
-      //background-color: $light_primary_100;
       border-color: var(--borders-neutral-primary);
     }
-
-    //// Pressed styles
-    //&:active {
-    //  background-color: $light_primary_500;
-    //  border-color: $light_primary_500;
-    //}
 
     // Disabled styles
     &:disabled {
       background-color: var(--background-neutral-primary);
-      //border-color: $light_primary_100;
     }
   }
 }
@@ -179,52 +147,25 @@
 
     // Focus styles
     &:focus-visible {
-      //background-color: $light_primary_100;
       border-color: var(--borders-neutral-strong);
     }
-
-    //// Pressed styles
-    //&:active {
-    //  background-color: $light_primary_700;
-    //  // Important here is needed to rewrite line 3328, app/assets/stylesheets/application.scss */
-    //  border-color: $light_primary_500 !important;
-    //  color: $light_white;
-    //}
 
     // Disabled styles
     &:disabled {
       background-color: transparent;
-      //border-color: $light_gray_200;
-      //color: $light_gray_200;
     }
   }
 
   // Selected styles
   .selectedSegmentedButton.segmentedButton {
-    //background-color: $light_primary_500;
-    //border-color: $light_primary_500;
-    //// Hover styles
-    //&:hover {
-    //  background-color: $light_primary_500;
-    //  border-color: $light_primary_500;
-    //}
-
     // Focus styles
     &:focus-visible {
-      //background-color: $light_primary_100;
       border-color: var(--borders-neutral-strong);
     }
-
-    //// Pressed styles
-    //&:active {
-    //  background-color: $light_primary_500;
-    //  border-color: $light_primary_500;
-    //}
 
     // Disabled styles
     &:disabled {
       background-color: transparent;
-      //border-color: $light_primary_100;
     }
   }
 }
