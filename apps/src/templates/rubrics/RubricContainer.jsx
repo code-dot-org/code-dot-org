@@ -118,7 +118,7 @@ export default function RubricContainer({
       fetchTeacherEvaluationAll(rubricId, sectionId).then(response => {
         if (response.ok) {
           response.json().then(data => {
-            initializeHasTeacherFeedback(data);
+            initializeHasTeacherFeedbackMap(data);
             setAllTeacherEvaluationData(data);
           });
         }
@@ -164,21 +164,21 @@ export default function RubricContainer({
     setAiEvalStatusMap(aiEvalStatusMap);
   };
 
-  const [hasTeacherFeedbackByUser, setHasTeacherFeedbackByUser] = useState({});
+  const [hasTeacherFeedbackMap, setHasTeacherFeedbackMap] = useState({});
 
-  const initializeHasTeacherFeedback = allTeacherEvaluationData => {
-    const hasFeedbackByUser = {};
+  const initializeHasTeacherFeedbackMap = allTeacherEvaluationData => {
+    const hasFeedbackMap = {};
     allTeacherEvaluationData.forEach(userEvalData => {
       if (userEvalData?.user_id) {
-        hasFeedbackByUser[userEvalData.user_id] = userEvalData.eval.length > 0;
+        hasFeedbackMap[userEvalData.user_id] = userEvalData.eval.length > 0;
       }
     });
-    setHasTeacherFeedbackByUser(hasFeedbackByUser);
+    setHasTeacherFeedbackMap(hasFeedbackMap);
   };
 
   const updateHasTeacherFeedback = userId => {
-    setHasTeacherFeedbackByUser({
-      ...hasTeacherFeedbackByUser,
+    setHasTeacherFeedbackMap({
+      ...hasTeacherFeedbackMap,
       [userId]: true,
     });
   };
@@ -426,7 +426,7 @@ export default function RubricContainer({
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
-            hasTeacherFeedbackByUser={hasTeacherFeedbackByUser}
+            hasTeacherFeedbackMap={hasTeacherFeedbackMap}
             aiEvalStatusMap={aiEvalStatusMap}
           />
           {showSettings && (

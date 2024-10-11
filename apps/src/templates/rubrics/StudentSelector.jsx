@@ -29,7 +29,7 @@ function StudentSelector({
   reloadOnChange,
   reportingData,
   sectionId,
-  hasTeacherFeedbackByUser,
+  hasTeacherFeedbackMap,
   aiEvalStatusMap,
 
   //from redux
@@ -99,7 +99,7 @@ function StudentSelector({
                 {!!levelsWithProgress && aiEvalStatusMap && (
                   <StudentProgressStatus
                     aiEvalStatus={aiEvalStatusMap[student.id]}
-                    hasTeacherFeedback={hasTeacherFeedbackByUser[student.id]}
+                    hasTeacherFeedback={hasTeacherFeedbackMap[student.id]}
                   />
                 )}
               </div>
@@ -117,7 +117,7 @@ StudentSelector.propTypes = {
   reloadOnChange: PropTypes.bool,
   sectionId: PropTypes.number,
   reportingData: reportingDataShape,
-  hasTeacherFeedbackByUser: PropTypes.object,
+  hasTeacherFeedbackMap: PropTypes.object,
   aiEvalStatusMap: PropTypes.object,
 
   //from redux
