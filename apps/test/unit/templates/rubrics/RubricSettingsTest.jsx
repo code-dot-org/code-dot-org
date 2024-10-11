@@ -183,7 +183,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -201,7 +201,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -223,7 +223,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={noAttempts}
+          aiEvalStatusCounters={noAttempts}
         />
       </Provider>
     );
@@ -242,7 +242,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={noUnevaluated}
+          aiEvalStatusCounters={noUnevaluated}
         />
       </Provider>
     );
@@ -266,7 +266,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -305,7 +305,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -361,7 +361,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={noEvals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -383,7 +383,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -406,7 +406,7 @@ describe('RubricSettings', () => {
           reportingData={reportingData}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -435,7 +435,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -456,7 +456,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
@@ -474,7 +474,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           allTeacherEvaluationData={evals}
-          allAiEvaluationStatus={ready}
+          aiEvalStatusCounters={ready}
         />
       </Provider>
     );
