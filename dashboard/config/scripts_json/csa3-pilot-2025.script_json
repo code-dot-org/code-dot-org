@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-09 19:38:42 UTC",
+    "serialized_at": "2024-10-11 00:59:02 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -98,6 +98,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**How can analyzing data sets help us answer questions and solve problems?**",
+        "preparation": "* **(Optional)** Print copies of the Data Sets Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Data Sets activity guide (one for each student)",
+        "student_overview": "**How can analyzing data sets help us answer questions and solve problems?**"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -453,11 +456,39 @@
       "key": "6b574029-57a4-4e3b-8e73-276ccbace490",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Activity"
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "6b574029-57a4-4e3b-8e73-276ccbace490",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "key": "0abef305-631d-4d1b-b113-22f003477c1b",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0abef305-631d-4d1b-b113-22f003477c1b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "key": "8c37b57e-017d-40a2-a209-2beb372dc9f9",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9",
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot-2025"
@@ -1145,10 +1176,133 @@
       "key": "ace1f07d-6031-45a2-8e05-3179583a5615",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about this chart? What do you wonder?*\n\n**Discussion Goal:** discussion goal",
+        "name": "The Ultimate Data Dog",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "show the full-size version so students can see it better"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ace1f07d-6031-45a2-8e05-3179583a5615",
         "lesson_activity.key": "6b574029-57a4-4e3b-8e73-276ccbace490"
+      }
+    },
+    {
+      "key": "c17a4109-0c0e-4f6b-9a5f-42c76284e1ea",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *This is just a snapshot of the data table used to generate the chart. If you were able to see the full data table, what are some specific questions you would be able to answer?*\n\n**Discussion Goal:** discussion goal",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "show the data table"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c17a4109-0c0e-4f6b-9a5f-42c76284e1ea",
+        "lesson_activity.key": "6b574029-57a4-4e3b-8e73-276ccbace490"
+      }
+    },
+    {
+      "key": "e4d1365d-8e8a-456d-b520-f496d0f1dcd7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***data set***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In looking at this data set, we might ask what the average cost of an item is. We can uncover even more insights by analyzing different aspects of the data. What other questions can we ask about the data in this data set?*\n\n**Discussion Goal:** discussion goal\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a Writing Algorithms with Data Sets activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the sample data sets and decide which questions can be answered for each table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Analyzing different data points in a set can help us solve problems. How might we use data from these examples to answer new questions or uncover trends?*\n\n**Discussion Goal:** discussion goal\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***value***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that programmers use data sets to create algorithms to answer questions and solve problems.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *One question we can answer about this data set is: What is the largest value in the \"Units Sold\" column? What would an algorithm need to process this data set and return an accurate answer?*\n\n**Discussion Goal:** discussion goal\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Walk through the algorithm to find the maximum value.",
+        "name": "Writing Algorithms with Data Sets",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "tips for walking through the algorithm"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e4d1365d-8e8a-456d-b520-f496d0f1dcd7",
+        "lesson_activity.key": "0abef305-631d-4d1b-b113-22f003477c1b"
+      }
+    },
+    {
+      "key": "591c0509-b705-420c-9461-845b3a182662",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose a data set and a question to answer. They should copy the data table in the space provided on the activity guide, then write pseudocode for an algorithm that will answer that question.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students share their algorithm with another group and discuss the following prompts:\n* *Does the algorithm use all the needed data to answer the question?*\n* *How can the algorithm be improved to work better or faster?*\n\n**Discussion Goal:** discussion goal"
+      },
+      "seeding_key": {
+        "activity_section.key": "591c0509-b705-420c-9461-845b3a182662",
+        "lesson_activity.key": "0abef305-631d-4d1b-b113-22f003477c1b"
+      }
+    },
+    {
+      "key": "650675d9-56f1-49f6-ac8e-00e05693dd7b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How can charts or tables help you plan your algorithm?*\n* *What challenges did you face while analyzing your data?*\n\n**Discussion Goal:** discussion goal",
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "650675d9-56f1-49f6-ac8e-00e05693dd7b",
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9"
+      }
+    },
+    {
+      "key": "13870d80-8210-4afc-b81b-a44084c6ba01",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "13870d80-8210-4afc-b81b-a44084c6ba01",
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9"
+      }
+    },
+    {
+      "key": "52ae4ead-843a-4241-948d-490dc374d6bf",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "52ae4ead-843a-4241-948d-490dc374d6bf",
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9"
+      }
+    },
+    {
+      "key": "5b395451-cf3a-499c-8c3b-5a29635bbe24",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b395451-cf3a-499c-8c3b-5a29635bbe24",
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9"
+      }
+    },
+    {
+      "key": "bf9478ff-18a3-45fa-a61e-8813fce0f698",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf9478ff-18a3-45fa-a61e-8813fce0f698",
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9"
       }
     },
     {
@@ -2452,7 +2606,7 @@
       "key": "49f8ac59-0c49-4d9e-9aef-f29d4c5fa9dc",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `File` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***text file***.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***file*** and explain that the contents of a file can be accessed by a program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***text file***.",
         "duration": "15",
         "name": "Reading and Processing Text Files",
         "tips": [
@@ -2468,20 +2622,10 @@
       }
     },
     {
-      "key": "8c3ee147-9322-46e6-b984-1f96acd41598",
+      "key": "74634953-1d65-4c11-b56a-6266f35ce5a4",
       "position": 6,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8c3ee147-9322-46e6-b984-1f96acd41598",
-        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
-      }
-    },
-    {
-      "key": "74634953-1d65-4c11-b56a-6266f35ce5a4",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can reading a text file be useful in a program?*\n\n**Discussion Goal:** Students note that a program can read data in a file. Students may also suggest that it makes the program more user-friendly and adaptable. The user does not need to enter the files directly into the array, and one program can process multiple data sets.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program on Levels 2 and 3 with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `File` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `File` class needs to be imported and briefly introduce the `File` class constructors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can reading a text file be useful in a program?*\n\n**Discussion Goal:** Students note that a program can read data in a file. Students may also suggest that it makes the program more user-friendly and adaptable. The user does not need to enter the files directly into the array, and one program can process multiple data sets.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate and Modify: Reading Text Files"
       },
       "seeding_key": {
@@ -2491,9 +2635,10 @@
     },
     {
       "key": "ae4c6602-dc87-4712-8943-6d27dc20c51d",
-      "position": 8,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the libraries that must be imported into the class where the file reading method is being written. Explain that if the file reading method is being called in a different class than the one in which it is written, the `java.io.IOException` library must be imported in both classes. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how to validate the file name being used by adding `throws IOException` to the header of the method that uses the file. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how to create a `File` object and `Scanner` object to read the file being processed by the method. Remind students to call the `close()` method after the `Scanner` is finished reading from the file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show students the various `Scanner` methods that they may need in order to process a file. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the libraries that must be imported into the class where the file reading method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `java.io.IOException` library must be imported in the tester class and the class where the file reader method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to validate the file name being used by adding `throws IOException` to the header of the method that uses the file. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to create a `File` object and `Scanner` object to read the file being processed by the method. Remind students to call the `close()` method after the `Scanner` is finished reading from the file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show students the various `Scanner` methods that they may need to process a file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "progression_name": "Investigate and Modify: Handling Files"
       },
       "seeding_key": {
         "activity_section.key": "ae4c6602-dc87-4712-8943-6d27dc20c51d",
@@ -2502,9 +2647,9 @@
     },
     {
       "key": "6e16a518-a779-4640-a7e6-01617969af7c",
-      "position": 9,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how to use a `while` loop and the `hasNext()` method to detect if the file still contains elements to read.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how to implement a standard algorithm students may have seen when traversing arrays within a file reading method. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to use a `while` loop and the `hasNext()` method to detect if the file still contains elements to read.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to implement a standard algorithm students may have seen when traversing arrays within a file reading method. "
       },
       "seeding_key": {
         "activity_section.key": "6e16a518-a779-4640-a7e6-01617969af7c",
@@ -2513,7 +2658,7 @@
     },
     {
       "key": "1d7ef54e-8144-4b35-b46f-627c39087e8f",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "Reading a text file may seem complicated at first, so it is important to practice writing methods that open and read from text files. Another part of this practice is learning how to process lines from the text file in a meaningful way. ",
         "duration": "15",
@@ -2527,20 +2672,10 @@
     },
     {
       "key": "24d7b4c7-7afb-43e9-9261-e9885238eaf7",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete a choice level to read and process a text file. ",
-        "progression_name": "Practice: Reading Text Files"
-      },
-      "seeding_key": {
-        "activity_section.key": "24d7b4c7-7afb-43e9-9261-e9885238eaf7",
-        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
-      }
-    },
-    {
-      "key": "dd61873e-3ce1-4ad5-8cff-c29b3063eb28",
-      "position": 12,
-      "properties": {
+        "progression_name": "Practice: Reading Text Files",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2549,7 +2684,7 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "dd61873e-3ce1-4ad5-8cff-c29b3063eb28",
+        "activity_section.key": "24d7b4c7-7afb-43e9-9261-e9885238eaf7",
         "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
       }
     },
@@ -2570,7 +2705,7 @@
       "key": "2935867b-e741-44a3-b38d-4b81eca93409",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? Which parts are completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** Some key takeaways students might point out are the syntax of the code segments for using the `File` and `Scanner` classes to read from a text file. Students may also recall that three libraries need to be imported into their file in order to read from a text file. Some may also mention that reading from a text file and processing its data is similar to what they have learned about processing the data from an array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? Which parts are completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** Some key takeaways students might point out are the syntax of the code segments for using the `File` and `Scanner` classes to read from a text file. Students may also recall that three libraries need to be imported into their file in order to read from a text file. Some may also mention that reading from a text file and processing its data is similar to what they have learned about processing the data from an array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "2935867b-e741-44a3-b38d-4b81eca93409",
@@ -5957,13 +6092,10 @@
     {
       "chapter": 35,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U3L6 Reading Files-L3"
-        ],
-        "progression": "Investigate and Modify: Reading Text Files"
+        "progression": "Investigate and Modify: Handling Files"
       },
       "bonus": false,
       "seeding_key": {
@@ -5973,7 +6105,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot-2025",
-        "activity_section.key": "74634953-1d65-4c11-b56a-6266f35ce5a4"
+        "activity_section.key": "ae4c6602-dc87-4712-8943-6d27dc20c51d"
       },
       "level_keys": [
         "CSA U3L6 Reading Files-L3"
@@ -6010,6 +6142,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csa-u3l6-l5cfu_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6157,6 +6292,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-u3l8-l1datasets_2024"
+        ],
         "progression": "Data Sets"
       },
       "bonus": false,
@@ -6179,6 +6317,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csa-u3l8-l2cfu_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7562,7 +7703,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot-2025",
-        "activity_section.key": "74634953-1d65-4c11-b56a-6266f35ce5a4"
+        "activity_section.key": "ae4c6602-dc87-4712-8943-6d27dc20c51d"
       }
     },
     {
@@ -8156,6 +8297,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Data Sets Guided Notes",
+      "url": "https://docs.google.com/document/d/1Uv8SGUl5dJJ2h-WHLrXXzgL7uF5b3MbNe7Iw7FE6rYs/edit?usp=drive_link",
+      "key": "_exemplar_data_sets_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_data_sets_guided_notes"
+      }
+    },
+    {
       "name": "[EXEMPLAR] Ethical and Social Issues Around Data Collection Guided Notes",
       "url": "https://docs.google.com/document/d/1rVZ5xG9R2KBwtpTHXe8P1TLxGfocOHKX69DNiH871bQ/edit?usp=drive_link",
       "key": "_exemplar_ethical_and_social_issues_around_data_collection_guided_notes",
@@ -8295,6 +8448,18 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_unit_3_guide"
+      }
+    },
+    {
+      "name": "[KEY] Data Sets Extra Practice",
+      "url": "https://docs.google.com/document/d/1YsoBsXW2EGe0_FzcAoQs5nyu_w9KHvQbyRw15DrDl4M/edit?usp=drive_link",
+      "key": "_key_data_sets_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_sets_extra_practice"
       }
     },
     {
@@ -8490,6 +8655,18 @@
       }
     },
     {
+      "name": "[KEY] Writing Algorithms with Data Sets",
+      "url": "https://docs.google.com/document/d/1aF_1rrcTOlBlyaP6mw8YkgrFsBuVp1NptSNAXNL23YQ/edit?usp=drive_link",
+      "key": "_key_writing_algorithms_with_data_sets",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_writing_algorithms_with_data_sets"
+      }
+    },
+    {
       "name": "Analyzing Data Sets",
       "url": "https://docs.google.com/document/d/1gjUs07b2Jrx0CyLB2q8Qwxo_HdmEgSJXUfCMty4jCZ8/edit?usp=drive_link",
       "key": "analyzing_data_sets",
@@ -8609,6 +8786,44 @@
       },
       "seeding_key": {
         "resource.key": "data_for_social_good_project_planning_guide_1"
+      }
+    },
+    {
+      "name": "Data Sets",
+      "url": "https://docs.google.com/presentation/d/1155DrPTBdiU1XhqXtjbGKac39eC76T0cT2TYWTWwct4/edit?usp=sharing",
+      "key": "data_sets",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_sets"
+      }
+    },
+    {
+      "name": "Data Sets Extra Practice",
+      "url": "https://docs.google.com/document/d/1m7M5VN9nnKu9oc6KwXAdy316Ao82KQTv6Vul98sX10w/edit?usp=drive_link",
+      "key": "data_sets_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_sets_extra_practice"
+      }
+    },
+    {
+      "name": "Data Sets Guided Notes",
+      "url": "https://docs.google.com/document/d/1Ttr7Z57BdUKKGG-7qD3NRLkq-8j1bQ9r4rsoI0oSD54/edit?usp=drive_link",
+      "key": "data_sets_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_sets_guided_notes"
       }
     },
     {
@@ -9303,6 +9518,18 @@
       "seeding_key": {
         "resource.key": "writing_algorithms_with_arrays_1"
       }
+    },
+    {
+      "name": "Writing Algorithms with Data Sets",
+      "url": "https://docs.google.com/document/d/1EGY4ktPYEjI4iIbxWPOG9GOLQtgf0zZrVhMTAvBX3uM/edit?usp=drive_link",
+      "key": "writing_algorithms_with_data_sets",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "writing_algorithms_with_data_sets"
+      }
     }
   ],
   "lessons_resources": [
@@ -9824,6 +10051,48 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_exemplar_data_sets_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_data_sets_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_writing_algorithms_with_data_sets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "data_sets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "data_sets_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "data_sets_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "writing_algorithms_with_data_sets"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_exemplar_text_files_guided_notes"
       }
@@ -9958,6 +10227,16 @@
       }
     },
     {
+      "key": "data_set",
+      "word": "data set",
+      "definition": "a collection of related pieces of information organized together to analyze, answer questions, or solve problems",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_set"
+      }
+    },
+    {
       "key": "data_structure",
       "word": "data structure",
       "definition": "a structure for organizing, processing, retrieving, and storing data",
@@ -9985,6 +10264,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "element"
+      }
+    },
+    {
+      "key": "file",
+      "word": "file",
+      "definition": "storage for data that persists when the program is not running",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "file"
       }
     },
     {
@@ -10106,6 +10395,16 @@
       "seeding_key": {
         "vocabulary.key": "traverse"
       }
+    },
+    {
+      "key": "value",
+      "word": "value",
+      "definition": "a single item in a data structure",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "value"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -10201,6 +10500,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data_set"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "file"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-6",
         "vocabulary.key": "text_file"
       }
@@ -10224,6 +10541,26 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "objective.key": "03b267d0-f00b-4041-8c05-50d11e8fa9ee"
+      }
+    },
+    {
+      "key": "157b18e1-6859-4a65-8920-4b0aa7a455e7",
+      "properties": {
+        "description": "Use data sets to solve problems"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "157b18e1-6859-4a65-8920-4b0aa7a455e7"
+      }
+    },
+    {
+      "key": "1c9b50a9-a9f9-44dc-876c-a95637d270e9",
+      "properties": {
+        "description": "Process a data set to calculate totals, averages, or to find specific values"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "1c9b50a9-a9f9-44dc-876c-a95637d270e9"
       }
     },
     {
@@ -10414,6 +10751,16 @@
       "seeding_key": {
         "lesson.key": "Data for Social Good Project [1-Day Version]",
         "objective.key": "8de68e25-7d0d-4eae-a65f-455ef2e0b266"
+      }
+    },
+    {
+      "key": "8e4035a2-7f3a-45f8-96ac-cb888fe5f012",
+      "properties": {
+        "description": "Write algorithms to work with data sets"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "8e4035a2-7f3a-45f8-96ac-cb888fe5f012"
       }
     },
     {
