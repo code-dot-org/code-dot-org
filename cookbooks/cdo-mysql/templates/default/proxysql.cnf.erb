@@ -88,7 +88,7 @@ mysql_variables=
   # connections to execute new queries, which in turn further degrades query latency due to CPU load to service
   # new connection attempts.
   # https://proxysql.com/documentation/global-variables/mysql-variables/#mysql-throttle_connections_per_sec_to_hostgroup
-  throttle_connections_per_sec_to_hostgroup = <%= throttle_connections_per_sec_to_hostgroup  %>
+  throttle_connections_per_sec_to_hostgroup=<%=node['cdo-mysql']['proxy']['throttle_connections_per_sec_to_hostgroup']%>
 }
 
 # https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_servers
