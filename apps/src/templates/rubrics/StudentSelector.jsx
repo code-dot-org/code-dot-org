@@ -30,7 +30,7 @@ function StudentSelector({
   reportingData,
   sectionId,
   hasTeacherFeedbackByUser,
-  aiEvalStatusForUser,
+  aiEvalStatusMap,
 
   //from redux
   students,
@@ -96,9 +96,9 @@ function StudentSelector({
                           .concat('', '...')
                     : `${student.name}`}
                 </BodyThreeText>
-                {!!levelsWithProgress && aiEvalStatusForUser && (
+                {!!levelsWithProgress && aiEvalStatusMap && (
                   <StudentProgressStatus
-                    aiEvalStatus={aiEvalStatusForUser[student.id]}
+                    aiEvalStatus={aiEvalStatusMap[student.id]}
                     hasTeacherFeedback={hasTeacherFeedbackByUser[student.id]}
                   />
                 )}
@@ -118,7 +118,7 @@ StudentSelector.propTypes = {
   sectionId: PropTypes.number,
   reportingData: reportingDataShape,
   hasTeacherFeedbackByUser: PropTypes.object,
-  aiEvalStatusForUser: PropTypes.object,
+  aiEvalStatusMap: PropTypes.object,
 
   //from redux
   students: PropTypes.arrayOf(
