@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-gen-ai",
-    "serialized_at": "2024-10-09 18:48:25 UTC",
+    "serialized_at": "2024-10-10 15:04:04 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -727,6 +727,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-04_2024"
+        ],
         "progression": "Lesson Previews (15 min)"
       },
       "bonus": false,
@@ -749,6 +752,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-05_2024"
+        ],
         "progression": "Lesson Previews (15 min)"
       },
       "bonus": false,
@@ -771,6 +777,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-06_2024"
+        ],
         "progression": "Lesson Previews (15 min)"
       },
       "bonus": false,
@@ -790,9 +799,34 @@
     {
       "chapter": 19,
       "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Previews (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-07_2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "fba06010-99e8-48e6-9979-44e7c1ea463e"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-foundations-preview-07_2024"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-project_01_2024"
+        ],
         "progression": "Final Project (3 min)"
       },
       "bonus": false,
@@ -810,11 +844,14 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 12,
+      "chapter": 21,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-project_02_2024"
+        ],
         "progression": "Final Project (3 min)"
       },
       "bonus": false,
@@ -832,11 +869,14 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 13,
+      "chapter": 22,
+      "position": 14,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-project_04_2024"
+        ],
         "progression": "Final Project (3 min)"
       },
       "bonus": false,
@@ -854,7 +894,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -879,7 +919,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -904,7 +944,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -929,7 +969,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -954,7 +994,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -979,7 +1019,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1004,7 +1044,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1029,7 +1069,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -1054,7 +1094,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -1079,7 +1119,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 10,
       "activity_section_position": 7,
       "assessment": false,
@@ -1104,7 +1144,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -1129,7 +1169,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -1154,7 +1194,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -1179,7 +1219,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -1204,7 +1244,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 15,
       "activity_section_position": 5,
       "assessment": false,
@@ -1229,7 +1269,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 16,
       "activity_section_position": 6,
       "assessment": false,
@@ -1254,7 +1294,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 17,
       "activity_section_position": 1,
       "assessment": false,
@@ -1279,7 +1319,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 18,
       "activity_section_position": 2,
       "assessment": false,
@@ -1304,7 +1344,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 19,
       "activity_section_position": 3,
       "assessment": false,
@@ -1329,7 +1369,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 20,
       "activity_section_position": 1,
       "assessment": false,
@@ -1354,7 +1394,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 21,
       "activity_section_position": 2,
       "assessment": false,
@@ -1379,7 +1419,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 22,
       "activity_section_position": 3,
       "assessment": false,
@@ -1404,7 +1444,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 23,
       "activity_section_position": 4,
       "assessment": false,
@@ -1429,7 +1469,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 24,
       "activity_section_position": 1,
       "assessment": false,
@@ -1454,7 +1494,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 25,
       "activity_section_position": 2,
       "assessment": false,
@@ -1479,7 +1519,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 26,
       "activity_section_position": 3,
       "assessment": false,
@@ -1504,7 +1544,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1529,7 +1569,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1554,7 +1594,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1579,7 +1619,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1604,7 +1644,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -1629,7 +1669,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1654,7 +1694,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -1679,7 +1719,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -1704,7 +1744,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -1939,6 +1979,18 @@
         "level.key": "self-paced-pl-gen-ai-foundations-preview-06_2024",
         "script_level.level_keys": [
           "self-paced-pl-gen-ai-foundations-preview-06_2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "fba06010-99e8-48e6-9979-44e7c1ea463e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-foundations-preview-07_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-07_2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
