@@ -15,6 +15,16 @@ module CoreExtensions
           char.bytes.length >= 4
         end.join
       end
+
+      def sanitize_utf8mb4
+        chars.map do |char|
+          if char.bytes.length >= 4
+            '?'
+          else
+            char
+          end
+        end.join
+      end
     end
   end
 end

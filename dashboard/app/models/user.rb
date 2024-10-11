@@ -549,9 +549,11 @@ class User < ApplicationRecord
   has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
   has_many :scripts, through: :user_scripts, source: :script
 
+  before_validation on: [:create, :update], if: -> {name.utf8mb4?} do
+    self.name = name.sanitize_utf8mb4
+  end
   validates :name, presence: true, unless: -> {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
-  validates :name, no_utf8mb4: true
 
   defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
