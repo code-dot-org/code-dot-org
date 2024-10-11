@@ -189,6 +189,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
             styles.typeIcon,
             SoundStyle[sound.type]?.classNameColor
           )}
+          iconStyle="regular"
         />
         <div
           className={classNames(
@@ -335,6 +336,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
               ]}
               onChange={value => onModeChange(value as Mode)}
               className={styles.segmentedButtons}
+              size="s"
             />
 
             <SegmentedButtons
@@ -342,6 +344,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
               buttons={filterButtons}
               onChange={value => onFilterChange(value as Filter)}
               className={styles.segmentedButtons}
+              size="s"
             />
           </div>
         )}

@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 
 import MusicRegistry from '../MusicRegistry';
-import {PatternEventValue} from '../player/interfaces/PatternEvent';
+import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 import MusicLibrary from '../player/MusicLibrary';
 
 import LoadingOverlay from './LoadingOverlay';
@@ -20,8 +20,8 @@ import styles from './patternPanel.module.scss';
 const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 
 interface PatternPanelProps {
-  initValue: PatternEventValue;
-  onChange: (value: PatternEventValue) => void;
+  initValue: InstrumentEventValue;
+  onChange: (value: InstrumentEventValue) => void;
 }
 
 /*
@@ -35,7 +35,9 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
-  const currentValue: PatternEventValue = JSON.parse(JSON.stringify(initValue));
+  const currentValue: InstrumentEventValue = JSON.parse(
+    JSON.stringify(initValue)
+  );
 
   const availableKits = useMemo(
     () => MusicLibrary.getInstance()?.kits || [],
@@ -45,10 +47,10 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   const currentFolder = useMemo(() => {
     // Default to the first available kit if the current kit is not found in this library.
     return (
-      availableKits?.find(kit => kit.id === currentValue.kit) ||
+      availableKits?.find(kit => kit.id === currentValue.instrument) ||
       availableKits?.[0]
     );
-  }, [availableKits, currentValue.kit]);
+  }, [availableKits, currentValue.instrument]);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
   const toggleEvent = useCallback(
@@ -62,7 +64,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
       } else {
         // Not found, so add.
         currentValue.events.push({tick, note});
-        MusicRegistry.player.previewNote(note, currentValue.kit);
+        MusicRegistry.player.previewNote(note, currentValue.instrument);
       }
 
       onChange(currentValue);
@@ -78,7 +80,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   };
 
   const handleFolderChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    currentValue.kit = event.target.value;
+    currentValue.instrument = event.target.value;
     onChange(currentValue);
   };
 
@@ -99,7 +101,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   }, [onChange, currentValue]);
 
   const startPreview = useCallback(() => {
-    MusicRegistry.player.previewPattern(
+    MusicRegistry.player.previewNotes(
       currentValue,
       (tick: number) => setCurrentPreviewTick(tick),
       () => setCurrentPreviewTick(0)
@@ -112,27 +114,27 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   }, [setCurrentPreviewTick]);
 
   useEffect(() => {
-    if (!MusicRegistry.player.isInstrumentLoaded(currentValue.kit)) {
+    if (!MusicRegistry.player.isInstrumentLoaded(currentValue.instrument)) {
       setIsLoading(true);
-      if (MusicRegistry.player.isInstrumentLoading(currentValue.kit)) {
+      if (MusicRegistry.player.isInstrumentLoading(currentValue.instrument)) {
         // If the instrument is already loading, register a callback and wait for it to finish.
         MusicRegistry.player.registerCallback('InstrumentLoaded', kit => {
-          if (kit === currentValue.kit) {
+          if (kit === currentValue.instrument) {
             setIsLoading(false);
           }
         });
       } else {
         // Otherwise, initiate the load.
-        MusicRegistry.player.setupSampler(currentValue.kit, () =>
+        MusicRegistry.player.setupSampler(currentValue.instrument, () =>
           setIsLoading(false)
         );
       }
     }
-  }, [currentValue.kit, setIsLoading]);
+  }, [currentValue.instrument, setIsLoading]);
 
   return (
     <div className={styles.patternPanel}>
-      <select value={currentValue.kit} onChange={handleFolderChange}>
+      <select value={currentValue.instrument} onChange={handleFolderChange}>
         {availableKits.map(folder => (
           <option key={folder.id} value={folder.id}>
             {folder.name}
@@ -149,7 +151,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
                 onClick={() =>
                   MusicRegistry.player.previewNote(
                     note || index,
-                    currentValue.kit
+                    currentValue.instrument
                   )
                 }
               >

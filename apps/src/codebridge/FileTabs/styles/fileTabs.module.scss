@@ -26,6 +26,10 @@
   height: 28px;
   background-color: $light_gray_950;
   border-radius: 4px 4px 0 0;
+
+  &:hover:not(.active) {
+    background-color: $light_gray_800;
+  }
 }
 
 .fileTab > span {

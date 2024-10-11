@@ -1,0 +1,29 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-07T22:05:50.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "finish_dialog": "hoc2024",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "###Your turn\r\nCheck out all the new blocks and make some music! ",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "showSoundFilters": true,
+      "toolbox": {
+        "includeAi": true,
+        "type": "category",
+        "addFunctionCalls": true
+      }
+    },
+    "name_suffix": "_1",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:50.427+00:00\",\"changed\":[\"cloned from \\\"music-ai-freeplay_3\\\"\"],\"cloned_from\":\"music-ai-freeplay_3\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,7 +1,13 @@
 {
+  "aboutAichatLab": "About AI Chat Lab",
   "aichatWorkspaceHeader": "AI Chat",
+  "chatComponentsHeader": "AI Chat Components",
   "continue": "Continue",
+  "learnMoreHereInBrackets": "[Learn more here.]",
   "startOverAichatModelCustomizations": "This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.",
+  "teacherOnboardingModal_warning": "While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption.",
+  "teacherOnboardingModal_chatHistoryAccess": "As a teacher, you have access to all of your students' chat history and customizations. ",
   "waitingForChatResponse": "Waiting for a response...",
+  "welcomeToAichatLab": "Welcome to AI Chat Lab",
   "whatIsPersonalInformation": "What is considered personal information?"
 }
