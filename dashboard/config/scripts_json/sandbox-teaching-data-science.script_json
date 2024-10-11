@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-10 14:47:53 UTC",
+    "serialized_at": "2024-10-11 16:35:59 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -3431,31 +3431,6 @@
     {
       "chapter": 124,
       "position": 74,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "sp-pl-DS-L8-visualPanels"
-        ],
-        "progression": "More Visualizations"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "sp-pl-DS-L8-visualPanels"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "3edfbfc4-9955-4fae-90ab-babfdc402a2d"
-      },
-      "level_keys": [
-        "sp-pl-DS-L8-visualPanels"
-      ]
-    },
-    {
-      "chapter": 125,
-      "position": 75,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3479,8 +3454,8 @@
       ]
     },
     {
-      "chapter": 126,
-      "position": 76,
+      "chapter": 125,
+      "position": 75,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3504,8 +3479,8 @@
       ]
     },
     {
-      "chapter": 127,
-      "position": 77,
+      "chapter": 126,
+      "position": 76,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3529,8 +3504,8 @@
       ]
     },
     {
-      "chapter": 128,
-      "position": 78,
+      "chapter": 127,
+      "position": 77,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3554,8 +3529,8 @@
       ]
     },
     {
-      "chapter": 129,
-      "position": 79,
+      "chapter": 128,
+      "position": 78,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3579,8 +3554,8 @@
       ]
     },
     {
-      "chapter": 130,
-      "position": 80,
+      "chapter": 129,
+      "position": 79,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3604,8 +3579,8 @@
       ]
     },
     {
-      "chapter": 131,
-      "position": 81,
+      "chapter": 130,
+      "position": 80,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3629,8 +3604,8 @@
       ]
     },
     {
-      "chapter": 132,
-      "position": 82,
+      "chapter": 131,
+      "position": 81,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3654,7 +3629,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 132,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3679,7 +3654,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 133,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3704,7 +3679,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 134,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3729,7 +3704,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 135,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3754,7 +3729,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 136,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5249,18 +5224,6 @@
         "level.key": "SP-PL-DS-U2L89-CFU",
         "script_level.level_keys": [
           "SP-PL-DS-U2L89-CFU"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "3edfbfc4-9955-4fae-90ab-babfdc402a2d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "sp-pl-DS-L8-visualPanels",
-        "script_level.level_keys": [
-          "sp-pl-DS-L8-visualPanels"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
