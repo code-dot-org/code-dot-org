@@ -1,10 +1,16 @@
+import {FieldBitmap} from '@blockly/field-bitmap';
 import * as Blockly from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
-import {FieldBitmap, FieldBitmapFromJsonConfig} from './blocklyFieldBitmap';
-
+// Use our translations for "Clear" button text.
 Blockly.Msg['BUTTON_LABEL_CLEAR'] = commonI18n.blocklyClear();
+
+interface FieldBitmapFromJsonConfig extends Blockly.FieldConfig {
+  value?: number[][];
+  width?: number;
+  height?: number;
+}
 /**
  * Custom FieldBitmap class with additional hooks for XML serialization.
  */
@@ -21,6 +27,60 @@ export class CdoFieldBitmap extends FieldBitmap {
     config?: FieldBitmapFromJsonConfig
   ) {
     super(value, options, config);
+  }
+
+  /**
+   * Show the bitmap editor dialog.
+   *
+   * @param e Optional mouse event that triggered the field to open, or
+   *    undefined if triggered programmatically.
+   */
+  // eslint-disable-next-line
+  protected showEditor_(this: typeof FieldBitmap, e?: Event) {
+    super.showEditor_();
+
+    // Store row and column indices on each pixel button.
+    const pixelContainer = document.querySelector('.pixelContainer');
+    pixelContainer?.querySelectorAll('.pixelRow').forEach((row, rowIndex) => {
+      row.querySelectorAll('.pixelButton').forEach((button, colIndex) => {
+        // Set the custom data attributes for row and column indices
+        button.setAttribute('data-row', rowIndex.toString());
+        button.setAttribute('data-col', colIndex.toString());
+      });
+    });
+
+    // Handle dragging into a pixel when pointer is down. In the base class,
+    // mouseenter events are bound to the individual pixel buttons, but this
+    // isn't compatible with touch devices.
+    const dropdownEditor = document.querySelector('.dropdownEditor');
+    this.bindEvent(dropdownEditor, 'pointermove', (e: PointerEvent) => {
+      const currentElement = document.elementFromPoint(e.clientX, e.clientY);
+      const rowIndex = currentElement?.getAttribute('data-row');
+      const colIndex = currentElement?.getAttribute('data-col');
+      if (rowIndex && colIndex) {
+        this.onMouseEnterPixel(parseInt(rowIndex), parseInt(colIndex));
+      }
+    });
+  }
+
+  /**
+   * Binds an event listener to the specified element.
+   *
+   * @param element Specified element.
+   * @param eventName Name of the event to bind.
+   * @param callback Function to be called on specified event.
+   * @override
+   */
+  bindEvent(
+    element: HTMLElement,
+    eventName: string,
+    callback: (e: Event) => void
+  ) {
+    this.boundEvents.push(
+      // In the base class, browserEvents.conditionalBind is used, which has
+      // a side of effect of locking workspace events on touch devices.
+      Blockly.browserEvents.bind(element, eventName, this, callback)
+    );
   }
 
   /**
