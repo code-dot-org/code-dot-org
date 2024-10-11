@@ -55,11 +55,8 @@ $(document).ready(() => {
     'account-information'
   );
   if (accountInformationMountPoint) {
-    const store = getStore();
     ReactDOM.render(
-      <Provider store={store}>
-        <AccountInformation {...scriptData} />
-      </Provider>,
+      <AccountInformation {...scriptData} />,
       accountInformationMountPoint
     );
   }
@@ -67,11 +64,8 @@ $(document).ready(() => {
   const schoolInformationMountPoint =
     document.getElementById('school-information');
   if (schoolInformationMountPoint) {
-    const store = getStore();
     ReactDOM.render(
-      <Provider store={store}>
-        <SchoolInformation {...scriptData} />
-      </Provider>,
+      <SchoolInformation {...scriptData} />,
       schoolInformationMountPoint
     );
   }
