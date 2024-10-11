@@ -56,6 +56,7 @@ export interface Section {
   courseVersionName: string;
   courseOfferingId: number;
   unitId: number;
+  unitName: string;
   courseDisplayName: string;
 }
 
@@ -273,7 +274,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.unitOverview}
-            element={<TeacherUnitOverview />}
+            element={applyV1TeacherDashboardWidth(<TeacherUnitOverview />)}
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.settings}

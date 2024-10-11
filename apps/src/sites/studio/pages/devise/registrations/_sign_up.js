@@ -2,9 +2,21 @@ import $ from 'jquery';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 
 $(document).ready(() => {
   analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT, {}, PLATFORMS.BOTH);
+
+  const isInSignupExperiment = statsigReporter.getIsInExperiment(
+    'new_sign_up_v1',
+    'showNewFlow',
+    false
+  );
+
+  if (isInSignupExperiment) {
+    window.location.href =
+      'https://studio.code.org/users/new_sign_up/account_type';
+  }
 
   document
     .getElementById('signup_form_submit')

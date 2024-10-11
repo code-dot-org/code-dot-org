@@ -12,16 +12,9 @@ import {
   useHandleFileUpload,
   usePrompts,
 } from './hooks';
-import {newFilePromptType} from './types';
 
-type FileBrowserHeaderPopUpButtonProps = {
-  newFilePrompt: newFilePromptType;
-};
-
-export const FileBrowserHeaderPopUpButton = ({
-  newFilePrompt,
-}: FileBrowserHeaderPopUpButtonProps) => {
-  const {openNewFolderPrompt} = usePrompts();
+export const FileBrowserHeaderPopUpButton = () => {
+  const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
   const {
     project,
     config: {validMimeTypes},
@@ -38,7 +31,7 @@ export const FileBrowserHeaderPopUpButton = ({
       <PopUpButtonOption
         iconName="plus"
         labelText={codebridgeI18n.newFile()}
-        clickHandler={() => newFilePrompt()}
+        clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
       />
       <FileUploader
         validMimeTypes={validMimeTypes}

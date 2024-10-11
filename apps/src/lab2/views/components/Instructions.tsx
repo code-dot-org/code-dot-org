@@ -206,8 +206,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
     }
 
     if (finishUrl) {
-      if (finishDialog === 'hoc2024') {
-        shareLab2Project(finishUrl);
+      if (finishDialog) {
+        shareLab2Project(finishDialog, finishUrl);
       } else {
         window.location.href = finishUrl;
       }

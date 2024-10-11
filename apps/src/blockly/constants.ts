@@ -124,6 +124,7 @@ export enum BLOCK_TYPES {
   procedureDefinition = 'procedures_defnoreturn',
   procedureDefinitionReturn = 'procedures_defreturn',
   procedureCall = 'procedures_callnoreturn',
+  procedureCallReturn = 'procedures_callreturn',
   procedureIfReturn = 'procedures_ifreturn',
   spriteParameterGet = 'sprite_parameter_get',
   whenRun = 'when_run',

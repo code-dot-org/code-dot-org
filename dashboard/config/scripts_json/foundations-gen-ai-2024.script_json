@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "foundations-gen-ai",
-    "serialized_at": "2024-10-07 21:47:14 UTC",
+    "serialized_at": "2024-10-10 19:43:50 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3392,6 +3392,30 @@
   ],
   "resources": [
     {
+      "name": "[Exemplar] AI Auditors",
+      "url": "https://docs.google.com/document/d/1W-3aTLH56DHgM-mV3EcA0-hIFR2WgShp15f7ctIkO7A/edit",
+      "key": "_exemplar_ai_auditors",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_ai_auditors"
+      }
+    },
+    {
+      "name": "[Exemplar] Character Quiz",
+      "url": "https://docs.google.com/document/d/1GdQLnKLwAnrNVoceYXh3WMUEt-nB7nHB7K7WJHayoio/edit",
+      "key": "_exemplar_character_quiz",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_character_quiz"
+      }
+    },
+    {
       "name": "[Exemplar] Foundations of Generative AI Graphic Organizer",
       "url": "https://docs.google.com/presentation/d/1L-NZa63NatGczunX-58GlPNwHnNxD_XQxQSSbqlhP_Y/view",
       "key": "_exemplar_foundations_of_generative_ai_graphic_organizer",
@@ -3404,6 +3428,30 @@
       }
     },
     {
+      "name": "[Exemplar] Meanings from Context",
+      "url": "https://docs.google.com/document/d/1OFqzLA4VMZV0ibii-gGT2BLI3HnJ0RLH8c6KTGP2d2g/edit",
+      "key": "_exemplar_meanings_from_context",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_meanings_from_context"
+      }
+    },
+    {
+      "name": "[Exemplar] Training Data",
+      "url": "https://docs.google.com/document/d/1s-OfR8hRDSjLiLYaVQztOpXiDDqjVOer6NJyw-ejJzM/edit",
+      "key": "_exemplar_training_data",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_training_data"
+      }
+    },
+    {
       "name": "[For Teachers] Behind the Activity",
       "url": "https://docs.google.com/document/d/1r3bQUafEdjoN2flf-htXkO0iYCIBrW5-_NtQCQMoedU/edit",
       "key": "_for_teachers_behind_the_activity",
@@ -3413,6 +3461,30 @@
       },
       "seeding_key": {
         "resource.key": "_for_teachers_behind_the_activity"
+      }
+    },
+    {
+      "name": "[Key] How Embeddings are Made (Version A)",
+      "url": "https://docs.google.com/document/d/1Eb7iLCgWuayaW18-rfxbDHCc5djPcQqtFoB66iyGDGM/edit",
+      "key": "_key_how_embeddings_are_made_version_a_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_how_embeddings_are_made_version_a_"
+      }
+    },
+    {
+      "name": "[Key] How Embeddings are Made (Version B)",
+      "url": "https://docs.google.com/document/d/1ghxt4d0MlKfXdjlxyarIrn6OP_10TP8nK4jYnQoxwKw/edit",
+      "key": "_key_how_embeddings_are_made_version_b_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_how_embeddings_are_made_version_b_"
       }
     },
     {
@@ -4057,6 +4129,12 @@
     {
       "seeding_key": {
         "lesson.key": "Attention Is All You Need",
+        "resource.key": "_exemplar_meanings_from_context"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
         "resource.key": "attention_is_all_you_need"
       }
     },
@@ -4093,6 +4171,18 @@
     {
       "seeding_key": {
         "lesson.key": "Embeddings: How They're Created",
+        "resource.key": "_key_how_embeddings_are_made_version_a_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "resource.key": "_key_how_embeddings_are_made_version_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
         "resource.key": "how_embeddings_are_made"
       }
     },
@@ -4117,6 +4207,12 @@
     {
       "seeding_key": {
         "lesson.key": "Hallucinations and Fabrications",
+        "resource.key": "_exemplar_ai_auditors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hallucinations and Fabrications",
         "resource.key": "ai_auditors"
       }
     },
@@ -4130,6 +4226,12 @@
       "seeding_key": {
         "lesson.key": "Input & Training Data",
         "resource.key": "_exemplar_foundations_of_generative_ai_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input & Training Data",
+        "resource.key": "_exemplar_training_data"
       }
     },
     {
@@ -4304,6 +4406,12 @@
       "seeding_key": {
         "lesson.key": "Project: Demystifying Generative AI",
         "resource.key": "project_guide_-_demystifying_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
+        "resource.key": "_exemplar_character_quiz"
       }
     },
     {

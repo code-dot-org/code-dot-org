@@ -246,7 +246,7 @@ const initializeRedux = (
   dispatch(initializeHiddenScripts(unitData.section_hidden_unit_info));
   dispatch(setPageType(pageTypes.scriptOverview));
 
-  progress.initCourseProgress(unitData);
+  progress.initCourseProgress(unitData, false);
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);

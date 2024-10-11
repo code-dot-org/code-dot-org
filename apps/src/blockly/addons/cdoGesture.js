@@ -88,13 +88,13 @@ export function overrideHandleTouchMove(blocklyWrapper) {
     try {
       Blockly.Events.disable();
       const xy = this.blockToDuplicate.getRelativeToSurfaceXY();
-      const newBlock = this.blockToDuplicate.workspace.newBlock(
-        this.blockToDuplicate.type
+      const newBlock = Blockly.serialization.blocks.append(
+        Blockly.serialization.blocks.save(this.blockToDuplicate),
+        this.blockToDuplicate.workspace
       );
       newBlock.initSvg();
       newBlock.render();
       newBlock.moveTo(xy);
-      newBlock.setFieldValue(this.blockToDuplicate.getFieldValue('VAR'), 'VAR');
       this.setTargetBlock(newBlock);
     } finally {
       Blockly.Events.enable();

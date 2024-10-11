@@ -19175,6 +19175,8 @@ en:
               name: Additional Input
             lesson-8:
               name: Additional Output
+            lesson-9:
+              name: Pre-assessment
           lesson_groups: {}
           name: computer-systems-playground
           title: "[PLAYGROUND] Computer Systems and Devices (with micro:bit)"
@@ -19389,6 +19391,15 @@ en:
           lesson_groups: {}
           name: tessnew-2024
           title: 'Tess test '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoc-music-ai-pilot-4:
+          lessons: {}
+          lesson_groups: {}
+          name: hoc-music-ai-pilot-4
+          title: 'Playtest 4 (PDX) - Music Lab: A.I. Edition for Hour of Code'
           description_audience: ''
           description_short: ''
           description: ''

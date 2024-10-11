@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Matplotlib
 
-## Lesson 4: Introduction to Matplotlib
+## Lesson 5: Introduction to Matplotlib
 
 #### In this lesson, students discover the need for a library with functions that create **data visualizations in Python**. 
 

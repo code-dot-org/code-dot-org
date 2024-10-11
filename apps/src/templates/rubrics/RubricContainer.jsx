@@ -244,6 +244,7 @@ export default function RubricContainer({
       defaultPosition={{x: positionX, y: positionY}}
       onStart={onStartHandler}
       onStop={onStopHandler}
+      handle=".ai-rubric-handle"
     >
       <div
         data-testid="draggable-test-id"
@@ -272,7 +273,10 @@ export default function RubricContainer({
             showStepNumbers: true,
           }}
         />
-        <div className={style.rubricHeaderRedesign}>
+        <div
+          className={classnames(style.rubricHeaderRedesign, 'ai-rubric-handle')}
+          data-testid="ai-rubric-handle-test-id"
+        >
           <div className={style.rubricHeaderLeftSide}>
             <img
               src={aiBotOutlineIcon}
