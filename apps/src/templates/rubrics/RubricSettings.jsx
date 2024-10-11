@@ -397,7 +397,7 @@ RubricSettings.propTypes = {
   aiRubricsDisabled: PropTypes.bool,
   setAiRubricsDisabled: PropTypes.func.isRequired,
   allTeacherEvaluationData: PropTypes.array,
-  allAiEvaluationStatus: PropTypes.array,
+  allAiEvaluationStatus: PropTypes.object,
 };
 
 export const UnconnectedRubricSettings = RubricSettings;
