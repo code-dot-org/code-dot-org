@@ -1,0 +1,130 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-10T15:04:36.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "startSources": {
+        "variables": [
+          {
+            "name": "i",
+            "id": "]6|r|l_3)Rb+,NM!a~Ln"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "variables_set",
+                  "id": "HL_?QUG$YqO5L@e!fLFG",
+                  "extraState": {
+                  },
+                  "fields": {
+                    "VAR": {
+                      "id": "]6|r|l_3)Rb+,NM!a~Ln"
+                    }
+                  },
+                  "inputs": {
+                    "VALUE": {
+                      "block": {
+                        "type": "math_number",
+                        "id": "}]:F=uZu).=-9Wk1Ul+Y",
+                        "fields": {
+                          "NUM": 2
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound",
+                      "id": "W6pf)LgUx9Q{Q;K(b?l0",
+                      "fields": {
+                        "sound": "electro/drum_beat_cowbell"
+                      },
+                      "inputs": {
+                        "measure": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "jU~Q/=!)Rl_#X-dh{%e(",
+                            "fields": {
+                              "NUM": 1
+                            }
+                          },
+                          "block": {
+                            "type": "variables_get",
+                            "id": "=0(Eu0mta+rdHdy7+H%6",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "]6|r|l_3)Rb+,NM!a~Ln"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound",
+                          "id": "Vl-_~2e6VM5nc8Pvc,rn",
+                          "fields": {
+                            "sound": "electro/bass_synth_glitter"
+                          },
+                          "inputs": {
+                            "measure": {
+                              "shadow": {
+                                "type": "math_number",
+                                "id": "jU~Q/=!)Rl_#X-dh{%e(",
+                                "fields": {
+                                  "NUM": 1
+                                }
+                              },
+                              "block": {
+                                "type": "variables_get",
+                                "id": "#9ZaKHKE|a8yDdkWY1`S",
+                                "extraState": {
+                                },
+                                "fields": {
+                                  "VAR": {
+                                    "id": "]6|r|l_3)Rb+,NM!a~Ln"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024"
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-10T15:04:36.456+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-variables-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-variables-1\"},{\"changed_at\":\"2024-10-10 15:04:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:49:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:57:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:58:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

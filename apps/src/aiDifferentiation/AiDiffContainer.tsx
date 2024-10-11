@@ -175,6 +175,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
   return (
     <Draggable
+      handle=".ai_diff_handle"
       defaultPosition={{x: positionX, y: positionY}}
       onStop={onStopHandler}
     >
@@ -183,7 +184,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           [style.hiddenAiDiffPanel]: !open,
         })}
       >
-        <div className={style.aiDiffHeader}>
+        <div className={classnames(style.aiDiffHeader, 'ai_diff_handle')}>
           <div className={style.aiDiffHeaderLeftSide}>
             <img
               src={aiBotOutlineIcon}

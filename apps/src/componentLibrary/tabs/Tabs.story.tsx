@@ -1,5 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
-import React from 'react';
+import React, {useState} from 'react';
+
+import {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
 
 import Tabs, {TabsProps} from './index';
 
@@ -14,16 +16,37 @@ export default {
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
 const SingleTemplate: StoryFn<TabsProps> = args => {
-  return <Tabs {...args} />;
+  const [openTabs, setOpenTabs] = useState(args.tabs);
+  const handleClose = (value: string) =>
+    setOpenTabs(openTabs.filter(tab => tab.value !== value));
+
+  return <Tabs {...args} tabs={openTabs} onTabClose={handleClose} />;
 };
 
 const MultipleTemplate: StoryFn<{
   components: TabsProps[];
 }> = args => {
+  const [tabs, setTabs] = useState(
+    args.components.reduce((acc, {tabs, name}) => {
+      acc[name] = tabs;
+      return acc;
+    }, {} as Record<string, TabModel[]>)
+  );
+
+  const handleClose = (value: string, name?: string) => {
+    name &&
+      setTabs({...tabs, [name]: tabs[name].filter(tab => tab.value !== value)});
+  };
+
   return (
     <>
       {args.components?.map(componentArg => (
-        <Tabs key={componentArg.name} {...componentArg} />
+        <Tabs
+          key={componentArg.name}
+          onTabClose={handleClose}
+          {...componentArg}
+          tabs={tabs[componentArg.name]}
+        />
       ))}
     </>
   );
@@ -87,6 +110,34 @@ DefaultTabsWithDisabledTab.args = {
   ],
   defaultSelectedTabValue: 'tab1',
   onChange: () => null,
+};
+
+export const ClosableTabs = SingleTemplate.bind({});
+ClosableTabs.args = {
+  name: 'closable_tabs',
+  tabs: [
+    {
+      value: 'tab1',
+      text: 'Tab 1',
+      tabContent: <div>Tab 1 Content</div>,
+      isClosable: true,
+    },
+    {
+      value: 'tab2',
+      text: 'Tab 2',
+      tabContent: <div>Tab 2 Content</div>,
+      isClosable: true,
+    },
+    {
+      value: 'tab3',
+      text: 'Tab 3',
+      tabContent: <div>Tab 3 Content</div>,
+      isClosable: true,
+    },
+  ],
+  defaultSelectedTabValue: 'tab1',
+  onChange: () => null,
+  onTabClose: () => null,
 };
 
 export const TabsWithTooltips = SingleTemplate.bind({});
@@ -577,6 +628,64 @@ GroupOfSizesOfTabs.args = {
       type: 'secondary',
       onChange: () => null,
       size: 'l',
+    },
+  ],
+};
+
+export const GroupOfTabsWithClosableTabs = MultipleTemplate.bind({});
+GroupOfTabsWithClosableTabs.args = {
+  components: [
+    {
+      name: 'primary_tabs_with_closable_tabs',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1',
+          tabContent: <div>Tab 1 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+          isClosable: true,
+        },
+      ],
+      defaultSelectedTabValue: 'tab1',
+      onChange: () => null,
+      type: 'primary',
+    },
+    {
+      name: 'secondary_tabs_with_closable_tabs',
+      tabs: [
+        {
+          value: 'tab1',
+          text: 'Tab 1',
+          tabContent: <div>Tab 1 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab2',
+          text: 'Tab 2',
+          tabContent: <div>Tab 2 Content</div>,
+          isClosable: true,
+        },
+        {
+          value: 'tab3',
+          text: 'Tab 3',
+          tabContent: <div>Tab 3 Content</div>,
+          isClosable: true,
+        },
+      ],
+      defaultSelectedTabValue: 'tab1',
+      onChange: () => null,
+      type: 'secondary',
     },
   ],
 };

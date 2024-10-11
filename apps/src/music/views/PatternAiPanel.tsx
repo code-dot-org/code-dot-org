@@ -25,7 +25,7 @@ import {generatePattern} from '../ai/patternAi';
 import appConfig from '../appConfig';
 import musicI18n from '../locale';
 import MusicRegistry from '../MusicRegistry';
-import {PatternEventValue} from '../player/interfaces/PatternEvent';
+import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 import MusicLibrary from '../player/MusicLibrary';
 
 import LoadingOverlay from './LoadingOverlay';
@@ -40,8 +40,8 @@ const numSeedEvents = 8;
 const arrayOfTicks = Array.from({length: numEvents}, (_, i) => i + 1);
 
 interface PatternAiPanelProps {
-  initValue: PatternEventValue;
-  onChange: (value: PatternEventValue) => void;
+  initValue: InstrumentEventValue;
+  onChange: (value: InstrumentEventValue) => void;
 }
 
 type UserCompletedTaskType = 'none' | 'generated' | 'drawnDrums';
@@ -58,7 +58,9 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
-  const currentValue: PatternEventValue = JSON.parse(JSON.stringify(initValue));
+  const currentValue: InstrumentEventValue = JSON.parse(
+    JSON.stringify(initValue)
+  );
 
   const [aiTemperature, setAiTemperature] = useState(10);
 
@@ -171,8 +173,8 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   }, [currentValue.events, userCompletedTask]);
 
   const startPreview = useCallback(
-    (value: PatternEventValue) => {
-      MusicRegistry.player.previewPattern(
+    (value: InstrumentEventValue) => {
+      MusicRegistry.player.previewNotes(
         value,
         (tick: number) => {
           setCurrentPreviewTick(tick);

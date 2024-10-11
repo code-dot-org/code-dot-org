@@ -1,4 +1,4 @@
-import {TuneEventValue, TuneTickEvent} from '../player/interfaces/TuneEvent';
+import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 
 // This file contains a helper function for tunes, and is used by the
 // block's custom field.
@@ -12,7 +12,7 @@ export interface TuneGraphEvent {
 }
 
 interface GenerateGraphDataFromTuneOptions {
-  tuneEventValue: TuneEventValue;
+  value: InstrumentEventValue;
   width: number;
   height: number;
   numOctaves: number;
@@ -23,7 +23,7 @@ interface GenerateGraphDataFromTuneOptions {
 
 // Given a ChordEventValue, generate a set of data for graphing it.
 export function generateGraphDataFromTune({
-  tuneEventValue,
+  value,
   width,
   height,
   numOctaves,
@@ -31,7 +31,7 @@ export function generateGraphDataFromTune({
   padding,
   noteHeightScale,
 }: GenerateGraphDataFromTuneOptions): TuneGraphEvent[] {
-  const notes: TuneTickEvent[] = tuneEventValue.events;
+  const notes = value.events;
 
   // Note widths fit in the space; note heights are exaggerated.
   const noteWidth = Math.ceil((width - 2 * padding) / 16);
@@ -44,7 +44,7 @@ export function generateGraphDataFromTune({
   const useWidth = width - 2 * padding - noteWidth;
   const useHeight = height - 2 * padding - noteHeight;
 
-  return notes.map((note: TuneTickEvent) => {
+  return notes.map(note => {
     return {
       x: 1 + ((note.tick - 1) * useWidth) / (16 - 1) + padding,
       y:

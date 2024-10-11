@@ -161,7 +161,7 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.customizationContainer}>
         {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
-          <div>
+          <>
             <div className={styles.horizontalFlexContainer}>
               <FieldLabel
                 id="temperature"
@@ -171,10 +171,10 @@ const SetupCustomization: React.FunctionComponent = () => {
               {aiCustomizations.temperature}
             </div>
             <Slider {...sliderProps} />
-          </div>
+          </>
         )}
         {isVisible(systemPrompt) && (
-          <div>
+          <>
             <FieldLabel
               id="system-prompt"
               label="System Prompt"
@@ -194,7 +194,7 @@ const SetupCustomization: React.FunctionComponent = () => {
                 )
               }
             />
-          </div>
+          </>
         )}
       </div>
       <div className={styles.footerButtonContainer}>

@@ -13,7 +13,7 @@ import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {setRestoredOldVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
+import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
@@ -34,10 +34,15 @@ const Workspace = () => {
   const dispatch = useAppDispatch();
 
   const headerContent = (
-    <>
-      {commonI18n.workspaceHeaderShort()}{' '}
-      {projectTemplateLevel && <ProjectTemplateWorkspaceIcon />}
-    </>
+    <div className={moduleStyles.centerHeaderContent}>
+      <div>{commonI18n.workspaceHeaderShort()}</div>
+      {projectTemplateLevel && (
+        <ProjectTemplateWorkspaceIconV2
+          darkMode={true}
+          className={moduleStyles.projectTemplateIcon}
+        />
+      )}
+    </div>
   );
 
   const closeRestoredVersionBanner = () => {
