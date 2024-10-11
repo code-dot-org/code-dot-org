@@ -141,11 +141,6 @@ function stepDelayFromStepSpeed(stepSpeed) {
 }
 
 function loadLevel() {
-  console.log('APP LAB CALLED ------------ '); // TODO: It's here, this get's logged in levels as well\'
-  // Only send PROJECT_ACTIVITY event for students or non-authenticated users
-  if (getStore().getState().currentUser?.userType !== 'teacher') {
-    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
-  }
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
@@ -789,7 +784,15 @@ Applab.init = function (config) {
         });
       }
     });
-
+  console.log(`Is project level? ----- ${!!config.level.isProjectLevel}`);
+  // Only send PROJECT_ACTIVITY event for students or non-authenticated users,
+  // AND only if they're on a project level.
+  if (
+    getStore().getState().currentUser?.userType !== 'teacher' &&
+    !!config.level.isProjectLevel
+  ) {
+    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
+  }
   if (IN_UNIT_TEST) {
     return loader.catch(() => {});
   }
