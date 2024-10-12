@@ -396,7 +396,7 @@ When /^I click on the link reading "([^"]*)"(?: within element "([^"]*)")?(?: to
   wait_until_interactable(5) do
     context = @browser.find_element(:css, parent) if parent
     context ||= @browser
-    xpath = ".//a[text()='#{text}']"
+    xpath = ".//a[contains(text(), '#{text}')]"
     link = context.find_element(:xpath, xpath)
     page_load(load) {link.click}
   end
@@ -405,7 +405,7 @@ end
 Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
   context = @browser.find_element(:css, parent) if parent
   context ||= @browser
-  xpath = ".//a[text()='#{text}']"
+  xpath = ".//a[contains(text(), '#{text}')]"
   link = context.find_element(:xpath, xpath)
   expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
 end
