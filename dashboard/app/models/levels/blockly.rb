@@ -386,16 +386,16 @@ class Blockly < Level
 
       functions = level_options.
         dig("levelData", "startSources", "blocks", "blocks")&.
-        filter {|block| block.try(:[], "type") == "procedures_defnoreturn"}
+        filter {|block| block["type"] == "procedures_defnoreturn"}
 
       functions&.each do |function|
-        function_name = function.try(:[], "fields").try(:[], "NAME")
+        function_name = function.dig("fields", "NAME")
         next unless function_name
 
         localized_name = I18n.t(
           "name",
           scope: [:data, :function_definitions, name, function_name],
-          default: nil,
+          default: function_name,
           smart: true
         )
 

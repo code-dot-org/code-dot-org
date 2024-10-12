@@ -206,12 +206,12 @@ module I18n
                   functions = level.
                     properties.
                     dig("level_data", "startSources", "blocks", "blocks")&.
-                    filter {|block| block.try(:[], "type") == "procedures_defnoreturn"}
+                    filter {|block| block["type"] == "procedures_defnoreturn"}
 
                   i18n_strings['function_definitions'] = Hash.new unless functions.nil? || functions.empty?
 
                   functions&.each do |function|
-                    name = function.try(:[], "fields").try(:[], "NAME")
+                    name = function.dig("fields", "NAME")
                     # The name is used to uniquely identify the function. Skip if there is no name.
                     next unless name
                     function_definition = Hash.new
