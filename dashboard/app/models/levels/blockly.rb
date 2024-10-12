@@ -648,7 +648,7 @@ class Blockly < Level
       next unless function_name
       localized_name = I18n.t(
         "name",
-        scope: [:data, :function_definitions, name, function_name.content],
+        scope: [:data, :function_definitions, function_name.content],
         default: nil,
         smart: true
       )
