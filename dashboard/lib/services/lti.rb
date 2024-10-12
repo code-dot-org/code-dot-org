@@ -60,10 +60,11 @@ module Services
       )
     end
 
-    def self.create_lti_deployment(integration_id, deployment_id)
+    def self.create_lti_deployment(integration_id, deployment_id, deployment_name)
       LtiDeployment.create(
         lti_integration_id: integration_id,
         deployment_id: deployment_id,
+        name: deployment_name,
       )
     end
 

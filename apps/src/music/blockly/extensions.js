@@ -1,3 +1,5 @@
+import MusicLibrary from '../player/MusicLibrary';
+
 import {BlockTypes} from './blockTypes';
 import {
   EXTRA_SOUND_INPUT_PREFIX,
@@ -9,6 +11,7 @@ import {
   FIELD_EFFECTS_VALUE,
   FIELD_EFFECTS_VALUE_OPTIONS,
   DEFAULT_EFFECT_VALUE,
+  FIELD_SOUNDS_NAME,
 } from './constants';
 
 export const getDefaultTrackNameExtension = player =>
@@ -150,4 +153,14 @@ export const effectsFieldExtension = function () {
 
     baseHandler.call(fieldEffectsName, menu, menuItem);
   };
+};
+
+export const fieldSoundsValidator = function () {
+  this.getField(FIELD_SOUNDS_NAME).setValidator(newValue => {
+    if (MusicLibrary.getInstance()?.getSoundForId(newValue)) {
+      return newValue;
+    } else {
+      return MusicLibrary.getInstance()?.getDefaultSound();
+    }
+  });
 };
