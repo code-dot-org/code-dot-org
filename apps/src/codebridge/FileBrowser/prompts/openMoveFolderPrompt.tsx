@@ -3,6 +3,7 @@ import {ProjectType, FolderId} from '@codebridge/types';
 import {
   findFolder,
   getErrorMessage,
+  getFolderLineage,
   validateFolderName,
 } from '@codebridge/utils';
 
@@ -48,6 +49,19 @@ export const openMoveFolderPrompt = async ({
           folders: Object.values(projectFolders),
           required: true,
         });
+
+        if (folderId === parentId) {
+          return codebridgeI18n.moveFolderErrorSelf();
+        }
+
+        const destinationLineage = new Set(
+          getFolderLineage(parentId, Object.values(projectFolders))
+        );
+
+        if (destinationLineage.has(folderId)) {
+          return codebridgeI18n.moveFolderErrorChild();
+        }
+
         return validateFolderName({
           folderName: folder.name,
           parentId,
