@@ -128,7 +128,7 @@ const SetupCustomization: React.FunctionComponent = () => {
     );
   };
 
-  const sliderProps = {
+  const sliderProps: SliderProps = {
     name: 'temperature-slider',
     value: aiCustomizations.temperature,
     minValue: MIN_TEMPERATURE,
@@ -154,7 +154,7 @@ const SetupCustomization: React.FunctionComponent = () => {
       icon: {iconName: 'plus', title: 'Increase'},
       ['aria-label']: 'Increase',
     },
-  } as SliderProps;
+  };
 
   return (
     <div className={styles.verticalFlexContainer}>
