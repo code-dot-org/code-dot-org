@@ -112,7 +112,7 @@ class Blockly < Level
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
     level_properties = super
     level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
-    localize_blockly_level_options_for_lab2(script)
+    level_properties[:levelData] = localized_blockly_level_options_for_lab2(script)["levelData"]
     level_properties
   end
 
@@ -380,14 +380,12 @@ class Blockly < Level
     options.freeze
   end
 
-  def localize_blockly_level_options_for_lab2(script)
-    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Unit.should_cache?) do
+  def localized_blockly_level_options_for_lab2(script)
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options_for_lab2", force: !Unit.should_cache?) do
       level_options = blockly_level_options.dup
 
       functions = level_options.
-        try(:[], "levelData").
-        try(:[], "startSources").
-        try(:[], "blocks").try(:[], "blocks")&.
+        dig("levelData", "startSources", "blocks", "blocks")&.
         filter {|block| block.try(:[], "type") == "procedures_defnoreturn"}
 
       functions&.each do |function|
@@ -403,6 +401,8 @@ class Blockly < Level
 
         function["fields"]["NAME"] = localized_name
       end
+
+      level_options
     end
     options.freeze
   end

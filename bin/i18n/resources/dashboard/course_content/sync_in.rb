@@ -200,12 +200,12 @@ module I18n
                   i18n_strings[BLOCK_CATEGORIES_TYPE][name] = name if name
                 end
 
-                ## Lab2 Function Names
+                ## Lab2 Function Names.
+                ## Blockly in Lab2 uses JSON rather than XML.
                 if level.uses_lab2?
                   functions = level.
-                    try(:level_data).
-                    try(:[], "startSources").
-                    try(:[], "blocks").try(:[], "blocks")&.
+                    properties.
+                    dig("level_data", "startSources", "blocks", "blocks")&.
                     filter {|block| block.try(:[], "type") == "procedures_defnoreturn"}
 
                   i18n_strings['function_definitions'] = Hash.new unless functions.nil? || functions.empty?
