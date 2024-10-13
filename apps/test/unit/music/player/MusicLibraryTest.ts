@@ -262,6 +262,22 @@ describe('MusicLibrary', () => {
         ['unrestricted1', 'unrestricted2']
       )
     );
+    assert(
+      library.getSoundForId('unrestricted2/drum_beat_cowbell')?.src ===
+        'drum_beat_cowbell'
+    );
+
+    const folder = library.getFolderForSoundId(
+      'unrestricted2/drum_beat_cowbell'
+    );
+    assert(folder?.path === 'packs/unrestricted2');
+    assert(
+      isEqual(
+        folder?.sounds.map(sound => sound.src),
+        ['electro', 'drum_beat_cowbell', 'drum_beat_club', 'drum_beat_edm']
+      )
+    );
+    assert(isEqual(library.getFolderForFolderId('unrestricted2'), folder));
   });
 
   it('allows some sounds in a library', () => {

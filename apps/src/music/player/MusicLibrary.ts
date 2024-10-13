@@ -133,8 +133,6 @@ export default class MusicLibrary {
     this.instruments = libraryJson.instruments;
     this.kits = libraryJson.kits;
 
-    console.log('packs', this.packs);
-
     if (libraryJson.bpm !== undefined) {
       this.bpm = libraryJson.bpm;
     }
