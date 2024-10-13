@@ -256,6 +256,12 @@ describe('MusicLibrary', () => {
     assert(
       isEqual(library.getAvailableSoundTypes(), {preview: true, beat: true})
     );
+    assert(
+      isEqual(
+        library.getAvailableSounds().map(availableFolder => availableFolder.id),
+        ['unrestricted1', 'unrestricted2']
+      )
+    );
   });
 
   it('allows some sounds in a library', () => {
@@ -275,10 +281,9 @@ describe('MusicLibrary', () => {
     );
     assert(library.getDefaultSound() === 'restricted2/kick_verse_1');
 
-    const availableFolders = library.getAvailableSounds();
     assert(
       isEqual(
-        availableFolders.map(availableFolder => availableFolder.id),
+        library.getAvailableSounds().map(availableFolder => availableFolder.id),
         ['restricted2', 'unrestricted1', 'unrestricted2']
       )
     );
