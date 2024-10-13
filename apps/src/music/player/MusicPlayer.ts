@@ -560,7 +560,7 @@ export default class MusicPlayer {
   }
 
   private calculatePitchShift(soundData: SoundData) {
-    if (['beat', 'preview'].includes(soundData.type)) {
+    if (!soundData.type || ['beat', 'preview'].includes(soundData.type)) {
       return 0;
     }
     const diff = this.key - (soundData.key || Key.C);

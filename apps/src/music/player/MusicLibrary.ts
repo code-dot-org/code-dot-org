@@ -92,8 +92,8 @@ export default class MusicLibrary {
   name: string;
 
   packs: SoundFolder[];
-  instruments: SoundFolder[];
-  kits: SoundFolder[];
+  instruments: SoundFolderInstrument[];
+  kits: SoundFolderKit[];
 
   private folders: SoundFolder[];
 
@@ -125,13 +125,15 @@ export default class MusicLibrary {
     // Combine the JSON-specified folders into one flat list of folders.
     this.folders = [
       ...libraryJson.packs,
-      ...libraryJson.instruments,
-      ...libraryJson.kits,
+      ...(libraryJson.instruments as SoundFolder[]),
+      ...(libraryJson.kits as SoundFolder[]),
     ];
 
     this.packs = libraryJson.packs;
     this.instruments = libraryJson.instruments;
     this.kits = libraryJson.kits;
+
+    console.log('packs', this.packs);
 
     if (libraryJson.bpm !== undefined) {
       this.bpm = libraryJson.bpm;
@@ -169,7 +171,9 @@ export default class MusicLibrary {
 
     folders.forEach(folder => {
       folder.sounds.forEach(sound => {
-        this.availableSoundTypes[sound.type] = true;
+        if (sound.type) {
+          this.availableSoundTypes[sound.type] = true;
+        }
       });
     });
   }
@@ -413,6 +417,10 @@ export interface SoundData {
   skipLocalization?: boolean;
 }
 
+interface SoundDataInstrument extends Omit<SoundData, 'length' | 'type'> {}
+
+interface SoundDataKit extends Omit<SoundData, 'length' | 'type'> {}
+
 export interface ImageAttribution {
   author: string;
   color?: string;
@@ -427,7 +435,7 @@ export interface SoundFolder {
   id: string;
   type?: SoundFolderType;
   path: string;
-  imageSrc: string;
+  imageSrc?: string;
   color?: string;
   restricted?: boolean;
   sounds: SoundData[];
@@ -437,17 +445,22 @@ export interface SoundFolder {
   skipLocalization?: boolean;
 }
 
+interface SoundFolderInstrument extends Omit<SoundFolder, 'sounds'> {
+  sounds: SoundDataInstrument[];
+}
+
+interface SoundFolderKit extends Omit<SoundFolder, 'sounds'> {
+  sounds: SoundDataKit[];
+}
+
 export type LibraryJson = {
   id: string;
-  name: string;
-  imageSrc: string;
   path: string;
   bpm?: number;
   key?: number;
   defaultSound?: string;
-  folders: SoundFolder[];
-  instruments: SoundFolder[];
-  kits: SoundFolder[];
+  instruments: SoundFolderInstrument[];
+  kits: SoundFolderKit[];
   packs: SoundFolder[];
 };
 
