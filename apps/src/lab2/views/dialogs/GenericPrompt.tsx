@@ -1,10 +1,17 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import debounce from 'lodash/debounce';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
 import {useDialogControl} from './DialogControlContext';
-import GenericDialog, {GenericDialogProps} from './GenericDialog';
+import GenericDialog, {
+  defaultGetButtonCallback,
+  GenericDialogProps,
+  GetButtonCallbackArgs,
+} from './GenericDialog';
+
+const DEBOUNCE_TIME_OUT = 300;
 
 export type GenericPromptProps = Pick<GenericDialogProps, 'title'> & {
   handleConfirm?: (prompt: string) => void;
@@ -67,17 +74,59 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
     undefined
   );
 
+  const debouncedErrorHandler = useMemo(() => {
+    return debounce((newInput: string) => {
+      setErrorMessage(validateInput(newInput));
+    }, DEBOUNCE_TIME_OUT);
+  }, [setErrorMessage, validateInput]);
+
   const handleInputChange = useCallback(
     (newInput: string) => {
       setPromiseArgs(newInput);
-      setErrorMessage(validateInput(newInput));
+      if (newInput.length && !errorMessage?.length) {
+        debouncedErrorHandler(newInput);
+      } else {
+        setErrorMessage(validateInput(newInput));
+      }
     },
-    [validateInput, setPromiseArgs, setErrorMessage]
+    [
+      errorMessage,
+      validateInput,
+      setPromiseArgs,
+      setErrorMessage,
+      debouncedErrorHandler,
+    ]
   );
 
   // fire the handleInputChange callback once upon loading. This'll populate the given prompt into the promiseArgs
   // as well as calling validateInput on it to confirm it's acceptable.'
   useEffect(() => handleInputChange(prompt), []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // we're going to hande in a custom buttonCallback getter to the generic dialog. We don't need to worry about memoizing this,
+  // since it'll get memoized up in the parent component. When the user clicks the confirm button, we're just going to re-validate
+  // the prompt. If if produces a validation error, display it and bow out. Otherwise, just proceed with the default handler.
+  //
+  // This will prevent the user from rapidly typing an invalid input and then clicking `OK` before the debounced error handler has
+  // had a chance to catch up.
+  const getButtonCallback =
+    ({closeDialog, closeType, callback, disabled}: GetButtonCallbackArgs) =>
+    () => {
+      if (closeType === 'confirm') {
+        const validationError = validateInput(prompt);
+        if (validationError) {
+          setErrorMessage(validationError);
+          return;
+        }
+      }
+      const defaultCallback = defaultGetButtonCallback({
+        closeDialog,
+        closeType,
+        callback,
+        disabled,
+      });
+
+      return defaultCallback();
+    };
 
   return (
     <GenericDialog
@@ -98,6 +147,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
         },
         cancel: {callback: () => handleCancel?.()},
       }}
+      getButtonCallback={getButtonCallback}
     />
   );
 };
