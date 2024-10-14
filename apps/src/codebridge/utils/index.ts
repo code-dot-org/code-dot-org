@@ -8,6 +8,8 @@ export * from './fileUtils';
 export * from './findFolder';
 export * from './getEmptyProject';
 export * from './getErrorMessage';
+export * from './getFolderLineage';
+export * from './getFolderPath';
 export * from './getOpenFiles';
 export * from './previewFileType';
 export * from './sortFilesByName';

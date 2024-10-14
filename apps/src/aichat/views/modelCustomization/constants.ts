@@ -7,9 +7,9 @@ import {
   Visibility,
 } from '../../types';
 
-export const MIN_TEMPERATURE = 0.1;
-export const MAX_TEMPERATURE = 1;
-export const SET_TEMPERATURE_STEP = 0.1;
+export const MIN_TEMPERATURE = 1;
+export const MAX_TEMPERATURE = 10;
+export const SET_TEMPERATURE_STEP = 1;
 export const MAX_RETRIEVAL_CONTEXTS = 20;
 export const MAX_ASK_ABOUT_TOPICS = 10;
 
