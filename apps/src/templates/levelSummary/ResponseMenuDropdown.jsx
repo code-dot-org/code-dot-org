@@ -19,10 +19,6 @@ const ResponseMenuDropdown = ({
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  if (!DCDO.get('cfu-pin-hide-enabled', false)) {
-    return null;
-  }
-
   const getPinnedDropdownOption = () => {
     if (unpinResponse) {
       return (

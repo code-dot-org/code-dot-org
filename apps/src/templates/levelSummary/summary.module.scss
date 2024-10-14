@@ -176,6 +176,12 @@ label.sectionSelector {
     background-color: #F6EDFD;
   }
 
+  .freeresponsePinnedDropdown {
+    &:hover {
+      background-color: #6C468A !important;
+    }
+  }
+
   .studentAnswer {
     width: 100%;
     box-sizing: border-box;
