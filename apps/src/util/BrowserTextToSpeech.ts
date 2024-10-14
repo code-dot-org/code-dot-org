@@ -11,6 +11,9 @@ let ttsAvailable = speechSynthesis.getVoices().length > 0;
 // Add a listener to update the ttsAvailable flag when voices are loaded.
 onTtsAvailable(isAvailable => (ttsAvailable = isAvailable));
 
+// Stop any speech when the page is changed or refreshed.
+addEventListener('beforeunload', () => speechSynthesis.cancel());
+
 function onTtsAvailable(callback: (isAvailable: boolean) => void) {
   if (ttsAvailable) {
     callback(true);
@@ -39,4 +42,8 @@ function speak(text: string) {
   speechSynthesis.speak(utterance);
 }
 
-export {onTtsAvailable, isTtsAvailable, speak};
+function cancelSpeech() {
+  speechSynthesis.cancel();
+}
+
+export {onTtsAvailable, isTtsAvailable, speak, cancelSpeech};
