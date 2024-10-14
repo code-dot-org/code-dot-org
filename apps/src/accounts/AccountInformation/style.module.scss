@@ -1,41 +1,16 @@
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
-.inputContainer {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  gap: 1.125rem;
-  margin: 1rem 0;
-
-  .verifiedTeacher {
-    font-weight: bold;
-    color: $light_affirmative_500;
-    margin: 0;
-  }
-
-  label.input {
-    width: 100%;
-
+.accountForm {
+  label {
     &.emailInput {
       margin-bottom: 0.5rem;
     }
 
-    input,
-    > div {
-      width: 100%;
+    &.authorizedTeacher {
+      font-weight: bold;
+      color: $light_affirmative_500;
+      margin: 0;
     }
   }
-
-  .alert {
-    margin: 1rem 0;
-  }
-}
-
-button.submit {
-  margin: 1rem 0;
-}
-
-h2.sectionHeader {
-  color: $light_primary_500;
 }
