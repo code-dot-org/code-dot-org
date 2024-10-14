@@ -396,7 +396,7 @@ When /^I click on the link reading "([^"]*)"(?: within element "([^"]*)")?(?: to
   wait_until_interactable(5) do
     context = @browser.find_element(:css, parent) if parent
     context ||= @browser
-    xpath = ".//a[contains(text(), '#{text}')]"
+    xpath = ".//a[starts-with(text(), '#{text}')]"
     link = context.find_element(:xpath, xpath)
     page_load(load) {link.click}
   end
