@@ -1,7 +1,11 @@
 @import 'color', 'breakpoints';
 
 .gen-ai-launch-skinny-banner {
-  background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
+  background-color: #0F1E2E;
+  background-image: url('/images/banners/banner-bg-horizontal-line-gaps.png');
+  background-repeat: repeat;
+  background-size: contain;
+  color: $white !important;
   padding: 2rem;
 
   .wrapper {
@@ -24,6 +28,10 @@
   .text-wrapper {
     flex: 2;
 
+    h5, p {
+      color: $white;
+    }
+
     @media (max-width: $width-sm) {
       text-align: center;
     }
@@ -38,7 +46,7 @@
   }
 
   .afe-partnership-logo {
-    width: 250px;
-    margin-top: -3px;
+    max-width: 190px;
+    padding-inline-start: 0.5rem;
   }
 }
