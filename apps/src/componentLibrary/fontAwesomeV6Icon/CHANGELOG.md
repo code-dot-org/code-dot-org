@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.4.0]()
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/61754)
 
 - updated `FontAwesomeV6Icon` props to support native HTML Element attributes
 

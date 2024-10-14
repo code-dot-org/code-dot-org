@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.0]()
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/61754)
 
 - updated `CloseButton` props to support native HTML Div element attributes
 
