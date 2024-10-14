@@ -78,11 +78,13 @@ layout: wide_index
 
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
+    // As of 2024 we are no longer showing the "Sort by" dropdown
+    // per line 87. See ACQ-2301 for more details.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{raw tutorials_contents.to_json},
       locale: "#{locale_code}",
       roboticsButtonUrl: "#{resolve_url('/learn/robotics')}",
-      showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', false)},
+      showSortDropdown: false,
       disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])},
       defaultSortByPopularity: #{Tutorials.sort_by_popularity?(request.site, DCDO.get("hoc_mode", CDO.default_hoc_mode))}
     });
