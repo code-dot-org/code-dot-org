@@ -1276,6 +1276,19 @@ p.detailsHidden {
   }
 }
 
+.purpleStatusBlob {
+  background-color: var(--background-brand-purple-light);
+  border-radius: 20px;
+  padding: 4px 10px 0;
+  height: 22px;
+  min-width: 80px;
+  display: inline;
+  margin-right: 17px;
+  p {
+      margin-bottom: 0;
+  }
+}
+
 .redStatusBlob {
   background-color: $light_negative_100;
   border-radius: 20px;
