@@ -748,6 +748,14 @@ roles.each do |name, config| %>
             Resource: 'arn:aws:cloudwatch::${AWS::AccountId}:dashboard/*'
           - Effect: Allow
             Action:
+              - logs:DescribeLogStreams
+            Resource: 'arn:aws:logs:*:${AWS::AccountId}:log-group:*'
+          - Effect: Allow
+            Action:
+              - logs:GetLogEvents
+            Resource: 'arn:aws:logs:*:${AWS::AccountId}:log-group:*:log-stream:*'
+          - Effect: Allow
+            Action:
               - cloudwatch:GetMetricData
               - cloudwatch:GetMetricStatistics
               - cloudwatch:ListDashboards
