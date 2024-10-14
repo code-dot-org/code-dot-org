@@ -84,13 +84,6 @@ def main
   puts "Environment: " + (options[:environment]).to_s.colorize(:light_cyan)
   puts "Dry-run mode: " + (options[:dry_run]).to_s.colorize(:light_cyan)
 
-  unless options[:dry_run]
-    puts "\nDeregistering autoscaling targets, if present...\n"
-    Config::ENDPOINT_CONFIGS.each do |config|
-      deregister_auto_scaling(config[:model_id], options[:environment])
-    end
-  end
-
   puts "\nTransforming ERB to YAML..."
   ` erb -T - environment=#{options[:environment]} -r ./config.rb gen_ai_curriculum.yml.erb > gen_ai_curriculum.yml `
   return unless $?&.exitstatus == 0
@@ -101,6 +94,13 @@ def main
   return unless $?&.exitstatus == 0
   account_id = JSON.parse(identity)['Account']
   puts "Using AWS Account ID: #{account_id.colorize(:light_cyan)}"
+
+  unless options[:dry_run]
+    puts "\nDeregistering autoscaling targets, if present...\n"
+    Config::ENDPOINT_CONFIGS.each do |config|
+      deregister_auto_scaling(config[:model_id], options[:environment])
+    end
+  end
 
   cmd = "aws cloudformation deploy " \
     "--stack-name gen-ai-curriculum-#{options[:environment]} " \
