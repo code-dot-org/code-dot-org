@@ -42,16 +42,16 @@ layout: wide_index
         %figure.flex-1
           %img.rounded-corners{src: "/images/donors_choose_blue_bg.png", alt: "", style: "width: 100%;"}
         .text-wrapper.flex-1
-          %h2.no-margin-top=hoc_s("hoc_events.sweepstakes.heading")
-          %p=hoc_s("hoc_events.sweepstakes.desc", markdown: :inline, locals:{rules_url: "/sweepstakes"})
+          %h2.no-margin-top=hoc_s("hoc_sweepstakes_2024.heading")
+          %p=hoc_s("hoc_sweepstakes_2024.desc", markdown: :inline, locals:{rules_url: "/sweepstakes"})
           %ul
             %li
               %i{class: "fa fa-check-circle"}
-              %p=hoc_s("hoc_events.sweepstakes.must_be_18")
+              %p=hoc_s("hoc_sweepstakes_2024.must_be_18")
             %li
               %i{class: "fa fa-check-circle"}
               %p.no-margin-bottom
-                =hoc_s("hoc_events.sweepstakes.must_be_employed")
+                =hoc_s("hoc_sweepstakes_2024.must_be_employed")
 
   %section#form.bg-neutral-light
     .wrapper
