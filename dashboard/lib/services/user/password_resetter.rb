@@ -14,25 +14,17 @@ module Services
           user.errors.add :email, ::I18n.t('activerecord.errors.messages.blank')
           return user
         end
+
         # We are no longer sending an email to parents, so grab the first user we find
         # (a user with an Email auth option first, otherwise any user that has that email)
         @user = ::User.find_by_email_or_hashed_email(email)
-        if user.nil?
-          Cdo::Metrics.put(
-            'User', 'PasswordResetUserNotFound', 1, {
-              Environment: CDO.rack_env
-            }
-          )
-          return ::User.new(email: email)
-        end
 
-        if user.authentication_options.any?(&:email?)
+        if !user.nil? && user.authentication_options.any?(&:email?)
           user.raw_token = send_reset_password_instructions
         else
           Cdo::Metrics.put(
             'User', 'PasswordResetEmailAuthNotFound', 1, {
-              Environment: CDO.rack_env,
-              UserType: user.user_type
+              Environment: CDO.rack_env
             }
           )
         end
