@@ -74,6 +74,13 @@ CenteredSlider.args = {
   value: 50,
 };
 
+export const SliderWithNoLabel = SingleTemplate.bind({});
+SliderWithNoLabel.args = {
+  name: 'controlled_Slider_no_label',
+  value: 50,
+  hideValue: true,
+};
+
 export const SliderWithButtons = SingleTemplate.bind({});
 SliderWithButtons.args = {
   name: 'controlled_Slider_buttons',
