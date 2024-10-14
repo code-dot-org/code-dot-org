@@ -1,16 +1,24 @@
-import GoogleBlockly, {Block, IDraggable, Options} from 'blockly/core';
-import {FlyoutItem} from 'blockly/core/flyout_base';
-import {Svg} from 'blockly/core/utils';
+import * as GoogleBlockly from 'blockly/core';
 
 import {ExtendedWorkspaceSvg} from '../types';
 
 const svgPaths = GoogleBlockly.utils.svgPaths;
-interface CdoBlockFlyoutOptions extends Options {
+interface CdoBlockFlyoutOptions extends GoogleBlockly.Options {
   minWidth: number;
   maxWidth: number;
-  parentBlock: Block | null;
+  parentBlock: GoogleBlockly.Block | null;
 }
 
+enum FlyoutItemType {
+  BLOCK = 'block',
+  BUTTON = 'button',
+}
+
+interface FlyoutItem {
+  type: FlyoutItemType;
+  button?: GoogleBlockly.FlyoutButton | undefined;
+  block?: GoogleBlockly.BlockSvg | undefined;
+}
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   private svgClipPath_: SVGElement | undefined;
   parentBlock: GoogleBlockly.Block | null;
@@ -53,7 +61,12 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @returns The flyout's SVG group.
    * @override
    */
-  createDom(tagName: string | Svg<SVGSVGElement> | Svg<SVGGElement>) {
+  createDom(
+    tagName:
+      | string
+      | GoogleBlockly.utils.Svg<SVGSVGElement>
+      | GoogleBlockly.utils.Svg<SVGGElement>
+  ) {
     // super.createDom returns this.svgGroup_. Explicitly setting it here
     // so that TypeScript knows it is not null.
     this.svgGroup_ = super.createDom(tagName) as SVGGElement;
@@ -197,7 +210,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @override
    */
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  wouldDelete(_element: IDraggable, _couldConnect: boolean) {
+  wouldDelete(_element: GoogleBlockly.IDraggable, _couldConnect: boolean) {
     return false;
   }
 

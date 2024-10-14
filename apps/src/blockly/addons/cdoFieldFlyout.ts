@@ -1,6 +1,10 @@
-import GoogleBlockly, {Block, FieldConfig, WorkspaceSvg} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import CdoBlockFlyout from './cdoBlockFlyout';
+
+interface FieldConfig {
+  tooltip?: string;
+}
 
 interface FieldFlyoutConfig extends FieldConfig {
   flyoutKey: string;
@@ -8,7 +12,7 @@ interface FieldFlyoutConfig extends FieldConfig {
 }
 
 export default class CdoFieldFlyout extends GoogleBlockly.Field {
-  private workspace_: WorkspaceSvg | undefined;
+  private workspace_: GoogleBlockly.WorkspaceSvg | undefined;
   private flyout_: CdoBlockFlyout | undefined;
   private minWidth_ = 0;
   private maxWidth_ = 1000;
@@ -36,7 +40,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     return new CdoFieldFlyout(options.flyoutKey, options);
   }
 
-  static getFlyoutId(block: Block) {
+  static getFlyoutId(block: GoogleBlockly.Block) {
     return `flyout_${block.type}_${block.id}`;
   }
 
@@ -48,7 +52,8 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @override
    */
   initView() {
-    this.workspace_ = this.getSourceBlock()?.workspace as WorkspaceSvg;
+    this.workspace_ = this.getSourceBlock()
+      ?.workspace as GoogleBlockly.WorkspaceSvg;
     const options =
       Blockly.getMainWorkspace()?.options || this.workspace_?.options || {};
     this.flyout_ = new CdoBlockFlyout({
