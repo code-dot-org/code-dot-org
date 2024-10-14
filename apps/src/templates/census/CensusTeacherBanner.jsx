@@ -5,6 +5,7 @@ import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
+import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
 import color from '@cdo/apps/util/color';
 import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
@@ -157,8 +158,7 @@ export default function CensusTeacherBanner({
   };
 
   const renderSchoolInfoForm = () => {
-    const submitDisabled =
-      schoolInfo.schoolId === NonSchoolOptions.SELECT_A_SCHOOL;
+    const submitDisabled = schoolInfoInvalid(schoolInfo);
     return (
       <div>
         <div style={styles.header}>
