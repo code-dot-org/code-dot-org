@@ -318,6 +318,9 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       nonce: @nonce,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri,
       'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest',
+      'https://purl.imsglobal.org/spec/lti/claim/tool_platform' => {
+        name: 'test_platform'
+      },
       custom_claims_key => {
         display_name: 'hansolo',
         full_name: 'Han Solo',
@@ -503,6 +506,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     deployment = LtiDeployment.find_by(deployment_id: @deployment_id)
     assert deployment
+    assert deployment.name
     assert_equal deployment, @integration.lti_deployments.first
   end
 
@@ -514,6 +518,19 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_equal deployment, @integration.lti_deployments.first
     assert_equal @integration.lti_deployments.count, 1
+  end
+
+  test 'auth - given an existing LTI deployment in our system, update deployment with name if empty' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
+    assert deployment
+    assert_nil deployment.name
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_equal deployment, @integration.lti_deployments.first
+    assert_equal @integration.lti_deployments.count, 1
+    deployment.reload
+    assert deployment.name
   end
 
   test 'auth - link lti_user_identity with lti_deployment' do
