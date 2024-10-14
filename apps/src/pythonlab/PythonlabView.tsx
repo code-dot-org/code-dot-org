@@ -4,6 +4,7 @@ import {useSource} from '@codebridge/hooks/useSource';
 import {ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
+import {debounce, isEqual} from 'lodash';
 import React, {useCallback, useContext, useEffect, useState} from 'react';
 
 import {
@@ -23,7 +24,9 @@ import {
   useAppDispatch,
   useAppSelector,
 } from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
 import {TestResults} from '../constants';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
@@ -120,10 +123,7 @@ const PythonlabView: React.FunctionComponent = () => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
-  const unitProgress = useAppSelector(state => state.progress.unitProgress);
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-  const progressState =
-    unitProgress && currentLevelId && unitProgress[parseInt(currentLevelId)];
+  const currentLevel = useAppSelector(state => getCurrentLevel(state));
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -141,7 +141,7 @@ const PythonlabView: React.FunctionComponent = () => {
   );
 
   const setSourceAndUpdateProgress = (newSource: MultiFileSource) => {
-    updateToInProgress();
+    updateToInProgress(true, newSource);
     setSource(newSource);
   };
 
@@ -176,15 +176,25 @@ const PythonlabView: React.FunctionComponent = () => {
     }
   };
 
-  const updateToInProgress = useCallback(() => {
-    const hasStartedOrPassed =
-      progressState &&
-      (progressState.result === TestResults.LEVEL_STARTED ||
-        progressState.result >= TestResults.MINIMUM_PASS_RESULT);
-    if (!hasStartedOrPassed) {
-      dispatch(sendProgressReport('pythonlab', TestResults.LEVEL_STARTED));
-    }
-  }, [dispatch, progressState]);
+  const debouncedProgressReport = debounce(() => {
+    dispatch(sendProgressReport('pythonlab', TestResults.LEVEL_STARTED));
+  }, 100);
+
+  const updateToInProgress = useCallback(
+    (checkSourceChanged?: boolean, newSource?: MultiFileSource) => {
+      if (currentLevel && currentLevel.status === LevelStatus.not_tried) {
+        let sendReport = true;
+        if (checkSourceChanged && newSource) {
+          sendReport = !isEqual(newSource, source);
+        }
+        console.log({sendReport});
+        if (sendReport) {
+          debouncedProgressReport();
+        }
+      }
+    },
+    [currentLevel, debouncedProgressReport, source]
+  );
 
   return (
     <div className={moduleStyles.pythonlab}>

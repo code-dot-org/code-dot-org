@@ -14,7 +14,6 @@ import {
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {TestResults} from '@cdo/apps/constants';
 import {
   isPredictAnswerLocked,
   setPredictResponse,
@@ -110,15 +109,19 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const scriptName =
     useAppSelector(state => state.progress.scriptName) || undefined;
 
-  const unitProgress = useAppSelector(state => state.progress.unitProgress);
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-  const progressState =
-    unitProgress && currentLevelId && unitProgress[parseInt(currentLevelId)];
+  const currentLevel = useAppSelector(state => getCurrentLevel(state));
 
   // The icon in the validated instructions panel should match the icon in the
   // header.
+  const passedStatuses = [
+    LevelStatus.perfect,
+    LevelStatus.submitted,
+    LevelStatus.passed,
+    LevelStatus.free_play_complete,
+    LevelStatus.completed_assessment,
+  ];
   const showPassedIcon =
-    progressState && progressState.result >= TestResults.MINIMUM_PASS_RESULT;
+    currentLevel && passedStatuses.includes(currentLevel.status);
 
   const dispatch = useAppDispatch();
 
