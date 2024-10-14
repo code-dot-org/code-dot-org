@@ -39,7 +39,6 @@ const SummaryContainer = ({store, scriptData, isLevelGroup}) => {
           <SubLevelDropdown
             subLevels={scriptData.levels}
             handleChange={updateSubLevel}
-            //className={styles.subLevelDropdown}
           />
         </div>
       )}
@@ -47,8 +46,10 @@ const SummaryContainer = ({store, scriptData, isLevelGroup}) => {
         viewingLevelData={updatedScriptData.viewing_level_data}
       />
       <InstructorsOnly>
-        <SummaryResponses scriptData={updatedScriptData} />
-        <SummaryTeacherInstructions scriptData={updatedScriptData} />
+        <div>
+          <SummaryResponses scriptData={updatedScriptData} />
+          <SummaryTeacherInstructions scriptData={updatedScriptData} />
+        </div>
       </InstructorsOnly>
     </Provider>
   );

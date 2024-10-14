@@ -10,7 +10,7 @@ import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses'
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const JS_DATA = {
-  level: {
+  viewing_level_data: {
     type: 'FreeResponse',
     id: 0,
   },
@@ -89,7 +89,7 @@ describe('SummaryResponses', () => {
     renderDefault(
       {},
       {
-        level: {
+        viewing_level_data: {
           type: 'Multi',
           id: 0,
           properties: {
@@ -107,7 +107,7 @@ describe('SummaryResponses', () => {
     renderDefault(
       {},
       {
-        level: {
+        viewing_level_data: {
           type: 'FreeResponse',
           id: 0,
           properties: {
@@ -125,7 +125,7 @@ describe('SummaryResponses', () => {
     renderDefault(
       {},
       {
-        level: {
+        viewing_level_data: {
           type: 'Multi',
           id: 0,
           properties: {

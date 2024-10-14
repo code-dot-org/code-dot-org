@@ -24,6 +24,7 @@ $(document).ready(() => {
   const levelData = getScriptData('levelData');
   const initData = getScriptData('initData');
   window.levelData = levelData;
+  console.log('levelData', levelData);
 
   if (initData) {
     initLevelGroup(
@@ -32,24 +33,24 @@ $(document).ready(() => {
       initData.last_attempt
     );
 
+    // if (
+    //   levelData.activity_guide_level ||
+    //   levelData.activity_guide_level === 'true'
+    // ) {
     $('#summaryEntryPoint').each(function () {
       const container = this;
       const store = getStore();
-      const isActivityGuideLevel =
-        appOptions.level.activityGuideLevel === true ||
-        appOptions.level.activityGuideLevel === 'true';
 
-      if (isActivityGuideLevel) {
-        ReactDOM.render(
-          <Provider store={store}>
-            <InstructorsOnly>
-              <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
-            </InstructorsOnly>
-          </Provider>,
-          container
-        );
-      }
+      ReactDOM.render(
+        <Provider store={store}>
+          <InstructorsOnly>
+            <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
+          </InstructorsOnly>
+        </Provider>,
+        container
+      );
     });
+    // }
   }
 
   reportTeacherReviewingStudentNonLabLevel({page: initData?.page});

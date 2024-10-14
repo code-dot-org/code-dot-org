@@ -51,13 +51,12 @@ const SummaryResponses = ({
 
   const logEvent = useCallback(
     eventName => {
-      const {levels} = scriptData;
       analyticsReporter.sendEvent(
         eventName,
         {
-          levelId: levels[0].id,
-          levelName: levels[0].name,
-          levelType: levels[0].type,
+          levelId: scriptData.viewing_level_data.id,
+          levelName: scriptData.viewing_level_data.name,
+          levelType: scriptData.viewing_level_data.type,
           sectionSelected: !!selectedSection,
           ...scriptData.reportingData,
         },
