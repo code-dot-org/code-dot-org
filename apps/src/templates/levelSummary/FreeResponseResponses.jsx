@@ -11,8 +11,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
-import ResponseMenuDropdown from './ResponseMenuDropdown';
-
 import styles from './summary.module.scss';
 import { ActionDropdown } from '@cdo/apps/componentLibrary/dropdown';
 
@@ -89,19 +87,6 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
             }}
             options= {getMenuOptions(pinResponse, unpinResponse, response)}
             aria-label={i18n.additionalOptions()}
-          />
-          <ResponseMenuDropdown
-            response={response}
-            hideResponse={userId => {
-              analyticsReporter.sendEvent(
-                EVENTS.CFU_RESPONSE_HIDDEN,
-                eventData,
-                PLATFORMS.BOTH
-              );
-              setHiddenResponses(prevHidden => [...prevHidden, userId]);
-            }}
-            pinResponse={pinResponse}
-            unpinResponse={unpinResponse}
           />
         </div>
       </div>
