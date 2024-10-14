@@ -2,6 +2,12 @@
 @import 'style-constants';
 @import '@cdo/apps/componentLibrary/common/styles/colors.css';
 
+@media print {
+  .sidebarContainer {
+    display: none !important;
+  }
+}
+
 .pageAndSidebar {
   display: flex;
   flex-direction: row;
@@ -130,4 +136,29 @@
   font-weight: 600;
   color: $light_primary_500;
   text-transform: uppercase;
+  height: 18px;
+}
+
+.skeletonHeaderSectionName {
+  width: fit-content;
+}
+
+.calendarContentContainer {
+  width: fit-content;
+}
+
+.minutesPerWeekWrapper {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.minutesPerWeekDescription {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.calendarDropdown {
+  width: fit-content;
+  margin-bottom: 0;
 }

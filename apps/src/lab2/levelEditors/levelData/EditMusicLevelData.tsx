@@ -6,8 +6,12 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
-import {BlockMode, DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
-import globals from '@cdo/apps/music/globals';
+import {
+  BlockMode,
+  DEFAULT_LIBRARY,
+  DEFAULT_PACK,
+} from '@cdo/apps/music/constants';
+import MusicRegistry from '@cdo/apps/music/MusicRegistry';
 import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
 import MusicPlayer from '@cdo/apps/music/player/MusicPlayer';
 import {MusicLevelData} from '@cdo/apps/music/types';
@@ -20,6 +24,7 @@ import RawJsonEditor from './RawJsonEditor';
 import moduleStyles from './edit-music-level-data.module.scss';
 
 const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024'];
+const RECOMMENDED_LIBRARY = 'launch2024';
 
 const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
 
@@ -35,10 +40,14 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
 }) => {
   useEffect(() => {
     setUpBlocklyForMusicLab();
-    globals.setPlayer(new MusicPlayer());
+    MusicRegistry.player = new MusicPlayer();
   }, []);
 
   const [levelData, setLevelData] = useState(initialLevelData);
+  // Immediately set a level, if needed, so we can populate its allowed sounds.
+  if (!levelData.library) {
+    levelData.library = RECOMMENDED_LIBRARY;
+  }
 
   const blockMode = levelData.blockMode || BlockMode.SIMPLE2;
   useEffect(() => {
@@ -85,6 +94,10 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       />
       <CollapsibleSection headerContent="Library & Sounds">
         <div className={moduleStyles.section}>
+          <i>
+            Note that currently, all levels within a lesson must use the same
+            library.
+          </i>
           <div>
             <SimpleDropdown
               labelText="Selected Library"
@@ -112,7 +125,11 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 labelText="Selected Artist Pack"
                 name="packId"
                 size="s"
-                items={[{value: 'none', text: '(none)'}, ...restrictedPacks]}
+                items={[
+                  {value: 'none', text: '(none)'},
+                  {value: DEFAULT_PACK, text: 'Code.org (Default)'},
+                  ...restrictedPacks,
+                ]}
                 selectedValue={levelData.packId}
                 onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
                   const packId =
@@ -175,18 +192,52 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
         <EditMusicToolbox
           toolbox={levelData.toolbox}
           blockMode={levelData.blockMode || BlockMode.SIMPLE2}
+          addFunctionDefinition={levelData.toolbox?.addFunctionDefinition}
+          addFunctionCalls={levelData.toolbox?.addFunctionCalls}
           onChange={toolbox => setLevelData({...levelData, toolbox})}
-          onBlockModeChange={blockMode =>
+          onBlockModeChange={blockMode => {
+            const startSourcesFilename = `startSources${blockMode}`;
+            const startSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
+
             // Reset toolbox blocks when changing block mode
             setLevelData({
               ...levelData,
               blockMode,
+              startSources,
               toolbox: {
                 ...levelData.toolbox,
                 blocks: undefined,
+                addFunctionDefinition: undefined,
+                addFunctionCalls: undefined,
               },
-            })
-          }
+            });
+          }}
+          onAddFunctionDefinitionChange={(addFunctionDefinition: boolean) => {
+            setLevelData({
+              ...levelData,
+              toolbox: {
+                ...levelData.toolbox,
+                addFunctionDefinition,
+                // Call blocks are required if definitions are included.
+                addFunctionCalls: addFunctionDefinition
+                  ? true
+                  : levelData.toolbox?.addFunctionCalls,
+              },
+            });
+          }}
+          onAddFunctionCallsChange={(addFunctionCalls: boolean) => {
+            setLevelData({
+              ...levelData,
+              toolbox: {
+                ...levelData.toolbox,
+                // Definitions are prohibited unless call blocks are included.
+                addFunctionDefinition: !addFunctionCalls
+                  ? false
+                  : levelData.toolbox?.addFunctionDefinition,
+                addFunctionCalls,
+              },
+            });
+          }}
         />
       </CollapsibleSection>
       <hr />

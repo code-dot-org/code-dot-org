@@ -67,6 +67,7 @@ export const highSchoolCourseOfferings = {
           id: 74,
           key: 'csd',
           display_name: 'Computer Science Discoveries',
+          ai_teaching_assistant_available: true,
           course_versions: [
             [
               736,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_09_16_200341) do
+ActiveRecord::Schema.define(version: 2024_10_09_182721) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 2024_09_16_200341) do
     t.text "response"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["execution_status"], name: "index_aichat_requests_on_execution_status"
   end
 
   create_table "aichat_sessions", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
@@ -449,6 +450,7 @@ ActiveRecord::Schema.define(version: 2024_09_16_200341) do
     t.string "video"
     t.datetime "published_date"
     t.integer "self_paced_pl_course_offering_id"
+    t.boolean "ai_teaching_assistant_available", default: false, null: false
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -931,6 +933,7 @@ ActiveRecord::Schema.define(version: 2024_09_16_200341) do
     t.bigint "lti_integration_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
     t.index ["deployment_id"], name: "index_lti_deployments_on_deployment_id"
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end

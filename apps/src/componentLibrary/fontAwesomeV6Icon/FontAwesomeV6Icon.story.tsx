@@ -22,11 +22,11 @@ const MultipleTemplate: StoryFn<{
 }> = args => (
   <>
     <p>
-      * Margins on this screen does not represent Component's margins, and are
-      only added to improve storybook view *
+      * Font size and Margins on this screen does not represent Component's
+      margins, and are only added to improve storybook view *
     </p>
     <p>Multiple Icons:</p>
-    <div style={{display: 'flex', gap: '20px'}}>
+    <div style={{display: 'flex', gap: '20px', fontSize: '25px'}}>
       {args.components?.map(componentArg => (
         <FontAwesomeV6Icon
           key={componentArg.iconName + componentArg.iconStyle}
@@ -44,15 +44,102 @@ DefaultFontAwesomeV6Icon.args = {
   title: 'check',
 };
 
-export const ClassNameBrandsIconExampleFontAwesomeV6Icon =
-  MultipleTemplate.bind({});
-ClassNameBrandsIconExampleFontAwesomeV6Icon.args = {
+export const BrandsIconExampleFontAwesomeV6Icon = MultipleTemplate.bind({});
+BrandsIconExampleFontAwesomeV6Icon.args = {
   components: [
     {
       iconStyle: 'light',
       iconName: 'microsoft',
-      className: 'fa-brands',
+      iconFamily: 'brands',
       title: 'microsoft',
+    },
+    {
+      iconName: 'google',
+      iconFamily: 'brands',
+      title: 'google',
+    },
+    {
+      iconName: 'apple',
+      iconFamily: 'brands',
+      title: 'apple',
+    },
+  ],
+};
+
+export const GroupOfFamiliesOfFontAwesomeV6Icon = MultipleTemplate.bind({});
+GroupOfFamiliesOfFontAwesomeV6Icon.args = {
+  components: [
+    {
+      iconFamily: 'brands',
+      iconName: 'github',
+      title: 'github-brands',
+    },
+    {
+      iconStyle: 'solid',
+      iconFamily: 'duotone',
+      iconName: 'house',
+      title: 'house-duotone',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'text-speech',
+      title: 'text-speach-kit',
+    },
+  ],
+};
+
+export const GroupOfCustomIconsOfFontAwesomeV6Icon = MultipleTemplate.bind({});
+GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
+  components: [
+    {
+      iconFamily: 'kit',
+      iconName: 'click-to-continue-down',
+      title: 'click-to-continue-down-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'click-to-continue-up',
+      title: 'click-to-continue-up-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'connected-level',
+      title: 'connected-level-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-bot-solid',
+      title: 'ai-bot-solid-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-bot-regular',
+      title: 'ai-bot-regular-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'text-speech-pause',
+      title: 'text-speech-pause-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'text-speech',
+      title: 'text-speech',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'solid-thumbtack-slash',
+      title: 'solid-thumbtack-slash-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'solid-gear-pen',
+      title: 'solid-gear-pen-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'clever',
+      title: 'clever-kit',
     },
   ],
 };

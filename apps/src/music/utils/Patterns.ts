@@ -1,8 +1,5 @@
 import {DEFAULT_PATTERN_LENGTH} from '../constants';
-import {
-  PatternEventValue,
-  PatternTickEvent,
-} from '../player/interfaces/PatternEvent';
+import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 import MusicLibrary from '../player/MusicLibrary';
 
 // This file contains a helper function for patterns, and is used by the
@@ -17,22 +14,20 @@ export interface PatternGraphEvent {
 }
 
 interface GenerateGraphDataFromPatternOptions {
-  patternEventValue: PatternEventValue;
+  value: InstrumentEventValue;
   width: number;
   height: number;
   padding: number;
-  library: MusicLibrary;
 }
 
 // Given a PatternEventValue, generate a set of data for graphing it.
 export function generateGraphDataFromPattern({
-  patternEventValue,
+  value,
   width,
   height,
   padding,
-  library,
 }: GenerateGraphDataFromPatternOptions): PatternGraphEvent[] {
-  const length = patternEventValue.length || DEFAULT_PATTERN_LENGTH;
+  const length = value.length || DEFAULT_PATTERN_LENGTH;
   const eventsLength = length * 16;
 
   // Event widths fit in the space; event heights match the widths.
@@ -44,20 +39,19 @@ export function generateGraphDataFromPattern({
   const useWidth = width - 2 * padding - noteWidth;
   const useHeight = height - 2 * padding - noteHeight;
 
-  const currentFolder = library.getFolderForFolderId(patternEventValue.kit);
+  const currentFolder = MusicLibrary.getInstance()?.getFolderForFolderId(
+    value.instrument
+  );
   if (!currentFolder) {
     return [];
   }
 
   const numSounds = currentFolder.sounds.length;
 
-  return patternEventValue.events.map((event: PatternTickEvent) => {
-    const soundIndex = currentFolder.sounds.findIndex(
-      sound => sound.src === event.src
-    );
+  return value.events.map(event => {
     return {
       x: 1 + ((event.tick - 1) * useWidth) / (eventsLength - 1) + padding,
-      y: 1 + padding + (soundIndex * useHeight) / (numSounds - 1),
+      y: 1 + padding + (event.note * useHeight) / (numSounds - 1),
       width: noteWidth,
       height: noteHeight,
       tick: event.tick,

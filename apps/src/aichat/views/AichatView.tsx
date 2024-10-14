@@ -4,6 +4,7 @@ import React, {useCallback, useEffect} from 'react';
 
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import ActionDropdown from '@cdo/apps/componentLibrary/dropdown/actionDropdown/ActionDropdown';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
@@ -20,6 +21,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getUserHasAichatAccess} from '../aichatApi';
+import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
 import {
   addChatEvent,
@@ -30,6 +32,7 @@ import {
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   sendAnalytics,
+  setShowModalType,
   setStartingAiCustomizations,
   setUserHasAichatAccess,
   setViewMode,
@@ -57,6 +60,7 @@ const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
 
   const beforeNextLevel = useCallback(() => {
     dispatch(sendSuccessReport('aichat'));
@@ -100,8 +104,8 @@ const AichatView: React.FunctionComponent = () => {
     projectManager.addSaveSuccessListener(() => {
       dispatch(onSaveComplete());
     });
-    projectManager.addSaveFailListener((e: Error) => {
-      dispatch(onSaveFail(e));
+    projectManager.addSaveFailListener(() => {
+      dispatch(onSaveFail());
     });
   }, [projectManager, dispatch]);
 
@@ -244,6 +248,12 @@ const AichatView: React.FunctionComponent = () => {
                 headerContent={commonI18n.instructions()}
                 className={moduleStyles.panelContainer}
                 headerClassName={moduleStyles.panelHeader}
+                rightHeaderContent={renderInstructionsHeaderRight(
+                  isUserTeacher,
+                  () => {
+                    dispatch(setShowModalType(ModalTypes.TEACHER_ONBOARDING));
+                  }
+                )}
               >
                 <Instructions
                   beforeNextLevel={beforeNextLevel}
@@ -307,7 +317,7 @@ const AichatView: React.FunctionComponent = () => {
 
 const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
   return (
-    <div className={moduleStyles.chatHeaderRight}>
+    <div>
       <Button
         icon={{iconStyle: 'solid', iconName: 'refresh'}}
         isIconOnly={true}
@@ -316,10 +326,37 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
         ariaLabel={'Start Over'}
         size={'xs'}
         type="tertiary"
-        className={moduleStyles.aichatViewButton}
+        className={moduleStyles.startOverButton}
       />
     </div>
   );
+};
+
+const renderInstructionsHeaderRight = (
+  isUserTeacher: boolean | undefined,
+  onInfoClick: () => void
+) => {
+  return isUserTeacher ? (
+    <ActionDropdown
+      name="instructionsInfoDropdown"
+      labelText="Instructions Info Dropdown"
+      size="xs"
+      triggerButtonProps={{
+        type: 'tertiary',
+        isIconOnly: true,
+        color: 'black',
+        icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
+      }}
+      options={[
+        {
+          value: 'teacherOnboardingModal',
+          label: aichatI18n.aboutAichatLab(),
+          icon: {iconName: 'circle-info', iconStyle: 'solid'},
+          onClick: onInfoClick,
+        },
+      ]}
+    />
+  ) : null;
 };
 
 export default AichatView;

@@ -1,0 +1,10 @@
+name 'Data Sci U2 Pre Q5_2024-pilot'
+
+question 'Differentiate between `.loc` and `.iloc` in pandas, providing examples of how each is used to access and manipulate data within a DataFrame.'
+
+wrong '`.loc` and `.iloc` both use label-based indexing, making them interchangeable in most scenarios.'
+wrong '`.loc` uses integer-based indexing, while `.iloc` uses label-based indexing, with `.loc` being more flexible in handling slices.'
+right '`.loc` uses label-based indexing, allowing selection of rows and columns by label names, while `.iloc` uses integer-based indexing, allowing selection by row and column positions.'
+wrong '`.loc` is used for modifying DataFrame structures, while `.iloc` is used exclusively for data retrieval.'
+
+allow_multiple_attempts false

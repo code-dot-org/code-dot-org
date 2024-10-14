@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -19,6 +19,8 @@ const UserChatMessageEditor: React.FunctionComponent<{
 
   const dispatch = useAppDispatch();
 
+  const inputRef = useRef<HTMLTextAreaElement | null>(null);
+
   const handleSubmit = useCallback(
     (userMessage: string) => {
       if (!isWaitingForChatResponse) {
@@ -32,7 +34,9 @@ const UserChatMessageEditor: React.FunctionComponent<{
 
   useEffect(() => {
     if (!disabled) {
-      document.getElementById('uitest-chat-textarea')?.focus();
+      // Return focus to user input textarea after user submits chat message and response displayed
+      // or after user updates model customizations.
+      inputRef.current?.focus();
     }
   }, [disabled]);
 
@@ -41,6 +45,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
       onSubmit={handleSubmit}
       disabled={disabled}
       editorContainerClassName={editorContainerClassName}
+      ref={inputRef}
     />
   );
 };

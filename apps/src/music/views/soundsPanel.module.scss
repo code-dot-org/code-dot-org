@@ -3,21 +3,15 @@
 .soundsPanel {
   user-select: none;
   width: 600px;
-  height: 340px;
+  height: 290px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
 
   &Top {
     display: flex;
     justify-content: space-between;
-    margin: 5px 0;
-
-    .segmentedButtons {
-      span {
-        font-size: 12px !important;
-      }
-    }
+    margin-bottom: 5px;
+    gap: 8px;
   }
 
   &Body {
@@ -60,9 +54,6 @@
 
     &:first-child {
       margin-top: 1px;
-    }
-    &:not(:first-child) {
-      margin-top: 14px;
     }
 
     &Left {
@@ -118,13 +109,14 @@
     &Left {
       display: flex;
       align-items: center;
-      width: 200px;
+      width: calc(100% - 30px);
 
       .typeIcon {
         margin-right: 6px;
         margin-left: 4px;
         width: 24px;
         text-align: center;
+        flex-shrink: 0;
       }
 
       .name {

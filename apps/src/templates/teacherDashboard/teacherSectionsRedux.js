@@ -69,10 +69,6 @@ const SET_AVAILABLE_PARTICIPANT_TYPES =
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
-// DCDO Flag - show/hide Lock Section field
-const SET_SHOW_LOCK_SECTION_FIELD =
-  'teacherDashboard/SET_SHOW_LOCK_SECTION_FIELD';
-
 /** Sets teacher's current authentication providers */
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
@@ -171,13 +167,6 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
 });
 export const setPageType = pageType => ({type: SET_PAGE_TYPE, pageType});
 
-// DCDO Flag - show/hide Lock Section field
-export const setShowLockSectionField = showLockSectionField => {
-  return {
-    type: SET_SHOW_LOCK_SECTION_FIELD,
-    showLockSectionField,
-  };
-};
 export const setSectionCodeReviewExpiresAt = (
   sectionId,
   codeReviewExpiresAt
@@ -698,8 +687,6 @@ const initialState = {
   loadError: null,
   // The page where the action is occurring
   pageType: '',
-  // DCDO Flag - show/hide Lock Section field
-  showLockSectionField: null,
   ltiSyncResult: null,
   isLoadingSectionData: false,
 };
@@ -728,6 +715,8 @@ function newSectionData(participantType) {
     courseVersionId: null,
     courseDisplayName: null,
     unitId: null,
+    unitName: null,
+    isAssignedStandaloneCourse: false,
     hidden: false,
     restrictSection: false,
     aiTutorEnabled: false,
@@ -972,6 +961,7 @@ export default function teacherSections(state = initialState, action) {
       initialUnitId: initialSectionData.unitId,
       initialCourseOfferingId: initialSectionData.courseOfferingId,
       initialCourseVersionId: initialSectionData.courseVersionId,
+      initialUnitName: initialSectionData.unitName,
       initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
     };
@@ -1125,6 +1115,9 @@ export default function teacherSections(state = initialState, action) {
     if (section.courseVersionId !== state.initialCourseVersionId) {
       assignmentData.course_version_id = section.courseVersionId;
     }
+    if (section.unitName !== state.initialUnitName) {
+      assignmentData.unitName = section.unitName;
+    }
     if (
       // If either of these is not undefined, then assignment changed and should be logged
       !(typeof assignmentData.unit_id === 'undefined') ||
@@ -1259,14 +1252,6 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       ltiSyncResult: action.results,
-    };
-  }
-
-  // DCDO Flag - show/hide Lock Section field
-  if (action.type === SET_SHOW_LOCK_SECTION_FIELD) {
-    return {
-      ...state,
-      showLockSectionField: action.showLockSectionField,
     };
   }
 

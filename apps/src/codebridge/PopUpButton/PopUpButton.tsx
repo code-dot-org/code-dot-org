@@ -1,8 +1,10 @@
+import classNames from 'classnames';
 import React, {useState, useCallback} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './PopUpButton.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 type PopUpButtonProps = {
   iconName: string;
@@ -32,6 +34,7 @@ export const PopUpButton = ({
         | React.MouseEvent<HTMLButtonElement>
         | React.MouseEvent<HTMLAnchorElement>
     ) => {
+      e.stopPropagation();
       setButtonRect((e.target as HTMLElement).getBoundingClientRect());
       setOffsetParent(
         (e.target as HTMLElement).offsetParent?.getBoundingClientRect()
@@ -57,12 +60,13 @@ export const PopUpButton = ({
   return (
     <>
       <Button
-        className={className}
+        className={classNames(className, darkModeStyles.iconOnlyTertiaryButton)}
         size="xs"
         icon={{iconStyle: 'solid', iconName}}
-        color="black"
+        color="white"
         isIconOnly
         onClick={clickHandler}
+        type={'tertiary'}
       />
       {isOpen && buttonRect && offsetParent && (
         <div
