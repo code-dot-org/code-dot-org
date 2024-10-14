@@ -1468,6 +1468,12 @@
   ai_vid_ethics1_caption: "Ethics & AI: Equal Access and Algorithmic Bias"
   ai_vid_ethics2_caption: "Ethics & AI: Privacy and the Future of Work"
 
+  gen_ai_vid_input_caption: "Generative AI: Input & Pre-training"
+  gen_ai_vid_storage_caption: "Generative AI: Storage & Embeddings"
+  gen_ai_vid_processing_caption: "Generative AI: Processing & Neural Networks"
+  gen_ai_vid_attention_caption: "Generative AI: Attention"
+  gen_ai_vid_output_caption: "Generative AI: Output & Probabilities"
+
   admins_page_top_heading: "Expand computer science in your district"
   admins_page_top_subhead: "Unlock the future of education with Code.org's comprehensive computer science (CS) programs."
   admins_page_top_desc: "Join a visionary network of over 2 million educators dedicated to shaping innovative leaders, critical thinkers, and engaged digital citizens. Code.org partners with administrators to seamlessly integrate CS into schools, offering extensive resources, tailored professional development, and continual support for systemic success."
