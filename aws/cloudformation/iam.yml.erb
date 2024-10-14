@@ -321,6 +321,7 @@ roles = {
       '!Ref DataAnalystPolicy',
       '!Ref DataAnalystDmsReadOnlyPolicy',
       '!Ref DataAnalystRedshiftPolicy',
+      '!Ref CloudwatchReaderPolicy',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
     ]
@@ -345,7 +346,7 @@ roles = {
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess'
       '!Ref BedrockKnowledgeBaseInvocationPolicy',
-      '!Ref CloudwatchViewerPolicy',
+      '!Ref CloudwatchReaderPolicy',
     ]
   }
 }
@@ -730,20 +731,28 @@ roles.each do |name, config| %>
             Resource:
               - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/*'
 
-  CloudwatchViewerPolicy:
+  CloudwatchReaderPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
-      ManagedPolicyName: CloudwatchViewerPolicy
+      ManagedPolicyName: CloudwatchReaderPolicy
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
           - Effect: Allow
             Action:
+              - cloudwatch:DescribeAlarms
+            Resource: 'arn:aws:cloudwatch:*:${AWS::AccountId}:alarm:*'
+          - Effect: Allow
+            Action:
               - cloudwatch:GetDashboard
-              - cloudwatch:ListDashboards
+            Resource: 'arn:aws:cloudwatch::${AWS::AccountId}:dashboard/*'
+          - Effect: Allow
+            Action:
               - cloudwatch:GetMetricData
+              - cloudwatch:GetMetricStatistics
+              - cloudwatch:ListDashboards
               - cloudwatch:ListMetrics
-              - cloudwatch:'cloudwatch:GetMetricStatistics'
+              - logs:DescribeLogGroups
             Resource: '*'
 
   # Used by FirehoseMicroservice Lambda function.
