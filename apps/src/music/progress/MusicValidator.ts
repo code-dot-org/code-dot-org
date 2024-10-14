@@ -104,6 +104,9 @@ export default class MusicValidator extends Validator {
 
           if (eventData.functionContext) {
             this.conditionsChecker.addSatisfiedCondition({
+              name: MusicConditions.PLAYED_SOUND_IN_ANY_FUNCTION.name,
+            });
+            this.conditionsChecker.addSatisfiedCondition({
               name: MusicConditions.PLAYED_SOUND_IN_FUNCTION.name,
               value: eventData.functionContext.name,
             });
