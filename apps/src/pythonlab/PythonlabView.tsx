@@ -4,9 +4,12 @@ import {useSource} from '@codebridge/hooks/useSource';
 import {ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
 
-import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
+import {
+  sendPredictLevelReport,
+  sendProgressReport,
+} from '@cdo/apps/code-studio/progressRedux';
 import {MAIN_PYTHON_FILE, START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -15,7 +18,13 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  AppDispatch,
+  useAppDispatch,
+  useAppSelector,
+} from '@cdo/apps/util/reduxHooks';
+
+import {TestResults} from '../constants';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
@@ -111,6 +120,12 @@ const PythonlabView: React.FunctionComponent = () => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
+  const unitProgress = useAppSelector(state => state.progress.unitProgress);
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const progressState =
+    unitProgress && currentLevelId && unitProgress[parseInt(currentLevelId)];
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
     if (progressManager && appName === 'pythonlab') {
       progressManager.setValidator(
@@ -124,6 +139,11 @@ const PythonlabView: React.FunctionComponent = () => {
     LifecycleEvent.LevelLoadStarted,
     restartPyodideIfProgramIsRunning
   );
+
+  const setSourceAndUpdateProgress = (newSource: MultiFileSource) => {
+    updateToInProgress();
+    setSource(newSource);
+  };
 
   const onRun = async (
     runTests: boolean,
@@ -143,6 +163,7 @@ const PythonlabView: React.FunctionComponent = () => {
       progressManager,
       isStartMode ? undefined : validationFile
     );
+    updateToInProgress();
     // Only send a predict level report if this is a predict level and the predict
     // answer was not locked.
     if (isPredictLevel && !predictAnswerLocked) {
@@ -155,13 +176,23 @@ const PythonlabView: React.FunctionComponent = () => {
     }
   };
 
+  const updateToInProgress = useCallback(() => {
+    const hasStartedOrPassed =
+      progressState &&
+      (progressState.result === TestResults.LEVEL_STARTED ||
+        progressState.result >= TestResults.MINIMUM_PASS_RESULT);
+    if (!hasStartedOrPassed) {
+      dispatch(sendProgressReport('pythonlab', TestResults.LEVEL_STARTED));
+    }
+  }, [dispatch, progressState]);
+
   return (
     <div className={moduleStyles.pythonlab}>
       {source && (
         <Codebridge
           project={source}
           config={config}
-          setProject={setSource}
+          setProject={setSourceAndUpdateProgress}
           setConfig={setConfig}
           startSource={startSource}
           onRun={onRun}
