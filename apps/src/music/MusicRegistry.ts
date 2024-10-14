@@ -1,3 +1,4 @@
+import AnalyticsReporter from './analytics/AnalyticsReporter';
 import MusicPlayer from './player/MusicPlayer';
 
 /**
@@ -7,6 +8,7 @@ import MusicPlayer from './player/MusicPlayer';
  */
 class MusicRegistry {
   private playerRef: MusicPlayer | null = null;
+  private analyticsReporterRef: AnalyticsReporter | null = null;
 
   public showSoundFilters: boolean = false;
   public hideAiTemperature: boolean = false;
@@ -20,6 +22,17 @@ class MusicRegistry {
 
   public set player(player: MusicPlayer) {
     this.playerRef = player;
+  }
+
+  public get analyticsReporter(): AnalyticsReporter {
+    if (!this.analyticsReporterRef) {
+      throw new Error('AnalyticsReporter not set in MusicRegistry');
+    }
+    return this.analyticsReporterRef;
+  }
+
+  public set analyticsReporter(analyticsReporter: AnalyticsReporter) {
+    this.analyticsReporterRef = analyticsReporter;
   }
 }
 
