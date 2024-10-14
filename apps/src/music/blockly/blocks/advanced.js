@@ -8,6 +8,7 @@ import {
   FIELD_EFFECTS_VALUE,
   FIELD_PATTERN_NAME,
   FIELD_SOUNDS_NAME,
+  FIELD_SOUNDS_VALIDATOR,
 } from '../constants';
 import {
   fieldChordDefinition,
@@ -35,6 +36,7 @@ export const playSound = {
     nextStatement: null,
     tooltip: musicI18n.blockly_blockPlaySoundAtMeasureTooltip(),
     helpUrl: '',
+    extensions: [FIELD_SOUNDS_VALIDATOR],
   },
   generator: ctx =>
     'Sequencer.playSoundAtMeasureById("' +

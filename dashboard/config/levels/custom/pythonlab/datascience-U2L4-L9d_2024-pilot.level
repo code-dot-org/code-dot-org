@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2024-09-15T21:39:02.000Z",
   "level_num": "custom",
@@ -22,7 +21,7 @@
           "language": "py",
           "contents": "import matplotlib.pyplot as plt\nimport pandas as pd\n\n#Import the data\ndf = pd.read_csv('US_Gas_Prices.csv', sep=',')\ndf.columns\n\n# Create the chart\nplt.plot(df['Date'], df['US Average'], linestyle=':', color='blue')\n\n# ADD CODE HERE To Display the chart\n\n\n# Add title and labels\nplt.title( 'US Average Gas Prices')\nplt.xlabel('Date')\nplt.ylabel('US Dollars')",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
         },
         "1": {
@@ -46,8 +45,19 @@
     "project_template_level_name": "datascience-U2L4-L6dTempl_2024-pilot",
     "teacher_markdown": "If students encounter issues with their plots not displaying, remind them to check for plt.show() at the end of their plotting commands.\r\n",
     "bubble_choice_description": "Practice creating a bar chart to represent the yield of each of the crops.",
-    "thumbnail_url": "https://images.code.org/9a41fbca5571b9529477685fbfe958e3-avocado.png"
+    "thumbnail_url": "https://images.code.org/9a41fbca5571b9529477685fbfe958e3-avocado.png",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\nimport matplotlib.pyplot as plt\n\nclass TestBitcoinCharts(unittest.TestCase):\n    def setUp(self):\n        # Read the student's code from 'main.py' and parse it into an AST\n        with open('main.py', 'r') as f:\n            self.tree = ast.parse(f.read())\n        self.function_calls = self.get_function_calls()\n\n    def get_function_calls(self):\n        \"\"\"Get all plt function calls in order.\"\"\"\n        function_calls = []\n        for node in ast.walk(self.tree):\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if isinstance(node.func.value, ast.Name) and node.func.value.id == 'plt':\n                    function_calls.append((node.func.attr, node))\n        return function_calls\n\n    def find_nth_function_call(self, func_name, n):\n        \"\"\"Find the nth occurrence of a function call.\"\"\"\n        count = 0\n        for call in self.function_calls:\n            if call[0] == func_name:\n                count += 1\n                if count == n:\n                    return call[1]\n        return None\n\n    def is_column_access(self, node, column_name):\n        return (isinstance(node, ast.Subscript) and \n                isinstance(node.value, ast.Name) and \n                isinstance(node.slice, ast.Constant) and \n                node.slice.value == column_name)\n\n    def test_step_1_create_bar_chart(self):\n        \"\"\"Test if a bar chart is created using bar with correct data.\"\"\"\n        bar_call = self.find_nth_function_call('bar', 1)  # First (and only) bar call\n        self.assertIsNotNone(bar_call, \"No plt.bar() call found.\")\n        \n        args = bar_call.args\n        self.assertGreaterEqual(len(args), 2, \"plt.bar() should have at least two arguments (x and height).\")\n        \n        x_arg = args[0]\n        y_arg = args[1]\n        self.assertTrue(self.is_column_access(x_arg, 'Crop'), \"X-axis should use the 'Crop' column.\")\n        self.assertTrue(self.is_column_access(y_arg, '2000 Yield'), \"Y-axis should use the '2000 Yield' column.\")\n\n    def test_step_2_bar_chart_labels(self):\n        \"\"\"Test if x-axis and y-axis labels are added to the bar chart.\"\"\"\n        xlabel_call = self.find_nth_function_call('xlabel', 2)  # Second xlabel call\n        ylabel_call = self.find_nth_function_call('ylabel', 2)  # Second ylabel call\n        \n        self.assertIsNotNone(xlabel_call, \"X-axis label not set for bar chart using plt.xlabel().\")\n        self.assertIsNotNone(ylabel_call, \"Y-axis label not set for bar chart using plt.ylabel().\")\n        \n\n    def test_step_3_show_bar_chart(self):\n        \"\"\"Test if the bar chart is displayed.\"\"\"\n        show_calls = [call for call in self.function_calls if call[0] == 'show']\n        self.assertGreaterEqual(len(show_calls), 2, \"plt.show() should be called at least twice, once each for both charts.\")\n\n\nif __name__ == '__main__':\n    unittest.main()",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-15T21:39:02.590+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L8d_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L8d_2024-pilot\"},{\"changed_at\":\"2024-09-15 21:40:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-15T21:39:02.590+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L8d_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L8d_2024-pilot\"},{\"changed_at\":\"2024-09-15 21:40:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 03:56:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Pythonlab>
