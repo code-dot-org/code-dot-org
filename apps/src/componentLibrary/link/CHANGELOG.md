@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - updated `Link` props to support native HTML Element attributes
 
-## [0.2.4]()
+## [0.2.4](https://github.com/code-dot-org/code-dot-org/pull/61281)
 
 * minor types updates
 
