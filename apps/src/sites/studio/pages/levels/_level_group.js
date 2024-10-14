@@ -35,15 +35,20 @@ $(document).ready(() => {
     $('#summaryEntryPoint').each(function () {
       const container = this;
       const store = getStore();
+      const isActivityGuideLevel =
+        appOptions.level.activityGuideLevel === true ||
+        appOptions.level.activityGuideLevel === 'true';
 
-      ReactDOM.render(
-        <Provider store={store}>
-          <InstructorsOnly>
-            <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
-          </InstructorsOnly>
-        </Provider>,
-        container
-      );
+      if (isActivityGuideLevel) {
+        ReactDOM.render(
+          <Provider store={store}>
+            <InstructorsOnly>
+              <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
+            </InstructorsOnly>
+          </Provider>,
+          container
+        );
+      }
     });
   }
 
