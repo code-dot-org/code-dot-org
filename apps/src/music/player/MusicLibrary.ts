@@ -75,11 +75,11 @@ export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
     // Second, retrieve any partial library files.  These contain
     // additional content that will be merged into the library.
     const partialsPromises: Promise<GetResponse<LibraryJson>>[] | undefined =
-      libraryJson.partials?.map(merge => {
+      libraryJson.partials?.map(partial => {
         return HttpClient.fetchJson<LibraryJson>(
           getBaseAssetUrl() +
             'v2/partials/' +
-            merge +
+            partial +
             '.json' +
             (requestVersion ? `?version=${requestVersion}` : ''),
           {},
