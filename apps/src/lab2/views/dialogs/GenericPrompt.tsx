@@ -83,6 +83,12 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   const handleInputChange = useCallback(
     (newInput: string) => {
       setPromiseArgs(newInput);
+      // if the user has typed something in and we do not currently have an error,
+      // then use the debounced handler with the delay.
+      //
+      //That'll prevent the error from popping up immediately and giving a chance to type.
+      // Otherwise, if there is no input or the user already has an error, then we want to
+      // validate immediately (in an attempt to clear the error), so use the non-debounced version.
       if (newInput.length && !errorMessage?.length) {
         debouncedErrorHandler(newInput);
       } else {
@@ -102,7 +108,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   // as well as calling validateInput on it to confirm it's acceptable.'
   useEffect(() => handleInputChange(prompt), []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // we're going to hande in a custom buttonCallback getter to the generic dialog. We don't need to worry about memoizing this,
+  // we're going to hand in a custom buttonCallback getter to the generic dialog. We don't need to worry about memoizing this,
   // since it'll get memoized up in the parent component. When the user clicks the confirm button, we're just going to re-validate
   // the prompt. If if produces a validation error, display it and bow out. Otherwise, just proceed with the default handler.
   //
