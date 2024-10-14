@@ -85,7 +85,7 @@ def main
   puts "Dry-run mode: " + (options[:dry_run]).to_s.colorize(:light_cyan)
 
   unless options[:dry_run]
-    puts "\nChecking autoscaling targets...\n"
+    puts "\nDeregistering autoscaling targets, if present...\n"
     Config::ENDPOINT_CONFIGS.each do |config|
       deregister_auto_scaling(config[:model_id], options[:environment])
     end
