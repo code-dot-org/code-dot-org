@@ -314,17 +314,18 @@ const InnerFileBrowser = React.memo(
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f =>
             !isStartMode && f.type === ProjectFileType.LOCKED_STARTER ? (
+              /* Locked starter files are not draggable, unless we are in start mode */
               <FileRow
+                key={f.id}
                 file={f}
                 isReadOnly={isReadOnly}
-                renameFilePrompt={renameFilePrompt}
                 appName={appName}
-                handleDeleteFile={handleDeleteFile}
                 hasValidationFile={hasValidationFile}
-                setFileType={setFileType}
                 isStartMode={isStartMode}
                 enableMenu={true}
-                key={f.id}
+                setFileType={setFileType}
+                handleDeleteFile={handleDeleteFile}
+                renameFilePrompt={renameFilePrompt}
               />
             ) : (
               <Draggable
@@ -335,13 +336,13 @@ const InnerFileBrowser = React.memo(
                 <FileRow
                   file={f}
                   isReadOnly={isReadOnly}
-                  renameFilePrompt={renameFilePrompt}
                   appName={appName}
-                  handleDeleteFile={handleDeleteFile}
                   hasValidationFile={hasValidationFile}
-                  setFileType={setFileType}
                   isStartMode={isStartMode}
                   enableMenu={!dragData?.id}
+                  setFileType={setFileType}
+                  handleDeleteFile={handleDeleteFile}
+                  renameFilePrompt={renameFilePrompt}
                 />
               </Draggable>
             )

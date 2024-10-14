@@ -1,3 +1,4 @@
+import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import {ProjectFile} from '@codebridge/types';
 import React, {useMemo} from 'react';
 
@@ -7,8 +8,6 @@ import {PASSED_ALL_TESTS_VALIDATION} from '@cdo/apps/lab2/progress/constants';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {PopUpButtonOption} from '../PopUpButton/PopUpButtonOption';
-
 import {setFileType} from './types';
 
 interface StartModeFileDropdownOptionsProps {
@@ -17,6 +16,13 @@ interface StartModeFileDropdownOptionsProps {
   setFileType: setFileType;
 }
 
+/**
+ * Dropdown options for the file dropdown in start mode.
+ * In start mode levelbuilders can set the file type to starter, locked starter,
+ * support, or validation.
+ * There can only be one validation file in a project; the option to set a file
+ * as validation will only be shown if there is no validation file in the project.
+ */
 const StartModeFileDropdownOptions: React.FunctionComponent<
   StartModeFileDropdownOptionsProps
 > = ({file, projectHasValidationFile, setFileType}) => {

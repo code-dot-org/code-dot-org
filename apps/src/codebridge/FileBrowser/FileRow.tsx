@@ -1,3 +1,8 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import OverflowTooltip from '@codebridge/components/OverflowTooltip';
+import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
+import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
+import {ProjectFile} from '@codebridge/types';
 import {
   getFileIconNameAndStyle,
   sendCodebridgeAnalyticsEvent,
@@ -11,12 +16,6 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
-import {useCodebridgeContext} from '../codebridgeContext';
-import OverflowTooltip from '../components/OverflowTooltip';
-import {PopUpButton} from '../PopUpButton/PopUpButton';
-import {PopUpButtonOption} from '../PopUpButton/PopUpButtonOption';
-import {ProjectFile} from '../types';
-
 import {usePrompts} from './hooks';
 import StartModeFileDropdownOptions from './StartModeFileDropdownOptions';
 import {renameFilePromptType, setFileType} from './types';
@@ -26,13 +25,14 @@ import moduleStyles from './styles/filebrowser.module.scss';
 interface FileRowProps {
   file: ProjectFile;
   isReadOnly: boolean;
+  // If the pop-up menu is enabled, we will show the 3-dot menu button on hover.
   enableMenu: boolean;
-  renameFilePrompt: renameFilePromptType;
   appName?: string;
-  handleDeleteFile: (fileId: string) => void;
-  hasValidationFile: boolean;
-  setFileType: setFileType;
+  hasValidationFile: boolean; // If the project has a validation file already.
   isStartMode: boolean;
+  renameFilePrompt: renameFilePromptType;
+  handleDeleteFile: (fileId: string) => void;
+  setFileType: setFileType;
 }
 
 const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
@@ -40,16 +40,20 @@ const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
   sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
 };
 
+/**
+ * A single file row in the file browser. This component does not handle
+ * drag and drop, that is handled by the parent component.
+ */
 const FileRow: React.FunctionComponent<FileRowProps> = ({
   file,
   isReadOnly,
   enableMenu,
-  renameFilePrompt,
   appName,
-  handleDeleteFile,
   hasValidationFile,
-  setFileType,
   isStartMode,
+  renameFilePrompt,
+  handleDeleteFile,
+  setFileType,
 }) => {
   const {
     openFile,
