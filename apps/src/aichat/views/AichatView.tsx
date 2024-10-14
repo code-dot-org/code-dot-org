@@ -15,7 +15,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
+import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -184,9 +184,12 @@ const AichatView: React.FunctionComponent = () => {
   };
 
   const chatWorkspaceHeader = (
-    <div>
+    <div className={moduleStyles.workspaceHeaderContent}>
       {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIcon tooltipPlace="bottom" dark />
+        <ProjectTemplateWorkspaceIconV2
+          tooltipPlace="onBottom"
+          className={moduleStyles.projectTemplateIcon}
+        />
       )}
       {viewMode === ViewMode.EDIT
         ? aichatI18n.aichatWorkspaceHeader()
