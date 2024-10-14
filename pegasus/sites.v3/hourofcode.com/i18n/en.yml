@@ -12017,6 +12017,8 @@
   video_library_page_hero_description: "Code.org's growing library of educational videos is available for re-use by educators worldwide, online or in classrooms. Our goal is to amplify our efforts beyond our own curriculum's reach."
   video_library_page_title_ai_works: "How AI Works"
   video_library_page_description_ai_works: "This series of short videos will introduce you to how artificial intelligence works and why it matters. Learn about neural networks, or how AI learns, and delve into issues like algorithmic bias and the ethics of AI decision-making."
+  video_library_page_title_gen_ai: "Exploring Generative AI"
+  video_library_page_description_gen_ai: "Generative AI may seem magical and mysterious, but it’s a lot easier to understand when you break it down to four core components: input, storage, processing, and output. Learn How Generative AI Works in this video series!"
   video_library_page_title_computers_work: "How Computers Work"
   video_library_page_description_computers_work: "Explains what makes a computer a computer, how digital information is represented in 1s and 0s, how computer circuits work to manipulate digital information, and how a central processing unit (CPU) and operating system control the inputs, outputs, memory, and hardware of a computer."
   video_library_page_title_internet_works: "How the Internet Works"
