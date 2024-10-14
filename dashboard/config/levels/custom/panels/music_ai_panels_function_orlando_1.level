@@ -1,0 +1,69 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-07T22:05:50.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "offerTts": "true",
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_1",
+    "panels": [
+      {
+        "text": "Wow! You just used functions in your code. You’re looking like an expert coder now!\n\nYou’re looking like an expert coder now!\n\n",
+        "imageUrl": "",
+        "key": "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677",
+        "layout": "text-bottom-right"
+      },
+      {
+        "imageUrl": "",
+        "text": "As a software engineer, I use functions all the time too.",
+        "key": "musiclab_intro_panels_function_pdx-f1f658c0-64a9-471c-9f2a-399ba1ea8538",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Functions let me build big projects with small blocks of code.",
+        "imageUrl": "",
+        "key": "music_ai_panels_function_orlando_3-37c593a7-2cf3-44e3-9b22-f8a2de64646f",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "They amplify my creative process!",
+        "imageUrl": "",
+        "key": "music_ai_panels_function-c72da2a5-cee8-4254-b1e7-6d487a2ebcde",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "I loved listening to music as a teenager.",
+        "imageUrl": "",
+        "key": "music_ai_panels_function_orlando_3-2ab47291-490a-409a-87e7-22b140c0a9f3",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "In college, I studied computer science and entered coding competitions.",
+        "imageUrl": "",
+        "key": "music_ai_panels_function-f164a0ad-f4a0-4fb7-a4a4-a0269980b587",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Today, my code brings music to millions of listeners around the world. ",
+        "imageUrl": "",
+        "key": "music_ai_panels_function_orlando_1-f035b103-9b30-4dfa-a757-f2a2c37c61bc"
+      },
+      {
+        "text": "If you keep coding, one day you could build something that reaches millions of people too!",
+        "imageUrl": "",
+        "key": "music_ai_panels_function_orlando_1-9982e867-aa17-4766-9879-bcdcfa1bdda0"
+      },
+      {
+        "text": "Next, learn how to use AI to amplify your creativity!",
+        "imageUrl": "",
+        "key": "music_ai_panels_function_orlando_1-6aa299b0-1069-49c8-817f-b450316e3ce7"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:50.230+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_function_orlando_3\\\"\"],\"cloned_from\":\"music_ai_panels_function_orlando_3\"},{\"changed_at\":\"2024-10-08 17:09:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 17:42:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

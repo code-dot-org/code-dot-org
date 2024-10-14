@@ -1,7 +1,6 @@
 import cloneDeep from 'lodash/cloneDeep';
 
 import {getCurrentLocale} from '@cdo/apps/lab2/projects/utils';
-import experiments from '@cdo/apps/util/experiments';
 import HttpClient, {
   ResponseValidator,
   GetResponse,
@@ -13,7 +12,7 @@ import {Key} from '../utils/Notes';
 
 // This value can be modifed each time we know that there is an important new version
 // of the library on S3, to help bypass any caching of an older version.
-const requestVersion = 'launch2024-0';
+const requestVersion = 'launch2024-1';
 
 /**
  * Loads a sound library JSON file.
@@ -61,11 +60,6 @@ export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
     let libraryJson = {} as LibraryJson;
     if (libraryJsonResponse.status === 'fulfilled') {
       libraryJson = libraryJsonResponse.value.value as LibraryJson;
-    }
-
-    // Early return with no translations unless experiment is enabled for now.
-    if (!experiments.isEnabledAllowingQueryString('libraryLocalization')) {
-      return new MusicLibrary(libraryName, libraryJson);
     }
 
     if (translations && translations.status === 'fulfilled') {
@@ -119,6 +113,14 @@ export default class MusicLibrary {
     this.name = name;
     this.libraryJson = libraryJson;
     this.allowedSounds = null;
+
+    // Add notes for drum kits based on index if they don't already have them.
+    for (const kit of libraryJson.kits) {
+      kit.sounds = kit.sounds.map((sound, i) => ({
+        ...sound,
+        note: i,
+      }));
+    }
 
     // Combine the JSON-specified folders into one flat list of folders.
     this.folders = [

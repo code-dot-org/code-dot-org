@@ -7,46 +7,18 @@ import {
 } from '@cdo/apps/lab2/progress/ProgressManager';
 import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 
-import {ChordEvent} from '../player/interfaces/ChordEvent';
-import {PatternEvent} from '../player/interfaces/PatternEvent';
+import {isChordEvent} from '../player/interfaces/ChordEvent';
+import {isInstrumentEvent} from '../player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {PlayingTrigger} from '../player/interfaces/PlayingTrigger';
+import {isSoundEvent} from '../player/interfaces/SoundEvent';
 import MusicPlayer from '../player/MusicPlayer';
+
+import {MusicConditions} from './MusicConditions';
 
 export interface ConditionNames {
   [key: string]: ConditionType;
 }
-
-export const MusicConditions: ConditionNames = {
-  PLAYED_SOUNDS_TOGETHER: {name: 'played_sounds_together', valueType: 'number'},
-  PLAYED_DIFFERENT_SOUNDS_TOGETHER: {
-    name: 'played_different_sounds_together',
-    valueType: 'number',
-  },
-  PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered'},
-  PLAYED_SOUND_IN_FUNCTION: {
-    name: 'played_sound_in_function',
-    valueType: 'string',
-  },
-  PLAYED_SOUNDS: {name: 'played_sounds', valueType: 'number'},
-  PLAYED_DIFFERENT_SOUNDS: {
-    name: 'played_different_sounds',
-    valueType: 'number',
-  },
-  PLAYED_SOUND_ID: {name: 'played_sound_id', valueType: 'string'},
-  PLAYED_EMPTY_CHORDS: {name: 'played_empty_chords', valueType: 'number'},
-  PLAYED_CHORDS: {name: 'played_chords', valueType: 'number'},
-  PLAYED_EMPTY_PATTERNS: {name: 'played_empty_patterns', valueType: 'number'},
-  PLAYED_PATTERNS: {name: 'played_patterns', valueType: 'number'},
-  PLAYED_EMPTY_PATTERNS_AI: {
-    name: 'played_empty_patterns_ai',
-    valueType: 'number',
-  },
-  PLAYED_PATTERNS_AI: {name: 'played_patterns_ai', valueType: 'number'},
-  PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES: {
-    name: 'played_different_sounds_together_multiple_times',
-    valueType: 'number',
-  },
-};
 
 export default class MusicValidator extends Validator {
   constructor(
@@ -54,6 +26,7 @@ export default class MusicValidator extends Validator {
     private readonly getPlaybackEvents: () => PlaybackEvent[],
     private readonly getValidationTimeout: () => number,
     private readonly player: MusicPlayer,
+    private readonly getPlayingTriggers: () => PlayingTrigger[],
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
       Object.values(MusicConditions).map(condition => condition.name)
     )
@@ -84,6 +57,9 @@ export default class MusicValidator extends Validator {
     // Get number of different sounds that have been started.
     let playedNumberDifferentSounds = 0;
 
+    // A list of unique invocated ids associated with played trigger sounds.
+    const playedTriggerSoundUniqueInvocationIds: number[] = [];
+
     // Get number of patterns that have been started, separately counting those
     // that are empty and those with events.
     let playedNumberEmptyPatterns = 0;
@@ -102,7 +78,7 @@ export default class MusicValidator extends Validator {
     const uniqueCurrentSounds: string[] = [];
 
     const currentPlayheadPosition = this.player.getCurrentPlayheadPosition();
-    this.getPlaybackEvents().forEach((eventData: PlaybackEvent) => {
+    this.getPlaybackEvents().forEach(eventData => {
       // Skip events that we haven't gotten to yet.
       if (eventData.when > currentPlayheadPosition) {
         return;
@@ -110,7 +86,7 @@ export default class MusicValidator extends Validator {
 
       const length = eventData.length;
 
-      if (eventData.type === 'sound') {
+      if (isSoundEvent(eventData)) {
         if (eventData.when + length > currentPlayheadPosition) {
           currentNumberSounds++;
 
@@ -119,6 +95,7 @@ export default class MusicValidator extends Validator {
             uniqueCurrentSounds.push(eventData.id);
           }
 
+          // Simple2 only
           if (eventData.triggered) {
             this.conditionsChecker.addSatisfiedCondition({
               name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
@@ -140,28 +117,41 @@ export default class MusicValidator extends Validator {
 
         playedNumberSounds++;
 
+        // In order to check that the user has pressed the beat map buttons multiple times,
+        // we look at the unique invocation id. (Simple2 only)
+        if (eventData.triggered) {
+          const invocationId = eventData.functionContext?.uniqueInvocationId;
+          if (
+            invocationId &&
+            !playedTriggerSoundUniqueInvocationIds.includes(invocationId)
+          ) {
+            playedTriggerSoundUniqueInvocationIds.push(invocationId);
+          }
+        }
+
         if (!uniqueSounds.includes(eventData.id)) {
           playedNumberDifferentSounds++;
           uniqueSounds.push(eventData.id);
         }
-      } else if (eventData.type === 'pattern') {
-        const patternEvent = eventData as PatternEvent;
-        if (patternEvent.value.events.length === 0) {
-          if (patternEvent.value.ai) {
+      } else if (
+        isInstrumentEvent(eventData) &&
+        eventData.instrumentType === 'drums'
+      ) {
+        if (eventData.value.events.length === 0) {
+          if (eventData.value.ai) {
             playedNumberEmptyPatternsAi++;
           } else {
             playedNumberEmptyPatterns++;
           }
         } else {
-          if (patternEvent.value.ai) {
+          if (eventData.value.ai) {
             playedNumberPatternsAi++;
           } else {
             playedNumberPatterns++;
           }
         }
-      } else if (eventData.type === 'chord') {
-        const chordEvent = eventData as ChordEvent;
-        if (chordEvent.value.notes.length === 0) {
+      } else if (isChordEvent(eventData)) {
+        if (eventData.value.notes.length === 0) {
           playedNumberEmptyChords++;
         } else {
           playedNumberChords++;
@@ -213,6 +203,11 @@ export default class MusicValidator extends Validator {
       playedNumberDifferentSounds
     );
 
+    this.addPlayedConditions(
+      MusicConditions.PLAYED_SOUND_TRIGGERED_MULTIPLE_TIMES.name,
+      playedTriggerSoundUniqueInvocationIds.length
+    );
+
     // Add satisfied conditions for the played patterns.
     this.addPlayedConditions(
       MusicConditions.PLAYED_EMPTY_PATTERNS.name,
@@ -242,6 +237,15 @@ export default class MusicValidator extends Validator {
       MusicConditions.PLAYED_CHORDS.name,
       playedNumberChords
     );
+
+    // Add satisfied condition for playing triggers. This does not require a playback event.
+    const playingTriggers = this.getPlayingTriggers();
+    playingTriggers.forEach((trigger: PlayingTrigger) => {
+      this.setSatisfiedCondition(
+        MusicConditions.TRIGGER_ID_PRESSED.name,
+        parseInt(trigger.id.replace('trigger', ''))
+      );
+    });
   }
 
   // Check for PLAYED_DIFFERENT_SOUNDS_TOGETHER_MULTIPLE_TIMES.
@@ -258,7 +262,7 @@ export default class MusicValidator extends Validator {
 
     this.getPlaybackEvents()
       .filter(playbackEvent => playbackEvent.when <= currentPlayheadPosition)
-      .forEach((eventData: PlaybackEvent) => {
+      .forEach(eventData => {
         if (!uniqueStarts[eventData.when]) {
           uniqueStarts[eventData.when] = [];
         }

@@ -5,6 +5,7 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import {ConditionType, Validation, Condition} from '../../types';
 
+import ConditionDescription from './ConditionDescription';
 import EditCondition from './EditCondition';
 
 import moduleStyles from './edit-validations.module.scss';
@@ -134,15 +135,23 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
       </Typography>
       {validation.conditions.map((condition, index) => {
         return (
-          <div className={moduleStyles.row} key={index}>
-            <EditCondition
-              condition={condition}
-              conditionTypes={conditionTypes}
-              index={index}
-              onConditionChange={onConditionChange}
-              deleteCondition={deleteCondition}
-            />
-          </div>
+          <>
+            <div className={moduleStyles.row} key={`${index}-condition`}>
+              <EditCondition
+                condition={condition}
+                conditionTypes={conditionTypes}
+                index={index}
+                onConditionChange={onConditionChange}
+                deleteCondition={deleteCondition}
+              />
+            </div>
+            <div className={moduleStyles.row} key={`${index}-description`}>
+              <ConditionDescription
+                condition={condition}
+                conditionTypes={conditionTypes}
+              />
+            </div>
+          </>
         );
       })}
       <div className={moduleStyles.row}>

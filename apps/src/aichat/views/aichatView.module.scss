@@ -53,7 +53,7 @@ $column-min-width: 200px;
   overflow: auto;
 }
 
-.aichatViewButton {
+.startOverButton {
   margin-right: 5px;
 }
 
@@ -61,6 +61,7 @@ $column-min-width: 200px;
   border: 1px $light_gray_200 solid;
   border-radius: $border-radius;
   box-sizing: border-box;
+  background: $white;
 }
 
 .panelHeader {
@@ -69,4 +70,5 @@ $column-min-width: 200px;
 
 .instructions {
   @extend %panel-section;
+  margin-bottom: 28px; // Added to avoid collision with language dropdown footer.
 }

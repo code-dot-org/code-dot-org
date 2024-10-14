@@ -1,0 +1,15 @@
+name 'Data Sci U1 Post Q18_2024-pilot'
+
+question 'How can you effectively communicate the findings of a data analysis to stakeholders with varying levels of technical expertise?'
+
+wrong 'Use detailed technical language and complex statistical terms to ensure precision.'
+right 'Present a summary of key insights using simple language and visual aids, tailoring the depth of information to the audience\'s expertise.'
+wrong 'Provide only raw data so stakeholders can interpret the results themselves.'
+wrong 'Focus on the most positive aspects of the findings, minimizing any negative results.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

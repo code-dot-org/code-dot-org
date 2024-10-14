@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-22 15:09:06 UTC",
+    "serialized_at": "2024-10-11 00:59:02 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -98,6 +98,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**How can analyzing data sets help us answer questions and solve problems?**",
+        "preparation": "* **(Optional)** Print copies of the Data Sets Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Data Sets activity guide (one for each student)",
+        "student_overview": "**How can analyzing data sets help us answer questions and solve problems?**"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -115,7 +118,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/1) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I store multiple related values without creating multiple variables?**\n\nStudents have used variables to store literal values and references to objects. In this lesson, students discover the need for one-dimensional (1D) arrays to store multiple related values. Students explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. They learn how to determine the length of a 1D array, then practice creating 1D arrays using the `new` keyword and accessing and returning their length.",
-        "preparation": "* **(Optional)** Print copies of the U3L1 Guided Notes (one for each student)\n* Print copies of the Unit 3 Guide (one for each student)\n* Preview the *One-Dimensional (1D) Arrays* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-1-one-dimensional-1d-arrays/37885) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the One-Dimensional (1D) Arrays Guided Notes (one for each student)\n* Print copies of the Unit 3 Guide (one for each student)\n* Preview the *One-Dimensional (1D) Arrays* video",
         "student_overview": "**How can I store multiple related values without creating multiple variables?**\n\nYou have used variables to store literal values and references to objects. In this lesson, you discover the need for one-dimensional (1D) arrays to store multiple related values. You explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. You learn how to determine the length of a 1D array then practice creating 1D arrays using the `new` keyword and assigning and accessing values at specific positions."
       },
       "seeding_key": {
@@ -134,7 +137,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, students explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. They discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. Students then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array.",
-        "preparation": "* **(Optional)** Print copies of the U3L2 Guided Notes (one for each student)\n* Preview the *Modifying Values in a 1D Array* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-2-modifying-elements/37886) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Modifying Elements Guided Notes (one for each student)\n* Preview the *Modifying Values in a 1D Array* video",
         "student_overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, you explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. You discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. You then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array."
       },
       "seeding_key": {
@@ -153,7 +156,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.2\n* Topic Questions 6.1\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily access all elements in a one-dimensional (1D) array?**\n\nStudents have learned how to declare and initialize one-dimensional (1D) arrays and access and modify elements one at a time. In this lesson, students discover the need for loops to repeatedly access multiple elements and revisit `while` loops. Students learn how to traverse 1D arrays using a `while` loop and discover the cause of the `ArrayIndexOutOfBoundsException` and strategies for debugging this error. Students then practice using `while` loops to traverse one and multiple 1D arrays.",
-        "preparation": "* **(Optional)** Print copies of the U3L3 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-3-traversing-1d-arrays/37887) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Traversing 1D Arrays Guided Notes (one for each student)",
         "student_overview": "**How can I easily access all elements in a one-dimensional (1D) array?**\n\nYou have learned how to declare and initialize one-dimensional (1D) arrays and access and modify elements one at a time. In this lesson, you discover the need for loops to repeatedly access multiple elements and revisit `while` loops. You learn how to traverse 1D arrays using a `while` loop and discover the cause of the `ArrayIndexOutOfBoundsException` and strategies for debugging this error. You then practice using `while` loops to traverse one and multiple 1D arrays."
       },
       "seeding_key": {
@@ -172,7 +175,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.4\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I write more efficient code to traverse a 1D array?**\n\nStudents learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. They identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. Students then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop.",
-        "preparation": "* **(Optional)** Print copies of the U3L4 Guided Notes (one for each student)\n* Preview the *For Loops* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-4-for-loops/37888) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the For Loops Guided Notes (one for each student)\n* Preview the *For Loops* video",
         "student_overview": "**How can I write more efficient code to traverse a 1D array?**\n\nYou learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. You identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. You then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop."
       },
       "seeding_key": {
@@ -189,6 +192,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**How can I efficiently read and process data from a file in Java?**\n\nStudents learn to use the `File` class to read data from files and handle file-related exceptions with `throws IOException`. They employ `Scanner` methods to read various data types from a file and use loops to efficiently read and process all file elements. By mastering these techniques, students enhance their ability to manage external data sources and improve their debugging and problem-solving skills in real-world programming scenarios.",
+        "preparation": "* **(Optional)** Print copies of the Text Files Guided Notes (one for each student)",
+        "student_overview": "**How can I efficiently read and process data from a file in Java?**\n\nYou can use the `Scanner` class to read data from a file. In this lesson, you learn to use the `File` class to read data from files and handle file-related exceptions with `throws IOException`. You employ `Scanner` methods to read various data types from a file and use `while` loops to efficiently read and process all file elements. By mastering these techniques, you enhance your ability to manage external data sources and improve your debugging and problem-solving skills in real-world programming scenarios."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -205,9 +211,9 @@
       "relative_position": 7,
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
-        "overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nStudents have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, students explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. Students then apply their knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array. ",
-        "preparation": "* **(Optional)** Print copies of the U3L5 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Writing Algorithms with Arrays (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-5-preconditions-and-postconditions/37889) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nYou have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, you explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. You then apply your knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array."
+        "overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nStudents have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, students read and store values from text files into 1D arrays and consider the preconditions and postconditions an algorithm should satisfy. Students then apply their knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array.",
+        "preparation": "* **(Optional)** Print copies of the Preconditions and Postconditions Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Writing Algorithms with Arrays (one for each student)",
+        "student_overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nYou have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists, how to access and modify one or multiple elements, and how to read and store values from text files. In this lesson, you practice reading and storing values from text files and consider the preconditions and postconditions an algorithm should satisfy. You then apply your knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array."
       },
       "seeding_key": {
         "lesson.key": "Preconditions and Postconditions",
@@ -223,6 +229,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "**How can biased data impact the fairness and accuracy of a program's outcomes?**\n\nIn this lesson, students consider the ethical and social issues around algorithmic bias and data collection. They learn about algorithmic bias and training data, and the ways algorithmic bias can lead to unfair outcomes. Students analyze data sets in order to identify bias and understand the impact bias has on the conclusions that can be drawn from the data. Finally, students choose a scenario and consider ways in which data can be collected in order to minimize bias.",
+        "preparation": "* **(Optional)** Print copies of the Ethical and Social Issues Around Data Collection Guided Notes (one for each student)\n* Print copies of the Analyzing Data Sets handout (one for each student)",
+        "student_overview": "**How can biased data impact the fairness and accuracy of a program's outcomes?**\n\nIn this lesson, you will consider the ethical and social issues around algorithmic bias and data collection. You will learn about algorithmic bias and training data, and the ways algorithmic bias can lead to unfair outcomes. You will then analyze data sets in order to identify bias and understand the impact bias has on the conclusions that can be drawn from the data. Finally, you will choose a scenario and consider ways in which data can be collected in order to minimize bias."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -259,7 +268,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nStudents have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, students explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. Students practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop.",
-        "preparation": "* **(Optional)** Print copies of the U3L7 Guided Notes (one for each student)\n* Preview the *Careers in Tech: My Name is Polina* and *Enhanced For Loops* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-7-enhanced-for-loops/37891) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Enhanced for Loops Guided Notes (one for each student)\n* Preview the *Careers in Tech: My Name is Polina* and *Enhanced For Loops* videos",
         "student_overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nYou have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, you explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. You practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop."
       },
       "seeding_key": {
@@ -278,7 +287,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. Students discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. Students then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing their algorithm, students conduct a code review to refine and improve their code.",
-        "preparation": "* **(Optional)** Print copies of the U3L8 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Arrays handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-8-array-algorithms/37892) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Array Algorithms Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Arrays handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies",
         "student_overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. You discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. You then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing your algorithm, you conduct a code review to refine and improve your code."
       },
       "seeding_key": {
@@ -297,7 +306,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 6.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/9) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I check if a 1D array contains duplicate elements?**\n\nStudents have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. They expand on their knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. Students then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array.",
-        "preparation": "* **(Optional)** Print copies of the U3L9 Guided Notes (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Preview the *Nested Loops* video\n* Print copies of the Unit 3 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-9-finding-duplicates/37893) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Finding Duplicates Guided Notes (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Preview the *Nested Loops* video\n* Print copies of the Unit 3 Study Guide (one for each student)",
         "student_overview": "**How can I check if a 1D array contains duplicate elements?**\n\nYou have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. You expand on your knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. You then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array."
       },
       "seeding_key": {
@@ -447,11 +456,39 @@
       "key": "6b574029-57a4-4e3b-8e73-276ccbace490",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Activity"
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "6b574029-57a4-4e3b-8e73-276ccbace490",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "key": "0abef305-631d-4d1b-b113-22f003477c1b",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0abef305-631d-4d1b-b113-22f003477c1b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "key": "8c37b57e-017d-40a2-a209-2beb372dc9f9",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9",
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot-2025"
@@ -629,11 +666,39 @@
       "key": "69b7b29f-788d-41bb-b50d-fe3bd631199b",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Activity"
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "69b7b29f-788d-41bb-b50d-fe3bd631199b",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "key": "8accceb6-7cc1-4fba-bfef-366394467402",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8accceb6-7cc1-4fba-bfef-366394467402",
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot-2025"
@@ -685,11 +750,39 @@
       "key": "0753da5d-5459-4961-8c39-b7f1d7ac9876",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Activity"
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "0753da5d-5459-4961-8c39-b7f1d7ac9876",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "key": "f8390486-7e73-4fb2-8629-21f592177028",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "key": "f29a28da-f7ad-44a3-8e2d-975e6a54ba40",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f29a28da-f7ad-44a3-8e2d-975e6a54ba40",
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot-2025"
@@ -1083,10 +1176,133 @@
       "key": "ace1f07d-6031-45a2-8e05-3179583a5615",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about this chart? What do you wonder?*\n\n**Discussion Goal:** discussion goal",
+        "name": "The Ultimate Data Dog",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "show the full-size version so students can see it better"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ace1f07d-6031-45a2-8e05-3179583a5615",
         "lesson_activity.key": "6b574029-57a4-4e3b-8e73-276ccbace490"
+      }
+    },
+    {
+      "key": "c17a4109-0c0e-4f6b-9a5f-42c76284e1ea",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *This is just a snapshot of the data table used to generate the chart. If you were able to see the full data table, what are some specific questions you would be able to answer?*\n\n**Discussion Goal:** discussion goal",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "show the data table"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c17a4109-0c0e-4f6b-9a5f-42c76284e1ea",
+        "lesson_activity.key": "6b574029-57a4-4e3b-8e73-276ccbace490"
+      }
+    },
+    {
+      "key": "e4d1365d-8e8a-456d-b520-f496d0f1dcd7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***data set***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In looking at this data set, we might ask what the average cost of an item is. We can uncover even more insights by analyzing different aspects of the data. What other questions can we ask about the data in this data set?*\n\n**Discussion Goal:** discussion goal\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a Writing Algorithms with Data Sets activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the sample data sets and decide which questions can be answered for each table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Analyzing different data points in a set can help us solve problems. How might we use data from these examples to answer new questions or uncover trends?*\n\n**Discussion Goal:** discussion goal\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***value***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that programmers use data sets to create algorithms to answer questions and solve problems.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *One question we can answer about this data set is: What is the largest value in the \"Units Sold\" column? What would an algorithm need to process this data set and return an accurate answer?*\n\n**Discussion Goal:** discussion goal\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Walk through the algorithm to find the maximum value.",
+        "name": "Writing Algorithms with Data Sets",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "tips for walking through the algorithm"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e4d1365d-8e8a-456d-b520-f496d0f1dcd7",
+        "lesson_activity.key": "0abef305-631d-4d1b-b113-22f003477c1b"
+      }
+    },
+    {
+      "key": "591c0509-b705-420c-9461-845b3a182662",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose a data set and a question to answer. They should copy the data table in the space provided on the activity guide, then write pseudocode for an algorithm that will answer that question.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students share their algorithm with another group and discuss the following prompts:\n* *Does the algorithm use all the needed data to answer the question?*\n* *How can the algorithm be improved to work better or faster?*\n\n**Discussion Goal:** discussion goal"
+      },
+      "seeding_key": {
+        "activity_section.key": "591c0509-b705-420c-9461-845b3a182662",
+        "lesson_activity.key": "0abef305-631d-4d1b-b113-22f003477c1b"
+      }
+    },
+    {
+      "key": "650675d9-56f1-49f6-ac8e-00e05693dd7b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How can charts or tables help you plan your algorithm?*\n* *What challenges did you face while analyzing your data?*\n\n**Discussion Goal:** discussion goal",
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "650675d9-56f1-49f6-ac8e-00e05693dd7b",
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9"
+      }
+    },
+    {
+      "key": "13870d80-8210-4afc-b81b-a44084c6ba01",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 3 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "13870d80-8210-4afc-b81b-a44084c6ba01",
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9"
+      }
+    },
+    {
+      "key": "52ae4ead-843a-4241-948d-490dc374d6bf",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "52ae4ead-843a-4241-948d-490dc374d6bf",
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9"
+      }
+    },
+    {
+      "key": "5b395451-cf3a-499c-8c3b-5a29635bbe24",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b395451-cf3a-499c-8c3b-5a29635bbe24",
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9"
+      }
+    },
+    {
+      "key": "bf9478ff-18a3-45fa-a61e-8813fce0f698",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf9478ff-18a3-45fa-a61e-8813fce0f698",
+        "lesson_activity.key": "8c37b57e-017d-40a2-a209-2beb372dc9f9"
       }
     },
     {
@@ -1315,7 +1531,7 @@
       "key": "599d5e34-8a20-45e8-a2f7-d084f26206fb",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding, then continue to Level 6 to complete a choice level to return the length of a 1D array from a class. On Level 7, students complete a choice level to declare and initialize a 1D array.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***data abstraction***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding, then continue to Level 6 to complete a choice level to return the length of a 1D array from a class. On Level 7, students complete a choice level to declare and initialize a 1D array.",
         "progression_name": "Practice: Creating 1D Arrays",
         "tips": [
           {
@@ -2318,10 +2534,206 @@
       "key": "b83c21a0-a483-411f-87bc-fb537d3083a9",
       "position": 1,
       "properties": {
+        "description": "Software engineers often work with very large amounts of data. When working with larger amounts of data, storing information in arrays is not as practical. ",
+        "name": "Too Much Data",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "b83c21a0-a483-411f-87bc-fb537d3083a9",
         "lesson_activity.key": "69b7b29f-788d-41bb-b50d-fe3bd631199b"
+      }
+    },
+    {
+      "key": "ce94b11f-8f4f-4147-bd09-e7e3e8cc781c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *We have learned to work with 1D arrays. Imagine you had hundreds of lines of data. How might processing this data in an array become challenging?*\n* *What are some potential problems with storing large amounts of data directly in an array?*\n\n**Discussion Goal:** The goal of this discussion is to help students recognize the limitations of using 1D arrays for handling large datasets. By the end of the discussion, students should identify challenges related to memory, efficiency, and code complexity. Students should leave the discussion with questions about what more advanced data structures might look like. "
+      },
+      "seeding_key": {
+        "activity_section.key": "ce94b11f-8f4f-4147-bd09-e7e3e8cc781c",
+        "lesson_activity.key": "69b7b29f-788d-41bb-b50d-fe3bd631199b"
+      }
+    },
+    {
+      "key": "d78b5119-044d-4f02-bc61-9c62b501f073",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "d78b5119-044d-4f02-bc61-9c62b501f073",
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
+      }
+    },
+    {
+      "key": "e39df6d7-8a38-4f30-9e5e-8b587c0e7d6e",
+      "position": 2,
+      "properties": {
+        "description": "You have probably gotten user input in other programming languages. In Java, we use the `Scanner` class to get user input from the keyboard, but we also use the `Scanner` class to read text from a file. In this lesson, we will learn how to set up the `File` and `Scanner` classes to read text from a file, and how to use while loops to read multiple lines of data from a file efficiently. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e39df6d7-8a38-4f30-9e5e-8b587c0e7d6e",
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
+      }
+    },
+    {
+      "key": "0a0fb202-4d9a-4ee1-b7e0-a7bad85bb446",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Reading Text Files"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a0fb202-4d9a-4ee1-b7e0-a7bad85bb446",
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
+      }
+    },
+    {
+      "key": "e7fdb178-be17-447b-83f1-9c98957453ae",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that values are stored in a text file and read into the program. Students also notice that the first line of the text file is used to create a `Student` object. Students may wonder how to read multiple lines of data or how to read different types of data."
+      },
+      "seeding_key": {
+        "activity_section.key": "e7fdb178-be17-447b-83f1-9c98957453ae",
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
+      }
+    },
+    {
+      "key": "49f8ac59-0c49-4d9e-9aef-f29d4c5fa9dc",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***file*** and explain that the contents of a file can be accessed by a program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***text file***.",
+        "duration": "15",
+        "name": "Reading and Processing Text Files",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students if they have used a text editor such as Notepad. Have students identify the similarities and differences between the files created in these text editors and programs like Microsoft Word or Google Docs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "49f8ac59-0c49-4d9e-9aef-f29d4c5fa9dc",
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
+      }
+    },
+    {
+      "key": "74634953-1d65-4c11-b56a-6266f35ce5a4",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `File` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `File` class needs to be imported and briefly introduce the `File` class constructors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can reading a text file be useful in a program?*\n\n**Discussion Goal:** Students note that a program can read data in a file. Students may also suggest that it makes the program more user-friendly and adaptable. The user does not need to enter the files directly into the array, and one program can process multiple data sets.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "progression_name": "Investigate and Modify: Reading Text Files"
+      },
+      "seeding_key": {
+        "activity_section.key": "74634953-1d65-4c11-b56a-6266f35ce5a4",
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
+      }
+    },
+    {
+      "key": "ae4c6602-dc87-4712-8943-6d27dc20c51d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the libraries that must be imported into the class where the file reading method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `java.io.IOException` library must be imported in the tester class and the class where the file reader method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to validate the file name being used by adding `throws IOException` to the header of the method that uses the file. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to create a `File` object and `Scanner` object to read the file being processed by the method. Remind students to call the `close()` method after the `Scanner` is finished reading from the file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show students the various `Scanner` methods that they may need to process a file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "progression_name": "Investigate and Modify: Handling Files"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae4c6602-dc87-4712-8943-6d27dc20c51d",
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
+      }
+    },
+    {
+      "key": "6e16a518-a779-4640-a7e6-01617969af7c",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to use a `while` loop and the `hasNext()` method to detect if the file still contains elements to read.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to implement a standard algorithm students may have seen when traversing arrays within a file reading method. "
+      },
+      "seeding_key": {
+        "activity_section.key": "6e16a518-a779-4640-a7e6-01617969af7c",
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
+      }
+    },
+    {
+      "key": "1d7ef54e-8144-4b35-b46f-627c39087e8f",
+      "position": 9,
+      "properties": {
+        "description": "Reading a text file may seem complicated at first, so it is important to practice writing methods that open and read from text files. Another part of this practice is learning how to process lines from the text file in a meaningful way. ",
+        "duration": "15",
+        "name": "Reading Text Files",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1d7ef54e-8144-4b35-b46f-627c39087e8f",
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
+      }
+    },
+    {
+      "key": "24d7b4c7-7afb-43e9-9261-e9885238eaf7",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete a choice level to read and process a text file. ",
+        "progression_name": "Practice: Reading Text Files",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The practice level can be used as a formative assessment to gauge understanding of reading and processing text files."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "24d7b4c7-7afb-43e9-9261-e9885238eaf7",
+        "lesson_activity.key": "0cb7c7c3-0123-4b1a-b2e5-3d3bcd7a8324"
+      }
+    },
+    {
+      "key": "ee8a5878-9c1f-4f78-ae53-41641653239e",
+      "position": 1,
+      "properties": {
+        "description": "We’ve now seen how the `Scanner` and `File` classes can be used to read and process text files. We’ve also seen how to use `while` loops to process the data from a text file efficiently, and to apply standard algorithms to that data. Depending on the needs of our programs, we may need to process the data from a text file in a variety of ways. ",
+        "name": "Closing the Loop",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ee8a5878-9c1f-4f78-ae53-41641653239e",
+        "lesson_activity.key": "8accceb6-7cc1-4fba-bfef-366394467402"
+      }
+    },
+    {
+      "key": "2935867b-e741-44a3-b38d-4b81eca93409",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? Which parts are completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** Some key takeaways students might point out are the syntax of the code segments for using the `File` and `Scanner` classes to read from a text file. Students may also recall that three libraries need to be imported into their file in order to read from a text file. Some may also mention that reading from a text file and processing its data is similar to what they have learned about processing the data from an array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "2935867b-e741-44a3-b38d-4b81eca93409",
+        "lesson_activity.key": "8accceb6-7cc1-4fba-bfef-366394467402"
+      }
+    },
+    {
+      "key": "28585523-56e5-4ff5-b870-4cb017d98bb6",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "28585523-56e5-4ff5-b870-4cb017d98bb6",
+        "lesson_activity.key": "8accceb6-7cc1-4fba-bfef-366394467402"
+      }
+    },
+    {
+      "key": "fb2cef7f-e819-4502-892b-aac8c918724a",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb2cef7f-e819-4502-892b-aac8c918724a",
+        "lesson_activity.key": "8accceb6-7cc1-4fba-bfef-366394467402"
       }
     },
     {
@@ -2395,7 +2807,7 @@
       "key": "fa36cd0b-b06b-4ef8-a9c7-29fc6443186f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that values are stored in a text file and read into the program. Students also notice that the values are stored in a 1D array. Students may wonder how they might work with larger files or with multiple types of values or how they could write data to a file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define text file and introduce potential uses for them in a program."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that values are stored in a text file and read into the program. Students also notice that the values are stored in a 1D array. Students may wonder how they might work with larger files or with multiple types of values or how they could write data to a file."
       },
       "seeding_key": {
         "activity_section.key": "fa36cd0b-b06b-4ef8-a9c7-29fc6443186f",
@@ -2608,10 +3020,204 @@
       "key": "25e6b881-cb48-40ad-9e4d-2f725f7e372f",
       "position": 1,
       "properties": {
+        "description": "In this lesson we will explore why data sets need to represent all scenarios and user groups. Throughout the lesson, consider how a data set that lacks representation of all scenarios and user groups would affect a system’s fairness and effectiveness.",
+        "name": "Representation on Data Sets",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "25e6b881-cb48-40ad-9e4d-2f725f7e372f",
         "lesson_activity.key": "0753da5d-5459-4961-8c39-b7f1d7ac9876"
+      }
+    },
+    {
+      "key": "f65ec8ca-4111-4f9d-a615-6b502acf0c7e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Is it important for a data set to represent all possible scenarios and user groups? Why or why not?*\n* *If a facial recognition data set mainly includes one ethnicity, how might this impact the system's effectiveness and fairness?*\n\n**Discussion Goal:** Students should recognize the importance of diversity in data sets and understand that if a facial recognition system is trained on a data set that primarily includes one ethnicity, it may result in biased outcomes. They would discuss how this could lead to less effective systems that are unfair to other ethnicities."
+      },
+      "seeding_key": {
+        "activity_section.key": "f65ec8ca-4111-4f9d-a615-6b502acf0c7e",
+        "lesson_activity.key": "0753da5d-5459-4961-8c39-b7f1d7ac9876"
+      }
+    },
+    {
+      "key": "218b9edb-515a-46ee-a8a2-5128dc12d2e2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "10",
+        "name": "Training Data and Algorithmic Bias"
+      },
+      "seeding_key": {
+        "activity_section.key": "218b9edb-515a-46ee-a8a2-5128dc12d2e2",
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028"
+      }
+    },
+    {
+      "key": "7f208413-923b-44da-9c14-9a43ed753bf0",
+      "position": 2,
+      "properties": {
+        "description": "We will start by exploring how biased data affects the fairness and accuracy of program outcomes. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7f208413-923b-44da-9c14-9a43ed753bf0",
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028"
+      }
+    },
+    {
+      "key": "70482b2c-ffd6-4057-a047-2e9b2a60d8a7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***algorithmic bias***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video - *Training Data & Bias*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Depending on how training data is collected, who is doing the collecting, and how the data is fed, there is a chance that human bias is included in the data. What steps can be taken to ensure that the data collected for training a machine learning model is comprehensive and unbiased?*\n\n**Discussion Goal:** Students brainstorm and discuss steps to ensure that machine learning training data is comprehensive and unbiased. Students may mention using diverse data sets, checking data sets for inherent bias, and ways to check for possible biases during data collection. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "70482b2c-ffd6-4057-a047-2e9b2a60d8a7",
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028"
+      }
+    },
+    {
+      "key": "64c0e837-7094-4856-ad4e-dcbf7470ed12",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "64c0e837-7094-4856-ad4e-dcbf7470ed12",
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028"
+      }
+    },
+    {
+      "key": "fc67bb4c-213e-4435-9540-5d2e7d2e9be3",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:** Click through the animated slide to display the prompts.\n* *The video mentions that if X-ray data is only collected from men, the predictions might not work for women. How does this example illustrate the concept of algorithmic bias?*\n* *What are some other real-world examples where incomplete data could lead to unfair outcomes?*\n\n**Discussion Goal:** Students brainstorm and discuss steps to ensure that machine learning training data is comprehensive and unbiased. Students may mention using diverse data sets, checking data sets for inherent bias, and ways to check for possible biases during data collection.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nPrompt students to consider real-world examples they have heard of, or to speculate about ways that biased data could lead to unfair outcomes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fc67bb4c-213e-4435-9540-5d2e7d2e9be3",
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028"
+      }
+    },
+    {
+      "key": "88740807-9b6e-4427-9c33-cb507502ae16",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "88740807-9b6e-4427-9c33-cb507502ae16",
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028"
+      }
+    },
+    {
+      "key": "fddcbd57-9a3f-492d-9146-196b59f3df03",
+      "position": 7,
+      "properties": {
+        "description": "Now let's explore how to evaluate data sets for bias, and how to design methods for data collection to ensure fairness. You’ll start by looking at an existing data set and trying to spot both where the data set may show bias, and how that bias skews the answers to questions we might ask. Your goal is to identify potential issues and think about strategies to address these biases in your own data collection methods.",
+        "duration": "20",
+        "name": "Analyzing Data Sets",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fddcbd57-9a3f-492d-9146-196b59f3df03",
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028"
+      }
+    },
+    {
+      "key": "7e0ef854-64ae-4f19-b583-5dc8839e91f9",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Analyzing Data Sets handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 8, Level 1 on Code Studio. Have them choose a data set to review and complete Part 1 of the activity guide for the selected data set.",
+        "progression_name": "Data Sets",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to ask critical questions about representation and completeness in their chosen data set. As they work through the handout, prompt them to consider which groups are included and which are excluded. Encourage students to speculate about real-world examples that would illustrate how bias can impact decisions made from the data."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7e0ef854-64ae-4f19-b583-5dc8839e91f9",
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028"
+      }
+    },
+    {
+      "key": "f67cb6c7-3d23-4483-a5cf-4334c9b12f07",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f67cb6c7-3d23-4483-a5cf-4334c9b12f07",
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028"
+      }
+    },
+    {
+      "key": "49e21ae2-aada-484e-980e-9cd0a7d9e065",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose a scenario from Part II of the \"Analyzing Data Sets\" activity guide. They review the goals they want to achieve with the data they will collect and consider how to minimize bias and ensure their approach accurately represents all perspectives. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to form groups and share their approaches. Students should discuss the potential biases in the data they plan to collect and the way it is collected, and the ways in which those biases can be minimized. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *It may not be possible to eliminate all forms of bias from a data set, but efforts can be made to reduce potential biases. Based on your methodology and the methodology of other groups, how can bias be minimized?*\n\n**Discussion Goal:** Students surface specific strategies that they noticed in their own methodology and the methodologies of other groups. They discuss how these strategies can be applied across different scenarios in order to achieve more accurate and representative results. "
+      },
+      "seeding_key": {
+        "activity_section.key": "49e21ae2-aada-484e-980e-9cd0a7d9e065",
+        "lesson_activity.key": "f8390486-7e73-4fb2-8629-21f592177028"
+      }
+    },
+    {
+      "key": "6273ae2b-0551-464f-a9ad-5edfcee7c0db",
+      "position": 1,
+      "properties": {
+        "description": "In this lesson, we focused on evaluating data sets for bias and designing methods to ensure fairness in data collection. Accurate and complete data sets are crucial for reliable results and fairness.",
+        "name": "Closing the Loop",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6273ae2b-0551-464f-a9ad-5edfcee7c0db",
+        "lesson_activity.key": "f29a28da-f7ad-44a3-8e2d-975e6a54ba40"
+      }
+    },
+    {
+      "key": "93d66c39-0308-4e32-a71e-6201ba17e1ba",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Why is it important to use accurate and complete data sets?*\n* *What are the potential consequences of using biased or incomplete data?*\n* *How can we ensure our data sets are relevant to the questions we want to answer?*\n\n**Discussion Goal:** Students will be able to explain the significance of using accurate and complete data sets. Students will also speculate on real-world examples of consequences from using biased or incomplete data.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "93d66c39-0308-4e32-a71e-6201ba17e1ba",
+        "lesson_activity.key": "f29a28da-f7ad-44a3-8e2d-975e6a54ba40"
+      }
+    },
+    {
+      "key": "f75d10b7-8bc6-4846-9dab-cff8adca3a7b",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "f75d10b7-8bc6-4846-9dab-cff8adca3a7b",
+        "lesson_activity.key": "f29a28da-f7ad-44a3-8e2d-975e6a54ba40"
+      }
+    },
+    {
+      "key": "f7dd2726-e633-4fd1-816f-050eaa36f927",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7dd2726-e633-4fd1-816f-050eaa36f927",
+        "lesson_activity.key": "f29a28da-f7ad-44a3-8e2d-975e6a54ba40"
       }
     },
     {
@@ -5440,6 +6046,128 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSA U3L6 Predict"
+        ],
+        "progression": "Predict and Run: Reading Text Files"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6 Predict"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "0a0fb202-4d9a-4ee1-b7e0-a7bad85bb446"
+      },
+      "level_keys": [
+        "CSA U3L6 Predict"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L6 Reading Files-L2"
+        ],
+        "progression": "Investigate and Modify: Reading Text Files"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6 Reading Files-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "74634953-1d65-4c11-b56a-6266f35ce5a4"
+      },
+      "level_keys": [
+        "CSA U3L6 Reading Files-L2"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Handling Files"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6 Reading Files-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "ae4c6602-dc87-4712-8943-6d27dc20c51d"
+      },
+      "level_keys": [
+        "CSA U3L6 Reading Files-L3"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L6 Reading Files-L4"
+        ],
+        "progression": "Practice: Reading Text Files"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6 Reading Files-L4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "24d7b4c7-7afb-43e9-9261-e9885238eaf7"
+      },
+      "level_keys": [
+        "CSA U3L6 Reading Files-L4"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csa-u3l6-l5cfu_2024"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-u3l6-l5cfu_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "fb2cef7f-e819-4502-892b-aac8c918724a"
+      },
+      "level_keys": [
+        "csa-u3l6-l5cfu_2024"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSA U3L5-L1_pilot-2025"
         ],
         "progression": "Investigate and Modify: Reading a File"
@@ -5459,7 +6187,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5484,7 +6212,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5509,7 +6237,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5534,7 +6262,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5559,7 +6287,57 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-u3l8-l1datasets_2024"
+        ],
+        "progression": "Data Sets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-u3l8-l1datasets_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "7e0ef854-64ae-4f19-b583-5dc8839e91f9"
+      },
+      "level_keys": [
+        "csa-u3l8-l1datasets_2024"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csa-u3l8-l2cfu_2024"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-u3l8-l2cfu_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "f7dd2726-e633-4fd1-816f-050eaa36f927"
+      },
+      "level_keys": [
+        "csa-u3l8-l2cfu_2024"
+      ]
+    },
+    {
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5584,7 +6362,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5609,7 +6387,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5634,7 +6412,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5659,7 +6437,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5684,7 +6462,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5709,7 +6487,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 51,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5734,7 +6512,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 52,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5759,7 +6537,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5784,7 +6562,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5809,7 +6587,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5834,7 +6612,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5859,7 +6637,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5884,7 +6662,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5909,7 +6687,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5934,7 +6712,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5959,7 +6737,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5984,7 +6762,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6009,7 +6787,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6034,7 +6812,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6059,7 +6837,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6084,7 +6862,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6109,7 +6887,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6134,7 +6912,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6159,7 +6937,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6184,7 +6962,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6209,7 +6987,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6234,7 +7012,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 72,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6259,7 +7037,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 73,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6284,7 +7062,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 74,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6309,7 +7087,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6334,7 +7112,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6359,7 +7137,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6384,7 +7162,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6409,7 +7187,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6433,7 +7211,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6458,7 +7236,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 81,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6483,7 +7261,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6894,6 +7672,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U3L6 Predict",
+        "script_level.level_keys": [
+          "CSA U3L6 Predict"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "0a0fb202-4d9a-4ee1-b7e0-a7bad85bb446"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6 Reading Files-L2",
+        "script_level.level_keys": [
+          "CSA U3L6 Reading Files-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "74634953-1d65-4c11-b56a-6266f35ce5a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6 Reading Files-L3",
+        "script_level.level_keys": [
+          "CSA U3L6 Reading Files-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "ae4c6602-dc87-4712-8943-6d27dc20c51d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6 Reading Files-L4",
+        "script_level.level_keys": [
+          "CSA U3L6 Reading Files-L4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "24d7b4c7-7afb-43e9-9261-e9885238eaf7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-u3l6-l5cfu_2024",
+        "script_level.level_keys": [
+          "csa-u3l6-l5cfu_2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "fb2cef7f-e819-4502-892b-aac8c918724a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U3L5-L1_pilot-2025",
         "script_level.level_keys": [
           "CSA U3L5-L1_pilot-2025"
@@ -6950,6 +7788,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot-2025",
         "activity_section.key": "3306cc03-11df-4703-b311-2c3ac21532e5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-u3l8-l1datasets_2024",
+        "script_level.level_keys": [
+          "csa-u3l8-l1datasets_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "7e0ef854-64ae-4f19-b583-5dc8839e91f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-u3l8-l2cfu_2024",
+        "script_level.level_keys": [
+          "csa-u3l8-l2cfu_2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "f7dd2726-e633-4fd1-816f-050eaa36f927"
       }
     },
     {
@@ -7435,8 +8297,44 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U3L1 Guided Notes",
-      "url": "https://docs.google.com/document/d/1EOWOaumzU1ZjlEsEuD6lMHCgGcJwuMQS4l3wcNLr9XY/edit?usp=sharing",
+      "name": "[EXEMPLAR] Data Sets Guided Notes",
+      "url": "https://docs.google.com/document/d/1Uv8SGUl5dJJ2h-WHLrXXzgL7uF5b3MbNe7Iw7FE6rYs/edit?usp=drive_link",
+      "key": "_exemplar_data_sets_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_data_sets_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Ethical and Social Issues Around Data Collection Guided Notes",
+      "url": "https://docs.google.com/document/d/1rVZ5xG9R2KBwtpTHXe8P1TLxGfocOHKX69DNiH871bQ/edit?usp=drive_link",
+      "key": "_exemplar_ethical_and_social_issues_around_data_collection_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_ethical_and_social_issues_around_data_collection_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Text Files Guided Notes",
+      "url": "https://docs.google.com/document/d/1i24lmTyZ_ZuXeXi4eJioBnparMps-FfbeYqpMkzUROQ/edit?usp=drive_link",
+      "key": "_exemplar_text_files_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_text_files_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] One-Dimensional (1D) Arrays Guided Notes",
+      "url": "https://docs.google.com/document/d/1mSP9nGV-52LocH4GTbEe2Ou0iETt4LgYxiwM5VTXvX0/edit?usp=drive_link",
       "key": "_exemplar_u3l1_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -7447,8 +8345,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U3L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1UFVyEN0mK9Cpvsy_xiySYu2FWERP8sr_97haQgcRVQI/edit?usp=sharing",
+      "name": "[EXEMPLAR] Modifying Elements Guided Notes",
+      "url": "https://docs.google.com/document/d/1R-VwH4eKNFtV18f9-S3pHnBxyoghUuHvvrzpUY1KTms/edit?usp=drive_link",
       "key": "_exemplar_u3l2_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -7459,8 +8357,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U3L3 Guided Notes",
-      "url": "https://docs.google.com/document/d/1HT1VJz1be9euEAXzV2aMb3eCjfsy9K7Nx-B_yJ9-r2A/edit?usp=sharing",
+      "name": "[EXEMPLAR] Traversing 1D Arrays Guided Notes",
+      "url": "https://docs.google.com/document/d/1yh2zI5-ALd7DOYiC6gghUvM1_9u2kcsAXjOO0tZScGs/edit?usp=drive_link",
       "key": "_exemplar_u3l3_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -7471,8 +8369,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U3L4 Guided Notes",
-      "url": "https://docs.google.com/document/d/1AcYc1o7JjXrkd8HuVzSEw2tA7r-EIcZPseOj2LXaIIk/edit?usp=sharing",
+      "name": "[EXEMPLAR] For Loops Guided Notes",
+      "url": "https://docs.google.com/document/d/1wdFFQj4E2FmQVQHyGl6QJ2Sx99-V3xtbZQDgwDAv7IY/edit?usp=drive_link",
       "key": "_exemplar_u3l4_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -7483,8 +8381,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U3L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/1iLTD_kaEY5Lz2mKWKMA7Tr9c0fntUVxICyYem6q1cV0/edit?usp=sharing",
+      "name": "[EXEMPLAR] Preconditions and Postconditions Guided Notes",
+      "url": "https://docs.google.com/document/d/1r5JXbw4rfqS59hWJXfxAaRv2w9C_msTPpY2QvGA4bFo/edit?usp=drive_link",
       "key": "_exemplar_u3l5_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -7507,8 +8405,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U3L7 Guided Notes",
-      "url": "https://docs.google.com/document/d/1n-Bf3j2614tFcpXj9W-dASu_MLYJsn5q3YNmx6nvLkg/edit?usp=sharing",
+      "name": "[EXEMPLAR] Enhanced for Loops Guided Notes",
+      "url": "https://docs.google.com/document/d/1uN6nrrN4M0r7OUllPAghXtFlLaxVcBXlZavndDLMU9g/edit?usp=drive_link",
       "key": "_exemplar_u3l7_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -7519,8 +8417,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U3L8 Guided Notes",
-      "url": "https://docs.google.com/document/d/14XtcOdzftiYFcInQ4Pl2lST9F1lEJzLhglDAdxWCXXI/edit?usp=sharing",
+      "name": "[EXEMPLAR] Array Algorithms Guided Notes",
+      "url": "https://docs.google.com/document/d/1LClMGWR9lUhKnz7PO-3TRprACgTsWaPtxdiDIL-am7U/edit?usp=drive_link",
       "key": "_exemplar_u3l8_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -7531,8 +8429,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U3L9 Guided Notes",
-      "url": "https://docs.google.com/document/d/1TzPam0fdPRGe2M7Ep2QKAO5LXYxhXF0lxMf0B_v2nF0/edit?usp=sharing",
+      "name": "[EXEMPLAR] Finding Duplicates Guided Notes",
+      "url": "https://docs.google.com/document/d/1Nmprr19aZmi2iwJMNXcYfewMUaTdUvUhgBmSLZy0ddo/edit?usp=drive_link",
       "key": "_exemplar_u3l9_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -7543,8 +8441,42 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Unit 3 Guide",
+      "url": "https://docs.google.com/document/d/1neIijgDoiwPbXBOgtpFT8-HMVUkoQ6NSRN5l7bg8oDI/edit?usp=drive_link",
+      "key": "_exemplar_unit_3_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_3_guide"
+      }
+    },
+    {
+      "name": "[KEY] Data Sets Extra Practice",
+      "url": "https://docs.google.com/document/d/1YsoBsXW2EGe0_FzcAoQs5nyu_w9KHvQbyRw15DrDl4M/edit?usp=drive_link",
+      "key": "_key_data_sets_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_sets_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] Ethical and Social Issues Around Data Collection Extra Practice",
+      "url": "https://docs.google.com/document/d/1m_cyc5_1ayyVMrgg2Jus8AMRKcQqMjLeDzuqQoSj9FQ/edit?usp=drive_link",
+      "key": "_key_ethical_and_social_issues_around_data_collection_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ethical_and_social_issues_around_data_collection_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] Finding Duplicates",
-      "url": "https://docs.google.com/document/d/1y5kEpgsfxc4R2RyRqq4XVtd1KiCL6DoqFQ83rColQC0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1ev8-reg8SPWdcTMYtBLMyq-JJQIIVSz-WQiMU6g8pIo/edit?usp=drive_link",
       "key": "_key_finding_duplicates",
       "properties": {
         "audience": "Verified Teacher",
@@ -7552,6 +8484,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_finding_duplicates"
+      }
+    },
+    {
+      "name": "[KEY] Text Files Extra Practice",
+      "url": "https://docs.google.com/document/d/13ELZ4UimCScduuEoDvctyPpr7Q-NJsVQqF66Xn_MKfk/edit?usp=drive_link",
+      "key": "_key_text_files_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_text_files_extra_practice"
       }
     },
     {
@@ -7579,8 +8523,8 @@
       }
     },
     {
-      "name": "[KEY] U3L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1xz52naX5m67u5X-huvkElaTKKwz06uPw_Q2Qp1En5AA/edit?usp=sharing",
+      "name": "[KEY] One-Dimensional (1D) Arrays Extra Practice",
+      "url": "https://docs.google.com/document/d/14ve34pprVaUoOqpiJ_0sey-LG5YIm9rOtbEnMwt8pF8/edit?usp=drive_link",
       "key": "_key_u3l1_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -7591,8 +8535,8 @@
       }
     },
     {
-      "name": "[KEY] U3L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Xy9dqVtdcmaN2sMt5zpuXKiAG6nWsCDutGOtBzkRKnE/edit?usp=sharing",
+      "name": "[KEY] Modifying Elements Extra Practice",
+      "url": "https://docs.google.com/document/d/1WnrTNPDdLd_K_mkD_x556olqAkNn1O6rqoS-0NHUtKA/edit?usp=drive_link",
       "key": "_key_u3l2_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -7603,8 +8547,8 @@
       }
     },
     {
-      "name": "[KEY] U3L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1ZuBq9nH0822Y9odQrZuo9QtlfSlna3aMNBQv1FfvDyw/edit?usp=sharing",
+      "name": "[KEY] Traversing 1D Arrays Extra Practice",
+      "url": "https://docs.google.com/document/d/172eDQO0H9nUNqRJjX3QZBPlX8wyYt1E1oSywAGNTDIk/edit?usp=drive_link",
       "key": "_key_u3l3_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -7615,8 +8559,8 @@
       }
     },
     {
-      "name": "[KEY] U3L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/1pz_eP3zPRcKLibhTtRpL-Of2B7XegCicDLnTezX4k1g/edit?usp=sharing",
+      "name": "[KEY] For Loops Extra Practice",
+      "url": "https://docs.google.com/document/d/16GYSF1B_Dg2EnhAGCHNGLOr6Hy1l1ovQ0pLmZpkwLQE/edit?usp=drive_link",
       "key": "_key_u3l4_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -7627,8 +8571,8 @@
       }
     },
     {
-      "name": "[KEY] U3L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/18f8jSMO_wdllcDaZlmmXGmNxV1xuDhSjdmHiPu_Ifvc/edit?usp=sharing",
+      "name": "[KEY] Preconditions and Postconditions Extra Practice",
+      "url": "https://docs.google.com/document/d/19IHeLgpMv8LIMZ_N6Sz6arTFedrLy21MPqM3pSxfAGM/edit?usp=drive_link",
       "key": "_key_u3l5_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -7651,8 +8595,8 @@
       }
     },
     {
-      "name": "[KEY] U3L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1au9Gf8AThnoCecTVeGfAaXWqV6nVADtxo6FDdVoa6mg/edit?usp=sharing",
+      "name": "[KEY] Enhanced for Loops Extra Practice",
+      "url": "https://docs.google.com/document/d/1Wi47L09AWmg3r35Ywco4d4tgLj5_LYCoA4AehBRgzV4/edit?usp=drive_link",
       "key": "_key_u3l7_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -7663,8 +8607,8 @@
       }
     },
     {
-      "name": "[KEY] U3L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1iWjLOLgVMrpJZC_7QSRzfs6NPSR0BEsNvxCDC1LMO0Q/edit?usp=sharing",
+      "name": "[KEY] Array Algorithms Extra Practice",
+      "url": "https://docs.google.com/document/d/1QVlQoGXv6lI2yFMe_sf7mBRGibRswz28PFZLcPcWbnw/edit?usp=drive_link",
       "key": "_key_u3l8_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -7675,8 +8619,8 @@
       }
     },
     {
-      "name": "[KEY] U3L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1XroKC2gFI8HEYLPKpGtlZlp5Mf4q8JHu1dAVM8Dx0qk/edit?usp=sharing",
+      "name": "[KEY] Finding Duplicates Extra Practice",
+      "url": "https://docs.google.com/document/d/1cDKfeHrPT45q7upsF_p-CpxZaMP_vtDEkaKbcfM5h1U/edit?usp=drive_link",
       "key": "_key_u3l9_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -7688,7 +8632,7 @@
     },
     {
       "name": "[KEY] Writing Algorithms with Arrays",
-      "url": "https://docs.google.com/document/d/1wKV_HOlhrv2Upnz-PnyX_BzcO7Av0rkwUC5J0ILGg9E/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1JcnEhCGtYLDZjpeSGWX_nkYsW0-d2-ZbrkJvaUzCZJQ/edit?usp=drive_link",
       "key": "_key_writing_algorithms_with_arrays",
       "properties": {
         "audience": "Verified Teacher",
@@ -7700,7 +8644,7 @@
     },
     {
       "name": "[KEY] Writing Algorithms with Arrays",
-      "url": "https://docs.google.com/document/d/1s4WrshmVTRHGmJ0uU1qaay1Q298vYHlYRkbwb4P_CNM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1ZQYXKfBWDNhERLMDfkDa-5yPR7XaD4de99u_6JR3WFk/edit?usp=drive_link",
       "key": "_key_writing_algorithms_with_arrays_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -7711,8 +8655,33 @@
       }
     },
     {
+      "name": "[KEY] Writing Algorithms with Data Sets",
+      "url": "https://docs.google.com/document/d/1aF_1rrcTOlBlyaP6mw8YkgrFsBuVp1NptSNAXNL23YQ/edit?usp=drive_link",
+      "key": "_key_writing_algorithms_with_data_sets",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_writing_algorithms_with_data_sets"
+      }
+    },
+    {
+      "name": "Analyzing Data Sets",
+      "url": "https://docs.google.com/document/d/1gjUs07b2Jrx0CyLB2q8Qwxo_HdmEgSJXUfCMty4jCZ8/edit?usp=drive_link",
+      "key": "analyzing_data_sets",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "analyzing_data_sets"
+      }
+    },
+    {
       "name": "Array Algorithms",
-      "url": "https://docs.google.com/presentation/d/1Ks7hI6Ig7WPUhQN0Pp2WIbxqAYD4PvsuzHvfPcVDXOA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1BUk7K4y9GBgd8ku567P8PAUHVv-_-X2HltBVx8ncy10/edit?usp=drive_link",
       "key": "array_algorithms",
       "properties": {
         "audience": "Verified Teacher",
@@ -7746,7 +8715,7 @@
     },
     {
       "name": "CS Bingo Cards",
-      "url": "https://docs.google.com/document/d/1FPz9Q-xJmlujbdQhaOZ1-Jf-9rz07eF9m5lynjuUlH4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1QuNXxgMaZFdSk1j_vHJEUnNTNcSoURInbrbkXKMgxwo/edit?usp=drive_link",
       "key": "cs_bingo_cards_1",
       "properties": {
         "audience": "Student",
@@ -7759,7 +8728,7 @@
     },
     {
       "name": "CS Bingo Definitions",
-      "url": "https://docs.google.com/document/d/1bdXt3-RXuBbmrRoFRUMfmFq6IQPH82gxpDPA7GcmfYg/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1bg56_vWHTribit2tS_Ow2oBCmuk6tnYvhvBdVQYL1aQ/edit?usp=drive_link",
       "key": "cs_bingo_definitions_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -7783,7 +8752,7 @@
     },
     {
       "name": "Data for Social Good Project",
-      "url": "https://docs.google.com/presentation/d/15-oUt8-MMzLVqX-CrAKCJg0vzPPH1SdgKUr03wjxinY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1jHD3HVAIjAzGHA9ktB7O3uCssmC6cpUhpFb_Sgs0EUI/edit?usp=drive_link",
       "key": "data_for_social_good_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -7820,8 +8789,46 @@
       }
     },
     {
+      "name": "Data Sets",
+      "url": "https://docs.google.com/presentation/d/1155DrPTBdiU1XhqXtjbGKac39eC76T0cT2TYWTWwct4/edit?usp=sharing",
+      "key": "data_sets",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_sets"
+      }
+    },
+    {
+      "name": "Data Sets Extra Practice",
+      "url": "https://docs.google.com/document/d/1m7M5VN9nnKu9oc6KwXAdy316Ao82KQTv6Vul98sX10w/edit?usp=drive_link",
+      "key": "data_sets_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_sets_extra_practice"
+      }
+    },
+    {
+      "name": "Data Sets Guided Notes",
+      "url": "https://docs.google.com/document/d/1Ttr7Z57BdUKKGG-7qD3NRLkq-8j1bQ9r4rsoI0oSD54/edit?usp=drive_link",
+      "key": "data_sets_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_sets_guided_notes"
+      }
+    },
+    {
       "name": "Enhanced For Loops",
-      "url": "https://docs.google.com/presentation/d/1e7RR2SUn6ip2MZ2LyjT5f_F_evcGNwkf5Po7Upeccf0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1_M_VBz4LCg6wc9xPnFW3az5up0ZzJFC1mn2XIOR6qoQ/edit?usp=drive_link",
       "key": "enhanced_for_loops",
       "properties": {
         "audience": "Verified Teacher",
@@ -7844,8 +8851,46 @@
       }
     },
     {
+      "name": "Ethical and Social Issues Around Data Collection",
+      "url": "https://docs.google.com/presentation/d/18J1TgB5vHoLOWf2gLSW-Ja9TsJkvdQAWVvuzG5BIKVo/edit?usp=drive_link",
+      "key": "ethical_and_social_issues_around_data_collection",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ethical_and_social_issues_around_data_collection"
+      }
+    },
+    {
+      "name": "Ethical and Social Issues Around Data Collection Extra Practice",
+      "url": "https://docs.google.com/document/d/1OG0g_2sGodll1FFgzhCbnawVOpiqKKjsRQipsxa1ywA/edit?usp=drive_link",
+      "key": "ethical_and_social_issues_around_data_collection_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "ethical_and_social_issues_around_data_collection_extra_practice"
+      }
+    },
+    {
+      "name": "Ethical and Social Issues Around Data Collection Guided Notes",
+      "url": "https://docs.google.com/document/d/1v2vcwFEYhFtQ1wht8sT-7cZAusThtwsHtBZ2tXPWurU/edit?usp=drive_link",
+      "key": "ethical_and_social_issues_around_data_collection_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "ethical_and_social_issues_around_data_collection_guided_notes"
+      }
+    },
+    {
       "name": "Finding Duplicates",
-      "url": "https://docs.google.com/presentation/d/1uAb-x1BIssUKs6zFzafyX_C0YvQJVA99oNVq74WGh7Q/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/122iPZqMrAF8yS8Jo8X47L9i_7XygfUKEY-XjJQNgLyY/edit?usp=drive_link",
       "key": "finding_duplicates",
       "properties": {
         "audience": "Verified Teacher",
@@ -7857,7 +8902,7 @@
     },
     {
       "name": "Finding Duplicates",
-      "url": "https://docs.google.com/document/d/1P0ChBYBeEfPXmhSexp8X8q5hYi3GoqTPqyjLjVvCn2Q/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1y-K0jFN6lONro-zHxEk72TPZcuRGALsDBQYWQEYJNO8/edit?usp=drive_link",
       "key": "finding_duplicates_1",
       "properties": {
         "audience": "Student",
@@ -7870,7 +8915,7 @@
     },
     {
       "name": "For Loops",
-      "url": "https://docs.google.com/presentation/d/1O1MCBkgwAtO73vll5Efn1OGqJsSeNg7Bfoh2JJLfk5c/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1b7wWYYbpTb_WG7axKcZvy7uwukpDpiS0NoqTInVHGNw/edit?usp=drive_link",
       "key": "for_loops",
       "properties": {
         "audience": "Verified Teacher",
@@ -7906,7 +8951,7 @@
     },
     {
       "name": "Modifying Elements",
-      "url": "https://docs.google.com/presentation/d/1E8G1t0h4bX3jnUITNVcR4IjtZI2kUA4DWezfYDy8JDU/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1JTSWAOoUUjp17ktuOoR81gRlk9jK8vlXBrTGpjFGq1Y/edit?usp=drive_link",
       "key": "modifying_elements",
       "properties": {
         "audience": "Verified Teacher",
@@ -7942,7 +8987,7 @@
     },
     {
       "name": "One-Dimensional (1D) Arrays",
-      "url": "https://docs.google.com/presentation/d/1ILRcTvqHwzkyKoYf9i_REBoWZQuF_ooafnmvL0mm-8k/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/17uXUrkC870E4OR0vTPqkRAHv8oz1lwb4welcgbx-Iu4/edit?usp=drive_link",
       "key": "one-dimensional_1d_arrays",
       "properties": {
         "audience": "Verified Teacher",
@@ -7966,7 +9011,7 @@
     },
     {
       "name": "Planning Algorithms Manipulatives",
-      "url": "https://docs.google.com/document/d/13SwSFKkS7zg6bfKGdARBiIBR8kdpJ-tzCb2ZvKyz5bQ/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1SjVfF7BqUPqIDHOzBT1c2m8zhYNxPPbJ2H0BOMR_sfU/edit?usp=drive_link",
       "key": "planning_algorithms_manipulatives",
       "properties": {
         "audience": "Student",
@@ -7979,7 +9024,7 @@
     },
     {
       "name": "Planning Algorithms Manipulatives",
-      "url": "https://docs.google.com/document/d/1CxKlb9dXdJ2G92hkoJRJG451dF4jNDPB6qN5__H0KHU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1NG-d3GSussRHpi-mwdALXQP_2FiJX8AJ83yPu30GSvc/edit?usp=drive_link",
       "key": "planning_algorithms_manipulatives_1",
       "properties": {
         "audience": "Student",
@@ -7992,7 +9037,7 @@
     },
     {
       "name": "Polymorphism",
-      "url": "https://docs.google.com/presentation/d/1rUrsc10AR9UmXvCuZH2Jm3MAhocJjHnW5FqtibZJR3Q/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1DWqBdwU1-F1pIVYkTbAg4Y3gX0t7OvbgWCoYbs86iIQ/edit?usp=drive_link",
       "key": "polymorphism",
       "properties": {
         "audience": "Verified Teacher",
@@ -8016,7 +9061,7 @@
     },
     {
       "name": "Preconditions and Postconditions",
-      "url": "https://docs.google.com/presentation/d/1rFiKkjhTcak9pE3U6rzw4SG6EXGu2p3H90OcvgNFVvQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1oNWLb_4efgh2kuSwqOVFe2OS20AFdXVqWIOwgsPqCZU/edit?usp=drive_link",
       "key": "preconditions_and_postconditions",
       "properties": {
         "audience": "Verified Teacher",
@@ -8034,6 +9079,44 @@
       },
       "seeding_key": {
         "resource.key": "programming_levels_in_csa_3"
+      }
+    },
+    {
+      "name": "Text Files",
+      "url": "https://docs.google.com/presentation/d/1eldTgEYN3IlzZxzbzzbdH6To3ohWG0qx4KsOwxHxLH8/edit?usp=drive_link",
+      "key": "text_files",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "text_files"
+      }
+    },
+    {
+      "name": "Text Files Extra Practice",
+      "url": "https://docs.google.com/document/d/16Q4Nu63m4c97vrVDKUN2a68jrWyxJFdxleRLtJrKQlc/edit?usp=drive_link",
+      "key": "text_files_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "text_files_extra_practice"
+      }
+    },
+    {
+      "name": "Text Files Guided Notes",
+      "url": "https://docs.google.com/document/d/15ibPFlDacjf4VQCFHoTCoxx8QXFXok_4nd3IHQbxqAM/edit?usp=drive_link",
+      "key": "text_files_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "text_files_guided_notes"
       }
     },
     {
@@ -8089,7 +9172,7 @@
     },
     {
       "name": "Traversing 1D Arrays",
-      "url": "https://docs.google.com/presentation/d/1di6gI9wOwCs4OjIB_BDgenO6qSXaqXKb3LSjfFnBHas/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1iPdDRxTBukYSH-q0aSEh9Na1q6FFt55QVurtwOhmQC8/edit?usp=drive_link",
       "key": "traversing_1d_arrays",
       "properties": {
         "audience": "Verified Teacher",
@@ -8100,8 +9183,8 @@
       }
     },
     {
-      "name": "U3L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1mHGQY_wjNcEM3RF72WJcBxm7x7zxp1fweTycE27miVU/edit?usp=sharing",
+      "name": "One-Dimensional (1D) Arrays Extra Practice",
+      "url": "https://docs.google.com/document/d/1Ik1McYYls769XBJIsyA3d9AmDA-LvQY5HRgZ8Kbs4IE/edit?usp=drive_link",
       "key": "u3l1_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8113,8 +9196,8 @@
       }
     },
     {
-      "name": "U3L1 Guided Notes",
-      "url": "https://docs.google.com/document/d/1fJSW9V_UohWVEA-v7qgbA1veUXli1rrOiZu2LoVpOQo/edit?usp=sharing",
+      "name": "One-Dimensional (1D) Arrays Guided Notes",
+      "url": "https://docs.google.com/document/d/1G_niP4faK_zNPxuSNkIhtOlO8tAQ2B-4MDAAq1f5eRE/edit?usp=drive_link",
       "key": "u3l1_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8126,8 +9209,8 @@
       }
     },
     {
-      "name": "U3L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/13M7L-uaed6l1O6d7461POhmp0HfnaBpmmgrh-rlD7XE/edit?usp=sharing",
+      "name": "Modifying Elements Extra Practice",
+      "url": "https://docs.google.com/document/d/1HJMxXOB5QZqWWF4uflRps3aAZjyX2ccZSTBcj0oIxrw/edit?usp=drive_link",
       "key": "u3l2_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8139,8 +9222,8 @@
       }
     },
     {
-      "name": "U3L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1KEAhcOwSHY7dmJ403gYKLUGmid1Ydgrbl6TL6eVDIlc/edit?usp=sharing",
+      "name": "Modifying Elements Guided Notes",
+      "url": "https://docs.google.com/document/d/1b4adC16vhZuttgV3WrBDuuLvRmubMMr1Bri9gZvaoxw/edit?usp=drive_link",
       "key": "u3l2_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8152,8 +9235,8 @@
       }
     },
     {
-      "name": "U3L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1TnYW18F4xv0nbD1_pgYeqMY3WsDTnboXs3fNpEgnXLE/edit?usp=sharing",
+      "name": "Traversing 1D Arrays Extra Practice",
+      "url": "https://docs.google.com/document/d/1s0oI6SsDEKWV1Ri5I132269ja5jKi9DfVljTrKya36U/edit?usp=drive_link",
       "key": "u3l3_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8165,8 +9248,8 @@
       }
     },
     {
-      "name": "U3L3 Guided Notes",
-      "url": "https://docs.google.com/document/d/1zjKgQIjVyPVeh14KBhqDqi9uB_ldglG3Htz-i7jDuTI/edit?usp=sharing",
+      "name": "Traversing 1D Arrays Guided Notes",
+      "url": "https://docs.google.com/document/d/1W5S2QFbkCpQDfiZ1f7AZyBI64n_4qCfMBZ6Xw98ex1M/edit?usp=drive_link",
       "key": "u3l3_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8178,8 +9261,8 @@
       }
     },
     {
-      "name": "U3L4 Extra Practice",
-      "url": "https://docs.google.com/document/d/12XBj7ixvUZgMngl8j9lsTIXFzrvUJ5sroyu6rUOhCVQ/edit?usp=sharing",
+      "name": "For Loops Extra Practice",
+      "url": "https://docs.google.com/document/d/12E0Pvt1FAA7_cpleFZmLlnIa__lj8k_BEUH_ctgA71g/edit?usp=drive_link",
       "key": "u3l4_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8191,8 +9274,8 @@
       }
     },
     {
-      "name": "U3L4 Guided Notes",
-      "url": "https://docs.google.com/document/d/1C8AYNAz9k1hfeBmrPkUsda65aJp7UnACNK60BbN5Uqs/edit?usp=sharing",
+      "name": "For Loops Guided Notes",
+      "url": "https://docs.google.com/document/d/1TzwUwVQxh-VTevzXaNnGA_n-QyI-HrwllWfL1FSO0N4/edit?usp=drive_link",
       "key": "u3l4_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8204,8 +9287,8 @@
       }
     },
     {
-      "name": "U3L5 Extra Practice",
-      "url": "https://docs.google.com/document/d/1xoaQtWVak820UovArVA_THJUbcTogtMAdZTB5_UFiVI/edit?usp=sharing",
+      "name": "Preconditions and Postconditions Extra Practice",
+      "url": "https://docs.google.com/document/d/1iU83DpXrxjXwOMWWb3MlPutZFpywPpuW2FH3upC5Nm0/edit?usp=drive_link",
       "key": "u3l5_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8217,8 +9300,8 @@
       }
     },
     {
-      "name": "U3L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/1W6EtbRZBdtGYeq4kmpJkQvqV6YGDDlupJ058fJQxrG4/edit?usp=sharing",
+      "name": "Preconditions and Postconditions Guided Notes",
+      "url": "https://docs.google.com/document/d/1FeQhiGU1CeQU5pj62kWPBz0QjE8yieLnnZH_etHUZUs/edit?usp=drive_link",
       "key": "u3l5_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8256,8 +9339,8 @@
       }
     },
     {
-      "name": "U3L7 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Q3PNy582iV67yAS4FAOf8lUn-yJGk8TFVeCJ_ifEbqw/edit?usp=sharing",
+      "name": "Enhanced for Loops Extra Practice",
+      "url": "https://docs.google.com/document/d/1cayLk0oSHkeP4SVvN22sMgXJgzrMEmfrUqfjHfZPhlk/edit?usp=drive_link",
       "key": "u3l7_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8269,8 +9352,8 @@
       }
     },
     {
-      "name": "U3L7 Guided Notes",
-      "url": "https://docs.google.com/document/d/1IXRg1XdvQJ_TUQ0tmdN866CxHxvzIw5Q-Gpzq68UgLQ/edit?usp=sharing",
+      "name": "Enhanced for Loops Guided Notes",
+      "url": "https://docs.google.com/document/d/1nvkF7ZNE0Iow6-hS8FCd5t57NoEZHIhchiGjrKxOwlk/edit?usp=drive_link",
       "key": "u3l7_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8282,8 +9365,8 @@
       }
     },
     {
-      "name": "U3L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1oBySNR7eETbzZML00nmI-KexneZc86RC9Jhxo0Hn3Nw/edit?usp=sharing",
+      "name": "Array Algorithms Extra Practice",
+      "url": "https://docs.google.com/document/d/1D8djcTvhKxRLUn9AqhcUCSYAK5gCJO0neBuqhLpefKI/edit?usp=drive_link",
       "key": "u3l8_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8295,8 +9378,8 @@
       }
     },
     {
-      "name": "U3L8 Guided Notes",
-      "url": "https://docs.google.com/document/d/1yUMYx6iYUcedxfPIIxXwR0ll2-bxqALE9sUdBFLY1Dc/edit?usp=sharing",
+      "name": "Array Algorithms Guided Notes",
+      "url": "https://docs.google.com/document/d/1h3_h9X9mfqM2uC2PRcT2jUcGNoftm4_oqR3rzobvcT8/edit?usp=drive_link",
       "key": "u3l8_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8308,8 +9391,8 @@
       }
     },
     {
-      "name": "U3L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/13kU6VOCKvNy7cVvkeA5ZuhOo7jDa41rt9cxjGoP3mfs/edit?usp=sharing",
+      "name": "Finding Duplicates Extra Practice",
+      "url": "https://docs.google.com/document/d/1lQCIV4NxAmAMO9mstRdY7rFPFjAIheAXtyfTj4AxaIU/edit?usp=drive_link",
       "key": "u3l9_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8321,8 +9404,8 @@
       }
     },
     {
-      "name": "U3L9 Guided Notes",
-      "url": "https://docs.google.com/document/d/1kcuU6WUqb5vVNdcqN-Zfmi1o1bV5ZWRfMSXdBouUYMI/edit?usp=sharing",
+      "name": "Finding Duplicates Guided Notes",
+      "url": "https://docs.google.com/document/d/1fxJODyGCCRtCORrJiacUnHOHNfsbY1F6MJa3SMuxGQ8/edit?usp=drive_link",
       "key": "u3l9_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8346,8 +9429,28 @@
       }
     },
     {
+      "name": "Unit 3 Guide",
+      "url": "https://docs.google.com/document/d/1sQ-D0HJH_wFBRmp_vbjGWH17rahBivNRKttyjam-738/edit?usp=drive_link",
+      "key": "unit_3_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_guide"
+      }
+    },
+    {
+      "name": "Unit 3 Overview",
+      "url": "https://docs.google.com/document/d/1Ug70wDr0LxT49wcxv8GQEZ4UOi1wj1yKnzIgt0VSvu4/edit?usp=drive_link",
+      "key": "unit_3_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_overview"
+      }
+    },
+    {
       "name": "Unit 3 Study Guide",
-      "url": "https://docs.google.com/document/d/1XNLZmHIVsdan4CSW9rw5kOOtRglGHXBeBSX9sihIHSs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1CaOn7eQvoRdjlI2CtkatSJLw3CZt31ZOshG0dq0sZBE/edit?usp=drive_link",
       "key": "unit_3_study_guide",
       "properties": {
         "audience": "Student",
@@ -8356,6 +9459,26 @@
       },
       "seeding_key": {
         "resource.key": "unit_3_study_guide"
+      }
+    },
+    {
+      "name": "Unit 3 Study Guide",
+      "url": "https://docs.google.com/document/d/1CaOn7eQvoRdjlI2CtkatSJLw3CZt31ZOshG0dq0sZBE/edit?usp=drive_link",
+      "key": "unit_3_study_guide_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_study_guide_1"
+      }
+    },
+    {
+      "name": "Unit 3 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/11q8dFgEnW8sCDODP0APfgLOBpVrrUPLloaMPJZUqIB0/edit?usp=drive_link",
+      "key": "unit_3_word_wall_cards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_word_wall_cards"
       }
     },
     {
@@ -8372,7 +9495,7 @@
     },
     {
       "name": "Writing Algorithms with Arrays",
-      "url": "https://docs.google.com/document/d/1TGA3DKOqIpyKg4yCuV82lWb8ZnHM8-xoQBw82cviIT0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/11bCfIL1NDVj7BOUrAWIxnZ2t0MJTrNGXAeapegZVEU0/edit?usp=drive_link",
       "key": "writing_algorithms_with_arrays",
       "properties": {
         "audience": "Student",
@@ -8385,7 +9508,7 @@
     },
     {
       "name": "Writing Algorithms with Arrays",
-      "url": "https://docs.google.com/document/d/1Umn4BLrL3DDKlQHfXXrImQ8LRS1C3ShruJnv-cYFp1c/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1u4BKMp6_8IPSuiHOHPH0ydNMWJXBO4y7LAstjmOL48E/edit?usp=drive_link",
       "key": "writing_algorithms_with_arrays_1",
       "properties": {
         "audience": "Student",
@@ -8394,6 +9517,18 @@
       },
       "seeding_key": {
         "resource.key": "writing_algorithms_with_arrays_1"
+      }
+    },
+    {
+      "name": "Writing Algorithms with Data Sets",
+      "url": "https://docs.google.com/document/d/1EGY4ktPYEjI4iIbxWPOG9GOLQtgf0zZrVhMTAvBX3uM/edit?usp=drive_link",
+      "key": "writing_algorithms_with_data_sets",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "writing_algorithms_with_data_sets"
       }
     }
   ],
@@ -8913,9 +10048,123 @@
         "lesson.key": "Unit 3 Assessment",
         "resource.key": "unlocking_assessments"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_exemplar_data_sets_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_data_sets_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_writing_algorithms_with_data_sets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "data_sets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "data_sets_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "data_sets_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "writing_algorithms_with_data_sets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_exemplar_text_files_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_text_files_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "text_files"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "text_files_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "text_files_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_exemplar_ethical_and_social_issues_around_data_collection_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_ethical_and_social_issues_around_data_collection_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "analyzing_data_sets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "ethical_and_social_issues_around_data_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "ethical_and_social_issues_around_data_collection_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "ethical_and_social_issues_around_data_collection_guided_notes"
+      }
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_3_guide",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "creating_and_using_word_walls_2",
@@ -8927,12 +10176,66 @@
         "resource.key": "programming_levels_in_csa_3",
         "script.name": "csa3-pilot-2025"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_guide",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_overview",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_study_guide_1",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_word_wall_cards",
+        "script.name": "csa3-pilot-2025"
+      }
     }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
+    {
+      "key": "algorithmic_bias",
+      "word": "algorithmic bias",
+      "definition": "when a computer program makes decisions that unfairly favor one group of people over others due to errors in the data or the way the program is designed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithmic_bias"
+      }
+    },
+    {
+      "key": "data_abstraction",
+      "word": "data abstraction",
+      "definition": "the process of managing complexity via named data structures like variables and arrays",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_abstraction"
+      }
+    },
+    {
+      "key": "data_set",
+      "word": "data set",
+      "definition": "a collection of related pieces of information organized together to analyze, answer questions, or solve problems",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_set"
+      }
+    },
     {
       "key": "data_structure",
       "word": "data structure",
@@ -8961,6 +10264,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "element"
+      }
+    },
+    {
+      "key": "file",
+      "word": "file",
+      "definition": "storage for data that persists when the program is not running",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "file"
       }
     },
     {
@@ -9082,6 +10395,16 @@
       "seeding_key": {
         "vocabulary.key": "traverse"
       }
+    },
+    {
+      "key": "value",
+      "word": "value",
+      "definition": "a single item in a data structure",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "value"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -9130,6 +10453,12 @@
     {
       "seeding_key": {
         "lesson.key": "One-Dimensional (1D) Arrays",
+        "vocabulary.key": "data_abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "One-Dimensional (1D) Arrays",
         "vocabulary.key": "data_structure"
       }
     },
@@ -9165,14 +10494,38 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Preconditions and Postconditions",
+        "lesson.key": "Traversing 1D Arrays",
+        "vocabulary.key": "traverse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data_set"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "file"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "vocabulary.key": "text_file"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversing 1D Arrays",
-        "vocabulary.key": "traverse"
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "algorithmic_bias"
       }
     }
   ],
@@ -9180,6 +10533,36 @@
 
   ],
   "objectives": [
+    {
+      "key": "03b267d0-f00b-4041-8c05-50d11e8fa9ee",
+      "properties": {
+        "description": "Use the `File` class to read data from a file and handle file-related exceptions with `throws IOException`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "03b267d0-f00b-4041-8c05-50d11e8fa9ee"
+      }
+    },
+    {
+      "key": "157b18e1-6859-4a65-8920-4b0aa7a455e7",
+      "properties": {
+        "description": "Use data sets to solve problems"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "157b18e1-6859-4a65-8920-4b0aa7a455e7"
+      }
+    },
+    {
+      "key": "1c9b50a9-a9f9-44dc-876c-a95637d270e9",
+      "properties": {
+        "description": "Process a data set to calculate totals, averages, or to find specific values"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "1c9b50a9-a9f9-44dc-876c-a95637d270e9"
+      }
+    },
     {
       "key": "24b34c2e-984e-4e5a-8704-4660c431894b",
       "properties": {
@@ -9198,6 +10581,36 @@
       "seeding_key": {
         "lesson.key": "One-Dimensional (1D) Arrays",
         "objective.key": "2b680586-3b8c-430b-8f17-06bee9151aa7"
+      }
+    },
+    {
+      "key": "2cf365f9-a4f3-4b31-a8d9-e4c4a31c974e",
+      "properties": {
+        "description": "Explain how algorithmic bias creates unfair outcomes for specific groups of users"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "2cf365f9-a4f3-4b31-a8d9-e4c4a31c974e"
+      }
+    },
+    {
+      "key": "373054fd-527a-4a6c-ae0f-76d3f76409f3",
+      "properties": {
+        "description": "Use `while` loops to read and process all elements in a file efficiently"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "373054fd-527a-4a6c-ae0f-76d3f76409f3"
+      }
+    },
+    {
+      "key": "3b5b2ea0-0c42-4038-9c23-6cbd23aa6224",
+      "properties": {
+        "description": "Use `Scanner` methods to read various data types from a file"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "3b5b2ea0-0c42-4038-9c23-6cbd23aa6224"
       }
     },
     {
@@ -9291,6 +10704,16 @@
       }
     },
     {
+      "key": "6b280622-eb3a-4863-832f-5a9eb8715e6b",
+      "properties": {
+        "description": "Evaluate the appropriateness of data sets for specific questions or topics"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "6b280622-eb3a-4863-832f-5a9eb8715e6b"
+      }
+    },
+    {
       "key": "75e5fc6f-2ca5-4549-b29f-fb4a6344c65c",
       "properties": {
         "description": "Use variables of a superclass type as instance variables and method parameters in a class"
@@ -9331,6 +10754,16 @@
       }
     },
     {
+      "key": "8e4035a2-7f3a-45f8-96ac-cb888fe5f012",
+      "properties": {
+        "description": "Write algorithms to work with data sets"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "8e4035a2-7f3a-45f8-96ac-cb888fe5f012"
+      }
+    },
+    {
       "key": "8f342067-7f17-4038-8a7b-df671eb19a4a",
       "properties": {
         "description": "Plan a project to meet specifications"
@@ -9358,6 +10791,16 @@
       "seeding_key": {
         "lesson.key": "Enhanced For Loops",
         "objective.key": "92ad1302-bd23-4fba-8302-2f7483e16046"
+      }
+    },
+    {
+      "key": "9c16c725-1dab-4a55-8f08-23023b8cd7f6",
+      "properties": {
+        "description": "Discuss how biases in data sets impact the accuracy and efficiency of program outcomes"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "9c16c725-1dab-4a55-8f08-23023b8cd7f6"
       }
     },
     {
@@ -9515,13 +10958,6 @@
     {
       "seeding_key": {
         "lesson.key": "Array Algorithms",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.I.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Array Algorithms",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-14"
       }
@@ -9606,29 +11042,29 @@
     {
       "seeding_key": {
         "lesson.key": "Enhanced For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.C.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.4.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Enhanced For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.C.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.4.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Enhanced For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.C.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.4.A.5"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Enhanced For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.C.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.4.A.6"
       }
     },
     {
@@ -9655,22 +11091,8 @@
     {
       "seeding_key": {
         "lesson.key": "Finding Duplicates",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.G.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.G.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.I.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.11.A.1"
       }
     },
     {
@@ -9704,50 +11126,36 @@
     {
       "seeding_key": {
         "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.6.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.7.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.8.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.8.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.B.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.8.A.3"
       }
     },
     {
@@ -9767,22 +11175,22 @@
     {
       "seeding_key": {
         "lesson.key": "Modifying Elements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.A.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.3.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Modifying Elements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.A.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.3.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Modifying Elements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.A.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.3.A.5"
       }
     },
     {
@@ -9802,15 +11210,15 @@
     {
       "seeding_key": {
         "lesson.key": "One-Dimensional (1D) Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.3.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "One-Dimensional (1D) Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.A.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.3.A.3"
       }
     },
     {
@@ -9830,48 +11238,6 @@
     {
       "seeding_key": {
         "lesson.key": "Polymorphism",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.A.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Polymorphism",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-14"
       }
@@ -9886,36 +11252,22 @@
     {
       "seeding_key": {
         "lesson.key": "Preconditions and Postconditions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.I.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.8.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Preconditions and Postconditions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.8.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Preconditions and Postconditions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Preconditions and Postconditions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Preconditions and Postconditions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.F.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.5.A.1"
       }
     },
     {
@@ -9949,29 +11301,22 @@
     {
       "seeding_key": {
         "lesson.key": "Traversing 1D Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.A.7"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.3.A.6"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversing 1D Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.B.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.4.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Traversing 1D Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing 1D Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.B.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.4.A.2"
       }
     },
     {
@@ -9986,6 +11331,90 @@
         "lesson.key": "Traversing 1D Arrays",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.6.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.6.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.6.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.6.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.6.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "4.1.C.1"
       }
     }
   ],
