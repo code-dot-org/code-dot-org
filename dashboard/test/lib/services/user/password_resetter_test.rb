@@ -1,34 +1,38 @@
 require 'test_helper'
-class Services::User::PasswordResetterTest < ActiveSupport::TestCase
-  test 'do not send password reset to accounts without email authentication' do
-    # Clear out any deliveries
+
+describe Services::User::PasswordResetter do
+  before do
+    # Clear out any deliveries before each test
     ActionMailer::Base.deliveries.clear
+  end
+  before(:all) do
+    @lti_user = FactoryBot.create(:teacher, :with_lti_auth)
+    @google_user = FactoryBot.create(:teacher, :with_google_authentication_option)
+  end
 
-    # User with LTI only does not get email
-    lti_user = create(:teacher, :with_lti_auth)
-    assert Services::User::PasswordResetter.call(email: lti_user.email)
-    assert ActionMailer::Base.deliveries.empty?
+  it 'does not send password reset to lti accounts without email authentication' do
+    assert Services::User::PasswordResetter.call(email: @lti_user.email)
+    assert_empty ActionMailer::Base.deliveries
+  end
 
-    # User with LTI and email auth gets email
-    lti_user.authentication_options.append(create(:authentication_option))
-    assert Services::User::PasswordResetter.call(email: lti_user.email)
+  it 'does send password reset to lti accounts with email authentication' do
+    @lti_user.authentication_options.append(FactoryBot.create(:authentication_option, email: @lti_user.email))
+    assert Services::User::PasswordResetter.call(email: @lti_user.email)
     mail = ActionMailer::Base.deliveries.first
-    assert_equal [lti_user.email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
+    _(mail.to).must_equal [@lti_user.email]
+    _(mail.subject).must_equal 'Code.org reset password instructions'
+  end
 
-    # User with Google and email auth gets email
-    google_user = create(:teacher, :with_google_authentication_option)
-    assert Services::User::PasswordResetter.call(email: google_user.email)
+  it 'does not send password reset to oauth accounts without email authentication' do
+    @google_user.authentication_options.find_by(credential_type: "email").destroy
+    assert Services::User::PasswordResetter.call(email: @google_user.email)
+    assert_empty ActionMailer::Base.deliveries
+  end
+
+  it 'does send password reset to oauth accounts with email authentication' do
+    assert Services::User::PasswordResetter.call(email: @google_user.email)
     mail = ActionMailer::Base.deliveries.first
-    assert_equal [lti_user.email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
-
-    # Clear out any deliveries
-    ActionMailer::Base.deliveries.clear
-
-    # User with Google only does not get email
-    google_user.authentication_options.find_by(credential_type: "email").destroy
-    assert Services::User::PasswordResetter.call(email: google_user.email)
-    assert ActionMailer::Base.deliveries.empty?
+    _(mail.to).must_equal [@google_user.email]
+    _(mail.subject).must_equal 'Code.org reset password instructions'
   end
 end

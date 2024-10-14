@@ -18,13 +18,12 @@ module Services
         # (a user with an Email auth option first, otherwise any user that has that email)
         @user = ::User.find_by_email_or_hashed_email(email)
         if user.nil?
-          not_found_user = ::User.new(email: email)
           Cdo::Metrics.put(
             'User', 'PasswordResetUserNotFound', 1, {
               Environment: CDO.rack_env
             }
           )
-          return not_found_user
+          return ::User.new(email: email)
         end
 
         if user.authentication_options.any?(&:email?)
