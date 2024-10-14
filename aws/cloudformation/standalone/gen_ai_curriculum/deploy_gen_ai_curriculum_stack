@@ -95,13 +95,6 @@ def main
   account_id = JSON.parse(identity)['Account']
   puts "Using AWS Account ID: #{account_id.colorize(:light_cyan)}"
 
-  unless options[:dry_run]
-    puts "\nDeregistering autoscaling targets, if present...\n"
-    Config::ENDPOINT_CONFIGS.each do |config|
-      deregister_auto_scaling(config[:model_id], options[:environment])
-    end
-  end
-
   cmd = "aws cloudformation deploy " \
     "--stack-name gen-ai-curriculum-#{options[:environment]} " \
     "--template-file gen_ai_curriculum.yml " \
@@ -115,6 +108,11 @@ def main
     puts "\nWould have run command: " + cmd.colorize(:light_cyan)
     puts "\nCreated Cloudformation template. Re-run this script with dry-run: false to deploy.".colorize(:light_green)
     return
+  end
+
+  puts "\nDeregistering autoscaling targets, if present...\n"
+  Config::ENDPOINT_CONFIGS.each do |config|
+    deregister_auto_scaling(config[:model_id], options[:environment])
   end
 
   puts "\nDeploying stack..."
