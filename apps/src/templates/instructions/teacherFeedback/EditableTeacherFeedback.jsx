@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
@@ -68,11 +68,15 @@ export class EditableTeacherFeedback extends Component {
   componentDidMount = () => {
     window.addEventListener('beforeunload', this.onUnload);
     if (this.props.rubric) {
-      analyticsReporter.sendEvent(EVENTS.RUBRIC_LEVEL_VIEWED_EVENT, {
-        sectionId: this.props.selectedSectionId,
-        unitId: this.props.serverScriptId,
-        levelId: this.props.serverLevelId,
-      });
+      analyticsReporter.sendEvent(
+        EVENTS.RUBRIC_LEVEL_VIEWED_EVENT,
+        {
+          sectionId: this.props.selectedSectionId,
+          unitId: this.props.serverScriptId,
+          levelId: this.props.serverLevelId,
+        },
+        PLATFORMS.BOTH
+      );
     }
   };
 
@@ -130,6 +134,15 @@ export class EditableTeacherFeedback extends Component {
     } else {
       this.setState({performance: value});
     }
+    analyticsReporter.sendEvent(
+      EVENTS.RUBRIC_ACTIVITY,
+      {
+        sectionId: this.props.selectedSectionId,
+        unitId: this.props.serverScriptId,
+        levelId: this.props.serverLevelId,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   onSubmitFeedback = () => {
@@ -167,12 +180,16 @@ export class EditableTeacherFeedback extends Component {
           submitting: false,
         });
       });
-    analyticsReporter.sendEvent(EVENTS.FEEDBACK_SUBMITTED, {
-      sectionId: this.props.selectedSectionId,
-      unitId: this.props.serverScriptId,
-      levelId: this.props.serverLevelId,
-      isRubric: this.props.rubric,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.FEEDBACK_SUBMITTED,
+      {
+        sectionId: this.props.selectedSectionId,
+        unitId: this.props.serverScriptId,
+        levelId: this.props.serverLevelId,
+        isRubric: this.props.rubric,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   didFeedbackChange = () => {
