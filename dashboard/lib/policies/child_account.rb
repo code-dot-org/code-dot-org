@@ -147,7 +147,7 @@ class Policies::ChildAccount
     # lockout_date: the date at which we will begin to lockout all CPA users who
     # are not in compliance with the policy.
     # start_date: the date on which this policy first went into effect.
-    {
+    policies = {
       'CO' => {
         name: 'CPA',
         max_age: 12,
@@ -163,6 +163,15 @@ class Policies::ChildAccount
         start_date: DateTime.parse('2025-01-01T00:00:00-05:00'),
       }
     }
+
+    # Override the configured dates for testing purposes
+    policies.each_key do |state_code|
+      policy = policies[state_code]
+      lockout_date_override = DCDO.get("cap_#{state_code}_lockout_date_override", nil)
+      policy[:lockout_date] = DateTime.parse(lockout_date_override) if lockout_date_override
+      start_date_override = DCDO.get("cap_#{state_code}_start_date_override", nil)
+      policy[:start_date] = DateTime.parse(start_date_override) if start_date_override
+    end
   end
 
   def self.state_policy(user)
@@ -195,7 +204,7 @@ class Policies::ChildAccount
 
     # Check to see if they are old enough at the current date
     # We cannot trust 'user.age' because that is a different time zone and broken for leap years
-    today = current_time.in_time_zone(lockout_date.utc_offset)
+    today = DateTime.now.in_time_zone(lockout_date.utc_offset)
     student_age = today.year - student_birthday.year
     ((student_birthday + student_age.years > today) ? (student_age - 1) : student_age) <= policy[:max_age]
   end
@@ -220,19 +229,12 @@ class Policies::ChildAccount
     return false unless policy
 
     # Parental permission is not required until the policy is in effect.
-    return false if policy[:start_date] > current_time
+    return false if policy[:start_date] > DateTime.now
 
     # Parental permission is not required for students
     # whose age cannot be identified or who are older than the maximum age covered by the policy.
     return false unless underage?(user)
 
     personal_account?(user)
-  end
-
-  # Allows for manual an automated tests to override what the "current time" is
-  # for CAP calculations. Testers can set the DCDO key "cap_current_time" to a
-  # string representing the DateTime they want to simulate.
-  def self.current_time
-    DateTime.parse(DCDO.get('cap_current_time', DateTime.now.iso8601))
   end
 end

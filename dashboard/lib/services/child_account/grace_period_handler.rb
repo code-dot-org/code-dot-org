@@ -13,7 +13,7 @@ module Services
       def call
         return if Policies::ChildAccount::ComplianceState.locked_out?(user)
         # Users can be transitioned to the grace period only after the "all users' lockout" phase has started.
-        return if all_users_lockout_start_date.nil? || all_users_lockout_start_date > Policies::ChildAccount.current_time
+        return if all_users_lockout_start_date.nil? || all_users_lockout_start_date > DateTime.now
 
         if Policies::ChildAccount.compliant?(user)
           # Removes the "grace period" state if the user is now CAP compliant.
