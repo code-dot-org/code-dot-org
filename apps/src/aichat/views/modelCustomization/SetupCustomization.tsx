@@ -130,14 +130,14 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const sliderProps: SliderProps = {
     name: 'temperature-slider',
-    value: aiCustomizations.temperature,
+    value: aiCustomizations.temperature * 10,
     minValue: MIN_TEMPERATURE,
     maxValue: MAX_TEMPERATURE,
     step: SET_TEMPERATURE_STEP,
     hideValue: true,
     disabled: isDisabled(temperature) || readOnlyWorkspace,
     onChange: event => {
-      const value = parseFloat(event.target.value).toFixed(1); // Round to nearest tenth.
+      const value = parseInt(event.target.value) / 10;
       dispatch(
         setAiCustomizationProperty({
           property: 'temperature',
