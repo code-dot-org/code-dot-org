@@ -71,7 +71,7 @@ steps:
   - name: unit-tests
     # see: docker/continuous-integration/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:ruby-3.3.4
+    image: codedotorg/code-dot-org:1.11.0
     pull: always
     volumes:
       - name: rbenv
@@ -191,7 +191,7 @@ steps:
   - name: ui-tests
     # see: docker/continuous-integration/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:ruby-3.3.4
+    image: codedotorg/code-dot-org:1.11.0
     pull: always
     volumes:
       - name: rbenv
@@ -289,6 +289,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 621468bfcefa883b6ee97f1b7dc12c252c55f3ba4bcb3e72fbea87b7958b8960
+hmac: a23424eb3b46ffbbc17d8c215769cc6639ba651799eed53d6e0d263ba7e71f65
 
 ...
