@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "hoc-music-ai-pilot-4",
-    "serialized_at": "2024-10-11 16:14:50 UTC",
+    "serialized_at": "2024-10-11 16:41:05 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -140,15 +140,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-ai-video-intro"
-        ],
         "progression": "Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music-ai-video-intro"
+          "music_lab_intro_panels_start2"
         ],
         "lesson.key": "Music Lab: AI Edition for Hour of Code",
         "lesson_group.key": "",
@@ -156,7 +153,7 @@
         "activity_section.key": "bd4b14b1-93ac-4bef-a759-6dc06c32f759"
       },
       "level_keys": [
-        "music-ai-video-intro"
+        "music_lab_intro_panels_start2"
       ]
     },
     {
@@ -563,9 +560,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "music-ai-video-intro",
+        "level.key": "music_lab_intro_panels_start2",
         "script_level.level_keys": [
-          "music-ai-video-intro"
+          "music_lab_intro_panels_start2"
         ],
         "lesson.key": "Music Lab: AI Edition for Hour of Code",
         "lesson_group.key": "",
