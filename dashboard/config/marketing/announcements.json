@@ -1,6 +1,6 @@
 {
   "pages": {
-    "/home": "access-report-launch-2024",
+    "/home": "gen-ai-launch-2024",
     "/student-home": "transformers-sept-2024"
   },
   "banners": {
@@ -53,6 +53,15 @@
       "buttonText": "Read the report",
       "buttonUrl": "https://advocacy.code.org/stateofcs/",
       "buttonId": "access-report-launch-2024"
+    },
+    "gen-ai-launch-2024": {
+      "dcdo": "gen-ai-launch",
+      "image": "/images/ai/explore-gen-ai-bot-wizard.png",
+      "title": "Exploring Generative AI",
+      "body": "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/curriculum/generative-ai",
+      "buttonId": "gen-ai-launch-2024"
     }
   }
 }
