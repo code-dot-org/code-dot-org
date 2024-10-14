@@ -116,6 +116,10 @@ const Callouts: React.FunctionComponent = () => {
         direction: availableCallouts[calloutId].direction,
         openToolboxCategory: availableCallouts[calloutId].openToolboxCategory,
       });
+    } else {
+      // If there's no available callout for the id, fallback by looking for
+      // a rendered block with a matching id.
+      validCallouts.push({selector: `g[data-id="${calloutId}"]`});
     }
   });
 
