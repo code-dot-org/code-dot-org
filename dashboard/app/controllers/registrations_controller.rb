@@ -60,7 +60,7 @@ class RegistrationsController < Devise::RegistrationsController
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
     else
-      # Use this path to raise errors in new sign up flow
+      # Currently, the only error we're checking for is a duplicate email
       if params[:new_sign_up].present?
         raise ValidationError.new(@user.errors)
       end

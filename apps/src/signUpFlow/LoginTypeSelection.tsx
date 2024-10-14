@@ -143,7 +143,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
         },
         body: JSON.stringify(submitLoginTypeParams),
       });
-
+      // We are currently only intentionally surfacing errors for duplicate emails
       if (!response.ok) {
         setEmailErrorMessage(i18n.duplicate_email_error_message());
         setShowEmailError(true);
@@ -152,7 +152,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
       navigateToHref(finishAccountUrl);
     } catch (error) {
       // Handle network or other errors
-      console.error('Fetch error:', error);
+      console.error(error);
     }
   };
 
