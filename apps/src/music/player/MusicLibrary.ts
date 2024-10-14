@@ -32,14 +32,17 @@ export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       localLibrary as LibraryJson
     );
   } else {
+    // First, retrieve the library and perhaps translations.
     const libraryJsonResponsePromise = HttpClient.fetchJson<LibraryJson>(
       getBaseAssetUrl() +
+        'v2/' +
         libraryFilename +
         '.json' +
         (requestVersion ? `?version=${requestVersion}` : ''),
       {},
       LibraryValidator
     );
+
     const promises: Promise<GetResponse<Translations | LibraryJson>>[] = [
       libraryJsonResponsePromise,
     ];
@@ -52,7 +55,7 @@ export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       promises.push(translationPromise);
     }
 
-    // translations will be undefined if locale is en_us.
+    // Translations will be undefined if locale is en_us.
     const [libraryJsonResponse, translations] = await Promise.allSettled(
       promises
     );
@@ -68,6 +71,47 @@ export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
         translations.value.value as Translations
       );
     }
+
+    // Second, retrieve any partial library files.  These contain
+    // additional content that will be merged into the library.
+    const partialsPromises: Promise<GetResponse<LibraryJson>>[] | undefined =
+      libraryJson.partials?.map(merge => {
+        return HttpClient.fetchJson<LibraryJson>(
+          getBaseAssetUrl() +
+            'v2/partials/' +
+            merge +
+            '.json' +
+            (requestVersion ? `?version=${requestVersion}` : ''),
+          {},
+          LibraryValidator
+        );
+      });
+
+    let partialsResponses: PromiseSettledResult<GetResponse<LibraryJson>>[] =
+      [];
+    if (partialsPromises) {
+      partialsResponses = await Promise.allSettled(partialsPromises);
+    }
+
+    libraryJson.kits ??= [];
+    libraryJson.instruments ??= [];
+    libraryJson.packs ??= [];
+
+    partialsResponses.forEach(partialsResponse => {
+      if (partialsResponse.status !== 'fulfilled') {
+        throw new Error('Error loading a library partial.');
+      }
+      const src = partialsResponse.value.value;
+      if (src.kits) {
+        libraryJson.kits.push(...src.kits);
+      }
+      if (src.instruments) {
+        libraryJson.instruments.push(...src.instruments);
+      }
+      if (src.packs) {
+        libraryJson.packs.push(...src.packs);
+      }
+    });
 
     return new MusicLibrary(libraryName, libraryJson);
   }
@@ -449,6 +493,7 @@ export type LibraryJson = {
   instruments: SoundFolder[];
   kits: SoundFolder[];
   packs: SoundFolder[];
+  partials?: string[];
 };
 
 export interface Sounds {
