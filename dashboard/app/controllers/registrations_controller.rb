@@ -95,8 +95,9 @@ class RegistrationsController < Devise::RegistrationsController
     @age_options = [{value: '', text: ''}] + User::AGE_DROPDOWN_OPTIONS.map do |age|
       {value: age.to_s, text: age.to_s}
     end
-
-    @us_ip = us_ip?
+    location = Geocoder.search(request.ip).try(:first)
+    @country_code = location&.country_code.to_s.upcase
+    @us_ip = ['US', 'RD'].include?(@country_code)
     @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
       {value: code, text: name}
     end
@@ -108,7 +109,9 @@ class RegistrationsController < Devise::RegistrationsController
   # Get /users/new_sign_up/finish_teacher_account
   #
   def finish_teacher_account
-    @us_ip = us_ip?
+    location = Geocoder.search(request.ip).try(:first)
+    @country_code = location&.country_code.to_s.upcase
+    @us_ip = ['US', 'RD'].include?(@country_code)
     render 'finish_teacher_account'
   end
 

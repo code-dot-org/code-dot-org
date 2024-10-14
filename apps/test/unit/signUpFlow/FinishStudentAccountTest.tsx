@@ -54,6 +54,7 @@ describe('FinishStudentAccount', () => {
       <FinishStudentAccount
         ageOptions={ageOptions}
         usIp={usIp}
+        countryCode={'US'}
         usStateOptions={usStateOptions}
       />
     );

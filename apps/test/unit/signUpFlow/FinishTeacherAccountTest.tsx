@@ -36,7 +36,7 @@ describe('FinishTeacherAccount', () => {
   });
 
   function renderDefault(usIp: boolean = true) {
-    render(<FinishTeacherAccount usIp={usIp} />);
+    render(<FinishTeacherAccount usIp={usIp} countryCode={'US'} />);
   }
 
   it('renders finish teacher account page with school zip when usIp is true', () => {
