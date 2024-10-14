@@ -93,8 +93,8 @@ export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       partialsResponses = await Promise.allSettled(partialsPromises);
     }
 
-    libraryJson.kits ??= [];
     libraryJson.instruments ??= [];
+    libraryJson.kits ??= [];
     libraryJson.packs ??= [];
 
     partialsResponses.forEach(partialsResponse => {
@@ -102,11 +102,11 @@ export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
         throw new Error('Error loading a library partial.');
       }
       const src = partialsResponse.value.value;
-      if (src.kits) {
-        libraryJson.kits.push(...src.kits);
-      }
       if (src.instruments) {
         libraryJson.instruments.push(...src.instruments);
+      }
+      if (src.kits) {
+        libraryJson.kits.push(...src.kits);
       }
       if (src.packs) {
         libraryJson.packs.push(...src.packs);
