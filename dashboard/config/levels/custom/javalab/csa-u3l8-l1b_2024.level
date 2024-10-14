@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-10-09T19:11:27.000Z",
   "level_num": "custom",
@@ -42,9 +43,15 @@
         "isVisible": true,
         "tabOrder": 5
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Health Research Data",
+    "bubble_choice_description": "Patient data for a study on heart disease, aimed at understanding risk-factors for disease.",
+    "long_instructions": "Investigate the bias in this data set and explore its impact on the conclusions drawn from the data.",
+    "thumbnail_url": "https://images.code.org/32ca50ec0a86270ae3e3b9ef563f0016-heart-attack.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-09T19:11:27.272+00:00\",\"changed\":[\"cloned from \\\"csa-u3l8-l1a_2024\\\"\"],\"cloned_from\":\"csa-u3l8-l1a_2024\"},{\"changed_at\":\"2024-10-09 19:11:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:23:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:23:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:23:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:23:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-09T19:11:27.272+00:00\",\"changed\":[\"cloned from \\\"csa-u3l8-l1a_2024\\\"\"],\"cloned_from\":\"csa-u3l8-l1a_2024\"},{\"changed_at\":\"2024-10-09 19:11:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:23:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:23:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:23:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:23:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-13 18:51:42 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-13 19:16:47 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-13 19:18:40 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

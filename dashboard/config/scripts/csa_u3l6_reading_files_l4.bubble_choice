@@ -1,6 +1,6 @@
 name 'CSA U3L6 Reading Files-L4'
-display_name 'Reading Files'
-description 'level description here'
+display_name 'Reading and Processing Files'
+description 'Practice reading data from text files and writing algorithms to process the data.'
 
 sublevels
 level 'CSA U3L6 Reading Files-L4a'
