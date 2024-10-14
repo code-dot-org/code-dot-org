@@ -1712,57 +1712,11 @@ class User < ApplicationRecord
 
   def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
-    if attributes[:email].blank?
-      user = User.new
-      user.errors.add :email, I18n.t('activerecord.errors.messages.blank')
-      return user
-    end
-
-    email = attributes[:email]
-    # We are no longer sending an email to parents, so grab the first user we find
-    # (a user with an Email auth option first, otherwise any user that has that email)
-    associated_user = User.find_by_email_or_hashed_email(email)
-    return User.new(email: email).send_reset_password_for_users(email, associated_user)
+    Services::User::PasswordResetter.call(email: attributes[:email])
   end
 
-  def send_reset_password_for_users(email, user)
-    if user.nil?
-      not_found_user = User.new(email: email)
-      Cdo::Metrics.put(
-        'User', 'PasswordResetUserNotFound', 1, {
-          Environment: CDO.rack_env,
-          UserType: user_type
-        }
-      )
-      return not_found_user
-    end
-
-    if user.authentication_options.any?(&:email?)
-      user.raw_token = user.send_reset_password_instructions(email) # protected in the superclass
-    else
-      Cdo::Metrics.put(
-        'User', 'PasswordResetEmailAuthNotFound', 1, {
-          Environment: CDO.rack_env,
-          UserType: user_type
-        }
-      )
-    end
-    user
-  end
-
-  # Send a password reset email to the user (not to their parent)
-  def send_reset_password_instructions(email)
-    raw, enc = Devise.token_generator.generate(self.class, :reset_password_token)
-
-    self.reset_password_token   = enc
-    self.reset_password_sent_at = Time.now.utc
-    save(validate: false)
-
-    send_devise_notification(:reset_password_instructions, raw, {to: email})
-    raw
-  rescue ArgumentError
-    errors.add :base, I18n.t('password.reset_errors.invalid_email')
-    return nil
+  def send_reset_email(reset_password_instructions, raw, email)
+    send_devise_notification(reset_password_instructions, raw, {to: email})
   end
 
   def reset_secrets
