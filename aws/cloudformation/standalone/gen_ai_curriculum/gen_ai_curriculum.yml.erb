@@ -34,7 +34,7 @@ Resources:
             "SAGEMAKER_REGION": !Sub "${AWS::Region}",
             "SM_NUM_GPUS": 1,
           }
-        Image: !Sub "${HuggingFaceImageUri}"
+        Image: !Ref HuggingFaceImageUri
         Mode: "SingleModel"
 
   <%= config[:model_name] %>EndpointConfig:
