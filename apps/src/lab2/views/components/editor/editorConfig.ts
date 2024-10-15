@@ -60,12 +60,12 @@ const editorConfig = [
   highlightActiveLine(),
   highlightSelectionMatches(),
   keymap.of([
+    ...autocompleteKeybindings,
     ...closeBracketsKeymap,
     ...defaultKeymap,
     ...searchKeymap,
     ...historyKeymap,
     ...foldKeymap,
-    ...autocompleteKeybindings,
     indentWithTab,
   ]),
   EditorState.tabSize.of(2),
