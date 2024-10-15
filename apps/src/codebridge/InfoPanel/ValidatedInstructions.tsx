@@ -110,6 +110,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     useAppSelector(state => state.progress.scriptName) || undefined;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   // The icon in the validated instructions panel should match the icon in the
   // header.
@@ -195,7 +196,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   // If the level has conditions, they must be satisfied.
   // If the level has no conditions, the user must run their code at least once.
   const hasMetValidation =
-    (!hasConditions && hasRun) || (hasConditions && satisfied);
+    (!hasConditions && hasRun && hasEdited) || (hasConditions && satisfied);
 
   /**
    * Returns the props for the navigation (continue/finish/submit/unsubmit)

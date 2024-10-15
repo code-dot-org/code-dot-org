@@ -4,8 +4,7 @@ import {useSource} from '@codebridge/hooks/useSource';
 import {ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
-import {debounce, isEqual} from 'lodash';
-import React, {useCallback, useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 
 import {
   sendPredictLevelReport,
@@ -19,11 +18,7 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {
-  AppDispatch,
-  useAppDispatch,
-  useAppSelector,
-} from '@cdo/apps/util/reduxHooks';
+import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
@@ -124,7 +119,7 @@ const PythonlabView: React.FunctionComponent = () => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
-  const dispatch = useAppDispatch();
+  //const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (progressManager && appName === 'pythonlab') {
@@ -139,11 +134,6 @@ const PythonlabView: React.FunctionComponent = () => {
     LifecycleEvent.LevelLoadStarted,
     restartPyodideIfProgramIsRunning
   );
-
-  const setSourceAndUpdateProgress = (newSource: MultiFileSource) => {
-    updateToInProgress(true, newSource);
-    setSource(newSource);
-  };
 
   const onRun = async (
     runTests: boolean,
@@ -163,7 +153,9 @@ const PythonlabView: React.FunctionComponent = () => {
       progressManager,
       isStartMode ? undefined : validationFile
     );
-    updateToInProgress();
+    if (currentLevel && currentLevel.status === LevelStatus.not_tried) {
+      sendProgressReport('pythonlab', TestResults.LEVEL_STARTED);
+    }
     // Only send a predict level report if this is a predict level and the predict
     // answer was not locked.
     if (isPredictLevel && !predictAnswerLocked) {
@@ -176,33 +168,13 @@ const PythonlabView: React.FunctionComponent = () => {
     }
   };
 
-  const debouncedProgressReport = debounce(() => {
-    dispatch(sendProgressReport('pythonlab', TestResults.LEVEL_STARTED));
-  }, 100);
-
-  const updateToInProgress = useCallback(
-    (checkSourceChanged?: boolean, newSource?: MultiFileSource) => {
-      if (currentLevel && currentLevel.status === LevelStatus.not_tried) {
-        let sendReport = true;
-        if (checkSourceChanged && newSource) {
-          sendReport = !isEqual(newSource, source);
-        }
-        console.log({sendReport});
-        if (sendReport) {
-          debouncedProgressReport();
-        }
-      }
-    },
-    [currentLevel, debouncedProgressReport, source]
-  );
-
   return (
     <div className={moduleStyles.pythonlab}>
       {source && (
         <Codebridge
           project={source}
           config={config}
-          setProject={setSourceAndUpdateProgress}
+          setProject={setSource}
           setConfig={setConfig}
           startSource={startSource}
           onRun={onRun}
