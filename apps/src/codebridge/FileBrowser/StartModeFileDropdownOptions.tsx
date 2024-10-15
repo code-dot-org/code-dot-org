@@ -51,35 +51,46 @@ const StartModeFileDropdownOptions: React.FunctionComponent<
     },
     [dispatch, setFileType, file]
   );
+
+  const dropdownOptions = [
+    {
+      condition: !projectHasValidationFile,
+      iconName: 'flask',
+      labelText: codebridgeI18n.makeValidation(),
+      clickHandler: () => handleSetFileType(ProjectFileType.VALIDATION),
+    },
+    {
+      condition: file.type !== ProjectFileType.STARTER && file.type,
+      iconName: 'eye',
+      labelText: codebridgeI18n.makeStarter(),
+      clickHandler: () => handleSetFileType(ProjectFileType.STARTER),
+    },
+    {
+      condition: file.type !== ProjectFileType.SUPPORT,
+      iconName: 'eye-slash',
+      labelText: codebridgeI18n.makeSupport(),
+      clickHandler: () => handleSetFileType(ProjectFileType.SUPPORT),
+    },
+    {
+      condition: file.type !== ProjectFileType.LOCKED_STARTER,
+      iconName: 'lock',
+      labelText: codebridgeI18n.makeLockedStarter(),
+      clickHandler: () => handleSetFileType(ProjectFileType.LOCKED_STARTER),
+    },
+  ];
+
   return (
     <>
-      {!projectHasValidationFile && (
-        <PopUpButtonOption
-          iconName="flask"
-          labelText={codebridgeI18n.makeValidation()}
-          clickHandler={() => handleSetFileType(ProjectFileType.VALIDATION)}
-        />
-      )}
-      {file.type !== ProjectFileType.STARTER && file.type && (
-        <PopUpButtonOption
-          iconName="eye"
-          labelText={codebridgeI18n.makeStarter()}
-          clickHandler={() => handleSetFileType(ProjectFileType.STARTER)}
-        />
-      )}
-      {file.type !== ProjectFileType.SUPPORT && (
-        <PopUpButtonOption
-          iconName="eye-slash"
-          labelText={codebridgeI18n.makeSupport()}
-          clickHandler={() => handleSetFileType(ProjectFileType.SUPPORT)}
-        />
-      )}
-      {file.type !== ProjectFileType.LOCKED_STARTER && (
-        <PopUpButtonOption
-          iconName="lock"
-          labelText={codebridgeI18n.makeLockedStarter()}
-          clickHandler={() => handleSetFileType(ProjectFileType.LOCKED_STARTER)}
-        />
+      {dropdownOptions.map(
+        ({condition, iconName, labelText, clickHandler}, index) =>
+          condition && (
+            <PopUpButtonOption
+              key={index}
+              iconName={iconName}
+              labelText={labelText}
+              clickHandler={clickHandler}
+            />
+          )
       )}
     </>
   );

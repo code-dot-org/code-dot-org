@@ -66,6 +66,33 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
     : moduleStyles.rowIcon;
   const isLocked = !isStartMode && file.type === ProjectFileType.LOCKED_STARTER;
 
+  const dropdownOptions = [
+    {
+      condition: !isLocked,
+      iconName: 'arrow-right',
+      labelText: codebridgeI18n.moveFile(),
+      clickHandler: () => openMoveFilePrompt({fileId: file.id}),
+    },
+    {
+      condition: !isLocked,
+      iconName: 'pencil',
+      labelText: codebridgeI18n.renameFile(),
+      clickHandler: () => renameFilePrompt(file.id),
+    },
+    {
+      condition: editableFileTypes.includes(file.language),
+      iconName: 'download',
+      labelText: codebridgeI18n.downloadFile(),
+      clickHandler: () => handleFileDownload(file, appName),
+    },
+    {
+      condition: !isLocked,
+      iconName: 'trash',
+      labelText: codebridgeI18n.deleteFile(),
+      clickHandler: () => handleDeleteFile(file.id),
+    },
+  ];
+
   return (
     <div className={moduleStyles.row}>
       <div className={moduleStyles.label} onClick={() => openFile(file.id)}>
@@ -94,33 +121,16 @@ const FileRow: React.FunctionComponent<FileRowProps> = ({
           className={moduleStyles['button-kebab']}
         >
           <span className={moduleStyles['button-bar']}>
-            {!isLocked && (
-              <PopUpButtonOption
-                iconName="arrow-right"
-                labelText={codebridgeI18n.moveFile()}
-                clickHandler={() => openMoveFilePrompt({fileId: file.id})}
-              />
-            )}
-            {!isLocked && (
-              <PopUpButtonOption
-                iconName="pencil"
-                labelText={codebridgeI18n.renameFile()}
-                clickHandler={() => renameFilePrompt(file.id)}
-              />
-            )}
-            {editableFileTypes.some(type => type === file.language) && (
-              <PopUpButtonOption
-                iconName="download"
-                labelText={codebridgeI18n.downloadFile()}
-                clickHandler={() => handleFileDownload(file, appName)}
-              />
-            )}
-            {!isLocked && (
-              <PopUpButtonOption
-                iconName="trash"
-                labelText={codebridgeI18n.deleteFile()}
-                clickHandler={() => handleDeleteFile(file.id)}
-              />
+            {dropdownOptions.map(
+              ({condition, iconName, labelText, clickHandler}, index) =>
+                condition && (
+                  <PopUpButtonOption
+                    key={index}
+                    iconName={iconName}
+                    labelText={labelText}
+                    clickHandler={clickHandler}
+                  />
+                )
             )}
             {isStartMode && (
               <StartModeFileDropdownOptions
