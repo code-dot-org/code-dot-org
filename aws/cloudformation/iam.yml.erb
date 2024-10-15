@@ -214,31 +214,6 @@ Resources:
         - Key: sqlworkbench-team
           Value: codedotorg
 
-# TODO: Migrate to DataAnalyst_FullAccess
-  DataAnalystRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: DataAnalyst
-      Path: /dataanalyst/
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
-            Action: sts:AssumeRoleWithSAML
-            Condition:
-              StringEquals:
-                SAML:aud: https://signin.aws.amazon.com/saml
-      ManagedPolicyArns:
-        - !Ref DataAnalystPolicy
-        - !Ref DataAnalystDmsReadOnlyPolicy
-        - !Ref DataAnalystRedshiftPolicy
-        - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor
-        - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess
-      Tags:
-        - Key: sqlworkbench-team
-          Value: codedotorg
-
 # TODO: Migrate to Billing_ReadOnly
   BillingRole:
     Type: AWS::IAM::Role
