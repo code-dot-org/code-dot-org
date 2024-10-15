@@ -1,6 +1,7 @@
 import React, {useMemo} from 'react';
 
 import {ComponentPlacementDirection} from '@cdo/apps/componentLibrary/common/types';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import commonI18n from '@cdo/locale';
 
@@ -58,7 +59,12 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
     >
       {/* FontAwesomeV6Icon with custom icon does not work with WithTooltip here. */}
       <button type="button" className={styles.iconButton}>
-        <i className={'fa-kit fa-connected-level'} />
+        <FontAwesomeV6Icon
+          iconFamily={'kit'}
+          iconName={'connected-level'}
+          className={styles.icon}
+        />
+        {/* <i className={'fa-kit fa-connected-level'} /> */}
       </button>
     </WithTooltip>
   );
