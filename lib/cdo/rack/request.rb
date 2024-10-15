@@ -120,6 +120,10 @@ module Cdo
         location&.country_code
     end
 
+    def country_code
+      country.to_s.strip.upcase.presence
+    end
+
     def gdpr?
       gdpr_country_code?(country)
     end
