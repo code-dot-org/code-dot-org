@@ -189,7 +189,10 @@ const AichatView: React.FunctionComponent = () => {
         ? aichatI18n.aichatWorkspaceHeader()
         : botName}
       {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
+        <ProjectTemplateWorkspaceIconV2
+          tooltipPlace="onBottom"
+          className={moduleStyles.icon}
+        />
       )}
     </div>
   );
