@@ -88,10 +88,6 @@ var AVATAR_HEIGHT = constants.AVATAR_HEIGHT;
 var AVATAR_WIDTH = constants.AVATAR_WIDTH;
 
 var loadLevel = function () {
-  // Only send PROJECT_ACTIVITY event for students or non-authenticated users
-  if (getStore().getState().currentUser?.userType !== 'teacher') {
-    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
-  }
   // Load maps.
   infoText = utils.valueOr(level.infoText, true);
   if (!infoText) {
@@ -655,6 +651,8 @@ Flappy.init = function (config) {
   };
 
   studioApp().setPageConstants(config);
+
+  analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
 
   ReactDOM.render(
     <Provider store={getStore()}>

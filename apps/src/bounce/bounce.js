@@ -833,10 +833,7 @@ Bounce.init = function (config) {
 
   studioApp().setPageConstants(config);
 
-  // Only send LEVEL_ACTIVITY event for students or non-authenticated users
-  if (getStore().getState().currentUser?.userType !== 'teacher') {
-    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
-  }
+  analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
 
   ReactDOM.render(
     <Provider store={getStore()}>

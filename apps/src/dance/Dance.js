@@ -103,10 +103,6 @@ Dance.prototype.injectStudioApp = function (studioApp) {
  * @param {!Dancelab} config.level
  */
 Dance.prototype.init = function (config) {
-  // Only send LEVEL_ACTIVITY event for students or non-authenticated users
-  if (getStore().getState().currentUser?.userType !== 'teacher') {
-    analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
-  }
   if (!this.studioApp_) {
     throw new Error('Dance requires a StudioApp');
   }
@@ -194,6 +190,8 @@ Dance.prototype.init = function (config) {
     scriptId: state.progress.scriptId,
     userId: state.currentUser.userId,
   });
+
+  analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
 
   ReactDOM.render(
     <Provider store={getStore()}>

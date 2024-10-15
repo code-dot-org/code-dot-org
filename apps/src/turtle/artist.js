@@ -328,10 +328,6 @@ Artist.prototype.isFrozenSkin = function () {
  * Initialize Blockly and the turtle.  Called on page load.
  */
 Artist.prototype.init = function (config) {
-  // Only send PROJECT_ACTIVITY event for students or non-authenticated users
-  if (getStore().getState().currentUser?.userType !== 'teacher') {
-    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
-  }
   if (!this.studioApp_) {
     throw new Error('Artist requires a StudioApp');
   }
@@ -414,6 +410,8 @@ Artist.prototype.init = function (config) {
       dom.addClickTouchEvent(finishButton, this.checkAnswer.bind(this));
     }
   }
+
+  analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
 
   return Promise.all([
     this.preloadAllStickerImages(),

@@ -21,10 +21,6 @@ import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 $(document).ready(initPage);
 
 function initPage() {
-  // Only send LEVEL_ACTIVITY event for students or non-authenticated users
-  if (getStore().getState().currentUser?.userType !== 'teacher') {
-    analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
-  }
   const script = document.querySelector('script[data-level]');
   const config = JSON.parse(script.dataset.level);
 
@@ -40,6 +36,8 @@ function initPage() {
   // If viewing the unit overview components on the level page it is in
   // the mini view
   getStore().dispatch(setIsMiniView(true));
+
+  analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
 
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
   if (redirectDialogMountPoint && config.redirect_script_url) {

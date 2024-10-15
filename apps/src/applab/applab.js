@@ -784,12 +784,8 @@ Applab.init = function (config) {
         });
       }
     });
-  // Only send PROJECT_ACTIVITY event for students or non-authenticated users,
-  // AND only if they're on a project level.
-  if (
-    getStore().getState().currentUser?.userType !== 'teacher' &&
-    !!config.level.isProjectLevel
-  ) {
+  // Only send PROJECT_ACTIVITY event if they're on a project level.
+  if (!!config.level.isProjectLevel) {
     analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
   }
   if (IN_UNIT_TEST) {

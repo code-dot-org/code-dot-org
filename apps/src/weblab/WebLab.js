@@ -94,10 +94,6 @@ window.getWebLab = function () {
  * Initialize this WebLab instance.  Called on page load.
  */
 WebLab.prototype.init = function (config) {
-  // Only send LEVEL_ACTIVITY event for students or non-authenticated users
-  if (getStore().getState().currentUser?.userType !== 'teacher') {
-    analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
-  }
   if (!this.studioApp_) {
     throw new Error('WebLab requires a StudioApp');
   }
@@ -244,6 +240,8 @@ WebLab.prototype.init = function (config) {
       });
     }
   }
+
+  analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {}, PLATFORMS.BOTH);
 
   ReactDOM.render(
     <Provider store={getStore()}>

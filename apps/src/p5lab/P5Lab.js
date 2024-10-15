@@ -219,10 +219,6 @@ export default class P5Lab {
    * @param {!GameLabLevel} config.level
    */
   init(config) {
-    // Only send PROJECT_ACTIVITY event for students or non-authenticated users
-    if (getStore().getState().currentUser?.userType !== 'teacher') {
-      analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
-    }
     if (!this.studioApp_) {
       throw new Error('P5Lab requires a StudioApp');
     }
@@ -502,6 +498,8 @@ export default class P5Lab {
       soundConfig[Sounds.getExtensionFromUrl(href)] = href;
       Sounds.getSingleton().register(soundConfig);
     });
+
+    analyticsReporter.sendEvent(EVENTS.PROJECT_ACTIVITY, {}, PLATFORMS.BOTH);
 
     this.loadValidationCodeIfNeeded_();
     const loader = this.studioApp_
