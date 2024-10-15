@@ -14,7 +14,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenNewFilePromptArgsType = {
   folderId?: FolderId;
-  appName: string;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   newFile: NewFileFunction;
   projectFiles: ProjectType['files'];
@@ -25,7 +24,6 @@ type OpenNewFilePromptArgsType = {
 
 export const openNewFilePrompt = async ({
   folderId = DEFAULT_FOLDER_ID,
-  appName,
   dialogControl,
   newFile,
   projectFiles,
