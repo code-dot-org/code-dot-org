@@ -66,60 +66,10 @@
   #summary-top-links
 
   #level-question
-    -# - if levels[0].is_a?(FreeResponse)
-    -#   .free-response
-    -#     - title = levels[0].get_property(:title)
-    -#     - if title.present? && !in_level_group
-    -#       %h1.no-underline= title
-    -#     - long_instructions = levels[0].get_property("long_instructions")
-    -#     - if long_instructions
-    -#       / Markdown will be rendered clientside by _summary.js
-    -#       .markdown-container{data: {markdown: long_instructions}}
-
-    -#     - height = levels[0].height || '80'
-    -#     - placeholder = levels[0].get_property(:placeholder) || I18n.t('free_response.placeholder')
-    -#     %textarea.response{id: "level_#{levels[0].id}", placeholder: placeholder, style: "height: #{height}px;", readonly: true}= last_attempt
-
-    -# - elsif levels[0].is_a?(Multi)
-    -#   .multi.tight
-    -#     .container.mainblock
-    -#       - data = brakeman_no_warn(levels[0].properties)
-    -#       - data['answers'] ||= []
-    -#       = render partial: 'levels/content', locals: {app: "multi", data: data, content_class: "question", source_level: levels[0]}
-    -#       - localized_questions = levels[0].localized_property(:questions)
-    -#       - if localized_questions.any?
-    -#         .multi-question!= render_multi_or_match_content(localized_questions[0]["text"])
-    -#       %ol.answers{type: "A"}
-    -#         - if data['height'] == 'auto' || data['height'].blank?
-    -#           - height = 'auto'
-    -#         - else
-    -#           - height = "#{data['height']}px"
-    -#         - localized_answers = levels[0].localized_property(:answers)
-    -#         - localized_answers.each do |answer|
-    -#           %li{style: "height: #{height}"}!= render_multi_or_match_content(answer['text'])
-
     - if levels[0].predict_level?
       #predict-question
 
   #summary-responses
-
-  -# - if answer_is_visible
-  -#   - if levels[0].is_a?(Multi)
-  -#     #summary-correct-answer.multi.hide
-  -#       - correct_answers = data['answers'].each_with_index.map do |answer, index|
-  -#         - next unless answer['correct']
-  -#         - letter = Multi.value_to_letter(index)
-  -#         - {index: index, letter: letter}
-  -#       - end.compact
-  -#       - unless correct_answers.empty?
-  -#         %h3#summary-correct-heading= I18n.t('level_summary.correct_answer')
-  -#         - localized_answers = levels[0].localized_property(:answers)
-  -#         - correct_answers.each do |correct_answer|
-  -#           .summary-answer.mainblock
-  -#             %p{style: "height: #{height}"}
-  -#               - if correct_answer[:letter]
-  -#                 = "#{correct_answer[:letter]}. "
-  -#               != render_multi_or_match_content(localized_answers[correct_answer[:index]]['text'])
     - if levels[0].predict_level?
       #summary-predict-correct-answer.hide
 

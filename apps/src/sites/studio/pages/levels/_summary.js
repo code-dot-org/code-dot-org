@@ -9,7 +9,6 @@ import {getStore} from '@cdo/apps/redux';
 import SummaryContainer from '@cdo/apps/templates/levelSummary/SummaryContainer.jsx';
 import SummaryPredictQuestion from '@cdo/apps/templates/levelSummary/SummaryPredictQuestion';
 import SummaryTopLinks from '@cdo/apps/templates/levelSummary/SummaryTopLinks';
-//import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -26,18 +25,6 @@ $(document).ready(() => {
     </Provider>,
     document.getElementById('summary-top-links')
   );
-
-  // $('.markdown-container').each(function () {
-  //   const container = this;
-  //   if (!container.dataset.markdown) {
-  //     return;
-  //   }
-
-  //   ReactDOM.render(
-  //     React.createElement(SafeMarkdown, container.dataset, null),
-  //     container
-  //   );
-  // });
 
   ReactDOM.render(
     <SummaryContainer

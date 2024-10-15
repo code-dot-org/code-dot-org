@@ -17,7 +17,6 @@
 - activity_guide = @script_level.try(:activity_guide_level?)
 
 .level-group
-  - puts sublevel_data.inspect
   - @pages.each do |page|
     - if activity_guide
       %div#summaryEntryPoint
@@ -64,6 +63,6 @@
   - init_data = nil
   - unless @script_level.nil?
     - init_data = { total_level_count: @total_level_count, page: current_page.to_i || -1, last_attempt: parsed_last_attempt}
-    - js_data = {response_count: @responses[0]&.length || 0, is_contained_level: contained_mode, levels: @levels}
+    - js_data = {response_count: @responses&.first&.length || 0, is_contained_level: contained_mode, levels: @levels}
 
   %script{src: webpack_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json, summaryinfo: js_data.to_json}}
