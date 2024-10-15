@@ -184,7 +184,7 @@ interface UnitData {
   isPlCourse: boolean;
   showAiAssessmentsAnnouncement: boolean;
   lessonGroups: LessonGroup[];
-  lessons: Lesson[]; // can we use this for the calendar?
+  lessons: Lesson[];
   deeperLearningCourse: string | null;
   wrapupVideo: string | null;
   calendarLessons: CalendarLesson[];
@@ -304,7 +304,6 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
 
   React.useEffect(() => {
     if (!unitName || !userType || !userId) {
-      // potential to see if data is already loaded from calendar
       return;
     }
     setUnitSummaryResponse(null);
@@ -322,7 +321,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
       .then(response => response.json())
       .then(responseJson => {
         initializeRedux(responseJson, dispatch, userType, userId);
-        setUnitSummaryResponse(responseJson); // might cause an issue - may need to refactor to include this state
+        setUnitSummaryResponse(responseJson);
       });
   }, [unitName, userType, userId, dispatch]);
 

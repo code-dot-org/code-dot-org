@@ -4,9 +4,9 @@ import {useSelector} from 'react-redux';
 
 import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCalendarGrid';
 import {initializeRedux} from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import i18n from '@cdo/locale';
 
 import styles from './teacher-navigation.module.scss';
