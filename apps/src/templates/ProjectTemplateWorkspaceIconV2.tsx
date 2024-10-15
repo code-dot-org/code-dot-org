@@ -57,6 +57,7 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
       }}
       tooltipOverlayClassName={className}
     >
+      {/* Wrap the icon in a button so that the tooltip is tabbable. */}
       <button type="button" className={styles.iconButton}>
         <FontAwesomeV6Icon
           iconFamily={'kit'}
