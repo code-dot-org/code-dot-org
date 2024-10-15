@@ -232,7 +232,7 @@ class ManageLinkedAccounts extends React.Component {
             <p style={styles.message}>
               {this.props.usStateCode
                 ? i18n.manageLinkedAccounts_parentalPermissionRequired()
-                : i18n.manageLinkedAccounts_stateRequired()}
+                : i18n.manageLinkedAccounts_ageAndStateRequired()}
             </p>
             <div style={styles.lockContainer}>
               <table style={{...styles.table, ...styles.lockedTable}}>
@@ -281,6 +281,7 @@ export default connect(state => ({
   personalAccountLinkingEnabled:
     state.manageLinkedAccounts.personalAccountLinkingEnabled,
   usStateCode: state.currentUser.usStateCode,
+  age: state.currentUser.age,
   lmsName: state.manageLinkedAccounts.lmsName,
 }))(ManageLinkedAccounts);
 

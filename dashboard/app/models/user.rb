@@ -2244,6 +2244,8 @@ class User < ApplicationRecord
   end
 
   def should_see_add_password_form?
+    return false unless Policies::ChildAccount.can_link_new_personal_account?(self)
+
     !can_create_personal_login? && # mutually exclusive with personal login UI
       can_edit_password? && encrypted_password.blank?
   end

@@ -474,7 +474,7 @@ class RegistrationsController < Devise::RegistrationsController
     @student_in_lockout_flow = @potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
     # We need to also account for the case when the US State is not specified
     # All students are locked out of account settings features until they specify these
-    @locked = @student_in_lockout_flow || current_user.country_code.nil? || current_user.us_state.nil?
+    @locked = @student_in_lockout_flow || !Policies::ChildAccount.has_required_information?(current_user)
     # Only for students
     @locked &&= current_user.student?
     # Only for US-based requests
