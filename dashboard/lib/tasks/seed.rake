@@ -195,12 +195,15 @@ namespace :seed do
     csa-postap-se-and-computer-vision-2024
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
   ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
+    algebra
     allthehiddenthings
     allthemigratedthings
     alltheplcthings
     alltheselfpacedplthings
     allthethings
     allthettsthings
+    artist
+    20-hour
     dance
     events
     flappy
