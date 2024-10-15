@@ -57,14 +57,12 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
       }}
       tooltipOverlayClassName={className}
     >
-      {/* FontAwesomeV6Icon with custom icon does not work with WithTooltip here. */}
       <button type="button" className={styles.iconButton}>
         <FontAwesomeV6Icon
           iconFamily={'kit'}
           iconName={'connected-level'}
           className={styles.icon}
         />
-        {/* <i className={'fa-kit fa-connected-level'} /> */}
       </button>
     </WithTooltip>
   );
