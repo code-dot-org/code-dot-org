@@ -15,5 +15,13 @@ class Api::V1::Pd::InternationalOptInsController < Api::V1::Pd::FormsController
       source: EmailPreference::FORM_PD_INTERNATIONAL_OPT_IN,
       form_kind: "0"
     )
+
+    verify_teacher
+  end
+
+  private def verify_teacher
+    return if current_user.verified_teacher?
+
+    current_user.update(permission: UserPermission::AUTHORIZED_TEACHER)
   end
 end
