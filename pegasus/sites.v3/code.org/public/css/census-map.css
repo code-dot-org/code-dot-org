@@ -79,13 +79,15 @@
   font-size: 18px;
   color: #008b9a;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .color {
   border: 1px solid;
+  border-radius: 50%;
   height: 12px;
   width: 12px;
+  margin-top: 1px;
   margin-right: 3px;
   float: left;
 }
@@ -184,19 +186,18 @@
 }
 
 #census-map .legend-offers-cs {
-  background-color: #66DC57;
+  background-color: #0093A4;
+  border-color: #0093A4;
 }
 
 #census-map .legend-limited-cs {
-  background-color: #989CF8;
-}
-
-#census-map .legend-inconclusive-cs {
-  background-color: #FFFDA6;
+  background-color: #8C52BA;
+  border-color: #8C52BA;
 }
 
 #census-map .legend-no-data-cs {
   background-color: #FFFFFF;
+  border-color: #D1D4D8;
 }
 
 .mapboxgl-map button {
