@@ -23,7 +23,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
  *   - **openMoveFolderPrompt:** Opens a prompt for moving a folder within the project.
  *   - **openNewFilePrompt:** Opens a prompt for creating a new file within the project.
  *   - **openNewFolderPrompt:** Opens a prompt for creating a new folder within the project.
- *   - **openRenameFolderPrompt:** Opens a prompt for renaming folder within the project.
+ *   - **openRenameFolderPrompt:** Opens a prompt for renaming a folder within the project.
  */
 export const usePrompts = () => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
