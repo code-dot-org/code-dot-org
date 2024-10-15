@@ -1,7 +1,7 @@
-%h1.control-legend{data: {toggle: "collapse", target: "#sharing_area"}}
+%h1.control-legend{data: {toggle: "collapse", target: "#browser_tts_area"}}
   Browser Text-to-Speech
-  %p Enables native browser text-to-speech on all enabled components, such as instructions and validations. Currently only available in Lab2 labs.
 
-#sharing_area.in.collapse
+#browser_tts_area.in.collapse
+  %p Enables native browser text-to-speech on all enabled components, such as instructions and validations. Currently only available in Lab2 labs.
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :offer_browser_tts, description: "Enable Browser Text-to-Speech"} if @level.uses_lab2?
 
