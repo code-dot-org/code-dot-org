@@ -37,10 +37,7 @@ const Workspace = () => {
     <div className={moduleStyles.centerHeaderContent}>
       <div>{commonI18n.workspaceHeaderShort()}</div>
       {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2
-          darkMode={true}
-          className={moduleStyles.projectTemplateIcon}
-        />
+        <ProjectTemplateWorkspaceIconV2 darkMode={true} />
       )}
     </div>
   );
