@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux';
 import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
+import Slider, {SliderProps} from '@cdo/apps/componentLibrary/slider/Slider';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -127,12 +128,40 @@ const SetupCustomization: React.FunctionComponent = () => {
     );
   };
 
+  const sliderProps: SliderProps = {
+    name: 'temperature-slider',
+    value: aiCustomizations.temperature * 10,
+    minValue: MIN_TEMPERATURE,
+    maxValue: MAX_TEMPERATURE,
+    step: SET_TEMPERATURE_STEP,
+    hideValue: true,
+    disabled: isDisabled(temperature) || readOnlyWorkspace,
+    onChange: event => {
+      const value = parseInt(event.target.value) / 10;
+      dispatch(
+        setAiCustomizationProperty({
+          property: 'temperature',
+          value: value,
+        })
+      );
+    },
+    className: styles.temperatureSlider,
+    leftButtonProps: {
+      icon: {iconName: 'minus', title: 'Decrease'},
+      ['aria-label']: 'Decrease',
+    },
+    rightButtonProps: {
+      icon: {iconName: 'plus', title: 'Increase'},
+      ['aria-label']: 'Increase',
+    },
+  };
+
   return (
     <div className={styles.verticalFlexContainer}>
       <div className={styles.customizationContainer}>
         {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
-          <div>
+          <>
             <div className={styles.horizontalFlexContainer}>
               <FieldLabel
                 id="temperature"
@@ -141,26 +170,11 @@ const SetupCustomization: React.FunctionComponent = () => {
               />
               {aiCustomizations.temperature}
             </div>
-            <input
-              type="range"
-              min={MIN_TEMPERATURE}
-              max={MAX_TEMPERATURE}
-              step={SET_TEMPERATURE_STEP}
-              value={aiCustomizations.temperature}
-              disabled={isDisabled(temperature) || readOnlyWorkspace}
-              onChange={event =>
-                dispatch(
-                  setAiCustomizationProperty({
-                    property: 'temperature',
-                    value: parseFloat(event.target.value),
-                  })
-                )
-              }
-            />
-          </div>
+            <Slider {...sliderProps} />
+          </>
         )}
         {isVisible(systemPrompt) && (
-          <div>
+          <>
             <FieldLabel
               id="system-prompt"
               label="System Prompt"
@@ -180,7 +194,7 @@ const SetupCustomization: React.FunctionComponent = () => {
                 )
               }
             />
-          </div>
+          </>
         )}
       </div>
       <div className={styles.footerButtonContainer}>

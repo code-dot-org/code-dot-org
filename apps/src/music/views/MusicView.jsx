@@ -126,7 +126,6 @@ class UnconnectedMusicView extends React.Component {
       key && Key[key.toUpperCase()],
       this.analyticsReporter
     );
-    MusicRegistry.player = this.player;
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
     this.playingTriggers = [];
@@ -137,6 +136,11 @@ class UnconnectedMusicView extends React.Component {
       this.player,
       this.getPlayingTriggers
     );
+
+    // Set shared shared objects in the MusicRegistry so views outside of this
+    // React tree (i.e. Blockly fields) can access them.
+    MusicRegistry.player = this.player;
+    MusicRegistry.analyticsReporter = this.analyticsReporter;
 
     // Set default for instructions position.
     const defaultInstructionsPos = AppConfig.getValue(

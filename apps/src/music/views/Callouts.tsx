@@ -13,7 +13,7 @@ const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
 type DirectionString = 'up' | 'left';
 
 interface AvailableCallout {
-  selector: string;
+  selector?: string;
   openToolboxCategory?: number;
   direction?: DirectionString;
 }
@@ -100,15 +100,30 @@ const Callouts: React.FunctionComponent = () => {
 
   const calloutIds = callout?.id?.split('---');
 
-  const validCallouts: AvailableCallout[] | undefined = calloutIds?.map(
-    calloutId => availableCallouts[calloutId]
-  );
+  const validCallouts: AvailableCallout[] = [];
+
+  calloutIds?.forEach(calloutId => {
+    const splitId = calloutId.split(':');
+    if (splitId.length === 2) {
+      const dataId = splitId[1];
+      validCallouts.push({
+        selector: `.blocklyWorkspace g[data-id="${dataId}"] path`,
+        direction: splitId[0] === 'id-left' ? 'left' : 'up',
+      });
+    } else if (availableCallouts[calloutId]) {
+      validCallouts.push({
+        selector: availableCallouts[calloutId].selector,
+        direction: availableCallouts[calloutId].direction,
+        openToolboxCategory: availableCallouts[calloutId].openToolboxCategory,
+      });
+    }
+  });
 
   const targets: Target[] = [];
   let calloutClassName;
 
-  validCallouts?.forEach(validCallout => {
-    const element = document.querySelector(validCallout.selector);
+  validCallouts.forEach(validCallout => {
+    const element = document.querySelector(validCallout.selector || '');
     const elementRect = element?.getBoundingClientRect();
     if (elementRect && elementRect.width > 0) {
       let target: Target;
@@ -132,7 +147,7 @@ const Callouts: React.FunctionComponent = () => {
   });
 
   const openToolboxCategory =
-    validCallouts && validCallouts[0].openToolboxCategory;
+    validCallouts && validCallouts[0]?.openToolboxCategory;
 
   const calloutIndex = callout.index;
 

@@ -6,6 +6,7 @@ import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
+import {cancelSpeech} from '../util/BrowserTextToSpeech';
 
 import {Panel} from './types';
 
@@ -91,6 +92,13 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       setCurrentPanel(Math.max(panels.length - 1, 0));
     }
   }, [currentPanel, panels]);
+
+  // Cancel any in-progress text-to-speech when the panel changes.
+  useEffect(() => {
+    if (offerTts) {
+      cancelSpeech();
+    }
+  }, [currentPanel, offerTts]);
 
   const panel = panels[currentPanel];
   if (!panel) {
