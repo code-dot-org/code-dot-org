@@ -18,7 +18,7 @@ class Level
   end
 
   def game
-    "couldBeAnyLab"
+    Game.new("couldBeAnyLab")
   end
 end
 
@@ -28,7 +28,7 @@ class LevelAppLab
   end
 
   def game
-    "AppLab"
+    Game.new("Applab")
   end
 end
 
@@ -38,7 +38,7 @@ class LevelGameLab
   end
 
   def game
-    "GameLab"
+    Game.new("Gamelab")
   end
 end
 
@@ -48,7 +48,7 @@ class LevelSpriteLab
   end
 
   def game
-    "SpriteLab"
+    Game.new("Spritelab")
   end
 end
 
@@ -58,28 +58,14 @@ class LevelWebLab
   end
 
   def game
-    "WebLab"
+    Game.new("Weblab")
   end
 end
 
 class Game
-  def self.gamelab
-    "GameLab"
-  end
+  attr_reader :name
 
-  def self.applab
-    "AppLab"
-  end
-
-  def self.spritelab
-    "SpriteLab"
-  end
-
-  def self.weblab
-    "WebLab"
-  end
-
-  def self.music
-    "Music"
+  def initialize(name)
+    @name = name
   end
 end
