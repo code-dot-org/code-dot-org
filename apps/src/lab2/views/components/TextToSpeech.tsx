@@ -1,8 +1,7 @@
-import {markdownToTxt} from 'markdown-to-txt';
 import React, {useCallback} from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {getCurrentLocale} from '@cdo/apps/lab2/projects/utils';
+import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 
 import moduleStyles from './TextToSpeech.module.scss';
 
@@ -14,28 +13,26 @@ interface TextToSpeechProps {
  * TextToSpeech play button.
  */
 const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({text}) => {
+  const {isTtsAvailable, speak} = useBrowserTextToSpeech();
+
   const playText = useCallback(() => {
-    const currentLocale = getCurrentLocale();
-    const voices = speechSynthesis.getVoices();
-    if (voices.length === 0) {
+    if (!isTtsAvailable) {
+      console.log('Browser TextToSpeech unavailable');
       return;
     }
-    const plainText = markdownToTxt(text);
-    const utterance = new SpeechSynthesisUtterance(plainText);
-    utterance.lang = currentLocale;
-    speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
-  }, [text]);
+    speak(text);
+  }, [isTtsAvailable, speak, text]);
 
   return (
     <button
       className={moduleStyles.playButton}
       onClick={playText}
       type="button"
+      disabled={!isTtsAvailable} // TODO: Better UI for disabled state
     >
       <FontAwesomeV6Icon
-        iconName={'play'}
-        iconStyle="solid"
+        iconName={'waveform-lines'}
+        iconStyle="regular"
         className={moduleStyles.icon}
       />
     </button>

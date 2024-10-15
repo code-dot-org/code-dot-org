@@ -9,22 +9,25 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "###📝 Sequence Matters\nThe computer runs your code runs **in order** from top to bottom.",
-        "imageUrl": "https://images.code.org/5d3d60ebbd10254c67d4998a18b61e68-Oct-08-2024 11-48-12.gif",
-        "key": "music-intro-coding-seq-panel-3ad5bdff-9161-4fad-af85-4095174d23d7"
+        "text": "### <i class=\"fa-regular fa-list-check\"></i> Sequence Matters\n\nThe computer runs your code runs <strong>in order</strong> from top to bottom.",
+        "imageUrl": "https://images.code.org/e24fc5edf2d4a510be49be4cf923beb9-select-checkbox-interface-with-glowing-cursor-2024-08-13-16-05-21-utc (1) (1).gif",
+        "key": "music-intro-coding-seq-panel-3ad5bdff-9161-4fad-af85-4095174d23d7",
+        "layout": "text-top-right"
       },
       {
-        "text": "🎵You can add blocks to build a sequence of sounds. ",
-        "imageUrl": "https://images.code.org/71a2b2a32f313c7d2e54fe3b5e2ebee2-Slide 16_9 - 1.png",
-        "key": "music-intro-coding-seq-panel-c89c8094-7ebd-4fdf-8e56-6b3283b69e64"
+        "text": "<i class=\"fa-solid fa-music\"></i> You can add blocks to build a sequence of sounds. ",
+        "imageUrl": "https://images.code.org/cabe3ba5e668729a398daa9f5f72191f-sequence (1).gif",
+        "key": "music-intro-coding-seq-panel-c89c8094-7ebd-4fdf-8e56-6b3283b69e64",
+        "layout": "text-top-center"
       },
       {
-        "text": "🔀You can also change the order of the blocks whenever you want.",
+        "text": "<i class=\"fa-solid fa-shuffle\"></i> Change the order of the blocks whenever you want.",
         "imageUrl": "",
-        "key": "music-intro-coding-seq-panel-1691297d-ba17-44dc-9a45-d24db5194f15"
+        "key": "music-intro-coding-seq-panel-1691297d-ba17-44dc-9a45-d24db5194f15",
+        "layout": "text-top-center"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-08 17:53:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:25:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 21:37:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-08 17:53:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 18:25:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 21:37:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 17:22:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 17:37:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 17:44:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 17:50:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 17:51:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 17:55:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 18:23:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 18:24:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-09 19:09:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 16:36:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

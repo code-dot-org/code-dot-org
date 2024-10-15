@@ -880,6 +880,9 @@
   cs_ambassador_application_closed_subhead: "Questions about future opportunities or want to learn more? Please contact [youngwomen@code.org](%{email_url})."
   cs_ambassador_application_questions: "Questions? Please contact [youngwomen@code.org](%{email_url})"
   cs_ambassador_application_parter_program: "Not a high school student or teacher? Check out our [Partner Program](#partner-program)."
+  cs_ambassador_closed_heading: "2024 - 25 School Year Applications Now Closed"
+  cs_ambassador_next_year_open: "Next year's application will open in Spring 2025."
+  cs_ambassador_drop_us_a_note: "Drop us a note at [youngwomen@code.org](%{email_url}) to be notified when applications open again!"
   cs_ambassador_do_heading: "What do CS Ambassadors do?"
   cs_ambassador_do_desc: "CS Ambassadors encourage young women to explore the subject, and lift each other up as they reclaim their place in computer science. CS Ambassadors connect with their peers to share their excitement and love of computer science. They visit classrooms, host tables at lunch, and speak at assemblies and club meetings. CS Ambassadors work with teachers and school administrators to breakdown stereotypes that hold young women back."
   cs_ambassador_steps_heading: "What do I need to become a CS Ambassador?"
@@ -2375,6 +2378,11 @@
         title: "Curriculum Catalog"
         desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
         button_label: "Explore the catalog"
+
+  access_report_skinny_banner:
+    title: "The 2024 State of CS Report is here!"
+    desc: "Check out the latest data on national and state-level computer science education policy, including policy trends, maps, state summaries, and implementation data."
+    read_report: "Read the report"
 
   app_lab_page:
     heading: "App Lab"
@@ -10975,6 +10983,12 @@
         title: "Choose an Activity"
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
+
+  hoc_sweepstakes_2024:
+    heading: "Win $500 worth of DonorsChoose Credits!"
+    desc: "Now's your chance to win! Code.org is giving away DonorsChoose credits to 250 inspiring teachers! Register your Hour of Code event now, and choose to be entered for a chance to win! [See Official Rules](%{rules_url})"
+    must_be_18: "Must be at least 18 years old at the time you enter"
+    must_be_employed: "Must be employed as a full-time teacher by a public school, public charter school or Office of Head Start that is located in the US"
 
   hoc_activities:
     heading: "Explore activities"

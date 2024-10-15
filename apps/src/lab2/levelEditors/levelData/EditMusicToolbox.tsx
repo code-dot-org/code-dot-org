@@ -23,9 +23,11 @@ import styles from './edit-music-level-data.module.scss';
 interface EditMusicToolboxProps {
   toolbox?: ToolboxData;
   blockMode: ValueOf<typeof BlockMode>;
+  addFunctionDefinition?: boolean;
   addFunctionCalls?: boolean;
   onChange: (toolbox: ToolboxData) => void;
   onBlockModeChange: (blockMode: ValueOf<typeof BlockMode>) => void;
+  onAddFunctionDefinitionChange: (addDefinitionCalls: boolean) => void;
   onAddFunctionCallsChange: (addFunctionCalls: boolean) => void;
 }
 
@@ -44,9 +46,11 @@ const ChangeWarning: React.FC = () => (
 const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
   toolbox,
   blockMode,
+  addFunctionDefinition,
   addFunctionCalls,
   onChange,
   onBlockModeChange,
+  onAddFunctionDefinitionChange,
   onAddFunctionCallsChange,
 }) => {
   const defaultBlocks = defaultMaps[blockMode];
@@ -135,14 +139,25 @@ const EditMusicToolbox: React.FunctionComponent<EditMusicToolboxProps> = ({
             toolboxType={toolbox?.type}
           />
           {toolbox?.type === 'flyout' && blockMode === BlockMode.SIMPLE2 && (
-            <Checkbox
-              checked={!!addFunctionCalls}
-              name="addFunctionCalls"
-              label="Add function calls"
-              onChange={event => {
-                onAddFunctionCallsChange(event.target.checked);
-              }}
-            />
+            <div className={styles.checkbox}>
+              <Checkbox
+                checked={!!addFunctionDefinition}
+                name="addFunctionDefinition"
+                label="Add function definition"
+                onChange={event => {
+                  onAddFunctionDefinitionChange(event.target.checked);
+                }}
+              />
+              <Checkbox
+                checked={!!addFunctionCalls}
+                name="addFunctionCalls"
+                label="Add function calls"
+                disabled={!!addFunctionDefinition}
+                onChange={event =>
+                  onAddFunctionCallsChange(event.target.checked)
+                }
+              />
+            </div>
           )}
         </div>
         <div className={styles.verticalLine}>&nbsp;</div>

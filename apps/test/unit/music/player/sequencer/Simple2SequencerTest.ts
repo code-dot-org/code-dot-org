@@ -7,9 +7,9 @@ import {
   ChordEvent,
 } from '@cdo/apps/music/player/interfaces/ChordEvent';
 import {
-  PatternEventValue,
-  PatternEvent,
-} from '@cdo/apps/music/player/interfaces/PatternEvent';
+  InstrumentEvent,
+  InstrumentEventValue,
+} from '@cdo/apps/music/player/interfaces/InstrumentEvent';
 import {SoundEvent} from '@cdo/apps/music/player/interfaces/SoundEvent';
 import MusicLibrary, {SoundData} from '@cdo/apps/music/player/MusicLibrary';
 import Simple2Sequencer from '@cdo/apps/music/player/sequencer/Simple2Sequencer';
@@ -78,8 +78,9 @@ describe('Simple2Sequencer', () => {
   });
 
   it('adds a pattern event', () => {
-    const patternValue: PatternEventValue = {
+    const patternValue: InstrumentEventValue = {
       instrument: 'machine',
+      length: 2,
       events: [],
     };
 
@@ -91,13 +92,14 @@ describe('Simple2Sequencer', () => {
     expect(playbackEvents.length).to.equal(1);
 
     const event = playbackEvents[0];
-    expect(event.type).to.equal('pattern');
+    expect(event.type).to.equal('instrument');
     expect(event.id).to.equal(JSON.stringify(patternValue));
     expect(event.blockId).to.equal('blockId');
     expect(event.when).to.equal(1);
-    expect(event.length).to.equal(DEFAULT_PATTERN_LENGTH);
+    expect(event.length).to.equal(2);
     expect(event.triggered).to.be.false;
-    expect((event as PatternEvent).value).to.equal(patternValue);
+    expect((event as InstrumentEvent).instrumentType).to.equal('drums');
+    expect((event as InstrumentEvent).value).to.equal(patternValue);
   });
 
   it('adds a chord event', () => {
