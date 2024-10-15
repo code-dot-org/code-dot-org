@@ -4,6 +4,7 @@ import {ComponentPlacementDirection} from '@cdo/apps/componentLibrary/common/typ
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import commonI18n from '@cdo/locale';
 
+import styles from './project-template-workspace-icon-v2.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface ProjectTemplateWorkspaceIconV2Props {
@@ -55,8 +56,10 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
       }}
       tooltipOverlayClassName={className}
     >
-      {/* FontAwesomeV6Icon does not work with WithTooltip. */}
-      <i className={'fa-kit fa-connected-level'} />
+      {/* FontAwesomeV6Icon with custom icon does not work with WithTooltip here. */}
+      <button type="button" className={styles.iconButton}>
+        <i className={'fa-kit fa-connected-level'} />
+      </button>
     </WithTooltip>
   );
 };
