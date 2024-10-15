@@ -30,10 +30,7 @@ module Services
         else
           # We are no longer sending an email to parents, so grab the first user we find
           # (a user with an Email auth option first, otherwise any user that has that email)
-          @user = ::User.find_by_email_or_hashed_email(email)
-          if @user.nil?
-            @user = ::User.new(email: email)
-          end
+          @user = ::User.find_by_email_or_hashed_email(email) || ::User.new(email: email)
         end
         @user
       end
