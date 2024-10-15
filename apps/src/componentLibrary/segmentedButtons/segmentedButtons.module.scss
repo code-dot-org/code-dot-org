@@ -56,6 +56,7 @@
     // Disabled styles
     &:disabled {
       border-color: var(--borders-neutral-disabled);
+      background-color: transparent;
       color: var(--text-neutral-disabled);
     }
   }
@@ -86,21 +87,12 @@
       border-color: var(--borders-brand-teal-primary);
       color: var(--text-neutral-white-fixed);
     }
-
-    // Disabled styles
-    &:disabled {
-      // TODO: Do we need this?
-      background-color: $light_primary_100;
-      border-color: $light_primary_100;
-      color: $light_white;
-    }
   }
 }
 
 // Colors
 .segmentedButtons-primary {
   .segmentedButton {
-    background-color: var(--background-neutral-primary);
     border-color: var(--borders-neutral-primary);
 
     // Hover styles
@@ -113,11 +105,6 @@
     &:focus-visible {
       border-color: var(--borders-neutral-primary);
     }
-
-    // Disabled styles
-    &:disabled {
-      background-color: var(--background-neutral-primary);
-    }
   }
 
   // Selected styles
@@ -126,17 +113,11 @@
     &:focus-visible {
       border-color: var(--borders-neutral-primary);
     }
-
-    // Disabled styles
-    &:disabled {
-      background-color: var(--background-neutral-primary);
-    }
   }
 }
 
 .segmentedButtons-strong {
   .segmentedButton {
-    background-color: transparent;
     border-color: var(--borders-neutral-strong);
 
     // Hover styles
@@ -149,11 +130,6 @@
     &:focus-visible {
       border-color: var(--borders-neutral-strong);
     }
-
-    // Disabled styles
-    &:disabled {
-      background-color: transparent;
-    }
   }
 
   // Selected styles
@@ -161,11 +137,6 @@
     // Focus styles
     &:focus-visible {
       border-color: var(--borders-neutral-strong);
-    }
-
-    // Disabled styles
-    &:disabled {
-      background-color: transparent;
     }
   }
 }
