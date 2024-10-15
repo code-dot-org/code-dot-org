@@ -1365,17 +1365,19 @@
     in_partnership: "In partnership with"
 
   gen_ai_middle_high_carousel_card:
-    overline: "Grades: 8-12"
+    overline: "8-12"
     title: "Exploring Generative AI"
     desc: "Empower students with hands-on projects and ethical insights into generative AI, equipping them to think critically and innovate in an AI-driven world."
     duration: "6 weeks"
+    aria_label: "Explore the Exploring Generative AI course"
 
-  gen_ai_pl_carousel_cared:
+  gen_ai_pl_carousel_card:
     overline: "8-12 Teachers"
     title: "Teaching Exploring Generative AI"
     curriculum: "Exploring Generative AI"
     duration: "2.5 hours"
     prerequisites: "Verified teacher account or SSO-login needed to access AI Chat Lab"
+    aria_label: "Start the Teaching Exploring Generative AI professional learning course"
 
   ai_integrations:
     heading: "AI Integrations"
