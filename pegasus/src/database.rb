@@ -63,14 +63,28 @@ class Tutorials
 
   # return the first tutorial with a matching code
   def find_with_code(code)
-    by_code = CDO.cache.fetch("Tutorials/#{@table}/by_code") {@contents.index_by {|row| row[:code]}}
-    by_code[code]
+    ids_by_code = CDO.cache.fetch("CdoTutorials/#{@table}/ids_by_code") do
+      @contents.index_by {|row| row[:code]}.transform_values {|obj| obj[:id]}
+    end
+    id = ids_by_code[code]
+    if id
+      DB[@table].where(id: id).first
+    else
+      nil
+    end
   end
 
   # return the first tutorial with a matching short code
   def find_with_short_code(short_code)
-    by_short_code = CDO.cache.fetch("Tutorials/#{@table}/by_short_code") {@contents.index_by {|row| row[:short_code]}}
-    by_short_code[short_code]
+    ids_by_short_code = CDO.cache.fetch("Tutorials/#{@table}/ids_by_short_code") do
+      @contents.index_by {|row| row[:code]}.transform_values {|obj| obj[:id]}
+    end
+    id = ids_by_short_code[short_code]
+    if id
+      DB[@table].where(id: id).first
+    else
+      nil
+    end
   end
 
   def self.sort_by_popularity?(site, hoc_mode)
