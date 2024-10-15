@@ -1715,10 +1715,6 @@ class User < ApplicationRecord
     Services::User::PasswordResetter.call(email: attributes[:email])
   end
 
-  def send_reset_email(reset_password_instructions, raw, email)
-    send_devise_notification(reset_password_instructions, raw, {to: email})
-  end
-
   def reset_secrets
     generate_secret_picture
     generate_secret_words

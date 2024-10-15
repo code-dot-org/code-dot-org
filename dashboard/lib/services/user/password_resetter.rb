@@ -10,7 +10,7 @@ module Services
       def call
         return user if user.errors.present?
 
-        if !user.nil? && user.authentication_options.any?(&:email?)
+        if user.authentication_options.any?(&:email?)
           user.raw_token = send_reset_password_instructions
         else
           Cdo::Metrics.put(
@@ -31,17 +31,20 @@ module Services
           # We are no longer sending an email to parents, so grab the first user we find
           # (a user with an Email auth option first, otherwise any user that has that email)
           @user = ::User.find_by_email_or_hashed_email(email)
+          if @user.nil?
+            @user = ::User.new(email: email)
+          end
         end
         @user
       end
 
       private def send_reset_password_instructions
         raw = user.send(:set_reset_password_token)
-        user.send(:send_devise_notification, :reset_password_instructions, user.raw_token, {to: email})
+        user.send(:send_devise_notification, :reset_password_instructions, raw, {to: email})
         raw
       rescue ArgumentError
         user.errors.add :base, I18n.t('password.reset_errors.invalid_email')
-        user.send(clear_reset_password_token)
+        user.send(:clear_reset_password_token)
         nil
       end
     end
