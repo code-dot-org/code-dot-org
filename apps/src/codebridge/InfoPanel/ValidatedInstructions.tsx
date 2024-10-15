@@ -6,6 +6,7 @@ import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {
   navigateToNextLevel,
   sendSubmitReport,
+  sendSuccessReport,
 } from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentLevel,
@@ -130,12 +131,25 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const vertical = layout === 'vertical';
 
+  const sendReportIfNeeded = () => {
+    if (!hasConditions) {
+      // If there are no conditions, we send a success report.
+      dispatch(sendSuccessReport(appType || ''));
+    }
+  };
+
   const onFinish = () => {
-    // No-op if there's no script. Students/teachers should always be
-    // accessing the level from a script.
+    sendReportIfNeeded();
+    // If there's no script, we just send a report. Otherwise,
+    // we navigate to the main script page.
     if (scriptName) {
       navigateToHref(linkWithQueryParams(`/s/${scriptName}`));
     }
+  };
+
+  const onContinue = () => {
+    sendReportIfNeeded();
+    onNextPanel();
   };
 
   const onNextPanel = useCallback(() => {
@@ -234,7 +248,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       return {
         showNavigation,
         navigationText: commonI18n.continue(),
-        handleNavigation: onNextPanel,
+        handleNavigation: onContinue,
         navigationIcon: {iconName: 'arrow-right', iconStyle: 'solid'},
       };
     } else {
