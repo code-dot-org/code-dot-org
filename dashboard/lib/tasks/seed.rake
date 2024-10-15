@@ -194,7 +194,7 @@ namespace :seed do
     csa9-2024
     csa-postap-se-and-computer-vision-2024
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
-  ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
+  ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + UI_TEST_SCRIPTS + %w(
     algebra
     allthehiddenthings
     allthemigratedthings
@@ -313,6 +313,13 @@ namespace :seed do
     %w(allthethingscourse csp-2024 csd-2024 csa-2024).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
+    # seed those courses that are needed for UI tests
+    %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
+      UnitGroup.load_from_path("config/courses/#{course_name}.course")
+    end
+    %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
+      UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
+    end
   end
 
   # multi and match files must be seeded before any custom levels which contain them
@@ -419,6 +426,9 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings_adhoc: :environment do
+    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course).each do |course_offering_name|
+      CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
+    end
     %w(csp csa csd coursea courseb coursec coursed coursee coursef).each do |course_offering_name|
       CourseOffering.seed_record("config/course_offerings/#{course_offering_name}.json")
     end
