@@ -195,7 +195,7 @@ class Policies::ChildAccount
 
   # Whether or not the user can create/link new personal logins
   def self.can_link_new_personal_account?(user)
-    return true unless user.student?
+    return true unless user.student? && ['US', 'RD'].include?(user.country_code)
     return false unless has_required_information?(user)
     return true unless underage?(user)
 

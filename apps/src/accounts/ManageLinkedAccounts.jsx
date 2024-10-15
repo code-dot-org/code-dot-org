@@ -230,7 +230,7 @@ class ManageLinkedAccounts extends React.Component {
         {lockedOptions.length > 0 && (
           <>
             <p style={styles.message}>
-              {this.props.usStateCode
+              {this.props.usStateCode && this.props.age
                 ? i18n.manageLinkedAccounts_parentalPermissionRequired()
                 : i18n.manageLinkedAccounts_ageAndStateRequired()}
             </p>
