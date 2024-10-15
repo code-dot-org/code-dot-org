@@ -309,41 +309,33 @@ const InnerFileBrowser = React.memo(
         {Object.values(files)
           .filter(f => f.folderId === parentId && shouldShowFile(f))
           .sort((a, b) => a.name.localeCompare(b.name))
-          .map(f =>
-            !isStartMode && f.type === ProjectFileType.LOCKED_STARTER ? (
-              /* Locked starter files are not draggable, unless we are in start mode */
-              <FileRow
-                key={f.id}
-                file={f}
-                isReadOnly={isReadOnly}
-                appName={appName}
-                hasValidationFile={hasValidationFile}
-                isStartMode={isStartMode}
-                enableMenu={true}
-                setFileType={setFileType}
-                handleDeleteFile={handleDeleteFile}
-                renameFilePrompt={renameFilePrompt}
-              />
+          .map(f => {
+            const isDraggingLocked =
+              !isStartMode && f.type === ProjectFileType.LOCKED_STARTER;
+            const fileRowProps = {
+              key: f.id,
+              file: f,
+              isReadOnly,
+              appName,
+              hasValidationFile,
+              isStartMode,
+              setFileType,
+              handleDeleteFile,
+              renameFilePrompt,
+              enableMenu: !dragData?.id || isDraggingLocked,
+            };
+            return isDraggingLocked ? (
+              <FileRow {...fileRowProps} />
             ) : (
               <Draggable
                 data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
                 Component="li"
               >
-                <FileRow
-                  file={f}
-                  isReadOnly={isReadOnly}
-                  appName={appName}
-                  hasValidationFile={hasValidationFile}
-                  isStartMode={isStartMode}
-                  enableMenu={!dragData?.id}
-                  setFileType={setFileType}
-                  handleDeleteFile={handleDeleteFile}
-                  renameFilePrompt={renameFilePrompt}
-                />
+                <FileRow {...fileRowProps} />
               </Draggable>
-            )
-          )}
+            );
+          })}
       </>
     );
   }
