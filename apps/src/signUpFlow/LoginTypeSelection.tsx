@@ -119,7 +119,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   };
 
   const submitLoginType = async () => {
-    const authToken = await getAuthenticityToken();
     logUserLoginType('email');
     if (!isEmail(email)) {
       setEmailErrorMessage(i18n.censusInvalidEmail());
