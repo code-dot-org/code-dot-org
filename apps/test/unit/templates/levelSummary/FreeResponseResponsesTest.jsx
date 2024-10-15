@@ -56,9 +56,10 @@ describe('FreeResponseResponses', () => {
     renderDefault();
 
     const studentResp1 = screen.getByText('student response 1');
-    const studentResp1Parent = studentResp1.parentNode; 
+    const studentResp1Parent = studentResp1.parentNode;
 
-    const dropdownButton = within(studentResp1Parent).getByLabelText('Additional options');
+    const dropdownButton =
+      within(studentResp1Parent).getByLabelText('Additional options');
     dropdownButton.click();
 
     const hideResponseButton = within(studentResp1Parent).getByRole('button', {
@@ -80,7 +81,7 @@ describe('FreeResponseResponses', () => {
 
     let student1 = screen.getByText('student response 1');
     let student5 = screen.getByText('student response 5');
-    const studentResp5Parent = student5.parentNode; 
+    const studentResp5Parent = student5.parentNode;
 
     expect(student1.compareDocumentPosition(student5)).toBe(
       Node.DOCUMENT_POSITION_FOLLOWING
@@ -88,7 +89,8 @@ describe('FreeResponseResponses', () => {
     expect(screen.queryByText('Pinned responses')).toBeNull();
 
     // pin response
-    const dropdownButton = within(studentResp5Parent).getByLabelText('Additional options');
+    const dropdownButton =
+      within(studentResp5Parent).getByLabelText('Additional options');
     dropdownButton.click();
 
     const pinResponseButton = within(studentResp5Parent).getByRole('button', {

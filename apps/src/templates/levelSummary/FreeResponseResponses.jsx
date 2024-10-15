@@ -39,7 +39,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
   const getMenuOptions = (pinResponse, unpinResponse, response) => {
     return [
       {
-        value: unpinResponse ? "unpin-option" : "pin-option",
+        value: unpinResponse ? 'unpin-option' : 'pin-option',
         label: unpinResponse ? i18n.unpinResponse() : i18n.pinResponse(),
         icon: unpinResponse
           ? {iconName: 'thumbtack-slash', iconStyle: 'solid'}
@@ -54,7 +54,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
             : pinResponse(response.user_id),
       },
       {
-        value: "hide-option",
+        value: 'hide-option',
         label: i18n.hideResponse(),
         icon: {
           iconName: 'eye-slash',
