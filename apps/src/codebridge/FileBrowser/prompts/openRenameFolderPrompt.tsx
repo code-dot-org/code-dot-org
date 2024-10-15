@@ -31,10 +31,7 @@ export const openRenameFolderPrompt = async ({
     title: codebridgeI18n.renameFolder(),
     value: folder.name,
     validateInput: (newName: string) => {
-      if (!newName.length) {
-        return;
-      }
-      if (newName === folder.name) {
+      if (!newName.length || newName === folder.name) {
         return;
       }
 
@@ -45,9 +42,11 @@ export const openRenameFolderPrompt = async ({
       });
     },
   });
+
   if (results.type !== 'confirm') {
     return;
   }
+
   const newName = extractUserInput(results);
   renameFolder(folderId, newName);
   sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FOLDER);
