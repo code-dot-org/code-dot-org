@@ -11,9 +11,7 @@ import {
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 
-import TeacherCourseOverview, {
-  teacherCourseOverviewLoader,
-} from '../courseOverview/TeacherCourseOverview';
+import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
 import ManageStudents from '../manageStudents/ManageStudents';
 import SectionProjectsListWithData from '../projects/SectionProjectsListWithData';
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
@@ -58,6 +56,7 @@ export interface Section {
   unitId: number;
   unitName: string;
   courseDisplayName: string;
+  courseId: number;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -257,7 +256,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           />
           <Route
             path={TEACHER_NAVIGATION_PATHS.courseOverview}
-            loader={teacherCourseOverviewLoader}
             element={
               <ElementOrEmptyPage
                 showNoStudents={false}

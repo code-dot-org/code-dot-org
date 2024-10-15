@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "interactive-games-animations",
-    "serialized_at": "2024-09-18 21:42:07 UTC",
+    "serialized_at": "2024-10-14 21:11:11 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -20709,7 +20709,7 @@
       "key": "6eea9ecc-61c1-41ba-b9fc-b8bd368ac9e7",
       "position": 2,
       "learning_goal": "Position - Shapes",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": null,
       "seeding_key": {
         "learning_goal.key": "6eea9ecc-61c1-41ba-b9fc-b8bd368ac9e7",
@@ -20969,7 +20969,7 @@
       "key": "d1022ece-09e4-4df4-92ac-3019d67b287a",
       "position": 3,
       "learning_goal": "Variables / Storing Information",
-      "ai_enabled": false,
+      "ai_enabled": true,
       "tips": null,
       "seeding_key": {
         "learning_goal.key": "d1022ece-09e4-4df4-92ac-3019d67b287a",

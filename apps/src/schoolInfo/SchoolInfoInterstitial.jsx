@@ -5,10 +5,6 @@ import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {
-  SELECT_COUNTRY,
-  US_COUNTRY_CODE,
-} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -17,6 +13,7 @@ import SchoolDataInputs from '../templates/SchoolDataInputs';
 import color from '../util/color';
 
 import {useSchoolInfo} from './hooks/useSchoolInfo';
+import {schoolInfoInvalid} from './utils/schoolInfoInvalid';
 import {updateSchoolInfo} from './utils/updateSchoolInfo';
 
 export default function SchoolInfoInterstitial({
@@ -44,56 +41,23 @@ export default function SchoolInfoInterstitial({
     );
   }, []);
 
-  const saveDisabled = useMemo(() => {
-    const countryExists =
-      schoolInfo.country && schoolInfo.country !== SELECT_COUNTRY;
-
-    if (!countryExists) {
-      // disabled if country is not selected
-      return true;
-    }
-
-    // for non-US countries
-    if (schoolInfo.country !== US_COUNTRY_CODE) {
-      // disable true if no school/organization name
-      return !schoolInfo.schoolName;
-    }
-
-    // for US country
-    // must have zip code to enable school list dropdown where click to add and non school setting are selectable
-    const hasZip = Boolean(schoolInfo.schoolZip);
-    if (!hasZip) {
-      return true;
-    }
-    // disable true if school is not selected
-    if (schoolInfo.schoolId === NonSchoolOptions.SELECT_A_SCHOOL) {
-      return true;
-    }
-    // for non school settings, don't disable
-    if (schoolInfo.schoolId === NonSchoolOptions.NO_SCHOOL_SETTING) {
-      return false;
-    }
-    // if school not in list, disable true if no name
-    if (schoolInfo.schoolId === NonSchoolOptions.CLICK_TO_ADD) {
-      return !schoolInfo.schoolName;
-    }
-
-    // if schoolId exists, don't disable unless selected school is not in the schools list
-    if (
-      schoolInfo.schoolId &&
-      schoolInfo.schoolsList.some(({value}) => schoolInfo.schoolId === value)
-    ) {
-      return false;
-    }
-    // disable by default
-    return true;
-  }, [
-    schoolInfo.country,
-    schoolInfo.schoolId,
-    schoolInfo.schoolZip,
-    schoolInfo.schoolName,
-    schoolInfo.schoolsList,
-  ]);
+  const saveDisabled = useMemo(
+    () =>
+      schoolInfoInvalid({
+        schoolId: schoolInfo.schoolId,
+        country: schoolInfo.country,
+        schoolName: schoolInfo.schoolName,
+        schoolZip: schoolInfo.schoolZip,
+        schoolsList: schoolInfo.schoolsList,
+      }),
+    [
+      schoolInfo.country,
+      schoolInfo.schoolId,
+      schoolInfo.schoolZip,
+      schoolInfo.schoolName,
+      schoolInfo.schoolsList,
+    ]
+  );
 
   const handleSchoolInfoSubmit = async () => {
     const hasNcesId =

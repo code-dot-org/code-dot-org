@@ -89,13 +89,14 @@ const reverseMidiMapping = new Map([
 onmessage = async e => {
   if (e.data[0] === Message.GeneratePattern) {
     try {
+      const startTime = Date.now();
       const result = await generatePattern(
         e.data[1],
         e.data[2],
         e.data[3],
         e.data[4]
       );
-      postMessage([Message.Result, result]);
+      postMessage([Message.Result, result, Date.now() - startTime]);
     } catch (e) {
       // Using setTimeout to ensure the error is handled by the onerror callback.
       setTimeout(() => {

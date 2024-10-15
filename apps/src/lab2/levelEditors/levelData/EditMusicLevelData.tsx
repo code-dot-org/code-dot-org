@@ -6,7 +6,11 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
-import {BlockMode, DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
+import {
+  BlockMode,
+  DEFAULT_LIBRARY,
+  DEFAULT_PACK,
+} from '@cdo/apps/music/constants';
 import MusicRegistry from '@cdo/apps/music/MusicRegistry';
 import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
 import MusicPlayer from '@cdo/apps/music/player/MusicPlayer';
@@ -121,7 +125,11 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 labelText="Selected Artist Pack"
                 name="packId"
                 size="s"
-                items={[{value: 'none', text: '(none)'}, ...restrictedPacks]}
+                items={[
+                  {value: 'none', text: '(none)'},
+                  {value: DEFAULT_PACK, text: 'Code.org (Default)'},
+                  ...restrictedPacks,
+                ]}
                 selectedValue={levelData.packId}
                 onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
                   const packId =

@@ -29,6 +29,11 @@ export const MusicConditions: ConditionNames = {
     description:
       'Successful when a sound is playing in a given function. Simple2 only. Ex. Value: chorus',
   },
+  PLAYED_SOUND_IN_ANY_FUNCTION: {
+    name: 'played_sound_in_any_function',
+    description:
+      'Successful when a sound is playing in any function. Simple2 only.',
+  },
   PLAYED_SOUNDS: {
     name: 'played_sounds',
     valueType: 'number',
