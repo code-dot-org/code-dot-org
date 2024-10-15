@@ -34,6 +34,8 @@
   "moveFolder": "Move",
   "moveFilePrompt": "Please enter your destination folder",
   "moveFolderPrompt": "Please enter your destination folder",
+  "moveFolderErrorSelf": "Cannot move a folder into itself",
+  "moveFolderErrorChild": "Cannot move a folder into a child folder",
   "newFile": "New File",
   "newFilePrompt": "Please name your new file",
   "newFolder": "New Folder",

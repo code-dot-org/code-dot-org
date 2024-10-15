@@ -104,7 +104,7 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
   unitOverview: {
     url: TEACHER_NAVIGATION_PATHS.unitOverview,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.unitOverview),
-    label: i18n.unit(),
+    label: i18n.course(),
     icon: 'desktop',
   },
   settings: {

@@ -1,4 +1,5 @@
 :ruby
+  gen_ai_launched = !!DCDO.get('gen-ai-launch', false)
   block_items = [
     {
       overline: hoc_s("gen_ai_pl_carousel_card.overline"),
@@ -24,6 +25,7 @@
       url_secondary: '/ai#ai-curricula',
       aria_label_primary: hoc_s(:aria_label_call_to_action_ai_101),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_ai_101),
+      new: !gen_ai_launched,
     },
     {
       overline: hoc_s(:module_grade_6_12_teachers),
@@ -36,6 +38,7 @@
       url_secondary: '/curriculum/coding-with-ai',
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_coding_with_ai),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_coding_with_ai),
+      new: !gen_ai_launched,
     },
     {
       overline: hoc_s(:module_grade_9_12_teachers),
@@ -48,6 +51,7 @@
       url_secondary: '/curriculum/computer-vision',
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_computer_vision),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_computer_vision),
+      new: !gen_ai_launched,
     },
     {
       overline: hoc_s(:module_grade_9_12_teachers),
@@ -158,6 +162,21 @@
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_design_process),
     },
   ]
+  if gen_ai_launched
+    block_items.unshift({
+      overline: hoc_s("gen_ai_pl_carousel_card.overline"),
+      title: hoc_s("gen_ai_pl_carousel_card.title"),
+      image: "/images/ai/explore-gen-ai-bot-wizard.png",
+      curriculum: hoc_s("gen_ai_pl_carousel_card.curriculum"),
+      duration: hoc_s("gen_ai_pl_carousel_card.duration"),
+      prerequisites: hoc_s("gen_ai_pl_carousel_card.prerequisites"),
+      url_primary: CDO.studio_url("/courses/self-paced-exploring-gen-ai-2024"),
+      url_secondary: "/curriculum/generative-ai",
+      aria_label_primary: hoc_s("gen_ai_pl_carousel_card.aria_label"),
+      aria_label_secondary: hoc_s("gen_ai_middle_high_carousel_card.aria_label"),
+      new: true
+    })
+  end
 
 .carousel-wrapper
   %swiper-container.swiper-high{navigation: "true", "navigation-next-el": ".nav-next-high", "navigation-prev-el": ".nav-prev-high", pagination: "true", init: "false"}
