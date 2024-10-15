@@ -3,7 +3,9 @@ import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCalendarGrid';
+import {initializeRedux} from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [
@@ -11,20 +13,8 @@ const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [
 ];
 export const WEEK_WIDTH = 585;
 
-interface CalendarLesson {
-  id: number;
-  lessonNumber: number;
-  title: string;
-  duration: number;
-  assessment: boolean;
-  unplugged: boolean;
-  url: string;
-}
-
 const UnitCalendar: React.FC = () => {
-  const [lessons, setLessons] = useState<CalendarLesson[] | null>(null);
-  const [hasCalendar, setHasCalendar] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false); // it is only loading when you do the fetch
 
   const [weeklyInstructionalMinutes, setWeeklyInstructionalMinutes] =
     useState<number>(WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS[4]);
@@ -33,29 +23,60 @@ const UnitCalendar: React.FC = () => {
     (state: {unitSelection: {unitName: string}}) => state.unitSelection.unitName
   );
 
-  useEffect(() => {
-    if (!unitName) {
-      return;
-    }
+  const unitNameFromProgress = useAppSelector(
+    state => state.progress?.scriptName
+  );
 
-    getAuthenticityToken()
-      .then(token =>
-        fetch(`/dashboardapi/unit_summary/${unitName}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': token,
-          },
+  const hasCalendar = useAppSelector(state => state.progress?.showCalendar);
+
+  const calendarLessons = useAppSelector(
+    state => state.progress?.calendarLessons
+  );
+
+  const {userId, userType} = useAppSelector(state => ({
+    userId: state.currentUser.userId,
+    userType: state.currentUser.userType,
+  }));
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    setIsLoading(true);
+    if (
+      (unitName &&
+        userType &&
+        userId &&
+        (hasCalendar === undefined || calendarLessons === null)) ||
+      unitNameFromProgress !== unitName
+    ) {
+      getAuthenticityToken()
+        .then(token => {
+          return fetch(`/dashboardapi/unit_summary/${unitName}`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-Token': token,
+            },
+          });
         })
-      )
-      .then(response => response.json())
-      .then(responseJson => {
-        // initializeRedux(responseJson, dispatch, userType, userId);  commented out to see if we can just get the data
-        setLessons(responseJson.unitData.calendarLessons);
-        setHasCalendar(responseJson.unitData.showCalendar);
-        setIsLoading(false);
-      });
-  }, [unitName, lessons]);
+        .then(response => response.json())
+        .then(responseJson => {
+          // Initialize Redux state with the new data
+          initializeRedux(responseJson, dispatch, userType, userId);
+          setIsLoading(false);
+        });
+    } else {
+      setIsLoading(false);
+    }
+  }, [
+    unitName,
+    userId,
+    userType,
+    hasCalendar,
+    calendarLessons,
+    unitNameFromProgress,
+    dispatch,
+  ]);
 
   const generateDropdownOptions = () => {
     const options = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS;
@@ -88,7 +109,7 @@ const UnitCalendar: React.FC = () => {
       </div>
       {!isLoading && hasCalendar && (
         <UnitCalendarGrid
-          lessons={lessons}
+          lessons={calendarLessons}
           weeklyInstructionalMinutes={weeklyInstructionalMinutes}
           weekWidth={WEEK_WIDTH}
         />

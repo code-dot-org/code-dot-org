@@ -28,7 +28,11 @@ import {
 } from '@cdo/apps/util/reduxHooks';
 
 import {addAnnouncement, VisibilityType} from '../../announcementsRedux';
-import {setStudentDefaultsSummaryView} from '../../progressRedux';
+import {
+  setStudentDefaultsSummaryView,
+  setShowCalendar,
+  setCalendarLessons,
+} from '../../progressRedux';
 import {setVerified, setVerifiedResources} from '../../verifiedInstructorRedux';
 
 import UnitOverview from './UnitOverview';
@@ -179,7 +183,7 @@ interface UnitData {
   isPlCourse: boolean;
   showAiAssessmentsAnnouncement: boolean;
   lessonGroups: LessonGroup[];
-  lessons: Lesson[];
+  lessons: Lesson[]; // can we use this for the calendar?
   deeperLearningCourse: string | null;
   wrapupVideo: string | null;
   calendarLessons: CalendarLesson[];
@@ -197,7 +201,7 @@ interface TeacherUnitOverviewProps {
   // Define any props you need here
 }
 
-const initializeRedux = (
+export const initializeRedux = (
   unitSummaryResponse: UnitSummaryResponse,
   dispatch: AppDispatch,
   userType: string,
@@ -236,6 +240,14 @@ const initializeRedux = (
 
   if (unitData.student_detail_progress_view) {
     dispatch(setStudentDefaultsSummaryView(false));
+  }
+
+  if (unitData.showCalendar) {
+    dispatch(setShowCalendar(true));
+  }
+
+  if (unitData.calendarLessons) {
+    dispatch(setCalendarLessons(unitData.calendarLessons));
   }
 
   progress.initViewAsWithoutStore(
@@ -291,6 +303,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
 
   React.useEffect(() => {
     if (!unitName || !userType || !userId) {
+      // potential to see if data is already loaded from calendar
       return;
     }
     setUnitSummaryResponse(null);
@@ -308,7 +321,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = props => {
       .then(response => response.json())
       .then(responseJson => {
         initializeRedux(responseJson, dispatch, userType, userId);
-        setUnitSummaryResponse(responseJson);
+        setUnitSummaryResponse(responseJson); // might cause an issue - may need to refactor to include this state
       });
   }, [unitName, userType, userId, dispatch]);
 

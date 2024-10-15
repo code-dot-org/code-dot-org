@@ -48,6 +48,16 @@ import {
 } from './progressReduxSelectors';
 import {SET_VIEW_TYPE} from './viewAsRedux';
 
+interface CalendarLesson {
+  id: number;
+  lessonNumber: number;
+  title: string;
+  duration: number;
+  assessment: boolean;
+  unplugged: boolean;
+  url: string;
+}
+
 export interface ProgressState {
   currentLevelId: string | null;
   currentLessonId: number | undefined;
@@ -84,6 +94,8 @@ export interface ProgressState {
   unitStudentDescription: string | undefined;
   changeFocusAreaPath: string | undefined;
   unitCompleted: boolean | undefined;
+  showCalendar: boolean | undefined;
+  calendarLessons: CalendarLesson[] | null;
 }
 
 export interface MilestoneReport extends OptionalMilestoneData {
@@ -147,6 +159,8 @@ const initialState: ProgressState = {
   unitStudentDescription: undefined,
   changeFocusAreaPath: undefined,
   unitCompleted: undefined,
+  showCalendar: undefined,
+  calendarLessons: null,
 };
 
 const progressSlice = createSlice({
@@ -283,6 +297,12 @@ const progressSlice = createSlice({
     },
     setViewAsUserId(state, action: PayloadAction<number>) {
       state.viewAsUserId = action.payload;
+    },
+    setShowCalendar(state, action: PayloadAction<boolean>) {
+      state.showCalendar = action.payload;
+    },
+    setCalendarLessons(state, action: PayloadAction<CalendarLesson[]>) {
+      state.calendarLessons = action.payload;
     },
   },
   extraReducers: {
@@ -581,6 +601,8 @@ export const {
   setScriptCompleted,
   setLessonExtrasEnabled,
   setViewAsUserId,
+  setShowCalendar,
+  setCalendarLessons,
 } = progressSlice.actions;
 
 export default progressSlice.reducer;
