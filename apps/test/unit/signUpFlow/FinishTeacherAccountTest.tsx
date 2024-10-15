@@ -197,6 +197,7 @@ describe('FinishTeacherAccount', () => {
           schoolsList: [],
           usIp: true,
         },
+        country_code: 'US',
       },
     };
     sessionStorage.setItem('email', email);
