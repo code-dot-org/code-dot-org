@@ -4,5 +4,8 @@
 .iconButton {
   @include remove-button-styles;
   font-size: 13px;
+}
+
+.icon {
   color: $light_gray_500;
 }
