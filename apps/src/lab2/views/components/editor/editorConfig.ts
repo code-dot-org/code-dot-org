@@ -1,4 +1,11 @@
-import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
+import {
+  closeBrackets,
+  closeBracketsKeymap,
+  startCompletion,
+  closeCompletion,
+  acceptCompletion,
+  moveCompletionSelection,
+} from '@codemirror/autocomplete';
 import {
   defaultKeymap,
   indentWithTab,
@@ -24,6 +31,17 @@ import {
   rectangularSelection,
 } from '@codemirror/view';
 
+const autocompleteKeybindings = [
+  {key: 'Ctrl-Space', run: startCompletion},
+  {mac: 'Alt-`', run: startCompletion},
+  {key: 'Escape', run: closeCompletion},
+  {key: 'ArrowDown', run: moveCompletionSelection(true)},
+  {key: 'ArrowUp', run: moveCompletionSelection(false)},
+  {key: 'PageDown', run: moveCompletionSelection(true, 'page')},
+  {key: 'PageUp', run: moveCompletionSelection(false, 'page')},
+  {key: 'Tab', run: acceptCompletion},
+];
+
 // Extensions for codemirror. Based on @codemirror/basic-setup, with javascript-specific
 // extensions removed (lint, autocomplete). This is the base configuration for all codemirror
 // editors on the site. Any changes here will impact Java Lab, Python Lab, and Web Lab 2.
@@ -47,6 +65,7 @@ const editorConfig = [
     ...searchKeymap,
     ...historyKeymap,
     ...foldKeymap,
+    ...autocompleteKeybindings,
     indentWithTab,
   ]),
   EditorState.tabSize.of(2),
