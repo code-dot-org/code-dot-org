@@ -14,6 +14,16 @@
       "id": "3",
       "name": "testfolder2",
       "parentId": "0"
+    },
+    "4": {
+      "id": "4",
+      "name": "testfolder4",
+      "parentId": "2"
+    },
+    "5": {
+      "id": "5",
+      "name": "testfolder5",
+      "parentId": "4"
     }
   },
   "files": {

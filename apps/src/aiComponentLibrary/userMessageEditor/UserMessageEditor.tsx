@@ -40,7 +40,7 @@ const UserMessageEditor = React.forwardRef<
     }, [userMessage]);
 
     const handleKeyPress = (e: React.KeyboardEvent, userMessage: string) => {
-      if (e.key === 'Enter' && userMessage.trim() !== '') {
+      if (e.key === 'Enter' && !e.shiftKey && userMessage.trim() !== '') {
         e.preventDefault(); // Prevent the text box from having just a blank line.
         handleSubmit(userMessage);
       }
