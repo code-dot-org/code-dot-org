@@ -1,0 +1,65 @@
+name 'self-paced-pl-gen-ai-foundations-preview-06_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Output
+
+## Lesson Highlight: Mad Lib Activity
+
+<img src="https://images.code.org/01fd008e4d6048055a571f437280fdc4-1ca792f16c9de3956ac12df63b575695-Slide17.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+
+#### During **Lesson 9: Outputs & Probabilities**, students investigate how language models generate output based on probabilities through creating mad-libs together.
+
+#### Student groups create a mad-lib using a predetermined set of words. As groups share, you'll type in their responses in the **Mad Lib App** to explore how their choices compare to what others said. You'll have the opportunity to try out the **Mad Lib App** on the next level.
+
+#### As you explore computer generated mad-lib answers, you and your students will notice that the most probable responses are often predictable and generic. This is also what tends to happen with real language models - when asked to be creative without special prompting, the results from a language model can be bland and lukewarm since it’s pulling from the most commonly used phrases associated with the input
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; clear: both;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> There are several sets of cards and half-sheets to manage in this activity. The lesson plan has some material management strategies recommended by teachers who piloted this unit.</p>
+</div>
+
+## Lesson Previews
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 9: Outputs & Probabilities
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/ee2c1e06e0231d2da55f0092134eeefd-1019ee4f65d7f4008dc7f8bd9da98cc4-Slide4.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** What is the last step for language models to generate output responses?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students investigate how language models generate output based on probabilities. The lesson kicks off with the class collaboratively crafting a story, with a twist to alternate between realistic and fantastical elements. This leads into a group activity where students fill in a mad lib with predetermined words, aiming for either coherent or absurd outcomes. They are then introduced to an app that aggregates responses from numerous users to the same mad lib, showcasing a variety of popular choices for each blank. Through selecting the most popular choices based on this data, students experience firsthand how language models select words with the highest probability from training data.
+
+#### **Students will be able to:**
+* #### Explain how a language model uses probabilities to generate words as ouput
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/9" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 10: Hallucinations and Fabrications</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/625b1702fa6b7def7fa356f43241c365-9121715a2b9b4b3d3fe248ffa4b4247f-Slide14.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** What happens when a language model gives inaccurate information?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students investigate why language models may produce inaccurate outputs, known as hallucinations. They start by understanding the probabilistic nature of generative AI and how bias in training data can lead to such errors. Following discussions on examples of AI systems recalled for bias and hallucinations, students assume the role of AI Auditors to explore proactive measures for mitigating harm caused by deployed language models. After their exploration, they watch a video of a professional AI Auditor, reflecting on the parallels between the professional's work and their class activity.
+
+#### **Students will be able to:**
+* #### Make recommendations regarding the input and output of a language model to avoid bias and harm
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/10" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+
+MARKDOWN

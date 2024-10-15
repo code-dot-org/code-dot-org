@@ -24,6 +24,9 @@
 -# Mount point for React AccountInformation component.
 %div#account-information
 
+-# Mount point for React SchoolInformation component.
+%div#school-information
+
 - if current_user.should_see_add_password_form?
   -# Mount point for React AddPasswordForm component.
   %div#add-password-fields
@@ -239,6 +242,7 @@
       studentInLockoutFlow: @student_in_lockout_flow,
       countryCode: @country_code,
       isUSA: @is_usa,
+      schoolInfo: current_user.school_info
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}

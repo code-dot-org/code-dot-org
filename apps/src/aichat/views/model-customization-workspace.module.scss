@@ -67,48 +67,15 @@ $default-spacing: 4px;
     border-color: $light_black;
   }
 
+  .temperatureSlider {
+    @extend %full-width;
+  }
+
   input {
     @extend %full-width;
     height: 30px;
     border-radius: 4px;
     border-color: $light_black;
-  }
-
-  input[type='range'] {
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-
-    @include slider-track;
-    &:disabled,
-    &[aria-disabled='true'] {
-      background: $light_gray_200;
-    }
-  }
-
-  input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Hides the thumb so that custom thumb can be made */
-
-    @include slider-thumb;
-  }
-
-  input[type='range']:disabled::-webkit-slider-thumb {
-    @include disabled-slider-thumb;
-  }
-
-  /* Firefox */
-  input[type='range']::-moz-range-track {
-    @include slider-track;
-  }
-
-  input[type='range']:disabled::-moz-range-track {
-    background: $light_gray_200;
-  }
-
-  input[type='range']::-moz-range-thumb {
-    @include slider-thumb;
-  }
-
-  input[type='range']:disabled::-moz-range-thumb {
-    @include disabled-slider-thumb;
   }
 }
 
@@ -138,7 +105,7 @@ $default-spacing: 4px;
   justify-content: center;
   align-items: center;
   border-top: 1px solid $light_gray_200;
-  padding: 10px 26px;
+  padding: 10px 7px;
 }
 
 .selectedModelDropdown {
@@ -178,7 +145,7 @@ $default-spacing: 4px;
 }
 
 .saveAlert {
-  margin-left: 20px;
+  margin-left: 4px;
   height: 10px;
   padding-top: 0;
   padding-bottom: 0;

@@ -2,8 +2,10 @@ import classNames from 'classnames';
 import React from 'react';
 import {useDispatch} from 'react-redux';
 
+import {isChordEvent} from '../player/interfaces/ChordEvent';
+import {isInstrumentEvent} from '../player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {SoundEvent} from '../player/interfaces/SoundEvent';
+import {isSoundEvent} from '../player/interfaces/SoundEvent';
 import {selectBlockId} from '../redux/musicRedux';
 import SoundStyle from '../utils/SoundStyle';
 
@@ -49,10 +51,13 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
 
   const isBlockSelected = eventData.blockId === selectedBlockId;
 
-  const soundType =
-    eventData.type === 'sound'
-      ? (eventData as SoundEvent).soundType
-      : eventData.type;
+  const soundType = isSoundEvent(eventData)
+    ? eventData.soundType
+    : isChordEvent(eventData)
+    ? eventData.type
+    : isInstrumentEvent(eventData)
+    ? eventData.instrumentType
+    : 'beat';
 
   return (
     <div
