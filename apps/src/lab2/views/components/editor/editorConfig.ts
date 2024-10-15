@@ -31,6 +31,8 @@ import {
   rectangularSelection,
 } from '@codemirror/view';
 
+// These are the almost same as the default keybindings for autocomplete,
+// except that we changed acceptCompletion to use Tab instead of Enter.
 const autocompleteKeybindings = [
   {key: 'Ctrl-Space', run: startCompletion},
   {mac: 'Alt-`', run: startCompletion},
