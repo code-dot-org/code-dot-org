@@ -101,6 +101,9 @@ function StudentSelector({
                   <StudentProgressStatus
                     aiEvalStatus={aiEvalStatusMap[student.id]}
                     hasTeacherFeedback={hasTeacherFeedbackMap[student.id]}
+                    level={levelsWithProgress.find(
+                      userLevel => student.id === userLevel.userId
+                    )}
                   />
                 )}
               </div>
@@ -149,7 +152,7 @@ export default connect(
 const STATUS_BUBBLE_COLOR = {
   NOT_STARTED: style.grayStatusBlob,
   IN_PROGRESS: style.yellowStatusBlob,
-  SUBMITTED: style.yellowStatusBlob,
+  SUBMITTED: style.purpleStatusBlob,
   READY_TO_REVIEW: style.redStatusBlob,
   EVALUATED: style.greenStatusBlob,
 };
