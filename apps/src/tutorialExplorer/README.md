@@ -44,6 +44,8 @@ The page's [source HTML](https://github.com/code-dot-org/code-dot-org/blob/929fb
 
 Management of the source gsheet is a significant task in itself, and the sheet has some internal complexity so that it can generate the appropriate values for the variety of `displayweight_*` and `popularityrank_*` columns (which correspond to "Recommended" vs. "Most popular" in the UI).
 
+_Note:_ As of 2024 we will manually sort activities by displayweight on the cdo-tutorials gsheet with new activities at the top of the list followed by ranking in popularity from the pervious year. See [this PR](https://github.com/code-dot-org/code-dot-org/pull/60728) for more details.
+
 ## Components
 
 Each React component is in its own file with a brief comment at the top describing its use.
