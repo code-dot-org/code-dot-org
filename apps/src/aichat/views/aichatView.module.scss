@@ -72,3 +72,9 @@ $column-min-width: 200px;
   @extend %panel-section;
   margin-bottom: 28px; // Added to avoid collision with language dropdown footer.
 }
+
+.workspaceHeaderContent {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
