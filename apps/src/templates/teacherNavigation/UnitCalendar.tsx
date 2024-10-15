@@ -30,10 +30,10 @@ const UnitCalendar: React.FC = () => {
     state => state.progress?.scriptName
   );
 
-  const hasCalendar = useAppSelector(state => state.progress?.showCalendar);
+  const hasCalendar = useAppSelector(state => state.calendar?.showCalendar);
 
   const calendarLessons = useAppSelector(
-    state => state.progress?.calendarLessons
+    state => state.calendar?.calendarLessons
   );
 
   const {userId, userType} = useAppSelector(state => ({

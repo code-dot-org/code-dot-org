@@ -29,11 +29,8 @@ import {
 } from '@cdo/apps/util/reduxHooks';
 
 import {addAnnouncement, VisibilityType} from '../../announcementsRedux';
-import {
-  setStudentDefaultsSummaryView,
-  setShowCalendar,
-  setCalendarLessons,
-} from '../../progressRedux';
+import {setShowCalendar, setCalendarLessons} from '../../calendarRedux';
+import {setStudentDefaultsSummaryView} from '../../progressRedux';
 import {setVerified, setVerifiedResources} from '../../verifiedInstructorRedux';
 
 import UnitOverview from './UnitOverview';
@@ -244,10 +241,12 @@ export const initializeRedux = (
   }
 
   if (unitData.showCalendar) {
+    console.log('inside showCalendar');
     dispatch(setShowCalendar(true));
   }
 
   if (unitData.calendarLessons) {
+    console.log('inside calendarLessons');
     dispatch(setCalendarLessons(unitData.calendarLessons));
   }
 
