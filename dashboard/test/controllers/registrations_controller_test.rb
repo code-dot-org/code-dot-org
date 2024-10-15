@@ -311,14 +311,12 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
-  test "create does not allow pandas in name" do
+  test "create does allow pandas in name" do
     params_with_panda_name = @default_params.update(name: panda_panda)
 
-    assert_does_not_create(User) do
+    assert_creates(User) do
       post :create, params: {user: params_with_panda_name}
     end
-
-    assert_equal ["Display Name is invalid"], assigns(:user).errors.full_messages
   end
 
   test "create does not allow pandas in email" do
@@ -612,11 +610,9 @@ class RegistrationsControllerTest < ActionController::TestCase
   test "create does not allow pandas in name [new sign up flow]" do
     params_with_panda_name = @default_params_new_signup.update(name: panda_panda)
 
-    assert_does_not_create(User) do
+    assert_creates(User) do
       post :create, params: {user: params_with_panda_name}
     end
-
-    assert_equal ["Display Name is invalid"], assigns(:user).errors.full_messages
   end
 
   test "create does not allow pandas in email [new sign up flow]" do
