@@ -15,8 +15,12 @@
       "startSources": {
         "variables": [
           {
-            "name": "i",
+            "name": "x",
             "id": "]6|r|l_3)Rb+,NM!a~Ln"
+          },
+          {
+            "name": "y",
+            "id": "cz@_gQd-O+kC0g6#u3Y2"
           }
         ],
         "blocks": {
@@ -53,63 +57,180 @@
                   },
                   "next": {
                     "block": {
-                      "type": "play_sound",
-                      "id": "2.U!}|2L#9TEdzPHDv?^",
+                      "type": "variables_set",
+                      "id": "u%~L5lg#S{}R0.P-fnoJ",
+                      "extraState": {
+                      },
                       "fields": {
-                        "sound": "alessia_cara_scars_to_your_beautiful/drums_verse"
+                        "VAR": {
+                          "id": "cz@_gQd-O+kC0g6#u3Y2"
+                        }
                       },
                       "inputs": {
-                        "measure": {
-                          "shadow": {
+                        "VALUE": {
+                          "block": {
                             "type": "math_number",
-                            "id": "R:Ho-=$J^4*F@lyQvXnc",
+                            "id": "He)9bVP~Wx2FeYIYq{8!",
                             "fields": {
-                              "NUM": 1
+                              "NUM": 2
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound",
+                          "id": "2.U!}|2L#9TEdzPHDv?^",
+                          "fields": {
+                            "sound": "sabrina_carpenter_espresso/vocals_now_hes"
+                          },
+                          "inputs": {
+                            "measure": {
+                              "shadow": {
+                                "type": "math_number",
+                                "id": "R:Ho-=$J^4*F@lyQvXnc",
+                                "fields": {
+                                  "NUM": 1
+                                }
+                              },
+                              "block": {
+                                "type": "variables_get",
+                                "id": "jSBeC[9]Kj6Q1v(=~A=@",
+                                "extraState": {
+                                },
+                                "fields": {
+                                  "VAR": {
+                                    "id": "]6|r|l_3)Rb+,NM!a~Ln"
+                                  }
+                                }
+                              }
                             }
                           },
-                          "block": {
-                            "type": "variables_get",
-                            "id": "wGdQ;I~cGYNB(.v4uH_+",
-                            "extraState": {
-                            },
-                            "fields": {
-                              "VAR": {
-                                "id": "]6|r|l_3)Rb+,NM!a~Ln"
+                          "next": {
+                            "block": {
+                              "type": "play_sound",
+                              "id": "Ap0n_Yo!xRo;=!X+T,.l",
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                              },
+                              "inputs": {
+                                "measure": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "klu~l(:9Lrz%^l:y5vYG",
+                                    "fields": {
+                                      "NUM": 1
+                                    }
+                                  },
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "x)[t0ZMUtW)^UubiG1)N",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "cz@_gQd-O+kC0g6#u3Y2"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound",
+                                  "id": "@TOB!=$:~-W`74%aHdB[",
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                                  },
+                                  "inputs": {
+                                    "measure": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": "klu~l(:9Lrz%^l:y5vYG",
+                                        "fields": {
+                                          "NUM": 1
+                                        }
+                                      },
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "YzBFjeQw-pEerGH-IPX/",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "cz@_gQd-O+kC0g6#u3Y2"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound",
+                                      "id": "3pb9hbrZf:nW)PM+HK_D",
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_espresso/bass_main"
+                                      },
+                                      "inputs": {
+                                        "measure": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "klu~l(:9Lrz%^l:y5vYG",
+                                            "fields": {
+                                              "NUM": 1
+                                            }
+                                          },
+                                          "block": {
+                                            "type": "variables_get",
+                                            "id": "07;8U7+E]jL2p`KVz)|s",
+                                            "extraState": {
+                                            },
+                                            "fields": {
+                                              "VAR": {
+                                                "id": "cz@_gQd-O+kC0g6#u3Y2"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound",
+                                          "id": "lQsiGAs1X,`#UAASw:R5",
+                                          "fields": {
+                                            "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                          },
+                                          "inputs": {
+                                            "measure": {
+                                              "shadow": {
+                                                "type": "math_number",
+                                                "id": "klu~l(:9Lrz%^l:y5vYG",
+                                                "fields": {
+                                                  "NUM": 1
+                                                }
+                                              },
+                                              "block": {
+                                                "type": "variables_get",
+                                                "id": "/UImpjRZ?px=TPF~p2;K",
+                                                "extraState": {
+                                                },
+                                                "fields": {
+                                                  "VAR": {
+                                                    "id": "cz@_gQd-O+kC0g6#u3Y2"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
                               }
                             }
                           }
                         }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "type": "play_sound",
-              "id": "Ap0n_Yo!xRo;=!X+T,.l",
-              "x": 30,
-              "y": 210,
-              "fields": {
-                "sound": "alessia_cara_scars_to_your_beautiful/bass_verse"
-              },
-              "inputs": {
-                "measure": {
-                  "shadow": {
-                    "type": "math_number",
-                    "id": "klu~l(:9Lrz%^l:y5vYG",
-                    "fields": {
-                      "NUM": 1
-                    }
-                  },
-                  "block": {
-                    "type": "variables_get",
-                    "id": "x)[t0ZMUtW)^UubiG1)N",
-                    "extraState": {
-                    },
-                    "fields": {
-                      "VAR": {
-                        "id": "]6|r|l_3)Rb+,NM!a~Ln"
                       }
                     }
                   }
@@ -120,12 +241,12 @@
         }
       },
       "library": "launch2024",
-      "packId": "alessia_cara_scars_to_your_beautiful"
+      "packId": "sabrina_carpenter_espresso"
     },
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-10T15:59:58.719+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-variables-2\\\"\"],\"cloned_from\":\"advanced-model-sandbox-variables-2\"},{\"changed_at\":\"2024-10-10 16:00:01 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 16:01:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 16:03:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-10T15:59:58.719+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-variables-2\\\"\"],\"cloned_from\":\"advanced-model-sandbox-variables-2\"},{\"changed_at\":\"2024-10-10 16:00:01 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 16:01:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 16:03:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:09:23 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:09:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:10:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:11:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:12:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:13:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:16:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:16:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:38:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 21:39:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
