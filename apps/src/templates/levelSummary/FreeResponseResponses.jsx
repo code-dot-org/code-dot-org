@@ -39,6 +39,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
   const getMenuOptions = (pinResponse, unpinResponse, response) => {
     return [
       {
+        value: unpinResponse ? "unpin-option" : "pin-option",
         label: unpinResponse ? i18n.unpinResponse() : i18n.pinResponse(),
         icon: unpinResponse
           ? {iconName: 'thumbtack-slash', iconStyle: 'solid'}
@@ -53,6 +54,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
             : pinResponse(response.user_id),
       },
       {
+        value: "hide-option",
         label: i18n.hideResponse(),
         icon: {
           iconName: 'eye-slash',
@@ -89,7 +91,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
           <ActionDropdown
             name="free-response"
             menuPlacement="right"
-            labelText="Free Response"
+            labelText={i18n.additionalOptions()}
             size="xs"
             triggerButtonProps={{
               isIconOnly: true,
@@ -101,7 +103,6 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
                 : styles.freeresponseUnpinnedDropdown,
             }}
             options={getMenuOptions(pinResponse, unpinResponse, response)}
-            aria-label={i18n.additionalOptions()}
           />
         </div>
       </div>
