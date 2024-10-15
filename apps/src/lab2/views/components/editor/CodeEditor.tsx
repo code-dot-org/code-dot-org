@@ -72,6 +72,11 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
           extensions: editorExtensions,
         }),
         parent: editorRef.current,
+        // Always start on the first line.
+        // TODO: Determine if we should track line position and scroll to
+        // a saved position instead.
+        // https://codedotorg.atlassian.net/browse/CT-870
+        scrollTo: EditorView.scrollIntoView(0),
       })
     );
     setDidInit(true);

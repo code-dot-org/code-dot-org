@@ -19,6 +19,7 @@ export const MusicConditions: ConditionNames = {
   },
   PLAYED_SOUND_TRIGGERED_MULTIPLE_TIMES: {
     name: 'played_sound_triggered_multiple_times',
+    valueType: 'number',
     description:
       'Successful when at least this many triggered sounds have played. Simple2 only. Ex. Value: 5',
   },
@@ -27,6 +28,11 @@ export const MusicConditions: ConditionNames = {
     valueType: 'string',
     description:
       'Successful when a sound is playing in a given function. Simple2 only. Ex. Value: chorus',
+  },
+  PLAYED_SOUND_IN_ANY_FUNCTION: {
+    name: 'played_sound_in_any_function',
+    description:
+      'Successful when a sound is playing in any function. Simple2 only.',
   },
   PLAYED_SOUNDS: {
     name: 'played_sounds',

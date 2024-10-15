@@ -11,6 +11,8 @@ import _ from 'lodash';
 
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import notifyLevelChange from '@cdo/apps/lab2/utils/notifyLevelChange';
 import {
   processServerStudentProgress,
   getLevelResult,
@@ -29,7 +31,6 @@ import {
 } from '@cdo/apps/types/progressTypes';
 import {RootState} from '@cdo/apps/types/redux';
 
-import notifyLevelChange from '../lab2/utils/notifyLevelChange';
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {AppDispatch} from '../util/reduxHooks';
 import {navigateToHref} from '../utils';
@@ -330,7 +331,7 @@ export const queryUserProgress =
 // so we should update the browser and also set this as the new
 // current level.
 export function navigateToLevelId(levelId: string): ProgressThunkAction {
-  return (dispatch, getState) => {
+  return async (dispatch, getState) => {
     const state = getState().progress;
     if (!state.currentLessonId || !state.currentLevelId) {
       return;
@@ -348,6 +349,12 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
       notifyLevelChange(currentLevel.id, levelId);
       dispatch(setCurrentLevelId(levelId));
     } else {
+      if (currentLevel?.usesLab2) {
+        // If we are switching from a lab2 level but can't change the level without reloading,
+        // we clean up the project manager (if it exists) to avoid a confusing pop-up to users
+        // if their most recent code has not saved.
+        await Lab2Registry.getInstance().getProjectManager()?.cleanUp();
+      }
       const url = getBubbleUrl(newLevel.path, undefined, undefined, true);
       navigateToHref(url);
     }

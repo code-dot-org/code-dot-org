@@ -1,7 +1,6 @@
 import cloneDeep from 'lodash/cloneDeep';
 
 import {getCurrentLocale} from '@cdo/apps/lab2/projects/utils';
-import experiments from '@cdo/apps/util/experiments';
 import HttpClient, {
   ResponseValidator,
   GetResponse,
@@ -61,11 +60,6 @@ export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
     let libraryJson = {} as LibraryJson;
     if (libraryJsonResponse.status === 'fulfilled') {
       libraryJson = libraryJsonResponse.value.value as LibraryJson;
-    }
-
-    // Early return with no translations unless experiment is enabled for now.
-    if (!experiments.isEnabledAllowingQueryString('libraryLocalization')) {
-      return new MusicLibrary(libraryName, libraryJson);
     }
 
     if (translations && translations.status === 'fulfilled') {

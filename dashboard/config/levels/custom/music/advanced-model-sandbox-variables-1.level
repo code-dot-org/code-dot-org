@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2024-09-19T19:48:06.000Z",
   "level_num": "custom",
@@ -16,12 +15,8 @@
       "startSources": {
         "variables": [
           {
-            "name": "currentTime",
-            "id": "Rz#SeWm)%Id~Ll*%ln,#"
-          },
-          {
             "name": "i",
-            "id": ";:]5ZL.)zy1eT0D2O[_X"
+            "id": "]$EXHpiIqs2Wya@[Hce}"
           }
         ],
         "blocks": {
@@ -29,26 +24,27 @@
           "blocks": [
             {
               "type": "when_run",
-              "id": "o8tu9ro(lP|pTF~svhPU",
+              "id": "when-run-block",
               "x": 30,
               "y": 30,
               "deletable": false,
+              "movable": false,
               "next": {
                 "block": {
                   "type": "variables_set",
-                  "id": "70.ZV~YjRs(^]B;[N#Bg",
+                  "id": "@c*ZK6=D)Vg)mR7Lf`U2",
                   "extraState": {
                   },
                   "fields": {
                     "VAR": {
-                      "id": ";:]5ZL.)zy1eT0D2O[_X"
+                      "id": "]$EXHpiIqs2Wya@[Hce}"
                     }
                   },
                   "inputs": {
                     "VALUE": {
                       "block": {
                         "type": "math_number",
-                        "id": "QDVq0@FysVAbrI1ic[4h",
+                        "id": "j{?v|BnJ{+WpxFq%Toj_",
                         "fields": {
                           "NUM": 2
                         }
@@ -58,58 +54,27 @@
                   "next": {
                     "block": {
                       "type": "play_sound",
-                      "id": "@9R:AGvPCA(;s]*-^l53",
+                      "id": "?nLaG`nK?3_(yu[Ow+Z6",
                       "fields": {
-                        "sound": "beats/disco_beat"
+                        "sound": "indie/drum_beat_ping"
                       },
                       "inputs": {
                         "measure": {
                           "shadow": {
                             "type": "math_number",
-                            "id": "f6RlcH!B{_1bh_{=atLf",
+                            "id": ",?U-9`sj?nKmx^A(TPA6",
                             "fields": {
                               "NUM": 1
                             }
                           },
                           "block": {
                             "type": "variables_get",
-                            "id": "ku)4)$k@v+!t#J-se|J+",
+                            "id": "3$JNiZ=~^s}y-*Er%?[.",
                             "extraState": {
                             },
                             "fields": {
                               "VAR": {
-                                "id": ";:]5ZL.)zy1eT0D2O[_X"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "next": {
-                        "block": {
-                          "type": "play_sound",
-                          "id": "YfzSwjx%;K/a%3K2X}D=",
-                          "fields": {
-                            "sound": "bass/funky_bass"
-                          },
-                          "inputs": {
-                            "measure": {
-                              "shadow": {
-                                "type": "math_number",
-                                "id": "B61{HWNuuZ+$v8JZNqU(",
-                                "fields": {
-                                  "NUM": 1
-                                }
-                              },
-                              "block": {
-                                "type": "variables_get",
-                                "id": "Xp,AA1Uyj+BZkmc[R{Mg",
-                                "extraState": {
-                                },
-                                "fields": {
-                                  "VAR": {
-                                    "id": ";:]5ZL.)zy1eT0D2O[_X"
-                                  }
-                                }
+                                "id": "]$EXHpiIqs2Wya@[Hce}"
                               }
                             }
                           }
@@ -122,11 +87,14 @@
             }
           ]
         }
-      }
+      },
+      "library": "launch2024",
+      "packId": "default"
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-19 19:48:33 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:26:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:27:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:32:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:33:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-20 15:35:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-09-20 15:35:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-09-20 15:37:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-19 19:48:33 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:26:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:27:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:32:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-19 21:33:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-20 15:35:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-09-20 15:35:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-09-20 15:37:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-10-10 15:17:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2024-10-10 15:30:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:41:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:42:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-10 15:46:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:04:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:04:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-14 20:12:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

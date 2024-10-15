@@ -83,6 +83,10 @@ h1 {
   @include main-font-bold;
   font-size: 32px;
   color: $purple;
+
+  &.text-black {
+    color: $light_black;
+  }
 }
 
 h2 {

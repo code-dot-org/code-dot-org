@@ -21,17 +21,20 @@
   cursor: pointer;
   white-space: nowrap;
   justify-content: space-between;
-  gap: 10px;
-  padding: 0 6px;
   height: 28px;
   background-color: $light_gray_950;
   border-radius: 4px 4px 0 0;
+
+  &:hover:not(.active) {
+    background-color: $light_gray_800;
+  }
 }
 
-.fileTab > span {
+.label {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 0 10px;
 }
 
 .active {
@@ -44,5 +47,6 @@
 }
 
 .closeButton {
-  margin-top: 4px;
+  margin: 4px 0;
+  padding-right: 10px;
 }

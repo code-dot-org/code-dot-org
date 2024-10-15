@@ -5,7 +5,7 @@ class TeacherDashboardController < ApplicationController
     if params[:course_version_name]
       redirect_to "/courses/#{params[:course_version_name]}"
     elsif params[:unit_name]
-      redirect_to "/s/#{params[:unitName]}"
+      redirect_to "/s/#{params[:unit_name]}"
     else
       redirect_to "/home"
     end
