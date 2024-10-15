@@ -12,7 +12,7 @@ import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {singleton as StudioApp} from '@cdo/apps/StudioApp';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ai_rubric_cyan} from '@cdo/apps/util/color';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -537,13 +537,13 @@ export default function LearningGoals({
   };
 
   // Remember whether no not the code editor is loaded
-  const studioApp = StudioApp();
-  const [editorLoaded, setEditorLoaded] = useState(!!studioApp.editor);
+  const studio = studioApp();
+  const [editorLoaded, setEditorLoaded] = useState(!!studio.editor);
   useMemo(() => {
-    studioApp.on('afterInit', () => {
+    studio.on('afterInit', () => {
       setEditorLoaded(true);
     });
-  }, [studioApp]);
+  }, [studio]);
 
   const aiEvidence = useMemo(() => {
     if (!editorLoaded) {
