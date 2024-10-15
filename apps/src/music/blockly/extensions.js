@@ -155,12 +155,33 @@ export const effectsFieldExtension = function () {
   };
 };
 
+/**
+ * Extension to blocks with sound fields that validates new values.
+ */
 export const fieldSoundsValidator = function () {
+  /**
+   * Ensures that sound blocks also have a valid value, even if a level's library or song
+   * pack has changed. *
+   * @param newValue The sound id selected from the field editor or initial sources.
+   * @returns The new sound id or, if that's invalid, the id for the first available sound
+   */
   this.getField(FIELD_SOUNDS_NAME).setValidator(newValue => {
-    if (MusicLibrary.getInstance()?.getSoundForId(newValue)) {
-      return newValue;
-    } else {
-      return MusicLibrary.getInstance()?.getDefaultSound();
+    const libraryInstance = MusicLibrary.getInstance();
+    if (libraryInstance) {
+      const soundDataForValue = libraryInstance.getSoundForId(newValue);
+      const defaultSoundData = libraryInstance.getDefaultSound();
+      if (!soundDataForValue) {
+        console.warn(
+          `A sound field value was reset. ${newValue} was not found in the current library.`
+        );
+        return defaultSoundData;
+      } else if (!libraryInstance.isSoundIdAvailable(newValue)) {
+        console.warn(
+          `A sound field value was reset. ${newValue} was not found in the available sound packs.`
+        );
+        return defaultSoundData;
+      }
     }
+    return newValue;
   });
 };
