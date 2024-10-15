@@ -306,6 +306,7 @@ describe('RubricSettings', () => {
           sectionId={1}
           allTeacherEvaluationData={evals}
           aiEvalStatusCounters={ready}
+          updateAiEvalStatusMap={jest.fn()}
         />
       </Provider>
     );
