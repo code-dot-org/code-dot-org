@@ -311,6 +311,26 @@ describe('useSchoolInfo', () => {
         expect(schoolNameSessionStorageCalls[1][1]).toBe('Super Cool School');
       });
     });
+
+    it('should reset school info to initial state if passed', async () => {
+      await act(async () => {
+        hook.current.setSchoolZip('90210');
+      });
+      expect(hook.current.schoolZip).toBe('90210');
+      act(async () => {
+        hook.current.setSchoolId(NonSchoolOptions.CLICK_TO_ADD);
+        hook.current.setSchoolName('Fake School');
+      });
+      expect(hook.current.schoolId).toBe(NonSchoolOptions.CLICK_TO_ADD);
+      expect(hook.current.schoolName).toBe('Fake School');
+      act(async () => {
+        hook.current.reset();
+      });
+      expect(hook.current.schoolZip).toBe(initialState.schoolZip);
+      expect(hook.current.schoolName).toBe(initialState.schoolName);
+      expect(hook.current.schoolId).toBe(initialState.schoolId);
+      expect(hook.current.country).toBe(initialState.country);
+    });
   });
 
   describe('fetchSchools', () => {

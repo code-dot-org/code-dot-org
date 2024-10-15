@@ -54,6 +54,7 @@ export default function CensusTeacherBanner({
     // may have been partial state about the school changed. We do not want
     // to use that partial state in the census submission so we need to reset
     // to the previous values.
+    schoolInfo.reset();
     setShowSchoolInfoForm(false);
     setShowSchoolInfoUnknownError(false);
   };
