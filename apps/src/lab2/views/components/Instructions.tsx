@@ -37,8 +37,6 @@ interface InstructionsProps {
   manageNavigation?: boolean;
   /** Optional classname for the container */
   className?: string;
-  /** Whether we support TTS. */
-  offerTts?: boolean;
 }
 
 /**
@@ -55,7 +53,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
-  offerTts = false,
 }) => {
   const instructionsText = useSelector(
     (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
@@ -74,6 +71,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const finishDialog = useAppSelector(
     state => state.lab.levelProperties?.finishDialog
+  );
+  const offerBrowserTts = useAppSelector(
+    state => state.lab.levelProperties?.offerBrowserTts
   );
 
   // If there are no validation conditions, we can show the continue button so long as
@@ -120,7 +120,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       predictAnswerLocked={predictAnswerLocked}
       layout={layout}
       handleInstructionsTextClick={handleInstructionsTextClick}
-      offerTts={offerTts}
+      offerTts={offerBrowserTts}
       finishUrl={finishUrl}
       finishDialog={finishDialog}
       className={className}

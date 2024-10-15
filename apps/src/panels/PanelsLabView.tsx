@@ -32,7 +32,7 @@ const PanelsLabView: React.FunctionComponent = () => {
   );
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
   const offerTts =
-    useAppSelector(state => state.lab.levelProperties?.offerTts) ||
+    useAppSelector(state => state.lab.levelProperties?.offerBrowserTts) ||
     queryParams('show-tts') === 'true';
 
   const dialogControl = useDialogControl();
