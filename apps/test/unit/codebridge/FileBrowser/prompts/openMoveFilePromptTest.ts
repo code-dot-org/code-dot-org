@@ -1,6 +1,7 @@
 import {MoveFileFunction} from '@codebridge/codebridgeContext/types';
 import {openMoveFilePrompt} from '@codebridge/FileBrowser/prompts/openMoveFilePrompt';
 import {ProjectFile} from '@codebridge/types';
+import {getFolderPath} from '@codebridge/utils';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
@@ -24,7 +25,10 @@ describe('openMoveFilePrompt', function () {
     const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
     const fileId = '4';
     const destinationFolderId = '1';
-    const destinationFolderName = testProject.folders[destinationFolderId].name;
+    const destinationFolderName = getFolderPath(
+      destinationFolderId,
+      testProject.folders
+    );
 
     const [moveFileData, moveFileDataMock] = getMoveFileMock();
 
@@ -73,7 +77,10 @@ describe('openMoveFilePrompt', function () {
     const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
     const fileId = '1';
     const destinationFolderId = '1';
-    const destinationFolderName = testProject.folders[destinationFolderId].name;
+    const destinationFolderName = getFolderPath(
+      destinationFolderId,
+      testProject.folders
+    );
 
     const [moveFileData, moveFileDataMock] = getMoveFileMock();
 
