@@ -29,7 +29,7 @@ class PasswordsControllerTest < ActionController::TestCase
 
     assert_redirected_to '/users/sign_in'
 
-    assert_equal 'You will receive an email with instructions about how to reset your password in a few minutes.', flash[:notice]
+    assert_equal I18n.t('password.reset_form.confirmation'), flash[:notice]
   end
 
   test "create with valid email includes link for admin" do
