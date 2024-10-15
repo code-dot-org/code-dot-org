@@ -322,6 +322,7 @@ roles = {
       '!Ref DataAnalystDmsReadOnlyPolicy',
       '!Ref DataAnalystRedshiftPolicy',
       '!Ref CloudwatchReaderPolicy',
+      '!Ref RedshiftScheduledActionsPolicy',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
     ]
@@ -762,6 +763,24 @@ roles.each do |name, config| %>
               - cloudwatch:ListMetrics
               - logs:DescribeLogGroups
             Resource: '*'
+
+  # Allows the creation and management of Redshift scheduled actions.
+  # Note that these permissions can only apply to "*" resources and
+  # cannot be restricted to specific Redshift clusters or actions.
+  RedshiftScheduledActionsPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: RedshiftScheduledActionsPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - redshift:ModifyScheduledAction
+              - redshift:DescribeScheduledActions
+              - redshift:DeleteScheduledAction
+              - redshift:CreateScheduledAction
+            Resource: "*"
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
