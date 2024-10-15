@@ -142,6 +142,11 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     onChange(currentValue);
   }, [onChange, currentValue]);
 
+  // Report analytics when the panel first opens.
+  useEffect(() => {
+    MusicRegistry.analyticsReporter.onOpenPatternAiPanel();
+  }, []);
+
   useEffect(() => {
     if (!MusicRegistry.player.isInstrumentLoaded(currentValue.instrument)) {
       setIsLoading(true);
