@@ -1,5 +1,5 @@
 require 'selenium/webdriver'
-require 'webdrivers'
+# require 'webdrivers'
 
 module SeleniumBrowser
   def self.local(browser: :chrome, headless: true)
