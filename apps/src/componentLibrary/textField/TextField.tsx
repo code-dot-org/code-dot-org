@@ -1,7 +1,6 @@
 import classNames from 'classnames';
-import React, {AriaAttributes, ChangeEvent} from 'react';
+import React, {ChangeEvent, HTMLAttributes} from 'react';
 
-import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
@@ -9,7 +8,7 @@ import FontAwesomeV6Icon, {
 
 import moduleStyles from './textfield.module.scss';
 
-export interface TextFieldProps extends AriaAttributes {
+export interface TextFieldProps extends HTMLAttributes<HTMLInputElement> {
   /** TextField onChange handler*/
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   /** TextField id */
@@ -83,10 +82,8 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   autoComplete,
   color = 'black',
   size = 'm',
-  ...rest
+  ...HTMLAttributes
 }) => {
-  const ariaProps = getAriaPropsFromProps(rest);
-
   return (
     <label
       className={classNames(
@@ -95,7 +92,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         moduleStyles[`textField-${size}`],
         className
       )}
-      aria-describedby={rest['aria-describedby']}
+      aria-describedby={HTMLAttributes['aria-describedby']}
     >
       {label && <span className={moduleStyles.textFieldLabel}>{label}</span>}
       <input
@@ -113,8 +110,8 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         className={classNames({
           [moduleStyles.hasError]: errorMessage,
         })}
-        {...ariaProps}
-        aria-disabled={disabled || ariaProps['aria-disabled']}
+        {...HTMLAttributes}
+        aria-disabled={disabled || HTMLAttributes['aria-disabled']}
       />
       {!errorMessage && (helperMessage || helperIcon) && (
         <div className={moduleStyles.textFieldHelperSection}>
