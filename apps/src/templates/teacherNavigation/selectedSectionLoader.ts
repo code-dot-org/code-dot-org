@@ -1,5 +1,9 @@
 import {getStore} from '@cdo/apps/redux';
-import {setScriptId, setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import {
+  asyncLoadCoursesWithProgress,
+  setScriptId,
+  setUnitName,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {
@@ -73,5 +77,7 @@ export const asyncLoadSelectedSection = async (sectionId: string) => {
       getStore().dispatch(updateSelectedSection(selectedSection));
 
       getStore().dispatch(finishLoadingSectionData());
+
+      getStore().dispatch(asyncLoadCoursesWithProgress());
     });
 };
