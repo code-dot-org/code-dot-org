@@ -10,7 +10,7 @@ import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no
 const {multiAnswerCounts, multiChartData} = exportedForTesting;
 
 const JS_DATA = {
-  level: {
+  viewing_level_data: {
     properties: {
       answers: [{}],
     },
@@ -19,7 +19,7 @@ const JS_DATA = {
 };
 
 const PREDICT_DATA = {
-  level: {
+  viewing_level_data: {
     properties: {
       predict_settings: {
         isPredictLevel: true,
