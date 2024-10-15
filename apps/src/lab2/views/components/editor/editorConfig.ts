@@ -62,6 +62,9 @@ const editorConfig = [
   highlightActiveLine(),
   highlightSelectionMatches(),
   keymap.of([
+    // Order matters here. autocomplete is first because when autocomplete is open,
+    // we want those keybindings to take precedence (for example, tab to complete, arrow keys
+    // to choose from the dropdown).
     ...autocompleteKeybindings,
     ...closeBracketsKeymap,
     ...defaultKeymap,
