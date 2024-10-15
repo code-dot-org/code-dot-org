@@ -6,17 +6,17 @@ import currentLocale from './currentLocale';
  * Manages native Browser Text to Speech functionality.
  */
 
-let ttsAvailable = false;
+let ttsAvailable = speechSynthesis.getVoices().length > 0;
 
-speechSynthesis.addEventListener('voiceschanged', () => {
-  ttsAvailable = speechSynthesis.getVoices().length > 0;
-});
+// Add a listener to update the ttsAvailable flag when voices are loaded.
+onTtsAvailable(isAvailable => (ttsAvailable = isAvailable));
 
 function onTtsAvailable(callback: (isAvailable: boolean) => void) {
   if (ttsAvailable) {
     callback(true);
   } else {
-    speechSynthesis.addEventListener('voiceschanged', () => {
+    // On some old browsers (e.g. Safari <16), the voiceschanged event is not implemented.
+    speechSynthesis.addEventListener?.('voiceschanged', () => {
       callback(speechSynthesis.getVoices().length > 0);
     });
   }

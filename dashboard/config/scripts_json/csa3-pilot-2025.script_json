@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-10-11 00:59:02 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-10-13 21:25:52 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -98,9 +98,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**How can analyzing data sets help us answer questions and solve problems?**",
+        "overview": "**How can analyzing data sets help us answer questions and solve problems?**\n\nIn this lesson, students learn how to analyze data sets and use that analysis to write algorithms that solve real-world problems. They explore data through charts and tables, asking key questions to uncover insights, then work collaboratively to design and refine algorithms.",
         "preparation": "* **(Optional)** Print copies of the Data Sets Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Data Sets activity guide (one for each student)",
-        "student_overview": "**How can analyzing data sets help us answer questions and solve problems?**"
+        "student_overview": "**How can analyzing data sets help us answer questions and solve problems?**\n\nIn this lesson, you learn how to analyze data sets and use that analysis to write algorithms that solve real-world problems. You explore data through charts and tables, asking key questions to uncover insights, then work collaboratively to design and refine algorithms."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -249,7 +249,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n* Topic Questions 9.5\n* Topic Questions 9.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, students expand on what they know about inheritance to explore how they can create arrays of objects. They learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. Students recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. Students then practice using superclass references to create and work with 1D arrays.",
-        "preparation": "* **(Optional)** Print copies of the U3L6 Guided Notes (one for each student)\n* Preview the *Polymorphism* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-6-polymorphism/37890) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Polymorphism Guided Notes (one for each student)\n* Preview the *Polymorphism* video",
         "student_overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, you expand on what you know about inheritance to explore how you can create arrays of objects. You learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. You recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. You then practice using superclass references to create and work with 1D arrays."
       },
       "seeding_key": {
@@ -1176,12 +1176,12 @@
       "key": "ace1f07d-6031-45a2-8e05-3179583a5615",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about this chart? What do you wonder?*\n\n**Discussion Goal:** discussion goal",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about this chart? What do you wonder?*\n\n**Discussion Goal:** Students should notice key features of the chart, such as the categorization of dogs by intelligence, popularity, and size. They should also begin questioning how the data was collected and what factors influence the placement of different breeds.",
         "name": "The Ultimate Data Dog",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "show the full-size version so students can see it better"
+            "markdown": "Show the full-size version of the chart so that students can clearly see all the details and labels. This will help them better analyze the data, observe patterns, and ask more informed questions during the discussion. Encourage students to take note of specific categories, data points, and visual elements that stand out to them."
           }
         ]
       },
@@ -1194,11 +1194,11 @@
       "key": "c17a4109-0c0e-4f6b-9a5f-42c76284e1ea",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *This is just a snapshot of the data table used to generate the chart. If you were able to see the full data table, what are some specific questions you would be able to answer?*\n\n**Discussion Goal:** discussion goal",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *This is just a snapshot of the data table used to generate the chart. If you were able to see the full data table, what are some specific questions you would be able to answer?*\n\n**Discussion Goal:** Students should consider the types of additional insights they could gain from the full data set. They should think about how having more detailed data might allow them to answer specific questions about patterns or rankings that aren't immediately visible in the chart.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "show the data table"
+            "markdown": "Show the full data table that corresponds to the chart so students can see the raw data behind the visual representation. This will help them understand how the chart was generated and encourage deeper analysis by allowing them to connect specific data points with trends or insights they observe in the visual."
           }
         ]
       },
@@ -1208,15 +1208,32 @@
       }
     },
     {
-      "key": "e4d1365d-8e8a-456d-b520-f496d0f1dcd7",
+      "key": "6814cce1-ad70-4de8-bae7-ecee0d158948",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***data set***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In looking at this data set, we might ask what the average cost of an item is. We can uncover even more insights by analyzing different aspects of the data. What other questions can we ask about the data in this data set?*\n\n**Discussion Goal:** discussion goal\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a Writing Algorithms with Data Sets activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the sample data sets and decide which questions can be answered for each table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Analyzing different data points in a set can help us solve problems. How might we use data from these examples to answer new questions or uncover trends?*\n\n**Discussion Goal:** discussion goal\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***value***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that programmers use data sets to create algorithms to answer questions and solve problems.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *One question we can answer about this data set is: What is the largest value in the \"Units Sold\" column? What would an algorithm need to process this data set and return an accurate answer?*\n\n**Discussion Goal:** discussion goal\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Walk through the algorithm to find the maximum value.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***data set***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In looking at this data set, we might ask what the average cost of an item is. We can uncover even more insights by analyzing different aspects of the data. What other questions can we ask about the data in this data set?*\n\n**Discussion Goal:** Students should explore various questions that can be asked about the data, such as calculating total revenue, determining the most popular item, or comparing the cost per unit sold across different items.",
         "name": "Writing Algorithms with Data Sets",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "tips for walking through the algorithm"
+            "markdown": "Encourage students to brainstorm as many questions as possible without worrying about the answers initially. You could also group similar questions and guide students to think about how different types of analysis (e.g., averages, totals, trends) could help answer them."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6814cce1-ad70-4de8-bae7-ecee0d158948",
+        "lesson_activity.key": "0abef305-631d-4d1b-b113-22f003477c1b"
+      }
+    },
+    {
+      "key": "e4d1365d-8e8a-456d-b520-f496d0f1dcd7",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a Writing Algorithms with Data Sets activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the sample data sets and decide which questions can be answered for each table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Analyzing different data points in a set can help us solve problems. How might we use data from these examples to answer new questions or uncover trends?*\n\n**Discussion Goal:** Students should demonstrate understanding of how analyzing specific data points can reveal patterns or trends. They should think about how data analysis can be used to answer new questions, make decisions, or optimize processes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***value***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that programmers use data sets to create algorithms to answer questions and solve problems.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *One question we can answer about this data set is: What is the largest value in the \"Units Sold\" column? What would an algorithm need to process this data set and return an accurate answer?*\n\n**Discussion Goal:** Students should recognize how algorithms can be used to process data sets, specifically to identify the largest value in a column. They should consider what steps an algorithm would need, such as iterating through the data and comparing values, to find the correct answer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Walk through the algorithm to find the maximum value.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you walk through the algorithm, break it down step by step to ensure students understand the process. Start by explaining the logic behind each step, and highlight key points like like updating the maximum value when a larger value is found. Encourage students to follow along and ask clarifying questions at each step to reinforce their understanding."
           }
         ]
       },
@@ -1227,9 +1244,15 @@
     },
     {
       "key": "591c0509-b705-420c-9461-845b3a182662",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose a data set and a question to answer. They should copy the data table in the space provided on the activity guide, then write pseudocode for an algorithm that will answer that question.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students share their algorithm with another group and discuss the following prompts:\n* *Does the algorithm use all the needed data to answer the question?*\n* *How can the algorithm be improved to work better or faster?*\n\n**Discussion Goal:** discussion goal"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose a data set and a question to answer. They should copy the data table in the space provided on the activity guide, then write pseudocode for an algorithm that will answer that question.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to think about edge cases in the data (e.g., empty data sets, unusually high or low values) while writing their algorithms. This encourages them to write more robust solutions and prepares them for real-world data irregularities."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "591c0509-b705-420c-9461-845b3a182662",
@@ -1237,10 +1260,21 @@
       }
     },
     {
+      "key": "9efbe711-2e27-47b6-b6bb-6f70396a6517",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share their algorithm with another group and discuss the following prompts:\n* *Does the algorithm use all the needed data to answer the question?*\n* *How can the algorithm be improved to work better or faster?*"
+      },
+      "seeding_key": {
+        "activity_section.key": "9efbe711-2e27-47b6-b6bb-6f70396a6517",
+        "lesson_activity.key": "0abef305-631d-4d1b-b113-22f003477c1b"
+      }
+    },
+    {
       "key": "650675d9-56f1-49f6-ac8e-00e05693dd7b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How can charts or tables help you plan your algorithm?*\n* *What challenges did you face while analyzing your data?*\n\n**Discussion Goal:** discussion goal",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How can charts or tables help you plan your algorithm?*\n* *What challenges did you face while analyzing your data?*\n\n**Discussion Goal:** Students should reflect on how charts and tables can simplify data analysis by making patterns or key values easier to identify, which in turn helps in planning algorithms. Students should also share challenges they encountered, such as interpreting data or ensuring accuracy, to promote a deeper understanding of the complexities of data analysis and algorithm design.",
         "name": "Reflection",
         "tips": [
           {
@@ -1298,7 +1332,8 @@
       "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "bf9478ff-18a3-45fa-a61e-8813fce0f698",
@@ -2638,7 +2673,7 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the libraries that must be imported into the class where the file reading method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that the `java.io.IOException` library must be imported in the tester class and the class where the file reader method is being written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to validate the file name being used by adding `throws IOException` to the header of the method that uses the file. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to create a `File` object and `Scanner` object to read the file being processed by the method. Remind students to call the `close()` method after the `Scanner` is finished reading from the file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show students the various `Scanner` methods that they may need to process a file.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
-        "progression_name": "Investigate and Modify: Handling Files"
+        "progression_name": "Investigate and Modify: Processing File Data"
       },
       "seeding_key": {
         "activity_section.key": "ae4c6602-dc87-4712-8943-6d27dc20c51d",
@@ -5243,6 +5278,28 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-u3l1-datasets-l1cfu_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "bf9478ff-18a3-45fa-a61e-8813fce0f698"
+      },
+      "level_keys": [
+        "csa-u3l1-datasets-l1cfu_2024"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5265,7 +5322,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5290,7 +5347,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5315,7 +5372,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5340,7 +5397,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5365,7 +5422,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5390,7 +5447,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5415,7 +5472,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5440,7 +5497,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5465,7 +5522,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5490,7 +5547,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5515,7 +5572,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5540,7 +5597,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5565,7 +5622,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5590,7 +5647,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5615,7 +5672,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5640,7 +5697,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5665,7 +5722,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5690,7 +5747,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5715,7 +5772,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5740,7 +5797,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5765,7 +5822,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5790,7 +5847,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5815,7 +5872,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5840,7 +5897,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5865,7 +5922,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5890,7 +5947,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5915,7 +5972,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5940,7 +5997,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5965,7 +6022,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5990,7 +6047,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6015,7 +6072,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6040,7 +6097,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6065,7 +6122,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6090,12 +6147,15 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Investigate and Modify: Handling Files"
+        "level_keys": [
+          "CSA U3L6 Reading Files-L3"
+        ],
+        "progression": "Investigate and Modify: Processing File Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -6112,7 +6172,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6137,7 +6197,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6162,7 +6222,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6187,7 +6247,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6212,7 +6272,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6237,7 +6297,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6262,7 +6322,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6287,7 +6347,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6312,7 +6372,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6337,7 +6397,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6362,7 +6422,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6387,7 +6447,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6412,7 +6472,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6437,7 +6497,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6462,7 +6522,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6487,7 +6547,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6512,7 +6572,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6537,7 +6597,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6562,7 +6622,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6587,7 +6647,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6612,7 +6672,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6637,7 +6697,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6662,7 +6722,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6687,7 +6747,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6712,7 +6772,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6737,7 +6797,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6762,7 +6822,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6787,7 +6847,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6812,7 +6872,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6837,7 +6897,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6862,7 +6922,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6887,7 +6947,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6912,7 +6972,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6937,7 +6997,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6962,7 +7022,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6987,7 +7047,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7012,7 +7072,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7037,7 +7097,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7062,7 +7122,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7087,7 +7147,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7112,7 +7172,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7137,7 +7197,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7162,7 +7222,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7187,7 +7247,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7211,7 +7271,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7236,7 +7296,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7261,7 +7321,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7286,6 +7346,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csa-u3l1-datasets-l1cfu_2024",
+        "script_level.level_keys": [
+          "csa-u3l1-datasets-l1cfu_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot-2025",
+        "activity_section.key": "bf9478ff-18a3-45fa-a61e-8813fce0f698"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSA U3L1-L1_pilot-2025",
@@ -8393,8 +8465,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U3L6 Guided Notes",
-      "url": "https://docs.google.com/document/d/1Y3Q7liMQxgxq4buJPbXsy3c-ZsEKd57IRGqeT1LJFpg/edit?usp=sharing",
+      "name": "[EXEMPLAR] Polymorphism Guided Notes",
+      "url": "https://docs.google.com/document/d/1mZzlpwalQD3ERUuW6rPEp81ZbSFKCGhwZ_OMYaWIXkA/edit?usp=drive_link",
       "key": "_exemplar_u3l6_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8583,8 +8655,8 @@
       }
     },
     {
-      "name": "[KEY] U3L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1CLE1D4KZwWwnGwyj5-RTFxhKkvmntJR0lZGFaCe3VVc/edit?usp=sharing",
+      "name": "[KEY] Polymorphism Extra Practice",
+      "url": "https://docs.google.com/document/d/1vQN70GHAq4sxrFxofsJRszqcAs3fHdNgizyQuBn76Vo/edit?usp=drive_link",
       "key": "_key_u3l6_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8664,6 +8736,39 @@
       },
       "seeding_key": {
         "resource.key": "_key_writing_algorithms_with_data_sets"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa3-pilot-2025/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa3-pilot-2025/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa3-pilot-2025/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
       }
     },
     {
@@ -9313,8 +9418,8 @@
       }
     },
     {
-      "name": "U3L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1499hS_rHogZgajYhhaou5uhdX3eXfUzab7N6CDtzeQo/edit?usp=sharing",
+      "name": "Polymorphism Extra Practice",
+      "url": "https://docs.google.com/document/d/11QuxryOnpt4Mcw4a71bxNx3Vi-SFdWNCBU-kzYZDBtQ/edit?usp=drive_link",
       "key": "u3l6_extra_practice",
       "properties": {
         "audience": "Student",
@@ -9326,8 +9431,8 @@
       }
     },
     {
-      "name": "U3L6 Guided Notes",
-      "url": "https://docs.google.com/document/d/1bIkfvoudpoFn6bdnXfGwg3Hop5lT7If55a86WTVE7kA/edit?usp=sharing",
+      "name": "Polymorphism Guided Notes",
+      "url": "https://docs.google.com/document/d/12kchi0lxZeMz-Rs5LK4pyYvpcpp3Y9SxeQHUwUC7wVI/edit?usp=drive_link",
       "key": "u3l6_guided_notes",
       "properties": {
         "audience": "Student",
@@ -9446,6 +9551,16 @@
       },
       "seeding_key": {
         "resource.key": "unit_3_overview"
+      }
+    },
+    {
+      "name": "Unit 3 Slides",
+      "url": "https://docs.google.com/presentation/d/1zrq9GCi48HTojPFg-KEx1jxZaAaCxi-xwnMe3M7O1aU/edit?usp=sharing",
+      "key": "unit_3_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_slides"
       }
     },
     {
@@ -10167,6 +10282,24 @@
     },
     {
       "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "creating_and_using_word_walls_2",
         "script.name": "csa3-pilot-2025"
       }
@@ -10186,6 +10319,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_3_overview",
+        "script.name": "csa3-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_slides",
         "script.name": "csa3-pilot-2025"
       }
     },

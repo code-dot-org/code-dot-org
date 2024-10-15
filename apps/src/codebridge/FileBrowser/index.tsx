@@ -11,8 +11,6 @@ import {ProjectType, FolderId} from '@codebridge/types';
 import {
   validateFileName as globalValidateFileName,
   validateFolderName,
-  findFolder,
-  getErrorMessage,
   sendCodebridgeAnalyticsEvent,
   shouldShowFile,
   isValidFileName,
@@ -66,7 +64,6 @@ import {
   DragType,
   DragDataType,
   DropDataType,
-  moveFolderPromptType,
   renameFilePromptType,
   renameFolderPromptType,
   setFileType,
@@ -78,7 +75,6 @@ type FilesComponentProps = {
   files: ProjectType['files'];
   folders: ProjectType['folders'];
   parentId?: FolderId;
-  moveFolderPrompt: moveFolderPromptType;
   renameFilePrompt: renameFilePromptType;
   renameFolderPrompt: renameFolderPromptType;
   setFileType: setFileType;
@@ -90,13 +86,13 @@ const InnerFileBrowser = React.memo(
     parentId,
     folders,
     files,
-    moveFolderPrompt,
     renameFilePrompt,
     renameFolderPrompt,
     setFileType,
     appName,
   }: FilesComponentProps) => {
-    const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
+    const {openMoveFolderPrompt, openNewFilePrompt, openNewFolderPrompt} =
+      usePrompts();
     const {
       deleteFile,
       toggleOpenFolder,
@@ -245,7 +241,9 @@ const InnerFileBrowser = React.memo(
                         <PopUpButtonOption
                           iconName="arrow-right"
                           labelText={codebridgeI18n.moveFolder()}
-                          clickHandler={() => moveFolderPrompt(f.id)}
+                          clickHandler={() =>
+                            openMoveFolderPrompt({folderId: f.id})
+                          }
                         />
                         <PopUpButtonOption
                           iconName="pencil"
@@ -298,7 +296,6 @@ const InnerFileBrowser = React.memo(
                       folders={folders}
                       parentId={f.id}
                       files={files}
-                      moveFolderPrompt={moveFolderPrompt}
                       renameFilePrompt={renameFilePrompt}
                       renameFolderPrompt={renameFolderPrompt}
                       setFileType={setFileType}
@@ -391,54 +388,6 @@ export const FileBrowser = React.memo(() => {
       },
     }),
     [setDragData, setDropData]
-  );
-
-  const moveFolderPrompt: FilesComponentProps['moveFolderPrompt'] = useMemo(
-    () => async folderId => {
-      const folder = project.folders[folderId];
-      const results = await dialogControl?.showDialog({
-        type: DialogType.GenericPrompt,
-        title: codebridgeI18n.moveFolderPrompt(),
-        placeholder: codebridgeI18n.rootFolder(),
-        requiresPrompt: false,
-
-        validateInput: (destinationFolderName: string) => {
-          try {
-            const parentId = findFolder(destinationFolderName.split('/'), {
-              folders: Object.values(project.folders),
-              required: true,
-            });
-            return validateFolderName({
-              folderName: folder.name,
-              parentId,
-              projectFolders: project.folders,
-            });
-          } catch (e) {
-            return getErrorMessage(e);
-          }
-        },
-      });
-
-      if (results.type !== 'confirm') {
-        return;
-      }
-
-      const destinationFolderName = extractInput(results) || '';
-      try {
-        const parentId = findFolder(destinationFolderName.split('/'), {
-          folders: Object.values(project.folders),
-          required: true,
-        });
-        moveFolder(folderId, parentId);
-      } catch (e) {
-        dialogControl?.showDialog({
-          type: DialogType.GenericAlert,
-          title: getErrorMessage(e),
-        });
-      }
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FOLDER, appName);
-    },
-    [project.folders, dialogControl, appName, moveFolder]
   );
 
   const renameFilePrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
@@ -590,7 +539,6 @@ export const FileBrowser = React.memo(() => {
                 parentId={DEFAULT_FOLDER_ID}
                 folders={project.folders}
                 files={project.files}
-                moveFolderPrompt={moveFolderPrompt}
                 renameFilePrompt={renameFilePrompt}
                 renameFolderPrompt={renameFolderPrompt}
                 setFileType={setFileType}

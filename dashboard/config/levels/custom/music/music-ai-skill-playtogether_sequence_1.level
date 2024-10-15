@@ -35,24 +35,12 @@
         "callout": "play-sounds-together-block-2-workspace"
       },
       {
-        "key": "music-ai-skill-playtogether_sequence_2_c60a465c-3f07-4f14-a758-de2c1cddc382",
-        "message": "You chose two of the same sound. Choose two different [sounds](#clickable=play-sound-block-workspace) to play together. ",
-        "next": false,
-        "conditions": [
-          {
-            "name": "played_different_sounds_together",
-            "value": 1
-          }
-        ],
-        "callout": "play-sound-block-workspace"
-      },
-      {
         "key": "music-ai-skill-playtogether_sequence_3_8db01d98-40e3-4fb3-bcee-0f59b17262bb",
-        "message": "You played one sound, now add another sound into each of the [play together](#clickable=play-sounds-together-block-workspace) blocks. ",
+        "message": "You played one sound, now add another sound into the [play together](#clickable=play-sounds-together-block-workspace) block. ",
         "next": false,
         "conditions": [
           {
-            "name": "played_sounds",
+            "name": "played_sounds_together",
             "value": 1
           }
         ],
@@ -173,7 +161,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:47.985+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence_3\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence_3\"},{\"changed_at\":\"2024-10-08 19:09:17 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 19:32:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 19:32:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 20:00:00 +0000\",\"changed\":[\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:31:53 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:35:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:37:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:23:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:25:03 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:26:18 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:26:41 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-11 03:01:48 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-07T22:05:47.985+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-playtogether_sequence_3\\\"\"],\"cloned_from\":\"music-ai-skill-playtogether_sequence_3\"},{\"changed_at\":\"2024-10-08 19:09:17 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 19:32:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 19:32:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-08 20:00:00 +0000\",\"changed\":[\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:31:53 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:35:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 20:37:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:23:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:25:03 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:26:18 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-10 22:26:41 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-11 03:01:48 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-11 16:15:07 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-12 04:12:47 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-12 04:13:22 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-12 04:14:16 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-12 04:15:04 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-12 04:15:42 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-12 04:16:31 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-12 04:18:33 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
