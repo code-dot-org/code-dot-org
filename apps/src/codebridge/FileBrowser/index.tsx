@@ -72,6 +72,7 @@ import {
 } from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
   fileDownload(file.contents, file.name);
@@ -303,6 +304,7 @@ const InnerFileBrowser = React.memo(
                         tooltipId: `folder-tooltip-${f.id}`,
                         size: 's',
                         direction: 'onBottom',
+                        className: darkModeStyles.tooltipBottom,
                       }}
                       tooltipOverlayClassName={moduleStyles.nameContainer}
                       className={moduleStyles.nameContainer}
@@ -423,6 +425,7 @@ const InnerFileBrowser = React.memo(
                         tooltipId: `file-tooltip-${f.id}`,
                         size: 's',
                         direction: 'onBottom',
+                        className: darkModeStyles.tooltipBottom,
                       }}
                       tooltipOverlayClassName={moduleStyles.nameContainer}
                       className={moduleStyles.nameContainer}
@@ -537,11 +540,6 @@ export const FileBrowser = React.memo(() => {
             fileName: newName,
             folderId: file.folderId,
           });
-
-          const [, extension] = newName.split('.');
-          if (!extension) {
-            return codebridgeI18n.noFileExtensionError();
-          }
         },
       });
       if (results.type !== 'confirm') {
