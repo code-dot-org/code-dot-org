@@ -68,7 +68,7 @@ class Tutorials
     end
     id = ids_by_code[code]
     if id
-      DB[@table].where(id: id).first
+      DB[@table].select(*@column_aliases).where(id: id).first
     else
       nil
     end
@@ -77,11 +77,11 @@ class Tutorials
   # return the first tutorial with a matching short code
   def find_with_short_code(short_code)
     ids_by_short_code = CDO.cache.fetch("Tutorials/#{@table}/ids_by_short_code") do
-      @contents.index_by {|row| row[:code]}.transform_values {|obj| obj[:id]}
+      @contents.index_by {|row| row[:short_code]}.transform_values {|obj| obj[:id]}
     end
     id = ids_by_short_code[short_code]
     if id
-      DB[@table].where(id: id).first
+      DB[@table].select(*@column_aliases).where(id: id).first
     else
       nil
     end
