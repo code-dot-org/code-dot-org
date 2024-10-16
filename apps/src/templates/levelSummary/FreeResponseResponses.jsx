@@ -98,9 +98,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
               icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
               type: 'tertiary',
               color: unpinResponse ? 'white' : 'purple',
-              className: unpinResponse
-                ? styles.freeresponsePinnedDropdown
-                : styles.freeresponseUnpinnedDropdown,
+              className: unpinResponse && styles.freeresponsePinnedDropdown,
             }}
             options={getMenuOptions(pinResponse, unpinResponse, response)}
           />
