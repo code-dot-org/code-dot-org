@@ -2,14 +2,14 @@ import {DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {GenericPromptProps} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
 
 export const getDialogControlMock = (
-  newFolderName: string
+  dialogInput: string
 ): Pick<DialogControlInterface, 'showDialog'> => ({
   showDialog: ({validateInput}: GenericPromptProps) => {
-    const error = validateInput?.(newFolderName);
+    const error = validateInput?.(dialogInput);
     if (error) {
       return Promise.resolve({type: 'cancel', args: error});
     } else {
-      return Promise.resolve({type: 'confirm', args: newFolderName});
+      return Promise.resolve({type: 'confirm', args: dialogInput});
     }
   },
 });

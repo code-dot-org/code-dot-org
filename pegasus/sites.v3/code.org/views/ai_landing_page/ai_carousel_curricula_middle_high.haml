@@ -1,16 +1,6 @@
 :ruby
+  gen_ai_launched = !!DCDO.get('gen-ai-launch', false)
   block_items = [
-    {
-      overline: hoc_s("gen_ai_middle_high_carousel_card.overline"),
-      title: hoc_s("gen_ai_middle_high_carousel_card.title"),
-      img: "/images/ai/explore-gen-ai-bot-wizard.png",
-      desc: hoc_s("gen_ai_middle_high_carousel_card.desc"),
-      duration: hoc_s("gen_ai_middle_high_carousel_card.duration"),
-      url: "/curriculum/generative-ai",
-      aria_label: hoc_s("gen_ai_middle_high_carousel_card.aria_label"),
-      button_label: hoc_s(:call_to_action_explore_course),
-      new: true,
-    },
     {
       overline: hoc_s("ai_page.curricula.tile.humanities.overline"),
       title: hoc_s("ai_page.curricula.tile.humanities.title"),
@@ -20,6 +10,7 @@
       url: CDO.studio_url("/s/gen-ai-humanities"),
       aria_label: hoc_s("ai_page.curricula.tile.humanities.aria_label"),
       button_label: hoc_s("ai_page.curricula.tile.humanities.button"),
+      new: !gen_ai_launched,
     },
     {
       overline: hoc_s(:module_grade_6_12),
@@ -102,6 +93,19 @@
       button_label: hoc_s(:call_to_action_try_activity),
     },
   ]
+  if gen_ai_launched
+    block_items.unshift({
+      overline: hoc_s("gen_ai_middle_high_carousel_card.overline"),
+      title: hoc_s("gen_ai_middle_high_carousel_card.title"),
+      img: "/images/ai/explore-gen-ai-bot-wizard.png",
+      desc: hoc_s("gen_ai_middle_high_carousel_card.desc"),
+      duration: hoc_s("gen_ai_middle_high_carousel_card.duration"),
+      url: "/curriculum/generative-ai",
+      aria_label: hoc_s("gen_ai_middle_high_carousel_card.aria_label"),
+      button_label: hoc_s(:call_to_action_explore_course),
+      new: true,
+    })
+  end
 
 .carousel-wrapper
   %swiper-container.swiper-middle-high{navigation: "true", "navigation-next-el": ".nav-next-middle-high", "navigation-prev-el": ".nav-prev-middle-high", pagination: "true", init: "false"}

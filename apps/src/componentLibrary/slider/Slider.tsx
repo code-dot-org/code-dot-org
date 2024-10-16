@@ -36,6 +36,9 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
   /** Is the slider in percent mode
    * @default false */
   isPercentMode?: boolean;
+  /** Is the slider value hidden
+   * @default false */
+  hideValue?: boolean;
   /** Step value for the slider
    * @default 1 */
   step?: number;
@@ -106,6 +109,7 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   color = 'black',
   isCentered = false,
   isPercentMode = false,
+  hideValue = false,
   step = 1,
   // TODO: Uncomment when working on adding steps support
   // steps,
@@ -236,6 +240,8 @@ const Slider: React.FunctionComponent<SliderProps> = ({
     isRtl,
   ]);
 
+  const showLabelSection = label || !hideValue;
+
   return (
     <div
       className={classnames(
@@ -245,16 +251,18 @@ const Slider: React.FunctionComponent<SliderProps> = ({
         className
       )}
     >
-      <div className={moduleStyles.sliderLabelSection}>
-        {label && (
-          <label id={labelId} className={moduleStyles.sliderLabel}>
-            {label}
-          </label>
-        )}
+      {showLabelSection && (
+        <div className={moduleStyles.sliderLabelSection}>
+          {label && (
+            <label id={labelId} className={moduleStyles.sliderLabel}>
+              {label}
+            </label>
+          )}
 
-        {/* Display the value with a % sign if percentMode is true */}
-        <span>{isPercentMode ? `${value}%` : value}</span>
-      </div>
+          {/* Display the value with a % sign if percentMode is true */}
+          {!hideValue && <span>{isPercentMode ? `${value}%` : value}</span>}
+        </div>
+      )}
 
       <div className={moduleStyles.sliderMainContainer}>
         {leftButtonProps && (

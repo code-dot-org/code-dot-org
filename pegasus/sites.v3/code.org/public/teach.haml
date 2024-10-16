@@ -23,9 +23,6 @@ theme: responsive_full_width
 -# Show Curriculum Launch banner if dcdo is true
 = view :curriculum_launch_skinny_banner
 
--# Show Hour of Code 2024 banner if hoc_mode is set to "soon-hoc"
-= view :hoc_skinny_banner
-
 -# Show Generative AI Launch banner if 'gen-ai-launch' dcdo is true
 = view :gen_ai_launch_skinny_banner
 
@@ -100,6 +97,9 @@ theme: responsive_full_width
           =hoc_s(:grade_level_label_middle)
         %a.link-button{href: "/educate/curriculum/high-school"}
           =hoc_s(:grade_level_label_high)
+
+-# Show Hour of Code 2024 banner if hoc_mode is set to "soon-hoc"
+= view :hoc_skinny_banner
 
 %section.curriculum-offerings
   .wrapper

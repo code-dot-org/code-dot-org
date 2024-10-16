@@ -189,11 +189,14 @@ describe('FinishTeacherAccount', () => {
         email: email,
         name: name,
         email_preference_opt_in: true,
-        school: NonSchoolOptions.SELECT_A_SCHOOL,
-        school_id: NonSchoolOptions.SELECT_A_SCHOOL,
-        school_zip: '',
-        school_name: '',
-        school_country: 'US',
+        school_info_attributes: {
+          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
+          country: 'US',
+          schoolName: '',
+          schoolZip: '',
+          schoolsList: [],
+          usIp: true,
+        },
       },
     };
     sessionStorage.setItem('email', email);

@@ -1,6 +1,6 @@
 name 'csa-u3l8-l1datasets_2024'
-display_name 'Data Sets'
-description 'level description here'
+display_name 'Analyzing Data Sets'
+description 'Investigate the bias in a provided data set and understand its impact on the conclusions drawn from the data.'
 
 sublevels
 level 'csa-u3l8-l1a_2024'

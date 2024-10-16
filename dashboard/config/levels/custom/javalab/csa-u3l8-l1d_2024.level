@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-10-09T19:11:55.000Z",
   "level_num": "custom",
@@ -42,9 +43,15 @@
         "isVisible": true,
         "tabOrder": 5
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Salary Data Set",
+    "bubble_choice_description": "Annual salary data for various jobs, used to assess income distribution and job market trends.",
+    "long_instructions": "Investigate the bias in this data set and explore its impact on the conclusions drawn from the data.",
+    "thumbnail_url": "https://images.code.org/9f5041b054bd717413926bdb843876b6-salary.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-10-09T19:11:55.446+00:00\",\"changed\":[\"cloned from \\\"csa-u3l8-l1c_2024\\\"\"],\"cloned_from\":\"csa-u3l8-l1c_2024\"},{\"changed_at\":\"2024-10-09 19:12:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:27 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-10-09T19:11:55.446+00:00\",\"changed\":[\"cloned from \\\"csa-u3l8-l1c_2024\\\"\"],\"cloned_from\":\"csa-u3l8-l1c_2024\"},{\"changed_at\":\"2024-10-09 19:12:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-09 19:17:27 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-13 18:51:46 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-13 19:15:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-10-13 19:18:50 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
