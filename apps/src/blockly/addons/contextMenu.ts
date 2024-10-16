@@ -12,6 +12,11 @@ import GoogleBlockly, {
 import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
 
+import {getStore} from '@cdo/apps/redux';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+
 import LegacyDialog from '../../code-studio/LegacyDialog';
 import {
   Themes,
@@ -212,10 +217,21 @@ const registerKeyboardNavigation = function (weight: number) {
     },
     callback: function (scope: ContextMenuRegistry.Scope) {
       const controller = Blockly.navigationController;
+      const analyticsData = Blockly.analyticsData;
       if (scope.workspace?.keyboardAccessibilityMode) {
         controller.disable(scope.workspace);
+        analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
+          setting: EVENTS.BLOCKLY_SETTING_KEYBOARD_NAVIGATION,
+          value: EVENTS.BLOCKLY_SETTING_OFF,
+          ...analyticsData,
+        });
       } else {
         controller.enable(scope.workspace);
+        analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
+          setting: EVENTS.BLOCKLY_SETTING_KEYBOARD_NAVIGATION,
+          value: EVENTS.BLOCKLY_SETTING_ON,
+          ...analyticsData,
+        });
         Blockly.navigationController.navigation.focusWorkspace(scope.workspace);
       }
     },
@@ -305,6 +321,12 @@ const registerTheme = function (name: Themes, label: string, weight: number) {
       const themeName =
         name + (isDarkTheme(currentTheme) ? DARK_THEME_SUFFIX : '');
       setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
+      const analyticsData = Blockly.analyticsData;
+      analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
+        setting: EVENTS.BLOCKLY_SETTING_THEME,
+        value: name,
+        ...analyticsData,
+      });
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: name + 'ThemeOption',
