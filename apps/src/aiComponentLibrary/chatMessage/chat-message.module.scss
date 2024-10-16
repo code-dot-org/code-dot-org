@@ -69,8 +69,14 @@ $assistant-color: $brand_primary_light;
   overflow-x: auto;
 }
 
+.messageContainer {
+  display: flex;
+  flex-direction: row;
+}
+
 %container {
   display: flex;
+  flex-direction: row;
   gap: 8px;
 }
 
@@ -99,6 +105,11 @@ $assistant-color: $brand_primary_light;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 8px;
+}
+
+.childContainer {
+  margin-left: 40px;
 }
 
 .botIcon {
