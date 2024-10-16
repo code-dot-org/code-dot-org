@@ -1,7 +1,7 @@
 import {action} from '@storybook/addon-actions';
 import React from 'react';
 
-import ChangeEmailForm from './ChangeEmailForm';
+import {ChangeEmailForm} from './ChangeEmailForm';
 
 const DEFAULT_PROPS = {
   values: {
