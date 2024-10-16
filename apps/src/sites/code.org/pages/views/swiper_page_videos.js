@@ -10,6 +10,7 @@ register();
 
 const swipers = [
   document.querySelector('swiper-container.how-ai-works'),
+  document.querySelector('swiper-container.explore-gen-ai'),
   document.querySelector('swiper-container.how-computers-work'),
   document.querySelector('swiper-container.how-internet-works'),
   document.querySelector('swiper-container.not-hacked'),

@@ -22,7 +22,7 @@ const getNewFolderMock = (
 };
 
 const appName = 'Codebridge Unit Test';
-const EXPECTED_NEXT_FOLDER_ID = '4';
+const EXPECTED_NEXT_FOLDER_ID = '6';
 
 describe('openNewFolderPrompt', function () {
   it('can successfully add a new folder to root', async function () {
