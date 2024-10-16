@@ -1,7 +1,6 @@
 import {render, screen, within} from '@testing-library/react';
 import React from 'react';
 
-import DCDO from '@cdo/apps/dcdo';
 import FreeResponseResponses from '@cdo/apps/templates/levelSummary/FreeResponseResponses';
 
 const RESPONSES = [
@@ -28,7 +27,6 @@ describe('FreeResponseResponses', () => {
   };
 
   it('renders responses', () => {
-    DCDO.set('cfu-pin-hide-enabled', true);
     renderDefault();
 
     expect(screen.getAllByText(/student response [1-5]/)).toHaveLength(
@@ -40,7 +38,6 @@ describe('FreeResponseResponses', () => {
   });
 
   it('renders responses with names', () => {
-    DCDO.set('cfu-pin-hide-enabled', true);
     renderDefault({showStudentNames: true});
 
     expect(screen.getAllByText(/student response [1-5]/)).toHaveLength(
@@ -52,7 +49,6 @@ describe('FreeResponseResponses', () => {
   });
 
   it('hides responses', () => {
-    DCDO.set('cfu-pin-hide-enabled', true);
     renderDefault();
 
     const studentResp1 = screen.getByText('student response 1');
@@ -76,7 +72,6 @@ describe('FreeResponseResponses', () => {
   });
 
   it('pins and unpins responses', () => {
-    DCDO.set('cfu-pin-hide-enabled', true);
     renderDefault();
 
     let student1 = screen.getByText('student response 1');
