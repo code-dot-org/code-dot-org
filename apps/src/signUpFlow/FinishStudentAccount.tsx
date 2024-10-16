@@ -244,6 +244,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           <div>
             <SimpleDropdown
               name="userAge"
+              className={style.dropdownContainer}
               labelText={locale.what_is_your_age()}
               size="m"
               items={ageOptions}
@@ -260,6 +261,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             <div>
               <SimpleDropdown
                 name="userState"
+                className={style.dropdownContainer}
                 labelText={locale.what_state_are_you_in()}
                 size="m"
                 items={usStateOptions}
