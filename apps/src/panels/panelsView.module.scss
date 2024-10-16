@@ -140,7 +140,14 @@ $text-offset-y: 5cqw;
       position: absolute;
       right: 0;
       height: 38px;
-      animation: fade-in 3s, delay-pointer-events 3s;
+
+      &Ready {
+        animation: fade-in 0.5s;
+      }
+
+      &Delay {
+        animation: fade-in 3s, delay-pointer-events 3s;
+      }
     }
 
     .bubble {

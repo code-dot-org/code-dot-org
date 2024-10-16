@@ -50,6 +50,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   resetOnChange = true,
 }) => {
   const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
+  const [typingDone, setTypingDone] = useState(false);
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -89,7 +90,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     }
   }, [panels, resetOnChange]);
 
-  // Reset to last panel if number of panels has reduced
+  // Reset to last panel if number of panels has reduced.
   useEffect(() => {
     if (currentPanelIndex >= panels.length) {
       setCurrentPanelIndex(Math.max(panels.length - 1, 0));
@@ -102,6 +103,11 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       cancelSpeech();
     }
   }, [currentPanelIndex, offerTts]);
+
+  // Reset typing if the panel changes.
+  useEffect(() => {
+    setTypingDone(false);
+  }, [currentPanelIndex, setTypingDone]);
 
   const panel = panels[currentPanelIndex];
   if (!panel) {
@@ -134,6 +140,9 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       : commonI18n.continue();
 
   const plainText = markdownToTxt(panel.text);
+
+  // When typing, only show the button when the typing is done.
+  const showButton = !panel.typing || typingDone;
 
   return (
     <div
@@ -172,7 +181,9 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
                 avgTypingDelay={35}
                 stdTypingDelay={15}
                 cursor={{show: false}}
-                onTypingDone={() => {}}
+                onTypingDone={() => {
+                  setTypingDone(true);
+                }}
                 className={styles.typist}
               >
                 {plainText}
@@ -187,12 +198,17 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
         className={styles.childrenArea}
         style={{width: width, height: childrenAreaHeight}}
       >
-        <Button
-          id="panels-button"
-          onClick={handleButtonClick}
-          className={styles.button}
-          text={buttonText}
-        />
+        {showButton && (
+          <Button
+            id="panels-button"
+            onClick={handleButtonClick}
+            className={classNames(
+              styles.button,
+              panel.typing ? styles.buttonReady : styles.buttonDelay
+            )}
+            text={buttonText}
+          />
+        )}
 
         {panels.length > 1 && (
           <div id="panels-bubbles">
