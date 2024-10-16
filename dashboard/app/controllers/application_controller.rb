@@ -361,6 +361,8 @@ class ApplicationController < ActionController::Base
       # Allow students to join sections while locked out
       student_user_new_path,
       student_register_path,
+      reset_session_path,
+      join_path,
     ].include?(request.path)
 
     redirect_to lockout_path

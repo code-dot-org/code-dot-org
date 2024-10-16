@@ -121,14 +121,14 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? stud
     user_opts[:user_provided_us_state] = true
   end
 
-  cap_start_date = DateTime.parse('2023-07-01T00:00:00MDT').freeze
-
   if after_cap_start
-    user_opts[:created_at] = cap_start_date
+    raise "cap_lockout_date undefined" unless @cap_lockout_date
+    user_opts[:created_at] = @cap_lockout_date
   end
 
   if before_cap_start
-    user_opts[:created_at] = cap_start_date - 1.second
+    raise "cap_lockout_date undefined" unless @cap_lockout_date
+    user_opts[:created_at] = @cap_lockout_date - 1.second
   end
 
   create_user(name, **user_opts)
