@@ -90,7 +90,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
       },
     };
     const authToken = await getAuthenticityToken();
-    await fetch('/users', {
+    const response = await fetch('/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -99,7 +99,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
       body: JSON.stringify(signUpParams),
     });
 
-    navigateToHref('/home');
+    if (response.ok) {
+      const responseData = await response.json();
+      const redirectHref = responseData['user_return_to'] || '/home';
+      navigateToHref(redirectHref);
+    }
   };
 
   const onGDPRChange = (): void => {

@@ -221,6 +221,10 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     SignUpTracking.log_sign_up_result resource, session
+
+    if ActiveModel::Type::Boolean.new.cast(params[:new_sign_up])
+      render status: :ok, json: {user_return_to: session[:user_return_to]}
+    end
   end
 
   #
