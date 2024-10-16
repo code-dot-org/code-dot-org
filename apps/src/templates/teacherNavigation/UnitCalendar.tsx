@@ -36,22 +36,20 @@ const UnitCalendar: React.FC = () => {
     state => state.calendar?.calendarLessons
   );
 
-  const {userId, userType} = useAppSelector(state => ({
-    userId: state.currentUser.userId,
-    userType: state.currentUser.userType,
-  }));
+  const {userId, userType} = useAppSelector(state => state.currentUser);
 
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    setIsLoading(true);
     if (
-      (unitName &&
+      (!isLoading &&
+        unitName &&
         userType &&
         userId &&
         (hasCalendar === undefined || calendarLessons === null)) ||
       unitNameFromProgress !== unitName
     ) {
+      setIsLoading(true);
       getAuthenticityToken()
         .then(token => {
           return fetch(`/dashboardapi/unit_summary/${unitName}`, {
@@ -68,8 +66,6 @@ const UnitCalendar: React.FC = () => {
           initializeRedux(responseJson, dispatch, userType, userId);
           setIsLoading(false);
         });
-    } else {
-      setIsLoading(false);
     }
   }, [
     unitName,
@@ -79,6 +75,7 @@ const UnitCalendar: React.FC = () => {
     calendarLessons,
     unitNameFromProgress,
     dispatch,
+    isLoading,
   ]);
 
   const weeklyMinutesOptions = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS.map(

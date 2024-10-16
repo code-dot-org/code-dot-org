@@ -15,6 +15,11 @@ export interface CalendarState {
   calendarLessons: CalendarLesson[] | null;
 }
 
+interface CalendarDataPayload {
+  showCalendar: boolean;
+  calendarLessons: CalendarLesson[] | null;
+}
+
 const initialState: CalendarState = {
   showCalendar: false,
   calendarLessons: null,
@@ -24,14 +29,12 @@ const calendarReduxSlice = createSlice({
   name: 'calendar',
   initialState,
   reducers: {
-    setShowCalendar(state, action: PayloadAction<boolean>) {
-      state.showCalendar = action.payload;
-    },
-    setCalendarLessons(state, action: PayloadAction<CalendarLesson[]>) {
-      state.calendarLessons = action.payload;
+    setCalendarData(state, action: PayloadAction<CalendarDataPayload>) {
+      state.showCalendar = action.payload.showCalendar;
+      state.calendarLessons = action.payload.calendarLessons;
     },
   },
 });
 
-export const {setShowCalendar, setCalendarLessons} = calendarReduxSlice.actions;
+export const {setCalendarData} = calendarReduxSlice.actions;
 export default calendarReduxSlice.reducer;
